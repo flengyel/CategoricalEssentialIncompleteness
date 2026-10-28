@@ -64,6 +64,21 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap",
     "CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions",
     "CategoricalEssentialIncompleteness.no_represented_boolean_decision",
+    "CategoricalEssentialIncompleteness.InternalLattice.complement_isCompl",
+    "CategoricalEssentialIncompleteness.InternalLattice.liftComplement_pair",
+    "CategoricalEssentialIncompleteness.InternalHom.comp_pair",
+    "CategoricalEssentialIncompleteness.InternalPredicateEmbedding.injective",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.pairing_row",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.diagonal_collapse",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.RepresentationSection.represents",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.representation_section_iff",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separatorPair_separates",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.liftSeparator",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separator_represented",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separator_bounds_eq",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.internal_inseparability",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.no_global_separator",
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separatorIsInitial",
 ]
 
 

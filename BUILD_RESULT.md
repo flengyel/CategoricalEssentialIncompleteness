@@ -1,5 +1,43 @@
 # Categorical essential incompleteness: build result
 
+## Internal separator checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`94390c5b4f84125bd9b245d966ad1aed6b5dbd0e`. The existing checkout was clean,
+and the remote `main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1896 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 62 declarations, retaining every
+  previous check. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- All four new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- The scan of all fourteen project Lean files found no `sorry`, `admit`,
+  `axiom`, or `opaque` declarations. No imported source was changed.
+
+`InternalLattices.lean` constructs the actual complementary-pair pullback
+and its universal projections and lifts. `InternalCartesian.lean` specifies
+internal total-arrow operations and predicate actions, with their structural
+equations at every parameter. `InternalDiagonal.lean` proves the diagonal
+calculation at arbitrary parameters. `InternalRepresentation.lean` constructs
+the representation pullback and derives generalized representatives from its
+section. At the actual separator equalizer, it constructs `gamma`, composes
+it with `rho`, and proves `Sep → Z_U` and the factorization equation. It also
+proves the no-global-separator and strict-initial-object consequences.
+
+Deriving this internal total-arrow structure from the enriched restriction
+hom-objects remains open. The full enriched categorical theorem and the
+numerical/arithmetic interpretation are not claimed. See
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for the exact boundary.
+The source toolchain and imported provenance are unchanged. The documented
+hosted executable-path adapter was used; Palomar Comparator, NanoDa, and
+con-ron were not run.
+
+Evidence is retained in
+[Audit/2026-10-28-internal-separator](Audit/2026-10-28-internal-separator/).
+
 ## Characteristic arrows and Boolean decisions checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from

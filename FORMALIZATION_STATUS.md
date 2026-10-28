@@ -2,8 +2,11 @@
 
 The external diagonal theorem, its global inseparability consequence, the
 Boolean-presentation lemma, and the equivalence between complete represented
-extensions and represented decisions are proved. The full enriched categorical
-theorem and its numerical interpretation are not yet formalized. All declarations below are in the namespace
+extensions and represented decisions are proved. The internal factorization
+`Sep → Z_U` is also proved for explicit internal total-arrow and predicate
+structures, using the actual representation section and separator equalizer.
+The full enriched categorical theorem and its numerical interpretation are not
+yet formalized. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -12,8 +15,10 @@ theorem and its numerical interpretation are not yet formalized. All declaration
 | --- | --- | --- |
 | `eq:integration-rows` | `DiagonalData.Represents` | Both representation equations, with the same total arrow and separate objects `U`, `S`. |
 | `thm:integration-diagonal` | `DiagonalData.integration_diagonal`; `restriction_integration_diagonal` | Proved. The latter uses actual `DomSemilattice` elements and `RestrictionCategory.TotalSubcategory`. |
-| `cor:definability-algebra-inseparability` | `DiagonalData.inseparable`; `restriction_inseparable` | Proved from representation of every complementary pair. Extraction of that representation from an enriched section remains to be implemented. |
-| `thm:internal-inseparability` | `parameterized_separator_factorization` | Conditional bridge proved over an arbitrary finitely complete base. Construction of its parameterized input from the enriched algebra, at the actual object `Sep`, remains open. |
+| `cor:definability-algebra-inseparability` | `DiagonalData.inseparable`; `restriction_inseparable` | Proved from representation of every complementary pair. The internal section now supplies representatives at every parameter; its comparison with the restriction-category presentation remains open. |
+| `eq:v8-complement-pullback` | `InternalLattice.Complements`; `InternalLattice.liftComplement` | Actual pullback, universal complementary pair, and lift at every parameter constructed. |
+| `eq:v8-representation-pullback`; `eq:v8-representation-section` | `InternalDiagonalData.Representation`; `representation_section_iff`; `RepresentationSection.represents` | Actual pullback and section; equivalence with the universal representation equations; generalized representatives derived. The latter two names are in `InternalDiagonalData`. |
+| `thm:internal-inseparability` | `InternalDiagonalData.internal_inseparability`; `no_global_separator`; `separatorIsInitial` | Factorization at the actual `Sep` and both consequences proved for explicit internal total-arrow/predicate data over an arbitrary finitely complete base. Construction of that data from enriched restriction hom-objects remains open. The latter two names are in `InternalDiagonalData`. |
 | `lem:complete-boolean-presentation` | `BooleanPresentation.consistent_iff_mono`; `BooleanPresentation.complete_iff_regularEpi`; `BooleanPresentation.consistent_complete_iff_isIso` | Proved in a regular extensive category, with actual equalizer fibers and the actual bound copairing. |
 | `thm:categorical-essential-incompleteness` | `boolean_quotient_incomplete`; `boolean_quotient_boundCopair_not_regularEpi` | The external quotient argument and its equivalent conclusion about the bound copairing are proved for genuine Boolean presentations, regular epimorphisms, and subobject fibers. The full enriched input construction remains open. |
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `PredicateEmbedding.complete_extensions_and_decisions` | Proved for genuine Boolean quotients and the constructed internal Boolean algebra on `1 + 1`. The second declaration uses the existing `E`-to-`P` embedding followed by the subobject identification. |
@@ -110,28 +115,53 @@ restriction-domain sort `E(S)` distinct from the general-predicate sort `P(S)`.
 The final `no_represented_boolean_decision` result combines this equivalence
 with the existing external diagonal obstruction.
 
-## The enriched bridge still required
+## The internal separator construction and remaining enriched bridge
 
-`parameterized_separator_factorization` proves an actual arrow into the
-equalizer of the two global bounds, with its factorization equation. Its
-inputs include a separator and representative in a category of parameterized
-arrows, and an interpretation of that domain lattice as arrows from the
-parameter object into `E_U`, preserving the two bounds. It assumes neither
-the equality of those bounds nor the requested factorization.
+`InternalLattices.lean` describes a bounded distributive lattice object by its
+lattice structures on all generalized-element hom-sets, natural under
+precomposition. It constructs the representing meet and join arrows and the
+actual complementary-pair pullback. Its two projections are complementary,
+and a complementary pair at every parameter has a lift to this pullback.
 
-To recover `thm:internal-inseparability`, construct these inputs for the
-parameter object `Sep` from the enriched hom-objects, the internal lattice
-objects, their equalizers and pullbacks, and the section `sigma`. In
-particular, `g = rho gamma` must be an arrow with parameter `Sep`.
-Representation merely at global points does not fill this obligation.
-The strict-initial-object consequence is also not yet implemented.
+`InternalCartesian.lean` specifies hom-objects, composition, identity, and
+binary-product operations as morphisms in the base. `CartesianLaws` gives the
+category and binary-product equations at all parameters. `InternalPredicates`
+specifies internal action arrows, bounded lattice preservation, and the
+identity and contravariant composition equations. `InternalPredicateEmbedding`
+has actual monic components; injectivity at arbitrary parameters is derived
+from monicity. None of these fields assumes separator collapse or a
+factorization through the bound equalizer.
 
-The next unresolved categorical construction is the generalized representative
-at the actual object `Sep`, obtained from the enriched section and the
-internal complementary-pair object. This must supply the input to
-`parameterized_separator_factorization` and connect the global representation
-data to the manuscript's functor `J`. The completed Boolean decision
-equivalence does not replace that construction.
+`InternalDiagonalData.diagonal_collapse` proves the diagonal calculation at
+any parameter object. `InternalRepresentation.lean` forms the actual pullback
+`R`, derives `rho` from its section, and proves both representation equations
+after any generalized complementary pair. It also proves the converse:
+the universal representation equations construct a section of `R → C_U`.
+
+The module forms `Sep` as the manuscript's meet-equation equalizer. Its two
+projections give the complementary separator pair. The constructed map
+`separatorDiagonal : Sep → C_U` is `gamma`; composition with `rho` gives the
+required representative. The diagonal calculation equates bottom and top as
+morphisms `Sep → E_U`, giving `separatorFactor : Sep → Z_U` and its equation.
+`no_global_separator` follows from unequal global bounds. `separatorIsInitial`
+proves the strict-initial-object consequence. No well-pointedness, enough
+points, or inference from absence of global points to initiality is used.
+
+The earlier `parameterized_separator_factorization` remains available, but
+the new construction no longer requires its parameterized separator and
+representative to be supplied separately.
+
+The next unresolved lemma is the construction of this **internal total-arrow
+reduct from enriched restriction hom-objects**: define `E_X` as the fixed-point
+equalizer of restriction and `T(X,Y)` as its totality pullback; construct
+composition and chosen binary products on `T`; derive their equations and the
+restriction inverse-image action. The lattice sort `E` in the new internal
+modules is not yet identified with that equalizer. The existing external
+`RestrictionPredicates.lean` construction does not itself establish this
+internal comparison. The global-element comparison must then connect the
+internal section to the existing external `DiagonalData` and to the functor
+`J` and its natural subobject identification. Until these bridges are proved,
+the full enriched categorical theorem is not claimed.
 
 ## Numerical and verification boundaries
 
@@ -143,7 +173,7 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The full verifier builds the combined entry point and audits 47 declarations,
+The full verifier builds the combined entry point and audits 62 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash. No imported source was changed for this milestone.
 Lean compilation and axiom inspection do not establish the open comparisons

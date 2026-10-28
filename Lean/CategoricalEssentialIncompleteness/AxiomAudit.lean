@@ -2,7 +2,7 @@ import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, and Boolean
-presentation and decision results. The verification script rejects any axiom
+presentation, decision, and internal-separator results. The verification script rejects any axiom
 other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 
 #print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
@@ -55,3 +55,19 @@ other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap
 #print axioms CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions
 #print axioms CategoricalEssentialIncompleteness.no_represented_boolean_decision
+
+#print axioms CategoricalEssentialIncompleteness.InternalLattice.complement_isCompl
+#print axioms CategoricalEssentialIncompleteness.InternalLattice.liftComplement_pair
+#print axioms CategoricalEssentialIncompleteness.InternalHom.comp_pair
+#print axioms CategoricalEssentialIncompleteness.InternalPredicateEmbedding.injective
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.pairing_row
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.diagonal_collapse
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.RepresentationSection.represents
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.representation_section_iff
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.separatorPair_separates
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.liftSeparator
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.separator_represented
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.separator_bounds_eq
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.internal_inseparability
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.no_global_separator
+#print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.separatorIsInitial

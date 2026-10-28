@@ -15,8 +15,11 @@ The current Lean checkpoint proves the external diagonal obstruction and its
 inseparability consequence, including their interpretation on actual restriction
 idempotents and total arrows. It also proves the Boolean-quotient incompleteness
 argument for genuine equalizer subobjects from explicit external representation
-data, and a conditional bridge from a parameterized diagonal calculation to an
-equalizer factorization.
+data. For explicit internal total-arrow and predicate structures, it constructs
+the complementary-pair and representation pullbacks, the actual separator
+equalizer, and the factorization `Sep → Z_U`. The representation section
+supplies the varying representative at `Sep`. The no-global-separator and
+strict-initial-object consequences are also proved.
 
 The Boolean-presentation lemma is proved: consistency is equivalent to the
 bound copairing being monic, completeness to its being a regular epimorphism,
@@ -26,8 +29,9 @@ proves that the bound copairing is not a regular epimorphism.
 Characteristic arrows for complementary subobjects and the internal Boolean
 algebra on `1 + 1` are constructed. The equivalence between complete represented
 Boolean extensions and represented decisions is proved, including the
-comparison through the domain-to-predicate embedding. The full enriched
-theorem and numerical interpretation remain incomplete; see
+comparison through the domain-to-predicate embedding. Deriving the internal
+total-arrow structure from the enriched restriction hom-objects remains open.
+The full enriched theorem and numerical interpretation remain incomplete; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -117,14 +121,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 36 diagonal, restriction, internal-bridge, quotient,
-Boolean-presentation, and decision declarations (47 declarations in total). Only
+declarations, and 51 diagonal, restriction, internal, quotient,
+Boolean-presentation, and decision declarations (62 declarations in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 47 axiom audits.
+PASS: project build, dependency pins, source hashes, and 62 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -136,7 +140,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The decision checkpoint evidence is in
+is ignored by Git. The internal-separator checkpoint evidence is in
+[`Audit/2026-10-28-internal-separator/`](Audit/2026-10-28-internal-separator/).
+The decision checkpoint evidence is in
 [`Audit/2026-10-28-decisions/`](Audit/2026-10-28-decisions/).
 The Boolean-presentation checkpoint evidence is in
 [`Audit/2026-10-28-boolean-presentations/`](Audit/2026-10-28-boolean-presentations/).
