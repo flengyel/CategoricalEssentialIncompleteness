@@ -1,9 +1,10 @@
 import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
-nine proved solution declarations, and the diagonal, quotient, and Boolean
-presentation, decision, and internal-separator results. The verification script rejects any axiom
-other than `propext`, `Classical.choice`, and `Quot.sound`. -/
+nine proved solution declarations, and the diagonal, quotient, Boolean
+presentation, decision, internal-separator, and enriched-restriction results.
+The verification script rejects any axiom other than `propext`,
+`Classical.choice`, and `Quot.sound`. -/
 
 #print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
 #print axioms CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring
@@ -71,3 +72,26 @@ other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.internal_inseparability
 #print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.no_global_separator
 #print axioms CategoricalEssentialIncompleteness.InternalDiagonalData.separatorIsInitial
+
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.parameterizedRestriction
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.restrict_restrict
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainPointsEquiv
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.totalPointsEquiv
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.Products.restrict_pair
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.Products.pair_total
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom_cartesian
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainAction_apply
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.precomp_domainInverse
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_comp
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domain_le_iff
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domain_bounds_ne
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_inf
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_top
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_bot
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainPredicates
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_internal_inseparability
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_no_global_separator
+
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boolean_quotient_incomplete
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boundCopair_not_regularEpi

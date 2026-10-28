@@ -1,0 +1,217 @@
+'CategoricalEssentialIncompleteness.arithmeticRecursionCategory' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.obstruction_four_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.pi_one_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.generated_congruence_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.weak_totality_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.generated_quotient_partial_recursive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.ComplementaryPair.eq_of_le' depends on axioms: [propext, Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.diagonal_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.integration_diagonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.inseparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.domainInverseImage_meet' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.restrictionPredicates' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.totalBinaryProductLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.restriction_integration_diagonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.restriction_inseparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.parameterized_separator_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.no_global_point_of_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanPresentation.quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boundFiber_le_postcomp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.represented_extension_incomplete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boolean_quotient_incomplete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.PresentationLemmas.image_copair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.PresentationLemmas.pullback_le_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.PresentationLemmas.mono_copair_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanPresentation.consistent_iff_mono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.Two.fibersIsColimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.SubobjectPartition.cover_isIso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_isPullback' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_negative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_unique_of_fibers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boundFiber_mono_postcomp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.twoBooleanObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanObject.boundMorphism' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanMorphism.toTwo_isSplitEpi' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.complete_extensions_and_decisions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.no_represented_boolean_decision' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalLattice.complement_isCompl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalLattice.liftComplement_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalHom.comp_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.InternalPredicateEmbedding.injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.pairing_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.diagonal_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.RepresentationSection.represents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.representation_section_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.separatorPair_separates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.liftSeparator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.separator_represented' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.separator_bounds_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.internal_inseparability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.no_global_separator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.InternalDiagonalData.separatorIsInitial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.parameterizedRestriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.restrict_restrict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainPointsEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.totalPointsEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.Products.restrict_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.Products.pair_total' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom_cartesian' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainAction_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.precomp_domainInverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domain_le_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domain_bounds_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_inf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_bot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.domainPredicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_internal_inseparability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_no_global_separator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boolean_quotient_incomplete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boundCopair_not_regularEpi' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

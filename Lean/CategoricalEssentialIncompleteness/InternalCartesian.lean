@@ -10,8 +10,9 @@ import CategoricalEssentialIncompleteness.InternalLattices
 
 All operations are morphisms in the base. Their equations are stated at every
 parameter object, so they do not require the terminal object to be a generator.
-This is the total-arrow reduct needed by the internal diagonal argument. Its
-construction from enriched restriction hom-objects is a separate obligation.
+This is the total-arrow reduct needed by the internal diagonal argument.
+`EnrichedTotals` constructs it from enriched restriction hom-objects, and
+`EnrichedDomains` constructs its domain-predicate action.
 -/
 
 set_option autoImplicit false

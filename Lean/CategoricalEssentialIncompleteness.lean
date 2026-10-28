@@ -11,6 +11,7 @@ import CategoricalEssentialIncompleteness.BooleanQuotients
 import CategoricalEssentialIncompleteness.BooleanPresentations
 import CategoricalEssentialIncompleteness.BooleanDecisions
 import CategoricalEssentialIncompleteness.InternalRepresentation
+import CategoricalEssentialIncompleteness.EnrichedQuotients
 
 /-!
 # Categorical essential incompleteness: diagonal and quotient arguments
@@ -23,11 +24,13 @@ interpretation, a parameterized equalizer bridge, and the Boolean-quotient
 argument, including the comparison between bound fibers and the bound
 copairing. It also constructs characteristic arrows and the internal Boolean
 algebra on `1 + 1`, and proves the equivalence of complete represented Boolean
-extensions with represented decisions. For explicit internal total-arrow and
-predicate structures, it constructs the representation and separator objects
-and proves the factorization of the actual separator through the equalizer of
-the bounds. Deriving that internal structure from enriched restriction
-hom-objects, and the full enriched and numerical comparisons, remain separate
+extensions with represented decisions. It constructs the domain equalizers,
+totality pullbacks, internal total-arrow operations, and domain inverse image
+from enriched restriction hom-objects. The representation section yields the
+factorization of the actual separator through the equalizer of the bounds.
+It also proves the Boolean-quotient obstruction directly from that section
+and an explicit subobject identification at the sentence object. The global
+comparison along `J` and the numerical interpretation remain separate
 obligations.
 -/
 

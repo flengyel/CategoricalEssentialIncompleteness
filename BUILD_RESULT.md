@@ -1,5 +1,49 @@
 # Categorical essential incompleteness: build result
 
+## Enriched restriction checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`ea86f7d8689bcee9594ea11bd976d2265d4b76d3`. The remote `main` was inspected
+before editing. The prior transient checkout was unavailable; its text sources
+were restored at that exact revision and checked against their Git blob hashes.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1900 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 83 declarations, retaining every
+  previous check. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- All four new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- The scan of all eighteen project Lean files found no `sorry`, `admit`,
+  `axiom`, or `opaque` declarations. No imported source was changed.
+
+`EnrichedRestriction.lean` constructs the actual domain equalizers and
+totality pullbacks and proves their generalized-point descriptions.
+`EnrichedTotals.lean` derives internal total composition and binary products
+from the restriction-product equations. `EnrichedDomains.lean` constructs
+the partial and total domain inverse-image actions, proves the required
+structural laws, and instantiates the internal separator factorization. It
+also connects nontriviality of the enriched identity with inequality of the
+global domain bounds.
+
+`EnrichedQuotients.lean` proves incompleteness of consistent represented
+Boolean quotients directly from the internal representation section and an
+explicit subobject identification at `S`. Its equivalent conclusion excludes
+the bound copairing from being a regular epimorphism. There is no independent
+external representation premise in these two new quotient results.
+
+The remaining construction is the global total-arrow and predicate comparison,
+including the natural identification along `J`. The fully packaged enriched
+theorem and numerical/arithmetic interpretation are not claimed. See
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for the exact boundary.
+The source toolchain and imported provenance are unchanged. The documented
+hosted executable-path restriction occurred and its adapter was used;
+Palomar Comparator, NanoDa, and con-ron were not run.
+
+Evidence is retained in
+[Audit/2026-10-28-enriched-restriction](Audit/2026-10-28-enriched-restriction/).
+
 ## Internal separator checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
