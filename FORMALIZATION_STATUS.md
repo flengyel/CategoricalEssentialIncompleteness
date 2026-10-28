@@ -12,7 +12,10 @@ proved. The categorical theorem is now stated along `J : Tot(K₀) → C`, with
 actual restriction idempotents and a natural subobject identification. It uses
 the restriction, lattice, predicate, and section data of a definability algebra;
 the additional recursion and indexing data are unused. The numerical
-interpretation remains open. All declarations below are in the namespace
+restriction category, PER category, full faithful functor, domain/support
+comparison, support subobjects, pullbacks, and c.e. joins are constructed.
+The numerical separator equivalence is proved; the remaining numerical
+structure and arithmetic interpretation are open. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -35,7 +38,12 @@ interpretation remains open. All declarations below are in the namespace
 | `thm:categorical-essential-incompleteness` | `EnrichedRestriction.categorical_essential_incompleteness`; `categorical_boundCopair_not_regularEpi` | Both conclusions proved along `J : Tot(K₀) → C`, from the internal section, natural predicate identification, and ordinary representing restriction idempotents. Both names are in `EnrichedRestriction`; the precise input scope is described below. |
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for genuine Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
 | Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
-| `thm:integration-essential-equivalence` | — | Open; needs the numerical recursion category, PER category, and syntax/provability comparison. |
+| Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. Products and the recursion-category instance remain open. |
+| PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and quotient tracker arrows constructed. The functor is full and faithful; product preservation and regular/extensive structure remain open. |
+| Support order and inverse image in `lem:integration-numerical-subobjects` | `NumericalPER.supportSubobject_le_iff`; `supportSubobject_eq_iff`; `inverse_isPullback` | Actual subobjects and the full pullback universal property proved for arbitrary supports. All names are in `NumericalPER`. |
+| C.e. joins and the image of `j` in `lem:integration-numerical-subobjects` | `NumericalPER.enumerable_union_isLUB`; `Numerical.domainSubobject`; `Numerical.supportSubobject_in_range_iff` | The union is least among all categorical upper bounds. The domain map is an order embedding whose image among support inclusions is exactly c.e. supports. Its full bounded-lattice packaging and the Boolean-fiber assertions remain open. |
+| `thm:integration-essential-equivalence` (ii) | `Numerical.no_separator_iff_recursively_inseparable` | The support statement is proved for arbitrary disjoint supports, with genuine PER subobject inequalities and actual numerical restriction domains. |
+| `thm:integration-essential-equivalence` (i), (iii), and its theory instance | — | Open; needs the remaining numerical/PER structure and the syntax/provability comparison. |
 | `prop:numerical-boolean-extensions` | — | Open. |
 | `cor:arithmetic-representation-incompleteness` | — | Open; the imported arithmetic recursion-category instance is not this numerical comparison. |
 
@@ -259,6 +267,57 @@ A single Lean record for the entire definability algebra, including its
 recursion and indexing data, and a comparison with Mathlib's bundled enriched
 category interface are not provided.
 
+## Numerical constructions
+
+`NumericalCategory.lean` uses the manuscript's infinite recursive subsets of
+`ℕ` as objects. An arrow is a Mathlib partial recursive function on `ℕ`, with
+domain contained in the source and values in the target. Equality is equality
+of partial functions. Composition uses partial bind; restriction is partial
+identity on the domain. The category and four restriction laws, zero morphisms,
+totality characterization, and nontriviality at `ℕ` are proved.
+
+`NumericalDomains.lean` identifies genuine restriction idempotents with c.e.
+subsets of the source by an order isomorphism. The bounded distributive lattice
+has intersection and union as operations; its order agrees with restriction
+composition, and its bounds have arrows zero and identity. Partial inverse
+image has the support `∃ m ∈ f(n), m ∈ A`. Post's theorem supplies the recursive
+decision procedure from complementary c.e. supports. Conversely a recursive
+set and its complement give actual complementary restriction idempotents.
+
+`NumericalPER.lean` constructs arbitrary symmetric transitive relations on
+`ℕ` and their category. A tracker is partial recursive, defined on every
+supported input, and respects the two relations. Arrow equality is target
+relatedness of the outputs at every supported input. The tracker equivalence,
+compatibility of composition, and category laws are proved. Neither the PER
+relation nor its support is assumed c.e.
+
+`NumericalEmbedding.lean` defines `J` on the genuine wide subcategory of total
+numerical arrows. It preserves identities and composition and is full and
+faithful. The fullness proof restricts a tracker to the recursive source,
+giving a partial map undefined elsewhere. Total arrows on `ℕ` are also compared
+in both directions with ordinary total recursive functions.
+
+`NumericalSubobjects.lean` constructs the actual monomorphism `D_A → D_X` for
+every inclusion `A ⊆ X`, and proves that its subobject order is precisely
+support inclusion. The inverse-image square has a universal lift for arbitrary
+PER sources and a uniqueness proof. Its support agrees with the numerical
+restriction inverse image along total arrows. `domainSubobject` is an order
+embedding, and a support inclusion belongs to its image exactly when its
+support is c.e.
+
+`NumericalUnions.lean` dovetails the two c.e. support tests using Mathlib's
+partial-recursive merge construction. This supplies a factorization through
+every common categorical upper bound, proving that the support union is the
+join among all PER subobjects. The conclusion is restricted to c.e. supports;
+arbitrary support inclusions are not identified with the full subobject lattice.
+
+`NumericalInseparability.lean` compares the actual subobject separator
+inequalities with a recursive separating set. It proves the absence-of-separator
+equivalence for disjoint supports without assuming that either distinguished
+support is c.e. This supplies the support argument of
+`thm:integration-essential-equivalence` (ii). It does not yet instantiate the
+supports with arithmetic theorem and refutation sets.
+
 ## Numerical and verification boundaries
 
 No equivalence between the imported typed arithmetic program category and the
@@ -269,13 +328,16 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next unresolved mathematical construction is the **numerical presentation**:
-construct its restriction category and theorem/refutation predicate functor,
-then prove the comparisons required by `thm:integration-essential-equivalence`
-and `prop:numerical-boolean-extensions`. The imported typed arithmetic category
-cannot supply these comparisons merely by compiling.
+The next unresolved construction is **binary products and their preservation
+by `Numerical.toPER`**, using recursive tuple coding. The remaining PER finite
+limits, regular images, coproducts, and extensivity must then be constructed,
+and the numerical domain map packaged as the required natural bounded lattice
+map. The Turing/indexing and Set-enrichment data, effective syntax, numeral
+substitution, Lindenbaum Boolean presentation, and theory-extension quotients
+also remain open. They are needed for `thm:integration-essential-equivalence`
+(i) and (iii), `prop:numerical-boolean-extensions`, and the arithmetic corollary.
 
-The full verifier builds the combined entry point and audits 113 declarations,
+The full verifier builds the combined entry point and audits 152 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash. No imported source was changed for this milestone.
 Lean compilation and axiom inspection do not establish the open comparisons

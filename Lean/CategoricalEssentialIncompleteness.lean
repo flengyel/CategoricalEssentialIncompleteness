@@ -13,6 +13,7 @@ import CategoricalEssentialIncompleteness.BooleanDecisions
 import CategoricalEssentialIncompleteness.InternalRepresentation
 import CategoricalEssentialIncompleteness.EnrichedQuotients
 import CategoricalEssentialIncompleteness.CategoricalTheorem
+import CategoricalEssentialIncompleteness.NumericalInseparability
 
 /-!
 # Categorical essential incompleteness: diagonal and quotient arguments
@@ -35,7 +36,12 @@ identification along `J` then gives categorical essential incompleteness for
 genuine Boolean quotients and the corresponding decision obstruction.
 The proof uses the restriction, lattice, predicate, and section data;
 the additional recursion and indexing structure is unused. The numerical
-interpretation remains a separate obligation.
+restriction category and PER category are constructed, with a full faithful
+functor on total arrows. Restriction domains are c.e. supports; complementary
+domains on ℕ are recursive sets. Actual support subobjects, their pullbacks,
+and c.e. joins give the equivalence between absence of domain separators and
+recursive inseparability. Numerical products, the remaining PER structure,
+and the arithmetic syntax and provability comparisons remain open.
 -/
 
 set_option autoImplicit false

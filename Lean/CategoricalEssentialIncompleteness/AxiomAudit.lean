@@ -3,7 +3,7 @@ import CategoricalEssentialIncompleteness
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, Boolean
 presentation, decision, internal-separator, enriched-restriction, global
-comparison, and categorical essential-incompleteness results.
+comparison, categorical essential-incompleteness, and numerical support results.
 The verification script rejects any axiom other than `propext`,
 `Classical.choice`, and `Quot.sound`. -/
 
@@ -127,3 +127,43 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_essential_incompleteness
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_boundCopair_not_regularEpi
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.global_no_boolean_decision
+
+#print axioms CategoricalEssentialIncompleteness.supportIdentity_partrec
+#print axioms CategoricalEssentialIncompleteness.Numerical.numericalCategory
+#print axioms CategoricalEssentialIncompleteness.Numerical.numericalRestriction
+#print axioms CategoricalEssentialIncompleteness.Numerical.total_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.numericalZeroMorphisms
+#print axioms CategoricalEssentialIncompleteness.Numerical.restrict_zero
+#print axioms CategoricalEssentialIncompleteness.Numerical.nat_nontrivial
+#print axioms CategoricalEssentialIncompleteness.re_inter
+#print axioms CategoricalEssentialIncompleteness.re_union
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSupportOrderIso
+#print axioms CategoricalEssentialIncompleteness.Numerical.Domain.le_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.Domain.inf_hom
+#print axioms CategoricalEssentialIncompleteness.Numerical.Domain.top_hom
+#print axioms CategoricalEssentialIncompleteness.Numerical.Domain.bot_hom
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_support
+#print axioms CategoricalEssentialIncompleteness.Numerical.complementary_support_recursive
+#print axioms CategoricalEssentialIncompleteness.Numerical.recursive_iff_complemented_support
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.perCategory
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.ofTracker_eq_iff
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.discrete_arrow_eq_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.toPER
+#print axioms CategoricalEssentialIncompleteness.Numerical.toPER_faithful
+#print axioms CategoricalEssentialIncompleteness.Numerical.toPER_full
+#print axioms CategoricalEssentialIncompleteness.Numerical.ofDiscreteTracker_total
+#print axioms CategoricalEssentialIncompleteness.Numerical.natFunction_computable
+#print axioms CategoricalEssentialIncompleteness.Numerical.natArrow_natFunction
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.inclusion_mono
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_le_iff
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_eq_iff
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.inverse_isPullback
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject
+#print axioms CategoricalEssentialIncompleteness.Numerical.supportSubobject_in_range_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_support_comparison
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.enumerable_union_lift
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.enumerable_union_isLUB
+#print axioms CategoricalEssentialIncompleteness.Numerical.complementary_support_compl
+#print axioms CategoricalEssentialIncompleteness.Numerical.separatesSupports_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.exists_separator_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.no_separator_iff_recursively_inseparable

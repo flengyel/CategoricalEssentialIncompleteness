@@ -1,0 +1,929 @@
+{
+  "success": true,
+  "commands": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05,
+      "log": "build-logs/lean-version.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 4.48,
+      "log": "build-logs/build.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.19,
+      "log": "build-logs/axiom-audit.log"
+    }
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "local_patches": [
+    {
+      "path": "Lean/FailureOfComposition/Palomar/EvaluatorBridge.lean",
+      "source_git_blob": "21f0dc59501748f46cca38abbd534f6691c23626",
+      "patched_git_blob": "a8c9bed6115d8e1e44da9555eee588f2f1317670",
+      "reason": "Use the proved eventualGraph_val interface instead of unfolding the previous mkSigma representation. The theorem statement is unchanged."
+    },
+    {
+      "path": "Lean/lake-manifest.json",
+      "source_git_blob": "a5ffe3288c09401adf74fc6f2c93e94d2dcf70af",
+      "patched_git_blob": "489f82649891d939c7e7652afb5f5f703d73a118",
+      "reason": "Rename the root Lake package to CategoricalEssentialIncompleteness; dependency revisions are unchanged."
+    }
+  ],
+  "source_files_verified": 356,
+  "source_mismatches": [],
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "dependencies": [
+    {
+      "name": "Foundation",
+      "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+      "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d"
+    },
+    {
+      "name": "mathlib",
+      "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+    },
+    {
+      "name": "Forgive",
+      "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+      "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055"
+    },
+    {
+      "name": "doc-gen4",
+      "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+      "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772"
+    },
+    {
+      "name": "plausible",
+      "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912"
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "actual": "95e037bfdc31d3916ac615446847fb01960e2719"
+    },
+    {
+      "name": "importGraph",
+      "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f"
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
+    },
+    {
+      "name": "aesop",
+      "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "actual": "75d936c7af167cc93fac0d31237682fc2204591d"
+    },
+    {
+      "name": "Qq",
+      "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334"
+    },
+    {
+      "name": "batteries",
+      "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42"
+    },
+    {
+      "name": "Cli",
+      "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "actual": "2842b9871b04862f944c032e34052cb9448ccb71"
+    },
+    {
+      "name": "leansqlite",
+      "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+      "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281"
+    },
+    {
+      "name": "UnicodeBasic",
+      "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+      "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4"
+    },
+    {
+      "name": "BibtexQuery",
+      "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+      "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc"
+    },
+    {
+      "name": "MD4Lean",
+      "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67"
+    }
+  ],
+  "axioms": {
+    "CategoricalEssentialIncompleteness.arithmeticRecursionCategory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.obstruction_four_properties": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.no_quotient_composition_productive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.no_quotient_composition_godel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.pi_one_characterization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.generated_congruence_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.weak_totality_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.range_counterexample_godel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.range_counterexample_productive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FailureOfComposition.Palomar.generated_quotient_partial_recursive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.ComplementaryPair.eq_of_le": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.DiagonalData.diagonal_collapse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.DiagonalData.integration_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.DiagonalData.inseparable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.domainInverseImage_meet": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.restrictionPredicates": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.totalBinaryProductLimit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.restriction_integration_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.restriction_inseparable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.parameterized_separator_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.no_global_point_of_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanPresentation.quotient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.boundFiber_le_postcomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.represented_extension_incomplete": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.boolean_quotient_incomplete": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PresentationLemmas.image_copair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PresentationLemmas.pullback_le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PresentationLemmas.mono_copair_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanPresentation.consistent_iff_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Two.fibersIsColimit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectPartition.cover_isIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_isPullback": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_unique_of_fibers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.boundFiber_mono_postcomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.twoBooleanObject": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanObject.boundMorphism": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.BooleanMorphism.toTwo_isSplitEpi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.complete_extensions_and_decisions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.no_represented_boolean_decision": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalLattice.complement_isCompl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalLattice.liftComplement_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalHom.comp_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalPredicateEmbedding.injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.pairing_row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.diagonal_collapse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.RepresentationSection.represents": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.representation_section_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separatorPair_separates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.liftSeparator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separator_represented": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separator_bounds_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.internal_inseparability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.no_global_separator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.separatorIsInitial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.parameterizedRestriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.restrict_restrict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainPointsEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.totalPointsEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.Products.restrict_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.Products.pair_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.totalHom_cartesian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainAction_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.precomp_domainInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domain_le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domain_bounds_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_inf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainInverse_bot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainPredicates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_internal_inseparability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_no_global_separator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boolean_quotient_incomplete": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.enriched_boundCopair_not_regularEpi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalHom.globalBinaryFanIsLimit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalHom.globalProductIso_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalPredicates.globalPredicates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalPredicateEmbedding.globalEmbedding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalTotalEquivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalTotalHasBinaryProducts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalTotalPreservesBinaryProducts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.parameterizedZeroMorphisms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.global_nontrivial_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomainEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomain_idem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomainInverse_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomainOrderIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomain_le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomain_inf_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomain_top_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.globalDomain_bot_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.global_represents_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.global_representation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.InternalDiagonalData.global_inseparable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.PredicateLattice.presheaf": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.SubobjectIdentification.presheafIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.predicatesOnTotals": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.global_complete_extensions_and_decisions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_essential_incompleteness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_boundCopair_not_regularEpi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.global_no_boolean_decision": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.supportIdentity_partrec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.numericalCategory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.numericalRestriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.total_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.numericalZeroMorphisms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.restrict_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.nat_nontrivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.re_inter": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.re_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.domainSupportOrderIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.Domain.le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.Domain.inf_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.Domain.top_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.Domain.bot_hom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.domainInverse_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.complementary_support_recursive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.recursive_iff_complemented_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.perCategory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.ofTracker_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.discrete_arrow_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.toPER": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.toPER_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.toPER_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.ofDiscreteTracker_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.natFunction_computable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.natArrow_natFunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.inclusion_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.inverse_isPullback": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.domainSubobject": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.supportSubobject_in_range_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.domainInverse_support_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.enumerable_union_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.NumericalPER.enumerable_union_isLUB": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.complementary_support_compl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.separatesSupports_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.exists_separator_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.Numerical.no_separator_iff_recursively_inseparable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "integration_sha256": {
+    "Lean/CategoricalEssentialIncompleteness.lean": "c2fdf228fa107494fdac273e99b26e84de5d090c3dba597ddbc3863a6deac6e1",
+    "Lean/lakefile.toml": "503bcad17e7002bfe33dfface892eaee360b63f45042474d6e1bdc9c30bdc9f9",
+    "Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean": "a60ce3e26d497f61689ff73c1cf5d7037cfc6052bc8787a791ffbf85cd8062a2",
+    "Lean/CategoricalEssentialIncompleteness/BooleanDecisions.lean": "ccded11f529423bdc0a05c43b5ca28e8fb5e905e7dce1fd9706ae0f239a5a02f",
+    "Lean/CategoricalEssentialIncompleteness/BooleanPresentations.lean": "a11eba45bd86ec044beb14b8ca77b5caa8a61ce99fc040d98f5f04b8a5651552",
+    "Lean/CategoricalEssentialIncompleteness/BooleanQuotients.lean": "4a17be118634bf7dfd837f14b6fdcd7be88054f6bf7908d9f6ba7176c210c26b",
+    "Lean/CategoricalEssentialIncompleteness/CategoricalTheorem.lean": "ec322f799608a97e8777c9191b85404670ec1676064aa51a6f6229346560d4c2",
+    "Lean/CategoricalEssentialIncompleteness/CharacteristicArrows.lean": "76082b40ef3d34fa052b411dc67f629ffa3b469dbbfcd88d59eea621fedaad16",
+    "Lean/CategoricalEssentialIncompleteness/Diagonal.lean": "14e68939090094e87023ec20fa234511ffee67edab3e240328a2be0ddeb410db",
+    "Lean/CategoricalEssentialIncompleteness/EnrichedDomains.lean": "8d9c4301b33faa84e8715fca37e224a8c0b7e314a4edf7d53d7c27fa072b67f7",
+    "Lean/CategoricalEssentialIncompleteness/EnrichedQuotients.lean": "7182cf436863f3e0d99d9dce4a9160393f4f287aa71e1cc63e6359d71faffd12",
+    "Lean/CategoricalEssentialIncompleteness/EnrichedRestriction.lean": "9065790e0f4bdecbb91465941b19710f2eda7e19e82dd7bfadbfcd03e6137a45",
+    "Lean/CategoricalEssentialIncompleteness/EnrichedTotals.lean": "ce6d7ed89c58a0a7af2312815cbbc446f58097098c4781aeefa4e4744720b002",
+    "Lean/CategoricalEssentialIncompleteness/GlobalCartesian.lean": "effa35c40dab50ded97d090264d30bc1ae01cc229af38de9def9435a3895c30d",
+    "Lean/CategoricalEssentialIncompleteness/GlobalDomains.lean": "fed4bf3bf634aa67da76404e96546626011bb1864917aaefce6e2dda1a49bc5c",
+    "Lean/CategoricalEssentialIncompleteness/GlobalRepresentation.lean": "440f7a578b2ed44266a8bb08159618cae67252ba6ec92ab17b95d7c4737207d3",
+    "Lean/CategoricalEssentialIncompleteness/GlobalSubobjects.lean": "cffb389617ba61685abaefa33280a7ed7bdcf69378afd22e9252746607f2de79",
+    "Lean/CategoricalEssentialIncompleteness/GlobalTotals.lean": "870f66637183ddef13615b0f0df29a879a1fd084bf91f2ce558f147259f5761e",
+    "Lean/CategoricalEssentialIncompleteness/InternalBridge.lean": "15e3369c545749696424c5fa86d7dc62d1dab00e3db37ee45e23832cd3e834cf",
+    "Lean/CategoricalEssentialIncompleteness/InternalCartesian.lean": "2b1f0ec100633f43246731c87a7f7ea7e4b9f670baa7d64860e7cb1128ed9c92",
+    "Lean/CategoricalEssentialIncompleteness/InternalDiagonal.lean": "f1fc5a13f5d18957ca90b44e9c9b426e778db64c0730697404cf027d5a996d00",
+    "Lean/CategoricalEssentialIncompleteness/InternalLattices.lean": "c99e482a7543ecad43a9d6e4b9233170c5081410ad2bf53a5c5cc51d19d385f4",
+    "Lean/CategoricalEssentialIncompleteness/InternalRepresentation.lean": "1fdeb0653e47a809fb9de2d84deb4bfbe09af7b8ec5858c63cdf0a84f3929caf",
+    "Lean/CategoricalEssentialIncompleteness/NumericalCategory.lean": "7e2262f9c8bc54ec8ad003fe0217e40af180374516abf73593903f14cb6bfb8f",
+    "Lean/CategoricalEssentialIncompleteness/NumericalDomains.lean": "b7a366bfd8de4a4e1704948bfd27cbfe63cc6f1143c50a8dc16b4c84895b3df2",
+    "Lean/CategoricalEssentialIncompleteness/NumericalEmbedding.lean": "2ba1145e6f4d4c48488c2bd6cb1a222280ee00de46c484c05a3f11fc57046dda",
+    "Lean/CategoricalEssentialIncompleteness/NumericalInseparability.lean": "04ff940be2925d4a993c7aa59f879cdf080061b94c3a333d19fba9504807c236",
+    "Lean/CategoricalEssentialIncompleteness/NumericalPER.lean": "c72b894b7830c3fe43f3cc76e49f80c30cc8e42c56d9cb44066c014245be6c6a",
+    "Lean/CategoricalEssentialIncompleteness/NumericalSubobjects.lean": "2ce4d5d89526c95e5a5cb3beddeffebd5e83527d3ed2e359e7b1150a11925985",
+    "Lean/CategoricalEssentialIncompleteness/NumericalUnions.lean": "1c77b61b11439ae950e8950522ed4ec88124dce48a16c2c14ee3f084ab302071",
+    "Lean/CategoricalEssentialIncompleteness/RestrictionPredicates.lean": "5bd5ffdeef949091dbffaa12e25b5ee16d997c59d2bd854bf30c21fef5231ec6",
+    "Lean/CategoricalEssentialIncompleteness/TwoBoolean.lean": "ae65b20f04d20730cb7bd83400aa0fca357132d945efb8aac38f380b181222f3"
+  }
+}

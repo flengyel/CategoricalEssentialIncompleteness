@@ -1,0 +1,35 @@
+CategoricalEssentialIncompleteness.Numerical.numericalRestriction :
+  CategoryTheory.RestrictionCategory CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.domainSupportOrderIso (X : CategoricalEssentialIncompleteness.Numerical) :
+  X.Domain ≃o X.EnumerableSubset
+CategoricalEssentialIncompleteness.Numerical.recursive_iff_complemented_support (A : Set ℕ) :
+  (ComputablePred fun x => x ∈ A) ↔ ∃ a, a.pos.support = A
+CategoricalEssentialIncompleteness.NumericalPER.perCategory :
+  CategoryTheory.Category.{0, 0} CategoricalEssentialIncompleteness.NumericalPER
+CategoricalEssentialIncompleteness.Numerical.toPER_full : CategoricalEssentialIncompleteness.Numerical.toPER.Full
+CategoricalEssentialIncompleteness.Numerical.toPER_faithful :
+  CategoricalEssentialIncompleteness.Numerical.toPER.Faithful
+CategoricalEssentialIncompleteness.NumericalPER.inverse_isPullback {X Y A : Set ℕ}
+  (f :
+    (CategoricalEssentialIncompleteness.NumericalPER.discrete X).Tracker
+      (CategoricalEssentialIncompleteness.NumericalPER.discrete Y))
+  (hA : A ⊆ Y) :
+  CategoryTheory.IsPullback (CategoricalEssentialIncompleteness.NumericalPER.inclusion ⋯)
+    (CategoricalEssentialIncompleteness.NumericalPER.ofTracker
+      (CategoricalEssentialIncompleteness.NumericalPER.inverseTracker f))
+    (CategoricalEssentialIncompleteness.NumericalPER.ofTracker f)
+    (CategoricalEssentialIncompleteness.NumericalPER.inclusion hA)
+CategoricalEssentialIncompleteness.Numerical.supportSubobject_in_range_iff
+  {X : CategoricalEssentialIncompleteness.Numerical} (A : Set ℕ) (hA : A ⊆ X.carrier) :
+  CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A hA ∈ Set.range ⇑X.domainSubobject ↔
+    REPred fun x => x ∈ A
+CategoricalEssentialIncompleteness.NumericalPER.enumerable_union_isLUB {A B X : Set ℕ} (hA : REPred fun x => x ∈ A)
+  (hB : REPred fun x => x ∈ B) (hAX : A ⊆ X) (hBX : B ⊆ X) :
+  IsLUB
+    {CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A hAX,
+      CategoricalEssentialIncompleteness.NumericalPER.supportSubobject B hBX}
+    (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject (A ∪ B) ⋯)
+CategoricalEssentialIncompleteness.Numerical.no_separator_iff_recursively_inseparable (A B : Set ℕ)
+  (hAB : Disjoint A B) :
+  (¬∃ a, CategoricalEssentialIncompleteness.Numerical.SeparatesSupports A B a) ↔
+    CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable A B

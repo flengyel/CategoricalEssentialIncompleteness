@@ -1,5 +1,45 @@
 # Categorical essential incompleteness: build result
 
+## Numerical categories and support comparison checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`c56b783a858087f3b77f6420fd2469e9f28094e6`. The checkout was clean and the
+remote `main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1913 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for 152 declarations, retaining all 113
+  previous audits. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- All seven new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- No imported source or dependency pin was changed.
+
+The checkpoint constructs the numerical restriction category, including zero
+morphisms and nontriviality, and identifies its domain lattice with c.e.
+supports. Complementary domains on `ℕ` are exactly recursive sets. The
+arbitrary-PER category uses quotient tracker arrows, and the functor from
+total numerical arrows to equality PERs is proved full and faithful.
+
+Support inclusions are genuine categorical subobjects. Their order and
+equality reflect support inclusion and equality. The inverse-image square
+satisfies the full pullback universal property and agrees with restriction
+inverse image. Dovetailing proves that c.e. support unions are least upper
+bounds among all categorical subobjects. For disjoint supports, absence of a
+complementary-domain separator is equivalent to recursive inseparability.
+
+This establishes the support comparison in part (ii) of
+`thm:integration-essential-equivalence`. The next construction is numerical
+binary products and their preservation by `J`. Remaining PER regular/extensive
+structure, the bounded-lattice packaging, and the syntax/provability and
+arithmetic comparisons are open; see [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md).
+
+The documented hosted executable-path adapter was used. Ordinary Debian/WSL2
+builds do not need it. Palomar Comparator, NanoDa, and con-ron were not run.
+Evidence is retained in
+[Audit/2026-10-28-numerical-supports](Audit/2026-10-28-numerical-supports/).
+
 ## Global comparison and categorical theorem checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from

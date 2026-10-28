@@ -38,7 +38,19 @@ comparison through the domain-to-predicate embedding and the functor `J`.
 The categorical proof is stated using the restriction, lattice, predicate,
 and section data of a definability algebra. Its additional recursion and
 indexing structure is unused; a single record bundling all of that structure
-is not yet provided. The numerical and arithmetic interpretation remains open; see
+is not yet provided.
+
+The numerical restriction category and the category of arbitrary PERs on
+`ℕ` are now constructed. The functor from total numerical arrows to equality
+PERs is full and faithful. Restriction domains correspond to c.e. supports,
+and complementary domains on `ℕ` correspond exactly to recursive sets.
+Support inclusions are genuine subobjects with the stated order and pullback
+properties; dovetailing proves that c.e. unions are their categorical joins.
+For disjoint supports, absence of a complementary-domain separator is
+equivalent to recursive inseparability.
+
+Numerical products and their preservation, the remaining regular extensive
+PER structure, and the arithmetic syntax/provability comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -128,14 +140,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 102 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, and decision declarations (113 in total). Only
+declarations, and 141 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (152 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 113 axiom audits.
+PASS: project build, dependency pins, source hashes, and 152 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -147,7 +159,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The global-comparison and categorical-theorem evidence is in
+is ignored by Git. The numerical-category and support-comparison evidence is in
+[`Audit/2026-10-28-numerical-supports/`](Audit/2026-10-28-numerical-supports/).
+The global-comparison and categorical-theorem evidence is in
 [`Audit/2026-10-28-global-comparison/`](Audit/2026-10-28-global-comparison/).
 The enriched-restriction checkpoint evidence is in
 [`Audit/2026-10-28-enriched-restriction/`](Audit/2026-10-28-enriched-restriction/).
