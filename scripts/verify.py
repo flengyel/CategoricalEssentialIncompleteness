@@ -43,6 +43,13 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.boundFiber_le_postcomp",
     "CategoricalEssentialIncompleteness.represented_extension_incomplete",
     "CategoricalEssentialIncompleteness.boolean_quotient_incomplete",
+    "CategoricalEssentialIncompleteness.PresentationLemmas.image_copair",
+    "CategoricalEssentialIncompleteness.PresentationLemmas.pullback_le_iff",
+    "CategoricalEssentialIncompleteness.PresentationLemmas.mono_copair_iff",
+    "CategoricalEssentialIncompleteness.BooleanPresentation.consistent_iff_mono",
+    "CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi",
+    "CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso",
+    "CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi",
 ]
 
 

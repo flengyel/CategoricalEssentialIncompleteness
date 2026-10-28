@@ -1,7 +1,8 @@
 import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
-nine proved solution declarations, and the diagonal and quotient results. The verification script rejects any axiom
+nine proved solution declarations, and the diagonal, quotient, and Boolean
+presentation results. The verification script rejects any axiom
 other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 
 #print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
@@ -31,3 +32,11 @@ other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms CategoricalEssentialIncompleteness.boundFiber_le_postcomp
 #print axioms CategoricalEssentialIncompleteness.represented_extension_incomplete
 #print axioms CategoricalEssentialIncompleteness.boolean_quotient_incomplete
+
+#print axioms CategoricalEssentialIncompleteness.PresentationLemmas.image_copair
+#print axioms CategoricalEssentialIncompleteness.PresentationLemmas.pullback_le_iff
+#print axioms CategoricalEssentialIncompleteness.PresentationLemmas.mono_copair_iff
+#print axioms CategoricalEssentialIncompleteness.BooleanPresentation.consistent_iff_mono
+#print axioms CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi
+#print axioms CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso
+#print axioms CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi

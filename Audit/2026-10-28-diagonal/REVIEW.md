@@ -29,8 +29,8 @@ Anchor: `lem:complete-boolean-presentation`,
 `cor:arithmetic-representation-incompleteness`.
 Failure mode if these were claimed as formalized: **unproved**.
 The quotient code proves noncoverage by the two represented equalizer fibers.
-It does not prove the equivalence with regular epimorphy of the bound
-copairing, the correspondence with decisions, or the PER and arithmetic
+It does not prove the equivalence with the bound copairing being a regular
+epimorphism, the correspondence with decisions, or the PER and arithmetic
 interpretations. Evidence: **absence_in_text**, as recorded in the declaration
 table. Impact: these later links in the requested dependency chain remain
 open. Severity: major formalization gaps, each repairable by additional proofs.

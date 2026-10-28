@@ -8,6 +8,7 @@ import FailureOfComposition.Palomar.SolutionNine
 import CategoricalEssentialIncompleteness.RestrictionPredicates
 import CategoricalEssentialIncompleteness.InternalBridge
 import CategoricalEssentialIncompleteness.BooleanQuotients
+import CategoricalEssentialIncompleteness.BooleanPresentations
 
 /-!
 # Categorical essential incompleteness: diagonal and quotient arguments
@@ -17,7 +18,8 @@ together with the nine proved Failure of Composition solution declarations.
 It checks the concrete typed program category against the `PCats` interfaces
 and imports the external diagonal argument, its restriction-idempotent
 interpretation, a parameterized equalizer bridge, and the Boolean-quotient
-argument. The full enriched and numerical comparisons remain separate obligations.
+argument, including the comparison between bound fibers and the bound
+copairing. The full enriched and numerical comparisons remain separate obligations.
 -/
 
 set_option autoImplicit false

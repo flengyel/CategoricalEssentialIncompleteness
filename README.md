@@ -16,8 +16,14 @@ inseparability consequence, including their interpretation on actual restriction
 idempotents and total arrows. It also proves the Boolean-quotient incompleteness
 argument for genuine equalizer subobjects from explicit external representation
 data, and a conditional bridge from a parameterized diagonal calculation to an
-equalizer factorization. The full enriched theorem and numerical interpretation
-remain incomplete; see [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
+equalizer factorization.
+
+The Boolean-presentation lemma is proved: consistency is equivalent to the
+bound copairing being monic, completeness to its being a regular epimorphism,
+and both together to its being an isomorphism. The quotient argument now also
+proves that the bound copairing is not a regular epimorphism. The full enriched
+theorem and numerical interpretation remain incomplete; see
+[the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
 [`CategoricalEssentialIncompleteness.lean`](Lean/CategoricalEssentialIncompleteness.lean).
@@ -106,13 +112,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and fifteen diagonal, restriction, internal-bridge, and quotient
-declarations (26 declarations in total). Only `propext`, `Classical.choice`, and `Quot.sound` are accepted.
+declarations, and twenty-two diagonal, restriction, internal-bridge, quotient,
+and Boolean-presentation declarations (33 declarations in total). Only
+`propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 26 axiom audits.
+PASS: project build, dependency pins, source hashes, and 33 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -124,7 +131,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The diagonal checkpoint evidence is in
+is ignored by Git. The Boolean-presentation checkpoint evidence is in
+[`Audit/2026-10-28-boolean-presentations/`](Audit/2026-10-28-boolean-presentations/).
+The diagonal checkpoint evidence is in
 [`Audit/2026-10-28-diagonal/`](Audit/2026-10-28-diagonal/); the initial foundations
 evidence is retained in [`Audit/2026-10-28/`](Audit/2026-10-28/).
 See [`BUILD_RESULT.md`](BUILD_RESULT.md).

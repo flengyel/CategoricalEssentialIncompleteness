@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness.lean",
+      "sha256": "58c26cf8b2cd874dd2da37fdf1aa7aeef1a52ee7c22a5829aed400ff710c0f5c"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean",
+      "sha256": "e57fe9a2ff422a4cb5b032eb79fc6a952edb4e7e840924b024164abeb11faf9a"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanPresentations.lean",
+      "sha256": "a11eba45bd86ec044beb14b8ca77b5caa8a61ce99fc040d98f5f04b8a5651552"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanQuotients.lean",
+      "sha256": "4a17be118634bf7dfd837f14b6fdcd7be88054f6bf7908d9f6ba7176c210c26b"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/Diagonal.lean",
+      "sha256": "14e68939090094e87023ec20fa234511ffee67edab3e240328a2be0ddeb410db"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalBridge.lean",
+      "sha256": "15e3369c545749696424c5fa86d7dc62d1dab00e3db37ee45e23832cd3e834cf"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/RestrictionPredicates.lean",
+      "sha256": "5bd5ffdeef949091dbffaa12e25b5ee16d997c59d2bd854bf30c21fef5231ec6"
+    }
+  ],
+  "pattern": "\\b(?:sorry|admit)\\b|^\\s*(?:axiom|opaque)\\s",
+  "findings": [],
+  "success": true
+}

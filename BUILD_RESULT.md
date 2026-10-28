@@ -1,5 +1,41 @@
 # Categorical essential incompleteness: build result
 
+## Boolean-presentation checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`639edbafe31cbe84122ec532cca1818f3d7257b5`. The existing checkout was clean,
+and the remote `main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1889 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 33 declarations, retaining all
+  26 previous checks and all eleven original foundation checks. Only
+  `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- `BooleanPresentations.lean` compiles without warnings. The two existing
+  imported linter warnings remain.
+- The scan of all seven project Lean files found no `sorry`, `admit`,
+  `axiom`, or `opaque` declarations. No imported source was changed.
+
+The new module proves all three clauses of manuscript
+`lem:complete-boolean-presentation`: consistency is equivalent to the bound
+copairing being monic; completeness is equivalent to its being a regular
+epimorphism; and both together are equivalent to its being an isomorphism.
+The quotient theorem now also concludes that its bound copairing is not a
+regular epimorphism. These are results about actual equalizer subobjects,
+regular epimorphisms, and coproducts in a regular extensive category.
+
+The full enriched input construction, the correspondence with decisions, and
+the numerical/arithmetic interpretation remain open. See
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for their precise scope.
+The pinned source toolchain and imported provenance are unchanged. The
+documented hosted executable-path adapter was used; Palomar Comparator,
+NanoDa, and con-ron were not run.
+
+Evidence is retained in
+[Audit/2026-10-28-boolean-presentations](Audit/2026-10-28-boolean-presentations/).
+
 ## Diagonal and quotient checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
