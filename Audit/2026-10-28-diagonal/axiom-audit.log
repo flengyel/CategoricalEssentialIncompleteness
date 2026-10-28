@@ -1,0 +1,54 @@
+'CategoricalEssentialIncompleteness.arithmeticRecursionCategory' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.obstruction_four_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.pi_one_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.generated_congruence_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.weak_totality_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.generated_quotient_partial_recursive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.ComplementaryPair.eq_of_le' depends on axioms: [propext, Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.diagonal_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.integration_diagonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.DiagonalData.inseparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.domainInverseImage_meet' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.restrictionPredicates' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.totalBinaryProductLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.restriction_integration_diagonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.restriction_inseparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.parameterized_separator_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.no_global_point_of_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.BooleanPresentation.quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boundFiber_le_postcomp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CategoricalEssentialIncompleteness.represented_extension_incomplete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.boolean_quotient_incomplete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

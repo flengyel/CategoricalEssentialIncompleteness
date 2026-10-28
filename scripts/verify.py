@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the categorical essential-incompleteness foundations and audit its transitive proof axioms."""
+"""Build the categorical essential-incompleteness development and audit its transitive proof axioms."""
 
 from __future__ import annotations
 
@@ -28,6 +28,21 @@ AUDITED = [
     "FailureOfComposition.Palomar.range_counterexample_godel",
     "FailureOfComposition.Palomar.range_counterexample_productive",
     "FailureOfComposition.Palomar.generated_quotient_partial_recursive",
+    "CategoricalEssentialIncompleteness.ComplementaryPair.eq_of_le",
+    "CategoricalEssentialIncompleteness.DiagonalData.diagonal_collapse",
+    "CategoricalEssentialIncompleteness.DiagonalData.integration_diagonal",
+    "CategoricalEssentialIncompleteness.DiagonalData.inseparable",
+    "CategoricalEssentialIncompleteness.domainInverseImage_meet",
+    "CategoricalEssentialIncompleteness.restrictionPredicates",
+    "CategoricalEssentialIncompleteness.totalBinaryProductLimit",
+    "CategoricalEssentialIncompleteness.restriction_integration_diagonal",
+    "CategoricalEssentialIncompleteness.restriction_inseparable",
+    "CategoricalEssentialIncompleteness.parameterized_separator_factorization",
+    "CategoricalEssentialIncompleteness.no_global_point_of_factorization",
+    "CategoricalEssentialIncompleteness.BooleanPresentation.quotient",
+    "CategoricalEssentialIncompleteness.boundFiber_le_postcomp",
+    "CategoricalEssentialIncompleteness.represented_extension_incomplete",
+    "CategoricalEssentialIncompleteness.boolean_quotient_incomplete",
 ]
 
 
@@ -111,7 +126,7 @@ def main() -> int:
         for name in re.findall(r"'([^']+)' does not depend on any axioms", text):
             found[name] = []
         if set(found) != set(AUDITED):
-            raise RuntimeError("Axiom audit declaration set differs from the expected eleven declarations")
+            raise RuntimeError(f"Axiom audit declaration set differs from the expected {len(AUDITED)} declarations")
         for name, axioms in found.items():
             extra = set(axioms) - ALLOWED_AXIOMS
             if extra:
@@ -119,12 +134,12 @@ def main() -> int:
         report["axioms"] = found
         report["integration_sha256"] = {
             str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "CategoricalEssentialIncompleteness/AxiomAudit.lean",
-                         LEAN / "lakefile.toml"]
+            for path in [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "lakefile.toml",
+                         *sorted((LEAN / "CategoricalEssentialIncompleteness").glob("*.lean"))]
         }
         report["success"] = True
         save()
-        print("PASS: project build, dependency pins, source hashes, and eleven axiom audits.")
+        print(f"PASS: project build, dependency pins, source hashes, and {len(AUDITED)} axiom audits.")
         return 0
     except (OSError, RuntimeError, subprocess.SubprocessError) as error:
         report["error"] = str(error)

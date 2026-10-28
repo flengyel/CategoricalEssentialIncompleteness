@@ -1,6 +1,39 @@
 # Categorical essential incompleteness: build result
 
-Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64.
+## Diagonal and quotient checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`08e094d7c3e923eb690b66b5fce5ac85f724b636`. The existing checkout was clean,
+and the remote `main` had the same revision before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1888 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 26 declarations, including all
+  eleven original declarations. Only `propext`, `Classical.choice`, and
+  `Quot.sound` occur; several new results use smaller subsets.
+- All sixteen dependency revisions match; all 356 checked imported-file
+  records match their pins or the two pre-existing recorded patches.
+- The four new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- No new `sorry`, `admit`, or axiom declarations; no imported-source changes.
+
+The new proofs cover the external diagonal result, its restriction-idempotent
+specialization and inseparability consequence, a conditional parameterized
+equalizer factorization, and the Boolean-quotient incompleteness argument with
+actual subobject fibers. See [the precise correspondence and remaining
+obligations](FORMALIZATION_STATUS.md). The full enriched theorem and its
+numerical interpretation remain incomplete.
+
+The hosted executable-path restriction was observed, so the existing adapter
+documented in [HOST_BUILD.md](HOST_BUILD.md) was used. The source toolchain,
+manifest, `SOURCE_PINS.json`, and `LOCAL_PATCHES.json` are unchanged. Palomar
+Comparator, NanoDa, and con-ron were not run.
+
+Evidence is retained in [Audit/2026-10-28-diagonal](Audit/2026-10-28-diagonal/).
+
+## Initial foundations checkpoint
+
+The following records the earlier foundations-only verification on 2026-10-28.
 
 - `lake build CategoricalEssentialIncompleteness`: PASS (1665 jobs, including cached dependencies).
 - `lake env lean CategoricalEssentialIncompleteness/AxiomAudit.lean`: PASS for all eleven declarations.

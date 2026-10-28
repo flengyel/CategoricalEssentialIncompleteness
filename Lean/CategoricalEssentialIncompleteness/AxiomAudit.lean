@@ -1,7 +1,7 @@
 import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
-nine proved solution declarations. The verification script rejects any axiom
+nine proved solution declarations, and the diagonal and quotient results. The verification script rejects any axiom
 other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 
 #print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
@@ -15,3 +15,19 @@ other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms FailureOfComposition.Palomar.range_counterexample_godel
 #print axioms FailureOfComposition.Palomar.range_counterexample_productive
 #print axioms FailureOfComposition.Palomar.generated_quotient_partial_recursive
+
+#print axioms CategoricalEssentialIncompleteness.ComplementaryPair.eq_of_le
+#print axioms CategoricalEssentialIncompleteness.DiagonalData.diagonal_collapse
+#print axioms CategoricalEssentialIncompleteness.DiagonalData.integration_diagonal
+#print axioms CategoricalEssentialIncompleteness.DiagonalData.inseparable
+#print axioms CategoricalEssentialIncompleteness.domainInverseImage_meet
+#print axioms CategoricalEssentialIncompleteness.restrictionPredicates
+#print axioms CategoricalEssentialIncompleteness.totalBinaryProductLimit
+#print axioms CategoricalEssentialIncompleteness.restriction_integration_diagonal
+#print axioms CategoricalEssentialIncompleteness.restriction_inseparable
+#print axioms CategoricalEssentialIncompleteness.parameterized_separator_factorization
+#print axioms CategoricalEssentialIncompleteness.no_global_point_of_factorization
+#print axioms CategoricalEssentialIncompleteness.BooleanPresentation.quotient
+#print axioms CategoricalEssentialIncompleteness.boundFiber_le_postcomp
+#print axioms CategoricalEssentialIncompleteness.represented_extension_incomplete
+#print axioms CategoricalEssentialIncompleteness.boolean_quotient_incomplete

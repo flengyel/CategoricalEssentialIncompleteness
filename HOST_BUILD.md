@@ -25,6 +25,6 @@ LD_PRELOAD=/absolute/build/path/proc_self_compat.so \
 ```
 
 The verification script inherits this process-local environment setting. It
-retains command exit codes and records all eleven axiom checks. Mathlib objects
+retains command exit codes and records every declaration listed in `scripts/verify.py`. Mathlib objects
 come from its standard cache for the pinned source revision. Project sources
 and the required Foundation sources are compiled in the combined workspace.

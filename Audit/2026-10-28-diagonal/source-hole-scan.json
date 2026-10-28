@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "scope": "project entry point and all project namespace modules; imported sources checked by their pinned Git blob hashes",
+  "pattern": "\\b(?:sorry|admit)\\b|^\\s*(?:axiom|opaque)\\s",
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness.lean",
+      "sha256": "d9261b24f108efc0625b8ef6decd1b20257059d15666042e008393f3fd89aea7",
+      "matches": []
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean",
+      "sha256": "f122457dce199daec794d2deec38b00a682c35ac2182c875dd7c90a08df86232",
+      "matches": []
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanQuotients.lean",
+      "sha256": "4a17be118634bf7dfd837f14b6fdcd7be88054f6bf7908d9f6ba7176c210c26b",
+      "matches": []
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/Diagonal.lean",
+      "sha256": "14e68939090094e87023ec20fa234511ffee67edab3e240328a2be0ddeb410db",
+      "matches": []
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalBridge.lean",
+      "sha256": "15e3369c545749696424c5fa86d7dc62d1dab00e3db37ee45e23832cd3e834cf",
+      "matches": []
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/RestrictionPredicates.lean",
+      "sha256": "5bd5ffdeef949091dbffaa12e25b5ee16d997c59d2bd854bf30c21fef5231ec6",
+      "matches": []
+    }
+  ]
+}

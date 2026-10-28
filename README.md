@@ -11,10 +11,14 @@ Version 16 is included unchanged:
 - [LaTeX source](manuscript/definability_comparison_v16.tex)
 - [Source provenance](MANUSCRIPT_SOURCE.json)
 
-The manuscript proves categorical essential incompleteness. The current Lean
-checkpoint compiles the categorical and arithmetic foundations imported from
-the categorical Rice–Shapiro and Failure of Composition developments. The main
-categorical essential-incompleteness theorem remains to be formalized in Lean.
+The current Lean checkpoint proves the external diagonal obstruction and its
+inseparability consequence, including their interpretation on actual restriction
+idempotents and total arrows. It also proves the Boolean-quotient incompleteness
+argument for genuine equalizer subobjects from explicit external representation
+data, and a conditional bridge from a parameterized diagonal calculation to an
+equalizer factorization. The full enriched theorem and numerical interpretation
+remain incomplete; see [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
+The imported categorical and arithmetic foundations remain available.
 The entry point is
 [`CategoricalEssentialIncompleteness.lean`](Lean/CategoricalEssentialIncompleteness.lean).
 
@@ -101,13 +105,14 @@ The toolchain file selects Lean `4.35.0-rc2` automatically through `elan`; the
 manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
-of its two interface declarations and all nine Failure of Composition solution
-declarations. Only `propext`, `Classical.choice`, and `Quot.sound` are accepted.
+of its two interface declarations, all nine Failure of Composition solution
+declarations, and fifteen diagonal, restriction, internal-bridge, and quotient
+declarations (26 declarations in total). Only `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and eleven axiom audits.
+PASS: project build, dependency pins, source hashes, and 26 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -119,8 +124,10 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The recorded upload checkpoint is in
-[`Audit/2026-10-28/`](Audit/2026-10-28/); see [`BUILD_RESULT.md`](BUILD_RESULT.md).
+is ignored by Git. The diagonal checkpoint evidence is in
+[`Audit/2026-10-28-diagonal/`](Audit/2026-10-28-diagonal/); the initial foundations
+evidence is retained in [`Audit/2026-10-28/`](Audit/2026-10-28/).
+See [`BUILD_RESULT.md`](BUILD_RESULT.md).
 The hosted environment's executable-path adapter,
 [`scripts/host_proc_self_compat.c`](scripts/host_proc_self_compat.c), is documented
 in [`HOST_BUILD.md`](HOST_BUILD.md). Ordinary Linux and WSL 2 builds do not need it.

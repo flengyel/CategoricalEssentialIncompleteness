@@ -5,15 +5,19 @@ import Arith
 import CategoricalRiceShapiro
 import FailureOfComposition
 import FailureOfComposition.Palomar.SolutionNine
+import CategoricalEssentialIncompleteness.RestrictionPredicates
+import CategoricalEssentialIncompleteness.InternalBridge
+import CategoricalEssentialIncompleteness.BooleanQuotients
 
 /-!
-# Foundations for categorical essential incompleteness
+# Categorical essential incompleteness: diagonal and quotient arguments
 
 This module imports the maintained categorical Rice--Shapiro infrastructure
 together with the nine proved Failure of Composition solution declarations.
-It checks that the concrete typed program category instantiates the same
-categorical interfaces used by `PCats`. It does not formalize the new
-definability-algebra theorems of the incompleteness manuscript.
+It checks the concrete typed program category against the `PCats` interfaces
+and imports the external diagonal argument, its restriction-idempotent
+interpretation, a parameterized equalizer bridge, and the Boolean-quotient
+argument. The full enriched and numerical comparisons remain separate obligations.
 -/
 
 set_option autoImplicit false
