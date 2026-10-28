@@ -18,30 +18,102 @@ categorical essential-incompleteness theorem remains to be formalized in Lean.
 The entry point is
 [`CategoricalEssentialIncompleteness.lean`](Lean/CategoricalEssentialIncompleteness.lean).
 
-## Build on Linux or WSL
+## Clone and build on Debian, Linux, or WSL 2
 
-The same commands run on native Linux and on Linux under WSL 2. Install Git,
-Python 3.9 or later, and the Lean toolchain manager `elan`, then run:
+The same build commands run on native Linux and on Linux under WSL 2. On
+Windows, run them in the Debian or Ubuntu WSL 2 terminal. WSL is optional;
+native Debian uses its normal terminal.
+
+### Install prerequisites
+
+Git, Python 3.9 or later, and the Lean toolchain manager `elan` are required.
+On Debian or Ubuntu, including those distributions under WSL 2:
+
+```bash
+sudo apt update
+sudo apt install -y git curl python3 build-essential ca-certificates
+```
+
+If `elan` is not already installed, follow the
+[official Lean installation instructions](https://lean-lang.org/install/manual/):
+
+```bash
+curl https://elan.lean-lang.org/elan-init.sh -sSf | sh
+source "$HOME/.elan/env"
+```
+
+### Clone and set origin
 
 ```bash
 git clone https://github.com/flengyel/CategoricalEssentialIncompleteness.git
-cd CategoricalEssentialIncompleteness/Lean
+cd CategoricalEssentialIncompleteness
+git remote set-url origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+git remote -v
+git branch -vv
+```
+
+`git clone` creates `origin` and makes the local `main` branch track
+`origin/main`. The `set-url` command explicitly sets the intended repository
+URL. `git remote -v` should show that URL for both fetch and push. Use GitHub
+credentials with access to the repository when HTTPS authentication is required.
+
+For an existing Git checkout, run the following from its root to add `origin`
+if it is missing, or correct its URL if it already exists:
+
+```bash
+if git remote get-url origin >/dev/null 2>&1; then
+  git remote set-url origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+else
+  git remote add origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+fi
+git fetch origin
+git branch --set-upstream-to=origin/main main
+git remote -v
+```
+
+This configures the remote and upstream for an existing local `main` branch;
+it does not merge or replace local work. Prefer cloning for a fresh checkout
+with the repository's commit history.
+
+### Run compilation and verification
+
+From the repository root, download the cached Mathlib build and run the
+verification script:
+
+```bash
+cd Lean
 lake exe cache get
 cd ..
 python3 scripts/verify.py
 ```
 
-The toolchain file selects Lean `4.35.0-rc2`; the manifest pins every dependency.
-The verification script uses one Lean thread by default, builds
+The toolchain file selects Lean `4.35.0-rc2` automatically through `elan`; the
+manifest pins every dependency. The script uses one Lean thread by default,
+checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations and all nine Failure of Composition solution
 declarations. Only `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
+A successful run ends with:
+
+```text
+PASS: project build, dependency pins, source hashes, and eleven axiom audits.
+```
+
+For compilation alone, run from the repository root:
+
+```bash
+cd Lean
+lake build CategoricalEssentialIncompleteness
+cd ..
+```
+
 Fresh logs and the machine-readable result are written to `build-logs/`, which
 is ignored by Git. The recorded upload checkpoint is in
 [`Audit/2026-10-28/`](Audit/2026-10-28/); see [`BUILD_RESULT.md`](BUILD_RESULT.md).
-The hosted environment's executable-path adapter is documented in
-[`HOST_BUILD.md`](HOST_BUILD.md). Ordinary Linux and WSL builds do not need it.
+The hosted environment's executable-path adapter,
+[`scripts/host_proc_self_compat.c`](scripts/host_proc_self_compat.c), is documented
+in [`HOST_BUILD.md`](HOST_BUILD.md). Ordinary Linux and WSL 2 builds do not need it.
 
 ## Imported foundations
 
