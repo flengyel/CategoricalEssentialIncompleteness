@@ -44,27 +44,37 @@ source "$HOME/.elan/env"
 
 ### Clone and set origin
 
+Use SSH when your GitHub SSH key is already configured. You can check the
+recognized account with `ssh -T git@github.com`; after successful authentication,
+GitHub's message that it does not provide shell access is expected.
+
 ```bash
-git clone https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+git clone git@github.com:flengyel/CategoricalEssentialIncompleteness.git
 cd CategoricalEssentialIncompleteness
-git remote set-url origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+git remote set-url origin git@github.com:flengyel/CategoricalEssentialIncompleteness.git
 git remote -v
 git branch -vv
 ```
 
 `git clone` creates `origin` and makes the local `main` branch track
 `origin/main`. The `set-url` command explicitly sets the intended repository
-URL. `git remote -v` should show that URL for both fetch and push. Use GitHub
-credentials with access to the repository when HTTPS authentication is required.
+URL. `git remote -v` should show the SSH URL for both fetch and push.
+
+HTTPS remains an alternative:
+`https://github.com/flengyel/CategoricalEssentialIncompleteness.git`.
+HTTPS uses separate authentication and does not use your SSH key. If credentials
+are required, use a GitHub credential manager or a personal access token;
+GitHub account passwords are not accepted for Git operations over HTTPS. See
+[GitHub's authentication guidance](https://docs.github.com/en/get-started/git-basics/about-remote-repositories).
 
 For an existing Git checkout, run the following from its root to add `origin`
 if it is missing, or correct its URL if it already exists:
 
 ```bash
 if git remote get-url origin >/dev/null 2>&1; then
-  git remote set-url origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+  git remote set-url origin git@github.com:flengyel/CategoricalEssentialIncompleteness.git
 else
-  git remote add origin https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+  git remote add origin git@github.com:flengyel/CategoricalEssentialIncompleteness.git
 fi
 git fetch origin
 git branch --set-upstream-to=origin/main main
