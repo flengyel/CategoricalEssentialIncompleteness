@@ -1,0 +1,100 @@
+# Categorical essential incompleteness
+
+Lean development toward the proof of categorical essential incompleteness in
+*Definability and incompleteness in recursion categories*.
+
+## Manuscript
+
+Version 16 is included unchanged:
+
+- [PDF](manuscript/definability_comparison_v16.pdf)
+- [LaTeX source](manuscript/definability_comparison_v16.tex)
+- [Source provenance](MANUSCRIPT_SOURCE.json)
+
+The manuscript proves categorical essential incompleteness. The current Lean
+checkpoint compiles the categorical and arithmetic foundations imported from
+the categorical Rice–Shapiro and Failure of Composition developments. The main
+categorical essential-incompleteness theorem remains to be formalized in Lean.
+The entry point is
+[`CategoricalEssentialIncompleteness.lean`](Lean/CategoricalEssentialIncompleteness.lean).
+
+## Build on Linux or WSL
+
+The same commands run on native Linux and on Linux under WSL 2. Install Git,
+Python 3.9 or later, and the Lean toolchain manager `elan`, then run:
+
+```bash
+git clone https://github.com/flengyel/CategoricalEssentialIncompleteness.git
+cd CategoricalEssentialIncompleteness/Lean
+lake exe cache get
+cd ..
+python3 scripts/verify.py
+```
+
+The toolchain file selects Lean `4.35.0-rc2`; the manifest pins every dependency.
+The verification script uses one Lean thread by default, builds
+`CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
+of its two interface declarations and all nine Failure of Composition solution
+declarations. Only `propext`, `Classical.choice`, and `Quot.sound` are accepted.
+
+Fresh logs and the machine-readable result are written to `build-logs/`, which
+is ignored by Git. The recorded upload checkpoint is in
+[`Audit/2026-10-28/`](Audit/2026-10-28/); see [`BUILD_RESULT.md`](BUILD_RESULT.md).
+The hosted environment's executable-path adapter is documented in
+[`HOST_BUILD.md`](HOST_BUILD.md). Ordinary Linux and WSL builds do not need it.
+
+## Imported foundations
+
+The entry point imports `PCats`, `RiceShapiro`, `Metamath`, `Arith`,
+`CategoricalRiceShapiro`, `FailureOfComposition`, and the nine proved solution
+declarations. It checks that the concrete typed arithmetic category instantiates
+the existing `PRecursionCategory` interface and that its packaged evaluator
+satisfies the Turing factorization property. Imported libraries retain their
+existing module names.
+
+| Component | Revision |
+| --- | --- |
+| Categorical_Rice_Shapiro | `cb0622c864f50372f5ddc1882a6c66c31144c70e` |
+| FailureOfComposition | `506d1f1494d6c05b0ba304edf5fe0bfa6c32864b` |
+| Mathlib | `065356127b1dc0016f66b7283ce0ce2c4055aa55` |
+| Foundation | `01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d` |
+
+[`SOURCE_PINS.json`](SOURCE_PINS.json) records the original Git blob hash of each
+imported file. [`LOCAL_PATCHES.json`](LOCAL_PATCHES.json) records the proof
+compatibility repair and root-package rename with exact before/after hashes.
+The root Lake configuration adds this project's entry point.
+
+The Rice–Shapiro tree supplies the shared sources. Two shared Lean files differ
+between the original repositories: its `FailureOfComposition.lean` imports the
+additional developments, and its `ConcreteEvaluatorGraph.lean` expresses
+`eventualGraph` using explicit substitution and adds `eventualGraph_val`.
+Both files are retained from Rice–Shapiro. One proof in
+`Palomar/EvaluatorBridge.lean` is adapted to rewrite with the proved
+`eventualGraph_val` characterization. Its theorem statement is unchanged. The
+exact diff and original build failure are retained in the audit directory.
+
+This checkpoint does not assert completion of categorical Rice–Shapiro or
+identification of every concrete category with the manuscript's intended
+category. Open hypotheses in the imported development remain explicit.
+
+## Palomar toolchain and checker
+
+On 2026-10-28, PalomarSubmission revision
+`a93fc88c092faeef1a92b1c905e688aab8e80795` specifies a minimum source toolchain
+of Lean `v4.35.0-rc2`. Its independent con-ron checker for that source toolchain
+is taken from Lean `v4.36.0-rc1`, release commit
+`c9afcddf514a6772bd4d649f7cfc04eff0b9f15e`. Lean, Lake, the exporter, and NanoDa
+remain tied to the submitted source toolchain. The inspected policy files and
+their source links are retained in the audit directory.
+
+The recorded validation consists of Lean compilation and transitive axiom
+inspection. This repository has not undergone Palomar Comparator or
+independent-kernel verification and does not inherit the original project's
+registry verification.
+
+## License
+
+The Lean and supporting software are distributed under the existing
+[Apache License 2.0](LICENSE). The manuscript retains its existing copyright
+and licensing terms; no additional manuscript license is granted here. See
+[the manuscript notice](manuscript/NOTICE.md).
