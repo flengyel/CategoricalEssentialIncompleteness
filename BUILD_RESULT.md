@@ -1,5 +1,43 @@
 # Categorical essential incompleteness: build result
 
+## Characteristic arrows and Boolean decisions checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`988d958983e716e175b293721aaeea1d03a5666d`. The existing checkout was clean,
+and the remote `main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1892 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 47 declarations, retaining every
+  previous check. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- All three new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- The scan of all ten project Lean files found no `sorry`, `admit`,
+  `axiom`, or `opaque` declarations. No imported source was changed.
+
+`CharacteristicArrows.lean` constructs characteristic arrows of specified
+complementary subobjects, proves their two fiber equations and uniqueness,
+and proves the coproduct decomposition of an arbitrary arrow to `1 + 1`.
+`TwoBoolean.lean` constructs the internal Boolean algebra on `1 + 1`, proves
+naturality of its operations on generalized elements, and proves that each
+bound copairing into an internal Boolean algebra is a Boolean homomorphism.
+`BooleanDecisions.lean` proves `prop:complete-extensions-and-decisions`, both
+for an injective bounded lattice map into subobjects and for the existing
+domain-to-predicate embedding followed by the subobject identification. It
+also excludes represented Boolean decisions under the external diagonal
+hypotheses.
+
+The full enriched input construction at the actual separator object `Sep`
+and the numerical/arithmetic interpretation remain open. See
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for their precise scope.
+The source toolchain and imported provenance are unchanged. The documented
+hosted executable-path adapter was used; Palomar Comparator, NanoDa, and
+con-ron were not run.
+
+Evidence is retained in [Audit/2026-10-28-decisions](Audit/2026-10-28-decisions/).
+
 ## Boolean-presentation checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from

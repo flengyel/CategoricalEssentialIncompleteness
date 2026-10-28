@@ -2,7 +2,7 @@ import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, and Boolean
-presentation results. The verification script rejects any axiom
+presentation and decision results. The verification script rejects any axiom
 other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 
 #print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
@@ -40,3 +40,18 @@ other than `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi
 #print axioms CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso
 #print axioms CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi
+
+#print axioms CategoricalEssentialIncompleteness.Two.fibersIsColimit
+#print axioms CategoricalEssentialIncompleteness.SubobjectPartition.cover_isIso
+#print axioms CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_isPullback
+#print axioms CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_positive
+#print axioms CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_negative
+#print axioms CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_unique_of_fibers
+#print axioms CategoricalEssentialIncompleteness.boundFiber_mono_postcomp
+#print axioms CategoricalEssentialIncompleteness.twoBooleanObject
+#print axioms CategoricalEssentialIncompleteness.BooleanObject.boundMorphism
+#print axioms CategoricalEssentialIncompleteness.BooleanMorphism.toTwo_isSplitEpi
+#print axioms CategoricalEssentialIncompleteness.complete_extensions_and_decisions
+#print axioms CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap
+#print axioms CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions
+#print axioms CategoricalEssentialIncompleteness.no_represented_boolean_decision

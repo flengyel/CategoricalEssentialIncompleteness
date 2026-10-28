@@ -21,7 +21,12 @@ equalizer factorization.
 The Boolean-presentation lemma is proved: consistency is equivalent to the
 bound copairing being monic, completeness to its being a regular epimorphism,
 and both together to its being an isomorphism. The quotient argument now also
-proves that the bound copairing is not a regular epimorphism. The full enriched
+proves that the bound copairing is not a regular epimorphism.
+
+Characteristic arrows for complementary subobjects and the internal Boolean
+algebra on `1 + 1` are constructed. The equivalence between complete represented
+Boolean extensions and represented decisions is proved, including the
+comparison through the domain-to-predicate embedding. The full enriched
 theorem and numerical interpretation remain incomplete; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
@@ -112,14 +117,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and twenty-two diagonal, restriction, internal-bridge, quotient,
-and Boolean-presentation declarations (33 declarations in total). Only
+declarations, and 36 diagonal, restriction, internal-bridge, quotient,
+Boolean-presentation, and decision declarations (47 declarations in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 33 axiom audits.
+PASS: project build, dependency pins, source hashes, and 47 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -131,7 +136,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The Boolean-presentation checkpoint evidence is in
+is ignored by Git. The decision checkpoint evidence is in
+[`Audit/2026-10-28-decisions/`](Audit/2026-10-28-decisions/).
+The Boolean-presentation checkpoint evidence is in
 [`Audit/2026-10-28-boolean-presentations/`](Audit/2026-10-28-boolean-presentations/).
 The diagonal checkpoint evidence is in
 [`Audit/2026-10-28-diagonal/`](Audit/2026-10-28-diagonal/); the initial foundations

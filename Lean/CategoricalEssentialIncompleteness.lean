@@ -9,6 +9,7 @@ import CategoricalEssentialIncompleteness.RestrictionPredicates
 import CategoricalEssentialIncompleteness.InternalBridge
 import CategoricalEssentialIncompleteness.BooleanQuotients
 import CategoricalEssentialIncompleteness.BooleanPresentations
+import CategoricalEssentialIncompleteness.BooleanDecisions
 
 /-!
 # Categorical essential incompleteness: diagonal and quotient arguments
@@ -19,7 +20,10 @@ It checks the concrete typed program category against the `PCats` interfaces
 and imports the external diagonal argument, its restriction-idempotent
 interpretation, a parameterized equalizer bridge, and the Boolean-quotient
 argument, including the comparison between bound fibers and the bound
-copairing. The full enriched and numerical comparisons remain separate obligations.
+copairing. It also constructs characteristic arrows and the internal Boolean
+algebra on `1 + 1`, and proves the equivalence of complete represented Boolean
+extensions with represented decisions. The full enriched and numerical
+comparisons remain separate obligations.
 -/
 
 set_option autoImplicit false

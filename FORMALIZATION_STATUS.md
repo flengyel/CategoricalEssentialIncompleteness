@@ -1,8 +1,9 @@
 # Formalization status: version 16
 
-The external diagonal theorem, its global inseparability consequence, and the
-Boolean-presentation lemma are proved. The full enriched categorical theorem
-and its numerical interpretation are not yet formalized. All declarations below are in the namespace
+The external diagonal theorem, its global inseparability consequence, the
+Boolean-presentation lemma, and the equivalence between complete represented
+extensions and represented decisions are proved. The full enriched categorical
+theorem and its numerical interpretation are not yet formalized. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -15,7 +16,8 @@ and its numerical interpretation are not yet formalized. All declarations below 
 | `thm:internal-inseparability` | `parameterized_separator_factorization` | Conditional bridge proved over an arbitrary finitely complete base. Construction of its parameterized input from the enriched algebra, at the actual object `Sep`, remains open. |
 | `lem:complete-boolean-presentation` | `BooleanPresentation.consistent_iff_mono`; `BooleanPresentation.complete_iff_regularEpi`; `BooleanPresentation.consistent_complete_iff_isIso` | Proved in a regular extensive category, with actual equalizer fibers and the actual bound copairing. |
 | `thm:categorical-essential-incompleteness` | `boolean_quotient_incomplete`; `boolean_quotient_boundCopair_not_regularEpi` | The external quotient argument and its equivalent conclusion about the bound copairing are proved for genuine Boolean presentations, regular epimorphisms, and subobject fibers. The full enriched input construction remains open. |
-| `prop:complete-extensions-and-decisions` | — | Open. |
+| `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `PredicateEmbedding.complete_extensions_and_decisions` | Proved for genuine Boolean quotients and the constructed internal Boolean algebra on `1 + 1`. The second declaration uses the existing `E`-to-`P` embedding followed by the subobject identification. |
+| Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision` | Proved from the external diagonal representation data. This does not claim the arbitrary-arrow clause or the full enriched input construction. |
 | `thm:integration-essential-equivalence` | — | Open; needs the numerical recursion category, PER category, and syntax/provability comparison. |
 | `prop:numerical-boolean-extensions` | — | Open. |
 | `cor:arithmetic-representation-incompleteness` | — | Open; the imported arithmetic recursion-category instance is not this numerical comparison. |
@@ -82,6 +84,32 @@ relevant arrow is a regular epimorphism. No preservation-of-unions assumption
 is added. The supporting comparisons apply to any two global points, and the
 three principal declarations specialize them to the Boolean bounds.
 
+`CharacteristicArrows.lean` constructs the coproduct decomposition associated
+with a specified complementary pair of subobjects. Its characteristic arrow
+has the negative and positive subobjects as its exact lower and upper fibers,
+and is uniquely determined by them. It also proves that the two fibers of
+every arrow to `1 + 1` form a colimit cofan. No subobject classifier for arbitrary
+subobjects is assumed.
+
+`TwoBoolean.lean` constructs Boolean operations as actual arrows on `1 + 1`.
+It proves their identities by restriction to the truth-value fibers of each
+generalized argument. Thus the use of finite Boolean truth tables is justified
+over arbitrary source objects; global points are not assumed to detect arrow
+equality. The resulting Boolean algebras on the hom-sets are natural under
+precomposition. `BooleanObject.boundMorphism` proves that the canonical bound
+copairing into every internal Boolean algebra is a Boolean homomorphism.
+
+`BooleanDecisions.lean` proves both directions of
+`prop:complete-extensions-and-decisions`. A consistent complete quotient has
+an invertible bound copairing; composing the quotient with its Boolean inverse
+produces the required decision. Conversely, every Boolean homomorphism to
+`1 + 1` is a split epimorphism, so it gives a genuine Boolean quotient. The
+characteristic-arrow fiber equations identify its two represented fibers.
+`PredicateEmbedding.subobjectMap` and the specialized equivalence keep the
+restriction-domain sort `E(S)` distinct from the general-predicate sort `P(S)`.
+The final `no_represented_boolean_decision` result combines this equivalence
+with the existing external diagonal obstruction.
+
 ## The enriched bridge still required
 
 `parameterized_separator_factorization` proves an actual arrow into the
@@ -98,12 +126,12 @@ particular, `g = rho gamma` must be an arrow with parameter `Sep`.
 Representation merely at global points does not fill this obligation.
 The strict-initial-object consequence is also not yet implemented.
 
-The next Boolean construction is `prop:complete-extensions-and-decisions`:
-construct the internal Boolean algebra on the coproduct of two terminal
-objects, prove that its bound copairing into every internal Boolean algebra is
-a Boolean homomorphism, and relate characteristic arrows to complementary
-subobjects in the image of `j_S`. The enriched input construction remains a
-separate prerequisite for the full central theorem.
+The next unresolved categorical construction is the generalized representative
+at the actual object `Sep`, obtained from the enriched section and the
+internal complementary-pair object. This must supply the input to
+`parameterized_separator_factorization` and connect the global representation
+data to the manuscript's functor `J`. The completed Boolean decision
+equivalence does not replace that construction.
 
 ## Numerical and verification boundaries
 
@@ -115,7 +143,7 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The full verifier builds the combined entry point and audits 33 declarations,
+The full verifier builds the combined entry point and audits 47 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash. No imported source was changed for this milestone.
 Lean compilation and axiom inspection do not establish the open comparisons

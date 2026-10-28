@@ -50,6 +50,20 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.BooleanPresentation.complete_iff_regularEpi",
     "CategoricalEssentialIncompleteness.BooleanPresentation.consistent_complete_iff_isIso",
     "CategoricalEssentialIncompleteness.boolean_quotient_boundCopair_not_regularEpi",
+    "CategoricalEssentialIncompleteness.Two.fibersIsColimit",
+    "CategoricalEssentialIncompleteness.SubobjectPartition.cover_isIso",
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_isPullback",
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_positive",
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_negative",
+    "CategoricalEssentialIncompleteness.SubobjectPartition.characteristic_unique_of_fibers",
+    "CategoricalEssentialIncompleteness.boundFiber_mono_postcomp",
+    "CategoricalEssentialIncompleteness.twoBooleanObject",
+    "CategoricalEssentialIncompleteness.BooleanObject.boundMorphism",
+    "CategoricalEssentialIncompleteness.BooleanMorphism.toTwo_isSplitEpi",
+    "CategoricalEssentialIncompleteness.complete_extensions_and_decisions",
+    "CategoricalEssentialIncompleteness.PredicateEmbedding.subobjectMap",
+    "CategoricalEssentialIncompleteness.PredicateEmbedding.complete_extensions_and_decisions",
+    "CategoricalEssentialIncompleteness.no_represented_boolean_decision",
 ]
 
 
