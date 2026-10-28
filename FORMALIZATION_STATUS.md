@@ -7,8 +7,12 @@ extensions and represented decisions are proved. The internal factorization
 domain equalizers, totality pullbacks, internal total-arrow operations, and
 restriction inverse-image action are now constructed, and the proof uses the
 actual representation section and separator equalizer.
-The full enriched categorical theorem and its numerical interpretation are not
-yet formalized. All declarations below are in the namespace
+The global total-arrow, domain, representation, and predicate comparisons are
+proved. The categorical theorem is now stated along `J : Tot(K₀) → C`, with
+actual restriction idempotents and a natural subobject identification. It uses
+the restriction, lattice, predicate, and section data of a definability algebra;
+the additional recursion and indexing data are unused. The numerical
+interpretation remains open. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -17,16 +21,20 @@ yet formalized. All declarations below are in the namespace
 | --- | --- | --- |
 | `eq:integration-rows` | `DiagonalData.Represents` | Both representation equations, with the same total arrow and separate objects `U`, `S`. |
 | `thm:integration-diagonal` | `DiagonalData.integration_diagonal`; `restriction_integration_diagonal` | Proved. The latter uses actual `DomSemilattice` elements and `RestrictionCategory.TotalSubcategory`. |
-| `cor:definability-algebra-inseparability` | `DiagonalData.inseparable`; `restriction_inseparable` | Proved from representation of every complementary pair. The internal section now supplies representatives at every parameter; its comparison with the restriction-category presentation remains open. |
+| `cor:definability-algebra-inseparability` | `DiagonalData.inseparable`; `restriction_inseparable`; `InternalDiagonalData.global_inseparable` | Proved. The last declaration derives the external representation premise from the internal section. |
 | Restriction-idempotent and total-arrow objects in `sec:definability-algebras` | `EnrichedRestriction.domainObject`; `totalObject`; `domainPointsEquiv`; `totalPointsEquiv` | Actual equalizer and pullback, with generalized-point equivalences. All four declarations are in `EnrichedRestriction`. |
 | Total products and restriction inverse image in `def:generalized-definability-algebra` | `EnrichedRestriction.totalHom_cartesian`; `domainPredicates` | Internal total composition and binary products, and the internal domain-predicate action, are constructed. The latter declaration is also in `EnrichedRestriction`. |
+| Global total-arrow comparison in `sec:definability-algebras` | `EnrichedRestriction.globalTotalEquivalence`; `globalTotalPreservesBinaryProducts` | Equivalence with the actual wide subcategory of total arrows, preserving binary products. Both names are in `EnrichedRestriction`. |
+| Global domain comparison in `sec:definability-algebras` | `EnrichedRestriction.globalDomainOrderIso`; `globalDomainInverse_comparison` | Bounded lattice comparison with ordinary restriction idempotents, compatible with partial inverse image. Both names are in `EnrichedRestriction`. |
+| Global representation equations | `InternalDiagonalData.global_represents_iff`; `global_representation` | Comparison through the chosen-product isomorphism and representatives obtained from the internal section. Both names are in `InternalDiagonalData`. |
+| Natural global predicate identification along `J` | `SubobjectIdentification.presheafIso`; `EnrichedRestriction.domainSubobject_naturality` | Actual natural presheaf isomorphism and natural injective bounded lattice map from ordinary domains to genuine subobjects. |
 | `eq:v8-complement-pullback` | `InternalLattice.Complements`; `InternalLattice.liftComplement` | Actual pullback, universal complementary pair, and lift at every parameter constructed. |
 | `eq:v8-representation-pullback`; `eq:v8-representation-section` | `InternalDiagonalData.Representation`; `representation_section_iff`; `RepresentationSection.represents` | Actual pullback and section; equivalence with the universal representation equations; generalized representatives derived. The latter two names are in `InternalDiagonalData`. |
 | `thm:internal-inseparability` | `InternalDiagonalData.internal_inseparability`; `no_global_separator`; `separatorIsInitial` | Factorization at the actual `Sep` and both consequences proved over an arbitrary finitely complete base. `EnrichedRestriction.enriched_internal_inseparability` and `enriched_no_global_separator` now supply the constructed domain and total-arrow data; the latter two names in this row's declaration column are in `InternalDiagonalData`. |
 | `lem:complete-boolean-presentation` | `BooleanPresentation.consistent_iff_mono`; `BooleanPresentation.complete_iff_regularEpi`; `BooleanPresentation.consistent_complete_iff_isIso` | Proved in a regular extensive category, with actual equalizer fibers and the actual bound copairing. |
-| `thm:categorical-essential-incompleteness` | `boolean_quotient_incomplete`; `boolean_quotient_boundCopair_not_regularEpi` | The external quotient argument is proved. `EnrichedRestriction.enriched_boolean_quotient_incomplete` and `enriched_boundCopair_not_regularEpi` now derive both conclusions directly from the enriched section and an explicit subobject identification at `S`. Packaging this identification from the global comparison along `J` remains open. |
-| `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `PredicateEmbedding.complete_extensions_and_decisions` | Proved for genuine Boolean quotients and the constructed internal Boolean algebra on `1 + 1`. The second declaration uses the existing `E`-to-`P` embedding followed by the subobject identification. |
-| Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision` | Proved from the external diagonal representation data. This does not claim the arbitrary-arrow clause or the full enriched input construction. |
+| `thm:categorical-essential-incompleteness` | `EnrichedRestriction.categorical_essential_incompleteness`; `categorical_boundCopair_not_regularEpi` | Both conclusions proved along `J : Tot(K₀) → C`, from the internal section, natural predicate identification, and ordinary representing restriction idempotents. Both names are in `EnrichedRestriction`; the precise input scope is described below. |
+| `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for genuine Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
+| Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
 | `thm:integration-essential-equivalence` | — | Open; needs the numerical recursion category, PER category, and syntax/provability comparison. |
 | `prop:numerical-boolean-extensions` | — | Open. |
 | `cor:arithmetic-representation-incompleteness` | — | Open; the imported arithmetic recursion-category instance is not this numerical comparison. |
@@ -77,9 +85,10 @@ in the quotient argument. `boolean_quotient_incomplete` assumes a regular
 extensive category, an order isomorphism from `P(S)` to its relevant subobject
 lattice, and the external representation data. It proves that consistent
 represented quotient fibers cannot have join top. Since the external data
-are already supplied, this proof only needs the identification at `S`; it
-does not yet construct that data from the manuscript's functor `J` and its
-natural identification at every object.
+are already supplied, this proof only needs the identification at `S`.
+`GlobalSubobjects.lean` supplies this component from the natural identification
+along `J`, and `CategoricalTheorem.lean` states the conclusion using ordinary
+restriction idempotents.
 
 `BooleanPresentations.lean` proves the three clauses of
 `lem:complete-boolean-presentation`. Its supporting results establish that the
@@ -119,7 +128,7 @@ restriction-domain sort `E(S)` distinct from the general-predicate sort `P(S)`.
 The final `no_represented_boolean_decision` result combines this equivalence
 with the existing external diagonal obstruction.
 
-## The internal separator construction and remaining enriched bridge
+## Internal and global comparisons
 
 `InternalLattices.lean` describes a bounded distributive lattice object by its
 lattice structures on all generalized-element hom-sets, natural under
@@ -200,15 +209,55 @@ the already proved Boolean-presentation lemma. The theorem takes the
 subobject identification at the sentence object explicitly; no independent
 external representation operation is assumed.
 
-The next unresolved construction is the **global comparison**: assemble the
-generalized-point equivalences at the terminal object into the ordinary
-total-arrow and domain-predicate comparison; connect the internal section to
-the external representation data and the natural subobject identification
-along `J`. The existing `DomSemilattice` interface additionally uses the
-`PCategory` presentation, so its comparison with the new restriction-category
-presentation is not silently assumed. Until the comparison along `J` is
-packaged with these constructions, the full theorem
-`thm:categorical-essential-incompleteness` is not claimed.
+`GlobalCartesian.lean` constructs the ordinary category of global arrows and
+its binary product universal property. The projection and naturality equations
+of `globalProductIso` compare the enriched product with Mathlib's chosen
+product. Global predicates and the internal monic components give the external
+predicate lattice and natural injective embedding.
+
+`GlobalTotals.lean` takes `K₀ = Parameterized R 1` and defines `GlobalTotal`
+as the wide subcategory of `RestrictionCategory.isTotal`. Its equivalence with
+global total hom-objects has proved identity, composition, natural-isomorphism,
+and triangle laws, and preserves binary products. Zero morphisms and the
+identity/zero comparison are constructed. The imported `TotalSubcategory`
+abbreviation additionally requires a `PCategory` presentation; the new definition
+uses the same wide-subcategory construction directly.
+
+`GlobalDomains.lean` defines ordinary restriction domains by an endomorphism
+and the equation `rst e = e`. The global equalizer comparison is an order
+isomorphism. Its lattice order is `e >> d = e`, meet is composition, and the
+bounds have underlying arrows zero and identity. The comparison commutes with
+actual inverse image `rst (f >> e)` for partial as well as total arrows.
+
+`GlobalRepresentation.lean` includes the chosen-product isomorphism in the
+external substitution map. It proves the row comparison and the equivalence
+of internal and external representation equations at the terminal object.
+The internal section supplies external representatives and global inseparability.
+
+`GlobalSubobjects.lean` reindexes predicates onto `GlobalTotal`.
+`SubobjectIdentification` specifies order-isomorphism components and their
+pullback naturality equation. `presheafIso` constructs the actual natural
+isomorphism of contravariant functors; universe lifts place both in one
+category of types. `domainSubobject` combines the domain comparison, internal
+embedding, and subobject identification. Its bounded lattice laws, injectivity,
+and naturality for actual subobject pullback are proved.
+
+`CategoricalTheorem.lean` states the principal theorem with ordinary
+nontriviality `1_U ≠ 0`, a regular extensive target, a binary-product-preserving
+functor `J`, the natural identification, actual Boolean presentations and
+quotients, and representing ordinary restriction idempotents. It proves
+incompleteness and the bound-copairing conclusion. It also specializes the
+decision equivalence and excludes represented Boolean decisions.
+
+The precise input scope is the restriction, product, zero, lattice, predicate,
+and representation-section part of Definition `def:generalized-definability-algebra`.
+The proof does not use the additional recursion-category or indexing data.
+Product preservation by `J` is retained in the principal statement, although
+the quotient argument needs only the identification component at `S`.
+No additional mathematical hypothesis is introduced by the global comparison.
+A single Lean record for the entire definability algebra, including its
+recursion and indexing data, and a comparison with Mathlib's bundled enriched
+category interface are not provided.
 
 ## Numerical and verification boundaries
 
@@ -220,7 +269,13 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The full verifier builds the combined entry point and audits 83 declarations,
+The next unresolved mathematical construction is the **numerical presentation**:
+construct its restriction category and theorem/refutation predicate functor,
+then prove the comparisons required by `thm:integration-essential-equivalence`
+and `prop:numerical-boolean-extensions`. The imported typed arithmetic category
+cannot supply these comparisons merely by compiling.
+
+The full verifier builds the combined entry point and audits 113 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash. No imported source was changed for this milestone.
 Lean compilation and axiom inspection do not establish the open comparisons

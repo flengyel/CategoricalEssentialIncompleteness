@@ -11,19 +11,20 @@ Version 16 is included unchanged:
 - [LaTeX source](manuscript/definability_comparison_v16.tex)
 - [Source provenance](MANUSCRIPT_SOURCE.json)
 
-The current Lean checkpoint proves the external diagonal obstruction and its
-inseparability consequence, including their interpretation on actual restriction
-idempotents and total arrows. It also proves the Boolean-quotient incompleteness
-argument for genuine equalizer subobjects from explicit external representation
-data. The quotient argument is also proved directly from the enriched
-representation section and an explicit subobject identification at `S`.
-It constructs the restriction-idempotent equalizers and totality
-pullbacks from enriched restriction hom-objects, and derives internal total
-composition, products, and restriction inverse image. The complementary-pair
-and representation pullbacks and the actual separator equalizer yield the
-factorization `Sep → Z_U`. The section supplies the varying representative at
-`Sep`. The no-global-separator and strict-initial-object consequences are also
-proved.
+The current Lean checkpoint proves categorical essential incompleteness for
+Boolean presentations along `J : Tot(K₀) → C`. The theorem uses a regular
+extensive category `C`, a binary-product-preserving `J`, a natural identification
+of global predicates with subobjects along `J`, the internal representation
+section, and nontriviality `1_U ≠ 0`. Every consistent Boolean quotient whose
+two bound fibers arise from restriction idempotents is incomplete.
+
+The proof constructs the domain equalizers, totality pullbacks, internal
+total-arrow operations, and restriction inverse image. It proves the internal
+factorization `Sep → Z_U`, identifies global total arrows with `Tot(K₀)`, and
+identifies global domains with ordinary restriction idempotents. The predicate
+identification gives a natural isomorphism of presheaves and a natural
+injective bounded lattice map from domains to actual subobjects. The internal
+section also supplies the external diagonal representation equations.
 
 The Boolean-presentation lemma is proved: consistency is equivalent to the
 bound copairing being monic, completeness to its being a regular epimorphism,
@@ -33,10 +34,11 @@ proves that the bound copairing is not a regular epimorphism.
 Characteristic arrows for complementary subobjects and the internal Boolean
 algebra on `1 + 1` are constructed. The equivalence between complete represented
 Boolean extensions and represented decisions is proved, including the
-comparison through the domain-to-predicate embedding. The comparison of global
-elements with the external predicate functor and the functor `J` remains open.
-The full categorical essential-incompleteness theorem and numerical
-interpretation remain incomplete; see
+comparison through the domain-to-predicate embedding and the functor `J`.
+The categorical proof is stated using the restriction, lattice, predicate,
+and section data of a definability algebra. Its additional recursion and
+indexing structure is unused; a single record bundling all of that structure
+is not yet provided. The numerical and arithmetic interpretation remains open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -126,14 +128,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 72 diagonal, restriction, internal, quotient,
-Boolean-presentation, and decision declarations (83 declarations in total). Only
+declarations, and 102 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, and decision declarations (113 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 83 axiom audits.
+PASS: project build, dependency pins, source hashes, and 113 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -145,7 +147,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The enriched-restriction checkpoint evidence is in
+is ignored by Git. The global-comparison and categorical-theorem evidence is in
+[`Audit/2026-10-28-global-comparison/`](Audit/2026-10-28-global-comparison/).
+The enriched-restriction checkpoint evidence is in
 [`Audit/2026-10-28-enriched-restriction/`](Audit/2026-10-28-enriched-restriction/).
 The internal-separator checkpoint evidence is in
 [`Audit/2026-10-28-internal-separator/`](Audit/2026-10-28-internal-separator/).

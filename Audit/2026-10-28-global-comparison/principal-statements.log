@@ -1,0 +1,55 @@
+CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_essential_incompleteness.{v, u, w, v', u'}
+  {V : Type u} [CategoryTheory.Category.{v, u} V] [CategoryTheory.Limits.HasFiniteLimits V] {O : Type w}
+  {H : CategoricalEssentialIncompleteness.InternalHom V O}
+  (R : CategoricalEssentialIncompleteness.EnrichedRestriction H) [R.Zeros] [R.DomainLattices] (products : R.Products)
+  (P : CategoricalEssentialIncompleteness.InternalPredicates (R.totalHom products)) {C : Type u'}
+  [CategoryTheory.Category.{v', u'} C] [CategoryTheory.Regular C] [CategoryTheory.FinitaryExtensive C]
+  (J : CategoryTheory.Functor R.GlobalTotal C)
+  (η : CategoricalEssentialIncompleteness.SubobjectIdentification (R.predicatesOnTotals products P) J)
+  (D : CategoricalEssentialIncompleteness.InternalDiagonalData (R.domainPredicates products) P)
+  (σ : D.RepresentationSection) (hU : CategoryTheory.CategoryStruct.id (R.globalObject D.U) ≠ 0)
+  (q : CategoricalEssentialIncompleteness.BooleanPresentation (J.obj (R.totalGlobalObject D.S)))
+  (hpos : (η.app (R.totalGlobalObject D.S)) D.positive = q.positive)
+  (hneg : (η.app (R.totalGlobalObject D.S)) D.negative = q.negative)
+  (r : CategoricalEssentialIncompleteness.BooleanQuotient q.algebra)
+  (_preservesProducts :
+    CategoryTheory.Limits.PreservesLimitsOfShape (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair) J)
+  (consistent : (q.quotient r).Consistent)
+  (represented : R.RepresentedQuotientFibers products P J η D.embedding D.S q r) : ¬(q.quotient r).Complete
+CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_boundCopair_not_regularEpi.{v, u, w, v', u'}
+  {V : Type u} [CategoryTheory.Category.{v, u} V] [CategoryTheory.Limits.HasFiniteLimits V] {O : Type w}
+  {H : CategoricalEssentialIncompleteness.InternalHom V O}
+  (R : CategoricalEssentialIncompleteness.EnrichedRestriction H) [R.Zeros] [R.DomainLattices] (products : R.Products)
+  (P : CategoricalEssentialIncompleteness.InternalPredicates (R.totalHom products)) {C : Type u'}
+  [CategoryTheory.Category.{v', u'} C] [CategoryTheory.Regular C] [CategoryTheory.FinitaryExtensive C]
+  (J : CategoryTheory.Functor R.GlobalTotal C)
+  (η : CategoricalEssentialIncompleteness.SubobjectIdentification (R.predicatesOnTotals products P) J)
+  (D : CategoricalEssentialIncompleteness.InternalDiagonalData (R.domainPredicates products) P)
+  (σ : D.RepresentationSection) (hU : CategoryTheory.CategoryStruct.id (R.globalObject D.U) ≠ 0)
+  (q : CategoricalEssentialIncompleteness.BooleanPresentation (J.obj (R.totalGlobalObject D.S)))
+  (hpos : (η.app (R.totalGlobalObject D.S)) D.positive = q.positive)
+  (hneg : (η.app (R.totalGlobalObject D.S)) D.negative = q.negative)
+  (r : CategoricalEssentialIncompleteness.BooleanQuotient q.algebra)
+  (preservesProducts :
+    CategoryTheory.Limits.PreservesLimitsOfShape (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair) J)
+  (consistent : (q.quotient r).Consistent)
+  (represented : R.RepresentedQuotientFibers products P J η D.embedding D.S q r) :
+  ¬CategoryTheory.IsRegularEpi r.target.boundCopair
+CategoricalEssentialIncompleteness.SubobjectIdentification.presheafIso.{v, u, w, v', u'} {A : Type u}
+  [CategoryTheory.Category.{v, u} A] {P : CategoricalEssentialIncompleteness.PredicateLattice A} {C : Type u'}
+  [CategoryTheory.Category.{v', u'} C] [CategoryTheory.Limits.HasPullbacks C] {J : CategoryTheory.Functor A C}
+  (η : CategoricalEssentialIncompleteness.SubobjectIdentification P J) :
+  P.presheaf.comp CategoryTheory.uliftFunctor.{max u' v', w} ≅
+    J.op.comp ((CategoryTheory.Subobject.functor C).comp CategoryTheory.uliftFunctor.{w, max u' v'})
+CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_naturality.{v, u, w, v', u'} {V : Type u}
+  [CategoryTheory.Category.{v, u} V] [CategoryTheory.Limits.HasFiniteLimits V] {O : Type w}
+  {H : CategoricalEssentialIncompleteness.InternalHom V O}
+  (R : CategoricalEssentialIncompleteness.EnrichedRestriction H) (products : R.Products)
+  (P : CategoricalEssentialIncompleteness.InternalPredicates (R.totalHom products)) [R.Zeros] [R.DomainLattices]
+  (j : CategoricalEssentialIncompleteness.InternalPredicateEmbedding (R.domainPredicates products) P) {C : Type u'}
+  [CategoryTheory.Category.{v', u'} C] [CategoryTheory.Regular C] [CategoryTheory.FinitaryExtensive C]
+  {J : CategoryTheory.Functor R.GlobalTotal C}
+  (η : CategoricalEssentialIncompleteness.SubobjectIdentification (R.predicatesOnTotals products P) J) {X Y : O}
+  (f : R.totalGlobalObject X ⟶ R.totalGlobalObject Y) (a : R.GlobalDomain Y) :
+  (R.domainSubobject products P j η X) (R.globalDomainInverse f.hom a) =
+    (CategoryTheory.Subobject.pullback (J.map f)).obj ((R.domainSubobject products P j η Y) a)

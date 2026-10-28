@@ -12,6 +12,7 @@ import CategoricalEssentialIncompleteness.BooleanPresentations
 import CategoricalEssentialIncompleteness.BooleanDecisions
 import CategoricalEssentialIncompleteness.InternalRepresentation
 import CategoricalEssentialIncompleteness.EnrichedQuotients
+import CategoricalEssentialIncompleteness.CategoricalTheorem
 
 /-!
 # Categorical essential incompleteness: diagonal and quotient arguments
@@ -28,10 +29,13 @@ extensions with represented decisions. It constructs the domain equalizers,
 totality pullbacks, internal total-arrow operations, and domain inverse image
 from enriched restriction hom-objects. The representation section yields the
 factorization of the actual separator through the equalizer of the bounds.
-It also proves the Boolean-quotient obstruction directly from that section
-and an explicit subobject identification at the sentence object. The global
-comparison along `J` and the numerical interpretation remain separate
-obligations.
+The global comparison identifies total arrows and restriction domains with
+the ordinary category and its domain lattices. A natural subobject
+identification along `J` then gives categorical essential incompleteness for
+genuine Boolean quotients and the corresponding decision obstruction.
+The proof uses the restriction, lattice, predicate, and section data;
+the additional recursion and indexing structure is unused. The numerical
+interpretation remains a separate obligation.
 -/
 
 set_option autoImplicit false

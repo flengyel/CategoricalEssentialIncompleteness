@@ -1,5 +1,52 @@
 # Categorical essential incompleteness: build result
 
+## Global comparison and categorical theorem checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`68d5d9cb07e2bf63f693ea20401ed335a7807357`. The existing checkout was clean,
+and the remote `main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS.
+- Combined entry point: PASS (1906 jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for all 113 declarations, retaining all
+  83 previous checks. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions and all 356 imported-file records match
+  their pins or the two pre-existing recorded patches.
+- All six new modules compile without warnings. The two existing imported
+  linter warnings remain.
+- The scan of all twenty-four project Lean files found no `sorry`, `admit`,
+  `axiom`, or `opaque` declarations. No imported source was changed.
+
+The global comparison constructs the ordinary total-arrow category, its
+equivalence with global total hom-objects, and the bounded lattice comparison
+between global domain points and ordinary restriction idempotents. It proves
+compatibility with products and actual restriction inverse image. The internal
+section supplies the external representation equations through the explicit
+chosen-product isomorphism.
+
+The natural predicate identification along `J` gives a genuine natural
+presheaf isomorphism and a natural injective bounded lattice map into actual
+subobjects. `categorical_essential_incompleteness` and
+`categorical_boundCopair_not_regularEpi` prove the two conclusions of
+`thm:categorical-essential-incompleteness`, using ordinary nontriviality,
+represented restriction domains, and the internal section. The decision
+equivalence and Boolean-decision obstruction are also specialized along `J`.
+
+The input is the restriction, product, zero, lattice, predicate, and section
+data of a definability algebra. The additional recursion and indexing data are
+unused in this proof; a single record bundling the entire algebra is not yet
+provided. Product preservation by `J` is retained in the principal theorem,
+although the quotient argument uses only its identification component at `S`.
+The numerical/PER and arithmetic comparisons remain open. See
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for the exact scope.
+
+The source toolchain and imported provenance are unchanged. The documented
+hosted executable-path adapter was used. Palomar Comparator, NanoDa, and
+con-ron were not run.
+
+Evidence is retained in
+[Audit/2026-10-28-global-comparison](Audit/2026-10-28-global-comparison/).
+
 ## Enriched restriction checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from

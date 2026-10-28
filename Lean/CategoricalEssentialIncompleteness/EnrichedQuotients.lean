@@ -11,8 +11,9 @@ import CategoricalEssentialIncompleteness.BooleanPresentations
 
 The separator obstruction now uses the actual domain equalizers and totality
 pullbacks. Only the sentence-object component of the subobject identification
-is used in this argument. Packaging that component from the full global
-comparison along `J` remains a separate construction.
+is used in this argument. `GlobalSubobjects` constructs the global predicate
+comparison along `J`; `CategoricalTheorem` applies it with ordinary
+restriction idempotents and total arrows.
 -/
 
 set_option autoImplicit false

@@ -1,0 +1,103 @@
+{
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness.lean",
+      "sha256": "0eb2c7907f56834e72f0411b33f5aab72d9d2ede79e2b1db5f8290c8042ee4f1"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean",
+      "sha256": "867354f5f1dcc00096b57ea2a925373b256c0649ccc38430d6f65b56d0886714"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanDecisions.lean",
+      "sha256": "ccded11f529423bdc0a05c43b5ca28e8fb5e905e7dce1fd9706ae0f239a5a02f"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanPresentations.lean",
+      "sha256": "a11eba45bd86ec044beb14b8ca77b5caa8a61ce99fc040d98f5f04b8a5651552"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanQuotients.lean",
+      "sha256": "4a17be118634bf7dfd837f14b6fdcd7be88054f6bf7908d9f6ba7176c210c26b"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/CategoricalTheorem.lean",
+      "sha256": "ec322f799608a97e8777c9191b85404670ec1676064aa51a6f6229346560d4c2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/CharacteristicArrows.lean",
+      "sha256": "76082b40ef3d34fa052b411dc67f629ffa3b469dbbfcd88d59eea621fedaad16"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/Diagonal.lean",
+      "sha256": "14e68939090094e87023ec20fa234511ffee67edab3e240328a2be0ddeb410db"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedDomains.lean",
+      "sha256": "8d9c4301b33faa84e8715fca37e224a8c0b7e314a4edf7d53d7c27fa072b67f7"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedQuotients.lean",
+      "sha256": "7182cf436863f3e0d99d9dce4a9160393f4f287aa71e1cc63e6359d71faffd12"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedRestriction.lean",
+      "sha256": "9065790e0f4bdecbb91465941b19710f2eda7e19e82dd7bfadbfcd03e6137a45"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedTotals.lean",
+      "sha256": "ce6d7ed89c58a0a7af2312815cbbc446f58097098c4781aeefa4e4744720b002"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalCartesian.lean",
+      "sha256": "effa35c40dab50ded97d090264d30bc1ae01cc229af38de9def9435a3895c30d"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalDomains.lean",
+      "sha256": "fed4bf3bf634aa67da76404e96546626011bb1864917aaefce6e2dda1a49bc5c"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalRepresentation.lean",
+      "sha256": "440f7a578b2ed44266a8bb08159618cae67252ba6ec92ab17b95d7c4737207d3"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalSubobjects.lean",
+      "sha256": "cffb389617ba61685abaefa33280a7ed7bdcf69378afd22e9252746607f2de79"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalTotals.lean",
+      "sha256": "870f66637183ddef13615b0f0df29a879a1fd084bf91f2ce558f147259f5761e"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalBridge.lean",
+      "sha256": "15e3369c545749696424c5fa86d7dc62d1dab00e3db37ee45e23832cd3e834cf"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalCartesian.lean",
+      "sha256": "2b1f0ec100633f43246731c87a7f7ea7e4b9f670baa7d64860e7cb1128ed9c92"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalDiagonal.lean",
+      "sha256": "f1fc5a13f5d18957ca90b44e9c9b426e778db64c0730697404cf027d5a996d00"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalLattices.lean",
+      "sha256": "c99e482a7543ecad43a9d6e4b9233170c5081410ad2bf53a5c5cc51d19d385f4"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalRepresentation.lean",
+      "sha256": "1fdeb0653e47a809fb9de2d84deb4bfbe09af7b8ec5858c63cdf0a84f3929caf"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/RestrictionPredicates.lean",
+      "sha256": "5bd5ffdeef949091dbffaa12e25b5ee16d997c59d2bd854bf30c21fef5231ec6"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/TwoBoolean.lean",
+      "sha256": "ae65b20f04d20730cb7bd83400aa0fca357132d945efb8aac38f380b181222f3"
+    }
+  ],
+  "pattern": "\\b(?:sorry|admit)\\b|^\\s*(?:axiom|opaque)\\s",
+  "findings": [],
+  "success": true
+}
