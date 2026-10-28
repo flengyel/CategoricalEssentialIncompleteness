@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    {
+      "file": "CategoricalRiceShapiro/ArithmeticCode/BetaCoding.lean",
+      "line": 17,
+      "text": "needs: in a model of `\ud835\udde3\ud835\uddd4`, every beta code `n` and every index `l` admit a code"
+    },
+    {
+      "file": "FailureOfComposition/NumericalSpecialization.lean",
+      "line": 18,
+      "text": "axiom schemes are PA theorems, stage axioms denote the theorem enumerated at"
+    },
+    {
+      "file": "RiceShapiro.lean",
+      "line": 30,
+      "text": "* `RiceShapiro.ExtensionFamilies` \u2014 generated domains admit extension spans,"
+    }
+  ],
+  "review": "All three matches are prose inside comments; no sorry/admit term or axiom declaration was found in the project import closure."
+}

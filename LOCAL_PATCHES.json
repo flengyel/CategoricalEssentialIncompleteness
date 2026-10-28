@@ -1,0 +1,14 @@
+[
+  {
+    "path": "Lean/FailureOfComposition/Palomar/EvaluatorBridge.lean",
+    "source_git_blob": "21f0dc59501748f46cca38abbd534f6691c23626",
+    "patched_git_blob": "a8c9bed6115d8e1e44da9555eee588f2f1317670",
+    "reason": "Use the proved eventualGraph_val interface instead of unfolding the previous mkSigma representation. The theorem statement is unchanged."
+  },
+  {
+    "path": "Lean/lake-manifest.json",
+    "source_git_blob": "a5ffe3288c09401adf74fc6f2c93e94d2dcf70af",
+    "patched_git_blob": "489f82649891d939c7e7652afb5f5f703d73a118",
+    "reason": "Rename the root Lake package to CategoricalEssentialIncompleteness; dependency revisions are unchanged."
+  }
+]

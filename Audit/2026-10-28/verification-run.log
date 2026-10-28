@@ -1,0 +1,4 @@
+Running: lean --version
+Running: lake build CategoricalEssentialIncompleteness
+Running: lake env lean CategoricalEssentialIncompleteness/AxiomAudit.lean
+PASS: project build, dependency pins, source hashes, and eleven axiom audits.

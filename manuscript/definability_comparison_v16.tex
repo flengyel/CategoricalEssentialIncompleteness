@@ -1,0 +1,2916 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,xurl,hyperref,needspace}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Definability and incompleteness in recursion categories},pdfsubject={Version 16, 27 October 2026}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Definability and incompleteness in recursion categories}
+\author{}
+\date{27 October 2026\\Version 16}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove a categorical essential incompleteness theorem for recursion
+categories equipped with additional structure expressing definability.
+The proof establishes a categorical analogue of recursive inseparability.
+In the numerical interpretation, the definability hypothesis is equivalent
+to strong numeralwise definability of every recursive set in a consistent
+arithmetical theory $T$ with effective syntax and numeral substitution.
+The conclusion is essential incompleteness: every consistent c.e.\ extension
+of $T$ is incomplete. This gives a categorical version of one of the
+generalized incompleteness statements proposed by Di Paola and Heller.
+
+Let $\mathscr V$ be a finitely complete category. A definability algebra
+consists of a $\mathscr V$-enriched category $\mathcal K$ whose underlying
+ordinary category $\mathcal K_0$ is a recursion category, together with
+predicate objects, compatible restriction and inverse-image operations,
+embeddings of restriction idempotents, and internal indexing and
+representation operations in $\mathscr V$. The representation operation
+assigns a total representing arrow to every complemented restriction
+idempotent on a fixed object, relative to a fixed total arrow and two
+fixed disjoint predicates.
+
+If $\mathcal K_0$ is nontrivial, two disjoint predicates that arise
+from restriction idempotents and contain the two fixed predicates,
+respectively, cannot have join equal to the greatest element of their
+predicate lattice. We formulate categorical essential incompleteness
+using quotients of internal Boolean algebras and derive it from this
+result.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Di Paola and Heller sought an algebraic formulation of generalized
+incompleteness in which the recursive constructions and diagonal
+argument are developed within recursion categories
+\cite[pp.~594--596]{DPH}.
+One of their formulations asserts that definability of every
+recursive set in a consistent arithmetical theory implies recursive
+inseparability of its theorem and refutation sets. Essential
+incompleteness follows: every consistent c.e. extension is incomplete.
+We prove a categorical form of this implication and a categorical
+essential incompleteness theorem. The additional structure expressing
+definability is specified by a definability algebra.
+
+We write $\mathcal K$ for an enriched category and $\mathcal K_0$
+for its underlying ordinary category. We use Heller's convention:
+a recursion category $\mathcal K_0$ is a prodominical
+category in which all objects are isomorphic and which admits a
+Turing morphism \cite[Sections~5 and~9]{Heller}.
+For an arrow $f:X\to Y$, write $\bar f:X\to X$ for its
+restriction. An endomorphism $e:X\to X$ satisfying $\bar e=e$
+is a \emph{restriction idempotent}
+\cite[Section~2.1]{RestrictionI}.
+These are the morphisms called \emph{domains} in Di Paola and
+Heller's terminology \cite[Definition~3.1 and Lemma~3.2]{DPH}.
+We use \emph{restriction idempotent} throughout.
+A total arrow satisfies $\bar f=1_X$;
+the total arrows form $\operatorname{Tot}(\mathcal K_0)$.
+We write $\otimes$ for binary restriction products and use the
+composition convention $gf=g\circ f$: first $f$, then $g$.
+
+Fix a finitely complete category $\mathscr V$ and a
+$\mathscr V$-enriched category $\mathcal K$ whose underlying
+ordinary category $\mathcal K_0$ is a recursion category.
+A definability algebra equips $\mathcal K$ with restriction
+operations, predicate objects, inverse-image operations, and
+embeddings of the objects of restriction idempotents into the
+predicate objects. It also includes internal indexing and
+representation operations in $\mathscr V$. The representation
+operation assigns a total representing arrow to every complemented
+restriction idempotent on a fixed object, relative to a fixed total
+arrow and two fixed disjoint predicates. Its source is a pullback
+in $\mathscr V$ expressing complementarity. A second pullback in
+$\mathscr V$ expresses the representation equations, and a section
+of its projection supplies the operation.
+
+Theorem~\ref{thm:internal-inseparability} proves that, in a nontrivial
+recursion category, no complemented restriction idempotent separates
+the two distinguished predicates. Suppose the predicate lattices
+are realized as subobject lattices in a regular extensive category,
+and the distinguished predicates are the fibers over the bounds
+of a Boolean presentation. Every consistent presentation induced
+by a Boolean quotient is incomplete if its two fibers are images
+of restriction idempotents
+(Theorem~\ref{thm:categorical-essential-incompleteness}).
+In the numerical interpretation, the representation condition is
+equivalent to strong numeralwise definability of every recursive
+set, and the categorical inseparability conclusion becomes
+recursive inseparability of the theorem and refutation sets
+(Theorem~\ref{thm:integration-essential-equivalence}).
+The Boolean quotient conclusion is equivalent to essential
+incompleteness (Proposition~\ref{prop:numerical-boolean-extensions}).
+Consistent extensions of Peano arithmetic provide the numerical
+examples.
+
+\subsection{Related literature}
+\label{sec:related-literature}
+
+Lawvere's 1969 categorical diagonal and incompleteness theorems
+use representation by global elements
+\cite[Theorems~2.2 and~3.3]{Lawvere}.
+Di Paola and Heller's 1987 program instead asks for the recursive
+constructions and generalized incompleteness statements within
+recursion categories. The numerical interpretation of our
+inseparability theorem recovers their formulation~(3)
+\cite[pp.~594--596]{DPH}.
+They reject diagonalizable algebras for this purpose: first
+incompleteness reduces to the assertion that a nontrivial algebra
+has more than two elements, while the axiom formalizing L\"ob's
+theorem largely incorporates second incompleteness.
+Their proposed development uses intrinsic recursion theory to
+obtain the generalized incompleteness statements.
+
+Di Paola and Heller also construct recursion categories of free
+actions of finite groups
+\cite[Section~7.9(3), Theorem~7.9.9]{DPH}.
+The equivariant recursion category used here is the one-object
+form of that construction over the numerical recursion category.
+Heller's 1990 existence theorem supplies recursion categories
+beyond the numerical prototype
+\cite[Theorem~9.2 and Section~10]{Heller}.
+His formulation adopts Rosolini's P-categories and uses the
+prodominical condition \cite[Introduction and Section~5]{Heller}.
+
+Cockett and Hofstra's 2008 Turing categories replace the isotype
+condition by a Turing object
+\cite[Sections~3.1 and~3.6]{TuringCategories}.
+Cockett's March 2010 lectures attribute a recursive-inseparability
+theorem in this setting to Lengyel
+\cite[slides~33--34]{CockettSlides}.
+His 2014 notes state the result for discrete Turing categories
+with finite joins and give an incompleteness theorem with a
+provability predicate
+\cite[Section~7.1 and Theorems~7.8 and~7.14]{CockettNotes}.
+The categorical hypothesis used here is representation of
+complemented restriction idempotents by fixed disjoint predicates;
+Theorem~\ref{thm:integration-essential-equivalence} identifies
+its numerical meaning.
+
+Ramesh's 2023 introspective theories provide categorical fixed-point
+theorems \cite[Chapters~2--4]{Ramesh}.
+We construct a relative free introspective extension that preserves
+a definability algebra, including its representation operation.
+For the arithmetic introspective structures, quotation and
+consistency supply the numerical representation operation after
+standard interpretation. This construction uses actual totality
+of a decision procedure, without requiring its totality to be
+provable in the arithmetical theory.
+
+The numerical definability algebra is enriched over $\mathbf{Set}$;
+its Boolean presentations belong to the c.e. and full categories
+of partial equivalence relations. On each of these categories,
+every introspective functor is naturally isomorphic to a constant
+functor with terminal value. Conversely, the PA syntactic base
+admits nonconstant introspection, but its enrichment of programs
+modulo uniformly PA-provable graph equality admits no internal
+representation operation. Among the base and enrichment pairs
+specified in Appendix~\ref{sec:introspection-representation-appendix},
+neither nonconstant introspection
+on the base nor extension to a definability algebra implies the other.
+
+Definability algebras were introduced by adjoining chosen total
+representing arrows to the recursion-category structure
+\cite[Sections~3--4]{DefinabilityAlgebras}.
+The present construction internalizes the representing operation
+and allows general predicate objects. Taking the objects of
+restriction idempotents as predicate objects recovers the original
+algebras. Their inclusion into the general predicate structures
+is fully faithful; the numerical interpretation shows that it
+need not be essentially surjective.
+
+\subsection{Organization}
+
+Section~\ref{sec:integration} defines the categorical structure,
+proves inseparability, and establishes categorical essential
+incompleteness for Boolean presentations.
+Section~\ref{sec:integration-numerical} proves the numerical
+realization and its exact-completion comparison.
+Section~\ref{sec:equivariant-model} gives the equivariant example,
+including its Turing morphism and Boolean presentation.
+Section~\ref{sec:completion-introspection} constructs extensions
+with restriction terminal objects, exact completions, the relative
+free introspective extension,
+and the comparisons with nonconstant introspection. It also
+derives the numerical definability structure from arithmetic
+introspection.
+Appendix~\ref{sec:introspection-representation-appendix} proves
+the obstruction to an internal representation operation over
+the PA syntactic base.
+
+\section{Definability algebras and categorical incompleteness}
+\label{sec:integration}
+
+\subsection{Enriched categories and underlying recursion categories}
+\label{sec:definability-algebras}
+
+Fix a finitely complete category $\mathscr V$ with terminal object $1$.
+All limits and structure arrows in this subsection belong to $\mathscr V$.
+We use categories enriched over the cartesian monoidal category
+$(\mathscr V,\times,1)$ in the sense of
+\cite[Sections~1.2--1.3]{Kelly}.
+Let $\mathcal K$ be such an enriched category, with hom-objects
+$H(X,Y)$ in $\mathscr V$, identity
+arrows $1\to H(X,X)$, and composition arrows
+\[
+ H(Y,Z)\times H(X,Y)\longrightarrow H(X,Z)
+\]
+satisfying the category equations. Restriction is given by arrows
+$r_{X,Y}:H(X,Y)\to H(X,X)$ satisfying the restriction equations.
+Assume chosen binary restriction products and restriction zeros, with their operations given by arrows of $\mathscr V$.
+The restriction and product equations are those of
+\cite[Section~2.1]{RestrictionI} and
+\cite[Section~4.1]{RestrictionIII}, interpreted as equations
+of morphisms in $\mathscr V$.
+Write $\Gamma=\mathscr V(1,-):\mathscr V\to\mathbf{Set}$.
+The underlying ordinary category $\mathcal K_0$ has the same
+objects as $\mathcal K$ and hom-sets
+\[
+ \mathcal K_0(X,Y)=\Gamma H(X,Y)=\mathscr V(1,H(X,Y)).
+\]
+Applying $\Gamma$ to the enriched identities, composition,
+restriction, and product operations gives the corresponding
+operations in $\mathcal K_0$. Require $\mathcal K_0$ to be a
+recursion category. For objects $X,Y$ of $\mathcal K$, an arrow
+$f:X\to Y$ of $\mathcal K_0$ is represented by a point
+$\widehat f:1\to H(X,Y)$ in $\mathscr V$. We distinguish these
+notations when both types occur in the same construction.
+
+The objects of restriction idempotents and total arrows are defined by
+\[
+\begin{tikzcd}
+ E_X \arrow[r, hook, "i_X"] & H(X,X)
+ \arrow[r, shift left, "r_{X,X}"]
+ \arrow[r, shift right, swap, "1_{H(X,X)}"] & H(X,X),
+\end{tikzcd}
+\qquad
+\begin{tikzcd}
+ \mathsf T(X,Y) \arrow[r, hook] \arrow[d] & H(X,Y) \arrow[d, "r_{X,Y}"]\\
+ 1 \arrow[r, "1_X"'] & H(X,X),
+\end{tikzcd}
+\]
+where the first diagram is an equalizer and the second a pullback.
+For every object $A$ of $\mathscr V$, the equalizer identifies
+morphisms $A\to E_X$ with morphisms $u:A\to H(X,X)$ satisfying
+$r_{X,X}u=u$. In particular, preservation of finite limits by
+$\Gamma$ gives
+\[
+ \Gamma E_X\cong E(X),\qquad
+ \Gamma \mathsf T(X,Y)\cong\operatorname{Tot}(\mathcal K_0)(X,Y),
+\]
+where $E(X)$ consists of the restriction idempotents of $X$ in
+$\mathcal K_0$. This identifies every restriction idempotent
+$e:X\to X$ with a unique arrow $1\to E_X$.
+The induced map $\Gamma i_X$ is the inclusion into the
+endomorphism monoid $\mathcal K_0(X,X)$. The restriction equation
+$e\bar e=e$ implies $e^2=e$ when $\bar e=e$.
+Composition induces meet $\wedge:E_X\times E_X\to E_X$.
+The restriction zero and identity give the lower and upper
+bounds $\bot_{E_X},\top_{E_X}:1\to E_X$, respectively.
+Equip $E_X$ with joins so that it is a bounded distributive lattice
+object. Composition and restriction induce an inverse-image morphism
+\[
+ a^E_{X,Y}:H(X,Y)\times E_Y\longrightarrow E_X,
+ \qquad (f,e)\longmapsto\overline{ef}.
+\]
+Require preservation of finite joins as equations of morphisms on
+$H(X,Y)\times E_Y\times E_Y$. On $\mathsf T(X,Y)\times E_Y$ this
+action also preserves the bounds. Expressions in variables here
+and below abbreviate morphisms from the indicated finite products.
+
+The chosen Turing morphism $U\otimes U\to U$ of $\mathcal K_0$
+is represented by a global point $\tau:1\to H(U\otimes U,U)$
+in $\mathscr V$. Composition with this point gives
+\[
+ \operatorname{ev}_\tau:\mathsf T(U,U)\longrightarrow H(U\otimes U,U),
+ \qquad g\longmapsto\tau(g\otimes1_U).
+\]
+A chosen indexing arrow
+$\Lambda:H(U\otimes U,U)\to \mathsf T(U,U)$ satisfies
+$\operatorname{ev}_\tau\Lambda=1_{H(U\otimes U,U)}$.
+
+\subsection{Predicate objects and the representation pullback}
+\label{sec:generalized-definability-algebras}
+
+\begin{definition}\label{def:generalized-definability-algebra}
+A \emph{definability algebra} over $\mathscr V$ consists of the
+enriched category $\mathcal K$ with the restriction, product,
+lattice, and indexing structure above, together with the following
+predicate and representation structure.
+For each $X$, let $P_X$ be a bounded distributive lattice object.
+Inverse image is given by arrows
+\[
+ a_{X,Y}:\mathsf T(X,Y)\times P_Y\longrightarrow P_X
+\]
+that preserve the lattice operations in the predicate argument and
+satisfy the identity and contravariant composition equations
+\[
+ 1_X^*a=a,\qquad (gf)^*a=f^*(g^*a).
+\]
+These are equations on $P_X$ and
+$\mathsf T(Y,Z)\times \mathsf T(X,Y)\times P_Z$, respectively.
+Let $j_X:E_X\rightarrowtail P_X$ be monomorphisms of bounded
+distributive lattice objects, compatible with these inverse images.
+Thus inverse image on restriction idempotents and on predicates satisfies
+$a_{X,Y}(f,j_Y(e))=j_X(\overline{ef})$ as arrows on
+$\mathsf T(X,Y)\times E_Y$.
+
+An arrow $e:X\to X$ of $\mathcal K_0$ is represented
+by a morphism $\widehat e:1\to H(X,X)$ in $\mathscr V$.
+If $e$ is a restriction idempotent, the equation
+$r_{X,X}\widehat e=\widehat e$ gives a unique factorization
+$\widehat e=i_X\widetilde e$ through $E_X$.
+Its associated predicate is $p_e=j_X\widetilde e$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ 1 \arrow[r,"\widetilde e"] \arrow[dr,"\widehat e"']
+   \arrow[rr,bend left=22,"p_e"]
+ & E_X \arrow[r,"j_X"] \arrow[d,hook,"i_X"] & P_X \\
+ & H(X,X). &
+\end{tikzcd}
+\]
+Here $1$ is the terminal object of $\mathscr V$.
+Thus predicates arising from restriction idempotents are exactly those arrows
+$1\to P_X$ that factor through $j_X$.
+
+Fix objects $U,S$ and a global point
+$s:1\to \mathsf T(U\otimes U,S)$, representing a total arrow
+$U\otimes U\to S$ of $\mathcal K_0$. Fix also predicates
+$p_+,p_-:1\to P_S$ satisfying $p_+\wedge p_-=0$.
+The object $C_U$ of pairs of complementary restriction idempotents is the pullback
+\begin{equation}\label{eq:v8-complement-pullback}
+\begin{tikzcd}
+ C_U \arrow[r, hook, "d"] \arrow[d] & E_U\times E_U
+ \arrow[d, "{\langle\wedge,\vee\rangle}"]\\
+ 1 \arrow[r, "{\langle\bot_{E_U},\top_{E_U}\rangle}"'] & E_U\times E_U.
+\end{tikzcd}
+\end{equation}
+Write $d_+,d_-:C_U\to E_U$ for the two components of $d$.
+
+Composition and tensor give an arrow
+\[
+ \chi:\mathsf T(U,U)\longrightarrow \mathsf T(U\otimes U,S),
+ \qquad g\longmapsto s(g\otimes1_U).
+\]
+Put $W=P_{U\otimes U}$ and $G=\mathsf T(U,U)$. Define arrows
+$\ell:G\to W\times W$ and $b:C_U\to W\times W$ by
+\begin{align*}
+ \ell_\pm&=a_{U\otimes U,S}\langle\chi,p_\pm!_G\rangle,\\
+ b_\pm&=\pi_2^*j_Ud_\pm.
+\end{align*}
+Here $\pi_2^*:P_U\to W$ is inverse image under the second
+projection $U\otimes U\to U$. Form the pullback
+\begin{equation}\label{eq:v8-representation-pullback}
+\begin{tikzcd}
+ R \arrow[r, "r"] \arrow[d, "q_R"'] & G \arrow[d, "\ell"]\\
+ C_U \arrow[r, "b"'] & W\times W.
+\end{tikzcd}
+\end{equation}
+The representation structure is a section $\sigma:C_U\to R$ of $q_R$.
+Put $\rho=r\sigma:C_U\to \mathsf T(U,U)$. The corresponding commutative
+triangle is
+\begin{equation}\label{eq:v8-representation-section}
+\begin{tikzcd}
+ C_U \arrow[rr, "\rho"] \arrow[dr, "b"'] && \mathsf T(U,U)
+     \arrow[dl, "\ell"]\\
+ & W\times W. &
+\end{tikzcd}
+\qquad q_R\sigma=1_{C_U},\qquad \rho=r\sigma.
+\end{equation}
+Equivalently, $\rho:C_U\to \mathsf T(U,U)$ satisfies
+\begin{equation}\label{eq:generalized-algebra-representation}
+ a_{U\otimes U,S}\langle\chi\rho,p_\pm!_{C_U}\rangle
+   =\pi_2^*j_Ud_\pm.
+\end{equation}
+The pullback universal property makes these equations equivalent
+to the existence of the section in
+\eqref{eq:v8-representation-section}.
+\end{definition}
+
+\subsection{Morphisms and predicates arising from restriction idempotents}
+\label{sec:definability-morphisms}
+
+Work over the fixed category $\mathscr V$. A morphism consists of
+a $\mathscr V$-enriched functor $F:\mathcal K\to\mathcal K'$
+preserving restriction, the chosen binary restriction products, zeros, joins of restriction idempotents,
+Turing morphism, and indexing arrow, together with bounded lattice
+homomorphisms $\eta_X:P_X\to P'_{FX}$ compatible with inverse image.
+Writing $F_{X,Y}:H(X,Y)\to H'(FX,FY)$ for its hom-object
+morphisms, the induced ordinary functor
+$F_0:\mathcal K_0\to\mathcal K'_{0}$ sends $X$ to $FX$ and
+a point $\widehat f:1\to H(X,Y)$ to
+$F_{X,Y}\widehat f:1\to H'(FX,FY)$.
+Preservation of restriction means
+\[
+ r'_{FX,FY}F_{X,Y}=F_{X,X}r_{X,Y}.
+\]
+Compatibility of the predicate morphisms means
+\[
+ \eta_Xa_{X,Y}
+   =a'_{FX,FY}\bigl(\mathsf T(F)_{X,Y}\times\eta_Y\bigr)
+\]
+on $\mathsf T(X,Y)\times P_Y$.
+We require strict preservation of the chosen products, $FU=U'$,
+$FS=S'$, preservation of $s,p_+,p_-$, and
+\[
+ \eta_Xj_X=j'_{FX}E(F)_X,
+ \qquad \mathsf T(F)\rho=\rho'C(F).
+\]
+The arrows $E(F),\mathsf T(F),C(F)$ are induced by the equalizer and
+pullback universal properties. The last equation is equivalent to
+preservation of the section $\sigma$, since the inclusion of $R'$
+in $C_{U'}\times\mathsf T(U',U')$ is monic.
+Identity functors and composite functors, with their corresponding
+predicate components, satisfy these equations.
+
+\begin{definition}\label{def:original-definability-algebra}
+A \emph{definability algebra with restriction idempotents as predicates}
+has the enriched category and structure of
+Section~\ref{sec:definability-algebras}, together with $s$, $\rho$, and disjoint
+$a_+,a_-:1\to E_S$ satisfying
+\begin{equation}\label{eq:original-algebra-representation}
+ a^E_{U\otimes U,S}\langle\chi\rho,a_\pm!_{C_U}\rangle
+   =\pi_2^*d_\pm.
+\end{equation}
+Here $a^E$ is the inverse-image action on restriction idempotents.
+A morphism is an enriched functor preserving this structure,
+$s,a_+,a_-$, and $\rho$.
+\end{definition}
+
+Write $\mathsf{DefAlg}(\mathscr V)$ and
+$\mathsf{DefAlg}_{\mathrm{pred}}(\mathscr V)$ for the categories of
+definability algebras with restriction idempotents as predicates and with general predicates, respectively.
+
+\begin{proposition}\label{prop:algebra-comparison}
+The assignment $P_X=E_X$, $j_X=1_{E_X}$, with inverse images of restriction idempotents,
+defines a fully faithful functor
+\[
+ I:\mathsf{DefAlg}(\mathscr V)
+   \longrightarrow\mathsf{DefAlg}_{\mathrm{pred}}(\mathscr V).
+\]
+If the distinguished predicates of a general definability algebra
+factor as $p_\pm=j_Sa_\pm$ for $a_\pm:1\to E_S$, then the same
+enriched structure, $s$, and $\rho$ give a definability algebra with restriction idempotents as predicates. Conversely, any compatible predicate structure $(P,j)$
+extends a definability algebra with restriction idempotents as predicates by $p_\pm=j_Sa_\pm$.
+\end{proposition}
+\begin{proof}
+The inverse-image action on restriction idempotents satisfies the required equations.
+On morphisms set $I(F)=(F,E(F))$. Preservation of restriction
+makes $E(F)$ compatible with inverse images. Between two objects
+in the image of $I$, the equation
+$\eta_Xj_X=j'_{FX}E(F)_X$ forces $\eta_X=E(F)_X$.
+Every morphism between objects in the image is therefore uniquely
+of the form $I(F)$, proving fullness and faithfulness.
+
+When $p_\pm=j_Sa_\pm$, monicity of $j_S$ reflects disjointness.
+Compatibility with inverse image rewrites
+\eqref{eq:generalized-algebra-representation} as equalities after
+composition with $j_{U\otimes U}$. Its monicity reflects those
+equalities and gives~\eqref{eq:original-algebra-representation}.
+Conversely, composing the latter equations with
+$j_{U\otimes U}$ gives the generalized equations.
+\end{proof}
+
+The functor $\Gamma$ preserves finite limits. Consequently,
+$\Gamma E_X$ is the lattice of restriction idempotents of $X$ in $\mathcal K_0$,
+$\Gamma \mathsf T(X,Y)$ consists of its total arrows, and
+$\Gamma C_U$ gives pairs of complementary restriction idempotents. The internal lattice
+operations make $\Gamma P_X$ a bounded distributive lattice;
+inverse images make these lattices a contravariant functor on
+$\operatorname{Tot}(\mathcal K_0)$. The monomorphisms $j_X$
+induce a natural embedding of lattices of restriction idempotents, and the section
+$\sigma$ supplies a total representing arrow for each complemented restriction idempotent. In a one-object presentation with $S=U$, this gives the
+one-object predicate-lattice presentation. In the case of restriction idempotents as predicates it recovers the original definability algebra and its
+representing operation \cite[Section~4]{DefinabilityAlgebras}.
+
+\subsection{Categorical inseparability}
+\label{sec:categorical-representation}
+
+Let $C_S$ be the pullback defined by
+\eqref{eq:v8-complement-pullback}, with $U$ replaced by $S$,
+and write $b_+,b_-:C_S\to E_S$ for its two projections.
+Define $\operatorname{Sep}\rightarrowtail C_S$ as the equalizer of
+\[
+ \bigl\langle p_+!\wedge j_Sb_+,\ p_-!\wedge j_Sb_-\bigr\rangle,
+ \quad \langle p_+!,p_-!\rangle:C_S\longrightarrow P_S\times P_S.
+\]
+Thus its defining equations are the separator inequalities,
+expressed by meet. Define $z_U:Z_U\rightarrowtail1$ by the equalizer
+\[
+ Z_U\longrightarrow1
+ \mathrel{\substack{\xrightarrow{\ \bot_{E_U}\ }\\[-.5ex]
+                   \xrightarrow[\ \top_{E_U}\ ]{}}} E_U.
+\]
+
+\begin{theorem}[Categorical inseparability]
+\label{thm:internal-inseparability}
+For a definability algebra over a finitely complete category
+$\mathscr V$, the structure arrow $\operatorname{Sep}\to1$
+factors through $z_U:Z_U\rightarrowtail1$.
+Consequently, if $\bot_{E_U}\ne\top_{E_U}$ as arrows $1\to E_U$,
+there is no arrow $1\to\operatorname{Sep}$.
+If $\mathscr V$ has a strict initial object and $Z_U$ is initial,
+then $\operatorname{Sep}$ is initial.
+\end{theorem}
+\begin{proof}
+Pull the structure back to $\mathscr V/\operatorname{Sep}$.
+The two projections give morphisms
+$a,b:\operatorname{Sep}\to E_S$ representing complementary restriction idempotents,
+with $p_+\leq j_Sa$ and $p_-\leq j_Sb$.
+All operations and equations below are interpreted in this slice;
+their displayed parameter morphisms belong to $\mathscr V$.
+Put $\delta=s\Delta_U$, where
+$\Delta_U:U\to U\otimes U$ is the diagonal. Inverse image gives morphisms
+\[
+ d=\delta^*b,\qquad d'=\delta^*a
+ \quad:\operatorname{Sep}\longrightarrow E_U
+\]
+representing complementary restriction idempotents on $U$, hence an arrow $\gamma:\operatorname{Sep}\to C_U$ in
+$\mathscr V$. Compose it with $\rho:C_U\to \mathsf T(U,U)$ to obtain $g$.
+The representation equations and separator inequalities give
+\[
+ \pi_2^*j_Ud\leq c_g^*j_Sa,
+ \qquad
+ \pi_2^*j_Ud'\leq c_g^*j_Sb,
+ \qquad c_g=s(g\otimes1_U).
+\]
+Both pairs are complementary. In any bounded distributive
+lattice object, $x\leq y$ and $x'\leq y'$ for complementary
+pairs imply $x=y$: distributivity gives
+$y=y\wedge(x\vee x')=(y\wedge x)\vee(y\wedge x')=x$.
+This is an equation of lattice operations and therefore applies
+in the slice. It follows that
+$c_g^*j_Sa=\pi_2^*j_Ud$.
+
+Pairing the constant identity with
+$g=\rho\gamma:\operatorname{Sep}\to\mathsf T(U,U)$ gives
+\[
+ h=\langle1_U!,g\rangle:
+ \operatorname{Sep}\longrightarrow\mathsf T(U,U\otimes U).
+\]
+Compositions of these parameterized arrows use the diagonal of
+$\operatorname{Sep}$. The equations
+$c_gh=\delta g$ and $\pi_2h=g$, together with compatibility of
+$j$ with inverse image, yield
+\[
+ j_U\bigl((\delta g)^*a\bigr)
+   =j_U(g^*d)
+   =j_U\bigl((\delta g)^*b\bigr).
+\]
+Monicity of $j_U$ gives $(\delta g)^*a=(\delta g)^*b$.
+These two morphisms have meet $\bot_{E_U}!_{\operatorname{Sep}}$
+and join $\top_{E_U}!_{\operatorname{Sep}}$; hence
+\[
+ \bot_{E_U}!_{\operatorname{Sep}}
+     =\top_{E_U}!_{\operatorname{Sep}}.
+\]
+The equalizer universal property gives the asserted factorization.
+A global arrow into $\operatorname{Sep}$ would equate the two
+bounds. If $Z_U$ is initial and the initial object is strict,
+the resulting arrow $\operatorname{Sep}\to Z_U$ is an
+isomorphism, proving the final assertion.
+\end{proof}
+
+Taking global arrows gives the usual categorical formulation.
+Write $E(X)=\mathscr V(1,E_X)$ and
+$P(X)=\mathscr V(1,P_X)$. These are bounded distributive lattices;
+the internal actions give functors
+\[
+ E,P:\operatorname{Tot}(\mathcal K_0)^{\mathrm{op}}
+       \longrightarrow\mathbf{BDLat},
+\]
+and the $j_X$ give a natural transformation $j:E\to P$ with
+injective components. In this notation a total arrow
+$g:U\to U$ represents a complemented restriction idempotent $e$ when
+\begin{equation}\label{eq:integration-rows}
+ c_g^*p_+=\pi_2^*j_U(e),\qquad
+ c_g^*p_-=\pi_2^*j_U(e^c),
+ \qquad c_g=s(g\otimes1_U).
+\end{equation}
+
+\begin{corollary}\label{thm:integration-diagonal}
+Let $\mathcal K_0$ be a restriction category with binary restriction
+products, restriction zeros, and bounded distributive lattices of restriction idempotents whose total inverse images preserve finite joins.
+Let $P:\operatorname{Tot}(\mathcal K_0)^{\mathrm{op}}\to\mathbf{BDLat}$
+and let $j:E\to P$ be natural with injective components.
+Fix $U,S$, a total arrow $s:U\otimes U\to S$, and disjoint
+$p_+,p_-\in P(S)$, with $1_U\ne0_{U,U}$.
+If a complemented $D\in E(S)$ satisfies
+\[
+ p_+\leq j_S(D),\qquad p_-\leq j_S(D^c),
+\]
+then $d=(s\Delta_U)^*(D^c)$ has no representing total arrow.
+In particular, representation of every complemented restriction idempotent on
+$U$ excludes every such separator.
+\end{corollary}
+\begin{proof}
+A proposed representative of $d$ gives the calculation in the
+proof of Theorem~\ref{thm:internal-inseparability}, with
+$a=D$ and $b=D^c$. It equates complementary restriction idempotents on $U$
+and hence gives $1_U=0_{U,U}$.
+\end{proof}
+
+\begin{corollary}[Inseparability in definability algebras]
+\label{cor:definability-algebra-inseparability}
+If the underlying recursion category $\mathcal K_0$ of a
+definability algebra has $1_U\ne0_{U,U}$, its distinguished predicates have no
+separator given by a complemented restriction idempotent.
+\end{corollary}
+\begin{proof}
+The section $\sigma$ supplies a representing total arrow for
+every complemented restriction idempotent. Apply
+Corollary~\ref{thm:integration-diagonal}.
+\end{proof}
+
+The distinction between the fixed objects $U$ and $S$ is
+compatible with the isotype condition on a recursion category.
+
+\begin{lemma}\label{lem:sentence-object-transport}
+Let $b:S\to U$ be an isomorphism. Put
+$\widetilde s=bs$ and
+$\widetilde p_\pm=(b^{-1})^*p_\pm$.
+These data have the same representation pullback over $C_U$,
+up to its canonical isomorphism, and hence the same sections.
+\end{lemma}
+\begin{proof}
+Isomorphisms are total. Functoriality of the internal action gives
+$(bc_g)^*(b^{-1})^*p_\pm=c_g^*p_\pm$ as morphisms on $\mathsf T(U,U)$.
+Thus the morphism $\ell$ defining the representation pullback
+is unchanged, as is its morphism from $C_U$.
+\end{proof}
+
+\subsection{Boolean presentations}
+
+Apply $\Gamma$ to the predicate objects to obtain the functor $P$, and
+write $\mathcal A=\operatorname{Tot}(\mathcal K_0)$.
+Let $\mathcal C$ be a regular extensive category with finite
+coproducts, and let $J:\mathcal A\to\mathcal C$ preserve binary
+products. Its subobject lattices are bounded distributive:
+finite unions are images of coproducts, and regularity and
+extensivity make these unions stable under inverse image.
+Suppose now that $P(X)=\operatorname{Sub}_{\mathcal C}(JX)$,
+with reindexing along $Jf$. A \emph{Boolean presentation} is a regular epimorphism
+$q:JS\twoheadrightarrow B$, where $B$ is an internal Boolean
+algebra in $\mathcal C$. Put $\mathbf2=1+1$, with its two injections
+$\iota_0,\iota_1$. Its Boolean operations are determined by the
+two-element truth tables. Write $\bot,\top:1\to B$ for the bounds
+of $B$, and set $\iota=[\bot,\top]:\mathbf2\to B$.
+Take
+\[
+ p_+=\operatorname{Eq}(q,\top!_{JS}),\qquad
+ p_-=\operatorname{Eq}(q,\bot!_{JS}),
+\]
+and assume $p_+\wedge p_-=0$.
+
+For a complemented restriction idempotent $e\in E(X)$, its image
+$j_X(e)$ is complemented in $\operatorname{Sub}(JX)$. Extensivity
+therefore gives a unique characteristic arrow $\chi_e:JX\to\mathbf2$
+whose $1$-fiber is $j_X(e)$ and whose $0$-fiber is $j_X(e^c)$.
+Indeed, the two complementary inclusions give an isomorphism
+from their coproduct to $JX$. We identify $J(U\otimes U)$ with
+$JU\times JU$ by the product comparison.
+
+\begin{proposition}\label{prop:integration-family-equation}
+A total arrow $g:U\to U$ represents $e$ if and only if the
+following square commutes:
+\begin{equation}\label{eq:integration-family-quotient}
+\begin{tikzcd}[column sep=large,row sep=large]
+ JU\times JU \arrow[r,"Js\,(Jg\times1)"] \arrow[d,"\chi_e\pi_2"'] & JS \arrow[d,"q"] \\
+ \mathbf2 \arrow[r,"\iota"'] & B.
+\end{tikzcd}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The two fibers of $\chi_e\pi_2$ decompose $JU\times JU$ as a
+coproduct. The representation equations say that $qJc_g$ is
+$\top$ on its $1$-fiber and $\bot$ on its $0$-fiber. The
+coproduct decomposition gives~\eqref{eq:integration-family-quotient}.
+
+Conversely, that equality gives the inclusions of those two
+fibers into $(Jc_g)^*p_+$ and $(Jc_g)^*p_-$, respectively.
+These latter subobjects are disjoint. If complementary elements
+$a,a^c$ satisfy $a\leq b$, $a^c\leq c$, and $b\wedge c=0$
+in a bounded distributive lattice, then $b=a$ and $c=a^c$.
+Applying this observation proves both representation equations.
+\end{proof}
+
+The representation section of a definability algebra supplies
+the representation hypothesis of the following corollary.
+
+\begin{corollary}\label{cor:integration-no-boolean-map}
+Assume $1_U\ne0_{U,U}$ and every complemented restriction idempotent on $U$ is
+represented. There is no arrow $h:B\to\mathbf2$ such that
+$h\iota=1_{\mathbf2}$ and $hq=\chi_D$ for a complemented
+$D\in E(S)$. In particular, if for every Boolean-algebra
+homomorphism $h:B\to\mathbf2$ there is a complemented
+$D\in E(S)$ with $hq=\chi_D$, then no such homomorphism exists.
+\end{corollary}
+\begin{proof}
+If $hq=\chi_D$, then $h\iota=1$ gives
+$p_+\leq j_S(D)$ and $p_-\leq j_S(D^c)$.
+Corollary~\ref{thm:integration-diagonal} excludes this separator.
+Every Boolean-algebra homomorphism preserves both bounds, so
+it satisfies $h\iota=1$.
+\end{proof}
+
+\subsection{Boolean quotients and essential incompleteness}
+\label{sec:boolean-extensions}
+
+A \emph{Boolean quotient} $r:B\twoheadrightarrow B'$ is a Boolean-algebra
+homomorphism whose underlying arrow is a regular epimorphism.
+It induces the presentation $q_r=rq$, whose fibers over the Boolean bounds are
+\[
+ p^r_+=\operatorname{Eq}(q_r,\top_{B'}!_{JS}),\qquad
+ p^r_-=\operatorname{Eq}(q_r,\bot_{B'}!_{JS}).
+\]
+The presentation $q_r$ is \emph{consistent} if
+$p^r_+\wedge p^r_-=0$, and \emph{complete} if
+$p^r_+\vee p^r_-=1_{\operatorname{Sub}(JS)}$.
+
+\begin{lemma}\label{lem:complete-boolean-presentation}
+For a Boolean presentation $q_r:JS\twoheadrightarrow B'$, put
+$\iota_{B'}=[\bot_{B'},\top_{B'}]:\mathbf2\to B'$.
+The presentation is consistent if and only if $\iota_{B'}$ is
+monic, and complete if and only if $\iota_{B'}$ is a regular
+epimorphism. Consequently it is consistent and complete if and
+only if $\iota_{B'}$ is an isomorphism.
+\end{lemma}
+\begin{proof}
+Each bound $1\to B'$ is monic. Their join as subobjects of $B'$
+is the image of $\iota_{B'}$.
+Inverse image along the regular epimorphism $q_r$ preserves finite
+joins and reflects the subobject order. It follows that
+$p^r_+\vee p^r_-=1$ if and only if this image is all of $B'$.
+Similarly, $p^r_+\wedge p^r_-=0$ if and only if the two bound
+subobjects are disjoint. In an extensive category the copairing
+of two monomorphisms is monic exactly when their images are
+disjoint. Thus consistency is equivalent to monicity of
+$\iota_{B'}$. A monic regular epimorphism is an isomorphism.
+\end{proof}
+
+\begin{theorem}[Categorical essential incompleteness]
+\label{thm:categorical-essential-incompleteness}
+Let a definability algebra over $\mathscr V$ have underlying
+recursion category $\mathcal K_0$ with $1_U\ne0_{U,U}$.
+Let $\mathcal C$ be regular and extensive, and let
+$J:\operatorname{Tot}(\mathcal K_0)\to\mathcal C$ preserve binary
+products. Suppose that the global predicate functor is naturally
+identified with $\operatorname{Sub}_{\mathcal C}(J{-})$.
+Let $q:JS\twoheadrightarrow B$ be a Boolean presentation whose
+fibers over the Boolean bounds are the distinguished predicates $p_+,p_-$.
+
+Let $r:B\twoheadrightarrow B'$ be a Boolean quotient whose
+induced presentation $q_r=rq$ is consistent. If there are
+restriction idempotents $a_+,a_-:S\to S$ satisfying
+\[
+ p^r_+=j_S(a_+),\qquad p^r_-=j_S(a_-)
+\]
+then $q_r$ is incomplete. Equivalently,
+$[\bot_{B'},\top_{B'}]:\mathbf2\to B'$ is not a regular
+epimorphism.
+\end{theorem}
+\begin{proof}
+Suppose that the presentation is also complete. Since $j_S$ is an
+injective bounded lattice homomorphism, consistency and
+completeness give
+\[
+ a_+a_-=0_{S,S},\qquad a_+\vee a_-=1_S.
+\]
+Thus $a_-$ is the complement of $a_+$. Preservation of the Boolean
+bounds by $r$ gives
+\[
+ p_+\leq p^r_+=j_S(a_+),\qquad
+ p_-\leq p^r_-=j_S(a_-).
+\]
+The complemented restriction idempotent $a_+$ therefore separates $p_+$ and
+$p_-$. The categorical inseparability theorem excludes this
+separator. The last assertion follows from
+Lemma~\ref{lem:complete-boolean-presentation}.
+\end{proof}
+
+\begin{proposition}\label{prop:complete-extensions-and-decisions}
+For a Boolean presentation $q:JS\twoheadrightarrow B$, the
+following conditions are equivalent.
+\begin{enumerate}
+\item There is a Boolean quotient $r:B\twoheadrightarrow B'$
+such that the induced presentation $rq$ is consistent and complete,
+with both fibers over the Boolean bounds in the image of $j_S$.
+\item There are a Boolean-algebra homomorphism
+$h:B\to\mathbf2$ and a complemented restriction idempotent $D$ on
+$S$ such that $hq=\chi_D$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+For (1), Lemma~\ref{lem:complete-boolean-presentation} makes
+$\iota_{B'}$ an isomorphism. It is a Boolean-algebra homomorphism,
+so $h=\iota_{B'}^{-1}r$ is also one. If the fibers over the Boolean bounds are
+$j_S(a_+)$ and $j_S(a_-)$, injectivity of $j_S$ makes $a_+$ and
+$a_-$ complementary. The two fibers of $hq$ are these subobjects,
+so $hq=\chi_{a_+}$.
+
+Conversely, every Boolean-algebra homomorphism
+$h:B\to\mathbf2$ satisfies $h[\bot_B,\top_B]=1_{\mathbf2}$.
+It is therefore a split epimorphism and hence a regular
+epimorphism. Its presentation $hq=\chi_D$ is consistent and
+complete, with fibers over the Boolean bounds $j_S(D)$ and $j_S(D^c)$.
+\end{proof}
+
+In particular, the hypotheses of
+Theorem~\ref{thm:categorical-essential-incompleteness} exclude every
+Boolean-algebra homomorphism $h:B\to\mathbf2$ whose composite
+with $q$ is the characteristic arrow of a complemented
+restriction idempotent. If every Boolean-algebra homomorphism to
+$\mathbf2$ has this property, there is no such homomorphism.
+
+\section{The numerical interpretation}
+\label{sec:integration-numerical}
+
+Let $\mathcal R_{\mathrm{num}}$ have the infinite recursive subsets
+of $\mathbb N$ as objects and partial recursive maps as arrows,
+with fixed recursive tuple coding. Universal partial recursive
+application and the parameter theorem
+\cite[Section~3.4.1]{AspertiLongo} make this a recursion
+category \cite[Section~10(1)]{Heller}. Every object is recursively
+isomorphic to $\mathbb N$, and binary products remain in this
+category. Let $\mathcal A$ be its total-map category, and let
+$E(X)$ be the lattice of restriction idempotents on $X$ in
+$\mathcal R_{\mathrm{num}}$.
+Each such idempotent is the partial identity $e_A$ on a c.e.
+subset $A\subseteq X$. We identify $e_A$ with $A$ in this section;
+under this identification, $E(X)$ is the bounded distributive
+lattice of c.e. subsets of $X$, and inverse image is recursive
+inverse image.
+
+A \emph{partial equivalence relation} (PER) is a symmetric and
+transitive binary relation. We use the PER category of
+\cite[Definition~3.4.1.1]{AspertiLongo}. Let $\mathcal P$ have all PERs on
+$\mathbb N$ as objects, with arrows defined by partial recursive
+trackers as follows. An arrow
+$R\to S$ is represented by a partial recursive function $f$ defined
+on $|R|=\{n:nRn\}$ such that $nRm$ implies $f(n)S f(m)$.
+Two trackers define the same arrow if their values are $S$-related
+at every supported input. Neither a relation nor its support is
+required to be c.e. For $A\subseteq\mathbb N$, write $D_A$ for
+equality restricted to $A$; tuple coding gives the corresponding
+notation for subsets of numerical objects. The functor
+$J:\mathcal A\to\mathcal P$ sends an object to its equality
+relation and a recursive map to its tracker. It is faithful and
+preserves binary products; on these objects it is full.
+A partial recursive map $f:X\rightharpoonup Y$ is represented
+by the span $D_X\leftarrow D_{\operatorname{dom}(f)}\to D_Y$.
+Its left leg is a c.e. domain inclusion. Equality and
+composition of these spans reproduce equality and composition of
+partial recursive maps.
+
+To compare $\mathcal P$ with the modest-set presentation, send $R$
+to its set of equivalence classes $|R|/R$, with a class realized
+by its members, and send a tracker $f$ to $[n]\mapsto[f(n)]$.
+Conversely, the disjoint nonempty realizing sets of a modest set
+define a PER on their union; the same trackers define its arrows.
+These assignments give the equivalence with modest sets over
+Kleene's first partial combinatory algebra
+\cite[Proposition~1.2.2]{Bauer}. It transfers the finite-limit,
+regular-image, and coproduct constructions of
+\cite[Sections~1.3.1--1.3.3]{Bauer} to $\mathcal P$.
+Thus $\mathcal P$ is regular and extensive.
+Consequently $P(X)=\operatorname{Sub}_{\mathcal P}(JX)$, with
+pullback along $Jf$, defines a functor to bounded distributive
+lattices.
+
+\begin{lemma}\label{lem:integration-numerical-subobjects}
+There is a natural transformation $j:E\Rightarrow P$ whose
+components are injective bounded lattice homomorphisms. Its
+component at $X$ sends a c.e. subset $A\subseteq X$ to the
+subobject represented by $i_A:D_A\hookrightarrow D_X$.
+More generally, arbitrary support
+inclusions satisfy
+\[
+ [i_A]\leq[i_B]\ \Longleftrightarrow\ A\subseteq B,
+ \qquad
+ (Jf)^*[i_A]=[i_{f^{-1}A}].
+\]
+The arrows $D_{\mathbb N}\to\mathbf2=D_{\{0,1\}}$ are exactly
+total recursive Boolean functions, and their fibers over $1$ are exactly the
+images under $j$ of recursive subsets. These are also exactly
+the complemented subobjects of $D_{\mathbb N}$.
+\end{lemma}
+\begin{proof}
+A factorization of $i_A$ through $i_B$ must send each $a$ to $a$.
+It exists precisely when $A\subseteq B$, and is then tracked by
+the identity. For a pullback, restrict the source equality
+relation to $f^{-1}A$; the defining square and its universal
+property use the same trackers as the corresponding maps into
+$D_X$ and $D_A$. This proves the displayed assertions, naturality,
+and preservation of meets and bounds.
+
+For c.e. sets $A,B$, their categorical join is the image of
+$D_A+D_B\to D_X$. An input in $A\cup B$ can be assigned to a
+summand by dovetailing enumerations of $A$ and $B$ until that
+input appears. This gives a recursive tracker on $A\cup B$ and
+identifies the image with $D_{A\cup B}$. Hence $j$ preserves
+joins. Finally, a tracker from $D_{\mathbb N}$ to $\mathbf2$
+is a total recursive Boolean function; its pullback of $1$ is
+the indicated recursive support inclusion. Conversely every
+recursive subset has such a characteristic function. A complemented
+subobject and its complement give a coproduct decomposition of
+$D_{\mathbb N}$; its inverse computes the summand tag and hence
+a Boolean function with that subobject as its fiber over $1$. This proves
+the final assertion.
+\end{proof}
+
+The restriction to c.e. sets in the join assertion matters.
+For a nonrecursive $A\subseteq\mathbb N$, the mono
+$D_A+D_{\mathbb N\setminus A}\to D_{\mathbb N}$ is the join
+of its two summands but is not invertible: an inverse would
+compute the summand tag and decide $A$. Thus arbitrary support
+inclusions do not identify the full subobject lattice with a
+powerset.
+
+Let $\mathcal E_{\mathrm{rec}}$ be the full subcategory of $\mathcal P$
+on c.e. PERs. For $R,S$ in this subcategory, a tracker $f:R\to S$
+determines the c.e. relation
+\[
+ F_f(x,y)\quad\Longleftrightarrow\quad
+ xRx,\quad f(x)\downarrow,\quad f(x)S y.
+\]
+It is saturated under $R$ and $S$, total on $|R|$, and single-valued
+modulo $S$. Conversely, searching a c.e. relation
+$F\subseteq |R|\times |S|$ with these properties for an output
+gives a partial recursive tracker.
+The assignments are inverse on arrows and preserve composition.
+They identify $\mathcal E_{\mathrm{rec}}$ with Lambek and Scott's
+category of c.e. PERs and c.e. functional relations
+\cite[Definition~2.4 and Remark~2.6]{LambekScott}, which is exact
+\cite[Theorem~4.5]{LambekScott}.
+The finite-limit, coproduct, and regular-image constructions preserve
+c.e. relations, so its inclusion in $\mathcal P$ preserves these
+constructions and $\mathcal E_{\mathrm{rec}}$ is extensive.
+
+The connection with completion of the numerical recursion category
+can be stated explicitly. Let $\mathcal D_{\mathrm{rec}}$ have c.e.
+subsets $A\subseteq\mathbb N$ as objects and partial recursive
+functions total on $A$ as arrows $A\to B$, identified by equality
+on $A$. Write $\operatorname{Split}_r(\mathcal R_{\mathrm{num}})$
+for the category obtained by splitting restriction idempotents:
+an object is such an idempotent $e:X\to X$, and an arrow from $e$
+to $d$ is an arrow $f:X\to Y$ with $f=df=fe$.
+Its identity at $e$ is $e$, and totality there means $\bar f=e$.
+
+\begin{proposition}\label{prop:numerical-exact-completion}
+There are equivalences
+\[
+ \operatorname{Tot}\bigl(\operatorname{Split}_r
+       (\mathcal R_{\mathrm{num}})\bigr)
+       \simeq\mathcal D_{\mathrm{rec}},
+ \qquad
+ \operatorname{Ex}_{\mathrm{reg}}(\mathcal D_{\mathrm{rec}})
+       \simeq\mathcal E_{\mathrm{rec}},
+\]
+where $\operatorname{Ex}_{\mathrm{reg}}$ denotes exact completion
+of a regular category.
+\end{proposition}
+\begin{proof}
+A restriction idempotent is partial identity on a c.e. set $A$,
+and every c.e. set occurs as such a domain in $\mathbb N$.
+An arrow total relative to this idempotent has domain exactly $A$.
+Conversely, a tracker total on $A$ can be restricted to precisely
+$A$ by first waiting for its input to appear in an enumeration
+of $A$. This gives the first equivalence.
+
+Finite limits in $\mathcal D_{\mathrm{rec}}$ have c.e. supports.
+For $f:A\to B$, the image $f(A)$ is c.e., and the surjection
+$A\to f(A)$ has a partial recursive section: enumerate $A$ and
+dovetail the computations until a preimage of the input is found.
+Surjections are therefore regular epimorphisms. Conversely,
+factoring a regular epimorphism through its image shows that it
+is surjective. Surjections are stable under pullback, so
+$\mathcal D_{\mathrm{rec}}$ is regular.
+
+Every mono is injective, as tested by maps from singleton supports,
+and is isomorphic to the inclusion of its c.e. image; the inverse on that image is obtained by the
+same search. Thus its internal equivalence relations are
+precisely c.e. equivalence relations on c.e. supports.
+The relation construction of exact completion
+\cite{CarboniVitale} has these as objects and saturated total
+single-valued relations as arrows. Its objects are therefore
+c.e. PERs, and the tracker comparison above identifies its
+arrows with those of $\mathcal E_{\mathrm{rec}}$.
+\end{proof}
+
+\subsection{Strong numeralwise definability}
+
+Fix a consistent theory $T$ in a classical first-order language
+with recursive syntax, a recursive sequence of closed numeral terms
+$\nu_n$, and recursive substitution. Theories are identified
+with their deductive closures, and all extensions below are in
+this language. Let $\mathsf{Sent}\subseteq\mathbb N$ be the infinite
+recursive set of G\"odel codes of sentences, and fix a recursive
+bijection $\beta:\mathbb N\to\mathsf{Sent}$. Write $\sigma_b$
+for the sentence with G\"odel code $\beta(b)$. Take $S=U=\mathbb N$.
+Decode $a\in\mathbb N$ as a formula $\varphi_a(x)$
+whose only possible free variable is $x$; invalid codes denote a
+fixed contradiction. Numeral substitution defines the total
+recursive arrow $s:U\otimes U\to U$ by
+$s(a,n)=\beta^{-1}(\ulcorner\varphi_a(\nu_n)\urcorner)$.
+Thus every element of $U$ indexes a sentence through $\beta$,
+while the first argument of $s$ is decoded as a unary-formula code.
+Let $p_T^+,p_T^-\in P(S)$ be the support inclusions of
+\begin{align*}
+ \mathsf{Th}_T&=\{b\in\mathbb N:T\vdash\sigma_b\},\\
+ \mathsf{Rf}_T&=\{b\in\mathbb N:T\vdash\neg\sigma_b\}.
+\end{align*}
+They are disjoint by consistency, although they need not lie in
+the image of $j$. For a total recursive $g:\mathbb N\to\mathbb N$,
+write $c_g(x,n)=s(g(x),n)$.
+
+\begin{proposition}\label{prop:integration-arbitrary-adequacy}
+For a recursive set $A\subseteq\mathbb N$, the following are
+equivalent.
+\begin{enumerate}
+\item There is a total recursive $g$ satisfying the representation equations
+\[
+ c_g^*p_T^+=\pi_2^*j(A),\qquad
+ c_g^*p_T^-=\pi_2^*j(\mathbb N\setminus A).
+\]
+\item Some formula $\varphi_a(x)$ strongly defines $A$
+numeralwise in $T$: each $n\in A$ satisfies
+$T\vdash\varphi_a(\nu_n)$, and each $n\notin A$ satisfies
+$T\vdash\neg\varphi_a(\nu_n)$.
+\end{enumerate}
+Consequently, representation of every complemented restriction idempotent is exactly strong numeralwise definability
+of every recursive set, without a c.e. hypothesis on $T$.
+\end{proposition}
+\begin{proof}
+All four predicates in the representation equations are support inclusions.
+Lemma~\ref{lem:integration-numerical-subobjects} identifies their
+equality with equality of their supports. Thus the first equation says, for every $x,n$,
+$T\vdash\varphi_{g(x)}(\nu_n)\quad\Longleftrightarrow\quad n\in A$,
+and the second says the analogous equivalence for refutation and
+$n\notin A$. Taking $x=0$ yields (2). Conversely, if $a$
+strongly defines $A$, take the constant recursive function
+$g(x)=a$. Consistency excludes a proof of the opposite instance
+in each case, so the defining implications are equivalences and
+give both representation equations.
+\end{proof}
+
+\begin{corollary}[Numerical realization of the representation section]
+\label{cor:numerical-definability-algebras}
+Let $\mathcal K$ be the $\mathbf{Set}$-enriched category with
+hom-objects $H(X,Y)=\mathcal R_{\mathrm{num}}(X,Y)$. Evaluation at
+the unique element of $1$ identifies $\mathcal K_0$ with
+$\mathcal R_{\mathrm{num}}$. Equip $\mathcal K$ with
+the bounded distributive lattice objects
+$P_X=\operatorname{Sub}_{\mathcal P}(JX)$ in $\mathbf{Set}$ and
+the embedding of restriction idempotents $j$ of
+Lemma~\ref{lem:integration-numerical-subobjects}.
+Fix a consistent theory $T$ with the effective syntax and numeral
+terms above, and take $S=U=\mathbb N$ and
+$s,p_T^+,p_T^-$ as defined above.
+The projection $q_R:R\to C_U$ from the representation pullback
+has a section if and only if every recursive subset of
+$\mathbb N$ is strongly definable numeralwise in $T$.
+When these conditions hold and $T$ is c.e., the same chosen
+representing arrows give a definability algebra with predicate
+functor $E$ and distinguished restriction idempotents
+$e_{\mathsf{Th}_T}$ and $e_{\mathsf{Rf}_T}$.
+\end{corollary}
+\begin{proof}
+Composition, restriction, and pairing are maps between the
+indicated hom-objects in $\mathbf{Set}$.
+Fix an acceptable program numbering and its parameter function
+$k$. For each partial recursive arrow
+$f:\mathbb N\times\mathbb N\rightharpoonup\mathbb N$, let
+$e_f$ be its least program index. The total recursive arrow
+$\Lambda(f)(x)=k(e_f,x)$ satisfies
+$\tau(\Lambda(f)\times1)=f$. This defines the required morphism
+$\Lambda:H(U\otimes U,U)\to\mathsf T(U,U)$ in $\mathbf{Set}$.
+The total-arrow action on predicates is the map
+\[
+ \mathsf T(X,Y)\times P(Y)\longrightarrow P(X),
+ \qquad (f,a)\longmapsto (Jf)^*a.
+\]
+Functoriality of inverse image and
+Lemma~\ref{lem:integration-numerical-subobjects} give its action
+laws and compatibility with $j$. Joins of restriction idempotents
+correspond to unions of their domains, which are stable under
+arbitrary partial recursive inverse images.
+Thus the equalizers and pullbacks defining $C_U$ and $R$ apply
+to these data.
+
+The two projections from $C_U$ give partial identities on
+complementary c.e. supports $A$ and $\mathbb N\setminus A$.
+Such an $A$ is recursive, and every recursive $A$ occurs.
+Suppose that every recursive set is strongly definable. Let
+$a_A$ be the least code of a formula strongly defining $A$ in
+$T$, and let $g_A:\mathbb N\to\mathbb N$ be the constant
+recursive function with value $a_A$.
+Proposition~\ref{prop:integration-arbitrary-adequacy} verifies
+the two representation equations. Therefore the assignment
+\[
+ (e_A,e_{A^c})\longmapsto
+ \bigl((e_A,e_{A^c}),g_A\bigr)
+\]
+defines a morphism $\sigma:C_U\to R$ in $\mathbf{Set}$.
+Its composite with $q_R$ is the identity, so it is a section.
+The representing operation is the composite of $\sigma$ with
+the projection $R\to \mathsf T(U,U)$.
+
+Conversely, a section supplies a representing arrow $g_A$ for
+each recursive $A$. Evaluating $g_A$ at $0$ gives the code of
+a formula strongly defining $A$, by
+Proposition~\ref{prop:integration-arbitrary-adequacy}.
+
+If $T$ is c.e., both distinguished supports are c.e. and define
+restriction idempotents on $S$. Their images under $j_S$ are
+$p_T^+$ and $p_T^-$. Compatibility of $j$ with inverse image
+and its injectivity identify the representation equations with
+the corresponding equations in $E$. Hence the same representing
+arrows give the definability algebra with predicate functor $E$.
+\end{proof}
+
+
+Two disjoint subsets of $\mathbb N$ are \emph{recursively inseparable}
+when no recursive set contains the first and is disjoint from the second.
+If every recursive set is represented, Corollary~\ref{thm:integration-diagonal}
+therefore implies recursive inseparability of
+$\mathsf{Th}_T$ and $\mathsf{Rf}_T$.
+
+\subsection{The Lindenbaum quotient and essential incompleteness}
+
+Define the PER on $S=U=\mathbb N$ by
+\[
+ bR_Tc\quad\Longleftrightarrow\quad
+ T\vdash\sigma_b\leftrightarrow\sigma_c.
+\]
+The identity tracker gives the regular quotient
+$q_T:JU\to B_T=(\mathbb N,R_T)$.
+Indeed, its kernel pair is the equality PER on
+$\{(b,c):bR_Tc\}$ with its two projections. A tracker coequalizing
+those projections respects $R_T$ and descends uniquely to $B_T$,
+so $q_T$ is their coequalizer. Negation is represented by the
+recursive function $b\mapsto\beta^{-1}(\ulcorner\neg\sigma_b\urcorner)$;
+conjunction and the bounds are encoded through $\beta$ in the same way.
+These operations make $B_T$ a Boolean algebra in $\mathcal P$. Its pullbacks along
+top and bottom are the theorem and refutation support inclusions.
+Thus they are precisely $p_T^+,p_T^-$.
+For a recursive characteristic map $d:D_{\mathbb N}\to\mathbf2$
+and a formula code $a$, write $s_a:D_{\mathbb N}\to JS$ for the
+arrow tracked by $n\mapsto s(a,n)$.
+The formula $\varphi_a$ strongly defines $d^{-1}(1)$ numeralwise
+in $T$ if and only if
+\[
+ q_Ts_a=[\bot,\top]d.
+\]
+Equality here requires a $T$-proof for each numeral instance; it
+does not assert a single universally quantified $T$-theorem.
+
+A theory is \emph{decidable} when its theorem set is recursive,
+and \emph{complete} when it proves either $\sigma$ or $\neg\sigma$
+for every sentence $\sigma$. It is \emph{essentially undecidable}
+when every consistent extension is undecidable, and
+\emph{essentially incomplete} when every consistent c.e. axiomatized
+extension is incomplete.
+
+Boolean homomorphisms $B_T\to\mathbf2$ are in bijection with
+complete decidable consistent extensions of $T$. Indeed, the
+composite with $q_T$ is a recursive Boolean function on
+sentences. Its inverse image of $1$ contains $T$, decides each sentence,
+and is closed under deduction: any proof from finitely many
+sentences in this inverse image gives a $T$-provable implication from their
+conjunction, and a Boolean homomorphism preserves this order.
+Conversely the recursive characteristic function of a complete
+decidable consistent extension respects $R_T$ and the Boolean
+operations, so is a tracker for the required homomorphism.
+
+\begin{theorem}[Numerical realization of essential incompleteness]
+\label{thm:integration-essential-equivalence}
+Let $T$ be a consistent classical first-order theory with the
+effective syntax and numeral terms specified above. Its
+Lindenbaum presentation $q_T:JS\to B_T$ in $\mathcal P$ has the
+following properties.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item Every complemented restriction idempotent on $\mathbb N$ is
+represented relative to $s,p_T^+,p_T^-$ if and only if every
+recursive subset of $\mathbb N$ is strongly definable numeralwise
+in $T$. These conditions are also equivalent to the existence of a
+section of the representation projection $q_R:R\to C_U$
+for the numerical data of
+Corollary~\ref{cor:numerical-definability-algebras}.
+\item There is no complemented restriction idempotent on $S$
+separating $p_T^+$ and $p_T^-$ if and only if
+$\mathsf{Th}_T$ and $\mathsf{Rf}_T$ are recursively inseparable.
+\item There is no Boolean homomorphism $B_T\to\mathbf2$ in
+$\mathcal P$ if and only if $T$ is essentially undecidable,
+equivalently essentially incomplete.
+\end{enumerate}
+Under the equivalent conditions in \textup{(i)}, the conditions
+in \textup{(ii)} and \textup{(iii)} hold.
+\end{theorem}
+\begin{proof}
+Part (i) follows from Proposition~\ref{prop:integration-arbitrary-adequacy}
+and Corollary~\ref{cor:numerical-definability-algebras}.
+For (ii), a complemented restriction idempotent on $S=U$ is the
+partial identity on a recursive subset of $\mathbb N$. The separator
+inequalities are exactly inclusion of $\mathsf{Th}_T$ and
+disjointness from $\mathsf{Rf}_T$, giving both directions.
+
+For (iii), the preceding correspondence identifies Boolean
+homomorphisms with complete decidable consistent extensions.
+A complete consistent c.e. axiomatized theory is decidable, by
+searching for a proof of a sentence or its negation; a decidable
+theory is c.e. axiomatized by its theorems. Every consistent
+decidable theory has a complete decidable consistent extension
+\cite[Section~2.7, Exercise~2.50]{Mendelson}.
+Applying this fact to a decidable extension of $T$ proves the
+equivalence with essential undecidability and essential incompleteness.
+
+Under (i), Corollary~\ref{thm:integration-diagonal} excludes the
+separators in (ii). Every arrow $JS\to\mathbf2$ is the
+characteristic arrow of a recursive subset of $S$, by the same
+tracker argument as in
+Lemma~\ref{lem:integration-numerical-subobjects}. Therefore
+Corollary~\ref{cor:integration-no-boolean-map} excludes the Boolean
+homomorphisms in (iii).
+\end{proof}
+
+For c.e. $T$, the PER $R_T$, its sentence presentation, and its
+two fibers belong to $\mathcal E_{\mathrm{rec}}$. Fullness of its
+inclusion in $\mathcal P$ gives the same Boolean-homomorphism
+characterization in that category.
+
+\begin{proposition}[Lindenbaum quotients induced by theory extensions]
+\label{prop:numerical-boolean-extensions}
+Let $T$ be a consistent classical first-order theory with the
+effective syntax and numeral substitution fixed above.
+For every consistent extension $T'$ of $T$ in the same language,
+the identity on sentence codes induces a regular-epimorphic
+Boolean-algebra homomorphism
+\[
+ r_{T,T'}:B_T\twoheadrightarrow B_{T'},\qquad
+ r_{T,T'}q_T=q_{T'}.
+\]
+The fibers of $q_{T'}$ over the Boolean bounds lie in the image of $j_S$ if and
+only if $T'$ is c.e. axiomatizable. Under these equivalent
+conditions, $q_{T'}$ is complete if and only if $T'$ is complete.
+
+There is a Boolean quotient $r:B_T\twoheadrightarrow B$ for
+which $rq_T$ is consistent and complete and its fibers over the
+bounds lie in the image of $j_S$ if and only if $T$ has a
+complete consistent c.e. extension. Consequently the absence of
+such quotient presentations is equivalent to essential incompleteness
+of $T$.
+\end{proposition}
+\begin{proof}
+An equivalence provable in $T$ is provable in $T'$, so the
+identity on sentence codes respects the two Lindenbaum PERs.
+It induces $r_{T,T'}$, preserves the Boolean operations, and
+satisfies $r_{T,T'}q_T=q_{T'}$. Since $q_{T'}$ is a regular
+epimorphism, factoring $r_{T,T'}$ into its regular image shows
+that $r_{T,T'}$ is a regular epimorphism.
+
+The fibers over the Boolean bounds have supports $\mathsf{Th}_{T'}$ and
+$\mathsf{Rf}_{T'}$. They lie in the image of $j_S$ exactly when
+these supports are c.e. A c.e. axiomatization enumerates both
+supports. Conversely, a c.e. theorem set itself gives a c.e.
+axiomatization. Consistency makes the two supports disjoint.
+For c.e. $T'$, preservation of joins by $j_S$ identifies
+$p^{T'}_+\vee p^{T'}_-=1$ with
+$\mathsf{Th}_{T'}\cup\mathsf{Rf}_{T'}=\mathbb N$,
+which is completeness of $T'$. Equivalently, when $T'$ is
+complete, simultaneous proof searches for a sentence and its
+negation give the recursive characteristic arrow of its theorem
+set and the inverse to $[\bot,\top]:\mathbf2\to B_{T'}$.
+
+A complete consistent c.e. extension therefore gives a Boolean quotient with the stated properties. Conversely, by
+Proposition~\ref{prop:complete-extensions-and-decisions}, such a
+Boolean quotient gives $h:B_T\to\mathbf2$ with $hq_T$ a
+recursive characteristic arrow on sentences. Its $1$-fiber
+contains the theorems of $T$, decides every sentence, and is
+closed under deduction: a proof from finitely many sentences
+gives a $T$-provable implication from their conjunction, and
+$h$ preserves conjunction and Boolean order. Since $h$ preserves
+both bounds, this theory is consistent. It is decidable and
+hence c.e. axiomatizable. This proves both implications.
+\end{proof}
+
+\subsection{Extensions of arithmetic}
+\label{sec:arithmetic-representation}
+
+Let PA denote Peano arithmetic. In this subsection take
+$\nu_n=\overline n$, the standard arithmetic numeral for $n$.
+Every recursive set is strongly definable numeralwise in PA,
+by representability of recursive characteristic functions
+\cite[Section~16.2]{BBJ}.
+
+\begin{corollary}\label{cor:arithmetic-representation-incompleteness}
+Let $T$ be a consistent extension of PA in an effective classical
+language. Every complemented restriction idempotent on $\mathbb N$
+is represented relative to $s,p_T^+,p_T^-$ by a constant total arrow.
+The sets $\mathsf{Th}_T$ and $\mathsf{Rf}_T$ are recursively inseparable,
+and there is no Boolean homomorphism $B_T\to\mathbf2$ in $\mathcal P$.
+Consequently $T$ is essentially undecidable and essentially incomplete.
+The numerical representation projection admits a section, and
+for c.e. $T$ the same representing arrows give a definability
+algebra with predicate objects $E_X$.
+\end{corollary}
+\begin{proof}
+Numeralwise definitions in PA remain definitions in $T$.
+Proposition~\ref{prop:integration-arbitrary-adequacy} supplies
+the constant representing arrows, and
+Theorem~\ref{thm:integration-essential-equivalence} gives the incompleteness
+conclusions. Corollary~\ref{cor:numerical-definability-algebras} supplies
+the algebraic structures.
+\end{proof}
+
+\begin{corollary}\label{cor:proper-predicate-extension}
+There is a definability algebra over $\mathbf{Set}$ with underlying
+recursion category $\mathcal R_{\mathrm{num}}$ whose distinguished predicates lie
+outside the image of the embedding of restriction idempotents. Consequently the
+functor $I$ of Proposition~\ref{prop:algebra-comparison} for $\mathscr V=\mathbf{Set}$ is not essentially surjective.
+\end{corollary}
+\begin{proof}
+Take $T=\operatorname{Th}(\mathbb N)$, the theory of the standard
+model of arithmetic. It is a complete consistent extension of PA,
+so Corollary~\ref{cor:arithmetic-representation-incompleteness}
+and Corollary~\ref{cor:numerical-definability-algebras} supply
+the representation section. Each of the theorem and refutation
+supports is the inverse image of the other under recursive
+negation. If either support were c.e., both would be c.e.;
+completeness would then make the theorem set recursive,
+contrary to their recursive inseparability.
+Lemma~\ref{lem:integration-numerical-subobjects} identifies the
+image of $j$ with the c.e. support inclusions. Neither
+distinguished predicate belongs to it. In the image of the
+functor $I$, both distinguished predicates belong to the image
+of $j$. Compatibility of a definability-algebra isomorphism with
+the embeddings of restriction idempotents preserves this property, proving the claim.
+\end{proof}
+
+
+\section{An equivariant recursion category}
+\label{sec:equivariant-model}
+
+Di Paola and Heller construct recursion categories of free actions
+of finite groups \cite[Section~7.9(3), Theorem~7.9.9]{DPH}.
+We use the one-object form of their construction over the numerical
+recursion category and give its Boolean presentation.
+Let $G$ be a finite nontrivial group, with fixed
+effective multiplication and coding, and let
+\[
+ U=G\times\mathbb N,
+ \qquad k\cdot(g,n)=(kg,n).
+\]
+Consider the one-object category $\mathcal R_G$ whose arrows are
+the $G$-equivariant partial recursive maps $U\rightharpoonup U$.
+Equivariance includes invariance of the domain.  Restriction is
+partial identity on the domain, and zero is the nowhere-defined
+map.  Every domain has the form $G\times D$ for a c.e. set
+$D\subseteq\mathbb N$.  Conversely each such set is a domain.
+Consequently the lattice of restriction idempotents is the lattice of c.e. subsets
+of $\mathbb N$, with joins given by union and stable under
+partial inverse image.
+
+In Di Paola and Heller's construction, the free objects are
+$G\times X$ for $X$ in $\mathcal R_{\mathrm{num}}$.
+A recursive bijection $h_X:\mathbb N\to X$ gives the equivariant
+isomorphism $(g,n)\mapsto(g,h_X(n))$ from $U$ to $G\times X$.
+Their free-action category is therefore equivalent to its full
+one-object subcategory on $U$, whose arrows are exactly those of
+$\mathcal R_G$.
+
+The product $U\times U$ carries the diagonal action.  Choose a
+computable bijection
+$b:\mathbb N\times G\times\mathbb N\to\mathbb N$.
+Then
+\[
+ ((g,m),(h,n))\longmapsto(g,b(m,g^{-1}h,n))
+\]
+is an equivariant computable bijection $U\times U\cong U$.
+Transporting the coordinatewise product of partial maps along this
+bijection gives binary restriction products on $\mathcal R_G$,
+written $\otimes$. These are the near products in the dominical
+terminology. In the formulas below, we use the unencoded pairs
+in $U\times U$.
+
+\begin{proposition}\label{prop:equivariant-recursion}
+The category $\mathcal R_G$ is a dominical recursion category
+with $1_U\ne0_{U,U}$. Its lattices of restriction idempotents are bounded distributive, and finite joins
+are stable under inverse image along total arrows.
+\end{proposition}
+\begin{proof}
+Let $(\psi_a)$ be an acceptable enumeration of partial recursive
+maps $G\times\mathbb N\rightharpoonup G\times\mathbb N$.
+Define equivariant application by
+\[
+ \tau((g,a),(h,n))=(gk,m)
+ \quad\text{when}\quad
+ \psi_a(g^{-1}h,n)=(k,m).
+\]
+Let $f:U\times U\rightharpoonup U$ be equivariant and partial
+recursive.  There are partial recursive functions $k_f,m_f$,
+with the same domain, such that
+\[
+ f((g,r),(h,n))
+   =\bigl(gk_f(r,g^{-1}h,n),m_f(r,g^{-1}h,n)\bigr).
+\]
+Fix a parameter function for the acceptable numbering, and
+choose the least program index for the partial recursive map
+$(r,d,n)\mapsto(k_f(r,d,n),m_f(r,d,n))$.
+The parameter theorem \cite[Section~3.4.1]{AspertiLongo}
+then specifies a total recursive function $a_f$ such that
+\[
+ \psi_{a_f(r)}(d,n)=(k_f(r,d,n),m_f(r,d,n)).
+\]
+Thus $\lambda_f(g,r)=(g,a_f(r))$ is total and equivariant, and
+$\tau(\lambda_f\times1)=f$. Thus $\tau$ is a Turing morphism.
+The assignment $\Lambda(f)=\lambda_f$ is a morphism of the
+indicated hom-objects in $\mathbf{Set}$ and supplies the
+indexing structure of Section~\ref{sec:definability-algebras}.
+
+The partial-map restriction and product axioms hold directly.
+Products of nonzero arrows are nonzero because both domains
+are nonempty.  If an arrow $f$ is not total, choose an orbit
+$G\times\{n\}$ outside its domain.  The total equivariant map
+$(g,r)\mapsto(g,n)$ is nonzero and is annihilated by $f$.
+Conversely a total partial map annihilates no nonzero partial
+map.  These facts give the additional dominical conditions.
+Finally the identity and nowhere-defined map are different.
+\end{proof}
+
+\subsection{The Boolean quotient}
+
+Let $\mathcal K$ be the $\mathbf{Set}$-enriched category with
+hom-object $H(U,U)=\mathcal R_G(U,U)$ and the composition and
+restriction operations just defined. Evaluation at the unique
+element of $1$ identifies $\mathcal K_0$ with $\mathcal R_G$.
+Use the regular extensive category $\mathcal E_{\mathrm{rec}}$
+of c.e. PERs defined in Section~\ref{sec:integration-numerical}.
+Define $\mathcal C=\mathcal E_{\mathrm{rec}}^{G}$,
+the category of objects of $\mathcal E_{\mathrm{rec}}$ equipped
+with a $G$-action and equivariant arrows. Finite limits, regular
+image factorizations, and finite coproducts are computed on the
+underlying objects with their induced actions. For a regular
+image factorization, the action descends uniquely to the image;
+uniqueness gives the group laws. Kernel-pair coequalizers and
+their pullbacks are computed on the underlying objects as well.
+Hence $\mathcal C$ is regular and extensive.
+
+The free action on $U$ defines an object of $\mathcal C$.
+Total arrows of $\mathcal R_G$ embed fully faithfully as its
+equivariant total recursive endomorphisms.  The corresponding
+functor $J:\operatorname{Tot}(\mathcal R_G)\to\mathcal C$
+preserves binary products. Its value $JU$ is the equality PER on
+$G\times\mathbb N$ with its free action. Put
+$P(X)=\operatorname{Sub}_{\mathcal C}(JX)$, with inverse image
+along $Jf$. For a c.e. subset $D\subseteq\mathbb N$, let
+$e_{G\times D}$ be the partial identity on $G\times D$, and define
+$j(e_{G\times D})$ to be the inclusion
+$D_{G\times D}\hookrightarrow JU$.
+These inclusions preserve and reflect the order on restriction
+idempotents and preserve meets, joins, bounds, and total inverse
+image.  For unions, dovetail enumerations of $D$ and $E$ using
+only the orbit index $n$ to select a coproduct tag.  This gives
+an equivariant recursive witness for the union
+$G\times(D\cup E)$; the choice of tag is independent of the
+group coordinate. Thus they give the lattice embeddings $j$ required
+in Section~\ref{sec:integration}.
+
+Fix a consistent c.e. theory $T$ with effective syntax and
+numeral substitution, and suppose every recursive subset of
+$\mathbb N$ is strongly numeralwise definable in $T$.
+Corollary~\ref{cor:arithmetic-representation-incompleteness} supplies this
+hypothesis for every consistent c.e. extension of PA.
+Let $B_T$ be its Lindenbaum Boolean algebra from
+Section~\ref{sec:integration-numerical}, now with the trivial
+$G$-action. Its bounds are equivariant global arrows.
+For this example take $S=U$, and define
+\[
+ q_T^G:JS\longrightarrow B_T,
+ \qquad q_T^G(g,a)=[a]_T.
+\]
+Here $[a]_T$ is the class of $a$ in the PER $R_T$;
+its sentence is $\sigma_a$, with G\"odel code $\beta(a)$.
+The underlying arrow is the composite of the projection
+$G\times\mathbb N\to\mathbb N$ and the quotient
+$q_T:D_{\mathbb N}\to B_T$.
+The projection has a recursive section, and $q_T$ is a
+regular epimorphism. Their composite is therefore a regular
+epimorphism. It is equivariant because $B_T$ has trivial action.
+Its top and bottom fibers have supports
+\[
+ P_T=G\times\mathsf{Th}_T,\qquad
+ Q_T=G\times\mathsf{Rf}_T.
+\]
+These are disjoint c.e. subsets of $U$. Their partial identities
+$e_{P_T},e_{Q_T}$ are restriction idempotents in $\mathcal R_G$.
+Let $p_T^+=j_S(e_{P_T})$ and $p_T^-=j_S(e_{Q_T})$.
+
+Decode unary-formula codes as in
+Section~\ref{sec:integration-numerical}, and let
+$\operatorname{sub}(a,n)=\beta^{-1}(\ulcorner\varphi_a(\nu_n)\urcorner)$
+be the numerical substitution arrow. Define $s:U\times U\to S$ by
+\[
+ s((g,a),(h,n))=(g,\operatorname{sub}(a,n)).
+\]
+This map is total recursive and equivariant.
+
+\begin{proposition}\label{prop:equivariant-logical-model}
+The $\mathbf{Set}$-enriched category $\mathcal K$, with underlying
+recursion category $\mathcal R_G$ and the chosen indexing arrow above, admits a
+definability algebra with predicate objects $E_X$, total arrow $s$,
+and distinguished restriction idempotents $e_{P_T},e_{Q_T}$.
+Their images under $j_S$
+give a definability algebra with predicate objects $P_X$.
+Every arrow $JS\to\mathbf2$ in $\mathcal C$ is $\chi_D$ for a
+complemented $D\in E(S)$, and there is no Boolean-algebra
+homomorphism $B_T\to\mathbf2$ in $\mathcal C$.
+\end{proposition}
+\begin{proof}
+A complemented restriction idempotent is $e_{G\times A}$ with $A$ recursive:
+both $A$ and its complement are c.e., and dovetailing their
+enumerations decides membership. For each $A$, choose the least
+code $a$ of a unary formula strongly defining $A$, and put
+$g_A(g,r)=(g,a)$.
+This arrow is total recursive and equivariant. Substitution
+gives
+\[
+ s(g_A\times1)((g,r),(h,n))
+       =(g,\operatorname{sub}(a,n)).
+\]
+Strong numeralwise definability and consistency show that
+its inverse images of $P_T$ and $Q_T$ are exactly the inverse
+images under the second projection of $G\times A$ and
+$G\times A^c$, respectively. These are the representation
+equations~\eqref{eq:original-algebra-representation}.
+Assigning $g_A$ to each pair
+$(e_{G\times A},e_{G\times A^c})$ gives
+a section of the representation projection in $\mathbf{Set}$.
+Proposition~\ref{prop:algebra-comparison} then supplies the
+section for the predicate objects $P_X$.
+
+The object $\mathbf2=1+1$ has trivial action.
+By the definition of arrows between equality PERs, every underlying
+arrow $JU\to\mathbf2$ is tracked by a total recursive Boolean
+function. Equivariance says its value at $(g,n)$ is independent
+of $g$.  It therefore decides a recursive set of $n$, and its
+two fibers are the images under $j$ of complementary restriction
+idempotents.
+Corollary~\ref{cor:integration-no-boolean-map} applies.
+\end{proof}
+
+The object $JU$ has no global elements: an equivariant arrow
+$1\to JU$ would select an element fixed by every member of $G$,
+whereas the action on $U$ is free.
+
+The Boolean algebra $B_T$ and $\mathbf2$ both have trivial
+action.  Hence their Boolean homomorphisms in $\mathcal C$ are
+exactly their Boolean homomorphisms in
+$\mathcal E_{\mathrm{rec}}$.  The usual numerical comparison
+with complete decidable consistent extensions of $T$ therefore
+remains valid. By Theorem~\ref{thm:integration-essential-equivalence},
+the absence of these homomorphisms is equivalent to essential
+incompleteness of $T$.
+
+\section{Completions and introspective structures}
+\label{sec:completion-introspection}
+
+For a separable recursion category $\mathcal K_0$, adjoining a
+restriction terminal object and splitting restriction idempotents
+gives a restriction category whose total-map category $\mathcal D$
+is finitely complete. Its exact completion provides effective
+quotients. We next construct a free introspective extension of
+a finitely complete category. Applied to the enriching base
+$\mathscr V$, this extension changes the base of a definability
+algebra and preserves its internal indexing and representation
+operations. The unit has a finite-limit-preserving retraction.
+The numerical examples
+give categorical inseparability where every introspective functor
+is naturally isomorphic to a constant functor with terminal value.
+Arithmetic introspection supplies a representation operation after
+realization in $\mathbf{Set}$; Section~\ref{sec:quotation-realization}
+constructs this operation from quotation.
+
+\subsection{Restriction terminal objects and exact completions}
+\label{sec:completion-comparison}
+
+We first construct finitely complete categories from the underlying
+ordinary recursion category $\mathcal K_0$. There are two extensions
+with a restriction terminal object. If $c:X\to X$ is a chosen total constant, so that
+$c\pi_1=c\pi_2$, splitting $c$ gives the extension $\mathcal K_0^1$
+of \cite[Sections~3--4]{RecursionCompletions}. Its objects are
+$(A,1_A)$ and $(X,c)$, and its arrows satisfy
+\[
+ \mathcal K_0^1((A,e),(B,d))
+   =\{f:A\to B\mid f=dfe\},
+ \qquad \overline f^{\,1}=e\overline f.
+\]
+The object $(X,c)$ is restriction terminal. The inclusion of
+$\mathcal K_0$ is fully faithful and preserves restrictions, zeros,
+and binary restriction products. The original Turing morphism
+also admits total indices with parameters in $\mathcal K_0^1$.
+Functoriality here requires preservation of the chosen constant.
+
+Without a chosen constant, a free restriction terminal extension is available
+in the category of restriction categories and functors preserving
+zeros and binary restriction products.
+
+\begin{proposition}\label{prop:free-restriction-terminal}
+Let $\mathcal K_0$ be a restriction category with restriction zeros
+and binary restriction products. There is a fully faithful
+restriction functor $J:\mathcal K_0\to\mathcal K_0^\top$ preserving
+this structure, where $\mathcal K_0^\top$ has a restriction terminal
+object $I$. Every structure-preserving functor
+$F:\mathcal K_0\to\mathcal C$ into a category with a chosen
+restriction terminal object extends uniquely to a
+restriction-terminal-preserving functor on $\mathcal K_0^\top$
+whose value at $I$ is the chosen restriction terminal object.
+\end{proposition}
+\begin{proof}
+Adjoin one object $I$ and retain every old hom-set. For
+$X\in\mathcal K_0$, define
+\[
+ \mathcal K_0^\top(X,I)=\{!e\mid e\in E(X)\},\qquad
+ \mathcal K_0^\top(I,X)=\{0_{I,X}\},\qquad
+ \mathcal K_0^\top(I,I)=\{0_I,1_I\},
+\]
+where $0_I\ne1_I$. Set $\overline{!e}=e$,
+$\overline{0_{I,X}}=0_I$, and $\overline a=a$ for
+$a\in\{0_I,1_I\}$. For $f:X\to Y$ in $\mathcal K_0$ and
+$e\in E(Y)$, define
+\[
+ !e\,f= !\overline{ef}:X\longrightarrow I.
+\]
+The arrow $!0_X$ is the zero from $X$ to $I$; all zero arrows
+absorb composition, and $1_I$ acts as identity. These rules cover
+every composite involving $I$. Associativity for a composite
+ending at $I$ follows from
+$\overline{\overline{eg}f}=\overline{egf}$ for
+$f:X\to Y$, $g:Y\to Z$, and $e\in E(Z)$; other new cases
+are identity or zero composites. For $d,e\in E(X)$ the third
+restriction equation reads $\overline{!d\,e}=de$.
+The fourth reduces to $ef=f\overline{ef}$ for $f:X\to Y$
+and $e\in E(Y)$. The remaining cases are the equations for
+$0_I$ and $1_I$. Thus the old restriction structure extends.
+
+Put $X\otimes I=I\otimes X=X$ and $I\otimes I=I$.
+The projections from $X\otimes I$ are $1_X,!1_X$, and those
+from $I\otimes I$ are both $1_I$. Retain the old products.
+For arrows with a common source, the new pairings are
+\[
+ \langle f,!e\rangle=fe,\qquad
+ \langle !e,f\rangle=fe,\qquad
+ \langle !e,!d\rangle=!(ed).
+\]
+For source $I$, read $!e=e$ for $e\in\{0_I,1_I\}$;
+an arrow $I\to X$ with $X\in\mathcal K_0$ is zero. Hence these
+formulas also cover source $I$, including
+$\langle1_I,1_I\rangle=1_I$. The projections give the
+restriction-product equations; for example,
+$\overline{fe}=\overline f\,e$ and
+$!1_Xfe=!(\overline f\,e)$. Uniqueness follows from the
+projection to the old factor, or from either identity projection
+when both factors are $I$. For old factors and source $I$,
+the unique pairing is zero.
+
+The unique total arrow $X\to I$ is $!1_X$, and
+$!1_Yf=!1_X\overline f$; the terminal arrow of $I$ is $1_I$.
+If $1_{\mathcal C}$ is restriction terminal in $\mathcal C$,
+the extension of $F$ is forced by
+\[
+ \widetilde F(I)=1_{\mathcal C},\qquad
+ \widetilde F(!e)=!_{FX}F(e),\qquad
+ \widetilde F(0_{I,X})=0_{1_{\mathcal C},FX}.
+\]
+These formulas preserve composition, restrictions, and pairings.
+They also prove uniqueness.
+\end{proof}
+
+The extension $\mathcal K_0^\top$ has no total arrow from $I$ to
+an old object. Thus $\mathcal K_0^1$ is the extension that preserves
+the original Turing indexing for the new parameters, whereas
+$\mathcal K_0^\top$ supplies a restriction terminal object for arbitrary
+$\mathcal K_0$.
+
+Write $\mathcal C$ for either restriction terminal extension and let
+$K_r(\mathcal C)$ split its restriction idempotents. Its objects
+are $(A,e)$ with $e=\overline e$, its arrows satisfy $f=dfe$,
+and its identity at $(A,e)$ is $e$. Every original arrow
+$f:X\to Y$ is retained and determines the span of total maps
+\[
+\begin{tikzcd}
+ X & (X,\overline f)
+   \arrow[l, hook, "\overline f"'] \arrow[r, "f"] & Y
+\end{tikzcd}
+\]
+in $\mathcal D=\operatorname{Tot}K_r(\mathcal C)$.
+Thus passing to total maps records each partial arrow $f$ together
+with the splitting of its restriction idempotent $\bar f$.
+
+For the original enrichment $\mathcal K$, splittings of idempotents
+admit the following description in $\mathscr V$.
+For global idempotents $e:A\to A$ and $d:B\to B$ of
+$\mathcal K_0$, define a hom-object in $\mathscr V$ by
+\[
+ H_{e,d}=\operatorname{Eq}\bigl(1_{H(A,B)},
+             f\longmapsto dfe\bigr).
+\]
+Here multiplication by $e$ and $d$ uses their representing points
+in the hom-objects. For a third global idempotent $k:C\to C$,
+enriched composition restricts to
+$H_{d,k}\times H_{e,d}\to H_{e,k}$, and the identity at $(A,e)$
+is the point represented by $e$. Preservation of equalizers by
+$\Gamma$ identifies its ordinary hom-set with
+\[
+ \Gamma H_{e,d}\cong
+ \{f\in\mathcal K_0(A,B)\mid f=dfe\}.
+\]
+For total idempotents, restriction is induced by
+$f\mapsto e\bar f$; for restriction idempotents this formula
+reduces to $f\mapsto\bar f$. Indeed, $fe=f$ implies
+$\bar f e=e\bar f$ in the first case and $\bar f\leq e$ in
+the second. The restriction equations therefore restrict to the
+equalizer hom-objects. Binary restriction products are
+$(A,e)\otimes(B,d)=(A\otimes B,e\otimes d)$, with projections
+$\pi_1(e\otimes d)$ and $\pi_2(e\otimes d)$ and pairing
+induced by the original pairing operation. Thus these constructions
+enrich the total-idempotent and restriction-idempotent splittings
+over $\mathscr V$. The chosen-constant extension is the full
+enriched subcategory on $(A,1_A)$ and $(X,c)$, with products
+transported along the isomorphisms of
+\cite[Section~3]{RecursionCompletions}.
+Finite-limit-preserving change of base preserves these hom-object
+equalizers for the chosen split objects.
+
+An object $A$ is \emph{separable} if its diagonal has a
+restriction inverse $\delta_A:A\otimes A\to A$ satisfying
+\[
+ \delta_A\Delta_A=1_A,\qquad
+ \Delta_A\delta_A=\overline{\delta_A}.
+\]
+Assume every object of $\mathcal K_0$ is separable. This property
+passes to $\mathcal K_0^1$ and to restriction-idempotent splittings
+\cite[Section~4]{RecursionCompletions}. It also passes to
+$\mathcal K_0^\top$, since the old products are retained and
+$\Delta_I=1_I$ has restriction inverse $1_I$.
+The category $\mathcal D$
+has finite limits: it has a terminal object and binary products,
+and the equalizer of total $f,g:A\to B$ is the splitting of
+$e_{f,g}=\overline{\delta_B\langle f,g\rangle}$.
+Indeed, $fe_{f,g}=ge_{f,g}$. If a total $h:Z\to A$ satisfies
+$fh=gh$, then
+$\delta_B\langle f,g\rangle h=fh$ is total, so
+$e_{f,g}h=h$; this gives the unique factorization through the
+splitting. A restriction functor preserving binary products
+preserves the restriction inverses of diagonals and these
+equalizers. If it also preserves the restriction terminal object,
+its induced functor on $\mathcal D$ preserves all finite limits.
+The functors induced by the two terminal extensions above have
+these preservation properties.
+
+For small $\mathcal D$, the free exact completion of
+Carboni and Celia Magno \cite{CarboniCeliaMagno1982} gives
+\[
+ \mathcal D\longrightarrow\operatorname{Ex}_{\mathrm{lex}}
+ (\mathcal D),\qquad
+ \operatorname{Reg}(\operatorname{Ex}_{\mathrm{lex}}(\mathcal D),
+                    \mathcal E)
+ \simeq \operatorname{Lex}(\mathcal D,\mathcal E)
+\]
+for every exact category $\mathcal E$. Here $\operatorname{Lex}$
+and $\operatorname{Reg}$ denote the categories of finite-limit-
+preserving and regular functors, respectively. Equivalently, one
+may first take the free regular completion and then its exact
+completion \cite{CarboniVitale}:
+\[
+ \operatorname{Ex}_{\mathrm{lex}}(\mathcal D)
+ \simeq
+ \operatorname{Ex}_{\mathrm{reg}}
+       (\operatorname{Reg}_{\mathrm{lex}}(\mathcal D)).
+\]
+When $\mathcal D$ is already regular, the construction in
+\cite[Section~6]{RecursionCompletions} instead uses
+$\operatorname{Ex}_{\mathrm{reg}}(\mathcal D)$, whose universal
+property is
+\[
+ \operatorname{Reg}(\operatorname{Ex}_{\mathrm{reg}}(\mathcal D),
+                    \mathcal E)
+ \simeq \operatorname{Reg}(\mathcal D,\mathcal E).
+\]
+Its functoriality requires the induced functor on total maps to
+preserve regular epimorphisms. In the numerical category
+$\mathcal D_{\mathrm{rec}}$, every regular epimorphism splits,
+so every finite-limit-preserving functor into a regular category
+has this property. The $\mathrm{lex}$ construction supplies an
+exact completion when regularity has not been established.
+
+\subsection{Introspective structures and free extensions}
+\label{sec:introspective-extension}
+
+For the free-extension and change-of-base constructions, bases carry
+chosen terminal objects and pullbacks, and base functors preserve
+these choices strictly. Products and
+equalizers are formed from these chosen limits. Work in a universe
+in which the bases and enriched object sets under consideration
+are small, and form categories of these structures in a larger
+universe. In the numerical examples, $\mathbf{Set}$ denotes sets
+in a smaller universe.
+
+Let $\mathbf{Lex}_{\mathrm{s}}$ denote the category of these
+finite-limit categories and functors. For a finite-limit category
+$A$, an internal finite-limit category $C$ has objects of objects
+and arrows in $A$, internal category operations, and chosen internal
+finite limits. Write $\operatorname{Glob}_A(C)$ for its category of
+global objects and arrows. For global objects $a,c:1\to C_0$,
+the hom-object $C(a,c)$ is the pullback of
+$(\operatorname{src},\operatorname{tgt}):C_1\to C_0\times C_0$
+along $(a,c):1\to C_0\times C_0$.
+In particular, $C(1_C,c)$ belongs to $A$ for each global
+object $c$ of $C$.
+
+Following Ramesh, a \emph{strict introspective theory} consists of
+$A\in\mathbf{Lex}_{\mathrm{s}}$, an internal finite-limit category
+$C$ in $A$, a strict finite-limit-preserving functor
+\[
+ \mathsf S:A\longrightarrow\operatorname{Glob}_A(C),
+\]
+and a natural transformation
+\[
+ N:\mathrm{id}_A\Longrightarrow\Box_A,
+ \qquad \Box_A(X)=C(1_C,\mathsf SX).
+\]
+Thus $N_X:X\to C(1_C,\mathsf SX)$ is an arrow of $A$.
+For an arrow $f:X\to Y$ of $A$, the morphism
+\[
+ \Box_A(f)=C(1_C,\mathsf Sf):
+ C(1_C,\mathsf SX)\longrightarrow C(1_C,\mathsf SY)
+\]
+is induced by postcomposition with $\mathsf Sf$.
+Naturality of $N$ is the equation $\Box_A(f)N_X=N_Yf$.
+A homomorphism $(A,C,\mathsf S,N)\to(A',C',\mathsf S',N')$ is a strict
+finite-limit-preserving functor $H:A\to A'$ satisfying
+\[
+ H[C]=C',\qquad
+ H_C \mathsf S=\mathsf S'H,\qquad H(N_X)=N'_{HX},
+\]
+where $H_C:\operatorname{Glob}_A(C)\to
+\operatorname{Glob}_{A'}(C')$ applies $H$ to global objects and
+arrows. Preservation of the chosen limits identifies the codomains
+in the last equation. These are Ramesh's Definitions~5.8 and~5.10
+\cite[pp.~93--94]{Ramesh}. Denote this category by
+$\mathbf{Int}_{\mathrm{s}}$ and its underlying-category functor by
+$U:\mathbf{Int}_{\mathrm{s}}\to\mathbf{Lex}_{\mathrm{s}}$.
+
+\begin{proposition}\label{prop:free-introspective-extension}
+The functor $U$ has a left adjoint $L$. For every $A$, its unit
+$\eta_A:A\to UL(A)$ has a strict finite-limit-preserving retraction.
+Consequently $\eta_A$ is faithful and reflects isomorphisms.
+\end{proposition}
+\begin{proof}
+Strict introspective theories are models of an essentially algebraic
+theory extending the theory of strict finite-limit categories
+\cite[p.~94]{Ramesh}. Add to its signature a name for every object
+and arrow of $A$, with equations for their domains, codomains,
+identities, compositions, and chosen finite limits. The initial model
+of this presentation is $L(A)$; the named objects and arrows define
+$\eta_A$. Interpreting these names in an introspective theory $I$
+is precisely giving a strict finite-limit-preserving functor
+$A\to UI$. Hence
+\[
+ \mathbf{Int}_{\mathrm{s}}(L(A),I)
+ \cong\mathbf{Lex}_{\mathrm{s}}(A,UI).
+\]
+The unique extension of $\eta_Bf$ defines $L(f)$ for
+$f:A\to B$. Uniqueness proves the functor laws and naturality of
+the displayed bijection.
+
+Let $R(A)$ have underlying category $A$ and the terminal internal
+category: both its object of objects and its object of arrows are
+$1_A$, and all operations are the unique possible arrows. Take $\mathsf S$
+to be the constant functor at its terminal object and $N_X$ to be
+the unique arrow from $X$ to the terminal object $\Box_A X$.
+These choices give an introspective theory and are preserved by
+every strict finite-limit-preserving functor. Thus $R$ is a functor
+with $UR=\mathrm{id}$.
+
+The identity $A\to UR(A)$ extends uniquely to a homomorphism
+$\epsilon_A:L(A)\to R(A)$. Put $r_A=U\epsilon_A$. Then
+$r_A\eta_A=\mathrm{id}_A$. Applying $r_A$ shows that $\eta_A$
+reflects equality of arrows and invertibility.
+\end{proof}
+
+\subsection{Change of base for definability algebras}
+\label{sec:definability-base-change}
+
+The completions in Section~\ref{sec:completion-comparison} act on
+the underlying recursion category $\mathcal K_0$. Change of base
+acts on the ambient category $\mathscr V$ containing the hom-objects,
+predicate objects, and representation operation.
+
+For the chosen presentations in this section, take the objects
+$E_X$, $\mathsf T(X,Y)$, $C_U$, and $R$ from the fixed finite-limit
+constructions above. If $F:\mathscr V\to\mathscr W$ is a strict
+finite-limit-preserving functor and $D$ is a definability algebra
+over $\mathscr V$, apply $F$ to its hom-objects, predicate objects,
+and structure arrows. Denote these data by $F_*D$ and its
+$\mathscr W$-enriched category by $F_*\mathcal K$. Its objects
+and chosen products are those of $\mathcal K$, and its hom-objects
+are $FH(X,Y)$. The underlying ordinary category has hom-sets
+\[
+ (F_*\mathcal K)_0(X,Y)=\mathscr W(1,FH(X,Y)).
+\]
+Applying $F$ to global arrows defines an ordinary functor
+\[
+ \iota_F:\mathcal K_0\longrightarrow(F_*\mathcal K)_0,
+ \qquad \widehat f\longmapsto F(\widehat f).
+\]
+
+\begin{lemma}\label{lem:definability-base-change}
+The structure $F_*D$ is a definability algebra over $\mathscr W$.
+The functor $\iota_F$ preserves restriction, the chosen restriction
+products, zeros, and joins of restriction idempotents. If $F$ is faithful, so is
+$\iota_F$, and $1_U\ne0_{U,U}$ implies the same inequality in
+$(F_*\mathcal K)_0$. If $F$ is fully faithful, $\iota_F$ is an
+isomorphism of ordinary categories.
+\end{lemma}
+\begin{proof}
+The enriched category, restriction, product, and lattice axioms
+are equations of structure arrows, so application of $F$ preserves
+them. Zero absorption by the restriction product also follows
+equationally: for $h=\langle f,0\rangle$,
+$\bar h=\bar f\,\bar0=0$, whence $h=h\bar h=0$.
+Thus the prodominical equations hold. The original isomorphisms
+between objects remain isomorphisms, so $(F_*\mathcal K)_0$ is an isotype.
+
+Preservation of the defining limits gives
+\[
+ E_X^{F}=F(E_X),\quad
+ \mathsf T^{F}(X,Y)=F(\mathsf T(X,Y)),\quad
+ C_U^{F}=F(C_U),\quad R^{F}=F(R).
+\]
+The morphism $F(j_X)$ is monic, and the predicate actions and their
+compatibility with $j$ satisfy the required equations. The equation
+$F(q_R)F(\sigma)=1_{F(C_U)}$ makes $F(\sigma)$ the representation
+section. Its representation operation is
+$\rho^F=F(\rho):F(C_U)\longrightarrow F\mathsf T(U,U)$.
+
+The indexing equation becomes
+\[
+ F(\operatorname{ev}_{\tau})F(\Lambda)
+     =1_{FH(U\otimes U,U)}.
+\]
+For every global arrow $a:1\to FH(U\otimes U,U)$, the composite
+$F(\Lambda)a:1\to F\mathsf T(U,U)$ therefore gives a total index
+for $a$. Write $\tau_F:U\otimes U\to U$ for the ordinary arrow
+represented by $F(\tau)$. For an arbitrary parameter object $X$,
+choose an isomorphism $i:X\to U$. Given $f:X\otimes U\to U$,
+apply this indexing construction to $f(i^{-1}\otimes1_U)$ to
+obtain a total $g:U\to U$. Then $gi:X\to U$ is total and
+$\tau_F((gi)\otimes1_U)=f$. Thus $\tau_F$ is a Turing morphism
+in $(F_*\mathcal K)_0$.
+Likewise, every global pair of complementary restriction idempotents in
+$(F_*\mathcal K)_0$ factors through $F(C_U)$, so $F(\sigma)$ supplies
+its representative. These verifications apply to all global
+arrows of the new hom-objects.
+
+The preservation statements for $\iota_F$ follow from its
+definition. If $F$ is faithful, equality of the images of two
+global arrows implies their equality, proving faithfulness of
+$\iota_F$ and preservation of $1_U\ne0_{U,U}$. If $F$ is fully
+faithful, its maps
+\[
+ \mathscr V(1,H(X,Y))\longrightarrow
+ \mathscr W(F1,FH(X,Y))=\mathscr W(1,FH(X,Y))
+\]
+are bijections. Since $\iota_F$ is the identity on objects, it is
+then an isomorphism of ordinary categories.
+\end{proof}
+
+In particular, for small $\mathscr V$ the canonical embedding
+$\mathscr V\to\operatorname{Ex}_{\mathrm{lex}}(\mathscr V)$ is
+fully faithful and preserves finite limits
+\cite[Section~2]{CarboniCeliaMagno1982}. With compatible choices
+of finite limits, change of base along this embedding gives a
+definability algebra over an exact category with the same underlying
+ordinary recursion category up to the isomorphism above.
+
+Change of base also applies to morphisms of definability algebras.
+With the chosen strict limits,
+$(GF)_*=G_*F_*$ and $(1_{\mathscr V})_*=1$.
+
+\subsection{The relative adjunction}
+\label{sec:relative-introspective-adjunction}
+
+Define $\mathbf{Def}$ to have objects $(\mathscr V,D)$, where
+$\mathscr V\in\mathbf{Lex}_{\mathrm{s}}$ and $D$ is a definability
+algebra over $\mathscr V$. A morphism
+$(\mathscr V,D)\to(\mathscr W,D')$ is a pair $(F,\alpha)$,
+where $F:\mathscr V\to\mathscr W$ is strict and preserves finite
+limits, and $\alpha:F_*D\to D'$ is a morphism of definability
+algebras over $\mathscr W$ as defined in Section~\ref{sec:definability-morphisms}.
+Composition and identity are
+\[
+ (G,\beta)(F,\alpha)=(GF,\beta\,G_*(\alpha)),
+ \qquad 1_{(\mathscr V,D)}=(1_{\mathscr V},1_D).
+\]
+An object of $\mathbf{IntDef}$ is $(I,D)$, where $I$ is a strict
+introspective theory and $D$ is a definability algebra over $UI$.
+Its morphisms are the pairs above whose base functors preserve
+the introspective structures.
+Write $U_D:\mathbf{IntDef}\to\mathbf{Def}$ for the functor
+forgetting the introspective structure.
+
+\begin{theorem}\label{thm:relative-introspective-adjunction}
+There is an adjunction
+\[
+ L_D:\mathbf{Def}\rightleftarrows\mathbf{IntDef}:U_D,
+ \qquad L_D\dashv U_D,
+\]
+with
+\[
+ L_D(\mathscr V,D)=
+ \bigl(L(\mathscr V),(\eta_{\mathscr V})_*D\bigr).
+\]
+Its unit has a retraction in $\mathbf{Def}$. On underlying
+recursion categories it induces a faithful functor with a
+structure-preserving retraction. If $1_U\ne0_{U,U}$ in $D$,
+then the distinguished predicates of $(\eta_{\mathscr V})_*D$
+have no separator given by a complemented restriction idempotent.
+\end{theorem}
+\begin{proof}
+A morphism from $L_D(\mathscr V,D)$ to $(I,D')$ consists of an
+introspective homomorphism $H:L(\mathscr V)\to I$ and an algebra
+morphism
+\[
+ (UH)_*\bigl((\eta_{\mathscr V})_*D\bigr)\longrightarrow D'.
+\]
+The adjunction $L\dashv U$ identifies $H$ uniquely with
+$F=UH\eta_{\mathscr V}:\mathscr V\to UI$. Since
+$(UH)_*(\eta_{\mathscr V})_*D=F_*D$, the algebra morphism is
+exactly the second component of a morphism
+$(\mathscr V,D)\to U_D(I,D')$. This gives the natural hom-set
+bijection. On a morphism $(F,\alpha)$, the left adjoint is
+$(L(F),(\eta_{\mathscr W})_*\alpha)$, using naturality of $\eta$.
+
+The unit is $(\eta_{\mathscr V},1_{(\eta_{\mathscr V})_*D})$.
+The retraction $r_{\mathscr V}$ of
+Proposition~\ref{prop:free-introspective-extension} satisfies
+$(r_{\mathscr V})_*(\eta_{\mathscr V})_*D=D$. Paired with $1_D$,
+it therefore retracts this unit. On underlying recursion
+categories the induced functors are
+\[
+ \mathcal K_0
+ \xrightarrow{\ \iota_{\eta_{\mathscr V}}\ }
+ ((\eta_{\mathscr V})_*\mathcal K)_0
+ \xrightarrow{\ \iota_{r_{\mathscr V}}\ }\mathcal K_0.
+\]
+Their composite is the identity because
+$r_{\mathscr V}\eta_{\mathscr V}=1_{\mathscr V}$.
+Lemma~\ref{lem:definability-base-change} gives faithfulness and
+preservation of nontriviality. The final assertion follows from
+Corollary~\ref{cor:definability-algebra-inseparability}.
+\end{proof}
+
+\subsection{Definability without nonconstant introspection}
+\label{sec:introspection-separation}
+
+The numerical definability algebras give a separation from
+nonconstant introspection on the same base category. We first prove a
+restriction on finite-limit-preserving functors with the
+L\"ob property.
+
+Let $\mathcal A$ have finite limits and terminal object $1$.
+A finite-limit-preserving endofunctor $\Box:\mathcal A\to\mathcal A$
+has the \emph{L\"ob property} if, for every
+$f:\Box X\to X$, there is an arrow $x:1\to X$ satisfying
+\[
+ f\Box(x)u=x,
+ \qquad u:1\xrightarrow{\cong}\Box1,
+\]
+where $u$ is the unique isomorphism between the indicated terminal
+objects \cite[Definition~4.1]{Ramesh}.
+An initial object $0$ is \emph{strict} if every arrow into $0$
+is an isomorphism. An object is \emph{subterminal} if its unique
+arrow to $1$ is monic.
+
+\begin{theorem}\label{thm:two-valued-lob-collapse}
+Let $\mathcal A$ have finite limits and a strict initial object
+$0$, with $0\not\cong1$. Suppose that its only subobjects of
+$1$ are $0$ and $1$. Every finite-limit-preserving endofunctor
+$\Box:\mathcal A\to\mathcal A$ with the L\"ob property is
+naturally isomorphic to the constant functor with value $1$.
+\end{theorem}
+\begin{proof}
+Since $\Box$ preserves monomorphisms and the terminal object,
+$\Box0$ is subterminal. Thus $\Box0\cong0$ or $\Box0\cong1$.
+In the first case an isomorphism $\Box0\to0$ and the L\"ob
+property give an arrow $1\to0$. Strictness would make this
+arrow an isomorphism, contrary to $0\not\cong1$.
+Hence $\Box0\cong1$.
+
+For each $X$, strictness makes the projection $0\times X\to0$
+an isomorphism. Applying $\Box$ and using its product comparison
+shows that the projection
+$\Box0\times\Box X\longrightarrow\Box0$
+is an isomorphism. Since $\Box0$ is terminal, the unique arrow
+$\Box X\to1$ is therefore an isomorphism. These unique arrows
+form the required natural isomorphism.
+\end{proof}
+
+For an introspective structure, the endofunctor $\Box$ defined
+in Section~\ref{sec:introspective-extension} preserves finite limits
+\cite[Definition~3.2]{Ramesh} and has the L\"ob property
+\cite[Theorem~4.19 and Corollary~4.21]{Ramesh}.
+
+\begin{corollary}\label{cor:two-valued-introspection-collapse}
+Under the hypotheses on $\mathcal A$ in
+Theorem~\ref{thm:two-valued-lob-collapse}, every introspective
+structure $(\mathcal A,\mathcal C,\mathsf S,N)$ has
+$\mathsf S$ naturally isomorphic to the constant functor
+with value $1_{\mathcal C}$, and $\Box$ naturally isomorphic
+to the constant functor with value $1$.
+\end{corollary}
+\begin{proof}
+The theorem gives $\Box0\cong1$. A global point of this
+internal hom is an arrow $1_{\mathcal C}\to \mathsf S0$ in
+$\operatorname{Glob}(\mathcal C)$. Since $\mathsf S$ preserves finite
+limits, $\mathsf S0$ is subterminal. Its point therefore makes it
+terminal. Applying $\mathsf S$ to the projection $0\times X\to0$
+now shows that $\mathsf S0\times \mathsf SX\to \mathsf S0$ is an isomorphism, so
+$\mathsf SX$ is terminal for every $X$. The unique arrows from these
+objects to $1_{\mathcal C}$ give the natural isomorphism.
+\end{proof}
+
+The internal category $\mathcal C$ may have nonterminal objects;
+the corollary says that the image of $\mathsf S$ consists of terminal
+objects. These are the constant-functor introspective structures
+of \cite[Example~2.4]{Ramesh}.
+
+\begin{corollary}\label{cor:numerical-introspection-separation}
+Let $T$ be a consistent c.e. extension of PA. Its numerical
+definability algebra over $\mathbf{Set}$ has restriction idempotents as predicates,
+and its Lindenbaum presentation belongs to
+$\mathcal E_{\mathrm{rec}}$.
+Every introspective structure on any of
+$\mathbf{Set}$, $\mathcal E_{\mathrm{rec}}$, and $\mathcal P$,
+with internal category $\mathcal C$, has $\mathsf S$ naturally
+isomorphic to the constant functor with value
+$1_{\mathcal C}$.
+\end{corollary}
+\begin{proof}
+The definability algebra is supplied by
+Corollaries~\ref{cor:numerical-definability-algebras}
+and~\ref{cor:arithmetic-representation-incompleteness}.
+Since $T$ is c.e., its Lindenbaum PER and presentation belong
+to $\mathcal E_{\mathrm{rec}}$, as established in
+Section~\ref{sec:integration-numerical}.
+
+The category $\mathbf{Set}$ satisfies the hypotheses of
+Theorem~\ref{thm:two-valued-lob-collapse}. In each of the two
+PER categories, the empty PER is strict initial: an arrow into
+it forces the source support to be empty. The singleton equality
+PER is terminal and is not initial. If a monomorphism
+$R\rightarrowtail1$ has nonempty support, choose a supported
+representative $n$. The constant recursive function with value
+$n$ gives a section $1\to R$. The monomorphism is consequently
+an isomorphism. Thus the only subobjects of $1$ are $0$ and $1$.
+Corollary~\ref{cor:two-valued-introspection-collapse} applies.
+\end{proof}
+
+Here $\mathbf{Set}$ is the ambient category containing the
+hom-objects and the representation operation. The category
+$\mathcal E_{\mathrm{rec}}$ is the exact completion providing
+the numerical Boolean presentation. The corollary excludes
+nonconstant introspection on both categories.
+
+There is also an obstruction to identifying the embedding of restriction idempotents
+with the natural transformation $N$.
+
+\begin{proposition}\label{prop:domain-embedding-not-introspection}
+Let $\mathcal A$ satisfy the hypotheses of
+Theorem~\ref{thm:two-valued-lob-collapse} and carry an
+introspective structure. If $E$ has distinct global points and
+$j:E\rightarrowtail P$ is monic, then $N_E:E\to\Box E$
+is not monic, and no arrow $a:\Box E\to P$ satisfies
+$aN_E=j$.
+\end{proposition}
+\begin{proof}
+Choose distinct $b,t:1\to E$. The object $\Box E$ is terminal,
+so $N_Eb=N_Et$. This proves that $N_E$ is not monic.
+If $aN_E=j$, then $jb=jt$, contradicting monicity of $j$.
+\end{proof}
+
+For the numerical definability algebra, take $E=E_U$ and
+$j=j_U$. Its lower and upper bounds are distinct global
+points. Proposition~\ref{prop:domain-embedding-not-introspection}
+therefore prevents the identification of $N_{E_U}$ with the
+embedding of restriction idempotents, even after an isomorphism of their codomains.
+
+\subsection{Numerical realization of arithmetic introspection}
+\label{sec:quotation-realization}
+
+A finite-limit-preserving interpretation of the arithmetic
+introspective structure sends its internal category and quotation
+maps to $\mathbf{Set}$. From these interpretations we construct
+the representation operation for the numerical $\mathbf{Set}$-enrichment.
+The construction uses disjoint subobjects describing
+the two possible outputs of a program. For a total Boolean
+program, their inverse images under its input map are complementary.
+
+\begin{lemma}\label{lem:realized-disjoint-subobjects}
+Let $(\mathcal B,\mathcal C,\mathsf S,N)$ be an introspective
+structure, and suppose that $\mathcal B$ has an initial object
+$0_{\mathcal B}$. Let $F:\mathcal B\to\mathcal E$ preserve finite
+limits, where $\mathcal E$ is finitely complete and has a strict initial object
+$0_{\mathcal E}$ and distributive subobject lattices. Suppose that
+$F(\Box0_{\mathcal B})\cong0_{\mathcal E}$.
+For disjoint monomorphisms $m_\pm:M_\pm\rightarrowtail Z$ in
+$\mathcal B$, put
+$Q_\pm=(FN_Z)^*[F(\Box m_\pm)]$ in
+$\operatorname{Sub}_{\mathcal E}(FZ)$.
+Then $[Fm_\pm]\leq Q_\pm$ and $Q_+\wedge Q_-=0$.
+For every $h:Y\to FZ$ satisfying
+$h^*[Fm_+]\vee h^*[Fm_-]=1_Y$, one has
+$h^*Q_\pm=h^*[Fm_\pm]$.
+\end{lemma}
+\begin{proof}
+Naturality gives the commutative square
+\[
+\begin{tikzcd}
+ FM_\pm \arrow[r,"F(N_{M_\pm})"] \arrow[d,hook,"Fm_\pm"']
+   & F(\Box M_\pm) \arrow[d,hook,"F(\Box m_\pm)"]\\
+ FZ \arrow[r,"FN_Z"'] & F(\Box Z).
+\end{tikzcd}
+\]
+Its factorization through the pullback defining $Q_\pm$ gives
+$[Fm_\pm]\leq Q_\pm$. Since $F$ and $\Box$ preserve finite
+limits, the intersection of $F(\Box m_+)$ and $F(\Box m_-)$ is
+$F(\Box0_{\mathcal B})$. The hypothesis on this object gives
+$Q_+\wedge Q_-=0$.
+
+Write $D_\pm=h^*[Fm_\pm]$ and $A_\pm=h^*Q_\pm$.
+Then $D_\pm\leq A_\pm$, $A_+\wedge A_-=0$, and
+$D_+\vee D_-=1_Y$. Distributivity gives
+$A_+=A_+\wedge(D_+\vee D_-)=D_+$; the other equality follows
+in the same way.
+\end{proof}
+
+We use the arithmetical form of Ramesh's syntactic constructions
+\cite[Constructions~2.9--2.10, pp.~49--53]{Ramesh}.
+Let $\mathcal B$ be the exact completion of the regular
+$\Sigma_1$ syntactic category of PA. It has the following PER
+presentation. An object is a $\Sigma_1$ formula $R(x,x')$ whose
+symmetry and transitivity PA proves. An arrow $R\to R'$ is a
+$\Sigma_1$ formula $H(x,y)$ for which PA proves the universal
+closures of
+\begin{align*}
+ H(x,y)&\ \Longrightarrow\ R(x,x)\wedge R'(y,y),\\
+ R(x,x')\wedge R'(y,y')\wedge H(x,y)
+   &\ \Longrightarrow\ H(x',y'),\\
+ R(x,x)&\ \Longrightarrow\ \exists y\,H(x,y),\\
+ H(x,y)\wedge H(x,y')&\ \Longrightarrow\ R'(y,y').
+\end{align*}
+Arrows are identified when PA proves their defining formulas
+equivalent. Composition is relational composition. Write
+$\mathcal N$ for the equality PER defined by $x=y$,
+$0_{\mathcal B}$ for the empty PER, and $1_{\mathcal B}$ for
+equality on the singleton defined by $x=0$.
+
+Let $T=\mathrm{PA}+\Gamma$, where $\Gamma$ is a c.e. collection
+of axioms in an effective classical language extending that of
+arithmetic. A proof includes finite computation records verifying
+its syntactic checks and its uses of axioms from $\Gamma$.
+This presentation gives a
+primitive recursive proof-verification relation and a
+PA-verifiable translation of PA proofs into $T$-proofs.
+Define the internal category $\mathcal C_T$ in $\mathcal B$
+by the same syntactic construction, allowing arbitrary formulas
+for the PERs and functional relations and using $T$-provability
+in the defining conditions. Its object of objects is the PER of
+valid PER-formula codes, with two codes related when $T$ proves
+their formulas equivalent. Its object of arrows is the PER of
+triples $(R,H,R')$ satisfying the functional-relation conditions;
+two triples are related when $T$ proves their corresponding
+component formulas equivalent.
+The defining relations on these codes are $\Sigma_1$, and the
+exact completion supplies the quotients. Identities are represented
+by the PER formulas, and composition is relational composition.
+For arrows $H:R\to V$ and $G:R'\to V$, their pullback is represented by
+\[
+ P((x,y),(x',y'))\ \Longleftrightarrow\
+ R(x,x')\wedge R'(y,y')\wedge
+ \exists z\bigl(H(x,z)\wedge G(y,z)\bigr).
+\]
+Saturation makes equality of the two images equivalent to the
+existence of the common representative $z$. The first projection
+has graph $P((x,y),(x,y))\wedge R(x,r)$, and the second has
+graph $P((x,y),(x,y))\wedge R'(y,r')$.
+For compatible arrows $L:W\to R$ and $K:W\to R'$, the graph
+$L(w,x)\wedge K(w,y)$ defines the mediating arrow.
+Compatibility places its values in the support of $P$;
+the two projection equations give uniqueness modulo $P$.
+Replacing any component formula by a $T$-provably equivalent
+formula gives a $T$-provably equivalent construction. These
+operations therefore descend to the PER quotients and give the
+internal finite-limit structure, with terminal PER equality on
+$\{0\}$. The constructions on formulas and proofs are primitive
+recursive, and PA verifies their correctness. They therefore
+define structure arrows in $\mathcal B$, as in Ramesh's
+Construction~2.10.
+
+Regard each base formula and arrow as the same formula modulo
+$T$-provability. This gives the finite-limit-preserving functor
+$\mathsf S_T:\mathcal B\to
+\operatorname{Glob}_{\mathcal B}(\mathcal C_T)$.
+Thus $\mathsf S_TX$ is a global object of $\mathcal C_T$, and
+$\Box_TX=\mathcal C_T(1_{\mathcal C_T},\mathsf S_TX)$ is an
+object of $\mathcal B$. For a base PER $R$, a supported
+representative $n$ determines the constant numeral arrow into
+$\mathsf S_TR$, represented by
+$(z=0)\wedge R(\overline n,y)$, where $z$ is the terminal input.
+Write $\operatorname{Pr}_T$ for the arithmetic proof predicate
+from the chosen proof coding, and let
+$\ulcorner\alpha(\dot{\vec x})\urcorner$ denote the code obtained
+by substituting the numerals for $\vec x$ into a fixed formula $\alpha$.
+Formalized $\Sigma_1$-completeness and the proof translation into
+$T$ give, for each $\Sigma_1$ formula $\alpha$, the PA theorem
+$\alpha(\vec x)\Rightarrow
+\operatorname{Pr}_T(\ulcorner\alpha(\dot{\vec x})\urcorner)$.
+Applied to $R$, this shows that the assignment respects $R$ and defines
+$N^T_R:R\to\Box_TR$ in $\mathcal B$.
+Applied to the functional relation $H(x,y)$ of an arrow, the
+same PA theorem proves that applying $\mathsf S_TH$ to the
+numeral arrow for $x$ gives the numeral arrow for $y$ whenever
+$H(x,y)$ holds. These PA-provable equations give naturality of
+$N^T:\mathrm{id}_{\mathcal B}\Rightarrow\Box_T$.
+These constructions give an introspective structure
+$(\mathcal B,\mathcal C_T,\mathsf S_T,N^T)$.
+Chosen finite-limit presentations can be made strict by
+\cite[Theorem~5.9]{Ramesh}.
+
+Interpret base formulas in the standard model of PA. This gives
+a finite-limit-preserving functor $F:\mathcal B\to\mathbf{Set}$:
+it sends $R$ to the quotient of
+$\{n\in\mathbb N:\mathbb N\models R(n,n)\}$ by $R$, and sends a functional
+relation to its induced function on equivalence classes.
+Interpretation preserves the finite-limit constructions on
+these quotients. In particular, $F\mathcal N=\mathbb N$ and
+$F0_{\mathcal B}=\varnothing$.
+Applying $F$ to the internal-category diagram gives the ordinary
+category $F(\mathcal C_T)$ of $T$-provable PERs and functional
+relations, modulo the equivalences just defined.
+The object $\mathsf S_T0_{\mathcal B}$ is the empty PER in the
+internal syntactic category. A point of $F(\Box_T0_{\mathcal B})$
+is a class of $T$-provably functional relations from its terminal
+object to that empty PER. Such a relation exists precisely when
+$T\vdash\bot$. Thus consistency of $T$ gives
+$F(\Box_T0_{\mathcal B})=\varnothing$.
+
+\begin{theorem}\label{thm:introspection-numerical-definability}
+Let $T=\mathrm{PA}+\Gamma$ be consistent, where $\Gamma$ is c.e.
+in an effective classical language extending arithmetic.
+The introspective structure
+$(\mathcal B,\mathcal C_T,\mathsf S_T,N^T)$ and its standard
+realization $F$ determine a representation section for the
+numerical recursion category $\mathcal R_{\mathrm{num}}$ with
+$U=S=\mathbb N$, predicate objects $P_X=E_X$, and the numeral
+substitution of Section~\ref{sec:integration-numerical}. Its distinguished
+restriction idempotents are $a_T^+=e_{\mathsf{Th}_T}$ and $a_T^-=e_{\mathsf{Rf}_T}$,
+where $e_A$ denotes the partial identity on $A$.
+Consequently these data form a definability algebra over
+$\mathbf{Set}$.
+\end{theorem}
+\begin{proof}
+Fix the acceptable program numbering used for the Turing
+morphism $\tau:U\otimes U\rightharpoonup U$ in
+$\mathcal R_{\mathrm{num}}$.
+Let $M_b(p,x)$, for $b\in\{0,1\}$, be a $\Sigma_1$ formula
+asserting that program $p$ on input $x$ terminates with output
+$b$. Its computation relation is deterministic, and PA proves
+that $M_0(p,x)$ and $M_1(p,x)$ are disjoint.
+These formulas therefore define disjoint subobjects
+$m_b:\mathcal M_b\rightarrowtail\mathcal N\times\mathcal N$
+in $\mathcal B$.
+
+Put $Z=\mathcal N\times\mathcal N$ and define $Q_b$ by the
+pullback
+\[
+\begin{tikzcd}
+ Q_b \arrow[r] \arrow[d,hook]
+   & F(\Box_T\mathcal M_b) \arrow[d,hook,"F(\Box_Tm_b)"]\\
+ \mathbb N^2 \arrow[r,"FN^T_Z"'] & F(\Box_TZ).
+\end{tikzcd}
+\]
+For a standard pair $(p,n)$, membership in $Q_b$ says that its
+numeral arrow factors through the interpretation of $\mathsf S_Tm_b$
+in $F(\mathcal C_T)$. A proof of $M_b(\overline p,\overline n)$
+gives such a factorization by the constant numeral arrow into
+the interpretation of $\mathsf S_T\mathcal M_b$.
+Conversely, write $G(z)$ for the graph of a factorization after
+substitution of the unique terminal input. Its defining proofs give
+$T\vdash\exists z\,G(z)$ and
+$T\vdash\forall z\,(G(z)\Rightarrow
+(M_b(z)\wedge z=(\overline p,\overline n)))$, with pairs
+encoded by the fixed tuple coding. Hence
+$T\vdash M_b(\overline p,\overline n)$.
+Thus $(p,n)\in Q_b$ if and only if
+$T\vdash M_b(\overline p,\overline n)$.
+
+Let $p$ be an index of an actual total Boolean function. The map
+$h_p:\mathbb N\to\mathbb N^2$, given by $h_p(n)=(p,n)$, has
+complementary inverse images of $Fm_0$ and $Fm_1$.
+Lemma~\ref{lem:realized-disjoint-subobjects} gives
+$h_p^*Q_b=h_p^*[Fm_b]$.
+The coverage used here holds in $\mathbf{Set}$ because the
+program terminates with output $0$ or $1$ on every input.
+It therefore applies to every total Boolean program, including
+those whose totality $T$ does not prove.
+
+The fixed recursive tuple coding identifies the underlying set
+of $U\otimes U$ with $\mathbb N^2=FZ$. Here $U$ is an object
+of $\mathcal R_{\mathrm{num}}$, whereas $\mathcal N$ is an
+object of $\mathcal B$ and $F\mathcal N$ is a set.
+For a recursive subset $A\subseteq\mathbb N$, let $p_A$ be
+the least index of its Boolean characteristic function, with
+output $1$ on $A$. Define $\theta_p(v)=M_1(\overline p,v)$.
+The map $a(p)=\ulcorner\theta_p\urcorner$ from program indices
+to formula codes is primitive recursive, and
+$g_A:U\to U$, given by $g_A(u)=a(p_A)$, is a constant total
+recursive arrow.
+
+If $n\in A$, the equality for $Q_1$ gives
+$T\vdash\theta_{p_A}(\overline n)$.
+If $n\notin A$, the equality for $Q_0$ gives
+$T\vdash M_0(\overline{p_A},\overline n)$, and determinism
+gives $T\vdash\neg\theta_{p_A}(\overline n)$.
+Consistency excludes a proof of the opposite instance in each
+case. With $c_{g_A}=s(g_A\otimes1_U)$, the fixed substitution
+arrow satisfies
+$\sigma_{s(a(p_A),n)}=\theta_{p_A}(\overline n)$ and hence the
+representation equations
+\[
+ c_{g_A}^*a_T^+=\pi_2^*e_A,
+ \qquad
+ c_{g_A}^*a_T^-=\pi_2^*e_{\mathbb N\setminus A}.
+\]
+The embedding of restriction idempotents for these predicates is $j_X=1_{E_X}$.
+
+The objects $E_X$, $C_U$, and
+$G=\mathsf T(U,U)=\operatorname{Tot}(\mathcal R_{\mathrm{num}})(U,U)$
+belong to $\mathbf{Set}$.
+Pairs of complementary restriction idempotents are precisely
+$(e_A,e_{\mathbb N\setminus A})$ with $A$ recursive.
+The assignment
+$\rho(e_A,e_{\mathbb N\setminus A})=g_A$ is therefore a
+morphism $\rho:C_U\to G$ in $\mathbf{Set}$.
+The representation equations give $\ell\rho=b$ in
+\eqref{eq:v8-representation-section}; the pullback
+\eqref{eq:v8-representation-pullback} consequently supplies its
+section $\sigma:C_U\to R$.
+Both $\mathsf{Th}_T$ and $\mathsf{Rf}_T$ are c.e., so their
+partial identities are arrows of $\mathcal R_{\mathrm{num}}$.
+The remaining enriched category, lattice, and indexing structure
+is that of Corollary~\ref{cor:numerical-definability-algebras}.
+\end{proof}
+
+\begin{corollary}\label{cor:introspection-realized-incompleteness}
+For a consistent c.e. extension $T=\mathrm{PA}+\Gamma$, the
+theorem and refutation sets $\mathsf{Th}_T$ and $\mathsf{Rf}_T$
+are recursively inseparable.
+Every consistent c.e. extension of $T$ is incomplete.
+No Boolean quotient of the associated Lindenbaum algebra induces
+a consistent complete presentation whose fibers over the bounds
+arise from restriction idempotents.
+\end{corollary}
+\begin{proof}
+The numerical recursion category has $1_U\ne0_{U,U}$.
+Theorem~\ref{thm:introspection-numerical-definability} and
+Corollary~\ref{cor:definability-algebra-inseparability} therefore
+exclude a complemented restriction idempotent separating
+$a_T^+$ and $a_T^-$. Such an idempotent is the partial identity
+on a recursive set containing $\mathsf{Th}_T$ and disjoint
+from $\mathsf{Rf}_T$.
+
+If a consistent c.e. extension $T'$ of $T$ were complete,
+simultaneous enumeration of its proofs of $\sigma_b$ and
+$\neg\sigma_b$ would decide $\mathsf{Th}_{T'}$.
+This recursive set contains $\mathsf{Th}_T$ and is disjoint
+from $\mathsf{Rf}_T$, contradicting inseparability.
+
+The embedding $j$ of
+Lemma~\ref{lem:integration-numerical-subobjects} and
+Proposition~\ref{prop:algebra-comparison} extend the same
+representation section to $P_X=\operatorname{Sub}_{\mathcal P}(JX)$,
+with distinguished predicates $p_T^\pm=j_Ua_T^\pm$.
+Their Boolean presentation is $q_T:JU\twoheadrightarrow B_T$.
+Theorem~\ref{thm:categorical-essential-incompleteness} gives the
+last assertion; Proposition~\ref{prop:numerical-boolean-extensions}
+identifies it with essential incompleteness of $T$.
+\end{proof}
+
+Theorem~\ref{thm:introspection-numerical-definability} derives the
+representation section from arithmetic introspection after
+realization in $\mathbf{Set}$. On that realized base,
+Corollary~\ref{cor:numerical-introspection-separation} makes every
+introspective interpretation naturally isomorphic to a constant
+functor with terminal value. Thus the realized definability algebra
+proves inseparability on a base that admits no nonconstant
+introspective interpretation.
+
+\appendix
+\section{Definability and introspection on a fixed base}
+\label{sec:introspection-representation-appendix}
+
+Consider a finitely complete category $\mathscr V$ and a
+$\mathscr V$-enriched restriction category $\mathcal K$ with
+chosen binary restriction products, zeros, and bounded distributive
+lattices of restriction idempotents whose joins are stable under inverse image.
+Assume that its underlying ordinary category $\mathcal K_0$ is a nontrivial
+recursion category, with distinguished Turing object $U$ and Turing
+morphism $\tau:U\otimes U\to U$.
+The Turing axiom requires a total index for each ordinary arrow.
+An internal section of $\operatorname{ev}_\tau$ is a further
+condition, considered below.
+
+For the numerical enrichment over $\mathbf{Set}$,
+Corollary~\ref{cor:numerical-introspection-separation} supplies a
+definability algebra while every introspective functor on the base
+is naturally isomorphic to a constant functor with terminal value.
+The PA syntactic category admits nonconstant introspection but
+no internal representation operation for the enrichment
+constructed below.
+
+\subsection{The enriched PA program category}
+
+Let $\mathcal B$ be the exact $\Sigma_1$ syntactic category of PA
+defined in Section~\ref{sec:quotation-realization}.
+Write $\mathcal N$ for its equality PER defined by $x=y$,
+$\bar e$ for the arithmetic numeral for $e$, and
+$\underline e:1\to\mathcal N$ for the point represented by
+that numeral. We use the register-program
+presentation of \cite[Section~7]{RecursionCompletions}.
+Write $\varphi_e$ for the partial recursive function of program
+index $e$, and $\Gamma_e^{m,n}(\vec x,\vec y)$ for its graph formula
+with $m$ inputs and $n$ outputs, using the fixed recursive tuple
+codings. Let
+\[
+ \operatorname{Eq}_{m,n}(e,f)
+ :=\forall\vec x\,\forall\vec y\,
+   \bigl(\Gamma_e^{m,n}(\vec x,\vec y)
+             \leftrightarrow\Gamma_f^{m,n}(\vec x,\vec y)\bigr).
+\]
+Define $H(m,n)$ to be the object of $\mathcal B$ represented by
+the $\Sigma_1$ PER
+$Q_{m,n}(e,f)=\operatorname{Pr}_{\mathrm{PA}}
+(\ulcorner\operatorname{Eq}_{m,n}(\dot e,\dot f)\urcorner)$.
+Here the dotted parameters denote numeral substitution into the
+displayed formula. Primitive recursive transformations of proofs
+show in PA that $Q_{m,n}$ is reflexive, symmetric, and transitive.
+
+\begin{proposition}\label{prop:pa-enriched-recursion-category}
+There is a $\mathcal B$-enriched restriction category $\mathcal K$
+with objects $U_m$, $m\ge1$, hom-objects $H(m,n)$, and chosen
+products $U_m\otimes U_n=U_{m+n}$. Its objects of restriction idempotents are bounded
+distributive lattice objects with inverse-image-stable joins. Its underlying
+ordinary category $\mathcal K_0$ is the nontrivial recursion category
+$S_{\mathrm{PA}}$ of programs modulo uniformly PA-provable graph
+equality. The category $\mathcal B$ admits a nonconstant
+introspective structure.
+\end{proposition}
+\begin{proof}
+The program constructors for composition and restriction induce
+arrows $H(n,p)\times H(m,n)\to H(m,p)$ and
+$H(m,n)\to H(m,m)$. The near-product constructor, together
+with the tuple codings, induces
+$H(m,n)\times H(p,q)\to H(m+p,n+q)$.
+Identity, projection, diagonal, and nowhere-defined programs
+give the remaining global structure arrows.
+Their graph identities are provable uniformly in Heyting arithmetic
+and hence in PA \cite[Lemmas~7.1--7.3]{RecursionCompletions}.
+
+These constructors respect the PERs $Q_{m,n}$. For example,
+proofs of $\operatorname{Eq}_{m,n}(e,e')$ and
+$\operatorname{Eq}_{n,p}(d,d')$ can be combined with the composition
+graph identity to give a proof of
+$\operatorname{Eq}_{m,p}(\operatorname{cmp}(d,e),
+\operatorname{cmp}(d',e'))$. The transformation of proof codes
+is primitive recursive, and PA verifies it. The same construction
+for the other operations proves that they descend to arrows of
+$\mathcal B$. Instantiating the uniformly proved graph identities
+gives proof codes for the category, restriction, and product laws;
+hence these laws hold as equations in $\mathcal B$.
+
+The object of restriction idempotents $E_{U_m}$ is the equalizer of restriction and
+identity on $H(m,m)$. The join of two restriction idempotents is represented by
+the partial identity on
+$\operatorname{dom}(e,\vec x)\vee
+\operatorname{dom}(f,\vec x)$, where
+$\operatorname{dom}(e,\vec x)$ abbreviates
+$\exists\vec y\,\Gamma_e^{m,m}(\vec x,\vec y)$.
+The verified search construction
+\cite[Lemma~7.6]{RecursionCompletions}, followed by restriction,
+gives this constructor uniformly in $e,f$.
+The bounded distributive-lattice identities follow from the
+corresponding identities of conjunction and disjunction.
+The graph formulas for inverse image prove stability of joins.
+The same proof transformations make these equations internal
+to $\mathcal B$.
+
+Every global point of $H(m,n)$ is represented by a numeral
+program index. Indeed, its $\Sigma_1$ graph has a PA-provable
+existential output. Soundness in $\mathbb N$ supplies a standard
+witness, and $\Sigma_1$-completeness proves its instance in PA.
+Functionality and saturation then identify the global point
+with the corresponding constant arrow. Two indices $e,f$ give
+the same global point precisely when PA proves $Q_{m,n}(e,f)$.
+By $\Sigma_1$-soundness and verification of finite proofs, this
+is equivalent to PA proving $\operatorname{Eq}_{m,n}(e,f)$.
+This identifies $\mathcal K_0$ with $S_{\mathrm{PA}}$.
+Write $[e]_{m,n}:U_m\to U_n$ for the arrow represented by
+program $e$, suppressing the arities when they are fixed.
+
+The tuple codings make it an isotype. Zero programs absorb
+composition and near product, so it is prodominical. The universal
+program gives $\tau:U_1\otimes U_1\to U_1$.
+For a representative index $e$ of an arrow
+$U_m\otimes U_1\to U_1$, the verified parameter operation
+produces a total primitive recursive index map on $U_m$;
+its graph equation is provable in PA. This is the ordinary
+Turing axiom. Consistency of PA separates identity from zero
+\cite[Proposition~7.5]{RecursionCompletions}.
+
+Take $T=\mathrm{PA}$ in the introspective structure
+$(\mathcal B,\mathcal C_T,\mathsf S_T,N^T)$ of
+Section~\ref{sec:quotation-realization}.
+Its standard realization $F:\mathcal B\to\mathbf{Set}$ sends
+$\Box_T0_{\mathcal B}$ to the empty set. If $\mathsf S_T0_{\mathcal B}$ were terminal,
+$\Box_T0_{\mathcal B}=\mathcal C_T(1_{\mathcal C_T},\mathsf S_T0_{\mathcal B})$ would be terminal in
+$\mathcal B$, whose image under $F$ is a singleton.
+Consequently $\mathsf S_T$ is nonconstant.
+\end{proof}
+
+Here prodominicality uses zero absorption. Heller's additional
+conditions for dominicality include the absence of zero divisors
+\cite[Proposition~5.1]{Heller}; his definition of recursion
+category uses prodominicality \cite[p.~1265]{Heller}.
+
+\subsection{The obstruction to an internal representation operation}
+
+Let $\operatorname{Halt}(e)$ assert that program $e$ halts on
+input zero. We first record the undecidability needed for the
+obstruction.
+
+\begin{lemma}\label{lem:pa-nonhalting-undecidable}
+The set $\{e:\mathrm{PA}\vdash\neg\operatorname{Halt}(\bar e)\}$
+is not recursive.
+\end{lemma}
+\begin{proof}
+Suppose a total Boolean program $d$ decides this set, with value
+$1$ for membership. Write $\operatorname{par}(e,a)$ for the
+verified parameter operation. Compile a binary program $q(x,z)$
+which computes $d(\operatorname{par}(x,x))$, halts when the
+result is $1$, and otherwise loops. If $a$ is its program index
+and $b=\operatorname{par}(a,a)$, the parameter and composition
+graph identities give a PA proof that program $b$ halts exactly
+when $d(\bar b)$ returns $1$.
+
+If $d(b)=1$, its finite computation record gives a PA proof
+that $b$ halts. Correctness of $d$ also gives a PA proof that
+$b$ does not halt, contradicting consistency.
+If $d(b)=0$, its finite computation record and the loop branch
+give a PA proof that $b$ does not halt, contradicting the
+answer $0$. These are the two possible outputs of $d$.
+\end{proof}
+
+Fix the enrichment of
+Proposition~\ref{prop:pa-enriched-recursion-category}, and put
+$U=U_1$ and $G=\mathsf T(U,U)$.
+The objects $E_U$, $G$, and $C_U$ are the equalizer and pullbacks
+of Section~\ref{sec:generalized-definability-algebras}.
+
+\begin{theorem}\label{thm:pa-no-internal-representation}
+Equip $\mathcal K$ with predicate objects, inverse-image actions,
+and monic embeddings of restriction idempotents $j_X:E_X\to P_X$ as in
+Definition~\ref{def:generalized-definability-algebra}.
+For every total arrow $s:U\otimes U\to S$ and predicate
+$p:1\to P_S$, there is no arrow $\rho:C_U\to G$ in
+$\mathcal B$ satisfying the positive representation equation
+\[
+ a_{U\otimes U,S}
+   \langle\chi\rho,p!_{C_U}\rangle
+      =\pi_2^*j_Ud_+,
+ \qquad \chi(g)=s(g\otimes1_U).
+\]
+\end{theorem}
+\begin{proof}
+Let $B(e,n)$ be the primitive recursive predicate asserting that
+program $e$ halts on input zero within $n$ steps.
+Choose primitive recursive program constructors $a(e),a^c(e)$
+whose graph identities
+$\Gamma_{a(e)}(x,y)\leftrightarrow x=y\wedge B(e,x)$ and
+$\Gamma_{a^c(e)}(x,y)\leftrightarrow x=y\wedge\neg B(e,x)$
+are proved uniformly in PA. Their restriction and complementarity
+equations have proof codes obtained uniformly by the verified
+program constructors. They therefore define an arrow
+$\gamma:\mathcal N\to C_U$ in $\mathcal B$.
+Write $\epsilon_e:1\to E_U$ for the point representing the
+program class $[a(e)]$, and
+$\gamma_e=\gamma\underline e:1\to C_U$ for its complementary pair.
+
+Suppose $\rho$ exists. A $\Sigma_1$ graph for $\rho\gamma$
+allows effective search for a program index $k(e)$ representing
+its output on $e$. Soundness of PA makes the search terminate,
+and membership in $G$ makes the resulting function total.
+Thus $c(e)=\varphi_{k(e)}(0)$ is a total recursive function.
+Put $g_e=[k(e)]:U\to U$.
+If $\epsilon_e=\epsilon_f$, uniqueness of complements gives
+$\gamma_e=\gamma_f$, whence $g_e=g_f$ and $c(e)=c(f)$.
+
+Conversely, suppose $c(e)=c(f)=k$. Let
+$\kappa_i:U\to U$ be the total constant program with value $i$.
+The two finite computations at zero yield PA proofs
+$g_e\kappa_0=\kappa_k=g_f\kappa_0$.
+Pull the representation equations back along
+$h=\langle\kappa_0,1_U\rangle:U\to U\otimes U$.
+Since $\pi_2h=1_U$, they give
+\[
+ j_U\epsilon_e
+ =\bigl(s\langle g_e\kappa_0,1_U\rangle\bigr)^*p
+ =\bigl(s\langle g_f\kappa_0,1_U\rangle\bigr)^*p
+ =j_U\epsilon_f.
+\]
+Monicity of $j_U$ gives $\epsilon_e=\epsilon_f$.
+Consequently $c(e)=c(f)$ precisely when PA proves
+$\operatorname{Eq}_{1,1}(\overline{a(e)},\overline{a(f)})$.
+
+Choose $e_0$ to be an explicit infinite loop. PA proves
+$\forall n\,\neg B(\bar e_0,n)$.
+The graph identities identify $\epsilon_e=\epsilon_{e_0}$ with
+PA-provability of $\forall n\,\neg B(\bar e,n)$, equivalently
+of $\neg\operatorname{Halt}(\bar e)$.
+Comparing $c(e)$ and $c(e_0)$ therefore decides the set in
+Lemma~\ref{lem:pa-nonhalting-undecidable}, a contradiction.
+\end{proof}
+
+\subsection{Internal indexing and the comparison}
+
+The obstruction also applies to the choice of Turing indices
+as an arrow of the ambient category.
+
+\begin{proposition}\label{prop:pa-no-internal-indexing}
+For the enrichment of
+Proposition~\ref{prop:pa-enriched-recursion-category}, the arrow
+$\operatorname{ev}_\tau:G\to H(2,1)$ has no section in
+$\mathcal B$.
+\end{proposition}
+\begin{proof}
+Suppose $\Lambda:H(2,1)\to G$ is a section.
+For a unary program index $e$, write $u_e=[e]:U\to U$ for
+its arrow in $S_{\mathrm{PA}}$, and put
+$f_e=u_e\pi_2:U\otimes U\to U$.
+The primitive recursive constructor that sends $e$ to a program
+index for $f_e$ respects PA-provable equality and induces
+$H(1,1)\to H(2,1)$.
+Effective search in a graph for its composite with $\Lambda$
+gives an index $k(e)$ of a total arrow $g_e=[k(e)]:U\to U$ satisfying
+$\tau(g_e\otimes1_U)=f_e$.
+As in the preceding proof, $b(e)=\varphi_{k(e)}(0)$ is total recursive.
+Equality of the unary arrows represented by $e,f$ gives
+$g_e=g_f$, hence $b(e)=b(f)$.
+
+If $b(e)=b(f)=k$, finite computation gives
+$g_e\kappa_0=\kappa_k=g_f\kappa_0$.
+Precomposing the indexing equations with
+$h=\langle\kappa_0,1_U\rangle$ therefore gives, in
+$S_{\mathrm{PA}}$,
+$u_e=\tau\langle\kappa_k,1_U\rangle=u_f$.
+Thus $b$ decides uniformly PA-provable graph equality of unary
+programs. Given $e$, compile a unary program which ignores its
+input, simulates $e$ on zero, and returns zero if that simulation
+halts. Its equality with the nowhere-defined program is provable
+in PA exactly when $\neg\operatorname{Halt}(\bar e)$ is provable.
+The resulting decision contradicts
+Lemma~\ref{lem:pa-nonhalting-undecidable}.
+\end{proof}
+
+\begin{corollary}\label{cor:fixed-base-incomparability}
+Among pairs consisting of a finitely complete base and an enriched
+category whose underlying ordinary category is a recursion category,
+as specified at the start of this appendix,
+neither of the following properties implies the other:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item the base admits an introspective structure whose functor
+is not naturally isomorphic to a constant functor with terminal value;
+\item the enrichment extends to a definability algebra at its
+distinguished Turing object.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+The numerical definability algebra over $\mathbf{Set}$ has
+property~\textup{(ii)}, and
+Corollary~\ref{cor:numerical-introspection-separation} excludes
+property~\textup{(i)}.
+Proposition~\ref{prop:pa-enriched-recursion-category} gives
+property~\textup{(i)} for $(\mathcal B,\mathcal K)$, whereas
+Theorem~\ref{thm:pa-no-internal-representation} excludes
+property~\textup{(ii)}.
+\end{proof}
+
+\begin{thebibliography}{99}
+\bibitem{Lawvere} F.~W.~Lawvere,
+Diagonal arguments and cartesian closed categories,
+in \emph{Category Theory, Homology Theory and their Applications II},
+Lecture Notes in Mathematics \textbf{92}, Springer, Berlin, 1969,
+134--145; reprinted with author commentary in
+\emph{Reprints in Theory and Applications of Categories}
+\textbf{15} (2006), 1--13.
+\url{https://tac.mta.ca/tac/reprints/articles/15/tr15.pdf}.
+\bibitem{Kelly} G.~M.~Kelly,
+\emph{Basic Concepts of Enriched Category Theory},
+London Mathematical Society Lecture Note Series \textbf{64},
+Cambridge University Press, 1982; reprinted in
+\emph{Reprints in Theory and Applications of Categories}
+\textbf{10} (2005), 1--136.
+\url{https://tac.mta.ca/tac/reprints/articles/10/tr10.pdf}.
+\bibitem{CarboniCeliaMagno1982} A.~Carboni and R.~Celia Magno,
+The free exact category on a left exact one,
+\emph{Journal of the Australian Mathematical Society, Series A}
+\textbf{33}(3) (1982), 295--301.
+\url{https://doi.org/10.1017/S1446788700018735}.
+\bibitem{DPH} R.~A.~Di Paola and A.~Heller,
+Dominical categories: recursion theory without elements,
+\emph{Journal of Symbolic Logic} \textbf{52}(3) (1987), 594--635.
+\url{https://doi.org/10.2307/2274352}.
+\bibitem{Heller} A.~Heller,
+An existence theorem for recursion categories,
+\emph{Journal of Symbolic Logic} \textbf{55}(3) (1990), 1252--1268.
+\url{https://doi.org/10.2307/2274486}.
+\bibitem{AspertiLongo} A.~Asperti and G.~Longo,
+\emph{Categories, Types, and Structures:
+An Introduction to Category Theory for the Working Computer Scientist},
+Foundations of Computing, MIT Press, Cambridge, Massachusetts, 1991.
+\url{https://www.cs.unibo.it/~asperti/PAPERS/book.pdf}.
+\bibitem{Mendelson} E.~Mendelson,
+\emph{Introduction to Mathematical Logic}, fourth edition,
+Chapman \& Hall, London, 1997.
+\bibitem{CarboniVitale} A.~Carboni and E.~M.~Vitale,
+Regular and exact completions,
+\emph{Journal of Pure and Applied Algebra} \textbf{125}(1--3) (1998),
+79--116. \url{https://doi.org/10.1016/S0022-4049(96)00115-6}.
+\bibitem{Bauer} A.~Bauer,
+\emph{The Realizability Approach to Computable Analysis and Topology},
+Ph.D. thesis, Carnegie Mellon University, 2000,
+Technical Report CMU-CS-00-164.
+\url{https://www.csd.cmu.edu/sites/default/files/phd-thesis/CMU-CS-00-164.pdf}.
+\bibitem{RestrictionI} J.~R.~B.~Cockett and S.~Lack,
+Restriction categories I: categories of partial maps,
+\emph{Theoretical Computer Science} \textbf{270}(1--2) (2002),
+223--259. \url{https://doi.org/10.1016/S0304-3975(00)00382-0}.
+\bibitem{LambekScott} J.~Lambek and P.~Scott,
+An exactification of the monoid of primitive recursive functions,
+\emph{Studia Logica} \textbf{81} (2005), 1--18.
+\url{https://doi.org/10.1007/s11225-005-2765-x}.
+\bibitem{BBJ} G.~S.~Boolos, J.~P.~Burgess, and R.~C.~Jeffrey,
+\emph{Computability and Logic}, fifth edition,
+Cambridge University Press, Cambridge, 2007.
+\url{https://doi.org/10.1017/CBO9780511804076}.
+\bibitem{RestrictionIII} J.~R.~B.~Cockett and S.~Lack,
+Restriction categories III: colimits, partial limits and extensivity,
+\emph{Mathematical Structures in Computer Science}
+\textbf{17}(4) (2007), 775--817.
+\url{https://doi.org/10.1017/S0960129507006056}.
+\bibitem{TuringCategories} J.~R.~B.~Cockett and P.~J.~W.~Hofstra,
+Introduction to Turing categories,
+\emph{Annals of Pure and Applied Logic} \textbf{156}(2--3) (2008),
+183--209. \url{https://doi.org/10.1016/j.apal.2008.04.005}.
+\bibitem{CockettSlides} J.~R.~B.~Cockett,
+\emph{Turing Categories and Computability},
+Estonian Winter School in Computer Science, lecture~4, March 2010.
+\url{https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-slides-4.pdf}.
+\bibitem{CockettNotes} J.~R.~B.~Cockett,
+\emph{Categories and Computability},
+lecture notes, University of Calgary, 12 August 2014.
+\url{https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf}.
+\bibitem{Ramesh} S.~Ramesh,
+\emph{Introspective Theories and Geminal Categories},
+Ph.D. dissertation, University of California, Berkeley, 2023.
+\url{https://escholarship.org/uc/item/3mn0c475}.
+\bibitem{RecursionCompletions} F.~Lengyel,
+\emph{Completions of recursion categories},
+unpublished manuscript, 22 September 2026.
+\url{https://github.com/flengyel/Categorical_Incompleteness/blob/d09bd09c52c2fd398a8abbe283d9d73c79fa36d5/01_recursion_category_completions.tex}.
+\bibitem{DefinabilityAlgebras} F.~Lengyel,
+\emph{Definability algebras, quantifiers, and recursion categories},
+unpublished manuscript, version~3, 25 October 2026.
+\url{https://github.com/flengyel/Categorical_Incompleteness/blob/7abe598b9291c4bed2dddb8ae7c61de76c692428/definability_algebras_v3.tex}.
+\end{thebibliography}
+\end{document}

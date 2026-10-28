@@ -1,0 +1,12 @@
+--- upstream/EvaluatorBridge.lean
++++ combined/EvaluatorBridge.lean
+@@ -603,8 +603,7 @@
+   unfold eventualGraph
+   rw [Formula.toFoundation_exs, Formula.toFoundation_subst,
+     toFoundation_certificateFormula]
+-  unfold FailureOfComposition.ConcreteEvaluator.eventualGraph
+-  simp only [HierarchySymbol.Semiformula.val_mkSigma]
++  rw [FailureOfComposition.ConcreteEvaluator.eventualGraph_val]
+   apply congrArg Semiformula.exs
+   apply congrArg (fun w ↦ w ▹
+     (evalnCertificateFormula : ArithmeticSemisentence 4))

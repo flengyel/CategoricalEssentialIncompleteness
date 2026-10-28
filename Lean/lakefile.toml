@@ -1,0 +1,41 @@
+name = "CategoricalEssentialIncompleteness"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["PCats", "RiceShapiro", "Metamath", "Arith", "CategoricalRiceShapiro", "FailureOfComposition", "CategoricalEssentialIncompleteness"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+
+[[require]]
+name = "Foundation"
+git = "https://github.com/flengyel/foundation.git"
+rev = "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d"
+
+[[lean_lib]]
+name = "PCats"
+
+[[lean_lib]]
+name = "RiceShapiro"
+
+[[lean_lib]]
+name = "Metamath"
+
+[[lean_lib]]
+name = "Arith"
+
+[[lean_lib]]
+name = "CategoricalRiceShapiro"
+
+[[lean_lib]]
+name = "FailureOfComposition"
+
+[[lean_lib]]
+name = "CategoricalEssentialIncompleteness"

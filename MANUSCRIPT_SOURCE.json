@@ -1,0 +1,20 @@
+{
+  "repository": "flengyel/Categorical_Incompleteness",
+  "revision": "38c4fba2202bb8c001d1aa353ed48b018592e090",
+  "files": [
+    {
+      "path": "manuscript/definability_comparison_v16.tex",
+      "source_path": "definability_comparison_v16.tex",
+      "git_blob": "f1e79d972f715ffaceb85f1a560bc0e7c6954fce",
+      "sha256": "b750233696ed731b932f91251341936765d2697e49474d96b662edf19279295c",
+      "size": 133491
+    },
+    {
+      "path": "manuscript/definability_comparison_v16.pdf",
+      "source_path": "definability_comparison_v16.pdf",
+      "git_blob": "8107cdabd8c5ddf612ab59f243439114e4ebbe31",
+      "sha256": "24aa9614d6fb3e15ad1ac29ae2f18fd14dab2cefa6fc55fd67b6a156f8c87b5a",
+      "size": 591333
+    }
+  ]
+}

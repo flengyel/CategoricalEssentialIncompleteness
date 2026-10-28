@@ -1,0 +1,25 @@
+--- FailureOfComposition/ConcreteEvaluatorGraph.lean
++++ Categorical_Rice_Shapiro/ConcreteEvaluatorGraph.lean
+@@ -46,7 +46,21 @@
+ 
+ /-- The graph at a fixed standard program index, allowing any internal stage. -/
+ def eventualGraph (q : ℕ) : Graph :=
+-  .mkSigma “x y. ∃ s, !evalnCertificateFormula.val s !!(q) x y”
++  (evalnCertificateFormula.rew
++    (Rew.subst ![
++      (#0 : ArithmeticSemiterm Empty 3),
++      (↑q : ArithmeticSemiterm Empty 3),
++      (#1 : ArithmeticSemiterm Empty 3),
++      (#2 : ArithmeticSemiterm Empty 3)])).exs
++
++theorem eventualGraph_val (q : ℕ) :
++    (eventualGraph q).val =
++      ∃¹ ((evalnCertificateFormula : ArithmeticSemisentence 4)/[
++        (#0 : ArithmeticSemiterm Empty 3),
++        (↑q : ArithmeticSemiterm Empty 3),
++        (#1 : ArithmeticSemiterm Empty 3),
++        (#2 : ArithmeticSemiterm Empty 3)]) := by
++  simp [eventualGraph]
+ 
+ @[simp] theorem eventualGraph_eval
+     {M : Type*} [ORingStructure M] (q : ℕ) (v : Fin 2 → M) :

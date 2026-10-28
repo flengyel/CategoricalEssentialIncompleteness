@@ -1,0 +1,23 @@
+'CategoricalEssentialIncompleteness.arithmeticRecursionCategory' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.obstruction_four_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.no_quotient_composition_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.pi_one_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.generated_congruence_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.weak_totality_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_godel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FailureOfComposition.Palomar.range_counterexample_productive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FailureOfComposition.Palomar.generated_quotient_partial_recursive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

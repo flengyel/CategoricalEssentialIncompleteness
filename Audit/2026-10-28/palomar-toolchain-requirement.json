@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-10-28",
+  "repository": "PalomarRegistry/PalomarSubmission",
+  "revision": "a93fc88c092faeef1a92b1c905e688aab8e80795",
+  "blob": "9022506963e460170c7f90c3547e85e0891753c0",
+  "url": "https://github.com/PalomarRegistry/PalomarSubmission/blob/a93fc88c092faeef1a92b1c905e688aab8e80795/toolchains.json",
+  "toolchains": {
+    "schema_version": 2,
+    "minimum": "v4.35.0-rc2"
+  },
+  "scope": "Toolchain requirement check only; no Palomar Comparator or independent-kernel verification of the combined source tree was performed."
+}

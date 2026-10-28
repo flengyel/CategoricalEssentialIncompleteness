@@ -1,0 +1,2148 @@
+{
+  "crs": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+  "failureOfComposition": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+  "files": [
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Arith.lean",
+      "sha": "ad808010888efec5b3c816d6d432959370a0803d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Arith/Feferman/ProofFormula.lean",
+      "sha": "2dd3751826eb26c8900577f6345ef0d7ec909870"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Arith/Feferman/Specialization.lean",
+      "sha": "d464fa91fc2d8c19f2752c66018963b071cc00b1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Arith/Feferman/StructuralProof.lean",
+      "sha": "7c800ad438373ad341f4cd2e588a204212f4159d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Arith/FixedFormulaNumeralSubstitution.lean",
+      "sha": "6525d169fea675bed82c52acf3fa7b6245525b31"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro.lean",
+      "sha": "7e24f15c342bcfe8e01c0473535af7c9a1d1abf1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Arithmetic.lean",
+      "sha": "0f72f3f6de7e38e2e9b26ab2b09e2b0e06df6f0e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Basic.lean",
+      "sha": "ad605be60235af679bd8d7bc09ee2f373b602d3f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/BetaCoding.lean",
+      "sha": "83d15048790a99c2f8160b1d6b46eca7d90765dc"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Conditional.lean",
+      "sha": "749fa766ef6e8884bd26257041517e781e681499"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EncodedList.lean",
+      "sha": "041b57b3b49d2fe37678a27c285c755947761643"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EncodedListEvaluation.lean",
+      "sha": "b7cb248440c06e808e9b350e26baa99a15225d87"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Evaluation.lean",
+      "sha": "21ee58d435b1333a9993b47c09ed1644315b18be"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EvaluationCongruence.lean",
+      "sha": "c210d97ed4e6d2cabedfe512811a712388e85582"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/FoundationCompat.lean",
+      "sha": "70b8105dff22d8cc23062985463d8da856e7a401"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Minimization.lean",
+      "sha": "543cdf13150a627018098552ff07fb9cfa11ddc3"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/NumeralEvaluation.lean",
+      "sha": "cefcda34841efb3b736d926ec79dbde487d7a063"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Pairing.lean",
+      "sha": "38dc15a18c1461d9a13c0b909a55ef7895235a8d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/PartialRecursive.lean",
+      "sha": "8fc6125c772cb644ec7c4e3398ea935c5e495b42"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/PartialRecursiveEvaluation.lean",
+      "sha": "4e004aa7742a77631f9bb169b93ad15303d31349"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Recursion.lean",
+      "sha": "05395958c7c0b3b77ca74ece4aab1de0d228b20f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/RecursionEvaluation.lean",
+      "sha": "eae0752fc78374ed665666dcd4cf544fd7668717"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/Cell.lean",
+      "sha": "641f3e9c2de53c7a5afbd5372013b6be81990534"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/CellCongruence.lean",
+      "sha": "0238aac7c9e3fb144d21c5b7d4c8fa23a5bfa627"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/CellEvaluation.lean",
+      "sha": "c3b2424e1c7c45e927e07b884f14a2017ff7de08"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/Certificate.lean",
+      "sha": "8e28d0511297f2f1069b98fd86f262b5b66a22b9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/CompositionDispatch.lean",
+      "sha": "8cfdcf3f1ebb2d75e2f04f353d97e47ea33dc389"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/CompositionPersistence.lean",
+      "sha": "aaa6409c25a8338a46a491c555570bad37a01a54"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/History.lean",
+      "sha": "c9ddddec0b5f4eec33f340a181175d3535dfcc77"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/HistoryEvaluation.lean",
+      "sha": "328670ec8b7cf3b0bfaf4320e46f481622daa091"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/PairPersistence.lean",
+      "sha": "4ac3f217ff715b4c467149b89e3dc8274099ac7c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/PersistenceInduction.lean",
+      "sha": "0e6828be9f44de512148f72a1caba2699d764b5c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/PrimitiveRecursionPersistence.lean",
+      "sha": "b7638ae26bf5f93c08800cd966a6e69e90d4e012"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/PrimitiveRecursionStructuralBridges.lean",
+      "sha": "fad39d4f47d143449fc210d9a168869509db59a2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/TableLookup.lean",
+      "sha": "e573891b9a8f35c6db0350bf78d92fae8e05a26f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/Evaluator/TableLookupEvaluation.lean",
+      "sha": "0ba47e197396acedfc1bc82e8ec81574dc73bf1d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/CategoricalRiceShapiro/PartialRecursive/CanonicalComposition.lean",
+      "sha": "03c915d996e38f8e87b9e5a613f14722480013cf"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition.lean",
+      "sha": "2d56b398faea8a63a6001c12bcb3a1c7ee5150f9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ArithmeticCodeCompiler.lean",
+      "sha": "2bbd996b078648a2c491e638d4449ca3a77c9f1f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ArithmeticFormulaAtoms.lean",
+      "sha": "55e470174b18db2549034d05666a997f253178e5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ArithmeticProgramOperations.lean",
+      "sha": "7c09f65eb24810f5ad4f2fb12516da7f78a01e91"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ArithmetizationTransport.lean",
+      "sha": "2fc358a90600131a66ab10cbcf649db011fa3162"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/AxiomEnumeration.lean",
+      "sha": "c7fff85ca8151e334f04acf7fd54928f26ac1df1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/BoundedSemidecision.lean",
+      "sha": "faa0d07bced65c3dffee8ca05fdb9e1b68ba82c6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/CodedObjectMembership.lean",
+      "sha": "e125f82efa3e4304a2f9d169723881c6bc3911ce"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/CompositionClosure.lean",
+      "sha": "d86bd999b58afc95ed367ef77a0fbdbf4084254b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ComputationSearchIndices.lean",
+      "sha": "f9a3e5a2e0317e02b4e3e71f4619b5d1e5364909"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteAdequacy.lean",
+      "sha": "e96ef6ad735bc68bbc6ffbff2bada7998b217f08"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteConstructorGraphs.lean",
+      "sha": "5ee257d107fc1a9e28fb14374e9d64e2dc58e567"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteDiagonal.lean",
+      "sha": "c8e49d1a343d4ee2e27f47268d49c0844fb9f264"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteEmptyGraph.lean",
+      "sha": "71999c9c3aec895c5cb984ae9e7ce33a75d54322"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteEvaluatorGraph.lean",
+      "sha": "5e1261420fee98cad12620decedb6e14866a2f1e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteGeneratedCongruence.lean",
+      "sha": "34b649b33950c3f9b9d4cea0d3574f367c910a78"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteGodel.lean",
+      "sha": "0af393398a4dcfa0f53c48da6bf4a10e5e7e3424"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteGodelRE.lean",
+      "sha": "116e67c963e49565d66c81023ab1c93ec1322f5c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteIndexObstruction.lean",
+      "sha": "a02b2b998a37713d14edbe1aea3ad777a95d698b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteMinimizationGraph.lean",
+      "sha": "91b3f4fcf6e6d9f57e9ec8c6e9819eed98fed23e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteNormalForm.lean",
+      "sha": "6629a313f0902ae7e551a65e3ad1c5bc0381744f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcretePersistence.lean",
+      "sha": "4a3d2ada9f07c78905ed93f7e39f9bc262f1850c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcretePiOneCharacterization.lean",
+      "sha": "aaa39f5f3ab08e59bcbe9985235d8229de961570"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteRecursionGraph.lean",
+      "sha": "2ed45420d8a36b0ecf140165a5cc13ce93c2f9cc"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteTransport.lean",
+      "sha": "2207aec07c47797e92d8dbc39384a110e6c152a9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteWeakTotality.lean",
+      "sha": "b0e5fca0edc6cf87606545a87060bc559789934c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConcreteWitnessGraphs.lean",
+      "sha": "80f6ca7232ae55da51f5a46b3e7b5acd757ab61f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ConservativityConsequence.lean",
+      "sha": "7be566a4cd1a8d4e1737199bfc3281233b93cd50"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/CraigPresentation.lean",
+      "sha": "037644902faa1c16e6b17749a0d6087396f699bb"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/DomainTotality.lean",
+      "sha": "395ecbce02b2b08a8b64ae492aa5c123b5779ae8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/FiniteExtensionChecker.lean",
+      "sha": "9e02d003e4b086552016ec482bcce53e0a770047"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/FiniteFunctionCoding.lean",
+      "sha": "bf4c15ca3241889ef044f3b7e63d0dd57a122095"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/FiniteFunctionEvaluator.lean",
+      "sha": "004859b7ce4bda8d27f4a80abab9390a82d70f84"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/FirstSuccessGraph.lean",
+      "sha": "3fb64357f7fbc22d6a27b1105c09d6995017a0c7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedClassification.lean",
+      "sha": "5d0539aec9dc2db9f0c9d64849e1865601866fb2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedCollapse.lean",
+      "sha": "10ec0121c24da6f4e64c5efc1f3dc5552d4a9990"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedExtensionality.lean",
+      "sha": "19206d5346f7215055f0140c9dbf225b49f039ff"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedGraphDefinitions.lean",
+      "sha": "4dede9d917be715f210a0b1c8c7ca30635974387"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedIndexClassification.lean",
+      "sha": "60c5bf91b14da57f8873444b07880d6de5e52e2a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedIndexQuotient.lean",
+      "sha": "1fe6e53ac6fd4a4db717fbee61726b08412ddec5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedIndexTransport.lean",
+      "sha": "f473a047f29e4c5d2ad5db1d1df10dbd62222210"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedQuotient.lean",
+      "sha": "73bf60a4f5b58c86d738d44f059eb3c3ec7113a4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedSoundness.lean",
+      "sha": "a1fd9153ea1a6edcb53dca37b4a06849bf6c4335"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedWitnessGraphs.lean",
+      "sha": "e9f1da87b6de7f8f9d9d869f9deef3ae7cc9d812"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GeneratedWitnessPointwise.lean",
+      "sha": "cbff57d431daf1ae1c8223d85a74222e81273e4f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GodelGraph.lean",
+      "sha": "3276c9dbb0e2f4f7dd8e0e07e6662b5fc2745437"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/GraphQuotient.lean",
+      "sha": "f8a488cde76a92111101e343eed15eb113f24128"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/HistoryObstruction.lean",
+      "sha": "7573a6292f376bb06529661a4c25096bea1f76ae"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/HistoryWitnesses.lean",
+      "sha": "ac873ee27db549bc9dcb16892e00227a05687256"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/KleeneNormalForm.lean",
+      "sha": "2be3a1c761398f40da1edb4c981d92d154037f69"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ManuscriptObstruction.lean",
+      "sha": "1c4d63914b6e1900ea65860928eb8b3493775d0e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/MinimizationPersistence.lean",
+      "sha": "4584d27b39debea22b99ff2fdae83b1e15b45df6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeContextMP.lean",
+      "sha": "919db9835a781bf810bf621761a2d391ac0ac2b7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeContextSpecialization.lean",
+      "sha": "fbf0d7f3e69eaee66dd7b232765ef3377e238a51"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeContextSpecialization/AuditFixtures.lean",
+      "sha": "c9914588392aaeeb3086c752a911e22296d8e3ec"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeEqualityTransport.lean",
+      "sha": "f0c54a046da26eaee68b86ee408a6120ec6b8b47"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyApplications.lean",
+      "sha": "bca5c65beebeb44bc38c2de4c1ac76d26eb80ca6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyConstructor.lean",
+      "sha": "88bb76b66c49360787f77286af8a727a8d3bcc8c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyFormulas.lean",
+      "sha": "2e8ed0047b9cac09c3e1a3ef2c28ae40df07f2c9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyInstances.lean",
+      "sha": "c0d3b04e3e3cb4f7aa9b6c3ec2c3a1801ebbeea3"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyNat.lean",
+      "sha": "9a9df8665f01b4c50999626b31236239d74b6a3b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyNumeralInstances.lean",
+      "sha": "0054435dd3138cde559baf9a6e09deae35d8505a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyPR.lean",
+      "sha": "534e5f9586b6299b276740da529909a06e38710f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyPreservation.lean",
+      "sha": "dd3c977a9effc9e4ea6c98032a011651f9aacb70"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilySeed.lean",
+      "sha": "b4a0f7acecb74ab4c2aea9116a22191293f04b7e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeFamilyTypedApplications.lean",
+      "sha": "b9f90d05de265c2b223c0c67d4b00d5d6a894a7b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalApplications.lean",
+      "sha": "ca627597c08521a1484e0850dcb034e310c31651"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalAxiomGraph.lean",
+      "sha": "ff871ed29f1dee29d4d071f77f07c72cfc412654"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalChecker.lean",
+      "sha": "c35a97e4b4e3a18e446218a9d5255e5ef2a13a24"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalCorrectness.lean",
+      "sha": "c2eaec17307f10e8efccbaa525a1d2668974ffe7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalEquality.lean",
+      "sha": "37afa5afa7f224f9fc0bd394a70b4d2d6ed1005e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalGraphs.lean",
+      "sha": "66c4fdd52f7f8def5108f0c4cd464b0a4be1be49"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalNat.lean",
+      "sha": "efa95f3d4da1507e4c6a5616c6f6acbab9cb7baa"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalSequence.lean",
+      "sha": "7ea884313d7e0e904190f165890e34e9eedc2ee6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeInternalSyntax.lean",
+      "sha": "132d12a8f65302697212fa6b209c8f17f5dadc0a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipApplications.lean",
+      "sha": "548bf3aaa7ed6990e05ebe9bd9d8b614daae9220"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipConstructor.lean",
+      "sha": "d98d0df6261ead722673fc1462cc0c8961418119"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipFormulas.lean",
+      "sha": "47ceaf51a3812683987c4fbd5c84f55d4543b86d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipInstances.lean",
+      "sha": "6632e27936c1dbdc6f71b7f0016eb4c37820f09b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipPR.lean",
+      "sha": "639e7c5ef4e736a876cbb788b5a5a8fddbf32d66"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipPreservation.lean",
+      "sha": "77f5d0fb35034c7b1d53df586b547f41578affa1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipProductionComparison.lean",
+      "sha": "4480944e9f33984c3725301d643e7e1db5f1ce23"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeMembershipTypedApplications.lean",
+      "sha": "b959460b54aa25ec1f7feaa3d7d902837e67d7a0"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralAdditionGraph.lean",
+      "sha": "e315aabecdba857956bc51aef80b479b4aa60334"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralApplications.lean",
+      "sha": "fd632a22a206b03ebf43ef317289809d1a527ae9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonApplications.lean",
+      "sha": "a37cd57e20abf0278688fd4dd01dd570f62c3490"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonConstructor.lean",
+      "sha": "6e14e38740503138a9059a53e2941dd226062ecb"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonGraph.lean",
+      "sha": "32b19bbed18d6a518fde1f0328fa0654f0e5f1c7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonInstances.lean",
+      "sha": "952e9e4691582d6a193e8710aaa90e5ef02207c2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonPreservation.lean",
+      "sha": "d04791a88a1ca37f28c48ff106068207a8e47454"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonProof.lean",
+      "sha": "952f4cd4eed6213f3463e82001533b629ab276c3"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonSeeds.lean",
+      "sha": "eb67ce8de937a1d829ec578e2a12f5be9fa00d71"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonSyntax.lean",
+      "sha": "07d40f1c50d798a2762c5f98978a53373a1aecc5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralComparisonTypedApplications.lean",
+      "sha": "cc7de2cc86da16907d041029bf49b74aba193ff0"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralConstructor.lean",
+      "sha": "dccb1d40ef7f3ae5b688c2963d4b51c06975cb44"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralInstances.lean",
+      "sha": "af046b92d6c1dea251cdab249543a4d0799d4a48"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralMultiplicationGraph.lean",
+      "sha": "950b62a00b620af94dcacec5b06cfdb7214a77b6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralPR.lean",
+      "sha": "f11c10b9c07db763e14b5da8f0553836fd0a5eb7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralPreservation.lean",
+      "sha": "54346298558d70c0f926483535672fdf7775c4ec"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralProof.lean",
+      "sha": "42ceb60fdada740e64d60cf4e737a60b8f123e89"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralSeeds.lean",
+      "sha": "099c24a86227c1ad16847eda0d3220c96a9f656d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralSpecialization.lean",
+      "sha": "859b4421bb3ed2406be34a70c06d2c380ae5f813"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeNumeralSyntax.lean",
+      "sha": "5dbc31e025fbdd0b1356d296b9e78e7cd6058de9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeProofChecker.lean",
+      "sha": "1758343db9581d67364ec0afae72b09911146315"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeSigmaOneWitness.lean",
+      "sha": "bbdceaecdf1fe9e73258c2bfa64b0114038916f7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeSubstitution.lean",
+      "sha": "905d707581f58040d5cbb78f2adce716fa4525ec"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NativeSyntaxShift.lean",
+      "sha": "3d96e67eacbc955f9f85ab3df943ccbae1040671"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder.lean",
+      "sha": "e8d3c4fdcef9978ce8a562c9f418bb4ecd865eed"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Categorical.lean",
+      "sha": "6e47176ed41b926eb1f4b203ab1d0102db7309b1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Core.lean",
+      "sha": "9b96936172e3fd8e6c3a28b365cf146cc4d4ee49"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/RETheory.lean",
+      "sha": "9f50490076a31061833ec0875f8ebfd7fb396f28"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Soundness.lean",
+      "sha": "4d360c8e2edaf8fea898580e87cf476d8b5127f2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Codes.lean",
+      "sha": "7166ae8ec1453cd414810e4680a64359f74223e1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Maps.lean",
+      "sha": "bc3c64cbf38195fd5884488af912d7fbc7f8e0b7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Preservation.lean",
+      "sha": "57e419e8c5fc91795c82a44a00b246b0353e6160"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/ProofGraph.lean",
+      "sha": "4a25f26b5a798c057d26827e4831bcf6111e3211"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition.lean",
+      "sha": "1bcd940ceeeed66ac11c215f77dfef6f7792155e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Application.lean",
+      "sha": "c15dc3168f7958d646cac6ddd926ded1ab596221"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Categorical.lean",
+      "sha": "670923f9de59c6278353e7456b5fd15fe6e6579b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Core.lean",
+      "sha": "e5aa42fc6914dfbc8c67322dd42e2e924e7f6064"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/RETheory.lean",
+      "sha": "7c0e2f18c4f3a36985629769218bb1187e5e6620"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Soundness.lean",
+      "sha": "fa37152ac694b69e0103f7773064b3665e566f20"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Codes.lean",
+      "sha": "8ea702da1b7408c7a3262ae98843d1616b102641"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Maps.lean",
+      "sha": "dd1dd5618e177f946bfd29bd7b34df92e529e886"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Preservation.lean",
+      "sha": "906120b4478213ee96243f09803655c042d2b8cc"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/ProofGraph.lean",
+      "sha": "e31dd03180312162c89f01a173d5df10731ee6f2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs.lean",
+      "sha": "fa45d75566d4871cefc031aecc153d64fd6a95b6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Core.lean",
+      "sha": "bec866524d8522e0bbc837b3e7c9a4bf07db75f8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/RETheory.lean",
+      "sha": "84b28dc692c6145a21f7357d85e5a10a3e877f72"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Soundness.lean",
+      "sha": "995c972a4ae0f4de671961ad7d90f58159b44e27"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Codes.lean",
+      "sha": "2acd92b071110c8dfd870e31e16eadaeb3986084"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Maps.lean",
+      "sha": "cfad77ac0bc03a603cb557a400fea1ffe82b5ca9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Preservation.lean",
+      "sha": "80f6d8981c9ccb0ac4a7c72f2fa8f322b5b81c28"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/ProofGraph.lean",
+      "sha": "c2b785986f068dcf68e3cd5c162bc62a7f5ca871"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta.lean",
+      "sha": "92a00ee0fdae12be576ae5f46edc7f88116f0659"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Application.lean",
+      "sha": "5d31c3d04a20030802dcbd46c01ac3f0fc56d8c1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Categorical.lean",
+      "sha": "b65abd2220d47656d8858d4a8f4da817de5b639f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Core.lean",
+      "sha": "05f5f242d343090444da37d250083f6419c0325c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/RETheory.lean",
+      "sha": "fea9ffa49ffb96c4d9474e18152571278853e9d0"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Soundness.lean",
+      "sha": "bf703cdef1ab2998e0e6c66a8f67b4321bf20624"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Codes.lean",
+      "sha": "d9e1e2afd45b57a67b20239ba409f40c7a090bb7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Maps.lean",
+      "sha": "07260cb9d17f7ad0fa03b7becedd01fa4a26f4c1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Preservation.lean",
+      "sha": "837dcf933f9753917206576da3e048bffb3505b7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/ProofGraph.lean",
+      "sha": "567edc2cc92ccfab86fcf99dbd0a01273da35276"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs.lean",
+      "sha": "30e70642669f9d622ef17a77af4ed8e01a0e13f4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Core.lean",
+      "sha": "1a4dcb5d4cfdc59440a87b54b3abbdb0c1328842"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/RETheory.lean",
+      "sha": "f6c62a6ee359c02d58da653b9a82bc13d8b68f2c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Soundness.lean",
+      "sha": "16388296397929e8be2754aabbde3689db8ad084"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Codes.lean",
+      "sha": "891fdd8ffc4f2fffb402471635c47329f9252f36"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Maps.lean",
+      "sha": "ee5711df2d60a868fa0d2f1d404c73fd584cbf95"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Preservation.lean",
+      "sha": "b1b808bbb54227215a858948fd5d802849d03292"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/ProofGraph.lean",
+      "sha": "96dfa0b208db2a07835ce5e7c559500e89d401ce"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProductProofs/Typed.lean",
+      "sha": "04d777e60705ace71509c1b753ad87fecd0039f5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge.lean",
+      "sha": "5bbc5b73a6a1a68f60fbcd3dd63c49fecd2dab2a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core.lean",
+      "sha": "03a61b26ed864414dd51c27c58ccd7dff5f60e7b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes.lean",
+      "sha": "07851ff14573a2a594b0708de309f63f692cc3e5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Base.lean",
+      "sha": "05773d6998074ed64a16998ec688c4fbd0fbd170"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/PrimitiveRecursive.lean",
+      "sha": "affb7434410255480221bee516e57f656ac18885"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution.lean",
+      "sha": "cd60afbda57e1888bce294f0f9c0080d21422b49"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/DirectEquality.lean",
+      "sha": "085fabc08bcf27076047d428d49dac576f84894b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Equality.lean",
+      "sha": "b82c0b3a73a8b3e5ad2ec7bd16b518d0fc4d1315"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/EqualityPieces.lean",
+      "sha": "e3b4100864abc26cffca760c9fd9b051c2a9266d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/FirstBinder.lean",
+      "sha": "39f468912278ee1957a748e61efecdb44017a90f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/FirstSuccessValue.lean",
+      "sha": "6f3ac26f604df88e7b380eeea9ada4eda8a90f0e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Left.lean",
+      "sha": "9385c169043ae90707728f04ea989ccb2c33a4da"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/LeftEquality.lean",
+      "sha": "12de0e6560c2305ab550bbe3e634f3402082d54d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/LeftTemplate.lean",
+      "sha": "89b8784511273cf5af27aa6d9c04521288faec9c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Right.lean",
+      "sha": "2dcdb8e7779345adcf00d36b0acc34da5869ee87"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/RightEquality.lean",
+      "sha": "77f0202503da128e93386996cc1077bb367953f9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/SecondBinder.lean",
+      "sha": "0be1f387e190da3f20ff5f4fb2bb2b8c55500ec8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/TemplateDirect.lean",
+      "sha": "3d544cf5478308d804ed0f0bc66c3586f22660d1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Ternary.lean",
+      "sha": "00ce007f77295a687d936c245c32046ff3e5fd3c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Presentation.lean",
+      "sha": "b652af48220a875a0d00fe4be976cff22b6b75ba"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Soundness.lean",
+      "sha": "5d1be50312152b26bde4667f74ddc13211c7fc86"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/RETheory.lean",
+      "sha": "49627197d290049cd4ea81d6f703761764c8f33e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural.lean",
+      "sha": "848b3586cff9b0d630f0577264360abe04d09b49"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/AxiomCodes.lean",
+      "sha": "bc8dd0ac65571383fa47fde2ea6d19654a4c473a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Base.lean",
+      "sha": "a4e0b209ba5d95bf7336d6751d84ea92a43dea9d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/BridgeMaps.lean",
+      "sha": "f74c216bfe756aec050abf42ea64e6f8ce66199b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Codes.lean",
+      "sha": "72c67976f8f26bf3aa8b92be246c71044911bc87"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Preservation.lean",
+      "sha": "2e8c4c007c7893727cda6fea01a104dac257d0f4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/ProofGraph.lean",
+      "sha": "5f542f699edb1bcaf77dc350e3933b752ec6f8ca"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalProofBridge/Transfer.lean",
+      "sha": "e739a06c29d6a1d8308fbb1411e089c2673b3db5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs.lean",
+      "sha": "7b4a25134439fc1b4d538ad28f98fda61f2081be"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Categorical.lean",
+      "sha": "ac3019992e864e53546af6215cc94554e6c86e26"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Core.lean",
+      "sha": "5ed79543fcfe6d47f2feaa7f650e66eafee456e4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Soundness.lean",
+      "sha": "78238b2716f166ea726a6d4e2d84c39f53a27ee3"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Codes.lean",
+      "sha": "364aabd739ce80cc3aa6eed94bdc38bc179b4827"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Maps.lean",
+      "sha": "8c8aac638e8768dceee11c71d5a6a6c6ad79eeee"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Preservation.lean",
+      "sha": "29f5e0c5cd9cbc18af733093ccc572da6ef8dbda"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/ProofGraph.lean",
+      "sha": "409a19bacf88e279a29edd90ec468499be0c5fba"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/NumericalSpecialization.lean",
+      "sha": "a012e8d311f5ec8c0b8d49504c9dc664c62e3413"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Palomar/Challenge.lean",
+      "sha": "1c3a6f65cdb8f0f8175624fa8e6b3ea0ca72f0de"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Palomar/CheckInterface.lean",
+      "sha": "fb0e79f476dc65ef01c86ee43844bbc0c9305c60"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Palomar/Solution.lean",
+      "sha": "a076f492a822ed6bb64fa42aa9f2a7e7ad51615c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PartialRecursiveQuotient.lean",
+      "sha": "6bec33951fd8fa4e7f423588f5ccd13ddcb6eaa5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneCharacterization.lean",
+      "sha": "36b8dd10318c9e4fc2c5d240ce664a8d03e94be4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneCongruence.lean",
+      "sha": "2519cf5ae37ad0dcf309d054cd43587548e53244"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneDefinitions.lean",
+      "sha": "e83b99289d6a5c9c7bf900bdc383a8f643cda7db"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneExtensionality.lean",
+      "sha": "91fea8494ef8375c38e112da10d11cf808c5c5ca"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneIndexCharacterization.lean",
+      "sha": "48cc593c4502f0465d21200ec8f98de3f0dfb6ef"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PiOneNecessity.lean",
+      "sha": "fe464f6a840678c81d427b9ae205f90faf79ca9b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PrfEqTransportRepair.lean",
+      "sha": "8809fef24059612aeb37b404928379d0c5aeae17"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Core.lean",
+      "sha": "bfcd0b8c456fcf6ba9b048a69017cb86431dafd5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PrfEqTransportRepair/RETheory.lean",
+      "sha": "cba6a235db4091687ccdeb3fb4b5ffe6f0a7ab62"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Soundness.lean",
+      "sha": "61813ae7f0192564ae5805a25246ae1ec8758a72"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Structural.lean",
+      "sha": "fe1c401b48597041987e0f236842e6d05225038b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProductionRepairClosure.lean",
+      "sha": "0fc9abb0805a1ec9acac4a34fc294e4a1b77b06f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProductionStageClosure.lean",
+      "sha": "27c49fcd392de232c282b01920dffd5f44695806"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProductiveDivergence.lean",
+      "sha": "04fc855183148e6c08d18eca465039dd77d048b5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProductiveGraph.lean",
+      "sha": "813d7a167baa1c016e3940af496bd578a95ba826"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Productiveness.lean",
+      "sha": "d10866d8329c97d64c59998328fa15bb76e54399"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProgramGraph.lean",
+      "sha": "c879c60dae704e1f9b23179bf648e051095d2783"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProgramIndices.lean",
+      "sha": "fc9995eb709e12548bd4aa2916804d37d2159ea5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProofSearchMembership.lean",
+      "sha": "0f7dba41f4e68df6bcd3424e870f2dfc31e52d87"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/ProofSearchTemplate.lean",
+      "sha": "20d2aa3d21ee8b9f105aedb10ebb86372b2cc988"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/QuotientComposition.lean",
+      "sha": "02f2621f831c515fb8951170b5b876970bcdea01"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/QuotientObstruction.lean",
+      "sha": "14e4b7ff65c853a6b327f10680190934771c2089"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/RangeAssignment.lean",
+      "sha": "b0d0c78e92c039b769b77d044c498ca427edc756"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/RangeGodel.lean",
+      "sha": "ee27bb6cad0b86aa8fcda6d19e105832420a9ab5"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/RangeProductive.lean",
+      "sha": "4e41bb21a09f834284ae7b47409f69cafb36c463"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/RangeWitness.lean",
+      "sha": "3faab39a6de8e4f19c5bdef7ee462702e079fa77"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/SigmaOneGraphWitness.lean",
+      "sha": "35f1291a063edf78d6499c49969ea74283319e1e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/SigmaOneRealization.lean",
+      "sha": "e313600169a9cfab1d8fd48d4a4b8fb11c253ff0"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/SigmaOneSearch.lean",
+      "sha": "d10e79a55f5a3ef24dc3c7e25aea8a3a28261760"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/SigmaOneSemidecisionCore.lean",
+      "sha": "951febdd5577d622b9a48f8a6082eaa82e813029"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/StageEnumerationObstruction.lean",
+      "sha": "81439f9fe8985c9ab5564fb0439fe1f322aef9cc"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TheoryEnumerability.lean",
+      "sha": "7a672aeab5b9675d26c73e8f78ad410feefa5faf"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TruePiOneTheory.lean",
+      "sha": "66213beafcf50d783edc2a1a67c49908dafe3e57"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedChoice.lean",
+      "sha": "24050d5fb0210e157626fbdac9779f2c80b69951"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedCoproducts.lean",
+      "sha": "5bafcf0e574cc172f13d618149e1eb73b1e1df3a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedNearProduct.lean",
+      "sha": "5de33f14ba147adbfcb858db6bcf04a66db93b79"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedProgramCategory.lean",
+      "sha": "eaec8335755e4b9245cd38a5a416acd27fba38f4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedRanges.lean",
+      "sha": "8ba97a2f0fad9ca8c3e265336b4b57560bd32f8c"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedRecursionCategory.lean",
+      "sha": "c882595fb274920b1d57c9a53f235b5ae9ee23c7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/TypedTuringMorphism.lean",
+      "sha": "0b51d6fe9c489f8d4ecc027ac956a226ab686190"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/UniformIndexQuotient.lean",
+      "sha": "ef8587d2cce18e233aa64b1a448ec964e061039f"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/UniformRange.lean",
+      "sha": "b5491a812cf478d2dc5516832220f5041a98e44e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Verification/CheckAxioms.lean",
+      "sha": "0a6b54a6ccb57a09f456fc1db196432b469f9010"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Verification/CheckDependencies.lean",
+      "sha": "1fa6018ff507e560387ddfb7696637a394d5c8fc"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/FailureOfComposition/Verification/CheckTypes.lean",
+      "sha": "cf6479facf4b7abef7092acc340b782d7839a383"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Metamath.lean",
+      "sha": "64990ffc6680befe10d05ca53f35c6f1c341ac1e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Metamath/Feferman/MPSequence.lean",
+      "sha": "c435afbf83ed643bfc032b70ee7c82e19f09b2ff"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Metamath/Feferman/ProofCode.lean",
+      "sha": "060eb33685e6ef94bbbc8ba582256519fa6d5fe0"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats.lean",
+      "sha": "eaaacc0cf5dd0a808b69b05bbe0429d0c4e6fb6a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Coproducts.lean",
+      "sha": "753d90e38ee2b2706b5514485fc2586388526db8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/CountableUnions.lean",
+      "sha": "aec374eb8fe5da9cd9ff21642a98e783ebb588fd"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomEqualizers.lean",
+      "sha": "a0fe49c0e2da6e202af24a4444671ef6d8daa0b1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomProducts.lean",
+      "sha": "c21293b42ddb31bc4ae56b924028b6fe5dcb3de8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomPullbacks.lean",
+      "sha": "dc6ea0ec50c29c9006b78adb088d4713508487ed"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomSemilattice.lean",
+      "sha": "fda4756ab2149cab47bc06d9860e74071ce44129"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomSubdomainMorphisms.lean",
+      "sha": "eabf8df24880a8453535ad75121f9f39dc9d1bc7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomSubdomains.lean",
+      "sha": "62cd311de1380fa80e70d60a5bd4913c9414d447"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DomTotalEmbedding.lean",
+      "sha": "da6aa38a6300e9920277599444ebe287fcd42841"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Domains.lean",
+      "sha": "0d38fd4a914326b82b347128c37acc3649e1cdcf"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Dominical.lean",
+      "sha": "553c78167f78d13142938ee4caf823f7916733ce"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/DominicalRecursion.lean",
+      "sha": "685c7de7addb5b9482721f115b1d0e98bd239e64"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Erratum.lean",
+      "sha": "1b684b053f3fedf8cd4a14d2516641f4c45025eb"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/HellerNaturalizer.lean",
+      "sha": "4a3942a96824b0287e688984d4f69e36a6450325"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/NCoproducts.lean",
+      "sha": "564e61a08505c0e3d13e09a6cf7e7291ce2540be"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/OptionKleisli.lean",
+      "sha": "4772295ba4964cf6e6403026fa9f018a015baf36"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/PCat.lean",
+      "sha": "f9e174b3baa0e8661ec42a509f02567fac2e0717"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Ranges.lean",
+      "sha": "2968973816c262e877d985c0f775babe0f2d46e8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Recursion.lean",
+      "sha": "8353a4e1b71d0296d3182cc73d8e5f01dddcfdc9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Restriction.lean",
+      "sha": "8be04e263211438f27484d6f83f8dd6865b9b4a2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/PCats/Unions.lean",
+      "sha": "d3fefbd4998792e20596af131de519ea8dfc50d8"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro.lean",
+      "sha": "0ffd9a76f264b42754a252be30e6c6a6c483368b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/Approximation.lean",
+      "sha": "5a0fbeaef0c5749e5215a2c6d137fde66cd58f69"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/CaseLaws.lean",
+      "sha": "4724da13ef7ff2f436efeb0e5dff5bc72221b10a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/Decisions.lean",
+      "sha": "140ec3fd66fc965ba01f85d67ad168f78d2e9edd"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/ExtensionFamilies.lean",
+      "sha": "f1c102504cea89fbbac430ccf9f817a34d1ed038"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/GeneratedRepresentation.lean",
+      "sha": "262d4cab56a3dc79ca046a5fc2c98f56366021b4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/LocalConnectedness.lean",
+      "sha": "2e04f5ab905c6dd21397c2388150cfba1f013f23"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/ParameterizedRecursion.lean",
+      "sha": "fbb18e70ae42e1225656627b030899ef67ca9bad"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/Selection.lean",
+      "sha": "636ff9e286290eee0b6674fd5e7e8082e2a09f00"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/UpwardClosure.lean",
+      "sha": "df6897e8064ea37519495ab7eff5da90c4ba23c4"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/RiceShapiro/WitnessExistence.lean",
+      "sha": "17f1993436f544131ef1e7fdb9bfb374aa49d360"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/ArithProofFormulaRegression.lean",
+      "sha": "81bf3d4f310ce447023a1d81cd86de7d31bc2e48"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/AxiomRegression.lean",
+      "sha": "b4db9ed92403b87430c539cf59b56a69c5952e37"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/CoproductRegression.lean",
+      "sha": "e8deb4ee4ee24e2c9ef97ad9709a67ed7af65ab7"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomEqualizersRegression.lean",
+      "sha": "833315e32c505369b2f03386ae2a2a224cbff971"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomProductsRegression.lean",
+      "sha": "a08482d99732b1ec1a239d0224519672ae14384d"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomPullbacksRegression.lean",
+      "sha": "9d38767c10c9f0ed4ad1761b3d80d4604902c6f2"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomSubdomainMorphismsRegression.lean",
+      "sha": "9343ebd7ea4e63d3a278b1814ee640cf25193ab9"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomSubdomainsRegression.lean",
+      "sha": "fa7f1f00e5e50dab7a94ca74cf6d9e1b550da29e"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DomTotalEmbeddingRegression.lean",
+      "sha": "6fec59434e1c2e29cc7747331801a68f46f49403"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DominicalRecursionRegression.lean",
+      "sha": "0c1c7c138c7d8519498447dbe6d366667cdce2e6"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/DominicalRegression.lean",
+      "sha": "d869f13c0970716b2e42cfad5e122442932c3300"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/FefermanMPSequenceRegression.lean",
+      "sha": "d628f283902991cce25e5aff9c72a49d54cd33ee"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/FefermanProofCodeRegression.lean",
+      "sha": "0542d27924b0b8f0a10db6f19662e598381ec54a"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/HellerNaturalizerRegression.lean",
+      "sha": "2489ec49956bc3f2a6bdbe7c4ce1eb8f73017c49"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/Tests/RiceShapiroRegression.lean",
+      "sha": "dfdbcf207701a8ab7fc09e470627674f17260489"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/check_arith_axioms.lean",
+      "sha": "0f71321206190e9c2f1ee110fda1251acd022fd1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/check_axioms.lean",
+      "sha": "2b981bb7c10b0115fee714ba5398ae7cd25798f1"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/check_metamath_axioms.lean",
+      "sha": "37661cd213d0c039cb39daad37ae836dde25e4f3"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/check_riceshapiro_axioms.lean",
+      "sha": "041c84debbda3d5baca6a75bd626785fdea52d7b"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/lake-manifest.json",
+      "sha": "a5ffe3288c09401adf74fc6f2c93e94d2dcf70af"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/lakefile.toml",
+      "sha": "18b28f7a70f2b4525882db17c3e4264a0fc92999"
+    },
+    {
+      "repo": "flengyel/Categorical_Rice_Shapiro",
+      "ref": "cb0622c864f50372f5ddc1882a6c66c31144c70e",
+      "path": "Lean/lean-toolchain",
+      "sha": "acc704ffe6eefbbe8ec09452a276202748aac923"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/ArithmeticBridge.lean",
+      "sha": "016cce5825c3c50ac0525012435795e08e763280"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/ArithmeticInterface.lean",
+      "sha": "c8aef5a888be2a563a7a80d998b62c3cd3a536c3"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/CheckNineInterface.lean",
+      "sha": "9a0cd328c91abb004ee5eccfa5568f077baecd12"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/DirectDerivationEnumeration.lean",
+      "sha": "1c75430b54f6d39ec65a580d77b17963e40ca22f"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/DirectDivergenceBridge.lean",
+      "sha": "7120b3cf36a8e9d185743893ab7fe0028219672e"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/EvaluatorBridge.lean",
+      "sha": "21f0dc59501748f46cca38abbd534f6691c23626"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/EvaluatorInterface.lean",
+      "sha": "0e9ef663576cf30cbfc42f597e276ae497905d78"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/GeneratedCongruenceBridge.lean",
+      "sha": "024c754b65692ee45190caa93d500706494526d3"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/GeneratedCongruenceInterface.lean",
+      "sha": "c90d20dc07052f44f94febef9d804c87af652e9c"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/GeneratedQuotientBridge.lean",
+      "sha": "af79d65bfb240c43b11a38ce63095416ea89cbbb"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/GeneratedQuotientInterface.lean",
+      "sha": "c5d9068a6271dcd6c1e1d4360aa2ae41275f9edf"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/GodelQuotientBridge.lean",
+      "sha": "7c72ad2588815cd0d1396ca94b2ef93e7d80b6f7"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/ObstructionBridge.lean",
+      "sha": "7430cf2fc918502d70ae096671562b61736e5601"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/PiOneBridge.lean",
+      "sha": "6956d808d6c626832de2a1057ed93710b7dcfa3c"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/PiOneInterface.lean",
+      "sha": "7e2e419ea345edec5a1398d1e873780abdd3644f"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/QuotientBridge.lean",
+      "sha": "db14a098ec225d81521dac7a848bcff9e80f7555"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/RangeBridge.lean",
+      "sha": "1182631a690485034ddf1b2adeb6d69ea6f48fa3"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/RangeInterface.lean",
+      "sha": "2fac6087b2f0f9785cf439943999022da84f2fbb"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/RangeProductiveBridge.lean",
+      "sha": "259a05eb4f334fcdf47f6c52eb279fe684c2f641"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/SolutionNine.lean",
+      "sha": "84ae0eca88108fa4a906fe6477cdcd7216bf8ee5"
+    },
+    {
+      "repo": "flengyel/FailureOfComposition",
+      "ref": "506d1f1494d6c05b0ba304edf5fe0bfa6c32864b",
+      "path": "Lean/FailureOfComposition/Palomar/WeakTotalityBridge.lean",
+      "sha": "f1ef301e786fd43b0181445f8cb5080a927da535"
+    }
+  ]
+}

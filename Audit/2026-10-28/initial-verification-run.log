@@ -1,0 +1,3 @@
+Running: lean --version
+Running: lake build CombinedDevelopment
+FAIL: Command exited 1; see /workspace/scratch/79abe9e6b47a/combined-development/build-logs/combined-build.log
