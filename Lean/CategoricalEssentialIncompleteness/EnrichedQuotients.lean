@@ -9,7 +9,7 @@ import CategoricalEssentialIncompleteness.BooleanPresentations
 /-!
 # Boolean quotient incompleteness from the enriched representation section
 
-The separator obstruction now uses the actual domain equalizers and totality
+The separator obstruction uses the domain equalizers and totality
 pullbacks. Only the sentence-object component of the subobject identification
 is used in this argument. `GlobalSubobjects` constructs the global predicate
 comparison along `J`; `CategoricalTheorem` applies it with ordinary
@@ -70,7 +70,7 @@ theorem enriched_boolean_quotient_incomplete (consistent : (q.quotient r).Consis
       using And.intro hp hn
   exact (R.enriched_no_global_separator products D σ hU).false (D.liftSeparator pair hsep)
 
-/-- The equivalent conclusion about the genuine Boolean bound copairing. -/
+/-- The equivalent conclusion about the Boolean bound copairing. -/
 theorem enriched_boundCopair_not_regularEpi (consistent : (q.quotient r).Consistent) :
     ¬ IsRegularEpi r.target.boundCopair := by
   intro h

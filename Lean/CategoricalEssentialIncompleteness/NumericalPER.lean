@@ -9,9 +9,9 @@ import Mathlib.CategoryTheory.Widesubcategory
 /-!
 # The category of numerical partial equivalence relations
 
-Objects are arbitrary symmetric transitive relations on ℕ. Trackers are partial
+Objects are arbitrary symmetric transitive relations on ℕ. Representatives are partial
 recursive functions defined on the source support and respecting the relations.
-Arrows identify trackers whose values are related at every supported input.
+Arrows identify representing functions whose values are related at every supported input.
 No enumerability condition is imposed on a relation or its support.
 -/
 
@@ -35,22 +35,22 @@ theorem supported_left {R : NumericalPER} {n m : ℕ} (h : R.rel n m) :
 theorem supported_right {R : NumericalPER} {n m : ℕ} (h : R.rel n m) :
     m ∈ R.support := R.trans (R.symm h) h
 
-structure Tracker (R S : NumericalPER) where
+structure Representative (R S : NumericalPER) where
   val : ℕ → Part ℕ
   computable : Partrec val
   total : ∀ n ∈ R.support, (val n).Dom
   respects : ∀ {n m a b}, R.rel n m → a ∈ val n → b ∈ val m → S.rel a b
 
-namespace Tracker
+namespace Representative
 variable {R S T W : NumericalPER}
 
-theorem output_supported (f : Tracker R S) {n a : ℕ} (hn : n ∈ R.support)
+theorem output_supported (f : Representative R S) {n a : ℕ} (hn : n ∈ R.support)
     (ha : a ∈ f.val n) : a ∈ S.support := f.respects hn ha ha
 
-def Equiv (f g : Tracker R S) : Prop :=
+def Equiv (f g : Representative R S) : Prop :=
   ∀ n ∈ R.support, ∀ a ∈ f.val n, ∀ b ∈ g.val n, S.rel a b
 
-instance : Setoid (Tracker R S) where
+instance : Setoid (Representative R S) where
   r := Equiv
   iseqv :=
     { refl := fun f n hn _ ha _ hb ↦ f.respects hn ha hb
@@ -61,12 +61,12 @@ instance : Setoid (Tracker R S) where
         exact S.trans (hfg n hn a ha b (Part.get_mem _))
           (hgh n hn b (Part.get_mem _) c hc) }
 
-theorem equiv_of_val_eq (f g : Tracker R S) (h : f.val = g.val) : Equiv f g := by
+theorem equiv_of_val_eq (f g : Representative R S) (h : f.val = g.val) : Equiv f g := by
   intro n hn a ha b hb
   rw [h] at ha
   exact g.respects hn ha hb
 
-def identity (R : NumericalPER) : Tracker R R where
+def identity (R : NumericalPER) : Representative R R where
   val := Part.some
   computable := Partrec.some
   total := fun _ _ ↦ Part.some_dom _
@@ -76,7 +76,7 @@ def identity (R : NumericalPER) : Tracker R R where
     obtain rfl := Part.mem_some_iff.mp hb
     simpa using h
 
-def compose (f : Tracker R S) (g : Tracker S T) : Tracker R T where
+def compose (f : Representative R S) (g : Representative S T) : Representative R T where
   val n := (f.val n).bind g.val
   computable := f.computable.bind (g.computable.comp Computable.snd).to₂
   total := by
@@ -89,7 +89,7 @@ def compose (f : Tracker R S) (g : Tracker S T) : Tracker R T where
     obtain ⟨y, hy, hb⟩ := Part.mem_bind_iff.mp hb
     exact g.respects (f.respects h hx hy) ha hb
 
-theorem compose_equiv {f f' : Tracker R S} {g g' : Tracker S T}
+theorem compose_equiv {f f' : Representative R S} {g g' : Representative S T}
     (hf : Equiv f f') (hg : Equiv g g') : Equiv (compose f g) (compose f' g') := by
   intro n hn a ha b hb
   obtain ⟨x, hx, ha⟩ := Part.mem_bind_iff.mp ha
@@ -99,43 +99,44 @@ theorem compose_equiv {f f' : Tracker R S} {g g' : Tracker S T}
   exact T.trans (g.respects (hf n hn x hx y hy) ha (Part.get_mem _))
     (hg y hyS z (Part.get_mem _) b hb)
 
-end Tracker
+end Representative
 
-def Hom (R S : NumericalPER) := Quotient (inferInstance : Setoid (Tracker R S))
+def Hom (R S : NumericalPER) := Quotient (inferInstance : Setoid (Representative R S))
 
 instance perCategory : Category NumericalPER where
   Hom := Hom
-  id R := Quotient.mk _ (Tracker.identity R)
+  id R := Quotient.mk _ (Representative.identity R)
   comp f g := Quotient.liftOn₂ f g
-    (fun f g ↦ Quotient.mk _ (Tracker.compose f g))
-    (fun _ _ _ _ hf hg ↦ Quotient.sound (Tracker.compose_equiv hf hg))
+    (fun f g ↦ Quotient.mk _ (Representative.compose f g))
+    (fun _ _ _ _ hf hg ↦ Quotient.sound (Representative.compose_equiv hf hg))
   id_comp := by
     intro R S f
     induction f using Quotient.inductionOn with | _ f =>
       apply Quotient.sound
-      exact Tracker.equiv_of_val_eq _ _ (funext fun n ↦ Part.bind_some n f.val)
+      exact Representative.equiv_of_val_eq _ _ (funext fun n ↦ Part.bind_some n f.val)
   comp_id := by
     intro R S f
     induction f using Quotient.inductionOn with | _ f =>
       apply Quotient.sound
-      exact Tracker.equiv_of_val_eq _ _ (funext fun n ↦ Part.bind_some_right (f.val n))
+      exact Representative.equiv_of_val_eq _ _ (funext fun n ↦ Part.bind_some_right (f.val n))
   assoc := by
     intro R S T W f g h
     induction f using Quotient.inductionOn with | _ f =>
       induction g using Quotient.inductionOn with | _ g =>
         induction h using Quotient.inductionOn with | _ h =>
           apply Quotient.sound
-          exact Tracker.equiv_of_val_eq _ _
+          exact Representative.equiv_of_val_eq _ _
             (funext fun n ↦ Part.bind_assoc (f.val n) g.val h.val)
 
-/-- The arrow represented by a tracker. -/
-def ofTracker {R S : NumericalPER} (f : Tracker R S) : R ⟶ S := Quotient.mk _ f
+/-- The morphism determined by a representing partial recursive function. -/
+def ofRepresentative {R S : NumericalPER} (f : Representative R S) : R ⟶ S := Quotient.mk _ f
 
-theorem ofTracker_eq_iff {R S : NumericalPER} (f g : Tracker R S) :
-    ofTracker f = ofTracker g ↔ Tracker.Equiv f g := Quotient.eq
+theorem ofRepresentative_eq_iff {R S : NumericalPER} (f g : Representative R S) :
+    ofRepresentative f = ofRepresentative g ↔ Representative.Equiv f g := Quotient.eq
 
-@[simp] theorem ofTracker_comp {R S T : NumericalPER} (f : Tracker R S) (g : Tracker S T) :
-    ofTracker f ≫ ofTracker g = ofTracker (Tracker.compose f g) := rfl
+@[simp] theorem ofRepresentative_comp {R S T : NumericalPER}
+    (f : Representative R S) (g : Representative S T) :
+    ofRepresentative f ≫ ofRepresentative g = ofRepresentative (Representative.compose f g) := rfl
 
 /-- Equality restricted to an arbitrary support. -/
 def discrete (A : Set ℕ) : NumericalPER where
@@ -148,9 +149,9 @@ def discrete (A : Set ℕ) : NumericalPER where
 
 /-- Equality of arrows into a discrete PER is equality of their supported values. -/
 theorem discrete_arrow_eq_iff {R : NumericalPER} {A : Set ℕ}
-    (f g : Tracker R (discrete A)) :
-    ofTracker f = ofTracker g ↔ ∀ n ∈ R.support, f.val n = g.val n := by
-  rw [ofTracker_eq_iff]
+    (f g : Representative R (discrete A)) :
+    ofRepresentative f = ofRepresentative g ↔ ∀ n ∈ R.support, f.val n = g.val n := by
+  rw [ofRepresentative_eq_iff]
   constructor
   · intro h n hn
     apply Part.ext

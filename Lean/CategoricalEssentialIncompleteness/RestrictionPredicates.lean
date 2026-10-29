@@ -28,7 +28,7 @@ namespace CategoricalEssentialIncompleteness
 
 variable {C : Type u} [Category.{v} C] [PCategoryStruct C] [PCategory C]
 
-/-- The actual inverse image of a restriction idempotent. -/
+/-- The inverse image of a restriction idempotent. -/
 def domainInverseImage {X Y : C} (f : X ⟶ Y) (e : DomSemilattice Y) : DomSemilattice X :=
   ⟨rst (f ≫ e.hom), PCategory.rst_rst _⟩
 
@@ -118,7 +118,7 @@ def domainPull {X Y : C} (f : X ⟶ Y) (hf : RestrictionCategory.isTotal f) :
     change rst (f ≫ 0) = 0
     rw [comp_zero, RestrictionZeros.rst_zero]
 
-/-- `E` on the genuine total-arrow category, with `f* e = rst (f ≫ e)`. -/
+/-- `E` on the total-arrow category, with `f* e = rst (f ≫ e)`. -/
 def restrictionPredicates : PredicateLattice (TotalSubcategory C) where
   obj X := DomSemilattice X.obj
   lattice _ := inferInstance
@@ -140,7 +140,7 @@ theorem restrictionPredicates_nontrivial (U : TotalSubcategory C)
   intro h
   exact hU (congrArg DomSemilattice.hom h).symm
 
-/-- The external diagonal theorem on genuine restriction idempotents and total arrows. -/
+/-- The external diagonal theorem on restriction idempotents and total arrows. -/
 theorem restriction_integration_diagonal
     {P : PredicateLattice (TotalSubcategory C)}
     (D : DiagonalData (restrictionPredicates (C := C)) P)

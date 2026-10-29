@@ -820,7 +820,7 @@ private theorem formulaSubstAtCode_encode (t : ArithmeticSyntacticTerm) :
       simpa only [Semiformula.encode_eq_toNat] using
         formulaSubstAtCode_encode t (d + 1) p
 
-/-- On two genuine syntax codes, the numerical constructor returns exactly
+/-- On the code of a term and the code of a formula, the numerical constructor returns
 the code of Foundation's capture-avoiding one-variable substitution. -/
 theorem subst1Code_encode (t : ArithmeticSyntacticTerm)
     (p : ArithmeticFormulaBody) :

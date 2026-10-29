@@ -91,7 +91,7 @@ open CategoryTheory
 #print axioms hasWeakChoice_of_hasChoice
 
 -- Coproducts: the nested identities are theorems here, and the coproduct is a
--- genuine coproduct with no totality hypothesis.
+-- coproduct with no totality hypothesis.
 #print axioms HasCoproducts.i0_i0
 #print axioms HasCoproducts.i1_i1
 #print axioms HasCoproducts.copair_inj

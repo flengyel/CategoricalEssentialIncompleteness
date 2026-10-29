@@ -88,8 +88,7 @@ theorem computes_reordered_inverse
     inverseSemidecisionCode_spec q M ![y, x] z]
   simp only [inverseGraph_eval]
 
-/-- Every preimage returned by fair search is a genuine preimage.  No converse
-is claimed for a specified candidate. -/
+/-- Every value returned by the section program maps to its input under the original program. -/
 theorem sectionIndex_sound
     {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
     (q : ℕ) (y x : M)

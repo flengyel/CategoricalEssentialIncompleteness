@@ -7,12 +7,12 @@ import CategoricalEssentialIncompleteness.EnrichedTotals
 import CategoricalEssentialIncompleteness.InternalRepresentation
 
 /-!
-# Restriction inverse image on the actual domain equalizers
+# Restriction inverse image on the domain equalizers
 
 The action is constructed as the restriction of composition, lifted to the
 fixed-point equalizer. Its identity, composition, meet, and bound laws are
 proved from the restriction equations. The extra lattice and join-stability
-structure is specified on these actual equalizers, as in the manuscript.
+structure is specified on these equalizers, as in the manuscript.
 -/
 
 set_option autoImplicit false
@@ -108,7 +108,7 @@ class DomainLattices where
 attribute [instance_reducible, instance] DomainLattices.lattice DomainLattices.bounds
 variable [R.DomainLattices]
 
-/-- The internal lattice carried by the actual domain equalizer. -/
+/-- The internal lattice carried by the domain equalizer. -/
 def domainLattice (X : O) : InternalLattice V where
   obj := R.domainObject X
   lattice T := DomainLattices.lattice X T
@@ -196,7 +196,7 @@ def domainPredicates (P : R.Products) : InternalPredicates (R.totalHom P) where
     rw [R.total_comp_ι, R.domainInverse_comp]
 
 /-- Internal inseparability with the domain equalizers and totality pullbacks
-constructed from enriched restriction, rather than supplied as an independent reduct. -/
+constructed from the enriched restriction operations. -/
 theorem enriched_internal_inseparability (products : R.Products)
     {P : InternalPredicates (R.totalHom products)}
     (D : InternalDiagonalData (R.domainPredicates products) P)

@@ -9,7 +9,7 @@ import CategoricalEssentialIncompleteness.EnrichedRestriction
 # Internal composition and products of total arrows
 
 The restriction-product equations imply closure of total arrows under pairing.
-Identities, composition, and pairing therefore lift to the actual totality
+Identities, composition, and pairing therefore lift to the totality
 pullbacks. Monicity of their inclusions then proves the category and ordinary
 binary-product equations required by `InternalHom.CartesianLaws`.
 -/

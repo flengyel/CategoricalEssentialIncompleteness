@@ -25,7 +25,7 @@ Palomar Challenge: a candidate-local import of this module is not itself an
 eligible final boundary.
 
 Terms use separate free variables and de Bruijn bound variables.  Formulas are
-in negation-normal form.  `Derivation` is a genuine one-sided classical
+in negation-normal form.  `Derivation` is a one-sided classical
 first-order sequent calculus, and `Proof` records the finite theory axioms used
 by a derivation.  No semantic consequence relation or supplied realization
 field is used.

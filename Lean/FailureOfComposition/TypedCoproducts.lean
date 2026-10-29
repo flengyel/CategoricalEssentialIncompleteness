@@ -1280,7 +1280,7 @@ theorem typed_i1_nat_left
     (eqIndex_rightInjection_unused T (objectCode Z)
       (normalizeIndex (objectCode X) (objectCode Y) q))
 
-/-- The typed program category has genuine binary coproducts. -/
+/-- The typed program category has binary coproducts. -/
 instance codedProgramCategoryHasCoproducts
     (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] :
     HasCoproducts (CodedProgramCategory T) where
@@ -1313,7 +1313,7 @@ instance codedProgramCategoryHasCoproducts
     i1 Q R ≫ copair f g = g :=
   HasCoproducts.i1_copair f g
 
-/-- The genuine binary-coproduct universal property, with no totality premise
+/-- The binary-coproduct universal property, with no totality premise
 on either branch. -/
 theorem typed_existsUnique_copair
     (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]

@@ -36,7 +36,7 @@ structure PredicateLattice (A : Type u) [Category.{v} A] where
 
 attribute [instance] PredicateLattice.lattice PredicateLattice.bounds
 
-/-- An injective natural bounded lattice map, without a surjectivity assumption. -/
+/-- An injective natural bounded lattice map. -/
 structure PredicateEmbedding {A : Type u} [Category.{v} A]
     (E : PredicateLattice.{v, u, w} A) (P : PredicateLattice.{v, u, w'} A) where
   app : ∀ X, BoundedLatticeHom (E.obj X) (P.obj X)

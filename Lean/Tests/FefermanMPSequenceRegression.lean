@@ -51,7 +51,7 @@ def bStr : FormulaString := [2]
 
 /-- Every candidate string is a formula. This is the weakest `formula`
 predicate satisfying `formula_imp_iff`, and it suffices: the point of the test
-is the proof-sequence bookkeeping, not the grammar. -/
+is to check the proof-sequence transformations. -/
 def allFormulas : StringPredicate where
   test := fun _ => true
 

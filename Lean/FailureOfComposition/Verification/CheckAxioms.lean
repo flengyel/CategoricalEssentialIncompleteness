@@ -294,7 +294,7 @@ Audit the axioms used by the maintained public results.
 #check @FailureOfComposition.ProgramIndices.no_index_quotient_via_productiveness
 #print axioms FailureOfComposition.ProgramIndices.no_index_quotient_via_productiveness
 
--- Concrete evaluator milestone: print full types, not only axiom envelopes.
+-- Types and axiom dependencies of evaluator declarations.
 #check @FailureOfComposition.ConcreteWitnessGraphs.base_computation_iff
 #print axioms FailureOfComposition.ConcreteWitnessGraphs.base_computation_iff
 #check @CategoricalRiceShapiro.Evaluator.evalnCertificateFormula_tag_seven_iff
@@ -455,7 +455,7 @@ Audit the axioms used by the maintained public results.
 #print axioms FailureOfComposition.UniformRange.eqIndex_typedUniformRangeIndex_congr
 #print axioms FailureOfComposition.UniformRange.ran_arrowOfIndex_eq_uniformRange
 
--- Genuine typed coproducts and their two distributivity isomorphisms.
+-- typed coproducts and their two distributivity isomorphisms.
 #print axioms FailureOfComposition.TypedCoproducts.typedCoprodIndex_uniform
 #print axioms FailureOfComposition.TypedCoproducts.eqIndex_coprod_congr
 #print axioms FailureOfComposition.TypedCoproducts.typedCoprodMap_arrowOfIndex

@@ -10,7 +10,7 @@ import CategoricalEssentialIncompleteness.InternalCartesian
 
 The representative in this module is a morphism from the parameter object into
 an internal hom-object. It need not be a global arrow. The representation section
-and the actual separator object are constructed in `InternalRepresentation`.
+and the separator object are constructed in `InternalRepresentation`.
 -/
 
 set_option autoImplicit false

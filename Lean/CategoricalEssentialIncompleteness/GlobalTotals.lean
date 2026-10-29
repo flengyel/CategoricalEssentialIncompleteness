@@ -30,7 +30,7 @@ variable {H : InternalHom V O} (R : EnrichedRestriction H)
 /-- The manuscript's underlying ordinary restriction category `K₀`. -/
 abbrev GlobalCategory := R.Parameterized (⊤_ V)
 
-/-- Its genuine wide subcategory of total arrows. -/
+/-- Its wide subcategory of total arrows. -/
 abbrev GlobalTotal := WideSubcategory (RestrictionCategory.isTotal (C := R.GlobalCategory))
 
 def globalObject (X : O) : R.GlobalCategory := ⟨X⟩

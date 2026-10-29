@@ -11,7 +11,7 @@ import CategoricalEssentialIncompleteness.GlobalTotals
 Global points of the domain equalizers are identified with restriction
 idempotents in the ordinary category. The transported lattice has the
 restriction-domain order, composition as meet, and identity and zero as bounds.
-The comparison commutes with the actual restriction inverse image.
+The comparison commutes with the restriction inverse image.
 -/
 
 set_option autoImplicit false

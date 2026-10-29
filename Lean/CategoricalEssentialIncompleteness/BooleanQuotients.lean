@@ -13,8 +13,8 @@ import Mathlib.CategoryTheory.Subobject.Lattice
 
 Boolean algebras are specified on all generalized elements, naturally under
 precomposition. By Yoneda this is the internal Boolean-algebra structure.
-Presentations and quotients have genuine regular epimorphisms as underlying
-arrows; their fibers are actual equalizer subobjects.
+Presentations and quotients have regular epimorphisms as underlying
+arrows; their fibers are equalizer subobjects.
 -/
 
 set_option autoImplicit false
@@ -169,9 +169,9 @@ theorem represented_extension_incomplete (D : DiagonalData E P)
 
 variable {C : Type u'} [Category.{v'} C] [Regular C] [FinitaryExtensive C]
 
-/-- The incompleteness conclusion for actual Boolean presentations and quotients.
-The input `D` is the external representation data; obtaining it from an enriched
-definability algebra is a separate construction. -/
+/-- The incompleteness conclusion for Boolean presentations and quotients.
+The input `D` is the external representation data constructed from an internal
+section in `GlobalRepresentation`. -/
 theorem boolean_quotient_incomplete (D : DiagonalData E P)
     (hU : (⊥ : E.obj D.U) ≠ ⊤)
     (represent : ∀ a : ComplementaryPair (E.obj D.U), ∃ g, D.Represents a g)

@@ -11,8 +11,8 @@ import CategoricalEssentialIncompleteness.BooleanDecisions
 # Categorical essential incompleteness along `J`
 
 The source of `J` is the ordinary total-arrow category of the enriched
-restriction structure. Predicates are naturally identified with actual
-subobjects along `J`, and the representing domains are actual restriction
+restriction structure. Predicates are naturally identified with
+subobjects along `J`, and the representing domains are restriction
 idempotents of the underlying ordinary category. Representation is supplied
 by the internal section.
 
@@ -69,7 +69,7 @@ variable (r : BooleanQuotient q.algebra)
 include σ hU hpos hneg
 
 /-- `thm:categorical-essential-incompleteness`: every consistent represented Boolean quotient
-is incomplete. The domain and total-arrow comparisons are constructed, not assumed. -/
+is incomplete. -/
 theorem categorical_essential_incompleteness
     (_preservesProducts : PreservesLimitsOfShape (Discrete WalkingPair) J)
     (consistent : (q.quotient r).Consistent)

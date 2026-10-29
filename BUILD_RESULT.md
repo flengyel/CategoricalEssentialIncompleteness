@@ -1,5 +1,43 @@
 # Categorical essential incompleteness: build result
 
+## Numerical limits, regular images, and terminology revision
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
+`69100418d5d8dd8c77a2b98a06939593aecdc51a`. The original checkout and remote
+`main` agreed. Subsequent work was preserved.
+
+- `python3 scripts/verify.py`: PASS (1920 build jobs, including cached dependencies).
+- Transitive axiom inspection: PASS for 179 declarations. All 152 previous
+  checks are retained, with two names updated from `Tracker` to `Representative`.
+  Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions and 356 imported-file records match their
+  pins or recorded patches. Toolchain and dependency pins are unchanged.
+- Thirteen imported files have comment-only revisions, checked against their
+  original noncomment source. Original and revised hashes are recorded.
+- The scan of all 35 project Lean files found no `sorry`, `admit`, `axiom`, or
+  `opaque` declarations.
+- The revised manuscript and rebuilt 33-page PDF have verified provenance
+  hashes. The final LaTeX pass reports no warnings or overfull/underfull boxes. All 64 labels
+  and 19 bibliography keys are unchanged.
+
+The mathematical additions construct binary products of numerical total arrows
+and their preservation by `J`, finite limits in the arbitrary-PER category,
+regular-epimorphism/monomorphism factorizations, and coequalizers of kernel pairs.
+Pullback stability of regular epimorphisms is the next unresolved lemma.
+Extensivity, numerical restriction products and recursion, and the arithmetic
+syntax/provability comparison remain open.
+
+Terminology revisions replace `Tracker` with `Representative`, rename
+`InternalBridge` to `ParameterizedEqualizer`, and remove informal assessments,
+redundant assurances, vague descriptions, and stale references. Definitions,
+mathematical hypotheses, and numeralwise/uniform provability distinctions are
+retained. The separate editorial report records the reviewed scope and the
+unavailable governing-source limitation.
+
+The hosted executable-path adapter was used. Ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-28-per-limits](Audit/2026-10-28-per-limits/).
+
 ## Numerical categories and support comparison checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from
@@ -19,10 +57,10 @@ remote `main` agreed before editing.
 The checkpoint constructs the numerical restriction category, including zero
 morphisms and nontriviality, and identifies its domain lattice with c.e.
 supports. Complementary domains on `ℕ` are exactly recursive sets. The
-arbitrary-PER category uses quotient tracker arrows, and the functor from
+arbitrary-PER category uses arrows defined by equivalence classes of representing functions, and the functor from
 total numerical arrows to equality PERs is proved full and faithful.
 
-Support inclusions are genuine categorical subobjects. Their order and
+Support inclusions are categorical subobjects. Their order and
 equality reflect support inclusion and equality. The inverse-image square
 satisfies the full pullback universal property and agrees with restriction
 inverse image. Dovetailing proves that c.e. support unions are least upper
@@ -32,7 +70,7 @@ complementary-domain separator is equivalent to recursive inseparability.
 This establishes the support comparison in part (ii) of
 `thm:integration-essential-equivalence`. The next construction is numerical
 binary products and their preservation by `J`. Remaining PER regular/extensive
-structure, the bounded-lattice packaging, and the syntax/provability and
+structure, the bounded lattice homomorphism structure, and the syntax/provability and
 arithmetic comparisons are open; see [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md).
 
 The documented hosted executable-path adapter was used. Ordinary Debian/WSL2
@@ -64,7 +102,7 @@ compatibility with products and actual restriction inverse image. The internal
 section supplies the external representation equations through the explicit
 chosen-product isomorphism.
 
-The natural predicate identification along `J` gives a genuine natural
+The natural predicate identification along `J` gives a natural
 presheaf isomorphism and a natural injective bounded lattice map into actual
 subobjects. `categorical_essential_incompleteness` and
 `categorical_boundCopair_not_regularEpi` prove the two conclusions of
@@ -121,7 +159,7 @@ the bound copairing from being a regular epimorphism. There is no independent
 external representation premise in these two new quotient results.
 
 The remaining construction is the global total-arrow and predicate comparison,
-including the natural identification along `J`. The fully packaged enriched
+including the natural identification along `J`. The enriched
 theorem and numerical/arithmetic interpretation are not claimed. See
 [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) for the exact boundary.
 The source toolchain and imported provenance are unchanged. The documented
@@ -263,7 +301,7 @@ and the remote `main` had the same revision before editing.
 The new proofs cover the external diagonal result, its restriction-idempotent
 specialization and inseparability consequence, a conditional parameterized
 equalizer factorization, and the Boolean-quotient incompleteness argument with
-actual subobject fibers. See [the precise correspondence and remaining
+subobject fibers. See [the precise correspondence and remaining
 obligations](FORMALIZATION_STATUS.md). The full enriched theorem and its
 numerical interpretation remain incomplete.
 

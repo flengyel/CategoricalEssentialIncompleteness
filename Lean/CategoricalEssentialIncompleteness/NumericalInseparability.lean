@@ -8,7 +8,7 @@ import CategoricalEssentialIncompleteness.NumericalUnions
 /-!
 # Numerical domain separators and recursive inseparability
 
-The separator inequalities use actual PER subobjects and complementary
+The separator inequalities use PER subobjects and complementary
 restriction idempotents of the numerical category. They are equivalent to the
 existence of a recursive separating set, for arbitrary distinguished supports.
 This is the support comparison in part (ii) of the manuscript's numerical
@@ -40,7 +40,7 @@ theorem complementary_support_compl (a : ComplementaryPair (Domain nat)) :
     have : n ∈ a.pos.support ∪ a.neg.support := by rw [hu]; trivial
     exact this.resolve_left hn
 
-/-- A separator expressed in genuine categorical subobject order. -/
+/-- A separator expressed in categorical subobject order. -/
 def SeparatesSupports (A B : Set ℕ) (a : ComplementaryPair (Domain nat)) : Prop :=
   NumericalPER.supportSubobject A (Set.subset_univ A) ≤ domainSubobject nat a.pos ∧
   NumericalPER.supportSubobject B (Set.subset_univ B) ≤ domainSubobject nat a.neg

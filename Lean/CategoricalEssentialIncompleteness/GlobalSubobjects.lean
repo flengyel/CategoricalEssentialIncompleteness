@@ -10,7 +10,7 @@ import Mathlib.CategoryTheory.Types.Basic
 /-!
 # The global predicate functor and subobjects along `J`
 
-The global predicate lattice is reindexed onto the genuine total-arrow category.
+The global predicate lattice is reindexed onto the total-arrow category.
 A natural family of order isomorphisms with the subobject lattices along `J`
 induces a natural isomorphism of the underlying presheaves. The induced map
 from ordinary restriction domains to subobjects is a natural injective bounded
@@ -45,7 +45,7 @@ def presheaf : Aᵒᵖ ⥤ Type w where
 
 end PredicateLattice
 
-/-- A natural identification with genuine subobjects along `J`, including their order. -/
+/-- A natural identification with subobjects along `J`, including their order. -/
 structure SubobjectIdentification {A : Type u} [Category.{v} A]
     (P : PredicateLattice.{v, u, w} A) {C : Type u'} [Category.{v'} C] [HasPullbacks C]
     (J : A ⥤ C) where
@@ -58,7 +58,7 @@ variable {A : Type u} [Category.{v} A] {P : PredicateLattice.{v, u, w} A}
 variable {C : Type u'} [Category.{v'} C] [HasPullbacks C] {J : A ⥤ C}
 variable (η : SubobjectIdentification P J)
 
-/-- The componentwise identification gives a genuine natural isomorphism of presheaves.
+/-- The componentwise identification gives a natural isomorphism of presheaves.
 Universe lifts only place the two presheaves in a common category of types. -/
 def presheafIso :
     P.presheaf ⋙ uliftFunctor.{max u' v', w} ≅
@@ -120,7 +120,7 @@ theorem domainSubobject_injective (X : O) :
   apply j.injective (⊤_ V) X
   exact (η.app (R.totalGlobalObject X)).injective h
 
-/-- The domain-to-subobject comparison commutes with actual inverse image on both sides. -/
+/-- The domain-to-subobject comparison commutes with inverse image on both sides. -/
 theorem domainSubobject_naturality {X Y : O}
     (f : R.totalGlobalObject X ⟶ R.totalGlobalObject Y) (a : R.GlobalDomain Y) :
     R.domainSubobject products P j η X (R.globalDomainInverse f.hom a) =

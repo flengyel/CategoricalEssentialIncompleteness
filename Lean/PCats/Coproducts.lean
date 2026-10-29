@@ -15,9 +15,6 @@ distributive when the two comparison morphisms are isomorphisms; that is
 Heller's `P⁺`-structure, and a `P⁺`-category that is also an `rP`-category is an
 `rP⁺`-category.
 
-The duality is literal but not symmetric in its consequences, and the asymmetry
-is the point of this module.
-
 The injections are natural in *both* variables, where the projections are
 half-natural: `p₀` is natural in the first variable only and `p₁` in the second.
 A projection discards an argument, so a partial morphism in the discarded
@@ -28,7 +25,7 @@ so both squares commute and no restricted form is needed.
 Two consequences. The four nested-injection identities `i0_i0`, `i0_i1`,
 `i1_i0`, `i1_i1` are *theorems* here, immediate from naturality in the second
 and first variable respectively — unlike their near-product duals, which must be
-assumed. And `coprod` is a genuine categorical coproduct: `existsUnique_copair`
+assumed. And `coprod` is a categorical coproduct: `existsUnique_copair`
 has no totality hypothesis on either the mediating morphism or the two given
 ones, whereas `existsUnique_partialPairing` needs both given morphisms total.
 

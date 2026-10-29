@@ -39,7 +39,7 @@ structure BoundInterpretation (D : DiagonalData E P) (T EU : V)
   realize_bot : realize ⊥ = terminal.from T ≫ zero
   realize_top : realize ⊤ = terminal.from T ≫ one
 
-/-- The finite-limit bridge for `thm:internal-inseparability`.
+/-- The parameterized equalizer factorization used in `thm:internal-inseparability`.
 Here `T` may be the separator object. The separator and its representative
 belong to the parameterized data, rather than to the global-point data. -/
 theorem parameterized_separator_factorization (D : DiagonalData E P)

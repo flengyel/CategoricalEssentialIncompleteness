@@ -1,0 +1,80 @@
+[
+  {
+    "path": "Lean/FailureOfComposition/GeneratedWitnessPointwise.lean",
+    "source_git_blob": "cbff57d431daf1ae1c8223d85a74222e81273e4f",
+    "patched_git_blob": "5026fa0d8e2a1576316eadb9d2031080856f821e",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeSubstitution.lean",
+    "source_git_blob": "905d707581f58040d5cbb78f2adce716fa4525ec",
+    "patched_git_blob": "3c33e28e30a798be8ba9397eca8eeddbb844cd98",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedChoice.lean",
+    "source_git_blob": "24050d5fb0210e157626fbdac9779f2c80b69951",
+    "patched_git_blob": "70b69174115ffc6349e474a2987bdbd2a39f5611",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedCoproducts.lean",
+    "source_git_blob": "5bafcf0e574cc172f13d618149e1eb73b1e1df3a",
+    "patched_git_blob": "ecf0975a29f06113689591ed459391e261a9ba32",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/FailureOfComposition/Verification/CheckAxioms.lean",
+    "source_git_blob": "0a6b54a6ccb57a09f456fc1db196432b469f9010",
+    "patched_git_blob": "83fdf337212cf9c17a935bd5dbfb78a344ae50ba",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/Metamath/Feferman/MPSequence.lean",
+    "source_git_blob": "c435afbf83ed643bfc032b70ee7c82e19f09b2ff",
+    "patched_git_blob": "802806d44ed4df1e0587308b7898c890439fcd5c",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/PCats/Coproducts.lean",
+    "source_git_blob": "753d90e38ee2b2706b5514485fc2586388526db8",
+    "patched_git_blob": "b59cea340884a7d616cb78f553009d447db9ceb3",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/PCats/OptionKleisli.lean",
+    "source_git_blob": "4772295ba4964cf6e6403026fa9f018a015baf36",
+    "patched_git_blob": "cad3c0bdfc58fce609c467dd9a8eacb9d85e5a89",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/PCats/PCat.lean",
+    "source_git_blob": "f9e174b3baa0e8661ec42a509f02567fac2e0717",
+    "patched_git_blob": "b8f16ade91c2e278cbc9b9ab5f7f2f7152df3af5",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/Tests/FefermanMPSequenceRegression.lean",
+    "source_git_blob": "d628f283902991cce25e5aff9c72a49d54cd33ee",
+    "patched_git_blob": "880120a000d80b45adae6d787837bab05b8862be",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/check_axioms.lean",
+    "source_git_blob": "2b981bb7c10b0115fee714ba5398ae7cd25798f1",
+    "patched_git_blob": "f51305b5499856d4c4e466d9fd8f28431cc44d80",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/ArithmeticInterface.lean",
+    "source_git_blob": "c8aef5a888be2a563a7a80d998b62c3cd3a536c3",
+    "patched_git_blob": "9e210b0ff0898e64fd79578fb8a331ff70a40366",
+    "noncomment_source_unchanged": true
+  },
+  {
+    "path": "Lean/Metamath/Feferman/ProofCode.lean",
+    "source_git_blob": "060eb33685e6ef94bbbc8ba582256519fa6d5fe0",
+    "patched_git_blob": "367bcd3716ff73c92d22a0c00d7428396953146a",
+    "noncomment_source_unchanged": true
+  }
+]

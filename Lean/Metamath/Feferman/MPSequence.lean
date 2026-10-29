@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 import Mathlib.Computability.Primrec.List
 
 /-!
-# Feferman MP-only proof sequences, at the string and list level
+# Feferman proof sequences with modus ponens as the sole inference rule
 
 Feferman, *Arithmetization of Metamathematics in a General Setting*,
 Fund. Math. 49 (1960), §2(c), p. 44: a proof is a finite sequence of formulas
@@ -23,13 +23,13 @@ with a proof of `a`, and `proofList_mp` is the external preservation theorem.
 Three levels are kept apart. This module occupies the first two.
 
 * `Token = ℕ`, `FormulaString = List Token` — finite token strings.
-* `ProofSequence = List FormulaString` — proof bookkeeping.
+* `ProofSequence = List FormulaString` — finite sequences of candidate formulas.
 * natural-number codes — **not** in this module; see the boundary note below.
 
 A `FormulaString` is a *candidate* formula string. Whether it is a formula is
 decided by the `formula` predicate of a `SyntaxPresentation`, not by the type.
 
-No `String`, no UTF-8, no prime-power coding. `impString` is self-delimiting:
+`impString` is self-delimiting:
 `impString a b` records the tag, the length of the antecedent, and then the
 concatenation, so the antecedent and consequent are recoverable by taking and
 dropping. That is what lets the later numeric `mp` recover `b` from the final
@@ -64,7 +64,7 @@ certificate.
 
 `Primrec.list_cons`, `list_length`, `list_append`, `list_concat`, `list_take`,
 `list_drop`, `list_getD`, `list_reverse`, `list_head?`, from
-`Mathlib/Computability/Primrec/List.lean` at Mathlib `905b958`, together with
+`Mathlib/Computability/Primrec/List.lean` together with
 `Primrec.option_getD`. `List.take` and `List.drop` are `Primrec₂` in the
 argument order `(n, l)`.
 
@@ -83,8 +83,7 @@ constructed here.
 It does **not** supply natural-number proof codes, `Proof_T : ℕ → ℕ → Prop`,
 primitive recursiveness of the coded proof predicate, Feferman's concrete
 `Fm_K` or the ten logical-axiom schemata `Ax_K`, substitution, or any
-arithmetic internalization. Feferman §2(c) is not complete, and no assertion of
-Appendix B of the manuscript has yet been formalized.
+arithmetic internalization.
 -/
 
 namespace Metamath.Feferman

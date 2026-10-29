@@ -96,7 +96,7 @@ theorem total_comp {T : V} {X Y Z : O} (f : T ⟶ H.hom X Y) (g : T ⟶ H.hom Y 
     (hf : R.restrict f = H.identity X) (hg : R.restrict g = H.identity Y) :
     R.restrict (H.comp f g) = H.identity X := (R.restrict_comp_of_total f g hg).trans hf
 
-/-- The manuscript's actual equalizer `E_X`. -/
+/-- The manuscript's equalizer `E_X`. -/
 abbrev domainObject (X : O) : V := equalizer (R.restriction X X) (𝟙 (H.hom X X))
 def domainι (X : O) : R.domainObject X ⟶ H.hom X X := equalizer.ι _ _
 
@@ -122,7 +122,7 @@ def domainPointsEquiv (T : V) (X : O) :
   left_inv e := by apply (cancel_mono (R.domainι X)).mp; simp
   right_inv e := by apply Subtype.ext; simp
 
-/-- The manuscript's actual pullback `T(X,Y)`. -/
+/-- The manuscript's pullback `T(X,Y)`. -/
 abbrev totalObject (X Y : O) : V := pullback (R.restriction X Y) (H.unit X)
 def totalι (X Y : O) : R.totalObject X Y ⟶ H.hom X Y := pullback.fst _ _
 

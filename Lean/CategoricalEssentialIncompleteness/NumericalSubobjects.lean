@@ -13,7 +13,7 @@ import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
 
 An arbitrary inclusion of supports is a monomorphism between equality PERs.
 Its subobject order reflects precisely inclusion of supports. Restriction
-domains therefore embed into genuine PER subobjects, with image exactly the
+domains therefore embed into PER subobjects, with image exactly the
 c.e. support inclusions.
 -/
 
@@ -23,7 +23,8 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace NumericalPER
 
-def inclusionTracker {A B : Set ℕ} (h : A ⊆ B) : Tracker (discrete A) (discrete B) where
+def inclusionRepresentative {A B : Set ℕ} (h : A ⊆ B) :
+    Representative (discrete A) (discrete B) where
   val := Part.some
   computable := Partrec.some
   total := fun _ _ ↦ Part.some_dom _
@@ -34,7 +35,7 @@ def inclusionTracker {A B : Set ℕ} (h : A ⊆ B) : Tracker (discrete A) (discr
     exact ⟨h hn.1, hn.2⟩
 
 def inclusion {A B : Set ℕ} (h : A ⊆ B) : discrete A ⟶ discrete B :=
-  ofTracker (inclusionTracker h)
+  ofRepresentative (inclusionRepresentative h)
 
 @[simp] theorem inclusion_comp {A B C : Set ℕ} (h : A ⊆ B) (k : B ⊆ C) :
     inclusion h ≫ inclusion k = inclusion (h.trans k) := by
@@ -49,12 +50,13 @@ instance inclusion_mono {A B : Set ℕ} (h : A ⊆ B) : Mono (inclusion h) where
       induction g using Quotient.inductionOn with | _ g =>
         apply (discrete_arrow_eq_iff f g).mpr
         have hv := (discrete_arrow_eq_iff
-          (Tracker.compose f (inclusionTracker h))
-          (Tracker.compose g (inclusionTracker h))).mp heq
+          (Representative.compose f (inclusionRepresentative h))
+          (Representative.compose g (inclusionRepresentative h))).mp heq
         intro n hn
-        simpa only [Tracker.compose, inclusionTracker, Part.bind_some_right] using hv n hn
+        simpa only [Representative.compose, inclusionRepresentative, Part.bind_some_right]
+          using hv n hn
 
-/-- The genuine categorical subobject defined by an arbitrary support inclusion. -/
+/-- The categorical subobject defined by an arbitrary support inclusion. -/
 def supportSubobject {X : Set ℕ} (A : Set ℕ) (hA : A ⊆ X) : Subobject (discrete X) :=
   Subobject.mk (inclusion hA)
 
@@ -68,10 +70,11 @@ theorem supportSubobject_le_iff {X A B : Set ℕ} (hA : A ⊆ X) (hB : B ⊆ X) 
     induction f using Quotient.inductionOn with | _ f =>
       intro hf
       have hv := (discrete_arrow_eq_iff
-        (Tracker.compose f (inclusionTracker hB)) (inclusionTracker hA)).mp hf
+        (Representative.compose f (inclusionRepresentative hB)) (inclusionRepresentative hA)).mp hf
       intro n hn
       have he : f.val n = Part.some n := by
-        simpa only [Tracker.compose, inclusionTracker, Part.bind_some_right] using hv n ⟨hn, rfl⟩
+        simpa only [Representative.compose, inclusionRepresentative, Part.bind_some_right]
+          using hv n ⟨hn, rfl⟩
       exact f.output_supported ⟨hn, rfl⟩ (Part.eq_some_iff.mp he) |>.1
   · intro h
     exact Subobject.mk_le_mk_of_comm (inclusion h) (inclusion_comp h hB)
@@ -85,12 +88,12 @@ theorem supportSubobject_eq_iff {X A B : Set ℕ} (hA : A ⊆ X) (hB : B ⊆ X) 
   · rintro rfl; rfl
 
 
-/-- The inverse-image support of an arbitrary subset under a supported tracker. -/
-def inverseSupport {X Y : Set ℕ} (f : Tracker (discrete X) (discrete Y))
+/-- The inverse-image support of an arbitrary subset under a supported representing function. -/
+def inverseSupport {X Y : Set ℕ} (f : Representative (discrete X) (discrete Y))
     (A : Set ℕ) : Set ℕ := {n | n ∈ X ∧ ∃ m ∈ f.val n, m ∈ A}
 
-def inverseTracker {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete Y)) :
-    Tracker (discrete (inverseSupport f A)) (discrete A) where
+def inverseRepresentative {X Y A : Set ℕ} (f : Representative (discrete X) (discrete Y)) :
+    Representative (discrete (inverseSupport f A)) (discrete A) where
   val := f.val
   computable := f.computable
   total := by
@@ -104,57 +107,58 @@ def inverseTracker {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete Y)) :
     have hka := Part.mem_unique hk ha
     exact ⟨hka ▸ hkA, Part.mem_unique ha hb⟩
 
-theorem inverse_square {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete Y))
+theorem inverse_square {X Y A : Set ℕ} (f : Representative (discrete X) (discrete Y))
     (hA : A ⊆ Y) :
-    inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1) ≫ ofTracker f =
-      ofTracker (inverseTracker f) ≫ inclusion hA := by
+    inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1) ≫ ofRepresentative f =
+      ofRepresentative (inverseRepresentative f) ≫ inclusion hA := by
   apply (discrete_arrow_eq_iff _ _).mpr
   intro n _
   change (Part.some n).bind f.val = (f.val n).bind Part.some
   simp
 
-theorem inverse_lift {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete Y))
+theorem inverse_lift {X Y A : Set ℕ} (f : Representative (discrete X) (discrete Y))
     (hA : A ⊆ Y) {R : NumericalPER} (p : R ⟶ discrete X) (q : R ⟶ discrete A)
-    (h : p ≫ ofTracker f = q ≫ inclusion hA) :
+    (h : p ≫ ofRepresentative f = q ≫ inclusion hA) :
     ∃ l : R ⟶ discrete (inverseSupport f A),
       l ≫ inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1) = p ∧
-      l ≫ ofTracker (inverseTracker f) = q := by
+      l ≫ ofRepresentative (inverseRepresentative f) = q := by
   induction p using Quotient.inductionOn with | _ p =>
     induction q using Quotient.inductionOn with | _ q =>
       have hv := (discrete_arrow_eq_iff
-        (Tracker.compose p f) (Tracker.compose q (inclusionTracker hA))).mp h
+        (Representative.compose p f) (Representative.compose q (inclusionRepresentative hA))).mp h
       have hs : ∀ n ∈ R.support, ∀ a ∈ p.val n, a ∈ inverseSupport f A := by
         intro n hn a ha
         have hq := Part.get_mem (q.total n hn)
         have he : (p.val n).bind f.val = q.val n := by
-          simpa only [Tracker.compose, inclusionTracker, Part.bind_some_right] using hv n hn
+          simpa only [Representative.compose, inclusionRepresentative, Part.bind_some_right]
+            using hv n hn
         have hc : (q.val n).get (q.total n hn) ∈ (p.val n).bind f.val := he.symm ▸ hq
         obtain ⟨b, hb, hc⟩ := Part.mem_bind_iff.mp hc
         have hba := Part.mem_unique hb ha
         subst b
         exact ⟨(p.output_supported hn ha).1, _, hc, (q.output_supported hn hq).1⟩
-      let l : Tracker R (discrete (inverseSupport f A)) :=
+      let l : Representative R (discrete (inverseSupport f A)) :=
         { val := p.val
           computable := p.computable
           total := p.total
           respects := fun h ha hb ↦ ⟨hs _ (supported_left h) _ ha, (p.respects h ha hb).2⟩ }
-      have hl : ofTracker l ≫
-          inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1) = ofTracker p := by
+      have hl : ofRepresentative l ≫
+          inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1) = ofRepresentative p := by
         apply (discrete_arrow_eq_iff _ _).mpr
         intro n _
         exact Part.bind_some_right (p.val n)
-      refine ⟨ofTracker l, hl, ?_⟩
+      refine ⟨ofRepresentative l, hl, ?_⟩
       apply (cancel_mono (inclusion hA)).mp
       rw [Category.assoc, ← inverse_square f hA, ← Category.assoc, hl]
       exact h
 
 /-- The support inverse-image square has the full categorical pullback property. -/
-theorem inverse_isPullback {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete Y))
+theorem inverse_isPullback {X Y A : Set ℕ} (f : Representative (discrete X) (discrete Y))
     (hA : A ⊆ Y) :
     IsPullback
       (inclusion (show inverseSupport f A ⊆ X from fun _ h ↦ h.1))
-      (ofTracker (inverseTracker f)) (ofTracker f) (inclusion hA) := by
-  have hl := fun s : PullbackCone (ofTracker f) (inclusion hA) ↦
+      (ofRepresentative (inverseRepresentative f)) (ofRepresentative f) (inclusion hA) := by
+  have hl := fun s : PullbackCone (ofRepresentative f) (inclusion hA) ↦
     inverse_lift f hA s.fst s.snd s.condition
   exact IsPullback.of_isLimit (PullbackCone.IsLimit.mk (inverse_square f hA)
     (fun s ↦ (hl s).choose)
@@ -165,7 +169,7 @@ theorem inverse_isPullback {X Y A : Set ℕ} (f : Tracker (discrete X) (discrete
 end NumericalPER
 namespace Numerical
 
-/-- The support inclusion associated with an actual numerical restriction idempotent. -/
+/-- The support inclusion associated with an numerical restriction idempotent. -/
 def domainSubobject (X : Numerical) : Domain X ↪o Subobject (NumericalPER.discrete X.carrier) where
   toFun e := NumericalPER.supportSubobject e.support
     (fun _ hn ↦ e.hom.source (Part.get_mem hn))
@@ -188,7 +192,7 @@ theorem supportSubobject_in_range_iff {X : Numerical} (A : Set ℕ) (hA : A ⊆ 
 /-- The support comparison identifies restriction inverse image with the PER pullback support. -/
 theorem domainInverse_support_comparison {X Y : Total} (f : X ⟶ Y) (e : Domain Y.obj) :
     (domainInverse f.hom e).support =
-      NumericalPER.inverseSupport (totalTracker f) e.support := by
+      NumericalPER.inverseSupport (totalRepresentative f) e.support := by
   rw [domainInverse_support]
   ext n
   constructor

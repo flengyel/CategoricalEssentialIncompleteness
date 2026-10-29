@@ -5,7 +5,7 @@ Lean development toward the proof of categorical essential incompleteness in
 
 ## Manuscript
 
-Version 16 is included unchanged:
+Version 16 is included with editorial revisions dated 28 October 2026:
 
 - [PDF](manuscript/definability_comparison_v16.pdf)
 - [LaTeX source](manuscript/definability_comparison_v16.tex)
@@ -23,12 +23,12 @@ total-arrow operations, and restriction inverse image. It proves the internal
 factorization `Sep → Z_U`, identifies global total arrows with `Tot(K₀)`, and
 identifies global domains with ordinary restriction idempotents. The predicate
 identification gives a natural isomorphism of presheaves and a natural
-injective bounded lattice map from domains to actual subobjects. The internal
+injective bounded lattice map from domains to subobjects. The internal
 section also supplies the external diagonal representation equations.
 
 The Boolean-presentation lemma is proved: consistency is equivalent to the
 bound copairing being monic, completeness to its being a regular epimorphism,
-and both together to its being an isomorphism. The quotient argument now also
+and both together to its being an isomorphism. The quotient argument also
 proves that the bound copairing is not a regular epimorphism.
 
 Characteristic arrows for complementary subobjects and the internal Boolean
@@ -41,16 +41,18 @@ indexing structure is unused; a single record bundling all of that structure
 is not yet provided.
 
 The numerical restriction category and the category of arbitrary PERs on
-`ℕ` are now constructed. The functor from total numerical arrows to equality
-PERs is full and faithful. Restriction domains correspond to c.e. supports,
+`ℕ` are constructed. The functor from total numerical arrows to equality
+PERs is full and faithful and preserves binary products. The PER category has
+finite limits and regular-epimorphism/monomorphism factorizations; every kernel
+pair has a coequalizer. Restriction domains correspond to c.e. supports,
 and complementary domains on `ℕ` correspond exactly to recursive sets.
-Support inclusions are genuine subobjects with the stated order and pullback
+Support inclusions are subobjects with the stated order and pullback
 properties; dovetailing proves that c.e. unions are their categorical joins.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-Numerical products and their preservation, the remaining regular extensive
-PER structure, and the arithmetic syntax/provability comparisons remain open; see
+Pullback stability of PER regular epimorphisms, coproducts and extensivity,
+and the arithmetic syntax and provability comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -137,17 +139,17 @@ python3 scripts/verify.py
 
 The toolchain file selects Lean `4.35.0-rc2` automatically through `elan`; the
 manifest pins every dependency. The script uses one Lean thread by default,
-checks the imported source hashes and dependency revisions, builds
+checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 141 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (152 in total). Only
+declarations, and 168 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (179 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 152 axiom audits.
+PASS: project build, dependency pins, source hashes, and 179 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -159,7 +161,10 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The numerical-category and support-comparison evidence is in
+is ignored by Git. The product, finite-limit, and regular-image evidence and
+the editorial review are in
+[`Audit/2026-10-28-per-limits/`](Audit/2026-10-28-per-limits/).
+The numerical-category and support-comparison evidence is in
 [`Audit/2026-10-28-numerical-supports/`](Audit/2026-10-28-numerical-supports/).
 The global-comparison and categorical-theorem evidence is in
 [`Audit/2026-10-28-global-comparison/`](Audit/2026-10-28-global-comparison/).
@@ -184,7 +189,7 @@ in [`HOST_BUILD.md`](HOST_BUILD.md). Ordinary Linux and WSL 2 builds do not need
 The entry point imports `PCats`, `RiceShapiro`, `Metamath`, `Arith`,
 `CategoricalRiceShapiro`, `FailureOfComposition`, and the nine proved solution
 declarations. It checks that the concrete typed arithmetic category instantiates
-the existing `PRecursionCategory` interface and that its packaged evaluator
+the existing `PRecursionCategory` interface and that its evaluator
 satisfies the Turing factorization property. Imported libraries retain their
 existing module names.
 
@@ -197,7 +202,8 @@ existing module names.
 
 [`SOURCE_PINS.json`](SOURCE_PINS.json) records the original Git blob hash of each
 imported file. [`LOCAL_PATCHES.json`](LOCAL_PATCHES.json) records the proof
-compatibility repair and root-package rename with exact before/after hashes.
+compatibility repair, root-package rename, thirteen comment-only imported-source
+revisions, and manuscript revisions with exact before/after hashes.
 The root Lake configuration adds this project's entry point.
 
 The Rice–Shapiro tree supplies the shared sources. Two shared Lean files differ

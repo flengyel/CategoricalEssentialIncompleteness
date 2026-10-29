@@ -148,12 +148,12 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.Numerical.complementary_support_recursive",
     "CategoricalEssentialIncompleteness.Numerical.recursive_iff_complemented_support",
     "CategoricalEssentialIncompleteness.NumericalPER.perCategory",
-    "CategoricalEssentialIncompleteness.NumericalPER.ofTracker_eq_iff",
+    "CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative_eq_iff",
     "CategoricalEssentialIncompleteness.NumericalPER.discrete_arrow_eq_iff",
     "CategoricalEssentialIncompleteness.Numerical.toPER",
     "CategoricalEssentialIncompleteness.Numerical.toPER_faithful",
     "CategoricalEssentialIncompleteness.Numerical.toPER_full",
-    "CategoricalEssentialIncompleteness.Numerical.ofDiscreteTracker_total",
+    "CategoricalEssentialIncompleteness.Numerical.ofDiscreteRepresentative_total",
     "CategoricalEssentialIncompleteness.Numerical.natFunction_computable",
     "CategoricalEssentialIncompleteness.Numerical.natArrow_natFunction",
     "CategoricalEssentialIncompleteness.NumericalPER.inclusion_mono",
@@ -169,6 +169,33 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.Numerical.separatesSupports_iff",
     "CategoricalEssentialIncompleteness.Numerical.exists_separator_iff",
     "CategoricalEssentialIncompleteness.Numerical.no_separator_iff_recursively_inseparable",
+    "CategoricalEssentialIncompleteness.NumericalPER.pair_fst",
+    "CategoricalEssentialIncompleteness.NumericalPER.pair_snd",
+    "CategoricalEssentialIncompleteness.NumericalPER.product_hom_ext",
+    "CategoricalEssentialIncompleteness.NumericalPER.productIsLimit",
+    "CategoricalEssentialIncompleteness.NumericalPER.perHasBinaryProducts",
+    "CategoricalEssentialIncompleteness.NumericalPER.relationIso",
+    "CategoricalEssentialIncompleteness.Numerical.product",
+    "CategoricalEssentialIncompleteness.Numerical.productIso",
+    "CategoricalEssentialIncompleteness.Numerical.productIso_hom_fst",
+    "CategoricalEssentialIncompleteness.Numerical.productIso_hom_snd",
+    "CategoricalEssentialIncompleteness.Numerical.productMapIsLimit",
+    "CategoricalEssentialIncompleteness.Numerical.productIsLimit",
+    "CategoricalEssentialIncompleteness.Numerical.totalHasBinaryProducts",
+    "CategoricalEssentialIncompleteness.Numerical.toPER_preservesBinaryProducts",
+    "CategoricalEssentialIncompleteness.NumericalPER.unitIsTerminal",
+    "CategoricalEssentialIncompleteness.NumericalPER.subsetInclusion_mono",
+    "CategoricalEssentialIncompleteness.NumericalPER.equalizer_condition",
+    "CategoricalEssentialIncompleteness.NumericalPER.equalizer_existsUnique",
+    "CategoricalEssentialIncompleteness.NumericalPER.equalizerIsLimit",
+    "CategoricalEssentialIncompleteness.NumericalPER.perHasFiniteLimits",
+    "CategoricalEssentialIncompleteness.NumericalPER.relationRegularEpi",
+    "CategoricalEssentialIncompleteness.NumericalPER.imageQuotient_regularEpi",
+    "CategoricalEssentialIncompleteness.NumericalPER.imageInclusion_mono",
+    "CategoricalEssentialIncompleteness.NumericalPER.image_factorization",
+    "CategoricalEssentialIncompleteness.NumericalPER.imageFactorisation",
+    "CategoricalEssentialIncompleteness.NumericalPER.perHasStrongEpiMonoFactorisations",
+    "CategoricalEssentialIncompleteness.NumericalPER.hasCoequalizer_of_isKernelPair",
 ]
 
 
@@ -226,6 +253,22 @@ def main() -> int:
         report["source_mismatches"] = mismatches
         if mismatches:
             raise RuntimeError("Imported sources differ from their pins: " + ", ".join(mismatches))
+
+        manuscript = json.loads((ROOT / "MANUSCRIPT_SOURCE.json").read_text())
+        manuscript_files = []
+        for record in manuscript["files"]:
+            expected = record["git_blob"]
+            patch = patch_by_path.get(record["path"])
+            if patch:
+                if patch["source_git_blob"] != expected:
+                    raise RuntimeError("Manuscript provenance mismatch: " + record["path"])
+                expected = patch["patched_git_blob"]
+            actual = git_blob((ROOT / record["path"]).read_bytes())
+            if actual != expected:
+                raise RuntimeError("Manuscript differs from its recorded hash: " + record["path"])
+            manuscript_files.append({"path": record["path"], "expected": expected,
+                                     "actual": actual})
+        report["manuscript_files"] = manuscript_files
 
         report["lean_version"] = run(["lean", "--version"], "lean-version.log").strip()
         if "version 4.35.0-rc2," not in report["lean_version"]:

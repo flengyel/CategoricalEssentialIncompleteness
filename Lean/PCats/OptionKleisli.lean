@@ -10,9 +10,6 @@ import PCats.Recursion
 /-!
 # The Kleisli category of `Option`
 
-A concrete model, so that the axioms of `PCategoryStruct` and `PCategory` are
-known to be satisfiable and the theorems proved from them are not vacuous.
-
 Objects are types and morphisms are `X → Option Y`, with composition
 `fun x => (f x).bind g` and identity `some`; this is the Kleisli category of the
 `Option` monad. Because `f x = none` is a decidable test, these are the partial
@@ -28,10 +25,9 @@ to a case split with no library lemmas involved.
 
 The near product is the Cartesian product of types, which is not a categorical
 product here: `p₀ (f ⊠ g)` is undefined wherever `g` is, so it differs from
-`f p₀`. That failure is what `p0_nat_of_isTotal` repairs by assuming `g` total,
-and this model is where it can be seen. The coproduct, by contrast, is the
-disjoint union and is a genuine coproduct, which is why `existsUnique_copair`
-carries no totality hypothesis.
+`f p₀`. That failure is what `p0_nat_of_isTotal` repairs by assuming `g` total.
+The disjoint union satisfies the coproduct universal property without a
+totality hypothesis, as expressed by `existsUnique_copair`.
 
 Each instance field is proved by splitting on the `Option` values of the
 morphisms at the relevant arguments. For a split to substitute anything, the
@@ -308,10 +304,10 @@ The dependent sum `Σ n, Uₙ`. Everything is a case split on `Sigma`, with a
 further split on an `Option` value only where a morphism is applied, exactly as
 for the binary coproduct.
 
-This is the model the countable-coproduct classes lacked. It witnesses
-`NCoprodStruct`, `HasNCoproducts` and `CountablyDistributive`; it does not
-witness the manuscript's full `rPΣ`-structure, which also wants ranges and
-`IsRP`, and those `OptionKleisli` has only classically. -/
+The dependent sum supplies `NCoprodStruct`, `HasNCoproducts`, and
+`CountablyDistributive` instances. The manuscript's `rPΣ`-structure also
+requires ranges and `IsRP`; the corresponding constructions for
+`OptionKleisli` use classical logic. -/
 
 instance : NCoprodStruct OptionKleisli.{u} where
   ncoprod U := of (Σ n : ℕ, U n)

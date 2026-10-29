@@ -49,7 +49,7 @@ private theorem history_output_at_numerals (e s x z : ℕ)
   rw [heq] at htr
   exact htr
 
-/-- A fixed standard stage can only return its genuine standard output in
+/-- A fixed standard stage can only return its standard output in
 any PA model. Standard agreement then supplies the second graph at that output. -/
 private theorem standard_stage_implies_graph (e : ℕ) (G : Graph)
     (hExt : Extensional (eventualGraph e) G) (s x : ℕ)

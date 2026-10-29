@@ -36,7 +36,7 @@ different head constants, so `rw` and `simp` cannot cross between them —
   Every lemma statement here uses it.
 * To use a `RestrictionCategory` lemma, restate it with an explicit type
   ascription and let `exact` cross the definitional equality. The primed names
-  below are exactly these bridges: `rst_comp_rst_right'`, together with the
+  below are exactly these restatements: `rst_comp_rst_right'`, together with the
   R2/R3/R4 lemmas `rst_comm'`, `rst_comp_rst'`, `rst_comp'`, which run the
   other way.
 * Never repair a spelling mismatch with `rw [restrictionCategory_rst]`; it
@@ -269,8 +269,8 @@ lemma partialPairing_assoc {X Y Z : C} (f : X ⟶ Y) (g : X ⟶ Z) :
 
 /-! ### The three remaining restriction axioms -/
 
-/-- `rst ⟨f, g⟩ = rst g rst f`.  This is the crux; everything below is
-bookkeeping. -/
+/-- The restriction of a pairing is the product of the two restrictions:
+`rst ⟨f, g⟩ = rst g rst f`. -/
 lemma rst_partialPairing_eq {X Y Z : C} (f : X ⟶ Y) (g : X ⟶ Z) :
     rst (partialPairing f g) = rst g ≫ rst f := by
   rw [rst_eq_partialPairing, ← partialPairing_assoc, Category.assoc, assoc_p0,

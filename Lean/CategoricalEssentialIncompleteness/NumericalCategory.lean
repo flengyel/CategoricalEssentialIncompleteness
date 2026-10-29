@@ -12,8 +12,7 @@ import Mathlib.Data.Set.Finite.Basic
 
 Objects are infinite recursive subsets of `ℕ`. An arrow is a partial recursive
 function on `ℕ` whose domain is contained in the source and whose values belong
-to the target. Equality is equality of partial functions. Thus an arrow is
-undefined outside its source, rather than retaining irrelevant tracker values.
+to the target. Equality is equality of partial functions.
 Composition is diagrammatic.
 -/
 

@@ -1,0 +1,102 @@
+@CategoricalEssentialIncompleteness.NumericalPER.pair_fst : ∀ {T R S : CategoricalEssentialIncompleteness.NumericalPER}
+  (f : T ⟶ R) (g : T ⟶ S),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.pair f g) (R.fst S) = f
+@CategoricalEssentialIncompleteness.NumericalPER.pair_snd : ∀ {T R S : CategoricalEssentialIncompleteness.NumericalPER}
+  (f : T ⟶ R) (g : T ⟶ S),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.pair f g) (R.snd S) = g
+@CategoricalEssentialIncompleteness.NumericalPER.product_hom_ext : ∀
+  {T R S : CategoricalEssentialIncompleteness.NumericalPER} {f g : T ⟶ R.product S},
+  CategoryTheory.CategoryStruct.comp f (R.fst S) = CategoryTheory.CategoryStruct.comp g (R.fst S) →
+    CategoryTheory.CategoryStruct.comp f (R.snd S) = CategoryTheory.CategoryStruct.comp g (R.snd S) → f = g
+CategoricalEssentialIncompleteness.NumericalPER.productIsLimit : (R S :
+    CategoricalEssentialIncompleteness.NumericalPER) →
+  CategoryTheory.Limits.IsLimit (CategoryTheory.Limits.BinaryFan.mk (R.fst S) (R.snd S))
+CategoricalEssentialIncompleteness.NumericalPER.perHasBinaryProducts : CategoryTheory.Limits.HasBinaryProducts
+  CategoricalEssentialIncompleteness.NumericalPER
+CategoricalEssentialIncompleteness.NumericalPER.relationIso : (R S : CategoricalEssentialIncompleteness.NumericalPER) →
+  (∀ (n m : ℕ), R.rel n m ↔ S.rel n m) → (R ≅ S)
+CategoricalEssentialIncompleteness.Numerical.product : CategoricalEssentialIncompleteness.Numerical →
+  CategoricalEssentialIncompleteness.Numerical → CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.productIso : (X Y : CategoricalEssentialIncompleteness.Numerical.Total) →
+  CategoricalEssentialIncompleteness.Numerical.toPER.obj
+      (CategoricalEssentialIncompleteness.Numerical.totalProduct X Y) ≅
+    (CategoricalEssentialIncompleteness.Numerical.toPER.obj X).product
+      (CategoricalEssentialIncompleteness.Numerical.toPER.obj Y)
+CategoricalEssentialIncompleteness.Numerical.productIso_hom_fst : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical.Total),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.productIso X Y).hom
+      ((CategoricalEssentialIncompleteness.Numerical.toPER.obj X).fst
+        (CategoricalEssentialIncompleteness.Numerical.toPER.obj Y)) =
+    CategoricalEssentialIncompleteness.Numerical.toPER.map (CategoricalEssentialIncompleteness.Numerical.fst X Y)
+CategoricalEssentialIncompleteness.Numerical.productIso_hom_snd : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical.Total),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.productIso X Y).hom
+      ((CategoricalEssentialIncompleteness.Numerical.toPER.obj X).snd
+        (CategoricalEssentialIncompleteness.Numerical.toPER.obj Y)) =
+    CategoricalEssentialIncompleteness.Numerical.toPER.map (CategoricalEssentialIncompleteness.Numerical.snd X Y)
+CategoricalEssentialIncompleteness.Numerical.productMapIsLimit : (X Y :
+    CategoricalEssentialIncompleteness.Numerical.Total) →
+  CategoryTheory.Limits.IsLimit
+    (CategoryTheory.Limits.BinaryFan.mk
+      (CategoricalEssentialIncompleteness.Numerical.toPER.map (CategoricalEssentialIncompleteness.Numerical.fst X Y))
+      (CategoricalEssentialIncompleteness.Numerical.toPER.map (CategoricalEssentialIncompleteness.Numerical.snd X Y)))
+CategoricalEssentialIncompleteness.Numerical.productIsLimit : (X Y :
+    CategoricalEssentialIncompleteness.Numerical.Total) →
+  CategoryTheory.Limits.IsLimit
+    (CategoryTheory.Limits.BinaryFan.mk (CategoricalEssentialIncompleteness.Numerical.fst X Y)
+      (CategoricalEssentialIncompleteness.Numerical.snd X Y))
+CategoricalEssentialIncompleteness.Numerical.totalHasBinaryProducts : CategoryTheory.Limits.HasBinaryProducts
+  CategoricalEssentialIncompleteness.Numerical.Total
+CategoricalEssentialIncompleteness.Numerical.toPER_preservesBinaryProducts : CategoryTheory.Limits.PreservesLimitsOfShape
+  (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair) CategoricalEssentialIncompleteness.Numerical.toPER
+CategoricalEssentialIncompleteness.NumericalPER.unitIsTerminal : CategoryTheory.Limits.IsTerminal
+  CategoricalEssentialIncompleteness.NumericalPER.unitPER
+CategoricalEssentialIncompleteness.NumericalPER.subsetInclusion_mono : ∀
+  (R : CategoricalEssentialIncompleteness.NumericalPER) (A : Set ℕ), CategoryTheory.Mono (R.subsetInclusion A)
+@CategoricalEssentialIncompleteness.NumericalPER.equalizer_condition : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f g : R.Representative S),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.equalizerInclusion f g)
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f) =
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.equalizerInclusion f g)
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative g)
+@CategoricalEssentialIncompleteness.NumericalPER.equalizer_existsUnique : ∀
+  {T R S : CategoricalEssentialIncompleteness.NumericalPER} (f g : R.Representative S) (h : T ⟶ R),
+  CategoryTheory.CategoryStruct.comp h (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f) =
+      CategoryTheory.CategoryStruct.comp h (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative g) →
+    ∃! l,
+      CategoryTheory.CategoryStruct.comp l (CategoricalEssentialIncompleteness.NumericalPER.equalizerInclusion f g) = h
+@CategoricalEssentialIncompleteness.NumericalPER.equalizerIsLimit : {R S :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f g : R.Representative S) →
+    CategoryTheory.Limits.IsLimit
+      (CategoryTheory.Limits.Fork.ofι (CategoricalEssentialIncompleteness.NumericalPER.equalizerInclusion f g) ⋯)
+CategoricalEssentialIncompleteness.NumericalPER.perHasFiniteLimits : CategoryTheory.Limits.HasFiniteLimits
+  CategoricalEssentialIncompleteness.NumericalPER
+@CategoricalEssentialIncompleteness.NumericalPER.relationRegularEpi : {R S :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (hrel : ∀ (n m : ℕ), R.rel n m → S.rel n m) →
+    S.support ⊆ R.support →
+      CategoryTheory.RegularEpi
+        (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative
+          (CategoricalEssentialIncompleteness.NumericalPER.relationRepresentative hrel))
+@CategoricalEssentialIncompleteness.NumericalPER.imageQuotient_regularEpi : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative S),
+  CategoryTheory.IsRegularEpi (CategoricalEssentialIncompleteness.NumericalPER.imageQuotient f)
+@CategoricalEssentialIncompleteness.NumericalPER.imageInclusion_mono : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative S),
+  CategoryTheory.Mono (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f)
+@CategoricalEssentialIncompleteness.NumericalPER.image_factorization : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative S),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.imageQuotient f)
+      (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f) =
+    CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f
+@CategoricalEssentialIncompleteness.NumericalPER.imageFactorisation : {R S :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f : R.Representative S) →
+    CategoryTheory.Limits.StrongEpiMonoFactorisation
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)
+CategoricalEssentialIncompleteness.NumericalPER.perHasStrongEpiMonoFactorisations : CategoryTheory.Limits.HasStrongEpiMonoFactorisations
+  CategoricalEssentialIncompleteness.NumericalPER
+@CategoricalEssentialIncompleteness.NumericalPER.hasCoequalizer_of_isKernelPair : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} {f : R ⟶ S} {p q : T ⟶ R},
+  CategoryTheory.IsKernelPair f p q → CategoryTheory.Limits.HasCoequalizer p q

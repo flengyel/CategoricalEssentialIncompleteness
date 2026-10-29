@@ -9,7 +9,7 @@ import CategoricalEssentialIncompleteness.NumericalPER
 # The numerical functor into PERs
 
 The total-arrow category of the numerical restriction category maps to equality
-PERs. Restricting a tracker to the recursive source support proves fullness;
+PERs. Restricting a representing function to the recursive source support proves fullness;
 extensional equality of canonical partial maps proves faithfulness.
 -/
 
@@ -23,8 +23,8 @@ abbrev Total := WideSubcategory (RestrictionCategory.isTotal (C := Numerical))
 
 def totalObject (X : Numerical) : Total := ⟨X⟩
 
-def totalTracker {X Y : Total} (f : X ⟶ Y) :
-    NumericalPER.Tracker (NumericalPER.discrete X.obj.carrier)
+def totalRepresentative {X Y : Total} (f : X ⟶ Y) :
+    NumericalPER.Representative (NumericalPER.discrete X.obj.carrier)
       (NumericalPER.discrete Y.obj.carrier) where
   val := f.hom.val
   computable := f.hom.computable
@@ -37,7 +37,7 @@ def totalTracker {X Y : Total} (f : X ⟶ Y) :
 /-- The manuscript's functor J on the numerical total-arrow category. -/
 def toPER : Total ⥤ NumericalPER where
   obj X := NumericalPER.discrete X.obj.carrier
-  map f := NumericalPER.ofTracker (totalTracker f)
+  map f := NumericalPER.ofRepresentative (totalRepresentative f)
   map_id X := by
     apply Quotient.sound
     intro n hn a ha b hb
@@ -49,7 +49,8 @@ def toPER : Total ⥤ NumericalPER where
 instance toPER_faithful : toPER.Faithful where
   map_injective := by
     intro X Y f g h
-    have hv := (NumericalPER.discrete_arrow_eq_iff (totalTracker f) (totalTracker g)).mp h
+    have hv := (NumericalPER.discrete_arrow_eq_iff
+      (totalRepresentative f) (totalRepresentative g)).mp h
     apply WideSubcategory.hom_ext
     apply Hom.ext
     funext n
@@ -59,9 +60,9 @@ instance toPER_faithful : toPER.Faithful where
       intro m
       exact ⟨fun hm ↦ (hn (f.hom.source hm)).elim, fun hm ↦ (hn (g.hom.source hm)).elim⟩
 
-/-- Canonical partial map obtained by restricting a tracker to its source. -/
-def ofDiscreteTracker {X Y : Numerical}
-    (f : NumericalPER.Tracker (NumericalPER.discrete X.carrier)
+/-- Canonical partial map obtained by restricting a representing function to its source. -/
+def ofDiscreteRepresentative {X Y : Numerical}
+    (f : NumericalPER.Representative (NumericalPER.discrete X.carrier)
       (NumericalPER.discrete Y.carrier)) : X ⟶ Y where
   val n := (supportIdentity X.carrier n).bind f.val
   computable := (supportIdentity_partrec _ X.recursive.to_re).bind
@@ -76,10 +77,10 @@ def ofDiscreteTracker {X Y : Numerical}
     obtain ⟨hn, rfl⟩ := (mem_supportIdentity _ _ _).mp hk
     exact f.output_supported ⟨hn, rfl⟩ hm |>.1
 
-theorem ofDiscreteTracker_total {X Y : Numerical}
-    (f : NumericalPER.Tracker (NumericalPER.discrete X.carrier)
+theorem ofDiscreteRepresentative_total {X Y : Numerical}
+    (f : NumericalPER.Representative (NumericalPER.discrete X.carrier)
       (NumericalPER.discrete Y.carrier)) :
-    RestrictionCategory.isTotal (ofDiscreteTracker f) := by
+    RestrictionCategory.isTotal (ofDiscreteRepresentative f) := by
   apply (total_iff _).mpr
   intro n hn
   change ((supportIdentity X.carrier n).bind f.val).Dom
@@ -90,7 +91,7 @@ instance toPER_full : toPER.Full where
   map_surjective := by
     intro X Y f
     induction f using Quotient.inductionOn with | _ f =>
-      refine ⟨⟨ofDiscreteTracker f, ofDiscreteTracker_total f⟩, ?_⟩
+      refine ⟨⟨ofDiscreteRepresentative f, ofDiscreteRepresentative_total f⟩, ?_⟩
       apply NumericalPER.discrete_arrow_eq_iff _ _ |>.mpr
       intro n hn
       change (supportIdentity X.obj.carrier n).bind f.val = f.val n

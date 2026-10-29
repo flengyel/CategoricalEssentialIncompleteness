@@ -8,7 +8,7 @@ import CategoricalEssentialIncompleteness.TwoBoolean
 /-!
 # Complete Boolean extensions and represented decisions
 
-This module compares genuine Boolean quotients with Boolean homomorphisms to
+This module compares Boolean quotients with Boolean homomorphisms to
 the constructed internal algebra `1 + 1`. Characteristic arrows refer to
 particular complementary subobjects, not to arbitrary predicates.
 -/
@@ -73,7 +73,7 @@ end BooleanMorphism
 
 variable {X : C} {L : Type w} [DistribLattice L] [BoundedOrder L]
 
-/-- A represented complementary pair determines actual complementary subobjects. -/
+/-- A represented complementary pair determines complementary subobjects. -/
 def representedPartition (j : BoundedLatticeHom L (Subobject X)) (a : ComplementaryPair L) :
     SubobjectPartition X where
   positive := j a.pos
@@ -84,7 +84,7 @@ def representedPartition (j : BoundedLatticeHom L (Subobject X)) (a : Complement
 
 set_option backward.isDefEq.respectTransparency false in
 /-- Manuscript Proposition `prop:complete-extensions-and-decisions`.
-The map `j` is the embedding of restriction domains into actual subobjects at
+The map `j` is the embedding of restriction domains into subobjects at
 the presentation object, after the manuscript's predicate identification. -/
 theorem complete_extensions_and_decisions
     (j : BoundedLatticeHom L (Subobject X)) (hj : Function.Injective j)
@@ -171,7 +171,7 @@ end PredicateEmbedding
 variable [HasBinaryProducts A]
 
 /-- The external diagonal obstruction excludes every represented Boolean decision.
-The enriched source of the representation data remains a separate construction. -/
+`GlobalRepresentation` derives the representation data from the internal section. -/
 theorem no_represented_boolean_decision (D : DiagonalData E P)
     (hU : (⊥ : E.obj D.U) ≠ ⊤)
     (represent : ∀ a : ComplementaryPair (E.obj D.U), ∃ g, D.Represents a g)

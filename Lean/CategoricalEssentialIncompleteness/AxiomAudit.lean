@@ -3,7 +3,7 @@ import CategoricalEssentialIncompleteness
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, Boolean
 presentation, decision, internal-separator, enriched-restriction, global
-comparison, categorical essential-incompleteness, and numerical support results.
+comparison, categorical essential-incompleteness, numerical support, product, finite-limit, and regular-image results.
 The verification script rejects any axiom other than `propext`,
 `Classical.choice`, and `Quot.sound`. -/
 
@@ -146,12 +146,12 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.Numerical.complementary_support_recursive
 #print axioms CategoricalEssentialIncompleteness.Numerical.recursive_iff_complemented_support
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.perCategory
-#print axioms CategoricalEssentialIncompleteness.NumericalPER.ofTracker_eq_iff
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative_eq_iff
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.discrete_arrow_eq_iff
 #print axioms CategoricalEssentialIncompleteness.Numerical.toPER
 #print axioms CategoricalEssentialIncompleteness.Numerical.toPER_faithful
 #print axioms CategoricalEssentialIncompleteness.Numerical.toPER_full
-#print axioms CategoricalEssentialIncompleteness.Numerical.ofDiscreteTracker_total
+#print axioms CategoricalEssentialIncompleteness.Numerical.ofDiscreteRepresentative_total
 #print axioms CategoricalEssentialIncompleteness.Numerical.natFunction_computable
 #print axioms CategoricalEssentialIncompleteness.Numerical.natArrow_natFunction
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.inclusion_mono
@@ -167,3 +167,31 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.Numerical.separatesSupports_iff
 #print axioms CategoricalEssentialIncompleteness.Numerical.exists_separator_iff
 #print axioms CategoricalEssentialIncompleteness.Numerical.no_separator_iff_recursively_inseparable
+
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.pair_fst
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.pair_snd
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.product_hom_ext
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.productIsLimit
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.perHasBinaryProducts
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.relationIso
+#print axioms CategoricalEssentialIncompleteness.Numerical.product
+#print axioms CategoricalEssentialIncompleteness.Numerical.productIso
+#print axioms CategoricalEssentialIncompleteness.Numerical.productIso_hom_fst
+#print axioms CategoricalEssentialIncompleteness.Numerical.productIso_hom_snd
+#print axioms CategoricalEssentialIncompleteness.Numerical.productMapIsLimit
+#print axioms CategoricalEssentialIncompleteness.Numerical.productIsLimit
+#print axioms CategoricalEssentialIncompleteness.Numerical.totalHasBinaryProducts
+#print axioms CategoricalEssentialIncompleteness.Numerical.toPER_preservesBinaryProducts
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.unitIsTerminal
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.subsetInclusion_mono
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.equalizer_condition
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.equalizer_existsUnique
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.equalizerIsLimit
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.perHasFiniteLimits
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.relationRegularEpi
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.imageQuotient_regularEpi
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.imageInclusion_mono
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.image_factorization
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.imageFactorisation
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.perHasStrongEpiMonoFactorisations
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.hasCoequalizer_of_isKernelPair

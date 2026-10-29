@@ -4,7 +4,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem,xurl,hyperref,needspace}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
-pdftitle={Definability and incompleteness in recursion categories},pdfsubject={Version 16, 27 October 2026}}
+pdftitle={Definability and incompleteness in recursion categories},pdfsubject={Version 16, 28 October 2026}}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -15,7 +15,7 @@ pdftitle={Definability and incompleteness in recursion categories},pdfsubject={V
 \newtheorem{remark}[theorem]{Remark}
 \title{Definability and incompleteness in recursion categories}
 \author{}
-\date{27 October 2026\\Version 16}
+\date{28 October 2026\\Version 16}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -163,9 +163,8 @@ We construct a relative free introspective extension that preserves
 a definability algebra, including its representation operation.
 For the arithmetic introspective structures, quotation and
 consistency supply the numerical representation operation after
-standard interpretation. This construction uses actual totality
-of a decision procedure, without requiring its totality to be
-provable in the arithmetical theory.
+standard interpretation. This construction uses totality of a decision procedure on $\mathbb N$,
+without requiring that totality to be provable in the arithmetical theory.
 
 The numerical definability algebra is enriched over $\mathbf{Set}$;
 its Boolean presentations belong to the c.e. and full categories
@@ -632,8 +631,7 @@ every complemented restriction idempotent. Apply
 Corollary~\ref{thm:integration-diagonal}.
 \end{proof}
 
-The distinction between the fixed objects $U$ and $S$ is
-compatible with the isotype condition on a recursion category.
+Transport along an isomorphism $S\cong U$ preserves the representation equations.
 
 \begin{lemma}\label{lem:sentence-object-transport}
 Let $b:S\to U$ be an isomorphism. Put
@@ -825,13 +823,6 @@ epimorphism. Its presentation $hq=\chi_D$ is consistent and
 complete, with fibers over the Boolean bounds $j_S(D)$ and $j_S(D^c)$.
 \end{proof}
 
-In particular, the hypotheses of
-Theorem~\ref{thm:categorical-essential-incompleteness} exclude every
-Boolean-algebra homomorphism $h:B\to\mathbf2$ whose composite
-with $q$ is the characteristic arrow of a complemented
-restriction idempotent. If every Boolean-algebra homomorphism to
-$\mathbf2$ has this property, there is no such homomorphism.
-
 \section{The numerical interpretation}
 \label{sec:integration-numerical}
 
@@ -854,17 +845,16 @@ inverse image.
 A \emph{partial equivalence relation} (PER) is a symmetric and
 transitive binary relation. We use the PER category of
 \cite[Definition~3.4.1.1]{AspertiLongo}. Let $\mathcal P$ have all PERs on
-$\mathbb N$ as objects, with arrows defined by partial recursive
-trackers as follows. An arrow
+$\mathbb N$ as objects, with arrows defined as follows. An arrow
 $R\to S$ is represented by a partial recursive function $f$ defined
 on $|R|=\{n:nRn\}$ such that $nRm$ implies $f(n)S f(m)$.
-Two trackers define the same arrow if their values are $S$-related
+Two representing functions define the same arrow if their values are $S$-related
 at every supported input. Neither a relation nor its support is
 required to be c.e. For $A\subseteq\mathbb N$, write $D_A$ for
 equality restricted to $A$; tuple coding gives the corresponding
 notation for subsets of numerical objects. The functor
 $J:\mathcal A\to\mathcal P$ sends an object to its equality
-relation and a recursive map to its tracker. It is faithful and
+relation and a recursive map to the arrow it represents. It is faithful and
 preserves binary products; on these objects it is full.
 A partial recursive map $f:X\rightharpoonup Y$ is represented
 by the span $D_X\leftarrow D_{\operatorname{dom}(f)}\to D_Y$.
@@ -874,9 +864,9 @@ partial recursive maps.
 
 To compare $\mathcal P$ with the modest-set presentation, send $R$
 to its set of equivalence classes $|R|/R$, with a class realized
-by its members, and send a tracker $f$ to $[n]\mapsto[f(n)]$.
+by its members, and send an arrow represented by $f$ to $[n]\mapsto[f(n)]$.
 Conversely, the disjoint nonempty realizing sets of a modest set
-define a PER on their union; the same trackers define its arrows.
+define a PER on their union; the same partial recursive functions represent its arrows.
 These assignments give the equivalence with modest sets over
 Kleene's first partial combinatory algebra
 \cite[Proposition~1.2.2]{Bauer}. It transfers the finite-limit,
@@ -906,20 +896,20 @@ the complemented subobjects of $D_{\mathbb N}$.
 \end{lemma}
 \begin{proof}
 A factorization of $i_A$ through $i_B$ must send each $a$ to $a$.
-It exists precisely when $A\subseteq B$, and is then tracked by
+It exists precisely when $A\subseteq B$, and is then represented by
 the identity. For a pullback, restrict the source equality
 relation to $f^{-1}A$; the defining square and its universal
-property use the same trackers as the corresponding maps into
+property use the same representing functions as the corresponding maps into
 $D_X$ and $D_A$. This proves the displayed assertions, naturality,
 and preservation of meets and bounds.
 
 For c.e. sets $A,B$, their categorical join is the image of
 $D_A+D_B\to D_X$. An input in $A\cup B$ can be assigned to a
 summand by dovetailing enumerations of $A$ and $B$ until that
-input appears. This gives a recursive tracker on $A\cup B$ and
+input appears. This gives a partial recursive function defined on $A\cup B$ and
 identifies the image with $D_{A\cup B}$. Hence $j$ preserves
-joins. Finally, a tracker from $D_{\mathbb N}$ to $\mathbf2$
-is a total recursive Boolean function; its pullback of $1$ is
+joins. Finally, a representing function for an arrow from $D_{\mathbb N}$
+to $\mathbf2$ is a total recursive Boolean function; its pullback of $1$ is
 the indicated recursive support inclusion. Conversely every
 recursive subset has such a characteristic function. A complemented
 subobject and its complement give a coproduct decomposition of
@@ -937,8 +927,8 @@ inclusions do not identify the full subobject lattice with a
 powerset.
 
 Let $\mathcal E_{\mathrm{rec}}$ be the full subcategory of $\mathcal P$
-on c.e. PERs. For $R,S$ in this subcategory, a tracker $f:R\to S$
-determines the c.e. relation
+on c.e. PERs. For $R,S$ in this subcategory, a partial recursive function $f$
+representing an arrow $R\to S$ determines the c.e. relation
 \[
  F_f(x,y)\quad\Longleftrightarrow\quad
  xRx,\quad f(x)\downarrow,\quad f(x)S y.
@@ -946,7 +936,7 @@ determines the c.e. relation
 It is saturated under $R$ and $S$, total on $|R|$, and single-valued
 modulo $S$. Conversely, searching a c.e. relation
 $F\subseteq |R|\times |S|$ with these properties for an output
-gives a partial recursive tracker.
+gives a partial recursive function representing an arrow $R\to S$.
 The assignments are inverse on arrows and preserve composition.
 They identify $\mathcal E_{\mathrm{rec}}$ with Lambek and Scott's
 category of c.e. PERs and c.e. functional relations
@@ -983,7 +973,7 @@ of a regular category.
 A restriction idempotent is partial identity on a c.e. set $A$,
 and every c.e. set occurs as such a domain in $\mathbb N$.
 An arrow total relative to this idempotent has domain exactly $A$.
-Conversely, a tracker total on $A$ can be restricted to precisely
+Conversely, a representing function total on $A$ can be restricted to precisely
 $A$ by first waiting for its input to appear in an enumeration
 of $A$. This gives the first equivalence.
 
@@ -1003,7 +993,7 @@ precisely c.e. equivalence relations on c.e. supports.
 The relation construction of exact completion
 \cite{CarboniVitale} has these as objects and saturated total
 single-valued relations as arrows. Its objects are therefore
-c.e. PERs, and the tracker comparison above identifies its
+c.e. PERs, and the comparison by representing functions above identifies its
 arrows with those of $\mathcal E_{\mathrm{rec}}$.
 \end{proof}
 
@@ -1152,10 +1142,10 @@ Define the PER on $S=U=\mathbb N$ by
  bR_Tc\quad\Longleftrightarrow\quad
  T\vdash\sigma_b\leftrightarrow\sigma_c.
 \]
-The identity tracker gives the regular quotient
+The identity function represents the regular quotient
 $q_T:JU\to B_T=(\mathbb N,R_T)$.
 Indeed, its kernel pair is the equality PER on
-$\{(b,c):bR_Tc\}$ with its two projections. A tracker coequalizing
+$\{(b,c):bR_Tc\}$ with its two projections. A partial recursive function representing an arrow that coequalizes
 those projections respects $R_T$ and descends uniquely to $B_T$,
 so $q_T$ is their coequalizer. Negation is represented by the
 recursive function $b\mapsto\beta^{-1}(\ulcorner\neg\sigma_b\urcorner)$;
@@ -1165,7 +1155,7 @@ top and bottom are the theorem and refutation support inclusions.
 Thus they are precisely $p_T^+,p_T^-$.
 For a recursive characteristic map $d:D_{\mathbb N}\to\mathbf2$
 and a formula code $a$, write $s_a:D_{\mathbb N}\to JS$ for the
-arrow tracked by $n\mapsto s(a,n)$.
+arrow represented by $n\mapsto s(a,n)$.
 The formula $\varphi_a$ strongly defines $d^{-1}(1)$ numeralwise
 in $T$ if and only if
 \[
@@ -1190,7 +1180,7 @@ sentences in this inverse image gives a $T$-provable implication from their
 conjunction, and a Boolean homomorphism preserves this order.
 Conversely the recursive characteristic function of a complete
 decidable consistent extension respects $R_T$ and the Boolean
-operations, so is a tracker for the required homomorphism.
+operations, so represents the required homomorphism.
 
 \begin{theorem}[Numerical realization of essential incompleteness]
 \label{thm:integration-essential-equivalence}
@@ -1236,8 +1226,7 @@ equivalence with essential undecidability and essential incompleteness.
 
 Under (i), Corollary~\ref{thm:integration-diagonal} excludes the
 separators in (ii). Every arrow $JS\to\mathbf2$ is the
-characteristic arrow of a recursive subset of $S$, by the same
-tracker argument as in
+characteristic arrow of a recursive subset of $S$, by the same argument with representing functions as in
 Lemma~\ref{lem:integration-numerical-subobjects}. Therefore
 Corollary~\ref{cor:integration-no-boolean-map} excludes the Boolean
 homomorphisms in (iii).
@@ -1253,8 +1242,8 @@ characterization in that category.
 Let $T$ be a consistent classical first-order theory with the
 effective syntax and numeral substitution fixed above.
 For every consistent extension $T'$ of $T$ in the same language,
-the identity on sentence codes induces a regular-epimorphic
-Boolean-algebra homomorphism
+the identity on sentence codes induces a Boolean-algebra homomorphism
+that is a regular epimorphism,
 \[
  r_{T,T'}:B_T\twoheadrightarrow B_{T'},\qquad
  r_{T,T'}q_T=q_{T'}.
@@ -1300,7 +1289,7 @@ closed under deduction: a proof from finitely many sentences
 gives a $T$-provable implication from their conjunction, and
 $h$ preserves conjunction and Boolean order. Since $h$ preserves
 both bounds, this theory is consistent. It is decidable and
-hence c.e. axiomatizable. This proves both implications.
+hence c.e. axiomatizable.
 \end{proof}
 
 \subsection{Extensions of arithmetic}
@@ -1479,11 +1468,14 @@ $D_{G\times D}\hookrightarrow JU$.
 These inclusions preserve and reflect the order on restriction
 idempotents and preserve meets, joins, bounds, and total inverse
 image.  For unions, dovetail enumerations of $D$ and $E$ using
-only the orbit index $n$ to select a coproduct tag.  This gives
-an equivariant recursive witness for the union
-$G\times(D\cup E)$; the choice of tag is independent of the
-group coordinate. Thus they give the lattice embeddings $j$ required
-in Section~\ref{sec:integration}.
+only the orbit index $n$ to choose a coproduct summand. This defines an arrow
+\[
+ D_{G\times(D\cup E)}\longrightarrow D_{G\times D}+D_{G\times E}
+\]
+that sends $(g,n)$ to the chosen summand without changing $(g,n)$.
+The choice is independent of $g$, so the arrow is equivariant.
+Its composite with the copairing of the two inclusions is the inclusion of
+$D_{G\times(D\cup E)}$ into $JU$. Hence $j$ preserves joins.
 
 Fix a consistent c.e. theory $T$ with effective syntax and
 numeral substitution, and suppose every recursive subset of
@@ -1560,7 +1552,7 @@ section for the predicate objects $P_X$.
 
 The object $\mathbf2=1+1$ has trivial action.
 By the definition of arrows between equality PERs, every underlying
-arrow $JU\to\mathbf2$ is tracked by a total recursive Boolean
+arrow $JU\to\mathbf2$ is represented by a total recursive Boolean
 function. Equivariance says its value at $(g,n)$ is independent
 of $g$.  It therefore decides a recursive set of $n$, and its
 two fibers are the images under $j$ of complementary restriction
@@ -2425,15 +2417,14 @@ $T\vdash M_b(\overline p,\overline n)$.
 Thus $(p,n)\in Q_b$ if and only if
 $T\vdash M_b(\overline p,\overline n)$.
 
-Let $p$ be an index of an actual total Boolean function. The map
+Let $p$ be an index of a Boolean program total on $\mathbb N$. The map
 $h_p:\mathbb N\to\mathbb N^2$, given by $h_p(n)=(p,n)$, has
 complementary inverse images of $Fm_0$ and $Fm_1$.
 Lemma~\ref{lem:realized-disjoint-subobjects} gives
 $h_p^*Q_b=h_p^*[Fm_b]$.
-The coverage used here holds in $\mathbf{Set}$ because the
-program terminates with output $0$ or $1$ on every input.
-It therefore applies to every total Boolean program, including
-those whose totality $T$ does not prove.
+The equality $h_p^*[Fm_0]\vee h_p^*[Fm_1]=1_{\mathbb N}$ holds
+because the program terminates with output $0$ or $1$ on every input.
+This uses totality on $\mathbb N$; it does not require a proof of totality in $T$.
 
 The fixed recursive tuple coding identifies the underlying set
 of $U\otimes U$ with $\mathbb N^2=FZ$. Here $U$ is an object
@@ -2688,7 +2679,7 @@ that $b$ halts. Correctness of $d$ also gives a PA proof that
 $b$ does not halt, contradicting consistency.
 If $d(b)=0$, its finite computation record and the loop branch
 give a PA proof that $b$ does not halt, contradicting the
-answer $0$. These are the two possible outputs of $d$.
+answer $0$.
 \end{proof}
 
 Fix the enrichment of

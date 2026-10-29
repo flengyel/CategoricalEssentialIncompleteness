@@ -3,14 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalBridge
+import CategoricalEssentialIncompleteness.ParameterizedEqualizer
 
 /-!
 # Internal bounded distributive lattices and complementary pairs
 
 The representable functor of an internal lattice carries bounded distributive
-lattice structures naturally under precomposition. The complement-pair object
-is the manuscript's actual finite-limit construction, not a set of global pairs.
+lattice structures naturally under precomposition. The object of complementary pairs
+is defined by the pullback in `eq:v8-complement-pullback`.
 -/
 
 set_option autoImplicit false

@@ -11,7 +11,7 @@ import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
 
 We form the manuscript's representation pullback and separator equalizer in an
 arbitrary finitely complete base. A section supplies representatives at every
-parameter. In particular it supplies the representative at the actual separator
+parameter. In particular it supplies the representative at the separator
 object, yielding the factorization through the equalizer of the bounds.
 -/
 
@@ -41,7 +41,7 @@ def representationRight : (E.lattice D.U).Complements ⟶
     (P.pull (H.snd D.U D.U) ((D.embedding.app D.U).postcomp _
       (E.lattice D.U).complementNeg))
 
-/-- The actual pullback `R` of `eq:v8-representation-pullback`. -/
+/-- The pullback `R` of `eq:v8-representation-pullback`. -/
 def Representation : V := pullback D.representationLeft D.representationRight
 
 /-- The manuscript's section of the projection `R → C_U`. -/
@@ -103,7 +103,7 @@ def separatorRight : (E.lattice D.S).Complements ⟶
     (P.lattice D.S).obj ⨯ (P.lattice D.S).obj :=
   prod.lift (D.positiveAt _) (D.negativeAt _)
 
-/-- The manuscript's actual equalizer `Sep`. -/
+/-- The manuscript's equalizer `Sep`. -/
 def Sep : V := equalizer D.separatorLeft D.separatorRight
 
 def separatorPair : ComplementaryPair (D.Sep ⟶ (E.lattice D.S).obj) :=
@@ -167,7 +167,7 @@ theorem separatorFactor_ι (σ : D.RepresentationSection) :
     D.separatorFactor σ ≫ equalizer.ι (⊥ : ⊤_ V ⟶ (E.lattice D.U).obj) ⊤ =
       terminal.from D.Sep := by simp [separatorFactor]
 
-/-- The structure arrow of the actual separator factors through the actual bound equalizer. -/
+/-- The structure arrow of the separator factors through the bound equalizer. -/
 theorem internal_inseparability (σ : D.RepresentationSection) :
     ∃ f : D.Sep ⟶ D.ZeroLocus,
       f ≫ equalizer.ι (⊥ : ⊤_ V ⟶ (E.lattice D.U).obj) ⊤ = terminal.from D.Sep :=

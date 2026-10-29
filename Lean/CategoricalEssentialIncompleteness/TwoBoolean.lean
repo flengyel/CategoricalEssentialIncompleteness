@@ -8,7 +8,7 @@ import CategoricalEssentialIncompleteness.CharacteristicArrows
 /-!
 # The internal Boolean algebra on `1 + 1`
 
-Operations are actual arrows, constructed by the universal coproduct
+Operations are arrows, constructed by the universal coproduct
 decompositions. Their identities are checked after restriction to truth-value
 fibers, not merely at global points.
 -/

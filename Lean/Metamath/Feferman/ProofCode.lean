@@ -6,21 +6,19 @@ Authors: Florian Lengyel
 import Metamath.Feferman.MPSequence
 
 /-!
-# Explicit natural-number proof codes
+# Natural-number codes for formulas and proof sequences
 
-`MPSequence.lean` develops Feferman's MP-only proof sequences at the level of
-finite token strings and lists. This module defines an explicit bijection
-between `ℕ` and `List ℕ`, transports it to formula strings and proof sequences,
-defines the numerical implication and modus-ponens operations, defines the
-numerical proof predicate by decoding, and proves external preservation of
-provability under the numerical transformation.
+`MPSequence.lean` defines finite strings and proof sequences with modus ponens
+as the sole inference rule. This module gives a bijection between `ℕ` and
+`List ℕ`, applies it to formula strings and proof sequences, and defines
+numerical implication, modus ponens, and a proof predicate by decoding.
 
-## The pairing
+## Pairing
 
-The pairing is a local bit-interleaving bijection. `bitSpread` sends the binary
+The pairing is a bit-interleaving bijection. `bitSpread` sends the binary
 digit in position `i` to position `2 * i`; `codePair a b` places the digits of
-`a` in the even positions and those of `b` in the odd positions; `codeUnpair`
-reads them back.
+`a` in the even positions and those of `b` in the odd positions. `codeUnpair`
+recovers both coordinates.
 
 ```
 bitSpread 0       = 0
@@ -33,17 +31,13 @@ codeUnpair (n + 1) = (2 * (codeUnpair ((n + 1) / 4)).1 + (n + 1) % 2,
                       2 * (codeUnpair ((n + 1) / 4)).2 + ((n + 1) / 2) % 2)
 ```
 
-Both recursions decrease logarithmically — at `n / 2` and at `n / 4` — so the
-inverse takes one step per pair of binary digits, not one step per coded
-natural number. `Nat.sqrt` is not used, nor `Nat.pair` or `Nat.unpair`, nor any
-diagonal or square-spiral enumeration. Nothing here is `partial` or `unsafe`,
-and no fuel bound truncates a recursion.
+The recursive arguments decrease by division by two and four, respectively.
+Thus `codeUnpair` takes one recursive step per pair of binary digits.
+`codePair_codeUnpair` and `codeUnpair_codePair` prove the inverse laws.
+`codeUnpair_right_le` supplies the bound used to prove termination of
+`listDecode`.
 
-`codePair_codeUnpair` and `codeUnpair_codePair` state that the two are mutually
-inverse. `codeUnpair_right_le` supplies the bound that discharges the
-termination obligation of `listDecode`.
-
-## The list coding
+## List coding
 
 ```
 listEncode []        = 0
@@ -53,84 +47,51 @@ listDecode 0       = []
 listDecode (n + 1) = (codeUnpair n).1 :: listDecode (codeUnpair n).2
 ```
 
-`listDecode` is total, by well-founded recursion on `n`. Both inverse laws are
-proved: `listDecode_listEncode` and `listEncode_listDecode`. Together they
-state that `listEncode` and `listDecode` are mutually inverse bijections
-between `List ℕ` and `ℕ`. Consequently every natural number is the code of
-exactly one finite token list, and no valid-code predicate is needed. This does
-**not** assert that every decoded token list is a formula: whether a decoded
-string is a formula is decided by the `formula` predicate of a
-`SyntaxPresentation`.
+`listDecode` is defined by well-founded recursion on `n`.
+`listDecode_listEncode` and `listEncode_listDecode` prove that the two functions
+are mutually inverse. Every natural number therefore codes one finite token
+list. The `formula` predicate of a `SyntaxPresentation` determines whether the
+decoded list is a formula.
 
-The coding is not prime-power coding, and it uses no Lean `String`, no Unicode,
-and no UTF-8. `Encodable.encode` is not used, and no `Primcodable` encoder is
-exposed as the public representation.
+`FormulaCode` and `ProofSequenceCode` are abbreviations for `ℕ`.
+Their decoders distinguish the intended interpretations: `decodeFormula`
+yields a `FormulaString`, whereas `decodeProof` yields a `ProofSequence`.
+In particular, `encodeProof [] ≠ encodeProof [[]]` distinguishes an empty proof
+sequence from a sequence containing the empty formula string.
 
-## Codes of formula strings and of proof sequences
+## Numerical proof predicate and arithmetic representation
 
-`FormulaCode` and `ProofSequenceCode` are both `ℕ`. They are distinguished by
-their decoders, which are different functions: `decodeFormula` yields a
-`FormulaString`, `decodeProof` yields a `ProofSequence`. The abbreviations
-record which decoder a numeral is intended for; they do not separate the types.
-`encodeProof [] ≠ encodeProof [[]]` witnesses that the nesting is not collapsed.
+`Proof_T Th p a` relates a proof-sequence code `p` to a formula code `a`.
+The theorem `proof_T_mp` states that if `p` codes a proof of `a` and `r` codes
+a proof of `imp a b`, then `mp r p` codes a proof of `b`.
+`primrecRel_proof_T` establishes primitive recursiveness for a
+`PRTheoryPresentation`.
 
-## Numerical coding is not arithmetical representation
-
-Numerical Gödel-style coding now exists. Every candidate formula string and
-proof sequence has a natural-number code under its respective encoder.
-`decodeFormula` and `decodeProof` are total inverse decoders.
-`Proof_T Th p a` is a predicate on proof-sequence code `p` and formula
-code `a`.
-
-Formula strings and proof sequences are list types; their codes are natural
-numbers. The two are not identified. Arithmetical representation is a further
-step: no formula of arithmetic represents `Proof_T` here, nothing is proved in
-PA, and no external logic library is imported.
-
-`proof_T_mp` is proved. It is the **external** numerical modus-ponens theorem,
-asserting in Lean that if `p` codes a proof of `a` and `r` codes a proof of
-`imp a b`, then `mp r p` codes a proof of `b`.
-
-This module also proves primitive recursiveness of `Proof_T`, through
-`primrecRel_proof_T`. It defines no arithmetic formula and imports no
-Foundation module. The separate `Arith` root defines `proofTFormula` and proves
-both standard-model adequacy and numeralwise weak representation for it. The
-uniform object-language theorem, quantified over free proof and formula codes,
-remains absent, and nothing here is proved in PA.
+These are external statements about numerical codes. The separate `Arith`
+root defines the arithmetic formula `proofTFormula` and proves standard-model
+adequacy and numeralwise weak representation. A uniform object-language
+preservation theorem, quantified over free proof and formula codes, is not
+provided. This module does not construct Feferman's `Fm_K` or `Ax_K`, implement
+`Sb` or `SSb`, or perform Craig conversion.
 
 ## Axiom dependencies
 
-The computational definitions, the inverse laws, `Proof_T` and `proof_T_mp` do
-not depend on `Classical.choice`. The arithmetic they rest on —
-`Nat.div_lt_self`, `Nat.mod_add_div`, `Nat.div_div_eq_div_mul` — and the
-`omega` decision procedure stay within `{propext, Quot.sound}`.
+The computational definitions, the inverse laws, `Proof_T`, and `proof_T_mp`
+do not depend on `Classical.choice`. Their arithmetic dependencies include
+`Nat.div_lt_self`, `Nat.mod_add_div`, and `Nat.div_div_eq_div_mul`; these and the
+`omega` proofs use only `propext` and `Quot.sound`.
 
-The thirteen `Primrec` certificates list `Classical.choice`. They depend on
-pinned-Mathlib `Primrec` declarations that also list `Classical.choice`;
-`check_metamath_axioms.lean` records these measured declaration dependencies.
-This does not identify a unique first dependency or establish that the
-dependency is necessary.
+The thirteen `Primrec` certificates depend on Mathlib declarations that use
+`Classical.choice`. `check_metamath_axioms.lean` records the declaration
+dependencies. This observation does not establish that the dependency is
+necessary.
 
-## Boundary
+## Mathlib declarations used
 
-This module defines codes, the numerical operations, `Proof_T`, the
-external theorem `proof_T_mp`, and primitive recursiveness of `Proof_T`
-through `primrecRel_proof_T`.
-
-It defines no arithmetic formula and imports no Foundation module; arithmetic
-representation is defined in the separate `Arith` root, which proves
-standard-model adequacy and numeralwise weak representation. The uniform
-object-language theorem remains absent. This module defines no arithmetic
-syntax, constructs neither `Fm_K` nor `Ax_K`, implements neither `Sb` nor
-`SSb`, and performs no Craig conversion.
-
-## Pinned-Mathlib API used
-
-`Nat.div_lt_self`, `Nat.mod_add_div`, `Nat.div_div_eq_div_mul`;
+`Nat.div_lt_self`, `Nat.mod_add_div`, `Nat.div_div_eq_div_mul`,
 `Primrec.list_foldr`, `Primrec.nat_strong_rec`, `Primrec.list_map`,
 `Primrec.nat_casesOn`, `Primrec.list_getD`, `Primrec.nat_div`,
-`Primrec.nat_mod`, `Primrec.nat_add`, `Primrec.nat_mul`, at Lean 4.32.2 and
-Mathlib `905b958`.
+`Primrec.nat_mod`, `Primrec.nat_add`, and `Primrec.nat_mul`.
 -/
 
 namespace Metamath.Feferman

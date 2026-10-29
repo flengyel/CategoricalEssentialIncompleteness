@@ -53,7 +53,7 @@ instance (X : Numerical) : BoundedOrder (EnumerableSubset X) where
   le_top A := A.property.2
   bot_le A := Set.empty_subset _
 
-/-- Genuine restriction idempotents in the numerical category. -/
+/-- restriction idempotents in the numerical category. -/
 @[ext] structure Domain (X : Numerical) where
   hom : X ⟶ X
   isDomain : RestrictionCategory.rst hom = hom
@@ -200,7 +200,7 @@ theorem complementary_support_recursive (a : ComplementaryPair (Domain nat)) :
     exact this.resolve_left hn
 
 set_option backward.isDefEq.respectTransparency false in
-/-- Every recursive set gives complementary genuine restriction domains. -/
+/-- Every recursive set gives complementary restriction domains. -/
 def recursivePair (A : Set ℕ) (hA : ComputablePred (· ∈ A)) :
     ComplementaryPair (Domain nat) where
   pos := domainOfSupport ⟨A, hA.to_re, Set.subset_univ _⟩

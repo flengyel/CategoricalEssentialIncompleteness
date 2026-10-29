@@ -10,8 +10,7 @@ import CategoricalEssentialIncompleteness.NumericalSubobjects
 
 Dovetailing semidecision procedures gives a factorization through every common
 upper bound of two c.e. support inclusions. Thus their union represents their
-categorical join. Arbitrary support inclusions are not asserted to have this
-property.
+categorical join. The computable choice of summand uses enumerability of both supports.
 -/
 
 set_option autoImplicit false
@@ -20,15 +19,15 @@ open CategoryTheory
 namespace CategoricalEssentialIncompleteness
 namespace NumericalPER
 
-private theorem union_tracker {A B X : Set ℕ}
+private theorem union_representative {A B X : Set ℕ}
     (hA : REPred (· ∈ A)) (hB : REPred (· ∈ B))
     (hAX : A ⊆ X) (hBX : B ⊆ X) {R : NumericalPER}
-    (a : Tracker (discrete A) R) (b : Tracker (discrete B) R)
-    (m : Tracker R (discrete X))
-    (ha : ofTracker a ≫ ofTracker m = inclusion hAX)
-    (hb : ofTracker b ≫ ofTracker m = inclusion hBX) :
-    ∃ k : Tracker (discrete (A ∪ B)) R,
-      ofTracker k ≫ ofTracker m = inclusion (Set.union_subset hAX hBX) := by
+    (a : Representative (discrete A) R) (b : Representative (discrete B) R)
+    (m : Representative R (discrete X))
+    (ha : ofRepresentative a ≫ ofRepresentative m = inclusion hAX)
+    (hb : ofRepresentative b ≫ ofRepresentative m = inclusion hBX) :
+    ∃ k : Representative (discrete (A ∪ B)) R,
+      ofRepresentative k ≫ ofRepresentative m = inclusion (Set.union_subset hAX hBX) := by
   let fa : ℕ → Part ℕ := fun n ↦ (supportIdentity A n).bind a.val
   let fb : ℕ → Part ℕ := fun n ↦ (supportIdentity B n).bind b.val
   have hfa : Partrec fa :=
@@ -55,7 +54,7 @@ private theorem union_tracker {A B X : Set ℕ}
       exact a.output_supported ⟨hn, rfl⟩ hz
     · obtain ⟨hn, hz⟩ := (hfb_mem n z).mp hz
       exact b.output_supported ⟨hn, rfl⟩ hz
-  let t : Tracker (discrete (A ∪ B)) R :=
+  let t : Representative (discrete (A ∪ B)) R :=
     { val := k
       computable := hk
       total := by
@@ -72,17 +71,17 @@ private theorem union_tracker {A B X : Set ℕ}
         have heq := Part.mem_unique hu hv
         exact heq ▸ supported n u hu }
   refine ⟨t, ?_⟩
-  apply (ofTracker_eq_iff _ _).mpr
+  apply (ofRepresentative_eq_iff _ _).mpr
   intro n _ z hz y hy
   have hyEq : y = n := Part.mem_some_iff.mp hy
   subst y
   obtain ⟨u, hu, hz⟩ := Part.mem_bind_iff.mp hz
   rcases (h n).1 u hu with hu | hu
   · obtain ⟨hnA, hu⟩ := (hfa_mem n u).mp hu
-    exact (ofTracker_eq_iff _ _).mp ha n ⟨hnA, rfl⟩ z
+    exact (ofRepresentative_eq_iff _ _).mp ha n ⟨hnA, rfl⟩ z
       (Part.mem_bind hu hz) n (Part.mem_some n)
   · obtain ⟨hnB, hu⟩ := (hfb_mem n u).mp hu
-    exact (ofTracker_eq_iff _ _).mp hb n ⟨hnB, rfl⟩ z
+    exact (ofRepresentative_eq_iff _ _).mp hb n ⟨hnB, rfl⟩ z
       (Part.mem_bind hu hz) n (Part.mem_some n)
 
 theorem enumerable_union_lift {A B X : Set ℕ}
@@ -96,8 +95,8 @@ theorem enumerable_union_lift {A B X : Set ℕ}
     induction b using Quotient.inductionOn with | _ b =>
       induction m using Quotient.inductionOn with | _ m =>
         intro ha hb
-        obtain ⟨k, hk⟩ := union_tracker hA hB hAX hBX a b m ha hb
-        exact ⟨ofTracker k, hk⟩
+        obtain ⟨k, hk⟩ := union_representative hA hB hAX hBX a b m ha hb
+        exact ⟨ofRepresentative k, hk⟩
 
 /-- The union is the least upper bound among all categorical subobjects. -/
 theorem enumerable_union_isLUB {A B X : Set ℕ}
