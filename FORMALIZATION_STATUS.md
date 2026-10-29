@@ -30,6 +30,13 @@ lattices and total-arrow category are compared explicitly with the existing
 numerical constructions. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
+The numerical category is a recursion category. Computable enumeration and
+counting give recursive isomorphisms with `ℕ`, and partial application of
+program codes proves the full Turing factorization property. A choice of
+codes supplies a set-level indexing function and its evaluation equation.
+The internal Set-enriched structure and its indexing morphism remain to be
+constructed.
+
 ## Correspondence
 
 | Manuscript label | Lean declaration or module | Status |
@@ -50,7 +57,10 @@ numerical constructions. All declarations below are in the namespace
 | `thm:categorical-essential-incompleteness` | `EnrichedRestriction.categorical_essential_incompleteness`; `categorical_boundCopair_not_regularEpi` | Both conclusions proved along `J : Tot(K₀) → C`, from the internal section, natural predicate identification, and ordinary representing restriction idempotents. Both names are in `EnrichedRestriction`; the precise input scope is described below. |
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
 | Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
-| Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. Restriction products are constructed; isotype and the recursion-category instance remain open. |
+| Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. |
+| Isotype of the numerical category in `sec:integration-numerical` | `Numerical.enumerate_computable`; `rank_computable`; `natIso`; `totalNatIso`; `numericalIsotype` | Increasing enumeration and counting give inverse recursive total arrows between each numerical object and `ℕ`. Both inverse equations hold as partial maps with the required source restrictions. All names are in `Numerical`. |
+| Numerical Turing morphism in `sec:integration-numerical` | `Numerical.turingEvaluator`; `codeParameter`; `turingEvaluator_parameterization`; `turingEvaluator_isTuringMorphism` | Universal partial recursive evaluation and computable partial application of program codes give the factorization for every numerical parameter object. Equality includes inputs outside the source carrier. All names are in `Numerical`. |
+| Numerical recursion category and indexing in `sec:integration-numerical` | `Numerical.numericalRecursionCategory`; `turingIndexing`; `turingIndexing_evaluation` | The concrete `PRecursionCategory` instance is constructed. The indexing function assigns a total parameter arrow to each extensional partial arrow and satisfies the evaluation equation. Its internal Set-enriched realization remains open. All names are in `Numerical`. |
 | PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular and finitely extensive. |
 | Binary products and preservation by `J` in `sec:integration-numerical` | `Numerical.productIsLimit`; `Numerical.toPER_preservesBinaryProducts` | Recursive tuple coding gives infinite recursive product carriers. Projection equations for the PER comparison prove preservation. |
 | Numerical restriction products in `sec:integration-numerical` | `Numerical.partialPair_fst`; `partialPair_snd`; `partialPair_proj`; `numericalPCategory`; `numericalProdominical` | Partial pairing, the restriction projection equations, all `P`-category equations, and zero absorption are proved. All names are in `Numerical`. |
@@ -432,6 +442,25 @@ It preserves partial inverse image. Transport of c.e. joins constructs the
 join assumption is added. The comparison is a bijective bounded lattice
 homomorphism compatible with partial inverse image.
 
+`NumericalEnumeration.lean` proves computability of counting and increasing
+enumeration for recursive predicates. Infinitude of the carrier makes the
+enumeration total; counting gives its inverse on the carrier.
+`NumericalIsotype.lean` restricts these functions to the required source
+objects and proves both partial-map inverse equations. This gives an
+isomorphism with `ℕ` in both the numerical category and its total subcategory,
+and hence the isotype property.
+
+`NumericalTuring.lean` defines universal partial recursive evaluation using
+the pinned program-code API. Partial application gives a computable total
+parameter arrow for each numerical object. The factorization proof establishes
+equality at every input, including outside the source carrier, and converts
+totality to the restriction structure induced by the `P`-category.
+`NumericalRecursion.lean` combines this result with isotype to construct
+`PRecursionCategory Numerical`. Choice of a program code for each extensional
+partial arrow defines `turingIndexing`, whose evaluation equation is proved.
+This is a function between sets of arrows; its internal Set-enriched
+realization remains to be constructed.
+
 `PERFiniteLimits.lean` constructs a terminal PER and equalizers. The equalizer
 restricts the source to inputs where the two representing functions return
 related outputs. Its inclusion is monic, and each equalizing arrow factors
@@ -491,14 +520,23 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next construction is **a recursive isomorphism between each numerical
-object and `ℕ`**, giving the isotype property. The Turing morphism, indexing
-and Set-enrichment data, effective syntax, numeral
-substitution, Lindenbaum Boolean presentation, and theory-extension quotients
-also remain open. They are needed for `thm:integration-essential-equivalence`
-(i) and (iii), `prop:numerical-boolean-extensions`, and the arithmetic corollary.
+The next construction is **the Set-enriched numerical category**, including
+its internal indexing morphism and comparison with the ordinary numerical
+category. The remaining arithmetic constructions are effective sentence and
+unary-formula coding, recursive substitution in both the formula code and
+numeral, the representation section, the Lindenbaum Boolean presentation,
+and theory-extension quotients. They are needed for
+`thm:integration-essential-equivalence` (i) and (iii),
+`prop:numerical-boolean-extensions`, and the arithmetic corollary.
 
-The full verifier builds the combined entry point and audits 311 declarations,
+The pinned arithmetic foundations already prove the positive and negative
+numeral instances of `codeOfComputablePred`, under extensions of `R₀` and
+`PA⁻`, respectively. These results can supply the numeralwise representation
+step once their formula codes and substitution are compared with the
+numerical categorical construction. The existing fixed-formula substitution
+results alone do not give the required joint recursive substitution map.
+
+The full verifier builds the combined entry point and audits 336 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash, as well as both manuscript hashes. Thirteen imported
 files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean

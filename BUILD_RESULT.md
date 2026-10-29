@@ -1,5 +1,44 @@
 # Categorical essential incompleteness: build result
 
+## Numerical recursion category and indexing checkpoint
+
+Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from
+`06f4e14ea2ce77bc57afd0f72068026a95466c69`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1949 jobs, including cached dependencies).
+- All 336 axiom audits pass, retaining the previous 311. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source, pin,
+  or manuscript file was changed.
+- All four new modules compile without warnings. The two imported linter
+  warnings remain. The 60 project Lean files contain no proof holes or new axioms.
+
+Counting and increasing enumeration are proved computable for recursive
+predicates. For an infinite recursive carrier they give inverse total numerical
+arrows, with both inverse equations proved as partial maps. Consequently,
+every numerical object is recursively isomorphic to `ℕ`, and any two numerical
+objects are isomorphic.
+
+Universal partial recursive evaluation is a Turing morphism for the numerical
+category. Partial application of program codes gives a total parameter arrow
+for every numerical parameter object; the factorization is equality of partial
+functions, including outside the source carrier. These results construct
+`PRecursionCategory Numerical`. Choice of a program code for each extensional
+partial arrow also gives a set-level indexing function, with its evaluation
+equation proved.
+
+The next construction is the Set-enriched numerical category, beginning with
+its hom-objects and the identification of the internal domain equalizer with
+numerical restriction idempotents. Its internal indexing morphism and the
+arithmetic syntax, representation section, Lindenbaum presentation, and
+theory-extension comparisons remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-29-numerical-recursion](Audit/2026-10-29-numerical-recursion/).
+
 ## Numerical restriction products and comparisons checkpoint
 
 Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from

@@ -61,11 +61,17 @@ prodominical `P`-category structure with its original restriction operation.
 The induced total-arrow category is equivalent to the existing one, with
 compatible product pairings. The domain lattices are naturally isomorphic
 under restriction inverse image; their joins are constructed from c.e. unions.
+Computable increasing enumeration and counting give recursive isomorphisms
+between every numerical object and `ℕ`. The universal partial recursive
+evaluator satisfies the Turing factorization property for every numerical
+parameter object, giving a recursion-category instance. Choosing a program
+code for each partial arrow defines a set-level indexing function with the
+required evaluation equation.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-Numerical recursion and indexing, and arithmetic syntax and provability
-comparisons remain open; see
+The numerical Set-enriched structure, its internal indexing morphism, and
+the arithmetic syntax and provability comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -155,14 +161,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 300 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (311 in total). Only
+declarations, and 325 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (336 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 311 axiom audits.
+PASS: project build, dependency pins, source hashes, and 336 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -174,7 +180,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The numerical restriction-product and comparison evidence is in
+is ignored by Git. The numerical recursion-category and indexing evidence is in
+[`Audit/2026-10-29-numerical-recursion/`](Audit/2026-10-29-numerical-recursion/).
+The numerical restriction-product and comparison evidence is in
 [`Audit/2026-10-29-numerical-restriction-products/`](Audit/2026-10-29-numerical-restriction-products/).
 The Boolean-arrow and complemented-subobject evidence is in
 [`Audit/2026-10-29-numerical-boolean/`](Audit/2026-10-29-numerical-boolean/).

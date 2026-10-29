@@ -20,6 +20,7 @@ import CategoricalEssentialIncompleteness.NumericalPredicates
 import CategoricalEssentialIncompleteness.NumericalComplementedSubobjects
 import CategoricalEssentialIncompleteness.NumericalTotalComparison
 import CategoricalEssentialIncompleteness.NumericalDomainComparison
+import CategoricalEssentialIncompleteness.NumericalRecursion
 
 /-!
 # Categorical essential incompleteness
@@ -41,6 +42,10 @@ Numerical restriction products give a prodominical P-category with the
 original restriction operation. Its total-arrow category and domain lattices
 are compared with the existing numerical presentations, including products,
 bounded lattice operations, and restriction inverse image.
+Computable enumeration and counting give recursive isomorphisms between
+numerical objects. Universal program evaluation gives a Turing morphism and
+a recursion-category instance. Choosing program codes gives a set-level
+indexing function satisfying the evaluation equation.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison

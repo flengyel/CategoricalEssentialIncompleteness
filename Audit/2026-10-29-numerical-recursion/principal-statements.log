@@ -1,0 +1,68 @@
+CategoricalEssentialIncompleteness.computable_count : ∀ (p : ℕ → Prop) [inst : DecidablePred p],
+  ComputablePred p → Computable (Nat.count p)
+CategoricalEssentialIncompleteness.computable_nth : ∀ (p : ℕ → Prop),
+  ComputablePred p → (Set.ofPred p).Infinite → Computable (Nat.nth p)
+CategoricalEssentialIncompleteness.Numerical.enumerate_computable : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical), Computable X.enumerate
+CategoricalEssentialIncompleteness.Numerical.rank_computable : ∀ (X : CategoricalEssentialIncompleteness.Numerical),
+  Computable X.rank
+CategoricalEssentialIncompleteness.Numerical.enumerate_mem : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  (n : ℕ), X.enumerate n ∈ X.carrier
+CategoricalEssentialIncompleteness.Numerical.enumerate_injective : ∀ (X : CategoricalEssentialIncompleteness.Numerical),
+  Function.Injective X.enumerate
+CategoricalEssentialIncompleteness.Numerical.rank_enumerate : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  (n : ℕ), X.rank (X.enumerate n) = n
+CategoricalEssentialIncompleteness.Numerical.enumerate_rank : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  {n : ℕ}, n ∈ X.carrier → X.enumerate (X.rank n) = n
+CategoricalEssentialIncompleteness.Numerical.enumerate_surjective : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  {n : ℕ}, n ∈ X.carrier → ∃ k, X.enumerate k = n
+CategoricalEssentialIncompleteness.Numerical.mem_enumerationArrow : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  (n m : ℕ), m ∈ X.enumerationArrow.hom.val n ↔ X.enumerate n = m
+CategoricalEssentialIncompleteness.Numerical.mem_rankArrow : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  (n m : ℕ), m ∈ X.rankArrow.hom.val n ↔ n ∈ X.carrier ∧ X.rank n = m
+CategoricalEssentialIncompleteness.Numerical.enumerationArrow_rankArrow : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical),
+  CategoryTheory.CategoryStruct.comp X.enumerationArrow.hom X.rankArrow.hom =
+    CategoryTheory.CategoryStruct.id CategoricalEssentialIncompleteness.Numerical.nat
+CategoricalEssentialIncompleteness.Numerical.rankArrow_enumerationArrow : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical),
+  CategoryTheory.CategoryStruct.comp X.rankArrow.hom X.enumerationArrow.hom = CategoryTheory.CategoryStruct.id X
+CategoricalEssentialIncompleteness.Numerical.natIso : (X : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.nat ≅ X
+CategoricalEssentialIncompleteness.Numerical.totalNatIso : (X : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.nat.totalObject ≅ X.totalObject
+CategoricalEssentialIncompleteness.Numerical.objectIso : (X Y : CategoricalEssentialIncompleteness.Numerical) → X ≅ Y
+CategoricalEssentialIncompleteness.Numerical.numericalIsotype : CategoryTheory.RecursionCategory.Isotype
+  CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.turingEvaluator : CategoricalEssentialIncompleteness.Numerical.nat.product
+    CategoricalEssentialIncompleteness.Numerical.nat ⟶
+  CategoricalEssentialIncompleteness.Numerical.nat
+CategoricalEssentialIncompleteness.Numerical.codeParameter : (V : CategoricalEssentialIncompleteness.Numerical) →
+  Nat.Partrec.Code → (V.totalObject ⟶ CategoricalEssentialIncompleteness.Numerical.nat.totalObject)
+CategoricalEssentialIncompleteness.Numerical.mem_codeParameter : ∀ (V : CategoricalEssentialIncompleteness.Numerical)
+  (c : Nat.Partrec.Code) (n m : ℕ), m ∈ (V.codeParameter c).hom.val n ↔ n ∈ V.carrier ∧ Encodable.encode (c.curry n) = m
+CategoricalEssentialIncompleteness.Numerical.turingEvaluator_parameterization : ∀
+  (V : CategoricalEssentialIncompleteness.Numerical)
+  (φ : V.product CategoricalEssentialIncompleteness.Numerical.nat ⟶ CategoricalEssentialIncompleteness.Numerical.nat)
+  (c : Nat.Partrec.Code),
+  c.eval = φ.val →
+    CategoryTheory.CategoryStruct.comp
+        (CategoricalEssentialIncompleteness.Numerical.partialProdMap (V.codeParameter c).hom
+          (CategoryTheory.CategoryStruct.id CategoricalEssentialIncompleteness.Numerical.nat))
+        CategoricalEssentialIncompleteness.Numerical.turingEvaluator =
+      φ
+CategoricalEssentialIncompleteness.Numerical.turingEvaluator_isTuringMorphism : CategoryTheory.RecursionCategory.IsTuringMorphism
+  CategoricalEssentialIncompleteness.Numerical.turingEvaluator
+CategoricalEssentialIncompleteness.Numerical.numericalRecursionCategory : CategoryTheory.RecursionCategory.PRecursionCategory
+  CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.turingIndexing : (V : CategoricalEssentialIncompleteness.Numerical) →
+  (V.product CategoricalEssentialIncompleteness.Numerical.nat ⟶ CategoricalEssentialIncompleteness.Numerical.nat) →
+    (V.totalObject ⟶ CategoricalEssentialIncompleteness.Numerical.nat.totalObject)
+CategoricalEssentialIncompleteness.Numerical.turingIndexing_evaluation : ∀
+  (V : CategoricalEssentialIncompleteness.Numerical)
+  (φ : V.product CategoricalEssentialIncompleteness.Numerical.nat ⟶ CategoricalEssentialIncompleteness.Numerical.nat),
+  CategoryTheory.CategoryStruct.comp
+      (CategoricalEssentialIncompleteness.Numerical.partialProdMap (V.turingIndexing φ).hom
+        (CategoryTheory.CategoryStruct.id CategoricalEssentialIncompleteness.Numerical.nat))
+      CategoricalEssentialIncompleteness.Numerical.turingEvaluator =
+    φ
