@@ -1,0 +1,394 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Inseparable domains and computational extensions},pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathscr R}
+\newcommand{\D}{\mathscr D}
+\newcommand{\Pair}{\operatorname{Pair}}
+\newcommand{\Inv}{\operatorname{Inv}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\ran}{\operatorname{ran}}
+\title{Inseparable domains and computational extensions}
+\author{Florian Lengyel}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An inseparable pair of computational domains determines a consistent
+presentation of signed literals on a binary coproduct. Its consistent
+computational extensions are exactly the disjoint enlargements of the
+original pair. Consequently, inseparability is equivalent to essential
+incompleteness for this presentation. The construction is left adjoint
+to the functor taking an involutive presentation to its positive and
+negative domains. For classical theories, the existing atom constructor
+transports the same obstruction to every consistent extension, whose
+theorem and refutation domains are themselves inseparable. We also
+separate reflection of inseparability by restriction functors from its
+preservation; a projection of recursion categories disproves unrestricted
+preservation, even when it preserves a universal evaluator.
+\end{abstract}
+
+\section{Domains, separators, and reductions}
+
+Let $\R$ be a restriction category with restriction zeros.
+Composition is $gf=g\circ f$. For $f:X\to Y$, its restriction
+idempotent is $\bar f:X\to X$; $f$ is total when $\bar f=1_X$.
+Write $\D(X)$ for the poset of restriction idempotents on $X$,
+ordered by $e\le d$ when $de=e$. Its meet is composition, its bottom
+is $0_X$, and its top is $1_X$. For a total arrow $f:X\to Y$, put
+\[
+ f^*:\D(Y)\longrightarrow\D(X),\qquad f^*e=\overline{ef}.
+\]
+The restriction identities give preservation of meets and both bounds,
+as well as $(gf)^*=f^*g^*$ and $1_X^*=1_{\D(X)}$.
+Thus domains and inverse images define
+$\D:\Tot(\R)^{\mathrm{op}}\to\mathbf{Pos}$, where
+$\mathbf{Pos}$ has posets as objects and monotone maps as arrows.
+Domain idempotents remain arrows of $\R$; when split,
+their splitting objects belong to its total category.
+
+Whenever the domain poset has binary joins, a pair $(c,d)$ is
+\emph{complementary} if $cd=0$ and $c\vee d=1$.
+It separates $(a,b)$ if $a\le c$ and $b\le d$.
+A disjoint pair $(a,b)$ is \emph{inseparable} if it has no such
+separator.
+
+Define the category $\Pair(\R)$ to have objects $(X,a,b)$ with
+$a,b\in\D(X)$ and $ab=0_X$. A morphism
+\[
+ f:(X,a,b)\longrightarrow(Y,c,d)
+\]
+is a total arrow $f:X\to Y$ satisfying $a\le f^*c$ and $b\le f^*d$.
+Identities and composition are inherited from $\R$:
+if $c\le g^*e$, then $a\le f^*c\le(gf)^*e$, and similarly for
+the second coordinate. These arrows are simultaneous reductions of
+the two domains.
+
+\begin{proposition}\label{prop:transport}
+Suppose all $\D(X)$ have binary joins and total inverse images preserve
+them. If $f:(X,a,b)\to(Y,c,d)$ is a morphism of $\Pair(\R)$ and
+$(a,b)$ is inseparable, then $(c,d)$ is inseparable.
+\end{proposition}
+\begin{proof}
+A complementary separator $(r,s)$ of $(c,d)$ pulls back to the
+complementary pair $(f^*r,f^*s)$. The inequalities
+$a\le f^*c\le f^*r$ and $b\le f^*d\le f^*s$ contradict
+inseparability of $(a,b)$.
+\end{proof}
+
+\section{The free involutive presentation}
+
+Assume $\R$ has binary restriction coproducts: these are coproducts
+$X+Y$ whose injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$ are
+total. The copair of $f:X\to Z$ and $g:Y\to Z$ is written $[f,g]$.
+For arrows $f:X\to X'$ and $g:Y\to Y'$, their coproduct is
+$f+g=[i'_0f,i'_1g]:X+Y\to X'+Y'$, where $i'_0,i'_1$
+are the target injections. In particular, for domains $a$ on $X$
+and $b$ on $Y$, write $a+b=[i_0a,i_1b]$.
+
+\begin{lemma}\label{lem:decompose}
+There is an order isomorphism
+\[
+ \D(X+Y)\cong\D(X)\times\D(Y),\qquad
+ e\longmapsto(i_0^*e,i_1^*e),\qquad (a,b)\longmapsto a+b.
+\]
+It preserves all meets and joins that exist.
+\end{lemma}
+\begin{proof}
+For a restriction idempotent $e$ on $X+Y$, the restriction identities
+give $ei_j=i_j\overline{ei_j}$. Hence
+$e=(i_0^*e)+(i_1^*e)$ by the coproduct property.
+Conversely, $a+b$ is a restriction idempotent: the identities for its
+restriction, precomposed with either injection, give
+$\overline{a+b}\,i_0=i_0a$ and
+$\overline{a+b}\,i_1=i_1b$. Its two inverse images are $a,b$.
+Finally, $(a+b)(c+d)=ac+bd$, so the two maps preserve and reflect
+order. The assertion about meets and joins follows from their order
+universal properties.
+\end{proof}
+
+An \emph{involutive presentation} is a triple $(S,\nu,t)$ consisting
+of a total involution $\nu:S\to S$, a domain $t\in\D(S)$, and
+the consistency equation $t\,\nu^*t=0_S$.
+Regard $S$ as the object of assertions, $\nu$ as their negation
+constructor, and $t$ as the theorem domain. In particular, $\nu^*$ is monotone
+inverse image, not complementation of domains.
+Let $\Inv(\R)$ have these presentations as objects. A morphism
+\[
+ h:(S,\nu,t)\longrightarrow(T,\mu,u)
+\]
+is a total arrow $h:S\to T$ with $h\nu=\mu h$ and $t\le h^*u$.
+Identity and composition preserve both conditions.
+There is a covariant functor
+\[
+ J:\Inv(\R)\longrightarrow\Pair(\R),\qquad
+ J(S,\nu,t)=(S,t,\nu^*t),\quad J(h)=h.
+\]
+Indeed, equivariance gives $\nu^*h^*=h^*\mu^*$, which verifies
+the second domain inequality.
+
+\begin{theorem}\label{thm:free}
+The functor $J$ has a left adjoint $\Sigma$ given by
+\[
+ \Sigma(X,a,b)=(X+X,\sigma_X,a+b),\qquad
+ \sigma_X=[i_1,i_0],\qquad \Sigma(f)=f+f.
+\]
+Neither domain joins nor ranges are needed for this adjunction.
+\end{theorem}
+\begin{proof}
+The map $\sigma_X$ is a total involution and
+$\sigma_X^*(a+b)=b+a$. Thus
+$(a+b)\sigma_X^*(a+b)=ab+ba=0_{X+X}$.
+For a morphism $f$ of pairs, $(f+f)^*(c+d)=f^*c+f^*d$;
+this proves the required theorem-domain inequality. The coproduct
+identities prove equivariance and the functor laws.
+
+For $(S,\nu,t)\in\Inv(\R)$, the bijection defining the adjunction is
+\[
+ \Inv(\R)(\Sigma(X,a,b),(S,\nu,t))
+ \cong\Pair(\R)((X,a,b),J(S,\nu,t)).
+\]
+It sends $h$ to $hi_0$. Its inverse sends $f$ to $[f,\nu f]$.
+Every equivariant $h$ satisfies $hi_1=\nu hi_0$, so these assignments
+are inverse. By Lemma~\ref{lem:decompose}, the inequality
+$a+b\le[f,\nu f]^*t$ is equivalent to
+$a\le f^*t$ and $b\le f^*\nu^*t$.
+Both assignments commute with precomposition and postcomposition;
+for postcomposition this uses the equivariance of the composed arrow.
+The unit is $i_0:X\to X+X$, and the counit is
+$[1_S,\nu]:S+S\to S$.
+\end{proof}
+
+For a fixed involutive presentation $(S,\nu,t_0)$, a
+\emph{consistent computational extension} is a selected domain
+$t\in\D(S)$ with $t_0\le t$ and $t\,\nu^*t=0_S$.
+It is \emph{complete} if $t\vee\nu^*t=1_S$.
+Essential incompleteness below refers to this specified class of
+domain extensions.
+
+\begin{theorem}\label{thm:signed}
+Let $\R$ have restriction zeros and binary restriction coproducts,
+and suppose $\D(X)$ has binary joins. For disjoint $a,b\in\D(X)$,
+the following are equivalent:
+\begin{enumerate}
+\item $(a,b)$ is inseparable;
+\item every consistent computational extension of
+      $(X+X,\sigma_X,a+b)$ is incomplete.
+\end{enumerate}
+The base presentation is consistent. Its extension poset is isomorphic
+to the coordinatewise ordered poset of pairs $(c,d)$ with
+$a\le c$, $b\le d$, and $cd=0_X$.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:decompose} writes each extension uniquely as $t=c+d$.
+The three conditions are
+\[
+ \begin{aligned}
+ a+b\le t&\ \Longleftrightarrow\ a\le c\text{ and }b\le d,\\
+ t\,\sigma_X^*t=0&\ \Longleftrightarrow\ cd=0,\\
+ t\vee\sigma_X^*t=1&\ \Longleftrightarrow\ c\vee d=1_X.
+ \end{aligned}
+\]
+Thus a consistent complete extension is exactly a complementary
+separator of $(a,b)$. Consistency of the base follows from $ab=0$.
+\end{proof}
+
+This construction applies within a recursion category as soon as its
+inseparable pair and binary restriction coproducts are supplied.
+It presents signed literals with involutive negation. Constructing
+implication, the classical logical axioms, and modus ponens requires a
+further deductive presentation. In particular, the theorem does not
+supply a conservative extension to that calculus. Its domain calculation
+uses no iteration, regularity, decidable equality, or proof algebra;
+stability of arbitrary total inverse images is also unnecessary here,
+because the coproduct decomposition computes the required joins.
+
+\section{The fixed interpretation for classical extensions}
+
+The same separation argument applies to the classical presentations of
+\cite{Domains,General,Iteration}. Suppose $\R$ has restriction zeros,
+binary domain joins preserved by total inverse images, an inseparable
+pair $a,b\in\D(U)$, total arrows
+\[
+ \theta:U\to S,\qquad \nu:S\to S,
+\]
+and a domain $t_0\in\D(S)$ such that
+\begin{equation}\label{eq:base}
+ a\le\theta^*t_0,\qquad b\le\theta^*\nu^*t_0.
+\end{equation}
+Here $S$ is the syntax object, $\theta$ its atom constructor, and
+$\nu$ its negation constructor; involutivity of $\nu$ is not required.
+
+Let $\mathcal E(t_0)$ be the poset category of domains $t\ge t_0$
+with $t\,\nu^*t=0_S$, with one arrow $t\to t'$ when $t\le t'$.
+It may instead be restricted to the rule-closed computational theory
+domains. There is a covariant functor
+\[
+ \mathcal P:\mathcal E(t_0)\longrightarrow\Pair(\R),\qquad
+ t\longmapsto(S,t,\nu^*t),\qquad (t\le t')\longmapsto1_S.
+\]
+Monotonicity of $\nu^*$ verifies the arrow action. Equations
+\eqref{eq:base} make the single arrow $\theta$ the component at every
+$t$ of a natural transformation from the constant functor at $(U,a,b)$
+to $\mathcal P$. Naturality is $1_S\theta=\theta$.
+
+\begin{corollary}\label{cor:classical}
+Under the preceding hypotheses, every pair $(t,\nu^*t)$ with
+$t\in\mathcal E(t_0)$ is inseparable. In particular, no such
+extension is complete.
+\end{corollary}
+\begin{proof}
+Apply Proposition~\ref{prop:transport} to the component $\theta$.
+A complete consistent pair would be its own complementary separator.
+\end{proof}
+
+The data in \eqref{eq:base} are already supplied by the one-node
+proofs in \cite[Corollary 6.3]{General}. Explicitly, let
+$m_A:A\to U$ and $m_B:B\to U$ split the domains $a,b$,
+let $c:D\to S$ be the total proof-conclusion map, and let
+$t_0=\ran(c)$. The total one-node proof maps satisfy
+\[
+ \begin{tikzcd}[column sep=large]
+ A\arrow[r,"u_A"]\arrow[d,"m_A"']&D\arrow[d,"c"]&
+ B\arrow[l,"u_B"']\arrow[d,"m_B"]\\
+ U\arrow[r,"\theta"']&S&U\arrow[l,"\nu\theta"]
+ \end{tikzcd}
+\]
+Since $t_0c=c$, these equations give
+$t_0\theta m_A=\theta m_A$ and
+$t_0\nu\theta m_B=\nu\theta m_B$.
+Consequently $m_A^*\theta^*t_0=1_A$ and
+$m_B^*\theta^*\nu^*t_0=1_B$, which are exactly
+\eqref{eq:base} under the splittings. Thus every extension uses the
+same bounded-lattice homomorphism $\theta^*:\D(S)\to\D(U)$.
+
+For an unsplit assertion domain $s\in\D(V)$, take
+$\nu:V\to V$ with $\bar\nu=s$ and $s\nu=\nu$, and put
+$\nu^*t=\overline{t\nu}$ for $t\le s$.
+The corresponding source lattice is the interval
+$\D(V)\mathord\downarrow s$, with top $s$.
+A total $\theta:U\to V$ satisfying $s\theta=\theta$
+has $\theta^*s=1_U$. Splitting $s$ gives the formulation above;
+in the unsplit formulation completeness means $t\vee\nu^*t=s$.
+The proof in \cite[Theorem 6.1]{Domains} uses this relative form.
+
+The construction of classical syntax and a consistent base theorem
+domain remains the substantive premise of this application. The
+finite-stage constructions and consistency proofs in
+\cite{General,Iteration} establish it under their stated hypotheses;
+the three-point computational cosheaf category in \cite{ThreePoint}
+is a nonnumerical instance satisfying these hypotheses.
+Corollary~\ref{cor:classical}
+strengthens the conclusion to inseparability of every extension's
+theorem/refutation pair without adding an interpretation hypothesis.
+
+\section{Functors between computational categories}
+
+The preceding reductions are total arrows inside a fixed category.
+For a covariant restriction functor $F:\mathscr C\to\mathscr B$,
+the induced domain map is covariant:
+$F_X:\D_{\mathscr C}(X)\to\D_{\mathscr B}(FX)$,
+$e\mapsto Fe$.
+
+\begin{proposition}\label{prop:reflection}
+Suppose the domain posets of $\mathscr C$ and $\mathscr B$ have
+binary joins and $F$ preserves restriction zeros and these joins.
+For a disjoint source pair $(a,b)$, inseparability of $(Fa,Fb)$
+implies inseparability of $(a,b)$.
+If, in addition, the map
+$\mathscr C(X,X)\to\mathscr B(FX,FX)$ is bijective, then $F$
+also preserves inseparability of pairs on $X$.
+\end{proposition}
+\begin{proof}
+The functor preserves meets, both bounds, and the domain order.
+It therefore sends each source complementary separator to a target
+complementary separator, proving reflection.
+
+For preservation, lift a target complementary separator $(r,s)$ to
+endomorphisms $h,k$ of $X$, and put $e=\bar h$, $d=\bar k$.
+Then $Fe=r$ and $Fd=s$. Injectivity on endomorphisms reflects the
+equations $ed=0$, $e\vee d=1$, $ea=a$, and $db=b$ from their
+images. Hence $(e,d)$ is a source separator.
+\end{proof}
+
+We use Heller's 1990 definition: a recursion category is a
+prodominical isotype with a Turing morphism
+\cite[\S9, pp.~1264--1265]{Heller}.
+
+\begin{proposition}\label{prop:projection}
+Preservation of a universal evaluator, products, coproducts, ranges,
+and iteration does not by itself imply preservation of a specified
+inseparable pair by a functor between recursion categories.
+\end{proposition}
+\begin{proof}
+Take the numerical recursion category $\mathscr C$ on formal objects
+generated from $\mathbb N$ by binary products, binary coproducts, and
+nonempty finite words, with partial recursive arrows on their usual
+effective presentations. Fix inseparable domains $a,b$ on $\mathbb N$.
+Let $\mathscr C^{(2)}$ be the full subcategory of
+$\mathscr C\times\mathscr C$ on objects $(X,X)$.
+Thus its arrows are pairs $(f,g)$ of arrows of $\mathscr C$ with
+the same source and target. Equality, identities, composition,
+restrictions, zeros, and ranges are componentwise. Products,
+coproducts, and word objects are the corresponding diagonal objects,
+with their componentwise structural maps. The numerical range of $f$
+is the partial identity on its c.e. image. Agreement after $f$ implies
+agreement on this image; hence the full range agreement law, as well
+as its product compatibility, holds componentwise.
+Finite unions are componentwise. A finite-run iteration in
+$\mathscr C^{(2)}$ is the pair of the numerical finite-run iterations:
+each component terminates exactly on its own finite-termination domain
+and has the corresponding terminal value. Thus iteration and its
+termination domains are preserved by either projection. This uses no
+arbitrary countable joins.
+
+All objects are isomorphic to $(\mathbb N,\mathbb N)$ by pairs of
+the effective coding isomorphisms. If
+$\tau:\mathbb N\times\mathbb N\to\mathbb N$ is the numerical
+universal evaluator, then $(\tau,\tau)$ is universal in
+$\mathscr C^{(2)}$: a pair of computations has a pair of total
+program-parameter maps, obtained separately from $\tau$.
+The partial-product equations and the zero laws hold componentwise.
+Together with isotypy and this evaluator, they make
+$\mathscr C^{(2)}$ a recursion category.
+
+Projection to the second component is a full functor
+$F:\mathscr C^{(2)}\to\mathscr C$ preserving all the displayed
+structures. Let $p,q$ be the domains of the even and odd natural
+numbers. The domains $(a,p)$ and $(b,q)$ are disjoint and inseparable in
+$\mathscr C^{(2)}$, since the first components of a separator
+would separate $a,b$ in $\mathscr C$.
+Their images are the nonzero complementary pair $p,q$.
+\end{proof}
+
+This source is not dominical: the nonzero arrows $(1,0)$ and $(0,1)$
+have zero restriction product, violating the additional dominical
+condition of \cite[Proposition 5.1(ii)]{Heller}.
+The projection is not faithful and does not reflect zero. Its target
+still has the inseparable pair $(a,b)$; the counterexample concerns
+the image of the specified source pair. Reflection in
+Proposition~\ref{prop:reflection} likewise concerns a pair with specified
+source preimages. Neither statement identifies arbitrary target pairs
+with source pairs.
+
+\begin{thebibliography}{9}
+\bibitem{Domains} F. Lengyel, \emph{Domains, finite proofs, and essential
+incompleteness}, 29 October 2026, 23-page manuscript.
+\bibitem{General} F. Lengyel, \emph{Finite proof algebras in range
+restriction categories}, 29 October 2026, 13-page manuscript.
+\bibitem{Iteration} F. Lengyel, \emph{Iteration domains, finite proofs,
+and computational cosheaves}, 29 October 2026, 14-page manuscript.
+\bibitem{ThreePoint} F. Lengyel, \emph{Range completion and computational
+cosheaves on a three-point space}, 29 October 2026, 7-page manuscript.
+\bibitem{Heller} A. Heller, An existence theorem for recursion categories,
+\emph{Journal of Symbolic Logic} \textbf{55}(3) (1990), 1252--1268.
+\href{https://doi.org/10.2307/2274486}{doi:10.2307/2274486}.
+\end{thebibliography}
+\end{document}

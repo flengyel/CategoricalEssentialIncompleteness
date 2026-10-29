@@ -106,6 +106,33 @@ The [source, review, and verification record](../Audit/2026-10-29-range-three-po
 states the remaining general completion problem. Earlier mathematical
 sources are unchanged, and these new results are not Lean-formalized.
 
+## Inseparable domains and computational extensions
+
+[Inseparable domains and computational extensions](inseparable_domains_and_extensions.pdf)
+([LaTeX source](inseparable_domains_and_extensions.tex), 29 October 2026, 5 pages)
+constructs the free involutive presentation of disjoint computational domains:
+`(U,a,b) ↦ (U+U,swap,a+b)`. Its right adjoint takes a presentation to
+its positive/negative domain pair. Consistent selected extensions correspond
+exactly to disjoint enlargements of `(a,b)`; complete extensions correspond
+exactly to complementary separators. Thus this signed-literal presentation
+is essentially incomplete precisely when the pair is inseparable.
+
+The existing atom constructor supplies one fixed interpretation for all
+classical extensions; their theorem/refutation pairs are inseparable.
+The note also proves restriction-functor reflection and gives a projection
+counterexample to preservation, retaining a chosen universal evaluator.
+The counterexample uses Heller's 1990 prodominical definition and is not
+dominical. The signed construction needs no ranges, iteration, regularity,
+or proof algebra, but does not supply classical deductive closure.
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error inseparable_domains_and_extensions.tex
+```
+
+The [author-side reviews and verification](../Audit/2026-10-29-inseparable-extensions/README.md)
+keep the proof checks and remaining scope outside the mathematical document.
+Earlier mathematical sources are unchanged. No Lean formalization is claimed.
+
 ## Separate arithmetic-universe comparison
 
 [Internal theories and intrinsic incompleteness](intrinsic_introspection_and_extensions.pdf)

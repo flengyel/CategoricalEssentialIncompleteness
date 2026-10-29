@@ -17,13 +17,16 @@ in flengyel/errata; read their latest committed state before importing further r
   *Iteration domains, finite proofs, and computational cosheaves*, 14 pages.
 - manuscript/range_completion_three_point_cosheaves.tex and .pdf:
   *Range completion and computational cosheaves on a three-point space*.
+- manuscript/inseparable_domains_and_extensions.tex and .pdf:
+  *Inseparable domains and computational extensions*, 5 pages.
 - manuscript/intrinsic_introspection_and_extensions.tex and .pdf:
   *Internal theories and intrinsic incompleteness*, 3 pages: a separate
   arithmetic-universe comparison, with no established connection to the
   given recursion category or the Di Paola–Heller construction.
 - Audit/2026-10-29-polynomial-proofs/, Audit/2026-10-29-general-construction/,
   Audit/2026-10-29-iteration-cosheaves/, Audit/2026-10-29-range-three-point/,
-  and Audit/2026-10-29-intrinsic-introspection/
+  Audit/2026-10-29-inseparable-extensions/, and
+  Audit/2026-10-29-intrinsic-introspection/
   record the respective reviews,
   source checks, and verification.
 
@@ -57,11 +60,38 @@ must not replace this project's recursion-category target.
 
 ## Immediate mathematical work
 
-Audit which concrete embeddings and coding choices are used only to
-realize intrinsic categorical operations, and formulate those operations
-by their universal properties where possible. Derive or construct them
-from the stated recursion-category structure; do not merely assume the
-objects and properties that constitute the original existence problem.
+The latest result gives a minimal construction inside the original category.
+For disjoint domains a,b on U, binary restriction coproducts give the signed
+presentation (U+U,swap,a+b). Its consistent computational extensions are
+exactly disjoint enlargements (c,d) of (a,b), and completeness is c∨d=1.
+Thus inseparability is equivalent to essential incompleteness in this class.
+The construction is left adjoint to (S,ν,t)↦(S,t,ν*t) for total involutive
+ν and consistent t. The adjunction needs no joins; the equivalence needs
+binary domain joins but not their stability under arbitrary total pullback.
+Neither result needs ranges, iteration, regularity, or a proof algebra.
+
+Next, investigate classical deductive closure over this signed presentation,
+with the least extra categorical structure possible. Construct its selected
+theorem domain and prove consistency, preferably conservation of literals.
+Do not assume such a closure or identify the free signed presentation with
+the classical Hilbert calculus. Ordinary syntax-code negation need not be
+involutive: a comparison with the involutive presentation must address that
+distinction explicitly. The existing conditional proof-algebra construction
+remains available; no new interpretation is needed for each extension.
+
+Indeed, its existing atom constructor θ:U→S already gives the fixed map
+θ*:D(S)→D(U), with a≤θ*t₀ and b≤θ*ν*t₀ from one-node proofs.
+The same inequalities hold for every t≥t₀. Every consistent extension's
+theorem/refutation pair (t,ν*t) is therefore inseparable, not just incomplete.
+
+For functors between categories, separate the two directions. A restriction
+functor preserving zero and binary domain joins reflects inseparability of
+a specified image pair. Full faithfulness on the relevant endomorphism set
+suffices for preservation. Unrestricted preservation fails even with the
+chosen evaluator preserved: the second projection from the diagonal-object
+subcategory of C×C sends (a,p),(b,q) to complementary p,q, where a,b are
+inseparable in C. This source is Heller-1990 prodominical, not dominical.
+It does not refute the weaker claim that the target has some inseparable pair.
 
 Any use of Ramesh's introspection must supply an actual construction
 associated with R and prove its compatibility with the selected

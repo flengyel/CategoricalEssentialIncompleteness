@@ -57,6 +57,21 @@ equality. The [reviews and verification](Audit/2026-10-29-range-three-point/READ
 separate proved facts from the remaining recursion-preserving completion
 problem in the [continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md).
 
+The note [Inseparable domains and computational extensions](manuscript/inseparable_domains_and_extensions.pdf)
+([source](manuscript/inseparable_domains_and_extensions.tex), 5 pages)
+constructs the signed-literal presentation `(U+U, swap, a+b)` directly from
+an inseparable pair. It proves an adjunction and an exact equivalence:
+inseparability means that every consistent selected extension of this
+presentation is incomplete. This construction needs binary restriction
+coproducts and finite domain joins, with no range or proof-algebra assumption.
+For the existing classical theories, the fixed atom map proves the stronger
+inseparability of every extension's theorem/refutation pair. Restriction
+functors preserving zero and domain joins reflect inseparability; a projection
+of Heller recursion categories shows that even evaluator-preserving functors
+need not preserve a specified pair. The signed presentation does not construct
+a full classical deductive closure. The [reviews and verification](Audit/2026-10-29-inseparable-extensions/README.md)
+record this distinction and the remaining construction problem.
+
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's
 results in the initial arithmetic universe. It constructs no comparison from
