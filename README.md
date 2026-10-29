@@ -44,10 +44,18 @@ Sierpiński space. Its universal object has no decidable equality. Heller's
 definitions and Lengyel's 2004 paper are read together with the version-10
 [errata](https://github.com/flengyel/errata/tree/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004).
 The [source checks, author-side reviews, and verification](Audit/2026-10-29-iteration-cosheaves/README.md)
-record the scope of the results. Range closure for general generated recursion
-categories and cosheaves with nontrivial covers remains open; the
-[continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md) gives the
-next construction. No new result has been formalized in Lean.
+record the scope of the results. No new result has been formalized in Lean.
+
+The companion [Range completion and computational cosheaves on a three-point space](manuscript/range_completion_three_point_cosheaves.pdf)
+([LaTeX source](manuscript/range_completion_three_point_cosheaves.tex))
+identifies the established free range completions and proves an obstruction
+to preservation of the original universal evaluator. It constructs the
+three-point cosheaf example with a nontrivial cover, effective global pushout
+presentations, internal regular images, explicit frames, and a compatible
+Turing morphism. The finite-proof construction applies without decidable atom
+equality. The [reviews and verification](Audit/2026-10-29-range-three-point/README.md)
+separate proved facts from the remaining recursion-preserving completion
+problem in the [continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md).
 
 Earlier notes remain available in [the manuscript directory](manuscript/README.md).
 

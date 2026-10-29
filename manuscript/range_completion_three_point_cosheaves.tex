@@ -1,0 +1,575 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Range completion and computational cosheaves on a three-point space},
+pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\Par}{\operatorname{Par}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\E}{\mathscr E}
+\newcommand{\A}{\mathscr A}
+\newcommand{\C}{\mathscr C}
+\title{Range completion and computational cosheaves\\on a three-point space}
+\author{Florian Lengyel}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Free range completions exist, but their universal properties must be
+distinguished from preservation of a universal evaluator. We state the
+relevant distinction and prove an obstruction for completions that add
+partial arrows without adding total arrows.
+We then construct a recursion category from computational cosheaves on
+a three-point space with a nontrivial two-open cover. Global values are
+pushouts presented by computably enumerable equivalence relations.
+Finite limits, ranges, and word objects are constructed on the three
+basic opens. A countable family of complete bipartite components supplies
+a universal object, Heller frames, and a filtered Turing evaluator.
+The finite-proof construction therefore gives essential incompleteness
+in this category without decidable atom equality.
+\end{abstract}
+
+\section{Adjoining ranges and retaining computation}
+
+Composition is written $gf=g\circ f$. In a restriction category,
+$\bar f:X\to X$ denotes the domain idempotent of $f:X\to Y$.
+The restriction order is $f\leq g$ if $f=g\bar f$;
+we write $\boxtimes$ for binary restriction products.
+A range idempotent is written $\widehat f:Y\to Y$.
+Restriction functors preserve the domain operation; range functors
+preserve both operations.
+
+There is a general free range construction. Cockett, Guo, and Hofstra
+construct a functor $R$ left adjoint to the forgetful functor from
+range categories to restriction categories
+\cite[Theorem~5.12]{CGH1}. For a small restriction category $\C$,
+its unit $\eta:\C\to R(\C)$ has the universal property
+\[
+ \operatorname{RangeFun}(R(\C),\mathscr D)
+ \cong \operatorname{RestrFun}(\C,\mathscr D)
+\]
+for every range category $\mathscr D$, naturally in both categories.
+The construction keeps the objects and represents arrows by labeled
+trees together with an original arrow \cite[\S5]{CGH1}.
+
+Their basic algebraic range axioms do not include
+\begin{equation}\label{eq:agreement}
+ vf=wf\quad\Longrightarrow\quad
+ v\widehat f=w\widehat f.
+\end{equation}
+This is their additional axiom RR.5 \cite[\S4.11]{CGH1};
+it is the universal-agreement property required in \cite{Iteration}.
+Here $f:X\to Y$ and $v,w:Y\to Z$ may all be partial.
+Thus the existence of the general left adjoint alone does not discharge
+that hypothesis.
+
+For a discrete cartesian restriction category, there is also a faithful
+discrete cartesian range completion $R_d(\C)$, universal for
+product-preserving functors into discrete cartesian range categories
+\cite[Theorem~3.27]{CGH2}. Here discrete means that each diagonal has a
+restriction inverse; it does not mean Boolean-decidable equality.
+In this cartesian setting discreteness is equivalent to
+\eqref{eq:agreement} \cite[Proposition~3.11]{CGH2}, so this completion
+does supply universal agreement.
+The regularization by fractions in \cite[Theorem~3.19]{CGH2} is a
+further construction. Regularity, coproducts, word-length coverage,
+and universal evaluation must be checked at the relevant step.
+
+\begin{lemma}\label{lem:no-new-total}
+Every arrow $q:A\to B$ of $R_d(\C)$ is a restriction of
+$\eta f$ for some $f:A\to B$ of $\C$.
+In particular, every total arrow of $R_d(\C)$ is the image of a
+total arrow of $\C$.
+\end{lemma}
+\begin{proof}
+The span presentation in \cite[Construction~3.21 and Lemma~3.22]{CGH2}
+represents $q$ by $[k,h]$, where $k:Z\to A$, $h:Z\to B$,
+and $h=fk$ for some $f:A\to B$; one may arrange
+$\bar k=\bar h$.
+The extension formula in the proof of their Theorem~3.27, applied
+to $\eta$ itself, gives the identity extension. Indeed, the
+universal equivalence of functor categories supplies an isomorphism
+to the identity extension restricting to the identity on $\eta$.
+Since $\eta$ is identity on objects, every component of this
+isomorphism is an identity. Thus
+\[
+ q=(\eta f)\widehat{\eta k}.
+\]
+Since $\widehat{\eta k}$ is a restriction idempotent, $q\leq\eta f$.
+If $q$ is total, this inequality gives $q=\eta f$.
+Faithfulness of $\eta$ and preservation of restriction then give
+$\bar f=1_A$.
+\end{proof}
+
+The following elementary obstruction concerns preservation of the
+\emph{given} evaluator. Its assumptions are stated independently of
+any particular completion.
+
+\begin{proposition}\label{prop:evaluator-obstruction}
+Let $J:\C\to\mathscr D$ be a restriction functor preserving binary
+restriction products. Suppose that every total arrow
+$JX\to JU$ in $\mathscr D$ is $Jc$ for some total $c:X\to U$ in
+$\C$. Suppose also that every object $Y$ of $\C$ has a total
+restriction embedding $j_Y:Y\to U$ with partial retraction
+$p_Y:U\to Y$.
+If $\tau:U\boxtimes U\to U$ is an arrow of $\C$ and
+$J\tau$ is parameter-universal for arrows
+$JX\boxtimes JU\to JU$ in $\mathscr D$, then $J$ is full on
+arrows between its image objects.
+\end{proposition}
+\begin{proof}
+We identify preserved products through the canonical product comparisons.
+Let $g:JX\to JY$ be partial. Put
+\[
+ G=(Jj_Y)g\pi_1:JX\boxtimes JU\to JU.
+\]
+Universality supplies a total $d:JX\to JU$ with
+$G=(J\tau)(d\boxtimes1)$. Write $d=Jc$ with $c$ total.
+Then $G=JG_0$, where $G_0=\tau(c\boxtimes1_U)$.
+Precompose with $J\langle1_X,j_X\rangle$ and postcompose with
+$Jp_Y$. Since $p_Yj_Y=1_Y$ and
+$\pi_1\langle1_X,j_X\rangle=1_X$, this gives
+\[
+ g=J\bigl(p_YG_0\langle1_X,j_X\rangle\bigr).
+\]
+The equations include their restriction domains.
+\end{proof}
+
+Consequently a completion satisfying the displayed condition on total
+arrows cannot both add genuinely new partial arrows between old objects
+and preserve the original evaluator's universality.
+By Lemma~\ref{lem:no-new-total}, this applies to $R_d(\C)$ whenever
+the original objects restriction-embed in $U$: if its unit is not full,
+$\eta\tau$ fails parameter-universality.
+A replacement
+evaluator or a completion adding new total program maps is a different
+question. This observation does not rule out a computational range
+completion; it identifies a property such a construction must address.
+
+\section{Cosheaves and a computational presentation}\label{sec:cosheaves}
+
+Let $X=\{a,b,c\}$ have opens
+\[
+ \varnothing,\quad D=\{c\},\quad
+ L=\{a,c\},\quad R=\{b,c\},\quad X.
+\]
+Write $\mathcal O(X)$ for the poset category of opens and inclusions.
+A set-valued cosheaf is a covariant functor
+$C:\mathcal O(X)\to\Set$ with $C(\varnothing)=\varnothing$
+whose cover diagram
+\[
+ \coprod_{i,j}C(V_i\cap V_j)\rightrightarrows
+ \coprod_iC(V_i)\longrightarrow C(V)
+\]
+is a coequalizer whenever the $V_i$ cover $V$
+\cite[\S\S2.1--2.2]{Curry}. Arrows are natural transformations.
+Let $J_0$ be the category with objects $0,1,2$ and two
+nonidentity arrows $0\to1$, $0\to2$.
+
+\begin{proposition}\label{prop:cosheaf-equivalence}
+Restriction to $D,L,R$ gives an equivalence
+\[
+ \operatorname{CoSh}(X,\Set)\simeq\Set^{J_0}.
+\]
+Its inverse sends a span $A\xleftarrow{r}C\xrightarrow{s}B$
+to the cosheaf with values $C,A,B$ on $D,L,R$ and
+$A\amalg_C B$ on $X$.
+\end{proposition}
+\begin{proof}
+Every cover of $D,L$, or $R$ contains the covered open itself.
+A cover of $X$ either contains $X$ or contains both $L$ and $R$.
+Thus its only additional condition is the pushout square
+\[
+\begin{tikzcd}
+C\arrow[r,"s"]\arrow[d,"r"']&B\arrow[d]\\
+A\arrow[r]&A\amalg_C B.
+\end{tikzcd}
+\]
+Redundant opens in a cover give the same coequalizer, since their
+maps already factor through the two displayed cover members.
+A commuting map of spans induces a unique map of pushouts.
+This defines the inverse functor on arrows; the pushout universal
+property gives both inverse natural isomorphisms.
+\end{proof}
+
+Let $\C_{\rm rec}$ have c.e.\ subsets of finite powers of $\N$
+as objects and partial recursive functions total on their sources as
+arrows; equality of arrows is extensional. Here c.e.\ means
+computably enumerable. Define
+\[
+ \E=\C_{\rm rec}^{J_0},\qquad \A=\Par(\E,\operatorname{Mono}).
+\]
+Here $\Par(\E,\operatorname{Mono})$ has the objects of $\E$;
+an arrow $Y\to Z$ is an isomorphism class of spans
+$Y\xleftarrow{m}T\xrightarrow{f}Z$ with $m$ monic.
+Composition uses pullback, and total arrows are represented by $m=1$.
+The required finite limits are verified below.
+An object of $\E$ is a pair of recursive transitions
+$r_i:Y_0\to Y_i$, $i=1,2$, on c.e.\ carriers.
+An arrow is a triple $f_j:Y_j\to Z_j$ with
+$r_i^Zf_0=f_i r_i^Y$.
+We call these computational cosheaves, using
+Proposition~\ref{prop:cosheaf-equivalence} for their underlying
+set-valued cosheaves. The permitted natural transformations are
+exactly those computable at the three basic opens.
+
+For a computational span, its global pushout has an effective quotient
+presentation. Take the tagged carrier $Y_1+Y_2$ and the equivalence
+relation generated by
+\[
+ (1,r_1 y)\sim(2,r_2 y)\qquad(y\in Y_0).
+\]
+Enumeration of finite paths in this c.e.\ edge relation enumerates
+the equivalence relation. A computational span map acts on tagged
+representatives and respects that relation, so induces the global
+map. Composition is induced by composition on representatives.
+No decision procedure for quotient equality is required.
+
+This qualification is necessary. If $E$ is any c.e.\ equivalence
+relation on $\N$, take $Y_0=E$, $Y_1=Y_2=\N$ and the two
+projections. The pushout is $\N/E$: reflexivity joins the two
+copies of each integer, and the other edges impose precisely $E$.
+An effective injective coding of this quotient into a numerical
+carrier, computable from representatives, would decide $E$ by
+equality of the codes. Such a coding therefore cannot be demanded
+for arbitrary c.e.\ $E$.
+
+\begin{proposition}\label{prop:structural}
+The category $\E$ is finitely complete, regular, and extensive.
+Its monomorphisms and regular images are computed at $0,1,2$.
+The partial category $\A$ is split, has restriction zeros,
+restriction products and coproducts, weak choice, and universal
+product-compatible ranges. Componentwise nonempty words give
+Heller's $B^\#$-structure with stable finite-length coverage.
+\end{proposition}
+\begin{proof}
+In $\C_{\rm rec}$ finite limits use tuples and equality of
+numerical codes; images are c.e.\ sets. A total surjection admits a
+partial recursive section total on its target: enumerate its source
+and search for a preimage. Hence it coequalizes its kernel pair.
+Surjections are stable under pullback. Tagged finite sums give
+extensivity.
+
+Finite limits, finite coproducts, and image factorizations of
+diagrams of shape $J_0$ are computed at the three objects.
+The transitions restrict to image carriers by naturality.
+For componentwise regular epimorphisms, componentwise descent is
+natural: its commuting equations follow after precomposition with
+the corresponding epic component. Thus these are regular
+epimorphisms in $\E$, and are pullback-stable.
+Decomposing each component over a tagged sum gives subdiagrams,
+so the slice equivalence for extensivity also holds.
+
+Monicity is detected by the three representable finite diagrams:
+$(1\leftarrow1\to1)$, $(1\leftarrow0\to0)$, and
+$(0\leftarrow0\to1)$, where $0$ and $1$ denote empty and singleton carriers.
+A chosen component element defines a computable map from the
+corresponding diagram. Hence a monomorphism is injective at
+each basic component. Conversely, these injections imply
+monicity. Their inverses on their c.e.\ images are partial recursive.
+
+Consequently a partial arrow in $\A$ is represented by c.e.\
+subsets $T_j\subseteq Y_j$ with $r_i(T_0)\subseteq T_i$,
+and recursive value maps on the $T_j$ commuting with the
+restricted transitions. Composition pulls back the domain subsets.
+Restrictions are the partial identities on these subdiagrams,
+which split. Products and coproducts use the diagram operations.
+Ranges are the three c.e.\ value images. Equality of partial
+composites includes equality of domains; componentwise surjectivity
+onto the image reflects that equality and equality of values.
+This proves universal range agreement. Products preserve these
+images.
+
+A partial monomorphism has an injective value map on its domain:
+test the defining monicity condition on total maps into that domain.
+Reversing its span gives a section, proving weak choice.
+
+Finally, apply nonempty-word formation to each carrier, and apply
+each transition to every letter. Concatenation, singleton insertion,
+flattening, left and right decomposition, parameter repetition,
+and alternating-word decomposition are recursive and natural.
+They obey Heller's seven-map axioms componentwise.
+The fixed-length inclusions cover all words. Equality on every
+length implies equality of partial domains and values, including
+after product with any diagram. This is stable agreement coverage,
+without an assumption of arbitrary external c.e.\ unions.
+\end{proof}
+
+\section{Internal products and domains}\label{sec:internal}
+
+The equivalence in Proposition~\ref{prop:cosheaf-equivalence}
+does not make every open-set evaluation preserve finite limits.
+For spans $Y,Z$, their internal product has basic components
+$Y_j\times Z_j$ and global value
+\[
+ (Y_1\times Z_1)
+ \amalg_{Y_0\times Z_0}
+ (Y_2\times Z_2).
+\]
+Its projections induce the product universal property from that
+of diagrams. It need not be the product of the two global
+pushouts. For $H=(1\leftarrow0\to1)$, one has $H\times H=H$
+but $H(X)\times H(X)$ has four elements, whereas
+$(H\times H)(X)$ has two.
+
+Likewise, the componentwise inclusion
+\[
+ (1\leftarrow0\to1)\ \longrightarrow\ (1\leftarrow1\to1)
+\]
+is a categorical monomorphism, while its global map is $2\to1$.
+Thus a partial map in $\A$ is not generally a family of
+pointwise partial functions on all five opens. Its domain is a
+categorical subobject of the computational cosheaf, represented
+by an injective subdiagram at the three basic opens.
+The images in Proposition~\ref{prop:structural} are categorical
+regular images, not an assertion about ordinary subsets of global
+pushouts.
+
+The same distinction applies to word objects and syntax.
+Their basic components are words or formulas in the indicated
+carriers; their global values are obtained by the pushout
+construction. There is no assertion that this pushout equals
+the words or formulas over the global atom quotient.
+These internal objects satisfy the categorical universal properties
+used below.
+
+\section{A universal object with frames}\label{sec:universal}
+
+Define $V$ by
+\[
+ V_0=\N^4,\quad V_1=V_2=\N^2,\qquad
+ r_1(k,z,a,b)=(k,a),\quad r_2(k,z,a,b)=(k,b).
+\]
+For each fixed $k$, this is a complete bipartite incidence diagram
+with infinitely many central labels over every endpoint pair.
+The index $k$ distinguishes its connected components.
+
+\begin{lemma}\label{lem:dominance}
+Every object of $\E$ has a total restriction embedding into $V$.
+\end{lemma}
+\begin{proof}
+Choose recursive injections $j_i:Y_i\to\N$ with partial recursive
+inverses on their images. Put
+\[
+ m_i(y_i)=(0,j_i y_i)\quad(i=1,2),\qquad
+ m_0(y)=(0,j_0y,j_1r_1y,j_2r_2y).
+\]
+These are commuting componentwise injections. Their inverse
+maps on the image subdiagram give the restriction inverse in $\A$.
+\end{proof}
+
+Fix a recursive pairing bijection $\N^2\cong\N$, a recursive
+bijection $\N\cong\N^\#$ onto nonempty numerical words, and
+recursive bijections $\N\cong\N^n$ uniform for $n\ge1$.
+
+\begin{lemma}\label{lem:frames}
+There are total computable isomorphisms
+$V\cong V\boxtimes V$, $V\cong V+V$, and $V\cong V^\#$.
+\end{lemma}
+\begin{proof}
+For the product frame, decode $k$ into $(k',k'')$ and independently
+decode each of $z,a,b$ into a pair. At endpoint $i$, decode
+$(k,x)$ into $((k',x'),(k'',x''))$. The two transition equations
+hold coordinatewise; pairing supplies the inverse.
+
+For the coproduct frame, write $k=2q+t$, $t\in\{0,1\}$.
+Choose summand $t$, replace $k$ by $q$, and keep the other
+coordinates. This is natural and has the evident inverse.
+
+For the word frame, decode $k$ as a nonempty component word
+$(k_1,\ldots,k_n)$. Decode each of $z,a,b$ into $n$ coordinates,
+giving the word
+$((k_j,z_j,a_j,b_j))_{j=1}^n$.
+At an endpoint decode $(k,x)$ into $((k_j,x_j))_{j=1}^n$.
+Transitions commute with these maps. Recoding the component
+word and coordinate tuples gives total recursive inverses.
+\end{proof}
+
+The component index is essential for this choice of frames.
+The single-component diagram
+$\N\leftarrow\N^3\to\N$ is connected: every left endpoint
+is joined to every right endpoint. Its coproduct with itself
+has two components, so the two diagrams are not isomorphic.
+Passing to $V$ supplies enough component indices for all three
+frame constructions.
+
+\section{A compatible universal evaluator}\label{sec:evaluator}
+
+Fix a universal partial recursive function $\varphi_p(x)$ with
+total recursive specialization. Numerical tuple encodings are
+understood below; every code decodes to a tuple of the stated
+fixed length.
+
+\begin{theorem}\label{thm:turing}
+There is a parameter-universal Turing morphism
+$\tau:V\boxtimes V\to V$ in $\A$.
+\end{theorem}
+\begin{proof}
+At endpoint $i=1,2$ define
+\[
+ \tau_i((k_p,p_i),(k_x,x_i))
+   =\operatorname{decode}_2
+      \varphi_{p_i}(\operatorname{encode}_2(k_x,x_i)).
+\]
+The program-component index $k_p$ is ignored.
+At component $0$, a program and an input have the forms
+$(k_p,p_0,p_1,p_2)$ and $(k_x,x_0,x_1,x_2)$.
+Run the central program
+\[
+ \operatorname{decode}_4
+ \varphi_{p_0}(\operatorname{encode}_4(k_x,x_0,x_1,x_2))
+       =(\ell,y_0,y_1,y_2).
+\]
+Return this tuple precisely when both endpoint computations also
+halt and return $(\ell,y_1)$ and $(\ell,y_2)$, respectively.
+Dovetailing and numerical equality define a partial recursive map.
+Its domain projects into both endpoint domains, and its values
+satisfy both transition equations. Hence $\tau$ is an arrow of $\A$.
+
+Let $F:Y\boxtimes V\to V$ be partial. Represent its three
+components by programs including their c.e.\ domain tests.
+Specialization gives total-on-source recursive index maps $s_i$
+such that the program $s_i(y_i)$ computes
+$x\mapsto F_i(y_i,x)$ with exactly its specified domain.
+Define
+\[
+ c_i(y_i)=(0,s_i(y_i))\quad(i=1,2),\qquad
+ c_0(y)=(0,s_0(y),s_1(r_1y),s_2(r_2y)).
+\]
+Then $c:Y\to V$ is a total commuting diagram.
+The equality $\tau_i(c_i,-)=F_i$ holds at both endpoints.
+Where the central program for $F_0$ halts, the domain and
+naturality conditions for $F$ guarantee that both endpoint
+checks succeed. Conversely, the central evaluator cannot halt
+without that program halting. Thus
+$\tau(c\boxtimes1_V)=F$, with equality of domains at all
+three components.
+\end{proof}
+
+Let $\mathscr R_X$ be the full partial category on formal objects
+generated by $V$ under $\boxtimes,+,\#$.
+Lemma~\ref{lem:frames} makes it isotypical.
+Theorem~\ref{thm:turing} restricts to these objects, so
+$\mathscr R_X$ is a recursion category.
+By Lemma~\ref{lem:dominance}, its restriction-idempotent splitting
+is equivalent to $\A$. In particular, the ranges in this
+example are verified within the computational category.
+
+\section{Equality, case distinction, and finite proofs}
+
+\begin{proposition}\label{prop:distinction}
+The object $V$ has no decidable equality in $\E$.
+The terminal object of $\E$ has five subobjects up to isomorphism,
+so $\E$ is equivalent to neither the numerical total category
+nor the computational Sierpi\'nski total category.
+\end{proposition}
+\begin{proof}
+The Boolean object $2=1+1$ is the constant diagram $2$.
+If $\epsilon:V\times V\to2$ classified the diagonal, naturality
+along $r_1$ would make $\epsilon_0(u,v)$ true whenever
+$r_1u=r_1v$. Choose distinct central tuples differing only in
+$z$; their endpoint values agree. This contradicts the required
+central diagonal inverse image.
+
+A subobject of the terminal diagram has either empty central
+component and arbitrary empty/singleton endpoint components
+(four choices), or all three components singleton (one choice).
+The numerical and Sierpi\'nski terminal subobject orders have
+two and three elements, respectively \cite[\S6]{Iteration}.
+Equivalences preserve these orders.
+\end{proof}
+
+\begin{lemma}\label{lem:case}
+There are disjoint domains $q_0,q_1$ on $V$ with the binary
+case-distinction property: for every complementary pair of
+domains $d,d'$ on $V$, a total $h:V\to V$ satisfies
+$h^*q_0=d'$ and $h^*q_1=d$.
+\end{lemma}
+\begin{proof}
+Let $q_i$ be the range of the global point with central value
+$(i,0,0,0)$ and endpoint values $(i,0)$, for $i=0,1$.
+
+Write the component subsets of $d,d'$ as complementary partitions.
+For every tuple $(k,z,a,b)$, its two endpoints must lie in the
+same part: its central part projects into that part at both
+endpoints. Varying $a,b$ shows that every endpoint with the
+same $k$ has the same part. Every central tuple with that $k$
+is forced into that part as well. Thus $d$ is the union of
+whole component blocks indexed by a subset $K\subseteq\N$.
+The set $K$ and its complement are c.e., by testing the two
+domains at the endpoint $(k,0)$. Parallel search decides $K$.
+Let $h$ send block $k$ to the displayed point $1$ if $k\in K$
+and to point $0$ otherwise. Its three component maps are total
+recursive and commute. Their inverse-image domains are as claimed.
+\end{proof}
+
+\begin{theorem}\label{thm:essential}
+In the restriction splitting of $\mathscr R_X$, there is a
+consistent computational classical propositional presentation
+such that every consistent computational extension is incomplete.
+Its syntax and proof algebras are parameter-stable finite-stage
+algebras, and its theorem domain is the selected range of its
+proof-conclusion map.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:structural}, Lemma~\ref{lem:dominance},
+and Theorem~\ref{thm:turing} verify every hypothesis of
+\cite[Corollary~4.2]{Iteration}. The finite trace/worklist
+construction therefore supplies both stage unions, and the
+typed Turing-fold theorem cited there supplies the folds.
+The typing filter is retained before applying the polynomial;
+its strength uses only total program-parameter maps.
+
+The object $V$ is nonzero. Lemma~\ref{lem:case} and the
+Turing diagonal give disjoint inseparable domains $a,b$ on $V$.
+Use syntax $V+Z+Z^2$, the three Hilbert schemes and modus ponens,
+and the signed atomic axioms indexed by the split objects of
+$a,b$. The equality-constraint argument of
+\cite[Theorem~5.3]{Iteration} proves consistency without a
+Boolean equality test. Regular images give the least rule-closed
+theorem domain. The one-node proof maps give its two atomic
+range inequalities, so a complete consistent computational
+extension would separate $a,b$ by complementary domains,
+contradicting inseparability.
+\end{proof}
+
+This verifies a nontrivial-cover cosheaf instance. It does not
+assert a general recursion-preserving range completion or closure
+of arbitrary Heller-generated subcategories under ranges.
+The next completion question is to identify which added range
+predicates admit a uniform evaluator while retaining the required
+total program maps, word-length coverage, and finite coproducts.
+The three-point example supplies a test category in which these
+properties can be compared without assuming that global pushouts
+have decidable equality.
+
+\begin{thebibliography}{9}
+\bibitem{CGH1} J.~R.~B.~Cockett, X.~Guo, and P.~Hofstra,
+Range categories I: General theory,
+\emph{Theory and Applications of Categories} \textbf{26}(17)
+(2012), 412--452.
+\url{https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html}.
+\bibitem{CGH2} J.~R.~B.~Cockett, X.~Guo, and P.~Hofstra,
+Range categories II: Towards regularity,
+\emph{Theory and Applications of Categories} \textbf{26}(18)
+(2012), 453--500.
+\url{https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html}.
+\bibitem{Iteration} F.~Lengyel,
+\emph{Iteration domains, finite proofs, and computational cosheaves},
+29 October 2026, repository version \texttt{8961637}.
+\url{https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/896163707ed3eaa61a30f1d881e8a9f18a3ec0c8/manuscript/iteration_domains_and_cosheaves.tex}.
+\bibitem{Curry} J.~M.~Curry,
+\emph{Sheaves, Cosheaves and Applications}, Ph.D. thesis,
+University of Pennsylvania, 2014.
+\href{https://arxiv.org/abs/1303.3255}{arXiv:1303.3255v2}.
+\end{thebibliography}
+\end{document}

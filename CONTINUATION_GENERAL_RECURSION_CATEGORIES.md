@@ -1,4 +1,4 @@
-# Continuation: iteration domains and computational cosheaves
+# Continuation: computational range completion
 
 Continue the mathematical construction in flengyel/CategoricalEssentialIncompleteness
 on main. Use the current committed sources, not the earlier represented-Boolean-quotient
@@ -15,8 +15,11 @@ in flengyel/errata; read their latest committed state before importing further r
   committed at dbd8b1ad803c1436ecf6abdc1c4ef1548f7ab4c1.
 - manuscript/iteration_domains_and_cosheaves.tex and .pdf:
   *Iteration domains, finite proofs, and computational cosheaves*, 14 pages.
+- manuscript/range_completion_three_point_cosheaves.tex and .pdf:
+  *Range completion and computational cosheaves on a three-point space*.
 - Audit/2026-10-29-polynomial-proofs/, Audit/2026-10-29-general-construction/,
-  and Audit/2026-10-29-iteration-cosheaves/ record the respective reviews,
+  Audit/2026-10-29-iteration-cosheaves/, and Audit/2026-10-29-range-three-point/
+  record the respective reviews,
   source checks, and verification.
 
 The first two manuscripts remain unchanged by the cosheaf continuation.
@@ -93,24 +96,54 @@ Thus this example needs the equality-free consistency argument.
 Its computations still use numerical component programs; do not claim
 an arithmetic interpretation or a nonclassical computability theory.
 
+## Verified three-point construction
+
+The companion treats the space with opens ∅, {c}, {a,c}, {b,c}, {a,b,c}.
+Its set-valued cosheaves are exactly covariant fork diagrams
+Y_1←Y_0→Y_2, with global value the pushout Y_1 ⊔_(Y_0) Y_2.
+The computational total category is C^[0→1,0→2], and partial domains
+are c.e. subdiagrams. The global pushout is presented by a c.e.
+equivalence relation on tagged representatives; quotient equality need
+not be decidable. Every c.e. equivalence relation on N occurs this way.
+
+The note proves finite limits, regularity, extensivity, range/image
+agreement, weak choice, and stable word-length coverage on basic components.
+A categorical monomorphism can induce a noninjective global pushout map.
+Internal products, word objects, and syntax are consequently not obtained
+by performing the corresponding set construction on every open value.
+
+The universal object has V_0=N^4, V_1=V_2=N^2 and transitions
+(k,z,a,b)↦(k,a),(k,b). The component index k supplies product, coproduct,
+and nonempty-word frames. A central universal computation is accepted
+only when its two endpoint computations return the required projections.
+The total natural compiler proves exact parameter-universality.
+The generated isotypical full partial category is a recursion category,
+and its restriction splitting is the full computational fork category.
+
+Complemented domains of V consist of whole component blocks, with a
+recursive set of indices; this gives binary case distinction. V lacks
+decidable equality. The total terminal object has five subobjects, unlike
+the numerical two and Sierpiński three. The established finite-stage
+and equality-constraint theorems therefore give essential incompleteness
+in this three-point category without decidable atom equality.
+
 ## Next mathematical target
 
-Try a cosheaf construction with a genuinely nontrivial covering condition.
-The proposed test space has opens
-∅, {c}, {a,c}, {b,c}, {a,b,c}. Its two proper maximal opens cover X.
-A cosheaf realizes the pushout of the extension maps from C({c}).
+Cockett–Guo–Hofstra I, Theorem 5.12, supplies a general algebraic range
+completion. Part II, Theorem 3.27, supplies a faithful discrete cartesian
+range completion R_d(C); Proposition 3.11 gives universal agreement.
+The companion derives from its normal form that it adds no total arrows
+on original objects. If all original objects restriction-embed in U,
+preservation of the original evaluator's parameter-universality would
+force the unit to be full. Thus a nonfull R_d completion requires a
+different evaluator or a construction adding total program maps.
 
-Determine a precise computational category for these diagrams, then:
-
-- Construct the required pushouts. Identify whether their quotient equality
-  remains computable, or whether different carriers are needed.
-- Prove finite limits, actual categorical products, extensivity, and
-  agreement of selected ranges with regular images in that category.
-- Construct a universal object, compatible frames, and a typed
-  parameter-universal evaluator with exact computational domains.
-- Verify stable word-length coverage and closure under the trace/worklist
-  construction. Apply the existing equality-free consistency theorem only
-  after these hypotheses have been established.
+Construct a completion with explicit uniform codes for the added range
+predicates and a compatible evaluator. Prove preservation or recovery
+of finite coproducts, stable word-length coverage, universal dominance,
+and weak choice; establish regularity using the stated hypotheses.
+Do not infer these properties from the range universal property.
+Use the three-point computational category as a test example.
 
 Pointwise products of general set-valued cosheaves need not be cosheaves:
 on a discrete two-point space C(V)=V gives four pairs at X but only two

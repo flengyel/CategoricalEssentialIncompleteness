@@ -77,6 +77,33 @@ The [review and verification record](../Audit/2026-10-29-iteration-cosheaves/REA
 includes the Lengyel2004/errata comparison and the checked hypotheses.
 These are paper proofs; no Lean files were changed.
 
+## Range completion and the three-point space
+
+[Range completion and computational cosheaves on a three-point space](range_completion_three_point_cosheaves.pdf)
+([LaTeX source](range_completion_three_point_cosheaves.tex), 29 October 2026)
+answers the range-completion question using Cockett–Guo–Hofstra's general
+and discrete cartesian constructions. The latter supplies universal
+agreement, but adds no total arrows on the original objects. Under
+universal-object dominance, a nonfull completion therefore cannot preserve
+the original evaluator's parameter-universality.
+
+On the space with opens ∅, {c}, {a,c}, {b,c}, and {a,b,c}, computational
+cosheaves are computable fork diagrams whose global values are effective
+pushout quotients. The note proves regularity, ranges, extensivity, weak
+choice, stable word-length coverage, universal-object dominance, frames,
+and an exact-domain evaluator. It verifies binary case distinction and
+applies the preceding equality-free consistency theorem. Categorical
+subobjects need not induce injective maps of global pushouts; internal
+products and syntax are treated accordingly.
+
+~~~bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error range_completion_three_point_cosheaves.tex
+~~~
+
+The [source, review, and verification record](../Audit/2026-10-29-range-three-point/README.md)
+states the remaining general completion problem. Earlier mathematical
+sources are unchanged, and these new results are not Lean-formalized.
+
 ## Earlier notes
 
 
