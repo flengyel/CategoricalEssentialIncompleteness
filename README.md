@@ -56,10 +56,15 @@ a specified pair. Arrows from the equality PER on `ℕ` to the Boolean PER
 correspond bijectively to total recursive Boolean functions. Their upper
 fibers are exactly the recursive support inclusions, which are exactly the
 complemented subobjects of that equality PER.
+Partial pairing and recursive tuple coding give the numerical category a
+prodominical `P`-category structure with its original restriction operation.
+The induced total-arrow category is equivalent to the existing one, with
+compatible product pairings. The domain lattices are naturally isomorphic
+under restriction inverse image; their joins are constructed from c.e. unions.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-Numerical restriction products and recursion, and arithmetic syntax and provability
+Numerical recursion and indexing, and arithmetic syntax and provability
 comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
@@ -150,14 +155,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 262 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (273 in total). Only
+declarations, and 300 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (311 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 273 axiom audits.
+PASS: project build, dependency pins, source hashes, and 311 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -169,7 +174,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The Boolean-arrow and complemented-subobject evidence is in
+is ignored by Git. The numerical restriction-product and comparison evidence is in
+[`Audit/2026-10-29-numerical-restriction-products/`](Audit/2026-10-29-numerical-restriction-products/).
+The Boolean-arrow and complemented-subobject evidence is in
 [`Audit/2026-10-29-numerical-boolean/`](Audit/2026-10-29-numerical-boolean/).
 The numerical predicate and domain-embedding evidence is in
 [`Audit/2026-10-29-numerical-predicates/`](Audit/2026-10-29-numerical-predicates/).

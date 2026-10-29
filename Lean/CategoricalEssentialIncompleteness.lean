@@ -18,6 +18,8 @@ import CategoricalEssentialIncompleteness.NumericalProducts
 import CategoricalEssentialIncompleteness.PERExtensive
 import CategoricalEssentialIncompleteness.NumericalPredicates
 import CategoricalEssentialIncompleteness.NumericalComplementedSubobjects
+import CategoricalEssentialIncompleteness.NumericalTotalComparison
+import CategoricalEssentialIncompleteness.NumericalDomainComparison
 
 /-!
 # Categorical essential incompleteness
@@ -35,6 +37,10 @@ satisfy the van Kampen property. The numerical domain inclusion is an injective
 natural bounded lattice map into the full PER subobject predicate lattices.
 The complemented subobjects of the equality PER on `ℕ` are exactly recursive
 support inclusions, equivalently the upper fibers of Boolean arrows.
+Numerical restriction products give a prodominical P-category with the
+original restriction operation. Its total-arrow category and domain lattices
+are compared with the existing numerical presentations, including products,
+bounded lattice operations, and restriction inverse image.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison

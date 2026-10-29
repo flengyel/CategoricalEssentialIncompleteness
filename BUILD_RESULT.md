@@ -1,5 +1,43 @@
 # Categorical essential incompleteness: build result
 
+## Numerical restriction products and comparisons checkpoint
+
+Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from
+`7befddd873d85750721aafb2f47f913cda082ddf`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1941 jobs, including cached dependencies).
+- All 311 axiom audits pass, retaining the previous 273. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source, pin,
+  or manuscript file was changed.
+- All five new modules compile without warnings. The two imported linter
+  warnings remain. The 56 project Lean files contain no proof holes or new axioms.
+
+Partial pairing is defined on the intersection of the component domains.
+The restriction projection equations, reconstruction from projections, and
+precomposition law are proved. Recursive tuple coding gives all `PCategory`
+equations, including associator and symmetry naturality. Both zero-absorption
+laws establish `Prodominical Numerical`.
+
+The induced restriction and the original numerical restriction are proved
+equal as structures. Explicit functors give an equivalence between their
+total-arrow categories and identify their product pairings. Total pairing
+also agrees with the existing numerical product lift and its PER image.
+The numerical domain lattice is order isomorphic to `DomSemilattice`, with
+the same underlying arrows. C.e. unions construct `DomainJoins Numerical`;
+the bounded lattice comparison preserves partial inverse image.
+
+The next construction is a recursive isomorphism between each infinite
+recursive numerical carrier and `ℕ`, establishing isotype. The Turing
+morphism, indexing, Set-enrichment, and arithmetic syntax/provability
+comparisons remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-29-numerical-restriction-products](Audit/2026-10-29-numerical-restriction-products/).
+
 ## Numerical Boolean arrows and complemented subobjects checkpoint
 
 Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from

@@ -24,7 +24,10 @@ predicate lattices. Boolean arrows and their fibers are characterized by
 total recursive functions and recursive support inclusions. These inclusions
 are exactly the complemented subobjects of the equality PER on `ℕ`.
 This completes `lem:integration-numerical-subobjects`. The arithmetic
-interpretation remains incomplete. All declarations below are in the namespace
+interpretation remains incomplete. Numerical restriction products give a
+prodominical `P`-category with the original restriction operation. Its domain
+lattices and total-arrow category are compared explicitly with the existing
+numerical constructions. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -47,9 +50,12 @@ interpretation remains incomplete. All declarations below are in the namespace
 | `thm:categorical-essential-incompleteness` | `EnrichedRestriction.categorical_essential_incompleteness`; `categorical_boundCopair_not_regularEpi` | Both conclusions proved along `J : Tot(K₀) → C`, from the internal section, natural predicate identification, and ordinary representing restriction idempotents. Both names are in `EnrichedRestriction`; the precise input scope is described below. |
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
 | Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
-| Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. Binary products of total arrows are constructed; restriction products and the recursion-category instance remain open. |
+| Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. Restriction products are constructed; isotype and the recursion-category instance remain open. |
 | PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular and finitely extensive. |
 | Binary products and preservation by `J` in `sec:integration-numerical` | `Numerical.productIsLimit`; `Numerical.toPER_preservesBinaryProducts` | Recursive tuple coding gives infinite recursive product carriers. Projection equations for the PER comparison prove preservation. |
+| Numerical restriction products in `sec:integration-numerical` | `Numerical.partialPair_fst`; `partialPair_snd`; `partialPair_proj`; `numericalPCategory`; `numericalProdominical` | Partial pairing, the restriction projection equations, all `P`-category equations, and zero absorption are proved. All names are in `Numerical`. |
+| Compatibility of numerical restriction and total products | `Numerical.inducedRestriction_eq`; `pcategoryTotalEquivalence`; `fromPCategoryTotal_pairing`; `totalPair_eq_lift`; `toPER_totalPair` | The induced restriction equals the original structure. The total-arrow equivalence identifies pairings and preserves products; pairing agrees with the existing numerical and PER product constructions. All names are in `Numerical`. |
+| Numerical domains in the imported domain API | `Numerical.domainOrderIso`; `numericalDomainJoins`; `domainComparisonHom`; `domainComparisonHom_inverse` | The domain presentations are bounded lattice isomorphic, with identical underlying arrows and compatible partial inverse image. Joins and their stability are constructed from the c.e. support lattice. All names are in `Numerical`. |
 | Finite limits and regular images in `sec:integration-numerical` | `NumericalPER.perHasFiniteLimits`; `imageFactorisation`; `hasCoequalizer_of_isKernelPair` | Terminal object, products, equalizers, and regular-epimorphism/monomorphism factorizations are constructed. Every kernel pair has a coequalizer. The latter two declarations are in `NumericalPER`. |
 | Regular PER target in `sec:integration-numerical` | `NumericalPER.pullback_isPullback`; `pullbackSnd_regularEpi`; `perRegular` | Explicit pullbacks and stability of regular epimorphisms proved, giving `Regular NumericalPER`. All names are in `NumericalPER`. |
 | Extensive PER target in `sec:integration-numerical` | `NumericalPER.coproductIsColimit`; `decompositionIso`; `perFinitaryExtensive`; `coproduct_disjoint` | Finite coproducts, decomposition into inverse images, the van Kampen property, and disjointness are proved. All names are in `NumericalPER`. |
@@ -396,8 +402,35 @@ and proves its universal property against every PER source.
 recursive and infinite. The comparison isomorphism under `J` is represented by
 the identity function on pair codes. Its projection equations prove that `J`
 preserves binary products; full faithfulness then gives the numerical product
-universal property. This does not yet construct the `PCategory` restriction
-products or the numerical recursion-category instance.
+universal property.
+
+`NumericalPartialProducts.lean` pairs partial numerical arrows on the
+intersection of their domains. The projection equations include the
+restriction of the other component. Every partial arrow into a product is
+recovered from its projections, and precomposition preserves pairing.
+
+`NumericalPCategory.lean` uses these operations to construct `PCategoryStruct`
+and prove all `PCategory` equations. Recursive reassociation and transposition
+of tuple codes prove the naturality of the associator and symmetry. The
+derived restriction operation equals the original one, and the two
+restriction structures are proved equal. Both zero-absorption laws give
+`Prodominical Numerical`.
+
+`NumericalTotalProducts.lean` proves totality of pairing of total arrows and
+identifies it with the lift of the existing numerical product cone. The
+functor to PERs sends this pairing to the PER pairing through `productIso`.
+
+`NumericalTotalComparison.lean` constructs explicit mutually inverse functors
+between the total-arrow categories defined using the induced and original
+restrictions. The functors retain underlying arrows and identify the two
+product pairings. The resulting equivalence preserves binary products.
+
+`NumericalDomainComparison.lean` gives an order isomorphism between
+`Numerical.Domain X` and `DomSemilattice X`, with identical underlying arrows.
+It preserves partial inverse image. Transport of c.e. joins constructs the
+`DomainJoins` instance required by `RestrictionPredicates`; no independent
+join assumption is added. The comparison is a bijective bounded lattice
+homomorphism compatible with partial inverse image.
 
 `PERFiniteLimits.lean` constructs a terminal PER and equalizers. The equalizer
 restricts the source to inputs where the two representing functions return
@@ -458,14 +491,14 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next construction is **numerical restriction products**, including partial
-pairing and the restriction projection equations. Turing/indexing and
-Set-enrichment data, effective syntax, numeral
+The next construction is **a recursive isomorphism between each numerical
+object and `ℕ`**, giving the isotype property. The Turing morphism, indexing
+and Set-enrichment data, effective syntax, numeral
 substitution, Lindenbaum Boolean presentation, and theory-extension quotients
 also remain open. They are needed for `thm:integration-essential-equivalence`
 (i) and (iii), `prop:numerical-boolean-extensions`, and the arithmetic corollary.
 
-The full verifier builds the combined entry point and audits 273 declarations,
+The full verifier builds the combined entry point and audits 311 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash, as well as both manuscript hashes. Thirteen imported
 files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean

@@ -1,0 +1,150 @@
+CategoricalEssentialIncompleteness.Numerical.partialFst_total : ∀ (X Y : CategoricalEssentialIncompleteness.Numerical),
+  CategoryTheory.RestrictionCategory.isTotal (X.partialFst Y)
+CategoricalEssentialIncompleteness.Numerical.partialSnd_total : ∀ (X Y : CategoricalEssentialIncompleteness.Numerical),
+  CategoryTheory.RestrictionCategory.isTotal (X.partialSnd Y)
+@CategoricalEssentialIncompleteness.Numerical.mem_partialPair : ∀ {W X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : W ⟶ X) (g : W ⟶ Y) (n k : ℕ),
+  k ∈ (CategoricalEssentialIncompleteness.Numerical.partialPair f g).val n ↔
+    ∃ a ∈ f.val n, ∃ b ∈ g.val n, Nat.pair a b = k
+@CategoricalEssentialIncompleteness.Numerical.mem_partialPair_iff : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} (f : W ⟶ X) (g : W ⟶ Y) (n m : ℕ),
+  m ∈ (CategoricalEssentialIncompleteness.Numerical.partialPair f g).val n ↔
+    (Nat.unpair m).1 ∈ f.val n ∧ (Nat.unpair m).2 ∈ g.val n
+@CategoricalEssentialIncompleteness.Numerical.mem_partialProdMap_iff : ∀
+  {W X Y Z : CategoricalEssentialIncompleteness.Numerical} (f : W ⟶ X) (g : Y ⟶ Z) (n m : ℕ),
+  m ∈ (CategoricalEssentialIncompleteness.Numerical.partialProdMap f g).val n ↔
+    (Nat.unpair m).1 ∈ f.val (Nat.unpair n).1 ∧ (Nat.unpair m).2 ∈ g.val (Nat.unpair n).2
+@CategoricalEssentialIncompleteness.Numerical.partialPair_fst : ∀ {W X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.partialPair f g) (X.partialFst Y) =
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.restrict g) f
+@CategoricalEssentialIncompleteness.Numerical.partialPair_snd : ∀ {W X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.partialPair f g) (X.partialSnd Y) =
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.restrict f) g
+@CategoricalEssentialIncompleteness.Numerical.restrict_partialPair : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoricalEssentialIncompleteness.Numerical.restrict (CategoricalEssentialIncompleteness.Numerical.partialPair f g) =
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.restrict f)
+      (CategoricalEssentialIncompleteness.Numerical.restrict g)
+@CategoricalEssentialIncompleteness.Numerical.comp_partialPair : ∀
+  {V W X Y : CategoricalEssentialIncompleteness.Numerical} (h : V ⟶ W) (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp h (CategoricalEssentialIncompleteness.Numerical.partialPair f g) =
+    CategoricalEssentialIncompleteness.Numerical.partialPair (CategoryTheory.CategoryStruct.comp h f)
+      (CategoryTheory.CategoryStruct.comp h g)
+@CategoricalEssentialIncompleteness.Numerical.partialPair_proj : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} (h : W ⟶ X.product Y),
+  CategoricalEssentialIncompleteness.Numerical.partialPair (CategoryTheory.CategoryStruct.comp h (X.partialFst Y))
+      (CategoryTheory.CategoryStruct.comp h (X.partialSnd Y)) =
+    h
+@CategoricalEssentialIncompleteness.Numerical.partial_product_hom_ext : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} {f g : W ⟶ X.product Y},
+  CategoryTheory.CategoryStruct.comp f (X.partialFst Y) = CategoryTheory.CategoryStruct.comp g (X.partialFst Y) →
+    CategoryTheory.CategoryStruct.comp f (X.partialSnd Y) = CategoryTheory.CategoryStruct.comp g (X.partialSnd Y) →
+      f = g
+CategoricalEssentialIncompleteness.Numerical.partialProdMap_id : ∀ (X Y : CategoricalEssentialIncompleteness.Numerical),
+  CategoricalEssentialIncompleteness.Numerical.partialProdMap (CategoryTheory.CategoryStruct.id X)
+      (CategoryTheory.CategoryStruct.id Y) =
+    CategoryTheory.CategoryStruct.id (X.product Y)
+@CategoricalEssentialIncompleteness.Numerical.partialProdMap_comp : ∀
+  {U V W X Y Z : CategoricalEssentialIncompleteness.Numerical} (f : U ⟶ V) (g : V ⟶ W) (h : X ⟶ Y) (k : Y ⟶ Z),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.partialProdMap f h)
+      (CategoricalEssentialIncompleteness.Numerical.partialProdMap g k) =
+    CategoricalEssentialIncompleteness.Numerical.partialProdMap (CategoryTheory.CategoryStruct.comp f g)
+      (CategoryTheory.CategoryStruct.comp h k)
+@CategoricalEssentialIncompleteness.Numerical.partialDiag_nat : ∀ {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : X ⟶ Y),
+  CategoryTheory.CategoryStruct.comp f Y.partialDiag =
+    CategoryTheory.CategoryStruct.comp X.partialDiag (CategoricalEssentialIncompleteness.Numerical.partialProdMap f f)
+@CategoricalEssentialIncompleteness.Numerical.pcategory_partialPairing_eq : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.PCategoryStruct.partialPairing f g = CategoricalEssentialIncompleteness.Numerical.partialPair f g
+@CategoricalEssentialIncompleteness.Numerical.pcategory_rst_eq : ∀ {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : X ⟶ Y), CategoryTheory.PCategoryStruct.rst f = CategoricalEssentialIncompleteness.Numerical.restrict f
+@CategoricalEssentialIncompleteness.Numerical.partialProdMap_assoc_nat : ∀
+  {X X' Y Y' Z Z' : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ X') (g : Y ⟶ Y') (h : Z ⟶ Z'),
+  CategoryTheory.CategoryStruct.comp
+      (CategoricalEssentialIncompleteness.Numerical.partialProdMap
+        (CategoricalEssentialIncompleteness.Numerical.partialProdMap f g) h)
+      (CategoryTheory.PCategoryStruct.assoc X' Y' Z') =
+    CategoryTheory.CategoryStruct.comp (CategoryTheory.PCategoryStruct.assoc X Y Z)
+      (CategoricalEssentialIncompleteness.Numerical.partialProdMap f
+        (CategoricalEssentialIncompleteness.Numerical.partialProdMap g h))
+@CategoricalEssentialIncompleteness.Numerical.partialProdMap_swap_nat : ∀
+  {X X' Y Y' : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ X') (g : Y ⟶ Y'),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.partialProdMap f g)
+      (CategoryTheory.PCategoryStruct.swap X' Y') =
+    CategoryTheory.CategoryStruct.comp (CategoryTheory.PCategoryStruct.swap X Y)
+      (CategoricalEssentialIncompleteness.Numerical.partialProdMap g f)
+CategoricalEssentialIncompleteness.Numerical.numericalPCategory : CategoryTheory.PCategory
+  CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.inducedRestriction_eq : CategoryTheory.PCategory.inducedRestriction =
+  CategoricalEssentialIncompleteness.Numerical.numericalRestriction
+CategoricalEssentialIncompleteness.Numerical.numericalProdominical : CategoryTheory.RecursionCategory.Prodominical
+  CategoricalEssentialIncompleteness.Numerical
+@CategoricalEssentialIncompleteness.Numerical.partialPair_isTotal : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical} {f : W ⟶ X} {g : W ⟶ Y},
+  CategoryTheory.RestrictionCategory.isTotal f →
+    CategoryTheory.RestrictionCategory.isTotal g →
+      CategoryTheory.RestrictionCategory.isTotal (CategoricalEssentialIncompleteness.Numerical.partialPair f g)
+@CategoricalEssentialIncompleteness.Numerical.totalPair : {W X Y : CategoricalEssentialIncompleteness.Numerical.Total} →
+  (W ⟶ X) → (W ⟶ Y) → (W ⟶ CategoricalEssentialIncompleteness.Numerical.totalProduct X Y)
+@CategoricalEssentialIncompleteness.Numerical.totalPair_fst : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.totalPair f g)
+      (CategoricalEssentialIncompleteness.Numerical.fst X Y) =
+    f
+@CategoricalEssentialIncompleteness.Numerical.totalPair_snd : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Numerical.totalPair f g)
+      (CategoricalEssentialIncompleteness.Numerical.snd X Y) =
+    g
+@CategoricalEssentialIncompleteness.Numerical.totalPair_eq_lift : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoricalEssentialIncompleteness.Numerical.totalPair f g =
+    (CategoricalEssentialIncompleteness.Numerical.productIsLimit X Y).lift (CategoryTheory.Limits.BinaryFan.mk f g)
+@CategoricalEssentialIncompleteness.Numerical.toPER_totalPair : ∀
+  {W X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : W ⟶ X) (g : W ⟶ Y),
+  CategoryTheory.CategoryStruct.comp
+      (CategoricalEssentialIncompleteness.Numerical.toPER.map
+        (CategoricalEssentialIncompleteness.Numerical.totalPair f g))
+      (CategoricalEssentialIncompleteness.Numerical.productIso X Y).hom =
+    CategoricalEssentialIncompleteness.NumericalPER.pair (CategoricalEssentialIncompleteness.Numerical.toPER.map f)
+      (CategoricalEssentialIncompleteness.Numerical.toPER.map g)
+CategoricalEssentialIncompleteness.Numerical.pcategoryTotalEquivalence : CategoryTheory.RestrictionCategory.TotalSubcategory
+    CategoricalEssentialIncompleteness.Numerical ≌
+  CategoricalEssentialIncompleteness.Numerical.Total
+@CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal_pairing : ∀
+  {W X Y : CategoryTheory.RestrictionCategory.TotalSubcategory CategoricalEssentialIncompleteness.Numerical} (f : W ⟶ X)
+  (g : W ⟶ Y),
+  CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal.map
+      (CategoryTheory.RestrictionCategory.TotalSubcategory.binaryProductLift f g) =
+    CategoricalEssentialIncompleteness.Numerical.totalPair
+      (CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal.map f)
+      (CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal.map g)
+CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal_preservesBinaryProducts : CategoryTheory.Limits.PreservesLimitsOfShape
+  (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair)
+  CategoricalEssentialIncompleteness.Numerical.fromPCategoryTotal
+CategoricalEssentialIncompleteness.Numerical.domainOrderIso : (X : CategoricalEssentialIncompleteness.Numerical) →
+  X.Domain ≃o CategoryTheory.DomSemilattice X
+@CategoricalEssentialIncompleteness.Numerical.domainOrderIso_symm_meet : ∀
+  {X : CategoricalEssentialIncompleteness.Numerical} (a b : CategoryTheory.DomSemilattice X),
+  X.domainOrderIso.symm (a.meet b) = X.domainOrderIso.symm a ⊓ X.domainOrderIso.symm b
+@CategoricalEssentialIncompleteness.Numerical.domainOrderIso_inverse : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ Y) (e : Y.Domain),
+  X.domainOrderIso (CategoricalEssentialIncompleteness.Numerical.domainInverse f e) =
+    CategoricalEssentialIncompleteness.domainInverseImage f (Y.domainOrderIso e)
+@CategoricalEssentialIncompleteness.Numerical.domainOrderIso_symm_inverse : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ Y) (e : CategoryTheory.DomSemilattice Y),
+  X.domainOrderIso.symm (CategoricalEssentialIncompleteness.domainInverseImage f e) =
+    CategoricalEssentialIncompleteness.Numerical.domainInverse f (Y.domainOrderIso.symm e)
+CategoricalEssentialIncompleteness.Numerical.numericalDomainJoins : CategoricalEssentialIncompleteness.DomainJoins
+  CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.domainComparisonHom : (X : CategoricalEssentialIncompleteness.Numerical) →
+  BoundedLatticeHom X.Domain (CategoryTheory.DomSemilattice X)
+CategoricalEssentialIncompleteness.Numerical.domainComparisonHom_bijective : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical), Function.Bijective ⇑X.domainComparisonHom
+@CategoricalEssentialIncompleteness.Numerical.domainComparisonHom_inverse : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ Y) (e : Y.Domain),
+  X.domainComparisonHom (CategoricalEssentialIncompleteness.Numerical.domainInverse f e) =
+    CategoricalEssentialIncompleteness.domainInverseImage f (Y.domainComparisonHom e)
