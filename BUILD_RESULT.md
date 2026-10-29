@@ -1,5 +1,30 @@
 # Categorical essential incompleteness: build result
 
+The checks recorded here validate the Lean declarations, dependency pins, and
+source records. Coverage of the manuscript's full definition and its models
+is tracked separately in [FORMALIZATION_REQUIREMENTS.md](FORMALIZATION_REQUIREMENTS.md).
+
+## Theorem-interface correction
+
+The supporting quotient theorem is now
+`EnrichedRestriction.represented_boolean_quotient_incomplete` in
+`RepresentedQuotients.lean`. Its unused product-preservation argument is removed,
+as are the corresponding arguments of its consequences. The disconnected
+root aliases `arithmeticRecursionCategory` and `arithmeticEvaluatorIsTuring`
+are removed. The underlying numerical and imported recursion constructions
+remain, as do the representation and arithmetic incompleteness proofs.
+
+`python3 scripts/verify.py` passed at this checkpoint with 458 axiom audits: the previous 460
+entries minus the two deleted aliases. The quotient declarations are renamed
+in both audit lists. Dependency revisions and manuscript hashes are unchanged.
+The full definability-algebra instance and the arithmetic Lindenbaum
+specialization remain unfinished; no replacement principal theorem is claimed.
+
+The subsequent indexed-predicate note compiles to five pages without LaTeX
+warnings. A pre-commit Lean rerun on 29 October stopped at `lean --version`
+because the available executable reported `error: failed to locate application`.
+The 458-audit run above remains the most recent completed Lean verification.
+
 ## Arithmetic syntax and essential incompleteness checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from

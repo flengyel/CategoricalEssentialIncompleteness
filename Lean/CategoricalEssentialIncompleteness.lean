@@ -12,7 +12,7 @@ import CategoricalEssentialIncompleteness.BooleanPresentations
 import CategoricalEssentialIncompleteness.BooleanDecisions
 import CategoricalEssentialIncompleteness.InternalRepresentation
 import CategoricalEssentialIncompleteness.EnrichedQuotients
-import CategoricalEssentialIncompleteness.CategoricalTheorem
+import CategoricalEssentialIncompleteness.RepresentedQuotients
 import CategoricalEssentialIncompleteness.NumericalInseparability
 import CategoricalEssentialIncompleteness.NumericalProducts
 import CategoricalEssentialIncompleteness.PERExtensive
@@ -27,12 +27,14 @@ import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
 import CategoricalEssentialIncompleteness.ArithmeticEssentialIncompleteness
 
 /-!
-# Categorical essential incompleteness
+# Restriction predicates, represented quotients, and arithmetic incompleteness
 
 The project proves the external diagonal theorem, the internal separator
-factorization, and categorical essential incompleteness for represented Boolean
-quotients. The proof constructs the restriction-domain and total-arrow objects
-and compares their global points with the underlying ordinary category.
+factorization, and incompleteness of represented Boolean quotients under
+representation-section hypotheses. The proof constructs the restriction-domain
+and total-arrow objects and compares their global points with the underlying
+ordinary category. The intrinsic connection from Turing computation to the
+predicates of a theory is not established by this quotient theorem.
 
 The numerical development constructs partial recursive maps, PER morphisms,
 the full faithful binary-product-preserving functor on total maps, and the
@@ -66,30 +68,8 @@ diagonal theorem then gives recursive inseparability of theorem and refutation
 indices. Every consistent c.e. extension of such a theory is incomplete.
 These results specialize to consistent extensions of `PA⁻`.
 
-The imported arithmetic declarations below check the recursion-category
-instance and Turing evaluator of the typed program category. The comparison
-with numerical syntax and provability is recorded in `FORMALIZATION_STATUS.md`.
+The numerical recursion-category and indexing constructions are separate from
+the representation-based inseparability argument. These results do not yet
+realize the arithmetic theorem as a Lindenbaum instance of the represented
+Boolean quotient theorem.
 -/
-
-set_option autoImplicit false
-
-open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
-open CategoryTheory CategoryTheory.RecursionCategory
-open FailureOfComposition.TypedProgramCategory
-open FailureOfComposition.TypedRecursionCategory
-
-namespace CategoricalEssentialIncompleteness
-
-/-- The arithmetic model uses the existing categorical recursion interface. -/
-noncomputable abbrev arithmeticRecursionCategory
-    (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] :
-    PRecursionCategory (CodedProgramCategory T) := inferInstance
-
-/-- The evaluator has the categorical Turing factorization property. -/
-theorem arithmeticEvaluatorIsTuring
-    (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] :
-    IsTuringMorphism
-      (PRecursionCategory.tau (C := CodedProgramCategory T)) :=
-  codedProgramCategory_tau_isTuringMorphism T
-
-end CategoricalEssentialIncompleteness

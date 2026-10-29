@@ -1,5 +1,15 @@
 # Formalization status: version 16
 
+The full definability-algebra interface and its arithmetic Boolean-presentation
+instance remain **unfinished**. The supporting quotient lemma is named
+`EnrichedRestriction.represented_boolean_quotient_incomplete`; it takes the
+restriction, predicate, and representation data that its proof needs.
+The numerical recursion category and indexing equations are separately proved.
+Unused hypotheses in a supporting lemma do not refute the manuscript's
+mathematical program. The remaining task is to assemble its exact compatible
+structures and instances, as specified in
+[FORMALIZATION_REQUIREMENTS.md](FORMALIZATION_REQUIREMENTS.md).
+
 The external diagonal theorem, its global inseparability consequence, the
 Boolean-presentation lemma, and the equivalence between complete represented
 extensions and represented decisions are proved. The internal factorization
@@ -8,7 +18,7 @@ domain equalizers, totality pullbacks, internal total-arrow operations, and
 restriction inverse-image action are constructed, and the proof uses the
 representation section and separator equalizer.
 The global total-arrow, domain, representation, and predicate comparisons are
-proved. The categorical theorem is stated along `J : Tot(K₀) → C`, with
+proved. The represented-quotient lemma is stated along `J : Tot(K₀) → C`, with
 restriction idempotents and a natural subobject identification. It uses
 the restriction, lattice, predicate, and section data of a definability algebra;
 the additional recursion and indexing data are unused. The numerical
@@ -75,7 +85,7 @@ satisfy the definability hypothesis.
 | `eq:v8-representation-pullback`; `eq:v8-representation-section` | `InternalDiagonalData.Representation`; `representation_section_iff`; `RepresentationSection.represents` | Pullback and section; equivalence with the universal representation equations; generalized representatives derived. The latter two names are in `InternalDiagonalData`. |
 | `thm:internal-inseparability` | `InternalDiagonalData.internal_inseparability`; `no_global_separator`; `separatorIsInitial` | Factorization at the `Sep` and both consequences proved over an arbitrary finitely complete base. `EnrichedRestriction.enriched_internal_inseparability` and `enriched_no_global_separator` supply the constructed domain and total-arrow data; the latter two names in this row's declaration column are in `InternalDiagonalData`. |
 | `lem:complete-boolean-presentation` | `BooleanPresentation.consistent_iff_mono`; `BooleanPresentation.complete_iff_regularEpi`; `BooleanPresentation.consistent_complete_iff_isIso` | Proved in a regular extensive category, with equalizer fibers and the bound copairing. |
-| `thm:categorical-essential-incompleteness` | `EnrichedRestriction.categorical_essential_incompleteness`; `categorical_boundCopair_not_regularEpi` | Both conclusions proved along `J : Tot(K₀) → C`, from the internal section, natural predicate identification, and ordinary representing restriction idempotents. Both names are in `EnrichedRestriction`; the precise input scope is described below. |
+| `thm:categorical-essential-incompleteness` | Supporting lemmas `EnrichedRestriction.represented_boolean_quotient_incomplete`; `represented_boolean_quotient_boundCopair_not_regularEpi` | Both quotient conclusions are proved from restriction/predicate/representation hypotheses. The full definability-algebra interface and its concrete arithmetic Boolean-presentation instance remain unfinished. |
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
 | Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
 | Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. |
@@ -161,7 +171,7 @@ lattice, and the external representation data. It proves that consistent
 represented quotient fibers cannot have join top. Since the external data
 are already supplied, this proof only needs the identification at `S`.
 `GlobalSubobjects.lean` supplies this component from the natural identification
-along `J`, and `CategoricalTheorem.lean` states the conclusion using ordinary
+along `J`, and `RepresentedQuotients.lean` states the conclusion using ordinary
 restriction idempotents.
 
 `BooleanPresentations.lean` proves the three clauses of
@@ -316,8 +326,8 @@ category of types. `domainSubobject` combines the domain comparison, internal
 embedding, and subobject identification. Its bounded lattice laws, injectivity,
 and naturality for subobject pullback are proved.
 
-`CategoricalTheorem.lean` states the principal theorem with ordinary
-nontriviality `1_U ≠ 0`, a regular extensive target, a binary-product-preserving
+`RepresentedQuotients.lean` states the supporting quotient lemma with ordinary
+nontriviality `1_U ≠ 0`, a regular extensive target, a
 functor `J`, the natural identification, Boolean presentations and
 quotients, and representing ordinary restriction idempotents. It proves
 incompleteness and the bound-copairing conclusion. It also specializes the
@@ -326,8 +336,8 @@ decision equivalence and excludes represented Boolean decisions.
 The precise input scope is the restriction, product, zero, lattice, predicate,
 and representation-section part of Definition `def:generalized-definability-algebra`.
 The proof does not use the additional recursion-category or indexing data.
-Product preservation by `J` is retained in the principal statement, although
-the quotient argument needs only the identification component at `S`.
+The quotient argument needs only the identification component at `S`;
+product preservation by `J` is not a hypothesis of this supporting lemma.
 No additional mathematical hypothesis is introduced by the global comparison.
 A single Lean record for the entire definability algebra, including its
 recursion and indexing data, and a comparison with Mathlib's bundled enriched
@@ -635,8 +645,8 @@ record bundling the full definability-algebra data also remains absent.
 The imported typed arithmetic program category remains a separate construction;
 no equivalence with the numerical category is asserted.
 
-The full verifier builds the combined entry point and audits 460 declarations,
-retaining all 383 previous checks and the eleven original audits. It checks
+The full verifier builds the combined entry point and audits 458 declarations,
+after removal of the two disconnected arithmetic interface aliases. It checks
 every pinned dependency and imported-source hash, as well as both manuscript
 hashes. Thirteen imported files have comment-only revisions recorded in
 `LOCAL_PATCHES.json`; their declarations and proofs are unchanged.

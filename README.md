@@ -3,6 +3,15 @@
 Lean development toward the proof of categorical essential incompleteness in
 *Definability and incompleteness in recursion categories*.
 
+The complete formalization of the manuscript remains unfinished. The proved
+incompleteness lemmas use restriction domains, predicates, and a representation
+section. The numerical recursion and indexing structures are also constructed,
+but there is no assembled instance of the full definability-algebra definition
+or arithmetic specialization of the Boolean-presentation theorem. A theorem
+under weaker hypotheses remains a valid supporting lemma. Completion requires
+the compatible structures and model constructions specified in the
+[formalization requirements](FORMALIZATION_REQUIREMENTS.md).
+
 ## Manuscript
 
 Version 16 is included with editorial revisions dated 28 October 2026:
@@ -11,9 +20,9 @@ Version 16 is included with editorial revisions dated 28 October 2026:
 - [LaTeX source](manuscript/definability_comparison_v16.tex)
 - [Source provenance](MANUSCRIPT_SOURCE.json)
 
-The current Lean checkpoint proves categorical essential incompleteness for
-Boolean presentations along `J : Tot(K₀) → C`. The theorem uses a regular
-extensive category `C`, a binary-product-preserving `J`, a natural identification
+The current Lean checkpoint proves incompleteness for represented Boolean
+quotients along `J : Tot(K₀) → C`, under the stated representation hypotheses.
+Its statement includes a regular extensive category `C`, a functor `J`, a natural identification
 of global predicates with subobjects along `J`, the internal representation
 section, and nontriviality `1_U ≠ 0`. Every consistent Boolean quotient whose
 two bound fibers arise from restriction idempotents is incomplete.
@@ -35,10 +44,11 @@ Characteristic arrows for complementary subobjects and the internal Boolean
 algebra on `1 + 1` are constructed. The equivalence between complete represented
 Boolean extensions and represented decisions is proved, including the
 comparison through the domain-to-predicate embedding and the functor `J`.
-The categorical proof is stated using the restriction, lattice, predicate,
-and section data of a definability algebra. Its additional recursion and
-indexing structure is unused; a single record bundling all of that structure
-is not yet provided.
+`EnrichedRestriction.represented_boolean_quotient_incomplete` is the supporting
+lemma using restriction, lattice, predicate, and section data. Its name does
+not identify it with the manuscript's full definability-algebra interface.
+The numerical model's additional recursion and indexing structures are proved
+separately; a compatible assembled instance is not yet provided.
 
 The numerical restriction category and the category of arbitrary PERs on
 `ℕ` are constructed. The functor from total numerical arrows to equality
@@ -188,15 +198,15 @@ The toolchain file selects Lean `4.35.0-rc2` automatically through `elan`; the
 manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
-of its two interface declarations, all nine Failure of Composition solution
-declarations, and 449 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, numerical, and arithmetic declarations (460 in total). Only
+of all nine Failure of Composition solution declarations and 449 diagonal,
+restriction, internal, global-comparison, categorical, Boolean-presentation,
+decision, numerical, and arithmetic declarations (458 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 460 axiom audits.
+PASS: project build, dependency pins, source hashes, and 458 axiom audits.
 ```
 
 For compilation alone, run from the repository root:

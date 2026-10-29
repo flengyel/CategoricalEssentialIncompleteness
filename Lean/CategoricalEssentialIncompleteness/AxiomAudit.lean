@@ -8,8 +8,6 @@ and predicate constructions.
 The verification script rejects any axiom other than `propext`,
 `Classical.choice`, and `Quot.sound`. -/
 
-#print axioms CategoricalEssentialIncompleteness.arithmeticRecursionCategory
-#print axioms CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring
 #print axioms FailureOfComposition.Palomar.obstruction_four_properties
 #print axioms FailureOfComposition.Palomar.no_quotient_composition_productive
 #print axioms FailureOfComposition.Palomar.no_quotient_composition_godel
@@ -125,8 +123,8 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_injective
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_naturality
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.global_complete_extensions_and_decisions
-#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_essential_incompleteness
-#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_boundCopair_not_regularEpi
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.represented_boolean_quotient_incomplete
+#print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.represented_boolean_quotient_boundCopair_not_regularEpi
 #print axioms CategoricalEssentialIncompleteness.EnrichedRestriction.global_no_boolean_decision
 
 #print axioms CategoricalEssentialIncompleteness.supportIdentity_partrec

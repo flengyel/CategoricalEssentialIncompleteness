@@ -8,7 +8,7 @@ import CategoricalEssentialIncompleteness.GlobalRepresentation
 import CategoricalEssentialIncompleteness.BooleanDecisions
 
 /-!
-# Categorical essential incompleteness along `J`
+# Incompleteness of represented Boolean quotients along `J`
 
 The source of `J` is the ordinary total-arrow category of the enriched
 restriction structure. Predicates are naturally identified with
@@ -16,10 +16,11 @@ subobjects along `J`, and the representing domains are restriction
 idempotents of the underlying ordinary category. Representation is supplied
 by the internal section.
 
-The proof uses the restriction, lattice, predicate, and section data of a
-definability algebra. The additional recursion and indexing structure is
-not used. Binary-product preservation by `J` is retained in the principal
-statement, although the quotient argument only uses the identification at `S`.
+The proof uses restriction domains, their lattice structure, predicate inverse
+images, and a representation section. These hypotheses suffice for the quotient
+conclusion; no recursion-category structure or Turing indexing is assumed here.
+This module does not establish the manuscript's proposed intrinsic construction
+from recursion categories to the predicates of a theory.
 -/
 
 set_option autoImplicit false
@@ -68,10 +69,9 @@ variable (hneg : η.app (R.totalGlobalObject D.S) D.negative = q.negative)
 variable (r : BooleanQuotient q.algebra)
 include σ hU hpos hneg
 
-/-- `thm:categorical-essential-incompleteness`: every consistent represented Boolean quotient
-is incomplete. -/
-theorem categorical_essential_incompleteness
-    (_preservesProducts : PreservesLimitsOfShape (Discrete WalkingPair) J)
+/-- Under the representation-section hypotheses, every consistent Boolean quotient
+whose bound fibers are represented by restriction domains is incomplete. -/
+theorem represented_boolean_quotient_incomplete
     (consistent : (q.quotient r).Consistent)
     (represented : R.RepresentedQuotientFibers products P J η D.embedding D.S q r) :
     ¬ (q.quotient r).Complete := by
@@ -82,22 +82,21 @@ theorem categorical_essential_incompleteness
     ((R.domainSubobject_apply products P D.embedding η a).symm.trans ha.symm)
     ((R.domainSubobject_apply products P D.embedding η b).symm.trans hb.symm) consistent
 
-/-- The bound-copairing conclusion in `thm:categorical-essential-incompleteness`. -/
-theorem categorical_boundCopair_not_regularEpi
-    (preservesProducts : PreservesLimitsOfShape (Discrete WalkingPair) J)
+/-- A consistent quotient with represented bound fibers has no regular-epimorphic
+bound copairing under the representation-section hypotheses. -/
+theorem represented_boolean_quotient_boundCopair_not_regularEpi
     (consistent : (q.quotient r).Consistent)
     (represented : R.RepresentedQuotientFibers products P J η D.embedding D.S q r) :
     ¬ IsRegularEpi r.target.boundCopair := by
   intro h
-  exact R.categorical_essential_incompleteness
+  exact R.represented_boolean_quotient_incomplete
     (products := products) (P := P) (J := J) (η := η) (D := D) (σ := σ)
     (hU := hU) (q := q) (hpos := hpos) (hneg := hneg) (r := r)
-    preservesProducts consistent represented ((q.quotient r).complete_iff_regularEpi.mpr h)
+    consistent represented ((q.quotient r).complete_iff_regularEpi.mpr h)
 
 omit r in
 /-- No Boolean decision with represented complementary fibers exists for this presentation. -/
-theorem global_no_boolean_decision
-    (preservesProducts : PreservesLimitsOfShape (Discrete WalkingPair) J) :
+theorem global_no_boolean_decision :
     ¬ ∃ h : BooleanMorphism q.algebra (twoBooleanObject (C := C)),
       ∃ a : ComplementaryPair (R.GlobalDomain D.S),
         q.q ≫ h.hom =
@@ -106,10 +105,10 @@ theorem global_no_boolean_decision
   intro decision
   obtain ⟨r, hc, ht, hr⟩ :=
     (R.global_complete_extensions_and_decisions products P J η D.embedding D.S q).mpr decision
-  exact R.categorical_essential_incompleteness
+  exact R.represented_boolean_quotient_incomplete
     (products := products) (P := P) (J := J) (η := η) (D := D) (σ := σ)
     (hU := hU) (q := q) (hpos := hpos) (hneg := hneg) (r := r)
-    preservesProducts hc hr ht
+    hc hr ht
 
 end EnrichedRestriction
 end CategoricalEssentialIncompleteness

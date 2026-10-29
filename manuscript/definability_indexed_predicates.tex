@@ -1,0 +1,380 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={Definability over a recursion category}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\R}{\mathcal R}
+\newcommand{\C}{\mathcal C}
+\newcommand{\BDLat}{\mathbf{BDLat}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\Comp}{\operatorname{Comp}}
+\title{Definability over a recursion category}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In a nontrivial recursion category, representation of every complementary
+domain pair by a total arrow implies that two distinguished predicates have
+no separator given by a complemented domain. We formulate the representation
+condition using an indexed bounded distributive lattice of predicates and a
+natural monomorphism from the domain functor. The inseparability theorem
+excludes disjoint domain extensions of the distinguished pair whose join is
+the top predicate. In arithmetic, it implies that every consistent computably
+enumerable extension of a consistent theory strongly defining every recursive
+set numeralwise is incomplete.
+\end{abstract}
+
+\section{Computations and their domains}
+
+We write $gf=g\circ f$, so that $f$ is applied first. Let $\R$ be a
+locally small recursion category in Heller's prodominical sense: it has a
+near-product structure and zero arrows, all its objects are isomorphic,
+and it admits a Turing morphism \cite[Sections~5 and~9]{Heller}.
+Write $\bar f:X\to X$ for the restriction of $f:X\to Y$.
+The restriction is the domain of $f$, expressed as an endomorphism
+\cite[Section~3]{DPH}; it satisfies the restriction-category axioms
+\cite[Section~2.1.1]{RestrictionI}.
+An arrow $f:X\to Y$ is \emph{total} when $\bar f=1_X$.
+
+Write $X\boxtimes Y$ for the binary restriction product, with total
+projections $\pi_1:X\boxtimes Y\to X$ and
+$\pi_2:X\boxtimes Y\to Y$. For arrows $f:Z\to X$ and $g:Z\to Y$,
+their pairing satisfies
+\[
+ \pi_1\langle f,g\rangle=f\bar g,
+ \qquad \pi_2\langle f,g\rangle=g\bar f,
+ \qquad \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+For $h:Z\to X\boxtimes Y$, the uniqueness equation is
+$\langle\pi_1h,\pi_2h\rangle=h$.
+Consequently the category $\C=\Tot(\R)$, with the same objects and only
+the total arrows, has binary products. No terminal object in $\C$ is
+assumed. Its diagonal is the total arrow
+$\Delta_X=\langle1_X,1_X\rangle:X\to X\boxtimes X$.
+
+A \emph{restriction idempotent}, or \emph{domain}, on $X$ is an
+endomorphism $e:X\to X$ satisfying $\bar e=e$. Domains on $X$ are
+ordered by $e\leq d$ if $de=e$, with meet $e\wedge d=ed$;
+restriction idempotents commute. The zero and identity are the least
+and greatest elements. Assume that the domains on each object form a
+bounded distributive lattice and that, for every total $f:X\to Y$,
+the assignment $e\mapsto\overline{ef}$ preserves finite joins.
+
+Let $\BDLat$ denote the category of bounded distributive lattices and
+homomorphisms preserving both bounds, finite meets, and finite joins.
+The \emph{contravariant domain functor}
+\[
+ E:\C^{\mathrm{op}}\longrightarrow\BDLat
+\]
+is defined on objects by
+\[
+ E(X)=\{e:X\to X\mid\bar e=e\},
+\]
+with the lattice structure just specified. On a morphism
+$f^{\mathrm{op}}:Y\to X$ of $\C^{\mathrm{op}}$, corresponding to a
+total $f:X\to Y$ in $\C$, it is defined by
+\[
+ E(f^{\mathrm{op}})=f_E^*:E(Y)\longrightarrow E(X),
+ \qquad f_E^*(e)=\overline{ef}.
+\]
+The restriction axioms give preservation of meets;
+totality gives $f_E^*(1_Y)=1_X$, and restriction zeros give
+$f_E^*(0_Y)=0_X$. Together with the finite-join hypothesis, these
+identities make each $f_E^*$ a bounded lattice homomorphism.
+For total $f:X\to Y$ and $g:Y\to Z$, the restriction axioms also give
+$(1_X)_E^*=1_{E(X)}$ and $(gf)_E^*=f_E^*g_E^*$, the functor laws.
+The restriction-idempotent functor and its associated fibration are
+studied in \cite[Sections~4.1--4.2]{RestrictionI}.
+
+A pair $(e_+,e_-)$ in $E(X)$ is \emph{complementary} when
+\[
+ e_+\wedge e_-=0_X,\qquad e_+\vee e_-=1_X.
+\]
+Write $\Comp(E(X))$ for the set of these pairs. In the numerical
+recursion category, domains are computably enumerable sets; complementary
+pairs are a recursive set and its complement.
+
+\section{An indexed lattice of predicates}
+
+The domains need not include the predicates associated with a theory.
+For example, the theorem set of a theory need not be computably enumerable.
+We therefore supply another functor
+\[
+ P:\C^{\mathrm{op}}\longrightarrow\BDLat
+\]
+and a monomorphism
+\[
+ j:E\rightarrowtail P
+ \quad\text{in }[\C^{\mathrm{op}},\BDLat].
+\]
+Equivalently, each component $j_X:E(X)\to P(X)$ is an injective
+bounded lattice homomorphism. Each component is therefore an order
+embedding: $j_X(e)\leq j_X(d)$ if and only if $e\leq d$.
+An element of $P(X)$ is called a \emph{predicate on $X$}.
+For a total $f:X\to Y$, write $f_P^*=P(f^{\mathrm{op}}):P(Y)\to P(X)$.
+Naturality is the commutative square
+\begin{equation}\label{eq:naturality}
+\begin{tikzcd}[column sep=large]
+ E(Y) \arrow[r,hook,"j_Y"] \arrow[d,"f_E^*"']
+   & P(Y) \arrow[d,"f_P^*"] \\
+ E(X) \arrow[r,hook,"j_X"'] & P(X).
+\end{tikzcd}
+\end{equation}
+We omit the subscripts $E,P$ when the argument specifies the lattice.
+
+The functor $P$ is an \emph{indexed bounded distributive lattice}. It
+also has a description as a fibration with poset fibres. Define a category
+$\int P$ whose objects are pairs $(X,p)$, where $p\in P(X)$, and whose
+arrows $(X,p)\to(Y,q)$ are total arrows $f:X\to Y$ satisfying
+$p\leq f^*q$. Projection onto $X$ defines a functor
+$\int P\to\C$. For every $f:X\to Y$ and $q\in P(Y)$, its chosen
+cartesian lift is
+\[
+ (X,f^*q)\xrightarrow{\ f\ }(Y,q).
+\]
+For $k:Z\to X$, an arrow $(Z,p)\to(Y,q)$ over $fk$ satisfies
+$p\leq(fk)^*q=k^*f^*q$. This is precisely the condition for its
+unique factorization over $k$ through the displayed lift.
+Identity and composition of these lifts follow from functoriality of $P$.
+The natural transformation $j$ induces a functor $\int E\to\int P$
+over $\C$, by $(X,e)\mapsto(X,j_X(e))$, preserving the chosen lifts.
+
+\section{Substitution and representation}
+
+Fix objects $U,S$ of $\R$, a total arrow
+$s:U\boxtimes U\to S$, and predicates $p_+,p_-\in P(S)$ satisfying
+$p_+\wedge p_-=0$. In the arithmetic interpretation, $U$ supplies formula
+and numeral codes, $S$ supplies sentence codes, $s$ performs numeral
+substitution, and the distinguished predicates express provability and
+refutability.
+
+For a total arrow $g:U\to U$, put
+\[
+ c_g=s(g\boxtimes1_U):U\boxtimes U\longrightarrow S.
+\]
+\begin{definition}\label{def:rep}
+A total arrow $g:U\to U$ \emph{represents} a complementary pair
+$(e_+,e_-)\in\Comp(E(U))$ if
+\begin{equation}\label{eq:representation}
+ c_g^*p_+=\pi_2^*j_U(e_+),\qquad
+ c_g^*p_-=\pi_2^*j_U(e_-)
+ \quad\text{in }P(U\boxtimes U).
+\end{equation}
+The \emph{representation condition} requires that every complementary
+pair in $E(U)$ have such a representative.
+\end{definition}
+
+\section{Inseparability}
+
+A complementary pair $(d_+,d_-)\in\Comp(E(S))$ \emph{separates}
+$p_+$ from $p_-$ when
+\begin{equation}\label{eq:separator}
+ p_+\leq j_S(d_+),\qquad p_-\leq j_S(d_-).
+\end{equation}
+\begin{theorem}\label{thm:inseparability}
+Let $\R$ be a recursion category whose domain lattices have stable
+finite joins as in Section~1, and put $\C=\Tot(\R)$.
+Let $P:\C^{\mathrm{op}}\to\BDLat$ be a functor and
+$j:E\rightarrowtail P$ a monomorphism in
+$[\C^{\mathrm{op}},\BDLat]$, where $E$ is the domain functor.
+Fix $U,S$, a total arrow
+$s:U\boxtimes U\to S$, and disjoint $p_+,p_-\in P(S)$.
+If $0_U\ne1_U$ and every complementary pair in $E(U)$ is represented
+in the sense of Definition~\ref{def:rep}, then no complementary pair
+in $E(S)$ separates $p_+$ from $p_-$.
+\end{theorem}
+
+\begin{proof}
+Suppose that $(d_+,d_-)$ is a separator. Define the total arrow
+$\delta=s\Delta_U:U\to S$. The pair
+\[
+ a_+=\delta^*d_-,\qquad a_-=\delta^*d_+
+\]
+is complementary, because total inverse image preserves the lattice
+operations and bounds. Choose a total $g:U\to U$ representing this pair.
+Put $\gamma=\langle1_U,g\rangle:U\to U\boxtimes U$ and
+$t=\delta g:U\to S$. The product equations give $\pi_2\gamma=g$
+and the commutative square
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ U \arrow[r,"\gamma"] \arrow[d,"g"']
+   & U\boxtimes U \arrow[d,"c_g"] \\
+ U \arrow[r,"\delta"'] & S.
+\end{tikzcd}
+\]
+In fact $c_g\gamma=s\langle g,g\rangle=s\Delta_Ug=\delta g$.
+Pulling \eqref{eq:representation} back along $\gamma$, and using
+\eqref{eq:naturality}, yields
+\[
+ t^*p_+=g^*j_U(a_+)=j_U(t^*d_-),\qquad
+ t^*p_-=g^*j_U(a_-)=j_U(t^*d_+).
+\]
+Pulling \eqref{eq:separator} back along $t$ now gives
+\[
+ j_U(t^*d_-)\leq j_U(t^*d_+),\qquad
+ j_U(t^*d_+)\leq j_U(t^*d_-).
+\]
+Injectivity of $j_U$ implies $t^*d_+=t^*d_-$. These elements are
+complementary because $t$ is total. Equal complementary elements have
+both their meet and their join equal to the same element, so
+$0_U=1_U$, contrary to the hypothesis.
+\end{proof}
+
+The theorem also holds for any category $\C$ with binary products,
+functors $E,P:\C^{\mathrm{op}}\to\BDLat$, and a monomorphism
+$j:E\rightarrowtail P$, provided that $E(U)$ is nontrivial and the
+substitution and representation hypotheses hold. The same proof applies.
+
+\section{Extensions and the numerical interpretation}
+
+The theorem excludes complete disjoint extensions of the distinguished
+pair whenever both new predicates arise from computational domains.
+\begin{corollary}\label{cor:extension}
+Under the hypotheses of Theorem~\ref{thm:inseparability}, suppose that
+$b_+,b_-\in E(S)$ satisfy
+\[
+ p_+\leq j_S(b_+),\qquad p_-\leq j_S(b_-),\qquad
+ j_S(b_+)\wedge j_S(b_-)=0.
+\]
+Then $j_S(b_+)\vee j_S(b_-)\ne1$.
+\end{corollary}
+\begin{proof}
+If the join were $1$, preservation of the lattice operations and
+injectivity of $j_S$ would imply
+$b_+\wedge b_-=0_S$ and $b_+\vee b_-=1_S$.
+The pair would be a separator, contrary to the theorem.
+\end{proof}
+
+For a numerical example, take the recursion category whose objects are
+infinite recursive subsets of $\mathbb N$ and whose arrows are partial
+recursive functions of the specified types, with extensional equality.
+Fix a recursive bijection $\langle-,-\rangle:\mathbb N^2\to\mathbb N$
+with recursive projections, and take
+$X\boxtimes Y=\{\langle x,y\rangle:x\in X,\ y\in Y\}$.
+The domains on $X$ are the computably enumerable subsets of $X$.
+Take $P(X)$ to be the ordinary
+powerset of $X$, with inverse image along total recursive functions,
+and let $j_X$ include the domains as subsets.
+
+Fix effective enumerations $a\mapsto\varphi_a(x)$ of unary arithmetic
+formulas and $b\mapsto\sigma_b$ of sentences, together with a total
+recursive function $s:\mathbb N^2\to\mathbb N$ satisfying
+\[
+ \sigma_{s(a,n)}=\varphi_a(\overline n).
+\]
+Here $\overline n$ is the numeral for $n$. Through the chosen pairing,
+$s$ is a total arrow $U\boxtimes U\to S$, with $U=S=\mathbb N$.
+For a consistent theory $T$, define
+\[
+ p_+=\{b:T\vdash\sigma_b\},\qquad
+ p_-=\{b:T\vdash\neg\sigma_b\}.
+\]
+Consistency makes these predicates disjoint.
+
+A formula $\varphi_a(x)$ \emph{strongly defines} a set
+$A\subseteq\mathbb N$ \emph{numeralwise in $T$} when
+\[
+ n\in A\ \Longrightarrow\ T\vdash\varphi_a(\overline n),
+ \qquad
+ n\notin A\ \Longrightarrow\ T\vdash\neg\varphi_a(\overline n).
+\]
+For consistent $T$, these implications give the exact two preimage
+equalities in \eqref{eq:representation}, with the constant recursive
+map $g(x)=a$. Conversely, a representing $g$ yields a defining formula
+with code $g(0)$. Thus representation of every complementary domain
+pair is equivalent to strong numeralwise definability of every recursive
+set in $T$.
+
+An \emph{extension} of $T$ proves every theorem of $T$. A theory is
+\emph{computably enumerable} if it admits a computably enumerable
+axiomatization in the fixed effective proof calculus.
+
+\begin{corollary}[Essential incompleteness]\label{cor:arithmetic}
+Let $T$ be a consistent arithmetical theory in the effective language
+above. If every recursive subset of $\mathbb N$ is strongly definable
+numeralwise in $T$, then every consistent computably enumerable
+extension of $T$ is incomplete.
+\end{corollary}
+\begin{proof}
+The definability hypothesis supplies the representation condition.
+Let $T'$ be a consistent computably enumerable extension of $T$.
+Enumerating its proofs shows that its theorem and refutation sets are
+computably enumerable domains
+$b_+,b_-$ containing $p_+,p_-$, respectively. They are disjoint by
+consistency. Corollary~\ref{cor:extension} says that their union is not
+all of $\mathbb N$, which is precisely incompleteness of $T'$.
+\end{proof}
+
+\section{Morphisms and chosen operations}
+
+Let primed symbols denote a second structure. Take a functor
+$F:\R\to\R'$ preserving restriction, zero arrows, and the chosen
+binary restriction products, and preserving finite joins of domains.
+It restricts to $F_t:\C\to\C'$ and induces
+$E(F)_X:E(X)\to E'(FX)$, with $E(F)_X(e)=F(e)$.
+Require $FU=U'$, $FS=S'$, and $F(s)=s'$ under the chosen product
+identifications. Supply a natural transformation
+\[
+ \eta:P\Longrightarrow P'\circ F_t^{\mathrm{op}}
+\]
+whose components are bounded lattice homomorphisms and satisfy
+\[
+ \eta_Xj_X=j'_{FX}E(F)_X,\qquad
+ \eta_S(p_+)=p'_+,\qquad\eta_S(p_-)=p'_-.
+\]
+These equations ensure that $F(g)$ represents the image of every pair
+represented by $g$. If Turing morphisms are part of the chosen recursion
+data, require their preservation as well. Identity functors and
+composition, with the corresponding predicate transformations, define
+the category of these structures.
+
+One may also specify a choice of representatives. Define the set
+\[
+ \operatorname{Rep}=
+ \{(a,g)\in\Comp(E(U))\times\C(U,U):g\text{ represents }a\}.
+\]
+The representation condition says that the projection
+$\operatorname{Rep}\to\Comp(E(U))$ is surjective. A chosen section
+amounts to a function
+\[
+ \rho:\Comp(E(U))\longrightarrow\C(U,U)
+\]
+satisfying \eqref{eq:representation}. Ordinary set-theoretic choice
+supplies such a section. In the numerical example, this is an external
+choice of representing recursive functions; it does not assert a
+recursive procedure for selecting their indices.
+
+With fixed object, hom-set, and predicate sorts, the chosen structure has
+the operations of composition, restriction, pairing, lattice operations,
+inverse image, the maps $j_X$, and $\rho$. The domain of $\rho$ is specified
+by the two complement equations. The one-object, domain-only version
+takes $P=E$ and $j=1$.
+
+A morphism preserving the chosen representatives satisfies
+\[
+ F_t(\rho(a))=\rho'(\Comp(E(F)_U)(a)).
+\]
+Thus choosing representatives adds a preservation equation to the
+definition of a morphism.
+
+\begin{thebibliography}{9}
+\bibitem{DPH} R.~A.~Di Paola and A.~Heller,
+Dominical categories: recursion theory without elements,
+\emph{Journal of Symbolic Logic} \textbf{52}(3) (1987), 594--635.
+\bibitem{Heller} A.~Heller,
+An existence theorem for recursion categories,
+\emph{Journal of Symbolic Logic} \textbf{55}(3) (1990), 1252--1268.
+\bibitem{RestrictionI} J.~R.~B.~Cockett and S.~Lack,
+Restriction categories I: categories of partial maps,
+\emph{Theoretical Computer Science} \textbf{270}(1--2) (2002), 223--259.
+\end{thebibliography}
+\end{document}

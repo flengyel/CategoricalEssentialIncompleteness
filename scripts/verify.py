@@ -17,8 +17,6 @@ LEAN = ROOT / "Lean"
 LOGS = ROOT / "build-logs"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 AUDITED = [
-    "CategoricalEssentialIncompleteness.arithmeticRecursionCategory",
-    "CategoricalEssentialIncompleteness.arithmeticEvaluatorIsTuring",
     "FailureOfComposition.Palomar.obstruction_four_properties",
     "FailureOfComposition.Palomar.no_quotient_composition_productive",
     "FailureOfComposition.Palomar.no_quotient_composition_godel",
@@ -127,8 +125,8 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_injective",
     "CategoricalEssentialIncompleteness.EnrichedRestriction.domainSubobject_naturality",
     "CategoricalEssentialIncompleteness.EnrichedRestriction.global_complete_extensions_and_decisions",
-    "CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_essential_incompleteness",
-    "CategoricalEssentialIncompleteness.EnrichedRestriction.categorical_boundCopair_not_regularEpi",
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.represented_boolean_quotient_incomplete",
+    "CategoricalEssentialIncompleteness.EnrichedRestriction.represented_boolean_quotient_boundCopair_not_regularEpi",
     "CategoricalEssentialIncompleteness.EnrichedRestriction.global_no_boolean_decision",
     "CategoricalEssentialIncompleteness.supportIdentity_partrec",
     "CategoricalEssentialIncompleteness.Numerical.numericalCategory",
