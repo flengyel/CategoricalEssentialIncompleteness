@@ -1,5 +1,49 @@
 # Categorical essential incompleteness: build result
 
+## Numerical enrichment and global comparisons checkpoint
+
+Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from
+`fcea3cce61067fdad81796f0d4a31cd46b09054e`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1956 jobs, including cached dependencies).
+- All 383 axiom audits pass, retaining the previous 336. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source, pin,
+  or manuscript file was changed.
+- All seven new modules compile without warnings. The two imported linter
+  warnings remain. The 67 project Lean files contain no proof holes or new axioms.
+
+The numerical hom-sets and pointwise operations construct enriched restriction
+hom-objects, zeros, and partial products in `Type`. The actual domain equalizer
+is equivalent to the numerical domain lattice. Its lattice operations,
+precomposition, and partial inverse image are proved for families at every
+parameter type. The actual totality pullback is equivalent to the numerical
+total hom-set, with compatible identity, composition, and pairing.
+
+The indexing function lifts to an internal morphism whose composite with
+Turing evaluation is the identity. Full PER subobjects give internal predicate
+lattices, and support inclusion gives a monic natural domain embedding.
+Evaluation and constant families give equivalences of the global partial and
+total categories with their numerical counterparts. Restriction, zeros,
+partial pairing, and projections agree under evaluation.
+
+The functor on global total arrows to PERs preserves binary products. Global
+predicates are naturally order isomorphic to the full PER subobject lattices
+along this functor. The induced domain-to-subobject map is identified with the
+existing numerical support inclusion. These results construct the numerical
+enriched and subobject-comparison data used by the categorical theorem.
+
+The next construction is effective sentence and unary-formula coding, including
+recursive substitution in both the formula code and numeral. The
+theory-specific representation section, Lindenbaum Boolean presentation,
+theory-extension correspondence, and arithmetic conclusion remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-29-numerical-enrichment](Audit/2026-10-29-numerical-enrichment/).
+
 ## Numerical recursion category and indexing checkpoint
 
 Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from

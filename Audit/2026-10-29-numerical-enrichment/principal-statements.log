@@ -1,0 +1,242 @@
+CategoricalEssentialIncompleteness.typeLattice : (A : Type u_1) →
+  [inst : DistribLattice A] → [BoundedOrder A] → CategoricalEssentialIncompleteness.InternalLattice (Type u_1)
+@CategoricalEssentialIncompleteness.typeLatticeHom : {A B : Type u_1} →
+  [inst : DistribLattice A] →
+    [inst_1 : BoundedOrder A] →
+      [inst_2 : DistribLattice B] →
+        [inst_3 : BoundedOrder B] →
+          BoundedLatticeHom A B →
+            CategoricalEssentialIncompleteness.InternalLatticeHom (CategoricalEssentialIncompleteness.typeLattice A)
+              (CategoricalEssentialIncompleteness.typeLattice B)
+@CategoricalEssentialIncompleteness.typeLatticeHom_mono_iff_injective : ∀ {A B : Type u_1} [inst : DistribLattice A]
+  [inst_1 : BoundedOrder A] [inst_2 : DistribLattice B] [inst_3 : BoundedOrder B] (f : BoundedLatticeHom A B),
+  CategoryTheory.Mono (CategoricalEssentialIncompleteness.typeLatticeHom f).hom ↔ Function.Injective ⇑f
+CategoricalEssentialIncompleteness.Numerical.enrichedHom : CategoricalEssentialIncompleteness.InternalHom Type
+  CategoricalEssentialIncompleteness.Numerical
+CategoricalEssentialIncompleteness.Numerical.enrichedRestriction : CategoricalEssentialIncompleteness.EnrichedRestriction
+  CategoricalEssentialIncompleteness.Numerical.enrichedHom
+CategoricalEssentialIncompleteness.Numerical.enrichedProducts : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.Products
+CategoricalEssentialIncompleteness.Numerical.enrichedZeros : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.Zeros
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainEquiv : (X : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X ≃ X.Domain
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv : (T : Type) →
+  (X : CategoricalEssentialIncompleteness.Numerical) →
+    (T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X) ≃ (T → X.Domain)
+@CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv_precomp : ∀ {T T' : Type}
+  {X : CategoricalEssentialIncompleteness.Numerical} (k : T' ⟶ T)
+  (e : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X),
+  (CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv T' X)
+      (CategoryTheory.CategoryStruct.comp k e) =
+    fun t =>
+    (CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv T X) e
+      ((CategoryTheory.ConcreteCategory.hom k) t)
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainOrderIso : (X :
+    CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X ≃o X.Domain
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyOrderIso : (T : Type) →
+  (X : CategoricalEssentialIncompleteness.Numerical) →
+    (T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X) ≃o (T → X.Domain)
+@CategoricalEssentialIncompleteness.Numerical.enrichedDomainInverse_apply : ∀ {T : Type}
+  {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedHom.hom X Y)
+  (e : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject Y) (t : T),
+  X.enrichedDomainEquiv
+      ((CategoryTheory.ConcreteCategory.hom
+          (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainInverse f e))
+        t) =
+    CategoricalEssentialIncompleteness.Numerical.domainInverse ((CategoryTheory.ConcreteCategory.hom f) t)
+      (Y.enrichedDomainEquiv ((CategoryTheory.ConcreteCategory.hom e) t))
+@CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv_inverse : ∀ {T : Type}
+  {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedHom.hom X Y)
+  (e : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject Y),
+  (CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv T X)
+      (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainInverse f e) =
+    fun t =>
+    CategoricalEssentialIncompleteness.Numerical.domainInverse ((CategoryTheory.ConcreteCategory.hom f) t)
+      ((CategoricalEssentialIncompleteness.Numerical.enrichedDomainFamilyEquiv T Y) e t)
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainLattices : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.DomainLattices
+CategoricalEssentialIncompleteness.Numerical.enriched_nat_nontrivial : CategoricalEssentialIncompleteness.Numerical.enrichedHom.unit
+    CategoricalEssentialIncompleteness.Numerical.nat ≠
+  CategoricalEssentialIncompleteness.EnrichedRestriction.Zeros.zero
+    CategoricalEssentialIncompleteness.Numerical.enrichedRestriction CategoricalEssentialIncompleteness.Numerical.nat
+    CategoricalEssentialIncompleteness.Numerical.nat
+CategoricalEssentialIncompleteness.Numerical.enrichedTotalLift : (X Y : CategoricalEssentialIncompleteness.Numerical) →
+  (X.totalObject ⟶ Y.totalObject) ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y
+CategoricalEssentialIncompleteness.Numerical.enrichedTotalLift_ι : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical) (f : X.totalObject ⟶ Y.totalObject),
+  (CategoryTheory.ConcreteCategory.hom (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalι X Y))
+      ((CategoryTheory.ConcreteCategory.hom (X.enrichedTotalLift Y)) f) =
+    f.hom
+CategoricalEssentialIncompleteness.Numerical.enrichedTotalEquiv : (X Y : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y ≃ (X.totalObject ⟶ Y.totalObject)
+@CategoricalEssentialIncompleteness.Numerical.enrichedTotal_identity : ∀ {T : Type}
+  (X : CategoricalEssentialIncompleteness.Numerical) (t : T),
+  (X.enrichedTotalEquiv X)
+      ((CategoryTheory.ConcreteCategory.hom
+          ((CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalHom
+                CategoricalEssentialIncompleteness.Numerical.enrichedProducts).identity
+            X))
+        t) =
+    CategoryTheory.CategoryStruct.id X.totalObject
+@CategoricalEssentialIncompleteness.Numerical.enrichedTotal_comp : ∀ {T : Type}
+  {X Y Z : CategoricalEssentialIncompleteness.Numerical}
+  (f : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y)
+  (g : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject Y Z) (t : T),
+  (X.enrichedTotalEquiv Z)
+      ((CategoryTheory.ConcreteCategory.hom
+          ((CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalHom
+                CategoricalEssentialIncompleteness.Numerical.enrichedProducts).comp
+            f g))
+        t) =
+    CategoryTheory.CategoryStruct.comp ((X.enrichedTotalEquiv Y) ((CategoryTheory.ConcreteCategory.hom f) t))
+      ((Y.enrichedTotalEquiv Z) ((CategoryTheory.ConcreteCategory.hom g) t))
+@CategoricalEssentialIncompleteness.Numerical.enrichedTotal_pair : ∀ {T : Type}
+  {X Y Z : CategoricalEssentialIncompleteness.Numerical}
+  (f : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y)
+  (g : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Z) (t : T),
+  (X.enrichedTotalEquiv (Y.product Z))
+      ((CategoryTheory.ConcreteCategory.hom
+          ((CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalHom
+                CategoricalEssentialIncompleteness.Numerical.enrichedProducts).pair
+            f g))
+        t) =
+    CategoricalEssentialIncompleteness.Numerical.totalPair
+      ((X.enrichedTotalEquiv Y) ((CategoryTheory.ConcreteCategory.hom f) t))
+      ((X.enrichedTotalEquiv Z) ((CategoryTheory.ConcreteCategory.hom g) t))
+CategoricalEssentialIncompleteness.Numerical.internalIndexing : (V : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedHom.hom
+      (V.product CategoricalEssentialIncompleteness.Numerical.nat) CategoricalEssentialIncompleteness.Numerical.nat ⟶
+    CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject V
+      CategoricalEssentialIncompleteness.Numerical.nat
+CategoricalEssentialIncompleteness.Numerical.internalEvaluation : (V : CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject V
+      CategoricalEssentialIncompleteness.Numerical.nat ⟶
+    CategoricalEssentialIncompleteness.Numerical.enrichedHom.hom
+      (V.product CategoricalEssentialIncompleteness.Numerical.nat) CategoricalEssentialIncompleteness.Numerical.nat
+@CategoricalEssentialIncompleteness.Numerical.internalEvaluation_composition : ∀ {T : Type}
+  (V : CategoricalEssentialIncompleteness.Numerical)
+  (g :
+    T ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject V
+        CategoricalEssentialIncompleteness.Numerical.nat),
+  CategoryTheory.CategoryStruct.comp g V.internalEvaluation =
+    CategoricalEssentialIncompleteness.Numerical.enrichedHom.comp
+      (CategoricalEssentialIncompleteness.Numerical.enrichedHom.pair
+        (CategoricalEssentialIncompleteness.Numerical.enrichedHom.comp
+          (CategoricalEssentialIncompleteness.Numerical.enrichedHom.fst V
+            CategoricalEssentialIncompleteness.Numerical.nat)
+          (CategoryTheory.CategoryStruct.comp g
+            (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalι V
+              CategoricalEssentialIncompleteness.Numerical.nat)))
+        (CategoricalEssentialIncompleteness.Numerical.enrichedHom.snd V
+          CategoricalEssentialIncompleteness.Numerical.nat))
+      (TypeCat.ofHom fun x => CategoricalEssentialIncompleteness.Numerical.turingEvaluator)
+CategoricalEssentialIncompleteness.Numerical.internalIndexing_evaluation : ∀
+  (V : CategoricalEssentialIncompleteness.Numerical),
+  CategoryTheory.CategoryStruct.comp V.internalIndexing V.internalEvaluation =
+    CategoryTheory.CategoryStruct.id
+      (CategoricalEssentialIncompleteness.Numerical.enrichedHom.hom
+        (V.product CategoricalEssentialIncompleteness.Numerical.nat) CategoricalEssentialIncompleteness.Numerical.nat)
+CategoricalEssentialIncompleteness.Numerical.enrichedGlobalEquivalence : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalCategory ≌
+  CategoricalEssentialIncompleteness.Numerical
+@CategoricalEssentialIncompleteness.Numerical.globalEvaluation_restrict : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalCategory} (f : X ⟶ Y),
+  CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map (CategoryTheory.RestrictionCategory.rst f) =
+    CategoricalEssentialIncompleteness.Numerical.restrict
+      (CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map f)
+CategoricalEssentialIncompleteness.Numerical.globalEvaluation_zero : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalCategory),
+  CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map 0 = 0
+@CategoricalEssentialIncompleteness.Numerical.globalEvaluation_pair : ∀
+  {X Y Z : CategoricalEssentialIncompleteness.Numerical}
+  (f :
+    CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalObject X ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalObject Y)
+  (g :
+    CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalObject X ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalObject Z),
+  CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map
+      (CategoricalEssentialIncompleteness.Numerical.enrichedHom.pair f g) =
+    CategoricalEssentialIncompleteness.Numerical.partialPair
+      (CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map f)
+      (CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map g)
+CategoricalEssentialIncompleteness.Numerical.globalEvaluation_fst : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical),
+  CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map
+      (CategoricalEssentialIncompleteness.Numerical.enrichedHom.fst X Y) =
+    X.partialFst Y
+CategoricalEssentialIncompleteness.Numerical.globalEvaluation_snd : ∀
+  (X Y : CategoricalEssentialIncompleteness.Numerical),
+  CategoricalEssentialIncompleteness.Numerical.globalEvaluation.map
+      (CategoricalEssentialIncompleteness.Numerical.enrichedHom.snd X Y) =
+    X.partialSnd Y
+CategoricalEssentialIncompleteness.Numerical.enrichedGlobalTotalEquivalence : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalTotal ≌
+  CategoricalEssentialIncompleteness.Numerical.Total
+CategoricalEssentialIncompleteness.Numerical.globalTotalEvaluationPreservesBinaryProducts : CategoryTheory.Limits.PreservesLimitsOfShape
+  (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair)
+  CategoricalEssentialIncompleteness.Numerical.globalTotalEvaluation
+CategoricalEssentialIncompleteness.Numerical.enrichedPredicateAction : (X Y :
+    CategoricalEssentialIncompleteness.Numerical) →
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y ⨯
+      CategoricalEssentialIncompleteness.Numerical.predicates.obj Y.totalObject ⟶
+    CategoricalEssentialIncompleteness.Numerical.predicates.obj X.totalObject
+@CategoricalEssentialIncompleteness.Numerical.enrichedPredicatePull_action : ∀ {T : Type}
+  {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : T ⟶ CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject X Y)
+  (a : T ⟶ CategoricalEssentialIncompleteness.Numerical.predicates.obj Y.totalObject),
+  (CategoricalEssentialIncompleteness.Numerical.enrichedPredicatePull f) a =
+    CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.prod.lift f a) (X.enrichedPredicateAction Y)
+CategoricalEssentialIncompleteness.Numerical.enrichedPredicates : CategoricalEssentialIncompleteness.InternalPredicates
+  (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalHom
+    CategoricalEssentialIncompleteness.Numerical.enrichedProducts)
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainSubobjectHom : (X :
+    CategoricalEssentialIncompleteness.Numerical) →
+  BoundedLatticeHom (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject X)
+    (CategoricalEssentialIncompleteness.Numerical.predicates.obj X.totalObject)
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainSubobjectHom_injective : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical), Function.Injective ⇑X.enrichedDomainSubobjectHom
+CategoricalEssentialIncompleteness.Numerical.enrichedDomainEmbeddingApp_mono : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical), CategoryTheory.Mono X.enrichedDomainEmbeddingApp.hom
+CategoricalEssentialIncompleteness.Numerical.enrichedPredicateEmbedding : CategoricalEssentialIncompleteness.InternalPredicateEmbedding
+  (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainPredicates
+    CategoricalEssentialIncompleteness.Numerical.enrichedProducts)
+  CategoricalEssentialIncompleteness.Numerical.enrichedPredicates
+CategoricalEssentialIncompleteness.Numerical.enrichedToPER : CategoryTheory.Functor
+  CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalTotal
+  CategoricalEssentialIncompleteness.NumericalPER
+CategoricalEssentialIncompleteness.Numerical.enrichedToPERPreservesBinaryProducts : CategoryTheory.Limits.PreservesLimitsOfShape
+  (CategoryTheory.Discrete CategoryTheory.Limits.WalkingPair) CategoricalEssentialIncompleteness.Numerical.enrichedToPER
+@CategoricalEssentialIncompleteness.Numerical.enrichedTotal_globalTotalPoint : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalTotal} (f : X ⟶ Y),
+  (X.obj.obj.enrichedTotalEquiv Y.obj.obj)
+      ((CategoryTheory.ConcreteCategory.hom
+          (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalTotalPoint f))
+        default) =
+    CategoricalEssentialIncompleteness.Numerical.globalTotalEvaluation.map f
+CategoricalEssentialIncompleteness.Numerical.enrichedPredicateSubobjectOrderIso : (X :
+    CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalTotal) →
+  (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.predicatesOnTotals
+          CategoricalEssentialIncompleteness.Numerical.enrichedProducts
+          CategoricalEssentialIncompleteness.Numerical.enrichedPredicates).obj
+      X ≃o
+    CategoryTheory.Subobject (CategoricalEssentialIncompleteness.Numerical.enrichedToPER.obj X)
+CategoricalEssentialIncompleteness.Numerical.enrichedPredicateSubobjectIdentification : CategoricalEssentialIncompleteness.SubobjectIdentification
+  (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.predicatesOnTotals
+    CategoricalEssentialIncompleteness.Numerical.enrichedProducts
+    CategoricalEssentialIncompleteness.Numerical.enrichedPredicates)
+  CategoricalEssentialIncompleteness.Numerical.enrichedToPER
+@CategoricalEssentialIncompleteness.Numerical.enriched_domainSubobject_apply : ∀
+  {X : CategoricalEssentialIncompleteness.Numerical}
+  (a : CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.GlobalDomain X),
+  (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainSubobject
+        CategoricalEssentialIncompleteness.Numerical.enrichedProducts
+        CategoricalEssentialIncompleteness.Numerical.enrichedPredicates
+        CategoricalEssentialIncompleteness.Numerical.enrichedPredicateEmbedding
+        CategoricalEssentialIncompleteness.Numerical.enrichedPredicateSubobjectIdentification X)
+      a =
+    X.domainSubobject
+      (X.enrichedDomainEquiv
+        ((CategoryTheory.ConcreteCategory.hom
+            ((CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.globalDomainOrderIso X).symm a))
+          default))

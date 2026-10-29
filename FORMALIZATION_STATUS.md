@@ -34,8 +34,17 @@ The numerical category is a recursion category. Computable enumeration and
 counting give recursive isomorphisms with `ℕ`, and partial application of
 program codes proves the full Turing factorization property. A choice of
 codes supplies a set-level indexing function and its evaluation equation.
-The internal Set-enriched structure and its indexing morphism remain to be
-constructed.
+The numerical hom-objects, restriction, zeros, and products are internalized
+in `Type`. Their domain equalizers and totality pullbacks are compared with
+numerical domains and total arrows. The domain lattice and inverse-image
+equations hold at every parameter type, and the indexing function lifts to
+an internal section of evaluation.
+The full PER subobject predicates and monic domain embedding are internalized.
+Evaluation of global arrows identifies the partial and total categories with
+their numerical counterparts.
+The global predicate functor is naturally identified with the full PER
+subobject functor along the product-preserving functor on global total arrows,
+and the induced domain map agrees with numerical support inclusion.
 
 ## Correspondence
 
@@ -60,7 +69,14 @@ constructed.
 | Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. |
 | Isotype of the numerical category in `sec:integration-numerical` | `Numerical.enumerate_computable`; `rank_computable`; `natIso`; `totalNatIso`; `numericalIsotype` | Increasing enumeration and counting give inverse recursive total arrows between each numerical object and `ℕ`. Both inverse equations hold as partial maps with the required source restrictions. All names are in `Numerical`. |
 | Numerical Turing morphism in `sec:integration-numerical` | `Numerical.turingEvaluator`; `codeParameter`; `turingEvaluator_parameterization`; `turingEvaluator_isTuringMorphism` | Universal partial recursive evaluation and computable partial application of program codes give the factorization for every numerical parameter object. Equality includes inputs outside the source carrier. All names are in `Numerical`. |
-| Numerical recursion category and indexing in `sec:integration-numerical` | `Numerical.numericalRecursionCategory`; `turingIndexing`; `turingIndexing_evaluation` | The concrete `PRecursionCategory` instance is constructed. The indexing function assigns a total parameter arrow to each extensional partial arrow and satisfies the evaluation equation. Its internal Set-enriched realization remains open. All names are in `Numerical`. |
+| Numerical recursion category and indexing in `sec:integration-numerical` | `Numerical.numericalRecursionCategory`; `turingIndexing`; `turingIndexing_evaluation` | The concrete `PRecursionCategory` instance is constructed. The indexing function assigns a total parameter arrow to each extensional partial arrow and satisfies the evaluation equation. All names are in `Numerical`. |
+| Numerical enriched restriction structure in `sec:integration-numerical` | `Numerical.enrichedHom`; `enrichedRestriction`; `enrichedProducts`; `enrichedZeros` | Hom-sets and pointwise operations define the enriched restriction, zero, and product data over `Type`. All names are in `Numerical`. |
+| Numerical internal domain lattices | `Numerical.enrichedDomainEquiv`; `enrichedDomainFamilyOrderIso`; `enrichedDomainInverse_apply`; `enrichedDomainLattices` | The actual equalizer is identified with numerical domains. Its bounded distributive lattice and partial inverse-image laws are constructed at every parameter type. All names are in `Numerical`. |
+| Numerical internal totality and indexing | `Numerical.enrichedTotalEquiv`; `enrichedTotal_comp`; `enrichedTotal_pair`; `internalEvaluation_composition`; `internalIndexing_evaluation` | The actual totality pullback is identified with numerical total arrows, with compatible operations. Internal indexing is a section of the internal Turing evaluation morphism. All names are in `Numerical`. |
+| Numerical internal predicates and embedding | `Numerical.enrichedPredicates`; `enrichedDomainSubobjectHom`; `enrichedPredicateEmbedding` | Full PER subobjects give the internal predicate objects. The actual domain equalizers embed by monic bounded lattice maps, natural for every parameter type. All names are in `Numerical`. |
+| Numerical global category comparison | `Numerical.enrichedGlobalEquivalence`; `enrichedGlobalTotalEquivalence`; `globalTotalEvaluationPreservesBinaryProducts` | Evaluation and constant families give inverse equivalences of the partial and total categories. Restriction, zero, partial pairing, and projections agree; the total equivalence preserves binary products. All names are in `Numerical`. |
+| Numerical global subobject identification | `Numerical.enrichedToPER`; `enrichedToPERPreservesBinaryProducts`; `enrichedPredicateSubobjectIdentification`; `enriched_domainSubobject_apply` | The PER-valued functor preserves binary products. Its full subobject functor is naturally identified with global predicates, and the enriched domain map agrees with numerical support inclusion. All names are in `Numerical`. |
+| `cor:numerical-definability-algebras` | `NumericalEnriched*` modules | The numerical enriched category, domain lattices, predicates, embedding, and indexing are constructed. The equivalence between existence of the theory-specific representation section and strong numeralwise definability remains open. |
 | PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular and finitely extensive. |
 | Binary products and preservation by `J` in `sec:integration-numerical` | `Numerical.productIsLimit`; `Numerical.toPER_preservesBinaryProducts` | Recursive tuple coding gives infinite recursive product carriers. Projection equations for the PER comparison prove preservation. |
 | Numerical restriction products in `sec:integration-numerical` | `Numerical.partialPair_fst`; `partialPair_snd`; `partialPair_proj`; `numericalPCategory`; `numericalProdominical` | Partial pairing, the restriction projection equations, all `P`-category equations, and zero absorption are proved. All names are in `Numerical`. |
@@ -458,8 +474,49 @@ totality to the restriction structure induced by the `P`-category.
 `NumericalRecursion.lean` combines this result with isotype to construct
 `PRecursionCategory Numerical`. Choice of a program code for each extensional
 partial arrow defines `turingIndexing`, whose evaluation equation is proved.
-This is a function between sets of arrows; its internal Set-enriched
-realization remains to be constructed.
+This is a function between sets of arrows. Its internal realization is
+constructed in `NumericalEnrichedTotals.lean`.
+
+`TypeLattices.lean` internalizes bounded distributive lattices and their
+homomorphisms in `Type`. The generalized-element operations are pointwise,
+and monicity of the resulting internal map is equivalent to injectivity.
+`NumericalEnriched.lean` internalizes the numerical hom-sets, category and
+restriction operations, zeros, and partial products. Each equation is proved
+for families at every parameter type.
+
+`NumericalEnrichedDomains.lean` identifies the actual chosen equalizer of
+restriction and identity with `Numerical.Domain`. It transports the domain
+lattice to the equalizer and proves the generalized-family order isomorphism,
+precomposition law, and partial inverse-image comparison. These give the
+complete `EnrichedRestriction.DomainLattices` structure.
+
+`NumericalEnrichedTotals.lean` identifies the actual chosen totality pullback
+with the numerical total hom-set. Identities, composition, and pairing agree
+under this equivalence. The indexing function lifts to an internal morphism;
+its composite with the evaluation morphism is the identity. The evaluation
+morphism is also expressed through internal composition and partial pairing
+with the Turing evaluator. The numerical identity and zero remain distinct
+as global enriched arrows.
+
+`NumericalEnrichedPredicates.lean` gives the internal predicate action on all
+PER subobjects, with identity, composition, and bounded lattice preservation
+proved at every parameter type. The domain equalizer maps to its support
+subobject. Injectivity proves monicity, and the partial inverse-image comparison
+proves the naturality of this internal embedding.
+
+`NumericalEnrichedGlobal.lean` evaluates global families at the unique element
+of the terminal type. Constant families give inverse functors, producing
+equivalences with the numerical partial and total categories. Restriction,
+zeros, partial pairing, and projections agree under evaluation, and the
+total-arrow equivalence preserves binary products.
+
+`NumericalEnrichedSubobjects.lean` composes evaluation of global total arrows
+with `toPER`. The composite preserves binary products. Evaluation of global
+predicates gives an order isomorphism to the full PER subobject lattice;
+its naturality is the categorical pullback equation. The resulting
+`SubobjectIdentification` is the one required by the categorical theorem.
+The generic enriched domain-to-subobject map agrees with the existing
+numerical support-subobject map under these comparisons.
 
 `PERFiniteLimits.lean` constructs a terminal PER and equalizers. The equalizer
 restricts the source to inputs where the two representing functions return
@@ -520,11 +577,10 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next construction is **the Set-enriched numerical category**, including
-its internal indexing morphism and comparison with the ordinary numerical
-category. The remaining arithmetic constructions are effective sentence and
-unary-formula coding, recursive substitution in both the formula code and
-numeral, the representation section, the Lindenbaum Boolean presentation,
+The next construction is **effective sentence and unary-formula coding**,
+including recursive substitution in both the formula code and numeral.
+The remaining arithmetic constructions include the theorem and refutation
+supports, the representation section, the Lindenbaum Boolean presentation,
 and theory-extension quotients. They are needed for
 `thm:integration-essential-equivalence` (i) and (iii),
 `prop:numerical-boolean-extensions`, and the arithmetic corollary.
@@ -536,7 +592,7 @@ step once their formula codes and substitution are compared with the
 numerical categorical construction. The existing fixed-formula substitution
 results alone do not give the required joint recursive substitution map.
 
-The full verifier builds the combined entry point and audits 336 declarations,
+The full verifier builds the combined entry point and audits 383 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash, as well as both manuscript hashes. Thirteen imported
 files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean

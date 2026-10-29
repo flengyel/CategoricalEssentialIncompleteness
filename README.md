@@ -67,11 +67,23 @@ evaluator satisfies the Turing factorization property for every numerical
 parameter object, giving a recursion-category instance. Choosing a program
 code for each partial arrow defines a set-level indexing function with the
 required evaluation equation.
+The numerical hom-sets and their operations define enriched restriction
+hom-objects in `Type`. The domain equalizers and totality pullbacks are
+identified with numerical domains and total arrows. Their lattice and product
+operations agree for families at every parameter type. The indexing function
+lifts to an internal morphism whose composite with evaluation is the identity.
+Full PER subobjects give internal predicates with a monic natural domain
+embedding. Evaluation of global arrows gives equivalences with the numerical
+partial and total categories, preserving restriction, partial pairing, and
+binary products of total arrows.
+The global predicate functor is naturally identified with the full PER
+subobject functor, and its induced domain embedding agrees with support
+inclusion.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-The numerical Set-enriched structure, its internal indexing morphism, and
-the arithmetic syntax and provability comparisons remain open; see
+The arithmetic syntax, representation section, Lindenbaum presentation, and
+theory-extension comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -161,14 +173,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 325 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (336 in total). Only
+declarations, and 372 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (383 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 336 axiom audits.
+PASS: project build, dependency pins, source hashes, and 383 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -180,7 +192,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The numerical recursion-category and indexing evidence is in
+is ignored by Git. The numerical enrichment and global-comparison evidence is in
+[`Audit/2026-10-29-numerical-enrichment/`](Audit/2026-10-29-numerical-enrichment/).
+The numerical recursion-category and indexing evidence is in
 [`Audit/2026-10-29-numerical-recursion/`](Audit/2026-10-29-numerical-recursion/).
 The numerical restriction-product and comparison evidence is in
 [`Audit/2026-10-29-numerical-restriction-products/`](Audit/2026-10-29-numerical-restriction-products/).

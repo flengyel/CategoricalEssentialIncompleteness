@@ -21,6 +21,7 @@ import CategoricalEssentialIncompleteness.NumericalComplementedSubobjects
 import CategoricalEssentialIncompleteness.NumericalTotalComparison
 import CategoricalEssentialIncompleteness.NumericalDomainComparison
 import CategoricalEssentialIncompleteness.NumericalRecursion
+import CategoricalEssentialIncompleteness.NumericalEnrichedSubobjects
 
 /-!
 # Categorical essential incompleteness
@@ -46,6 +47,13 @@ Computable enumeration and counting give recursive isomorphisms between
 numerical objects. Universal program evaluation gives a Turing morphism and
 a recursion-category instance. Choosing program codes gives a set-level
 indexing function satisfying the evaluation equation.
+The numerical Set-enrichment constructs the domain equalizers, totality
+pullbacks, and their pointwise comparisons at every parameter type.
+Its internal indexing morphism is a section of evaluation. Full PER subobjects
+give internal predicates and a monic natural domain embedding. The global
+partial and total categories are equivalent to their numerical counterparts,
+and the global predicates are naturally identified with PER subobjects along
+the product-preserving numerical functor.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison
