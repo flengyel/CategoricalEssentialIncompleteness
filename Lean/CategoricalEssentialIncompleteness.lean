@@ -22,6 +22,9 @@ import CategoricalEssentialIncompleteness.NumericalTotalComparison
 import CategoricalEssentialIncompleteness.NumericalDomainComparison
 import CategoricalEssentialIncompleteness.NumericalRecursion
 import CategoricalEssentialIncompleteness.NumericalEnrichedSubobjects
+import CategoricalEssentialIncompleteness.ArithmeticAdequacy
+import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
+import CategoricalEssentialIncompleteness.ArithmeticEssentialIncompleteness
 
 /-!
 # Categorical essential incompleteness
@@ -54,6 +57,14 @@ give internal predicates and a monic natural domain embedding. The global
 partial and total categories are equivalent to their numerical counterparts,
 and the global predicates are naturally identified with PER subobjects along
 the product-preserving numerical functor.
+
+Arithmetic sentence coding and numeral substitution define a total numerical
+substitution arrow, computable jointly in the formula code and numeral.
+The internal representation projection has a section exactly when every
+recursive set is strongly definable numeralwise in the theory. The internal
+diagonal theorem then gives recursive inseparability of theorem and refutation
+indices. Every consistent c.e. extension of such a theory is incomplete.
+These results specialize to consistent extensions of `PA⁻`.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison

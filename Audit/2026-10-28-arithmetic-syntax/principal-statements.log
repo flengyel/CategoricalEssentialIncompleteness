@@ -1,0 +1,405 @@
+CategoricalEssentialIncompleteness.numeralSubstitutionCode_encode : ∀ (φ : FFL.FirstOrder.ArithmeticSemisentence 1)
+  (n : ℕ),
+  FFL.FirstOrder.Arithmetic.Bootstrapping.Arithmetic.substNumeral (Encodable.encode φ) n = Encodable.encode (φ/[↑n])
+CategoricalEssentialIncompleteness.computable_numeralSubstitutionCode : Computable₂
+  FFL.FirstOrder.Arithmetic.Bootstrapping.Arithmetic.substNumeral
+CategoricalEssentialIncompleteness.computable_numeralSubstitution : Computable₂ fun φ n => φ/[↑n]
+CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes_primrec : PrimrecPred fun x =>
+  x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes
+CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes_recursive : ComputablePred fun x =>
+  x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes
+CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes_infinite : CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes.Infinite
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeEnumeration_computable : Computable
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeEnumeration
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeRank_computable : Computable
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeRank
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeRank_enumeration : ∀ (b : ℕ),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeRank
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeEnumeration b) =
+    b
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeEnumeration_rank : ∀ {a : ℕ},
+  a ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.validSentenceCodes →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeEnumeration
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceCodeRank a) =
+      a
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration_computable : Computable
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex_computable : Computable
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex_enumeration : ∀ (b : ℕ),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration b) =
+    b
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration_index : ∀
+  (φ : FFL.FirstOrder.ArithmeticSentence),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex φ) =
+    φ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEquiv : ℕ ≃ FFL.FirstOrder.ArithmeticSentence
+CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula_primrec : Primrec
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula
+CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula_encode : ∀
+  (φ : FFL.FirstOrder.ArithmeticSemiformula Empty 1),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula (Encodable.encode φ) = φ
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula_of_invalid : ∀ {a : ℕ},
+  a ∉ Set.range Encodable.encode → CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula a = ⊥
+CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction_computable : Computable₂
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction
+CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration_substitutionFunction : ∀ (a n : ℕ),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceEnumeration
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction a n) =
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula a)/[↑n]
+CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction_encode : ∀
+  (φ : FFL.FirstOrder.ArithmeticSemisentence 1) (n : ℕ),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction (Encodable.encode φ) n =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex (φ/[↑n])
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction_of_invalid : ∀ {a : ℕ},
+  a ∉ Set.range Encodable.encode →
+    ∀ (n : ℕ),
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction a n =
+        CategoricalEssentialIncompleteness.ArithmeticSyntax.sentenceIndex ⊥
+CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionArrow : (CategoricalEssentialIncompleteness.Numerical.nat.product
+      CategoricalEssentialIncompleteness.Numerical.nat).totalObject ⟶
+  CategoricalEssentialIncompleteness.Numerical.nat.totalObject
+CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionArrow_pair_val : ∀ (a n : ℕ),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionArrow.hom.val (Nat.pair a n) =
+    Part.some (CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction a n)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionRow_pair_val : ∀
+  (g :
+    CategoricalEssentialIncompleteness.Numerical.nat.totalObject ⟶
+      CategoricalEssentialIncompleteness.Numerical.nat.totalObject)
+  (x n : ℕ),
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionRow g).hom.val (Nat.pair x n) =
+    Part.some
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction
+        (CategoricalEssentialIncompleteness.Numerical.natFunction g x) n)
+@CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise.provable_iff : ∀
+  {T : FFL.FirstOrder.ArithmeticTheory} {p : ℕ → Prop} {φ : FFL.FirstOrder.ArithmeticSemisentence 1}
+  [FFL.Entailment.Consistent T],
+  CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T p φ → ∀ (n : ℕ), T ⊢ φ/[↑n] ↔ p n
+@CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise.provable_neg_iff : ∀
+  {T : FFL.FirstOrder.ArithmeticTheory} {p : ℕ → Prop} {φ : FFL.FirstOrder.ArithmeticSemisentence 1}
+  [FFL.Entailment.Consistent T],
+  CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T p φ → ∀ (n : ℕ), T ⊢ ∼φ/[↑n] ↔ ¬p n
+@CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise.mono : ∀
+  {T T' : FFL.FirstOrder.ArithmeticTheory} {p : ℕ → Prop} {φ : FFL.FirstOrder.ArithmeticSemisentence 1},
+  CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T p φ →
+    T ⪯ T' → CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T' p φ
+CategoricalEssentialIncompleteness.ArithmeticRepresentation.codeOfComputablePred_strongNumeralwise : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [𝗣𝗔⁻ ⪯ T] {p : ℕ → Prop},
+  ComputablePred p →
+    CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T p
+      (FFL.FirstOrder.Arithmetic.codeOfComputablePred p)
+CategoricalEssentialIncompleteness.ArithmeticRepresentation.computable_has_persistent_representation : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [𝗣𝗔⁻ ⪯ T] {p : ℕ → Prop},
+  ComputablePred p →
+    ∃ φ,
+      CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T p φ ∧
+        ∀ (T' : FFL.FirstOrder.ArithmeticTheory),
+          T ⪯ T' → FFL.Entailment.Consistent T' → ∀ (n : ℕ), (T' ⊢ φ/[↑n] ↔ p n) ∧ (T' ⊢ ∼φ/[↑n] ↔ ¬p n)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.supports_disjoint_iff : ∀ (T : FFL.FirstOrder.ArithmeticTheory),
+  Disjoint (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T) ↔
+    FFL.Entailment.Consistent T
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport_mono : ∀ {T T' : FFL.FirstOrder.ArithmeticTheory},
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T ⊆
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T'
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport_mono : ∀
+  {T T' : FFL.FirstOrder.ArithmeticTheory},
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T ⊆
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.predicates_disjoint : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.Entailment.Consistent T],
+  Disjoint (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremPredicate T)
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationPredicate T)
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremPredicate_mono : ∀ {T T' : FFL.FirstOrder.ArithmeticTheory},
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremPredicate T ≤
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremPredicate T'
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationPredicate_mono : ∀
+  {T T' : FFL.FirstOrder.ArithmeticTheory},
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationPredicate T ≤
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationPredicate T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.pull_support_eq_snd_iff : ∀
+  (g :
+    CategoricalEssentialIncompleteness.Numerical.nat.totalObject ⟶
+      CategoricalEssentialIncompleteness.Numerical.nat.totalObject)
+  (A B : Set ℕ),
+  (CategoricalEssentialIncompleteness.Numerical.predicates.pull
+          (CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionRow g))
+        (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯) =
+      (CategoricalEssentialIncompleteness.Numerical.predicates.pull
+          (CategoricalEssentialIncompleteness.Numerical.snd CategoricalEssentialIncompleteness.Numerical.nat.totalObject
+            CategoricalEssentialIncompleteness.Numerical.nat.totalObject))
+        (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject B ⋯) ↔
+    ∀ (x n : ℕ),
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionFunction
+            (CategoricalEssentialIncompleteness.Numerical.natFunction g x) n ∈
+          A ↔
+        n ∈ B
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representsPair_iff : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain)
+  (g :
+    CategoricalEssentialIncompleteness.Numerical.nat.totalObject ⟶
+      CategoricalEssentialIncompleteness.Numerical.nat.totalObject),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g ↔
+    ∀ (x n : ℕ),
+      (T ⊢
+            (CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula
+                (CategoricalEssentialIncompleteness.Numerical.natFunction g x))/[↑n] ↔
+          n ∈ a.pos.support) ∧
+        (T ⊢
+            ∼(CategoricalEssentialIncompleteness.ArithmeticSyntax.unaryFormula
+                  (CategoricalEssentialIncompleteness.Numerical.natFunction g x))/[↑n] ↔
+          n ∈ a.neg.support)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representsPair_constant : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.Entailment.Consistent T]
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain)
+  (φ : FFL.FirstOrder.ArithmeticSemisentence 1),
+  CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ a.pos.support) φ →
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a
+      (CategoricalEssentialIncompleteness.Numerical.natArrow (fun x => Encodable.encode φ) ⋯)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.exists_representsPair_iff_strongNumeralwise : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T]
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+  (∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g) ↔
+    ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ a.pos.support) φ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.recursiveSet_adequacy_iff : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.Entailment.Consistent T] (A : Set ℕ) (hA : ComputablePred fun x => x ∈ A),
+  (∃ g,
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T
+        (CategoricalEssentialIncompleteness.Numerical.recursivePair A hA) g) ↔
+    ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.represents_all_pairs_iff : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.Entailment.Consistent T],
+  (∀ (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+      ∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g) ↔
+    ∀ (A : Set ℕ),
+      (ComputablePred fun x => x ∈ A) →
+        ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.every_pair_represented : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [𝗣𝗔⁻ ⪯ T] [FFL.Entailment.Consistent T]
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+  ∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g
+CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport_enumerable : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.FirstOrder.Theory.RE T], REPred fun x => x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport_enumerable : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.FirstOrder.Theory.RE T],
+  REPred fun x => x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremDomain : (T : FFL.FirstOrder.ArithmeticTheory) →
+  [FFL.FirstOrder.Theory.RE T] → CategoricalEssentialIncompleteness.Numerical.nat.Domain
+CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationDomain : (T : FFL.FirstOrder.ArithmeticTheory) →
+  [FFL.FirstOrder.Theory.RE T] → CategoricalEssentialIncompleteness.Numerical.nat.Domain
+CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremDomain_support : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.FirstOrder.Theory.RE T],
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremDomain T).support =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationDomain_support : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.FirstOrder.Theory.RE T],
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationDomain T).support =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremDomain_predicate : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.FirstOrder.Theory.RE T],
+  CategoricalEssentialIncompleteness.Numerical.nat.domainSubobject
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremDomain T) =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremPredicate T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationDomain_predicate : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.FirstOrder.Theory.RE T],
+  CategoricalEssentialIncompleteness.Numerical.nat.domainSubobject
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationDomain T) =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationPredicate T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData : (T : FFL.FirstOrder.ArithmeticTheory) →
+  [FFL.Entailment.Consistent T] →
+    CategoricalEssentialIncompleteness.InternalDiagonalData
+      (CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainPredicates
+        CategoricalEssentialIncompleteness.Numerical.enrichedProducts)
+      CategoricalEssentialIncompleteness.Numerical.enrichedPredicates
+CategoricalEssentialIncompleteness.ArithmeticSyntax.domainEvaluation : (X : Type) →
+  X →
+    BoundedLatticeHom
+      (X ⟶
+        CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject
+          CategoricalEssentialIncompleteness.Numerical.nat)
+      CategoricalEssentialIncompleteness.Numerical.nat.Domain
+@CategoricalEssentialIncompleteness.ArithmeticSyntax.domainPairAt : {X : Type} →
+  CategoricalEssentialIncompleteness.ComplementaryPair
+      (X ⟶
+        CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject
+          CategoricalEssentialIncompleteness.Numerical.nat) →
+    X → CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain
+CategoricalEssentialIncompleteness.ArithmeticSyntax.internal_row_apply : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.Entailment.Consistent T] {X : Type}
+  (g :
+    X ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject
+        CategoricalEssentialIncompleteness.Numerical.nat CategoricalEssentialIncompleteness.Numerical.nat)
+  (x : X),
+  (((CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalHom
+                CategoricalEssentialIncompleteness.Numerical.enrichedProducts).product
+            (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).U
+            (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).U).enrichedTotalEquiv
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).S)
+      ((CategoryTheory.ConcreteCategory.hom
+          ((CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).row g))
+        x) =
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.substitutionRow
+      ((CategoricalEssentialIncompleteness.Numerical.nat.enrichedTotalEquiv
+          CategoricalEssentialIncompleteness.Numerical.nat)
+        ((CategoryTheory.ConcreteCategory.hom g) x))
+CategoricalEssentialIncompleteness.ArithmeticSyntax.internal_represents_iff : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [inst : FFL.Entailment.Consistent T] {X : Type}
+  (a :
+    CategoricalEssentialIncompleteness.ComplementaryPair
+      (X ⟶
+        CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject
+          CategoricalEssentialIncompleteness.Numerical.nat))
+  (g :
+    X ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.totalObject
+        CategoricalEssentialIncompleteness.Numerical.nat CategoricalEssentialIncompleteness.Numerical.nat),
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).Represents a g ↔
+    ∀ (x : X),
+      CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.domainPairAt a x)
+        ((CategoricalEssentialIncompleteness.Numerical.nat.enrichedTotalEquiv
+            CategoricalEssentialIncompleteness.Numerical.nat)
+          ((CategoryTheory.ConcreteCategory.hom g) x))
+CategoricalEssentialIncompleteness.ArithmeticSyntax.internalRepresentative_represents : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [inst : FFL.Entailment.Consistent T]
+  (hrep :
+    ∀
+      (a :
+        CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+      ∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g),
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).Represents
+    CategoricalEssentialIncompleteness.ArithmeticSyntax.internalUniversalPair
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalRepresentative T hrep)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.internalRepresentative_condition : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [inst : FFL.Entailment.Consistent T]
+  (hrep :
+    ∀
+      (a :
+        CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+      ∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalRepresentative T hrep)
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).representationLeft =
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).representationRight
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representationSectionOfPairs : (T :
+    FFL.FirstOrder.ArithmeticTheory) →
+  [inst : FFL.Entailment.Consistent T] →
+    (∀
+        (a :
+          CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+        ∃ g, CategoricalEssentialIncompleteness.ArithmeticSyntax.RepresentsPair T a g) →
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).RepresentationSection
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representationSectionOfDefinability : (T :
+    FFL.FirstOrder.ArithmeticTheory) →
+  [inst : FFL.Entailment.Consistent T] →
+    (∀ (A : Set ℕ),
+        (ComputablePred fun x => x ∈ A) →
+          ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ) →
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).RepresentationSection
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representationSection : (T : FFL.FirstOrder.ArithmeticTheory) →
+  [𝗣𝗔⁻ ⪯ T] →
+    [inst : FFL.Entailment.Consistent T] →
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).RepresentationSection
+CategoricalEssentialIncompleteness.ArithmeticSyntax.globalDomainPair : CategoricalEssentialIncompleteness.ComplementaryPair
+    CategoricalEssentialIncompleteness.Numerical.nat.Domain →
+  CategoricalEssentialIncompleteness.ComplementaryPair
+    (⊤_ Type ⟶
+      CategoricalEssentialIncompleteness.Numerical.enrichedRestriction.domainObject
+        CategoricalEssentialIncompleteness.Numerical.nat)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.domainPairAt_globalDomainPair : ∀
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain)
+  (t : ⊤_ Type),
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.domainPairAt
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.globalDomainPair a) t =
+    a
+CategoricalEssentialIncompleteness.ArithmeticSyntax.representationSection_iff_definability : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [inst : FFL.Entailment.Consistent T],
+  Nonempty (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).RepresentationSection ↔
+    ∀ (A : Set ℕ),
+      (ComputablePred fun x => x ∈ A) →
+        ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.globalDomainPair_separates_iff : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [inst : FFL.Entailment.Consistent T]
+  (a : CategoricalEssentialIncompleteness.ComplementaryPair CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+  (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).Separates
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.globalDomainPair a) ↔
+    CategoricalEssentialIncompleteness.Numerical.SeparatesSupports
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T) a
+CategoricalEssentialIncompleteness.ArithmeticSyntax.no_separator_of_representationSection : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [inst : FFL.Entailment.Consistent T]
+  (σ : (CategoricalEssentialIncompleteness.ArithmeticSyntax.internalDiagonalData T).RepresentationSection),
+  ¬∃ a,
+      CategoricalEssentialIncompleteness.Numerical.SeparatesSupports
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T) a
+CategoricalEssentialIncompleteness.ArithmeticSyntax.supports_recursivelyInseparable_of_definability : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T],
+  (∀ (A : Set ℕ),
+      (ComputablePred fun x => x ∈ A) →
+        ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ) →
+    CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+      (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.supports_recursivelyInseparable : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [𝗣𝗔⁻ ⪯ T] [FFL.Entailment.Consistent T],
+  CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T)
+CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport_eq_compl : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [FFL.Entailment.Consistent T] [FFL.Entailment.Complete T],
+  CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T =
+    (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)ᶜ
+CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport_computable_of_complete : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.FirstOrder.Theory.RE T] [FFL.Entailment.Consistent T]
+  [FFL.Entailment.Complete T],
+  ComputablePred fun x => x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T
+CategoricalEssentialIncompleteness.ArithmeticSyntax.extension_theoremSupport_not_computable_of_recursivelyInseparable : ∀
+  (T T' : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T'],
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T) →
+      ¬ComputablePred fun x => x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.extension_incomplete_of_recursivelyInseparable : ∀
+  (T T' : FFL.FirstOrder.ArithmeticTheory) [FFL.FirstOrder.Theory.RE T'] [FFL.Entailment.Consistent T'],
+  T ⪯ T' →
+    CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T)
+        (CategoricalEssentialIncompleteness.ArithmeticSyntax.refutationSupport T) →
+      FFL.Entailment.Incomplete T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.extension_incomplete_of_definability : ∀
+  (T T' : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T] [FFL.FirstOrder.Theory.RE T']
+  [FFL.Entailment.Consistent T'],
+  T ⪯ T' →
+    (∀ (A : Set ℕ),
+        (ComputablePred fun x => x ∈ A) →
+          ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ) →
+      FFL.Entailment.Incomplete T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.essential_undecidability_of_definability : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T],
+  (∀ (A : Set ℕ),
+      (ComputablePred fun x => x ∈ A) →
+        ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ) →
+    ∀ (T' : FFL.FirstOrder.ArithmeticTheory),
+      T ⪯ T' →
+        FFL.Entailment.Consistent T' →
+          ¬ComputablePred fun x => x ∈ CategoricalEssentialIncompleteness.ArithmeticSyntax.theoremSupport T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.essential_incompleteness_of_definability : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T],
+  (∀ (A : Set ℕ),
+      (ComputablePred fun x => x ∈ A) →
+        ∃ φ, CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise T (fun x => x ∈ A) φ) →
+    ∀ (T' : FFL.FirstOrder.ArithmeticTheory),
+      T ⪯ T' → FFL.FirstOrder.Theory.RE T' → FFL.Entailment.Consistent T' → FFL.Entailment.Incomplete T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.extension_incomplete_of_PAminus : ∀
+  (T T' : FFL.FirstOrder.ArithmeticTheory) [𝗣𝗔⁻ ⪯ T] [FFL.Entailment.Consistent T] [FFL.FirstOrder.Theory.RE T']
+  [FFL.Entailment.Consistent T'], T ⪯ T' → FFL.Entailment.Incomplete T'
+CategoricalEssentialIncompleteness.ArithmeticSyntax.incomplete_of_PAminus : ∀ (T : FFL.FirstOrder.ArithmeticTheory)
+  [𝗣𝗔⁻ ⪯ T] [FFL.FirstOrder.Theory.RE T] [FFL.Entailment.Consistent T], FFL.Entailment.Incomplete T

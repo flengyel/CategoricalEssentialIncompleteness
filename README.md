@@ -82,8 +82,24 @@ inclusion.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-The arithmetic syntax, representation section, Lindenbaum presentation, and
-theory-extension comparisons remain open; see
+Canonical arithmetic sentence codes form an infinite recursive set with a
+computable enumeration and inverse. Numeral substitution is computable jointly
+in the unary-formula code and numeral and defines a total numerical arrow.
+Its representation equations are equivalent to strong numeralwise definability.
+The internal representation projection has a section exactly when every
+recursive set is strongly definable numeralwise in the theory.
+The internal categorical diagonal theorem then proves recursive inseparability
+of theorem and refutation indices. For c.e. theories, both supports are c.e.
+and are represented by numerical restriction domains.
+
+Every consistent c.e. extension of a consistent arithmetic theory strongly
+defining every recursive set is incomplete. Every consistent extension has a
+nonrecursive theorem support. These results apply in particular to consistent
+extensions of `PA⁻`. The general theorem assumes neither that the original
+theory is c.e. nor that it extends `PA⁻`.
+
+The Lindenbaum Boolean presentation, its theory-extension correspondence,
+and the arbitrary-effective-language generalization remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -173,14 +189,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 372 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (383 in total). Only
+declarations, and 449 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, numerical, and arithmetic declarations (460 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 383 axiom audits.
+PASS: project build, dependency pins, source hashes, and 460 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -192,7 +208,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The numerical enrichment and global-comparison evidence is in
+is ignored by Git. The arithmetic syntax, representation, and incompleteness evidence is in
+[`Audit/2026-10-28-arithmetic-syntax/`](Audit/2026-10-28-arithmetic-syntax/).
+The numerical enrichment and global-comparison evidence is in
 [`Audit/2026-10-29-numerical-enrichment/`](Audit/2026-10-29-numerical-enrichment/).
 The numerical recursion-category and indexing evidence is in
 [`Audit/2026-10-29-numerical-recursion/`](Audit/2026-10-29-numerical-recursion/).

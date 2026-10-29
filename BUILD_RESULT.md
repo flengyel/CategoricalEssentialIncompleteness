@@ -1,5 +1,48 @@
 # Categorical essential incompleteness: build result
 
+## Arithmetic syntax and essential incompleteness checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from
+`fe4c9ce037ab049bff1bdf1a383f1a6d1106567e`. Six uncommitted arithmetic modules
+from the preceding session were present and were incorporated into this
+checkpoint. The remote `main` still matched the starting commit before
+publication.
+
+- `python3 scripts/verify.py`: PASS (1966 jobs, including cached dependencies).
+- All 460 axiom audits pass, retaining the previous 383. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- All sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values.
+- Ten new arithmetic modules compile. The two pre-existing imported linter
+  warnings remain; no new module warnings occurred.
+- The source scan covers 77 project Lean files and finds no proof omissions
+  or new axiom declarations.
+
+Effective sentence coding has a computable inverse, and numeral substitution
+is computable jointly in the formula code and numeral. The numerical
+representation equations are equivalent to strong numeralwise definability.
+The internal representation projection has a section exactly when every
+recursive set has such a definition. Applying the internal categorical
+diagonal theorem gives recursive inseparability of theorem and refutation
+indices.
+
+C.e. axioms give c.e. theorem and refutation supports. A complete consistent
+c.e. extension would have recursive theorem support, which would separate the
+original supports. Thus every consistent c.e. extension of a consistent
+arithmetic theory strongly defining every recursive set is incomplete.
+Every consistent extension has nonrecursive theorem support. These conclusions
+apply in particular to consistent extensions of `PA⁻`.
+
+The results use Foundation's arithmetic language. The Lindenbaum PER Boolean
+presentation, its theory-extension correspondence, and the generalization to
+arbitrary effective languages remain open. The version using only domain
+predicates `E` and a single bundled definability-algebra record are not yet
+assembled. No manuscript or imported source was changed.
+
+The hosted executable-path adapter was used. Palomar Comparator, NanoDa,
+and con-ron were not run. Evidence:
+[Audit/2026-10-28-arithmetic-syntax](Audit/2026-10-28-arithmetic-syntax/).
+
 ## Numerical enrichment and global comparisons checkpoint
 
 Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from

@@ -24,6 +24,7 @@ predicate lattices. Boolean arrows and their fibers are characterized by
 total recursive functions and recursive support inclusions. These inclusions
 are exactly the complemented subobjects of the equality PER on `ℕ`.
 This completes `lem:integration-numerical-subobjects`. The arithmetic
+incompleteness consequence is proved below; the Lindenbaum Boolean
 interpretation remains incomplete. Numerical restriction products give a
 prodominical `P`-category with the original restriction operation. Its domain
 lattices and total-arrow category are compared explicitly with the existing
@@ -45,6 +46,17 @@ their numerical counterparts.
 The global predicate functor is naturally identified with the full PER
 subobject functor along the product-preserving functor on global total arrows,
 and the induced domain map agrees with numerical support inclusion.
+
+Canonical sentence coding and joint numeral substitution are constructed in
+Foundation's arithmetic language. The representation equations are equivalent
+to strong numeralwise definability, and the internal representation projection
+has a section exactly when every recursive set has such a definition. Applying
+the internal diagonal theorem proves recursive inseparability of theorem and
+refutation indices. The supports are c.e. when the theory is c.e.
+Consequently, every consistent c.e. extension of a consistent arithmetic theory
+strongly defining every recursive set is incomplete; every consistent
+extension has nonrecursive theorem support. Consistent extensions of `PA⁻`
+satisfy the definability hypothesis.
 
 ## Correspondence
 
@@ -76,7 +88,7 @@ and the induced domain map agrees with numerical support inclusion.
 | Numerical internal predicates and embedding | `Numerical.enrichedPredicates`; `enrichedDomainSubobjectHom`; `enrichedPredicateEmbedding` | Full PER subobjects give the internal predicate objects. The actual domain equalizers embed by monic bounded lattice maps, natural for every parameter type. All names are in `Numerical`. |
 | Numerical global category comparison | `Numerical.enrichedGlobalEquivalence`; `enrichedGlobalTotalEquivalence`; `globalTotalEvaluationPreservesBinaryProducts` | Evaluation and constant families give inverse equivalences of the partial and total categories. Restriction, zero, partial pairing, and projections agree; the total equivalence preserves binary products. All names are in `Numerical`. |
 | Numerical global subobject identification | `Numerical.enrichedToPER`; `enrichedToPERPreservesBinaryProducts`; `enrichedPredicateSubobjectIdentification`; `enriched_domainSubobject_apply` | The PER-valued functor preserves binary products. Its full subobject functor is naturally identified with global predicates, and the enriched domain map agrees with numerical support inclusion. All names are in `Numerical`. |
-| `cor:numerical-definability-algebras` | `NumericalEnriched*` modules | The numerical enriched category, domain lattices, predicates, embedding, and indexing are constructed. The equivalence between existence of the theory-specific representation section and strong numeralwise definability remains open. |
+| `cor:numerical-definability-algebras` | `NumericalEnriched*`; `ArithmeticSyntax.representationSection_iff_definability` | The numerical enriched structure and the section/definability equivalence are proved for arithmetic syntax with full PER predicates. The version using only domain predicates `E` is not yet assembled. |
 | PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular and finitely extensive. |
 | Binary products and preservation by `J` in `sec:integration-numerical` | `Numerical.productIsLimit`; `Numerical.toPER_preservesBinaryProducts` | Recursive tuple coding gives infinite recursive product carriers. Projection equations for the PER comparison prove preservation. |
 | Numerical restriction products in `sec:integration-numerical` | `Numerical.partialPair_fst`; `partialPair_snd`; `partialPair_proj`; `numericalPCategory`; `numericalProdominical` | Partial pairing, the restriction projection equations, all `P`-category equations, and zero absorption are proved. All names are in `Numerical`. |
@@ -92,9 +104,14 @@ and the induced domain map agrees with numerical support inclusion.
 | Boolean fibers and complemented subobjects in `lem:integration-numerical-subobjects` | `NumericalPER.booleanArrow_boundFiber`; `exists_boolean_fiber_iff_recursive_support`; `isComplemented_iff_recursive_support` | Proved for all subobjects of `D_ℕ`. Boolean fibers, recursive support inclusions, and complemented subobjects coincide. All names are in `NumericalPER`. |
 | Complemented domains in `lem:integration-numerical-subobjects` | `Numerical.isComplemented_iff_represented_domain`; `isComplemented_domainSubobject_iff` | Every complemented subobject of `D_ℕ` is represented by a complementary domain pair. The domain embedding preserves and reflects existence of a complement. Both names are in `Numerical`. |
 | `thm:integration-essential-equivalence` (ii) | `Numerical.no_separator_iff_recursively_inseparable` | The support statement is proved for arbitrary disjoint supports, with PER subobject inequalities and numerical restriction domains. |
-| `thm:integration-essential-equivalence` (i), (iii), and its theory instance | — | Open; needs the remaining numerical/PER structure and the syntax/provability comparison. |
+| Effective syntax in the strong numeralwise definability subsection | `ArithmeticSyntax.sentenceEquiv`; `computable_numeralSubstitution`; `ArithmeticSyntax.substitutionFunction_computable`; `substitutionArrow` | Computable inverse sentence coding and substitution jointly in the formula and numeral; the latter arrow is total. |
+| `prop:integration-arbitrary-adequacy`; `thm:integration-essential-equivalence` (i) | `ArithmeticSyntax.recursiveSet_adequacy_iff`; `represents_all_pairs_iff`; `representationSection_iff_definability` | Proved for the arithmetic language. Consistency is the only hypothesis on the theory in these equivalences. All names are in `ArithmeticSyntax`. |
+| Theorem/refutation domains for c.e. theories | `ArithmeticSyntax.theoremSupport_enumerable`; `refutationSupport_enumerable`; `theoremDomain_predicate`; `refutationDomain_predicate` | The supports are c.e. under `T.RE` alone, and their partial identities represent the stated PER predicates. |
+| Inseparability under (i) in `thm:integration-essential-equivalence` | `ArithmeticSyntax.supports_recursivelyInseparable_of_definability` | Proved by applying the internal categorical diagonal theorem to the constructed representation section. |
+| Arithmetic essential undecidability and incompleteness under (i) | `ArithmeticSyntax.essential_undecidability_of_definability`; `essential_incompleteness_of_definability` | Every consistent extension has nonrecursive theorem support; every consistent c.e. extension is incomplete. The original theory need not be c.e. |
+| `thm:integration-essential-equivalence` (iii), Boolean-homomorphism equivalence | — | Open; requires the Lindenbaum PER and the correspondence with complete decidable consistent extensions. |
 | `prop:numerical-boolean-extensions` | — | Open. |
-| `cor:arithmetic-representation-incompleteness` | — | Open; the imported arithmetic recursion-category instance is not this numerical comparison. |
+| `cor:arithmetic-representation-incompleteness` | `ArithmeticSyntax.every_pair_represented`; `representationSection`; `supports_recursivelyInseparable`; `incomplete_of_PAminus` | Representation, the section, inseparability, and essential incompleteness are proved for consistent arithmetic-language extensions of `PA⁻`. The Lindenbaum Boolean-homomorphism conclusion and domain-predicate algebra remain open. |
 
 ## Hypotheses and constructions
 
@@ -567,36 +584,60 @@ then gives `FinitaryExtensive NumericalPER`, and disjointness follows. Together
 with regularity, this supplies the target-category assumptions in the numerical
 interpretation without restricting PER supports to enumerable sets.
 
+## Arithmetic syntax, representation, and incompleteness
+
+`ArithmeticSyntax.lean` uses canonical syntax codes. The recursive increasing
+enumeration and its rank give inverse computable maps between natural numbers
+and arithmetic sentences. Unary-formula decoding assigns falsity to invalid
+codes. `ArithmeticFormulaSubstitution.lean` compares Foundation's arithmetized
+substitution with its syntax encoding and proves joint computability.
+`ArithmeticNumericalSubstitution.lean` turns this into the total numerical
+substitution arrow, returning a sentence-enumeration index.
+
+`ArithmeticRepresentation.lean` defines strong numeralwise representation by
+positive and negative proofs for each individual numeral. Consistency makes
+the implications equivalences. The property persists under theory extension,
+and Foundation's representation theorem supplies it for extensions of `PA⁻`.
+`ArithmeticAdequacy.lean` identifies the categorical pullback equations with
+these provability equivalences. Taking one parameter value gives a formula;
+a fixed formula gives a constant recursive parameter arrow.
+
+`ArithmeticRepresentationSection.lean` constructs the theory-specific internal
+diagonal data and compares representation at every parameter type with the
+numerical equations. Set-level choice of representing arrows supplies the
+section of the representation pullback. Conversely, evaluation of a section
+at constant global complementary pairs gives numeralwise definitions. No
+uniform computable selection of formulas is required.
+
+`ArithmeticEnumerableSupports.lean` proves that c.e. axioms give c.e. theorem
+and refutation supports and constructs their numerical restriction domains.
+`ArithmeticInseparability.lean` applies `enriched_no_global_separator` to the
+section and numerical nontriviality, then uses the support comparison to
+obtain recursive inseparability. `ArithmeticEssentialIncompleteness.lean`
+proves that a complete consistent c.e. theory has recursive theorem support.
+Such a support in an extension would separate the original theorem and
+refutation supports. This proves the quantified essential-incompleteness
+statement, as well as nonrecursiveness of theorem support in every consistent
+extension.
+
 ## Remaining numerical constructions and verification
 
-No equivalence between the imported typed arithmetic program category and the
-manuscript's numerical category or PER presentation is asserted. That comparison
-must identify objects, arrows and their equality, restriction domains, numeral
-substitution, and the theorem/refutation fibers. Numeralwise provability has
-the form “for every numeral, there exists a proof of the corresponding
-instance”; it must not be replaced by provability of one universally
-quantified sentence.
+The next construction is the arithmetic Lindenbaum PER, its Boolean operations,
+and the regular-epimorphism presentation by sentence indices. Its two bound
+fibers must be identified with theorem and refutation predicates. Then the
+theory-extension quotient maps and the Boolean-homomorphism correspondence in
+`thm:integration-essential-equivalence` (iii) and
+`prop:numerical-boolean-extensions` remain to be proved.
 
-The next construction is **effective sentence and unary-formula coding**,
-including recursive substitution in both the formula code and numeral.
-The remaining arithmetic constructions include the theorem and refutation
-supports, the representation section, the Lindenbaum Boolean presentation,
-and theory-extension quotients. They are needed for
-`thm:integration-essential-equivalence` (i) and (iii),
-`prop:numerical-boolean-extensions`, and the arithmetic corollary.
+The effective-language generalization beyond arithmetic syntax and the c.e.
+realization using only domain predicates `E` are not yet assembled. A single
+record bundling the full definability-algebra data also remains absent.
+The imported typed arithmetic program category remains a separate construction;
+no equivalence with the numerical category is asserted.
 
-The pinned arithmetic foundations already prove the positive and negative
-numeral instances of `codeOfComputablePred`, under extensions of `R₀` and
-`PA⁻`, respectively. These results can supply the numeralwise representation
-step once their formula codes and substitution are compared with the
-numerical categorical construction. The existing fixed-formula substitution
-results alone do not give the required joint recursive substitution map.
-
-The full verifier builds the combined entry point and audits 383 declarations,
-retaining all eleven original audits. It also checks every pinned dependency
-and imported source hash, as well as both manuscript hashes. Thirteen imported
-files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean
-declarations and proofs are unchanged. Original source pins are retained.
-Lean compilation and axiom inspection do not establish the open comparisons
-above or completion of the imported Rice–Shapiro program. Palomar Comparator,
-NanoDa, and con-ron have not been run on this repository.
+The full verifier builds the combined entry point and audits 460 declarations,
+retaining all 383 previous checks and the eleven original audits. It checks
+every pinned dependency and imported-source hash, as well as both manuscript
+hashes. Thirteen imported files have comment-only revisions recorded in
+`LOCAL_PATCHES.json`; their declarations and proofs are unchanged.
+Palomar Comparator, NanoDa, and con-ron have not been run on this repository.
