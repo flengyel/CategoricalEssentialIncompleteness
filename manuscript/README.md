@@ -1,5 +1,28 @@
 # Domains, finite proofs, and essential incompleteness
 
+## Intrinsic theories and extensions
+
+[Internal theories and intrinsic incompleteness](intrinsic_introspection_and_extensions.pdf)
+([LaTeX source](intrinsic_introspection_and_extensions.tex), 29 October 2026)
+starts with Ramesh's initiality construction. For an internal arithmetic
+universe C in the initial arithmetic universe I, the internal hom-object
+p_C=Hom_C(1,0) is unrefutable in I. It has no global element exactly when
+Glob(C) is consistent. Internal arithmetic functors give coherent maps
+between the modal functors and their contradiction objects. Initial models
+of finitely axiomatized lex extensions supply an explicit class of these
+theories and maps.
+
+The note separates undecidability in I from second incompleteness in
+Glob(C). Essential incompleteness inside every intended extension is the
+next intrinsic question. The [reviews and verification](../Audit/2026-10-29-intrinsic-introspection/README.md)
+record this scope. No new result is Lean-formalized.
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error intrinsic_introspection_and_extensions.tex
+```
+
+## Computational constructions
+
 The current note is [Domains, finite proofs, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
 ([LaTeX source](domains_hoare_profunctors_essential_incompleteness.tex),
 29 October 2026, 23 pages).

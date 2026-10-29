@@ -11,6 +11,18 @@ nonnumerical computational cosheaf example.
 
 ## Manuscript
 
+The intrinsic approach is developed in [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
+([LaTeX source](manuscript/intrinsic_introspection_and_extensions.tex)).
+Using Ramesh's initiality construction, an internal arithmetic universe C
+has a contradiction object Hom_C(1,0), with no chosen coding into a
+universal object. This proposition is undecided in the initial arithmetic
+universe precisely when Glob(C) is consistent. Internal theory extensions
+give coherent comparison maps. The [review record](Audit/2026-10-29-intrinsic-introspection/README.md)
+distinguishes this result and the extension-relative second-incompleteness
+theorem from the remaining essential-incompleteness claim inside each
+extension. The computational constructions below provide a separate
+realization route.
+
 The current note is [Domains, finite proofs, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
 ([LaTeX source](manuscript/domains_hoare_profunctors_essential_incompleteness.tex),
 29 October 2026, 23 pages). It includes Hoare profunctors and their relation

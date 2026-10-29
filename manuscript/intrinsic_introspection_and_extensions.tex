@@ -1,0 +1,259 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Internal theories and intrinsic incompleteness},pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\I}{\mathcal I}
+\newcommand{\C}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Glob}{\operatorname{Glob}}
+\newcommand{\Lex}{\operatorname{Lex}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\hhom}{\underline{\operatorname{Hom}}}
+\title{Internal theories and intrinsic incompleteness}
+\author{Florian Lengyel}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An internal theory has an object of contradictions, obtained directly
+as an internal hom-object. Ramesh's initiality construction equips
+internal arithmetic universes with the introspection needed to apply
+his L\"ob theorem. We deduce that the contradiction object of every
+consistent internal arithmetic universe is an undecided proposition
+in the initial arithmetic universe. Internal arithmetic functors
+induce coherent comparison maps between these propositions and their
+associated modal functors. This gives an intrinsic theory-and-extension
+construction without choosing encodings into a universal object.
+\end{abstract}
+
+\section{The internal theory and its two modal functors}
+
+An arithmetic universe is an exact, extensive category with
+pullback-stable list objects. Arithmetic functors preserve this
+structure. Write $\I$ for the initial arithmetic universe.
+We use Ramesh's initiality construction and L\"ob theorem
+\cite[Construction~6.11 and Theorem~4.19]{Ramesh}.
+
+Let $\C$ be an arithmetic universe internal to $\I$.
+Its external category $L_\C=\Glob(\C)$ has global objects
+$c:1_\I\to\C_0$ and global arrows in $\C_1$ with the specified
+endpoints. For global objects $c,d$, the object
+$\hhom_\C(c,d)$ is the pullback of the source-target map
+$\C_1\to\C_0\times\C_0$ along $(c,d):1_\I\to\C_0\times\C_0$.
+In particular,
+\begin{equation}\label{eq:global-hom}
+ \I(1_\I,\hhom_\C(c,d))\cong L_\C(c,d).
+\end{equation}
+Internal composition induces composition on these objects.
+The chosen internal arithmetic structure gives $L_\C$ its
+arithmetic structure.
+
+Initiality supplies an arithmetic functor
+$S_\C:\I\to L_\C$, unique up to unique natural isomorphism.
+The covariant functor
+\[
+ H_\C:L_\C\longrightarrow\I,
+ \qquad H_\C(c)=\hhom_\C(1_\C,c)
+\]
+sends $u:c\to d$ to postcomposition by $u$.
+It preserves finite limits, by the internal universal properties.
+There are two covariant finite-limit-preserving endofunctors:
+\begin{equation}\label{eq:two-boxes}
+ B_\C=H_\C S_\C:\I\to\I,
+ \qquad Q_\C=S_\C H_\C:L_\C\to L_\C.
+\end{equation}
+These act on different categories.
+
+Ramesh's construction gives the natural transformation
+$N_\C:\operatorname{id}_\I\Rightarrow B_\C$ required for introspection.
+Its existence follows from the
+initiality of the identity functor in $\Lex(\I,\I)$
+\cite[Theorem~1.56 and Corollary~1.55]{Ramesh}.
+Equivalently, consider the comma category $(\operatorname{id}_\I\mathbin\downarrow B_\C)$.
+Arithmetic left comma-stability makes its projections arithmetic.
+The initial arithmetic functor from $\I$ into this comma category
+has both projections canonically isomorphic to $\operatorname{id}_\I$;
+its comparison arrow is $N_\C$. The same initiality makes
+this transformation unique.
+
+The pair $(S_\C,N_\C)$ determines an indexed finite-limit-preserving
+functor from $\I/{-}$ to the indexed category represented by $\C$
+\cite[Theorem~2.5]{Ramesh}. Ramesh's L\"ob theorem therefore applies
+to both functors in \eqref{eq:two-boxes}. In particular, an arrow
+$B_\C A\to A$ gives a global element of $A$ in $\I$, and an
+arrow $Q_\C c\to c$ gives a global element of $c$ in $L_\C$.
+The fixed-point equations use the canonical identifications
+$B_\C1_\I\cong1_\I$ and $Q_\C1_\C\cong1_\C$.
+
+\section{The contradiction object}
+
+A category with initial object $0$ and terminal object $1$ is
+\emph{consistent} if it has no arrow $1\to0$.
+A subterminal object $p$ is \emph{undecided} if neither
+$1\to p$ nor $p\to0$ exists. A morphism $p\to0$ is a
+refutation; no pseudocomplement object is required.
+
+The category $\I$ is consistent: its arithmetic functor to $\Set$
+would send an arrow $1_\I\to0_\I$ to a function from a singleton
+to the empty set.
+
+Define the contradiction object of $\C$ by
+\begin{equation}\label{eq:contradiction}
+ p_\C=\hhom_\C(1_\C,0_\C).
+\end{equation}
+This is subterminal in $\I$, since $0_\C$ is internally
+subterminal. The arithmetic functor $S_\C$ preserves $0$ and $1$,
+so $p_\C\cong B_\C0_\I$.
+
+\begin{theorem}\label{thm:relative}
+For every arithmetic universe $\C$ internal to $\I$, there is no
+arrow $p_\C\to0_\I$.
+Moreover, $p_\C$ is undecided in $\I$ if and only if
+$L_\C=\Glob(\C)$ is consistent.
+\end{theorem}
+\begin{proof}
+An arrow $p_\C\to0_\I$ would be an arrow
+$B_\C0_\I\to0_\I$. L\"ob's theorem on $\I$ would give
+$1_\I\to0_\I$, contradicting consistency of $\I$.
+On the other hand, \eqref{eq:global-hom} gives
+\[
+ \I(1_\I,p_\C)\cong L_\C(1_\C,0_\C).
+\]
+Thus $p_\C$ has no global element precisely when $L_\C$ is
+consistent. Together these prove the assertion.
+\end{proof}
+
+\begin{corollary}\label{cor:internal-consistency}
+If $L_\C$ is consistent, there is no arrow
+$Q_\C0_\C\to0_\C$ in $L_\C$.
+\end{corollary}
+\begin{proof}
+Such an arrow would give $1_\C\to0_\C$ by L\"ob's theorem on
+$L_\C$.
+\end{proof}
+
+Theorem~\ref{thm:relative} concerns $p_\C$ in $\I$;
+Corollary~\ref{cor:internal-consistency} concerns
+$Q_\C0_\C\cong S_\C(p_\C)$ in $L_\C$.
+An arithmetic functor can send an object without global elements
+to one having a global element. Consequently the corollary does
+not assert that $S_\C(p_\C)$ is undecided in $L_\C$.
+
+\section{Internal extensions}
+
+Let $j:\C\to\D$ be an internal arithmetic functor.
+It induces the arithmetic functor
+$J=\Glob(j):L_\C\to L_\D$.
+Initiality of $\I$ gives a canonical natural isomorphism
+\[
+ \lambda_j:JS_\C\xRightarrow{\ \cong\ }S_\D.
+\]
+Applying $j$ to internal arrows, and using its terminal-object
+comparison and $\lambda_j$, defines
+\[
+ \beta_{j,A}: B_\C A\longrightarrow B_\D A
+ \quad(A\in\I).
+\]
+In internal notation it sends $u:1_\C\to S_\C A$ to
+$\lambda_{j,A}\,j(u)\,\epsilon_j^{-1}$, where
+$\epsilon_j:j(1_\C)\xrightarrow{\cong}1_\D$.
+Composition is written from right to left.
+
+\begin{proposition}\label{prop:extensions}
+The maps $\beta_{j,A}$ form a natural transformation
+$\beta_j:B_\C\Rightarrow B_\D$ satisfying
+$\beta_jN_\C=N_\D$.
+Identity and composite internal arithmetic functors induce identity
+and composite transformations, through the canonical comparisons.
+Their components at $0_\I$ induce maps
+$p_j:p_\C\to p_\D$.
+If $L_\D$ is consistent, then $L_\C$ is consistent and both
+$p_\C$ and $p_\D$ are undecided in $\I$.
+\end{proposition}
+\begin{proof}
+For $f:A\to A'$ in $\I$, functoriality of $j$ and naturality
+of $\lambda_j$ give the commutative square
+\[
+\begin{tikzcd}
+B_\C A\arrow[r,"\beta_{j,A}"]\arrow[d,"B_\C f"']&
+B_\D A\arrow[d,"B_\D f"]\\
+B_\C A'\arrow[r,"\beta_{j,A'}"']&B_\D A'.
+\end{tikzcd}
+\]
+Both $\beta_jN_\C$ and $N_\D$ are transformations
+$\operatorname{id}_\I\Rightarrow B_\D$, so their equality follows from
+the uniqueness established in Section~1.
+The canonical comparison for a composite is the composite of
+the canonical comparisons, by their uniqueness. The internal
+functor laws then give the identity and composition assertions.
+At $0_\I$, the map is the action of $j$ on
+$\hhom_\C(1_\C,0_\C)$, with the initial- and terminal-object
+comparisons. Finally, $J$ sends any arrow $1_\C\to0_\C$ to
+an arrow $1_\D\to0_\D$. Apply Theorem~\ref{thm:relative}.
+\end{proof}
+
+These extensions can themselves be constructed by initiality.
+Let $i:\mathbb T\to\mathbb T'$ be a finite-limit-preserving
+map of finitely axiomatized lex theories. Write $\mathbb A$ for
+the lex theory of arithmetic universes, and fix lex interpretations
+$u:\mathbb A\to\mathbb T$ and $u':\mathbb A\to\mathbb T'$
+with $iu=u'$.
+Ramesh's internal-model theorem
+\cite[Theorem~1.63 and Observation~1.66]{Ramesh} gives initial
+models $G_{\mathbb T}:\mathbb T\to\I$ and
+$G_{\mathbb T'}:\mathbb T'\to\I$.
+Initiality gives the model homomorphism
+\[
+ G_{\mathbb T}\longrightarrow G_{\mathbb T'}i.
+\]
+On the underlying internal arithmetic universes it is an internal
+arithmetic functor $j$. For successive extensions these maps compose
+by uniqueness. Proposition~\ref{prop:extensions} therefore applies
+to this explicitly specified class of theories and extensions.
+
+\section{The initial example and the extension question}
+
+Let $\C$ be the initial arithmetic universe internal to $\I$.
+The external global-sections functor
+$\Gamma_\I=\I(1_\I,-):\I\to\Set$ is arithmetic
+\cite[Theorem~1.80]{Ramesh}. Indeed, it is initial among
+finite-limit-preserving functors to $\Set$ by Yoneda; the unique
+arithmetic functor to $\Set$ is also initial among these functors
+by arithmetic left comma-stability. They are therefore naturally
+isomorphic. Preservation of the internal initial model then gives
+$\Glob(\C)\simeq\I$ and makes $S_\C$ an equivalence
+\cite[Observation~6.12]{Ramesh}.
+Thus $\Glob(\C)$ is consistent, and Theorem~\ref{thm:relative}
+gives a subterminal $p_\C$ isomorphic to neither $0_\I$ nor
+$1_\I$, with neither a proof nor a refutation in $\I$.
+
+The external arithmeticity of $\Gamma_\I$ does not internalize.
+For this very example, the internal global-sections functor sends
+$0_\C$ to $p_\C$, which is not $0_\I$.
+This distinction accounts for the simultaneous external consistency
+and internal failure to refute $p_\C$.
+
+The remaining essential-incompleteness question is to prove, for the
+intended consistent internal extensions $\D$, that their own
+category $L_\D$ has an undecided proposition. The results above
+construct undecided propositions in the fixed base $\I$ and prove
+the second-incompleteness assertion in each consistent $L_\D$.
+Passing from these statements to undecidability in $L_\D$ requires
+a further argument; the equivalence $\Glob(\C)\simeq\I$ for the
+internal initial example supplies no such equivalence for general
+extensions.
+
+\begin{thebibliography}{9}
+\bibitem{Ramesh} S.~Ramesh,
+\emph{Introspective Theories and Geminal Categories},
+Ph.D. dissertation, University of California, Berkeley, 2023.
+\url{https://escholarship.org/uc/item/3mn0c475}.
+\end{thebibliography}
+\end{document}
