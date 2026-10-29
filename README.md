@@ -1,27 +1,26 @@
 # Categorical essential incompleteness
 
-Lean development toward the proof of categorical essential incompleteness in
-*Definability and incompleteness in recursion categories*.
-
-The complete formalization of the manuscript remains unfinished. The proved
-incompleteness lemmas use restriction domains, predicates, and a representation
-section. The numerical recursion and indexing structures are also constructed,
-but there is no assembled instance of the full definability-algebra definition
-or arithmetic specialization of the Boolean-presentation theorem. A theorem
-under weaker hypotheses remains a valid supporting lemma. Completion requires
-the compatible structures and model constructions specified in the
-[formalization requirements](FORMALIZATION_REQUIREMENTS.md).
+Research notes and a Lean development on categorical essential incompleteness.
+The current account develops Hoare profunctors from restriction domains and
+ranges, proves conditional categorical separation results, and constructs a
+numerical deductive category with an essential-incompleteness theorem. The
+intrinsic passage from an abstract recursion category to the required logical
+and deductive data remains open.
 
 ## Manuscript
 
-The current note is [Deduction and essential incompleteness in recursion categories](manuscript/deduction_and_essential_incompleteness.pdf)
-([LaTeX source](manuscript/deduction_and_essential_incompleteness.tex)). It
-constructs theories as closed restriction domains using ranges and Heller's
-stable unions, proves the representation-to-inseparability and essential
-incompleteness theorems, and verifies the arithmetic instance. The arithmetic
-corollary allows a non-c.e. base theory. The new closure construction is not
-yet formalized in Lean; the checkpoint described below concerns the existing
-development. See the [review and continuation record](Audit/2026-10-29-deduction/README.md).
+The current note is [Domains, Hoare profunctors, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
+([LaTeX source](manuscript/domains_hoare_profunctors_essential_incompleteness.tex), 29 October 2026, 21 pages). It gives the
+Hoare-profunctor constructions, the numerical obstruction to weakest liberal
+preconditions, categorical separation theorems, and the numerical deductive
+construction. Closure operators associated with specified rules are treated in
+Appendix A; the intrinsic construction problem is stated in Section 9.
+
+The [outline, mathematical review, writing review, and verification record](Audit/2026-10-29-hoare-profunctors/README.md)
+accompany the note. This account has not been formalized in Lean. The existing
+Lean checkpoint described below concerns the earlier development.
+
+Earlier notes remain available in [the manuscript directory](manuscript/README.md).
 
 Version 16 is included with editorial revisions dated 28 October 2026:
 
@@ -29,7 +28,9 @@ Version 16 is included with editorial revisions dated 28 October 2026:
 - [LaTeX source](manuscript/definability_comparison_v16.tex)
 - [Source provenance](MANUSCRIPT_SOURCE.json)
 
-The current Lean checkpoint proves incompleteness for represented Boolean
+## Earlier Lean checkpoint
+
+The earlier Lean checkpoint proves incompleteness for represented Boolean
 quotients along `J : Tot(K₀) → C`, under the stated representation hypotheses.
 Its statement includes a regular extensive category `C`, a functor `J`, a natural identification
 of global predicates with subobjects along `J`, the internal representation

@@ -1,4 +1,30 @@
-# Definability and incompleteness in recursion categories
+# Domains, Hoare profunctors, and essential incompleteness
+
+The current note is [Domains, Hoare profunctors, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
+([LaTeX source](domains_hoare_profunctors_essential_incompleteness.tex),
+29 October 2026, 21 pages).
+
+Restriction domains and ranges define total- and partial-correctness Hoare
+profunctors. The note proves their composition laws, characterizes the numerical
+existence of weakest liberal preconditions, and gives categorical separation
+theorems with explicit representation or proof-map hypotheses. A numerical
+deductive construction supplies a consistent c.e. essentially incomplete theory
+and relates its assertions to the Hoare profunctors. Section 9 states the open
+intrinsic construction problem. Closure operators for specified deductive
+presentations appear in Appendix A.
+
+Build the self-contained source from this directory with:
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error domains_hoare_profunctors_essential_incompleteness.tex
+```
+
+The [outline and review records](../Audit/2026-10-29-hoare-profunctors/README.md) include the
+mathematical and writing reviews, compilation status, and source/PDF hashes.
+This note has not been formalized in Lean.
+
+## Earlier notes
+
 
 The note [Deduction and essential incompleteness in recursion categories](deduction_and_essential_incompleteness.pdf)
 ([LaTeX source](deduction_and_essential_incompleteness.tex), 29 October 2026)
