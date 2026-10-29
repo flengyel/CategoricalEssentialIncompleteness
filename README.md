@@ -14,6 +14,15 @@ the compatible structures and model constructions specified in the
 
 ## Manuscript
 
+The current note is [Deduction and essential incompleteness in recursion categories](manuscript/deduction_and_essential_incompleteness.pdf)
+([LaTeX source](manuscript/deduction_and_essential_incompleteness.tex)). It
+constructs theories as closed restriction domains using ranges and Heller's
+stable unions, proves the representation-to-inseparability and essential
+incompleteness theorems, and verifies the arithmetic instance. The arithmetic
+corollary allows a non-c.e. base theory. The new closure construction is not
+yet formalized in Lean; the checkpoint described below concerns the existing
+development. See the [review and continuation record](Audit/2026-10-29-deduction/README.md).
+
 Version 16 is included with editorial revisions dated 28 October 2026:
 
 - [PDF](manuscript/definability_comparison_v16.pdf)

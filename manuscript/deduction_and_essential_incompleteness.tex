@@ -1,0 +1,669 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={Deduction and essential incompleteness in recursion categories},
+  pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\R}{\mathscr R}
+\newcommand{\Pos}{\mathbf{Pos}}
+\newcommand{\BDLat}{\mathbf{BDLat}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\Th}{\mathsf{Th}}
+\newcommand{\Cons}{\mathsf{Cons}}
+\newcommand{\id}{\operatorname{id}}
+\title{Deduction and essential incompleteness\protect\\in recursion categories}
+\author{Florian Lengyel}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Inference rules in a recursion category act on restriction idempotents by
+taking ranges. Stable unions of the increasing deduction stages yield the
+least domain closed under the rules, and hence a closure operator whose fixed
+points are theories. A representation condition on the positive and negative
+domains of a theory implies their computational inseparability. Consequently,
+every consistent extension represented by a closed domain is incomplete.
+In the category of partial recursive maps, the required unions exist because
+the deduction stages are uniformly computably enumerable. The arithmetic
+instance gives essential incompleteness for every consistent theory strongly
+defining all recursive sets numeralwise; the base theory need not be
+computably enumerable.
+\end{abstract}
+
+\section{Domains and ranges}
+
+Deduction requires both operations producing conclusions and a means of
+collecting their outputs. We express the operations as partial morphisms and
+the collections as restriction idempotents. Ranges provide direct images of
+these domains, and Heller's stable unions provide closure under finite
+iterations of the rules \cite{Heller}.
+
+We write $gf=g\circ f$. Let $\R$ be a locally small $P$-category with zero
+morphisms, in the sense of \cite{Heller}. We use the restriction notation
+of \cite{RestrictionI},
+written $f\mapsto\bar f$, and its binary restriction products, written
+$X\boxtimes Y$. The restriction of $f:X\to Y$ is an endomorphism
+$\bar f:X\to X$. The restriction identities are
+\[
+ f\bar f=f,\qquad
+ \bar f\bar g=\bar g\bar f,\qquad
+ \overline{g\bar f}=\bar g\bar f,\qquad
+ \bar h f=f\overline{hf}.
+\]
+In the middle two identities $f$ and $g$ have a common source; in the last,
+$f:X\to Y$ and $h:Y\to Z$. We assume $\overline{0_{X,Y}}=0_{X,X}$.
+A morphism is \emph{total} when $\bar f=1_X$. The projections of a restriction
+product are total, and the pairing of $f:Z\to X$ and $g:Z\to Y$ satisfies
+\[
+ \pi_1\langle f,g\rangle=f\bar g,\qquad
+ \pi_2\langle f,g\rangle=g\bar f,\qquad
+ \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+Pairing is determined by these equations. The near product on morphisms
+preserves composition and satisfies
+$\overline{f\boxtimes g}=\bar f\boxtimes\bar g$.
+The total morphisms form a category $\Tot(\R)$ with binary products.
+Its diagonal is $\Delta_X=\langle1_X,1_X\rangle$.
+
+A \emph{domain} on $X$ is a restriction idempotent $e:X\to X$, meaning
+$\bar e=e$. Write
+\[
+ \operatorname{Dom}(X)=\{e:X\to X\mid\bar e=e\}.
+\]
+The order $e\le d$ is defined by $de=e$. Domains on the same object commute,
+their meet is $ed$, and their least and greatest elements are $0_X$ and $1_X$.
+For a fixed domain $q$ on $U$, write
+$E_q=\{a\in\operatorname{Dom}(U):a\le q\}$.
+
+The intended examples are recursion categories: prodominical $P$-categories
+whose objects are all isomorphic and which admit a Turing morphism
+\cite{DPH,Heller}. On a chosen object $U$, the latter is a morphism
+$\tau:U\boxtimes U\to U$ such that, for every $f:X\boxtimes U\to U$,
+there is a total $g:X\to U$ with $f=\tau(g\boxtimes1_U)$.
+The constructions below are stated with the particular domain, range, and
+union hypotheses they require.
+
+\begin{definition}[Range]\label{def:range}
+A \emph{range} of $f:X\to Y$ is a domain $r\in\operatorname{Dom}(Y)$ such that $rf=f$ and,
+for every object $Z$ and every pair $\beta,\beta':Y\to Z$,
+\[
+ \beta f=\beta'f\quad\Longrightarrow\quad\beta r=\beta'r.
+\]
+The category \emph{has ranges} if every morphism has a range.
+\end{definition}
+
+This is the range definition of Di Paola--Heller \cite[Definition 5.1]{DPH}
+and Heller \cite{Heller}. A range is unique. Indeed, if $r,r'$ are ranges of
+$f$, their universal properties give $r'r=r$ and $rr'=r'$, and domains
+commute. We write the unique range as $\ran(f)$.
+
+\begin{lemma}\label{lem:range}
+In a $P$-category with ranges, for $f:X\to Y$, $g:Y\to Z$, and domains
+$e\in\operatorname{Dom}(X)$ and $d\in\operatorname{Dom}(Y)$,
+\begin{align}
+ \ran(f)\le d&\quad\Longleftrightarrow\quad df=f,\label{eq:least-range}\\
+ \ran(e)&=e,\label{eq:range-domain}\\
+ \ran(gf)&=\ran(g\ran(f)),\label{eq:range-composition}\\
+ \ran(df)&=d\ran(f).\label{eq:range-meet}
+\end{align}
+\end{lemma}
+\begin{proof}
+If $df=f$, apply the universal property to $d$ and $1_Y$ to obtain
+$d\ran(f)=\ran(f)$. The converse follows by composing this equality with
+$f$. A domain $e$ satisfies the range conditions for itself, proving
+\eqref{eq:range-domain}.
+
+To prove \eqref{eq:range-composition}, the domain $r=\ran(g\ran(f))$
+receives $gf$. If $\beta gf=\beta'gf$, the range property for $f$ first gives
+$\beta g\ran(f)=\beta'g\ran(f)$; the property for $g\ran(f)$ then gives
+$\beta r=\beta'r$. Thus $r$ is a range of $gf$.
+
+For \eqref{eq:range-meet}, the domain $d\ran(f)$ receives $df$, since $d$
+commutes with $\ran(f)$. Agreement after $df$, followed by the range
+property for $f$ applied to $\beta d$ and $\beta'd$, gives agreement after
+$d\ran(f)$. Uniqueness proves the identity.
+\end{proof}
+
+Ranges define a covariant functor
+\[
+ E_!:\R\longrightarrow\Pos.
+\]
+On objects it assigns $E_!(X)=\operatorname{Dom}(X)$. On $f:X\to Y$ it assigns
+\[
+ f_!:\operatorname{Dom}(X)\longrightarrow\operatorname{Dom}(Y),\qquad f_!(e)=\ran(fe).
+\]
+If $e\le e'$, then $\ran(fe')$ receives $fe$, proving monotonicity.
+Equations \eqref{eq:range-domain} and \eqref{eq:range-composition} give
+$ (1_X)_!=1_{\operatorname{Dom}(X)}$ and $(gf)_!=g_!f_!$.
+
+For any $f:X\to Y$, define the inverse-image map
+\[
+ f^*:\operatorname{Dom}(Y)\longrightarrow\operatorname{Dom}(X),\qquad f^*(d)=\overline{df}.
+\]
+The restriction identities give preservation of meets and
+$(gf)^*=f^*g^*$. They also give the precise relation
+\begin{equation}\label{eq:local-adjunction}
+ f_!(e)\le d\quad\Longleftrightarrow\quad
+ e\bar f\le f^*(d).
+\end{equation}
+Indeed, the left side is equivalent to $dfe=fe$. Restricting this equality
+gives $\overline{df}e=\bar f e$; conversely that equality and
+$df=f\overline{df}$ give $dfe=fe$.
+For total $f$ this is the adjunction $f_!\dashv f^*$.
+
+\section{Stable unions and inverse image}
+
+We use Heller's notion of stable union \cite{Heller}. A finite family can be
+regarded as a countable family by repetition.
+
+\begin{definition}[Stable union]\label{def:stable-union}
+Let $(e_i)_{i\in I}$ be a nonempty finite or countable family in $\operatorname{Dom}(X)$.
+A domain $e\in\operatorname{Dom}(X)$ is its \emph{union} if $e_i\le e$ for every $i$ and,
+for every parallel pair $\beta,\beta':X\to Y$,
+\[
+ (\forall i\in I,\ \beta e_i=\beta'e_i)
+ \quad\Longrightarrow\quad\beta e=\beta'e.
+\]
+The union is \emph{stable} if, for every object $W$, the domain
+$1_W\boxtimes e$ is the union of the $1_W\boxtimes e_i$.
+\end{definition}
+
+Every such union is a least upper bound: apply its universal property to
+an upper bound $d$ and $1_X$. Thus it is unique, and we write it as
+$\bigvee_i e_i$. Symmetry of the near product gives stability in the other
+coordinate as well. The empty union is $0_X$.
+
+\begin{lemma}\label{lem:union-calculus}
+Let $\R$ be a $P$-category with ranges.
+\begin{enumerate}
+\item If $e=\bigvee_i e_i$ is a union and $d\in\operatorname{Dom}(X)$, then $de$ is
+      the union of the $de_i$.
+\item Direct image preserves unions:
+      $f_!(\bigvee_i e_i)=\bigvee_i f_!(e_i)$.
+\item Inverse image along a total morphism preserves stable unions.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+For the first assertion, suppose $\beta de_i=\beta'de_i$ for every $i$.
+Apply the union property to $\beta d$ and $\beta'd$. The result is agreement
+after $de$; the upper-bound condition follows from monotonicity of meet.
+
+For the second, suppose $\beta\ran(fe_i)=\beta'\ran(fe_i)$ for every $i$.
+Composing with $fe_i$ gives $\beta fe_i=\beta'fe_i$. The union property for
+$e$, and then the range property for $fe$, give agreement after $\ran(fe)$.
+Monotonicity of $f_!$ gives the upper-bound condition.
+
+For the third, let $h:X\to Y$ be total, and let $d=\bigvee_i d_i$ be a
+stable union in $\operatorname{Dom}(Y)$. Put $g=\langle1_X,h\rangle:X\to X\boxtimes Y$ and
+$R=\ran(g)$. The restriction-product identities and
+\eqref{eq:range-meet} give, for each domain $v\in\operatorname{Dom}(Y)$,
+\[
+ (1_X\boxtimes v)g=g\,h^*v,
+ \qquad
+ (1_X\boxtimes v)R=\ran(g\,h^*v).
+\]
+Stability and the first assertion show that $(1_X\boxtimes d)R$ is the union
+of $(1_X\boxtimes d_i)R$. Apply the second assertion to the projection
+$\pi_1:X\boxtimes Y\to X$. Since $\pi_1g=1_X$,
+\[
+ (\pi_1)_!\bigl((1_X\boxtimes v)R\bigr)
+ =\ran(\pi_1g\,h^*v)=h^*v.
+\]
+This proves that $h^*d$ is the union of the $h^*d_i$.
+For each object $W$, apply the same argument to $1_W\boxtimes h$ and
+the stable union of the $1_W\boxtimes d_i$. Iterated near products preserve
+this union by stability and associativity. Since
+$(1_W\boxtimes h)^*(1_W\boxtimes v)=1_W\boxtimes h^*v$, the union of
+the inverse images is itself stable.
+\end{proof}
+
+Assume henceforth that finite stable unions exist. Lemma~\ref{lem:union-calculus}
+shows that each $\operatorname{Dom}(X)$ is a bounded distributive lattice. Let $\BDLat$ be
+the category of such lattices and homomorphisms preserving both bounds,
+finite meets, and finite joins. The contravariant domain functor is
+\[
+ E:\Tot(\R)^{\mathrm{op}}\longrightarrow\BDLat.
+\]
+On objects it assigns $E(X)=\operatorname{Dom}(X)$. On $f^{\mathrm{op}}:Y\to X$, corresponding
+to a total $f:X\to Y$, it assigns $f^*:E(Y)\to E(X)$. The restriction
+identities give the identity and composition laws and preservation of meets;
+totality and restriction zeros give preservation of the bounds. Preservation
+of joins is Lemma~\ref{lem:union-calculus}.
+
+\begin{lemma}\label{lem:chain-powers}
+If $e_0\le e_1\le\cdots$ has stable union $e$, then, for every $n\ge1$,
+$e^{\boxtimes n}$ is the union of $e_k^{\boxtimes n}$. For every object $P$,
+$1_P\boxtimes e^{\boxtimes n}$ is the union of
+$1_P\boxtimes e_k^{\boxtimes n}$.
+\end{lemma}
+\begin{proof}
+Suppose two parallel morphisms agree after every $e_k^{\boxtimes n}$.
+They agree after each mixed product
+$e_{k_1}\boxtimes\cdots\boxtimes e_{k_n}$, since that product is below
+$e_k^{\boxtimes n}$ for $k=\max(k_1,\ldots,k_n)$. Apply stability successively
+in each coordinate. At each application, compose the two morphisms with the
+fixed domains in the remaining coordinates. This gives agreement after
+$e^{\boxtimes n}$. All members lie below that domain. The same argument
+with the additional fixed factor $1_P$ proves the second assertion.
+\end{proof}
+
+\section{Deductive closure and theories}
+
+Fix an object $U$, a domain $q\in E(U)$, and a domain $\ell\le q$ of fixed
+axioms. A rule with $n_i\ge1$ premises and parameter object $P_i$ is a
+morphism
+\[
+ r_i:P_i\boxtimes U^{\boxtimes n_i}\longrightarrow U
+\]
+satisfying
+\begin{equation}\label{eq:rule-support}
+ r_i=q\,r_i(1_{P_i}\boxtimes q^{\boxtimes n_i}).
+\end{equation}
+A rule without parameters has type $U^{\boxtimes n_i}\to U$, with the
+corresponding support equation. Rules with no premises are included in
+$\ell$. Fix finitely many rules. Each defines a monotone map
+\[
+ R_i:E_q\longrightarrow E_q,\qquad
+ R_i(a)=\ran\bigl(r_i(1_{P_i}\boxtimes a^{\boxtimes n_i})\bigr),
+\]
+with the parameter factor omitted for a rule without parameters.
+Equation~\eqref{eq:rule-support} puts the image below $q$.
+
+A domain $t\le q$ is \emph{closed under the rules} if $R_i(t)\le t$ for
+each $i$. By \eqref{eq:least-range}, this condition is equivalent to
+\[
+ t\,r_i(1_{P_i}\boxtimes t^{\boxtimes n_i})
+ =r_i(1_{P_i}\boxtimes t^{\boxtimes n_i}).
+\]
+For $a\in E_q$, its deduction stages are
+\begin{equation}\label{eq:stages}
+ a_0=\ell\vee a,\qquad
+ a_{k+1}=a_k\vee\bigvee_i R_i(a_k).
+\end{equation}
+These form an increasing sequence in $E_q$.
+
+\begin{theorem}[Deductive closure]\label{thm:closure}
+Let $\R$ be a $P$-category with ranges and finite stable unions. Fix the
+domain $q$, fixed axioms $\ell\le q$, and finitely many rules satisfying
+\eqref{eq:rule-support}. Assume that, for every $a\le q$, the sequence
+\eqref{eq:stages} has a stable union. There is a closure functor
+\[
+ c_q:E_q\longrightarrow E_q.
+\]
+On objects it is defined by $c_q(a)=\bigvee_k a_k$; an inequality $a\le b$
+is sent to $c_q(a)\le c_q(b)$. Its value is the least rule-closed domain
+containing $\ell\vee a$. In particular, $a\le c_q(a)$ and $c_q^2=c_q$.
+\end{theorem}
+\begin{proof}
+All stages lie below $q$, so their union does as well. Lemmas
+\ref{lem:union-calculus} and \ref{lem:chain-powers} imply
+\[
+ R_i(c_q(a))=\bigvee_k R_i(a_k)
+ \le\bigvee_k a_{k+1}=c_q(a).
+\]
+Thus $c_q(a)$ is rule-closed. If $t$ is rule-closed and $\ell\vee a\le t$,
+induction gives $a_k\le t$ for every $k$, hence $c_q(a)\le t$.
+
+If $a\le b$, monotonicity of the rules gives the corresponding inequality
+at every stage, and therefore $c_q(a)\le c_q(b)$. These inequalities define
+the functor on the poset category. Extensivity follows from the initial
+stage. Leastness and closedness give $c_q(c_q(a))=c_q(a)$.
+\end{proof}
+
+Some applications distinguish a subdomain in which conclusions are selected.
+Fix $s\le q$. Define the functor
+\[
+ c_s:E_s\longrightarrow E_s
+\]
+on domains by $c_s(a)=s\,c_q(a)$ and on inequalities by monotonicity.
+It is extensive because $a\le s$ and $a\le c_q(a)$. Moreover,
+\[
+ c_s(c_s(a))=s\,c_q(s\,c_q(a))
+ \le s\,c_q(c_q(a))=s\,c_q(a)=c_s(a).
+\]
+Extensivity gives the reverse inequality, so $c_s$ is a closure operator.
+
+\begin{definition}[Theory and extension]\label{def:theory}
+The category $\Th_c$ is the full subposet of $E_s$ consisting of domains
+$t$ with $c_s(t)=t$. Its objects are called \emph{theories}. An extension
+of $b\in\Th_c$ is a theory $t$ with $b\le t$.
+\end{definition}
+
+The inclusion functor $i:\Th_c\hookrightarrow E_s$ sends each domain and
+inequality to itself. Define the functor
+\[
+ L:E_s\longrightarrow\Th_c
+\]
+on objects by $L(a)=c_s(a)$ and on morphisms by $a\le b\mapsto c_s(a)\le c_s(b)$.
+It is left adjoint to $i$, since for closed $t$,
+\begin{equation}\label{eq:reflection}
+ L(a)\le t\quad\Longleftrightarrow\quad a\le i(t).
+\end{equation}
+
+\subsection{Morphisms of presentations}
+
+Fix the ambient category $\R$. A presentation consists of the data
+$(U,q,s,\ell,(r_i))$ of Theorem~\ref{thm:closure}, including the specified
+stable unions of its deduction chains. Define a category $\Cons$ as follows.
+Its objects are these presentations. A morphism from a presentation with
+selected domain $s$ to one with selected domain $s'$ is a morphism
+$f:U\to U'$ of $\R$ satisfying
+\[
+ \bar f=s,\qquad s'f=f,
+ \qquad c_s f^*(a)\le f^*c_{s'}(a)\quad(a\le s').
+\]
+The inverse image here has type $f^*:E_{s'}\to E_s$. The identity is $s$;
+composition is composition in $\R$. The restriction identities give the
+support equations for a composite, and the displayed inequalities compose
+using monotonicity and $(gf)^*=f^*g^*$.
+
+There is a contravariant functor
+\[
+ \Th:\Cons^{\mathrm{op}}\longrightarrow\Pos.
+\]
+It assigns to a presentation its poset $\Th_c$, and to $f^{\mathrm{op}}$
+the restricted inverse-image map $f^*$. If $t$ is closed, continuity gives
+$c_s(f^*t)\le f^*c_{s'}(t)=f^*t$, and extensivity gives equality. Thus the
+map lands in the closed domains; its functor laws follow from inverse image.
+The analogous functor $\mathcal E:\Cons^{\mathrm{op}}\to\Pos$ assigns
+$E_s$ to a presentation and $f^*$ to a morphism. The inclusions form a natural
+transformation $i:\Th\Rightarrow\mathcal E$, because both routes in the
+naturality square are the same restricted inverse-image map. The closure
+maps satisfy the stated inequality; equality is an additional condition.
+
+\section{Representation and essential incompleteness}
+
+Fix a presentation as above, with selected domain $s\in E(U)$ and closure
+$c_s$. Supply a morphism
+\begin{equation}\label{eq:negative-operation}
+ \nu:U\to U,\qquad\bar\nu=s,\qquad s\nu=\nu.
+\end{equation}
+For $t\le s$, define its \emph{negative domain} by
+$t^-=\nu^*t=\overline{t\nu}$. This is a domain below $s$.
+A theory $t$ is \emph{consistent} if $t\wedge t^-=0_U$, and
+\emph{complete} if $t\vee t^-=s$. It is \emph{incomplete} if the latter
+equality fails.
+
+A pair $(e_+,e_-)$ in $E(U)$ is \emph{complementary} if its meet is $0_U$
+and its join is $1_U$. A pair $(d_+,d_-)$ in $E_s$ is complementary
+\emph{relative to $s$} if its meet is $0_U$ and its join is $s$.
+Such a pair \emph{separates} $p_+,p_-\le s$ if $p_+\le d_+$ and
+$p_-\le d_-$. The domains $p_+,p_-$ are \emph{computationally inseparable}
+if they are disjoint and have no such separator.
+
+Fix a total morphism
+\[
+ \sigma:U\boxtimes U\longrightarrow U,\qquad s\sigma=\sigma.
+\]
+For each total $g:U\to U$, put $f_g=\sigma(g\boxtimes1_U)$.
+
+\begin{definition}[Representation]\label{def:representation}
+A consistent theory $b\in\Th_c$ satisfies the \emph{representation condition}
+for $\sigma$ and $\nu$ if, for every complementary pair $(e_+,e_-)$ in
+$E(U)$, there exists a total $g:U\to U$ such that
+\begin{equation}\label{eq:representation}
+ f_g^*b=\pi_2^*e_+,\qquad
+ f_g^*b^-=\pi_2^*e_-.
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Computational inseparability]\label{thm:inseparability}
+Let $\R$ be a $P$-category with ranges and finite stable unions, and let
+$U$ satisfy $0_U\ne1_U$. Fix a domain $s$ on $U$, a closure $c_s:E_s\to E_s$,
+and morphisms $\nu:U\to U$ and $\sigma:U\boxtimes U\to U$ satisfying
+$\bar\nu=s$, $s\nu=\nu$, $\bar\sigma=1_{U\boxtimes U}$, and
+$s\sigma=\sigma$. If a consistent theory $b$ satisfies the representation
+condition, then $b$ and $b^-$ are computationally inseparable.
+\end{theorem}
+\begin{proof}
+Suppose that $(d_+,d_-)$ separates $(b,b^-)$ and is complementary relative to
+$s$. Put $\delta=\sigma\Delta_U:U\to U$. This is total and $s\delta=\delta$.
+The pair
+\[
+ e_+=\delta^*d_-,\qquad e_-=\delta^*d_+
+\]
+is complementary in $E(U)$: inverse image preserves finite meets and joins,
+and $\delta^*s=1_U$. Choose $g$ representing this pair. Set
+$\gamma=\langle1_U,g\rangle$ and $h=\delta g$. The restriction-product
+identities give $f_g\gamma=h$ and $\pi_2\gamma=g$, yielding the commutative
+square
+\[
+\begin{tikzcd}[column sep=large]
+ U \arrow[r,"\gamma"] \arrow[d,"g"'] & U\boxtimes U \arrow[d,"f_g"]\\
+ U \arrow[r,"\delta"'] & U.
+\end{tikzcd}
+\]
+Pulling \eqref{eq:representation} back along $\gamma$ gives
+\[
+ h^*b=h^*d_-,\qquad h^*b^-=h^*d_+.
+\]
+The separator inequalities therefore imply both
+$h^*d_-\le h^*d_+$ and $h^*d_+\le h^*d_-$. These two domains are
+complementary, since $h$ is total and $sh=h$. Their equality forces
+$0_U=1_U$, a contradiction.
+\end{proof}
+
+\begin{theorem}[Essential incompleteness]\label{thm:essential}
+Let $\R$ have ranges and finite stable unions, and let a presentation satisfy
+the deduction-chain hypotheses of Theorem~\ref{thm:closure}. Suppose
+$0_U\ne1_U$, and fix $\nu$ and $\sigma$ as in
+Theorem~\ref{thm:inseparability}. If a consistent theory $b\in\Th_c$
+satisfies the representation condition, every consistent theory
+$t\in\Th_c$ with $b\le t$ is incomplete.
+\end{theorem}
+\begin{proof}
+Monotonicity gives $b^-=\nu^*b\le\nu^*t=t^-$. If $t$ were complete,
+consistency and completeness would make $(t,t^-)$ a complementary pair
+relative to $s$ separating $(b,b^-)$. This contradicts
+Theorem~\ref{thm:inseparability}.
+\end{proof}
+
+The representation condition is inherited by consistent extensions. To see
+this, let $g$ represent $(e_+,e_-)$ in $b$, and suppose $b\le t$ with $t$
+consistent. Write $x=f_g^*t$ and $y=f_g^*t^-$. Then
+\[
+ \pi_2^*e_+\le x,\qquad\pi_2^*e_-\le y,\qquad x\wedge y=0_{U\boxtimes U}.
+\]
+Since the two lower bounds are complementary, distributivity gives
+$x=\pi_2^*e_+$ and $y=\pi_2^*e_-$. Thus the same $g$ represents the pair
+in $t$.
+
+\section{The arithmetic realization}
+
+Let $\R_{\mathrm{rec}}$ have objects $\mathbb N^k$, where $k\ge1$, and partial
+recursive maps as morphisms, with equality of partial functions. Composition
+is ordinary composition of partial maps. The near product is the product on
+the underlying sets and on partial maps. Recursive pairing and its inverses
+identify all the objects up to isomorphism, and a universal partial recursive
+function supplies a Turing morphism. This is a numerical recursion category
+\cite{DPH,Heller}.
+
+For a c.e. subset $A\subseteq\mathbb N^k$, let $1_A$ denote the partial
+identity with domain $A$. The domains of $\R_{\mathrm{rec}}$ are exactly
+these partial identities. Their order is inclusion of the corresponding
+sets; finite meets and joins are intersection and union. For a partial
+recursive map $f$, its image is c.e., and
+\[
+ \ran(f)=1_{\operatorname{im}(f)}.
+\]
+Indeed, agreement after $f$ implies agreement, including definedness, at
+every point of its image. This proves the universal range condition.
+
+\begin{proposition}\label{prop:effective-union}
+Fix $r\ge1$. Suppose $(A_k)_{k\in\mathbb N}$ is a uniformly c.e. family of
+subsets of $\mathbb N^r$, meaning that
+$\{(k,x):x\in A_k\}$ is c.e. Then the domains $1_{A_k}$ have the stable
+union $1_{\bigcup_k A_k}$ in $\R_{\mathrm{rec}}$.
+\end{proposition}
+\begin{proof}
+Let $D=\{(k,x):x\in A_k\}\subseteq\mathbb N^{r+1}$ and let
+$\delta=1_D:\mathbb N^{r+1}\rightharpoonup\mathbb N^{r+1}$. For the total
+projection $\pi_2:\mathbb N^{r+1}\to\mathbb N^r$ onto the $x$-coordinates,
+\[
+ \ran(\pi_2\delta)=1_{\bigcup_k A_k}.
+\]
+Thus the proposed union is a morphism of $\R_{\mathrm{rec}}$.
+If $\beta1_{A_k}=\beta'1_{A_k}$ for every $k$, then for every
+$x\in\bigcup_k A_k$ a stage containing $x$ shows that $\beta(x)$ and
+$\beta'(x)$ have the same definedness and value. Outside the union both
+composites with its partial identity are undefined. This proves the union
+condition. For every object $W$,
+\[
+ W\times\bigcup_k A_k=\bigcup_k(W\times A_k),
+\]
+and the same argument proves stability.
+\end{proof}
+
+Arbitrary increasing countable families need not have unions. If
+$B\subseteq\mathbb N$ is not c.e., each finite set
+$B_k=B\cap\{0,\ldots,k\}$ is recursive, but its increasing sequence has no
+union in the domain poset. Any upper bound contains $B$, while for each
+$x\notin B$ the recursive set $\mathbb N\setminus\{x\}$ is an upper bound.
+A least upper bound would therefore equal $B$.
+
+\subsection{Effective deduction}
+
+Fix a computable coding of the terms and formulas of the language of
+arithmetic, with decidable recognition of well-formed formulas and sentences.
+Let $F$ and $S$ be their respective sets of codes, and put $q=1_F$ and
+$s=1_S$. Choose a Hilbert calculus for classical first-order logic with
+equality and a recursive set $\Lambda$ of logical axiom instances; put
+$\ell=1_\Lambda$. Nonlogical axioms are sentences.
+
+The calculus has the partial recursive rule maps
+\[
+ \mathrm{mp}:\mathbb N^2\rightharpoonup\mathbb N,
+ \qquad \mathrm{gen}:\mathbb N^2\rightharpoonup\mathbb N,
+\]
+where
+\[
+ \mathrm{mp}(\ulcorner\varphi\urcorner,\ulcorner\varphi\to\psi\urcorner)
+ =\ulcorner\psi\urcorner,
+ \qquad
+ \mathrm{gen}(v,\ulcorner\varphi\urcorner)=\ulcorner\forall v\,\varphi\urcorner.
+\]
+The first map is defined exactly on instances of modus ponens. The second
+checks that its second input is a formula code; its first input indexes a
+variable. Thus $\mathrm{mp}$ is a binary rule and $\mathrm{gen}$ a unary rule with parameter
+object $\mathbb N$. Generalization is unrestricted because the nonlogical
+axioms are sentences. Formula domains are used for intermediate deductions;
+the selected domain $s$ restricts their conclusions to sentences.
+
+For every c.e. domain $a\le q$, the stage construction becomes
+\begin{align*}
+ a_0&=\ell\vee a,\\
+ a_{k+1}&=a_k\vee\ran\bigl(\mathrm{mp}(a_k\boxtimes a_k)\bigr)
+                  \vee\ran\bigl(\mathrm{gen}(1_{\mathbb N}\boxtimes a_k)\bigr).
+\end{align*}
+These stages are uniformly c.e. To verify uniformity, fix an effective
+numbering of the c.e. sets. From an index for $\operatorname{dom}(a_k)$,
+one effectively obtains indices for its finite products, their images under
+the two fixed rule maps, and the finite union displayed above. A total
+recursive transformation of indices therefore takes an index for one stage
+to an index for the next. Iterating this transformation computes a stage
+index uniformly in $k$. A universal simulation consequently enumerates the
+relation $(k,x)$ with $x\in\operatorname{dom}(a_k)$.
+Proposition~\ref{prop:effective-union} supplies exactly the stable unions
+required by Theorem~\ref{thm:closure}.
+
+For a c.e. set $A\subseteq S$ of nonlogical axioms, induction on proof trees
+shows that the union of the stages starting at $\ell\vee1_A$ is the domain
+of all formula conclusions derivable from $A$. Each stage adds one rule
+application to earlier conclusions. Conversely, every finite proof tree
+has a finite height and hence its conclusion appears at a finite stage.
+It follows that
+\begin{equation}\label{eq:arithmetic-closure}
+ c_s(1_A)=1_{\{\ulcorner\theta\urcorner:\theta\text{ is a sentence and }A\vdash\theta\}}.
+\end{equation}
+Thus the fixed points of $c_s$ are exactly the c.e. deductively closed sets
+of sentences. This includes the theorem sets of Robinson's $Q$, Peano
+arithmetic, and their c.e. axiomatic extensions.
+
+\subsection{Representation and arbitrary base theories}
+
+Define $\nu:\mathbb N\rightharpoonup\mathbb N$ by
+$\nu(\ulcorner\theta\urcorner)=\ulcorner\neg\theta\urcorner$ on sentence
+codes, leaving it undefined elsewhere. Then $\bar\nu=s$ and $s\nu=\nu$.
+For a theorem domain $t$, the domain $t^-$ is precisely the set of sentence
+codes refutable in that theory. The categorical consistency and completeness
+conditions therefore have their usual syntactic meanings.
+
+Choose a total computable enumeration $u\mapsto\varphi_u(v_0)$ of the
+formulas whose only possible free variable is $v_0$, covering every such
+formula. For example, use a syntactic code when it has this property and a
+fixed formula otherwise. Numeral substitution gives a total recursive map
+\[
+ \sigma:\mathbb N^2\longrightarrow\mathbb N,
+ \qquad \sigma(u,n)=\ulcorner\varphi_u(\overline n)\urcorner,
+\]
+where $\overline n$ is the numeral for $n$. To compute this map, first compute
+the code of the closed term $\overline n$ by iteration on $n$. Traverse the
+finite syntax tree of $\varphi_u$, replacing free occurrences of $v_0$ by
+that term and retaining bound occurrences. The closed replacement term
+introduces no variable capture. The constructors, parsing operations, and
+traversal are effective, so this is a terminating algorithm jointly in $u$
+and $n$. Its output is a sentence code, giving $s\sigma=\sigma$.
+
+An arithmetical theory $T$ \emph{strongly defines} $A\subseteq\mathbb N$
+\emph{numeralwise} by $\varphi(v_0)$ if
+\[
+ n\in A\ \Longrightarrow\ T\vdash\varphi(\overline n),
+ \qquad
+ n\notin A\ \Longrightarrow\ T\vdash\neg\varphi(\overline n).
+\]
+If $T$ is consistent, neither opposite assertion is provable in the
+respective case.
+
+A complementary pair of c.e. domains on $\mathbb N$ consists of a recursive
+set $A$ and its complement: dovetailing their enumerations decides
+membership. Suppose $T$ is consistent and c.e., with theorem domain $t$,
+and every recursive set is strongly definable numeralwise in $T$. For each
+such $A$, choose an index $u$ of a representing formula and take the total
+constant map $g(x)=u$. The two defining implications and consistency give
+\[
+ [\sigma(g\boxtimes1)]^*t=\pi_2^*1_A,
+ \qquad
+ [\sigma(g\boxtimes1)]^*t^-=\pi_2^*1_{\mathbb N\setminus A}.
+\]
+Thus $t$ satisfies the categorical representation condition.
+
+\begin{corollary}[Arithmetic essential incompleteness]\label{cor:arithmetic}
+Let $B$ be a consistent arithmetical theory in the effective language above.
+Suppose every recursive subset of $\mathbb N$ is strongly definable
+numeralwise in $B$. Then every consistent computably enumerable extension
+$T$ of $B$ is incomplete. Here extension means that every theorem of $B$
+is a theorem of $T$; no enumerability hypothesis is imposed on $B$.
+\end{corollary}
+\begin{proof}
+Each formula strongly defining a recursive set in $B$ also strongly defines
+it in $T$, because its positive and negative instances remain provable
+under extension.
+Consistency of $T$ gives the corresponding exact representation equations.
+By \eqref{eq:arithmetic-closure}, its theorem domain $t$ belongs to $\Th_c$.
+Theorem~\ref{thm:essential}, applied with base and extension both equal to
+$t$, proves that $T$ is incomplete.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{DPH} R.~A.~Di Paola and A.~Heller,
+Dominical categories: recursion theory without elements,
+\emph{Journal of Symbolic Logic} \textbf{52}(3) (1987), 594--635.
+\bibitem{Heller} A.~Heller,
+An existence theorem for recursion categories,
+\emph{Journal of Symbolic Logic} \textbf{55}(3) (1990), 1252--1268.
+\bibitem{RestrictionI} J.~R.~B.~Cockett and S.~Lack,
+Restriction categories I: categories of partial maps,
+\emph{Theoretical Computer Science} \textbf{270}(1--2) (2002), 223--259.
+\end{thebibliography}
+\end{document}

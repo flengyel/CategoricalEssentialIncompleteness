@@ -1,5 +1,24 @@
 # Definability and incompleteness in recursion categories
 
+The note [Deduction and essential incompleteness in recursion categories](deduction_and_essential_incompleteness.pdf)
+([LaTeX source](deduction_and_essential_incompleteness.tex), 29 October 2026)
+constructs deductive closure from rule morphisms, ranges, and Heller's stable
+unions. Theories are closed restriction domains; the representation condition
+implies inseparability of their positive and negative domains and essential
+incompleteness. Its arithmetic realization verifies the uniform c.e. stage
+construction and includes the theorem for a possibly non-c.e. base theory.
+
+Build this note with:
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error deduction_and_essential_incompleteness.tex
+```
+
+The range-and-stable-union closure construction in this note is a mathematical
+development; it has not yet been added to the Lean formalization. The
+[review and continuation record](../Audit/2026-10-29-deduction/README.md)
+records its relation to the existing sources.
+
 The companion note [Definability over a recursion category](definability_indexed_predicates.pdf)
 ([LaTeX source](definability_indexed_predicates.tex), 29 October 2026) gives the
 ordinary categorical argument using indexed predicate lattices, an embedding of
