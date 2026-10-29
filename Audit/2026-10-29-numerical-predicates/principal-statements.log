@@ -1,0 +1,125 @@
+CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_top : ∀ (X : Set ℕ),
+  CategoricalEssentialIncompleteness.NumericalPER.supportSubobject X ⋯ = ⊤
+CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_bot : ∀ (X : Set ℕ),
+  CategoricalEssentialIncompleteness.NumericalPER.supportSubobject ∅ ⋯ = ⊥
+@CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_inf : ∀ {A B X : Set ℕ} (hA : A ⊆ X) (hB : B ⊆ X),
+  CategoricalEssentialIncompleteness.NumericalPER.supportSubobject (A ∩ B) ⋯ =
+    CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A hA ⊓
+      CategoricalEssentialIncompleteness.NumericalPER.supportSubobject B hB
+@CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_sup : ∀ {A B X : Set ℕ},
+  (REPred fun x => x ∈ A) →
+    (REPred fun x => x ∈ B) →
+      ∀ (hAX : A ⊆ X) (hBX : B ⊆ X),
+        CategoricalEssentialIncompleteness.NumericalPER.supportSubobject (A ∪ B) ⋯ =
+          CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A hAX ⊔
+            CategoricalEssentialIncompleteness.NumericalPER.supportSubobject B hBX
+@CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_pullback : ∀ {X Y A : Set ℕ}
+  (f :
+    (CategoricalEssentialIncompleteness.NumericalPER.discrete X).Representative
+      (CategoricalEssentialIncompleteness.NumericalPER.discrete Y))
+  (hA : A ⊆ Y),
+  (CategoryTheory.Subobject.pullback (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)).obj
+      (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A hA) =
+    CategoricalEssentialIncompleteness.NumericalPER.supportSubobject
+      (CategoricalEssentialIncompleteness.NumericalPER.inverseSupport f A) ⋯
+@CategoricalEssentialIncompleteness.Numerical.domainInverse_bot : ∀ {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : X ⟶ Y), CategoricalEssentialIncompleteness.Numerical.domainInverse f ⊥ = ⊥
+@CategoricalEssentialIncompleteness.Numerical.domainInverse_inf : ∀ {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : X ⟶ Y) (a b : Y.Domain),
+  CategoricalEssentialIncompleteness.Numerical.domainInverse f (a ⊓ b) =
+    CategoricalEssentialIncompleteness.Numerical.domainInverse f a ⊓
+      CategoricalEssentialIncompleteness.Numerical.domainInverse f b
+@CategoricalEssentialIncompleteness.Numerical.domainInverse_sup : ∀ {X Y : CategoricalEssentialIncompleteness.Numerical}
+  (f : X ⟶ Y) (a b : Y.Domain),
+  CategoricalEssentialIncompleteness.Numerical.domainInverse f (a ⊔ b) =
+    CategoricalEssentialIncompleteness.Numerical.domainInverse f a ⊔
+      CategoricalEssentialIncompleteness.Numerical.domainInverse f b
+@CategoricalEssentialIncompleteness.Numerical.domainInverse_top : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : X ⟶ Y),
+  CategoricalEssentialIncompleteness.Numerical.domainInverse f.hom ⊤ = ⊤
+CategoricalEssentialIncompleteness.Numerical.domainInverse_id : ∀ (X : CategoricalEssentialIncompleteness.Numerical)
+  (e : X.Domain), CategoricalEssentialIncompleteness.Numerical.domainInverse (CategoryTheory.CategoryStruct.id X) e = e
+@CategoricalEssentialIncompleteness.Numerical.domainInverse_comp : ∀
+  {X Y Z : CategoricalEssentialIncompleteness.Numerical} (f : X ⟶ Y) (g : Y ⟶ Z) (e : Z.Domain),
+  CategoricalEssentialIncompleteness.Numerical.domainInverse (CategoryTheory.CategoryStruct.comp f g) e =
+    CategoricalEssentialIncompleteness.Numerical.domainInverse f
+      (CategoricalEssentialIncompleteness.Numerical.domainInverse g e)
+@CategoricalEssentialIncompleteness.Numerical.domainInverseHom : {X Y :
+    CategoricalEssentialIncompleteness.Numerical.Total} →
+  (X ⟶ Y) → BoundedLatticeHom Y.obj.Domain X.obj.Domain
+CategoricalEssentialIncompleteness.Numerical.domainInverseHom_id : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical.Total),
+  CategoricalEssentialIncompleteness.Numerical.domainInverseHom (CategoryTheory.CategoryStruct.id X) =
+    BoundedLatticeHom.id X.obj.Domain
+@CategoricalEssentialIncompleteness.Numerical.domainInverseHom_comp : ∀
+  {X Y Z : CategoricalEssentialIncompleteness.Numerical.Total} (f : X ⟶ Y) (g : Y ⟶ Z),
+  CategoricalEssentialIncompleteness.Numerical.domainInverseHom (CategoryTheory.CategoryStruct.comp f g) =
+    (CategoricalEssentialIncompleteness.Numerical.domainInverseHom f).comp
+      (CategoricalEssentialIncompleteness.Numerical.domainInverseHom g)
+@CategoricalEssentialIncompleteness.Numerical.domainSubobject_naturality : ∀
+  {X Y : CategoricalEssentialIncompleteness.Numerical.Total} (f : X ⟶ Y) (e : Y.obj.Domain),
+  (CategoryTheory.Subobject.pullback (CategoricalEssentialIncompleteness.Numerical.toPER.map f)).obj
+      (Y.obj.domainSubobject e) =
+    X.obj.domainSubobject (CategoricalEssentialIncompleteness.Numerical.domainInverse f.hom e)
+CategoricalEssentialIncompleteness.Numerical.domainSubobject_top : ∀ (X : CategoricalEssentialIncompleteness.Numerical),
+  X.domainSubobject ⊤ = ⊤
+CategoricalEssentialIncompleteness.Numerical.domainSubobject_bot : ∀ (X : CategoricalEssentialIncompleteness.Numerical),
+  X.domainSubobject ⊥ = ⊥
+@CategoricalEssentialIncompleteness.Numerical.domainSubobject_inf : ∀ {X : CategoricalEssentialIncompleteness.Numerical}
+  (a b : X.Domain), X.domainSubobject (a ⊓ b) = X.domainSubobject a ⊓ X.domainSubobject b
+@CategoricalEssentialIncompleteness.Numerical.domainSubobject_sup : ∀ {X : CategoricalEssentialIncompleteness.Numerical}
+  (a b : X.Domain), X.domainSubobject (a ⊔ b) = X.domainSubobject a ⊔ X.domainSubobject b
+CategoricalEssentialIncompleteness.Numerical.domainSubobjectHom : (X : CategoricalEssentialIncompleteness.Numerical) →
+  BoundedLatticeHom X.Domain
+    (CategoryTheory.Subobject (CategoricalEssentialIncompleteness.NumericalPER.discrete X.carrier))
+CategoricalEssentialIncompleteness.Numerical.domainSubobjectHom_injective : ∀
+  (X : CategoricalEssentialIncompleteness.Numerical), Function.Injective ⇑X.domainSubobjectHom
+@CategoricalEssentialIncompleteness.Numerical.domainSubobject_isCompl_iff : ∀
+  {X : CategoricalEssentialIncompleteness.Numerical} (a b : X.Domain),
+  IsCompl (X.domainSubobject a) (X.domainSubobject b) ↔ IsCompl a b
+CategoricalEssentialIncompleteness.Numerical.domainPredicates : CategoricalEssentialIncompleteness.PredicateLattice
+  CategoricalEssentialIncompleteness.Numerical.Total
+CategoricalEssentialIncompleteness.Numerical.predicates : CategoricalEssentialIncompleteness.PredicateLattice
+  CategoricalEssentialIncompleteness.Numerical.Total
+CategoricalEssentialIncompleteness.Numerical.domainEmbedding : CategoricalEssentialIncompleteness.PredicateEmbedding
+  CategoricalEssentialIncompleteness.Numerical.domainPredicates CategoricalEssentialIncompleteness.Numerical.predicates
+CategoricalEssentialIncompleteness.Numerical.predicateSubobjectIdentification : CategoricalEssentialIncompleteness.SubobjectIdentification
+  CategoricalEssentialIncompleteness.Numerical.predicates CategoricalEssentialIncompleteness.Numerical.toPER
+@CategoricalEssentialIncompleteness.SubobjectPredicates.image_of_factorization : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Limits.HasImages C] {X Y : C} {f : X ⟶ Y}
+  (F : CategoryTheory.Limits.StrongEpiMonoFactorisation f),
+  CategoryTheory.Limits.imageSubobject f = CategoryTheory.Subobject.mk F.m
+@CategoricalEssentialIncompleteness.SubobjectPredicates.image_pullback : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Regular C] {P X A Y : C} {p : P ⟶ X}
+  {q : P ⟶ A} {f : X ⟶ Y} {g : A ⟶ Y},
+  CategoryTheory.IsPullback p q f g →
+    CategoryTheory.Limits.imageSubobject p =
+      (CategoryTheory.Subobject.pullback f).obj (CategoryTheory.Limits.imageSubobject g)
+@CategoricalEssentialIncompleteness.SubobjectPredicates.pullback_sup : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Regular C]
+  [inst_2 : CategoryTheory.FinitaryExtensive C] {X Y : C} (f : X ⟶ Y) (A B : CategoryTheory.Subobject Y),
+  (CategoryTheory.Subobject.pullback f).obj (A ⊔ B) =
+    (CategoryTheory.Subobject.pullback f).obj A ⊔ (CategoryTheory.Subobject.pullback f).obj B
+@CategoricalEssentialIncompleteness.SubobjectPredicates.map_sup : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [CategoryTheory.Limits.HasPullbacks C]
+  [inst_2 : CategoryTheory.Limits.HasImages C] [inst_3 : CategoryTheory.Limits.HasBinaryCoproducts C] {X Y : C}
+  (f : X ⟶ Y) [inst_4 : CategoryTheory.Mono f] (A B : CategoryTheory.Subobject X),
+  (CategoryTheory.Subobject.map f).obj (A ⊔ B) =
+    (CategoryTheory.Subobject.map f).obj A ⊔ (CategoryTheory.Subobject.map f).obj B
+@CategoricalEssentialIncompleteness.SubobjectPredicates.inf_sup : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Regular C]
+  [inst_2 : CategoryTheory.FinitaryExtensive C] {X : C} (A B D : CategoryTheory.Subobject X),
+  A ⊓ (B ⊔ D) = A ⊓ B ⊔ A ⊓ D
+@CategoricalEssentialIncompleteness.SubobjectPredicates.subobjectDistribLattice : {C : Type u_2} →
+  [inst : CategoryTheory.Category.{u_1, u_2} C] →
+    [CategoryTheory.Regular C] →
+      [CategoryTheory.FinitaryExtensive C] → (X : C) → DistribLattice (CategoryTheory.Subobject X)
+@CategoricalEssentialIncompleteness.SubobjectPredicates.pullbackHom : {C : Type u_2} →
+  [inst : CategoryTheory.Category.{u_1, u_2} C] →
+    [inst_1 : CategoryTheory.Regular C] →
+      [inst_2 : CategoryTheory.FinitaryExtensive C] →
+        {X Y : C} → (X ⟶ Y) → BoundedLatticeHom (CategoryTheory.Subobject Y) (CategoryTheory.Subobject X)
+CategoricalEssentialIncompleteness.subobjectPredicates : (C : Type u_2) →
+  [inst : CategoryTheory.Category.{u_1, u_2} C] →
+    [CategoryTheory.Regular C] →
+      [CategoryTheory.FinitaryExtensive C] → CategoricalEssentialIncompleteness.PredicateLattice C

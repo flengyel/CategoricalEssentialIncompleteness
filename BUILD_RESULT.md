@@ -1,5 +1,37 @@
 # Categorical essential incompleteness: build result
 
+## Numerical predicate and domain-embedding checkpoint
+
+Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from
+`43ef82666d9919cdea35f1a59bd0557f450a6830`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1931 jobs, including cached dependencies).
+- All 247 axiom audits pass, retaining the previous 213. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source, pin,
+  or manuscript file was changed.
+- All five new modules compile without warnings. The two imported linter
+  warnings remain. The 46 project Lean files contain no proof holes or new axioms.
+
+The checkpoint constructs the numerical domain and full PER subobject
+predicate functors and their injective natural bounded lattice embedding.
+Restriction inverse image preserves bottom, meets, and joins for partial
+arrows, and top for total arrows. The domain embedding preserves the bounded
+lattice operations and preserves and reflects complementarity of a specified
+pair. The general subobject predicate construction derives distributivity
+and bounded lattice reindexing from regularity and finite extensivity.
+
+The next construction is the Boolean-fiber and complemented-subobject
+characterization in `lem:integration-numerical-subobjects`. Numerical
+restriction products, recursion/indexing, Set-enrichment, and arithmetic
+syntax/provability comparisons remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-29-numerical-predicates](Audit/2026-10-29-numerical-predicates/).
+
 ## PER coproducts and extensivity checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from

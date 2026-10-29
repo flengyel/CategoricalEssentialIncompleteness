@@ -3,7 +3,8 @@ import CategoricalEssentialIncompleteness
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, Boolean
 presentation, decision, internal-separator, enriched-restriction, global
-comparison, categorical essential-incompleteness, numerical support, product, finite-limit, and regular-image results.
+comparison, categorical essential-incompleteness, and numerical categorical
+and predicate constructions.
 The verification script rejects any axiom other than `propext`,
 `Classical.choice`, and `Quot.sound`. -/
 
@@ -233,3 +234,39 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.two_isVanKampen
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.perFinitaryExtensive
 #print axioms CategoricalEssentialIncompleteness.NumericalPER.coproduct_disjoint
+
+-- Numerical domain and subobject predicate lattices.
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_top
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_bot
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_inf
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_sup
+#print axioms CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_pullback
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_bot
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_inf
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_sup
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_top
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_id
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverse_comp
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverseHom
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverseHom_id
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainInverseHom_comp
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_naturality
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_top
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_bot
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_inf
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_sup
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobjectHom
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobjectHom_injective
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainSubobject_isCompl_iff
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainPredicates
+#print axioms CategoricalEssentialIncompleteness.Numerical.predicates
+#print axioms CategoricalEssentialIncompleteness.Numerical.domainEmbedding
+#print axioms CategoricalEssentialIncompleteness.Numerical.predicateSubobjectIdentification
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.image_of_factorization
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.image_pullback
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.pullback_sup
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.map_sup
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.inf_sup
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.subobjectDistribLattice
+#print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.pullbackHom
+#print axioms CategoricalEssentialIncompleteness.subobjectPredicates
