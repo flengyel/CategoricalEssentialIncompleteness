@@ -1,61 +1,160 @@
-# Continuation: general recursion-category construction
+# Continuation: iteration domains and computational cosheaves
 
-Continue the mathematical construction in `flengyel/CategoricalEssentialIncompleteness` on `main`. Work from the current committed sources, not from the earlier represented-Boolean-quotient formalization.
+Continue the mathematical construction in flengyel/CategoricalEssentialIncompleteness
+on main. Use the current committed sources, not the earlier represented-Boolean-quotient
+formalization. Consult Lengyel2004 together with the version-10 corrections
+in flengyel/errata; read their latest committed state before importing further results.
 
 ## Current documents
 
-- `manuscript/domains_hoare_profunctors_essential_incompleteness.tex` and `.pdf`: *Domains, finite proofs, and essential incompleteness*, 23 pages, committed as `10284d07bd46f327472ccddf1ee508d0de5c2156`.
-- `manuscript/general_recursion_category_construction.tex` and `.pdf`: the general-construction supplement produced after that commit. Consult its latest committed statements and review record before using them.
-- `Audit/2026-10-29-polynomial-proofs/`: outline, hostile review, mathematical-writing review, and verification of the 23-page note.
-- `Audit/2026-10-29-general-construction/`: review and verification of the supplement.
+- manuscript/domains_hoare_profunctors_essential_incompleteness.tex and .pdf:
+  *Domains, finite proofs, and essential incompleteness*, 23 pages,
+  committed at 10284d07bd46f327472ccddf1ee508d0de5c2156.
+- manuscript/general_recursion_category_construction.tex and .pdf:
+  *Finite proof algebras in range restriction categories*, 13 pages,
+  committed at dbd8b1ad803c1436ecf6abdc1c4ef1548f7ab4c1.
+- manuscript/iteration_domains_and_cosheaves.tex and .pdf:
+  *Iteration domains, finite proofs, and computational cosheaves*, 14 pages.
+- Audit/2026-10-29-polynomial-proofs/, Audit/2026-10-29-general-construction/,
+  and Audit/2026-10-29-iteration-cosheaves/ record the respective reviews,
+  source checks, and verification.
 
-No new theorem in these notes has been formalized in Lean. The older Lean axiom-audit count does not verify the present constructions.
+The first two manuscripts remain unchanged by the cosheaf continuation.
+No new theorem in these notes has been formalized in Lean. The older Lean
+axiom-audit count does not verify these constructions. The latest reviews
+are expressly author-side audits, not independent referee reports.
 
-## Established mathematical structure
+## Established structure to preserve
 
-1. In a restriction category with binary restriction products, stable finite domain joins, a nontrivial object U, a Turing morphism τ, and the stated binary case distinction, d=τΔ gives an inseparable pair a=d*q0, b=d*q1. Universality is used at F=hπ2 to obtain total g and dg=hg. Binary case distinction is an explicit additional hypothesis.
-2. A typed rule presentation gives a polynomial inference functor. In a split range restriction category, universal-object dominance and universal ranges construct a total typed constructor embedding γ:PW→W with restriction inverse δ. With q:W=S×U→S, choose an embedding k:PW→U and use γ=⟨t,k⟩; restrict its partial retraction to ranγ to obtain the typed δ.
-3. Finite stages are e0=0 and e(n+1)=γP(e_n)δ. The supplement proves initiality on the union e from the indicated union conditions and exact-support gluing of finite partial folds h0=0, h(n+1)=αP(h_n)δ. The proof handles arbitrary split target algebras. For finitary inference polynomials, the Turing construction discharges the separate arrow-gluing assumption: a parameterized recursion theorem produces h=αP(h)δ, induction gives h_n≤h, and he has exact restriction e. The typed evaluator is filtered by ran(ΔS); the polynomial strength is used only with total program-parameter maps. The two finite-stage domain-union hypotheses remain. The proof does not assume that P preserves arrow joins or that arbitrary countable joins exist.
-4. Parameter-stable versions give finite lists, syntax, and proof algebras. The syntactic signature is U+X+X²: atoms, negation, and implication. Logical rules are the three displayed classical Hilbert schemes and modus ponens. Positive A-axioms and negative B-axioms are indexed by the split objects of disjoint domains a,b.
-5. Under the supplement's regularity, extensivity, range/regular-image compatibility, and decidable equality hypotheses, the proof-conclusion range is the least rule-closed domain. Consistency is proved using valuations depending on finite lists of positive axiom leaves. No global Boolean separator of A and B, or soundness of an arbitrary extension, is assumed.
-6. The maps from atomic axiom instances to one-node proofs give the positive and negative range inequalities. Inseparability then proves every consistent computational extension incomplete. Computational theories are the stated rule-closed computational subobjects, not arbitrary subobjects of an enlarged topos.
-7. The numerical split category realizes the construction hypotheses by uniform dovetailing. C.e. rule-instance carriers are allowed; their proof carriers are c.e. Recursive instance carriers with ordinary finite-tree coding give decidable proof checking.
+1. Binary case distinction, a nontrivial object U, and a parameter-universal
+   Turing morphism give an inseparable pair by the Turing diagonal. The
+   case-distinction hypothesis is explicit.
+2. Universal-object dominance and universal ranges give a total typed
+   constructor embedding γ:Pq→q for W=S×U, with its range-filtered
+   restriction inverse δ. Stages are e_0=0 and e_(n+1)=γP(e_n)δ.
+3. The supplement's typed Turing-fold theorem constructs partial-fold
+   gluing. Its evaluator is filtered by ran Δ_S before P is applied.
+   Its strength identity uses only total program-parameter maps.
+   Nullary constructors prevent unrestricted partial-parameter naturality.
+4. The new note reconstructs Heller's iteration lemma in a split setting
+   from stable length coverage of formally free semigroups. It uses only
+   the semigroup functor's total action, applied to the domain and value
+   maps of a partial endomorphism. The start range of the finite trace
+   object is exactly the agreement union of finite termination domains.
+5. A finite worklist decodes a node and replaces it by its ordered premises.
+   Its singleton-input domain r_m after m steps is the finite union of
+   codes of trees with at most m vertices. The constructor stage e_n is
+   the finite union of codes of trees with height at most n. With
+   B_0=0 and B_(n+1)=1+kB_n, e_n≤r_(B_n) and r_m≤e_m. This proves
+   equality of agreement unions. It does not infer leastness from a
+   fixed-point equation.
+6. The note separately proves preservation of these stable unions by
+   total inverse images, finite products, and finite coproducts.
+   Hence it discharges both union hypotheses of the supplement for the
+   stated bounded-finitary presentations. Parameters are retained.
+7. Universal product-compatible ranges, splitting, weak choice, and finite
+   limits of the total category imply regularity and range/image agreement.
+   The proof gives the graph pullback law and kernel-pair descent.
+   Heller factoriality is an alternative under the stated range/limit data.
+8. For the finite-stage syntax U+X+X² and the three displayed Hilbert
+   schemes plus modus ponens, consistency no longer needs decidable atom
+   equality. Fix finite proof shapes and refine all formula parameters by
+   syntax shape. The finitely many required equalities generate a relation
+   on atom occurrences. Opposite conclusions force a positive and a
+   negative axiom leaf into the same class. The branch then maps into
+   A×_U B=0. Stable shape coverage proves global consistency.
+9. The proof-conclusion range is the least rule-closed computational
+   domain. One-node proofs give the two atomic range inequalities.
+   Inseparability makes every consistent computational extension incomplete.
+   No soundness of arbitrary extensions or global Boolean separator is assumed.
 
-## The next mathematical target
+## Verified nonnumerical example
 
-Derive the existence of the finite-stage domain union e from a precise categorical iteration structure. Use Heller's actual definitions of iteration categories, isotypical objects, frames, and the generated recursion categories. Identify the exact data needed for a finite-tree or finite-worklist evaluator whose termination domain is e. Prove the equality with the union of constructor stages. Do not infer leastness from an arbitrary fixed-point equation.
+Let C be c.e. subsets of finite powers of N with total-on-source partial
+recursive functions. The computational Sierpiński cosheaves are
+E_→=C^[1], with partial maps A_→=Par(E_→,Mono).
+For the opens ∅⊂V⊂X, a set-valued cosheaf is exactly an arrow C(V)→C(X);
+all nonempty covers contain the covered open. Computational morphisms are
+commuting recursive squares, and domains are c.e. subdiagrams.
 
-The supplement's Turing-fold theorem already constructs partial-fold gluing for finitary inference polynomials. Preserve its two essential details: the evaluator respects expression types before P is applied to it, and the strength identity uses total program-parameter maps. Nullary constructors invalidate unrestricted partial-parameter naturality. Do not replace this proof by external functoriality of P on arrows. For the polynomial preservation of e, the note separately assumes preservation by restriction products, total inverse image, and the finite coproducts in the presentation; product stability alone is not asserted to imply all three.
+The universal object is U=(N²→N), with transition π₂. Its evaluator at
+component 1 is the ordinary universal partial recursive function.
+At component 0 it runs a program returning a pair and checks that its
+second output equals the component-1 computation. The compiler is a
+total natural square, and the equality of represented domains is proved.
+The note checks ranges, weak choice, finite limits/extensivity, stable
+length coverage, dominance, frames, and binary case distinction.
 
-Then examine whether the other structural hypotheses follow from an appropriate established class of recursion categories:
+The full isotypical partial subcategory generated on U's formal objects
+is a recursion category; its restriction splitting is equivalent to A_→.
+The total terminal object has three subobjects, not the numerical two.
+The universal object lacks decidable equality because π₂ is noninjective.
+Thus this example needs the equality-free consistency argument.
+Its computations still use numerical component programs; do not claim
+an arithmetic interpretation or a nonclassical computability theory.
 
-- Can regularity and agreement of ranges with regular images be derived from Heller's factoriality or weak-choice hypotheses, together with the required finite limits? Prove the factorization and pullback laws rather than adding them tacitly.
-- Which nonnumerical recursion categories have the required atom equality and parameterized finite constructions? Test at least one genuine nonnumerical example, with each hypothesis checked.
-- Can decidable atom equality be weakened while retaining an internal consistency proof? A finite-formula characterization using equality partitions is a concrete candidate; the sheaf construction below is not yet established.
+## Next mathematical target
 
-## Heller attribution and completions
+Try a cosheaf construction with a genuinely nontrivial covering condition.
+The proposed test space has opens
+∅, {c}, {a,c}, {b,c}, {a,b,c}. Its two proper maximal opens cover X.
+A cosheaf realizes the pushout of the extension maps from C({c}).
 
-Heller 1990 contains printed typographical errors as well as errors introduced
-by OCR. Inspect the scan, type-check every imported equation, and reconstruct
-any proof used. Consult `Audit/2026-10-29-general-construction/HELLER_SOURCE_CHECK.md`.
-In particular, the equality-product and division formulas on p.1262 have
-incorrect object subscripts. Do not copy the printed proof of Proposition 6.2
-without checking its final composite. The current supplement proves its
-range-filter calculation directly and does not invoke that proposition or the
-iteration lemma to discharge an existence hypothesis.
+Determine a precise computational category for these diagrams, then:
 
-Heller, *An existence theorem for recursion categories* (1990), §10, Example 5, p.1267, already constructs a recursion category from partial maps of simplicial sets whose diagonal Y→Y×Y has no range. Cite this as prior work. Do not present the general possibility of range failure as a new discovery.
+- Construct the required pushouts. Identify whether their quotient equality
+  remains computable, or whether different carriers are needed.
+- Prove finite limits, actual categorical products, extensivity, and
+  agreement of selected ranges with regular images in that category.
+- Construct a universal object, compatible frames, and a typed
+  parameter-universal evaluator with exact computational domains.
+- Verify stable word-length coverage and closure under the trace/worklist
+  construction. Apply the existing equality-free consistency theorem only
+  after these hypotheses have been established.
 
-Garner–Lin, *Cocompletion of restriction categories*, §3.1 and Lemma 9, define selected presheaf monomorphisms by representable pullbacks. They preserve the original selected-domain order on representables. This does not make the partial-map completion a range category. The supplement's particular counterexample is F_B:∐_{n∈B}y1→yN for non-c.e. B: any selected range would be a least c.e. superset of B, and the co-singleton upper bounds force it to equal B. Also, y0 need not be the initial presheaf; distinguish the selected-domain bottom from the empty presheaf.
+Pointwise products of general set-valued cosheaves need not be cosheaves:
+on a discrete two-point space C(V)=V gives four pairs at X but only two
+in the cosheaf gluing of singleton values. The assignment of ordinary
+formulas to open sets also fails descent for mixed implications.
+Do not equate an internal polynomial syntax algebra with an external
+assignment of recursive syntax codes without a comparison proof.
 
-A finite-cover sheaf route remains a candidate. For a fixed finite formula, enumerate partitions of its atom occurrences and positive/negative literal subsets for which the corresponding implication is a tautology. The domain of a branch is a finite meet of equality domains and a/b inverse images; take the finite join of these branches. No disequalities are required. To turn this into a construction, prove finite local syntax, selected representability of theorem images, and consistency. Ordinary presheaf images cannot be assumed selected. Do not assume a sheaf syntax object equals the representable object of recursive syntax codes; recursive code families can have unbounded formula shape.
+The further general problem is closure of Heller/Lengyel generated
+recursion subcategories under the needed ranges and finite limits.
+The ambient coalgebra results in the corrections do not by themselves
+settle this. Their two-phase explicit example is numerically equivalent.
+
+## Source and completion cautions
+
+Inspect Heller's scan and type-check imported formulas. The equality-product
+and division subscripts on p.1262 are printed incorrectly, and the final
+composite of Proposition 6.2 cannot be copied as printed. The new note
+reconstructs the relevant range and iteration arguments.
+
+Heller §10, Example 5, p.1267 already constructs a generated simplicial
+recursion category whose diagonal lacks a range. Attribute this prior work.
+Heller's iteration definition uses stable finite-length coverage; Lengyel's
+later definition assumes countable strong unions and iteration for total
+endomorphisms. The version-10 corrections' §7.1 gives the graph union
+argument, §11.2 states product stability explicitly, and Appendix B repairs
+the range representation theorem.
+
+The previous selected-presheaf obstruction remains valid: Garner–Lin's
+representable-pullback domains do not ensure ranges. For non-c.e. B, a
+selected range of F_B:∐_(n∈B)y1→yN would be the least c.e. superset of B,
+and co-singleton upper bounds force equality with B. Also y0 need not be
+the empty presheaf. No sheaf or cosheaf completion theorem supersedes this.
 
 ## Working requirements
 
-- State categories, functor types, object actions, morphism actions, variance, and universal properties explicitly. Define notation before using it.
-- Keep restriction idempotents and domains in the partial category; identify their split objects in the total category. Distinguish logical negation from monotone inverse image along its code constructor.
-- Do not call ordinary indexed predicates or Set-valued profunctors Kelly enrichment. Any enrichment claim needs its monoidal category, hom-objects, composition, and units.
-- Preserve the proven conditional statements. Do not claim the Di Paola–Heller program is completed merely because the numerical model works or because a completion has all ordinary subobjects.
-- Do the mathematical work before preparing an update. Review new proofs with the hostile referee and mathematical-writing plugins; resolve confirmed defects. Keep their reports and process remarks outside the mathematical documents.
-- Run the checks appropriate to actual changes. Reuse the existing verification of unchanged sources. Do not rerun the older Lean development as a substitute for proving the new mathematics.
-- Finish with a precise account of what was proved, which hypotheses were discharged, which remain, and the next construction to attempt.
+State categories, variance, functor actions, map types, and universal
+properties explicitly. Keep restriction idempotents in the partial category
+and their split objects in the total category. Distinguish logical negation
+from monotone inverse image along its constructor.
+
+Do the mathematics before preparing updates. Use the hostile-referee and
+mathematical-writing plugin instructions and keep reports outside the paper.
+Preserve proved conditional statements; do not claim completion of the
+Di Paola–Heller program. Reuse verification of unchanged sources, run
+appropriate checks on changed sources, and report exactly which hypotheses
+were discharged and which remain. No Lean rerun substitutes for a new proof.

@@ -4,9 +4,10 @@ Research notes and a Lean development on categorical essential incompleteness.
 The current account connects a Turing morphism, computational inseparability,
 polynomial finite-proof algebras, and theorem ranges. It proves essential
 incompleteness for a numerical classical deductive presentation and gives a
-general construction under explicit domain-union and logical hypotheses.
-Deriving the required finite-stage domain unions from categorical iteration
-remains open.
+general construction under explicit structural hypotheses. A further note
+derives the finite-stage domain unions from Heller's iteration structure,
+proves consistency without decidable atom equality, and constructs a
+nonnumerical computational cosheaf example.
 
 ## Manuscript
 
@@ -31,7 +32,22 @@ hypotheses, and inseparability gives essential incompleteness. The supplement
 credits Heller's range counterexample and examines a selected presheaf completion.
 Its [review record](Audit/2026-10-29-general-construction/README.md) and
 [continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md) identify the
-remaining construction problems. These results have not been formalized in Lean.
+construction problems at that stage. These results have not been formalized in Lean.
+
+The continuation [Iteration domains, finite proofs, and computational cosheaves](manuscript/iteration_domains_and_cosheaves.pdf)
+([LaTeX source](manuscript/iteration_domains_and_cosheaves.tex), 14 pages)
+constructs the stage union as a finite-worklist termination domain. It proves
+regularity and range/image agreement from weak choice and the stated range
+and finite-limit hypotheses, gives an equality-free finite-proof consistency
+argument, and verifies the construction in computational cosheaves on the
+Sierpiński space. Its universal object has no decidable equality. Heller's
+definitions and Lengyel's 2004 paper are read together with the version-10
+[errata](https://github.com/flengyel/errata/tree/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004).
+The [source checks, author-side reviews, and verification](Audit/2026-10-29-iteration-cosheaves/README.md)
+record the scope of the results. Range closure for general generated recursion
+categories and cosheaves with nontrivial covers remains open; the
+[continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md) gives the
+next construction. No new result has been formalized in Lean.
 
 Earlier notes remain available in [the manuscript directory](manuscript/README.md).
 
@@ -336,3 +352,4 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+

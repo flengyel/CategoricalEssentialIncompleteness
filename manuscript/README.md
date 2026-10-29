@@ -47,6 +47,36 @@ formalized in Lean.
 latexmk -pdf -interaction=nonstopmode -halt-on-error general_recursion_category_construction.tex
 ```
 
+## Iteration and computational cosheaves
+
+[Iteration domains, finite proofs, and computational cosheaves](iteration_domains_and_cosheaves.pdf)
+([LaTeX source](iteration_domains_and_cosheaves.tex), 29 October 2026, 14 pages)
+continues the supplement without changing its conditional results.
+
+The note reconstructs Heller's iteration lemma using total maps of finite
+trace objects. A finite worklist has the same agreement union as the
+constructor stages, with separate proofs of preservation by products,
+total inverse images, and finite coproducts. Weak choice, universal
+product-compatible ranges, and finite limits give regularity and identify
+ranges with regular images. A finite equality-constraint argument removes
+decidable atom equality from consistency for these constructed proof algebras.
+
+The example consists of computational cosheaves on the Sierpiński space:
+arrows between c.e. carriers, with computational commuting squares.
+It has a universal object, a parameter-universal Turing morphism, compatible
+frames, and the required binary case distinction. Its universal object
+lacks decidable equality, and its total category is not equivalent to
+the numerical category. The final section explains why pointwise products
+and formula assignments fail for general cosheaves.
+
+~~~bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error iteration_domains_and_cosheaves.tex
+~~~
+
+The [review and verification record](../Audit/2026-10-29-iteration-cosheaves/README.md)
+includes the Lengyel2004/errata comparison and the checked hypotheses.
+These are paper proofs; no Lean files were changed.
+
 ## Earlier notes
 
 
@@ -103,3 +133,4 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
