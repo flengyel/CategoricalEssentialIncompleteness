@@ -1,0 +1,109 @@
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_rel_inl : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER) (n m : ℕ),
+  (R.coproduct S).rel (Nat.pair 0 n) (Nat.pair 0 m) ↔ R.rel n m
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_rel_inr : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER) (n m : ℕ),
+  (R.coproduct S).rel (Nat.pair 1 n) (Nat.pair 1 m) ↔ S.rel n m
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_rel_inl_inr : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER) (n m : ℕ), ¬(R.coproduct S).rel (Nat.pair 0 n) (Nat.pair 1 m)
+CategoricalEssentialIncompleteness.NumericalPER.inl_mono : ∀ (R S : CategoricalEssentialIncompleteness.NumericalPER),
+  CategoryTheory.Mono (R.inl S)
+CategoricalEssentialIncompleteness.NumericalPER.inr_mono : ∀ (R S : CategoricalEssentialIncompleteness.NumericalPER),
+  CategoryTheory.Mono (R.inr S)
+@CategoricalEssentialIncompleteness.NumericalPER.inl_copair : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R ⟶ T) (g : S ⟶ T),
+  CategoryTheory.CategoryStruct.comp (R.inl S) (CategoricalEssentialIncompleteness.NumericalPER.copair f g) = f
+@CategoricalEssentialIncompleteness.NumericalPER.inr_copair : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R ⟶ T) (g : S ⟶ T),
+  CategoryTheory.CategoryStruct.comp (R.inr S) (CategoricalEssentialIncompleteness.NumericalPER.copair f g) = g
+@CategoricalEssentialIncompleteness.NumericalPER.coproduct_hom_ext : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} {f g : R.coproduct S ⟶ T},
+  CategoryTheory.CategoryStruct.comp (R.inl S) f = CategoryTheory.CategoryStruct.comp (R.inl S) g →
+    CategoryTheory.CategoryStruct.comp (R.inr S) f = CategoryTheory.CategoryStruct.comp (R.inr S) g → f = g
+CategoricalEssentialIncompleteness.NumericalPER.coproductIsColimit : (R S :
+    CategoricalEssentialIncompleteness.NumericalPER) →
+  CategoryTheory.Limits.IsColimit (CategoryTheory.Limits.BinaryCofan.mk (R.inl S) (R.inr S))
+CategoricalEssentialIncompleteness.NumericalPER.emptyIsInitial : CategoryTheory.Limits.IsInitial
+  CategoricalEssentialIncompleteness.NumericalPER.emptyPER
+CategoricalEssentialIncompleteness.NumericalPER.perHasFiniteCoproducts : CategoryTheory.Limits.HasFiniteCoproducts
+  CategoricalEssentialIncompleteness.NumericalPER
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_to_units_inl_isPullback : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER),
+  CategoryTheory.IsPullback (R.inl S)
+    (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative R.unitRepresentative) (R.coproductToUnits S)
+    (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inl
+      CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_to_units_inr_isPullback : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER),
+  CategoryTheory.IsPullback (R.inr S)
+    (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative S.unitRepresentative) (R.coproductToUnits S)
+    (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inr
+      CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+@CategoricalEssentialIncompleteness.NumericalPER.coproduct_to_units_squares : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER}
+  (α : R ⟶ CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+  (β : S ⟶ CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+  (f :
+    R.coproduct S ⟶
+      CategoricalEssentialIncompleteness.NumericalPER.unitPER.coproduct
+        CategoricalEssentialIncompleteness.NumericalPER.unitPER),
+  CategoryTheory.CategoryStruct.comp α
+        (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inl
+          CategoricalEssentialIncompleteness.NumericalPER.unitPER) =
+      CategoryTheory.CategoryStruct.comp (R.inl S) f →
+    CategoryTheory.CategoryStruct.comp β
+          (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inr
+            CategoricalEssentialIncompleteness.NumericalPER.unitPER) =
+        CategoryTheory.CategoryStruct.comp (R.inr S) f →
+      CategoryTheory.IsPullback (R.inl S) α f
+          (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inl
+            CategoricalEssentialIncompleteness.NumericalPER.unitPER) ∧
+        CategoryTheory.IsPullback (R.inr S) β f
+          (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inr
+            CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+@CategoricalEssentialIncompleteness.NumericalPER.decomposition_inv_hom : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative (S.coproduct T)),
+  CategoryTheory.CategoryStruct.comp
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative
+        (CategoricalEssentialIncompleteness.NumericalPER.decompositionRepresentative f))
+      (CategoricalEssentialIncompleteness.NumericalPER.decompositionComparison f) =
+    CategoryTheory.CategoryStruct.id R
+@CategoricalEssentialIncompleteness.NumericalPER.decomposition_hom_inv : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative (S.coproduct T)),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.decompositionComparison f)
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative
+        (CategoricalEssentialIncompleteness.NumericalPER.decompositionRepresentative f)) =
+    CategoryTheory.CategoryStruct.id
+      ((CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f (S.inlRepresentative T)).coproduct
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f (S.inrRepresentative T)))
+@CategoricalEssentialIncompleteness.NumericalPER.decompositionIso : {R S T :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f : R.Representative (S.coproduct T)) →
+    (CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f (S.inlRepresentative T)).coproduct
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f (S.inrRepresentative T)) ≅
+      R
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackCoproductIsColimit : {R S T :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f : R.Representative (S.coproduct T)) →
+    CategoryTheory.Limits.IsColimit
+      (CategoryTheory.Limits.BinaryCofan.mk
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f (S.inlRepresentative T))
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f (S.inrRepresentative T)))
+@CategoricalEssentialIncompleteness.NumericalPER.chosenPullbackCoproductIsColimit : {R S T :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f : R ⟶ S.coproduct T) →
+    CategoryTheory.Limits.IsColimit
+      (CategoryTheory.Limits.BinaryCofan.mk (CategoryTheory.Limits.pullback.fst f (S.inl T))
+        (CategoryTheory.Limits.pullback.fst f (S.inr T)))
+CategoricalEssentialIncompleteness.NumericalPER.two_isVanKampen : CategoryTheory.IsVanKampenColimit
+  (CategoryTheory.Limits.BinaryCofan.mk
+    (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inl
+      CategoricalEssentialIncompleteness.NumericalPER.unitPER)
+    (CategoricalEssentialIncompleteness.NumericalPER.unitPER.inr
+      CategoricalEssentialIncompleteness.NumericalPER.unitPER))
+CategoricalEssentialIncompleteness.NumericalPER.perFinitaryExtensive : CategoryTheory.FinitaryExtensive
+  CategoricalEssentialIncompleteness.NumericalPER
+CategoricalEssentialIncompleteness.NumericalPER.coproduct_disjoint : ∀
+  (R S : CategoricalEssentialIncompleteness.NumericalPER),
+  CategoryTheory.IsPullback (CategoryTheory.Limits.initial.to R) (CategoryTheory.Limits.initial.to S) (R.inl S)
+    (R.inr S)

@@ -17,8 +17,9 @@ comparison, support subobjects, pullbacks, and c.e. joins are constructed.
 The numerical separator equivalence, binary products and their preservation
 by `J`, PER finite limits, regular-image factorizations, and coequalizers of
 kernel pairs are proved. Regular epimorphisms are stable under pullback, giving
-a regular PER category. Coproducts, extensivity, and
-the arithmetic interpretation remain open. All declarations below are in the namespace
+a regular PER category. Finite coproducts and their van Kampen property are
+proved, giving finite extensivity. The numerical domain embedding and the
+arithmetic interpretation remain incomplete. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -42,10 +43,11 @@ the arithmetic interpretation remain open. All declarations below are in the nam
 | `prop:complete-extensions-and-decisions` | `complete_extensions_and_decisions`; `EnrichedRestriction.global_complete_extensions_and_decisions` | Proved for Boolean quotients and the constructed internal Boolean algebra on `1 + 1`, including the specialization to ordinary restriction domains and the identification along `J`. |
 | Boolean-homomorphism conclusion of `cor:integration-no-boolean-map` | `no_represented_boolean_decision`; `EnrichedRestriction.global_no_boolean_decision` | Proved, including the specialization along `J` from the internal section. The arbitrary-arrow clause is not claimed. |
 | Numerical category and domain identification in `sec:integration-numerical` | `Numerical.numericalRestriction`; `Numerical.domainSupportOrderIso`; `Numerical.recursive_iff_complemented_support` | Extensional partial recursive arrows, restriction laws, c.e. domain lattice, partial inverse image, and recursive/complemented equivalence proved. Binary products of total arrows are constructed; restriction products and the recursion-category instance remain open. |
-| PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular; coproducts and extensivity remain open. |
+| PER category and functor `J` in `sec:integration-numerical` | `NumericalPER.perCategory`; `Numerical.toPER`; `Numerical.toPER_full`; `Numerical.toPER_faithful` | Arbitrary PERs and arrows defined by equivalence classes of representing functions constructed. The functor is full and faithful and preserves binary products. The PER category is regular and finitely extensive. |
 | Binary products and preservation by `J` in `sec:integration-numerical` | `Numerical.productIsLimit`; `Numerical.toPER_preservesBinaryProducts` | Recursive tuple coding gives infinite recursive product carriers. Projection equations for the PER comparison prove preservation. |
 | Finite limits and regular images in `sec:integration-numerical` | `NumericalPER.perHasFiniteLimits`; `imageFactorisation`; `hasCoequalizer_of_isKernelPair` | Terminal object, products, equalizers, and regular-epimorphism/monomorphism factorizations are constructed. Every kernel pair has a coequalizer. The latter two declarations are in `NumericalPER`. |
 | Regular PER target in `sec:integration-numerical` | `NumericalPER.pullback_isPullback`; `pullbackSnd_regularEpi`; `perRegular` | Explicit pullbacks and stability of regular epimorphisms proved, giving `Regular NumericalPER`. All names are in `NumericalPER`. |
+| Extensive PER target in `sec:integration-numerical` | `NumericalPER.coproductIsColimit`; `decompositionIso`; `perFinitaryExtensive`; `coproduct_disjoint` | Finite coproducts, decomposition into inverse images, the van Kampen property, and disjointness are proved. All names are in `NumericalPER`. |
 | Support order and inverse image in `lem:integration-numerical-subobjects` | `NumericalPER.supportSubobject_le_iff`; `supportSubobject_eq_iff`; `inverse_isPullback` | Subobjects and the full pullback universal property proved for arbitrary supports. All names are in `NumericalPER`. |
 | C.e. joins and the image of `j` in `lem:integration-numerical-subobjects` | `NumericalPER.enumerable_union_isLUB`; `Numerical.domainSubobject`; `Numerical.supportSubobject_in_range_iff` | The union is least among all categorical upper bounds. The domain map is an order embedding whose image among support inclusions is exactly c.e. supports. Its full bounded lattice homomorphism structure and the Boolean-fiber assertions remain open. |
 | `thm:integration-essential-equivalence` (ii) | `Numerical.no_separator_iff_recursively_inseparable` | The support statement is proved for arbitrary disjoint supports, with PER subobject inequalities and numerical restriction domains. |
@@ -362,6 +364,26 @@ Together with finite limits and kernel-pair coequalizers, this proves
 `Regular NumericalPER`. Surjectivity on equivalence classes alone is not used
 to infer the existence of a partial recursive selection of preimages.
 
+`PERCoproducts.lean` constructs finite coproducts by coding the two summands
+as pairs with first coordinate zero or one. The injections are monic, and the
+empty PER is initial. `PERCoproductSquares.lean` proves the injection pullback
+squares for a map of coproducts into the coproduct of two terminal objects.
+The mediating functions recursively decode the second coordinate.
+
+`PERCoproductDecomposition.lean` proves that the copairing of the two inverse
+images of the summands is an isomorphism. For a function representing
+`f : R → S + T`, the inverse evaluates `f` on an input `n`, uses the output's
+first coordinate to choose the summand, and retains `n` and the output's
+second coordinate as a pullback representative. Both inverse equations are
+proved modulo the PER relations. The result is transported to chosen pullbacks
+and arbitrary morphism classes.
+
+`PERExtensive.lean` combines these two properties to prove the van Kampen
+property for the coproduct of terminal objects. Mathlib's characterization
+then gives `FinitaryExtensive NumericalPER`, and disjointness follows. Together
+with regularity, this supplies the target-category assumptions in the numerical
+interpretation without restricting PER supports to enumerable sets.
+
 ## Remaining numerical constructions and verification
 
 No equivalence between the imported typed arithmetic program category and the
@@ -372,14 +394,14 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next construction is **binary coproducts in the PER category and their
-stability under pullback**, followed by extensivity. The numerical domain map
-must also be made into the required natural bounded lattice homomorphism. The Turing/indexing and Set-enrichment data, effective syntax, numeral
+The next construction is **the numerical domain embedding as a natural bounded
+lattice homomorphism**, beginning with preservation of bounds, meets, and joins.
+Numerical restriction products, Turing/indexing and Set-enrichment data, effective syntax, numeral
 substitution, Lindenbaum Boolean presentation, and theory-extension quotients
 also remain open. They are needed for `thm:integration-essential-equivalence`
 (i) and (iii), `prop:numerical-boolean-extensions`, and the arithmetic corollary.
 
-The full verifier builds the combined entry point and audits 191 declarations,
+The full verifier builds the combined entry point and audits 213 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash, as well as both manuscript hashes. Thirteen imported
 files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean

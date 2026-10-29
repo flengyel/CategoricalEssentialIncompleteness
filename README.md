@@ -44,15 +44,17 @@ The numerical restriction category and the category of arbitrary PERs on
 `ℕ` are constructed. The functor from total numerical arrows to equality
 PERs is full and faithful and preserves binary products. The PER category is regular: it has
 finite limits and coequalizers of kernel pairs, and its regular epimorphisms
-are stable under pullback. Restriction domains correspond to c.e. supports,
+are stable under pullback. It is also finitely extensive: coproducts are
+disjoint and satisfy the van Kampen property. Restriction domains correspond to c.e. supports,
 and complementary domains on `ℕ` correspond exactly to recursive sets.
 Support inclusions are subobjects with the stated order and pullback
 properties; dovetailing proves that c.e. unions are their categorical joins.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-PER coproducts and extensivity,
-and the arithmetic syntax and provability comparisons remain open; see
+The numerical domain embedding as a natural bounded lattice homomorphism,
+restriction products and recursion, and the arithmetic syntax and provability
+comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
 The entry point is
@@ -142,14 +144,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 180 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (191 in total). Only
+declarations, and 202 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (213 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 191 axiom audits.
+PASS: project build, dependency pins, source hashes, and 213 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -161,7 +163,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The PER regularity evidence is in
+is ignored by Git. The PER coproduct and extensivity evidence is in
+[`Audit/2026-10-28-per-extensive/`](Audit/2026-10-28-per-extensive/).
+The PER regularity evidence is in
 [`Audit/2026-10-28-per-regular/`](Audit/2026-10-28-per-regular/).
 The product, finite-limit, and regular-image evidence and
 the editorial review are in

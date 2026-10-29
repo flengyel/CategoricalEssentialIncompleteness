@@ -1,5 +1,36 @@
 # Categorical essential incompleteness: build result
 
+## PER coproducts and extensivity checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from
+`9d9f2e4d1be9c83a74c155377053917cc40e703f`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1926 jobs, including cached dependencies).
+- All 213 axiom audits pass, retaining the previous 191. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source or pin
+  was changed.
+- All four new modules compile without warnings. The two imported linter
+  warnings remain. The 41 project Lean files contain no proof holes or new axioms.
+
+The checkpoint constructs finite PER coproducts, proves monicity of their
+injections, and proves that the copairing of the two inverse images of the
+summands is an isomorphism. The injection squares into the coproduct of terminal
+objects are pullbacks. These results give the van Kampen property,
+`NumericalPER.perFinitaryExtensive`, and disjointness of the injections.
+Together with the preceding regularity proof, this supplies the regular
+extensive target required by the numerical interpretation.
+
+The next construction is the numerical domain embedding as a natural bounded
+lattice homomorphism. Numerical restriction products, recursion/indexing, and
+the arithmetic syntax/provability comparison remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-28-per-extensive](Audit/2026-10-28-per-extensive/).
+
 ## PER regularity checkpoint
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from

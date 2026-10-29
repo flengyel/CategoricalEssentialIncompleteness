@@ -15,7 +15,7 @@ import CategoricalEssentialIncompleteness.EnrichedQuotients
 import CategoricalEssentialIncompleteness.CategoricalTheorem
 import CategoricalEssentialIncompleteness.NumericalInseparability
 import CategoricalEssentialIncompleteness.NumericalProducts
-import CategoricalEssentialIncompleteness.PERRegular
+import CategoricalEssentialIncompleteness.PERExtensive
 
 /-!
 # Categorical essential incompleteness
@@ -28,8 +28,8 @@ and compares their global points with the underlying ordinary category.
 The numerical development constructs partial recursive maps, PER morphisms,
 the full faithful binary-product-preserving functor on total maps, and the
 comparison between domain separators and recursive separators. The PER category
-is regular: it has finite limits, coequalizers of kernel pairs, and regular
-epimorphisms stable under pullback.
+is regular and finitely extensive: finite coproducts are disjoint and
+satisfy the van Kampen property.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison
