@@ -1,5 +1,34 @@
 # Categorical essential incompleteness: build result
 
+## PER regularity checkpoint
+
+Verified on 2026-10-28 using Lean 4.35.0-rc2, starting from
+`994323256483136cfd23c3e935a826d18aa6b9cf`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1922 jobs, including cached dependencies).
+- All 191 axiom audits pass, retaining the previous 179. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- Sixteen dependency revisions, 356 imported-file records, and both manuscript
+  hashes match their recorded values. No imported source or pin was changed.
+- Both new modules compile without warnings. The two imported linter warnings
+  remain. The 37 project Lean files contain no proof holes or new axioms.
+
+`PERPullbacks` constructs pullbacks of arbitrary PER morphisms.
+`NumericalPER.pullbackSnd_regularEpi` proves stability of regular epimorphisms;
+`NumericalPER.perRegular` combines this with finite limits and kernel-pair
+coequalizers to give a regular category. The proof extracts a representing
+partial recursive function from the inverse of the image inclusion. It assumes
+no enumerability of PER supports or relations.
+
+The next construction is PER binary coproducts and their pullback stability,
+followed by extensivity. Numerical restriction products, recursion/indexing,
+and arithmetic syntax/provability comparisons remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-28-per-regular](Audit/2026-10-28-per-regular/).
+
 ## Numerical limits, regular images, and terminology revision
 
 Verified on 2026-10-28 using Lean 4.35.0-rc2 on Linux x86-64, starting from

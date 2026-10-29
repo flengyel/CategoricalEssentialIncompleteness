@@ -196,6 +196,18 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.NumericalPER.imageFactorisation",
     "CategoricalEssentialIncompleteness.NumericalPER.perHasStrongEpiMonoFactorisations",
     "CategoricalEssentialIncompleteness.NumericalPER.hasCoequalizer_of_isKernelPair",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullbackPER_support",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullback_condition",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullback_hom_ext",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullbackIsLimit",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullback_isPullback",
+    "CategoricalEssentialIncompleteness.NumericalPER.imageInclusion_isIso",
+    "CategoricalEssentialIncompleteness.NumericalPER.regularEpi_of_image_section",
+    "CategoricalEssentialIncompleteness.NumericalPER.image_section_output",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullbackPreimageFunction_supported",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullbackImageSection_fac",
+    "CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd_regularEpi",
+    "CategoricalEssentialIncompleteness.NumericalPER.perRegular",
 ]
 
 

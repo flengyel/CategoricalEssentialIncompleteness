@@ -1,0 +1,78 @@
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackPER_support : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T) (n : ℕ),
+  n ∈ (CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f g).support ↔
+    (Nat.unpair n).1 ∈ R.support ∧
+      (Nat.unpair n).2 ∈ S.support ∧ n ∈ CategoricalEssentialIncompleteness.NumericalPER.pullbackAgreement f g
+@CategoricalEssentialIncompleteness.NumericalPER.pullback_condition : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f g)
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f) =
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g)
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative g)
+@CategoricalEssentialIncompleteness.NumericalPER.pullback_hom_ext : ∀
+  {W R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T)
+  {h k : W ⟶ CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f g},
+  CategoryTheory.CategoryStruct.comp h (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f g) =
+      CategoryTheory.CategoryStruct.comp k (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f g) →
+    CategoryTheory.CategoryStruct.comp h (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g) =
+        CategoryTheory.CategoryStruct.comp k (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g) →
+      h = k
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackIsLimit : {R S T :
+    CategoricalEssentialIncompleteness.NumericalPER} →
+  (f : R.Representative T) →
+    (g : S.Representative T) →
+      CategoryTheory.Limits.IsLimit
+        (CategoryTheory.Limits.PullbackCone.mk (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f g)
+          (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g) ⋯)
+@CategoricalEssentialIncompleteness.NumericalPER.pullback_isPullback : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T),
+  CategoryTheory.IsPullback (CategoricalEssentialIncompleteness.NumericalPER.pullbackFst f g)
+    (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g)
+    (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)
+    (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative g)
+@CategoricalEssentialIncompleteness.NumericalPER.imageInclusion_isIso : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative S)
+  [CategoryTheory.IsRegularEpi (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)],
+  CategoryTheory.IsIso (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f)
+@CategoricalEssentialIncompleteness.NumericalPER.regularEpi_of_image_section : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative S)
+  (s : S ⟶ CategoricalEssentialIncompleteness.NumericalPER.imagePER f),
+  CategoryTheory.CategoryStruct.comp s (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f) =
+      CategoryTheory.CategoryStruct.id S →
+    CategoryTheory.IsRegularEpi (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)
+@CategoricalEssentialIncompleteness.NumericalPER.image_section_output : ∀
+  {R T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T)
+  (h : T.Representative (CategoricalEssentialIncompleteness.NumericalPER.imagePER f)),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative h)
+        (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f) =
+      CategoryTheory.CategoryStruct.id T →
+    ∀ {n a b : ℕ}, n ∈ T.support → a ∈ h.val n → b ∈ f.val a → T.rel b n
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackPreimageFunction_supported : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T)
+  (h : T.Representative (CategoricalEssentialIncompleteness.NumericalPER.imagePER f)),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative h)
+        (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f) =
+      CategoryTheory.CategoryStruct.id T →
+    ∀ {n a : ℕ},
+      n ∈ S.support →
+        a ∈ (CategoricalEssentialIncompleteness.NumericalPER.pullbackPreimageFunction f g h).val n →
+          a ∈ (CategoricalEssentialIncompleteness.NumericalPER.pullbackPER f g).support
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackImageSection_fac : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T)
+  (h : T.Representative (CategoricalEssentialIncompleteness.NumericalPER.imagePER f))
+  (hh :
+    CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative h)
+        (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion f) =
+      CategoryTheory.CategoryStruct.id T),
+  CategoryTheory.CategoryStruct.comp
+      (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackImageSectionRepresentative f g h hh))
+      (CategoricalEssentialIncompleteness.NumericalPER.imageInclusion
+        (CategoricalEssentialIncompleteness.NumericalPER.pullbackSndRepresentative f g)) =
+    CategoryTheory.CategoryStruct.id S
+@CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd_regularEpi : ∀
+  {R S T : CategoricalEssentialIncompleteness.NumericalPER} (f : R.Representative T) (g : S.Representative T)
+  [CategoryTheory.IsRegularEpi (CategoricalEssentialIncompleteness.NumericalPER.ofRepresentative f)],
+  CategoryTheory.IsRegularEpi (CategoricalEssentialIncompleteness.NumericalPER.pullbackSnd f g)
+CategoricalEssentialIncompleteness.NumericalPER.perRegular : CategoryTheory.Regular
+  CategoricalEssentialIncompleteness.NumericalPER

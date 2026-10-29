@@ -1,0 +1,159 @@
+{
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness.lean",
+      "sha256": "a8e436a2a8109386a9772cf09566a93d212d3af925d4eb318ded6c60c477966d"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean",
+      "sha256": "e03d690a72515a2ccddf4d17efa3b8fb0bc15db408689cc0d59ff30fecc0cc2c"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanDecisions.lean",
+      "sha256": "32086f8108fb0d9e283b946906b3707422cb744dd62ecbec3d980ac4f3e69219"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanPresentations.lean",
+      "sha256": "a11eba45bd86ec044beb14b8ca77b5caa8a61ce99fc040d98f5f04b8a5651552"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/BooleanQuotients.lean",
+      "sha256": "6411890283b4f597866b0b87bc9edc6ec3e67b9100726ba87a5b431163772eb7"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/CategoricalTheorem.lean",
+      "sha256": "396ca351bfdfa35d3d04b7db7817e467763e0ce7ff86359f621a25e18653915b"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/CharacteristicArrows.lean",
+      "sha256": "76082b40ef3d34fa052b411dc67f629ffa3b469dbbfcd88d59eea621fedaad16"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/Diagonal.lean",
+      "sha256": "64236a56373b2071263cccd836339bb3ed393f1474f17c0c1108584cd3a6fa52"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedDomains.lean",
+      "sha256": "968ac82a2267149f3010165210b2e023e8b7da8eb1828b242522c73e1e05e234"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedQuotients.lean",
+      "sha256": "395723193b71581ddd59008f69992192380490e8b967a0f65e787e963596b86e"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedRestriction.lean",
+      "sha256": "ff312e1e9ccd4713c123227b90cffad508d64d46ec8b767384a893d3ab6e33c2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EnrichedTotals.lean",
+      "sha256": "a3aef163d2b4cb41773b7d44ee324be8b34469c0fb4170c1d86e4658c2670cdd"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalCartesian.lean",
+      "sha256": "effa35c40dab50ded97d090264d30bc1ae01cc229af38de9def9435a3895c30d"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalDomains.lean",
+      "sha256": "46cfef6c37d4d4c49c6e35f4b4d18f616f0b8ad9ff2f89f213429f9f48055fb7"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalRepresentation.lean",
+      "sha256": "440f7a578b2ed44266a8bb08159618cae67252ba6ec92ab17b95d7c4737207d3"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalSubobjects.lean",
+      "sha256": "4e3d868bb1be0d091604ca1e7a951585ebd52ee281dc5808657d7b63110572ba"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/GlobalTotals.lean",
+      "sha256": "98363151e8a0f8eac46b55b013fa0573ff926b76d338da34bc6e256902730e6b"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalCartesian.lean",
+      "sha256": "2b1f0ec100633f43246731c87a7f7ea7e4b9f670baa7d64860e7cb1128ed9c92"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalDiagonal.lean",
+      "sha256": "b798bcaef44c215abfb36b0593a8d31bbfb52962d1c47a6ca5775890bd5495e6"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalLattices.lean",
+      "sha256": "fd42fe98eef68c5b2c97419e2fdad2d584ed98c41ab34ff2adf81e4856ae9eb2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/InternalRepresentation.lean",
+      "sha256": "107436fa7454aaa1059720a0a5c9c190e80e8c759cf8d569cff99d312bfde386"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalCategory.lean",
+      "sha256": "b85b1e2d2f4e5ac5aedea6379d375677d351623ac6cbae252ca9e8fda75a8301"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalDomains.lean",
+      "sha256": "cace17791965c057edd79fe912a022e57decbdcb38163a55f85e783ee72fb463"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalEmbedding.lean",
+      "sha256": "93ef53a83f0c39cda8e00d3e7abb28dac8979bb80789ca321d685f4fe086cc0c"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalInseparability.lean",
+      "sha256": "ef0747eb5ad2eaca7dc2b2ff9f420df10dbd23c13c1acf240ab1a560554a1cae"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalPER.lean",
+      "sha256": "95fd1f6068b5f42c71ec32ab39d96c87d356d1694438321b5489dd998409f1e8"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalProducts.lean",
+      "sha256": "4a49f56c6e44004cdf882b8de8896f1c43c28ee2b6e054dbca64fb2fc0fd7a52"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalSubobjects.lean",
+      "sha256": "d70bfc99064e597e18af67b448a5cfd99ff9e1c48cb31d7005a1cea07394b277"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/NumericalUnions.lean",
+      "sha256": "e022ff1025659831efba41b6d65cc914edd432293881f3a98343295c5db9a6ea"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/PERFiniteLimits.lean",
+      "sha256": "6f6cd28afe7197c1964fbada1ef795a23f5b30b323c49f8400a446cc51b2cc75"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/PERImages.lean",
+      "sha256": "3a74c90d14e8b8026dcd5d13f7f73ff7d3bd3e855fda0895faae4d4d504635c2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/PERProducts.lean",
+      "sha256": "1828633df5e0f39a8659cdbef4dc429c3d121cf23bfe1a198a6808b25286cf70"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/PERPullbacks.lean",
+      "sha256": "d6547d65a426319d9e414de999523ecd4d1ed419eb0d5fd4f951cd37604dcfc4"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/PERRegular.lean",
+      "sha256": "1e7ed73c938f70c4a87ec2d8b3995fa2e8952949b33829d54fa5b09478041f01"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/ParameterizedEqualizer.lean",
+      "sha256": "8a0df0cb36826f17c9f9b43e992576746958064b86444fff7bdac4c89b81cce9"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/RestrictionPredicates.lean",
+      "sha256": "604560589a888ad81052b538cb3cad6788132c9993bb285a6b910d7f8596cb54"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/TwoBoolean.lean",
+      "sha256": "7b588c2d308413c75ff849542acd0b2a1f4bcef2df6aef218f09d80284bc6334"
+    }
+  ],
+  "findings": [],
+  "patterns": [
+    "word: sorry",
+    "word: admit",
+    "declaration: axiom",
+    "declaration: opaque"
+  ]
+}
