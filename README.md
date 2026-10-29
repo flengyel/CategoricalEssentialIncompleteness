@@ -1,22 +1,23 @@
 # Categorical essential incompleteness
 
 Research notes and a Lean development on categorical essential incompleteness.
-The current account develops Hoare profunctors from restriction domains and
-ranges, proves conditional categorical separation results, and constructs a
-numerical deductive category with an essential-incompleteness theorem. The
-intrinsic passage from an abstract recursion category to the required logical
-and deductive data remains open.
+The current account connects a Turing morphism, computational inseparability,
+polynomial finite-proof algebras, and theorem ranges. It proves essential
+incompleteness for a numerical classical deductive presentation. The existence
+of the corresponding logical presentations in general recursion categories
+remains open.
 
 ## Manuscript
 
-The current note is [Domains, Hoare profunctors, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
-([LaTeX source](manuscript/domains_hoare_profunctors_essential_incompleteness.tex), 29 October 2026, 21 pages). It gives the
-Hoare-profunctor constructions, the numerical obstruction to weakest liberal
-preconditions, categorical separation theorems, and the numerical deductive
-construction. Closure operators associated with specified rules are treated in
-Appendix A; the intrinsic construction problem is stated in Section 9.
+The current note is [Domains, finite proofs, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
+([LaTeX source](manuscript/domains_hoare_profunctors_essential_incompleteness.tex),
+29 October 2026, 23 pages). It includes Hoare profunctors and their relation
+to polynomial bicomodules, the numerical obstruction to weakest liberal
+preconditions, the explicit Turing-morphism inseparability proof, computational
+finite-proof initial algebras, and the proof-range construction. Section 13
+states the general logical-presentation existence problem. No appendix remains.
 
-The [outline, mathematical review, writing review, and verification record](Audit/2026-10-29-hoare-profunctors/README.md)
+The [outline, mathematical review, writing review, and verification record](Audit/2026-10-29-polynomial-proofs/README.md)
 accompany the note. This account has not been formalized in Lean. The existing
 Lean checkpoint described below concerns the earlier development.
 

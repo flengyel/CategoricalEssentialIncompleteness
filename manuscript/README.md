@@ -1,17 +1,18 @@
-# Domains, Hoare profunctors, and essential incompleteness
+# Domains, finite proofs, and essential incompleteness
 
-The current note is [Domains, Hoare profunctors, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
+The current note is [Domains, finite proofs, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
 ([LaTeX source](domains_hoare_profunctors_essential_incompleteness.tex),
-29 October 2026, 21 pages).
+29 October 2026, 23 pages).
 
-Restriction domains and ranges define total- and partial-correctness Hoare
-profunctors. The note proves their composition laws, characterizes the numerical
-existence of weakest liberal preconditions, and gives categorical separation
-theorems with explicit representation or proof-map hypotheses. A numerical
-deductive construction supplies a consistent c.e. essentially incomplete theory
-and relates its assertions to the Hoare profunctors. Section 9 states the open
-intrinsic construction problem. Closure operators for specified deductive
-presentations appear in Appendix A.
+The note proves a Turing-morphism inseparability theorem under explicit
+binary-case hypotheses, constructs finite-proof initial algebras in the
+numerical restriction-idempotent splitting, and defines the functor taking
+proof-conclusion maps to their ranges. Trace-to-proof maps connect these
+constructions in a consistent c.e. essentially incomplete propositional theory.
+Hoare profunctors, weakest liberal preconditions, polynomial bicomodules, and
+conditional arithmetic applications are developed separately. Section 13
+states the remaining existence problem for general recursion categories.
+The unused appendices have been removed.
 
 Build the self-contained source from this directory with:
 
@@ -19,9 +20,9 @@ Build the self-contained source from this directory with:
 latexmk -pdf -interaction=nonstopmode -halt-on-error domains_hoare_profunctors_essential_incompleteness.tex
 ```
 
-The [outline and review records](../Audit/2026-10-29-hoare-profunctors/README.md) include the
-mathematical and writing reviews, compilation status, and source/PDF hashes.
-This note has not been formalized in Lean.
+The [outline and review records](../Audit/2026-10-29-polynomial-proofs/README.md)
+include the mathematical and writing reviews, compilation status, and
+source/PDF hashes. This note has not been formalized in Lean.
 
 ## Earlier notes
 
