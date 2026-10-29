@@ -49,7 +49,7 @@ record the scope of the results. No new result has been formalized in Lean.
 The companion [Range completion and computational cosheaves on a three-point space](manuscript/range_completion_three_point_cosheaves.pdf)
 ([LaTeX source](manuscript/range_completion_three_point_cosheaves.tex))
 identifies the established free range completions and proves an obstruction
-to preservation of the original universal evaluator. It constructs the
+to preservation of the original Turing morphism. It constructs the
 three-point cosheaf example with a nontrivial cover, effective global pushout
 presentations, internal regular images, explicit frames, and a compatible
 Turing morphism. The finite-proof construction applies without decidable atom
@@ -67,10 +67,20 @@ coproducts and finite domain joins, with no range or proof-algebra assumption.
 For the existing classical theories, the fixed atom map proves the stronger
 inseparability of every extension's theorem/refutation pair. Restriction
 functors preserving zero and domain joins reflect inseparability; a projection
-of Heller recursion categories shows that even evaluator-preserving functors
+of Heller recursion categories shows that even Turing-morphism-preserving functors
 need not preserve a specified pair. The signed presentation does not construct
 a full classical deductive closure. The [reviews and verification](Audit/2026-10-29-inseparable-extensions/README.md)
 record this distinction and the remaining construction problem.
+
+The [review of the existing syntactic categories S_T](Audit/2026-10-29-separator-transfer/README.md)
+starts from their valid uniform provability quotient. The actual extension
+functors preserve identity, zero, and the chosen Turing morphism. The sets
+of program indices proved equal to identity and zero form a recursively
+inseparable pair, and extension enlarges both sets. Completeness would
+decide identity membership by proof search. This gives a short PA benchmark
+and identifies the effective proof observations to construct in a
+nonnumerical setting. It supplies a comparison on presentations and domain
+observations, not a functor on all arrows from S_T to the classical category.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's

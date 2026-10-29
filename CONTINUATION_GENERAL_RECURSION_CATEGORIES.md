@@ -29,6 +29,11 @@ in flengyel/errata; read their latest committed state before importing further r
   Audit/2026-10-29-intrinsic-introspection/
   record the respective reviews,
   source checks, and verification.
+- Audit/2026-10-29-separator-transfer/ reviews the valid unprimed S_T
+  construction, the actual theory-extension quotients, and effective
+  observations of identity and zero. It records the PA benchmark and
+  candidate data for its nonnumerical generalization; it is not a new
+  mathematical manuscript.
 
 The first two manuscripts remain unchanged by the cosheaf continuation.
 No new theorem in these notes has been formalized in Lean. The older Lean
@@ -70,23 +75,49 @@ The construction is left adjoint to (S,ν,t)↦(S,t,ν*t) for total involutive
 binary domain joins but not their stability under arbitrary total pullback.
 Neither result needs ranges, iteration, regularity, or a proof algebra.
 
-The user's subsequent direction is now the primary target: construct a
-category D_T intrinsically associated with each intended consistent
-computational extension T and a comparison that transports its separators
-back to the starting recursion category C. A direct implementation is a
-restriction functor G_T:D_T→C preserving zero and binary domain joins.
-With a,b inseparable on U in C, construct an assertion object Y_T and actual
-theorem/refutation domains p_T,n_T in D_T. Identify G_T(Y_T) with U and
-prove a≤G_T(p_T), b≤G_T(n_T). More generally, supply a total
-u_T:U→G_T(Y_T) and these inequalities after u_T*, proving that this
-inverse image preserves the required joins.
+The user's subsequent direction is the primary target: transport separators
+back to a fixed recursion category with an inseparable pair. Start the PA
+benchmark from the established unprimed categories S_T, not a new quotient
+construction. Their arrows are program indices modulo one uniform T-proof
+of equality; the invalid pointwise quotients S'_T are excluded.
 
-A separator in D_T then gives a separator in C. Consistency must imply
-p_T n_T=0, and completeness must imply p_T∨n_T=1. This gives essential
-incompleteness. Neither fullness nor faithfulness is required for this
-backwards functor. The categories, the functor, and the domain identifications
-must be constructed from the formal systems and their extension relation;
-merely assuming separator reflection leaves the central task open.
+For T⊆T', the actual functor is Q_(T,T'):S_T→S_T', identical on objects
+and sending [e]_T to [e]_T'. It preserves the chosen Turing morphism,
+its total parameter maps, and the fixed computational operations. The
+latest review proves a simpler comparison through the effective presentations:
+I_T={e:[e]_T=1} and Z_T={e:[e]_T=0} are disjoint c.e. subsets of the
+program-index object in the fixed classical category Rec. A fixed total
+compiler r sends the canonical output-0/output-1 diagonal pair into
+I_PA,Z_PA. Thus that pair is recursively inseparable. Q preserves identity
+and zero, giving I_T⊆I_T' and Z_T⊆Z_T'. Consistency keeps these enlarged
+pairs disjoint. Completeness would decide I_T by parallel proof search for
+the uniform identity equation or its negation, producing a separator.
+It does not imply I_T∪Z_T=N.
+
+This is an actual covariant functor from the poset of consistent c.e.
+extensions into Pair(Rec), with identity maps on program indices for theory
+inclusions. Separators pull back along those maps and the fixed compiler r.
+The map from program indices to S_T(omega,omega) is a set-presentation map,
+not a functor from the extensional category Rec. The alternative observation
+E_T([D])={n:T proves D(numeral n)} is a well-defined monotone map on domain
+posets; it need not preserve binary joins and is not extended to all arrows.
+
+The next construction is to realize these effective proof observations
+intrinsically in an appropriate nonnumerical recursion category. Specify
+parameterized proof objects, selected positive and negative conclusion
+domains for computational equations, the fixed total separation reduction,
+and their compatibility with extensions. Derive their disjointness from
+consistency and coverage from completeness. The three-point computational
+cosheaf category is a concrete test. No new range completion is needed for
+the PA benchmark, and no full backwards arrow functor has been constructed.
+
+A restriction functor G_T:D_T→C preserving zero and binary domain joins
+remains a sufficient stronger implementation if it can actually be built.
+For theorem/refutation domains p_T,n_T on Y_T, supply a total
+u_T:U→G_T(Y_T) with a≤u_T*G_T(p_T), b≤u_T*G_T(n_T), and prove the
+needed inverse-image join law. Consistency must give p_T n_T=0 and
+completeness p_T∨n_T=1. Neither fullness nor faithfulness is required.
+Merely assuming these data leaves their construction open.
 
 The distinction is directional: for F:C→D, preservation of separators
 C→D only reflects inseparability D→C. That was not the needed transfer
@@ -95,11 +126,12 @@ uses the same elementary preservation law in the useful direction.
 Alternatively, a forward F:C→D may work if target separators can actually
 be lifted. Do not confuse these two mechanisms.
 
-The PA benchmark is the fixed Rosser reduction θ(n)=code(ρ(numeral n))
-from a disjoint inseparable c.e. pair A,B to the theorem/refutation pair
-of every consistent c.e. extension of PA. Its inverse image sends
-separators backwards. An intrinsic category-level construction must recover
-this connection without silently assuming soundness of the extensions.
+For the canonical machine-output pair, finite computation verification and
+PA-provable output disjointness already give a fixed reduction to the
+theorem/refutation pair of every consistent c.e. extension. A separate
+Rosser comparison formula is unnecessary for this particular pair. The
+earlier Rosser reduction remains applicable to general disjoint c.e. pairs.
+Neither argument assumes soundness of the extensions.
 
 Classical deductive closure over the signed presentation is a subsidiary
 construction to test against this target. The signed presentation does not
@@ -116,7 +148,7 @@ For functors between categories, separate the two directions. A restriction
 functor preserving zero and binary domain joins reflects inseparability of
 a specified image pair. Full faithfulness on the relevant endomorphism set
 suffices for preservation. Unrestricted preservation fails even with the
-chosen evaluator preserved: the second projection from the diagonal-object
+chosen Turing morphism preserved: the second projection from the diagonal-object
 subcategory of C×C sends (a,p),(b,q) to complementary p,q, where a,b are
 inseparable in C. This source is Heller-1990 prodominical, not dominical.
 It does not refute the weaker claim that the target has some inseparable pair.
@@ -137,7 +169,8 @@ research state.
    constructor embedding γ:Pq→q for W=S×U, with its range-filtered
    restriction inverse δ. Stages are e_0=0 and e_(n+1)=γP(e_n)δ.
 3. The supplement's typed Turing-fold theorem constructs partial-fold
-   gluing. Its evaluator is filtered by ran Δ_S before P is applied.
+   gluing. The typed partial map obtained from its Turing morphism is
+   filtered by ran Δ_S before P is applied.
    Its strength identity uses only total program-parameter maps.
    Nullary constructors prevent unrestricted partial-parameter naturality.
 4. The new note reconstructs Heller's iteration lemma in a split setting
@@ -181,7 +214,7 @@ For the opens ∅⊂V⊂X, a set-valued cosheaf is exactly an arrow C(V)→C(X);
 all nonempty covers contain the covered open. Computational morphisms are
 commuting recursive squares, and domains are c.e. subdiagrams.
 
-The universal object is U=(N²→N), with transition π₂. Its evaluator at
+The universal object is U=(N²→N), with transition π₂. Its Turing morphism at
 component 1 is the ordinary universal partial recursive function.
 At component 0 it runs a program returning a pair and checks that its
 second output equals the component-1 computation. The compiler is a
@@ -235,12 +268,12 @@ completion. Part II, Theorem 3.27, supplies a faithful discrete cartesian
 range completion R_d(C); Proposition 3.11 gives universal agreement.
 The companion derives from its normal form that it adds no total arrows
 on original objects. If all original objects restriction-embed in U,
-preservation of the original evaluator's parameter-universality would
+preservation of the original Turing morphism's parameter-universality would
 force the unit to be full. Thus a nonfull R_d completion requires a
-different evaluator or a construction adding total program maps.
+different Turing morphism or a construction adding total program maps.
 
 Construct a completion with explicit uniform codes for the added range
-predicates and a compatible evaluator. Prove preservation or recovery
+predicates and a compatible Turing morphism. Prove preservation or recovery
 of finite coproducts, stable word-length coverage, universal dominance,
 and weak choice; establish regularity using the stated hypotheses.
 Do not infer these properties from the range universal property.
