@@ -5,6 +5,9 @@ Date: 29 October 2026. Baseline: e98536008177001780499378f4752e99b2e3d00e.
 [Internal theories and intrinsic incompleteness](../../manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](../../manuscript/intrinsic_introspection_and_extensions.tex)) is a
 three-page application of Ramesh's initiality and Löb constructions.
+It is a separate arithmetic-universe comparison and establishes no
+connection to the given recursion category. See the
+[scope correction](SCOPE_CORRECTION.md).
 
 - [Hostile mathematical review](HOSTILE_REVIEW.md)
 - [Mathematical-writing review](WRITING_REVIEW.md)
@@ -39,6 +42,7 @@ coherence; the paragraph following it constructs extensions via initial models.
 
 Undecidability in I is not yet undecidability in every Glob(C). Essential
 incompleteness of all intended internal extensions remains unproved by this
-route. The next attempt is an intrinsic proof/refutation comparison for
-those extensions, retaining consistency alone rather than imposing soundness.
+route. That is a question internal to this separate comparison, not the next
+Di Paola–Heller construction task. The recursion-category continuation
+retains its original starting data and computational extension class.
 No novelty claim is made for the consequences of Ramesh's theorems.

@@ -1,4 +1,4 @@
-# Continuation: intrinsic theories and extensions
+# Continuation: the general construction in recursion categories
 
 Continue the mathematical construction in flengyel/CategoricalEssentialIncompleteness
 on main. Use the current committed sources, not the earlier represented-Boolean-quotient
@@ -18,7 +18,9 @@ in flengyel/errata; read their latest committed state before importing further r
 - manuscript/range_completion_three_point_cosheaves.tex and .pdf:
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/intrinsic_introspection_and_extensions.tex and .pdf:
-  *Internal theories and intrinsic incompleteness*, 3 pages.
+  *Internal theories and intrinsic incompleteness*, 3 pages: a separate
+  arithmetic-universe comparison, with no established connection to the
+  given recursion category or the Di Paola–Heller construction.
 - Audit/2026-10-29-polynomial-proofs/, Audit/2026-10-29-general-construction/,
   Audit/2026-10-29-iteration-cosheaves/, Audit/2026-10-29-range-three-point/,
   and Audit/2026-10-29-intrinsic-introspection/
@@ -30,57 +32,43 @@ No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
 
-## Current intrinsic construction
+## Research target and starting data
 
-Follow Ramesh's actual initiality construction, not an arbitrary modal
-operator plus assumed reflection or a repackaging of the inseparable-domain
-inputs. Use the primary thesis, especially Construction 6.11, Theorem 4.19,
-Theorems 1.56/1.63/1.80, and Observation 6.12.
+The starting data remain a Heller recursion category R. The task is to
+construct the compatible deductive presentation from that category and
+prove consistency and incompleteness of every consistent computational
+extension in the stated class. Domains remain restriction idempotents of
+R (or of its restriction-idempotent splitting); their split objects lie
+in the corresponding total category. Do not replace them by arbitrary
+subobjects of a different ambient category.
 
-Let I be the initial arithmetic universe and C an internal arithmetic
-universe. Set L_C=Glob(C). Initiality gives an arithmetic S_C:I→L_C;
-H_C:L_C→I is the internal hom functor Hom_C(1,-).
-Keep the two modal functors distinct:
+The established notes give conditional construction theorems and explicit
+nonnumerical recursion-category examples. Preserve those results and work
+on the remaining hypotheses for appropriate general classes of recursion
+categories. Simplifying unnecessary encoding choices is useful only if
+the resulting construction remains attached to R and proves the required
+statement about its computational theories and extensions.
 
-- B_C=H_C S_C acts on I;
-- Q_C=S_C H_C acts on L_C.
+The arithmetic-universe comparison note starts from different data and
+proves a different result. It supplies neither a construction from R nor
+a comparison of its computational domains and extensions. It discharges
+none of the open construction hypotheses here. Its own extension question
+must not replace this project's recursion-category target.
 
-The contradiction object p_C=Hom_C(1,0) equals B_C(0_I).
-Löb on the consistent base I rules out p_C→0_I for every C.
-The exact identification I(1,p_C)=L_C(1,0) shows that p_C is undecided
-in I if and only if L_C is consistent. No reflection or soundness
-assumption enters this proof. Separately, consistency of L_C and Löb
-on L_C rule out Q_C(0_C)→0_C; this does not rule out a global point
-of Q_C(0_C)=S_C(p_C).
+## Immediate mathematical work
 
-An internal arithmetic functor j:C→D induces beta_j:B_C⇒B_D and
-p_j:p_C→p_D. The proof gives the naturality square, compatibility with
-N, and identity/composition coherence. Maps of finitely axiomatized lex
-theories extending the theory of arithmetic universes induce such j
-by initiality of their internal models in I.
+Audit which concrete embeddings and coding choices are used only to
+realize intrinsic categorical operations, and formulate those operations
+by their universal properties where possible. Derive or construct them
+from the stated recursion-category structure; do not merely assume the
+objects and properties that constitute the original existence problem.
 
-For the internal initial arithmetic universe C, external arithmeticity
-of Γ_I and preservation of initial models give S_C:I≃Glob(C). This
-equivalence is specific to that example. Γ_I's arithmeticity does not
-internalize; indeed internal global sections send 0_C to p_C≠0_I.
-
-## Next intrinsic target
-
-Prove incompleteness in L_D itself for the intended class of consistent
-internal extensions D. The present undecided proposition lives in the
-fixed base I. Do not silently transport its lack of global points through
-S_D or assume S_D is conservative or an equivalence.
-
-Ramesh's Construction 6.13 specifies when introspection descends under
-lex localization: S must invert the chosen maps. His Observation 6.15
-includes unsound consistent theories, so bottom reflection is not an
-acceptable substitute for the required extension argument.
-
-The next concrete attempt is an intrinsic comparison of proofs and
-refutations in the internal theory, sufficient for a Rosser-style argument,
-using categorical structure rather than first choosing encodings into
-a universal object. Preserve the established construction below as a
-realization theorem, not as a prerequisite for the intrinsic route.
+Any use of Ramesh's introspection must supply an actual construction
+associated with R and prove its compatibility with the selected
+computational domains and intended extensions. No such construction or
+comparison has yet been established. Until then, the proved recursion-
+category results and their remaining hypotheses below are the operative
+research state.
 
 ## Established computational structure to preserve
 
