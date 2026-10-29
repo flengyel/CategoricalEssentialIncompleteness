@@ -20,8 +20,11 @@ kernel pairs are proved. Regular epimorphisms are stable under pullback, giving
 a regular PER category. Finite coproducts and their van Kampen property are
 proved, giving finite extensivity. The numerical domain embedding is an
 injective natural bounded lattice homomorphism into the full PER subobject
-predicate lattices. The Boolean-fiber characterization and the arithmetic
-interpretation remain incomplete. All declarations below are in the namespace
+predicate lattices. Boolean arrows and their fibers are characterized by
+total recursive functions and recursive support inclusions. These inclusions
+are exactly the complemented subobjects of the equality PER on `ℕ`.
+This completes `lem:integration-numerical-subobjects`. The arithmetic
+interpretation remains incomplete. All declarations below are in the namespace
 `CategoricalEssentialIncompleteness`.
 
 ## Correspondence
@@ -53,7 +56,9 @@ interpretation remain incomplete. All declarations below are in the namespace
 | Support order and inverse image in `lem:integration-numerical-subobjects` | `NumericalPER.supportSubobject_le_iff`; `supportSubobject_eq_iff`; `inverse_isPullback` | Subobjects and the full pullback universal property proved for arbitrary supports. All names are in `NumericalPER`. |
 | C.e. joins and the image of `j` in `lem:integration-numerical-subobjects` | `NumericalPER.enumerable_union_isLUB`; `Numerical.domainSubobject`; `Numerical.supportSubobject_in_range_iff` | The union is least among all categorical upper bounds. The domain map is an order embedding whose image among support inclusions is exactly c.e. supports. |
 | Predicate functors and natural bounded lattice embedding in `lem:integration-numerical-subobjects` | `subobjectPredicates`; `Numerical.domainPredicates`; `Numerical.predicates`; `Numerical.domainEmbedding`; `Numerical.predicateSubobjectIdentification` | Proved. General predicates are all PER subobjects along `J`; domain reindexing and categorical pullback agree. Bounds, meets, joins, and specified complementary pairs are preserved. |
-| Boolean arrows, fibers, and complemented subobjects in `lem:integration-numerical-subobjects` | — | Open. Complementarity is preserved and reflected by `Numerical.domainSubobject_isCompl_iff`, but the characterization of every complemented subobject remains to be proved. |
+| Boolean arrows in `lem:integration-numerical-subobjects` | `NumericalPER.booleanIso`; `booleanIso_point`; `booleanArrowEquiv` | The chosen coproduct of terminal objects is identified with `D_{0,1}`, including both points. Arrows from `D_ℕ` correspond bijectively to total recursive Boolean functions. All names are in `NumericalPER`. |
+| Boolean fibers and complemented subobjects in `lem:integration-numerical-subobjects` | `NumericalPER.booleanArrow_boundFiber`; `exists_boolean_fiber_iff_recursive_support`; `isComplemented_iff_recursive_support` | Proved for all subobjects of `D_ℕ`. Boolean fibers, recursive support inclusions, and complemented subobjects coincide. All names are in `NumericalPER`. |
+| Complemented domains in `lem:integration-numerical-subobjects` | `Numerical.isComplemented_iff_represented_domain`; `isComplemented_domainSubobject_iff` | Every complemented subobject of `D_ℕ` is represented by a complementary domain pair. The domain embedding preserves and reflects existence of a complement. Both names are in `Numerical`. |
 | `thm:integration-essential-equivalence` (ii) | `Numerical.no_separator_iff_recursively_inseparable` | The support statement is proved for arbitrary disjoint supports, with PER subobject inequalities and numerical restriction domains. |
 | `thm:integration-essential-equivalence` (i), (iii), and its theory instance | — | Open; needs the remaining numerical/PER structure and the syntax/provability comparison. |
 | `prop:numerical-boolean-extensions` | — | Open. |
@@ -350,6 +355,34 @@ functor, the full PER subobject predicate functor, their natural embedding,
 and the subobject identification along `toPER`. No new premise is added to
 the numerical construction.
 
+`ComplementedSubobjects.lean` proves that complemented subobjects in a
+regular finitely extensive category are exactly the upper fibers of arrows
+to `1 + 1`. The two point subobjects are complementary, and bounded lattice
+pullback preserves their complementarity for every arrow.
+
+`NumericalBooleanObject.lean` constructs the equality PER on `{0,1}` as a
+coproduct of terminal PERs. Recursive coding and decoding give an isomorphism
+with the explicit PER coproduct; the universal property identifies it with
+the chosen object `Two NumericalPER`. Both point equations and their singleton
+subobject equations are proved.
+
+`NumericalBooleanArrows.lean` constructs the bijection between total recursive
+Boolean functions and arrows from `D_ℕ` to this Boolean PER. A representing
+partial recursive function is total on every natural number. Its supported
+outputs are zero or one, giving a total recursive Boolean function. Equality
+of morphism classes agrees with equality of these functions.
+
+`NumericalBooleanFibers.lean` identifies each truth-value fiber with the
+corresponding inverse-image support inclusion. These supports are recursive,
+and every recursive subset occurs as the upper fiber of a Boolean arrow.
+
+`NumericalComplementedSubobjects.lean` applies the characteristic-arrow
+construction to arbitrary complemented subobjects of `D_ℕ`. The Boolean
+comparison and fiber calculation identify them exactly with recursive support
+inclusions. They are therefore exactly the images of complementary numerical
+domain pairs. This also proves that the numerical domain embedding reflects
+existence of a complement on `ℕ`.
+
 `NumericalInseparability.lean` compares the subobject separator
 inequalities with a recursive separating set. It proves the absence-of-separator
 equivalence for disjoint supports without assuming that either distinguished
@@ -425,16 +458,14 @@ the form “for every numeral, there exists a proof of the corresponding
 instance”; it must not be replaced by provability of one universally
 quantified sentence.
 
-The next construction is **the Boolean-fiber characterization in
-`lem:integration-numerical-subobjects`**: identify arrows to the Boolean PER
-with total recursive Boolean functions and prove that every complemented
-subobject of `D_ℕ` is the image of a recursive support inclusion.
-Numerical restriction products, Turing/indexing and Set-enrichment data, effective syntax, numeral
+The next construction is **numerical restriction products**, including partial
+pairing and the restriction projection equations. Turing/indexing and
+Set-enrichment data, effective syntax, numeral
 substitution, Lindenbaum Boolean presentation, and theory-extension quotients
 also remain open. They are needed for `thm:integration-essential-equivalence`
 (i) and (iii), `prop:numerical-boolean-extensions`, and the arithmetic corollary.
 
-The full verifier builds the combined entry point and audits 247 declarations,
+The full verifier builds the combined entry point and audits 273 declarations,
 retaining all eleven original audits. It also checks every pinned dependency
 and imported source hash, as well as both manuscript hashes. Thirteen imported
 files have comment-only revisions recorded in `LOCAL_PATCHES.json`; their Lean

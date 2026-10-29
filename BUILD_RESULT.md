@@ -1,5 +1,40 @@
 # Categorical essential incompleteness: build result
 
+## Numerical Boolean arrows and complemented subobjects checkpoint
+
+Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from
+`f51ca8e82ba08603f206f51f1ec1b37ad047e45d`. The checkout was clean and remote
+`main` agreed before editing.
+
+- `python3 scripts/verify.py`: PASS (1936 jobs, including cached dependencies).
+- All 273 axiom audits pass, retaining the previous 247. Only `propext`,
+  `Classical.choice`, and `Quot.sound` occur.
+- The sixteen dependency revisions, 356 imported-file records, and both
+  manuscript hashes match their recorded values. No imported source, pin,
+  or manuscript file was changed.
+- All five new modules compile without warnings. The two imported linter
+  warnings remain. The 51 project Lean files contain no proof holes or new axioms.
+
+The explicit Boolean PER is a coproduct of terminal PERs, with a proved
+isomorphism to the chosen object `1 + 1` and equations for both points.
+Arrows from `D_ℕ` to this PER correspond bijectively to total recursive
+Boolean functions. Their fibers are the recursive inverse-image support
+inclusions, and every recursive subset occurs as an upper fiber.
+
+The complemented subobjects of `D_ℕ` are exactly these recursive support
+inclusions, equivalently the images of complementary numerical domain pairs.
+The domain embedding also reflects existence of a complement on `ℕ`.
+Together with the preceding constructions, these results complete
+`lem:integration-numerical-subobjects`.
+
+The next construction is numerical restriction products, including partial
+pairing and the restriction projection equations. Recursion/indexing,
+Set-enrichment, and arithmetic syntax/provability comparisons remain open.
+
+The hosted executable-path adapter was used; ordinary Debian/WSL2 builds do
+not need it. Palomar Comparator, NanoDa, and con-ron were not run. Evidence:
+[Audit/2026-10-29-numerical-boolean](Audit/2026-10-29-numerical-boolean/).
+
 ## Numerical predicate and domain-embedding checkpoint
 
 Verified on 2026-10-29 using Lean 4.35.0-rc2, starting from

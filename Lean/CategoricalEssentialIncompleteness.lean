@@ -17,6 +17,7 @@ import CategoricalEssentialIncompleteness.NumericalInseparability
 import CategoricalEssentialIncompleteness.NumericalProducts
 import CategoricalEssentialIncompleteness.PERExtensive
 import CategoricalEssentialIncompleteness.NumericalPredicates
+import CategoricalEssentialIncompleteness.NumericalComplementedSubobjects
 
 /-!
 # Categorical essential incompleteness
@@ -32,6 +33,8 @@ comparison between domain separators and recursive separators. The PER category
 is regular and finitely extensive: finite coproducts are disjoint and
 satisfy the van Kampen property. The numerical domain inclusion is an injective
 natural bounded lattice map into the full PER subobject predicate lattices.
+The complemented subobjects of the equality PER on `ℕ` are exactly recursive
+support inclusions, equivalently the upper fibers of Boolean arrows.
 
 The imported arithmetic declarations below check the recursion-category
 instance and Turing evaluator of the typed program category. The comparison

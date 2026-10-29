@@ -52,12 +52,14 @@ properties; dovetailing proves that c.e. unions are their categorical joins.
 Restriction domains and full PER subobject lattices define predicate functors
 on total numerical arrows. The domain inclusion is an injective natural
 bounded lattice homomorphism, preserving and reflecting complementarity of
-a specified pair.
+a specified pair. Arrows from the equality PER on `ℕ` to the Boolean PER
+correspond bijectively to total recursive Boolean functions. Their upper
+fibers are exactly the recursive support inclusions, which are exactly the
+complemented subobjects of that equality PER.
 For disjoint supports, absence of a complementary-domain separator is
 equivalent to recursive inseparability.
 
-The Boolean-fiber and complemented-subobject characterization, numerical
-restriction products and recursion, and arithmetic syntax and provability
+Numerical restriction products and recursion, and arithmetic syntax and provability
 comparisons remain open; see
 [the declaration-to-manuscript correspondence](FORMALIZATION_STATUS.md).
 The imported categorical and arithmetic foundations remain available.
@@ -148,14 +150,14 @@ manifest pins every dependency. The script uses one Lean thread by default,
 checks the imported source and manuscript hashes and dependency revisions, builds
 `CategoricalEssentialIncompleteness`, and checks the transitive axiom dependencies
 of its two interface declarations, all nine Failure of Composition solution
-declarations, and 236 diagonal, restriction, internal, global-comparison,
-categorical, Boolean-presentation, decision, and numerical declarations (247 in total). Only
+declarations, and 262 diagonal, restriction, internal, global-comparison,
+categorical, Boolean-presentation, decision, and numerical declarations (273 in total). Only
 `propext`, `Classical.choice`, and `Quot.sound` are accepted.
 
 A successful run ends with:
 
 ```text
-PASS: project build, dependency pins, source hashes, and 247 axiom audits.
+PASS: project build, dependency pins, source hashes, and 273 axiom audits.
 ```
 
 For compilation alone, run from the repository root:
@@ -167,7 +169,9 @@ cd ..
 ```
 
 Fresh logs and the machine-readable result are written to `build-logs/`, which
-is ignored by Git. The numerical predicate and domain-embedding evidence is in
+is ignored by Git. The Boolean-arrow and complemented-subobject evidence is in
+[`Audit/2026-10-29-numerical-boolean/`](Audit/2026-10-29-numerical-boolean/).
+The numerical predicate and domain-embedding evidence is in
 [`Audit/2026-10-29-numerical-predicates/`](Audit/2026-10-29-numerical-predicates/).
 The PER coproduct and extensivity evidence is in
 [`Audit/2026-10-28-per-extensive/`](Audit/2026-10-28-per-extensive/).

@@ -1,0 +1,107 @@
+@CategoricalEssentialIncompleteness.Two.points_isCompl : ∀ {C : Type u_2} [inst : CategoryTheory.Category.{u_1, u_2} C]
+  [inst_1 : CategoryTheory.Regular C] [inst_2 : CategoryTheory.FinitaryExtensive C],
+  IsCompl (CategoryTheory.Subobject.mk (CategoricalEssentialIncompleteness.Two.point false))
+    (CategoryTheory.Subobject.mk (CategoricalEssentialIncompleteness.Two.point true))
+@CategoricalEssentialIncompleteness.Two.boundFibers_isCompl : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Regular C]
+  [inst_2 : CategoryTheory.FinitaryExtensive C] {X : C} (f : X ⟶ CategoricalEssentialIncompleteness.Two C),
+  IsCompl (CategoricalEssentialIncompleteness.boundFiber f (CategoricalEssentialIncompleteness.Two.point false))
+    (CategoricalEssentialIncompleteness.boundFiber f (CategoricalEssentialIncompleteness.Two.point true))
+@CategoricalEssentialIncompleteness.isComplemented_iff_exists_characteristic : ∀ {C : Type u_2}
+  [inst : CategoryTheory.Category.{u_1, u_2} C] [inst_1 : CategoryTheory.Regular C]
+  [inst_2 : CategoryTheory.FinitaryExtensive C] {X : C} (a : CategoryTheory.Subobject X),
+  IsComplemented a ↔
+    ∃ f, CategoricalEssentialIncompleteness.boundFiber f (CategoricalEssentialIncompleteness.Two.point true) = a
+@CategoricalEssentialIncompleteness.NumericalPER.comp_booleanConstant : ∀
+  {R S : CategoricalEssentialIncompleteness.NumericalPER} (f : R ⟶ S) (b : Bool),
+  CategoryTheory.CategoryStruct.comp f (S.booleanConstant b) = R.booleanConstant b
+CategoricalEssentialIncompleteness.NumericalPER.coproductBooleanIso : CategoricalEssentialIncompleteness.NumericalPER.unitPER.coproduct
+    CategoricalEssentialIncompleteness.NumericalPER.unitPER ≅
+  CategoricalEssentialIncompleteness.NumericalPER.boolean
+CategoricalEssentialIncompleteness.NumericalPER.booleanCofanIsColimit : CategoryTheory.Limits.IsColimit
+  (CategoryTheory.Limits.BinaryCofan.mk (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint false)
+    (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint true))
+CategoricalEssentialIncompleteness.NumericalPER.booleanIso : CategoricalEssentialIncompleteness.Two
+    CategoricalEssentialIncompleteness.NumericalPER ≅
+  CategoricalEssentialIncompleteness.NumericalPER.boolean
+CategoricalEssentialIncompleteness.NumericalPER.booleanIso_point : ∀ (b : Bool),
+  CategoryTheory.CategoryStruct.comp (CategoricalEssentialIncompleteness.Two.point b)
+      CategoricalEssentialIncompleteness.NumericalPER.booleanIso.hom =
+    CategoricalEssentialIncompleteness.NumericalPER.booleanPoint b
+CategoricalEssentialIncompleteness.NumericalPER.singletonIsTerminal : (n : ℕ) →
+  CategoryTheory.Limits.IsTerminal (CategoricalEssentialIncompleteness.NumericalPER.discrete {n})
+CategoricalEssentialIncompleteness.NumericalPER.booleanPoint_subobject : ∀ (b : Bool),
+  CategoryTheory.Subobject.mk (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint b) =
+    CategoricalEssentialIncompleteness.NumericalPER.supportSubobject {b.toNat} ⋯
+CategoricalEssentialIncompleteness.NumericalPER.booleanArrow_eq_iff : ∀ (f g : ℕ → Bool) (hf : Computable f)
+  (hg : Computable g),
+  CategoricalEssentialIncompleteness.NumericalPER.booleanArrow f hf =
+      CategoricalEssentialIncompleteness.NumericalPER.booleanArrow g hg ↔
+    f = g
+CategoricalEssentialIncompleteness.NumericalPER.booleanArrow_surjective : ∀
+  (f :
+    CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ ⟶
+      CategoricalEssentialIncompleteness.NumericalPER.boolean),
+  ∃ g, ∃ (hg : Computable g), CategoricalEssentialIncompleteness.NumericalPER.booleanArrow g hg = f
+CategoricalEssentialIncompleteness.NumericalPER.booleanArrowEquiv : { f // Computable f } ≃
+  (CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ ⟶
+    CategoricalEssentialIncompleteness.NumericalPER.boolean)
+CategoricalEssentialIncompleteness.NumericalPER.booleanArrow_boundFiber : ∀ (f : ℕ → Bool) (hf : Computable f)
+  (b : Bool),
+  CategoricalEssentialIncompleteness.boundFiber (CategoricalEssentialIncompleteness.NumericalPER.booleanArrow f hf)
+      (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint b) =
+    CategoricalEssentialIncompleteness.NumericalPER.supportSubobject {n | f n = b} ⋯
+CategoricalEssentialIncompleteness.NumericalPER.boolean_fiber_recursive : ∀ (f : ℕ → Bool),
+  Computable f → ∀ (b : Bool), ComputablePred fun n => f n = b
+CategoricalEssentialIncompleteness.NumericalPER.boolean_fiber_is_recursive_support : ∀
+  (f :
+    CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ ⟶
+      CategoricalEssentialIncompleteness.NumericalPER.boolean)
+  (b : Bool),
+  ∃ A,
+    (ComputablePred fun x => x ∈ A) ∧
+      CategoricalEssentialIncompleteness.boundFiber f (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint b) =
+        CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯
+CategoricalEssentialIncompleteness.NumericalPER.recursive_support_is_boolean_fiber : ∀ (A : Set ℕ),
+  (ComputablePred fun x => x ∈ A) →
+    ∃ f,
+      CategoricalEssentialIncompleteness.boundFiber f
+          (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint true) =
+        CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯
+CategoricalEssentialIncompleteness.NumericalPER.exists_boolean_fiber_iff_recursive_support : ∀
+  (A : CategoryTheory.Subobject (CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ)),
+  (∃ f,
+      CategoricalEssentialIncompleteness.boundFiber f
+          (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint true) =
+        A) ↔
+    ∃ D, (ComputablePred fun x => x ∈ D) ∧ CategoricalEssentialIncompleteness.NumericalPER.supportSubobject D ⋯ = A
+CategoricalEssentialIncompleteness.NumericalPER.isComplemented_iff_boolean_fiber : ∀
+  (A : CategoryTheory.Subobject (CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ)),
+  IsComplemented A ↔
+    ∃ f,
+      CategoricalEssentialIncompleteness.boundFiber f
+          (CategoricalEssentialIncompleteness.NumericalPER.booleanPoint true) =
+        A
+CategoricalEssentialIncompleteness.NumericalPER.isComplemented_iff_recursive_support : ∀
+  (A : CategoryTheory.Subobject (CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ)),
+  IsComplemented A ↔
+    ∃ D, (ComputablePred fun x => x ∈ D) ∧ CategoricalEssentialIncompleteness.NumericalPER.supportSubobject D ⋯ = A
+CategoricalEssentialIncompleteness.NumericalPER.supportSubobject_isComplemented_iff : ∀ (A : Set ℕ),
+  IsComplemented (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯) ↔ ComputablePred fun x => x ∈ A
+CategoricalEssentialIncompleteness.Numerical.domainSubobject_recursivePair : ∀ (A : Set ℕ)
+  (hA : ComputablePred fun x => x ∈ A),
+  CategoricalEssentialIncompleteness.Numerical.nat.domainSubobject
+      (CategoricalEssentialIncompleteness.Numerical.recursivePair A hA).pos =
+    CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯
+CategoricalEssentialIncompleteness.Numerical.isComplemented_domain_iff_recursive_support : ∀
+  (e : CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+  IsComplemented e ↔ ComputablePred fun x => x ∈ e.support
+CategoricalEssentialIncompleteness.Numerical.recursive_support_isComplemented : ∀ (A : Set ℕ),
+  (ComputablePred fun x => x ∈ A) →
+    IsComplemented (CategoricalEssentialIncompleteness.NumericalPER.supportSubobject A ⋯)
+CategoricalEssentialIncompleteness.Numerical.isComplemented_iff_represented_domain : ∀
+  (A : CategoryTheory.Subobject (CategoricalEssentialIncompleteness.NumericalPER.discrete Set.univ)),
+  IsComplemented A ↔ ∃ a, CategoricalEssentialIncompleteness.Numerical.nat.domainSubobject a.pos = A
+CategoricalEssentialIncompleteness.Numerical.isComplemented_domainSubobject_iff : ∀
+  (e : CategoricalEssentialIncompleteness.Numerical.nat.Domain),
+  IsComplemented (CategoricalEssentialIncompleteness.Numerical.nat.domainSubobject e) ↔ IsComplemented e
