@@ -1,0 +1,1009 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Finite proof algebras in range restriction categories},pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newcommand{\R}{\mathscr R}
+\newcommand{\D}{\mathsf D}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\id}{\operatorname{id}}
+\title{Finite proof algebras\\in range restriction categories}
+\author{Florian Lengyel}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Increasing domains of finite constructor stages determine an initial
+algebra when the corresponding partial folds admit gluing with exactly
+those domains. A universal object with partial retractions supplies the
+typed constructor embeddings. For finitary inference polynomials, a
+Turing morphism constructs the partial folds by a parameterized recursion
+theorem; the finite-stage domain unions remain an existence hypothesis.
+Under regularity, parameter-stable finite
+recursion, and decidable equality on atoms, disjoint computational
+domains determine a consistent classical deductive presentation. An
+inseparable pair makes every consistent computational extension of this
+presentation incomplete. The stated construction hypotheses are realized
+by partial recursive maps. The range question for a selected presheaf
+completion is examined in relation to Heller's example of a recursion
+category without ranges.
+\end{abstract}
+\tableofcontents
+
+\section{Computational domains and inseparability}\label{gen:background}
+
+Finite proofs require both an object of codes and a recursion principle
+for interpreting those codes. In a category of partial computations,
+the finite stages of an interpretation can be partial arrows with
+increasing domains. Their gluing gives the fold required by initiality.
+The construction below applies this principle to typed inference rules
+and then proves consistency by finite Boolean valuations.
+
+We use restriction categories in the sense of \cite{CockettLack}.
+Composition is written $gf=g\circ f$. A restriction category assigns
+to each $f:X\to Y$ a domain idempotent $\bar f:X\to X$ satisfying
+\[
+ f\bar f=f,\qquad \bar f\bar g=\bar g\bar f,
+ \qquad\overline{g\bar f}=\bar g\bar f,
+ \qquad\bar h f=f\overline{hf}.
+\]
+The middle identities require $f,g$ to have the same source; the last
+requires $h$ to have source $Y$. An arrow is total when $\bar f=1_X$.
+A restriction idempotent $e=\bar e$ is called a domain. We assume zero
+arrows with $\overline{0_{X,Y}}=0_X$ whenever zeros are used. Domains
+are ordered by $e\le d$ if $de=e$, with meet $ed$ and bottom $0_X$.
+
+For $f:X\to Y$ and a domain $q$ on $Y$, inverse image is
+$f^*q=\overline{qf}$. A range operator assigns a domain $\ran(f)$ on
+$Y$ such that, for every domain $e$ on $Y$ and arrow $g:Y\to Z$,
+\[
+ \ran(f)f=f,\qquad
+ \ran(ef)=e\ran(f),\qquad
+ \ran(g\ran(f))=\ran(gf).
+\]
+In particular, $\ran(f)\le e$ if and only if $ef=f$.
+Where specified, the universal range property further says that
+$vf=wf$ implies $v\ran(f)=w\ran(f)$.
+
+Write $X\boxtimes Y$ for a binary restriction product. Its projections
+are total, and pairing satisfies
+\[
+ \pi_1\langle f,g\rangle=f\bar g,\qquad
+ \pi_2\langle f,g\rangle=g\bar f,\qquad
+ \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+The diagonal $\Delta_X=\langle1_X,1_X\rangle$ is total. Total arrows
+have ordinary binary products. The union convention in the next section
+is Heller's universal agreement convention \cite[\S6]{Heller}.
+
+Domains $c,c'$ on $U$ are complementary if $cc'=0_U$ and
+$c\vee c'=1_U$. They separate $a,b$ if $a\le c$ and $b\le c'$.
+A disjoint pair is inseparable if no complementary pair separates it.
+For a total negation-code map $\nu:S\to S$, a theorem domain $t$ on
+$S$ is consistent if $t\nu^*t=0_S$, and complete if
+$t\vee\nu^*t=1_S$.
+
+\begin{proposition}\label{gen:turing}
+Suppose a restriction category has binary restriction products and finite
+domain joins preserved by total inverse image. Let $U$ satisfy
+$0_U\ne1_U$, and let $\tau:U\boxtimes U\to U$ have the following
+parameter-universality property: every $F:U\boxtimes U\to U$ has a
+total $g:U\to U$ with $\tau(g\boxtimes1_U)=F$. Suppose disjoint
+output domains $q_0,q_1$ have binary case distinction: for every
+complementary $c,c'$ there is a total $h:U\to U$ with
+$h^*q_0=c'$ and $h^*q_1=c$. Then, for $d=\tau\Delta_U$, the domains
+$a=d^*q_0$ and $b=d^*q_1$ are inseparable.
+\end{proposition}
+\begin{proof}
+They are disjoint because inverse image preserves meets and zero.
+If $c,c'$ separated them, choose $h$ as stated and apply universality
+to $h\pi_2$. Precomposition with $\langle1_U,g\rangle$ gives
+$dg=hg$. Consequently
+\[
+ g^*a=g^*c',\qquad g^*b=g^*c.
+\]
+The separator inequalities make $g^*c=g^*c'$. These domains are
+complementary because $g$ is total, contradicting $0_U\ne1_U$.
+\end{proof}
+
+The Turing morphism constructs this inseparable pair and, in
+Section~\ref{gen:turing-fold-section}, the partial folds for finitary
+inference polynomials. The finite-proof construction also uses ranges,
+constructor embeddings, and domain unions. The consistency
+argument additionally uses finite-list recursion and decidable equality
+on the atom object.
+
+
+\section{Initial algebras from domains and partial folds}\label{gen:finite-algebras}
+
+A constructor map can encode arbitrary one-step expressions without
+requiring every code to be well founded. The domain generated in finitely
+many constructor steps selects the finite expressions. To obtain an
+initial algebra, the corresponding finite partial folds must also assemble
+to an arrow.
+
+Let $\mathscr A$ be a restriction category with zero arrows satisfying
+$\overline{0_{X,Y}}=0_X$. The restriction order is
+$f\le g$ when $f=g\bar f$. A \emph{restriction functor}
+$P:\mathscr A\to\mathscr A$ is a functor satisfying
+$P(\bar f)=\overline{P(f)}$. It preserves the restriction order and
+induces a functor
+\[
+ \widetilde P:\Tot(\operatorname{Split}_r\mathscr A)
+ \longrightarrow\Tot(\operatorname{Split}_r\mathscr A),
+ \qquad (X,x)\longmapsto(PX,Px),\quad f\longmapsto P(f).
+\]
+Here an object $(X,x)$ consists of a restriction idempotent on $X$,
+and a total arrow $f:(X,x)\to(Y,y)$ satisfies
+$f=yfx$ and $\bar f=x$.
+
+For restriction idempotents $e_n$ on $W$, a \emph{union} $e$ means an
+upper bound such that, for all parallel arrows $v,w:W\to Z$,
+\[
+ (\forall n,\ ve_n=we_n)\quad\Longrightarrow\quad ve=we.
+\]
+This condition implies that $e$ is their least upper bound. Stability
+means that the same condition holds after restriction product with any
+identity arrow.
+
+Suppose there is a total arrow $\gamma:PW\to W$ and an arrow
+$\delta:W\to PW$ such that
+\begin{equation}\label{gen:code-inverse}
+ \delta\gamma=1_{PW},\qquad
+ \gamma\delta=\bar\delta.
+\end{equation}
+Thus $\gamma$ is a restriction monomorphism, with restriction inverse
+$\delta$. Define domains on $W$ by
+\begin{equation}\label{gen:finite-stages}
+ e_0=0_W,\qquad e_{n+1}=\gamma P(e_n)\delta.
+\end{equation}
+For any restriction idempotent $v$ on $PW$,
+$\gamma v\delta=\overline{v\delta}$, by the restriction identities
+and \eqref{gen:code-inverse}. Hence each $e_n$ is a restriction
+idempotent. They form an increasing sequence, since $P$ preserves the
+restriction order. The functor $P$ need not preserve zero; its value at
+$e_0$ can include nullary constructors.
+
+\begin{theorem}\label{gen:initial}
+Let $P:\mathscr A\to\mathscr A$ be a restriction functor and let
+$\gamma,\delta$ satisfy \eqref{gen:code-inverse}. Assume that the
+sequence \eqref{gen:finite-stages} has a union $e$ and that $P(e)$ is
+a union of the domains $P(e_n)$. For every $\widetilde P$-algebra
+\[
+ \alpha:(PX,Px)\longrightarrow(X,x)
+ \quad\text{in }\Tot(\operatorname{Split}_r\mathscr A),
+\]
+form the sequence of arrows $h_n:W\to X$ given by
+\begin{equation}\label{gen:partial-folds}
+ h_0=0_{W,X},\qquad h_{n+1}=\alpha P(h_n)\delta.
+\end{equation}
+Assume that this sequence has an upper bound $h:W\to X$ with
+$\bar h=e$. Then
+\[
+ \iota=\gamma P(e):(PW,P(e))\longrightarrow(W,e)
+\]
+is an initial $\widetilde P$-algebra. The unique algebra morphism from
+it to $\alpha$ is the arrow $h:(W,e)\to(X,x)$ obtained from
+\eqref{gen:partial-folds}.
+\end{theorem}
+\begin{proof}
+For every $n$, the equality
+$e_{n+1}\gamma P(e_n)=\gamma P(e_n)$ and the inequality
+$e_{n+1}\le e$ give
+$e\gamma P(e_n)=\gamma P(e_n)$. The union property of $P(e)$ gives
+\[
+ e\gamma P(e)=\gamma P(e).
+\]
+Since $\gamma$ is total, $\overline{\gamma P(e)}=P(e)$.
+Thus $\iota$ is a total arrow between the indicated split objects.
+
+For a target algebra, its support and totality equations are
+$x\alpha=\alpha$ and $\bar\alpha=P(x)$. Inductively,
+\[
+ xh_n=h_n,\qquad \bar h_n=e_n.
+\]
+Indeed, the first equality for $h_{n+1}$ follows from
+$x\alpha=\alpha$. The inductive hypothesis gives
+$P(x)P(h_n)=P(h_n)$; therefore
+\[
+ \bar h_{n+1}
+ =\overline{P(h_n)\delta}
+ =\overline{P(e_n)\delta}
+ =\gamma P(e_n)\delta=e_{n+1}.
+\]
+The arrows $h_n$ are increasing, beginning with zero, because $P$ and
+composition preserve the restriction order.
+
+Let $h$ be the specified upper bound. Since $h_n\le h$ and
+$\bar h_n=e_n$, we have $he_n=h_n$. The equalities
+$xhe_n=xh_n=h_n=he_n$ and the union property of $e$ imply
+$xh=xhe=he=h$. Thus $h$ is a total arrow $(W,e)\to(X,x)$.
+For every $n$,
+\begin{align*}
+ h\gamma P(e_n)
+ &=he_{n+1}\gamma P(e_n)\\
+ &=h_{n+1}\gamma P(e_n)\\
+ &=\alpha P(h_n)\delta\gamma P(e_n)\\
+ &=\alpha P(h_n)
+  =\alpha P(h)P(e_n).
+\end{align*}
+The union property of $P(e)$ now gives
+$h\gamma P(e)=\alpha P(h)P(e)=\alpha P(h)$.
+This is the algebra-morphism equation.
+
+If $k:(W,e)\to(X,x)$ is another algebra morphism, induction gives
+$ke_n=h_n$. The initial case uses zero. For the induction step,
+\[
+ ke_{n+1}
+ =k\gamma P(e_n)\delta
+ =\alpha P(k)P(e_n)\delta
+ =\alpha P(ke_n)\delta=h_{n+1}.
+\]
+The union property gives $ke=he$, and both maps are supported on $e$.
+Consequently $k=h$.
+\end{proof}
+
+The upper bound in Theorem~\ref{gen:initial} is automatically the join
+of the sequence. If $v$ is another upper bound, then
+$ve_n=he_n$ for every $n$, so $ve=h$ and $h\le v$.
+It is enough, in particular, that the particular sequences
+\eqref{gen:partial-folds} have compatible joins whose restriction is the
+union of their restrictions. Preservation of arrow joins by $P$ is not
+required: the proof uses the union agreement property on $P(e_n)$.
+
+\section{Typed constructor maps from a universal object}\label{gen:coding}
+
+Ranges turn an arbitrary retraction into a restriction inverse. This
+supplies the constructor maps needed in Theorem~\ref{gen:initial}
+from a suitable universal-object hypothesis.
+
+\begin{lemma}\label{gen:section-inverse}
+Suppose a range restriction category has the universal range property
+\[
+ vf=wf\quad\Longrightarrow\quad
+ v\ran(f)=w\ran(f).
+\]
+Let $\gamma:Z\to W$ be total and let $r:W\to Z$ satisfy
+$r\gamma=1_Z$. Put $j=\ran(\gamma)$ and $\delta=rj$. Then
+\[
+ \delta\gamma=1_Z,\qquad
+ \gamma\delta=j=\bar\delta.
+\]
+\end{lemma}
+\begin{proof}
+The first equality follows from $j\gamma=\gamma$. Since
+$\gamma r\gamma=\gamma$, the universal range property gives
+$\gamma rj=j$. The restriction equation
+$\bar r\gamma=\gamma\overline{r\gamma}=\gamma$ gives
+$\bar rj=j$ by the same property. Hence
+$\bar\delta=\overline{rj}=\bar rj=j$.
+\end{proof}
+
+Let $\mathscr A$ now be a split range restriction category with
+universal ranges and binary restriction products. Put
+$\mathscr E=\Tot(\mathscr A)$, and assume that it has the finite
+limits and finite coproducts used below. Fix an expression object $S$.
+The partial slice $\mathscr A_S$ has total arrows $q:X\to S$ as
+objects. An arrow from $q:X\to S$ to $q':Y\to S$ is an arrow
+$f:X\to Y$ of $\mathscr A$ satisfying
+\[
+ q'f=q\bar f.
+\]
+Restriction and composition are inherited from $\mathscr A$.
+Its total subcategory is $\mathscr E/S$.
+
+For $0\le i\le k$, supply objects $A_i$ and total maps
+$s_i:A_i\to S^i$ and $t_i:A_i\to S$. These are rule instances,
+premise tuples, and conclusions. Define
+\[
+ P_\Sigma:\mathscr E/S\longrightarrow\mathscr E/S,
+ \qquad
+ (q:X\to S)\longmapsto
+ \left(\coprod_{i=0}^k A_i\times_{S^i}X^i
+     \xrightarrow{[t_i\pi_{A_i}]}S\right).
+\]
+On a slice arrow it fixes the rule instance and applies that arrow to
+each premise. Suppose this functor extends to a restriction functor
+$P_\Sigma:\mathscr A_S\to\mathscr A_S$.
+
+Here extensivity means that finite coproducts exist and that the canonical
+functor
+\[
+ (\mathscr E/X)\times(\mathscr E/Y)\longrightarrow\mathscr E/(X+Y),
+\]
+which takes coproducts on objects and arrows, is an equivalence, with the
+corresponding empty-coproduct condition. One sufficient condition for the
+extension is that $\mathscr E$ be extensive and that finite products and
+coproducts of total
+restriction monomorphisms are again restriction monomorphisms. Let
+$\mathcal M$ be their class in $\mathscr E$. It is stable under
+pullback: the pullback of $m$ along a total $f$ is obtained by splitting
+the domain of $m^\dagger f$. Each partial arrow is represented by its
+domain span, whose left leg belongs to $\mathcal M$. Finite products,
+pullback against $s_i$, and the extensive coproduct preserve these
+domain spans and their composition pullbacks. Applying $P_\Sigma$ to
+both legs therefore defines the required partial-arrow action. Its
+restriction is obtained by applying $P_\Sigma$ to the domain inclusion,
+so it is a restriction functor.
+
+\begin{proposition}\label{gen:typed-coding}
+Assume that every object of $\mathscr E$ admits a total arrow into an
+object $U$ with a partial retraction. For a rule presentation $\Sigma$
+as above, put $W=S\boxtimes U$ and $q=\pi_1:W\to S$.
+There are arrows in $\mathscr A_S$
+\[
+ \gamma:P_\Sigma(q)\longrightarrow q,
+ \qquad \delta:q\longrightarrow P_\Sigma(q)
+\]
+such that $\gamma$ is total and
+$\delta\gamma=1$, $\gamma\delta=\bar\delta$.
+\end{proposition}
+\begin{proof}
+Write $Z$ for the carrier of $P_\Sigma(q)$ and $t:Z\to S$ for its
+conclusion map. Choose a total $k:Z\to U$ and a partial retraction
+$\ell:U\to Z$. Define
+\[
+ \gamma=\langle t,k\rangle:Z\to S\boxtimes U,
+ \qquad r=\ell\pi_2:S\boxtimes U\to Z.
+\]
+Then $q\gamma=t$ and $r\gamma=1_Z$. Lemma~\ref{gen:section-inverse}
+provides $\delta=r\ran(\gamma)$ with the required inverse equations.
+It remains to check its partial-slice type. Since
+$t\delta\gamma=t=q\gamma$, universal ranges give
+$t\delta\ran(\gamma)=q\ran(\gamma)$. The inverse equations and
+$\delta=\delta\ran(\gamma)$ turn this into
+$t\delta=q\bar\delta$, as required.
+\end{proof}
+
+Apply Theorem~\ref{gen:initial} in $\mathscr A_S$ to this constructor
+map. If its finite-stage domains have the two indicated unions and its
+partial-fold sequences admit the indicated joins, it gives an initial
+$P_\Sigma$-algebra in $\mathscr E/S$. Splitting in
+$\mathscr A_S$ introduces no further object requirement: a splitting
+of a domain on $q:X\to S$ inherits its total map to $S$.
+
+For a finitary polynomial, the condition on $P_\Sigma(e)$ follows
+from preservation of the relevant unions by restriction products,
+total inverse image, and the finite coproducts in the presentation.
+Indeed, every tuple of finitely many stages is bounded by the stage
+with their maximum index. Thus the union of the $i$-fold diagonal
+stages is the $i$-fold product of the union. Pullback against $s_i$
+and the finite coproduct give exactly the asserted union on
+$P_\Sigma(e)$. The union of the finite-stage domains themselves and
+the gluing of partial folds remain separate existence conditions.
+
+\begin{corollary}\label{gen:parameter-stability}
+For a typed presentation $\Sigma$ over $S$, suppose the two unions in
+Theorem~\ref{gen:initial} are stable under restriction products.
+Suppose also that its partial-fold gluing hypothesis holds after adjoining
+any parameter object $K$. Then the constructed initial algebra is stable
+under this parameter extension: if its carrier is $c:D\to S$, the
+parameterized presentation over $K\boxtimes S$ has initial carrier
+$1_K\boxtimes c:K\boxtimes D\to K\boxtimes S$.
+\end{corollary}
+\begin{proof}
+The parameterized rule objects are $K\boxtimes A_i$. All premises
+and the conclusion retain the same $K$-coordinate. The polynomial
+\[
+ P_{K\Sigma}:\mathscr E/(K\boxtimes S)
+       \longrightarrow\mathscr E/(K\boxtimes S)
+\]
+satisfies the canonical identification
+\[
+ P_{K\Sigma}(1_K\boxtimes q)
+ \cong 1_K\boxtimes P_\Sigma(q).
+\]
+Finite pullbacks and the stable coproducts give this identification on
+objects and morphisms. Use the constructor $1_K\boxtimes\gamma$
+and decoder $1_K\boxtimes\delta$. Their finite stages are
+$1_K\boxtimes e_n$, by induction. The stable-union assumptions give
+their union $1_K\boxtimes e$ and the required union of its polynomial
+images. The assumed gluing for parameterized folds permits application
+of Theorem~\ref{gen:initial}. Splitting $1_K\boxtimes e$ gives
+$K\boxtimes D$ with its displayed conclusion map.
+\end{proof}
+
+
+
+\section{Turing morphisms and partial folds}\label{gen:turing-fold-section}
+
+For finitary inference polynomials, a Turing morphism constructs the
+partial fold required by Theorem~\ref{gen:initial}. Its restriction to
+the finite-stage domain is the total fold. The argument uses an evaluator
+for partial maps that respect the expression type.
+
+Let $\mathscr A$ be a split range restriction category with restriction
+zeros, binary restriction products, and universal ranges. Put
+$\mathscr E=\Tot(\mathscr A)$, and assume that $\mathscr E$ has a
+terminal object $1$. A total restriction embedding means a total
+restriction monomorphism. Suppose every object has such an embedding
+into an object $U$. Fix a Turing morphism
+$\tau:U\boxtimes U\to U$ with the following parameter property:
+for every object $Y$ and arrow $F:Y\boxtimes U\to U$, there is a
+total $c:Y\to U$ such that
+\begin{equation}\label{gen:turing-parameter}
+ \tau(c\boxtimes1_U)=F.
+\end{equation}
+
+This property passes from a restriction category to its restriction
+idempotent splitting. Indeed, an arrow
+$F:(Y,e)\boxtimes U\to U$ has an underlying arrow
+$F:Y\boxtimes U\to U$ with $F=F(e\boxtimes1_U)$.
+If $c:Y\to U$ is supplied by \eqref{gen:turing-parameter}, the arrow
+$ce:(Y,e)\to U$ is total in the splitting and satisfies the same
+evaluation equation there. Thus a terminal object supplied by the
+splitting may be used as a parameter object in that equation.
+
+\begin{lemma}[Parameterized recursion]\label{gen:recursion}
+For every arrow $G:Y\boxtimes U\boxtimes U\to U$, there is a total
+$c:Y\to U$ such that
+\[
+ \tau\langle c\pi_1,\pi_2\rangle
+ =G\langle\pi_1,c\pi_1,\pi_2\rangle:
+ Y\boxtimes U\longrightarrow U.
+\]
+\end{lemma}
+\begin{proof}
+Choose a total restriction embedding
+$\kappa:U\boxtimes U\to U$ with partial inverse
+$\lambda:U\to U\boxtimes U$. Parameter universality supplies a
+total specialization map $s:U\boxtimes U\to U$ with
+\[
+ \tau(s(a,b),x)=\tau(a,\kappa(b,x)).
+\]
+Here, and in the following calculation, expressions with arguments
+denote compositions with the indicated projections and pairings.
+For instance, the displayed equation is between arrows
+$U\boxtimes U\boxtimes U\to U$.
+
+Define $F:Y\boxtimes U\to U$ by
+\[
+ F=G(1_Y\boxtimes(s\Delta_U\boxtimes1_U))
+       (1_Y\boxtimes\lambda).
+\]
+Choose a total $k:Y\to U$ with $\tau(k\boxtimes1_U)=F$, and set
+$c=s\langle k,k\rangle:Y\to U$. For the associated arrows on
+$Y\boxtimes U$, specialization and $\lambda\kappa=1$ give
+\begin{align*}
+ \tau(c(y),x)
+ &=\tau(k(y),\kappa(k(y),x))\\
+ &=F(y,\kappa(k(y),x))\\
+ &=G(y,s(k(y),k(y)),x)=G(y,c(y),x).
+\end{align*}
+The map $c$ is total because $s$ and $k$ are total.
+\end{proof}
+
+Fix total maps $q:W\to S$ and $p:X\to S$. Choose restriction
+embeddings $j_W:W\to U$ and $j_X:X\to U$, with inverses
+$r_W$ and $r_X$. The arrow
+\[
+ H_0=r_X\tau(1_U\boxtimes j_W):U\boxtimes W\longrightarrow X
+\]
+evaluates program codes on $W$ and retains outputs in $X$. To restrict
+it to the matching expression type, put
+\[
+ r=\ran(\Delta_S),\qquad
+ v=\langle pH_0,q\pi_2\rangle:U\boxtimes W\to S\boxtimes S,
+ \qquad e=\overline{rv},\qquad H=H_0e.
+\]
+The equality $\pi_1\Delta_S=\pi_2\Delta_S$ and universal ranges give
+$\pi_1r=\pi_2r$. Moreover, $e\le\bar v=\bar H_0$, and the restriction
+identities give $rv=ve$. Consequently
+\[
+ pH=\pi_1ve=\pi_1rv=\pi_2rv=\pi_2ve=q\pi_2e.
+\]
+Since $\bar H=e$, the arrow $H$ belongs to $\mathscr A_S$, with source
+$q\pi_2$ and target $p$.
+
+This restriction retains every well-typed specialization of $H_0$:
+if $c:1\to U$ is total and $H_0(c\boxtimes1_W)=g$ with
+$pg=q\bar g$, then
+\begin{equation}\label{gen:type-filter}
+ H(c\boxtimes1_W)=g.
+\end{equation}
+Indeed, write $j=c\boxtimes1_W$. The typing equation gives
+$vj=\Delta_Spg$, whence $rvj=vj$ and
+$j^*e=\overline{rvj}=\bar g$. Therefore
+$Hj=H_0ej=H_0j\bar g=g$.
+
+For an object $K$, write $K\cdot q$ for
+$q\pi_2:K\boxtimes W\to S$. A finitary rule polynomial on
+$\mathscr A_S$ has a total map
+\[
+ \operatorname{st}_{K,q}:K\cdot P_\Sigma(q)
+                  \longrightarrow P_\Sigma(K\cdot q).
+\]
+It repeats the $K$-parameter at every premise of a rule instance.
+At a nullary instance it forgets the parameter. On total parameter
+maps it is natural; in particular, for every total $c:1\to K$,
+\begin{equation}\label{gen:total-parameter-strength}
+ \operatorname{st}_{K,q}(c\boxtimes1_{P_\Sigma(q)})
+   =P_\Sigma(c\boxtimes1_q),
+\end{equation}
+with the unit isomorphisms understood. The displayed identity follows
+by the premise projections, including the empty tuple for a nullary
+instance. Only naturality in total parameter maps is used here.
+
+\begin{theorem}[Turing construction of a partial fold]\label{gen:turing-fold}
+Assume the categorical and Turing hypotheses of this section. Let
+$P=P_\Sigma:\mathscr A_S\to\mathscr A_S$ be a finitary rule
+polynomial with its restriction-functor action and the maps
+\eqref{gen:total-parameter-strength}. Let
+$\gamma:P(q)\to q$, $\delta:q\to P(q)$ satisfy
+\eqref{gen:code-inverse}. For every total algebra
+$\alpha:P(p)\to p$, there is an arrow $h:q\to p$ in
+$\mathscr A_S$ such that
+\begin{equation}\label{gen:fold-fixed-point}
+ h=\alpha P(h)\delta.
+\end{equation}
+If the finite-stage domains have the two unions in
+Theorem~\ref{gen:initial}, their union supports an initial algebra
+in $\mathscr E/S$.
+\end{theorem}
+\begin{proof}
+Use the typed evaluator $H:U\cdot q\to p$ just constructed, and put
+\[
+ G=\alpha P(H)\operatorname{st}_{U,q}
+                  (1_U\boxtimes\delta):U\boxtimes W\to X.
+\]
+Every factor has its indicated partial-slice type, so
+$pG=q\pi_2\bar G$. Form the arrow
+\[
+ \widehat G=j_XG(1_U\boxtimes r_W):U\boxtimes U\to U.
+\]
+Lemma~\ref{gen:recursion}, with parameter object $1$, supplies a
+total code $c:1\to U$ satisfying
+$\tau(c\boxtimes1_U)=\widehat G(c\boxtimes1_U)$.
+Precomposing with $j_W$ and using $r_Wj_W=1_W$ and
+$r_Xj_X=1_X$ yields
+\[
+ H_0(c\boxtimes1_W)=G(c\boxtimes1_W).
+\]
+The right side is well typed. Equation~\eqref{gen:type-filter}
+therefore gives the same equality with $H$ in place of $H_0$.
+Set $h=H(c\boxtimes1_W)$. By
+\eqref{gen:total-parameter-strength},
+\[
+ h=G(c\boxtimes1_W)
+   =\alpha P(H)P(c\boxtimes1_W)\delta
+   =\alpha P(h)\delta.
+\]
+
+For the finite partial folds \eqref{gen:partial-folds}, induction
+gives $h_n\le h$, beginning with zero and using
+\eqref{gen:fold-fixed-point}. Consequently $e_n\le\bar h$ for all
+$n$, and their union satisfies $e\le\bar h$. The arrow $he$ has
+restriction $e$ and extends every $h_n$. It is therefore the upper
+bound required by Theorem~\ref{gen:initial}.
+\end{proof}
+
+The same theorem applies to parameterized presentations over
+$K\boxtimes S$. Consequently, when the two finite-stage unions are
+stable under restriction products, the initial algebras satisfy
+Corollary~\ref{gen:parameter-stability} without a separate gluing
+assumption. The Turing construction provides a partial fold;
+the union of the finite-stage domains specifies its total finite part.
+
+
+\section{The uniform numerical instance}\label{gen:numerical}
+
+Take $\mathscr A=\operatorname{Split}_r(\R_{\mathrm{rec}})$.
+The category $\R_{\mathrm{rec}}$ has the positive finite powers
+$\N^k$, $k\ge1$, as objects and partial recursive functions as arrows,
+with extensional equality.
+Objects of $\mathscr A$ may be identified with c.e. carriers, and
+its arrows with partial recursive maps between them. Finite limits of
+total arrows and finite tagged coproducts
+exist, and every carrier has a total computable embedding into $\N$
+with a partial recursive inverse. The partial-slice polynomial above
+applies a partial map to every premise, being defined exactly when all
+of those applications are defined.
+
+Fix finite numerical presentations of the rule maps and of the chosen
+constructor and decoder. The domains $e_n$ are uniformly c.e.: the
+recurrence \eqref{gen:finite-stages} gives a procedure from an index
+for $e_n$ to an index for $e_{n+1}$. Dovetailing these procedures
+recognizes their union $e$. The pointwise agreement criterion verifies
+that it is a stable union. Finiteness of the premise tuples gives
+$P_\Sigma(e)=\bigvee_nP_\Sigma(e_n)$ by taking the maximum of their
+finitely many stage indices.
+
+For any algebra $\alpha$ in the computational slice, the arrows $h_n$
+are likewise uniformly partial recursive. Dovetail their computations
+on an input until one returns. Since the $h_n$ are increasing, any two
+returned values agree. The resulting partial recursive map $h$ has
+domain $\bigcup_n\operatorname{dom}(h_n)$, namely $e$, and extends
+every $h_n$. Theorem~\ref{gen:initial} therefore constructs the
+initial algebra in the numerical computational slice.
+
+This argument allows c.e. instance carriers, with premise and conclusion
+maps total on those carriers. When the instance carriers are recursive
+and the constructor is the usual finite-tree encoding, the resulting
+proof carrier has the decidable validity test given by recursive checking
+of its nodes.
+
+The construction is stable under a c.e. parameter carrier $K$: retain
+the parameter in every intermediate tuple and in every simulation.
+The same dovetailing procedure computes each parameterized fold,
+uniformly in its parameter value. Thus it supplies the parameter
+stability required for list, syntax, and proof algebras below.
+
+A category is regular if it has finite limits and
+regular-epimorphism--monomorphism factorizations, with regular
+epimorphisms stable under pullback. A regular epimorphism is a
+coequalizer of some pair.
+
+\begin{proposition}\label{gen:numerical-regularity}
+The total category of $\mathscr A$ is regular and extensive. The range
+factorization of each total arrow is its regular image factorization.
+Equality on $\N$ is decidable in this category.
+\end{proposition}
+\begin{proof}
+Finite limits are computed on c.e. carriers by tuples and equality
+tests; tagged finite coproducts are disjoint and stable under pullback.
+Let $f:X\to Y$ be total on its c.e. source. Its image $I$ is c.e.
+The surjection $X\to I$ has a computable section: enumerate $X$,
+dovetail evaluations of $f$, and return a preimage when the requested
+value appears. This terminates on every input in $I$. Thus $f$
+factors as a split epimorphism followed by its range inclusion.
+Split epimorphisms are coequalizers of their kernel pairs, and every
+regular epimorphism in this factorization system is surjective and
+hence split. Their pullbacks are again split epimorphisms. This proves
+regularity and the image assertion. The ordinary equality test gives
+the required arrow $\N^2\to1+1$.
+\end{proof}
+
+
+\section{A categorical construction of a consistent presentation}
+\label{gen:consistency-section}
+
+Finite Boolean valuations suffice to prove consistency of a presentation
+whose positive and negative atomic axioms have disjoint supports. The
+valuation used for a proof depends on its finitely many positive axiom
+leaves. This permits a construction inside a computational category even
+when the entire positive axiom domain has no computational complement.
+
+Let $\R$ be a range restriction category and put
+\[
+ \mathscr E=\Tot(\operatorname{Split}_r(\R)).
+\]
+Assume that $\mathscr E$ is regular and extensive and that the
+factorization of each total arrow through its restriction range is its
+regular image factorization in $\mathscr E$. Thus pullback-stable regular
+images agree with the computational ranges. A distinguished subobject
+of $(X,e)$ is an inclusion $(X,d)\to(X,e)$ for $d\le e$.
+Under the stated compatibility assumption, every subobject of
+$\mathscr E$ is distinguished up to isomorphism: apply the image
+factorization to a representing monomorphism. The assumption therefore
+concerns a computational category, rather than a larger category with
+additional noncomputational subobjects.
+
+The domain poset of each object is consequently canonically isomorphic
+to its subobject poset.
+For domains $d,e$ on $X$, their join is the regular image of the
+copairing of their inclusions into $X$. It is again a computational
+domain. Pullbacks preserve this image and, by extensivity, the finite
+coproduct used to form it. Therefore inverse image along a total arrow
+preserves finite computational joins. Intersections agree with products
+of restriction idempotents, and the empty join is the zero domain.
+
+For each $X$, define the functor
+\[
+ L_X:\mathscr E\longrightarrow\mathscr E,
+ \qquad L_X(Y)=1+X\times Y,\qquad
+ L_X(f)=1_1+(1_X\times f).
+\]
+Assume that $\operatorname{List}(X)$ is the carrier of an initial
+$L_X$-algebra, with recursion stable under an arbitrary fixed parameter
+object. Write $2=1+1$, with the two
+coproduct injections denoted $0,1:1\to2$. Finite extensivity defines
+the Boolean operations on $2$ by their finite truth tables. Constant
+Boolean arrows are denoted by their values, with the unique arrow to
+$1$ suppressed.
+
+Fix an object $U$ with decidable equality: there is an arrow
+$\epsilon:U\times U\to2$ whose inverse image of $1$ is the diagonal
+$\Delta_U$. Let $a,b$ be disjoint restriction domains on $U$, and let
+\[
+ m_A:A\longrightarrow U,\qquad m_B:B\longrightarrow U
+\]
+be their inclusions in the splitting. Disjointness means
+$A\times_U B\cong0$.
+
+Suppose the functor
+\[
+ F_U:\mathscr E\longrightarrow\mathscr E,
+ \qquad F_U(X)=U+X+X^2,
+\]
+with its componentwise action on arrows, has an initial algebra stable
+under parameters. Denote its carrier by $S$ and its constructors by
+\[
+ \theta:U\to S,\qquad \nu:S\to S,
+ \qquad \mathbin{\Rightarrow}:S^2\to S.
+\]
+These constructors express atoms, negation, and implication. The
+parameter-stability assumptions on initial algebras below mean that the
+corresponding algebra remains initial after adjoining a fixed parameter
+to every rule instance, premise, and conclusion.
+
+Define arrows of logical axiom instances
+\[
+ H_1,H_3:S^2\longrightarrow S,\qquad H_2:S^3\longrightarrow S
+\]
+by
+\begin{align*}
+ H_1(\alpha,\beta)&=\alpha\Rightarrow(\beta\Rightarrow\alpha),\\
+ H_2(\alpha,\beta,\gamma)
+   &=(\alpha\Rightarrow(\beta\Rightarrow\gamma))
+      \Rightarrow((\alpha\Rightarrow\beta)
+                    \Rightarrow(\alpha\Rightarrow\gamma)),\\
+ H_3(\alpha,\beta)&=(\nu\beta\Rightarrow\nu\alpha)
+                         \Rightarrow(\alpha\Rightarrow\beta).
+\end{align*}
+The formulas here denote composites of the constructors and projections;
+they do not require elements of $S$. Let the nullary rule object be
+\[
+ A_0=A+B+S^2+S^3+S^2,
+\]
+with conclusion map $[\theta m_A,\nu\theta m_B,H_1,H_2,H_3]$.
+There are no unary rules. The binary rule object is $A_2=S^2$, with
+premises $(\alpha,\alpha\Rightarrow\beta)$ and conclusion $\beta$.
+These data determine the polynomial functor
+\[
+ P:\mathscr E/S\longrightarrow\mathscr E/S,
+ \qquad
+ P(q:X\to S)=
+ \left(A_0+(A_2\times_{S^2}X^2)\longrightarrow S\right).
+\]
+On arrows, $P$ fixes rule instances and applies the given slice arrow
+to both premise entries. Suppose this functor has a parameter-stable
+initial algebra, with underlying conclusion map $c:D\to S$.
+
+\begin{lemma}\label{gen:theorem-image}
+The range $t_0=\ran(c)$ is the least distinguished subobject of $S$
+containing all nullary conclusions and closed under the displayed binary
+rule.
+\end{lemma}
+\begin{proof}
+Factor $c$ as a regular epimorphism $e:D\to T_0$ followed by its range
+inclusion $m:T_0\to S$. The functor $P$ preserves regular epimorphisms:
+finite products and pullbacks preserve them in a regular category, and
+finite coproducts preserve them in an extensive regular category. Thus
+$P(e)$ is a regular epimorphism. Grafting proves that the structure
+arrow of the slice object $P(m)$ factors through $m$ after
+precomposition with $P(e)$.
+The regular-image property therefore makes that arrow factor
+through $m$ itself. This is closure under the rules. If a distinguished
+subobject $n:T\to S$ is rule-closed, the factorizations of its rule
+conclusions equip it with a $P$-algebra. Initiality gives a map
+$D\to T$ over $S$, whence $t_0\le t$ by the leastness of the range.
+\end{proof}
+
+\begin{theorem}\label{gen:finite-valuation-consistency}
+Let $\R$ be a range restriction category such that
+$\mathscr E=\Tot(\operatorname{Split}_r\R)$ is regular and
+extensive, restriction ranges agree with regular images, and
+finite-list recursion is stable under parameters. Let $U$ have
+decidable equality, and let $a,b$ be disjoint restriction domains
+on $U$. Suppose that the syntax functor $F_U$ and the rule functor
+$P$ defined above have parameter-stable initial algebras, with
+syntax object $S$ and proof conclusion map $c:D\to S$.
+Then $t_0=\ran(c)$ is consistent:
+\[
+ t_0\wedge\nu^*t_0=0_S.
+\]
+\end{theorem}
+\begin{proof}
+Put $L=\operatorname{List}(A)$. Decidable equality on $U$ and list
+recursion define the membership arrow
+\[
+ \mu:U\times L\longrightarrow2.
+\]
+Its value is $1$ precisely when the atom agrees with the image under
+$m_A$ of an entry of the list. The empty-list value is $0$, and the
+cons step takes the disjunction of the equality test for the new entry
+and the preceding membership value. List induction and
+$A\times_U B\cong0$ give
+\begin{equation}\label{gen:negative-list}
+ \mu(m_B\times1_L)=0.
+\end{equation}
+Indeed, a successful equality test between an $A$-entry and a $B$-entry
+would give an arrow to their zero pullback.
+
+Parameterized syntax recursion gives an evaluation arrow
+\[
+ v:S\times L\longrightarrow2
+\]
+that evaluates an atom by $\mu$, negation by Boolean complementation,
+and implication by its Boolean truth table. Each of $H_1,H_2,H_3$
+evaluates to $1$, as is checked on the finitely many Boolean tuples.
+Modus ponens preserves the value $1$.
+
+There is also an arrow $\ell:D\to L$ listing the positive atomic
+axiom leaves of a proof. At an $A$-axiom it returns the singleton list;
+at all other nullary rules it returns the empty list; at a binary rule
+it concatenates the lists of its premise proofs. This is a fold of the
+initial proof algebra into the object $S\times L\to S$.
+
+Membership and Boolean conjunction over finite lists define an arrow
+\[
+ h:D\times L\longrightarrow2
+\]
+which tests whether every entry of $\ell(p)$ occurs in the parameter
+list. Form the decidable subobject $G\hookrightarrow D\times L$
+specified by the Boolean implication
+\begin{equation}\label{gen:good-proof}
+ h(p,l)=1\quad\Longrightarrow\quad v(c(p),l)=1.
+\end{equation}
+Here and below this notation specifies identities and subobjects using
+the displayed arrows; it is valid in the internal logic of
+$\mathscr E$.
+
+The object $G\to S\times L$ is a subalgebra of the proof algebra
+with parameter $L$. At a positive axiom, the antecedent in
+\eqref{gen:good-proof} is exactly the required atomic membership.
+At a negative axiom, \eqref{gen:negative-list} makes its negation true.
+At a logical axiom, Boolean validity gives the conclusion. At a binary
+node, containment of the concatenated positive-leaf list implies
+containment for each premise. The two premise conditions and the truth
+table for implication then give the conclusion condition.
+
+By parameter-stable initiality, the inclusion $G\to D\times L$ is
+an isomorphism. Explicitly, the unique algebra map from the initial
+algebra into $G$, followed by the inclusion, is its identity algebra
+endomorphism. The monic inclusion is consequently a split epimorphism.
+Thus \eqref{gen:good-proof} holds on all of $D\times L$.
+
+Define the refutation object by the pullback
+\[
+\begin{tikzcd}
+ D^-\arrow[r,"r"]\arrow[d,"c^-"']&D\arrow[d,"c"]\\
+ S\arrow[r,"\nu"']&S.
+\end{tikzcd}
+\]
+Pullback stability of the regular images gives
+$\ran(c^-)=\nu^*t_0$. Let $Q=D\times_S D^-$, using $c$ and $c^-$,
+with projections $p:Q\to D$ and $q:Q\to D^-$. Evaluate both
+proofs against the list $\ell p\mathbin{+\!+}\ell rq$, where
+$+\!+$ denotes concatenation. Each positive-leaf list is contained in
+this concatenation. Hence \eqref{gen:good-proof} gives the value $1$
+to both conclusions. But $crq=\nu cp$, so their evaluations are Boolean
+complements. The disjoint coproduct injections $0,1:1\to2$ force
+$Q\cong0$. Pullback stability of images now gives
+$t_0\wedge\nu^*t_0=0_S$.
+\end{proof}
+
+\begin{corollary}\label{gen:essential}
+Under the hypotheses of
+Theorem~\ref{gen:finite-valuation-consistency}, assume additionally
+that $a,b$ are inseparable computational domains.
+Then every consistent computational domain $t$ on $S$ with
+$t_0\le t$ is incomplete. In particular, this holds for every
+consistent computational theory extending the displayed presentation,
+where a computational theory means a distinguished subobject closed
+under its logical axioms and modus ponens.
+\end{corollary}
+\begin{proof}
+The nullary constructors give arrows $u_A:A\to D$ and $u_B:B\to D$
+with
+\[
+ cu_A=\theta m_A,\qquad cu_B=\nu\theta m_B.
+\]
+Taking ranges gives
+$a\le\theta^*t_0$ and $b\le\theta^*\nu^*t_0$.
+If an extension $t$ were consistent and complete, then
+$t\wedge\nu^*t=0_S$ and $t\vee\nu^*t=1_S$. Total inverse image
+along $\theta$ would give a complementary separator of $a,b$.
+\end{proof}
+
+
+
+\section{Presheaf completion and the range obstruction}
+\label{gen:completion}
+
+Heller constructs a recursion category from partial maps of simplicial
+sets in which the diagonal $Y\to Y\boxtimes Y$ has no range
+\cite[\S10, Example~5, p.~1267]{Heller}. Range existence must therefore
+be established in the category used for deduction. The following
+calculation identifies a failure in a selected presheaf completion.
+
+Let $\mathscr C$ be a small
+category with a stable class $\mathcal M$ of monomorphisms: it contains
+isomorphisms and is closed under composition and pullback. Write
+$y:\mathscr C\to\Set^{\mathscr C^{\op}}$ for Yoneda. Select a
+presheaf monomorphism $\mu:P\to Q$ when each pullback along
+$yX\to Q$ is isomorphic to $ym:yA\to yX$ for some $m\in\mathcal M$.
+Denote this class by $\widehat{\mathcal M}$.
+Garner and Lin prove that it is stable and that Yoneda induces
+\begin{equation}\label{gen:selected-domains}
+ \operatorname{Sub}_{\mathcal M}(X)
+ \cong\operatorname{Sub}_{\widehat{\mathcal M}}(yX)
+\end{equation}
+\cite[\S3.1 and Lemma~9]{GarnerLin}.
+Applying the defining pullback condition to $1_{yX}$ gives surjectivity;
+full faithfulness gives the order isomorphism. Thus equations for
+complementary separators in these selected orders are preserved and
+reflected. If $0$ is initial in $\mathscr C$ and every initial map
+$0\to X$ belongs to $\mathcal M$, the selected bottom on
+$yX$ is $y0\to yX$; $y0$ need not be the empty presheaf.
+
+Write $\operatorname{Par}(\mathscr E,\mathcal M)$ for the category
+whose arrows $X\rightharpoonup Y$ are spans
+$X\xleftarrow{m}D\xrightarrow{f}Y$ with $m\in\mathcal M$, modulo
+isomorphism of spans. Composition uses pullbacks, and restriction
+replaces the right leg $f$ by $m$. Its total arrows are ordinary arrows
+of $\mathscr E$. The following obstruction concerns the existence of
+ranges in this partial-map category.
+
+\begin{proposition}\label{gen:no-presheaf-range}
+Let $\mathscr C_{\mathrm{rec}}$ be the total category of the numerical
+restriction-idempotent splitting, and let $\mathcal M$ consist of its
+restriction monomorphisms. For a non-c.e. set $B\subseteq\N$, the
+copairing of the numeral maps
+\[
+ F_B:\coprod_{n\in B}y1\longrightarrow y\N
+\]
+has no restriction range in
+$\operatorname{Par}(\Set^{\mathscr C_{\mathrm{rec}}^{\op}},
+\widehat{\mathcal M})$.
+\end{proposition}
+\begin{proof}
+A range would, by \eqref{gen:selected-domains}, correspond to the
+inclusion of a c.e. set $T\subseteq\N$. Every summand factors through
+it, so $B\subseteq T$ by full faithfulness of Yoneda. For $k\notin B$,
+each numeral summand factors through $y(\N\setminus\{k\})$. The
+coproduct property gives the same factorization for $F_B$. Leastness of
+a range therefore gives $T\subseteq\N\setminus\{k\}$ for every
+$k\notin B$. Hence $T=B$, a contradiction.
+\end{proof}
+
+This obstruction uses an externally indexed coproduct. The finite-stage
+construction of Theorem~\ref{gen:initial} requires unions for specified
+recursively generated domain sequences. In the numerical case their
+uniformity makes these unions available. Theorem~\ref{gen:turing-fold}
+supplies the partial folds without a separate arrow-gluing assumption.
+It does not supply the finite-stage domain unions.
+
+\begin{problem}\label{gen:next-problem}
+For a recursion category satisfying the hypotheses of
+Theorem~\ref{gen:turing-fold}, derive the required finite-stage domain
+unions from a categorical iteration structure. Construct a finite-tree
+evaluator and prove that its termination domain is the union of the
+constructor stages, with the stated stability and polynomial preservation.
+Determine which such categories satisfy the regular-image and finite
+valuation hypotheses of Theorem~\ref{gen:finite-valuation-consistency}.
+\end{problem}
+
+The fixed-point equation \eqref{gen:fold-fixed-point} determines the
+fold on every finite stage, but it does not assert that the fold's full
+domain is generated by those stages. The domain equality required in
+this problem is therefore additional to the recursion theorem.
+
+\begin{thebibliography}{9}
+\bibitem{CockettLack} J.~R.~B.~Cockett and S.~Lack,
+Restriction categories I: categories of partial maps,
+\emph{Theoretical Computer Science} \textbf{270}(1--2) (2002), 223--259.
+\bibitem{Heller} A.~Heller,
+An existence theorem for recursion categories,
+\emph{Journal of Symbolic Logic} \textbf{55}(3) (1990), 1252--1268.
+\href{https://doi.org/10.2307/2274486}{doi:10.2307/2274486}.
+\bibitem{GarnerLin} R.~Garner and D.~Lin,
+\emph{Cocompletion of restriction categories},
+\href{https://arxiv.org/abs/1610.07164}{arXiv:1610.07164}.
+\end{thebibliography}
+\end{document}

@@ -3,8 +3,9 @@
 Research notes and a Lean development on categorical essential incompleteness.
 The current account connects a Turing morphism, computational inseparability,
 polynomial finite-proof algebras, and theorem ranges. It proves essential
-incompleteness for a numerical classical deductive presentation. The existence
-of the corresponding logical presentations in general recursion categories
+incompleteness for a numerical classical deductive presentation and gives a
+general construction under explicit domain-union and logical hypotheses.
+Deriving the required finite-stage domain unions from categorical iteration
 remains open.
 
 ## Manuscript
@@ -20,6 +21,17 @@ states the general logical-presentation existence problem. No appendix remains.
 The [outline, mathematical review, writing review, and verification record](Audit/2026-10-29-polynomial-proofs/README.md)
 accompany the note. This account has not been formalized in Lean. The existing
 Lean checkpoint described below concerns the earlier development.
+
+The supplement [Finite proof algebras in range restriction categories](manuscript/general_recursion_category_construction.pdf)
+([LaTeX source](manuscript/general_recursion_category_construction.tex))
+constructs typed constructor maps and uses a Turing morphism to produce partial
+folds. Specified stable domain unions then give initial proof algebras. A finite
+valuation argument proves consistency under explicit regularity and equality
+hypotheses, and inseparability gives essential incompleteness. The supplement
+credits Heller's range counterexample and examines a selected presheaf completion.
+Its [review record](Audit/2026-10-29-general-construction/README.md) and
+[continuation prompt](CONTINUATION_GENERAL_RECURSION_CATEGORIES.md) identify the
+remaining construction problems. These results have not been formalized in Lean.
 
 Earlier notes remain available in [the manuscript directory](manuscript/README.md).
 

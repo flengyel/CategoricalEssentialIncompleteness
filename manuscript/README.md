@@ -24,6 +24,29 @@ The [outline and review records](../Audit/2026-10-29-polynomial-proofs/README.md
 include the mathematical and writing reviews, compilation status, and
 source/PDF hashes. This note has not been formalized in Lean.
 
+## General construction
+
+The supplement [Finite proof algebras in range restriction categories](general_recursion_category_construction.pdf)
+([LaTeX source](general_recursion_category_construction.tex), 29 October 2026)
+proves a finite-stage initial-algebra theorem and obtains typed constructor
+embeddings from universal-object dominance and universal ranges. A parameterized
+recursion theorem constructs partial folds from a Turing morphism, leaving the
+specified stable domain unions as existence hypotheses. Under regularity,
+range/image compatibility, parameter-stable finite recursion, and decidable atom
+equality, disjoint domains give a consistent classical presentation; inseparability
+makes every consistent computational extension incomplete.
+
+The numerical split category realizes the stated construction hypotheses. The
+final section credits Heller's recursion-category example without ranges and
+checks a particular selected presheaf completion. The [outline and reviews](../Audit/2026-10-29-general-construction/README.md)
+and [continuation prompt](../CONTINUATION_GENERAL_RECURSION_CATEGORIES.md)
+record the remaining general existence questions. This supplement is not yet
+formalized in Lean.
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error general_recursion_category_construction.tex
+```
+
 ## Earlier notes
 
 
