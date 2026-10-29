@@ -70,14 +70,42 @@ The construction is left adjoint to (S,ν,t)↦(S,t,ν*t) for total involutive
 binary domain joins but not their stability under arbitrary total pullback.
 Neither result needs ranges, iteration, regularity, or a proof algebra.
 
-Next, investigate classical deductive closure over this signed presentation,
-with the least extra categorical structure possible. Construct its selected
-theorem domain and prove consistency, preferably conservation of literals.
-Do not assume such a closure or identify the free signed presentation with
-the classical Hilbert calculus. Ordinary syntax-code negation need not be
-involutive: a comparison with the involutive presentation must address that
-distinction explicitly. The existing conditional proof-algebra construction
-remains available; no new interpretation is needed for each extension.
+The user's subsequent direction is now the primary target: construct a
+category D_T intrinsically associated with each intended consistent
+computational extension T and a comparison that transports its separators
+back to the starting recursion category C. A direct implementation is a
+restriction functor G_T:D_T→C preserving zero and binary domain joins.
+With a,b inseparable on U in C, construct an assertion object Y_T and actual
+theorem/refutation domains p_T,n_T in D_T. Identify G_T(Y_T) with U and
+prove a≤G_T(p_T), b≤G_T(n_T). More generally, supply a total
+u_T:U→G_T(Y_T) and these inequalities after u_T*, proving that this
+inverse image preserves the required joins.
+
+A separator in D_T then gives a separator in C. Consistency must imply
+p_T n_T=0, and completeness must imply p_T∨n_T=1. This gives essential
+incompleteness. Neither fullness nor faithfulness is required for this
+backwards functor. The categories, the functor, and the domain identifications
+must be constructed from the formal systems and their extension relation;
+merely assuming separator reflection leaves the central task open.
+
+The distinction is directional: for F:C→D, preservation of separators
+C→D only reflects inseparability D→C. That was not the needed transfer
+when C is the category with the known inseparable pair. A functor G:D→C
+uses the same elementary preservation law in the useful direction.
+Alternatively, a forward F:C→D may work if target separators can actually
+be lifted. Do not confuse these two mechanisms.
+
+The PA benchmark is the fixed Rosser reduction θ(n)=code(ρ(numeral n))
+from a disjoint inseparable c.e. pair A,B to the theorem/refutation pair
+of every consistent c.e. extension of PA. Its inverse image sends
+separators backwards. An intrinsic category-level construction must recover
+this connection without silently assuming soundness of the extensions.
+
+Classical deductive closure over the signed presentation is a subsidiary
+construction to test against this target. The signed presentation does not
+itself supply the classical Hilbert calculus. Ordinary syntax-code negation
+need not be involutive. The existing conditional proof-algebra results remain
+available; no new interpretation is needed for each extension in that setting.
 
 Indeed, its existing atom constructor θ:U→S already gives the fixed map
 θ*:D(S)→D(U), with a≤θ*t₀ and b≤θ*ν*t₀ from one-node proofs.

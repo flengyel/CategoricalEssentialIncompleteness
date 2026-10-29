@@ -19,9 +19,8 @@ The classical application reuses the actual atom and one-node proof maps
 in the committed sources. It strengthens their conclusion to inseparability
 of every consistent extension's theorem/refutation pair. It does not derive
 the classical proof algebra or its consistency from the minimal signed
-construction. The next construction is classical deductive closure over
-the signed presentation, with explicit computational domains and a proof
-of consistency, preferably conservation of literals.
+construction. Classical deductive closure over the signed presentation
+remains a candidate to test against the primary target recorded below.
 
 The reflection result assumes preservation of restrictions, zero, and
 binary domain joins. The preservation counterexample is the second
@@ -41,3 +40,15 @@ Records:
 These are author-side reviews, not independent human referee reports.
 No new theorem is Lean-formalized. Earlier mathematical sources and PDFs
 are unchanged.
+
+## Subsequent research direction
+
+The user has selected separator transport from an extension-associated
+category D_T back to the starting recursion category C as the primary
+construction target. The [continuation document](../../CONTINUATION_GENERAL_RECURSION_CATEGORIES.md)
+now states the direct functor direction G_T:D_T→C, the required
+theorem/refutation-domain inequalities, and the consistency/completeness
+connection. The source-grounded program assessment is in
+[PROGRAM_SOURCES.md](../2026-10-29-program/PROGRAM_SOURCES.md).
+The signed construction remains a proved preliminary result; it is not
+a replacement for this intrinsic connection to formal systems.
