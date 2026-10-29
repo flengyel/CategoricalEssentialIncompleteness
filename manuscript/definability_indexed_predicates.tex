@@ -99,9 +99,7 @@ A pair $(e_+,e_-)$ in $E(X)$ is \emph{complementary} when
 \[
  e_+\wedge e_-=0_X,\qquad e_+\vee e_-=1_X.
 \]
-Write $\Comp(E(X))$ for the set of these pairs. In the numerical
-recursion category, domains are computably enumerable sets; complementary
-pairs are a recursive set and its complement.
+Write $\Comp(E(X))$ for the set of these pairs.
 
 \section{An indexed lattice of predicates}
 
@@ -260,7 +258,8 @@ recursive functions of the specified types, with extensional equality.
 Fix a recursive bijection $\langle-,-\rangle:\mathbb N^2\to\mathbb N$
 with recursive projections, and take
 $X\boxtimes Y=\{\langle x,y\rangle:x\in X,\ y\in Y\}$.
-The domains on $X$ are the computably enumerable subsets of $X$.
+The domains on $X$ are the computably enumerable subsets of $X$;
+complementary domain pairs are recursive subsets of $X$ and their complements.
 Take $P(X)$ to be the ordinary
 powerset of $X$, with inverse image along total recursive functions,
 and let $j_X$ include the domains as subsets.
