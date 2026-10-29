@@ -19,6 +19,10 @@ development; it has not yet been added to the Lean formalization. The
 [review and continuation record](../Audit/2026-10-29-deduction/README.md)
 records its relation to the existing sources.
 
+The [outline and assessment against the Di Paola--Heller program](../Audit/2026-10-29-program/README.md)
+examine the connection between deductive closure, representation, and intrinsic
+categorical recursion, and record the separate mathematical writing review.
+
 The companion note [Definability over a recursion category](definability_indexed_predicates.pdf)
 ([LaTeX source](definability_indexed_predicates.tex), 29 October 2026) gives the
 ordinary categorical argument using indexed predicate lattices, an embedding of
