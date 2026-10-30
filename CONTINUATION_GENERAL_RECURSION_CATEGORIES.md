@@ -19,9 +19,9 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/essential_incompleteness_via_local_connectedness_v4.tex and .pdf:
+- manuscript/essential_incompleteness_via_local_connectedness_v5.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  Version 4, 30 October 2026, 27 pages.
+  Version 5, 30 October 2026, 27 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
@@ -72,10 +72,14 @@ No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
 
-## Version 4: purpose and topology
+## Version 5: direct theorem statement and attribution
 
-The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v4.tex`
-and `.pdf`, visibly marked Version 4 and dated 30 October 2026.
+The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`
+and `.pdf`, visibly marked Version 5 and dated 30 October 2026.
+The abstract names the syntactic recursion categories of Di Paola–Montagna.
+Its opening states the new theorem directly; do not describe it as extending
+an established “local-connectedness method.” Use “a section-lifting condition,”
+without the redundant adjective “specified.”
 The abstract and introduction lead with the use of a locally connected target
 to establish recursive inseparability in a source that need not be locally
 connected. The sections lift from target to source; the resulting pair is

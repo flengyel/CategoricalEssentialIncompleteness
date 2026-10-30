@@ -1,0 +1,2277 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Local connectedness, range functors, and essential incompleteness (Version 5)},pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\PA}{\mathrm{PA}}
+\newcommand{\Pfn}{\mathbf{Pfn}}
+\newcommand{\ran}{\operatorname{ran}}
+\title{Local connectedness, range functors,\\
+and essential incompleteness}
+\author{Florian Lengyel}
+\date{Version 5\\30 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We establish recursive inseparability in a recursion category using a
+functor into a locally connected restriction category, even when the
+source is not locally connected. The functor preserves restrictions,
+ranges, zero maps, and binary coproducts and satisfies a section-lifting
+condition. Under the target hypotheses, local
+connectedness supplies sections associated with the images of
+complementary pairs of source restriction idempotents. Lifting these
+sections to source arrows allows a Turing morphism to yield an
+inseparable pair in the source. Preservation of products is unnecessary.
+We apply the theorem to the syntactic recursion categories of Di Paola
+and Montagna associated with consistent computably enumerable extensions
+of Peano arithmetic. These categories are not locally connected;
+interpretation in all countable models gives faithful functors
+satisfying the hypotheses.
+
+It follows that every consistent computably enumerable
+extension of Peano arithmetic is incomplete. The categorical theorem
+supplies a fixed numerical inseparable pair, and finite computation
+proofs place its two sets in the inverse images of the theorem and
+refutation sets under numeral substitution. These inclusions persist
+under theory extension, so completeness would give a recursive separator.
+
+A further application uses cosheaves on the three-point space obtained
+by gluing two Sierpi\'nski spaces along their open singleton. We construct
+a recursion category not restriction-equivalent to the classical one,
+and a consistent propositional theory with no complete consistent
+extension represented by a computably enumerable subdiagram of its
+formula diagram.
+\end{abstract}
+
+\section{Introduction}
+
+Di Paola and Heller proposed recursive inseparability of theorems and
+refutable sentences as part of a categorical formulation of
+incompleteness \cite[pp.~594--595]{DPH}. We use a locally connected
+target category to prove inseparability of restriction idempotents in
+a source recursion category that need not itself be locally connected.
+
+Rosolini's $P$-categories provide the partial-map framework
+\cite{RosoliniThesis,Rosolini}. Bernardi obtained categorical
+inseparability results from precomplete equivalence relations, including
+PA-provable program equality among his examples
+\cite[pp.~125--128]{Bernardi}. Heller used local connectedness to
+construct recursion categories \cite[Sections 8--9]{Heller}.
+Lengyel extended this existence method using faithful functors
+preserving restrictions, coproducts, zero maps, and iteration, without
+requiring preservation of the near product \cite{Lengyel2004,Corrections}.
+Theorem~\ref{thm:local-lifting}
+uses a functor preserving restrictions, ranges, zero maps, and binary
+coproducts to construct target sections associated with complementary
+source restriction idempotents. Its lifting hypothesis
+requires these sections to be images of source arrows; a Turing
+morphism then yields an inseparable pair in the source.
+
+The principal application is to the syntactic recursion categories
+$S_T$ of Di Paola and Montagna, where $T$ is a consistent theory
+extending Peano arithmetic ($\PA$). Programs
+are identified when $T$ proves a single universally quantified sentence
+asserting equality of their partial graphs \cite{Montagna,DPM}.
+When $T$ is computably enumerable (c.e.), $S_T$ is not locally connected
+\cite[Corollary 4.4]{DPM}. Interpretation in the models of $T$ with
+carrier $\N$ gives a faithful functor with these preservation properties
+into a product of categories of sets and partial functions. This target
+is locally connected, and
+programs selecting between predicates proved complementary in $T$
+supply the required lifts. The construction commutes with theory
+extension. The related pointwise quotients fail to have well-defined
+composition for consistent c.e.\ extensions of $\PA$
+\cite[Corollary 2]{Composition}.
+
+A separate application to the classical recursion category gives two
+disjoint c.e.\ sets that are recursively inseparable: no recursive set
+contains the first and avoids the second. Finite computation proofs
+place this pair, under numeral substitution, inside the theorem and
+refutation sets of $\PA$. The inclusions persist under theory extension.
+Consequently every consistent c.e.\ extension of $\PA$ has recursively
+inseparable theorem and refutation sets. Completeness would make these
+two c.e.\ sets recursive. Thus $\PA$ is \emph{essentially incomplete}:
+every consistent c.e.\ extension is incomplete.
+
+For a nonnumerical example, we use the three-point space obtained by
+gluing two copies of the Sierpi\'nski space along their common open
+singleton. Its set-valued cosheaves correspond to diagrams of shape
+$1\leftarrow0\to2$. Using numerical presentations of these diagrams,
+we construct a recursion category not equivalent as a restriction
+category to the classical one. In its restriction splitting we construct
+a consistent propositional theory and use the inseparability theorem
+to prove that every consistent extension represented by a restriction
+idempotent is incomplete.
+
+Sections~\ref{sec:syntactic}--\ref{sec:family} construct the model
+functors, and Section~\ref{sec:lifting} proves the lifting theorem and
+its incompleteness corollary. Sections~\ref{sec:arithmetic}
+and~\ref{sec:cosheaves} give the arithmetic and cosheaf applications.
+The appendices provide the nonnumerical construction and a counterexample
+to the inseparability theorem with its lifting hypothesis omitted.
+
+\section{Categorical preliminaries}\label{sec:preliminaries}
+
+Rosolini's representation theorem realizes a $P$-category inside a
+category of partial maps whose permitted monic legs belong to a
+specified class of monomorphisms \cite[Theorem 1.2]{Rosolini}.
+We use restriction-category notation for these partial maps.
+
+\subsection{Partial maps and restriction idempotents}
+
+Composition is written $gf=g\circ f$, so $f$ is applied first.
+A \emph{restriction category} assigns to every arrow
+$f:X\rightharpoonup Y$ an arrow
+$\bar f:X\rightharpoonup X$ satisfying
+\[
+ f\bar f=f,\qquad
+ \bar f\bar g=\bar g\bar f,\qquad
+ \overline{g\bar f}=\bar g\bar f,\qquad
+ \bar h f=f\overline{hf}.
+\]
+In the middle two equations $g:X\rightharpoonup Z$; in the last,
+$h:Y\rightharpoonup Z$ \cite{CockettLack}.
+The arrows $\bar f$ are idempotent. They are called
+\emph{restriction idempotents}.
+The arrow $f$ is \emph{total} when $\bar f=1_X$.
+The total arrows form a subcategory, denoted by
+$\operatorname{Tot}(\mathcal C)$ for a restriction category $\mathcal C$.
+
+Restriction idempotents on $X$ are ordered by $a\le b$ when $ba=a$.
+Their meet is composition, their greatest element is $1_X$, and
+$a\vee b$ denotes their least upper bound when it exists.
+For parallel partial arrows, the restriction order is
+$f\le g$ when $f=g\bar f$.
+A \emph{restriction zero} $0_{X,Y}:X\rightharpoonup Y$ is
+absorbing under composition and satisfies
+$\overline{0_{X,Y}}=0_{X,X}$. We abbreviate $0_{X,X}$ to $0_X$.
+Restriction idempotents $a,b$ on $X$ are disjoint when $ab=0_X$.
+They are complementary when also $a\vee b=1_X$.
+A disjoint pair $a_0,a_1$ is \emph{inseparable} if no complementary
+pair $c,c'$ satisfies $a_0\le c$ and $a_1\le c'$.
+
+For $f:X\rightharpoonup Y$ and a restriction idempotent $a$ on $Y$,
+the \emph{inverse image} of $a$ is the restriction idempotent
+$f^*a=\overline{af}$ on $X$.
+A restriction idempotent $r$ on $Y$ \emph{receives} $f$ when $rf=f$.
+The \emph{range} $\ran(f)$ is the least restriction idempotent receiving $f$;
+we require the agreement law
+\[
+ gf=hf\quad\Longrightarrow\quad
+ g\ran(f)=h\ran(f)
+ \qquad(g,h:Y\rightharpoonup Z).
+\]
+For an ordinary partial function $f$, the restriction idempotent
+$\bar f$ and the range $\ran(f)$ are the partial identities on its
+domain of definition and image, respectively.
+
+A restriction idempotent $e$ on $X$ \emph{splits} if
+$e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
+with $rm=1_A$. The category is \emph{split} when every restriction
+idempotent splits.
+Its \emph{restriction splitting}, denoted by
+$\operatorname{Split}(\mathcal C)$, has objects $(X,e)$, where $e$ is a
+restriction idempotent on $X$, and arrows
+$f:(X,e)\rightharpoonup(Y,d)$ given by original arrows
+$f:X\rightharpoonup Y$ satisfying $f=dfe$.
+The identity of $(X,e)$ is $e$, and $f$ is total there when
+$\bar f=e$. Thus $(X,e)$ is the object through which $e$ splits.
+
+\subsection{Products, coproducts, and local connectedness}
+
+A \emph{binary restriction product} $X\times Y$ has total
+projections $\pi_1:X\times Y\to X$ and $\pi_2:X\times Y\to Y$.
+For arrows $f:Z\rightharpoonup X$ and $g:Z\rightharpoonup Y$,
+there is a unique $\langle f,g\rangle:Z\rightharpoonup X\times Y$
+with
+\[
+ \pi_1\langle f,g\rangle=f\bar g,\qquad
+ \pi_2\langle f,g\rangle=g\bar f,\qquad
+ \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+Products of arrows are obtained by this pairing and the projections.
+The total categorical diagonal is
+$\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
+This is the restriction-category description of the near product
+in a $P$-category \cite{Rosolini,CockettLack}.
+
+Binary \emph{restriction coproducts} are categorical coproducts with
+total injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$.
+For arrows $f:X\rightharpoonup Z$ and $g:Y\rightharpoonup Z$,
+write $[f,g]:X+Y\rightharpoonup Z$ for their copairing.
+The \emph{codiagonal} is
+$\nabla_X=[1_X,1_X]:X+X\to X$.
+In a category with ranges and restriction coproducts,
+$a\vee b=\ran[a,b]$ for restriction idempotents on the same object.
+
+A \emph{range functor} $F:\mathcal C\to\mathcal D$ is a covariant
+functor preserving restrictions, ranges, restriction zeros, and binary
+restriction coproducts. In particular, the canonical map
+\[
+ \chi_{X,Y}=[F i_0,F i_1]:FX+FY\longrightarrow F(X+Y)
+\]
+is an isomorphism, and
+$F[f,g]\chi_{X,Y}=[Ff,Fg]$ for $f:X\rightharpoonup Z$ and
+$g:Y\rightharpoonup Z$. A range functor preserves binary
+joins of restriction idempotents by the preceding formula, and hence
+complementary pairs.
+It need not preserve restriction products. For example, the functor
+$F:\Pfn\to\Pfn$ given by $F(X)=X\times\{0,1\}$ and
+$F(f)=f\times1_{\{0,1\}}$ preserves restrictions, images, zeros,
+and coproducts. Its canonical map from $F(X\times Y)$ to
+$FX\times FY$ sends $((x,y),a)$ to $((x,a),(y,a))$, and is
+not surjective when $X,Y$ are nonempty. Here $\Pfn$ denotes the
+category of sets and partial functions.
+
+A restriction idempotent $a$ is \emph{connected} if $a=b\vee c$ and $bc=0$
+imply $b=0$ or $c=0$. The category is \emph{locally connected}
+when its connected restriction idempotents are jointly epimorphic: for
+$f,g:X\rightharpoonup Y$, the equations $fa=ga$ for every connected
+restriction idempotent $a$ on $X$ imply $f=g$.
+A \emph{partial monomorphism} $p:X\rightharpoonup Y$ satisfies
+$pu=pv\Rightarrow\bar p u=\bar p v$ for all
+$u,v:W\rightharpoonup X$.
+A \emph{section} of $p$ is an arrow $s:Y\rightharpoonup X$
+with $ps=\bar s$ and $psp=p$.
+\emph{Weak choice} means that every partial monomorphism has such
+a section. For partial functions, this is the existence of the
+partial inverse of an injection on its domain.
+
+\subsection{Recursion categories}
+
+A restriction category with binary restriction products and zeros is
+\emph{prodominical} if $f\times0=0$ for every arrow $f$ and every
+zero arrow of the required type. It is \emph{isotypical} if any
+two of its objects are isomorphic.
+
+A \emph{Turing morphism} on $U$ is an arrow
+$\tau:U\times U\rightharpoonup U$ such that, for every object $X$
+and every $f:X\times U\rightharpoonup U$, there is a total
+parameter map $r:X\to U$ satisfying
+\[
+ f=\tau(r\times1_U).
+\]
+A \emph{recursion category} here is a prodominical isotypical
+category with binary restriction products and a Turing morphism,
+as in \cite[Section 9]{Heller}.
+
+\section{The syntactic recursion category}\label{sec:syntactic}
+
+Let $T$ be a consistent classical theory in the language of arithmetic
+containing $\PA$. Write $\N$ for the natural numbers and $\omega$
+for their formal numerical type. The other formal numerical types are
+generated from $\omega$ by binary products and tagged coproducts.
+Fix recursive numerical codings
+whose bijection and structural equations are provable in $\PA$.
+For a typed program index $e:X\rightharpoonup Y$, let $G_e(x,y)$ be its
+$\Sigma_1$ output formula. It existentially quantifies a computation trace
+over a primitive-recursive trace test. Fix a deterministic programming
+system whose graph identities, including functionality, composition,
+and parameterization, are provable in $\PA$.
+
+The category $S_T$ has these formal types as objects and typed indices
+modulo the equivalence relation
+\begin{equation}\label{eq:uniform}
+ e\equiv_T f
+ \quad\Longleftrightarrow\quad
+ T\vdash \forall x\forall y\,
+       \bigl(G_e(x,y)\leftrightarrow G_f(x,y)\bigr).
+\end{equation}
+The quantifiers belong to the single sentence proved in $T$.
+Write $[e]_T$ for the equivalence class of the typed index $e$.
+This is the unprimed syntactic construction of Montagna and
+Di Paola--Montagna \cite{Montagna,DPM}; Montagna's $S$ is $S_{\PA}$.
+
+For a program operation $\operatorname{comp}$ implementing composition,
+$\PA$ proves
+\begin{equation}\label{eq:composition}
+ G_{\operatorname{comp}(f,e)}(x,z)
+ \leftrightarrow
+ \exists y\,\bigl(G_e(x,y)\land G_f(y,z)\bigr).
+\end{equation}
+Substitution of uniformly equivalent graphs under this existential proves
+that composition descends to \eqref{eq:uniform}. The identity and
+associativity equations follow from the same graph identities.
+
+The pointwise relation defining the primed systems is different:
+two programs are identified when $T$ proves their partial computations
+equal separately at each standard input. Montagna's $S'$ is the case
+$T=\PA$ of Di Paola and Montagna's $S'_T$. Their claimed
+local-connectedness result includes an arithmetic soundness hypothesis
+\cite[Theorem 4.5, pp.~658--659]{DPM}. However,
+\emph{Pointwise provable equality and the failure of composition}
+\cite[Corollary 2]{Composition} proves that the proposed composition
+is not independent of representatives for any consistent c.e.\
+extension $T$ of $\PA$. Thus these primed systems do not define
+categories with that composition. The uniformly quantified equivalence
+\eqref{eq:uniform} gives the well-defined composition proved above.
+
+Every $\Sigma_1$ formula $C(x)$ represents a partial identity: search for
+a witness to $C(x)$ and then return $x$. Write $[C]_T$ for this
+restriction idempotent.
+Then
+\begin{equation}\label{eq:domain-order}
+ [C]_T\le[D]_T
+ \quad\Longleftrightarrow\quad
+ T\vdash\forall x\,(C(x)\longrightarrow D(x)).
+\end{equation}
+Conjunction and disjunction give meets and joins of restriction
+idempotents. The restriction $\overline{[e]_T}$ and range $\ran([e]_T)$
+are represented respectively by
+\[
+ \exists y\,G_e(x,y),\qquad
+ R_e(y):=\exists x\,G_e(x,y).
+\]
+For the range property, a restriction idempotent $[C]_T$ receives
+$[e]_T$ precisely when
+$T$ proves $G_e(x,y)\to C(y)$ universally, equivalently when
+$T$ proves $R_e(y)\to C(y)$ universally. For agreement, a witness to
+$R_e(y)$ together with equality of two composite graphs gives equality
+of the two output graphs at $y$. Existential elimination in $T$ proves
+the required agreement equation. These arguments also show that the
+chosen ranges are unchanged under theory extension.
+
+The ordinary product and tagged-coproduct programs supply the restriction
+products and coproducts. The universal program supplies a Turing morphism
+\[
+ \tau:\omega\times\omega\rightharpoonup\omega:
+ \quad f:X\times\omega\rightharpoonup\omega
+ \ \Longrightarrow\ 
+ f=\tau(r\times1_\omega)
+\]
+for some total parameter arrow $r:X\to\omega$. Formalized
+parameterization makes this arrow $\PA$-provably total. The chosen coding
+isomorphisms make $S_T$ isotypical, and product with a zero arrow is zero.
+Thus $S_T$ is a prodominical recursion category.
+
+\section{Interpretation in models}\label{sec:models}
+
+The category $\Pfn$ has sets as objects and partial functions as arrows,
+with ordinary composition. Restrictions and ranges are partial identities
+on domains of definition and images. Restriction products are Cartesian products;
+coproducts are tagged disjoint unions.
+
+Fix a model $M\models T$. Interpret numerical types recursively by
+\[
+ X_M=|M|\quad(X=\omega),\qquad
+ (X\times Y)_M=X_M\times Y_M,\qquad
+ (X+Y)_M=X_M\amalg Y_M.
+\]
+The fixed arithmetic codings identify these sets with the corresponding
+codes in $M$. A standard program index in a graph formula is interpreted
+as its numeral in $M$. Define
+\begin{equation}\label{eq:model-functor}
+ F_M(X)=X_M,\qquad
+ F_M([e]_T)(x)=y
+ \quad\Longleftrightarrow\quad M\models G_e(x,y).
+\end{equation}
+All quantified traces and intermediate values in this formula range over
+the whole model, including its nonstandard elements.
+
+\begin{proposition}\label{prop:model}
+For every $M\models T$, \eqref{eq:model-functor} defines a covariant
+functor $F_M:S_T\to\Pfn$ preserving restrictions, zeros, binary
+restriction products and coproducts, ranges, and finite joins of
+restriction idempotents.
+\end{proposition}
+\begin{proof}
+Functionality is provable in $\PA$, so the interpreted graph is a
+partial function. Equation \eqref{eq:uniform} makes the assignment
+independent of the representative. Equation \eqref{eq:composition},
+interpreted in $M$, is exactly relational composition of the two partial
+functions; their intermediate values range over $Y_M$. The identity
+graph gives the identity function.
+
+The definedness predicate $\exists y\,G_e(x,y)$ gives the interpreted
+function's domain. Similarly,
+\[
+ \{y\in Y_M:M\models R_e(y)\}
+ =\operatorname{im}(F_M[e]_T),
+\]
+so ranges are preserved. False predicates, conjunction, and disjunction
+give zeros, intersections, and unions. The PA-provable product and
+tagged-coproduct graph equations give the corresponding operations on
+partial functions.
+\end{proof}
+
+\section{A faithful family and theory extension}\label{sec:family}
+
+Let $\mathcal M_T$ be the set of all structures for the language of
+arithmetic with underlying set $\N$ that satisfy $T$. Their arithmetic
+operations need not be the standard ones, and the interpretation of a
+numeral $\bar n$ need not be the carrier element $n$. Completeness and
+the downward L\"owenheim--Skolem theorem imply
+$\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
+countably infinite model can be transported to the carrier $\N$.
+
+Define the product category
+\[
+ \mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn.
+\]
+An object is a family of sets $(A_M)_M$; an arrow is a family of partial
+functions with the indicated sources and targets. Composition and the
+restriction, range, restriction-product, and coproduct operations are coordinatewise.
+The functors of Proposition~\ref{prop:model} combine to give
+\[
+ F_T:S_T\longrightarrow\mathcal D_T,\qquad
+ F_T(X)=(X_M)_M,\quad F_T([e]_T)=(F_M[e]_T)_M.
+\]
+
+\begin{theorem}\label{thm:faithful}
+The functor $F_T$ is faithful and preserves restrictions, zeros, binary
+restriction products and coproducts, ranges, and finite joins of
+restriction idempotents. The category
+$\mathcal D_T$ is split and locally connected, satisfies weak choice,
+and has inverse images preserving binary joins of restriction
+idempotents. Moreover,
+$F_T(1_\omega)\ne0$.
+\end{theorem}
+\begin{proof}
+Preservation follows coordinatewise from Proposition~\ref{prop:model}.
+If $[e]_T\ne[f]_T$, let $E$ denote the uniform graph-equality sentence
+in \eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
+Completeness and downward L\"owenheim--Skolem give a model on carrier
+$\N$ in which the two graphs differ. This is a coordinate of $F_T$,
+which therefore distinguishes the arrows.
+
+A restriction idempotent in $\mathcal D_T$ is a family of partial
+identities on subsets. Its splitting uses those subsets as the
+coordinate sets. For an object $A=(A_M)_M$, take the partial identity
+on a singleton $\{x\}\subseteq A_M$ at one coordinate $M$ and the zero
+map elsewhere. This restriction idempotent is connected. These
+idempotents detect the definedness and value of every coordinate of a partial arrow. Hence
+$\mathcal D_T$ is locally connected.
+
+A partial monomorphism has injective coordinate functions: test its
+defining property on singleton objects supported at one coordinate.
+The partial inverses of these injections form a section, proving weak
+choice. Inverse images commute with unions coordinatewise. Finally,
+$\mathcal M_T$ is nonempty and every interpreted numerical object is
+nonempty, so its identity differs from zero.
+\end{proof}
+
+For consistent computably enumerable $T\supseteq\PA$, the source $S_T$
+is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
+The connected restriction idempotents used in the preceding proof
+belong to $\mathcal D_T$ and need not be images of source restriction
+idempotents.
+
+For an inclusion $T\subseteq T'$ of consistent theories, define
+\[
+ Q_{T,T'}:S_T\to S_{T'},\qquad
+ Q_{T,T'}X=X,\quad Q_{T,T'}[e]_T=[e]_{T'}.
+\]
+Provability is monotone, so this is a well-defined covariant functor.
+It preserves restrictions, zeros, ranges, binary restriction products
+and coproducts, and the chosen Turing morphism.
+Since $\mathcal M_{T'}\subseteq\mathcal M_T$, restriction of families
+defines a covariant projection
+$\pi_{T,T'}:\mathcal D_T\to\mathcal D_{T'}$. Fixing type interpretations
+once for each arithmetic structure gives a strictly commuting square:
+\[
+\begin{tikzcd}[column sep=large]
+ S_T \arrow[r,"Q_{T,T'}"] \arrow[d,"F_T"'] &
+ S_{T'} \arrow[d,"F_{T'}"]\\
+ \mathcal D_T \arrow[r,"\pi_{T,T'}"'] & \mathcal D_{T'}.
+\end{tikzcd}
+\]
+Both paths send a program to the family of its interpretations in the
+models of $T'$. The identity and composition laws for the projections
+and quotient functors follow from restriction of indices and the
+unchanged program representatives.
+
+\section{Switching and the local-connectedness theorem}\label{sec:lifting}
+
+Theorem~\ref{thm:faithful} supplies a range functor into a split locally
+connected category satisfying weak choice and inverse-image preservation
+of joins of restriction idempotents. We prove an inseparability theorem
+using these target properties and the lifting of specific sections associated with
+complemented source restriction idempotents.
+
+\subsection{The local-connectedness construction}
+
+The following argument supplies the needed sections.
+For a coproduct $Y+Z$, let
+$\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
+restriction idempotents. Their meet is zero and their join is the identity. These facts
+follow by precomposition with the two injections and the agreement
+property of ranges.
+
+\begin{lemma}\label{lem:connected-alternative}
+Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
+and binary restriction coproducts. Suppose inverse images preserve binary
+joins of restriction idempotents. If $a$ is a connected restriction
+idempotent on $X$ and
+$f:X\to Y+Z$ is total, then
+$\varepsilon_0fa=fa$ or $\varepsilon_1fa=fa$.
+\end{lemma}
+\begin{proof}
+Totality and the inverse-image laws give the disjoint decomposition
+\[
+ a=af^*\varepsilon_0\vee af^*\varepsilon_1.
+\]
+Connectedness makes one term zero and the other equal to $a$. In the
+latter case $a\le f^*\varepsilon_i$, and the restriction identity
+$\varepsilon_i f=f\overline{\varepsilon_i f}$ gives
+$\varepsilon_i fa=fa$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-switch}
+Let $\mathcal A$ be a locally connected split restriction category with
+ranges, restriction zeros, and binary restriction coproducts. Suppose
+weak choice holds and inverse images preserve binary joins of
+restriction idempotents.
+For disjoint restriction idempotents $a,b$ on $X$, the arrow
+$p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
+with a unique section $s:X\rightharpoonup X+X$, and
+\[
+ ps=\bar s=a\vee b.
+\]
+In particular, for complementary $c,c'$ on $X$, the arrow
+$\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
+$sc=i_1c$ and $sc'=i_0c'$.
+\end{proposition}
+\begin{proof}
+First let $\theta,\theta':Y\to X+X$ be total and suppose
+$p\theta=p\theta'$. The identities
+$ap=\nabla_X(a+0)$ and $bp=\nabla_X(0+b)$ give
+\[
+ \nabla_X(a+0)\theta=\nabla_X(a+0)\theta',
+ \qquad
+ \nabla_X(0+b)\theta=\nabla_X(0+b)\theta'.
+\]
+For a connected restriction idempotent $\gamma$ on $Y$,
+Lemma~\ref{lem:connected-alternative} places each of
+$\theta\gamma,\theta'\gamma$ in one summand.
+If both lie in the first summand, the first equality, followed by $i_0$,
+gives $(a+b)\theta\gamma=(a+b)\theta'\gamma$; the second-summand
+case uses the second equality and $i_1$.
+If they lie in opposite summands, the two equalities force both these
+restricted arrows to be zero. Local connectedness therefore gives
+$(a+b)\theta=(a+b)\theta'$. Since $\bar p=a+b$, this proves the
+partial-monomorphism condition for total test arrows.
+
+For arbitrary $u,v:W\rightharpoonup X+X$ with $pu=pv$, split their
+common restriction idempotent as
+$\overline{pu}=\overline{pv}=me$, where $m:Z\to W$ is total,
+$e:W\rightharpoonup Z$, and $em=1_Z$. The arrows $pum,pvm$, hence also $um,vm$, are total.
+The preceding case gives $\bar p um=\bar p vm$. Composing with $e$
+and using $\bar p u=\bar p u\,\overline{pu}$ and its analogue for $v$
+gives $\bar p u=\bar p v$. Thus $p$ is a partial monomorphism.
+
+Weak choice supplies a section $s$. The equations $ps=\bar s$ and
+$psp=p$ imply $\bar s=\ran(p)$: the idempotent $\bar s$ receives $p$,
+and every restriction idempotent receiving $p$ also receives
+$ps=\bar s$. Moreover
+$\bar p s=s\overline{ps}=s$. Two sections have the same composite
+with $p$, so partial monicity makes them equal.
+The defining property of the range gives $\ran(p)=a\vee b$.
+
+For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$.
+The equality $p(sc)=c=p(i_1c)$ and partial monicity give $sc=i_1c$;
+the equation on $c'$ is analogous.
+\end{proof}
+
+\begin{theorem}[Range-functor lifting]\label{thm:local-lifting}
+Let $\mathscr R$ be a prodominical recursion category with ranges and
+binary restriction coproducts. Let $\mathcal A$ be a locally connected
+split restriction category with ranges, restriction zeros, and binary
+restriction coproducts, satisfying weak choice, with inverse images
+preserving binary joins of restriction idempotents. Let
+$F:\mathscr R\to\mathcal A$ be a range functor.
+Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and
+an isomorphism $b:U\to U+U$, with $F(1_U)\ne0$.
+For each complementary pair $c,c'$ on $U$, let
+$s_c:FU\to FU+FU$ be the total section of $\nabla_{FU}(Fc'+Fc)$ supplied by
+Proposition~\ref{prop:local-switch}. Suppose there is an arrow
+$\ell_c:U\rightharpoonup U+U$ with
+$F\ell_c=\chi_{U,U}s_c$, where
+$\chi_{U,U}:FU+FU\to F(U+U)$ is the canonical coproduct isomorphism.
+Then
+\[
+ a_0=(b\tau\Delta_U)^*(1_U+0_U),\qquad
+ a_1=(b\tau\Delta_U)^*(0_U+1_U)
+\]
+are inseparable in $\mathscr R$.
+\end{theorem}
+\begin{proof}
+The restriction idempotents $a_0,a_1$ are disjoint. Suppose $c,c'$ separate them.
+Put $u=b^{-1}\ell_c$, and choose a total parameter $g:U\to U$ with
+$\tau(g\times1_U)=u\pi_2$. Precomposition with $\langle1_U,g\rangle$
+gives $\tau\Delta_Ug=ug$.
+
+Applying $F$ to the source equation
+$b\tau\Delta_Ug=\ell_cg$ gives
+\[
+ \chi_{U,U}^{-1}F(b\tau\Delta_U)Fg=s_cFg.
+\]
+In the target write $E=Fg:FU\to FU$,
+$H=\chi_{U,U}^{-1}F(b\tau\Delta_U):FU\rightharpoonup FU+FU$,
+$\Gamma=Fc$, and $\Gamma'=Fc'$. Thus $HE=s_cE$.
+Since $s_c\Gamma=i_1\Gamma$ and $s_c\Gamma'=i_0\Gamma'$,
+the inverse images under $s_c$ of the two summand restriction idempotents are
+$\Gamma'$ and $\Gamma$,
+respectively. Preservation of restrictions and composition now gives
+\[
+ E^*F(a_0)=E^*\Gamma',\qquad E^*F(a_1)=E^*\Gamma.
+\]
+The separator inequalities imply that $E^*\Gamma$ and $E^*\Gamma'$
+are equal. They are complementary because $E$ is total and target
+inverse images preserve joins. Hence $1_{FU}=0$, contradicting the
+hypothesis.
+\end{proof}
+
+\subsection{A sufficient condition for lifting}
+
+\begin{proposition}\label{prop:disjoint-joins}
+Let $\mathcal C$ be a restriction category with restriction zeros and
+binary restriction coproducts. Suppose every pair of parallel arrows
+whose restriction idempotents are disjoint has a join in the restriction
+order.
+For complementary restriction idempotents $c,c'$ on $X$, the arrow
+\[
+ \ell_c=(i_1c)\vee(i_0c'):X\rightharpoonup X+X
+\]
+is total and satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+If $F:\mathcal C\to\mathcal A$ is a range functor and $\mathcal A$
+satisfies the hypotheses of Proposition~\ref{prop:local-switch},
+then $\chi_{X,X}^{-1}F\ell_c$ is the section of
+$\nabla_{FX}(Fc'+Fc)$.
+\end{proposition}
+\begin{proof}
+The restrictions of $i_1c$ and $i_0c'$ are $c$ and $c'$ because
+the injections are total. The upper-bound equations for the join
+give $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+Both $c$ and $c'$ lie below $\bar\ell_c$, so
+$1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
+
+Put $\Gamma=Fc$ and $\Gamma'=Fc'$. Preservation of composition
+and coproduct injections gives
+$(\chi_{X,X}^{-1}F\ell_c)\Gamma=i_1\Gamma$ and
+$(\chi_{X,X}^{-1}F\ell_c)\Gamma'=i_0\Gamma'$.
+The section $s$ of Proposition~\ref{prop:local-switch} satisfies the
+same two equations. Thus $\chi_{X,X}^{-1}F\ell_c$ and $s$ agree after
+$[\Gamma,\Gamma']$. Its range is
+$\Gamma\vee\Gamma'=1_{FX}$, so range agreement gives
+$\chi_{X,X}^{-1}F\ell_c=s$.
+\end{proof}
+
+\subsection{Lifting in the syntactic category}
+
+\begin{lemma}\label{lem:switch}
+Let $c,c'$ be complementary restriction idempotents on $X$ in $S_T$.
+There is a total arrow $s:X\to X+X$ with
+\[
+ sc=i_1c,\qquad sc'=i_0c'.
+\]
+The arrow $\chi_{X,X}^{-1}F_Ts$ is the unique section of
+$\nabla_{F_TX}(F_Tc'+F_Tc)$, where
+$\chi_{X,X}:F_TX+F_TX\to F_T(X+X)$ is the coproduct isomorphism.
+\end{lemma}
+\begin{proof}
+Choose $\Sigma_1$ representatives $C(x)=\exists u\,R(x,u)$ and
+$C'(x)=\exists v\,R'(x,v)$ with primitive-recursive witness tests.
+The theory $T$ proves universally their disjointness and coverage.
+Search increasing finite bounds for a witness to either predicate,
+returning the tagged input $i_1x$ on finding a $C$-witness and $i_0x$
+on finding a $C'$-witness. Fix a priority for simultaneous discoveries.
+Let $e_s$ be an index of this program. The finite-search verification
+in $\PA$ proves that the program halts
+exactly when $C(x)\lor C'(x)$. Under the disjointness assumption it also
+proves the exact graph equation
+\[
+ G_{e_s}(x,z)\leftrightarrow
+ (C(x)\land z=i_1x)\lor(C'(x)\land z=i_0x).
+\]
+Thus $T$ proves this equation and universal halting. The equations for
+the restrictions follow, giving the total arrow $s=[e_s]_T$ of $S_T$.
+
+In each $M\models T$, the interpretations of $C,C'$ partition $X_M$.
+The interpreted program sends each input to its specified tagged copy.
+It is exactly the inverse of the partial injection
+$\nabla_{X_M}(c'_M+c_M)$. Its graph is therefore the unique required
+section. The same program works at every coordinate, proving the lifting
+statement for the entire family.
+\end{proof}
+
+\begin{corollary}\label{cor:pair}
+For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
+lifting hypothesis of Theorem~\ref{thm:local-lifting}.
+Fix $U=\omega$, a Turing morphism $\tau:U\times U\rightharpoonup U$,
+and a PA-provable coding isomorphism $b:U\to U+U$. Put
+\[
+ d=\tau\Delta_U,\qquad
+ a_0=(bd)^*(1_U+0_U),\qquad a_1=(bd)^*(0_U+1_U).
+\]
+Then $a_0,a_1$ are inseparable in $S_T$. For every consistent
+extension $T'\supseteq T$, their images under $Q_{T,T'}$ are the
+identically defined inseparable pair in $S_{T'}$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:faithful} and Lemma~\ref{lem:switch} verify all the
+hypotheses of Theorem~\ref{thm:local-lifting}. The quotient functor keeps
+every program in the definition fixed, and the same argument applies
+to consistent $T'$.
+\end{proof}
+
+The local-connectedness theorem uses Turing universality in its source.
+The target $\mathcal D_T$ has all families of partial functions as arrows;
+$F_T(\tau)$ is not universal for these arrows: at each model coordinate,
+countably many program parameters cannot enumerate all partial functions
+on its countable numerical carrier. The lattices of restriction
+idempotents in the target are Boolean, so the image of every disjoint source pair has a separator
+there. Lemma~\ref{lem:switch} lifts the sections associated with source
+complemented restriction idempotents. An arbitrary target separator
+need not come from such an idempotent. This distinction explains how a faithful range functor
+can have an inseparable source pair and a separable image pair.
+
+\subsection{From inseparable restriction idempotents to incompleteness}
+
+Theorem~\ref{thm:local-lifting} supplies an inseparable pair in its
+source recursion category. To obtain incompleteness, one must connect
+that pair to restriction idempotents representing theorems and refutable sentences.
+The following corollary states the required connection.
+
+\begin{corollary}\label{cor:domain-incompleteness}
+Let $\mathcal C$ be a restriction category with restriction zeros and
+binary joins of restriction idempotents preserved by inverse image along total arrows.
+Let $a,b$ be inseparable restriction idempotents on $U$. Suppose that
+$\theta:U\to S$ and $\nu:S\to S$ are total, and that a restriction
+idempotent $t_0$ on $S$ satisfies
+\[
+ a\le\theta^*t_0,\qquad b\le\theta^*\nu^*t_0.
+\]
+For every restriction idempotent $t\ge t_0$ on $S$ with $t\,\nu^*t=0_S$,
+the pair $t,\nu^*t$ is inseparable. In particular,
+$t\vee\nu^*t\ne1_S$.
+\end{corollary}
+\begin{proof}
+Suppose complementary restriction idempotents $e,e'$ on $S$ satisfy
+$t\le e$ and $\nu^*t\le e'$. Put
+$c=\theta^*e$ and $c'=\theta^*e'$. Inverse image preserves
+meets and zero, so $cc'=\theta^*(ee')=0_U$.
+Preservation of joins and totality of $\theta$ give
+\[
+ c\vee c'=\theta^*(e\vee e')=\theta^*1_S=1_U.
+\]
+Monotonicity gives
+$a\le\theta^*t_0\le\theta^*t\le c$ and
+$b\le\theta^*\nu^*t_0\le\theta^*\nu^*t\le c'$.
+Thus $c,c'$ would separate $a,b$, a contradiction.
+If $t\vee\nu^*t=1_S$, the disjoint pair $t,\nu^*t$ would
+itself be such a complementary separator.
+\end{proof}
+
+For a sentence object $S$, a negation map $\nu$, and a restriction
+idempotent $t$ representing the theorems, the equations
+$t\,\nu^*t=0_S$ and $t\vee\nu^*t=1_S$
+express consistency and completeness, respectively.
+The corollary therefore proves essential
+incompleteness whenever the theories under consideration have such
+representations by restriction idempotents and the two inequalities
+hold for the base theory.
+
+An inseparable pair on an object of $\mathscr R$ remains inseparable
+in $\operatorname{Split}(\mathscr R)$: the fully faithful inclusion
+$U\mapsto(U,1_U)$ changes neither its endomorphisms nor its restriction idempotents.
+Thus sentence and proof objects may be constructed in the restriction
+splitting when applying Corollary~\ref{cor:domain-incompleteness}.
+
+\section{Essential incompleteness of arithmetic}\label{sec:arithmetic}
+
+Let $\mathrm{Rec}$ be the classical recursion category on the formal
+numerical types, with partial recursive functions as arrows and extensional
+equality. Its restriction idempotents are partial identities on
+computably enumerable subsets; the complemented ones are partial
+identities on recursive subsets.
+
+Use the universal program of Section~\ref{sec:syntactic}, whose
+computation and parameterization identities are provable in $\PA$.
+It defines a Turing morphism
+$\tau:\N\times\N\rightharpoonup\N$ in $\mathrm{Rec}$.
+Put $d=\tau\Delta_{\N}$ and choose the coproduct isomorphism
+$b(2m)=i_0m$, $b(2m+1)=i_1m$.
+Let $\alpha(x)$ and $\beta(x)$ be the $\Sigma_1$ formulas asserting
+that $d(x)$ halts with an even or an odd output, respectively.
+Their standard truth sets
+\[
+ A=\{n:\N\models\alpha(\bar n)\},\qquad
+ B=\{n:\N\models\beta(\bar n)\}
+\]
+are the classical even-output and odd-output sets for self-application.
+Their recursive inseparability is another instance of
+Theorem~\ref{thm:local-lifting}. To see this, let
+$J:\mathrm{Rec}\to\Pfn$ send a formal numerical type to its underlying
+set and a partial recursive arrow to the same partial function.
+It is a covariant range functor. The category $\Pfn$ satisfies
+the target hypotheses: partial identities on singletons detect partial
+functions, restriction idempotents split through their subsets of
+definition, partial injections have partial inverses, and inverse images
+preserve unions. Complementary restriction idempotents in $\mathrm{Rec}$
+are partial identities on complementary recursive subsets. A procedure
+deciding these subsets computes
+the required tagged-input map, so its underlying partial function is
+the target section. This verifies the lifting hypothesis of
+Theorem~\ref{thm:local-lifting} for $J$.
+The theorem, with the chosen universal program and parity
+isomorphism $b$, gives precisely the pair $A,B$.
+Each finite computation gives a PA-proof of its numeral instance, and $\PA$ proves
+$\forall x\,\neg(\alpha(x)\land\beta(x))$.
+
+We now represent theorems by restriction idempotents in order to apply
+Corollary~\ref{cor:domain-incompleteness}. Work in
+$\operatorname{Split}(\mathrm{Rec})$, whose objects can be represented
+by c.e.\ numerical carriers and whose arrows are partial recursive
+functions with c.e.\ domains in those carriers. A restriction idempotent
+is a partial identity on a c.e.\ subset. Joins of these idempotents
+correspond to unions of the subsets, and inverse image along a total
+arrow preserves these joins. Write $a,b$ for the partial
+identities on the sets $A,B$ obtained above. They remain inseparable
+in this splitting.
+
+Let $S$ be the recursive set of codes of closed arithmetic sentences.
+Negation and numeral substitution give total maps
+\[
+ \nu:S\to S,\qquad \nu(\ulcorner\varphi\urcorner)
+     =\ulcorner\neg\varphi\urcorner,
+ \qquad
+ \theta:\N\to S,\qquad \theta(n)=\ulcorner\alpha(\bar n)\urcorner.
+\]
+For a c.e.\ theory $T\supseteq\PA$, fix a recursive first-order proof
+calculus and let $\mathrm{Prf}_T$ be its carrier of finite proofs from
+$T$. This carrier is c.e.: the logical rules and formula syntax are
+recursive, and each candidate proof has only finitely many axiom
+membership tests in the c.e.\ axiom set of $T$. Reading the final
+sentence gives a total arrow
+$c_T:\mathrm{Prf}_T\to S$ in the splitting. Its range
+$t_T=\ran(c_T)$ is the partial identity on the c.e.\ set of theorems
+of $T$.
+
+The finite computation proofs of $\alpha(\bar n)$ for $n\in A$ give
+$a\le\theta^*t_{\PA}$. For $n\in B$, a finite computation proves
+$\beta(\bar n)$ in $\PA$; the PA-provable disjointness of $\alpha$
+and $\beta$ then proves $\neg\alpha(\bar n)$. Thus
+\begin{equation}\label{eq:arithmetic-domain-inclusions}
+ a\le\theta^*t_{\PA},\qquad
+ b\le\theta^*\nu^*t_{\PA},\qquad
+ t_{\PA}\le t_T.
+\end{equation}
+These are inequalities of restriction idempotents in $\operatorname{Split}(\mathrm{Rec})$.
+
+\begin{corollary}[Essential incompleteness of arithmetic]\label{cor:arithmetic}
+The theorem and refutation sets of every consistent computably
+enumerable extension of $\PA$ are recursively inseparable.
+Consequently every such extension is incomplete.
+\end{corollary}
+\begin{proof}
+Let $T\supseteq\PA$ be consistent and c.e.\ Consistency says that
+no sentence and its negation are both theorems, so
+$t_T\,\nu^*t_T=0_S$. Completeness would say that every sentence or
+its negation is a theorem, giving $t_T\vee\nu^*t_T=1_S$.
+The pair $a,b$ supplied by Theorem~\ref{thm:local-lifting}, together
+with \eqref{eq:arithmetic-domain-inclusions}, satisfies the hypotheses
+of Corollary~\ref{cor:domain-incompleteness}. That corollary makes
+$t_T,\nu^*t_T$ inseparable and rules out the completeness equation.
+A complemented restriction idempotent on the recursive sentence carrier
+$S$ is a partial identity on a recursive subset of $S$, so this gives
+recursive inseparability of the theorem and refutation sets.
+\end{proof}
+
+\subsection{Numeral instances and theory extension}
+
+The categorical separator contradiction can also be expressed directly
+on the parameter object $\N$. Define
+\[
+ P_T=\{n:T\vdash\alpha(\bar n)\},\qquad
+ N_T=\{n:T\vdash\neg\alpha(\bar n)\}.
+\]
+These are the carriers of $\theta^*t_T$ and $\theta^*\nu^*t_T$.
+They are computably enumerable disjoint sets with $A\subseteq P_T$
+and $B\subseteq N_T$, and they enlarge under theory extension.
+Let $\operatorname{Pair}(\mathrm{Rec})$ have objects $(X,A,B)$ consisting
+of a numerical type and two disjoint computably enumerable subsets.
+An arrow $(X,A,B)\to(Y,P,N)$ is a total recursive function $f:X\to Y$
+with $f(A)\subseteq P$ and $f(B)\subseteq N$. Identities and composition
+are inherited from $\mathrm{Rec}$. The assignment
+$T\mapsto(\omega,P_T,N_T)$, with the identity function for theory
+inclusions, is a covariant functor from the poset of consistent
+computably enumerable extensions of $\PA$ to
+$\operatorname{Pair}(\mathrm{Rec})$.
+The inclusions $A\subseteq P_T$ and $B\subseteq N_T$ give the morphism
+$1_\omega:(\omega,A,B)\to(\omega,P_T,N_T)$ in this category.
+A recursive separator pulls back along a total recursive function;
+consequently $P_T,N_T$ are recursively inseparable.
+
+
+Assume now that $T$ has computably enumerable axioms. For a restriction idempotent
+$c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
+\begin{equation}\label{eq:observation}
+ E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
+\end{equation}
+It is computably enumerable by proof enumeration and is independent of
+the representative. The operation is monotone, preserves finite meets,
+and preserves top and bottom. Let $\kappa_n:\omega\to\omega$ be the
+total constant program with value $n$. Then
+\begin{equation}\label{eq:faithful-observation}
+ n\in E_T(c)
+ \quad\Longleftrightarrow\quad c\kappa_n=\kappa_n
+ \quad\Longleftrightarrow\quad
+ F_T(c)F_T(\kappa_n)=F_T(\kappa_n).
+\end{equation}
+The first equivalence follows from the partial-identity graph equation;
+the second is faithfulness. Thus the standard observations can also be
+expressed by equations in the faithful representation.
+
+
+The effective step uses standard numeral instances and the presentation
+of $T$ by computably enumerable axioms. The semantic functor exists also
+for $T=\operatorname{Th}(\N)$, when $T$ is complete and $S_T$ is the
+classical category of partial recursive functions on the formal numerical
+types. Thus internal inseparability alone does not imply logical
+incompleteness.
+
+Bernardi's earlier method uses precomplete equivalence relations.
+In the numerical case, precompleteness means that every partial
+recursive function agrees, where defined and modulo the equivalence
+relation, with a total recursive function. Under the hypotheses of
+his categorical theorem, nonempty disjoint unions of equivalence
+classes are inseparable. His examples include PA-provable program
+equality \cite[pp.~125--128]{Bernardi}. The argument above instead
+uses Theorem~\ref{thm:local-lifting} to obtain the numerical pair and
+finite PA-proofs to place it in the sets $P_T,N_T$.
+
+\section{A recursion category from a three-point space}\label{sec:cosheaves}
+
+We construct a recursion category $\mathscr R_X$ whose restriction
+splitting contains a consistent propositional theory all of whose
+consistent extensions represented by restriction idempotents are
+incomplete. The construction
+starts with a category $\mathcal E$ of diagrams of numerical sets.
+After forming its partial-map category $\mathcal A$, we specify the
+full subcategory $\mathscr R_X$ and construct its Turing morphism.
+The shape of the diagrams is determined by cosheaves on the following
+three-point space.
+
+For a topological space $X$, let $\mathcal O(X)$ be the category
+of open sets and inclusions. A \emph{set-valued cosheaf} is a
+covariant functor $C:\mathcal O(X)\to\mathbf{Set}$ for which
+every open cover $(O_\lambda)_\lambda$ of $O$ gives a coequalizer
+\[
+ \coprod_{\lambda,\mu} C(O_\lambda\cap O_\mu)
+ \rightrightarrows \coprod_\lambda C(O_\lambda)
+ \longrightarrow C(O).
+\]
+The two parallel maps are induced by the inclusions into the two
+members of the cover; the empty cover requires
+$C(\varnothing)=\varnothing$.
+The \emph{Sierpi\'nski space} has two points and exactly three open
+sets: the empty set, one singleton, and the whole space.
+Let $X=\{a,b,c\}$ have opens
+$\varnothing,\{c\},\{a,c\},\{b,c\},X$.
+The open subspaces $\{a,c\}$ and $\{b,c\}$ are Sierpi\'nski spaces
+with common open singleton $\{c\}$. Thus $X$ is obtained by gluing
+two copies of the Sierpi\'nski space along that singleton.
+Its set-valued cosheaves are equivalent to covariant diagrams of shape
+$J=(1\leftarrow0\to2)$: the three components are the values at
+$\{c\},\{a,c\},\{b,c\}$, and the value at $X$ is their pushout
+(Proposition~\ref{prop:fork-cosheaves}).
+Let $\mathcal C_{\mathrm{rec}}$ have computably enumerable subsets
+of finite powers of $\N$ as objects. An arrow $f:A\to B$ is a
+function computed by a partial recursive program defined at every
+element of $A$, with values there in $B$. Equality of arrows is
+equality of their functions on $A$.
+Put $\mathcal E=\mathcal C_{\mathrm{rec}}^J$.
+An object is a covariant functor $Y:J\to\mathcal C_{\mathrm{rec}}$,
+equivalently two arrows $r_i^Y:Y_0\to Y_i$, for $i=1,2$.
+A morphism $f:Y\to Z$ is a natural transformation: its components
+are arrows $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
+$r_i^Zf_0=f_i r_i^Y$.
+A \emph{c.e.\ subdiagram} $D\subseteq Y$ consists of c.e.\ subsets
+$D_j\subseteq Y_j$ such that $r_i^Y(D_0)\subseteq D_i$.
+Forgetting the numerical presentations gives a functor
+$\mathcal E\to\mathbf{Set}^J$; the cosheaf equivalence above assigns
+a set-valued cosheaf to each such diagram and a natural transformation
+to each morphism of $\mathcal E$.
+Define the partial category
+\[
+ \mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono}).
+\]
+Its arrows $Y\rightharpoonup Z$ are isomorphism classes of spans
+$Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
+uses pullback. Monomorphisms are componentwise injections.
+Thus a partial arrow is equivalently a computably enumerable
+subdiagram $D\subseteq Y$ with arrows $D_j\to Z_j$ of
+$\mathcal C_{\mathrm{rec}}$ commuting with the transitions. Its
+restriction is the partial identity on $D$, and its range is the
+partial identity on the subdiagram of component images.
+Proposition~\ref{prop:fork-structure} proves these assertions and
+the structural properties used below.
+
+The diagram used for universal computation is
+\begin{equation}\label{eq:universal-fork}
+ V_0=\N^4,\qquad V_1=V_2=\N^2,\qquad
+ r_1(k,z,a,b)=(k,a),\quad r_2(k,z,a,b)=(k,b).
+\end{equation}
+Every object $Y$ of $\mathcal E$ admits a total map $m:Y\to V$ in
+$\mathcal A$ with a partial
+inverse $r:V\rightharpoonup Y$ such that $rm=1_Y$ and
+$mr$ is a restriction idempotent. In this sense $V$ is a
+\emph{universal object}.
+Write $V^\#$ for the diagram of nonempty finite words in its
+components, with transitions acting letter by letter.
+The chosen \emph{frames} are isomorphisms in $\mathcal E$
+$V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
+Let $\mathscr R_X$ denote the full subcategory of $\mathcal A$
+on the formal objects generated by $V$ using those operations.
+It is an isotypical recursion category, and its restriction
+splitting is equivalent to $\mathcal A$.
+Lemmas~\ref{lem:fork-dominance} and~\ref{lem:fork-frames} give the
+embedding and frames explicitly. Theorem~\ref{thm:fork-turing}
+constructs the Turing morphism, and
+Proposition~\ref{prop:fork-recursion} proves the splitting equivalence.
+
+\subsection{Local connectedness and lifting}
+
+The subdiagram generated by a central element and its two endpoint
+images is finite and connected. Singleton subdiagrams at either endpoint
+are connected as well. Their partial identities are restriction
+idempotents in $\mathcal A$. They detect the definedness and value
+of every component of a partial arrow, so $\mathcal A$ is locally
+connected. Its splitness, weak choice, ranges, coproducts, and
+componentwise inverse-image laws are proved in
+Proposition~\ref{prop:fork-structure}.
+The full inclusion $\mathscr R_X\hookrightarrow\mathcal A$ is a
+range functor.
+For each complementary pair $c,c'$ on $V$, the section
+$s_c:V\to V+V$ of $\nabla_V(c'+c)$ belongs to $\mathscr R_X$
+by fullness. Thus this inclusion satisfies the lifting hypothesis of
+Theorem~\ref{thm:local-lifting}, which gives an inseparable pair in
+$\mathscr R_X$.
+To see that $\mathscr R_X$ is nonnumerical, note that the terminal
+object of $\mathcal E$ has five subobjects,
+whereas a numerical singleton has two.
+A restriction equivalence with the classical recursion category
+would extend to the restriction splittings and then restrict to an
+equivalence $\mathcal E\simeq\mathcal C_{\mathrm{rec}}$, contradicting
+this invariant. Proposition~\ref{prop:fork-distinction} supplies the
+subobject calculation and proves that $V$ has no decidable equality.
+
+\subsection{Endpoint functors}
+
+Let
+$\mathcal K=\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})$.
+This is the restriction splitting of the classical recursion category:
+objects are c.e.\ numerical carriers and arrows are partial recursive
+functions with c.e.\ domains contained in their sources.
+For $j\in\{0,1,2\}$, component evaluation defines
+\begin{equation}\label{eq:endpoint-functor}
+ E_j:\mathcal A\longrightarrow\mathcal K,\qquad
+ E_j(Y)=Y_j,\qquad
+ E_j(Y\xleftarrow{m}D\xrightarrow{f}Z)
+   =(Y_j\xleftarrow{m_j}D_j\xrightarrow{f_j}Z_j).
+\end{equation}
+
+\begin{proposition}\label{prop:endpoint}
+The covariant functors $E_j$ preserve restrictions, zeros, ranges,
+binary restriction products and coproducts, and finite joins of
+restriction idempotents.
+For $i=1,2$, the Turing morphism
+$\tau:V\times V\rightharpoonup V$ constructed in
+Theorem~\ref{thm:fork-turing} is sent
+to a Turing morphism on $\N^2$ in $\mathcal K$.
+\end{proposition}
+\begin{proof}
+Component evaluation preserves identities, monomorphisms, and
+pullbacks in the total categories. Consequently \eqref{eq:endpoint-functor}
+is independent of the representative span and preserves partial-map
+composition. The stated operations are represented componentwise by
+partial identities, empty sets, images, products, tagged unions, and
+finite unions, respectively.
+
+Fix a recursive bijection $\operatorname{encode}_2:\N^2\to\N$
+with inverse $\operatorname{decode}_2$, and an acceptable numbering
+$(\varphi_p)_{p\in\N}$ of the partial recursive functions.
+At either endpoint the chosen
+Turing morphism has the formula
+\[
+ (E_i\tau)((k,p),(\ell,x))
+ =\operatorname{decode}_2\varphi_p(\operatorname{encode}_2(\ell,x)).
+\]
+For every partial recursive
+$F:Z\times\N^2\rightharpoonup\N^2$ with c.e.\ carrier $Z$,
+specialization gives a recursive index map $s$ defined on every
+element of $Z$ for
+the functions $F(z,-)$, including their domain tests.
+The total parameter map $z\mapsto(0,s(z))$ proves the required
+universality.
+\end{proof}
+
+For $i\in\{1,2\}$, let $H_i$ have singleton component at endpoint $i$ and empty
+components elsewhere. An \emph{endpoint probe} of $Y$ is a total
+arrow $p:H_i\to Y$. Every such arrow is uniquely
+the point $p_y$ determined by an element $y\in Y_i$. A partial
+arrow from $H_i$ is either total or zero, since $H_i$ has just
+two restriction idempotents. Hence postcomposition defines a partial
+function on total probes, defining $\Phi_i:\mathcal A\to\Pfn$ by
+\[
+ \Phi_i(Y)=\operatorname{Tot}(\mathcal A)(H_i,Y),\qquad
+ \Phi_i(f)(p)=fp\quad\hbox{when }fp\hbox{ is total}.
+\]
+If $fp$ is not total, it is zero, and every further composite
+remains zero. If it is total, further postcomposition has exactly
+the domain specified by the next partial function. This proves
+$\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$; identities are immediate.
+The bijections $p_y\leftrightarrow y$ identify $\Phi_i$ with the
+underlying partial-set functor of $E_i$. Giving each probe $p_y$
+the numerical name $y$ recovers its effective presentation in
+$\mathcal K$.
+For a restriction idempotent $e$ on $Y$, its observed carrier is therefore
+\begin{equation}\label{eq:probe-domain}
+ |e|_i:=\{y\in Y_i:ep_y=p_y\}
+       =\{y\in Y_i:E_i(e)(y)=y\}.
+\end{equation}
+This is the c.e.\ subset on which $E_i(e)$ is the partial identity.
+
+Endpoint universality is specific to the chosen components.
+For example, the numerical total function
+$F(k,z,a,b)=(0,0,z,0)$ on $V_0$ cannot equal
+$\tau_0(p,-)$ for a fixed central program $p$.
+Inputs differing only in $z$ have the same first endpoint input
+$(k,a)$, so that endpoint program forces the same endpoint output.
+The first endpoint of $F(k,z,a,b)$ is $(0,z)$, a contradiction.
+Thus $E_0$ preserves the listed categorical structure but does
+not preserve this Turing morphism's universality.
+
+\subsection{Proof observations and extensions}
+
+Let $\zeta:V\to V+V$ be the coproduct isomorphism of
+Lemma~\ref{lem:fork-frames}: it selects the summand by the parity
+of the first coordinate. Define the complementary restriction idempotents
+\[
+ q_0=\zeta^{-1}(1_V+0_V)\zeta,\qquad
+ q_1=\zeta^{-1}(0_V+1_V)\zeta.
+\]
+Put
+\[
+ d=\tau\Delta_V,\qquad a=d^*q_0,\qquad b=d^*q_1.
+\]
+These are the inseparable restriction idempotents supplied by
+Theorem~\ref{thm:local-lifting} for the full inclusion
+$\mathscr R_X\hookrightarrow\mathcal A$. They remain inseparable
+in $\mathcal A$: fullness leaves the restriction idempotents on $V$, their order,
+and their complements unchanged.
+For an endpoint $i\in\{1,2\}$,
+write $d_i=E_i(d)$ and let $A_i,B_i\subseteq\N^2$ be the
+carriers of $E_i(a),E_i(b)$. By Proposition~\ref{prop:endpoint},
+\begin{align*}
+ A_i&=\{x:d_i(x)\text{ is defined with even first coordinate}\},\\
+ B_i&=\{x:d_i(x)\text{ is defined with odd first coordinate}\}.
+\end{align*}
+These sets are recursively inseparable by the numerical instance
+of Theorem~\ref{thm:local-lifting} used in
+Section~\ref{sec:arithmetic}. Here the universal object is $\N^2$,
+the Turing morphism is $E_i\tau$, and the coproduct isomorphism
+is $E_i\zeta$, using the componentwise identification of
+$E_i(V+V)$ with $\N^2+\N^2$. Proposition~\ref{prop:endpoint}
+verifies universality, and the inclusion of partial recursive
+functions into $\Pfn$ supplies the same range functor and lifts.
+
+We construct a classical presentation from the disjoint restriction idempotents $a,b$.
+Define the covariant polynomial
+$P:\mathcal E\to\mathcal E$ on the total diagram category by
+$P(Z)=V+Z+(Z\times Z)$ and
+$P(f)=1_V+f+(f\times f)$ for total arrows $f$.
+Its initial algebra $\iota:P(S)\to S$ is constructed from finite
+formula trees. Initiality means that every total algebra
+$\alpha:P(Z)\to Z$ admits a unique total arrow $u:S\to Z$
+with $u\iota=\alpha P(u)$.
+The three summands give constructors for atoms, negation, and implication.
+Write $\theta:V\to S$ for the total atom map
+and $\nu:S\to S$ for the total negation constructor.
+Let $\mathrm{Prf}$ be the object of finite proofs for the rules below
+and $c:\mathrm{Prf}\to S$ its total conclusion map.
+The restriction idempotent $t_0=\ran(c)$ represents the theorems.
+Writing $\alpha\Rightarrow\beta$ for the implication constructor
+applied to $(\alpha,\beta)$, the logical axiom schemes are
+\[
+ \alpha\Rightarrow(\beta\Rightarrow\alpha),\qquad
+ (\alpha\Rightarrow(\beta\Rightarrow\gamma))
+   \Rightarrow((\alpha\Rightarrow\beta)\Rightarrow
+                         (\alpha\Rightarrow\gamma)),\qquad
+ (\nu\beta\Rightarrow\nu\alpha)\Rightarrow(\alpha\Rightarrow\beta).
+\]
+Their parameters range over $S$. Modus ponens concludes $\beta$
+from $\alpha$ and $\alpha\Rightarrow\beta$.
+The additional atomic axioms are indexed by the split objects
+of $a$ positively and $b$ negatively.
+Theorem~\ref{thm:fork-proof-presentation} constructs this syntax and
+proof object, proves that the split subdiagram of $t_0$ is the least
+subdiagram closed under the rules and containing the axioms, and proves
+consistency. In particular, its one-node proofs give
+\begin{equation}\label{eq:atomic-inequalities}
+ a\le\theta^*t_0,\qquad
+ b\le\theta^*\nu^*t_0,\qquad t_0\,\nu^*t_0=0.
+\end{equation}
+A \emph{theory extending $t_0$} is a restriction idempotent $t\ge t_0$
+on $S$ in $\mathcal A$ whose split subdiagram is closed under those
+logical rules.
+It is consistent when $t\,\nu^*t=0$, and complete when
+$t\vee\nu^*t=1_S$. The split subdiagram of $\nu^*t$ consists of the formulas whose
+negations belong to the split subdiagram of $t$.
+
+\begin{theorem}\label{thm:cosheaf-observation}
+Fix $i\in\{1,2\}$. For every consistent theory $t$ extending
+$t_0=\ran(c)$ on $S$ in $\mathcal A$, define
+\[
+ P_{i,t}=(E_i\theta)^{-1}(|t|_i),\qquad
+ N_{i,t}=(E_i\theta)^{-1}(|\nu^*t|_i).
+\]
+The restriction idempotents $t,\nu^*t$ are inseparable in $\mathcal A$.
+The sets $P_{i,t},N_{i,t}$ are disjoint c.e.\ subsets of $\N^2$ satisfying
+$A_i\subseteq P_{i,t}$ and $B_i\subseteq N_{i,t}$.
+They are recursively inseparable. The assignment
+\[
+ t\longmapsto(\N^2,P_{i,t},N_{i,t})
+\]
+with identity maps on $\N^2$ for extension inclusions is a
+covariant functor from the poset of consistent theories extending
+$t_0$ to $\operatorname{Pair}(\mathrm{Rec})$.
+Every such theory is incomplete.
+\end{theorem}
+\begin{proof}
+The category $\mathcal A$ has restriction zeros and joins of restriction idempotents
+preserved by total inverse image. Its restriction idempotents $a,b$ are inseparable,
+and \eqref{eq:atomic-inequalities} gives the hypotheses of
+Corollary~\ref{cor:domain-incompleteness}. Hence $t,\nu^*t$ are
+inseparable, and $t$ is incomplete.
+
+The atom map $E_i\theta:\N^2\to S_i$ is total recursive.
+Proposition~\ref{prop:endpoint} makes the observed theorem and refutation
+sets c.e.; total inverse image therefore makes $P_{i,t}$
+and $N_{i,t}$ c.e. Consistency and preservation of meets and
+zero make them disjoint. Applying $E_i$ to
+\eqref{eq:atomic-inequalities} and using $t_0\le t$ gives
+the two inclusions. A recursive separator would consequently
+separate $A_i,B_i$, which is impossible.
+
+If $t\le t'$, monotonicity gives inclusions of both observed
+sets, so the identity of $\N^2$ is the required pair morphism.
+The functor laws follow from the identity maps.
+\end{proof}
+
+The observation argument also applies to another recursion category
+whose restriction splitting admits a functor to $\mathcal K$
+preserving restrictions, zeros, and binary joins of restriction
+idempotents, and sending the selected pair to a recursively inseparable pair. A sentence object,
+negation map, and total map satisfying the inequalities of
+Corollary~\ref{cor:domain-incompleteness} then give the corresponding
+observed theorem and refutation sets.
+
+\appendix
+
+\section{Construction of the nonnumerical recursion category}\label{app:fork-structure}
+
+We prove the structural claims about $\mathcal E$, $\mathcal A$, and
+$\mathscr R_X$ made in Section~\ref{sec:cosheaves}. In particular,
+we construct the frames and Turing morphism that make
+$\mathscr R_X$ a recursion category.
+
+\subsection{Cosheaves and numerical diagrams}
+
+Write $D=\{c\}$, $L=\{a,c\}$, and $R=\{b,c\}$ for the nonempty
+proper opens of $X$. Morphisms of the set-valued cosheaves defined in
+Section~\ref{sec:cosheaves} are natural transformations.
+
+\begin{proposition}\label{prop:fork-cosheaves}
+Restriction to $D,L,R$ defines an equivalence
+$\operatorname{CoSh}(X,\mathbf{Set})\simeq\mathbf{Set}^{J}$,
+where $J=(1\leftarrow0\to2)$. Its inverse assigns to a diagram
+$A\xleftarrow{r}C\xrightarrow{s}B$ the cosheaf whose values at
+$D,L,R,X$ are respectively $C,A,B,A\amalg_C B$.
+\end{proposition}
+\begin{proof}
+Every cover of $D$, $L$, or $R$ contains the covered open. A cover
+of $X$ either contains $X$ or contains both $L$ and $R$. Thus the
+only additional cosheaf condition is that the following square be
+a pushout:
+\[
+\begin{tikzcd}
+C\arrow[r,"s"]\arrow[d,"r"']&B\arrow[d]\\
+A\arrow[r]&A\amalg_C B.
+\end{tikzcd}
+\]
+Any other members of a cover factor through these maximal members,
+so their identifications are already imposed by this pushout.
+A commuting map of diagrams induces a unique map of pushouts.
+This defines the inverse functor on morphisms; the same universal
+property gives both natural isomorphisms required for an equivalence.
+\end{proof}
+
+For an object $Y$ of $\mathcal E$, the pushout has a
+quotient presentation on the tagged carrier $Y_1+Y_2$: identify
+$(1,r_1^Yy)$ with $(2,r_2^Yy)$ for every $y\in Y_0$ and take the
+equivalence relation generated by these pairs. This relation is c.e.,
+since finite paths in its c.e.\ edge relation can be enumerated.
+A morphism of $\mathcal E$ acts on representatives and respects the
+relation, and hence induces the map at $X$.
+
+Products and subobjects are taken in the diagram category. In
+particular, the global value of the product of $Y$ and $Z$ is
+\[
+ (Y_1\times Z_1)\amalg_{Y_0\times Z_0}(Y_2\times Z_2).
+\]
+It need not be the product of the two global values. For example,
+the diagram $H=(1\leftarrow0\to1)$ satisfies $H\times H\cong H$,
+whose global value has two elements, whereas the Cartesian square
+of that global value has four. Likewise $H\to(1\leftarrow1\to1)$ is a monomorphism
+of diagrams although its global map is the function $2\to1$.
+Here $0$ and $1$ denote empty and singleton carriers. Thus the
+subdiagrams used as partial-map domains are categorical subobjects
+of the cosheaves, not necessarily subsets at every open.
+
+A \emph{regular epimorphism} is a coequalizer of a pair of arrows.
+A category is \emph{regular} if it has finite limits, every arrow
+factors as a regular epimorphism followed by a monomorphism, and
+regular epimorphisms are preserved by pullback. The monic part of
+this factorization is its \emph{regular image}. The \emph{kernel
+pair} of $q:Y\to Z$ is the pair of projections
+$Y\times_ZY\rightrightarrows Y$.
+Finite coproducts are \emph{extensive} when, for every finite family
+$(Y_k)_k$, copairing defines an equivalence
+\[
+ \prod_k(\mathcal E/Y_k)\longrightarrow
+ \mathcal E/\Bigl(\coprod_kY_k\Bigr).
+\]
+Here $\mathcal E/Y$ is the slice category of arrows with target $Y$,
+whose morphisms are commuting triangles over $Y$.
+
+\begin{proposition}\label{prop:fork-total}
+The categories $\mathcal C_{\mathrm{rec}}$ and
+$\mathcal E=\mathcal C_{\mathrm{rec}}^J$ have finite limits and
+finite coproducts. The category $\mathcal E$ is regular and
+extensive. Its monomorphisms are componentwise injections, and its
+regular images are the componentwise c.e.\ images.
+\end{proposition}
+\begin{proof}
+The terminal numerical carrier is a singleton. Products use tuples,
+and an equalizer of $f,g:Y\to Z$ has carrier
+$\{y\in Y:f(y)=g(y)\}$. This carrier is c.e.: enumerate $Y$, run
+both computations, and retain equal outputs. Its inclusion is
+recursive. The universal maps into products and equalizers use the
+given recursive maps and tuple formation, and are total on their
+specified source carriers. This proves the finite-limit universal
+properties in $\mathcal C_{\mathrm{rec}}$.
+
+For a total arrow $f:Y\to Z$, enumerate $Y$ and its computed
+values to enumerate $f(Y)$. The factorization
+$Y\to f(Y)\hookrightarrow Z$ is therefore a factorization in
+$\mathcal C_{\mathrm{rec}}$. Every total surjection
+$q:Y\to Z$ has a partial recursive section total on $Z$: on input
+$z$, enumerate $Y$ and search for a computed value $q(y)=z$.
+If $u:Y\to W$ is constant on the fibers of $q$, composing $u$
+with this section gives the unique arrow $v:Z\to W$ of
+$\mathcal C_{\mathrm{rec}}$ with $vq=u$. Thus $q$ is the
+coequalizer of its kernel pair.
+The pullback of a surjection is surjective, since a preimage of
+each element can be paired with that element. These pullbacks
+have c.e.\ tuple carriers by the finite-limit construction.
+This proves regularity and pullback stability of the image
+factorizations in the numerical category.
+
+Limits and tagged finite coproducts of diagrams are formed
+componentwise. Their universal maps are natural because their
+components are uniquely determined by the corresponding numerical
+universal properties. Images of a diagram map form a subdiagram:
+the transition of an image element is an image element by naturality.
+For a componentwise surjection $q:Y\to Z$, a diagram map
+$u:Y\to W$ coequalizing its kernel pair descends componentwise.
+If $v_jq_j=u_j$ are the descended maps, then
+\[
+ r_i^Wv_0q_0=r_i^Wu_0=u_i r_i^Y
+ =v_iq_i r_i^Y=v_i r_i^Zq_0.
+\]
+Surjectivity of $q_0$ gives $r_i^Wv_0=v_i r_i^Z$, so the
+descent is a diagram map. These image factorizations are stable
+under pullback because the corresponding assertion holds in
+each component. They give regularity of $\mathcal E$.
+
+The three finite diagrams
+\[
+ H_0=(1\leftarrow1\to1),\qquad
+ H_1=(1\leftarrow0\to0),\qquad
+ H_2=(0\leftarrow0\to1)
+\]
+detect component elements: total maps $H_j\to Y$ are in bijection
+with elements of $Y_j$. These maps are recursive because every
+nonempty component of their source $H_j$ is a singleton.
+If a diagram map is monic,
+testing it on these maps proves that each component is injective.
+The converse follows by cancelling those component injections.
+An injective arrow of $\mathcal C_{\mathrm{rec}}$ has a partial recursive inverse
+on its c.e.\ image, obtained by preimage search.
+
+Finally, for a map $Y\to A+B$, the inverse images of the two
+tags form c.e.\ subdiagrams $Y^A,Y^B$ and give an isomorphism
+$Y^A+Y^B\cong Y$. Maps over $A+B$ restrict uniquely to maps
+over $A$ and $B$, and two such maps combine uniquely by tagged
+copairing. This proves the slice equivalence expressing extensivity.
+\end{proof}
+
+\subsection{Partial maps, ranges, and connected restriction idempotents}
+
+\begin{proposition}\label{prop:fork-structure}
+The category $\mathcal A=\operatorname{Par}(\mathcal E,
+\operatorname{Mono})$ is a split prodominical restriction category
+with binary restriction products, restriction coproducts, weak
+choice, and ranges satisfying the agreement law. Its range idempotents
+are the partial identities on the regular images of the value maps.
+Joins of restriction idempotents are partial identities on finite
+unions of their subdiagrams, and inverse image along every partial
+arrow preserves binary meets and finite joins. Ranges commute with products and
+are stable under pullback along total arrows.
+\end{proposition}
+\begin{proof}
+Replace the monic leg of a representing span by its image
+inclusion, using its computable inverse on that image. A partial
+arrow $f:Y\rightharpoonup Z$ is then a c.e.\ subdiagram
+$D_f\subseteq Y$ and a total diagram map $D_f\to Z$.
+If $g:Z\rightharpoonup W$ has domain $D_g$, the domain of $gf$
+at component $j$ is
+\[
+ \{y\in(D_f)_j:f_j(y)\in(D_g)_j\},
+\]
+and its value there is $g_j(f_j(y))$. These carriers are c.e.\
+and form a subdiagram by naturality. This is precisely the
+pullback composition of the representing spans. Associativity
+and identities follow from these domain and value formulas.
+
+The restriction $\bar f$ is the partial identity on $D_f$.
+The restriction axioms reduce componentwise to the corresponding
+identities of partial functions. Every restriction idempotent
+splits through its domain subdiagram: the inclusion is total,
+and its partial inverse is the identity with that domain.
+Empty domains give restriction zeros. The restriction product
+uses componentwise Cartesian products; a pairing is defined on
+the intersection of the two domains and has the ordered pair
+of values there. Its projection identities and uniqueness are
+those in the definition of a restriction product. Coproducts
+use tagged carriers; partial copairing uses the tagged union
+of the two domains. A product with an empty domain is empty,
+which proves the prodominical zero law.
+
+The component images $f_j((D_f)_j)$ form a c.e.\ subdiagram
+$I_f\subseteq Z$. Its partial identity receives $f$. If a restriction
+idempotent receives $f$, its subdiagram contains each component image,
+and hence contains $I_f$.
+This proves the range property and agreement with the regular
+image of $D_f\to Z$. If $gf=hf$, choose a preimage of each
+$z\in(I_f)_j$. Equality of the two partial composites shows
+that $g_j$ is defined at $z$ exactly when $h_j$ is, and their
+values there agree. Hence $g\ran(f)=h\ran(f)$, including
+equality of domains.
+
+For a total $u:W\to Z$, the projection
+$D_f\times_Z W\to W$ has component image
+$u_j^{-1}(f_j((D_f)_j))$. Thus its range is $u^*\ran(f)$,
+which is the asserted pullback law. The image of a product
+of two value maps is the product of their images, giving
+$\ran(f\times g)=\ran(f)\times\ran(g)$.
+Intersections and finite unions of domain subdiagrams are again
+c.e.\ subdiagrams; their partial identities give the meets and joins
+of the corresponding restriction idempotents. For a restriction idempotent
+$e$ on $Z$ with domain subdiagram $D_e$, the inverse image $f^*e$
+has component carrier
+\[
+ \{y\in(D_f)_j:f_j(y)\in(D_e)_j\}.
+\]
+This formula proves preservation of binary meets and finite joins,
+including the empty join.
+
+Suppose that $p:Y\rightharpoonup Z$ is a partial monomorphism
+and let $D_p$ be its domain subdiagram. If two elements of $(D_p)_j$
+have the same image, their corresponding total maps
+$H_j\to D_p\to Y$ have equal composites with $p$.
+Partial monicity makes the original maps equal, since their
+images lie in $D_p$. Thus every value component is injective.
+Preimage search gives recursive inverse components on $I_p$;
+they commute with transitions by injectivity and naturality of $p$.
+The resulting partial arrow $s:Z\rightharpoonup Y$ has domain
+$I_p$ and satisfies $ps=\bar s$ and $psp=p$.
+This proves weak choice.
+\end{proof}
+
+\begin{proposition}\label{prop:fork-local}
+The category $\mathcal A$ is locally connected.
+\end{proposition}
+\begin{proof}
+For $y\in Y_0$, take the finite subdiagram of $Y$ with central
+carrier $\{y\}$ and endpoint carriers
+$\{r_1^Yy\}$ and $\{r_2^Yy\}$. It is connected: in any partition
+by two disjoint domain subdiagrams, the part containing its central
+element must contain both endpoints and therefore the whole
+subdiagram. A singleton at either endpoint, with the other
+components empty, is connected as well.
+
+Suppose that partial arrows $f,g:Y\rightharpoonup Z$ agree
+after composition with every connected restriction idempotent.
+Restriction to the
+finite subdiagram generated by $y\in Y_0$ detects whether
+$f_0$ and $g_0$ are defined at $y$, and compares their values
+when defined. Partial identities on endpoint singleton subdiagrams do
+the same for $f_1,g_1$ and $f_2,g_2$. Thus all three domains and all three
+value maps agree, proving $f=g$.
+\end{proof}
+
+\subsection{A universal object and its frames}
+
+Let $V$ be the diagram in \eqref{eq:universal-fork}.
+A \emph{total restriction embedding} $m:Y\to V$ is a total
+arrow with a partial inverse $m^\dagger:V\rightharpoonup Y$
+satisfying $m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
+
+\begin{lemma}\label{lem:fork-dominance}
+Every object of $\mathcal E$ has a total restriction embedding
+into $V$.
+\end{lemma}
+\begin{proof}
+For $j=0,1,2$, choose a recursive injection $c_j:Y_j\to\N$
+with a partial recursive inverse on its image, using a tuple
+coding of the ambient finite power. Define
+\[
+ m_i(y_i)=(0,c_i(y_i))\quad(i=1,2),\qquad
+ m_0(y)=(0,c_0(y),c_1(r_1^Yy),c_2(r_2^Yy)).
+\]
+These maps are total, injective, and commute with both transitions.
+Their image is a c.e.\ subdiagram. The inverses on that image
+are natural and give the required partial inverse.
+\end{proof}
+
+For a diagram $Y$, let $Y^\#$ have at component $j$ the
+nonempty finite words over $Y_j$; its transitions apply those
+of $Y$ to each letter. Finite words over a c.e.\ carrier form
+a c.e.\ carrier. A total diagram map acts on words letterwise.
+A partial diagram map acts on precisely the words all of whose
+letters belong to its domain, also letterwise. These formulas
+preserve identities and composition and define a covariant functor
+$(-)^\#:\mathcal A\to\mathcal A$. Concatenation
+$Y^\#\times Y^\#\to Y^\#$ and singleton insertion
+$Y\to Y^\#$ are total natural maps. For an internal semigroup $M$
+in $\mathcal E$ and a morphism $f:Y\to M$, multiplication of the
+$f$-images of the letters gives the unique semigroup morphism
+$f^\#:Y^\#\to M$ whose composite with singleton insertion is $f$.
+This finite computation proves the free-semigroup universal property.
+
+Fix a recursive pairing bijection
+$\pi:\N^2\to\N$ and recursive tuple bijections
+$\gamma_n:\N^n\to\N$, with their inverses computable uniformly
+for $n\ge1$. Encode a nonempty word $(k_1,\ldots,k_n)$ by
+$\pi(n-1,\gamma_n(k_1,\ldots,k_n))$.
+
+\begin{lemma}\label{lem:fork-frames}
+There are isomorphisms in $\mathcal E$
+$V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
+\end{lemma}
+\begin{proof}
+For the product isomorphism, decode each of $k,z,a,b$ into a
+pair using $\pi^{-1}$. Send $(k,z,a,b)$ to the resulting pair
+of four-tuples. At either endpoint, decode $(k,x)$ into the
+resulting pair of two-tuples. The transition equations hold
+coordinatewise, and coordinatewise pairing gives the inverse.
+
+For the coproduct isomorphism, write $k=2q+t$ with
+$t\in\{0,1\}$. Send a tuple with first coordinate $k$ to
+summand $t$, replace $k$ by $q$, and retain its remaining
+coordinates. This rule is the same at all three components.
+The inverse replaces $q$ in summand $t$ by $2q+t$.
+
+For the word isomorphism, decode $k$ as the nonempty word
+$(k_1,\ldots,k_n)$. Decode $z,a,b$ by $\gamma_n^{-1}$,
+and send $(k,z,a,b)$ to
+\[
+ ((k_1,z_1,a_1,b_1),\ldots,(k_n,z_n,a_n,b_n)).
+\]
+At an endpoint, decode $k$ in the same way and decode $x$
+by $\gamma_n^{-1}$, obtaining $((k_j,x_j))_{j=1}^n$.
+These maps commute with transitions. Recovering the word of
+first coordinates and applying the tuple encodings to the
+remaining coordinate words gives total recursive inverses.
+\end{proof}
+
+\subsection{A Turing morphism}\label{app:fork-turing}
+
+The two endpoint programs of a central program will compute its
+endpoint values. A central computation is accepted only when
+these programs agree with its proposed output.
+
+Fix recursive bijections
+$\operatorname{encode}_n:\N^n\to\N$, with recursive inverses
+$\operatorname{decode}_n$, for each positive integer $n$.
+We use an acceptable numbering
+$\varphi:\N\times\N\rightharpoonup\N$ of the partial recursive
+functions and write $\varphi_p(t)=\varphi(p,t)$.
+The specialization property of this numbering is the following:
+if $m\geq0$, $n\geq1$, and
+$G:\N^m\times\N^n\rightharpoonup\N$ is partial recursive,
+there is a total recursive map $s:\N^m\to\N$ such that
+\[
+ \varphi_{s(y)}(\operatorname{encode}_n x)\simeq G(y,x).
+\]
+Here $\simeq$ means equality of partial values,
+including simultaneous undefinedness. The case $m=0$ is a
+constant program index. This is the usual $s$-$m$-$n$ theorem.
+
+\begin{theorem}\label{thm:fork-turing}
+The diagram $V$ in
+$\mathcal A=\operatorname{Par}(\mathcal C_{\mathrm{rec}}^J,
+\operatorname{Mono})$ admits a partial arrow
+$\tau:V\times V\rightharpoonup V$ with the following property.
+For every diagram $Y$ and every partial arrow
+$F:Y\times V\rightharpoonup V$, there is a total arrow
+$c:Y\to V$ such that
+\[
+ \tau(c\times1_V)=F.
+\]
+At each endpoint $i=1,2$, this Turing morphism is given by
+\begin{equation}\label{eq:fork-turing-endpoint}
+ \tau_i((k,p),(\ell,x))
+ =\operatorname{decode}_2
+     \varphi_p(\operatorname{encode}_2(\ell,x)).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $i=1,2$, let $T_i\subseteq V_i\times V_i$ be the c.e.\ set
+on which the numerical computation in
+\eqref{eq:fork-turing-endpoint} halts, and define
+$\tau_i:T_i\to V_i$ by that equation. The first coordinate $k$
+of the program argument has no effect on this computation.
+
+A central program and input have the respective forms
+\[
+ P=(k,p_0,p_1,p_2)\in V_0,
+ \qquad x=(\ell,x_0,x_1,x_2)\in V_0.
+\]
+Define partial recursive maps
+$C:V_0\times V_0\rightharpoonup V_0$ and
+$Q_i:V_0\times V_0\rightharpoonup V_i$, for $i=1,2$,
+by the following computations, run in parallel:
+\begin{align*}
+ C(P,x)&\simeq
+   \operatorname{decode}_4
+      \varphi_{p_0}(\operatorname{encode}_4 x),\\
+ Q_i(P,x)&\simeq
+   \operatorname{decode}_2
+      \varphi_{p_i}(\operatorname{encode}_2(\ell,x_i))
+      \qquad(i=1,2).
+\end{align*}
+Let $T_0\subseteq V_0\times V_0$ consist of those pairs $(P,x)$
+for which all three computations halt and
+\begin{equation}\label{eq:fork-turing-check}
+ Q_i(P,x)=r_i^V C(P,x)\qquad(i=1,2).
+\end{equation}
+Define $\tau_0:T_0\to V_0$ by $\tau_0(P,x)=C(P,x)$.
+Dovetailing the three computations and checking equality of their
+numerical outputs enumerates $T_0$ and computes $\tau_0$ on it.
+
+If $(P,x)\in T_0$, then
+\[
+ (r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in T_i.
+\]
+Thus $T=(T_0,T_1,T_2)$ is a c.e.\ subdiagram of $V\times V$.
+Equation~\eqref{eq:fork-turing-check} gives
+\[
+ r_i^V\tau_0(P,x)
+   =\tau_i(r_i^V P,r_i^V x)
+ \qquad((P,x)\in T_0).
+\]
+The three value maps therefore form a total arrow $T\to V$.
+Together with the inclusion $T\hookrightarrow V\times V$,
+they define the required partial arrow $\tau$.
+
+Now let $F:Y\times V\rightharpoonup V$ be any partial arrow.
+Choose its representation by a c.e.\ subdiagram
+$D\subseteq Y\times V$ and value maps
+$F_j:D_j\to V_j$ in $\mathcal C_{\mathrm{rec}}$, where $j=0,1,2$.
+Put $d_0=4$ and $d_1=d_2=2$, so that $V_j=\N^{d_j}$.
+Choose $m_j\geq0$ with $Y_j\subseteq\N^{m_j}$.
+For each component define a partial recursive numerical function
+\[
+ G_j:\N^{m_j}\times\N^{d_j}\rightharpoonup\N
+\]
+as follows. On input $(y,x)$, wait until $(y,x)$ appears in an
+enumeration of $D_j$; then compute $F_j(y,x)$ and return its
+$\operatorname{encode}_{d_j}$-code. This function has domain
+exactly $D_j$.
+Specialization gives total recursive maps
+$s_j:\N^{m_j}\to\N$ satisfying
+\begin{equation}\label{eq:fork-specialization}
+ \operatorname{decode}_{d_j}
+   \varphi_{s_j(y)}(\operatorname{encode}_{d_j}x)
+ \simeq F_j(y,x),
+ \qquad\text{with domain }D_j.
+\end{equation}
+
+Define the component maps of $c:Y\to V$ by
+\begin{align*}
+ c_i(y_i)&=(0,s_i(y_i)) &&(i=1,2),\\
+ c_0(y)&=(0,s_0(y),s_1(r_1^Yy),s_2(r_2^Yy)).
+\end{align*}
+These maps are recursive and total on their respective carriers:
+the maps $s_j$ are total on the ambient numerical powers and the
+maps $r_i^Y$ are total on $Y_0$. Moreover,
+\[
+ r_i^Vc_0(y)=(0,s_i(r_i^Yy))=c_i(r_i^Yy),
+\]
+so $c$ is a total natural map of diagrams.
+
+At endpoint $i$, equations
+\eqref{eq:fork-turing-endpoint} and
+\eqref{eq:fork-specialization} show that
+$\tau_i(c_i(y_i),v_i)$, for $v_i\in V_i$, has domain exactly
+$D_i$ and agrees there with $F_i(y_i,v_i)$.
+For the central component, fix $(y,x)\in Y_0\times V_0$.
+If $(y,x)\in D_0$, its central program returns $F_0(y,x)$.
+Since $D$ is a subdiagram,
+\[
+ (r_i^Yy,r_i^Vx)\in D_i\qquad(i=1,2).
+\]
+Both endpoint programs consequently halt, and naturality of
+the value map $D\to V$ gives
+\[
+ F_i(r_i^Yy,r_i^Vx)=r_i^VF_0(y,x).
+\]
+Both tests in \eqref{eq:fork-turing-check} succeed, so
+$\tau_0(c_0(y),x)=F_0(y,x)$.
+Conversely, if $\tau_0(c_0(y),x)$ is defined, its central
+program has halted. Equation~\eqref{eq:fork-specialization}
+then implies $(y,x)\in D_0$.
+This proves equality of the central domains as well as their
+values. Since $c\times1_V$ is total, the componentwise domain
+and value equalities prove $\tau(c\times1_V)=F$ in $\mathcal A$.
+\end{proof}
+
+\subsection{The recursion category and its splitting}
+
+\begin{proposition}\label{prop:fork-recursion}
+Let $\mathscr R_X$ be the full subcategory of
+$\mathcal A$ on the formal objects generated by $V$ under
+binary products, binary coproducts, and nonempty-word formation.
+Then $\mathscr R_X$ is a recursion category. Its inclusion
+into $\mathcal A$ is a range functor, and its restriction
+splitting is equivalent to $\mathcal A$.
+\end{proposition}
+\begin{proof}
+The frames of Lemma~\ref{lem:fork-frames}, applied inductively,
+show that every formal object is isomorphic to $V$.
+The binary restriction products, coproducts, and prodominical
+zero law restrict from $\mathcal A$ to this full subcategory.
+The Turing morphism of Theorem~\ref{thm:fork-turing} has
+source $V\times V$ and target $V$ in the subcategory.
+Its total parameter maps for objects of $\mathscr R_X$ belong
+to $\mathscr R_X$ by fullness. Hence it retains its Turing
+universal property there, proving that $\mathscr R_X$ is a
+recursion category.
+
+Restrictions and ranges of arrows between formal objects are
+endomorphisms of formal objects, so belong to the subcategory.
+Their universal properties are unchanged, since all competing
+endomorphisms and all arrows between the relevant objects remain
+available. Coproducts and their copairings are likewise retained.
+Thus the inclusion is a range functor.
+
+For a restriction idempotent $e$ on a formal object $Y$, write
+$m_e:D_e\to Y$ and $r_e:Y\rightharpoonup D_e$ for its
+domain inclusion and partial inverse. Send $(Y,e)$ to $D_e$
+and a supported arrow $f:(Y,e)\rightharpoonup(Z,d)$ to
+$r_d f m_e:D_e\rightharpoonup D_d$.
+The equations $m_er_e=e$ and $r_em_e=1_{D_e}$ show that
+identities and composition are preserved. Conversely, send a
+partial map $g:D_e\rightharpoonup D_d$ to $m_d g r_e$.
+This arrow belongs to the full subcategory on the ambient
+formal objects, and it has the required support. The two
+assignments are inverse on each hom-set, so the functor is
+fully faithful.
+For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
+provides a total restriction embedding $m:Z\to V$.
+The domain subdiagram of $mm^\dagger$ is isomorphic to $Z$,
+so the functor is essentially surjective.
+\end{proof}
+
+The same construction gives a functor from the restriction splitting
+of $\mathrm{Rec}$ to
+$\mathcal K=\operatorname{Par}(\mathcal C_{\mathrm{rec}},
+\operatorname{Mono})$: it sends a split object to its c.e.\ carrier
+and a supported partial recursive arrow to its restriction to that
+carrier. Every c.e.\
+numerical carrier embeds by tuple coding into $\N$ and is
+isomorphic to the split object of its c.e.\ partial identity
+on $\N$. Partial recursive maps between these carriers are
+exactly the arrows supported by the corresponding restriction
+idempotents on their sources and targets. Thus this functor is fully
+faithful and essentially surjective.
+
+\emph{Decidable equality} on $V$ means a total map
+$\epsilon:V\times V\to1+1$ whose inverse image of the first
+summand is the diagonal subdiagram. Here $1$ is the terminal diagram.
+
+\begin{proposition}\label{prop:fork-distinction}
+The recursion category $\mathscr R_X$ is not equivalent, as a
+restriction category, to the classical numerical recursion category.
+The object $V$ has no decidable equality in $\mathcal E$.
+\end{proposition}
+\begin{proof}
+The terminal diagram is $(1\leftarrow1\to1)$. A subobject
+with empty central component has independently empty or singleton
+endpoint components, giving four subobjects. A subobject with
+singleton central component must contain both endpoints, giving
+one more. Thus its subobject order has five elements, whereas
+the terminal singleton of $\mathcal C_{\mathrm{rec}}$ has two.
+An equivalence of the asserted restriction categories would induce
+an equivalence of their restriction splittings, hence of their
+total categories $\mathcal E$ and $\mathcal C_{\mathrm{rec}}$.
+Equivalences preserve terminal objects and their subobject orders,
+so this is impossible.
+
+Suppose that $\epsilon$ decides equality on $V$. The diagram $1+1$
+is constant, with identity transitions. Choose distinct central
+tuples $u,v$ differing only in their $z$ coordinate. Their first
+endpoint images coincide. Hence $\epsilon_1(r_1u,r_1v)$ is the
+first truth value. Naturality forces $\epsilon_0(u,v)$ to be
+the same value, contrary to $u\ne v$ and the prescribed diagonal
+inverse image.
+\end{proof}
+
+\section{Finite syntax and proofs}
+\label{app:fork-proofs}
+
+Let $\mathcal E=\mathcal C_{\mathrm{rec}}^{J}$, where
+$J=(1\leftarrow0\to2)$, and let
+$\mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono})$.
+The components of the atom object $V$ are $V_0=\N^4$ and
+$V_1=V_2=\N^2$, with transitions $r_i:V_0\to V_i$.
+We construct syntax and finite proofs in $\mathcal E$; their
+conclusion image will determine a restriction idempotent in $\mathcal A$.
+
+\subsection{The syntax algebra}
+
+Fix recursive encodings of finite rooted ordered trees and of finite
+tuples of natural numbers, with recursive parsing operations. For
+$j\in\{0,1,2\}$, let $S_j$ be the set of finite formula trees
+generated by
+\[
+ \theta_j(x)\quad(x\in V_j),\qquad
+ \nu_j(\varphi)\quad(\varphi\in S_j),\qquad
+ \varphi\Rightarrow_j\psi\quad(\varphi,\psi\in S_j).
+\]
+The three constructor tags are distinct. Tree parsing and the
+decidable numerical carriers $V_j$ make $S_j$ a recursive set of
+codes. For $i=1,2$, define $\sigma_i:S_0\to S_i$ by replacing
+each atom label $x$ with $r_i(x)$ and retaining every constructor.
+This is a total recursive map, so the fork
+$S=(S_1\xleftarrow{\sigma_1}S_0\xrightarrow{\sigma_2}S_2)$
+is an object of $\mathcal E$. The constructors form total natural
+maps $\theta:V\to S$, $\nu:S\to S$, and
+$\Rightarrow:S\times S\to S$.
+
+The covariant functor $P:\mathcal E\to\mathcal E$ is defined by
+\[
+ P(Z)=V+Z+(Z\times Z),\qquad
+ P(f)=1_V+f+(f\times f)
+ \quad(f:Z\to Z'\text{ in }\mathcal E).
+\]
+Its identity and composition laws follow componentwise from those
+of tagged sums and ordered pairs. The constructor maps define
+$\iota=[\theta,\nu,\Rightarrow]:P(S)\to S$.
+
+\begin{proposition}\label{prop:fork-syntax-initial}
+The algebra $\iota:P(S)\to S$ is initial in the category of
+$P$-algebras in $\mathcal E$: for every total natural map
+$\alpha:P(Z)\to Z$, there is a unique total natural map
+$u:S\to Z$ satisfying $u\iota=\alpha P(u)$.
+\end{proposition}
+\begin{proof}
+At component $j$, define $u_j:S_j\to Z_j$ by evaluating a tree
+from its leaves to its root, using the three restrictions of
+$\alpha_j:V_j+Z_j+Z_j^2\to Z_j$ at the corresponding tags.
+Every application of $\alpha_j$ has an input in its carrier.
+Induction on tree size therefore proves termination and membership
+of the output in $Z_j$. The evaluation is partial recursive on
+numerical codes and total on $S_j$, as required for a morphism of
+$\mathcal C_{\mathrm{rec}}$.
+
+Write $z_i:Z_0\to Z_i$ for a transition of $Z$. Naturality of
+$\alpha$ says that applying $z_i$ after one constructor operation
+is the same as first applying $r_i$ to an atom label, or $z_i$
+to each recursive argument, and then using the corresponding
+operation at component $i$. Induction on the tree consequently
+gives $z_i u_0=u_i\sigma_i$. Thus the component maps form
+$u:S\to Z$ in $\mathcal E$, and their recursive definition gives
+the algebra equation. Any map satisfying that equation agrees
+with $u$ on atoms and then on negations and implications by the
+same finite induction, proving uniqueness.
+\end{proof}
+
+\subsection{The proof object and its range}
+
+Let $a,b$ be disjoint restriction idempotents on $V$ in $\mathcal A$.
+Write $A,B\hookrightarrow V$ for their split subdiagrams, with
+c.e.\ component subsets $A_j,B_j\subseteq V_j$. Disjointness
+means $A_j\cap B_j=\varnothing$ at each component.
+For formulas $\alpha,\beta,\gamma\in S_j$, put
+\begin{align*}
+ H_{1,j}(\alpha,\beta)
+   &=\alpha\Rightarrow_j(\beta\Rightarrow_j\alpha),\\
+ H_{2,j}(\alpha,\beta,\gamma)
+   &=(\alpha\Rightarrow_j(\beta\Rightarrow_j\gamma))
+     \Rightarrow_j((\alpha\Rightarrow_j\beta)
+                          \Rightarrow_j(\alpha\Rightarrow_j\gamma)),\\
+ H_{3,j}(\alpha,\beta)
+   &=(\nu_j\beta\Rightarrow_j\nu_j\alpha)
+                          \Rightarrow_j(\alpha\Rightarrow_j\beta).
+\end{align*}
+These are the component instances of the three logical schemes.
+
+A proof at component $j$ is a finite rooted ordered tree with
+the following node data and conclusion. A leaf is either a
+tagged logical instance $H_{1,j}(\alpha,\beta)$,
+$H_{2,j}(\alpha,\beta,\gamma)$, or
+$H_{3,j}(\alpha,\beta)$, carrying its displayed formula
+parameters; a positive leaf labeled by $x\in A_j$, with
+conclusion $\theta_j(x)$; or a negative leaf labeled by
+$x\in B_j$, with conclusion $\nu_j\theta_j(x)$.
+A nonleaf has the modus-ponens tag and two ordered children.
+If their conclusions are $\alpha$ and
+$\alpha\Rightarrow_j\beta$, its conclusion is $\beta$.
+
+Let $\mathrm{Prf}_j$ be the set of codes of these trees.
+Tree shape, formula syntax, and premise matching can be checked
+by recursive operations on the numerical codes. Membership tests
+for positive and negative leaves are c.e.; there are only finitely
+many such tests in any tree. Dovetailing these finite collections
+of tests over all tree codes enumerates exactly $\mathrm{Prf}_j$.
+Hence $\mathrm{Prf}_j$ is a c.e.\ carrier.
+Reading conclusions from leaves to root gives an arrow
+$c_j:\mathrm{Prf}_j\to S_j$ of $\mathcal C_{\mathrm{rec}}$.
+
+For $i=1,2$, replace formula parameters by their images under
+$\sigma_i$, positive or negative labels $x$ by $r_i(x)$, and
+retain every node tag. The resulting map
+$\rho_i:\mathrm{Prf}_0\to\mathrm{Prf}_i$ is an arrow of
+$\mathcal C_{\mathrm{rec}}$.
+It preserves validity: the inclusions $r_i(A_0)\subseteq A_i$
+and $r_i(B_0)\subseteq B_i$ handle signed leaves, and
+$\sigma_i$ commutes with the formula constructors and hence
+preserves the equalities required at modus-ponens nodes.
+Induction on proofs gives
+\[
+ c_i\rho_i=\sigma_i c_0.
+\]
+The proof carriers therefore form an object $\mathrm{Prf}$ of
+$\mathcal E$, and their conclusion maps form a total natural map
+$c:\mathrm{Prf}\to S$.
+
+\begin{theorem}\label{thm:fork-proof-presentation}
+For disjoint restriction idempotents $a,b$ on $V$ in $\mathcal A$, the syntax and
+proof objects above define a restriction idempotent $t_0=\ran(c)$ on $S$ in
+$\mathcal A$. Its split subdiagram is the least c.e.\ subdiagram
+containing all instances of the three logical schemes and the
+positive and negative atomic axioms, and closed under modus ponens.
+Moreover,
+\[
+ a\le\theta^*t_0,\qquad
+ b\le\theta^*\nu^*t_0,\qquad
+ t_0\,\nu^*t_0=0_S.
+\]
+In particular, this gives a consistent classical propositional
+presentation in $\mathcal A$.
+\end{theorem}
+\begin{proof}
+Let $T_j=c_j(\mathrm{Prf}_j)\subseteq S_j$.
+These sets are c.e.\ images of c.e.\ carriers under
+arrows of $\mathcal C_{\mathrm{rec}}$. The conclusion equation gives
+$\sigma_i(T_0)\subseteq T_i$, so they form a c.e.\
+subdiagram $T\hookrightarrow S$. Its partial identity is
+$\ran(c)$: it receives $c$, and the subdiagram of every restriction
+idempotent receiving $c$ contains its component images.
+
+Each leaf supplies a proof of its axiom instance. Given proofs
+of $\alpha$ and $\alpha\Rightarrow_j\beta$, adjoining a
+modus-ponens root supplies a proof of $\beta$. Thus $T$ is
+rule-closed. If another c.e.\ subdiagram contains all
+the axiom instances and is closed under modus ponens, induction
+on each proof puts its conclusion in that subdiagram. This
+proves leastness. The one-node positive and negative proof maps
+$A\to\mathrm{Prf}$ and $B\to\mathrm{Prf}$ are total and natural.
+Their composites with $c$ are $\theta|_A$ and
+$\nu\theta|_B$, respectively, proving the first two inequalities.
+
+For consistency, fix a component $j$ and suppose two proofs
+$p,q\in\mathrm{Prf}_j$ conclude $\varphi$ and $\nu_j\varphi$.
+Let $L\subseteq A_j$ be the finite set of atom labels at
+positive leaves of either proof. Assign truth value $1$ to an
+atom precisely when its label belongs to $L$, and assign $0$
+to every other atom. Extend these values to formulas using
+Boolean negation and implication.
+All positive leaves of both proofs are true. Each negative
+leaf has a label in $B_j$, which is disjoint from $A_j$ and
+hence from $L$, so that leaf is true as well.
+
+The three logical schemes are true under this assignment.
+For the first, a true $\alpha$ makes
+$\beta\Rightarrow_j\alpha$ true. For the second, if
+$\alpha$, $\alpha\Rightarrow_j\beta$, and
+$\alpha\Rightarrow_j(\beta\Rightarrow_j\gamma)$ are true,
+then both $\beta$ and $\gamma$ are true. For the third, if
+$\alpha$ is true and $\beta$ false, then
+$\nu_j\beta\Rightarrow_j\nu_j\alpha$ is false.
+These observations give the displayed implications in all
+Boolean cases. Modus ponens preserves truth. Induction on
+$p$ and $q$ would therefore make $\varphi$ and its negation
+both true, a contradiction.
+
+Consequently $T_j\cap\nu_j^{-1}(T_j)=\varnothing$ for every
+$j$. Restriction idempotents, inverse images, and their meets are componentwise
+in $\mathcal A$, so this is precisely $t_0\nu^*t_0=0_S$.
+\end{proof}
+
+\section{Necessity of section lifting for inseparability}
+\label{app:lifting-counterexample}
+
+Consider the statement obtained from Theorem~\ref{thm:local-lifting}
+by dropping its lifting hypothesis. We construct a counterexample to
+that statement in which the range functor is faithful, preserves
+restriction products, and reflects zero arrows.
+
+Fix an acceptable numbering $(\varphi_e)_{e\in\N}$ of the ordinary
+partial recursive functions, and put
+\[
+ K=\{e:\varphi_e(e)\mathord\downarrow\}.
+\]
+The set $K$ is not recursive. Indeed, a decision procedure for $K$
+would give a program that, on input $x$, halts precisely when the
+procedure answers that $x\notin K$. Applying this program to its own
+index gives a contradiction.
+Let $(W_a^K)_{a\in\N}$ enumerate the domains of an acceptable
+numbering of partial functions recursive relative to $K$.
+Fix a recursive bijective pairing function
+$\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
+
+The objects of $\mathcal C_K$ are the formal numerical types generated
+from $\N$ by binary products and tagged coproducts, with fixed recursive
+codings. An arrow $f:X\rightharpoonup Y$ is a partial function whose
+domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
+recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
+on every element of $D_f$ and agrees with $f$ there. Equality is equality
+of partial-function graphs. These arrows need not themselves be ordinary
+partial recursive functions. The total arrows of $\mathcal C_K$ are exactly
+the ordinary total recursive functions between the indicated types.
+
+On $\N$, the arrows are precisely the functions
+\[
+ f_{e,a}(x)\simeq
+ \begin{cases}
+  \varphi_e(x),&x\in W_a^K,\\
+  \text{undefined},&x\notin W_a^K.
+ \end{cases}
+\]
+Here $\simeq$ includes simultaneous undefinedness: the actual domain
+is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every arrow has this
+form by taking an index of its extension and an oracle index of its
+specified domain.
+
+\begin{proposition}\label{prop:missing-lift}
+The category $\mathcal C_K$ is a prodominical recursion category with
+binary restriction coproducts and ranges. Its inclusion
+$F:\mathcal C_K\to\Pfn$ satisfies every hypothesis of
+Theorem~\ref{thm:local-lifting} except the lifting hypothesis.
+For the Turing morphism and coproduct isomorphism constructed below,
+the specified pair is separated by complementary restriction idempotents in
+$\mathcal C_K$. Moreover, two parallel arrows of $\mathcal C_K$
+whose restriction idempotents are disjoint can have no common upper
+bound in the restriction order, although finite joins of restriction
+idempotents exist.
+\end{proposition}
+
+\begin{proof}
+Let $f:X\rightharpoonup Y$ and $g:Y\rightharpoonup Z$ have
+ordinary partial recursive extensions $f_0,g_0$. Their composite has
+extension $g_0f_0$ and domain
+\[
+ D_{gf}=D_f\cap f_0^{-1}(D_g).
+\]
+This domain is c.e.\ relative to $K$: enumerate $D_f$, compute the
+corresponding $f_0$-values, and test for their appearance in the
+enumeration of $D_g$, using dovetailing. Identities and associativity
+are inherited from partial functions. Restriction is the partial
+identity on $D_f$, which has the ordinary identity as an extension.
+Empty partial functions give restriction zeros.
+
+Cartesian products and tagged copairings preserve the arrow class:
+their domains are respectively products and tagged unions of the given
+domains, and their extensions are the corresponding ordinary partial
+recursive programs. Consequently the set-theoretic restriction
+products and coproducts have their usual universal properties in
+$\mathcal C_K$. Product with a zero arrow is zero, and the chosen
+recursive coding isomorphisms make the category isotypical.
+
+The set $f(D_f)$ is c.e.\ relative to $K$: enumerate $D_f$ and run
+$f_0$ on its elements. The partial identity on this image belongs to
+$\mathcal C_K$ and is its range. Leastness and the agreement law
+hold for partial functions: equality after $f$ gives equality on
+every value in its image, including equality of definedness.
+Ranges commute with restriction products because images of products
+of partial functions are products of images. Restriction idempotents
+are the partial identities on the subsets c.e.\ relative to $K$;
+their order corresponds to inclusion, and their finite joins are
+partial identities on unions.
+
+Define
+\[
+ \tau_K(\langle e,a\rangle,x)=f_{e,a}(x).
+\]
+Its domain is c.e.\ relative to $K$, uniformly in all three
+variables, and it has the ordinary partial recursive extension
+$(\langle e,a\rangle,x)\mapsto\varphi_e(x)$.
+To prove its Turing property, let
+$v:\N\times\N\rightharpoonup\N$ be an arrow, with ordinary
+partial recursive extension $V(z,x)$ and domain $D_v$ c.e.\ relative
+to $K$. Specializing the ordinary program for $V$ gives an ordinary
+total recursive function $e(z)$ with
+\[
+ \varphi_{e(z)}(x)\simeq V(z,x).
+\]
+Specializing an oracle program for $D_v$ gives an ordinary total
+recursive function $a(z)$ with
+\[
+ W_{a(z)}^K=\{x:(z,x)\in D_v\}.
+\]
+The latter specialization is ordinary recursive because it only
+inserts the finite numeral for $z$ into program code; the oracle is
+used when the resulting program runs. Thus
+$r(z)=\langle e(z),a(z)\rangle$ is total in $\mathcal C_K$, and
+$v=\tau_K(r\times1_{\N})$, with equality of domains and values.
+The fixed recursive codings give the same argument for every formal
+parameter type. Hence $\tau_K$ is a Turing morphism.
+
+The inclusion $F$ is faithful and preserves restrictions, zeros,
+ranges, binary restriction products, and coproducts. It also reflects
+zero arrows. Its target $\Pfn$ is split and locally connected:
+restriction idempotents split through their subsets of definition,
+and partial identities on singletons detect partial functions.
+Partial injections have partial inverses, giving weak choice, and
+inverse images preserve unions. Also $F(1_{\N})\ne0$.
+
+Use the total recursive isomorphism
+\[
+ b:\N\longrightarrow\N+\N,\qquad
+ b(2n)=i_0(n),\quad b(2n+1)=i_1(n).
+\]
+Put $d=\tau_K\Delta_{\N}$ and
+$a_0=(bd)^*(1_{\N}+0_{\N})$,
+$a_1=(bd)^*(0_{\N}+1_{\N})$.
+For $q\in\N$, write
+$p(q)\simeq\varphi_{\pi_0(q)}(q)$. The carriers of these restriction idempotents are
+\[
+ \begin{aligned}
+ D_{a_0}&=\{q:q\in W_{\pi_1(q)}^K,
+                    \ p(q)\mathord\downarrow\text{ with an even value}\},\\
+ D_{a_1}&=\{q:q\in W_{\pi_1(q)}^K,
+                    \ p(q)\mathord\downarrow\text{ with an odd value}\}.
+ \end{aligned}
+\]
+Let
+\[
+ A=\{q:p(q)\mathord\downarrow\text{ with an even value}\}.
+\]
+This is an ordinary c.e.\ set and is decidable relative to $K$.
+For the latter assertion, uniformly construct a program that ignores
+its input, simulates $p(q)$, and halts precisely when the output is
+even; membership of its index in $K$ decides membership of $q$ in $A$.
+Thus $A$ and $A^c$ are c.e.\ relative to $K$, and their partial
+identities are complementary restriction idempotents in $\mathcal C_K$.
+They separate the displayed pair because
+$D_{a_0}\subseteq A$ and $D_{a_1}\subseteq A^c$.
+
+The set $A$ is not recursive. Fix any index $a_*$, and choose $e(n)$
+effectively for a program that ignores its input, simulates
+$\varphi_n(n)$, and returns $0$ if that simulation halts. Then
+\[
+ n\in K\quad\Longleftrightarrow\quad
+ \langle e(n),a_*\rangle\in A.
+\]
+Write $1_B$ for the partial identity on a subset $B$. The source
+arrow $p_A=\nabla_{\N}(1_{A^c}+1_A)$ is sent to the partial
+injection whose unique section in $\Pfn$ is
+\[
+ s_A(n)=
+ \begin{cases}
+  i_1(n),&n\in A,\\
+  i_0(n),&n\notin A.
+ \end{cases}
+\]
+This section is total and not recursive, since its tag decides $A$.
+If it had a preimage under the inclusion $F$, that source arrow would
+be total and hence ordinary total recursive, a contradiction.
+This is the missing lift required by
+Theorem~\ref{thm:local-lifting} for the complemented restriction idempotent $1_A$.
+
+Finally, the arrows $i_1 1_A$ and $i_0 1_{A^c}$ belong to
+$\mathcal C_K$: they have the total recursive extensions $i_1$
+and $i_0$, respectively. Their domains are disjoint. Any common
+upper bound would agree with the first arrow on $A$ and the second
+on $A^c$. It would therefore be the total function $s_A$, which
+is not a source arrow. Thus no such upper bound exists.
+\end{proof}
+
+\begin{thebibliography}{99}
+\bibitem{Bernardi}
+C.~Bernardi, \emph{Precomplete equivalence relations in dominical
+categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
+\bibitem{CockettLack}
+J.~R.~B. Cockett and S.~Lack, \emph{Restriction categories. I.
+Categories of partial maps}, Theoret. Comput. Sci. \textbf{270}
+(2002), 223--259.
+\bibitem{DPH}
+R.~A. Di Paola and A.~Heller, \emph{Dominical categories:
+recursion theory without elements}, J. Symbolic Logic
+\textbf{52} (1987), 594--635.
+\bibitem{DPM}
+R.~A. Di Paola and F.~Montagna, \emph{Some properties of the syntactic
+$P$-recursion categories generated by consistent, recursively enumerable
+extensions of Peano arithmetic}, J. Symbolic Logic \textbf{56} (1991),
+643--660.
+\bibitem{Heller}
+A.~Heller, \emph{An existence theorem for recursion categories},
+J. Symbolic Logic \textbf{55} (1990), 1252--1268.
+\bibitem{Lengyel2004}
+F.~Lengyel, \emph{More existence theorems for recursion categories},
+Ann. Pure Appl. Logic \textbf{125} (2004), 1--41.
+\bibitem{Corrections}
+F.~Lengyel, \emph{Corrections to More existence theorems for recursion
+categories}, version 10, 20 October 2026,
+\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.
+\bibitem{Composition}
+F.~Lengyel, \emph{Pointwise provable equality and the failure of
+composition}, 2026,
+\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.
+\bibitem{Montagna}
+F.~Montagna, \emph{``Pathologies'' in two syntactic categories of partial
+maps}, Notre Dame J. Formal Logic \textbf{30} (1989), 105--116.
+\bibitem{RosoliniThesis}
+G.~Rosolini, \emph{Continuity and effectiveness in topoi}, D.Phil.
+thesis, University of Oxford, 1986.
+\bibitem{Rosolini}
+G.~Rosolini, \emph{Representation theorems for $P$-categories},
+in F.~Borceux (ed.), \emph{Categorical Algebra and its Applications},
+Lecture Notes in Mathematics \textbf{1348}, Springer, Berlin, 1988,
+307--315.
+\end{thebibliography}
+\end{document}
