@@ -19,13 +19,13 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/essential_incompleteness_via_local_connectedness.tex and .pdf:
+- manuscript/essential_incompleteness_via_local_connectedness_v2.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  29 October 2026, 26 pages.
+  Version 2, 29 October 2026, 27 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
-  computational cosheaf category and proves that every consistent selected
+  three-point partial-map category and proves that every consistent selected
   extension has recursively inseparable observed theorem/refutation sets.
   Section 6 proves the local-connectedness inseparability theorem and its
   sufficient lifting criterion. Appendix A proves the diagram structure,
@@ -71,6 +71,36 @@ The first two manuscripts remain unchanged by the cosheaf continuation.
 No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
+
+## Version 2 completion
+
+The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v2.tex`
+and `.pdf`, visibly marked Version 2. Read
+`Audit/2026-10-29-introduction-economy/README.md` for this revision's outline,
+proof review and writing review.
+
+The dependency is explicit: Theorem 6.3 (range-functor lifting) supplies an
+inseparable pair; Corollary 6.7 proves inseparability of the theorem and
+refutation domains of every consistent extension when the two pullback
+inequalities hold. Corollary 7.1 instantiates this in Split(Rec), using the
+classical inclusion J:Rec→Pfn, actual finite proof carriers, their conclusion
+ranges, and numeral substitution. Do not claim that the model-family
+functor F_T alone gives the arithmetic incompleteness implication.
+
+The three-point construction now uses the coproduct-summand pair from
+Theorem 6.3 throughout. For the explicit coproduct isomorphism ζ, set
+q₀=ζ⁻¹(1+0)ζ, q₁=ζ⁻¹(0+1)ζ, and a=(τΔ)*q₀, b=(τΔ)*q₁.
+Those domains supply the positive and negative atomic axioms. The internal
+incompleteness proof is an application of Corollary 6.7; endpoint
+inseparability is a further numerical instance of Theorem 6.3. The old
+singleton-output pair is not the pair in Version 2.
+
+The general range functor does not preserve products by definition or by
+hypothesis. Particular model and endpoint functors do preserve them, with
+separate proofs. The main theorem retains the explicit lifting equation;
+Appendix C removes it only in the statement being refuted. Keep every
+needed argument from the private notes inside the manuscript, including
+those used in the introduction. No private-note citations are permitted.
 
 ## Research target and starting data
 
@@ -232,7 +262,7 @@ Heller category out of each lambda theory.
 
 Further work can test appropriate existing theory presentations against
 these structural hypotheses and check weaker arithmetic bases. The three-point
-computational cosheaf category now supplies a nonnumerical realization with
+three-point partial-map category now supplies a nonnumerical realization with
 actual endpoint functors on partial arrows. Further classes and changes of
 presentation remain to be treated. No new range completion is needed for the
 established applications; a full backwards arrow functor from arbitrary S_T
@@ -291,7 +321,7 @@ research state.
 ## Established computational structure to preserve
 
 1. Binary case distinction, a nontrivial object U, and a parameter-universal
-   Turing morphism give an inseparable pair by the Turing diagonal. The
+   Turing morphism give an inseparable pair by the Turing-morphism argument. The
    case-distinction hypothesis is explicit.
 2. Universal-object dominance and universal ranges give a total typed
    constructor embedding γ:Pq→q for W=S×U, with its range-filtered

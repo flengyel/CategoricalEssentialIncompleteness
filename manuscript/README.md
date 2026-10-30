@@ -135,56 +135,36 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 ## Local connectedness, range functors, and essential incompleteness
 
-[Local connectedness, range functors, and essential incompleteness](essential_incompleteness_via_local_connectedness.pdf)
-([source](essential_incompleteness_via_local_connectedness.tex), 29 October 2026, 26 pages)
-constructs a faithful range functor
-S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
-extension. The product target is locally connected; the source S_T is not
-locally connected for consistent c.e. extensions of PA. Uniform witness
-search supplies the lifting required by the local-connectedness theorem.
-Section 6 proves that theorem and a sufficient lifting criterion, keeping
-the lifting hypothesis in the theorem statement.
+[Version 2 PDF](essential_incompleteness_via_local_connectedness_v2.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v2.tex),
+29 October 2026, 27 pages).
 
-The final sections distinguish the effective standard-numeral observation
-argument from model interpretation and construct endpoint observation
-functors `E_i : A → K`, for `i = 1,2`, from the split three-point
-computational cosheaf category to the splitting of the classical recursion
-category. They preserve restrictions, ranges, products, coproducts, finite
-domain joins, and the chosen Turing morphism. Total maps from singleton
-endpoint diagrams describe the observations intrinsically.
+Theorem 6.3 gives inseparable domains from a range functor into a locally
+connected target, with a specified section-lifting hypothesis. It does not
+require preservation of products. Section 6.2 proves the sufficient lifting
+criterion from joins of arrows with disjoint domains.
 
-For every consistent selected computational extension, the observed theorem
-and refutation domains pull back along the atom map to disjoint c.e. subsets
-of `N²` containing a fixed recursively inseparable pair. Extension inclusions
-give identity maps between the observed pairs. Thus the construction proves
-essential incompleteness by an actual functor on partial arrows in this
-nonnumerical example. Other recursion categories and changes of presentation
-require suitable effective observations and compatible comparison maps.
-The introduction connects these applications to Di Paola–Heller's program,
-Rosolini's partial-map framework, Heller's use of local connectedness,
-Lengyel's 2004 existence theorem with its version-10 corrections, the
-syntactic examples of Montagna and Di Paola–Montagna, and Bernardi's
-precomplete-equivalence method. The partial-map and restriction definitions
-precede their use. The pointwise systems S'_T of Di Paola–Montagna are
-excluded using [Lengyel's composition-failure result](https://arxiv.org/abs/2609.25556);
-the uniform quotients S_T remain the source categories.
+Corollary 6.7 proves inseparability of every consistent extension's theorem
+and refutation domains. Its arithmetic instance, Corollary 7.1, uses the
+classical recursion category and proof-conclusion ranges in its restriction
+splitting. The all-model functor from S_T is a separate syntactic instance;
+its construction is not substituted for the effective arithmetic argument.
+The three-point application uses the same categorical corollary and the
+same pair supplied by Theorem 6.3. Endpoint functors give the additional
+recursive-inseparability assertion in Theorem 8.2.
 
-Appendix A proves the computational diagram structure, universal-object
-embeddings, frames, the exact-domain Turing morphism, and equivalence with
-the restriction splitting of the generated recursion category. Appendix B
-constructs finite syntax and proofs, identifies the least rule-closed
-theorem domain, and proves consistency. Appendix C gives a counterexample
-only to the statement with the lifting hypothesis omitted. The proofs
-needed for the introductory claims are included in this paper; neither
-LOCOct10f nor the companion cosheaf note is a bibliography dependency.
+The introduction, definitions and appendices are self-contained with respect
+to the private local-connectedness and cosheaf notes. Appendix A constructs
+the recursion category, Turing morphism and restriction splitting; Appendix B
+constructs finite syntax and proofs and proves consistency. Appendix C is a
+counterexample specifically to dropping the section-lifting hypothesis.
 
-The [model and endpoint review record](../Audit/2026-10-30-syntactic-models/README.md)
-and [current self-contained version's review and verification record](../Audit/2026-10-29-self-contained-local-connectedness/README.md)
-state the scope, checks, and source provenance. No Lean files were changed.
+[Outline and review record](../Audit/2026-10-29-introduction-economy/README.md).
+No Lean sources changed.
 
-~~~bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness.tex
-~~~
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v2.tex
+```
 
 ## Separate arithmetic-universe comparison
 

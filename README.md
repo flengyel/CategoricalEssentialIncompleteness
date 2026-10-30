@@ -86,47 +86,39 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The note [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness.pdf)
-([source](manuscript/essential_incompleteness_via_local_connectedness.tex), 29 October 2026, 26 pages)
-constructs a faithful range functor from S_T to a product of partial-function
-categories indexed by all countable models of T. The target is locally
-connected; for consistent c.e. T, S_T itself is not, as Di Paola–Montagna
-proved. One T-provably total program lifts each target switch associated
-with complementary source domains. A commuting square expresses
-compatibility with theory extension. Section 6 proves the local-connectedness
-inseparability theorem and a sufficient lifting criterion; the theorem
-retains its explicit lifting hypothesis. The separate effective
-proof-observation argument gives essential incompleteness.
-In the three-point computational cosheaf category, actual
-endpoint functors `E_i : A → K`, for `i = 1,2`, preserve the chosen Turing
-morphism; here `A` is the split computational partial-map category and `K`
-is the splitting of the classical recursion category. Total maps from the
-singleton endpoint diagrams give an intrinsic description of these
-observations. Pulling the observed theorem and refutation domains back
-along the total atom map gives disjoint c.e. subsets of `N²` containing a
-fixed recursively inseparable pair for every consistent selected extension.
-Extension inclusions act by identity maps on these observed pairs, proving
-essential incompleteness in this nonnumerical example. The remaining
-generalization is to identify further effective observation functors and
-compatible comparisons when the presentation changes. Appendix A proves
-the diagram-category structure, frames, Turing universality, and equivalence
-with the restriction splitting of the generated recursion category.
-Appendix B constructs finite syntax and proofs and proves consistency.
-Appendix C gives a counterexample to the statement obtained by dropping the
-lifting hypothesis. The paper contains the proofs needed for its introductory
-claims and has no bibliographic dependency on the private local-connectedness
-source or the companion cosheaf note. See the
-[model and endpoint reviews](Audit/2026-10-30-syntactic-models/README.md)
-and the [current self-contained version's review and verification record](Audit/2026-10-29-self-contained-local-connectedness/README.md).
-The introduction situates the construction among the work of Di Paola–Heller,
-Rosolini, Heller, Lengyel, Montagna and Di Paola–Montagna, and Bernardi.
-Partial maps and their restriction structure are introduced before the
-local-connectedness argument. The uniform quotients S_T of Di Paola–Montagna
-are retained; their pointwise systems S'_T are excluded by
-[Lengyel's composition-failure result](https://arxiv.org/abs/2609.25556).
-The discussion of Lengyel's 2004 existence theorem uses the version-10
-[corrections](https://github.com/flengyel/errata/tree/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004).
-These are paper proofs, not new Lean formalizations.
+The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v2.pdf)
+([source](manuscript/essential_incompleteness_via_local_connectedness_v2.tex), Version 2, 29 October 2026, 27 pages)
+derives essential incompleteness from its range-functor lifting theorem.
+Theorem 6.3 gives inseparable domains; Corollary 6.7 transfers this
+inseparability to the theorem and refutation domains of every consistent
+extension. Corollary 7.1 applies this to PA using the classical recursion
+category, actual c.e. proof carriers, conclusion ranges, and numeral
+substitution. No soundness of the extensions is assumed.
+
+The faithful model-family functor `F_T:S_T→∏_M Pfn` is a separate
+application of the lifting theorem. Its target is locally connected;
+`S_T` itself is not locally connected for consistent c.e. extensions of PA.
+One program supplies each required lift for complementary source domains.
+The general theorem does not require preservation of products, although
+these particular model functors preserve them.
+
+The three-point construction gives a recursion category not restriction-
+equivalent to the classical one. Its positive and negative atomic axioms
+use exactly the inseparable pair supplied by Theorem 6.3. Corollary 6.7
+proves internal essential incompleteness, and Theorem 8.2 additionally
+proves recursive inseparability of the endpoint observations.
+Appendices A–B contain the structural, Turing, syntax, proof and consistency
+arguments. Appendix C treats only the theorem with its lifting hypothesis
+removed. The lifting criterion and proof remain in Section 6.2.
+
+The introduction includes the Di Paola–Heller program and the relevant
+literature, cites Lengyel 2004 together with the version-10 corrections,
+and explains the exclusion of the primed systems by
+[the composition-failure result](https://arxiv.org/abs/2609.25556).
+No private-note citation substitutes for an argument in this paper.
+The [Version 2 outline and reviews](Audit/2026-10-29-introduction-economy/README.md)
+record the mathematical and writing checks. These are paper proofs, not
+new Lean formalizations.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's
