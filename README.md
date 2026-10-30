@@ -86,8 +86,8 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The note [Local connectedness, range functors, and essential incompleteness](manuscript/local_connectedness_and_essential_incompleteness.pdf)
-([source](manuscript/local_connectedness_and_essential_incompleteness.tex), 29 October 2026, 26 pages)
+The note [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness.pdf)
+([source](manuscript/essential_incompleteness_via_local_connectedness.tex), 29 October 2026, 26 pages)
 constructs a faithful range functor from S_T to a product of partial-function
 categories indexed by all countable models of T. The target is locally
 connected; for consistent c.e. T, S_T itself is not, as Di Paola–Montagna

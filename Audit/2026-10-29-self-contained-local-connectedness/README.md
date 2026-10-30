@@ -1,8 +1,8 @@
 # Self-contained local-connectedness paper
 
 The paper is
-[Local connectedness, range functors, and essential incompleteness](../../manuscript/local_connectedness_and_essential_incompleteness.pdf)
-([source](../../manuscript/local_connectedness_and_essential_incompleteness.tex)).
+[Local connectedness, range functors, and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness.pdf)
+([source](../../manuscript/essential_incompleteness_via_local_connectedness.tex)).
 This revision replaces the private-note citations by the arguments needed
 in the paper, including the claims made in its introduction.
 
@@ -37,3 +37,5 @@ new priority for those arguments or formal verification in Lean.
 The [preceding writing record](../2026-10-30-local-connectedness-writing/README.md)
 and [model and endpoint records](../2026-10-30-syntactic-models/README.md)
 remain historical records of their reviewed versions.
+
+The [delivery rename record](DELIVERY_RENAME.md) identifies the current source and PDF filenames.

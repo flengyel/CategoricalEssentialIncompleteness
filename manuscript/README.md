@@ -135,8 +135,8 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 ## Local connectedness, range functors, and essential incompleteness
 
-[Local connectedness, range functors, and essential incompleteness](local_connectedness_and_essential_incompleteness.pdf)
-([source](local_connectedness_and_essential_incompleteness.tex), 29 October 2026, 26 pages)
+[Local connectedness, range functors, and essential incompleteness](essential_incompleteness_via_local_connectedness.pdf)
+([source](essential_incompleteness_via_local_connectedness.tex), 29 October 2026, 26 pages)
 constructs a faithful range functor
 S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
 extension. The product target is locally connected; the source S_T is not
@@ -183,7 +183,7 @@ and [current self-contained version's review and verification record](../Audit/2
 state the scope, checks, and source provenance. No Lean files were changed.
 
 ~~~bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error local_connectedness_and_essential_incompleteness.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness.tex
 ~~~
 
 ## Separate arithmetic-universe comparison

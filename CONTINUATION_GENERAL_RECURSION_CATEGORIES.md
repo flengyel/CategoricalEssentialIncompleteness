@@ -19,7 +19,7 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/local_connectedness_and_essential_incompleteness.tex and .pdf:
+- manuscript/essential_incompleteness_via_local_connectedness.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
   29 October 2026, 26 pages.
   It constructs a faithful range functor from S_T to a locally connected
