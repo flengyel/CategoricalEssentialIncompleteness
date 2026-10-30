@@ -21,20 +21,27 @@ in flengyel/errata; read their latest committed state before importing further r
   *Inseparable domains and computational extensions*, 5 pages.
 - manuscript/local_connectedness_and_essential_incompleteness.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  30 October 2026.
+  29 October 2026, 26 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
   computational cosheaf category and proves that every consistent selected
   extension has recursively inseparable observed theorem/refutation sets.
-  Its introduction includes the relevant literature from LOCOct10f, and
-  partial-map and restriction definitions precede the constructions.
+  Section 6 proves the local-connectedness inseparability theorem and its
+  sufficient lifting criterion. Appendix A proves the diagram structure,
+  frames, Turing universality, and restriction-splitting equivalence;
+  Appendix B constructs finite syntax and proofs and proves consistency.
+  Appendix C refutes the statement obtained by omitting the lifting
+  hypothesis; the actual theorem retains that hypothesis.
+  The introductory claims have proofs within the paper, and partial-map
+  and restriction definitions precede the constructions. Neither LOCOct10f
+  nor the companion cosheaf note is a bibliography dependency.
   Lengyel2004 is cited together with the version-10 corrections. The invalid
   pointwise systems S'_T of Di Paola–Montagna are excluded by Lengyel's
   composition-failure paper; the uniform quotients S_T are retained.
-- manuscript/sources/LOCOct10f.tex: unchanged supplied source,
+- manuscript/sources/LOCOct10f.tex: unchanged archived source,
   SHA-256 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
-  The necessary switching and lifting proofs are included in the new note.
+  The current paper's proofs do not depend on this archived source.
 - manuscript/intrinsic_introspection_and_extensions.tex and .pdf:
   *Internal theories and intrinsic incompleteness*, 3 pages: a separate
   arithmetic-universe comparison, with no established connection to the
@@ -52,10 +59,13 @@ in flengyel/errata; read their latest committed state before importing further r
   mathematical manuscript.
 - Audit/2026-10-30-syntactic-models/ records the model-family construction,
   source checks, hostile and writing reviews, and PDF verification.
-- Audit/2026-10-30-local-connectedness-writing/ records the current renamed
+- Audit/2026-10-30-local-connectedness-writing/ records the earlier renamed
   manuscript's introduction, literature review, definition order, and
-  verification. Earlier audit reports retain their original filenames and
-  hashes as historical records.
+  verification.
+- [Audit/2026-10-29-self-contained-local-connectedness/](Audit/2026-10-29-self-contained-local-connectedness/README.md)
+  records the current self-contained paper, its theorem and lifting
+  criterion, Appendices A--C, and verification. Earlier audit reports retain
+  their original filenames and hashes as historical records.
 
 The first two manuscripts remain unchanged by the cosheaf continuation.
 No new theorem in these notes has been formalized in Lean. The older Lean
@@ -103,8 +113,10 @@ For complementary source domains, one program dovetails their Σ₁ witness
 searches and returns the appropriate tagged input. T proves its universal
 halting and exact graph from the uniform complement equations. Its
 interpretation is the required section in every coordinate simultaneously.
-Thus all hypotheses of LOCOct10f's range-functor lifting theorem are
-discharged for S_T. For T⊆T', restricting the model family gives
+Thus all hypotheses of the range-functor lifting theorem proved in Section 6
+of the current paper are discharged for S_T. That section also proves a
+sufficient criterion using joins of disjoint arrows. Appendix C shows why
+the theorem cannot omit its lifting hypothesis. For T⊆T', restricting the model family gives
 π_(T,T'):D_T→D_T' and π_(T,T')F_T=F_T'Q_(T,T'). No soundness is used.
 The target need not be a recursion category; Turing universality is used
 in S_T. Every target domain is complemented, so arbitrary target

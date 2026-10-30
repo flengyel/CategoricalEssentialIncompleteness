@@ -136,15 +136,14 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 ## Local connectedness, range functors, and essential incompleteness
 
 [Local connectedness, range functors, and essential incompleteness](local_connectedness_and_essential_incompleteness.pdf)
-([source](local_connectedness_and_essential_incompleteness.tex), 30 October 2026)
+([source](local_connectedness_and_essential_incompleteness.tex), 29 October 2026, 26 pages)
 constructs a faithful range functor
 S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
 extension. The product target is locally connected; the source S_T is not
 locally connected for consistent c.e. extensions of PA. Uniform witness
 search supplies the lifting required by the local-connectedness theorem.
-The necessary switching and lifting proofs from
-[LOCOct10f.tex](sources/LOCOct10f.tex) are included in the new note;
-the referenced source is also retained unchanged.
+Section 6 proves that theorem and a sufficient lifting criterion, keeping
+the lifting hypothesis in the theorem statement.
 
 The final sections distinguish the effective standard-numeral observation
 argument from model interpretation and construct endpoint observation
@@ -170,8 +169,17 @@ precede their use. The pointwise systems S'_T of Di Paola–Montagna are
 excluded using [Lengyel's composition-failure result](https://arxiv.org/abs/2609.25556);
 the uniform quotients S_T remain the source categories.
 
+Appendix A proves the computational diagram structure, universal-object
+embeddings, frames, the exact-domain Turing morphism, and equivalence with
+the restriction splitting of the generated recursion category. Appendix B
+constructs finite syntax and proofs, identifies the least rule-closed
+theorem domain, and proves consistency. Appendix C gives a counterexample
+only to the statement with the lifting hypothesis omitted. The proofs
+needed for the introductory claims are included in this paper; neither
+LOCOct10f nor the companion cosheaf note is a bibliography dependency.
+
 The [model and endpoint review record](../Audit/2026-10-30-syntactic-models/README.md)
-and [current writing and verification record](../Audit/2026-10-30-local-connectedness-writing/README.md)
+and [current self-contained version's review and verification record](../Audit/2026-10-29-self-contained-local-connectedness/README.md)
 state the scope, checks, and source provenance. No Lean files were changed.
 
 ~~~bash

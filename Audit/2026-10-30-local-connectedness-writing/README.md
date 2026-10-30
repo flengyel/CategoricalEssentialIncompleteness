@@ -1,5 +1,11 @@
 # Writing revision and manuscript rename
 
+This record describes the fifteen-page version committed as
+`f1b32a4df2e677bb3dd7cfabe76720bfe0a284b5`. The subsequent
+[self-contained revision](../2026-10-29-self-contained-local-connectedness/README.md)
+includes the arguments previously cited from private notes. The reports
+below retain the source hashes and scope of the version they reviewed.
+
 The revised paper is
 [Local connectedness, range functors, and essential incompleteness](../../manuscript/local_connectedness_and_essential_incompleteness.pdf)
 ([LaTeX source](../../manuscript/local_connectedness_and_essential_incompleteness.tex)).

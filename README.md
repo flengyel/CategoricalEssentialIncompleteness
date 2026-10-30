@@ -87,17 +87,17 @@ Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
 The note [Local connectedness, range functors, and essential incompleteness](manuscript/local_connectedness_and_essential_incompleteness.pdf)
-([source](manuscript/local_connectedness_and_essential_incompleteness.tex), 30 October 2026)
+([source](manuscript/local_connectedness_and_essential_incompleteness.tex), 29 October 2026, 26 pages)
 constructs a faithful range functor from S_T to a product of partial-function
 categories indexed by all countable models of T. The target is locally
 connected; for consistent c.e. T, S_T itself is not, as Di Paola–Montagna
 proved. One T-provably total program lifts each target switch associated
 with complementary source domains. A commuting square expresses
-compatibility with theory extension. The note includes proofs of the
-needed local-connectedness and lifting results from
-[LOCOct10f.tex](manuscript/sources/LOCOct10f.tex), preserved here unchanged,
-and the separate effective proof-observation argument for essential
-incompleteness. In the three-point computational cosheaf category, actual
+compatibility with theory extension. Section 6 proves the local-connectedness
+inseparability theorem and a sufficient lifting criterion; the theorem
+retains its explicit lifting hypothesis. The separate effective
+proof-observation argument gives essential incompleteness.
+In the three-point computational cosheaf category, actual
 endpoint functors `E_i : A → K`, for `i = 1,2`, preserve the chosen Turing
 morphism; here `A` is the split computational partial-map category and `K`
 is the splitting of the classical recursion category. Total maps from the
@@ -108,9 +108,16 @@ fixed recursively inseparable pair for every consistent selected extension.
 Extension inclusions act by identity maps on these observed pairs, proving
 essential incompleteness in this nonnumerical example. The remaining
 generalization is to identify further effective observation functors and
-compatible comparisons when the presentation changes. See the
+compatible comparisons when the presentation changes. Appendix A proves
+the diagram-category structure, frames, Turing universality, and equivalence
+with the restriction splitting of the generated recursion category.
+Appendix B constructs finite syntax and proofs and proves consistency.
+Appendix C gives a counterexample to the statement obtained by dropping the
+lifting hypothesis. The paper contains the proofs needed for its introductory
+claims and has no bibliographic dependency on the private local-connectedness
+source or the companion cosheaf note. See the
 [model and endpoint reviews](Audit/2026-10-30-syntactic-models/README.md)
-and the [current writing and verification record](Audit/2026-10-30-local-connectedness-writing/README.md).
+and the [current self-contained version's review and verification record](Audit/2026-10-29-self-contained-local-connectedness/README.md).
 The introduction situates the construction among the work of Di Paola–Heller,
 Rosolini, Heller, Lengyel, Montagna and Di Paola–Montagna, and Bernardi.
 Partial maps and their restriction structure are introduced before the

@@ -1,18 +1,20 @@
 # Local connectedness, range functors, and essential incompleteness
 
 The note [Local connectedness, range functors, and essential incompleteness](../../manuscript/local_connectedness_and_essential_incompleteness.pdf)
-([source](../../manuscript/local_connectedness_and_essential_incompleteness.tex)) constructs
+([source](../../manuscript/local_connectedness_and_essential_incompleteness.tex),
+29 October 2026, 26 pages) constructs
 a faithful range functor from S_T to a locally connected target, proves
 the lifting hypothesis, and records compatibility with extensions.
-Its introduction develops the literature discussed in LOCOct10f and explains
-the passage from computational inseparability to essential incompleteness.
+Its introduction develops the relevant literature and explains the passage
+from computational inseparability to essential incompleteness.
 The endpoint continuation constructs an actual observation functor from
 the three-point category to the split classical recursion category.
 
 S_T itself is not locally connected for consistent c.e. extensions of PA.
 This is Di Paola–Montagna Corollary 4.4. The note explicitly distinguishes
-that source from the product target. It includes the necessary proofs from
-the unchanged [LOCOct10f source](../../manuscript/sources/LOCOct10f.tex).
+that source from the product target. Section 6 proves the local-connectedness
+inseparability theorem and a sufficient lifting criterion, retaining the
+lifting hypothesis in the theorem statement.
 The current introduction includes Rosolini's partial-map framework, Heller's
 local-connectedness theorem, Lengyel2004 with the version-10 corrections,
 and Bernardi's related method. Partial-map and restriction definitions
@@ -20,10 +22,18 @@ precede the constructions. The pointwise systems S'_T of Di Paola–Montagna
 are excluded using Lengyel's composition-failure result; the valid uniform
 quotients S_T remain the source categories.
 
-The [current writing and verification record](../2026-10-30-local-connectedness-writing/README.md)
-covers the renamed manuscript and these exposition changes. The records
-below retain the filenames and hashes of the model and endpoint versions
-they checked.
+Appendix A proves the diagram-category structure, frames, Turing universality,
+and restriction-splitting equivalence. Appendix B supplies the finite syntax
+and proof construction and its consistency proof. Appendix C gives a
+counterexample only to the statement with the lifting hypothesis omitted.
+The paper includes the proofs needed for its introductory claims and has no
+bibliographic dependency on LOCOct10f or the companion cosheaf note.
+
+The [current self-contained version's review and verification record](../2026-10-29-self-contained-local-connectedness/README.md)
+covers these proofs and appendices. The
+[earlier writing record](../2026-10-30-local-connectedness-writing/README.md)
+and the records below retain the filenames and hashes of the versions they
+checked.
 
 - [Revised outline and hypotheses](ENDPOINT_OUTLINE.md)
 - [Source check](SOURCE_CHECK.md)
