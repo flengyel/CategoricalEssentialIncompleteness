@@ -24,12 +24,21 @@ external proof-search totality remain distinct from their internal proofs.
 - [Mathematical-writing review](WRITING_REVIEW.md); its access limitation
   concerning the governing writing source is recorded there.
 - [Verification and scope](VERIFICATION.md).
+- [Other theories and precomplete equivalence relations](OTHER_THEORIES.md)
+  gives the interpretation construction S_(T,theta)=S_(T^theta), applications
+  to ACA_0, finite set theory and HA, and the related inseparable-class
+  argument for c.e. lambda theories. See its
+  [mathematical audit](OTHER_THEORIES_HOSTILE_REVIEW.md),
+  [writing review](OTHER_THEORIES_WRITING_REVIEW.md), and
+  [verification record](OTHER_THEORIES_VERIFICATION.md).
 
 For the PA benchmark, the actual quotient functors, fixed compiler,
 observation domains, and their consistency/completeness implications are
 established. No range completion, finite-stage union, or new syntax algebra
 is needed for this benchmark. The general nonnumerical construction of
-parameterized computational proof observations remains open. The next test
-is the established three-point computational cosheaf category, with the
-observation domains required to be its selected computational domains.
-The earlier conditional mathematical results remain unchanged.
+parameterized computational proof observations remains open. It is a question
+about extending the scope: existence of the compatible presentation is
+sufficient for the theories already covered, and need not follow from every
+recursion category. The established three-point computational cosheaf
+category remains a test for further nonnumerical instances, with selected
+computational domains. The earlier conditional results remain unchanged.

@@ -102,14 +102,36 @@ not a functor from the extensional category Rec. The alternative observation
 E_T([D])={n:T proves D(numeral n)} is a well-defined monotone map on domain
 posets; it need not preserve binary joins and is not extended to all arrows.
 
-The next construction is to realize these effective proof observations
-intrinsically in an appropriate nonnumerical recursion category. Specify
-parameterized proof objects, selected positive and negative conclusion
-domains for computational equations, the fixed total separation reduction,
-and their compatibility with extensions. Derive their disjointness from
-consistency and coverage from completeness. The three-point computational
-cosheaf category is a concrete test. No new range completion is needed for
-the PA benchmark, and no full backwards arrow functor has been constructed.
+The theorem should apply to theories admitting compatible computational
+presentations. Existence of such a presentation is sufficient; constructing
+it from every recursion category is not a prerequisite. The subsequent
+OTHER_THEORIES.md review establishes actual further instances. For an
+effective interpretation theta of PA in T, take the inverse-image theory
+T^theta={phi:T proves phi^theta}. It is a consistent c.e. extension of PA,
+so the already-valid category S_(T,theta)=S_(T^theta) applies. Extensions
+and compatible interpretations give the same covariant quotient functors.
+Checked cases include ACA_0, Kaye--Wong's specified finite set theory,
+and HA through the Goedel--Gentzen negative translation. These instances
+use arithmetic translations; no intrinsically nonnumerical interpretation
+is claimed for them.
+
+Precompleteness is a relevant established categorical hypothesis. Bernardi
+(1986) defines it for equivalence-relation domains and proves an
+inseparability theorem under c-plus-dominical hypotheses. Attribute that
+prior work; do not silently apply it to nondominical S_T. The uniform
+program-equivalence relation of PA is precomplete, and enlargement preserves
+precompleteness. The numerical class argument applies also to c.e. lambda
+theories: the classes of the two Church Booleans are inseparable, and no
+consistent c.e. lambda theory is maximal consistent. This latter application
+uses the fixed classical recursion category; it does not construct a new
+Heller category out of each lambda theory.
+
+Further work can test appropriate existing theory presentations against
+these structural hypotheses and check weaker arithmetic bases. An intrinsic
+nonnumerical realization remains a separate scope extension; the three-point
+computational cosheaf category is a concrete test. No new range completion
+is needed for the established applications, and no full backwards arrow
+functor has been constructed.
 
 A restriction functor G_T:D_T→C preserving zero and binary domain joins
 remains a sufficient stronger implementation if it can actually be built.

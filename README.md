@@ -81,6 +81,11 @@ decide identity membership by proof search. This gives a short PA benchmark
 and identifies the effective proof observations to construct in a
 nonnumerical setting. It supplies a comparison on presentations and domain
 observations, not a functor on all arrows from S_T to the classical category.
+The [other-theory applications](Audit/2026-10-29-separator-transfer/OTHER_THEORIES.md)
+reuse S_T through effective interpretations, including ACA_0, finite set
+theory and HA via negative translation. They connect the argument with
+Bernardi's established theory of precomplete equivalence relations and
+give a related inseparable-class proof for c.e. lambda theories.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's
