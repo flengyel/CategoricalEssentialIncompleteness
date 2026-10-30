@@ -5,13 +5,13 @@
   "files": {
     "tex": {
       "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
-      "bytes": 106204,
-      "sha256": "0d407588758545c0d8a68bd547e6bc0f1dc5bb6be14aae1d37d505b90fbb9adb"
+      "bytes": 109696,
+      "sha256": "a049438c2968ee86bdd7228e1fba1a826c09a753b1d41e3f8c6e0e28fa0a5adb"
     },
     "pdf": {
       "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
-      "bytes": 443377,
-      "sha256": "c29b6142e3e2c0135f18b9ea72a6c5bc86422f25d956ee03f47217c9d20c3eb1"
+      "bytes": 450641,
+      "sha256": "92c40da05e76fe92547a429406e3a655f647c84736056a75a05c7b738d33146b"
     }
   }
 }

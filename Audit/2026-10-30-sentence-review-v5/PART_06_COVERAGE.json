@@ -1,0 +1,217 @@
+{
+  "start_line": 1480,
+  "end_line": 1907,
+  "blocks": [
+    {
+      "id": "B123",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B124",
+      "status": "finding",
+      "finding_ids": [
+        "S06-01"
+      ]
+    },
+    {
+      "id": "B125",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B126",
+      "status": "finding",
+      "finding_ids": [
+        "S06-01",
+        "S06-04"
+      ]
+    },
+    {
+      "id": "B127",
+      "status": "finding",
+      "finding_ids": [
+        "S06-01"
+      ]
+    },
+    {
+      "id": "B128",
+      "status": "finding",
+      "finding_ids": [
+        "S06-01"
+      ]
+    },
+    {
+      "id": "B129",
+      "status": "finding",
+      "finding_ids": [
+        "S06-02",
+        "S06-03",
+        "S06-04"
+      ]
+    },
+    {
+      "id": "B130",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B131",
+      "status": "finding",
+      "finding_ids": [
+        "S06-08"
+      ]
+    },
+    {
+      "id": "B132",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B133",
+      "status": "finding",
+      "finding_ids": [
+        "S06-04"
+      ]
+    },
+    {
+      "id": "B134",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B135",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B136",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B137",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B138",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B139",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B140",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B141",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B142",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B143",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B144",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B145",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B146",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B147",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B148",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B149",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B150",
+      "status": "finding",
+      "finding_ids": [
+        "S06-08"
+      ]
+    },
+    {
+      "id": "B151",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B152",
+      "status": "finding",
+      "finding_ids": [
+        "S06-05"
+      ]
+    },
+    {
+      "id": "B153",
+      "status": "finding",
+      "finding_ids": [
+        "S06-05"
+      ]
+    },
+    {
+      "id": "B154",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B155",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03"
+      ]
+    },
+    {
+      "id": "B156",
+      "status": "finding",
+      "finding_ids": [
+        "S06-03",
+        "S06-06",
+        "S06-07"
+      ]
+    }
+  ]
+}

@@ -24,12 +24,12 @@ in flengyel/errata; read their latest committed state before importing further r
   Version 5, 30 October 2026, 28 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
-  It also constructs effective endpoint functors from the split three-point
+  It also constructs effective evaluation functors from the split three-point
   partial-map category and proves that every consistent selected
   extension has recursively inseparable observed theorem/refutation sets.
   Section 6 proves the local-connectedness inseparability theorem and its
-  sufficient lifting criterion. Appendix A proves the diagram structure,
-  frames, Turing universality, and restriction-splitting equivalence;
+  sufficient lifting criterion. Appendix A proves the functor-category structure,
+  constructs a frame, and proves Turing universality and the restriction-splitting equivalence;
   Appendix B constructs finite syntax and proofs and proves consistency.
   Appendix C refutes the statement obtained by omitting the lifting
   hypothesis; the actual theorem retains that hypothesis.

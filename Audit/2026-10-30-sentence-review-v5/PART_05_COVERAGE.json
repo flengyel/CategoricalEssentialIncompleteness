@@ -1,0 +1,170 @@
+{
+  "start_line": 1116,
+  "end_line": 1479,
+  "blocks": [
+    {
+      "id": "B096",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B097",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B098",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B099",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1",
+        "D05-2"
+      ]
+    },
+    {
+      "id": "B100",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1",
+        "C05-2"
+      ]
+    },
+    {
+      "id": "B101",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1",
+        "D05-1"
+      ]
+    },
+    {
+      "id": "B102",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B103",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B104",
+      "status": "finding",
+      "finding_ids": [
+        "M05-1",
+        "C05-3"
+      ]
+    },
+    {
+      "id": "B105",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B106",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B107",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B108",
+      "status": "finding",
+      "finding_ids": [
+        "C05-1"
+      ]
+    },
+    {
+      "id": "B109",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B110",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B111",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B112",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B113",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B114",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B115",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B116",
+      "status": "finding",
+      "finding_ids": [
+        "C05-4",
+        "C05-5"
+      ]
+    },
+    {
+      "id": "B117",
+      "status": "finding",
+      "finding_ids": [
+        "C05-5"
+      ]
+    },
+    {
+      "id": "B118",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B119",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B120",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B121",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B122",
+      "status": "checked",
+      "finding_ids": []
+    }
+  ]
+}

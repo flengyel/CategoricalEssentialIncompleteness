@@ -1,0 +1,123 @@
+{
+  "start_line": 816,
+  "end_line": 1115,
+  "blocks": [
+    {
+      "id": "B076",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B077",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B078",
+      "status": "finding",
+      "finding_ids": [
+        "04-04",
+        "04-05",
+        "04-06"
+      ]
+    },
+    {
+      "id": "B079",
+      "status": "finding",
+      "finding_ids": [
+        "04-05"
+      ]
+    },
+    {
+      "id": "B080",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B081",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B082",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B083",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B084",
+      "status": "finding",
+      "finding_ids": [
+        "04-01"
+      ]
+    },
+    {
+      "id": "B085",
+      "status": "finding",
+      "finding_ids": [
+        "04-01"
+      ]
+    },
+    {
+      "id": "B086",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B087",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B088",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B089",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B090",
+      "status": "finding",
+      "finding_ids": [
+        "04-02",
+        "04-07"
+      ]
+    },
+    {
+      "id": "B091",
+      "status": "finding",
+      "finding_ids": [
+        "04-08"
+      ]
+    },
+    {
+      "id": "B092",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B093",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B094",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B095",
+      "status": "finding",
+      "finding_ids": [
+        "04-03"
+      ]
+    }
+  ]
+}

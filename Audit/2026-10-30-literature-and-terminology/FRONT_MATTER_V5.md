@@ -57,7 +57,8 @@ unchanged from Version 4. The subsequent categorical-notation revision is
 recorded in [CATEGORICAL_NOTATION_V5.md](CATEGORICAL_NOTATION_V5.md).
 These focused checks do not constitute a new audit of all proofs.
 
-The exact delivered source was compiled with latexmk. The 28-page PDF
-has no compilation warnings or overfull/underfull boxes. The affected
-opening pages and bibliography were inspected. Source and PDF hashes
-are recorded in [DELIVERY_V5.json](DELIVERY_V5.json).
+That front-matter revision was compiled with latexmk, with no compilation
+warnings or overfull/underfull boxes, and its opening pages and bibliography
+were inspected. The subsequent [sentence-by-sentence review](../2026-10-30-sentence-review-v5/README.md)
+records the current full-text exposition audit and build checks. Current
+source and PDF hashes are recorded in [DELIVERY_V5.json](DELIVERY_V5.json).

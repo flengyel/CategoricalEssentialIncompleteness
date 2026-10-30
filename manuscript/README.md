@@ -140,7 +140,7 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 30 October 2026, 28 pages).
 
 Theorem 6.3 gives inseparable restriction idempotents from a range functor
-into a locally connected target, with a specified section-lifting hypothesis.
+into a locally connected target, with a section-lifting hypothesis.
 It does not require preservation of products. Section 6.2 proves the sufficient
 lifting criterion from joins of arrows whose restriction idempotents are disjoint.
 
@@ -151,7 +151,7 @@ ranges in its restriction
 splitting. The all-model functor from S_T is a separate syntactic instance;
 its construction is not substituted for the effective arithmetic argument.
 The three-point application uses the same categorical corollary and the
-same pair supplied by Theorem 6.3. Endpoint functors give the additional
+same pair supplied by Theorem 6.3. Evaluation functors give the additional
 recursive-inseparability assertion in Theorem 8.2.
 
 The introduction, definitions and appendices are self-contained with respect
@@ -162,6 +162,8 @@ counterexample specifically to dropping the section-lifting hypothesis.
 
 [Version 3 terminology and literature record](../Audit/2026-10-30-literature-and-terminology/README.md)
 and [literature comparison](../Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md).
+The [sentence-by-sentence review](../Audit/2026-10-30-sentence-review-v5/README.md)
+records the latest terminology, typing, and definition-order corrections and checks.
 The [Version 5 wording review](../Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V5.md)
 and [Version 4 front-matter review](../Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V4.md)
 record the purpose-led abstract and shorter introduction. The three-point

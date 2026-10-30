@@ -98,6 +98,9 @@ to PA using the classical recursion category, actual c.e. proof carriers,
 conclusion ranges, and numeral substitution. No soundness of the extensions
 is assumed.
 
+The [sentence-by-sentence terminology and definition-order review](Audit/2026-10-30-sentence-review-v5/README.md)
+records the full reading coverage, corrections, and build checks for this version.
+
 The faithful model-family functor `F_T:S_T→∏_M Pfn` is a separate
 application of the lifting theorem. Its target is locally connected;
 `S_T` itself is not locally connected for consistent c.e. extensions of PA.

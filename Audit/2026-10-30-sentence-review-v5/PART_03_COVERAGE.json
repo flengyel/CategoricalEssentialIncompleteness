@@ -1,0 +1,134 @@
+{
+  "start_line": 519,
+  "end_line": 815,
+  "blocks": [
+    {
+      "id": "B052",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B053",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B054",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B055",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B056",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B057",
+      "status": "finding",
+      "finding_ids": [
+        "P03-01"
+      ]
+    },
+    {
+      "id": "B058",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B059",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B060",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B061",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B062",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B063",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B064",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B065",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B066",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B067",
+      "status": "finding",
+      "finding_ids": [
+        "P03-03"
+      ]
+    },
+    {
+      "id": "B068",
+      "status": "finding",
+      "finding_ids": [
+        "P03-02"
+      ]
+    },
+    {
+      "id": "B069",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B070",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B071",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B072",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B073",
+      "status": "checked",
+      "finding_ids": []
+    },
+    {
+      "id": "B074",
+      "status": "finding",
+      "finding_ids": [
+        "P03-04"
+      ]
+    },
+    {
+      "id": "B075",
+      "status": "checked",
+      "finding_ids": []
+    }
+  ]
+}

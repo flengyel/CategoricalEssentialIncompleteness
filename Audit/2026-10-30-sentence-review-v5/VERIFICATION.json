@@ -1,0 +1,29 @@
+{
+  "version": 5,
+  "date": "2026-10-30",
+  "pages": 28,
+  "files": {
+    "tex": {
+      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+      "bytes": 109696,
+      "sha256": "a049438c2968ee86bdd7228e1fba1a826c09a753b1d41e3f8c6e0e28fa0a5adb"
+    },
+    "pdf": {
+      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "bytes": 450641,
+      "sha256": "92c40da05e76fe92547a429406e3a655f647c84736056a75a05c7b738d33146b"
+    }
+  },
+  "baseline_commit": "c8feb7e8788d16418dfd1a497913b2b5a46d3670",
+  "review_scope": "Sentence-by-sentence terminology, definition order, and typing; not full mathematical correctness or novelty certification",
+  "coverage_blocks": 188,
+  "coverage_has_gaps": false,
+  "coverage_has_duplicate_assignments": false,
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../build/sentence-review-final essential_incompleteness_via_local_connectedness_v5.tex",
+  "build_exit_code": 0,
+  "warnings": [],
+  "unresolved_references_or_citations": [],
+  "overfull_or_underfull_boxes": [],
+  "render_check": "Complete page layout overview; readable-scale inspection of materially changed passages and final bibliography.",
+  "source_consultation": "Supplied KLR Section 1 points 1\u201319; later sections unavailable in this pass."
+}
