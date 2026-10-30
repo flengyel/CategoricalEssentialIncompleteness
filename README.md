@@ -86,19 +86,21 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v2.pdf)
-([source](manuscript/essential_incompleteness_via_local_connectedness_v2.tex), Version 2, 29 October 2026, 27 pages)
+The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v3.pdf)
+([source](manuscript/essential_incompleteness_via_local_connectedness_v3.tex), Version 3, 30 October 2026, 28 pages)
 derives essential incompleteness from its range-functor lifting theorem.
-Theorem 6.3 gives inseparable domains; Corollary 6.7 transfers this
-inseparability to the theorem and refutation domains of every consistent
-extension. Corollary 7.1 applies this to PA using the classical recursion
-category, actual c.e. proof carriers, conclusion ranges, and numeral
-substitution. No soundness of the extensions is assumed.
+Theorem 6.3 gives inseparable restriction idempotents; Corollary 6.7 transfers
+this inseparability to the restriction idempotents representing theorems and
+refutable formulas of every consistent extension. Corollary 7.1 applies this
+to PA using the classical recursion category, actual c.e. proof carriers,
+conclusion ranges, and numeral substitution. No soundness of the extensions
+is assumed.
 
 The faithful model-family functor `F_T:S_T→∏_M Pfn` is a separate
 application of the lifting theorem. Its target is locally connected;
 `S_T` itself is not locally connected for consistent c.e. extensions of PA.
-One program supplies each required lift for complementary source domains.
+One program supplies each required lift for complementary source restriction
+idempotents.
 The general theorem does not require preservation of products, although
 these particular model functors preserve them.
 
@@ -116,9 +118,13 @@ literature, cites Lengyel 2004 together with the version-10 corrections,
 and explains the exclusion of the primed systems by
 [the composition-failure result](https://arxiv.org/abs/2609.25556).
 No private-note citation substitutes for an argument in this paper.
+The [Version 3 terminology and literature record](Audit/2026-10-30-literature-and-terminology/README.md)
+and [literature comparison](Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md)
+record the terminology and abstract corrections, removal of irrelevant
+disclaimers, and comparison with earlier work.
 The [Version 2 outline and reviews](Audit/2026-10-29-introduction-economy/README.md)
-record the mathematical and writing checks. These are paper proofs, not
-new Lean formalizations.
+remain the historical mathematical and writing checks for that version.
+These are paper proofs, not new Lean formalizations.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's

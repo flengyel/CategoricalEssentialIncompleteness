@@ -19,13 +19,13 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/essential_incompleteness_via_local_connectedness_v2.tex and .pdf:
+- manuscript/essential_incompleteness_via_local_connectedness_v3.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  Version 2, 29 October 2026, 27 pages.
+  Version 3, 30 October 2026, 28 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
-  three-point partial-map category and proves that every consistent selected
+  partial-map category and proves that every consistent selected
   extension has recursively inseparable observed theorem/refutation sets.
   Section 6 proves the local-connectedness inseparability theorem and its
   sufficient lifting criterion. Appendix A proves the diagram structure,
@@ -72,9 +72,34 @@ No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
 
-## Version 2 completion
+## Version 3: terminology and literature
 
-The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v2.tex`
+The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v3.tex`
+and `.pdf`, visibly marked Version 3 and dated 30 October 2026. Read the
+[terminology and literature record](Audit/2026-10-30-literature-and-terminology/README.md)
+and [literature comparison](Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md)
+for this revision's terminology and abstract corrections, removal of irrelevant
+disclaimers, and comparison with earlier work. The
+[Version 2 outline and reviews](Audit/2026-10-29-introduction-economy/README.md)
+remain historical records.
+
+The user is Florian Lengyel, the author. Cockett attributes his stated
+inseparability theorem to Florian Lengyel; the proof in those notes uses
+compatible joins, not local connectedness. Account for this attribution
+when comparing the present paper with the author's earlier work; it is
+not evidence of another author's independent discovery of the method.
+The literature comparison records the source and the limits of novelty claims.
+
+The user requires the term **restriction idempotent** for the categorical
+arrow and instructs us not to use **domain** as its synonym. Keep the
+restriction idempotent in the partial category distinct from its split
+object in the total category. Actual set-theoretic domains of definition,
+historical document titles, and historical records retain their appropriate
+terminology.
+
+## Version 2 completion (historical)
+
+The Version 2 paper is `manuscript/essential_incompleteness_via_local_connectedness_v2.tex`
 and `.pdf`, visibly marked Version 2. Read
 `Audit/2026-10-29-introduction-economy/README.md` for this revision's outline,
 proof review and writing review.
@@ -107,8 +132,8 @@ those used in the introduction. No private-note citations are permitted.
 The starting data remain a Heller recursion category R. The task is to
 construct the compatible deductive presentation from that category and
 prove consistency and incompleteness of every consistent computational
-extension in the stated class. Domains remain restriction idempotents of
-R (or of its restriction-idempotent splitting); their split objects lie
+extension in the stated class. Use restriction idempotents of R (or of its
+restriction-idempotent splitting); their split objects lie
 in the corresponding total category. Do not replace them by arbitrary
 subobjects of a different ambient category.
 
@@ -121,8 +146,8 @@ statement about its computational theories and extensions.
 
 The arithmetic-universe comparison note starts from different data and
 proves a different result. It supplies neither a construction from R nor
-a comparison of its computational domains and extensions. It discharges
-none of the open construction hypotheses here. Its own extension question
+a comparison of its computational restriction idempotents and extensions.
+It discharges none of the open construction hypotheses here. Its own extension question
 must not replace this project's recursion-category target.
 
 ## Immediate mathematical work
@@ -133,14 +158,15 @@ N satisfying T; their operations need not be standard. Interpret each
 standard program's arithmetic graph in each model. The resulting covariant
 F_T:S_T→D_T, D_T=∏_{M∈Mod_ω(T)}Pfn, is faithful by completeness and
 countable Löwenheim–Skolem. It preserves restrictions, ranges, zeros,
-restriction products, coproducts, and finite domain joins. D_T is split,
-locally connected, and satisfies weak choice and stable domain joins.
+restriction products, coproducts, and finite joins of restriction idempotents.
+D_T is split, locally connected, and satisfies weak choice; its joins of
+restriction idempotents are preserved by inverse image.
 S_T itself is NOT locally connected for consistent c.e. T: retain
 Di Paola–Montagna Corollary 4.4 and never transfer the target property
 back to the source merely because F_T is faithful.
 
-For complementary source domains, one program dovetails their Σ₁ witness
-searches and returns the appropriate tagged input. T proves its universal
+For complementary source restriction idempotents, one program dovetails
+their Σ₁ witness searches and returns the appropriate tagged input. T proves its universal
 halting and exact graph from the uniform complement equations. Its
 interpretation is the required section in every coordinate simultaneously.
 Thus all hypotheses of the range-functor lifting theorem proved in Section 6
@@ -149,8 +175,8 @@ sufficient criterion using joins of disjoint arrows. Appendix C shows why
 the theorem cannot omit its lifting hypothesis. For T⊆T', restricting the model family gives
 π_(T,T'):D_T→D_T' and π_(T,T')F_T=F_T'Q_(T,T'). No soundness is used.
 The target need not be a recursion category; Turing universality is used
-in S_T. Every target domain is complemented, so arbitrary target
-separators do not lift. The semantic functor is not an effective functor
+in S_T. Every target restriction idempotent is complemented, so arbitrary
+target separators do not lift. The semantic functor is not an effective functor
 to the classical recursion category.
 
 For c.e. T, E_T(c)={n:T proves C(numeral n)} remains the effective
@@ -172,18 +198,19 @@ computational partial-map category and K the restriction splitting of the
 classical recursion category. For either endpoint i=1,2, component evaluation
 E_i:A→K is an actual covariant functor on partial arrows preserving
 restrictions, zeros, ranges, binary products and coproducts, and finite
-domain joins. It preserves the chosen Turing morphism. The analogous central
-evaluation preserves the listed structure but not that Turing morphism's
+joins of restriction idempotents. It preserves the chosen Turing morphism.
+The analogous central evaluation preserves the listed structure but not that Turing morphism's
 universality. The endpoint functors also have an intrinsic description:
 total maps H_i→Y from the singleton endpoint diagram are the observations,
 and partial postcomposition is defined exactly when the composite is total.
 
 Fix the already constructed classical presentation with syntax S, atom map
-theta:V→S, negation constructor nu:S→S, and selected theorem domain t_0.
+theta:V→S, negation constructor nu:S→S, and restriction idempotent t_0
+representing the selected theorems.
 For a consistent computational extension t≥t_0, put theta_i=E_i(theta) and
 P_(i,t)=theta_i^(-1)(E_i(t)),
-N_(i,t)=theta_i^(-1)(E_i(nu^*t)), identifying numerical domains with their
-c.e. carriers. These are disjoint c.e. subsets of N² containing the fixed
+N_(i,t)=theta_i^(-1)(E_i(nu^*t)), identifying numerical restriction idempotents
+with their c.e. carriers. These are disjoint c.e. subsets of N² containing the fixed
 recursively inseparable carriers A_i,B_i of E_i(a),E_i(b).
 Every such observed pair is therefore recursively inseparable; completeness
 would make the two sets cover N² and yield a recursive separator. The
@@ -193,20 +220,22 @@ is a covariant functor to Pair(Rec).
 Next, identify a class of effective atomic observation functors beyond this
 fixed source and construct compatible comparison maps when computational
 presentations change. Preserve the specified inseparable pair and the atomic
-proof inclusions, and check the required inverse-image and domain-join laws.
+proof inclusions, and check the required inverse-image laws and laws for
+joins of restriction idempotents.
 A full functor from arbitrary S_T to classical Rec remains unconstructed and
 is not supplied by F_T or by the separate three-point endpoint functors.
 In new mathematical text, call the inseparability proof the Turing-morphism
 argument; reserve “diagonal” for the categorical map Δ_U.
 
 The preceding result gives a minimal construction inside the original category.
-For disjoint domains a,b on U, binary restriction coproducts give the signed
-presentation (U+U,swap,a+b). Its consistent computational extensions are
+For disjoint restriction idempotents a,b on U, binary restriction coproducts
+give the signed presentation (U+U,swap,a+b). Its consistent computational extensions are
 exactly disjoint enlargements (c,d) of (a,b), and completeness is c∨d=1.
 Thus inseparability is equivalent to essential incompleteness in this class.
 The construction is left adjoint to (S,ν,t)↦(S,t,ν*t) for total involutive
 ν and consistent t. The adjunction needs no joins; the equivalence needs
-binary domain joins but not their stability under arbitrary total pullback.
+binary joins of restriction idempotents but not their stability under
+arbitrary total pullback.
 Neither result needs ranges, iteration, regularity, or a proof algebra.
 
 The user's subsequent direction is the primary target: transport separators
@@ -233,8 +262,9 @@ extensions into Pair(Rec), with identity maps on program indices for theory
 inclusions. Separators pull back along those maps and the fixed index map r.
 The map from program indices to S_T(omega,omega) is a set-presentation map,
 not a functor from the extensional category Rec. The alternative observation
-E_T([D])={n:T proves D(numeral n)} is a well-defined monotone map on domain
-posets; it need not preserve binary joins and is not extended to all arrows.
+E_T([D])={n:T proves D(numeral n)} is a well-defined monotone map on
+restriction-idempotent posets; it need not preserve binary joins and is not
+extended to all arrows.
 
 The theorem should apply to theories admitting compatible computational
 presentations. Existence of such a presentation is sufficient; constructing
@@ -250,8 +280,8 @@ use arithmetic translations; no intrinsically nonnumerical interpretation
 is claimed for them.
 
 Precompleteness is a relevant established categorical hypothesis. Bernardi
-(1986) defines it for equivalence-relation domains and proves an
-inseparability theorem under c-plus-dominical hypotheses. Attribute that
+(1986) defines it for restriction idempotents representing equivalence relations
+and proves an inseparability theorem under c-plus-dominical hypotheses. Attribute that
 prior work; do not silently apply it to nondominical S_T. The uniform
 program-equivalence relation of PA is precomplete, and enlargement preserves
 precompleteness. The numerical class argument applies also to c.e. lambda
@@ -268,10 +298,11 @@ presentation remain to be treated. No new range completion is needed for the
 established applications; a full backwards arrow functor from arbitrary S_T
 has not been constructed.
 
-A restriction functor G_T:D_T→C preserving zero and binary domain joins
-is a sufficient implementation, realized by the endpoint functors for the
+A restriction functor G_T:D_T→C preserving zero and binary joins of
+restriction idempotents is a sufficient implementation, realized by the endpoint functors for the
 three-point construction and still to be constructed for further classes.
-For theorem/refutation domains p_T,n_T on Y_T, supply a total
+For restriction idempotents p_T,n_T on Y_T representing theorems and refutable
+formulas, supply a total
 u_T:U→G_T(Y_T) with a≤u_T*G_T(p_T), b≤u_T*G_T(n_T), and prove the
 needed inverse-image join law. Consistency must give p_T n_T=0 and
 completeness p_T∨n_T=1. Neither fullness nor faithfulness is required.
@@ -303,8 +334,8 @@ The same inequalities hold for every t≥t₀. Every consistent extension's
 theorem/refutation pair (t,ν*t) is therefore inseparable, not just incomplete.
 
 For functors between categories, separate the two directions. A restriction
-functor preserving zero and binary domain joins reflects inseparability of
-a specified image pair. Full faithfulness on the relevant endomorphism set
+functor preserving zero and binary joins of restriction idempotents reflects
+inseparability of a specified image pair. Full faithfulness on the relevant endomorphism set
 suffices for preservation. Unrestricted preservation fails even with the
 chosen Turing morphism preserved: the second projection from the diagonal-object
 subcategory of C×C sends (a,p),(b,q) to complementary p,q, where a,b are
@@ -313,8 +344,8 @@ It does not refute the weaker claim that the target has some inseparable pair.
 
 Any use of Ramesh's introspection must supply an actual construction
 associated with R and prove its compatibility with the selected
-computational domains and intended extensions. No such construction or
-comparison has yet been established. Until then, the proved recursion-
+computational restriction idempotents and intended extensions. No such
+construction or comparison has yet been established. Until then, the proved recursion-
 category results and their remaining hypotheses below are the operative
 research state.
 
@@ -393,8 +424,9 @@ an arithmetic interpretation or a nonclassical computability theory.
 The companion treats the space with opens ∅, {c}, {a,c}, {b,c}, {a,b,c}.
 Its set-valued cosheaves are exactly covariant fork diagrams
 Y_1←Y_0→Y_2, with global value the pushout Y_1 ⊔_(Y_0) Y_2.
-The computational total category is C^[0→1,0→2], and partial domains
-are c.e. subdiagrams. The global pushout is presented by a c.e.
+The computational total category is C^[0→1,0→2]. Its partial maps are
+specified by c.e. subdiagrams and natural maps on them. The global pushout
+is presented by a c.e.
 equivalence relation on tagged representatives; quotient equality need
 not be decidable. Every c.e. equivalence relation on N occurs this way.
 
@@ -412,9 +444,9 @@ The total natural parameter map proves exact parameter-universality.
 The generated isotypical full partial category is a recursion category,
 and its restriction splitting is the full computational fork category.
 
-Complemented domains of V consist of whole component blocks, with a
-recursive set of indices; this gives binary case distinction. V lacks
-decidable equality. The total terminal object has five subobjects, unlike
+Complemented restriction idempotents of V are partial identities on unions
+of whole component blocks, with a recursive set of indices; this gives binary
+case distinction. V lacks decidable equality. The total terminal object has five subobjects, unlike
 the numerical two and Sierpiński three. The established finite-stage
 and equality-constraint theorems therefore give essential incompleteness
 in this three-point category without decidable atom equality.

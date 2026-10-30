@@ -135,18 +135,19 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 ## Local connectedness, range functors, and essential incompleteness
 
-[Version 2 PDF](essential_incompleteness_via_local_connectedness_v2.pdf)
-([LaTeX source](essential_incompleteness_via_local_connectedness_v2.tex),
-29 October 2026, 27 pages).
+[Version 3 PDF](essential_incompleteness_via_local_connectedness_v3.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v3.tex),
+30 October 2026, 28 pages).
 
-Theorem 6.3 gives inseparable domains from a range functor into a locally
-connected target, with a specified section-lifting hypothesis. It does not
-require preservation of products. Section 6.2 proves the sufficient lifting
-criterion from joins of arrows with disjoint domains.
+Theorem 6.3 gives inseparable restriction idempotents from a range functor
+into a locally connected target, with a specified section-lifting hypothesis.
+It does not require preservation of products. Section 6.2 proves the sufficient
+lifting criterion from joins of arrows whose restriction idempotents are disjoint.
 
-Corollary 6.7 proves inseparability of every consistent extension's theorem
-and refutation domains. Its arithmetic instance, Corollary 7.1, uses the
-classical recursion category and proof-conclusion ranges in its restriction
+Corollary 6.7 proves inseparability of the restriction idempotents representing
+theorems and refutable formulas of every consistent extension. Its arithmetic
+instance, Corollary 7.1, uses the classical recursion category and proof-conclusion
+ranges in its restriction
 splitting. The all-model functor from S_T is a separate syntactic instance;
 its construction is not substituted for the effective arithmetic argument.
 The three-point application uses the same categorical corollary and the
@@ -159,11 +160,15 @@ the recursion category, Turing morphism and restriction splitting; Appendix B
 constructs finite syntax and proofs and proves consistency. Appendix C is a
 counterexample specifically to dropping the section-lifting hypothesis.
 
-[Outline and review record](../Audit/2026-10-29-introduction-economy/README.md).
+[Version 3 terminology and literature record](../Audit/2026-10-30-literature-and-terminology/README.md)
+and [literature comparison](../Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md).
+Version 3 corrects the terminology and abstract and removes irrelevant disclaimers.
+The [Version 2 outline and reviews](../Audit/2026-10-29-introduction-economy/README.md)
+remain available as a historical record.
 No Lean sources changed.
 
 ```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v2.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v3.tex
 ```
 
 ## Separate arithmetic-universe comparison
