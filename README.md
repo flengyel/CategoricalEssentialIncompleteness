@@ -86,8 +86,8 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The note [Local connectedness, range functors, and essential incompleteness](manuscript/syntactic_model_range_functors.pdf)
-([source](manuscript/syntactic_model_range_functors.tex), 30 October 2026)
+The note [Local connectedness, range functors, and essential incompleteness](manuscript/local_connectedness_and_essential_incompleteness.pdf)
+([source](manuscript/local_connectedness_and_essential_incompleteness.tex), 30 October 2026)
 constructs a faithful range functor from S_T to a product of partial-function
 categories indexed by all countable models of T. The target is locally
 connected; for consistent c.e. T, S_T itself is not, as Di Paola–Montagna
@@ -109,7 +109,16 @@ Extension inclusions act by identity maps on these observed pairs, proving
 essential incompleteness in this nonnumerical example. The remaining
 generalization is to identify further effective observation functors and
 compatible comparisons when the presentation changes. See the
-[reviews and verification](Audit/2026-10-30-syntactic-models/README.md).
+[model and endpoint reviews](Audit/2026-10-30-syntactic-models/README.md)
+and the [current writing and verification record](Audit/2026-10-30-local-connectedness-writing/README.md).
+The introduction situates the construction among the work of Di Paola–Heller,
+Rosolini, Heller, Lengyel, Montagna and Di Paola–Montagna, and Bernardi.
+Partial maps and their restriction structure are introduced before the
+local-connectedness argument. The uniform quotients S_T of Di Paola–Montagna
+are retained; their pointwise systems S'_T are excluded by
+[Lengyel's composition-failure result](https://arxiv.org/abs/2609.25556).
+The discussion of Lengyel's 2004 existence theorem uses the version-10
+[corrections](https://github.com/flengyel/errata/tree/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004).
 These are paper proofs, not new Lean formalizations.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)

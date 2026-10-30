@@ -22,94 +22,178 @@ and essential incompleteness}
 \maketitle
 
 \begin{abstract}
-We apply the local-connectedness inseparability theorem for recursion
-categories to obtain essential incompleteness: every consistent computably
-enumerable extension of Peano arithmetic is incomplete. For a consistent
-extension $T$, interpretation in countable models defines a faithful range
-functor from the syntactic
-recursion category $S_T$ to a locally connected split restriction
-category. One $T$-provably total program lifts each target map selecting
-between complementary source domains, as the theorem requires.
-The construction respects theory extension. Standard numeral instances
-then give disjoint computably enumerable proof and refutation sets
-containing a fixed recursively inseparable pair. A second application
-uses computational cosheaves on a three-point space. Endpoint evaluation
-preserves their chosen Turing morphism. Together with the atom map, it
-gives a fixed recursively inseparable pair contained in the observed
-proof and refutation sets of every consistent computational extension.
+Using categories of partial computations, we prove that every consistent
+computably enumerable extension of Peano arithmetic is incomplete.
+The obstruction is a recursively inseparable pair: two disjoint
+computably enumerable sets for which no recursive set contains the
+first and avoids the second. We interpret programs in countable
+models to obtain faithful functors from categories defined by provable
+program equality. These functors preserve computation domains and
+images. Each map selecting between two cases proved disjoint and
+exhaustive by the theory is the interpretation of a program.
+This verifies the hypotheses of a categorical
+inseparability theorem. Finite computations then place a fixed
+numerical inseparable pair inside the proof and refutation sets
+of every consistent computably enumerable extension.
+We also construct a classical propositional theory using computable
+diagrams on a three-point space. Every consistent extension represented
+by a computably enumerable subdiagram is incomplete.
 \end{abstract}
 
 \section{Introduction}
 
-Di Paola and Heller developed recursion categories to formulate the
-recursion-theoretic content of generalized incompleteness in categorical
-terms \cite{DPH}. Their program includes the recursive inseparability
-of theorems and refutable sentences. Computational domains are expressed
-by the partial identities restricting an object to permitted inputs.
-A domain is complemented when it and a disjoint domain exhaust the
-object. The relevant categorical obstruction is an inseparable pair:
-two disjoint domains that no complemented domain separates.
-To obtain essential incompleteness, this
-obstruction must persist through consistent computational extensions
-and must prevent those extensions from deciding every sentence.
+\subsection{Recursion categories and incompleteness}
 
-The local-connectedness theorem of \cite{LOC} produces inseparable
-domains by means of a range functor from a recursion category to a
-suitable category of partial maps. A range functor preserves domains,
-ranges, zeros, and binary coproducts. A domain is connected when it
-cannot be decomposed into two disjoint nonzero domains. In the target,
-local connectedness means that connected domains detect equality of
-partial arrows.
-Together with splitting of domains, weak choice for partial
-monomorphisms, and preservation of binary domain joins by inverse
-images, it constructs a map selecting one coproduct injection on the
-image of a complemented source domain and the other injection on the
-image of its complement. The theorem requires this particular target
-map to lift to a source arrow. Turing universality in the source then
-rules out a separator. The lifting hypothesis is essential:
-\cite[Section 4.5]{LOC} gives a counterexample when it is omitted.
+Di Paola and Heller developed recursion categories as an algebraic
+setting for recursion theory, with the aim of obtaining a categorical
+formulation of incompleteness \cite{DPH}. Morphisms represent partial
+computations, and restriction idempotents represent their domains.
+A restriction idempotent is the partial identity that keeps precisely
+the inputs on which a computation is defined.
+Rosolini's $P$-categories provide a more general setting for these
+constructions \cite{RosoliniThesis,Rosolini}. They describe partial
+maps with a product operation. His representation theorem realizes such a
+category inside a category of partial maps with a specified class of
+monomorphisms as permitted domains \cite[Theorem 1.2]{Rosolini}.
+Ranges express images, and coproducts provide the two branches used
+in definition by cases.
 
-Syntactic recursion categories provide a direct application to
-arithmetic. For a consistent theory $T$ extending Peano arithmetic
-($\PA$), the category $S_T$ identifies two programs when $T$ proves
-one universally quantified statement asserting equality of their
-partial graphs \cite{Montagna,DPM}. If $T$ is computably enumerable,
-$S_T$ is not locally connected \cite[Corollary 4.4]{DPM}.
-We instead interpret its arrows in all countable models of $T$.
-This gives a faithful range functor to a product of categories of
-partial functions. The product is locally connected, and a single
-program searching the two complementary domain predicates supplies
-the required lift in every model. Restricting the family of models
-makes these functors compatible with extensions of $T$.
+One of the generalized incompleteness statements proposed by
+Di Paola and Heller concerns recursive inseparability of theorems and
+refutable sentences \cite[pp.~594--595]{DPH}.
+For disjoint computably enumerable (c.e.) sets $A,B$, a \emph{recursive
+separator} is a recursive set $C$ with $A\subseteq C$ and
+$B\cap C=\varnothing$. The pair is \emph{recursively inseparable}
+when no such $C$ exists. If the theorem and refutation sets of a
+consistent computably enumerable theory contain such a pair,
+the theory cannot be complete: searching simultaneously for a proof
+and a refutation would decide a separator. When the same obstruction
+holds in every consistent computably enumerable extension, the theory
+is \emph{essentially incomplete}.
 
-The arithmetic conclusion is essential incompleteness of $\PA$:
-every consistent computably enumerable extension is incomplete.
-For the pair constructed from the Turing morphism, finite computations
-give PA-proofs of the corresponding numeral instances. The same
-local-connectedness theorem proves inseparability of its classical
-numerical realization. Proof and
-refutation in any such extension therefore contain a fixed recursively
-inseparable pair of computably enumerable sets. Completeness would
-make parallel proof and refutation search a recursive separator.
-This passage uses consistency, without assuming that the extension
-is sound. It supplies an application of the local-connectedness
-theorem to the incompleteness problem motivating the Di Paola--Heller
-program.
+Bernardi developed an earlier categorical approach through precomplete
+equivalence relations \cite{Bernardi}. In the numerical case,
+precompleteness means that every partial recursive function agrees,
+where defined and modulo the equivalence relation, with a total
+recursive function. His categorical results establish inseparability
+for nonempty disjoint unions of equivalence classes under the
+hypotheses of his categorical theorem, and his examples include program equality
+provable in Peano arithmetic \cite[pp.~125--128]{Bernardi}. This connects provable
+program equality with inseparability. The construction below uses
+domains, ranges, and local connectedness to obtain the obstruction,
+then makes explicit its relation to proof and refutation.
 
-There is also a nonnumerical application. In the computational
-three-point cosheaf category of \cite{ThreePoint}, the inclusion of
-the recursion category into its restriction splitting satisfies the
-local-connectedness and lifting hypotheses. Evaluation at either
-endpoint of its defining fork is a functor to the split classical
-recursion category. It preserves the displayed Turing morphism, so
-the endpoint image of the atom map, together with the one-node
-proofs of the signed atomic axioms, sends a fixed numerical inseparable
-pair into the proof and refutation domains of every consistent
-computational extension of the constructed classical presentation. This gives
-an effective observation of essential incompleteness in a category
-whose universal object has no decidable equality.
+\subsection{Local connectedness and comparison functors}
 
-Section~\ref{sec:syntactic} defines $S_T$.
+A computational domain is \emph{complemented} if it and a disjoint
+computational domain cover their object. The categorical analogue of
+an inseparable pair consists of disjoint domains that no complemented
+domain separates. A domain is \emph{connected} if it cannot be
+decomposed as the union of two disjoint nonzero domains.
+A category is \emph{locally connected} when agreement of partial
+arrows on every connected domain implies their equality.
+Thus local connectedness supplies domains on which the behavior of
+partial computations can be compared.
+
+Heller used local connectedness in his existence theorem for recursion
+categories \cite[Sections 8--9]{Heller}. In particular, it enters the
+proof that computations built from iterated total operations are closed
+under composition. The theorem constructs a recursion category from
+the stated generation and iteration data; it does not require that
+the ambient category already have a universal program.
+Lengyel extended this existence argument by using faithful functors
+that preserve domains, coproducts, zero maps, and iteration
+\cite{Lengyel2004,Corrections}. The target must have enough connected
+domains to detect equality. These are iteration functors; preservation
+of products is not required in the corrected theorem.
+
+The inseparability theorem of \cite{LOC} concerns a recursion category
+that is already given. Its comparison is a \emph{range functor},
+which preserves restriction domains, ranges, zero maps, and binary
+coproducts. Under the target hypotheses stated in
+Theorem~\ref{thm:local-lifting}, local connectedness constructs a
+partial injection from two disjoint domains. The target also treats
+domains as objects and admits partial inverses of partial injections, and its
+inverse-image operations preserve binary unions of domains.
+For complementary source domains, these properties yield a total
+target map selecting one coproduct injection on the image of the
+first domain and the other injection on the image of its complement.
+The \emph{lifting hypothesis} requires this particular map to be the
+image of a source arrow. Universality of computation in the source
+then contradicts the existence of a separator.
+Joins of source arrows with disjoint domains suffice for lifting
+\cite[Proposition 4.8]{LOC}; the counterexample in
+\cite[Section 4.5]{LOC} shows that the other hypotheses alone do not.
+
+\subsection{Syntactic categories and the present applications}
+
+Syntactic recursion categories explain why local connectedness is
+imposed on the target of a functor rather than on its source.
+For a consistent extension $T$ of Peano arithmetic ($\PA$), the category
+$S_T$ has programs as arrows, identified when $T$ proves one
+universally quantified sentence asserting equality of their partial
+graphs \cite{Montagna,DPM}. Montagna's category $S$ is the case
+$T=\PA$. Di Paola and Montagna prove that $S_T$ is not locally
+connected for any consistent computably enumerable $T$
+\cite[Corollary 4.4]{DPM}. Their examples therefore motivate
+comparison with a category in which connected domains do determine
+arrows, as in the existence and inseparability results just described.
+
+The primed systems use a different equivalence. Montagna's $S'$ is
+the case $T=\PA$ of the system $S'_T$ studied by Di Paola and
+Montagna: two programs are identified if $T$ proves equality of their
+partial computations separately at each standard input.
+The claimed local-connectedness result for these systems
+\cite[Theorem 4.5, pp.~658--659]{DPM} includes an arithmetic
+soundness hypothesis. However, \emph{Pointwise provable equality and
+the failure of composition} \cite[Corollary 2]{Composition} proves
+that their proposed composition is not independent of representatives
+for any consistent computably enumerable extension $T$ of $\PA$.
+Thus $S'$ and $S'_T$ do not define categories under that composition
+and cannot supply locally connected examples here.
+The single uniformly quantified proof used in the unprimed $S_T$
+makes composition well-defined; its verification is included in
+Section~\ref{sec:syntactic}.
+
+We construct such a comparison by interpreting programs in all
+countable models of $T$. The interpretations form a faithful range
+functor to a product of categories of partial functions, and that
+product is locally connected. Given complementary source domains,
+one program searches their defining predicates and returns the
+appropriately tagged input. The theory proves that the program is
+total; its interpretation is the required selecting map in every
+model. Restricting the model family makes the construction compatible
+with theory extension. This verifies the full lifting hypothesis
+and gives an inseparable pair in each $S_T$.
+
+The arithmetic conclusion requires an effective observation of this
+construction. The same local-connectedness theorem supplies a fixed
+inseparable pair in the classical category of partial recursive
+functions. Finite computations give PA-proofs of the corresponding
+numeral instances. Consequently the proof and refutation sets of
+every consistent computably enumerable extension of $\PA$ contain
+that numerical pair. Completeness would produce a recursive
+separator, proving essential incompleteness without a soundness
+assumption. The faithful model interpretation and the effective
+numeral observations have distinct roles: the former represents the
+syntactic category, while the latter connects computation with
+arithmetical proof.
+
+A second application uses the computational cosheaves of
+\cite{ThreePoint}. For the three-point space considered there,
+these are computable diagrams consisting of two arrows with a
+common source. Their partial-map category contains a nonnumerical
+recursion category and a classical propositional presentation.
+Taking the component at either target of the diagram gives a
+functor to numerical partial computations. We prove that it preserves
+the chosen universal computation and use the proofs of atomic
+axioms to obtain an inseparable pair within each extension's
+proof and refutation sets. The extensions here are the rule-closed
+computational domains of the constructed syntax object. Every
+consistent such extension is incomplete.
+
+Section~\ref{sec:preliminaries} fixes the categorical definitions,
+and Section~\ref{sec:syntactic} defines $S_T$.
 Sections~\ref{sec:models} and \ref{sec:family} construct its
 model interpretation and the comparison under theory extension.
 Section~\ref{sec:lifting} proves the needed local-connectedness
@@ -118,29 +202,138 @@ Section~\ref{sec:arithmetic} obtains arithmetic essential
 incompleteness, and Section~\ref{sec:cosheaves} develops the
 three-point application.
 
-\section{The syntactic recursion category}\label{sec:syntactic}
+\section{Categorical preliminaries}\label{sec:preliminaries}
 
-Composition is written $gf=g\circ f$. In a restriction category, the
-domain of $f:X\rightharpoonup Y$ is a restriction idempotent
-$\bar f:X\rightharpoonup X$. The arrow is total when $\bar f=1_X$.
-Domains are ordered by $a\le b$ when $ba=a$; their meet is composition.
-For a domain $a$ on $Y$, write $f^*a=\overline{af}$. A domain $r$ on
-$Y$ \emph{receives} $f$ when $rf=f$. A range of $f$
-is the least domain receiving $f$, with the additional agreement property
+\subsection{Partial maps and domains}
+
+Composition is written $gf=g\circ f$, so $f$ is applied first.
+A \emph{restriction category} assigns to every arrow
+$f:X\rightharpoonup Y$ an arrow
+$\bar f:X\rightharpoonup X$ satisfying
+\[
+ f\bar f=f,\qquad
+ \bar f\bar g=\bar g\bar f,\qquad
+ \overline{g\bar f}=\bar g\bar f,\qquad
+ \bar h f=f\overline{hf}.
+\]
+In the middle two equations $g:X\rightharpoonup Z$; in the last,
+$h:Y\rightharpoonup Z$ \cite{CockettLack}.
+The arrows $\bar f$ are idempotent. They are called
+\emph{restriction idempotents}, or \emph{domains}.
+The arrow $f$ is \emph{total} when $\bar f=1_X$.
+The total arrows form a subcategory, denoted by
+$\operatorname{Tot}(\mathcal C)$ for a restriction category $\mathcal C$.
+
+Domains on $X$ are ordered by $a\le b$ when $ba=a$.
+Their meet is composition, their greatest element is $1_X$, and
+$a\vee b$ denotes their least upper bound when it exists.
+For parallel partial arrows, the restriction order is
+$f\le g$ when $f=g\bar f$.
+A \emph{restriction zero} $0_{X,Y}:X\rightharpoonup Y$ is
+absorbing under composition and satisfies
+$\overline{0_{X,Y}}=0_{X,X}$. We abbreviate $0_{X,X}$ to $0_X$.
+Domains $a,b$ on $X$ are disjoint when $ab=0_X$.
+They are complementary when also $a\vee b=1_X$.
+A disjoint pair $a_0,a_1$ is \emph{inseparable} if no complementary
+pair $c,c'$ satisfies $a_0\le c$ and $a_1\le c'$.
+
+For $f:X\rightharpoonup Y$ and a domain $a$ on $Y$, its
+\emph{inverse image} is the domain $f^*a=\overline{af}$ on $X$.
+A domain $r$ on $Y$ \emph{receives} $f$ when $rf=f$.
+The \emph{range} $\ran(f)$ is the least domain receiving $f$;
+we require the agreement law
 \[
  gf=hf\quad\Longrightarrow\quad
- g\ran(f)=h\ran(f).
+ g\ran(f)=h\ran(f)
+ \qquad(g,h:Y\rightharpoonup Z).
 \]
-We use restriction zeros and binary restriction coproducts, whose injections
-are total. For $X+X$ these injections are denoted by $i_0,i_1$, and
-$\nabla_X=[1_X,1_X]:X+X\to X$ denotes the codiagonal.
-Complementary domains $c,c'$ satisfy $cc'=0$ and $c\vee c'=1$.
-A disjoint pair $a_0,a_1$ is \emph{inseparable} if no complementary pair
-satisfies $a_0\le c$ and $a_1\le c'$.
+For ordinary partial functions, domains and ranges are the partial
+identities on their domains of definition and images.
+
+A domain $e$ on $X$ \emph{splits} if
+$e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
+with $rm=1_A$. The category is \emph{split} when every domain splits.
+Its \emph{restriction splitting} has objects $(X,e)$, where $e$ is a
+domain on $X$, and arrows
+$f:(X,e)\rightharpoonup(Y,d)$ given by original arrows
+$f:X\rightharpoonup Y$ satisfying $f=dfe$.
+The identity of $(X,e)$ is $e$, and $f$ is total there when
+$\bar f=e$. The object $(X,e)$ thus represents the domain as an
+object in the corresponding total category.
+
+\subsection{Products, coproducts, and local connectedness}
+
+A \emph{binary restriction product} $X\times Y$ has total
+projections $\pi_1:X\times Y\to X$ and $\pi_2:X\times Y\to Y$.
+For arrows $f:Z\rightharpoonup X$ and $g:Z\rightharpoonup Y$,
+there is a unique $\langle f,g\rangle:Z\rightharpoonup X\times Y$
+with
+\[
+ \pi_1\langle f,g\rangle=f\bar g,\qquad
+ \pi_2\langle f,g\rangle=g\bar f,\qquad
+ \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+Products of arrows are obtained by this pairing and the projections.
+The total categorical diagonal is
+$\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
+This is the restriction-category description of the product operation
+in a $P$-category \cite{Rosolini,CockettLack}.
+
+Binary \emph{restriction coproducts} are categorical coproducts with
+total injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$.
+For arrows $f:X\rightharpoonup Z$ and $g:Y\rightharpoonup Z$,
+write $[f,g]:X+Y\rightharpoonup Z$ for their copairing.
+The \emph{codiagonal} is
+$\nabla_X=[1_X,1_X]:X+X\to X$.
+In a category with ranges and restriction coproducts,
+$a\vee b=\ran[a,b]$ for domains on the same object.
+
+A \emph{range functor} $F:\mathcal C\to\mathcal D$ is a covariant
+functor preserving restrictions, ranges, restriction zeros, and binary
+restriction coproducts, including their injections and copairings
+under the coproduct comparison isomorphisms. It preserves binary
+domain joins by the preceding formula, and hence complementary pairs.
+
+A domain $a$ is \emph{connected} if $a=b\vee c$ and $bc=0$
+imply $b=0$ or $c=0$. The category is \emph{locally connected}
+when its connected domains are jointly epimorphic: for
+$f,g:X\rightharpoonup Y$, the equations $fa=ga$ for every connected
+domain $a$ on $X$ imply $f=g$.
+A \emph{partial monomorphism} $p:X\rightharpoonup Y$ satisfies
+$pu=pv\Rightarrow\bar p u=\bar p v$ for all
+$u,v:W\rightharpoonup X$.
+A \emph{section} of $p$ is an arrow $s:Y\rightharpoonup X$
+with $ps=\bar s$ and $psp=p$.
+\emph{Weak choice} means that every partial monomorphism has such
+a section. For partial functions, this is the existence of the
+partial inverse of an injection on its domain.
+
+\subsection{Recursion categories}
+
+A restriction category with binary restriction products and zeros is
+\emph{prodominical} if $f\times0=0$ for every arrow $f$ and every
+zero arrow of the required type. It is \emph{isotypical} if any
+two of its objects are isomorphic.
+
+A \emph{Turing morphism} on $U$ is an arrow
+$\tau:U\times U\rightharpoonup U$ such that, for every object $X$
+and every $f:X\times U\rightharpoonup U$, there is a total
+parameter map $r:X\to U$ satisfying
+\[
+ f=\tau(r\times1_U).
+\]
+A \emph{recursion category} here is a prodominical isotypical
+category with binary restriction products and a Turing morphism,
+as in \cite[Section 9]{Heller}.
+Ranges and coproducts are stated as additional hypotheses when used.
+
+\section{The syntactic recursion category}\label{sec:syntactic}
 
 Let $T$ be a consistent classical theory in the language of arithmetic
-containing $\PA$. Formal numerical types are generated from $\omega$ by
-binary products and tagged coproducts. Fix recursive numerical codings
+containing $\PA$. Write $\N$ for the natural numbers and $\omega$
+for their formal numerical type. The other formal numerical types are
+generated from $\omega$ by binary products and tagged coproducts.
+Fix recursive numerical codings
 whose bijection and structural equations are provable in $\PA$.
 For a typed program index $e:X\rightharpoonup Y$, let $G_e(x,y)$ be its
 $\Sigma_1$ output formula. It existentially quantifies a computation trace
@@ -194,9 +387,7 @@ the required agreement equation. These arguments also show that the
 chosen ranges are unchanged under theory extension.
 
 The ordinary product and tagged-coproduct programs supply the restriction
-products and coproducts. Write $\pi_1,\pi_2$ for the projections and
-$\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$ for the total categorical
-diagonal. The universal program supplies a Turing morphism
+products and coproducts. The universal program supplies a Turing morphism
 \[
  \tau:\omega\times\omega\rightharpoonup\omega:
  \quad f:X\times\omega\rightharpoonup\omega
@@ -281,17 +472,6 @@ The functors of Proposition~\ref{prop:model} combine to give
  F_T(X)=(X_M)_M,\quad F_T([e]_T)=(F_M[e]_T)_M.
 \]
 
-A domain $a$ is \emph{connected} if $a=b\vee c$ and $bc=0$ imply
-$b=0$ or $c=0$. A category is \emph{locally connected} when its connected
-domains are jointly epimorphic: agreement of parallel arrows after every
-connected restriction implies equality. A category is \emph{split} when
-every restriction idempotent splits. A partial monomorphism
-$p:X\rightharpoonup Y$ satisfies
-$pu=pv\Rightarrow\bar p u=\bar p v$ for all $u,v:W\rightharpoonup X$.
-\emph{Weak choice} means that
-every partial monomorphism has a section $s$ with
-$ps=\bar s$ and $psp=p$.
-
 \begin{theorem}\label{thm:faithful}
 The functor $F_T$ is faithful and preserves restrictions, zeros, binary
 restriction products and coproducts, ranges, and finite domain joins. The category
@@ -354,9 +534,6 @@ unchanged program representatives.
 
 \section{Switching and the local-connectedness theorem}\label{sec:lifting}
 
-A \emph{range functor} preserves restrictions, ranges, restriction zeros,
-and binary restriction coproducts. Since $c\vee c'=\ran[c,c']$,
-such a functor preserves binary domain joins and complementary pairs.
 Theorem~\ref{thm:faithful} supplies
 such a functor into a split locally connected category satisfying weak
 choice and inverse-image preservation of domain joins. These are the
@@ -646,7 +823,19 @@ established route through PA-provable program equivalence
 
 \section{Computational cosheaves and effective observation}\label{sec:cosheaves}
 
-Let $X=\{a,b,c\}$ have opens
+For a topological space $X$, let $\mathcal O(X)$ be the category
+of open sets and inclusions. A \emph{set-valued cosheaf} is a
+covariant functor $C:\mathcal O(X)\to\mathbf{Set}$ for which
+every open cover $(O_\lambda)_\lambda$ of $O$ gives a coequalizer
+\[
+ \coprod_{\lambda,\mu} C(O_\lambda\cap O_\mu)
+ \rightrightarrows \coprod_\lambda C(O_\lambda)
+ \longrightarrow C(O).
+\]
+The two parallel maps are induced by the inclusions into the two
+members of the cover; the empty cover requires
+$C(\varnothing)=\varnothing$.
+Now let $X=\{a,b,c\}$ have opens
 $\varnothing,\{c\},\{a,c\},\{b,c\},X$.
 Its set-valued cosheaves are equivalent to covariant diagrams of shape
 $J=(1\leftarrow0\to2)$: the three components are the values at
@@ -671,12 +860,20 @@ subdiagram $D\subseteq Y$ with recursive value maps $D_j\to Z_j$
 commuting with the transitions. Its restriction is the partial
 identity on $D$, and its range is the subdiagram of component images.
 
-The universal object of \cite[Sections 4--5]{ThreePoint} is
+The diagram used for universal computation in
+\cite[Sections 4--5]{ThreePoint} is
 \begin{equation}\label{eq:universal-fork}
  V_0=\N^4,\qquad V_1=V_2=\N^2,\qquad
  r_1(k,z,a,b)=(k,a),\quad r_2(k,z,a,b)=(k,b).
 \end{equation}
-It has computable product, coproduct, and nonempty-word frames.
+Every diagram $Y$ admits a total map $m:Y\to V$ with a partial
+inverse $r:V\rightharpoonup Y$ such that $rm=1_Y$ and
+$mr$ is a restriction idempotent. In this sense $V$ is a
+\emph{universal object}.
+Write $V^\#$ for the diagram of nonempty finite words in its
+components, with transitions acting letter by letter.
+The chosen \emph{frames} are computable isomorphisms
+$V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
 Let $\mathscr R_X$ denote the full subcategory of $\mathcal A$
 on the formal objects generated by $V$ using those operations.
 It is an isotypical recursion category, and its restriction
@@ -749,9 +946,9 @@ The total parameter map $z\mapsto(0,s(z))$ proves the required
 universality.
 \end{proof}
 
-The endpoint functor also has a description by categorical probes.
 Let $H_i$ have singleton component at endpoint $i$ and empty
-components elsewhere. Every total arrow $p:H_i\to Y$ is uniquely
+components elsewhere. An \emph{endpoint probe} of $Y$ is a total
+arrow $p:H_i\to Y$. Every such arrow is uniquely
 the point $p_y$ determined by an element $y\in Y_i$. A partial
 arrow from $H_i$ is either total or zero, since $H_i$ has just
 two restriction domains. Hence postcomposition defines a partial
@@ -788,7 +985,9 @@ not preserve this Turing morphism's universality.
 
 \subsection{Proof observations and extensions}
 
-For $j=0,1$, let $q_j$ be the range of the total global point $1\to V$
+Write $1$ for the terminal diagram with singleton components.
+A \emph{global point} of $V$ is a total arrow $1\to V$.
+For $j=0,1$, let $q_j$ be the range of the global point
 with central value $(j,0,0,0)$ and both endpoint values $(j,0)$.
 Put
 \[
@@ -815,11 +1014,16 @@ Use the consistent classical presentation constructed in
 $P:\mathcal E\to\mathcal E$ on the total diagram category by
 $P(Z)=V+Z+(Z\times Z)$ and
 $P(f)=1_V+f+(f\times f)$ for total arrows $f$.
-Its initial algebra $S$, constructed from finite formula trees,
-has constructors for atoms, negation, and implication.
+Its initial algebra $\iota:P(S)\to S$ is constructed from finite
+formula trees. Initiality means that every total algebra
+$\alpha:P(Z)\to Z$ admits a unique total arrow $u:S\to Z$
+with $u\iota=\alpha P(u)$.
+The three summands give constructors for atoms, negation, and implication.
 Write $\theta:V\to S$ for the total atom map
 and $\nu:S\to S$ for the total negation constructor.
-The theorem domain $t_0$ is the range of the proof-conclusion map.
+Let $\mathrm{Prf}$ be the object of finite proofs for the rules below
+and $c:\mathrm{Prf}\to S$ its total conclusion map.
+The theorem domain is $t_0=\ran(c)$.
 Writing $\alpha\Rightarrow\beta$ for the implication constructor
 applied to $(\alpha,\beta)$, the logical axiom schemes are
 \[
@@ -880,7 +1084,7 @@ $P_{i,t}\cup N_{i,t}=\N^2$. Dovetailing their enumerations would
 then decide $P_{i,t}$, contradicting inseparability.
 \end{proof}
 
-The construction uses the selected computational domains of
+The construction uses the computational domains of
 $\mathcal A$. Its numerical observations are obtained by an
 actual functor on partial arrows and a total atom map.
 The restriction $E_i|_{\mathscr R_X}$ starts in the nonnumerical
@@ -889,10 +1093,14 @@ proof objects. Extending this method to other recursion categories
 requires an effective observation functor that preserves a specified
 inseparable pair and the atomic proof inclusions.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 \bibitem{Bernardi}
 C.~Bernardi, \emph{Precomplete equivalence relations in dominical
 categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
+\bibitem{CockettLack}
+J.~R.~B. Cockett and S.~Lack, \emph{Restriction categories. I.
+Categories of partial maps}, Theoret. Comput. Sci. \textbf{270}
+(2002), 223--259.
 \bibitem{DPH}
 R.~A. Di Paola and A.~Heller, \emph{Dominical categories:
 recursion theory without elements}, J. Symbolic Logic
@@ -902,6 +1110,20 @@ R.~A. Di Paola and F.~Montagna, \emph{Some properties of the syntactic
 $P$-recursion categories generated by consistent, recursively enumerable
 extensions of Peano arithmetic}, J. Symbolic Logic \textbf{56} (1991),
 643--660.
+\bibitem{Heller}
+A.~Heller, \emph{An existence theorem for recursion categories},
+J. Symbolic Logic \textbf{55} (1990), 1252--1268.
+\bibitem{Lengyel2004}
+F.~Lengyel, \emph{More existence theorems for recursion categories},
+Ann. Pure Appl. Logic \textbf{125} (2004), 1--41.
+\bibitem{Corrections}
+F.~Lengyel, \emph{Corrections to More existence theorems for recursion
+categories}, version 10, 20 October 2026,
+\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.
+\bibitem{Composition}
+F.~Lengyel, \emph{Pointwise provable equality and the failure of
+composition}, 2026,
+\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.
 \bibitem{LOC}
 F.~Lengyel, \emph{Locally connected recursion categories}, manuscript,
 revised 10 October 2026, \texttt{LOCOct10f.tex}.
@@ -912,5 +1134,13 @@ three-point space}, 29 October 2026,
 \bibitem{Montagna}
 F.~Montagna, \emph{``Pathologies'' in two syntactic categories of partial
 maps}, Notre Dame J. Formal Logic \textbf{30} (1989), 105--116.
+\bibitem{RosoliniThesis}
+G.~Rosolini, \emph{Continuity and effectiveness in topoi}, D.Phil.
+thesis, University of Oxford, 1986.
+\bibitem{Rosolini}
+G.~Rosolini, \emph{Representation theorems for $P$-categories},
+in F.~Borceux (ed.), \emph{Categorical Algebra and its Applications},
+Lecture Notes in Mathematics \textbf{1348}, Springer, Berlin, 1988,
+307--315.
 \end{thebibliography}
 \end{document}

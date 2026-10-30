@@ -19,7 +19,7 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/syntactic_model_range_functors.tex and .pdf:
+- manuscript/local_connectedness_and_essential_incompleteness.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
   30 October 2026.
   It constructs a faithful range functor from S_T to a locally connected
@@ -27,6 +27,11 @@ in flengyel/errata; read their latest committed state before importing further r
   It also constructs effective endpoint functors from the split three-point
   computational cosheaf category and proves that every consistent selected
   extension has recursively inseparable observed theorem/refutation sets.
+  Its introduction includes the relevant literature from LOCOct10f, and
+  partial-map and restriction definitions precede the constructions.
+  Lengyel2004 is cited together with the version-10 corrections. The invalid
+  pointwise systems S'_T of Di Paola–Montagna are excluded by Lengyel's
+  composition-failure paper; the uniform quotients S_T are retained.
 - manuscript/sources/LOCOct10f.tex: unchanged supplied source,
   SHA-256 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
   The necessary switching and lifting proofs are included in the new note.
@@ -47,6 +52,10 @@ in flengyel/errata; read their latest committed state before importing further r
   mathematical manuscript.
 - Audit/2026-10-30-syntactic-models/ records the model-family construction,
   source checks, hostile and writing reviews, and PDF verification.
+- Audit/2026-10-30-local-connectedness-writing/ records the current renamed
+  manuscript's introduction, literature review, definition order, and
+  verification. Earlier audit reports retain their original filenames and
+  hashes as historical records.
 
 The first two manuscripts remain unchanged by the cosheaf continuation.
 No new theorem in these notes has been formalized in Lean. The older Lean

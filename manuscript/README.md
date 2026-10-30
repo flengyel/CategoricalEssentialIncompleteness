@@ -135,8 +135,8 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 ## Local connectedness, range functors, and essential incompleteness
 
-[Local connectedness, range functors, and essential incompleteness](syntactic_model_range_functors.pdf)
-([source](syntactic_model_range_functors.tex), 30 October 2026)
+[Local connectedness, range functors, and essential incompleteness](local_connectedness_and_essential_incompleteness.pdf)
+([source](local_connectedness_and_essential_incompleteness.tex), 30 October 2026)
 constructs a faithful range functor
 S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
 extension. The product target is locally connected; the source S_T is not
@@ -161,11 +161,21 @@ give identity maps between the observed pairs. Thus the construction proves
 essential incompleteness by an actual functor on partial arrows in this
 nonnumerical example. Other recursion categories and changes of presentation
 require suitable effective observations and compatible comparison maps.
-The [review record](../Audit/2026-10-30-syntactic-models/README.md)
-states the scope, checks, and source provenance. No Lean files were changed.
+The introduction connects these applications to Di Paola–Heller's program,
+Rosolini's partial-map framework, Heller's use of local connectedness,
+Lengyel's 2004 existence theorem with its version-10 corrections, the
+syntactic examples of Montagna and Di Paola–Montagna, and Bernardi's
+precomplete-equivalence method. The partial-map and restriction definitions
+precede their use. The pointwise systems S'_T of Di Paola–Montagna are
+excluded using [Lengyel's composition-failure result](https://arxiv.org/abs/2609.25556);
+the uniform quotients S_T remain the source categories.
+
+The [model and endpoint review record](../Audit/2026-10-30-syntactic-models/README.md)
+and [current writing and verification record](../Audit/2026-10-30-local-connectedness-writing/README.md)
+state the scope, checks, and source provenance. No Lean files were changed.
 
 ~~~bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error syntactic_model_range_functors.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error local_connectedness_and_essential_incompleteness.tex
 ~~~
 
 ## Separate arithmetic-universe comparison
