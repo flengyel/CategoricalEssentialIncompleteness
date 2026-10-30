@@ -11,19 +11,15 @@ combined theorem and restriction-splitting inclusion. The model interpretation
 and a consistency-only syntactic inseparability application also use the new
 categorical theorem. These do not complete the full-paper target.
 
-Continue with the formal transport of preservation along the constructed
-product/type comparisons for model interpretations, the family over all arithmetic
-structures on ℕ, its projection/extension square, and the specified finite two-test
-program of Lemma 6.5. Theory-extension range functors and their pair image equations
-are constructed. Discharge these constructions
-with the fixed PA-verified evaluator; do not replace uniformly quantified
-provability by pointwise provability or impose soundness on consistent extensions.
-The existing source-choice lifting route is a proved sufficient condition, and
-must not be reported as the missing finite-search program or faithful family.
+Preservation transport, the exact family over all arithmetic structures on ℕ,
+its strict projection/extension square, and the specified finite two-test program
+of Lemma 6.5 are implemented. The finite-switch pair theorem uses that program
+and the categorical Turing argument. Retain uniformly quantified provability and
+the consistency-only hypotheses; the older source-choice route is separate.
 
-Then instantiate the categorical chain in classical recursion and construct the
-sentence/proof objects, conclusion range, negation, numeral substitution and both
-inclusions needed for the arithmetic result. Carry out the nonnumerical
+The classical recursion instance, sentence/proof objects, conclusion range,
+negation, numeral substitution and both inclusions now give arithmetic recursive
+inseparability and incompleteness through the new categorical chain. Carry out the nonnumerical
 three-point construction, its recursion and syntax/proof properties, the
 applications, and Appendix C. The finite fork obstruction presently proved is
 only part of the non-equivalence result.

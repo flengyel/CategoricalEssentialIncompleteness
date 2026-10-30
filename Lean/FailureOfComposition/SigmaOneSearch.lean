@@ -77,7 +77,7 @@ private theorem historyAt_eval [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
     · exact eval_codeConst (encode c) v
     · exact hx
 
-private theorem computes_iff_stage [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
+theorem computes_iff_stage [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
     (c : PCode) (x y : M) :
     Computes c x y ↔ ∃ s : M, Semiformula.Evalb ![s,(encode c:M),x,y]
       (evalnCertificateFormula : ArithmeticSemisentence 4) := by
@@ -86,7 +86,7 @@ private theorem computes_iff_stage [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
 
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
 
-private theorem successAt_eval {n : ℕ} (c : PCode) (ds dx : Code n)
+theorem successAt_eval {n : ℕ} (c : PCode) (ds dx : Code n)
     (s x z : M) (v : Fin n → M)
     (hs : Semiformula.Evalb (s :> v) (code ds))
     (hx : Semiformula.Evalb (x :> v) (code dx)) :
@@ -291,7 +291,7 @@ private theorem unionTest_total (c d : PCode) (s x : M) :
   · exact ⟨1,(unionTest_eval c d s x 1).mpr (Or.inl ⟨h,rfl⟩)⟩
   · exact ⟨0,(unionTest_eval c d s x 0).mpr (Or.inr ⟨h,rfl⟩)⟩
 
-private theorem unionTest_positive (c d : PCode) (s x : M) :
+theorem unionTest_positive (c d : PCode) (s x : M) :
     (∃ z : M, 0 < z ∧ Semiformula.Evalb ![z,s,x] (code (unionTest c d))) ↔
       (Semiformula.Evalb ![s,(encode c:M),x,0]
           (evalnCertificateFormula : ArithmeticSemisentence 4) ∨
@@ -305,7 +305,7 @@ private theorem unionTest_positive (c d : PCode) (s x : M) :
   · intro h
     exact ⟨1,Arithmetic.zero_lt_one,Or.inl ⟨h,rfl⟩⟩
 
-private theorem unionSearch_domain (c d : PCode) (x : M) :
+theorem unionSearch_domain (c d : PCode) (x : M) :
     (∃ w : M, Semiformula.Evalb ![w,x] (code (codeRfindPos (unionTest c d)))) ↔
       Computes c x 0 ∨ Computes d x 0 := by
   rw [positive_search_domain _ x (fun s => unionTest_total c d s x)]

@@ -121,7 +121,16 @@ theorem le_iff_base {X : SplitObject C} (a b : Idem X) :
 @[simp] theorem base_inf {X : SplitObject C} (a b : Idem X) :
     baseIdem (a ⊓ b) = baseIdem a ⊓ baseIdem b := rfl
 
+@[simp] theorem base_pull {X Y : SplitObject C} (f : X ⟶ Y) (a : Idem Y) :
+    baseIdem (Idem.pull f a) = Idem.pull f.hom (baseIdem a) := rfl
+
 @[simp] theorem base_top {X : SplitObject C} : baseIdem (⊤ : Idem X) = X.domain := rfl
+
+instance [Ranges C] : Ranges (SplitObject C) where
+  range f := relativeIdem (Ranges.range f.hom) (Ranges.least f.hom _ f.target)
+  receives f := Hom.ext (Ranges.receives f.hom)
+  agreement f g h he := Hom.ext
+    (Ranges.agreement f.hom g.hom h.hom (congrArg Hom.hom he))
 
 variable [BinaryJoins C]
 
@@ -135,6 +144,11 @@ instance : BinaryJoins (SplitObject C) where
 
 @[simp] theorem base_sup {X : SplitObject C} (a b : Idem X) :
     baseIdem (a ⊔ b) = baseIdem a ⊔ baseIdem b := rfl
+
+instance [JoinInverse C] : JoinInverse (SplitObject C) where
+  pull_sup f a b := by
+    apply baseIdem_injective
+    rw [base_pull, base_sup, JoinInverse.pull_sup, base_sup, base_pull, base_pull]
 
 variable [HasZeroMorphisms C] [RestrictionZero C]
 

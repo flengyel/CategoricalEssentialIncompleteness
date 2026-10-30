@@ -18,17 +18,20 @@ totality reflection, or totality of the source lifts is assumed there.
 The category of arbitrary partial functions is constructed using `Part` rather
 than decidable domains. The uniform syntactic category already present in
 `FailureOfComposition.TypedProgramCategory` is reused with explicit comparisons.
-Its model interpretation preserves restrictions, ranges, zeros and the canonical
-binary coproduct comparison. Product preservation includes simultaneous definedness
-and the canonical coding isomorphism. `codingEquiv` and `modelComparison` explicitly
-compare coded carriers with recursively interpreted formal types. Interpretation
-in all models is jointly faithful,
-and this proves stability of syntactic idempotent joins under arbitrary inverse
-image. The new `SyntacticModel.syntactic_inseparable` derives its actual syntactic
-pair by Theorem 6.3 for every consistent extension of PA. Its sufficient lifting
-argument uses the previously constructed, PA-verified fair preimage search in
-`FailureOfComposition.TypedChoice`. It is separate from the manuscript's specified
-finite two-test switching construction, which is still required.
+Preservation is proved on the recursively interpreted carriers, including products,
+projections and finite idempotent joins. `ModelIndex T` is exactly the family of all
+arithmetic structures on carrier ℕ satisfying T. Downward Löwenheim–Skolem and an
+explicit transport of operations prove completeness for this family; no standard
+soundness assumption is used. Its functor is faithful, and its target has the
+required splitting, local connectedness, weak choice and inverse-image joins.
+The projection/extension square commutes as an equality of functors.
+
+Lemma 6.5 is implemented by `FiniteSwitch.switchCode`: it searches increasing
+finite computation bounds, gives the first test priority, and returns the tagged
+input. PA proves the exact domain disjunction and the conditional graph equation.
+`SyntacticModel.finite_switch_categorical_pair` uses this actual program's source
+totality and branch equations to discharge family section lifting and apply
+Theorem 6.3. Its transitive proof does not use the older source-choice lifting route.
 
 All new names below have prefix
 `CategoricalEssentialIncompleteness.LocalConnectedness.` unless stated otherwise.
@@ -36,16 +39,16 @@ All new names below have prefix
 
 | Manuscript label | Lean declarations | Hypotheses and status |
 | --- | --- | --- |
-| `prop:model` | `SyntacticModel.rangeFunctor`, `SyntacticModel.modelFunctor`, `SyntacticModel.modelComparison`, `SyntacticModel.codingEquiv`, `SyntacticModel.map_restriction_product`, `SyntacticModel.map_first_projection`, `SyntacticModel.map_second_projection` | **Partial.** Full-carrier semantics, uniform quotient, restrictions, ranges, zeros, canonical coproducts, product graph/preservation and recursive type comparison proved. These preservation assertions are exported for the coded functor; their transport to `modelFunctor` is not yet packaged as a single formal preservation result. |
-| `thm:faithful` | `SyntacticModel.joint_faithful`; `PartialFunctions` | **Partial.** Joint faithfulness for all arithmetic models and all required properties of the single partial-function category are proved. The exact family indexed by all structures on carrier ℕ and its structure instances remain. |
+| `prop:model` | `SyntacticModel.modelRangeFunctor`, `SyntacticModel.model_map_product`, `SyntacticModel.model_map_first_projection`, `SyntacticModel.model_map_second_projection`, `SyntacticModel.model_map_sup` | **Proved.** Full model carriers, uniform graph quotient, recursive type interpretation, restrictions, ranges, zeros, canonical coproducts, products with simultaneous definedness, projections and finite joins. |
+| `thm:faithful` | `SyntacticModel.ModelIndex`, `SyntacticModel.exists_nat_elementary`, `SyntacticModel.complete_nat_models`, `SyntacticModel.family_faithful`, `SyntacticModel.familyRangeFunctor`, `SyntacticModel.family_nonzero`; `PartialFunctionFamilies` | **Proved.** The index is all arithmetic structures on ℕ satisfying T, including nonstandard models. Faithfulness uses uniform graph equality. Target structure is constructed pointwise; connected singleton supports detect every coordinate. Nonzero identity uses only consistency. |
 | `lem:connected-alternative` | `connected_alternative` | **Proved.** Restriction zeros, restriction coproducts, and arbitrary inverse-image preservation of binary joins; the test arrow is total. |
 | `prop:local-switch` | `local_switch`, `complementary_switch` | **Proved.** Split locally connected restriction category with ranges, restriction zeros, restriction coproducts, weak choice and arbitrary join inverse images. Arbitrary partial test arrows are handled by splitting their common composite restriction. |
 | `thm:local-lifting` | `range_functor_lifting`; generalized `local_lifting` | **Proved.** The exact diagonal pair, canonical coproduct comparison, nonzero image identity and source-pair-specific partial lifts are used. The total parameter and diagonal equation are derived in `turing_diagonal`. |
 | `prop:disjoint-joins` | `disjoint_joins_switch`, `disjoint_joins_lift` | **Proved.** First clause uses only pairwise complementarity (`PairComplementary`) and disjoint arrow joins; no global idempotent-join assumption. The range-functor clause uses the target hypotheses of Proposition 6.2. |
-| `lem:switch` | — | **Pending.** The exact increasing finite-bound two-test program, fixed priority and PA graph/domain proofs have not yet been instantiated. Source choice gives an independently proved sufficient lifting route. |
-| `cor:pair` | `SyntacticModel.syntactic_inseparable` | **Partial.** The categorical inseparable pair is proved for consistent PA extensions, without soundness assumptions. The exact faithful-family lift remains. `SyntacticExtension.pair0_image`, `SyntacticExtension.pair1_image` and `SyntacticExtension.extension_pair_inseparable` prove the theory-extension image equations and inseparability of the images. |
+| `lem:switch` | `FiniteSwitch.switchCode_domain`, `FiniteSwitch.switchCode_graph`, `FiniteSwitch.pa_proves_domain`, `FiniteSwitch.pa_proves_graph`, `SyntacticModel.syntactic_finite_switch`, `SyntacticModel.family_finite_switch` | **Proved.** Increasing finite bounds, fixed first-test priority, PA halting disjunction and conditional exact tagged graph; totality and both source equations; the same program gives the unique section at every family coordinate. |
+| `cor:pair` | `SyntacticModel.finite_switch_categorical_pair`, `SyntacticModel.section_lifting_finite_switch`; `SyntacticExtension.pair0_image`, `SyntacticExtension.pair1_image`, `SyntacticExtension.extension_pair_inseparable` | **Proved.** The exact faithful family and specified finite-switch lift instantiate Theorem 6.3 under consistency alone. The extension functor preserves the actual pair; `SyntacticModel.family_extension_square` proves the strict model-family square. |
 | `cor:domain-incompleteness` | `domain_incompleteness` | **Proved.** Only total inverse images must preserve joins. Exactly the two base-domain inequalities, total θ and ν, extension inclusion and disjointness are assumed. |
-| `cor:arithmetic` | — | **Pending.** The classical recursion-category instance and the two numeral-substitution inclusions must be connected to the newly constructed pair. Older arithmetic incompleteness results do not discharge this row. |
+| `cor:arithmetic` | `ClassicalPrograms.diagonal_inseparable`, `ClassicalPrograms.evenDiagonal_support`, `ClassicalPrograms.oddDiagonal_support`; `ArithmeticApplication.conclusion_range`, `ArithmeticApplication.even_le_theorems`, `ArithmeticApplication.odd_le_refutations`, `ArithmeticApplication.categorical_arithmetic`, `ArithmeticApplication.essential_incompleteness_of_arithmetic` | **Proved.** Classical extensional partial recursive arrows on formal numerical types; actual source Turing pair and parity isomorphism; sentence carrier and finite Craig-presentation proof carrier with total conclusion and exact original-theory theorem range; total negation/substitution and both base inclusions; consistency-only Corollary 6.7 application; recursive inseparability and logical incompleteness for every c.e. PA extension. |
 | `prop:endpoint` | — | **Pending.** |
 | `thm:cosheaf-observation` | — | **Pending.** |
 | `prop:fork-cosheaves` | — | **Pending.** |
@@ -72,14 +75,19 @@ range/zero/choice comparisons; the combined
 program index fixed and preserves products, the diagonal and the chosen Turing
 morphism under provability inclusion of theories.
 
-The first missing inference in the exact Section 4 correspondence is the formal
-transport of all preservation assertions from the coded range functor to the
-recursively interpreted `modelFunctor` along `modelComparison`. The product and
-coproduct coding comparisons are constructed. Section 5 additionally requires
-the exact family indexed by arithmetic structures on ℕ. These are implementation
-obligations, not confirmed defects in the manuscript. Subsequent obligations
-are listed separately above; none is an axiom
-or a claimed completed instance.
+The arithmetic application is now connected through the new categorical chain.
+The finite-proof object uses actual finite LK derivations from Craig's witnessed
+axiomatization; `craig_proof_iff` proves its exact comparison with T-provability.
+No equality with the raw original-T proof-code set or unproved effective proof
+translation is asserted. The classical source retains formal types and actual
+partial functions; `represents_partrec` and `omegaArrow_partrec` prove the
+comparison with ordinary unary partial recursive functions.
+
+The next unfinished construction is the full computational fork category
+`C_rec^J` and its partial-map category, including the comparison with the
+three-point cosheaves. Its frame, Turing morphism, applications and all appendices
+remain in scope. These are implementation obligations; none is an axiom or a
+claimed completed instance.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -87,6 +95,17 @@ functor and syntactic inseparability application. It found and prompted removal
 of a global-join assumption from Proposition 6.4's first clause. The resulting
 proofs use only the permitted axioms. The project verifier also audits these
 exports and tracks the reviewed v5 sources alongside the historical v16 sources.
+Further independent review checked preservation transport, the exact countable
+model family, the strict extension square and the specified finite switch. It
+reported no findings and confirmed the final pair's categorical and finite-search
+dependencies, with only the permitted axioms.
+Independent review of the classical and arithmetic modules also reported no
+findings. It checked the exact τ-diagonal formulas, both numeral inclusions,
+proof conclusion range, consistency hypotheses and recursive-set translation.
+Transitive inspection confirmed Theorem 6.3 and Corollary 6.7 and excluded the
+older representation-based arithmetic proofs from the new final theorem.
+The full repository verifier passed with 573 configured transitive axiom checks,
+the pinned dependencies and the recorded source hashes.
 
 ---
 

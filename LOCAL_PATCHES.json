@@ -100,5 +100,11 @@
     "source_git_blob": "060eb33685e6ef94bbbc8ba582256519fa6d5fe0",
     "patched_git_blob": "367bcd3716ff73c92d22a0c00d7428396953146a",
     "reason": "Author-requested editorial revision: remove development narration, redundant disclaimers, and stale toolchain references. Lean declarations and proofs are unchanged."
+  },
+  {
+    "path": "Lean/FailureOfComposition/SigmaOneSearch.lean",
+    "source_git_blob": "d10e79a55f5a3ef24dc3c7e25aea8a3a28261760",
+    "patched_git_blob": "db465717b47183c047619b1ed1067cb1edee3473",
+    "reason": "Expose four proved search-correctness lemmas for the manuscript's finite two-test switch. Only private visibility is removed; all statements and proof bodies are unchanged."
   }
 ]

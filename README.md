@@ -3,9 +3,12 @@
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).
 The abstract categorical chain through Corollary 6.7, its combined theorem,
-and a syntactic inseparability application are proved. The full-paper
-formalization, including the arithmetic application and the remaining
-three-point and appendix constructions, is unfinished.
+and the syntactic application through the exact faithful model family and
+specified finite two-test switch are proved. The arithmetic application now
+derives recursive inseparability and incompleteness through that categorical
+chain, with explicit sentence/proof objects and both substitution inclusions.
+The full-paper formalization, including the three-point construction and
+appendices, is unfinished.
 [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) tracks all 24 numbered results,
 their Lean declarations, and the remaining obligations. Run
 `python3 scripts/verify.py` to build the project and audit its proof dependencies.
