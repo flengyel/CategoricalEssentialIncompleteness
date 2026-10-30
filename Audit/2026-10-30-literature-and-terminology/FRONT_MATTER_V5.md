@@ -49,11 +49,13 @@ No first-existence claim is made for S.
 - The prose review used Knuth–Larrabee–Roberts, *Mathematical Writing*,
   Section 1, particularly motivation, definition order, and attribution.
 
-This revision changes introductory prose, two explanatory passages in
-Section 2, the primed-system discussion in Section 3, and the bibliography.
-The theorem, proposition, lemma, corollary, and proof environments,
-displayed mathematics, and labels are unchanged from Version 4.
-The focused checks do not constitute a new audit of all proofs.
+The introduction revision, committed at 422f37f307a61b5e09ace13f44a8b87a239cc594,
+changed introductory prose, two explanatory passages in Section 2, the
+primed-system discussion in Section 3, and the bibliography. At that commit
+the theorem and proof environments, displayed mathematics, and labels were
+unchanged from Version 4. The subsequent categorical-notation revision is
+recorded in [CATEGORICAL_NOTATION_V5.md](CATEGORICAL_NOTATION_V5.md).
+These focused checks do not constitute a new audit of all proofs.
 
 The exact delivered source was compiled with latexmk. The 28-page PDF
 has no compilation warnings or overfull/underfull boxes. The affected

@@ -47,8 +47,8 @@ A further application uses cosheaves on the three-point space obtained
 by gluing two Sierpi\'nski spaces along their open singleton. We construct
 a recursion category not restriction-equivalent to the classical one,
 and a consistent propositional theory with no complete consistent
-extension represented by a computably enumerable subdiagram of its
-formula diagram.
+extension represented by a restriction idempotent on its object of
+formulas.
 \end{abstract}
 
 \section{Introduction}
@@ -112,8 +112,9 @@ every consistent c.e.\ extension is incomplete.
 
 For a nonnumerical example, we use the three-point space obtained by
 gluing two copies of the Sierpi\'nski space along their common open
-singleton. Its set-valued cosheaves correspond to diagrams of shape
-$1\leftarrow0\to2$. Using numerical presentations of these diagrams,
+singleton. Its category of set-valued cosheaves is equivalent to
+$\mathbf{Set}^{J}$, where $J=(1\leftarrow0\to2)$. Using functors
+with computably enumerable numerical presentations,
 we construct a recursion category not equivalent as a restriction
 category to the classical one. In its restriction splitting we construct
 a consistent propositional theory and use the inseparability theorem
@@ -981,16 +982,17 @@ We construct a recursion category $\mathscr R_X$ whose restriction
 splitting contains a consistent propositional theory all of whose
 consistent extensions represented by restriction idempotents are
 incomplete. The construction
-starts with a category $\mathcal E$ of diagrams of numerical sets.
+starts with a functor category $\mathcal E$, defined below.
 After forming its partial-map category $\mathcal A$, we specify the
 full subcategory $\mathscr R_X$ and construct its Turing morphism.
-The shape of the diagrams is determined by cosheaves on the following
+This functor category arises from cosheaves on the following
 three-point space.
 
 For a topological space $X$, let $\mathcal O(X)$ be the category
 of open sets and inclusions. A \emph{set-valued cosheaf} is a
 covariant functor $C:\mathcal O(X)\to\mathbf{Set}$ for which
 every open cover $(O_\lambda)_\lambda$ of $O$ gives a coequalizer
+\cite[Definition 2.6]{CurryCosheaves}
 \[
  \coprod_{\lambda,\mu} C(O_\lambda\cap O_\mu)
  \rightrightarrows \coprod_\lambda C(O_\lambda)
@@ -1006,8 +1008,9 @@ $\varnothing,\{c\},\{a,c\},\{b,c\},X$.
 The open subspaces $\{a,c\}$ and $\{b,c\}$ are Sierpi\'nski spaces
 with common open singleton $\{c\}$. Thus $X$ is obtained by gluing
 two copies of the Sierpi\'nski space along that singleton.
-Its set-valued cosheaves are equivalent to covariant diagrams of shape
-$J=(1\leftarrow0\to2)$: the three components are the values at
+Its category of set-valued cosheaves is equivalent to
+$\mathbf{Set}^{J}$, where $J=(1\leftarrow0\to2)$: the three
+components of a functor are the values at
 $\{c\},\{a,c\},\{b,c\}$, and the value at $X$ is their pushout
 (Proposition~\ref{prop:fork-cosheaves}).
 Let $\mathcal C_{\mathrm{rec}}$ have computably enumerable subsets
@@ -1017,15 +1020,16 @@ element of $A$, with values there in $B$. Equality of arrows is
 equality of their functions on $A$.
 Put $\mathcal E=\mathcal C_{\mathrm{rec}}^J$.
 An object is a covariant functor $Y:J\to\mathcal C_{\mathrm{rec}}$,
-equivalently two arrows $r_i^Y:Y_0\to Y_i$, for $i=1,2$.
+given by the objects $Y_j=Y(j)$, for $j=0,1,2$, and the
+morphisms $r_i^Y=Y(0\to i):Y_0\to Y_i$, for $i=1,2$.
 A morphism $f:Y\to Z$ is a natural transformation: its components
 are arrows $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
 $r_i^Zf_0=f_i r_i^Y$.
-A \emph{c.e.\ subdiagram} $D\subseteq Y$ consists of c.e.\ subsets
+A \emph{c.e.\ subfunctor} $D\subseteq Y$ consists of c.e.\ subsets
 $D_j\subseteq Y_j$ such that $r_i^Y(D_0)\subseteq D_i$.
 Forgetting the numerical presentations gives a functor
 $\mathcal E\to\mathbf{Set}^J$; the cosheaf equivalence above assigns
-a set-valued cosheaf to each such diagram and a natural transformation
+a set-valued cosheaf to each such functor and a natural transformation
 to each morphism of $\mathcal E$.
 Define the partial category
 \[
@@ -1035,40 +1039,58 @@ Its arrows $Y\rightharpoonup Z$ are isomorphism classes of spans
 $Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
 uses pullback. Monomorphisms are componentwise injections.
 Thus a partial arrow is equivalently a computably enumerable
-subdiagram $D\subseteq Y$ with arrows $D_j\to Z_j$ of
-$\mathcal C_{\mathrm{rec}}$ commuting with the transitions. Its
+subfunctor $D\subseteq Y$ together with a natural transformation
+$D\to Z$. Its
 restriction is the partial identity on $D$, and its range is the
-partial identity on the subdiagram of component images.
+partial identity on the subfunctor of component images.
 Proposition~\ref{prop:fork-structure} proves these assertions and
 the structural properties used below.
 
-The diagram used for universal computation is
+Define an object $V:J\to\mathcal C_{\mathrm{rec}}$ of $\mathcal E$
+by the following objects $V_j=V(j)$ and morphisms
+$r_i^V=V(0\to i)$:
 \begin{equation}\label{eq:universal-fork}
- V_0=\N^4,\qquad V_1=V_2=\N^2,\qquad
- r_1(k,z,a,b)=(k,a),\quad r_2(k,z,a,b)=(k,b).
+ \begin{gathered}
+ V_0=\N^4,\qquad V_1=V_2=\N^2,\\
+ r_1^V:V_0\to V_1,\qquad r_1^V(k,z,a,b)=(k,a),\\
+ r_2^V:V_0\to V_2,\qquad r_2^V(k,z,a,b)=(k,b).
+ \end{gathered}
 \end{equation}
-Every object $Y$ of $\mathcal E$ admits a total map $m:Y\to V$ in
-$\mathcal A$ with a partial
-inverse $r:V\rightharpoonup Y$ such that $rm=1_Y$ and
-$mr$ is a restriction idempotent. In this sense $V$ is a
-\emph{universal object}.
-Write $V^\#$ for the diagram of nonempty finite words in its
-components, with transitions acting letter by letter.
+We regard $V$ also as an object of $\mathcal A$, whose objects
+are those of $\mathcal E$. Let $V^\#$ be the object of
+$\mathcal E$ whose component $(V^\#)_j$ consists of nonempty
+finite words in $V_j$. Its morphism $(V^\#)(0\to i)$ applies
+$r_i^V$ letter by letter, for $i=1,2$.
 The chosen \emph{frames} are isomorphisms in $\mathcal E$
 $V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
 Let $\mathscr R_X$ denote the full subcategory of $\mathcal A$
-on the formal objects generated by $V$ using those operations.
-It is an isotypical recursion category, and its restriction
-splitting is equivalent to $\mathcal A$.
-Lemmas~\ref{lem:fork-dominance} and~\ref{lem:fork-frames} give the
-embedding and frames explicitly. Theorem~\ref{thm:fork-turing}
-constructs the Turing morphism, and
-Proposition~\ref{prop:fork-recursion} proves the splitting equivalence.
+on the formal objects generated by $V$ under binary restriction
+products, binary coproducts, and nonempty-word formation.
+The frames, constructed in Lemma~\ref{lem:fork-frames}, make
+$\mathscr R_X$ isotypical.
+
+Theorem~\ref{thm:fork-turing} constructs a Turing morphism
+$\tau:V\times V\rightharpoonup V$ in $\mathcal A$.
+For every object $Y$ of $\mathcal A$ and every arrow
+$F:Y\times V\rightharpoonup V$ in $\mathcal A$, there is a
+total arrow $c:Y\to V$ such that $\tau(c\times1_V)=F$.
+By fullness this property holds in $\mathscr R_X$ when
+$Y$ belongs to $\mathscr R_X$. Together with the inherited
+prodominical structure, it makes $\mathscr R_X$ a recursion category.
+
+Every object $Y$ of $\mathcal E$ admits a total map $m:Y\to V$ in
+$\mathcal A$ with a partial inverse $r:V\rightharpoonup Y$
+such that $rm=1_Y$ and $mr=\bar r$
+(Lemma~\ref{lem:fork-dominance}). In this sense $V$ is a
+\emph{universal object} of $\mathcal A$.
+These embeddings give the equivalence
+$\operatorname{Split}(\mathscr R_X)\simeq\mathcal A$
+proved in Proposition~\ref{prop:fork-recursion}.
 
 \subsection{Local connectedness and lifting}
 
-The subdiagram generated by a central element and its two endpoint
-images is finite and connected. Singleton subdiagrams at either endpoint
+The subfunctor generated by a central element and its two endpoint
+images is finite and connected. Singleton subfunctors at either endpoint
 are connected as well. Their partial identities are restriction
 idempotents in $\mathcal A$. They detect the definedness and value
 of every component of a partial arrow, so $\mathcal A$ is locally
@@ -1213,7 +1235,7 @@ functions into $\Pfn$ supplies the same range functor and lifts.
 
 We construct a classical presentation from the disjoint restriction idempotents $a,b$.
 Define the covariant polynomial
-$P:\mathcal E\to\mathcal E$ on the total diagram category by
+$P:\mathcal E\to\mathcal E$ by
 $P(Z)=V+Z+(Z\times Z)$ and
 $P(f)=1_V+f+(f\times f)$ for total arrows $f$.
 Its initial algebra $\iota:P(S)\to S$ is constructed from finite
@@ -1240,19 +1262,19 @@ from $\alpha$ and $\alpha\Rightarrow\beta$.
 The additional atomic axioms are indexed by the split objects
 of $a$ positively and $b$ negatively.
 Theorem~\ref{thm:fork-proof-presentation} constructs this syntax and
-proof object, proves that the split subdiagram of $t_0$ is the least
-subdiagram closed under the rules and containing the axioms, and proves
+proof object, proves that the split subfunctor of $t_0$ is the least
+subfunctor closed under the rules and containing the axioms, and proves
 consistency. In particular, its one-node proofs give
 \begin{equation}\label{eq:atomic-inequalities}
  a\le\theta^*t_0,\qquad
  b\le\theta^*\nu^*t_0,\qquad t_0\,\nu^*t_0=0.
 \end{equation}
 A \emph{theory extending $t_0$} is a restriction idempotent $t\ge t_0$
-on $S$ in $\mathcal A$ whose split subdiagram is closed under those
+on $S$ in $\mathcal A$ whose split subfunctor is closed under those
 logical rules.
 It is consistent when $t\,\nu^*t=0$, and complete when
-$t\vee\nu^*t=1_S$. The split subdiagram of $\nu^*t$ consists of the formulas whose
-negations belong to the split subdiagram of $t$.
+$t\vee\nu^*t=1_S$. The split subfunctor of $\nu^*t$ consists of the formulas whose
+negations belong to the split subfunctor of $t$.
 
 \begin{theorem}\label{thm:cosheaf-observation}
 Fix $i\in\{1,2\}$. For every consistent theory $t$ extending
@@ -1311,7 +1333,7 @@ $\mathscr R_X$ made in Section~\ref{sec:cosheaves}. In particular,
 we construct the frames and Turing morphism that make
 $\mathscr R_X$ a recursion category.
 
-\subsection{Cosheaves and numerical diagrams}
+\subsection{Cosheaves and functor categories}
 
 Write $D=\{c\}$, $L=\{a,c\}$, and $R=\{b,c\}$ for the nonempty
 proper opens of $X$. Morphisms of the set-valued cosheaves defined in
@@ -1320,8 +1342,9 @@ Section~\ref{sec:cosheaves} are natural transformations.
 \begin{proposition}\label{prop:fork-cosheaves}
 Restriction to $D,L,R$ defines an equivalence
 $\operatorname{CoSh}(X,\mathbf{Set})\simeq\mathbf{Set}^{J}$,
-where $J=(1\leftarrow0\to2)$. Its inverse assigns to a diagram
-$A\xleftarrow{r}C\xrightarrow{s}B$ the cosheaf whose values at
+where $J=(1\leftarrow0\to2)$. An object of $\mathbf{Set}^{J}$
+consists of sets $C,A,B$ and functions $r:C\to A$, $s:C\to B$.
+The inverse assigns to this functor the cosheaf whose values at
 $D,L,R,X$ are respectively $C,A,B,A\amalg_C B$.
 \end{proposition}
 \begin{proof}
@@ -1337,7 +1360,7 @@ A\arrow[r]&A\amalg_C B.
 \]
 Any other members of a cover factor through these maximal members,
 so their identifications are already imposed by this pushout.
-A commuting map of diagrams induces a unique map of pushouts.
+A natural transformation induces a unique map of pushouts.
 This defines the inverse functor on morphisms; the same universal
 property gives both natural isomorphisms required for an equivalence.
 \end{proof}
@@ -1350,18 +1373,19 @@ since finite paths in its c.e.\ edge relation can be enumerated.
 A morphism of $\mathcal E$ acts on representatives and respects the
 relation, and hence induces the map at $X$.
 
-Products and subobjects are taken in the diagram category. In
+Products and subobjects are taken in $\mathcal E$. In
 particular, the global value of the product of $Y$ and $Z$ is
 \[
  (Y_1\times Z_1)\amalg_{Y_0\times Z_0}(Y_2\times Z_2).
 \]
 It need not be the product of the two global values. For example,
-the diagram $H=(1\leftarrow0\to1)$ satisfies $H\times H\cong H$,
+the object $H=(1\leftarrow0\to1)$ of $\mathcal E$ satisfies
+$H\times H\cong H$,
 whose global value has two elements, whereas the Cartesian square
 of that global value has four. Likewise $H\to(1\leftarrow1\to1)$ is a monomorphism
-of diagrams although its global map is the function $2\to1$.
+in $\mathcal E$ although its value at $X$ is the function $2\to1$.
 Here $0$ and $1$ denote empty and singleton carriers. Thus the
-subdiagrams used as partial-map domains are categorical subobjects
+subfunctors used as partial-map domains are categorical subobjects
 of the cosheaves, not necessarily subsets at every open.
 
 A \emph{regular epimorphism} is a coequalizer of a pair of arrows.
@@ -1413,12 +1437,13 @@ have c.e.\ tuple carriers by the finite-limit construction.
 This proves regularity and pullback stability of the image
 factorizations in the numerical category.
 
-Limits and tagged finite coproducts of diagrams are formed
+Limits and tagged finite coproducts in $\mathcal E$ are formed
 componentwise. Their universal maps are natural because their
 components are uniquely determined by the corresponding numerical
-universal properties. Images of a diagram map form a subdiagram:
-the transition of an image element is an image element by naturality.
-For a componentwise surjection $q:Y\to Z$, a diagram map
+universal properties. For a natural transformation $f:Y\to Z$,
+the equations $r_i^Zf_0=f_i r_i^Y$ show that its component images
+form a subfunctor of $Z$.
+For a componentwise surjection $q:Y\to Z$, a natural transformation
 $u:Y\to W$ coequalizing its kernel pair descends componentwise.
 If $v_jq_j=u_j$ are the descended maps, then
 \[
@@ -1426,11 +1451,11 @@ If $v_jq_j=u_j$ are the descended maps, then
  =v_iq_i r_i^Y=v_i r_i^Zq_0.
 \]
 Surjectivity of $q_0$ gives $r_i^Wv_0=v_i r_i^Z$, so the
-descent is a diagram map. These image factorizations are stable
+descent is a natural transformation. These image factorizations are stable
 under pullback because the corresponding assertion holds in
 each component. They give regularity of $\mathcal E$.
 
-The three finite diagrams
+The three objects of $\mathcal E$
 \[
  H_0=(1\leftarrow1\to1),\qquad
  H_1=(1\leftarrow0\to0),\qquad
@@ -1439,14 +1464,14 @@ The three finite diagrams
 detect component elements: total maps $H_j\to Y$ are in bijection
 with elements of $Y_j$. These maps are recursive because every
 nonempty component of their source $H_j$ is a singleton.
-If a diagram map is monic,
+If a morphism of $\mathcal E$ is monic,
 testing it on these maps proves that each component is injective.
 The converse follows by cancelling those component injections.
 An injective arrow of $\mathcal C_{\mathrm{rec}}$ has a partial recursive inverse
 on its c.e.\ image, obtained by preimage search.
 
 Finally, for a map $Y\to A+B$, the inverse images of the two
-tags form c.e.\ subdiagrams $Y^A,Y^B$ and give an isomorphism
+tags form c.e.\ subfunctors $Y^A,Y^B$ and give an isomorphism
 $Y^A+Y^B\cong Y$. Maps over $A+B$ restrict uniquely to maps
 over $A$ and $B$, and two such maps combine uniquely by tagged
 copairing. This proves the slice equivalence expressing extensivity.
@@ -1461,29 +1486,29 @@ with binary restriction products, restriction coproducts, weak
 choice, and ranges satisfying the agreement law. Its range idempotents
 are the partial identities on the regular images of the value maps.
 Joins of restriction idempotents are partial identities on finite
-unions of their subdiagrams, and inverse image along every partial
+unions of their subfunctors, and inverse image along every partial
 arrow preserves binary meets and finite joins. Ranges commute with products and
 are stable under pullback along total arrows.
 \end{proposition}
 \begin{proof}
 Replace the monic leg of a representing span by its image
 inclusion, using its computable inverse on that image. A partial
-arrow $f:Y\rightharpoonup Z$ is then a c.e.\ subdiagram
-$D_f\subseteq Y$ and a total diagram map $D_f\to Z$.
+arrow $f:Y\rightharpoonup Z$ is then a c.e.\ subfunctor
+$D_f\subseteq Y$ and a natural transformation $D_f\to Z$.
 If $g:Z\rightharpoonup W$ has domain $D_g$, the domain of $gf$
 at component $j$ is
 \[
  \{y\in(D_f)_j:f_j(y)\in(D_g)_j\},
 \]
 and its value there is $g_j(f_j(y))$. These carriers are c.e.\
-and form a subdiagram by naturality. This is precisely the
+and form a subfunctor by naturality. This is precisely the
 pullback composition of the representing spans. Associativity
 and identities follow from these domain and value formulas.
 
 The restriction $\bar f$ is the partial identity on $D_f$.
 The restriction axioms reduce componentwise to the corresponding
 identities of partial functions. Every restriction idempotent
-splits through its domain subdiagram: the inclusion is total,
+splits through its domain subfunctor: the inclusion is total,
 and its partial inverse is the identity with that domain.
 Empty domains give restriction zeros. The restriction product
 uses componentwise Cartesian products; a pairing is defined on
@@ -1494,9 +1519,9 @@ use tagged carriers; partial copairing uses the tagged union
 of the two domains. A product with an empty domain is empty,
 which proves the prodominical zero law.
 
-The component images $f_j((D_f)_j)$ form a c.e.\ subdiagram
+The component images $f_j((D_f)_j)$ form a c.e.\ subfunctor
 $I_f\subseteq Z$. Its partial identity receives $f$. If a restriction
-idempotent receives $f$, its subdiagram contains each component image,
+idempotent receives $f$, its subfunctor contains each component image,
 and hence contains $I_f$.
 This proves the range property and agreement with the regular
 image of $D_f\to Z$. If $gf=hf$, choose a preimage of each
@@ -1511,10 +1536,10 @@ $u_j^{-1}(f_j((D_f)_j))$. Thus its range is $u^*\ran(f)$,
 which is the asserted pullback law. The image of a product
 of two value maps is the product of their images, giving
 $\ran(f\times g)=\ran(f)\times\ran(g)$.
-Intersections and finite unions of domain subdiagrams are again
-c.e.\ subdiagrams; their partial identities give the meets and joins
+Intersections and finite unions of domain subfunctors are again
+c.e.\ subfunctors; their partial identities give the meets and joins
 of the corresponding restriction idempotents. For a restriction idempotent
-$e$ on $Z$ with domain subdiagram $D_e$, the inverse image $f^*e$
+$e$ on $Z$ with domain subfunctor $D_e$, the inverse image $f^*e$
 has component carrier
 \[
  \{y\in(D_f)_j:f_j(y)\in(D_e)_j\}.
@@ -1523,13 +1548,13 @@ This formula proves preservation of binary meets and finite joins,
 including the empty join.
 
 Suppose that $p:Y\rightharpoonup Z$ is a partial monomorphism
-and let $D_p$ be its domain subdiagram. If two elements of $(D_p)_j$
+and let $D_p$ be its domain subfunctor. If two elements of $(D_p)_j$
 have the same image, their corresponding total maps
 $H_j\to D_p\to Y$ have equal composites with $p$.
 Partial monicity makes the original maps equal, since their
 images lie in $D_p$. Thus every value component is injective.
 Preimage search gives recursive inverse components on $I_p$;
-they commute with transitions by injectivity and naturality of $p$.
+they form a natural transformation by injectivity and naturality of $p$.
 The resulting partial arrow $s:Z\rightharpoonup Y$ has domain
 $I_p$ and satisfies $ps=\bar s$ and $psp=p$.
 This proves weak choice.
@@ -1539,27 +1564,28 @@ This proves weak choice.
 The category $\mathcal A$ is locally connected.
 \end{proposition}
 \begin{proof}
-For $y\in Y_0$, take the finite subdiagram of $Y$ with central
+For $y\in Y_0$, take the finite subfunctor of $Y$ with central
 carrier $\{y\}$ and endpoint carriers
 $\{r_1^Yy\}$ and $\{r_2^Yy\}$. It is connected: in any partition
-by two disjoint domain subdiagrams, the part containing its central
+by two disjoint domain subfunctors, the part containing its central
 element must contain both endpoints and therefore the whole
-subdiagram. A singleton at either endpoint, with the other
+subfunctor. A singleton at either endpoint, with the other
 components empty, is connected as well.
 
 Suppose that partial arrows $f,g:Y\rightharpoonup Z$ agree
 after composition with every connected restriction idempotent.
 Restriction to the
-finite subdiagram generated by $y\in Y_0$ detects whether
+finite subfunctor generated by $y\in Y_0$ detects whether
 $f_0$ and $g_0$ are defined at $y$, and compares their values
-when defined. Partial identities on endpoint singleton subdiagrams do
+when defined. Partial identities on endpoint singleton subfunctors do
 the same for $f_1,g_1$ and $f_2,g_2$. Thus all three domains and all three
 value maps agree, proving $f=g$.
 \end{proof}
 
 \subsection{A universal object and its frames}
 
-Let $V$ be the diagram in \eqref{eq:universal-fork}.
+Let $V$ be the object of $\mathcal A$ defined in
+\eqref{eq:universal-fork}.
 A \emph{total restriction embedding} $m:Y\to V$ is a total
 arrow with a partial inverse $m^\dagger:V\rightharpoonup Y$
 satisfying $m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
@@ -1576,16 +1602,17 @@ coding of the ambient finite power. Define
  m_i(y_i)=(0,c_i(y_i))\quad(i=1,2),\qquad
  m_0(y)=(0,c_0(y),c_1(r_1^Yy),c_2(r_2^Yy)).
 \]
-These maps are total, injective, and commute with both transitions.
-Their image is a c.e.\ subdiagram. The inverses on that image
+These maps are total and injective, and satisfy
+$r_i^Vm_0=m_i r_i^Y$ for $i=1,2$.
+Their image is a c.e.\ subfunctor. The inverses on that image
 are natural and give the required partial inverse.
 \end{proof}
 
-For a diagram $Y$, let $Y^\#$ have at component $j$ the
-nonempty finite words over $Y_j$; its transitions apply those
-of $Y$ to each letter. Finite words over a c.e.\ carrier form
-a c.e.\ carrier. A total diagram map acts on words letterwise.
-A partial diagram map acts on precisely the words all of whose
+For an object $Y$ of $\mathcal E$, let $Y^\#$ have at component $j$ the
+nonempty finite words over $Y_j$; the morphism $Y^\#(0\to i)$
+applies $Y(0\to i)$ to each letter. Finite words over a c.e.\ carrier form
+a c.e.\ carrier. A morphism of $\mathcal E$ acts on words letterwise.
+A partial arrow in $\mathcal A$ acts on precisely the words all of whose
 letters belong to its domain, also letterwise. These formulas
 preserve identities and composition and define a covariant functor
 $(-)^\#:\mathcal A\to\mathcal A$. Concatenation
@@ -1610,7 +1637,7 @@ $V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
 For the product isomorphism, decode each of $k,z,a,b$ into a
 pair using $\pi^{-1}$. Send $(k,z,a,b)$ to the resulting pair
 of four-tuples. At either endpoint, decode $(k,x)$ into the
-resulting pair of two-tuples. The transition equations hold
+resulting pair of two-tuples. The naturality equations hold
 coordinatewise, and coordinatewise pairing gives the inverse.
 
 For the coproduct isomorphism, write $k=2q+t$ with
@@ -1627,16 +1654,16 @@ and send $(k,z,a,b)$ to
 \]
 At an endpoint, decode $k$ in the same way and decode $x$
 by $\gamma_n^{-1}$, obtaining $((k_j,x_j))_{j=1}^n$.
-These maps commute with transitions. Recovering the word of
+These maps form a natural transformation. Recovering the word of
 first coordinates and applying the tuple encodings to the
 remaining coordinate words gives total recursive inverses.
 \end{proof}
 
 \subsection{A Turing morphism}\label{app:fork-turing}
 
-The two endpoint programs of a central program will compute its
-endpoint values. A central computation is accepted only when
-these programs agree with its proposed output.
+We construct a Turing morphism $\tau:V\times V\rightharpoonup V$
+in $\mathcal A$ by giving a monomorphism $T\hookrightarrow V\times V$
+and a natural transformation $T\to V$.
 
 Fix recursive bijections
 $\operatorname{encode}_n:\N^n\to\N$, with recursive inverses
@@ -1656,12 +1683,12 @@ including simultaneous undefinedness. The case $m=0$ is a
 constant program index. This is the usual $s$-$m$-$n$ theorem.
 
 \begin{theorem}\label{thm:fork-turing}
-The diagram $V$ in
+The object $V$ of
 $\mathcal A=\operatorname{Par}(\mathcal C_{\mathrm{rec}}^J,
-\operatorname{Mono})$ admits a partial arrow
-$\tau:V\times V\rightharpoonup V$ with the following property.
-For every diagram $Y$ and every partial arrow
-$F:Y\times V\rightharpoonup V$, there is a total arrow
+\operatorname{Mono})$ admits a Turing morphism
+$\tau:V\times V\rightharpoonup V$: for every object $Y$ of
+$\mathcal A$ and every arrow $F:Y\times V\rightharpoonup V$
+in $\mathcal A$, there is a total arrow
 $c:Y\to V$ such that
 \[
  \tau(c\times1_V)=F.
@@ -1712,7 +1739,7 @@ If $(P,x)\in T_0$, then
 \[
  (r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in T_i.
 \]
-Thus $T=(T_0,T_1,T_2)$ is a c.e.\ subdiagram of $V\times V$.
+Thus $T=(T_0,T_1,T_2)$ is a c.e.\ subfunctor of $V\times V$.
 Equation~\eqref{eq:fork-turing-check} gives
 \[
  r_i^V\tau_0(P,x)
@@ -1724,7 +1751,7 @@ Together with the inclusion $T\hookrightarrow V\times V$,
 they define the required partial arrow $\tau$.
 
 Now let $F:Y\times V\rightharpoonup V$ be any partial arrow.
-Choose its representation by a c.e.\ subdiagram
+Choose its representation by a c.e.\ subfunctor
 $D\subseteq Y\times V$ and value maps
 $F_j:D_j\to V_j$ in $\mathcal C_{\mathrm{rec}}$, where $j=0,1,2$.
 Put $d_0=4$ and $d_1=d_2=2$, so that $V_j=\N^{d_j}$.
@@ -1757,7 +1784,8 @@ maps $r_i^Y$ are total on $Y_0$. Moreover,
 \[
  r_i^Vc_0(y)=(0,s_i(r_i^Yy))=c_i(r_i^Yy),
 \]
-so $c$ is a total natural map of diagrams.
+so $c$ is a natural transformation in $\mathcal E$, hence total in
+$\mathcal A$.
 
 At endpoint $i$, equations
 \eqref{eq:fork-turing-endpoint} and
@@ -1766,7 +1794,7 @@ $\tau_i(c_i(y_i),v_i)$, for $v_i\in V_i$, has domain exactly
 $D_i$ and agrees there with $F_i(y_i,v_i)$.
 For the central component, fix $(y,x)\in Y_0\times V_0$.
 If $(y,x)\in D_0$, its central program returns $F_0(y,x)$.
-Since $D$ is a subdiagram,
+Since $D$ is a subfunctor,
 \[
  (r_i^Yy,r_i^Vx)\in D_i\qquad(i=1,2).
 \]
@@ -1828,7 +1856,7 @@ assignments are inverse on each hom-set, so the functor is
 fully faithful.
 For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
 provides a total restriction embedding $m:Z\to V$.
-The domain subdiagram of $mm^\dagger$ is isomorphic to $Z$,
+The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
 so the functor is essentially surjective.
 \end{proof}
 
@@ -1847,7 +1875,7 @@ faithful and essentially surjective.
 
 \emph{Decidable equality} on $V$ means a total map
 $\epsilon:V\times V\to1+1$ whose inverse image of the first
-summand is the diagonal subdiagram. Here $1$ is the terminal diagram.
+summand is the diagonal subfunctor. Here $1$ is the terminal object of $\mathcal E$.
 
 \begin{proposition}\label{prop:fork-distinction}
 The recursion category $\mathscr R_X$ is not equivalent, as a
@@ -1855,7 +1883,7 @@ restriction category, to the classical numerical recursion category.
 The object $V$ has no decidable equality in $\mathcal E$.
 \end{proposition}
 \begin{proof}
-The terminal diagram is $(1\leftarrow1\to1)$. A subobject
+The terminal object of $\mathcal E$ is the constant functor at a singleton. A subobject
 with empty central component has independently empty or singleton
 endpoint components, giving four subobjects. A subobject with
 singleton central component must contain both endpoints, giving
@@ -1867,8 +1895,9 @@ total categories $\mathcal E$ and $\mathcal C_{\mathrm{rec}}$.
 Equivalences preserve terminal objects and their subobject orders,
 so this is impossible.
 
-Suppose that $\epsilon$ decides equality on $V$. The diagram $1+1$
-is constant, with identity transitions. Choose distinct central
+Suppose that $\epsilon$ decides equality on $V$. The functor $1+1$
+is constant and sends both nonidentity morphisms of $J$ to
+identity functions. Choose distinct central
 tuples $u,v$ differing only in their $z$ coordinate. Their first
 endpoint images coincide. Hence $\epsilon_1(r_1u,r_1v)$ is the
 first truth value. Naturality forces $\epsilon_0(u,v)$ to be
@@ -1883,7 +1912,8 @@ Let $\mathcal E=\mathcal C_{\mathrm{rec}}^{J}$, where
 $J=(1\leftarrow0\to2)$, and let
 $\mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono})$.
 The components of the atom object $V$ are $V_0=\N^4$ and
-$V_1=V_2=\N^2$, with transitions $r_i:V_0\to V_i$.
+$V_1=V_2=\N^2$; write $r_i=r_i^V=V(0\to i):V_0\to V_i$
+for $i=1,2$.
 We construct syntax and finite proofs in $\mathcal E$; their
 conclusion image will determine a restriction idempotent in $\mathcal A$.
 
@@ -1934,7 +1964,7 @@ of the output in $Z_j$. The evaluation is partial recursive on
 numerical codes and total on $S_j$, as required for a morphism of
 $\mathcal C_{\mathrm{rec}}$.
 
-Write $z_i:Z_0\to Z_i$ for a transition of $Z$. Naturality of
+Write $z_i=Z(0\to i):Z_0\to Z_i$ for $i=1,2$. Naturality of
 $\alpha$ says that applying $z_i$ after one constructor operation
 is the same as first applying $r_i$ to an atom label, or $z_i$
 to each recursive argument, and then using the corresponding
@@ -1949,7 +1979,7 @@ same finite induction, proving uniqueness.
 \subsection{The proof object and its range}
 
 Let $a,b$ be disjoint restriction idempotents on $V$ in $\mathcal A$.
-Write $A,B\hookrightarrow V$ for their split subdiagrams, with
+Write $A,B\hookrightarrow V$ for their split subfunctors, with
 c.e.\ component subsets $A_j,B_j\subseteq V_j$. Disjointness
 means $A_j\cap B_j=\varnothing$ at each component.
 For formulas $\alpha,\beta,\gamma\in S_j$, put
@@ -2008,7 +2038,7 @@ $c:\mathrm{Prf}\to S$.
 \begin{theorem}\label{thm:fork-proof-presentation}
 For disjoint restriction idempotents $a,b$ on $V$ in $\mathcal A$, the syntax and
 proof objects above define a restriction idempotent $t_0=\ran(c)$ on $S$ in
-$\mathcal A$. Its split subdiagram is the least c.e.\ subdiagram
+$\mathcal A$. Its split subfunctor is the least c.e.\ subfunctor
 containing all instances of the three logical schemes and the
 positive and negative atomic axioms, and closed under modus ponens.
 Moreover,
@@ -2025,16 +2055,16 @@ Let $T_j=c_j(\mathrm{Prf}_j)\subseteq S_j$.
 These sets are c.e.\ images of c.e.\ carriers under
 arrows of $\mathcal C_{\mathrm{rec}}$. The conclusion equation gives
 $\sigma_i(T_0)\subseteq T_i$, so they form a c.e.\
-subdiagram $T\hookrightarrow S$. Its partial identity is
-$\ran(c)$: it receives $c$, and the subdiagram of every restriction
+subfunctor $T\hookrightarrow S$. Its partial identity is
+$\ran(c)$: it receives $c$, and the subfunctor of every restriction
 idempotent receiving $c$ contains its component images.
 
 Each leaf supplies a proof of its axiom instance. Given proofs
 of $\alpha$ and $\alpha\Rightarrow_j\beta$, adjoining a
 modus-ponens root supplies a proof of $\beta$. Thus $T$ is
-rule-closed. If another c.e.\ subdiagram contains all
+rule-closed. If another c.e.\ subfunctor contains all
 the axiom instances and is closed under modus ponens, induction
-on each proof puts its conclusion in that subdiagram. This
+on each proof puts its conclusion in that subfunctor. This
 proves leastness. The one-node positive and negative proof maps
 $A\to\mathrm{Prf}$ and $B\to\mathrm{Prf}$ are total and natural.
 Their composites with $c$ are $\theta|_A$ and
@@ -2274,6 +2304,11 @@ Categories of partial maps}, Theoret. Comput. Sci. \textbf{270}
 J.~R.~B. Cockett and S.~Lack,
 \emph{Restriction categories III: colimits, partial limits and extensivity},
 Math. Structures Comput. Sci. \textbf{17} (2007), 775--817.
+\bibitem{CurryCosheaves}
+J.~M. Curry, \emph{Dualities between cellular sheaves and cosheaves},
+J. Pure Appl. Algebra \textbf{222} (2018), 966--993.
+\href{https://doi.org/10.1016/j.jpaa.2017.06.001}
+{doi:10.1016/j.jpaa.2017.06.001}.
 \bibitem{DPH}
 R.~A. Di Paola and A.~Heller, \emph{Dominical categories:
 recursion theory without elements}, J. Symbolic Logic

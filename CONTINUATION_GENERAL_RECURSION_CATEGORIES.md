@@ -108,6 +108,14 @@ when comparing the present paper with the author's earlier work; it is
 not evidence of another author's independent discovery of the method.
 The literature comparison records the source and the limits of novelty claims.
 
+The user requires explicit categorical typing: V is a functor J -> C_rec,
+its components are V(j), and its morphisms are V(0 -> i). Use “morphism,”
+not “transition” or “structure map.” State that E is the functor category,
+A is its partial-map category, and R_X is the indicated full subcategory.
+Use “functor” and “subfunctor” in the exposition. Curry (2018), Definition
+2.6, is now the cited reference for the cosheaf axiom. Read
+[the categorical notation record](Audit/2026-10-30-literature-and-terminology/CATEGORICAL_NOTATION_V5.md).
+
 The user requires the term **restriction idempotent** for the categorical
 arrow and instructs us not to use **domain** as its synonym. Keep the
 restriction idempotent in the partial category distinct from its split
