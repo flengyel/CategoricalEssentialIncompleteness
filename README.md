@@ -87,7 +87,7 @@ Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
 The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf)
-([source](manuscript/essential_incompleteness_via_local_connectedness_v5.tex), Version 5, 30 October 2026, 27 pages)
+([source](manuscript/essential_incompleteness_via_local_connectedness_v5.tex), Version 5, 30 October 2026, 28 pages)
 uses a locally connected target to establish recursive inseparability in a
 source recursion category that need not be locally connected, and applies
 the result to essential incompleteness.

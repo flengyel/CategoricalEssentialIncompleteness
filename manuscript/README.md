@@ -137,7 +137,7 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 [Version 5 PDF](essential_incompleteness_via_local_connectedness_v5.pdf)
 ([LaTeX source](essential_incompleteness_via_local_connectedness_v5.tex),
-30 October 2026, 27 pages).
+30 October 2026, 28 pages).
 
 Theorem 6.3 gives inseparable restriction idempotents from a range functor
 into a locally connected target, with a specified section-lifting hypothesis.

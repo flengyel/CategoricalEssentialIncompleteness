@@ -59,37 +59,46 @@ incompleteness \cite[pp.~594--595]{DPH}. We use a locally connected
 target category to prove inseparability of restriction idempotents in
 a source recursion category that need not itself be locally connected.
 
-Rosolini's $P$-categories provide the partial-map framework
-\cite{RosoliniThesis,Rosolini}. Bernardi obtained categorical
-inseparability results from precomplete equivalence relations, including
-PA-provable program equality among his examples
-\cite[pp.~125--128]{Bernardi}. Heller used local connectedness to
-construct recursion categories \cite[Sections 8--9]{Heller}.
-Lengyel extended this existence method using faithful functors
+Local connectedness enters Heller's existence theorem for recursion
+categories \cite[Sections 8--9]{Heller}. Di Paola and Montagna
+exhibited recursion categories that are not locally connected and
+asked how the existence theorem could be extended to them
+\cite{DPM}. Lengyel addressed this question using faithful functors
 preserving restrictions, coproducts, zero maps, and iteration, without
 requiring preservation of the near product \cite{Lengyel2004,Corrections}.
-Theorem~\ref{thm:local-lifting}
-uses a functor preserving restrictions, ranges, zero maps, and binary
-coproducts to construct target sections associated with complementary
-source restriction idempotents. Its lifting hypothesis
-requires these sections to be images of source arrows; a Turing
-morphism then yields an inseparable pair in the source.
+Here the corresponding problem is to establish recursive inseparability
+when the source category is not locally connected.
 
-The principal application is to the syntactic recursion categories
-$S_T$ of Di Paola and Montagna, where $T$ is a consistent theory
-extending Peano arithmetic ($\PA$). Programs
-are identified when $T$ proves a single universally quantified sentence
-asserting equality of their partial graphs \cite{Montagna,DPM}.
-When $T$ is computably enumerable (c.e.), $S_T$ is not locally connected
-\cite[Corollary 4.4]{DPM}. Interpretation in the models of $T$ with
+Theorem~\ref{thm:local-lifting}
+uses a range functor: a functor preserving restrictions, ranges, zero
+maps, and binary coproducts. Local connectedness and weak choice in
+the target, together with the other target hypotheses, supply sections
+associated with complementary source restriction idempotents.
+A section-lifting condition requires these sections to be images of
+source arrows. A Turing morphism in the source then yields an
+inseparable pair. The functor need not preserve restriction products.
+
+The syntactic examples of Montagna and Di Paola--Montagna provide
+the principal application. Montagna's $S$ and its generalizations
+$S_T$ identify programs when the theory $T$ proves a single universally
+quantified sentence asserting equality of their partial graphs;
+$S=S_{\PA}$, where $\PA$ denotes Peano arithmetic
+\cite{Montagna,DPM}. For each consistent computably enumerable
+(c.e.) extension $T$ of $\PA$, $S_T$ is not locally connected
+\cite[Corollary 4.4]{DPM}.
+We do not use Montagna's $S'$ or Di Paola--Montagna's $S'_T$,
+which instead identify programs by equality provable separately at
+each standard input: their proposed composition is not independent
+of representatives for any consistent c.e.\ extension $T$ of $\PA$
+\cite[Corollary 2]{Composition}.
+
+Interpretation of $S_T$ in the models of $T$ with
 carrier $\N$ gives a faithful functor with these preservation properties
 into a product of categories of sets and partial functions. This target
 is locally connected, and
 programs selecting between predicates proved complementary in $T$
 supply the required lifts. The construction commutes with theory
-extension. The related pointwise quotients fail to have well-defined
-composition for consistent c.e.\ extensions of $\PA$
-\cite[Corollary 2]{Composition}.
+extension.
 
 A separate application to the classical recursion category gives two
 disjoint c.e.\ sets that are recursively inseparable: no recursive set
@@ -118,12 +127,31 @@ and~\ref{sec:cosheaves} give the arithmetic and cosheaf applications.
 The appendices provide the nonnumerical construction and a counterexample
 to the inseparability theorem with its lifting hypothesis omitted.
 
+\subsection{Related work}
+
+Di Paola and Heller introduced dominical categories as a setting for
+recursion theory \cite{DPH}. Rosolini's $P$-categories generalized this
+setting \cite{RosoliniThesis,Rosolini}. Heller adopted them and defined
+prodominical categories \cite[Section 5]{Heller}.
+Cockett and Lack introduced restriction categories \cite{CockettLack},
+and Cockett and Hofstra developed the theory of Turing categories
+\cite{CockettHofstra}. We use restriction categories, with binary
+restriction products in the source recursion categories. These products
+give the equivalent $P$-category structure
+\cite[Proposition 4.5]{CockettLackIII}.
+
+Di Paola and Heller proved recursive inseparability in dominical
+recursion categories satisfying the axiom of choice
+\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability
+results from precomplete equivalence relations, including PA-provable
+program equality among his examples \cite[pp.~125--128]{Bernardi}.
+Montagna also obtained effectively inseparable pairs in $S$
+\cite[Remark 3.1]{Montagna}.
+
 \section{Categorical preliminaries}\label{sec:preliminaries}
 
-Rosolini's representation theorem realizes a $P$-category inside a
-category of partial maps whose permitted monic legs belong to a
-specified class of monomorphisms \cite[Theorem 1.2]{Rosolini}.
-We use restriction-category notation for these partial maps.
+We work in restriction categories \cite{CockettLack} and express the
+recursion-category structure using binary restriction products.
 
 \subsection{Partial maps and restriction idempotents}
 
@@ -200,8 +228,9 @@ with
 Products of arrows are obtained by this pairing and the projections.
 The total categorical diagonal is
 $\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
-This is the restriction-category description of the near product
-in a $P$-category \cite{Rosolini,CockettLack}.
+A restriction category has a $P$-category structure if and only if
+it has binary restriction products
+\cite[Proposition 4.5]{CockettLackIII}.
 
 Binary \emph{restriction coproducts} are categorical coproducts with
 total injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$.
@@ -304,9 +333,7 @@ associativity equations follow from the same graph identities.
 The pointwise relation defining the primed systems is different:
 two programs are identified when $T$ proves their partial computations
 equal separately at each standard input. Montagna's $S'$ is the case
-$T=\PA$ of Di Paola and Montagna's $S'_T$. Their claimed
-local-connectedness result includes an arithmetic soundness hypothesis
-\cite[Theorem 4.5, pp.~658--659]{DPM}. However,
+$T=\PA$ of Di Paola and Montagna's $S'_T$ \cite{Montagna,DPM}.
 \emph{Pointwise provable equality and the failure of composition}
 \cite[Corollary 2]{Composition} proves that the proposed composition
 is not independent of representatives for any consistent c.e.\
@@ -2235,10 +2262,18 @@ is not a source arrow. Thus no such upper bound exists.
 \bibitem{Bernardi}
 C.~Bernardi, \emph{Precomplete equivalence relations in dominical
 categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
+\bibitem{CockettHofstra}
+J.~R.~B. Cockett and P.~J.~W. Hofstra,
+\emph{Introduction to Turing categories},
+Ann. Pure Appl. Logic \textbf{156} (2008), 183--209.
 \bibitem{CockettLack}
 J.~R.~B. Cockett and S.~Lack, \emph{Restriction categories. I.
 Categories of partial maps}, Theoret. Comput. Sci. \textbf{270}
 (2002), 223--259.
+\bibitem{CockettLackIII}
+J.~R.~B. Cockett and S.~Lack,
+\emph{Restriction categories III: colimits, partial limits and extensivity},
+Math. Structures Comput. Sci. \textbf{17} (2007), 775--817.
 \bibitem{DPH}
 R.~A. Di Paola and A.~Heller, \emph{Dominical categories:
 recursion theory without elements}, J. Symbolic Logic

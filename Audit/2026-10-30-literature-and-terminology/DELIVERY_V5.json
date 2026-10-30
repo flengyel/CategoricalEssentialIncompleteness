@@ -1,17 +1,17 @@
 {
   "version": 5,
   "date": "2026-10-30",
-  "pages": 27,
+  "pages": 28,
   "files": {
     "tex": {
       "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
-      "bytes": 103162,
-      "sha256": "936d0925fa7d7635f37d4bc1dd4c5cc008778a1ac8b5873fb87484c904f94517"
+      "bytes": 104761,
+      "sha256": "b823093c712b16bc1c568a4239f371f56b3630c77771154084346c3d6117d33c"
     },
     "pdf": {
       "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
-      "bytes": 437711,
-      "sha256": "49ed658580cda96eb433dfdc775d8f261aa2eb455df14e041be3c2ce1b995179"
+      "bytes": 440141,
+      "sha256": "ce9205b003a9a5b59f32431a92eba7b97ce4fbb87e2826a509c5026e53f988e0"
     }
   }
 }

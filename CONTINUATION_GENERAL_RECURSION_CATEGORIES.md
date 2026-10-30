@@ -21,7 +21,7 @@ in flengyel/errata; read their latest committed state before importing further r
   *Inseparable domains and computational extensions*, 5 pages.
 - manuscript/essential_incompleteness_via_local_connectedness_v5.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  Version 5, 30 October 2026, 27 pages.
+  Version 5, 30 October 2026, 28 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
@@ -72,7 +72,7 @@ No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
 
-## Version 5: direct theorem statement and attribution
+## Version 5: introduction, theorem statement, and attribution
 
 The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`
 and `.pdf`, visibly marked Version 5 and dated 30 October 2026.
@@ -86,7 +86,13 @@ connected. The sections lift from target to source; the resulting pair is
 inseparable in the source. Its image in the model-family target is separable.
 The three-point space is the gluing of two Sierpiński spaces along their open
 singleton, not itself the two-point Sierpiński space.
-Read the [Version 4 front-matter review](Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V4.md).
+The introduction follows the motivation in the supplied LOC18Jul06.tex: local
+connectedness, the Di Paola–Montagna examples, and range functors. It explicitly
+excludes S' and S'_T because the proposed composition is not well-defined.
+Related work is a separate subsection. The framework is restriction categories
+with binary restriction products in the source, with the precise P-category
+comparison cited to Cockett–Lack III, Proposition 4.5.
+Read the [Version 5 front-matter review](Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V5.md).
 The Version 3
 [terminology and literature record](Audit/2026-10-30-literature-and-terminology/README.md)
 and [literature comparison](Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md)
