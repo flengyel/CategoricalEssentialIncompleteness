@@ -19,9 +19,9 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/essential_incompleteness_via_local_connectedness_v3.tex and .pdf:
+- manuscript/essential_incompleteness_via_local_connectedness_v4.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
-  Version 3, 30 October 2026, 28 pages.
+  Version 4, 30 October 2026, 27 pages.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
   It also constructs effective endpoint functors from the split three-point
@@ -72,13 +72,21 @@ No new theorem in these notes has been formalized in Lean. The older Lean
 axiom-audit count does not verify these constructions. The latest reviews
 are expressly author-side audits, not independent referee reports.
 
-## Version 3: terminology and literature
+## Version 4: purpose and topology
 
-The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v3.tex`
-and `.pdf`, visibly marked Version 3 and dated 30 October 2026. Read the
+The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v4.tex`
+and `.pdf`, visibly marked Version 4 and dated 30 October 2026.
+The abstract and introduction lead with the use of a locally connected target
+to establish recursive inseparability in a source that need not be locally
+connected. The sections lift from target to source; the resulting pair is
+inseparable in the source. Its image in the model-family target is separable.
+The three-point space is the gluing of two Sierpiński spaces along their open
+singleton, not itself the two-point Sierpiński space.
+Read the [Version 4 front-matter review](Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V4.md).
+The Version 3
 [terminology and literature record](Audit/2026-10-30-literature-and-terminology/README.md)
 and [literature comparison](Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md)
-for this revision's terminology and abstract corrections, removal of irrelevant
+record that revision's terminology and abstract corrections, removal of irrelevant
 disclaimers, and comparison with earlier work. The
 [Version 2 outline and reviews](Audit/2026-10-29-introduction-economy/README.md)
 remain historical records.

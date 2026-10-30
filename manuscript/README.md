@@ -135,9 +135,9 @@ Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
 ## Local connectedness, range functors, and essential incompleteness
 
-[Version 3 PDF](essential_incompleteness_via_local_connectedness_v3.pdf)
-([LaTeX source](essential_incompleteness_via_local_connectedness_v3.tex),
-30 October 2026, 28 pages).
+[Version 4 PDF](essential_incompleteness_via_local_connectedness_v4.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v4.tex),
+30 October 2026, 27 pages).
 
 Theorem 6.3 gives inseparable restriction idempotents from a range functor
 into a locally connected target, with a specified section-lifting hypothesis.
@@ -162,13 +162,16 @@ counterexample specifically to dropping the section-lifting hypothesis.
 
 [Version 3 terminology and literature record](../Audit/2026-10-30-literature-and-terminology/README.md)
 and [literature comparison](../Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md).
-Version 3 corrects the terminology and abstract and removes irrelevant disclaimers.
+The [Version 4 front-matter review](../Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V4.md)
+records the purpose-led abstract and shorter introduction. The three-point
+space is obtained by gluing two Sierpiński spaces along their open singleton.
+Version 3 supplied the terminology and disclaimer corrections.
 The [Version 2 outline and reviews](../Audit/2026-10-29-introduction-economy/README.md)
 remain available as a historical record.
 No Lean sources changed.
 
 ```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v3.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v4.tex
 ```
 
 ## Separate arithmetic-universe comparison

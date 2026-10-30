@@ -86,9 +86,11 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v3.pdf)
-([source](manuscript/essential_incompleteness_via_local_connectedness_v3.tex), Version 3, 30 October 2026, 28 pages)
-derives essential incompleteness from its range-functor lifting theorem.
+The paper [Local connectedness, range functors, and essential incompleteness](manuscript/essential_incompleteness_via_local_connectedness_v4.pdf)
+([source](manuscript/essential_incompleteness_via_local_connectedness_v4.tex), Version 4, 30 October 2026, 27 pages)
+uses a locally connected target to establish recursive inseparability in a
+source recursion category that need not be locally connected, and applies
+the result to essential incompleteness.
 Theorem 6.3 gives inseparable restriction idempotents; Corollary 6.7 transfers
 this inseparability to the restriction idempotents representing theorems and
 refutable formulas of every consistent extension. Corollary 7.1 applies this
@@ -118,6 +120,9 @@ literature, cites Lengyel 2004 together with the version-10 corrections,
 and explains the exclusion of the primed systems by
 [the composition-failure result](https://arxiv.org/abs/2609.25556).
 No private-note citation substitutes for an argument in this paper.
+The [Version 4 front-matter review](Audit/2026-10-30-literature-and-terminology/FRONT_MATTER_V4.md)
+records the revised abstract and shorter introduction, including the gluing
+of two Sierpiński spaces underlying the three-point example.
 The [Version 3 terminology and literature record](Audit/2026-10-30-literature-and-terminology/README.md)
 and [literature comparison](Audit/2026-10-30-literature-and-terminology/LITERATURE_COMPARISON.md)
 record the terminology and abstract corrections, removal of irrelevant
