@@ -133,6 +133,28 @@ The [author-side reviews and verification](../Audit/2026-10-29-inseparable-exten
 keep the proof checks and remaining scope outside the mathematical document.
 Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
+## Syntactic model interpretation
+
+[Model interpretation of syntactic recursion categories](syntactic_model_range_functors.pdf)
+([source](syntactic_model_range_functors.tex), 30 October 2026)
+constructs a faithful range functor
+S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
+extension. The product target is locally connected; the source S_T is not
+locally connected for consistent c.e. extensions of PA. Uniform witness
+search supplies the lifting required by the local-connectedness theorem.
+The necessary switching and lifting proofs from
+[LOCOct10f.tex](sources/LOCOct10f.tex) are included in the new note;
+the referenced source is also retained unchanged.
+
+The final sections distinguish the effective standard-numeral observation
+argument from model interpretation and check the three-point cosheaf
+alternative. The [review record](../Audit/2026-10-30-syntactic-models/README.md)
+states the scope, checks, and source provenance. No Lean files were changed.
+
+~~~bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error syntactic_model_range_functors.tex
+~~~
+
 ## Separate arithmetic-universe comparison
 
 [Internal theories and intrinsic incompleteness](intrinsic_introspection_and_extensions.pdf)

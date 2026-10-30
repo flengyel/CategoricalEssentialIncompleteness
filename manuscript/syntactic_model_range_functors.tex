@@ -1,0 +1,604 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Model interpretation of syntactic recursion categories},pdfauthor={Florian Lengyel}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\PA}{\mathrm{PA}}
+\newcommand{\Pfn}{\mathbf{Pfn}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\Dom}{\operatorname{Dom}}
+\title{Model interpretation of syntactic recursion categories}
+\author{Florian Lengyel}
+\date{30 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a consistent extension $T$ of Peano arithmetic, interpretation in
+countable models gives a faithful range functor from the syntactic
+recursion category $S_T$ to a locally connected split restriction category.
+For computably enumerable $T$, Di Paola--Montagna's theorem says that
+$S_T$ itself is not locally connected.
+Theory extension is compatible with restriction of the family of models.
+Every target switch associated with a complemented source domain is the
+image of a single $T$-provably total program. The local-connectedness
+inseparability theorem therefore applies to $S_T$ without a soundness
+assumption. For computably enumerable $T$, numeral instances of domain
+predicates give the separate effective comparison with classical recursive
+inseparability and essential incompleteness.
+\end{abstract}
+
+\section{The syntactic recursion category}
+
+Composition is written $gf=g\circ f$. In a restriction category, the
+domain of $f:X\rightharpoonup Y$ is a restriction idempotent
+$\bar f:X\rightharpoonup X$. The arrow is total when $\bar f=1_X$.
+Domains are ordered by $a\le b$ when $ba=a$; their meet is composition.
+For a domain $a$ on $Y$, write $f^*a=\overline{af}$. A domain $r$ on
+$Y$ \emph{receives} $f$ when $rf=f$. A range of $f$
+is the least domain receiving $f$, with the additional agreement property
+\[
+ gf=hf\quad\Longrightarrow\quad
+ g\ran(f)=h\ran(f).
+\]
+We use restriction zeros and binary restriction coproducts, whose injections
+are total. For $X+X$ these injections are denoted by $i_0,i_1$, and
+$\nabla_X=[1_X,1_X]:X+X\to X$ denotes the codiagonal.
+Complementary domains $c,c'$ satisfy $cc'=0$ and $c\vee c'=1$.
+A disjoint pair $a_0,a_1$ is \emph{inseparable} if no complementary pair
+satisfies $a_0\le c$ and $a_1\le c'$.
+
+Let $T$ be a consistent classical theory in the language of arithmetic
+containing $\PA$. Formal numerical types are generated from $\omega$ by
+binary products and tagged coproducts. Fix recursive numerical codings
+whose bijection and structural equations are provable in $\PA$.
+For a typed program index $e:X\rightharpoonup Y$, let $G_e(x,y)$ be its
+$\Sigma_1$ output formula. It existentially quantifies a computation trace
+over a primitive-recursive trace test. Fix a deterministic programming
+system whose graph identities, including functionality, composition,
+and parameterization, are provable in $\PA$.
+
+The category $S_T$ has these formal types as objects and typed indices
+modulo the equivalence relation
+\begin{equation}\label{eq:uniform}
+ e\equiv_T f
+ \quad\Longleftrightarrow\quad
+ T\vdash \forall x\forall y\,
+       \bigl(G_e(x,y)\leftrightarrow G_f(x,y)\bigr).
+\end{equation}
+The quantifiers belong to the single sentence proved in $T$.
+This is the unprimed syntactic construction of Montagna and
+Di Paola--Montagna \cite{Montagna,DPM}.
+
+For a program operation $\operatorname{comp}$ implementing composition,
+$\PA$ proves
+\begin{equation}\label{eq:composition}
+ G_{\operatorname{comp}(f,e)}(x,z)
+ \leftrightarrow
+ \exists y\,\bigl(G_e(x,y)\land G_f(y,z)\bigr).
+\end{equation}
+Substitution of uniformly equivalent graphs under this existential proves
+that composition descends to \eqref{eq:uniform}. The identity and
+associativity equations follow from the same graph identities.
+
+Every $\Sigma_1$ formula $C(x)$ represents a partial identity: search for
+a witness to $C(x)$ and then return $x$. Write $[C]_T$ for this domain.
+Then
+\begin{equation}\label{eq:domain-order}
+ [C]_T\le[D]_T
+ \quad\Longleftrightarrow\quad
+ T\vdash\forall x\,(C(x)\longrightarrow D(x)).
+\end{equation}
+Conjunction and disjunction give domain meets and joins. The domain and
+range of $[e]_T$ are represented respectively by
+\[
+ \exists y\,G_e(x,y),\qquad
+ R_e(y):=\exists x\,G_e(x,y).
+\]
+For the range property, a domain $[C]_T$ receives $[e]_T$ precisely when
+$T$ proves $G_e(x,y)\to C(y)$ universally, equivalently when
+$T$ proves $R_e(y)\to C(y)$ universally. For agreement, a witness to
+$R_e(y)$ together with equality of two composite graphs gives equality
+of the two output graphs at $y$. Existential elimination in $T$ proves
+the required agreement equation. These arguments also show that the
+chosen ranges are unchanged under theory extension.
+
+The ordinary product and tagged-coproduct programs supply the restriction
+products and coproducts. Write $\pi_1,\pi_2$ for the projections and
+$\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$ for the total categorical
+diagonal. The universal program supplies a Turing morphism
+\[
+ \tau:\omega\times\omega\rightharpoonup\omega:
+ \quad f:X\times\omega\rightharpoonup\omega
+ \ \Longrightarrow\ 
+ f=\tau(r\times1_\omega)
+\]
+for some total parameter arrow $r:X\to\omega$. Formalized
+parameterization makes this arrow $\PA$-provably total. The chosen coding
+isomorphisms make $S_T$ isotypical, and product with a zero arrow is zero.
+Thus $S_T$ is a prodominical recursion category. The preceding
+constructions do not require that the axioms of $T$ be computably enumerable.
+
+\section{Interpretation in models}
+
+The category $\Pfn$ has sets as objects and partial functions as arrows,
+with ordinary composition. Restrictions and ranges are partial identities
+on domains of definition and images. Restriction products are Cartesian products;
+coproducts are tagged disjoint unions.
+
+Fix a model $M\models T$. Interpret numerical types recursively by
+\[
+ X_M=|M|\quad(X=\omega),\qquad
+ (X\times Y)_M=X_M\times Y_M,\qquad
+ (X+Y)_M=X_M\amalg Y_M.
+\]
+The fixed arithmetic codings identify these sets with the corresponding
+codes in $M$. A standard program index in a graph formula is interpreted
+as its numeral in $M$. Define
+\begin{equation}\label{eq:model-functor}
+ F_M(X)=X_M,\qquad
+ F_M([e]_T)(x)=y
+ \quad\Longleftrightarrow\quad M\models G_e(x,y).
+\end{equation}
+All quantified traces and intermediate values in this formula range over
+the whole model, including its nonstandard elements.
+
+\begin{proposition}\label{prop:model}
+For every $M\models T$, \eqref{eq:model-functor} defines a covariant
+functor $F_M:S_T\to\Pfn$ preserving restrictions, zeros, binary
+restriction products and coproducts, ranges, and finite joins of domains.
+\end{proposition}
+\begin{proof}
+Functionality is provable in $\PA$, so the interpreted graph is a
+partial function. Equation \eqref{eq:uniform} makes the assignment
+independent of the representative. Equation \eqref{eq:composition},
+interpreted in $M$, is exactly relational composition of the two partial
+functions; their intermediate values range over $Y_M$. The identity
+graph gives the identity function.
+
+The domain predicate $\exists y\,G_e(x,y)$ gives the interpreted
+function's domain. Similarly,
+\[
+ \{y\in Y_M:M\models R_e(y)\}
+ =\operatorname{im}(F_M[e]_T),
+\]
+so ranges are preserved. False predicates, conjunction, and disjunction
+give zeros, intersections, and unions. The PA-provable product and
+tagged-coproduct graph equations give the corresponding operations on
+partial functions.
+\end{proof}
+
+\section{A faithful family and theory extension}
+
+Let $\mathcal M_T$ be the set of all structures for the language of
+arithmetic with underlying set $\N$ that satisfy $T$. Their arithmetic
+operations need not be the standard ones, and the interpretation of a
+numeral $\bar n$ need not be the carrier element $n$. Completeness and
+the downward L\"owenheim--Skolem theorem imply
+$\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
+countably infinite model can be transported to the carrier $\N$.
+
+Define the product category
+\[
+ \mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn.
+\]
+An object is a family of sets $(A_M)_M$; an arrow is a family of partial
+functions with the indicated sources and targets. Composition and the
+restriction, range, restriction-product, and coproduct operations are coordinatewise.
+The functors of Proposition~\ref{prop:model} combine to give
+\[
+ F_T:S_T\longrightarrow\mathcal D_T,\qquad
+ F_T(X)=(X_M)_M,\quad F_T([e]_T)=(F_M[e]_T)_M.
+\]
+
+A domain $a$ is \emph{connected} if $a=b\vee c$ and $bc=0$ imply
+$b=0$ or $c=0$. A category is \emph{locally connected} when its connected
+domains are jointly epimorphic: agreement of parallel arrows after every
+connected restriction implies equality. A category is \emph{split} when
+every restriction idempotent splits. A partial monomorphism
+$p:X\rightharpoonup Y$ satisfies
+$pu=pv\Rightarrow\bar p u=\bar p v$ for all $u,v:W\rightharpoonup X$.
+\emph{Weak choice} means that
+every partial monomorphism has a section $s$ with
+$ps=\bar s$ and $psp=p$.
+
+\begin{theorem}\label{thm:faithful}
+The functor $F_T$ is faithful and preserves restrictions, zeros, binary
+restriction products and coproducts, ranges, and finite domain joins. The category
+$\mathcal D_T$ is split and locally connected, satisfies weak choice,
+and has inverse images preserving binary domain joins. Moreover,
+$F_T(1_\omega)\ne0$.
+\end{theorem}
+\begin{proof}
+Preservation follows coordinatewise from Proposition~\ref{prop:model}.
+If $[e]_T\ne[f]_T$, let $E$ denote the uniform graph-equality sentence
+in \eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
+Completeness and downward L\"owenheim--Skolem give a model on carrier
+$\N$ in which the two graphs differ. This is a coordinate of $F_T$,
+which therefore distinguishes the arrows.
+
+A domain in $\mathcal D_T$ is a family of subsets. Its splitting uses
+those subsets as the coordinate sets. For an object $A=(A_M)_M$, a
+domain supported at one coordinate $M$, with a singleton subset
+$\{x\}\subseteq A_M$ there, is connected. These domains detect the
+definedness and value of every coordinate of a partial arrow. Hence
+$\mathcal D_T$ is locally connected.
+
+A partial monomorphism has injective coordinate functions: test its
+defining property on singleton objects supported at one coordinate.
+The partial inverses of these injections form a section, proving weak
+choice. Inverse images commute with unions coordinatewise. Finally,
+$\mathcal M_T$ is nonempty and every interpreted numerical object is
+nonempty, so its identity differs from zero.
+\end{proof}
+
+For consistent computably enumerable $T\supseteq\PA$, the source $S_T$
+is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
+The connected domains used in the preceding proof belong to
+$\mathcal D_T$ and need not be images of source domains. Faithfulness
+reflects equality of arrows; it does not require these additional target
+domains to have source preimages.
+
+For an inclusion $T\subseteq T'$ of consistent theories, define
+\[
+ Q_{T,T'}:S_T\to S_{T'},\qquad
+ Q_{T,T'}X=X,\quad Q_{T,T'}[e]_T=[e]_{T'}.
+\]
+Provability is monotone, so this is a well-defined covariant functor.
+It preserves the chosen computational operations and Turing morphism.
+Since $\mathcal M_{T'}\subseteq\mathcal M_T$, restriction of families
+defines a covariant projection
+$\pi_{T,T'}:\mathcal D_T\to\mathcal D_{T'}$. Fixing type interpretations
+once for each arithmetic structure gives a strictly commuting square:
+\[
+\begin{tikzcd}[column sep=large]
+ S_T \arrow[r,"Q_{T,T'}"] \arrow[d,"F_T"'] &
+ S_{T'} \arrow[d,"F_{T'}"]\\
+ \mathcal D_T \arrow[r,"\pi_{T,T'}"'] & \mathcal D_{T'}.
+\end{tikzcd}
+\]
+Both paths send a program to the family of its interpretations in the
+models of $T'$. The identity and composition laws for the projections
+and quotient functors follow from restriction of indices and the
+unchanged program representatives.
+
+\section{Switching and the local-connectedness theorem}
+
+A \emph{range functor} preserves restrictions, ranges, restriction zeros,
+and binary restriction coproducts. Since $c\vee c'=\ran[c,c']$,
+such a functor preserves binary domain joins and complementary pairs.
+Theorem~\ref{thm:faithful} supplies
+such a functor into a split locally connected category satisfying weak
+choice and inverse-image preservation of domain joins. These are the
+target hypotheses of the local-connectedness inseparability theorem
+\cite[Theorem 4.7]{LOC}. Its remaining requirement concerns lifting
+specific sections associated with complemented source domains.
+
+\subsection{The local-connectedness construction}
+
+The following argument supplies the needed sections. It is the
+construction of \cite[Section 4.3]{LOC}, with its restriction-category
+hypotheses stated explicitly. For a coproduct $Y+Z$, let
+$\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
+domains. Their meet is zero and their join is the identity. These facts
+follow by precomposition with the two injections and the agreement
+property of ranges.
+
+\begin{lemma}\label{lem:connected-alternative}
+Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
+and binary restriction coproducts. Suppose inverse images preserve binary
+domain joins. If $a$ is a connected domain on $X$ and
+$f:X\to Y+Z$ is total, then
+$\varepsilon_0fa=fa$ or $\varepsilon_1fa=fa$.
+\end{lemma}
+\begin{proof}
+Totality and the inverse-image laws give the disjoint decomposition
+\[
+ a=af^*\varepsilon_0\vee af^*\varepsilon_1.
+\]
+Connectedness makes one term zero and the other equal to $a$. In the
+latter case $a\le f^*\varepsilon_i$, and the restriction identity
+$\varepsilon_i f=f\overline{\varepsilon_i f}$ gives
+$\varepsilon_i fa=fa$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-switch}
+Let $\mathcal A$ be a locally connected split restriction category with
+ranges, restriction zeros, and binary restriction coproducts. Suppose
+weak choice holds and inverse images preserve binary domain joins.
+For disjoint domains $a,b$ on $X$, the arrow
+$p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
+with a unique section $s:X\rightharpoonup X+X$, and
+\[
+ ps=\bar s=a\vee b.
+\]
+In particular, for complementary $c,c'$ on $X$, the arrow
+$\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
+$sc=i_1c$ and $sc'=i_0c'$.
+\end{proposition}
+\begin{proof}
+First let $\theta,\theta':Y\to X+X$ be total and suppose
+$p\theta=p\theta'$. The identities
+$ap=\nabla_X(a+0)$ and $bp=\nabla_X(0+b)$ give
+\[
+ \nabla_X(a+0)\theta=\nabla_X(a+0)\theta',
+ \qquad
+ \nabla_X(0+b)\theta=\nabla_X(0+b)\theta'.
+\]
+For a connected domain $\gamma$ on $Y$,
+Lemma~\ref{lem:connected-alternative} places each of
+$\theta\gamma,\theta'\gamma$ in one summand.
+If both lie in the first summand, the first equality, followed by $i_0$,
+gives $(a+b)\theta\gamma=(a+b)\theta'\gamma$; the second-summand
+case uses the second equality and $i_1$.
+If they lie in opposite summands, the two equalities force both these
+restricted arrows to be zero. Local connectedness therefore gives
+$(a+b)\theta=(a+b)\theta'$. Since $\bar p=a+b$, this proves the
+partial-monomorphism condition for total test arrows.
+
+For arbitrary $u,v:W\rightharpoonup X+X$ with $pu=pv$, split their
+common composite domain as
+$\overline{pu}=\overline{pv}=me$, where $m:Z\to W$ is total and
+$em=1_Z$. The arrows $pum,pvm$, hence also $um,vm$, are total.
+The preceding case gives $\bar p um=\bar p vm$. Composing with $e$
+and using $\bar p u=\bar p u\,\overline{pu}$ and its analogue for $v$
+gives $\bar p u=\bar p v$. Thus $p$ is a partial monomorphism.
+
+Weak choice supplies a section $s$. The equations $ps=\bar s$ and
+$psp=p$ imply $\bar s=\ran(p)$: this domain receives $p$, and every
+domain receiving $p$ also receives $ps=\bar s$. Moreover
+$\bar p s=s\overline{ps}=s$. Two sections have the same composite
+with $p$, so partial monicity makes them equal.
+The least-domain property gives $\ran(p)=a\vee b$.
+
+For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$.
+The equality $p(sc)=c=p(i_1c)$ and partial monicity give $sc=i_1c$;
+the equation on $c'$ is analogous.
+\end{proof}
+
+\begin{theorem}[Range-functor lifting]\label{thm:local-lifting}
+Let $\mathscr R$ be a prodominical recursion category with ranges and
+binary restriction coproducts. Let $\mathcal A$ be a locally connected
+split restriction category with ranges, restriction zeros, and binary
+restriction coproducts, satisfying weak choice, with inverse images
+preserving binary domain joins. Let
+$F:\mathscr R\to\mathcal A$ be a range functor.
+Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and
+an isomorphism $b:U\to U+U$, with $F(1_U)\ne0$.
+For each complementary pair $c,c'$ on $U$, let $s_c$ be the section
+of $\nabla_{FU}(Fc'+Fc)$. Suppose there is an arrow
+$\ell_c:U\rightharpoonup U+U$ with $F\ell_c=s_c$, using the coproduct
+comparison. Then
+\[
+ a_0=(b\tau\Delta_U)^*(1_U+0_U),\qquad
+ a_1=(b\tau\Delta_U)^*(0_U+1_U)
+\]
+are inseparable in $\mathscr R$.
+\end{theorem}
+\begin{proof}
+This is \cite[Theorem 4.7]{LOC}; the following proof uses the
+inverse-image laws directly after constructing the section.
+The domains $a_0,a_1$ are disjoint. Suppose $c,c'$ separate them.
+Put $u=b^{-1}\ell_c$, and choose a total parameter $g:U\to U$ with
+$\tau(g\times1_U)=u\pi_2$. Precomposition with $\langle1_U,g\rangle$
+gives $\tau\Delta_Ug=ug$.
+
+In the target write $E=Fg$, $H=F(b\tau\Delta_U)$, $\Gamma=Fc$,
+and $\Gamma'=Fc'$. The preceding equation gives $HE=s_cE$.
+Since $s_c\Gamma=i_1\Gamma$ and $s_c\Gamma'=i_0\Gamma'$,
+its inverse images of the summand domains are $\Gamma'$ and $\Gamma$,
+respectively. Preservation of restrictions and composition now gives
+\[
+ E^*F(a_0)=E^*\Gamma',\qquad E^*F(a_1)=E^*\Gamma.
+\]
+The separator inequalities imply that $E^*\Gamma$ and $E^*\Gamma'$
+are equal. They are complementary because $E$ is total and target
+inverse images preserve joins. Hence $1_{FU}=0$, contradicting the
+hypothesis. The proof uses totality of $F\ell_c=s_c$, not totality of
+its source lift $\ell_c$.
+\end{proof}
+
+\subsection{Lifting in the syntactic category}
+
+\begin{lemma}\label{lem:switch}
+Let $c,c'$ be complementary domains on $X$ in $S_T$. There is a total
+arrow $s:X\to X+X$ with
+\[
+ sc=i_1c,\qquad sc'=i_0c'.
+\]
+Its image under $F_T$ is the unique section of
+$\nabla_{F_TX}(F_Tc'+F_Tc)$, using the coproduct comparison to identify
+$F_T(X+X)$ with $F_TX+F_TX$.
+\end{lemma}
+\begin{proof}
+Choose $\Sigma_1$ representatives $C(x)=\exists u\,R(x,u)$ and
+$C'(x)=\exists v\,R'(x,v)$ with primitive-recursive witness tests.
+The theory $T$ proves universally their disjointness and coverage.
+Search increasing finite bounds for a witness to either predicate,
+returning the tagged input $i_1x$ on finding a $C$-witness and $i_0x$
+on finding a $C'$-witness. Fix a priority for simultaneous discoveries.
+The finite-search verification in $\PA$ proves that the program halts
+exactly when $C(x)\lor C'(x)$. Under the disjointness assumption it also
+proves the exact graph equation
+\[
+ G_s(x,z)\leftrightarrow
+ (C(x)\land z=i_1x)\lor(C'(x)\land z=i_0x).
+\]
+Thus $T$ proves this equation and universal halting. The equations for
+the restrictions follow, giving a total arrow of the uniform quotient.
+
+In each $M\models T$, the interpretations of $C,C'$ partition $X_M$.
+The interpreted program sends each input to its specified tagged copy.
+It is exactly the inverse of the partial injection
+$\nabla_{X_M}(c'_M+c_M)$. Its graph is therefore the unique required
+section. The same program works at every coordinate, proving the lifting
+statement for the entire family.
+\end{proof}
+
+\begin{corollary}\label{cor:pair}
+For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
+lifting hypothesis of the local-connectedness inseparability theorem.
+Fix $U=\omega$, a Turing morphism $\tau:U\times U\rightharpoonup U$,
+and a PA-provable coding isomorphism $b:U\to U+U$. Put
+\[
+ d=\tau\Delta_U,\qquad
+ a_0=(bd)^*(1_U+0_U),\qquad a_1=(bd)^*(0_U+1_U).
+\]
+Then $a_0,a_1$ are inseparable in $S_T$. Their images under
+$Q_{T,T'}$ are the identically defined inseparable pair in $S_{T'}$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:faithful} and Lemma~\ref{lem:switch} verify all the
+hypotheses of Theorem~\ref{thm:local-lifting}. The quotient functor keeps
+every program in the definition fixed, and the same argument applies
+to consistent $T'$.
+\end{proof}
+
+The local-connectedness theorem uses Turing universality in its source.
+The target $\mathcal D_T$ has all families of partial functions as arrows;
+$F_T(\tau)$ is not universal for these arrows: at each model coordinate,
+countably many program parameters cannot enumerate all partial functions
+on its countable numerical carrier. The target's domain lattices are
+Boolean, so the image of every disjoint source pair has a separator
+there. Lemma~\ref{lem:switch} lifts the sections associated with source
+complemented domains. An arbitrary target separator need not come from
+such a domain. This distinction explains how a faithful range functor
+can have an inseparable source pair and a separable image pair.
+
+\section{Effective observations and essential incompleteness}
+
+Let $\mathrm{Rec}$ be the classical recursion category on the formal
+numerical types, with partial recursive functions as arrows and extensional
+equality. Its domains are computably enumerable subsets, and its
+complemented domains are recursive subsets.
+Assume now that $T$ has computably enumerable axioms. For a domain
+$c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
+\begin{equation}\label{eq:observation}
+ E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
+\end{equation}
+It is computably enumerable by proof enumeration and is independent of
+the representative. The operation is monotone, preserves finite meets,
+and preserves top and bottom. Let $\kappa_n:\omega\to\omega$ be the
+total constant program with value $n$. Then
+\begin{equation}\label{eq:faithful-observation}
+ n\in E_T(c)
+ \quad\Longleftrightarrow\quad c\kappa_n=\kappa_n
+ \quad\Longleftrightarrow\quad
+ F_T(c)F_T(\kappa_n)=F_T(\kappa_n).
+\end{equation}
+The first equivalence follows from the partial-identity graph equation;
+the second is faithfulness. Thus the standard observations can also be
+expressed by equations in the faithful representation.
+
+Take $b(2m)=i_0m$ and $b(2m+1)=i_1m$ in
+Corollary~\ref{cor:pair}, using an acceptable universal program.
+Let $\alpha(x),\beta(x)$ be the resulting $\Sigma_1$ domain formulas.
+Their standard truth sets
+\[
+ A=\{n:\N\models\alpha(\bar n)\},\qquad
+ B=\{n:\N\models\beta(\bar n)\}
+\]
+are the classical even-output and odd-output sets for self-application.
+To prove inseparability, suppose a recursive set $C$ separated them.
+Choose a program with index $e$ that returns $1$ on inputs in $C$
+and $0$ on inputs outside $C$. If $e\in C$, its output on $e$ puts
+$e$ in $B$, contrary to separation. If $e\notin C$, its output puts
+$e$ in $A$, again a contradiction.
+Each finite computation gives a PA-proof of its numeral instance, and $\PA$ proves
+$\forall x\,\neg(\alpha(x)\land\beta(x))$.
+
+Define
+\[
+ P_T=\{n:T\vdash\alpha(\bar n)\},\qquad
+ N_T=\{n:T\vdash\neg\alpha(\bar n)\}.
+\]
+These are computably enumerable disjoint sets with $A\subseteq P_T$
+and $B\subseteq N_T$. They enlarge under theory extension.
+Let $\operatorname{Pair}(\mathrm{Rec})$ have objects $(X,A,B)$ consisting
+of a numerical type and disjoint computably enumerable domains.
+An arrow $(X,A,B)\to(Y,P,N)$ is a total recursive function $f:X\to Y$
+with $f(A)\subseteq P$ and $f(B)\subseteq N$. Identities and composition
+are inherited from $\mathrm{Rec}$. The assignment
+$T\mapsto(\omega,P_T,N_T)$, with the identity function for theory
+inclusions, is a covariant functor from the poset of consistent
+computably enumerable extensions of $\PA$ to
+$\operatorname{Pair}(\mathrm{Rec})$.
+The inclusions of $A,B$ give identity-arrow reductions to every such pair.
+A recursive separator pulls back along a total recursive function;
+consequently $P_T,N_T$ are recursively inseparable.
+
+\begin{corollary}
+Every consistent computably enumerable extension of $\PA$ is incomplete.
+\end{corollary}
+\begin{proof}
+If $T$ were complete, parallel enumeration of proofs of
+$\alpha(\bar n)$ and $\neg\alpha(\bar n)$ would halt on every standard
+input. Consistency makes the answers exclusive. The resulting recursive
+set $P_T$ would separate $A$ and $B$, a contradiction.
+\end{proof}
+
+The effective step uses standard numeral instances and the presentation
+of $T$ by computably enumerable axioms. The semantic functor exists also
+for $T=\operatorname{Th}(\N)$, when $T$ is complete and $S_T$ is the
+classical category of partial recursive functions on the formal numerical
+types. Thus internal inseparability alone does not imply logical
+incompleteness. Bernardi's precomplete-equivalence method gives another
+established route through PA-provable program equivalence
+\cite[pp.~125--128]{Bernardi}.
+
+\section{The three-point alternative}
+
+The same local-connectedness theorem applies to the computational cosheaf
+category on the three-point space of \cite{ThreePoint}. Its basic diagram
+shape is $J=(1\leftarrow0\to2)$. Let $\mathcal C_{\mathrm{rec}}$ have
+computably enumerable numerical carriers and partial recursive functions
+total on those carriers. The split ambient category is
+\[
+ \mathcal A=\operatorname{Par}
+   (\mathcal C_{\mathrm{rec}}^J,\operatorname{Mono}),
+\]
+whose arrows are partial maps with monic domain inclusions. Let $X$ be
+the universal diagram constructed in \cite{ThreePoint}, and let
+$\mathscr R_X$ be the full isotypical recursion category on the formal
+objects generated by $X$.
+Its full inclusion $\mathscr R_X\hookrightarrow\mathcal A$ preserves
+the required ranges and coproducts.
+
+The subdiagram generated by a central element and its two endpoint
+images is finite and connected. Singleton subdiagrams at either endpoint
+are connected as well. All are computational domains. They detect every
+component domain and value of a partial arrow, so $\mathcal A$ is locally
+connected. Its splitness, weak choice, ranges, coproducts, and
+componentwise inverse-image laws are established in \cite{ThreePoint}.
+The section associated with a complemented domain has source and target
+in $\mathscr R_X$; fullness therefore supplies its lift. This gives the
+same switching argument in a nonnumerical prodominical recursion category.
+
+\begin{thebibliography}{9}
+\bibitem{Bernardi}
+C.~Bernardi, \emph{Precomplete equivalence relations in dominical
+categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
+\bibitem{DPM}
+R.~A. Di Paola and F.~Montagna, \emph{Some properties of the syntactic
+$P$-recursion categories generated by consistent, recursively enumerable
+extensions of Peano arithmetic}, J. Symbolic Logic \textbf{56} (1991),
+643--660.
+\bibitem{LOC}
+F.~Lengyel, \emph{Locally connected recursion categories}, manuscript,
+revised 10 October 2026, \texttt{LOCOct10f.tex}.
+\bibitem{ThreePoint}
+F.~Lengyel, \emph{Range completion and computational cosheaves on a
+three-point space}, 29 October 2026,
+\href{https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/3be65406b0bb6d3109a41fd3f517ca62fcc5ed8f/manuscript/range_completion_three_point_cosheaves.tex}{source}.
+\bibitem{Montagna}
+F.~Montagna, \emph{``Pathologies'' in two syntactic categories of partial
+maps}, Notre Dame J. Formal Logic \textbf{30} (1989), 105--116.
+\end{thebibliography}
+\end{document}

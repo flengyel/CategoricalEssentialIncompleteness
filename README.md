@@ -87,6 +87,21 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
+The note [Model interpretation of syntactic recursion categories](manuscript/syntactic_model_range_functors.pdf)
+([source](manuscript/syntactic_model_range_functors.tex), 30 October 2026)
+constructs a faithful range functor from S_T to a product of partial-function
+categories indexed by all countable models of T. The target is locally
+connected; for consistent c.e. T, S_T itself is not, as Di Paola–Montagna
+proved. One T-provably total program lifts each target switch associated
+with complementary source domains. A commuting square expresses
+compatibility with theory extension. The note includes proofs of the
+needed local-connectedness and lifting results from
+[LOCOct10f.tex](manuscript/sources/LOCOct10f.tex), preserved here unchanged,
+and the separate effective proof-observation argument for essential
+incompleteness. The three-point cosheaf category supplies a second
+application. See the [reviews and verification](Audit/2026-10-30-syntactic-models/README.md).
+These are paper proofs, not new Lean formalizations.
+
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)
 ([source](manuscript/intrinsic_introspection_and_extensions.tex)) applies Ramesh's
 results in the initial arithmetic universe. It constructs no comparison from

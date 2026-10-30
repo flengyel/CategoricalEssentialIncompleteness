@@ -19,6 +19,13 @@ in flengyel/errata; read their latest committed state before importing further r
   *Range completion and computational cosheaves on a three-point space*.
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
+- manuscript/syntactic_model_range_functors.tex and .pdf:
+  *Model interpretation of syntactic recursion categories*, 30 October 2026.
+  It constructs a faithful range functor from S_T to a locally connected
+  product of partial-function categories and proves the required lifting.
+- manuscript/sources/LOCOct10f.tex: unchanged supplied source,
+  SHA-256 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
+  The necessary switching and lifting proofs are included in the new note.
 - manuscript/intrinsic_introspection_and_extensions.tex and .pdf:
   *Internal theories and intrinsic incompleteness*, 3 pages: a separate
   arithmetic-universe comparison, with no established connection to the
@@ -34,6 +41,8 @@ in flengyel/errata; read their latest committed state before importing further r
   observations of identity and zero. It records the PA benchmark and
   candidate data for its nonnumerical generalization; it is not a new
   mathematical manuscript.
+- Audit/2026-10-30-syntactic-models/ records the model-family construction,
+  source checks, hostile and writing reviews, and PDF verification.
 
 The first two manuscripts remain unchanged by the cosheaf continuation.
 No new theorem in these notes has been formalized in Lean. The older Lean
@@ -65,7 +74,52 @@ must not replace this project's recursion-category target.
 
 ## Immediate mathematical work
 
-The latest result gives a minimal construction inside the original category.
+The latest result supplies a concrete range functor for the S_T route.
+For consistent T⊇PA, let Mod_ω(T) be all arithmetic structures on carrier
+N satisfying T; their operations need not be standard. Interpret each
+standard program's arithmetic graph in each model. The resulting covariant
+F_T:S_T→D_T, D_T=∏_{M∈Mod_ω(T)}Pfn, is faithful by completeness and
+countable Löwenheim–Skolem. It preserves restrictions, ranges, zeros,
+restriction products, coproducts, and finite domain joins. D_T is split,
+locally connected, and satisfies weak choice and stable domain joins.
+S_T itself is NOT locally connected for consistent c.e. T: retain
+Di Paola–Montagna Corollary 4.4 and never transfer the target property
+back to the source merely because F_T is faithful.
+
+For complementary source domains, one program dovetails their Σ₁ witness
+searches and returns the appropriate tagged input. T proves its universal
+halting and exact graph from the uniform complement equations. Its
+interpretation is the required section in every coordinate simultaneously.
+Thus all hypotheses of LOCOct10f's range-functor lifting theorem are
+discharged for S_T. For T⊆T', restricting the model family gives
+π_(T,T'):D_T→D_T' and π_(T,T')F_T=F_T'Q_(T,T'). No soundness is used.
+The target need not be a recursion category; Turing universality is used
+in S_T. Every target domain is complemented, so arbitrary target
+separators do not lift. The semantic functor is not an effective functor
+to the classical recursion category.
+
+For c.e. T, E_T(c)={n:T proves C(numeral n)} remains the effective
+observation. It is also characterized by F_T(c)F_T(κ_n)=F_T(κ_n), where
+κ_n is the total constant program. Proof and refutation of the fixed
+machine-output predicate give disjoint c.e. enlargements of a classical
+inseparable pair. Completeness would give a recursive separator. This
+effective step is separate from semantic faithfulness.
+
+The three-point alternative also satisfies the local-connectedness
+theorem: use the full inclusion of its isotypical recursion category into
+its split computational partial-map category. Finite subdiagrams generated
+by central elements and their endpoint images, and endpoint singletons,
+are connected and detect all partial maps. Fullness supplies the switch
+lifts. Do not require the isotypical source itself to be split.
+
+Next, abstract the effective observation and extension comparison from
+this verified S_T instance and test it against the already constructed
+three-point computational theories. A full functor from arbitrary S_T
+to classical Rec remains unconstructed and is not supplied by F_T.
+In new mathematical text, call the inseparability proof the Turing-morphism
+argument; reserve “diagonal” for the categorical map Δ_U.
+
+The preceding result gives a minimal construction inside the original category.
 For disjoint domains a,b on U, binary restriction coproducts give the signed
 presentation (U+U,swap,a+b). Its consistent computational extensions are
 exactly disjoint enlargements (c,d) of (a,b), and completeness is c∨d=1.
