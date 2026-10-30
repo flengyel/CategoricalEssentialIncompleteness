@@ -1,0 +1,24 @@
+import CategoricalEssentialIncompleteness
+
+/-! Elaborated exported statements for the version 5 correspondence. -/
+
+set_option pp.universes true
+set_option pp.explicit true
+set_option pp.fullNames true
+
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.connected_alternative
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.local_switch
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.complementary_switch
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.turing_diagonal
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.range_functor_lifting
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.categorical_essential_incompleteness
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.disjoint_joins_switch
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.domain_incompleteness
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.inclusion_inseparable
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.rangeFunctor
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.map_restriction_product
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.joint_faithful
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_inseparable
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.rangeFunctor
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.extension_pair_inseparable
+#check @CategoricalEssentialIncompleteness.LocalConnectedness.Fork.universal_no_decidable_equality

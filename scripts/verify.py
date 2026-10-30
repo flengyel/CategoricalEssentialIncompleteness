@@ -475,6 +475,43 @@ AUDITED = [
     "CategoricalEssentialIncompleteness.ArithmeticSyntax.essential_incompleteness_of_definability",
     "CategoricalEssentialIncompleteness.ArithmeticSyntax.extension_incomplete_of_PAminus",
     "CategoricalEssentialIncompleteness.ArithmeticSyntax.incomplete_of_PAminus",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.domain_incompleteness",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.connected_alternative",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.local_switch",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.complementary_switch",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.switch_fibers",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.range_copair_idem",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.turing_diagonal",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.range_functor_lifting",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.local_lifting",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.categorical_essential_incompleteness",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.disjoint_joins_switch",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.disjoint_joins_lift",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.inclusion_inseparable",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.idemOrderIso",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.section_lifting_of_choice",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctions.singleton_connected",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctions.chosenSection_isSection",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.functor",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.rangeFunctor",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.joint_faithful",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntacticJoinInverse",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_inseparable_of_model",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_inseparable",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.Fork.universal_no_decidable_equality",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.Fork.terminalSupport_card",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelFunctor",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelComparison",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.codingEquiv",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.map_restriction_product",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.map_first_projection",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.map_second_projection",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.rangeFunctor",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.map_product",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.map_turing",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.pair0_image",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.pair1_image",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.extension_pair_inseparable",
 ]
 
 
@@ -567,6 +604,7 @@ def main() -> int:
                 raise RuntimeError(f"Dependency revision mismatch: {name}")
         report["dependencies"] = deps
 
+        run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/V5StatementAudit.lean"], "v5-statement-audit.log")
         text = run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/AxiomAudit.lean"], "axiom-audit.log")
         found = {}
         for name, contents in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text):

@@ -1,7 +1,19 @@
 # Categorical essential incompleteness
 
+The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
+as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).
+The abstract categorical chain through Corollary 6.7, its combined theorem,
+and a syntactic inseparability application are proved. The full-paper
+formalization, including the arithmetic application and the remaining
+three-point and appendix constructions, is unfinished.
+[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) tracks all 24 numbered results,
+their Lean declarations, and the remaining obligations. Run
+`python3 scripts/verify.py` to build the project and audit its proof dependencies.
+
+## Earlier development
+
 Research notes and a Lean development on categorical essential incompleteness.
-The current account connects a Turing morphism, computational inseparability,
+The earlier account connects a Turing morphism, computational inseparability,
 polynomial finite-proof algebras, and theorem ranges. It proves essential
 incompleteness for a numerical classical deductive presentation and gives a
 general construction under explicit structural hypotheses. A further note
@@ -9,9 +21,9 @@ derives the finite-stage domain unions from Heller's iteration structure,
 proves consistency without decidable atom equality, and constructs a
 nonnumerical computational cosheaf example.
 
-## Manuscript
+## Earlier manuscripts
 
-The current note is [Domains, finite proofs, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
+The note [Domains, finite proofs, and essential incompleteness](manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
 ([LaTeX source](manuscript/domains_hoare_profunctors_essential_incompleteness.tex),
 29 October 2026, 23 pages). It includes Hoare profunctors and their relation
 to polynomial bicomodules, the numerical obstruction to weakest liberal

@@ -1,3 +1,95 @@
+# Formalization status: local-connectedness manuscript, version 5
+
+The current target is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`,
+reviewed baseline `883f1f792a5e4a244974d00458e8a9dee61b2f94`.
+The full paper is **unfinished**. The earlier version-16 development is retained
+below as a historical record and does not determine completion of version 5.
+The author's announced title change does not change the mathematical target;
+this work does not edit the manuscript.
+
+The abstract categorical chain is proved. In particular, the combined theorem
+constructs its inseparable pair using source Turing universality and target local
+connectedness with section lifting, then applies the domain incompleteness
+corollary. Its source total inverse-image join preservation is explicit.
+Theorem 6.3 has both a generalized statement and an export with the manuscript's
+prodominical and isotypical source hypotheses. No faithfulness, product preservation,
+totality reflection, or totality of the source lifts is assumed there.
+
+The category of arbitrary partial functions is constructed using `Part` rather
+than decidable domains. The uniform syntactic category already present in
+`FailureOfComposition.TypedProgramCategory` is reused with explicit comparisons.
+Its model interpretation preserves restrictions, ranges, zeros and the canonical
+binary coproduct comparison. Product preservation includes simultaneous definedness
+and the canonical coding isomorphism. `codingEquiv` and `modelComparison` explicitly
+compare coded carriers with recursively interpreted formal types. Interpretation
+in all models is jointly faithful,
+and this proves stability of syntactic idempotent joins under arbitrary inverse
+image. The new `SyntacticModel.syntactic_inseparable` derives its actual syntactic
+pair by Theorem 6.3 for every consistent extension of PA. Its sufficient lifting
+argument uses the previously constructed, PA-verified fair preimage search in
+`FailureOfComposition.TypedChoice`. It is separate from the manuscript's specified
+finite two-test switching construction, which is still required.
+
+All new names below have prefix
+`CategoricalEssentialIncompleteness.LocalConnectedness.` unless stated otherwise.
+“Partial” means that the row does not yet implement the entire numbered result.
+
+| Manuscript label | Lean declarations | Hypotheses and status |
+| --- | --- | --- |
+| `prop:model` | `SyntacticModel.rangeFunctor`, `SyntacticModel.modelFunctor`, `SyntacticModel.modelComparison`, `SyntacticModel.codingEquiv`, `SyntacticModel.map_restriction_product`, `SyntacticModel.map_first_projection`, `SyntacticModel.map_second_projection` | **Partial.** Full-carrier semantics, uniform quotient, restrictions, ranges, zeros, canonical coproducts, product graph/preservation and recursive type comparison proved. These preservation assertions are exported for the coded functor; their transport to `modelFunctor` is not yet packaged as a single formal preservation result. |
+| `thm:faithful` | `SyntacticModel.joint_faithful`; `PartialFunctions` | **Partial.** Joint faithfulness for all arithmetic models and all required properties of the single partial-function category are proved. The exact family indexed by all structures on carrier ℕ and its structure instances remain. |
+| `lem:connected-alternative` | `connected_alternative` | **Proved.** Restriction zeros, restriction coproducts, and arbitrary inverse-image preservation of binary joins; the test arrow is total. |
+| `prop:local-switch` | `local_switch`, `complementary_switch` | **Proved.** Split locally connected restriction category with ranges, restriction zeros, restriction coproducts, weak choice and arbitrary join inverse images. Arbitrary partial test arrows are handled by splitting their common composite restriction. |
+| `thm:local-lifting` | `range_functor_lifting`; generalized `local_lifting` | **Proved.** The exact diagonal pair, canonical coproduct comparison, nonzero image identity and source-pair-specific partial lifts are used. The total parameter and diagonal equation are derived in `turing_diagonal`. |
+| `prop:disjoint-joins` | `disjoint_joins_switch`, `disjoint_joins_lift` | **Proved.** First clause uses only pairwise complementarity (`PairComplementary`) and disjoint arrow joins; no global idempotent-join assumption. The range-functor clause uses the target hypotheses of Proposition 6.2. |
+| `lem:switch` | — | **Pending.** The exact increasing finite-bound two-test program, fixed priority and PA graph/domain proofs have not yet been instantiated. Source choice gives an independently proved sufficient lifting route. |
+| `cor:pair` | `SyntacticModel.syntactic_inseparable` | **Partial.** The categorical inseparable pair is proved for consistent PA extensions, without soundness assumptions. The exact faithful-family lift remains. `SyntacticExtension.pair0_image`, `SyntacticExtension.pair1_image` and `SyntacticExtension.extension_pair_inseparable` prove the theory-extension image equations and inseparability of the images. |
+| `cor:domain-incompleteness` | `domain_incompleteness` | **Proved.** Only total inverse images must preserve joins. Exactly the two base-domain inequalities, total θ and ν, extension inclusion and disjointness are assumed. |
+| `cor:arithmetic` | — | **Pending.** The classical recursion-category instance and the two numeral-substitution inclusions must be connected to the newly constructed pair. Older arithmetic incompleteness results do not discharge this row. |
+| `prop:endpoint` | — | **Pending.** |
+| `thm:cosheaf-observation` | — | **Pending.** |
+| `prop:fork-cosheaves` | — | **Pending.** |
+| `prop:fork-total` | — | **Pending.** |
+| `prop:fork-structure` | — | **Pending.** |
+| `prop:fork-local` | — | **Pending.** |
+| `lem:fork-dominance` | — | **Pending.** |
+| `lem:fork-frames` | — | **Pending.** |
+| `thm:fork-turing` | — | **Pending.** |
+| `prop:fork-recursion` | — | **Pending.** |
+| `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork and the five terminal-support patterns are proved. The numerical functor-category construction and non-equivalence argument remain. |
+| `prop:fork-syntax-initial` | — | **Pending.** |
+| `thm:fork-proof-presentation` | — | **Pending.** |
+| `prop:missing-lift` | — | **Pending.** |
+
+Unnumbered constructions already proved include restriction-idempotent order and
+inverse-image calculus; ranges with agreement and derived leastness; canonical
+range joins; canonical coproduct comparison and its naturality; section uniqueness;
+the full restriction-splitting category and `SplitObject.inclusion_inseparable`;
+`idemOrderIso`, `partialMono_iff_existing`, `section_iff_existing` and the existing
+range/zero/choice comparisons; the combined
+`categorical_essential_incompleteness`; and `section_lifting_of_choice`.
+`SyntacticExtension.rangeFunctor` keeps every
+program index fixed and preserves products, the diagonal and the chosen Turing
+morphism under provability inclusion of theories.
+
+The first missing inference in the exact Section 4 correspondence is the formal
+transport of all preservation assertions from the coded range functor to the
+recursively interpreted `modelFunctor` along `modelComparison`. The product and
+coproduct coding comparisons are constructed. Section 5 additionally requires
+the exact family indexed by arithmetic structures on ℕ. These are implementation
+obligations, not confirmed defects in the manuscript. Subsequent obligations
+are listed separately above; none is an axiom
+or a claimed completed instance.
+
+Independent read-only review checked elaborated types and transitive axioms of the
+categorical chain, splitting, compatibility, partial-function category, model range
+functor and syntactic inseparability application. It found and prompted removal
+of a global-join assumption from Proposition 6.4's first clause. The resulting
+proofs use only the permitted axioms. The project verifier also audits these
+exports and tracks the reviewed v5 sources alongside the historical v16 sources.
+
+---
+
 # Formalization status: version 16
 
 The full definability-algebra interface and its arithmetic Boolean-presentation

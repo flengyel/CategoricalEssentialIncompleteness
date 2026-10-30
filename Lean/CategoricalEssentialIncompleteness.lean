@@ -25,9 +25,32 @@ import CategoricalEssentialIncompleteness.NumericalEnrichedSubobjects
 import CategoricalEssentialIncompleteness.ArithmeticAdequacy
 import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
 import CategoricalEssentialIncompleteness.ArithmeticEssentialIncompleteness
+import CategoricalEssentialIncompleteness.LocalLifting
+import CategoricalEssentialIncompleteness.DisjointJoins
+import CategoricalEssentialIncompleteness.RestrictionSplitting
+import CategoricalEssentialIncompleteness.RestrictionCompatibility
+import CategoricalEssentialIncompleteness.PartialFunctions
+import CategoricalEssentialIncompleteness.SyntacticExtension
+import CategoricalEssentialIncompleteness.ForkObstruction
 
 /-!
-# Restriction predicates, represented quotients, and arithmetic incompleteness
+# Local connectedness and essential incompleteness
+
+The version 5 categorical proof is in the namespace
+`CategoricalEssentialIncompleteness.LocalConnectedness`. It proves the
+connected-alternative lemma, the local-switch proposition with arbitrary
+partial tests, the range-functor lifting theorem, the disjoint-join sufficient
+condition, and the domain incompleteness corollary. The combined theorem uses
+the new source Turing diagonal to derive its inseparable pair. The restriction
+splitting preserves inseparability on included objects. `PartialFunctions`
+constructs the locally connected split target of arbitrary partial functions.
+The syntactic model interpretation constructs a range functor and derives
+inseparability of its actual Turing diagonal pair for every consistent PA
+extension. Theory extension preserves this pair. The exact model family,
+specified finite switch, arithmetic and three-point applications, and remaining
+appendix constructions are unfinished; see `FORMALIZATION_STATUS.md`.
+
+## Earlier representation-based development
 
 The project proves the external diagonal theorem, the internal separator
 factorization, and incompleteness of represented Boolean quotients under

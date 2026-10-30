@@ -1,3 +1,41 @@
+# Current requirements: local-connectedness manuscript, version 5
+
+`CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md` supersedes the historical version-16
+requirements below. Preserve the existing proofs, dependency pins, source-hash
+checks and allowed-axiom audit. Current mathematical completion is tracked by all
+24 labels in `FORMALIZATION_STATUS.md`.
+
+The abstract chain through Corollary 6.7 is implemented, including the source
+Turing diagonal, exact lifting hypothesis, disjoint-join sufficient condition,
+combined theorem and restriction-splitting inclusion. The model interpretation
+and a consistency-only syntactic inseparability application also use the new
+categorical theorem. These do not complete the full-paper target.
+
+Continue with the formal transport of preservation along the constructed
+product/type comparisons for model interpretations, the family over all arithmetic
+structures on ℕ, its projection/extension square, and the specified finite two-test
+program of Lemma 6.5. Theory-extension range functors and their pair image equations
+are constructed. Discharge these constructions
+with the fixed PA-verified evaluator; do not replace uniformly quantified
+provability by pointwise provability or impose soundness on consistent extensions.
+The existing source-choice lifting route is a proved sufficient condition, and
+must not be reported as the missing finite-search program or faithful family.
+
+Then instantiate the categorical chain in classical recursion and construct the
+sentence/proof objects, conclusion range, negation, numeral substitution and both
+inclusions needed for the arithmetic result. Carry out the nonnumerical
+three-point construction, its recursion and syntax/proof properties, the
+applications, and Appendix C. The finite fork obstruction presently proved is
+only part of the non-equivalence result.
+
+Every completed result must be imported by the project entry point, included in
+the transitive audit, built with the pinned toolchain, and checked by
+`python3 scripts/verify.py`. Retain exact hypotheses and record the first remaining
+inference. Do not claim full-paper formalization from this abstract chain or from
+any older representation-based arithmetic theorem.
+
+---
+
 # Formalization requirements
 
 The target is Definition 2.1 and the categorical essential incompleteness

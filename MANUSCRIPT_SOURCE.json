@@ -15,6 +15,31 @@
       "git_blob": "8107cdabd8c5ddf612ab59f243439114e4ebbe31",
       "sha256": "24aa9614d6fb3e15ad1ac29ae2f18fd14dab2cefa6fc55fd67b6a156f8c87b5a",
       "size": 591333
+    },
+    {
+      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+      "source_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+      "repository": "flengyel/CategoricalEssentialIncompleteness",
+      "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
+      "git_blob": "db1e0b185beec80ffa936cb0a72ff95c6d1f591e",
+      "sha256": "a049438c2968ee86bdd7228e1fba1a826c09a753b1d41e3f8c6e0e28fa0a5adb",
+      "size": 109696
+    },
+    {
+      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "source_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "repository": "flengyel/CategoricalEssentialIncompleteness",
+      "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
+      "git_blob": "69676b7f894714c95cd58d29d1c133f25ee77009",
+      "sha256": "92c40da05e76fe92547a429406e3a655f647c84736056a75a05c7b738d33146b",
+      "size": 450641
     }
-  ]
+  ],
+  "current_target": {
+    "repository": "flengyel/CategoricalEssentialIncompleteness",
+    "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
+    "version": 5,
+    "source": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+    "continuation": "CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md"
+  }
 }
