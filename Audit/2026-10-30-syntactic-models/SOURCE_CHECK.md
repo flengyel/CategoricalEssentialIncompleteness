@@ -58,3 +58,44 @@ N of a model is not assumed to have standard arithmetic operations.
 
 This is a focused source comparison and proof audit, not an exhaustive
 novelty search or a new formalization of the underlying machine semantics.
+
+## Introduction and endpoint continuation
+
+Baseline: faf3d070c94681748b6cb99d22243173bd665644.
+
+The Introduction of the preserved LOCOct10f source was reread. Its order
+of motivation is retained: Di Paola–Heller's program, the role of ranges
+and local connectedness, the precise lifting requirement, and the
+syntactic categories that are not locally connected. The new paper then
+states the additional effective argument giving essential incompleteness.
+
+The publisher's primary-source extract of Di Paola–Heller (1987) was
+consulted at
+https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/dominical-categories-recursion-theory-without-elements1-2/2E11506A81794B06EF34603881D79394 .
+It explicitly states the algebraization objective and includes recursive
+inseparability of theorem/refutation sets among the generalized
+incompleteness statements. The date used is the September 1987 print
+publication, not the publisher's later online-hosting date.
+
+The unchanged three-point source and its PDF were checked at:
+
+- Proposition 2.1: cosheaves are covariant fork diagrams, with a pushout
+  at the whole space.
+- Proposition 2.2: finite limits, componentwise monomorphisms and images,
+  regularity, weak choice, and the split partial-map structure.
+- Sections 4–5: the universal fork V, frames, and the explicit Turing
+  morphism. Its endpoint formulas are used verbatim as mathematical
+  data, and their classical parameter universality is proved separately.
+- Proposition 6.1: five terminal subobjects and failure of decidable
+  equality on V.
+- Theorem 6.3: the consistent finite-proof presentation.
+
+The three Hilbert schemes were checked against the displayed schemes
+in iteration_domains_and_cosheaves.tex, Section 5, including the
+orientation of the classical contraposition scheme.
+
+The new component-evaluation, probe, separator, and extension arguments
+are proved directly. They invoke no new Heller equation, no range
+completion theorem, and no preservation of the proof polynomial by an
+observation functor. Earlier source verification is reused for the
+unchanged finite-proof construction.

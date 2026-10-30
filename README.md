@@ -78,8 +78,7 @@ functors preserve identity, zero, and the chosen Turing morphism. The sets
 of program indices proved equal to identity and zero form a recursively
 inseparable pair, and extension enlarges both sets. Completeness would
 decide identity membership by proof search. This gives a short PA benchmark
-and identifies the effective proof observations to construct in a
-nonnumerical setting. It supplies a comparison on presentations and domain
+and records effective proof observations. It supplies a comparison on presentations and domain
 observations, not a functor on all arrows from S_T to the classical category.
 The [other-theory applications](Audit/2026-10-29-separator-transfer/OTHER_THEORIES.md)
 reuse S_T through effective interpretations, including ACA_0, finite set
@@ -87,7 +86,7 @@ theory and HA via negative translation. They connect the argument with
 Bernardi's established theory of precomplete equivalence relations and
 give a related inseparable-class proof for c.e. lambda theories.
 
-The note [Model interpretation of syntactic recursion categories](manuscript/syntactic_model_range_functors.pdf)
+The note [Local connectedness, range functors, and essential incompleteness](manuscript/syntactic_model_range_functors.pdf)
 ([source](manuscript/syntactic_model_range_functors.tex), 30 October 2026)
 constructs a faithful range functor from S_T to a product of partial-function
 categories indexed by all countable models of T. The target is locally
@@ -98,8 +97,19 @@ compatibility with theory extension. The note includes proofs of the
 needed local-connectedness and lifting results from
 [LOCOct10f.tex](manuscript/sources/LOCOct10f.tex), preserved here unchanged,
 and the separate effective proof-observation argument for essential
-incompleteness. The three-point cosheaf category supplies a second
-application. See the [reviews and verification](Audit/2026-10-30-syntactic-models/README.md).
+incompleteness. In the three-point computational cosheaf category, actual
+endpoint functors `E_i : A → K`, for `i = 1,2`, preserve the chosen Turing
+morphism; here `A` is the split computational partial-map category and `K`
+is the splitting of the classical recursion category. Total maps from the
+singleton endpoint diagrams give an intrinsic description of these
+observations. Pulling the observed theorem and refutation domains back
+along the total atom map gives disjoint c.e. subsets of `N²` containing a
+fixed recursively inseparable pair for every consistent selected extension.
+Extension inclusions act by identity maps on these observed pairs, proving
+essential incompleteness in this nonnumerical example. The remaining
+generalization is to identify further effective observation functors and
+compatible comparisons when the presentation changes. See the
+[reviews and verification](Audit/2026-10-30-syntactic-models/README.md).
 These are paper proofs, not new Lean formalizations.
 
 The separate comparison [Internal theories and intrinsic incompleteness](manuscript/intrinsic_introspection_and_extensions.pdf)

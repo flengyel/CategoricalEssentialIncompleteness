@@ -133,9 +133,9 @@ The [author-side reviews and verification](../Audit/2026-10-29-inseparable-exten
 keep the proof checks and remaining scope outside the mathematical document.
 Earlier mathematical sources are unchanged. No Lean formalization is claimed.
 
-## Syntactic model interpretation
+## Local connectedness, range functors, and essential incompleteness
 
-[Model interpretation of syntactic recursion categories](syntactic_model_range_functors.pdf)
+[Local connectedness, range functors, and essential incompleteness](syntactic_model_range_functors.pdf)
 ([source](syntactic_model_range_functors.tex), 30 October 2026)
 constructs a faithful range functor
 S_T → ∏_{M∈Mod_ω(T)} Pfn and proves its compatibility with theory
@@ -147,8 +147,21 @@ The necessary switching and lifting proofs from
 the referenced source is also retained unchanged.
 
 The final sections distinguish the effective standard-numeral observation
-argument from model interpretation and check the three-point cosheaf
-alternative. The [review record](../Audit/2026-10-30-syntactic-models/README.md)
+argument from model interpretation and construct endpoint observation
+functors `E_i : A → K`, for `i = 1,2`, from the split three-point
+computational cosheaf category to the splitting of the classical recursion
+category. They preserve restrictions, ranges, products, coproducts, finite
+domain joins, and the chosen Turing morphism. Total maps from singleton
+endpoint diagrams describe the observations intrinsically.
+
+For every consistent selected computational extension, the observed theorem
+and refutation domains pull back along the atom map to disjoint c.e. subsets
+of `N²` containing a fixed recursively inseparable pair. Extension inclusions
+give identity maps between the observed pairs. Thus the construction proves
+essential incompleteness by an actual functor on partial arrows in this
+nonnumerical example. Other recursion categories and changes of presentation
+require suitable effective observations and compatible comparison maps.
+The [review record](../Audit/2026-10-30-syntactic-models/README.md)
 states the scope, checks, and source provenance. No Lean files were changed.
 
 ~~~bash

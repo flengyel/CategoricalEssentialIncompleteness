@@ -20,9 +20,13 @@ in flengyel/errata; read their latest committed state before importing further r
 - manuscript/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
 - manuscript/syntactic_model_range_functors.tex and .pdf:
-  *Model interpretation of syntactic recursion categories*, 30 October 2026.
+  *Local connectedness, range functors, and essential incompleteness*,
+  30 October 2026.
   It constructs a faithful range functor from S_T to a locally connected
   product of partial-function categories and proves the required lifting.
+  It also constructs effective endpoint functors from the split three-point
+  computational cosheaf category and proves that every consistent selected
+  extension has recursively inseparable observed theorem/refutation sets.
 - manuscript/sources/LOCOct10f.tex: unchanged supplied source,
   SHA-256 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
   The necessary switching and lifting proofs are included in the new note.
@@ -112,10 +116,35 @@ by central elements and their endpoint images, and endpoint singletons,
 are connected and detect all partial maps. Fullness supplies the switch
 lifts. Do not require the isotypical source itself to be split.
 
-Next, abstract the effective observation and extension comparison from
-this verified S_T instance and test it against the already constructed
-three-point computational theories. A full functor from arbitrary S_T
-to classical Rec remains unconstructed and is not supplied by F_T.
+The three-point effective observation is now constructed. Let A be its split
+computational partial-map category and K the restriction splitting of the
+classical recursion category. For either endpoint i=1,2, component evaluation
+E_i:A→K is an actual covariant functor on partial arrows preserving
+restrictions, zeros, ranges, binary products and coproducts, and finite
+domain joins. It preserves the chosen Turing morphism. The analogous central
+evaluation preserves the listed structure but not that Turing morphism's
+universality. The endpoint functors also have an intrinsic description:
+total maps H_i→Y from the singleton endpoint diagram are the observations,
+and partial postcomposition is defined exactly when the composite is total.
+
+Fix the already constructed classical presentation with syntax S, atom map
+theta:V→S, negation constructor nu:S→S, and selected theorem domain t_0.
+For a consistent computational extension t≥t_0, put theta_i=E_i(theta) and
+P_(i,t)=theta_i^(-1)(E_i(t)),
+N_(i,t)=theta_i^(-1)(E_i(nu^*t)), identifying numerical domains with their
+c.e. carriers. These are disjoint c.e. subsets of N² containing the fixed
+recursively inseparable carriers A_i,B_i of E_i(a),E_i(b).
+Every such observed pair is therefore recursively inseparable; completeness
+would make the two sets cover N² and yield a recursive separator. The
+assignment t↦(N²,P_(i,t),N_(i,t)), with identity maps for extension inclusions,
+is a covariant functor to Pair(Rec).
+
+Next, identify a class of effective atomic observation functors beyond this
+fixed source and construct compatible comparison maps when computational
+presentations change. Preserve the specified inseparable pair and the atomic
+proof inclusions, and check the required inverse-image and domain-join laws.
+A full functor from arbitrary S_T to classical Rec remains unconstructed and
+is not supplied by F_T or by the separate three-point endpoint functors.
 In new mathematical text, call the inseparability proof the Turing-morphism
 argument; reserve “diagonal” for the categorical map Δ_U.
 
@@ -141,7 +170,7 @@ its total parameter maps, and the fixed computational operations. The
 latest review proves a simpler comparison through the effective presentations:
 I_T={e:[e]_T=1} and Z_T={e:[e]_T=0} are disjoint c.e. subsets of the
 program-index object in the fixed classical category Rec. A fixed total
-compiler r sends the canonical output-0/output-1 diagonal pair into
+recursive index map r sends the canonical output-0/output-1 diagonal pair into
 I_PA,Z_PA. Thus that pair is recursively inseparable. Q preserves identity
 and zero, giving I_T⊆I_T' and Z_T⊆Z_T'. Consistency keeps these enlarged
 pairs disjoint. Completeness would decide I_T by parallel proof search for
@@ -150,7 +179,7 @@ It does not imply I_T∪Z_T=N.
 
 This is an actual covariant functor from the poset of consistent c.e.
 extensions into Pair(Rec), with identity maps on program indices for theory
-inclusions. Separators pull back along those maps and the fixed compiler r.
+inclusions. Separators pull back along those maps and the fixed index map r.
 The map from program indices to S_T(omega,omega) is a set-presentation map,
 not a functor from the extensional category Rec. The alternative observation
 E_T([D])={n:T proves D(numeral n)} is a well-defined monotone map on domain
@@ -181,14 +210,16 @@ uses the fixed classical recursion category; it does not construct a new
 Heller category out of each lambda theory.
 
 Further work can test appropriate existing theory presentations against
-these structural hypotheses and check weaker arithmetic bases. An intrinsic
-nonnumerical realization remains a separate scope extension; the three-point
-computational cosheaf category is a concrete test. No new range completion
-is needed for the established applications, and no full backwards arrow
-functor has been constructed.
+these structural hypotheses and check weaker arithmetic bases. The three-point
+computational cosheaf category now supplies a nonnumerical realization with
+actual endpoint functors on partial arrows. Further classes and changes of
+presentation remain to be treated. No new range completion is needed for the
+established applications; a full backwards arrow functor from arbitrary S_T
+has not been constructed.
 
 A restriction functor G_T:D_T→C preserving zero and binary domain joins
-remains a sufficient stronger implementation if it can actually be built.
+is a sufficient implementation, realized by the endpoint functors for the
+three-point construction and still to be constructed for further classes.
 For theorem/refutation domains p_T,n_T on Y_T, supply a total
 u_T:U→G_T(Y_T) with a≤u_T*G_T(p_T), b≤u_T*G_T(n_T), and prove the
 needed inverse-image join law. Consistency must give p_T n_T=0 and
@@ -326,7 +357,7 @@ The universal object has V_0=N^4, V_1=V_2=N^2 and transitions
 (k,z,a,b)↦(k,a),(k,b). The component index k supplies product, coproduct,
 and nonempty-word frames. A central universal computation is accepted
 only when its two endpoint computations return the required projections.
-The total natural compiler proves exact parameter-universality.
+The total natural parameter map proves exact parameter-universality.
 The generated isotypical full partial category is a recursion category,
 and its restriction splitting is the full computational fork category.
 
@@ -336,6 +367,12 @@ decidable equality. The total terminal object has five subobjects, unlike
 the numerical two and Sierpiński three. The established finite-stage
 and equality-constraint theorems therefore give essential incompleteness
 in this three-point category without decidable atom equality.
+
+The current range-functor note constructs the endpoint observations and their
+extension functor to Pair(Rec), as specified under Immediate mathematical
+work above. Thus the next step concerns further source categories and
+compatible changes of presentation, rather than constructing observations
+for this example.
 
 ## Separate range-completion target
 
