@@ -36,6 +36,7 @@ import CategoricalEssentialIncompleteness.SyntacticFiniteSwitch
 import CategoricalEssentialIncompleteness.ClassicalRanges
 import CategoricalEssentialIncompleteness.ArithmeticCategoricalIncompleteness
 import CategoricalEssentialIncompleteness.ForkObstruction
+import CategoricalEssentialIncompleteness.EffectiveForkConstruction
 
 /-!
 # Local connectedness and essential incompleteness

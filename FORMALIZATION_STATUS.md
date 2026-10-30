@@ -52,14 +52,14 @@ All new names below have prefix
 | `prop:endpoint` | — | **Pending.** |
 | `thm:cosheaf-observation` | — | **Pending.** |
 | `prop:fork-cosheaves` | — | **Pending.** |
-| `prop:fork-total` | — | **Pending.** |
-| `prop:fork-structure` | — | **Pending.** |
-| `prop:fork-local` | — | **Pending.** |
-| `lem:fork-dominance` | — | **Pending.** |
+| `prop:fork-total` | `EffectiveFork.totalEquivalence`, `EffectiveFork.total_mono_iff_injective`; `EnumerableCarriers.coded_decoded`, `EnumerableCarriers.decoded_coded` | **Partial.** The total category is equivalent to the actual walking-span functor category; total monomorphisms are componentwise injective. Canonical coding of arbitrary c.e. finite-power carriers preserves exact partial maps, totality and composition and has an explicit inverse on every supported arrow. Finite limits, regularity and extensivity remain. |
+| `prop:fork-structure` | `EffectiveFork.inducedRestriction_eq`, `EffectiveFork.split`, `EffectiveFork.weak_choice`, `EffectiveFork.inverse_image_joins`, `EffectiveFork.normalized_span`; modules `EffectiveForkProducts`, `EffectiveForkCoproducts` | **Partial.** Actual partial recursive component arrows with forward-closed natural domains; restrictions, zeros, component-image ranges with agreement, products, coproducts, prodominical laws, splitting and weak choice are constructed. Every arrow has a total-monic domain span. The quotient-of-spans comparison with `Par(C_rec^J,Mono)`, pullback composition, and the remaining range compatibility laws are unfinished. |
+| `prop:fork-local` | `EffectiveFork.centerAtom_connected`, `EffectiveFork.leftAtom_connected`, `EffectiveFork.rightAtom_connected`, `EffectiveFork.locally_connected` | **Partial.** The three families of finite subfunctors prove local connectedness of the constructed computational fork category, detecting domains and values. Transfer through the full partial-span comparison remains. |
+| `lem:fork-dominance` | `EffectiveFork.dominance`, `EffectiveFork.embedding_injective`, `EffectiveFork.coherentEncoding_total` | **Partial.** The specified `(0,y,r₁y,r₂y)`/`(0,yᵢ)` total restriction embeddings and natural partial inverses are proved in the computational fork category. Transfer through the full partial-span comparison remains. |
 | `lem:fork-frames` | — | **Pending.** |
-| `thm:fork-turing` | — | **Pending.** |
+| `thm:fork-turing` | `EffectiveFork.tau`, `EffectiveFork.central_specialized`, `EffectiveFork.center_parameterization`, `EffectiveFork.endpoint_parameterization`, `EffectiveFork.tau_parameterization`, `EffectiveFork.tau_isTuring` | **Partial.** Actual ordinary universal evaluation and recursive specialization at all three components. The central computation checks that both endpoint computations halt with the projected outputs. Every arrow `F:Y×V⇀V` has a total coherent parameter, and factorization is equality of partial functions, including simultaneous undefinedness. Transfer through the full partial-span comparison remains. |
 | `prop:fork-recursion` | — | **Pending.** |
-| `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork and the five terminal-support patterns are proved. The numerical functor-category construction and non-equivalence argument remain. |
+| `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card`, `EffectiveFork.universal_no_decidable_equality` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork, its concrete recursive coding, and the five terminal-support patterns are proved. The non-equivalence argument remains. |
 | `prop:fork-syntax-initial` | — | **Pending.** |
 | `thm:fork-proof-presentation` | — | **Pending.** |
 | `prop:missing-lift` | — | **Pending.** |
@@ -83,11 +83,19 @@ translation is asserted. The classical source retains formal types and actual
 partial functions; `represents_partrec` and `omegaArrow_partrec` prove the
 comparison with ordinary unary partial recursive functions.
 
-The next unfinished construction is the full computational fork category
-`C_rec^J` and its partial-map category, including the comparison with the
-three-point cosheaves. Its frame, Turing morphism, applications and all appendices
-remain in scope. These are implementation obligations; none is an axiom or a
-claimed completed instance.
+The computational fork retains three c.e. carriers and both total structural
+maps. Its partial arrows obey naturality on their domains and forward closure;
+extra endpoint-domain elements are permitted. Actual finite probes `H0`, `H1`
+and `H2` prove componentwise injectivity of partial monomorphisms. Recursive
+inverse graphs then give natural sections. The total-category comparison is an
+equivalence with `WalkingSpan ⥤ EnumerableCarriers.Total`.
+
+The unfinished comparisons include the full quotient of total-monic spans with
+pullback composition, the cosheaf equivalence, and the finite-limit, regular and
+extensive structures. The actual universal fork is constructed with recursive
+ℕ⁴/ℕ² tuple coding. Its specified dominance embeddings and Turing morphism are
+proved in the computational presentation. The frame, full restriction-subcategory
+construction, applications and remaining appendices remain in scope.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -104,8 +112,18 @@ findings. It checked the exact τ-diagonal formulas, both numeral inclusions,
 proof conclusion range, consistency hypotheses and recursive-set translation.
 Transitive inspection confirmed Theorem 6.3 and Corollary 6.7 and excluded the
 older representation-based arithmetic proofs from the new final theorem.
-The full repository verifier passed with 573 configured transitive axiom checks,
+The full repository verifier for the arithmetic stage passed with 573 configured transitive axiom checks,
 the pinned dependencies and the recorded source hashes.
+Independent review of the computational fork core, coding comparison, products,
+coproducts, exact inverse graphs, finite probes, weak choice, total monicity and
+normalized spans found no defects. Its elaborated-type and axiom checks used
+only the permitted axioms. The review did not identify normalized spans alone
+with the unfinished full partial-span equivalence.
+Independent review also checked the specified dominance embeddings and the new
+checked Turing evaluator. It confirmed the exact program slots, carrier supports,
+projection tests and simultaneous undefinedness. The full project verifier passed
+with 656 configured axiom checks. The Turing proof uses its own ordinary
+specialization construction directly.
 
 ---
 

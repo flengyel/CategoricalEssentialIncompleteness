@@ -1,3 +1,4 @@
 Lean/.lake/
 build-logs/
 __pycache__/
+.codex-work/
