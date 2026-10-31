@@ -2,7 +2,7 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 16 PDF](essential_incompleteness_via_local_connectedness_v16.pdf)
+[Version 17 PDF](essential_incompleteness_via_local_connectedness_v17.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 31 October 2026).
 
@@ -26,6 +26,8 @@ cd local_connectedness
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
+The [version 17 Boolean operations and conditionals](../Audit/2026-10-31-appendix-v17/README.md)
+records the component calculations, Boolean identities, and explicit conditional copairing.
 The [version 16 notation revision](../Audit/2026-10-31-appendix-v16/README.md)
 records the finite-product convention and explicit Boolean pullback notation.
 The [version 15 appendix clarification](../Audit/2026-10-31-appendix-v15/README.md)
@@ -298,6 +300,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
 
 

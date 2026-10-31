@@ -32,46 +32,94 @@ product morphism, with $f^0=1_1$ and $f^1=f$.
 Thus powers of objects denote finite products.
 
 Put $\Two=1+1$, with injections
-$\mathbf f,\mathbf t:1\to\Two$. Pulling this coproduct back along
+$\mathbf{f},\mathbf{t}:1\to\Two$. Pulling this coproduct back along
 $\pi_1:\Two\times\Two\to\Two$ decomposes $\Two\times\Two$ into two copies of
 $\Two$. Decomposing each copy as $1+1$ gives the isomorphism
 \[
- \gamma=[\langle\mathbf f,\mathbf f\rangle,
-          \langle\mathbf f,\mathbf t\rangle,
-          \langle\mathbf t,\mathbf f\rangle,
-          \langle\mathbf t,\mathbf t\rangle]:
+ \gamma=[\langle\mathbf{f},\mathbf{f}\rangle,
+          \langle\mathbf{f},\mathbf{t}\rangle,
+          \langle\mathbf{t},\mathbf{f}\rangle,
+          \langle\mathbf{t},\mathbf{t}\rangle]:
           1+1+1+1\xrightarrow{\cong}\Two\times\Two.
 \]
 Define the Boolean morphisms by
 \[
- \neg_2=[\mathbf t,\mathbf f]:\Two\to\Two,\qquad
- \wedge_2=[\mathbf f,\mathbf f,\mathbf f,\mathbf t]\gamma^{-1},
+ \neg_2=[\mathbf{t},\mathbf{f}]:\Two\to\Two,\qquad
+ \wedge_2=[\mathbf{f},\mathbf{f},\mathbf{f},\mathbf{t}]\gamma^{-1},
  \qquad
- \vee_2=[\mathbf f,\mathbf t,\mathbf t,\mathbf t]\gamma^{-1},
+ \vee_2=[\mathbf{f},\mathbf{t},\mathbf{t},\mathbf{t}]\gamma^{-1},
 \]
 where $\wedge_2,\vee_2:\Two\times\Two\to\Two$.
-Together with $\mathbf f$ and $\mathbf t$, these morphisms make
-$\Two$ a Boolean algebra object in $\mathcal D$.
-To verify the axioms, distributivity expresses each finite power
-$\Two^n$ as a coproduct of $2^n$ copies of $1$.
-Its coproduct injections are jointly epimorphic, so each required
-equation can be checked after precomposition with these injections.
-The displayed copairings give the same composite on each summand
-for the two sides of every Boolean algebra axiom. For example,
+For $\mathbf{a},\mathbf{b}$ each equal to one of the injections
+$\mathbf{f},\mathbf{t}$, let $j_{\mathbf{a}\mathbf{b}}:1\to1+1+1+1$
+denote the corresponding summand injection. The definition of $\gamma$ gives
+$\gamma j_{\mathbf{a}\mathbf{b}}=\langle\mathbf{a},\mathbf{b}\rangle$.
+Consequently,
 \[
- \wedge_2\langle1_{\Two},\neg_2\rangle=\mathbf f!_{\Two},
- \qquad
- \vee_2\langle1_{\Two},\neg_2\rangle=\mathbf t!_{\Two}:
- \Two\to\Two,
+ \wedge_2\langle\mathbf{a},\mathbf{b}\rangle
+ =[\mathbf{f},\mathbf{f},\mathbf{f},\mathbf{t}]
+    j_{\mathbf{a}\mathbf{b}},\qquad
+ \vee_2\langle\mathbf{a},\mathbf{b}\rangle
+ =[\mathbf{f},\mathbf{t},\mathbf{t},\mathbf{t}]
+    j_{\mathbf{a}\mathbf{b}}.
 \]
-as follows by precomposing with $\mathbf f$ and $\mathbf t$.
+The defining equations of a copairing therefore give
+\[
+\begin{array}{cc|cc}
+ \mathbf{a}&\mathbf{b}&
+ \wedge_2\langle\mathbf{a},\mathbf{b}\rangle&
+ \vee_2\langle\mathbf{a},\mathbf{b}\rangle\\\hline
+ \mathbf{f}&\mathbf{f}&\mathbf{f}&\mathbf{f}\\
+ \mathbf{f}&\mathbf{t}&\mathbf{f}&\mathbf{t}\\
+ \mathbf{t}&\mathbf{f}&\mathbf{f}&\mathbf{t}\\
+ \mathbf{t}&\mathbf{t}&\mathbf{t}&\mathbf{t}.
+\end{array}
+\]
+Also $\neg_2\mathbf{f}=\mathbf{t}$ and
+$\neg_2\mathbf{t}=\mathbf{f}$.
 
-Let $p:X\to\Two$. Write $[p=t]\hookrightarrow X$ for its
-pullback along $\mathbf t$; write $[p=f]\hookrightarrow X$ for its
-pullback along $\mathbf f$.
-A conditional with test $p$ and branches $f,g:X\to Y$ is the
-morphism obtained by copairing their restrictions to these two
-pullbacks.
+These morphisms make $\Two$ a Boolean algebra object in $\mathcal D$.
+Indeed, distributivity expresses each finite power $\Two^n$ as a
+coproduct of $2^n$ copies of $1$, indexed by the ordered choices of
+$\mathbf{f}$ or $\mathbf{t}$ in each coordinate. The resulting
+injections are jointly epimorphic. The equations above verify the
+commutativity, idempotence, unit, absorption, and complement identities
+after precomposition with the injections for their respective sources.
+For associativity of $\wedge_2$, both composites on $\Two^3$ are
+$\mathbf{t}$ on the summand labelled $(\mathbf{t},\mathbf{t},\mathbf{t})$
+and $\mathbf{f}$ on the other seven summands. For associativity of
+$\vee_2$, both composites are $\mathbf{f}$ on the summand labelled
+$(\mathbf{f},\mathbf{f},\mathbf{f})$ and $\mathbf{t}$ on the others.
+For distributivity of $\wedge_2$ over $\vee_2$, both composites are
+$\mathbf{t}$ on the summands labelled
+$(\mathbf{t},\mathbf{f},\mathbf{t})$,
+$(\mathbf{t},\mathbf{t},\mathbf{f})$, and
+$(\mathbf{t},\mathbf{t},\mathbf{t})$; both are $\mathbf{f}$ on the others.
+For distributivity of $\vee_2$ over $\wedge_2$, both composites are
+$\mathbf{f}$ on the summands labelled
+$(\mathbf{f},\mathbf{f},\mathbf{f})$,
+$(\mathbf{f},\mathbf{f},\mathbf{t})$, and
+$(\mathbf{f},\mathbf{t},\mathbf{f})$; both are $\mathbf{t}$ on the others.
+Joint epimorphy then gives these identities as equalities of morphisms
+in $\mathcal D$.
+
+Let $p:X\to\Two$. Write $[p=\mathbf{t}]\hookrightarrow X$ for its
+pullback along $\mathbf{t}$; write $[p=\mathbf{f}]\hookrightarrow X$ for its
+pullback along $\mathbf{f}$.
+Denote these inclusions by $i_{\mathbf{t}}$ and $i_{\mathbf{f}}$.
+The coproduct hypotheses give the isomorphism
+\[
+ \delta_p=[i_{\mathbf{t}},i_{\mathbf{f}}]:
+ [p=\mathbf{t}]+[p=\mathbf{f}]\xrightarrow{\cong}X.
+\]
+For branches $f,g:X\to Y$, define the conditional by
+\[
+ \mathsf{if}(p;f,g)=
+ [f i_{\mathbf{t}},g i_{\mathbf{f}}]\delta_p^{-1}:X\to Y.
+\]
+It is the unique morphism $h:X\to Y$ satisfying
+$h i_{\mathbf{t}}=f i_{\mathbf{t}}$ and
+$h i_{\mathbf{f}}=g i_{\mathbf{f}}$.
 
 We use variables to abbreviate projections from a displayed product.
 An expression built from them denotes a composite of morphisms on
@@ -84,13 +132,13 @@ $\epsilon:V\times V\to\Two$ in $\mathcal D$ such that the square
 \[
 \begin{tikzcd}
  V\arrow[r,"{!_V}"]\arrow[d,hook,"\Delta_V"'] &
- 1\arrow[d,hook,"\mathbf t"]\\
+ 1\arrow[d,hook,"\mathbf{t}"]\\
  V\times V\arrow[r,"\epsilon"'] & \Two
 \end{tikzcd}
 \]
 is a pullback. Thus $V$ is equipped with decidable equality:
 its diagonal is a complemented subobject of $V\times V$, with
-complement given by the pullback of $\mathbf f:1\to\Two$
+complement given by the pullback of $\mathbf{f}:1\to\Two$
 along $\epsilon$.
 For $0\leq k\leq d$, fix objects
 $\Sigma_k,\Pi_k\in\operatorname{Ob}(\mathcal D)$ to index the
@@ -162,7 +210,7 @@ deletion $\del:V\times W\to W$ by
 \begin{align*}
  \nil+\!+w&=w,&
  \cons(y,w)+\!+w'&=\cons(y,w+\!+w'),\\
- \mem(x,\nil)&=\mathbf f,&
+ \mem(x,\nil)&=\mathbf{f},&
  \mem(x,\cons(y,w))&=\epsilon(x,y)\vee_2\mem(x,w),\\
  \del(x,\nil)&=\nil,&
  \del(x,\cons(y,w))&=
@@ -296,7 +344,7 @@ Put $B=V\times\Fm\times E$ and define
  p=\langle\pi_{\Fm},\pi_E\rangle:B\to\Fm\times E.
 \]
 Let $D_=\hookrightarrow B$ and $D_{\ne}\hookrightarrow B$ be the
-two fibers of $\epsilon(y,x)$, and let $D_C=[C=t]$.
+two fibers of $\epsilon(y,x)$, and let $D_C=[C=\mathbf{t}]$.
 Equation~\eqref{eq:quantifier-fold} gives
 \begin{equation}\label{eq:admissibility-subobjects}
  q^*\Adm=D_=\;\vee\;
@@ -326,9 +374,9 @@ Identity substitution satisfies
 The second equality also states admissibility. For substitution at
 an absent variable, use the subobjects
 \begin{align*}
- N_T&=[\mem(x,\FV_{\Tm}(u))=f]
+ N_T&=[\mem(x,\FV_{\Tm}(u))=\mathbf{f}]
                             \hookrightarrow\Tm\times E,\\
- N_F&=[\mem(x,\FV_{\Fm}(\varphi))=f]
+ N_F&=[\mem(x,\FV_{\Fm}(\varphi))=\mathbf{f}]
                             \hookrightarrow\Fm\times E.
 \end{align*}
 On $N_T$, $a_T$ is the term projection. On $N_F$, $b_F$ is
@@ -464,7 +512,7 @@ For \eqref{eq:hilbert-instantiation}, use the pullback of
 $j:\Adm\hookrightarrow F\times V\times\Tm$ along the
 permutation $V\times F\times\Tm\to F\times V\times\Tm$.
 For \eqref{eq:hilbert-distribution}, use
-$[\mem(x,\FV_{\Fm}(\varphi))=f]
+$[\mem(x,\FV_{\Fm}(\varphi))=\mathbf{f}]
 \hookrightarrow V\times F^2$.
 For \eqref{eq:hilbert-reflexivity}, use $\Tm$.
 For \eqref{eq:hilbert-equality}, intersect the pullbacks of $j$
