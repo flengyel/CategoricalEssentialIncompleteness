@@ -43,6 +43,11 @@ import CategoricalEssentialIncompleteness.EffectiveForkProductFrame
 import CategoricalEssentialIncompleteness.EffectiveForkCoproductFrame
 import CategoricalEssentialIncompleteness.EffectiveForkWords
 import CategoricalEssentialIncompleteness.WordTuples
+import CategoricalEssentialIncompleteness.EffectiveForkSplitEquivalence
+import CategoricalEssentialIncompleteness.EffectiveForkRangeProducts
+import CategoricalEssentialIncompleteness.EnumerableChoice
+import CategoricalEssentialIncompleteness.ForkSyntaxObjects
+import CategoricalEssentialIncompleteness.ForkProofTreeRecursion
 
 /-!
 # Local connectedness and essential incompleteness
@@ -57,9 +62,12 @@ splitting preserves inseparability on included objects. `PartialFunctions`
 constructs the locally connected split target of arbitrary partial functions.
 The syntactic model interpretation constructs a range functor and derives
 inseparability of its actual Turing diagonal pair for every consistent PA
-extension. Theory extension preserves this pair. The exact model family,
-specified finite switch, arithmetic and three-point applications, and remaining
-appendix constructions are unfinished; see `FORMALIZATION_STATUS.md`.
+extension. Theory extension preserves this pair. The exact model family, specified finite switch, and categorical arithmetic
+application are proved. The three-point construction includes actual monic spans,
+all three frames, the generated recursion category, its categorical inseparable
+pair, and the equivalence of its restriction splitting with the full partial-map
+category. Its syntax and finite-proof applications and other remaining appendix
+results are unfinished; see `FORMALIZATION_STATUS.md`.
 
 ## Earlier representation-based development
 

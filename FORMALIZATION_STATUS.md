@@ -52,16 +52,16 @@ All new names below have prefix
 | `prop:endpoint` | — | **Pending.** |
 | `thm:cosheaf-observation` | — | **Pending.** |
 | `prop:fork-cosheaves` | — | **Pending.** |
-| `prop:fork-total` | `EffectiveFork.totalEquivalence`, `EffectiveFork.total_mono_iff_injective`; `EnumerableCarriers.coded_decoded`, `EnumerableCarriers.decoded_coded` | **Partial.** The total category is equivalent to the actual walking-span functor category; total monomorphisms are componentwise injective. Canonical coding of arbitrary c.e. finite-power carriers preserves exact partial maps, totality and composition and has an explicit inverse on every supported arrow. Finite limits are now constructed in `EnumerableLimits` and transported through `EffectiveFork.totalEquivalence`. Finite-coproduct universal properties, regularity and extensivity remain. |
-| `prop:fork-structure` | `EffectiveFork.inducedRestriction_eq`, `EffectiveFork.split`, `EffectiveFork.weak_choice`, `EffectiveFork.inverse_image_joins`, `EffectiveFork.normalized_span`; modules `EffectiveForkProducts`, `EffectiveForkCoproducts` | **Partial.** Actual partial recursive component arrows with forward-closed natural domains; restrictions, zeros, component-image ranges with agreement, products, coproducts, prodominical laws, splitting and weak choice are constructed. Every arrow has a total-monic domain span. The comparison `EffectiveFork.partialMapEquivalence` now uses actual isomorphism classes of monic total spans: equality is precisely apex isomorphism over both legs, composition is proved to be the actual pullback composition, and `PartialSpans.Span.restriction_toHom` identifies the canonical `(m,m)` restriction. The remaining range/product and total-pullback compatibility laws are unfinished. |
+| `prop:fork-total` | `EffectiveFork.totalEquivalence`, `EffectiveFork.total_mono_iff_injective`; `EnumerableCarriers.coded_decoded`, `EnumerableCarriers.decoded_coded` | **Partial.** The total category is equivalent to the actual walking-span functor category; total monomorphisms are componentwise injective. Canonical coding of arbitrary c.e. finite-power carriers preserves exact partial maps, totality and composition and has an explicit inverse on every supported arrow. Finite limits are now constructed in `EnumerableLimits` and transported through `EffectiveFork.totalEquivalence`. Actual finite-coproduct universal properties are proved by `EnumerableCarriers.coproductIsColimit` and `initialIsInitial` and transferred by `EffectiveFork.totalHasFiniteCoproducts`. Regularity and extensivity remain. |
+| `prop:fork-structure` | `EffectiveFork.inducedRestriction_eq`, `EffectiveFork.split`, `EffectiveFork.weak_choice`, `EffectiveFork.inverse_image_joins`, `EffectiveFork.normalized_span`; modules `EffectiveForkProducts`, `EffectiveForkCoproducts` | **Partial.** Actual partial recursive component arrows with forward-closed natural domains; restrictions, zeros, component-image ranges with agreement, products, coproducts, prodominical laws, splitting and weak choice are constructed. Every arrow has a total-monic domain span. The comparison `EffectiveFork.partialMapEquivalence` now uses actual isomorphism classes of monic total spans: equality is precisely apex isomorphism over both legs, composition is proved to be the actual pullback composition, and `PartialSpans.Span.restriction_toHom` identifies the canonical `(m,m)` restriction. `EffectiveFork.range_product` proves exact range/product compatibility. Regular-image pullback stability along total arrows remains unfinished. |
 | `prop:fork-local` | `EffectiveFork.centerAtom_connected`, `EffectiveFork.leftAtom_connected`, `EffectiveFork.rightAtom_connected`, `EffectiveFork.locally_connected` | **Proved.** The three families of finite subfunctors detect domains and values. `EffectiveFork.partialMapEquivalence`, `PartialSpans.pullback_composition` and `PartialSpans.Span.restriction_toHom` identify this presentation with the actual monic-span category and its restriction. |
 | `lem:fork-dominance` | `EffectiveFork.dominance`, `EffectiveFork.embedding_injective`, `EffectiveFork.coherentEncoding_total` | **Proved.** The specified `(0,y,r₁y,r₂y)`/`(0,yᵢ)` total restriction embeddings and natural partial inverses are proved in the exact partial-function presentation, now compared with actual monic-span classes and their composition/restriction. |
-| `lem:fork-frames` | `EffectiveFork.productFrame`, `EffectiveFork.coproductFrame`; `EffectiveFork.wordFunctor`, `WordCoding.decode_encode`, `WordCoding.encode_decode` | **Partial.** Explicit natural product and parity coproduct isomorphisms are proved. Nonempty-word objects, their partial recursive maps and functor laws, and uniform recursive tuple/word bijections are constructed. The final natural word-frame isomorphism is being completed. |
+| `lem:fork-frames` | `EffectiveFork.productFrame`, `EffectiveFork.coproductFrame`, `EffectiveFork.wordFrame`; `EffectiveFork.wordFunctor`, `WordCoding.decode_encode`, `WordCoding.encode_decode` | **Proved.** The explicit natural product, parity coproduct and nonempty-word isomorphisms have both inverse equations. The word code retains positive length and uses the same coordinate length at all three components. Letterwise words are actual c.e. carriers and partial recursive maps, with exact domains and functor laws. |
 | `thm:fork-turing` | `EffectiveFork.tau`, `EffectiveFork.central_specialized`, `EffectiveFork.center_parameterization`, `EffectiveFork.endpoint_parameterization`, `EffectiveFork.tau_parameterization`, `EffectiveFork.tau_isTuring` | **Proved.** Actual ordinary universal evaluation and recursive specialization at all three components. The central computation checks that both endpoint computations halt with the projected outputs. Every arrow `F:Y×V⇀V` has a total coherent parameter, and factorization is equality of partial functions, including simultaneous undefinedness. The actual span comparison, pullback composition and canonical restriction formula now discharge the presentation comparison. |
-| `prop:fork-recursion` | — | **Pending.** |
+| `prop:fork-recursion` | `EffectiveFork.Recursion.Generated`, `EffectiveFork.Recursion.Generated.iso`, `EffectiveFork.Recursion.recursionCategory`, `EffectiveFork.Recursion.rangeFunctor`, `EffectiveFork.Recursion.splittingEquivalence`, `EffectiveFork.Recursion.realization_rst`, `EffectiveFork.Recursion.pair_inseparable` | **Proved.** Exact full generated subcategory, inherited prodominical/products/coproducts/restriction/range structure, frame-derived isotype and actual checked Turing universality. The restriction splitting is equivalent to the full partial fork category via explicit inverse hom assignments and dominance. The inclusion lifts the actual complementary-pair sections by fullness and instantiates Theorem 6.3. |
 | `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card`, `EffectiveFork.universal_no_decidable_equality` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork, its concrete recursive coding, and the five terminal-support patterns are proved. The non-equivalence argument remains. |
-| `prop:fork-syntax-initial` | — | **Pending.** |
-| `thm:fork-proof-presentation` | — | **Pending.** |
+| `prop:fork-syntax-initial` | `ForkSyntax.Formula.codingEquiv`, `ForkSyntax.Formula.sigma_computable`, `ForkSyntax.S`, `ForkSyntax.theta_total`, `ForkSyntax.nu_total`, `ForkSyntax.implication_total` | **Partial.** Exact finite formula trees, recursive parsing/coding and atom substitution, actual syntax fork and total natural constructors are proved. Initiality for arbitrary recursive partial-operation algebras remains. |
+| `thm:fork-proof-presentation` | `ForkSyntax.ProofTree.codingEquiv`, `ForkSyntax.ProofTree.fold_computable`, `ForkSyntax.Concludes.sound`, `ForkSyntax.theorem_least`, `ForkSyntax.Concludes.mapAtoms`, `ForkSyntax.finite_valuation_consistency` | **Partial.** Actual finite ordered Hilbert trees with the three exact schemes, signed atomic leaves and modus ponens; recursive raw-tree coding/structural recursion; least theorem closure, relabeling, and consistency by the finite set of positive leaf labels. The c.e. valid-proof carrier, its conclusion morphism/range and the categorical atomic inclusions remain. |
 | `prop:missing-lift` | — | **Pending.** |
 
 Unnumbered constructions already proved include restriction-idempotent order and
@@ -90,12 +90,14 @@ and `H2` prove componentwise injectivity of partial monomorphisms. Recursive
 inverse graphs then give natural sections. The total-category comparison is an
 equivalence with `WalkingSpan ⥤ EnumerableCarriers.Total`.
 
-The unfinished comparisons include the full quotient of total-monic spans with
-pullback composition, the cosheaf equivalence, and the finite-limit, regular and
-extensive structures. The actual universal fork is constructed with recursive
-ℕ⁴/ℕ² tuple coding. Its specified dominance embeddings and Turing morphism are
-proved in the computational presentation. The frame, full restriction-subcategory
-construction, applications and remaining appendices remain in scope.
+The actual quotient of total-monic spans is now compared with the computational
+presentation, including pullback composition, the identity span and canonical
+restriction. Total finite limits and finite coproducts are constructed. All three
+explicit frames, the full generated recursion subcategory, its inseparable pair
+through Theorem 6.3, and its restriction-splitting equivalence are proved.
+The cosheaf equivalence, regularity/extensivity and total-pullback image stability,
+syntax initiality, the effective proof-carrier/range application, endpoint
+observations, non-equivalence invariant and Appendix C remain in scope.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -124,6 +126,16 @@ checked Turing evaluator. It confirmed the exact program slots, carrier supports
 projection tests and simultaneous undefinedness. The full project verifier passed
 with 656 configured axiom checks. The Turing proof uses its own ordinary
 specialization construction directly.
+
+Further independent reviews checked actual monic-span composition and restriction,
+finite limits/coproducts, all three frame isomorphisms, word coding and functor laws,
+the generated recursion category and its explicit Theorem 6.3 dependency chain,
+and the full restriction-splitting equivalence. No findings remained. Reviews also
+checked actual syntax coding/substitution and total natural constructors, raw finite
+proof trees and the finite-positive-label consistency argument, without inferring
+initiality or an effective proof carrier from those components. The latest full
+repository verifier passed with **741 configured transitive axiom checks**, the
+pinned dependencies and the recorded source/manuscript hashes.
 
 ---
 
