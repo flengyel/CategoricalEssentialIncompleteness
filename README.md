@@ -17,10 +17,12 @@ Version 12 has not been reconciled with the Lean declarations.
 
 The [current source directory](manuscript/local_connectedness/README.md) contains
 a main file and separate files for the preamble, abstract, each section,
-each appendix, and bibliography. Review proceeds section by section, beginning
-with [the abstract](manuscript/local_connectedness/abstract.tex). The
-[organization and abstract review](Audit/2026-10-31-abstract-organization/README.md)
-records the current outline and the recommended order of contributions.
+each appendix, and bibliography. The version 12 abstract is accepted.
+The [continuation prompt](CONTINUATION_INTRODUCTION_REVIEW.md) assigns a
+multi-agent review of the introduction after reading the paper and
+Knuth–Larrabee–Roberts. The accompanying
+[theorem and proof synopsis](notes/manuscript_v12_theorems_and_proofs.md)
+covers all 34 numbered results and their dependencies.
 The modular source was created from version 9 and has since been revised.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),

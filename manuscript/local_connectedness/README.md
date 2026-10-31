@@ -55,4 +55,7 @@ not establish the correctness of the complete paper.
 The [outline and abstract review for version 12](../../Audit/2026-10-31-outline-v12/README.md)
 records the section functions, theorem dependencies, source-based writing review,
 and abstract revision.
+The abstract is accepted. The next section is the introduction; use the
+[continuation prompt](../../CONTINUATION_INTRODUCTION_REVIEW.md) and
+[theorem and proof synopsis](../../notes/manuscript_v12_theorems_and_proofs.md).
 The Lean formalization remains indexed to version 5.
