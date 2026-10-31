@@ -58,6 +58,7 @@ import CategoricalEssentialIncompleteness.EffectiveForkExtensive
 import CategoricalEssentialIncompleteness.ForkCosheafExamples
 
 import CategoricalEssentialIncompleteness.ForkNonEquivalence
+import CategoricalEssentialIncompleteness.OracleMissingLift
 
 /-!
 # Local connectedness and essential incompleteness
@@ -76,8 +77,11 @@ extension. Theory extension preserves this pair. The exact model family, specifi
 application are proved. The three-point construction includes actual monic spans,
 all three frames, the generated recursion category, its categorical inseparable
 pair, and the equivalence of its restriction splitting with the full partial-map
-category. Its syntax and finite-proof applications and other remaining appendix
-results are unfinished; see `FORMALIZATION_STATUS.md`.
+category. Its syntax, finite-proof applications, cosheaf equivalence and
+restriction non-equivalence are proved. Appendix C constructs the actual
+oracle-domain counterexample, including its missing section and disjoint arrows
+without a common upper bound. Unnumbered full-paper obligations remain; see
+`FORMALIZATION_STATUS.md`.
 
 ## Earlier representation-based development
 

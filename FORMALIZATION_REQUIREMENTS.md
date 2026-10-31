@@ -19,10 +19,16 @@ the consistency-only hypotheses; the older source-choice route is separate.
 
 The classical recursion instance, sentence/proof objects, conclusion range,
 negation, numeral substitution and both inclusions now give arithmetic recursive
-inseparability and incompleteness through the new categorical chain. Carry out the nonnumerical
-three-point construction, its recursion and syntax/proof properties, the
-applications, and Appendix C. The finite fork obstruction presently proved is
-only part of the non-equivalence result.
+inseparability and incompleteness through the new categorical chain. The three-point
+construction, applications, structural appendices and actual restriction
+non-equivalence are proved. Appendix C now constructs the exact oracle-domain
+category, ordinary-valued Turing evaluator, separated diagonal pair, missing
+section and disjoint arrows without a common upper bound. All 24 numbered results
+have proofs. Finish the unnumbered free-semigroup universal property, arithmetic
+observation functor and standard-observation equations, the doubling functor,
+endpoint probe observations and complete-standard-theory comparison before
+claiming full-paper completion. Check the cited syntactic non-local-connectedness
+assertion as well.
 
 Every completed result must be imported by the project entry point, included in
 the transitive audit, built with the pinned toolchain, and checked by
