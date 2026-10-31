@@ -324,7 +324,7 @@ on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
 would define a complemented restriction idempotent on $\N^2$ in
 this full subcategory. Hence $A_i,B_i$ are recursively inseparable.
 
-We construct a theory in classical propositional logic from the
+We construct a family of theories in classical propositional logic from the
 disjoint restriction idempotents $a,b$. Define the polynomial functor
 $P:\mathcal E\to\mathcal E$ by
 $P(Z)=V+Z+(Z\times Z)$ and
@@ -344,7 +344,8 @@ Proposition~\ref{prop:fork-proof-initial} defines an endofunctor
 $\mathsf H:\mathcal E/S\to\mathcal E/S$ and equips $(\mathrm{Prf},c)$
 with an initial algebra structure
 $\delta:\mathsf H(\mathrm{Prf},c)\to(\mathrm{Prf},c)$.
-The restriction idempotent $t_0=\ran(c)$ represents the theorems.
+The range $t_0=\ran(c):S\rightharpoonup S$ is the partial identity
+on the subfunctor of conclusions of these proofs.
 For $j=0,1,2$, write $S_j=S(j)$, and let $\theta_j$, $\nu_j$,
 and $\Rightarrow_j$ be the components of the atom, negation,
 and implication morphisms. At component $j$, the logical axiom
@@ -380,9 +381,11 @@ under modus ponens, with $\sigma_i(T_0)\subseteq T_i$ for $i=1,2$.
 These sets form a subfunctor $T\subseteq S$.
 The family is consistent if each theory is consistent, that is,
 $T_j\cap\nu_j^{-1}(T_j)=\varnothing$ for every $j$.
-Let $t_T:S\rightharpoonup S$ be the partial identity on $T$.
-Then $t_0\le t_T$, and consistency is equivalent to
-$t_T\nu^*t_T=0_S$. All three theories are complete precisely when
+Each compatible family of consistent c.e.\ deductively closed extensions
+determines a restriction idempotent $t_T:S\rightharpoonup S$, the partial
+identity on its theorem subfunctor $T\subseteq S$.
+It satisfies $t_0\le t_T$ and $t_T\nu^*t_T=0_S$.
+All three theories are complete precisely when
 $t_T\vee\nu^*t_T=1_S$, since the component domains of $\nu^*t_T$
 are the sets $\nu_j^{-1}(T_j)$.
 
