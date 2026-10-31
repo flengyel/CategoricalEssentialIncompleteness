@@ -1,8 +1,36 @@
-# Domains, finite proofs, and essential incompleteness
+# Manuscripts
+
+## Local connectedness in recursion categories and essential incompleteness
+
+[Version 7 PDF](essential_incompleteness_via_local_connectedness_v7.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v7.tex),
+31 October 2026).
+
+Theorem 3.3 proves inseparability using a range functor into a locally
+connected target and a hypothesis lifting specified sections. Section 4
+constructs a recursion category from Miller's sequence, reduces the diagonal
+pair to its strict-cut pair, and proves essential incompleteness of a theory
+of real closed fields relative to computations independent of the binary name.
+Every individual binary name computes a separator of the strict-cut pair.
+The syntactic, arithmetic, and three-point cosheaf applications follow in
+Sections 5–9. Appendix B gives initial-algebra characterizations of propositional and
+first-order derivations, with sentence proofs obtained by pullback.
+The Miller section and these universal-property statements are not yet
+formalized in Lean; the existing formalization is indexed to version 5.
+
+Build from this directory with:
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v7.tex
+```
+
+The [reviews](../Audit/2026-10-31-miller-prose-v7/README.md) include the
+sentence-by-sentence prose review, mathematical findings, and compilation
+record. The earlier versions and notes follow.
 
 ## Computational constructions
 
-The current note is [Domains, finite proofs, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
+[Domains, finite proofs, and essential incompleteness](domains_hoare_profunctors_essential_incompleteness.pdf)
 ([LaTeX source](domains_hoare_profunctors_essential_incompleteness.tex),
 29 October 2026, 23 pages).
 
@@ -257,4 +285,5 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
