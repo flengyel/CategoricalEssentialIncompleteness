@@ -59,6 +59,101 @@ $\alpha(\bar n)$; for $n\in B$, it gives a PA-proof of
 $\beta(\bar n)$. PA-provable functionality of $G_{e_d}$ gives
 $\PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x))$.
 
+The logical objects used below are constructed in the total part of
+the restriction splitting. Let $\mathcal C_{\mathrm{rec}}$ have c.e.\
+subsets of finite powers of $\N$ as objects and functions computed
+by partial recursive programs total on their source carriers as
+morphisms, with extensional equality.
+
+\begin{proposition}\label{prop:arithmetic-theory-realization}
+There is an equivalence
+\[
+ \operatorname{Tot}(\operatorname{Split}(\mathrm{Rec}))
+       \simeq\mathcal C_{\mathrm{rec}}.
+\]
+The category $\mathcal C_{\mathrm{rec}}$ is regular, with finite
+coproducts that are disjoint and stable under pullback. Every
+monomorphism is an admissible domain monomorphism, and
+\[
+ \operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
+       \simeq\operatorname{Split}(\mathrm{Rec}).
+\]
+For $V=\N$ and a recursive signature of bounded finite arity, the
+syntax and list algebras of Definition~\ref{def:categorical-syntax}
+exist in $\mathcal C_{\mathrm{rec}}$ and are stable under parameters.
+For every axiom subobject of the sentence object, the inference
+endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
+algebra of finite derivations.
+\end{proposition}
+\begin{proof}
+A restriction idempotent in $\mathrm{Rec}$ is the partial identity
+on a c.e.\ carrier. A total morphism between two split objects is a
+partial recursive function with exactly the source carrier as domain
+and values in the target carrier. Conversely, a program total on a
+c.e.\ source can first semidecide membership in that source, giving
+the same function with exactly that domain. The recursive numerical
+codings identify these carriers with c.e.\ subsets of finite powers
+of $\N$ and give the stated equivalence.
+
+A singleton is terminal. Products and equalizers are c.e.\ carriers,
+computed by pairing and numerical equality. Tagged unions give
+finite coproducts. For a morphism into a tagged union, the two tag
+tests decompose its source into c.e.\ subcarriers; their coproduct
+maps isomorphically to the source. Thus coproducts are disjoint and
+stable under pullback. The image of a morphism is c.e.\ by
+dovetailing its computations; factorization through that image is
+a surjection followed by an inclusion. A surjection $e:C\to D$ is the
+coequalizer of its kernel pair: for $h:C\to Z$ constant on its
+fibers, search on input $y\in D$ for $x$ with $e(x)=y$ and return
+$h(x)$. This is the unique descended morphism. Pullbacks preserve
+surjections, proving regularity.
+
+Singleton maps detect noninjectivity, so monomorphisms are exactly
+the injections. Preimage search for an injection $m:C\to D$ gives
+a partial recursive inverse on its c.e.\ image. Hence every such
+monomorphism is an admissible domain inclusion up to isomorphism.
+The span $C\xleftarrow{m}B\xrightarrow{g}D$ represents the partial
+function $gm^{-1}$. Conversely, restricting a partial recursive
+function to its domain gives such a span. These assignments respect
+composition by pullback and give the restriction equivalence.
+
+Numerical equality makes $V=\N$ decidable. Encode terms and formulas
+as finite labeled ordered trees, and lists as finite sequences of
+variable names. Their carriers and constructors are recursive.
+To prove initiality with parameters, fix any c.e.\ carrier $P$ and
+an algebra for the functor $K_P$ of Appendix~\ref{app:syntax-theories}
+on $x:X\to P$ and $y:Y\to P$. For $(p,t)$ or
+$(p,\varphi)$, evaluate the tree from its leaves to its root using
+that algebra, retaining $p$ throughout. The algebra operations are
+recursive on their specified carriers and preserve their projection
+to $P$. Induction on the tree therefore proves termination and
+membership of the result in the fiber over $p$. The resulting
+morphisms $P\times\mathsf{Tm}\to X$ and
+$P\times\mathsf{Fm}\to Y$ satisfy the algebra equations;
+the same induction proves uniqueness.
+This proves initiality in every such slice. Evaluation of finite
+lists proves parameter stability of the list algebra in the same
+way. The free-variable and substitution folds of the appendix
+therefore exist here. Induction identifies them with the lists of
+free-variable occurrences and the usual free-for substitution on
+these named-variable trees.
+
+Represent an axiom subobject by its c.e.\ image in the sentence
+carrier. A finite derivation tree records its rule instance and
+ordered children at each node. Tree shape, logical instance
+conditions, and equality of child conclusions with the prescribed
+premises are recursive tests. The finitely many nonlogical axiom
+membership tests are semidecidable. Running these tests in parallel
+gives a c.e.\ carrier of valid derivations. Reading its conclusion
+is recursive, as are the operations adjoining an axiom leaf or an
+inference node. In any algebra for the inference endofunctor,
+evaluate a valid derivation from its leaves to its root. Induction
+shows that each intermediate result has the required conclusion,
+so every algebra operation is applied on its domain, and evaluation
+terminates. This defines an algebra morphism; induction on the same
+trees proves its uniqueness. Thus the derivation algebra is initial.
+\end{proof}
+
 Work in $\operatorname{Split}(\mathrm{Rec})$.
 For a c.e.\ subset $D\subseteq\N$, write $D$ for the split object
 $(\omega,1_D)$, where $1_D$ is the partial identity on $D$.
@@ -66,9 +161,8 @@ A partial recursive function $h:\N\rightharpoonup\N$ with domain
 contained in $D$ and image contained in a c.e.\ subset $E\subseteq\N$
 represents a morphism
 $D\rightharpoonup E$; it is total precisely when its domain is $D$.
-The comparison with partial maps between c.e.\ numerical carriers
-is constructed in Appendix~\ref{app:fork-structure}, following
-Proposition~\ref{prop:fork-recursion}.
+Proposition~\ref{prop:arithmetic-theory-realization} identifies this
+presentation with partial maps between c.e.\ numerical carriers.
 In this presentation, restriction idempotents are partial identities
 on c.e.\ subsets, their joins are partial identities on unions, and inverse images along
 total morphisms preserve these joins.
@@ -79,7 +173,9 @@ on each original object, their order, and their complements unchanged.
 Thus the partial identities $a,b$ on $A,B$ remain inseparable
 on $I(\omega)$.
 
-Let $S$ be the recursive set of codes of closed arithmetic sentences.
+Use the syntax of Proposition~\ref{prop:arithmetic-theory-realization}
+for the arithmetic signature. Its sentence object $S$ is the recursive
+set of codes of closed arithmetic sentences.
 Negation and numeral substitution give total maps
 \[
  \nu:S\to S,\qquad \nu(\ulcorner\varphi\urcorner)
@@ -87,8 +183,8 @@ Negation and numeral substitution give total maps
  \qquad
  \theta:\N\to S,\qquad \theta(n)=\ulcorner\alpha(\bar n)\urcorner.
 \]
-For a c.e.\ theory $T\supseteq\PA$, fix a recursive Hilbert calculus
-with modus ponens and generalization. Let $\mathrm{Prf}_T$ be the
+For a c.e.\ theory $T\supseteq\PA$, use the Hilbert calculus of
+Appendix~\ref{app:first-order-derivations}. Let $\mathrm{Prf}_T$ be the
 set of codes of finite derivation trees from $T$ whose conclusions are sentences.
 This carrier is c.e.: the logical rules and formula syntax are
 recursive, and each candidate proof has only finitely many axiom
@@ -97,8 +193,10 @@ conclusion gives a total morphism
 $c_T:\mathrm{Prf}_T\to S$ in the splitting. Its range
 $t_T=\ran(c_T)$ is the partial identity on the c.e.\ set of theorems
 of $T$.
-Proposition~\ref{prop:first-order-proof-initial} gives the initial-algebra
-and pullback characterization of $c_T$.
+Proposition~\ref{prop:arithmetic-theory-realization} supplies the initial
+derivation algebra. Theorem~\ref{thm:first-order-theory} identifies its
+sentence-conclusion pullback with $c_T$ and its image with the least
+sentence theory containing the axioms of $T$.
 
 The finite computation proofs of $\alpha(\bar n)$ for $n\in A$ give
 $a\le\theta^*t_{\PA}$. For $n\in B$, a finite computation proves
@@ -206,4 +304,3 @@ in \eqref{eq:uniform} is one of his examples
 The argument above obtains $A,B$ from
 Theorem~\ref{thm:local-lifting} and uses finite PA-proofs to
 establish $A\subseteq P_T$ and $B\subseteq N_T$.
-

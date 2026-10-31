@@ -1,9 +1,15 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 12. The modular manuscript was
+This is the working source for version 13. The modular manuscript was
 created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
-The [version 12 PDF](../essential_incompleteness_via_local_connectedness_v12.pdf)
+The [version 13 PDF](../essential_incompleteness_via_local_connectedness_v13.pdf)
 records this revision.
+
+Appendix B contains the categorical construction of syntax, admissible
+substitution, and deductively closed theories. The realization proofs are
+in Sections 4, 8, and 9. The appendix is also available as a
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix.tex).
 
 ## Build
 
@@ -34,7 +40,7 @@ numbering command remains in `main.tex`.
 | [sections/08-essential-incompleteness-of-arithmetic.tex](sections/08-essential-incompleteness-of-arithmetic.tex) | Essential incompleteness of arithmetic |
 | [sections/09-three-point-space.tex](sections/09-three-point-space.tex) | A recursion category from a three-point space |
 | [appendices/a-three-point-cosheaves.tex](appendices/a-three-point-cosheaves.tex) | Appendix: The three-point cosheaf construction |
-| [appendices/b-finite-syntax-and-proofs.tex](appendices/b-finite-syntax-and-proofs.tex) | Appendix: Finite syntax and proofs |
+| [appendices/b-finite-syntax-and-proofs.tex](appendices/b-finite-syntax-and-proofs.tex) | Appendix: Syntax and deductively closed theories |
 | [appendices/c-section-lifting.tex](appendices/c-section-lifting.tex) | Appendix: Necessity of section lifting for inseparability |
 | [bibliography.tex](bibliography.tex) | References |
 
@@ -55,7 +61,8 @@ not establish the correctness of the complete paper.
 The [outline and abstract review for version 12](../../Audit/2026-10-31-outline-v12/README.md)
 records the section functions, theorem dependencies, source-based writing review,
 and abstract revision.
-The abstract is accepted. The next section is the introduction; use the
-[continuation prompt](../../CONTINUATION_INTRODUCTION_REVIEW.md) and
-[theorem and proof synopsis](../../notes/manuscript_v12_theorems_and_proofs.md).
+The accepted abstract is retained. For the introduction review, use the
+[version 12 continuation prompt](../../CONTINUATION_INTRODUCTION_REVIEW.md) and
+[version 12 theorem and proof synopsis](../../notes/manuscript_v12_theorems_and_proofs.md),
+accounting for the revised appendix and its applications in version 13.
 The Lean formalization remains indexed to version 5.

@@ -313,8 +313,118 @@ a morphism $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
 $f=1_Ef1_D$; it is total when $\bar f=1_D$.
 All code operations below are restricted to their indicated carriers.
 
+Put $\mathcal D_a=\operatorname{Tot}(\operatorname{Split}(\mathcal E_a))$.
+The following realization permits us to apply the categorical theory
+construction of Appendix~\ref{app:syntax-theories}.
+
+\begin{proposition}\label{prop:miller-theory-realization}
+The category $\mathcal D_a$ is regular, with finite coproducts that
+are disjoint and stable under pullback. Every monomorphism is an
+admissible domain monomorphism, and there is a restriction equivalence
+\[
+ \operatorname{Par}(\mathcal D_a,\operatorname{Mono})
+       \simeq\operatorname{Split}(\mathcal E_a).
+\]
+For $V=\N$ and a recursive signature of bounded finite arity, the
+syntax and list algebras of Definition~\ref{def:categorical-syntax}
+exist in $\mathcal D_a$ and are stable under parameters.
+For every axiom subobject of the sentence object, the inference
+endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
+algebra of finite derivations.
+\end{proposition}
+\begin{proof}
+A singleton is terminal. Finite products and equalizers are
+$\mathcal E_a$-semidecidable carriers, using parallel membership
+tests and numerical equality. The empty carrier and tagged unions
+give finite coproducts.
+For a morphism $f:C\to D+E$, running $f$ and testing its output tag
+gives two semidecidable inverse-image carriers. Their coproduct
+maps isomorphically to $C$, with inverse given by the same tag test.
+The injections have disjoint images, so these coproducts are disjoint
+and stable under pullback.
+
+For $f:C\to D$, dovetail its computations over all numerical inputs
+to semidecide its image. A surjection $e:C\to D$ is the coequalizer
+of its kernel pair. Indeed, for $h:C\to Z$ constant on the fibers
+of $e$, search on input $y$ for $x$ with $e(x)=y$ and return $h(x)$.
+This computation has domain exactly $D$. The witness found may
+depend on the binary representation of $a$, but its $h$-value does
+not. It therefore defines the unique descended morphism $D\to Z$.
+Every morphism factors through its image in this way, and pullbacks
+preserve surjections, proving regularity. Conversely, a regular
+epimorphism is surjective, since its image factorization and
+extremality force the image inclusion to be an isomorphism.
+
+Singleton maps detect noninjectivity, so the monomorphisms are
+exactly the injections. For an injection $m:C\to D$, preimage
+search returns the unique $x$ with $m(x)=y$. Its domain is $m(C)$,
+and both its domain and its value are independent of the binary
+representation. This gives a partial inverse $m^\dagger$ in the
+restriction splitting. Hence every monomorphism is an admissible
+domain inclusion up to isomorphism. A span
+$C\xleftarrow{m}B\xrightarrow{g}D$ represents $gm^\dagger$;
+conversely, every partial morphism is total on its semidecidable
+domain. These assignments respect composition by pullback and give
+the displayed restriction equivalence.
+
+Numerical equality makes $V=\N$ decidable. Encode terms and formulas
+as finite labeled ordered trees with distinct constructor tags,
+and lists of variable names as finite sequences. Recursive parsing
+and the recursive symbol carriers make these carriers and their
+constructors recursive. Fix an arbitrary object $P$ of $\mathcal D_a$
+and a $K_P$-algebra on two objects over $P$. On input $(w,t)$ or
+$(w,\varphi)$, first semidecide $w\in P$ and check the tree, then
+evaluate it from its leaves to its root using the algebra operations
+in the fiber over $w$. Each operation preserves that fiber.
+Induction on the tree proves termination and gives the same result
+for every $p\in P_a$, because each algebra operation has a common
+domain and value. Thus evaluation defines morphisms from
+$P\times\mathsf{Tm}$ and $P\times\mathsf{Fm}$ with exactly these
+source domains. They satisfy the algebra equations, and induction
+proves uniqueness. This proves syntax initiality in every slice
+over $P$. Evaluation of finite lists, retaining the same parameter
+$w$, proves the corresponding assertion for the list algebra.
+
+The free-variable and substitution folds of the appendix consequently
+exist in $\mathcal D_a$. In this realization, the free-variable fold
+computes finite lists of occurrences. The single-variable
+substitution fold computes either failure or a resulting formula:
+it compares the bound and substituted variables and uses the finite
+membership tests in~\eqref{eq:quantifier-fold}. These computations
+are ordinary recursive functions. The pullback in
+Proposition~\ref{prop:categorical-substitution} therefore gives the
+recursive free-for domain and substitution on that domain. The
+sentence carrier, where the free-variable list is empty, is recursive.
+
+Represent an axiom subobject by its semidecidable image in the
+sentence carrier. Use the seven logical schemes, modus ponens,
+and generalization of Appendix~\ref{app:first-order-derivations}.
+A finite derivation tree records its rule instance and ordered
+children at every node. Tree shape, logical instance conditions,
+and agreement of child conclusions with the required premises are
+recursive tests. Run these tests together with the finitely many
+nonlogical axiom membership tests. They semidecide a carrier
+$P_A$ with the same membership outcome for every $p\in P_a$.
+Reading the root gives a total conclusion morphism
+$c_A:P_A\to\mathsf{Fm}$, and adjoining a labeled root gives an
+$H_A$-algebra.
+
+For any $H_A$-algebra, first semidecide that the input is a valid
+derivation, then evaluate it from its leaves to its root. Induction
+shows that each intermediate value has the prescribed conclusion,
+so the next algebra operation is applied on its domain. The
+evaluation terminates on every valid derivation. The operations'
+common domains and values make its domain and result independent
+of $p\in P_a$, so it is a morphism of $\mathcal D_a$ over
+$\mathsf{Fm}$. Its recursive equations make it an algebra morphism;
+induction on derivations proves uniqueness. Thus the derivation
+algebra is initial.
+\end{proof}
+
 Consider the language of ordered fields with additional constants
-$(c_n)_{n\in\N}$. Let $T_a$ consist of a recursive axiomatization of
+$(c_n)_{n\in\N}$. Its symbol carriers are recursive and its arities
+are at most two, so Proposition~\ref{prop:miller-theory-realization}
+applies. Let $T_a$ consist of a recursive axiomatization of
 real closed ordered fields together with the axioms
 \begin{equation}\label{eq:miller-theory}
  q<c_n\quad\text{if }q<a(n),\qquad
@@ -348,20 +458,18 @@ of a constant into an inequality give ordinary recursive total morphisms
  \theta(n)=\ulcorner c_n<1/2\urcorner.
 \]
 For a theory $T$ with an $\mathcal E_a$-semidecidable axiom set,
-fix a recursive Hilbert calculus with modus ponens and generalization,
-and let $\mathrm{Prf}_T$ be the set of codes of its finite derivation
-trees whose conclusions are sentences. Membership is
-$\mathcal E_a$-semidecidable: syntax and inference checks are recursive,
-and the finitely many nonlogical axiom tests can be run in parallel.
-The validity of a derivation is independent of the binary representation of $a$. Thus
-$\mathrm{Prf}_T$ is an object of the splitting, and reading the root
-conclusion gives a total morphism
+let $A_T\hookrightarrow S$ be its axiom subobject. By
+Proposition~\ref{prop:miller-theory-realization}, the inference
+endofunctor $H_{A_T}$ has an initial derivation algebra. Pull its
+conclusion morphism back to $S$, obtaining
 \[
  c_T:\mathrm{Prf}_T\to S.
 \]
-Proposition~\ref{prop:first-order-proof-initial} characterizes this object
-as the pullback of the initial derivation algebra to the sentence object.
-Its range $t_T=\ran(c_T)$ is the partial identity on the theorem set.
+Theorem~\ref{thm:first-order-theory} identifies its image with the
+sentence theory generated by $A_T$. The realization proposition
+makes this image monomorphism an admissible domain, so its range
+$t_T=\ran(c_T)$ is the partial identity on the theorem set in
+$\operatorname{Split}(\mathcal E_a)$.
 The inverse image $\nu^*t_T$ is the partial identity on the set of
 sentence codes whose negations are provable in $T$.
 
@@ -377,10 +485,10 @@ $1_{L_a},1_{R_a}$ are inseparable; the full inclusion into the restriction
 splitting preserves this property. Joins of restriction idempotents in
 the splitting are partial identities on unions, and their inverse images
 are partial identities on the corresponding set preimages.
-For a consistent extension $T\supseteq T_a$, we have
-$t_{T_a}\le t_T$ and $t_T\nu^*t_T=0_S$.
+For a consistent extension $T\supseteq T_a$, leastness in
+Theorem~\ref{thm:first-order-theory} gives $t_{T_a}\le t_T$,
+while consistency gives $t_T\nu^*t_T=0_S$.
 Corollary~\ref{cor:domain-incompleteness} therefore makes
 $t_T,\nu^*t_T$ inseparable and gives
 $t_T\vee\nu^*t_T\ne1_S$. This is incompleteness of $T$.
 \end{proof}
-

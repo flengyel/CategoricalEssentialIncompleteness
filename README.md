@@ -1,28 +1,30 @@
 # Categorical essential incompleteness
 
-The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 12](manuscript/essential_incompleteness_via_local_connectedness_v12.pdf)
+The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 13](manuscript/essential_incompleteness_via_local_connectedness_v13.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
 31 October 2026). Section 3 proves the range-functor lifting theorem;
 Section 4 applies it to Miller's sequence and a theory of real closed fields.
-Appendix B characterizes derivations by initial algebras and sentence proofs
-by pullbacks. The Miller section and these universal-property statements
-have not yet been formalized in Lean.
+Appendix B constructs syntax, admissible substitution, and deductively closed
+theories categorically, with explicit ambient categories and existence hypotheses.
+Sections 4 and 8 prove the first-order realizations; Section 9 proves the
+propositional realization. These constructions and the Miller section have
+not yet been formalized in Lean.
 The [version 12 outline and review](Audit/2026-10-31-outline-v12/README.md)
 records the section functions, theorem dependencies, and abstract revision.
 The earlier [mathematical and prose reviews](Audit/2026-10-31-terminology-v9/README.md)
 record the terminology corrections, explicit numerical codings, and comparison
 with Montagna's presentation. The definition of range functor and the three
 central result statements in Section 3 are unchanged from version 8.
-Version 12 has not been reconciled with the Lean declarations.
+Version 13 has not been reconciled with the Lean declarations.
 
 The [current source directory](manuscript/local_connectedness/README.md) contains
 a main file and separate files for the preamble, abstract, each section,
-each appendix, and bibliography. The version 12 abstract is accepted.
-The [continuation prompt](CONTINUATION_INTRODUCTION_REVIEW.md) assigns a
+each appendix, and bibliography. The accepted version 12 abstract is retained.
+The [version 12 continuation prompt](CONTINUATION_INTRODUCTION_REVIEW.md) assigns a
 multi-agent review of the introduction after reading the paper and
 Knuth–Larrabee–Roberts. The accompanying
-[theorem and proof synopsis](notes/manuscript_v12_theorems_and_proofs.md)
-covers all 34 numbered results and their dependencies.
+[version 12 theorem and proof synopsis](notes/manuscript_v12_theorems_and_proofs.md)
+covers that version's 34 numbered results and their dependencies.
 The modular source was created from version 9 and has since been revised.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),

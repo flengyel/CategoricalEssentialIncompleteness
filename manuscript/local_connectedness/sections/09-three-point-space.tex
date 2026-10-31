@@ -325,56 +325,224 @@ on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
 would define a complemented restriction idempotent on $\N^2$ in
 this full subcategory. Hence $A_i,B_i$ are recursively inseparable.
 
-We construct a family of theories for the propositional calculus specified
-below, using the disjoint restriction idempotents $a,b$. Define the polynomial functor
-$P:\mathcal E\to\mathcal E$ by
-$P(Z)=V+Z+(Z\times Z)$ and
-$P(f)=1_V+f+(f\times f)$ for morphisms $f$ of $\mathcal E$.
-Its initial algebra $\iota:P(S)\to S$ is constructed from finite
-formula trees. Initiality means that every morphism
-$\alpha:P(Z)\to Z$ of $\mathcal E$ admits a unique morphism $u:S\to Z$
-of $\mathcal E$
-with $u\iota=\alpha P(u)$.
-The three summands give constructors for atoms, negation, and implication.
-Write $\theta:V\to S$ for the total atom map
-and $\nu:S\to S$ for the total negation constructor.
-Let $\mathrm{Prf}$ be the object of finite proofs for the rules below
-and $c:\mathrm{Prf}\to S$ its conclusion morphism in $\mathcal E$,
-viewed as a total morphism of $\mathcal A$.
-Proposition~\ref{prop:fork-proof-initial} defines an endofunctor
-$\mathsf H:\mathcal E/S\to\mathcal E/S$ and equips $(\mathrm{Prf},c)$
-with an initial algebra structure
-$\delta:\mathsf H(\mathrm{Prf},c)\to(\mathrm{Prf},c)$.
-The range $t_0=\ran(c):S\rightharpoonup S$ is the partial identity
-on the subfunctor of conclusions of these proofs.
-For $j=0,1,2$, write $S_j=S(j)$, and let $\theta_j$, $\nu_j$,
-and $\Rightarrow_j$ be the components of the atom, negation,
-and implication morphisms. At component $j$, the logical axiom
-schemes, with $\alpha,\beta,\gamma\in S_j$, are
+The category $\mathcal E$ is regular with finite coproducts, and its
+images are componentwise images (Proposition~\ref{prop:fork-total}).
+We realize the propositional construction of
+Appendix~\ref{app:propositional-theories} in this category, with atom
+object $V$ and additional axioms determined by $A,B\subseteq V$.
+
+For $j=0,1,2$, let $S_j$ be the set of finite rooted ordered formula trees
+with constructors
 \[
-\begin{gathered}
- \alpha\Rightarrow_j(\beta\Rightarrow_j\alpha),\\
- (\alpha\Rightarrow_j(\beta\Rightarrow_j\gamma))
-   \Rightarrow_j((\alpha\Rightarrow_j\beta)\Rightarrow_j
-                         (\alpha\Rightarrow_j\gamma)),\\
- (\nu_j\beta\Rightarrow_j\nu_j\alpha)
-       \Rightarrow_j(\alpha\Rightarrow_j\beta).
-\end{gathered}
+ \theta_j(x)\quad(x\in V_j),\qquad
+ \nu_j(\varphi)\quad(\varphi\in S_j),\qquad
+ \varphi\Rightarrow_j\psi\quad(\varphi,\psi\in S_j).
 \]
-Modus ponens at component $j$ concludes $\beta$ from $\alpha$
-and $\alpha\Rightarrow_j\beta$. The additional axioms are
-$\theta_j(x)$ for $x\in A_j$ and $\nu_j\theta_j(y)$ for $y\in B_j$.
-For a restriction idempotent $t$ on $S$, denote by $D_t\subseteq S$
-the c.e.\ subfunctor on which $t$ is the partial identity.
-Theorem~\ref{thm:fork-proof-presentation} constructs this syntax and
-proof object, proves that $D_{t_0}$ is the least
-subfunctor closed under modus ponens and containing the axioms, and proves
-consistency. The one-node proofs give the first two relations below,
-and consistency gives the third:
+Distinct constructors have distinct tags. Recursive encodings with
+recursive parsing make $S_j$ a recursive numerical carrier, since
+$V_j$ is recursive. For $i=1,2$, replacing every atom label $x$ by
+$r_i^V(x)$ and retaining the constructors gives a total recursive map
+$\sigma_i:S_0\to S_i$. These maps define a functor
+$S:J\to\mathcal C_{\mathrm{rec}}$. The constructors commute with
+relabeling, so they define morphisms
+\[
+ \theta:V\to S,\qquad \nu:S\to S,
+ \qquad {\Rightarrow}:S\times S\to S
+\]
+of $\mathcal E$. Define $P:\mathcal E\to\mathcal E$ by
+$P(Z)=V+Z+(Z\times Z)$ and
+$P(f)=1_V+f+(f\times f)$. Its constructor algebra is
+$\iota=[\theta,\nu,\Rightarrow]:P(S)\to S$.
+
+\begin{proposition}\label{prop:fork-syntax-initial}
+The algebra $\iota$ is initial: for every
+$\alpha:P(Z)\to Z$ in $\mathcal E$, there is a unique morphism
+$u:S\to Z$ in $\mathcal E$ satisfying $u\iota=\alpha P(u)$.
+\end{proposition}
+\begin{proof}
+At component $j$, evaluate a formula tree from its leaves to its root,
+using the operations given by $\alpha_j:V_j+Z_j+Z_j^2\to Z_j$.
+Induction proves termination, membership of the result in $Z_j$, and
+the algebra equation. Evaluation is partial recursive and total on
+$S_j$, so it defines a morphism $u_j:S_j\to Z_j$ of
+$\mathcal C_{\mathrm{rec}}$.
+
+Write $z_i=Z(0\to i):Z_0\to Z_i$. Naturality of $\alpha$
+says that $z_i$ commutes with each constructor operation, with
+$r_i^V$ applied to atom labels. Induction therefore gives
+$z_i u_0=u_i\sigma_i$. Thus the $u_j$ form a morphism of
+$\mathcal E$. Any algebra morphism agrees with these evaluations
+on atoms and then on negations and implications by induction,
+proving uniqueness.
+\end{proof}
+
+The logical axiom schemes define morphisms
+$\Lambda_1,\Lambda_3:S^2\to S$ and $\Lambda_2:S^3\to S$.
+For $\alpha,\beta,\gamma\in S_j$, their components are
+\begin{align*}
+ \Lambda_{1,j}(\alpha,\beta)
+   &=\alpha\Rightarrow_j(\beta\Rightarrow_j\alpha),\\
+ \Lambda_{2,j}(\alpha,\beta,\gamma)
+   &=(\alpha\Rightarrow_j(\beta\Rightarrow_j\gamma))
+     \Rightarrow_j((\alpha\Rightarrow_j\beta)
+                         \Rightarrow_j(\alpha\Rightarrow_j\gamma)),\\
+ \Lambda_{3,j}(\alpha,\beta)
+   &=(\nu_j\beta\Rightarrow_j\nu_j\alpha)
+                         \Rightarrow_j(\alpha\Rightarrow_j\beta).
+\end{align*}
+The positive and negative atomic axiom morphism
+\[
+ [\theta|_A,\nu\theta|_B]:A+B\longrightarrow S
+\]
+is monic: each component is injective, because the constructors are
+injective and the atom and negation tags are distinct. It therefore
+presents the axiom subobject used in
+Appendix~\ref{app:propositional-theories}, with positive and negative
+labels retained. Put
+\[
+ \begin{gathered}
+ \mathrm{Ax}=S^2+S^3+S^2+A+B,\\
+ \lambda=[\Lambda_1,\Lambda_2,\Lambda_3,\theta|_A,\nu\theta|_B]:
+                 \mathrm{Ax}\longrightarrow S.
+ \end{gathered}
+\]
+A member of $\mathrm{Ax}_j$ records an axiom tag and its parameters;
+$\lambda_j$ gives its conclusion.
+
+Write $\pi_1,\pi_2:S^2\to S$ for the projections and put
+$\mu=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2$.
+For $q:Q\to S$ in $\mathcal E/S$, let $M(Q,q)$ be the pullback
+\[
+\begin{tikzcd}[column sep=large]
+ M(Q,q)\arrow[r,"v_q"]\arrow[d,"w_q"'] &
+ Q\times Q\arrow[d,"q\times q"]\\
+ S\times S\arrow[r,"\mu"'] & S\times S.
+\end{tikzcd}
+\]
+Its component members $(p_1,p_2,\alpha,\beta)$ satisfy
+$q_j(p_1)=\alpha$ and $q_j(p_2)=\alpha\Rightarrow_j\beta$.
+The conclusion morphism is
+$\kappa_q=\pi_2w_q:M(Q,q)\to S$. Define
+\[
+ \mathsf H:\mathcal E/S\longrightarrow\mathcal E/S,
+ \qquad
+ \mathsf H(Q,q)=
+       (\mathrm{Ax}+M(Q,q),[\lambda,\kappa_q]).
+\]
+For a slice morphism $h:(Q,q)\to(Q',q')$, the pullback gives
+$M(h):M(Q,q)\to M(Q',q')$ with
+$v_{q'}M(h)=(h\times h)v_q$ and $w_{q'}M(h)=w_q$.
+Put $\mathsf H(h)=1_{\mathrm{Ax}}+M(h)$; pullback uniqueness
+proves the functor laws. The rule data of
+Appendix~\ref{app:closed-subobjects} are
+$R_0=\mathrm{Ax}$, $q_0=\lambda$, $R_1=0$, and
+$R_2=S^2$, $p_2=\mu$, $q_2=\pi_2$; the map $p_0:R_0\to1$
+is unique. Since $\mathcal E$ is extensive, the unary pullback
+summand is initial, giving the displayed form of $\mathsf H$.
+
+At component $j$, a derivation is a finite rooted ordered tree.
+Each leaf is labeled by a member of $\mathrm{Ax}_j$ and concludes
+its image under $\lambda_j$. Each nonleaf has the modus-ponens tag
+and two children concluding $\alpha$ and
+$\alpha\Rightarrow_j\beta$; it concludes $\beta$. Let
+$\mathrm{Prf}_j$ be the carrier of these trees. Tree shape, logical
+parameters, and premise matching are recursively decidable; the
+finitely many positive and negative axiom labels require semidecision
+of membership in $A_j$ and $B_j$. Dovetailing these tests shows that
+$\mathrm{Prf}_j$ is c.e. Reading the conclusion gives a morphism
+$c_j:\mathrm{Prf}_j\to S_j$ of $\mathcal C_{\mathrm{rec}}$.
+
+For $i=1,2$, relabel formula parameters by $\sigma_i$ and atomic
+axiom labels by $r_i^V$, retaining each node tag. Since $A,B$ are
+subfunctors, $r_i^V(A_0)\subseteq A_i$ and
+$r_i^V(B_0)\subseteq B_i$. Relabeling therefore preserves axiom
+leaves. Commutation of $\sigma_i$ with implication preserves premise
+matching at modus-ponens nodes. The resulting morphisms
+$\rho_i:\mathrm{Prf}_0\to\mathrm{Prf}_i$ satisfy
+$c_i\rho_i=\sigma_i c_0$, by induction. They define an object
+$\mathrm{Prf}$ of $\mathcal E$, and the $c_j$ define
+$c:\mathrm{Prf}\to S$ in $\mathcal E$.
+
+Forming a leaf and adjoining a modus-ponens root give morphisms
+$\ell:\mathrm{Ax}\to\mathrm{Prf}$ and
+$m:M(\mathrm{Prf},c)\to\mathrm{Prf}$ in $\mathcal E$.
+They are recursive on their carriers and commute with relabeling.
+The injective implication constructor makes the consequent at a
+modus-ponens node unique. The equations
+$c\ell=\lambda$ and $cm=\kappa_c$ make
+$\delta=[\ell,m]:\mathsf H(\mathrm{Prf},c)\to(\mathrm{Prf},c)$
+an algebra in $\mathcal E/S$.
+
+\begin{proposition}\label{prop:fork-proof-initial}
+The algebra $\delta$ is initial. For every
+$\eta:\mathsf H(Q,q)\to(Q,q)$ in $\mathcal E/S$, there is a
+unique morphism $u:\mathrm{Prf}\to Q$ of $\mathcal E$ with
+$qu=c$ and $u\delta=\eta\mathsf H(u)$.
+\end{proposition}
+\begin{proof}
+Evaluate a derivation from its leaves to its root using $\eta_j$.
+At a leaf labeled by $\xi\in\mathrm{Ax}_j$, the value has
+$q_j$-image $\lambda_j(\xi)$ because $\eta$ is a slice morphism.
+If the children of a modus-ponens node conclude $\alpha$ and
+$\alpha\Rightarrow_j\beta$, their evaluated values, together
+with $\alpha,\beta$, belong to $M(Q,q)_j$. The corresponding
+operation of $\eta_j$ returns a value with $q_j$-image $\beta$.
+Induction proves termination and gives a partial recursive function
+$u_j:\mathrm{Prf}_j\to Q_j$ total on its source carrier, with
+$q_ju_j=c_j$.
+
+Naturality of $\eta$, $\lambda$, and the pullback projections
+makes each evaluation step commute with relabeling. Induction gives
+$Q(0\to i)u_0=u_i\rho_i$, so the $u_j$ form a morphism
+$u:\mathrm{Prf}\to Q$ of $\mathcal E$. Its defining recursion
+is the algebra equation. Any other algebra morphism agrees on
+leaves and then on each modus-ponens node by induction, proving
+uniqueness.
+\end{proof}
+
+For a restriction idempotent $t$ on $S$, let $D_t\subseteq S$
+be the c.e. subfunctor on which $t$ is the partial identity. View
+$c$ as a total morphism of $\mathcal A$ and put $t_0=\ran(c)$.
+
+\begin{theorem}\label{thm:fork-proof-presentation}
+The subfunctor $D_{t_0}\subseteq S$ is the least c.e. subfunctor
+containing the logical and positive and negative atomic axioms and
+closed under modus ponens. Its component theories are consistent,
+and
 \begin{equation}\label{eq:atomic-inequalities}
  a\le\theta^*t_0,\qquad
- b\le\theta^*\nu^*t_0,\qquad t_0\,\nu^*t_0=0.
+ b\le\theta^*\nu^*t_0,\qquad t_0\nu^*t_0=0_S.
 \end{equation}
+\end{theorem}
+\begin{proof}
+Apply Theorem~\ref{thm:least-theorem-subobject} to the regular
+category $\mathcal E$ and the initial algebra of
+Proposition~\ref{prop:fork-proof-initial}. It identifies the image
+of $c$ with the least subobject closed under these rules. Images
+in $\mathcal E$ are componentwise, so its components are
+$T_j=c_j(\mathrm{Prf}_j)\subseteq S_j$. Proposition
+\ref{prop:fork-structure} identifies its partial identity with
+$t_0=\ran(c)$, and hence the image subfunctor with $D_{t_0}$.
+The one-node positive and negative proofs give morphisms
+$A\to\mathrm{Prf}$ and $B\to\mathrm{Prf}$ whose composites
+with $c$ are $\theta|_A$ and $\nu\theta|_B$. These factorizations
+give the first two inequalities in \eqref{eq:atomic-inequalities}.
+
+For consistency, fix $j$ and suppose derivations $p,q$ conclude
+$\varphi$ and $\nu_j\varphi$. Let $L\subseteq A_j$ be the finite
+set of labels at positive leaves of either derivation. Assign truth
+value $1$ precisely to atoms with labels in $L$, and value $0$ to
+all other atoms. Extend this assignment by Boolean negation and
+implication. Every positive leaf is true. Every negative leaf has
+its label in $B_j$, disjoint from $A_j$ and hence from $L$, so it
+is true. The three logical schemes are Boolean tautologies, and
+modus ponens preserves truth. Induction on both derivations would
+make $\varphi$ and its negation true, a contradiction. Thus
+$T_j\cap\nu_j^{-1}(T_j)=\varnothing$ at every component, which
+is $t_0\nu^*t_0=0_S$ because restriction operations in
+$\mathcal A$ are componentwise.
+\end{proof}
+
 Write $\sigma_i=S(0\to i):S_0\to S_i$ for $i=1,2$.
 A compatible family of c.e.\ theory extensions consists of c.e.\ sets
 $T_j\subseteq S_j$, for $j=0,1,2$, containing $(D_{t_0})_j$ and closed
@@ -448,4 +616,3 @@ This family is consistent. Since $D_{t_0}$ is a subfunctor and
 $T_i$ contains its $i$th component, the family is compatible.
 Theorem~\ref{thm:cosheaf-observation} therefore makes $U$ incomplete.
 \end{proof}
-
