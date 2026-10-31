@@ -53,6 +53,7 @@ import CategoricalEssentialIncompleteness.ForkSyntaxInitialAlgebra
 import CategoricalEssentialIncompleteness.ForkObservationFunctor
 import CategoricalEssentialIncompleteness.EnumerablePartialMaps
 import CategoricalEssentialIncompleteness.ForkCentralNonuniversality
+import CategoricalEssentialIncompleteness.EffectiveForkExtensive
 
 /-!
 # Local connectedness and essential incompleteness

@@ -1,0 +1,85 @@
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
+import CategoricalEssentialIncompleteness.EnumerableFiniteCoproducts
+import Mathlib.CategoryTheory.Extensive
+import Mathlib.CategoryTheory.Limits.Types.Coproducts
+import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+
+/-! # Extensivity of total recursive maps on c.e. carriers -/
+
+set_option backward.isDefEq.respectTransparency false
+set_option backward.isDefEq.respectTransparency.types false
+noncomputable section
+open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
+
+namespace CategoricalEssentialIncompleteness.LocalConnectedness.EnumerableCarriers
+
+theorem underlying_inl_val (X Y : Total) (x : {n // n ∈ X.obj.support}) :
+    (underlying.map (totalInl X Y) x).val=2*x.val :=
+  Part.mem_unique (totalFunction_mem (totalInl X Y) x)
+    (Part.eq_some_iff.mp (val_inl_at X.obj Y.obj x.val x.property))
+
+theorem underlying_inr_val (X Y : Total) (x : {n // n ∈ Y.obj.support}) :
+    (underlying.map (totalInr X Y) x).val=2*x.val+1 :=
+  Part.mem_unique (totalFunction_mem (totalInr X Y) x)
+    (Part.eq_some_iff.mp (val_inr_at X.obj Y.obj x.val x.property))
+
+def underlyingCoproduct_isColimit (X Y : Total) :
+    IsColimit (BinaryCofan.mk (underlying.map (totalInl X Y)) (underlying.map (totalInr X Y))) := by
+  apply Classical.choice
+  apply (Types.binaryCofan_isColimit_iff _).mpr
+  refine ⟨?_,?_,isCompl_iff.mpr ⟨?_,?_⟩⟩
+  · intro x y h
+    apply Subtype.ext
+    have he := congrArg Subtype.val h
+    change (underlying.map (totalInl X Y) x).val=(underlying.map (totalInl X Y) y).val at he
+    simp only [underlying_inl_val] at he
+    omega
+  · intro x y h
+    apply Subtype.ext
+    have he := congrArg Subtype.val h
+    change (underlying.map (totalInr X Y) x).val=(underlying.map (totalInr X Y) y).val at he
+    simp only [underlying_inr_val] at he
+    omega
+  · apply Set.disjoint_left.mpr
+    rintro z ⟨x,hx⟩ ⟨y,hy⟩
+    have he := congrArg Subtype.val (hx.trans hy.symm)
+    change (underlying.map (totalInl X Y) x).val=(underlying.map (totalInr X Y) y).val at he
+    simp only [underlying_inl_val,underlying_inr_val] at he
+    omega
+  · apply codisjoint_iff.mpr
+    apply Set.eq_univ_of_forall
+    intro z
+    change z ∈ Set.range (underlying.map (totalInl X Y)) ∨
+      z ∈ Set.range (underlying.map (totalInr X Y))
+    rcases z.property with ⟨he,hs⟩ | ⟨he,hs⟩
+    · refine Or.inl ⟨⟨z.val/2,hs⟩,?_⟩
+      apply Subtype.ext
+      rw [underlying_inl_val]
+      change 2*(z.val/2)=z.val
+      omega
+    · refine Or.inr ⟨⟨z.val/2,hs⟩,?_⟩
+      apply Subtype.ext
+      rw [underlying_inr_val]
+      change 2*(z.val/2)+1=z.val
+      omega
+
+instance underlying_preservesPair (X Y : Total) : PreservesColimit (Limits.pair X Y) underlying :=
+  preservesColimit_of_preserves_colimit_cocone (coproductIsColimit X Y)
+    ((isColimitMapCoconeBinaryCofanEquiv underlying (totalInl X Y) (totalInr X Y)).symm
+      (underlyingCoproduct_isColimit X Y))
+
+instance underlying_preservesBinaryCoproducts :
+    PreservesColimitsOfShape (Discrete WalkingPair) underlying where
+  preservesColimit := by
+    intro K
+    exact preservesColimit_of_iso_diagram underlying (diagramIsoPair K).symm
+
+instance totalFinitaryExtensive : FinitaryExtensive Total :=
+  finitaryExtensive_of_preserves_and_reflects_isomorphism underlying
+
+end CategoricalEssentialIncompleteness.LocalConnectedness.EnumerableCarriers
