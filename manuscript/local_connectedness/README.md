@@ -1,8 +1,8 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 10. The modular manuscript was
+This is the working source for version 11. The modular manuscript was
 created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
-The [version 10 PDF](../essential_incompleteness_via_local_connectedness_v10.pdf)
+The [version 11 PDF](../essential_incompleteness_via_local_connectedness_v11.pdf)
 records this revision.
 
 ## Build

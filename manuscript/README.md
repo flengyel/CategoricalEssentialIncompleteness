@@ -2,7 +2,7 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 10 PDF](essential_incompleteness_via_local_connectedness_v10.pdf)
+[Version 11 PDF](essential_incompleteness_via_local_connectedness_v11.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 31 October 2026).
 
@@ -181,7 +181,7 @@ lifting criterion from joins of arrows whose restriction idempotents are disjoin
 
 Corollary 6.7 proves inseparability of the restriction idempotents representing
 theorems and refutable formulas of every consistent extension. Its arithmetic
-instance, Corollary 7.1, uses the classical recursion category and proof-conclusion
+instance, Corollary 7.1, uses the recursion category of partial recursive functions and proof-conclusion
 ranges in its restriction
 splitting. The all-model functor from S_T is a separate syntactic instance;
 its construction is not substituted for the effective arithmetic argument.

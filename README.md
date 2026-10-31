@@ -1,6 +1,6 @@
 # Categorical essential incompleteness
 
-The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 10](manuscript/essential_incompleteness_via_local_connectedness_v10.pdf)
+The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 11](manuscript/essential_incompleteness_via_local_connectedness_v11.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
 31 October 2026). Section 3 proves the range-functor lifting theorem;
 Section 4 applies it to Miller's sequence and a theory of real closed fields.
@@ -11,7 +11,7 @@ The [mathematical and prose reviews](Audit/2026-10-31-terminology-v9/README.md)
 record the terminology corrections, explicit numerical codings, and comparison
 with Montagna's presentation. The definition of range functor and the three
 central result statements in Section 3 are unchanged from version 8.
-Version 10 has not been reconciled with the Lean declarations.
+Version 11 has not been reconciled with the Lean declarations.
 
 The [current source directory](manuscript/local_connectedness/README.md) contains
 a main file and separate files for the preamble, abstract, each section,
@@ -118,7 +118,8 @@ of program indices proved equal to identity and zero form a recursively
 inseparable pair, and extension enlarges both sets. Completeness would
 decide identity membership by proof search. This gives a short PA benchmark
 and records effective proof observations. It supplies a comparison on presentations and domain
-observations, not a functor on all arrows from S_T to the classical category.
+observations, not a functor on all morphisms from S_T to the recursion category
+of partial recursive functions.
 The [other-theory applications](Audit/2026-10-29-separator-transfer/OTHER_THEORIES.md)
 reuse S_T through effective interpretations, including ACA_0, finite set
 theory and HA via negative translation. They connect the argument with
@@ -133,7 +134,7 @@ the result to essential incompleteness.
 Theorem 6.3 gives inseparable restriction idempotents; Corollary 6.7 transfers
 this inseparability to the restriction idempotents representing theorems and
 refutable formulas of every consistent extension. Corollary 7.1 applies this
-to PA using the classical recursion category, actual c.e. proof carriers,
+to PA using the recursion category of partial recursive functions, c.e. proof carriers,
 conclusion ranges, and numeral substitution. No soundness of the extensions
 is assumed.
 
@@ -149,7 +150,8 @@ The general theorem does not require preservation of products, although
 these particular model functors preserve them.
 
 The three-point construction gives a recursion category not restriction-
-equivalent to the classical one. Its positive and negative atomic axioms
+equivalent to the recursion category of partial recursive functions.
+Its positive and negative atomic axioms
 use exactly the inseparable pair supplied by Theorem 6.3. Corollary 6.7
 proves internal essential incompleteness, and Theorem 8.2 additionally
 proves recursive inseparability of the endpoint observations.
