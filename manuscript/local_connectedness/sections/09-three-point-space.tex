@@ -434,3 +434,18 @@ sets, so the identity of $\omega\times\omega$ is the required pair morphism.
 The functor laws follow from the identity maps.
 \end{proof}
 
+\begin{corollary}\label{cor:cosheaf-essential-incompleteness}
+For each $i\in\{1,2\}$, the propositional theory with theorem set
+$(D_{t_0})_i$ is essentially incomplete: every consistent extension in
+the same language with a computably enumerable axiom set is incomplete.
+\end{corollary}
+\begin{proof}
+Let $U\subseteq S_i$ be the deductive closure of such an axiom set.
+The finite proof calculus makes $U$ computably enumerable, and
+$U$ contains $(D_{t_0})_i$.
+Set $T_i=U$ and $T_j=(D_{t_0})_j$ for $j\ne i$.
+This family is consistent. Since $D_{t_0}$ is a subfunctor and
+$T_i$ contains its $i$th component, the family is compatible.
+Theorem~\ref{thm:cosheaf-observation} therefore makes $U$ incomplete.
+\end{proof}
+

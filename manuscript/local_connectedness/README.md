@@ -1,8 +1,8 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 11. The modular manuscript was
+This is the working source for version 12. The modular manuscript was
 created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
-The [version 11 PDF](../essential_incompleteness_via_local_connectedness_v11.pdf)
+The [version 12 PDF](../essential_incompleteness_via_local_connectedness_v12.pdf)
 records this revision.
 
 ## Build
@@ -52,6 +52,7 @@ separate from edits to the selected section. Compile the assembled document
 to check references and layout after changes. A review of one section does
 not establish the correctness of the complete paper.
 
-Review begins with the abstract. The [organization and abstract review](../../Audit/2026-10-31-abstract-organization/README.md)
-records the current outline and the recommended order of contributions.
+The [outline and abstract review for version 12](../../Audit/2026-10-31-outline-v12/README.md)
+records the section functions, theorem dependencies, source-based writing review,
+and abstract revision.
 The Lean formalization remains indexed to version 5.

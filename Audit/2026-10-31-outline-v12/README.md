@@ -1,0 +1,88 @@
+# Outline and abstract review
+
+**Manuscript:** *Local connectedness in recursion categories and essential incompleteness*. Version 11 was reviewed; the changes described below are implemented in version 12, dated 31 October 2026.
+
+The abstract's defect was its selection and ordering of information. It named intermediate proof data before explaining the result. The paper proves essential incompleteness by constructing inseparable pairs categorically and connecting those pairs to theorems and refutable sentences in specified logical constructions. The abstract should state that method and its consequences. The numerical codings, reduction morphisms, initial algebras, and completion constructions belong in the body.
+
+Five agents had separate assignments: the general theorem and arithmetic/syntactic arguments; the Miller construction; the cosheaf construction; the complete manuscript outline and exposition; and the complete Knuth–Larrabee–Roberts report. The coordinating review also read every manuscript section, appendix, and the bibliography. These were author-side mathematical and editorial checks, not independent peer review or formal verification.
+
+## 1. Current outline
+
+The section order is retained. The following outline records the actual mathematical function of every section and subsection.
+
+| Location | Contents and function |
+|---|---|
+| **1. Introduction** | Announces the categorical inseparability theorem and the Miller, syntactic, arithmetic, and cosheaf results. Gives the roadmap. **Related work** places these results in the categorical recursion theory of Di Paola and Heller, distinguishes existence theorems for recursion categories, and identifies the uses of Montagna and Miller. |
+| **2. Categorical preliminaries** | **Partial maps and restriction idempotents:** fixes restriction structure, domains, inseparability, inverse images, ranges, splitting, and the Karoubi envelope. **Products, coproducts, and local connectedness:** defines the finite structure, range functors, connectedness, partial monomorphisms, and weak choice. **Recursion categories:** fixes the source category and the Turing-morphism universal property. |
+| **3. Sections of partial monomorphisms and inseparability** | **Sections in a locally connected category:** Lemma 3.1 and Proposition 3.2 construct the relevant target sections; Theorem 3.3 proves source inseparability when those sections lift. **A sufficient condition for lifting:** Proposition 3.4 uses joins of morphisms with disjoint domains. **From inseparable restriction idempotents to incompleteness:** Corollary 3.5 transfers inseparability to the domains that the later logical constructions associate with provability and refutability. |
+| **4. Miller sequences and essential incompleteness** | Defines the sequence and its binary representations. **Computation independent of the binary representation:** Lemma 4.1 and Proposition 4.2 construct the recursion category and its Turing morphism. **The index sets below and above $1/2$:** Lemma 4.3 reduces the categorical diagonal pair to the two cut-index sets; Corollary 4.4 proves inseparability despite separation by every fixed representation. **A theory of real closed fields:** Theorem 4.5 proves consistency and incompleteness of every consistent extension with the stated uniform semidecidability property. |
+| **5. The syntactic recursion category** | Fixes numerical types and codings; records arithmetized evaluation, composition, and specialization; defines the quotient by provable equality; constructs ranges and the required finite structure. Compares the category with Montagna's presentation and explains the failure of composition in the primed systems. |
+| **6. Interpretation in models** | Constructs $F_M:S_T\to\mathbf{Pfn}$ for each model $M\models T$. Proposition 6.1 proves the functor laws and preservation of restrictions, ranges, products, and coproducts. |
+| **7. A faithful family and theory extension** | Combines the model interpretations into a faithful functor to a locally connected product category. Theorem 7.1 establishes the target hypotheses. Theory extension gives a commuting square of functors. **Lifting in the syntactic category:** Lemma 7.2 supplies section lifts and Corollary 7.3 applies Theorem 3.3. The final paragraphs explain the behavior of Turing morphisms and separators under the model functor. |
+| **8. Essential incompleteness of arithmetic** | Uses the numerical recursion category to obtain a fixed recursively inseparable pair. Finite computation proofs give the reductions needed by Corollary 3.5. Corollary 8.1 proves recursive inseparability of theorem and refutation sets for every consistent c.e. extension of PA. **Numeral instances and theory extension:** records the functoriality of the resulting pairs, relates numeral instances to model interpretation, and proves that inseparability in $S_T$ alone does not imply incompleteness of $T$. |
+| **9. A recursion category from a three-point space** | Defines the cosheaf example through the category of c.e. numerical diagrams and its partial maps. Constructs a universal object and the recursion category, and identifies its splitting and Karoubi envelope. **Local connectedness and lifting:** applies Theorem 3.3 and distinguishes the category from the recursion category of partial recursive functions. **Evaluation functors:** Proposition 9.1 identifies preservation properties; the two endpoint evaluations preserve the specified Turing morphism, whereas the middle evaluation does not. **Propositional theories and component theorem sets:** constructs consistent theories and proves Theorem 9.2 for compatible families of extensions. Version 12 adds Corollary 9.3: each endpoint base theory is essentially incomplete. |
+| **Appendix A. The three-point cosheaf construction** | **Cosheaves and functor categories:** proves the cosheaf equivalence and the finite categorical structure. **Partial maps, ranges, and connected restriction idempotents:** verifies the target hypotheses. **A universal object and a frame:** constructs the embeddings and isomorphisms. **A Turing morphism:** proves the parameterization property, including equality of domains. **The recursion category and its splitting:** proves the completion equivalences, numerical comparison, and categorical distinction. |
+| **Appendix B. Finite syntax and proofs** | **The syntax algebra:** constructs finite formula trees and proves initiality. **The proof object and its range:** constructs derivations, identifies their deductively closed image, and proves consistency. **The universal property of the proof object:** defines the endofunctor and proves initiality in the slice category. **First-order derivations and sentence proofs:** supplies the corresponding construction for the Miller and arithmetic theories. |
+| **Appendix C. Necessity of section lifting for inseparability** | Constructs a recursion category and a faithful range functor satisfying the other hypotheses of Theorem 3.3 but having a separable diagonal pair. Exhibits the missing section lift and disjoint morphisms without a common upper bound. |
+
+## 2. Main results and their dependencies
+
+The central question is how categorical inseparability can establish essential incompleteness. The answer has two stages. Theorem 3.3 constructs inseparable restriction idempotents. The logical constructions then supply theories and reductions for which Corollary 3.5 excludes completeness of consistent extensions in the specified class.
+
+| Conclusion | Necessary ingredients |
+|---|---|
+| Source inseparability, Theorem 3.3 | A recursion category with ranges and restriction coproducts; a range functor to a split locally connected target with weak choice and preservation of binary domain joins by inverse image; nonzero image of the identity; lifts of the sections associated with complementary source domains. |
+| Incompleteness, Corollary 3.5 | An inseparable pair; total reduction and negation morphisms; the two reduction inequalities; domain joins preserved by total inverse image. The logical constructions separately establish that the relevant domains are partial identities on deductively closed theorem sets and that consistency and completeness have the stated equations. |
+| Miller theory, Theorem 4.5 | Theorem 3.3; compactness of the representation set; Miller's index property; the recursive reduction to the cut-index sets; finite derivations; Corollary 3.5. |
+| Syntactic-category inseparability, Corollary 7.3 | The explicit category in §5; model interpretation in §6; the faithful family and section lifts in §7; Theorem 3.3. |
+| Arithmetic, Corollary 8.1 | The computation coding from §5; Theorem 3.3 in partial recursive functions; finite PA-proofs of the reduction inclusions; Corollary 3.5. |
+| Cosheaf theories, Theorem 9.2 and Corollary 9.3 | The categorical structure and Turing morphism in Appendix A; Theorem 3.3; the syntax, derivations, and consistency proof in Appendix B; Corollary 3.5; endpoint evaluation. |
+| Necessity of lifting, Proposition C.1 | The oracle-domain counterexample and the explicit nonrecursive section. |
+
+These dependencies have four branches after §3: Miller, syntactic categories, arithmetic, and cosheaves. Three establish logical incompleteness results. The syntactic-category branch establishes inseparability in $S_T$; it does not by itself establish incompleteness of the external theory $T$. Section 8 demonstrates the distinction with $T=\operatorname{Th}(\mathbb N)$.
+
+No whole-paper reordering is needed to repair the abstract. A future introduction revision should explain this dependency structure before listing structural hypotheses. Sections 5–7 can remain in their current order, and §8 must retain its dependence on the computation coding in §5. The first-order part of Appendix B serves §§4 and 8; it is not part of the propositional cosheaf proof.
+
+## 3. Writing source and concrete findings
+
+The governing source was the [official Stanford report of Knuth, Larrabee, and Roberts, *Mathematical Writing*](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf). One source-review agent read its complete extracted text: front matter, §§1–43, and handouts, across all 117 PDF pages. The coordinating review and the organization reviewer consulted the passages used below. Printed page numbers are two less than PDF page numbers. An older local file was invalid; the reading used a newly retrieved official copy.
+
+Verified advice: §1, points 12, 24, and 26, concerns reader motivation, openings, and unnecessary jargon. Wilf (§27, p. 59) recommends presenting the subject and results promptly. Ullman (§30, p. 67) emphasizes types and definite referents. Lamport (§31, pp. 69–71) puts ideas and structure before sentence repair. Halmos (§42, pp. 111–112) treats organization as the relation among branches of an argument. Van Leunen's abstract exercise (§36, p. 87) asks for a short account of a work. The report does not prescribe the abstract template adopted here; the following decisions are applications of its advice.
+
+| Manuscript anchor | Actual difficulty | Action |
+|---|---|---|
+| Version 11 abstract, second sentence | “For the incompleteness applications” adds no mathematical assertion. “Total morphisms to sentence objects” identifies proof data without explaining their purpose. | Replace the abstract as a whole with the method and its consequences. |
+| Version 11 abstract, cosheaf sentences | Formula objects, derivation objects, and the Karoubi envelope occupy the place where the logical conclusion should appear. | State essential incompleteness of the endpoint theories, and establish that consequence explicitly as Corollary 9.3. |
+| §1, opening paragraph | Theorem number and target hypotheses precede the problem. | Retain as a finding for the introduction's separate revision. Begin that revision with the method for obtaining essential incompleteness, then state Theorem 3.3's role and scope. |
+| §3, paragraph after Corollary 3.5 | “In each application” incorrectly includes the syntactic-category branch if read literally. | Name §§4, 8, and 9 explicitly. Implemented. |
+| §§5–8, viewed together | Their relation can be mistaken for a direct implication from inseparability in $S_T$ to incompleteness of $T$. | Preserve the mathematical distinction and show the separate branches in the outline. |
+| §4, categorical consequence after Corollary 4.4 | The failure of preservation of inseparability is a result, not background machinery. | Include it in the abstract. |
+
+## 4. Definition order and terminology
+
+| Term | Location and status | Consequence for the abstract |
+|---|---|---|
+| Restriction domain; inseparable pair | §2.1 gives the restriction idempotents, order, complementary pairs, and definition of inseparability. | Use “inseparable pairs” in the announced categorical construction. |
+| Range functor; local connectedness | §2.2 defines both. Theorem 3.3 states all additional assumptions. | Identify the lifting theorem without attempting an incomplete restatement of its hypotheses. |
+| Sentence object | §4.3 and §8 give recursive sets of sentence codes as objects of the appropriate splitting. §9 instead constructs a functor of propositional formulas. | Omit this local shorthand from the abstract. The defect was exposition, not absence of the concrete constructions. |
+| Proof object | Appendix B defines the derivation endofunctors and proves initiality, with a pullback for sentence conclusions. | Keep the construction and types in the body. |
+| Theory; theorem set; restriction idempotent | §§4, 8, and 9 specify theories first, then define partial identities on their theorem sets or theorem subfunctors. | Do not identify arbitrary idempotents with consistent theories. |
+| Compatible family | §9.3 states the c.e. theorem sets, deductive closure, and two compatibility inclusions. | Theorem 9.2 retains these hypotheses. Corollary 9.3 allows the abstract to state endpoint essential incompleteness without introducing compatibility. |
+| Karoubi envelope | §2.1 defines it; Appendix A proves its equivalence to the partial-map category in this example. | Omit completion machinery from the abstract; retain it in the construction. |
+| Essential incompleteness | Corollary 8.1 specifies c.e. consistent extensions of PA; Theorem 4.5 states the different Miller extension class; new Corollary 9.3 specifies c.e.-axiomatized extensions in the same propositional language. | Preserve the Miller uniformity condition explicitly. |
+
+## 5. Version 12 abstract
+
+> We derive essential incompleteness from a categorical construction of inseparable pairs. The construction uses a lifting theorem for range functors into locally connected restriction categories. We recover recursive inseparability of the theorem and refutation sets of every consistent computably enumerable extension of Peano arithmetic. From Miller's sequence we construct a recursion category and a consistent theory of real closed fields. Every consistent extension of this theory whose axiom set is semidecidable uniformly from all binary representations of the sequence is incomplete. The Miller example also gives a faithful range functor preserving restriction products that sends an inseparable pair to a separable pair. The same categorical method, applied to a recursion category constructed from cosheaves on a three-point space, gives essentially incomplete propositional theories.
+
+The final sentence is supported by the new Corollary 9.3. For a consistent c.e.-axiomatized extension at endpoint $i\in\{1,2\}$, take its c.e. deductive closure as component $T_i$ and keep the base theories at the other components. Compatibility persists because the structure maps originate at component $0$, whose theory remains unchanged. Theorem 9.2 then proves incompleteness. This is a consequence of the existing theorem, not an additional assumption about idempotents or arbitrary theories.
+
+The abstract and this corollary received a further independent check against the stated results. The review found no missing antecedent, change of logical level, or strengthened extension class in the replacement.
+
+## 6. Mathematical review and limits
+
+The assigned mathematical reviews checked the general inseparability and pullback arguments; the syntactic and model functors; the arithmetic reduction; the Miller compactness construction and reduction to cut-index sets; the cosheaf structure, parameterization, and completion equivalences; the derivation algebras and consistency proof; and the counterexample to omitting lifting. No confirmed mathematical blocker was found in those arguments.
+
+The Miller property was also checked against [Miller's author manuscript, Theorem 6.3 and the following paragraph](https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf), and [Bauer–Hanson, §2.1 and Theorem 2.2](https://arxiv.org/html/2404.01256v3). The review did not independently reprove Montagna's formalized computation-coding results, recheck every historical attribution, establish novelty, or reconcile the manuscript with Lean. The introduction's opening remains a documented editorial task for its separate review.
+
+Version 12 was compiled with `latexmk -pdf -interaction=nonstopmode -halt-on-error`: 40 pages, with no LaTeX warnings, unresolved references or citations, or overfull/underfull box reports. The title page, revised introduction passage, §3 scope correction, and new Corollary 9.3 were inspected in the rendered PDF. The archived version 12 PDF is byte-for-byte identical to the compiled `main.pdf`.
