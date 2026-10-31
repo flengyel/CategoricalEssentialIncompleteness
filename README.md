@@ -15,8 +15,10 @@ Version 9 has not been reconciled with the Lean declarations.
 
 The [current source directory](manuscript/local_connectedness/README.md) contains
 a main file and separate files for the preamble, abstract, each section,
-each appendix, and bibliography. Section-by-section revision begins with
-[the introduction](manuscript/local_connectedness/sections/01-introduction.tex).
+each appendix, and bibliography. Review proceeds section by section, beginning
+with [the abstract](manuscript/local_connectedness/abstract.tex). The
+[organization and abstract review](Audit/2026-10-31-abstract-organization/README.md)
+records the current outline and the recommended order of contributions.
 The initial split preserves the version 9 text exactly.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),

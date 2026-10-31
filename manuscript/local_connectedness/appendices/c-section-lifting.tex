@@ -3,7 +3,7 @@
 
 The lifting hypothesis in Theorem~\ref{thm:local-lifting} cannot be
 omitted, even for a faithful range functor that preserves restriction
-products and reflects zero arrows.
+products and reflects zero morphisms.
 
 Fix an acceptable numbering $(\varphi_e)_{e\in\N}$ of the ordinary
 partial recursive functions $\N\rightharpoonup\N$. For a partial
@@ -20,18 +20,18 @@ $\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
 
 The objects of $\mathcal C_K$ are the numerical carriers generated
 from $\N$ by binary Cartesian products and tagged disjoint unions,
-with fixed recursive codings. An arrow $f:X\rightharpoonup Y$ is a partial function whose
+with fixed recursive codings. A morphism $f:X\rightharpoonup Y$ is a partial function whose
 domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
 recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
 on every element of $D_f$ and agrees with $f$ there. Equality is equality
-of partial-function graphs. These arrows need not themselves be ordinary
-partial recursive functions. The total arrows of $\mathcal C_K$ are exactly
+of partial-function graphs. These morphisms need not themselves be ordinary
+partial recursive functions. The total morphisms of $\mathcal C_K$ are exactly
 the ordinary total recursive functions between the indicated types.
 
 Let $F:\mathcal C_K\to\Pfn$ send each numerical carrier to the same
-set and each arrow to the same partial function.
+set and each morphism to the same partial function.
 
-On $\N$, the arrows are precisely the functions
+On $\N$, the morphisms are precisely the functions
 \[
  f_{e,a}(x)\simeq
  \begin{cases}
@@ -40,7 +40,7 @@ On $\N$, the arrows are precisely the functions
  \end{cases}
 \]
 Here $\simeq$ includes simultaneous undefinedness: the actual domain
-is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every arrow has this
+is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every morphism has this
 form by taking an index of its extension and an oracle index of its
 specified domain.
 
@@ -51,7 +51,7 @@ every hypothesis of
 Theorem~\ref{thm:local-lifting} except the lifting hypothesis.
 For the Turing morphism and coproduct isomorphism constructed below,
 the specified pair is separated by complementary restriction idempotents in
-$\mathcal C_K$. Moreover, there are parallel arrows in $\mathcal C_K$
+$\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
 with disjoint restriction idempotents and no common upper bound in
 the restriction order, although finite joins of restriction idempotents
 exist.
@@ -71,12 +71,12 @@ are inherited from partial functions. Restriction is the partial
 identity on $D_f$, which has the ordinary identity as an extension.
 Empty partial functions give restriction zeros.
 
-Cartesian products and tagged copairings preserve the arrow class:
+Cartesian products and tagged copairings preserve the morphism class:
 their domains are respectively products and tagged unions of the given
 domains, and their extensions are the corresponding ordinary partial
 recursive programs. Consequently the set-theoretic restriction
 products and coproducts have their usual universal properties in
-$\mathcal C_K$. Product with a zero arrow is zero, and the chosen
+$\mathcal C_K$. Product with a zero morphism is zero, and the chosen
 recursive coding isomorphisms make the category isotypical.
 
 The set $f(D_f)$ is c.e.\ relative to $K$: enumerate $D_f$ and run
@@ -98,7 +98,7 @@ Its domain is c.e.\ relative to $K$, uniformly in all three
 variables, and it has the ordinary partial recursive extension
 $(\langle e,a\rangle,x)\mapsto\varphi_e(x)$.
 To prove its Turing property, let
-$v:\N\times\N\rightharpoonup\N$ be an arrow, with ordinary
+$v:\N\times\N\rightharpoonup\N$ be a morphism, with ordinary
 partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
 domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
 for $v_0$ gives an ordinary total recursive function $e:\N\to\N$ with
@@ -121,7 +121,7 @@ object of $\mathcal C_K$. Hence $\tau_K$ is a Turing morphism.
 
 The functor $F$ is faithful and preserves restrictions, zeros,
 ranges, binary restriction products, and coproducts. It also reflects
-zero arrows. Its target $\Pfn$ is split and locally connected:
+zero morphisms. Its target $\Pfn$ is split and locally connected:
 restriction idempotents split through their subsets of definition,
 and partial identities on singletons detect partial functions.
 Partial injections have partial inverses, giving weak choice, and
@@ -168,7 +168,7 @@ simulation halts. Then
  \langle h(n),a_*\rangle\in A.
 \]
 For $B\subseteq\N$, write $1_B:\N\rightharpoonup\N$ for the
-partial identity on $B$. The source arrow
+partial identity on $B$. The source morphism
 $p_A=\nabla_{\N}(1_{A^c}+1_A):\N+\N\rightharpoonup\N$
 is sent to the partial injection whose unique section
 $s_A:\N\to\N+\N$ in $\Pfn$ is
@@ -180,16 +180,16 @@ $s_A:\N\to\N+\N$ in $\Pfn$ is
  \end{cases}
 \]
 This section is total and not recursive, since its tag decides $A$.
-If it had a preimage under $F$, that source arrow would
+If it had a preimage under $F$, that source morphism would
 be total and hence ordinary total recursive, a contradiction.
 This is the missing lift required by
 Theorem~\ref{thm:local-lifting} for the complemented restriction idempotent $1_A$.
 
-Finally, the arrows $i_1 1_A$ and $i_0 1_{A^c}$ belong to
+Finally, the morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
 $\mathcal C_K$: they have the total recursive extensions $i_1$
 and $i_0$, respectively. Their domains are disjoint. Any common
-upper bound would agree with the first arrow on $A$ and the second
+upper bound would agree with the first morphism on $A$ and the second
 on $A^c$. It would therefore be the total function $s_A$, which
-is not a source arrow. Thus no such upper bound exists.
+is not a source morphism. Thus no such upper bound exists.
 \end{proof}
 

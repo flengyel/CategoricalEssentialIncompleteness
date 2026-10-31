@@ -37,9 +37,9 @@ $C(\{a,c\})\leftarrow C(\{c\})\to C(\{b,c\})$
 (Proposition~\ref{prop:fork-cosheaves}).
 
 Let $\mathcal C_{\mathrm{rec}}$ have computably enumerable subsets
-of finite powers of $\N$ as objects. An arrow $f:A\to B$ is a
+of finite powers of $\N$ as objects. A morphism $f:A\to B$ is a
 function computed by a partial recursive program defined at every
-element of $A$, with values there in $B$. Equality of arrows is
+element of $A$, with values there in $B$. Equality of morphisms is
 equality of their functions on $A$.
 
 Put $\mathcal E=\mathcal C_{\mathrm{rec}}^J$.
@@ -47,7 +47,7 @@ An object is a covariant functor $Y:J\to\mathcal C_{\mathrm{rec}}$,
 given by the objects $Y_j=Y(j)$, for $j=0,1,2$, and the
 morphisms $r_i^Y=Y(0\to i):Y_0\to Y_i$, for $i=1,2$.
 A morphism $f:Y\to Z$ is a natural transformation: its components
-are arrows $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
+are morphisms $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
 $r_i^Zf_0=f_i r_i^Y$.
 A \emph{c.e.\ subfunctor} $D\subseteq Y$ consists of c.e.\ subsets
 $D_j\subseteq Y_j$ such that $r_i^Y(D_0)\subseteq D_i$.
@@ -62,10 +62,10 @@ $\mathcal C$. Form the partial-map category
 \[
  \mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono}).
 \]
-Its arrows $Y\rightharpoonup Z$ are isomorphism classes of spans
+Its morphisms $Y\rightharpoonup Z$ are isomorphism classes of spans
 $Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
 uses pullback. Monomorphisms are componentwise injections.
-Thus a partial arrow is equivalently a computably enumerable
+Thus a partial morphism is equivalently a computably enumerable
 subfunctor $D\subseteq Y$ together with a natural transformation
 $D\to Z$. Its restriction is the partial identity on $D$, and its range is the
 partial identity on the subfunctor of component images.
@@ -117,9 +117,9 @@ $\mathscr R_X$ isotypical.
 
 Theorem~\ref{thm:fork-turing} constructs a Turing morphism
 $\tau:V\times V\rightharpoonup V$ in $\mathcal A$.
-For every object $Y$ of $\mathcal A$ and every arrow
+For every object $Y$ of $\mathcal A$ and every morphism
 $F:Y\times V\rightharpoonup V$ in $\mathcal A$, there is a
-total arrow $c:Y\to V$ such that $\tau(c\times1_V)=F$.
+total morphism $c:Y\to V$ such that $\tau(c\times1_V)=F$.
 By fullness this property holds in $\mathscr R_X$ when
 $Y$ belongs to $\mathscr R_X$. Together with the inherited
 prodominical structure, it makes $\mathscr R_X$ a recursion category.
@@ -141,7 +141,7 @@ $\{r_2^Yy\}$. Its partial identity is a connected restriction
 idempotent in $\mathcal A$. The same holds for a subfunctor with
 a singleton in component $1$ or $2$ and empty sets in the other
 components. These restriction idempotents detect the definedness and value
-of every component of a partial arrow, so $\mathcal A$ is locally
+of every component of a partial morphism, so $\mathcal A$ is locally
 connected. Its splitness, weak choice, ranges, coproducts, and
 componentwise inverse-image laws are proved in
 Proposition~\ref{prop:fork-structure}.
@@ -166,7 +166,7 @@ subobject calculation.
 
 Let
 $\mathcal K=\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})$.
-Its objects are c.e.\ numerical carriers, and its arrows are partial
+Its objects are c.e.\ numerical carriers, and its morphisms are partial
 recursive functions with c.e.\ domains contained in their sources.
 The functor
 $\mathsf Q_{\mathrm{num}}:\operatorname{Split}(\mathrm{Rec})\to\mathcal K$
@@ -226,7 +226,7 @@ have component $\{*\}$ at $i$ and empty components elsewhere.
 For $Y\in\mathcal E$ and $y\in Y_i$, let $p_y:H_i\to Y$ be the total morphism
 whose component at $i$ sends $*$ to $y$. Every total morphism
 $H_i\to Y$ has this form for a unique $y\in Y_i$. A partial
-arrow from $H_i$ is either total or zero, since $H_i$ has just
+morphism from $H_i$ is either total or zero, since $H_i$ has just
 two restriction idempotents. Hence postcomposition defines a partial
 function on these total morphisms, defining
 $\Phi_i:\mathcal A\to\Pfn$ by
@@ -239,7 +239,7 @@ remains zero. If it is total, further postcomposition has exactly
 the domain specified by the next partial function. This proves
 $\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$; identities are immediate.
 Let $U:\mathcal K\to\Pfn$ send a c.e.\ numerical carrier to its
-underlying set and a partial recursive arrow to the same partial
+underlying set and a partial recursive morphism to the same partial
 function. The bijections $p_y\mapsto y$ give a natural isomorphism
 $\Phi_i\cong U E_i$.
 Indeed, $fp_y=p_{E_i(f)(y)}$ when $E_i(f)(y)$ is defined, and $fp_y=0$
@@ -303,7 +303,7 @@ Proposition~\ref{prop:endpoint} belong to $\mathcal K_2$ whenever
 their sources do. Thus $\mathcal K_2$ is a recursion category.
 
 The restriction $U|_{\mathcal K_2}:\mathcal K_2\to\Pfn$ preserves
-restrictions, zeros, and ranges, since it sends each arrow to its
+restrictions, zeros, and ranges, since it sends each morphism to its
 underlying partial function. It also preserves the chosen products
 and coproducts, so it is a range functor.
 Complementary c.e.\ domains in an object of $\mathcal K_2$ are recursive,
@@ -332,7 +332,7 @@ Write $\theta:V\to S$ for the total atom map
 and $\nu:S\to S$ for the total negation constructor.
 Let $\mathrm{Prf}$ be the object of finite proofs for the rules below
 and $c:\mathrm{Prf}\to S$ its conclusion morphism in $\mathcal E$,
-viewed as a total arrow of $\mathcal A$.
+viewed as a total morphism of $\mathcal A$.
 Proposition~\ref{prop:fork-proof-initial} defines an endofunctor
 $\mathsf H:\mathcal E/S\to\mathcal E/S$ and equips $(\mathrm{Prf},c)$
 with an initial algebra structure

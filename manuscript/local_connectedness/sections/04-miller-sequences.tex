@@ -89,9 +89,9 @@ the asserted output and definedness, for every binary representation of $z$.
 For the fixed sequence $a$, let $\mathcal E_a$ have the
 objects generated from $\N$ by binary Cartesian products and tagged
 disjoint unions, with fixed recursive codings. Every such object is
-recursively isomorphic to $\N$. An arrow $f:X\rightharpoonup Y$ belongs
+recursively isomorphic to $\N$. A morphism $f:X\rightharpoonup Y$ belongs
 to $\mathcal E_a$ when one oracle program computes exactly $f$, including
-its domain of definition, for every $p\in P_a$. Equality of arrows is
+its domain of definition, for every $p\in P_a$. Equality of morphisms is
 equality of partial functions.
 
 \begin{proposition}\label{prop:miller-category}
@@ -122,7 +122,7 @@ recursive. It is connected, and these partial identities detect
 inequality of partial functions, so the category is locally connected.
 A partial monomorphism here is injective on its domain of definition: a failure of
 injectivity would be detected by two recursive constant maps. For an
-injective arrow $f$, the same preimage search returns the unique $x$
+injective morphism $f$, the same preimage search returns the unique $x$
 with $f(x)=y$. Its output is consequently independent of the representation and
 gives the partial inverse. This proves weak choice.
 
@@ -137,13 +137,13 @@ Here $\simeq$ includes simultaneous undefinedness.
 If $f(x,n)=m$, every $p\in P_a$ gives this same output; if $f(x,n)$ is
 undefined, every $p\in P_a$ gives an undefined computation. The definition
 of $\tau_a$ therefore gives
-$f=\tau_a(c\times1_{\N})$. The map $c$ is a total source arrow.
+$f=\tau_a(c\times1_{\N})$. The map $c$ is a total source morphism.
 Finally, the chosen recursive codings make the category isotypical.
 \end{proof}
 
 For $p\in P_a$, let $\mathrm{Rec}^{p}$ be the recursion category on
 the same numerical objects, with partial $p$-recursive functions as
-arrows. The identity interpretation of partial functions defines a
+morphisms. The identity interpretation of partial functions defines a
 faithful range functor
 \[
  J_p:\mathcal E_a\longrightarrow\mathrm{Rec}^{p}.
@@ -154,7 +154,7 @@ $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ be the full inclusion.
 This inclusion is a range functor.
 A concrete presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
 numerical objects as objects and partial $p$-recursive functions between
-these carriers as arrows. A restriction idempotent splits through its
+these carriers as morphisms. A restriction idempotent splits through its
 $p$-c.e. domain of definition.
 Singleton restrictions prove local connectedness, and preimage search
 for an injective map proves weak choice. Ranges are the partial identities
@@ -304,12 +304,12 @@ morphism, although $\mathrm{Rec}^{p}$ has a Turing morphism.
 \label{def:miller-splitting}
 
 Call a subset $D$ of a numerical object \emph{$\mathcal E_a$-semidecidable}
-when its partial identity $1_D$ is an arrow of $\mathcal E_a$.
+when its partial identity $1_D$ is a morphism of $\mathcal E_a$.
 We use the concrete presentation of $\operatorname{Split}(\mathcal E_a)$
 in which such a subset $D\subseteq X$ represents $(X,1_D)$.
 For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
 a morphism $D\rightharpoonup E$ is represented by
-an arrow $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
+a morphism $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
 $f=1_Ef1_D$; it is total when $\bar f=1_D$.
 All code operations below are restricted to their indicated carriers.
 
@@ -339,7 +339,7 @@ In particular, every such extension is incomplete.
 \begin{proof}
 The set $S$ of sentence codes is recursive. It therefore defines an
 object of $\operatorname{Split}(\mathcal E_a)$. Negation and insertion
-of a constant into an inequality give ordinary recursive total arrows
+of a constant into an inequality give ordinary recursive total morphisms
 \[
  \nu:S\to S,\qquad
  \nu(\ulcorner\varphi\urcorner)=\ulcorner\neg\varphi\urcorner,
@@ -355,7 +355,7 @@ $\mathcal E_a$-semidecidable: syntax and inference checks are recursive,
 and the finitely many nonlogical axiom tests can be run in parallel.
 The validity of a derivation is independent of the binary representation of $a$. Thus
 $\mathrm{Prf}_T$ is an object of the splitting, and reading the root
-conclusion gives a total arrow
+conclusion gives a total morphism
 \[
  c_T:\mathrm{Prf}_T\to S.
 \]

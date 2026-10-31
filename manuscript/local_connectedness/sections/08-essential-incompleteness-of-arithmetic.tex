@@ -7,7 +7,7 @@ $\varphi_e:|X|\rightharpoonup|Y|$ by
  \N\models G_e\bigl(\gamma_X(x),\gamma_Y(y)\bigr).
 \]
 Let $\mathrm{Rec}$ have the terms in $\mathsf O$ as objects and
-these partial functions as arrows, with extensional equality.
+these partial functions as morphisms, with extensional equality.
 The numerical indexing represents every partial recursive function,
 so this is a presentation of the classical recursion category
 on these objects.
@@ -44,7 +44,7 @@ functions, restriction idempotents split through their subsets of
 definition, partial injections have partial inverses, and inverse images
 preserve unions. Complementary restriction idempotents on an object $W$
 in $\mathrm{Rec}$ are partial identities on complementary recursive
-subsets $C,C'$ of $J_{\mathrm{rec}}(W)$. The arrow $s:W\to W+W$
+subsets $C,C'$ of $J_{\mathrm{rec}}(W)$. The morphism $s:W\to W+W$
 given numerically by $s(x)=i_1x$ for $x\in C$ and $s(x)=i_0x$
 for $x\in C'$ is total recursive. Its image under $J_{\mathrm{rec}}$ is the
 required section. This verifies the lifting hypothesis of
@@ -64,14 +64,14 @@ For a c.e.\ subset $D\subseteq\N$, write $D$ for the split object
 $(\omega,1_D)$, where $1_D$ is the partial identity on $D$.
 A partial recursive function $h:\N\rightharpoonup\N$ with domain
 contained in $D$ and image contained in a c.e.\ subset $E\subseteq\N$
-represents an arrow
+represents a morphism
 $D\rightharpoonup E$; it is total precisely when its domain is $D$.
 The comparison with partial maps between c.e.\ numerical carriers
 is constructed in Appendix~\ref{app:fork-structure}, following
 Proposition~\ref{prop:fork-recursion}.
 In this presentation, restriction idempotents are partial identities
 on c.e.\ subsets, their joins are partial identities on unions, and inverse images along
-total arrows preserve these joins.
+total morphisms preserve these joins.
 The full restriction functor
 $I:\mathrm{Rec}\to\operatorname{Split}(\mathrm{Rec})$ is given by
 $I(X)=(X,1_X)$ and $I(f)=f$. It leaves the restriction idempotents
@@ -93,7 +93,7 @@ set of codes of finite derivation trees from $T$ whose conclusions are sentences
 This carrier is c.e.: the logical rules and formula syntax are
 recursive, and each candidate proof has only finitely many axiom
 membership tests in the c.e.\ axiom set of $T$. Reading the root
-conclusion gives a total arrow
+conclusion gives a total morphism
 $c_T:\mathrm{Prf}_T\to S$ in the splitting. Its range
 $t_T=\ran(c_T)$ is the partial identity on the c.e.\ set of theorems
 of $T$.
@@ -143,7 +143,7 @@ and $B\subseteq N_T$, and they enlarge under theory extension.
 Let $\operatorname{Pair}(\mathrm{Rec})$ have objects $(X,A,B)$,
 where $X\in\mathsf O$ and $A,B\subseteq J_{\mathrm{rec}}(X)$
 are disjoint computably enumerable subsets.
-An arrow $(X,A,B)\to(Y,P,N)$ is a total arrow $f:X\to Y$
+A morphism $(X,A,B)\to(Y,P,N)$ is a total morphism $f:X\to Y$
 of $\mathrm{Rec}$ satisfying $J_{\mathrm{rec}}(f)(A)\subseteq P$ and
 $J_{\mathrm{rec}}(f)(B)\subseteq N$. Identities and composition are inherited
 from $\mathrm{Rec}$. The assignment

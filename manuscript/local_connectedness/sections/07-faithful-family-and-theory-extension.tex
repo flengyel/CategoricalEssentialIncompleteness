@@ -12,7 +12,7 @@ Define the product category
 \[
  \mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn.
 \]
-An object is a family of sets $(A_M)_M$; an arrow is a family of partial
+An object is a family of sets $(A_M)_M$; a morphism is a family of partial
 functions with the indicated sources and targets. Composition and the
 restriction, range, restriction-product, and coproduct operations are coordinatewise.
 The functors of Proposition~\ref{prop:model} combine to give
@@ -43,7 +43,7 @@ identities on subsets. Its splitting uses those subsets as the
 coordinate sets. For an object $A=(A_M)_M$, take the partial identity
 on a singleton $\{x\}\subseteq A_M$ at one coordinate $M$ and the zero
 map elsewhere. This restriction idempotent is connected. These
-restriction idempotents detect the definedness and value of every coordinate of a partial arrow. Hence
+restriction idempotents detect the definedness and value of every coordinate of a partial morphism. Hence
 $\mathcal D_T$ is locally connected.
 
 A partial monomorphism has injective coordinate functions: test its
@@ -81,7 +81,7 @@ commuting square:
  \mathcal D_T \arrow[r,"\pi_{T,T'}"'] & \mathcal D_{T'}.
 \end{tikzcd}
 \]
-On an arrow $[e]_T$, both composites have, at every
+On a morphism $[e]_T$, both composites have, at every
 $M\in\mathcal M_{T'}$, the partial function defined by interpreting
 $G_e$ in $M$. For $T\subseteq T'\subseteq T''$, the quotient
 functors satisfy $Q_{T',T''}Q_{T,T'}=Q_{T,T''}$, and the coordinate
@@ -93,11 +93,11 @@ The identity cases follow from the same definitions.
 
 \begin{lemma}\label{lem:switch}
 Let $c,c'$ be complementary restriction idempotents on $X$ in $S_T$.
-There is a total arrow $s:X\to X+X$ with
+There is a total morphism $s:X\to X+X$ with
 \[
  sc=i_1c,\qquad sc'=i_0c'.
 \]
-The arrow $\chi_{X,X}^{-1}F_Ts$ is the unique section of
+The morphism $\chi_{X,X}^{-1}F_Ts$ is the unique section of
 $\nabla_{F_TX}(F_Tc'+F_Tc)$, where
 $\chi_{X,X}:F_TX+F_TX\to F_T(X+X)$ is the coproduct isomorphism.
 \end{lemma}
@@ -120,7 +120,7 @@ proves the exact graph equation
  (C(x)\land z=\iota_1(x))\lor(C'(x)\land z=\iota_0(x)).
 \]
 Thus $T$ proves this equation and universal halting. The equations for
-the restrictions follow, giving the total arrow $s=[e_s]_T$ of $S_T$.
+the restrictions follow, giving the total morphism $s=[e_s]_T$ of $S_T$.
 
 Interpret this proved graph identity in $M\models T$.
 Under the canonical coproduct identification, $F_M(s)$ sends
@@ -154,19 +154,19 @@ hypotheses of Theorem~\ref{thm:local-lifting}.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
 It is the identity on objects and surjective on each hom-set.
 Consequently it preserves a Turing morphism: a preimage of a
-target arrow has a Turing factorization in $S_T$, whose image is
+target morphism has a Turing factorization in $S_T$, whose image is
 the required factorization in $S_{T'}$.
 The same lifting argument therefore applies over $T'$.
 \end{proof}
 
-The arrow $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
+The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
 Fix $M\in\mathcal M_T$. The partial functions
 $x\mapsto F_M(\tau_T)(a,x)$, indexed by all $a\in|M|$, form a
 countable family, whereas there are uncountably many partial
 functions $|M|\rightharpoonup|M|$.
 Choose one outside this family and use it at coordinate $M$,
 with zero partial functions at the other coordinates.
-The resulting arrow
+The resulting morphism
 $\mathbf1\times F_T\omega\rightharpoonup F_T\omega$,
 where $\mathbf1$ is the family of singleton sets, cannot factor
 through $F_T(\tau_T)$ with a total parameter

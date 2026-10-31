@@ -39,12 +39,14 @@ numbering command remains in `main.tex`.
 
 ## Section-by-section revision
 
+Use “morphism” throughout the mathematical prose.
+
 Work on the requested file, consulting definitions and results elsewhere
 when the argument requires them. Keep observations about other sections
 separate from edits to the selected section. Compile the assembled document
 to check references and layout after changes. A review of one section does
 not establish the correctness of the complete paper.
 
-The introduction is the next section to revise. This structural change
-makes no editorial or mathematical changes and does not alter the version 5
-Lean formalization.
+Review begins with the abstract. The [organization and abstract review](../../Audit/2026-10-31-abstract-organization/README.md)
+records the current outline and the recommended order of contributions.
+The Lean formalization remains indexed to version 5.

@@ -60,14 +60,14 @@ Thus the
 subfunctors used as partial-map domains are categorical subobjects
 of the cosheaves, not necessarily subsets at every open.
 
-A \emph{regular epimorphism} is a coequalizer of a pair of arrows.
-A category is \emph{regular} if it has finite limits, every arrow
+A \emph{regular epimorphism} is a coequalizer of a pair of morphisms.
+A category is \emph{regular} if it has finite limits, every morphism
 factors as a regular epimorphism followed by a monomorphism, and
 regular epimorphisms are preserved by pullback. The monic part of
 this factorization is its \emph{regular image}. The \emph{kernel
 pair} of $q:Y\to Z$ is the pair of projections
 $Y\times_ZY\rightrightarrows Y$.
-Write $\mathcal E/Y$ for the slice category of arrows with target $Y$,
+Write $\mathcal E/Y$ for the slice category of morphisms with target $Y$,
 whose morphisms are commuting triangles over $Y$.
 Finite coproducts are \emph{extensive} when, for every finite family
 $(Y_k)_k$, copairing defines an equivalence
@@ -93,14 +93,14 @@ given recursive maps and tuple formation, and are total on their
 specified source carriers. This proves the finite-limit universal
 properties in $\mathcal C_{\mathrm{rec}}$.
 
-For a total arrow $f:Y\to Z$, enumerate $Y$ and its computed
+For a total morphism $f:Y\to Z$, enumerate $Y$ and its computed
 values to enumerate $f(Y)$. The factorization
 $Y\to f(Y)\hookrightarrow Z$ is therefore a factorization in
 $\mathcal C_{\mathrm{rec}}$. Every total surjection
 $q:Y\to Z$ has a partial recursive section total on $Z$: on input
 $z$, enumerate $Y$ and search for a computed value $q(y)=z$.
 If $u:Y\to W$ is constant on the fibers of $q$, composing $u$
-with this section gives the unique arrow $v:Z\to W$ of
+with this section gives the unique morphism $v:Z\to W$ of
 $\mathcal C_{\mathrm{rec}}$ with $vq=u$. Thus $q$ is the
 coequalizer of its kernel pair.
 The pullback of a surjection is surjective, since a preimage of
@@ -139,7 +139,7 @@ nonempty component of their source $H_j$ is a singleton.
 If a morphism of $\mathcal E$ is monic,
 testing it on these maps proves that each component is injective.
 The converse follows by cancelling those component injections.
-An injective arrow of $\mathcal C_{\mathrm{rec}}$ has a partial recursive inverse
+An injective morphism of $\mathcal C_{\mathrm{rec}}$ has a partial recursive inverse
 on its c.e.\ image, obtained by preimage search.
 
 Finally, for a map $Y\to A+B$, the inverse images of the two
@@ -155,23 +155,23 @@ copairing. This proves the slice equivalence expressing extensivity.
 The category $\mathcal A=\operatorname{Par}(\mathcal E,
 \operatorname{Mono})$ is a split prodominical restriction category
 with binary restriction products, restriction coproducts, weak
-choice, and ranges satisfying the agreement law. The range of an arrow
+choice, and ranges satisfying the agreement law. The range of a morphism
 represented by $Y\xleftarrow{m}D\xrightarrow{v}Z$ is the partial
 identity on the regular image of $v$.
 Joins of restriction idempotents are partial identities on finite
 unions of their subfunctors, and inverse image along every partial
-arrow preserves binary meets and finite joins. Ranges commute with products and
-are stable under pullback along total arrows.
+morphism preserves binary meets and finite joins. Ranges commute with products and
+are stable under pullback along total morphisms.
 \end{proposition}
 \begin{proof}
 Replace the monic leg of a representing span by its image
 inclusion, using its computable inverse on that image. A partial
-arrow $f:Y\rightharpoonup Z$ is then represented by a c.e.\ subfunctor
+morphism $f:Y\rightharpoonup Z$ is then represented by a c.e.\ subfunctor
 $D_f\subseteq Y$ and a natural transformation $D_f\to Z$.
 For $j\in\{0,1,2\}$, write $f_j:Y_j\rightharpoonup Z_j$ for the
 partial recursive function with domain $(D_f)_j$ whose restriction
 to $(D_f)_j$ is the $j$-component of this natural transformation.
-Use the same convention for other partial arrows.
+Use the same convention for other partial morphisms.
 If $g:Z\rightharpoonup W$ has domain subfunctor $D_g$, the domain of $gf$
 at component $j$ is
 \[
@@ -233,7 +233,7 @@ images lie in $D_p$. Thus each $p_j$ is injective on $(D_p)_j$.
 Preimage search gives recursive inverse components on $I_p$;
 they form a natural transformation by injectivity and naturality of
 the representing morphism $D_p\to Z$.
-The resulting partial arrow $s:Z\rightharpoonup Y$ has domain
+The resulting partial morphism $s:Z\rightharpoonup Y$ has domain
 $I_p$ and satisfies $ps=\bar s$ and $psp=p$.
 This proves weak choice.
 \end{proof}
@@ -254,7 +254,7 @@ must equal $D$. The partial identity on a singleton subfunctor
 in component $i\in\{1,2\}$, with the other components empty,
 is connected as well.
 
-Suppose that partial arrows $f,g:Y\rightharpoonup Z$ agree
+Suppose that partial morphisms $f,g:Y\rightharpoonup Z$ agree
 after composition with every connected restriction idempotent.
 Restriction to the
 finite subfunctor generated by $y\in Y_0$ detects whether
@@ -269,7 +269,7 @@ Thus all three component partial functions agree, proving $f=g$.
 Let $V$ be the object of $\mathcal A$ defined in
 \eqref{eq:universal-fork}.
 A \emph{total restriction embedding} $m:Y\to V$ in $\mathcal A$
-is a total arrow with a partial inverse
+is a total morphism with a partial inverse
 $m^\dagger:V\rightharpoonup Y$ satisfying
 $m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
 
@@ -297,7 +297,7 @@ For $Y\in\mathcal E$, define $Y^\#$ by
 $(Y^\#)_j=(Y_j)^\#$.
 The map $(Y^\#)(0\to i):(Y_0)^\#\to(Y_i)^\#$ decodes a sequence,
 applies $r_i^Y$ to each entry, and encodes the result.
-For a partial arrow $f:Y\rightharpoonup Z$ of $\mathcal A$
+For a partial morphism $f:Y\rightharpoonup Z$ of $\mathcal A$
 with domain subfunctor $D_f$, define
 $f^\#:Y^\#\rightharpoonup Z^\#$ to have, at component $j$, domain
 \[
@@ -390,8 +390,8 @@ The object $V$ of
 $\mathcal A=\operatorname{Par}(\mathcal C_{\mathrm{rec}}^J,
 \operatorname{Mono})$ admits a Turing morphism
 $\tau:V\times V\rightharpoonup V$: for every object $Y$ of
-$\mathcal A$ and every arrow $F:Y\times V\rightharpoonup V$
-in $\mathcal A$, there is a total arrow
+$\mathcal A$ and every morphism $F:Y\times V\rightharpoonup V$
+in $\mathcal A$, there is a total morphism
 $c:Y\to V$ such that
 \[
  \tau(c\times1_V)=F.
@@ -454,9 +454,9 @@ Equation~\eqref{eq:fork-turing-check} gives
 The restrictions $\tau_j|_{T_j}:T_j\to V_j$, for $j=0,1,2$,
 therefore form a morphism $T\to V$ in $\mathcal E$.
 Together with the inclusion $T\hookrightarrow V\times V$,
-they define the required partial arrow $\tau$.
+they define the required partial morphism $\tau$.
 
-Now let $F:Y\times V\rightharpoonup V$ be any partial arrow.
+Now let $F:Y\times V\rightharpoonup V$ be any partial morphism.
 Choose its representation by a c.e.\ subfunctor
 $D\subseteq Y\times V$ and a morphism $D\to V$ in
 $\mathcal E$. Its components are the restrictions
@@ -544,23 +544,23 @@ to $\mathscr R_X$ by fullness. Hence it retains its Turing
 universal property there, proving that $\mathscr R_X$ is a
 recursion category.
 
-Restrictions and ranges of arrows between objects of $\mathscr R_X$
+Restrictions and ranges of morphisms between objects of $\mathscr R_X$
 are endomorphisms of objects of $\mathscr R_X$, so belong to the subcategory.
 Their universal properties are unchanged, since all competing
-endomorphisms and all arrows between the relevant objects remain
+endomorphisms and all morphisms between the relevant objects remain
 available. Coproducts and their copairings are likewise retained.
 Thus the inclusion is a range functor.
 
 For a restriction idempotent $e$ on an object $Y$ of $\mathscr R_X$,
 write $m_e:D_e\to Y$ and $r_e:Y\rightharpoonup D_e$ for its
 domain inclusion and partial inverse. Send $(Y,e)$ to $D_e$
-and an arrow $f:(Y,e)\rightharpoonup(Z,d)$, represented by
+and a morphism $f:(Y,e)\rightharpoonup(Z,d)$, represented by
 $f:Y\rightharpoonup Z$ satisfying $f=dfe$, to
 $r_d f m_e:D_e\rightharpoonup D_d$.
 The equations $m_er_e=e$ and $r_em_e=1_{D_e}$ show that
 identities and composition are preserved. Conversely, send a
 partial map $g:D_e\rightharpoonup D_d$ to $m_d g r_e$.
-This arrow belongs to $\mathscr R_X$ by fullness and satisfies
+This morphism belongs to $\mathscr R_X$ by fullness and satisfies
 $d(m_d g r_e)e=m_d g r_e$. The two assignments are inverse on
 each hom-set, so the functor is fully faithful.
 It preserves restrictions, since
@@ -572,7 +572,7 @@ so the functor is essentially surjective.
 \end{proof}
 
 Use the carrier bijections $\gamma_X:|X|\to\N$ fixed in
-Section~\ref{sec:syntactic}. For an arrow $f:X\rightharpoonup Y$
+Section~\ref{sec:syntactic}. For a morphism $f:X\rightharpoonup Y$
 of $\mathrm{Rec}$, put
 \[
  \widehat f=\gamma_Y\circ J_{\mathrm{rec}}(f)\circ\gamma_X^{-1}
@@ -589,13 +589,13 @@ defines a functor
 For a restriction idempotent $e$ on $X$, let $D_e\subseteq\N$
 be the domain of the partial identity $\widehat e$.
 Put $\mathsf Q_{\mathrm{num}}(X,e)=D_e$.
-An arrow $f:(X,e)\rightharpoonup(Y,d)$ is represented by an arrow
+A morphism $f:(X,e)\rightharpoonup(Y,d)$ is represented by a morphism
 $f:X\rightharpoonup Y$ of $\mathrm{Rec}$ satisfying $f=dfe$.
 Its image under $\mathsf Q_{\mathrm{num}}$ is the restriction of
 $\widehat f$ to a partial function $D_e\rightharpoonup D_d$.
 Conversely, every partial recursive map $D_e\rightharpoonup D_d$,
 extended by undefinedness outside $D_e$ and conjugated by the
-inverse carrier bijections, represents an arrow
+inverse carrier bijections, represents a morphism
 $f:X\rightharpoonup Y$ satisfying $f=dfe$. These assignments are
 inverse on each hom-set and preserve restrictions. Thus
 $\mathsf Q_{\mathrm{num}}$ is fully faithful.
