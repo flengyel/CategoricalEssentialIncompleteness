@@ -48,6 +48,8 @@ import CategoricalEssentialIncompleteness.EffectiveForkRangeProducts
 import CategoricalEssentialIncompleteness.EnumerableChoice
 import CategoricalEssentialIncompleteness.ForkSyntaxObjects
 import CategoricalEssentialIncompleteness.ForkProofTreeRecursion
+import CategoricalEssentialIncompleteness.ForkEssentialIncompleteness
+import CategoricalEssentialIncompleteness.ForkSyntaxInitialAlgebra
 
 /-!
 # Local connectedness and essential incompleteness

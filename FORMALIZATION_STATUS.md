@@ -60,8 +60,8 @@ All new names below have prefix
 | `thm:fork-turing` | `EffectiveFork.tau`, `EffectiveFork.central_specialized`, `EffectiveFork.center_parameterization`, `EffectiveFork.endpoint_parameterization`, `EffectiveFork.tau_parameterization`, `EffectiveFork.tau_isTuring` | **Proved.** Actual ordinary universal evaluation and recursive specialization at all three components. The central computation checks that both endpoint computations halt with the projected outputs. Every arrow `F:Y×V⇀V` has a total coherent parameter, and factorization is equality of partial functions, including simultaneous undefinedness. The actual span comparison, pullback composition and canonical restriction formula now discharge the presentation comparison. |
 | `prop:fork-recursion` | `EffectiveFork.Recursion.Generated`, `EffectiveFork.Recursion.Generated.iso`, `EffectiveFork.Recursion.recursionCategory`, `EffectiveFork.Recursion.rangeFunctor`, `EffectiveFork.Recursion.splittingEquivalence`, `EffectiveFork.Recursion.realization_rst`, `EffectiveFork.Recursion.pair_inseparable` | **Proved.** Exact full generated subcategory, inherited prodominical/products/coproducts/restriction/range structure, frame-derived isotype and actual checked Turing universality. The restriction splitting is equivalent to the full partial fork category via explicit inverse hom assignments and dominance. The inclusion lifts the actual complementary-pair sections by fullness and instantiates Theorem 6.3. |
 | `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card`, `EffectiveFork.universal_no_decidable_equality` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork, its concrete recursive coding, and the five terminal-support patterns are proved. The non-equivalence argument remains. |
-| `prop:fork-syntax-initial` | `ForkSyntax.Formula.codingEquiv`, `ForkSyntax.Formula.sigma_computable`, `ForkSyntax.S`, `ForkSyntax.theta_total`, `ForkSyntax.nu_total`, `ForkSyntax.implication_total` | **Partial.** Exact finite formula trees, recursive parsing/coding and atom substitution, actual syntax fork and total natural constructors are proved. Initiality for arbitrary recursive partial-operation algebras remains. |
-| `thm:fork-proof-presentation` | `ForkSyntax.ProofTree.codingEquiv`, `ForkSyntax.ProofTree.fold_computable`, `ForkSyntax.Concludes.sound`, `ForkSyntax.theorem_least`, `ForkSyntax.Concludes.mapAtoms`, `ForkSyntax.finite_valuation_consistency` | **Partial.** Actual finite ordered Hilbert trees with the three exact schemes, signed atomic leaves and modus ponens; recursive raw-tree coding/structural recursion; least theorem closure, relabeling, and consistency by the finite set of positive leaf labels. The c.e. valid-proof carrier, its conclusion morphism/range and the categorical atomic inclusions remain. |
+| `prop:fork-syntax-initial` | `ForkSyntax.polynomialTotal`, `ForkSyntax.syntaxAlgebra`, `ForkSyntax.syntax_initial`, `ForkSyntax.syntaxAlgebra_isInitial`; `ForkSyntax.Formula.fold_computable_of_partial` | **Proved.** Actual finite formula syntax and recursive natural constructors, the polynomial functor on the actual total fork category, and mathlib `IsInitial` in its category of algebras. Evaluation uses the actual constructor computations, which may be partial off their specified c.e. carriers. A partial recursive table computes the semantic fold, with no ambient total-extension hypothesis. Formula induction proves both endpoint naturality, the constructor equations and uniqueness. |
+| `thm:fork-proof-presentation` | `ForkSyntax.Prf`, `ForkSyntax.conclusion`, `ForkSyntax.conclusion_range`, `ForkSyntax.positiveLeaves_conclusion`, `ForkSyntax.negativeLeaves_conclusion`, `ForkSyntax.t0_isLeast`, `ForkSyntax.fork_proof_presentation` | **Proved.** Actual c.e. valid finite Hilbert-proof carriers, recursive relabeling, total natural conclusion morphism and its exact theorem range. The range is the least c.e. theorem subfunctor containing the exact schemes and signed atoms and closed under modus ponens. Actual one-node proof morphisms give both atomic inclusions. Componentwise finite valuations prove consistency under exactly disjointness of the input restriction idempotents. |
 | `prop:missing-lift` | — | **Pending.** |
 
 Unnumbered constructions already proved include restriction-idempotent order and
@@ -95,9 +95,15 @@ presentation, including pullback composition, the identity span and canonical
 restriction. Total finite limits and finite coproducts are constructed. All three
 explicit frames, the full generated recursion subcategory, its inseparable pair
 through Theorem 6.3, and its restriction-splitting equivalence are proved.
+The actual syntax algebra is initial among all total polynomial algebras in the
+total fork category. The proof object and its conclusion range now discharge
+Appendix B. `EffectiveFork.Recursion.image_pair_inseparable` transfers the actual
+new categorical pair through the full inclusion. `ForkSyntax.essential_incompleteness`
+then applies Corollary 6.7 to the constructed theorem and refutation domains, for
+every consistent restriction-idempotent extension of the base theory. The base
+theory itself is proved consistent and incomplete.
 The cosheaf equivalence, regularity/extensivity and total-pullback image stability,
-syntax initiality, the effective proof-carrier/range application, endpoint
-observations, non-equivalence invariant and Appendix C remain in scope.
+endpoint observations, non-equivalence invariant and Appendix C remain in scope.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
