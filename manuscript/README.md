@@ -2,8 +2,8 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 7 PDF](essential_incompleteness_via_local_connectedness_v7.pdf)
-([LaTeX source](essential_incompleteness_via_local_connectedness_v7.tex),
+[Version 8 PDF](essential_incompleteness_via_local_connectedness_v8.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v8.tex),
 31 October 2026).
 
 Theorem 3.3 proves inseparability using a range functor into a locally
@@ -21,12 +21,12 @@ formalized in Lean; the existing formalization is indexed to version 5.
 Build from this directory with:
 
 ```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v7.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v8.tex
 ```
 
-The [reviews](../Audit/2026-10-31-miller-prose-v7/README.md) include the
-sentence-by-sentence prose review, mathematical findings, and compilation
-record. The earlier versions and notes follow.
+The [reviews](../Audit/2026-10-31-abstraction-prose-v8/README.md) include the
+full-source mathematical and prose reviews, the disposition of the typing
+findings, source checks for the syntactic evaluator, and compilation record. The earlier versions and notes follow.
 
 ## Computational constructions
 
