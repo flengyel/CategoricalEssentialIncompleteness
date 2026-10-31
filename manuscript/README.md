@@ -2,7 +2,7 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 9 PDF](local_connectedness/main.pdf)
+[Version 10 PDF](essential_incompleteness_via_local_connectedness_v10.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 31 October 2026).
 

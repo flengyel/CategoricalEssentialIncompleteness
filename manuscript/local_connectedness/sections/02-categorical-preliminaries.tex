@@ -63,10 +63,12 @@ A restriction idempotent $e$ on $X$ \emph{splits} if
 $e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
 with $rm=1_A$. The category is \emph{split} when every restriction
 idempotent splits.
-Write $\operatorname{Split}(\mathcal C)$ for the category obtained by
-splitting its restriction idempotents, denoted by $K_r(\mathcal C)$
-in Cockett--Lack \cite[Section~2.3.3]{CockettLack}.
-Its objects are pairs $(X,e)$, where $e$ is a
+For a restriction category $\mathcal C$, write
+$\operatorname{Split}(\mathcal C)$ for the category obtained from
+$\mathcal C$ by splitting the restriction idempotents of $\mathcal C$.
+Cockett--Lack denote this category by $K_r(\mathcal C)$
+\cite[Section~2.3.3]{CockettLack}.
+The objects of $\operatorname{Split}(\mathcal C)$ are pairs $(X,e)$, where $e$ is a
 restriction idempotent on $X$, and morphisms
 $f:(X,e)\rightharpoonup(Y,d)$ given by original morphisms
 $f:X\rightharpoonup Y$ satisfying $f=dfe$.
@@ -75,7 +77,8 @@ $\bar f=e$. Thus $(X,e)$ is the object through which $e$ splits.
 
 The \emph{Karoubi envelope} $\operatorname{Kar}(\mathcal C)$ has the
 same description with arbitrary idempotents $e:X\rightharpoonup X$
-in place of restriction idempotents. Its restriction operation sends
+in place of restriction idempotents. The restriction operation on
+$\operatorname{Kar}(\mathcal C)$ sends
 $f:(X,e)\rightharpoonup(Y,d)$ to the morphism represented by $\bar f e$.
 This is the construction $K_E(\mathcal C)$ of
 \cite[Section~2.3.3, Proposition~2.26]{CockettLack} with $E$ the class

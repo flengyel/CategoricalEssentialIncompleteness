@@ -1,8 +1,9 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 9. The initial division into files
-preserves the text of the [single-file version](../essential_incompleteness_via_local_connectedness_v9.tex)
-exactly, including definitions, statements, labels, and bibliography entries.
+This is the working source for version 10. The modular manuscript was
+created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
+The [version 10 PDF](../essential_incompleteness_via_local_connectedness_v10.pdf)
+records this revision.
 
 ## Build
 
@@ -40,6 +41,10 @@ numbering command remains in `main.tex`.
 ## Section-by-section revision
 
 Use “morphism” throughout the mathematical prose.
+
+Increment the manuscript version for each published revision. Update the
+title page and current-version links, and retain a PDF with the version in
+its filename.
 
 Work on the requested file, consulting definitions and results elsewhere
 when the argument requires them. Keep observations about other sections
