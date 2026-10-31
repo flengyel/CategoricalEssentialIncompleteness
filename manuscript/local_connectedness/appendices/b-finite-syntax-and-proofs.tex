@@ -152,9 +152,27 @@ by replacing each constant $X$ by $P\times X\to P$ and using
 products and coproducts in that slice. An initial algebra is
 \emph{stable under parameters} if, for every $P\in\mathcal D$,
 its pullback along $P\to1$ is initial for this slice endofunctor.
+For list objects, this is the parameterized recursion property studied by
+Cockett~\cite{CockettLists}; its formulation by pullback into slices is
+recalled by Maietti~\cite[Definition 2.4 and the following paragraph]{MaiettiLists}.
 
 \subsection{Terms, formulas, and free variables}
 \label{app:first-order-syntax}
+
+Initial many-sorted algebras are used to specify abstract syntax by
+Goguen, Thatcher, Wagner, and Wright~\cite[Section 2]{GTWW}.
+Goguen and Burstall~\cite[Section 4]{GoguenBurstall} apply this method
+to the term and sentence sorts of logical languages.
+Here the signature objects, syntax objects, and constructor morphisms
+lie in $\mathcal D$.
+
+Initial-algebra accounts of binding and substitution are developed by
+Fiore, Plotkin, and Turi~\cite[Sections 2--4]{FPT} and by
+Gabbay and Pitts~\cite[Section 6]{GabbayPitts}.
+Katsumata~\cite[Section 2, Example 1(3)]{Katsumata} gives a first-order
+instance with a quantifier. These treatments identify expressions up to
+renaming of bound variables. The syntax defined below retains variable
+names, and formula substitution is defined on an admissibility subobject.
 
 Define $K:\mathcal D^2\to\mathcal D^2$ by
 $K(X,Y)=\bigl(K_1(X,Y),K_2(X,Y)\bigr)$, where
@@ -278,6 +296,8 @@ In $(\mathcal D/E)^2$, use the carriers
  X_F=E\times(\Fm\times O(\Fm))\longrightarrow E.
 \]
 The first component of each pair records the original expression.
+Retaining this component obtains structural recursion from initial-algebra
+iteration; compare Gabbay and Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}.
 Define a $K_E$-algebra as follows, retaining the same parameter
 $(x,t)$ in every operation. At a variable $v$, the pair is
 \[
@@ -396,8 +416,9 @@ induction hypothesis gives the required successful second branch.
 \subsection{Inference rules and deductively closed subobjects}
 \label{app:closed-subobjects}
 
-The rule presentation below is the finitary inductive definition of a
-formal system~\cite[Section 1.1]{Aczel}, expressed in a slice category.
+Aczel~\cite[Propositions 1.1.4 and 1.4.5]{Aczel} describes finitary
+inductive closure by the conclusions of finite proofs. We express the
+rule presentation in a slice category.
 Let $\mathcal D$ be regular with finite coproducts, and fix an object
 $F$. For an integer $N\geq0$, let
 \[
@@ -441,6 +462,11 @@ The algebra structure is unique because $m$ is monic. Its nullary
 part includes all axioms, and its other parts express closure under
 the inference rules. Inclusion of closed subobjects is automatically
 an algebra morphism, by composing with the target monomorphism.
+
+The following proof transfers the initial derivation algebra to its
+regular image. This is an instance of lifting a factorization system to
+algebras for an endofunctor preserving its left class; see, for example,
+Wi\ss{}mann~\cite[Lemma 3.6]{Wissmann}.
 
 \begin{theorem}\label{thm:least-theorem-subobject}
 With the rule data above, suppose
@@ -569,29 +595,94 @@ $T_{A,S}\subseteq T_{U,S}\subseteq U$.
 It also follows that $A\subseteq A'$ implies
 $T_{A,S}\subseteq T_{A',S}$.
 
-In the partial-map category $\Par(\mathcal D,\Mono)$, whose morphisms
-are spans with monic left leg composed by pullback
-\cite[Section 3]{CockettLack}, the sentence theory is represented by
-\[
- t_A=[S\xleftarrow{m_A}T_{A,S}\xrightarrow{m_A}S]:S\rightharpoonup S,
- \qquad m_A:T_{A,S}\hookrightarrow S.
-\]
-Its restriction is itself. It is the range partial identity of
-$c_{A,S}$, meaning the partial identity on that morphism's image.
 For a restriction category $\mathcal R$, its restriction splitting
 $\Split(\mathcal R)$ has objects $(X,e)$, where $e=\bar e$, and
 morphisms $f:(X,e)\rightharpoonup(Y,d)$ satisfying $f=dfe$.
 Its identity on $(X,e)$ is $e$; such a morphism is total when
 $\bar f=e$. Write $\Tot(\Split(\mathcal R))$ for the subcategory
 of total morphisms~\cite[Section 2.3.3]{CockettLack}.
-If $\mathcal D$ is this total category, require the theorem inclusion
-$m_A$ to admit a partial inverse
-$r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$, with
+
+In a restriction category $\mathcal S$, restriction idempotents
+$a,b:Y\rightharpoonup Y$ are ordered by $a\leq b$ when $ba=a$.
+A restriction idempotent $a$ receives $f:X\rightharpoonup Y$ if $af=f$.
+The \emph{range} $\ran(f)$ is the least restriction idempotent receiving
+$f$. We use ranges satisfying the agreement law
 \[
- r_A m_A=1_{T_{A,S}},\qquad m_A r_A=\bar r_A.
+ uf=vf\quad\Longrightarrow\quad u\ran(f)=v\ran(f)
+ \qquad(u,v:Y\rightharpoonup Z).
 \]
-Then $\bar r_A:S\rightharpoonup S$ represents the constructed
-sentence theory as a restriction idempotent.
+A total morphism $m:I\to Y$ is a \emph{restriction monomorphism}
+if it has a partial inverse $r:Y\rightharpoonup I$ with
+$rm=1_I$ and $mr=\bar r$.
+
+\begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
+Let $\mathcal S$ be a restriction category with ranges in which every
+restriction idempotent splits. Suppose $\mathcal D=\Tot(\mathcal S)$
+is regular, and let
+\[
+ f:X\longrightarrow Y,\qquad
+ f=me,\qquad e:X\twoheadrightarrow I,\qquad m:I\hookrightarrow Y
+\]
+be a regular-image factorization in $\mathcal D$.
+If $m$ has a partial inverse $r:Y\rightharpoonup I$ in $\mathcal S$,
+then $\ran(f)=mr=\bar r$.
+\end{lemma}
+\begin{proof}
+The restriction idempotent $mr$ receives $f$, since $mrf=mrme=f$.
+Let $a:Y\rightharpoonup Y$ be any restriction idempotent receiving $f$.
+Choose a splitting $a=js$, where $j:J\to Y$ is total,
+$s:Y\rightharpoonup J$, and $sj=1_J$.
+Then $f=j(sf)$, and $sf:X\to J$ is total, since
+$\overline{sf}=\overline{jsf}=\bar f=1_X$.
+The morphism $j$ is monic in $\mathcal D$, so the universal property
+of the regular image gives a unique $u:I\to J$ with $ju=m$.
+Consequently,
+\[
+ am=jsju=ju=m,\qquad a(mr)=mr.
+\]
+Thus $mr\leq a$, proving that $mr$ is the least restriction
+idempotent receiving $f$.
+\end{proof}
+
+The relation between split ranges and factorizations through restriction
+monomorphisms is developed in Cockett, Guo, and
+Hofstra~\cite[Theorem 4.7 and Lemma 4.12]{CGHRangeI}.
+The additional conditions for these to be regular-image factorizations
+are given in \cite[Section 3.16 and Proposition 3.17]{CGHRangeII}.
+
+The partial-map category $\Par(\mathcal D,\Mono)$ has morphisms given
+by spans with monic left leg, composed by pullback
+\cite[Section 3]{CockettLack}. Since $\mathcal D$ is regular, it is a
+split restriction category with ranges
+\cite[Theorem 4.5 and Section 4.11]{CGHRangeI}; its total subcategory
+is canonically isomorphic to $\mathcal D$.
+The sentence theory is represented in this category by
+\[
+ t_A=[S\xleftarrow{m_A}T_{A,S}\xrightarrow{m_A}S]:S\rightharpoonup S,
+ \qquad m_A:T_{A,S}\hookrightarrow S.
+\]
+Every monomorphism in $\mathcal D$ has a partial inverse in this
+partial-map category. Lemma~\ref{lem:range-regular-image} therefore
+gives $t_A=\ran(c_{A,S})$.
+If instead $\mathcal D=\Tot(\Split(\mathcal R))$ for a restriction
+category $\mathcal R$ whose restriction splitting has ranges, require
+$m_A$ to have a partial inverse
+$r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$.
+The same lemma gives
+\[
+ \ran(c_{A,S})=m_A r_A=\bar r_A.
+\]
+Thus the range represents the constructed sentence theory.
+
+A functor $G:\mathcal S\to\mathcal S'$ between restriction categories
+with ranges is a \emph{restriction functor} if
+$G(\bar v)=\overline{G(v)}$ for every morphism $v$.
+If it also preserves ranges, then the splitting in
+Lemma~\ref{lem:range-regular-image} satisfies
+\[
+ G(m)G(r)=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
+\]
+Hence $G(m)$ and $G(r)$ split the range of $G(f)$.
 
 \subsection{Propositional theories}
 \label{app:propositional-theories}
