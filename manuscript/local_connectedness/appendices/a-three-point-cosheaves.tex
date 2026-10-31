@@ -571,6 +571,40 @@ The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
 so the functor is essentially surjective.
 \end{proof}
 
+\begin{corollary}\label{cor:fork-karoubi}
+Every idempotent in $\mathcal A$ splits, and the inclusion
+$\mathscr R_X\hookrightarrow\mathcal A$ extends to an equivalence
+$\operatorname{Kar}(\mathscr R_X)\simeq\mathcal A$.
+\end{corollary}
+\begin{proof}
+Let $p:Y\rightharpoonup Y$ satisfy $p^2=p$, and let
+$D\subseteq Y$ be its domain subfunctor. For $j=0,1,2$, put
+$I_j=p_j(D_j)\subseteq Y_j$. These sets are c.e., and naturality
+of $p:D\to Y$ gives $r_i^Y(I_0)\subseteq I_i$ for $i=1,2$.
+Thus $I\subseteq Y$ is an object of $\mathcal E$.
+Let $m:I\to Y$ be the inclusion, and let
+$r:Y\rightharpoonup I$ have domain $D$ and component functions $p_j$.
+The equation $p^2=p$ implies that $I_j\subseteq D_j$ and that
+$p_j$ fixes every element of $I_j$. Hence $mr=p$ and $rm=1_I$.
+
+For each idempotent $e:Y\rightharpoonup Y$ in $\mathscr R_X$, write
+$I_e$ for its image subfunctor and
+$m_e:I_e\to Y$, $r_e:Y\rightharpoonup I_e$ for the splitting just
+constructed. Define
+$Q:\operatorname{Kar}(\mathscr R_X)\to\mathcal A$ by
+$Q(Y,e)=I_e$ and
+$Q(f)=r_d f m_e:I_e\rightharpoonup I_d$ for
+$f:(Y,e)\rightharpoonup(Z,d)$.
+The equations $m_er_e=e$ and $r_em_e=1_{I_e}$ prove the functor
+laws. As in Proposition~\ref{prop:fork-recursion}, the inverse
+assignment on hom-sets is $g\mapsto m_d g r_e$, so $Q$ is fully faithful.
+For $f:(Y,e)\rightharpoonup(Z,d)$, restriction preservation follows from
+$\overline{r_d f m_e}=r_e\bar f e m_e$, since $e$ fixes its image
+and $f=dfe$ takes values in the image of $d$.
+Every object of $\mathcal A$ is isomorphic to the image of a restriction
+idempotent on $V$, so this functor is essentially surjective.
+\end{proof}
+
 Use the carrier bijections $\gamma_X:|X|\to\N$ fixed in
 Section~\ref{sec:syntactic}. For a morphism $f:X\rightharpoonup Y$
 of $\mathrm{Rec}$, put

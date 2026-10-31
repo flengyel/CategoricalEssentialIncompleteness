@@ -1,9 +1,10 @@
 \section{A recursion category from a three-point space}\label{sec:cosheaves}
 
 We construct a recursion category $\mathscr R_X$ from cosheaves on a
-three-point space. Its restriction splitting contains a consistent
-propositional theory with no complete consistent extension represented
-by a restriction idempotent.
+three-point space. Formula and derivation objects in its Karoubi envelope
+give, by component evaluation, a family of consistent propositional
+theories. This family admits no compatible family of complete consistent
+extensions with computably enumerable theorem sets.
 
 For a topological space $X$, let $\mathcal O(X)$ be the category
 of open sets and inclusions. A \emph{set-valued cosheaf} is a
@@ -132,6 +133,12 @@ such that $rm=1_Y$ and $mr=\bar r$
 These embeddings give the equivalence
 $\operatorname{Split}(\mathscr R_X)\simeq\mathcal A$
 proved in Proposition~\ref{prop:fork-recursion}.
+Every idempotent in $\mathcal A$ splits through its image, so also
+$\operatorname{Kar}(\mathscr R_X)\simeq\mathcal A$
+(Corollary~\ref{cor:fork-karoubi}).
+The formula and derivation objects below are constructed in
+$\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
+component evaluation give ordinary propositional formulas and derivations.
 
 \subsection{Local connectedness and lifting}
 
@@ -366,48 +373,59 @@ and consistency gives the third:
  a\le\theta^*t_0,\qquad
  b\le\theta^*\nu^*t_0,\qquad t_0\,\nu^*t_0=0.
 \end{equation}
-A \emph{theory extending $t_0$} is a restriction idempotent $t\ge t_0$
-on $S$ in $\mathcal A$ such that $D_t$ is closed under modus ponens.
-It is consistent when $t\,\nu^*t=0$, and complete when
-$t\vee\nu^*t=1_S$. The set $(D_{\nu^*t})_j$ consists of the
-formulas whose negations belong to $(D_t)_j$.
+Write $\sigma_i=S(0\to i):S_0\to S_i$ for $i=1,2$.
+A compatible family of c.e.\ theory extensions consists of c.e.\ sets
+$T_j\subseteq S_j$, for $j=0,1,2$, containing $(D_{t_0})_j$ and closed
+under modus ponens, with $\sigma_i(T_0)\subseteq T_i$ for $i=1,2$.
+These sets form a subfunctor $T\subseteq S$.
+The family is consistent if each theory is consistent, that is,
+$T_j\cap\nu_j^{-1}(T_j)=\varnothing$ for every $j$.
+Let $t_T:S\rightharpoonup S$ be the partial identity on $T$.
+Then $t_0\le t_T$, and consistency is equivalent to
+$t_T\nu^*t_T=0_S$. All three theories are complete precisely when
+$t_T\vee\nu^*t_T=1_S$, since the component domains of $\nu^*t_T$
+are the sets $\nu_j^{-1}(T_j)$.
 
 \begin{theorem}\label{thm:cosheaf-observation}
-Fix $i\in\{1,2\}$. For every consistent theory $t$ extending
-$t_0=\ran(c)$ on $S$ in $\mathcal A$, define
+Fix $i\in\{1,2\}$. Let $T\subseteq S$ be a compatible family of
+consistent c.e.\ theory extensions as above, and let
+$t_T:S\rightharpoonup S$ be its partial identity. Define
 \[
- P_{i,t}=(E_i\theta)^{-1}(|t|_i),\qquad
- N_{i,t}=(E_i\theta)^{-1}(|\nu^*t|_i).
+ P_{i,T}=(E_i\theta)^{-1}(|t_T|_i),\qquad
+ N_{i,T}=(E_i\theta)^{-1}(|\nu^*t_T|_i).
 \]
-The restriction idempotents $t,\nu^*t$ are inseparable in $\mathcal A$.
-The sets $P_{i,t},N_{i,t}$ are disjoint c.e.\ subsets of $\N^2$ satisfying
-$A_i\subseteq P_{i,t}$ and $B_i\subseteq N_{i,t}$.
+The restriction idempotents $t_T,\nu^*t_T$ are inseparable in $\mathcal A$.
+The sets $P_{i,T},N_{i,T}$ are disjoint c.e.\ subsets of $\N^2$ satisfying
+$A_i\subseteq P_{i,T}$ and $B_i\subseteq N_{i,T}$.
 They are recursively inseparable. The assignment
 \[
- t\longmapsto(\omega\times\omega,P_{i,t},N_{i,t})
+ T\longmapsto(\omega\times\omega,P_{i,T},N_{i,T})
 \]
 with the identity of $\omega\times\omega$ for extension inclusions is a
-covariant functor from the poset of consistent theories extending
-$t_0$ to $\operatorname{Pair}(\mathrm{Rec})$.
-Every such theory is incomplete.
+covariant functor from the poset of these families, ordered by componentwise
+inclusion, to $\operatorname{Pair}(\mathrm{Rec})$.
+The theory with theorem set $T_i$ is incomplete.
 \end{theorem}
 \begin{proof}
 The category $\mathcal A$ has restriction zeros and joins of restriction idempotents
 preserved by total inverse image. Its restriction idempotents $a,b$ are inseparable,
 and \eqref{eq:atomic-inequalities} gives the hypotheses of
-Corollary~\ref{cor:domain-incompleteness}. Hence $t,\nu^*t$ are
-inseparable, and $t$ is incomplete.
+Corollary~\ref{cor:domain-incompleteness}. Hence $t_T,\nu^*t_T$ are
+inseparable.
 
 The atom map $E_i\theta:\N^2\to S_i$ is total recursive.
-The component theorem and refutation sets $|t|_i$ and $|\nu^*t|_i$
+The component theorem and refutation sets $|t_T|_i$ and $|\nu^*t_T|_i$
 are c.e.; their inverse images under the total recursive map
 $E_i\theta$ are therefore c.e. Consistency and preservation of meets and
 zero make them disjoint. Applying $E_i$ to
-\eqref{eq:atomic-inequalities} and using $t_0\le t$ gives
+\eqref{eq:atomic-inequalities} and using $t_0\le t_T$ gives
 the two inclusions. A recursive separator would consequently
 separate $A_i,B_i$, which is impossible.
+If $T_i\cup\nu_i^{-1}(T_i)=S_i$, then $P_{i,T}$ and $N_{i,T}$
+would be complementary c.e.\ subsets of $\N^2$, and hence recursive.
+This would contradict their recursive inseparability.
 
-If $t\le t'$, monotonicity gives inclusions of both component
+If $T\subseteq T'$, monotonicity gives inclusions of both component
 sets, so the identity of $\omega\times\omega$ is the required pair morphism.
 The functor laws follow from the identity maps.
 \end{proof}

@@ -63,13 +63,23 @@ A restriction idempotent $e$ on $X$ \emph{splits} if
 $e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
 with $rm=1_A$. The category is \emph{split} when every restriction
 idempotent splits.
-Its \emph{restriction splitting}, denoted by
-$\operatorname{Split}(\mathcal C)$, has objects $(X,e)$, where $e$ is a
+Write $\operatorname{Split}(\mathcal C)$ for the category obtained by
+splitting its restriction idempotents, denoted by $K_r(\mathcal C)$
+in Cockett--Lack \cite[Section~2.3.3]{CockettLack}.
+Its objects are pairs $(X,e)$, where $e$ is a
 restriction idempotent on $X$, and morphisms
 $f:(X,e)\rightharpoonup(Y,d)$ given by original morphisms
 $f:X\rightharpoonup Y$ satisfying $f=dfe$.
 The identity of $(X,e)$ is $e$, and $f$ is total there when
 $\bar f=e$. Thus $(X,e)$ is the object through which $e$ splits.
+
+The \emph{Karoubi envelope} $\operatorname{Kar}(\mathcal C)$ has the
+same description with arbitrary idempotents $e:X\rightharpoonup X$
+in place of restriction idempotents. Its restriction operation sends
+$f:(X,e)\rightharpoonup(Y,d)$ to the morphism represented by $\bar f e$.
+This is the construction $K_E(\mathcal C)$ of
+\cite[Section~2.3.3, Proposition~2.26]{CockettLack} with $E$ the class
+of all idempotents.
 
 \subsection{Products, coproducts, and local connectedness}
 
