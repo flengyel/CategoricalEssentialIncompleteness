@@ -9,7 +9,7 @@ The abstract chain through Corollary 6.7 is implemented, including the source
 Turing diagonal, exact lifting hypothesis, disjoint-join sufficient condition,
 combined theorem and restriction-splitting inclusion. The model interpretation
 and a consistency-only syntactic inseparability application also use the new
-categorical theorem. These do not complete the full-paper target.
+categorical theorem. Those results alone do not complete the full-paper target.
 
 Preservation transport, the exact family over all arithmetic structures on ℕ,
 its strict projection/extension square, and the specified finite two-test program
@@ -24,11 +24,14 @@ construction, applications, structural appendices and actual restriction
 non-equivalence are proved. Appendix C now constructs the exact oracle-domain
 category, ordinary-valued Turing evaluator, separated diagonal pair, missing
 section and disjoint arrows without a common upper bound. All 24 numbered results
-have proofs. Finish the unnumbered free-semigroup universal property, arithmetic
-observation functor and standard-observation equations, the doubling functor,
-endpoint probe observations and complete-standard-theory comparison before
-claiming full-paper completion. Check the cited syntactic non-local-connectedness
-assertion as well.
+have proofs. The unnumbered free-semigroup universal property, arithmetic
+observation functor and standard-observation equations, doubling functor,
+endpoint probe observations and complete-standard-theory comparison are also
+implemented. The source/target universality and separator distinction and the
+general observation principle have dedicated exports as well. The source-to-declaration correspondence is recorded in the status
+file. The cited syntactic non-local-connectedness background assertion remains
+unformalized; no numbered proof depends on it. Do not describe that external
+background result as a proved instance of the current development.
 
 Every completed result must be imported by the project entry point, included in
 the transitive audit, built with the pinned toolchain, and checked by

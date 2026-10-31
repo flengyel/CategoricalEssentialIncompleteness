@@ -7,8 +7,11 @@ and the syntactic application through the exact faithful model family and
 specified finite two-test switch are proved. The arithmetic application now
 derives recursive inseparability and incompleteness through that categorical
 chain, with explicit sentence/proof objects and both substitution inclusions.
-The full-paper formalization, including the three-point construction and
-appendices, is unfinished.
+All 24 numbered results, including the three-point construction, applications
+and Appendices A–C, are proved. The required unnumbered constructions are also
+implemented, including word-semigroup universality, endpoint probes and standard
+observations. The status record distinguishes this scope from one cited
+background theorem that has not been independently formalized.
 [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md) tracks all 24 numbered results,
 their Lean declarations, and the remaining obligations. Run
 `python3 scripts/verify.py` to build the project and audit its proof dependencies.

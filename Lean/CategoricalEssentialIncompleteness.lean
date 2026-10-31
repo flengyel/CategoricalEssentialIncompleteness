@@ -60,6 +60,16 @@ import CategoricalEssentialIncompleteness.ForkCosheafExamples
 import CategoricalEssentialIncompleteness.ForkNonEquivalence
 import CategoricalEssentialIncompleteness.OracleMissingLift
 
+import CategoricalEssentialIncompleteness.ArithmeticObservationFunctor
+import CategoricalEssentialIncompleteness.DoublingRangeFunctor
+import CategoricalEssentialIncompleteness.EffectiveForkFreeSemigroup
+import CategoricalEssentialIncompleteness.StandardTrueTheory
+import CategoricalEssentialIncompleteness.ForkProbeComposition
+import CategoricalEssentialIncompleteness.SyntacticObservationLattice
+
+import CategoricalEssentialIncompleteness.GeneralObservationPrinciple
+import CategoricalEssentialIncompleteness.SyntacticTargetSeparators
+
 /-!
 # Local connectedness and essential incompleteness
 
@@ -80,7 +90,9 @@ pair, and the equivalence of its restriction splitting with the full partial-map
 category. Its syntax, finite-proof applications, cosheaf equivalence and
 restriction non-equivalence are proved. Appendix C constructs the actual
 oracle-domain counterexample, including its missing section and disjoint arrows
-without a common upper bound. Unnumbered full-paper obligations remain; see
+without a common upper bound. The word free-semigroup universal property,
+standard-theory comparison, doubling functor and both observation constructions
+are also proved. The exact scope and cited background limitation are recorded in
 `FORMALIZATION_STATUS.md`.
 
 ## Earlier representation-based development

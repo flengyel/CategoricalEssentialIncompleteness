@@ -2,8 +2,10 @@
 
 The current target is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`,
 reviewed baseline `883f1f792a5e4a244974d00458e8a9dee61b2f94`.
-The full paper is **unfinished**. The earlier version-16 development is retained
-below as a historical record and does not determine completion of version 5.
+All **24 numbered results**, their applications and appendices, and the
+constructions required by their proofs are proved. The cited background
+limitation below remains explicit. The earlier version-16 development is retained
+as a historical record and does not determine completion of version 5.
 The author's announced title change does not change the mathematical target;
 this work does not edit the manuscript.
 
@@ -128,9 +130,36 @@ tagged coproducts and reflects isomorphisms by recursive inverse search; these
 properties give extensivity and transfer through the functor-category equivalence.
 Appendix C is implemented by the actual oracle-domain category. Finite-prefix semidecision is proved equivalent to `Nat.RecursiveIn` domains, including typed encodings; the construction does not assume a proxy notion of relative enumerability. The native and P-category induced restrictions are explicitly compared. The range inclusion is faithful, reflects zero, preserves the actual products and coproducts, and has nonzero numerical identity. The literal Turing diagonal pair has the manuscript's exact even/odd supports. Its separator is ordinary c.e., nonrecursive and decidable relative to the actual diagonal halting set. The missing section is identified with the chosen Proposition 6.2 section, including its uniqueness; totality is derived for any proposed lift.
 
-All 24 numbered rows have proofs. Full-paper completion still requires the unnumbered free-semigroup universal property, the explicit arithmetic theory-extension observation functor and standard-observation equations, the doubling range-functor example, the endpoint probe functor with its observation isomorphism, and the complete-standard-theory comparison. Independent review also identified the cited non-local-connectedness assertion for consistent c.e. syntactic categories as unformalized. These are implementation work, not mathematical obstacles.
+All 24 numbered rows have proofs. The unnumbered constructions identified in
+source review are now implemented as follows.
 
-Independent source and compiled-type review of Appendix C found no unresolved issue. The full verifier passed with 1,109 transitive axiom checks; the new oracle proofs use only the permitted axioms.
+| Manuscript construction | Lean declarations | Exact coverage |
+| --- | --- | --- |
+| Section 2 doubling range functor | `PartialFunctions.doublingRangeFunctor`, `doublingCoproductIso`, `doubling_product_comparison`, `doubling_product_not_surjective` | Actual `X × Bool` on arbitrary partial functions; restrictions, image ranges, zeros and canonical coproduct comparison. Pairing the images of the two projections gives the displayed diagonal-tag map, which is not surjective under exactly nonemptiness of both factors. |
+| Appendix A free semigroup | `EffectiveFork.wordSingleton`, `wordConcatenate`, `wordInternalSemigroup`, `internal_free_semigroup`; `EnumerableCarriers.associative_of_values`, `PartialLists.foldl_partrec` | Actual total natural singleton and concatenation maps, associative internal word semigroup, and the unique total multiplicative extension to every actual internal semigroup. Finite partial recursive folds require totality only on the specified carriers; the component semigroup structures are derived from the internal associativity equation. |
+| Section 7 arithmetic observation functor | `ArithmeticApplication.observationFunctor`, `diagonalToObservation`, `observations_recursivelyInseparable` | Literal numeral theorem/refutation sets, c.e. and disjoint under consistency, enlarge under axiom inclusion. Actual identity arrows land in `RecursivePairs.Object` on the formal numerical type and receive the actual categorical diagonal pair. Recursive inseparability depends on the new local-lifting chain. |
+| Section 7 standard syntactic observations | `SyntacticModel.observation_iff_provable`, `observation_enumerable`, `observation_faithful_representation`, `observation_inf`, `observation_mono`, `observation_top`, `observation_bot`, `kappa_total` | Every normalized graph representative gives the same provable numeral domain predicate. The two displayed fixed-point equations hold in the source and its actual faithful model family. Enumerability uses `T.RE`; preservation of bottom states consistency explicitly. Constants are total source morphisms. |
+| Section 7 complete standard theory | `StandardTrueTheory.equivalence`, `complete`, `consistent`, `not_enumerable` | Actual uniformly provable `S_{Th(ℕ)}` is equivalent to the extensional classical category `Rec`, retaining the formal object codes and actual partial-function graphs. Fullness, faithfulness and essential surjectivity are proved. |
+| Section 6 source/target distinction | `SyntacticModel.family_tau_not_universal`, `family_disjoint_pair_separated`, `family_pair_complement_no_preimage` | The actual image of the Turing morphism fails universality among all target partial functions with total parameters. Target complements separate disjoint images, and the complement of the actual finite-switch pair's first image has no source-idempotent preimage. |
+| Section 8 general observation principle | `general_observed_incompleteness` | An arbitrary observation functor preserving restrictions, zeros and binary idempotent joins transports the specified inequalities to c.e. recursively inseparable observations. No faithfulness or preservation of ranges, products or coproducts is assumed. |
+| Section 8 endpoint probes | `EffectiveFork.probeEquiv`, `probeFunctor`, `probeObservationIso`, `probe_postcomposition`, `probe_postcomposition_domain`, `probe_partial_total_or_zero`, `probe_domain`, `probe_domain_fixed_point` | Actual total arrows out of each literal endpoint probe, their bijection with endpoint carrier elements, the partial postcomposition functor and natural observation isomorphism. Definedness is exactly totality of the composite; every partial arrow from a probe is total or zero. The idempotent domain is the exact fixed-point set. |
+
+The contextual sentence in Section 5 citing Di Paola–Montagna Corollary 4.4
+(non-local-connectedness of consistent c.e. syntactic categories) is not yet a Lean
+theorem. None of the numbered results or the constructed applications uses that
+external background assertion. It must not be confused with the proved local
+connectedness of the model-family target or with the classical numerical category.
+Thus the table records the exact verified scope rather than claiming every cited
+background fact has been formalized.
+
+Independent source and compiled-type review of Appendix C found no unresolved
+issue. Its full verifier run passed with 1,109 transitive axiom checks. Independent
+source, elaborated-type, axiom and dependency review of the word, observation,
+doubling and complete-standard-theory constructions found no substantive issue.
+The expanded full verifier passed with **1,274 transitive axiom checks**, unchanged
+pins and the recorded source/manuscript hashes. The standard and arithmetic
+observation results use the new categorical diagonal route. The final coverage
+review found no missing numbered result or required proof construction.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -181,7 +210,8 @@ passed with **893 configured transitive axiom checks**, unchanged dependency pin
 and recorded source/manuscript hashes. At that stage there were 22 proved numbered results,
 one partial result (categorical non-equivalence), and one pending result
 (Appendix C). The non-equivalence argument has since been completed as recorded
-in the correspondence table; Appendix C remains pending.
+in the correspondence table. Appendix C was still pending at that stage and
+has since been completed.
 
 
 The subsequent non-equivalence development passed independent read-only source,
@@ -190,8 +220,9 @@ terminal domain bijections, full realization of arbitrary classical formal-type
 splittings, extension of restriction equivalences to splittings, and passage to
 total categories. No findings remained. The full project verifier passed with
 **915 configured transitive axiom checks**, unchanged pins and source/manuscript
-hashes. All 23 numbered results outside Appendix C are now proved; Appendix C
-remains pending and full-paper completion is not claimed.
+hashes. At that stage all 23 numbered results outside Appendix C were proved.
+Appendix C and the further unnumbered constructions have since been completed
+as recorded above.
 
 ---
 
