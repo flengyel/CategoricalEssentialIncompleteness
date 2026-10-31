@@ -1,0 +1,195 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,array,tabularx,booktabs}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue,pdftitle={Appendix A: corrections and independent reviews}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Two}{\mathbf 2}
+\newcommand{\Tm}{\mathsf{Tm}}
+\newcommand{\Fm}{\mathsf{Fm}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+{\LARGE Appendix A: corrections and independent reviews}\par
+{\large Syntax and deductively closed theories}\par
+31 October 2026 \hfill Revision accompanying manuscript version 14
+
+The two indicated corrections have been implemented. Separate agents applied
+the hostile-review and mathematical-writing workflows; a third prepared the
+actual six-section outline, and a fourth reconciled their reports and edited
+both copies of the appendix. The new reviews identified no further necessary
+repair. They support retaining the six sections and their dependencies.
+
+This report concerns the standalone Appendix A, whose mathematical body is
+Appendix B of \emph{Local connectedness in recursion categories and essential
+incompleteness}. It records an author-side audit, not independent human peer
+review or formal verification. The complete individual reports accompany this
+summary in the repository's version 14 audit directory.
+
+\section*{Actual six-section outline}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabularx}{\textwidth}{@{}L{0.07\textwidth}L{0.31\textwidth}Y@{}}
+\toprule
+Section & Title & Function and dependencies\\\midrule
+A.1 & Categorical hypotheses and notation
+& Fixes the ambient category, coproduct assumptions, Boolean morphisms,
+decidable variable equality, signatures, and parameter stability.\\
+A.2 & Terms, formulas, and free variables
+& Defines the initial syntax and list algebras; constructs list operations,
+free-variable lists, and the sentence subobject. Uses A.1.\\
+A.3 & Admissible substitution
+& Constructs single-variable substitution and its admissibility subobject;
+proves the identity and absent-variable laws. Uses A.1--A.2.\\
+A.4 & Inference rules and deductively closed subobjects
+& Defines the inference endofunctor in a slice and proves that the image of
+its initial algebra is the least closed subobject. Uses regularity and finite
+coproducts, independently of the first-order syntax.\\
+A.5 & First-order theories
+& Specifies logical schemes and rule morphisms; applies A.4 to A.2--A.3;
+constructs sentence theories and their partial-identity representations.\\
+A.6 & Propositional theories
+& Applies A.4 to propositional syntax under weaker hypotheses, reusing the
+three propositional schemes displayed in A.5.\\\bottomrule
+\end{tabularx}
+
+The principal result is Theorem A.5, the least closed image theorem.
+Proposition A.3 supplies substitution for the first-order calculus;
+Theorem A.6 applies the image theorem and identifies its sentence part.
+The first-order dependency chain is A.1 $\to$ A.2 $\to$ A.3 $\to$ A.5,
+together with A.4 $\to$ A.5. A.6 uses A.4 and the three propositional
+scheme expressions, without the binding or decidable-equality assumptions.
+
+No lost dependency or unrelated section was identified. The list identities,
+substitution laws, distinction between formula and sentence closure, and
+restriction-splitting paragraph each perform a mathematical task.
+The construction gives a generated theory for each axiom subobject;
+it does not construct an object classifying all theories.
+
+\newpage
+\section*{Implemented corrections}
+\textbf{R1: explicit Boolean morphisms (A.1).}
+The phrase ``finite coproduct tables'' has been replaced by the actual
+copairings. For the injections $\mathsf f,\mathsf t:1\to\Two=1+1$,
+distributivity gives
+\[
+\gamma=[\langle\mathsf f,\mathsf f\rangle,
+         \langle\mathsf f,\mathsf t\rangle,
+         \langle\mathsf t,\mathsf f\rangle,
+         \langle\mathsf t,\mathsf t\rangle]:
+         1+1+1+1\xrightarrow{\cong}\Two^2.
+\]
+The definitions are
+\[
+\neg_2=[\mathsf t,\mathsf f],\qquad
+\wedge_2=[\mathsf f,\mathsf f,\mathsf f,\mathsf t]\gamma^{-1},
+\qquad
+\vee_2=[\mathsf f,\mathsf t,\mathsf t,\mathsf t]\gamma^{-1}.
+\]
+Thus $\neg_2:\Two\to\Two$ and
+$\wedge_2,\vee_2:\Two^2\to\Two$ have the declared types.
+The restrictions to the summands specify the operations; the coproduct
+universal property then determines their copairings. The symbol $\gamma$
+avoids conflict with the signature's arity bound $d$.
+
+\textbf{R2: the composite in the substitution proof (A.3).}
+If $h:I_E\to(X_T,X_F)$ is the initial algebra morphism and
+$\pi:(X_T,X_F)\to I_E$ projects to the original expressions, the
+endomorphism is $\pi h$. The proof now reads:
+\begin{quote}
+Composing this algebra morphism with the projections to the original
+components gives an endomorphism of the initial $K_E$-algebra, hence the identity.
+\end{quote}
+This repairs the local typing statement without changing the construction.
+
+\textbf{Explicit ambient category (A.6).}
+The fourth agent's local clarification declares the atom object as
+$V\in\operatorname{Ob}(\D)$. This matches the first-order declaration
+and the author's requirement that objects have an explicit ambient category.
+
+\section*{Writing and terminology findings}
+\begin{tabularx}{\textwidth}{@{}L{0.13\textwidth}Y Y@{}}
+\toprule
+Location & Finding and disposition & Source principle or rationale\\\midrule
+A.1 & R1 is resolved by typed copairings. & KLR \S1, points 11 and 26:
+explain introduced notation and avoid unnecessary jargon.\\
+A.2--A.3 & ``Fold'' and ``carrier'' are established terms. Optional replacements
+were considered and declined; no ambiguity was demonstrated. & Audience-sensitive
+editorial judgment; technical vocabulary is not prohibited mechanically.\\
+A.3 & R2 is resolved; retain the explanation of the equal-name binder branch.
+& KLR \S1, points 10--11: connect formulas and provide complementary explanation.\\
+A.1--A.6 & Keep the present definition order and proof dependencies.
+& KLR \S\S4--5 on contextual definition timing; Ullman, \S30, p.~67, on
+types and nearby definitions; \S37, pp.~92--93, on proof order.\\\bottomrule
+\end{tabularx}
+
+``Raw named-variable syntax object,'' ``stable under parameters,''
+``admissibility,'' and ``sentence theory'' are defined and subsequently used.
+Free-variable values are expressly lists of occurrences, retaining repetitions.
+No further undefined invented terminology was identified. No new citation,
+glossary, reorganization, or numerical realization proof was added.
+
+\newpage
+\section*{Independent reports and reconciliation}
+\textbf{Agent 1: hostile mathematical review.}
+The report checks the types and universal properties in all six sections,
+the substitution branches and laws, descent of the inference algebra to its
+regular image, leastness, sentence closure, and the partial-inverse condition.
+It also checks the relevant realization interfaces in manuscript \S\S4, 8,
+and 9. Its findings in the required audit categories are:
+\begin{itemize}
+\item[(A)] No confirmed hard blocker.
+\item[(B)] No established major weakness in the audited construction.
+\item[(C)] Both prior local defects resolved; no new definite minor defect.
+\item[(D)] No confirmed inconsistency between the appendix copies or the checked
+application interfaces.
+\item[(E)] No unmet mathematical correction condition supported by this pass.
+\item[(F)] Original-source adequacy of the Hilbert presentation, unrelated
+external results, novelty, and formal verification were not repeated or established.
+\end{itemize}
+Its final publication recommendation is unknown outside this bounded audit;
+the checked findings supply no ground for rejecting the revised construction.
+
+\textbf{Agent 2: mathematical-writing review.}
+The report supplies an actual outline, a source-grounded KLR comparison,
+a definition and notation audit, exact optional replacements, and a coverage
+record. It finds no further necessary writing change. The source advice is
+distinguished from the reviewer's categorical judgments and vocabulary preferences.
+
+\textbf{Agent 3: six-section outline.}
+The report assigns each section its function, constructions, principal results,
+and prerequisites. It finds no missing dependency or unrelated section and
+recommends retaining the existing order.
+
+\textbf{Agent 4: reconciliation and editing.}
+The fourth agent read all three new reports, checked their findings against
+the appendix, and retained R1 and R2. It declined the optional changes to
+``fold'' and ``carrier,'' made the explicit ambient-category declaration
+in A.6, and synchronized the standalone and integrated sources.
+
+\section*{Coverage, verification, and limits}
+The hostile and outline reports identify the reviewed 598-line source snapshot
+by SHA-256. The final edit is recorded separately in the fourth report.
+The reviewers reread the complete appendix in this pass; the hostile reviewer
+also inspected all seven pages of the corrected PDF. Earlier complete readings
+of the manuscript and KLR report are distinguished from this pass's targeted
+rereading. The writing review checked the cited KLR advice in the supplied
+Stanford report. The four mathematical bibliography sources were not freshly
+verified in this pass.
+
+The final standalone appendix and assembled manuscript were compiled, checked
+for unresolved references and layout warnings, and inspected at the revised
+pages. Their mathematical bodies agree apart from the integrated appendix's
+additional compatibility label. The accepted abstract and the other mathematical
+sections were preserved. The manuscript version is 14. No Lean verification
+is claimed.
+
+\textbf{Review source.} D.~E.~Knuth, T.~Larrabee, and P.~M.~Roberts,
+\emph{Mathematical Writing}, Stanford report.
+\href{https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf}{Official report}.
+Page citations above use printed pages. The full individual reports and
+reconciliation are in
+\href{https://github.com/flengyel/CategoricalEssentialIncompleteness/tree/main/Audit/2026-10-31-appendix-v14}{the version 14 audit directory}.
+\end{document}

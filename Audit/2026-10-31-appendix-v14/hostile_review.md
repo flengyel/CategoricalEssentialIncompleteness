@@ -1,0 +1,62 @@
+## (A) Kill-shots / hard blockers
+
+None confirmed in this author-side audit of the revised appendix. This is an AI-assisted self-audit, not a report submitted on behalf of an independent human referee.
+
+The reviewed source is `output/appendix/first_order_syntax_and_deductive_closure_appendix.tex`, 598 lines, SHA-256 `915f5398976c8802760a75cc9750b70c73a6c48a0faefd4e29906cac74df5a04`. Page anchors refer to the freshly compiled seven-page PDF, SHA-256 `af847394f687dcf0990981f451697313f92664e161023af63a5739882c0aa0d7` (273,428 bytes). They do not refer to the previous compilation.
+
+## (B) Major weaknesses
+
+None established. The following central claims were checked rather than treated as consequences of their terminology.
+
+| Current anchor | Claim and explicit hypotheses | Check and status |
+|---|---|---|
+| p. 1, A.1; source 46–110 | The Boolean operations, tests, and parameterized polynomial functors exist under the stated finite-limit and disjoint, pullback-stable coproduct hypotheses. | The displayed `gamma` is the canonical four-summand distributivity isomorphism. Each Boolean copairing has source `1+1+1+1` and target `2`, hence its composite with `gamma` inverse has source `2^2`. Pullback stability supplies the decompositions used for conditionals. No exponential or subobject classifier is used. Status: checked. |
+| p. 2, Definition A.1 and its universal square; source 115–161 | Raw syntax is an initial algebra for the displayed covariant `K:D^2→D^2`, assumed stable under every parameter object. | Every summand has a specified morphism action, preserving identities and composition. The universal square has both sides in `D^2`. For a monic subalgebra inclusion `m`, the initial map `h` gives `mh=id`; monicity then gives `hm=id`. This licenses the stated induction. Existence is an explicit hypothesis, not a purported consequence of regularity. Status: checked. |
+| pp. 2–3, list operations and Definition A.2; source 163–213 | Parameterized list recursion defines concatenation, membership, deletion, free-variable lists, and the sentence subobject. | Concatenation uses parameter `W`; membership and deletion use parameter `V`. The `K`-algebra on `(W,W)` has all the prescribed constructor types. Its quantifier component is deletion. The sentence square is a pullback along `nil:1→W`; this arrow is monic, so `s` is monic. The negation equation induces `ν:S→S`. The composite defining existential quantification has source `V×Fm` and target `Fm`. Status: checked. |
+| pp. 3–4, Proposition A.3 and equations (3)–(4); source 218–350 | The initial `K_E` morphism constructs single-variable substitution and a complemented admissibility domain. | The carriers are objects over `E=V×Tm`; all constructor operations retain that parameter. The binder operation has source `E×V×Fm×O(Fm)`. Equal-name binding returns the original formula, irrespective of the child result. For distinct names it requires both the capture test and a successful child result. Pullback along the coproduct injection `ok` gives exactly the stated admissibility subobject. Identity and absent-variable substitution follow by the given simultaneous induction, using the deletion identity. Status: checked. |
+| p. 5, Definition A.4 and Theorem A.5; source 355–430 | The image of an initial derivation algebra is the least rule-closed subobject, assuming regularity, finite coproducts, and existence of that algebra. | The rule functor is covariant on `D/F`; the two equations for `B_n(h)` determine its morphism action and functor laws. If `e` is regular epic, `B_n(e)` is the pullback of `e^n`. Finite products, pullbacks, and finite coproducts preserve the relevant regular epimorphisms. Monicity of `m` makes `eδ` coequalize the kernel pair of `H(e)`; descent supplies the algebra on the image. Initiality into every other closed subobject supplies leastness. No syntax assumptions are used here. Status: checked. |
+| pp. 6–7, Theorem A.6 and sentence theories; source 436–550 | The seven schemes determine typed rule data, and their initial derivation algebra generates the least formula and sentence theories. | The two substitution schemes use the specified admissibility pullbacks. The generalization rule has one premise; modus ponens has the ordered premises `(φ,φ⇒ψ)` and conclusion `ψ`. All nonlogical axioms lie in the sentence object, matching unrestricted generalization. Regular-image stability proves the sentence-image claim. The additional all-axiom existence hypothesis is explicitly introduced before defining sentence theories and proving closure/idempotence. The passage to `Split(R)` separately requires the stated partial inverse. Status: checked. |
+| p. 7, A.6; source 555–575 | The general image theorem applies to propositional syntax and the stated rule presentation under the weaker hypotheses. | The same three propositional scheme morphisms are reused, and the nullary/binary rule data have the required types. Positive and negative atomic axioms are specified by an image; their copairing is not gratuitously assumed monic in the abstract statement. No decidable atom equality is required. Status: checked. |
+
+Evidence for these checks is `derivation` or `structural_argument`, not an appeal to the intended construction. No substantive hidden hypothesis was found.
+
+## (C) Minor issues
+
+No new definite minor mathematical or terminology issue was found. The two requested repairs are resolved in the source actually reviewed:
+
+- **R1, resolved:** p. 1, source 57–73. The Boolean maps are now explicit copairings using `gamma`; the arity bound remains `d`. The displayed maps have the declared types. Evidence: `derivation`.
+- **R2, resolved:** p. 4, proof of Proposition A.3, source 287–293. The text now says that *composing* the initial algebra morphism with the original-component projections gives an endomorphism of the initial algebra. If the initial map is `h:I_E→(X_T,X_F)` and the projection is `π:(X_T,X_F)→I_E`, the expression being identified with the identity is `πh`. This fixes the previously exhibited typing imprecision. Evidence: `derivation`.
+
+Terminology audit: “raw named-variable syntax object” is locally defined by its data and universal property; “stable under parameters” is defined before use; “admissibility” is the named pullback subobject; “sentence theory” is explicitly defined by a factorization. These terms have subsequent mathematical uses. “Lists of free-variable occurrences” correctly preserves multiplicity rather than claiming a finite-set object. None of these terms supplies a hidden assumption or an unproved universal property. No invented term was found that requires removal merely because it is locally introduced.
+
+All seven rendered pages were inspected. The diagrams, labels, formula numbers, and revised Boolean display were legible; no clipping or overlap was observed. The ordinary paragraph continuation from p. 2 to p. 3 is not a mathematical or typographical blocker.
+
+## (D) Cross-section consistency failures
+
+None confirmed in the checked interfaces.
+
+1. A direct source comparison found the standalone mathematical body identical to manuscript `appendices/b-finite-syntax-and-proofs.tex`, after removing only the manuscript's additional `app:fork-proofs` label. Thus both repairs are synchronized. The standalone appendix is A; its manuscript counterpart is B.
+2. The numerical realization propositions in §§4 and 8 supply the stronger syntax hypotheses exactly where needed: decidable `V=N`, recursive bounded-arity signatures, parameter-stable syntax and lists, and initial derivation algebras for every axiom subobject. The tree-evaluation proofs quantify over arbitrary parameter objects and arbitrary algebras over them. Their uniformity is the uniformity of the algebra morphisms, not an unjustified choice of a program for each parameter.
+3. The Miller proof separately verifies common definedness and common output across binary representations. Preimage witnesses may vary, but the descended value is constant on fibers. This is sufficient for the category's extensional morphism definition.
+4. The cosheaf application uses A.6's propositional construction in `E=C_rec^J`, proves its own syntax and derivation initiality, and uses componentwise images. It does not apply A.1's decidable variable equality assumption to the nondecidable fork atom object.
+5. A.6 does not assert that `R_1=0` makes the unary pullback summand initial in an arbitrary regular category. The cosheaf application makes that further simplification only after invoking extensivity. No missing strict-initial-object assumption was found in the statement actually written.
+
+The scope of the claims is consistent: the syntax universal property concerns raw constructor algebras, not arbitrary semantic models equipped with binding and substitution; substitution is restricted to the displayed free-for domain; a generated theory is a subobject with a carrier in the total category. There is no claim of an object classifying all theories, no alpha-quotient construction, and no assertion that regularity alone supplies the initial algebras.
+
+## (E) Acceptance conditions, non-negotiable
+
+No unmet mathematical correction condition is supported by this pass. R1 and R2 have verifiable endpoints in the current source and PDF and are both satisfied. No central claim has been shown to require withdrawal. Adding a fabricated rejection condition would misrepresent the evidence.
+
+The final combined review should retain the explicit scope limitations in (F); this audit is not a verification of every cited logical source or a publication-level novelty assessment.
+
+## (F) Not checked / uncertainty log
+
+**Reading performed during this rerun:** the complete hostile-review skill; all 598 lines of the revised standalone source; the entire current seven-page PDF extraction; all seven rendered PDF pages; the realization passages in manuscript §4 (lines 326–450), §8 (lines 66–178), and §9 (lines 326–520); and a full body-equality comparison with manuscript Appendix B. The category setup and the beginning of the Miller realization statement were available from the immediately preceding full-manuscript reading. No fresh full-manuscript reread is claimed for this rerun.
+
+**Earlier common reading retained:** every `.tex` file assembled by current `main.tex`, including abstract, preamble, bibliography, §§1–9, and Appendices A–C; the complete provided KLR extraction, all 5,729 lines. KLR was not reread in full during this rerun. Its advice on typed variables, motivated definitions, complementary explanations, and controlled notation informs the terminology check; its stylistic examples are not treated as mathematical axioms.
+
+**Additional checks:** the binder fold was checked on shadowing, genuinely capturing substitution, and an absent substituted variable; the equal-name branch handles child failure correctly. The rule construction was tested conceptually on nullary-only and one-step rules in sets and on the two-object order `0<1` for variance and leastness. The degenerate one-object category introduces no contradiction under the hypotheses. The partial-identity statement was checked against an ordinary inclusion and its partial inverse. These are checks of the arguments, not machine-verified proofs or a claimed exhaustive counterexample search.
+
+**Remaining uncertainties:** this pass did not independently verify the original-source correspondence or completeness of the chosen Hilbert presentation in Hájek–Pudlák and Hirst–Hirst; it did not audit every external result in the paper, establish novelty, mechanically formalize the proofs, or test a concrete implementation of syntax codes. No such implementation is claimed as evidence by this abstract appendix. No new fundamental defect is suspected strongly enough to record as a finding.
+
+**Final self-audit:** strongest confirmed blocker: none; the previously confirmed projection typing defect is demonstrably repaired. Strongest suspected unconfirmed blocker: none identified. Most important unchecked item: the original-source correspondence and adequacy of the cited first-order calculus for the applications. The algebraic audit does not depend on unavailable material; a full publication recommendation would require checks outside this assigned scope. Final recommendation: **unknown**. No checked finding supports rejection of the revised appendix.

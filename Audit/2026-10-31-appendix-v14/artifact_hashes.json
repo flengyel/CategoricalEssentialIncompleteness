@@ -1,0 +1,32 @@
+[
+  {
+    "path": "output/appendix/first_order_syntax_and_deductive_closure_appendix.tex",
+    "sha256": "ab3b89623dc3023940e4d882c97fe9d063ac20758b41a45366c619bc642cbab0",
+    "bytes": 24762
+  },
+  {
+    "path": "output/appendix/first_order_syntax_and_deductive_closure_appendix.pdf",
+    "sha256": "9f811bd191cd487f5b927a80767fa38556e8a27c34ace8dedd72b74e50a9696d",
+    "bytes": 273483
+  },
+  {
+    "path": "output/manuscript/local_connectedness/appendices/b-finite-syntax-and-proofs.tex",
+    "sha256": "56160b5098163349f87fdbae3a6aa27f10a3a92357edc64f899c5cf2527700df",
+    "bytes": 22521
+  },
+  {
+    "path": "output/manuscript/local_connectedness_v14.pdf",
+    "sha256": "e27ede8de6bde1390693a8da1179fad5b8d1e4cac8bb9e467653b8eeae676878",
+    "bytes": 608110
+  },
+  {
+    "path": "output/manuscript/local_connectedness_v14_source.zip",
+    "sha256": "15007defbf612ea470470e9269227130e3a6a4fc3b52162bf141e2928e53ec34",
+    "bytes": 68055
+  },
+  {
+    "path": "output/appendix_review/review.pdf",
+    "sha256": "71a0a86b23831d4f705599a863ab2496ac097d81629d6c495e03f5b44fac4043",
+    "bytes": 217397
+  }
+]

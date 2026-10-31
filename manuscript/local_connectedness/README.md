@@ -1,8 +1,8 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 13. The modular manuscript was
+This is the working source for version 14. The modular manuscript was
 created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
-The [version 13 PDF](../essential_incompleteness_via_local_connectedness_v13.pdf)
+The [version 14 PDF](../essential_incompleteness_via_local_connectedness_v14.pdf)
 records this revision.
 
 Appendix B contains the categorical construction of syntax, admissible
@@ -10,6 +10,8 @@ substitution, and deductively closed theories. The realization proofs are
 in Sections 4, 8, and 9. The appendix is also available as a
 [standalone PDF](../first_order_syntax_and_deductive_closure_appendix.pdf)
 with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix.tex).
+The [version 14 appendix review](../../Audit/2026-10-31-appendix-v14/README.md)
+records the independent reports, their reconciliation, and the implemented corrections.
 
 ## Build
 
@@ -66,3 +68,4 @@ The accepted abstract is retained. For the introduction review, use the
 [version 12 theorem and proof synopsis](../../notes/manuscript_v12_theorems_and_proofs.md),
 accounting for the revised appendix and its applications in version 13.
 The Lean formalization remains indexed to version 5.
+

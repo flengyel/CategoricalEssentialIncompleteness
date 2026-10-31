@@ -2,7 +2,7 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 12 PDF](essential_incompleteness_via_local_connectedness_v12.pdf)
+[Version 14 PDF](essential_incompleteness_via_local_connectedness_v14.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 31 October 2026).
 
@@ -26,7 +26,9 @@ cd local_connectedness
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The [reviews](../Audit/2026-10-31-terminology-v9/README.md) record the terminology
+The [Appendix A review and corrections](../Audit/2026-10-31-appendix-v14/README.md)
+record the separate mathematical, writing, and outline reviews of the syntax
+appendix and their reconciliation. The [earlier reviews](../Audit/2026-10-31-terminology-v9/README.md) record the terminology
 and typing corrections, the independent mathematical and prose checks, and
 compilation results. The range-functor definition is unchanged.
 The [source directory guide](local_connectedness/README.md) lists the separate
@@ -292,5 +294,6 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
 
