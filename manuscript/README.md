@@ -2,31 +2,33 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 8 PDF](essential_incompleteness_via_local_connectedness_v8.pdf)
-([LaTeX source](essential_incompleteness_via_local_connectedness_v8.tex),
+[Version 9 PDF](essential_incompleteness_via_local_connectedness_v9.pdf)
+([LaTeX source](essential_incompleteness_via_local_connectedness_v9.tex),
 31 October 2026).
 
 Theorem 3.3 proves inseparability using a range functor into a locally
 connected target and a hypothesis lifting specified sections. Section 4
 constructs a recursion category from Miller's sequence, reduces the diagonal
-pair to its strict-cut pair, and proves essential incompleteness of a theory
-of real closed fields relative to computations independent of the binary name.
-Every individual binary name computes a separator of the strict-cut pair.
+pair to the index sets of coordinates below and above 1/2, and proves essential
+incompleteness of a theory of real closed fields relative to computations
+independent of the binary representation. Every individual binary representation
+computes a separator of those index sets.
 The syntactic, arithmetic, and three-point cosheaf applications follow in
-Sections 5–9. Appendix B gives initial-algebra characterizations of propositional and
-first-order derivations, with sentence proofs obtained by pullback.
+Sections 5–9. Appendix B gives initial-algebra characterizations of propositional
+and first-order derivations, with sentence proofs obtained by pullback.
 The Miller section and these universal-property statements are not yet
 formalized in Lean; the existing formalization is indexed to version 5.
 
 Build from this directory with:
 
 ```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v8.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error essential_incompleteness_via_local_connectedness_v9.tex
 ```
 
-The [reviews](../Audit/2026-10-31-abstraction-prose-v8/README.md) include the
-full-source mathematical and prose reviews, the disposition of the typing
-findings, source checks for the syntactic evaluator, and compilation record. The earlier versions and notes follow.
+The [reviews](../Audit/2026-10-31-terminology-v9/README.md) record the terminology
+and typing corrections, the independent mathematical and prose checks, and
+compilation results. The range-functor definition is unchanged.
+The earlier versions and notes follow.
 
 ## Computational constructions
 
