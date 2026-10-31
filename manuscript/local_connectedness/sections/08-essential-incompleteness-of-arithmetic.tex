@@ -1,0 +1,209 @@
+\section{Essential incompleteness of arithmetic}\label{sec:arithmetic}
+
+For $e\in\mathcal I(X,Y)$, define the partial function
+$\varphi_e:|X|\rightharpoonup|Y|$ by
+\[
+ \varphi_e(x)=y\quad\Longleftrightarrow\quad
+ \N\models G_e\bigl(\gamma_X(x),\gamma_Y(y)\bigr).
+\]
+Let $\mathrm{Rec}$ have the terms in $\mathsf O$ as objects and
+these partial functions as arrows, with extensional equality.
+The numerical indexing represents every partial recursive function,
+so this is a presentation of the classical recursion category
+on these objects.
+Its restriction idempotents are partial identities on c.e.\ subsets;
+the complemented ones are partial identities on recursive subsets.
+
+Let $u$ be the evaluator index of Lemma~\ref{lem:arithmetized-evaluation}.
+Its standard denotation
+$\tau_{\mathrm{rec}}=\varphi_u:\omega\times\omega\rightharpoonup\omega$
+is a Turing morphism in $\mathrm{Rec}$ by the specialization identity
+of that lemma. Let $e_d$ be the index obtained by composing $u$
+with the chosen diagonal index. Thus
+$\varphi_{e_d}=\tau_{\mathrm{rec}}\Delta_\omega$.
+Choose the coproduct isomorphism $\zeta:\omega\to\omega+\omega$
+whose underlying function sends $2m$ to the first tagged copy of $m$
+and $2m+1$ to the second. Define
+\[
+ \alpha(x)\equiv\exists m\,G_{e_d}(x,2m),\qquad
+ \beta(x)\equiv\exists m\,G_{e_d}(x,2m+1).
+\]
+Their standard truth sets
+\[
+ A=\{n:\N\models\alpha(\bar n)\},\qquad
+ B=\{n:\N\models\beta(\bar n)\}
+\]
+are the classical even-output and odd-output sets for self-application.
+Their recursive inseparability is another instance of
+Theorem~\ref{thm:local-lifting}. To see this, let
+$J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ be given by
+$J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
+It is a covariant range functor. The category $\Pfn$ satisfies
+the target hypotheses: partial identities on singletons detect partial
+functions, restriction idempotents split through their subsets of
+definition, partial injections have partial inverses, and inverse images
+preserve unions. Complementary restriction idempotents on an object $W$
+in $\mathrm{Rec}$ are partial identities on complementary recursive
+subsets $C,C'$ of $J_{\mathrm{rec}}(W)$. The arrow $s:W\to W+W$
+given numerically by $s(x)=i_1x$ for $x\in C$ and $s(x)=i_0x$
+for $x\in C'$ is total recursive. Its image under $J_{\mathrm{rec}}$ is the
+required section. This verifies the lifting hypothesis of
+Theorem~\ref{thm:local-lifting} for $J_{\mathrm{rec}}$.
+Applied with $\tau_{\mathrm{rec}}$ and $\zeta$, the theorem gives
+the partial identities on $A$ and $B$ as its two inseparable
+restriction idempotents. Since complemented restriction idempotents
+in $\mathrm{Rec}$ are partial identities on recursive subsets,
+$A,B$ are recursively inseparable.
+For $n\in A$, its finite computation trace gives a PA-proof of
+$\alpha(\bar n)$; for $n\in B$, it gives a PA-proof of
+$\beta(\bar n)$. PA-provable functionality of $G_{e_d}$ gives
+$\PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x))$.
+
+Work in $\operatorname{Split}(\mathrm{Rec})$.
+For a c.e.\ subset $D\subseteq\N$, write $D$ for the split object
+$(\omega,1_D)$, where $1_D$ is the partial identity on $D$.
+A partial recursive function $h:\N\rightharpoonup\N$ with domain
+contained in $D$ and image contained in a c.e.\ subset $E\subseteq\N$
+represents an arrow
+$D\rightharpoonup E$; it is total precisely when its domain is $D$.
+The comparison with partial maps between c.e.\ numerical carriers
+is constructed in Appendix~\ref{app:fork-structure}, following
+Proposition~\ref{prop:fork-recursion}.
+In this presentation, restriction idempotents are partial identities
+on c.e.\ subsets, their joins are partial identities on unions, and inverse images along
+total arrows preserve these joins.
+The full restriction functor
+$I:\mathrm{Rec}\to\operatorname{Split}(\mathrm{Rec})$ is given by
+$I(X)=(X,1_X)$ and $I(f)=f$. It leaves the restriction idempotents
+on each original object, their order, and their complements unchanged.
+Thus the partial identities $a,b$ on $A,B$ remain inseparable
+on $I(\omega)$.
+
+Let $S$ be the recursive set of codes of closed arithmetic sentences.
+Negation and numeral substitution give total maps
+\[
+ \nu:S\to S,\qquad \nu(\ulcorner\varphi\urcorner)
+     =\ulcorner\neg\varphi\urcorner,
+ \qquad
+ \theta:\N\to S,\qquad \theta(n)=\ulcorner\alpha(\bar n)\urcorner.
+\]
+For a c.e.\ theory $T\supseteq\PA$, fix a recursive Hilbert calculus
+with modus ponens and generalization. Let $\mathrm{Prf}_T$ be the
+set of codes of finite derivation trees from $T$ whose conclusions are sentences.
+This carrier is c.e.: the logical rules and formula syntax are
+recursive, and each candidate proof has only finitely many axiom
+membership tests in the c.e.\ axiom set of $T$. Reading the root
+conclusion gives a total arrow
+$c_T:\mathrm{Prf}_T\to S$ in the splitting. Its range
+$t_T=\ran(c_T)$ is the partial identity on the c.e.\ set of theorems
+of $T$.
+Proposition~\ref{prop:first-order-proof-initial} gives the initial-algebra
+and pullback characterization of $c_T$.
+
+The finite computation proofs of $\alpha(\bar n)$ for $n\in A$ give
+$a\le\theta^*t_{\PA}$. For $n\in B$, a finite computation proves
+$\beta(\bar n)$ in $\PA$; the PA-provable disjointness of $\alpha$
+and $\beta$ then proves $\neg\alpha(\bar n)$. Thus
+\begin{equation}\label{eq:arithmetic-domain-inclusions}
+ a\le\theta^*t_{\PA},\qquad
+ b\le\theta^*\nu^*t_{\PA},\qquad
+ t_{\PA}\le t_T.
+\end{equation}
+
+\begin{corollary}[Essential incompleteness of arithmetic]\label{cor:arithmetic}
+The theorem and refutation sets of every consistent computably
+enumerable extension of $\PA$ are recursively inseparable.
+Consequently every such extension is incomplete.
+\end{corollary}
+\begin{proof}
+Let $T\supseteq\PA$ be consistent and c.e.\ Consistency says that
+no sentence and its negation are both theorems, so
+$t_T\,\nu^*t_T=0_S$. Completeness would say that every sentence or
+its negation is a theorem, giving $t_T\vee\nu^*t_T=1_S$.
+The pair $a,b$ supplied by Theorem~\ref{thm:local-lifting}, together
+with \eqref{eq:arithmetic-domain-inclusions}, satisfies the hypotheses
+of Corollary~\ref{cor:domain-incompleteness}. That corollary makes
+$t_T,\nu^*t_T$ inseparable and rules out the completeness equation.
+A complemented restriction idempotent on the recursive sentence carrier
+$S$ is a partial identity on a recursive subset of $S$, so this gives
+recursive inseparability of the theorem and refutation sets.
+\end{proof}
+
+\subsection{Numeral instances and theory extension}
+
+For a consistent c.e.\ extension $T$ of $\PA$, define
+\[
+ P_T=\{n:T\vdash\alpha(\bar n)\},\qquad
+ N_T=\{n:T\vdash\neg\alpha(\bar n)\}.
+\]
+These are the domains of definition of the partial identities
+$\theta^*t_T$ and $\theta^*\nu^*t_T$.
+They are computably enumerable disjoint sets with $A\subseteq P_T$
+and $B\subseteq N_T$, and they enlarge under theory extension.
+Let $\operatorname{Pair}(\mathrm{Rec})$ have objects $(X,A,B)$,
+where $X\in\mathsf O$ and $A,B\subseteq J_{\mathrm{rec}}(X)$
+are disjoint computably enumerable subsets.
+An arrow $(X,A,B)\to(Y,P,N)$ is a total arrow $f:X\to Y$
+of $\mathrm{Rec}$ satisfying $J_{\mathrm{rec}}(f)(A)\subseteq P$ and
+$J_{\mathrm{rec}}(f)(B)\subseteq N$. Identities and composition are inherited
+from $\mathrm{Rec}$. The assignment
+$T\mapsto(\omega,P_T,N_T)$, with the identity function for theory
+inclusions, is a covariant functor from the poset of consistent
+computably enumerable extensions of $\PA$ to
+$\operatorname{Pair}(\mathrm{Rec})$.
+The inclusions $A\subseteq P_T$ and $B\subseteq N_T$ give the morphism
+$1_\omega:(\omega,A,B)\to(\omega,P_T,N_T)$ in this category.
+A recursive separator pulls back along a total recursive function;
+consequently $P_T,N_T$ are recursively inseparable.
+
+
+For a restriction idempotent
+$c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
+\begin{equation}\label{eq:observation}
+ E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
+\end{equation}
+It is computably enumerable by proof enumeration and is independent of
+the representative. The operation is monotone, preserves finite meets,
+and preserves top and bottom. Choose a constant-function index
+$\operatorname{const}(n)\in\N$ for which
+$\PA\vdash\forall x\forall y\,
+(G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
+$\kappa_n=[\operatorname{const}(n)]_T:\omega\to\omega$. Then
+\begin{equation}\label{eq:faithful-observation}
+ n\in E_T(c)
+ \quad\Longleftrightarrow\quad c\kappa_n=\kappa_n
+ \quad\Longleftrightarrow\quad
+ F_T(c)F_T(\kappa_n)=F_T(\kappa_n).
+\end{equation}
+The composition formula makes
+$G_{\operatorname{comp}(j_C,\operatorname{const}(n))}(x,y)$
+T-provably equivalent to $C(\bar n)\land y=\bar n$, which gives
+the first equivalence.
+The second follows from faithfulness of $F_T$.
+
+
+For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
+\[
+ D:S_{\operatorname{Th}(\N)}\longrightarrow\mathrm{Rec},\qquad
+ D([e]_{\operatorname{Th}(\N)})=\varphi_e,
+\]
+is an isomorphism: two classes are equal exactly when their uniform
+graph-equivalence sentence is true in $\N$, which is equivalent
+to equality of their standard partial functions.
+The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
+although $T$ is complete.
+Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.
+
+Bernardi's numerical argument uses a precomplete equivalence
+relation $R$ on $\N$: for every partial recursive function $f$
+there is a total recursive function $g$ such that
+$f(n)\mathord\downarrow$ implies $f(n)\,R\,g(n)$.
+For such a relation, distinct equivalence classes are recursively
+inseparable; consequently the same holds for disjoint nonempty
+unions of classes. The relation $\equiv_{\PA}$ on indices defined
+in \eqref{eq:uniform} is one of his examples
+\cite[pp.~125--126]{Bernardi}.
+The argument above obtains $A,B$ from
+Theorem~\ref{thm:local-lifting} and uses finite PA-proofs to
+establish $A\subseteq P_T$ and $B\subseteq N_T$.
+

@@ -1,0 +1,57 @@
+\section{Interpretation in models}\label{sec:models}
+
+In $\Pfn$, restriction products are Cartesian products and coproducts
+are tagged disjoint unions.
+
+Fix a model $M\models T$. Assign a set $X_M$ to each term
+$X\in\mathsf O$ by
+\[
+ X_M=|M|\quad(X=\omega),\qquad
+ (X\times Y)_M=X_M\times Y_M,\qquad
+ (X+Y)_M=X_M\amalg Y_M.
+\]
+The recursive coding for each $X\in\mathsf O$ induces a bijection
+$\gamma_X^M:X_M\to|M|$: use the identity for $\omega$, the
+interpreted pairing for products, and the interpreted even and odd
+codings for the two coproduct summands. The PA-provable coding
+identities give the inverses. For $e\in\mathcal I(X,Y)$
+and elements $x\in X_M$, $y\in Y_M$, define
+\begin{equation}\label{eq:model-functor}
+ \begin{aligned}
+ F_M(X)&=X_M,\\
+ F_M([e]_T)(x)=y
+ &\quad\Longleftrightarrow\quad
+ M\models G_e\bigl(\gamma_X^M(x),\gamma_Y^M(y)\bigr).
+ \end{aligned}
+\end{equation}
+The standard index $e$ in $G_e$ is interpreted as its numeral in $M$.
+All quantified traces and intermediate values in this formula range over
+the whole model, including its nonstandard elements.
+
+\begin{proposition}\label{prop:model}
+For every $M\models T$, \eqref{eq:model-functor} defines a covariant
+functor $F_M:S_T\to\Pfn$ preserving restrictions, zeros, binary
+restriction products and coproducts, ranges, and finite joins of
+restriction idempotents.
+\end{proposition}
+\begin{proof}
+Functionality is provable in $\PA$, so the interpreted graph is a
+partial function. Equation \eqref{eq:uniform} makes the assignment
+independent of the representative. Equation \eqref{eq:composition},
+interpreted in $M$, quantifies over an intermediate arithmetic code.
+The bijection $\gamma_Y^M$ converts that code into the intermediate
+element of $Y_M$, proving preservation of composition. The identity
+graph gives the identity function on $X_M$.
+
+The definedness predicate $\exists y\,G_e(x,y)$ gives the interpreted
+function's domain. Similarly,
+\[
+ \{y\in Y_M:M\models R_e(\gamma_Y^M(y))\}
+ =\operatorname{im}(F_M[e]_T),
+\]
+so ranges are preserved. False predicates, conjunction, and disjunction
+give zeros, intersections, and unions. The PA-provable product and
+tagged-coproduct graph equations give the corresponding operations on
+partial functions.
+\end{proof}
+

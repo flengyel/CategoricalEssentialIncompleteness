@@ -1,0 +1,195 @@
+\section{Necessity of section lifting for inseparability}
+\label{app:lifting-counterexample}
+
+The lifting hypothesis in Theorem~\ref{thm:local-lifting} cannot be
+omitted, even for a faithful range functor that preserves restriction
+products and reflects zero arrows.
+
+Fix an acceptable numbering $(\varphi_e)_{e\in\N}$ of the ordinary
+partial recursive functions $\N\rightharpoonup\N$. For a partial
+numerical function $f$, write $f(x)\mathord\downarrow$ when $f$ is
+defined at $x$. Put
+\[
+ K=\{e:\varphi_e(e)\mathord\downarrow\}.
+\]
+The set $K$ is not recursive.
+Let $(W_a^K)_{a\in\N}$ enumerate the domains of an acceptable
+numbering of partial functions recursive relative to $K$.
+Fix a recursive bijective pairing function
+$\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
+
+The objects of $\mathcal C_K$ are the numerical carriers generated
+from $\N$ by binary Cartesian products and tagged disjoint unions,
+with fixed recursive codings. An arrow $f:X\rightharpoonup Y$ is a partial function whose
+domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
+recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
+on every element of $D_f$ and agrees with $f$ there. Equality is equality
+of partial-function graphs. These arrows need not themselves be ordinary
+partial recursive functions. The total arrows of $\mathcal C_K$ are exactly
+the ordinary total recursive functions between the indicated types.
+
+Let $F:\mathcal C_K\to\Pfn$ send each numerical carrier to the same
+set and each arrow to the same partial function.
+
+On $\N$, the arrows are precisely the functions
+\[
+ f_{e,a}(x)\simeq
+ \begin{cases}
+  \varphi_e(x),&x\in W_a^K,\\
+  \text{undefined},&x\notin W_a^K.
+ \end{cases}
+\]
+Here $\simeq$ includes simultaneous undefinedness: the actual domain
+is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every arrow has this
+form by taking an index of its extension and an oracle index of its
+specified domain.
+
+\begin{proposition}\label{prop:missing-lift}
+The category $\mathcal C_K$ is a prodominical recursion category with
+binary restriction coproducts and ranges. The functor $F$ satisfies
+every hypothesis of
+Theorem~\ref{thm:local-lifting} except the lifting hypothesis.
+For the Turing morphism and coproduct isomorphism constructed below,
+the specified pair is separated by complementary restriction idempotents in
+$\mathcal C_K$. Moreover, there are parallel arrows in $\mathcal C_K$
+with disjoint restriction idempotents and no common upper bound in
+the restriction order, although finite joins of restriction idempotents
+exist.
+\end{proposition}
+
+\begin{proof}
+Let $f:X\rightharpoonup Y$ and $g:Y\rightharpoonup Z$ have
+ordinary partial recursive extensions $f_0,g_0$. Their composite has
+extension $g_0f_0$ and domain
+\[
+ D_{gf}=D_f\cap f_0^{-1}(D_g).
+\]
+This domain is c.e.\ relative to $K$: enumerate $D_f$, compute the
+corresponding $f_0$-values, and test for their appearance in the
+enumeration of $D_g$, using dovetailing. Identities and associativity
+are inherited from partial functions. Restriction is the partial
+identity on $D_f$, which has the ordinary identity as an extension.
+Empty partial functions give restriction zeros.
+
+Cartesian products and tagged copairings preserve the arrow class:
+their domains are respectively products and tagged unions of the given
+domains, and their extensions are the corresponding ordinary partial
+recursive programs. Consequently the set-theoretic restriction
+products and coproducts have their usual universal properties in
+$\mathcal C_K$. Product with a zero arrow is zero, and the chosen
+recursive coding isomorphisms make the category isotypical.
+
+The set $f(D_f)$ is c.e.\ relative to $K$: enumerate $D_f$ and run
+$f_0$ on its elements. The partial identity on this image belongs to
+$\mathcal C_K$ and is its range. Leastness and the agreement law
+hold for partial functions: equality after $f$ gives equality on
+every value in its image, including equality of definedness.
+Ranges commute with restriction products because images of products
+of partial functions are products of images. Restriction idempotents
+are the partial identities on the subsets c.e.\ relative to $K$;
+their order corresponds to inclusion, and their finite joins are
+partial identities on unions.
+
+Define $\tau_K:\N\times\N\rightharpoonup\N$ by
+\[
+ \tau_K(\langle e,a\rangle,x)\simeq f_{e,a}(x).
+\]
+Its domain is c.e.\ relative to $K$, uniformly in all three
+variables, and it has the ordinary partial recursive extension
+$(\langle e,a\rangle,x)\mapsto\varphi_e(x)$.
+To prove its Turing property, let
+$v:\N\times\N\rightharpoonup\N$ be an arrow, with ordinary
+partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
+domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
+for $v_0$ gives an ordinary total recursive function $e:\N\to\N$ with
+\[
+ \varphi_{e(z)}(x)\simeq v_0(z,x).
+\]
+Specializing an oracle program for $D_v$ gives an ordinary total
+recursive function $a:\N\to\N$ with
+\[
+ W_{a(z)}^K=\{x:(z,x)\in D_v\}.
+\]
+The latter specialization is ordinary recursive because it only
+inserts the finite numeral for $z$ into program code; the oracle is
+used when the resulting program runs. Thus the function
+$r:\N\to\N$ given by $r(z)=\langle e(z),a(z)\rangle$ is a total
+morphism of $\mathcal C_K$, and
+$v=\tau_K(r\times1_{\N})$, with equality of domains and values.
+The fixed recursive codings give the same argument for every parameter
+object of $\mathcal C_K$. Hence $\tau_K$ is a Turing morphism.
+
+The functor $F$ is faithful and preserves restrictions, zeros,
+ranges, binary restriction products, and coproducts. It also reflects
+zero arrows. Its target $\Pfn$ is split and locally connected:
+restriction idempotents split through their subsets of definition,
+and partial identities on singletons detect partial functions.
+Partial injections have partial inverses, giving weak choice, and
+inverse images preserve unions. Also $F(1_{\N})\ne0$.
+
+Use the total recursive isomorphism
+\[
+ b:\N\longrightarrow\N+\N,\qquad
+ b(2n)=i_0(n),\quad b(2n+1)=i_1(n).
+\]
+Put $d=\tau_K\Delta_{\N}$ and
+$a_0=(bd)^*(1_{\N}+0_{\N})$,
+$a_1=(bd)^*(0_{\N}+1_{\N})$.
+For $q\in\N$, write
+$p(q)\simeq\varphi_{\pi_0(q)}(q)$. These restriction idempotents
+are the partial identities on the sets
+\[
+ \begin{aligned}
+ D_{a_0}&=\{q:q\in W_{\pi_1(q)}^K,
+                    \ p(q)\mathord\downarrow\text{ with an even value}\},\\
+ D_{a_1}&=\{q:q\in W_{\pi_1(q)}^K,
+                    \ p(q)\mathord\downarrow\text{ with an odd value}\}.
+ \end{aligned}
+\]
+Let
+\[
+ A=\{q:p(q)\mathord\downarrow\text{ with an even value}\}.
+\]
+This is an ordinary c.e.\ set and is decidable relative to $K$.
+For the latter assertion, uniformly construct a program that ignores
+its input, simulates $p(q)$, and halts precisely when the output is
+even; membership of its index in $K$ decides membership of $q$ in $A$.
+Thus $A$ and $A^c$ are c.e.\ relative to $K$, and their partial
+identities are complementary restriction idempotents in $\mathcal C_K$.
+They separate the displayed pair because
+$D_{a_0}\subseteq A$ and $D_{a_1}\subseteq A^c$.
+
+The set $A$ is not recursive. Fix any index $a_*$. Choose an ordinary
+total recursive function $h:\N\to\N$ such that $\varphi_{h(n)}$
+ignores its input, simulates $\varphi_n(n)$, and returns $0$ if that
+simulation halts. Then
+\[
+ n\in K\quad\Longleftrightarrow\quad
+ \langle h(n),a_*\rangle\in A.
+\]
+For $B\subseteq\N$, write $1_B:\N\rightharpoonup\N$ for the
+partial identity on $B$. The source arrow
+$p_A=\nabla_{\N}(1_{A^c}+1_A):\N+\N\rightharpoonup\N$
+is sent to the partial injection whose unique section
+$s_A:\N\to\N+\N$ in $\Pfn$ is
+\[
+ s_A(n)=
+ \begin{cases}
+  i_1(n),&n\in A,\\
+  i_0(n),&n\notin A.
+ \end{cases}
+\]
+This section is total and not recursive, since its tag decides $A$.
+If it had a preimage under $F$, that source arrow would
+be total and hence ordinary total recursive, a contradiction.
+This is the missing lift required by
+Theorem~\ref{thm:local-lifting} for the complemented restriction idempotent $1_A$.
+
+Finally, the arrows $i_1 1_A$ and $i_0 1_{A^c}$ belong to
+$\mathcal C_K$: they have the total recursive extensions $i_1$
+and $i_0$, respectively. Their domains are disjoint. Any common
+upper bound would agree with the first arrow on $A$ and the second
+on $A^c$. It would therefore be the total function $s_A$, which
+is not a source arrow. Thus no such upper bound exists.
+\end{proof}
+

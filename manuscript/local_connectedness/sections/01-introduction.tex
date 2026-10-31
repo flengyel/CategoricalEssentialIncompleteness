@@ -1,0 +1,123 @@
+\section{Introduction}
+
+Theorem~\ref{thm:local-lifting} establishes recursive inseparability
+in a recursion category using a range functor to a split locally
+connected target satisfying weak choice and inverse-image preservation
+of binary joins. The target provides sections associated with
+complementary source restriction idempotents. If these sections lift
+to source arrows, a Turing morphism gives an inseparable source pair.
+The functor need not preserve restriction products.
+
+Joins of source arrows with disjoint domains suffice for lifting
+(Proposition~\ref{prop:disjoint-joins}). Without lifting the conclusion
+can fail even for a faithful range functor preserving products and
+reflecting zero maps
+(Appendix~\ref{app:lifting-counterexample}).
+
+The principal application uses a sequence $a:\N\to[0,1]$ constructed
+by Miller \cite{Miller2004}. We form a category $\mathcal E_a$ whose
+arrows are partial numerical functions computed by one oracle program
+with the same domain and values for every binary representation of $a$.
+Compactness of the set of representations permits the construction of a Turing
+morphism in this category. The index sets
+\[
+ L_a=\{n:a(n)<1/2\},\qquad R_a=\{n:a(n)>1/2\}
+\]
+are semidecidable in $\mathcal E_a$. We construct an ordinary recursive
+map reducing the diagonal pair of Theorem~\ref{thm:local-lifting} to
+$L_a,R_a$, and hence prove their inseparability in $\mathcal E_a$.
+Each fixed binary representation $p$ computes a separator of $L_a$
+and $R_a$. The inclusion into the recursion category of
+$p$-partial recursive functions is a faithful range functor preserving
+restriction products and sends this inseparable pair to a separable pair.
+
+This example gives a theory of real closed fields with constants $c_n$
+and the strict rational inequalities satisfied by $a(n)$.
+The theory is consistent, and its axioms are semidecidable independently
+of the representation of $a$. Every consistent extension with the same
+semidecidability property is incomplete
+(Theorem~\ref{thm:miller-incompleteness}). The total map
+$n\mapsto\ulcorner c_n<1/2\urcorner$ pulls the theorem and refutation
+domains back to domains containing $1_{L_a}$ and $1_{R_a}$,
+respectively. Corollary~\ref{cor:domain-incompleteness} then applies.
+
+We also apply the criterion to the syntactic recursion categories of
+Montagna and Di Paola--Montagna \cite{Montagna,DPM}.
+For a consistent computably enumerable (c.e.)
+extension $T$ of Peano arithmetic ($\PA$), the arrows of $S_T$ are
+equivalence classes of indices of partial recursive functions. Two
+indices are identified when $T$ proves the universal closure of the
+equivalence of their graph formulas. These categories are not locally
+connected \cite[Corollary 4.4]{DPM}. Interpretation in all models of
+$T$ with carrier $\N$ gives a faithful range functor into a locally
+connected product of partial-map categories. Partial recursive functions
+selecting between predicates proved complementary in $T$ represent the
+required section lifts.
+The construction commutes with theory extension.
+
+The numerical instance of the criterion gives a fixed recursively
+inseparable pair. Finite computation proofs show that its two sets lie
+in the inverse images of the theorem and refutation sets of $\PA$ under
+numeral substitution. The inclusions persist under theory extension.
+Consequently every consistent c.e.\ extension of $\PA$ has recursively
+inseparable theorem and refutation sets and is incomplete.
+We also construct a recursion category from cosheaves on a three-point
+space. It is not equivalent as a restriction category to the classical
+recursion category. Its restriction splitting contains a consistent
+propositional theory whose formula and derivation objects are
+characterized by initiality. Every consistent extension represented
+by a restriction idempotent is incomplete.
+
+After the preliminaries, Section~\ref{sec:lifting} proves the general
+criterion and its incompleteness corollary.
+Section~\ref{sec:miller} gives the Miller application.
+Sections~\ref{sec:syntactic}--\ref{sec:family} construct the syntactic
+model functors and their section lifts. Sections~\ref{sec:arithmetic}
+and~\ref{sec:cosheaves} give the arithmetic and cosheaf applications.
+The appendices contain the cosheaf construction, its syntax and proofs,
+and the counterexample to inseparability without section lifting.
+
+\subsection{Related work}
+
+Di Paola and Heller proposed inseparability of theorems and refutable
+sentences as part of a categorical formulation of incompleteness
+\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence
+theorem for recursion categories \cite[Sections 8--9]{Heller}.
+Di Paola and Montagna's syntactic examples led to the question of
+extending that theorem beyond locally connected sources \cite{DPM}.
+Lengyel proved existence theorems using faithful iteration functors
+\cite{Lengyel2004,Corrections}. The present criterion concerns
+inseparability in a source already equipped with a Turing morphism.
+
+Di Paola and Heller introduced dominical categories as a setting for
+recursion theory \cite{DPH}. Rosolini's $P$-categories generalized this
+setting \cite{RosoliniThesis,Rosolini}. Heller adopted them and defined
+prodominical categories \cite[Section 5]{Heller}.
+Cockett and Lack introduced restriction categories \cite{CockettLack},
+and Cockett and Hofstra developed the theory of Turing categories
+\cite{CockettHofstra}. We use restriction categories, with binary
+restriction products in the source recursion categories. These products
+give the equivalent $P$-category structure
+\cite[Proposition 4.5]{CockettLackIII}.
+
+Di Paola and Heller proved recursive inseparability in dominical
+recursion categories in which every arrow has a section
+\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability
+results from precomplete equivalence relations, including PA-provable
+equality of partial recursive functions among his examples
+\cite[pp.~125--128]{Bernardi}.
+Montagna also obtained effectively inseparable pairs in his syntactic
+category $S$
+\cite[Remark 3.1]{Montagna}.
+
+
+Miller constructed a sequence that enumerates every real in $[0,1]$
+computable uniformly from its representations \cite[Theorem~6.3]{Miller2004}.
+We use the stronger index property stated immediately after that
+theorem and recalled in Section~\ref{sec:miller}.
+Bauer and Hanson use this construction in a parameterized realizability
+topos with countable Dedekind reals \cite{BauerHanson}.
+Section~\ref{sec:miller} uses their binary representations to construct a recursion category,
+prove inseparability of $L_a,R_a$, and obtain essential incompleteness
+for a theory of real closed fields.
+

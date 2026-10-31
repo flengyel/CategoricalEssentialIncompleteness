@@ -1,7 +1,7 @@
 # Categorical essential incompleteness
 
-The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 9](manuscript/essential_incompleteness_via_local_connectedness_v9.pdf)
-([LaTeX source](manuscript/essential_incompleteness_via_local_connectedness_v9.tex),
+The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 9](manuscript/local_connectedness/main.pdf)
+([LaTeX source](manuscript/local_connectedness/main.tex),
 31 October 2026). Section 3 proves the range-functor lifting theorem;
 Section 4 applies it to Miller's sequence and a theory of real closed fields.
 Appendix B characterizes derivations by initial algebras and sentence proofs
@@ -12,6 +12,12 @@ record the terminology corrections, explicit numerical codings, and comparison
 with Montagna's presentation. The definition of range functor and the three
 central result statements in Section 3 are unchanged from version 8.
 Version 9 has not been reconciled with the Lean declarations.
+
+The [current source directory](manuscript/local_connectedness/README.md) contains
+a main file and separate files for the preamble, abstract, each section,
+each appendix, and bibliography. Section-by-section revision begins with
+[the introduction](manuscript/local_connectedness/sections/01-introduction.tex).
+The initial split preserves the version 9 text exactly.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).

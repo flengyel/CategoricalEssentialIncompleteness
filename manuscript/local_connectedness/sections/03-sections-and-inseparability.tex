@@ -1,0 +1,228 @@
+\section{Sections of partial monomorphisms and inseparability}\label{sec:lifting}
+
+\subsection{Sections in a locally connected category}
+
+For a coproduct $Y+Z$, let
+$\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
+restriction idempotents. Their meet is zero and their join is the identity. These facts
+follow by precomposition with the two injections and the agreement
+property of ranges.
+
+\begin{lemma}\label{lem:connected-alternative}
+Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
+and binary restriction coproducts. Suppose inverse images preserve binary
+joins of restriction idempotents. If $a$ is a connected restriction
+idempotent on $X$ and
+$f:X\to Y+Z$ is total, then
+$\varepsilon_0fa=fa$ or $\varepsilon_1fa=fa$.
+\end{lemma}
+\begin{proof}
+Totality and the inverse-image laws give the disjoint decomposition
+\[
+ a=af^*\varepsilon_0\vee af^*\varepsilon_1.
+\]
+Connectedness makes one term zero and the other equal to $a$. In the
+latter case $a\le f^*\varepsilon_i$, and the restriction identity
+$\varepsilon_i f=f\overline{\varepsilon_i f}$ gives
+$\varepsilon_i fa=fa$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-switch}
+Let $\mathcal A$ be a locally connected split restriction category with
+ranges, restriction zeros, and binary restriction coproducts. Suppose
+weak choice holds and inverse images preserve binary joins of
+restriction idempotents.
+For disjoint restriction idempotents $a,b$ on $X$, the arrow
+$p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
+with a unique section $s:X\rightharpoonup X+X$, and
+\[
+ ps=\bar s=a\vee b.
+\]
+In particular, for complementary $c,c'$ on $X$, the arrow
+$\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
+$sc=i_1c$ and $sc'=i_0c'$.
+\end{proposition}
+\begin{proof}
+First let $\theta,\theta':Y\to X+X$ be total and suppose
+$p\theta=p\theta'$. The identities
+$ap=\nabla_X(a+0)$ and $bp=\nabla_X(0+b)$ give
+\[
+ \nabla_X(a+0)\theta=\nabla_X(a+0)\theta',
+ \qquad
+ \nabla_X(0+b)\theta=\nabla_X(0+b)\theta'.
+\]
+For each connected restriction idempotent $\gamma$ on $Y$,
+Lemma~\ref{lem:connected-alternative} gives $i,j\in\{0,1\}$ with
+\[
+ \varepsilon_i\theta\gamma=\theta\gamma,
+ \qquad \varepsilon_j\theta'\gamma=\theta'\gamma.
+\]
+If $i=j=0$, compose the equality involving $a$ with $\gamma$ and
+then with $i_0$ to obtain
+$(a+b)\theta\gamma=(a+b)\theta'\gamma$.
+If $i=j=1$, use the equality involving $b$ and $i_1$.
+If $i\ne j$, the two equalities give
+$(a+b)\theta\gamma=0=(a+b)\theta'\gamma$.
+Local connectedness therefore gives
+$(a+b)\theta=(a+b)\theta'$. Since $\bar p=a+b$, this proves the
+partial-monomorphism condition for total arrows.
+
+For arbitrary $u,v:W\rightharpoonup X+X$ with $pu=pv$, split their
+common restriction idempotent as
+$\overline{pu}=\overline{pv}=me$, where $m:Z\to W$ is total,
+$e:W\rightharpoonup Z$, and $em=1_Z$. The arrows $pum,pvm$, hence also $um,vm$, are total.
+The preceding case gives $\bar p um=\bar p vm$. Composing with $e$
+and using $\bar p u=\bar p u\,\overline{pu}$ and its analogue for $v$
+gives $\bar p u=\bar p v$. Thus $p$ is a partial monomorphism.
+
+Weak choice supplies a section $s$. The equations $ps=\bar s$ and
+$psp=p$ imply $\bar s=\ran(p)$: the idempotent $\bar s$ receives $p$,
+and every restriction idempotent receiving $p$ also receives
+$ps=\bar s$. Moreover
+$\bar p s=s\overline{ps}=s$. Two sections have the same composite
+with $p$, so partial monicity makes them equal.
+The defining property of the range gives $\ran(p)=a\vee b$.
+
+For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$.
+The equality $p(sc)=c=p(i_1c)$ and partial monicity give $sc=i_1c$;
+the equation on $c'$ is analogous.
+\end{proof}
+
+\begin{theorem}[Range-functor lifting]\label{thm:local-lifting}
+Let $\mathscr R$ be a recursion category with ranges and
+binary restriction coproducts. Let $\mathcal A$ be a locally connected
+split restriction category with ranges, restriction zeros, and binary
+restriction coproducts, satisfying weak choice, with inverse images
+preserving binary joins of restriction idempotents. Let
+$F:\mathscr R\to\mathcal A$ be a range functor.
+Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and
+an isomorphism $b:U\to U+U$, with $F(1_U)\ne0$.
+For each complementary pair $c,c'$ on $U$, let
+$s_c:FU\to FU+FU$ be the total section of $\nabla_{FU}(Fc'+Fc)$ supplied by
+Proposition~\ref{prop:local-switch}. Suppose there is an arrow
+$\ell_c:U\rightharpoonup U+U$ with
+$F\ell_c=\chi_{U,U}s_c$, where
+$\chi_{U,U}:FU+FU\to F(U+U)$ is the canonical coproduct isomorphism.
+Then
+\[
+ a_0=(b\tau\Delta_U)^*(1_U+0_U),\qquad
+ a_1=(b\tau\Delta_U)^*(0_U+1_U)
+\]
+are inseparable in $\mathscr R$.
+\end{theorem}
+\begin{proof}
+The restriction idempotents $a_0,a_1$ are disjoint. Suppose $c,c'$ separate them.
+Put $u=b^{-1}\ell_c:U\rightharpoonup U$, and choose a total parameter $g:U\to U$ with
+$\tau(g\times1_U)=u\pi_2$. Precomposition with $\langle1_U,g\rangle$
+gives $\tau\Delta_Ug=ug$.
+
+Applying $F$ to the source equation
+$b\tau\Delta_Ug=\ell_cg$ gives
+\[
+ \chi_{U,U}^{-1}F(b\tau\Delta_U)Fg=s_cFg.
+\]
+In the target write $E=Fg:FU\to FU$,
+$H=\chi_{U,U}^{-1}F(b\tau\Delta_U):FU\rightharpoonup FU+FU$,
+$\Gamma=Fc$, and $\Gamma'=Fc'$. Thus $HE=s_cE$.
+Since $s_c\Gamma=i_1\Gamma$ and $s_c\Gamma'=i_0\Gamma'$,
+the inverse images under $s_c$ of the two summand restriction idempotents are
+$\Gamma'$ and $\Gamma$,
+respectively. Preservation of restrictions and composition now gives
+\[
+ E^*F(a_0)=E^*\Gamma',\qquad E^*F(a_1)=E^*\Gamma.
+\]
+The separator inequalities give
+\[
+ E^*\Gamma'=E^*F(a_0)\le E^*\Gamma,
+ \qquad E^*\Gamma=E^*F(a_1)\le E^*\Gamma'.
+\]
+The two restriction idempotents are therefore equal. Their meet is
+zero, and totality of $E$ and preservation of joins make their join
+$1_{FU}$. Hence $1_{FU}=0$, contradicting the hypothesis.
+\end{proof}
+
+\subsection{A sufficient condition for lifting}
+
+\begin{proposition}\label{prop:disjoint-joins}
+Let $\mathcal C$ be a restriction category with restriction zeros and
+binary restriction coproducts. Suppose every pair of parallel arrows
+whose restriction idempotents are disjoint has a join in the restriction
+order.
+For complementary restriction idempotents $c,c'$ on $X$, the arrow
+\[
+ \ell_c=(i_1c)\vee(i_0c'):X\rightharpoonup X+X
+\]
+is total and satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+If $F:\mathcal C\to\mathcal A$ is a range functor and $\mathcal A$
+satisfies the hypotheses of Proposition~\ref{prop:local-switch},
+then $\chi_{X,X}^{-1}F\ell_c$ is the section of
+$\nabla_{FX}(Fc'+Fc)$.
+\end{proposition}
+\begin{proof}
+The restrictions of $i_1c$ and $i_0c'$ are $c$ and $c'$ because
+the injections are total. The upper-bound equations for the join
+give $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+Both $c$ and $c'$ lie below $\bar\ell_c$, so
+$1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
+
+Put $\Gamma=Fc$ and $\Gamma'=Fc'$. Preservation of composition
+and coproduct injections gives
+$(\chi_{X,X}^{-1}F\ell_c)\Gamma=i_1\Gamma$ and
+$(\chi_{X,X}^{-1}F\ell_c)\Gamma'=i_0\Gamma'$.
+The section $s$ of Proposition~\ref{prop:local-switch} satisfies the
+same two equations. Thus $\chi_{X,X}^{-1}F\ell_c$ and $s$ agree after
+$[\Gamma,\Gamma']$. Its range is
+$\Gamma\vee\Gamma'=1_{FX}$, so range agreement gives
+$\chi_{X,X}^{-1}F\ell_c=s$.
+\end{proof}
+
+\subsection{From inseparable restriction idempotents to incompleteness}
+
+The following corollary applies when inverse images of the theorem
+and refutation domains contain an inseparable pair.
+
+\begin{corollary}\label{cor:domain-incompleteness}
+Let $\mathcal C$ be a restriction category with restriction zeros and
+binary joins of restriction idempotents preserved by inverse image along total arrows.
+Let $a,b$ be inseparable restriction idempotents on $U$. Suppose that
+$\theta:U\to S$ and $\nu:S\to S$ are total, and that a restriction
+idempotent $t_0$ on $S$ satisfies
+\[
+ a\le\theta^*t_0,\qquad b\le\theta^*\nu^*t_0.
+\]
+For every restriction idempotent $t\ge t_0$ on $S$ with $t\,\nu^*t=0_S$,
+the pair $t,\nu^*t$ is inseparable. In particular,
+$t\vee\nu^*t\ne1_S$.
+\end{corollary}
+\begin{proof}
+Suppose complementary restriction idempotents $e,e'$ on $S$ satisfy
+$t\le e$ and $\nu^*t\le e'$. Put
+$c=\theta^*e$ and $c'=\theta^*e'$. Inverse image preserves
+meets and zero, so $cc'=\theta^*(ee')=0_U$.
+Preservation of joins and totality of $\theta$ give
+\[
+ c\vee c'=\theta^*(e\vee e')=\theta^*1_S=1_U.
+\]
+Monotonicity gives
+$a\le\theta^*t_0\le\theta^*t\le c$ and
+$b\le\theta^*\nu^*t_0\le\theta^*\nu^*t\le c'$.
+Thus $c,c'$ would separate $a,b$, a contradiction.
+If $t\vee\nu^*t=1_S$, the disjoint pair $t,\nu^*t$ would
+itself be such a complementary separator.
+\end{proof}
+
+In each application, we specify a sentence object $S$, a negation
+morphism $\nu$, and a conclusion map whose range is $t_0$.
+For these representations we verify the two inequalities and identify
+the equations $t\,\nu^*t=0_S$ and $t\vee\nu^*t=1_S$ with
+consistency and completeness, respectively. The corollary then excludes
+complete consistent extensions represented by restriction idempotents
+$t\ge t_0$.
+
+An inseparable pair on an object of $\mathscr R$ remains inseparable
+in $\operatorname{Split}(\mathscr R)$: the fully faithful inclusion
+$U\mapsto(U,1_U)$ changes neither its endomorphisms nor its restriction idempotents.
+In the applications below we construct sentence and proof objects in
+the restriction splitting and verify the remaining hypotheses of
+Corollary~\ref{cor:domain-incompleteness}.
+

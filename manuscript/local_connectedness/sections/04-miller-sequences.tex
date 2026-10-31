@@ -1,0 +1,386 @@
+\section{Miller sequences and essential incompleteness}\label{sec:miller}
+
+Let $2^{\N}=\{0,1\}^{\N}$ be the set of infinite binary sequences,
+with the product topology of the discrete space $\{0,1\}$.
+This is Cantor space.
+Fix a recursive bijection $\langle-,-\rangle:\N^2\to\N$ and an
+acceptable enumeration $(\Phi_e^p)_{e\in\N}$ of partial numerical
+oracle computations, where $p\in2^{\N}$. Tuple inputs and outputs use
+fixed recursive codings. Let $(q_j)_{j\in\N}$ be a recursive enumeration
+of the rationals. An oracle program with index $d\in\N$
+\emph{computes a real $r$ from $p$}
+if $\Phi_d^p(k)$ is defined for every $k$ and
+\[
+ |q_{\Phi_d^p(k)}-r|<2^{-k}\qquad(k\in\N).
+\]
+Give $Q=[0,1]^{\N}$ its product topology and define
+\[
+ \rho:2^{\N}\longrightarrow Q,\qquad
+ \rho(p)(n)=\sum_{j\geq0}p(\langle n,j\rangle)2^{-j-1}.
+\]
+For each $n$, the subsequence $j\mapsto p(\langle n,j\rangle)$
+is a binary expansion of $\rho(p)(n)$.
+A \emph{binary representation} of $z\in Q$ is a sequence
+$p\in2^{\N}$ with $\rho(p)=z$. Write
+$P_z=\rho^{-1}(\{z\})$ for the set of these representations.
+The map $\rho$ is continuous and onto, so every $P_z$ is nonempty
+and compact.
+
+Miller's construction gives a sequence $a\in Q$ with the following
+property: if an oracle program with index $d$ computes the same real $r\in[0,1]$ from
+every $p\in P_a$, then
+\begin{equation}\label{eq:miller-property}
+ a(d)=r.
+\end{equation}
+Such a sequence is called a \emph{Miller sequence}
+\cite[Theorem~2.2]{BauerHanson}.
+The index equality is the strengthened conclusion stated after
+\cite[Theorem~6.3]{Miller2004}; the formulation with binary
+representations is given in
+\cite[Section~2.1 and Theorem~2.2]{BauerHanson}.
+The rational approximations produced by $d$ may depend on $p$,
+while the real they represent is fixed.
+
+\subsection{Computation independent of the binary representation}
+\label{sec:miller-category}
+
+\begin{lemma}\label{lem:miller-unanimity}
+There is one oracle program which, from $p\in P_z$ and numerical inputs
+$e,n$, computes the partial function $\tau_z:\N^2\rightharpoonup\N$
+defined by
+\[
+ \tau_z(e,n)=m
+ \quad\Longleftrightarrow\quad
+ (\forall q\in P_z)\;\Phi_e^q(n)\mathord\downarrow=m.
+\]
+Its value and its domain of definition depend only on $z$, not on the
+chosen binary representation $p$.
+\end{lemma}
+\begin{proof}
+For a finite binary sequence $\sigma$, let
+$[\sigma]=\{p\in2^{\N}:p\mathbin{\upharpoonright}|\sigma|=\sigma\}$
+be its cylinder in Cantor space.
+The set $\rho([\sigma])$ is a computably specified finite
+union of closed dyadic boxes in $Q$, with restrictions on only finitely
+many coordinates. For each affected coordinate $n$, complete the
+prescribed binary digits to a finite initial segment of
+$j\mapsto p(\langle n,j\rangle)$. There are only finitely many such
+completions.
+From a binary representation $p$ of $z$, strict rational inequalities for the coordinates
+of $z$ are semidecidable. We can therefore enumerate all cylinders
+$[\sigma]$ for which $z\notin\rho([\sigma])$. Their union is exactly
+$2^{\N}\setminus P_z$: if $\rho(q)\ne z$, a sufficiently long initial
+segment of $q$ already forces a different value in one coordinate.
+
+For fixed $e,n,m$, let
+\[
+ H_{e,n,m}=\{q\in2^{\N}:\Phi_e^q(n)\mathord\downarrow=m\}.
+\]
+Finite halting computations enumerate this open set as a union of
+cylinders, uniformly in $e,n,m$. For each $m$, search for a finite cover
+of Cantor space by cylinders from $H_{e,n,m}$ and
+$2^{\N}\setminus P_z$, dovetailing these searches over $m$. Whether finitely
+many cylinders cover Cantor space is decidable. Such a cover exists
+exactly when $P_z\subseteq H_{e,n,m}$, by compactness. Since $P_z$ is
+nonempty, at most one $m$ satisfies this condition. Thus the search has
+the asserted output and definedness, for every binary representation of $z$.
+\end{proof}
+
+For the fixed sequence $a$, let $\mathcal E_a$ have the
+objects generated from $\N$ by binary Cartesian products and tagged
+disjoint unions, with fixed recursive codings. Every such object is
+recursively isomorphic to $\N$. An arrow $f:X\rightharpoonup Y$ belongs
+to $\mathcal E_a$ when one oracle program computes exactly $f$, including
+its domain of definition, for every $p\in P_a$. Equality of arrows is
+equality of partial functions.
+
+\begin{proposition}\label{prop:miller-category}
+The category $\mathcal E_a$ is a locally connected recursion category
+with ranges, binary restriction coproducts, and finite compatible joins.
+It satisfies weak choice, and $\tau_a:\N\times\N\rightharpoonup\N$
+is a Turing morphism.
+\end{proposition}
+\begin{proof}
+Composition of the representing programs gives the same composite
+partial function for every binary representation of $a$.
+The recursive projections, pairings,
+tagged injections, and case distinctions give the stated finite
+structure. Restriction is computed by running a program for $f(x)$ and,
+if it halts, returning $x$. To compute the range partial identity at
+$y$, dovetail the computations $f(x)$ over all coded inputs $x$ and
+return $y$ when one returns $y$. Although the discovered witness may
+depend on the representation, the returned value and the existence of a witness
+do not. Thus $\ran(f)$ belongs to $\mathcal E_a$; its leastness and
+agreement law follow from those of set-theoretic images.
+Dovetailing compatible computations gives their union;
+compatibility ensures that the output is independent of which
+computation finishes first. These operations also give zero maps and
+the prodominical law $f\times0=0$.
+
+For every input $x$, the singleton partial identity $1_{\{x\}}$ is
+recursive. It is connected, and these partial identities detect
+inequality of partial functions, so the category is locally connected.
+A partial monomorphism here is injective on its domain of definition: a failure of
+injectivity would be detected by two recursive constant maps. For an
+injective arrow $f$, the same preimage search returns the unique $x$
+with $f(x)=y$. Its output is consequently independent of the representation and
+gives the partial inverse. This proves weak choice.
+
+Lemma~\ref{lem:miller-unanimity} puts $\tau_a$ in $\mathcal E_a$.
+Let $f:X\times\N\rightharpoonup\N$ be represented by a program with
+index $d$. The parameter theorem for oracle programs gives an ordinary
+total recursive map $c:X\to\N$ with
+\[
+ \Phi_{c(x)}^p(n)\simeq\Phi_d^p(x,n).
+\]
+Here $\simeq$ includes simultaneous undefinedness.
+If $f(x,n)=m$, every $p\in P_a$ gives this same output; if $f(x,n)$ is
+undefined, every $p\in P_a$ gives an undefined computation. The definition
+of $\tau_a$ therefore gives
+$f=\tau_a(c\times1_{\N})$. The map $c$ is a total source arrow.
+Finally, the chosen recursive codings make the category isotypical.
+\end{proof}
+
+For $p\in P_a$, let $\mathrm{Rec}^{p}$ be the recursion category on
+the same numerical objects, with partial $p$-recursive functions as
+arrows. The identity interpretation of partial functions defines a
+faithful range functor
+\[
+ J_p:\mathcal E_a\longrightarrow\mathrm{Rec}^{p}.
+\]
+It also preserves restriction products and finite compatible joins.
+Write $\mathcal K_p=\operatorname{Split}(\mathrm{Rec}^{p})$ and let
+$I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ be the full inclusion.
+This inclusion is a range functor.
+A concrete presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
+numerical objects as objects and partial $p$-recursive functions between
+these carriers as arrows. A restriction idempotent splits through its
+$p$-c.e. domain of definition.
+Singleton restrictions prove local connectedness, and preimage search
+for an injective map proves weak choice. Ranges are the partial identities
+on images, and inverse images preserve unions of domains of definition.
+Thus $\mathcal K_p$ satisfies the target
+hypotheses of Theorem~\ref{thm:local-lifting}.
+
+If $c,c'$ are complementary restriction idempotents on a numerical
+object $X$, run the membership computations for their domains of
+definition in parallel and return the opposite tag when one succeeds.
+This gives the total source map
+\[
+ \ell_c=(i_1c)\vee(i_0c'):X\longrightarrow X+X.
+\]
+Its image under $I_pJ_p$ is the required section, and
+$(I_pJ_p)(1_{\N})\ne0$. Thus each composite
+$I_pJ_p$ satisfies the hypotheses of Theorem~\ref{thm:local-lifting}.
+Using the recursive bijection $b:\N\to\N+\N$ which assigns the tag
+of $m$ according to its parity, that theorem gives inseparable
+restriction idempotents that are the partial identities on the sets
+\begin{equation}\label{eq:miller-diagonal-pair}
+ A_i=\{e:\tau_a(e,e)\mathord\downarrow=m
+                   \text{ for some }m\equiv i\pmod2\},
+ \qquad i=0,1.
+\end{equation}
+
+\subsection{The index sets below and above \texorpdfstring{$1/2$}{1/2}}
+\label{sec:miller-cuts}
+
+Define
+\[
+ L_a=\{n:a(n)<\tfrac12\},\qquad
+ R_a=\{n:a(n)>\tfrac12\}.
+\]
+Their partial identities belong to $\mathcal E_a$, since strict
+inequalities can be recognized from approximations obtained from any
+binary representation of $a$.
+
+\begin{lemma}\label{lem:miller-cut-reduction}
+There is an ordinary total recursive map $h:\N\to\N$ such that
+\[
+ h^{-1}(L_a)=A_0,\qquad h^{-1}(R_a)=A_1.
+\]
+\end{lemma}
+\begin{proof}
+For $e,m,t\in\N$, let $H_{e,m,t}$ be the finite union of halting
+cylinders enumerated by stage $t$ for the computation
+$\Phi_e^q(e)\mathord\downarrow=m$. Choose these finite unions increasing
+in $t$, and put
+\[
+ K_{e,m,t}=\rho(2^{\N}\setminus H_{e,m,t})\subseteq Q.
+\]
+Each $K_{e,m,t}$ is a computably specified finite union of closed dyadic
+boxes. Compactness of $P_z$ gives
+\begin{align*}
+ U_e^i
+ &:=\{z\in Q:\tau_z(e,e)\mathord\downarrow=m
+                      \text{ for some }m\equiv i\pmod2\}\\
+ &=\bigcup_{\substack{m\equiv i\pmod2\\t\in\N}}
+       (Q\setminus K_{e,m,t}).
+\end{align*}
+In particular, $U_e^0$ and $U_e^1$ are disjoint effectively open sets.
+
+The product topology on $Q$ is induced by the metric
+\[
+ d:Q\times Q\to[0,1],\qquad
+ d(z,w)=\sum_{n\geq0}2^{-n-1}|z(n)-w(n)|.
+\]
+For a nonempty box restricting finitely many coordinates to closed
+rational intervals $I_n$, the distance from $z$ to the box is the
+finite sum
+$\sum_n2^{-n-1}\operatorname{dist}(z(n),I_n)$ over those coordinates.
+Distance to a nonempty finite union is the minimum of these distances.
+Define $\delta_{e,m,t}:Q\to[0,1]$ by
+$\delta_{e,m,t}(z)=d(z,K_{e,m,t})$ when $K_{e,m,t}$ is nonempty, and
+$\delta_{e,m,t}(z)=1$ when it is empty. These functions are uniformly
+computable and continuous, and
+\[
+ \delta_{e,m,t}(z)>0\quad\Longleftrightarrow\quad
+ z\notin K_{e,m,t}.
+\]
+For each $i$, take a fixed recursive enumeration
+$(m_j,t_j)_{j\geq0}$ of all pairs with $m_j\equiv i\pmod2$, and define
+\[
+ g_e^i:Q\to[0,1],\qquad
+ g_e^i(z)=\sum_{j\geq0}2^{-j-1}\delta_{e,m_j,t_j}(z).
+\]
+The tail bound is uniform, so $g_e^i$ is computable and continuous,
+with $0\leq g_e^i\leq1$ and $g_e^i(z)>0$ exactly on $U_e^i$.
+Consequently the computable continuous function
+\[
+ r_e:Q\to[1/4,3/4],\qquad
+ r_e(z)=\frac12+\frac{g_e^1(z)-g_e^0(z)}4
+\]
+is below $1/2$ exactly on $U_e^0$, and
+is above $1/2$ exactly on $U_e^1$.
+
+The preceding construction gives one oracle program computing total
+numerical functions $\Psi^p:\N^2\to\N$, for $p\in2^{\N}$.
+Its output $\Psi^p(e,k)$ is an index in the rational enumeration,
+with
+\[
+ \bigl|q_{\Psi^p(e,k)}-r_e(\rho(p))\bigr|<2^{-k}
+ \qquad(e,k\in\N,\ p\in2^{\N}).
+\]
+The oracle parameter theorem gives a total recursive $h$ such that
+$\Phi_{h(e)}^p(k)=\Psi^p(e,k)$. For $p\in P_a$ these computations
+represent the same real $r_e(a)$, so the Miller property gives
+\[
+ a(h(e))=r_e(a).
+\]
+Together with $a\in U_e^i\Longleftrightarrow e\in A_i$, this proves
+the asserted inverse-image equalities.
+\end{proof}
+
+\begin{corollary}\label{cor:miller-cuts-inseparable}
+The restriction idempotents $1_{L_a},1_{R_a}:\N\rightharpoonup\N$ are inseparable in
+$\mathcal E_a$. Nevertheless, every $p\in P_a$ computes a separator
+of the underlying sets $L_a,R_a$.
+\end{corollary}
+\begin{proof}
+If complementary restriction idempotents in $\mathcal E_a$ separated
+$1_{L_a},1_{R_a}$, their inverse images under $h$ would separate
+$1_{A_0},1_{A_1}$, contrary to
+Theorem~\ref{thm:local-lifting} as applied above.
+For a fixed binary representation $p\in P_a$, the set
+\[
+ C_p=\{n:p(\langle n,0\rangle)=0\}
+\]
+is $p$-decidable and satisfies $L_a\subseteq C_p$ and
+$C_p\cap R_a=\varnothing$. At $a(n)=1/2$, either first binary digit
+is allowed. Thus the single program reading that digit produces a
+separator from every binary representation of $a$, but the set it decides
+cannot be independent of the representation.
+\end{proof}
+
+If $J_p\tau_a$ were a Turing morphism, Theorem~\ref{thm:local-lifting},
+applied to $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ and its
+$p$-recursive sections associated with complementary restriction
+idempotents, would make $1_{A_0},1_{A_1}$ inseparable in
+$\mathrm{Rec}^{p}$. The $p$-decidable set $h^{-1}(C_p)$ separates
+$A_0,A_1$. Hence $J_p\tau_a$ is not a Turing
+morphism, although $\mathrm{Rec}^{p}$ has a Turing morphism.
+
+
+\subsection{A theory of real closed fields}
+\label{def:miller-splitting}
+
+Call a subset $D$ of a numerical object \emph{$\mathcal E_a$-semidecidable}
+when its partial identity $1_D$ is an arrow of $\mathcal E_a$.
+We use the concrete presentation of $\operatorname{Split}(\mathcal E_a)$
+in which such a subset $D\subseteq X$ represents $(X,1_D)$.
+For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
+a morphism $D\rightharpoonup E$ is represented by
+an arrow $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
+$f=1_Ef1_D$; it is total when $\bar f=1_D$.
+All code operations below are restricted to their indicated carriers.
+
+Consider the language of ordered fields with additional constants
+$(c_n)_{n\in\N}$. Let $T_a$ consist of a recursive axiomatization of
+real closed ordered fields together with the axioms
+\begin{equation}\label{eq:miller-theory}
+ q<c_n\quad\text{if }q<a(n),\qquad
+ c_n<q\quad\text{if }a(n)<q,
+ \qquad(q\in\mathbb Q, n\in\N).
+\end{equation}
+Rational bounds abbreviate inequalities with integer coefficients.
+The real field, with $c_n$ interpreted as $a(n)$, is a model of $T_a$.
+Its axiom set is $\mathcal E_a$-semidecidable: the field axioms are
+recursive, and each strict rational inequality can be recognized from
+every binary representation of $a$ with the same membership outcome.
+
+\begin{theorem}\label{thm:miller-incompleteness}
+Let $a$ be a Miller sequence with property~\eqref{eq:miller-property},
+and let $T_a$ be the theory~\eqref{eq:miller-theory}.
+For every consistent extension of $T_a$ with an
+$\mathcal E_a$-semidecidable axiom set, the partial identities on its
+theorem and refutation sets are inseparable in
+$\operatorname{Split}(\mathcal E_a)$.
+In particular, every such extension is incomplete.
+\end{theorem}
+\begin{proof}
+The set $S$ of sentence codes is recursive. It therefore defines an
+object of $\operatorname{Split}(\mathcal E_a)$. Negation and insertion
+of a constant into an inequality give ordinary recursive total arrows
+\[
+ \nu:S\to S,\qquad
+ \nu(\ulcorner\varphi\urcorner)=\ulcorner\neg\varphi\urcorner,
+ \qquad
+ \theta:\N\to S,\qquad
+ \theta(n)=\ulcorner c_n<1/2\urcorner.
+\]
+For a theory $T$ with an $\mathcal E_a$-semidecidable axiom set,
+fix a recursive Hilbert calculus with modus ponens and generalization,
+and let $\mathrm{Prf}_T$ be the set of codes of its finite derivation
+trees whose conclusions are sentences. Membership is
+$\mathcal E_a$-semidecidable: syntax and inference checks are recursive,
+and the finitely many nonlogical axiom tests can be run in parallel.
+The validity of a derivation is independent of the binary representation of $a$. Thus
+$\mathrm{Prf}_T$ is an object of the splitting, and reading the root
+conclusion gives a total arrow
+\[
+ c_T:\mathrm{Prf}_T\to S.
+\]
+Proposition~\ref{prop:first-order-proof-initial} characterizes this object
+as the pullback of the initial derivation algebra to the sentence object.
+Its range $t_T=\ran(c_T)$ is the partial identity on the theorem set.
+The inverse image $\nu^*t_T$ is the partial identity on the set of
+sentence codes whose negations are provable in $T$.
+
+For $n\in L_a$, the sentence $c_n<1/2$ is an axiom of $T_a$.
+For $n\in R_a$, the axiom $1/2<c_n$ and the ordered-field axioms
+prove its negation. Consequently
+\[
+ 1_{L_a}\le\theta^*t_{T_a},\qquad
+ 1_{R_a}\le\theta^*\nu^*t_{T_a}.
+\]
+By Corollary~\ref{cor:miller-cuts-inseparable}, the restriction idempotents
+$1_{L_a},1_{R_a}$ are inseparable; the full inclusion into the restriction
+splitting preserves this property. Joins of restriction idempotents in
+the splitting are partial identities on unions, and their inverse images
+are partial identities on the corresponding set preimages.
+For a consistent extension $T\supseteq T_a$, we have
+$t_{T_a}\le t_T$ and $t_T\nu^*t_T=0_S$.
+Corollary~\ref{cor:domain-incompleteness} therefore makes
+$t_T,\nu^*t_T$ inseparable and gives
+$t_T\vee\nu^*t_T\ne1_S$. This is incompleteness of $T$.
+\end{proof}
+

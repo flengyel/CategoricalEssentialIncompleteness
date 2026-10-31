@@ -1,0 +1,203 @@
+\section{The syntactic recursion category}\label{sec:syntactic}
+
+Let $T$ be a consistent classical theory in the language of arithmetic
+containing $\PA$. Fix in the metatheory the algebra of closed terms
+$\mathsf O$ for a signature with one constant $\omega$ and two
+binary operations, written $\times$ and $+$. Equality in $\mathsf O$
+is syntactic equality of terms. Assign a set $|X|$ to each
+$X\in\mathsf O$ by
+\[
+ |\omega|=\N,\qquad
+ |X\times Y|=|X|\times|Y|,\qquad
+ |X+Y|=|X|\amalg|Y|,
+\]
+where $A\amalg B=(A\times\{0\})\cup(B\times\{1\})$.
+Use the primitive-recursive pairing
+$\langle a,b\rangle=2^a(2b+1)-1$ for products and the even and
+odd codings for coproducts. These determine recursive bijections
+$\gamma_X:|X|\to\N$ by
+\[
+ \begin{aligned}
+ \gamma_\omega&=1_\N,\\
+ \gamma_{X\times Y}(x,y)
+   &=\langle\gamma_X(x),\gamma_Y(y)\rangle,\\
+ \gamma_{X+Y}(x,0)&=2\gamma_X(x),\qquad
+ \gamma_{X+Y}(y,1)=2\gamma_Y(y)+1.
+ \end{aligned}
+\]
+The arithmetic formulas below use the single sort of PA.
+The numerical pairing, its two projections, and division with
+remainder by $2$ are primitive recursive; PA proves their defining
+and inverse equations. These are the arithmetic coding identities
+used for each fixed term $X\in\mathsf O$.
+
+Use the deterministic computation coding for Kleene's trace
+predicate as in \cite[p.~115, Note~1]{Montagna}.
+Let $e,x,t$ range over $\N$, and write
+$\mathsf{Tr}(e,x,t)$ for the primitive-recursive predicate
+that $t$ is a halting computation trace with index $e$ and input
+$x$, and let $\mathsf{out}:\N\to\N$ be the primitive-recursive
+output-extraction function. Put
+\[
+ G(e,x,y)\equiv
+ \exists t\,\bigl(\mathsf{Tr}(e,x,t)\land\mathsf{out}(t)=y\bigr),
+ \qquad G_e(x,y)=G(\bar e,x,y).
+\]
+Primitive-recursive symbols abbreviate their defining formulas in
+PA, as in \cite[p.~644]{DPM}; the expanded graph formula is $\Sigma_1$.
+For $X,Y\in\mathsf O$, let $\mathcal I(X,Y)=\N$.
+An index $e\in\mathcal I(X,Y)$ is interpreted using
+$\gamma_X$ for inputs and $\gamma_Y$ for outputs.
+
+\begin{lemma}\label{lem:arithmetized-evaluation}
+For this computation coding, there are an index $u\in\N$ and
+primitive-recursive functions
+$\operatorname{s},\operatorname{comp}:\N^2\to\N$
+such that PA proves functionality
+of $G$ and the universal closures of
+\begin{align}
+ G_u(\langle e,x\rangle,y)
+   &\leftrightarrow G(e,x,y),
+   \label{eq:arithmetized-universal}\\
+ G(\operatorname{s}(e,a),x,y)
+   &\leftrightarrow G(e,\langle a,x\rangle,y),
+   \label{eq:arithmetized-specialization}\\
+ G(\operatorname{comp}(f,e),x,z)
+   &\leftrightarrow
+     \exists y\,\bigl(G(e,x,y)\land G(f,y,z)\bigr).
+   \label{eq:composition}
+\end{align}
+Regard $u$ as an element of $\mathcal I(\omega\times\omega,\omega)$.
+For each fixed $e\in\N$, there is an index
+$k_e\in\N$ for which PA proves
+\[
+ \forall a\forall p\,
+ \bigl(G_{k_e}(a,p)\leftrightarrow
+       p=\operatorname{s}(\bar e,a)\bigr).
+\]
+In particular, PA proves $\forall a\exists!p\,G_{k_e}(a,p)$.
+\end{lemma}
+\begin{proof}
+These are the formalized enumeration, composition, and
+parameterization properties of the computation coding used in
+\cite[p.~108; p.~115, Note~1]{Montagna}.
+The pairing can be replaced by the pairing fixed above, using
+the PA-provable inverse equations for the two numerical codings.
+For $k_e$, use an index for the primitive-recursive function
+$a\mapsto\operatorname{s}(e,a)$; its defining equation and
+totality are provable in PA.
+\end{proof}
+
+The objects of $S_T$ are the terms in $\mathsf O$. Its arrows
+$X\rightharpoonup Y$ are the equivalence classes in
+$\mathcal I(X,Y)$ under
+\begin{equation}\label{eq:uniform}
+ e\equiv_T f
+ \quad\Longleftrightarrow\quad
+ T\vdash \forall x\forall y\,
+       \bigl(G_e(x,y)\leftrightarrow G_f(x,y)\bigr).
+\end{equation}
+Write $[e]_T$ for the class of $e\in\mathcal I(X,Y)$.
+
+For $e\in\mathcal I(X,Y)$ and $f\in\mathcal I(Y,Z)$, define
+$[f]_T[e]_T=[\operatorname{comp}(f,e)]_T$.
+Substitution of T-provably equivalent graphs in
+\eqref{eq:composition} proves independence of representatives.
+The identity and associativity equations follow from the same
+graph identities.
+
+Montagna's objects are the actual sets generated from $\N$ by
+Cartesian products and the displayed disjoint unions
+\cite[p.~105]{Montagna}. Let $S_T^{\mathrm{set}}$ denote that
+presentation of the unprimed category, using the computation
+formulas and the induced numerical codings fixed above
+\cite{Montagna,DPM}. There is a functor
+\[
+ \Pi_T:S_T\longrightarrow S_T^{\mathrm{set}},\qquad
+ \Pi_T(X)=|X|,\qquad \Pi_T([e]_T)=[e]_T^{\mathrm{set}}.
+\]
+Every object of $S_T^{\mathrm{set}}$ is $|X|$ for a term
+$X\in\mathsf O$, and the map on each hom-set is a bijection
+because both presentations use \eqref{eq:uniform} with the same
+numerical codings. Thus $\Pi_T$ is an equivalence. For $T=\PA$,
+the target is Montagna's unprimed category $S$ with these choices
+of computation formulas and codings.
+
+The pointwise relation used in the primed systems identifies
+$e,f\in\mathcal I(X,Y)$ when, for every standard input code $n$,
+\[
+ T\vdash\forall y\,
+   \bigl(G_e(\bar n,y)\leftrightarrow G_f(\bar n,y)\bigr).
+\]
+Montagna's $S'$ is the case
+$T=\PA$ of Di Paola and Montagna's $S'_T$ \cite{Montagna,DPM}.
+\emph{Pointwise provable equality and the failure of composition}
+\cite[Corollary 2]{Composition} proves that the proposed composition
+is not independent of representatives for any consistent c.e.\
+extension $T$ of $\PA$. Thus these primed systems do not define
+categories with that composition.
+
+For $X\in\mathsf O$ and a $\Sigma_1$ arithmetic formula $C(x)$,
+where $x$ is the numerical code variable for $X$, choose
+a witness-search index $j_C$ for which
+\[
+ \PA\vdash\forall x\forall y\,
+ \bigl(G_{j_C}(x,y)\leftrightarrow(C(x)\land y=x)\bigr).
+\]
+Such an index searches increasing bounds for a witness to $C(x)$
+and returns $x$ when a witness is found
+\cite[p.~109, equation~$(*)$]{Montagna}. Write
+$[C]_T=[j_C]_T:X\rightharpoonup X$.
+For two such formulas,
+\begin{equation}\label{eq:domain-order}
+ [C]_T\le[D]_T
+ \quad\Longleftrightarrow\quad
+ T\vdash\forall x\,(C(x)\longrightarrow D(x)).
+\end{equation}
+Conjunction and disjunction give meets and joins of restriction
+idempotents. For $[e]_T:X\rightharpoonup Y$, its restriction
+$\overline{[e]_T}$ and range $\ran([e]_T)$ are represented respectively by
+\[
+ \exists y\,G_e(x,y),\qquad
+ R_e(y):=\exists x\,G_e(x,y).
+\]
+For a restriction idempotent $[C]_T:Y\rightharpoonup Y$, the
+equation $[C]_T[e]_T=[e]_T$ holds precisely when
+$T$ proves $G_e(x,y)\to C(y)$ universally, equivalently when
+$T$ proves $R_e(y)\to C(y)$ universally.
+Write $g=[p]_T,h=[q]_T:Y\rightharpoonup Z$.
+If $g[e]_T=h[e]_T$, the
+composition equation and PA-provable functionality of $G_e$ give
+\[
+ T\vdash\forall y\forall z\,
+ \bigl(R_e(y)\longrightarrow
+       (G_p(y,z)\leftrightarrow G_q(y,z))\bigr).
+\]
+Indeed, a witness $x$ to $R_e(y)$ can be used in the equality of
+the composite graphs, and functionality identifies the intermediate
+output with $y$. This proves $g[R_e]_T=h[R_e]_T$ in $S_T$.
+The index $j_{R_e}$ is independent of the theory, so its class
+represents the range over every extension of $T$.
+
+The pairing and tagged-coproduct constructions on indices have
+PA-provable graph equations: pairing requires both component
+computations to halt, and copairing selects the computation
+specified by the input tag. They supply the restriction products
+and coproducts in $S_T$.
+Put $\tau_T=[u]_T:\omega\times\omega\rightharpoonup\omega$.
+For $f=[e]_T:X\times\omega\rightharpoonup\omega$, put
+$r=[k_e]_T:X\to\omega$. Lemma~\ref{lem:arithmetized-evaluation}
+proves that $r$ is total and gives a PA-proof of
+\[
+ G_e(\langle a,x\rangle,y)\leftrightarrow
+ \exists p\,
+ \bigl(G_{k_e}(a,p)\land G_u(\langle p,x\rangle,y)\bigr)
+\]
+for all numerical codes $a,x,y$.
+The composition and product graph equations therefore give
+$f=\tau_T(r\times1_\omega)$ in $S_T$.
+Thus $\tau_T$ is a Turing morphism. The coding bijections give
+isomorphisms from each object to $\omega$, and the product
+of any arrow with a zero arrow is zero. Hence $S_T$ is a
+prodominical recursion category.
+
