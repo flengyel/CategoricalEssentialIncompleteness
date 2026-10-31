@@ -55,6 +55,8 @@ import CategoricalEssentialIncompleteness.EnumerablePartialMaps
 import CategoricalEssentialIncompleteness.ForkCentralNonuniversality
 import CategoricalEssentialIncompleteness.EffectiveForkExtensive
 
+import CategoricalEssentialIncompleteness.ForkCosheafExamples
+
 /-!
 # Local connectedness and essential incompleteness
 

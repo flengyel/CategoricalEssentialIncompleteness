@@ -51,7 +51,7 @@ All new names below have prefix
 | `cor:arithmetic` | `ClassicalPrograms.diagonal_inseparable`, `ClassicalPrograms.evenDiagonal_support`, `ClassicalPrograms.oddDiagonal_support`; `ArithmeticApplication.conclusion_range`, `ArithmeticApplication.even_le_theorems`, `ArithmeticApplication.odd_le_refutations`, `ArithmeticApplication.categorical_arithmetic`, `ArithmeticApplication.essential_incompleteness_of_arithmetic` | **Proved.** Classical extensional partial recursive arrows on formal numerical types; actual source Turing pair and parity isomorphism; sentence carrier and finite Craig-presentation proof carrier with total conclusion and exact original-theory theorem range; total negation/substitution and both base inclusions; consistency-only Corollary 6.7 application; recursive inseparability and logical incompleteness for every c.e. PA extension. |
 | `prop:endpoint` | `EffectiveFork.evaluationRangeFunctor`, `EffectiveFork.evaluationProductComparison`, `EffectiveFork.evaluation_product`, `EffectiveFork.evaluation_first`, `EffectiveFork.evaluation_second`, `EffectiveFork.evaluation_diagonal`, `EffectiveFork.evaluation_coproduct`, `EffectiveFork.evaluation_sup`, `EffectiveFork.endpoint_isTuring` | **Proved.** All three actual component functors preserve the specified operations through their explicit comparisons. Both endpoint evaluators are Turing morphisms for arbitrary c.e. parameter carriers, with equality of partial functions. `EnumerableCarriers.partialMapEquivalence` identifies the numerical presentation with the actual monic-span category. |
 | `thm:cosheaf-observation` | `EffectiveFork.endpoint_pair_inseparable`, `EffectiveFork.left_pair0`, `EffectiveFork.right_pair0`, `ForkSyntax.observed_bounds`, `ForkSyntax.observed_recursivelyInseparable`, `ForkSyntax.observationFunctor`, `ForkSyntax.tuplePositive_mem`, `ForkSyntax.tupleNegative_mem`, `ForkSyntax.cosheaf_observation` | **Proved.** Endpoint numerical inseparability is derived independently through the categorical lifting theorem, then identified with the actual internal diagonal pair's endpoints. The observations are atomic inverse images. Their literal ℕ² sets are c.e., contain the endpoint pair, and admit no recursive separator on ℕ². The actual covariant functor lands in `RecursivePairs.Object` on formal classical numerical types, with literal formal product `U2` and identity extension maps. Internal inseparability and incompleteness use the actual proof presentation and Corollary 6.7. |
-| `prop:fork-cosheaves` | — | **Pending.** |
+| `prop:fork-cosheaves` | `ForkTopology.actualCosheafEquivalence`, `ForkTopology.actual_restriction`, `ForkTopology.actual_inverse_whole`, `ForkTopology.cosheaf_iff_coverCoequalizers` | **Proved.** The actual three-point topology has exactly the five enumerated opens. Arbitrary indexed cover gluing, including the empty cover, is equivalent to the displayed coproduct coequalizer. Restriction to D, L, R and actual set-pushout extension are inverse functors, with both natural isomorphisms and triangle coherence. An explicit order isomorphism transports the complete cover axiom to the literal category of topological opens. |
 | `prop:fork-total` | `EffectiveFork.totalEquivalence`, `EffectiveFork.total_mono_iff_injective`, `EffectiveFork.totalRegular`, `EffectiveFork.totalFinitaryExtensive`, `EffectiveFork.imageIsImage`; `EnumerableCarriers.coded_decoded`, `EnumerableCarriers.decoded_coded` | **Proved.** Actual total-category equivalence and componentwise monomorphism criterion, exact coding comparison for arbitrary c.e. finite-power carriers, finite limits and finite coproducts. Actual mathlib `Regular` and `FinitaryExtensive` instances are proved for both the numerical and fork total categories. The component-image factorization has a regular epimorphic quotient, monic inclusion and the universal image property. Kernel-pair coequalizers descend through componentwise colimit reflection; no arbitrary fork choice is assumed. |
 | `prop:fork-structure` | `EffectiveFork.inducedRestriction_eq`, `EffectiveFork.split`, `EffectiveFork.weak_choice`, `EffectiveFork.inverse_image_joins`, `EffectiveFork.normalized_span`, `EffectiveFork.partialMapEquivalence`, `EffectiveFork.range_product`, `EffectiveFork.pullback_image`, `EffectiveFork.imageIsImage` | **Proved.** Actual forward-closed partial natural maps, restriction zeros/products/coproducts, prodominicality, splitting, weak choice, finite idempotent joins and arbitrary inverse-image preservation. Ranges are component images with agreement and leastness, commute with products, and are stable under every total categorical pullback. The explicit image factorization proves these are regular images. The actual monic-span quotient comparison identifies composition with pullbacks, identities with ordinary identity spans and restriction with `(m,m)`. |
 | `prop:fork-local` | `EffectiveFork.centerAtom_connected`, `EffectiveFork.leftAtom_connected`, `EffectiveFork.rightAtom_connected`, `EffectiveFork.locally_connected` | **Proved.** The three families of finite subfunctors detect domains and values. `EffectiveFork.partialMapEquivalence`, `PartialSpans.pullback_composition` and `PartialSpans.Span.restriction_toHom` identify this presentation with the actual monic-span category and its restriction. |
@@ -63,6 +63,17 @@ All new names below have prefix
 | `prop:fork-syntax-initial` | `ForkSyntax.polynomialTotal`, `ForkSyntax.syntaxAlgebra`, `ForkSyntax.syntax_initial`, `ForkSyntax.syntaxAlgebra_isInitial`; `ForkSyntax.Formula.fold_computable_of_partial` | **Proved.** Actual finite formula syntax and recursive natural constructors, the polynomial functor on the actual total fork category, and mathlib `IsInitial` in its category of algebras. Evaluation uses the actual constructor computations, which may be partial off their specified c.e. carriers. A partial recursive table computes the semantic fold, with no ambient total-extension hypothesis. Formula induction proves both endpoint naturality, the constructor equations and uniqueness. |
 | `thm:fork-proof-presentation` | `ForkSyntax.Prf`, `ForkSyntax.conclusion`, `ForkSyntax.conclusion_range`, `ForkSyntax.positiveLeaves_conclusion`, `ForkSyntax.negativeLeaves_conclusion`, `ForkSyntax.t0_isLeast`, `ForkSyntax.fork_proof_presentation` | **Proved.** Actual c.e. valid finite Hilbert-proof carriers, recursive relabeling, total natural conclusion morphism and its exact theorem range. The range is the least c.e. theorem subfunctor containing the exact schemes and signed atoms and closed under modus ponens. Actual one-node proof morphisms give both atomic inclusions. Componentwise finite valuations prove consistency under exactly disjointness of the input restriction idempotents. |
 | `prop:missing-lift` | — | **Pending.** |
+
+The associated whole-space value has an actual tagged-carrier quotient
+presentation (`ForkTopology.associatedWholeIso`). Its equality relation on valid
+numerical representatives is exactly the equivalence generated by the c.e. edge
+relation (`quotient_eq_iff_numeric_paths`, `numeric_paths_re`). Finite-list path
+traversal proves enumerability without decidability of the generated relation.
+The actual objects H and T of the total computable fork category give
+`Examples.H_product_iso` and `Examples.H_to_T_mono`; their associated cosheaves
+satisfy `H_product_whole_not_equiv_square` and
+`H_to_T_whole_not_injective`. Thus products and subobjects are correctly taken
+in the functor category, and are not asserted to be pointwise at every open.
 
 Unnumbered constructions already proved include restriction-idempotent order and
 inverse-image calculus; ranges with agreement and derived leastness; canonical
@@ -115,7 +126,7 @@ split. Evaluation detects their kernel-pair coequalizers, without a global fork
 section. The numerical underlying-set functor preserves actual pullbacks and
 tagged coproducts and reflects isomorphisms by recursive inverse search; these
 properties give extensivity and transfer through the functor-category equivalence.
-The cosheaf equivalence, non-equivalence invariant and Appendix C remain in scope.
+The non-equivalence invariant and Appendix C remain unfinished.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -151,9 +162,21 @@ the generated recursion category and its explicit Theorem 6.3 dependency chain,
 and the full restriction-splitting equivalence. No findings remained. Reviews also
 checked actual syntax coding/substitution and total natural constructors, raw finite
 proof trees and the finite-positive-label consistency argument, without inferring
-initiality or an effective proof carrier from those components. The latest full
+initiality or an effective proof carrier from those components. That stage's full
 repository verifier passed with **741 configured transitive axiom checks**, the
 pinned dependencies and the recorded source/manuscript hashes.
+
+
+Independent read-only review of the full cosheaf construction checked arbitrary
+indexed covers, the empty cover, the actual coproduct coequalizer, both natural
+isomorphisms and triangle coherence, and transport to the literal topological
+open-set category. It also checked the tagged quotient, its exact c.e. finite-path
+relation, and the actual computable-fork product/monomorphism examples. Compiled
+types and transitive axiom checks reported no findings. The full project verifier
+passed with **893 configured transitive axiom checks**, unchanged dependency pins
+and recorded source/manuscript hashes. There are now 22 proved numbered results,
+one partial result (categorical non-equivalence), and one pending result
+(Appendix C); this is not full-paper completion.
 
 ---
 
