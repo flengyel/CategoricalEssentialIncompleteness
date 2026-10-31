@@ -57,6 +57,8 @@ import CategoricalEssentialIncompleteness.EffectiveForkExtensive
 
 import CategoricalEssentialIncompleteness.ForkCosheafExamples
 
+import CategoricalEssentialIncompleteness.ForkNonEquivalence
+
 /-!
 # Local connectedness and essential incompleteness
 

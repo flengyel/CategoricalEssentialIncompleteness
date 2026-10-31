@@ -59,7 +59,7 @@ All new names below have prefix
 | `lem:fork-frames` | `EffectiveFork.productFrame`, `EffectiveFork.coproductFrame`, `EffectiveFork.wordFrame`; `EffectiveFork.wordFunctor`, `WordCoding.decode_encode`, `WordCoding.encode_decode` | **Proved.** The explicit natural product, parity coproduct and nonempty-word isomorphisms have both inverse equations. The word code retains positive length and uses the same coordinate length at all three components. Letterwise words are actual c.e. carriers and partial recursive maps, with exact domains and functor laws. |
 | `thm:fork-turing` | `EffectiveFork.tau`, `EffectiveFork.central_specialized`, `EffectiveFork.center_parameterization`, `EffectiveFork.endpoint_parameterization`, `EffectiveFork.tau_parameterization`, `EffectiveFork.tau_isTuring` | **Proved.** Actual ordinary universal evaluation and recursive specialization at all three components. The central computation checks that both endpoint computations halt with the projected outputs. Every arrow `F:Y×V⇀V` has a total coherent parameter, and factorization is equality of partial functions, including simultaneous undefinedness. The actual span comparison, pullback composition and canonical restriction formula now discharge the presentation comparison. |
 | `prop:fork-recursion` | `EffectiveFork.Recursion.Generated`, `EffectiveFork.Recursion.Generated.iso`, `EffectiveFork.Recursion.recursionCategory`, `EffectiveFork.Recursion.rangeFunctor`, `EffectiveFork.Recursion.splittingEquivalence`, `EffectiveFork.Recursion.realization_rst`, `EffectiveFork.Recursion.pair_inseparable` | **Proved.** Exact full generated subcategory, inherited prodominical/products/coproducts/restriction/range structure, frame-derived isotype and actual checked Turing universality. The restriction splitting is equivalent to the full partial fork category via explicit inverse hom assignments and dominance. The inclusion lifts the actual complementary-pair sections by fullness and instantiates Theorem 6.3. |
-| `prop:fork-distinction` | `Fork.universal_no_decidable_equality`, `Fork.terminalSupport_card`, `EffectiveFork.universal_no_decidable_equality` | **Partial.** The natural equality obstruction for the actual ℕ⁴/ℕ² universal fork, its concrete recursive coding, and the five terminal-support patterns are proved. The non-equivalence argument remains. |
+| `prop:fork-distinction` | `fork_not_restriction_equivalent`, `splittingEquivalenceOfRestriction`, `EffectiveFork.terminalIdemEquiv`, `EffectiveFork.terminal_idem_card`, `EnumerableCarriers.terminal_idem_card`, `EffectiveFork.universal_no_decidable_equality` | **Proved.** Any restriction equivalence in both directions induces an equivalence of the actual restriction splittings and their total categories. Full and faithful idempotent maps and terminal uniqueness transport the actual terminal domain cardinalities. Explicit bijections give five for the fork and two for the numerical singleton, a contradiction. The universal fork also has no natural decidable equality. No range/product/coproduct preservation is added to the equivalence hypotheses. |
 | `prop:fork-syntax-initial` | `ForkSyntax.polynomialTotal`, `ForkSyntax.syntaxAlgebra`, `ForkSyntax.syntax_initial`, `ForkSyntax.syntaxAlgebra_isInitial`; `ForkSyntax.Formula.fold_computable_of_partial` | **Proved.** Actual finite formula syntax and recursive natural constructors, the polynomial functor on the actual total fork category, and mathlib `IsInitial` in its category of algebras. Evaluation uses the actual constructor computations, which may be partial off their specified c.e. carriers. A partial recursive table computes the semantic fold, with no ambient total-extension hypothesis. Formula induction proves both endpoint naturality, the constructor equations and uniqueness. |
 | `thm:fork-proof-presentation` | `ForkSyntax.Prf`, `ForkSyntax.conclusion`, `ForkSyntax.conclusion_range`, `ForkSyntax.positiveLeaves_conclusion`, `ForkSyntax.negativeLeaves_conclusion`, `ForkSyntax.t0_isLeast`, `ForkSyntax.fork_proof_presentation` | **Proved.** Actual c.e. valid finite Hilbert-proof carriers, recursive relabeling, total natural conclusion morphism and its exact theorem range. The range is the least c.e. theorem subfunctor containing the exact schemes and signed atoms and closed under modus ponens. Actual one-node proof morphisms give both atomic inclusions. Componentwise finite valuations prove consistency under exactly disjointness of the input restriction idempotents. |
 | `prop:missing-lift` | — | **Pending.** |
@@ -126,7 +126,7 @@ split. Evaluation detects their kernel-pair coequalizers, without a global fork
 section. The numerical underlying-set functor preserves actual pullbacks and
 tagged coproducts and reflects isomorphisms by recursive inverse search; these
 properties give extensivity and transfer through the functor-category equivalence.
-The non-equivalence invariant and Appendix C remain unfinished.
+Appendix C remains unfinished.
 
 Independent read-only review checked elaborated types and transitive axioms of the
 categorical chain, splitting, compatibility, partial-function category, model range
@@ -174,9 +174,20 @@ open-set category. It also checked the tagged quotient, its exact c.e. finite-pa
 relation, and the actual computable-fork product/monomorphism examples. Compiled
 types and transitive axiom checks reported no findings. The full project verifier
 passed with **893 configured transitive axiom checks**, unchanged dependency pins
-and recorded source/manuscript hashes. There are now 22 proved numbered results,
+and recorded source/manuscript hashes. At that stage there were 22 proved numbered results,
 one partial result (categorical non-equivalence), and one pending result
-(Appendix C); this is not full-paper completion.
+(Appendix C). The non-equivalence argument has since been completed as recorded
+in the correspondence table; Appendix C remains pending.
+
+
+The subsequent non-equivalence development passed independent read-only source,
+elaborated-type and transitive axiom review. The review checked both actual
+terminal domain bijections, full realization of arbitrary classical formal-type
+splittings, extension of restriction equivalences to splittings, and passage to
+total categories. No findings remained. The full project verifier passed with
+**915 configured transitive axiom checks**, unchanged pins and source/manuscript
+hashes. All 23 numbered results outside Appendix C are now proved; Appendix C
+remains pending and full-paper completion is not claimed.
 
 ---
 
