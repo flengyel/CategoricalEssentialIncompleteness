@@ -1,16 +1,18 @@
 # Local connectedness in recursion categories and essential incompleteness
 
-This is the working source for version 15. The modular manuscript was
+This is the working source for version 16. The modular manuscript was
 created from the [single-file version 9](../essential_incompleteness_via_local_connectedness_v9.tex).
-The [version 15 PDF](../essential_incompleteness_via_local_connectedness_v15.pdf)
-records this revision. The [source archive](../local_connectedness_v15_source.zip)
+The [version 16 PDF](../essential_incompleteness_via_local_connectedness_v16.pdf)
+records this revision. The [source archive](../local_connectedness_v16_source.zip)
 contains the matching modular source.
 
 Appendix B contains the categorical construction of syntax, admissible
 substitution, and deductively closed theories. The realization proofs are
 in Sections 4, 8, and 9. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v15.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v15.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v16.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v16.tex).
+The [version 16 notation revision](../../Audit/2026-10-31-appendix-v16/README.md)
+records the finite-product convention and explicit Boolean pullback notation.
 The [version 15 clarification](../../Audit/2026-10-31-appendix-v15/README.md)
 records the Boolean-algebra argument and the versioned exports.
 The [version 14 appendix review](../../Audit/2026-10-31-appendix-v14/README.md)
@@ -25,7 +27,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The build output is `main.pdf`; the published download is the
-[version 15 PDF](../essential_incompleteness_via_local_connectedness_v15.pdf).
+[version 16 PDF](../essential_incompleteness_via_local_connectedness_v16.pdf).
 `main.tex` assembles the document with
 `\input`, so file boundaries do not introduce page breaks. The appendix
 numbering command remains in `main.tex`.
