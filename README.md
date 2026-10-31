@@ -1,6 +1,6 @@
 # Categorical essential incompleteness
 
-The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 14](manuscript/essential_incompleteness_via_local_connectedness_v14.pdf)
+The current manuscript is [Local connectedness in recursion categories and essential incompleteness, version 15](manuscript/essential_incompleteness_via_local_connectedness_v15.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
 31 October 2026). Section 3 proves the range-functor lifting theorem;
 Section 4 applies it to Miller's sequence and a theory of real closed fields.
@@ -9,6 +9,9 @@ theories categorically, with explicit ambient categories and existence hypothese
 Sections 4 and 8 prove the first-order realizations; Section 9 proves the
 propositional realization. These constructions and the Miller section have
 not yet been formalized in Lean.
+The [version 15 appendix clarification](Audit/2026-10-31-appendix-v15/README.md)
+proves the Boolean operations' categorical construction. All current downloadable
+artifacts use versioned filenames and the PDFs display their version.
 The [Appendix A review and corrections](Audit/2026-10-31-appendix-v14/README.md)
 record the separate mathematical, writing, and outline reviews of the syntax
 appendix, including the explicit Boolean copairings and substitution proof repair.
@@ -18,7 +21,7 @@ The earlier [mathematical and prose reviews](Audit/2026-10-31-terminology-v9/REA
 record the terminology corrections, explicit numerical codings, and comparison
 with Montagna's presentation. The definition of range functor and the three
 central result statements in Section 3 are unchanged from version 8.
-Version 14 has not been reconciled with the Lean declarations.
+Version 15 has not been reconciled with the Lean declarations.
 
 The [current source directory](manuscript/local_connectedness/README.md) contains
 a main file and separate files for the preamble, abstract, each section,
@@ -496,6 +499,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 

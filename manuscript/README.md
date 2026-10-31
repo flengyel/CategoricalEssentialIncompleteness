@@ -2,7 +2,7 @@
 
 ## Local connectedness in recursion categories and essential incompleteness
 
-[Version 14 PDF](essential_incompleteness_via_local_connectedness_v14.pdf)
+[Version 15 PDF](essential_incompleteness_via_local_connectedness_v15.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 31 October 2026).
 
@@ -26,6 +26,8 @@ cd local_connectedness
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
+The [version 15 appendix clarification](../Audit/2026-10-31-appendix-v15/README.md)
+records the Boolean-algebra proof and versioned artifact publication.
 The [Appendix A review and corrections](../Audit/2026-10-31-appendix-v14/README.md)
 record the separate mathematical, writing, and outline reviews of the syntax
 appendix and their reconciliation. The [earlier reviews](../Audit/2026-10-31-terminology-v9/README.md) record the terminology
@@ -294,6 +296,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
 
 
