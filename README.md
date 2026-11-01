@@ -1,15 +1,18 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 21](manuscript/logical_consequence_and_essential_incompleteness_v21.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 22](manuscript/logical_consequence_and_essential_incompleteness_v22.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v21_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v22_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
 categorical syntax in the total restriction splitting of the syntactic category.
 Section 6 constructs soundness factorizations for the standard code interpretation
 and its ultrapowers, using a separate model of the represented axioms.
-Section 7 applies the comparison through partial proof search. Sections 8 and 9
+Section 7 applies the comparison through partial proof search. Section 7.2
+constructs an indexed family of arithmetic theories, proves the numeral-fiber
+identification categorically, and constructs one total morphism assigning an
+independent sentence to every consistent standard presentation. Sections 8 and 9
 contain the Miller-sequence and three-point-cosheaf applications.
 
 Appendix A constructs categorical syntax, substitution, and deductively closed

@@ -2,16 +2,17 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 21 PDF](logical_consequence_and_essential_incompleteness_v21.pdf)
+[Version 22 PDF](logical_consequence_and_essential_incompleteness_v22.pdf)
 ([LaTeX source](local_connectedness/main.tex),
-[source archive](logical_consequence_v21_source.zip), 1 November 2026).
+[source archive](logical_consequence_v22_source.zip), 1 November 2026).
 
 Sections 3 and 4 prove the comparison theorem and its application to interpreted
 sentence theories. Section 5 realizes the categorical syntax of Appendix A in
 the syntactic category. Section 6 proves the soundness factorization for standard
 codes and arithmetic ultrapowers. Section 7 supplies the partial proof-search
-lift and applies the comparison to arithmetic. The Miller and cosheaf applications
-follow in Sections 8 and 9.
+lift and applies the comparison to arithmetic. Section 7.2 constructs an indexed
+family, identifies its numeral fibers, and proves uniform independence.
+The Miller and cosheaf applications follow in Sections 8 and 9.
 
 Appendix A contains categorical syntax and deductive closure; Appendix B,
 the cosheaf construction; Appendix C, the lifting counterexample; and Appendix D,
@@ -27,8 +28,8 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
 The [source directory guide](local_connectedness/README.md) lists the files.
 The syntax appendix is also available as a
-[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v21.pdf)
-with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v21.tex).
+[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v22.pdf)
+with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v22.tex).
 The [theorem-and-proof plan](../Plans/comparison_soundness_paper_plan_v2.pdf)
 gives the proposed organization of the remaining revisions. The Lean
 formalization remains indexed to version 5.
