@@ -1,96 +1,156 @@
 \section{Introduction}
 
-Corollary~\ref{cor:source-conditionals} establishes inseparability of
-restriction idempotents in a recursion category using a range functor and
-specified total morphisms that agree with opposite coproduct injections on
-complementary source domains. It follows from the comparison theorem,
-which assumes a lift of the corresponding target conditional.
-Total inverse images in the target preserve binary joins of
-restriction idempotents.
-The functor need not preserve restriction products.
+Di Paola and Heller sought a formulation of generalized incompleteness
+in categorical algebra, with inseparability of theorems and refutable
+sentences among its conclusions \cite[pp.~594--595]{DPH}.
+We construct internal deductive systems in completions of recursion
+categories and apply categorical inseparability arguments to their
+sentence theories. The resulting essential-incompleteness theorems
+assert that every consistent extension in a specified effective class
+is incomplete. The three principal applications concern arithmetic,
+a theory of real closed fields expanded by constants, and propositional
+theories obtained from cosheaves.
 
-Joins of source morphisms with disjoint domains supply complementary conditionals
-(Proposition~\ref{prop:disjoint-joins}). Without lifting the conclusion
-can fail even for a faithful range functor preserving products and
-reflecting zero morphisms
+The connection between deduction and recursion uses two descriptions
+of the same theory: a subobject of sentences and a restriction domain.
+For a recursion category $\mathscr R$, write
+\[
+ \mathscr S=\Split(\mathscr R),\qquad
+ \mathcal D=\Tot(\mathscr S).
+\]
+Splitting restriction idempotents makes their domains into objects;
+$\mathcal D$ consists of the total morphisms between these objects.
+In the applications, $\mathcal D$ is regular and supports the syntax
+and initial algebras required in Appendix~\ref{app:syntax-theories}.
+For first-order logic this includes terms, formulas, quantifiers,
+equality, and admissible substitution. The application sections prove
+that their realizations have the stated universal properties.
+
+Let $\Phi\in\mathcal D$ be the formula object, let
+$j:S\hookrightarrow\Phi$ be its sentence subobject, and choose
+an axiom subobject $i_A:A\hookrightarrow S$.
+The inference rules and axioms determine an initial algebra of finite
+derivations with conclusion morphism $c_A:P_A\to\Phi$.
+Pulling back along $j$ gives the sentence-conclusion morphism
+$c_{A,S}:P_{A,S}\to S$. Its regular image
+\[
+ P_{A,S}\twoheadrightarrow T_{A,S}\xhookrightarrow{m_A}S
+\]
+is the sentence part of the deductive closure of the axioms
+(Theorem~\ref{thm:first-order-theory}). It represents the sentences
+derivable from $A$ under the internal inference rules.
+
+When $m_A$ admits a partial inverse in $\mathscr S$, this subobject
+also represents the restriction range
+$t_A=\ran(c_{A,S}):S\rightharpoonup S$
+(Lemma~\ref{lem:range-regular-image}).
+For the total sentence-negation morphism $\nu:S\to S$,
+the inverse image $\nu^*t_A$ is the refutation domain.
+Consistency means $t_A\nu^*t_A=0_S$, and completeness means
+$t_A\vee\nu^*t_A=1_S$. These equations put the logical
+questions in terms of the restriction domains used in categorical
+recursion theory.
+
+There are two incompleteness arguments. The first uses a range functor
+$F:\mathscr R\to\mathcal A$ into a split restriction category,
+extended to $\widehat F:\mathscr S\to\mathcal A$ by chosen
+splittings. When $\mathcal A$ is the partial-map category of a regular
+category, a sound interpretation factors the interpreted conclusion morphism
+through a validity subobject. If validity is disjoint from
+its inverse image under negation, the interpreted theorem and refutation
+domains are disjoint (Proposition~\ref{prop:interpreted-theory}).
+A total reduction from the diagonal domains of a source Turing morphism,
+together with a source lift of a specified partial conditional in the
+target, then yields incompleteness of the source theory
+(Theorem~\ref{thm:logical-comparison}).
+Without the lifting hypothesis, the diagonal pair can be
+separable even when the range functor is faithful, preserves restriction
+products, and reflects zero morphisms
 (Appendix~\ref{app:lifting-counterexample}).
 
-The principal application uses a sequence $a:\N\to[0,1]$ constructed
-by Miller \cite{Miller2004}. We form a category $\mathcal E_a$ whose
-morphisms are partial numerical functions computed by one oracle program
-with the same domain and values for every binary representation of $a$.
-Compactness of the set of representations permits the construction of a Turing
-morphism in this category. The index sets
+The second argument starts with an inseparable pair in the source.
+A total morphism reduces that pair to the theorem and refutation domains
+of a base theory. Enlarging the axiom subobject enlarges the generated
+theory, so the same reduction applies to each represented extension.
+If the extension is consistent, a separator of its theorem and refutation
+domains would pull back to a separator of the fixed pair.
+Corollary~\ref{cor:domain-incompleteness} therefore gives inseparability,
+and hence incompleteness, for every such consistent extension.
+The realizations specify which effective axiom sets are represented.
+
+The first-order syntactic realization uses the recursion categories
+$S_T$ of Montagna and Di Paola--Montagna \cite{Montagna,DPM}, for
+consistent computably enumerable (c.e.) extensions $T$ of Peano arithmetic
+($\PA$). Their morphisms are equivalence classes of indices of partial
+recursive functions under universally $T$-provable graph equality.
+We realize the syntax and derivation algebras in
+$\mathcal B_T=\Tot(\Split(S_T))$, with their universal properties
+expressed by this equality
+(Theorem~\ref{thm:syntactic-generated-theory}).
+For the arithmetic application we fix the ambient category $S_{\PA}$
+and vary the represented axiom subobjects; the represented theory need
+not be the theory that defines equality of morphisms.
+
+Soundness in this application separates the interpretation of syntax
+codes from the interpretation of the formulas they encode.
+Standard arithmetic interprets the codes, while a model $K$ of the
+represented axioms interprets the decoded formulas.
+Induction on finite derivations gives the soundness factorization
+(Proposition~\ref{prop:standard-code-soundness});
+Theorem~\ref{thm:ultrapower-soundness} transports it to arithmetic
+ultrapowers. Partial proof search supplies the lift needed for the
+comparison theorem. We obtain incompleteness in the fixed syntactic
+category and in its standard and ultrapower interpretations
+(Theorem~\ref{thm:arithmetic-internal-comparison}).
+Every consistent c.e.\ extension of PA has recursively inseparable
+theorem and refutation sets (Corollary~\ref{cor:arithmetic}).
+We also construct an independent sentence uniformly from an index for
+an axiom enumeration of any such theory
+(Theorem~\ref{thm:uniform-independent-sentences}).
+The numerical realization supplies a second arithmetic argument and
+is used in the cosheaf application.
+
+The Miller application uses a sequence $a:\N\to[0,1]$ constructed
+by Miller \cite{Miller2004}. A morphism of the recursion category
+$\mathcal E_a$ is a partial numerical function computed by one oracle
+program with the same domain and values for every binary representation
+of $a$. First-order logic with equality is realized in
+$\mathcal D_a=\Tot(\Split(\mathcal E_a))$.
+The domains corresponding to
 \[
  L_a=\{n:a(n)<1/2\},\qquad R_a=\{n:a(n)>1/2\}
 \]
-are semidecidable in $\mathcal E_a$. We construct an ordinary recursive
-map reducing the diagonal pair of Corollary~\ref{cor:source-conditionals} to
-$L_a,R_a$, and hence prove their inseparability in $\mathcal E_a$.
-Each fixed binary representation $p$ computes a separator of $L_a$
-and $R_a$. The inclusion into the recursion category of
-$p$-partial recursive functions is a faithful range functor preserving
-restriction products and sends this inseparable pair to a separable pair.
+are inseparable in $\mathcal E_a$, although each fixed binary
+representation computes a separator.
+The theory $T_a$ of real closed fields expanded by constants $c_n$
+contains the strict rational bounds satisfied by $a(n)$.
+It is consistent, and the total morphism sending $n$ to the sentence
+$c_n<1/2$ reduces $L_a,R_a$ to its theorem and refutation domains.
+Every consistent extension whose axiom set is semidecidable by one
+oracle program from every binary representation of $a$ is incomplete
+(Theorem~\ref{thm:miller-incompleteness}).
 
-This example gives a theory of real closed fields with constants $c_n$
-and the strict rational inequalities satisfied by $a(n)$.
-The theory is consistent, and its axioms are semidecidable independently
-of the representation of $a$. Every consistent extension with the same
-semidecidability property is incomplete
-(Theorem~\ref{thm:miller-incompleteness}). The total map
-$n\mapsto\ulcorner c_n<1/2\urcorner$ pulls the theorem and refutation
-domains back to domains containing $1_{L_a}$ and $1_{R_a}$,
-respectively. Corollary~\ref{cor:domain-incompleteness} then applies.
-
-We also apply the criterion to the syntactic recursion categories of
-Montagna and Di Paola--Montagna \cite{Montagna,DPM}.
-For a consistent computably enumerable (c.e.)
-extension $T$ of Peano arithmetic ($\PA$), the morphisms of $S_T$ are
-equivalence classes of indices of partial recursive functions. Two
-indices are identified when $T$ proves the universal closure of the
-equivalence of their graph formulas. These categories are not locally
-connected \cite[Corollary 4.4]{DPM}. Interpretation in all models of
-$T$ with carrier $\N$ gives a faithful range functor into a locally
-connected product of partial-map categories. Partial recursive functions
-selecting between predicates proved complementary in $T$ represent the
-required section lifts.
-The construction commutes with theory extension.
-The total restriction splitting of $S_T$ also realizes the
-first-order syntax and theory construction of
-Appendix~\ref{app:syntax-theories}
-(Theorem~\ref{thm:syntactic-generated-theory}).
-Its universal properties use $T$-provable graph equality.
-
-The numerical instance of the criterion gives a fixed recursively
-inseparable pair. Finite computation proofs show that its two sets lie
-in the inverse images of the theorem and refutation sets of $\PA$ under
-numeral substitution. The inclusions persist under theory extension.
-Consequently every consistent c.e.\ extension of $\PA$ has recursively
-inseparable theorem and refutation sets and is incomplete.
-We also construct a recursion category $\mathscr R_X$ from cosheaves on a
-three-point space $X$. The category $\mathscr R_X$ is not equivalent as a
-restriction category to the recursion category of partial recursive functions.
-The Karoubi envelope $\operatorname{Kar}(\mathscr R_X)$ contains formula and derivation
-objects characterized by initiality. Component evaluation gives a
-family of consistent propositional theories. The two endpoint theories
-are essentially incomplete: every consistent extension in the same
-language with a c.e.\ axiom set is incomplete
+The third application constructs a recursion category $\mathscr R_X$
+from cosheaves on a three-point space $X$.
+It is not equivalent as a restriction category to the category of partial
+recursive functions. Its completion realizes propositional syntax and
+finite derivations by initial algebras. The generated theory is a
+subfunctor of the sentence functor; evaluation at each of the two endpoints
+gives a consistent propositional theory.
+Both theories are essentially incomplete: every consistent extension
+in the same language with a c.e.\ axiom set is incomplete
 (Corollary~\ref{cor:cosheaf-essential-incompleteness}).
 
-After the preliminaries, Section~\ref{sec:lifting} proves the
-comparison theorem and the criterion using source conditionals.
-Section~\ref{sec:internal-theories} applies the comparison theorem
-to internal theories.
-Section~\ref{sec:syntactic} constructs the syntactic recursion category
-and its internal syntax and theories, and Section~\ref{sec:models}
-constructs the interpretation functors and proves soundness.
-Sections~\ref{sec:arithmetic}, \ref{sec:miller}, and~\ref{sec:cosheaves}
-give the arithmetic, Miller, and cosheaf applications, respectively.
-Appendix~\ref{app:syntax-theories} constructs syntax and deductively
-closed theories categorically. The remaining appendices give the
-cosheaf construction, the counterexample to inseparability without
-section lifting, and the faithful model family and its behavior under
-theory extension.
+Section~\ref{sec:lifting} proves the comparison theorem and the criterion
+using source conditionals, after the categorical preliminaries.
+Section~\ref{sec:internal-theories} applies these results to the
+sentence theories constructed in Appendix~\ref{app:syntax-theories}.
+Sections~\ref{sec:syntactic} and~\ref{sec:models} establish the syntactic
+realization and soundness; Sections~\ref{sec:arithmetic},
+\ref{sec:miller}, and~\ref{sec:cosheaves} give the three applications.
+The remaining appendices supply the cosheaf infrastructure, the lifting
+counterexample, and the auxiliary faithful model family and its behavior
+under theory extension.
 
 \subsection{Related work}
 
