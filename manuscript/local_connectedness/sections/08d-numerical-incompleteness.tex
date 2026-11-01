@@ -29,12 +29,10 @@ The functor $J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ has
 $J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
 It preserves restrictions, ranges, zero maps, and the chosen
 products and coproducts by their numerical descriptions.
-The category $\Pfn$ is split and locally connected: restrictions
-to singletons detect the domain and value of a partial function.
-Partial injections have partial inverses, and inverse images
-preserve unions of partial-identity domains.
-For complementary restriction idempotents on $W\in\mathrm{Rec}$,
-let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
+In $\Pfn$, total inverse images preserve unions of partial-identity
+domains.
+For complementary restriction idempotents $c,c':W\rightharpoonup W$
+in $\mathrm{Rec}$, let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
 subsets are recursive. The morphism $s:W\to W+W$ in $\mathrm{Rec}$
 given by
 \[
@@ -45,8 +43,9 @@ given by
  \end{cases}
 \]
 is total recursive; here $i_0,i_1:W\to W+W$ are the coproduct
-injections. Its image is the reversed conditional required by
-Theorem~\ref{thm:local-lifting}. That theorem gives inseparability
+injections. Its restrictions to the two domains give
+$sc=i_1c$ and $sc'=i_0c'$. Since $J_{\mathrm{rec}}(1_\omega)\ne0$,
+Corollary~\ref{cor:source-conditionals} gives inseparability
 of $a,b$ in $\mathrm{Rec}$. A recursive separator of $A,B$ would
 give complementary restriction idempotents separating $a,b$, so
 $A,B$ are recursively inseparable. Fullness of $I$ then gives

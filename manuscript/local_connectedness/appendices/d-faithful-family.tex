@@ -94,7 +94,7 @@ The identity cases follow from the same definitions.
 
 \begin{corollary}\label{cor:pair}
 For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
-lifting hypothesis of Theorem~\ref{thm:local-lifting}.
+conditional hypothesis of Corollary~\ref{cor:source-conditionals}.
 Fix $U=\omega$ and a Turing morphism
 $\tau:U\times U\rightharpoonup U$ in $S_T$.
 Choose an isomorphism $b_0:U\to U+U$ in $S_{\PA}$ and put
@@ -110,15 +110,16 @@ identically defined inseparable pair in $S_{T'}$.
 \begin{proof}
 For every complementary pair in $S_T$, Lemma~\ref{lem:switch}
 constructs a single morphism whose image under each $F_M$ is the
-required section. Its image under $F_T$ is therefore the required
-section coordinatewise. Theorem~\ref{thm:faithful} verifies the
-remaining hypotheses of Theorem~\ref{thm:local-lifting}.
+required conditional. Its image under $F_T$ is the corresponding
+conditional coordinatewise. Total inverse images preserve unions in
+each coordinate. Theorem~\ref{thm:faithful} supplies the range functor
+and $F_T(1_U)\ne0$, so Corollary~\ref{cor:source-conditionals} applies.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
 It is the identity on objects and surjective on each hom-set.
 Consequently it preserves a Turing morphism: a preimage of a
 target morphism has a Turing factorization in $S_T$, whose image is
 the required factorization in $S_{T'}$.
-The same lifting argument therefore applies over $T'$.
+The same conditional argument therefore applies over $T'$.
 \end{proof}
 
 The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.

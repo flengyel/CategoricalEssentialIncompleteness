@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 27, 1 November 2026.
+Version 28, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v27.pdf) ·
-[Source archive](../logical_consequence_v27_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v28.pdf) ·
+[Source archive](../logical_consequence_v28_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -18,18 +18,19 @@ contain the Miller and cosheaf applications.
 The faithful model family and numeral observations are in Appendix D.
 The introduction and abstract are reserved for the final revision.
 
-The [version 27 reviews](../../Audit/2026-11-01-numerical-consolidation-v27/README.md)
-record the consolidation of the numerical foundations, the two partial-map
-comparison functors and their natural isomorphisms, and the retained
-fork-specific arguments. The preceding
-[version 26 numerical realization reviews](../../Audit/2026-11-01-numerical-v26/README.md)
-remain available.
+The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
+record the direct conditional criterion and its uses in the applications.
+The former local-connectedness criterion and its supporting arguments are
+in the separate note
+[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v1.pdf).
+The dated source `LOCOct10f` is preserved with that note. The numerical
+foundation consolidated in version 27 is unchanged.
 
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v27.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v27.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v28.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v28.tex).
 
 ## Build
 

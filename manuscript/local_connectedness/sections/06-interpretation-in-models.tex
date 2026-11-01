@@ -102,7 +102,7 @@ unique section.
 
 \begin{corollary}\label{cor:model-pair}
 For every $M\models T$, the functor $F_M$ satisfies the hypotheses of
-Theorem~\ref{thm:local-lifting}. Thus, for a Turing morphism
+Corollary~\ref{cor:source-conditionals}. Thus, for a Turing morphism
 $\tau:\omega\times\omega\rightharpoonup\omega$ and an isomorphism
 $b:\omega\to\omega+\omega$ in $S_T$, the restriction idempotents
 \[
@@ -112,14 +112,11 @@ $b:\omega\to\omega+\omega$ in $S_T$, the restriction idempotents
 are inseparable in $S_T$.
 \end{corollary}
 \begin{proof}
-In $\Pfn$, restriction idempotents split through their domains, and
-singleton partial identities are connected and detect partial functions.
-Partial monomorphisms are partial injections and have partial inverses;
-inverse images preserve unions. Thus $\Pfn$ satisfies the target
-hypotheses of Theorem~\ref{thm:local-lifting}.
-Proposition~\ref{prop:model} supplies the required preservation,
-Lemma~\ref{lem:switch} supplies the lifts, and
+In $\Pfn$, total inverse images preserve unions of partial-identity
+domains. Proposition~\ref{prop:model} supplies the range functor,
+Lemma~\ref{lem:switch} supplies the total source conditionals, and
 $F_M(1_\omega)\ne0$ because $|M|$ is nonempty.
+Corollary~\ref{cor:source-conditionals} applies.
 \end{proof}
 
 

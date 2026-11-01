@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 27](manuscript/logical_consequence_and_essential_incompleteness_v27.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 28](manuscript/logical_consequence_and_essential_incompleteness_v28.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v27_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v28_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -30,13 +30,15 @@ and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
 record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
 
-The [version 27 review record](Audit/2026-11-01-numerical-consolidation-v27/README.md)
-records one consolidation of the numerical foundations. Section 7.4 now contains
-the shared category, regularity proof, and restriction equivalence in both
-directions; Appendix B cites it while retaining its componentwise arguments.
-All applications remain. The preceding
-[version 26 review record](Audit/2026-11-01-numerical-v26/README.md)
-records the numerical first-order realization and its proof-code comparison.
+The [version 28 review record](Audit/2026-11-01-conditionals-v28/README.md)
+records the conditional criterion and the direct application proofs.
+Local connectedness remains a proved property of the cosheaf category.
+The separate note
+[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v1.pdf)
+contains the general section and lifting criterion; its dated predecessor
+`LOCOct10f` is preserved in the same repository. The
+[version 27 review record](Audit/2026-11-01-numerical-consolidation-v27/README.md)
+records the unchanged numerical foundation.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).

@@ -1,7 +1,7 @@
 \section{Necessity of section lifting for inseparability}
 \label{app:lifting-counterexample}
 
-The lifting hypothesis in Theorem~\ref{thm:local-lifting} cannot be
+The lifting hypothesis in Theorem~\ref{thm:comparison} cannot be
 omitted, even for a faithful range functor that preserves restriction
 products and reflects zero morphisms.
 
@@ -46,9 +46,9 @@ specified domain.
 
 \begin{proposition}\label{prop:missing-lift}
 The category $\mathcal C_K$ is a prodominical recursion category with
-binary restriction coproducts and ranges. The functor $F$ satisfies
-every hypothesis of
-Theorem~\ref{thm:local-lifting} except the lifting hypothesis.
+binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
+reflects zero morphisms, and $F(1_{\N})\ne0$. Total inverse images
+in its target preserve binary joins of restriction idempotents.
 For the Turing morphism and coproduct isomorphism constructed below,
 the specified pair is separated by complementary restriction idempotents in
 $\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
@@ -182,8 +182,8 @@ $s_A:\N\to\N+\N$ in $\Pfn$ is
 This section is total and not recursive, since its tag decides $A$.
 If it had a preimage under $F$, that source morphism would
 be total and hence ordinary total recursive, a contradiction.
-This is the missing lift required by
-Theorem~\ref{thm:local-lifting} for the complemented restriction idempotent $1_A$.
+For $P=F(1_A)$ and $N=F(1_{A^c})$, this is the target conditional
+of Corollary~\ref{cor:separator}, and it has no source lift.
 
 Finally, the morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
 $\mathcal C_K$: they have the total recursive extensions $i_1$

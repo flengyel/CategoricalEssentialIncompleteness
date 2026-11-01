@@ -1,0 +1,615 @@
+--- v27/README.md
++++ v28/README.md
+@@ -1,9 +1,9 @@
+ # Logical consequence and essential incompleteness in recursion categories
+ 
+-Version 27, 1 November 2026.
++Version 28, 1 November 2026.
+ 
+-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v27.pdf) ·
+-[Source archive](../logical_consequence_v27_source.zip)
++[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v28.pdf) ·
++[Source archive](../logical_consequence_v28_source.zip)
+ 
+ Sections 3 and 4 prove the comparison theorem and its application to internally
+ generated sentence theories. Section 5 proves the syntactic realization.
+@@ -18,18 +18,19 @@
+ The faithful model family and numeral observations are in Appendix D.
+ The introduction and abstract are reserved for the final revision.
+ 
+-The [version 27 reviews](../../Audit/2026-11-01-numerical-consolidation-v27/README.md)
+-record the consolidation of the numerical foundations, the two partial-map
+-comparison functors and their natural isomorphisms, and the retained
+-fork-specific arguments. The preceding
+-[version 26 numerical realization reviews](../../Audit/2026-11-01-numerical-v26/README.md)
+-remain available.
++The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
++record the direct conditional criterion and its uses in the applications.
++The former local-connectedness criterion and its supporting arguments are
++in the separate note
++[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v1.pdf).
++The dated source `LOCOct10f` is preserved with that note. The numerical
++foundation consolidated in version 27 is unchanged.
+ 
+ Appendix A contains the full categorical construction of syntax, substitution,
+ and deductively closed theories. Its realizations are proved in the application
+ sections. The appendix is also available as a
+-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v27.pdf)
+-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v27.tex).
++[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v28.pdf)
++with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v28.tex).
+ 
+ ## Build
+ 
+--- v27/abstract.tex
++++ v28/abstract.tex
+@@ -1,7 +1,7 @@
+ \begin{abstract}
+ We derive essential incompleteness from a categorical construction of
+-inseparable pairs. The construction uses a lifting theorem for range
+-functors into locally connected restriction categories. We recover
++inseparable pairs. The construction uses a comparison theorem for range functors
++and specified lifts of partial morphisms into binary coproducts. We recover
+ recursive inseparability of the theorem and refutation sets of every
+ consistent computably enumerable extension of Peano arithmetic.
+ From Miller's sequence we construct a recursion category and a consistent
+--- v27/appendices/c-section-lifting.tex
++++ v28/appendices/c-section-lifting.tex
+@@ -1,7 +1,7 @@
+ \section{Necessity of section lifting for inseparability}
+ \label{app:lifting-counterexample}
+ 
+-The lifting hypothesis in Theorem~\ref{thm:local-lifting} cannot be
++The lifting hypothesis in Theorem~\ref{thm:comparison} cannot be
+ omitted, even for a faithful range functor that preserves restriction
+ products and reflects zero morphisms.
+ 
+@@ -46,9 +46,9 @@
+ 
+ \begin{proposition}\label{prop:missing-lift}
+ The category $\mathcal C_K$ is a prodominical recursion category with
+-binary restriction coproducts and ranges. The functor $F$ satisfies
+-every hypothesis of
+-Theorem~\ref{thm:local-lifting} except the lifting hypothesis.
++binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
++reflects zero morphisms, and $F(1_{\N})\ne0$. Total inverse images
++in its target preserve binary joins of restriction idempotents.
+ For the Turing morphism and coproduct isomorphism constructed below,
+ the specified pair is separated by complementary restriction idempotents in
+ $\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
+@@ -182,8 +182,8 @@
+ This section is total and not recursive, since its tag decides $A$.
+ If it had a preimage under $F$, that source morphism would
+ be total and hence ordinary total recursive, a contradiction.
+-This is the missing lift required by
+-Theorem~\ref{thm:local-lifting} for the complemented restriction idempotent $1_A$.
++For $P=F(1_A)$ and $N=F(1_{A^c})$, this is the target conditional
++of Corollary~\ref{cor:separator}, and it has no source lift.
+ 
+ Finally, the morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
+ $\mathcal C_K$: they have the total recursive extensions $i_1$
+--- v27/appendices/d-faithful-family.tex
++++ v28/appendices/d-faithful-family.tex
+@@ -94,7 +94,7 @@
+ 
+ \begin{corollary}\label{cor:pair}
+ For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
+-lifting hypothesis of Theorem~\ref{thm:local-lifting}.
++conditional hypothesis of Corollary~\ref{cor:source-conditionals}.
+ Fix $U=\omega$ and a Turing morphism
+ $\tau:U\times U\rightharpoonup U$ in $S_T$.
+ Choose an isomorphism $b_0:U\to U+U$ in $S_{\PA}$ and put
+@@ -110,15 +110,16 @@
+ \begin{proof}
+ For every complementary pair in $S_T$, Lemma~\ref{lem:switch}
+ constructs a single morphism whose image under each $F_M$ is the
+-required section. Its image under $F_T$ is therefore the required
+-section coordinatewise. Theorem~\ref{thm:faithful} verifies the
+-remaining hypotheses of Theorem~\ref{thm:local-lifting}.
++required conditional. Its image under $F_T$ is the corresponding
++conditional coordinatewise. Total inverse images preserve unions in
++each coordinate. Theorem~\ref{thm:faithful} supplies the range functor
++and $F_T(1_U)\ne0$, so Corollary~\ref{cor:source-conditionals} applies.
+ The functor $Q_{T,T'}$ preserves the operations defining the pair.
+ It is the identity on objects and surjective on each hom-set.
+ Consequently it preserves a Turing morphism: a preimage of a
+ target morphism has a Turing factorization in $S_T$, whose image is
+ the required factorization in $S_{T'}$.
+-The same lifting argument therefore applies over $T'$.
++The same conditional argument therefore applies over $T'$.
+ \end{proof}
+ 
+ The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
+--- v27/preamble.tex
++++ v28/preamble.tex
+@@ -3,7 +3,7 @@
+ \usepackage[margin=1in]{geometry}
+ \usepackage{xurl,hyperref}
+ \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+-pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 27},pdfauthor={Florian Lengyel}}
++pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 28},pdfauthor={Florian Lengyel}}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{proposition}[theorem]{Proposition}
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -17,7 +17,7 @@
+ \title{Logical consequence and essential incompleteness\\
+ in recursion categories}
+ \author{Florian Lengyel}
+-\date{Version 27\\1 November 2026}
++\date{Version 28\\1 November 2026}
+ 
+ \newcommand{\Crec}{\mathcal C_{\mathrm{rec}}}
+ \newcommand{\Da}{\mathcal D_a}
+--- v27/sections/01-introduction.tex
++++ v28/sections/01-introduction.tex
+@@ -1,14 +1,15 @@
+ \section{Introduction}
+ 
+-Theorem~\ref{thm:local-lifting} establishes recursive inseparability
+-in a recursion category using a range functor to a split locally
+-connected target satisfying weak choice and inverse-image preservation
+-of binary joins. The target provides sections associated with
+-complementary source restriction idempotents. If these sections lift
+-to source morphisms, a Turing morphism gives an inseparable source pair.
++Corollary~\ref{cor:source-conditionals} establishes recursive
++inseparability in a recursion category using a range functor and
++specified total morphisms that exchange the coproduct tags on
++complementary source domains. It follows from the comparison theorem,
++which assumes a lift of the corresponding target conditional.
++Total inverse images in the target preserve binary joins of
++restriction idempotents.
+ The functor need not preserve restriction products.
+ 
+-Joins of source morphisms with disjoint domains suffice for lifting
++Joins of source morphisms with disjoint domains supply complementary conditionals
+ (Proposition~\ref{prop:disjoint-joins}). Without lifting the conclusion
+ can fail even for a faithful range functor preserving products and
+ reflecting zero maps
+@@ -24,7 +25,7 @@
+  L_a=\{n:a(n)<1/2\},\qquad R_a=\{n:a(n)>1/2\}
+ \]
+ are semidecidable in $\mathcal E_a$. We construct an ordinary recursive
+-map reducing the diagonal pair of Theorem~\ref{thm:local-lifting} to
++map reducing the diagonal pair of Corollary~\ref{cor:source-conditionals} to
+ $L_a,R_a$, and hence prove their inseparability in $\mathcal E_a$.
+ Each fixed binary representation $p$ computes a separator of $L_a$
+ and $R_a$. The inclusion into the recursion category of
+--- v27/sections/03-sections-and-inseparability.tex
++++ v28/sections/03-sections-and-inseparability.tex
+@@ -1,11 +1,11 @@
+-\section{Diagonal comparison and lifted partial conditionals}\label{sec:lifting}
++\section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
+ 
+ The diagonal argument compares a pair of source restriction idempotents
+ with two disjoint target domains. A lift of a partial morphism that
+ sends these domains into opposite coproduct summands produces a total
+ source morphism whose interpretation avoids both domains.
+-Local connectedness and weak choice supply such target
+-morphisms for every disjoint pair.
++Total morphisms that exchange the coproduct tags on complementary
++source domains give an inseparability criterion.
+ 
+ For a coproduct $Y+Z$, let
+ $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
+@@ -97,140 +97,52 @@
+ Theorem~\ref{thm:comparison}, contradicting complementarity.
+ \end{proof}
+ 
+-\subsection{Sections in a locally connected category}
++\subsection{Complementary conditionals}
+ 
+-\begin{lemma}\label{lem:connected-alternative}
+-Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
+-and binary restriction coproducts. Suppose inverse images preserve binary
+-joins of restriction idempotents. If $a$ is a connected restriction
+-idempotent on $X$ and
+-$f:X\to Y+Z$ is total, then
+-$\varepsilon_0fa=fa$ or $\varepsilon_1fa=fa$.
+-\end{lemma}
++\begin{corollary}[Inseparability from complementary conditionals]
++\label{cor:source-conditionals}
++Under the hypotheses of Theorem~\ref{thm:comparison} on
++$\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
++$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
++binary joins of restriction idempotents.
++Suppose that, for every complementary pair $c,c'$ on $U$, there
++is a total morphism $\ell_c:U\to U+U$ satisfying
++\[
++ \ell_cc=i_1c,\qquad \ell_cc'=i_0c',
++\]
++where $i_0,i_1:U\to U+U$ are the coproduct injections.
++Then the restriction idempotents $a_0,a_1$ of
++Theorem~\ref{thm:comparison} are inseparable in $\mathscr R$.
++\end{corollary}
+ \begin{proof}
+-Totality and the inverse-image laws give the disjoint decomposition
++Put $\varepsilon_0=1_U+0_U$ and $\varepsilon_1=0_U+1_U$.
++The morphisms $\varepsilon_0\ell_c$ and $i_0c'$ agree after
++composition with both $c$ and $c'$. Hence they agree after
++$[c,c']:U+U\rightharpoonup U$. Its range is
++$c\vee c'=1_U$, so range agreement gives
++$\varepsilon_0\ell_c=i_0c'$.
++The same argument gives $\varepsilon_1\ell_c=i_1c$.
++Taking restrictions yields
+ \[
+- a=af^*\varepsilon_0\vee af^*\varepsilon_1.
++ \ell_c^*\varepsilon_0=c',\qquad
++ \ell_c^*\varepsilon_1=c.
+ \]
+-Connectedness makes one term zero and the other equal to $a$. In the
+-latter case $a\le f^*\varepsilon_i$, and the restriction identity
+-$\varepsilon_i f=f\overline{\varepsilon_i f}$ gives
+-$\varepsilon_i fa=fa$.
++
++If $c,c'$ separated $a_0,a_1$, put $P=F(c)$ and $N=F(c')$.
++These are complementary target restriction idempotents.
++For the canonical coproduct isomorphism
++$\chi_{U,U}:FU+FU\to F(U+U)$, define
++\[
++ s_c=\chi_{U,U}^{-1}F(\ell_c):FU\to FU+FU.
++\]
++Restriction preservation and the coproduct comparison give
++\[
++ s_c^*(1_{FU}+0_{FU})=N,\qquad
++ s_c^*(0_{FU}+1_{FU})=P.
++\]
++Together with $F(\ell_c)=\chi_{U,U}s_c$, these identities contradict
++Corollary~\ref{cor:separator}.
+ \end{proof}
+-
+-\begin{proposition}\label{prop:local-switch}
+-Let $\mathcal A$ be a locally connected split restriction category with
+-ranges, restriction zeros, and binary restriction coproducts. Suppose
+-weak choice holds and inverse images preserve binary joins of
+-restriction idempotents.
+-For disjoint restriction idempotents $a,b$ on $X$, the morphism
+-$p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
+-with a unique section $s:X\rightharpoonup X+X$, and
+-\[
+- ps=\bar s=a\vee b,\qquad sa=i_0a,\qquad sb=i_1b,
+-\]
+-and its inverse images of the summand idempotents are
+-\[
+- s^*(1_X+0_X)=a,\qquad s^*(0_X+1_X)=b.
+-\]
+-In particular, for complementary $c,c'$ on $X$, the morphism
+-$\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
+-$sc=i_1c$ and $sc'=i_0c'$.
+-\end{proposition}
+-\begin{proof}
+-First let $\theta,\theta':Y\to X+X$ be total and suppose
+-$p\theta=p\theta'$. The identities
+-$ap=\nabla_X(a+0)$ and $bp=\nabla_X(0+b)$ give
+-\[
+- \nabla_X(a+0)\theta=\nabla_X(a+0)\theta',
+- \qquad
+- \nabla_X(0+b)\theta=\nabla_X(0+b)\theta'.
+-\]
+-For each connected restriction idempotent $\gamma$ on $Y$,
+-Lemma~\ref{lem:connected-alternative} gives $i,j\in\{0,1\}$ with
+-\[
+- \varepsilon_i\theta\gamma=\theta\gamma,
+- \qquad \varepsilon_j\theta'\gamma=\theta'\gamma.
+-\]
+-If $i=j=0$, compose the equality involving $a$ with $\gamma$ and
+-then with $i_0$ to obtain
+-$(a+b)\theta\gamma=(a+b)\theta'\gamma$.
+-If $i=j=1$, use the equality involving $b$ and $i_1$.
+-If $i\ne j$, the two equalities give
+-$(a+b)\theta\gamma=0=(a+b)\theta'\gamma$.
+-Local connectedness therefore gives
+-$(a+b)\theta=(a+b)\theta'$. Since $\bar p=a+b$, this proves the
+-partial-monomorphism condition for total morphisms.
+-
+-For arbitrary $u,v:W\rightharpoonup X+X$ with $pu=pv$, split their
+-common restriction idempotent as
+-$\overline{pu}=\overline{pv}=me$, where $m:Z\to W$ is total,
+-$e:W\rightharpoonup Z$, and $em=1_Z$. The morphisms $pum,pvm$, hence also $um,vm$, are total.
+-The preceding case gives $\bar p um=\bar p vm$. Composing with $e$
+-and using $\bar p u=\bar p u\,\overline{pu}$ and its analogue for $v$
+-gives $\bar p u=\bar p v$. Thus $p$ is a partial monomorphism.
+-
+-Weak choice supplies a section $s$. The equations $ps=\bar s$ and
+-$psp=p$ imply $\bar s=\ran(p)$: the idempotent $\bar s$ receives $p$,
+-and every restriction idempotent receiving $p$ also receives
+-$ps=\bar s$. Moreover
+-$\bar p s=s\overline{ps}=s$. Two sections have the same composite
+-with $p$, so partial monicity makes them equal.
+-The defining property of the range gives $\ran(p)=a\vee b$.
+-
+-The equations $p(sa)=a=p(i_0a)$ and $p(sb)=b=p(i_1b)$,
+-together with $\bar p s=s$, give $sa=i_0a$ and $sb=i_1b$ by
+-partial monicity. Consequently, $\varepsilon_0s$ and $i_0a$ agree
+-after both $a$ and $b$. They therefore agree after $[a,b]$, whose
+-range is $a\vee b=\bar s$. Both morphisms have restriction bounded
+-by this range, so range agreement gives $\varepsilon_0s=i_0a$.
+-The same argument gives $\varepsilon_1s=i_1b$.
+-Taking restrictions proves the two inverse-image equations.
+-For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$,
+-and its restrictions to $c,c'$ are $i_1c,i_0c'$, respectively.
+-\end{proof}
+-
+-\begin{theorem}[Inseparability in the source]\label{thm:local-lifting}
+-Let $\mathscr R$ be a recursion category with ranges and
+-binary restriction coproducts. Let $\mathcal A$ be a locally connected
+-split restriction category with ranges, restriction zeros, and binary
+-restriction coproducts, satisfying weak choice, with inverse images
+-preserving binary joins of restriction idempotents. Let
+-$F:\mathscr R\to\mathcal A$ be a range functor.
+-Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and
+-an isomorphism $b:U\to U+U$, with $F(1_U)\ne0$.
+-For each complementary pair $c,c'$ on $U$, let
+-$s_c:FU\to FU+FU$ be the total section of $\nabla_{FU}(Fc'+Fc)$ supplied by
+-Proposition~\ref{prop:local-switch}. Suppose there is a morphism
+-$\ell_c:U\rightharpoonup U+U$ with
+-$F\ell_c=\chi_{U,U}s_c$, where
+-$\chi_{U,U}:FU+FU\to F(U+U)$ is the canonical coproduct isomorphism.
+-Then
+-\[
+- a_0=(b\tau\Delta_U)^*(1_U+0_U),\qquad
+- a_1=(b\tau\Delta_U)^*(0_U+1_U)
+-\]
+-are inseparable in $\mathscr R$.
+-\end{theorem}
+-\begin{proof}
+-The restriction idempotents $a_0,a_1$ are disjoint because they are
+-inverse images of disjoint summand idempotents. If $c,c'$ separated
+-them, the range functor would send $c,c'$ to complementary target
+-idempotents $Fc,Fc'$ containing $F(a_0),F(a_1)$, respectively.
+-Proposition~\ref{prop:local-switch} gives
+-\[
+- s_c^*(1_{FU}+0_{FU})=Fc',\qquad
+- s_c^*(0_{FU}+1_{FU})=Fc.
+-\]
+-Together with the assumed lift $\ell_c$, these equations contradict
+-Corollary~\ref{cor:separator} with $P=Fc$ and $N=Fc'$.
+-\end{proof}
+-
+-Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
+-with a separable diagonal pair for which the required section has no
+-source lift.
+-
+-\subsection{A sufficient condition for lifting}
+ 
+ \begin{proposition}\label{prop:disjoint-joins}
+ Let $\mathcal C$ be a restriction category with restriction zeros and
+@@ -242,10 +154,6 @@
+  \ell_c=(i_1c)\vee(i_0c'):X\rightharpoonup X+X
+ \]
+ is total and satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+-If $F:\mathcal C\to\mathcal A$ is a range functor and $\mathcal A$
+-satisfies the hypotheses of Proposition~\ref{prop:local-switch},
+-then $\chi_{X,X}^{-1}F\ell_c$ is the section of
+-$\nabla_{FX}(Fc'+Fc)$.
+ \end{proposition}
+ \begin{proof}
+ The restrictions of $i_1c$ and $i_0c'$ are $c$ and $c'$ because
+@@ -253,14 +161,7 @@
+ give $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+ Both $c$ and $c'$ lie below $\bar\ell_c$, so
+ $1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
++\end{proof}
+ 
+-Put $\Gamma=Fc$ and $\Gamma'=Fc'$. Preservation of composition
+-and coproduct injections gives
+-$(\chi_{X,X}^{-1}F\ell_c)\Gamma=i_1\Gamma$ and
+-$(\chi_{X,X}^{-1}F\ell_c)\Gamma'=i_0\Gamma'$.
+-The section $s$ of Proposition~\ref{prop:local-switch} satisfies the
+-same two equations. Thus $\chi_{X,X}^{-1}F\ell_c$ and $s$ agree after
+-$[\Gamma,\Gamma']$. Its range is
+-$\Gamma\vee\Gamma'=1_{FX}$, so range agreement gives
+-$\chi_{X,X}^{-1}F\ell_c=s$.
+-\end{proof}
++Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
++and a complementary target separator whose conditional has no source lift.
+--- v27/sections/04-miller-sequences.tex
++++ v28/sections/04-miller-sequences.tex
+@@ -156,24 +156,25 @@
+ numerical objects as objects and partial $p$-recursive functions between
+ these carriers as morphisms. A restriction idempotent splits through its
+ $p$-c.e. domain of definition.
+-Singleton restrictions prove local connectedness, and preimage search
+-for an injective map proves weak choice. Ranges are the partial identities
+-on images, and inverse images preserve unions of domains of definition.
+-Thus $\mathcal K_p$ satisfies the target
+-hypotheses of Theorem~\ref{thm:local-lifting}.
+-
+-If $c,c'$ are complementary restriction idempotents on a numerical
+-object $X$, run the membership computations for their domains of
++Ranges are the partial identities on images, and total inverse
++images preserve unions of domains of definition.
++
++If $c,c':X\rightharpoonup X$ are complementary restriction
++idempotents in $\mathcal E_a$, run the membership computations for their domains of
+ definition in parallel and return the opposite tag when one succeeds.
+-This gives the total source map
++Each domain is independent of the representation, the domains are
++disjoint, and their union is the source carrier. Thus exactly one
++computation succeeds for every representation, and its output tag and
++input value are independent of the representation. This gives the total
++source morphism
+ \[
+  \ell_c=(i_1c)\vee(i_0c'):X\longrightarrow X+X.
+ \]
+-Its image under $I_pJ_p$ is the required section, and
+-$(I_pJ_p)(1_{\N})\ne0$. Thus each composite
+-$I_pJ_p$ satisfies the hypotheses of Theorem~\ref{thm:local-lifting}.
++It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
++Since $(I_pJ_p)(1_{\N})\ne0$, each composite
++$I_pJ_p$ satisfies the hypotheses of Corollary~\ref{cor:source-conditionals}.
+ Using the recursive bijection $b:\N\to\N+\N$ which assigns the tag
+-of $m$ according to its parity, that theorem gives inseparable
++of $m$ according to its parity, that corollary gives inseparable
+ restriction idempotents that are the partial identities on the sets
+ \begin{equation}\label{eq:miller-diagonal-pair}
+  A_i=\{e:\tau_a(e,e)\mathord\downarrow=m
+@@ -279,7 +280,7 @@
+ If complementary restriction idempotents in $\mathcal E_a$ separated
+ $1_{L_a},1_{R_a}$, their inverse images under $h$ would separate
+ $1_{A_0},1_{A_1}$, contrary to
+-Theorem~\ref{thm:local-lifting} as applied above.
++Corollary~\ref{cor:source-conditionals} as applied above.
+ For a fixed binary representation $p\in P_a$, the set
+ \[
+  C_p=\{n:p(\langle n,0\rangle)=0\}
+@@ -291,9 +292,9 @@
+ cannot be independent of the representation.
+ \end{proof}
+ 
+-If $J_p\tau_a$ were a Turing morphism, Theorem~\ref{thm:local-lifting},
++If $J_p\tau_a$ were a Turing morphism, Corollary~\ref{cor:source-conditionals},
+ applied to $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ and its
+-$p$-recursive sections associated with complementary restriction
++$p$-recursive conditionals associated with complementary restriction
+ idempotents, would make $1_{A_0},1_{A_1}$ inseparable in
+ $\mathrm{Rec}^{p}$. The $p$-decidable set $h^{-1}(C_p)$ separates
+ $A_0,A_1$. Hence $J_p\tau_a$ is not a Turing
+--- v27/sections/06-interpretation-in-models.tex
++++ v28/sections/06-interpretation-in-models.tex
+@@ -102,7 +102,7 @@
+ 
+ \begin{corollary}\label{cor:model-pair}
+ For every $M\models T$, the functor $F_M$ satisfies the hypotheses of
+-Theorem~\ref{thm:local-lifting}. Thus, for a Turing morphism
++Corollary~\ref{cor:source-conditionals}. Thus, for a Turing morphism
+ $\tau:\omega\times\omega\rightharpoonup\omega$ and an isomorphism
+ $b:\omega\to\omega+\omega$ in $S_T$, the restriction idempotents
+ \[
+@@ -112,14 +112,11 @@
+ are inseparable in $S_T$.
+ \end{corollary}
+ \begin{proof}
+-In $\Pfn$, restriction idempotents split through their domains, and
+-singleton partial identities are connected and detect partial functions.
+-Partial monomorphisms are partial injections and have partial inverses;
+-inverse images preserve unions. Thus $\Pfn$ satisfies the target
+-hypotheses of Theorem~\ref{thm:local-lifting}.
+-Proposition~\ref{prop:model} supplies the required preservation,
+-Lemma~\ref{lem:switch} supplies the lifts, and
++In $\Pfn$, total inverse images preserve unions of partial-identity
++domains. Proposition~\ref{prop:model} supplies the range functor,
++Lemma~\ref{lem:switch} supplies the total source conditionals, and
+ $F_M(1_\omega)\ne0$ because $|M|$ is nonempty.
++Corollary~\ref{cor:source-conditionals} applies.
+ \end{proof}
+ 
+ 
+--- v27/sections/08-essential-incompleteness-of-arithmetic.tex
++++ v28/sections/08-essential-incompleteness-of-arithmetic.tex
+@@ -327,5 +327,5 @@
+ in \eqref{eq:uniform} is one of his examples
+ \cite[pp.~125--126]{Bernardi}.
+ The argument above obtains $A,B$ from
+-Theorem~\ref{thm:local-lifting} and uses finite PA-proofs to
++Corollary~\ref{cor:source-conditionals} and uses finite PA-proofs to
+ establish $A\subseteq P_T$ and $B\subseteq N_T$.
+--- v27/sections/08d-numerical-incompleteness.tex
++++ v28/sections/08d-numerical-incompleteness.tex
+@@ -29,12 +29,10 @@
+ $J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
+ It preserves restrictions, ranges, zero maps, and the chosen
+ products and coproducts by their numerical descriptions.
+-The category $\Pfn$ is split and locally connected: restrictions
+-to singletons detect the domain and value of a partial function.
+-Partial injections have partial inverses, and inverse images
+-preserve unions of partial-identity domains.
+-For complementary restriction idempotents on $W\in\mathrm{Rec}$,
+-let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
++In $\Pfn$, total inverse images preserve unions of partial-identity
++domains.
++For complementary restriction idempotents $c,c':W\rightharpoonup W$
++in $\mathrm{Rec}$, let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
+ subsets are recursive. The morphism $s:W\to W+W$ in $\mathrm{Rec}$
+ given by
+ \[
+@@ -45,8 +43,9 @@
+  \end{cases}
+ \]
+ is total recursive; here $i_0,i_1:W\to W+W$ are the coproduct
+-injections. Its image is the reversed conditional required by
+-Theorem~\ref{thm:local-lifting}. That theorem gives inseparability
++injections. Its restrictions to the two domains give
++$sc=i_1c$ and $sc'=i_0c'$. Since $J_{\mathrm{rec}}(1_\omega)\ne0$,
++Corollary~\ref{cor:source-conditionals} gives inseparability
+ of $a,b$ in $\mathrm{Rec}$. A recursive separator of $A,B$ would
+ give complementary restriction idempotents separating $a,b$, so
+ $A,B$ are recursively inseparable. Fullness of $I$ then gives
+--- v27/sections/09-three-point-space.tex
++++ v28/sections/09-three-point-space.tex
+@@ -148,25 +148,40 @@
+ $\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
+ component evaluation give ordinary propositional formulas and derivations.
+ 
+-\subsection{Local connectedness and lifting}
+-
+-For an object $Y$ of $\mathcal E$ and an element $y\in Y_0$, take
+-the subfunctor with components $\{y\}$, $\{r_1^Yy\}$, and
+-$\{r_2^Yy\}$. Its partial identity is a connected restriction
+-idempotent in $\mathcal A$. The same holds for a subfunctor with
+-a singleton in component $1$ or $2$ and empty sets in the other
+-components. These restriction idempotents detect the definedness and value
+-of every component of a partial morphism, so $\mathcal A$ is locally
++\subsection{Complementary domains and inseparability}
++
++Proposition~\ref{prop:fork-local} proves that $\mathcal A$ is locally
+ connected. Its splitness, weak choice, ranges, coproducts, and
+ componentwise inverse-image laws are proved in
+ Proposition~\ref{prop:fork-structure}.
+-The full inclusion $\mathscr R_X\hookrightarrow\mathcal A$ is a
+-range functor.
+-For each complementary pair $c,c'$ on $V$, the section
+-$s_c:V\to V+V$ of $\nabla_V(c'+c)$ belongs to $\mathscr R_X$
+-by fullness. Thus this inclusion satisfies the lifting hypothesis of
+-Theorem~\ref{thm:local-lifting}, which gives an inseparable pair in
+-$\mathscr R_X$.
++Let $c,c'$ be complementary restriction idempotents on $V$ in
++$\mathscr R_X$, with domain inclusions
++$m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$.
++Their component domains are disjoint c.e.\ subsets whose union is
++$V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
++\[
++ q=[m,m']:C+C'\longrightarrow V
++\]
++has bijective components $q_j:C_j+C'_j\to V_j$. Each inverse is
++computable by running the two domain membership searches in parallel
++and returning the corresponding tagged element. Naturality of $q$ gives
++\[
++ r_i^{C+C'}q_0^{-1}=q_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
++ \qquad(i=1,2).
++\]
++Thus these inverse components define $q^{-1}:V\to C+C'$ in
++$\mathcal E$, proving that $q$ is an isomorphism.
++For the injections $i_0,i_1:V\to V+V$, define
++\[
++ \ell_c=[i_1m,i_0m']q^{-1}:V\longrightarrow V+V.
++\]
++It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
++$\mathscr R_X$ by fullness. The full inclusion
++$I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
++$I(1_V)\ne0$, and total inverse images in $\mathcal A$ preserve
++binary joins by Proposition~\ref{prop:fork-structure}.
++Corollary~\ref{cor:source-conditionals} therefore gives an inseparable
++pair in $\mathscr R_X$.
+ The category $\mathscr R_X$ is not restriction-equivalent to the
+ recursion category of partial recursive functions. Indeed, the terminal object of
+ $\mathcal E$ has five subobjects, whereas the terminal object of
+@@ -296,7 +311,7 @@
+  a=d^*q_0,\qquad b=d^*q_1.
+ \]
+ These are the inseparable restriction idempotents supplied by
+-Theorem~\ref{thm:local-lifting} for the full inclusion
++Corollary~\ref{cor:source-conditionals} for the full inclusion
+ $\mathscr R_X\hookrightarrow\mathcal A$. They remain inseparable
+ in $\mathcal A$: fullness leaves the restriction idempotents on $V$, their order,
+ and their complements unchanged.
+@@ -327,7 +342,9 @@
+ in Section~\ref{sec:arithmetic}. With the componentwise coproduct
+ identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
+ isomorphism in $\mathcal K_2$.
+-Theorem~\ref{thm:local-lifting} therefore makes the partial identities
++Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and total inverse
++images in $\Pfn$ preserve unions,
++Corollary~\ref{cor:source-conditionals} makes the partial identities
+ on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
+ would define a complemented restriction idempotent on $\N^2$ in
+ this full subcategory. Hence $A_i,B_i$ are recursively inseparable.

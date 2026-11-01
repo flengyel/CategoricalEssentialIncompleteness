@@ -148,25 +148,40 @@ The formula and derivation objects below are constructed in
 $\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
 component evaluation give ordinary propositional formulas and derivations.
 
-\subsection{Local connectedness and lifting}
+\subsection{Complementary domains and inseparability}
 
-For an object $Y$ of $\mathcal E$ and an element $y\in Y_0$, take
-the subfunctor with components $\{y\}$, $\{r_1^Yy\}$, and
-$\{r_2^Yy\}$. Its partial identity is a connected restriction
-idempotent in $\mathcal A$. The same holds for a subfunctor with
-a singleton in component $1$ or $2$ and empty sets in the other
-components. These restriction idempotents detect the definedness and value
-of every component of a partial morphism, so $\mathcal A$ is locally
+Proposition~\ref{prop:fork-local} proves that $\mathcal A$ is locally
 connected. Its splitness, weak choice, ranges, coproducts, and
 componentwise inverse-image laws are proved in
 Proposition~\ref{prop:fork-structure}.
-The full inclusion $\mathscr R_X\hookrightarrow\mathcal A$ is a
-range functor.
-For each complementary pair $c,c'$ on $V$, the section
-$s_c:V\to V+V$ of $\nabla_V(c'+c)$ belongs to $\mathscr R_X$
-by fullness. Thus this inclusion satisfies the lifting hypothesis of
-Theorem~\ref{thm:local-lifting}, which gives an inseparable pair in
-$\mathscr R_X$.
+Let $c,c'$ be complementary restriction idempotents on $V$ in
+$\mathscr R_X$, with domain inclusions
+$m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$.
+Their component domains are disjoint c.e.\ subsets whose union is
+$V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
+\[
+ q=[m,m']:C+C'\longrightarrow V
+\]
+has bijective components $q_j:C_j+C'_j\to V_j$. Each inverse is
+computable by running the two domain membership searches in parallel
+and returning the corresponding tagged element. Naturality of $q$ gives
+\[
+ r_i^{C+C'}q_0^{-1}=q_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
+ \qquad(i=1,2).
+\]
+Thus these inverse components define $q^{-1}:V\to C+C'$ in
+$\mathcal E$, proving that $q$ is an isomorphism.
+For the injections $i_0,i_1:V\to V+V$, define
+\[
+ \ell_c=[i_1m,i_0m']q^{-1}:V\longrightarrow V+V.
+\]
+It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
+$\mathscr R_X$ by fullness. The full inclusion
+$I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
+$I(1_V)\ne0$, and total inverse images in $\mathcal A$ preserve
+binary joins by Proposition~\ref{prop:fork-structure}.
+Corollary~\ref{cor:source-conditionals} therefore gives an inseparable
+pair in $\mathscr R_X$.
 The category $\mathscr R_X$ is not restriction-equivalent to the
 recursion category of partial recursive functions. Indeed, the terminal object of
 $\mathcal E$ has five subobjects, whereas the terminal object of
@@ -296,7 +311,7 @@ $a,b:V\rightharpoonup V$ by
  a=d^*q_0,\qquad b=d^*q_1.
 \]
 These are the inseparable restriction idempotents supplied by
-Theorem~\ref{thm:local-lifting} for the full inclusion
+Corollary~\ref{cor:source-conditionals} for the full inclusion
 $\mathscr R_X\hookrightarrow\mathcal A$. They remain inseparable
 in $\mathcal A$: fullness leaves the restriction idempotents on $V$, their order,
 and their complements unchanged.
@@ -327,7 +342,9 @@ $\mathcal K_2$ by fullness. The same switching construction was used
 in Section~\ref{sec:arithmetic}. With the componentwise coproduct
 identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
 isomorphism in $\mathcal K_2$.
-Theorem~\ref{thm:local-lifting} therefore makes the partial identities
+Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and total inverse
+images in $\Pfn$ preserve unions,
+Corollary~\ref{cor:source-conditionals} makes the partial identities
 on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
 would define a complemented restriction idempotent on $\N^2$ in
 this full subcategory. Hence $A_i,B_i$ are recursively inseparable.

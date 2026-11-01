@@ -1,11 +1,11 @@
-\section{Diagonal comparison and lifted partial conditionals}\label{sec:lifting}
+\section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
 
 The diagonal argument compares a pair of source restriction idempotents
 with two disjoint target domains. A lift of a partial morphism that
 sends these domains into opposite coproduct summands produces a total
 source morphism whose interpretation avoids both domains.
-Local connectedness and weak choice supply such target
-morphisms for every disjoint pair.
+Total morphisms that exchange the coproduct tags on complementary
+source domains give an inseparability criterion.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
@@ -97,140 +97,52 @@ Such morphisms would give $P\vee N\ne1_{FU}$ by
 Theorem~\ref{thm:comparison}, contradicting complementarity.
 \end{proof}
 
-\subsection{Sections in a locally connected category}
+\subsection{Complementary conditionals}
 
-\begin{lemma}\label{lem:connected-alternative}
-Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
-and binary restriction coproducts. Suppose inverse images preserve binary
-joins of restriction idempotents. If $a$ is a connected restriction
-idempotent on $X$ and
-$f:X\to Y+Z$ is total, then
-$\varepsilon_0fa=fa$ or $\varepsilon_1fa=fa$.
-\end{lemma}
+\begin{corollary}[Inseparability from complementary conditionals]
+\label{cor:source-conditionals}
+Under the hypotheses of Theorem~\ref{thm:comparison} on
+$\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
+$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
+binary joins of restriction idempotents.
+Suppose that, for every complementary pair $c,c'$ on $U$, there
+is a total morphism $\ell_c:U\to U+U$ satisfying
+\[
+ \ell_cc=i_1c,\qquad \ell_cc'=i_0c',
+\]
+where $i_0,i_1:U\to U+U$ are the coproduct injections.
+Then the restriction idempotents $a_0,a_1$ of
+Theorem~\ref{thm:comparison} are inseparable in $\mathscr R$.
+\end{corollary}
 \begin{proof}
-Totality and the inverse-image laws give the disjoint decomposition
+Put $\varepsilon_0=1_U+0_U$ and $\varepsilon_1=0_U+1_U$.
+The morphisms $\varepsilon_0\ell_c$ and $i_0c'$ agree after
+composition with both $c$ and $c'$. Hence they agree after
+$[c,c']:U+U\rightharpoonup U$. Its range is
+$c\vee c'=1_U$, so range agreement gives
+$\varepsilon_0\ell_c=i_0c'$.
+The same argument gives $\varepsilon_1\ell_c=i_1c$.
+Taking restrictions yields
 \[
- a=af^*\varepsilon_0\vee af^*\varepsilon_1.
+ \ell_c^*\varepsilon_0=c',\qquad
+ \ell_c^*\varepsilon_1=c.
 \]
-Connectedness makes one term zero and the other equal to $a$. In the
-latter case $a\le f^*\varepsilon_i$, and the restriction identity
-$\varepsilon_i f=f\overline{\varepsilon_i f}$ gives
-$\varepsilon_i fa=fa$.
+
+If $c,c'$ separated $a_0,a_1$, put $P=F(c)$ and $N=F(c')$.
+These are complementary target restriction idempotents.
+For the canonical coproduct isomorphism
+$\chi_{U,U}:FU+FU\to F(U+U)$, define
+\[
+ s_c=\chi_{U,U}^{-1}F(\ell_c):FU\to FU+FU.
+\]
+Restriction preservation and the coproduct comparison give
+\[
+ s_c^*(1_{FU}+0_{FU})=N,\qquad
+ s_c^*(0_{FU}+1_{FU})=P.
+\]
+Together with $F(\ell_c)=\chi_{U,U}s_c$, these identities contradict
+Corollary~\ref{cor:separator}.
 \end{proof}
-
-\begin{proposition}\label{prop:local-switch}
-Let $\mathcal A$ be a locally connected split restriction category with
-ranges, restriction zeros, and binary restriction coproducts. Suppose
-weak choice holds and inverse images preserve binary joins of
-restriction idempotents.
-For disjoint restriction idempotents $a,b$ on $X$, the morphism
-$p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
-with a unique section $s:X\rightharpoonup X+X$, and
-\[
- ps=\bar s=a\vee b,\qquad sa=i_0a,\qquad sb=i_1b,
-\]
-and its inverse images of the summand idempotents are
-\[
- s^*(1_X+0_X)=a,\qquad s^*(0_X+1_X)=b.
-\]
-In particular, for complementary $c,c'$ on $X$, the morphism
-$\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
-$sc=i_1c$ and $sc'=i_0c'$.
-\end{proposition}
-\begin{proof}
-First let $\theta,\theta':Y\to X+X$ be total and suppose
-$p\theta=p\theta'$. The identities
-$ap=\nabla_X(a+0)$ and $bp=\nabla_X(0+b)$ give
-\[
- \nabla_X(a+0)\theta=\nabla_X(a+0)\theta',
- \qquad
- \nabla_X(0+b)\theta=\nabla_X(0+b)\theta'.
-\]
-For each connected restriction idempotent $\gamma$ on $Y$,
-Lemma~\ref{lem:connected-alternative} gives $i,j\in\{0,1\}$ with
-\[
- \varepsilon_i\theta\gamma=\theta\gamma,
- \qquad \varepsilon_j\theta'\gamma=\theta'\gamma.
-\]
-If $i=j=0$, compose the equality involving $a$ with $\gamma$ and
-then with $i_0$ to obtain
-$(a+b)\theta\gamma=(a+b)\theta'\gamma$.
-If $i=j=1$, use the equality involving $b$ and $i_1$.
-If $i\ne j$, the two equalities give
-$(a+b)\theta\gamma=0=(a+b)\theta'\gamma$.
-Local connectedness therefore gives
-$(a+b)\theta=(a+b)\theta'$. Since $\bar p=a+b$, this proves the
-partial-monomorphism condition for total morphisms.
-
-For arbitrary $u,v:W\rightharpoonup X+X$ with $pu=pv$, split their
-common restriction idempotent as
-$\overline{pu}=\overline{pv}=me$, where $m:Z\to W$ is total,
-$e:W\rightharpoonup Z$, and $em=1_Z$. The morphisms $pum,pvm$, hence also $um,vm$, are total.
-The preceding case gives $\bar p um=\bar p vm$. Composing with $e$
-and using $\bar p u=\bar p u\,\overline{pu}$ and its analogue for $v$
-gives $\bar p u=\bar p v$. Thus $p$ is a partial monomorphism.
-
-Weak choice supplies a section $s$. The equations $ps=\bar s$ and
-$psp=p$ imply $\bar s=\ran(p)$: the idempotent $\bar s$ receives $p$,
-and every restriction idempotent receiving $p$ also receives
-$ps=\bar s$. Moreover
-$\bar p s=s\overline{ps}=s$. Two sections have the same composite
-with $p$, so partial monicity makes them equal.
-The defining property of the range gives $\ran(p)=a\vee b$.
-
-The equations $p(sa)=a=p(i_0a)$ and $p(sb)=b=p(i_1b)$,
-together with $\bar p s=s$, give $sa=i_0a$ and $sb=i_1b$ by
-partial monicity. Consequently, $\varepsilon_0s$ and $i_0a$ agree
-after both $a$ and $b$. They therefore agree after $[a,b]$, whose
-range is $a\vee b=\bar s$. Both morphisms have restriction bounded
-by this range, so range agreement gives $\varepsilon_0s=i_0a$.
-The same argument gives $\varepsilon_1s=i_1b$.
-Taking restrictions proves the two inverse-image equations.
-For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$,
-and its restrictions to $c,c'$ are $i_1c,i_0c'$, respectively.
-\end{proof}
-
-\begin{theorem}[Inseparability in the source]\label{thm:local-lifting}
-Let $\mathscr R$ be a recursion category with ranges and
-binary restriction coproducts. Let $\mathcal A$ be a locally connected
-split restriction category with ranges, restriction zeros, and binary
-restriction coproducts, satisfying weak choice, with inverse images
-preserving binary joins of restriction idempotents. Let
-$F:\mathscr R\to\mathcal A$ be a range functor.
-Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and
-an isomorphism $b:U\to U+U$, with $F(1_U)\ne0$.
-For each complementary pair $c,c'$ on $U$, let
-$s_c:FU\to FU+FU$ be the total section of $\nabla_{FU}(Fc'+Fc)$ supplied by
-Proposition~\ref{prop:local-switch}. Suppose there is a morphism
-$\ell_c:U\rightharpoonup U+U$ with
-$F\ell_c=\chi_{U,U}s_c$, where
-$\chi_{U,U}:FU+FU\to F(U+U)$ is the canonical coproduct isomorphism.
-Then
-\[
- a_0=(b\tau\Delta_U)^*(1_U+0_U),\qquad
- a_1=(b\tau\Delta_U)^*(0_U+1_U)
-\]
-are inseparable in $\mathscr R$.
-\end{theorem}
-\begin{proof}
-The restriction idempotents $a_0,a_1$ are disjoint because they are
-inverse images of disjoint summand idempotents. If $c,c'$ separated
-them, the range functor would send $c,c'$ to complementary target
-idempotents $Fc,Fc'$ containing $F(a_0),F(a_1)$, respectively.
-Proposition~\ref{prop:local-switch} gives
-\[
- s_c^*(1_{FU}+0_{FU})=Fc',\qquad
- s_c^*(0_{FU}+1_{FU})=Fc.
-\]
-Together with the assumed lift $\ell_c$, these equations contradict
-Corollary~\ref{cor:separator} with $P=Fc$ and $N=Fc'$.
-\end{proof}
-
-Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
-with a separable diagonal pair for which the required section has no
-source lift.
-
-\subsection{A sufficient condition for lifting}
 
 \begin{proposition}\label{prop:disjoint-joins}
 Let $\mathcal C$ be a restriction category with restriction zeros and
@@ -242,10 +154,6 @@ For complementary restriction idempotents $c,c'$ on $X$, the morphism
  \ell_c=(i_1c)\vee(i_0c'):X\rightharpoonup X+X
 \]
 is total and satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
-If $F:\mathcal C\to\mathcal A$ is a range functor and $\mathcal A$
-satisfies the hypotheses of Proposition~\ref{prop:local-switch},
-then $\chi_{X,X}^{-1}F\ell_c$ is the section of
-$\nabla_{FX}(Fc'+Fc)$.
 \end{proposition}
 \begin{proof}
 The restrictions of $i_1c$ and $i_0c'$ are $c$ and $c'$ because
@@ -253,14 +161,7 @@ the injections are total. The upper-bound equations for the join
 give $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
 Both $c$ and $c'$ lie below $\bar\ell_c$, so
 $1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
-
-Put $\Gamma=Fc$ and $\Gamma'=Fc'$. Preservation of composition
-and coproduct injections gives
-$(\chi_{X,X}^{-1}F\ell_c)\Gamma=i_1\Gamma$ and
-$(\chi_{X,X}^{-1}F\ell_c)\Gamma'=i_0\Gamma'$.
-The section $s$ of Proposition~\ref{prop:local-switch} satisfies the
-same two equations. Thus $\chi_{X,X}^{-1}F\ell_c$ and $s$ agree after
-$[\Gamma,\Gamma']$. Its range is
-$\Gamma\vee\Gamma'=1_{FX}$, so range agreement gives
-$\chi_{X,X}^{-1}F\ell_c=s$.
 \end{proof}
+
+Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
+and a complementary target separator whose conditional has no source lift.

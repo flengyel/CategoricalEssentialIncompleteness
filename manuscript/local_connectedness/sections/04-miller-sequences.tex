@@ -156,24 +156,25 @@ A concrete presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
 numerical objects as objects and partial $p$-recursive functions between
 these carriers as morphisms. A restriction idempotent splits through its
 $p$-c.e. domain of definition.
-Singleton restrictions prove local connectedness, and preimage search
-for an injective map proves weak choice. Ranges are the partial identities
-on images, and inverse images preserve unions of domains of definition.
-Thus $\mathcal K_p$ satisfies the target
-hypotheses of Theorem~\ref{thm:local-lifting}.
+Ranges are the partial identities on images, and total inverse
+images preserve unions of domains of definition.
 
-If $c,c'$ are complementary restriction idempotents on a numerical
-object $X$, run the membership computations for their domains of
+If $c,c':X\rightharpoonup X$ are complementary restriction
+idempotents in $\mathcal E_a$, run the membership computations for their domains of
 definition in parallel and return the opposite tag when one succeeds.
-This gives the total source map
+Each domain is independent of the representation, the domains are
+disjoint, and their union is the source carrier. Thus exactly one
+computation succeeds for every representation, and its output tag and
+input value are independent of the representation. This gives the total
+source morphism
 \[
  \ell_c=(i_1c)\vee(i_0c'):X\longrightarrow X+X.
 \]
-Its image under $I_pJ_p$ is the required section, and
-$(I_pJ_p)(1_{\N})\ne0$. Thus each composite
-$I_pJ_p$ satisfies the hypotheses of Theorem~\ref{thm:local-lifting}.
+It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+Since $(I_pJ_p)(1_{\N})\ne0$, each composite
+$I_pJ_p$ satisfies the hypotheses of Corollary~\ref{cor:source-conditionals}.
 Using the recursive bijection $b:\N\to\N+\N$ which assigns the tag
-of $m$ according to its parity, that theorem gives inseparable
+of $m$ according to its parity, that corollary gives inseparable
 restriction idempotents that are the partial identities on the sets
 \begin{equation}\label{eq:miller-diagonal-pair}
  A_i=\{e:\tau_a(e,e)\mathord\downarrow=m
@@ -279,7 +280,7 @@ of the underlying sets $L_a,R_a$.
 If complementary restriction idempotents in $\mathcal E_a$ separated
 $1_{L_a},1_{R_a}$, their inverse images under $h$ would separate
 $1_{A_0},1_{A_1}$, contrary to
-Theorem~\ref{thm:local-lifting} as applied above.
+Corollary~\ref{cor:source-conditionals} as applied above.
 For a fixed binary representation $p\in P_a$, the set
 \[
  C_p=\{n:p(\langle n,0\rangle)=0\}
@@ -291,9 +292,9 @@ separator from every binary representation of $a$, but the set it decides
 cannot be independent of the representation.
 \end{proof}
 
-If $J_p\tau_a$ were a Turing morphism, Theorem~\ref{thm:local-lifting},
+If $J_p\tau_a$ were a Turing morphism, Corollary~\ref{cor:source-conditionals},
 applied to $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ and its
-$p$-recursive sections associated with complementary restriction
+$p$-recursive conditionals associated with complementary restriction
 idempotents, would make $1_{A_0},1_{A_1}$ inseparable in
 $\mathrm{Rec}^{p}$. The $p$-decidable set $h^{-1}(C_p)$ separates
 $A_0,A_1$. Hence $J_p\tau_a$ is not a Turing
