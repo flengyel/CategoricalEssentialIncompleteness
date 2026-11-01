@@ -148,23 +148,25 @@ The formula and derivation objects below are constructed in
 $\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
 component evaluation give ordinary propositional formulas and derivations.
 
-\subsection{Complementary domains and inseparability}
+\subsection{Complementary restriction idempotents and inseparability}
 
 Proposition~\ref{prop:fork-local} proves that $\mathcal A$ is locally
 connected. Its splitness, weak choice, ranges, coproducts, and
 componentwise inverse-image laws are proved in
 Proposition~\ref{prop:fork-structure}.
 Let $c,c'$ be complementary restriction idempotents on $V$ in
-$\mathscr R_X$, with domain inclusions
-$m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$.
-Their component domains are disjoint c.e.\ subsets whose union is
-$V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
+$\mathscr R_X$. Write
+$m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$
+for the inclusions through which $c,c'$ split in $\mathcal A$.
+The component carriers $C_j,C'_j$ are disjoint c.e.\ subsets whose union
+is $V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
 \[
  q=[m,m']:C+C'\longrightarrow V
 \]
 has bijective components $q_j:C_j+C'_j\to V_j$. Each inverse is
-computable by running the two domain membership searches in parallel
-and returning the corresponding tagged element. Naturality of $q$ gives
+computable by running the membership searches for $C_j$ and $C'_j$ in
+parallel and returning the corresponding tagged element. Naturality of $q$
+gives
 \[
  r_i^{C+C'}q_0^{-1}=q_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
  \qquad(i=1,2).
@@ -582,8 +584,8 @@ determines a restriction idempotent $t_T:S\rightharpoonup S$, the partial
 identity on its theorem subfunctor $T\subseteq S$.
 It satisfies $t_0\le t_T$ and $t_T\nu^*t_T=0_S$.
 All three theories are complete precisely when
-$t_T\vee\nu^*t_T=1_S$, since the component domains of $\nu^*t_T$
-are the sets $\nu_j^{-1}(T_j)$.
+$t_T\vee\nu^*t_T=1_S$, since the $j$th component of $\nu^*t_T$
+is the partial identity on $\nu_j^{-1}(T_j)$.
 
 \begin{theorem}\label{thm:cosheaf-observation}
 Fix $i\in\{1,2\}$. Let $T\subseteq S$ be a compatible family of

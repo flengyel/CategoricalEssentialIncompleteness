@@ -2,9 +2,9 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 40 PDF](logical_consequence_and_essential_incompleteness_v40.pdf)
+[Version 41 PDF](logical_consequence_and_essential_incompleteness_v41.pdf)
 ([LaTeX source](local_connectedness/main.tex),
-[source archive](logical_consequence_v40_source.zip), 1 November 2026).
+[source archive](logical_consequence_v41_source.zip), 1 November 2026).
 
 Sections 3 and 4 prove the comparison theorem and its application to interpreted
 sentence theories. Section 5 realizes the categorical syntax of Appendix A in

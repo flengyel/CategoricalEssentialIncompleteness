@@ -11,15 +11,17 @@ is incomplete. The three principal applications concern arithmetic,
 a theory of real closed fields expanded by constants, and propositional
 theories obtained from cosheaves.
 
-The connection between deduction and recursion uses two descriptions
-of the same theory: a subobject of sentences and a restriction domain.
-For a recursion category $\mathscr R$, write
-\[
- \mathscr S=\Split(\mathscr R),\qquad
- \mathcal D=\Tot(\mathscr S).
-\]
-Splitting restriction idempotents makes their domains into objects;
-$\mathcal D$ consists of the total morphisms between these objects.
+The connection between deduction and recursion uses two representations
+of the same sentence theory: a subobject of a sentence object and a
+restriction idempotent on that object. For partial functions, a restriction
+idempotent is a partial identity on a subset of the source; splitting it
+makes that subset an object. Let $\mathscr R$ be a recursion category.
+Its \emph{restriction idempotent completion}, written
+$\mathscr S=\Split(\mathscr R)$, is obtained by splitting the restriction
+idempotents of $\mathscr R$. The \emph{category of total morphisms} of
+$\mathscr S$, written $\mathcal D=\Tot(\mathscr S)$, has all objects
+of $\mathscr S$ and only its total morphisms. A morphism is total when its restriction
+idempotent is the identity on its source.
 In the applications, $\mathcal D$ is regular and supports the syntax
 and initial algebras required in Appendix~\ref{app:syntax-theories}.
 For first-order logic this includes terms, formulas, quantifiers,
@@ -45,11 +47,11 @@ also represents the restriction range
 $t_A=\ran(c_{A,S}):S\rightharpoonup S$
 (Lemma~\ref{lem:range-regular-image}).
 For the total sentence-negation morphism $\nu:S\to S$,
-the inverse image $\nu^*t_A$ is the refutation domain.
+the inverse image $\nu^*t_A$ is the restriction idempotent representing
+refutable sentences.
 Consistency means $t_A\nu^*t_A=0_S$, and completeness means
 $t_A\vee\nu^*t_A=1_S$. These equations put the logical
-questions in terms of the restriction domains used in categorical
-recursion theory.
+questions in terms of restriction idempotents.
 
 There are two incompleteness arguments. The first uses a range functor
 $F:\mathscr R\to\mathcal A$ into a split restriction category,
@@ -57,23 +59,23 @@ extended to $\widehat F:\mathscr S\to\mathcal A$ by chosen
 splittings. When $\mathcal A$ is the partial-map category of a regular
 category, a sound interpretation factors the interpreted conclusion morphism
 through a validity subobject. If validity is disjoint from
-its inverse image under negation, the interpreted theorem and refutation
-domains are disjoint (Proposition~\ref{prop:interpreted-theory}).
-A total reduction from the diagonal domains of a source Turing morphism,
-together with a source lift of a specified partial conditional in the
+its inverse image under negation, the interpreted restriction idempotents
+representing theorems and refutations are disjoint (Proposition~\ref{prop:interpreted-theory}).
+A total reduction from the pair of restriction idempotents determined by
+a source Turing morphism, together with a source lift of a specified partial conditional in the
 target, then yields incompleteness of the source theory
 (Theorem~\ref{thm:logical-comparison}).
-Without the lifting hypothesis, the diagonal pair can be
+Without the lifting hypothesis, this pair can be
 separable even when the range functor is faithful, preserves restriction
 products, and reflects zero morphisms
 (Appendix~\ref{app:lifting-counterexample}).
 
 The second argument starts with an inseparable pair in the source.
-A total morphism reduces that pair to the theorem and refutation domains
-of a base theory. Enlarging the axiom subobject enlarges the generated
-theory, so the same reduction applies to each represented extension.
-If the extension is consistent, a separator of its theorem and refutation
-domains would pull back to a separator of the fixed pair.
+A total morphism reduces that pair to the restriction idempotents
+representing theorems and refutations of a base theory. Enlarging the axiom
+subobject enlarges the generated theory, so the same reduction applies to each represented extension.
+If the extension is consistent, a separator of the corresponding restriction
+idempotents would pull back to a separator of the fixed pair.
 Corollary~\ref{cor:domain-incompleteness} therefore gives inseparability,
 and hence incompleteness, for every such consistent extension.
 The realizations specify which effective axiom sets are represented.
@@ -115,8 +117,7 @@ by Miller \cite{Miller2004}. A morphism of the recursion category
 $\mathcal E_a$ is a partial numerical function computed by one oracle
 program with the same domain and values for every binary representation
 of $a$. First-order logic with equality is realized in
-$\mathcal D_a=\Tot(\Split(\mathcal E_a))$.
-The domains corresponding to
+$\mathcal D_a=\Tot(\Split(\mathcal E_a))$. The partial identities on
 \[
  L_a=\{n:a(n)<1/2\},\qquad R_a=\{n:a(n)>1/2\}
 \]
@@ -125,9 +126,10 @@ representation computes a separator.
 The theory $T_a$ of real closed fields expanded by constants $c_n$
 contains the strict rational bounds satisfied by $a(n)$.
 It is consistent, and the total morphism sending $n$ to the sentence
-$c_n<1/2$ reduces $L_a,R_a$ to its theorem and refutation domains.
-Every consistent extension whose axiom set is semidecidable by one
-oracle program from every binary representation of $a$ is incomplete
+$c_n<1/2$ reduces this inseparable pair to the restriction idempotents
+representing theorems and refutations. Every consistent extension is
+incomplete if a single oracle program semidecides its axiom set using
+any binary representation of $a$ as oracle
 (Theorem~\ref{thm:miller-incompleteness}).
 
 The third application constructs a recursion category $\mathscr R_X$
