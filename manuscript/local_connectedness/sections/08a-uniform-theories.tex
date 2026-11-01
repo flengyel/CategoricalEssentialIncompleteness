@@ -2,12 +2,21 @@
 \label{subsec:indexed-arithmetic-theories}
 
 We construct one derivation object for all computably enumerable
-axiom presentations extending PA.
-Put $\mathcal B=\mathcal B_{\PA}$ and let
-$I:S_{\PA}\to\Split(S_{\PA})$ be the inclusion into the
-restriction splitting. The object $E=I(\omega)=(\omega,1_\omega)$
-belongs to $\mathcal B$, and $G_{\N}E=\N$.
-Choose a $\Sigma_1$ predicate $\operatorname{Ax}_{\PA}(z)$
+axiom sets containing the chosen sentence axioms of PA. Put
+$\mathcal B=\Tot(\Split(S_{\PA}))$, and let
+$I:S_{\PA}\to\Split(S_{\PA})$ be the inclusion
+$I(X)=(X,1_X)$ on objects and $I(f)=f$ for
+$f:X\rightharpoonup Y$ in $S_{\PA}$.
+Use the syntax realized in $\mathcal B$ by
+Theorem~\ref{thm:syntactic-generated-theory}. In particular,
+$S,\Fm\in\mathcal B$, and $j:S\hookrightarrow\Fm$ is the
+sentence inclusion. All products, coproducts, and pullbacks in
+the family construction below are taken in $\mathcal B$.
+The parameter object is $E=I(\omega)=(\omega,1_\omega)$.
+The interpretation $G_{\N}:\mathcal B\to\mathbf{Set}$ of
+Section~\ref{sec:models} satisfies $G_{\N}E=\N$.
+
+Choose a $\Sigma_1$ formula $\operatorname{Ax}_{\PA}(z)$
 for the codes of the chosen sentence axioms of PA. Define
 \[
  W(e,z)\equiv\exists y\,G(e,z,y),\qquad
@@ -15,76 +24,119 @@ for the codes of the chosen sentence axioms of PA. Define
  \operatorname{Sent}(z)\land
        \bigl(\operatorname{Ax}_{\PA}(z)\lor W(e,z)\bigr).
 \]
-The sets $\{z\in\N:\N\models W(e,z)\}$, as $e$ varies over
-$\N$, are all the c.e.\ subsets of $\N$. For $e\in\N$, let
-$\Gamma_e$ be the set of
-sentences whose codes satisfy $\operatorname{Ax}(e,z)$ in $\N$.
-These are axiom presentations extending PA. Define their axiom
-subobjects $A_{\Gamma_e}\hookrightarrow S$ by the formulas
+As $e$ varies over $\N$, the sets
+$\{z\in\N:\N\models W(e,z)\}$ are precisely the c.e.\ subsets of
+$\N$. Let $\Gamma_e$ be the set of sentences whose codes
+satisfy $\operatorname{Ax}(e,z)$ in $\N$.
+For each $e\in\N$, the axiom subobject
+$A_{\Gamma_e}\hookrightarrow S$ is represented by
 $\operatorname{Ax}(\bar e,z)$.
-The formula $\operatorname{Ax}(e,z)$ represents a subobject
-\[
- i:A\hookrightarrow E\times S
-\]
-in $\mathcal B$, through the predicate presentation of
-Lemma~\ref{lem:syntactic-total-category}.
 
-Write $j:S\hookrightarrow\Fm$ for the sentence inclusion.
-Retain the logical-axiom morphism $\lambda:L\to\Fm$ and
-the rule morphisms $p_n:R_n\to\Fm^n$, $q_n:R_n\to\Fm$
-for $n=1,2$ from Appendix~\ref{app:first-order-derivations}.
-On $F_E=E\times\Fm$, use the rule objects
+We specify the numerical presentation of the axiom family.
+Let $J=J_{\PA}:\mathcal P_{\PA}\to\mathcal B$ be the
+equivalence of Lemma~\ref{lem:syntactic-total-category}.
+Put $\operatorname{Top}(x)\equiv(x=x)$, so that
+$J(\operatorname{Top})=E$, and use the chosen object
+$S=J(\operatorname{Sent})$.
+Let $\pi_0^{\mathrm{num}},\pi_1^{\mathrm{num}}:\N\to\N$
+be the projections of the numerical pairing, and put
+\[
+ D(w)\equiv\operatorname{Sent}(\pi_1^{\mathrm{num}}w),\qquad
+ A_0(w)\equiv\operatorname{Ax}
+            (\pi_0^{\mathrm{num}}w,\pi_1^{\mathrm{num}}w).
+\]
+Let $r_0:D\to\operatorname{Top}$ and
+$r_1:D\to\operatorname{Sent}$ in $\mathcal P_{\PA}$ be
+represented, respectively, by
+$D(w)\land e=\pi_0^{\mathrm{num}}w$ and
+$D(w)\land z=\pi_1^{\mathrm{num}}w$.
+The pairing identities give the product isomorphism
+\[
+ v=\langle J(r_0),J(r_1)\rangle:
+       J(D)\xrightarrow{\cong}E\times S.
+\]
+The predicate inclusion $a:A_0\hookrightarrow D$ in
+$\mathcal P_{\PA}$ has graph $A_0(w)\land w'=w$.
+Define the family axiom subobject in $\mathcal B$ by
+\[
+ A=J(A_0),\qquad i=vJ(a):A\hookrightarrow E\times S.
+\]
+
+Let $L,R_1,R_2\in\mathcal B$ and
+\[
+ \lambda:L\to\Fm,\qquad
+ p_n:R_n\to\Fm^n,\qquad q_n:R_n\to\Fm\quad(n=1,2)
+\]
+be the realized logical-axiom and rule morphisms of
+Appendix~\ref{app:first-order-derivations}.
+Put $F_E=E\times\Fm$ and define
 \[
  R^E_0=(E\times L)+A,\qquad
  R^E_n=E\times R_n\quad(n=1,2).
 \]
-The nullary premise morphism is the unique map to $1$, and its
-conclusion morphism is
+The nullary premise morphism is $p^E_0:R^E_0\to1$, the
+unique morphism to the terminal object. Its conclusion morphism is
 \[
  q^E_0=[1_E\times\lambda,(1_E\times j)i]:R^E_0\to F_E.
 \]
-For $n=1,2$, let
-$d_n:E\times\Fm^n\to(E\times\Fm)^n$ be the morphism whose
-$k$th component is $\langle\pi_E,\pi_k\pi_{\Fm^n}\rangle$.
-Put
+For $n=1,2$, write
+$u_n:E\times\Fm^n\to E$ and
+$v_n:E\times\Fm^n\to\Fm^n$ for the product projections,
+and $\pi_{n,k}:\Fm^n\to\Fm$ for the $k$th projection,
+where $1\le k\le n$.
+Define $d_n:E\times\Fm^n\to F_E^n$ by its components
+$\langle u_n,\pi_{n,k}v_n\rangle:E\times\Fm^n\to F_E$,
+and put
 \[
  p^E_n=d_n(1_E\times p_n):R_n^E\to F_E^n,\qquad
  q^E_n=1_E\times q_n:R_n^E\to F_E.
 \]
-Every premise and the conclusion of a rule thus have the same
-$E$-coordinate. These rules define the inference endofunctor
+Every premise and the conclusion of a rule have the same
+$E$-coordinate. These morphisms define the inference endofunctor
 \[
  H_E:\mathcal B/F_E\longrightarrow\mathcal B/F_E
 \]
 of Appendix~\ref{app:closed-subobjects}.
-Lemma~\ref{lem:syntactic-derivation-initiality}
-gives its initial algebra with conclusion morphism
+Lemma~\ref{lem:syntactic-derivation-initiality} gives its
+initial algebra
 \[
- c^{\mathrm{all}}:P^{\mathrm{all}}\longrightarrow E\times\Fm.
+ \mathfrak P=((P^{\mathrm{all}},c^{\mathrm{all}}),\alpha),
+ \qquad c^{\mathrm{all}}:P^{\mathrm{all}}\to F_E,
 \]
-Let $c:P\to E\times S$ be its pullback along $1_E\times j$,
-and let $m:\mathcal T\hookrightarrow E\times S$ be the regular
-image of $c$. Theorem~\ref{thm:least-theorem-subobject} identifies
+where
+$\alpha:H_E(P^{\mathrm{all}},c^{\mathrm{all}})
+             \to(P^{\mathrm{all}},c^{\mathrm{all}})$
+is a morphism in $\mathcal B/F_E$.
+Let $c:P\to E\times S$ be the pullback of $c^{\mathrm{all}}$
+along $1_E\times j:E\times S\to F_E$, and let
+$m:\mathcal T\hookrightarrow E\times S$ be the regular image
+of $c$. Theorem~\ref{thm:least-theorem-subobject} identifies
 the image of $c^{\mathrm{all}}$ as the least subobject closed
 under the displayed rules. Stability of regular images identifies
-$\mathcal T$ with the pullback of that image along $1_E\times j$.
-The monomorphism $m$ has a partial inverse in $\Split(S_{\PA})$
-by Lemma~\ref{lem:syntactic-total-category}. Hence
-Lemma~\ref{lem:range-regular-image} identifies the partial identity
-on this image with $t=\ran(c):E\times S\rightharpoonup E\times S$.
+$m$ with the pullback of that image along $1_E\times j$.
+By Lemma~\ref{lem:syntactic-total-category}, $m$ has a partial
+inverse $r:E\times S\rightharpoonup\mathcal T$ in
+$\Split(S_{\PA})$. Thus $rm=1_{\mathcal T}$ and $mr=\bar r$;
+Lemma~\ref{lem:range-regular-image} gives
+\[
+ t=mr=\ran(c):E\times S\rightharpoonup E\times S
+ \quad\text{in }\Split(S_{\PA}).
+\]
 
-For $e\in\N$, let $\epsilon_e:1\to E$ be the numeral morphism
-in $\mathcal B$, and put
-$k_e^X=\langle\epsilon_e!,1_X\rangle:X\to E\times X$
-for $X\in\mathcal B$.
+For $e\in\N$, let $\epsilon_e:1\to E$ be the numeral
+morphism. For $X\in\mathcal B$, let $!_X:X\to1$ be the
+terminal morphism, and define
+\[
+ k_e^X=\langle\epsilon_e!_X,1_X\rangle:X\to E\times X.
+\]
 
 \begin{proposition}[Fibers of the derivation family]
 \label{prop:arithmetic-theory-fibers}
 For every $e\in\N$, the pullback of $c^{\mathrm{all}}$ along
-$k_e^{\Fm}$ is isomorphic, as a derivation algebra over $\Fm$,
-to the initial derivation algebra for $A_{\Gamma_e}$.
-There is an induced morphism $\iota_e:P_{\Gamma_e}\to P$,
-and the square
+$k_e^{\Fm}$ is the underlying conclusion morphism of an initial
+$H_{A_{\Gamma_e}}$-algebra in $\mathcal B/\Fm$.
+There is an induced morphism $\iota_e:P_{\Gamma_e}\to P$
+in $\mathcal B$, and the square
 \[
 \begin{tikzcd}
  P_{\Gamma_e}\arrow[r,"\iota_e"]
@@ -93,98 +145,184 @@ and the square
 \end{tikzcd}
 \]
 is a pullback in $\mathcal B$. Consequently
-$(k_e^S)^*\mathcal T$ is the sentence theory
-generated by $A_{\Gamma_e}$.
+$(k_e^S)^*m$ is the sentence theory generated by $A_{\Gamma_e}$.
 \end{proposition}
 \begin{proof}
-The numeral morphism $\epsilon_e$ has a complement: put
-$E_{\ne e}=(\omega,[x\ne\bar e]_{\PA})\in\mathcal B$,
-with its inclusion into $E$. The two carrier predicates $x=\bar e$
-and $x\ne\bar e$ give an isomorphism
-$E\cong1+E_{\ne e}$ in $\mathcal B$. Products and finite
-extensivity, supplied by
-Lemma~\ref{lem:syntactic-total-category}, therefore give
+Put $E_{\ne e}=(\omega,[x\ne\bar e]_{\PA})\in\mathcal B$,
+and let $u_e:E_{\ne e}\hookrightarrow E$ be its inclusion.
+The predicates $x=\bar e$ and $x\ne\bar e$ give the
+isomorphism $[\epsilon_e,u_e]:1+E_{\ne e}\to E$.
+For $X\in\mathcal B$, put
+$k_{\ne e}^X=u_e\times1_X:E_{\ne e}\times X\to E\times X$.
+Finite extensivity gives an equivalence
 \[
- E\times\Fm\cong\Fm+(E_{\ne e}\times\Fm),\qquad
- \Xi_e:\mathcal B/(E\times\Fm)
-   \xrightarrow{\simeq}\mathcal B/\Fm\times
-                 \mathcal B/(E_{\ne e}\times\Fm).
+ \Xi_e:\mathcal B/F_E\longrightarrow
+       \mathcal B/\Fm\times\mathcal B/(E_{\ne e}\times\Fm).
 \]
-The first component functor is pullback along $k_e^{\Fm}$.
+For an object $(Q,q)$ of $\mathcal B/F_E$, define
+\[
+ \Xi_e(Q,q)=((Q_e,q_e),(Q_{\ne e},q_{\ne e}))
+   =\bigl((k_e^{\Fm})^*(Q,q),(k_{\ne e}^{\Fm})^*(Q,q)\bigr).
+\]
+Thus $q_e:Q_e\to\Fm$ and
+$q_{\ne e}:Q_{\ne e}\to E_{\ne e}\times\Fm$ are pullbacks
+of $q$. For a slice morphism $f:(Q,q)\to(Q',q')$, represented
+by $f:Q\to Q'$ with $q'f=q$, put
+\[
+ \Xi_e(f)=(f_e,f_{\ne e}),\qquad
+ f_e:(Q_e,q_e)\to(Q'_e,q'_e),\quad
+ f_{\ne e}:(Q_{\ne e},q_{\ne e})\to(Q'_{\ne e},q'_{\ne e}),
+\]
+where each component is the induced pullback morphism in its
+respective slice category. Pullback uniqueness proves the
+identity and composition laws.
+A quasi-inverse
+\[
+ \Psi_e:\mathcal B/\Fm\times\mathcal B/(E_{\ne e}\times\Fm)
+                 \longrightarrow\mathcal B/F_E
+\]
+sends $(x:X\to\Fm,y:Y\to E_{\ne e}\times\Fm)$ to
+$[k_e^{\Fm}x,k_{\ne e}^{\Fm}y]:X+Y\to F_E$.
+For $f:(X,x)\to(X',x')$ in $\mathcal B/\Fm$ and
+$g:(Y,y)\to(Y',y')$ in $\mathcal B/(E_{\ne e}\times\Fm)$,
+its action on morphisms is represented by
+$f+g:X+Y\to X'+Y'$ in $\mathcal B$.
+The decomposition $Q\cong Q_e+Q_{\ne e}$ supplies the
+equivalence isomorphisms.
 
-For $n=0,1,2$, pull back $R_n^E\to E$, given by the parameter
-of its conclusion, along $E_{\ne e}\hookrightarrow E$.
-The premise and conclusion morphisms restrict to these rule
-objects because they preserve the parameter. They define an
-inference endofunctor
+Write $F_{\ne e}=E_{\ne e}\times\Fm$, and let
+$\pi_E:F_E\to E$ be the product projection. For $n=0,1,2$,
+put $\rho_n=\pi_Eq_n^E:R_n^E\to E$, and form the pullback
 \[
- H_{\ne e}:\mathcal B/(E_{\ne e}\times\Fm)
-       \longrightarrow\mathcal B/(E_{\ne e}\times\Fm).
+ R_n^{\ne e}=E_{\ne e}\times_E R_n^E,
+ \qquad s_n:R_n^{\ne e}\to R_n^E,
+ \qquad t_n:R_n^{\ne e}\to E_{\ne e},
+ \qquad \rho_ns_n=u_et_n.
 \]
+Since every premise has the parameter of the conclusion, there
+are unique morphisms
+\[
+ p_n^{\ne e}:R_n^{\ne e}\to F_{\ne e}^n,
+ \qquad q_n^{\ne e}:R_n^{\ne e}\to F_{\ne e}
+\]
+satisfying
+\[
+ (k_{\ne e}^{\Fm})^n p_n^{\ne e}=p_n^Es_n,
+ \qquad k_{\ne e}^{\Fm}q_n^{\ne e}=q_n^Es_n.
+\]
+These are the premise and conclusion morphisms for an inference
+endofunctor
+$H_{\ne e}:\mathcal B/F_{\ne e}\to\mathcal B/F_{\ne e}$.
+Write $H_e=H_{A_{\Gamma_e}}:\mathcal B/\Fm\to\mathcal B/\Fm$
+for the inference endofunctor of the chosen axiom subobject.
 There is a natural isomorphism
 \[
- \Xi_e H_E\cong
-      (H_{A_{\Gamma_e}}\times H_{\ne e})\Xi_e.
+ \zeta:\Xi_eH_E\xRightarrow{\cong}
+                 (H_e\times H_{\ne e})\Xi_e.
 \]
-To verify it, let $q:Q\to E\times\Fm$ be a slice object,
-and write $q_e:Q_e\to\Fm$ and
-$q_{\ne e}:Q_{\ne e}\to E_{\ne e}\times\Fm$ for its two
-inverse images. Finite extensivity gives
-$Q\cong Q_e+Q_{\ne e}$. For nullary rules,
-$B_0(Q,q)\cong R^E_0$, so its two inverse images are those
-of $q^E_0$. For $n=1,2$, the equation
-$p_n^E=d_n(1_E\times p_n)$ makes the parameter of every
-premise equal to that of the rule. Pullback pasting gives a
-canonical isomorphism from the inverse image of $B_n(Q,q)$
-over $\Fm$ to the pullback defining $B_n(Q_e,q_e)$ for
-$A_{\Gamma_e}$.
-Its inverse image over $E_{\ne e}\times\Fm$ is canonically
-isomorphic to the pullback defining $B_n(Q_{\ne e},q_{\ne e})$ for
-$H_{\ne e}$.
-These identifications commute with slice morphisms by the
-uniqueness of the pullback maps. On the first component,
-the nonlogical axiom predicate is
-$\operatorname{Ax}(\bar e,z)$, so its rule system is precisely
-the one defining $H_{A_{\Gamma_e}}$.
-
-The equivalence $\Xi_e$ and this natural isomorphism induce
-an equivalence
+Its component at $(Q,q)$ has two slice-morphism components
 \[
- \operatorname{Alg}(H_E)\simeq
- \operatorname{Alg}(H_{A_{\Gamma_e}})\times
- \operatorname{Alg}(H_{\ne e}).
+ \begin{aligned}
+ \zeta^0_{(Q,q)}&:(k_e^{\Fm})^*H_E(Q,q)\xrightarrow{\cong}
+                                      H_e(Q_e,q_e),\\
+ \zeta^1_{(Q,q)}&:(k_{\ne e}^{\Fm})^*H_E(Q,q)\xrightarrow{\cong}
+                                      H_{\ne e}(Q_{\ne e},q_{\ne e}).
+ \end{aligned}
 \]
-Let $(P_e,P_{\ne e})$ be the image of the initial
-$H_E$-algebra. For any $H_{A_{\Gamma_e}}$-algebra $Q$, initiality
-provides a morphism to $(Q,P_{\ne e})$, and hence a morphism
-$P_e\to Q$. Any two such morphisms, paired with
-$1_{P_{\ne e}}$, would give two morphisms from the initial
-$H_E$-algebra. They are equal. Thus $P_e$ is initial and is
-isomorphic to the initial derivation algebra for
-$A_{\Gamma_e}$ from
-Theorem~\ref{thm:syntactic-generated-theory}.
+The first belongs to $\mathcal B/\Fm$ and the second to
+$\mathcal B/F_{\ne e}$.
+For the nullary summand of $H_E(Q,q)$, the two pullbacks of
+$R_0^E$ are the corresponding axiom objects. In the first,
+the nonlogical axiom predicate is $\operatorname{Ax}(\bar e,z)$.
+For $n=1,2$, the equation $p_n^E=d_n(1_E\times p_n)$ makes
+the parameter of every premise equal to that of the rule.
+Pullback pasting therefore gives the displayed isomorphisms on
+each summand of arity $n$. Taking their coproducts defines
+$\zeta^0_{(Q,q)}$ and $\zeta^1_{(Q,q)}$.
+For $f:(Q,q)\to(Q',q')$ in $\mathcal B/F_E$, uniqueness
+of the pullback morphisms gives the naturality equation
+\[
+ (H_e\times H_{\ne e})(\Xi_e f)\,\zeta_{(Q,q)}
+   =\zeta_{(Q',q')}\,\Xi_e(H_Ef).
+\]
+Both sides are morphisms from $\Xi_eH_E(Q,q)$ to
+$(H_e\times H_{\ne e})\Xi_e(Q',q')$ in the product of
+the two slice categories.
 
-Restricting conclusions to sentences gives the displayed
-pullback square. Regular images are stable under pullback in
-$\mathcal B$, so the pullback of $\mathcal T$ is the image of
-$c_{\Gamma_e}$. Appendix~\ref{app:first-order-derivations}
-identifies that image with the generated sentence theory.
+The equivalence $\Xi_e$ and the natural isomorphism $\zeta$
+induce an equivalence
+\[
+ \Lambda_e:\operatorname{Alg}(H_E)\longrightarrow
+             \operatorname{Alg}(H_e)\times
+             \operatorname{Alg}(H_{\ne e}).
+\]
+Explicitly, an algebra $((Q,q),\delta)$, where
+$\delta:H_E(Q,q)\to(Q,q)$ in $\mathcal B/F_E$, is sent
+to the pair of algebras whose structure morphisms are the
+components of
+\[
+ \Xi_e(\delta)\,\zeta_{(Q,q)}^{-1}:
+ (H_e\times H_{\ne e})\Xi_e(Q,q)\longrightarrow\Xi_e(Q,q).
+\]
+For an algebra morphism
+$a:((Q,q),\delta)\to((Q',q'),\delta')$ in
+$\operatorname{Alg}(H_E)$, let
+$f:(Q,q)\to(Q',q')$ be its underlying slice morphism.
+Then $\Lambda_e(a)$ has underlying slice morphisms
+$(f_e,f_{\ne e})$. Naturality of $\zeta$ identifies the
+algebra-morphism equations in the two categories. Full faithfulness
+of $\Xi_e$ therefore gives full faithfulness of $\Lambda_e$.
+Transporting a pair of structure morphisms through $\Psi_e$
+gives essential surjectivity.
+
+Let $(\mathfrak P_e,\mathfrak P_{\ne e})=\Lambda_e(\mathfrak P)$.
+This pair is initial in
+$\operatorname{Alg}(H_e)\times\operatorname{Alg}(H_{\ne e})$.
+For any $\mathfrak Q\in\operatorname{Alg}(H_e)$, there is
+therefore a unique morphism
+\[
+ (\mathfrak P_e,\mathfrak P_{\ne e})\longrightarrow
+ (\mathfrak Q,\mathfrak P_{\ne e})
+\]
+in that product category. Its first component is an
+$H_e$-algebra morphism $\mathfrak P_e\to\mathfrak Q$.
+Pairing any two such algebra morphisms with
+$1_{\mathfrak P_{\ne e}}$ proves their equality. Hence
+$\mathfrak P_e$ is initial and is therefore isomorphic in
+$\operatorname{Alg}(H_e)$ to the initial derivation algebra for
+$A_{\Gamma_e}$ from Theorem~\ref{thm:syntactic-generated-theory}.
+The underlying slice object of $\mathfrak P_e$ is
+$(k_e^{\Fm})^*(P^{\mathrm{all}},c^{\mathrm{all}})$.
+
+Pulling back the conclusion morphisms along $j:S\hookrightarrow\Fm$
+gives the displayed square. Regular-image stability shows that
+$(k_e^S)^*m$ is the image of $c_{\Gamma_e}$.
+Appendix~\ref{app:first-order-derivations} identifies that image
+with the generated sentence theory.
 \end{proof}
 
-Under the predicate presentation of
-Lemma~\ref{lem:syntactic-total-category}, choose a predicate
-$P_0(d)$ representing $P$ and an index $a_c$ representing $c$.
-Since $c$ is total on $P$, these satisfy
+Choose a $\Sigma_1$ predicate $P_0(d)$ and a presentation
+isomorphism $u:J(P_0)\xrightarrow{\cong}P$ in $\mathcal B$.
+By fullness of $J$, there is a morphism
+$\gamma_c:P_0\to D$ in $\mathcal P_{\PA}$ satisfying
+\[
+ J(\gamma_c)=v^{-1}cu:J(P_0)\longrightarrow J(D).
+\]
+Choose a standard program index $a_c\in\N$ whose graph
+$G_{a_c}(d,w)$ represents $\gamma_c$, as in
+Lemma~\ref{lem:syntactic-functional-search}. Its support and
+totality give
 \[
  \PA\vdash\forall d\,
-      \bigl(\exists w\,G_{a_c}(d,w)\leftrightarrow P_0(d)\bigr).
+     \bigl(\exists w\,G_{a_c}(d,w)\leftrightarrow P_0(d)\bigr).
 \]
-Write
+Define
 \[
  \operatorname{Prov}(e,z)
        \equiv\exists d\,G_{a_c}(d,\langle e,z\rangle).
 \]
-This is a $\Sigma_1$ predicate for $\mathcal T$.
+The specified product isomorphism $v$ makes this a $\Sigma_1$
+predicate for $m:\mathcal T\hookrightarrow E\times S$.
 For each $e\in\N$,
 Proposition~\ref{prop:arithmetic-theory-fibers} identifies the
 represented subobjects of $S$, giving
@@ -196,56 +334,81 @@ represented subobjects of $S$, giving
 
 \begin{theorem}[Uniform independent sentences]
 \label{thm:uniform-independent-sentences}
-For the family $\Gamma_e$ above, there is a total morphism
-$q:E\to S$ in $\mathcal B$ such that, for every $e\in\N$
-for which $\Gamma_e$ is consistent, the sentence with code
-$(G_{\N}q)(e)$ is neither provable nor refutable from $\Gamma_e$.
+For the family $\Gamma_e$ above, there is a morphism
+$q:E\to S$ in $\mathcal B=\Tot(\Split(S_{\PA}))$ such that,
+for every $e\in\N$ for which $\Gamma_e$ is consistent, the
+sentence with code $(G_{\N}q)(e)$ is neither provable nor
+refutable from $\Gamma_e$.
 \end{theorem}
 \begin{proof}
-Use the numeral-substitution morphism $\theta:E\to S$ of
-Lemma~\ref{lem:arithmetic-diagonal-representation} and its
-numerical function $\Theta$. Put
+Use the morphism $\theta:E\to S$ of
+Lemma~\ref{lem:arithmetic-diagonal-representation} and the
+function $\Theta:\N\to\N$ defined in
+Section~\ref{subsec:arithmetic-internal-comparison}.
+Define the arithmetic formulas
 \[
- C(e,x)=\operatorname{Prov}(e,\Theta(x)),\qquad
- C'(e,x)=\operatorname{Prov}(e,\operatorname{Neg}(\Theta(x))).
+ C(e,x)\equiv\operatorname{Prov}(e,\Theta(x)),\qquad
+ C'(e,x)\equiv\operatorname{Prov}(e,\operatorname{Neg}(\Theta(x))),
 \]
-Apply Lemma~\ref{lem:syntactic-functional-search} to the
-$\Sigma_1$ relation
+and
 \[
  R(e,x,z)\equiv
-   (C(e,x)\land z=2x+1)\lor(C'(e,x)\land z=2x),
+   (C(e,x)\land z=2x+1)\lor(C'(e,x)\land z=2x).
 \]
-using $\langle e,x\rangle$ as its input code. It gives a
-morphism $\ell:\omega\times\omega\rightharpoonup\omega+\omega$
-in $S_{\PA}$ whose graph implies $R$ and whose domain predicate
-is $C\lor C'$, with both assertions provable in PA.
-On each interpretation in which $C(e,-)$ and $C'(e,-)$ are
-disjoint, the graph at parameter $e$ is exactly $R(e,-,-)$,
-by the argument of Lemma~\ref{lem:arithmetic-proof-search}.
+Lemma~\ref{lem:syntactic-functional-search}, with input
+$\langle e,x\rangle$, gives a standard index
+$a_\ell\in\mathcal I(\omega\times\omega,\omega+\omega)$
+such that
+\[
+ \begin{aligned}
+ \PA&\vdash\forall e\,\forall x\,\forall z\,
+   \bigl(G_{a_\ell}(\langle e,x\rangle,z)\to R(e,x,z)\bigr),\\
+ \PA&\vdash\forall e\,\forall x\,
+   \bigl(\exists z\,G_{a_\ell}(\langle e,x\rangle,z)
+                     \leftrightarrow C(e,x)\lor C'(e,x)\bigr).
+ \end{aligned}
+\]
+Put $\ell=[a_\ell]_{\PA}:\omega\times\omega\rightharpoonup
+\omega+\omega$ in $S_{\PA}$.
 
+Recall the Turing morphism
+$\tau_{\PA}:\omega\times\omega\rightharpoonup\omega$,
+the isomorphism $b:\omega\to\omega+\omega$, and
+$h=b\tau_{\PA}\Delta_\omega:\omega\rightharpoonup\omega+\omega$
+in $S_{\PA}$ from Section~\ref{subsec:arithmetic-internal-comparison}.
 The parameterized Turing property gives a total morphism
 $g:\omega\to\omega$ in $S_{\PA}$ satisfying
 \[
- \tau_{\PA}(g\times1_\omega)=b^{-1}\ell.
+ \tau_{\PA}(g\times1_\omega)=b^{-1}\ell:
+                    \omega\times\omega\rightharpoonup\omega.
 \]
-Precomposing with $\langle1_\omega,g\rangle$ and using
-$(g\times1_\omega)\langle1_\omega,g\rangle
- =\langle g,g\rangle=\Delta_\omega g$ gives
+Precomposing with $\langle1_\omega,g\rangle:\omega\to\omega\times\omega$
+and using $(g\times1_\omega)\langle1_\omega,g\rangle
+=\langle g,g\rangle=\Delta_\omega g$ gives
 \[
- hg=\ell\langle1_\omega,g\rangle.
+ hg=\ell\langle1_\omega,g\rangle:
+                  \omega\rightharpoonup\omega+\omega.
 \]
-Set $q=\theta I(g):E\to S$, which is total.
+The morphism $I(g):E\to E$ is total, so
+$q=\theta I(g):E\to S$ belongs to $\mathcal B$.
 
 Fix $e\in\N$ with $\Gamma_e$ consistent, and put
-$n=F_{\N}(g)(e)$. Choose $K\models\Gamma_e$ by completeness.
+$n=F_{\N}(g)(e)\in\N$. Choose a first-order structure
+$K\models\Gamma_e$ by completeness.
 Proposition~\ref{prop:standard-code-soundness} and
 Proposition~\ref{prop:arithmetic-theory-fibers} show that
-$C(e,-)$ and $C'(e,-)$ have disjoint truth sets in $\N$.
-If $C(e,n)$ holds, the interpreted graph of $\ell$ sends
-$(e,n)$ to the second copy of $n$. The preceding identity then
-puts $n$ in $D_1$. Lemma~\ref{lem:arithmetic-diagonal-representation}
-gives $C'(e,n)$, a contradiction. If $C'(e,n)$ holds, the same
-identity puts $n$ in $D_0$, and that lemma gives $C(e,n)$,
-again a contradiction. Therefore neither predicate holds.
-Since $(G_{\N}q)(e)=\Theta(n)$, this is the claimed independence.
+$C(e,x)$ and $C'(e,x)$ have disjoint truth sets in $\N$.
+The graph and domain equations above therefore determine the
+value of $F_{\N}(\ell):\N\times\N\rightharpoonup\N\amalg\N$
+at this parameter, as in Lemma~\ref{lem:arithmetic-proof-search}.
+If $\N\models C(e,n)$, this partial function sends $(e,n)$
+to the second copy of $n$. The identity for $hg$ then puts
+$n$ in $D_1\subseteq\N$.
+Lemma~\ref{lem:arithmetic-diagonal-representation} gives
+$\N\models C'(e,n)$, a contradiction.
+If $\N\models C'(e,n)$, the same identity puts $n$ in
+$D_0\subseteq\N$, and that lemma gives
+$\N\models C(e,n)$, again a contradiction.
+Thus neither predicate holds. Since $(G_{\N}q)(e)=\Theta(n)$,
+the sentence with this code is independent of $\Gamma_e$.
 \end{proof}

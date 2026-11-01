@@ -6,8 +6,8 @@
 Fix the arithmetic signature and its realization in
 $\mathcal B_{\PA}=\Tot(\Split(S_{\PA}))$ from
 Theorem~\ref{thm:syntactic-generated-theory}.
-Let $S\in\mathcal B_{\PA}$ be the sentence object, represented
-by the predicate $\operatorname{Sent}(z)$, and let
+Let $S=J_{\PA}(\operatorname{Sent})\in\mathcal B_{\PA}$ be
+the chosen sentence object, and let
 $\nu:S\to S$ be syntactic negation.
 We regard an object $X$ of $S_{\PA}$ as its identity splitting
 $(X,1_X)$ when it occurs in $\mathcal B_{\PA}$.
@@ -39,7 +39,7 @@ on the split sentence object its identity is
 $[\operatorname{Sent}]_{\PA}$.
 
 Under the standard interpretation, the set
-$G_{\N}P_\Gamma$ consists of the finite derivations from $\Gamma$
+$G_{\N}P_\Gamma$ consists of the codes of finite derivations from $\Gamma$
 whose conclusions are sentences. Consequently
 \[
  \mathsf{Th}_\Gamma
@@ -61,10 +61,13 @@ In numerical coordinates the graph of $b$ is $y=x$; its standard
 interpretation sends $2m$ to the first copy of $m$ and $2m+1$
 to the second. Put
 \[
- h=b\tau_{\PA}\Delta_\omega,\qquad
+ h=b\tau_{\PA}\Delta_\omega:\omega\rightharpoonup\omega+\omega,
+ \qquad
  a_0=h^*(1_\omega+0_\omega),\qquad
  a_1=h^*(0_\omega+1_\omega).
 \]
+Thus $a_0,a_1:\omega\rightharpoonup\omega$ are restriction
+idempotents in $S_{\PA}$.
 Choose an index $e_d$ representing
 $\tau_{\PA}\Delta_\omega$ and define
 \[
@@ -74,9 +77,12 @@ $\tau_{\PA}\Delta_\omega$ and define
 The partial identities $F_{\N}(a_0),F_{\N}(a_1)$ have domains
 $D_0=\{n:\N\models\alpha(n)\}$ and
 $D_1=\{n:\N\models\beta(n)\}$.
-Write $\Theta(n)=\ulcorner\alpha(\bar n)\urcorner$ for the
-sentence-code function, and let $\operatorname{Neg}$ be the
-primitive-recursive negation-code function. In arithmetic formulas,
+Let $\Theta:\N\to\N$ be the primitive-recursive function
+$\Theta(n)=\ulcorner\alpha(\bar n)\urcorner$, and choose a
+primitive-recursive extension $\operatorname{Neg}:\N\to\N$
+of negation on formula codes. The values of
+$\Theta$ belong to the sentence-code subset $G_{\N}S$.
+In arithmetic formulas,
 these functions abbreviate their PA-provably total graph definitions.
 
 \begin{lemma}[Representation of the diagonal domains]
@@ -145,7 +151,11 @@ for which
  C'(x)=\operatorname{Prov}_\Gamma(\operatorname{Neg}(\Theta(x)))
 \]
 have disjoint truth sets, the partial function
-$s_\Gamma=\chi_{\omega,\omega}^{-1}F_M(\ell_\Gamma)$ has
+\[
+ s_\Gamma=\chi_{\omega,\omega}^{-1}F_M(\ell_\Gamma):
+       F_M\omega\rightharpoonup F_M\omega+F_M\omega
+\]
+in $\Pfn$ satisfies
 \[
  s_\Gamma^*(1_{F_M\omega}+0_{F_M\omega})=[C'(M)],\qquad
  s_\Gamma^*(0_{F_M\omega}+1_{F_M\omega})=[C(M)].

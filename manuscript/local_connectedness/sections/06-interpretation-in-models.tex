@@ -201,17 +201,30 @@ The arithmetic model $\N$ interprets the code objects and their
 morphisms; the structure $K$ interprets the decoded arithmetic
 formulas.
 
+Let $j_{\Adm}:\Adm\hookrightarrow\Fm\times V\times\Tm$
+be the admissibility inclusion in $\mathcal B_{\PA}$.
+Composing $G_{\N}(j_{\Adm})$ with the canonical product
+comparison gives an injection of sets
+\[
+ a_{\N}:G_{\N}\Adm\hookrightarrow
+             G_{\N}\Fm\times\N\times G_{\N}\Tm.
+\]
+For a finite term $t$ and formula $\varphi$, their codes belong
+to $G_{\N}\Tm$ and $G_{\N}\Fm$, respectively.
+
 \begin{lemma}[Semantic substitution]\label{lem:semantic-substitution}
 Let $\sigma:\N\to |K|$ be an assignment of values to variables.
-Write $\sigma[x\mapsto a]$ for the assignment obtained by changing
-the value of $x$ to $a$. For finite terms $r,t$,
+For $x\in\N$ and $a\in|K|$, write
+$\sigma[x\mapsto a]:\N\to|K|$ for the assignment obtained
+by changing the value of $x$ to $a$. For finite terms $r,t$,
 \[
  \llbracket r[x:=t]\rrbracket^K_\sigma
  =\llbracket r\rrbracket^K_{
           \sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]}.
 \]
-If $(\varphi,x,t)$ belongs to the standard interpretation of
-$\Adm$, then
+For a finite formula $\varphi$, if
+$(\ulcorner\varphi\urcorner,x,\ulcorner t\urcorner)$ lies in
+the image of $a_{\N}$, then
 \begin{equation}\label{eq:semantic-substitution}
  K,\sigma\models\varphi[x:=t]
  \quad\Longleftrightarrow\quad
@@ -425,10 +438,16 @@ Lemma~\ref{lem:syntactic-total-category}, and set
 \[
  \eta_B=G_M(u_B)\,
        \eta_{J_{\PA}(C_B)}\,
-       \mathscr U(G_{\N}(u_B^{-1})).
+       \mathscr U(G_{\N}(u_B^{-1})):
+       \mathscr U(G_{\N}B)\longrightarrow G_MB.
 \]
 Fullness of $J_{\PA}$ and the naturality already proved imply
-naturality for every morphism of $\mathcal B_{\PA}$. They also
+naturality for every $f:B\to B'$ in $\mathcal B_{\PA}$:
+\[
+ G_M(f)\eta_B=\eta_{B'}\mathscr U(G_{\N}(f)):
+       \mathscr U(G_{\N}B)\longrightarrow G_MB'.
+\]
+They also
 show that changing $u_B$ does not change $\eta_B$: the transition
 isomorphism between two predicate presentations is a morphism in
 the image of $J_{\PA}$.
@@ -437,7 +456,9 @@ the image of $J_{\PA}$.
 \begin{theorem}[Soundness in the arithmetic ultrapower]
 \label{thm:ultrapower-soundness}
 Let $i_A:A\hookrightarrow S$ and $K$ satisfy the hypotheses of
-Proposition~\ref{prop:standard-code-soundness}. Let $I$ be nonempty,
+Proposition~\ref{prop:standard-code-soundness}, and let
+$\nu:S\to S$ be syntactic negation in $\mathcal B_{\PA}$.
+Let $I$ be nonempty,
 let $\mathcal U$ be a proper ultrafilter on $I$, and put
 $M=\N^I/\mathcal U$. Define
 \[
@@ -511,7 +532,7 @@ standard sentence code it agrees with satisfaction in $K$.
 
 Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
 in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.
-Each $p_i$ is a standard finite derivation with sentence conclusion,
+Each $p_i$ is the code of a standard finite derivation with sentence conclusion,
 and the definition of the factorization gives
 \[
  e_{K,\mathcal U}(p)=[e_K(p_i)].
