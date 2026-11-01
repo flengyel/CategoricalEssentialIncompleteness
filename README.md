@@ -1,28 +1,27 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 20](manuscript/logical_consequence_and_essential_incompleteness_v20.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 21](manuscript/logical_consequence_and_essential_incompleteness_v21.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v20_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v21_source.zip), 1 November 2026).
 
-Section 3 proves the comparison theorem for lifted partial conditionals and
-its source-inseparability consequence. Section 4 constructs interpreted theory
-ranges from the categorical syntax of Appendix A and applies the comparison
-theorem to disjoint theorem and refutation domains. The range/image comparison
-states the partial-inverse hypothesis needed to represent a regular image by
-a restriction idempotent.
+Section 3 proves the comparison theorem for lifted partial conditionals;
+Section 4 applies it to interpreted sentence theories. Section 5 realizes
+categorical syntax in the total restriction splitting of the syntactic category.
+Section 6 constructs soundness factorizations for the standard code interpretation
+and its ultrapowers, using a separate model of the represented axioms.
+Section 7 applies the comparison through partial proof search. Sections 8 and 9
+contain the Miller-sequence and three-point-cosheaf applications.
 
-Appendix A is the full categorical construction of syntax, substitution, and
-deductively closed theories. The cosheaf construction is Appendix B; the
-counterexample to dropping the lifting hypothesis is Appendix C.
-The applications remain in Sections 5–10. The introduction and abstract are
+Appendix A constructs categorical syntax, substitution, and deductively closed
+theories. Appendix B constructs the cosheaf category; Appendix C gives the
+lifting counterexample. Appendix D contains the faithful model family, ambient
+theory extension, and numeral observations. The introduction and abstract remain
 reserved for the final revision. The [source directory guide](manuscript/local_connectedness/README.md)
 lists the files and build command.
 
 The [theorem-and-proof plan](Plans/comparison_soundness_paper_plan_v2.pdf)
-gives the proposed organization of the remaining revisions. The
-[version 19 syntactic realization and reviews](Audit/2026-11-01-st-realization-v19/README.md)
-and [version 18 range comparison and literature review](Audit/2026-10-31-appendix-v18/README.md)
-record the preceding mathematical checks. The current manuscript has not
+and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
+record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
@@ -491,6 +490,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 

@@ -1,4 +1,4 @@
-\section{Interpretation in models}\label{sec:models}
+\section{Interpretation and soundness}\label{sec:models}
 
 In $\Pfn$, restriction products are Cartesian products and coproducts
 are tagged disjoint unions.
@@ -55,3 +55,463 @@ tagged-coproduct graph equations give the corresponding operations on
 partial functions.
 \end{proof}
 
+\subsection{Lifting complementary conditionals}
+
+\begin{lemma}\label{lem:switch}
+Let $c,c'$ be complementary restriction idempotents on $X$ in $S_T$.
+There is a total morphism $s:X\to X+X$ with
+\[
+ sc=i_1c,\qquad sc'=i_0c'.
+\]
+For every $M\models T$, the morphism $\chi_{X,X}^{-1}F_Ms$ is the
+unique section of $\nabla_{F_MX}(F_Mc'+F_Mc)$, where
+$\chi_{X,X}:F_MX+F_MX\to F_M(X+X)$ is the coproduct isomorphism.
+\end{lemma}
+\begin{proof}
+Choose $\Sigma_1$ representatives $C(x)=\exists u\,R(x,u)$ and
+$C'(x)=\exists v\,R'(x,v)$ with primitive-recursive witness tests.
+The theory $T$ proves universally their disjointness and coverage.
+For $j=0,1$, put $\iota_j(x)=2x+j$. The graph
+$z=\iota_j(x)$ represents the coproduct injection
+$i_j:X\to X+X$ on numerical codes.
+Search increasing finite bounds for a witness to either predicate,
+returning $\iota_1(x)$ on finding a $C$-witness and $\iota_0(x)$
+on finding a $C'$-witness. Fix a priority for simultaneous discoveries.
+Let $e_s$ be an index of this program. The finite-search verification
+in $\PA$ proves that the program halts
+exactly when $C(x)\lor C'(x)$. Under the disjointness assumption it also
+proves the exact graph equation
+\[
+ G_{e_s}(x,z)\leftrightarrow
+ (C(x)\land z=\iota_1(x))\lor(C'(x)\land z=\iota_0(x)).
+\]
+Thus $T$ proves this equation and universal halting. The equations for
+the restrictions follow, giving the total morphism $s=[e_s]_T$ of $S_T$.
+
+Interpret this proved graph identity in $M\models T$.
+Under the canonical coproduct identification, $F_M(s)$ sends
+$x$ to its second tagged copy when
+$M\models C(\gamma_X^M(x))$ and to its first tagged copy when
+$M\models C'(\gamma_X^M(x))$.
+These conditions partition $X_M$, so
+$\chi_{X,X}^{-1}F_M(s)$ is the partial inverse of
+$\nabla_{X_M}(F_M(c')+F_M(c))$. The latter partial function is injective
+on its domain and has range $X_M$, so its partial inverse is its
+unique section.
+\end{proof}
+
+\begin{corollary}\label{cor:model-pair}
+For every $M\models T$, the functor $F_M$ satisfies the hypotheses of
+Theorem~\ref{thm:local-lifting}. Thus, for a Turing morphism
+$\tau:\omega\times\omega\rightharpoonup\omega$ and an isomorphism
+$b:\omega\to\omega+\omega$ in $S_T$, the restriction idempotents
+\[
+ (b\tau\Delta_\omega)^*(1_\omega+0_\omega),\qquad
+ (b\tau\Delta_\omega)^*(0_\omega+1_\omega)
+\]
+are inseparable in $S_T$.
+\end{corollary}
+\begin{proof}
+In $\Pfn$, restriction idempotents split through their domains, and
+singleton partial identities are connected and detect partial functions.
+Partial monomorphisms are partial injections and have partial inverses;
+inverse images preserve unions. Thus $\Pfn$ satisfies the target
+hypotheses of Theorem~\ref{thm:local-lifting}.
+Proposition~\ref{prop:model} supplies the required preservation,
+Lemma~\ref{lem:switch} supplies the lifts, and
+$F_M(1_\omega)\ne0$ because $|M|$ is nonempty.
+\end{proof}
+
+
+\subsection{The total interpretation functor}
+
+For a model $M\models T$, split each interpreted restriction
+idempotent in $\Pfn$ by its domain inclusion. Restricting the resulting
+functor $\widehat F_M:\Split(S_T)\to\Pfn$ to total morphisms gives
+\[
+ G_M:\mathcal B_T\longrightarrow\mathbf{Set},
+ \qquad \mathcal B_T=\Tot(\Split(S_T)).
+\]
+Let $J_T:\mathcal P_T\to\mathcal B_T$ denote the equivalence
+constructed in Lemma~\ref{lem:syntactic-total-category}. Thus
+$J_T(C)=(\omega,[C]_T)$. With the indicated splittings,
+\[
+ G_MJ_T(C)=C(M):=\{a\in |M|:M\models C(a)\},
+\]
+and $G_MJ_T(\Gamma):C(M)\to D(M)$ is the function whose graph
+is the interpretation of $\Gamma$ in $M$.
+
+\begin{proposition}\label{prop:model-total-regular}
+For every $M\models T$, the functor $G_M$ preserves finite limits,
+finite coproducts, and regular images.
+\end{proposition}
+\begin{proof}
+It suffices to work along the equivalence $J_T$.
+The terminal predicate $x=0$ is interpreted as a singleton.
+The numerical pairing bijection identifies the interpretation of
+the product predicate with $C(M)\times D(M)$. For functional graphs
+$\Gamma,\Delta:C\to D$, the equalizer predicate
+\[
+ C(x)\land\exists y\,
+             \bigl(\Gamma(x,y)\land\Delta(x,y)\bigr)
+\]
+is interpreted as the equalizer of the two functions. Hence $G_M$
+preserves finite limits. The even and odd coding bijections identify
+the interpreted coproduct predicate with the tagged disjoint union;
+the false predicate is interpreted as the empty set. Finally,
+the regular image of $\Gamma:C\to D$ has predicate
+$\exists x\,\Gamma(x,y)$. Its interpretation is exactly the image
+of the interpreted function, since the quantified variable ranges
+over all of $|M|$.
+\end{proof}
+
+\subsection{Soundness on standard codes}
+
+Fix the arithmetic signature and the variable object
+$V=(\omega,1_\omega)\in\mathcal B_{\PA}$, so that
+$G_{\N}V=\N$. Use the syntax and derivation objects
+constructed in Section~\ref{sec:st-parameterized-syntax}. Let
+$S\hookrightarrow\Fm$ be the sentence object. Let $\Gamma$ be
+a computably enumerable set of arithmetic sentences, choose a
+$\Sigma_1$ predicate $\operatorname{Ax}_\Gamma(z)$ enumerating
+their codes, and let
+\[
+ i_A:A=A_\Gamma\hookrightarrow S
+\]
+be the subobject with carrier predicate
+$\operatorname{Sent}(z)\land\operatorname{Ax}_\Gamma(z)$. Write
+\[
+ c_A:P_A\longrightarrow\Fm,\qquad
+ c_{A,S}:P_{A,S}\longrightarrow S
+\]
+for the full conclusion morphism and its pullback to sentences.
+The standard interpretation of $i_A$ is the inclusion of the
+codes of the sentences in $\Gamma$.
+
+For $s\in G_{\N}S$, let $\varphi_s$ be the finite sentence with
+code $s$. Let $K\models\Gamma$ be a nonempty first-order
+structure for the arithmetic signature, with equality interpreted
+as identity. Define a subobject in $\mathbf{Set}$ by
+\[
+ v_K:V_K\hookrightarrow G_{\N}S,
+ \qquad
+ V_K=\{s\in G_{\N}S:K\models\varphi_s\}.
+\]
+The arithmetic model $\N$ interprets the code objects and their
+morphisms; the structure $K$ interprets the decoded arithmetic
+formulas.
+
+\begin{lemma}[Semantic substitution]\label{lem:semantic-substitution}
+Let $\sigma:\N\to |K|$ be an assignment of values to variables.
+Write $\sigma[x\mapsto a]$ for the assignment obtained by changing
+the value of $x$ to $a$. For finite terms $r,t$,
+\[
+ \llbracket r[x:=t]\rrbracket^K_\sigma
+ =\llbracket r\rrbracket^K_{
+          \sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]}.
+\]
+If $(\varphi,x,t)$ belongs to the standard interpretation of
+$\Adm$, then
+\begin{equation}\label{eq:semantic-substitution}
+ K,\sigma\models\varphi[x:=t]
+ \quad\Longleftrightarrow\quad
+ K,\sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]
+             \models\varphi.
+\end{equation}
+Here the expressions and substitutions are the finite expressions
+decoded from the realized syntax objects.
+\end{lemma}
+\begin{proof}
+First, term values and formula truth depend only on the values
+assigned to their free variables. For a variable this is the
+definition of its value. The induction steps for function and
+relation symbols, equality, negation, and implication follow from
+their semantic clauses. For $\forall y\,\psi$, assignments agreeing
+on its free variables yield, after changing $y$ to the same
+$b\in|K|$, assignments agreeing on the free variables of $\psi$.
+The induction hypothesis for $\psi$ therefore proves the assertion
+for the quantified formula. The free-variable lists realized in
+Proposition~\ref{prop:st-substitution-realization} have precisely
+these constructor equations.
+
+Induction on $r$ proves the term identity. At a variable it is the
+two-case definition of substitution; at a function application it
+follows by applying the interpretation of the function symbol to
+the child identities. The atomic cases of
+\eqref{eq:semantic-substitution} follow from this term identity.
+Negation and implication follow from their truth clauses and the
+induction hypotheses.
+
+Consider $\varphi=\forall y\,\psi$ and put
+$a=\llbracket t\rrbracket^K_\sigma$. If $y=x$, substitution leaves
+$\varphi$ unchanged. The values of
+$\sigma[x\mapsto b]$ and
+$\sigma[x\mapsto a][x\mapsto b]$ agree for every $b$, proving
+the required equivalence. Suppose $y\ne x$. If $x$ is not free
+in $\psi$, substitution leaves $\psi$ unchanged, by
+Proposition~\ref{prop:st-substitution-realization}; the free-variable
+assertion just proved gives the equivalence. Otherwise admissibility
+requires that $y$ is not free in $t$ and that substitution into
+$\psi$ is admissible. For every $b\in|K|$, the free-variable
+assertion gives
+$\llbracket t\rrbracket^K_{\sigma[y\mapsto b]}=a$, and hence
+\[
+ \sigma[y\mapsto b][x\mapsto a]
+   =\sigma[x\mapsto a][y\mapsto b].
+\]
+Apply the induction hypothesis to $\psi$ at
+$\sigma[y\mapsto b]$ and then quantify over $b$. These are all
+the admissible cases in the quantified-constructor equation.
+\end{proof}
+
+\begin{proposition}[Soundness on standard codes]
+\label{prop:standard-code-soundness}
+Let $\Gamma$ be a computably enumerable set of arithmetic sentences,
+with axiom subobject $i_A:A\hookrightarrow S$ in
+$\mathcal B_{\PA}$, and let $K\models\Gamma$.
+There is a unique function
+\[
+ e_K:G_{\N}P_{A,S}\longrightarrow V_K
+ \quad\text{such that}\quad
+ v_Ke_K=G_{\N}c_{A,S}.
+\]
+If $\nu:S\to S$ is sentence negation, then the subobjects
+$v_K$ and $(G_{\N}\nu)^*v_K$ of $G_{\N}S$ have empty
+intersection.
+\end{proposition}
+\begin{proof}
+Call a finite formula valid in $K$ if it holds under every
+assignment $\N\to|K|$. We check validity for the seven logical
+axiom schemes of Appendix~\ref{app:first-order-derivations}.
+The first three are the displayed classical propositional
+tautologies: the first retains its antecedent under a further
+implication, the second composes two implications with the same
+antecedent, and the third expresses contraposition. Their truth
+follows in each assignment from the two-valued clauses for
+negation and implication.
+
+For universal instantiation, if $\forall x\,\varphi$ holds at
+$\sigma$, then $\varphi$ holds at
+$\sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]$.
+Lemma~\ref{lem:semantic-substitution} gives
+$\varphi[x:=t]$ at $\sigma$, since its parameter object imposes
+admissibility. For universal distribution, suppose
+$\forall x(\varphi\Rightarrow\psi)$ and $\varphi$ hold at
+$\sigma$. The side condition says that $x$ is not free in
+$\varphi$. Thus $\varphi$ holds at $\sigma[x\mapsto b]$ for
+every $b\in|K|$, and the universally quantified implication gives
+$\psi$ there. This proves $\forall x\,\psi$ at $\sigma$.
+Reflexivity holds because the two occurrences of a term have the
+same value. Finally, if $u=t$ holds at $\sigma$, the assignments
+obtained by assigning $x$ the values of $u$ and $t$ are equal.
+Applying Lemma~\ref{lem:semantic-substitution} to both admissible
+substitutions proves the equality-substitution axiom.
+
+Every nonlogical axiom is a sentence satisfied by $K$, and hence
+is valid under every assignment. Modus ponens preserves validity
+by the truth clause for implication. Generalization preserves
+validity because validity of $\varphi$ includes its truth at
+$\sigma[x\mapsto b]$ for every assignment $\sigma$ and every
+$b\in|K|$.
+
+By Lemma~\ref{lem:syntactic-derivation-initiality}, each element
+of $G_{\N}P_A$ is the code of a finite derivation tree. Its
+parameter at each node satisfies the indicated rule predicate;
+the child conclusions are the premises of that rule. Induction
+on the tree, using the preceding checks, shows that its root
+formula is valid in $K$. Restriction to the pullback
+$G_{\N}P_{A,S}$ gives a sentence satisfied by $K$.
+Consequently $G_{\N}c_{A,S}$ takes values in $V_K$; its
+corestriction is $e_K$. The inclusion $v_K$ is monic, proving
+uniqueness.
+
+By Proposition~\ref{prop:st-substitution-realization} and the
+constructor realization, $G_{\N}\nu$ sends a sentence code to
+the code of its negation. A sentence and its negation cannot
+both hold in $K$. This proves the empty-intersection assertion.
+\end{proof}
+
+\subsection{Ultrapowers of the code interpretation}
+
+Work in the usual set-theoretic metatheory with choice. Fix a
+nonempty set $I$ and a proper ultrafilter $\mathcal U$ on $I$.
+For a set $X$, let
+\[
+ \mathscr U(X)=X^I/{\sim_{\mathcal U}},
+ \qquad
+ (x_i)\sim_{\mathcal U}(y_i)
+ \Longleftrightarrow\{i:x_i=y_i\}\in\mathcal U.
+\]
+Here $X^I$ is the set of functions from $I$ to $X$. For a
+function $f:X\to Y$, put
+$\mathscr U(f)[x_i]=[f(x_i)]$.
+
+\begin{lemma}\label{lem:ultrapower-regular}
+The functor $\mathscr U:\mathbf{Set}\to\mathbf{Set}$ preserves
+finite limits, finite coproducts, and regular images.
+\end{lemma}
+\begin{proof}
+The empty set and singleton are preserved. Coordinatewise pairing
+gives a bijection
+$\mathscr U(X\times Y)\cong\mathscr U(X)\times\mathscr U(Y)$.
+Let $E\hookrightarrow X$ be the equalizer of $f,g:X\to Y$.
+An element $[x_i]\in\mathscr U(X)$ equalizes
+$\mathscr U(f)$ and $\mathscr U(g)$ precisely when
+$J=\{i:x_i\in E\}$ belongs to $\mathcal U$. In that case
+$J$ is nonempty, so choose $e\in E$ and replace $x_i$ by $e$
+outside $J$. This gives a representative in $E^I$. Conversely,
+every representative in $E^I$ equalizes the two functions.
+The induced map from $\mathscr U(E)$ is injective by the
+definition of $\sim_{\mathcal U}$. Hence equalizers, and
+therefore finite limits, are preserved.
+
+For a family in $X\amalg Y$, exactly one of the sets of indices
+carrying the two tags belongs to $\mathcal U$. Retain that
+summand on this set and fill the other coordinates with one
+element of the same summand. The summand is nonempty because
+the retained set is nonempty. This proves surjectivity of
+\[
+ \mathscr U(X)\amalg\mathscr U(Y)
+       \longrightarrow\mathscr U(X\amalg Y).
+\]
+The two tags cannot agree on a member of $\mathcal U$, and
+equality within a tag is exactly $\sim_{\mathcal U}$. Thus this
+map is bijective. Finally, every surjection of sets has a section,
+so its image under $\mathscr U$ is surjective. Finite-limit
+preservation preserves monomorphisms; applying $\mathscr U$ to
+the surjection--inclusion factorization of a function therefore
+preserves its regular image.
+\end{proof}
+
+Let $M=\N^I/\mathcal U$ be the arithmetic ultrapower.
+\L o\'s's theorem~\cite[Theorem~3.1]{Keisler}
+gives $M\models\PA$.
+
+\begin{lemma}[Comparison with the arithmetic ultrapower]
+\label{lem:ultrapower-comparison}
+There is a natural isomorphism of functors
+\[
+ \eta:\mathscr U G_{\N}\xRightarrow{\ \cong\ }G_M:
+             \mathcal B_{\PA}\longrightarrow\mathbf{Set}.
+\]
+On a predicate object $J_{\PA}(C)$ it is the map
+\begin{equation}\label{eq:ultrapower-predicate-comparison}
+ \eta_{J_{\PA}(C)}:
+ \mathscr U(C(\N))\longrightarrow C(M),
+ \qquad [c_i]\longmapsto[c_i].
+\end{equation}
+\end{lemma}
+\begin{proof}
+By \L o\'s's theorem, the displayed map is well defined and
+injective. If $a=[a_i]\in C(M)$, then
+$J=\{i:\N\models C(a_i)\}$ belongs to $\mathcal U$.
+Choose $c\in C(\N)$ from one coordinate in $J$, and replace
+$a_i$ by $c$ outside $J$. The resulting family belongs to
+$C(\N)^I$ and represents $a$, proving surjectivity. If
+$C(\N)$ is empty, \L o\'s's theorem gives $C(M)=\varnothing$,
+so the same conclusion holds.
+
+For a morphism represented by a functional graph
+$\Gamma:C\to D$, let $d_i$ be its value at $c_i$ in $\N$.
+Then $\N\models\Gamma(c_i,d_i)$ for every $i$.
+\L o\'s's theorem and functionality in $M$ show that the value
+at $[c_i]$ in $M$ is $[d_i]$. Thus the displayed maps are
+natural on $\mathcal P_{\PA}$.
+
+To define the comparison on $\mathcal B_{\PA}$, for each
+object $B$ choose an isomorphism
+$u_B:J_{\PA}(C_B)\xrightarrow{\cong}B$, as supplied by
+Lemma~\ref{lem:syntactic-total-category}, and set
+\[
+ \eta_B=G_M(u_B)\,
+       \eta_{J_{\PA}(C_B)}\,
+       \mathscr U(G_{\N}(u_B^{-1})).
+\]
+Fullness of $J_{\PA}$ and the naturality already proved imply
+naturality for every morphism of $\mathcal B_{\PA}$. They also
+show that changing $u_B$ does not change $\eta_B$: the transition
+isomorphism between two predicate presentations is a morphism in
+the image of $J_{\PA}$.
+\end{proof}
+
+\begin{theorem}[Soundness in the arithmetic ultrapower]
+\label{thm:ultrapower-soundness}
+Let $i_A:A\hookrightarrow S$ and $K$ satisfy the hypotheses of
+Proposition~\ref{prop:standard-code-soundness}. Let $I$ be nonempty,
+let $\mathcal U$ be a proper ultrafilter on $I$, and put
+$M=\N^I/\mathcal U$. Define
+\[
+ \begin{aligned}
+ V_{K,\mathcal U}&=\mathscr U(V_K),\\
+ v_{K,\mathcal U}
+   &=\eta_S\mathscr U(v_K):V_{K,\mathcal U}\hookrightarrow G_MS,\\
+ e_{K,\mathcal U}
+   &=\mathscr U(e_K)\eta_{P_{A,S}}^{-1}:
+       G_MP_{A,S}\longrightarrow V_{K,\mathcal U}.
+ \end{aligned}
+\]
+Then
+\begin{equation}\label{eq:ultrapower-soundness-factorization}
+ v_{K,\mathcal U}e_{K,\mathcal U}=G_Mc_{A,S},
+\end{equation}
+and $v_{K,\mathcal U}$ has empty intersection with its inverse
+image along $G_M\nu$. Consequently the interpreted theorem
+subobject and its inverse image along $G_M\nu$ have empty
+intersection. Equivalently, for the restriction idempotent
+$t_A=\ran(c_{A,S})$ in $\Split(S_{\PA})$,
+\[
+ \widehat F_M(t_A)\,
+       (\widehat F_M\nu)^*\widehat F_M(t_A)=0.
+\]
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:ultrapower-regular} shows that
+$\mathscr U(v_K)$ is monic, so $v_{K,\mathcal U}$ is monic.
+Apply $\mathscr U$ to the factorization in
+Proposition~\ref{prop:standard-code-soundness}. Naturality of
+$\eta$ for $c_{A,S}$ gives
+\[
+ \begin{aligned}
+ v_{K,\mathcal U}e_{K,\mathcal U}
+ &=\eta_S\mathscr U(v_Ke_K)\eta_{P_{A,S}}^{-1}\\
+ &=\eta_S\mathscr U(G_{\N}c_{A,S})
+                          \eta_{P_{A,S}}^{-1}
+   =G_Mc_{A,S}.
+ \end{aligned}
+\]
+The intersection of $v_K$ with $(G_{\N}\nu)^*v_K$ is a
+finite limit with empty carrier. Its image under $\mathscr U$
+again has empty carrier. Naturality for $\nu$, together with
+the isomorphism $\eta_S$, identifies this limit with the
+intersection asserted for $v_{K,\mathcal U}$.
+
+The factorization places the regular image of $G_Mc_{A,S}$
+inside $v_{K,\mathcal U}$. Proposition~\ref{prop:model-total-regular}
+identifies this image with the interpreted theorem subobject;
+Proposition~\ref{prop:interpreted-theory} identifies its partial
+identity with $\widehat F_M(t_A)$. Taking inverse images along
+$G_M\nu$ and using the preceding disjointness proves both
+conclusions.
+\end{proof}
+
+For a sentence-code representative $s=[s_i]\in G_MS$, the
+subobject $v_{K,\mathcal U}$ has the description
+\[
+ s\in\im(v_{K,\mathcal U})
+ \quad\Longleftrightarrow\quad
+ \{i:K\models\varphi_{s_i}\}\in\mathcal U.
+\]
+Indeed, membership on a set in $\mathcal U$ permits replacing
+all other coordinates by one member of $V_K$, and the reverse
+implication follows from a representative in $V_K^I$.
+This description is independent of representatives because two
+representatives agree on a set in $\mathcal U$. On a constant
+standard sentence code it agrees with satisfaction in $K$.
+
+The comparison also describes the domain of
+\eqref{eq:ultrapower-soundness-factorization}. Represent
+$P_{A,S}$ by its $\Sigma_1$ carrier predicate. Every element of
+$G_MP_{A,S}$ is, by \L o\'s's theorem and replacement outside
+a set in $\mathcal U$, represented by a family of standard
+sentence derivations. Thus the factorization holds on the entire
+interpreted proof object, including its nonstandard proof codes.

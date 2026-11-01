@@ -1,5 +1,266 @@
 \section{Essential incompleteness of arithmetic}\label{sec:arithmetic}
 
+\subsection{Comparison in the fixed syntactic category}
+\label{subsec:arithmetic-internal-comparison}
+
+Fix the arithmetic signature and its realization in
+$\mathcal B_{\PA}=\Tot(\Split(S_{\PA}))$ from
+Theorem~\ref{thm:syntactic-generated-theory}.
+Let $S\in\mathcal B_{\PA}$ be the sentence object, represented
+by the predicate $\operatorname{Sent}(z)$, and let
+$\nu:S\to S$ be syntactic negation.
+We regard an object $X$ of $S_{\PA}$ as its identity splitting
+$(X,1_X)$ when it occurs in $\mathcal B_{\PA}$.
+
+Let $\Gamma$ be a computably enumerable set of arithmetic
+sentences. Choose a $\Sigma_1$ formula
+$\operatorname{Ax}_\Gamma(z)$ enumerating their codes.
+The predicate
+$\operatorname{Sent}(z)\land\operatorname{Ax}_\Gamma(z)$
+defines an axiom subobject $A_\Gamma\hookrightarrow S$ in
+$\mathcal B_{\PA}$. Write
+\[
+ P_\Gamma=P_{A_\Gamma,S},\qquad
+ c_\Gamma=c_{A_\Gamma,S}:P_\Gamma\to S,\qquad
+ t_\Gamma=\ran(c_\Gamma):S\rightharpoonup S.
+\]
+Thus $P_\Gamma$ is the sentence-conclusion pullback of the full
+derivation object. Choose its conclusion index $e_{\Gamma,S}$
+as in Theorem~\ref{thm:syntactic-generated-theory}, and put
+\[
+ \operatorname{Prov}_\Gamma(z)
+   \equiv\exists p\,G_{e_{\Gamma,S}}(p,z).
+\]
+This predicate is $\Sigma_1$ and implies
+$\operatorname{Sent}(z)$ in PA. The morphism on $\omega$
+representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$;
+on the split sentence object its identity is
+$[\operatorname{Sent}]_{\PA}$.
+
+Under the standard interpretation, the set
+$G_{\N}P_\Gamma$ consists of the finite derivations from $\Gamma$
+whose conclusions are sentences. Consequently
+\[
+ \mathsf{Th}_\Gamma
+   =\{s\in G_{\N}S:\N\models\operatorname{Prov}_\Gamma(s)\}
+\]
+is the set of sentence codes derivable from $\Gamma$.
+Its refutation set is
+$\mathsf{Ref}_\Gamma=(G_{\N}\nu)^{-1}(\mathsf{Th}_\Gamma)$.
+The partial identities on these sets are
+$\widehat F_{\N}(t_\Gamma)$ and
+$(\widehat F_{\N}\nu)^*\widehat F_{\N}(t_\Gamma)$,
+respectively.
+
+Use the Turing morphism
+$\tau_{\PA}=[u]_{\PA}:\omega\times\omega\rightharpoonup\omega$
+and the coproduct isomorphism
+$b:\omega\to\omega+\omega$ given by the even and odd codings.
+In numerical coordinates the graph of $b$ is $y=x$; its standard
+interpretation sends $2m$ to the first copy of $m$ and $2m+1$
+to the second. Put
+\[
+ h=b\tau_{\PA}\Delta_\omega,\qquad
+ a_0=h^*(1_\omega+0_\omega),\qquad
+ a_1=h^*(0_\omega+1_\omega).
+\]
+Choose an index $e_d$ representing
+$\tau_{\PA}\Delta_\omega$ and define
+\[
+ \alpha(x)\equiv\exists m\,G_{e_d}(x,2m),\qquad
+ \beta(x)\equiv\exists m\,G_{e_d}(x,2m+1).
+\]
+The partial identities $F_{\N}(a_0),F_{\N}(a_1)$ have domains
+$D_0=\{n:\N\models\alpha(n)\}$ and
+$D_1=\{n:\N\models\beta(n)\}$.
+Write $\Theta(n)=\ulcorner\alpha(\bar n)\urcorner$ for the
+sentence-code function, and let $\operatorname{Neg}$ be the
+primitive-recursive negation-code function. In arithmetic formulas,
+these functions abbreviate their PA-provably total graph definitions.
+
+\begin{lemma}[Representation of the diagonal domains]
+\label{lem:arithmetic-diagonal-representation}
+There is a total morphism
+$\theta:\omega\to S$ in $\mathcal B_{\PA}$ such that
+\[
+ (G_{\N}\theta)(n)=\ulcorner\alpha(\bar n)\urcorner.
+\]
+Suppose that every axiom of PA is derivable from the c.e.\
+sentence set $\Gamma$. For every $M\equiv\N$, the following
+inequalities hold in $\Pfn$:
+\begin{align*}
+ F_M(a_0)&\le
+   (\widehat F_M\theta)^*\widehat F_M(t_\Gamma),\\
+ F_M(a_1)&\le
+   (\widehat F_M\theta)^*(\widehat F_M\nu)^*
+                   \widehat F_M(t_\Gamma).
+\end{align*}
+\end{lemma}
+\begin{proof}
+Numeral construction and substitution in the fixed formula
+$\alpha(x)$ compute $\Theta$ primitive-recursively.
+PA proves that the numeral is a closed term, so it is admissible
+for substitution, and that the resulting formula is a sentence.
+The substitution realization of
+Proposition~\ref{prop:st-substitution-realization} therefore gives
+the stated total morphism $\theta$.
+
+PA-provable functionality of $G$ and disjointness of even and odd
+numbers give
+\[
+ \PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x)).
+\]
+If $n\in D_0$, a finite computation trace ending in an even
+output can be verified by a finite PA-proof. Introducing its
+existential witnesses gives $\PA\vdash\alpha(\bar n)$.
+If $n\in D_1$, the same argument gives a PA-proof of
+$\beta(\bar n)$; the displayed disjointness theorem then gives
+a PA-proof of $\neg\alpha(\bar n)$.
+The hypothesis on $\Gamma$ makes both proofs available from
+$\Gamma$, since each uses only finitely many PA-axioms.
+By the description of $\operatorname{Prov}_\Gamma$, the
+universal closures of
+\[
+ \alpha(x)\longrightarrow\operatorname{Prov}_\Gamma(\Theta(x)),
+ \qquad
+ \beta(x)\longrightarrow
+       \operatorname{Prov}_\Gamma(\operatorname{Neg}(\Theta(x)))
+\]
+are true in $\N$.
+These two sentences hold in every $M\equiv\N$.
+Interpreting their predicates gives exactly the two claimed
+inequalities, because $\widehat F_M$ preserves the range of
+$c_\Gamma$ and the indicated inverse images.
+\end{proof}
+
+\begin{lemma}[A partial proof-search lift]
+\label{lem:arithmetic-proof-search}
+For every c.e.\ sentence set $\Gamma$, there is a morphism
+$\ell_\Gamma:\omega\rightharpoonup\omega+\omega$ in
+$S_{\PA}$ with the following property. In any $M\models\PA$
+for which
+\[
+ C(x)=\operatorname{Prov}_\Gamma(\Theta(x)),\qquad
+ C'(x)=\operatorname{Prov}_\Gamma(\operatorname{Neg}(\Theta(x)))
+\]
+have disjoint truth sets, the partial function
+$s_\Gamma=\chi_{\omega,\omega}^{-1}F_M(\ell_\Gamma)$ has
+\[
+ s_\Gamma^*(1_{F_M\omega}+0_{F_M\omega})=[C'(M)],\qquad
+ s_\Gamma^*(0_{F_M\omega}+1_{F_M\omega})=[C(M)].
+\]
+Here $[C(M)]$ denotes the partial identity on
+$\{x\in M:M\models C(x)\}$, and $[C'(M)]$ is defined in the
+same way.
+\end{lemma}
+\begin{proof}
+The formula
+\[
+ R(x,z)\equiv
+   (C(x)\land z=2x+1)\lor(C'(x)\land z=2x)
+\]
+is $\Sigma_1$. Lemma~\ref{lem:syntactic-functional-search}
+gives an index $a_R$ for which PA proves
+\[
+ G_{a_R}(x,z)\longrightarrow R(x,z),\qquad
+ \exists z\,G_{a_R}(x,z)\longleftrightarrow C(x)\lor C'(x).
+\]
+Set $\ell_\Gamma=[a_R]_{\PA}$, with the displayed source and
+target. The search tests the two proof predicates by increasing
+finite bounds and fixes a priority if both first succeed at the
+same stage.
+
+In a model where $C,C'$ are disjoint, $R$ is functional. If
+$M\models R(x,z)$, the second displayed equivalence supplies
+an output $z'$ of the interpreted program. The first implication
+gives $M\models R(x,z')$, so $z'=z$. Thus the interpreted graph
+is precisely $R$. Decoding the even and odd outputs gives the
+two inverse-image equations.
+\end{proof}
+
+\begin{theorem}[Incompleteness of an internal arithmetic theory]
+\label{thm:arithmetic-internal-comparison}
+Let $\Gamma$ be a consistent c.e.\ set of arithmetic sentences
+from which every PA-axiom is derivable. Its sentence theory
+$t_\Gamma$ in $\Split(S_{\PA})$ is incomplete.
+Its interpretations under $\widehat F_{\N}$ and under every
+$\widehat F_M$, where $M=\N^I/\mathcal U$ for a proper ultrafilter
+$\mathcal U$ on a nonempty set $I$, are incomplete.
+For the standard interpretation, there is a total source morphism
+$g:\omega\to\omega$ such that, writing
+$\gamma=F_{\N}(g):\N\to\N$, every sentence
+$\alpha(\overline{\gamma(n)})$ is undecidable from $\Gamma$.
+\end{theorem}
+\begin{proof}
+By first-order completeness there is a model $K\models\Gamma$.
+Proposition~\ref{prop:standard-code-soundness} supplies the
+soundness factorization for $c_\Gamma$ under $G_{\N}$.
+Its validity subobject is disjoint from its negated inverse
+image, so Proposition~\ref{prop:interpreted-theory} gives
+\[
+ \widehat F_{\N}(t_\Gamma)
+    (\widehat F_{\N}\nu)^*\widehat F_{\N}(t_\Gamma)=0.
+\]
+For an ultrapower $M=\N^I/\mathcal U$, the same conclusion
+follows from Theorem~\ref{thm:ultrapower-soundness}.
+
+Apply Theorem~\ref{thm:logical-comparison} with
+$\mathscr R=S_{\PA}$, $\mathcal A=\Pfn$ and $F=F_M$.
+The target is split, its total inverse images preserve binary
+joins, and $F_M(1_\omega)\ne0$ because $M$ is nonempty.
+Lemma~\ref{lem:arithmetic-diagonal-representation} gives the
+two reduction inequalities. Lemma~\ref{lem:arithmetic-proof-search}
+gives the partial conditional and its source lift.
+The theorem therefore excludes coverage by the interpreted
+theorem and refutation domains and also gives
+\[
+ t_\Gamma\vee\nu^*t_\Gamma\ne1_S.
+\]
+For $M=\N$, it supplies a total $g$ whose two inverse images
+vanish. Thus neither $\Theta(\gamma(n))$ nor its negation code
+is a theorem code, for every $n\in\N$.
+\end{proof}
+
+\begin{corollary}[Essential incompleteness of arithmetic]
+\label{cor:arithmetic}
+\label{thm:arithmetic-comparison-inseparability}
+For every consistent c.e.\ extension of PA, its theorem and
+refutation sets of sentence codes are recursively inseparable.
+Consequently every consistent c.e.\ extension of it is incomplete.
+\end{corollary}
+\begin{proof}
+Choose a c.e.\ sentence presentation $\Gamma$ of the extension.
+Suppose a recursive set $R\subseteq\N$ contains
+$\mathsf{Th}_\Gamma$ and is disjoint from
+$\mathsf{Ref}_\Gamma$. The recursive set
+\[
+ C=\{n\in\N:\Theta(n)\in R\}
+\]
+contains $D_0$ and is disjoint from $D_1$, by
+Lemma~\ref{lem:arithmetic-diagonal-representation}.
+Let $P,N$ be the complementary partial identities on $C$ and
+$\N\setminus C$. The total recursive function that sends
+$n\in C$ to the second copy of $n$ and $n\notin C$ to the
+first is their reversed conditional in $\Pfn$.
+Choose an index for this function, using the fixed numerical
+coproduct coding. Its class is a morphism
+$\ell:\omega\rightharpoonup\omega+\omega$ of $S_{\PA}$,
+and its standard interpretation is the chosen conditional.
+Corollary~\ref{cor:separator}, applied to $F_{\N}$, gives a
+contradiction. The lift is used as a partial source morphism;
+its totality in $S_{\PA}$ is not required.
+
+The same argument applies to every consistent c.e.\ extension.
+If such a theory were complete, its theorem and refutation
+sets would be disjoint c.e.\ sets covering the recursive
+sentence carrier. On a sentence code, parallel enumeration of
+the two sets would decide membership in the theorem set;
+non-sentence codes can be rejected by the sentence test.
+This would give a recursive separator, a contradiction.
+\end{proof}
+
+\subsection{The numerical realization}
+
 For $e\in\mathcal I(X,Y)$, define the partial function
 $\varphi_e:|X|\rightharpoonup|Y|$ by
 \[
@@ -14,27 +275,17 @@ functions on these objects.
 Its restriction idempotents are partial identities on c.e.\ subsets;
 the complemented ones are partial identities on recursive subsets.
 
-Let $u$ be the evaluator index of Lemma~\ref{lem:arithmetized-evaluation}.
-Its standard denotation
+The standard denotation
 $\tau_{\mathrm{rec}}=\varphi_u:\omega\times\omega\rightharpoonup\omega$
 is a Turing morphism in $\mathrm{Rec}$ by the specialization identity
-of that lemma. Let $e_d$ be the index obtained by composing $u$
-with the chosen diagonal index. Thus
-$\varphi_{e_d}=\tau_{\mathrm{rec}}\Delta_\omega$.
-Choose the coproduct isomorphism $\zeta:\omega\to\omega+\omega$
+of Lemma~\ref{lem:arithmetized-evaluation}.
+Use the same diagonal index $e_d$ and formulas $\alpha,\beta$ as in
+Section~\ref{subsec:arithmetic-internal-comparison}. Their standard
+truth sets are $A=D_0$ and $B=D_1$.
+Let $\zeta:\omega\to\omega+\omega$ be the coproduct isomorphism
 whose underlying function sends $2m$ to the first tagged copy of $m$
-and $2m+1$ to the second. Define
-\[
- \alpha(x)\equiv\exists m\,G_{e_d}(x,2m),\qquad
- \beta(x)\equiv\exists m\,G_{e_d}(x,2m+1).
-\]
-Their standard truth sets
-\[
- A=\{n:\N\models\alpha(\bar n)\},\qquad
- B=\{n:\N\models\beta(\bar n)\}
-\]
-are the even-output and odd-output sets for self-application.
-Their recursive inseparability is another instance of
+and $2m+1$ to the second.
+The recursive inseparability of $A,B$ is another instance of
 Theorem~\ref{thm:local-lifting}. To see this, let
 $J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ be given by
 $J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
@@ -72,8 +323,10 @@ There is an equivalence
        \simeq\mathcal C_{\mathrm{rec}}.
 \]
 The category $\mathcal C_{\mathrm{rec}}$ is regular, with finite
-coproducts that are disjoint and stable under pullback. Every
-monomorphism is an admissible domain monomorphism, and
+coproducts that are disjoint and stable under pullback. Under the
+displayed equivalence, every monomorphism of $\mathcal C_{\mathrm{rec}}$
+corresponds to a restriction monomorphism in
+$\operatorname{Split}(\mathrm{Rec})$, and
 \[
  \operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
        \simeq\operatorname{Split}(\mathrm{Rec}).
@@ -110,8 +363,9 @@ surjections, proving regularity.
 
 Singleton maps detect noninjectivity, so monomorphisms are exactly
 the injections. Preimage search for an injection $m:C\to D$ gives
-a partial recursive inverse on its c.e.\ image. Hence every such
-monomorphism is an admissible domain inclusion up to isomorphism.
+a partial recursive inverse on its c.e.\ image. The corresponding
+morphism in $\operatorname{Split}(\mathrm{Rec})$ is therefore a
+restriction monomorphism.
 The span $C\xleftarrow{m}B\xrightarrow{g}D$ represents the partial
 function $gm^{-1}$. Conversely, restricting a partial recursive
 function to its domain gives such a span. These assignments respect
@@ -210,24 +464,10 @@ and $\beta$ then proves $\neg\alpha(\bar n)$. Thus
  t_{\PA}\le t_T.
 \end{equation}
 
-\begin{corollary}[Essential incompleteness of arithmetic]\label{cor:arithmetic}
-The theorem and refutation sets of every consistent computably
-enumerable extension of $\PA$ are recursively inseparable.
-Consequently every such extension is incomplete.
-\end{corollary}
-\begin{proof}
-Let $T\supseteq\PA$ be consistent and c.e.\ Consistency says that
-no sentence and its negation are both theorems, so
-$t_T\,\nu^*t_T=0_S$. Completeness would say that every sentence or
-its negation is a theorem, giving $t_T\vee\nu^*t_T=1_S$.
-The pair $a,b$ supplied by Theorem~\ref{thm:local-lifting}, together
-with \eqref{eq:arithmetic-domain-inclusions}, satisfies the hypotheses
-of Corollary~\ref{cor:domain-incompleteness}. That corollary makes
-$t_T,\nu^*t_T$ inseparable and rules out the completeness equation.
-A complemented restriction idempotent on the recursive sentence carrier
-$S$ is a partial identity on a recursive subset of $S$, so this gives
-recursive inseparability of the theorem and refutation sets.
-\end{proof}
+Corollary~\ref{cor:domain-incompleteness} applies to these
+inequalities for every $t_T$ with $t_T\nu^*t_T=0_S$.
+It gives inseparability of $t_T,\nu^*t_T$ in
+$\Split(\mathrm{Rec})$.
 
 \subsection{Numeral instances and theory extension}
 
@@ -257,42 +497,8 @@ A recursive separator pulls back along a total recursive function;
 consequently $P_T,N_T$ are recursively inseparable.
 
 
-For a restriction idempotent
-$c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
-\begin{equation}\label{eq:observation}
- E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
-\end{equation}
-It is computably enumerable by proof enumeration and is independent of
-the representative. The operation is monotone, preserves finite meets,
-and preserves top and bottom. Choose a constant-function index
-$\operatorname{const}(n)\in\N$ for which
-$\PA\vdash\forall x\forall y\,
-(G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
-$\kappa_n=[\operatorname{const}(n)]_T:\omega\to\omega$. Then
-\begin{equation}\label{eq:faithful-observation}
- n\in E_T(c)
- \quad\Longleftrightarrow\quad c\kappa_n=\kappa_n
- \quad\Longleftrightarrow\quad
- F_T(c)F_T(\kappa_n)=F_T(\kappa_n).
-\end{equation}
-The composition formula makes
-$G_{\operatorname{comp}(j_C,\operatorname{const}(n))}(x,y)$
-T-provably equivalent to $C(\bar n)\land y=\bar n$, which gives
-the first equivalence.
-The second follows from faithfulness of $F_T$.
 
 
-For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
-\[
- D:S_{\operatorname{Th}(\N)}\longrightarrow\mathrm{Rec},\qquad
- D([e]_{\operatorname{Th}(\N)})=\varphi_e,
-\]
-is an isomorphism: two classes are equal exactly when their uniform
-graph-equivalence sentence is true in $\N$, which is equivalent
-to equality of their standard partial functions.
-The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
-although $T$ is complete.
-Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.
 
 Bernardi's numerical argument uses a precomplete equivalence
 relation $R$ on $\N$: for every partial recursive function $f$

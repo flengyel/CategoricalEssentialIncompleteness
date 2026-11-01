@@ -1,5 +1,6 @@
-\section{A faithful family and theory extension}\label{sec:family}
+\section{Faithful families and theory extension}\label{sec:family}
 
+Fix a consistent theory $T\supseteq\PA$.
 Let $\mathcal M_T$ be the set of all structures for the language of
 arithmetic with underlying set $\N$ that satisfy $T$. Their arithmetic
 operations need not be the standard ones, and the interpretation of a
@@ -89,49 +90,7 @@ projections satisfy
 $\pi_{T',T''}\pi_{T,T'}=\pi_{T,T''}$.
 The identity cases follow from the same definitions.
 
-\subsection{Lifting in the syntactic category}
-
-\begin{lemma}\label{lem:switch}
-Let $c,c'$ be complementary restriction idempotents on $X$ in $S_T$.
-There is a total morphism $s:X\to X+X$ with
-\[
- sc=i_1c,\qquad sc'=i_0c'.
-\]
-The morphism $\chi_{X,X}^{-1}F_Ts$ is the unique section of
-$\nabla_{F_TX}(F_Tc'+F_Tc)$, where
-$\chi_{X,X}:F_TX+F_TX\to F_T(X+X)$ is the coproduct isomorphism.
-\end{lemma}
-\begin{proof}
-Choose $\Sigma_1$ representatives $C(x)=\exists u\,R(x,u)$ and
-$C'(x)=\exists v\,R'(x,v)$ with primitive-recursive witness tests.
-The theory $T$ proves universally their disjointness and coverage.
-For $j=0,1$, put $\iota_j(x)=2x+j$. The graph
-$z=\iota_j(x)$ represents the coproduct injection
-$i_j:X\to X+X$ on numerical codes.
-Search increasing finite bounds for a witness to either predicate,
-returning $\iota_1(x)$ on finding a $C$-witness and $\iota_0(x)$
-on finding a $C'$-witness. Fix a priority for simultaneous discoveries.
-Let $e_s$ be an index of this program. The finite-search verification
-in $\PA$ proves that the program halts
-exactly when $C(x)\lor C'(x)$. Under the disjointness assumption it also
-proves the exact graph equation
-\[
- G_{e_s}(x,z)\leftrightarrow
- (C(x)\land z=\iota_1(x))\lor(C'(x)\land z=\iota_0(x)).
-\]
-Thus $T$ proves this equation and universal halting. The equations for
-the restrictions follow, giving the total morphism $s=[e_s]_T$ of $S_T$.
-
-Interpret this proved graph identity in $M\models T$.
-Under the canonical coproduct identification, $F_M(s)$ sends
-$x$ to its second tagged copy when
-$M\models C(\gamma_X^M(x))$ and to its first tagged copy when
-$M\models C'(\gamma_X^M(x))$.
-These conditions partition $X_M$, so $F_M(s)$ is the inverse of
-$\nabla_{X_M}(F_M(c')+F_M(c))$.
-Taking these inverses coordinatewise gives the unique section
-asserted in the lemma.
-\end{proof}
+\subsection{Inseparable pairs under theory extension}
 
 \begin{corollary}\label{cor:pair}
 For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
@@ -149,8 +108,11 @@ extension $T'\supseteq T$, their images under $Q_{T,T'}$ are the
 identically defined inseparable pair in $S_{T'}$.
 \end{corollary}
 \begin{proof}
-Theorem~\ref{thm:faithful} and Lemma~\ref{lem:switch} verify all the
-hypotheses of Theorem~\ref{thm:local-lifting}.
+For every complementary pair in $S_T$, Lemma~\ref{lem:switch}
+constructs a single morphism whose image under each $F_M$ is the
+required section. Its image under $F_T$ is therefore the required
+section coordinatewise. Theorem~\ref{thm:faithful} verifies the
+remaining hypotheses of Theorem~\ref{thm:local-lifting}.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
 It is the identity on objects and surjective on each hom-set.
 Consequently it preserves a Turing morphism: a preimage of a
@@ -178,3 +140,44 @@ associated with complementary source restriction idempotents;
 an arbitrary target separator need not be the image of such an
 idempotent.
 
+
+\subsection{Numeral observations}
+
+Suppose in addition that $T$ is computably enumerable.
+For a restriction idempotent
+$c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
+\begin{equation}\label{eq:observation}
+ E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
+\end{equation}
+It is computably enumerable by proof enumeration and is independent of
+the representative. The operation is monotone, preserves finite meets,
+and preserves top and bottom. Choose a constant-function index
+$\operatorname{const}(n)\in\N$ for which
+$\PA\vdash\forall x\forall y\,
+(G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
+$\kappa_n=[\operatorname{const}(n)]_T:\omega\to\omega$. Then
+\begin{equation}\label{eq:faithful-observation}
+ n\in E_T(c)
+ \quad\Longleftrightarrow\quad c\kappa_n=\kappa_n
+ \quad\Longleftrightarrow\quad
+ F_T(c)F_T(\kappa_n)=F_T(\kappa_n).
+\end{equation}
+The composition formula makes
+$G_{\operatorname{comp}(j_C,\operatorname{const}(n))}(x,y)$
+T-provably equivalent to $C(\bar n)\land y=\bar n$, which gives
+the first equivalence.
+The second follows from faithfulness of $F_T$.
+
+\subsection{A complete ambient theory}
+
+For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
+\[
+ D:S_{\operatorname{Th}(\N)}\longrightarrow\mathrm{Rec},\qquad
+ D([e]_{\operatorname{Th}(\N)})=\varphi_e,
+\]
+is an isomorphism: two classes are equal exactly when their uniform
+graph-equivalence sentence is true in $\N$, which is equivalent
+to equality of their standard partial functions.
+The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
+although $T$ is complete.
+Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.

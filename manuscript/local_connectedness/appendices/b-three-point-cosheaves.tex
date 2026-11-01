@@ -268,14 +268,14 @@ Thus all three component partial functions agree, proving $f=g$.
 
 Let $V$ be the object of $\mathcal A$ defined in
 \eqref{eq:universal-fork}.
-A \emph{total restriction embedding} $m:Y\to V$ in $\mathcal A$
+A \emph{restriction monomorphism} $m:Y\to V$ in $\mathcal A$
 is a total morphism with a partial inverse
 $m^\dagger:V\rightharpoonup Y$ satisfying
 $m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
 
 \begin{lemma}\label{lem:fork-dominance}
-Every object of $\mathcal E$ has a total restriction embedding
-into $V$.
+Every object $Y$ of $\mathcal E$ admits a restriction monomorphism
+$m:Y\to V$ in $\mathcal A$.
 \end{lemma}
 \begin{proof}
 Let $Y$ be an object of $\mathcal E$. For $j=0,1,2$, choose a
@@ -566,7 +566,7 @@ each hom-set, so the functor is fully faithful.
 It preserves restrictions, since
 $\overline{r_d f m_e}=r_e\bar f m_e$.
 For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
-provides a total restriction embedding $m:Z\to V$.
+provides a restriction monomorphism $m:Z\to V$.
 The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
 so the functor is essentially surjective.
 \end{proof}
