@@ -1,0 +1,30 @@
+[
+  {
+    "region": "Section 2.3",
+    "file": "sections/02-categorical-preliminaries.tex",
+    "start_line": 149,
+    "end_line": 178,
+    "text": "\\subsection{Recursion categories}\n\nA restriction category with binary restriction products and zeros is\n\\emph{prodominical} if $f\\times0=0$ for every morphism $f$ and every\nzero morphism of the required type. It is \\emph{isotypical} if any\ntwo of its objects are isomorphic.\n\nA \\emph{Turing morphism} on $U$ is a morphism\n$\\tau:U\\times U\\rightharpoonup U$ such that, for every object $X$\nand every $f:X\\times U\\rightharpoonup U$, there is a total\nparameter morphism $r:X\\to U$ satisfying\n\\[\n f=\\tau(r\\times1_U).\n\\]\nA \\emph{recursion category} here is a prodominical isotypical\ncategory with binary restriction products and a Turing morphism,\nas in \\cite[Section 9]{Heller}.\n\nA \\emph{restriction terminal object} $1$ has a unique total morphism\n$!_X:X\\to1$ for each object $X$, satisfying\n$!_Yf=!_X\\bar f$ for every $f:X\\rightharpoonup Y$.\nA restriction category is \\emph{cartesian} if it has binary\nrestriction products and a restriction terminal object.\nA \\emph{Turing category} is a cartesian restriction category with an\nobject $U$, called a \\emph{Turing object}, such that every object $X$\nadmits a total morphism $m_X:X\\to U$ and a morphism\n$r_X:U\\rightharpoonup X$ with $r_Xm_X=1_X$, and there is a\nTuring morphism on $U$. This is the characterization of\nCockett--Hofstra~\\cite[Theorem 3.4]{CockettHofstra}.\n"
+  },
+  {
+    "region": "Section 5.1",
+    "file": "sections/05a-internal-syntax.tex",
+    "start_line": 258,
+    "end_line": 300,
+    "text": "In particular, there is a restriction equivalence\n\\[\n \\Par(\\mathcal B_T,\\Mono)\\simeq\\Split(S_T).\n\\]\nExplicitly, a span $C\\xleftarrow{m}E\\xrightarrow{g}D$ is sent\nto $gm^{-1}$, where $m^{-1}$ is the partial inverse just constructed.\nConversely, a partial morphism is represented by its domain\ninclusion and its total restriction to that domain. In the predicate\npresentation the domain is $\\exists y\\,G_f(x,y)$; relational\ncomposition identifies composition of these spans by pullback with\ncomposition in $\\Split(S_T)$.\n\nThe category $\\Split(S_T)$ is a Turing category,\nwith Turing object $U=(\\omega,1_\\omega)$.\nIndeed, the displayed restriction equivalence supplies a restriction\nterminal object, represented by the singleton predicate $x=0$.\nBinary restriction products are\n$(X,e)\\times(Y,d)=(X\\times Y,e\\times d)$.\nEvery object $(X,e)$ is a retract of $(X,1_X)$, with both morphisms\nrepresented by $e$, and $(X,1_X)\\cong U$ by the coding isomorphism.\nThe Turing morphism extends by the idempotent-splitting argument\nof Cockett--Hofstra~\\cite[Section 3.5]{CockettHofstra}.\nExplicitly, let $\\tau:\\omega\\times\\omega\\rightharpoonup\\omega$\nbe the Turing morphism of $S_T$, and let\n$f:(X,e)\\times U\\rightharpoonup U$ be a morphism of $\\Split(S_T)$.\nIts representative $f:X\\times\\omega\\rightharpoonup\\omega$ in $S_T$\nsatisfies $f=f(e\\times1_\\omega)$. Choose a total morphism\n$r:X\\to\\omega$ in $S_T$ with $f=\\tau(r\\times1_\\omega)$.\nThen $re:(X,e)\\to U$ is total, since $\\overline{re}=e$, and\n\\[\n f=\\tau(r\\times1_\\omega)(e\\times1_\\omega)\n   =\\tau((re)\\times1_\\omega).\n\\]\nThe recognition criterion~\\cite[Theorem 3.4]{CockettHofstra}\ntherefore applies.\n\nRanges extend to $\\Split(S_T)$ by the same representatives.\nFor a morphism $f:(X,e)\\rightharpoonup(Y,d)$, the equation\n$df=f$ implies $\\ran_{S_T}(f)\\leq d$. This range is therefore\na restriction idempotent on $(Y,d)$, with the same leastness\nand agreement properties. Lemma~\\ref{lem:range-regular-image}\napplies because every monomorphism of $\\mathcal B_T$ has a\npartial inverse."
+  },
+  {
+    "region": "Section 7.4",
+    "file": "sections/08c-numerical-realization.tex",
+    "start_line": 394,
+    "end_line": 415,
+    "text": "The free-variable and substitution algorithms in\nPropositions~\\ref{prop:st-list-initiality} and\n\\ref{prop:st-substitution-realization} use these same codes.\nTheir primitive-recursive traversals therefore give morphisms\n\\[\n \\FV_{\\Tm}:\\Tm\\to W,\\quad \\FV_{\\Fm}:\\Fm\\to W,\\quad\n a_T:\\Tm\\times(V\\times\\Tm)\\to\\Tm,\\quad\n b_F:\\Fm\\times(V\\times\\Tm)\\to1+\\Fm\n\\]\nin $\\mathcal C_{\\mathrm{rec}}$.\nFor these same codes, Proposition~\\ref{prop:st-substitution-realization}\nproves the carrier and constructor equations in $\\PA$.\nThey therefore hold in $\\N$. Uniqueness of the parameterized folds\nidentifies these numerical morphisms with the categorical ones.\nIn particular,\n$\\Adm=b_F^{-1}(\\Fm\\hookrightarrow1+\\Fm)$ is the admissibility\nsubobject, and $a_F:\\Adm\\to\\Fm$ is the induced substitution\nmorphism. The sentence object is\n$j:S\\hookrightarrow\\Fm$, where\n$|S|=\\{s\\in|\\Fm|:\\FV_{\\Fm}(s)=w_0\\}$.\n\nFix an axiom subobject $i_A:A\\hookrightarrow S$ in"
+  },
+  {
+    "region": "Appendix A.1",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start_line": 148,
+    "end_line": 160,
+    "text": "For an endofunctor on the $r$-fold product category $\\mathcal D^r$\ndefined using finite products, coproducts, and specified constant objects, its version on\n$(\\mathcal D/P)^r$ is obtained\nby replacing each constant $X$ by $P\\times X\\to P$ and using\nproducts and coproducts in that slice. An initial algebra is\n\\emph{stable under parameters} if, for every $P\\in\\mathcal D$,\nits pullback along $P\\to1$ is initial for this slice endofunctor.\nFor list objects, this is the parameterized recursion property studied by\nCockett~\\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.\\footnote{The gap\nin the printed uniqueness argument for Lemma~5.6 (p.~18) does not affect\nLemma~2.2 or Definition~2.3, cited here.}\nIts formulation by pullback into slices is\nrecalled by Maietti~\\cite[Definition 2.4 and the following paragraph]{MaiettiLists}."
+  }
+]

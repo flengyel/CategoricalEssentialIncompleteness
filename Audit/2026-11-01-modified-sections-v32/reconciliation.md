@@ -1,0 +1,23 @@
+# Reconciliation of the scoped Version 32 audit
+
+**Conclusion.** No manuscript change is necessary on the evidence of these reviews. Neither report exhibits an actual defect in the four modified passages of *Logical consequence and essential incompleteness in recursion categories*, Version 32. No concrete unresolved finding in those passages warrants another audit pass. This is a bounded conclusion about the changes, not certification of the whole manuscript.
+
+I read `hostile.md` and `writing.md`, checked the frozen LaTeX passages and their directly cited dependencies, and independently compared the relevant primary-source text: Cockett–Hofstra, §2.2, Theorem 3.4, and §3.5; Cockett, Lemma 2.2, Definition 2.3, and the printed Lemma 5.6 argument. I also consulted the supplied KLR *Mathematical Writing*, §1. The reviewers agree on the actual findings; their different report formats do not change the evidential conclusion.
+
+## Findings and disposition
+
+| Modified passage | Reconciled finding | Disposition |
+| --- | --- | --- |
+| §2.3, PDF p. 5; `02-categorical-preliminaries.tex:167–177` | Restriction terminal objects and cartesian restriction categories are defined before use. The total embedding and partial retraction, together with the Turing morphism, match Cockett–Hofstra's recognition criterion. The terminal equation is correctly typed. The omitted explicit equation \(!_1=1_1\) follows from uniqueness of total maps to \(1\). | No defect; retain. |
+| §5.1, PDF p. 15; `05a-internal-syntax.tex:258–292` | The partial-map equivalence supplies the restriction terminal object. Restriction products and the object retractions are specified. For a split representative \(f=f(e\times1_\omega)\), the original total parameter \(r\) yields a parameter \(re\) that is total in the splitting, since \(\overline{re}=e\), and the displayed factorization follows. Cockett–Hofstra §3.5 supplies this argument; the manuscript independently establishes the cartesian hypothesis. It does not need \(S_T\) itself to be a Turing category in their stronger sense. | No defect or circularity; retain. |
+| §7.4, PDF p. 39; `08c-numerical-realization.tex:394–413` | Proposition 5.7 proves the carrier and constructor equations in \(\mathrm{PA}\) for the same codes. These equations hold in \(\mathbb N\), and the preceding numerical proof independently establishes parameterized initiality. Uniqueness therefore identifies the numerical algorithms with the categorical folds. The admissibility pullback and sentence subobject have the stated types. | No missing inference; retain the transfer and uniqueness steps. |
+| Appendix A.1, PDF p. 57; `a-syntax-and-theories.tex:148–160` | Cockett's Lemma 2.2 and Definition 2.3 concern recursion in slices and preservation by the product-to-slice functor, supporting the list-specific comparison. The p. 18 uniqueness argument improperly cancels through an arbitrary target action by appealing to monicity of the source constructor. This is a gap in that printed proof, not a demonstration that the lemma is false. The earlier cited items do not depend on it. | The pinpoint citation and user-requested footnote are supported; retain both. |
+
+## Classification
+
+- **Actual defects:** none established in scope.
+- **Optional polish:** the writing reviewer suggests naming the ambient restriction category explicitly in the terminal-object definition and spelling out the directions of the two arrows represented by \(e\). Both are already determined by the surrounding definitions. They are optional additions, not repair requirements; no edit is recommended in this reconciliation.
+- **Unsupported criticism:** neither reviewer presents a substantive criticism requiring dismissal. In particular, the reviewed text supports neither an objection that §5.1 presupposes a terminal object in \(S_T\) nor an objection that §7.4 assumes preservation of initial algebras by a realization functor. The requested footnote is a source-specific mathematical qualification, not editing-process narration.
+- **Out-of-scope concerns:** the remaining central theorems, whole-paper novelty, Maietti's unchanged passage, and a complete replacement proof of Cockett's Lemma 5.6 were not audited here. They are not unresolved findings against these modifications.
+
+The existing local outline and dependencies work; no reorganization is warranted. Preserve the explicit types, established terminology, substantive proof steps, and the appendix's categorical purpose. The hostile report's whole-manuscript recommendation and any format-imposed verdict labels neither certify correctness nor create a reason to reject the changes. No manuscript edits or external writes were made.
