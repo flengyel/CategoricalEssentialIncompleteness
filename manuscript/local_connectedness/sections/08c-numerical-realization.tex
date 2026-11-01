@@ -1,0 +1,515 @@
+\subsection{The numerical realization}
+\label{subsec:numerical-realization}
+
+For $X,Y\in\mathsf O$ and $e\in\mathcal I(X,Y)$, define the partial function
+$\varphi_e:|X|\rightharpoonup|Y|$ by
+\[
+ \varphi_e(x)=y\quad\Longleftrightarrow\quad
+ \N\models G_e\bigl(\gamma_X(x),\gamma_Y(y)\bigr).
+\]
+Let $\mathrm{Rec}$ have the terms in $\mathsf O$ as objects and
+these partial functions as morphisms, with extensional equality.
+The numerical indexing represents every partial recursive function,
+so this is a presentation of the recursion category of partial recursive
+functions on these objects.
+Its restriction idempotents are partial identities on c.e.\ subsets;
+the complemented ones are partial identities on recursive subsets.
+
+Write $\mathcal C=\mathcal C_{\mathrm{rec}}$,
+$\mathscr S_{\mathrm{rec}}=\Split(\mathrm{Rec})$, and
+$\mathcal B_{\mathrm{rec}}=\Tot(\mathscr S_{\mathrm{rec}})$.
+An object $C$ of $\mathcal C$ is a pair $(m,C_0)$, where
+$m\ge0$ and $C_0\subseteq\N^m$ is computably enumerable.
+Write $|C|=C_0$ for its carrier. A morphism $f:C\to D$ is
+specified by a function $|f|:|C|\to|D|$ computed by a partial
+recursive program on tuple codes, defined on every input from
+$|C|$. Equality is equality of these functions. In computations,
+$f(x)$ abbreviates $|f|(x)$. Identities and composition are
+identities and composition of the represented functions.
+
+For each $m\geq0$, choose an injective recursive tuple coding
+$\kappa_m:\N^m\to\N$ with recursive image $K_m$ and recursive
+inverse $\kappa_m^{-1}:K_m\to\N^m$. Take
+$\kappa_0(())=0$, $K_0=\{0\}$, and $\kappa_1=1_{\N}$;
+iterated numerical pairing gives such codings for $m\geq2$.
+For $C=(m,C_0)$, put $\widehat C=\kappa_m(|C|)$.
+
+
+\begin{proposition}\label{prop:arithmetic-theory-realization}
+There is an equivalence
+\[
+ \operatorname{Tot}(\operatorname{Split}(\mathrm{Rec}))
+       \simeq\mathcal C_{\mathrm{rec}}.
+\]
+The category $\mathcal C_{\mathrm{rec}}$ is regular, with finite
+coproducts that are disjoint and stable under pullback. Under the
+displayed equivalence, every monomorphism of $\mathcal C_{\mathrm{rec}}$
+corresponds to a restriction monomorphism in
+$\operatorname{Split}(\mathrm{Rec})$, and
+\[
+ \operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
+       \simeq\operatorname{Split}(\mathrm{Rec}).
+\]
+Fix $d\ge0$, let $V=(1,\N)$, and let
+$\Sigma_k=(1,\Sigma_{k,0})$ and $\Pi_k=(1,\Pi_{k,0})$
+have recursive carriers for $0\le k\le d$. Then the
+syntax and list algebras of Definition~\ref{def:categorical-syntax}
+exist in $\mathcal C_{\mathrm{rec}}$ and are stable under parameters.
+For every axiom subobject of the sentence object, the inference
+endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
+algebra of finite derivations.
+\end{proposition}
+\begin{proof}
+Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
+\[
+ Q(C)=(\omega,1_{\widehat C}),\qquad
+ Q(f)=\kappa_n |f|\kappa_m^{-1}:
+     (\omega,1_{\widehat C})\longrightarrow
+     (\omega,1_{\widehat D}).
+\]
+For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
+the displayed formula specifies its representing partial function.
+The numerical program for $Q(f)$ first semidecides membership
+in $\widehat C$, then decodes its input, computes $f$, and encodes
+the output. Its domain is exactly $\widehat C$, so the displayed
+split morphism is total. The inverse coding equations prove
+$Q(1_C)=1_{Q(C)}$ and $Q(gf)=Q(g)Q(f)$.
+
+For $(X,e)\in\mathcal B_{\mathrm{rec}}$, let
+$D_e=\gamma_X(\operatorname{dom}e)\subseteq\N$, and define
+$F:\mathcal B_{\mathrm{rec}}\to\mathcal C$ by
+\[
+ F(X,e)=(1,D_e),\qquad
+ |F(f)|=\gamma_Y f\gamma_X^{-1}|_{D_e}:D_e\longrightarrow D_d
+\]
+for a total split morphism $f:(X,e)\to(Y,d)$, so that
+$F(f):F(X,e)\to F(Y,d)$ belongs to $\mathcal C$.
+The restriction equation $\bar f=e$ gives its exact source domain,
+and $f=dfe$ gives its target membership. Composition and identities
+are the corresponding partial-function equations in the numerical
+coordinates.
+Tuple decoding gives isomorphisms
+\[
+ u_C:FQ(C)\xrightarrow{\cong}C
+       \quad\text{in }\mathcal C,\qquad
+       |u_C|=\kappa_m^{-1}|_{\widehat C}.
+\]
+The restriction of $\gamma_X^{-1}$ to $D_e$ gives isomorphisms
+\[
+ v_{(X,e)}:QF(X,e)\xrightarrow{\cong}(X,e)
+       \quad\text{in }\mathcal B_{\mathrm{rec}}.
+\]
+For $f:C\to D$ in $\mathcal C$ and
+$a:(X,e)\to(Y,d)$ in $\mathcal B_{\mathrm{rec}}$,
+the coding equations give
+\[
+ f u_C=u_DFQ(f),\qquad
+ a v_{(X,e)}=v_{(Y,d)}QF(a).
+\]
+Thus $u:FQ\Rightarrow1_{\mathcal C}$ and
+$v:QF\Rightarrow1_{\mathcal B_{\mathrm{rec}}}$ are natural
+isomorphisms, proving the first equivalence.
+
+The singleton $(0,\{()\})$ is terminal in $\mathcal C$.
+Products are Cartesian products of carriers, represented by
+concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to D$ are parallel morphisms, their
+equalizer is the object of the same dimension as $C$ with carrier
+$\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
+enumerate $|C|$, run the two computations in parallel, and compare
+their outputs. The product and equalizer universal arrows are the
+corresponding computable pairings and restrictions.
+
+The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
+$D=(n,D_0)$, choose their coproduct as the object of dimension one
+with tagged carrier
+\[
+ |C+D|=\{2\kappa_m(c):c\in|C|\}
+        \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
+\]
+with the two displayed encoding functions as injections.
+Copairing tests the tag, decodes, and runs the corresponding
+branch. These operations give the coproduct universal property.
+For $f:X\to C+D$ in $\mathcal C$, let $X_C,X_D$ be the
+objects of the same dimension as $X$ whose carriers are the
+inverse images in $|X|$ of the even and odd summands. Both are c.e.
+and their inclusions give an isomorphism $X_C+X_D\cong X$:
+the inverse computes $f(x)$ to determine the tag and retains $x$.
+The tag sets are disjoint, so these coproducts are disjoint and
+stable under pullback.
+
+For $f:C\to D$ in $\mathcal C$, define the image object
+$\operatorname{Im}(f)$ to have the dimension of $D$ and carrier
+$|\operatorname{Im}(f)|=|f|(|C|)\subseteq|D|$. This carrier is
+c.e. by enumerating $|C|$ and dovetailing the computations of $f$. Its image factorization
+is
+\[
+ C\xrightarrow{e_f}\operatorname{Im}(f)
+       \xrightarrow{m_f}D,
+\]
+where $e_f$ is surjective and $m_f$ is the inclusion.
+For any surjective morphism $e:C\to D$ and morphism $h:C\to Z$
+constant on its kernel-pair fibers, compute a morphism $d:D\to Z$
+as follows. On $y\in|D|$, enumerate $|C|$ and dovetail the
+computations of $e$ until a value $e(x)=y$ appears, then return
+$h(x)$. Surjectivity ensures termination on $|D|$, and constancy
+on fibers ensures independence of the selected $x$. Thus $de=h$,
+and surjectivity gives uniqueness of $d$. Hence $e$ is the
+coequalizer of its kernel pair. Conversely, a regular epimorphism
+cannot factor through a proper image monomorphism, so regular
+epimorphisms are exactly the surjections. A pullback of a surjection
+is surjective on its c.e. pullback carrier. This proves regularity.
+
+Computable singleton maps distinguish any two elements of a carrier.
+Consequently a monomorphism $m:B\to C$ in $\mathcal C$ is
+injective; every injective morphism is monic. Enumerating $|B|$ and
+searching for a preimage computes the partial inverse of $m$ on
+$|m|(|B|)$. In numerical coordinates this gives
+\[
+ \mu_m:Q(C)\rightharpoonup Q(B)
+       \quad\text{in }\mathscr S_{\mathrm{rec}},
+\]
+with
+\[
+ \mu_mQ(m)=1_{Q(B)},\qquad
+ Q(m)\mu_m=\overline{\mu_m}.
+\]
+The right-hand side is the partial identity on the coded image
+of $m$ in $Q(C)$.
+
+Define a functor
+\[
+ \widetilde Q:\operatorname{Par}(\mathcal C,\operatorname{Mono})
+                 \longrightarrow\mathscr S_{\mathrm{rec}}
+\]
+on objects by $\widetilde Q(C)=Q(C)$ and on a monic span by
+\[
+ \widetilde Q[\,C\xleftarrow{m}B\xrightarrow{g}D\,]
+       =Q(g)\mu_m:Q(C)\rightharpoonup Q(D).
+\]
+This function is defined on the coded image of $m$ and sends
+the code of $m(b)$ to the code of $g(b)$ for $b\in|B|$. An isomorphism of spans therefore leaves it
+unchanged. For two composable spans, their pullback selects exactly
+the pairs $(b,b')$ for which the first right leg equals the second
+left leg. The same condition is the domain condition for composing
+the two partial functions. Their values then agree, proving
+preservation of composition. Identity spans give identities, and
+the restriction span $(m,m)$ gives the partial identity on the coded image of $m$.
+
+For fullness, let $a:Q(C)\rightharpoonup Q(D)$ be a morphism
+of $\mathscr S_{\mathrm{rec}}$. Decode its c.e. domain to a
+subobject $U\hookrightarrow C$ with a c.e. carrier. Its decoded
+values define a total morphism $g:U\to D$ in $\mathcal C$, and the span
+$C\leftarrow U\xrightarrow{g}D$ maps to $a$.
+For faithfulness, equal partial functions have equal domains
+$|m|(|B|)=|m'|(|B'|)$ and equal values there. Searching for inverse images
+under the injective $m,m'$ gives inverse computable maps
+$B\cong B'$ commuting with both span legs. Hence the spans
+represent the same morphism. Essential surjectivity follows from
+the essential surjectivity of $Q$ at the level of total categories,
+with the isomorphisms $v_{(X,e)}$ displayed above.
+Thus $\widetilde Q$ is a restriction equivalence.
+
+Choose the variable object $V=(1,\N)$ and, for a fixed $d\ge0$,
+objects $\Sigma_k,\Pi_k\in\mathcal C_{\mathrm{rec}}$ with
+recursive carriers $|\Sigma_k|,|\Pi_k|\subseteq\N$ for $0\le k\le d$.
+Use the syntax codes and constructor tags of
+Section~\ref{sec:st-parameterized-syntax}. The finite tree parser,
+the coefficient tests, and numerical equality decide the carriers
+of objects $\Tm,\Fm\in\mathcal C_{\mathrm{rec}}$. Each constructor is a primitive-recursive
+function on its displayed source. The unique root decomposition
+and the strictly smaller sizes of its children are the properties
+of these codes established in Proposition~\ref{prop:st-syntax-initiality}.
+Let $K:\mathcal C_{\mathrm{rec}}^2\to\mathcal C_{\mathrm{rec}}^2$
+be the endofunctor of Appendix~\ref{app:first-order-syntax}, with
+these coefficient objects. Its constructor algebra is
+$\iota:K(\Tm,\Fm)\to(\Tm,\Fm)$.
+
+Fix $P\in\mathcal C_{\mathrm{rec}}$. In
+$(\mathcal C_{\mathrm{rec}}/P)^2$, put
+\[
+ \mathbf T_P=((P\times\Tm,\pi_P),(P\times\Fm,\pi_P)),
+ \qquad \iota_P:K_P\mathbf T_P\to\mathbf T_P,
+\]
+where $\iota_P$ retains the parameter and applies the constructor
+in the other coordinate. Take any $K_P$-algebra
+\[
+ \mathbf X=((X,\xi),(Y,\upsilon)),\qquad
+ \alpha=(\alpha_1,\alpha_2):K_P\mathbf X\to\mathbf X.
+\]
+Here $\xi:X\to P$ and $\upsilon:Y\to P$ are morphisms of
+$\mathcal C_{\mathrm{rec}}$, while
+\[
+ \alpha_1:K_{P,1}\mathbf X\to(X,\xi),\qquad
+ \alpha_2:K_{P,2}\mathbf X\to(Y,\upsilon)
+\]
+are morphisms in $\mathcal C_{\mathrm{rec}}/P$.
+For example, the function-symbol operation at arity $k$ is defined
+on tuples $(p,s,x_1,\ldots,x_k)$ with $p\in|P|$,
+$s\in|\Sigma_k|$, and $x_i\in|X|$ with $\xi(x_i)=p$
+for $1\le i\le k$; its value belongs to $|X|$ and lies
+over $p$. Its representing program halts on every such tuple.
+
+On input $(p,t)\in|P|\times|\Tm|$ or
+$(p,\varphi)\in|P|\times|\Fm|$, parse the tree and evaluate its
+nodes in children-before-parent order. At each node, apply the
+representing program for the corresponding component of $\alpha$
+to its label, its children's values, and the same parameter $p$.
+Induction on the number of nodes proves that the child values
+have the required sort and projection to $p$. They therefore lie
+in the source carrier of that component of $\alpha$; its program
+halts and returns a value of the required sort over $p$.
+The nullary step uses the variable or nullary-symbol operation.
+Thus this algorithm is partial recursive and halts on every input
+in each of the two displayed source carriers. It defines morphisms
+\[
+ h_T:P\times\Tm\to X,\qquad h_F:P\times\Fm\to Y
+ \quad\text{in }\mathcal C_{\mathrm{rec}},
+ \qquad \xi h_T=\pi_P,\quad\upsilon h_F=\pi_P.
+\]
+For $h=(h_T,h_F):\mathbf T_P\to\mathbf X$, decomposition at
+the root gives
+\[
+ h\iota_P=\alpha K_P(h):K_P\mathbf T_P\to\mathbf X
+ \quad\text{in }(\mathcal C_{\mathrm{rec}}/P)^2.
+\]
+If $h':\mathbf T_P\to\mathbf X$ satisfies that equation,
+induction on the same root decomposition gives $h'=h$.
+Consequently $(\mathbf T_P,\iota_P)$ is initial for every $P$.
+Taking $P=1$ gives the syntax algebra, and the construction for
+all $P$ proves stability under parameters.
+
+Let $W\in\mathcal C_{\mathrm{rec}}$ be the object of dimension
+one whose carrier is the recursive set of finite list codes over $|V|$, with constructor algebra
+$\iota^L=[\nil,\cons]:1+V\times W\to W$.
+Write $w_0=|\nil|(())\in|W|$ for the empty-list value.
+For $P\in\mathcal C_{\mathrm{rec}}$, let
+$L_P:\mathcal C_{\mathrm{rec}}/P\to\mathcal C_{\mathrm{rec}}/P$
+be the slice version of $Z\mapsto1+V\times Z$ defined in
+Appendix~\ref{app:categorical-hypotheses}.
+Its constructor algebra has carrier $(P\times W,\pi_P)$ and
+structure $\iota^L_P:L_P(P\times W,\pi_P)\to(P\times W,\pi_P)$.
+For an object $(Z,z)$ of that slice, the canonical isomorphism
+$\sigma_{P,Z}:(P\times V)\times_P Z\to V\times Z$
+sends $((p,v),z_0)$ to $(v,z_0)$. Its inverse sends $(v,z_0)$
+to $((z(z_0),v),z_0)$. For any algebra
+$\beta:L_P(Z,z)\to(Z,z)$, use this isomorphism and write
+$\beta_0:P\to Z$ and $\beta_1:V\times Z\to Z$ for its
+two underlying operations; thus $z\beta_0=1_P$ and
+$z\beta_1=z\pi_Z$.
+The recursive evaluation of a finite list gives
+$h_L:P\times W\to Z$ with
+\[
+ \begin{aligned}
+ h_L(p,w_0)&=\beta_0(p),\\
+ h_L(p,\cons(v,w))&=\beta_1(v,h_L(p,w)),\qquad
+ zh_L=\pi_P.
+ \end{aligned}
+\]
+Induction on list length proves halting on $|P|\times|W|$ and
+uniqueness. Equivalently,
+$h_L\iota^L_P=\beta L_P(h_L)$ as morphisms from
+$L_P(P\times W,\pi_P)$ to $(Z,z)$ in the slice.
+This proves parameterized list initiality.
+
+The free-variable and substitution algorithms in
+Propositions~\ref{prop:st-list-initiality} and
+\ref{prop:st-substitution-realization} use these same codes.
+Their primitive-recursive traversals therefore give morphisms
+\[
+ \FV_{\Tm}:\Tm\to W,\quad \FV_{\Fm}:\Fm\to W,\quad
+ a_T:\Tm\times(V\times\Tm)\to\Tm,\quad
+ b_F:\Fm\times(V\times\Tm)\to1+\Fm
+\]
+in $\mathcal C_{\mathrm{rec}}$.
+The free-variable traversal concatenates the child lists and,
+at a quantifier, deletes the bound variable. These are the
+constructor equations of Appendix~\ref{app:first-order-syntax}.
+For substitution, the traversal at a quantifier with variable $y$
+tests $y=x$, absence of $x$ from the body's free-variable list,
+and absence of $y$ from the replacement term's free-variable list.
+It retains the original quantified formula in the first case;
+in the other cases its success or failure and its reconstructed
+body are exactly the branches of \eqref{eq:quantifier-fold}.
+At the other constructors it has the corresponding term,
+connective, and atomic equations from Appendix~\ref{app:substitution}.
+Induction on the tree verifies all these equations; uniqueness of
+the parameterized folds identifies these numerical morphisms with
+the categorical ones. In particular,
+$\Adm=b_F^{-1}(\Fm\hookrightarrow1+\Fm)$ is the admissibility
+subobject, and $a_F:\Adm\to\Fm$ is the induced substitution
+morphism. The sentence object is
+$j:S\hookrightarrow\Fm$, where
+$|S|=\{s\in|\Fm|:\FV_{\Fm}(s)=w_0\}$.
+
+Fix an axiom subobject $i_A:A\hookrightarrow S$ in
+$\mathcal C_{\mathrm{rec}}$. Retain $A$ itself as the object of axiom labels. The realized
+rule data of Appendix~\ref{app:first-order-derivations} are
+\[
+ p_n:R_n\to\Fm^n,\qquad q_n:R_n\to\Fm\quad(0\le n\le2),
+\]
+and define
+$H_A:\mathcal C_{\mathrm{rec}}/\Fm\to
+\mathcal C_{\mathrm{rec}}/\Fm$ as in that appendix.
+Use the finite derivation-tree codes of
+Lemma~\ref{lem:syntactic-derivation-initiality} with these rule labels.
+If $R_n$ has dimension $m_n$, store a label as a number
+$r\in\widehat{R_n}$ and decode it by $\kappa_{m_n}^{-1}$
+before applying $p_n$ or $q_n$. A code is valid when each stored
+label has this membership and the ordered children's conclusions
+are the premises of its decoded rule instance.
+There are finitely many nodes. Dovetailing their membership and
+computation tests semidecides validity, giving an object
+$P_A^{\mathrm{all}}$ of dimension one whose carrier is the
+c.e.\ set of valid derivation codes. Membership witnesses are not part of a
+derivation code. Reading the root rule and computing its conclusion
+gives $c_A^{\mathrm{all}}:P_A^{\mathrm{all}}\to\Fm$.
+The node constructors give an algebra
+\[
+ \delta_A:H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})
+           \to(P_A^{\mathrm{all}},c_A^{\mathrm{all}})
+ \quad\text{in }\mathcal C_{\mathrm{rec}}/\Fm.
+\]
+
+For any object $(Q,q)$ of $\mathcal C_{\mathrm{rec}}/\Fm$ and
+algebra $\beta:H_A(Q,q)\to(Q,q)$ in this slice,
+evaluate a valid derivation in children-before-parent order.
+Its children have already been assigned values in $|Q|$ whose
+images under $q$ are their conclusions. Together with the node's
+decoded rule instance these values belong to the corresponding pullback
+summand of $H_A(Q,q)$. The program representing $\beta$ therefore
+halts at that input and returns a value in $|Q|$ with the node's
+conclusion as its image under $q$. The same argument applies to
+a nullary node with no child values. Induction on tree size proves
+halting throughout the finite evaluation on every input in
+$|P_A^{\mathrm{all}}|$. It gives a morphism
+$h_A:P_A^{\mathrm{all}}\to Q$ in $\mathcal C_{\mathrm{rec}}$ with
+\[
+ qh_A=c_A^{\mathrm{all}},\qquad
+ h_A\delta_A=\beta H_A(h_A).
+\]
+The second equation is in $\mathcal C_{\mathrm{rec}}/\Fm$, from
+$H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})$ to $(Q,q)$.
+Root decomposition proves the equation, and induction on tree
+size proves uniqueness of $h_A$. This establishes initiality.
+\end{proof}
+
+For arithmetic, choose exactly the signature labels and numerical
+syntax codes used in Section~\ref{sec:st-parameterized-syntax}.
+For a c.e.\ axiom presentation $T$ containing the chosen PA sentence
+axioms, use the same axiom predicate as in
+Section~\ref{subsec:arithmetic-internal-comparison}, with $\Gamma=T$.
+Let
+$c_T^{\mathrm{all}}:\mathrm{Prf}_T^{\mathrm{all}}\to\Fm$
+be the full derivation conclusion of the proposition. Its sentence
+restriction is the pullback in $\mathcal C_{\mathrm{rec}}$
+\[
+\begin{tikzcd}
+ \mathrm{Prf}_T\arrow[r,hook]\arrow[d,"c_T"'] &
+ \mathrm{Prf}_T^{\mathrm{all}}\arrow[d,"c_T^{\mathrm{all}}"]\\
+ S\arrow[r,hook,"j"'] & \Fm.
+\end{tikzcd}
+\]
+Thus $|\mathrm{Prf}_T|$ consists of the full derivation codes whose
+conclusions belong to $|S|$. Theorem~\ref{thm:first-order-theory}
+identifies the regular image $m_T:\mathcal T_T\hookrightarrow S$
+of $c_T$ as the sentence part of the least deductively closed
+formula subobject containing the axioms of $T$.
+
+To compare with the syntactic category, write
+$S^{\mathrm{syn}}\in\mathcal B_{\PA}$ and
+$c_T^{\mathrm{syn}}:P_T^{\mathrm{syn}}\to S^{\mathrm{syn}}$
+for the sentence object and conclusion morphism denoted by $S,c_\Gamma$
+in Section~\ref{subsec:arithmetic-internal-comparison}, at $\Gamma=T$.
+Let $\Fm^{\mathrm{syn}}\in\mathcal B_{\PA}$ be the formula object
+with the syntax codes fixed above. Use the axiom inclusion of the
+chosen sentence-code subset in both constructions. Let
+$R_n^{\mathrm{num}}$ and $R_n^{\mathrm{syn}}$ be the resulting
+rule objects in $\mathcal C_{\mathrm{rec}}$ and $\mathcal B_{\PA}$,
+respectively, for $0\le n\le2$. Their rule morphisms are
+\[
+ \begin{aligned}
+ p_n^{\mathrm{num}}&:R_n^{\mathrm{num}}\to\Fm^n,&
+ q_n^{\mathrm{num}}&:R_n^{\mathrm{num}}\to\Fm,\\
+ p_n^{\mathrm{syn}}&:R_n^{\mathrm{syn}}\to(\Fm^{\mathrm{syn}})^n,&
+ q_n^{\mathrm{syn}}&:R_n^{\mathrm{syn}}\to\Fm^{\mathrm{syn}}.
+ \end{aligned}
+\]
+Let $m_n$ be the dimension of $R_n^{\mathrm{num}}$.
+The finite-product, coproduct, and pullback comparisons for these
+rule constructions give bijections
+\[
+ \rho_n:|R_n^{\mathrm{num}}|\xrightarrow{\cong}
+                  G_{\N}R_n^{\mathrm{syn}}\quad(0\le n\le2).
+\]
+They match the constructor parameters, tuple entries, and tags of
+corresponding rule instances. These maps and their inverses are
+computable on their carriers by the structural encodings and projections.
+The rule membership conditions coincide because they use the same
+syntax operations and axiom predicate. Let
+$\chi_n:G_{\N}((\Fm^{\mathrm{syn}})^n)\xrightarrow{\cong}|\Fm|^n$
+be the finite-product comparison, using the fixed equality
+$G_{\N}\Fm^{\mathrm{syn}}=|\Fm|$. The definitions give
+\[
+ \chi_n(G_{\N}p_n^{\mathrm{syn}})\rho_n=|p_n^{\mathrm{num}}|,
+ \qquad
+ (G_{\N}q_n^{\mathrm{syn}})\rho_n=|q_n^{\mathrm{num}}|.
+\]
+These are equations of functions on $|R_n^{\mathrm{num}}|$.
+Let $J_{\PA}:\mathcal P_{\PA}\to\mathcal B_{\PA}$ be the
+predicate equivalence of Lemma~\ref{lem:syntactic-total-category}.
+For each $n$, use the predicate presentation $C_n(z)$ and
+isomorphism $u_n:J_{\PA}(C_n)\xrightarrow{\cong}R_n^{\mathrm{syn}}$
+chosen in the derivation construction of
+Lemma~\ref{lem:syntactic-derivation-initiality}. Put
+\[
+ C_n(\N)=\{r\in\N:\N\models C_n(r)\},\qquad
+ \eta_n=G_{\N}(u_n):C_n(\N)\xrightarrow{\cong}
+                                      G_{\N}R_n^{\mathrm{syn}}.
+\]
+Both $\eta_n$ and its inverse are computable on their carriers,
+by the representing programs of $u_n$ and $u_n^{-1}$.
+At a numerical derivation node of arity $n$ with stored label $r$,
+replace that label by
+$\eta_n^{-1}\rho_n(\kappa_{m_n}^{-1}(r))\in C_n(\N)$ and
+recursively relabel its ordered children. The inverse replaces a
+syntactic label $s\in C_n(\N)$ by
+$\kappa_{m_n}\rho_n^{-1}(\eta_n(s))\in\widehat{R_n^{\mathrm{num}}}$.
+Induction on tree size, using the two rule
+comparison equations, proves that these procedures preserve validity
+and conclusions and are inverse on the valid derivation carriers.
+Restricting to sentence conclusions gives a computable bijection
+\[
+ \rho_T:|\mathrm{Prf}_T|\xrightarrow{\cong}G_{\N}P_T^{\mathrm{syn}},
+ \qquad
+ (G_{\N}c_T^{\mathrm{syn}})\rho_T=|c_T|.
+\]
+The sentence comparison is $G_{\N}S^{\mathrm{syn}}=|S|$.
+In particular, the image of $c_T$ has underlying carrier
+$\{s\in|S|:\N\models\operatorname{Prov}_T(s)\}$, for the
+predicate fixed in that section.
+
+Put $\mathscr S_{\mathrm{rec}}=\Split(\mathrm{Rec})$ and
+transport these objects and total maps along $Q$.
+Define
+\[
+ E=Q(V)=(\omega,1_\omega),\qquad
+ S_{\mathrm{rec}}=Q(S),\qquad
+ t_T=\ran(Q(c_T)):S_{\mathrm{rec}}\rightharpoonup S_{\mathrm{rec}}.
+\]
+The partial inverse of $Q(m_T)$ and
+Lemma~\ref{lem:range-regular-image} identify $t_T$ with the partial
+identity on the numerical image of $c_T$.
+Negation and numeral substitution are the morphisms
+\[
+ \nu_{\mathrm{num}}:S\to S,\quad
+    \nu_{\mathrm{num}}(s)=\operatorname{Neg}(s),\qquad
+ \theta_{\mathrm{num}}:V\to S,\quad
+    \theta_{\mathrm{num}}(n)=\Theta(n)
+\]
+in $\mathcal C_{\mathrm{rec}}$. Set
+$\nu=Q(\nu_{\mathrm{num}}):S_{\mathrm{rec}}\to S_{\mathrm{rec}}$
+and $\theta=Q(\theta_{\mathrm{num}}):E\to S_{\mathrm{rec}}$
+in $\mathscr S_{\mathrm{rec}}$.
+Because the syntax codes coincide, their underlying functions are
+the standard denotations of the negation and numeral-substitution
+morphisms of Lemma~\ref{lem:arithmetic-diagonal-representation}.

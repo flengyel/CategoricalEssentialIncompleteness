@@ -1,0 +1,81 @@
+\subsection{Numerical incompleteness}
+\label{subsec:numerical-incompleteness}
+
+Use the numerical realization and comparison functors of
+Section~\ref{subsec:numerical-realization}. Let
+$I:\mathrm{Rec}\to\mathscr S_{\mathrm{rec}}$ be the full restriction
+functor $I(X)=(X,1_X)$, $I(f)=f$. It preserves the restriction
+idempotents on every original object, their order, and their
+complements. Put $E=I(\omega)=Q(V)$.
+
+The denotation
+$\tau_{\mathrm{rec}}=\varphi_u:\omega\times\omega\rightharpoonup\omega$
+is a Turing morphism in $\mathrm{Rec}$ by the specialization identity
+of Lemma~\ref{lem:arithmetized-evaluation}. Let the isomorphism
+$\zeta:\omega\to\omega+\omega$ in $\mathrm{Rec}$ send $2m$ to
+the first tagged copy of $m$ and $2m+1$ to the second. Use the
+diagonal index $e_d$ and formulas $\alpha,\beta$ of
+Section~\ref{subsec:arithmetic-internal-comparison}, and put
+\[
+ A=\{n\in\N:\N\models\alpha(n)\}=D_0,\qquad
+ B=\{n\in\N:\N\models\beta(n)\}=D_1.
+\]
+The partial identities
+$a=1_A,b=1_B:\omega\rightharpoonup\omega$ belong to
+$\mathrm{Rec}$ and are the two diagonal restriction idempotents
+for $\tau_{\mathrm{rec}}$ and $\zeta$.
+
+The functor $J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ has
+$J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
+It preserves restrictions, ranges, zero maps, and the chosen
+products and coproducts by their numerical descriptions.
+The category $\Pfn$ is split and locally connected: restrictions
+to singletons detect the domain and value of a partial function.
+Partial injections have partial inverses, and inverse images
+preserve unions of partial-identity domains.
+For complementary restriction idempotents on $W\in\mathrm{Rec}$,
+let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
+subsets are recursive. The morphism $s:W\to W+W$ in $\mathrm{Rec}$
+given by
+\[
+ s(x)=
+ \begin{cases}
+  i_1(x),&x\in C,\\
+  i_0(x),&x\in C'
+ \end{cases}
+\]
+is total recursive; here $i_0,i_1:W\to W+W$ are the coproduct
+injections. Its image is the reversed conditional required by
+Theorem~\ref{thm:local-lifting}. That theorem gives inseparability
+of $a,b$ in $\mathrm{Rec}$. A recursive separator of $A,B$ would
+give complementary restriction idempotents separating $a,b$, so
+$A,B$ are recursively inseparable. Fullness of $I$ then gives
+inseparability of $I(a),I(b):E\rightharpoonup E$ in
+$\mathscr S_{\mathrm{rec}}$.
+
+For a c.e.\ arithmetic presentation $T$ containing the PA sentence
+axioms, use $S_{\mathrm{rec}},\nu,\theta,t_T$ from
+Section~\ref{subsec:numerical-realization}. The code comparison there
+identifies their underlying numerical functions and domains with
+the standard interpretations in
+Lemma~\ref{lem:arithmetic-diagonal-representation}. Applying that
+lemma at $\N$, with $\Gamma$ the chosen PA presentation, gives
+the first two inequalities below. Inclusion of the PA axioms in
+$T$ gives the third:
+\begin{equation}\label{eq:arithmetic-domain-inclusions}
+ I(a)\le\theta^*t_{\PA},\qquad
+ I(b)\le\theta^*\nu^*t_{\PA},\qquad t_{\PA}\le t_T.
+\end{equation}
+The first two are inequalities of restriction idempotents on $E$;
+the third is on $S_{\mathrm{rec}}$, all in
+$\mathscr S_{\mathrm{rec}}$.
+For consistent $T$, its sentence theorem set and refutation set
+are disjoint, so $t_T\nu^*t_T=0_{S_{\mathrm{rec}}}$.
+Joins in this splitting are unions of c.e.\ domains, and total
+inverse images preserve them. Corollary~\ref{cor:domain-incompleteness}
+therefore gives inseparability of $t_T,\nu^*t_T$ and
+\[
+ t_T\vee\nu^*t_T\ne1_{S_{\mathrm{rec}}}.
+\]
+This proves incompleteness for every consistent c.e.\ extension
+of PA in the numerical realization.

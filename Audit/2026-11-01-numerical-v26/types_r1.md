@@ -1,0 +1,36 @@
+# Numerical realization: explicit types and dependencies
+
+**Round 1: revision required.** I found no counterexample to Proposition 7.7. The present text does not yet meet the user's requirement that the categorical comparisons and universal-property proofs have explicit types and equations.
+
+The reviewed source is `tmp/numerical26/round1/08-essential-incompleteness-of-arithmetic.tex`, lines 285–488 (version 25, §7.4, printed pp.36–38). I checked the numerical object/program conventions in §5, the restriction-splitting definitions in §2, the syntactic syntax realization in §5, the standard interpretation and arithmetic definitions in §§6–7.1, and Appendix A's parameterized syntax and inference-functor definitions. This is a local technical review, not Lean verification.
+
+## Necessary corrections
+
+| Anchor | Finding | Required repair |
+| --- | --- | --- |
+| Lines 332–368, “The recursive numerical codings ... give the stated equivalence” | The equivalence is asserted without named object and morphism actions. The phrase does not specify which carrier is attached to a split object or how the identities and comparison isomorphisms are represented. | Define coded objects as pairs `(m,C⊆N^m)` and choose injective recursive tuple codings κ_m with recursive images and computable inverses. For m=0 use the singleton code, not an impossible bijection N^0≅N. Give functors Q:C_rec→Tot(Split Rec) and F in the reverse direction, object and arrow formulas, and coding/decoding natural isomorphisms. This is a substantial exposition/type omission, not an exhibited false equivalence. |
+| Lines 370–391, “These assignments respect composition by pullback” | The partial-map comparison gives a span-to-function rule, but its object action, morphism endpoint conventions, inverse hom assignment, restriction preservation, and full-faithfulness are suppressed. | Type the functor Q̃:Par(C_rec,Mono)→Split Rec. A span C←mB→gD goes to Q(g)μ_m, where μ_m:Q(C)⇀Q(B) is the computed inverse on the image. For a source partial function, take its c.e. domain to form the inverse span. Equal decoded graphs give an isomorphism of spans using the computable inverses of both monos; the pullback composite gives precisely the composite partial graph. State the restriction-span calculation. |
+| Lines 393–412, parameterized initiality | The relevant target algebra structure maps and fold equations are not displayed. List initiality is compressed to “in the same way.” | Declare x:X→P, y:Y→P in C_rec/P, and α:K_P(x,y)→(x,y). Name h_T:P×Tm→X and h_F:P×Fm→Y, state xh_T=π_P, yh_F=π_P and the algebra-morphism equation. The finite-tree evaluation proof must explicitly establish partial recursiveness, termination on valid inputs, and uniqueness for these types. Give the list algebra's base and step maps and its two fold equations. No global total extension of the operations is required. |
+| Lines 409–412, substitution identification | “Induction identifies them” gives no explicit interface with the previously constructed numerical free-variable, admissibility, and substitution functions. | Use the fixed syntax codes of §5, identify the numerical functions satisfying Appendix A's constructor equations, and invoke the just-proved uniqueness of folds. The PA-provable equations already established for those functions hold in N; this can be cited without repeating Appendix A's general construction or the complete syntactic proof. Distinguish the total failure-valued substitution map from its successful restriction to Adm. |
+| Lines 414–427, derivation initiality | The target inference algebra, source constructor algebra, conclusion map, and algebra-morphism equations are only described in prose. | Declare H_A:C_rec/Fm→C_rec/Fm, the algebra ((P_A,c_A),δ_A), and an arbitrary algebra ((Q,q),β). Construct u:P_A→Q and state qu=c_A and uδ_A=βH_A(u). Evaluation by finite trees supplies computability and termination on P_A; induction proves uniqueness. Preserve the distinction between full derivation carrier and its sentence pullback. |
+| Lines 442–488, application | The partial identities a,b are used without an explicit introduction as arrows of Rec. The passage from standard-model inequalities of Lemma 7.1 to inequalities in Split(Rec) is not stated as a comparison of the fixed numerical presentations. | Define a=1_A,b=1_B:ω⇀ω in Rec. State that the numerical syntax and ν,θ use the codes fixed in §5 and agree with the standard denotations used by Lemma 7.1. Equality and order in this numerical category are extensional, so the interpreted support inclusions give the displayed categorical inequalities. Type θ:I(ω)→S in the splitting. The earlier D-shorthand technically licenses N as a split object, but the explicit source is clearer. |
+
+The regularity proof is mathematically coherent: finite limits have c.e. carriers; surjections have computable descent by enumerating preimages; their pullbacks are surjective; image factorizations exist. It should name the descended map `d:D→Z` and give `de=h`. A regular epimorphism is surjective because its image monomorphism must be invertible, so stability of surjections establishes stability of all regular epimorphisms. Monomorphisms are injective by computable singleton points, and their inverse searches are partial recursive on the image. No additional choice of a uniformly computable enumeration of all possible objects is needed.
+
+## Exact type data for the repairs
+
+Let `S_rec=Split(Rec)` and `B_rec=Tot(S_rec)`. For `(m,C)∈C_rec`, put `Q(C)=(ω,1_{κ_m(C)})`. For `f:C→D`, the underlying numerical partial function of Q(f) is `κ_n f κ_m^{-1}`, with exact domain κ_m(C). For a split object `(X,e)`, put `F(X,e)=(1,γ_X(dom e))`; for a total split arrow f, use `γ_Y f γ_X^{-1}` on that carrier. The natural isomorphisms are tuple decoding `FQ(C)→C` and γ_X decoding `QF(X,e)→(X,e)`. All these comparison arrows are total relative to their displayed split/carrier objects.
+
+In the syntax proof, the pair of folds is an arrow
+
+`(h_T,h_F):((P×Tm,π_P),(P×Fm,π_P))→((X,x),(Y,y))`
+
+in `(C_rec/P)^2`. Its equation is `(h_T,h_F)ι_P=αK_P(h_T,h_F)`, where ι_P is the parameterized constructor structure. The proof may compute using finite numerical codes externally; the resulting arrows and equations belong to the named category. A proof of the recursion equations is not a set-level replacement of the categorical universal property, provided existence, source-domain totality, and categorical uniqueness are all established.
+
+For lists with target z:Z→P, the structure maps can be written β_0:P→Z and β_1:V×Z→Z, with zβ_0=1_P and zβ_1=zπ_Z. The unique l:P×List(V)→Z satisfies zl=π_P and the nil/cons equations. These equations give the full parameterized universal property.
+
+## Framework and scope
+
+The numerical realization necessarily uses external computable carriers and programs. This is the declared application of Appendix A, whose abstract categorical proof should remain unchanged. All passages between external presentations and categorical objects must go through the typed functors and coding maps above. No change to the theorem's hypotheses or conclusion is indicated by the findings.
+
+No manuscript file was edited by this audit. No new literature claim was checked or proposed. After the repairs, a final source/type check is needed to close these local findings.

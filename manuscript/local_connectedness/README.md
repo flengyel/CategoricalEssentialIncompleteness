@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 25, 1 November 2026.
+Version 26, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v25.pdf) ·
-[Source archive](../logical_consequence_v25_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v26.pdf) ·
+[Source archive](../logical_consequence_v26_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -11,20 +11,22 @@ Section 6 proves the soundness factorization for the standard code interpretatio
 and its ultrapowers; Section 7 applies the comparison through partial proof
 search. Section 7.2 constructs one indexed family of arithmetic theories and
 identifies its numeral fibers. Section 7.3 constructs a total morphism assigning
-an independent sentence to every consistent standard presentation. Sections 8 and 9
+an independent sentence to every consistent standard presentation. Section 7.4
+proves the numerical realization; Section 7.5 applies numerical incompleteness,
+and Section 7.6 treats numeral instances and theory extension. Sections 8 and 9
 contain the Miller and cosheaf applications.
 The faithful model family and numeral observations are in Appendix D.
 The introduction and abstract are reserved for the final revision.
 
-The [version 25 reviews](../../Audit/2026-11-01-split-v25/README.md)
-record the split of Sections 7.2 and 7.3 and the subsequent mathematical,
-writing, and type checks.
+The [version 26 reviews](../../Audit/2026-11-01-numerical-v26/README.md)
+record the numerical realization, the computable proof-code comparisons,
+and the mathematical, writing, and type checks of Sections 7.4 and 7.5.
 
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v25.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v25.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v26.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v26.tex).
 
 ## Build
 
@@ -55,6 +57,8 @@ sources, including the complete appendix and bibliography.
 | [sections/08-essential-incompleteness-of-arithmetic.tex](sections/08-essential-incompleteness-of-arithmetic.tex) | Essential incompleteness of arithmetic |
 | [sections/08a-uniform-theories.tex](sections/08a-uniform-theories.tex) | Indexed arithmetic theories and their numeral fibers |
 | [sections/08b-uniform-independent-sentences.tex](sections/08b-uniform-independent-sentences.tex) | Uniform independent sentences |
+| [sections/08c-numerical-realization.tex](sections/08c-numerical-realization.tex) | Numerical categories, syntax, substitution, and derivation initiality |
+| [sections/08d-numerical-incompleteness.tex](sections/08d-numerical-incompleteness.tex) | Numerical application of the incompleteness theorem |
 | [sections/09-three-point-space.tex](sections/09-three-point-space.tex) | A recursion category from a three-point space |
 | [appendices/a-syntax-and-theories.tex](appendices/a-syntax-and-theories.tex) | Appendix A: Syntax and deductively closed theories |
 | [appendices/b-three-point-cosheaves.tex](appendices/b-three-point-cosheaves.tex) | Appendix B: The three-point cosheaf construction |
