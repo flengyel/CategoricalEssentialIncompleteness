@@ -49,8 +49,14 @@ The category $\mathcal C_K$ is a prodominical recursion category with
 binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
 reflects zero morphisms, and $F(1_{\N})\ne0$. Total inverse images
 in its target preserve binary joins of restriction idempotents.
-For the Turing morphism and coproduct isomorphism constructed below,
-the specified pair is separated by complementary restriction idempotents in
+There are a Turing morphism
+$\tau_K:\N\times\N\rightharpoonup\N$ and an isomorphism
+$b:\N\to\N+\N$ for which the restriction idempotents
+\[
+ a_0=(b\tau_K\Delta_{\N})^*(1_{\N}+0_{\N}),\qquad
+ a_1=(b\tau_K\Delta_{\N})^*(0_{\N}+1_{\N})
+\]
+are separated by complementary restriction idempotents in
 $\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
 with disjoint restriction idempotents and no common upper bound in
 the restriction order, although finite joins of restriction idempotents
@@ -121,11 +127,8 @@ object of $\mathcal C_K$. Hence $\tau_K$ is a Turing morphism.
 
 The functor $F$ is faithful and preserves restrictions, zeros,
 ranges, binary restriction products, and coproducts. It also reflects
-zero morphisms. Its target $\Pfn$ is split and locally connected:
-restriction idempotents split through their subsets of definition,
-and partial identities on singletons detect partial functions.
-Partial injections have partial inverses, giving weak choice, and
-inverse images preserve unions. Also $F(1_{\N})\ne0$.
+zero morphisms. Total inverse images in $\Pfn$ preserve unions,
+and $F(1_{\N})\ne0$.
 
 Use the total recursive isomorphism
 \[

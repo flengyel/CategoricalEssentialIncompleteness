@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 28](manuscript/logical_consequence_and_essential_incompleteness_v28.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 29](manuscript/logical_consequence_and_essential_incompleteness_v29.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v28_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v29_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -30,11 +30,16 @@ and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
 record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
 
+The [version 29 review record](Audit/2026-11-01-prose-types-v29/README.md)
+records the independent hostile-referee and mathematical-writing checks of
+the preceding revision and the resulting local statement, typing and prose
+corrections.
+
 The [version 28 review record](Audit/2026-11-01-conditionals-v28/README.md)
 records the conditional criterion and the direct application proofs.
 Local connectedness remains a proved property of the cosheaf category.
 The separate note
-[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v1.pdf)
+[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v2.pdf)
 contains the general section and lifting criterion; its dated predecessor
 `LOCOct10f` is preserved in the same repository. The
 [version 27 review record](Audit/2026-11-01-numerical-consolidation-v27/README.md)

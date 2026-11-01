@@ -93,8 +93,7 @@ The identity cases follow from the same definitions.
 \subsection{Inseparable pairs under theory extension}
 
 \begin{corollary}\label{cor:pair}
-For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
-conditional hypothesis of Corollary~\ref{cor:source-conditionals}.
+Let $T\supseteq\PA$ be consistent.
 Fix $U=\omega$ and a Turing morphism
 $\tau:U\times U\rightharpoonup U$ in $S_T$.
 Choose an isomorphism $b_0:U\to U+U$ in $S_{\PA}$ and put
@@ -108,12 +107,13 @@ extension $T'\supseteq T$, their images under $Q_{T,T'}$ are the
 identically defined inseparable pair in $S_{T'}$.
 \end{corollary}
 \begin{proof}
-For every complementary pair in $S_T$, Lemma~\ref{lem:switch}
-constructs a single morphism whose image under each $F_M$ is the
-required conditional. Its image under $F_T$ is the corresponding
-conditional coordinatewise. Total inverse images preserve unions in
-each coordinate. Theorem~\ref{thm:faithful} supplies the range functor
-and $F_T(1_U)\ne0$, so Corollary~\ref{cor:source-conditionals} applies.
+By Lemma~\ref{lem:switch}, every complementary pair $c,c'$ on $U$
+admits a total morphism $\ell_c:U\to U+U$ with
+$\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+Theorem~\ref{thm:faithful} gives a range functor $F_T$ with
+$F_T(1_U)\ne0$, and total inverse images in $\mathcal D_T$ preserve
+binary joins coordinatewise. Corollary~\ref{cor:source-conditionals}
+therefore applies.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
 It is the identity on objects and surjective on each hom-set.
 Consequently it preserves a Turing morphism: a preimage of a

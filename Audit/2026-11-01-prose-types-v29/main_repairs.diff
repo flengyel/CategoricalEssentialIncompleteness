@@ -1,0 +1,218 @@
+--- v28/README.md
++++ v29/README.md
+@@ -1,8 +1,8 @@
+ # Logical consequence and essential incompleteness in recursion categories
+ 
+-Version 28, 1 November 2026.
++Version 29, 1 November 2026.
+ 
+-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v28.pdf) ·
++[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v29.pdf) ·
+ [Source archive](../logical_consequence_v28_source.zip)
+ 
+ Sections 3 and 4 prove the comparison theorem and its application to internally
+@@ -18,19 +18,20 @@
+ The faithful model family and numeral observations are in Appendix D.
+ The introduction and abstract are reserved for the final revision.
+ 
++The [version 29 reviews](../../Audit/2026-11-01-prose-types-v29/README.md)
++record the hostile-referee and mathematical-writing review of the version 28
++revision, the local corrections, and the checks of the corrected passages.
+ The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
+-record the direct conditional criterion and its uses in the applications.
+-The former local-connectedness criterion and its supporting arguments are
+-in the separate note
+-[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v1.pdf).
+-The dated source `LOCOct10f` is preserved with that note. The numerical
+-foundation consolidated in version 27 is unchanged.
++record the conditional criterion and its direct application proofs.
++The general section and lifting criterion is in the separate note
++[Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v2.pdf).
++The dated source `LOCOct10f` is preserved with that note.
+ 
+ Appendix A contains the full categorical construction of syntax, substitution,
+ and deductively closed theories. Its realizations are proved in the application
+ sections. The appendix is also available as a
+-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v28.pdf)
+-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v28.tex).
++[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v29.pdf)
++with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v29.tex).
+ 
+ ## Build
+ 
+--- v28/appendices/c-section-lifting.tex
++++ v29/appendices/c-section-lifting.tex
+@@ -49,8 +49,14 @@
+ binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
+ reflects zero morphisms, and $F(1_{\N})\ne0$. Total inverse images
+ in its target preserve binary joins of restriction idempotents.
+-For the Turing morphism and coproduct isomorphism constructed below,
+-the specified pair is separated by complementary restriction idempotents in
++There are a Turing morphism
++$\tau_K:\N\times\N\rightharpoonup\N$ and an isomorphism
++$b:\N\to\N+\N$ for which the restriction idempotents
++\[
++ a_0=(b\tau_K\Delta_{\N})^*(1_{\N}+0_{\N}),\qquad
++ a_1=(b\tau_K\Delta_{\N})^*(0_{\N}+1_{\N})
++\]
++are separated by complementary restriction idempotents in
+ $\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
+ with disjoint restriction idempotents and no common upper bound in
+ the restriction order, although finite joins of restriction idempotents
+@@ -121,11 +127,8 @@
+ 
+ The functor $F$ is faithful and preserves restrictions, zeros,
+ ranges, binary restriction products, and coproducts. It also reflects
+-zero morphisms. Its target $\Pfn$ is split and locally connected:
+-restriction idempotents split through their subsets of definition,
+-and partial identities on singletons detect partial functions.
+-Partial injections have partial inverses, giving weak choice, and
+-inverse images preserve unions. Also $F(1_{\N})\ne0$.
++zero morphisms. Total inverse images in $\Pfn$ preserve unions,
++and $F(1_{\N})\ne0$.
+ 
+ Use the total recursive isomorphism
+ \[
+--- v28/appendices/d-faithful-family.tex
++++ v29/appendices/d-faithful-family.tex
+@@ -93,8 +93,7 @@
+ \subsection{Inseparable pairs under theory extension}
+ 
+ \begin{corollary}\label{cor:pair}
+-For every consistent $T\supseteq\PA$, the functor $F_T$ satisfies the
+-conditional hypothesis of Corollary~\ref{cor:source-conditionals}.
++Let $T\supseteq\PA$ be consistent.
+ Fix $U=\omega$ and a Turing morphism
+ $\tau:U\times U\rightharpoonup U$ in $S_T$.
+ Choose an isomorphism $b_0:U\to U+U$ in $S_{\PA}$ and put
+@@ -108,12 +107,13 @@
+ identically defined inseparable pair in $S_{T'}$.
+ \end{corollary}
+ \begin{proof}
+-For every complementary pair in $S_T$, Lemma~\ref{lem:switch}
+-constructs a single morphism whose image under each $F_M$ is the
+-required conditional. Its image under $F_T$ is the corresponding
+-conditional coordinatewise. Total inverse images preserve unions in
+-each coordinate. Theorem~\ref{thm:faithful} supplies the range functor
+-and $F_T(1_U)\ne0$, so Corollary~\ref{cor:source-conditionals} applies.
++By Lemma~\ref{lem:switch}, every complementary pair $c,c'$ on $U$
++admits a total morphism $\ell_c:U\to U+U$ with
++$\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
++Theorem~\ref{thm:faithful} gives a range functor $F_T$ with
++$F_T(1_U)\ne0$, and total inverse images in $\mathcal D_T$ preserve
++binary joins coordinatewise. Corollary~\ref{cor:source-conditionals}
++therefore applies.
+ The functor $Q_{T,T'}$ preserves the operations defining the pair.
+ It is the identity on objects and surjective on each hom-set.
+ Consequently it preserves a Turing morphism: a preimage of a
+--- v28/preamble.tex
++++ v29/preamble.tex
+@@ -3,7 +3,7 @@
+ \usepackage[margin=1in]{geometry}
+ \usepackage{xurl,hyperref}
+ \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+-pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 28},pdfauthor={Florian Lengyel}}
++pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 29},pdfauthor={Florian Lengyel}}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{proposition}[theorem]{Proposition}
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -17,7 +17,7 @@
+ \title{Logical consequence and essential incompleteness\\
+ in recursion categories}
+ \author{Florian Lengyel}
+-\date{Version 28\\1 November 2026}
++\date{Version 29\\1 November 2026}
+ 
+ \newcommand{\Crec}{\mathcal C_{\mathrm{rec}}}
+ \newcommand{\Da}{\mathcal D_a}
+--- v28/sections/01-introduction.tex
++++ v29/sections/01-introduction.tex
+@@ -1,8 +1,8 @@
+ \section{Introduction}
+ 
+-Corollary~\ref{cor:source-conditionals} establishes recursive
+-inseparability in a recursion category using a range functor and
+-specified total morphisms that exchange the coproduct tags on
++Corollary~\ref{cor:source-conditionals} establishes inseparability of
++restriction idempotents in a recursion category using a range functor and
++specified total morphisms that agree with opposite coproduct injections on
+ complementary source domains. It follows from the comparison theorem,
+ which assumes a lift of the corresponding target conditional.
+ Total inverse images in the target preserve binary joins of
+@@ -77,16 +77,20 @@
+ language with a c.e.\ axiom set is incomplete
+ (Corollary~\ref{cor:cosheaf-essential-incompleteness}).
+ 
+-After the preliminaries, Section~\ref{sec:lifting} proves the general
+-criterion and its incompleteness corollary.
+-Section~\ref{sec:miller} gives the Miller application.
++After the preliminaries, Section~\ref{sec:lifting} proves the
++comparison theorem and the criterion using source conditionals.
++Section~\ref{sec:internal-theories} applies the comparison theorem
++to internal theories.
+ Section~\ref{sec:syntactic} constructs the syntactic recursion category
+-and its internal syntax and theories. Sections~\ref{sec:models}--\ref{sec:family}
+-construct the model functors and their section lifts. Sections~\ref{sec:arithmetic}
+-and~\ref{sec:cosheaves} give the arithmetic and cosheaf applications.
+-The appendices contain the cosheaf construction, the categorical
+-construction of syntax and deductively closed theories, and the
+-counterexample to inseparability without section lifting.
++and its internal syntax and theories, and Section~\ref{sec:models}
++constructs the interpretation functors and proves soundness.
++Sections~\ref{sec:arithmetic}, \ref{sec:miller}, and~\ref{sec:cosheaves}
++give the arithmetic, Miller, and cosheaf applications, respectively.
++Appendix~\ref{app:syntax-theories} constructs syntax and deductively
++closed theories categorically. The remaining appendices give the
++cosheaf construction, the counterexample to inseparability without
++section lifting, and the faithful model family and its behavior under
++theory extension.
+ 
+ \subsection{Related work}
+ 
+--- v28/sections/03-sections-and-inseparability.tex
++++ v29/sections/03-sections-and-inseparability.tex
+@@ -4,7 +4,7 @@
+ with two disjoint target domains. A lift of a partial morphism that
+ sends these domains into opposite coproduct summands produces a total
+ source morphism whose interpretation avoids both domains.
+-Total morphisms that exchange the coproduct tags on complementary
++Total morphisms that agree with opposite coproduct injections on complementary
+ source domains give an inseparability criterion.
+ 
+ For a coproduct $Y+Z$, let
+@@ -119,7 +119,7 @@
+ The morphisms $\varepsilon_0\ell_c$ and $i_0c'$ agree after
+ composition with both $c$ and $c'$. Hence they agree after
+ $[c,c']:U+U\rightharpoonup U$. Its range is
+-$c\vee c'=1_U$, so range agreement gives
++$c\vee c'=1_U$, so the agreement law for ranges gives
+ $\varepsilon_0\ell_c=i_0c'$.
+ The same argument gives $\varepsilon_1\ell_c=i_1c$.
+ Taking restrictions yields
+--- v28/sections/08d-numerical-incompleteness.tex
++++ v29/sections/08d-numerical-incompleteness.tex
+@@ -1,4 +1,5 @@
+ \subsection{Numerical incompleteness}
++\label{sec:numerical-incompleteness}
+ \label{subsec:numerical-incompleteness}
+ 
+ Use the numerical realization and comparison functors of
+--- v28/sections/09-three-point-space.tex
++++ v29/sections/09-three-point-space.tex
+@@ -336,10 +336,12 @@
+ restrictions, zeros, and ranges, since it sends each morphism to its
+ underlying partial function. It also preserves the chosen products
+ and coproducts, so it is a range functor.
+-Complementary c.e.\ domains in an object of $\mathcal K_2$ are recursive,
+-so their switching sections are total recursive maps and belong to
+-$\mathcal K_2$ by fullness. The same switching construction was used
+-in Section~\ref{sec:arithmetic}. With the componentwise coproduct
++For complementary restriction idempotents $c,c':W\rightharpoonup W$
++in $\mathcal K_2$, the construction in
++Section~\ref{sec:numerical-incompleteness} gives a total recursive
++morphism $\ell_c:W\to W+W$ with
++$\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
++It belongs to $\mathcal K_2$ by fullness. With the componentwise coproduct
+ identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
+ isomorphism in $\mathcal K_2$.
+ Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and total inverse
