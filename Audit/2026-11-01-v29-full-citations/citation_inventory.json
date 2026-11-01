@@ -1,0 +1,578 @@
+[
+  {
+    "key": "BauerHanson",
+    "bibliography": "A.~Bauer and J.~E. Hanson, \\emph{The Countable Reals},\n\\href{https://arxiv.org/abs/2404.01256v3}{arXiv:2404.01256v3}, 2026.",
+    "uses": [
+      {
+        "file": "sections/04-miller-sequences.tex",
+        "line": 36,
+        "locator": "Theorem~2.2",
+        "paragraph": "Miller's construction gives a sequence $a\\in Q$ with the following\nproperty: if an oracle program with index $d$ computes the same real $r\\in[0,1]$ from\nevery $p\\in P_a$, then\n\\begin{equation}\\label{eq:miller-property}\n a(d)=r.\n\\end{equation}\nSuch a sequence is called a \\emph{Miller sequence}\n\\cite[Theorem~2.2]{BauerHanson}.\nThe index equality is the strengthened conclusion stated after\n\\cite[Theorem~6.3]{Miller2004}; the formulation with binary\nrepresentations is given in\n\\cite[Section~2.1 and Theorem~2.2]{BauerHanson}.\nThe rational approximations produced by $d$ may depend on $p$,\nwhile the real they represent is fixed."
+      },
+      {
+        "file": "sections/04-miller-sequences.tex",
+        "line": 40,
+        "locator": "Section~2.1 and Theorem~2.2",
+        "paragraph": "Miller's construction gives a sequence $a\\in Q$ with the following\nproperty: if an oracle program with index $d$ computes the same real $r\\in[0,1]$ from\nevery $p\\in P_a$, then\n\\begin{equation}\\label{eq:miller-property}\n a(d)=r.\n\\end{equation}\nSuch a sequence is called a \\emph{Miller sequence}\n\\cite[Theorem~2.2]{BauerHanson}.\nThe index equality is the strengthened conclusion stated after\n\\cite[Theorem~6.3]{Miller2004}; the formulation with binary\nrepresentations is given in\n\\cite[Section~2.1 and Theorem~2.2]{BauerHanson}.\nThe rational approximations produced by $d$ may depend on $p$,\nwhile the real they represent is fixed."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 134,
+        "locator": null,
+        "paragraph": "Miller constructed a sequence that enumerates every real in $[0,1]$\ncomputable uniformly from its representations \\cite[Theorem~6.3]{Miller2004}.\nWe use the stronger index property stated immediately after that\ntheorem and recalled in Section~\\ref{sec:miller}.\nBauer and Hanson use this construction in a parameterized realizability\ntopos with countable Dedekind reals \\cite{BauerHanson}.\nSection~\\ref{sec:miller} uses their binary representations to construct a recursion category,\nprove inseparability of $L_a,R_a$, and obtain essential incompleteness\nfor a theory of real closed fields.\n"
+      }
+    ]
+  },
+  {
+    "key": "Bernardi",
+    "bibliography": "C.~Bernardi, \\emph{Precomplete equivalence relations in dominical\ncategories}, Proc. Amer. Math. Soc. \\textbf{98} (1986), 124--134.",
+    "uses": [
+      {
+        "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+        "line": 328,
+        "locator": "pp.~125--126",
+        "paragraph": "Bernardi's numerical argument uses a precomplete equivalence\nrelation $R$ on $\\N$: for every partial recursive function $f$\nthere is a total recursive function $g$ such that\n$f(n)\\mathord\\downarrow$ implies $f(n)\\,R\\,g(n)$.\nFor such a relation, distinct equivalence classes are recursively\ninseparable; consequently the same holds for disjoint nonempty\nunions of classes. The relation $\\equiv_{\\PA}$ on indices defined\nin \\eqref{eq:uniform} is one of his examples\n\\cite[pp.~125--126]{Bernardi}.\nThe argument above obtains $A,B$ from\nCorollary~\\ref{cor:source-conditionals} and uses finite PA-proofs to\nestablish $A\\subseteq P_T$ and $B\\subseteq N_T$.\n"
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 123,
+        "locator": "pp.~125--128",
+        "paragraph": "Di Paola and Heller proved recursive inseparability in dominical\nrecursion categories in which every morphism has a section\n\\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability\nresults from precomplete equivalence relations, including PA-provable\nequality of partial recursive functions among his examples\n\\cite[pp.~125--128]{Bernardi}.\nMontagna also obtained effectively inseparable pairs in his syntactic\ncategory $S$\n\\cite[Remark 3.1]{Montagna}."
+      }
+    ]
+  },
+  {
+    "key": "CockettHofstra",
+    "bibliography": "J.~R.~B. Cockett and P.~J.~W. Hofstra,\n\\emph{Introduction to Turing categories},\nAnn. Pure Appl. Logic \\textbf{156} (2008), 183--209.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 113,
+        "locator": null,
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      }
+    ]
+  },
+  {
+    "key": "CockettLack",
+    "bibliography": "J.~R.~B. Cockett and S.~Lack, \\emph{Restriction categories. I.\nCategories of partial maps}, Theoret. Comput. Sci. \\textbf{270}\n(2002), 223--259.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 603,
+        "locator": "Section 2.3.3",
+        "paragraph": "For a restriction category $\\mathcal R$, its restriction splitting\n$\\Split(\\mathcal R)$ has objects $(X,e)$, where $e=\\bar e$, and\nmorphisms $f:(X,e)\\rightharpoonup(Y,d)$ satisfying $f=dfe$.\nIts identity on $(X,e)$ is $e$; such a morphism is total when\n$\\bar f=e$. Write $\\Tot(\\Split(\\mathcal R))$ for the subcategory\nof total morphisms~\\cite[Section 2.3.3]{CockettLack}."
+      },
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 655,
+        "locator": "Section 3",
+        "paragraph": "The partial-map category $\\Par(\\mathcal D,\\Mono)$ has morphisms given\nby spans with monic left leg, composed by pullback\n\\cite[Section 3]{CockettLack}. Since $\\mathcal D$ is regular, it is a\nsplit restriction category with ranges\n\\cite[Theorem 4.5 and Section 4.11]{CGHRangeI}; its total subcategory\nis canonically isomorphic to $\\mathcal D$.\nThe sentence theory is represented in this category by\n\\[\n t_A=[S\\xleftarrow{m_A}T_{A,S}\\xrightarrow{m_A}S]:S\\rightharpoonup S,\n \\qquad m_A:T_{A,S}\\hookrightarrow S.\n\\]\nEvery monomorphism in $\\mathcal D$ has a partial inverse in this\npartial-map category. Lemma~\\ref{lem:range-regular-image} therefore\ngives $t_A=\\ran(c_{A,S})$.\nIf instead $\\mathcal D=\\Tot(\\Split(\\mathcal R))$ for a restriction\ncategory $\\mathcal R$ whose restriction splitting has ranges, require\n$m_A$ to have a partial inverse\n$r_A:S\\rightharpoonup T_{A,S}$ in $\\Split(\\mathcal R)$.\nThe same lemma gives\n\\[\n \\ran(c_{A,S})=m_A r_A=\\bar r_A.\n\\]\nThus the range represents the constructed sentence theory."
+      },
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 17,
+        "locator": null,
+        "paragraph": "Composition is written $gf=g\\circ f$, so $f$ is applied first.\nA \\emph{restriction category} is a category equipped with an assignment\nthat sends every morphism\n$f:X\\rightharpoonup Y$ to a morphism\n$\\bar f:X\\rightharpoonup X$ satisfying\n\\[\n f\\bar f=f,\\qquad\n \\bar f\\bar g=\\bar g\\bar f,\\qquad\n \\overline{g\\bar f}=\\bar g\\bar f,\\qquad\n \\bar h f=f\\overline{hf}.\n\\]\nIn the middle two equations $g:X\\rightharpoonup Z$; in the last,\n$h:Y\\rightharpoonup Z$ \\cite{CockettLack}.\nThe morphisms $\\bar f$ are idempotent and are called\n\\emph{restriction idempotents}, also called domains\n\\cite[Section~5]{Heller}.\nThe morphism $f$ is \\emph{total} when $\\bar f=1_X$.\nThe total morphisms form a subcategory, denoted by\n$\\operatorname{Tot}(\\mathcal C)$ for a restriction category $\\mathcal C$.\nA \\emph{restriction functor} $F:\\mathcal C\\to\\mathcal D$ between\nrestriction categories satisfies $F(\\bar f)=\\overline{F(f)}$ for every\nmorphism $f$. A \\emph{restriction equivalence} consists of restriction\nfunctors in both directions whose composites are naturally isomorphic\nto the respective identity functors."
+      },
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 70,
+        "locator": "Section~2.3.3",
+        "paragraph": "A restriction idempotent $e$ on $X$ \\emph{splits} if\n$e=mr$ for a total $m:A\\to X$ and $r:X\\rightharpoonup A$\nwith $rm=1_A$. The category is \\emph{split} when every restriction\nidempotent splits.\nFor a restriction category $\\mathcal C$, write\n$\\operatorname{Split}(\\mathcal C)$ for the category obtained from\n$\\mathcal C$ by splitting the restriction idempotents of $\\mathcal C$.\nCockett--Lack denote this category by $K_r(\\mathcal C)$\n\\cite[Section~2.3.3]{CockettLack}.\nThe objects of $\\operatorname{Split}(\\mathcal C)$ are pairs $(X,e)$, where $e$ is a\nrestriction idempotent on $X$, and morphisms\n$f:(X,e)\\rightharpoonup(Y,d)$ given by original morphisms\n$f:X\\rightharpoonup Y$ satisfying $f=dfe$.\nThe identity of $(X,e)$ is $e$, and $f$ is total there when\n$\\bar f=e$. Thus $(X,e)$ is the object through which $e$ splits."
+      },
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 84,
+        "locator": "Section~2.3.3, Proposition~2.26",
+        "paragraph": "The \\emph{Karoubi envelope} $\\operatorname{Kar}(\\mathcal C)$ has the\nsame description with arbitrary idempotents $e:X\\rightharpoonup X$\nin place of restriction idempotents. The restriction operation on\n$\\operatorname{Kar}(\\mathcal C)$ sends\n$f:(X,e)\\rightharpoonup(Y,d)$ to the morphism represented by $\\bar f e$.\nThis is the construction $K_E(\\mathcal C)$ of\n\\cite[Section~2.3.3, Proposition~2.26]{CockettLack} with $E$ the class\nof all idempotents."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 111,
+        "locator": null,
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      }
+    ]
+  },
+  {
+    "key": "CockettLackIII",
+    "bibliography": "J.~R.~B. Cockett and S.~Lack,\n\\emph{Restriction categories III: colimits, partial limits and extensivity},\nMath. Structures Comput. Sci. \\textbf{17} (2007), 775--817.",
+    "uses": [
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 104,
+        "locator": "Proposition 4.5",
+        "paragraph": "A \\emph{binary restriction product} $X\\times Y$ has total\nprojections $\\pi_1:X\\times Y\\to X$ and $\\pi_2:X\\times Y\\to Y$.\nFor morphisms $f:Z\\rightharpoonup X$ and $g:Z\\rightharpoonup Y$,\nthere is a unique $\\langle f,g\\rangle:Z\\rightharpoonup X\\times Y$\nwith\n\\[\n \\pi_1\\langle f,g\\rangle=f\\bar g,\\qquad\n \\pi_2\\langle f,g\\rangle=g\\bar f,\\qquad\n \\overline{\\langle f,g\\rangle}=\\bar f\\bar g.\n\\]\nProducts of morphisms are obtained by this pairing and the projections.\nThe total categorical diagonal is\n$\\Delta_X=\\langle1_X,1_X\\rangle:X\\to X\\times X$.\nA restriction category has a $P$-category structure if and only if\nit has binary restriction products\n\\cite[Proposition 4.5]{CockettLackIII}."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 116,
+        "locator": "Proposition 4.5",
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      }
+    ]
+  },
+  {
+    "key": "CurryCosheaves",
+    "bibliography": "J.~M. Curry, \\emph{Dualities between cellular sheaves and cosheaves},\nJ. Pure Appl. Algebra \\textbf{222} (2018), 966--993.\n\\href{https://doi.org/10.1016/j.jpaa.2017.06.001}\n{doi:10.1016/j.jpaa.2017.06.001}.",
+    "uses": [
+      {
+        "file": "sections/09-three-point-space.tex",
+        "line": 14,
+        "locator": "Definition 2.6",
+        "paragraph": "For a topological space $X$, let $\\mathcal O(X)$ be the category\nof open sets and inclusions. A \\emph{set-valued cosheaf} is a\ncovariant functor $C:\\mathcal O(X)\\to\\mathbf{Set}$ for which\nevery open cover $(O_\\lambda)_\\lambda$ of $O$ gives a coequalizer\n\\cite[Definition 2.6]{CurryCosheaves}\n\\[\n \\coprod_{\\lambda,\\mu} C(O_\\lambda\\cap O_\\mu)\n \\rightrightarrows \\coprod_\\lambda C(O_\\lambda)\n \\longrightarrow C(O).\n\\]\nThe two parallel maps are induced by the inclusions into the two\nmembers of the cover; the empty cover requires\n$C(\\varnothing)=\\varnothing$.\nThe \\emph{Sierpi\\'nski space} has two points and exactly three open\nsets: the empty set, one singleton, and the whole space."
+      }
+    ]
+  },
+  {
+    "key": "DPH",
+    "bibliography": "R.~A. Di Paola and A.~Heller, \\emph{Dominical categories:\nrecursion theory without elements}, J. Symbolic Logic\n\\textbf{52} (1987), 594--635.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 99,
+        "locator": "pp.~594--595",
+        "paragraph": "Di Paola and Heller proposed inseparability of theorems and refutable\nsentences as part of a categorical formulation of incompleteness\n\\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence\ntheorem for recursion categories \\cite[Sections 8--9]{Heller}.\nDi Paola and Montagna's syntactic examples led to the question of\nextending that theorem beyond locally connected sources \\cite{DPM}.\nLengyel proved existence theorems using faithful iteration functors\n\\cite{Lengyel2004,Corrections}. The present criterion concerns\ninseparability in a source already equipped with a Turing morphism."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 108,
+        "locator": null,
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 120,
+        "locator": "Theorem 8.15",
+        "paragraph": "Di Paola and Heller proved recursive inseparability in dominical\nrecursion categories in which every morphism has a section\n\\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability\nresults from precomplete equivalence relations, including PA-provable\nequality of partial recursive functions among his examples\n\\cite[pp.~125--128]{Bernardi}.\nMontagna also obtained effectively inseparable pairs in his syntactic\ncategory $S$\n\\cite[Remark 3.1]{Montagna}."
+      }
+    ]
+  },
+  {
+    "key": "DPM",
+    "bibliography": "R.~A. Di Paola and F.~Montagna, \\emph{Some properties of the syntactic\n$p$-recursion categories generated by consistent, recursively enumerable\nextensions of Peano arithmetic}, J. Symbolic Logic \\textbf{56} (1991),\n643--660.",
+    "uses": [
+      {
+        "file": "appendices/d-faithful-family.tex",
+        "line": 60,
+        "locator": "Corollary 4.4, pp.~657--658",
+        "paragraph": "For consistent computably enumerable $T\\supseteq\\PA$, the source $S_T$\nis not locally connected \\cite[Corollary 4.4, pp.~657--658]{DPM}.\nThe connected restriction idempotents used in the preceding proof\nbelong to $\\mathcal D_T$ and need not be images of source restriction\nidempotents."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 47,
+        "locator": "p.~644",
+        "paragraph": "Use the deterministic computation coding for Kleene's trace\npredicate as in \\cite[p.~115, Note~1]{Montagna}.\nLet $e,x,t$ range over $\\N$, and write\n$\\mathsf{Tr}(e,x,t)$ for the primitive-recursive predicate\nthat $t$ is a halting computation trace with index $e$ and input\n$x$, and let $\\mathsf{out}:\\N\\to\\N$ be the primitive-recursive\noutput-extraction function. Put\n\\[\n G(e,x,y)\\equiv\n \\exists t\\,\\bigl(\\mathsf{Tr}(e,x,t)\\land\\mathsf{out}(t)=y\\bigr),\n \\qquad G_e(x,y)=G(\\bar e,x,y).\n\\]\nPrimitive-recursive symbols abbreviate their defining formulas in\nPA, as in \\cite[p.~644]{DPM}; the expanded graph formula is $\\Sigma_1$.\nFor $X,Y\\in\\mathsf O$, let $\\mathcal I(X,Y)=\\N$.\nAn index $e\\in\\mathcal I(X,Y)$ is interpreted using\n$\\gamma_X$ for inputs and $\\gamma_Y$ for outputs."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 114,
+        "locator": null,
+        "paragraph": "Montagna's objects are the sets generated from $\\N$ by\nCartesian products and the displayed disjoint unions\n\\cite[p.~105]{Montagna}. Let $S_T^{\\mathrm{set}}$ denote that\npresentation of the unprimed category, using the computation\nformulas and the induced numerical codings fixed above\n\\cite{Montagna,DPM}. There is a functor\n\\[\n \\Pi_T:S_T\\longrightarrow S_T^{\\mathrm{set}},\\qquad\n \\Pi_T(X)=|X|,\\qquad \\Pi_T([e]_T)=[e]_T^{\\mathrm{set}}.\n\\]\nEvery object of $S_T^{\\mathrm{set}}$ is $|X|$ for a term\n$X\\in\\mathsf O$, and the map on each hom-set is a bijection\nbecause both presentations use \\eqref{eq:uniform} with the same\nnumerical codings. Thus $\\Pi_T$ is an equivalence. For $T=\\PA$,\nthe target is Montagna's unprimed category $S$ with these choices\nof computation formulas and codings."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 133,
+        "locator": null,
+        "paragraph": "The pointwise relation used in the primed systems identifies\n$e,f\\in\\mathcal I(X,Y)$ when, for every standard input code $n$,\n\\[\n T\\vdash\\forall y\\,\n   \\bigl(G_e(\\bar n,y)\\leftrightarrow G_f(\\bar n,y)\\bigr).\n\\]\nMontagna's $S'$ is the case\n$T=\\PA$ of Di Paola and Montagna's $S'_T$ \\cite{Montagna,DPM}.\n\\emph{Pointwise provable equality and the failure of composition}\n\\cite[Corollary 2]{Composition} proves that the proposed composition\nis not independent of representatives for any consistent c.e.\\\nextension $T$ of $\\PA$. Thus these primed systems do not define\ncategories with that composition."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 46,
+        "locator": null,
+        "paragraph": "We also apply the criterion to the syntactic recursion categories of\nMontagna and Di Paola--Montagna \\cite{Montagna,DPM}.\nFor a consistent computably enumerable (c.e.)\nextension $T$ of Peano arithmetic ($\\PA$), the morphisms of $S_T$ are\nequivalence classes of indices of partial recursive functions. Two\nindices are identified when $T$ proves the universal closure of the\nequivalence of their graph formulas. These categories are not locally\nconnected \\cite[Corollary 4.4]{DPM}. Interpretation in all models of\n$T$ with carrier $\\N$ gives a faithful range functor into a locally\nconnected product of partial-map categories. Partial recursive functions\nselecting between predicates proved complementary in $T$ represent the\nrequired section lifts.\nThe construction commutes with theory extension.\nThe total restriction splitting of $S_T$ also realizes the\nfirst-order syntax and theory construction of\nAppendix~\\ref{app:syntax-theories}\n(Theorem~\\ref{thm:syntactic-generated-theory}).\nIts universal properties use $T$-provable graph equality."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 52,
+        "locator": "Corollary 4.4",
+        "paragraph": "We also apply the criterion to the syntactic recursion categories of\nMontagna and Di Paola--Montagna \\cite{Montagna,DPM}.\nFor a consistent computably enumerable (c.e.)\nextension $T$ of Peano arithmetic ($\\PA$), the morphisms of $S_T$ are\nequivalence classes of indices of partial recursive functions. Two\nindices are identified when $T$ proves the universal closure of the\nequivalence of their graph formulas. These categories are not locally\nconnected \\cite[Corollary 4.4]{DPM}. Interpretation in all models of\n$T$ with carrier $\\N$ gives a faithful range functor into a locally\nconnected product of partial-map categories. Partial recursive functions\nselecting between predicates proved complementary in $T$ represent the\nrequired section lifts.\nThe construction commutes with theory extension.\nThe total restriction splitting of $S_T$ also realizes the\nfirst-order syntax and theory construction of\nAppendix~\\ref{app:syntax-theories}\n(Theorem~\\ref{thm:syntactic-generated-theory}).\nIts universal properties use $T$-provable graph equality."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 102,
+        "locator": null,
+        "paragraph": "Di Paola and Heller proposed inseparability of theorems and refutable\nsentences as part of a categorical formulation of incompleteness\n\\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence\ntheorem for recursion categories \\cite[Sections 8--9]{Heller}.\nDi Paola and Montagna's syntactic examples led to the question of\nextending that theorem beyond locally connected sources \\cite{DPM}.\nLengyel proved existence theorems using faithful iteration functors\n\\cite{Lengyel2004,Corrections}. The present criterion concerns\ninseparability in a source already equipped with a Turing morphism."
+      }
+    ]
+  },
+  {
+    "key": "Heller",
+    "bibliography": "A.~Heller, \\emph{An existence theorem for recursion categories},\nJ. Symbolic Logic \\textbf{55} (1990), 1252--1268.",
+    "uses": [
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 20,
+        "locator": "Section~5",
+        "paragraph": "Composition is written $gf=g\\circ f$, so $f$ is applied first.\nA \\emph{restriction category} is a category equipped with an assignment\nthat sends every morphism\n$f:X\\rightharpoonup Y$ to a morphism\n$\\bar f:X\\rightharpoonup X$ satisfying\n\\[\n f\\bar f=f,\\qquad\n \\bar f\\bar g=\\bar g\\bar f,\\qquad\n \\overline{g\\bar f}=\\bar g\\bar f,\\qquad\n \\bar h f=f\\overline{hf}.\n\\]\nIn the middle two equations $g:X\\rightharpoonup Z$; in the last,\n$h:Y\\rightharpoonup Z$ \\cite{CockettLack}.\nThe morphisms $\\bar f$ are idempotent and are called\n\\emph{restriction idempotents}, also called domains\n\\cite[Section~5]{Heller}.\nThe morphism $f$ is \\emph{total} when $\\bar f=1_X$.\nThe total morphisms form a subcategory, denoted by\n$\\operatorname{Tot}(\\mathcal C)$ for a restriction category $\\mathcal C$.\nA \\emph{restriction functor} $F:\\mathcal C\\to\\mathcal D$ between\nrestriction categories satisfies $F(\\bar f)=\\overline{F(f)}$ for every\nmorphism $f$. A \\emph{restriction equivalence} consists of restriction\nfunctors in both directions whose composites are naturally isomorphic\nto the respective identity functors."
+      },
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 50,
+        "locator": "Section 6",
+        "paragraph": "For $f:X\\rightharpoonup Y$ and a restriction idempotent $a$ on $Y$,\nthe \\emph{inverse image} of $a$ is the restriction idempotent\n$f^*a=\\overline{af}$ on $X$.\nA restriction idempotent $r$ on $Y$ \\emph{receives} $f$ when $rf=f$\n\\cite[Section 6]{Heller}.\nThe \\emph{range} $\\ran(f)$ is the least restriction idempotent receiving $f$;\nwe require the agreement law\n\\[\n gf=hf\\quad\\Longrightarrow\\quad\n g\\ran(f)=h\\ran(f)\n \\qquad(g,h:Y\\rightharpoonup Z).\n\\]\nFor an ordinary partial function $f$, the restriction idempotent\n$\\bar f$ and the range $\\ran(f)$ are the partial identities on its\ndomain of definition and image, respectively."
+      },
+      {
+        "file": "sections/02-categorical-preliminaries.tex",
+        "line": 165,
+        "locator": "Section 9",
+        "paragraph": "A \\emph{Turing morphism} on $U$ is a morphism\n$\\tau:U\\times U\\rightharpoonup U$ such that, for every object $X$\nand every $f:X\\times U\\rightharpoonup U$, there is a total\nparameter map $r:X\\to U$ satisfying\n\\[\n f=\\tau(r\\times1_U).\n\\]\nA \\emph{recursion category} here is a prodominical isotypical\ncategory with binary restriction products and a Turing morphism,\nas in \\cite[Section 9]{Heller}."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 100,
+        "locator": "Sections 8--9",
+        "paragraph": "Di Paola and Heller proposed inseparability of theorems and refutable\nsentences as part of a categorical formulation of incompleteness\n\\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence\ntheorem for recursion categories \\cite[Sections 8--9]{Heller}.\nDi Paola and Montagna's syntactic examples led to the question of\nextending that theorem beyond locally connected sources \\cite{DPM}.\nLengyel proved existence theorems using faithful iteration functors\n\\cite{Lengyel2004,Corrections}. The present criterion concerns\ninseparability in a source already equipped with a Turing morphism."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 110,
+        "locator": "Section 5",
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      },
+      {
+        "file": "sections/09-three-point-space.tex",
+        "line": 119,
+        "locator": "Section 3",
+        "paragraph": "Define an object $V:J\\to\\mathcal C_{\\mathrm{rec}}$ of $\\mathcal E$\nby the following objects $V_j=V(j)$ and morphisms\n$r_i^V=V(0\\to i)$:\n\\begin{equation}\\label{eq:universal-fork}\n \\begin{gathered}\n V_0=\\N^4,\\qquad V_1=V_2=\\N^2,\\\\\n r_1^V:V_0\\to V_1,\\qquad r_1^V(k,z,a,b)=(k,a),\\\\\n r_2^V:V_0\\to V_2,\\qquad r_2^V(k,z,a,b)=(k,b).\n \\end{gathered}\n\\end{equation}\nWe regard $V$ also as an object of $\\mathcal A$, whose objects\nare those of $\\mathcal E$.\nFor an object $A=(m,A_0)$ of $\\mathcal C_{\\mathrm{rec}}$, put\n$m(A)=m$. Thus $|A|\\subseteq\\N^{m(A)}$,\n$m(V_0)=4$, and $m(V_1)=m(V_2)=2$.\nFix recursive numerical encodings of nonempty finite sequences of tuples,\n\\[\n \\operatorname{code}_m:\n \\coprod_{n\\ge1}(\\N^m)^n\\xrightarrow{\\cong}W_m\\subseteq\\N\n \\qquad(m\\ge0),\n\\]\nwhere each $W_m$ is recursive and the length and entry operations\nare recursive. For an object $A$ of $\\mathcal C_{\\mathrm{rec}}$, put\n\\[\n A^\\#=\\{\\operatorname{code}_{m(A)}(a_1,\\ldots,a_n):\n                 n\\ge1,\\ a_1,\\ldots,a_n\\in A\\}\\subseteq W_{m(A)}.\n\\]\nThis is a c.e.\\ numerical carrier. Let $V^\\#$ have components\n$(V^\\#)_j=(V_j)^\\#$.\nIts map $(V^\\#)(0\\to i):(V_0)^\\#\\to(V_i)^\\#$ decodes a sequence,\napplies $r_i^V$ to each entry, and encodes the resulting sequence,\nfor $i=1,2$.\nChoose isomorphisms in $\\mathcal E$\n$V\\cong V\\times V$, $V\\cong V+V$, and $V\\cong V^\\#$.\nTogether with their inverses, these form a \\emph{frame} at $V$\n\\cite[Section 3]{Heller}.\nLet $\\mathscr R_X$ denote the full subcategory of $\\mathcal A$\non the objects obtained from $V$ by finitely many applications of\nthe chosen binary restriction products, binary coproducts, and\nnonempty-word formation.\nThe isomorphisms, constructed in Lemma~\\ref{lem:fork-frames}, make\n$\\mathscr R_X$ isotypical."
+      }
+    ]
+  },
+  {
+    "key": "Lengyel2004",
+    "bibliography": "F.~Lengyel, \\emph{More existence theorems for recursion categories},\nAnn. Pure Appl. Logic \\textbf{125} (2004), 1--41.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 104,
+        "locator": null,
+        "paragraph": "Di Paola and Heller proposed inseparability of theorems and refutable\nsentences as part of a categorical formulation of incompleteness\n\\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence\ntheorem for recursion categories \\cite[Sections 8--9]{Heller}.\nDi Paola and Montagna's syntactic examples led to the question of\nextending that theorem beyond locally connected sources \\cite{DPM}.\nLengyel proved existence theorems using faithful iteration functors\n\\cite{Lengyel2004,Corrections}. The present criterion concerns\ninseparability in a source already equipped with a Turing morphism."
+      }
+    ]
+  },
+  {
+    "key": "Corrections",
+    "bibliography": "F.~Lengyel, \\emph{Corrections to More existence theorems for recursion\ncategories}, version 10, 20 October 2026,\n\\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 104,
+        "locator": null,
+        "paragraph": "Di Paola and Heller proposed inseparability of theorems and refutable\nsentences as part of a categorical formulation of incompleteness\n\\cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence\ntheorem for recursion categories \\cite[Sections 8--9]{Heller}.\nDi Paola and Montagna's syntactic examples led to the question of\nextending that theorem beyond locally connected sources \\cite{DPM}.\nLengyel proved existence theorems using faithful iteration functors\n\\cite{Lengyel2004,Corrections}. The present criterion concerns\ninseparability in a source already equipped with a Turing morphism."
+      }
+    ]
+  },
+  {
+    "key": "Composition",
+    "bibliography": "F.~Lengyel, \\emph{Pointwise provable equality and the failure of\ncomposition}, 2026,\n\\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.",
+    "uses": [
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 135,
+        "locator": "Corollary 2",
+        "paragraph": "The pointwise relation used in the primed systems identifies\n$e,f\\in\\mathcal I(X,Y)$ when, for every standard input code $n$,\n\\[\n T\\vdash\\forall y\\,\n   \\bigl(G_e(\\bar n,y)\\leftrightarrow G_f(\\bar n,y)\\bigr).\n\\]\nMontagna's $S'$ is the case\n$T=\\PA$ of Di Paola and Montagna's $S'_T$ \\cite{Montagna,DPM}.\n\\emph{Pointwise provable equality and the failure of composition}\n\\cite[Corollary 2]{Composition} proves that the proposed composition\nis not independent of representatives for any consistent c.e.\\\nextension $T$ of $\\PA$. Thus these primed systems do not define\ncategories with that composition."
+      }
+    ]
+  },
+  {
+    "key": "Miller2004",
+    "bibliography": "J.~S. Miller, \\emph{Degrees of unsolvability of continuous functions},\nJ. Symbolic Logic \\textbf{69} (2004), no.~2, 555--584.\n\\href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.",
+    "uses": [
+      {
+        "file": "sections/04-miller-sequences.tex",
+        "line": 38,
+        "locator": "Theorem~6.3",
+        "paragraph": "Miller's construction gives a sequence $a\\in Q$ with the following\nproperty: if an oracle program with index $d$ computes the same real $r\\in[0,1]$ from\nevery $p\\in P_a$, then\n\\begin{equation}\\label{eq:miller-property}\n a(d)=r.\n\\end{equation}\nSuch a sequence is called a \\emph{Miller sequence}\n\\cite[Theorem~2.2]{BauerHanson}.\nThe index equality is the strengthened conclusion stated after\n\\cite[Theorem~6.3]{Miller2004}; the formulation with binary\nrepresentations is given in\n\\cite[Section~2.1 and Theorem~2.2]{BauerHanson}.\nThe rational approximations produced by $d$ may depend on $p$,\nwhile the real they represent is fixed."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 19,
+        "locator": null,
+        "paragraph": "The principal application uses a sequence $a:\\N\\to[0,1]$ constructed\nby Miller \\cite{Miller2004}. We form a category $\\mathcal E_a$ whose\nmorphisms are partial numerical functions computed by one oracle program\nwith the same domain and values for every binary representation of $a$.\nCompactness of the set of representations permits the construction of a Turing\nmorphism in this category. The index sets\n\\[\n L_a=\\{n:a(n)<1/2\\},\\qquad R_a=\\{n:a(n)>1/2\\}\n\\]\nare semidecidable in $\\mathcal E_a$. We construct an ordinary recursive\nmap reducing the diagonal pair of Corollary~\\ref{cor:source-conditionals} to\n$L_a,R_a$, and hence prove their inseparability in $\\mathcal E_a$.\nEach fixed binary representation $p$ computes a separator of $L_a$\nand $R_a$. The inclusion into the recursion category of\n$p$-partial recursive functions is a faithful range functor preserving\nrestriction products and sends this inseparable pair to a separable pair."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 130,
+        "locator": "Theorem~6.3",
+        "paragraph": "Miller constructed a sequence that enumerates every real in $[0,1]$\ncomputable uniformly from its representations \\cite[Theorem~6.3]{Miller2004}.\nWe use the stronger index property stated immediately after that\ntheorem and recalled in Section~\\ref{sec:miller}.\nBauer and Hanson use this construction in a parameterized realizability\ntopos with countable Dedekind reals \\cite{BauerHanson}.\nSection~\\ref{sec:miller} uses their binary representations to construct a recursion category,\nprove inseparability of $L_a,R_a$, and obtain essential incompleteness\nfor a theory of real closed fields.\n"
+      }
+    ]
+  },
+  {
+    "key": "Montagna",
+    "bibliography": "F.~Montagna, \\emph{``Pathologies'' in two syntactic categories of partial\nmaps}, Notre Dame J. Formal Logic \\textbf{30} (1989), 105--116.",
+    "uses": [
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 35,
+        "locator": "p.~115, Note~1",
+        "paragraph": "Use the deterministic computation coding for Kleene's trace\npredicate as in \\cite[p.~115, Note~1]{Montagna}.\nLet $e,x,t$ range over $\\N$, and write\n$\\mathsf{Tr}(e,x,t)$ for the primitive-recursive predicate\nthat $t$ is a halting computation trace with index $e$ and input\n$x$, and let $\\mathsf{out}:\\N\\to\\N$ be the primitive-recursive\noutput-extraction function. Put\n\\[\n G(e,x,y)\\equiv\n \\exists t\\,\\bigl(\\mathsf{Tr}(e,x,t)\\land\\mathsf{out}(t)=y\\bigr),\n \\qquad G_e(x,y)=G(\\bar e,x,y).\n\\]\nPrimitive-recursive symbols abbreviate their defining formulas in\nPA, as in \\cite[p.~644]{DPM}; the expanded graph formula is $\\Sigma_1$.\nFor $X,Y\\in\\mathsf O$, let $\\mathcal I(X,Y)=\\N$.\nAn index $e\\in\\mathcal I(X,Y)$ is interpreted using\n$\\gamma_X$ for inputs and $\\gamma_Y$ for outputs."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 83,
+        "locator": "p.~108; p.~115, Note~1",
+        "paragraph": "\\begin{lemma}\\label{lem:arithmetized-evaluation}\nFor this computation coding, there are an index $u\\in\\N$ and\nprimitive-recursive functions\n$\\operatorname{s},\\operatorname{comp}:\\N^2\\to\\N$\nsuch that PA proves functionality\nof $G$ and the universal closures of\n\\begin{align}\n G_u(\\langle e,x\\rangle,y)\n   &\\leftrightarrow G(e,x,y),\n   \\label{eq:arithmetized-universal}\\\\\n G(\\operatorname{s}(e,a),x,y)\n   &\\leftrightarrow G(e,\\langle a,x\\rangle,y),\n   \\label{eq:arithmetized-specialization}\\\\\n G(\\operatorname{comp}(f,e),x,z)\n   &\\leftrightarrow\n     \\exists y\\,\\bigl(G(e,x,y)\\land G(f,y,z)\\bigr).\n   \\label{eq:composition}\n\\end{align}\nRegard $u$ as an element of $\\mathcal I(\\omega\\times\\omega,\\omega)$.\nFor each fixed $e\\in\\N$, there is an index\n$k_e\\in\\N$ for which PA proves\n\\[\n \\forall a\\forall p\\,\n \\bigl(G_{k_e}(a,p)\\leftrightarrow\n       p=\\operatorname{s}(\\bar e,a)\\bigr).\n\\]\nIn particular, PA proves $\\forall a\\exists!p\\,G_{k_e}(a,p)$.\n\\end{lemma}\n\\begin{proof}\nThese are the formalized enumeration, composition, and\nparameterization properties of the computation coding used in\n\\cite[p.~108; p.~115, Note~1]{Montagna}.\nThe pairing can be replaced by the pairing fixed above, using\nthe PA-provable inverse equations for the two numerical codings.\nFor $k_e$, use an index for the primitive-recursive function\n$a\\mapsto\\operatorname{s}(e,a)$; its defining equation and\ntotality are provable in PA.\n\\end{proof}"
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 111,
+        "locator": "p.~105",
+        "paragraph": "Montagna's objects are the sets generated from $\\N$ by\nCartesian products and the displayed disjoint unions\n\\cite[p.~105]{Montagna}. Let $S_T^{\\mathrm{set}}$ denote that\npresentation of the unprimed category, using the computation\nformulas and the induced numerical codings fixed above\n\\cite{Montagna,DPM}. There is a functor\n\\[\n \\Pi_T:S_T\\longrightarrow S_T^{\\mathrm{set}},\\qquad\n \\Pi_T(X)=|X|,\\qquad \\Pi_T([e]_T)=[e]_T^{\\mathrm{set}}.\n\\]\nEvery object of $S_T^{\\mathrm{set}}$ is $|X|$ for a term\n$X\\in\\mathsf O$, and the map on each hom-set is a bijection\nbecause both presentations use \\eqref{eq:uniform} with the same\nnumerical codings. Thus $\\Pi_T$ is an equivalence. For $T=\\PA$,\nthe target is Montagna's unprimed category $S$ with these choices\nof computation formulas and codings."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 114,
+        "locator": null,
+        "paragraph": "Montagna's objects are the sets generated from $\\N$ by\nCartesian products and the displayed disjoint unions\n\\cite[p.~105]{Montagna}. Let $S_T^{\\mathrm{set}}$ denote that\npresentation of the unprimed category, using the computation\nformulas and the induced numerical codings fixed above\n\\cite{Montagna,DPM}. There is a functor\n\\[\n \\Pi_T:S_T\\longrightarrow S_T^{\\mathrm{set}},\\qquad\n \\Pi_T(X)=|X|,\\qquad \\Pi_T([e]_T)=[e]_T^{\\mathrm{set}}.\n\\]\nEvery object of $S_T^{\\mathrm{set}}$ is $|X|$ for a term\n$X\\in\\mathsf O$, and the map on each hom-set is a bijection\nbecause both presentations use \\eqref{eq:uniform} with the same\nnumerical codings. Thus $\\Pi_T$ is an equivalence. For $T=\\PA$,\nthe target is Montagna's unprimed category $S$ with these choices\nof computation formulas and codings."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 133,
+        "locator": null,
+        "paragraph": "The pointwise relation used in the primed systems identifies\n$e,f\\in\\mathcal I(X,Y)$ when, for every standard input code $n$,\n\\[\n T\\vdash\\forall y\\,\n   \\bigl(G_e(\\bar n,y)\\leftrightarrow G_f(\\bar n,y)\\bigr).\n\\]\nMontagna's $S'$ is the case\n$T=\\PA$ of Di Paola and Montagna's $S'_T$ \\cite{Montagna,DPM}.\n\\emph{Pointwise provable equality and the failure of composition}\n\\cite[Corollary 2]{Composition} proves that the proposed composition\nis not independent of representatives for any consistent c.e.\\\nextension $T$ of $\\PA$. Thus these primed systems do not define\ncategories with that composition."
+      },
+      {
+        "file": "sections/05-syntactic-recursion-category.tex",
+        "line": 149,
+        "locator": "p.~109, equation~$(*)$",
+        "paragraph": "For $X\\in\\mathsf O$ and a $\\Sigma_1$ arithmetic formula $C(x)$,\nwhere $x$ is the numerical code variable for $X$, choose\na witness-search index $j_C$ for which\n\\[\n \\PA\\vdash\\forall x\\forall y\\,\n \\bigl(G_{j_C}(x,y)\\leftrightarrow(C(x)\\land y=x)\\bigr).\n\\]\nSuch an index searches increasing bounds for a witness to $C(x)$\nand returns $x$ when a witness is found\n\\cite[p.~109, equation~$(*)$]{Montagna}. Write\n$[C]_T=[j_C]_T:X\\rightharpoonup X$.\nFor two such formulas,\n\\begin{equation}\\label{eq:domain-order}\n [C]_T\\le[D]_T\n \\quad\\Longleftrightarrow\\quad\n T\\vdash\\forall x\\,(C(x)\\longrightarrow D(x)).\n\\end{equation}\nConjunction and disjunction give meets and joins of restriction\nidempotents. For $[e]_T:X\\rightharpoonup Y$, its restriction\n$\\overline{[e]_T}$ and range $\\ran([e]_T)$ are represented respectively by\n\\[\n \\exists y\\,G_e(x,y),\\qquad\n R_e(y):=\\exists x\\,G_e(x,y).\n\\]\nFor a restriction idempotent $[C]_T:Y\\rightharpoonup Y$, the\nequation $[C]_T[e]_T=[e]_T$ holds precisely when\n$T$ proves $G_e(x,y)\\to C(y)$ universally, equivalently when\n$T$ proves $R_e(y)\\to C(y)$ universally.\nWrite $g=[p]_T,h=[q]_T:Y\\rightharpoonup Z$.\nIf $g[e]_T=h[e]_T$, the\ncomposition equation and PA-provable functionality of $G_e$ give\n\\[\n T\\vdash\\forall y\\forall z\\,\n \\bigl(R_e(y)\\longrightarrow\n       (G_p(y,z)\\leftrightarrow G_q(y,z))\\bigr).\n\\]\nIndeed, a witness $x$ to $R_e(y)$ can be used in the equality of\nthe composite graphs, and functionality identifies the intermediate\noutput with $y$. This proves $g[R_e]_T=h[R_e]_T$ in $S_T$.\nThe index $j_{R_e}$ is independent of the theory, so its class\nrepresents the range over every extension of $T$."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 46,
+        "locator": null,
+        "paragraph": "We also apply the criterion to the syntactic recursion categories of\nMontagna and Di Paola--Montagna \\cite{Montagna,DPM}.\nFor a consistent computably enumerable (c.e.)\nextension $T$ of Peano arithmetic ($\\PA$), the morphisms of $S_T$ are\nequivalence classes of indices of partial recursive functions. Two\nindices are identified when $T$ proves the universal closure of the\nequivalence of their graph formulas. These categories are not locally\nconnected \\cite[Corollary 4.4]{DPM}. Interpretation in all models of\n$T$ with carrier $\\N$ gives a faithful range functor into a locally\nconnected product of partial-map categories. Partial recursive functions\nselecting between predicates proved complementary in $T$ represent the\nrequired section lifts.\nThe construction commutes with theory extension.\nThe total restriction splitting of $S_T$ also realizes the\nfirst-order syntax and theory construction of\nAppendix~\\ref{app:syntax-theories}\n(Theorem~\\ref{thm:syntactic-generated-theory}).\nIts universal properties use $T$-provable graph equality."
+      },
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 126,
+        "locator": "Remark 3.1",
+        "paragraph": "Di Paola and Heller proved recursive inseparability in dominical\nrecursion categories in which every morphism has a section\n\\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability\nresults from precomplete equivalence relations, including PA-provable\nequality of partial recursive functions among his examples\n\\cite[pp.~125--128]{Bernardi}.\nMontagna also obtained effectively inseparable pairs in his syntactic\ncategory $S$\n\\cite[Remark 3.1]{Montagna}."
+      }
+    ]
+  },
+  {
+    "key": "RosoliniThesis",
+    "bibliography": "G.~Rosolini, \\emph{Continuity and effectiveness in topoi}, D.Phil.\nthesis, University of Oxford, 1986.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 109,
+        "locator": null,
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      }
+    ]
+  },
+  {
+    "key": "Rosolini",
+    "bibliography": "G.~Rosolini, \\emph{Representation theorems for $P$-categories},\nin F.~Borceux (ed.), \\emph{Categorical Algebra and its Applications},\nLecture Notes in Mathematics \\textbf{1348}, Springer, Berlin, 1988,\n307--315.",
+    "uses": [
+      {
+        "file": "sections/01-introduction.tex",
+        "line": 109,
+        "locator": null,
+        "paragraph": "Di Paola and Heller introduced dominical categories as a setting for\nrecursion theory \\cite{DPH}. Rosolini's $P$-categories generalized this\nsetting \\cite{RosoliniThesis,Rosolini}. Heller adopted them and defined\nprodominical categories \\cite[Section 5]{Heller}.\nCockett and Lack introduced restriction categories \\cite{CockettLack},\nand Cockett and Hofstra developed the theory of Turing categories\n\\cite{CockettHofstra}. We use restriction categories, with binary\nrestriction products in the source recursion categories. These products\ngive the equivalent $P$-category structure\n\\cite[Proposition 4.5]{CockettLackIII}."
+      }
+    ]
+  },
+  {
+    "key": "Aczel",
+    "bibliography": "P.~Aczel, \\emph{An introduction to inductive definitions},\nin J.~Barwise (ed.), Handbook of Mathematical Logic,\nNorth-Holland, 1977, pp.~739--782.\n\\href{https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf}{Text}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 419,
+        "locator": "Propositions 1.1.4 and 1.4.5",
+        "paragraph": "Aczel~\\cite[Propositions 1.1.4 and 1.4.5]{Aczel} describes finitary\ninductive closure by the conclusions of finite proofs. We express the\nrule presentation in a slice category.\nLet $\\mathcal D$ be regular with finite coproducts, and fix an object\n$F$. For an integer $N\\geq0$, let\n\\[\n p_n:R_n\\longrightarrow F^n,\\qquad\n q_n:R_n\\longrightarrow F\\quad(0\\leq n\\leq N)\n\\]\nspecify rule instances, their ordered premises, and their conclusions.\nThe nullary rule instances specify axioms.\nFor an object $q:Q\\to F$ of the slice category $\\mathcal D/F$,\nform the pullback\n\\[\n\\begin{tikzcd}\n B_n(Q,q)\\arrow[r,\"{b_{n,q}}\"]\\arrow[d,\"{a_{n,q}}\"'] &\n Q^n\\arrow[d,\"q^n\"]\\\\\n R_n\\arrow[r,\"p_n\"'] & F^n.\n\\end{tikzcd}\n\\]\nPut\n\\[\n H(Q,q)=\\left(\\coprod_{n=0}^N B_n(Q,q),\\kappa_q\\right),\\qquad\n \\kappa_q=[q_na_{n,q}]_{n=0}^N.\n\\]\nFor a slice morphism $h:(Q,q)\\to(Q',q')$, define $B_n(h)$ by\n\\[\n a_{n,q'}B_n(h)=a_{n,q},\\qquad\n b_{n,q'}B_n(h)=h^n b_{n,q}.\n\\]\nPullback uniqueness proves the identity and composition laws, so\n$H(h)=\\coprod_nB_n(h)$ defines an endofunctor of $\\mathcal D/F$."
+      }
+    ]
+  },
+  {
+    "key": "HP",
+    "bibliography": "P.~H\\'ajek and P.~Pudl\\'ak, \\emph{Metamathematics of First-Order\nArithmetic}, Perspectives in Logic, Cambridge University Press,\n2016 reissue of the 1993 edition.\n\\href{https://doi.org/10.1017/9781316717271}{doi:10.1017/9781316717271}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 509,
+        "locator": "Section 0.10",
+        "paragraph": "Continue with the syntax structure of\nDefinition~\\ref{def:categorical-syntax} and its constructed substitution.\nPut $F=\\Fm$. The propositional axiom schemes are those of\nH\\'ajek and Pudl\\'ak~\\cite[Section 0.10]{HP}:\n\\begin{align}\n &\\varphi\\Rightarrow(\\psi\\Rightarrow\\varphi),\n                                                        \\label{eq:hilbert-one}\\\\\n &(\\varphi\\Rightarrow(\\psi\\Rightarrow\\chi))\n   \\Rightarrow((\\varphi\\Rightarrow\\psi)\n   \\Rightarrow(\\varphi\\Rightarrow\\chi)),\n                                                        \\label{eq:hilbert-two}\\\\\n &(\\neg\\psi\\Rightarrow\\neg\\varphi)\n   \\Rightarrow(\\varphi\\Rightarrow\\psi).\n                                                        \\label{eq:hilbert-three}\n\\end{align}\nThe named-variable quantifier axioms follow\nHirst and Hirst~\\cite[Sections 2.11--2.12]{HH}; equality is expressed\nby reflexivity and substitution of equal terms in formulas\n\\cite[Section 3.1]{HH}:\n\\begin{align}\n &(\\forall x\\,\\varphi)\\Rightarrow\\varphi[x:=t],\n                                                        \\label{eq:hilbert-instantiation}\\\\\n &\\forall x(\\varphi\\Rightarrow\\psi)\n       \\Rightarrow(\\varphi\\Rightarrow\\forall x\\,\\psi),\n                                                        \\label{eq:hilbert-distribution}\\\\\n &t=t,                                                   \\label{eq:hilbert-reflexivity}\\\\\n &(u=t)\\Rightarrow\n       (\\varphi[x:=u]\\Rightarrow\\varphi[x:=t]).           \\label{eq:hilbert-equality}\n\\end{align}\nEach scheme denotes a morphism from its parameter object to $F$.\nFor the first three these objects are $F^2,F^3,F^2$.\nFor \\eqref{eq:hilbert-instantiation}, use the pullback of\n$j:\\Adm\\hookrightarrow F\\times V\\times\\Tm$ along the\npermutation $V\\times F\\times\\Tm\\to F\\times V\\times\\Tm$.\nFor \\eqref{eq:hilbert-distribution}, use\n$[\\mem(x,\\FV_{\\Fm}(\\varphi))=\\mathbf{f}]\n\\hookrightarrow V\\times F^2$.\nFor \\eqref{eq:hilbert-reflexivity}, use $\\Tm$.\nFor \\eqref{eq:hilbert-equality}, intersect the pullbacks of $j$\nalong\n\\[\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,u),\\qquad\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,t)\n\\]\nfrom $V\\times F\\times\\Tm^2$ to $F\\times E$.\nLet $L$ be the coproduct of these seven parameter objects and\n$\\lambda:L\\to F$ their copairing."
+      }
+    ]
+  },
+  {
+    "key": "HH",
+    "bibliography": "H.~P.~Hirst and J.~L.~Hirst, \\emph{A Primer for Logic and Proof},\n2015 edition.\n\\href{https://www.appstate.edu/~hirstjl/primer/hirst.pdf}{Authors' text}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 522,
+        "locator": "Sections 2.11--2.12",
+        "paragraph": "Continue with the syntax structure of\nDefinition~\\ref{def:categorical-syntax} and its constructed substitution.\nPut $F=\\Fm$. The propositional axiom schemes are those of\nH\\'ajek and Pudl\\'ak~\\cite[Section 0.10]{HP}:\n\\begin{align}\n &\\varphi\\Rightarrow(\\psi\\Rightarrow\\varphi),\n                                                        \\label{eq:hilbert-one}\\\\\n &(\\varphi\\Rightarrow(\\psi\\Rightarrow\\chi))\n   \\Rightarrow((\\varphi\\Rightarrow\\psi)\n   \\Rightarrow(\\varphi\\Rightarrow\\chi)),\n                                                        \\label{eq:hilbert-two}\\\\\n &(\\neg\\psi\\Rightarrow\\neg\\varphi)\n   \\Rightarrow(\\varphi\\Rightarrow\\psi).\n                                                        \\label{eq:hilbert-three}\n\\end{align}\nThe named-variable quantifier axioms follow\nHirst and Hirst~\\cite[Sections 2.11--2.12]{HH}; equality is expressed\nby reflexivity and substitution of equal terms in formulas\n\\cite[Section 3.1]{HH}:\n\\begin{align}\n &(\\forall x\\,\\varphi)\\Rightarrow\\varphi[x:=t],\n                                                        \\label{eq:hilbert-instantiation}\\\\\n &\\forall x(\\varphi\\Rightarrow\\psi)\n       \\Rightarrow(\\varphi\\Rightarrow\\forall x\\,\\psi),\n                                                        \\label{eq:hilbert-distribution}\\\\\n &t=t,                                                   \\label{eq:hilbert-reflexivity}\\\\\n &(u=t)\\Rightarrow\n       (\\varphi[x:=u]\\Rightarrow\\varphi[x:=t]).           \\label{eq:hilbert-equality}\n\\end{align}\nEach scheme denotes a morphism from its parameter object to $F$.\nFor the first three these objects are $F^2,F^3,F^2$.\nFor \\eqref{eq:hilbert-instantiation}, use the pullback of\n$j:\\Adm\\hookrightarrow F\\times V\\times\\Tm$ along the\npermutation $V\\times F\\times\\Tm\\to F\\times V\\times\\Tm$.\nFor \\eqref{eq:hilbert-distribution}, use\n$[\\mem(x,\\FV_{\\Fm}(\\varphi))=\\mathbf{f}]\n\\hookrightarrow V\\times F^2$.\nFor \\eqref{eq:hilbert-reflexivity}, use $\\Tm$.\nFor \\eqref{eq:hilbert-equality}, intersect the pullbacks of $j$\nalong\n\\[\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,u),\\qquad\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,t)\n\\]\nfrom $V\\times F\\times\\Tm^2$ to $F\\times E$.\nLet $L$ be the coproduct of these seven parameter objects and\n$\\lambda:L\\to F$ their copairing."
+      },
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 524,
+        "locator": "Section 3.1",
+        "paragraph": "Continue with the syntax structure of\nDefinition~\\ref{def:categorical-syntax} and its constructed substitution.\nPut $F=\\Fm$. The propositional axiom schemes are those of\nH\\'ajek and Pudl\\'ak~\\cite[Section 0.10]{HP}:\n\\begin{align}\n &\\varphi\\Rightarrow(\\psi\\Rightarrow\\varphi),\n                                                        \\label{eq:hilbert-one}\\\\\n &(\\varphi\\Rightarrow(\\psi\\Rightarrow\\chi))\n   \\Rightarrow((\\varphi\\Rightarrow\\psi)\n   \\Rightarrow(\\varphi\\Rightarrow\\chi)),\n                                                        \\label{eq:hilbert-two}\\\\\n &(\\neg\\psi\\Rightarrow\\neg\\varphi)\n   \\Rightarrow(\\varphi\\Rightarrow\\psi).\n                                                        \\label{eq:hilbert-three}\n\\end{align}\nThe named-variable quantifier axioms follow\nHirst and Hirst~\\cite[Sections 2.11--2.12]{HH}; equality is expressed\nby reflexivity and substitution of equal terms in formulas\n\\cite[Section 3.1]{HH}:\n\\begin{align}\n &(\\forall x\\,\\varphi)\\Rightarrow\\varphi[x:=t],\n                                                        \\label{eq:hilbert-instantiation}\\\\\n &\\forall x(\\varphi\\Rightarrow\\psi)\n       \\Rightarrow(\\varphi\\Rightarrow\\forall x\\,\\psi),\n                                                        \\label{eq:hilbert-distribution}\\\\\n &t=t,                                                   \\label{eq:hilbert-reflexivity}\\\\\n &(u=t)\\Rightarrow\n       (\\varphi[x:=u]\\Rightarrow\\varphi[x:=t]).           \\label{eq:hilbert-equality}\n\\end{align}\nEach scheme denotes a morphism from its parameter object to $F$.\nFor the first three these objects are $F^2,F^3,F^2$.\nFor \\eqref{eq:hilbert-instantiation}, use the pullback of\n$j:\\Adm\\hookrightarrow F\\times V\\times\\Tm$ along the\npermutation $V\\times F\\times\\Tm\\to F\\times V\\times\\Tm$.\nFor \\eqref{eq:hilbert-distribution}, use\n$[\\mem(x,\\FV_{\\Fm}(\\varphi))=\\mathbf{f}]\n\\hookrightarrow V\\times F^2$.\nFor \\eqref{eq:hilbert-reflexivity}, use $\\Tm$.\nFor \\eqref{eq:hilbert-equality}, intersect the pullbacks of $j$\nalong\n\\[\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,u),\\qquad\n (x,\\varphi,u,t)\\longmapsto(\\varphi,x,t)\n\\]\nfrom $V\\times F\\times\\Tm^2$ to $F\\times E$.\nLet $L$ be the coproduct of these seven parameter objects and\n$\\lambda:L\\to F$ their copairing."
+      }
+    ]
+  },
+  {
+    "key": "GTWW",
+    "bibliography": "J.~A. Goguen, J.~W. Thatcher, E.~G. Wagner, and J.~B. Wright,\n\\emph{Initial algebra semantics and continuous algebras},\nJournal of the ACM \\textbf{24} (1977), no.~1, pp.~68--95.\n\\href{https://doi.org/10.1145/321992.321997}{doi:10.1145/321992.321997}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 163,
+        "locator": "Section 2",
+        "paragraph": "Initial many-sorted algebras are used to specify abstract syntax by\nGoguen, Thatcher, Wagner, and Wright~\\cite[Section 2]{GTWW}.\nGoguen and Burstall~\\cite[Section 4]{GoguenBurstall} apply this method\nto the term and sentence sorts of logical languages.\nHere the signature objects, syntax objects, and constructor morphisms\nlie in $\\mathcal D$."
+      }
+    ]
+  },
+  {
+    "key": "GoguenBurstall",
+    "bibliography": "J.~A. Goguen and R.~M. Burstall,\n\\emph{A study in the foundations of programming methodology:\nSpecifications, institutions, charters and parchments},\nin D.~Pitt, S.~Abramsky, A.~Poign\\'e, and D.~Rydeheard (eds.),\nCategory Theory and Computer Programming, Lecture Notes in Computer\nScience \\textbf{240}, Springer, 1986, pp.~313--333.\n\\href{https://doi.org/10.1007/3-540-17162-2_131}{doi:10.1007/3-540-17162-2\\_131}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 164,
+        "locator": "Section 4",
+        "paragraph": "Initial many-sorted algebras are used to specify abstract syntax by\nGoguen, Thatcher, Wagner, and Wright~\\cite[Section 2]{GTWW}.\nGoguen and Burstall~\\cite[Section 4]{GoguenBurstall} apply this method\nto the term and sentence sorts of logical languages.\nHere the signature objects, syntax objects, and constructor morphisms\nlie in $\\mathcal D$."
+      }
+    ]
+  },
+  {
+    "key": "CockettLists",
+    "bibliography": "J.~R.~B. Cockett, \\emph{List-arithmetic distributive categories: Locoi},\nJournal of Pure and Applied Algebra \\textbf{66} (1990), no.~1, pp.~1--29.\n\\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 156,
+        "locator": null,
+        "paragraph": "For an endofunctor on the $r$-fold product category $\\mathcal D^r$\ndefined using finite products, coproducts, and specified constant objects, its version on\n$(\\mathcal D/P)^r$ is obtained\nby replacing each constant $X$ by $P\\times X\\to P$ and using\nproducts and coproducts in that slice. An initial algebra is\n\\emph{stable under parameters} if, for every $P\\in\\mathcal D$,\nits pullback along $P\\to1$ is initial for this slice endofunctor.\nFor list objects, this is the parameterized recursion property studied by\nCockett~\\cite{CockettLists}; its formulation by pullback into slices is\nrecalled by Maietti~\\cite[Definition 2.4 and the following paragraph]{MaiettiLists}."
+      }
+    ]
+  },
+  {
+    "key": "FPT",
+    "bibliography": "M.~Fiore, G.~Plotkin, and D.~Turi,\n\\emph{Abstract syntax and variable binding},\nProceedings of the Fourteenth Annual IEEE Symposium on Logic in\nComputer Science, IEEE Computer Society, 1999, pp.~193--202.\n\\href{https://doi.org/10.1109/LICS.1999.782615}{doi:10.1109/LICS.1999.782615}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 170,
+        "locator": "Sections 2--4",
+        "paragraph": "Initial-algebra accounts of binding and substitution are developed by\nFiore, Plotkin, and Turi~\\cite[Sections 2--4]{FPT} and by\nGabbay and Pitts~\\cite[Section 6]{GabbayPitts}.\nKatsumata~\\cite[Section 2, Example 1(3)]{Katsumata} gives a first-order\ninstance with a quantifier. These treatments identify expressions up to\nrenaming of bound variables. The syntax defined below retains variable\nnames, and formula substitution is defined on an admissibility subobject."
+      }
+    ]
+  },
+  {
+    "key": "GabbayPitts",
+    "bibliography": "M.~J. Gabbay and A.~M. Pitts,\n\\emph{A new approach to abstract syntax with variable binding},\nFormal Aspects of Computing \\textbf{13} (2002), pp.~341--363.\n\\href{https://doi.org/10.1007/s001650200016}{doi:10.1007/s001650200016}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 171,
+        "locator": "Section 6",
+        "paragraph": "Initial-algebra accounts of binding and substitution are developed by\nFiore, Plotkin, and Turi~\\cite[Sections 2--4]{FPT} and by\nGabbay and Pitts~\\cite[Section 6]{GabbayPitts}.\nKatsumata~\\cite[Section 2, Example 1(3)]{Katsumata} gives a first-order\ninstance with a quantifier. These treatments identify expressions up to\nrenaming of bound variables. The syntax defined below retains variable\nnames, and formula substitution is defined on an admissibility subobject."
+      },
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 300,
+        "locator": "proof of Corollary 6.7",
+        "paragraph": "In $(\\mathcal D/E)^2$, use the carriers\n\\[\n X_T=E\\times(\\Tm\\times\\Tm)\\longrightarrow E,\n \\qquad\n X_F=E\\times(\\Fm\\times O(\\Fm))\\longrightarrow E.\n\\]\nThe first component of each pair records the original expression.\nRetaining this component obtains structural recursion from initial-algebra\niteration; compare Gabbay and Pitts~\\cite[proof of Corollary 6.7]{GabbayPitts}.\nDefine a $K_E$-algebra as follows, retaining the same parameter\n$(x,t)$ in every operation. At a variable $v$, the pair is\n\\[\n (\\eta v,\\mathsf{if}(\\epsilon(v,x);t,\\eta v)).\n\\]\nAt a function symbol, apply its constructor separately to the\noriginal term components and the substituted term components.\nAt equality and relation symbols, reconstruct the original formula\nand apply $\\ok_{\\Fm}$ to the formula formed from the substituted\nterm components. At negation and implication, reconstruct the\noriginal formula and apply $O(\\neg)$ or\n$\\widehat{\\Rightarrow}$ to the result components."
+      }
+    ]
+  },
+  {
+    "key": "Katsumata",
+    "bibliography": "S.-y. Katsumata,\n\\emph{A generalisation of pre-logical predicates to simply typed formal systems},\nin J.~D\\'iaz, J.~Karhum\\\"aki, A.~Lepist\\\"o, and D.~Sannella (eds.),\nAutomata, Languages and Programming, Lecture Notes in Computer Science\n\\textbf{3142}, Springer, 2004, pp.~831--845.\n\\href{https://doi.org/10.1007/978-3-540-27836-8_70}{doi:10.1007/978-3-540-27836-8\\_70}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 172,
+        "locator": "Section 2, Example 1(3)",
+        "paragraph": "Initial-algebra accounts of binding and substitution are developed by\nFiore, Plotkin, and Turi~\\cite[Sections 2--4]{FPT} and by\nGabbay and Pitts~\\cite[Section 6]{GabbayPitts}.\nKatsumata~\\cite[Section 2, Example 1(3)]{Katsumata} gives a first-order\ninstance with a quantifier. These treatments identify expressions up to\nrenaming of bound variables. The syntax defined below retains variable\nnames, and formula substitution is defined on an admissibility subobject."
+      }
+    ]
+  },
+  {
+    "key": "MaiettiLists",
+    "bibliography": "M.~E. Maietti, \\emph{Joyal's arithmetic universe as list-arithmetic pretopos},\nTheory and Applications of Categories \\textbf{24} (2010),\nno.~3, pp.~39--83.\n\\href{https://www.math.unipd.it/~maietti/papers/jartacrev.pdf}{Author's text}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 157,
+        "locator": "Definition 2.4 and the following paragraph",
+        "paragraph": "For an endofunctor on the $r$-fold product category $\\mathcal D^r$\ndefined using finite products, coproducts, and specified constant objects, its version on\n$(\\mathcal D/P)^r$ is obtained\nby replacing each constant $X$ by $P\\times X\\to P$ and using\nproducts and coproducts in that slice. An initial algebra is\n\\emph{stable under parameters} if, for every $P\\in\\mathcal D$,\nits pullback along $P\\to1$ is initial for this slice endofunctor.\nFor list objects, this is the parameterized recursion property studied by\nCockett~\\cite{CockettLists}; its formulation by pullback into slices is\nrecalled by Maietti~\\cite[Definition 2.4 and the following paragraph]{MaiettiLists}."
+      }
+    ]
+  },
+  {
+    "key": "CGHRangeI",
+    "bibliography": "J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,\n\\emph{Range categories I: General theory},\nTheory and Applications of Categories \\textbf{26} (2012),\nno.~17, pp.~412--452.\n\\href{https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html}{Journal page}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 649,
+        "locator": "Theorem 4.7 and Lemma 4.12",
+        "paragraph": "The relation between split ranges and factorizations through restriction\nmonomorphisms is developed in Cockett, Guo, and\nHofstra~\\cite[Theorem 4.7 and Lemma 4.12]{CGHRangeI}.\nThe additional conditions for these to be regular-image factorizations\nare given in \\cite[Section 3.16 and Proposition 3.17]{CGHRangeII}."
+      },
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 657,
+        "locator": "Theorem 4.5 and Section 4.11",
+        "paragraph": "The partial-map category $\\Par(\\mathcal D,\\Mono)$ has morphisms given\nby spans with monic left leg, composed by pullback\n\\cite[Section 3]{CockettLack}. Since $\\mathcal D$ is regular, it is a\nsplit restriction category with ranges\n\\cite[Theorem 4.5 and Section 4.11]{CGHRangeI}; its total subcategory\nis canonically isomorphic to $\\mathcal D$.\nThe sentence theory is represented in this category by\n\\[\n t_A=[S\\xleftarrow{m_A}T_{A,S}\\xrightarrow{m_A}S]:S\\rightharpoonup S,\n \\qquad m_A:T_{A,S}\\hookrightarrow S.\n\\]\nEvery monomorphism in $\\mathcal D$ has a partial inverse in this\npartial-map category. Lemma~\\ref{lem:range-regular-image} therefore\ngives $t_A=\\ran(c_{A,S})$.\nIf instead $\\mathcal D=\\Tot(\\Split(\\mathcal R))$ for a restriction\ncategory $\\mathcal R$ whose restriction splitting has ranges, require\n$m_A$ to have a partial inverse\n$r_A:S\\rightharpoonup T_{A,S}$ in $\\Split(\\mathcal R)$.\nThe same lemma gives\n\\[\n \\ran(c_{A,S})=m_A r_A=\\bar r_A.\n\\]\nThus the range represents the constructed sentence theory."
+      }
+    ]
+  },
+  {
+    "key": "CGHRangeII",
+    "bibliography": "J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,\n\\emph{Range categories II: Towards regularity},\nTheory and Applications of Categories \\textbf{26} (2012),\nno.~18, pp.~453--500.\n\\href{https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html}{Journal page}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 651,
+        "locator": "Section 3.16 and Proposition 3.17",
+        "paragraph": "The relation between split ranges and factorizations through restriction\nmonomorphisms is developed in Cockett, Guo, and\nHofstra~\\cite[Theorem 4.7 and Lemma 4.12]{CGHRangeI}.\nThe additional conditions for these to be regular-image factorizations\nare given in \\cite[Section 3.16 and Proposition 3.17]{CGHRangeII}."
+      }
+    ]
+  },
+  {
+    "key": "Wissmann",
+    "bibliography": "T.~Wi\\ss{}mann, \\emph{Minimality notions via factorization systems and examples},\nLogical Methods in Computer Science \\textbf{18} (2022),\nno.~3, article~31, pp.~31:1--31:26.\n\\href{https://doi.org/10.46298/lmcs-18(3:31)2022}{doi:10.46298/lmcs-18(3:31)2022}.",
+    "uses": [
+      {
+        "file": "appendices/a-syntax-and-theories.tex",
+        "line": 469,
+        "locator": "Lemma 3.6",
+        "paragraph": "The following proof transfers the initial derivation algebra to its\nregular image. This is an instance of lifting a factorization system to\nalgebras for an endofunctor preserving its left class; see, for example,\nWi\\ss{}mann~\\cite[Lemma 3.6]{Wissmann}."
+      }
+    ]
+  },
+  {
+    "key": "RobinsonRosolini",
+    "bibliography": "E.~Robinson and G.~Rosolini, \\emph{Categories of partial maps},\nInformation and Computation \\textbf{79} (1988), no.~2, pp.~95--130.\n\\href{https://doi.org/10.1016/0890-5401(88)90034-X}{doi:10.1016/0890-5401(88)90034-X}.",
+    "uses": [
+      {
+        "file": "sections/05a-internal-syntax.tex",
+        "line": 12,
+        "locator": "pp.~108--109",
+        "paragraph": "The syntax and theory construction of Appendix~\\ref{app:syntax-theories}\nwill be applied in\n\\[\n \\mathcal B_T=\\Tot(\\Split(S_T)).\n\\]\nWe describe this category by arithmetic predicates and prove the\nrequired properties. Syntactic partial maps presented by functional\n$\\Sigma_1$ formulas and provable graph equality are discussed by\nRobinson and Rosolini~\\cite[pp.~108--109]{RobinsonRosolini}."
+      }
+    ]
+  },
+  {
+    "key": "Keisler",
+    "bibliography": "H.~J. Keisler, \\emph{The ultraproduct construction},\nauthor's survey, 1 June 2010.\n\\href{https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf}{Author's text}.",
+    "uses": [
+      {
+        "file": "sections/06-interpretation-in-models.tex",
+        "line": 397,
+        "locator": "Theorem~3.1",
+        "paragraph": "Let $M=\\N^I/\\mathcal U$ be the arithmetic ultrapower.\n\\L o\\'s's theorem~\\cite[Theorem~3.1]{Keisler}\ngives $M\\models\\PA$."
+      }
+    ]
+  }
+]

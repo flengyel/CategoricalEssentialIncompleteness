@@ -1,0 +1,165 @@
+{
+  "scope": "VERSION29 frozen local_connectedness paper only; five keys delegated; every inventory use checked",
+  "audit_date": "2026-11-01",
+  "metadata": [
+    {
+      "key": "CockettLists",
+      "status": "verified",
+      "authors": "J. R. B. Cockett",
+      "title": "List-arithmetic distributive categories: Locoi",
+      "year": 1990,
+      "venue": "Journal of Pure and Applied Algebra",
+      "volume": "66",
+      "issue": "1",
+      "pages": "1–29",
+      "doi": "10.1016/0022-4049(90)90121-W",
+      "evidence_url": [
+        "https://api.crossref.org/works/10.1016%2F0022-4049%2890%2990121-W",
+        "https://www.researchgate.net/publication/242982818_List-arithmetic_distributive_categories_Locoi"
+      ],
+      "source_location": "Crossref publisher-deposited metadata; author-linked article record; Maietti bibliography [Coc90]",
+      "required_correction": "None. Original fulltext support remains unverified."
+    },
+    {
+      "key": "MaiettiLists",
+      "status": "verified",
+      "authors": "Maria Emilia Maietti",
+      "title": "Joyal's arithmetic universe as list-arithmetic pretopos",
+      "year": 2010,
+      "venue": "Theory and Applications of Categories",
+      "volume": "24",
+      "issue": "3",
+      "pages": "39–83",
+      "doi": null,
+      "evidence_url": [
+        "https://tac.mta.ca/tac/volumes/24/3/24-03abs.html",
+        "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf"
+      ],
+      "source_location": "Journal article landing page, line 8; author fulltext title page",
+      "required_correction": "None. No DOI is stated by the journal landing page."
+    },
+    {
+      "key": "RosoliniThesis",
+      "status": "verified",
+      "authors": "G. Rosolini",
+      "title": "Continuity and effectiveness in topoi",
+      "year": 1986,
+      "venue": "D.Phil. thesis, University of Oxford",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "doi": null,
+      "evidence_url": [
+        "https://www.researchgate.net/profile/Giuseppe-Rosolini/publication/35103849_Continuity_and_effectiveness_in_topoi/links/57ef75b908ae886b89741067/Continuity-and-effectiveness-in-topoi.pdf",
+        "https://link.springer.com/chapter/10.1007/BFb0081368"
+      ],
+      "source_location": "Thesis title page (PDF p1); Rosolini chapter references lists Oxford D.Phil. 1986",
+      "required_correction": "None. Available author PDF is the 17 October 1995 retypeset edition, 110 pages; its note warns of possible discrepancies from the original. Do not confuse ResearchGate's Carnegie Mellon catalog label with the degree institution shown on the title page."
+    },
+    {
+      "key": "Rosolini",
+      "status": "verified",
+      "authors": "G. Rosolini",
+      "title": "Representation theorems for P-categories",
+      "year": 1988,
+      "venue": "F. Borceux (ed.), Categorical Algebra and its Applications, Lecture Notes in Mathematics",
+      "volume": "1348",
+      "issue": null,
+      "pages": "307–315",
+      "doi": "10.1007/BFb0081368",
+      "evidence_url": [
+        "https://link.springer.com/chapter/10.1007/BFb0081368",
+        "https://api.crossref.org/works/10.1007%2FBFb0081368"
+      ],
+      "source_location": "Springer 'Cite this paper' and article header; Crossref deposit",
+      "required_correction": "None. Optional addition: DOI 10.1007/BFb0081368. Publisher's 2006 online date is not the print publication year."
+    },
+    {
+      "key": "RobinsonRosolini",
+      "status": "verified",
+      "authors": "E. Robinson and G. Rosolini",
+      "title": "Categories of partial maps",
+      "year": 1988,
+      "venue": "Information and Computation",
+      "volume": "79",
+      "issue": "2",
+      "pages": "95–130",
+      "doi": "10.1016/0890-5401(88)90034-X",
+      "evidence_url": [
+        "https://www.sciencedirect.com/science/article/pii/089054018890034X",
+        "https://api.crossref.org/works/10.1016%2F0890-5401%2888%2990034-X",
+        "https://www.researchgate.net/publication/319395054_Categories_of_partial_maps"
+      ],
+      "source_location": "Publisher indexed journal page; Crossref deposit; author-uploaded published scan title page",
+      "required_correction": "None. The ResearchGate record is labeled a 1986 report but the uploaded fulltext is the 1988 published version."
+    }
+  ],
+  "uses": [
+    {
+      "key": "CockettLists",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 156,
+      "status": "existence verified/fulltext unavailable",
+      "evidence_url": "https://www.researchgate.net/publication/242982818_List-arithmetic_distributive_categories_Locoi",
+      "source_location": "Original article fulltext unavailable. Corroborating primary source: Maietti, Definition 2.4 and immediately following paragraph, author PDF p4 (published p42).",
+      "support_explanation": "The cited work exists and its metadata are correct. Its author-linked record offers only an abstract and explicitly says no fulltext is available. Maietti's full paper directly attributes the recursive-object definition preserved by !*_D:U→U/D to [Coc90], supporting the historical attribution indirectly. This is not a direct fulltext verification of Cockett's own definitions. The manuscript restricts its attribution to list objects, so it does not attribute parameterized initiality for every polynomial functor to Cockett.",
+      "required_correction": "No false claim established. Obtain and inspect Cockett's original article to close this use. If it remains unavailable, retain the explicit verification limitation; Maietti alone directly supports the stated list formulation."
+    },
+    {
+      "key": "MaiettiLists",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 157,
+      "status": "verified",
+      "evidence_url": "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf",
+      "source_location": "Definition 2.4 and immediately following paragraph, author PDF p4 (0-index P3), published p42; retrieved lines128–160.",
+      "support_explanation": "Definition 2.4 gives parameterized list recursion in a finitely complete category, with a unique map B×List(A)→Y for each b:B→Y and g:Y×A→Y. The following paragraph states its equivalence to recursive objects preserved by !*_D:U→U/D, B↦(D×B→D). This is exactly the manuscript's list-specific pullback/slice formulation. Appendix A assumes D regular, hence finitely complete; list initiality is separately assumed rather than inferred from regularity or from an ordinary unparameterized NNO.",
+      "required_correction": "None."
+    },
+    {
+      "key": "RosoliniThesis",
+      "file": "sections/01-introduction.tex",
+      "line": 109,
+      "status": "verified",
+      "evidence_url": "https://www.researchgate.net/profile/Giuseppe-Rosolini/publication/35103849_Continuity_and_effectiveness_in_topoi/links/57ef75b908ae886b89741067/Continuity-and-effectiveness-in-topoi.pdf",
+      "source_location": "1995 retypeset author edition: Chapter2 opening p28; Definition2.1.2 p29; Proposition2.2.1 and counterexample p33.",
+      "support_explanation": "The chapter introduces p-categories after explaining the weakening of the dominical axioms. Proposition 2.2.1 proves every dominical category is a p-category, and the following examples show the converse fails. This directly supports the introduction's generalization statement. No technical theorem of VERSION29 is presented as a consequence of this historical citation.",
+      "required_correction": "None. Optional precision: cite Chapter2, especially Proposition2.2.1."
+    },
+    {
+      "key": "Rosolini",
+      "file": "sections/01-introduction.tex",
+      "line": 109,
+      "status": "verified",
+      "evidence_url": "https://www.researchgate.net/publication/225697089_Representation_theorems_for_P-categories",
+      "source_location": "Author-uploaded chapter fulltext, opening p307, before Section1; retrieved lines918–1071; Definition1.1 and Theorem1.2 p308.",
+      "support_explanation": "The opening describes dominical-category representation, the need for a more general notion, and p-categories as that algebraic setting. Definition1.1 and Theorem1.2 provide the setting and its representation as a full p-subcategory of partial maps over a category with binary products. It supports the historical generalization stated by the manuscript, without claiming all p-categories are themselves full partial-map categories.",
+      "required_correction": "None. Optional precision: add p307 to the historical citation."
+    },
+    {
+      "key": "RobinsonRosolini",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 12,
+      "status": "verified",
+      "evidence_url": "https://www.researchgate.net/publication/319395054_Categories_of_partial_maps",
+      "source_location": "Published article pp108–109, example immediately before Proposition2.4; author-uploaded fulltext lines1328–1390.",
+      "support_explanation": "The source describes the one-object syntactic p-category PA using equivalence classes of Sigma1 formulas F(x,y), PA-provable single-valuedness, and provable identity; p109 gives PA-provable totality. The manuscript says these presentations are discussed there and then proves its own total-splitting construction for T. It does not assert that Robinson–Rosolini prove that general T construction. The page locator is correct.",
+      "required_correction": "None."
+    }
+  ],
+  "counts": {
+    "keys": 5,
+    "uses": 5,
+    "verified_uses": 4,
+    "fulltext_unavailable_uses": 1,
+    "invented": 0,
+    "bibliographic_errors": 0,
+    "misattribution_or_wrong_locator": 0
+  },
+  "evidence_cache": [
+    "tmp/audit_v29/evidence/categories/lists_rosolini_retrieval.json",
+    "tmp/audit_v29/evidence/categories/lists_rosolini_metadata_retrieval.json",
+    "tmp/audit_v29/evidence/categories/cockett_lists_crossref.json",
+    "tmp/audit_v29/evidence/categories/rosolini_chapter_crossref.json",
+    "tmp/audit_v29/evidence/categories/robinson_rosolini_crossref.json"
+  ]
+}

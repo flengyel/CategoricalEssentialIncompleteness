@@ -1,0 +1,378 @@
+{
+  "scope": "VERSION29 frozen main paper only; no separate note or earlier revision; 9 keys, every one of 11 citation uses.",
+  "sources_root": "tmp/audit_v29/frozen/local_connectedness",
+  "summary": {
+    "reference_identities": 9,
+    "citation_uses": 11,
+    "invented_references": 0,
+    "wrong_claim_or_locator": 0,
+    "verified": 10,
+    "verified_with_adaptation": 1,
+    "existence_verified_fulltext_unavailable": 0,
+    "metadata_date_qualifications": 1
+  },
+  "uses": [
+    {
+      "key": "GTWW",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 163,
+      "status": "verified",
+      "locator": "Section 2",
+      "evidence_url": "https://fldit-www.cs.tu-dortmund.de/~peter/IniAlg.pdf",
+      "source_location": "Section 2, pp.70–73, especially Proposition 2.1 and its following construction pp.71–72 (PDF pp.3–6).",
+      "support_explanation": "Section 2 constructs the initial algebra for a many-sorted signature and identifies each carrier with well-formed expressions of that sort. Its constructor and unique-decomposition discussion supports the raw abstract-syntax attribution. This is ordinary many-sorted syntax, not by itself a treatment of capture avoidance or alpha equivalence. V29 correctly cites separate binding sources and separately assumes initiality stable under parameters in its category D.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "GoguenBurstall",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 164,
+      "status": "verified",
+      "locator": "Section 4",
+      "evidence_url": [
+        "https://www.lfcs.inf.ed.ac.uk/reports/86/ECS-LFCS-86-10/ECS-LFCS-86-10.pdf",
+        "https://link.springer.com/chapter/10.1007/3-540-17162-2_131"
+      ],
+      "source_location": "Section 4 “Parchments”, author report pp.15–16 (PDF pp.16–17); Section 4.1 pp.18–19 gives the equational example.",
+      "support_explanation": "The actual text describes a syntactic signature whose sorts include terms and sentences, with constructors for those sorts and the language as the initial algebra. It describes the signature-indexed Lang functor and points to first-order, equational and Horn logic. This exactly supports the stated attribution; it does not supply v29’s internal, parameter-stable construction. The full primary author report was read; publisher metadata independently identifies the 1986 chapter. The report has different pagination from the published pp.313–333, but the cited section number agrees.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "FPT",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 170,
+      "status": "verified",
+      "locator": "Sections 2--4",
+      "evidence_url": "https://www.dcs.ed.ac.uk/home/dt/FiorePlotkinTuri.pdf",
+      "source_location": "Sections 2–4, PDF pp.4–9: Theorem 2.1; Section 3 “Substitution”; Theorems 4.1–4.2.",
+      "support_explanation": "Section 2 represents binding signatures on covariant presheaves and characterizes terms modulo alpha equivalence as the free signature algebra on variables. Section 3 develops single and simultaneous substitution; Section 4 characterizes the compatible algebra-plus-substitution model by initiality. The article’s terms are alpha classes/canonical nameless implementations, as v29 says. Its hypotheses and setting are not those of an arbitrary category D; v29 uses this as background and explicitly distinguishes its raw named syntax and admissibility subobject.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "GabbayPitts",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 171,
+      "status": "verified",
+      "locator": "Section 6",
+      "evidence_url": "https://www.gabbay.org.uk/papers/newaas-jv.pdf",
+      "source_location": "Section 6, full author text pp.13–20: initial-algebra property (54), Theorem 6.2, Theorem 6.5, Corollary 6.7, Example 6.9.",
+      "support_explanation": "Section 6 builds inductive FM-sets using atom abstraction, identifies the lambda syntax with alpha classes, obtains iteration/recursion from initiality, and constructs capture-avoiding substitution in Example 6.9. The setting requires finite support and freshness restrictions; v29 does not directly invoke that theorem for its category D and accurately distinguishes its raw named syntax.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "Katsumata",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 172,
+      "status": "verified",
+      "locator": "Section 2, Example 1(3)",
+      "evidence_url": "https://www.kurims.kyoto-u.ac.jp/~sinya/paper/generalpre.pdf",
+      "source_location": "Section 2, Example 1(3), author PDF p.4; preceding typed-binding definition and immediately following initial-algebra characterization.",
+      "support_explanation": "Example 1(3) gives the typed binding signature for first-order classical logic, including an existential quantifier, negation and disjunction. The preceding paragraph explicitly identifies alpha-equivalent terms, and the following paragraph characterizes syntax as an initial algebra in the category of presentation models. The cited claim says only “a quantifier”, so existential rather than universal causes no mismatch. The typed presheaf setting is not silently imported as a theorem about v29’s category D.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "GabbayPitts",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 300,
+      "status": "verified",
+      "locator": "proof of Corollary 6.7",
+      "evidence_url": "https://www.gabbay.org.uk/papers/newaas-jv.pdf",
+      "source_location": "Proof of Corollary 6.7, full author text p.17 (PDF p.17).",
+      "support_explanation": "The proof replaces X by Lambda_alpha × X, applies initial-algebra iteration, and uses uniqueness to show the first projection recovers the original term. This is exactly the product-carrier trick being compared in v29. The source’s additional freshness condition is required for its binding theorem; the comparison borrows only this general recursion-from-iteration argument, with v29’s own explicitly defined slice algebra.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "Aczel",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 419,
+      "status": "verified",
+      "evidence_url": "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+      "source_location": "p.742 Proposition1.1.4 (PDFp4); pp747–748 Definitions1.4.3–1.4.4 and Proposition1.4.5 (PDFpp9–10)",
+      "support_explanation": "Proposition1.1.4 characterizes the least rule-closed set by finite-length proofs for a finitary rule set. Proposition1.4.5 gives the well-founded proof-tree characterization; the preceding p747 discussion observes that finitary proof trees are finite. V29 expressly assumes a finite maximum arity N and presents the following slice-category construction as its own reformulation, so it does not falsely attribute that internal categorical generalization to Aczel.",
+      "required_correction": "None. Optional improve locator by adding pp.742,747–748.",
+      "locator": "Propositions 1.1.4 and 1.4.5",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "Wissmann",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 469,
+      "status": "verified",
+      "locator": "Lemma 3.6",
+      "evidence_url": "https://lmcs.episciences.org/10014/pdf",
+      "source_location": "Lemma 3.6, p.31:10; proof p.31:11 (PDF pp.10–11), following coalgebra Lemma 3.3.",
+      "support_explanation": "Lemma 3.6 states exactly that an (E,M) factorization system lifts to algebras for an endofunctor preserving E. In v29 the base is the regular slice D/F, with regular epimorphisms and monomorphisms. H preserves the left class by regular-epi stability under finite products/pullbacks and preservation of coequalizers by finite coproducts. The conclusion map is an H-algebra map to the terminal slice algebra, so factoring it is a valid instance. V29 supplies its own least-subobject proof rather than attributing that whole theorem to this lemma.",
+      "required_correction": "None.",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "HP",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 509,
+      "status": "verified",
+      "evidence_url": "https://assets.cambridge.org/97811071/68411/excerpt/9781107168411_excerpt.pdf",
+      "source_location": "Preliminaries(a), numbered paragraph0.10, p7 (publisher excerpt PDFp3)",
+      "support_explanation": "All three displayed propositional schemata in v29 match the three propositional axioms in 0.10 exactly, after replacing source implication notation. HP uses a conditional quantifier rule and treats equality as special axioms in0.11, but v29 attributes only the three propositional schemata to HP.",
+      "required_correction": "No substantive correction. Prefer “0.10, p.7” over “Section0.10” because 0.10 is a numbered paragraph.",
+      "locator": "Section 0.10",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "HH",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 522,
+      "status": "verified",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "source_location": "§2.11 pp48–50; §2.12 p51 Axioms4–5 and generalization (PDFpp54–57)",
+      "support_explanation": "Axioms4–5 exactly match universal instantiation and the displayed distribution axiom. §2.11 defines the free-for condition. V29 enforces the first restriction through Adm and the second through x absent from FV(phi). Source generalization is unrestricted for theorem proofs; v29 also restricts nonlogical axioms to sentences, so its generalization rule introduces no omitted open-assumption restriction.",
+      "required_correction": "None.",
+      "locator": "Sections 2.11--2.12",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    },
+    {
+      "key": "HH",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 524,
+      "status": "verified_with_adaptation",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "source_location": "§3.1 pp64–65 Axioms6–7 and examples (PDFpp70–71)",
+      "support_explanation": "The source gives universally quantified variable reflexivity and variable substitutivity, subject to free-for capture avoidance. It also illustrates replacing a variable by the constant2. V29 uses the corresponding all-term reflexivity and all-term formula-substitution schemata, with both substitutions admissible. The citation supports the stated equality principles; it does not literally print the exact term-parametrized schemata.",
+      "required_correction": "Optional precision: say “We use the term-instantiated form of the reflexivity and substitutivity principles in §3.1” or add a brief derivation. Do not call the displayed term schemata verbatim Hirst–Hirst axioms.",
+      "locator": "Section 3.1",
+      "source_file_evidence": "tmp/audit_v29/evidence/syntax/"
+    }
+  ],
+  "metadata": [
+    {
+      "key": "Aczel",
+      "status": "verified",
+      "evidence_url": [
+        "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0049237X08711200"
+      ],
+      "verified_metadata": {
+        "authors": "Peter Aczel",
+        "title": "An Introduction to Inductive Definitions",
+        "container": "Handbook of Mathematical Logic",
+        "editor": "Jon Barwise",
+        "publisher": "North-Holland",
+        "year": 1977,
+        "pages": "739–782",
+        "doi": "10.1016/S0049-237X(08)71120-0"
+      },
+      "notes": "Chapter opening and ending verify page span and North-Holland1977; publisher confirms DOI. V29 supplies a text URL instead of DOI, which is valid.",
+      "required_correction": "None."
+    },
+    {
+      "key": "HP",
+      "status": "verified_with_date_qualification",
+      "evidence_url": [
+        "https://assets.cambridge.org/97811071/68411/frontmatter/9781107168411_frontmatter.pdf",
+        "https://www.cambridge.org/core/books/metamathematics-of-firstorder-arithmetic/E72D370D90F316D86CB9D0927377A1A3",
+        "https://link.springer.com/book/9783540636489"
+      ],
+      "verified_metadata": {
+        "authors": "Petr Hájek and Pavel Pudlák",
+        "title": "Metamathematics of First-Order Arithmetic",
+        "series": "Perspectives in Logic3",
+        "publisher": "Cambridge University Press for Association for Symbolic Logic",
+        "edition_copyright": 2016,
+        "publication_date_print": "2017-03-02",
+        "publication_date_online": "2017-03-24",
+        "original_copyright": 1993,
+        "springer_paperback_date": "1998-03-17",
+        "doi": "10.1017/9781316717271",
+        "pages": "xiv+460"
+      },
+      "notes": "V29’s2016 date matches the CUP frontmatter copyright, while current CUP catalog gives2017 publication. CUP frontmatter describes predecessor as1998; Springer catalog identifies first-edition copyright1993 and1998 softcover. Thus “2016 reissue of the1993 edition” is understandable but conflates copyright/publication and lacks version precision.",
+      "required_correction": "For exact publication metadata use “Cambridge University Press,2017 (©2016; reissue of the Springer text, originally1993)” or explicitly label2016 as copyright year."
+    },
+    {
+      "key": "HH",
+      "status": "verified",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "verified_metadata": {
+        "authors": "Holly P. Hirst and Jeffry L. Hirst",
+        "title": "A Primer for Logic and Proof",
+        "version": "2015 Edition",
+        "copyright": 2002,
+        "publisher": "author-hosted text; none asserted in v29",
+        "doi": "none asserted"
+      },
+      "notes": "Full primary PDF titlepage agrees with v29 authors, title and version. The2002 copyright is not a contradiction of the expressly marked2015 edition.",
+      "required_correction": "None."
+    },
+    {
+      "key": "GTWW",
+      "status": "verified",
+      "evidence_url": [
+        "https://research.ibm.com/publications/initial-algebra-semantics-and-continuous-algebras",
+        "https://api.crossref.org/works/10.1145/321992.321997",
+        "https://fldit-www.cs.tu-dortmund.de/~peter/IniAlg.pdf"
+      ],
+      "verified_metadata": {
+        "authors": "J. A. Goguen; J. W. Thatcher; E. G. Wagner; J. B. Wright",
+        "title": "Initial Algebra Semantics and Continuous Algebras",
+        "journal": "Journal of the ACM",
+        "year": 1977,
+        "volume": 24,
+        "issue": 1,
+        "pages": "68–95",
+        "publisher": "ACM",
+        "doi": "10.1145/321992.321997"
+      },
+      "notes": "Published-article scan and DOI registrant metadata agree. The inaccessible ACM landing page did not prevent reading the complete article scan.",
+      "required_correction": "None."
+    },
+    {
+      "key": "GoguenBurstall",
+      "status": "verified",
+      "evidence_url": [
+        "https://link.springer.com/chapter/10.1007/3-540-17162-2_131",
+        "https://link.springer.com/book/10.1007/3-540-17162-2",
+        "https://www.lfcs.inf.ed.ac.uk/reports/86/ECS-LFCS-86-10/"
+      ],
+      "verified_metadata": {
+        "authors": "Joseph A. Goguen; R. M. Burstall",
+        "title": "A study in the foundations of programming methodology: Specifications, institutions, charters and parchments",
+        "container": "Category Theory and Computer Programming",
+        "editors": "David Pitt; Samson Abramsky; Axel Poigné; David Rydeheard",
+        "series": "Lecture Notes in Computer Science",
+        "volume": 240,
+        "publisher": "Springer Berlin Heidelberg",
+        "year": 1986,
+        "pages": "313–333",
+        "doi": "10.1007/3-540-17162-2_131"
+      },
+      "notes": "All asserted metadata agree with Springer. “First online 2005” is retrospective digitization, not a contradiction of 1986 print publication. Full author report used for substantive check; final Springer pagination was not used as the evidence locator.",
+      "required_correction": "None."
+    },
+    {
+      "key": "FPT",
+      "status": "verified",
+      "evidence_url": [
+        "https://ieeexplore.ieee.org/abstract/document/782615/",
+        "https://lics.siglog.org/1999/FiorePlotkinTuri-AbstractSyntaxandVa.html",
+        "https://www.dcs.ed.ac.uk/home/dt/abstractsyn.html"
+      ],
+      "verified_metadata": {
+        "authors": "Marcelo Fiore; Gordon Plotkin; Daniele Turi",
+        "title": "Abstract syntax and variable binding",
+        "container": "Proceedings of the Fourteenth Annual IEEE Symposium on Logic in Computer Science",
+        "publisher": "IEEE Computer Society Press",
+        "year": 1999,
+        "pages": "193–202",
+        "doi": "10.1109/LICS.1999.782615"
+      },
+      "notes": "Conference archive and author bibliography verify the event/year/pages/publisher; IEEE verifies DOI. Author fulltext bears the subtitle “Extended Abstract”; omission of that subtitle matches the published IEEE title and is not an error.",
+      "required_correction": "None."
+    },
+    {
+      "key": "GabbayPitts",
+      "status": "verified",
+      "evidence_url": [
+        "https://doi.org/10.1007/s001650200016",
+        "https://www.cl.cam.ac.uk/~amp12/papers/index.html",
+        "https://www.gabbay.org.uk/papers/newaas-jv.pdf"
+      ],
+      "verified_metadata": {
+        "authors": "Murdoch J. Gabbay; Andrew M. Pitts",
+        "title": "A New Approach to Abstract Syntax with Variable Binding",
+        "journal": "Formal Aspects of Computing",
+        "volume": 13,
+        "issue": "3–5",
+        "year": 2002,
+        "pages": "341–363",
+        "historical_publisher": "Springer-Verlag",
+        "doi": "10.1007/s001650200016"
+      },
+      "notes": "Publisher landing page and Pitts’s bibliography agree with v29. The author manuscript has provisional “2001, volume 0, pages 1–23” frontmatter. That provisional frontmatter is not evidence that the published 2002 citation is wrong; section/theorem numbering was checked in this complete author version. V29 omits issue 3–5 but does not assert a wrong issue.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Katsumata",
+      "status": "verified",
+      "evidence_url": [
+        "https://link.springer.com/chapter/10.1007/978-3-540-27836-8_70",
+        "https://www.kurims.kyoto-u.ac.jp/~sinya/paper/generalpre.pdf"
+      ],
+      "verified_metadata": {
+        "authors": "Shin-ya Katsumata",
+        "title": "A Generalisation of Pre-logical Predicates to Simply Typed Formal Systems",
+        "container": "Automata, Languages and Programming",
+        "editors": "Josep Díaz; Juhani Karhumäki; Arto Lepistö; Donald Sannella",
+        "series": "Lecture Notes in Computer Science",
+        "volume": 3142,
+        "publisher": "Springer Berlin Heidelberg",
+        "year": 2004,
+        "pages": "831–845",
+        "doi": "10.1007/978-3-540-27836-8_70"
+      },
+      "notes": "Springer verifies all asserted metadata, including all four editors. Full author paper matches the cited section and example.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Wissmann",
+      "status": "verified",
+      "evidence_url": [
+        "https://lmcs.episciences.org/10014",
+        "https://lmcs.episciences.org/10014/pdf"
+      ],
+      "verified_metadata": {
+        "authors": "Thorsten Wißmann",
+        "title": "Minimality Notions via Factorization Systems and Examples",
+        "journal": "Logical Methods in Computer Science",
+        "volume": 18,
+        "issue": 3,
+        "article": 31,
+        "year": 2022,
+        "pages": "31:1–31:26",
+        "publisher": "Logical Methods in Computer Science / Episciences",
+        "doi": "10.46298/lmcs-18(3:31)2022"
+      },
+      "notes": "Journal page and PDF verify metadata. Currently supplied journal PDF notes an update correcting Figure 10; Lemma 3.6 remains at the exact cited number. No version-specific claim about Figure 10 occurs in this use.",
+      "required_correction": "None."
+    }
+  ],
+  "verification_limits": [
+    "Goguen–Burstall and Gabbay–Pitts were substantively verified against complete author-hosted versions; official publisher metadata establish final publication identity. Their draft pagination is reported explicitly, not conflated with published pagination.",
+    "These references support methodological background; none alone proves that an arbitrary category D admits the required parameter-stable initial syntax algebra.",
+    "No source was called invented from a failed search or inaccessible publisher page."
+  ],
+  "web_refs": {
+    "Aczel_fulltext": "turn221view0",
+    "Aczel_publisher": "turn244view3",
+    "HP_point": "turn229view0",
+    "HP_frontmatter": "turn244view1",
+    "HP_catalog": "turn233search0",
+    "HP_springer": "turn244view2",
+    "HH_quantifiers": "turn226view1",
+    "HH_equality": "turn229view1",
+    "GTWW_fulltext": "turn277view0",
+    "GTWW_IBM": "turn228view2",
+    "GB_publisher": "turn259view0",
+    "GB_book": "turn259view3",
+    "GB_author_fulltext": "turn222view3",
+    "FPT_fulltext": "turn277view1",
+    "FPT_IEEE": "turn253search0",
+    "FPT_conference": "turn218search2",
+    "GP_publisher": "turn218search3",
+    "GP_author_fulltext": "turn222view2",
+    "Katsumata_fulltext": "turn249view0",
+    "Katsumata_publisher": "turn259view1",
+    "Wissmann_lemma": "turn228view3",
+    "Wissmann_journal": "turn218view0"
+  },
+  "evidence_provenance": [
+    "tmp/audit_v29/evidence/syntax/hilbert_provenance.json",
+    "tmp/audit_v29/evidence/syntax/metadata_web_provenance.json",
+    "tmp/audit_v29/evidence/syntax/*.provenance.json",
+    "tmp/audit_v29/evidence/syntax/*.crossref.json"
+  ]
+}

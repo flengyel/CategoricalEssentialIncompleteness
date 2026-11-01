@@ -1,0 +1,124 @@
+{
+  "scope": "VERSION29 frozen main paper only; three references and four citation uses",
+  "summary": {
+    "invented_references": 0,
+    "wrong_claim_or_locator": 0,
+    "verified": 3,
+    "verified_with_adaptation": 1,
+    "metadata_date_qualification": 1
+  },
+  "uses": [
+    {
+      "key": "Aczel",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 419,
+      "status": "verified",
+      "evidence_url": "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+      "source_location": "p.742 Proposition1.1.4 (PDFp4); pp747–748 Definitions1.4.3–1.4.4 and Proposition1.4.5 (PDFpp9–10)",
+      "support_explanation": "Proposition1.1.4 characterizes the least rule-closed set by finite-length proofs for a finitary rule set. Proposition1.4.5 gives the well-founded proof-tree characterization; the preceding p747 discussion observes that finitary proof trees are finite. V29 expressly assumes a finite maximum arity N and presents the following slice-category construction as its own reformulation, so it does not falsely attribute that internal categorical generalization to Aczel.",
+      "required_correction": "None. Optional improve locator by adding pp.742,747–748."
+    },
+    {
+      "key": "HP",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 509,
+      "status": "verified",
+      "evidence_url": "https://assets.cambridge.org/97811071/68411/excerpt/9781107168411_excerpt.pdf",
+      "source_location": "Preliminaries(a), numbered paragraph0.10, p7 (publisher excerpt PDFp3)",
+      "support_explanation": "All three displayed propositional schemata in v29 match the three propositional axioms in 0.10 exactly, after replacing source implication notation. HP uses a conditional quantifier rule and treats equality as special axioms in0.11, but v29 attributes only the three propositional schemata to HP.",
+      "required_correction": "No substantive correction. Prefer “0.10, p.7” over “Section0.10” because 0.10 is a numbered paragraph."
+    },
+    {
+      "key": "HH",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 522,
+      "status": "verified",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "source_location": "§2.11 pp48–50; §2.12 p51 Axioms4–5 and generalization (PDFpp54–57)",
+      "support_explanation": "Axioms4–5 exactly match universal instantiation and the displayed distribution axiom. §2.11 defines the free-for condition. V29 enforces the first restriction through Adm and the second through x absent from FV(phi). Source generalization is unrestricted for theorem proofs; v29 also restricts nonlogical axioms to sentences, so its generalization rule introduces no omitted open-assumption restriction.",
+      "required_correction": "None."
+    },
+    {
+      "key": "HH",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 524,
+      "status": "verified_with_adaptation",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "source_location": "§3.1 pp64–65 Axioms6–7 and examples (PDFpp70–71)",
+      "support_explanation": "The source gives universally quantified variable reflexivity and variable substitutivity, subject to free-for capture avoidance. It also illustrates replacing a variable by the constant2. V29 uses the corresponding all-term reflexivity and all-term formula-substitution schemata, with both substitutions admissible. The citation supports the stated equality principles; it does not literally print the exact term-parametrized schemata.",
+      "required_correction": "Optional precision: say “We use the term-instantiated form of the reflexivity and substitutivity principles in §3.1” or add a brief derivation. Do not call the displayed term schemata verbatim Hirst–Hirst axioms."
+    }
+  ],
+  "metadata": [
+    {
+      "key": "Aczel",
+      "status": "verified",
+      "evidence_url": [
+        "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0049237X08711200"
+      ],
+      "verified_metadata": {
+        "authors": "Peter Aczel",
+        "title": "An Introduction to Inductive Definitions",
+        "container": "Handbook of Mathematical Logic",
+        "editor": "Jon Barwise",
+        "publisher": "North-Holland",
+        "year": 1977,
+        "pages": "739–782",
+        "doi": "10.1016/S0049-237X(08)71120-0"
+      },
+      "notes": "Chapter opening and ending verify page span and North-Holland1977; publisher confirms DOI. V29 supplies a text URL instead of DOI, which is valid.",
+      "required_correction": "None."
+    },
+    {
+      "key": "HP",
+      "status": "verified_with_date_qualification",
+      "evidence_url": [
+        "https://assets.cambridge.org/97811071/68411/frontmatter/9781107168411_frontmatter.pdf",
+        "https://www.cambridge.org/core/books/metamathematics-of-firstorder-arithmetic/E72D370D90F316D86CB9D0927377A1A3",
+        "https://link.springer.com/book/9783540636489"
+      ],
+      "verified_metadata": {
+        "authors": "Petr Hájek and Pavel Pudlák",
+        "title": "Metamathematics of First-Order Arithmetic",
+        "series": "Perspectives in Logic3",
+        "publisher": "Cambridge University Press for Association for Symbolic Logic",
+        "edition_copyright": 2016,
+        "publication_date_print": "2017-03-02",
+        "publication_date_online": "2017-03-24",
+        "original_copyright": 1993,
+        "springer_paperback_date": "1998-03-17",
+        "doi": "10.1017/9781316717271",
+        "pages": "xiv+460"
+      },
+      "notes": "V29’s2016 date matches the CUP frontmatter copyright, while current CUP catalog gives2017 publication. CUP frontmatter describes predecessor as1998; Springer catalog identifies first-edition copyright1993 and1998 softcover. Thus “2016 reissue of the1993 edition” is understandable but conflates copyright/publication and lacks version precision.",
+      "required_correction": "For exact publication metadata use “Cambridge University Press,2017 (©2016; reissue of the Springer text, originally1993)” or explicitly label2016 as copyright year."
+    },
+    {
+      "key": "HH",
+      "status": "verified",
+      "evidence_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "verified_metadata": {
+        "authors": "Holly P. Hirst and Jeffry L. Hirst",
+        "title": "A Primer for Logic and Proof",
+        "version": "2015 Edition",
+        "copyright": 2002,
+        "publisher": "author-hosted text; none asserted in v29",
+        "doi": "none asserted"
+      },
+      "notes": "Full primary PDF titlepage agrees with v29 authors, title and version. The2002 copyright is not a contradiction of the expressly marked2015 edition.",
+      "required_correction": "None."
+    }
+  ],
+  "web_refs": {
+    "Aczel_fulltext": "turn221view0",
+    "Aczel_publisher": "turn244view3",
+    "HP_point": "turn229view0",
+    "HP_frontmatter": "turn244view1",
+    "HP_catalog": "turn233search0",
+    "HP_springer": "turn244view2",
+    "HH_quantifiers": "turn226view1",
+    "HH_equality": "turn229view1"
+  },
+  "evidence_provenance": "tmp/audit_v29/evidence/syntax/hilbert_provenance.json"
+}

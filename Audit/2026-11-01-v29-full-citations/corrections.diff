@@ -1,0 +1,169 @@
+--- v29/README.md
++++ v30/README.md
+@@ -1,8 +1,8 @@
+ # Logical consequence and essential incompleteness in recursion categories
+ 
+-Version 29, 1 November 2026.
++Version 30, 1 November 2026.
+ 
+-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v29.pdf) ·
++[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v30.pdf) ·
+ [Source archive](../logical_consequence_v28_source.zip)
+ 
+ Sections 3 and 4 prove the comparison theorem and its application to internally
+@@ -18,20 +18,21 @@
+ The faithful model family and numeral observations are in Appendix D.
+ The introduction and abstract are reserved for the final revision.
+ 
+-The [version 29 reviews](../../Audit/2026-11-01-prose-types-v29/README.md)
+-record the hostile-referee and mathematical-writing review of the version 28
+-revision, the local corrections, and the checks of the corrected passages.
++The [complete version 29 audit](../../Audit/2026-11-01-v29-full-citations/README.md)
++covers every compiled source file and every citation use. Version 30 applies
++the local attribution, bibliographic and terminology corrections. The citation
++ledger records one original-full-text access gap for Cockett's 1990 article.
+ The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
+ record the conditional criterion and its direct application proofs.
+ The general section and lifting criterion is in the separate note
+ [Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v2.pdf).
+-The dated source `LOCOct10f` is preserved with that note.
++The dated source LOCOct10f is preserved with that note.
+ 
+ Appendix A contains the full categorical construction of syntax, substitution,
+ and deductively closed theories. Its realizations are proved in the application
+ sections. The appendix is also available as a
+-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v29.pdf)
+-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v29.tex).
++[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v30.pdf)
++with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v30.tex).
+ 
+ ## Build
+ 
+--- v29/appendices/a-syntax-and-theories.tex
++++ v30/appendices/a-syntax-and-theories.tex
+@@ -506,7 +506,7 @@
+ Continue with the syntax structure of
+ Definition~\ref{def:categorical-syntax} and its constructed substitution.
+ Put $F=\Fm$. The propositional axiom schemes are those of
+-H\'ajek and Pudl\'ak~\cite[Section 0.10]{HP}:
++H\'ajek and Pudl\'ak~\cite[0.10, p.~7]{HP}:
+ \begin{align}
+  &\varphi\Rightarrow(\psi\Rightarrow\varphi),
+                                                         \label{eq:hilbert-one}\\
+@@ -519,9 +519,9 @@
+                                                         \label{eq:hilbert-three}
+ \end{align}
+ The named-variable quantifier axioms follow
+-Hirst and Hirst~\cite[Sections 2.11--2.12]{HH}; equality is expressed
+-by reflexivity and substitution of equal terms in formulas
+-\cite[Section 3.1]{HH}:
++Hirst and Hirst~\cite[Sections 2.11--2.12]{HH}. For equality, we use
++their reflexivity and substitutivity principles with terms as
++parameters~\cite[Section 3.1]{HH}:
+ \begin{align}
+  &(\forall x\,\varphi)\Rightarrow\varphi[x:=t],
+                                                         \label{eq:hilbert-instantiation}\\
+--- v29/bibliography.tex
++++ v30/bibliography.tex
+@@ -69,7 +69,7 @@
+ \bibitem{HP}
+ P.~H\'ajek and P.~Pudl\'ak, \emph{Metamathematics of First-Order
+ Arithmetic}, Perspectives in Logic, Cambridge University Press,
+-2016 reissue of the 1993 edition.
++2017 reissue of the Springer text, originally published in 1993.
+ \href{https://doi.org/10.1017/9781316717271}{doi:10.1017/9781316717271}.
+ \bibitem{HH}
+ H.~P.~Hirst and J.~L.~Hirst, \emph{A Primer for Logic and Proof},
+--- v29/preamble.tex
++++ v30/preamble.tex
+@@ -3,7 +3,7 @@
+ \usepackage[margin=1in]{geometry}
+ \usepackage{xurl,hyperref}
+ \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+-pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 29},pdfauthor={Florian Lengyel}}
++pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 30},pdfauthor={Florian Lengyel}}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{proposition}[theorem]{Proposition}
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -17,7 +17,7 @@
+ \title{Logical consequence and essential incompleteness\\
+ in recursion categories}
+ \author{Florian Lengyel}
+-\date{Version 29\\1 November 2026}
++\date{Version 30\\1 November 2026}
+ 
+ \newcommand{\Crec}{\mathcal C_{\mathrm{rec}}}
+ \newcommand{\Da}{\mathcal D_a}
+--- v29/sections/01-introduction.tex
++++ v30/sections/01-introduction.tex
+@@ -12,7 +12,7 @@
+ Joins of source morphisms with disjoint domains supply complementary conditionals
+ (Proposition~\ref{prop:disjoint-joins}). Without lifting the conclusion
+ can fail even for a faithful range functor preserving products and
+-reflecting zero maps
++reflecting zero morphisms
+ (Appendix~\ref{app:lifting-counterexample}).
+ 
+ The principal application uses a sequence $a:\N\to[0,1]$ constructed
+@@ -116,7 +116,9 @@
+ \cite[Proposition 4.5]{CockettLackIII}.
+ 
+ Di Paola and Heller proved recursive inseparability in dominical
+-recursion categories in which every morphism has a section
++recursion categories with a section for every morphism and binary
++coproducts for which coproducts of total morphisms are total and the
++near product distributes over coproducts
+ \cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability
+ results from precomplete equivalence relations, including PA-provable
+ equality of partial recursive functions among his examples
+--- v29/sections/02-categorical-preliminaries.tex
++++ v30/sections/02-categorical-preliminaries.tex
+@@ -114,7 +114,7 @@
+ 
+ A \emph{range functor} $F:\mathcal C\to\mathcal D$ preserves
+ restrictions, ranges, restriction zeros, and binary
+-restriction coproducts. In particular, the canonical map
++restriction coproducts. In particular, the canonical morphism
+ \[
+  \chi_{X,Y}=[F i_0,F i_1]:FX+FY\longrightarrow F(X+Y)
+ \]
+@@ -127,7 +127,7 @@
+ category of sets and partial functions. For example, the functor
+ $F:\Pfn\to\Pfn$ given by $F(X)=X\times\{0,1\}$ and
+ $F(f)=f\times1_{\{0,1\}}$ preserves restrictions, images, zeros,
+-and coproducts. Its canonical map from $F(X\times Y)$ to
++and coproducts. Its canonical morphism from $F(X\times Y)$ to
+ $FX\times FY$ sends $((x,y),a)$ to $((x,a),(y,a))$, and is
+ not surjective when $X,Y$ are nonempty.
+ 
+@@ -156,7 +156,7 @@
+ A \emph{Turing morphism} on $U$ is a morphism
+ $\tau:U\times U\rightharpoonup U$ such that, for every object $X$
+ and every $f:X\times U\rightharpoonup U$, there is a total
+-parameter map $r:X\to U$ satisfying
++parameter morphism $r:X\to U$ satisfying
+ \[
+  f=\tau(r\times1_U).
+ \]
+--- v29/sections/05a-internal-syntax.tex
++++ v30/sections/05a-internal-syntax.tex
+@@ -512,8 +512,8 @@
+ 
+ \begin{proposition}
+ \label{prop:st-substitution-realization}
+-On the preceding codes, the list operations, free-variable maps,
+-term substitution, and the option-valued formula-substitution map
++On the preceding codes, the list operations, free-variable morphisms,
++term substitution, and the option-valued formula-substitution morphism
+ of Appendix~\ref{app:syntax-theories} are represented by algorithms whose
+ defining equations and preservation of the specified carriers are
+ provable in $\PA$. Restricting each graph to its source predicate
+@@ -846,7 +846,7 @@
+ 
+ Every rule object in Appendix~\ref{app:first-order-derivations}
+ is a finite product, coproduct, or pullback of these objects and
+-$A$. Its premise and conclusion maps are composites of the
++$A$. Its premise and conclusion morphisms are composites of the
+ realized constructors and substitution morphisms. They are
+ therefore morphisms of $\mathcal B_T$.
+ Lemma~\ref{lem:syntactic-derivation-initiality} applies with $N=2$.

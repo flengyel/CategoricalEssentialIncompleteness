@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 29, 1 November 2026.
+Version 30, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v29.pdf) ·
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v30.pdf) ·
 [Source archive](../logical_consequence_v28_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
@@ -18,20 +18,21 @@ contain the Miller and cosheaf applications.
 The faithful model family and numeral observations are in Appendix D.
 The introduction and abstract are reserved for the final revision.
 
-The [version 29 reviews](../../Audit/2026-11-01-prose-types-v29/README.md)
-record the hostile-referee and mathematical-writing review of the version 28
-revision, the local corrections, and the checks of the corrected passages.
+The [complete version 29 audit](../../Audit/2026-11-01-v29-full-citations/README.md)
+covers every compiled source file and every citation use. Version 30 applies
+the local attribution, bibliographic and terminology corrections. The citation
+ledger records one original-full-text access gap for Cockett's 1990 article.
 The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
 record the conditional criterion and its direct application proofs.
 The general section and lifting criterion is in the separate note
 [Ranges and inseparability in recursion categories](https://github.com/flengyel/notes/blob/main/recursion_categories/Ranges_and_Inseparability_v2.pdf).
-The dated source `LOCOct10f` is preserved with that note.
+The dated source LOCOct10f is preserved with that note.
 
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v29.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v29.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v30.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v30.tex).
 
 ## Build
 

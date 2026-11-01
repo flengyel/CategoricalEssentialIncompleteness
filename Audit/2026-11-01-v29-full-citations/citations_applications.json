@@ -1,0 +1,133 @@
+{
+  "scope": "Frozen version29 main paper only",
+  "metadata": [
+    {
+      "key": "BauerHanson",
+      "status": "verified",
+      "bibliography_as_written": "A.~Bauer and J.~E. Hanson, \\emph{The Countable Reals},\n\\href{https://arxiv.org/abs/2404.01256v3}{arXiv:2404.01256v3}, 2026.",
+      "evidence_url": [
+        "https://arxiv.org/abs/2404.01256v3"
+      ],
+      "required_correction": "None."
+    },
+    {
+      "key": "CurryCosheaves",
+      "status": "verified",
+      "bibliography_as_written": "J.~M. Curry, \\emph{Dualities between cellular sheaves and cosheaves},\nJ. Pure Appl. Algebra \\textbf{222} (2018), 966--993.\n\\href{https://doi.org/10.1016/j.jpaa.2017.06.001}\n{doi:10.1016/j.jpaa.2017.06.001}.",
+      "evidence_url": [
+        "https://doi.org/10.1016/j.jpaa.2017.06.001",
+        "https://arxiv.org/abs/1607.06942"
+      ],
+      "required_correction": "None."
+    },
+    {
+      "key": "Miller2004",
+      "status": "verified",
+      "bibliography_as_written": "J.~S. Miller, \\emph{Degrees of unsolvability of continuous functions},\nJ. Symbolic Logic \\textbf{69} (2004), no.~2, 555--584.\n\\href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.",
+      "evidence_url": [
+        "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/degrees-of-unsolvability-of-continuous-functions/976A65405A0C4D3784C7739673AE4D8C"
+      ],
+      "required_correction": "None."
+    },
+    {
+      "key": "Keisler",
+      "status": "verified",
+      "bibliography_as_written": "H.~J. Keisler, \\emph{The ultraproduct construction},\nauthor's survey, 1 June 2010.\n\\href{https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf}{Author's text}.",
+      "evidence_url": [
+        "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf",
+        "https://people.math.wisc.edu/~hkeisler/recent.html"
+      ],
+      "required_correction": "None. Keisler author survey date1June2010 is printed in the linked text; its published chapter record can be added, but the existing record is accurate."
+    }
+  ],
+  "uses": [
+    {
+      "key": "BauerHanson",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 36,
+      "locator": "Theorem~2.2",
+      "status": "verified",
+      "evidence_url": "https://arxiv.org/html/2404.01256v3",
+      "source_location": "Section2.1 Definition2.1 and Theorem2.2; abstract and Section6",
+      "support_explanation": "The exact v3 text uses the same binary-coordinate coding and fast rational approximation convention. Definition2.1 allows the approximating rational sequence to depend on the oracle while the represented real is fixed. Theorem2.2 gives the same-index equality. Section6 proves countability of the Dedekind reals in the parameterized realizability topos.",
+      "required_correction": "None."
+    },
+    {
+      "key": "BauerHanson",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 40,
+      "locator": "Section~2.1 and Theorem~2.2",
+      "status": "verified",
+      "evidence_url": "https://arxiv.org/html/2404.01256v3",
+      "source_location": "Section2.1 Definition2.1 and Theorem2.2; abstract and Section6",
+      "support_explanation": "The exact v3 text uses the same binary-coordinate coding and fast rational approximation convention. Definition2.1 allows the approximating rational sequence to depend on the oracle while the represented real is fixed. Theorem2.2 gives the same-index equality. Section6 proves countability of the Dedekind reals in the parameterized realizability topos.",
+      "required_correction": "None."
+    },
+    {
+      "key": "BauerHanson",
+      "file": "sections/01-introduction.tex",
+      "line": 134,
+      "locator": null,
+      "status": "verified",
+      "evidence_url": "https://arxiv.org/html/2404.01256v3",
+      "source_location": "Section2.1 Definition2.1 and Theorem2.2; abstract and Section6",
+      "support_explanation": "The exact v3 text uses the same binary-coordinate coding and fast rational approximation convention. Definition2.1 allows the approximating rational sequence to depend on the oracle while the represented real is fixed. Theorem2.2 gives the same-index equality. Section6 proves countability of the Dedekind reals in the parameterized realizability topos.",
+      "required_correction": "None."
+    },
+    {
+      "key": "CurryCosheaves",
+      "file": "sections/09-three-point-space.tex",
+      "line": 14,
+      "locator": "Definition 2.6",
+      "status": "verified_equivalent_form",
+      "evidence_url": "https://arxiv.org/pdf/1607.06942",
+      "source_location": "Definition2.6, author PDFp3, with Definitions2.1\u20132.3",
+      "support_explanation": "Definition2.6 states the cosheaf axiom as preservation of the colimit indexed by the nerve of a cover. For Set this colimit is the displayed coequalizer of pairwise-intersection and cover-member coproducts: compatible maps on the members are exactly cocones on all their finite intersections. The empty cover requires the initial set. Thus the paper uses an equivalent explicit form, not a verbatim source formula. Publisher metadata verify the published2018 article; the primary author version verifies the locator and definition.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Miller2004",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 38,
+      "locator": "Theorem~6.3",
+      "status": "verified_author_version",
+      "evidence_url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+      "source_location": "Section6, Theorem6.3 and the paragraph immediately following; author PDFpp12\u201313",
+      "support_explanation": "Theorem6.3 constructs the non-diagonalizable sequence; its proof and following paragraph give the stronger same-index equality. This supports the construction and strengthened-property attributions. Journal metadata are verified independently from Cambridge. The complete author version was read at the relevant theorem; it has33 pages and is not represented here as the publisher30-page PDF.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Miller2004",
+      "file": "sections/01-introduction.tex",
+      "line": 19,
+      "locator": null,
+      "status": "verified_author_version",
+      "evidence_url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+      "source_location": "Section6, Theorem6.3 and the paragraph immediately following; author PDFpp12\u201313",
+      "support_explanation": "Theorem6.3 constructs the non-diagonalizable sequence; its proof and following paragraph give the stronger same-index equality. This supports the construction and strengthened-property attributions. Journal metadata are verified independently from Cambridge. The complete author version was read at the relevant theorem; it has33 pages and is not represented here as the publisher30-page PDF.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Miller2004",
+      "file": "sections/01-introduction.tex",
+      "line": 130,
+      "locator": "Theorem~6.3",
+      "status": "verified_author_version",
+      "evidence_url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+      "source_location": "Section6, Theorem6.3 and the paragraph immediately following; author PDFpp12\u201313",
+      "support_explanation": "Theorem6.3 constructs the non-diagonalizable sequence; its proof and following paragraph give the stronger same-index equality. This supports the construction and strengthened-property attributions. Journal metadata are verified independently from Cambridge. The complete author version was read at the relevant theorem; it has33 pages and is not represented here as the publisher30-page PDF.",
+      "required_correction": "None."
+    },
+    {
+      "key": "Keisler",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 397,
+      "locator": "Theorem~3.1",
+      "status": "verified",
+      "evidence_url": "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf",
+      "source_location": "Theorem3.1 and Corollary3.2, author PDFp4",
+      "support_explanation": "Theorem3.1 is Los theorem for any first-order formula in an ultraproduct; Corollary3.2 expressly says that an ultraproduct of models of a theory models that theory. Apply to the constant family of standard arithmetic structures. The nonempty index set and proper ultrafilter are explicitly fixed in the paper.",
+      "required_correction": "None."
+    }
+  ]
+}
