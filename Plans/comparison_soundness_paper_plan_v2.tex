@@ -4,7 +4,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs,longtable,array,enumitem,tikz-cd}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\hypersetup{pdftitle={Paper plan: comparisons, internal theories, and essential incompleteness -- version 1},pdfauthor={Florian Lengyel}}
+\hypersetup{pdftitle={Local connectedness in recursion categories and essential incompleteness: theorem statements and proof outlines -- version 2},pdfauthor={Florian Lengyel}}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -30,150 +30,117 @@
 \newcommand{\D}{\mathcal D}
 \newcommand{\E}{\mathcal E}
 \newcommand{\U}{\mathcal U}
-\newcommand{\source}[1]{\par\smallskip\noindent\textit{Source and action.} #1\par\smallskip}
-\newcommand{\purpose}[1]{\noindent\textit{Purpose.} #1\par\medskip}
 \setlength{\emergencystretch}{3em}
 \setlist{topsep=4pt,itemsep=3pt}
-\title{Plan for revising\newline\emph{Local connectedness in recursion categories\newline and essential incompleteness}}
-\author{Theorem statements, proof outlines, and section dependencies}
-\date{Plan version 1 --- 1 November 2026}
+\title{Local connectedness in recursion categories\\and essential incompleteness\\[1ex]\large Theorem statements and proof outlines}
+\author{}
+\date{Version 2 --- 1 November 2026}
 \begin{document}
 \maketitle
-
-\noindent\textbf{Baseline.} Manuscript version 19, 1 November 2026.\par
-\noindent Commit \texttt{2a785a3b5b3b9686e12f72f5118cf14bbbf5e251}.\par
-This document plans the next revision. It does not revise the manuscript.
-The section and result numbers below are proposed numbers; references
-prefixed by ``v19'' identify the current manuscript.
-
-\section*{The proposed argument}
-\addcontentsline{toc}{section}{The proposed argument}
-The principal theorem will concern a partial conditional in a semantic
-target whose morphism lifts to a source recursion category. A Turing
-morphism in the source then produces a total morphism whose interpretation
-avoids both target domains. Local connectedness and weak choice provide
-the target conditional under the existing hypotheses. Range preservation
-identifies the interpreted internal theorem object with the image of the
-interpreted conclusion morphism.
-
-The arithmetic application will use the fixed ambient category
-$S_{\PA}$. Each c.e. theory $A\supseteq\PA$ is represented by an axiom
-subobject in $\B_{\PA}=\Tot(\Split S_{\PA})$. Actual consistency of $A$
-gives disjoint theorem and refutation domains in the standard
-interpretation. A partial program searching for a proof of either a
-sentence or its negation supplies the required lift. Neither PA-provable
-consistency of $A$ nor PA-provable totality of that search is required.
-Recursive separators also give source program lifts; their impossibility
-proves recursive inseparability and hence essential incompleteness.
-
-Soundness will have its own theorem. For a represented theory $A$ and
-a model $K\models A$, standard numerical proof codes give a conclusion
-map factoring through the subobject of sentences valid in $K$.
-The numerical code structure and the semantic structure $K$ have
-different roles. Taking an ultrapower
-of the entire interpretation, including satisfaction, preserves this
-factorization for all interpreted proof codes. This includes nonstandard
-codes and does not require preservation of initial derivation algebras.
-The arithmetic incompleteness theorem for arbitrary consistent extensions
-uses consistency directly and therefore does not assume their axioms
-true in $\N$.
-
-\paragraph{The consistency claim.}
-The soundness argument is a model-theoretic consistency proof: an
-independently verified interpretation of the axioms and rules excludes
-a proof of contradiction. A formal relative-consistency claim must
-specify the theories whose consistency is compared and the metatheory
-in which a proof translation or model construction is formalized.
-No such formalized argument is supplied here, so this revision will
-not claim a new relative-consistency
-strength. Ultrapowers transfer a soundness argument; they do not produce
-consistency from no semantic assumptions. For arbitrary consistent
-extensions in the incompleteness theorem, consistency remains a hypothesis.
-
-\paragraph{The Di Paola--Heller claim.}
-Di Paola and Heller explicitly proposed an algebraization of generalized
-incompleteness, including inseparability of theorem and refutation sets
-\cite{DPH}. The proposed paper supplies a categorical theorem under
-specified syntax, representation, interpretation, and lifting hypotheses,
-and verifies those hypotheses in concrete recursion categories.
-This supports the claim that the paper realizes an inseparability form
-of their program under these hypotheses. It does not establish that
-every recursion category has internal first-order syntax, that every
-internal theory is incomplete, or that all of their proposed generalized
-incompleteness statements follow. The arithmetic conclusion is known;
-priority for the comparison theorem and the particular realizations
-requires comparison with the cited categorical precedents.
-
-\paragraph{Version and scope.}
-The syntax appendix keeps its single task: the categorical construction
-of syntax and deductively closed theories. Numerical realizations remain
-where that appendix is applied. The new soundness and incompleteness
-arguments belong in the main text. The three-point application remains
-propositional for its selected atom object. The Miller application retains
-its distinct claims about uniform computation, real closed fields, and
-failure to preserve inseparability.
-
 \begingroup\small
 \tableofcontents
 \endgroup
 \newpage
 
-\section*{Migration from version 19}
-\addcontentsline{toc}{section}{Migration from version 19}
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.17\textwidth}>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.53\textwidth}@{}}
-\toprule
-Current location & Proposed location & Mathematical action\\\midrule\endhead
-\S\S1--2 & \S\S1--2 & Rewrite the introduction after the results are settled; retain categorical conventions and definitions.\\
-\S3 & \S3 and \S4 & Prove the comparison theorem first for partial target conditionals. Retain local connectedness as a sufficient condition and the source inseparability corollaries.\\
-\S4, results 4.1--4.6 & \S8 & Retain the Miller construction, reduction, syntax realization, and theory theorem. Change only the route through the general results.\\
-\S5, results 5.1--5.9 & \S5 & Retain the realization in $\B_T$ and all nine supporting statements. Use distinct letters for the ambient theory $B$ and represented theory $A$.\\
-\S6, result 6.1 & \S6 & Retain one-model interpretation; add standard and ultrapower soundness.\\
-\S7, results 7.1--7.3 & \S6, \S7, Appendix D & Keep one-model source inseparability in \S6. Generalize the search lemma for \S7. Move the faithful family and theory-extension square to Appendix D.\\
-\S8, results 8.1--8.2 & \S5 and \S7 & Retain the $\mathrm{Rec}$ realization as a comparison. Make the arithmetic derivation from $S_{\PA}$ the main proof.\\
-\S9, results 9.1--9.6 & \S9 & Retain propositional initiality, endpoint computations, consistent theories, and endpoint essential incompleteness.\\
-Appendix A\newline A.1--A.10 & Appendix B & Retain the complete three-point cosheaf construction and its recursion-category verification.\\
-Appendix B\newline B.1--B.7 & Appendix A & Retain the categorical syntax and theory construction, its substitution dependencies, and the range/image lemma.\\
-Appendix C, C.1 & Appendix C & Retain the counterexample to dropping lifting; identify exactly which proposed corollary it refutes without lifting.\\
-\bottomrule
-\end{longtable}
-
 \section{Introduction}
-\purpose{State the comparison theorem, its logical application, and the verified examples before discussing its relation to the Di Paola--Heller program.}
-The first mathematical claim should describe the total morphism avoiding
-two disjoint interpreted domains when their reversed partial conditional
-lifts. The following paragraph should explain that internally generated
-theories provide the theorem domains, while a semantic interpretation
-provides consistency. Then state the arithmetic, Miller, and cosheaf
-conclusions with their actual computability hypotheses.
+Let $F:\R\to\A$ be a range functor from a recursion category.
+Theorem~\ref{thm:comparison} constructs a total source morphism whose
+interpretation avoids two disjoint target domains containing the images
+of the diagonal domains. Its hypothesis is a source lift of the reversed
+partial conditional for those target domains. Local connectedness and
+weak choice provide such target conditionals
+(Proposition~\ref{prop:conditionals}); a Turing morphism in the source
+provides the diagonal argument.
 
-Keep the distinction between this theorem and Heller's existence theorem:
-the source here already has a Turing morphism. State that local
-connectedness is a sufficient target hypothesis. The target need not be
-a recursion category, and the functor need not be faithful or preserve
-restriction products. Describe the faithful family of models only as a
-separate representation result.
+Syntax and generated theories are constructed in
+$\Tot(\Split\R)$. Pulling the conclusion map of an initial derivation
+algebra back to the sentence object gives a map whose range represents
+the generated sentence theory. Interpretation transports this range to
+the image of the interpreted sentence-conclusion map. A semantic
+model gives disjoint theorem and refutation domains, and partial proof
+search supplies a conditional lift. For the ambient category $S_{\PA}$,
+this proves recursive inseparability of the theorem and refutation sets
+of every consistent computably enumerable (c.e.) extension of PA.
 
-The related-work discussion should place Di Paola--Heller, Bernardi,
-Montagna, and Di Paola--Montagna before the present construction
-\cite{DPH,Bernardi,Montagna,DPM}. The categorical syntax precedents remain
-in Appendix A with their precise functions. Miller's construction and the
-cosheaf literature stay with their applications. No claim of originality
-should rest on the fact that a theorem has been reformulated in the
-present notation.
-\source{Replace v19 \S1 and its roadmap after \S\S3--7 are revised. Draft the abstract last. The current title can be retained because local connectedness still supplies a general sufficient condition.}
+The other applications concern computation independent of a binary
+representation of Miller's sequence and a recursion category obtained
+from cosheaves on a three-point space. The first gives an essentially
+incomplete theory of real closed fields under the specified uniform
+semidecidability condition. Its inseparable pair acquires a separator
+when one representation is fixed. The second gives propositional
+theories whose endpoint theories have no complete consistent c.e.
+extensions.
+
+Di Paola and Heller proposed categorical formulations of generalized
+incompleteness through theorem and refutation sets \cite{DPH}.
+Bernardi studied categorical inseparability through precomplete
+equivalence relations \cite{Bernardi}. Montagna and Di Paola--Montagna
+constructed syntactic recursion categories using provable equality of
+partial recursive functions \cite{Montagna,DPM}. The comparison theorem
+applies to a source already equipped with a Turing morphism; the
+construction of syntax and theories, interpretation, and conditional
+lifting provide its logical applications.
 
 \section{Restriction categories, ranges, and recursion}
-\purpose{Fix the structures and conventions used by the comparison theorem and by the theory construction.}
-Retain the definitions in v19 \S2: restriction idempotents and total
-morphisms; restriction zeros; ranges and their agreement property;
-restriction products and coproducts; inverse images; joins and
-complementarity; partial monomorphisms, sections, and weak choice;
-local connectedness; restriction splitting; recursion categories and
-Turing morphisms. Write composition as $gf=g\circ f$.
+Composition is written $gf=g\circ f$. A restriction category $\mathcal C$ assigns
+to each morphism $f:X\rightharpoonup Y$ a morphism
+$\bar f:X\rightharpoonup X$ satisfying
+\[
+ f\bar f=f,\qquad
+ \bar f\bar g=\bar g\bar f,\qquad
+ \overline{g\bar f}=\bar g\bar f,\qquad
+ \bar h f=f\overline{hf}.
+\]
+In the middle two equations $g:X\rightharpoonup Z$; in the last,
+$h:Y\rightharpoonup Z$. The morphisms $\bar f$ are restriction
+idempotents. A morphism is total when $\bar f=1_X$, and the total
+morphisms form the category $\Tot(\mathcal C)$
+\cite{CockettLack}. A restriction functor preserves the operation
+$f\mapsto\bar f$.
+
+A restriction zero $0_{X,Y}$ is absorbing under composition and
+satisfies $\overline{0_{X,Y}}=0_{X,X}$; write $0_X=0_{X,X}$.
+Restriction idempotents on $X$ are ordered by $a\le b$ when $ba=a$.
+Their meet is composition and their greatest element is $1_X$.
+Their join, when it exists, is denoted by $a\vee b$. They are
+disjoint when $ab=0_X$ and complementary when also $a\vee b=1_X$.
+A disjoint pair $a_0,a_1$ is inseparable if no complementary pair
+$c,c'$ satisfies $a_0\le c$ and $a_1\le c'$.
+For parallel partial morphisms, the restriction order is
+$f\le g$ when $f=g\bar f$; joins of morphisms refer to this order.
+Parallel morphisms $f,g$ are compatible when $f\bar g=g\bar f$.
+
+A restriction idempotent $r$ on $Y$ receives
+$f:X\rightharpoonup Y$ when $rf=f$. The range $\ran(f)$ is the
+least such restriction idempotent. Ranges satisfy the agreement law
+\[
+ gf=hf\quad\Longrightarrow\quad
+ g\ran(f)=h\ran(f)
+ \qquad(g,h:Y\rightharpoonup Z).
+\]
+In $\Pfn$, the category of sets and partial functions, restriction
+and range are the partial identities on the domain and image.
+
+A binary restriction product $X\times Y$ has total projections
+$\pi_1,\pi_2$ and, for $f:Z\rightharpoonup X$ and
+$g:Z\rightharpoonup Y$, a unique pairing with
+\[
+ \pi_1\langle f,g\rangle=f\bar g,\qquad
+ \pi_2\langle f,g\rangle=g\bar f,\qquad
+ \overline{\langle f,g\rangle}=\bar f\bar g.
+\]
+Its total diagonal is $\Delta_X=\langle1_X,1_X\rangle$.
+A binary restriction coproduct is a categorical coproduct with total
+injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$. Write $[f,g]$ for
+copairing and $\nabla_X=[1_X,1_X]:X+X\to X$ for the codiagonal.
+Ranges and restriction coproducts give binary joins of restriction
+idempotents by $a\vee b=\ran[a,b]$.
 
 For $f:X\rightharpoonup Y$ and a restriction idempotent $e$ on $Y$,
-$f^*e=\overline{ef}$. A range functor preserves restrictions, ranges,
-restriction zeros, and binary restriction coproducts. It consequently
+$f^*e=\overline{ef}$. A range functor
+$F:\mathcal C\to\mathcal C'$ between categories with ranges,
+restriction zeros, and binary restriction coproducts preserves these
+structures and restrictions. It consequently
 preserves joins because $a\vee b=\ran[a,b]$. Write
 \[
  \chi_{X,Y}:FX+FY\xrightarrow{\cong}F(X+Y)
@@ -181,15 +148,43 @@ preserves joins because $a\vee b=\ran[a,b]$. Write
 for its coproduct comparison. The definition does not include preservation
 of restriction products.
 
-For an original source object $U$, the inclusion
-$\R\to\Split\R$ is full on the hom-sets between original objects.
-Thus a morphism $U\rightharpoonup U+U$ constructed in the splitting is
-also a source morphism. Formula, sentence, and proof objects may belong
-to $\Tot(\Split\R)$; this must be stated whenever they are introduced.
-\source{Retain v19 \S2. Add only the conventions needed to distinguish $F$ from its extension to restriction splittings and its restriction to total categories. Use Cockett--Lack and Cockett--Hofstra for the established categorical framework \cite{CockettLack,CockettHofstra}.}
+A restriction idempotent $e$ on $X$ splits when $e=mr$ for a total
+$m:E\to X$ and a partial $r:X\rightharpoonup E$ with $rm=1_E$.
+A restriction category is split when every restriction idempotent
+splits. The objects of $\Split\mathcal C$ are pairs $(X,e)$ with
+$e$ a restriction idempotent. A morphism
+$f:(X,e)\rightharpoonup(Y,d)$ is a morphism of $\mathcal C$
+satisfying $f=dfe$. The identity of $(X,e)$ is $e$, and $f$ is
+total precisely when $\bar f=e$. Ranges extend to this category:
+$df=f$ implies $\ran(f)\le d$, so the same representative is a
+range on $(Y,d)$. The inclusion $X\mapsto(X,1_X)$ is fully
+faithful. In particular, a morphism $U\rightharpoonup U+U$ between
+original objects constructed in the splitting belongs to the source.
+
+A restriction idempotent $a$ is connected if every disjoint
+decomposition $a=b\vee c$ has $b=0$ or $c=0$. A category is
+locally connected when its connected restriction idempotents are
+jointly epimorphic: $fa=ga$ for every connected restriction
+idempotent $a$ on the common source implies $f=g$.
+A partial monomorphism $p:X\rightharpoonup Y$ satisfies
+$pu=pv\Rightarrow\bar p u=\bar p v$ for all
+$u,v:W\rightharpoonup X$. A section of $p$ is a partial morphism
+$s:Y\rightharpoonup X$ with $ps=\bar s$ and $psp=p$.
+Weak choice means that every partial monomorphism has a section.
+
+A restriction category with binary restriction products and zeros
+is prodominical when $f\times0=0$ for all morphisms of the required
+types, and is isotypical when its objects are pairwise isomorphic.
+A Turing morphism $\tau:U\times U\rightharpoonup U$ has the
+following property: for every object $X$ and every
+$f:X\times U\rightharpoonup U$, there is a total parameter
+$r:X\to U$ with $f=\tau(r\times1_U)$. A recursion category is
+a prodominical isotypical category with binary restriction products
+and a Turing morphism. These structures express partial computation
+in the restriction-category framework
+\cite{CockettLack,CockettHofstra}.
 
 \section{Diagonal arguments and lifted partial conditionals}
-\purpose{Prove the comparison theorem before imposing local connectedness.}
 
 \begin{theorem}[Comparison theorem]\label{thm:comparison}
 Let $\R$ be a recursion category with ranges and binary restriction
@@ -236,7 +231,6 @@ $E^*(PN)=0$, so both are zero. Totality of $E$ and preservation
 of the indicated join would give
 $1_{FU}=E^*1_{FU}=E^*(P\vee N)=0$ if $P\vee N=1_{FU}$.
 \end{proof}
-\source{New statement extending the proof of v19 Theorem 3.3. The partial conditional need not be total, its source lift need not be total, and neither faithfulness nor product preservation is used. Range preservation is retained as the paper's common comparison structure, although the displayed diagonal calculation only uses restrictions, zeros, and coproducts.}
 
 \begin{corollary}[Separators whose conditionals lift]\label{cor:separator}
 Under the categorical assumptions of Theorem~\ref{thm:comparison},
@@ -248,10 +242,9 @@ admitting a source lift as in that theorem.
 \begin{proof}
 Apply the theorem and use $P\vee N=1_{FU}$.
 \end{proof}
-This does not assert inseparability among all target restriction
-idempotents. In $\Pfn$ every disjoint pair has a set-theoretic
-separator. The obstruction concerns separators whose conditional has
-the specified source lift.
+Every disjoint pair in $\Pfn$ has a set-theoretic separator.
+Corollary~\ref{cor:separator} constrains source lifts of the
+associated reversed conditional.
 
 \begin{lemma}[Connected domains and coproducts]\label{lem:connected}
 Suppose $\A$ has the restriction structure above and inverse images
@@ -264,7 +257,6 @@ Pull the disjoint summand decomposition back along $f$ and meet
 with $a$. Connectedness makes one piece zero; the other is $a$.
 The restriction identity gives the asserted equation.
 \end{proof}
-\source{Retain v19 Lemma 3.1.}
 
 \begin{proposition}[Conditionals in a locally connected category]\label{prop:conditionals}
 Let $\A$ be split and locally connected, with ranges, restriction
@@ -281,15 +273,17 @@ has a unique section $s:X\rightharpoonup X+X$. It satisfies
 \]
 \end{proposition}
 \begin{proof}
-Use Lemma~\ref{lem:connected} on connected domain restrictions to
-show that $p$ is a partial monomorphism. Split the common domain
-of $pu,pv$ to extend the argument from total maps to arbitrary
-partial maps. Weak choice supplies a section. The section equations
+For total $u,v:Y\to X+X$, Lemma~\ref{lem:connected} places each
+of their restrictions to a connected domain in one summand.
+The equation $pu=pv$ then gives $\bar p u=\bar p v$ on every
+connected domain, and hence everywhere by local connectedness.
+For arbitrary partial $u,v$, splitting the common domain of $pu,pv$
+reduces to this total case. Thus $p$ is a partial monomorphism.
+Weak choice supplies a section. The section equations
 give $\bar s=\ran(p)=P\vee N$; partial monicity gives uniqueness.
 The identities $sP=i_1P$ and $sN=i_0N$, together with this domain
 equation, give the two summand inverse images.
 \end{proof}
-\source{Retain v19 Proposition 3.2 and state its partial summand equations explicitly. This proposition is where local connectedness and weak choice are used.}
 
 \begin{corollary}[Inseparability in the source]\label{cor:source}
 Let $F:\R\to\A$, $\tau$, $b$, and $a_0,a_1$ be as in
@@ -304,7 +298,8 @@ A source separator is sent to a complementary target pair, since
 a range functor preserves joins, meets, and zero. The assumed lift
 contradicts Corollary~\ref{cor:separator}.
 \end{proof}
-\source{Retain the conclusion of v19 Theorem 3.3 as a corollary. Appendix C shows that its lifting hypothesis cannot simply be omitted.}
+Appendix C gives a faithful range functor with a separable diagonal
+pair for which the required conditional has no source lift.
 
 \begin{proposition}[Disjoint joins give source lifts]\label{prop:joins}
 If parallel partial morphisms with disjoint domains have joins in
@@ -323,16 +318,15 @@ is the full domain. After the coproduct identification, both maps agree on
 $Fc,Fc'$. Their copairing has full range, so range agreement gives
 equality.
 \end{proof}
-\source{Retain v19 Proposition 3.4. It remains useful in the Miller and numerical applications.}
 
 \section{Internal theories and semantic consistency}
-\purpose{Connect the abstract construction in Appendix A to the comparison theorem, without identifying syntax with an arbitrary restriction idempotent.}
 Let $\D=\Tot(\Split\R)$ satisfy the hypotheses used in Appendix A.
 Assume the semantic target $\A$ is split, and choose an extension
 $\widehat F:\Split\R\to\A$ preserving ranges and the restriction
-structure. Use the canonical functor to $\Split\A$ followed by
-chosen splittings in $\A$, with the identity splitting on original
-objects, so that $\widehat F|_{\R}=F$.
+structure. This extension is the composite of the canonical functor
+to $\Split\A$ and the functor given by chosen splittings in $\A$.
+The identity splitting on original objects gives
+$\widehat F|_{\R}=F$.
 Let $\Phi\in\D$ be the formula object and $j:S\hookrightarrow\Phi$
 its sentence subobject. For an axiom subobject $A\hookrightarrow S$,
 let $c_A:P_A\to\Phi$ be the initial derivation algebra's conclusion.
@@ -344,8 +338,8 @@ Form the pullback in $\D$:
 \end{tikzcd}
 \]
 Put $t_A=\ran(c_{A,S})$ in $\Split\R$ and let
-$\nu:S\to S$ be syntactic negation. These objects and maps are
-defined by the appendix; the application must prove their realization.
+$\nu:S\to S$ be total syntactic negation. Appendix A constructs
+these objects and morphisms from the syntax and inference-rule data.
 
 \begin{proposition}[Interpretation of the theorem object]\label{prop:image}
 Let $F:\R\to\A$ and $\widehat F$ be as specified above. Then
@@ -363,13 +357,12 @@ The first equation is preservation of ranges. Apply the range/image
 lemma of Appendix A to the conclusion map in the total category;
 factorization through a monomorphism bounds its regular image.
 \end{proof}
-No claim that $\widehat F(c_A)$ remains an initial derivation algebra
-is required. The image of $\widehat F(c_{A,S})$ is the interpreted
-sentence-theorem object, which may contain conclusions of nonstandard
-proof codes.
+The image of $\widehat F(c_{A,S})$ is the interpreted sentence-theorem
+object. It includes the conclusions of every code in the interpreted
+proof object, including nonstandard proof codes in arithmetic models.
 
 \begin{theorem}[Incompleteness from semantic consistency]\label{thm:logical}
-Use the source data of Theorem~\ref{thm:comparison} and suppose the
+Let the source data be as in Theorem~\ref{thm:comparison}. Suppose the
 target has total inverse images preserving binary joins, with
 $F(1_U)\ne0$. Let $\theta:U\to S$ be total in $\Split\R$.
 Put $t=\widehat F(t_A)$ and define restriction idempotents on $FU$ by
@@ -394,7 +387,6 @@ domains covered $\widehat F S$, their pullbacks along the total
 $\widehat F(\theta g)$ would cover $FU$, contradicting
 $F(1_U)\ne0$.
 \end{proof}
-\source{New logical application of the partial comparison theorem. It uses consistency in the target and does not require a source consistency equation. The two representation inequalities are target inequalities; an application may establish them directly or obtain them by interpreting source inequalities.}
 
 \begin{corollary}[The source-consistency criterion]\label{cor:source-logical}
 Let a restriction category have zeros and binary joins preserved by
@@ -411,17 +403,19 @@ A complementary separator of $t,\nu^*t$ pulls back to one of
 $a,b$. The same argument applies when $t,\nu^*t$ themselves are
 assumed complementary.
 \end{proof}
-\source{Retain v19 Corollary 3.5 for the Miller and cosheaf arguments, where source consistency is actually established. Do not use it for an arithmetic theory's own proof object in $S_T$ merely from external consistency.}
 
 \section{Syntactic recursion categories and their internal syntax}
-\purpose{Prove the appendix's realization where it is used.}
 Throughout this section, $B\supseteq\PA$ denotes the ambient
 arithmetic theory and $A$ denotes a represented axiom presentation.
-This replaces the ambiguous reuse of $T$ for both roles.
+Fix the program enumeration with its finite computation traces.
+Write $G(e,x,y)$ for its $\Sigma_1$ computation-graph predicate,
+defined by the existence of a finite computation trace, and put
+$G_e(x,y)=G(e,x,y)$. Choose primitive-recursive numerical codings
+of products and tagged coproducts with PA-provable decoding identities.
 
 \begin{lemma}[Arithmetic computation laws]\label{lem:computation}
-Fix the program enumeration and numerical product and coproduct
-codings of v19 \S5. The graph predicates are $\Sigma_1$ and
+For the fixed program enumeration and numerical codings, the graph
+predicates are $\Sigma_1$ and
 PA-provably functional. PA proves the uniform graph identities for
 composition, identities, projections, pairing, coproduct injections,
 copairing, domains, and the chosen universal evaluator. In particular,
@@ -440,16 +434,19 @@ For each fixed $e$, the function $a\mapsto\operatorname{s}(e,a)$
 has a program whose graph and totality PA proves.
 \end{lemma}
 \begin{proof}
-Retain the formalized coding argument used in v19 Lemma 5.1,
-including its dependence on Montagna's computation laws
-\cite{Montagna}, and verify the transfer to the chosen trace predicates.
+The computation laws are proved by the finite-trace transformations
+used in Montagna's formalized computation argument \cite{Montagna}.
 Composition concatenates two traces and records the intermediate
 value. The structural programs implement their numerical codings.
 The evaluator simulates the indexed program, and the parameter
 program gives its uniform factorization. All equalities are universal
 graph equalities, not separate proofs for individual numerals.
 \end{proof}
-\source{Retain v19 Lemma 5.1 and the definitions surrounding it. Morphisms of $S_B$ are indices modulo $B$-provable uniform graph equality. The primed pointwise quotients are not substituted for this category.}
+The objects of $S_B$ are generated from the numerical object
+$\omega$ by the chosen products and coproducts. A morphism is a
+program index with the indicated source and target, modulo
+$B$-provable uniform graph equality. Composition is represented
+by the function $\operatorname{comp}$.
 
 \begin{lemma}[Functional search]\label{lem:search}
 For a $\Sigma_1$ relation $\Gamma(x,y)$ there is a partial recursive
@@ -463,7 +460,6 @@ recursive matrix. The trace verification proves existence exactly
 on the existential domain. Under functionality, any discovered
 witness has the unique permitted output.
 \end{proof}
-\source{Retain v19 Lemma 5.2.}
 
 \begin{lemma}[The total splitting]\label{lem:total}
 For consistent $B\supseteq\PA$, the category
@@ -488,7 +484,6 @@ equal; this proves injectivity uniformly in $B$. Searching its
 transposed graph gives its partial inverse. These constructions give
 the asserted partial-map equivalence.
 \end{proof}
-\source{Retain all parts of v19 Lemma 5.3, including the categorical proof of injectivity; do not replace it by a standard-points argument.}
 
 \begin{lemma}[Finite membership conditions]\label{lem:finite}
 PA proves that a coded finite family of $\Sigma_1$ membership
@@ -502,7 +497,6 @@ Conversely each component of a witness list verifies its membership
 condition. This is induction in PA, so it covers internally finite
 lists in every model of $B$.
 \end{proof}
-\source{Retain v19 Lemma 5.4.}
 
 \begin{proposition}[Syntax and lists with parameters]\label{prop:syntax}
 Fix bounded finite arity and variable and signature objects of
@@ -520,10 +514,8 @@ values, the algebra-operation witnesses, and the common parameter.
 Lemma~\ref{lem:finite} makes validity $\Sigma_1$. Induction in $B$
 proves existence and uniqueness of evaluation, and a second induction
 proves uniform graph equality with every algebra morphism. This gives
-initiality in each slice. It is not merely the initiality of ordinary
-finite trees in $\Set$.
+initiality in each slice.
 \end{proof}
-\source{Retain v19 Propositions 5.5 and 5.6 as separate statements in the manuscript; grouped here because their proof mechanism is shared.}
 
 \begin{proposition}[Substitution realization]\label{prop:substitution}
 The numerical free-variable, free-for-substitution, term-substitution,
@@ -531,12 +523,11 @@ and formula-substitution operations realize the categorical folds and
 equations specified in Appendix A in $\B_B$.
 \end{proposition}
 \begin{proof}
-Verify the constructor equations, including the quantifier case and
-the free-for condition, in PA. Parameterized initiality identifies
+The numerical constructor equations, including the quantifier case
+and the free-for condition, are provable in PA. Parameterized initiality identifies
 these operations with the appendix's folds; uniqueness gives the
-claimed identities as $B$-provable graph equalities.
+identities as $B$-provable graph equalities.
 \end{proof}
-\source{Retain v19 Proposition 5.7. This proof stays in the realization section, not Appendix A.}
 
 \begin{lemma}[Initial derivations]\label{lem:proof-initial}
 Every bounded-arity rule presentation by objects and total morphisms
@@ -544,14 +535,13 @@ of $\B_B$ has an initial derivation algebra in the slice over its
 formula object.
 \end{lemma}
 \begin{proof}
-Use trees labeled by actual rule instances with ordered children.
+Use trees labeled by rule instances with ordered children.
 Finite membership conditions and the matching of premises to child
 conclusions are $\Sigma_1$. Evaluation into any rule algebra is
 $\Sigma_1$; $B$-induction proves its existence, functionality,
-algebra equations, and uniqueness. Membership witnesses verify labels;
-they are not extra constructors of the derivation object.
+algebra equations, and uniqueness. The constructors are labeled by
+rule instances; membership witnesses occur in the $\Sigma_1$ validity test.
 \end{proof}
-\source{Retain v19 Lemma 5.8.}
 
 \begin{theorem}[Internally generated theories]\label{thm:internal}
 For consistent $B\supseteq\PA$, the bounded-arity first-order
@@ -577,7 +567,10 @@ least-theory theorem of Appendix A. Functional search realizes the
 sentence-conclusion pullback. The range/image lemma identifies its
 program range with the regular image in the total category.
 \end{proof}
-\source{Retain v19 Theorem 5.9. Explicitly instantiate it with ambient $B=\PA$ and an independently chosen c.e. axiom presentation $A$, using the carrier predicate $\Sent(z)\land\operatorname{Ax}_A(z)$. The sentence conjunct makes this a typed subobject even if the enumeration's output typing has not been proved in PA.}
+For $B=\PA$, a c.e. axiom presentation $A$ determines the axiom
+subobject of $S$ with carrier predicate
+$\Sent(z)\land\operatorname{Ax}_A(z)$. Its inclusion is represented
+by the identity on sentence codes.
 
 \begin{proposition}[Numerical realization]\label{prop:rec-realization}
 The category $\Tot(\Split\mathrm{Rec})$ is equivalent to the category
@@ -592,7 +585,6 @@ gives initiality and uniqueness by induction. Finite nonlogical
 axiom membership tests are semidecidable. The range/image lemma gives
 the theorem partial identity.
 \end{proof}
-\source{Retain v19 Proposition 8.1 as the numerical comparison. The main arithmetic proof below will additionally use the internal theory object in $\B_{\PA}$.}
 
 \paragraph{Computational inseparability and completeness.}
 For $B=\Th(\N)$, interpreting each program in $\N$ gives an
@@ -604,10 +596,8 @@ partial functions. Thus $S_{\Th(\N)}$ has inseparable computational
 pairs although $\Th(\N)$ is complete. This example distinguishes
 the existence of an inseparable pair from its representation by
 the theorem and refutation domains of a specified internal theory.
-\source{Retain the unnumbered example from v19 \S8.}
 
 \section{Model interpretation, soundness, and ultrapowers}
-\purpose{Construct the semantic comparison and prove soundness for its entire interpreted internal proof object.}
 
 \begin{proposition}[Interpretation in one model]\label{prop:model}
 Let $B\supseteq\PA$ be consistent and let $M\models B$.
@@ -629,7 +619,6 @@ tagged coproducts, and existential image formulas become the
 corresponding set constructions. Internal traces and witnesses range
 over all of $M$, including its nonstandard elements.
 \end{proof}
-\source{Retain v19 Proposition 6.1 and add the total-category preservation statement with this proof. A single model suffices here; no faithful family is needed.}
 
 \begin{proposition}[Source complementarity and inseparability]\label{prop:st-pair}
 For complementary restriction idempotents $c,c'$ on $X$ in $S_B$,
@@ -646,7 +635,8 @@ conditional. The target $\Pfn$ satisfies
 Proposition~\ref{prop:conditionals}, and $F_M(1_U)\ne0$.
 Apply Corollary~\ref{cor:source}. A model exists by completeness.
 \end{proof}
-\source{Retain the substantive conclusions of v19 Lemma 7.2 and Corollary 7.3. Faithfulness of the all-model product is not a dependency. Theory-extension naturality is recorded in Appendix D.}
+Compatibility with extension of the ambient theory is described
+in Appendix D.
 
 \begin{proposition}[Soundness from one semantic model]\label{prop:soundness}
 Fix the ambient category $\B_{\PA}$, a c.e. first-order arithmetic
@@ -665,18 +655,22 @@ $V_K\cap(G_{\N}\nu)^{-1}V_K=\varnothing$, and $A$ is consistent.
 \end{proposition}
 \begin{proof}
 In the standard numerical interpretation, every proof code represents
-an actual finite derivation in the fixed calculus. Its nonlogical
+a standard finite derivation in the fixed calculus. Its nonlogical
 axioms hold in $K$; the logical axiom schemes are valid; modus ponens
 and generalization preserve validity. Induct on the entire derivation,
 taking validity of an open formula to mean truth under every
 assignment in $K$. At a sentence conclusion this is
 $K\models\varphi_s$, which gives the factorization.
 A sentence and its negation cannot both
-hold in $K$. Since every actual proof occurs in this carrier, a
+hold in $K$. Since every standard finite derivation occurs in this carrier, a
 pair of contradictory proofs would contradict that disjointness.
 \end{proof}
-\source{New main-text statement. This is ordinary soundness expressed as a factorization of the interpreted internal proof map. $K$ is a semantic structure for $A$, whereas $G_{\N}$ interprets numerical codes. It is not $G_K$. If $K$ is constructed from assumed consistency by completeness, this is not an independent proof of that consistency.}
+The functor $G_{\N}$ interprets the numerical code objects.
+The structure $K$ determines the validity subobject $V_K$ of
+the sentence-code carrier.
 
+The ultrapower construction \cite[Theorem 3.1 and Proposition 4.2]{Keisler}
+gives the following functor on sets.
 \begin{lemma}[The ultrapower functor]\label{lem:ultrafunctor}
 Work in a set-theoretic metatheory with choice. Let $\U$ be a proper
 ultrafilter on a nonempty set $I$. For a set $X$ and two families
@@ -711,7 +705,6 @@ Surjections have sections by choice, and their
 section equations are preserved. Surjection--injection factorizations
 therefore remain image factorizations.
 \end{proof}
-\source{New supporting lemma. Cite Keisler's functorial ultrapower construction and prove the finite-limit and finite-coproduct assertions used here \cite[Theorem 3.1 and Proposition 4.2]{Keisler}. No exponentials or $I$-indexed powers are asserted in $\B_{\PA}$.}
 
 \begin{theorem}[Ultrapower comparison]\label{thm:ultra}
 Let $\U$ be a proper ultrafilter on a nonempty set $I$, and let
@@ -735,7 +728,19 @@ ultrapower graph. This proves naturality. Finite-limit and image
 preservation give the conclusion about sentence pullbacks and
 theorem images \cite{Keisler}.
 \end{proof}
-\source{New statement. Initial-algebra preservation is not asserted: for $I=\N$ and $\U$ nonprincipal, the ultrapower of $(\N,0,\mathrm{succ})$ is not the initial $1+X$-algebra in $\Set$.}
+
+\begin{proposition}[Failure of initial-algebra preservation]\label{prop:ultra-initiality}
+Let $I=\N$ and let $\U$ be a nonprincipal ultrafilter on $\N$.
+The $1+X$-algebra obtained by applying $\mathscr U$ to
+$(\N,0,\mathrm{succ})$ is not initial in $\Set$.
+\end{proposition}
+\begin{proof}
+The element $[i]$ of $\N^{\N}/\U$ differs from every numeral,
+since a singleton does not belong to $\U$. The unique algebra
+morphism from $(\N,0,\mathrm{succ})$ maps each natural number
+to its numeral class. This morphism is not surjective. If its target
+were also initial, it would be an isomorphism.
+\end{proof}
 
 \begin{theorem}[Soundness for the full interpreted proof object]\label{thm:ultrasound}
 Under Proposition~\ref{prop:soundness}, let $I,\U,\mathscr U$
@@ -761,22 +766,26 @@ components of $\eta$. Explicitly,
 Naturality gives the equation, and preservation of pullbacks and
 the empty set gives disjointness. Proposition~\ref{prop:image}
 identifies the interpreted internal theorem object with this
-conclusion image. No induction over externally finite target
-derivations is being substituted for this factorization.
+conclusion image.
 \end{proof}
-\source{New theorem. For full first-order satisfaction, ultrapower the many-sorted structure containing standard numerical codes, the semantic domain $K$, assignments, and satisfaction. The code sort becomes $\N^I/\U$ and the semantic sort becomes $K^I/\U$. Their roles must remain distinct. The special case $K=\N\models A$ gives the expanded-standard-model construction discussed in the continuation.}
 
 \paragraph{The assignment sort.}
-One possible standard assignment sort is $K^{\N}$ in $\Set$.
-Its transferred sort is $\mathscr U(K^{\N})$; it is not identified
-with $(\mathscr U K)^{\mathscr U\N}$. Include evaluation, assignment
-modification, and the satisfaction relation before taking the
-ultrapower. Their compositional clauses for connectives,
-quantification, and substitution transfer by \L{}o\'s's theorem.
-The predicate obtained is part of the semantic expansion, not an
-arithmetically definable truth predicate in the source.
+Consider the many-sorted structure consisting of the numerical
+code sort $\N$, the semantic domain $K$, the assignment sort
+$K^{\N}$, and the evaluation, assignment-modification, and satisfaction
+relations. Its ultrapower has code sort $\N^I/\U$, semantic sort
+$K^I/\U$, and assignment sort $\mathscr U(K^{\N})$. The transferred
+evaluation map has type
+\[
+ \mathscr U(K^{\N})\times\mathscr U(\N)\longrightarrow\mathscr U(K).
+\]
+The compositional clauses for connectives, quantification, and
+substitution transfer by \L{}o\'s's theorem. Satisfaction is a named
+relation of this semantic expansion. For $K=\N\models A$, this
+is the ultrapower of the standard arithmetic structure expanded
+by its satisfaction relation.
 
-\begin{corollary}[Transfer of an assumed consistency]\label{cor:consistency}
+\begin{corollary}[Consistency under ultrapowers]\label{cor:consistency}
 Let $I,\U,\mathscr U$ be as in Lemma~\ref{lem:ultrafunctor}.
 Let $A$ be any consistent c.e. arithmetic theory represented in
 $\B_{\PA}$, and put $M=\N^I/\U$. Its interpreted theorem and
@@ -784,14 +793,13 @@ refutation domains are disjoint. No assumption $\N\models A$
 is required.
 \end{corollary}
 \begin{proof}
-The standard conclusion image is the actual theorem set of $A$,
+The standard conclusion image is the theorem set of $A$,
 so its negation intersection is empty by consistency. Apply the
 finite-limit and image preservation of $\mathscr U$ and the
 comparison isomorphism. Equivalently, transfer the true arithmetic
 sentence asserting that no sentence has both an $A$-proof and an
-$A$-refutation. A semantic model is not needed for this shorter proof.
+$A$-refutation.
 \end{proof}
-\source{New corollary used in the arithmetic incompleteness theorem. This transfers a hypothesis; it is not a proof of its premise.}
 
 \begin{proposition}[Limits of model interpretation]\label{prop:limits}
 The section-lifting hypotheses do not imply soundness for every model
@@ -813,17 +821,14 @@ graphs is expressed by their uniform graph-equality sentence. A
 model and its ultrapower satisfy the same such sentences. Thus
 their functors identify exactly the same pairs of source morphisms.
 \end{proof}
-\source{Retain this as a short limitation proposition adjacent to soundness. It prevents substituting an arbitrary $G_L$ for the comparison of Theorem~\ref{thm:ultrasound}. It does not obstruct that theorem.}
 
 \section{Arithmetic: theorem sets, refutations, and essential incompleteness}
-\purpose{Apply the categorical comparison theorem in the fixed ambient category $S_{\PA}$ to every consistent c.e. extension of PA.}
 Fix the arithmetic signature, the internal syntax of
 Theorem~\ref{thm:internal}, and its sentence object $S\in\B_{\PA}$.
 For every c.e. axiom presentation $A$, the standard interpretation
-of its generated-theory subobject is the set of actual finite
-consequences of $A$.
-This identification follows from the exact carrier predicate for
-derivation trees, not merely from an abstract claim of initiality.
+of its generated-theory subobject is the set of consequences of $A$
+with standard finite derivations: its carrier predicate recognizes exactly the
+finite derivation trees of the chosen calculus.
 Write $\Prov_A(z)$ for the $\Sigma_1$ sentence-conclusion image
 predicate supplied by Theorem~\ref{thm:internal}, including the
 sentence predicate and the chosen axiom presentation.
@@ -861,7 +866,6 @@ the morphisms realized in \S5. Extension includes these PA theorems
 among the $A$-theorems. The resulting uniform arithmetic implications
 are true in $\N$, so they hold in $M\equiv\N$.
 \end{proof}
-\source{Retain the finite-computation argument of v19 \S8, but state the inequalities in the target. The proof does not turn separate numeral proofs into a $\PA$-provable universal implication. A source version would require an additional uniform proof transformation; it is not needed for this plan.}
 
 Let $\theta_{\mathrm{num}},\nu_{\mathrm{num}}:\N\to\N$ be the
 chosen primitive recursive code functions realizing $\theta$ and
@@ -895,9 +899,7 @@ value satisfies
 Here $\iota_j(x)=2x+j$ realizes the injection $i_j$.
 In a model where $C,C'$ are disjoint, this relation is functional,
 so the interpreted search has exactly the displayed graph.
-Neither disjointness nor totality needs to be proved in PA.
 \end{proof}
-\source{Generalize v19 Lemma 7.2. Do not invoke the functional-search equality conclusion before functionality is available: the algorithm is defined first; exact equality with the disjunctive graph is proved in the target.}
 
 \begin{theorem}[Incompleteness from the internal theory object]\label{thm:arithmetic-incomplete}
 For every consistent c.e. extension $A\supseteq\PA$, the theory
@@ -910,15 +912,15 @@ the numerical substitution function $\theta_{\mathrm{num}}$. In particular,
 $\alpha(\overline{\gamma(0)})$ is undecidable in $A$.
 \end{theorem}
 \begin{proof}
-Use actual consistency to obtain disjoint target domains, or use
-Corollary~\ref{cor:consistency} for an ultrapower interpretation.
+Consistency gives disjoint target domains in the standard interpretation.
+For an ultrapower interpretation, use
+Corollary~\ref{cor:consistency}.
 Lemma~\ref{lem:reduction} supplies the target inequalities and
 Lemma~\ref{lem:proof-search} supplies the partial lift.
 Theorem~\ref{thm:logical} gives the total $g$ and the two zero
 inverse images. For the individual ordinary sentence, use the
 standard interpretation and evaluate at $0$.
 \end{proof}
-\source{New categorical derivation of the existing arithmetic conclusion through $S_{\PA}$. No completeness assumption is needed to construct an undecidable instance. The chosen $g$ may depend on the axiom presentation $A$.}
 
 \begin{theorem}[Recursive inseparability and essential incompleteness]\label{thm:arithmetic-insep}
 For every consistent c.e. extension $A\supseteq\PA$, its theorem
@@ -940,7 +942,9 @@ complete consistent c.e. theory would have complementary c.e.
 theorem and refutation sets, whose simultaneous enumeration decides
 them, contradicting recursive inseparability.
 \end{proof}
-\source{Recover v19 Corollary 8.2 and its recursive-inseparability conclusion. The full target category $\Pfn$ has arbitrary set-theoretic separators; only recursive separators supply the required program lifts.}
+In $\Pfn$, disjoint subsets have set-theoretic separators.
+The proof applies to recursive separators because their conditional
+functions are represented by program indices in $S_{\PA}$.
 
 \paragraph{Extension maps.}
 For c.e. axiom presentations $A\subseteq A'$ within the fixed
@@ -953,23 +957,22 @@ inclusions from PA into the two presentations. For the
 external essential-incompleteness statement, ordinary inclusion of
 theories and target inclusion suffice. The identity on the standard sentence
 carrier gives a covariant map between the corresponding disjoint
-theorem/refutation pairs. Do not replace this extension of represented
-theories by the distinct quotient functor $S_B\to S_{B'}$.
+theorem/refutation pairs. These maps vary the axiom presentation
+within a fixed ambient category. The quotient functor
+$S_B\to S_{B'}$ instead changes the ambient theory.
 
 \paragraph{Comparison with the numerical proof.}
-Retain the $\mathrm{Rec}$ realization and explain that the standard
-interpretation of the internal objects in $\B_{\PA}$ gives exactly
-the same c.e. proof and theorem carriers. The new argument uses the
+The standard interpretation of the internal objects in $\B_{\PA}$
+gives the c.e. proof and theorem carriers of
+Proposition~\ref{prop:rec-realization}. The arithmetic argument uses the
 source Turing morphism and the interpreted source proof-search
-morphism. It no longer leaves the syntactic-category construction
-disconnected from the arithmetic incompleteness conclusion.
+morphism.
 
 \section{Miller's sequence and a theory of real closed fields}
-\purpose{Retain the application that distinguishes uniform computation from computation relative to a fixed representation.}
-This section retains v19 results 4.1--4.6. It can follow the
-arithmetic application because the comparison theorem and the theory
-construction are then available. Its substantive conclusions do not
-depend on the arithmetic ultrapower construction.
+Computation uniform over all binary representations of a real
+sequence determines a recursion category. The comparison theorem
+produces an inseparable pair in this category, and Miller's index
+property reduces that pair to axioms of a theory of real closed fields.
 
 Fix a recursive pairing $\langle-,-\rangle:\N\times\N\to\N$
 and an acceptable oracle-program enumeration $(\Phi_e^p)_e$.
@@ -1029,11 +1032,15 @@ and weak choice. The morphism
 $\tau_a:\N\times\N\rightharpoonup\N$ is a Turing morphism.
 \end{proposition}
 \begin{proof}
-Retain v19 Proposition 4.2: structural operations preserve uniform
-domains and values; search gives ranges and sections; the preceding
-compactness construction provides the evaluator and the parameter
-theorem supplies its Turing factorizations. Singleton restrictions
-detect equality for local connectedness.
+The structural programs preserve uniform domains and values.
+Preimage search computes ranges and, for injective morphisms,
+partial inverse sections; the returned value is independent of
+the representation. Compatible computations can be dovetailed
+to obtain their join. Lemma~\ref{lem:miller-unanimity} supplies
+the evaluator, and the oracle parameter theorem supplies its total
+parameter maps. Singleton restrictions detect equality of partial
+functions and prove local connectedness. The numerical codings
+give isotypicality, and products with zero are zero.
 \end{proof}
 
 Choose the recursive coproduct isomorphism that tags a natural
@@ -1051,11 +1058,20 @@ There is an ordinary total recursive function $h:\N\to\N$ such
 that $h^{-1}(L_a)=A_0$ and $h^{-1}(R_a)=A_1$.
 \end{lemma}
 \begin{proof}
-Retain v19 Lemma 4.3: disjoint effectively open halting sets give
-computable continuous functions positive exactly on those sets.
-Their signed difference about $1/2$ yields a uniformly computable
-real-valued function. Miller's index property gives the index $h(e)$
-realizing its value at $a$ \cite{Miller}.
+For each $e$, the sets
+$U_e^i=\{z:\tau_z(e,e)\downarrow=m\text{ for some }m\equiv i\pmod2\}$
+are disjoint effectively open subsets of $Q$. Finite halting-cylinder
+covers express each as a union of complements of computably
+specified finite unions of closed dyadic boxes. Weighted sums of
+distances to these finite unions give uniformly computable continuous functions
+$g_{e,i}:Q\to[0,1]$ that are positive exactly on $U_e^i$.
+The function
+$r_e(z)=\tfrac12+(g_{e,1}(z)-g_{e,0}(z))/4$
+is uniformly computable from any binary representation of $z$.
+The parameter theorem gives an ordinary total recursive index
+function $h$ for these real-valued computations. Miller's index
+property gives $a(h(e))=r_e(a)$, proving both inverse-image
+equalities \cite{Miller}.
 \end{proof}
 
 \begin{corollary}[Inseparability and fixed-representation separation]\label{cor:miller-cuts}
@@ -1079,7 +1095,7 @@ first-order syntax, substitution, lists, and generated-theory
 construction of Appendix A.
 \end{proposition}
 \begin{proof}
-Retain v19 Proposition 4.5. Carriers are uniformly semidecidable
+Carriers are uniformly semidecidable
 from all representations. Pairing, tags, equality, and uniform
 search give the total categorical structure. Evaluate finite syntax
 and derivation trees with the common operations; their domains and
@@ -1103,14 +1119,16 @@ domains in $\Split\E_a$, and is incomplete.
 The real field with $c_n=a(n)$ gives consistency of $T_a$.
 The realized proof object gives the theorem domains for each
 extension. The map $n\mapsto\ulcorner c_n<1/2\urcorner$ reduces
-$L_a,R_a$ to the theorem and refutation domains. Actual consistency
-is source disjointness in this extensional category. Apply
-Corollary~\ref{cor:source-logical}, retaining v19 Theorem 4.6.
+$L_a,R_a$ to the theorem and refutation domains. Consistency
+is source disjointness in this extensional category.
+Corollary~\ref{cor:source-logical} gives the conclusion.
 \end{proof}
-\source{Preserve the exact oracle representation hypotheses and the full cut-reduction proof from v19. No assertion that arbitrary target separators lift is made.}
 
 \section{Three-point cosheaves and propositional theories}
-\purpose{Retain a recursion category not restriction equivalent to $\mathrm{Rec}$ and explain the separate role of its two endpoint interpretations.}
+The three-point cosheaf construction gives a recursion category
+not restriction equivalent to $\mathrm{Rec}$. Its two endpoint
+interpretations yield recursively inseparable theorem and refutation
+sets for internally generated propositional theories.
 Let $\mathcal C_{\mathrm{rec}}$ be the category of c.e. numerical
 carriers and partial recursive functions total on their source
 carriers, as in Proposition~\ref{prop:rec-realization}.
@@ -1164,8 +1182,16 @@ is a Turing morphism in $\mathcal K$, and $A_i,B_i$ are recursively
 inseparable. The morphism $E_0(\tau)$ is not Turing in $\mathcal K$.
 \end{proposition}
 \begin{proof}
-Retain the explicit endpoint evaluator computations of v19
-Proposition 9.1. Let $\mathcal K_2$ be the full subcategory of
+Component evaluation preserves the indicated operations because
+they are computed componentwise. With a recursive bijection
+$\operatorname{encode}_2:\N\times\N\to\N$ and its inverse
+$\operatorname{decode}_2$, the endpoint evaluator has the formula
+\[
+ (E_i\tau)((k,p),(\ell,x))
+ =\operatorname{decode}_2\varphi_p(\operatorname{encode}_2(\ell,x)).
+\]
+The parameter theorem gives the required total parameter maps.
+Let $\mathcal K_2$ be the full subcategory of
 $\mathcal K$ generated from $\N\times\N$ by the chosen binary
 products and coproducts. Its objects are recursively isomorphic to
 $\N\times\N$, and the displayed evaluator and its parameter maps
@@ -1175,7 +1201,7 @@ Complementary c.e. domains have total recursive conditionals, so
 Corollary~\ref{cor:source} gives the inseparability of the endpoint
 diagonal pair. A recursive separator would be a complementary
 restriction pair in $\mathcal K_2$.
-For the zeroth component, retain the v19 counterexample
+For the zeroth component, consider
 $f:V_0\to V_0$, $f(k,z,u,v)=(0,0,z,0)$: naturality would make
 $r_1^Vf(k,z,u,v)$
 independent of $z$ if $f$ were a specialization of $E_0(\tau)$.
@@ -1188,10 +1214,19 @@ by relabeling along $r_i^V$. Its constructors are morphisms
  \theta:V\to S,\qquad \nu:S\to S,
  \qquad {\Rightarrow}:S\times S\to S.
 \]
-Use the three classical propositional Hilbert schemes specified in
-v19 \S9, the positive and negative atomic axiom morphism
-$[\theta|_{D_a},\nu\theta|_{D_b}]:D_a+D_b\to S$, and modus ponens.
-The finite derivation trees give an object $\mathrm{Prf}\in\E$
+The logical axioms are the instances of the schemes
+\[
+ \begin{gathered}
+ \varphi\Rightarrow(\psi\Rightarrow\varphi),\\
+ (\varphi\Rightarrow(\psi\Rightarrow\chi))
+ \Rightarrow((\varphi\Rightarrow\psi)\Rightarrow(\varphi\Rightarrow\chi)),\\
+ (\nu\psi\Rightarrow\nu\varphi)\Rightarrow(\varphi\Rightarrow\psi).
+ \end{gathered}
+\]
+Together with the positive and negative atomic axiom morphism
+$[\theta|_{D_a},\nu\theta|_{D_b}]:D_a+D_b\to S$ and modus ponens,
+these schemes specify the derivation rules. The finite derivation
+trees give an object $\mathrm{Prf}\in\E$
 and a conclusion morphism $c:\mathrm{Prf}\to S$.
 
 \begin{proposition}[Propositional syntax and derivations]\label{prop:fork-initiality}
@@ -1205,8 +1240,7 @@ Evaluate finite trees at each component. Induction proves that
 evaluation commutes with the two fork structure maps, hence is a
 morphism of $\E$; componentwise uniqueness proves initiality.
 The same argument applies to derivations with their conclusion
-labels. Retain v19 Propositions 9.2 and 9.3 as separate manuscript
-statements.
+labels.
 \end{proof}
 
 View $c$ as a total morphism in $\A_X$ and put $t_0=\ran(c)$,
@@ -1238,8 +1272,10 @@ Every compatible family of consistent c.e. deductively closed
 extensions of the component theories has inseparable theorem and
 refutation subobjects in $\A_X$. At each endpoint, their inverse
 images under the atom map are disjoint recursively inseparable c.e.
-sets. Extension inclusion gives the covariant maps of pairs
-specified in v19 \S9, and each endpoint theory is incomplete.
+sets. Extension inclusions give identity-on-carrier morphisms
+between these pairs, preserving both distinguished subsets, and
+these assignments form a covariant functor. Each endpoint theory
+is incomplete.
 \end{theorem}
 \begin{proof}
 Use Corollary~\ref{cor:source-logical} in $\A_X$ for the first
@@ -1256,18 +1292,16 @@ Every consistent c.e. extension of either endpoint base theory is
 incomplete.
 \end{corollary}
 \begin{proof}
-Retain v19 Corollary 9.6 and its direct endpoint argument using
-the same atomic reductions. This conclusion does not require every
-endpoint extension to have been chosen as part of a compatible
-family on the entire fork.
+For either endpoint $i$, the theorem and refutation inverse images
+of any consistent c.e. extension are disjoint c.e. sets containing
+$A_i,B_i$. A complete extension would make these inverse images
+complementary and hence recursive, contradicting the recursive
+inseparability of $A_i,B_i$.
 \end{proof}
-\source{Retain all substantive claims of v19 \S9. The source theory and pair constructions are categorical; the endpoint conclusion uses the separately verified numerical interpretation.}
 
 \appendix
 \section{Syntax and deductively closed theories}
-\purpose{Define the internal syntax and generated theories categorically. This appendix contains no incompleteness or numerical realization argument.}
-Move v19 Appendix B here without cutting its dependencies. Its
-six subsections retain the following order and functions.
+The categorical construction has six parts.
 \begin{enumerate}
 \item \emph{Categorical hypotheses and notation.} Regularity,
   disjoint stable finite coproducts where needed, explicitly
@@ -1290,13 +1324,57 @@ six subsections retain the following order and functions.
   The precise comparison with partial-map ranges and the
   propositional specialization needed by \S9.
 \end{enumerate}
-Retain three separate definitions from v19: Definition B.1,
-\emph{categorical syntax}; Definition B.2, \emph{the sentence object};
-and Definition B.4, \emph{a deductively closed subobject}.
-The sentence-object definition follows the free-variable construction,
-and the definition of deductive closure precedes the least-image
-theorem. Together with the four results below, these account for
-all seven numbered items in the current syntax appendix.
+
+Let $\D$ be a regular category with disjoint pullback-stable finite
+coproducts. Write $\mathbf2=1+1$ with injections
+$\mathbf t,\mathbf f:1\to\mathbf2$.
+Fix $V\in\D$ with decidable equality: there is a morphism
+$\epsilon:V\times V\to\mathbf2$ whose pullback along $\mathbf t$
+is the diagonal $\Delta_V:V\hookrightarrow V\times V$.
+For a fixed integer $d\ge0$, let $\Sigma_k,\Pi_k\in\D$ be
+the objects of function and relation symbols of arity $k$, for
+$0\le k\le d$. Finite powers mean the chosen products
+$X^0=1$ and $X^{n+1}=X^n\times X$.
+Define $K:\D^2\to\D^2$ by
+$K(X,Y)=(K_1(X,Y),K_2(X,Y))$, where
+\[
+ \begin{aligned}
+ K_1(X,Y)&=V+\coprod_{k=0}^d\Sigma_k\times X^k,\\
+ K_2(X,Y)&=(X\times X)+\coprod_{k=0}^d\Pi_k\times X^k
+                    +Y+(Y\times Y)+(V\times Y).
+ \end{aligned}
+\]
+The action on morphisms uses products and copairings on the
+displayed summands. The formula constructors are equality,
+relations, negation, implication, and universal quantification.
+
+\begin{definition}[Categorical syntax]
+A syntax object is an initial algebra
+$\iota:K(\mathsf{Tm},\Fm)\to(\mathsf{Tm},\Fm)$ stable under
+parameters. There is also an initial list algebra
+$[\mathsf{nil},\mathsf{cons}]:1+V\times W\to W$, stable under
+parameters. Here stability means that, for every $P\in\D$,
+pullback along $P\to1$ gives initial algebras for the corresponding
+syntax endofunctor on $(\D/P)^2$ and list endofunctor on $\D/P$,
+with all constant objects pulled back along the same morphism.
+\end{definition}
+Initial algebras specify abstract syntax by its constructors and
+recursion property \cite{GTWW}. The parameterized list recursion
+used here is the list-object structure of \cite{CockettLists}.
+
+The free-variable fold $\mathsf{FV}:\Fm\to W$ concatenates the
+free-variable lists of arguments and deletes the bound variable at
+a quantifier. Deletion is defined by list recursion using $\epsilon$.
+
+\begin{definition}[Sentence object]
+The sentence object is the pullback
+\[
+\begin{tikzcd}
+ S\arrow[r,hook,"j"]\arrow[d] & \Fm\arrow[d,"\mathsf{FV}"]\\
+ 1\arrow[r,"\mathsf{nil}"'] & W.
+\end{tikzcd}
+\]
+\end{definition}
 
 \begin{proposition}[Categorical substitution]
 Under the appendix's parameterized syntax and list initiality and
@@ -1305,17 +1383,45 @@ free-for, and substitution operations exist as morphisms of $\D$
 and satisfy their constructor equations, including quantifiers.
 \end{proposition}
 \begin{proof}
-Retain the enlarged-algebra construction used to keep the original
-syntax component together with the recursively computed output.
+An enlarged algebra keeps the original syntax component together
+with the recursively computed output.
 Parameterized initiality gives the fold; its projection to syntax
 is the identity by uniqueness. Conditional copairings use the
-declared decidable predicates. This is v19 Proposition B.3.
+declared decidable predicates. In the quantifier case, deletion
+and the free-for predicate determine whether substitution is
+admissible; the same fold yields its constructor equations.
 \end{proof}
+
+For the rule construction, regularity and finite coproducts suffice.
+Fix $\Phi\in\D$ and, for $0\le n\le d$, morphisms
+$p_n:R_n\to\Phi^n$ and $q_n:R_n\to\Phi$ giving the premises
+and conclusion of a rule instance. Nullary rules are axioms.
+For $q:Q\to\Phi$, put
+\[
+ B_n(Q,q)=R_n\times_{\Phi^n}Q^n,\qquad
+ H(Q,q)=\left(\coprod_{n=0}^d B_n(Q,q),
+                   [q_n\operatorname{pr}_1]_{n=0}^d\right).
+\]
+Pullback uniqueness defines the action of the endofunctor
+$H:\D/\Phi\to\D/\Phi$ on morphisms.
+
+\begin{definition}[Deductively closed subobject]
+A subobject $m:T\hookrightarrow\Phi$ is closed under the rules
+if $(T,m)$ admits an $H$-algebra structure in $\D/\Phi$.
+Equivalently, there is a morphism
+$\alpha:\coprod_n B_n(T,m)\to T$ satisfying
+$m\alpha=[q_n\operatorname{pr}_1]_n$.
+For a logical calculus, these are its deductively closed formula
+subobjects.
+\end{definition}
+The algebra structure is unique because $m$ is monic. This is
+the categorical form of finitary closure by conclusions of finite
+proofs \cite{Aczel}.
 
 \begin{theorem}[Least rule-closed subobject]
 Let $\D$ be regular with finite coproducts, let $\Phi\in\D$,
-and let finitely bounded rule arities be given by
-$p_n:R_n\to\Phi^n$ and $q_n:R_n\to\Phi$.
+and fix rule morphisms $p_n:R_n\to\Phi^n$, $q_n:R_n\to\Phi$
+for $0\le n\le d$.
 If the induced endofunctor $H:\D/\Phi\to\D/\Phi$ has an
 initial algebra with conclusion $c:P\to\Phi$, then the regular
 image of $c$ is the least subobject closed under these rules.
@@ -1326,8 +1432,10 @@ are pullbacks of finite powers, followed by a finite coproduct.
 Factor $c=me$. The regular epimorphism $H(e)$ and the monomorphism
 $m$ give a unique diagonal defining an algebra structure on the
 image. Initiality maps $P$ into every other closed subobject;
-the image factorization gives the required inclusion. Retain
-v19 Theorem B.5 and its typed commutative square.
+the image factorization gives the required inclusion. The image
+algebra construction is an instance of lifting the regular
+epimorphism--monomorphism factorization to algebras for an
+endofunctor preserving regular epimorphisms \cite{Wissmann}.
 \end{proof}
 
 \begin{theorem}[Generated first-order theory]
@@ -1343,47 +1451,50 @@ idempotent closure operator on sentence subobjects.
 Apply the preceding theorem to the specified rule objects.
 Regular images commute with the sentence pullback. Leastness gives
 extensivity and monotonicity; the generated theory is already
-closed, which gives idempotence. Retain v19 Theorem B.6 and its
-following closure argument.
+closed, which gives idempotence.
 \end{proof}
 
 \begin{lemma}[Regular images and ranges]
-In the partial-map presentation under the appendix's stated
-admissibility hypotheses, the restriction idempotent splitting
-through the regular image of a total map is its range. The
-corresponding assertion for a partial map applies to its total
-part on its domain.
+Let $\mathcal C$ be a split restriction category with ranges,
+and suppose $\Tot(\mathcal C)$ is regular. Let a total morphism
+$f:X\to Y$ have regular-image factorization $f=me$ in
+$\Tot(\mathcal C)$. If $m:I\to Y$ has a partial inverse
+$r:Y\rightharpoonup I$ with $rm=1_I$ and $mr=\bar r$, then
+$\ran(f)=mr$. The corresponding assertion for a partial map
+applies to its total part on its split domain.
 \end{lemma}
 \begin{proof}
 The image idempotent receives the map. Every receiving restriction
 idempotent supplies a monomorphism through which the total part
 factors, so regular-image leastness makes the image idempotent
-smaller. This is the range universal property. Retain the explicit
-hypotheses and range-category references of v19 Lemma B.7
+smaller. This is the range universal property; the categorical
+relation between ranges and regular images is developed in
 \cite{RangeII}.
 \end{proof}
-\source{Retain the existing literature dependencies on inductive definitions, initial-algebra syntax, binding, lists, and range categories where actually used. No numerical verification is moved into this appendix.}
 
 \section{The three-point cosheaf recursion category}
-\purpose{Supply the complete categorical construction used by \S9.}
-Move v19 Appendix A here. Preserve the following ten statements
-and their proofs; the changes are numbering and cross-references.
+Let $X=\{a,b,c\}$ have open sets
+$\varnothing,\{c\},\{a,c\},\{b,c\},X$. The cosheaf construction
+on this space has the following ten steps. The categories
+$\mathcal C_{\mathrm{rec}}$, $\E=\mathcal C_{\mathrm{rec}}^J$,
+and $\A_X=\Par(\E,\operatorname{Mono})$, and the object $V$,
+are as in \S9. The nonempty-word object $V^\#$ is formed
+componentwise, with structure maps acting on each letter.
 \begin{longtable}{@{}p{.13\textwidth}p{.30\textwidth}p{.50\textwidth}@{}}
 \toprule
-v19 & Statement to retain & Proof dependency and function\\\midrule\endhead
-A.1 & Equivalence between cosheaves on the specified three-point space and fork diagrams. & Compute values on the opens and the cosheaf gluing conditions; give both functors.\\
-A.2 & The category of fork diagrams of c.e. numerical carriers has the claimed finite-limit, coproduct, and image structure. & Componentwise constructions; verify the maps are recursive and satisfy the fork equations.\\
-A.3 & The associated partial-map category has ranges, weak choice, and the stated restriction structure. & Use admissible monos and image factorizations from A.2; construct partial inverse sections.\\
-A.4 & Local connectedness of that partial-map category. & Construct connected restrictions and prove that they detect every component of a partial morphism.\\
-A.5 & Every object admits a restriction embedding into the chosen universal object. & Retain the component maps and the equations for their partial inverses.\\
-A.6 & The coordinate frames and their compatibility equations. & Preserve the full data needed by the evaluator construction.\\
-A.7 & The chosen evaluator is a Turing morphism. & Give the typed parameter morphism and verify all three component equations.\\
-A.8 & The designated full subcategory is a recursion category whose restriction splitting recovers the partial-map category. & Combine A.3 and A.5--A.7 with isotypicality; use the restriction embeddings from A.5 for the splitting equivalence.\\
-A.9 & Its Karoubi envelope also recovers the partial-map category. & Split arbitrary idempotents through their images and use the equivalence from A.8.\\
-A.10 & It is not restriction equivalent to $\mathrm{Rec}$; the chosen atom object does not have decidable equality. & Retain the terminal-subobject count and the separate obstruction to decidable equality.\\
+Result & Statement & Proof\\\midrule\endhead
+B.1 & Set-valued cosheaves on $X$ are equivalent to fork diagrams. & Restriction to the three proper nonempty opens gives the fork. Its pushout gives the cosheaf value on $X$, providing a quasi-inverse.\\
+B.2 & The category $\E$ is regular and extensive, with componentwise monomorphisms and images. & Finite limits, tagged coproducts, and c.e. images are computed componentwise; the induced morphisms satisfy the fork equations.\\
+B.3 & The category $\A_X$ has ranges, weak choice, and the required restriction products and coproducts. & Image factorizations from B.2 give ranges. Partial inverse injections give sections, and the span construction supplies the restriction structure.\\
+B.4 & The category $\A_X$ is locally connected. & A singleton at an endpoint, or a singleton at component $0$ together with its two images, gives a connected restriction. These restrictions detect partial morphisms.\\
+B.5 & Every object admits a restriction embedding into $V$. & Recursive component codes give a natural injection whose inverse on its c.e. image is a partial morphism.\\
+B.6 & There are isomorphisms $V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$. & Pairing, tagged parity, and finite-word coding commute with both fork maps.\\
+B.7 & The evaluator $\tau:V\times V\rightharpoonup V$ is a Turing morphism. & Ordinary numerical parameterization gives the endpoint maps; the middle component checks the two endpoint agreements. The resulting total parameter map satisfies all three component equations.\\
+B.8 & The full subcategory $\R_X$ generated from $V$ is a recursion category and $\Split\R_X\simeq\A_X$. & B.3 and B.6--B.7 give the recursion structure. The restriction embeddings in B.5 give essential surjectivity after splitting.\\
+B.9 & The Karoubi envelope of $\R_X$ is equivalent to $\A_X$. & Every idempotent of $\A_X$ splits through its image; B.8 then gives the equivalence.\\
+B.10 & The category $\R_X$ is not restriction equivalent to $\mathrm{Rec}$, and $V$ has no decidable equality. & The terminal object has five subobjects in $\E$ and two in $\mathcal C_{\mathrm{rec}}$. Distinct middle-component elements with the same endpoint images prevent a complemented diagonal on $V$.\\
 \bottomrule
 \end{longtable}
-\source{The exact definitions and proofs remain those of v19. The outline does not replace the component calculations needed by the recursion-category and non-equivalence claims.}
 
 \section{Why lifting cannot be omitted}
 \begin{proposition}[A range comparison without the required lifts]
@@ -1393,17 +1504,54 @@ the source-inseparability conclusion fails when the section-lifting
 hypothesis is removed.
 \end{proposition}
 \begin{proof}
-Retain v19 Proposition C.1: use the category with oracle-enumerable
-domains and ordinary partial recursive extensions, verify its
-structural operations and evaluator, and exhibit the relevant
-separators together with the missing lift. The new text should
-identify Corollary~\ref{cor:source}, rather than an unconditional
-claim about all target separators, as the statement whose omitted
-hypothesis the example tests.
+Let $K=\{e:\varphi_e(e)\downarrow\}$ be the ordinary halting set,
+and let $(W_a^K)_a$ enumerate the $K$-c.e. subsets of $\N$.
+The category $\mathcal C_K$ has the numerical objects generated
+from $\N$ by products and coproducts. Its morphisms have $K$-c.e.
+domains and ordinary partial recursive extensions. Composition,
+restrictions, products, coproducts, and ranges preserve this class:
+their domains and images are $K$-c.e., and their value maps have
+the indicated recursive extensions. Its total morphisms are exactly
+the ordinary total recursive functions. The underlying-function
+functor $F:\mathcal C_K\to\Pfn$ is faithful and preserves the
+specified structures and reflects zero.
+
+Using a recursive pairing with projections $\pi_0,\pi_1$, define
+\[
+ \tau_K(\langle e,a\rangle,x)\simeq
+ \begin{cases}
+ \varphi_e(x),&x\in W_a^K,\\
+ \text{undefined},&x\notin W_a^K.
+ \end{cases}
+\]
+Specializing the extension program and the oracle-domain program
+gives an ordinary total recursive parameter map. Thus $\tau_K$
+is Turing, and the numerical codings make $\mathcal C_K$ isotypical.
+
+For the parity coproduct isomorphism, the two diagonal domains
+are separated by $A$ and $A^c$, where
+\[
+ A=\{q:\varphi_{\pi_0(q)}(q)\downarrow
+                          \text{ with an even value}\}.
+\]
+Both sets are $K$-c.e., so they define complementary source
+restrictions. The set $A$ is not recursive: choose a total recursive
+$h$ such that $\varphi_{h(n)}$ ignores its input, simulates
+$\varphi_n(n)$, and returns $0$ on halting. For a fixed $a_*$,
+the map $n\mapsto\langle h(n),a_*\rangle$ reduces $K$ to $A$.
+The reversed conditional
+for this pair is total and decides $A$ by its output tag. It is
+therefore not recursive and cannot be the image of a source morphism.
+The target $\Pfn$ has all the other hypotheses of
+Corollary~\ref{cor:source}, so this is the omitted lift.
+The two disjoint tagged restrictions on $A$ and $A^c$ have no
+common upper bound either: such an upper bound would be this same
+nonrecursive total conditional.
 \end{proof}
 
 \section{Faithful families of models and ambient theory extension}
-\purpose{Retain the faithful representation theorem separately from the chosen soundness interpretation.}
+The family of all countable model interpretations detects every
+failure of provable uniform graph equality.
 
 \begin{theorem}[Faithful family of graph interpretations]
 For consistent $B\supseteq\PA$, let $\mathcal M_B$ be the set
@@ -1412,9 +1560,9 @@ of arithmetic models of $B$ with underlying set $\N$, and put
  \D_B=\prod_{M\in\mathcal M_B}\Pfn,
  \qquad F_B=(F_M)_M:S_B\to\D_B.
 \]
-Then $F_B$ is faithful and preserves the range, restriction,
-product, coproduct, and finite-join structure stated in v19
-Theorem 7.1. The target is split and locally connected, satisfies
+Then $F_B$ is faithful and preserves restrictions, zeros, ranges,
+binary restriction products and coproducts, and finite joins of
+restriction idempotents. The target is split and locally connected, satisfies
 weak choice and inverse-image preservation of joins, and
 $F_B(1_\omega)\ne0$.
 \end{theorem}
@@ -1448,73 +1596,14 @@ The quotient is surjective on hom-sets; a preimage of any target
 morphism supplies its Turing factorization. Apply
 Proposition~\ref{prop:st-pair} over $B'$.
 \end{proof}
-\source{Retain v19 Theorem 7.1, the extension square, and the extension part of Corollary 7.3. The image evaluator is not Turing among all target partial functions. Faithfulness and the product over all models are not used for soundness in \S6 or arithmetic incompleteness in \S7.}
+The image $F_B(\tau_B)$ is not a Turing morphism in $\D_B$.
+At any fixed coordinate $M$, its specializations are indexed by
+the countable set $|M|$, whereas there are uncountably many partial
+functions $|M|\rightharpoonup|M|$. A partial function outside this
+family, together with zero maps at the other coordinates, cannot
+have a parameterization through $F_B(\tau_B)$.
 
-\section*{Revision order and proof obligations}
-\addcontentsline{toc}{section}{Revision order and proof obligations}
-The next revision should proceed in the following order.
-\begin{enumerate}
-\item Replace the general comparison statement and prove its partial
-  conditional version in \S3. Recover the existing source theorem
-  as a corollary. Verify all coproduct comparisons and inverse-image
-  equations before changing applications.
-\item State the logical application in \S4 with target consistency,
-  typed sentence-proof pullbacks, and only target reduction
-  inequalities. Retain the direct source-consistency criterion for
-  its actual uses.
-\item Revise \S5 notation to distinguish ambient $B$ and represented
-  $A$. Preserve the realization proofs and their parameterized
-  universal properties. Add the explicit $B=\PA$ instantiation.
-\item Write \S6, including the one-model soundness factorization,
-  ultrapower comparison, and the distinction between the code sort
-  and the semantic sort. Prove the exact standard proof-image
-  identification for the chosen calculus.
-\item Rewrite the arithmetic application in \S7 using partial
-  proof search and the standard interpretation of $S_{\PA}$.
-  Prove recursive inseparability using arbitrary recursive
-  separator programs, without assuming their PA-provable totality.
-\item Move and reconnect the Miller and cosheaf sections. Preserve
-  their different computability classes, their actual consistency
-  arguments, and the endpoint Turing calculations.
-\item Reorder the appendices, move the faithful model family,
-  update every cross-reference, and remove duplicated proof text
-  only after its dependencies have been relocated.
-\item Rewrite the introduction and abstract around the final
-  statements. Compile and inspect the complete manuscript, then
-  publish a consistently numbered manuscript release and source
-  archive. The present plan does not change version 19's files.
-\end{enumerate}
-
-\paragraph{Claims requiring explicit verification during revision.}
-The categorical diagonal and the ultrapower-factorization proofs
-are given above. Integration still requires the exact program
-implementation of the first-witness search, its PA-provable domain
-and output implications, the identification of the selected
-derivation-tree presentation with the stated proof predicates,
-and the matching of all formula/term coding conventions. These are
-implementation and exposition obligations for the prescribed proofs,
-not assumptions to suppress. The target reductions can be proved
-from ordinary finite computation proofs; the plan does not require
-an unproved uniform source reflection principle.
-
-\paragraph{Dependency summary.}
-Appendix A and the realization in \S5 provide the internal theory.
-Range preservation in \S4 identifies its interpreted proof image.
-Section 6 supplies target consistency from a model, or transfers an
-assumed actual consistency. The partial search in \S7 supplies the
-lift; the comparison theorem in \S3 supplies the diagonal
-contradiction or avoidance morphism. The faithful family in
-Appendix D is independent of this route.
-
-\section*{Literature used by this plan}
-\addcontentsline{toc}{section}{Literature used by this plan}
-The references below identify dependencies and comparison points for
-the proposed organization. The full bibliography supporting the
-retained syntax and cosheaf constructions remains in the manuscript.
-The opening discussion of Di Paola--Heller and Keisler's stated
-ultraproduct results were inspected for this plan. Detailed priority
-claims about all categorical inseparability formulations are not
-established by this outline.
+\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{99}\small
 \bibitem{BauerHanson} A.~Bauer and J.~E. Hanson, \emph{The Countable Reals}, \href{https://arxiv.org/abs/2404.01256v3}{arXiv:2404.01256v3}, 2026.
 \bibitem{Bernardi} C.~Bernardi, \emph{Precomplete equivalence relations in dominical categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
@@ -1527,6 +1616,24 @@ established by this outline.
 \bibitem{Miller} J.~S. Miller, \emph{Degrees of unsolvability of continuous functions}, J. Symbolic Logic \textbf{69} (2004), 555--584. \href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.
 \bibitem{Keisler} H.~J. Keisler, \emph{The ultraproduct construction}, author's survey dated 1 June 2010, especially Theorem 3.1, Corollary 3.3, and Propositions 4.1--4.2. \href{https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf}{Author's text}.
 \bibitem{Terwijn} S.~Terwijn, \emph{The complexity of completions in partial combinatory algebra}, Math. Structures Comput. Sci. \textbf{34} (2024), 455--466, especially \S7. \href{https://doi.org/10.1017/S0960129524000252}{doi:10.1017/S0960129524000252}.
-\bibitem{KLR} D.~E. Knuth, T.~Larrabee, and P.~M. Roberts, \emph{Mathematical Writing}, Stanford report STAN-CS-89-1193, 1989. \href{https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf}{Stanford report}.
+\bibitem{Aczel}
+P.~Aczel, \emph{An introduction to inductive definitions},
+in J.~Barwise (ed.), Handbook of Mathematical Logic,
+North-Holland, 1977, pp.~739--782.
+\href{https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf}{Text}.
+\bibitem{GTWW}
+J.~A. Goguen, J.~W. Thatcher, E.~G. Wagner, and J.~B. Wright,
+\emph{Initial algebra semantics and continuous algebras},
+Journal of the ACM \textbf{24} (1977), no.~1, pp.~68--95.
+\href{https://doi.org/10.1145/321992.321997}{doi:10.1145/321992.321997}.
+\bibitem{CockettLists}
+J.~R.~B. Cockett, \emph{List-arithmetic distributive categories: Locoi},
+Journal of Pure and Applied Algebra \textbf{66} (1990), no.~1, pp.~1--29.
+\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.
+\bibitem{Wissmann}
+T.~Wi\ss{}mann, \emph{Minimality notions via factorization systems and examples},
+Logical Methods in Computer Science \textbf{18} (2022),
+no.~3, article~31, pp.~31:1--31:26.
+\href{https://doi.org/10.46298/lmcs-18(3:31)2022}{doi:10.46298/lmcs-18(3:31)2022}.
 \end{thebibliography}
 \end{document}
