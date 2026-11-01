@@ -24,8 +24,9 @@ $\mathcal B_{\PA}$. Write
  c_\Gamma=c_{A_\Gamma,S}:P_\Gamma\to S,\qquad
  t_\Gamma=\ran(c_\Gamma):S\rightharpoonup S.
 \]
-Thus $P_\Gamma$ is the sentence-conclusion pullback of the full
-derivation object. Choose its conclusion index $e_{\Gamma,S}$
+Thus $P_\Gamma$ is obtained by pulling back the full conclusion
+morphism along $S\hookrightarrow\Fm$.
+Choose its conclusion index $e_{\Gamma,S}$
 as in Theorem~\ref{thm:syntactic-generated-theory}, and put
 \[
  \operatorname{Prov}_\Gamma(z)
@@ -186,8 +187,8 @@ $t_\Gamma$ in $\Split(S_{\PA})$ is incomplete.
 Its interpretations under $\widehat F_{\N}$ and under every
 $\widehat F_M$, where $M=\N^I/\mathcal U$ for a proper ultrafilter
 $\mathcal U$ on a nonempty set $I$, are incomplete.
-For the standard interpretation, there is a total source morphism
-$g:\omega\to\omega$ such that, writing
+For the standard interpretation, there is a total morphism
+$g:\omega\to\omega$ in $S_{\PA}$ such that, writing
 $\gamma=F_{\N}(g):\N\to\N$, every sentence
 $\alpha(\overline{\gamma(n)})$ is undecidable from $\Gamma$.
 \end{theorem}
@@ -216,9 +217,18 @@ theorem and refutation domains and also gives
 \[
  t_\Gamma\vee\nu^*t_\Gamma\ne1_S.
 \]
-For $M=\N$, it supplies a total $g$ whose two inverse images
-vanish. Thus neither $\Theta(\gamma(n))$ nor its negation code
-is a theorem code, for every $n\in\N$.
+For $M=\N$, it supplies a total morphism $g:\omega\to\omega$
+in $S_{\PA}$. With $\gamma=F_{\N}(g)$, the two inverse-image
+equalities in that theorem become
+\[
+ \bigl((G_{\N}\theta)\gamma\bigr)^{-1}(\mathsf{Th}_\Gamma)
+ =\varnothing,
+ \qquad
+ \bigl((G_{\N}\theta)\gamma\bigr)^{-1}(\mathsf{Ref}_\Gamma)
+ =\varnothing.
+\]
+Thus neither $\alpha(\overline{\gamma(n)})$ nor its negation
+is derivable from $\Gamma$, for any $n\in\N$.
 \end{proof}
 
 \begin{corollary}[Essential incompleteness of arithmetic]
@@ -307,10 +317,6 @@ the partial identities on $A$ and $B$ as its two inseparable
 restriction idempotents. Since complemented restriction idempotents
 in $\mathrm{Rec}$ are partial identities on recursive subsets,
 $A,B$ are recursively inseparable.
-For $n\in A$, its finite computation trace gives a PA-proof of
-$\alpha(\bar n)$; for $n\in B$, it gives a PA-proof of
-$\beta(\bar n)$. PA-provable functionality of $G_{e_d}$ gives
-$\PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x))$.
 
 The logical objects used below are constructed in the total part of
 the restriction splitting. Let $\mathcal C_{\mathrm{rec}}$ have c.e.\
@@ -442,24 +448,23 @@ Negation and numeral substitution give total maps
 For a c.e.\ theory $T\supseteq\PA$, use the Hilbert calculus of
 Appendix~\ref{app:first-order-derivations}. Let $\mathrm{Prf}_T$ be the
 set of codes of finite derivation trees from $T$ whose conclusions are sentences.
-This carrier is c.e.: the logical rules and formula syntax are
-recursive, and each candidate proof has only finitely many axiom
-membership tests in the c.e.\ axiom set of $T$. Reading the root
-conclusion gives a total morphism
+By Proposition~\ref{prop:arithmetic-theory-realization}, this
+carrier is c.e.\ and reading the root conclusion gives a total morphism
 $c_T:\mathrm{Prf}_T\to S$ in the splitting. Its range
 $t_T=\ran(c_T)$ is the partial identity on the c.e.\ set of theorems
 of $T$.
 Proposition~\ref{prop:arithmetic-theory-realization} supplies the initial
-derivation algebra. Theorem~\ref{thm:first-order-theory} identifies its
-sentence-conclusion pullback with $c_T$ and its image with the least
+derivation algebra. Theorem~\ref{thm:first-order-theory} identifies the
+pullback of its conclusion morphism along $S\hookrightarrow\Fm$
+with $c_T$, and the image of $c_T$ with the least
 sentence theory containing the axioms of $T$.
 Lemma~\ref{lem:range-regular-image} identifies the partial identity
 on this regular image with $t_T$.
 
-The finite computation proofs of $\alpha(\bar n)$ for $n\in A$ give
-$a\le\theta^*t_{\PA}$. For $n\in B$, a finite computation proves
-$\beta(\bar n)$ in $\PA$; the PA-provable disjointness of $\alpha$
-and $\beta$ then proves $\neg\alpha(\bar n)$. Thus
+Apply Lemma~\ref{lem:arithmetic-diagonal-representation} in the
+standard model with $\Gamma$ the chosen PA-axiom presentation.
+Since $A=D_0$ and $B=D_1$, it gives the first two inequalities
+below. Axiom inclusion gives the third:
 \begin{equation}\label{eq:arithmetic-domain-inclusions}
  a\le\theta^*t_{\PA},\qquad
  b\le\theta^*\nu^*t_{\PA},\qquad

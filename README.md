@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 22](manuscript/logical_consequence_and_essential_incompleteness_v22.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 23](manuscript/logical_consequence_and_essential_incompleteness_v23.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v22_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v23_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -26,6 +26,10 @@ The [theorem-and-proof plan](Plans/comparison_soundness_paper_plan_v2.pdf)
 and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
 record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
+
+The [version 23 review record](Audit/2026-11-01-prose-v23/README.md)
+contains the hostile review, mathematical-writing review, and corrections
+to the soundness and arithmetic sections.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).
@@ -493,6 +497,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 
