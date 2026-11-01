@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 32](manuscript/logical_consequence_and_essential_incompleteness_v32.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 33](manuscript/logical_consequence_and_essential_incompleteness_v33.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v32_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v33_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -43,7 +43,10 @@ Cockett locators and a footnote recording that the uniqueness-proof gap is
 unrelated to the cited results, and replaces the repeated substitution
 verification in Section 7.4 by a reference to Proposition 5.7. Version 32
 defines Turing categories and identifies Split(S_T)
-as a Turing category with Turing object (omega, identity).
+as a Turing category with Turing object (omega, identity). The
+[version 32 reviews](Audit/2026-11-01-modified-sections-v32/README.md)
+record the checks of those changes. Version 33 makes the ambient category
+and the two retraction morphism types explicit.
 
 The [version 29 review record](Audit/2026-11-01-prose-types-v29/README.md)
 records the independent hostile-referee and mathematical-writing checks of
