@@ -1,0 +1,11 @@
+{
+  "tex_changes": [
+    "abstract.tex",
+    "preamble.tex"
+  ],
+  "log_issues": {
+    "output/manuscript/local_connectedness/main.log": [],
+    "output/appendix_v34/first_order_syntax_and_deductive_closure_appendix_v34.log": []
+  },
+  "pages": 77
+}

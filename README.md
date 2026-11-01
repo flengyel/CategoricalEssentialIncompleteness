@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 33](manuscript/logical_consequence_and_essential_incompleteness_v33.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 34](manuscript/logical_consequence_and_essential_incompleteness_v34.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v33_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v34_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -21,8 +21,8 @@ and three-point-cosheaf applications.
 Appendix A constructs categorical syntax, substitution, and deductively closed
 theories. Appendix B constructs the cosheaf category; Appendix C gives the
 lifting counterexample. Appendix D contains the faithful model family, ambient
-theory extension, and numeral observations. The introduction and abstract remain
-reserved for the final revision. The [source directory guide](manuscript/local_connectedness/README.md)
+theory extension, and numeral observations. The introduction and related-work discussion remain
+reserved for revision. The [source directory guide](manuscript/local_connectedness/README.md)
 lists the files and build command.
 
 The [theorem-and-proof plan](Plans/comparison_soundness_paper_plan_v2.pdf)
@@ -529,6 +529,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 

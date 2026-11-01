@@ -2,9 +2,9 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 26 PDF](logical_consequence_and_essential_incompleteness_v26.pdf)
+[Version 34 PDF](logical_consequence_and_essential_incompleteness_v34.pdf)
 ([LaTeX source](local_connectedness/main.tex),
-[source archive](logical_consequence_v26_source.zip), 1 November 2026).
+[source archive](logical_consequence_v34_source.zip), 1 November 2026).
 
 Sections 3 and 4 prove the comparison theorem and its application to interpreted
 sentence theories. Section 5 realizes the categorical syntax of Appendix A in
@@ -19,7 +19,7 @@ The Miller and cosheaf applications follow in Sections 8 and 9.
 Appendix A contains categorical syntax and deductive closure; Appendix B,
 the cosheaf construction; Appendix C, the lifting counterexample; and Appendix D,
 the faithful model family and the arguments using it. The introduction and
-abstract are reserved for the final revision.
+related-work discussion remain reserved for revision.
 
 The [version 26 reviews](../Audit/2026-11-01-numerical-v26/README.md)
 record the numerical realization, the computable proof-code comparisons,
@@ -34,8 +34,8 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
 The [source directory guide](local_connectedness/README.md) lists the files.
 The syntax appendix is also available as a
-[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v26.pdf)
-with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v26.tex).
+[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v34.pdf)
+with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v34.tex).
 The [theorem-and-proof plan](../Plans/comparison_soundness_paper_plan_v2.pdf)
 gives the proposed organization of the remaining revisions. The Lean
 formalization remains indexed to version 5.
@@ -297,6 +297,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
 
 

@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 33, 1 November 2026.
+Version 34, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v33.pdf) ·
-[Source archive](../logical_consequence_v33_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v34.pdf) ·
+[Source archive](../logical_consequence_v34_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -16,7 +16,7 @@ proves the numerical realization; Section 7.5 applies numerical incompleteness,
 and Section 7.6 treats numeral instances and theory extension. Sections 8 and 9
 contain the Miller and cosheaf applications.
 The faithful model family and numeral observations are in Appendix D.
-The introduction and abstract are reserved for the final revision.
+The introduction and related-work discussion remain reserved for revision.
 
 The [complete version 29 audit](../../Audit/2026-11-01-v29-full-citations/README.md)
 covers every compiled source file and every citation use. Version 30 applies
@@ -39,8 +39,8 @@ The dated source LOCOct10f is preserved with that note.
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v33.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v33.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v34.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v34.tex).
 
 ## Build
 
