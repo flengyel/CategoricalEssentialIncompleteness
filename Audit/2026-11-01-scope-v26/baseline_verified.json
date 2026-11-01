@@ -1,0 +1,117 @@
+[
+  {
+    "path": "manuscript/local_connectedness/abstract.tex",
+    "sha": "05ebbe79d0c853196247d1274a1d948c8f278337",
+    "sha256": "735e1b97767ef5182ed9e66bc40b95cb0c65ac3fa1ea3587633abe7dc7d2cc97"
+  },
+  {
+    "path": "manuscript/local_connectedness/appendices/a-syntax-and-theories.tex",
+    "sha": "29cdb3660579ca35b61f0e408f55e71ff0cbbe2a",
+    "sha256": "9fad5c920825b9745d151d434463dcf3e15730cf311667cd934f9e144e82e9d3"
+  },
+  {
+    "path": "manuscript/local_connectedness/appendices/b-three-point-cosheaves.tex",
+    "sha": "fdfb3f55e9f1926ac15842cc381580f8acfd3992",
+    "sha256": "a66b45ef82e830e9780ca5e2be1112285d6c3d00ffdc707a92eddbfbe4512258"
+  },
+  {
+    "path": "manuscript/local_connectedness/appendices/c-section-lifting.tex",
+    "sha": "56b853d70c452249a442b563aab27eea3adc3464",
+    "sha256": "248f23188054e5df92981ea76e3932e4139eb1730e8a711593f9fda813558a71"
+  },
+  {
+    "path": "manuscript/local_connectedness/appendices/d-faithful-family.tex",
+    "sha": "c5c92511b8f1751ca3b932a5d02f9441674fbf5f",
+    "sha256": "6164a959322f8e5972308e32c889076cd94a87b7c281eefb84b4329d7bfcabfe"
+  },
+  {
+    "path": "manuscript/local_connectedness/bibliography.tex",
+    "sha": "164b324f0d5a357d8b23bafa1e2151ae89a2df3b",
+    "sha256": "c85ac8aee883f6215f7aa3bae58c76ee7bcd48fc9ace067ce66aa1043d547c7b"
+  },
+  {
+    "path": "manuscript/local_connectedness/main.tex",
+    "sha": "9a410ed9d39923611daad277d84a39483c4298cd",
+    "sha256": "06a09303973295b0478aeee4db9b2e5104f30cbc3f150eaaf3d1b3174f16117f"
+  },
+  {
+    "path": "manuscript/local_connectedness/preamble.tex",
+    "sha": "97bc33a09fd999973ab9f3bbc3876bbdfc2525fa",
+    "sha256": "1070660a4b63d47c36968654dacfeb5d801a7a83e9a98378eb3bacde42162e35"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/01-introduction.tex",
+    "sha": "12506a38e64aa1c3f1b42510575a757a1d110cbe",
+    "sha256": "9ac9bca02539d593c88cecc3447a0eb82452f84811df3fcc9723e3debe65bf7a"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/02-categorical-preliminaries.tex",
+    "sha": "39dc7449532901c6649ae7d46b882f515a4956f3",
+    "sha256": "7f97bbb05383f41ed0ebdbd628b4202e7735c422f2e96a3b8746856b4179d12d"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/03-sections-and-inseparability.tex",
+    "sha": "bd15922133821476e903aab7376db280e5771cad",
+    "sha256": "3a99f4f892c32ca42675caf0e27e0a6e5046da157ac1a755098ec9be5d627d62"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/03a-internal-theories.tex",
+    "sha": "cdfae933269c222717e47be4820750a1298f6552",
+    "sha256": "f45d5c0c29b07c0b8148cebee320bd252812519e9a278d651a76753b42af1d72"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/04-miller-sequences.tex",
+    "sha": "fab62eeb686c8b7ed457692899a2f9ce4174532c",
+    "sha256": "eb0d73e7ebb2e11020f89e17a7cf7e781fdf3a2932924f87757e66a6718f0974"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/05-syntactic-recursion-category.tex",
+    "sha": "18a7501d0e7c38cbde8f28e1daf25eec303c585b",
+    "sha256": "34df9a30e0e032bb0a24b76458948c8533300cb42ce4d69a6411dfb25148b913"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/05a-internal-syntax.tex",
+    "sha": "5fca3c9cbb991fe00a679fbc9a7e08bef8c5916e",
+    "sha256": "7d0b9c3a05cb8258177afb2c68dcf64ebb4af24df20868325c06eadf20bee999"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/06-interpretation-in-models.tex",
+    "sha": "59fabc5fa886a3fa48fa0ad99548f5d37aabbdb3",
+    "sha256": "72b1874001abe6b8717ea3fa910afca439dc9307bda6f73f8a1dee45b00e73af"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/08-essential-incompleteness-of-arithmetic.tex",
+    "sha": "e03fcbe40adf70683008938e6f5a931e4344ab41",
+    "sha256": "a67c80632f8729caa0d0679e5b8bab260a5cdc4b20636ec9399ddb23ebdc247f"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/08a-uniform-theories.tex",
+    "sha": "34b3dae37f31cd4ae88a1dad0243e6bfa16de905",
+    "sha256": "1b9540d2537f6de7f658e8881d3fc9fc9c47971c1323df775762bbb20efcee45"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/08b-uniform-independent-sentences.tex",
+    "sha": "a629c26d3011b3eb3db8843a2782827bd3266fcf",
+    "sha256": "7cfdd66300041ad6a9fe7e59e78670d27007ed41e97fbc03ead57bf4f3840fb5"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/08c-numerical-realization.tex",
+    "sha": "c320b7b4149c04dea84e69cd68680e3ddb2e707d",
+    "sha256": "f6606bf81ca7546b1065ae10e80e68482000ff27add2485af36ff504e879f448"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/08d-numerical-incompleteness.tex",
+    "sha": "6a63385d4377047b4ed6fbc04c4bf332f910f2af",
+    "sha256": "11d6c06139fa1b2b457d3c1a577026767afae0cd2121005eac5c3ef1ed9d98f8"
+  },
+  {
+    "path": "manuscript/local_connectedness/sections/09-three-point-space.tex",
+    "sha": "dfcb3a66923b878bc44dc37b8f048e8a52a67cfc",
+    "sha256": "79f0734afc2548a9eb852102f4f6f459d8c9ee5f412016291e9d87d8c8fd826d"
+  },
+  {
+    "path": "manuscript/local_connectedness/README.md",
+    "sha": "b6c2370c360c7022c9de82066dc38129b1618513",
+    "sha256": "fecd962473fe44200c5238d262d62d947ec94fb6ad5d00c392c35b2500db0e88"
+  }
+]
