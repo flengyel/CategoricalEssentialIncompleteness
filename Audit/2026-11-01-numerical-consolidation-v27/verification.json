@@ -1,0 +1,48 @@
+{
+  "version": 27,
+  "base_commit": "7bf0de04ea162f5cd05688e869380aa1e412ae29",
+  "main_pages": 78,
+  "appendix_pages": 10,
+  "source_entries": 23,
+  "changed_modules": [
+    "README.md",
+    "appendices/b-three-point-cosheaves.tex",
+    "preamble.tex",
+    "sections/08c-numerical-realization.tex",
+    "sections/09-three-point-space.tex"
+  ],
+  "unchanged_modules": [
+    "abstract.tex",
+    "appendices/a-syntax-and-theories.tex",
+    "appendices/c-section-lifting.tex",
+    "appendices/d-faithful-family.tex",
+    "bibliography.tex",
+    "main.tex",
+    "sections/01-introduction.tex",
+    "sections/02-categorical-preliminaries.tex",
+    "sections/03-sections-and-inseparability.tex",
+    "sections/03a-internal-theories.tex",
+    "sections/04-miller-sequences.tex",
+    "sections/05-syntactic-recursion-category.tex",
+    "sections/05a-internal-syntax.tex",
+    "sections/06-interpretation-in-models.tex",
+    "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "sections/08a-uniform-theories.tex",
+    "sections/08b-uniform-independent-sentences.tex",
+    "sections/08d-numerical-incompleteness.tex"
+  ],
+  "first_order_and_code_bridge_tail_unchanged": true,
+  "fork_specific_total_proof_unchanged": true,
+  "no_undefined_references_or_overfull_boxes": true,
+  "reviewed_render_pages": [
+    1,
+    36,
+    37,
+    38,
+    39,
+    49,
+    50,
+    66,
+    72
+  ]
+}

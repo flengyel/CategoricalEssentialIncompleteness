@@ -84,30 +84,9 @@ extensive. Its monomorphisms are componentwise injections, and its
 regular images are the componentwise c.e.\ images.
 \end{proposition}
 \begin{proof}
-The terminal numerical carrier is a singleton. Products use tuples,
-and an equalizer of $f,g:Y\to Z$ has carrier
-$\{y\in Y:f(y)=g(y)\}$. This carrier is c.e.: enumerate $Y$, run
-both computations, and retain equal outputs. Its inclusion is
-recursive. The universal maps into products and equalizers use the
-given recursive maps and tuple formation, and are total on their
-specified source carriers. This proves the finite-limit universal
-properties in $\mathcal C_{\mathrm{rec}}$.
-
-For a total morphism $f:Y\to Z$, enumerate $Y$ and its computed
-values to enumerate $f(Y)$. The factorization
-$Y\to f(Y)\hookrightarrow Z$ is therefore a factorization in
-$\mathcal C_{\mathrm{rec}}$. Every total surjection
-$q:Y\to Z$ has a partial recursive section total on $Z$: on input
-$z$, enumerate $Y$ and search for a computed value $q(y)=z$.
-If $u:Y\to W$ is constant on the fibers of $q$, composing $u$
-with this section gives the unique morphism $v:Z\to W$ of
-$\mathcal C_{\mathrm{rec}}$ with $vq=u$. Thus $q$ is the
-coequalizer of its kernel pair.
-The pullback of a surjection is surjective, since a preimage of
-each element can be paired with that element. These pullbacks
-have c.e.\ tuple carriers by the finite-limit construction.
-This proves regularity and pullback stability of the image
-factorizations in the numerical category.
+Proposition~\ref{prop:numerical-structure} gives finite limits,
+disjoint pullback-stable finite coproducts, regular images, and
+computable sections of surjections in $\mathcal C_{\mathrm{rec}}$.
 
 Limits and tagged finite coproducts in $\mathcal E$ are formed
 componentwise. Their universal maps are natural because their
@@ -605,46 +584,17 @@ Every object of $\mathcal A$ is isomorphic to the image of a restriction
 idempotent on $V$, so this functor is essentially surjective.
 \end{proof}
 
-Use the carrier bijections $\gamma_X:|X|\to\N$ fixed in
-Section~\ref{sec:syntactic}. For a morphism $f:X\rightharpoonup Y$
-of $\mathrm{Rec}$, put
+Use the restriction equivalence
 \[
- \widehat f=\gamma_Y\circ J_{\mathrm{rec}}(f)\circ\gamma_X^{-1}
- :\N\rightharpoonup\N,
+ \mathsf Q_{\mathrm{num}}:\Split(\mathrm{Rec})
+       \longrightarrow\mathcal K_{\mathrm{rec}}
+       =\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
 \]
-where $J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ is the functor of
-Section~\ref{sec:arithmetic}. The same splitting construction
-defines a functor
-\[
- \mathsf Q_{\mathrm{num}}:\operatorname{Split}(\mathrm{Rec})
- \longrightarrow\mathcal K
- =\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono}).
-\]
-For a restriction idempotent $e$ on $X$, let $D_e\subseteq\N$
-be the domain of the partial identity $\widehat e$.
-Put $\mathsf Q_{\mathrm{num}}(X,e)=D_e$.
-A morphism $f:(X,e)\rightharpoonup(Y,d)$ is represented by a morphism
-$f:X\rightharpoonup Y$ of $\mathrm{Rec}$ satisfying $f=dfe$.
-Its image under $\mathsf Q_{\mathrm{num}}$ is the restriction of
-$\widehat f$ to a partial function $D_e\rightharpoonup D_d$.
-Conversely, every partial recursive map $D_e\rightharpoonup D_d$,
-extended by undefinedness outside $D_e$ and conjugated by the
-inverse carrier bijections, represents a morphism
-$f:X\rightharpoonup Y$ satisfying $f=dfe$. These assignments are
-inverse on each hom-set and preserve restrictions. Thus
-$\mathsf Q_{\mathrm{num}}$ is fully faithful.
-
-For a c.e.\ numerical carrier $C\subseteq\N^m$, choose a recursive
-tuple coding whose restriction is an injection $k:C\to\N$ with
-recursive inverse on its image. Let $e_k$ be the partial identity
-on $k(C)$, regarded as a restriction idempotent on $\omega$ in
-$\mathrm{Rec}$. The coding and its inverse give an isomorphism
-\[
- C\cong\mathsf Q_{\mathrm{num}}(\omega,e_k)
- \qquad\text{in }\mathcal K.
-\]
-Thus $\mathsf Q_{\mathrm{num}}$ is essentially surjective and is a
-restriction equivalence.
+constructed in Proposition~\ref{prop:numerical-structure}.
+Under the canonical isomorphism
+$\Tot(\mathcal K_{\mathrm{rec}})\cong\mathcal C_{\mathrm{rec}}$,
+its restriction to total categories is the equivalence
+$F:\mathcal B_{\mathrm{rec}}\to\mathcal C_{\mathrm{rec}}$ there.
 
 \emph{Decidable equality} on $V$ means a morphism
 $\epsilon:V\times V\to1+1$ in $\mathcal E$ whose inverse image of

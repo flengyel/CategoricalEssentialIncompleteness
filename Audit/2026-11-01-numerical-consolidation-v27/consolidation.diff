@@ -1,0 +1,558 @@
+--- v26/sections/08c-numerical-realization.tex
++++ v27/sections/08c-numerical-realization.tex
+@@ -35,7 +35,7 @@
+ For $C=(m,C_0)$, put $\widehat C=\kappa_m(|C|)$.
+ 
+ 
+-\begin{proposition}\label{prop:arithmetic-theory-realization}
++\begin{proposition}\label{prop:numerical-structure}
+ There is an equivalence
+ \[
+  \operatorname{Tot}(\operatorname{Split}(\mathrm{Rec}))
+@@ -50,6 +50,235 @@
+  \operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
+        \simeq\operatorname{Split}(\mathrm{Rec}).
+ \]
++\end{proposition}
++\begin{proof}
++Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
++\[
++ Q(C)=(\omega,1_{\widehat C}),\qquad
++ Q(f)=\kappa_n |f|\kappa_m^{-1}:
++     (\omega,1_{\widehat C})\longrightarrow
++     (\omega,1_{\widehat D}).
++\]
++For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
++the displayed formula specifies its representing partial function.
++The numerical program for $Q(f)$ first semidecides membership
++in $\widehat C$, then decodes its input, computes $f$, and encodes
++the output. Its domain is exactly $\widehat C$, so the displayed
++split morphism is total. The inverse coding equations prove
++$Q(1_C)=1_{Q(C)}$ and $Q(gf)=Q(g)Q(f)$.
++
++For $(X,e)\in\mathcal B_{\mathrm{rec}}$, let
++$D_e=\gamma_X(\operatorname{dom}e)\subseteq\N$, and define
++$F:\mathcal B_{\mathrm{rec}}\to\mathcal C$ by
++\[
++ F(X,e)=(1,D_e),\qquad
++ |F(f)|=\gamma_Y f\gamma_X^{-1}|_{D_e}:D_e\longrightarrow D_d
++\]
++for a total split morphism $f:(X,e)\to(Y,d)$, so that
++$F(f):F(X,e)\to F(Y,d)$ belongs to $\mathcal C$.
++The restriction equation $\bar f=e$ gives its exact source domain,
++and $f=dfe$ gives its target membership. Composition and identities
++are the corresponding partial-function equations in the numerical
++coordinates.
++Tuple decoding gives isomorphisms
++\[
++ u_C:FQ(C)\xrightarrow{\cong}C
++       \quad\text{in }\mathcal C,\qquad
++       |u_C|=\kappa_m^{-1}|_{\widehat C}.
++\]
++The restriction of $\gamma_X^{-1}$ to $D_e$ gives isomorphisms
++\[
++ v_{(X,e)}:QF(X,e)\xrightarrow{\cong}(X,e)
++       \quad\text{in }\mathcal B_{\mathrm{rec}}.
++\]
++For $f:C\to D$ in $\mathcal C$ and
++$a:(X,e)\to(Y,d)$ in $\mathcal B_{\mathrm{rec}}$,
++the coding equations give
++\[
++ f u_C=u_DFQ(f),\qquad
++ a v_{(X,e)}=v_{(Y,d)}QF(a).
++\]
++Thus $u:FQ\Rightarrow1_{\mathcal C}$ and
++$v:QF\Rightarrow1_{\mathcal B_{\mathrm{rec}}}$ are natural
++isomorphisms, proving the first equivalence.
++
++The singleton $(0,\{()\})$ is terminal in $\mathcal C$.
++Products are Cartesian products of carriers, represented by
++concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to D$ are parallel morphisms, their
++equalizer is the object of the same dimension as $C$ with carrier
++$\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
++enumerate $|C|$, run the two computations in parallel, and compare
++their outputs. The product and equalizer universal morphisms are the
++corresponding computable pairings and restrictions.
++
++The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
++$D=(n,D_0)$, choose their coproduct as the object of dimension one
++with tagged carrier
++\[
++ |C+D|=\{2\kappa_m(c):c\in|C|\}
++        \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
++\]
++with the two displayed encoding functions as injections.
++Copairing tests the tag, decodes, and runs the corresponding
++branch. These operations give the coproduct universal property.
++For $f:X\to C+D$ in $\mathcal C$, let $X_C,X_D$ be the
++objects of the same dimension as $X$ whose carriers are the
++inverse images in $|X|$ of the even and odd summands. Both are c.e.
++and their inclusions give an isomorphism $X_C+X_D\cong X$:
++the inverse computes $f(x)$ to determine the tag and retains $x$.
++The tag sets are disjoint, so these coproducts are disjoint and
++stable under pullback.
++
++For $f:C\to D$ in $\mathcal C$, define the image object
++$\operatorname{Im}(f)$ to have the dimension of $D$ and carrier
++$|\operatorname{Im}(f)|=|f|(|C|)\subseteq|D|$. This carrier is
++c.e. by enumerating $|C|$ and dovetailing the computations of $f$. Its image factorization
++is
++\[
++ C\xrightarrow{e_f}\operatorname{Im}(f)
++       \xrightarrow{m_f}D,
++\]
++where $e_f$ is surjective and $m_f$ is the inclusion.
++For any surjective morphism $q:C\to D$, define a morphism
++$s_q:D\to C$ by preimage search. On input $y\in|D|$, enumerate
++$|C|$ and dovetail the computations of $q$ until a value
++$q(x)=y$ appears, then return $x$. Surjectivity ensures termination
++on $|D|$, and $qs_q=1_D$.
++If $h:C\to Z$ is constant on the fibers of $q$, put
++$d=hs_q:D\to Z$. For $x\in|C|$, the elements $s_q(q(x))$ and
++$x$ lie in the same fiber of $q$, so $dq=h$. Surjectivity gives
++uniqueness of $d$. Hence $q$ is the coequalizer of its kernel pair.
++Conversely, a regular epimorphism
++cannot factor through a proper image monomorphism, so regular
++epimorphisms are exactly the surjections. A pullback of a surjection
++is surjective on its c.e. pullback carrier. This proves regularity.
++
++Computable singleton maps distinguish any two elements of a carrier.
++Consequently a monomorphism $m:B\to C$ in $\mathcal C$ is
++injective; every injective morphism is monic. Enumerating $|B|$ and
++searching for a preimage computes the partial inverse of $m$ on
++$|m|(|B|)$. In numerical coordinates this gives
++\[
++ \mu_m:Q(C)\rightharpoonup Q(B)
++       \quad\text{in }\mathscr S_{\mathrm{rec}},
++\]
++with
++\[
++ \mu_mQ(m)=1_{Q(B)},\qquad
++ Q(m)\mu_m=\overline{\mu_m}.
++\]
++The right-hand side is the partial identity on the coded image
++of $m$ in $Q(C)$.
++
++Define a functor
++\[
++ \widetilde Q:\operatorname{Par}(\mathcal C,\operatorname{Mono})
++                 \longrightarrow\mathscr S_{\mathrm{rec}}
++\]
++on objects by $\widetilde Q(C)=Q(C)$ and on a monic span by
++\[
++ \widetilde Q[\,C\xleftarrow{m}B\xrightarrow{g}D\,]
++       =Q(g)\mu_m:Q(C)\rightharpoonup Q(D).
++\]
++This function is defined on the coded image of $m$ and sends
++the code of $m(b)$ to the code of $g(b)$ for $b\in|B|$. An isomorphism of spans therefore leaves it
++unchanged. For two composable spans, their pullback selects exactly
++the pairs $(b,b')$ for which the first right leg equals the second
++left leg. The same condition is the domain condition for composing
++the two partial functions. Their values then agree, proving
++preservation of composition. Identity spans give identities, and
++the restriction span $(m,m)$ gives the partial identity on the coded image of $m$.
++
++Define a quasi-inverse
++\[
++ \mathsf Q_{\mathrm{num}}:\mathscr S_{\mathrm{rec}}
++       \longrightarrow\mathcal K_{\mathrm{rec}},
++ \qquad
++ \mathcal K_{\mathrm{rec}}
++       =\operatorname{Par}(\mathcal C,\operatorname{Mono}).
++\]
++On objects, put $\mathsf Q_{\mathrm{num}}(X,e)=F(X,e)=(1,D_e)$.
++For a partial morphism $f:(X,e)\rightharpoonup(Y,d)$, put
++\[
++ \widehat f=\gamma_Y f\gamma_X^{-1}:\N\rightharpoonup\N,
++ \qquad U_f=\operatorname{dom}(\widehat f)\subseteq D_e.
++\]
++The equation $f=dfe$ gives $\widehat f(U_f)\subseteq D_d$.
++Let $\iota_f:(1,U_f)\hookrightarrow(1,D_e)$ be the inclusion,
++and let $g_f:(1,U_f)\to(1,D_d)$ be the morphism with underlying
++function $\widehat f|_{U_f}$. Define
++\[
++ \mathsf Q_{\mathrm{num}}(f)=
++ [\,(1,D_e)\xleftarrow{\iota_f}(1,U_f)
++                      \xrightarrow{g_f}(1,D_d)\,].
++\]
++The carrier $U_f$ is c.e., and $g_f$ is computable and total on it,
++so both legs are morphisms of $\mathcal C$.
++The identity on $(X,e)$ has $U_e=D_e$ and $g_e=1_{F(X,e)}$,
++so its image is the identity span.
++For $g:(Y,d)\rightharpoonup(Z,c)$,
++\[
++ U_{gf}=\{z\in U_f:\widehat f(z)\in U_g\},\qquad
++ \widehat{gf}(z)=\widehat g(\widehat f(z))\quad(z\in U_{gf}).
++\]
++The pullback composing the two spans is the object
++\[
++ P_{f,g}=(2,\{(z,w)\in U_f\times U_g:\widehat f(z)=w\}).
++\]
++Projection to the first coordinate gives an isomorphism
++$P_{f,g}\to(1,U_{gf})$ in $\mathcal C$. Its inverse
++$(1,U_{gf})\to P_{f,g}$ sends $z$ to $(z,\widehat f(z))$.
++Both functions are computable and total on their source carriers.
++This isomorphism commutes with both span legs, proving
++preservation of composition.
++The restriction of $f$ is the partial identity on its domain,
++so $\mathsf Q_{\mathrm{num}}(\bar f)$ is the span
++$(\iota_f,\iota_f)$. Thus $\mathsf Q_{\mathrm{num}}$ preserves
++restrictions. On total morphisms it restricts to $F$, followed by
++the canonical inclusion of $\mathcal C$ into $\mathcal K_{\mathrm{rec}}$.
++
++Regard each $u_C:FQ(C)\to C$ as a total isomorphism in
++$\mathcal K_{\mathrm{rec}}$. For a partial morphism $k:C\rightharpoonup D$
++represented by $C\xleftarrow{m}B\xrightarrow{h}D$, its underlying
++partial function has domain $|m|(|B|)$ and value
++$|h|(|m|^{-1}(x))$ at $x$ in that domain. The inverse of $|m|$
++on its image is computable by preimage search. Write $k(x)$ for
++the value of this represented partial function. If a second span
++$C\xleftarrow{m'}B'\xrightarrow{h'}D$ has the same domain and values,
++then these spans are isomorphic. The functions $|m'|^{-1}|m|$ and $|m|^{-1}|m'|$
++define inverse morphisms $w:B\to B'$ and $w':B'\to B$ in
++$\mathcal C$. They satisfy $m'w=m$, $h'w=h$, $mw'=m'$, and
++$hw'=h'$ by equality of the represented domains and values.
++Both sides of
++\[
++ k u_C=u_D\mathsf Q_{\mathrm{num}}\widetilde Q(k)
++       :FQ(C)\rightharpoonup D
++\]
++are defined at $z\in\widehat C$ exactly when
++$\kappa_r^{-1}(z)$ belongs to the domain of $k$, where $C=(r,C_0)$.
++There they have value $k(\kappa_r^{-1}(z))$. The span criterion
++just proved gives equality of these morphisms.
++For $a:(X,e)\rightharpoonup(Y,d)$, both sides of
++\[
++ a v_{(X,e)}
++   =v_{(Y,d)}\widetilde Q\mathsf Q_{\mathrm{num}}(a)
++   :QF(X,e)\rightharpoonup(Y,d)
++\]
++are defined at $z\in D_e$ exactly when $z\in U_a$, and their
++value there is $a(\gamma_X^{-1}(z))$.
++The components $u_C$ and $v_{(X,e)}$ therefore give natural
++isomorphisms
++\[
++ u:\mathsf Q_{\mathrm{num}}\widetilde Q
++             \Rightarrow1_{\mathcal K_{\mathrm{rec}}},\qquad
++ v:\widetilde Q\mathsf Q_{\mathrm{num}}
++             \Rightarrow1_{\mathscr S_{\mathrm{rec}}}.
++\]
++Thus $\widetilde Q$ and $\mathsf Q_{\mathrm{num}}$ are
++quasi-inverse restriction functors.
++\end{proof}
++
++\begin{proposition}\label{prop:arithmetic-theory-realization}
+ Fix $d\ge0$, let $V=(1,\N)$, and let
+ $\Sigma_k=(1,\Sigma_{k,0})$ and $\Pi_k=(1,\Pi_{k,0})$
+ have recursive carriers for $0\le k\le d$. Then the
+@@ -60,155 +289,6 @@
+ algebra of finite derivations.
+ \end{proposition}
+ \begin{proof}
+-Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
+-\[
+- Q(C)=(\omega,1_{\widehat C}),\qquad
+- Q(f)=\kappa_n |f|\kappa_m^{-1}:
+-     (\omega,1_{\widehat C})\longrightarrow
+-     (\omega,1_{\widehat D}).
+-\]
+-For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
+-the displayed formula specifies its representing partial function.
+-The numerical program for $Q(f)$ first semidecides membership
+-in $\widehat C$, then decodes its input, computes $f$, and encodes
+-the output. Its domain is exactly $\widehat C$, so the displayed
+-split morphism is total. The inverse coding equations prove
+-$Q(1_C)=1_{Q(C)}$ and $Q(gf)=Q(g)Q(f)$.
+-
+-For $(X,e)\in\mathcal B_{\mathrm{rec}}$, let
+-$D_e=\gamma_X(\operatorname{dom}e)\subseteq\N$, and define
+-$F:\mathcal B_{\mathrm{rec}}\to\mathcal C$ by
+-\[
+- F(X,e)=(1,D_e),\qquad
+- |F(f)|=\gamma_Y f\gamma_X^{-1}|_{D_e}:D_e\longrightarrow D_d
+-\]
+-for a total split morphism $f:(X,e)\to(Y,d)$, so that
+-$F(f):F(X,e)\to F(Y,d)$ belongs to $\mathcal C$.
+-The restriction equation $\bar f=e$ gives its exact source domain,
+-and $f=dfe$ gives its target membership. Composition and identities
+-are the corresponding partial-function equations in the numerical
+-coordinates.
+-Tuple decoding gives isomorphisms
+-\[
+- u_C:FQ(C)\xrightarrow{\cong}C
+-       \quad\text{in }\mathcal C,\qquad
+-       |u_C|=\kappa_m^{-1}|_{\widehat C}.
+-\]
+-The restriction of $\gamma_X^{-1}$ to $D_e$ gives isomorphisms
+-\[
+- v_{(X,e)}:QF(X,e)\xrightarrow{\cong}(X,e)
+-       \quad\text{in }\mathcal B_{\mathrm{rec}}.
+-\]
+-For $f:C\to D$ in $\mathcal C$ and
+-$a:(X,e)\to(Y,d)$ in $\mathcal B_{\mathrm{rec}}$,
+-the coding equations give
+-\[
+- f u_C=u_DFQ(f),\qquad
+- a v_{(X,e)}=v_{(Y,d)}QF(a).
+-\]
+-Thus $u:FQ\Rightarrow1_{\mathcal C}$ and
+-$v:QF\Rightarrow1_{\mathcal B_{\mathrm{rec}}}$ are natural
+-isomorphisms, proving the first equivalence.
+-
+-The singleton $(0,\{()\})$ is terminal in $\mathcal C$.
+-Products are Cartesian products of carriers, represented by
+-concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to D$ are parallel morphisms, their
+-equalizer is the object of the same dimension as $C$ with carrier
+-$\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
+-enumerate $|C|$, run the two computations in parallel, and compare
+-their outputs. The product and equalizer universal arrows are the
+-corresponding computable pairings and restrictions.
+-
+-The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
+-$D=(n,D_0)$, choose their coproduct as the object of dimension one
+-with tagged carrier
+-\[
+- |C+D|=\{2\kappa_m(c):c\in|C|\}
+-        \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
+-\]
+-with the two displayed encoding functions as injections.
+-Copairing tests the tag, decodes, and runs the corresponding
+-branch. These operations give the coproduct universal property.
+-For $f:X\to C+D$ in $\mathcal C$, let $X_C,X_D$ be the
+-objects of the same dimension as $X$ whose carriers are the
+-inverse images in $|X|$ of the even and odd summands. Both are c.e.
+-and their inclusions give an isomorphism $X_C+X_D\cong X$:
+-the inverse computes $f(x)$ to determine the tag and retains $x$.
+-The tag sets are disjoint, so these coproducts are disjoint and
+-stable under pullback.
+-
+-For $f:C\to D$ in $\mathcal C$, define the image object
+-$\operatorname{Im}(f)$ to have the dimension of $D$ and carrier
+-$|\operatorname{Im}(f)|=|f|(|C|)\subseteq|D|$. This carrier is
+-c.e. by enumerating $|C|$ and dovetailing the computations of $f$. Its image factorization
+-is
+-\[
+- C\xrightarrow{e_f}\operatorname{Im}(f)
+-       \xrightarrow{m_f}D,
+-\]
+-where $e_f$ is surjective and $m_f$ is the inclusion.
+-For any surjective morphism $e:C\to D$ and morphism $h:C\to Z$
+-constant on its kernel-pair fibers, compute a morphism $d:D\to Z$
+-as follows. On $y\in|D|$, enumerate $|C|$ and dovetail the
+-computations of $e$ until a value $e(x)=y$ appears, then return
+-$h(x)$. Surjectivity ensures termination on $|D|$, and constancy
+-on fibers ensures independence of the selected $x$. Thus $de=h$,
+-and surjectivity gives uniqueness of $d$. Hence $e$ is the
+-coequalizer of its kernel pair. Conversely, a regular epimorphism
+-cannot factor through a proper image monomorphism, so regular
+-epimorphisms are exactly the surjections. A pullback of a surjection
+-is surjective on its c.e. pullback carrier. This proves regularity.
+-
+-Computable singleton maps distinguish any two elements of a carrier.
+-Consequently a monomorphism $m:B\to C$ in $\mathcal C$ is
+-injective; every injective morphism is monic. Enumerating $|B|$ and
+-searching for a preimage computes the partial inverse of $m$ on
+-$|m|(|B|)$. In numerical coordinates this gives
+-\[
+- \mu_m:Q(C)\rightharpoonup Q(B)
+-       \quad\text{in }\mathscr S_{\mathrm{rec}},
+-\]
+-with
+-\[
+- \mu_mQ(m)=1_{Q(B)},\qquad
+- Q(m)\mu_m=\overline{\mu_m}.
+-\]
+-The right-hand side is the partial identity on the coded image
+-of $m$ in $Q(C)$.
+-
+-Define a functor
+-\[
+- \widetilde Q:\operatorname{Par}(\mathcal C,\operatorname{Mono})
+-                 \longrightarrow\mathscr S_{\mathrm{rec}}
+-\]
+-on objects by $\widetilde Q(C)=Q(C)$ and on a monic span by
+-\[
+- \widetilde Q[\,C\xleftarrow{m}B\xrightarrow{g}D\,]
+-       =Q(g)\mu_m:Q(C)\rightharpoonup Q(D).
+-\]
+-This function is defined on the coded image of $m$ and sends
+-the code of $m(b)$ to the code of $g(b)$ for $b\in|B|$. An isomorphism of spans therefore leaves it
+-unchanged. For two composable spans, their pullback selects exactly
+-the pairs $(b,b')$ for which the first right leg equals the second
+-left leg. The same condition is the domain condition for composing
+-the two partial functions. Their values then agree, proving
+-preservation of composition. Identity spans give identities, and
+-the restriction span $(m,m)$ gives the partial identity on the coded image of $m$.
+-
+-For fullness, let $a:Q(C)\rightharpoonup Q(D)$ be a morphism
+-of $\mathscr S_{\mathrm{rec}}$. Decode its c.e. domain to a
+-subobject $U\hookrightarrow C$ with a c.e. carrier. Its decoded
+-values define a total morphism $g:U\to D$ in $\mathcal C$, and the span
+-$C\leftarrow U\xrightarrow{g}D$ maps to $a$.
+-For faithfulness, equal partial functions have equal domains
+-$|m|(|B|)=|m'|(|B'|)$ and equal values there. Searching for inverse images
+-under the injective $m,m'$ gives inverse computable maps
+-$B\cong B'$ commuting with both span legs. Hence the spans
+-represent the same morphism. Essential surjectivity follows from
+-the essential surjectivity of $Q$ at the level of total categories,
+-with the isomorphisms $v_{(X,e)}$ displayed above.
+-Thus $\widetilde Q$ is a restriction equivalence.
+-
+ Choose the variable object $V=(1,\N)$ and, for a fixed $d\ge0$,
+ objects $\Sigma_k,\Pi_k\in\mathcal C_{\mathrm{rec}}$ with
+ recursive carriers $|\Sigma_k|,|\Pi_k|\subseteq\N$ for $0\le k\le d$.
+--- v26/appendices/b-three-point-cosheaves.tex
++++ v27/appendices/b-three-point-cosheaves.tex
+@@ -84,30 +84,9 @@
+ regular images are the componentwise c.e.\ images.
+ \end{proposition}
+ \begin{proof}
+-The terminal numerical carrier is a singleton. Products use tuples,
+-and an equalizer of $f,g:Y\to Z$ has carrier
+-$\{y\in Y:f(y)=g(y)\}$. This carrier is c.e.: enumerate $Y$, run
+-both computations, and retain equal outputs. Its inclusion is
+-recursive. The universal maps into products and equalizers use the
+-given recursive maps and tuple formation, and are total on their
+-specified source carriers. This proves the finite-limit universal
+-properties in $\mathcal C_{\mathrm{rec}}$.
+-
+-For a total morphism $f:Y\to Z$, enumerate $Y$ and its computed
+-values to enumerate $f(Y)$. The factorization
+-$Y\to f(Y)\hookrightarrow Z$ is therefore a factorization in
+-$\mathcal C_{\mathrm{rec}}$. Every total surjection
+-$q:Y\to Z$ has a partial recursive section total on $Z$: on input
+-$z$, enumerate $Y$ and search for a computed value $q(y)=z$.
+-If $u:Y\to W$ is constant on the fibers of $q$, composing $u$
+-with this section gives the unique morphism $v:Z\to W$ of
+-$\mathcal C_{\mathrm{rec}}$ with $vq=u$. Thus $q$ is the
+-coequalizer of its kernel pair.
+-The pullback of a surjection is surjective, since a preimage of
+-each element can be paired with that element. These pullbacks
+-have c.e.\ tuple carriers by the finite-limit construction.
+-This proves regularity and pullback stability of the image
+-factorizations in the numerical category.
++Proposition~\ref{prop:numerical-structure} gives finite limits,
++disjoint pullback-stable finite coproducts, regular images, and
++computable sections of surjections in $\mathcal C_{\mathrm{rec}}$.
+ 
+ Limits and tagged finite coproducts in $\mathcal E$ are formed
+ componentwise. Their universal maps are natural because their
+@@ -605,46 +584,17 @@
+ idempotent on $V$, so this functor is essentially surjective.
+ \end{proof}
+ 
+-Use the carrier bijections $\gamma_X:|X|\to\N$ fixed in
+-Section~\ref{sec:syntactic}. For a morphism $f:X\rightharpoonup Y$
+-of $\mathrm{Rec}$, put
+-\[
+- \widehat f=\gamma_Y\circ J_{\mathrm{rec}}(f)\circ\gamma_X^{-1}
+- :\N\rightharpoonup\N,
+-\]
+-where $J_{\mathrm{rec}}:\mathrm{Rec}\to\Pfn$ is the functor of
+-Section~\ref{sec:arithmetic}. The same splitting construction
+-defines a functor
+-\[
+- \mathsf Q_{\mathrm{num}}:\operatorname{Split}(\mathrm{Rec})
+- \longrightarrow\mathcal K
+- =\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono}).
+-\]
+-For a restriction idempotent $e$ on $X$, let $D_e\subseteq\N$
+-be the domain of the partial identity $\widehat e$.
+-Put $\mathsf Q_{\mathrm{num}}(X,e)=D_e$.
+-A morphism $f:(X,e)\rightharpoonup(Y,d)$ is represented by a morphism
+-$f:X\rightharpoonup Y$ of $\mathrm{Rec}$ satisfying $f=dfe$.
+-Its image under $\mathsf Q_{\mathrm{num}}$ is the restriction of
+-$\widehat f$ to a partial function $D_e\rightharpoonup D_d$.
+-Conversely, every partial recursive map $D_e\rightharpoonup D_d$,
+-extended by undefinedness outside $D_e$ and conjugated by the
+-inverse carrier bijections, represents a morphism
+-$f:X\rightharpoonup Y$ satisfying $f=dfe$. These assignments are
+-inverse on each hom-set and preserve restrictions. Thus
+-$\mathsf Q_{\mathrm{num}}$ is fully faithful.
+-
+-For a c.e.\ numerical carrier $C\subseteq\N^m$, choose a recursive
+-tuple coding whose restriction is an injection $k:C\to\N$ with
+-recursive inverse on its image. Let $e_k$ be the partial identity
+-on $k(C)$, regarded as a restriction idempotent on $\omega$ in
+-$\mathrm{Rec}$. The coding and its inverse give an isomorphism
+-\[
+- C\cong\mathsf Q_{\mathrm{num}}(\omega,e_k)
+- \qquad\text{in }\mathcal K.
+-\]
+-Thus $\mathsf Q_{\mathrm{num}}$ is essentially surjective and is a
+-restriction equivalence.
++Use the restriction equivalence
++\[
++ \mathsf Q_{\mathrm{num}}:\Split(\mathrm{Rec})
++       \longrightarrow\mathcal K_{\mathrm{rec}}
++       =\operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
++\]
++constructed in Proposition~\ref{prop:numerical-structure}.
++Under the canonical isomorphism
++$\Tot(\mathcal K_{\mathrm{rec}})\cong\mathcal C_{\mathrm{rec}}$,
++its restriction to total categories is the equivalence
++$F:\mathcal B_{\mathrm{rec}}\to\mathcal C_{\mathrm{rec}}$ there.
+ 
+ \emph{Decidable equality} on $V$ means a morphism
+ $\epsilon:V\times V\to1+1$ in $\mathcal E$ whose inverse image of
+--- v26/sections/09-three-point-space.tex
++++ v27/sections/09-three-point-space.tex
+@@ -38,11 +38,14 @@
+ $C(\{a,c\})\leftarrow C(\{c\})\to C(\{b,c\})$
+ (Proposition~\ref{prop:fork-cosheaves}).
+ 
+-Let $\mathcal C_{\mathrm{rec}}$ have computably enumerable subsets
+-of finite powers of $\N$ as objects. A morphism $f:A\to B$ is a
+-function computed by a partial recursive program defined at every
+-element of $A$, with values there in $B$. Equality of morphisms is
+-equality of their functions on $A$.
++Use the category $\mathcal C_{\mathrm{rec}}$ of
++Section~\ref{subsec:numerical-realization}. Its objects are pairs
++$C=(m,C_0)$ with carrier $|C|=C_0$, and its morphisms are total
++computable functions on the specified carriers. For a c.e.\ subset
++$C_0\subseteq\N^m$, writing $C_0$ for the object $(m,C_0)$
++abbreviates this pair. Membership, subset and image expressions,
++and elementwise computations involving numerical objects refer
++to their carriers.
+ 
+ Put $\mathcal E=\mathcal C_{\mathrm{rec}}^J$.
+ An object is a covariant functor $Y:J\to\mathcal C_{\mathrm{rec}}$,
+@@ -51,8 +54,12 @@
+ A morphism $f:Y\to Z$ is a natural transformation: its components
+ are morphisms $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
+ $r_i^Zf_0=f_i r_i^Y$.
+-A \emph{c.e.\ subfunctor} $D\subseteq Y$ consists of c.e.\ subsets
+-$D_j\subseteq Y_j$ such that $r_i^Y(D_0)\subseteq D_i$.
++A \emph{c.e.\ subfunctor} $D\subseteq Y$ has component objects
++$D_j=(m_j,D_{j,0})$, where $Y_j=(m_j,Y_{j,0})$ and
++$D_{j,0}\subseteq|Y_j|$ is c.e.\ for each $j\in\{0,1,2\}$.
++The conditions $|r_i^Y|(|D_0|)\subseteq|D_i|$, for $i=1,2$,
++define its morphisms $r_i^D:D_0\to D_i$ by restriction.
++The component inclusions give a natural transformation $D\hookrightarrow Y$.
+ The underlying sets and functions define a functor
+ $\mathcal E\to\mathbf{Set}^J$. Composing with the quasi-inverse of
+ the cosheaf equivalence above assigns a set-valued cosheaf to each
+@@ -86,9 +93,9 @@
+ \end{equation}
+ We regard $V$ also as an object of $\mathcal A$, whose objects
+ are those of $\mathcal E$.
+-For each object $A$ of $\mathcal C_{\mathrm{rec}}$, choose an integer
+-$m(A)\ge0$ such that $A\subseteq\N^{m(A)}$, with
+-$m(V_0)=4$ and $m(V_1)=m(V_2)=2$.
++For an object $A=(m,A_0)$ of $\mathcal C_{\mathrm{rec}}$, put
++$m(A)=m$. Thus $|A|\subseteq\N^{m(A)}$,
++$m(V_0)=4$, and $m(V_1)=m(V_2)=2$.
+ Fix recursive numerical encodings of nonempty finite sequences of tuples,
+ \[
+  \operatorname{code}_m:
+@@ -178,8 +185,8 @@
+ recursive functions with c.e.\ domains contained in their sources.
+ The functor
+ $\mathsf Q_{\mathrm{num}}:\operatorname{Split}(\mathrm{Rec})\to\mathcal K$
+-constructed in Appendix~\ref{app:fork-structure} is a restriction
+-equivalence.
++constructed in Proposition~\ref{prop:numerical-structure} is a
++restriction equivalence.
+ For $j\in\{0,1,2\}$, component evaluation defines
+ \begin{equation}\label{eq:endpoint-functor}
+  E_j:\mathcal A\longrightarrow\mathcal K,\qquad

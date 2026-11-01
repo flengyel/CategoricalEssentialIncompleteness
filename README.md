@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 26](manuscript/logical_consequence_and_essential_incompleteness_v26.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 27](manuscript/logical_consequence_and_essential_incompleteness_v27.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v26_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v27_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -30,9 +30,13 @@ and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
 record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
 
-The [version 26 review record](Audit/2026-11-01-numerical-v26/README.md)
-contains the hostile-referee and Mathematical Writing reviews, the independent
-type audit, and the corrections to the numerical realization and its application.
+The [version 27 review record](Audit/2026-11-01-numerical-consolidation-v27/README.md)
+records one consolidation of the numerical foundations. Section 7.4 now contains
+the shared category, regularity proof, and restriction equivalence in both
+directions; Appendix B cites it while retaining its componentwise arguments.
+All applications remain. The preceding
+[version 26 review record](Audit/2026-11-01-numerical-v26/README.md)
+records the numerical first-order realization and its proof-code comparison.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).
@@ -500,6 +504,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 

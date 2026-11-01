@@ -35,7 +35,7 @@ iterated numerical pairing gives such codings for $m\geq2$.
 For $C=(m,C_0)$, put $\widehat C=\kappa_m(|C|)$.
 
 
-\begin{proposition}\label{prop:arithmetic-theory-realization}
+\begin{proposition}\label{prop:numerical-structure}
 There is an equivalence
 \[
  \operatorname{Tot}(\operatorname{Split}(\mathrm{Rec}))
@@ -50,14 +50,6 @@ $\operatorname{Split}(\mathrm{Rec})$, and
  \operatorname{Par}(\mathcal C_{\mathrm{rec}},\operatorname{Mono})
        \simeq\operatorname{Split}(\mathrm{Rec}).
 \]
-Fix $d\ge0$, let $V=(1,\N)$, and let
-$\Sigma_k=(1,\Sigma_{k,0})$ and $\Pi_k=(1,\Pi_{k,0})$
-have recursive carriers for $0\le k\le d$. Then the
-syntax and list algebras of Definition~\ref{def:categorical-syntax}
-exist in $\mathcal C_{\mathrm{rec}}$ and are stable under parameters.
-For every axiom subobject of the sentence object, the inference
-endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
-algebra of finite derivations.
 \end{proposition}
 \begin{proof}
 Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
@@ -116,7 +108,7 @@ concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to 
 equalizer is the object of the same dimension as $C$ with carrier
 $\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
 enumerate $|C|$, run the two computations in parallel, and compare
-their outputs. The product and equalizer universal arrows are the
+their outputs. The product and equalizer universal morphisms are the
 corresponding computable pairings and restrictions.
 
 The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
@@ -147,14 +139,16 @@ is
        \xrightarrow{m_f}D,
 \]
 where $e_f$ is surjective and $m_f$ is the inclusion.
-For any surjective morphism $e:C\to D$ and morphism $h:C\to Z$
-constant on its kernel-pair fibers, compute a morphism $d:D\to Z$
-as follows. On $y\in|D|$, enumerate $|C|$ and dovetail the
-computations of $e$ until a value $e(x)=y$ appears, then return
-$h(x)$. Surjectivity ensures termination on $|D|$, and constancy
-on fibers ensures independence of the selected $x$. Thus $de=h$,
-and surjectivity gives uniqueness of $d$. Hence $e$ is the
-coequalizer of its kernel pair. Conversely, a regular epimorphism
+For any surjective morphism $q:C\to D$, define a morphism
+$s_q:D\to C$ by preimage search. On input $y\in|D|$, enumerate
+$|C|$ and dovetail the computations of $q$ until a value
+$q(x)=y$ appears, then return $x$. Surjectivity ensures termination
+on $|D|$, and $qs_q=1_D$.
+If $h:C\to Z$ is constant on the fibers of $q$, put
+$d=hs_q:D\to Z$. For $x\in|C|$, the elements $s_q(q(x))$ and
+$x$ lie in the same fiber of $q$, so $dq=h$. Surjectivity gives
+uniqueness of $d$. Hence $q$ is the coequalizer of its kernel pair.
+Conversely, a regular epimorphism
 cannot factor through a proper image monomorphism, so regular
 epimorphisms are exactly the surjections. A pullback of a surjection
 is surjective on its c.e. pullback carrier. This proves regularity.
@@ -195,20 +189,106 @@ the two partial functions. Their values then agree, proving
 preservation of composition. Identity spans give identities, and
 the restriction span $(m,m)$ gives the partial identity on the coded image of $m$.
 
-For fullness, let $a:Q(C)\rightharpoonup Q(D)$ be a morphism
-of $\mathscr S_{\mathrm{rec}}$. Decode its c.e. domain to a
-subobject $U\hookrightarrow C$ with a c.e. carrier. Its decoded
-values define a total morphism $g:U\to D$ in $\mathcal C$, and the span
-$C\leftarrow U\xrightarrow{g}D$ maps to $a$.
-For faithfulness, equal partial functions have equal domains
-$|m|(|B|)=|m'|(|B'|)$ and equal values there. Searching for inverse images
-under the injective $m,m'$ gives inverse computable maps
-$B\cong B'$ commuting with both span legs. Hence the spans
-represent the same morphism. Essential surjectivity follows from
-the essential surjectivity of $Q$ at the level of total categories,
-with the isomorphisms $v_{(X,e)}$ displayed above.
-Thus $\widetilde Q$ is a restriction equivalence.
+Define a quasi-inverse
+\[
+ \mathsf Q_{\mathrm{num}}:\mathscr S_{\mathrm{rec}}
+       \longrightarrow\mathcal K_{\mathrm{rec}},
+ \qquad
+ \mathcal K_{\mathrm{rec}}
+       =\operatorname{Par}(\mathcal C,\operatorname{Mono}).
+\]
+On objects, put $\mathsf Q_{\mathrm{num}}(X,e)=F(X,e)=(1,D_e)$.
+For a partial morphism $f:(X,e)\rightharpoonup(Y,d)$, put
+\[
+ \widehat f=\gamma_Y f\gamma_X^{-1}:\N\rightharpoonup\N,
+ \qquad U_f=\operatorname{dom}(\widehat f)\subseteq D_e.
+\]
+The equation $f=dfe$ gives $\widehat f(U_f)\subseteq D_d$.
+Let $\iota_f:(1,U_f)\hookrightarrow(1,D_e)$ be the inclusion,
+and let $g_f:(1,U_f)\to(1,D_d)$ be the morphism with underlying
+function $\widehat f|_{U_f}$. Define
+\[
+ \mathsf Q_{\mathrm{num}}(f)=
+ [\,(1,D_e)\xleftarrow{\iota_f}(1,U_f)
+                      \xrightarrow{g_f}(1,D_d)\,].
+\]
+The carrier $U_f$ is c.e., and $g_f$ is computable and total on it,
+so both legs are morphisms of $\mathcal C$.
+The identity on $(X,e)$ has $U_e=D_e$ and $g_e=1_{F(X,e)}$,
+so its image is the identity span.
+For $g:(Y,d)\rightharpoonup(Z,c)$,
+\[
+ U_{gf}=\{z\in U_f:\widehat f(z)\in U_g\},\qquad
+ \widehat{gf}(z)=\widehat g(\widehat f(z))\quad(z\in U_{gf}).
+\]
+The pullback composing the two spans is the object
+\[
+ P_{f,g}=(2,\{(z,w)\in U_f\times U_g:\widehat f(z)=w\}).
+\]
+Projection to the first coordinate gives an isomorphism
+$P_{f,g}\to(1,U_{gf})$ in $\mathcal C$. Its inverse
+$(1,U_{gf})\to P_{f,g}$ sends $z$ to $(z,\widehat f(z))$.
+Both functions are computable and total on their source carriers.
+This isomorphism commutes with both span legs, proving
+preservation of composition.
+The restriction of $f$ is the partial identity on its domain,
+so $\mathsf Q_{\mathrm{num}}(\bar f)$ is the span
+$(\iota_f,\iota_f)$. Thus $\mathsf Q_{\mathrm{num}}$ preserves
+restrictions. On total morphisms it restricts to $F$, followed by
+the canonical inclusion of $\mathcal C$ into $\mathcal K_{\mathrm{rec}}$.
 
+Regard each $u_C:FQ(C)\to C$ as a total isomorphism in
+$\mathcal K_{\mathrm{rec}}$. For a partial morphism $k:C\rightharpoonup D$
+represented by $C\xleftarrow{m}B\xrightarrow{h}D$, its underlying
+partial function has domain $|m|(|B|)$ and value
+$|h|(|m|^{-1}(x))$ at $x$ in that domain. The inverse of $|m|$
+on its image is computable by preimage search. Write $k(x)$ for
+the value of this represented partial function. If a second span
+$C\xleftarrow{m'}B'\xrightarrow{h'}D$ has the same domain and values,
+then these spans are isomorphic. The functions $|m'|^{-1}|m|$ and $|m|^{-1}|m'|$
+define inverse morphisms $w:B\to B'$ and $w':B'\to B$ in
+$\mathcal C$. They satisfy $m'w=m$, $h'w=h$, $mw'=m'$, and
+$hw'=h'$ by equality of the represented domains and values.
+Both sides of
+\[
+ k u_C=u_D\mathsf Q_{\mathrm{num}}\widetilde Q(k)
+       :FQ(C)\rightharpoonup D
+\]
+are defined at $z\in\widehat C$ exactly when
+$\kappa_r^{-1}(z)$ belongs to the domain of $k$, where $C=(r,C_0)$.
+There they have value $k(\kappa_r^{-1}(z))$. The span criterion
+just proved gives equality of these morphisms.
+For $a:(X,e)\rightharpoonup(Y,d)$, both sides of
+\[
+ a v_{(X,e)}
+   =v_{(Y,d)}\widetilde Q\mathsf Q_{\mathrm{num}}(a)
+   :QF(X,e)\rightharpoonup(Y,d)
+\]
+are defined at $z\in D_e$ exactly when $z\in U_a$, and their
+value there is $a(\gamma_X^{-1}(z))$.
+The components $u_C$ and $v_{(X,e)}$ therefore give natural
+isomorphisms
+\[
+ u:\mathsf Q_{\mathrm{num}}\widetilde Q
+             \Rightarrow1_{\mathcal K_{\mathrm{rec}}},\qquad
+ v:\widetilde Q\mathsf Q_{\mathrm{num}}
+             \Rightarrow1_{\mathscr S_{\mathrm{rec}}}.
+\]
+Thus $\widetilde Q$ and $\mathsf Q_{\mathrm{num}}$ are
+quasi-inverse restriction functors.
+\end{proof}
+
+\begin{proposition}\label{prop:arithmetic-theory-realization}
+Fix $d\ge0$, let $V=(1,\N)$, and let
+$\Sigma_k=(1,\Sigma_{k,0})$ and $\Pi_k=(1,\Pi_{k,0})$
+have recursive carriers for $0\le k\le d$. Then the
+syntax and list algebras of Definition~\ref{def:categorical-syntax}
+exist in $\mathcal C_{\mathrm{rec}}$ and are stable under parameters.
+For every axiom subobject of the sentence object, the inference
+endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
+algebra of finite derivations.
+\end{proposition}
+\begin{proof}
 Choose the variable object $V=(1,\N)$ and, for a fixed $d\ge0$,
 objects $\Sigma_k,\Pi_k\in\mathcal C_{\mathrm{rec}}$ with
 recursive carriers $|\Sigma_k|,|\Pi_k|\subseteq\N$ for $0\le k\le d$.

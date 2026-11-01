@@ -38,11 +38,14 @@ The cosheaf value $C(X)$ is the pushout of
 $C(\{a,c\})\leftarrow C(\{c\})\to C(\{b,c\})$
 (Proposition~\ref{prop:fork-cosheaves}).
 
-Let $\mathcal C_{\mathrm{rec}}$ have computably enumerable subsets
-of finite powers of $\N$ as objects. A morphism $f:A\to B$ is a
-function computed by a partial recursive program defined at every
-element of $A$, with values there in $B$. Equality of morphisms is
-equality of their functions on $A$.
+Use the category $\mathcal C_{\mathrm{rec}}$ of
+Section~\ref{subsec:numerical-realization}. Its objects are pairs
+$C=(m,C_0)$ with carrier $|C|=C_0$, and its morphisms are total
+computable functions on the specified carriers. For a c.e.\ subset
+$C_0\subseteq\N^m$, writing $C_0$ for the object $(m,C_0)$
+abbreviates this pair. Membership, subset and image expressions,
+and elementwise computations involving numerical objects refer
+to their carriers.
 
 Put $\mathcal E=\mathcal C_{\mathrm{rec}}^J$.
 An object is a covariant functor $Y:J\to\mathcal C_{\mathrm{rec}}$,
@@ -51,8 +54,12 @@ morphisms $r_i^Y=Y(0\to i):Y_0\to Y_i$, for $i=1,2$.
 A morphism $f:Y\to Z$ is a natural transformation: its components
 are morphisms $f_j:Y_j\to Z_j$ of $\mathcal C_{\mathrm{rec}}$ satisfying
 $r_i^Zf_0=f_i r_i^Y$.
-A \emph{c.e.\ subfunctor} $D\subseteq Y$ consists of c.e.\ subsets
-$D_j\subseteq Y_j$ such that $r_i^Y(D_0)\subseteq D_i$.
+A \emph{c.e.\ subfunctor} $D\subseteq Y$ has component objects
+$D_j=(m_j,D_{j,0})$, where $Y_j=(m_j,Y_{j,0})$ and
+$D_{j,0}\subseteq|Y_j|$ is c.e.\ for each $j\in\{0,1,2\}$.
+The conditions $|r_i^Y|(|D_0|)\subseteq|D_i|$, for $i=1,2$,
+define its morphisms $r_i^D:D_0\to D_i$ by restriction.
+The component inclusions give a natural transformation $D\hookrightarrow Y$.
 The underlying sets and functions define a functor
 $\mathcal E\to\mathbf{Set}^J$. Composing with the quasi-inverse of
 the cosheaf equivalence above assigns a set-valued cosheaf to each
@@ -86,9 +93,9 @@ $r_i^V=V(0\to i)$:
 \end{equation}
 We regard $V$ also as an object of $\mathcal A$, whose objects
 are those of $\mathcal E$.
-For each object $A$ of $\mathcal C_{\mathrm{rec}}$, choose an integer
-$m(A)\ge0$ such that $A\subseteq\N^{m(A)}$, with
-$m(V_0)=4$ and $m(V_1)=m(V_2)=2$.
+For an object $A=(m,A_0)$ of $\mathcal C_{\mathrm{rec}}$, put
+$m(A)=m$. Thus $|A|\subseteq\N^{m(A)}$,
+$m(V_0)=4$, and $m(V_1)=m(V_2)=2$.
 Fix recursive numerical encodings of nonempty finite sequences of tuples,
 \[
  \operatorname{code}_m:
@@ -178,8 +185,8 @@ Its objects are c.e.\ numerical carriers, and its morphisms are partial
 recursive functions with c.e.\ domains contained in their sources.
 The functor
 $\mathsf Q_{\mathrm{num}}:\operatorname{Split}(\mathrm{Rec})\to\mathcal K$
-constructed in Appendix~\ref{app:fork-structure} is a restriction
-equivalence.
+constructed in Proposition~\ref{prop:numerical-structure} is a
+restriction equivalence.
 For $j\in\{0,1,2\}$, component evaluation defines
 \begin{equation}\label{eq:endpoint-functor}
  E_j:\mathcal A\longrightarrow\mathcal K,\qquad
