@@ -1,0 +1,11 @@
+{
+  "tex_changes": [
+    "abstract.tex",
+    "preamble.tex"
+  ],
+  "log_issues": [],
+  "abstract_words": 278,
+  "abstract_sha256": "c8d4ab510b23fe1cc83728f6517edaf72bd1dbd913cac6daa4e632b958a84bda",
+  "main_pages": 78,
+  "appendix_pages": 10
+}
