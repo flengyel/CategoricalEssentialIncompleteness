@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 36, 1 November 2026.
+Version 37, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v36.pdf) ·
-[Source archive](../logical_consequence_v36_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v37.pdf) ·
+[Source archive](../logical_consequence_v37_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -39,8 +39,8 @@ The dated source LOCOct10f is preserved with that note.
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v36.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v36.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v37.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v37.tex).
 
 ## Build
 

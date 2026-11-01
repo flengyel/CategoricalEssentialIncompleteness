@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 36](manuscript/logical_consequence_and_essential_incompleteness_v36.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 37](manuscript/logical_consequence_and_essential_incompleteness_v37.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v36_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v37_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
