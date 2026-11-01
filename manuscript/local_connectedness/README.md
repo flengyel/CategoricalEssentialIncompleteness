@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 38, 1 November 2026.
+Version 39, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v38.pdf) ·
-[Source archive](../logical_consequence_v38_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v39.pdf) ·
+[Source archive](../logical_consequence_v39_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -40,9 +40,7 @@ The dated source LOCOct10f is preserved with that note.
 
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
-sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v38.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v38.tex).
+sections. All appendices are included in the manuscript PDF and source archive.
 
 ## Build
 
@@ -84,9 +82,9 @@ sources, including the complete appendix and bibliography.
 
 ## Publication versions
 
-Every published revision has a new versioned PDF and source archive. The
-standalone appendix has matching versioned exports. Update the displayed
-PDF versions and all current download links together.
+Every published revision has a new versioned manuscript PDF and source archive,
+including all appendices. Update the displayed version and current download
+links together.
 
 The [theorem-and-proof plan](../../Plans/comparison_soundness_paper_plan_v2.pdf)
 gives the organization of the remaining revisions. The Lean formalization

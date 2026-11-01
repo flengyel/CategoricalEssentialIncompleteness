@@ -1,0 +1,132 @@
+{
+  "version": 39,
+  "changed_tex_files": [
+    "abstract.tex",
+    "preamble.tex"
+  ],
+  "all_other_tex_unchanged": true,
+  "source_count": 22,
+  "sources": [
+    {
+      "file": "abstract.tex",
+      "sha256": "e24f8b972eb44e8aac481a6f54c82e78ba8e7b7d724d3dfb0c94aca7d082f85d",
+      "changed": true
+    },
+    {
+      "file": "appendices/a-syntax-and-theories.tex",
+      "sha256": "ac9822db47a486b3e959909f7213184a0962d8647667fec84cbaab60187fbcd8",
+      "changed": false
+    },
+    {
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "sha256": "bdabb3b5acf9a6a6edc54eab904878bedfca29f291b254da54fd8a83311cd94d",
+      "changed": false
+    },
+    {
+      "file": "appendices/c-section-lifting.tex",
+      "sha256": "b5d61af8f7b2f395f7210af78690e8b33f8a6e984389042bf62fc1cb234a5b36",
+      "changed": false
+    },
+    {
+      "file": "appendices/d-faithful-family.tex",
+      "sha256": "32192287cce4f0610dee6ebdf0d77b72dffb57a3e7d2ffb7ea008426ffcb4a85",
+      "changed": false
+    },
+    {
+      "file": "bibliography.tex",
+      "sha256": "51d9d805b454ce5b1fb28c5bc77aaaf7d8936b3ce0e81428b54ed0aab4deed3a",
+      "changed": false
+    },
+    {
+      "file": "main.tex",
+      "sha256": "06a09303973295b0478aeee4db9b2e5104f30cbc3f150eaaf3d1b3174f16117f",
+      "changed": false
+    },
+    {
+      "file": "preamble.tex",
+      "sha256": "2cd4f85072b0aa03ffec731e97c36bc3cc4cb7aea6713c04d973d0e39d3906c8",
+      "changed": true
+    },
+    {
+      "file": "sections/01-introduction.tex",
+      "sha256": "962bef8e77710b3a4e7bfc3e96d6db2f2314290945da74d85ca62490b78f0e30",
+      "changed": false
+    },
+    {
+      "file": "sections/02-categorical-preliminaries.tex",
+      "sha256": "5a0464e0f4ff83f0b7757261e18eaee4e6a70601d9990418c5d96c1209bd8182",
+      "changed": false
+    },
+    {
+      "file": "sections/03-sections-and-inseparability.tex",
+      "sha256": "4b0aaa6b953e13508f08261b28e13bb2e29212a88eed9e1e8a51e6019e437f94",
+      "changed": false
+    },
+    {
+      "file": "sections/03a-internal-theories.tex",
+      "sha256": "f45d5c0c29b07c0b8148cebee320bd252812519e9a278d651a76753b42af1d72",
+      "changed": false
+    },
+    {
+      "file": "sections/04-miller-sequences.tex",
+      "sha256": "03954dab64fec8f7d205f0dc8acc1b318dda826b811c5916537239c6dda4327b",
+      "changed": false
+    },
+    {
+      "file": "sections/05-syntactic-recursion-category.tex",
+      "sha256": "34df9a30e0e032bb0a24b76458948c8533300cb42ce4d69a6411dfb25148b913",
+      "changed": false
+    },
+    {
+      "file": "sections/05a-internal-syntax.tex",
+      "sha256": "24f8d32fa83570f29975ef5bdb53e9cfe5360e71ffa3cdc051c0a89f19827e97",
+      "changed": false
+    },
+    {
+      "file": "sections/06-interpretation-in-models.tex",
+      "sha256": "438f941fa00785f3c011a3fa617c52fa01a3da9d820d185b84a88afa6b55e532",
+      "changed": false
+    },
+    {
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "sha256": "d477358dea9833c5f26aeb77e88376afc5240fb8594314188213ccde47e3cbd6",
+      "changed": false
+    },
+    {
+      "file": "sections/08a-uniform-theories.tex",
+      "sha256": "1b9540d2537f6de7f658e8881d3fc9fc9c47971c1323df775762bbb20efcee45",
+      "changed": false
+    },
+    {
+      "file": "sections/08b-uniform-independent-sentences.tex",
+      "sha256": "7cfdd66300041ad6a9fe7e59e78670d27007ed41e97fbc03ead57bf4f3840fb5",
+      "changed": false
+    },
+    {
+      "file": "sections/08c-numerical-realization.tex",
+      "sha256": "5f89e2c730caf9c3c2e1734be7f71f67199d932d8f6d06b4ec98d527c3ccfc1f",
+      "changed": false
+    },
+    {
+      "file": "sections/08d-numerical-incompleteness.tex",
+      "sha256": "c9ee11a5b4729287a3557d6a8a362fe06a83a86136160c895250a103096903f0",
+      "changed": false
+    },
+    {
+      "file": "sections/09-three-point-space.tex",
+      "sha256": "40ae3e059ad0c8575dd8a7ca8574a315b5feeb1d86aa8b94d15fc88f9000ecf4",
+      "changed": false
+    }
+  ],
+  "unresolved_reference_keys": [],
+  "main_pages": 78,
+  "main_build": "latexmk completed without warnings or unresolved references",
+  "visual_review": [
+    "main pages1-3 after final changes"
+  ],
+  "reviewed_abstract_sha256": "e24f8b972eb44e8aac481a6f54c82e78ba8e7b7d724d3dfb0c94aca7d082f85d",
+  "scoped_review_hashes_match_final_source": true,
+  "source_archive_members": 23,
+  "appendices_included_in_pdf_and_source_archive": true,
+  "standalone_appendix_exports_produced": false
+}

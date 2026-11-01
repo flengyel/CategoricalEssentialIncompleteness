@@ -2,9 +2,9 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 38 PDF](logical_consequence_and_essential_incompleteness_v38.pdf)
+[Version 39 PDF](logical_consequence_and_essential_incompleteness_v39.pdf)
 ([LaTeX source](local_connectedness/main.tex),
-[source archive](logical_consequence_v38_source.zip), 1 November 2026).
+[source archive](logical_consequence_v39_source.zip), 1 November 2026).
 
 Sections 3 and 4 prove the comparison theorem and its application to interpreted
 sentence theories. Section 5 realizes the categorical syntax of Appendix A in
@@ -34,9 +34,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The [source directory guide](local_connectedness/README.md) lists the files.
-The syntax appendix is also available as a
-[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v38.pdf)
-with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v38.tex).
+Appendix A is included in the manuscript PDF and the modular source archive.
 The [theorem-and-proof plan](../Plans/comparison_soundness_paper_plan_v2.pdf)
 gives the proposed organization of the remaining revisions. The Lean
 formalization remains indexed to version 5.
