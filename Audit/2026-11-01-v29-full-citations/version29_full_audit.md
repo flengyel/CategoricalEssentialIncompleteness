@@ -1,6 +1,6 @@
 # Complete audit of version 29
 
-All 31 references identify real works. No invented reference was found. Version 29 contains one incomplete attribution of a theorem's hypotheses and a publication-year ambiguity. These are corrected in version 30. One original-text verification remains open, so the citation audit is not reported as complete without qualification.
+All 31 references identify real works. No invented reference was found. Version 29 contains one incomplete attribution of a theorem's hypotheses and a publication-year ambiguity. These are corrected in version 30. The subsequently supplied original Cockett article closes the remaining access gap. All 65 uses now have recorded primary-text support, with the source-version and adaptation qualifications below.
 
 ## Scope and coverage
 
@@ -36,7 +36,7 @@ No theorem hypothesis was removed, no application was dropped, and no mathematic
 
 ## Citation verification results
 
-All 31 bibliographic identities and the asserted publication details were checked. After the corrections, 64 of the 65 uses have supporting primary text. This count includes explicit qualifications for author versions, equivalent formulations, and adaptations; it does not falsely describe those as quotations from a published version.
+All 31 bibliographic identities and the asserted publication details were checked. After the corrections, all 65 uses have supporting primary text. The Cockett use was closed by direct inspection of the subsequently supplied published original. This count includes explicit qualifications for author versions, equivalent formulations, and adaptations; it does not falsely describe those as quotations from a published version.
 
 The detailed checks include the following distinctions.
 
@@ -49,11 +49,13 @@ The detailed checks include the following distinctions.
 
 The per-use ledger retains both the version 29 status and the status after correction. The bibliography ledger records the checked metadata separately. The complete review archive contains all four citation reports, both hostile-referee reports, the mathematical-writing report and its paragraph inventory, the correction diff, and the rechecks.
 
-## Open verification: Cockett 1990
+## Completed verification: Cockett 1990
 
-J. R. B. Cockett, *List-arithmetic distributive categories: Locoi*, Journal of Pure and Applied Algebra 66(1) (1990), 1–29, [DOI 10.1016/0022-4049(90)90121-W](https://doi.org/10.1016/0022-4049(90)90121-W), is a real publication with correct bibliography metadata.
+The user supplied the original published article, *List-arithmetic distributive categories: Locoi*, Journal of Pure and Applied Algebra 66(1) (1990), 1–29, DOI 10.1016/0022-4049(90)90121-W. Direct inspection confirms the list-recursion attribution in Appendix A: Proposition 2.1, pp. 5–6, and Lemma 2.2 and Definition 2.3, p. 7. Proposition 6.7, p. 28, is the stronger result for arbitrary slice objects; it is not conflated with parameter stability. No manuscript correction is required for this citation.
 
-Its original full text could not be obtained through the publisher, author-linked records, public repositories or Library searches. Appendix A's contextual attribution of parameterized list recursion is corroborated by Maietti's primary text, Definition 2.4 and the following paragraph, but it has not been independently checked in Cockett's article. This one use is explicitly marked as not directly verified. The article is retained as a precedent; it was not deleted to make the audit appear closed. A copy of the original article is needed to finish this check.
+The [source verification and argument comparison](Cockett1990/cockett_verification_and_argument_overlap.md) records the precise comparison. It recommends one local consolidation of the repeated numerical substitution checks in §7.4, while retaining the generic construction and substantive realization proofs. That proposed proof edit has not been applied. A separate observation about the printed proof of Lemma 5.6 on p. 18 is distinguished from citation support and from the truth of the source theorem.
+
+Original PDF SHA-256: `498c616cde927654db68da87b0c838aced4e852a2199f3cb34e78fcf5ba146cc`. The original PDFs and internal page images are excluded from the archive.
 
 ## Proof, prose and production conclusions
 
@@ -61,4 +63,4 @@ Neither hostile-referee reviewer found a confirmed mathematical blocker after re
 
 The corrected passages passed the source, citation and writing rechecks. The paper remains 77 pages and the standalone appendix 10 pages. Their final LaTeX logs contain no undefined references, undefined citations, overfull boxes or warnings. The changed rendered pages were inspected. No Lean files were changed or checked.
 
-Version 30 contains the corrections; version 29 remains the frozen audit basis. The full-text access gap above prevents an unqualified statement that every citation has passed direct original-source verification.
+Version 30 contains the corrections; version 29 remains the frozen audit basis. The later Cockett source check closes the sole original-text access gap. The frozen version 29 status is retained alongside the completed status in the ledgers. Author-version, equivalent-formulation and adaptation qualifications remain explicit.

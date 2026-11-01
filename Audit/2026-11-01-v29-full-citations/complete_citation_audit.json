@@ -367,12 +367,14 @@
         "https://api.crossref.org/works/10.1016%2F0022-4049%2890%2990121-W",
         "https://www.researchgate.net/publication/242982818_List-arithmetic_distributive_categories_Locoi"
       ],
-      "source_location": "Crossref publisher-deposited metadata; author-linked article record; Maietti bibliography [Coc90]",
-      "required_correction": "None. Original fulltext support remains unverified.",
+      "source_location": "Original published title page p.1; earlier publisher-deposited Crossref metadata for issue and DOI.",
+      "required_correction": "None. Original fulltext now inspected; earlier access limitation closed.",
       "review_group": "categories",
       "version29_status": "verified",
       "post_correction_status": "verified",
-      "version29_bibliography": "J.~R.~B. Cockett, \\emph{List-arithmetic distributive categories: Locoi},\nJournal of Pure and Applied Algebra \\textbf{66} (1990), no.~1, pp.~1--29.\n\\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}."
+      "version29_bibliography": "J.~R.~B. Cockett, \\emph{List-arithmetic distributive categories: Locoi},\nJournal of Pure and Applied Algebra \\textbf{66} (1990), no.~1, pp.~1--29.\n\\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.",
+      "original_source": "User-attached original published PDF: cockettListarithmeticDistributiveCategories1990.pdf; DOI 10.1016/0022-4049(90)90121-W",
+      "original_source_sha256": "498c616cde927654db68da87b0c838aced4e852a2199f3cb34e78fcf5ba146cc"
     },
     {
       "key": "MaiettiLists",
@@ -1468,15 +1470,18 @@
       "key": "CockettLists",
       "file": "appendices/a-syntax-and-theories.tex",
       "line": 156,
-      "status": "existence verified/fulltext unavailable",
-      "evidence_url": "https://www.researchgate.net/publication/242982818_List-arithmetic_distributive_categories_Locoi",
-      "source_location": "Original article fulltext unavailable. Corroborating primary source: Maietti, Definition 2.4 and immediately following paragraph, author PDF p4 (published p42).",
-      "support_explanation": "Existence and metadata verified. Maietti explicitly corroborates this attribution for lists, but Cockett’s original article was inaccessible. General polynomial initiality is not attributed to this source.",
-      "required_correction": "No false claim established. Obtain and inspect Cockett's original article to close this use. If it remains unavailable, retain the explicit verification limitation; Maietti alone directly supports the stated list formulation.",
+      "status": "verified",
+      "evidence_url": "https://doi.org/10.1016/0022-4049(90)90121-W",
+      "source_location": "Original published article: Proposition 2.1, pp.5–6; Lemma 2.2 and Definition 2.3, p.7. Proposition 6.7, p.28, is the distinct stronger arbitrary-slice result.",
+      "support_explanation": "Directly verified from original primary text. With B=1, Cockett Lemma 2.2 and Definition 2.3 identify the pullback of list(A)=rec(A,1) with the initial algebra for 1_P+I_P(A)×_P− in D/P. Product symmetry reconciles X×P in the source with P×X in the manuscript. The current citation is expressly restricted to lists; it does not attribute general polynomial syntax initiality or the stronger arbitrary-slice result to this definition.",
+      "required_correction": null,
       "review_group": "categories",
       "version29_status": "existence verified/fulltext unavailable",
-      "post_correction_status": "existence verified/fulltext unavailable",
-      "correction": "No false claim established. Obtain and inspect Cockett's original article to close this use. If it remains unavailable, retain the explicit verification limitation; Maietti alone directly supports the stated list formulation."
+      "post_correction_status": "verified",
+      "correction": null,
+      "original_source": "User-attached original published PDF: cockettListarithmeticDistributiveCategories1990.pdf; DOI 10.1016/0022-4049(90)90121-W",
+      "original_source_sha256": "498c616cde927654db68da87b0c838aced4e852a2199f3cb34e78fcf5ba146cc",
+      "fulltext_status": "verified_primary_claim_bearing_text_read"
     },
     {
       "key": "MaiettiLists",
@@ -1848,5 +1853,13 @@
       "correction": "None."
     }
   ],
-  "open_check": "CockettLists original full text unavailable; existence and bibliography metadata verified; contextual claim corroborated by Maietti. This row is not counted as directly verified."
+  "open_check": null,
+  "original_text_followup": {
+    "date": "2026-11-01",
+    "manuscript_version_inspected": 30,
+    "citation_key": "CockettLists",
+    "result": "Original-text verification closed; 65/65 uses have recorded primary-text support, retaining all source-version and adaptation qualifications.",
+    "manuscript_edits": false,
+    "report": "Cockett1990/cockett_verification_and_argument_overlap.md"
+  }
 }

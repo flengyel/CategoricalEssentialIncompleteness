@@ -33,8 +33,12 @@ been reconciled with the Lean declarations.
 The [complete version 29 audit](Audit/2026-11-01-v29-full-citations/README.md)
 records the full-source hostile-referee and mathematical-writing reviews,
 the 31-reference / 65-use citation check, and the resulting version 30
-corrections. The original text of Cockett's 1990 article remains an explicitly
-recorded access gap; it is not counted as directly verified.
+corrections. The subsequently supplied Cockett original closes the access gap;
+all 65 uses now have recorded primary-text support, with the source-version
+and adaptation qualifications in the ledgers. The
+[Cockett comparison](Audit/2026-11-01-v29-full-citations/Cockett1990/cockett_verification_and_argument_overlap.md)
+records the argument comparison and one proposed local consolidation; no
+manuscript proof edit was made in that follow-up.
 
 The [version 29 review record](Audit/2026-11-01-prose-types-v29/README.md)
 records the independent hostile-referee and mathematical-writing checks of

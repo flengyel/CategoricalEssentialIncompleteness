@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "source_file": "cockettListarithmeticDistributiveCategories1990.pdf",
+  "source_sha256": "498c616cde927654db68da87b0c838aced4e852a2199f3cb34e78fcf5ba146cc",
+  "source_origin": "User-attached published journal PDF",
+  "source_pages": 29,
+  "page_mapping": "PDF page equals printed page",
+  "doi": "10.1016/0022-4049(90)90121-W",
+  "citation_locators": [
+    "Proposition 2.1, pp.5–6",
+    "Lemma 2.2 and Definition 2.3, p.7",
+    "Proposition 6.7, p.28 (stronger distinct result)"
+  ],
+  "manuscript_version": 30,
+  "manuscript_edits": false,
+  "independent_reviews": [
+    "original-source citation and metadata",
+    "overlap with Cockett",
+    "repetition among manuscript realizations"
+  ],
+  "source_proof_caution": "Separate printed-proof observation on Lemma 5.6, p.18; not a disproof and not a citation gap."
+}

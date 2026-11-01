@@ -1,0 +1,108 @@
+{
+  "key": "CockettLists",
+  "manuscript_version": 30,
+  "checked_date": "2026-11-01",
+  "scope": "Only the original CockettLists use at current appendix lines 148–157 and its bibliography entry; no manuscript edits or other citation reruns.",
+  "manuscript_claim": {
+    "file": "output/manuscript/local_connectedness/appendices/a-syntax-and-theories.tex",
+    "definition_lines": [
+      148,
+      154
+    ],
+    "attribution_lines": [
+      155,
+      157
+    ],
+    "exact_attribution": "For list objects, this is the parameterized recursion property studied by Cockett; its formulation by pullback into slices is recalled by Maietti.",
+    "bibliography_file": "output/manuscript/local_connectedness/bibliography.tex",
+    "bibliography_lines": [
+      91,
+      94
+    ]
+  },
+  "previous_status": "existence verified/fulltext unavailable",
+  "new_status": "verified",
+  "fulltext_status": "verified_primary_claim_bearing_text_read",
+  "metadata_status": "verified",
+  "existence_status": "verified",
+  "source": {
+    "path": "upload/cockettListarithmeticDistributiveCategories1990.pdf",
+    "sha256": "498c616cde927654db68da87b0c838aced4e852a2199f3cb34e78fcf5ba146cc",
+    "provenance": "User-uploaded original published journal PDF; direct local access; no Library tools.",
+    "pages": 29,
+    "page_mapping": "PDF page equals printed page; no cover."
+  },
+  "verified_metadata": {
+    "authors": [
+      "J. R. B. Cockett"
+    ],
+    "title": "List-arithmetic distributive categories: Locoi",
+    "year": 1990,
+    "venue": "Journal of Pure and Applied Algebra",
+    "volume": "66",
+    "issue": "1",
+    "pages": "1–29",
+    "doi": "10.1016/0022-4049(90)90121-W",
+    "version": "published journal article"
+  },
+  "metadata_evidence": [
+    {
+      "path": "upload/cockettListarithmeticDistributiveCategories1990.pdf",
+      "locator": "Printed title page p.1",
+      "supports": [
+        "author",
+        "title",
+        "journal",
+        "volume",
+        "year",
+        "page_range"
+      ]
+    },
+    {
+      "path": "tmp/audit_v29/evidence/categories/cockett_lists_crossref.json",
+      "locator": "Publisher-deposited Crossref message fields",
+      "supports": [
+        "issue",
+        "doi",
+        "all cited metadata"
+      ]
+    }
+  ],
+  "claim_evidence": [
+    {
+      "locator": "Section 2 pp.5–6; Proposition 2.1(iv), p.6",
+      "supports": "rec(A,B) is initial for B+A×−; source separates mere initiality from parameterized recursion."
+    },
+    {
+      "locator": "Lemma 2.2 and Definition 2.3, p.7",
+      "supports": "I_P(X)=(X×P→P) preserves recursion exactly when rec(A,B×P)→rec(A,B)×P is invertible. For B=1 this is precisely the manuscript list stability under pullback into D/P."
+    },
+    {
+      "locator": "Paragraph after Definition 2.3; Definition 2.4, p.7",
+      "supports": "list(A)=rec(A,1), rec(A,B)≅list(A)×B with parameters, and definition of list arithmetic."
+    },
+    {
+      "locator": "Composition convention, p.4; universal property diagram, p.6",
+      "supports": "Source f·g equals manuscript gf; h r0=y and h r1=x(1_A×h)."
+    },
+    {
+      "locator": "Paragraph before Proposition 6.7 and Proposition 6.7, p.28; Proposition 6.6, pp.27–28",
+      "supports": "Localness supplies recursion on arbitrary slice objects, a stronger theorem distinct from preservation on pulled-back ambient objects."
+    }
+  ],
+  "support_explanation": "Directly verified from original primary text. With B=1, Cockett Lemma 2.2 and Definition 2.3 identify the pullback of list(A)=rec(A,1) with the initial algebra for 1_P+I_P(A)×_P− in D/P. Product symmetry reconciles X×P in the source with P×X in the manuscript. The current citation is expressly restricted to lists; it does not attribute general polynomial syntax initiality or the stronger arbitrary-slice result to this definition.",
+  "conflation_detected": false,
+  "required_correction": null,
+  "optional_improvement": "Add the pinpoint Definition 2.3 to the Cockett citation, if desired.",
+  "recommended_locator": "Section 2, pp.5–7, especially Lemma 2.2 and Definition 2.3, p.7.",
+  "audit_update": {
+    "use_status": "verified",
+    "fulltext_status": "verified_primary_claim_bearing_text_read",
+    "metadata_caveat": "Remove obsolete original-fulltext-unverified caveat; original source inspected.",
+    "open_check": "The CockettLists original-fulltext access limitation is closed; no other citation status changed."
+  },
+  "proof_scope_limit": "The definition-to-manuscript comparison was verified. This is not certification of the source article’s unrelated proofs; any source-proof concern is outside this citation report.",
+  "report": "tmp/cockett_check/primary_citation_check.md",
+  "provenance": "tmp/cockett_check/provenance.json",
+  "hash_manifest": "tmp/cockett_check/sha256sums.txt"
+}
