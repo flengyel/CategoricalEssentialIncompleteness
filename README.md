@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 30](manuscript/logical_consequence_and_essential_incompleteness_v30.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 31](manuscript/logical_consequence_and_essential_incompleteness_v31.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v30_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v31_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -38,7 +38,10 @@ all 65 uses now have recorded primary-text support, with the source-version
 and adaptation qualifications in the ledgers. The
 [Cockett comparison](Audit/2026-11-01-v29-full-citations/Cockett1990/cockett_verification_and_argument_overlap.md)
 records the argument comparison and one proposed local consolidation; no
-manuscript proof edit was made in that follow-up.
+manuscript proof edit was made in that follow-up. Version 31 adds precise
+Cockett locators and a footnote recording that the uniqueness-proof gap is
+unrelated to the cited results, and replaces the repeated substitution
+verification in Section 7.4 by a reference to Proposition 5.7.
 
 The [version 29 review record](Audit/2026-11-01-prose-types-v29/README.md)
 records the independent hostile-referee and mathematical-writing checks of

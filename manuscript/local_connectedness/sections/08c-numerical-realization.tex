@@ -401,20 +401,11 @@ Their primitive-recursive traversals therefore give morphisms
  b_F:\Fm\times(V\times\Tm)\to1+\Fm
 \]
 in $\mathcal C_{\mathrm{rec}}$.
-The free-variable traversal concatenates the child lists and,
-at a quantifier, deletes the bound variable. These are the
-constructor equations of Appendix~\ref{app:first-order-syntax}.
-For substitution, the traversal at a quantifier with variable $y$
-tests $y=x$, absence of $x$ from the body's free-variable list,
-and absence of $y$ from the replacement term's free-variable list.
-It retains the original quantified formula in the first case;
-in the other cases its success or failure and its reconstructed
-body are exactly the branches of \eqref{eq:quantifier-fold}.
-At the other constructors it has the corresponding term,
-connective, and atomic equations from Appendix~\ref{app:substitution}.
-Induction on the tree verifies all these equations; uniqueness of
-the parameterized folds identifies these numerical morphisms with
-the categorical ones. In particular,
+For these same codes, Proposition~\ref{prop:st-substitution-realization}
+proves the carrier and constructor equations in $\PA$.
+They therefore hold in $\N$. Uniqueness of the parameterized folds
+identifies these numerical morphisms with the categorical ones.
+In particular,
 $\Adm=b_F^{-1}(\Fm\hookrightarrow1+\Fm)$ is the admissibility
 subobject, and $a_F:\Adm\to\Fm$ is the induced substitution
 morphism. The sentence object is
