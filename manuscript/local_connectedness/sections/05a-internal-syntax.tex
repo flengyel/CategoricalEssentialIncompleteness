@@ -267,6 +267,30 @@ presentation the domain is $\exists y\,G_f(x,y)$; relational
 composition identifies composition of these spans by pullback with
 composition in $\Split(S_T)$.
 
+The category $\Split(S_T)$ is a Turing category,
+with Turing object $U=(\omega,1_\omega)$.
+Indeed, the displayed restriction equivalence supplies a restriction
+terminal object, represented by the singleton predicate $x=0$.
+Binary restriction products are
+$(X,e)\times(Y,d)=(X\times Y,e\times d)$.
+Every object $(X,e)$ is a retract of $(X,1_X)$, with both morphisms
+represented by $e$, and $(X,1_X)\cong U$ by the coding isomorphism.
+The Turing morphism extends by the idempotent-splitting argument
+of Cockett--Hofstra~\cite[Section 3.5]{CockettHofstra}.
+Explicitly, let $\tau:\omega\times\omega\rightharpoonup\omega$
+be the Turing morphism of $S_T$, and let
+$f:(X,e)\times U\rightharpoonup U$ be a morphism of $\Split(S_T)$.
+Its representative $f:X\times\omega\rightharpoonup\omega$ in $S_T$
+satisfies $f=f(e\times1_\omega)$. Choose a total morphism
+$r:X\to\omega$ in $S_T$ with $f=\tau(r\times1_\omega)$.
+Then $re:(X,e)\to U$ is total, since $\overline{re}=e$, and
+\[
+ f=\tau(r\times1_\omega)(e\times1_\omega)
+   =\tau((re)\times1_\omega).
+\]
+The recognition criterion~\cite[Theorem 3.4]{CockettHofstra}
+therefore applies.
+
 Ranges extend to $\Split(S_T)$ by the same representatives.
 For a morphism $f:(X,e)\rightharpoonup(Y,d)$, the equation
 $df=f$ implies $\ran_{S_T}(f)\leq d$. This range is therefore

@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 31, 1 November 2026.
+Version 32, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v31.pdf) ·
-[Source archive](../logical_consequence_v31_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v32.pdf) ·
+[Source archive](../logical_consequence_v32_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.
@@ -25,7 +25,9 @@ ledger includes direct verification of the subsequently supplied Cockett origina
 Version 31 adds precise Cockett locators and a footnote distinguishing the
 uniqueness-proof gap from the cited parameterized-recursion results.
 Section 7.4 cites Proposition 5.7 for the previously proved substitution
-equations rather than repeating their verification.
+equations rather than repeating their verification. Version 32 defines Turing categories
+and identifies Split(S_T) as a Turing category,
+using the restriction terminal object already obtained from the singleton predicate.
 The [version 28 reviews](../../Audit/2026-11-01-conditionals-v28/README.md)
 record the conditional criterion and its direct application proofs.
 The general section and lifting criterion is in the separate note
@@ -35,8 +37,8 @@ The dated source LOCOct10f is preserved with that note.
 Appendix A contains the full categorical construction of syntax, substitution,
 and deductively closed theories. Its realizations are proved in the application
 sections. The appendix is also available as a
-[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v31.pdf)
-with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v31.tex).
+[standalone PDF](../first_order_syntax_and_deductive_closure_appendix_v32.pdf)
+with [LaTeX source](../first_order_syntax_and_deductive_closure_appendix_v32.tex).
 
 ## Build
 
