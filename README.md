@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 24](manuscript/logical_consequence_and_essential_incompleteness_v24.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 25](manuscript/logical_consequence_and_essential_incompleteness_v25.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v24_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v25_source.zip), 1 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -10,8 +10,8 @@ categorical syntax in the total restriction splitting of the syntactic category.
 Section 6 constructs soundness factorizations for the standard code interpretation
 and its ultrapowers, using a separate model of the represented axioms.
 Section 7 applies the comparison through partial proof search. Section 7.2
-constructs an indexed family of arithmetic theories, proves the numeral-fiber
-identification categorically, and constructs one total morphism assigning an
+constructs an indexed family of arithmetic theories and identifies its numeral
+fibers categorically. Section 7.3 constructs one total morphism assigning an
 independent sentence to every consistent standard presentation. Sections 8 and 9
 contain the Miller-sequence and three-point-cosheaf applications.
 
@@ -27,9 +27,9 @@ and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)
 record the organization and preceding review. The current manuscript has not
 been reconciled with the Lean declarations.
 
-The [version 24 review record](Audit/2026-11-01-types-v24/README.md)
-contains the hostile review, mathematical-writing review, and corrections
-to the soundness and arithmetic sections.
+The [version 25 review record](Audit/2026-11-01-split-v25/README.md)
+contains the hostile-referee and Mathematical Writing reviews, the independent
+type audit, and the correction made after separating Sections 7.2 and 7.3.
 
 The active Lean target is the [version 5 local-connectedness paper](manuscript/essential_incompleteness_via_local_connectedness_v5.pdf),
 as specified in [the continuation instructions](CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md).
@@ -497,6 +497,7 @@ The Lean and supporting software are distributed under the existing
 [Apache License 2.0](LICENSE). The manuscript retains its existing copyright
 and licensing terms; no additional manuscript license is granted here. See
 [the manuscript notice](manuscript/NOTICE.md).
+
 
 
 

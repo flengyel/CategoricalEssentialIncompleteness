@@ -2,16 +2,16 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 24 PDF](logical_consequence_and_essential_incompleteness_v24.pdf)
+[Version 25 PDF](logical_consequence_and_essential_incompleteness_v25.pdf)
 ([LaTeX source](local_connectedness/main.tex),
-[source archive](logical_consequence_v24_source.zip), 1 November 2026).
+[source archive](logical_consequence_v25_source.zip), 1 November 2026).
 
 Sections 3 and 4 prove the comparison theorem and its application to interpreted
 sentence theories. Section 5 realizes the categorical syntax of Appendix A in
 the syntactic category. Section 6 proves the soundness factorization for standard
 codes and arithmetic ultrapowers. Section 7 supplies the partial proof-search
 lift and applies the comparison to arithmetic. Section 7.2 constructs an indexed
-family, identifies its numeral fibers, and proves uniform independence.
+family and identifies its numeral fibers. Section 7.3 proves uniform independence.
 The Miller and cosheaf applications follow in Sections 8 and 9.
 
 Appendix A contains categorical syntax and deductive closure; Appendix B,
@@ -19,8 +19,9 @@ the cosheaf construction; Appendix C, the lifting counterexample; and Appendix D
 the faithful model family and the arguments using it. The introduction and
 abstract are reserved for the final revision.
 
-The [version 24 reviews](../Audit/2026-11-01-types-v24/README.md)
-record the terminology, typing, and proof-exposition corrections in Sections 6 and 7.
+The [version 25 reviews](../Audit/2026-11-01-split-v25/README.md)
+record the split of Sections 7.2 and 7.3 and the subsequent mathematical,
+writing, and type checks.
 
 Build from the source directory:
 
@@ -31,8 +32,8 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
 The [source directory guide](local_connectedness/README.md) lists the files.
 The syntax appendix is also available as a
-[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v24.pdf)
-with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v24.tex).
+[standalone PDF](first_order_syntax_and_deductive_closure_appendix_v25.pdf)
+with [LaTeX source](first_order_syntax_and_deductive_closure_appendix_v25.tex).
 The [theorem-and-proof plan](../Plans/comparison_soundness_paper_plan_v2.pdf)
 gives the proposed organization of the remaining revisions. The Lean
 formalization remains indexed to version 5.
@@ -294,6 +295,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error definability_comparison_v16
 ```
 
 See [NOTICE.md](NOTICE.md) for the manuscript licensing scope.
+
 
 
 
