@@ -1,0 +1,259 @@
+\section{Internal theories and semantic consistency}\label{sec:internal-theories}
+
+\subsection{Theories and their interpretation}
+
+Let $\mathscr R$ be a restriction category with ranges, restriction
+zeros, and binary restriction coproducts. Put
+$\mathscr S=\Split(\mathscr R)$ and $\mathcal D=\Tot(\mathscr S)$.
+Assume that $\mathcal D$ has the categorical syntax of
+Definition~\ref{def:categorical-syntax} and the regular structure
+required in Appendix~\ref{app:syntax-theories}.
+Let $\Phi\in\mathcal D$ be the formula object and
+$j:S\hookrightarrow\Phi$ its sentence subobject. For an axiom
+subobject $i_A:A\hookrightarrow S$, suppose the inference
+endofunctor $H_A:\mathcal D/\Phi\to\mathcal D/\Phi$ of
+Appendix~\ref{app:first-order-derivations} has an initial algebra
+with conclusion morphism $c_A:P_A\to\Phi$.
+The pullback in $\mathcal D$
+\[
+\begin{tikzcd}
+ P_{A,S}\arrow[r]\arrow[d,"c_{A,S}"'] & P_A\arrow[d,"c_A"]\\
+ S\arrow[r,hook,"j"'] & \Phi
+\end{tikzcd}
+\]
+restricts conclusions to sentences. By
+Theorem~\ref{thm:first-order-theory}, the regular image
+$m_A:T_{A,S}\hookrightarrow S$ of $c_{A,S}$ is the sentence part
+of the least deductively closed formula subobject containing the
+axioms. Assume that $m_A$ is a restriction monomorphism in
+$\mathscr S$: it has a partial inverse
+$r_A:S\rightharpoonup T_{A,S}$ with
+$r_A m_A=1_{T_{A,S}}$ and $m_A r_A=\bar r_A$.
+Lemma~\ref{lem:range-regular-image} then gives the restriction
+idempotent representing the sentence theory,
+\[
+ t_A=m_A r_A=\ran(c_{A,S}):S\rightharpoonup S.
+\]
+Negation preserves the empty free-variable list, so it restricts
+to a total morphism $\nu:S\to S$ in $\mathcal D$.
+The restriction idempotent $\nu^*t_A$ represents refutable sentences.
+The sentence theory is \emph{consistent} when
+$t_A\nu^*t_A=0_S$, and \emph{complete} when
+$t_A\vee\nu^*t_A=1_S$.
+
+Let $F:\mathscr R\to\mathcal A$ be a range functor, where
+$\mathcal A$ is a split restriction category. For each restriction
+idempotent $e$ on an object $X$ of $\mathscr R$, choose a splitting
+\[
+ F(e)=m_e r_e,\qquad
+ m_e:E_e\to FX,\qquad r_e:FX\rightharpoonup E_e,\qquad
+ r_e m_e=1_{E_e},
+\]
+with $m_e$ total. Choose the identity splitting when $e=1_X$.
+These choices define a restriction functor
+\[
+ \widehat F:\mathscr S\longrightarrow\mathcal A,\qquad
+ \widehat F(X,e)=E_e,\qquad
+ \widehat F(f)=r_d F(f)m_e
+\]
+for $f:(X,e)\rightharpoonup(Y,d)$. Its restriction to
+$\mathscr R$, identified with the objects $(X,1_X)$, is $F$.
+Indeed, the equations $f=dfe$ and $r_e m_e=1_{E_e}$ verify
+identities and composition, while the restriction axioms give
+$\overline{r_d F(f)m_e}=r_e F(\bar f)m_e$.
+
+This extension preserves ranges. To see this, write
+$a=\ran(f)\le d$, where the same restriction idempotent represents
+the range in $\mathscr R$ and in $\mathscr S$.
+The restriction idempotent $r_d F(a)m_d$ receives
+$\widehat F(f)$. If a restriction idempotent $q$ on $E_d$
+receives $\widehat F(f)$, then $m_d q r_d$ is a restriction
+idempotent on $FY$ receiving $F(f)$. Consequently
+$F(a)=\ran(F(f))\le m_d q r_d$, and hence
+$r_d F(a)m_d\le q$. Thus
+$\ran(\widehat F(f))=\widehat F(\ran(f))$.
+The extension also preserves restriction zeros.
+
+The coproduct of $(X,e)$ and $(Y,d)$ in $\mathscr S$ is
+$(X+Y,e+d)$. The canonical morphism
+\[
+ \kappa_{e,d}=r_{e+d}\chi_{X,Y}(m_e+m_d):
+ E_e+E_d\longrightarrow E_{e+d}
+\]
+has inverse
+$(r_e+r_d)\chi_{X,Y}^{-1}m_{e+d}$. The inverse equations follow
+from $m_e r_e=F(e)$, $m_d r_d=F(d)$, and
+$F(e+d)=\chi_{X,Y}(F(e)+F(d))\chi_{X,Y}^{-1}$.
+Thus $\widehat F$ preserves binary restriction coproducts.
+Since $a\vee b=\ran[a,b]$ for restriction idempotents $a,b$ on
+the same object, preservation of coproducts and ranges gives
+\[
+ \widehat F(a\vee b)=\widehat F(a)\vee\widehat F(b).
+\]
+
+\begin{proposition}[Interpretation of a sentence theory]\label{prop:interpreted-theory}
+Let $F:\mathscr R\to\mathcal A$ be a range functor with split
+target, let $\widehat F:\Split(\mathscr R)\to\mathcal A$ be the
+extension by chosen splittings, and let $t_A=m_A r_A=\ran(c_{A,S})$
+be a sentence theory constructed above. Then
+\begin{gather*}
+ \widehat F(t_A)=\ran(\widehat F(c_{A,S})),\\
+ \widehat F(m_A)\widehat F(r_A)=\widehat F(t_A),\qquad
+ \widehat F(r_A)\widehat F(m_A)=1_{\widehat F(T_{A,S})}.
+\end{gather*}
+Suppose moreover that $\mathcal A=\Par(\mathcal E,\Mono)$ for a
+regular category $\mathcal E$. If the total morphism
+$\widehat F(c_{A,S})$ factors in $\mathcal E$ through a
+monomorphism $v:V\hookrightarrow\widehat F S$, then
+$\widehat F(m_A)$ is a subobject of $v$. Put
+\[
+ d_V=[\widehat F S\xleftarrow{v}V\xrightarrow{v}\widehat F S]:
+ \widehat F S\rightharpoonup\widehat F S.
+\]
+If
+$d_V(\widehat F\nu)^*d_V=0$, then
+\[
+ \widehat F(t_A)(\widehat F\nu)^*\widehat F(t_A)=0.
+\]
+\end{proposition}
+\begin{proof}
+Range preservation gives the first equation, and functoriality
+gives the two splitting equations. In $\Par(\mathcal E,\Mono)$,
+every monomorphism of $\mathcal E$ has a partial inverse.
+Lemma~\ref{lem:range-regular-image} therefore identifies the range
+of $\widehat F(c_{A,S})$ with the partial identity on its regular
+image in $\mathcal E$. Its splitting by $\widehat F(m_A)$ and
+$\widehat F(r_A)$ identifies $\widehat F(m_A)$ with that image.
+Factorization through $v$ implies
+$\widehat F(t_A)\le d_V$. Monotonicity of inverse image and meet
+then gives
+\[
+ \widehat F(t_A)(\widehat F\nu)^*\widehat F(t_A)
+ \le d_V(\widehat F\nu)^*d_V=0.
+\]
+\end{proof}
+
+For an interpretation of the syntax with a validity subobject
+$v:V\hookrightarrow\widehat F S$, a proof of soundness supplies
+the factorization of $\widehat F(c_{A,S})$ through $v$.
+If $d_V(\widehat F\nu)^*d_V=0$, the proposition gives consistency
+of the interpreted sentence theory.
+
+\subsection{Incompleteness from semantic consistency}
+
+\begin{theorem}\label{thm:logical-comparison}
+Let $\mathscr R,\mathcal A,F,U,\tau,b,a_0,a_1$ satisfy the
+categorical hypotheses and definitions of
+Theorem~\ref{thm:comparison}. Suppose that $\mathcal A$ is split,
+that total inverse images in $\mathcal A$ preserve binary joins
+of restriction idempotents, and that $F(1_U)\ne0$.
+Let $t_A=\ran(c_{A,S})$ represent a sentence theory in
+$\Split(\mathscr R)$ as above, with total negation
+$\nu:S\to S$, and let $\theta:U\to S$ be total in
+$\Split(\mathscr R)$. Put
+\[
+ t=\widehat F(t_A),\qquad
+ P=(\widehat F\theta)^*t,\qquad
+ N=(\widehat F\theta)^*(\widehat F\nu)^*t.
+\]
+Assume that
+\[
+ t(\widehat F\nu)^*t=0,\qquad F(a_0)\le P,\qquad F(a_1)\le N.
+\]
+Suppose there are partial morphisms
+$s:FU\rightharpoonup FU+FU$ and
+$\ell:U\rightharpoonup U+U$ satisfying
+\[
+ s^*(1_{FU}+0_{FU})=N,\qquad
+ s^*(0_{FU}+1_{FU})=P,\qquad
+ F\ell=\chi_{U,U}s.
+\]
+Then there is a total $g:U\to U$ in $\mathscr R$ such that
+\[
+ (\widehat F(\theta g))^*t=0,\qquad
+ (\widehat F(\theta g))^*(\widehat F\nu)^*t=0.
+\]
+In particular,
+\[
+ t\vee(\widehat F\nu)^*t\ne1_{\widehat F S},\qquad
+ t_A\vee\nu^*t_A\ne1_S.
+\]
+\end{theorem}
+\begin{proof}
+Preservation of meets and zero by inverse image gives
+\[
+ PN=(\widehat F\theta)^*\bigl(t(\widehat F\nu)^*t\bigr)=0.
+\]
+Theorem~\ref{thm:comparison} therefore supplies a total $g:U\to U$
+with $(Fg)^*P=(Fg)^*N=0$. Since $\widehat F$ agrees with $F$ on
+$\mathscr R$, composition of inverse images gives the two claimed
+equalities.
+
+If $t\vee(\widehat F\nu)^*t=1_{\widehat F S}$, inverse image along
+the total morphism $\widehat F(\theta g):FU\to\widehat F S$ would
+give
+\[
+ 1_{FU}
+ =(\widehat F(\theta g))^*\bigl(t\vee(\widehat F\nu)^*t\bigr)
+ =0\vee0=0,
+\]
+contrary to $F(1_U)\ne0$.
+If $t_A\vee\nu^*t_A=1_S$, applying $\widehat F$ and using
+preservation of joins and inverse images would give
+$t\vee(\widehat F\nu)^*t=1_{\widehat F S}$, which has just
+been excluded.
+\end{proof}
+
+\subsection{Inseparability in the source}
+
+An inseparable pair in the source category gives an alternative
+criterion that applies to every consistent extension of a theory.
+
+\begin{corollary}\label{cor:domain-incompleteness}
+Let $\mathcal C$ be a restriction category with restriction zeros and
+binary joins of restriction idempotents preserved by inverse image along total morphisms.
+Let $a,b$ be inseparable restriction idempotents on $U$. Suppose that
+$\theta:U\to S$ and $\nu:S\to S$ are total, and that a restriction
+idempotent $t_0$ on $S$ satisfies
+\[
+ a\le\theta^*t_0,\qquad b\le\theta^*\nu^*t_0.
+\]
+For every restriction idempotent $t\ge t_0$ on $S$ with $t\,\nu^*t=0_S$,
+the pair $t,\nu^*t$ is inseparable. In particular,
+$t\vee\nu^*t\ne1_S$.
+\end{corollary}
+\begin{proof}
+Suppose complementary restriction idempotents $e,e'$ on $S$ satisfy
+$t\le e$ and $\nu^*t\le e'$. Put
+$c=\theta^*e$ and $c'=\theta^*e'$. Inverse image preserves
+meets and zero, so $cc'=\theta^*(ee')=0_U$.
+Preservation of joins and totality of $\theta$ give
+\[
+ c\vee c'=\theta^*(e\vee e')=\theta^*1_S=1_U.
+\]
+Monotonicity gives
+$a\le\theta^*t_0\le\theta^*t\le c$ and
+$b\le\theta^*\nu^*t_0\le\theta^*\nu^*t\le c'$.
+Thus $c,c'$ would separate $a,b$, a contradiction.
+If $t\vee\nu^*t=1_S$, the disjoint pair $t,\nu^*t$ would
+itself be such a complementary separator.
+\end{proof}
+
+An inseparable pair on an object of $\mathscr R$ remains inseparable
+in $\Split(\mathscr R)$: the fully faithful inclusion
+$U\mapsto(U,1_U)$ changes neither its endomorphisms nor its
+restriction idempotents. Thus
+Corollary~\ref{cor:domain-incompleteness} applies to sentence
+objects in $\Split(\mathscr R)$ even when the inseparable pair was
+constructed in $\mathscr R$.
+
+In Sections~\ref{sec:miller}, \ref{sec:arithmetic},
+and~\ref{sec:cosheaves}, the theorem subobjects arise from the
+first-order or propositional constructions of
+Appendix~\ref{app:syntax-theories}. Inclusion of the axiom
+subobjects gives inclusion of their generated theorem subobjects,
+and hence $t_0\le t$ for the corresponding partial identities.
+The two reduction inequalities in
+Corollary~\ref{cor:domain-incompleteness} then exclude complete
+consistent extensions under the computability and compatibility
+conditions specified in each application.

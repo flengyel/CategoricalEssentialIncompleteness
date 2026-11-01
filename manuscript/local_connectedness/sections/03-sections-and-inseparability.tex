@@ -1,12 +1,103 @@
-\section{Sections of partial monomorphisms and inseparability}\label{sec:lifting}
+\section{Diagonal comparison and lifted partial conditionals}\label{sec:lifting}
 
-\subsection{Sections in a locally connected category}
+The diagonal argument compares a pair of source restriction idempotents
+with two disjoint target domains. A lift of a partial morphism that
+sends these domains into opposite coproduct summands produces a total
+source morphism whose interpretation avoids both domains.
+Local connectedness and weak choice supply such target
+morphisms for every disjoint pair.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
 restriction idempotents. Their meet is zero and their join is the identity. These facts
 follow by precomposition with the two injections and the agreement
 property of ranges.
+
+\subsection{The comparison theorem}
+
+\begin{theorem}[Comparison theorem]\label{thm:comparison}
+Let $\mathscr R$ be a recursion category with ranges and binary
+restriction coproducts, let $\mathcal A$ be a restriction category with
+ranges, restriction zeros, and binary restriction coproducts, and let
+$F:\mathscr R\to\mathcal A$ be a range functor.
+Choose a Turing morphism $\tau:U\times U\rightharpoonup U$ and an
+isomorphism $b:U\to U+U$. Define
+\[
+ h=b\tau\Delta_U:U\rightharpoonup U+U,\qquad
+ a_0=h^*(1_U+0_U),\qquad a_1=h^*(0_U+1_U).
+\]
+Let $P,N$ be disjoint restriction idempotents on $FU$ such that
+$F(a_0)\le P$ and $F(a_1)\le N$. Suppose that
+$s:FU\rightharpoonup FU+FU$ satisfies
+\[
+ s^*(1_{FU}+0_{FU})=N,\qquad
+ s^*(0_{FU}+1_{FU})=P,
+\]
+and that there is a morphism $\ell:U\rightharpoonup U+U$ with
+$F\ell=\chi_{U,U}s$.
+Then there is a total $g:U\to U$ such that
+\[
+ (Fg)^*P=(Fg)^*N=0_{FU}.
+\]
+If $F(1_U)\ne0$ and inverse image along $Fg$ preserves the join
+$P\vee N$, then $P\vee N\ne1_{FU}$.
+\end{theorem}
+\begin{proof}
+Put $u=b^{-1}\ell:U\rightharpoonup U$. Apply the Turing property
+to $u\pi_2:U\times U\rightharpoonup U$, obtaining a total morphism
+$g:U\to U$ with
+\[
+ \tau(g\times1_U)=u\pi_2.
+\]
+Precomposition with $\langle1_U,g\rangle:U\to U\times U$ gives
+$\tau\Delta_Ug=ug$, and therefore $hg=\ell g$.
+
+Write
+$E=Fg:FU\to FU$ and
+$H=\chi_{U,U}^{-1}Fh:FU\rightharpoonup FU+FU$.
+Applying $F$ to the preceding identity gives $HE=sE$.
+The coproduct comparison identifies the images of the source summand
+idempotents with the target summand idempotents. Preservation of
+restrictions and composition therefore gives
+\[
+ E^*F(a_0)=E^*N,\qquad E^*F(a_1)=E^*P.
+\]
+The assumed inequalities imply
+\[
+ E^*N=E^*F(a_0)\le E^*P,\qquad
+ E^*P=E^*F(a_1)\le E^*N.
+\]
+The two inverse images are equal, and their meet is
+$E^*(PN)=0_{FU}$. Hence both are zero.
+If $P\vee N=1_{FU}$, totality of $E$ and preservation of this join
+would give
+\[
+ 1_{FU}=E^*1_{FU}=E^*(P\vee N)
+       =E^*P\vee E^*N=0_{FU},
+\]
+contrary to $F(1_U)\ne0$.
+\end{proof}
+
+\begin{corollary}[Lifted separators]\label{cor:separator}
+Under the hypotheses of Theorem~\ref{thm:comparison} on
+$\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
+$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
+binary joins. A complementary pair $P,N$ on $FU$ satisfying
+$F(a_0)\le P$ and $F(a_1)\le N$ admits no pair of morphisms
+$s:FU\rightharpoonup FU+FU$ and
+$\ell:U\rightharpoonup U+U$ with
+\[
+ s^*(1_{FU}+0_{FU})=N,\qquad
+ s^*(0_{FU}+1_{FU})=P,\qquad
+ F\ell=\chi_{U,U}s.
+\]
+\end{corollary}
+\begin{proof}
+Such morphisms would give $P\vee N\ne1_{FU}$ by
+Theorem~\ref{thm:comparison}, contradicting complementarity.
+\end{proof}
+
+\subsection{Sections in a locally connected category}
 
 \begin{lemma}\label{lem:connected-alternative}
 Let $\mathcal A$ be a restriction category with ranges, restriction zeros,
@@ -36,7 +127,11 @@ For disjoint restriction idempotents $a,b$ on $X$, the morphism
 $p=\nabla_X(a+b):X+X\rightharpoonup X$ is a partial monomorphism
 with a unique section $s:X\rightharpoonup X+X$, and
 \[
- ps=\bar s=a\vee b.
+ ps=\bar s=a\vee b,\qquad sa=i_0a,\qquad sb=i_1b,
+\]
+and its inverse images of the summand idempotents are
+\[
+ s^*(1_X+0_X)=a,\qquad s^*(0_X+1_X)=b.
 \]
 In particular, for complementary $c,c'$ on $X$, the morphism
 $\nabla_X(c'+c)$ has a total section $s:X\to X+X$ satisfying
@@ -83,12 +178,19 @@ $\bar p s=s\overline{ps}=s$. Two sections have the same composite
 with $p$, so partial monicity makes them equal.
 The defining property of the range gives $\ran(p)=a\vee b$.
 
-For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$.
-The equality $p(sc)=c=p(i_1c)$ and partial monicity give $sc=i_1c$;
-the equation on $c'$ is analogous.
+The equations $p(sa)=a=p(i_0a)$ and $p(sb)=b=p(i_1b)$,
+together with $\bar p s=s$, give $sa=i_0a$ and $sb=i_1b$ by
+partial monicity. Consequently, $\varepsilon_0s$ and $i_0a$ agree
+after both $a$ and $b$. They therefore agree after $[a,b]$, whose
+range is $a\vee b=\bar s$. Both morphisms have restriction bounded
+by this range, so range agreement gives $\varepsilon_0s=i_0a$.
+The same argument gives $\varepsilon_1s=i_1b$.
+Taking restrictions proves the two inverse-image equations.
+For $a=c'$ and $b=c$, the section is total because $c'\vee c=1_X$,
+and its restrictions to $c,c'$ are $i_1c,i_0c'$, respectively.
 \end{proof}
 
-\begin{theorem}[Range-functor lifting]\label{thm:local-lifting}
+\begin{theorem}[Inseparability in the source]\label{thm:local-lifting}
 Let $\mathscr R$ be a recursion category with ranges and
 binary restriction coproducts. Let $\mathcal A$ be a locally connected
 split restriction category with ranges, restriction zeros, and binary
@@ -111,35 +213,22 @@ Then
 are inseparable in $\mathscr R$.
 \end{theorem}
 \begin{proof}
-The restriction idempotents $a_0,a_1$ are disjoint. Suppose $c,c'$ separate them.
-Put $u=b^{-1}\ell_c:U\rightharpoonup U$, and choose a total parameter $g:U\to U$ with
-$\tau(g\times1_U)=u\pi_2$. Precomposition with $\langle1_U,g\rangle$
-gives $\tau\Delta_Ug=ug$.
-
-Applying $F$ to the source equation
-$b\tau\Delta_Ug=\ell_cg$ gives
+The restriction idempotents $a_0,a_1$ are disjoint because they are
+inverse images of disjoint summand idempotents. If $c,c'$ separated
+them, the range functor would send $c,c'$ to complementary target
+idempotents $Fc,Fc'$ containing $F(a_0),F(a_1)$, respectively.
+Proposition~\ref{prop:local-switch} gives
 \[
- \chi_{U,U}^{-1}F(b\tau\Delta_U)Fg=s_cFg.
+ s_c^*(1_{FU}+0_{FU})=Fc',\qquad
+ s_c^*(0_{FU}+1_{FU})=Fc.
 \]
-In the target write $E=Fg:FU\to FU$,
-$H=\chi_{U,U}^{-1}F(b\tau\Delta_U):FU\rightharpoonup FU+FU$,
-$\Gamma=Fc$, and $\Gamma'=Fc'$. Thus $HE=s_cE$.
-Since $s_c\Gamma=i_1\Gamma$ and $s_c\Gamma'=i_0\Gamma'$,
-the inverse images under $s_c$ of the two summand restriction idempotents are
-$\Gamma'$ and $\Gamma$,
-respectively. Preservation of restrictions and composition now gives
-\[
- E^*F(a_0)=E^*\Gamma',\qquad E^*F(a_1)=E^*\Gamma.
-\]
-The separator inequalities give
-\[
- E^*\Gamma'=E^*F(a_0)\le E^*\Gamma,
- \qquad E^*\Gamma=E^*F(a_1)\le E^*\Gamma'.
-\]
-The two restriction idempotents are therefore equal. Their meet is
-zero, and totality of $E$ and preservation of joins make their join
-$1_{FU}$. Hence $1_{FU}=0$, contradicting the hypothesis.
+Together with the assumed lift $\ell_c$, these equations contradict
+Corollary~\ref{cor:separator} with $P=Fc$ and $N=Fc'$.
 \end{proof}
+
+Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
+with a separable diagonal pair for which the required section has no
+source lift.
 
 \subsection{A sufficient condition for lifting}
 
@@ -175,59 +264,3 @@ $[\Gamma,\Gamma']$. Its range is
 $\Gamma\vee\Gamma'=1_{FX}$, so range agreement gives
 $\chi_{X,X}^{-1}F\ell_c=s$.
 \end{proof}
-
-\subsection{From inseparable restriction idempotents to incompleteness}
-
-The following corollary applies when inverse images of the theorem
-and refutation domains contain an inseparable pair.
-
-\begin{corollary}\label{cor:domain-incompleteness}
-Let $\mathcal C$ be a restriction category with restriction zeros and
-binary joins of restriction idempotents preserved by inverse image along total morphisms.
-Let $a,b$ be inseparable restriction idempotents on $U$. Suppose that
-$\theta:U\to S$ and $\nu:S\to S$ are total, and that a restriction
-idempotent $t_0$ on $S$ satisfies
-\[
- a\le\theta^*t_0,\qquad b\le\theta^*\nu^*t_0.
-\]
-For every restriction idempotent $t\ge t_0$ on $S$ with $t\,\nu^*t=0_S$,
-the pair $t,\nu^*t$ is inseparable. In particular,
-$t\vee\nu^*t\ne1_S$.
-\end{corollary}
-\begin{proof}
-Suppose complementary restriction idempotents $e,e'$ on $S$ satisfy
-$t\le e$ and $\nu^*t\le e'$. Put
-$c=\theta^*e$ and $c'=\theta^*e'$. Inverse image preserves
-meets and zero, so $cc'=\theta^*(ee')=0_U$.
-Preservation of joins and totality of $\theta$ give
-\[
- c\vee c'=\theta^*(e\vee e')=\theta^*1_S=1_U.
-\]
-Monotonicity gives
-$a\le\theta^*t_0\le\theta^*t\le c$ and
-$b\le\theta^*\nu^*t_0\le\theta^*\nu^*t\le c'$.
-Thus $c,c'$ would separate $a,b$, a contradiction.
-If $t\vee\nu^*t=1_S$, the disjoint pair $t,\nu^*t$ would
-itself be such a complementary separator.
-\end{proof}
-
-In Sections~\ref{sec:miller}, \ref{sec:arithmetic}, and~\ref{sec:cosheaves},
-we specify a sentence object $S$, a total negation
-morphism $\nu:S\to S$, and a base theory or compatible family of base
-theories. The theorem sets of the extensions considered there form
-subobjects of $S$. Let $t_0,t:S\rightharpoonup S$ be the partial
-identities on the base and extension theorem subobjects.
-Extension gives $t_0\le t$. For these deductively closed theorem sets,
-consistency and completeness are equivalent to $t\nu^*t=0_S$ and
-$t\vee\nu^*t=1_S$, respectively. After verifying the two reduction
-inequalities, the corollary excludes complete consistent extensions
-under the computability and compatibility conditions specified in each
-application.
-
-An inseparable pair on an object of $\mathscr R$ remains inseparable
-in $\operatorname{Split}(\mathscr R)$: the fully faithful inclusion
-$U\mapsto(U,1_U)$ changes neither its endomorphisms nor its restriction idempotents.
-In those three sections we construct sentence and proof objects in
-the restriction splitting and verify the hypotheses of
-Corollary~\ref{cor:domain-incompleteness}.
-
