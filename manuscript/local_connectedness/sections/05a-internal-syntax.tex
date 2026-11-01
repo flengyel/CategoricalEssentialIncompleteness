@@ -1,0 +1,878 @@
+\subsection{The total restriction splitting}
+\label{subsec:syntactic-total-splitting}
+
+The syntax and theory construction of Appendix~\ref{app:syntax-theories}
+will be applied in
+\[
+ \mathcal B_T=\Tot(\Split(S_T)).
+\]
+We describe this category by arithmetic predicates and prove the
+required properties. Syntactic partial maps presented by functional
+$\Sigma_1$ formulas and provable graph equality are discussed by
+Robinson and Rosolini~\cite[pp.~108--109]{RobinsonRosolini}.
+
+Let $\mathcal P_T$ have as objects the $\Sigma_1$ arithmetic formulas
+$C(x)$ with the displayed free variable. A morphism from $C$ to $D$
+is represented by a $\Sigma_1$ formula $\Gamma(x,y)$ for which $T$
+proves
+\begin{align}
+ &\forall x\forall y\,
+   \bigl(\Gamma(x,y)\longrightarrow C(x)\land D(y)\bigr),
+                                               \label{eq:syntactic-support}\\
+ &\forall x\,
+   \bigl(C(x)\longrightarrow\exists!y\,\Gamma(x,y)\bigr).
+                                               \label{eq:syntactic-totality}
+\end{align}
+Two representing formulas define the same morphism when $T$ proves
+their universal equivalence. The identity on $C$ is represented by
+$C(x)\land y=x$, and composition is represented by
+\[
+ (\Delta\Gamma)(x,z)
+   \equiv\exists y\,(\Gamma(x,y)\land\Delta(y,z)).
+\]
+These formulas are $\Sigma_1$ and satisfy
+\eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality}; first-order
+logic proves the identity and associativity equations. We write
+$\Gamma:C\to D$ for the morphism represented by $\Gamma(x,y)$.
+Provably equivalent carrier predicates need not be the same object
+of this presentation, but the identity relations give an isomorphism
+between them.
+
+\begin{lemma}\label{lem:syntactic-functional-search}
+For every $\Sigma_1$ formula $\Gamma(x,y)$ there is an index
+$a_\Gamma$ such that PA proves
+\begin{gather*}
+ \forall x\forall y\,
+   \bigl(G_{a_\Gamma}(x,y)\longrightarrow\Gamma(x,y)\bigr),\\
+ \forall x\,
+   \bigl(\exists y\,G_{a_\Gamma}(x,y)
+          \longleftrightarrow\exists y\,\Gamma(x,y)\bigr).
+\end{gather*}
+If $T$ proves that $\Gamma$ is functional, then
+\[
+ T\vdash\forall x\forall y\,
+       \bigl(G_{a_\Gamma}(x,y)\longleftrightarrow\Gamma(x,y)\bigr).
+\]
+\end{lemma}
+\begin{proof}
+Write $\Gamma(x,y)$ in the PA-provably equivalent form
+$\exists w\,R(x,y,w)$, with $R$ primitive recursive. Search the
+codes $n=0,1,\ldots$ in increasing order for
+$R(x,\pi_0n,\pi_1n)$, and return $\pi_0n$ at the first successful
+test. Here $\pi_0,\pi_1$ are the projections of the fixed numerical
+pairing. The program and its index depend on $\Gamma$, not on $T$.
+
+PA proves by induction on the number of tests that a halting run
+returns the first successful test's first component. Conversely,
+if there is a successful test, the least such code supplies a finite
+halting computation. Formalized least-number search and the
+computation coding therefore prove both displayed assertions.
+If $T$ also proves functionality, any pair satisfying $\Gamma$
+has the same output as this successful search. This gives the
+last universal graph equivalence.
+\end{proof}
+
+\begin{lemma}\label{lem:syntactic-total-category}
+There is an equivalence
+\[
+ \mathcal P_T\simeq\mathcal B_T.
+\]
+The category $\mathcal B_T$ is regular, with finite coproducts
+that are disjoint and stable under pullback. Every monomorphism
+of $\mathcal B_T$ has a partial inverse in $\Split(S_T)$.
+For $\Gamma:C\to D$ in the predicate presentation, its regular
+image is represented by the inclusion
+\[
+ R_\Gamma(y)\equiv\exists x\,\Gamma(x,y)
+ \quad\hookrightarrow\quad D(y).
+\]
+In particular, every subobject of a predicate $D$ is isomorphic
+over $D$ to an inclusion of a $\Sigma_1$ predicate.
+\end{lemma}
+\begin{proof}
+Send a carrier $C$ to $(\omega,[C]_T)$ and a represented morphism
+$\Gamma:C\to D$ to $[a_\Gamma]_T$. By
+Lemma~\ref{lem:syntactic-functional-search}, its graph is
+$T$-provably equivalent to $\Gamma$. Conditions
+\eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality} imply
+\[
+ [a_\Gamma]_T=[D]_T[a_\Gamma]_T[C]_T,
+ \qquad\overline{[a_\Gamma]_T}=[C]_T.
+\]
+Thus it is a total morphism between the indicated split objects.
+The arithmetized composition equation proves functoriality.
+
+Conversely, a total morphism from $(\omega,[C]_T)$ to
+$(\omega,[D]_T)$ has a graph satisfying
+\eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality} in $T$.
+Equality of these morphisms is exactly universal $T$-provable graph
+equivalence. The functor is therefore full and faithful.
+For essential surjectivity, use the coding isomorphism $X\cong\omega$
+to transport any object $(X,e)$ of $\Split(S_T)$ to $(\omega,e')$.
+If $b$ represents $e'$, put $C(x)\equiv\exists y\,G_b(x,y)$.
+The equation $e'=\bar e'$ says that $T$ proves
+\[
+ G_b(x,y)\longleftrightarrow(C(x)\land y=x)
+\]
+universally. Hence $e'=[C]_T$, proving the equivalence.
+
+We prove the remaining claims in $\mathcal P_T$.
+The predicate $x=0$ is terminal: the unique morphism to it from
+$C$ has graph $C(x)\land y=0$.
+A product of $C$ and $D$ is represented by
+\[
+ C(\pi_0z)\land D(\pi_1z),
+\]
+with its numerical projections. If $\Gamma:A\to C$ and
+$\Delta:A\to D$, their pairing has graph
+\[
+ \exists x\exists y\,
+   \bigl(\Gamma(a,x)\land\Delta(a,y)\land z=\langle x,y\rangle\bigr).
+\]
+The PA-provable pairing identities give its universal property.
+For parallel morphisms $\Gamma,\Delta:C\to D$, the equalizer is
+the inclusion into $C$ of
+\[
+ E(x)\equiv C(x)\land
+             \exists y\,(\Gamma(x,y)\land\Delta(x,y)).
+\]
+Indeed, if $\Lambda:A\to C$ equalizes $\Gamma$ and $\Delta$,
+equality of the composite graphs and functionality of $\Lambda$
+give a $T$-proof that $\Lambda(a,x)$ implies $E(x)$.
+The same graph therefore defines its unique factorization through
+$E$. This proves finite completeness. In particular, the pullback
+of $\Gamma:C\to E$ and $\Delta:D\to E$ is represented by
+\[
+ P(w)\equiv C(\pi_0w)\land D(\pi_1w)\land
+       \exists y\,(\Gamma(\pi_0w,y)\land\Delta(\pi_1w,y)),
+\]
+with the two numerical projections.
+
+Call a represented morphism $\varepsilon:C\to D$
+\emph{provably surjective} when
+\[
+ T\vdash\forall y\,
+       \bigl(D(y)\longrightarrow\exists x\,\varepsilon(x,y)\bigr).
+\]
+Every such morphism has a section. Apply the first two assertions
+of Lemma~\ref{lem:syntactic-functional-search} to the relation
+$\varepsilon(x,y)$ with input $y$ and output $x$. The resulting
+program chooses the first coded witness of a preimage. Its graph
+is PA-provably functional, even though the transposed relation
+need not be functional. Provable surjectivity makes its domain
+$D$, and the support of $\varepsilon$ makes its outputs belong
+to $C$. It therefore defines $\sigma:D\to C$. The search
+correctness statement and functionality of $\varepsilon$ give
+$\varepsilon\sigma=1_D$.
+
+Such a split epimorphism is the coequalizer of its kernel pair.
+Indeed, let $k_0,k_1:K\rightrightarrows C$ be the kernel-pair
+projections, and let $\beta:C\to Z$ satisfy
+$\beta k_0=\beta k_1$. Since
+$\varepsilon=\varepsilon\sigma\varepsilon$, the pair
+$(1_C,\sigma\varepsilon)$ induces a morphism $C\to K$.
+Thus $\beta=\beta\sigma\varepsilon$, so
+$\beta\sigma:D\to Z$ is the required factorization. If
+$\lambda\varepsilon=\beta$, then
+$\lambda=\lambda\varepsilon\sigma=\beta\sigma$, proving
+uniqueness.
+
+Every $\Gamma:C\to D$ factors through $R_\Gamma$ by the same
+graph, followed by the identity inclusion of $R_\Gamma$ into $D$.
+The first morphism is provably surjective, hence regular epic by
+the preceding argument, and the inclusion is monic.
+Conversely, a regular epimorphism factors through its predicate
+image as above; extremality of regular epimorphisms forces the
+image inclusion to be an isomorphism, which implies its provable
+surjectivity. Thus regular epimorphisms are precisely the provable
+surjections, and they all split. A pullback of a split epimorphism
+$\varepsilon:C\to D$ along $\Gamma:Z\to D$ has the section
+$\langle\sigma\Gamma,1_Z\rangle:Z\to C\times_D Z$.
+Consequently regular epimorphisms are stable under pullback.
+This proves regularity and the asserted image formula.
+
+The false predicate is initial. If $C$ admits a morphism to it,
+totality gives $T\vdash\forall x\,\neg C(x)$, so $C$ is
+isomorphic to the false predicate; thus the initial object is
+strict. A coproduct is the tagged predicate
+\[
+ (C+D)(z)\equiv
+   \exists x\,(z=2x\land C(x))\;\lor\;
+   \exists y\,(z=2y+1\land D(y)),
+\]
+with the even and odd injections. Copairing is defined by selecting
+the graph corresponding to the tag. The parity identities prove
+the coproduct equations and disjointness of its injections.
+For $\Gamma:A\to C+D$, put
+\[
+ A_C(a)\equiv\exists x\,\Gamma(a,2x),\qquad
+ A_D(a)\equiv\exists y\,\Gamma(a,2y+1).
+\]
+These are the pullback carriers of the two injections, up to the
+isomorphism that forgets the uniquely determined output coordinate.
+Totality and functionality of $\Gamma$ prove in $T$ that
+\[
+ A(a)\longleftrightarrow A_C(a)\lor A_D(a),\qquad
+ \neg(A_C(a)\land A_D(a)).
+\]
+The canonical morphism $A_C+A_D\to A$ forgets the tag.
+Its inverse has graph
+\[
+ (A_C(a)\land z=2a)\;\lor\;(A_D(a)\land z=2a+1).
+\]
+The partition equations prove both inverse identities. Hence finite
+coproducts are disjoint and stable under pullback.
+
+It remains to analyze arbitrary monomorphisms. Let
+$\Gamma:C\to D$ be monic and form its kernel pair. Its carrier is
+\[
+ K(w)\equiv C(\pi_0w)\land C(\pi_1w)\land
+    \exists y\,(\Gamma(\pi_0w,y)\land\Gamma(\pi_1w,y)).
+\]
+Monicity implies equality of the two kernel-pair projections.
+Consequently, $T$ proves $K(w)\to\pi_0w=\pi_1w$ universally.
+Using the numerical pairing, this gives
+\[
+ T\vdash\forall x\forall x'\forall y\,
+  \bigl(\Gamma(x,y)\land\Gamma(x',y)\longrightarrow x=x'\bigr).
+\]
+Regard the monomorphism in $\Split(S_T)$ through the preceding
+equivalence. The transposed relation $\Gamma(x,y)$, with input $y$ and
+output $x$, is therefore $T$-provably functional. By
+Lemma~\ref{lem:syntactic-functional-search} it defines a partial
+morphism $r:D\rightharpoonup C$ in $\Split(S_T)$ whose domain
+predicate is $R_\Gamma$. Totality and functionality of $\Gamma$,
+together with the displayed injectivity statement, prove
+\[
+ r\Gamma=1_C,\qquad
+ \Gamma r=[R_\Gamma]_T=\bar r.
+\]
+Here $[R_\Gamma]_T$ denotes the partial identity on the predicate
+$R_\Gamma$, regarded as a partial endomorphism of the split object
+presented by $D$. Thus every monomorphism has a partial inverse.
+Moreover, the corestriction $C\to R_\Gamma$ is an isomorphism,
+with the same transposed relation as its total inverse. This proves
+the assertion about subobjects and completes the proof.
+\end{proof}
+
+In particular, there is a restriction equivalence
+\[
+ \Par(\mathcal B_T,\Mono)\simeq\Split(S_T).
+\]
+Explicitly, a span $C\xleftarrow{m}E\xrightarrow{g}D$ is sent
+to $gm^{-1}$, where $m^{-1}$ is the partial inverse just constructed.
+Conversely, a partial morphism is represented by its domain
+inclusion and its total restriction to that domain. In the predicate
+presentation the domain is $\exists y\,G_f(x,y)$; relational
+composition identifies composition of these spans by pullback with
+composition in $\Split(S_T)$.
+
+Ranges extend to $\Split(S_T)$ by the same representatives.
+For a morphism $f:(X,e)\rightharpoonup(Y,d)$, the equation
+$df=f$ implies $\ran_{S_T}(f)\leq d$. This range is therefore
+a restriction idempotent on $(Y,d)$, with the same leastness
+and agreement properties. Lemma~\ref{lem:range-regular-image}
+applies because every monomorphism of $\mathcal B_T$ has a
+partial inverse.
+
+\subsection{Syntax and lists}
+\label{sec:st-parameterized-syntax}
+
+We use primitive-recursive codes for finite sequences with length,
+entry, and concatenation operations whose defining equations are
+provable in $\PA$. Each finite sequence has one code; the empty
+sequence and adjoining an entry are injective constructors with
+disjoint images. For example, encode the empty sequence by $0$
+and $(a,w)$ by $1+\langle a,w\rangle$. The tail code is smaller
+than the nonempty sequence code, so bounded traversal defines the
+sequence operations and induction in $\PA$ proves their equations.
+All displayed arithmetical implications and equivalences in this
+subsection are understood to be universally quantified.
+
+\begin{lemma}[Finite membership conditions]
+\label{lem:st-finite-sigma1}
+Let $C(x)$ be $\Sigma_1$. The assertion that all entries of a coded
+finite sequence satisfy $C$ is equivalent in $\mathrm{PA}$ to a
+$\Sigma_1$ formula. The same holds for finitely many different
+$\Sigma_1$ conditions selected by the primitive-recursive tags of
+the entries.
+\end{lemma}
+\begin{proof}
+Write $C(x)$ as $\exists v\,C_0(x,v)$ with $C_0$ primitive recursive.
+For a sequence code $a$, use a coded sequence of witnesses:
+\[
+ \exists b\,\bigl(\operatorname{len}(b)=\operatorname{len}(a)
+   \land\forall i<\operatorname{len}(a)\,
+                  C_0(a_i,b_i)\bigr).
+\]
+Reading the entries proves the reverse implication. For the forward implication,
+induction on the length constructs a sequence of witnesses by
+appending one witness at a time. This is an instance of induction in $\PA$.
+For finitely many tags, record the appropriate witness in each
+position and use the corresponding finite case distinction.
+\end{proof}
+
+Fix a nonnegative integer $d$ and objects
+\[
+ V,\quad \Sigma_0,\ldots,\Sigma_d,\quad
+ \Pi_0,\ldots,\Pi_d
+\]
+of $\mathcal B_T$, represented by $\Sigma_1$ carrier formulas with
+the same letters. Numerical equality gives decidable equality on
+$V$: on the source $V\times V$, the Boolean test is true precisely
+when its two numerical coordinates are equal. The diagonal and its
+complement are therefore represented by the predicates
+$V(x)\land V(y)\land x=y$ and
+$V(x)\land V(y)\land x\ne y$, respectively.
+
+We choose codes for raw, finite, ordered syntax trees as follows.
+A code is a canonical sequence of node records in postfix order.
+A record contains one of the finitely many constructor tags and,
+when the constructor has a label, that numeric label. Its ordered
+child blocks are recovered by parsing the preceding records with
+the arities specified by their tags. A term variable has arity zero; a
+$k$-ary function or relation record has arity $k$; equality and
+implication have arity two; negation and universal quantification
+have arity one. A universal-quantifier record also contains its
+variable label. A primitive-recursive stack parser checks the
+sorts of the children and that exactly one tree remains.
+
+Each constructor concatenates its ordered child blocks and appends
+its root record. Its decomposition is unique. The number of records
+is a primitive-recursive size function, and each child has smaller
+size. All these statements are proved in $\mathrm{PA}$ by induction
+on the length of the parsed sequence.
+
+The formula $\operatorname{Tm}(t)$ asserts that this parser accepts
+$t$ as a term, that variable labels satisfy $V$, and that each
+function label of arity $k$ satisfies $\Sigma_k$. The formula
+$\operatorname{Fm}(a)$ has the analogous conditions for formulas,
+including membership in $\Pi_k$ for relation labels and in $V$ for
+quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
+formulas $\Sigma_1$: membership witnesses are existentially
+quantified and are not components of a syntax code.
+The constructor decomposition equivalences for these carrier
+formulas are provable in $\mathrm{PA}$. For example, the universal
+constructor has the equivalence
+\[
+ \operatorname{Fm}(\operatorname{all}(x,a))
+       \longleftrightarrow V(x)\land\operatorname{Fm}(a),
+\]
+where $\operatorname{all}$ is the numerical universal-quantifier
+constructor. The corresponding equivalences for a function or relation
+constructor include its coefficient-carrier predicate and the
+carrier predicates of its ordered children.
+Write
+\[
+ \Tm=(\omega,[\operatorname{Tm}]_T),\qquad
+ \Fm=(\omega,[\operatorname{Fm}]_T)
+\]
+for the corresponding objects of $\mathcal B_T$.
+
+\begin{proposition}[Syntax initiality with parameters]
+\label{prop:st-syntax-initiality}
+Let $d$ be a nonnegative integer and let $V,\Sigma_k,\Pi_k$ be
+objects of $\mathcal B_T$ for $0\leq k\leq d$. Powers below
+denote finite products. The endofunctor
+$K:\mathcal B_T^2\to\mathcal B_T^2$ defined by
+\[
+ K(X,Y)=\left(
+ V+\coprod_{k=0}^{d}\Sigma_k\times X^k,
+ X^2+\coprod_{k=0}^{d}\Pi_k\times X^k+Y+Y^2+V\times Y
+ \right)
+\]
+has an initial algebra in $\mathcal B_T^2$, with carriers
+$\Tm$ and $\Fm$ as constructed above. This algebra is stable
+under parameters in the sense of Appendix~\ref{app:syntax-theories}: for every object $P$,
+its pullback to $(\mathcal B_T/P)^2$ is initial for $K_P$.
+\end{proposition}
+\begin{proof}
+The primitive-recursive constructors, restricted to their displayed
+sources, are morphisms in $\mathcal B_T$ by the constructor
+decomposition equivalences. They give the claimed algebra.
+
+Fix an arbitrary object $P$ and an arbitrary $K_P$-algebra with
+carriers $\xi:X\to P$ and $\upsilon:Y\to P$. Choose graph indices for their projections and for the
+finitely many algebra operations. Write
+$\Xi(x,p)$ and $\Upsilon(y,p)$ for the projection graphs. The source of a function operation is represented, for example, by
+the predicate
+\[
+       P(p)\land\Sigma_k(s)\land
+       \bigwedge_{i=1}^k\bigl(X(x_i)\land\Xi(x_i,p)\bigr).
+\]
+The algebra operation
+is $T$-provably total on this predicate and has values $x$ satisfying
+$X(x)\land\Xi(x,p)$. The other operations have the corresponding
+fiber-product sources and preserve their projection to $P$.
+
+Define relations $\operatorname{Ev}_{\mathrm{Tm}}(p,t,x)$ and
+$\operatorname{Ev}_{\mathrm{Fm}}(p,a,y)$ by finite evaluation
+records. A record assigns to every node its output value
+in $X$ or $Y$, as appropriate, together with a halting computation
+trace for the relevant algebra operation. At a node, the inputs
+are its label, the values already assigned to its children, and
+the fixed parameter $p$. Require the appropriate carrier and
+projection conditions for every assigned value. The last assigned
+value is the displayed output. Include $P(p)$ and the appropriate
+syntax-carrier predicate in the relation.
+
+All these requirements are $\Sigma_1$. Boundedly many carrier and
+projection requirements are combined using
+Lemma~\ref{lem:st-finite-sigma1}; the operation-trace requirements
+are decidable checks on the recorded traces. Existentially
+quantifying over the entire record therefore gives a
+$\Sigma_1$ formula.
+
+The following is an induction proof in $T$. Induct simultaneously
+for terms and formulas on the number of nodes. Its assertion is
+that every valid input of size at most $n$, with every parameter
+satisfying $P$, has exactly one evaluation value, of the required
+sort and over that parameter. At a variable or nullary constructor,
+the corresponding algebra operation is total on the input
+predicate. At any other constructor, its unique decomposition gives
+children of smaller size. The induction hypothesis supplies their
+values with the required common projection. They therefore form
+an input in the source of the algebra operation at the root.
+Its totality supplies an output in the correct fiber. Concatenating
+the child records and appending the root computation supplies
+the evaluation record. Functionality of the operation graphs,
+together with the induction hypothesis, proves uniqueness of the
+value. Evaluation records need not be unique.
+
+This argument uses the finitely many totality and projection
+equations of the given algebra as theorems of $T$. Its induction formula is an arithmetic formula, so the required
+induction is available from $\PA$.
+
+Lemma~\ref{lem:syntactic-functional-search} now supplies indices for
+the two evaluation relations. The preceding proof verifies in $T$
+that they are total morphisms
+\[
+ h_{\mathrm{Tm}}:P\times\Tm\longrightarrow X,
+ \qquad
+ h_{\mathrm{Fm}}:P\times\Fm\longrightarrow Y,
+\]
+and that they commute with the projections to $P$. Decomposing a
+record at its root proves, in $T$, their algebra-morphism
+equations: evaluation of a constructor is the corresponding algebra
+operation applied to the evaluated children. Thus these arrows form
+a $K_P$-algebra morphism in the slice.
+
+Let $(h'_{\mathrm{Tm}},h'_{\mathrm{Fm}})$ be any other such algebra
+morphism. Its totality and its algebra-morphism equations are
+theorems of $T$. A second simultaneous induction on size proves
+that its values equal the evaluation values. At a constructor,
+use its algebra-morphism equation, replace the child values by the
+induction hypothesis, and use functionality of the algebra
+operation. Both pairs of graphs are supported on the same source
+predicates. The resulting universal graph equivalences are
+therefore precisely equality of the two pairs of morphisms in
+$\mathcal B_T$. This proves uniqueness for every $P$. Taking $P$
+to be terminal proves initiality in $\mathcal B_T^2$.
+\end{proof}
+
+\begin{proposition}[List initiality with parameters]
+\label{prop:st-list-initiality}
+For every object $V$ of $\mathcal B_T$, the endofunctor
+$Z\mapsto1+V\times Z$ has an initial algebra stable under
+parameters.
+\end{proposition}
+\begin{proof}
+Use canonical codes of finite sequences and the predicate
+\[
+ \operatorname{List}_V(w)\quad\longleftrightarrow\quad
+ w\text{ is a sequence code}\ \land\
+       \forall i<\operatorname{len}(w)\,V(w_i).
+\]
+Lemma~\ref{lem:st-finite-sigma1} gives a $\Sigma_1$ presentation.
+The empty sequence and the operation of prepending an entry are
+primitive recursive, and $\mathrm{PA}$ proves their carrier
+conditions and the unique nil-or-cons decomposition.
+
+For an algebra in $\mathcal B_T/P$ on an arbitrary projection
+$\xi:X\to P$, its nil operation is a morphism $P\to X$ over
+$P$, and its cons operation has source
+$(P\times V)\times_P X$. Evaluate a list from its final entry
+back to its first entry, starting with the nil value in the fiber
+over $p$. A finite sequence records these values and the
+computation traces of the two algebra operations. As above, this
+defines a $\Sigma_1$ relation. Induction in $T$ on length proves
+its totality, functionality, and preservation of the projection to
+$P$. Lemma~\ref{lem:syntactic-functional-search} makes it a morphism.
+The nil and cons equations follow by splitting the record,
+and induction in $T$ on length proves uniqueness of any morphism
+satisfying these equations. This is initiality in every such slice.
+\end{proof}
+
+\subsection{Free variables and substitution}
+\label{sec:st-substitution-realization}
+
+The preceding propositions supply the initiality hypotheses of
+Definition~\ref{def:categorical-syntax} for arbitrary fixed coefficient objects of bounded
+arity in $\mathcal B_T$. The following algorithms realize its free-variable and substitution folds.
+
+\begin{proposition}
+\label{prop:st-substitution-realization}
+On the preceding codes, the list operations, free-variable maps,
+term substitution, and the option-valued formula-substitution map
+of Appendix~\ref{app:syntax-theories} are represented by algorithms whose
+defining equations and preservation of the specified carriers are
+provable in $\PA$. Restricting each graph to its source predicate
+gives a morphism of $\mathcal B_T$. These are the morphisms
+constructed there by parameterized initiality. In particular, the
+subobject $\Adm$ is the free-for substitution domain on
+these raw named-variable codes, represented by a complemented
+subobject in $\mathcal B_T$.
+\end{proposition}
+\begin{proof}
+Concatenation, membership, and deletion on sequence codes are
+primitive recursive. Membership compares numerical variable labels;
+deletion removes every entry equal to the specified label.
+Induction in $\mathrm{PA}$ on sequence length proves their nil and
+cons equations and the two membership identities displayed in
+Appendix~\ref{app:syntax-theories}. Each operation preserves its carrier whenever its
+inputs satisfy their carrier predicates. Thus the corresponding
+restricted graph equations define morphisms in $\mathcal B_T$.
+The uniqueness assertion of
+Proposition~\ref{prop:st-list-initiality} identifies them with the
+appendix's list folds.
+
+A postfix traversal computes the free-variable list. At a variable
+it returns the singleton list; at function symbols, relation
+symbols, and equality it concatenates the child lists in their
+specified order; at negation it retains the child list; at
+implication it concatenates the two lists; and at a quantifier it
+deletes the bound variable. This is a primitive-recursive traversal
+on finite codes. Induction in $\mathrm{PA}$ on node count proves
+that its output satisfies $\operatorname{List}_V$ and proves the
+constructor equations. These are the equations of the displayed
+$K$-algebra on lists, so
+Proposition~\ref{prop:st-syntax-initiality} identifies this algorithm
+with the appendix's free-variable morphisms.
+
+For substitution, use a traversal which retains at each node both
+its original subtree and its computed result. Its parameters are
+a variable code $x$ satisfying $V(x)$ and a term code $t$
+satisfying $\operatorname{Tm}(t)$. Terms have a term result;
+formulas have either a failure tag or a successful formula result.
+At a term variable $v$, the result is $t$ if $v=x$ and is the
+original variable term otherwise. At a function symbol, rebuild
+the term from the substituted children. At an atomic formula,
+rebuild the formula from the substituted terms and attach the
+success tag. At negation and implication, use the lifted operations
+on success-or-failure values.
+
+At a quantified formula $\forall y\,\varphi$, let $z$ be the
+computed option value for its body. The algorithm returns
+\[
+ \begin{cases}
+  \operatorname{ok}(\forall y\,\varphi),&y=x,\\
+  \widehat\forall(y,z),&y\ne x\text{ and }
+       \bigl(x\notin\operatorname{FV}(\varphi)
+             \text{ or }y\notin\operatorname{FV}(t)\bigr),\\
+  \operatorname{fail},&\text{otherwise}.
+ \end{cases}
+\]
+Here $x\notin\FV(\varphi)$ abbreviates failure of the numerical
+list-membership test, and the other occurrence assertions have the
+same meaning. The tests use numerical membership and equality. The first branch uses the original body, even if
+the recursive computation for that body has failed. This is exactly
+the quantified-constructor equation in Appendix~\ref{app:syntax-theories}.
+
+The traversal is primitive recursive: it runs through the finite
+postfix sequence, storing finite lists of original subtrees and
+computed values, using only primitive-recursive coding operations.
+Induction in $\mathrm{PA}$ proves that the term result is a valid
+term and that every successful formula result is a valid formula.
+The same induction proves that the first component is the original
+subtree and verifies all the constructor equations of the
+$K_{V\times\Tm}$-algebra used in Appendix~\ref{app:syntax-theories}.
+By Proposition~\ref{prop:st-syntax-initiality}, its classes are
+therefore precisely the appendix's $a_T$ and $b_F$.
+
+Success and failure are decidable tags of this total option-valued
+algorithm on its source. Their inverse images partition the source
+in $\mathcal B_T$, giving the complemented subobject $\Adm$.
+Write $\operatorname{Adm}(\varphi,x,t)$ for the numerical success
+predicate. Induction in $\PA$ identifies it with the recursive
+free-for condition. At a quantifier, this condition is
+\[
+ y=x\quad\text{or}\quad
+ \bigl(y\ne x\ \land\
+   (x\notin\operatorname{FV}(\varphi)
+        \text{ or }y\notin\operatorname{FV}(t))\ \land\
+   \operatorname{Adm}(\varphi,x,t)\bigr).
+\]
+The success value satisfies the usual substitution equation on
+each such branch.
+
+Finally, simultaneous induction in $\mathrm{PA}$ proves identity
+substitution and substitution at an absent variable. At a
+quantifier with $y=x$, the first branch returns the original
+formula. With $y\ne x$, identity substitution passes the capture
+test because $\operatorname{FV}(\eta x)=[x]$; absence of $x$
+passes it because deletion of the distinct variable $y$ does not
+remove $x$. The induction hypothesis supplies successful unchanged
+results for the bodies in both cases. These are exactly the
+source-restricted graph equations asserted at the end of
+Appendix~\ref{app:substitution}.
+\end{proof}
+
+
+\subsection{Derivations and theories}
+\label{subsec:syntactic-theories}
+
+Let $\operatorname{fv}_{\Fm}(z)$ denote the numerical free-variable
+list function just constructed. Since $0$ codes the empty list,
+the predicate
+\[
+ \operatorname{Sent}(z)\equiv
+ \operatorname{Fm}(z)\land\operatorname{fv}_{\Fm}(z)=0
+\]
+presents the sentence object
+$S=(\omega,[\operatorname{Sent}]_T)$. Its inclusion into $\Fm$
+is represented by the identity on sentence codes. This is the
+pullback of the empty-list morphism along $\FV_{\Fm}$ required
+by Definition~\ref{def:sentence-object}.
+
+\begin{lemma}\label{lem:syntactic-derivation-initiality}
+Let $T\supseteq\PA$, let $F$ be an object of $\mathcal B_T$, and
+fix morphisms
+\[
+ p_n:R_n\longrightarrow F^n,\qquad
+ q_n:R_n\longrightarrow F\qquad(0\leq n\leq N),
+\]
+where $N$ is a fixed nonnegative integer.
+The inference endofunctor $H$ of
+Appendix~\ref{app:closed-subobjects} has an initial algebra in
+$\mathcal B_T/F$.  Its underlying object and conclusion morphism
+are represented by $\Sigma_1$ formulas.
+\end{lemma}
+\begin{proof}
+Choose $\Sigma_1$ formulas $F(z)$ and $R_n(r)$ for the displayed
+objects and indices $u_n,v_n$ for $p_n,q_n$, respectively.
+The nullary product is represented by the singleton code $0$.
+
+First fix codes for finite ordered trees in which a node of arity
+$n\leq N$ has a numerical label $r$.  Write
+\[
+ \operatorname{node}_n(r,d_1,\ldots,d_n)
+\]
+for the constructor.  These constructors can be chosen injective,
+with pairwise disjoint images, and so that each $d_j$ is smaller
+than the resulting code.  For example, use
+$1+\langle n,\langle r,\operatorname{tuple}_n(d_1,\ldots,d_n)
+\rangle\rangle$, with fixed-length tuple codes, taking the empty
+tuple code to be $0$.  The pairing of Section~\ref{sec:syntactic}
+is at least each of its components, so this inequality is provable
+in $\PA$.
+Course-of-values primitive recursion then defines a
+primitive-recursive predicate $\operatorname{Tree}(d)$ and a
+primitive-recursive list of the node occurrences of a tree.  At
+each occurrence the list records the arity, numerical label, and
+indices of its immediate children.  The list is ordered so that
+children precede their parent.  Its constructor equations and
+the unique decomposition of a tree are provable in $\PA$ by
+induction on its numerical code.
+
+Define $P(d)$ to assert that $d$ is such a tree and that, at every
+node with label $r$, arity $n$, and immediate subtrees
+$d_1,\ldots,d_n$, the following hold: $R_n(r)$, and there is an
+$n$-tuple $(z_1,\ldots,z_n)$ such that
+\[
+ G_{u_n}(r,\langle z_1,\ldots,z_n\rangle)
+ \quad\text{and}\quad
+ G_{v_{m_j}}(r_j,z_j)\quad(1\leq j\leq n).
+ \tag{\(*\)}
+\]
+Here $m_j$ and $r_j$ are the arity and label of the root of
+$d_j$.  For $n=0$, the condition in \((*)\) is
+$G_{u_0}(r,0)$.
+Lemma~\ref{lem:st-finite-sigma1} makes $P$ a $\Sigma_1$
+formula. The witnesses to node membership and computation belong
+to its existential quantifiers; a derivation code records only
+its rule labels and ordered children.
+
+For a tree $d$ whose root has arity $n$ and label $r$, put
+\[
+ C(d,z)\ \equiv\ P(d)\land G_{v_n}(r,z).
+\]
+More precisely, this is the finite disjunction over $0\leq n\leq N$
+using the primitive-recursive root projections.
+The $T$-provable totality of $q_n$ on $R_n$ shows that
+$T$ proves $P(d)\to\exists!z\,C(d,z)$ and
+$C(d,z)\to F(z)$.
+The formula $C$ is $\Sigma_1$ and its functionality is already
+provable in $\PA$, by the functionality of the deterministic
+program graphs.  Witness search therefore supplies an index
+$e_c$ for which
+\[
+ \PA\vdash\forall d\forall z\,
+             \bigl(G_{e_c}(d,z)\leftrightarrow C(d,z)\bigr).
+\]
+Its class represents a morphism $c:(\omega,[P]_T)\to F$ in
+$\mathcal B_T$.
+
+The constructor equations for the node list give, in $T$,
+\begin{align}
+ &P\bigl(\operatorname{node}_n(r,d_1,\ldots,d_n)\bigr)
+                                                        \label{eq:syntactic-derivation-domain}\\
+ &\quad\longleftrightarrow
+ R_n(r)\land\bigwedge_{j=1}^{n}P(d_j)\land
+ \exists z_1\cdots z_n\,
+ \left(G_{u_n}(r,\langle z_1,\ldots,z_n\rangle)
+       \land\bigwedge_{j=1}^{n}C(d_j,z_j)\right).
+ \notag
+\end{align}
+For $n=0$, the last conjunct means $G_{u_0}(r,0)$.
+The right-hand side is exactly a predicate presenting
+$B_n(P,c)$.  Consequently the constructors define a total
+morphism $\delta:H(P,c)\to(P,c)$ in $\mathcal B_T/F$:
+its conclusion is $q_n(r)$ on this summand.
+
+Let $\alpha:H(Q,q)\to(Q,q)$ be any algebra in this slice.
+Represent $Q$ by $Q(y)$, $q$ by an index $b$, and $\alpha$ by
+an index $a$.  We construct its fold without assuming that
+$a$ is total on all numerical inputs.
+
+Define $E_a(d,y)$ to assert that $d$ is a tree and there is a
+finite list of values, one for each node occurrence, whose root
+value is $y$, with the following property.  At a node of arity
+$n$ and label $r$, if its children's values are
+$y_1,\ldots,y_n$ and its own value is $y'$, then
+\[
+ G_a\bigl(\operatorname{tag}_n(r,y_1,\ldots,y_n),y'\bigr).
+\]
+The tag and tuple code here is the chosen presentation of the
+$n$th summand of $H(Q,q)$.  This definition is $\Sigma_1$ by
+the finite-sequence argument above.  The functionality of $G_a$
+proves the functionality of $E_a$ in $\PA$: compare two value
+lists in their children-before-parent order and use induction on
+the position in the list.
+Decomposing and concatenating value lists proves in $\PA$ that,
+for trees $d_1,\ldots,d_n$,
+\begin{align}
+ &E_a\bigl(\operatorname{node}_n(r,d_1,\ldots,d_n),y\bigr)
+                                                        \label{eq:syntactic-derivation-fold}\\
+ &\quad\longleftrightarrow
+ \exists y_1\cdots y_n\,
+ \left(\bigwedge_{j=1}^{n}E_a(d_j,y_j)
+       \land G_a(\operatorname{tag}_n(r,y_1,\ldots,y_n),y)
+ \right).
+ \notag
+\end{align}
+In particular, all witnesses on the right can be combined into
+one evaluation list on the left; restricting a list gives the
+reverse implication.
+
+Induction on the numerical tree code now proves in $T$ that
+each $d$ satisfying $P(d)$ has an evaluation $y$ in $Q$, and
+that its image under $q$ equals its conclusion under $c$.
+For the induction step, the induction hypotheses give values
+$y_j$ for the immediate subtrees, with
+$q(y_j)=c(d_j)$.  Equation~\eqref{eq:syntactic-derivation-domain}
+therefore places
+$\operatorname{tag}_n(r,y_1,\ldots,y_n)$ in the domain
+$B_n(Q,q)$ of $\alpha$.  Its $T$-provable totality supplies
+$y$, and its equation as a slice morphism supplies
+$q(y)=q_n(r)=c(d)$.  Equation~\eqref{eq:syntactic-derivation-fold}
+supplies the evaluation at $d$.  The same argument covers
+$n=0$, with no induction hypotheses.
+Thus $T$ proves
+\[
+ P(d)\longrightarrow\exists!y\,E_a(d,y),
+ \qquad
+ P(d)\land E_a(d,y)\longrightarrow Q(y),
+\]
+and, for all $d,y,z$, proves
+\[
+ P(d)\land E_a(d,y)
+ \longrightarrow\bigl(G_b(y,z)\leftrightarrow C(d,z)\bigr).
+\]
+Witness search for the $\Sigma_1$ relation
+$P(d)\land E_a(d,y)$ gives a partial-recursive graph uniformly
+equivalent to it in $\PA$.  It defines a total slice morphism
+$h:(P,c)\to(Q,q)$.  Equation~\eqref{eq:syntactic-derivation-fold}
+is exactly the algebra-morphism equation
+$h\delta=\alpha H(h)$.
+
+If $g:(P,c)\to(Q,q)$ is another algebra morphism, its
+algebra-morphism equation gives the same recursion equation
+on the domain in~\eqref{eq:syntactic-derivation-domain}.
+Induction on $d$, using the unique root decomposition, proves
+in $T$ that its graph on $P(d)$ is equivalent to $E_a(d,y)$.
+Outside $P$ both morphisms have empty domain, by their source
+restriction equations.  Their graphs are therefore uniformly
+$T$-provably equivalent.  Hence $g=h$, proving initiality.
+\end{proof}
+
+\begin{theorem}\label{thm:syntactic-generated-theory}
+Let $T$ be a consistent extension of $\PA$ and put
+$\mathcal B_T=\Tot(\Split(S_T))$. Fix a nonnegative integer $d$
+and variable and signature objects $V,\Sigma_k,\Pi_k$ of
+$\mathcal B_T$ for $0\leq k\leq d$.
+The syntax, list, and substitution constructions above realize
+the first-order structure of Appendix~\ref{app:syntax-theories}
+in $\mathcal B_T$. For every axiom subobject $i_A:A\hookrightarrow S$
+of its sentence object, the inference endofunctor $H_A$ has an
+initial algebra with conclusion morphism $c_A:P_A\to\Fm$.
+Its image is the least subobject of $\Fm$ containing the logical
+and nonlogical axioms and closed under generalization and modus
+ponens. The sentence pullback of this image is the least sentence
+theory containing $A$.
+
+Use the displayed sentence predicate, and choose the derivation
+predicate $P_A(p)$ and conclusion index $e_A$ furnished by the
+construction. Put
+\[
+ \operatorname{Th}_A(z)\equiv\exists p\,G_{e_A}(p,z).
+\]
+Then the restriction idempotent
+\[
+ t_A=[\operatorname{Sent}(z)\land\operatorname{Th}_A(z)]_T:
+                  \omega\rightharpoonup\omega
+\]
+belongs to $S_T$, and its splitting represents that sentence theory.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:syntactic-total-category} supplies regularity,
+disjoint stable finite coproducts, and partial inverses for
+monomorphisms. Numerical equality makes $V$ decidable.
+Propositions~\ref{prop:st-syntax-initiality} and
+\ref{prop:st-list-initiality} give the required initial algebras,
+stable under every parameter object.
+Proposition~\ref{prop:st-substitution-realization} identifies
+their free-variable and substitution folds with the specified
+numerical operations.
+
+Every rule object in Appendix~\ref{app:first-order-derivations}
+is a finite product, coproduct, or pullback of these objects and
+$A$. Its premise and conclusion maps are composites of the
+realized constructors and substitution morphisms. They are
+therefore morphisms of $\mathcal B_T$.
+Lemma~\ref{lem:syntactic-derivation-initiality} applies with $N=2$.
+Theorem~\ref{thm:first-order-theory} and the sentence-theory
+construction following it give the two leastness assertions.
+
+The original morphism $[e_A]_T:\omega\rightharpoonup\omega$
+has restriction $[P_A]_T$ and range $[\operatorname{Th}_A]_T$.
+The graph
+\[
+ G_{e_A}(p,z)\land\operatorname{Sent}(z)
+\]
+is $\Sigma_1$ and PA-provably functional. By
+Lemma~\ref{lem:syntactic-functional-search} it has a program
+index $e_{A,S}$ with PA-provably equivalent graph.
+It represents the sentence-conclusion pullback
+$c_{A,S}:P_{A,S}\to S$. Its range in $S_T$ is precisely $t_A$.
+By Lemma~\ref{lem:range-regular-image}, the same range in
+$\Split(S_T)$ splits through the regular image of $c_{A,S}$.
+Thus its splitting is the asserted sentence theory.
+\end{proof}
+
+For the arithmetic signature, a $\Sigma_1$ predicate
+$\operatorname{Ax}_T(z)$ enumerating the axioms of a c.e.\ theory
+$T$ defines the axiom subobject with predicate
+$\operatorname{Sent}(z)\land\operatorname{Ax}_T(z)$.
+Theorem~\ref{thm:syntactic-generated-theory} therefore represents
+its internally generated sentence theory by a restriction
+idempotent of $S_T$.

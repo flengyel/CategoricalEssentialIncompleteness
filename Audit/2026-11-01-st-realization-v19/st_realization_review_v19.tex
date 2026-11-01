@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,array,longtable}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,
+pdftitle={Syntactic realization: proof and review record -- Version 19}}
+\newcommand{\BT}{\mathcal B_T}
+\title{Syntactic realization: proof and review record}
+\author{}
+\date{Version 19\\1 November 2026}
+\begin{document}
+\maketitle
+
+Theorem 5.9 of \emph{Local connectedness in recursion categories and
+essential incompleteness}, version 19, establishes the first-order
+realization in
+\[
+ \BT=\operatorname{Tot}(\operatorname{Split}(S_T)).
+\]
+Here $T$ is a consistent extension of PA. The variable and coefficient
+objects are arbitrary objects of $\BT$; the number of sorts and the
+arity bound are finite and fixed externally. For every axiom subobject
+of the sentence object, the theorem constructs the least sentence
+theory and represents it by a restriction idempotent in the original
+category $S_T$. The realization is in Section 5. The mathematical
+content of the abstract syntax appendix is unchanged.
+
+\section*{Outline and dependencies}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.18\textwidth}>{\raggedright\arraybackslash}p{.34\textwidth}>{\raggedright\arraybackslash}p{.42\textwidth}@{}}
+\textbf{Location}&\textbf{Result}&\textbf{Function in the proof}\\\hline
+5.1; Lemmas 5.2--5.3&Functional search and the total splitting&
+Identifies $\BT$ with $\Sigma_1$ predicates and $T$-provably total
+functional relations. Proves finite limits, regularity, stable disjoint
+coproducts, and partial inverses for every monomorphism.\\[5pt]
+5.2; Lemma 5.4&Finite witness collection&
+Keeps membership and evaluation relations $\Sigma_1$ for internally
+finite lists of unbounded length.\\[5pt]
+5.2; Propositions 5.5--5.6&Initial syntax and lists&
+Proves initiality in every slice, including algebras on arbitrary
+projections to the parameter object.\\[5pt]
+5.3; Proposition 5.7&Free variables and substitution&
+Identifies numerical algorithms with the appendix's folds and
+admissibility pullback by their PA-provable equations.\\[5pt]
+5.4; Lemma 5.8&Initial derivation algebra&
+Proves the universal property for every bounded-arity inference
+presentation in $\BT/F$.\\[5pt]
+5.4; Theorem 5.9&Generated sentence theories&
+Applies Appendix B's image theorem and image--range lemma; returns
+the representing range idempotent to $S_T$.\\
+\end{longtable}
+
+The decisive induction is internal to $T$. An arbitrary algebra has
+operations whose relative totality and equations are theorems of $T$.
+A $\Sigma_1$ evaluation relation records values and computation traces
+at the nodes of a coded finite tree. Induction proves existence,
+functionality, preservation of the projection to the parameter, and
+the constructor equations. A second induction proves uniqueness as
+uniform $T$-provable graph equality. Membership witnesses are existential
+in the carrier predicate and are not additional syntax labels.
+
+\section*{Hostile-referee review}
+\subsection*{(A) Kill-shots / hard blockers}
+No mathematical blocker was found in the three contributions or their
+integrated realization proof. This is an author-side source review,
+not a formal verification.
+
+\subsection*{(B) Major weaknesses}
+No major gap was retained after checking the following inferences.
+First, monicity is tested on the internal kernel pair, yielding a
+$T$-proof of injectivity; standard points are not used. Second,
+preimage search splits every provably surjective morphism, giving
+kernel-pair coequalizers and pullback-stable regular epimorphisms.
+Third, the initiality proofs quantify over arbitrary slice algebras.
+Fourth, the derivation constructor domain is the actual pullback
+specified by the inference endofunctor.
+
+\subsection*{(C) Minor issues}
+The integrated text was corrected to distinguish arithmetic carrier
+predicates from their split objects, numerical functions from categorical
+morphisms, and the external arity bound from the derivation-code variable.
+The sentence predicate is explicitly defined on the same formula-code
+coordinate used by the conclusion graph.
+
+\subsection*{(D) Cross-section consistency failures}
+None found in the checked dependencies. The final theorem uses sentence
+axioms, as Appendix B requires. It constructs the sentence theory by
+pulling back the formula-theory image. The range formula is
+\[
+ [\operatorname{Sent}(z)\land\exists p\,G_{e_A}(p,z)]_T.
+\]
+The graph $G_{e_A}(p,z)\land\operatorname{Sent}(z)$ represents the
+sentence-conclusion pullback, so the image--range lemma applies with
+the proved partial inverse of its image monomorphism.
+
+\subsection*{(E) Acceptance conditions, non-negotiable}
+The integrated proof retains uniform $T$-provable graph equality,
+relative totality, finite witness collection, arbitrary slice carriers,
+and internal induction for existence and uniqueness. These supply the
+appendix's hypotheses. No effective axiomatization or standard soundness
+assumption on the ambient $T$ is used.
+
+\subsection*{(F) Not checked / uncertainty log}
+The review covers the new realization, the existing definition of $S_T$,
+the syntax appendix, and the connected introduction. It does not certify
+the remaining proofs of the paper. No Lean files were changed. The
+construction asserts initiality in $\BT$; it supplies no claim that
+interpretation in every model preserves that initiality. Strongest
+confirmed blocker: none. Strongest suspected blocker retained: none.
+Whole-paper recommendation: unknown outside the stated review scope.
+
+\section*{Mathematical-writing review}
+The governing source was Knuth, Larrabee, and Roberts,
+\emph{Mathematical Writing}, Stanford report STAN-CS-89-1193,
+Sections 1, 4, and 5. The four-subsection order above was retained.
+The comparison below distinguishes source advice from independent
+typing conventions of the writing skill.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.20\textwidth}>{\raggedright\arraybackslash}p{.40\textwidth}>{\raggedright\arraybackslash}p{.34\textwidth}@{}}
+\textbf{Anchor}&\textbf{Issue and implemented correction}&\textbf{Basis}\\\hline
+Proposition 5.5&Put coefficient-object and arity hypotheses in the
+statement; state the source and target of $K$.&KLR Section 1(5),
+and the skill's explicit-typing convention.\\[5pt]
+Syntax predicates and objects&Declare $\mathsf{Tm}$ and $\mathsf{Fm}$
+as split objects; retain functional notation for the arithmetic
+predicates.&KLR Section 1(11), (14); typing convention.\\[5pt]
+Finite collection and folds&Distinguish scalar entries, sequence codes,
+node records, and evaluation records.&KLR Section 1(14), (17).\\[5pt]
+Substitution proof&Define the numerical admissibility predicate;
+explain list-occurrence notation; replace set-membership notation
+for a categorical variable object.&Typing convention and
+definition-order review.\\[5pt]
+Theorem 5.9&Use the canonical sentence predicate on formula codes
+when intersecting it with the theorem predicate.&Preserves the
+common coordinate needed by the formula.\\[5pt]
+All new material&Remove duplicate setup, duplicate search proofs,
+contributor comments, repeated scope statements, and unnecessary
+defensive prose.&The writing skill's economy and manuscript-scope
+requirements; KLR Section 1(10), (12), (26).\\
+\end{longtable}
+
+The notation audit checked objects, predicates, indices, graph formulas,
+slice projections, and range idempotents in reading order. The
+introduction now identifies the internal realization and its dependence
+on $T$-provable graph equality.
+
+\section*{Sources and document checks}
+Robinson and Rosolini, \emph{Categories of partial maps},
+Information and Computation 79 (1988), 95--130, pp.~108--109, was
+checked in the author-uploaded full text. It is cited for the
+functional-$\Sigma_1$ presentation of syntactic partial maps and
+provable totality, not as a source for the new realization theorem.
+The appendix's existing literature remains in place.
+
+The assembled version 19 manuscript and the separately versioned
+appendix were compiled, and their references and layout were checked.
+The manuscript has 59 pages; the standalone appendix has 10 pages.
+The final source and downloadable files use version 19. The existing
+version 18 dependence report describes that earlier version and does
+not contain the new Section 5 realization.
+\end{document}
