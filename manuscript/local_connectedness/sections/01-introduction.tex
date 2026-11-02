@@ -11,6 +11,17 @@ is incomplete. The three principal applications concern arithmetic,
 a theory of real closed fields expanded by constants, and propositional
 theories obtained from cosheaves.
 
+Di Paola and Heller observed that diagonalizable algebras and the modal
+logic $\mathrm{GL}$ include the formalized L\"ob theorem among their special
+axioms, so that second incompleteness is largely built into these systems.
+They related this axiom to arithmetic provability formulas satisfying
+the Hilbert--Bernays derivability conditions. They also discussed
+difficulties in extending modal fixed-point theorems to numerals and
+quantification. Their objective called for an intrinsic recursion theory
+supplying the fixed-point constructions of recursion theorems and
+analogues of creative and effectively inseparable sets
+\cite[pp.~595--596]{DPH}.
+
 The connection between deduction and recursion uses two representations
 of the same sentence theory: a subobject of a sentence object and a
 restriction idempotent on that object. For partial functions, a restriction
@@ -171,23 +182,50 @@ Rosolini's $P$-categories generalized dominical categories
 prodominical categories \cite[Section 5]{Heller}.
 Cockett and Lack introduced restriction categories \cite{CockettLack},
 and Cockett and Hofstra developed the theory of Turing categories
-\cite{CockettHofstra}. We use restriction categories, with binary
+and related them to partial combinatory algebras through idempotent
+splitting \cite[Theorem~4.9]{CockettHofstra}.
+We use restriction categories, with binary
 restriction products in the source recursion categories. These products
 give the equivalent $P$-category structure
 \cite[Proposition 4.5]{CockettLackIII}.
+
+Cockett's later incompleteness theorem assumes a predicate expressing
+program restriction order and produces a restriction idempotent on the
+restriction terminal object that is neither zero nor the identity
+\cite[Section~7.5, Theorem~7.14]{CockettComputability}.
+Its conclusion concerns that restriction idempotent, whereas the results
+here concern generated sentence theories and their consistent represented
+extensions.
 
 Di Paola and Heller proved recursive inseparability in dominical
 recursion categories with a section for every morphism and binary
 coproducts for which coproducts of total morphisms are total and the
 near product distributes over coproducts
-\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical inseparability
-results from precomplete equivalence relations, including PA-provable
+\cite[Theorem 8.15]{DPH}. Bernardi obtained categorical fixed-point and
+inseparability results from precomplete equivalence relations, including PA-provable
 equality of partial recursive functions among his examples
-\cite[pp.~125--128]{Bernardi}.
+\cite[Section~3, pp.~125--128]{Bernardi}.
+These results are recursion-theoretic antecedents of the present
+incompleteness criteria.
 Montagna also obtained effectively inseparable pairs in his syntactic
 category $S$
 \cite[Remark 3.1]{Montagna}.
 
+Ramesh's introspective theories are essentially algebraic theories
+extending the theory of finite-limit categories. Each model is equipped
+with a homomorphism into an internal model of the same theory in its
+underlying finite-limit category. From this interpretation he derives L\"ob's theorem and
+guarded fixed-point results
+\cite[Introduction, Definition~2.7, Theorem~4.19]{Ramesh2023}.
+
+Here formula objects, initial algebras of finite derivations, and
+conclusion images define internal deductive systems and their generated
+sentence theories. The comparison and inseparability criteria apply to
+the restriction idempotents representing these theories and their
+refutations, yielding incompleteness throughout the stated consistent
+represented extension classes. The criteria use categorical recursion
+and inseparability; they do not postulate a provability operator
+satisfying L\"ob's theorem or the Hilbert--Bernays derivability conditions.
 
 Miller constructed a sequence that enumerates every real in $[0,1]$
 computable uniformly from its representations \cite[Theorem~6.3]{Miller2004}.

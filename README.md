@@ -1,6 +1,6 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 42](manuscript/logical_consequence_and_essential_incompleteness_v42.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 43](manuscript/logical_consequence_and_essential_incompleteness_v43.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
 [source archive](manuscript/logical_consequence_v42_source.zip), 1 November 2026).
 
@@ -22,8 +22,9 @@ Appendix A constructs categorical syntax, substitution, and deductively closed
 theories. Appendix B constructs the cosheaf category; Appendix C gives the
 lifting counterexample. Appendix D contains the faithful model family, ambient
 theory extension, and numeral observations. The introduction explains how internal deduction, generated theories, and
-comparison lead to essential incompleteness. The related-work discussion awaits
-its separate revision. The [source directory guide](manuscript/local_connectedness/README.md)
+comparison lead to essential incompleteness. The historical discussion states Di Paola--Heller's requirement for intrinsic
+recursion theory and compares the constructions and conclusions of Bernardi,
+Cockett, and Ramesh. The [source directory guide](manuscript/local_connectedness/README.md)
 lists the files and build command.
 
 The [theorem-and-proof plan](Plans/comparison_soundness_paper_plan_v2.pdf)

@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 42, 1 November 2026.
+Version 43, 1 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v42.pdf) ·
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v43.pdf) ·
 [Source archive](../logical_consequence_v42_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
@@ -17,8 +17,9 @@ and Section 7.6 treats numeral instances and theory extension. Sections 8 and 9
 contain the Miller and cosheaf applications.
 The faithful model family and numeral observations are in Appendix D.
 The introduction explains how internal deduction, generated theories, and
-comparison lead to essential incompleteness. The related-work discussion awaits
-its separate revision.
+comparison lead to essential incompleteness. The historical discussion states Di Paola--Heller's requirement for intrinsic
+recursion theory and compares the constructions and conclusions of Bernardi,
+Cockett, and Ramesh.
 
 The [complete version 29 audit](../../Audit/2026-11-01-v29-full-citations/README.md)
 covers every compiled source file and every citation use. Version 30 applies
