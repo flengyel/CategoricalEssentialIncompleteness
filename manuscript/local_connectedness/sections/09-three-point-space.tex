@@ -1,7 +1,8 @@
 \section{A recursion category from a three-point space}\label{sec:cosheaves}
 
-We construct a recursion category $\mathscr R_X$ from cosheaves on a
-three-point space $X$. Formula and derivation objects in the Karoubi
+We construct a recursion category $\mathscr R_X$ from set-valued
+cosheaves in the sense of Curry~\cite[Definition~2.6]{CurryCosheaves}
+on a three-point space $X$. Formula and derivation objects in the Karoubi
 envelope $\operatorname{Kar}(\mathscr R_X)$
 give, by component evaluation, a family of consistent propositional
 theories. This family admits no compatible family of complete consistent
@@ -11,7 +12,6 @@ For a topological space $X$, let $\mathcal O(X)$ be the category
 of open sets and inclusions. A \emph{set-valued cosheaf} is a
 covariant functor $C:\mathcal O(X)\to\mathbf{Set}$ for which
 every open cover $(O_\lambda)_\lambda$ of $O$ gives a coequalizer
-\cite[Definition 2.6]{CurryCosheaves}
 \[
  \coprod_{\lambda,\mu} C(O_\lambda\cap O_\mu)
  \rightrightarrows \coprod_\lambda C(O_\lambda)
@@ -67,7 +67,8 @@ object of $\mathcal E$ and a natural transformation to each morphism.
 
 In the notation $\operatorname{Par}(\mathcal C,\operatorname{Mono})$,
 $\operatorname{Mono}$ denotes all monomorphisms of the category
-$\mathcal C$. Form the partial-map category
+$\mathcal C$. Use the partial-map construction of Cockett and
+Lack~\cite[Section~3]{CockettLack} to form
 \[
  \mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono}).
 \]

@@ -10,6 +10,13 @@ of derivations, and regular images.
 \subsection{Categorical hypotheses and notation}
 \label{app:categorical-hypotheses}
 
+For list objects, we use the parameterized recursion property studied by
+Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.\footnote{The gap
+in the printed uniqueness argument for Lemma~5.6 (p.~18) does not affect
+Lemma~2.2 or Definition~2.3, cited here.}
+Its formulation by pullback into slices is
+recalled by Maietti~\cite[Definition 2.4 and the following paragraph]{MaiettiLists}.
+
 Let $\mathcal D$ be a regular category with finite coproducts.
 Thus $\mathcal D$ has finite limits, every morphism factors as a
 regular epimorphism followed by a monomorphism, and regular
@@ -152,12 +159,6 @@ by replacing each constant $X$ by $P\times X\to P$ and using
 products and coproducts in that slice. An initial algebra is
 \emph{stable under parameters} if, for every $P\in\mathcal D$,
 its pullback along $P\to1$ is initial for this slice endofunctor.
-For list objects, this is the parameterized recursion property studied by
-Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.\footnote{The gap
-in the printed uniqueness argument for Lemma~5.6 (p.~18) does not affect
-Lemma~2.2 or Definition~2.3, cited here.}
-Its formulation by pullback into slices is
-recalled by Maietti~\cite[Definition 2.4 and the following paragraph]{MaiettiLists}.
 
 \subsection{Terms, formulas, and free variables}
 \label{app:first-order-syntax}
@@ -280,6 +281,10 @@ $\exists=\neg\circ\forall\circ(1_V\times\neg):V\times\Fm\to\Fm$.
 \subsection{Admissible substitution}
 \label{app:substitution}
 
+For structural recursion we retain the original expression together with
+the recursive result; compare Gabbay and
+Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}.
+
 We construct substitution of one term for one variable, as required
 by the logical schemes below. Put $E=V\times\Tm$, with projections
 $x:E\to V$ and $t:E\to\Tm$. For an object $Y$, write
@@ -299,8 +304,6 @@ In $(\mathcal D/E)^2$, use the carriers
  X_F=E\times(\Fm\times O(\Fm))\longrightarrow E.
 \]
 The first component of each pair records the original expression.
-Retaining this component obtains structural recursion from initial-algebra
-iteration; compare Gabbay and Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}.
 Define a $K_E$-algebra as follows, retaining the same parameter
 $(x,t)$ in every operation. At a variable $v$, the pair is
 \[
