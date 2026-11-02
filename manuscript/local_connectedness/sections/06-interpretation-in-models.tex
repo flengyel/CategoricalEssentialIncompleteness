@@ -68,27 +68,24 @@ unique section of $\nabla_{F_MX}(F_Mc'+F_Mc)$, where
 $\chi_{X,X}:F_MX+F_MX\to F_M(X+X)$ is the coproduct isomorphism.
 \end{lemma}
 \begin{proof}
-Choose $\Sigma_1$ representatives $C(x)=\exists u\,R(x,u)$ and
-$C'(x)=\exists v\,R'(x,v)$ with primitive-recursive witness tests.
+Choose $\Sigma_1$ predicates $C(x)$ and $C'(x)$ representing
+$c$ and $c'$.
 The theory $T$ proves universally their disjointness and coverage.
 For $j=0,1$, put $\iota_j(x)=2x+j$. The graph
 $z=\iota_j(x)$ represents the coproduct injection
 $i_j:X\to X+X$ on numerical codes.
-Search increasing finite bounds for a witness to either predicate,
-returning $\iota_1(x)$ on finding a $C$-witness and $\iota_0(x)$
-on finding a $C'$-witness. Fix a priority for simultaneous discoveries.
-Let $e_s$ be an index of this program. The finite-search verification
-in $\PA$ proves that the program halts
-exactly when $C(x)\lor C'(x)$. Under the disjointness assumption it also
-proves the exact graph equation
+The $\Sigma_1$ relation
 \[
- G_{e_s}(x,z)\leftrightarrow
- (C(x)\land z=\iota_1(x))\lor(C'(x)\land z=\iota_0(x)).
+ R(x,z)\equiv
+ (C(x)\land z=\iota_1(x))\lor(C'(x)\land z=\iota_0(x))
 \]
-Thus $T$ proves this equation and universal halting. The equations for
-the restrictions follow, giving the total morphism $s=[e_s]_T$ of $S_T$.
+is $T$-provably functional and total.
+Lemma~\ref{lem:syntactic-functional-search} supplies an index $e_s$
+whose graph is $T$-provably equivalent to $R$. Thus $s=[e_s]_T$
+is total in $S_T$, and its graph gives the asserted equations with
+$c$ and $c'$.
 
-Interpret this proved graph identity in $M\models T$.
+Interpret this graph equivalence in $M\models T$.
 Under the canonical coproduct identification, $F_M(s)$ sends
 $x$ to its second tagged copy when
 $M\models C(\gamma_X^M(x))$ and to its first tagged copy when
@@ -171,10 +168,7 @@ constructed in Section~\ref{sec:st-parameterized-syntax}. Let
 $S\hookrightarrow\Fm$ be the sentence object. Let $\Gamma$ be
 a computably enumerable set of arithmetic sentences, choose a
 $\Sigma_1$ predicate $\operatorname{Ax}_\Gamma(z)$ enumerating
-their codes, and let
-\[
- i_A:A=A_\Gamma\hookrightarrow S
-\]
+their codes, and let $i_A:A=A_\Gamma\hookrightarrow S$
 be the subobject with carrier predicate
 $\operatorname{Sent}(z)\land\operatorname{Ax}_\Gamma(z)$. Write
 \[
@@ -228,8 +222,7 @@ the image of $a_{\N}$, then
  K,\sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]
              \models\varphi.
 \end{equation}
-Here the expressions and substitutions are the finite expressions
-decoded from the realized syntax objects.
+Here the expressions are decoded from the realized syntax objects.
 \end{lemma}
 \begin{proof}
 First, term values and formula truth depend only on the values
@@ -270,8 +263,7 @@ $\llbracket t\rrbracket^K_{\sigma[y\mapsto b]}=a$, and hence
    =\sigma[x\mapsto a][y\mapsto b].
 \]
 Apply the induction hypothesis to $\psi$ at
-$\sigma[y\mapsto b]$ and then quantify over $b$. These are all
-the admissible cases in the quantified-constructor equation.
+$\sigma[y\mapsto b]$ and then quantify over $b$.
 \end{proof}
 
 \begin{proposition}[Soundness on standard codes]
@@ -347,7 +339,7 @@ We use \L o\'s's theorem~\cite[Theorem~3.1]{Keisler} to compare
 an ultrapower of the code interpretation with interpretation in an
 arithmetic ultrapower.
 
-Work in the usual set-theoretic metatheory with choice. Fix a
+Work in the set-theoretic metatheory with choice. Fix a
 nonempty set $I$ and a proper ultrafilter $\mathcal U$ on $I$.
 For a set $X$, let
 \[
@@ -447,8 +439,8 @@ naturality for every $f:B\to B'$ in $\mathcal B_{\PA}$:
  G_M(f)\eta_B=\eta_{B'}\mathscr U(G_{\N}(f)):
        \mathscr U(G_{\N}B)\longrightarrow G_MB'.
 \]
-They also
-show that changing $u_B$ does not change $\eta_B$: the transition
+They also show that changing $u_B$ does not change $\eta_B$: the
+transition
 isomorphism between two predicate presentations is a morphism in
 the image of $J_{\PA}$.
 \end{proof}
@@ -534,6 +526,4 @@ Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
 in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.
 Each $p_i$ is the code of a standard finite derivation with sentence conclusion,
 and the definition of the factorization gives
-\[
- e_{K,\mathcal U}(p)=[e_K(p_i)].
-\]
+$e_{K,\mathcal U}(p)=[e_K(p_i)]$.

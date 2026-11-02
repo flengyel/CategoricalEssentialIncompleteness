@@ -1,7 +1,7 @@
 \subsection{The numerical realization}
 \label{subsec:numerical-realization}
 
-For $X,Y\in\mathsf O$ and $e\in\mathcal I(X,Y)$, define the partial function
+For $X,Y\in\mathsf O$ and $e\in\mathcal I(X,Y)$, define
 $\varphi_e:|X|\rightharpoonup|Y|$ by
 \[
  \varphi_e(x)=y\quad\Longleftrightarrow\quad
@@ -60,8 +60,7 @@ Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
      (\omega,1_{\widehat D}).
 \]
 For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
-the displayed formula specifies its representing partial function.
-The numerical program for $Q(f)$ first semidecides membership
+the program for $Q(f)$ first semidecides membership
 in $\widehat C$, then decodes its input, computes $f$, and encodes
 the output. Its domain is exactly $\widehat C$, so the displayed
 split morphism is total. The inverse coding equations prove
@@ -221,10 +220,8 @@ For $g:(Y,d)\rightharpoonup(Z,c)$,
  U_{gf}=\{z\in U_f:\widehat f(z)\in U_g\},\qquad
  \widehat{gf}(z)=\widehat g(\widehat f(z))\quad(z\in U_{gf}).
 \]
-The pullback composing the two spans is the object
-\[
- P_{f,g}=(2,\{(z,w)\in U_f\times U_g:\widehat f(z)=w\}).
-\]
+The pullback composing the two spans is
+$P_{f,g}=(2,\{(z,w)\in U_f\times U_g:\widehat f(z)=w\})$.
 Projection to the first coordinate gives an isomorphism
 $P_{f,g}\to(1,U_{gf})$ in $\mathcal C$. Its inverse
 $(1,U_{gf})\to P_{f,g}$ sends $z$ to $(z,\widehat f(z))$.
@@ -289,9 +286,6 @@ endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
 algebra of finite derivations.
 \end{proposition}
 \begin{proof}
-Choose the variable object $V=(1,\N)$ and, for a fixed $d\ge0$,
-objects $\Sigma_k,\Pi_k\in\mathcal C_{\mathrm{rec}}$ with
-recursive carriers $|\Sigma_k|,|\Pi_k|\subseteq\N$ for $0\le k\le d$.
 Use the syntax codes and constructor tags of
 Section~\ref{sec:st-parameterized-syntax}. The finite tree parser,
 the coefficient tests, and numerical equality decide the carriers
@@ -401,7 +395,7 @@ Their primitive-recursive traversals therefore give morphisms
  b_F:\Fm\times(V\times\Tm)\to1+\Fm
 \]
 in $\mathcal C_{\mathrm{rec}}$.
-For these same codes, Proposition~\ref{prop:st-substitution-realization}
+Proposition~\ref{prop:st-substitution-realization}
 proves the carrier and constructor equations in $\PA$.
 They therefore hold in $\N$. Uniqueness of the parameterized folds
 identifies these numerical morphisms with the categorical ones.
@@ -464,7 +458,7 @@ Root decomposition proves the equation, and induction on tree
 size proves uniqueness of $h_A$. This establishes initiality.
 \end{proof}
 
-For arithmetic, choose exactly the signature labels and numerical
+For arithmetic, choose the signature labels and numerical
 syntax codes used in Section~\ref{sec:st-parameterized-syntax}.
 For a c.e.\ axiom presentation $T$ containing the chosen PA sentence
 axioms, use the same axiom predicate as in
@@ -559,8 +553,7 @@ In particular, the image of $c_T$ has underlying carrier
 $\{s\in|S|:\N\models\operatorname{Prov}_T(s)\}$, for the
 predicate fixed in that section.
 
-Put $\mathscr S_{\mathrm{rec}}=\Split(\mathrm{Rec})$ and
-transport these objects and total maps along $Q$.
+Transport these objects and total maps along $Q$.
 Define
 \[
  E=Q(V)=(\omega,1_\omega),\qquad

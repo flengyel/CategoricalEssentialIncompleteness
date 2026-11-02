@@ -66,12 +66,10 @@ the cosheaf equivalence above assigns a set-valued cosheaf to each
 object of $\mathcal E$ and a natural transformation to each morphism.
 
 In the notation $\operatorname{Par}(\mathcal C,\operatorname{Mono})$,
-$\operatorname{Mono}$ denotes all monomorphisms of the category
-$\mathcal C$. Use the partial-map construction of Cockett and
+$\operatorname{Mono}$ denotes all monomorphisms of $\mathcal C$.
+Use the partial-map construction of Cockett and
 Lack~\cite[Section~3]{CockettLack} to form
-\[
- \mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono}).
-\]
+$\mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono})$.
 Its morphisms $Y\rightharpoonup Z$ are isomorphism classes of spans
 $Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
 uses pullback. Monomorphisms are componentwise injections.
@@ -94,7 +92,7 @@ $r_i^V=V(0\to i)$:
 \end{equation}
 We regard $V$ also as an object of $\mathcal A$, whose objects
 are those of $\mathcal E$.
-For an object $A=(m,A_0)$ of $\mathcal C_{\mathrm{rec}}$, put
+For $A=(m,A_0)$ in $\mathcal C_{\mathrm{rec}}$, put
 $m(A)=m$. Thus $|A|\subseteq\N^{m(A)}$,
 $m(V_0)=4$, and $m(V_1)=m(V_2)=2$.
 Fix recursive numerical encodings of nonempty finite sequences of tuples,
@@ -151,20 +149,14 @@ component evaluation give ordinary propositional formulas and derivations.
 
 \subsection{Complementary restriction idempotents and inseparability}
 
-Proposition~\ref{prop:fork-local} proves that $\mathcal A$ is locally
-connected. Its splitness, weak choice, ranges, coproducts, and
-componentwise inverse-image laws are proved in
-Proposition~\ref{prop:fork-structure}.
 Let $c,c'$ be complementary restriction idempotents on $V$ in
 $\mathscr R_X$. Write
 $m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$
 for the inclusions through which $c,c'$ split in $\mathcal A$.
 The component carriers $C_j,C'_j$ are disjoint c.e.\ subsets whose union
 is $V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
-\[
- q=[m,m']:C+C'\longrightarrow V
-\]
-has bijective components $q_j:C_j+C'_j\to V_j$. Each inverse is
+$q=[m,m']:C+C'\to V$ has bijective components
+$q_j:C_j+C'_j\to V_j$. Each inverse is
 computable by running the membership searches for $C_j$ and $C'_j$ in
 parallel and returning the corresponding tagged element. Naturality of $q$
 gives
@@ -175,9 +167,7 @@ gives
 Thus these inverse components define $q^{-1}:V\to C+C'$ in
 $\mathcal E$, proving that $q$ is an isomorphism.
 For the injections $i_0,i_1:V\to V+V$, define
-\[
- \ell_c=[i_1m,i_0m']q^{-1}:V\longrightarrow V+V.
-\]
+$\ell_c=[i_1m,i_0m']q^{-1}:V\to V+V$.
 It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
 $\mathscr R_X$ by fullness. The full inclusion
 $I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
@@ -186,14 +176,8 @@ binary joins by Proposition~\ref{prop:fork-structure}.
 Corollary~\ref{cor:source-conditionals} therefore gives an inseparable
 pair in $\mathscr R_X$.
 The category $\mathscr R_X$ is not restriction-equivalent to the
-recursion category of partial recursive functions. Indeed, the terminal object of
-$\mathcal E$ has five subobjects, whereas the terminal object of
-$\mathcal C_{\mathrm{rec}}$ has two.
-A restriction equivalence between these two recursion categories
-would extend to the restriction splittings and then restrict to an
-equivalence $\mathcal E\simeq\mathcal C_{\mathrm{rec}}$, contradicting
-this invariant. Proposition~\ref{prop:fork-distinction} gives the
-subobject calculation.
+recursion category of partial recursive functions
+(Proposition~\ref{prop:fork-distinction}).
 
 \subsection{Evaluation functors}
 
@@ -236,12 +220,8 @@ finite unions, respectively.
 Use the recursive bijection $\operatorname{encode}_2:\N^2\to\N$,
 its inverse $\operatorname{decode}_2:\N\to\N^2$, and the acceptable numbering
 $(\varphi_p)_{p\in\N}$ chosen in the construction of $\tau$ in
-Appendix~\ref{app:fork-structure}. For $i=1,2$, its component has
-the formula
-\[
- (E_i\tau)((k,p),(\ell,x))
- =\operatorname{decode}_2\varphi_p(\operatorname{encode}_2(\ell,x)).
-\]
+Appendix~\ref{app:fork-structure}. For $i=1,2$, its component is
+given by \eqref{eq:fork-turing-endpoint}.
 For a partial recursive map
 $F:Z\times\N^2\rightharpoonup\N^2$ with c.e.\ carrier $Z$,
 the parameter theorem gives a total recursive map $s:Z\to\N$ such that
@@ -259,9 +239,8 @@ have component $\{*\}$ at $i$ and empty components elsewhere.
 For $Y\in\mathcal E$ and $y\in Y_i$, let $p_y:H_i\to Y$ be the total morphism
 whose component at $i$ sends $*$ to $y$. Every total morphism
 $H_i\to Y$ has this form for a unique $y\in Y_i$. A partial
-morphism from $H_i$ is either total or zero, since $H_i$ has just
-two restriction idempotents. Hence postcomposition defines a partial
-function on these total morphisms, defining
+morphism from $H_i$ is either total or zero, since $H_i$ has
+two restriction idempotents. Postcomposition therefore defines
 $\Phi_i:\mathcal A\to\Pfn$ by
 \[
  \Phi_i(Y)=\operatorname{Tot}(\mathcal A)(H_i,Y),\qquad
@@ -309,10 +288,7 @@ $q_0,q_1:V\rightharpoonup V$ by
  q_1=\zeta^{-1}(0_V+1_V)\zeta.
 \]
 Put $d=\tau\Delta_V:V\rightharpoonup V$ and define
-$a,b:V\rightharpoonup V$ by
-\[
- a=d^*q_0,\qquad b=d^*q_1.
-\]
+$a,b:V\rightharpoonup V$ by $a=d^*q_0$ and $b=d^*q_1$.
 These are the inseparable restriction idempotents supplied by
 Corollary~\ref{cor:source-conditionals} for the full inclusion
 $\mathscr R_X\hookrightarrow\mathcal A$. They remain inseparable
@@ -373,12 +349,9 @@ $V_j$ is recursive. For $i=1,2$, replacing every atom label $x$ by
 $r_i^V(x)$ and retaining the constructors gives a total recursive map
 $\sigma_i:S_0\to S_i$. These maps define a functor
 $S:J\to\mathcal C_{\mathrm{rec}}$. The constructors commute with
-relabeling, so they define morphisms
-\[
- \theta:V\to S,\qquad \nu:S\to S,
- \qquad {\Rightarrow}:S\times S\to S
-\]
-of $\mathcal E$. Define $P:\mathcal E\to\mathcal E$ by
+relabeling, so they define morphisms $\theta:V\to S$,
+$\nu:S\to S$, and ${\Rightarrow}:S\times S\to S$ of $\mathcal E$.
+Define $P:\mathcal E\to\mathcal E$ by
 $P(Z)=V+Z+(Z\times Z)$ and
 $P(f)=1_V+f+(f\times f)$. Its constructor algebra is
 $\iota=[\theta,\nu,\Rightarrow]:P(S)\to S$.
@@ -420,10 +393,8 @@ For $\alpha,\beta,\gamma\in S_j$, their components are
                          \Rightarrow_j(\alpha\Rightarrow_j\beta).
 \end{align*}
 The positive and negative atomic axiom morphism
-\[
- [\theta|_A,\nu\theta|_B]:A+B\longrightarrow S
-\]
-is monic: each component is injective, because the constructors are
+$[\theta|_A,\nu\theta|_B]:A+B\to S$ is monic: each component is
+injective, because the constructors are
 injective and the atom and negation tags are distinct. It therefore
 presents the axiom subobject used in
 Appendix~\ref{app:propositional-theories}, with positive and negative
@@ -600,10 +571,8 @@ The restriction idempotents $t_T,\nu^*t_T$ are inseparable in $\mathcal A$.
 The sets $P_{i,T},N_{i,T}$ are disjoint c.e.\ subsets of $\N^2$ satisfying
 $A_i\subseteq P_{i,T}$ and $B_i\subseteq N_{i,T}$.
 They are recursively inseparable. The assignment
-\[
- T\longmapsto(\omega\times\omega,P_{i,T},N_{i,T})
-\]
-with the identity of $\omega\times\omega$ for extension inclusions is a
+$T\mapsto(\omega\times\omega,P_{i,T},N_{i,T})$,
+with the identity of $\omega\times\omega$ for extension inclusions, is a
 covariant functor from the poset of these families, ordered by componentwise
 inclusion, to $\operatorname{Pair}(\mathrm{Rec})$.
 The theory with theorem set $T_i$ is incomplete.

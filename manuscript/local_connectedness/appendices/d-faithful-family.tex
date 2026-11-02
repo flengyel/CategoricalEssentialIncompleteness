@@ -10,17 +10,13 @@ $\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
 countably infinite model can be transported to the carrier $\N$.
 
 Define the product category
-\[
- \mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn.
-\]
+$\mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn$.
 An object is a family of sets $(A_M)_M$; a morphism is a family of partial
 functions with the indicated sources and targets. Composition and the
 restriction, range, restriction-product, and coproduct operations are coordinatewise.
 The functors of Proposition~\ref{prop:model} combine to give
-\[
- F_T:S_T\longrightarrow\mathcal D_T,\qquad
- F_T(X)=(X_M)_M,\quad F_T([e]_T)=(F_M[e]_T)_M.
-\]
+$F_T:S_T\to\mathcal D_T$, defined by $F_T(X)=(X_M)_M$ and
+$F_T([e]_T)=(F_M[e]_T)_M$.
 
 \begin{theorem}\label{thm:faithful}
 The functor $F_T$ is faithful and preserves restrictions, zeros, binary
@@ -63,10 +59,8 @@ belong to $\mathcal D_T$ and need not be images of source restriction
 idempotents.
 
 For an inclusion $T\subseteq T'$ of consistent theories, define
-\[
- Q_{T,T'}:S_T\to S_{T'},\qquad
- Q_{T,T'}X=X,\quad Q_{T,T'}[e]_T=[e]_{T'}.
-\]
+$Q_{T,T'}:S_T\to S_{T'}$ by $Q_{T,T'}X=X$ and
+$Q_{T,T'}[e]_T=[e]_{T'}$.
 Provability is monotone, so this is a well-defined covariant functor.
 It preserves restrictions, zeros, ranges, binary restriction products
 and coproducts, and satisfies $Q_{T,T'}(\tau_T)=\tau_{T'}$.
@@ -107,19 +101,15 @@ extension $T'\supseteq T$, their images under $Q_{T,T'}$ are the
 identically defined inseparable pair in $S_{T'}$.
 \end{corollary}
 \begin{proof}
-By Lemma~\ref{lem:switch}, every complementary pair $c,c'$ on $U$
-admits a total morphism $\ell_c:U\to U+U$ with
-$\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
-Theorem~\ref{thm:faithful} gives a range functor $F_T$ with
-$F_T(1_U)\ne0$, and total inverse images in $\mathcal D_T$ preserve
-binary joins coordinatewise. Corollary~\ref{cor:source-conditionals}
-therefore applies.
+Corollary~\ref{cor:model-pair} gives the first assertion, since
+$\mathcal M_T\ne\varnothing$.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
 It is the identity on objects and surjective on each hom-set.
 Consequently it preserves a Turing morphism: a preimage of a
 target morphism has a Turing factorization in $S_T$, whose image is
 the required factorization in $S_{T'}$.
-The same conditional argument therefore applies over $T'$.
+Applying Corollary~\ref{cor:model-pair} to $T'$ gives inseparability
+of the image pair.
 \end{proof}
 
 The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
@@ -172,11 +162,9 @@ The second follows from faithfulness of $F_T$.
 \subsection{A complete ambient theory}
 
 For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
-\[
- D:S_{\operatorname{Th}(\N)}\longrightarrow\mathrm{Rec},\qquad
- D([e]_{\operatorname{Th}(\N)})=\varphi_e,
-\]
-is an isomorphism: two classes are equal exactly when their uniform
+$D:S_{\operatorname{Th}(\N)}\to\mathrm{Rec}$, defined by
+$D([e]_{\operatorname{Th}(\N)})=\varphi_e$, is an isomorphism:
+two classes are equal exactly when their uniform
 graph-equivalence sentence is true in $\N$, which is equivalent
 to equality of their standard partial functions.
 The functor $F_T$ still exists, and $S_T$ has inseparable pairs,

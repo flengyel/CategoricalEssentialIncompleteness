@@ -41,11 +41,9 @@ A morphism of $\mathcal E$ acts on representatives and respects the
 relation, and hence induces the component at $X$ of the associated
 cosheaf morphism.
 
-Products and subobjects are taken in $\mathcal E$. In
-particular, the cosheaf associated with $Y\times Z$ has value at $X$
-\[
- (Y_1\times Z_1)\amalg_{Y_0\times Z_0}(Y_2\times Z_2).
-\]
+Products and subobjects are taken in $\mathcal E$. The cosheaf
+associated with $Y\times Z$ has value
+$(Y_1\times Z_1)\amalg_{Y_0\times Z_0}(Y_2\times Z_2)$ at $X$.
 This need not be the product of the values at $X$ of
 the cosheaves associated with $Y$ and $Z$. Write $0$, $1$, and $2$
 for empty, singleton, and two-element numerical carriers, respectively.
@@ -56,15 +54,11 @@ and the cosheaf associated with $H$ has two elements at $X$,
 whereas the Cartesian square of that set has four.
 Likewise $H\to(1\leftarrow1\to1)$ is a monomorphism in $\mathcal E$,
 although the associated cosheaf morphism has component $2\to1$ at $X$.
-Thus the
-subfunctors used as partial-map domains are categorical subobjects
+Thus the subfunctors used as partial-map domains are categorical subobjects
 of the cosheaves, not necessarily subsets at every open.
 
-A \emph{regular epimorphism} is a coequalizer of a pair of morphisms.
-A category is \emph{regular} if it has finite limits, every morphism
-factors as a regular epimorphism followed by a monomorphism, and
-regular epimorphisms are preserved by pullback. The monic part of
-this factorization is its \emph{regular image}. The \emph{kernel
+We use regularity and regular images as in
+Appendix~\ref{app:categorical-hypotheses}. The \emph{kernel
 pair} of $q:Y\to Z$ is the pair of projections
 $Y\times_ZY\rightrightarrows Y$.
 Write $\mathcal E/Y$ for the slice category of morphisms with target $Y$,
@@ -157,7 +151,7 @@ at component $j$ is
  \{y\in(D_f)_j:f_j(y)\in(D_g)_j\},
 \]
 and its value there is $g_j(f_j(y))$. These carriers are c.e.\
-and form a subfunctor by naturality. This is precisely the
+and form a subfunctor by naturality. This is the
 pullback composition of the representing spans. Associativity
 and identities follow from these domain and value formulas.
 
@@ -257,8 +251,7 @@ Every object $Y$ of $\mathcal E$ admits a restriction monomorphism
 $m:Y\to V$ in $\mathcal A$.
 \end{lemma}
 \begin{proof}
-Let $Y$ be an object of $\mathcal E$. For $j=0,1,2$, choose a
-recursive injection $c_j:Y_j\to\N$
+For $j=0,1,2$, choose a recursive injection $c_j:Y_j\to\N$
 with a partial recursive inverse on its image, using a tuple
 coding of the ambient finite power. Define
 \[
@@ -288,10 +281,7 @@ entry, and encodes the resulting sequence in $(Z_j)^\#$.
 These assignments preserve identities and composition and define
 a functor $(-)^\#:\mathcal A\to\mathcal A$.
 Concatenation and singleton insertion give morphisms
-\[
- \mu_Y:Y^\#\times Y^\#\to Y^\#,
- \qquad \eta_Y:Y\to Y^\#
-\]
+$\mu_Y:Y^\#\times Y^\#\to Y^\#$ and $\eta_Y:Y\to Y^\#$
 in $\mathcal E$.
 For an internal semigroup $(M,\mu)$ in $\mathcal E$, with
 associative multiplication $\mu:M\times M\to M$, and a morphism
@@ -362,7 +352,7 @@ there is a total recursive map $s:\N^m\to\N$ such that
 \]
 Here $\simeq$ means equality of partial values,
 including simultaneous undefinedness. The case $m=0$ is a
-constant program index. This is the usual $s$-$m$-$n$ theorem.
+constant program index. This is the $s$-$m$-$n$ theorem.
 
 \begin{theorem}\label{thm:fork-turing}
 The object $V$ of
@@ -371,10 +361,7 @@ $\mathcal A=\operatorname{Par}(\mathcal C_{\mathrm{rec}}^J,
 $\tau:V\times V\rightharpoonup V$: for every object $Y$ of
 $\mathcal A$ and every morphism $F:Y\times V\rightharpoonup V$
 in $\mathcal A$, there is a total morphism
-$c:Y\to V$ such that
-\[
- \tau(c\times1_V)=F.
-\]
+$c:Y\to V$ such that $\tau(c\times1_V)=F$.
 At component $i\in\{1,2\}$, this Turing morphism is given by
 \begin{equation}\label{eq:fork-turing-endpoint}
  \tau_i((k,p),(\ell,x))
@@ -391,11 +378,9 @@ $\tau_i:V_i\times V_i\rightharpoonup V_i$ with domain $T_i$
 by that equation. The first coordinate $k$
 of the parameter has no effect on this computation.
 
-At component $0$, write the parameter and input as
-\[
- P=(k,p_0,p_1,p_2)\in V_0,
- \qquad x=(\ell,x_0,x_1,x_2)\in V_0.
-\]
+At component $0$, write the parameter as
+$P=(k,p_0,p_1,p_2)\in V_0$ and the input as
+$x=(\ell,x_0,x_1,x_2)\in V_0$.
 Define partial recursive maps
 $C:V_0\times V_0\rightharpoonup V_0$ and
 $Q_i:V_0\times V_0\rightharpoonup V_i$, for $i=1,2$,
@@ -420,9 +405,7 @@ Dovetailing the three computations and checking equality of their
 numerical outputs enumerates $T_0$ and computes $\tau_0$ on it.
 
 If $(P,x)\in T_0$, then
-\[
- (r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in T_i.
-\]
+$(r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in T_i$.
 Thus $T=(T_0,T_1,T_2)$ is a c.e.\ subfunctor of $V\times V$.
 Equation~\eqref{eq:fork-turing-check} gives
 \[
@@ -467,9 +450,7 @@ Define the component maps of $c:Y\to V$ by
 These maps are recursive and total on their respective carriers:
 the maps $s_j$ are total on the ambient numerical powers and the
 maps $r_i^Y$ are total on $Y_0$. Moreover,
-\[
- r_i^Vc_0(y)=(0,s_i(r_i^Yy))=c_i(r_i^Yy),
-\]
+$r_i^Vc_0(y)=(0,s_i(r_i^Yy))=c_i(r_i^Yy)$,
 so $c$ is a natural transformation in $\mathcal E$, hence total in
 $\mathcal A$.
 
@@ -484,9 +465,7 @@ has domain $D_i$ and agrees there with $F_i$.
 At component $0$, fix $(y,x)\in Y_0\times V_0$.
 If $(y,x)\in D_0$, the computation $C(c_0(y),x)$ returns $F_0(y,x)$.
 Since $D$ is a subfunctor,
-\[
- (r_i^Yy,r_i^Vx)\in D_i\qquad(i=1,2).
-\]
+$(r_i^Yy,r_i^Vx)\in D_i$ for $i=1,2$.
 The computations $Q_i(c_0(y),x)$, for $i=1,2$, consequently
 halt, and naturality of the morphism $D\to V$ gives
 \[

@@ -1,13 +1,11 @@
 \subsection{The total restriction splitting}
 \label{subsec:syntactic-total-splitting}
 
-The syntax and theory construction of Appendix~\ref{app:syntax-theories}
-will be applied in
-\[
- \mathcal B_T=\Tot(\Split(S_T)).
-\]
-We describe this category by arithmetic predicates and prove the
-required properties. Syntactic partial maps presented by functional
+We apply the syntax and theory construction of
+Appendix~\ref{app:syntax-theories} in
+$\mathcal B_T=\Tot(\Split(S_T))$.
+We describe this category by arithmetic predicates. Syntactic partial
+maps presented by functional
 $\Sigma_1$ formulas and provable graph equality are discussed by
 Robinson and Rosolini~\cite[pp.~108--109]{RobinsonRosolini}.
 
@@ -26,10 +24,8 @@ proves
 Two representing formulas define the same morphism when $T$ proves
 their universal equivalence. The identity on $C$ is represented by
 $C(x)\land y=x$, and composition is represented by
-\[
- (\Delta\Gamma)(x,z)
-   \equiv\exists y\,(\Gamma(x,y)\land\Delta(y,z)).
-\]
+$(\Delta\Gamma)(x,z)\equiv
+\exists y\,(\Gamma(x,y)\land\Delta(y,z))$.
 These formulas are $\Sigma_1$ and satisfy
 \eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality}; first-order
 logic proves the identity and associativity equations. We write
@@ -73,10 +69,7 @@ last universal graph equivalence.
 \end{proof}
 
 \begin{lemma}\label{lem:syntactic-total-category}
-There is an equivalence
-\[
- \mathcal P_T\simeq\mathcal B_T.
-\]
+There is an equivalence $\mathcal P_T\simeq\mathcal B_T$.
 The category $\mathcal B_T$ is regular, with finite coproducts
 that are disjoint and stable under pullback. Every monomorphism
 of $\mathcal B_T$ has a partial inverse in $\Split(S_T)$.
@@ -120,10 +113,8 @@ We prove the remaining claims in $\mathcal P_T$.
 The predicate $x=0$ is terminal: the unique morphism to it from
 $C$ has graph $C(x)\land y=0$.
 A product of $C$ and $D$ is represented by
-\[
- C(\pi_0z)\land D(\pi_1z),
-\]
-with its numerical projections. If $\Gamma:A\to C$ and
+$C(\pi_0z)\land D(\pi_1z)$ with its numerical projections.
+If $\Gamma:A\to C$ and
 $\Delta:A\to D$, their pairing has graph
 \[
  \exists x\exists y\,
@@ -249,10 +240,8 @@ together with the displayed injectivity statement, prove
 \]
 Here $[R_\Gamma]_T$ denotes the partial identity on the predicate
 $R_\Gamma$, regarded as a partial endomorphism of the split object
-presented by $D$. Thus every monomorphism has a partial inverse.
-Moreover, the corestriction $C\to R_\Gamma$ is an isomorphism,
-with the same transposed relation as its total inverse. This proves
-the assertion about subobjects and completes the proof.
+presented by $D$. The corestriction $C\to R_\Gamma$ is an isomorphism,
+with the same transposed relation as its total inverse.
 \end{proof}
 
 In particular, there is a restriction equivalence
@@ -312,8 +301,8 @@ disjoint images. For example, encode the empty sequence by $0$
 and $(a,w)$ by $1+\langle a,w\rangle$. The tail code is smaller
 than the nonempty sequence code, so bounded traversal defines the
 sequence operations and induction in $\PA$ proves their equations.
-All displayed arithmetical implications and equivalences in this
-subsection are understood to be universally quantified.
+All arithmetical implications and equivalences in this subsection
+are understood to be universally quantified.
 
 \begin{lemma}[Finite membership conditions]
 \label{lem:st-finite-sigma1}
@@ -332,17 +321,14 @@ For a sequence code $a$, use a coded sequence of witnesses:
                   C_0(a_i,b_i)\bigr).
 \]
 Reading the entries proves the reverse implication. For the forward implication,
-induction on the length constructs a sequence of witnesses by
-appending one witness at a time. This is an instance of induction in $\PA$.
+induction in $\PA$ on the length constructs a sequence of witnesses by
+appending one witness at a time.
 For finitely many tags, record the appropriate witness in each
 position and use the corresponding finite case distinction.
 \end{proof}
 
 Fix a nonnegative integer $d$ and objects
-\[
- V,\quad \Sigma_0,\ldots,\Sigma_d,\quad
- \Pi_0,\ldots,\Pi_d
-\]
+$V,\Sigma_0,\ldots,\Sigma_d,\Pi_0,\ldots,\Pi_d$
 of $\mathcal B_T$, represented by $\Sigma_1$ carrier formulas with
 the same letters. Numerical equality gives decidable equality on
 $V$: on the source $V\times V$, the Boolean test is true precisely
@@ -351,7 +337,7 @@ complement are therefore represented by the predicates
 $V(x)\land V(y)\land x=y$ and
 $V(x)\land V(y)\land x\ne y$, respectively.
 
-We choose codes for raw, finite, ordered syntax trees as follows.
+We choose codes for finite ordered syntax trees as follows.
 A code is a canonical sequence of node records in postfix order.
 A record contains one of the finitely many constructor tags and,
 when the constructor has a label, that numeric label. Its ordered
@@ -378,12 +364,9 @@ quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
 formulas $\Sigma_1$: membership witnesses are existentially
 quantified and are not components of a syntax code.
 The constructor decomposition equivalences for these carrier
-formulas are provable in $\mathrm{PA}$. For example, the universal
-constructor has the equivalence
-\[
- \operatorname{Fm}(\operatorname{all}(x,a))
-       \longleftrightarrow V(x)\land\operatorname{Fm}(a),
-\]
+formulas are provable in $\mathrm{PA}$. For example,
+$\operatorname{Fm}(\operatorname{all}(x,a))
+\longleftrightarrow V(x)\land\operatorname{Fm}(a)$,
 where $\operatorname{all}$ is the numerical universal-quantifier
 constructor. The corresponding equivalences for a function or relation
 constructor include its coefficient-carrier predicate and the
@@ -408,7 +391,7 @@ $K:\mathcal B_T^2\to\mathcal B_T^2$ defined by
  \right)
 \]
 has an initial algebra in $\mathcal B_T^2$, with carriers
-$\Tm$ and $\Fm$ as constructed above. This algebra is stable
+$\Tm$ and $\Fm$. This algebra is stable
 under parameters in the sense of Appendix~\ref{app:syntax-theories}: for every object $P$,
 its pullback to $(\mathcal B_T/P)^2$ is initial for $K_P$.
 \end{proposition}
@@ -449,11 +432,10 @@ are decidable checks on the recorded traces. Existentially
 quantifying over the entire record therefore gives a
 $\Sigma_1$ formula.
 
-The following is an induction proof in $T$. Induct simultaneously
-for terms and formulas on the number of nodes. Its assertion is
-that every valid input of size at most $n$, with every parameter
-satisfying $P$, has exactly one evaluation value, of the required
-sort and over that parameter. At a variable or nullary constructor,
+Simultaneous induction in $T$ on node count $n$ proves that every
+valid input of size at most $n$, with every parameter satisfying $P$,
+has exactly one evaluation value of the required sort over that
+parameter. At a variable or nullary constructor,
 the corresponding algebra operation is total on the input
 predicate. At any other constructor, its unique decomposition gives
 children of smaller size. The induction hypothesis supplies their
@@ -546,7 +528,7 @@ provable in $\PA$. Restricting each graph to its source predicate
 gives a morphism of $\mathcal B_T$. These are the morphisms
 constructed there by parameterized initiality. In particular, the
 subobject $\Adm$ is the free-for substitution domain on
-these raw named-variable codes, represented by a complemented
+these named-variable codes, represented by a complemented
 subobject in $\mathcal B_T$.
 \end{proposition}
 \begin{proof}
@@ -600,8 +582,8 @@ computed option value for its body. The algorithm returns
 \]
 Here $x\notin\FV(\varphi)$ abbreviates failure of the numerical
 list-membership test, and the other occurrence assertions have the
-same meaning. The tests use numerical membership and equality. The first branch uses the original body, even if
-the recursive computation for that body has failed. This is exactly
+same meaning. The first branch uses the original body, even if
+the recursive computation for that body has failed. These branches give
 the quantified-constructor equation in Appendix~\ref{app:syntax-theories}.
 
 The traversal is primitive recursive: it runs through the finite
@@ -628,7 +610,7 @@ free-for condition. At a quantifier, this condition is
         \text{ or }y\notin\operatorname{FV}(t))\ \land\
    \operatorname{Adm}(\varphi,x,t)\bigr).
 \]
-The success value satisfies the usual substitution equation on
+The success value satisfies the substitution equation on
 each such branch.
 
 Finally, simultaneous induction in $\mathrm{PA}$ proves identity
@@ -638,8 +620,8 @@ formula. With $y\ne x$, identity substitution passes the capture
 test because $\operatorname{FV}(\eta x)=[x]$; absence of $x$
 passes it because deletion of the distinct variable $y$ does not
 remove $x$. The induction hypothesis supplies successful unchanged
-results for the bodies in both cases. These are exactly the
-source-restricted graph equations asserted at the end of
+results for the bodies in both cases. These are the
+source-restricted graph equations at the end of
 Appendix~\ref{app:substitution}.
 \end{proof}
 
@@ -650,10 +632,8 @@ Appendix~\ref{app:substitution}.
 Let $\operatorname{fv}_{\Fm}(z)$ denote the numerical free-variable
 list function just constructed. Since $0$ codes the empty list,
 the predicate
-\[
- \operatorname{Sent}(z)\equiv
- \operatorname{Fm}(z)\land\operatorname{fv}_{\Fm}(z)=0
-\]
+$\operatorname{Sent}(z)\equiv
+\operatorname{Fm}(z)\land\operatorname{fv}_{\Fm}(z)=0$
 presents the sentence object
 $S=(\omega,[\operatorname{Sent}]_T)$. Its inclusion into $\Fm$
 is represented by the identity on sentence codes. This is the
@@ -678,12 +658,10 @@ Choose $\Sigma_1$ formulas $F(z)$ and $R_n(r)$ for the displayed
 objects and indices $u_n,v_n$ for $p_n,q_n$, respectively.
 The nullary product is represented by the singleton code $0$.
 
-First fix codes for finite ordered trees in which a node of arity
-$n\leq N$ has a numerical label $r$.  Write
-\[
- \operatorname{node}_n(r,d_1,\ldots,d_n)
-\]
-for the constructor.  These constructors can be chosen injective,
+Fix codes for finite ordered trees in which a node of arity
+$n\leq N$ has a numerical label $r$. Write
+$\operatorname{node}_n(r,d_1,\ldots,d_n)$ for the constructor.
+These constructors can be chosen injective,
 with pairwise disjoint images, and so that each $d_j$ is smaller
 than the resulting code.  For example, use
 $1+\langle n,\langle r,\operatorname{tuple}_n(d_1,\ldots,d_n)
@@ -719,10 +697,8 @@ to its existential quantifiers; a derivation code records only
 its rule labels and ordered children.
 
 For a tree $d$ whose root has arity $n$ and label $r$, put
-\[
- C(d,z)\ \equiv\ P(d)\land G_{v_n}(r,z).
-\]
-More precisely, this is the finite disjunction over $0\leq n\leq N$
+$C(d,z)\equiv P(d)\land G_{v_n}(r,z)$.
+This abbreviates the finite disjunction over $0\leq n\leq N$
 using the primitive-recursive root projections.
 The $T$-provable totality of $q_n$ on $R_n$ shows that
 $T$ proves $P(d)\to\exists!z\,C(d,z)$ and
@@ -757,8 +733,8 @@ its conclusion is $q_n(r)$ on this summand.
 
 Let $\alpha:H(Q,q)\to(Q,q)$ be any algebra in this slice.
 Represent $Q$ by $Q(y)$, $q$ by an index $b$, and $\alpha$ by
-an index $a$.  We construct its fold without assuming that
-$a$ is total on all numerical inputs.
+an index $a$. The graph $G_a$ is $T$-provably total on the
+carrier of $H(Q,q)$.
 
 Define $E_a(d,y)$ to assert that $d$ is a tree and there is a
 finite list of values, one for each node occurrence, whose root
@@ -786,9 +762,6 @@ for trees $d_1,\ldots,d_n$,
  \right).
  \notag
 \end{align}
-In particular, all witnesses on the right can be combined into
-one evaluation list on the left; restricting a list gives the
-reverse implication.
 
 Induction on the numerical tree code now proves in $T$ that
 each $d$ satisfying $P(d)$ has an evaluation $y$ in $Q$, and
@@ -846,12 +819,9 @@ and nonlogical axioms and closed under generalization and modus
 ponens. The sentence pullback of this image is the least sentence
 theory containing $A$.
 
-Use the displayed sentence predicate, and choose the derivation
+Use the sentence predicate above, and choose the derivation
 predicate $P_A(p)$ and conclusion index $e_A$ furnished by the
-construction. Put
-\[
- \operatorname{Th}_A(z)\equiv\exists p\,G_{e_A}(p,z).
-\]
+construction. Put $\operatorname{Th}_A(z)\equiv\exists p\,G_{e_A}(p,z)$.
 Then the restriction idempotent
 \[
  t_A=[\operatorname{Sent}(z)\land\operatorname{Th}_A(z)]_T:
@@ -881,10 +851,7 @@ construction following it give the two leastness assertions.
 
 The original morphism $[e_A]_T:\omega\rightharpoonup\omega$
 has restriction $[P_A]_T$ and range $[\operatorname{Th}_A]_T$.
-The graph
-\[
- G_{e_A}(p,z)\land\operatorname{Sent}(z)
-\]
+The graph $G_{e_A}(p,z)\land\operatorname{Sent}(z)$
 is $\Sigma_1$ and PA-provably functional. By
 Lemma~\ref{lem:syntactic-functional-search} it has a program
 index $e_{A,S}$ with PA-provably equivalent graph.

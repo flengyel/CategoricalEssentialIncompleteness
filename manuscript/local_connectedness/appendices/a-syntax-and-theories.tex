@@ -36,7 +36,6 @@ For $X\in\mathcal D$, write $X^0=1$, $X^1=X$, and
 $X^{n+1}=X^n\times X$ for $n\geq1$.
 For $f:X\to Y$, the morphism $f^n:X^n\to Y^n$ is the corresponding
 product morphism, with $f^0=1_1$ and $f^1=f$.
-Thus powers of objects denote finite products.
 
 Put $\Two=1+1$, with injections
 $\mathbf{f},\mathbf{t}:1\to\Two$. Pulling this coproduct back along
@@ -49,14 +48,13 @@ $\Two$. Decomposing each copy as $1+1$ gives the isomorphism
           \langle\mathbf{t},\mathbf{t}\rangle]:
           1+1+1+1\xrightarrow{\cong}\Two\times\Two.
 \]
-Define the Boolean morphisms by
+Define $\neg_2=[\mathbf{t},\mathbf{f}]:\Two\to\Two$ and
+$\wedge_2,\vee_2:\Two\times\Two\to\Two$ by
 \[
- \neg_2=[\mathbf{t},\mathbf{f}]:\Two\to\Two,\qquad
  \wedge_2=[\mathbf{f},\mathbf{f},\mathbf{f},\mathbf{t}]\gamma^{-1},
  \qquad
- \vee_2=[\mathbf{f},\mathbf{t},\mathbf{t},\mathbf{t}]\gamma^{-1},
+ \vee_2=[\mathbf{f},\mathbf{t},\mathbf{t},\mathbf{t}]\gamma^{-1}.
 \]
-where $\wedge_2,\vee_2:\Two\times\Two\to\Two$.
 For $\mathbf{a},\mathbf{b}$ each equal to one of the injections
 $\mathbf{f},\mathbf{t}$, let $j_{\mathbf{a}\mathbf{b}}:1\to1+1+1+1$
 denote the corresponding summand injection. The definition of $\gamma$ gives
@@ -115,10 +113,8 @@ pullback along $\mathbf{t}$; write $[p=\mathbf{f}]\hookrightarrow X$ for its
 pullback along $\mathbf{f}$.
 Denote these inclusions by $i_{\mathbf{t}}$ and $i_{\mathbf{f}}$.
 The coproduct hypotheses give the isomorphism
-\[
- \delta_p=[i_{\mathbf{t}},i_{\mathbf{f}}]:
- [p=\mathbf{t}]+[p=\mathbf{f}]\xrightarrow{\cong}X.
-\]
+$\delta_p=[i_{\mathbf{t}},i_{\mathbf{f}}]:
+[p=\mathbf{t}]+[p=\mathbf{f}]\xrightarrow{\cong}X$.
 For branches $f,g:X\to Y$, define the conditional by
 \[
  \mathsf{if}(p;f,g)=
@@ -193,7 +189,7 @@ the respective summands. Product and coproduct laws give the
 functor laws.
 
 \begin{definition}\label{def:categorical-syntax}
-A raw named-variable syntax object is an initial $K$-algebra
+A named-variable syntax object is an initial $K$-algebra
 $\iota:K(\Tm,\Fm)\to(\Tm,\Fm)$ stable under parameters.
 We also require a list object $W=\List V$, given by an initial
 algebra $[\nil,\cons]:1+V\times W\to W$ stable under parameters.
@@ -306,9 +302,7 @@ In $(\mathcal D/E)^2$, use the carriers
 The first component of each pair records the original expression.
 Define a $K_E$-algebra as follows, retaining the same parameter
 $(x,t)$ in every operation. At a variable $v$, the pair is
-\[
- (\eta v,\mathsf{if}(\epsilon(v,x);t,\eta v)).
-\]
+$(\eta v,\mathsf{if}(\epsilon(v,x);t,\eta v))$.
 At a function symbol, apply its constructor separately to the
 original term components and the substituted term components.
 At equality and relation symbols, reconstruct the original formula
@@ -337,11 +331,9 @@ In particular, the branch $y=x$ uses the original body and discards
 its substitution result.
 
 \begin{proposition}\label{prop:categorical-substitution}
-Parameterized initiality determines morphisms
-\[
- a_T:\Tm\times E\longrightarrow\Tm,
- \qquad b_F:\Fm\times E\longrightarrow O(\Fm).
-\]
+Parameterized initiality uniquely determines morphisms
+$a_T:\Tm\times E\to\Tm$ and
+$b_F:\Fm\times E\to O(\Fm)$.
 Admissibility and formula substitution are defined by the pullback
 \[
 \begin{tikzcd}
@@ -350,8 +342,7 @@ Admissibility and formula substitution are defined by the pullback
  \Fm\times E\arrow[r,"b_F"'] & O(\Fm).
 \end{tikzcd}
 \]
-The monomorphism $j$ is complemented. These morphisms are uniquely
-determined by the preceding algebra and its initial morphism.
+The monomorphism $j$ is complemented.
 \end{proposition}
 \begin{proof}
 The unique $K_E$-algebra morphism into $(X_T,X_F)$ records an original
@@ -393,11 +384,9 @@ $a_T(u,x,t)$. Define
  e_F=\langle\pi_{\Fm},\pi_V,\eta\pi_V\rangle:
           \Fm\times V\to\Fm\times E.
 \]
-Identity substitution satisfies
-\[
- a_Te_T=\pi_{\Tm},\qquad b_Fe_F=\ok_{\Fm}\pi_{\Fm}.
-\]
-The second equality also states admissibility. For substitution at
+Identity substitution satisfies $a_Te_T=\pi_{\Tm}$ and
+$b_Fe_F=\ok_{\Fm}\pi_{\Fm}$; the second equality also states
+admissibility. For substitution at
 an absent variable, use the subobjects
 \begin{align*}
  N_T&=[\mem(x,\FV_{\Tm}(u))=\mathbf{f}]
@@ -426,12 +415,9 @@ Aczel~\cite[Propositions 1.1.4 and 1.4.5]{Aczel} describes finitary
 inductive closure by the conclusions of finite proofs. We express the
 rule presentation in a slice category.
 Let $\mathcal D$ be regular with finite coproducts, and fix an object
-$F$. For an integer $N\geq0$, let
-\[
- p_n:R_n\longrightarrow F^n,\qquad
- q_n:R_n\longrightarrow F\quad(0\leq n\leq N)
-\]
-specify rule instances, their ordered premises, and their conclusions.
+$F$ and an integer $N\geq0$. For $0\leq n\leq N$, morphisms
+$p_n:R_n\to F^n$ and $q_n:R_n\to F$ specify the ordered premises
+and conclusions of the rule instances $R_n$.
 The nullary rule instances specify axioms.
 For an object $q:Q\to F$ of the slice category $\mathcal D/F$,
 form the pullback
@@ -448,10 +434,8 @@ Put
  \kappa_q=[q_na_{n,q}]_{n=0}^N.
 \]
 For a slice morphism $h:(Q,q)\to(Q',q')$, define $B_n(h)$ by
-\[
- a_{n,q'}B_n(h)=a_{n,q},\qquad
- b_{n,q'}B_n(h)=h^n b_{n,q}.
-\]
+$a_{n,q'}B_n(h)=a_{n,q}$ and
+$b_{n,q'}B_n(h)=h^n b_{n,q}$.
 Pullback uniqueness proves the identity and composition laws, so
 $H(h)=\coprod_nB_n(h)$ defines an endofunctor of $\mathcal D/F$.
 
@@ -466,12 +450,12 @@ of formulas for that calculus.
 
 The algebra structure is unique because $m$ is monic. Its nullary
 part includes all axioms, and its other parts express closure under
-the inference rules. Inclusion of closed subobjects is automatically
+the inference rules. An inclusion of closed subobjects is
 an algebra morphism, by composing with the target monomorphism.
 
-The following proof transfers the initial derivation algebra to its
-regular image. This is an instance of lifting a factorization system to
-algebras for an endofunctor preserving its left class; see, for example,
+The proof transfers the initial derivation algebra to its regular image
+by lifting a factorization system to algebras for an endofunctor
+preserving its left class; see
 Wi\ss{}mann~\cite[Lemma 3.6]{Wissmann}.
 
 \begin{theorem}\label{thm:least-theorem-subobject}
@@ -503,14 +487,14 @@ there is a unique diagonal $\alpha$. In particular, $m\alpha=\kappa_m$,
 so the image is closed. If $u:U\hookrightarrow F$ is another
 closed subobject, initiality gives an algebra morphism
 $v:(P,c)\to(U,u)$, hence $uv=c$. The image factorization gives
-a unique $w:T\to U$ with $uw=m$. This is the required inclusion.
+a unique $w:T\to U$ with $uw=m$.
 \end{proof}
 
 \subsection{First-order theories}
 \label{app:first-order-derivations}
 
 Continue with the syntax structure of
-Definition~\ref{def:categorical-syntax} and its constructed substitution.
+Definition~\ref{def:categorical-syntax} and its substitution.
 Put $F=\Fm$. The propositional axiom schemes are those of
 H\'ajek and Pudl\'ak~\cite[0.10, p.~7]{HP}:
 \begin{align}
@@ -567,7 +551,7 @@ and their premise and conclusion morphisms by
              \quad q_2=\pi_2:R_2\to F.
 \end{gather*}
 These are axiom introduction, generalization, and modus ponens.
-All nonlogical axioms are sentences. Let $H_A:\mathcal D/F\to
+Let $H_A:\mathcal D/F\to
 \mathcal D/F$ be the resulting inference endofunctor.
 
 \begin{theorem}\label{thm:first-order-theory}
@@ -624,12 +608,9 @@ $rm=1_I$ and $mr=\bar r$.
 \begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
 Let $\mathcal S$ be a restriction category with ranges in which every
 restriction idempotent splits. Suppose $\mathcal D=\Tot(\mathcal S)$
-is regular, and let
-\[
- f:X\longrightarrow Y,\qquad
- f=me,\qquad e:X\twoheadrightarrow I,\qquad m:I\hookrightarrow Y
-\]
-be a regular-image factorization in $\mathcal D$.
+is regular, and let $f:X\to Y$ have regular-image factorization
+$f=me$ in $\mathcal D$, with $e:X\twoheadrightarrow I$ and
+$m:I\hookrightarrow Y$.
 If $m$ has a partial inverse $r:Y\rightharpoonup I$ in $\mathcal S$,
 then $\ran(f)=mr=\bar r$.
 \end{lemma}
@@ -642,12 +623,8 @@ Then $f=j(sf)$, and $sf:X\to J$ is total, since
 $\overline{sf}=\overline{jsf}=\bar f=1_X$.
 The morphism $j$ is monic in $\mathcal D$, so the universal property
 of the regular image gives a unique $u:I\to J$ with $ju=m$.
-Consequently,
-\[
- am=jsju=ju=m,\qquad a(mr)=mr.
-\]
-Thus $mr\leq a$, proving that $mr$ is the least restriction
-idempotent receiving $f$.
+Consequently, $am=jsju=ju=m$ and $a(mr)=mr$.
+Thus $mr\leq a$, so $mr=\ran(f)$.
 \end{proof}
 
 The relation between split ranges and factorizations through restriction
@@ -674,21 +651,17 @@ If instead $\mathcal D=\Tot(\Split(\mathcal R))$ for a restriction
 category $\mathcal R$ whose restriction splitting has ranges, require
 $m_A$ to have a partial inverse
 $r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$.
-The same lemma gives
-\[
- \ran(c_{A,S})=m_A r_A=\bar r_A.
-\]
-Thus the range represents the constructed sentence theory.
+The same lemma gives $\ran(c_{A,S})=m_A r_A=\bar r_A$.
 
 A functor $G:\mathcal S\to\mathcal S'$ between restriction categories
 with ranges is a \emph{restriction functor} if
 $G(\bar v)=\overline{G(v)}$ for every morphism $v$.
-If it also preserves ranges, then the splitting in
-Lemma~\ref{lem:range-regular-image} satisfies
+If it also preserves ranges, then $G(m)$ and $G(r)$ split
+$\ran(G(f))$, since applying $G$ to the splitting in
+Lemma~\ref{lem:range-regular-image} gives
 \[
  G(m)G(r)=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
 \]
-Hence $G(m)$ and $G(r)$ split the range of $G(f)$.
 
 \subsection{Propositional theories}
 \label{app:propositional-theories}
@@ -701,12 +674,10 @@ ${\Rightarrow}:S^2\to S$. For an axiom subobject
 $i_A:A\hookrightarrow S$, let $L=S^2+S^3+S^2$ and let
 $\lambda:L\to S$ be given by
 \eqref{eq:hilbert-one}--\eqref{eq:hilbert-three}, with $\nu$ for
-negation. Use $R_0=L+A$, $q_0=[\lambda,i_A]$, $R_1=0$, and
-\[
- R_2=S^2,\qquad
- p_2=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2,
- \qquad q_2=\pi_2:S^2\to S.
-\]
+negation. Use $R_0=L+A$, $q_0=[\lambda,i_A]$, and $R_1=0$.
+The binary rule has $R_2=S^2$, premise morphism
+$p_2=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2$, and conclusion
+morphism $q_2=\pi_2:S^2\to S$.
 If the resulting inference endofunctor has an initial algebra,
 Theorem~\ref{thm:least-theorem-subobject} constructs the least
 subobject of $S$ containing the axioms and closed under these rules.

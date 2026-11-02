@@ -1,13 +1,12 @@
 \section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
 
-The diagonal argument compares a pair of source restriction idempotents
-with a disjoint pair in the target category. Lifting a partial morphism
-whose inverse images of the two summand restriction idempotents give the target
-pair in reverse order produces a total source morphism. The inverse images
-of the target pair under its interpretation are both zero.
-Total morphisms that agree with opposite coproduct injections after
-composition with complementary source restriction idempotents give an
-inseparability criterion.
+The diagonal argument compares source restriction idempotents with a
+disjoint target pair. Lifting a partial morphism whose inverse images of
+the summand restriction idempotents give the target pair in reverse order
+produces a total source morphism whose interpretation has zero inverse
+images of both target idempotents. Total morphisms agreeing with opposite
+coproduct injections on complementary source restriction idempotents
+then give an inseparability criterion.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
@@ -47,10 +46,7 @@ $P\vee N$, then $P\vee N\ne1_{FU}$.
 \begin{proof}
 Put $u=b^{-1}\ell:U\rightharpoonup U$. Apply the Turing property
 to $u\pi_2:U\times U\rightharpoonup U$, obtaining a total morphism
-$g:U\to U$ with
-\[
- \tau(g\times1_U)=u\pi_2.
-\]
+$g:U\to U$ with $\tau(g\times1_U)=u\pi_2$.
 Precomposition with $\langle1_U,g\rangle:U\to U\times U$ gives
 $\tau\Delta_Ug=ug$, and therefore $hg=\ell g$.
 
@@ -124,19 +120,14 @@ $[c,c']:U+U\rightharpoonup U$. Its range is
 $c\vee c'=1_U$, so the agreement law for ranges gives
 $\varepsilon_0\ell_c=i_0c'$.
 The same argument gives $\varepsilon_1\ell_c=i_1c$.
-Taking restrictions yields
-\[
- \ell_c^*\varepsilon_0=c',\qquad
- \ell_c^*\varepsilon_1=c.
-\]
+Taking restrictions yields $\ell_c^*\varepsilon_0=c'$ and
+$\ell_c^*\varepsilon_1=c$.
 
 If $c,c'$ separated $a_0,a_1$, put $P=F(c)$ and $N=F(c')$.
 These are complementary target restriction idempotents.
 For the canonical coproduct isomorphism
 $\chi_{U,U}:FU+FU\to F(U+U)$, define
-\[
- s_c=\chi_{U,U}^{-1}F(\ell_c):FU\to FU+FU.
-\]
+$s_c=\chi_{U,U}^{-1}F(\ell_c):FU\to FU+FU$.
 Restriction preservation and the coproduct comparison give
 \[
  s_c^*(1_{FU}+0_{FU})=N,\qquad

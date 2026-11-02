@@ -8,10 +8,7 @@ products and reflects zero morphisms.
 Fix an acceptable numbering $(\varphi_e)_{e\in\N}$ of the ordinary
 partial recursive functions $\N\rightharpoonup\N$. For a partial
 numerical function $f$, write $f(x)\mathord\downarrow$ when $f$ is
-defined at $x$. Put
-\[
- K=\{e:\varphi_e(e)\mathord\downarrow\}.
-\]
+defined at $x$. Put $K=\{e:\varphi_e(e)\mathord\downarrow\}$.
 The set $K$ is not recursive.
 Let $(W_a^K)_{a\in\N}$ enumerate the domains of an acceptable
 numbering of partial functions recursive relative to $K$.
@@ -66,10 +63,7 @@ exist.
 \begin{proof}
 Let $f:X\rightharpoonup Y$ and $g:Y\rightharpoonup Z$ have
 ordinary partial recursive extensions $f_0,g_0$. Their composite has
-extension $g_0f_0$ and domain
-\[
- D_{gf}=D_f\cap f_0^{-1}(D_g).
-\]
+extension $g_0f_0$ and domain $D_{gf}=D_f\cap f_0^{-1}(D_g)$.
 This domain is c.e.\ relative to $K$: enumerate $D_f$, compute the
 corresponding $f_0$-values, and test for their appearance in the
 enumeration of $D_g$, using dovetailing. Identities and associativity
@@ -81,7 +75,7 @@ Cartesian products and tagged copairings preserve the morphism class:
 their domains are respectively products and tagged unions of the given
 domains, and their extensions are the corresponding ordinary partial
 recursive programs. Consequently the set-theoretic restriction
-products and coproducts have their usual universal properties in
+products and coproducts have their universal properties in
 $\mathcal C_K$. Product with a zero morphism is zero, and the chosen
 recursive coding isomorphisms make the category isotypical.
 
@@ -97,9 +91,7 @@ their order corresponds to inclusion, and their finite joins are
 partial identities on unions.
 
 Define $\tau_K:\N\times\N\rightharpoonup\N$ by
-\[
- \tau_K(\langle e,a\rangle,x)\simeq f_{e,a}(x).
-\]
+$\tau_K(\langle e,a\rangle,x)\simeq f_{e,a}(x)$.
 Its domain is c.e.\ relative to $K$, uniformly in all three
 variables, and it has the ordinary partial recursive extension
 $(\langle e,a\rangle,x)\mapsto\varphi_e(x)$.
@@ -108,14 +100,10 @@ $v:\N\times\N\rightharpoonup\N$ be a morphism, with ordinary
 partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
 domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
 for $v_0$ gives an ordinary total recursive function $e:\N\to\N$ with
-\[
- \varphi_{e(z)}(x)\simeq v_0(z,x).
-\]
+$\varphi_{e(z)}(x)\simeq v_0(z,x)$.
 Specializing an oracle program for $D_v$ gives an ordinary total
 recursive function $a:\N\to\N$ with
-\[
- W_{a(z)}^K=\{x:(z,x)\in D_v\}.
-\]
+$W_{a(z)}^K=\{x:(z,x)\in D_v\}$.
 The latter specialization is ordinary recursive because it only
 inserts the finite numeral for $z$ into program code; the oracle is
 used when the resulting program runs. Thus the function
@@ -149,10 +137,7 @@ are the partial identities on the sets
                     \ p(q)\mathord\downarrow\text{ with an odd value}\}.
  \end{aligned}
 \]
-Let
-\[
- A=\{q:p(q)\mathord\downarrow\text{ with an even value}\}.
-\]
+Let $A=\{q:p(q)\mathord\downarrow\text{ with an even value}\}$.
 This is an ordinary c.e.\ set and is decidable relative to $K$.
 For the latter assertion, uniformly construct a program that ignores
 its input, simulates $p(q)$, and halts precisely when the output is

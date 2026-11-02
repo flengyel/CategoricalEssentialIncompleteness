@@ -1,9 +1,9 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-Version 45, 1 November 2026.
+Version 46, 2 November 2026.
 
-[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v45.pdf) ·
-[Source archive](../logical_consequence_v42_source.zip)
+[Manuscript PDF](../logical_consequence_and_essential_incompleteness_v46.pdf) ·
+[Source archive](../logical_consequence_v46_source.zip)
 
 Sections 3 and 4 prove the comparison theorem and its application to internally
 generated sentence theories. Section 5 proves the syntactic realization.

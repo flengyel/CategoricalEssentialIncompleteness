@@ -5,19 +5,16 @@ We use the sequence constructed by Miller
 binary-representation formulation of Bauer and Hanson
 \cite[Section~2.1 and Theorem~2.2]{BauerHanson}.
 
-Let $2^{\N}=\{0,1\}^{\N}$ be the set of infinite binary sequences,
-with the product topology of the discrete space $\{0,1\}$.
-This is Cantor space.
+Let $2^{\N}=\{0,1\}^{\N}$ be Cantor space, the set of infinite binary
+sequences with the product topology of the discrete space $\{0,1\}$.
 Fix a recursive bijection $\langle-,-\rangle:\N^2\to\N$ and an
 acceptable enumeration $(\Phi_e^p)_{e\in\N}$ of partial numerical
 oracle computations, where $p\in2^{\N}$. Tuple inputs and outputs use
 fixed recursive codings. Let $(q_j)_{j\in\N}$ be a recursive enumeration
 of the rationals. An oracle program with index $d\in\N$
 \emph{computes a real $r$ from $p$}
-if $\Phi_d^p(k)$ is defined for every $k$ and
-\[
- |q_{\Phi_d^p(k)}-r|<2^{-k}\qquad(k\in\N).
-\]
+if $\Phi_d^p(k)$ is defined and
+$|q_{\Phi_d^p(k)}-r|<2^{-k}$ for every $k\in\N$.
 Give $Q=[0,1]^{\N}$ its product topology and define
 \[
  \rho:2^{\N}\longrightarrow Q,\qquad
@@ -73,9 +70,7 @@ $2^{\N}\setminus P_z$: if $\rho(q)\ne z$, a sufficiently long initial
 segment of $q$ already forces a different value in one coordinate.
 
 For fixed $e,n,m$, let
-\[
- H_{e,n,m}=\{q\in2^{\N}:\Phi_e^q(n)\mathord\downarrow=m\}.
-\]
+$H_{e,n,m}=\{q\in2^{\N}:\Phi_e^q(n)\mathord\downarrow=m\}$.
 Finite halting computations enumerate this open set as a union of
 cylinders, uniformly in $e,n,m$. For each $m$, search for a finite cover
 of Cantor space by cylinders from $H_{e,n,m}$ and
@@ -144,10 +139,7 @@ Finally, the chosen recursive codings make the category isotypical.
 For $p\in P_a$, let $\mathrm{Rec}^{p}$ be the recursion category on
 the same numerical objects, with partial $p$-recursive functions as
 morphisms. The identity interpretation of partial functions defines a
-faithful range functor
-\[
- J_p:\mathcal E_a\longrightarrow\mathrm{Rec}^{p}.
-\]
+faithful range functor $J_p:\mathcal E_a\to\mathrm{Rec}^{p}$.
 It also preserves restriction products and finite compatible joins.
 Write $\mathcal K_p=\operatorname{Split}(\mathrm{Rec}^{p})$ and let
 $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ be the full inclusion.
@@ -160,17 +152,10 @@ Ranges are the partial identities on images, and total inverse
 images preserve unions of domains of definition.
 
 If $c,c':X\rightharpoonup X$ are complementary restriction
-idempotents in $\mathcal E_a$, run the membership computations for their domains of
-definition in parallel and return the opposite tag when one succeeds.
-Each domain is independent of the representation, the domains are
-disjoint, and their union is the source carrier. Thus exactly one
-computation succeeds for every representation, and its output tag and
-input value are independent of the representation. This gives the total
-source morphism
-\[
- \ell_c=(i_1c)\vee(i_0c'):X\longrightarrow X+X.
-\]
-It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+idempotents in $\mathcal E_a$, Propositions~\ref{prop:miller-category}
+and~\ref{prop:disjoint-joins} give a total morphism
+$\ell_c:X\to X+X$ with $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$,
+where $i_0,i_1:X\to X+X$ are the coproduct injections.
 Since $(I_pJ_p)(1_{\N})\ne0$, each composite
 $I_pJ_p$ satisfies the hypotheses of Corollary~\ref{cor:source-conditionals}.
 Using the recursive bijection $b:\N\to\N+\N$ which assigns the tag
@@ -185,11 +170,8 @@ restriction idempotents that are the partial identities on the sets
 \subsection{The index sets below and above \texorpdfstring{$1/2$}{1/2}}
 \label{sec:miller-cuts}
 
-Define
-\[
- L_a=\{n:a(n)<\tfrac12\},\qquad
- R_a=\{n:a(n)>\tfrac12\}.
-\]
+Define $L_a=\{n:a(n)<\tfrac12\}$ and
+$R_a=\{n:a(n)>\tfrac12\}$.
 Their partial identities belong to $\mathcal E_a$, since strict
 inequalities can be recognized from approximations obtained from any
 binary representation of $a$.
@@ -204,10 +186,7 @@ There is an ordinary total recursive map $h:\N\to\N$ such that
 For $e,m,t\in\N$, let $H_{e,m,t}$ be the finite union of halting
 cylinders enumerated by stage $t$ for the computation
 $\Phi_e^q(e)\mathord\downarrow=m$. Choose these finite unions increasing
-in $t$, and put
-\[
- K_{e,m,t}=\rho(2^{\N}\setminus H_{e,m,t})\subseteq Q.
-\]
+in $t$, and put $K_{e,m,t}=\rho(2^{\N}\setminus H_{e,m,t})\subseteq Q$.
 Each $K_{e,m,t}$ is a computably specified finite union of closed dyadic
 boxes. Compactness of $P_z$ gives
 \begin{align*}
@@ -232,11 +211,8 @@ Distance to a nonempty finite union is the minimum of these distances.
 Define $\delta_{e,m,t}:Q\to[0,1]$ by
 $\delta_{e,m,t}(z)=d(z,K_{e,m,t})$ when $K_{e,m,t}$ is nonempty, and
 $\delta_{e,m,t}(z)=1$ when it is empty. These functions are uniformly
-computable and continuous, and
-\[
- \delta_{e,m,t}(z)>0\quad\Longleftrightarrow\quad
- z\notin K_{e,m,t}.
-\]
+computable and continuous, and $\delta_{e,m,t}(z)>0$ exactly when
+$z\notin K_{e,m,t}$.
 For each $i$, take a fixed recursive enumeration
 $(m_j,t_j)_{j\geq0}$ of all pairs with $m_j\equiv i\pmod2$, and define
 \[
@@ -264,9 +240,7 @@ with
 The oracle parameter theorem gives a total recursive $h$ such that
 $\Phi_{h(e)}^p(k)=\Psi^p(e,k)$. For $p\in P_a$ these computations
 represent the same real $r_e(a)$, so the Miller property gives
-\[
- a(h(e))=r_e(a).
-\]
+$a(h(e))=r_e(a)$.
 Together with $a\in U_e^i\Longleftrightarrow e\in A_i$, this proves
 the asserted inverse-image equalities.
 \end{proof}
@@ -282,9 +256,7 @@ $1_{L_a},1_{R_a}$, their inverse images under $h$ would separate
 $1_{A_0},1_{A_1}$, contrary to
 Corollary~\ref{cor:source-conditionals} as applied above.
 For a fixed binary representation $p\in P_a$, the set
-\[
- C_p=\{n:p(\langle n,0\rangle)=0\}
-\]
+$C_p=\{n:p(\langle n,0\rangle)=0\}$
 is $p$-decidable and satisfies $L_a\subseteq C_p$ and
 $C_p\cap R_a=\varnothing$. At $a(n)=1/2$, either first binary digit
 is allowed. Thus the single program reading that digit produces a
@@ -312,11 +284,9 @@ For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
 a morphism $D\rightharpoonup E$ is represented by
 a morphism $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
 $f=1_Ef1_D$; it is total when $\bar f=1_D$.
-All code operations below are restricted to their indicated carriers.
-
 Put $\mathcal D_a=\operatorname{Tot}(\operatorname{Split}(\mathcal E_a))$.
-The following realization permits us to apply the categorical theory
-construction of Appendix~\ref{app:syntax-theories}.
+To apply the theory construction of Appendix~\ref{app:syntax-theories},
+we realize its hypotheses in $\mathcal D_a$.
 
 \begin{proposition}\label{prop:miller-theory-realization}
 The category $\mathcal D_a$ is regular, with finite coproducts that
@@ -463,10 +433,7 @@ For a theory $T$ with an $\mathcal E_a$-semidecidable axiom set,
 let $A_T\hookrightarrow S$ be its axiom subobject. By
 Proposition~\ref{prop:miller-theory-realization}, the inference
 endofunctor $H_{A_T}$ has an initial derivation algebra. Pull its
-conclusion morphism back to $S$, obtaining
-\[
- c_T:\mathrm{Prf}_T\to S.
-\]
+conclusion morphism back to $S$, obtaining $c_T:\mathrm{Prf}_T\to S$.
 Theorem~\ref{thm:first-order-theory} identifies its image with the
 sentence theory generated by $A_T$. The realization proposition
 supplies a partial inverse for this image monomorphism in
@@ -494,5 +461,5 @@ Theorem~\ref{thm:first-order-theory} gives $t_{T_a}\le t_T$,
 while consistency gives $t_T\nu^*t_T=0_S$.
 Corollary~\ref{cor:domain-incompleteness} therefore makes
 $t_T,\nu^*t_T$ inseparable and gives
-$t_T\vee\nu^*t_T\ne1_S$. This is incompleteness of $T$.
+$t_T\vee\nu^*t_T\ne1_S$.
 \end{proof}

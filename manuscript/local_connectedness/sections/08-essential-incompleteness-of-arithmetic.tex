@@ -28,10 +28,7 @@ Thus $P_\Gamma$ is obtained by pulling back the full conclusion
 morphism along $S\hookrightarrow\Fm$.
 Choose its conclusion index $e_{\Gamma,S}$
 as in Theorem~\ref{thm:syntactic-generated-theory}, and put
-\[
- \operatorname{Prov}_\Gamma(z)
-   \equiv\exists p\,G_{e_{\Gamma,S}}(p,z).
-\]
+$\operatorname{Prov}_\Gamma(z)\equiv\exists p\,G_{e_{\Gamma,S}}(p,z)$.
 This predicate is $\Sigma_1$ and implies
 $\operatorname{Sent}(z)$ in PA. The morphism on $\omega$
 representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$;
@@ -89,9 +86,7 @@ these functions abbreviate their PA-provably total graph definitions.
 \label{lem:arithmetic-diagonal-representation}
 There is a total morphism
 $\theta:\omega\to S$ in $\mathcal B_{\PA}$ such that
-\[
- (G_{\N}\theta)(n)=\ulcorner\alpha(\bar n)\urcorner.
-\]
+$(G_{\N}\theta)(n)=\ulcorner\alpha(\bar n)\urcorner$.
 Suppose that every axiom of PA is derivable from the c.e.\
 sentence set $\Gamma$. For every $M\equiv\N$, the following
 inequalities hold in $\Pfn$:
@@ -113,15 +108,12 @@ Proposition~\ref{prop:st-substitution-realization} therefore gives
 the stated total morphism $\theta$.
 
 PA-provable functionality of $G$ and disjointness of even and odd
-numbers give
-\[
- \PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x)).
-\]
+numbers give $\PA\vdash\forall x\,\neg(\alpha(x)\land\beta(x))$.
 If $n\in D_0$, a finite computation trace ending in an even
 output can be verified by a finite PA-proof. Introducing its
 existential witnesses gives $\PA\vdash\alpha(\bar n)$.
 If $n\in D_1$, the same argument gives a PA-proof of
-$\beta(\bar n)$; the displayed disjointness theorem then gives
+$\beta(\bar n)$; the disjointness theorem then gives
 a PA-proof of $\neg\alpha(\bar n)$.
 The hypothesis on $\Gamma$ makes both proofs available from
 $\Gamma$, since each uses only finitely many PA-axioms.
@@ -135,7 +127,7 @@ universal closures of
 \]
 are true in $\N$.
 These two sentences hold in every $M\equiv\N$.
-Interpreting their predicates gives exactly the two claimed
+Interpreting their predicates gives the two claimed
 inequalities, because $\widehat F_M$ preserves the range of
 $c_\Gamma$ and the indicated inverse images.
 \end{proof}
@@ -176,10 +168,7 @@ gives an index $a_R$ for which PA proves
  G_{a_R}(x,z)\longrightarrow R(x,z),\qquad
  \exists z\,G_{a_R}(x,z)\longleftrightarrow C(x)\lor C'(x).
 \]
-Set $\ell_\Gamma=[a_R]_{\PA}$, with the displayed source and
-target. The search tests the two proof predicates by increasing
-finite bounds and fixes a priority if both first succeed at the
-same stage.
+Set $\ell_\Gamma=[a_R]_{\PA}:\omega\rightharpoonup\omega+\omega$.
 
 In a model where $C,C'$ are disjoint, $R$ is functional. If
 $M\models R(x,z)$, the second displayed equivalence supplies
@@ -223,10 +212,8 @@ Lemma~\ref{lem:arithmetic-diagonal-representation} gives the
 two reduction inequalities. Lemma~\ref{lem:arithmetic-proof-search}
 gives the partial conditional and its source lift.
 The theorem therefore proves that the join of the two interpreted
-restriction idempotents is not the identity, and also gives
-\[
- t_\Gamma\vee\nu^*t_\Gamma\ne1_S.
-\]
+restriction idempotents is not the identity, and gives
+$t_\Gamma\vee\nu^*t_\Gamma\ne1_S$.
 For $M=\N$, it supplies a total morphism $g:\omega\to\omega$
 in $S_{\PA}$. With $\gamma=F_{\N}(g)$, the two inverse-image
 equalities in that theorem become
@@ -253,9 +240,7 @@ Choose a c.e.\ sentence presentation $\Gamma$ of the extension.
 Suppose a recursive set $R\subseteq\N$ contains
 $\mathsf{Th}_\Gamma$ and is disjoint from
 $\mathsf{Ref}_\Gamma$. The recursive set
-\[
- C=\{n\in\N:\Theta(n)\in R\}
-\]
+$C=\{n\in\N:\Theta(n)\in R\}$
 contains $D_0$ and is disjoint from $D_1$, by
 Lemma~\ref{lem:arithmetic-diagonal-representation}.
 Let $P,N$ be the complementary partial identities on $C$ and
@@ -270,8 +255,7 @@ Corollary~\ref{cor:separator}, applied to $F_{\N}$, gives a
 contradiction. The lift is used as a partial source morphism;
 its totality in $S_{\PA}$ is not required.
 
-The same argument applies to every consistent c.e.\ extension.
-If such a theory were complete, its theorem and refutation
+If a consistent c.e.\ extension were complete, its theorem and refutation
 sets would be disjoint c.e.\ sets covering the recursive
 sentence carrier. On a sentence code, parallel enumeration of
 the two sets would decide membership in the theorem set;
@@ -312,10 +296,6 @@ The inclusions $A\subseteq P_T$ and $B\subseteq N_T$ give the morphism
 $1_\omega:(\omega,A,B)\to(\omega,P_T,N_T)$ in this category.
 A recursive separator pulls back along a total recursive function;
 consequently $P_T,N_T$ are recursively inseparable.
-
-
-
-
 
 Bernardi's numerical argument uses a precomplete equivalence
 relation $R$ on $\N$: for every partial recursive function $f$

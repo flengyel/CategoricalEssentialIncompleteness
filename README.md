@@ -1,8 +1,8 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 45](manuscript/logical_consequence_and_essential_incompleteness_v45.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 46](manuscript/logical_consequence_and_essential_incompleteness_v46.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
-[source archive](manuscript/logical_consequence_v42_source.zip), 1 November 2026).
+[source archive](manuscript/logical_consequence_v46_source.zip), 2 November 2026).
 
 Section 3 proves the comparison theorem for lifted partial conditionals;
 Section 4 applies it to interpreted sentence theories. Section 5 realizes
@@ -26,6 +26,8 @@ comparison lead to essential incompleteness. The historical discussion states Di
 recursion theory and compares the constructions and conclusions of Bernardi,
 Cockett, and Ramesh. The [source directory guide](manuscript/local_connectedness/README.md)
 lists the files and build command.
+The [version 46 prose and consolidation review](Audit/2026-11-02-prose-consolidation-v46/README.md)
+records the removal of repeated arguments and the inline-formula revision.
 
 The [theorem-and-proof plan](Plans/comparison_soundness_paper_plan_v2.pdf)
 and [version 20 reviews](Audit/2026-11-01-comparison-v20/README.md)

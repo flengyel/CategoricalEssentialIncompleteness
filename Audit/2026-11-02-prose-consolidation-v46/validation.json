@@ -1,0 +1,55 @@
+{
+  "version": 46,
+  "date": "2 November 2026",
+  "source_file_count": 23,
+  "changed_tex_file_count": 19,
+  "pdf_pages": 74,
+  "previous_pdf_pages": 78,
+  "unnumbered_display_blocks": {
+    "v45": 325,
+    "v46": 244
+  },
+  "source_matches_final_invariants": true,
+  "archive_members_match_frozen_sources": true,
+  "labels_citation_keys_and_numbered_equations_preserved": true,
+  "latex_warnings": [],
+  "visual_check": "All 74 pages checked in seven contact sheets; critical pages checked at full resolution. No layout issue found.",
+  "review_scope": "Whole-manuscript prose and display review and verification of the consolidated arguments; no fresh complete mathematical or bibliographic certification.",
+  "binaries": {
+    "output/manuscript/logical_consequence_and_essential_incompleteness_v46.pdf": {
+      "size": 855681,
+      "sha256": "4f695929b8887e6c0a663bd6e6ef00d41ce3a074b91b4bfb2e4cff40baf5917b",
+      "git_blob_sha": "7c12b1f7a429d436535235b148e703482fcb3fc7"
+    },
+    "output/manuscript/logical_consequence_v46_source.zip": {
+      "size": 109439,
+      "sha256": "4a327a0adbfaaf6d2b13ea8ad0bc9df5b695fa6b324137189a4ece855b09ebd8",
+      "git_blob_sha": "6df09cc6a653093d8441834c90fcfe085e18bd95"
+    }
+  },
+  "sources": {
+    "README.md": "5006cdd003141dab19a22d47d43534d8ffd82d1d310d9ab1af3d2aa22b23beb6",
+    "abstract.tex": "fb8d0a45696f2e196ca68783672b9940bdb7a278e5f670fab85d6aa76bc1ac3d",
+    "appendices/a-syntax-and-theories.tex": "56f88f8551636f6834903bd5755ed6790fb2626850228b34c90fb2a96becb3a5",
+    "appendices/b-three-point-cosheaves.tex": "31518df9cb7ce1198214b916ccd050e55516b43efb66d22ea6ae9671da8eed11",
+    "appendices/c-section-lifting.tex": "d7669ba13482c8868c2e28e6b26530a562921d4bbe0c3c9f861430d66760ca99",
+    "appendices/d-faithful-family.tex": "6fec4566ac0043b9608069959d65c823c6d41e390c084689e29809ff89721504",
+    "bibliography.tex": "fd73af8ebe4a47b02ea2be9af6c9ff81b129f9a6df5b3d300156ebea0a6e00f0",
+    "main.tex": "06a09303973295b0478aeee4db9b2e5104f30cbc3f150eaaf3d1b3174f16117f",
+    "preamble.tex": "734451f966a695d9b1ff9eec6da0bd0ad5d9dd0aaf2a1ba04ec8aa5865ef59dd",
+    "sections/01-introduction.tex": "6f7137531455ff792eac888d52a566ba744c304f8add9fb9976daa29a373d58a",
+    "sections/02-categorical-preliminaries.tex": "95a4df0f58e3e700cd12e79553ec4f000ccfbcff8ccb76c021dfecd0fb9fb186",
+    "sections/03-sections-and-inseparability.tex": "3ff38ef3484025ed42aeefa4818d74e5931138e8d1e925aee804db9e091e63e9",
+    "sections/03a-internal-theories.tex": "b1d2f4e40414b1768c9c71032737e953f650a610de95ec82f395464220dfac94",
+    "sections/04-miller-sequences.tex": "b46019d453afcfdd369d6893c78b50f1454ca33de07cf5e0637eaedffd6c8223",
+    "sections/05-syntactic-recursion-category.tex": "610b4d910cc631bacf82b32d13be4b64dc4fe47239631f7fd73edad4bcfc38db",
+    "sections/05a-internal-syntax.tex": "96aad8b4112f9544daec5ae9ce2f12859506666ec04923aa375ebb0bf39f4681",
+    "sections/06-interpretation-in-models.tex": "3e2ee1560d73dd4489b4bbb277d0a49299b8d62ddc6efb0acaf8f8e9af16d12c",
+    "sections/08-essential-incompleteness-of-arithmetic.tex": "2195ef85ce1bb786de48cc9dd1a89f21369225a24c144525211e21fbfabc6fc2",
+    "sections/08a-uniform-theories.tex": "61282892efcd5d2d721645a10e247f0d1ea3a1bcb96628f82a66cc74d2d61448",
+    "sections/08b-uniform-independent-sentences.tex": "22c69bca301dd329cffc55eab9882596395db08d88d7f1ff02d133edc95c1942",
+    "sections/08c-numerical-realization.tex": "6d830ce3109f02ff878c2d2823a4600db9dce8e294e628f6722369bb8a625e84",
+    "sections/08d-numerical-incompleteness.tex": "ed9bbfdf573575aaeec4c270518858d6465199434b162fc0f79445278939be34",
+    "sections/09-three-point-space.tex": "6914fb65baba67f04bdcc2dfdb3730c2c01f72cbd011ab93f3d0031ca0e9165b"
+  }
+}
