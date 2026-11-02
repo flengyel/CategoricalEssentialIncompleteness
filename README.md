@@ -1,6 +1,6 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 43](manuscript/logical_consequence_and_essential_incompleteness_v43.pdf)
+The current manuscript is [Logical consequence and essential incompleteness in recursion categories, version 44](manuscript/logical_consequence_and_essential_incompleteness_v44.pdf)
 ([LaTeX source](manuscript/local_connectedness/main.tex),
 [source archive](manuscript/logical_consequence_v42_source.zip), 1 November 2026).
 

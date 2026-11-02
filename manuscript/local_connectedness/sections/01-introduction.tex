@@ -172,10 +172,32 @@ sentences as part of a categorical formulation of incompleteness
 \cite[pp.~594--595]{DPH}. Local connectedness enters Heller's existence
 theorem for recursion categories \cite[Sections 8--9]{Heller}.
 Di Paola and Montagna's syntactic examples led to the question of
-extending that theorem beyond locally connected sources \cite{DPM}.
+extending that theorem beyond locally connected categories \cite{DPM}.
 Lengyel proved existence theorems using faithful iteration functors
-\cite{Lengyel2004,Corrections}. The present criterion concerns
-inseparability in a source already equipped with a Turing morphism.
+\cite{Lengyel2004,Corrections}.
+The comparison for internal theories here starts with a range functor
+$F:\mathscr R\to\mathcal A$ from a recursion category $\mathscr R$
+to a split restriction category $\mathcal A$. These are the source and
+target categories of $F$, respectively; the Turing morphism in
+$\mathscr R$ is part of the hypotheses.
+
+The extension $\widehat F:\Split(\mathscr R)\to\mathcal A$
+interprets the internal sentence theories in the target category.
+When the validity subobject is disjoint from its inverse image under negation,
+soundness gives disjoint interpreted theorem and refutation restriction
+idempotents (Proposition~\ref{prop:interpreted-theory}). Under the reduction and lifting
+hypotheses of Theorem~\ref{thm:logical-comparison}, this gives
+incompleteness both of the interpreted theory in $\mathcal A$ and
+of the internal theory in $\Split(\mathscr R)$.
+For the arithmetic comparison, let $M$ be the standard model of
+arithmetic on $\N$ or an ultrapower of that model. Interpreting program
+graphs in $M$ defines the range functor $F_M:S_{\PA}\to\Pfn$,
+where $\Pfn$ is the category of sets and partial functions.
+Appendix~\ref{sec:family} fixes a consistent theory $T\supseteq\PA$
+and the family $\mathcal M_T$ of its arithmetic models with underlying
+set $\N$. The range functor
+$F_T:S_T\to\prod_{M\in\mathcal M_T}\Pfn$ combines their
+program-graph interpretations.
 
 Rosolini's $P$-categories generalized dominical categories
 \cite{RosoliniThesis,Rosolini}. Heller adopted them and defined

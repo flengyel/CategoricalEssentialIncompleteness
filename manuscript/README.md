@@ -2,7 +2,7 @@
 
 ## Logical consequence and essential incompleteness in recursion categories
 
-[Version 43 PDF](logical_consequence_and_essential_incompleteness_v43.pdf)
+[Version 44 PDF](logical_consequence_and_essential_incompleteness_v44.pdf)
 ([LaTeX source](local_connectedness/main.tex),
 [source archive](logical_consequence_v42_source.zip), 1 November 2026).
 

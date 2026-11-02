@@ -1,0 +1,132 @@
+{
+  "version": 44,
+  "base_version": 43,
+  "changed_tex_files": [
+    "preamble.tex",
+    "sections/01-introduction.tex"
+  ],
+  "source_count": 22,
+  "sources": [
+    {
+      "file": "abstract.tex",
+      "sha256": "fb8d0a45696f2e196ca68783672b9940bdb7a278e5f670fab85d6aa76bc1ac3d",
+      "changed": false
+    },
+    {
+      "file": "appendices/a-syntax-and-theories.tex",
+      "sha256": "ac9822db47a486b3e959909f7213184a0962d8647667fec84cbaab60187fbcd8",
+      "changed": false
+    },
+    {
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "sha256": "bdabb3b5acf9a6a6edc54eab904878bedfca29f291b254da54fd8a83311cd94d",
+      "changed": false
+    },
+    {
+      "file": "appendices/c-section-lifting.tex",
+      "sha256": "b5d61af8f7b2f395f7210af78690e8b33f8a6e984389042bf62fc1cb234a5b36",
+      "changed": false
+    },
+    {
+      "file": "appendices/d-faithful-family.tex",
+      "sha256": "32192287cce4f0610dee6ebdf0d77b72dffb57a3e7d2ffb7ea008426ffcb4a85",
+      "changed": false
+    },
+    {
+      "file": "bibliography.tex",
+      "sha256": "fd73af8ebe4a47b02ea2be9af6c9ff81b129f9a6df5b3d300156ebea0a6e00f0",
+      "changed": false
+    },
+    {
+      "file": "main.tex",
+      "sha256": "06a09303973295b0478aeee4db9b2e5104f30cbc3f150eaaf3d1b3174f16117f",
+      "changed": false
+    },
+    {
+      "file": "preamble.tex",
+      "sha256": "9457818d779935ded7506bf55481a84489875625f74274d44622c1c843ef730f",
+      "changed": true
+    },
+    {
+      "file": "sections/01-introduction.tex",
+      "sha256": "e26a15521421b3b1081275431c66c42954a1e2fb4286c152596ef368178ccc05",
+      "changed": true
+    },
+    {
+      "file": "sections/02-categorical-preliminaries.tex",
+      "sha256": "b63a65aa953669be4444610d2048b111f9c27ce10344cbae84bdd353acec8fdb",
+      "changed": false
+    },
+    {
+      "file": "sections/03-sections-and-inseparability.tex",
+      "sha256": "26175f2da0198a7710748e57083aa7490f0f1295fb5ebd5dfbc457ae8a5caae2",
+      "changed": false
+    },
+    {
+      "file": "sections/03a-internal-theories.tex",
+      "sha256": "f45d5c0c29b07c0b8148cebee320bd252812519e9a278d651a76753b42af1d72",
+      "changed": false
+    },
+    {
+      "file": "sections/04-miller-sequences.tex",
+      "sha256": "9e24d7332b4c6cff89ca74b1c8c8cbb0b559bccd305e7142141c2c70aa6b9b83",
+      "changed": false
+    },
+    {
+      "file": "sections/05-syntactic-recursion-category.tex",
+      "sha256": "34df9a30e0e032bb0a24b76458948c8533300cb42ce4d69a6411dfb25148b913",
+      "changed": false
+    },
+    {
+      "file": "sections/05a-internal-syntax.tex",
+      "sha256": "24f8d32fa83570f29975ef5bdb53e9cfe5360e71ffa3cdc051c0a89f19827e97",
+      "changed": false
+    },
+    {
+      "file": "sections/06-interpretation-in-models.tex",
+      "sha256": "57be993cc95e618b0bf7ba9b9da652173145b4a64015717a349dbbc18e5bf122",
+      "changed": false
+    },
+    {
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "sha256": "abf8ed7a20fb312bcc5e15ac3734f6943404d5fd99ff40ba654812bf6fe352e3",
+      "changed": false
+    },
+    {
+      "file": "sections/08a-uniform-theories.tex",
+      "sha256": "1b9540d2537f6de7f658e8881d3fc9fc9c47971c1323df775762bbb20efcee45",
+      "changed": false
+    },
+    {
+      "file": "sections/08b-uniform-independent-sentences.tex",
+      "sha256": "7cfdd66300041ad6a9fe7e59e78670d27007ed41e97fbc03ead57bf4f3840fb5",
+      "changed": false
+    },
+    {
+      "file": "sections/08c-numerical-realization.tex",
+      "sha256": "861e34e3a588c9e07ae1b6fbb622d6ff4568d22a6db9fcacd988f572445f4188",
+      "changed": false
+    },
+    {
+      "file": "sections/08d-numerical-incompleteness.tex",
+      "sha256": "1c50baab15f666707d5bda718abc6d2787b2427b098c52a3d42294d37457a6fc",
+      "changed": false
+    },
+    {
+      "file": "sections/09-three-point-space.tex",
+      "sha256": "7ab696ccfae2653c23abf16e6f4875cbefb44acbf983896bed72b6e2c6203bfb",
+      "changed": false
+    }
+  ],
+  "all_other_tex_unchanged": true,
+  "pages": 79,
+  "main_build": "latexmk completed; no warnings or unresolved references",
+  "visual_review": [
+    "title/version page1",
+    "related-work pages3-4",
+    "transition to preliminaries page5"
+  ],
+  "all_appendices_included": true,
+  "standalone_appendix_exports_produced": false,
+  "review_scope": "Related-work comparison functor, source/target names, role, arithmetic model M, product-indexing family; no new body-proof audit."
+}
