@@ -39,6 +39,12 @@ regular-image foundations, with concrete syntactic and cosheaf applications.
 The table distinguishes categorical syntax interfaces from their concrete
 realizations; the latter require additional work.
 
+The [continued implementation](docs/V46_CONTINUATION_2026-11-03.md) constructs
+the regular extensive syntactic total category, its regular model
+interpretations, the arithmetic-ultrapower comparison, and named substitution
+with all seven logical schemes. Concrete syntax and derivation initiality and
+the remaining applications are still open.
+
 The existing verifier builds the combined Lean entry point, checks imported
 source and dependency pins, checks the preserved manuscript baseline, runs
 `V5StatementAudit.lean` and `V46StatementAudit.lean`, and inspects the transitive
@@ -107,8 +113,9 @@ files; the source ZIP contains all sections, appendices, and bibliography.
 
 [SOURCE_PINS.json](SOURCE_PINS.json) records the imported Lean sources;
 [LOCAL_PATCHES.json](LOCAL_PATCHES.json) records their permitted changes.
-[MANUSCRIPT_SOURCE.json](MANUSCRIPT_SOURCE.json) distinguishes the current
-manuscript target from the retained v5 verification baseline. The v46 manuscript
+[MANUSCRIPT_SOURCE.json](MANUSCRIPT_SOURCE.json) preserves the historical
+manuscript baseline; [MANUSCRIPT_V46_SOURCE.json](MANUSCRIPT_V46_SOURCE.json)
+pins the current TeX, PDF and source archive separately. The v46 manuscript
 was published at `558a20eed4c62d59eada05f5500cf233671078e9`; the directory
 reorganization changes no mathematical text or Lean source.
 
