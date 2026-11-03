@@ -1,7 +1,8 @@
 # Verified baseline: local-connectedness manuscript, version 5
 
 The current manuscript and new formalization target are v46. Follow
-[the v46 instructions](docs/CODEX_WSL2_V46.txt) for new work. The results below
+[the v46 instructions](docs/CODEX_WSL2_V46.txt) and the separate
+[v46 correspondence table](FORMALIZATION_STATUS_V46.md) for new work. The results below
 record the completed v5 baseline and do not certify v46.
 
 The verified v5 source is `manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex`,

@@ -1298,6 +1298,18 @@ def git_blob(data: bytes) -> str:
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 
+def source_snapshot() -> dict[str, str]:
+    paths = [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "lakefile.toml",
+             LEAN / "lake-manifest.json", LEAN / "lean-toolchain",
+             ROOT / "scripts/verify.py", ROOT / "scripts/setup-wsl.sh",
+             ROOT / "scripts/verify-wsl.sh", ROOT / "MANUSCRIPT_V46_SOURCE.json",
+             ROOT / "MANUSCRIPT_SOURCE.json", ROOT / "SOURCE_PINS.json",
+             ROOT / "LOCAL_PATCHES.json",
+             *sorted((LEAN / "CategoricalEssentialIncompleteness").glob("*.lean"))]
+    return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in paths}
+
+
 def main() -> int:
     LOGS.mkdir(exist_ok=True)
     env = os.environ.copy()
@@ -1323,6 +1335,7 @@ def main() -> int:
         return path.read_text()
 
     try:
+        starting_source = source_snapshot()
         pins = json.loads((ROOT / "SOURCE_PINS.json").read_text())
         patch_file = ROOT / "LOCAL_PATCHES.json"
         patches = json.loads(patch_file.read_text()) if patch_file.exists() else []
@@ -1365,6 +1378,19 @@ def main() -> int:
                                      "actual": actual})
         report["manuscript_files"] = manuscript_files
 
+        v46 = json.loads((ROOT / "MANUSCRIPT_V46_SOURCE.json").read_text())
+        if (v46["version"] != 46 or v46["publication_revision"] !=
+                "558a20eed4c62d59eada05f5500cf233671078e9"):
+            raise RuntimeError("Unexpected v46 manuscript provenance")
+        v46_files = []
+        for record in v46["files"]:
+            data = (ROOT / record["path"]).read_bytes()
+            if (git_blob(data) != record["git_blob"] or
+                    hashlib.sha256(data).hexdigest() != record["sha256"]):
+                raise RuntimeError("V46 manuscript differs from publication: " + record["path"])
+            v46_files.append(record["path"])
+        report["v46_manuscript_files"] = v46_files
+
         report["lean_version"] = run(["lean", "--version"], "lean-version.log").strip()
         if "version 4.35.0-rc2," not in report["lean_version"]:
             raise RuntimeError("Unexpected Lean version")
@@ -1384,6 +1410,15 @@ def main() -> int:
         report["dependencies"] = deps
 
         run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/V5StatementAudit.lean"], "v5-statement-audit.log")
+        run(["lake", "build", "CategoricalEssentialIncompleteness.V46StatementAudit"],
+            "v46-statement-build.log")
+        for path in sorted((LEAN / "CategoricalEssentialIncompleteness").glob("V46*.lean")):
+            if not path.stem.endswith("Audit"):
+                run(["lake", "env", "lean", "-DwarningAsError=true",
+                     str(path.relative_to(LEAN))], f"strict-{path.stem}.log")
+        run(["lake", "env", "lean", "-DwarningAsError=true",
+             "CategoricalEssentialIncompleteness/V46StatementAudit.lean"],
+            "v46-statement-audit.log")
         text = run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/AxiomAudit.lean"], "axiom-audit.log")
         found = {}
         for name, contents in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text):
@@ -1397,14 +1432,44 @@ def main() -> int:
             if extra:
                 raise RuntimeError(f"Unexpected axioms in {name}: {sorted(extra)}")
         report["axioms"] = found
-        report["integration_sha256"] = {
-            str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "lakefile.toml",
-                         *sorted((LEAN / "CategoricalEssentialIncompleteness").glob("*.lean"))]
-        }
+
+        v46_text = run(["lake", "env", "lean", "-DwarningAsError=true",
+                        "CategoricalEssentialIncompleteness/V46AxiomAudit.lean"],
+                       "v46-axiom-audit.log")
+        production = sorted(path for path in (LEAN / "CategoricalEssentialIncompleteness").glob(
+            "V46*.lean") if not path.stem.endswith(("Checks", "Audit")))
+        expected_modules = {"CategoricalEssentialIncompleteness." + path.stem
+                            for path in production}
+        actual_modules = set(re.findall(r"V46 module: (\S+)", v46_text))
+        if actual_modules != expected_modules:
+            raise RuntimeError("V46 production module audit coverage mismatch: " +
+                               str(sorted(actual_modules ^ expected_modules)))
+        v46_axioms = {}
+        for name, contents in re.findall(
+                r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", v46_text):
+            v46_axioms[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
+        for name in re.findall(r"'([^']+)' does not depend on any axioms", v46_text):
+            v46_axioms[name] = []
+        if not v46_axioms:
+            raise RuntimeError("V46 axiom audit produced no declarations")
+        for name, axioms in v46_axioms.items():
+            extra = set(axioms) - ALLOWED_AXIOMS
+            if extra:
+                raise RuntimeError(f"Unexpected v46 axioms in {name}: {sorted(extra)}")
+        for path in production:
+            if re.search(r"\b(sorry|admit|native_decide|unsafe)\b", path.read_text()):
+                raise RuntimeError("Forbidden proof token in v46 production source: " + str(path))
+        report["v46_audit_modules"] = sorted(actual_modules)
+        report["v46_axioms"] = v46_axioms
+        report["integration_sha256"] = source_snapshot()
+        if report["integration_sha256"] != starting_source:
+            raise RuntimeError("Source changed during verification; preserve this run and reverify")
+        report["source_snapshot_sha256"] = hashlib.sha256(
+            json.dumps(starting_source, sort_keys=True).encode()).hexdigest()
         report["success"] = True
         save()
-        print(f"PASS: project build, dependency pins, source hashes, and {len(AUDITED)} axiom audits.")
+        print(f"PASS: project build, dependency pins, source hashes, "
+              f"{len(AUDITED)} retained and {len(v46_axioms)} v46 axiom audits.")
         return 0
     except (OSError, RuntimeError, subprocess.SubprocessError) as error:
         report["error"] = str(error)

@@ -31,16 +31,20 @@ The existing Lean development covers the version-5 statements recorded in
 [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md). That completed baseline
 is retained for reuse. It does **not** establish verification of version 46.
 
-The v46 work begins with Theorem 3.1, Corollaries 3.2 and 3.3, and Proposition
-3.4, with their stated hypotheses. The [Codex instructions](docs/CODEX_WSL2_V46.txt)
-specify these proofs, the subsequent dependencies, and the new correspondence
-table and statement audit to implement. Those v46 checks are not yet present
-in this repository snapshot.
+The v46 results and remaining obligations are recorded separately in
+[FORMALIZATION_STATUS_V46.md](FORMALIZATION_STATUS_V46.md). The Section 3 comparison
+accepts arbitrary disjoint target idempotents and partial lifts. The subsequent
+development constructs the extension to the restriction splitting and proves
+regular-image foundations, with concrete syntactic and cosheaf applications.
+The table distinguishes categorical syntax interfaces from their concrete
+realizations; the latter require additional work.
 
 The existing verifier builds the combined Lean entry point, checks imported
 source and dependency pins, checks the preserved manuscript baseline, runs
-`V5StatementAudit.lean`, and inspects the transitive axioms of its audited
-declarations. The permitted axioms are `propext`, `Quot.sound`, and
+`V5StatementAudit.lean` and `V46StatementAudit.lean`, and inspects the transitive
+axioms of its retained declarations and every declaration in the v46 production
+modules. It also pins the v46 TeX, PDF and source archive separately from the
+historical manuscript sources. The permitted axioms are `propext`, `Quot.sound`, and
 `Classical.choice`. A successful baseline verification must not be reported
 as completion of v46.
 
@@ -70,18 +74,19 @@ Elan's global default or copy another project's compiled files.
 | Mathlib | `065356127b1dc0016f66b7283ce0ce2c4055aa55` |
 | Foundation | `01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d` |
 
-From the repository root:
+For an already prepared checkout, run from the repository root:
 
 ```bash
-cd Lean
-elan toolchain install leanprover/lean4:v4.35.0-rc2
-lake exe cache get
-cd ..
-LEAN_NUM_THREADS=1 python3 scripts/verify.py
+bash scripts/verify-wsl.sh
 ```
 
-The verifier writes logs and its machine-readable result to `build-logs/`.
-Run one heavy verification process at a time. WSL2 does not need the hosted
+For initial setup, `bash scripts/setup-wsl.sh` installs the pinned toolchain,
+obtains its Mathlib cache, and invokes verification once. The verification
+wrapper takes a project build lock, sets `LEAN_NUM_THREADS=1`, and preserves
+the starting commit, Git status, exit status, logs and machine-readable result
+in a fresh ignored `.codex-work/verify-*` directory. The underlying verifier
+remains `python3 scripts/verify.py` and writes to `build-logs/`.
+Run one heavy verification process at a time across projects. WSL2 does not need the hosted
 executable-path adapter described in [HOST_BUILD.md](HOST_BUILD.md).
 
 ## Build the manuscript

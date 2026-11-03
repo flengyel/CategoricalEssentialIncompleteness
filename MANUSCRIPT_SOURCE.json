@@ -52,6 +52,9 @@
     "publication_revision": "558a20eed4c62d59eada05f5500cf233671078e9",
     "publication_source_path": "manuscript/local_connectedness/main.tex",
     "continuation": "docs/CODEX_WSL2_V46.txt",
-    "formalization_status": "V46 correspondence and implementation pending; the existing statement audit covers v5."
+    "formalization_status": "Section 3 and subsequent v46 foundations/applications are recorded separately; full v46 correspondence remains incomplete.",
+    "correspondence": "FORMALIZATION_STATUS_V46.md",
+    "statement_audit": "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean",
+    "source_pins": "MANUSCRIPT_V46_SOURCE.json"
   }
 }

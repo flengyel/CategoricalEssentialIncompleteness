@@ -2,7 +2,8 @@
 
 These are retained instructions for the completed v5 baseline.
 The current target is v46; use [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt)
-for new implementation. The earlier task text is preserved below.
+and [FORMALIZATION_STATUS_V46.md](FORMALIZATION_STATUS_V46.md) for new implementation.
+The earlier task text is preserved below.
 
 Resume substantive Lean work in `flengyel/CategoricalEssentialIncompleteness`. Formalize the current paper, **Local connectedness, range functors, and essential incompleteness**, Version 5, including its applications and appendices. The first objective is the abstract categorical proof through Corollary 6.7; it is the beginning of the full-paper formalization, not its stopping point.
 

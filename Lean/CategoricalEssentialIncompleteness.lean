@@ -69,9 +69,37 @@ import CategoricalEssentialIncompleteness.SyntacticObservationLattice
 
 import CategoricalEssentialIncompleteness.GeneralObservationPrinciple
 import CategoricalEssentialIncompleteness.SyntacticTargetSeparators
+import CategoricalEssentialIncompleteness.V46Comparison
+import CategoricalEssentialIncompleteness.V46SplitCoproducts
+import CategoricalEssentialIncompleteness.V46SplitSplittings
+import CategoricalEssentialIncompleteness.V46SplitExtension
+import CategoricalEssentialIncompleteness.V46RegularImage
+import CategoricalEssentialIncompleteness.V46LogicalComparison
+import CategoricalEssentialIncompleteness.V46Applications
+import CategoricalEssentialIncompleteness.V46ForkComparison
+import CategoricalEssentialIncompleteness.V46SyntacticComparison
+import CategoricalEssentialIncompleteness.V46SyntacticExtension
+import CategoricalEssentialIncompleteness.V46CategoricalLists
+import CategoricalEssentialIncompleteness.V46CategoricalSyntax
+import CategoricalEssentialIncompleteness.V46CategoricalListOperations
+import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+import CategoricalEssentialIncompleteness.V46SyntacticSearch
+import CategoricalEssentialIncompleteness.V46Inference
+import CategoricalEssentialIncompleteness.V46SentenceImages
+import CategoricalEssentialIncompleteness.V46FirstOrderInference
+import CategoricalEssentialIncompleteness.V46Karoubi
 
 /-!
-# Local connectedness and essential incompleteness
+# Logical consequence and essential incompleteness
+
+`V46Comparison` proves the lifted-conditional comparison for arbitrary disjoint
+target restriction idempotents and its complementary-conditional consequences.
+`V46SplitExtension` constructs the range functor on the restriction splitting;
+`V46LogicalComparison` applies the comparison to interpreted theories.
+The v46 categorical syntax, inference and concrete application modules have
+their exact scope recorded in `FORMALIZATION_STATUS_V46.md`.
+
+## Local connectedness
 
 The version 5 categorical proof is in the namespace
 `CategoricalEssentialIncompleteness.LocalConnectedness`. It proves the
@@ -83,7 +111,8 @@ splitting preserves inseparability on included objects. `PartialFunctions`
 constructs the locally connected split target of arbitrary partial functions.
 The syntactic model interpretation constructs a range functor and derives
 inseparability of its actual Turing diagonal pair for every consistent PA
-extension. Theory extension preserves this pair. The exact model family, specified finite switch, and categorical arithmetic
+extension. Theory extension preserves this pair. The exact model family, specified finite switch,
+and categorical arithmetic
 application are proved. The three-point construction includes actual monic spans,
 all three frames, the generated recursion category, its categorical inseparable
 pair, and the equivalence of its restriction splitting with the full partial-map
