@@ -11,8 +11,8 @@ This record accompanies *Finite proof algebras in range restriction categories*
 - [Exploratory completion findings](COMPLETION_RESEARCH.md)
 - [Heller source check and targeted errata](HELLER_SOURCE_CHECK.md)
 - [Continuation prompt](../../CONTINUATION_GENERAL_RECURSION_CATEGORIES.md)
-- [Supplement source](../../manuscript/general_recursion_category_construction.tex)
-- [Supplement PDF](../../manuscript/general_recursion_category_construction.pdf)
+- [Supplement source](../../manuscript/archive/general_recursion_category_construction.tex)
+- [Supplement PDF](../../manuscript/archive/general_recursion_category_construction.pdf)
 
 The substantive addition is a Turing construction of partial folds for typed
 finitary inference polynomials. It discharges the separate partial-arrow gluing

@@ -3,21 +3,21 @@
   "revision": "38c4fba2202bb8c001d1aa353ed48b018592e090",
   "files": [
     {
-      "path": "manuscript/definability_comparison_v16.tex",
+      "path": "manuscript/archive/definability_comparison_v16.tex",
       "source_path": "definability_comparison_v16.tex",
       "git_blob": "f1e79d972f715ffaceb85f1a560bc0e7c6954fce",
       "sha256": "b750233696ed731b932f91251341936765d2697e49474d96b662edf19279295c",
       "size": 133491
     },
     {
-      "path": "manuscript/definability_comparison_v16.pdf",
+      "path": "manuscript/archive/definability_comparison_v16.pdf",
       "source_path": "definability_comparison_v16.pdf",
       "git_blob": "8107cdabd8c5ddf612ab59f243439114e4ebbe31",
       "sha256": "24aa9614d6fb3e15ad1ac29ae2f18fd14dab2cefa6fc55fd67b6a156f8c87b5a",
       "size": 591333
     },
     {
-      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+      "path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex",
       "source_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
       "repository": "flengyel/CategoricalEssentialIncompleteness",
       "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
@@ -26,7 +26,7 @@
       "size": 109696
     },
     {
-      "path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v5.pdf",
       "source_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
       "repository": "flengyel/CategoricalEssentialIncompleteness",
       "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
@@ -35,11 +35,23 @@
       "size": 450641
     }
   ],
-  "current_target": {
+  "verified_lean_baseline": {
     "repository": "flengyel/CategoricalEssentialIncompleteness",
     "revision": "883f1f792a5e4a244974d00458e8a9dee61b2f94",
     "version": 5,
-    "source": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
-    "continuation": "CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md"
+    "source": "manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex",
+    "continuation": "CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md",
+    "source_path_at_revision": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex"
+  },
+  "current_target": {
+    "repository": "flengyel/CategoricalEssentialIncompleteness",
+    "version": 46,
+    "source": "manuscript/latex/main.tex",
+    "pdf": "manuscript/logical_consequence_and_essential_incompleteness_v46.pdf",
+    "source_archive": "manuscript/logical_consequence_v46_source.zip",
+    "publication_revision": "558a20eed4c62d59eada05f5500cf233671078e9",
+    "publication_source_path": "manuscript/local_connectedness/main.tex",
+    "continuation": "docs/CODEX_WSL2_V46.txt",
+    "formalization_status": "V46 correspondence and implementation pending; the existing statement audit covers v5."
   }
 }

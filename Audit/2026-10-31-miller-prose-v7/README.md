@@ -1,7 +1,7 @@
 # Version 7: Miller application, mathematical prose, and proof objects
 
-Reviewed manuscript: [Local connectedness in recursion categories and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness_v7.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness_v7.tex)),
+Reviewed manuscript: [Local connectedness in recursion categories and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v7.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v7.tex)),
 31 October 2026, 35 pages.
 
 The manuscript adds the Miller-sequence application to the version 5 paper

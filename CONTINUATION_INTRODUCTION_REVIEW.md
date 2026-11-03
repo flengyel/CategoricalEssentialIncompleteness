@@ -1,5 +1,9 @@
 # Continuation: review the introduction with multiple agents
 
+These are retained instructions for the v12 introduction review.
+The current target is v46; use [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt)
+for new implementation. The earlier task text is preserved below.
+
 ## Task and accepted baseline
 
 Continue work on **Local connectedness in recursion categories and essential incompleteness** in [flengyel/CategoricalEssentialIncompleteness](https://github.com/flengyel/CategoricalEssentialIncompleteness).
@@ -8,15 +12,15 @@ The author has accepted the version 12 abstract. The next task is a coordinated 
 
 The manuscript baseline is commit `cceacb7725c0dd057caeff0579e90afb3f7ae00c`, version 12, dated 31 October 2026. Fetch the current repository state and check for subsequent changes before working. Preserve existing uncommitted work. The source is modular:
 
-- Assembly: `manuscript/local_connectedness/main.tex`.
-- Introduction: `manuscript/local_connectedness/sections/01-introduction.tex`.
-- Accepted abstract: `manuscript/local_connectedness/abstract.tex`.
-- Preamble and version: `manuscript/local_connectedness/preamble.tex`.
-- Sections, appendices, and bibliography: the corresponding files under `manuscript/local_connectedness/`.
-- Version 12 PDF: `manuscript/essential_incompleteness_via_local_connectedness_v12.pdf`.
+- Assembly: `manuscript/latex/main.tex`.
+- Introduction: `manuscript/latex/sections/01-introduction.tex`.
+- Accepted abstract: `manuscript/latex/abstract.tex`.
+- Preamble and version: `manuscript/latex/preamble.tex`.
+- Sections, appendices, and bibliography: the corresponding files under `manuscript/latex/`.
+- Version 12 PDF: `manuscript/archive/essential_incompleteness_via_local_connectedness_v12.pdf`.
 - Existing outline and writing review: `Audit/2026-10-31-outline-v12/README.md`.
 - Theorem and proof synopsis prepared for this continuation: `notes/manuscript_v12_theorems_and_proofs.md`.
-- Local build and revision instructions: `manuscript/local_connectedness/README.md`.
+- Local build and revision instructions: `manuscript/latex/README.md`.
 
 The synopsis and earlier reviews are reading aids. Check assertions against the manuscript; earlier agent agreement is not evidence of correctness. The separate note `notes/deductively_closed_subobjects.md` is not part of the manuscript. Do not silently import its proposed general construction into the introduction.
 

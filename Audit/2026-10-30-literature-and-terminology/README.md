@@ -2,8 +2,8 @@
 
 30 October 2026.
 
-The [Version 3 manuscript](../../manuscript/essential_incompleteness_via_local_connectedness_v3.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness_v3.tex))
+The [Version 3 manuscript](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v3.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v3.tex))
 uses restriction idempotents throughout its categorical exposition. The
 abstract states the categorical inseparability theorem first and identifies
 arithmetic essential incompleteness separately as a logical consequence.

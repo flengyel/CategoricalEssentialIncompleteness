@@ -2,8 +2,8 @@
 
 Date: 29 October 2026. Baseline: e98536008177001780499378f4752e99b2e3d00e.
 
-[Internal theories and intrinsic incompleteness](../../manuscript/intrinsic_introspection_and_extensions.pdf)
-([source](../../manuscript/intrinsic_introspection_and_extensions.tex)) is a
+[Internal theories and intrinsic incompleteness](../../manuscript/archive/intrinsic_introspection_and_extensions.pdf)
+([source](../../manuscript/archive/intrinsic_introspection_and_extensions.tex)) is a
 three-page application of Ramesh's initiality and Löb constructions.
 It is a separate arithmetic-universe comparison and establishes no
 connection to the given recursion category. See the

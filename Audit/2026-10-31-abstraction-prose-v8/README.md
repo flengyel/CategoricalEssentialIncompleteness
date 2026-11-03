@@ -1,6 +1,6 @@
 # Version 8: types, representations, and mathematical prose
 
-The revised manuscript is [Local connectedness in recursion categories and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness_v8.pdf), version 8, 31 October 2026, 38 pages ([source](../../manuscript/essential_incompleteness_via_local_connectedness_v8.tex)). It revises version 7 at commit `48ce2fda2bae3f7a5e32efc0c5130e7e4cfa8a60`.
+The revised manuscript is [Local connectedness in recursion categories and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v8.pdf), version 8, 31 October 2026, 38 pages ([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v8.tex)). It revises version 7 at commit `48ce2fda2bae3f7a5e32efc0c5130e7e4cfa8a60`.
 
 The revision makes the types and comparisons explicit at the passages identified by the preceding review. In particular, numerical indices, their classes in the syntactic category, their standard denotations, and their interpretations in models are separately defined. The proof-rule endofunctor is defined on arbitrary slice objects by pullback equations before its derivation-tree algebra is introduced. The numerical splitting comparison uses the coding bijections on both sides of each partial function.
 

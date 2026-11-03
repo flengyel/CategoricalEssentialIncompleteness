@@ -3,8 +3,8 @@
 Date: 29 October 2026. Base: `main` at
 `b20c3d89757a692314413e7d83fcf4511a4f3b22`.
 
-The five-page [note](../../manuscript/inseparable_domains_and_extensions.pdf)
-([source](../../manuscript/inseparable_domains_and_extensions.tex)) develops
+The five-page [note](../../manuscript/archive/inseparable_domains_and_extensions.pdf)
+([source](../../manuscript/archive/inseparable_domains_and_extensions.tex)) develops
 the requested two functor directions and constructs a minimal presentation
 inside the given restriction category.
 

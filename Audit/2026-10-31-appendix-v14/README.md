@@ -30,10 +30,10 @@ human referee reports or formal verification.
 
 ## Implemented source and verification
 
-- [Standalone appendix](../../manuscript/first_order_syntax_and_deductive_closure_appendix.pdf)
-  and [LaTeX source](../../manuscript/first_order_syntax_and_deductive_closure_appendix.tex).
-- [Version 14 manuscript](../../manuscript/essential_incompleteness_via_local_connectedness_v14.pdf)
-  and [integrated appendix source](../../manuscript/local_connectedness/appendices/b-finite-syntax-and-proofs.tex).
+- [Standalone appendix](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix.pdf)
+  and [LaTeX source](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix.tex).
+- [Version 14 manuscript](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v14.pdf)
+  and [integrated appendix source](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/69dfecfb68efaa3f8f3823959a7cf07056f96f02/manuscript/local_connectedness/appendices/b-finite-syntax-and-proofs.tex).
 - [Exact standalone diff against the previous main commit](appendix_changes.diff).
 - [Final artifact hashes](artifact_hashes.json).
 

@@ -1,6 +1,6 @@
 # Deduction and essential incompleteness
 
-The mathematical source is [deduction_and_essential_incompleteness.tex](../../manuscript/deduction_and_essential_incompleteness.tex), with its [nine-page PDF](../../manuscript/deduction_and_essential_incompleteness.pdf), dated 29 October 2026.
+The mathematical source is [deduction_and_essential_incompleteness.tex](../../manuscript/archive/deduction_and_essential_incompleteness.tex), with its [nine-page PDF](../../manuscript/archive/deduction_and_essential_incompleteness.pdf), dated 29 October 2026.
 
 ## Results and dependencies
 

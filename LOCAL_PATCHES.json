@@ -84,13 +84,13 @@
     "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
   },
   {
-    "path": "manuscript/definability_comparison_v16.tex",
+    "path": "manuscript/archive/definability_comparison_v16.tex",
     "source_git_blob": "f1e79d972f715ffaceb85f1a560bc0e7c6954fce",
     "patched_git_blob": "d78b7e69267010f692ed49a49ed4291d3d6f87d1",
     "reason": "Author-requested terminology and prose revision of version 16; mathematical statements, labels, and bibliography are retained. The PDF is rebuilt from the revised LaTeX source."
   },
   {
-    "path": "manuscript/definability_comparison_v16.pdf",
+    "path": "manuscript/archive/definability_comparison_v16.pdf",
     "source_git_blob": "8107cdabd8c5ddf612ab59f243439114e4ebbe31",
     "patched_git_blob": "2b5bb5835716d286428363cc54a7466602a1e8aa",
     "reason": "Author-requested terminology and prose revision of version 16; mathematical statements, labels, and bibliography are retained. The PDF is rebuilt from the revised LaTeX source."

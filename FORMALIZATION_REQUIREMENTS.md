@@ -1,4 +1,8 @@
-# Current requirements: local-connectedness manuscript, version 5
+# Requirements recorded for manuscript version 5
+
+These requirements record the v5 baseline and earlier developments.
+The current target is v46; use [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt)
+for new implementation. The earlier task text is preserved below.
 
 `CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md` supersedes the historical version-16
 requirements below. Preserve the existing proofs, dependency pins, source-hash

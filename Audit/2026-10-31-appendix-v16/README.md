@@ -10,9 +10,9 @@ The standalone appendix (8 pages), assembled manuscript (47 pages), and review (
 
 Every downloadable artifact has a new versioned filename; the PDFs identify version 16 in their visible text and metadata.
 
-- [Standalone appendix PDF](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v16.pdf)
-- [Standalone LaTeX](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v16.tex)
-- [Assembled manuscript PDF](../../manuscript/essential_incompleteness_via_local_connectedness_v16.pdf)
-- [Modular source archive](../../manuscript/local_connectedness_v16_source.zip)
+- [Standalone appendix PDF](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v16.pdf)
+- [Standalone LaTeX](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v16.tex)
+- [Assembled manuscript PDF](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v16.pdf)
+- [Modular source archive](../../manuscript/archive/local_connectedness_v16_source.zip)
 - [Review PDF](appendix_a_review_v16.pdf)
 - [Review LaTeX](appendix_a_review_v16.tex)

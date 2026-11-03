@@ -2,8 +2,8 @@
 
 Date: 29 October 2026.
 
-The new seven-page note is [Range completion and computational cosheaves on a three-point space](../../manuscript/range_completion_three_point_cosheaves.pdf)
-([source](../../manuscript/range_completion_three_point_cosheaves.tex)).
+The new seven-page note is [Range completion and computational cosheaves on a three-point space](../../manuscript/archive/range_completion_three_point_cosheaves.pdf)
+([source](../../manuscript/archive/range_completion_three_point_cosheaves.tex)).
 It continues repository version 896163707ed3eaa61a30f1d881e8a9f18a3ec0c8.
 The preceding three mathematical manuscripts and their PDFs are unchanged.
 

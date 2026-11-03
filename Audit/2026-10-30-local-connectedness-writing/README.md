@@ -7,8 +7,8 @@ includes the arguments previously cited from private notes. The reports
 below retain the source hashes and scope of the version they reviewed.
 
 The revised paper is
-[Local connectedness, range functors, and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness.pdf)
-([LaTeX source](../../manuscript/essential_incompleteness_via_local_connectedness.tex)).
+[Local connectedness, range functors, and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness.pdf)
+([LaTeX source](../../manuscript/archive/essential_incompleteness_via_local_connectedness.tex)).
 The basename replaces `syntactic_model_range_functors` at the author's request.
 
 The introduction now develops the Di Paola–Heller program, the literature

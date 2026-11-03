@@ -1,8 +1,8 @@
 # Self-contained local-connectedness paper
 
 The paper is
-[Local connectedness, range functors, and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness.tex)).
+[Local connectedness, range functors, and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness.tex)).
 This revision replaces the private-note citations by the arguments needed
 in the paper, including the claims made in its introduction.
 

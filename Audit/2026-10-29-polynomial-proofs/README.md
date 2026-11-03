@@ -1,6 +1,6 @@
 # Polynomial finite proofs and essential incompleteness
 
-The current manuscript is [Domains, finite proofs, and essential incompleteness](../../manuscript/domains_hoare_profunctors_essential_incompleteness.pdf), with [self-contained LaTeX source](../../manuscript/domains_hoare_profunctors_essential_incompleteness.tex).
+The current manuscript is [Domains, finite proofs, and essential incompleteness](../../manuscript/archive/domains_hoare_profunctors_essential_incompleteness.pdf), with [self-contained LaTeX source](../../manuscript/archive/domains_hoare_profunctors_essential_incompleteness.tex).
 
 - [Outline and dependencies](OUTLINE.md)
 - [Hostile mathematical review](HOSTILE_REVIEW.md)

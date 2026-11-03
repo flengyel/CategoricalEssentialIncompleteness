@@ -21,10 +21,10 @@ now has a versioned filename, and the PDFs visibly identify version 15.
 
 ## Files
 
-- [Standalone appendix PDF](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v15.pdf)
-  and [LaTeX source](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v15.tex).
-- [Version 15 manuscript](../../manuscript/essential_incompleteness_via_local_connectedness_v15.pdf)
-  and [source archive](../../manuscript/local_connectedness_v15_source.zip).
+- [Standalone appendix PDF](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v15.pdf)
+  and [LaTeX source](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v15.tex).
+- [Version 15 manuscript](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v15.pdf)
+  and [source archive](../../manuscript/archive/local_connectedness_v15_source.zip).
 - [Version 15 review](appendix_a_review_v15.pdf) and
   [review source](appendix_a_review_v15.tex).
 

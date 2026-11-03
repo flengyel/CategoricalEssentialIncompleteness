@@ -1,0 +1,257 @@
+CODEX INSTRUCTIONS — WSL2 LEAN FORMALIZATION OF MANUSCRIPT V46
+Prepared 3 November 2026
+
+Implement the Lean formalization of Florian Lengyel's “Logical consequence and essential incompleteness in recursion categories,” version 46, in flengyel/CategoricalEssentialIncompleteness. Reuse the existing development. Complete substantive proofs, beginning with the four Section 3 results below; continue through the manuscript's dependency order. Setup, an inventory, or an audit alone does not complete this task.
+
+Follow the WSL2 working procedure of flengyel/Dosen-Petric-Maximality: an existing Linux checkout, SSH Git access, a project-pinned Elan toolchain, serialized verification, exact statement correspondence, transitive axiom checks, and reports delivered from committed files. Preserve CategoricalEssentialIncompleteness's own toolchain, dependencies, mathematical definitions, and verifier.
+
+1. TARGET AND SOURCE OF TRUTH
+
+Target repository:
+https://github.com/flengyel/CategoricalEssentialIncompleteness
+
+WSL2 checkout:
+The author confirmed /home/flengyel/src/CategoricalEssentialIncompleteness as the existing WSL2 checkout on 3 November 2026. Reuse it and resolve its root with git rev-parse --show-toplevel, including when working in a separate worktree. Verify its repository identity before editing.
+
+Manuscript v46 commit:
+558a20eed4c62d59eada05f5500cf233671078e9
+
+This is the v46 publication commit before the manuscript directory reorganization. The current layout uses manuscript/latex/ for the same TeX sources and manuscript/archive/ for earlier manuscripts. Fetch and inspect subsequent work before integrating changes. Never reset a newer checkout to the publication commit.
+
+Read these target-repository files:
+
+- Applicable AGENTS.md files and local task guidance, including guidance above the checkout.
+- manuscript/latex/main.tex and its nested inputs.
+- manuscript/latex/sections/02-categorical-preliminaries.tex.
+- manuscript/latex/sections/03-sections-and-inseparability.tex.
+- manuscript/latex/sections/03a-internal-theories.tex.
+- FORMALIZATION_STATUS.md and CONTINUATION_LEAN_LOCAL_CONNECTEDNESS.md.
+- Lean/lean-toolchain, Lean/lakefile.toml, and Lean/lake-manifest.json.
+- scripts/verify.py and Lean/CategoricalEssentialIncompleteness/AxiomAudit.lean.
+- Lean/CategoricalEssentialIncompleteness/V5StatementAudit.lean.
+
+The assembled PDF is manuscript/logical_consequence_and_essential_incompleteness_v46.pdf; the complete source archive is manuscript/logical_consequence_v46_source.zip. Follow main.tex's input order. Filename numbers do not determine section numbers: the arithmetic section uses 08-essential-incompleteness-of-arithmetic.tex and its nested inputs; the Miller section uses 04-miller-sequences.tex.
+
+The existing status and continuation files concern v5. They report its 24 numbered results and required constructions as proved; they do not establish correspondence with v46. Preserve this record and create a separate v46 table. The v46 verifier currently lists 1,274 declarations for axiom inspection, but its statement audit remains the v5 audit. Neither that count nor a successful old build certifies v46. No WSL2 build was run while preparing these instructions.
+
+Reference setup inspected in Došen–Petrić commit 76a4ea71f257746bb6ea2cb2e686e85914c7347c:
+
+- docs/WSL2_SETUP.md
+- scripts/setup-wsl.sh
+- scripts/verify.sh
+- AGENTS.md, especially implementation, verification, and report delivery
+
+Use those files as a workflow reference. Their Došen–Petrić mathematical, publication, and registration tasks are separate from this task.
+
+2. WSL2 CHECKOUT AND PROJECT ENVIRONMENT
+
+Run as the existing Linux user in the current WSL2 session. Locate and reuse the existing checkout on the Linux filesystem. Preserve unrelated changes, stashes, worktrees, and all other repositories. Inspect any active Codex work before starting a second writer in the same checkout. If isolation is needed, use a separate worktree and reconcile its changes before integration.
+
+First inspect the active workspace:
+
+    pwd
+    git rev-parse --show-toplevel
+    git remote -v
+
+If this is the CategoricalEssentialIncompleteness checkout, record its root and inspect its state:
+
+    CEI_ROOT=$(git rev-parse --show-toplevel)
+    cd "$CEI_ROOT"
+    git status --short --branch
+    git worktree list
+    git log -8 --oneline --decorate
+
+If the active directory is outside a Git checkout or belongs to another repository, locate the existing CategoricalEssentialIncompleteness checkout using the open workspace folders and established local project locations. Do not relabel another repository by changing its origin. If the location remains ambiguous, report the observed pwd and repository information and request the intended path.
+
+Only after establishing that a new clone is needed, select a parent directory from the verified local workspace layout, change into that directory, and run:
+
+    git clone git@github.com:flengyel/CategoricalEssentialIncompleteness.git
+    cd CategoricalEssentialIncompleteness
+    CEI_ROOT=$(git rev-parse --show-toplevel)
+
+Use the resolved CEI_ROOT for subsequent commands; do not create a second checkout merely because an assumed absolute directory is absent.
+
+Confirm the repository identity before changing any remote. For this checkout, use git@github.com:flengyel/CategoricalEssentialIncompleteness.git as origin; add origin if absent or correct this repository's URL if necessary. Fetch, compare local work with origin/main, and integrate without discarding changes. Use ordinary non-force pushes. Do not replace the checkout merely because it is dirty or divergent.
+
+Inspect the installed Linux executables, memory, and swap:
+
+    export PATH="$HOME/.elan/bin:$PATH"
+    command -v git python3 elan lean lake flock
+    free -h
+    nproc
+
+Reuse the installed Elan and GitHub SSH authentication. Do not reinstall a working Lean environment or change Elan's global default. Do not run Lean or Lake through Windows executables. If a prerequisite is genuinely missing, report the exact missing program and resolve that prerequisite without replacing the existing toolchain installation.
+
+The project configurations differ:
+
+| Item | Došen–Petrić reference | CategoricalEssentialIncompleteness target |
+| --- | --- | --- |
+| Lake project directory | Repository root | Lean/ |
+| Toolchain | leanprover/lean4:v4.35.0 | leanprover/lean4:v4.35.0-rc2 |
+| Dependencies | Lean core; no active Mathlib dependency in the documented setup | Pinned Mathlib and Foundation, with the committed transitive manifest |
+| Verification | bash scripts/verify.sh | python3 scripts/verify.py from the repository root |
+
+Retain these target pins:
+
+- Lean: leanprover/lean4:v4.35.0-rc2
+- Mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+- Foundation: 01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d
+
+Read the current files before acting; if subsequent authorized work changed a pin, reconcile that change instead of silently restoring these values. Otherwise install only the pinned toolchain and use the existing manifest:
+
+    cd "$CEI_ROOT/Lean"
+    elan toolchain install leanprover/lean4:v4.35.0-rc2
+    lean --version
+    lake --version
+    elan which lean
+    lake exe cache get
+    cd "$CEI_ROOT"
+
+The Lean version must be 4.35.0-rc2. If the active version differs, inspect PATH and local Elan overrides. Do not solve a path problem by upgrading the project. Avoid an unrequested lake update, dependency repinning, or copying .lake directories or compiled artifacts from another project or toolchain. Preserve Foundation here even though the Došen–Petrić setup does not require it. The host_proc_self_compat adapter described in HOST_BUILD.md is for the hosted environment and is not needed for an ordinary WSL2 build.
+
+Provide a small target-specific scripts/setup-wsl.sh and scripts/verify-wsl.sh if equivalent wrappers are absent. Adapt existing wrappers if present. The setup wrapper must check prerequisites and the project pin, install the exact toolchain, obtain the pinned Mathlib cache from Lean/, and invoke verification once. The verification wrapper must:
+
+- Resolve the repository root from the script location, so a legitimate worktree also works.
+- Use the Linux Elan shims and set LEAN_NUM_THREADS=1.
+- Take a project build lock with flock and avoid simultaneous verification processes. Serialize heavy jobs across this session; a project-local lock alone does not coordinate other repositories.
+- Record the starting commit, Git status, toolchain, command, and exit status in a fresh ignored .codex-work/ run directory.
+- Invoke the existing python3 scripts/verify.py from the root, preserving failure status through any tee pipeline.
+- Preserve that run's build-logs/ output before a later verifier invocation overwrites it.
+
+Keep these wrappers small; do not replace the existing verifier with another verification framework. Check shell syntax, then use the setup invocation as the single baseline verification. If setup is unnecessary and the environment is already ready, run the verification wrapper once. The underlying command remains:
+
+    LEAN_NUM_THREADS=1 python3 scripts/verify.py
+
+On baseline failure, diagnose and repair the relevant problem while preserving the failure log. Do not disable a failing check or revise expected hashes merely to obtain a pass. After the baseline, begin implementation without another planning checkpoint.
+
+3. FIRST IMPLEMENTATION BATCH: THE EXACT SECTION 3 RESULTS
+
+Complete the following first. The labels, types, and hypotheses below have been checked against the v46 TeX; use the surrounding definitions as part of each statement.
+
+| Manuscript statement | TeX label | Required content |
+| --- | --- | --- |
+| Theorem 3.1 | thm:comparison | Comparison for a lifted partial conditional and an arbitrary disjoint target pair |
+| Corollary 3.2 | cor:separator | Nonexistence of a lifted complementary separator |
+| Corollary 3.3 | cor:source-conditionals | Source inseparability from complementary source conditionals |
+| Proposition 3.4 | prop:disjoint-joins | Construction of those total conditionals from disjoint morphism joins |
+
+Theorem 3.1:
+
+- R is a recursion category with ranges and binary restriction coproducts. A is a restriction category with ranges, restriction zeros, and binary restriction coproducts.
+- F : R → A is a range functor: it preserves restrictions, ranges, restriction zeros, and binary restriction coproducts. Its canonical coproduct isomorphism is χ_{X,Y} : FX + FY ≅ F(X + Y). Product preservation is not an assumption.
+- Fix a Turing morphism τ : U × U ⇀ U and an isomorphism b : U ≅ U + U.
+- Set h = b τ Δ_U : U ⇀ U + U. On U + U put ε₀ = 1_U + 0_U and ε₁ = 0_U + 1_U, and define a_j = h*ε_j, restriction idempotents on U. Here f* denotes restriction inverse image, as defined in the manuscript.
+- Let P and N be arbitrary disjoint restriction idempotents on FU, with F(a₀) ≤ P and F(a₁) ≤ N. They need not be complementary.
+- Assume s : FU ⇀ FU + FU and ℓ : U ⇀ U + U, with s*(1_{FU} + 0_{FU}) = N, s*(0_{FU} + 1_{FU}) = P, and F(ℓ) = χ_{U,U} s. Both s and ℓ may be partial.
+- Construct a total g : U → U with (Fg)*P = (Fg)*N = 0_{FU}.
+- For this g, the further assumptions F(1_U) ≠ 0 and preservation of the join P ∨ N by inverse image along Fg imply P ∨ N ≠ 1_{FU}. Keep the zero-inverse-image conclusion independent of these further assumptions. A separate consequence for the same constructed witness is acceptable.
+
+Use the source Turing construction and the equality h g = ℓ g. Applying F and the coproduct comparison gives the reversed inverse-image equalities. Monotonicity and disjointness then give zero inverse images. The final noncoverage conclusion uses totality, nontriviality, and preservation of the specified join. Do not assume global join preservation for the first conclusion.
+
+Corollary 3.2 assumes F(1_U) ≠ 0 and binary-join preservation by total inverse images in A. Apply Theorem 3.1 to a complementary target pair to exclude the specified s and ℓ.
+
+Corollary 3.3 retains those hypotheses and assumes that every complementary source pair c,c′ on U has a total ℓ_c : U → U + U with ℓ_c c = i₁ c and ℓ_c c′ = i₀ c′. Prove the reversed restriction inverse-image equations using the range agreement law. Set P = F(c), N = F(c′), and s_c = χ_{U,U}^{-1} F(ℓ_c); derive source inseparability from Corollary 3.2.
+
+Proposition 3.4 is stated for a restriction category C with restriction zeros and binary restriction coproducts, assuming joins of parallel morphisms with disjoint restrictions. For complementary c,c′ on X, construct ℓ_c = (i₁ c) ∨ (i₀ c′) : X ⇀ X + X. Prove its two agreement equations and totality. It does not require a recursion category, a range functor, local connectedness, or weak choice.
+
+The new Section 3 comparison results must not inherit the old target assumptions Splits, JoinInverse, LocallyConnected, or WeakChoice unless the precise manuscript statement independently requires the corresponding property. In particular, do not prove the first comparison only for complementary P,N, require ℓ to be total, or obtain it by specializing the old local-connectedness theorem.
+
+Reuse candidates under Lean/CategoricalEssentialIncompleteness/:
+
+- LocalLifting.lean: turing_diagonal, diagonal0, diagonal1. The turing_diagonal theorem already handles an arbitrary ℓ and gives the required total g. The old local_lifting and range_functor_lifting have stronger target hypotheses.
+- RangeFunctor.lean: RangeFunctor, comparison, restriction/range preservation, map_total, map_sup, map_complementary, and the coproduct inverse-image identities. Inspect the exact fields and theorem types before reuse.
+- RestrictionIdempotents.lean: order, inverse images, and domain incompleteness.
+- DisjointJoins.lean: the construction from disjoint joins; check its hypotheses against Proposition 3.4.
+
+The old namespace CategoricalEssentialIncompleteness.LocalConnectedness does not force a local-connectedness hypothesis on every declaration. Inspect elaborated signatures. Reuse appropriate lemmas without repository-wide renaming.
+
+Translate composition explicitly: manuscript gf means g ∘ f, corresponding to Lean f ≫ g. In particular, h is diag U ≫ τ ≫ b.hom, and F(ℓ) = χ s becomes F.map ℓ = s ≫ χ.hom. Lean's category morphism type includes partial morphisms here; totality must be a separate proved property.
+
+4. CORRESPONDENCE AND PROOF REQUIREMENTS
+
+Create FORMALIZATION_STATUS_V46.md. Cover every numbered result and the unnumbered constructions required by its proof, including all appendices. Record:
+
+- Manuscript section, source file, label, and statement.
+- Exact Lean declaration, object and morphism types, and effective hypotheses.
+- Definitions and categorical constructions represented.
+- Proof dependencies and concrete instances needed by the application.
+- Status: proved directly; recovered by a proved comparison; or pending, with the specific missing obligation.
+
+Start with Section 3 and add rows as work proceeds. Do not delay those proofs until a complete-paper inventory is finished. Preserve the v5 table as a separate record; correct active links and scope statements without erasing it.
+
+Add Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean. Check public results at explicitly written manuscript-equivalent types, rather than merely checking that declaration names exist. Verify that inferred parameters introduce no stronger class assumptions. Extend scripts/verify.py to run this audit and to audit every new public result, retaining the v5 audit and its existing declaration coverage.
+
+Prove the intended theorem with the intended definitions. An abstract interface may encode assumptions stated in the paper; it must not contain the desired conclusion as a field. In applications, construct every interface that the paper claims to construct. An uninstantiated interface is an open application obligation. Prove comparison equivalences before transporting results between coded syntax, categorical syntax, and derivation presentations.
+
+No sorry, admit, sorryAx, custom mathematical axioms, native_decide, unsafe proof escape, or hidden dependency on them is acceptable in production proofs. The only permitted transitive proof axioms are propext, Quot.sound, and Classical.choice. Inspect the transitive dependencies of the final declarations; a text search alone is insufficient. Keep new modules and statement audits warning-clean, and preserve existing strict checks. Do not silence warnings or remove declarations from the audit to obtain success.
+
+Keep universes, ambient categories, variance, sources and targets, totality, and composition explicit. Do not substitute a numerical or set-based special case for a theorem quantified over an arbitrary category D. Treat 2 × 2 as a product; define any finite-power convention before use.
+
+Use separate agents for independent modules and for checking manuscript-to-Lean correspondence when the WSL Codex session supports them. Give one integrator ownership of shared interfaces, the combined entry point, and verifier changes. Serialize builds. An agent must not rewrite another agent's files or shared interfaces without coordination. If delegation is unavailable, execute the same work sequentially and report only reviews actually performed.
+
+5. CONTINUE THROUGH THE MANUSCRIPT'S DEPENDENCIES
+
+After the Section 3 batch, continue the following obligations; the first batch is not the full endpoint.
+
+A. Appendix A and Section 4 foundations. Prove the regular-image least-closed-subobject theorem under its stated hypotheses, independently of stronger first-order syntax assumptions where possible. For a range functor F : R → A with split target, construct F̂ : Split(R) → A using chosen target splittings. Prove preservation of restrictions, ranges, zeros, and binary restriction coproducts. Then prove Proposition 4.1 (prop:interpreted-theory), Theorem 4.2 (thm:logical-comparison), and Corollary 4.3 (cor:domain-incompleteness). Retain the separate source-inseparability criterion for consistent extensions.
+
+B. Appendix A categorical syntax. Specify D, V ∈ D with internal decidable equality, the coefficient objects, K(X,Y) = (K₁(X,Y),K₂(X,Y)), and the parameter-stable initial syntax and list algebras. Prove the required initiality in slices and the folds; recursion on global elements is insufficient. Define list operations, occurrence lists, the sentence pullback, option-valued formula substitution, and the complemented admissibility subobject. Keep variable names and the free-for substitution condition. Define the inference endofunctor by its typed rule morphisms and pullbacks, and derive closure and leastness from the initial algebra. Prove Lemma A.7's regular-image/range identification with its partial-inverse hypothesis; do not assume all monomorphisms of Tot(Split(R)) have partial inverses.
+
+C. Section 5 and Section 7.4 realizations. Prove the categorical universal properties in their stated total categories, for arbitrary coefficients and the required parameter slices. Distinguish T-provable graph equality and totality in the syntactic category from ordinary computable totality on numerical carriers. Prove comparisons with the existing syntax, substitution, and Craig/LK derivations before reusing their results. ArithmeticProofDomains.lean and the existing syntax modules are resources, not automatic proofs of the new categorical universal properties.
+
+D. Section 6 soundness and Section 7 arithmetic. Distinguish the arithmetic code model M from a structure K satisfying the represented axioms. Prove the standard-code soundness factorization, semantic substitution, and the stated ultrapower comparison and factorization. Keep Lemma 6.2's total conditional lift distinct from Lemma 7.2's partial proof-search lift. Derive Theorem 7.3 through Theorem 4.2, using the interpreted theorem and refutation restriction idempotents. Then prove the indexed theory family, its numeral fibers, the uniform independent-sentence morphism, the numerical application, and the extension results. An imported arithmetic incompleteness theorem does not establish this categorical proof chain.
+
+E. Section 8 Miller application. Preserve the requirement of one oracle program with the same domain and values for every binary representation of the fixed sequence. Prove regularity, parameterized syntax and derivation initiality, and the theory application with this uniformity. A result for one chosen oracle does not establish the representation-independent statement.
+
+F. Section 9 and Appendix B cosheaves. Reuse the existing construction through proved identifications. Preserve component naturality, categorical initiality, component inverses, and the endpoint theory arguments. Retain the nonnumerical application. Appendix C's missing-lift counterexample and Appendix D's faithful-family results also require correspondence entries and proofs. Local connectedness can remain a proved property of examples; the old general local-connectedness lifting theorem does not replace the v46 comparison.
+
+Useful existing modules include SyntacticModel.lean, SyntacticFiniteSwitch.lean, ArithmeticProofDomains.lean, ForkSyntaxInitialAlgebra.lean, and ForkProofPresentation.lean. Check what each declaration proves before reusing it. Consolidate common reasoning through proved interfaces while retaining the distinct arguments for T-provability, numerical halting, representation independence, and naturality.
+
+6. VERIFICATION, CORRECTIONS, AND REVIEWS
+
+During implementation, run targeted Lean checks on changed modules. After integration, run the complete verifier once on the resulting source. Repeat a successful full check only when subsequent changes, a failure, or a concrete unresolved concern requires it. Keep one heavy build or replay active at a time. LEAN_NUM_THREADS=1 limits concurrency; it is not a memory limit.
+
+The final verification must retain source and manuscript pin checks, dependency revision checks against the committed manifest, the combined entry-point build, the v5 statement audit, the new v46 statement audit, and the transitive permitted-axiom audit. Ensure every new result is reachable from the combined entry point and included in the relevant audit. Preserve source provenance when an imported file genuinely requires a repair; record the justified change instead of concealing it with a new expected hash.
+
+Apply hostile-referee review to substantive theorem statements, proof dependencies, concrete instances, and their correspondence rows. Resolve concrete findings. When mathematical prose changes, apply the mathematical-writing instructions and read their Knuth–Larrabee–Roberts source; do not claim that review without consulting it. Keep reviews focused on changed mathematics and its dependencies, avoiding repeated audits of unchanged material.
+
+If formalization exposes a mathematical error, record the exact failed assertion, its hypotheses, and the smallest justified correction. Do not weaken a theorem silently or mark an application complete while a necessary instance remains unproved. Continue independent valid work while resolving the issue.
+
+Use standard terminology, including “morphism,” “Turing morphism,” and “restriction idempotent.” Define terms before use. Avoid empty adjectives, invented labels, duplicated arguments, and process commentary in mathematical prose. Prefer inline formulas unless a display improves readability or is numbered. Preserve every appendix and Appendix A's list construction. Appendix A contains no numerical realization or incompleteness discussion. Lean-only changes do not require a manuscript PDF revision; an authorized manuscript revision must preserve v46 and increment its version.
+
+Keep these statuses distinct: source inspection, Lean compilation, exact manuscript correspondence, concrete realization, independent-kernel replay, and registry verification. This task requires the Lean work and its correspondence. Existing Došen–Petrić kernel or Palomar results provide no verification of this project. Do not introduce a registry submission or unrelated toolchain migration into the proof task.
+
+7. INTEGRATION AND DELIVERY
+
+Integrate completed, checked work into main and push origin/main within the existing authorization. Preserve concurrent and unrelated work. Check the remote ref after the push; report an unavailable or rejected push as unsynchronized, without describing local completion as remote delivery. Do not force-push or move frozen tags.
+
+Retain the updated v46 correspondence table in the repository. Put implementation reports under docs/ and substantive review reports under docs/reviews/. Reports must state:
+
+- Exact manuscript results and Lean declarations proved in this batch.
+- Their effective hypotheses and the constructed concrete instances.
+- Actual verification commands, exit statuses, toolchain and dependency pins, and the transitive axiom result.
+- The tested source revision or precise precommit source identity, the resulting commit, and synchronization status.
+- Remaining v46 obligations, with abstract and concrete results distinguished.
+
+Keep transient logs under ignored .codex-work/ and build-logs/. Preserve the evidence needed to reproduce any reported failure or correction. Resolve the existing Windows Downloads directory for the active machine and profile before delivery. Deliver finalized reports and the correspondence table from committed bytes there, preferably in a dated CEI-v46 subdirectory. Verify each copy byte for byte or by SHA-256. If a destination contains different material, preserve it and use a dated or commit-suffixed filename. Do not infer a Windows username or create a fictitious Downloads location.
+
+The final response must identify the completed declarations, the verification outcome, the commit and push status, the specific remaining obligations, and both repository and Downloads paths. Report any delivery failure explicitly. Do not call all of v46 verified on the strength of v5 results, an abstraction without its realization, or a declaration count.
+
+Begin now: inspect the existing WSL2 checkout and guidance, establish the pinned environment, run one baseline verification, and implement the exact Section 3 results with their v46 statement checks. Continue substantive implementation after setup and reporting preparation.
+
+REFERENCE LINKS USED TO PREPARE THESE INSTRUCTIONS
+
+Došen–Petrić WSL2 setup:
+https://github.com/flengyel/Dosen-Petric-Maximality/blob/76a4ea71f257746bb6ea2cb2e686e85914c7347c/docs/WSL2_SETUP.md
+
+Došen–Petrić setup and verification scripts:
+https://github.com/flengyel/Dosen-Petric-Maximality/blob/76a4ea71f257746bb6ea2cb2e686e85914c7347c/scripts/setup-wsl.sh
+https://github.com/flengyel/Dosen-Petric-Maximality/blob/76a4ea71f257746bb6ea2cb2e686e85914c7347c/scripts/verify.sh
+
+Target toolchain and dependencies:
+https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/558a20eed4c62d59eada05f5500cf233671078e9/Lean/lean-toolchain
+https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/558a20eed4c62d59eada05f5500cf233671078e9/Lean/lake-manifest.json
+
+Target verifier and Section 3:
+https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/558a20eed4c62d59eada05f5500cf233671078e9/scripts/verify.py
+https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/558a20eed4c62d59eada05f5500cf233671078e9/manuscript/local_connectedness/sections/03-sections-and-inseparability.tex

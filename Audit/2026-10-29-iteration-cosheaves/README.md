@@ -2,8 +2,8 @@
 
 Date: 29 October 2026.
 
-The new note is [Iteration domains, finite proofs, and computational cosheaves](../../manuscript/iteration_domains_and_cosheaves.pdf)
-([source](../../manuscript/iteration_domains_and_cosheaves.tex)).
+The new note is [Iteration domains, finite proofs, and computational cosheaves](../../manuscript/archive/iteration_domains_and_cosheaves.pdf)
+([source](../../manuscript/archive/iteration_domains_and_cosheaves.tex)).
 It continues the repository at dbd8b1ad803c1436ecf6abdc1c4ef1548f7ab4c1.
 The preceding 23-page note and 13-page supplement are unchanged.
 

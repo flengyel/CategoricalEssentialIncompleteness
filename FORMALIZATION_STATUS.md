@@ -1,13 +1,15 @@
-# Formalization status: local-connectedness manuscript, version 5
+# Verified baseline: local-connectedness manuscript, version 5
 
-The current target is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`,
+The current manuscript and new formalization target are v46. Follow
+[the v46 instructions](docs/CODEX_WSL2_V46.txt) for new work. The results below
+record the completed v5 baseline and do not certify v46.
+
+The verified v5 source is `manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex`,
 reviewed baseline `883f1f792a5e4a244974d00458e8a9dee61b2f94`.
 All **24 numbered results**, their applications and appendices, and the
 constructions required by their proofs are proved. The cited background
 limitation below remains explicit. The earlier version-16 development is retained
 as a historical record and does not determine completion of version 5.
-The author's announced title change does not change the mathematical target;
-this work does not edit the manuscript.
 
 The abstract categorical chain is proved. In particular, the combined theorem
 constructs its inseparable pair using source Turing universality and target local

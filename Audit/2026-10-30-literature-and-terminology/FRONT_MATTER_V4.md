@@ -3,8 +3,8 @@
 30 October 2026. Focused revision of the abstract, introduction, and the
 description of the three-point space in Section 8.
 
-The [Version 4 PDF](../../manuscript/essential_incompleteness_via_local_connectedness_v4.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness_v4.tex))
+The [Version 4 PDF](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v4.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v4.tex))
 opens with the purpose of the theorem: a locally connected target permits
 an inseparability argument in a source recursion category that need not be
 locally connected. Target sections lift to source arrows; the source

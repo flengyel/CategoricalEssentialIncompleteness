@@ -1,5 +1,9 @@
 # Continuation: the general construction in recursion categories
 
+These are retained instructions for the earlier general-construction work.
+The current target is v46; use [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt)
+for new implementation. The earlier task text is preserved below.
+
 Continue the mathematical construction in flengyel/CategoricalEssentialIncompleteness
 on main. Use the current committed sources, not the earlier represented-Boolean-quotient
 formalization. Consult Lengyel2004 together with the version-10 corrections
@@ -7,19 +11,19 @@ in flengyel/errata; read their latest committed state before importing further r
 
 ## Current documents
 
-- manuscript/domains_hoare_profunctors_essential_incompleteness.tex and .pdf:
+- manuscript/archive/domains_hoare_profunctors_essential_incompleteness.tex and .pdf:
   *Domains, finite proofs, and essential incompleteness*, 23 pages,
   committed at 10284d07bd46f327472ccddf1ee508d0de5c2156.
-- manuscript/general_recursion_category_construction.tex and .pdf:
+- manuscript/archive/general_recursion_category_construction.tex and .pdf:
   *Finite proof algebras in range restriction categories*, 13 pages,
   committed at dbd8b1ad803c1436ecf6abdc1c4ef1548f7ab4c1.
-- manuscript/iteration_domains_and_cosheaves.tex and .pdf:
+- manuscript/archive/iteration_domains_and_cosheaves.tex and .pdf:
   *Iteration domains, finite proofs, and computational cosheaves*, 14 pages.
-- manuscript/range_completion_three_point_cosheaves.tex and .pdf:
+- manuscript/archive/range_completion_three_point_cosheaves.tex and .pdf:
   *Range completion and computational cosheaves on a three-point space*.
-- manuscript/inseparable_domains_and_extensions.tex and .pdf:
+- manuscript/archive/inseparable_domains_and_extensions.tex and .pdf:
   *Inseparable domains and computational extensions*, 5 pages.
-- manuscript/essential_incompleteness_via_local_connectedness_v5.tex and .pdf:
+- manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex and .pdf:
   *Local connectedness, range functors, and essential incompleteness*,
   Version 5, 30 October 2026, 28 pages.
   It constructs a faithful range functor from S_T to a locally connected
@@ -39,10 +43,10 @@ in flengyel/errata; read their latest committed state before importing further r
   Lengyel2004 is cited together with the version-10 corrections. The invalid
   pointwise systems S'_T of Di Paola–Montagna are excluded by Lengyel's
   composition-failure paper; the uniform quotients S_T are retained.
-- manuscript/sources/LOCOct10f.tex: unchanged archived source,
+- manuscript/archive/sources/LOCOct10f.tex: unchanged archived source,
   SHA-256 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
   The current paper's proofs do not depend on this archived source.
-- manuscript/intrinsic_introspection_and_extensions.tex and .pdf:
+- manuscript/archive/intrinsic_introspection_and_extensions.tex and .pdf:
   *Internal theories and intrinsic incompleteness*, 3 pages: a separate
   arithmetic-universe comparison, with no established connection to the
   given recursion category or the Di Paola–Heller construction.
@@ -74,7 +78,7 @@ are expressly author-side audits, not independent referee reports.
 
 ## Version 5: introduction, theorem statement, and attribution
 
-The current paper is `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`
+The current paper is `manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex`
 and `.pdf`, visibly marked Version 5 and dated 30 October 2026.
 The abstract names the syntactic recursion categories of Di Paola–Montagna.
 Its opening states the new theorem directly; do not describe it as extending
@@ -125,7 +129,7 @@ terminology.
 
 ## Version 2 completion (historical)
 
-The Version 2 paper is `manuscript/essential_incompleteness_via_local_connectedness_v2.tex`
+The Version 2 paper is `manuscript/archive/essential_incompleteness_via_local_connectedness_v2.tex`
 and `.pdf`, visibly marked Version 2. Read
 `Audit/2026-10-29-introduction-economy/README.md` for this revision's outline,
 proof review and writing review.

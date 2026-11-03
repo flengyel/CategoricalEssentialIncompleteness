@@ -1,6 +1,6 @@
 # Version 2: categorical essential incompleteness
 
-[PDF](../../manuscript/essential_incompleteness_via_local_connectedness_v2.pdf) · [LaTeX source](../../manuscript/essential_incompleteness_via_local_connectedness_v2.tex)
+[PDF](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v2.pdf) · [LaTeX source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v2.tex)
 
 Version 2 is dated 29 October 2026 and has 27 pages. The filename and title-page version distinguish it from the preceding cached PDF. The previous unversioned files remain historical copies; active README links point to Version 2.
 

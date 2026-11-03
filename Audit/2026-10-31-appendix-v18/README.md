@@ -4,11 +4,11 @@
 
 The standalone appendix is Appendix A; the same mathematical body is Appendix B of the assembled manuscript.
 
-- [Standalone appendix PDF](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v18.pdf)
-- [Standalone LaTeX source](../../manuscript/first_order_syntax_and_deductive_closure_appendix_v18.tex)
+- [Standalone appendix PDF](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v18.pdf)
+- [Standalone LaTeX source](../../manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v18.tex)
 - [Review and literature report](appendix_a_review_v18.pdf) ([source](appendix_a_review_v18.tex))
-- [Manuscript PDF](../../manuscript/essential_incompleteness_via_local_connectedness_v18.pdf)
-- [Matching source archive](../../manuscript/local_connectedness_v18_source.zip)
+- [Manuscript PDF](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v18.pdf)
+- [Matching source archive](../../manuscript/archive/local_connectedness_v18_source.zip)
 
 ## Mathematical change
 

@@ -1,0 +1,1044 @@
+{
+  "base_commit": "558a20eed4c62d59eada05f5500cf233671078e9",
+  "archive_date": "2026-11-03",
+  "current_version": 46,
+  "current_pdf": "manuscript/logical_consequence_and_essential_incompleteness_v46.pdf",
+  "current_source": "manuscript/latex/main.tex",
+  "current_source_archive": "manuscript/logical_consequence_v46_source.zip",
+  "archived_files": [
+    {
+      "from_path": "manuscript/deduction_and_essential_incompleteness.pdf",
+      "to_path": "manuscript/archive/deduction_and_essential_incompleteness.pdf",
+      "git_blob": "368e55048fb1ca3756835e4f659b511318eca4c4",
+      "size": 335055
+    },
+    {
+      "from_path": "manuscript/deduction_and_essential_incompleteness.tex",
+      "to_path": "manuscript/archive/deduction_and_essential_incompleteness.tex",
+      "git_blob": "a72a86d3501c65adb699d03a9930d458b782ae87",
+      "size": 29916
+    },
+    {
+      "from_path": "manuscript/definability_comparison_v16.pdf",
+      "to_path": "manuscript/archive/definability_comparison_v16.pdf",
+      "git_blob": "2b5bb5835716d286428363cc54a7466602a1e8aa",
+      "size": 591267
+    },
+    {
+      "from_path": "manuscript/definability_comparison_v16.tex",
+      "to_path": "manuscript/archive/definability_comparison_v16.tex",
+      "git_blob": "d78b7e69267010f692ed49a49ed4291d3d6f87d1",
+      "size": 133470
+    },
+    {
+      "from_path": "manuscript/definability_indexed_predicates.pdf",
+      "to_path": "manuscript/archive/definability_indexed_predicates.pdf",
+      "git_blob": "7794b1f88496ea5c5ae946477b6deac43bd307d1",
+      "size": 263772
+    },
+    {
+      "from_path": "manuscript/definability_indexed_predicates.tex",
+      "to_path": "manuscript/archive/definability_indexed_predicates.tex",
+      "git_blob": "b61d2dd4c67ee97f42421848bec4912f9971b0f9",
+      "size": 15465
+    },
+    {
+      "from_path": "manuscript/domains_hoare_profunctors_essential_incompleteness.pdf",
+      "to_path": "manuscript/archive/domains_hoare_profunctors_essential_incompleteness.pdf",
+      "git_blob": "406ea66d6544b5f688d7a487692262a3c89bb2bb",
+      "size": 480011
+    },
+    {
+      "from_path": "manuscript/domains_hoare_profunctors_essential_incompleteness.tex",
+      "to_path": "manuscript/archive/domains_hoare_profunctors_essential_incompleteness.tex",
+      "git_blob": "8f7c64d204f7a94672bf0e8bfb55adc63d4941ce",
+      "size": 71179
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness.pdf",
+      "git_blob": "3b756feaa3731c2c7bf39e0573c417b76c275106",
+      "size": 424781
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness.tex",
+      "git_blob": "22ebbc0e8d7f8fcab0627abd661d1639ac17d95e",
+      "size": 95984
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v10.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v10.pdf",
+      "git_blob": "ee00d0466fa822f3bfa2907486e784bb0676b140",
+      "size": 566345
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v11.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v11.pdf",
+      "git_blob": "606673c990898ef3b5d6d03846122b63a5353e35",
+      "size": 566522
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v12.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v12.pdf",
+      "git_blob": "63d037c2c8b654f357a64168e3936b0fe075d81c",
+      "size": 563504
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v13.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v13.pdf",
+      "git_blob": "ec3d42ade54becd4d710af1dc4ae34f9c48ea4e1",
+      "size": 608074
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v14.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v14.pdf",
+      "git_blob": "4bcce336bccaa29fca3e25a18f6536305ef5e9de",
+      "size": 608110
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v15.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v15.pdf",
+      "git_blob": "1351a5fbd47220807d5261242127751d54932341",
+      "size": 626798
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v16.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v16.pdf",
+      "git_blob": "932b7094f6a6cc2bb622a98212125930772a5d95",
+      "size": 631933
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v17.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v17.pdf",
+      "git_blob": "5a54b4af9cc76b36ba9ff2e9ff09f050c3d2d789",
+      "size": 634314
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v18.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v18.pdf",
+      "git_blob": "20f4b2cdf17e73e752ce777369e14d80e804cccd",
+      "size": 645687
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v19.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v19.pdf",
+      "git_blob": "d95356733735b4d5102437bf77bad3b516eb63bb",
+      "size": 702726
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v2.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v2.pdf",
+      "git_blob": "9f9684d232045c71adaeb6b211cea09ce8f60b46",
+      "size": 439657
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v2.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v2.tex",
+      "git_blob": "2d5aea18cc937d9ff5e616c5e4ecc0ca9ba00ba6",
+      "size": 104046
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v3.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v3.pdf",
+      "git_blob": "f7c23baed82cd5d862b872695102395f3efb9544",
+      "size": 440360
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v3.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v3.tex",
+      "git_blob": "87187b0d1a0dad461c07c9ca3de6328a0cce3ca9",
+      "size": 105017
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v4.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v4.pdf",
+      "git_blob": "25fec430134333c05706f9c042898aa72b2bbb65",
+      "size": 437494
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v4.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v4.tex",
+      "git_blob": "a2145897c68560acc776650bca17dad2a76adb18",
+      "size": 103050
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v5.pdf",
+      "git_blob": "69676b7f894714c95cd58d29d1c133f25ee77009",
+      "size": 450641
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v5.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex",
+      "git_blob": "db1e0b185beec80ffa936cb0a72ff95c6d1f591e",
+      "size": 109696
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v7.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v7.pdf",
+      "git_blob": "36d038feda30bd520e830ee31563ea765585baaf",
+      "size": 521087
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v7.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v7.tex",
+      "git_blob": "8e1475d0e71e248fee01d472d35e1ad6d7334a19",
+      "size": 132257
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v8.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v8.pdf",
+      "git_blob": "1b428c855f3f5537b2fe8141792140b5ab3d24f8",
+      "size": 544225
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v8.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v8.tex",
+      "git_blob": "3263ef1de3487dc985589248014ec2e46c4fc434",
+      "size": 142284
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v9.pdf",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v9.pdf",
+      "git_blob": "9454bff7ab11ec6681a6af8e7551e266a3b1ba96",
+      "size": 557281
+    },
+    {
+      "from_path": "manuscript/essential_incompleteness_via_local_connectedness_v9.tex",
+      "to_path": "manuscript/archive/essential_incompleteness_via_local_connectedness_v9.tex",
+      "git_blob": "05b2aae4813e7adc96b830ba5fc03bf920d005cd",
+      "size": 147093
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix.pdf",
+      "git_blob": "f403b414d70cf7d8f9d8f8ba83a25c0acf22155e",
+      "size": 315286
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix.tex",
+      "git_blob": "c6239b380514252024227284100a50dc117e6fc6",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v15.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v15.pdf",
+      "git_blob": "f04fe2e1370ff46424725d1c80c0c45a031f5911",
+      "size": 294594
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v15.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v15.tex",
+      "git_blob": "67bb97cfa1200b864d59721c25b33c4303978e24",
+      "size": 25646
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v16.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v16.pdf",
+      "git_blob": "1fda500445515abe981a18912ad34b872fc3a859",
+      "size": 299089
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v16.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v16.tex",
+      "git_blob": "99bcfab09827a0078c72d56b39f56802bec3b2fa",
+      "size": 26175
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v17.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v17.pdf",
+      "git_blob": "fe4310d062a15bc7e59e0e65080c004342dd16cd",
+      "size": 302186
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v17.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v17.tex",
+      "git_blob": "83dbf1166a0bd5362ede76f0dcf821a79a2358b3",
+      "size": 28352
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v18.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v18.pdf",
+      "git_blob": "ecb57acafd76eb503d7696f89dd9153dd21d248b",
+      "size": 315529
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v18.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v18.tex",
+      "git_blob": "24a53ae79f4fa97a695a119a40656f30147e8212",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v19.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v19.pdf",
+      "git_blob": "1ed5e4905430979c07ed3907468695f8ac433007",
+      "size": 315508
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v19.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v19.tex",
+      "git_blob": "ac42df54cbf2a6c430ce8fa530c2b054bb1e948f",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v20.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v20.pdf",
+      "git_blob": "e7b2d516b9ccffc59d19482b82679cc98290d199",
+      "size": 315286
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v20.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v20.tex",
+      "git_blob": "0d6f7f8e413e39814ffeeaf965f39b36895ab425",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v21.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v21.pdf",
+      "git_blob": "f4f2bdc70aac9a93862d615f55cf8cfddd71244a",
+      "size": 315286
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v21.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v21.tex",
+      "git_blob": "3dccb996cc2e12ab41f54cacf316e3e186813ba6",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v22.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v22.pdf",
+      "git_blob": "3ababc66014c52a0dd2e3cf37dac4b1d9276b8af",
+      "size": 315286
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v22.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v22.tex",
+      "git_blob": "46fcdfd0298fcc5e877bb5e5a0750abc78e11270",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v23.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v23.pdf",
+      "git_blob": "8ecdde336c1cd2aa6ef8fdde88b9b2c55b3c9a51",
+      "size": 315564
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v23.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v23.tex",
+      "git_blob": "8c95d0b68515b7be21b849a0029faced6e87be11",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v24.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v24.pdf",
+      "git_blob": "4900634eff359b2b9f0222c37a91e1060e6cd448",
+      "size": 315574
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v24.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v24.tex",
+      "git_blob": "a9ef79bf4acf0cfed4041032891936031f7780ee",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v25.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v25.pdf",
+      "git_blob": "91a1fbea799ae1a0f44c269af94c1607b76b5618",
+      "size": 315564
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v25.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v25.tex",
+      "git_blob": "74eafbbbcc979f37a382fc2e18de7df7046f8a2f",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v26.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v26.pdf",
+      "git_blob": "f403b414d70cf7d8f9d8f8ba83a25c0acf22155e",
+      "size": 315286
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v26.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v26.tex",
+      "git_blob": "c6239b380514252024227284100a50dc117e6fc6",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v27.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v27.pdf",
+      "git_blob": "9ee080a10cecd5647f4781b54fcc3d7f87574a4a",
+      "size": 315538
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v27.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v27.tex",
+      "git_blob": "3e1a0106ef7b994b6b73a4bfd449d4b8ddbcb93e",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v28.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v28.pdf",
+      "git_blob": "fc9d0d38040fd3647b00d457e13fe3b8982fb41c",
+      "size": 315514
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v28.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v28.tex",
+      "git_blob": "76da9bd40466167307b77d31360d8e680831717c",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v29.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v29.pdf",
+      "git_blob": "050df651a15bc3c40c5212e713b29b3cb1f2a7fd",
+      "size": 315508
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v29.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v29.tex",
+      "git_blob": "199491277ab837fef05f59a8f1b92f7a917456c6",
+      "size": 35412
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v30.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v30.pdf",
+      "git_blob": "5202222f3ea633a73a6355ab76eab789126ad271",
+      "size": 315631
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v30.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v30.tex",
+      "git_blob": "32dba6782777654758a6d32fe4cee8ebbcc41b83",
+      "size": 35454
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v31.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v31.pdf",
+      "git_blob": "522e05f43651a7171751c7f721bf30bb96a6291d",
+      "size": 365352
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v31.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v31.tex",
+      "git_blob": "0f81789544c3b834f3c2abbcbf5c538cc15829bc",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v32.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v32.pdf",
+      "git_blob": "d2b27172bedefc09b06349a78ea122a60d973f1d",
+      "size": 365352
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v32.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v32.tex",
+      "git_blob": "5ae004e36103b8338f9c380b0eec1f8119b9f314",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v33.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v33.pdf",
+      "git_blob": "db89e6455dfcef5c2a2acd97f86ce654af584e40",
+      "size": 365352
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v33.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v33.tex",
+      "git_blob": "7b3e25a19b04f8fb65462cb4c61566477406c3c4",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v34.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v34.pdf",
+      "git_blob": "f5da6813ffd47502e4d65f60a384b978b4d22c39",
+      "size": 365608
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v34.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v34.tex",
+      "git_blob": "4bf2e36e1eeb595eb2fee4caeaf23958ea85d28d",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v35.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v35.pdf",
+      "git_blob": "0c30b091bf64a767fc3c647b765bce08ecb96abf",
+      "size": 365589
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v35.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v35.tex",
+      "git_blob": "d1bcd29111744a921ed42b4864c7988f5e6be9e1",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v36.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v36.pdf",
+      "git_blob": "e5614fa1496427651cc81aecf067ea9fc9f6c6d5",
+      "size": 365352
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v36.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v36.tex",
+      "git_blob": "3fe86cb6c2c5d948ea14d85a5a3ba4e8801b60b9",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v37.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v37.pdf",
+      "git_blob": "85c804ab5fdea439475ab1469dfb6c889017b366",
+      "size": 365583
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v37.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v37.tex",
+      "git_blob": "72c53b5ad3016203fd649843d4a8786100f7ab22",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v38.pdf",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v38.pdf",
+      "git_blob": "bc513f7857c433750e526bb8c14414669642fe05",
+      "size": 365555
+    },
+    {
+      "from_path": "manuscript/first_order_syntax_and_deductive_closure_appendix_v38.tex",
+      "to_path": "manuscript/archive/first_order_syntax_and_deductive_closure_appendix_v38.tex",
+      "git_blob": "8c39c9ba5c1d44c8acc54f01f1834bb0d5d6bacd",
+      "size": 38710
+    },
+    {
+      "from_path": "manuscript/general_recursion_category_construction.pdf",
+      "to_path": "manuscript/archive/general_recursion_category_construction.pdf",
+      "git_blob": "125d7b52fdfdde876d8a6ad16b1b257d54574249",
+      "size": 342670
+    },
+    {
+      "from_path": "manuscript/general_recursion_category_construction.tex",
+      "to_path": "manuscript/archive/general_recursion_category_construction.tex",
+      "git_blob": "2b19c8f4adb98aa6b28b803bb5191d00cc63c53a",
+      "size": 42984
+    },
+    {
+      "from_path": "manuscript/inseparable_domains_and_extensions.pdf",
+      "to_path": "manuscript/archive/inseparable_domains_and_extensions.pdf",
+      "git_blob": "325c2c716661ada29ac8c9ad1718eb9d1e5f2d40",
+      "size": 252955
+    },
+    {
+      "from_path": "manuscript/inseparable_domains_and_extensions.tex",
+      "to_path": "manuscript/archive/inseparable_domains_and_extensions.tex",
+      "git_blob": "fc24a92a4adff1c475cbdfc7b7735dd2be4435d3",
+      "size": 17388
+    },
+    {
+      "from_path": "manuscript/intrinsic_introspection_and_extensions.pdf",
+      "to_path": "manuscript/archive/intrinsic_introspection_and_extensions.pdf",
+      "git_blob": "922c1558ac8072a4cef4f02a8a6b2b71173429f9",
+      "size": 306013
+    },
+    {
+      "from_path": "manuscript/intrinsic_introspection_and_extensions.tex",
+      "to_path": "manuscript/archive/intrinsic_introspection_and_extensions.tex",
+      "git_blob": "febac0f4a41f9a86192030c6bfc76bf95dc8a974",
+      "size": 10635
+    },
+    {
+      "from_path": "manuscript/iteration_domains_and_cosheaves.pdf",
+      "to_path": "manuscript/archive/iteration_domains_and_cosheaves.pdf",
+      "git_blob": "262215cfecbec0975989e29046abc65112f29957",
+      "size": 392900
+    },
+    {
+      "from_path": "manuscript/iteration_domains_and_cosheaves.tex",
+      "to_path": "manuscript/archive/iteration_domains_and_cosheaves.tex",
+      "git_blob": "6abcef6efd42c64266cf9b1f681ccfc1247169cc",
+      "size": 50341
+    },
+    {
+      "from_path": "manuscript/local_connectedness_v15_source.zip",
+      "to_path": "manuscript/archive/local_connectedness_v15_source.zip",
+      "git_blob": "abe9fca84ad78b1d61e5b4a122809cdc073e2ab5",
+      "size": 68538
+    },
+    {
+      "from_path": "manuscript/local_connectedness_v16_source.zip",
+      "to_path": "manuscript/archive/local_connectedness_v16_source.zip",
+      "git_blob": "0aabcf9b0a43bf72727bdc65487e875b594c09e5",
+      "size": 68763
+    },
+    {
+      "from_path": "manuscript/local_connectedness_v17_source.zip",
+      "to_path": "manuscript/archive/local_connectedness_v17_source.zip",
+      "git_blob": "5ef78d5a02c88400bd246df15f6362378932e46c",
+      "size": 69268
+    },
+    {
+      "from_path": "manuscript/local_connectedness_v18_source.zip",
+      "to_path": "manuscript/archive/local_connectedness_v18_source.zip",
+      "git_blob": "c7b0fdbbcc20ee8e9b9e5af76c359a93b144fe64",
+      "size": 71963
+    },
+    {
+      "from_path": "manuscript/local_connectedness_v19_source.zip",
+      "to_path": "manuscript/archive/local_connectedness_v19_source.zip",
+      "git_blob": "3ddc178415c870caf21f7194e0936d50f4e98c06",
+      "size": 84945
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v20.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v20.pdf",
+      "git_blob": "3df812b3c13a2ac82540360ad92357367804495e",
+      "size": 720735
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v21.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v21.pdf",
+      "git_blob": "b99fececd07ccb36345b7bf1b013c5743d618803",
+      "size": 764568
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v22.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v22.pdf",
+      "git_blob": "7679b403f3700d80815773d1376f20978cfab820",
+      "size": 779479
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v23.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v23.pdf",
+      "git_blob": "340038c441fcacdc24522cfc2e2a11b797faa49e",
+      "size": 781089
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v24.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v24.pdf",
+      "git_blob": "86709ae64e481802aa053b5d6e54d81d062af114",
+      "size": 795816
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v25.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v25.pdf",
+      "git_blob": "f89735f3168d7736151a0af3f8f026f1f7eddf8c",
+      "size": 796090
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v26.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v26.pdf",
+      "git_blob": "ab223a2bdcadeb2422576cd9fe7e74978af7d7b3",
+      "size": 826929
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v27.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v27.pdf",
+      "git_blob": "076981b95a792cbf8fd6251bdf69367a7ca71e4c",
+      "size": 829255
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v28.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v28.pdf",
+      "git_blob": "ef8782c5671fb3cdec81e95d10cd88fd7513d542",
+      "size": 822788
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v29.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v29.pdf",
+      "git_blob": "e3fc772ae00b6749c1dc4edcce237bec5b1e8929",
+      "size": 823298
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v30.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v30.pdf",
+      "git_blob": "f73cc489308e9dc4a451971d21b1dbcd77003566",
+      "size": 823610
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v31.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v31.pdf",
+      "git_blob": "b77f24d61dc8994a0d0b105d1879cdd59db337b1",
+      "size": 853024
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v32.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v32.pdf",
+      "git_blob": "b2216e5266b7e478d932b0cfdd132b0eb96cc52e",
+      "size": 855716
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v33.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v33.pdf",
+      "git_blob": "3172a3b3d1a1fefebf0e66b3264177c50d154c5e",
+      "size": 855798
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v34.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v34.pdf",
+      "git_blob": "6ad04a352b44f0512df842c1b866480c8275e326",
+      "size": 857729
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v35.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v35.pdf",
+      "git_blob": "99d2d8038a82272d7c7c8197bfa9be17c963a792",
+      "size": 858131
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v36.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v36.pdf",
+      "git_blob": "abdbae64bae2856c0c231f82ee9671c639c23a01",
+      "size": 857754
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v37.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v37.pdf",
+      "git_blob": "9d0a5cfa278f12a166e00919c76988d6b9cfd19b",
+      "size": 857692
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v38.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v38.pdf",
+      "git_blob": "48b055d12a9caea856f37a0d50f69da6d5ca8aeb",
+      "size": 859661
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v39.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v39.pdf",
+      "git_blob": "ce61f845208a44fab7e03c026ba5eab96a047922",
+      "size": 859512
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v40.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v40.pdf",
+      "git_blob": "1a32d8df9ebf564cbdceaa2321f60597949039dc",
+      "size": 859366
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v41.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v41.pdf",
+      "git_blob": "f3b4bd9a84ea2976844b1c8279d03df8285919da",
+      "size": 860177
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v42.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v42.pdf",
+      "git_blob": "83ebeb695647958b5a89be8fe8377a968bf8e0ee",
+      "size": 859846
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v43.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v43.pdf",
+      "git_blob": "44a7b65b91868afc4f44f4b2a11949b898de1716",
+      "size": 863503
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v44.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v44.pdf",
+      "git_blob": "5778aaed3d0957b0372e13856c801bff6cdbda52",
+      "size": 864513
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v45.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v45.pdf",
+      "git_blob": "5412426b61031e50d7d30565d682472c5b5727bb",
+      "size": 858475
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v20_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v20_source.zip",
+      "git_blob": "e43673ba415f1f00750ba688aa16d719dc08856a",
+      "size": 87929
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v21_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v21_source.zip",
+      "git_blob": "061723a92bb2c56b3eba5d42eef033ca999b055c",
+      "size": 96452
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v22_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v22_source.zip",
+      "git_blob": "42ae8eb41afa8ab04fd72f68c7cb5ec432fdc96c",
+      "size": 100098
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v23_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v23_source.zip",
+      "git_blob": "a3409eec38bdc43aa0b25f7e76ba1fedbd465856",
+      "size": 100487
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v24_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v24_source.zip",
+      "git_blob": "9e8323552512d64b26ef7b696a94a73569ac1d19",
+      "size": 102384
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v25_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v25_source.zip",
+      "git_blob": "828613a85816f570d51b00c7d35d9a2a9fb244f9",
+      "size": 103224
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v26_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v26_source.zip",
+      "git_blob": "d47d45b9464ef0ad5b9c5a0f8f0d2990a2d3da75",
+      "size": 110177
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v27_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v27_source.zip",
+      "git_blob": "746d590477944459b2bdf8daaba40649def91940",
+      "size": 110367
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v28_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v28_source.zip",
+      "git_blob": "3fb93d3bcff9c29e7dcae03198eb5d7779b6401e",
+      "size": 109262
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v29_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v29_source.zip",
+      "git_blob": "aba76952fe34c6d5d437c3660da5648842a0d16d",
+      "size": 109356
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v30_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v30_source.zip",
+      "git_blob": "821a6995542425367d553b3a230f234d1c912021",
+      "size": 109489
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v31_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v31_source.zip",
+      "git_blob": "8b5e3704c37219f4af0f94c008e8f4ba3211901f",
+      "size": 109467
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v32_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v32_source.zip",
+      "git_blob": "5a0923e19cbfcb5b0c15bd3c53aa1de1076cc3bc",
+      "size": 110068
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v33_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v33_source.zip",
+      "git_blob": "35950874fb3a58c7db6df98855e6fb7ea3cc1d63",
+      "size": 110125
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v34_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v34_source.zip",
+      "git_blob": "102acb79d991946e269be12cda8e8cf874684d31",
+      "size": 110397
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v35_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v35_source.zip",
+      "git_blob": "a7e51aea397682c18bd89dcc7a3bc6ebbc88ea89",
+      "size": 110566
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v36_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v36_source.zip",
+      "git_blob": "4eb134a6239ab2cdf0b6219e6c61c2304366e321",
+      "size": 110561
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v37_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v37_source.zip",
+      "git_blob": "815e283f4a35f16ddb96bf5a63c12f9f2857e274",
+      "size": 110559
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v38_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v38_source.zip",
+      "git_blob": "00d280413941384c8eb831ebc527608d8b721a9f",
+      "size": 111410
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v39_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v39_source.zip",
+      "git_blob": "4b193c0f93a76c1a012fc3bbd599ffa647d88677",
+      "size": 111198
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v40_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v40_source.zip",
+      "git_blob": "cecebe0f8b58f15356380a515c27c8bc5323eeec",
+      "size": 111258
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v41_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v41_source.zip",
+      "git_blob": "da82b2947b8b9f9ecbfb1288c62ded07149ad416",
+      "size": 111463
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v42_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v42_source.zip",
+      "git_blob": "7e882a8bdc1b1316c14351c5b0186cb415521e11",
+      "size": 111457
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v43_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v43_source.zip",
+      "git_blob": "bad59f993b8df1101d9042cfc22e9419357047ae",
+      "size": 112434
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v44_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v44_source.zip",
+      "git_blob": "4bf3ac5957ee29762c258cd4a5fa88783647c29b",
+      "size": 112775
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v45_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v45_source.zip",
+      "git_blob": "5071eeff24fb59f75d1f05015a892897384182d5",
+      "size": 110937
+    },
+    {
+      "from_path": "manuscript/range_completion_three_point_cosheaves.pdf",
+      "to_path": "manuscript/archive/range_completion_three_point_cosheaves.pdf",
+      "git_blob": "cc2cc459f46e88a290087f86a7e63db5ecfdddf5",
+      "size": 325561
+    },
+    {
+      "from_path": "manuscript/range_completion_three_point_cosheaves.tex",
+      "to_path": "manuscript/archive/range_completion_three_point_cosheaves.tex",
+      "git_blob": "67c6d5637dca6439998caff66ea06b137750ea08",
+      "size": 24910
+    },
+    {
+      "from_path": "manuscript/sources/LOCOct10f.tex",
+      "to_path": "manuscript/archive/sources/LOCOct10f.tex",
+      "git_blob": "781fbfae0935faff58a87435ef85cbc5d9540aea",
+      "size": 46123
+    }
+  ],
+  "source_directory_moves": [
+    {
+      "from_path": "manuscript/local_connectedness/README.md",
+      "to_path": "manuscript/latex/README.md",
+      "git_blob_before": "2c31561cde175d6f22180efbf70b40548f9f182f"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/abstract.tex",
+      "to_path": "manuscript/latex/abstract.tex",
+      "git_blob_before": "0a86bb1517b42720dabdb2eb77835cd655218c67"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/appendices/a-syntax-and-theories.tex",
+      "to_path": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+      "git_blob_before": "54e56a9487ea20eed95a95b52d0c45af55d8f7e2"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/appendices/b-three-point-cosheaves.tex",
+      "to_path": "manuscript/latex/appendices/b-three-point-cosheaves.tex",
+      "git_blob_before": "ffa99aa3286b017bc905324bb4af9c2264c3e752"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/appendices/c-section-lifting.tex",
+      "to_path": "manuscript/latex/appendices/c-section-lifting.tex",
+      "git_blob_before": "08adc4e8fb95d3eb907754c70a5d0818469c30b4"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/appendices/d-faithful-family.tex",
+      "to_path": "manuscript/latex/appendices/d-faithful-family.tex",
+      "git_blob_before": "8f301d53f008969829811d113d43517aceec5079"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/bibliography.tex",
+      "to_path": "manuscript/latex/bibliography.tex",
+      "git_blob_before": "2d6eb69ed68c7984169af03c512883c8b4ca6b43"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/main.pdf",
+      "to_path": "manuscript/latex/main.pdf",
+      "git_blob_before": "7c12b1f7a429d436535235b148e703482fcb3fc7"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/main.tex",
+      "to_path": "manuscript/latex/main.tex",
+      "git_blob_before": "9a410ed9d39923611daad277d84a39483c4298cd"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/preamble.tex",
+      "to_path": "manuscript/latex/preamble.tex",
+      "git_blob_before": "d00322593b4a9f0a09da3c3650208dcdb28070f2"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/01-introduction.tex",
+      "to_path": "manuscript/latex/sections/01-introduction.tex",
+      "git_blob_before": "5332ac48d3f287ec2c9d077e6ab3aaecc5f5e7fb"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/02-categorical-preliminaries.tex",
+      "to_path": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+      "git_blob_before": "f3b2db0cd5a75717a86df72ba6aa2bcd79ced0fb"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/03-sections-and-inseparability.tex",
+      "to_path": "manuscript/latex/sections/03-sections-and-inseparability.tex",
+      "git_blob_before": "bf02e108c8584e8fe456c0e4810cdcfb9b583528"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/03a-internal-theories.tex",
+      "to_path": "manuscript/latex/sections/03a-internal-theories.tex",
+      "git_blob_before": "d4ef8d774036f12cba651df395ce03c9f538e48e"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/04-miller-sequences.tex",
+      "to_path": "manuscript/latex/sections/04-miller-sequences.tex",
+      "git_blob_before": "19b9fb4424eb19579dd11c760ee2ebdd7d692719"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/05-syntactic-recursion-category.tex",
+      "to_path": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+      "git_blob_before": "7533f9f0b2fca1c9fed4f4d1a90f4fadea4054b5"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/05a-internal-syntax.tex",
+      "to_path": "manuscript/latex/sections/05a-internal-syntax.tex",
+      "git_blob_before": "7c11671ed30de7d76bbb10c00a4eb1fbd88eb6a9"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/06-interpretation-in-models.tex",
+      "to_path": "manuscript/latex/sections/06-interpretation-in-models.tex",
+      "git_blob_before": "8475fd9bb4b811698baabbb1a8149a7748b02b6d"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/08-essential-incompleteness-of-arithmetic.tex",
+      "to_path": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+      "git_blob_before": "73ec274069bd6e94c60bd4a30a25daa1bf6e8a7a"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/08a-uniform-theories.tex",
+      "to_path": "manuscript/latex/sections/08a-uniform-theories.tex",
+      "git_blob_before": "123ad81a2b6e08f49040e4b0debd28236b319861"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/08b-uniform-independent-sentences.tex",
+      "to_path": "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+      "git_blob_before": "d0d179ee4f74d7b92f37c248f02cc3549c95aea3"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/08c-numerical-realization.tex",
+      "to_path": "manuscript/latex/sections/08c-numerical-realization.tex",
+      "git_blob_before": "fd4fc2b69303a85d6427634fbbc469cd0c735f6e"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/08d-numerical-incompleteness.tex",
+      "to_path": "manuscript/latex/sections/08d-numerical-incompleteness.tex",
+      "git_blob_before": "da21ac32a70fdaa184a6f8dc1bd074d31d787d4e"
+    },
+    {
+      "from_path": "manuscript/local_connectedness/sections/09-three-point-space.tex",
+      "to_path": "manuscript/latex/sections/09-three-point-space.tex",
+      "git_blob_before": "6e1faa5d6ff4182849f5dc9a22eae4299e5b3341"
+    }
+  ]
+}

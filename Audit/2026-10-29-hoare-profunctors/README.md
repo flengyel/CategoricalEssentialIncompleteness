@@ -1,7 +1,7 @@
 # Hoare profunctors and essential incompleteness — 29 October 2026
 
-This record accompanies [Domains, Hoare profunctors, and essential incompleteness](../../manuscript/domains_hoare_profunctors_essential_incompleteness.pdf)
-([LaTeX source](../../manuscript/domains_hoare_profunctors_essential_incompleteness.tex)).
+This record accompanies [Domains, Hoare profunctors, and essential incompleteness](../../manuscript/archive/domains_hoare_profunctors_essential_incompleteness.pdf)
+([LaTeX source](../../manuscript/archive/domains_hoare_profunctors_essential_incompleteness.tex)).
 
 - [Outline and dependencies](OUTLINE.md)
 - [Mathematical review](HOSTILE_REVIEW.md)

@@ -1,13 +1,17 @@
 # Continue the Lean formalization of categorical essential incompleteness
 
+These are retained instructions for the completed v5 baseline.
+The current target is v46; use [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt)
+for new implementation. The earlier task text is preserved below.
+
 Resume substantive Lean work in `flengyel/CategoricalEssentialIncompleteness`. Formalize the current paper, **Local connectedness, range functors, and essential incompleteness**, Version 5, including its applications and appendices. The first objective is the abstract categorical proof through Corollary 6.7; it is the beginning of the full-paper formalization, not its stopping point.
 
 ## Authoritative mathematical source
 
 - Repository: `git@github.com:flengyel/CategoricalEssentialIncompleteness.git`.
 - Reviewed manuscript baseline: commit `883f1f792a5e4a244974d00458e8a9dee61b2f94`.
-- LaTeX: `manuscript/essential_incompleteness_via_local_connectedness_v5.tex`.
-- PDF: `manuscript/essential_incompleteness_via_local_connectedness_v5.pdf`.
+- LaTeX: `manuscript/archive/essential_incompleteness_via_local_connectedness_v5.tex`.
+- PDF: `manuscript/archive/essential_incompleteness_via_local_connectedness_v5.pdf`.
 - Existing Lean entry point: `Lean/CategoricalEssentialIncompleteness.lean`.
 - Existing verifier: `scripts/verify.py`.
 - Current pinned toolchain: `leanprover/lean4:v4.35.0-rc2`; retain the repository's dependency pins unless an actual implementation obstacle requires a justified change.

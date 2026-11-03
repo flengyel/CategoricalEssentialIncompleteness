@@ -9,7 +9,7 @@ Florian Lengyel, *Locally connected recursion categories*, revised
 mathematical comparison concerns §§3.1 and 4.1–4.5. Its SHA-256 is
 039000cafbe3636ae501125d403e8fe15d42effe1c37580346d108a5bec32aab.
 The source is preserved without changes at
-[manuscript/sources/LOCOct10f.tex](../../manuscript/sources/LOCOct10f.tex).
+[manuscript/sources/LOCOct10f.tex](../../manuscript/archive/sources/LOCOct10f.tex).
 It is not relabelled as a new contribution.
 
 - Connected domains and local connectedness: §4.1.

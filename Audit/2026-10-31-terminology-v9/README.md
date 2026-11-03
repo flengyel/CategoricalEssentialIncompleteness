@@ -1,7 +1,7 @@
 # Version 9: terminology and typing revisions
 
-The manuscript is [Local connectedness in recursion categories and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness_v9.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness_v9.tex)), 31 October 2026.
+The manuscript is [Local connectedness in recursion categories and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v9.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness_v9.tex)), 31 October 2026.
 
 ## Changes
 

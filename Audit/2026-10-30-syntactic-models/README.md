@@ -1,7 +1,7 @@
 # Local connectedness, range functors, and essential incompleteness
 
-The note [Local connectedness, range functors, and essential incompleteness](../../manuscript/essential_incompleteness_via_local_connectedness.pdf)
-([source](../../manuscript/essential_incompleteness_via_local_connectedness.tex),
+The note [Local connectedness, range functors, and essential incompleteness](../../manuscript/archive/essential_incompleteness_via_local_connectedness.pdf)
+([source](../../manuscript/archive/essential_incompleteness_via_local_connectedness.tex),
 29 October 2026, 26 pages) constructs
 a faithful range functor from S_T to a locally connected target, proves
 the lifting hypothesis, and records compatibility with extensions.

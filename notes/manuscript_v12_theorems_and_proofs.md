@@ -22,15 +22,15 @@ The source of Theorem 3.3 already has a Turing morphism. Using Corollary 3.5 to 
 
 | Results | Source |
 |---|---|
-| Definitions | [§2](../manuscript/local_connectedness/sections/02-categorical-preliminaries.tex) |
-| 3.1–3.5 | [§3](../manuscript/local_connectedness/sections/03-sections-and-inseparability.tex) |
-| 4.1–4.5 | [§4](../manuscript/local_connectedness/sections/04-miller-sequences.tex) |
-| 5.1, 6.1, 7.1–7.3 | [§5](../manuscript/local_connectedness/sections/05-syntactic-recursion-category.tex), [§6](../manuscript/local_connectedness/sections/06-interpretation-in-models.tex), [§7](../manuscript/local_connectedness/sections/07-faithful-family-and-theory-extension.tex) |
-| 8.1 | [§8](../manuscript/local_connectedness/sections/08-essential-incompleteness-of-arithmetic.tex) |
-| 9.1–9.3 | [§9](../manuscript/local_connectedness/sections/09-three-point-space.tex) |
-| A.1–A.10 | [Appendix A](../manuscript/local_connectedness/appendices/a-three-point-cosheaves.tex) |
-| B.1–B.4 | [Appendix B](../manuscript/local_connectedness/appendices/b-finite-syntax-and-proofs.tex) |
-| C.1 | [Appendix C](../manuscript/local_connectedness/appendices/c-section-lifting.tex) |
+| Definitions | [§2](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/02-categorical-preliminaries.tex) |
+| 3.1–3.5 | [§3](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/03-sections-and-inseparability.tex) |
+| 4.1–4.5 | [§4](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/04-miller-sequences.tex) |
+| 5.1, 6.1, 7.1–7.3 | [§5](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/05-syntactic-recursion-category.tex), [§6](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/06-interpretation-in-models.tex), [§7](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/07-faithful-family-and-theory-extension.tex) |
+| 8.1 | [§8](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/08-essential-incompleteness-of-arithmetic.tex) |
+| 9.1–9.3 | [§9](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/sections/09-three-point-space.tex) |
+| A.1–A.10 | [Appendix A](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/appendices/a-three-point-cosheaves.tex) |
+| B.1–B.4 | [Appendix B](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/appendices/b-finite-syntax-and-proofs.tex) |
+| C.1 | [Appendix C](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cceacb7725c0dd057caeff0579e90afb3f7ae00c/manuscript/local_connectedness/appendices/c-section-lifting.tex) |
 
 ## Common categorical notation
 
