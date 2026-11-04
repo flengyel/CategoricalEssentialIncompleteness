@@ -45,6 +45,13 @@ interpretations, the arithmetic-ultrapower comparison, and named substitution
 with all seven logical schemes. Concrete syntax and derivation initiality and
 the remaining applications are still open.
 
+The [next proof batch](docs/V46_NEXT_PROOFS_2026-11-04.md) constructs stable
+syntactic lists in every parameter slice, primitive-recursive tag
+representations, identity substitution and quantified admissibility,
+partial search comparisons, and the numerical tuple and monic-span
+equivalences. The [correspondence table](FORMALIZATION_STATUS_V46.md)
+retains the exact coding comparison and remaining concrete realizations.
+
 The existing verifier builds the combined Lean entry point, checks imported
 source and dependency pins, checks the preserved manuscript baseline, runs
 `V5StatementAudit.lean` and `V46StatementAudit.lean`, and inspects the transitive

@@ -6,6 +6,8 @@ This table follows `main.tex` and its nested inputs. It covers **62 numbered res
 
 Lean uses `f ≫ g` for the manuscript's `gf`; `Idem X` is the type of restriction idempotents on X, `Idem.pull f a` is restriction inverse image, and `isTotal f` is a proved property separate from `f : X ⟶ Y`. `BinaryJoins` concerns idempotents; `DisjointArrowJoins` concerns parallel morphisms. `TotalJoinInverse` requires joins to be preserved along total morphisms only. `RangeFunctor R A` includes restriction/range/zero/coproduct preservation and the canonical comparison isomorphism, and does not include product preservation.
 
+The [4 November proof report](docs/V46_NEXT_PROOFS_2026-11-04.md) records the new stable lists, substitution laws, primitive-recursive representations, numerical comparisons and family coherence. Its [verification record](docs/V46_NEXT_PROOFS_VERIFICATION_2026-11-04.json) identifies the tested and committed bytes. The exact product/trace presentation comparison in 5.1 remains pending.
+
 ## Numbered statements
 
 
