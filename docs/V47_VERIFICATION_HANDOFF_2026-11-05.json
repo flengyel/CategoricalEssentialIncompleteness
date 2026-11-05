@@ -1,0 +1,9 @@
+{
+  "manuscript_version": 47,
+  "source_commit": "d3e741dc982a71f7f4678376eeffe945eb183d11",
+  "manuscript_checks": "passed",
+  "local_lean_run": "stopped during build",
+  "exit_code": 130,
+  "full_verification_completed": false,
+  "reason": "Author assigns Lean execution to the separate Codex session and manuscript work to this chat."
+}
