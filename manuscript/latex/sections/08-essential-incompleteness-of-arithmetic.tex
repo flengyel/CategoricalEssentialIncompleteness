@@ -31,9 +31,8 @@ as in Theorem~\ref{thm:syntactic-generated-theory}, and put
 $\operatorname{Prov}_\Gamma(z)\equiv\exists p\,G_{e_{\Gamma,S}}(p,z)$.
 This predicate is $\Sigma_1$ and implies
 $\operatorname{Sent}(z)$ in PA. The morphism on $\omega$
-representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$;
-on the split sentence object its identity is
-$[\operatorname{Sent}]_{\PA}$.
+representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$.
+The identity of $S$ is $[\operatorname{Sent}]_{\PA}$.
 
 Under the standard interpretation, the set
 $G_{\N}P_\Gamma$ consists of the codes of finite derivations from $\Gamma$
@@ -82,6 +81,7 @@ $\Theta$ belong to the sentence-code subset $G_{\N}S$.
 In arithmetic formulas,
 these functions abbreviate their PA-provably total graph definitions.
 
+\Needspace{11\baselineskip}
 \begin{lemma}[Representation of the diagonal restriction idempotents]
 \label{lem:arithmetic-diagonal-representation}
 There is a total morphism
@@ -127,9 +127,8 @@ universal closures of
 \]
 are true in $\N$.
 These two sentences hold in every $M\equiv\N$.
-Interpreting their predicates gives the two claimed
-inequalities, because $\widehat F_M$ preserves the range of
-$c_\Gamma$ and the indicated inverse images.
+Interpreting their predicates gives the two inequalities, because $\widehat F_M$ preserves the range of
+$c_\Gamma$ and inverse images.
 \end{proof}
 
 \begin{lemma}[A partial proof-search lift]
@@ -174,7 +173,7 @@ In a model where $C,C'$ are disjoint, $R$ is functional. If
 $M\models R(x,z)$, the second displayed equivalence supplies
 an output $z'$ of the interpreted program. The first implication
 gives $M\models R(x,z')$, so $z'=z$. Thus the interpreted graph
-is precisely $R$. Decoding the even and odd outputs gives the
+is $R$. Decoding the even and odd outputs gives the
 two inverse-image equations.
 \end{proof}
 
@@ -206,7 +205,7 @@ follows from Theorem~\ref{thm:ultrapower-soundness}.
 
 Apply Theorem~\ref{thm:logical-comparison} with
 $\mathscr R=S_{\PA}$, $\mathcal A=\Pfn$ and $F=F_M$.
-The target is split, its total inverse images preserve binary
+The target is split, its inverse images along total morphisms preserve binary
 joins, and $F_M(1_\omega)\ne0$ because $M$ is nonempty.
 Lemma~\ref{lem:arithmetic-diagonal-representation} gives the
 two reduction inequalities. Lemma~\ref{lem:arithmetic-proof-search}
@@ -251,9 +250,8 @@ Choose an index for this function, using the fixed numerical
 coproduct coding. Its class is a morphism
 $\ell:\omega\rightharpoonup\omega+\omega$ of $S_{\PA}$,
 and its standard interpretation is the chosen conditional.
-Corollary~\ref{cor:separator}, applied to $F_{\N}$, gives a
-contradiction. The lift is used as a partial source morphism;
-its totality in $S_{\PA}$ is not required.
+Corollary~\ref{cor:separator}, applied to $F_{\N}$ with the
+partial lift $\ell$, gives a contradiction.
 
 If a consistent c.e.\ extension were complete, its theorem and refutation
 sets would be disjoint c.e.\ sets covering the recursive
@@ -309,3 +307,4 @@ in \eqref{eq:uniform} is one of his examples
 The argument above obtains $A,B$ from
 Corollary~\ref{cor:source-conditionals} and uses finite PA-proofs to
 establish $A\subseteq P_T$ and $B\subseteq N_T$.
+

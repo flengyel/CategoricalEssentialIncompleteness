@@ -62,7 +62,7 @@ Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
 For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
 the program for $Q(f)$ first semidecides membership
 in $\widehat C$, then decodes its input, computes $f$, and encodes
-the output. Its domain is exactly $\widehat C$, so the displayed
+the output. Its domain is $\widehat C$, so the displayed
 split morphism is total. The inverse coding equations prove
 $Q(1_C)=1_{Q(C)}$ and $Q(gf)=Q(g)Q(f)$.
 
@@ -181,7 +181,7 @@ on objects by $\widetilde Q(C)=Q(C)$ and on a monic span by
 \]
 This function is defined on the coded image of $m$ and sends
 the code of $m(b)$ to the code of $g(b)$ for $b\in|B|$. An isomorphism of spans therefore leaves it
-unchanged. For two composable spans, their pullback selects exactly
+unchanged. For two composable spans, their pullback selects
 the pairs $(b,b')$ for which the first right leg equals the second
 left leg. The same condition is the domain condition for composing
 the two partial functions. Their values then agree, proving
@@ -253,8 +253,7 @@ Both sides of
 \]
 are defined at $z\in\widehat C$ exactly when
 $\kappa_r^{-1}(z)$ belongs to the domain of $k$, where $C=(r,C_0)$.
-There they have value $k(\kappa_r^{-1}(z))$. The span criterion
-just proved gives equality of these morphisms.
+There they have value $k(\kappa_r^{-1}(z))$. The span criterion gives equality of these morphisms.
 For $a:(X,e)\rightharpoonup(Y,d)$, both sides of
 \[
  a v_{(X,e)}
@@ -334,7 +333,7 @@ in the source carrier of that component of $\alpha$; its program
 halts and returns a value of the required sort over $p$.
 The nullary step uses the variable or nullary-symbol operation.
 Thus this algorithm is partial recursive and halts on every input
-in each of the two displayed source carriers. It defines morphisms
+in each of the two source carriers. It defines morphisms
 \[
  h_T:P\times\Tm\to X,\qquad h_F:P\times\Fm\to Y
  \quad\text{in }\mathcal C_{\mathrm{rec}},
@@ -347,7 +346,7 @@ the root gives
  \quad\text{in }(\mathcal C_{\mathrm{rec}}/P)^2.
 \]
 If $h':\mathbf T_P\to\mathbf X$ satisfies that equation,
-induction on the same root decomposition gives $h'=h$.
+induction on root decomposition gives $h'=h$.
 Consequently $(\mathbf T_P,\iota_P)$ is initial for every $P$.
 Taking $P=1$ gives the syntax algebra, and the construction for
 all $P$ proves stability under parameters.
@@ -383,7 +382,7 @@ Induction on list length proves halting on $|P|\times|W|$ and
 uniqueness. Equivalently,
 $h_L\iota^L_P=\beta L_P(h_L)$ as morphisms from
 $L_P(P\times W,\pi_P)$ to $(Z,z)$ in the slice.
-This proves parameterized list initiality.
+
 
 The free-variable and substitution algorithms in
 Propositions~\ref{prop:st-list-initiality} and
@@ -407,7 +406,7 @@ $j:S\hookrightarrow\Fm$, where
 $|S|=\{s\in|\Fm|:\FV_{\Fm}(s)=w_0\}$.
 
 Fix an axiom subobject $i_A:A\hookrightarrow S$ in
-$\mathcal C_{\mathrm{rec}}$. Retain $A$ itself as the object of axiom labels. The realized
+$\mathcal C_{\mathrm{rec}}$. Use $A$ as the object of axiom labels. The realized
 rule data of Appendix~\ref{app:first-order-derivations} are
 \[
  p_n:R_n\to\Fm^n,\qquad q_n:R_n\to\Fm\quad(0\le n\le2),
@@ -425,8 +424,7 @@ are the premises of its decoded rule instance.
 There are finitely many nodes. Dovetailing their membership and
 computation tests semidecides validity, giving an object
 $P_A^{\mathrm{all}}$ of dimension one whose carrier is the
-c.e.\ set of valid derivation codes. Membership witnesses are not part of a
-derivation code. Reading the root rule and computing its conclusion
+c.e.\ set of valid derivation codes. Reading the root rule and computing its conclusion
 gives $c_A^{\mathrm{all}}:P_A^{\mathrm{all}}\to\Fm$.
 The node constructors give an algebra
 \[
@@ -438,7 +436,7 @@ The node constructors give an algebra
 For any object $(Q,q)$ of $\mathcal C_{\mathrm{rec}}/\Fm$ and
 algebra $\beta:H_A(Q,q)\to(Q,q)$ in this slice,
 evaluate a valid derivation in children-before-parent order.
-Its children have already been assigned values in $|Q|$ whose
+Its children have been assigned values in $|Q|$ whose
 images under $q$ are their conclusions. Together with the node's
 decoded rule instance these values belong to the corresponding pullback
 summand of $H_A(Q,q)$. The program representing $\beta$ therefore
@@ -455,7 +453,7 @@ $h_A:P_A^{\mathrm{all}}\to Q$ in $\mathcal C_{\mathrm{rec}}$ with
 The second equation is in $\mathcal C_{\mathrm{rec}}/\Fm$, from
 $H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})$ to $(Q,q)$.
 Root decomposition proves the equation, and induction on tree
-size proves uniqueness of $h_A$. This establishes initiality.
+size proves uniqueness of $h_A$. 
 \end{proof}
 
 For arithmetic, choose the signature labels and numerical
@@ -474,7 +472,7 @@ restriction is the pullback in $\mathcal C_{\mathrm{rec}}$
  S\arrow[r,hook,"j"'] & \Fm.
 \end{tikzcd}
 \]
-Thus $|\mathrm{Prf}_T|$ consists of the full derivation codes whose
+Thus $|\mathrm{Prf}_T|$ consists of the derivation codes whose
 conclusions belong to $|S|$. Theorem~\ref{thm:first-order-theory}
 identifies the regular image $m_T:\mathcal T_T\hookrightarrow S$
 of $c_T$ as the sentence part of the least deductively closed
@@ -508,7 +506,7 @@ rule constructions give bijections
 \]
 They match the constructor parameters, tuple entries, and tags of
 corresponding rule instances. These maps and their inverses are
-computable on their carriers by the structural encodings and projections.
+computable on their carriers by tuple encoding, decoding, and tag tests.
 The rule membership conditions coincide because they use the same
 syntax operations and axiom predicate. Let
 $\chi_n:G_{\N}((\Fm^{\mathrm{syn}})^n)\xrightarrow{\cong}|\Fm|^n$
@@ -519,7 +517,6 @@ $G_{\N}\Fm^{\mathrm{syn}}=|\Fm|$. The definitions give
  \qquad
  (G_{\N}q_n^{\mathrm{syn}})\rho_n=|q_n^{\mathrm{num}}|.
 \]
-These are equations of functions on $|R_n^{\mathrm{num}}|$.
 Let $J_{\PA}:\mathcal P_{\PA}\to\mathcal B_{\PA}$ be the
 predicate equivalence of Lemma~\ref{lem:syntactic-total-category}.
 For each $n$, use the predicate presentation $C_n(z)$ and
@@ -577,3 +574,4 @@ in $\mathscr S_{\mathrm{rec}}$.
 Because the syntax codes coincide, their underlying functions are
 the standard denotations of the negation and numeral-substitution
 morphisms of Lemma~\ref{lem:arithmetic-diagonal-representation}.
+

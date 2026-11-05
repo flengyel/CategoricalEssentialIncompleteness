@@ -1,10 +1,10 @@
 {
   "base_commit": "558a20eed4c62d59eada05f5500cf233671078e9",
   "archive_date": "2026-11-03",
-  "current_version": 46,
-  "current_pdf": "manuscript/logical_consequence_and_essential_incompleteness_v46.pdf",
+  "current_version": 47,
+  "current_pdf": "manuscript/logical_consequence_and_essential_incompleteness_v47.pdf",
   "current_source": "manuscript/latex/main.tex",
-  "current_source_archive": "manuscript/logical_consequence_v46_source.zip",
+  "current_source_archive": "manuscript/logical_consequence_v47_source.zip",
   "archived_files": [
     {
       "from_path": "manuscript/deduction_and_essential_incompleteness.pdf",
@@ -917,6 +917,24 @@
       "to_path": "manuscript/archive/sources/LOCOct10f.tex",
       "git_blob": "781fbfae0935faff58a87435ef85cbc5d9540aea",
       "size": 46123
+    },
+    {
+      "from_path": "manuscript/logical_consequence_and_essential_incompleteness_v46.pdf",
+      "to_path": "manuscript/archive/logical_consequence_and_essential_incompleteness_v46.pdf",
+      "git_blob": "7c12b1f7a429d436535235b148e703482fcb3fc7",
+      "size": 855681
+    },
+    {
+      "from_path": "manuscript/logical_consequence_v46_source.zip",
+      "to_path": "manuscript/archive/logical_consequence_v46_source.zip",
+      "git_blob": "97f695ad301f07b8b22dacacedb5977b16157e52",
+      "size": 107759
+    },
+    {
+      "from_path": "MANUSCRIPT_V46_SOURCE.json",
+      "to_path": "manuscript/archive/MANUSCRIPT_V46_SOURCE.json",
+      "git_blob": "0a5b0e98125fe53e0882372d3d2485ee62c90ac0",
+      "size": 9831
     }
   ],
   "source_directory_moves": [
@@ -1040,5 +1058,7 @@
       "to_path": "manuscript/latex/sections/09-three-point-space.tex",
       "git_blob_before": "6e1faa5d6ff4182849f5dc9a22eae4299e5b3341"
     }
-  ]
+  ],
+  "last_archive_date": "2026-11-05",
+  "last_archive_base_commit": "fc47dd92e97373244f72bfe191456863e6de8e88"
 }

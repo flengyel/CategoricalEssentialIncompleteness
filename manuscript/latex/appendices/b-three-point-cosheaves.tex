@@ -54,15 +54,8 @@ and the cosheaf associated with $H$ has two elements at $X$,
 whereas the Cartesian square of that set has four.
 Likewise $H\to(1\leftarrow1\to1)$ is a monomorphism in $\mathcal E$,
 although the associated cosheaf morphism has component $2\to1$ at $X$.
-Thus the subfunctors used as partial-map domains are categorical subobjects
-of the cosheaves, not necessarily subsets at every open.
-
 We use regularity and regular images as in
-Appendix~\ref{app:categorical-hypotheses}. The \emph{kernel
-pair} of $q:Y\to Z$ is the pair of projections
-$Y\times_ZY\rightrightarrows Y$.
-Write $\mathcal E/Y$ for the slice category of morphisms with target $Y$,
-whose morphisms are commuting triangles over $Y$.
+Appendix~\ref{app:categorical-hypotheses}.
 Finite coproducts are \emph{extensive} when, for every finite family
 $(Y_k)_k$, copairing defines an equivalence
 \[
@@ -241,11 +234,6 @@ Thus all three component partial functions agree, proving $f=g$.
 
 Let $V$ be the object of $\mathcal A$ defined in
 \eqref{eq:universal-fork}.
-A \emph{restriction monomorphism} $m:Y\to V$ in $\mathcal A$
-is a total morphism with a partial inverse
-$m^\dagger:V\rightharpoonup Y$ satisfying
-$m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
-
 \begin{lemma}\label{lem:fork-dominance}
 Every object $Y$ of $\mathcal E$ admits a restriction monomorphism
 $m:Y\to V$ in $\mathcal A$.
@@ -524,7 +512,7 @@ each hom-set, so the functor is fully faithful.
 It preserves restrictions, since
 $\overline{r_d f m_e}=r_e\bar f m_e$.
 For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
-provides a restriction monomorphism $m:Z\to V$.
+provides a restriction monomorphism $m:Z\to V$ with partial inverse $m^\dagger:V\rightharpoonup Z$.
 The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
 so the functor is essentially surjective.
 \end{proof}
@@ -605,4 +593,5 @@ $\epsilon_1(r_1^Vu,r_1^Vv)$ lies in the first summand.
 Naturality forces $\epsilon_0(u,v)$ to lie in the same summand,
 contrary to $u\ne v$ and the prescribed diagonal inverse image.
 \end{proof}
+
 

@@ -1,0 +1,65 @@
+CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
+Updated 5 November 2026
+
+The current target is Florian Lengyel's “Logical consequence and essential
+incompleteness in recursion categories,” version 47. The repository is
+flengyel/CategoricalEssentialIncompleteness.
+
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V47.md, and
+manuscript/latex/main.tex with its nested inputs. The manifest identifies the
+active version and audit entry points. Follow the current manuscript after
+every revision; do not retain v46 or another earlier version as the active
+target. Update the manifest, PDF, source archive, correspondence table, and
+affected Lean statements together.
+
+Reuse the existing WSL2 checkout:
+/home/flengyel/src/CategoricalEssentialIncompleteness
+Resolve its root with git rev-parse --show-toplevel. Inspect its Git status,
+remote, worktrees, and recent commits before editing. Preserve unrelated
+changes and reconcile newer work rather than resetting to an earlier commit.
+Use SSH Git authentication and the existing pinned Lean toolchain and Lake
+manifest. Do not change Elan's global default or copy compiled objects from
+another project.
+
+Continue the substantive proofs from the current correspondence table.
+The latest implementation report before the v47 editorial revision is
+docs/V46_SYNTAX_CONTINUATION_2026-11-05.md. Its completed constructions and
+remaining obligations are carried into FORMALIZATION_STATUS_V47.md.
+The V46 module/namespace prefix is an implementation name; MANUSCRIPT_CURRENT
+selects the verification target.
+
+Prove the printed statements with the printed definitions, hypotheses, and
+quantifiers. Do not replace a categorical universal property by an evaluator,
+assume the desired comparison, add an unprinted standardness or soundness
+hypothesis, or replace a categorical argument by an arithmetic theorem.
+Maintain arbitrary coefficient objects and parameter slices where stated.
+Record each unresolved comparison or application as an open obligation.
+
+The permitted axioms are propext, Quot.sound, and Classical.choice. New results
+must be imported by the main Lean entry point, checked at the intended statement
+type, and included in the transitive axiom audit. CurrentStatementAudit.lean
+and CurrentAxiomAudit.lean are the current audit entry points.
+
+For a prepared checkout, run from the repository root:
+
+    bash scripts/verify-wsl.sh
+
+For initial setup:
+
+    bash scripts/setup-wsl.sh
+
+The wrapper serializes project builds and preserves logs and exit status.
+The underlying full verifier is:
+
+    python3 scripts/verify.py
+
+For the manuscript source/version/archive gate alone:
+
+    python3 scripts/verify.py --manuscript-only
+
+That command reports a manuscript-only scope. It does not run Lean.
+
+Commit completed work to main when authorized. Deliver reports from committed
+bytes, identify the verified commit and commands, and distinguish completed
+proofs from remaining obligations. Preserve the current manuscript version
+rule in future continuation instructions.

@@ -1,0 +1,1673 @@
+--- v46/abstract.tex
++++ v47/abstract.tex
+@@ -1,8 +1,8 @@
+ \begin{abstract}
+ We construct internal deductive systems for propositional and first-order
+-logic within completions of recursion categories and use them to prove
+-essential incompleteness, addressing Di Paola and Heller's objective to
+-formulate generalized incompleteness in categorical algebra.
++logic in completions of recursion categories and use them to prove
++essential incompleteness. This addresses Di Paola and Heller's objective
++to formulate generalized incompleteness in categorical algebra.
+ We realize first-order logic with equality in completions of the syntactic
+ recursion categories of Di Paola and Montagna. In the completion of the
+ syntactic recursion category for Peano arithmetic, we represent its
+--- v46/appendices/a-syntax-and-theories.tex
++++ v47/appendices/a-syntax-and-theories.tex
+@@ -11,9 +11,7 @@
+ \label{app:categorical-hypotheses}
+ 
+ For list objects, we use the parameterized recursion property studied by
+-Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.\footnote{The gap
+-in the printed uniqueness argument for Lemma~5.6 (p.~18) does not affect
+-Lemma~2.2 or Definition~2.3, cited here.}
++Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.
+ Its formulation by pullback into slices is
+ recalled by Maietti~\cite[Definition 2.4 and the following paragraph]{MaiettiLists}.
+ 
+@@ -25,8 +23,7 @@
+ For the construction of first-order syntax, assume also that finite
+ coproducts are disjoint and stable under pullback. In particular,
+ a morphism into $X+Y$ decomposes its source as the coproduct of its
+-two inverse images. These additional coproduct hypotheses are not
+-needed for Theorem~\ref{thm:least-theorem-subobject}.
++two inverse images.
+ 
+ Composition is $gf=g\circ f$. Finite products and coproducts are
+ chosen and parenthesized to the left. Rebracketing uses the canonical
+@@ -84,7 +81,7 @@
+ $\neg_2\mathbf{t}=\mathbf{f}$.
+ 
+ These morphisms make $\Two$ a Boolean algebra object in $\mathcal D$.
+-Indeed, distributivity expresses each finite power $\Two^n$ as a
++Distributivity expresses each finite power $\Two^n$ as a
+ coproduct of $2^n$ copies of $1$, indexed by the ordered choices of
+ $\mathbf{f}$ or $\mathbf{t}$ in each coordinate. The resulting
+ injections are jointly epimorphic. The equations above verify the
+@@ -105,8 +102,8 @@
+ $(\mathbf{f},\mathbf{f},\mathbf{f})$,
+ $(\mathbf{f},\mathbf{f},\mathbf{t})$, and
+ $(\mathbf{f},\mathbf{t},\mathbf{f})$; both are $\mathbf{t}$ on the others.
+-Joint epimorphy then gives these identities as equalities of morphisms
+-in $\mathcal D$.
++Since the injections are jointly epimorphic, these are equalities
++of morphisms in $\mathcal D$.
+ 
+ Let $p:X\to\Two$. Write $[p=\mathbf{t}]\hookrightarrow X$ for its
+ pullback along $\mathbf{t}$; write $[p=\mathbf{f}]\hookrightarrow X$ for its
+@@ -248,7 +245,7 @@
+ ordered concatenation at function and relation symbols and equality,
+ the identity at negation, concatenation at implication, and deletion
+ at quantification. Its unique algebra morphism defines
+-$\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$. Explicitly,
++$\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$ by
+ \begin{align*}
+  \FV_{\Tm}(\eta x)&=[x],&
+  \FV_{\Tm}(f_k(s,\vec t))&=\FV_{\Tm}(t_1)+\!+\cdots+\!+\FV_{\Tm}(t_k),\\
+@@ -277,12 +274,9 @@
+ \subsection{Admissible substitution}
+ \label{app:substitution}
+ 
+-For structural recursion we retain the original expression together with
+-the recursive result; compare Gabbay and
+-Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}.
+-
+-We construct substitution of one term for one variable, as required
+-by the logical schemes below. Put $E=V\times\Tm$, with projections
++To construct substitution of one term for one variable, we retain
++the original expression together with the recursive result; compare
++Gabbay and Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}. Put $E=V\times\Tm$, with projections
+ $x:E\to V$ and $t:E\to\Tm$. For an object $Y$, write
+ $O(Y)=1+Y$, with injections $\fail_Y:1\to O(Y)$ and
+ $\ok_Y:Y\to O(Y)$. A morphism $g:Y\to Z$ induces
+@@ -375,7 +369,7 @@
+ Thus quantification binds its named variable and prevents capture
+ of free occurrences of the replacement term.
+ 
+-We write $\varphi[x:=t]$ only on $\Adm$, and $u[x:=t]$ for
++Write $\varphi[x:=t]$ on $\Adm$, and $u[x:=t]$ for
+ $a_T(u,x,t)$. Define
+ \[
+  e_T=\langle\pi_{\Tm},\pi_V,\eta\pi_V\rangle:
+@@ -453,9 +447,9 @@
+ the inference rules. An inclusion of closed subobjects is
+ an algebra morphism, by composing with the target monomorphism.
+ 
+-The proof transfers the initial derivation algebra to its regular image
+-by lifting a factorization system to algebras for an endofunctor
+-preserving its left class; see
++The following proof equips the regular image of the derivation algebra
++with an algebra structure. This is an instance of lifting a factorization
++system to algebras for an endofunctor preserving its left class; see
+ Wi\ss{}mann~\cite[Lemma 3.6]{Wissmann}.
+ 
+ \begin{theorem}\label{thm:least-theorem-subobject}
+@@ -576,7 +570,7 @@
+ subobject of $S$. A \emph{sentence theory} is a subobject
+ $u:U\hookrightarrow S$ through which $c_{U,S}$ factors.
+ Then $T_{A,S}$ is the least sentence theory containing $A$.
+-Indeed, axiom introduction gives $A\subseteq T_{A,S}$; since $T_A$
++Axiom introduction gives $A\subseteq T_{A,S}$; since $T_A$
+ is closed and contains $T_{A,S}$, leastness gives
+ $T_{T_{A,S}}\subseteq T_A$. Pullback proves closure of $T_{A,S}$.
+ If $U$ is a sentence theory containing $A$, leastness gives
+@@ -584,26 +578,6 @@
+ $T_{A,S}\subseteq T_{U,S}\subseteq U$.
+ It also follows that $A\subseteq A'$ implies
+ $T_{A,S}\subseteq T_{A',S}$.
+-
+-For a restriction category $\mathcal R$, its restriction splitting
+-$\Split(\mathcal R)$ has objects $(X,e)$, where $e=\bar e$, and
+-morphisms $f:(X,e)\rightharpoonup(Y,d)$ satisfying $f=dfe$.
+-Its identity on $(X,e)$ is $e$; such a morphism is total when
+-$\bar f=e$. Write $\Tot(\Split(\mathcal R))$ for the subcategory
+-of total morphisms~\cite[Section 2.3.3]{CockettLack}.
+-
+-In a restriction category $\mathcal S$, restriction idempotents
+-$a,b:Y\rightharpoonup Y$ are ordered by $a\leq b$ when $ba=a$.
+-A restriction idempotent $a$ receives $f:X\rightharpoonup Y$ if $af=f$.
+-The \emph{range} $\ran(f)$ is the least restriction idempotent receiving
+-$f$. We use ranges satisfying the agreement law
+-\[
+- uf=vf\quad\Longrightarrow\quad u\ran(f)=v\ran(f)
+- \qquad(u,v:Y\rightharpoonup Z).
+-\]
+-A total morphism $m:I\to Y$ is a \emph{restriction monomorphism}
+-if it has a partial inverse $r:Y\rightharpoonup I$ with
+-$rm=1_I$ and $mr=\bar r$.
+ 
+ \begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
+ Let $\mathcal S$ be a restriction category with ranges in which every
+@@ -629,13 +603,11 @@
+ 
+ The relation between split ranges and factorizations through restriction
+ monomorphisms is developed in Cockett, Guo, and
+-Hofstra~\cite[Theorem 4.7 and Lemma 4.12]{CGHRangeI}.
++Hofstra~\cite[Theorem 4.7]{CGHRangeI}.
+ The additional conditions for these to be regular-image factorizations
+ are given in \cite[Section 3.16 and Proposition 3.17]{CGHRangeII}.
+ 
+-The partial-map category $\Par(\mathcal D,\Mono)$ has morphisms given
+-by spans with monic left leg, composed by pullback
+-\cite[Section 3]{CockettLack}. Since $\mathcal D$ is regular, it is a
++Since $\mathcal D$ is regular, $\Par(\mathcal D,\Mono)$ is a
+ split restriction category with ranges
+ \cite[Theorem 4.5 and Section 4.11]{CGHRangeI}; its total subcategory
+ is canonically isomorphic to $\mathcal D$.
+@@ -653,11 +625,8 @@
+ $r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$.
+ The same lemma gives $\ran(c_{A,S})=m_A r_A=\bar r_A$.
+ 
+-A functor $G:\mathcal S\to\mathcal S'$ between restriction categories
+-with ranges is a \emph{restriction functor} if
+-$G(\bar v)=\overline{G(v)}$ for every morphism $v$.
+-If it also preserves ranges, then $G(m)$ and $G(r)$ split
+-$\ran(G(f))$, since applying $G$ to the splitting in
++Let $G:\mathcal S\to\mathcal S'$ be a restriction functor
++preserving ranges. Applying $G$ to the splitting in
+ Lemma~\ref{lem:range-regular-image} gives
+ \[
+  G(m)G(r)=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
+--- v46/appendices/b-three-point-cosheaves.tex
++++ v47/appendices/b-three-point-cosheaves.tex
+@@ -54,15 +54,8 @@
+ whereas the Cartesian square of that set has four.
+ Likewise $H\to(1\leftarrow1\to1)$ is a monomorphism in $\mathcal E$,
+ although the associated cosheaf morphism has component $2\to1$ at $X$.
+-Thus the subfunctors used as partial-map domains are categorical subobjects
+-of the cosheaves, not necessarily subsets at every open.
+-
+ We use regularity and regular images as in
+-Appendix~\ref{app:categorical-hypotheses}. The \emph{kernel
+-pair} of $q:Y\to Z$ is the pair of projections
+-$Y\times_ZY\rightrightarrows Y$.
+-Write $\mathcal E/Y$ for the slice category of morphisms with target $Y$,
+-whose morphisms are commuting triangles over $Y$.
++Appendix~\ref{app:categorical-hypotheses}.
+ Finite coproducts are \emph{extensive} when, for every finite family
+ $(Y_k)_k$, copairing defines an equivalence
+ \[
+@@ -241,11 +234,6 @@
+ 
+ Let $V$ be the object of $\mathcal A$ defined in
+ \eqref{eq:universal-fork}.
+-A \emph{restriction monomorphism} $m:Y\to V$ in $\mathcal A$
+-is a total morphism with a partial inverse
+-$m^\dagger:V\rightharpoonup Y$ satisfying
+-$m^\dagger m=1_Y$ and $mm^\dagger=\overline{m^\dagger}$.
+-
+ \begin{lemma}\label{lem:fork-dominance}
+ Every object $Y$ of $\mathcal E$ admits a restriction monomorphism
+ $m:Y\to V$ in $\mathcal A$.
+@@ -524,7 +512,7 @@
+ It preserves restrictions, since
+ $\overline{r_d f m_e}=r_e\bar f m_e$.
+ For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
+-provides a restriction monomorphism $m:Z\to V$.
++provides a restriction monomorphism $m:Z\to V$ with partial inverse $m^\dagger:V\rightharpoonup Z$.
+ The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
+ so the functor is essentially surjective.
+ \end{proof}
+--- v46/appendices/c-section-lifting.tex
++++ v47/appendices/c-section-lifting.tex
+@@ -21,8 +21,7 @@
+ domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
+ recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
+ on every element of $D_f$ and agrees with $f$ there. Equality is equality
+-of partial-function graphs. These morphisms need not themselves be ordinary
+-partial recursive functions. The total morphisms of $\mathcal C_K$ are exactly
++of partial-function graphs. The total morphisms of $\mathcal C_K$ are exactly
+ the ordinary total recursive functions between the indicated types.
+ 
+ Let $F:\mathcal C_K\to\Pfn$ send each numerical carrier to the same
+@@ -44,8 +43,8 @@
+ \begin{proposition}\label{prop:missing-lift}
+ The category $\mathcal C_K$ is a prodominical recursion category with
+ binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
+-reflects zero morphisms, and $F(1_{\N})\ne0$. Total inverse images
+-in its target preserve binary joins of restriction idempotents.
++reflects zero morphisms, and $F(1_{\N})\ne0$. Inverse images along
++total morphisms in its target preserve binary joins of restriction idempotents.
+ There are a Turing morphism
+ $\tau_K:\N\times\N\rightharpoonup\N$ and an isomorphism
+ $b:\N\to\N+\N$ for which the restriction idempotents
+@@ -68,7 +67,7 @@
+ corresponding $f_0$-values, and test for their appearance in the
+ enumeration of $D_g$, using dovetailing. Identities and associativity
+ are inherited from partial functions. Restriction is the partial
+-identity on $D_f$, which has the ordinary identity as an extension.
++identity on $D_f$, which has the identity as an extension.
+ Empty partial functions give restriction zeros.
+ 
+ Cartesian products and tagged copairings preserve the morphism class:
+@@ -115,7 +114,7 @@
+ 
+ The functor $F$ is faithful and preserves restrictions, zeros,
+ ranges, binary restriction products, and coproducts. It also reflects
+-zero morphisms. Total inverse images in $\Pfn$ preserve unions,
++zero morphisms. Inverse images along total morphisms in $\Pfn$ preserve unions,
+ and $F(1_{\N})\ne0$.
+ 
+ Use the total recursive isomorphism
+--- v46/appendices/d-faithful-family.tex
++++ v47/appendices/d-faithful-family.tex
+@@ -2,9 +2,8 @@
+ 
+ Fix a consistent theory $T\supseteq\PA$.
+ Let $\mathcal M_T$ be the set of all structures for the language of
+-arithmetic with underlying set $\N$ that satisfy $T$. Their arithmetic
+-operations need not be the standard ones, and the interpretation of a
+-numeral $\bar n$ need not be the carrier element $n$. Completeness and
++arithmetic with underlying set $\N$ that satisfy $T$. Arithmetic
++operations and numeral interpretations are those of each model. Completeness and
+ the downward L\"owenheim--Skolem theorem imply
+ $\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
+ countably infinite model can be transported to the carrier $\N$.
+@@ -54,9 +53,6 @@
+ 
+ For consistent computably enumerable $T\supseteq\PA$, the source $S_T$
+ is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
+-The connected restriction idempotents used in the preceding proof
+-belong to $\mathcal D_T$ and need not be images of source restriction
+-idempotents.
+ 
+ For an inclusion $T\subseteq T'$ of consistent theories, define
+ $Q_{T,T'}:S_T\to S_{T'}$ by $Q_{T,T'}X=X$ and
+@@ -125,11 +121,10 @@
+ through $F_T(\tau_T)$ with a total parameter
+ $\mathbf1\to F_T\omega$.
+ 
+-The target restriction lattices are Boolean, so every image of a disjoint source
+-pair has a separator. Lemma~\ref{lem:switch} lifts the sections
+-associated with complementary source restriction idempotents;
+-an arbitrary target separator need not be the image of such an
+-idempotent.
++The restriction lattices of $\mathcal D_T$ are Boolean, so every image
++of a disjoint source pair has a separator. Lemma~\ref{lem:switch}
++supplies lifts for sections associated with complementary restriction
++idempotents of $S_T$.
+ 
+ 
+ \subsection{Numeral observations}
+--- v46/bibliography.tex
++++ v47/bibliography.tex
+@@ -1,93 +1,88 @@
+ \begin{thebibliography}{99}
+ \small
++\bibitem{Aczel}
++P.~Aczel, \emph{An introduction to inductive definitions},
++in J.~Barwise (ed.), Handbook of Mathematical Logic,
++North-Holland, 1977, pp.~739--782.
++\href{https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf}{Text}.
++
+ \bibitem{BauerHanson}
+ A.~Bauer and J.~E. Hanson, \emph{The Countable Reals},
+ \href{https://arxiv.org/abs/2404.01256v3}{arXiv:2404.01256v3}, 2026.
++
+ \bibitem{Bernardi}
+ C.~Bernardi, \emph{Precomplete equivalence relations in dominical
+ categories}, Proc. Amer. Math. Soc. \textbf{98} (1986), 124--134.
++
++\bibitem{CockettLists}
++J.~R.~B. Cockett, \emph{List-arithmetic distributive categories: Locoi},
++J. Pure Appl. Algebra \textbf{66} (1990), no.~1, 1--29.
++\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.
++
+ \bibitem{CockettComputability}
+ J.~R.~B. Cockett, \emph{Categories and Computability},
+ lecture notes, 12 August 2014.
+ \href{https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf}{Author's text}.
++
++\bibitem{CGHRangeI}
++J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,
++\emph{Range categories I: General theory},
++Theory and Applications of Categories \textbf{26} (2012),
++no.~17, pp.~412--452.
++\href{https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html}{Journal page}.
++
++\bibitem{CGHRangeII}
++J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,
++\emph{Range categories II: Towards regularity},
++Theory and Applications of Categories \textbf{26} (2012),
++no.~18, pp.~453--500.
++\href{https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html}{Journal page}.
++
+ \bibitem{CockettHofstra}
+ J.~R.~B. Cockett and P.~J.~W. Hofstra,
+ \emph{Introduction to Turing categories},
+ Ann. Pure Appl. Logic \textbf{156} (2008), 183--209.
++
+ \bibitem{CockettLack}
+ J.~R.~B. Cockett and S.~Lack, \emph{Restriction categories. I.
+ Categories of partial maps}, Theoret. Comput. Sci. \textbf{270}
+ (2002), 223--259.
++
+ \bibitem{CockettLackIII}
+ J.~R.~B. Cockett and S.~Lack,
+ \emph{Restriction categories III: colimits, partial limits and extensivity},
+ Math. Structures Comput. Sci. \textbf{17} (2007), 775--817.
++
+ \bibitem{CurryCosheaves}
+ J.~M. Curry, \emph{Dualities between cellular sheaves and cosheaves},
+ J. Pure Appl. Algebra \textbf{222} (2018), 966--993.
+ \href{https://doi.org/10.1016/j.jpaa.2017.06.001}
+ {doi:10.1016/j.jpaa.2017.06.001}.
++
+ \bibitem{DPH}
+ R.~A. Di Paola and A.~Heller, \emph{Dominical categories:
+ recursion theory without elements}, J. Symbolic Logic
+ \textbf{52} (1987), 594--635.
++
+ \bibitem{DPM}
+ R.~A. Di Paola and F.~Montagna, \emph{Some properties of the syntactic
+ $p$-recursion categories generated by consistent, recursively enumerable
+ extensions of Peano arithmetic}, J. Symbolic Logic \textbf{56} (1991),
+ 643--660.
+-\bibitem{Heller}
+-A.~Heller, \emph{An existence theorem for recursion categories},
+-J. Symbolic Logic \textbf{55} (1990), 1252--1268.
+-\bibitem{Lengyel2004}
+-F.~Lengyel, \emph{More existence theorems for recursion categories},
+-Ann. Pure Appl. Logic \textbf{125} (2004), 1--41.
+-\bibitem{Corrections}
+-F.~Lengyel, \emph{Corrections to More existence theorems for recursion
+-categories}, version 10, 20 October 2026,
+-\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.
+-\bibitem{Composition}
+-F.~Lengyel, \emph{Pointwise provable equality and the failure of
+-composition}, 2026,
+-\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.
+-\bibitem{Miller2004}
+-J.~S. Miller, \emph{Degrees of unsolvability of continuous functions},
+-J. Symbolic Logic \textbf{69} (2004), no.~2, 555--584.
+-\href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.
+-\bibitem{Montagna}
+-F.~Montagna, \emph{``Pathologies'' in two syntactic categories of partial
+-maps}, Notre Dame J. Formal Logic \textbf{30} (1989), 105--116.
+-\bibitem{Ramesh2023}
+-S.~Ramesh, \emph{Introspective Theories and Geminal Categories},
+-Ph.D. dissertation, University of California, Berkeley, 2023.
+-\href{https://escholarship.org/uc/item/3mn0c475}{Institutional record}.
+-\bibitem{RosoliniThesis}
+-G.~Rosolini, \emph{Continuity and effectiveness in topoi}, D.Phil.
+-thesis, University of Oxford, 1986.
+-\bibitem{Rosolini}
+-G.~Rosolini, \emph{Representation theorems for $P$-categories},
+-in F.~Borceux (ed.), \emph{Categorical Algebra and its Applications},
+-Lecture Notes in Mathematics \textbf{1348}, Springer, Berlin, 1988,
+-307--315.
+-\bibitem{Aczel}
+-P.~Aczel, \emph{An introduction to inductive definitions},
+-in J.~Barwise (ed.), Handbook of Mathematical Logic,
+-North-Holland, 1977, pp.~739--782.
+-\href{https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf}{Text}.
+-\bibitem{HP}
+-P.~H\'ajek and P.~Pudl\'ak, \emph{Metamathematics of First-Order
+-Arithmetic}, Perspectives in Logic, Cambridge University Press,
+-2017 reissue of the Springer text, originally published in 1993.
+-\href{https://doi.org/10.1017/9781316717271}{doi:10.1017/9781316717271}.
+-\bibitem{HH}
+-H.~P.~Hirst and J.~L.~Hirst, \emph{A Primer for Logic and Proof},
+-2015 edition.
+-\href{https://www.appstate.edu/~hirstjl/primer/hirst.pdf}{Authors' text}.
+-\bibitem{GTWW}
+-J.~A. Goguen, J.~W. Thatcher, E.~G. Wagner, and J.~B. Wright,
+-\emph{Initial algebra semantics and continuous algebras},
+-Journal of the ACM \textbf{24} (1977), no.~1, pp.~68--95.
+-\href{https://doi.org/10.1145/321992.321997}{doi:10.1145/321992.321997}.
++
++\bibitem{FPT}
++M.~Fiore, G.~Plotkin, and D.~Turi,
++\emph{Abstract syntax and variable binding},
++Proceedings of the Fourteenth Annual IEEE Symposium on Logic in
++Computer Science, IEEE Computer Society, 1999, pp.~193--202.
++\href{https://doi.org/10.1109/LICS.1999.782615}{doi:10.1109/LICS.1999.782615}.
++
++\bibitem{GabbayPitts}
++M.~J. Gabbay and A.~M. Pitts,
++\emph{A new approach to abstract syntax with variable binding},
++Formal Aspects of Computing \textbf{13} (2002), 341--363.
++\href{https://doi.org/10.1007/s001650200016}{doi:10.1007/s001650200016}.
++
+ \bibitem{GoguenBurstall}
+ J.~A. Goguen and R.~M. Burstall,
+ \emph{A study in the foundations of programming methodology:
+@@ -96,21 +91,28 @@
+ Category Theory and Computer Programming, Lecture Notes in Computer
+ Science \textbf{240}, Springer, 1986, pp.~313--333.
+ \href{https://doi.org/10.1007/3-540-17162-2_131}{doi:10.1007/3-540-17162-2\_131}.
+-\bibitem{CockettLists}
+-J.~R.~B. Cockett, \emph{List-arithmetic distributive categories: Locoi},
+-Journal of Pure and Applied Algebra \textbf{66} (1990), no.~1, pp.~1--29.
+-\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.
+-\bibitem{FPT}
+-M.~Fiore, G.~Plotkin, and D.~Turi,
+-\emph{Abstract syntax and variable binding},
+-Proceedings of the Fourteenth Annual IEEE Symposium on Logic in
+-Computer Science, IEEE Computer Society, 1999, pp.~193--202.
+-\href{https://doi.org/10.1109/LICS.1999.782615}{doi:10.1109/LICS.1999.782615}.
+-\bibitem{GabbayPitts}
+-M.~J. Gabbay and A.~M. Pitts,
+-\emph{A new approach to abstract syntax with variable binding},
+-Formal Aspects of Computing \textbf{13} (2002), pp.~341--363.
+-\href{https://doi.org/10.1007/s001650200016}{doi:10.1007/s001650200016}.
++
++\bibitem{GTWW}
++J.~A. Goguen, J.~W. Thatcher, E.~G. Wagner, and J.~B. Wright,
++\emph{Initial algebra semantics and continuous algebras},
++J. ACM \textbf{24} (1977), no.~1, 68--95.
++\href{https://doi.org/10.1145/321992.321997}{doi:10.1145/321992.321997}.
++
++\bibitem{HP}
++P.~H\'ajek and P.~Pudl\'ak, \emph{Metamathematics of First-Order
++Arithmetic}, Perspectives in Logic, Cambridge University Press,
++2017 reissue of the Springer text, originally published in 1993.
++\href{https://doi.org/10.1017/9781316717271}{doi:10.1017/9781316717271}.
++
++\bibitem{Heller}
++A.~Heller, \emph{An existence theorem for recursion categories},
++J. Symbolic Logic \textbf{55} (1990), 1252--1268.
++
++\bibitem{HH}
++H.~P.~Hirst and J.~L.~Hirst, \emph{A Primer for Logic and Proof},
++2015 edition.
++\href{https://www.appstate.edu/~hirstjl/primer/hirst.pdf}{Authors' text}.
++
+ \bibitem{Katsumata}
+ S.-y. Katsumata,
+ \emph{A generalisation of pre-logical predicates to simply typed formal systems},
+@@ -118,36 +120,59 @@
+ Automata, Languages and Programming, Lecture Notes in Computer Science
+ \textbf{3142}, Springer, 2004, pp.~831--845.
+ \href{https://doi.org/10.1007/978-3-540-27836-8_70}{doi:10.1007/978-3-540-27836-8\_70}.
+-\bibitem{MaiettiLists}
+-M.~E. Maietti, \emph{Joyal's arithmetic universe as list-arithmetic pretopos},
+-Theory and Applications of Categories \textbf{24} (2010),
+-no.~3, pp.~39--83.
+-\href{https://www.math.unipd.it/~maietti/papers/jartacrev.pdf}{Author's text}.
+-\bibitem{CGHRangeI}
+-J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,
+-\emph{Range categories I: General theory},
+-Theory and Applications of Categories \textbf{26} (2012),
+-no.~17, pp.~412--452.
+-\href{https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html}{Journal page}.
+-\bibitem{CGHRangeII}
+-J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,
+-\emph{Range categories II: Towards regularity},
+-Theory and Applications of Categories \textbf{26} (2012),
+-no.~18, pp.~453--500.
+-\href{https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html}{Journal page}.
+-\bibitem{Wissmann}
+-T.~Wi\ss{}mann, \emph{Minimality notions via factorization systems and examples},
+-Logical Methods in Computer Science \textbf{18} (2022),
+-no.~3, article~31, pp.~31:1--31:26.
+-\href{https://doi.org/10.46298/lmcs-18(3:31)2022}{doi:10.46298/lmcs-18(3:31)2022}.
+ 
+-\bibitem{RobinsonRosolini}
+-E.~Robinson and G.~Rosolini, \emph{Categories of partial maps},
+-Information and Computation \textbf{79} (1988), no.~2, pp.~95--130.
+-\href{https://doi.org/10.1016/0890-5401(88)90034-X}{doi:10.1016/0890-5401(88)90034-X}.
+ \bibitem{Keisler}
+ H.~J. Keisler, \emph{The ultraproduct construction},
+ author's survey, 1 June 2010.
+ \href{https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf}{Author's text}.
++
++\bibitem{Lengyel2004}
++F.~Lengyel, \emph{More existence theorems for recursion categories},
++Ann. Pure Appl. Logic \textbf{125} (2004), 1--41.
++
++\bibitem{Corrections}
++F.~Lengyel, \emph{Corrections to More existence theorems for recursion
++categories}, version 10, 20 October 2026,
++\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.
++
++\bibitem{Composition}
++F.~Lengyel, \emph{Pointwise provable equality and the failure of
++composition}, 2026,
++\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.
++
++\bibitem{MaiettiLists}
++M.~E. Maietti, \emph{Joyal's arithmetic universe as list-arithmetic pretopos},
++Theory and Applications of Categories \textbf{24} (2010),
++no.~3, 39--83.
++\href{https://www.math.unipd.it/~maietti/papers/jartacrev.pdf}{Author's text}.
++
++\bibitem{Miller2004}
++J.~S. Miller, \emph{Degrees of unsolvability of continuous functions},
++J. Symbolic Logic \textbf{69} (2004), no.~2, 555--584.
++\href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.
++
++\bibitem{Montagna}
++F.~Montagna, \emph{``Pathologies'' in two syntactic categories of partial
++maps}, Notre Dame J. Formal Logic \textbf{30} (1989), 105--116.
++
++\bibitem{RobinsonRosolini}
++E.~Robinson and G.~Rosolini, \emph{Categories of partial maps},
++Inform. and Comput. \textbf{79} (1988), no.~2, 95--130.
++\href{https://doi.org/10.1016/0890-5401(88)90034-X}{doi:10.1016/0890-5401(88)90034-X}.
++
++\bibitem{RosoliniThesis}
++G.~Rosolini, \emph{Continuity and effectiveness in topoi}, D.Phil.
++thesis, University of Oxford, 1986.
++
++\bibitem{Rosolini}
++G.~Rosolini, \emph{Representation theorems for $P$-categories},
++in F.~Borceux (ed.), \emph{Categorical Algebra and its Applications},
++Lecture Notes in Mathematics \textbf{1348}, Springer, Berlin, 1988,
++307--315.
++
++\bibitem{Wissmann}
++T.~Wi\ss{}mann, \emph{Minimality notions via factorization systems and examples},
++Log. Methods Comput. Sci. \textbf{18} (2022),
++no.~3, article~31, 31:1--31:26.
++\href{https://doi.org/10.46298/lmcs-18(3:31)2022}{doi:10.46298/lmcs-18(3:31)2022}.
+ \end{thebibliography}
+-
+--- v46/preamble.tex
++++ v47/preamble.tex
+@@ -2,8 +2,9 @@
+ \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,tikz-cd}
+ \usepackage[margin=1in]{geometry}
+ \usepackage{xurl,hyperref}
++\usepackage{needspace}
+ \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+-pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 46},pdfauthor={Florian Lengyel}}
++pdftitle={Logical consequence and essential incompleteness in recursion categories -- Version 47},pdfauthor={Florian Lengyel}}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{proposition}[theorem]{Proposition}
+ \newtheorem{lemma}[theorem]{Lemma}
+@@ -17,7 +18,7 @@
+ \title{Logical consequence and essential incompleteness\\
+ in recursion categories}
+ \author{Florian Lengyel}
+-\date{Version 46\\2 November 2026}
++\date{Version 47\\5 November 2026}
+ 
+ \newcommand{\Crec}{\mathcal C_{\mathrm{rec}}}
+ \newcommand{\Da}{\mathcal D_a}
+--- v46/sections/01-introduction.tex
++++ v47/sections/01-introduction.tex
+@@ -5,7 +5,7 @@
+ incompleteness in this setting \cite[pp.~594--595]{DPH}.
+ We construct internal deductive systems in completions of recursion
+ categories and apply categorical inseparability arguments to their
+-sentence theories. The resulting essential-incompleteness theorems
++sentence theories. The essential-incompleteness theorems
+ assert that every consistent extension in a specified effective class
+ is incomplete. The three applications concern arithmetic,
+ a theory of real closed fields expanded by constants, and propositional
+@@ -24,7 +24,7 @@
+ 
+ Starting with a recursion category, we split its restriction idempotents
+ and work in the category of total morphisms of that completion.
+-In the realizations studied here, this category contains syntax for
++In these realizations, this category contains syntax for
+ propositional logic or first-order logic with equality and, for each
+ axiom subobject, its finite derivations. The conclusion morphism,
+ restricted to derivations of sentences, has the generated sentence
+@@ -48,15 +48,12 @@
+ theory. The same reduction applies to every consistent represented
+ extension of that theory
+ (Corollary~\ref{cor:domain-incompleteness}).
+-These criteria use categorical recursion and inseparability; they do not
+-postulate a provability operator satisfying L\"ob's theorem or the
+-Hilbert--Bernays derivability conditions.
+ 
+ The first-order syntactic realization uses the recursion categories of
+ Montagna and Di Paola--Montagna \cite{Montagna,DPM}.
+ For Peano arithmetic ($\PA$), the arithmetic comparison uses their
+-category $S_{\PA}$, with the computably enumerable (c.e.) extensions of PA represented by
+-internal theories in its completion. Let $M$ be the standard model of
++category $S_{\PA}$. Its completion represents the computably enumerable
++(c.e.) extensions of PA by internal theories. Let $M$ be the standard model of
+ arithmetic on $\N$, or an ultrapower of that model. Interpreting program
+ graphs in $M$ defines the range functor
+ $F_M:S_{\PA}\to\Pfn$, where $\Pfn$ is the category of sets and
+@@ -112,8 +109,7 @@
+ \cite{Lengyel2004,Corrections} concern the construction of recursion
+ categories. Di Paola and Montagna's syntactic examples raised the
+ question of extending Heller's theorem beyond locally connected categories
+-\cite{DPM}. The comparison theorem here assumes a recursion category
+-and its Turing morphism.
++\cite{DPM}.
+ 
+ Di Paola and Heller proved categorical recursive inseparability under
+ section and coproduct hypotheses
+@@ -123,9 +119,9 @@
+ examples \cite[Section~3, pp.~125--128]{Bernardi}.
+ Montagna obtained effectively inseparable pairs in his syntactic
+ category \cite[Remark~3.1]{Montagna}. Building on these
+-recursion-theoretic antecedents, we construct internal syntax,
+-derivations, and generated sentence theories to which inseparability
+-applies throughout the specified consistent extension classes.
++recursion-theoretic antecedents, we construct syntax and derivations
++internally and apply inseparability to generated sentence theories and
++their consistent extensions.
+ 
+ Cockett and Hofstra relate Turing categories to partial combinatory
+ algebras through idempotent splitting
+@@ -136,17 +132,10 @@
+ \cite[Section~7.5, Theorem~7.14]{CockettComputability}.
+ Its assumed predicate and conclusion differ from the construction of
+ generated sentence theories and the results for their consistent
+-extensions here.
+-
+-Ramesh's introspective theories are essentially algebraic theories
+-extending the theory of finite-limit categories. Each model is equipped
+-with a homomorphism into an internal model of the same theory in its
+-underlying finite-limit category. He derives L\"ob's theorem and guarded
+-fixed-point results from this interpretation
+-\cite[Introduction, Definition~2.7, Theorem~4.19]{Ramesh2023}.
++extensions.
+ 
+ Bauer and Hanson use Miller's sequence in a parameterized realizability
+-topos with countable Dedekind reals \cite{BauerHanson}.
++topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
+ We use their binary representations to construct the recursion category
+ and prove essential incompleteness for the theory of real closed fields
+ expanded by constants.
+--- v46/sections/02-categorical-preliminaries.tex
++++ v47/sections/02-categorical-preliminaries.tex
+@@ -17,12 +17,12 @@
+ In the middle two equations $g:X\rightharpoonup Z$; in the last,
+ $h:Y\rightharpoonup Z$.
+ The morphisms $\bar f$ are idempotent and are called
+-\emph{restriction idempotents}, or \emph{domains} in the earlier
++\emph{restriction idempotents}, or \emph{domains} in
+ recursion-category terminology \cite[Section~5]{Heller}.
+ The morphism $f$ is \emph{total} when $\bar f=1_X$.
+ For a restriction category $\mathcal C$, let
+ $\operatorname{Tot}(\mathcal C)$ be its \emph{category of total morphisms}:
+-the subcategory with all objects of $\mathcal C$ and precisely its
++the subcategory with all objects of $\mathcal C$ and its
+ total morphisms.
+ A \emph{restriction functor} $F:\mathcal C\to\mathcal D$ between
+ restriction categories satisfies $F(\bar f)=\overline{F(f)}$ for every
+@@ -58,10 +58,13 @@
+  g\ran(f)=h\ran(f)
+  \qquad(g,h:Y\rightharpoonup Z).
+ \]
+-For an ordinary partial function $f$, the restriction idempotent
++For a partial function $f$, the restriction idempotent
+ $\bar f$ and the range $\ran(f)$ are the partial identities on its
+ domain of definition and image, respectively.
+ 
++A \emph{restriction monomorphism} $m:A\to X$ is a total morphism
++with a partial inverse $r:X\rightharpoonup A$ satisfying
++$rm=1_A$ and $mr=\bar r$.
+ A restriction idempotent $e$ on $X$ \emph{splits} if
+ $e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
+ with $rm=1_A$. The category is \emph{split} when every restriction
+@@ -87,6 +90,17 @@
+ \cite[Section~2.3.3, Proposition~2.26]{CockettLack} with $E$ the class
+ of all idempotents.
+ 
++For a category $\mathcal E$ with pullbacks, let
++$\operatorname{Par}(\mathcal E,\operatorname{Mono})$ be its category
++of partial maps, where $\operatorname{Mono}$ denotes all monomorphisms
++of $\mathcal E$ \cite[Section~3]{CockettLack}.
++Its objects are those of $\mathcal E$. A morphism
++$X\rightharpoonup Y$ is an isomorphism class of spans
++$X\xleftarrow{m}D\xrightarrow{f}Y$ with $m$ monic, and composition
++uses pullback. Its restriction is represented by
++$X\xleftarrow{m}D\xrightarrow{m}X$.
++We identify its total category with $\mathcal E$.
++
+ \subsection{Products, coproducts, and local connectedness}
+ 
+ A \emph{binary restriction product} $X\times Y$ has total
+@@ -100,7 +114,7 @@
+  \overline{\langle f,g\rangle}=\bar f\bar g.
+ \]
+ Products of morphisms are obtained by this pairing and the projections.
+-The total categorical diagonal is
++The total diagonal is
+ $\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
+ A restriction category has a $P$-category structure if and only if
+ it has binary restriction products
+@@ -158,7 +172,7 @@
+ $\tau:U\times U\rightharpoonup U$ such that, for every object $X$
+ and every $f:X\times U\rightharpoonup U$, there is a total
+ parameter morphism $r:X\to U$ satisfying $f=\tau(r\times1_U)$.
+-A \emph{recursion category} here is a prodominical isotypical
++A \emph{recursion category} is a prodominical isotypical
+ category with binary restriction products and a Turing morphism,
+ as in \cite[Section 9]{Heller}.
+ 
+--- v46/sections/03-sections-and-inseparability.tex
++++ v47/sections/03-sections-and-inseparability.tex
+@@ -1,12 +1,10 @@
+ \section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
+ 
+-The diagonal argument compares source restriction idempotents with a
+-disjoint target pair. Lifting a partial morphism whose inverse images of
+-the summand restriction idempotents give the target pair in reverse order
+-produces a total source morphism whose interpretation has zero inverse
+-images of both target idempotents. Total morphisms agreeing with opposite
+-coproduct injections on complementary source restriction idempotents
+-then give an inseparability criterion.
++The comparison theorem constructs a total source morphism whose
++interpretation has zero inverse images of two disjoint target restriction
++idempotents. It uses a lift of a partial morphism whose summand inverse
++images are the target idempotents in reverse order. Complementary source
++conditionals then give an inseparability criterion.
+ 
+ For a coproduct $Y+Z$, let
+ $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
+@@ -36,7 +34,7 @@
+ \]
+ and that there is a morphism $\ell:U\rightharpoonup U+U$ with
+ $F\ell=\chi_{U,U}s$.
+-Then there is a total $g:U\to U$ such that
++Then there is a total morphism $g:U\to U$ such that
+ \[
+  (Fg)^*P=(Fg)^*N=0_{FU}.
+ \]
+@@ -60,7 +58,7 @@
+ \[
+  E^*F(a_0)=E^*N,\qquad E^*F(a_1)=E^*P.
+ \]
+-The assumed inequalities imply
++The inequalities imply
+ \[
+  E^*N=E^*F(a_0)\le E^*P,\qquad
+  E^*P=E^*F(a_1)\le E^*N.
+@@ -79,7 +77,7 @@
+ \begin{corollary}[Lifted separators]\label{cor:separator}
+ Under the hypotheses of Theorem~\ref{thm:comparison} on
+ $\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
+-$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
++$F(1_U)\ne0$ and inverse images along total morphisms in $\mathcal A$ preserve
+ binary joins. A complementary pair $P,N$ on $FU$ satisfying
+ $F(a_0)\le P$ and $F(a_1)\le N$ admits no pair of morphisms
+ $s:FU\rightharpoonup FU+FU$ and
+@@ -101,7 +99,7 @@
+ \label{cor:source-conditionals}
+ Under the hypotheses of Theorem~\ref{thm:comparison} on
+ $\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
+-$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
++$F(1_U)\ne0$ and inverse images along total morphisms in $\mathcal A$ preserve
+ binary joins of restriction idempotents.
+ Suppose that, for every complementary pair $c,c'$ on $U$, there
+ is a total morphism $\ell_c:U\to U+U$ satisfying
+--- v46/sections/03a-internal-theories.tex
++++ v47/sections/03a-internal-theories.tex
+@@ -140,7 +140,7 @@
+ Let $\mathscr R,\mathcal A,F,U,\tau,b,a_0,a_1$ satisfy the
+ categorical hypotheses and definitions of
+ Theorem~\ref{thm:comparison}. Suppose that $\mathcal A$ is split,
+-that total inverse images in $\mathcal A$ preserve binary joins
++that inverse images along total morphisms in $\mathcal A$ preserve binary joins
+ of restriction idempotents, and that $F(1_U)\ne0$.
+ Let $t_A=\ran(c_{A,S})$ represent a sentence theory in
+ $\Split(\mathscr R)$ as above, with total negation
+@@ -177,8 +177,7 @@
+ $PN=(\widehat F\theta)^*\bigl(t(\widehat F\nu)^*t\bigr)=0$.
+ Theorem~\ref{thm:comparison} therefore supplies a total $g:U\to U$
+ with $(Fg)^*P=(Fg)^*N=0$. Since $\widehat F$ agrees with $F$ on
+-$\mathscr R$, composition of inverse images gives the two claimed
+-equalities.
++$\mathscr R$, composition of inverse images gives the two equalities.
+ 
+ If $t\vee(\widehat F\nu)^*t=1_{\widehat F S}$, inverse image along
+ the total morphism $\widehat F(\theta g):FU\to\widehat F S$ would
+@@ -191,8 +190,7 @@
+ contrary to $F(1_U)\ne0$.
+ If $t_A\vee\nu^*t_A=1_S$, applying $\widehat F$ and using
+ preservation of joins and inverse images would give
+-$t\vee(\widehat F\nu)^*t=1_{\widehat F S}$, which has just
+-been excluded.
++$t\vee(\widehat F\nu)^*t=1_{\widehat F S}$, a contradiction.
+ \end{proof}
+ 
+ \subsection{Inseparability in the source}
+--- v46/sections/04-miller-sequences.tex
++++ v47/sections/04-miller-sequences.tex
+@@ -35,8 +35,8 @@
+  a(d)=r.
+ \end{equation}
+ Such a sequence is called a \emph{Miller sequence}.
+-The rational approximations produced by $d$ may depend on $p$,
+-while the real they represent is fixed.
++The program may produce different rational approximations from different
++representations of $a$; all approximate the same real $r$.
+ 
+ \subsection{Computation independent of the binary representation}
+ \label{sec:miller-category}
+@@ -131,8 +131,7 @@
+ Here $\simeq$ includes simultaneous undefinedness.
+ If $f(x,n)=m$, every $p\in P_a$ gives this same output; if $f(x,n)$ is
+ undefined, every $p\in P_a$ gives an undefined computation. The definition
+-of $\tau_a$ therefore gives
+-$f=\tau_a(c\times1_{\N})$. The map $c$ is a total source morphism.
++of $\tau_a$ gives $f=\tau_a(c\times1_{\N})$.
+ Finally, the chosen recursive codings make the category isotypical.
+ \end{proof}
+ 
+@@ -144,12 +143,12 @@
+ Write $\mathcal K_p=\operatorname{Split}(\mathrm{Rec}^{p})$ and let
+ $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ be the full inclusion.
+ This inclusion is a range functor.
+-A concrete presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
++A presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
+ numerical objects as objects and partial $p$-recursive functions between
+ these carriers as morphisms. A restriction idempotent splits through its
+ $p$-c.e. domain of definition.
+-Ranges are the partial identities on images, and total inverse
+-images preserve unions of domains of definition.
++Ranges are the partial identities on images, and inverse images along
++total morphisms preserve unions of domains of definition.
+ 
+ If $c,c':X\rightharpoonup X$ are complementary restriction
+ idempotents in $\mathcal E_a$, Propositions~\ref{prop:miller-category}
+@@ -247,7 +246,7 @@
+ 
+ \begin{corollary}\label{cor:miller-cuts-inseparable}
+ The restriction idempotents $1_{L_a},1_{R_a}:\N\rightharpoonup\N$ are inseparable in
+-$\mathcal E_a$. Nevertheless, every $p\in P_a$ computes a separator
++$\mathcal E_a$. Every $p\in P_a$ computes a separator
+ of the underlying sets $L_a,R_a$.
+ \end{corollary}
+ \begin{proof}
+@@ -278,15 +277,15 @@
+ 
+ Call a subset $D$ of a numerical object \emph{$\mathcal E_a$-semidecidable}
+ when its partial identity $1_D$ is a morphism of $\mathcal E_a$.
+-We use the concrete presentation of $\operatorname{Split}(\mathcal E_a)$
++We use the presentation of $\operatorname{Split}(\mathcal E_a)$
+ in which such a subset $D\subseteq X$ represents $(X,1_D)$.
+ For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
+ a morphism $D\rightharpoonup E$ is represented by
+ a morphism $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
+ $f=1_Ef1_D$; it is total when $\bar f=1_D$.
+ Put $\mathcal D_a=\operatorname{Tot}(\operatorname{Split}(\mathcal E_a))$.
+-To apply the theory construction of Appendix~\ref{app:syntax-theories},
+-we realize its hypotheses in $\mathcal D_a$.
++The following proposition supplies the hypotheses of
++Appendix~\ref{app:syntax-theories} for $\mathcal D_a$.
+ 
+ \begin{proposition}\label{prop:miller-theory-realization}
+ The category $\mathcal D_a$ is regular, with finite coproducts that
+@@ -357,13 +356,12 @@
+ over $P$. Evaluation of finite lists, retaining the same parameter
+ $w$, proves the corresponding assertion for the list algebra.
+ 
+-The free-variable and substitution folds of the appendix consequently
+-exist in $\mathcal D_a$. In this realization, the free-variable fold
++The free-variable fold of Appendix~\ref{app:syntax-theories}
+ computes finite lists of occurrences. The single-variable
+-substitution fold computes either failure or a resulting formula:
++substitution fold returns either failure or a formula:
+ it compares the bound and substituted variables and uses the finite
+ membership tests in~\eqref{eq:quantifier-fold}. These computations
+-are ordinary recursive functions. The pullback in
++are recursive functions. The pullback in
+ Proposition~\ref{prop:categorical-substitution} therefore gives the
+ recursive free-for domain and substitution on that domain. The
+ sentence carrier, where the free-variable list is empty, is recursive.
+@@ -419,9 +417,9 @@
+ In particular, every such extension is incomplete.
+ \end{theorem}
+ \begin{proof}
+-The set $S$ of sentence codes is recursive. It therefore defines an
++The recursive set $S$ of sentence codes is an
+ object of $\operatorname{Split}(\mathcal E_a)$. Negation and insertion
+-of a constant into an inequality give ordinary recursive total morphisms
++of a constant into an inequality give recursive total morphisms
+ \[
+  \nu:S\to S,\qquad
+  \nu(\ulcorner\varphi\urcorner)=\ulcorner\neg\varphi\urcorner,
+--- v46/sections/05-syntactic-recursion-category.tex
++++ v47/sections/05-syntactic-recursion-category.tex
+@@ -106,7 +106,7 @@
+ $[f]_T[e]_T=[\operatorname{comp}(f,e)]_T$.
+ Substitution of T-provably equivalent graphs in
+ \eqref{eq:composition} proves independence of representatives.
+-The identity and associativity equations follow from the same
++The identity and associativity equations follow from these
+ graph identities.
+ 
+ Montagna's objects are the sets generated from $\N$ by
+@@ -114,7 +114,7 @@
+ \cite[p.~105]{Montagna}. Let $S_T^{\mathrm{set}}$ denote that
+ presentation of the unprimed category, using the computation
+ formulas and the induced numerical codings fixed above
+-\cite{Montagna,DPM}. There is a functor
++\cite[p.~646]{DPM}. There is a functor
+ \[
+  \Pi_T:S_T\longrightarrow S_T^{\mathrm{set}},\qquad
+  \Pi_T(X)=|X|,\qquad \Pi_T([e]_T)=[e]_T^{\mathrm{set}}.
+@@ -165,7 +165,7 @@
+  R_e(y):=\exists x\,G_e(x,y).
+ \]
+ For a restriction idempotent $[C]_T:Y\rightharpoonup Y$, the
+-equation $[C]_T[e]_T=[e]_T$ holds precisely when
++equation $[C]_T[e]_T=[e]_T$ holds if and only if
+ $T$ proves $G_e(x,y)\to C(y)$ universally, equivalently when
+ $T$ proves $R_e(y)\to C(y)$ universally.
+ Write $g=[p]_T,h=[q]_T:Y\rightharpoonup Z$.
+@@ -176,9 +176,9 @@
+  \bigl(R_e(y)\longrightarrow
+        (G_p(y,z)\leftrightarrow G_q(y,z))\bigr).
+ \]
+-Indeed, a witness $x$ to $R_e(y)$ can be used in the equality of
++A witness $x$ to $R_e(y)$ can be used in the equality of
+ the composite graphs, and functionality identifies the intermediate
+-output with $y$. This proves $g[R_e]_T=h[R_e]_T$ in $S_T$.
++output with $y$. Hence $g[R_e]_T=h[R_e]_T$ in $S_T$.
+ The index $j_{R_e}$ is independent of the theory, so its class
+ represents the range over every extension of $T$.
+ 
+--- v46/sections/05a-internal-syntax.tex
++++ v47/sections/05a-internal-syntax.tex
+@@ -30,9 +30,8 @@
+ \eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality}; first-order
+ logic proves the identity and associativity equations. We write
+ $\Gamma:C\to D$ for the morphism represented by $\Gamma(x,y)$.
+-Provably equivalent carrier predicates need not be the same object
+-of this presentation, but the identity relations give an isomorphism
+-between them.
++Identity relations give isomorphisms between provably equivalent
++carrier predicates.
+ 
+ \begin{lemma}\label{lem:syntactic-functional-search}
+ For every $\Sigma_1$ formula $\Gamma(x,y)$ there is an index
+@@ -56,7 +55,7 @@
+ codes $n=0,1,\ldots$ in increasing order for
+ $R(x,\pi_0n,\pi_1n)$, and return $\pi_0n$ at the first successful
+ test. Here $\pi_0,\pi_1$ are the projections of the fixed numerical
+-pairing. The program and its index depend on $\Gamma$, not on $T$.
++pairing.
+ 
+ PA proves by induction on the number of tests that a halting run
+ returns the first successful test's first component. Conversely,
+@@ -98,7 +97,7 @@
+ Conversely, a total morphism from $(\omega,[C]_T)$ to
+ $(\omega,[D]_T)$ has a graph satisfying
+ \eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality} in $T$.
+-Equality of these morphisms is exactly universal $T$-provable graph
++Equality of these morphisms is universal $T$-provable graph
+ equivalence. The functor is therefore full and faithful.
+ For essential surjectivity, use the coding isomorphism $X\cong\omega$
+ to transport any object $(X,e)$ of $\Split(S_T)$ to $(\omega,e')$.
+@@ -127,7 +126,7 @@
+  E(x)\equiv C(x)\land
+              \exists y\,(\Gamma(x,y)\land\Delta(x,y)).
+ \]
+-Indeed, if $\Lambda:A\to C$ equalizes $\Gamma$ and $\Delta$,
++If $\Lambda:A\to C$ equalizes $\Gamma$ and $\Delta$,
+ equality of the composite graphs and functionality of $\Lambda$
+ give a $T$-proof that $\Lambda(a,x)$ implies $E(x)$.
+ The same graph therefore defines its unique factorization through
+@@ -157,7 +156,7 @@
+ $\varepsilon\sigma=1_D$.
+ 
+ Such a split epimorphism is the coequalizer of its kernel pair.
+-Indeed, let $k_0,k_1:K\rightrightarrows C$ be the kernel-pair
++Let $k_0,k_1:K\rightrightarrows C$ be the kernel-pair
+ projections, and let $\beta:C\to Z$ satisfy
+ $\beta k_0=\beta k_1$. Since
+ $\varepsilon=\varepsilon\sigma\varepsilon$, the pair
+@@ -206,7 +205,7 @@
+  A(a)\longleftrightarrow A_C(a)\lor A_D(a),\qquad
+  \neg(A_C(a)\land A_D(a)).
+ \]
+-The canonical morphism $A_C+A_D\to A$ forgets the tag.
++The morphism $A_C+A_D\to A$ forgets the tag.
+ Its inverse has graph
+ \[
+  (A_C(a)\land z=2a)\;\lor\;(A_D(a)\land z=2a+1).
+@@ -214,8 +213,7 @@
+ The partition equations prove both inverse identities. Hence finite
+ coproducts are disjoint and stable under pullback.
+ 
+-It remains to analyze arbitrary monomorphisms. Let
+-$\Gamma:C\to D$ be monic and form its kernel pair. Its carrier is
++Let $\Gamma:C\to D$ be monic and form its kernel pair. Its carrier is
+ \[
+  K(w)\equiv C(\pi_0w)\land C(\pi_1w)\land
+     \exists y\,(\Gamma(\pi_0w,y)\land\Gamma(\pi_1w,y)).
+@@ -248,8 +246,8 @@
+ \[
+  \Par(\mathcal B_T,\Mono)\simeq\Split(S_T).
+ \]
+-Explicitly, a span $C\xleftarrow{m}E\xrightarrow{g}D$ is sent
+-to $gm^{-1}$, where $m^{-1}$ is the partial inverse just constructed.
++A span $C\xleftarrow{m}E\xrightarrow{g}D$ is sent
++to $gm^{-1}$, where $m^{-1}$ is the partial inverse.
+ Conversely, a partial morphism is represented by its domain
+ inclusion and its total restriction to that domain. In the predicate
+ presentation the domain is $\exists y\,G_f(x,y)$; relational
+@@ -258,7 +256,7 @@
+ 
+ The category $\Split(S_T)$ is a Turing category,
+ with Turing object $U=(\omega,1_\omega)$.
+-Indeed, the displayed restriction equivalence supplies a restriction
++The restriction equivalence supplies a restriction
+ terminal object, represented by the singleton predicate $x=0$.
+ Binary restriction products are
+ $(X,e)\times(Y,d)=(X\times Y,e\times d)$.
+@@ -268,7 +266,7 @@
+ by the coding isomorphism.
+ The Turing morphism extends by the idempotent-splitting argument
+ of Cockett--Hofstra~\cite[Section 3.5]{CockettHofstra}.
+-Explicitly, let $\tau:\omega\times\omega\rightharpoonup\omega$
++Let $\tau:\omega\times\omega\rightharpoonup\omega$
+ be the Turing morphism of $S_T$, and let
+ $f:(X,e)\times U\rightharpoonup U$ be a morphism of $\Split(S_T)$.
+ Its representative $f:X\times\omega\rightharpoonup\omega$ in $S_T$
+@@ -338,7 +336,7 @@
+ $V(x)\land V(y)\land x\ne y$, respectively.
+ 
+ We choose codes for finite ordered syntax trees as follows.
+-A code is a canonical sequence of node records in postfix order.
++A code is a sequence of node records in postfix order.
+ A record contains one of the finitely many constructor tags and,
+ when the constructor has a label, that numeric label. Its ordered
+ child blocks are recovered by parsing the preceding records with
+@@ -361,8 +359,7 @@
+ $\operatorname{Fm}(a)$ has the analogous conditions for formulas,
+ including membership in $\Pi_k$ for relation labels and in $V$ for
+ quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
+-formulas $\Sigma_1$: membership witnesses are existentially
+-quantified and are not components of a syntax code.
++formulas $\Sigma_1$ by existentially quantifying membership witnesses.
+ The constructor decomposition equivalences for these carrier
+ formulas are provable in $\mathrm{PA}$. For example,
+ $\operatorname{Fm}(\operatorname{all}(x,a))
+@@ -398,9 +395,9 @@
+ \begin{proof}
+ The primitive-recursive constructors, restricted to their displayed
+ sources, are morphisms in $\mathcal B_T$ by the constructor
+-decomposition equivalences. They give the claimed algebra.
+-
+-Fix an arbitrary object $P$ and an arbitrary $K_P$-algebra with
++decomposition equivalences. They define a $K$-algebra.
++
++Fix an object $P$ and a $K_P$-algebra with
+ carriers $\xi:X\to P$ and $\upsilon:Y\to P$. Choose graph indices for their projections and for the
+ finitely many algebra operations. Write
+ $\Xi(x,p)$ and $\Upsilon(y,p)$ for the projection graphs. The source of a function operation is represented, for example, by
+@@ -445,7 +442,7 @@
+ the child records and appending the root computation supplies
+ the evaluation record. Functionality of the operation graphs,
+ together with the induction hypothesis, proves uniqueness of the
+-value. Evaluation records need not be unique.
++value.
+ 
+ This argument uses the finitely many totality and projection
+ equations of the given algebra as theorems of $T$. Its induction formula is an arithmetic formula, so the required
+@@ -462,7 +459,7 @@
+ and that they commute with the projections to $P$. Decomposing a
+ record at its root proves, in $T$, their algebra-morphism
+ equations: evaluation of a constructor is the corresponding algebra
+-operation applied to the evaluated children. Thus these arrows form
++operation applied to the evaluated children. Thus these morphisms form
+ a $K_P$-algebra morphism in the slice.
+ 
+ Let $(h'_{\mathrm{Tm}},h'_{\mathrm{Fm}})$ be any other such algebra
+@@ -473,7 +470,7 @@
+ induction hypothesis, and use functionality of the algebra
+ operation. Both pairs of graphs are supported on the same source
+ predicates. The resulting universal graph equivalences are
+-therefore precisely equality of the two pairs of morphisms in
++therefore equality of the two pairs of morphisms in
+ $\mathcal B_T$. This proves uniqueness for every $P$. Taking $P$
+ to be terminal proves initiality in $\mathcal B_T^2$.
+ \end{proof}
+@@ -485,7 +482,7 @@
+ parameters.
+ \end{proposition}
+ \begin{proof}
+-Use canonical codes of finite sequences and the predicate
++Use the codes of finite sequences and the predicate
+ \[
+  \operatorname{List}_V(w)\quad\longleftrightarrow\quad
+  w\text{ is a sequence code}\ \land\
+@@ -508,15 +505,16 @@
+ $P$. Lemma~\ref{lem:syntactic-functional-search} makes it a morphism.
+ The nil and cons equations follow by splitting the record,
+ and induction in $T$ on length proves uniqueness of any morphism
+-satisfying these equations. This is initiality in every such slice.
++satisfying these equations.
+ \end{proof}
+ 
+ \subsection{Free variables and substitution}
+ \label{sec:st-substitution-realization}
+ 
+ The preceding propositions supply the initiality hypotheses of
+-Definition~\ref{def:categorical-syntax} for arbitrary fixed coefficient objects of bounded
+-arity in $\mathcal B_T$. The following algorithms realize its free-variable and substitution folds.
++Definition~\ref{def:categorical-syntax} for coefficient objects of bounded
++arity in $\mathcal B_T$. We realize the free-variable and substitution
++folds by algorithms.
+ 
+ \begin{proposition}
+ \label{prop:st-substitution-realization}
+@@ -552,7 +550,7 @@
+ deletes the bound variable. This is a primitive-recursive traversal
+ on finite codes. Induction in $\mathrm{PA}$ on node count proves
+ that its output satisfies $\operatorname{List}_V$ and proves the
+-constructor equations. These are the equations of the displayed
++constructor equations. These are the equations of the
+ $K$-algebra on lists, so
+ Proposition~\ref{prop:st-syntax-initiality} identifies this algorithm
+ with the appendix's free-variable morphisms.
+@@ -595,7 +593,7 @@
+ subtree and verifies all the constructor equations of the
+ $K_{V\times\Tm}$-algebra used in Appendix~\ref{app:syntax-theories}.
+ By Proposition~\ref{prop:st-syntax-initiality}, its classes are
+-therefore precisely the appendix's $a_T$ and $b_F$.
++therefore the appendix's $a_T$ and $b_F$.
+ 
+ Success and failure are decidable tags of this total option-valued
+ algorithm on its source. Their inverse images partition the source
+@@ -630,7 +628,7 @@
+ \label{subsec:syntactic-theories}
+ 
+ Let $\operatorname{fv}_{\Fm}(z)$ denote the numerical free-variable
+-list function just constructed. Since $0$ codes the empty list,
++list function. Since $0$ codes the empty list,
+ the predicate
+ $\operatorname{Sent}(z)\equiv
+ \operatorname{Fm}(z)\land\operatorname{fv}_{\Fm}(z)=0$
+@@ -640,6 +638,7 @@
+ pullback of the empty-list morphism along $\FV_{\Fm}$ required
+ by Definition~\ref{def:sentence-object}.
+ 
++\Needspace{10\baselineskip}
+ \begin{lemma}\label{lem:syntactic-derivation-initiality}
+ Let $T\supseteq\PA$, let $F$ be an object of $\mathcal B_T$, and
+ fix morphisms
+@@ -692,9 +691,8 @@
+ $d_j$.  For $n=0$, the condition in \((*)\) is
+ $G_{u_0}(r,0)$.
+ Lemma~\ref{lem:st-finite-sigma1} makes $P$ a $\Sigma_1$
+-formula. The witnesses to node membership and computation belong
+-to its existential quantifiers; a derivation code records only
+-its rule labels and ordered children.
++formula, with node-membership and computation witnesses existentially
++quantified.
+ 
+ For a tree $d$ whose root has arity $n$ and label $r$, put
+ $C(d,z)\equiv P(d)\land G_{v_n}(r,z)$.
+@@ -726,7 +724,7 @@
+  \notag
+ \end{align}
+ For $n=0$, the last conjunct means $G_{u_0}(r,0)$.
+-The right-hand side is exactly a predicate presenting
++The right-hand side is a predicate presenting
+ $B_n(P,c)$.  Consequently the constructors define a total
+ morphism $\delta:H(P,c)\to(P,c)$ in $\mathcal B_T/F$:
+ its conclusion is $q_n(r)$ on this summand.
+@@ -791,7 +789,7 @@
+ $P(d)\land E_a(d,y)$ gives a partial-recursive graph uniformly
+ equivalent to it in $\PA$.  It defines a total slice morphism
+ $h:(P,c)\to(Q,q)$.  Equation~\eqref{eq:syntactic-derivation-fold}
+-is exactly the algebra-morphism equation
++gives the algebra-morphism equation
+ $h\delta=\alpha H(h)$.
+ 
+ If $g:(P,c)\to(Q,q)$ is another algebra morphism, its
+@@ -849,14 +847,14 @@
+ Theorem~\ref{thm:first-order-theory} and the sentence-theory
+ construction following it give the two leastness assertions.
+ 
+-The original morphism $[e_A]_T:\omega\rightharpoonup\omega$
++The morphism $[e_A]_T:\omega\rightharpoonup\omega$
+ has restriction $[P_A]_T$ and range $[\operatorname{Th}_A]_T$.
+ The graph $G_{e_A}(p,z)\land\operatorname{Sent}(z)$
+ is $\Sigma_1$ and PA-provably functional. By
+ Lemma~\ref{lem:syntactic-functional-search} it has a program
+ index $e_{A,S}$ with PA-provably equivalent graph.
+ It represents the sentence-conclusion pullback
+-$c_{A,S}:P_{A,S}\to S$. Its range in $S_T$ is precisely $t_A$.
++$c_{A,S}:P_{A,S}\to S$. Its range in $S_T$ is $t_A$.
+ By Lemma~\ref{lem:range-regular-image}, the same range in
+ $\Split(S_T)$ splits through the regular image of $c_{A,S}$.
+ Thus its splitting is the asserted sentence theory.
+--- v46/sections/06-interpretation-in-models.tex
++++ v47/sections/06-interpretation-in-models.tex
+@@ -25,8 +25,8 @@
+  \end{aligned}
+ \end{equation}
+ The standard index $e$ in $G_e$ is interpreted as its numeral in $M$.
+-All quantified traces and intermediate values in this formula range over
+-the whole model, including its nonstandard elements.
++Traces and intermediate values in this formula range over $M$,
++including its nonstandard elements.
+ 
+ \begin{proposition}\label{prop:model}
+ For every $M\models T$, \eqref{eq:model-functor} defines a covariant
+@@ -82,8 +82,7 @@
+ is $T$-provably functional and total.
+ Lemma~\ref{lem:syntactic-functional-search} supplies an index $e_s$
+ whose graph is $T$-provably equivalent to $R$. Thus $s=[e_s]_T$
+-is total in $S_T$, and its graph gives the asserted equations with
+-$c$ and $c'$.
++is total in $S_T$, and its graph gives $sc=i_1c$ and $sc'=i_0c'$.
+ 
+ Interpret this graph equivalence in $M\models T$.
+ Under the canonical coproduct identification, $F_M(s)$ sends
+@@ -109,7 +108,7 @@
+ are inseparable in $S_T$.
+ \end{corollary}
+ \begin{proof}
+-In $\Pfn$, total inverse images preserve binary joins of restriction
++In $\Pfn$, inverse images along total morphisms preserve binary joins of restriction
+ idempotents. Proposition~\ref{prop:model} supplies the range functor,
+ Lemma~\ref{lem:switch} supplies the total source conditionals, and
+ $F_M(1_\omega)\ne0$ because $|M|$ is nonempty.
+@@ -154,7 +153,7 @@
+ the interpreted coproduct predicate with the tagged disjoint union;
+ the false predicate is interpreted as the empty set. Finally,
+ the regular image of $\Gamma:C\to D$ has predicate
+-$\exists x\,\Gamma(x,y)$. Its interpretation is exactly the image
++$\exists x\,\Gamma(x,y)$. Its interpretation is the image
+ of the interpreted function, since the quantified variable ranges
+ over all of $|M|$.
+ \end{proof}
+@@ -234,8 +233,7 @@
+ $b\in|K|$, assignments agreeing on the free variables of $\psi$.
+ The induction hypothesis for $\psi$ therefore proves the assertion
+ for the quantified formula. The free-variable lists realized in
+-Proposition~\ref{prop:st-substitution-realization} have precisely
+-these constructor equations.
++Proposition~\ref{prop:st-substitution-realization} satisfy these constructor equations.
+ 
+ Induction on $r$ proves the term identity. At a variable it is the
+ two-case definition of substitution; at a function application it
+@@ -252,8 +250,7 @@
+ $\sigma[x\mapsto a][x\mapsto b]$ agree for every $b$, proving
+ the required equivalence. Suppose $y\ne x$. If $x$ is not free
+ in $\psi$, substitution leaves $\psi$ unchanged, by
+-Proposition~\ref{prop:st-substitution-realization}; the free-variable
+-assertion just proved gives the equivalence. Otherwise admissibility
++Proposition~\ref{prop:st-substitution-realization}; dependence on free variables gives the equivalence. Otherwise admissibility
+ requires that $y$ is not free in $t$ and that substitution into
+ $\psi$ is admissible. For every $b\in|K|$, the free-variable
+ assertion gives
+@@ -285,7 +282,7 @@
+ Call a finite formula valid in $K$ if it holds under every
+ assignment $\N\to|K|$. We check validity for the seven logical
+ axiom schemes of Appendix~\ref{app:first-order-derivations}.
+-The first three are the displayed classical propositional
++The first three are the classical propositional
+ tautologies: the first retains its antecedent under a further
+ implication, the second composes two implications with the same
+ antecedent, and the third expresses contraposition. Their truth
+@@ -318,7 +315,7 @@
+ 
+ By Lemma~\ref{lem:syntactic-derivation-initiality}, each element
+ of $G_{\N}P_A$ is the code of a finite derivation tree. Its
+-parameter at each node satisfies the indicated rule predicate;
++parameter at each node satisfies the rule predicate;
+ the child conclusions are the premises of that rule. Induction
+ on the tree, using the preceding checks, shows that its root
+ formula is valid in $K$. Restriction to the pullback
+@@ -381,7 +378,7 @@
+        \longrightarrow\mathscr U(X\amalg Y).
+ \]
+ The two tags cannot agree on a member of $\mathcal U$, and
+-equality within a tag is exactly $\sim_{\mathcal U}$. Thus this
++equality within a tag is given by $\sim_{\mathcal U}$. Thus this
+ map is bijective. Finally, every surjection of sets has a section,
+ so its image under $\mathscr U$ is surjective. Finite-limit
+ preservation preserves monomorphisms; applying $\mathscr U$ to
+@@ -433,7 +430,7 @@
+        \mathscr U(G_{\N}(u_B^{-1})):
+        \mathscr U(G_{\N}B)\longrightarrow G_MB.
+ \]
+-Fullness of $J_{\PA}$ and the naturality already proved imply
++Fullness of $J_{\PA}$ and naturality on $\mathcal P_{\PA}$ imply
+ naturality for every $f:B\to B'$ in $\mathcal B_{\PA}$:
+ \[
+  G_M(f)\eta_B=\eta_{B'}\mathscr U(G_{\N}(f)):
+@@ -496,7 +493,7 @@
+ finite limit with empty carrier. Its image under $\mathscr U$
+ again has empty carrier. Naturality for $\nu$, together with
+ the isomorphism $\eta_S$, identifies this limit with the
+-intersection asserted for $v_{K,\mathcal U}$.
++intersection of $v_{K,\mathcal U}$ with $(G_M\nu)^*v_{K,\mathcal U}$.
+ 
+ The factorization places the regular image of $G_Mc_{A,S}$
+ inside $v_{K,\mathcal U}$. Proposition~\ref{prop:model-total-regular}
+@@ -524,7 +521,7 @@
+ 
+ Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
+ in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.
+-Each $p_i$ is the code of a standard finite derivation with sentence conclusion,
++Each $p_i$ codes a finite derivation with sentence conclusion,
+ and the definition of the factorization gives
+ $e_{K,\mathcal U}(p)=[e_K(p_i)]$.
+ 
+--- v46/sections/08-essential-incompleteness-of-arithmetic.tex
++++ v47/sections/08-essential-incompleteness-of-arithmetic.tex
+@@ -31,9 +31,8 @@
+ $\operatorname{Prov}_\Gamma(z)\equiv\exists p\,G_{e_{\Gamma,S}}(p,z)$.
+ This predicate is $\Sigma_1$ and implies
+ $\operatorname{Sent}(z)$ in PA. The morphism on $\omega$
+-representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$;
+-on the split sentence object its identity is
+-$[\operatorname{Sent}]_{\PA}$.
++representing $t_\Gamma$ is $[\operatorname{Prov}_\Gamma]_{\PA}$.
++The identity of $S$ is $[\operatorname{Sent}]_{\PA}$.
+ 
+ Under the standard interpretation, the set
+ $G_{\N}P_\Gamma$ consists of the codes of finite derivations from $\Gamma$
+@@ -82,6 +81,7 @@
+ In arithmetic formulas,
+ these functions abbreviate their PA-provably total graph definitions.
+ 
++\Needspace{11\baselineskip}
+ \begin{lemma}[Representation of the diagonal restriction idempotents]
+ \label{lem:arithmetic-diagonal-representation}
+ There is a total morphism
+@@ -127,9 +127,8 @@
+ \]
+ are true in $\N$.
+ These two sentences hold in every $M\equiv\N$.
+-Interpreting their predicates gives the two claimed
+-inequalities, because $\widehat F_M$ preserves the range of
+-$c_\Gamma$ and the indicated inverse images.
++Interpreting their predicates gives the two inequalities, because $\widehat F_M$ preserves the range of
++$c_\Gamma$ and inverse images.
+ \end{proof}
+ 
+ \begin{lemma}[A partial proof-search lift]
+@@ -174,7 +173,7 @@
+ $M\models R(x,z)$, the second displayed equivalence supplies
+ an output $z'$ of the interpreted program. The first implication
+ gives $M\models R(x,z')$, so $z'=z$. Thus the interpreted graph
+-is precisely $R$. Decoding the even and odd outputs gives the
++is $R$. Decoding the even and odd outputs gives the
+ two inverse-image equations.
+ \end{proof}
+ 
+@@ -206,7 +205,7 @@
+ 
+ Apply Theorem~\ref{thm:logical-comparison} with
+ $\mathscr R=S_{\PA}$, $\mathcal A=\Pfn$ and $F=F_M$.
+-The target is split, its total inverse images preserve binary
++The target is split, its inverse images along total morphisms preserve binary
+ joins, and $F_M(1_\omega)\ne0$ because $M$ is nonempty.
+ Lemma~\ref{lem:arithmetic-diagonal-representation} gives the
+ two reduction inequalities. Lemma~\ref{lem:arithmetic-proof-search}
+@@ -251,9 +250,8 @@
+ coproduct coding. Its class is a morphism
+ $\ell:\omega\rightharpoonup\omega+\omega$ of $S_{\PA}$,
+ and its standard interpretation is the chosen conditional.
+-Corollary~\ref{cor:separator}, applied to $F_{\N}$, gives a
+-contradiction. The lift is used as a partial source morphism;
+-its totality in $S_{\PA}$ is not required.
++Corollary~\ref{cor:separator}, applied to $F_{\N}$ with the
++partial lift $\ell$, gives a contradiction.
+ 
+ If a consistent c.e.\ extension were complete, its theorem and refutation
+ sets would be disjoint c.e.\ sets covering the recursive
+--- v46/sections/08a-uniform-theories.tex
++++ v47/sections/08a-uniform-theories.tex
+@@ -246,7 +246,7 @@
+              \operatorname{Alg}(H_e)\times
+              \operatorname{Alg}(H_{\ne e}).
+ \]
+-Explicitly, an algebra $((Q,q),\delta)$, where
++An algebra $((Q,q),\delta)$, where
+ $\delta:H_E(Q,q)\to(Q,q)$ in $\mathcal B/F_E$, is sent
+ to the pair of algebras whose structure morphisms are the
+ components of
+@@ -308,7 +308,7 @@
+ \]
+ Define $\operatorname{Prov}(e,z)
+ \equiv\exists d\,G_{a_c}(d,\langle e,z\rangle)$.
+-The specified product isomorphism $v$ makes this a $\Sigma_1$
++The product isomorphism $v$ makes this a $\Sigma_1$
+ predicate for $m:\mathcal T\hookrightarrow E\times S$.
+ For each $e\in\N$,
+ Proposition~\ref{prop:arithmetic-theory-fibers} identifies the
+--- v46/sections/08b-uniform-independent-sentences.tex
++++ v47/sections/08b-uniform-independent-sentences.tex
+@@ -70,7 +70,7 @@
+ Proposition~\ref{prop:standard-code-soundness} and
+ Proposition~\ref{prop:arithmetic-theory-fibers} show that
+ $C(e,x)$ and $C'(e,x)$ have disjoint truth sets in $\N$.
+-The graph and domain equations above therefore determine the
++The graph and domain equations determine the
+ value of $F_{\N}(\ell):\N\times\N\rightharpoonup\N\amalg\N$
+ at this parameter, as in Lemma~\ref{lem:arithmetic-proof-search}.
+ If $\N\models C(e,n)$, this partial function sends $(e,n)$
+--- v46/sections/08c-numerical-realization.tex
++++ v47/sections/08c-numerical-realization.tex
+@@ -62,7 +62,7 @@
+ For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
+ the program for $Q(f)$ first semidecides membership
+ in $\widehat C$, then decodes its input, computes $f$, and encodes
+-the output. Its domain is exactly $\widehat C$, so the displayed
++the output. Its domain is $\widehat C$, so the displayed
+ split morphism is total. The inverse coding equations prove
+ $Q(1_C)=1_{Q(C)}$ and $Q(gf)=Q(g)Q(f)$.
+ 
+@@ -181,7 +181,7 @@
+ \]
+ This function is defined on the coded image of $m$ and sends
+ the code of $m(b)$ to the code of $g(b)$ for $b\in|B|$. An isomorphism of spans therefore leaves it
+-unchanged. For two composable spans, their pullback selects exactly
++unchanged. For two composable spans, their pullback selects
+ the pairs $(b,b')$ for which the first right leg equals the second
+ left leg. The same condition is the domain condition for composing
+ the two partial functions. Their values then agree, proving
+@@ -253,8 +253,7 @@
+ \]
+ are defined at $z\in\widehat C$ exactly when
+ $\kappa_r^{-1}(z)$ belongs to the domain of $k$, where $C=(r,C_0)$.
+-There they have value $k(\kappa_r^{-1}(z))$. The span criterion
+-just proved gives equality of these morphisms.
++There they have value $k(\kappa_r^{-1}(z))$. The span criterion gives equality of these morphisms.
+ For $a:(X,e)\rightharpoonup(Y,d)$, both sides of
+ \[
+  a v_{(X,e)}
+@@ -334,7 +333,7 @@
+ halts and returns a value of the required sort over $p$.
+ The nullary step uses the variable or nullary-symbol operation.
+ Thus this algorithm is partial recursive and halts on every input
+-in each of the two displayed source carriers. It defines morphisms
++in each of the two source carriers. It defines morphisms
+ \[
+  h_T:P\times\Tm\to X,\qquad h_F:P\times\Fm\to Y
+  \quad\text{in }\mathcal C_{\mathrm{rec}},
+@@ -347,7 +346,7 @@
+  \quad\text{in }(\mathcal C_{\mathrm{rec}}/P)^2.
+ \]
+ If $h':\mathbf T_P\to\mathbf X$ satisfies that equation,
+-induction on the same root decomposition gives $h'=h$.
++induction on root decomposition gives $h'=h$.
+ Consequently $(\mathbf T_P,\iota_P)$ is initial for every $P$.
+ Taking $P=1$ gives the syntax algebra, and the construction for
+ all $P$ proves stability under parameters.
+@@ -383,7 +382,7 @@
+ uniqueness. Equivalently,
+ $h_L\iota^L_P=\beta L_P(h_L)$ as morphisms from
+ $L_P(P\times W,\pi_P)$ to $(Z,z)$ in the slice.
+-This proves parameterized list initiality.
++
+ 
+ The free-variable and substitution algorithms in
+ Propositions~\ref{prop:st-list-initiality} and
+@@ -407,7 +406,7 @@
+ $|S|=\{s\in|\Fm|:\FV_{\Fm}(s)=w_0\}$.
+ 
+ Fix an axiom subobject $i_A:A\hookrightarrow S$ in
+-$\mathcal C_{\mathrm{rec}}$. Retain $A$ itself as the object of axiom labels. The realized
++$\mathcal C_{\mathrm{rec}}$. Use $A$ as the object of axiom labels. The realized
+ rule data of Appendix~\ref{app:first-order-derivations} are
+ \[
+  p_n:R_n\to\Fm^n,\qquad q_n:R_n\to\Fm\quad(0\le n\le2),
+@@ -425,8 +424,7 @@
+ There are finitely many nodes. Dovetailing their membership and
+ computation tests semidecides validity, giving an object
+ $P_A^{\mathrm{all}}$ of dimension one whose carrier is the
+-c.e.\ set of valid derivation codes. Membership witnesses are not part of a
+-derivation code. Reading the root rule and computing its conclusion
++c.e.\ set of valid derivation codes. Reading the root rule and computing its conclusion
+ gives $c_A^{\mathrm{all}}:P_A^{\mathrm{all}}\to\Fm$.
+ The node constructors give an algebra
+ \[
+@@ -438,7 +436,7 @@
+ For any object $(Q,q)$ of $\mathcal C_{\mathrm{rec}}/\Fm$ and
+ algebra $\beta:H_A(Q,q)\to(Q,q)$ in this slice,
+ evaluate a valid derivation in children-before-parent order.
+-Its children have already been assigned values in $|Q|$ whose
++Its children have been assigned values in $|Q|$ whose
+ images under $q$ are their conclusions. Together with the node's
+ decoded rule instance these values belong to the corresponding pullback
+ summand of $H_A(Q,q)$. The program representing $\beta$ therefore
+@@ -455,7 +453,7 @@
+ The second equation is in $\mathcal C_{\mathrm{rec}}/\Fm$, from
+ $H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})$ to $(Q,q)$.
+ Root decomposition proves the equation, and induction on tree
+-size proves uniqueness of $h_A$. This establishes initiality.
++size proves uniqueness of $h_A$. 
+ \end{proof}
+ 
+ For arithmetic, choose the signature labels and numerical
+@@ -474,7 +472,7 @@
+  S\arrow[r,hook,"j"'] & \Fm.
+ \end{tikzcd}
+ \]
+-Thus $|\mathrm{Prf}_T|$ consists of the full derivation codes whose
++Thus $|\mathrm{Prf}_T|$ consists of the derivation codes whose
+ conclusions belong to $|S|$. Theorem~\ref{thm:first-order-theory}
+ identifies the regular image $m_T:\mathcal T_T\hookrightarrow S$
+ of $c_T$ as the sentence part of the least deductively closed
+@@ -508,7 +506,7 @@
+ \]
+ They match the constructor parameters, tuple entries, and tags of
+ corresponding rule instances. These maps and their inverses are
+-computable on their carriers by the structural encodings and projections.
++computable on their carriers by tuple encoding, decoding, and tag tests.
+ The rule membership conditions coincide because they use the same
+ syntax operations and axiom predicate. Let
+ $\chi_n:G_{\N}((\Fm^{\mathrm{syn}})^n)\xrightarrow{\cong}|\Fm|^n$
+@@ -519,7 +517,6 @@
+  \qquad
+  (G_{\N}q_n^{\mathrm{syn}})\rho_n=|q_n^{\mathrm{num}}|.
+ \]
+-These are equations of functions on $|R_n^{\mathrm{num}}|$.
+ Let $J_{\PA}:\mathcal P_{\PA}\to\mathcal B_{\PA}$ be the
+ predicate equivalence of Lemma~\ref{lem:syntactic-total-category}.
+ For each $n$, use the predicate presentation $C_n(z)$ and
+--- v46/sections/08d-numerical-incompleteness.tex
++++ v47/sections/08d-numerical-incompleteness.tex
+@@ -6,7 +6,7 @@
+ Section~\ref{subsec:numerical-realization}. Let
+ $I:\mathrm{Rec}\to\mathscr S_{\mathrm{rec}}$ be the full restriction
+ functor $I(X)=(X,1_X)$, $I(f)=f$. It preserves the restriction
+-idempotents on every original object, their order, and their
++idempotents on each object of $\mathrm{Rec}$, their order, and their
+ complements. Put $E=I(\omega)=Q(V)$.
+ 
+ The denotation
+@@ -30,7 +30,7 @@
+ $J_{\mathrm{rec}}(X)=|X|$ and $J_{\mathrm{rec}}(f)=f$.
+ It preserves restrictions, ranges, zero maps, and the chosen
+ products and coproducts by their numerical descriptions.
+-In $\Pfn$, total inverse images preserve binary joins of restriction
++In $\Pfn$, inverse images along total morphisms preserve binary joins of restriction
+ idempotents.
+ For complementary restriction idempotents $c,c':W\rightharpoonup W$
+ in $\mathrm{Rec}$, let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
+@@ -72,7 +72,7 @@
+ For consistent $T$, its sentence theorem set and refutation set
+ are disjoint, so $t_T\nu^*t_T=0_{S_{\mathrm{rec}}}$.
+ Joins in this splitting are partial identities on unions of c.e.\ subsets,
+-and total inverse images preserve these joins. Corollary~\ref{cor:domain-incompleteness}
++and inverse images along total morphisms preserve these joins. Corollary~\ref{cor:domain-incompleteness}
+ therefore gives inseparability of $t_T,\nu^*t_T$ and
+ $t_T\vee\nu^*t_T\ne1_{S_{\mathrm{rec}}}$.
+ 
+--- v46/sections/09-three-point-space.tex
++++ v47/sections/09-three-point-space.tex
+@@ -4,9 +4,9 @@
+ cosheaves in the sense of Curry~\cite[Definition~2.6]{CurryCosheaves}
+ on a three-point space $X$. Formula and derivation objects in the Karoubi
+ envelope $\operatorname{Kar}(\mathscr R_X)$
+-give, by component evaluation, a family of consistent propositional
+-theories. This family admits no compatible family of complete consistent
+-extensions with computably enumerable theorem sets.
++give, by evaluation at components $1$ and $2$, consistent propositional
++theories whose consistent extensions with computably enumerable axiom
++sets are incomplete.
+ 
+ For a topological space $X$, let $\mathcal O(X)$ be the category
+ of open sets and inclusions. A \emph{set-valued cosheaf} is a
+@@ -65,20 +65,14 @@
+ the cosheaf equivalence above assigns a set-valued cosheaf to each
+ object of $\mathcal E$ and a natural transformation to each morphism.
+ 
+-In the notation $\operatorname{Par}(\mathcal C,\operatorname{Mono})$,
+-$\operatorname{Mono}$ denotes all monomorphisms of $\mathcal C$.
+-Use the partial-map construction of Cockett and
+-Lack~\cite[Section~3]{CockettLack} to form
++Put
+ $\mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono})$.
+-Its morphisms $Y\rightharpoonup Z$ are isomorphism classes of spans
+-$Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
+-uses pullback. Monomorphisms are componentwise injections.
++Monomorphisms of $\mathcal E$ are componentwise injections.
+ Thus a partial morphism is equivalently a computably enumerable
+ subfunctor $D\subseteq Y$ together with a natural transformation
+ $D\to Z$. Its restriction is the partial identity on $D$, and its range is the
+ partial identity on the subfunctor of component images.
+-Proposition~\ref{prop:fork-structure} proves these assertions and
+-the structural properties used below.
++Proposition~\ref{prop:fork-structure} proves these assertions.
+ 
+ Define an object $V:J\to\mathcal C_{\mathrm{rec}}$ of $\mathcal E$
+ by the following objects $V_j=V(j)$ and morphisms
+@@ -145,7 +139,7 @@
+ (Corollary~\ref{cor:fork-karoubi}).
+ The formula and derivation objects below are constructed in
+ $\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
+-component evaluation give ordinary propositional formulas and derivations.
++component evaluation give propositional formulas and derivations.
+ 
+ \subsection{Complementary restriction idempotents and inseparability}
+ 
+@@ -171,7 +165,7 @@
+ It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
+ $\mathscr R_X$ by fullness. The full inclusion
+ $I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
+-$I(1_V)\ne0$, and total inverse images in $\mathcal A$ preserve
++$I(1_V)\ne0$, and inverse images along total morphisms in $\mathcal A$ preserve
+ binary joins by Proposition~\ref{prop:fork-structure}.
+ Corollary~\ref{cor:source-conditionals} therefore gives an inseparable
+ pair in $\mathscr R_X$.
+@@ -249,7 +243,7 @@
+ If $fp$ is not total, it is zero, and every further composite
+ remains zero. If it is total, further postcomposition has exactly
+ the domain specified by the next partial function. This proves
+-$\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$; identities are immediate.
++$\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$, and $\Phi_i(1_Y)(p)=p$.
+ Let $U:\mathcal K\to\Pfn$ send a c.e.\ numerical carrier to its
+ underlying set and a partial recursive morphism to the same partial
+ function. The bijections $p_y\mapsto y$ give a natural isomorphism
+@@ -323,8 +317,8 @@
+ It belongs to $\mathcal K_2$ by fullness. With the componentwise coproduct
+ identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
+ isomorphism in $\mathcal K_2$.
+-Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and total inverse
+-images in $\Pfn$ preserve unions,
++Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and inverse images along
++total morphisms in $\Pfn$ preserve unions,
+ Corollary~\ref{cor:source-conditionals} makes the partial identities
+ on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
+ would define a complemented restriction idempotent on $\N^2$ in
+@@ -579,7 +573,7 @@
+ \end{theorem}
+ \begin{proof}
+ The category $\mathcal A$ has restriction zeros and joins of restriction idempotents
+-preserved by total inverse image. Its restriction idempotents $a,b$ are inseparable,
++preserved by inverse images along total morphisms. Its restriction idempotents $a,b$ are inseparable,
+ and \eqref{eq:atomic-inequalities} gives the hypotheses of
+ Corollary~\ref{cor:domain-incompleteness}. Hence $t_T,\nu^*t_T$ are
+ inseparable.

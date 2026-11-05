@@ -4,9 +4,9 @@ We construct a recursion category $\mathscr R_X$ from set-valued
 cosheaves in the sense of Curry~\cite[Definition~2.6]{CurryCosheaves}
 on a three-point space $X$. Formula and derivation objects in the Karoubi
 envelope $\operatorname{Kar}(\mathscr R_X)$
-give, by component evaluation, a family of consistent propositional
-theories. This family admits no compatible family of complete consistent
-extensions with computably enumerable theorem sets.
+give, by evaluation at components $1$ and $2$, consistent propositional
+theories whose consistent extensions with computably enumerable axiom
+sets are incomplete.
 
 For a topological space $X$, let $\mathcal O(X)$ be the category
 of open sets and inclusions. A \emph{set-valued cosheaf} is a
@@ -65,20 +65,14 @@ $\mathcal E\to\mathbf{Set}^J$. Composing with the quasi-inverse of
 the cosheaf equivalence above assigns a set-valued cosheaf to each
 object of $\mathcal E$ and a natural transformation to each morphism.
 
-In the notation $\operatorname{Par}(\mathcal C,\operatorname{Mono})$,
-$\operatorname{Mono}$ denotes all monomorphisms of $\mathcal C$.
-Use the partial-map construction of Cockett and
-Lack~\cite[Section~3]{CockettLack} to form
+Put
 $\mathcal A=\operatorname{Par}(\mathcal E,\operatorname{Mono})$.
-Its morphisms $Y\rightharpoonup Z$ are isomorphism classes of spans
-$Y\xleftarrow{m}D\xrightarrow{f}Z$ with $m$ monic; composition
-uses pullback. Monomorphisms are componentwise injections.
+Monomorphisms of $\mathcal E$ are componentwise injections.
 Thus a partial morphism is equivalently a computably enumerable
 subfunctor $D\subseteq Y$ together with a natural transformation
 $D\to Z$. Its restriction is the partial identity on $D$, and its range is the
 partial identity on the subfunctor of component images.
-Proposition~\ref{prop:fork-structure} proves these assertions and
-the structural properties used below.
+Proposition~\ref{prop:fork-structure} proves these assertions.
 
 Define an object $V:J\to\mathcal C_{\mathrm{rec}}$ of $\mathcal E$
 by the following objects $V_j=V(j)$ and morphisms
@@ -145,7 +139,7 @@ $\operatorname{Kar}(\mathscr R_X)\simeq\mathcal A$
 (Corollary~\ref{cor:fork-karoubi}).
 The formula and derivation objects below are constructed in
 $\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
-component evaluation give ordinary propositional formulas and derivations.
+component evaluation give propositional formulas and derivations.
 
 \subsection{Complementary restriction idempotents and inseparability}
 
@@ -171,7 +165,7 @@ $\ell_c=[i_1m,i_0m']q^{-1}:V\to V+V$.
 It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
 $\mathscr R_X$ by fullness. The full inclusion
 $I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
-$I(1_V)\ne0$, and total inverse images in $\mathcal A$ preserve
+$I(1_V)\ne0$, and inverse images along total morphisms in $\mathcal A$ preserve
 binary joins by Proposition~\ref{prop:fork-structure}.
 Corollary~\ref{cor:source-conditionals} therefore gives an inseparable
 pair in $\mathscr R_X$.
@@ -249,7 +243,7 @@ $\Phi_i:\mathcal A\to\Pfn$ by
 If $fp$ is not total, it is zero, and every further composite
 remains zero. If it is total, further postcomposition has exactly
 the domain specified by the next partial function. This proves
-$\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$; identities are immediate.
+$\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$, and $\Phi_i(1_Y)(p)=p$.
 Let $U:\mathcal K\to\Pfn$ send a c.e.\ numerical carrier to its
 underlying set and a partial recursive morphism to the same partial
 function. The bijections $p_y\mapsto y$ give a natural isomorphism
@@ -323,8 +317,8 @@ $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
 It belongs to $\mathcal K_2$ by fullness. With the componentwise coproduct
 identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
 isomorphism in $\mathcal K_2$.
-Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and total inverse
-images in $\Pfn$ preserve unions,
+Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and inverse images along
+total morphisms in $\Pfn$ preserve unions,
 Corollary~\ref{cor:source-conditionals} makes the partial identities
 on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
 would define a complemented restriction idempotent on $\N^2$ in
@@ -579,7 +573,7 @@ The theory with theorem set $T_i$ is incomplete.
 \end{theorem}
 \begin{proof}
 The category $\mathcal A$ has restriction zeros and joins of restriction idempotents
-preserved by total inverse image. Its restriction idempotents $a,b$ are inseparable,
+preserved by inverse images along total morphisms. Its restriction idempotents $a,b$ are inseparable,
 and \eqref{eq:atomic-inequalities} gives the hypotheses of
 Corollary~\ref{cor:domain-incompleteness}. Hence $t_T,\nu^*t_T$ are
 inseparable.
@@ -615,3 +609,4 @@ This family is consistent. Since $D_{t_0}$ is a subfunctor and
 $T_i$ contains its $i$th component, the family is compatible.
 Theorem~\ref{thm:cosheaf-observation} therefore makes $U$ incomplete.
 \end{proof}
+

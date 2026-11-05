@@ -11,9 +11,7 @@ of derivations, and regular images.
 \label{app:categorical-hypotheses}
 
 For list objects, we use the parameterized recursion property studied by
-Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.\footnote{The gap
-in the printed uniqueness argument for Lemma~5.6 (p.~18) does not affect
-Lemma~2.2 or Definition~2.3, cited here.}
+Cockett~\cite[Lemma 2.2 and Definition 2.3]{CockettLists}.
 Its formulation by pullback into slices is
 recalled by Maietti~\cite[Definition 2.4 and the following paragraph]{MaiettiLists}.
 
@@ -25,8 +23,7 @@ coequalizer; the monic part of the factorization is the image.
 For the construction of first-order syntax, assume also that finite
 coproducts are disjoint and stable under pullback. In particular,
 a morphism into $X+Y$ decomposes its source as the coproduct of its
-two inverse images. These additional coproduct hypotheses are not
-needed for Theorem~\ref{thm:least-theorem-subobject}.
+two inverse images.
 
 Composition is $gf=g\circ f$. Finite products and coproducts are
 chosen and parenthesized to the left. Rebracketing uses the canonical
@@ -84,7 +81,7 @@ Also $\neg_2\mathbf{f}=\mathbf{t}$ and
 $\neg_2\mathbf{t}=\mathbf{f}$.
 
 These morphisms make $\Two$ a Boolean algebra object in $\mathcal D$.
-Indeed, distributivity expresses each finite power $\Two^n$ as a
+Distributivity expresses each finite power $\Two^n$ as a
 coproduct of $2^n$ copies of $1$, indexed by the ordered choices of
 $\mathbf{f}$ or $\mathbf{t}$ in each coordinate. The resulting
 injections are jointly epimorphic. The equations above verify the
@@ -105,8 +102,8 @@ $\mathbf{f}$ on the summands labelled
 $(\mathbf{f},\mathbf{f},\mathbf{f})$,
 $(\mathbf{f},\mathbf{f},\mathbf{t})$, and
 $(\mathbf{f},\mathbf{t},\mathbf{f})$; both are $\mathbf{t}$ on the others.
-Joint epimorphy then gives these identities as equalities of morphisms
-in $\mathcal D$.
+Since the injections are jointly epimorphic, these are equalities
+of morphisms in $\mathcal D$.
 
 Let $p:X\to\Two$. Write $[p=\mathbf{t}]\hookrightarrow X$ for its
 pullback along $\mathbf{t}$; write $[p=\mathbf{f}]\hookrightarrow X$ for its
@@ -248,7 +245,7 @@ Give $(W,W)$ the $K$-algebra defined by singleton lists at variables,
 ordered concatenation at function and relation symbols and equality,
 the identity at negation, concatenation at implication, and deletion
 at quantification. Its unique algebra morphism defines
-$\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$. Explicitly,
+$\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$ by
 \begin{align*}
  \FV_{\Tm}(\eta x)&=[x],&
  \FV_{\Tm}(f_k(s,\vec t))&=\FV_{\Tm}(t_1)+\!+\cdots+\!+\FV_{\Tm}(t_k),\\
@@ -277,12 +274,9 @@ $\exists=\neg\circ\forall\circ(1_V\times\neg):V\times\Fm\to\Fm$.
 \subsection{Admissible substitution}
 \label{app:substitution}
 
-For structural recursion we retain the original expression together with
-the recursive result; compare Gabbay and
-Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}.
-
-We construct substitution of one term for one variable, as required
-by the logical schemes below. Put $E=V\times\Tm$, with projections
+To construct substitution of one term for one variable, we retain
+the original expression together with the recursive result; compare
+Gabbay and Pitts~\cite[proof of Corollary 6.7]{GabbayPitts}. Put $E=V\times\Tm$, with projections
 $x:E\to V$ and $t:E\to\Tm$. For an object $Y$, write
 $O(Y)=1+Y$, with injections $\fail_Y:1\to O(Y)$ and
 $\ok_Y:Y\to O(Y)$. A morphism $g:Y\to Z$ induces
@@ -375,7 +369,7 @@ $\widetilde p$ is the induced morphism to $\Adm$.
 Thus quantification binds its named variable and prevents capture
 of free occurrences of the replacement term.
 
-We write $\varphi[x:=t]$ only on $\Adm$, and $u[x:=t]$ for
+Write $\varphi[x:=t]$ on $\Adm$, and $u[x:=t]$ for
 $a_T(u,x,t)$. Define
 \[
  e_T=\langle\pi_{\Tm},\pi_V,\eta\pi_V\rangle:
@@ -453,9 +447,9 @@ part includes all axioms, and its other parts express closure under
 the inference rules. An inclusion of closed subobjects is
 an algebra morphism, by composing with the target monomorphism.
 
-The proof transfers the initial derivation algebra to its regular image
-by lifting a factorization system to algebras for an endofunctor
-preserving its left class; see
+The following proof equips the regular image of the derivation algebra
+with an algebra structure. This is an instance of lifting a factorization
+system to algebras for an endofunctor preserving its left class; see
 Wi\ss{}mann~\cite[Lemma 3.6]{Wissmann}.
 
 \begin{theorem}\label{thm:least-theorem-subobject}
@@ -576,7 +570,7 @@ Suppose these initial derivation algebras exist for every axiom
 subobject of $S$. A \emph{sentence theory} is a subobject
 $u:U\hookrightarrow S$ through which $c_{U,S}$ factors.
 Then $T_{A,S}$ is the least sentence theory containing $A$.
-Indeed, axiom introduction gives $A\subseteq T_{A,S}$; since $T_A$
+Axiom introduction gives $A\subseteq T_{A,S}$; since $T_A$
 is closed and contains $T_{A,S}$, leastness gives
 $T_{T_{A,S}}\subseteq T_A$. Pullback proves closure of $T_{A,S}$.
 If $U$ is a sentence theory containing $A$, leastness gives
@@ -584,26 +578,6 @@ $T_A\subseteq T_U$, hence
 $T_{A,S}\subseteq T_{U,S}\subseteq U$.
 It also follows that $A\subseteq A'$ implies
 $T_{A,S}\subseteq T_{A',S}$.
-
-For a restriction category $\mathcal R$, its restriction splitting
-$\Split(\mathcal R)$ has objects $(X,e)$, where $e=\bar e$, and
-morphisms $f:(X,e)\rightharpoonup(Y,d)$ satisfying $f=dfe$.
-Its identity on $(X,e)$ is $e$; such a morphism is total when
-$\bar f=e$. Write $\Tot(\Split(\mathcal R))$ for the subcategory
-of total morphisms~\cite[Section 2.3.3]{CockettLack}.
-
-In a restriction category $\mathcal S$, restriction idempotents
-$a,b:Y\rightharpoonup Y$ are ordered by $a\leq b$ when $ba=a$.
-A restriction idempotent $a$ receives $f:X\rightharpoonup Y$ if $af=f$.
-The \emph{range} $\ran(f)$ is the least restriction idempotent receiving
-$f$. We use ranges satisfying the agreement law
-\[
- uf=vf\quad\Longrightarrow\quad u\ran(f)=v\ran(f)
- \qquad(u,v:Y\rightharpoonup Z).
-\]
-A total morphism $m:I\to Y$ is a \emph{restriction monomorphism}
-if it has a partial inverse $r:Y\rightharpoonup I$ with
-$rm=1_I$ and $mr=\bar r$.
 
 \begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
 Let $\mathcal S$ be a restriction category with ranges in which every
@@ -629,13 +603,11 @@ Thus $mr\leq a$, so $mr=\ran(f)$.
 
 The relation between split ranges and factorizations through restriction
 monomorphisms is developed in Cockett, Guo, and
-Hofstra~\cite[Theorem 4.7 and Lemma 4.12]{CGHRangeI}.
+Hofstra~\cite[Theorem 4.7]{CGHRangeI}.
 The additional conditions for these to be regular-image factorizations
 are given in \cite[Section 3.16 and Proposition 3.17]{CGHRangeII}.
 
-The partial-map category $\Par(\mathcal D,\Mono)$ has morphisms given
-by spans with monic left leg, composed by pullback
-\cite[Section 3]{CockettLack}. Since $\mathcal D$ is regular, it is a
+Since $\mathcal D$ is regular, $\Par(\mathcal D,\Mono)$ is a
 split restriction category with ranges
 \cite[Theorem 4.5 and Section 4.11]{CGHRangeI}; its total subcategory
 is canonically isomorphic to $\mathcal D$.
@@ -653,11 +625,8 @@ $m_A$ to have a partial inverse
 $r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$.
 The same lemma gives $\ran(c_{A,S})=m_A r_A=\bar r_A$.
 
-A functor $G:\mathcal S\to\mathcal S'$ between restriction categories
-with ranges is a \emph{restriction functor} if
-$G(\bar v)=\overline{G(v)}$ for every morphism $v$.
-If it also preserves ranges, then $G(m)$ and $G(r)$ split
-$\ran(G(f))$, since applying $G$ to the splitting in
+Let $G:\mathcal S\to\mathcal S'$ be a restriction functor
+preserving ranges. Applying $G$ to the splitting in
 Lemma~\ref{lem:range-regular-image} gives
 \[
  G(m)G(r)=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
@@ -686,3 +655,4 @@ In particular, subobjects $i_+:A_+\hookrightarrow V$ and
 $i_-:A_-\hookrightarrow V$ specify positive and negative atomic
 axioms by the image of
 $[\theta i_+,\nu\theta i_-]:A_++A_-\to S$.
+

@@ -1,12 +1,10 @@
 \section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
 
-The diagonal argument compares source restriction idempotents with a
-disjoint target pair. Lifting a partial morphism whose inverse images of
-the summand restriction idempotents give the target pair in reverse order
-produces a total source morphism whose interpretation has zero inverse
-images of both target idempotents. Total morphisms agreeing with opposite
-coproduct injections on complementary source restriction idempotents
-then give an inseparability criterion.
+The comparison theorem constructs a total source morphism whose
+interpretation has zero inverse images of two disjoint target restriction
+idempotents. It uses a lift of a partial morphism whose summand inverse
+images are the target idempotents in reverse order. Complementary source
+conditionals then give an inseparability criterion.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
@@ -36,7 +34,7 @@ $s:FU\rightharpoonup FU+FU$ satisfies
 \]
 and that there is a morphism $\ell:U\rightharpoonup U+U$ with
 $F\ell=\chi_{U,U}s$.
-Then there is a total $g:U\to U$ such that
+Then there is a total morphism $g:U\to U$ such that
 \[
  (Fg)^*P=(Fg)^*N=0_{FU}.
 \]
@@ -60,7 +58,7 @@ restrictions and composition therefore gives
 \[
  E^*F(a_0)=E^*N,\qquad E^*F(a_1)=E^*P.
 \]
-The assumed inequalities imply
+The inequalities imply
 \[
  E^*N=E^*F(a_0)\le E^*P,\qquad
  E^*P=E^*F(a_1)\le E^*N.
@@ -79,7 +77,7 @@ contrary to $F(1_U)\ne0$.
 \begin{corollary}[Lifted separators]\label{cor:separator}
 Under the hypotheses of Theorem~\ref{thm:comparison} on
 $\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
-$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
+$F(1_U)\ne0$ and inverse images along total morphisms in $\mathcal A$ preserve
 binary joins. A complementary pair $P,N$ on $FU$ satisfying
 $F(a_0)\le P$ and $F(a_1)\le N$ admits no pair of morphisms
 $s:FU\rightharpoonup FU+FU$ and
@@ -101,7 +99,7 @@ Theorem~\ref{thm:comparison}, contradicting complementarity.
 \label{cor:source-conditionals}
 Under the hypotheses of Theorem~\ref{thm:comparison} on
 $\mathscr R$, $\mathcal A$, $F$, $\tau$, and $b$, suppose that
-$F(1_U)\ne0$ and total inverse images in $\mathcal A$ preserve
+$F(1_U)\ne0$ and inverse images along total morphisms in $\mathcal A$ preserve
 binary joins of restriction idempotents.
 Suppose that, for every complementary pair $c,c'$ on $U$, there
 is a total morphism $\ell_c:U\to U+U$ satisfying
@@ -158,3 +156,4 @@ $1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
 
 Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
 and a complementary target separator whose conditional has no source lift.
+

@@ -1,16 +1,16 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript and new Lean formalization target are **version 46**,
-dated 2 November 2026.
+The current manuscript and Lean formalization target are **version 47**,
+dated 5 November 2026.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v46.pdf](manuscript/logical_consequence_and_essential_incompleteness_v46.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v47.pdf](manuscript/logical_consequence_and_essential_incompleteness_v47.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v46_source.zip](manuscript/logical_consequence_v46_source.zip) |
+| Complete source ZIP | [logical_consequence_v47_source.zip](manuscript/logical_consequence_v47_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
-| WSL2 Codex instructions | [docs/CODEX_WSL2_V46.txt](docs/CODEX_WSL2_V46.txt) |
+| WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
 
 The paper proves the comparison theorem for lifted partial conditionals and
 applies it to internally generated sentence theories. It develops the syntactic
@@ -27,39 +27,28 @@ and Git blob hashes.
 
 ## Lean status
 
-The existing Lean development covers the version-5 statements recorded in
-[FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md). That completed baseline
-is retained for reuse. It does **not** establish verification of version 46.
+The current correspondence table is
+[FORMALIZATION_STATUS_V47.md](FORMALIZATION_STATUS_V47.md). It records all 62
+numbered results and three definitions, their Lean declarations, and remaining
+obligations. The earlier [v5 table](FORMALIZATION_STATUS.md) records the
+retained baseline.
 
-The v46 results and remaining obligations are recorded separately in
-[FORMALIZATION_STATUS_V46.md](FORMALIZATION_STATUS_V46.md). The Section 3 comparison
-accepts arbitrary disjoint target idempotents and partial lifts. The subsequent
-development constructs the extension to the restriction splitting and proves
-regular-image foundations, with concrete syntactic and cosheaf applications.
-The table distinguishes categorical syntax interfaces from their concrete
-realizations; the latter require additional work.
+Version 47 revises definitions, exposition, and citations while preserving the
+mathematical statements and hypotheses. The [5 November proof report](docs/V46_SYNTAX_CONTINUATION_2026-11-05.md)
+records the latest proof implementations. The current table retains their
+proved comparisons and the open coding and application obligations.
 
-The [continued implementation](docs/V46_CONTINUATION_2026-11-03.md) constructs
-the regular extensive syntactic total category, its regular model
-interpretations, the arithmetic-ultrapower comparison, and named substitution
-with all seven logical schemes. Concrete syntax and derivation initiality and
-the remaining applications are still open.
+Lean verification follows the current manuscript. Every manuscript revision
+must update `MANUSCRIPT_CURRENT.json`, the correspondence table, source archive,
+PDF, and any affected statement checks in the same commit. The verifier checks
+the version and bytes of the active sources, checks the archive against those
+sources, builds the combined Lean entry point, runs `CurrentStatementAudit.lean`,
+and inspects transitive axioms through `CurrentAxiomAudit.lean`. It also checks
+imported source and dependency pins and the retained baseline. The permitted
+axioms are `propext`, `Quot.sound`, and `Classical.choice`.
 
-The [next proof batch](docs/V46_NEXT_PROOFS_2026-11-04.md) constructs stable
-syntactic lists in every parameter slice, primitive-recursive tag
-representations, identity substitution and quantified admissibility,
-partial search comparisons, and the numerical tuple and monic-span
-equivalences. The [correspondence table](FORMALIZATION_STATUS_V46.md)
-retains the exact coding comparison and remaining concrete realizations.
-
-The existing verifier builds the combined Lean entry point, checks imported
-source and dependency pins, checks the preserved manuscript baseline, runs
-`V5StatementAudit.lean` and `V46StatementAudit.lean`, and inspects the transitive
-axioms of its retained declarations and every declaration in the v46 production
-modules. It also pins the v46 TeX, PDF and source archive separately from the
-historical manuscript sources. The permitted axioms are `propext`, `Quot.sound`, and
-`Classical.choice`. A successful baseline verification must not be reported
-as completion of v46.
+The existing `V46` Lean module and namespace names identify implementations.
+The active manuscript target is selected by `MANUSCRIPT_CURRENT.json`.
 
 ## Clone or use the existing checkout
 
@@ -120,11 +109,9 @@ files; the source ZIP contains all sections, appendices, and bibliography.
 
 [SOURCE_PINS.json](SOURCE_PINS.json) records the imported Lean sources;
 [LOCAL_PATCHES.json](LOCAL_PATCHES.json) records their permitted changes.
-[MANUSCRIPT_SOURCE.json](MANUSCRIPT_SOURCE.json) preserves the historical
-manuscript baseline; [MANUSCRIPT_V46_SOURCE.json](MANUSCRIPT_V46_SOURCE.json)
-pins the current TeX, PDF and source archive separately. The v46 manuscript
-was published at `558a20eed4c62d59eada05f5500cf233671078e9`; the directory
-reorganization changes no mathematical text or Lean source.
+[MANUSCRIPT_SOURCE.json](MANUSCRIPT_SOURCE.json) records the earlier
+manuscript baseline. [MANUSCRIPT_CURRENT.json](MANUSCRIPT_CURRENT.json) records
+the current verification target, its source hashes, PDF, and source archive.
 
 The software uses the existing [Apache-2.0 license](LICENSE). Manuscript terms
 are specified in [manuscript/NOTICE.md](manuscript/NOTICE.md).

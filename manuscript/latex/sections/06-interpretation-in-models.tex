@@ -25,8 +25,8 @@ and elements $x\in X_M$, $y\in Y_M$, define
  \end{aligned}
 \end{equation}
 The standard index $e$ in $G_e$ is interpreted as its numeral in $M$.
-All quantified traces and intermediate values in this formula range over
-the whole model, including its nonstandard elements.
+Traces and intermediate values in this formula range over $M$,
+including its nonstandard elements.
 
 \begin{proposition}\label{prop:model}
 For every $M\models T$, \eqref{eq:model-functor} defines a covariant
@@ -82,8 +82,7 @@ The $\Sigma_1$ relation
 is $T$-provably functional and total.
 Lemma~\ref{lem:syntactic-functional-search} supplies an index $e_s$
 whose graph is $T$-provably equivalent to $R$. Thus $s=[e_s]_T$
-is total in $S_T$, and its graph gives the asserted equations with
-$c$ and $c'$.
+is total in $S_T$, and its graph gives $sc=i_1c$ and $sc'=i_0c'$.
 
 Interpret this graph equivalence in $M\models T$.
 Under the canonical coproduct identification, $F_M(s)$ sends
@@ -109,7 +108,7 @@ $b:\omega\to\omega+\omega$ in $S_T$, the restriction idempotents
 are inseparable in $S_T$.
 \end{corollary}
 \begin{proof}
-In $\Pfn$, total inverse images preserve binary joins of restriction
+In $\Pfn$, inverse images along total morphisms preserve binary joins of restriction
 idempotents. Proposition~\ref{prop:model} supplies the range functor,
 Lemma~\ref{lem:switch} supplies the total source conditionals, and
 $F_M(1_\omega)\ne0$ because $|M|$ is nonempty.
@@ -154,7 +153,7 @@ preserves finite limits. The even and odd coding bijections identify
 the interpreted coproduct predicate with the tagged disjoint union;
 the false predicate is interpreted as the empty set. Finally,
 the regular image of $\Gamma:C\to D$ has predicate
-$\exists x\,\Gamma(x,y)$. Its interpretation is exactly the image
+$\exists x\,\Gamma(x,y)$. Its interpretation is the image
 of the interpreted function, since the quantified variable ranges
 over all of $|M|$.
 \end{proof}
@@ -234,8 +233,7 @@ on its free variables yield, after changing $y$ to the same
 $b\in|K|$, assignments agreeing on the free variables of $\psi$.
 The induction hypothesis for $\psi$ therefore proves the assertion
 for the quantified formula. The free-variable lists realized in
-Proposition~\ref{prop:st-substitution-realization} have precisely
-these constructor equations.
+Proposition~\ref{prop:st-substitution-realization} satisfy these constructor equations.
 
 Induction on $r$ proves the term identity. At a variable it is the
 two-case definition of substitution; at a function application it
@@ -252,8 +250,7 @@ $\sigma[x\mapsto b]$ and
 $\sigma[x\mapsto a][x\mapsto b]$ agree for every $b$, proving
 the required equivalence. Suppose $y\ne x$. If $x$ is not free
 in $\psi$, substitution leaves $\psi$ unchanged, by
-Proposition~\ref{prop:st-substitution-realization}; the free-variable
-assertion just proved gives the equivalence. Otherwise admissibility
+Proposition~\ref{prop:st-substitution-realization}; dependence on free variables gives the equivalence. Otherwise admissibility
 requires that $y$ is not free in $t$ and that substitution into
 $\psi$ is admissible. For every $b\in|K|$, the free-variable
 assertion gives
@@ -285,7 +282,7 @@ intersection.
 Call a finite formula valid in $K$ if it holds under every
 assignment $\N\to|K|$. We check validity for the seven logical
 axiom schemes of Appendix~\ref{app:first-order-derivations}.
-The first three are the displayed classical propositional
+The first three are the classical propositional
 tautologies: the first retains its antecedent under a further
 implication, the second composes two implications with the same
 antecedent, and the third expresses contraposition. Their truth
@@ -318,7 +315,7 @@ $b\in|K|$.
 
 By Lemma~\ref{lem:syntactic-derivation-initiality}, each element
 of $G_{\N}P_A$ is the code of a finite derivation tree. Its
-parameter at each node satisfies the indicated rule predicate;
+parameter at each node satisfies the rule predicate;
 the child conclusions are the premises of that rule. Induction
 on the tree, using the preceding checks, shows that its root
 formula is valid in $K$. Restriction to the pullback
@@ -381,7 +378,7 @@ the retained set is nonempty. This proves surjectivity of
        \longrightarrow\mathscr U(X\amalg Y).
 \]
 The two tags cannot agree on a member of $\mathcal U$, and
-equality within a tag is exactly $\sim_{\mathcal U}$. Thus this
+equality within a tag is given by $\sim_{\mathcal U}$. Thus this
 map is bijective. Finally, every surjection of sets has a section,
 so its image under $\mathscr U$ is surjective. Finite-limit
 preservation preserves monomorphisms; applying $\mathscr U$ to
@@ -433,7 +430,7 @@ Lemma~\ref{lem:syntactic-total-category}, and set
        \mathscr U(G_{\N}(u_B^{-1})):
        \mathscr U(G_{\N}B)\longrightarrow G_MB.
 \]
-Fullness of $J_{\PA}$ and the naturality already proved imply
+Fullness of $J_{\PA}$ and naturality on $\mathcal P_{\PA}$ imply
 naturality for every $f:B\to B'$ in $\mathcal B_{\PA}$:
 \[
  G_M(f)\eta_B=\eta_{B'}\mathscr U(G_{\N}(f)):
@@ -496,7 +493,7 @@ The intersection of $v_K$ with $(G_{\N}\nu)^*v_K$ is a
 finite limit with empty carrier. Its image under $\mathscr U$
 again has empty carrier. Naturality for $\nu$, together with
 the isomorphism $\eta_S$, identifies this limit with the
-intersection asserted for $v_{K,\mathcal U}$.
+intersection of $v_{K,\mathcal U}$ with $(G_M\nu)^*v_{K,\mathcal U}$.
 
 The factorization places the regular image of $G_Mc_{A,S}$
 inside $v_{K,\mathcal U}$. Proposition~\ref{prop:model-total-regular}
@@ -524,6 +521,7 @@ standard sentence code it agrees with satisfaction in $K$.
 
 Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
 in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.
-Each $p_i$ is the code of a standard finite derivation with sentence conclusion,
+Each $p_i$ codes a finite derivation with sentence conclusion,
 and the definition of the factorization gives
 $e_{K,\mathcal U}(p)=[e_K(p_i)]$.
+

@@ -35,8 +35,8 @@ every $p\in P_a$, then
  a(d)=r.
 \end{equation}
 Such a sequence is called a \emph{Miller sequence}.
-The rational approximations produced by $d$ may depend on $p$,
-while the real they represent is fixed.
+The program may produce different rational approximations from different
+representations of $a$; all approximate the same real $r$.
 
 \subsection{Computation independent of the binary representation}
 \label{sec:miller-category}
@@ -131,8 +131,7 @@ total recursive map $c:X\to\N$ with
 Here $\simeq$ includes simultaneous undefinedness.
 If $f(x,n)=m$, every $p\in P_a$ gives this same output; if $f(x,n)$ is
 undefined, every $p\in P_a$ gives an undefined computation. The definition
-of $\tau_a$ therefore gives
-$f=\tau_a(c\times1_{\N})$. The map $c$ is a total source morphism.
+of $\tau_a$ gives $f=\tau_a(c\times1_{\N})$.
 Finally, the chosen recursive codings make the category isotypical.
 \end{proof}
 
@@ -144,12 +143,12 @@ It also preserves restriction products and finite compatible joins.
 Write $\mathcal K_p=\operatorname{Split}(\mathrm{Rec}^{p})$ and let
 $I_p:\mathrm{Rec}^{p}\to\mathcal K_p$ be the full inclusion.
 This inclusion is a range functor.
-A concrete presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
+A presentation of $\mathcal K_p$ has $p$-c.e. subsets of the
 numerical objects as objects and partial $p$-recursive functions between
 these carriers as morphisms. A restriction idempotent splits through its
 $p$-c.e. domain of definition.
-Ranges are the partial identities on images, and total inverse
-images preserve unions of domains of definition.
+Ranges are the partial identities on images, and inverse images along
+total morphisms preserve unions of domains of definition.
 
 If $c,c':X\rightharpoonup X$ are complementary restriction
 idempotents in $\mathcal E_a$, Propositions~\ref{prop:miller-category}
@@ -247,7 +246,7 @@ the asserted inverse-image equalities.
 
 \begin{corollary}\label{cor:miller-cuts-inseparable}
 The restriction idempotents $1_{L_a},1_{R_a}:\N\rightharpoonup\N$ are inseparable in
-$\mathcal E_a$. Nevertheless, every $p\in P_a$ computes a separator
+$\mathcal E_a$. Every $p\in P_a$ computes a separator
 of the underlying sets $L_a,R_a$.
 \end{corollary}
 \begin{proof}
@@ -278,15 +277,15 @@ morphism, although $\mathrm{Rec}^{p}$ has a Turing morphism.
 
 Call a subset $D$ of a numerical object \emph{$\mathcal E_a$-semidecidable}
 when its partial identity $1_D$ is a morphism of $\mathcal E_a$.
-We use the concrete presentation of $\operatorname{Split}(\mathcal E_a)$
+We use the presentation of $\operatorname{Split}(\mathcal E_a)$
 in which such a subset $D\subseteq X$ represents $(X,1_D)$.
 For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
 a morphism $D\rightharpoonup E$ is represented by
 a morphism $f:X\rightharpoonup Y$ of $\mathcal E_a$ satisfying
 $f=1_Ef1_D$; it is total when $\bar f=1_D$.
 Put $\mathcal D_a=\operatorname{Tot}(\operatorname{Split}(\mathcal E_a))$.
-To apply the theory construction of Appendix~\ref{app:syntax-theories},
-we realize its hypotheses in $\mathcal D_a$.
+The following proposition supplies the hypotheses of
+Appendix~\ref{app:syntax-theories} for $\mathcal D_a$.
 
 \begin{proposition}\label{prop:miller-theory-realization}
 The category $\mathcal D_a$ is regular, with finite coproducts that
@@ -357,13 +356,12 @@ proves uniqueness. This proves syntax initiality in every slice
 over $P$. Evaluation of finite lists, retaining the same parameter
 $w$, proves the corresponding assertion for the list algebra.
 
-The free-variable and substitution folds of the appendix consequently
-exist in $\mathcal D_a$. In this realization, the free-variable fold
+The free-variable fold of Appendix~\ref{app:syntax-theories}
 computes finite lists of occurrences. The single-variable
-substitution fold computes either failure or a resulting formula:
+substitution fold returns either failure or a formula:
 it compares the bound and substituted variables and uses the finite
 membership tests in~\eqref{eq:quantifier-fold}. These computations
-are ordinary recursive functions. The pullback in
+are recursive functions. The pullback in
 Proposition~\ref{prop:categorical-substitution} therefore gives the
 recursive free-for domain and substitution on that domain. The
 sentence carrier, where the free-variable list is empty, is recursive.
@@ -419,9 +417,9 @@ $\operatorname{Split}(\mathcal E_a)$.
 In particular, every such extension is incomplete.
 \end{theorem}
 \begin{proof}
-The set $S$ of sentence codes is recursive. It therefore defines an
+The recursive set $S$ of sentence codes is an
 object of $\operatorname{Split}(\mathcal E_a)$. Negation and insertion
-of a constant into an inequality give ordinary recursive total morphisms
+of a constant into an inequality give recursive total morphisms
 \[
  \nu:S\to S,\qquad
  \nu(\ulcorner\varphi\urcorner)=\ulcorner\neg\varphi\urcorner,
@@ -463,3 +461,4 @@ Corollary~\ref{cor:domain-incompleteness} therefore makes
 $t_T,\nu^*t_T$ inseparable and gives
 $t_T\vee\nu^*t_T\ne1_S$.
 \end{proof}
+

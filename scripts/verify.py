@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -11,6 +12,9 @@ import re
 import subprocess
 import sys
 import time
+import zipfile
+
+from check_manuscript import check_manuscript, manuscript_paths, read_target
 
 ROOT = Path(__file__).resolve().parents[1]
 LEAN = ROOT / "Lean"
@@ -1299,12 +1303,15 @@ def git_blob(data: bytes) -> str:
 
 
 def source_snapshot() -> dict[str, str]:
+    target = read_target(ROOT)
     paths = [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "lakefile.toml",
              LEAN / "lake-manifest.json", LEAN / "lean-toolchain",
              ROOT / "scripts/verify.py", ROOT / "scripts/setup-wsl.sh",
-             ROOT / "scripts/verify-wsl.sh", ROOT / "MANUSCRIPT_V46_SOURCE.json",
+             ROOT / "scripts/verify-wsl.sh", ROOT / "scripts/check_manuscript.py",
              ROOT / "MANUSCRIPT_SOURCE.json", ROOT / "SOURCE_PINS.json",
              ROOT / "LOCAL_PATCHES.json",
+             *manuscript_paths(ROOT, target),
+             *sorted((ROOT / target["entry_point"]).parent.rglob("*.tex")),
              *sorted((LEAN / "CategoricalEssentialIncompleteness").glob("*.lean"))]
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in paths}
@@ -1336,13 +1343,19 @@ def require_clean_dependencies(states: list[dict]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manuscript-only", action="store_true",
+                        help="check the current manuscript target and artifacts without running Lean")
+    args = parser.parse_args()
     LOGS.mkdir(exist_ok=True)
     env = os.environ.copy()
     env.setdefault("LEAN_NUM_THREADS", "1")
-    report = {"success": False, "commands": [], "allowed_axioms": sorted(ALLOWED_AXIOMS)}
+    report = {"success": False, "scope": "manuscript-only" if args.manuscript_only else "full",
+              "commands": [], "allowed_axioms": sorted(ALLOWED_AXIOMS)}
+    report_name = "manuscript-verification.json" if args.manuscript_only else "verification.json"
 
     def save() -> None:
-        (LOGS / "verification.json").write_text(json.dumps(report, indent=2) + "\n")
+        (LOGS / report_name).write_text(json.dumps(report, indent=2) + "\n")
 
     def run(args: list[str], name: str) -> str:
         print("Running:", " ".join(args), flush=True)
@@ -1360,7 +1373,17 @@ def main() -> int:
         return path.read_text()
 
     try:
+        report["current_manuscript"] = check_manuscript(ROOT)
+        target = read_target(ROOT)
+        if args.manuscript_only:
+            report["success"] = True
+            save()
+            print(f"PASS: manuscript v{target['version']} source, archive, PDF, and target correspondence checks.")
+            return 0
         starting_source = source_snapshot()
+        if any(starting_source.get(path) != digest
+               for path, digest in report["current_manuscript"]["sha256"].items()):
+            raise RuntimeError("Current manuscript changed after its source checks")
         manifest = json.loads((LEAN / "lake-manifest.json").read_text())
         report["dependencies"] = dependency_snapshot(manifest)
         report["dependency_worktrees"] = {"start": report["dependencies"]}
@@ -1408,19 +1431,6 @@ def main() -> int:
                                      "actual": actual})
         report["manuscript_files"] = manuscript_files
 
-        v46 = json.loads((ROOT / "MANUSCRIPT_V46_SOURCE.json").read_text())
-        if (v46["version"] != 46 or v46["publication_revision"] !=
-                "558a20eed4c62d59eada05f5500cf233671078e9"):
-            raise RuntimeError("Unexpected v46 manuscript provenance")
-        v46_files = []
-        for record in v46["files"]:
-            data = (ROOT / record["path"]).read_bytes()
-            if (git_blob(data) != record["git_blob"] or
-                    hashlib.sha256(data).hexdigest() != record["sha256"]):
-                raise RuntimeError("V46 manuscript differs from publication: " + record["path"])
-            v46_files.append(record["path"])
-        report["v46_manuscript_files"] = v46_files
-
         report["lean_version"] = run(["lean", "--version"], "lean-version.log").strip()
         if "version 4.35.0-rc2," not in report["lean_version"]:
             raise RuntimeError("Unexpected Lean version")
@@ -1428,15 +1438,20 @@ def main() -> int:
         run(["lake", "build", "CategoricalEssentialIncompleteness"], "build.log")
 
         run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/V5StatementAudit.lean"], "v5-statement-audit.log")
-        run(["lake", "build", "CategoricalEssentialIncompleteness.V46StatementAudit"],
-            "v46-statement-build.log")
-        for path in sorted((LEAN / "CategoricalEssentialIncompleteness").glob("V46*.lean")):
+        run(["lake", "build", target["statement_audit"]], "current-statement-build.log")
+        current_sources = sorted(path for path in LEAN.rglob("*.lean")
+                                 if ".lake" not in path.relative_to(LEAN).parts and
+                                 ".".join(path.relative_to(LEAN).with_suffix("").parts).startswith(
+                                     target["production_prefix"]))
+        if not current_sources:
+            raise RuntimeError("Current production-module prefix selects no source files")
+        for path in current_sources:
             if not path.stem.endswith("Audit"):
                 run(["lake", "env", "lean", "-DwarningAsError=true",
                      str(path.relative_to(LEAN))], f"strict-{path.stem}.log")
         run(["lake", "env", "lean", "-DwarningAsError=true",
-             "CategoricalEssentialIncompleteness/V46StatementAudit.lean"],
-            "v46-statement-audit.log")
+             target["statement_audit"].replace(".", "/") + ".lean"],
+            "current-statement-audit.log")
         text = run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/AxiomAudit.lean"], "axiom-audit.log")
         found = {}
         for name, contents in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text):
@@ -1451,34 +1466,34 @@ def main() -> int:
                 raise RuntimeError(f"Unexpected axioms in {name}: {sorted(extra)}")
         report["axioms"] = found
 
-        v46_text = run(["lake", "env", "lean", "-DwarningAsError=true",
-                        "CategoricalEssentialIncompleteness/V46AxiomAudit.lean"],
-                       "v46-axiom-audit.log")
-        production = sorted(path for path in (LEAN / "CategoricalEssentialIncompleteness").glob(
-            "V46*.lean") if not path.stem.endswith(("Checks", "Audit")))
-        expected_modules = {"CategoricalEssentialIncompleteness." + path.stem
+        current_text = run(["lake", "env", "lean", "-DwarningAsError=true",
+                            target["axiom_audit"].replace(".", "/") + ".lean"],
+                           "current-axiom-audit.log")
+        production = [path for path in current_sources
+                      if not path.stem.endswith(("Checks", "Audit"))]
+        expected_modules = {".".join(path.relative_to(LEAN).with_suffix("").parts)
                             for path in production}
-        actual_modules = set(re.findall(r"V46 module: (\S+)", v46_text))
+        actual_modules = set(re.findall(re.escape(target["audit_marker"]) + r"(\S+)", current_text))
         if actual_modules != expected_modules:
-            raise RuntimeError("V46 production module audit coverage mismatch: " +
+            raise RuntimeError("Current production module audit coverage mismatch: " +
                                str(sorted(actual_modules ^ expected_modules)))
-        v46_axioms = {}
+        current_axioms = {}
         for name, contents in re.findall(
-                r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", v46_text):
-            v46_axioms[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
-        for name in re.findall(r"'([^']+)' does not depend on any axioms", v46_text):
-            v46_axioms[name] = []
-        if not v46_axioms:
-            raise RuntimeError("V46 axiom audit produced no declarations")
-        for name, axioms in v46_axioms.items():
+                r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", current_text):
+            current_axioms[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
+        for name in re.findall(r"'([^']+)' does not depend on any axioms", current_text):
+            current_axioms[name] = []
+        if not current_axioms:
+            raise RuntimeError("Current axiom audit produced no declarations")
+        for name, axioms in current_axioms.items():
             extra = set(axioms) - ALLOWED_AXIOMS
             if extra:
-                raise RuntimeError(f"Unexpected v46 axioms in {name}: {sorted(extra)}")
+                raise RuntimeError(f"Unexpected current axioms in {name}: {sorted(extra)}")
         for path in production:
             if re.search(r"\b(sorry|admit|native_decide|unsafe)\b", path.read_text()):
-                raise RuntimeError("Forbidden proof token in v46 production source: " + str(path))
-        report["v46_audit_modules"] = sorted(actual_modules)
-        report["v46_axioms"] = v46_axioms
+                raise RuntimeError("Forbidden proof token in current production source: " + str(path))
+        report["current_audit_modules"] = sorted(actual_modules)
+        report["current_axioms"] = current_axioms
         report["dependency_worktrees"]["end"] = dependency_snapshot(manifest)
         save()
         require_clean_dependencies(report["dependency_worktrees"]["end"])
@@ -1490,9 +1505,10 @@ def main() -> int:
         report["success"] = True
         save()
         print(f"PASS: project build, dependency pins, source hashes, "
-              f"{len(AUDITED)} retained and {len(v46_axioms)} v46 axiom audits.")
+              f"{len(AUDITED)} retained and {len(current_axioms)} current axiom audits for manuscript v{target['version']}.")
         return 0
-    except (OSError, RuntimeError, subprocess.SubprocessError) as error:
+    except (OSError, RuntimeError, ValueError, KeyError, TypeError, zipfile.BadZipFile,
+            subprocess.SubprocessError) as error:
         report["error"] = str(error)
         save()
         print("FAIL:", error, file=sys.stderr)

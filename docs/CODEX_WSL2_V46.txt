@@ -1,3 +1,6 @@
+SUPERSEDED: use docs/CODEX_WSL2_CURRENT.txt and MANUSCRIPT_CURRENT.json.
+The active manuscript and Lean target are v47; this file records the earlier task.
+
 CODEX INSTRUCTIONS — WSL2 LEAN FORMALIZATION OF MANUSCRIPT V46
 Prepared 3 November 2026
 

@@ -1,0 +1,19 @@
+{
+  "version": 47,
+  "numbered_results": 62,
+  "environment_counts": {
+    "theorem": 13,
+    "lemma": 16,
+    "proposition": 24,
+    "corollary": 9,
+    "definition": 3,
+    "proof": 62
+  },
+  "labels": 136,
+  "tex_files": 22,
+  "pages": 73,
+  "all_pages_visually_checked": true,
+  "latex_warnings": [],
+  "pdf_sha256": "95628a730f29754258cdc60a79f032a27e79003c3b008155b1aa2a88aa72d289",
+  "base_commit": "fc47dd92e97373244f72bfe191456863e6de8e88"
+}

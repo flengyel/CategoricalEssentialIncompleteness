@@ -1,11 +1,10 @@
-# LaTeX sources — version 46
+# LaTeX sources — version 47
 
 **Logical consequence and essential incompleteness in recursion categories**,
-2 November 2026.
+5 November 2026.
 
-[Publication PDF](../logical_consequence_and_essential_incompleteness_v46.pdf) ·
-[Complete source ZIP](../logical_consequence_v46_source.zip) ·
-[Older manuscripts](../archive/)
+Companion files: `logical_consequence_and_essential_incompleteness_v47.pdf`
+and `logical_consequence_v47_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All four appendices and
@@ -20,8 +19,8 @@ Run from this directory:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The output is `main.pdf`. The versioned publication PDF is retained one
-directory above. Changing the directory name does not change any TeX content.
+The output is `main.pdf`. The source package contains this directory as
+`latex/`. Editorial review records are in the repository under `docs/reviews/`.
 
 ## Files
 
@@ -52,6 +51,12 @@ directory above. Changing the directory name does not change any TeX content.
 
 ## Revisions
 
-Publish mathematical or prose revisions under a new version number, preserving
-the previous release in `manuscript/archive/`. Keep the current PDF, source ZIP,
-and source guide synchronized. The directory reorganization preserves v46.
+Version 47 revises the exposition and citations of version 46. The review
+records identify the edits and source checks. All numbered results,
+definitions, and mathematical labels are retained.
+
+Version 47 is the current manuscript and Lean verification target.
+`MANUSCRIPT_CURRENT.json` at the repository root records the active source
+hashes, PDF, archive, correspondence table, and audit entry points.
+Later manuscript revisions update that target in the same change.
+

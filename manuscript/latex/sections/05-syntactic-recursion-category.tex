@@ -106,7 +106,7 @@ For $e\in\mathcal I(X,Y)$ and $f\in\mathcal I(Y,Z)$, define
 $[f]_T[e]_T=[\operatorname{comp}(f,e)]_T$.
 Substitution of T-provably equivalent graphs in
 \eqref{eq:composition} proves independence of representatives.
-The identity and associativity equations follow from the same
+The identity and associativity equations follow from these
 graph identities.
 
 Montagna's objects are the sets generated from $\N$ by
@@ -114,7 +114,7 @@ Cartesian products and the displayed disjoint unions
 \cite[p.~105]{Montagna}. Let $S_T^{\mathrm{set}}$ denote that
 presentation of the unprimed category, using the computation
 formulas and the induced numerical codings fixed above
-\cite{Montagna,DPM}. There is a functor
+\cite[p.~646]{DPM}. There is a functor
 \[
  \Pi_T:S_T\longrightarrow S_T^{\mathrm{set}},\qquad
  \Pi_T(X)=|X|,\qquad \Pi_T([e]_T)=[e]_T^{\mathrm{set}}.
@@ -165,7 +165,7 @@ $\overline{[e]_T}$ and range $\ran([e]_T)$ are represented respectively by
  R_e(y):=\exists x\,G_e(x,y).
 \]
 For a restriction idempotent $[C]_T:Y\rightharpoonup Y$, the
-equation $[C]_T[e]_T=[e]_T$ holds precisely when
+equation $[C]_T[e]_T=[e]_T$ holds if and only if
 $T$ proves $G_e(x,y)\to C(y)$ universally, equivalently when
 $T$ proves $R_e(y)\to C(y)$ universally.
 Write $g=[p]_T,h=[q]_T:Y\rightharpoonup Z$.
@@ -176,9 +176,9 @@ composition equation and PA-provable functionality of $G_e$ give
  \bigl(R_e(y)\longrightarrow
        (G_p(y,z)\leftrightarrow G_q(y,z))\bigr).
 \]
-Indeed, a witness $x$ to $R_e(y)$ can be used in the equality of
+A witness $x$ to $R_e(y)$ can be used in the equality of
 the composite graphs, and functionality identifies the intermediate
-output with $y$. This proves $g[R_e]_T=h[R_e]_T$ in $S_T$.
+output with $y$. Hence $g[R_e]_T=h[R_e]_T$ in $S_T$.
 The index $j_{R_e}$ is independent of the theory, so its class
 represents the range over every extension of $T$.
 
@@ -203,4 +203,5 @@ Thus $\tau_T$ is a Turing morphism. The coding bijections give
 isomorphisms from each object to $\omega$, and the product
 of any morphism with a zero morphism is zero. Hence $S_T$ is a
 prodominical recursion category.
+
 

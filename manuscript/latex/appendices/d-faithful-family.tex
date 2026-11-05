@@ -2,9 +2,8 @@
 
 Fix a consistent theory $T\supseteq\PA$.
 Let $\mathcal M_T$ be the set of all structures for the language of
-arithmetic with underlying set $\N$ that satisfy $T$. Their arithmetic
-operations need not be the standard ones, and the interpretation of a
-numeral $\bar n$ need not be the carrier element $n$. Completeness and
+arithmetic with underlying set $\N$ that satisfy $T$. Arithmetic
+operations and numeral interpretations are those of each model. Completeness and
 the downward L\"owenheim--Skolem theorem imply
 $\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
 countably infinite model can be transported to the carrier $\N$.
@@ -54,9 +53,6 @@ identity of $F_T(X)$ differs from zero.
 
 For consistent computably enumerable $T\supseteq\PA$, the source $S_T$
 is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
-The connected restriction idempotents used in the preceding proof
-belong to $\mathcal D_T$ and need not be images of source restriction
-idempotents.
 
 For an inclusion $T\subseteq T'$ of consistent theories, define
 $Q_{T,T'}:S_T\to S_{T'}$ by $Q_{T,T'}X=X$ and
@@ -125,11 +121,10 @@ where $\mathbf1$ is the family of singleton sets, cannot factor
 through $F_T(\tau_T)$ with a total parameter
 $\mathbf1\to F_T\omega$.
 
-The target restriction lattices are Boolean, so every image of a disjoint source
-pair has a separator. Lemma~\ref{lem:switch} lifts the sections
-associated with complementary source restriction idempotents;
-an arbitrary target separator need not be the image of such an
-idempotent.
+The restriction lattices of $\mathcal D_T$ are Boolean, so every image
+of a disjoint source pair has a separator. Lemma~\ref{lem:switch}
+supplies lifts for sections associated with complementary restriction
+idempotents of $S_T$.
 
 
 \subsection{Numeral observations}
@@ -170,3 +165,4 @@ to equality of their standard partial functions.
 The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
 although $T$ is complete.
 Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.
+
