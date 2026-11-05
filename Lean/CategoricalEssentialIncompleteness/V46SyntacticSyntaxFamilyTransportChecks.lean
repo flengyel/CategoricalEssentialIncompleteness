@@ -1,0 +1,23 @@
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFamilyTransport
+
+/-! # Explicit signature checks for FamilyTransport -/
+
+noncomputable section
+universe v₁ v₂ u₁ u₂ w
+open CategoryTheory CategoryTheory.Limits
+open CategoricalEssentialIncompleteness.V46
+open CategoricalEssentialIncompleteness.V46.SyntacticLists.Transport
+open CategoricalEssentialIncompleteness.V46.SyntacticSyntax.Transport
+variable {I : Type w} {C : Type u₁} {D : Type u₂}
+variable [Category.{v₁} C] [Category.{v₂} D]
+variable [Regular C] [Regular D]
+variable (E : C ≌ D) {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
+variable (f : I → C) (g : I → D) (χ : ∀ i, E.functor.obj (f i) ≅ g i)
+
+example : constantFamilyFunctor P ⋙ (sliceEquivalence E b).functor ≅
+    E.functor ⋙ constantFamilyFunctor Q := familyNaturalIso E b

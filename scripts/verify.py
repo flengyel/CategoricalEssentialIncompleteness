@@ -1310,6 +1310,31 @@ def source_snapshot() -> dict[str, str]:
             for path in paths}
 
 
+def dependency_snapshot(manifest: dict) -> list[dict]:
+    states = []
+    for package in manifest["packages"]:
+        name = package["name"].removeprefix("«").removesuffix("»")
+        folder = LEAN / manifest["packagesDir"] / name
+        revision = subprocess.check_output(["git", "rev-parse", "HEAD"],
+                                           cwd=folder, text=True).strip()
+        status = subprocess.check_output(
+            ["git", "status", "--porcelain=v1", "--untracked-files=all",
+             "--ignore-submodules=none"], cwd=folder, text=True)
+        states.append({"name": name, "expected": package["rev"],
+                       "actual": revision, "worktree_clean": not status,
+                       "worktree_status": status})
+    return states
+
+
+def require_clean_dependencies(states: list[dict]) -> None:
+    mismatched = [p["name"] for p in states if p["actual"] != p["expected"]]
+    dirty = [p["name"] for p in states if not p["worktree_clean"]]
+    if mismatched or dirty:
+        raise RuntimeError("Dependency check failed; revision mismatches: " +
+                           repr(mismatched) + "; modified worktrees: " + repr(dirty) +
+                           ". Changes were preserved; see dependency_worktrees in verification.json.")
+
+
 def main() -> int:
     LOGS.mkdir(exist_ok=True)
     env = os.environ.copy()
@@ -1336,6 +1361,11 @@ def main() -> int:
 
     try:
         starting_source = source_snapshot()
+        manifest = json.loads((LEAN / "lake-manifest.json").read_text())
+        report["dependencies"] = dependency_snapshot(manifest)
+        report["dependency_worktrees"] = {"start": report["dependencies"]}
+        save()
+        require_clean_dependencies(report["dependencies"])
         pins = json.loads((ROOT / "SOURCE_PINS.json").read_text())
         patch_file = ROOT / "LOCAL_PATCHES.json"
         patches = json.loads(patch_file.read_text()) if patch_file.exists() else []
@@ -1397,18 +1427,6 @@ def main() -> int:
 
         run(["lake", "build", "CategoricalEssentialIncompleteness"], "build.log")
 
-        deps = []
-        manifest = json.loads((LEAN / "lake-manifest.json").read_text())
-        for package in manifest["packages"]:
-            name = package["name"].removeprefix("«").removesuffix("»")
-            folder = LEAN / manifest["packagesDir"] / name
-            actual = subprocess.check_output(["git", "rev-parse", "HEAD"],
-                                             cwd=folder, text=True).strip()
-            deps.append({"name": name, "expected": package["rev"], "actual": actual})
-            if actual != package["rev"]:
-                raise RuntimeError(f"Dependency revision mismatch: {name}")
-        report["dependencies"] = deps
-
         run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/V5StatementAudit.lean"], "v5-statement-audit.log")
         run(["lake", "build", "CategoricalEssentialIncompleteness.V46StatementAudit"],
             "v46-statement-build.log")
@@ -1461,6 +1479,9 @@ def main() -> int:
                 raise RuntimeError("Forbidden proof token in v46 production source: " + str(path))
         report["v46_audit_modules"] = sorted(actual_modules)
         report["v46_axioms"] = v46_axioms
+        report["dependency_worktrees"]["end"] = dependency_snapshot(manifest)
+        save()
+        require_clean_dependencies(report["dependency_worktrees"]["end"])
         report["integration_sha256"] = source_snapshot()
         if report["integration_sha256"] != starting_source:
             raise RuntimeError("Source changed during verification; preserve this run and reverify")
