@@ -1,6 +1,6 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the new arithmetic source/check files after verified main `eff88a8bdefbc`, the manifest-selected current manuscript target, their required imports,
+Scope: the new arithmetic source/check files after verified main `0c44cdafed27`, the manifest-selected current manuscript target, their required imports,
 correspondence rows and the existing implementation/verification records.
 This follows the HostileRefereeGPT — Cat/Rec instructions and includes
 collaborating-agent source/type checks. It is not an independent whole-paper
@@ -24,36 +24,43 @@ The application dependencies below still prevent a whole-current-manuscript comp
 
 ## (B) Major weaknesses
 
-1. **The diagonal bounds and categorical arithmetic application remain open.**
-   Anchors: `lem:arithmetic-diagonal-representation` and
-   `thm:arithmetic-internal-comparison`. The PA-total fixed-formula and exact
-   diagonal sentence maps, actual Gamma theorem/refutation image comparisons,
-   model-independent partial search and PA source inverse-image equalities
-   are proved. The printed primitive-recursive negation has its PA-total graph
-   and all-model evidence comparison. The remaining proof-system comparison
-   must supply the specified diagonal inequalities for every M equivalent
-   to N; Theorem 7.3 must then apply the categorical comparison theorem.
-   External consistency is not a PA proof of consistency. Code models N/M
-   remain distinct from the semantic structure K.
+1. **The indexed-family fiber universal property remains open.** Anchor:
+   `prop:arithmetic-theory-fibers`. `ArithmeticIndexedAxioms.axiomGraph`,
+   `carrier_numeral`, `productIso` and `axioms` construct the literal family
+   and its actual product-chart mono. `ArithmeticIndexedFamily.initial`
+   proves initiality of the constructed whole family. The printed numeral
+   fibers still require the extensive slice/algebra decomposition, the
+   inference natural isomorphism, the per-e initiality comparison and the
+   sentence-conclusion pullback square. Full-family initiality is not the
+   required numeral-fiber universal property.
 
-2. **A semantic syntax comparison is not a proof-system comparison.** Anchor:
-   the new `ArithmeticNamedTranslation` and `SyntacticNamedHilbert` endpoints.
-   Failure mode: **unproved** at the remaining derivability bridge;
-   evidence: **absence_in_text**. The checked translation uses explicit
-   variable contexts and fresh named binders and preserves semantics. The
-   literal finite named seven-scheme calculus is separately defined and
-   checked. The continuation now proves the open structural/substitution comparison
-   and an actual ten-case LK2 proof translation conditional on native proofs
-   of each individual translated source axiom. That premise is explicit in
-   the raw statement check and does not assume translation of all theorems. In particular our zero/add-one numeral1 and
-   Foundation's canonical one-symbol numeral1 are different syntax terms.
-   The PA equality and positive/refutation proof transports between the two numeral conventions are now proved. Every native finite proof is also realized in the actual constructed Gamma derivation carrier, including sentence theorem/refutation membership and individual PA numeral proofs. The conditional LK2 translation and this forward realization can be composed, but they do not identify the source-axiom premise with the concrete arithmetic Gamma/PA condition. That particular comparison and the diagonal bounds remain open.
+2. **The concrete arithmetic proof-system comparison is now proved.**
+   `ArithmeticNamedAxiomComparison.axiomsAdmissible_PA` discharges the
+   source-axiom premise from the actual native PA arithmetic/order and
+   arbitrary-induction axioms with finite universal closure. The proved
+   numeral-convention transport and native finite-proof realization yield
+   the standard Γ bounds. Their fixed universal closures transfer to every
+   M≡N, and `ArithmeticDiagonalRepresentation.printed_representation`
+   proves the proper sentence-object inequalities of 7.1. The semantic
+   model K is constructed from native consistency; its actual soundness
+   factor and ultrapower transport discharge the target consistency
+   conditions. `ArithmeticInternalComparison.internal_comparison` and
+   `total_undecidable_family` prove the categorical 7.3 application and its
+   total source family. No source-admissibility, assumed soundness factor,
+   PA consistency proof or imported arithmetic incompleteness theorem is
+   used as a replacement for these steps.
 
-3. **Later applications remain separate.** Indexed families, numerical
-   inference realization, representation-independent Miller computation and
-   cosheaf derivation initiality remain open as recorded in the correspondence
-   table. The completed numerical tuple comparison 7.7 is not listed as open;
+3. **Later applications remain separate.** Indexed-family numeral-fiber
+   and uniform-presentation comparisons, numerical inference realization,
+   representation-independent Miller computation and cosheaf derivation
+   initiality remain open as recorded in the correspondence table. The completed numerical tuple comparison 7.7 is not listed as open;
    rows 9.1 and B.10 retain their corrected wording.
+
+The direct Corollary 7.4 application is also proved: an actual recursive
+Θ-preimage and partial source conditional contradict categorical Corollary
+3.2; the c.e. parallel-enumeration proof and native finite axiom replacement
+give closed-sentence and extension incompleteness. Its final statement
+contains only the printed Γ PA-derivability and consistency hypotheses.
 
 ## (C) Minor issues
 
@@ -68,7 +75,7 @@ existing generated-theory data. They do not supply an assumed evaluator,
 initiality or soundness factor. Targeted reduced-budget diagnostics and all
 failed snapshots/logs are preserved; no Lean limit or linter was disabled.
 
-**Only verified production layers count.** The proved numeral and Gamma image components are distinguished from ignored derivability, expanded projection and optional chosen-chart drafts.
+**Only verified production layers count.** The concrete arithmetic axiom/model/comparison chain and the full indexed-family construction have passed targeted production and strict checks. Uncompiled extensive-fiber, uniform-presentation and optional expanded-chart drafts remain separate. The freeze receipts and exact declarations are listed in the existing continuation report.
 The final verification record identifies the exact tested and committed
 source bytes and any new component subsequently completed.
 
@@ -115,11 +122,22 @@ for a proved equation.
 
 ## (E) Verification and disposition
 
-Full verification exited 0 in `.codex-work/verify-20261106T052422Z-MLM1qM`; all 837 commands passed.
+The baseline full verification exited 0 in `.codex-work/verify-20261106T052422Z-MLM1qM`; all 837 commands passed.
 The permitted axiom union and clean pinned dependencies were checked. All
 1119 tested input hashes match proof commit `16ec62198d0aaa6506fc50d949f35af0fb26d94d`, whose ordinary
 main push and remote ref were confirmed. The delivery receipt records the
 separate report commit and six copied-byte hashes.
+
+Full verification exited 0 in `.codex-work/verify-20261106T125901Z-Acu0zJ`; all 905 commands passed.
+The permitted axiom union and clean pinned dependencies were checked. All
+1187 tested input hashes match proof commit `e08d21c7eee33e6e7ee398411124039133a92905`, whose ordinary
+main push and remote ref were confirmed. The delivery receipt records the
+separate report commit and six copied-byte hashes.
+
+An earlier full replay returned exit 1 only after the 905 successful Lean
+commands: the lexical gate matched an English word in a documentation
+comment. The comment-only repair and complete successful rerun are recorded;
+no proof, statement, axiom or verifier condition was relaxed.
 
 The scoped source/type review supports the stated completed endpoints and
 explicit remaining obligations. It does not replace the kernel/axiom checks,
