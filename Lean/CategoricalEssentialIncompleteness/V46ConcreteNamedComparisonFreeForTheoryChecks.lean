@@ -1,0 +1,19 @@
+import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFreeForTheory
+
+noncomputable section
+open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
+open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
+open CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
+namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.FreeForTheoryChecks
+variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
+variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
+
+example : T ⊢ canonicalFreeForDomainSentence T V σ π d :=
+  canonicalFreeForDomain_theory T V σ π d
+
+example (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
+    (input : M) :
+    (canonicalAdmissibleCarrier T V σ π d).val.Evalb ![input] ↔
+      (canonicalFreeForPredicate T V σ π d).val.Evalb ![input] :=
+  canonicalAdmissibleCarrier_freeFor T V σ π d M input
+end CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.FreeForTheoryChecks
