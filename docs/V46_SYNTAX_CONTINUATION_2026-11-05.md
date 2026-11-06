@@ -25,6 +25,15 @@ files were preserved and checked byte-for-byte; ignored continuation drafts
 and failed logs remain preserved. Codex made no manuscript editorial changes.
 The toolchain, dependency revisions and imported-source pins remain unchanged.
 
+The arithmetic continuation resumes from verified main
+`eff88a8bdefbc206b6231037b546bc8af8055fcc` and proof commit
+`670c6b04d5bd9f661c0019d7b4e8dcb782f6168d`. All 1,065 verification inputs
+matched that completed checkpoint before this batch. The completed syntax,
+derivation, trace, substitution and soundness proofs are reused. The new work
+constructs the fixed-formula and diagonal sentence morphisms, identifies the
+actual Gamma refutation image, and realizes arithmetic proof search at the
+actual generated theorem/refutation predicates.
+
 ## Completed mathematics
 
 Prefixes below abbreviate `CategoricalEssentialIncompleteness.V46`.
@@ -49,7 +58,7 @@ statements, effective hypotheses and separate application obligations.
 | Actual Γ theorem image | `SyntacticGeneratedAxioms.theoremCarrier_model`, `literalTheoremCarrier_model`, `axiomProof_conclusion`, `axiomProof_value`, `theoremProgram_theory`: actual constructed Γ proof/conclusion/image and selected literal source-program predicate, in every T-model and as a literal T-provable sentence. The external native/FFL derivability comparison remains separate. |
 | Numerical source object | `ArithmeticOmegaComparison.variables_idempotent`, `omegaIso` prove that the literal all-variable realization is the actual identity splitting of ω, for every T extending PA, by universal T-model graph equality. |
 | Native point adapters | `SyntacticNamedHilbertCoordinates` proves actual named constructor point equations, independent named free-for to the genuine admissibility pullback, and the actual categorical output of successful native substitution. Its standard code interpretation is explicitly PA/N. The full native finite-proof realization is still a draft. |
-| Model computation dependencies | `NamedArithmeticStandardCodes` proves positive standard-code transfer. `NamedArithmeticModelCoding`, `ModelSubstitution`, `ModelOccurrences` prove finite constructor charts and actual reconstruction/FV equations with arbitrary internal child values and typed closed replacements in every PA model. The equal binder returns the original whole quantified word. The remaining combined FV-bound/sentence-range/Pred Θ draft timed out at its 40-second diagnostic cap and is unclaimed. |
+| Model computation dependencies | `NamedArithmeticStandardCodes` proves positive standard-code transfer. `NamedArithmeticModelCoding`, `ModelSubstitution`, `ModelOccurrences` prove finite constructor charts and actual reconstruction/FV equations with arbitrary internal child values and typed closed replacements in every PA model. The equal binder returns the original whole quantified word. The fixed-source FV bound and sentence range are now proved in the arithmetic continuation below. |
 | Actual sentence chart | `SyntacticSentenceLiteralChart.toSentenceIso`, `toSentence_over`, `toSentence_value`: the literal sentence predicate is isomorphic to the actual chosen sentence object, with its inclusion triangle and formula-coordinate value proved for every T-model, arbitrary T extending PA and arbitrary coefficients. |
 | Arithmetic source diagonal component | `ArithmeticDiagonalCodes.diagonalIndex_represents`, `sourceTau_isTuring`, `source_pair_inseparable`, `model_a0`, `model_a1`, `printed_tau_is_universal`, `printed_parity_is_identity`: actual printed-u source morphisms, a PA-total adapter with proved factorization, exact diagonal source equality, PA disjointness and all-PA-model restriction-domain comparisons. This proves a component of 7.1, not its Γ inequalities. |
 | Arithmetic numeral dependency | `NamedArithmeticNumerals` proves the actual internal numeral graph, zero/successor equations and native primitive-recursive certificate. `NamedArithmeticNumeralCarriers.numeralCode_carrier_closed`, `numeralCode_closed` prove accepted term membership and numerical FV=0 for every internal input in every PA model, including nonstandard inputs. `NamedArithmeticNumerals.numeralMorphism` is the actual PA-total graph into closed terms; `numeralCode_standard` proves its exact standard external word. `translateFormula_freeVariables` and its unary specialization prove the external formula FV bound. `NamedArithmeticClosedSubstitution.substitutionFreeFor_closed`, `substitutionResult_closed`, `closedReplacement_PA` prove independent free-for and typed option success for every internal typed formula and typed FV-zero replacement, for arbitrary coefficients in every PA model. The fixed-formula sentence-range obligation remains separate until checked. |
@@ -100,31 +109,60 @@ closed concrete principal result. All section/comparison/principal source and
 raw statement-check files passed production builds and strict replays; no
 trace obligation remains in this assigned Lemma 5.1 scope. No arbitrary-internal-index stage-persistence assumption is used.
 
+## Arithmetic sentence maps and partial proof search
+
+The following statements use the manuscript's literal sentence realization.
+An interpreting arithmetic code model M is distinct from a semantic structure K.
+
+| Construction | Proved declarations and scope |
+| --- | --- |
+| Fixed-source substitution and free variables | `NamedArithmeticSubstitutionOccurrences.termOutput_member_iff`, `formulaOutput_member_iff`, `result_sentence` hold for arbitrary coefficient predicates and every PA model. The source formula is externally finite; the typed closed replacement may be an arbitrary internal word. The quantified equal-name branch retains the original word. |
+| PA sentence range | `NamedArithmeticFixedSubstitution.value_closed`, `value_sentence`, `value_admissible`, `value_success`, `value_primrec`, `morphism` prove the actual algorithm's range, independent admissibility, successful result, native primitive recursion and supported uniquely total graph. The sole source condition for sentence range is FV(phi) contained in {0}. No range or totality certificate is assumed. |
+| Standard word comparison | `NamedArithmeticFixedSubstitution.standard_literal_result` gives the actual named substitution result, its literal code and empty free-variable list. The arithmetic model's Nat cast is compared explicitly with ordinary naturals. `NamedArithmeticUnarySubstitution` applies the construction to any unary arithmetic formula without evaluating its indices. |
+| Realization on omega | `SyntacticOmegaRealization.realizeFromOmega`, `realizeFromOmega_underlying`, `realizeFromOmega_graph`, `omegaPoint_value` construct the morphism from the identity omega splitting, its source-morphism equality and model graph. T may be any extension of PA; the codomain predicate and T-supported, T-total graph are arbitrary. No standard model of T is assumed. |
+| Literal sentence morphism | `NamedArithmeticLiteralTotal.theta`, `canonical_graph`, `canonical_value_at`, `standard_literal_result` construct omega → J_PA(literalSent), prove its graph at every internal input of every PA model and identify its standard output with the named algorithm. `NamedArithmeticDiagonalLiteralTotal.theta`, `canonical_value_at`, `standard_literal_result` instantiate the actual alpha of `ArithmeticDiagonalCodes`. The predicate object is explicitly typed; its underlying carrier is the original literal sentence predicate. |
+| Actual Gamma refutation image | `SyntacticGeneratedAxioms.refutationCarrier_literal`, `refutation_literal_theory` identify the pullback proof image after the actual sentence negation with literal Sent and an existential negative word in the constructed theorem image. The equations hold in all T-models, for arbitrary T extending PA, coefficient objects and enumeration predicate. Chosen sentence codes are compared through their formula-coordinate morphisms. |
+| Source inverse images | `NamedArithmeticProofSearch.graphPullCarrier_idem` proves equality of restriction idempotents in the T-provable source quotient for arbitrary represented graphs. `model_predicateIdem` identifies their interpretations with the partial identities on the corresponding truth sets in every T-model. |
+| Actual Gamma partial lift | `NamedArithmeticProofSearch.partial_proof_search`, `ell_domain`, `mem_numericalEll`, `ell_comparison` choose the source morphism before the interpreting model and prove its domain, even/odd graph, reversed fibers and coproduct comparison. The model hypothesis is disjointness of the two evidence predicates. No source PA proof of disjointness, consistency, coverage or total search is required. |
+| Constructed images and exact diagonal | `negative_refutation_image`, `actual_partial_proof_search`, `sourceTheta_total`, `sourceTheta_graph`, `positive_source_pull`, `negative_source_pull`, `ell_source_fibers`, `diagonal_partial_proof_search` identify those predicates with the constructed Gamma theorem/refutation images, prove their actual PA source inverse-image equalities, and specialize to the chosen diagonal alpha. All internal inputs in every PA model are covered. |
+| Printed negation function | `NamedArithmeticProofSearch.negationWord_primrec`, `negationWord_total_PA`, `negationWord_formulaCode`, `negative_eval_word` give a primitive-recursive extension of negation, its literal PA unique-totality graph and exact formula-code equation, and the all-PA-model equation C'(n) iff Prov_Gamma(Neg(Theta(n))). The negation-constructor graph is proved first for arbitrary coefficients and T-model points. |
+| Printed Lemma 7.2 | `NamedArithmeticProofSearch.printed_partial_proof_search`, `printed_diagonal_partial_proof_search`, `ell_comparison_inv` prove the generic unary and exact-alpha statements for the actual selected Gamma theorem program at Theta and Neg(Theta). The displayed reversed fibers are those of F_M(ell) followed by the inverse coproduct comparison, and ell is quantified before all models and their disjointness witnesses. This completes Lemma 7.2. |
+| Native proof support | `NamedHilbertQuantifiers.all_mono`, `all_congr`, `all_vacuous`, `all_rename_forward`, `all_intro_under`, `exists_intro` are actual finite named proofs for arbitrary coefficients and Gamma. `SyntacticNamedHilbert.replace_axioms` transforms finite proofs using supplied proofs of the individual enumerated sentence axioms. These lemmas do not identify an older proof calculus with the named calculus. |
+| Native proof realization | `SyntacticNamedHilbert.native_derives`, `native_realizes`, `native_sentence_theorem`, `native_sentence_numeral_PA` realize every finite named proof in the actual constructed Gamma derivation carrier, using the genuine seven scheme domains, enumerated sentence axioms, generalization and ordered modus ponens. The comparison is standard PA/N, for arbitrary coefficient predicates and Gamma. The individual Sigma1 theorem membership gets its PA numeral proof; no PA consistency assertion is made. |
+| Native refutation realization | `SyntacticNamedHilbert.negation_graph_word`, `native_sentence_refutation`, `native_refutation_numeral_PA` send an actual finite proof of negation to the original sentence's constructed refutation image and supply its individual Sigma1 PA numeral proof. The negated word is compared through the actual categorical constructor graph. |
+| Open first-order substitution comparison | `ArithmeticNamedOpenTranslation.term_rew`, `formula_rew`, `formula_shift`, `formula_free`, `formula_emb`, `formula_freeFor_bounded`, `term_substitution_rew`, `formula_substitution_rew`, `instance_substitution` prove the structural and exact substitution comparisons for explicit bound/free-name assignments and fresh binder bounds. These are comparisons with the actual named algorithm, with independent free-for proofs; binder names are retained. They do not assume a theorem-level proof translation. |
+| First-order native proof steps | `ArithmeticNamedProofConnectives` proves NNF negation/implication and ordered modus ponens, two-way fresh-seed alpha conversion, actual all/exists steps using the proved substitutions, finite-sequent conjunction/cut and guarded quantifier/disjunction proofs. These proofs supply structural cases of the source LK translation; the concrete Gamma/PA axiom comparison remains separate. |
+| Conditional source proof translation | `ArithmeticNamedProofTranslation.derivation`, `sentence`, `expanded_instance_substitution`, `expanded_instance_proof`, `expanded_instance_refutation` prove the full ten-case LK2 induction, closed-sentence endpoint and numeral-instance transports. The premise is explicit: each individual axiom of the source theory has a native proof of its fixed named translation. It does not assume translation of all source theorems. The concrete Gamma/PA axiom-identification comparison is still required for 7.1. |
+| Numeral proof transport | `ArithmeticNamedProofNumerals.translate_expandedNumeral`, `expandedNumeral_eq_standard_PA`, `expanded_instance_equivalence_PA`, `expanded_instance_PA`, `expanded_instance_refutation_PA` compare the two numeral conventions with actual PA proofs at every external standard n. Equal semantic values are not used as equality of syntax words. |
+
+The statement checks spell out the source/model order of quantification and
+the actual generated images. The final printed search statement and inverse
+coproduct comparison passed production and strict raw checks.
+Additional expanded projection and chosen-pullback comparison drafts are
+preserved in the ignored continuation area and are not counted as proofs.
+They do not change the literal sentence target of the constructed morphism.
+
 ## Verification and source identity
 
-The preceding complete run is preserved at
-`.codex-work/verify-20261105T125741Z-QgX9an`: 510 successful commands,
-1,274 retained and 7,652 v46 declarations, 259 production modules, 763 inputs,
-and snapshot SHA-256
-`d6d693bd3c75d1b542926990fb4984e547f59fd8bf6381593cbd46f314849a54`.
-Those tested proof inputs matched the preceding committed checkpoint before
-implementation, except for the subsequently extended combined import lists.
-That historical baseline was reused for unchanged proof sources; it is not a
-full verification of the later manuscript target. The original reviewed 516-input/263-command baseline
-and hash `9c92ef0cf86c226adbb3a8ddd03fa1d74eb056e245cb3f3adaf7ac2037f8a2d9`
-remain in the previous committed verification records.
+The preceding complete v47 run is preserved at
+`.codex-work/verify-20261106T000653Z-wVCQvv`: 783 successful commands,
+1,274 retained and 10,610 current declarations, 406 production modules,
+1,065 inputs and snapshot SHA-256
+`0b6c1df38427b837b9998f08335ea8e2bcf1ef863170bfea1959b09ba191b019`.
+Every tested input matched at the start of this batch. Earlier v46 baselines
+and the original 516-input reviewed snapshot remain in the committed history.
 
 The required current-manuscript v47 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261106T000653Z-wVCQvv`.
-All 783 commands passed: combined build, both statement audits,
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261106T052422Z-MLM1qM`.
+All 837 commands passed: combined build, both statement audits,
 every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 10,610 current-production declarations in
-406 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
+all 1,274 earlier declarations and covers 11,129 current-production declarations in
+433 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
 `Classical.choice`. All 16 dependencies were clean and pinned at start/end;
 356 imported-source pins and 25 current manuscript files and artifacts passed.
-All 1065 tested inputs match committed bytes at proof commit
-`670c6b04d5bd9f661c0019d7b4e8dcb782f6168d`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `0b6c1df38427b837b9998f08335ea8e2bcf1ef863170bfea1959b09ba191b019`.
+All 1119 tested inputs match committed bytes at proof commit
+`16ec62198d0aaa6506fc50d949f35af0fb26d94d`, whose ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `4902b616aff33dd2018f304ddfd722c20f451ce97b3ce3582dca8ad56bb77209`.
 The separate report commit and Downloads copies are checked by the existing
 committed-byte delivery procedure.
 
@@ -156,24 +194,24 @@ The completed uniform trace comparison remains separate from the completed
 exponential/parity object coding. Neither is used as a substitute for the
 arithmetic application below.
 
-Sections 7.1–7.3 still require the actual arithmetic Gamma theorem/refutation
-predicate identifications, a PA-total fixed-formula sentence map,
-the specified diagonal bounds for every M elementarily equivalent to N, the
-actual partial proof-search instance and the categorical comparison application.
-Native-to-actual proof charts and the particular older FFL/LK derivability
-comparison remain distinct proof obligations. The checked semantic translation
-does not supply derivability.
-The arithmetic source diagonal now uses the actual printed universal map.
-Its Turing property is proved through a PA-total source adapter and an actual
-factorization equation with the older typed Turing morphism. The two morphisms
-are not identified. The diagonal index and all-model partial-identity comparisons
-are proved; Γ inequalities remain separate.
+Lemma 7.1 still requires the concrete Gamma/PA axiom-identification
+comparison for the proved conditional translation and the two specified
+diagonal bounds for every M elementarily
+equivalent to N. The PA-total sentence map and actual Gamma theorem/refutation
+image comparisons are proved. The proof-search instance uses those constructed
+predicates; Theorem 7.3 still requires the categorical comparison application
+to the interpreted restriction idempotents and the proved soundness factor.
+Native finite-proof realization in the constructed derivation carrier is proved.
+A conditional older FFL/LK proof translation is proved, from individual
+source-axiom admissibility. Its concrete Gamma/PA axiom-identification
+comparison remains open; finite named proofs are not identified with older
+proofs by erasing binders.
 
-Our checked numeral convention uses zero followed by add(previous,one), so
-numeral1 is zero+one. Foundation's canonical numeral1 is the one symbol. Their
-semantic agreement is not literal constructor equality. A later proof transfer
-must use an explicitly translated zero/add-one chain or prove the required
-numeral/substitution/derivability comparison.
+The arithmetic source diagonal uses the printed universal morphism through
+the proved PA-total adapter. The source/index and all-model partial-identity
+comparisons remain proved; the Gamma inequalities require the remaining
+proof comparison. The canonical and zero/add-one numeral words are distinct;
+their PA equality and positive/refutation proof transports are now proved.
 
 External consistency of Gamma is not a PA proof of its consistency. Fixed
 standard parameter-free graph comparisons do not automatically cover arbitrary

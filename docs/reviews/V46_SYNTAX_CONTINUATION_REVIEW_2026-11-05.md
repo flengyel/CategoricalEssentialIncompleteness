@@ -1,6 +1,6 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: new source/check files after `fc47dd92e973`, integrated main `0187c4308320`, the manifest-selected current manuscript target, their required imports,
+Scope: the new arithmetic source/check files after verified main `eff88a8bdefbc`, the manifest-selected current manuscript target, their required imports,
 correspondence rows and the existing implementation/verification records.
 This follows the HostileRefereeGPT — Cat/Rec instructions and includes
 collaborating-agent source/type checks. It is not an independent whole-paper
@@ -24,20 +24,17 @@ The application dependencies below still prevent a whole-current-manuscript comp
 
 ## (B) Major weaknesses
 
-1. **The arithmetic application 7.1–7.3 is not complete.** Anchor:
-   `lem:arithmetic-diagonal-representation` through
-   `thm:arithmetic-internal-comparison`. Failure mode: **unproved**;
-   evidence: **structural_argument**. The fixed-formula
-   sentence map, actual Gamma theorem/refutation predicate identifications,
-   particular derivability comparison, specified diagonal bounds and actual
-   partial-search/categorical application still require proofs. The existing
-   generic partial lift and imported numerical arithmetic conclusion do not
-   establish that instance. External consistency is not a PA proof of
-   consistency; the elementary-equivalence and ultrapower model scopes must
-   be retained. The actual printed universal map and an older typed Turing
-   map are distinct choices: their diagonals require a proved source/index
-   comparison or an explicit total adapter, not an identification from
-   Turingness alone.
+1. **The diagonal bounds and categorical arithmetic application remain open.**
+   Anchors: `lem:arithmetic-diagonal-representation` and
+   `thm:arithmetic-internal-comparison`. The PA-total fixed-formula and exact
+   diagonal sentence maps, actual Gamma theorem/refutation image comparisons,
+   model-independent partial search and PA source inverse-image equalities
+   are proved. The printed primitive-recursive negation has its PA-total graph
+   and all-model evidence comparison. The remaining proof-system comparison
+   must supply the specified diagonal inequalities for every M equivalent
+   to N; Theorem 7.3 must then apply the categorical comparison theorem.
+   External consistency is not a PA proof of consistency. Code models N/M
+   remain distinct from the semantic structure K.
 
 2. **A semantic syntax comparison is not a proof-system comparison.** Anchor:
    the new `ArithmeticNamedTranslation` and `SyntacticNamedHilbert` endpoints.
@@ -45,10 +42,12 @@ The application dependencies below still prevent a whole-current-manuscript comp
    evidence: **absence_in_text**. The checked translation uses explicit
    variable contexts and fresh named binders and preserves semantics. The
    literal finite named seven-scheme calculus is separately defined and
-   checked. Neither statement identifies older FFL/LK derivations with these
-   actual generated proof codes. In particular our zero/add-one numeral1 and
+   checked. The continuation now proves the open structural/substitution comparison
+   and an actual ten-case LK2 proof translation conditional on native proofs
+   of each individual translated source axiom. That premise is explicit in
+   the raw statement check and does not assume translation of all theorems. In particular our zero/add-one numeral1 and
    Foundation's canonical one-symbol numeral1 are different syntax terms.
-   A proof transfer must use a translated chain or a proved comparison.
+   The PA equality and positive/refutation proof transports between the two numeral conventions are now proved. Every native finite proof is also realized in the actual constructed Gamma derivation carrier, including sentence theorem/refutation membership and individual PA numeral proofs. The conditional LK2 translation and this forward realization can be composed, but they do not identify the source-axiom premise with the concrete arithmetic Gamma/PA condition. That particular comparison and the diagonal bounds remain open.
 
 3. **Later applications remain separate.** Indexed families, numerical
    inference realization, representation-independent Miller computation and
@@ -69,10 +68,18 @@ existing generated-theory data. They do not supply an assumed evaluator,
 initiality or soundness factor. Targeted reduced-budget diagnostics and all
 failed snapshots/logs are preserved; no Lean limit or linter was disabled.
 
-**Only verified production layers count.** Ignored numeral, Gamma chart,
-derivability and arithmetic continuation drafts are not reported as proved.
+**Only verified production layers count.** The proved numeral and Gamma image components are distinguished from ignored derivability, expanded projection and optional chosen-chart drafts.
 The final verification record identifies the exact tested and committed
 source bytes and any new component subsequently completed.
+
+The new realization comparison is proved for arbitrary T extending PA,
+predicate codomain and T-supported, T-total graph, before specialization to
+the arithmetic formula. Explicitly typed predicate objects preserve the
+original carrier. Reduced diagnostic limits exposed elaboration problems;
+no production limit was raised. The literal Total sentence morphism has its
+actual all-PA-model graph and value comparison. Its additional expanded
+source-projection drafts remain preserved and are not used as a substitute
+for a proved equation.
 
 ## (D) Cross-section consistency
 
@@ -108,9 +115,9 @@ source bytes and any new component subsequently completed.
 
 ## (E) Verification and disposition
 
-Full verification exited 0 in `.codex-work/verify-20261106T000653Z-wVCQvv`; all 783 commands passed.
+Full verification exited 0 in `.codex-work/verify-20261106T052422Z-MLM1qM`; all 837 commands passed.
 The permitted axiom union and clean pinned dependencies were checked. All
-1065 tested input hashes match proof commit `670c6b04d5bd9f661c0019d7b4e8dcb782f6168d`, whose ordinary
+1119 tested input hashes match proof commit `16ec62198d0aaa6506fc50d949f35af0fb26d94d`, whose ordinary
 main push and remote ref were confirmed. The delivery receipt records the
 separate report commit and six copied-byte hashes.
 
