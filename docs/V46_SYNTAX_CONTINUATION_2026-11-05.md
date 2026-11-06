@@ -1,156 +1,187 @@
-# Syntax and derivation continuation — 2026-11-05 (UTC)
+# Syntax, derivations and soundness for the current manuscript
 
-Proposition 5.5's parameter-stable syntax initiality and Lemma 5.8's
-arbitrary-rule derivation initiality remain proved in the predicate category
-and actual total restriction splitting. The present batch continues their
-logical realization: numerical substitution and free variables, the actual
-categorical occurrence fold and sentence predicate, standard named-code
-comparisons, generated-theory assembly, standard derivation induction and
-initial soundness results. The remaining categorical substitution/admissibility
-comparison, complete coded soundness and arithmetic application are explicit
-open obligations.
+Continuation begun 5 November 2026.
 
-This is the existing implementation record, continued from proof commit
-`54a5905ac392469b5e78ec1232a64952d85df942` and report commit
-`4cde20bb86edd9878336eb74a09f1cc6dc61e8af`. Earlier committed records, ignored
-continuation drafts and failed-elaboration logs are preserved. The manuscript
-entry remains `manuscript/latex/main.tex`, version 46; no manuscript prose,
-theorem statement, toolchain, dependency revision or imported-source pin changed.
+The parameter-stable initiality results 5.5 and 5.8 remain proved. This
+continuation completes the concrete named-variable substitution comparison
+5.7, the categorical generated-theory assembly 5.9, semantic substitution
+6.5, standard-code soundness 6.6 and its concrete arithmetic-ultrapower
+transport 6.9. The uniform computation/production comparison 5.1 is also complete.
+The categorical arithmetic application is tracked separately below; this is
+not a claim that the whole current manuscript is formalized.
+
+The active target is selected by `MANUSCRIPT_CURRENT.json`: currently version
+47 at `manuscript/latex/main.tex`, with `FORMALIZATION_STATUS_V47.md`,
+`CurrentStatementAudit` and `CurrentAxiomAudit`. `V46` module/namespace names and
+this existing report filename are retained as implementation names. Future
+manuscript revisions continue to follow the manifest.
+
+The ongoing proofs started from verified main `fc47dd92e97373244f72bfe191456863e6de8e88`
+and proof commit `5a361496f90f5bc20907182d35a883097959f63c`.
+Origin main was integrated by fast-forward to
+`0187c430832069adbd439e597225654ef10a7595`, including manuscript integration
+`d3e741dc982a71f7f4678376eeffe945eb183d11`. All 245 then-modified/untracked
+files were preserved and checked byte-for-byte; ignored continuation drafts
+and failed logs remain preserved. Codex made no manuscript editorial changes.
+The toolchain, dependency revisions and imported-source pins remain unchanged.
 
 ## Completed mathematics
 
-Declaration prefixes below abbreviate `CategoricalEssentialIncompleteness.V46`.
-The rows distinguish completed results from proved dependencies of an unfinished
-numbered result.
+Prefixes below abbreviate `CategoricalEssentialIncompleteness.V46`.
+The manifest-selected current correspondence table gives the full
+statements, effective hypotheses and separate application obligations.
 
-| Result or dependency | Proved declarations and exact scope |
+| Result | Actual proved declarations and scope |
 | --- | --- |
-| Proposition 5.5, retained complete result | `SyntacticSyntax.foldHom`, `foldHom_unique`, `withParametersInitial`, `postfixInitial`, `categoricalSyntax`, `totalCategoricalSyntax`, `plainCategoricalSyntax`, `plainTotalCategoricalSyntax`: actual constructor commutation and uniqueness among all algebra morphisms, in the base and every parameter slice. The plain parser/stored-word comparison preserves the same numerical word and constructors; `NatVectors.run_natPrimrec` supplies the actual standard parser certificate. |
-| Lemma 5.8, retained complete result | `SyntacticDerivation.derivationCarrier`, `derivationConclusion`, `derivationAlgebra`, `derivationInitial`, `derivationConstructor_tree`, the fold conclusion/constructor/uniqueness laws and all `totalDerivation*` counterparts: the initial algebra for arbitrary finite rule data, original premise pullbacks, arbitrary coefficient predicates and nullary rules. |
-| Numerical part of 5.7 | `ConcreteNamedSubstitution.freeVariables_carrier`, the guarded term/formula constructor equations and `freeVariables_natPrimrec`; `substitutionPayloadGraph_eval`, `substitutionResultGraph_eval`, `codedSubstitutionPayload_natPrimrec`, `codedSubstitutionResult_natPrimrec`, `substitutionPayload_carrier`, `substitutionResult_term`, `substitutionResult_formula`, `substitutionFreeFor_iff_success`, `substitutionPayload_term_constructor`, `substitutionPayload_formula_constructor`: actual total numerical traversals, primitive-recursive certificates and typed constructor laws in every PA model. `substitution_total_PA`, `substitution_preservation_PA`, `freeVariables_preservation_PA` and `freeFor_success_PA` export explicit PA proofs. |
-| Actual list and FV fold comparisons | `ConcreteNamedComparison.appendParameter_eq`, `membershipArrow_eq`, `deletionArrow_eq`, `occurrenceHom`, `plainOccurrenceHom`, `plain_termOccurrences_eq`, `plain_formulaOccurrences_eq` and their all-model values: the numerical operations agree with the specified categorical folds. The occurrence comparison is a proved algebra morphism and uses initiality; evaluator uniqueness alone is not substituted for that argument. The literal occurrence-graph equality is also proved in PA. |
-| Intended sentence codes | `ConcreteNamedComparison.literalSentenceCarrier`, `sentenceCarrier_literal`, `sentenceCarrier_literal_theory`: the formula-coordinate image of the actual sentence inclusion is T-provably exactly plain formula acceptance together with numerical FV=0. The chosen pullback object's own code is not assumed to be the formula code. |
-| Standard named syntax and operations | `NamedPostfixEncoding.termEquiv`, `formulaEquiv`; `NamedPostfixPlainComparison.plainTermModelEquiv`, `plainFormulaModelEquiv`: bijections with the actual standard accepted/plain categorical carriers. `freeVariables_termCode`, `freeVariables_formulaCode`, `substitutionResult_termCode`, `substitutionResult_formulaCode`, `substitutionFreeFor_formulaCode`: the actual numerical algorithms compute literal named substitution and the independently defined recursive FreeFor condition. Names, labels, arity tags, repetitions in occurrence lists and ordered children are retained. |
-| Actual constructor values and Boolean reflection | `NamedPlainConstructorModels.plainTerm_value`, `plainFormula_value`; `NamedPlainOperationsModels.variable_value`, `equality_value`, `negation_value`, `implication_value`, `quantifier_value`: values of the actual plain categorical constructors at arbitrary T-model inputs. `ConcreteNamedComparison.membershipArrow_point_iff` uses the actual Boolean isomorphism to reflect the numerical membership flag. No inverse for a general polynomial encoder or arbitrary chosen coproduct-code identity is assumed. |
-| Structural assembly of 5.9 | `SyntacticGeneratedTheory.proofInitial`, `generated_theory`, `sentence_theory_pullback`, `sentence_axioms_factor`, `sentence_theory_closed`, `sentence_theory_least`, `sentence_theory_idempotent`, `sentenceConclusion_range`, `literalSentenceRestrictionSplitting`, and the actual TotalSplit counterparts: constructed derivations supply formula-image closure/leastness, the sentence pullback and generated sentence theory, and its representing program-range/source idempotent. Full numerical realization still depends on the remaining 5.7 comparisons. |
-| Standard derivation induction | `SyntacticDerivation.StandardInduction.typed_children_smaller`, `derivation_constructor_cases`, `nat_rule_induction`: induction on the actual standard derivation carrier, with each original typed child separately bounded by the parent node count. Finite coproduct preservation and the constructed initial algebra's structure isomorphism give constructor cases; preservation of initiality in Set is not assumed. |
-| Proved coded semantic dependencies of 6.6 | `NamedPlainSemantics.decodeTerm`, `decodeFormula`, constructor decoding and semantic laws, `valid_hilbertOne`, `valid_hilbertTwo`, `valid_hilbertThree`, `valid_hilbertReflexivity`, `valid_generalization`, `valid_modusPonens`, `valid_negation_disjoint`: four actual standard coded schemes, both rules and formula-level validity-negation disjointness. The semantic structure K is separate from the arithmetic code model. Distribution, instantiation, equality substitution and the actual derivation validity factorization remain open. |
-| Completed trace predicate fragment of 5.1 | `UniformTrace.trace_primrec`, `traceCheck_natPrimrec`, `PrimitiveCoding.PrimitiveTotal.traceProgram`, `primitive_trace_graph_PA`, `traceProgram_comparison_PA`: the actual trace predicate is primitive recursive, with its PA defining-program graph comparison. `ModelHistory.history_nth_stable`, `lookup_history_eq`, `prefix_lookup_iff` prove the actual internal history/lookup comparison for arbitrary model stages, indices and inputs. Uniform composition/specialization and PA-total parameter-index programs remain open. |
-| Transport dependencies | `SyntaxOperationsTransport.mapped_fold`, `mapped_fold_comparison`, `plain_mapped_fold` and coefficient-expression equations: genuine fold equalities through the actual polynomial/algebra comparisons and counit components. They are a transport resource, not a claim that all TotalSplit substitution, list, Boolean and option-operation comparisons are finished. |
+| 5.5, retained | `SyntacticSyntax.foldHom`, `foldHom_unique`, `withParametersInitial`, `postfixInitial`, `categoricalSyntax`, `plainCategoricalSyntax`, `totalCategoricalSyntax`, `plainTotalCategoricalSyntax`: constructor compatibility, uniqueness among all algebra morphisms and IsInitial in the base and every parameter slice. The same-word plain/stored parser comparison preserves constructors; the actual standard parser has its native primitive-recursive certificate. |
+| 5.8, retained | `SyntacticDerivation.derivationAlgebra`, `derivationInitial`, `derivationFold_conclusion`, `derivationFold_constructor`, `derivationFold_unique` and their actual TotalSplit counterparts: arbitrary finite typed rule data, original premise pullbacks, nullary rules and the full slice universal property. |
+| 5.7, canonical and plain comparison | `ConcreteNamedComparison.computedTerm_commutes`, `computedFormula_commutes`, `computedSubstitutionHom`, `computedStatePair_eq_fold` construct an actual substitution algebra morphism and use stable initiality. `plain_termSubstitution_value`, `plain_formulaSubstitutionOption_value`, `plain_formulaSubstitution_result`, `plain_admissible_model_iff`, `plainFreeForClassifier_isPullback`, `plainFreeForDomain_theory` identify the actual operations, success pullback and independent free-for predicate, including literal T-provable domain equivalence. |
+| 5.7, genuine operation transport | `SyntaxOperationsTransport.substitutionAlgebraIso`, `substitutionFold_comparison`, `map_termSubstitution`, `map_formulaSubstitutionOption`, `mappedAdmissibleSubstitutionIso_inclusion`, `mappedAdmissibleSubstitutionIso_result` derive the diagrams through actual constructor, list, Boolean and option comparisons. `ConcreteSyntaxOperationsTransport.termSubstitution_comparison`, `formulaSubstitutionOption_comparison`, `admissibleIso_inclusion`, `admissibleIso_result` specialize them to the actual predicate/TotalSplit equivalence and mapped list record. Four raw concrete diagram checks are compiled. |
+| 5.9 | `SyntacticGeneratedTheory` and `SyntacticGeneratedTheoryTotal` supply constructed initial proof algebras, formula-image closure and leastness, the sentence pullback and least sentence theory, and its selected-program/source restriction idempotent. `TotalSentenceImages` gives the actual inverse-chart literal Sent-and-program-range splitting. The completed 5.7 comparisons discharge the remaining operation-realization dependency. |
+| 6.5 | `NamedPlainSemantics.evaluate_termSubstitution`, `holds_formulaSubstitution`: semantic substitution for the actual term morphism and the formula morphism on the constructed admissibility pullback, in arbitrary semantic K. No additional free-for or successful-output premise is supplied. |
+| 6.6 | `NamedPlainSemantics.valid_logicalAxioms`, `valid_conclusion`, `valid_sentenceConclusion`, `soundnessFactor_inclusion`, `exists_unique_soundnessFactor`, `sentenceConclusion_range_consistent`: all seven actual schemes and both rules, induction on constructed standard derivations, the unique sentence-validity factor and disjointness with the actual negation preimage. The sole nonlogical hypothesis is validity of the actual sentence axioms in K. |
+| Actual Γ filter | `NamedGammaSoundness.axioms_valid`, `exists_unique_factor` derive the soundness hypothesis and unique standard sentence-validity factor from satisfaction of enumerated literal named sentences in K, using the proved axiom formula-coordinate chart. No equality of chosen sentence codes with formula words is assumed. |
+| Exact soundness data | `FirstOrderModelSoundness.axiomsProperty_iff`, `conclusionProperty_iff`, `sentenceProperty_iff` expose the complete raw model-graph conditions. `proofAlgebra_plain`, `sentenceProofObject_plain`, `conclusion_plain`, `sentenceConclusion_plain` prove literal equality to the existing generated-theory algebra, carrier and maps, including constructors. These wrappers do not assume initiality, evaluation or a soundness factor. |
+| 6.9 | `NamedPlainSemantics.canonicalCodeComparison`, `canonicalSoundnessFactor_inclusion`, `canonicalValidity_disjoint`, `canonical_ultrapower_soundness`, `canonical_ultrapower_conclusion_consistent`: the actual proved standard factor is transported through realization and the constructed canonical arithmetic-ultrapower comparison. The comparison and factor are constructed, not application assumptions. |
+| Finite derivation comparison | `SyntacticFiniteDerivations` realizes finite ordered original-rule trees in the actual proof carrier in every T-model. `SyntacticFiniteDerivationsStandard` proves the reverse conclusion comparison for N, with N models T explicit. `SyntacticNamedHilbert.Derives` is the separate literal named seven-scheme, axiom, generalization and ordered modus-ponens calculus; independent FreeFor and actual partial-substitution equations are retained. `SyntacticFiniteNamedDerivations.logical_scheme`, `nonlogical_axiom`, `generalization`, `modus_ponens`, `realizes` additionally realize the seven actual parameter families and both ordered rules in the constructed generated-proof object. Native literal-coordinate and older FFL/LK proof comparisons remain separate. |
+| Arithmetic semantic comparison | `NamedArithmeticSignature` fixes the checked arithmetic coefficients. `ArithmeticNamedTranslation.translateTerm`, `translateTerm_freeVariables`, `evaluate_translateTerm`, `translateFormula`, `holds_translateFormula` preserve the explicit variable context and semantic interpretation in arbitrary arithmetic K. Target binders are named and fresh. This is semantic compatibility, not equality of syntax presentations or a derivability comparison. |
+| Literal proof support | `NamedHilbertPropositional.deduction`, `doubleNegElim`, `doubleNegIntro`, `conjunction_intro`, `disjunction_elim`, `systemClassical`, `system_provable_iff`: actual literal-calculus proofs and a constructed classical propositional entailment instance, for arbitrary coefficients and Γ. Local hypotheses have propositional inference only. This supplies logical support, not a first-order proof-presentation comparison. |
+| Actual Γ theorem image | `SyntacticGeneratedAxioms.theoremCarrier_model`, `literalTheoremCarrier_model`, `axiomProof_conclusion`, `axiomProof_value`, `theoremProgram_theory`: actual constructed Γ proof/conclusion/image and selected literal source-program predicate, in every T-model and as a literal T-provable sentence. The external native/FFL derivability comparison remains separate. |
+| Numerical source object | `ArithmeticOmegaComparison.variables_idempotent`, `omegaIso` prove that the literal all-variable realization is the actual identity splitting of ω, for every T extending PA, by universal T-model graph equality. |
+| Native point adapters | `SyntacticNamedHilbertCoordinates` proves actual named constructor point equations, independent named free-for to the genuine admissibility pullback, and the actual categorical output of successful native substitution. Its standard code interpretation is explicitly PA/N. The full native finite-proof realization is still a draft. |
+| Model computation dependencies | `NamedArithmeticStandardCodes` proves positive standard-code transfer. `NamedArithmeticModelCoding`, `ModelSubstitution`, `ModelOccurrences` prove finite constructor charts and actual reconstruction/FV equations with arbitrary internal child values and typed closed replacements in every PA model. The equal binder returns the original whole quantified word. The remaining combined FV-bound/sentence-range/Pred Θ draft timed out at its 40-second diagnostic cap and is unclaimed. |
+| Actual sentence chart | `SyntacticSentenceLiteralChart.toSentenceIso`, `toSentence_over`, `toSentence_value`: the literal sentence predicate is isomorphic to the actual chosen sentence object, with its inclusion triangle and formula-coordinate value proved for every T-model, arbitrary T extending PA and arbitrary coefficients. |
+| Arithmetic source diagonal component | `ArithmeticDiagonalCodes.diagonalIndex_represents`, `sourceTau_isTuring`, `source_pair_inseparable`, `model_a0`, `model_a1`, `printed_tau_is_universal`, `printed_parity_is_identity`: actual printed-u source morphisms, a PA-total adapter with proved factorization, exact diagonal source equality, PA disjointness and all-PA-model restriction-domain comparisons. This proves a component of 7.1, not its Γ inequalities. |
+| Arithmetic numeral dependency | `NamedArithmeticNumerals` proves the actual internal numeral graph, zero/successor equations and native primitive-recursive certificate. `NamedArithmeticNumeralCarriers.numeralCode_carrier_closed`, `numeralCode_closed` prove accepted term membership and numerical FV=0 for every internal input in every PA model, including nonstandard inputs. `NamedArithmeticNumerals.numeralMorphism` is the actual PA-total graph into closed terms; `numeralCode_standard` proves its exact standard external word. `translateFormula_freeVariables` and its unary specialization prove the external formula FV bound. `NamedArithmeticClosedSubstitution.substitutionFreeFor_closed`, `substitutionResult_closed`, `closedReplacement_PA` prove independent free-for and typed option success for every internal typed formula and typed FV-zero replacement, for arbitrary coefficients in every PA model. The fixed-formula sentence-range obligation remains separate until checked. |
 
-The syntax and derivation universal properties assume only T extending PA.
-Coefficient objects, arity bounds, parameters, target families and actual
-T-supported total algebra operations are arbitrary. Those operations need
-not be primitive recursive or PA-provably total. Consistency, c.e., soundness
-and standardness of T are not hypotheses of initiality.
+Initiality assumes only T extending PA, with arbitrary coefficient predicates,
+arity bounds, parameters, target families and actual algebra operations proved
+supported and total in T. Target operations need not be primitive recursive
+or PA-provably total. No consistency, c.e., soundness or standardness hypothesis
+on T is added. Carrier-membership, evaluation and conclusion witnesses remain
+existential witnesses rather than extra syntax labels.
 
-The manuscript polynomial is unchanged:
-`K(X,Y) = (V + sum Sigma_k × X^k,
-X^2 + sum Pi_k × X^k + Y + Y^2 + V × Y)`.
-Carrier-membership, computation and conclusion witnesses are existential,
-not extra syntax labels. Derivation constructors use the original
-`R_n ×_(F^n) Z^n`; each child matches its own prescribed premise, and the
-parent conclusion comes from `q_n`. Nullary rules need no global formula point.
+The manuscript polynomial and named variables are unchanged. Derivation
+constructors use the original `R_n ×_(F^n) Z^n`; each child matches its own
+prescribed premise and the parent conclusion is induced by `q_n`. Nullary
+rules require no global point of the formula object.
 
-The numerical algorithms have separate PA-level proofs and standard
-primitive-recursive certificates. Their equal-binder substitution branch
-retains the original body even when recursive substitution fails. Its
-standard comparison proves this behavior without changing the algorithm or
-defining free-for to mean successful substitution.
+The equal-binder substitution branch retains the original body even when
+recursive substitution fails. Free-for is the independently defined recursion,
+not a definition in terms of result tags. The actual formula-coordinate
+sentence image is T-provably plain Fm with FV=0. A chosen pullback object's raw
+code is not identified with the formula code, and arbitrary inverse-equivalence
+charts are not asserted to be primitive recursive.
 
-The standard-tree comparisons concern N. They do not identify nonstandard
-words with external finite trees or assert Set initiality for all functions
-in nonstandard models. The general standard-induction helper explicitly
-assumes N models T; the soundness application uses T=PA. K interprets decoded
-formulas and may have any universe; validity-negation disjointness requires
-nonempty K.
+Standard decoding and finite-tree reverse comparisons concern N. They do not
+identify nonstandard words with external finite trees or assume preservation
+of initiality by a Set model functor. Semantic K is distinct from code models
+N and M; validity-negation disjointness requires nonempty K. The 6.9 instance
+uses the actual realization of the constructed predicate proof/conclusion data
+and the canonical arithmetic-ultrapower interpretation.
+
+## Uniform computation comparison
+
+Exponential/parity object coding is complete and is separate from the uniform
+trace bridge. The actual trace predicate/output reader, native certificates,
+PA functionality/universal equation, and internal history-prefix/lookup laws
+are proved. `UniformTrace.specialization_PA`, `composition_PA` and
+`builders_totality_PA` prove the uniform graph equations and uniquely total
+index-builder graphs for arbitrary internal indices and parameters in every
+PA model. `specialize_primrec`, `compose_primrec`, `specialize_natPrimrec` and
+`compose_natPrimrec` certify the actual standard functions.
+
+`specializerSectionIndex`, `specializerSection_eval` and the section-program PA
+graph/totality sentences supply the actual fixed-e program k_e on all internal
+inputs. `compose_production_PA` proves that the actual new and canonical production
+composition indices have equal graphs in every PA model on all internal
+inputs, for fixed external indices. `arithmetized_evaluation` assembles the
+closed concrete principal result. All section/comparison/principal source and
+raw statement-check files passed production builds and strict replays; no
+trace obligation remains in this assigned Lemma 5.1 scope. No arbitrary-internal-index stage-persistence assumption is used.
 
 ## Verification and source identity
 
-The preceding complete verification is preserved at
-`.codex-work/verify-20261105T082552Z-2Hh2l8`: 386 successful commands,
-1,274 retained and 6,143 v46 declarations, 197 production modules and 639 inputs.
-Its snapshot hash is
-`f27917912324e1441cf25533a3307d39a3d16a29eb66ccd6910b707b412487a4`.
-All 639 inputs match report commit `4cde20bb86ed`, so that baseline was reused.
-The original reviewed 516-input baseline and its
-`9c92ef0cf86c226adbb3a8ddd03fa1d74eb056e245cb3f3adaf7ac2037f8a2d9`
-hash remain in the previous committed verification record.
+The preceding complete run is preserved at
+`.codex-work/verify-20261105T125741Z-QgX9an`: 510 successful commands,
+1,274 retained and 7,652 v46 declarations, 259 production modules, 763 inputs,
+and snapshot SHA-256
+`d6d693bd3c75d1b542926990fb4984e547f59fd8bf6381593cbd46f314849a54`.
+Those tested proof inputs matched the preceding committed checkpoint before
+implementation, except for the subsequently extended combined import lists.
+That historical baseline was reused for unchanged proof sources; it is not a
+full verification of the later manuscript target. The original reviewed 516-input/263-command baseline
+and hash `9c92ef0cf86c226adbb3a8ddd03fa1d74eb056e245cb3f3adaf7ac2037f8a2d9`
+remain in the previous committed verification records.
 
-The current preflight has 763 inputs: 124 new Lean source/check files and two
-changed previous inputs, the combined entry and statement-audit import lists.
-Every new file is directly imported. All previous proof sources, 356 imported
-pins, the pinned toolchain, all 16 dependency revisions and manuscript v46
-remain unchanged. All dependency worktrees were clean and pinned at preflight;
-the existing verifier also checks them before building and after the axiom audit.
-
-The required `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261105T125741Z-QgX9an`.
-All 510 commands passed: combined build, both statement audits,
+The required current-manuscript v47 `bash scripts/verify-wsl.sh` passed with exit **0** under the
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261106T000653Z-wVCQvv`.
+All 783 commands passed: combined build, both statement audits,
 every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 7,652 v46 declarations in
-259 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
+all 1,274 earlier declarations and covers 10,610 current-production declarations in
+406 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
 `Classical.choice`. All 16 dependencies were clean and pinned at start/end;
-356 imported-source pins and 24 v46 manuscript files passed.
-All 763 tested inputs match committed bytes at proof commit
-`5a361496f90f5bc20907182d35a883097959f63c`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256:
-`d6d693bd3c75d1b542926990fb4984e547f59fd8bf6381593cbd46f314849a54`. The separate report commit and Downloads
-copies are checked by the existing committed-byte delivery procedure.
-
-The first integration attempt,
-`.codex-work/verify-20261105T125509Z-nDj91A`, found that 19 new entry imports
-followed the existing module documentation command. Moving them into the
-initial import block fixed that packaging error; no proof body, theorem
-statement or Lean limit changed. The failed log and snapshot are preserved.
+356 imported-source pins and 25 current manuscript files and artifacts passed.
+All 1065 tested inputs match committed bytes at proof commit
+`670c6b04d5bd9f661c0019d7b4e8dcb782f6168d`, whose ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `0b6c1df38427b837b9998f08335ea8e2bcf1ef863170bfea1959b09ba191b019`.
+The separate report commit and Downloads copies are checked by the existing
+committed-byte delivery procedure.
 
 Lean remains `v4.35.0-rc2`, compiler
 `11acb17ec6b07a8f9e9173e6845197929540936b`; Mathlib remains
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`; Foundation remains
 `01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d`.
-The [verification record](V46_SYNTAX_CONTINUATION_VERIFICATION_2026-11-05.json),
-[source manifest](reviews/V46_SYNTAX_CONTINUATION_SOURCE_SHA256_2026-11-05.txt),
-[scoped review](reviews/V46_SYNTAX_CONTINUATION_REVIEW_2026-11-05.md) and
-[writing review](reviews/V46_SYNTAX_CONTINUATION_WRITING_2026-11-05.md) use the
-existing report/delivery procedure.
+The existing verifier checks all 16 dependency worktrees before and after the
+build, preserving and reporting changes. The current manuscript-only gate
+passed after main integration. The preceding v46 full replay was deliberately
+interrupted with observed exit 130 to integrate the current target; its partial
+logs are retained and no full pass is inferred. The manuscript chat supplied
+no full v47 Lean pass either.
+The existing report, verification JSON, source manifest and Downloads delivery
+procedure are reused.
 
-The independent review of `3f53b33` inspected source and recorded evidence;
-it did not independently rerun Lean or certify completion of v46. It found
-no confirmed mathematical drift in that snapshot. New source/type reviews
-and kernel checks here are author-side/collaborating-agent work.
+The independent review of `3f53b33` inspected source and recorded verification
+evidence. It did not independently rerun Lean or establish completion of v46,
+and found no confirmed mathematical drift in that snapshot. It correctly
+distinguished evaluator uniqueness from algebra initiality, arbitrary-rule
+initiality from a particular calculus, object coding from uniform trace
+comparison, and arithmetic incompleteness from its required categorical
+application. New source/type reviews and kernel runs here are author-side or
+collaborating-agent work, not an independent whole-paper certification.
 
 ## Remaining mathematical dependencies
 
-Lemma 5.1 still requires uniform composition and specialization equations for
-arbitrary internal indices/parameters, PA-provably total parameter-index
-programs and their production graph/index comparison. The trace predicate's
-primitive-recursive certificate and PA defining-graph comparison are now
-proved. Completed exponential/parity object coding is a separate result.
+The completed uniform trace comparison remains separate from the completed
+exponential/parity object coding. Neither is used as a substitute for the
+arithmetic application below.
 
-Proposition 5.7 still requires the actual categorical substitution algebra
-morphism and stable-initiality comparison, its success pullback/free-for
-identification and genuine operation transport through the chosen TotalSplit
-comparisons. Numerical algorithms, standard named comparisons, categorical
-FV and the literal predicate-category sentence identification are proved.
-Theorem 5.9's structural construction is proved; its complete numerical
-realization retains those remaining operation comparisons.
+Sections 7.1–7.3 still require the actual arithmetic Gamma theorem/refutation
+predicate identifications, a PA-total fixed-formula sentence map,
+the specified diagonal bounds for every M elementarily equivalent to N, the
+actual partial proof-search instance and the categorical comparison application.
+Native-to-actual proof charts and the particular older FFL/LK derivability
+comparison remain distinct proof obligations. The checked semantic translation
+does not supply derivability.
+The arithmetic source diagonal now uses the actual printed universal map.
+Its Turing property is proved through a PA-total source adapter and an actual
+factorization equation with the older typed Turing morphism. The two morphisms
+are not identified. The diagonal index and all-model partial-identity comparisons
+are proved; Γ inequalities remain separate.
 
-Lemma 6.5 requires applying the proved numerical/named substitution comparison
-to the actual categorical admissibility domain. Proposition 6.6 requires the
-remaining three actual scheme validities, soundness of constructed coded
-derivations, the unique sentence validity factorization and disjointness with the actual sentence-negation preimage.
-Only that proved factorization can instantiate the arithmetic-ultrapower
-transport in 6.9.
+Our checked numeral convention uses zero followed by add(previous,one), so
+numeral1 is zero+one. Foundation's canonical numeral1 is the one symbol. Their
+semantic agreement is not literal constructor equality. A later proof transfer
+must use an explicitly translated zero/add-one chain or prove the required
+numeral/substitution/derivability comparison.
 
-Sections 7.1–7.3 still require the actual Gamma theorem/refutation predicates,
-diagonal bounds, partial proof-search lift and categorical comparison
-application. Importing an arithmetic incompleteness theorem does not replace
-that application. External consistency of Gamma is not a PA proof of its
-consistency. Retain the required model scope, including M elementarily
-equivalent to N where specified, arbitrary nonstandard inputs and model
-parameters. The proof-search lift remains partial.
+External consistency of Gamma is not a PA proof of its consistency. Fixed
+standard parameter-free graph comparisons do not automatically cover arbitrary
+nonstandard indices or model parameters. The proof-search lift remains partial;
+a complementary total switch or an imported arithmetic incompleteness theorem
+does not replace the categorical application.
 
 Indexed families, numerical inference realization, Miller representation
-independence and cosheaf derivation initiality remain later obligations.
-Rows 9.1 and B.10 retain the corrected wording about the already-proved
-numerical tuple comparison in 7.7. Manuscript prose revisions remain deferred.
+independence and cosheaf derivation initiality remain later obligations. Rows
+9.1 and B.10 retain the corrected status of the completed numerical tuple
+comparison in 7.7. Manuscript editing belongs to the manuscript chat; this proof batch preserves its integrated target.
