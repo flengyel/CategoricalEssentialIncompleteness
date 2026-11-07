@@ -11,7 +11,7 @@ The categorical arithmetic application is tracked separately below; this is
 not a claim that the whole current manuscript is formalized.
 
 The active target is selected by `MANUSCRIPT_CURRENT.json`: currently version
-47 at `manuscript/latex/main.tex`, with `FORMALIZATION_STATUS_V47.md`,
+48 at `manuscript/latex/main.tex`, with `FORMALIZATION_STATUS_V48.md`,
 `CurrentStatementAudit` and `CurrentAxiomAudit`. `V46` module/namespace names and
 this existing report filename are retained as implementation names. Future
 manuscript revisions continue to follow the manifest.
@@ -53,6 +53,42 @@ PA-provable numeral-fiber comparison, the chosen PA-axiom enumeration and
 one total sentence morphism with the stated standard-fiber independence.
 Targeted builds, strict statement checks and the integrated full
 verification passed, as recorded below.
+
+The numerical continuation integrates main `2e7152b`, the v48 abstract
+revision, from the verified v47 checkpoint `c51c34d`. All earlier Lean
+inputs match the 965-command run at proof commit `ff0363b`; the active
+manuscript metadata, abstract and artifacts have advanced to v48. The
+v48 manuscript-only gate passes. No mathematical manuscript source has
+changed in this Lean batch.
+
+The constructed numerical syntax is initial in every parameter slice,
+and the constructed successful finite-rule word algebra is initial for
+every finite rule presentation, including nullary rules and empty
+coefficients. The tuple-coordinate isomorphisms, generated-theory images,
+literal syntax algebra comparisons and arithmetic graph transport have
+passed focused production builds and strict statement checks. Native term
+and formula decoding, the literal full Option-valued substitution and
+independent free-for values, the sentence-membership comparison, and the
+literal list support/nil/cons values are also checked. The actual unary
+word-carrier syntax algebra and list algebra have constructor-preserving
+isomorphisms and proved initiality in every required parameter slice.
+The exact polynomial
+input-code comparison and the original-rule validator comparison are proved;
+the latter covers both success and failure for arbitrary finite PA rule
+signatures. Formula-coordinate changes preserve the original proof word in
+both directions. Arbitrary coefficient-rule isomorphisms have inverse
+computable relabelling folds, both constructor/conclusion equations,
+ordered-child and label equations, and uniqueness among all algebra
+morphisms. These are supplied by the constructed inference initial algebras.
+The actual arithmetic syntax now has the proved negation diagrams and a
+numeral-substitution sentence morphism with the exact native zero/add-one
+output and canonical standard PA value. These are
+`NumericalArithmetic.SentenceMorphisms.negation_square`,
+`standard_literal_result` and `theta_standard_interpretation`. The full
+PA-to-numerical derivation-algebra transfer, concrete arithmetic rule-label
+and proof-code comparisons, and fixed Prov_T image are still being integrated. Proposition 7.8 remains partial. These focused checks do not supply a new
+full v48 verification result or a new committed proof checkpoint; the
+completed full results below remain historical evidence for v47.
 
 ## Completed mathematics
 
