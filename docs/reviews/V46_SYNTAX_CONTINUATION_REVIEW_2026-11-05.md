@@ -1,19 +1,33 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the indexed arithmetic source/check files after verified main/report
-`1db7a66` and proof `e08d21c`, the manifest-selected v47 target, their required
-imports, correspondence rows and existing implementation/verification records.
-The earlier 7.1–7.4 review and 905-command verification remain historical
-baseline evidence.
-This follows the HostileRefereeGPT — Cat/Rec instructions and includes
-collaborating-agent source/type checks. It is not an independent whole-paper
-review or an independent kernel certification.
+Scope: the numerical source/check batch after main `2e7152b`, with the
+manifest-selected v48 target, its imports, correspondence and verification
+records. The 7.1–7.7 proofs and earlier v47 verification remain preserved.
+Codex made no manuscript changes. The independent v48 review inspected
+`c51c34d` and recorded evidence; it did not independently rerun Lean.
+This author-side record covers the changed endpoints and does not certify
+whole-manuscript completion or an independent kernel run.
 
-The independent review of `3f53b33` inspected source and recorded verification
-evidence; it did not independently rerun Lean or establish v46 completion.
-It found no confirmed mathematical drift in that snapshot. Its findings have
-been retained as distinctions to prove, rather than treated as a completion
-certificate. The current v47 manuscript was integrated from the manuscript chat; Codex made no editorial source changes.
+## Current numerical batch and remaining blocker
+
+The constructed numerical term/formula and list algebras are identified
+with the actual unary named-word carriers by constructor-preserving
+algebra isomorphisms; initiality includes every parameter slice. Arbitrary
+finite rule data have an initial inference algebra with each child's own
+prescribed conclusion, including nullary rules and empty coefficients.
+Native decoding, full Option-valued substitution, independent admissibility,
+free-variable lists and the sentence pullback have expanded checked types.
+The arithmetic negation and numeral-substitution morphisms now use that
+constructed syntax, with exact zero/add-one words and the canonical PA
+standard interpretation. Formula-coordinate changes conserve original
+proof words; rule-coefficient isomorphisms induce inverse initial folds
+with constructor, conclusion, label and ordered-child equations.
+
+Proposition 7.8 is still partial. The actual arithmetic rho_n, the full
+PA-to-numerical derivation-algebra comparison and rho_T, and the fixed
+Prov_Gamma image are open. The intermediate PA proof-image comparison
+is not treated as the final numerical image theorem. No evaluator,
+carrier bijection or assumed comparison discharges these dependencies.
 
 ## (A) Kill-shots / hard blockers
 
@@ -195,11 +209,13 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full verification exited 0 in `.codex-work/verify-20261107T033748Z-uOYuIx`; all 965 commands passed.
-The permitted axiom union and clean pinned dependencies were checked. All
-1247 tested input hashes match proof commit `ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f`, whose ordinary
-main push and remote ref were confirmed. The delivery receipt records the
-separate report commit and six copied-byte hashes.
+Full v48 verification exited 0 in `.codex-work/verify-20261107T141721Z-5BSDgL`;
+all 1083 commands passed. The three permitted axioms and clean
+pinned dependencies were checked. All 1365 tested input hashes
+match proof commit `35398e4874e333fa31756a28f5ddfd2ab68b0b1a`, whose ordinary main push
+and remote ref were confirmed. Proposition 7.8 remains partial at the
+concrete arithmetic comparisons described above. The delivery receipt
+records the report commit and all six copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
 commands: the lexical gate matched an English word in a documentation

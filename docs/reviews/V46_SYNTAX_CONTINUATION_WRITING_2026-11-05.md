@@ -1,8 +1,11 @@
 # Writing review of the continuation records
 
-Scope: the changed correspondence rows and existing implementation/review
-records after verified main/report `1db7a66` and proof `e08d21c`. The manuscript chat's current v47 TeX and PDF were integrated through main. Codex made no manuscript editorial changes. The active target follows `MANUSCRIPT_CURRENT.json`.
-This is a scoped notes review, not a whole-manuscript editorial review.
+Scope: the numerical correspondence and implementation records for the
+manifest-selected v48 target after main `2e7152b`. Only the approved abstract
+changed upstream; this Lean batch makes no manuscript edits. The current
+records distinguish completed numerical components from the remaining
+concrete rule, derivation-algebra and fixed provability-image comparisons.
+This is a scoped record review.
 
 The governing source already consulted in this conversation is Knuth,
 Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf),
@@ -50,13 +53,21 @@ not counted as completed proofs.
 
 The 905-command full verification at proof `e08d21c` and report `1db7a66`,
 and its committed-byte delivery, remain historical baseline evidence. The
-current first open principal obligation is numerical syntax/inference
-realization 7.8, followed by Miller representation independence and cosheaf
-derivation initiality; tuple comparison 7.7 remains proved.
+current first open principal obligation is the concrete arithmetic rule,
+derivation-algebra and fixed provability-image comparison in 7.8. The
+parameter-stable numerical syntax/list algebras, arbitrary-rule initiality
+and literal operation comparisons are proved. Cosheaf initiality 9.3 is
+the next batch; Miller representation independence remains later. Tuple
+comparison 7.7 remains proved.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-The integrated full v47 verification passed with exit 0 in `.codex-work/verify-20261107T033748Z-uOYuIx`. All 965 commands passed, the permitted axiom union and pinned clean dependencies were checked, and every tested input matches committed bytes at proof `ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f`. The separate report commit and Downloads copies are checked by the existing committed-byte delivery procedure.
+The integrated full v48 verification passed with exit 0 in
+`.codex-work/verify-20261107T141721Z-5BSDgL`. All 1083 commands passed,
+the permitted axiom union and pinned clean dependencies were checked, and
+every tested input matches committed bytes at proof `35398e4874e333fa31756a28f5ddfd2ab68b0b1a`.
+The partial 7.8 status is retained. The separate report commit and Downloads
+copies are checked by the existing committed-byte delivery procedure.
 
 Final verification, permitted axioms, tested-source identity, ordinary push
 and committed-byte delivery are recorded from completed checks, not inferred

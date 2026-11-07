@@ -86,9 +86,11 @@ output and canonical standard PA value. These are
 `NumericalArithmetic.SentenceMorphisms.negation_square`,
 `standard_literal_result` and `theta_standard_interpretation`. The full
 PA-to-numerical derivation-algebra transfer, concrete arithmetic rule-label
-and proof-code comparisons, and fixed Prov_T image are still being integrated. Proposition 7.8 remains partial. These focused checks do not supply a new
-full v48 verification result or a new committed proof checkpoint; the
-completed full results below remain historical evidence for v47.
+and proof-code comparisons, and fixed Prov_T image are still being
+integrated. Proposition 7.8 remains partial. The completed integrated v48
+verification below replays every canonical source and expanded statement
+check; the preceding v47 result remains
+historical baseline evidence.
 
 ## Completed mathematics
 
@@ -315,17 +317,21 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
-The required current-manuscript v47 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261107T033748Z-uOYuIx`.
-All 965 commands passed: combined build, both statement audits,
+The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261107T141721Z-5BSDgL`.
+All 1083 commands passed: combined build, both statement audits,
 every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 13,290 current-production declarations in
-497 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
+all 1,274 earlier declarations and covers 14,883 current-production declarations in
+556 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
 `Classical.choice`. All 16 dependencies were clean and pinned at start/end;
 356 imported-source pins and 25 current manuscript files and artifacts passed.
-All 1247 tested inputs match committed bytes at proof commit
-`ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `1501719b0ea7367bc54a95a5aeadb5a0160a074e521a2619f276ba2c37f059e9`.
+The wrapper started with HEAD `2e7152bbebb40392b31148e40b9e53da6a68dac2`.
+The frozen proof checkpoint was committed during replay. All
+1365 tested inputs match its bytes at proof commit
+`35398e4874e333fa31756a28f5ddfd2ab68b0b1a`, whose ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `974c3cb1a5d5c1d5c4a92d4d97ec92dd60fa4e5a61f4a0daffb775a0fc1a4439`.
+Proposition 7.8 remains partial: the concrete arithmetic rule, full
+derivation-algebra and fixed provability-image comparisons are still open.
 The separate report commit and Downloads copies are checked by the existing
 committed-byte delivery procedure.
 
@@ -376,10 +382,12 @@ A₀/D/P₀ coordinates and selected-program PA numeral-Prov equivalence.
 Theorem 7.6 now has one total q:E→S with the stated independence at each
 externally consistent standard fiber, using the actual chosen PA enumeration.
 
-The first open principal result is 7.8: parameter-stable named syntax and
-finite-inference realization in the numerical tuple category, with the
-specified syntax and proof-code comparisons. Miller representation
-independence and cosheaf derivation initiality remain later obligations.
+The first open principal result is the remaining arithmetic comparison
+in 7.8: the concrete rule-label bijections, full PA-to-numerical derivation
+algebra and inverse proof relabellings, and the fixed Prov_Gamma image.
+Parameter-stable numerical syntax/list algebras, arbitrary-rule initiality
+and the literal operation comparisons are proved. Cosheaf initiality
+9.3 is the next batch; Miller representation independence remains later.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
 consistency is not a PA proof of Γ consistency. The fixed universal
