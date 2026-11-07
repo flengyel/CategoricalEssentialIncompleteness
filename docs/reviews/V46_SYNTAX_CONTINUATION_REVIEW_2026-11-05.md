@@ -1,7 +1,10 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the new arithmetic source/check files after verified main `0c44cdafed27`, the manifest-selected current manuscript target, their required imports,
-correspondence rows and the existing implementation/verification records.
+Scope: the indexed arithmetic source/check files after verified main/report
+`1db7a66` and proof `e08d21c`, the manifest-selected v47 target, their required
+imports, correspondence rows and existing implementation/verification records.
+The earlier 7.1–7.4 review and 905-command verification remain historical
+baseline evidence.
 This follows the HostileRefereeGPT — Cat/Rec instructions and includes
 collaborating-agent source/type checks. It is not an independent whole-paper
 review or an independent kernel certification.
@@ -24,15 +27,31 @@ The application dependencies below still prevent a whole-current-manuscript comp
 
 ## (B) Major weaknesses
 
-1. **The indexed-family fiber universal property remains open.** Anchor:
-   `prop:arithmetic-theory-fibers`. `ArithmeticIndexedAxioms.axiomGraph`,
-   `carrier_numeral`, `productIso` and `axioms` construct the literal family
-   and its actual product-chart mono. `ArithmeticIndexedFamily.initial`
-   proves initiality of the constructed whole family. The printed numeral
-   fibers still require the extensive slice/algebra decomposition, the
-   inference natural isomorphism, the per-e initiality comparison and the
-   sentence-conclusion pullback square. Full-family initiality is not the
-   required numeral-fiber universal property.
+1. **The indexed-family fiber universal property is proved.** Anchor:
+   `prop:arithmetic-theory-fibers`. The actual indexed coefficient, full-family
+   initial algebra and parameter-preserving ordered rules are retained.
+   `ArithmeticIndexedFibers.sliceEquivalence`, `numeralInferenceComparison`
+   and `algebraEquivalence` derive the extensive decomposition from actual
+   constructor coefficient pullbacks. `fiberInitial` covers every algebra
+   morphism; `individualFiberAlgebraIso`, `sentence_pullback` and
+   `sentenceTheory_fiber` prove the per-e derivation and sentence/image
+   comparisons. `individual_oldGamma_comparison` and
+   `individual_oldGamma_model` identify the original named Γ_e calculus and
+   its literal theorem predicate. The fiber universal property is established
+   by these comparisons, rather than inferred from full-family initiality
+   alone.
+
+   The printed presentations are also compared. The source and realized
+   `ArithmeticIndexedAxioms.Exponential.mono_square`/`realized_square`
+   identify the exponential-pair axiom coefficient. The product predicate D has the proved chart J(D)≅E×S.
+   The proof presentation isomorphism identifies J(P₀) with the sentence
+   derivation object P; `printedConclusion_realization` proves
+   J(γ_c)=v⁻¹cu for the actual γ_c:P₀→D. The selected program has PA-proved
+   graph and exact domain, and `sentence_range_regular_image` gives the
+   actual range/image splitting. `printedProvability_numeral_PA` proves
+   ∀z, Prov(ē,z) ↔ Prov_Γe(z) for every external numeral e; its model
+   theorem holds at every internal word of every PA model. A separate
+   representation or axiom-correctness premise is not required.
 
 2. **The concrete arithmetic proof-system comparison is now proved.**
    `ArithmeticNamedAxiomComparison.axiomsAdmissible_PA` discharges the
@@ -50,11 +69,28 @@ The application dependencies below still prevent a whole-current-manuscript comp
    PA consistency proof or imported arithmetic incompleteness theorem is
    used as a replacement for these steps.
 
-3. **Later applications remain separate.** Indexed-family numeral-fiber
-   and uniform-presentation comparisons, numerical inference realization,
-   representation-independent Miller computation and cosheaf derivation
-   initiality remain open as recorded in the correspondence table. The completed numerical tuple comparison 7.7 is not listed as open;
-   rows 9.1 and B.10 retain their corrected wording.
+3. **The uniform sentence theorem 7.6 is proved.** The chosen Σ₁ PA
+   enumeration has the exact native standard-code characterization
+   `ArithmeticIndexedPAEnumeration.axiomCodes_standard`; actual induction
+   substitution and finite named universal closure are included.
+   `fiber_extendsPA` supplies the PA-extension premise for every Γ_e.
+   `ArithmeticUniformIndependent.uniform_independent_sentence_codes` and
+   `uniform_independent_sentences` use one actual total q:E→S, constructed
+   before e or its consistency proof. At each standard externally consistent
+   fiber, q(ē) has a closed named formula code outside the actual theorem
+   image and negation preimage, and neither that formula nor its negation
+   has a native proof. Local evidence disjointness and the diagonal bounds
+   are derived. The final theorem has ordinary per-fiber consistency only;
+   it has no residual hRep, hAx, soundness or semantic-model field. Its
+   independence assertion uses N. The all-PA-model numeral-Prov statement
+   above is a distinct presentation theorem.
+
+4. **Later applications remain separate.** The first open principal
+   obligation is 7.8: parameter-stable named syntax and finite-inference
+   realization in the numerical tuple category, with the specified syntax
+   and proof-code comparisons. Miller representation independence and
+   cosheaf derivation initiality remain later obligations. Numerical tuple
+   comparison 7.7 is proved; rows 9.1 and B.10 retain their corrected wording.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
 Θ-preimage and partial source conditional contradict categorical Corollary
@@ -72,12 +108,22 @@ section-variable inclusion resolve the concrete soundness construction.
 Abstract model-predicate lemmas expose raw graph conditions through proved
 iff statements and have literal algebra/carrier/conclusion equalities to the
 existing generated-theory data. They do not supply an assumed evaluator,
-initiality or soundness factor. Targeted reduced-budget diagnostics and all
-failed snapshots/logs are preserved; no Lean limit or linter was disabled.
+initiality or soundness factor. Targeted diagnostics and all failed
+snapshots/logs are preserved. The production proofs use the existing strict checker and permitted-axiom audit.
 
-**Only verified production layers count.** The concrete arithmetic axiom/model/comparison chain and the full indexed-family construction have passed targeted production and strict checks. Uncompiled extensive-fiber, uniform-presentation and optional expanded-chart drafts remain separate. The freeze receipts and exact declarations are listed in the existing continuation report.
-The final verification record identifies the exact tested and committed
-source bytes and any new component subsequently completed.
+**The indexed proof layers have targeted kernel evidence.** The numeral
+split stores maps together with generically proved primitive and copair
+laws. Its checked opaque body constructs those laws; it does not postulate
+them. The inference comparisons derive from original ordered-premise and
+conclusion diagrams, and the actual Γ_e comparison is an algebra isomorphism.
+All 60 new production/check files have passed their targeted production and
+strict checks. The existing continuation report lists the component receipts:
+`native-fibers-FROZEN.json`, `V46ArithmeticIndexedPAEnumeration-FROZEN.json`,
+`V46ArithmeticIndexedExponential-FROZEN.json`,
+`V46ArithmeticIndexedProvability-FROZEN.json` and the uniform component of
+`first-order-bridge-freeze.json`. Optional expanded-chart drafts and failed
+elaboration snapshots remain preserved separately. Full integrated
+verification passed as recorded below.
 
 The new realization comparison is proved for arbitrary T extending PA,
 predicate codomain and T-supported, T-total graph, before specialization to
@@ -119,6 +165,15 @@ for a proved equation.
   all-internal PA graph laws; k_e is an actual PA-total program. Production
   graph equality is proved in PA at fixed external indices on all internal
   inputs, with no arbitrary-index stage-persistence assumption.
+- The indexed parameter e is standard when a numeral fiber is selected;
+  the printed Prov comparison quantifies over every internal word of every
+  PA model. The exact chosen PA-axiom code characterization and final native
+  independence theorem concern N. External Γ_e consistency supplies neither
+  a PA consistency proof nor a nonstandard consistency assertion.
+- The printed exponential pair is compared with the intermediate raw pair
+  presentation, including the restricted axiom coefficient, proof carrier
+  and selected conclusion program. These are proved morphism/graph
+  comparisons, rather than identifications of arbitrary chosen codes.
 
 ## (E) Verification and disposition
 
@@ -128,9 +183,21 @@ The permitted axiom union and clean pinned dependencies were checked. All
 main push and remote ref were confirmed. The delivery receipt records the
 separate report commit and six copied-byte hashes.
 
-Full verification exited 0 in `.codex-work/verify-20261106T125901Z-Acu0zJ`; all 905 commands passed.
+The completed core-baseline full verification exited 0 in
+`.codex-work/verify-20261106T125901Z-Acu0zJ`; all 905 commands passed.
 The permitted axiom union and clean pinned dependencies were checked. All
 1187 tested input hashes match proof commit `e08d21c7eee33e6e7ee398411124039133a92905`, whose ordinary
+main push and remote ref were confirmed. The delivery receipt records the
+separate report commit and six copied-byte hashes.
+
+Report commit `1db7a66` preserves the completed e08d21c core baseline and
+its committed-byte delivery; it predates this indexed proof batch.
+
+The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
+
+Full verification exited 0 in `.codex-work/verify-20261107T033748Z-uOYuIx`; all 965 commands passed.
+The permitted axiom union and clean pinned dependencies were checked. All
+1247 tested input hashes match proof commit `ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f`, whose ordinary
 main push and remote ref were confirmed. The delivery receipt records the
 separate report commit and six copied-byte hashes.
 

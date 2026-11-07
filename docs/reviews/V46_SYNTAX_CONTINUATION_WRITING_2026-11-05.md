@@ -1,7 +1,7 @@
 # Writing review of the continuation records
 
 Scope: the changed correspondence rows and existing implementation/review
-records after `0c44cdafed27`. The manuscript chat's current v47 TeX and PDF were integrated through main. Codex made no manuscript editorial changes. The active target follows `MANUSCRIPT_CURRENT.json`.
+records after verified main/report `1db7a66` and proof `e08d21c`. The manuscript chat's current v47 TeX and PDF were integrated through main. Codex made no manuscript editorial changes. The active target follows `MANUSCRIPT_CURRENT.json`.
 This is a scoped notes review, not a whole-manuscript editorial review.
 
 The governing source already consulted in this conversation is Knuth,
@@ -10,6 +10,14 @@ Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://w
 self-contained claims, definitions before use and consistent model roles.
 The review format follows the mathematical-writing skill; it is not attributed
 to the Stanford report.
+
+The continuation record proceeds from completed structural results through
+the trace comparison and arithmetic constructions to verification evidence
+and remaining dependencies. This order is retained. In the indexed part,
+E denotes identity Ω in B_PA, S the realization of literal Sent, and Γ_e
+the actual numeral fiber. The records introduce these objects before the
+uniform morphism q:E→S and distinguish the semantic structure K from
+arithmetic code models N/M.
 
 | Anchor | Difficulty | Applied repair |
 | --- | --- | --- |
@@ -24,20 +32,31 @@ to the Stanford report.
 | Partial proof search 7.2 | Source existence could incorrectly depend on a model or a PA proof of disjointness. | Place source existence before the model quantifier; retain model disjointness only; identify the actual generated images and printed Neg(Theta) predicate. |
 | Numeral comparison | PA equality could be mistaken for equality of source words or a uniform nonstandard proof-family theorem. | State the separate literal expanded-word equation and PA equality/instance transports for every external standard n. |
 | Arithmetic 7.1–7.3 | A numerical theorem, source-admissibility premise or ambient-code-set argument could be mistaken for the required categorical application. | Name the concrete native PA-axiom comparison, fixed universal sentences and elementary transfer, actual semantic model/soundness factor, proper sentence-domain range/negation and Theorem 4.2 application. Retain K versus N/M and partial proof search. |
-| Indexed family 7.5 | Full-family initiality could be mistaken for preservation of initiality by an arbitrary pullback. | Name the proved actual axiom mono, parameter-preserving rule signature, full-family initial algebra and image/constructor laws. Keep the extensive numeral slice/algebra decomposition, inference natural isomorphism, numeral-fiber initiality and per-e sentence square explicitly open. |
+| Indexed family 7.5 | Full-family initiality alone does not give the numeral-fiber universal property. | Name the constructed extensive slice/algebra equivalence, coefficient pullbacks and inference natural isomorphism, then `fiberInitial`, the original Γ_e algebra comparison, sentence pullback and image equality. These statements are now proved. |
+| Printed indexed coordinates | An intermediate raw pair or inverse-equivalence code could be read as the printed exponential pair or proof carrier. | Name the actual exponential axiom mono squares, product chart J(D)≅E×S, proof presentation J(P₀)≅P and γ_c:P₀→D conclusion comparison, selected program's PA graph/exact domain, and range/image splitting. |
+| Numeral-Prov scope | A standard word comparison could be read as the full PA statement. | State `printedProvability_numeral_PA` as ∀z, Prov(ē,z) ↔ Prov_Γe(z) for each standard e, with its all-PA-model theorem covering every internal word. Keep the standard native PA-axiom characterization separate. |
+| Uniform independence 7.6 | A family of choices depending on consistency could be mistaken for one morphism, or standard independence extended to nonstandard fibers. | State one actual q:E→S before e and consistency, identify its standard N word with a closed named formula, and retain only the external consistency hypothesis on the displayed Γ_e. The PA enumeration, representation and evidence bounds are proved dependencies. |
 
 The records define namespace abbreviations and model roles before use, state
 completion at the relevant claim, and list effective hypotheses. No declaration
-count substitutes for a manuscript result. Standard finite syntax, all-model
-internal graph equations and future indexed/nonstandard parameter obligations
-are kept separate.
+count substitutes for a manuscript result. Standard finite syntax,
+all-model internal graph equations and the standard N independence conclusion have separate statements. The final 7.6 endpoint
+has no residual hRep, hAx, soundness or model-existence premise.
 
 The independent review's source/evidence-only scope remains explicit. Rows
 9.1/B.10 retain the corrected completed tuple comparison. Manuscript prose,
 publication data and theorem statements remain unchanged. Ignored drafts are
 not counted as completed proofs.
 
-The prior full verification and committed-byte delivery remain historical baseline evidence.
+The 905-command full verification at proof `e08d21c` and report `1db7a66`,
+and its committed-byte delivery, remain historical baseline evidence. The
+current first open principal obligation is numerical syntax/inference
+realization 7.8, followed by Miller representation independence and cosheaf
+derivation initiality; tuple comparison 7.7 remains proved.
+
+The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
+
+The integrated full v47 verification passed with exit 0 in `.codex-work/verify-20261107T033748Z-uOYuIx`. All 965 commands passed, the permitted axiom union and pinned clean dependencies were checked, and every tested input matches committed bytes at proof `ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f`. The separate report commit and Downloads copies are checked by the existing committed-byte delivery procedure.
 
 Final verification, permitted axioms, tested-source identity, ordinary push
 and committed-byte delivery are recorded from completed checks, not inferred
