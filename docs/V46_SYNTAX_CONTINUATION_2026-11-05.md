@@ -85,12 +85,33 @@ numeral-substitution sentence morphism with the exact native zero/add-one
 output and canonical standard PA value. These are
 `NumericalArithmetic.SentenceMorphisms.negation_square`,
 `standard_literal_result` and `theta_standard_interpretation`. The full
-PA-to-numerical derivation-algebra transfer, concrete arithmetic rule-label
-and proof-code comparisons, and fixed Prov_T image are still being
-integrated. Proposition 7.8 remains partial. The completed integrated v48
-verification below replays every canonical source and expanded statement
-check; the preceding v47 result remains
-historical baseline evidence.
+PA-to-numerical derivation-algebra transfer has since passed targeted
+production and expanded statement checks: `interpretationAlgebraIso`
+preserves the actual inference constructors, `interpretationCodeIso` has
+both conclusion equations, and `mappedDerivationInitial` supplies folds
+and uniqueness among all algebra morphisms for arbitrary finite PA rule
+presentations. The used coefficient casts agree with the original
+interpreted rule coproduct. The same isomorphism preserves the original proof word in both
+directions; its exact dimension-one coding equations pass expanded checks.
+The actual arithmetic term/formula constructor diagrams, substitution
+domains and results, and unary/binary ordered rule-label comparisons also
+pass production and expanded statement checks. All nullary scheme/Γ labels
+and the concrete inverse proof relabellings now have checked premise/conclusion and constructor/label/ordered-child
+equations. The final exact PA sentence-proof comparison, canonical standard-domain
+isomorphism and both computable directions are proved. The actual numerical
+regular image is the fixed Prov_Γ predicate, without a representation or
+proof-translation premise. The unnumbered 08d argument applies Corollary 4.3
+to these actual numerical theory objects. The printed PA-axiom inclusion gives the actual
+finite-proof extension and third bound; the standard diagonal comparisons
+give the other two bounds. External consistency gives disjointness.
+`NumericalArithmetic.Incompleteness.categorical_incompleteness` and
+`syntax_categorical_incompleteness` prove inseparability and noncoverage
+on the literal sentence object and the constructed syntax sentence object
+through the proved chart. Proposition 7.8 and the actual numerical
+application are complete in this integrated, fully verified proof batch.
+The integrated full verification below covers these completed
+comparisons and the actual numerical application. The preceding v47
+result and earlier v48 syntax checkpoint remain historical evidence.
 
 ## Completed mathematics
 
@@ -120,6 +141,8 @@ statements, effective hypotheses and separate application obligations.
 | Actual sentence chart | `SyntacticSentenceLiteralChart.toSentenceIso`, `toSentence_over`, `toSentence_value`: the literal sentence predicate is isomorphic to the actual chosen sentence object, with its inclusion triangle and formula-coordinate value proved for every T-model, arbitrary T extending PA and arbitrary coefficients. |
 | Arithmetic source diagonal component | `ArithmeticDiagonalCodes.diagonalIndex_represents`, `sourceTau_isTuring`, `source_pair_inseparable`, `model_a0`, `model_a1`, `printed_tau_is_universal`, `printed_parity_is_identity`: actual printed-u source morphisms, a PA-total adapter with proved factorization, exact diagonal source equality, PA disjointness and all-PA-model restriction-domain comparisons. These source-diagonal results feed the proved Γ inequalities recorded below. |
 | Arithmetic numeral dependency | `NamedArithmeticNumerals` proves the actual internal numeral graph, zero/successor equations and native primitive-recursive certificate. `NamedArithmeticNumeralCarriers.numeralCode_carrier_closed`, `numeralCode_closed` prove accepted term membership and numerical FV=0 for every internal input in every PA model, including nonstandard inputs. `NamedArithmeticNumerals.numeralMorphism` is the actual PA-total graph into closed terms; `numeralCode_standard` proves its exact standard external word. `translateFormula_freeVariables` and its unary specialization prove the external formula FV bound. `NamedArithmeticClosedSubstitution.substitutionFreeFor_closed`, `substitutionResult_closed`, `closedReplacement_PA` prove independent free-for and typed option success for every internal typed formula and typed FV-zero replacement, for arbitrary coefficients in every PA model. `NamedArithmeticFixedSubstitution.value_sentence` and the literal sentence realization below discharge the fixed-formula sentence-range obligation. |
+| 7.8, numerical realization | `NumericalDerivationInterpretation.interpretationAlgebraIso`, `mappedDerivationInitial` and both `interpretationCodeIso` word equations compare the actual PA and numerical inference algebras. `NumericalArithmetic.RuleComparison.proofIso`, `branch_constructor`, `inverse_branch_constructor`, `input_label` and `input_children` give the concrete inverse relabellings. `SentenceProofCodes.isPullback`, `ProofComparison.rho_conclusion`, `fixed_provability`, `canonical_forward_program` and `canonical_backward_program` identify the actual sentence image and both canonical computable directions. The literal syntax, substitution, sentence and parameter-stability comparisons are retained. |
+| Unnumbered 08d, actual numerical application | `NumericalArithmetic.Incompleteness.theorem_range`, `theorem_support`, `pa_theorems_le`, `domain_inclusions`, `theorem_refutation_disjoint`, `categorical_incompleteness` and `syntax_categorical_incompleteness` identify the actual constructed proof-conclusion image, derive the three diagonal bounds from printed PA-axiom inclusion, use external consistency for disjointness, and apply Corollary 4.3 on both literal and chosen syntax sentence objects. |
 
 Initiality assumes only T extending PA, with arbitrary coefficient predicates,
 arity bounds, parameters, target families and actual algebra operations proved
@@ -318,20 +341,23 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
 The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261107T141721Z-5BSDgL`.
-All 1083 commands passed: combined build, both statement audits,
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261107T204745Z-Fc18Iv`.
+All 1149 commands passed: combined build, both statement audits,
 every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 14,883 current-production declarations in
-556 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
+all 1,274 earlier declarations and covers 16,416 current-production declarations in
+589 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
 `Classical.choice`. All 16 dependencies were clean and pinned at start/end;
 356 imported-source pins and 25 current manuscript files and artifacts passed.
-The wrapper started with HEAD `2e7152bbebb40392b31148e40b9e53da6a68dac2`.
-The frozen proof checkpoint was committed during replay. All
-1365 tested inputs match its bytes at proof commit
-`35398e4874e333fa31756a28f5ddfd2ab68b0b1a`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `974c3cb1a5d5c1d5c4a92d4d97ec92dd60fa4e5a61f4a0daffb775a0fc1a4439`.
-Proposition 7.8 remains partial: the concrete arithmetic rule, full
-derivation-algebra and fixed provability-image comparisons are still open.
+The wrapper started with HEAD `a674168b60a06dcf4a379ef3da24673c0fcec8b3`.
+The proof batch was committed during the frozen replay after the targeted
+proof, statement and combined axiom checks passed. All
+1431 tested inputs match its bytes at proof commit
+`bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`, whose ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `b2840cb45f3b570665e6481ab12a8d8c3ea00ac3d70dbb5099b5df774f078689`.
+Proposition 7.8 and the unnumbered08d numerical categorical application
+are complete. The remaining realizations are Miller 8.1–8.6 and
+cosheaf 9.3, with 9.4/9.6 presentation identifications. The next authorized
+bounded batch is 9.3; whole-manuscript completion is not claimed.
 The separate report commit and Downloads copies are checked by the existing
 committed-byte delivery procedure.
 
@@ -382,12 +408,9 @@ A₀/D/P₀ coordinates and selected-program PA numeral-Prov equivalence.
 Theorem 7.6 now has one total q:E→S with the stated independence at each
 externally consistent standard fiber, using the actual chosen PA enumeration.
 
-The first open principal result is the remaining arithmetic comparison
-in 7.8: the concrete rule-label bijections, full PA-to-numerical derivation
-algebra and inverse proof relabellings, and the fixed Prov_Gamma image.
-Parameter-stable numerical syntax/list algebras, arbitrary-rule initiality
-and the literal operation comparisons are proved. Cosheaf initiality
-9.3 is the next batch; Miller representation independence remains later.
+Proposition 7.8 and the actual numerical 08d application are complete. The
+next bounded proof batch is cosheaf 9.3 and its 9.4/9.6 identifications;
+Miller 8.1–8.6 remains a separate substantial realization.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
 consistency is not a PA proof of Γ consistency. The fixed universal

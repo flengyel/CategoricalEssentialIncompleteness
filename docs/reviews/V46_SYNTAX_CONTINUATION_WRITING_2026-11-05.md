@@ -1,10 +1,10 @@
 # Writing review of the continuation records
 
 Scope: the numerical correspondence and implementation records for the
-manifest-selected v48 target after main `2e7152b`. Only the approved abstract
-changed upstream; this Lean batch makes no manuscript edits. The current
-records distinguish completed numerical components from the remaining
-concrete rule, derivation-algebra and fixed provability-image comparisons.
+manifest-selected current target after main `a674168`. This Lean batch makes
+no manuscript edits. The records identify the completed concrete numerical
+comparisons and actual categorical application, and distinguish them from
+the remaining Miller and cosheaf realizations.
 This is a scoped record review.
 
 The governing source already consulted in this conversation is Knuth,
@@ -52,21 +52,20 @@ publication data and theorem statements remain unchanged. Ignored drafts are
 not counted as completed proofs.
 
 The 905-command full verification at proof `e08d21c` and report `1db7a66`,
-and its committed-byte delivery, remain historical baseline evidence. The
-current first open principal obligation is the concrete arithmetic rule,
-derivation-algebra and fixed provability-image comparison in 7.8. The
-parameter-stable numerical syntax/list algebras, arbitrary-rule initiality
-and literal operation comparisons are proved. Cosheaf initiality 9.3 is
-the next batch; Miller representation independence remains later. Tuple
+and its committed-byte delivery, remain historical baseline evidence.
+Proposition 7.8 and the actual numerical 08d application are complete.
+The next proof batch is cosheaf initiality 9.3 and the 9.4/9.6 presentation
+identifications. Miller representation independence remains open. Tuple
 comparison 7.7 remains proved.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
 The integrated full v48 verification passed with exit 0 in
-`.codex-work/verify-20261107T141721Z-5BSDgL`. All 1083 commands passed,
+`.codex-work/verify-20261107T204745Z-Fc18Iv`. All 1149 commands passed,
 the permitted axiom union and pinned clean dependencies were checked, and
-every tested input matches committed bytes at proof `35398e4874e333fa31756a28f5ddfd2ab68b0b1a`.
-The partial 7.8 status is retained. The separate report commit and Downloads
+every tested input matches committed bytes at proof `bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`.
+The 7.8 and 08d mathematical obligations are complete; the remaining
+applications retain their open status. The separate report commit and Downloads
 copies are checked by the existing committed-byte delivery procedure.
 
 Final verification, permitted axioms, tested-source identity, ordinary push

@@ -1,33 +1,26 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the numerical source/check batch after main `2e7152b`, with the
-manifest-selected v48 target, its imports, correspondence and verification
-records. The 7.1–7.7 proofs and earlier v47 verification remain preserved.
-Codex made no manuscript changes. The independent v48 review inspected
-`c51c34d` and recorded evidence; it did not independently rerun Lean.
-This author-side record covers the changed endpoints and does not certify
-whole-manuscript completion or an independent kernel run.
+Scope: the concrete numerical arithmetic source/check batch after main
+`a674168`, against the manifest-selected v48 manuscript. Earlier
+verified proofs and their source pins are preserved. Codex made no manuscript
+edits. The independent v48 review inspected `c51c34d` and recorded evidence;
+it did not independently rerun Lean. This author-side review concerns the
+changed endpoints, their expanded statement types and the verification
+record. It does not claim whole-manuscript completion or independent kernel
+certification.
 
-## Current numerical batch and remaining blocker
-
-The constructed numerical term/formula and list algebras are identified
-with the actual unary named-word carriers by constructor-preserving
-algebra isomorphisms; initiality includes every parameter slice. Arbitrary
-finite rule data have an initial inference algebra with each child's own
-prescribed conclusion, including nullary rules and empty coefficients.
-Native decoding, full Option-valued substitution, independent admissibility,
-free-variable lists and the sentence pullback have expanded checked types.
-The arithmetic negation and numeral-substitution morphisms now use that
-constructed syntax, with exact zero/add-one words and the canonical PA
-standard interpretation. Formula-coordinate changes conserve original
-proof words; rule-coefficient isomorphisms induce inverse initial folds
-with constructor, conclusion, label and ordered-child equations.
-
-Proposition 7.8 is still partial. The actual arithmetic rho_n, the full
-PA-to-numerical derivation-algebra comparison and rho_T, and the fixed
-Prov_Gamma image are open. The intermediate PA proof-image comparison
-is not treated as the final numerical image theorem. No evaluator,
-carrier bijection or assumed comparison discharges these dependencies.
+The numerical batch completes Proposition 7.8 and the unnumbered 08d
+application. The original proof isomorphism preserves constructors,
+conclusion and both literal proof words. Concrete arithmetic rule-label
+bijections preserve ordered premises and conclusions; their inverse tree
+relabellings preserve labels and ordered children. The actual sentence
+pullback has regular image equal to the fixed Prov_Γ predicate.
+`NumericalArithmetic.Incompleteness.categorical_incompleteness` applies
+Corollary 4.3 to that image, and `syntax_categorical_incompleteness`
+transports it through the constructed syntax chart. Literal PA sentence-axiom
+inclusion supplies the actual proof extension; external consistency gives
+disjointness. No residual representation or axiom-admissibility premise
+is left in these endpoints.
 
 ## (A) Kill-shots / hard blockers
 
@@ -99,12 +92,12 @@ The application dependencies below still prevent a whole-current-manuscript comp
    independence assertion uses N. The all-PA-model numeral-Prov statement
    above is a distinct presentation theorem.
 
-4. **Later applications remain separate.** The first open principal
-   obligation is 7.8: parameter-stable named syntax and finite-inference
-   realization in the numerical tuple category, with the specified syntax
-   and proof-code comparisons. Miller representation independence and
-   cosheaf derivation initiality remain later obligations. Numerical tuple
-   comparison 7.7 is proved; rows 9.1 and B.10 retain their corrected wording.
+4. **Later applications remain separate.** Proposition 7.8 and the actual
+   numerical 08d application are complete. The next bounded obligation is
+   cosheaf derivation initiality 9.3 and its 9.4/9.6 presentation
+   identifications. Miller representation independence 8.1–8.6 remains a
+   separate realization. Numerical tuple comparison 7.7 is proved; rows
+   9.1 and B.10 retain their corrected wording.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
 Θ-preimage and partial source conditional contradict categorical Corollary
@@ -209,12 +202,12 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full v48 verification exited 0 in `.codex-work/verify-20261107T141721Z-5BSDgL`;
-all 1083 commands passed. The three permitted axioms and clean
-pinned dependencies were checked. All 1365 tested input hashes
-match proof commit `35398e4874e333fa31756a28f5ddfd2ab68b0b1a`, whose ordinary main push
-and remote ref were confirmed. Proposition 7.8 remains partial at the
-concrete arithmetic comparisons described above. The delivery receipt
+Full v48 verification exited 0 in `.codex-work/verify-20261107T204745Z-Fc18Iv`;
+all 1149 commands passed. The three permitted axioms and clean
+pinned dependencies were checked. All 1431 tested input hashes
+match proof commit `bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`, whose ordinary main push
+and remote ref were confirmed. Proposition 7.8 and the actual 08d
+numerical application are complete. The delivery receipt
 records the report commit and all six copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
