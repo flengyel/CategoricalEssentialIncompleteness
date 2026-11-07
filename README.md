@@ -1,14 +1,14 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-The current manuscript and Lean formalization target are **version 47**,
-dated 5 November 2026.
+The current manuscript and Lean formalization target are **version 48**,
+dated 7 November 2026.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v47.pdf](manuscript/logical_consequence_and_essential_incompleteness_v47.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v48.pdf](manuscript/logical_consequence_and_essential_incompleteness_v48.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v47_source.zip](manuscript/logical_consequence_v47_source.zip) |
+| Complete source ZIP | [logical_consequence_v48_source.zip](manuscript/logical_consequence_v48_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
 
@@ -28,15 +28,16 @@ and Git blob hashes.
 ## Lean status
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V47.md](FORMALIZATION_STATUS_V47.md). It records all 62
+[FORMALIZATION_STATUS_V48.md](FORMALIZATION_STATUS_V48.md). It records all 62
 numbered results and three definitions, their Lean declarations, and remaining
 obligations. The earlier [v5 table](FORMALIZATION_STATUS.md) records the
 retained baseline.
 
-Version 47 revises definitions, exposition, and citations while preserving the
-mathematical statements and hypotheses. The [5 November proof report](docs/V46_SYNTAX_CONTINUATION_2026-11-05.md)
+Version 48 revises the abstract while preserving the numbered definitions,
+mathematical statements, hypotheses, and proofs of version 47. The [5 November proof report](docs/V46_SYNTAX_CONTINUATION_2026-11-05.md)
 records the latest proof implementations. The current table retains their
-proved comparisons and the open coding and application obligations.
+proved comparisons and the remaining numerical, Miller, and cosheaf realization
+obligations.
 
 Lean verification follows the current manuscript. Every manuscript revision
 must update `MANUSCRIPT_CURRENT.json`, the correspondence table, source archive,

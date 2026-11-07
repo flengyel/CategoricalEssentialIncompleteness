@@ -1,7 +1,7 @@
 # Earlier manuscripts and source packages
 
-The current version is [v46](../logical_consequence_and_essential_incompleteness_v46.pdf),
-with sources in [../latex/](../latex/) and its [source ZIP](../logical_consequence_v46_source.zip).
+The current manuscript is selected by [MANUSCRIPT_CURRENT.json](../../MANUSCRIPT_CURRENT.json).
+Its PDF and source package are linked from the [manuscript guide](../README.md).
 
 This directory preserves 152 files moved from the previous manuscript
 layout: 78 PDFs, 43 TeX files, and

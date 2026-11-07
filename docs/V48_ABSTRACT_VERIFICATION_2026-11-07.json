@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-07",
+  "scope": "abstract_revision_and_source_review",
+  "reviewed_main": "c51c34d37df83ee9c568b7fe0ed92a801a3215c4",
+  "manuscript_version": 48,
+  "approved_abstract_matches": true,
+  "changed_tex_files": [
+    "manuscript/latex/abstract.tex",
+    "manuscript/latex/preamble.tex"
+  ],
+  "unchanged_tex_files": 20,
+  "correspondence_result_rows_unchanged": true,
+  "lean_source_changes": false,
+  "new_lean_kernel_run": false,
+  "latex": {
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+    "exit_code": 0,
+    "pages": 73,
+    "bytes": 820844,
+    "final_log_issues": [],
+    "visual_check": "Pages 1 and 2 rendered and inspected; no clipping, overflow, or missing glyphs; embedded Type1 fonts."
+  },
+  "manuscript_gate": {
+    "command": "python3 scripts/verify.py --manuscript-only",
+    "exit_code": 0,
+    "result": {
+      "success": true,
+      "scope": "manuscript-only",
+      "commands": [],
+      "allowed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "current_manuscript": {
+        "version": 48,
+        "entry_point": "manuscript/latex/main.tex",
+        "correspondence": "FORMALIZATION_STATUS_V48.md",
+        "files_verified": [
+          "manuscript/latex/abstract.tex",
+          "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "manuscript/latex/appendices/b-three-point-cosheaves.tex",
+          "manuscript/latex/appendices/c-section-lifting.tex",
+          "manuscript/latex/appendices/d-faithful-family.tex",
+          "manuscript/latex/bibliography.tex",
+          "manuscript/latex/main.pdf",
+          "manuscript/latex/main.tex",
+          "manuscript/latex/preamble.tex",
+          "manuscript/latex/sections/01-introduction.tex",
+          "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "manuscript/latex/sections/03-sections-and-inseparability.tex",
+          "manuscript/latex/sections/03a-internal-theories.tex",
+          "manuscript/latex/sections/04-miller-sequences.tex",
+          "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "manuscript/latex/sections/05a-internal-syntax.tex",
+          "manuscript/latex/sections/06-interpretation-in-models.tex",
+          "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+          "manuscript/latex/sections/08a-uniform-theories.tex",
+          "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+          "manuscript/latex/sections/08c-numerical-realization.tex",
+          "manuscript/latex/sections/08d-numerical-incompleteness.tex",
+          "manuscript/latex/sections/09-three-point-space.tex",
+          "manuscript/logical_consequence_and_essential_incompleteness_v48.pdf",
+          "manuscript/logical_consequence_v48_source.zip"
+        ],
+        "tex_files": 22,
+        "source_archive_matches": true,
+        "pdf_copy_matches": true,
+        "sha256": {
+          "FORMALIZATION_STATUS_V48.md": "113aaeb0fa46dafbe29ba460f4aea7d75f96500e605aba6dcd6a7c6f48a94b4e",
+          "MANUSCRIPT_CURRENT.json": "bef2d4f6df483a8473e8b44db0a19b02dc4d5faf6c6a42438704b551e839802e",
+          "manuscript/latex/abstract.tex": "4e1419c03340c54acf83b02ea990d0d64deb6e935b7e23c835f4d96d0c9bb3cf",
+          "manuscript/latex/appendices/a-syntax-and-theories.tex": "f252bbfb0aaad19251f7a45bb5113de9d535d8101febaf85a2a0d208750e2d3a",
+          "manuscript/latex/appendices/b-three-point-cosheaves.tex": "877ac5736b7658ca23c31083cc353841e9d0004c4bd1708530992ec5cafe4225",
+          "manuscript/latex/appendices/c-section-lifting.tex": "99080bdc9c2ca504209f62d901949df9c7baed7801dba716b9c67231b129f234",
+          "manuscript/latex/appendices/d-faithful-family.tex": "b15cce7219ee2b9fa977a8960d7517d9ff3f74c66ef5ae95b5eacb6acb0034ab",
+          "manuscript/latex/bibliography.tex": "96b58f4e7cc07d69f2add5bb42466ccc6437355d05383360e0582c99f196a172",
+          "manuscript/latex/main.pdf": "822d5bf5e3df9243d374f2dbf36cb1e7ad41a36e179032c0b6b856bf76f0fc74",
+          "manuscript/latex/main.tex": "441faf69227ac9cdd305bf550d175e2a686455590871e6d51186d92ebf79af08",
+          "manuscript/latex/preamble.tex": "f403c29ad5d0e90ffcd3b648b7453ab1b601510f393d8087e3230003b59b4546",
+          "manuscript/latex/sections/01-introduction.tex": "d03d816e9768b8caeb64b7162577d36b11192c7ca6727c0696983a10fbc4500f",
+          "manuscript/latex/sections/02-categorical-preliminaries.tex": "45bf1ea27ec7d4da19c2d033b002ecb29fe88c86a66f3abfedc79727b86f1b02",
+          "manuscript/latex/sections/03-sections-and-inseparability.tex": "2a7483e37a7b41eb5976d22b5fc0d1518db0bd4301a5a0a9dc9fd024175546c3",
+          "manuscript/latex/sections/03a-internal-theories.tex": "9dde3c6215d0923bc8a9d5f0d52b87510ed3a20bbe22ea7144bcb5d249ed8662",
+          "manuscript/latex/sections/04-miller-sequences.tex": "06303b1d5b01b07320abd99fcec3f550cb81034516f590ff22ff87e9d3207592",
+          "manuscript/latex/sections/05-syntactic-recursion-category.tex": "a5e5a714f2b732e12221c1e04dbc5bc67e955c9d5836f740489d840822c9aecf",
+          "manuscript/latex/sections/05a-internal-syntax.tex": "d0d146509e09b0430d9d4fbb475f75d666c2e4c80f1706a8bb12c6868dbc769e",
+          "manuscript/latex/sections/06-interpretation-in-models.tex": "562073357d41ea3c91cbca7a75a860de7a3ccccf566755483cf3bf9c5bd7ec6b",
+          "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": "2ca58cdfa2029a07f00f42e841e9cb6157de4eba393564c9fc0ac0f2701e5705",
+          "manuscript/latex/sections/08a-uniform-theories.tex": "0b79d3e48a7f024415f26a82262cb8767c8c3cd2da326b2d57da26a1936115ee",
+          "manuscript/latex/sections/08b-uniform-independent-sentences.tex": "d1b67b9b1834efb684071972297f624f3d018ca643904fd98273774670c0b1d0",
+          "manuscript/latex/sections/08c-numerical-realization.tex": "b8d6d7fc312fc96716f3c34b633509e907d903ce999b6cd8d7088594e850c973",
+          "manuscript/latex/sections/08d-numerical-incompleteness.tex": "b1ad9143eb878c67c1c601433c6ed67e9d1dc139ac8c686288a3780cc03e14d4",
+          "manuscript/latex/sections/09-three-point-space.tex": "7125ae4b0a97c672e8346f4da017180195d56b1eeb466c947ae4bc8f46f9734b",
+          "manuscript/logical_consequence_and_essential_incompleteness_v48.pdf": "822d5bf5e3df9243d374f2dbf36cb1e7ad41a36e179032c0b6b856bf76f0fc74",
+          "manuscript/logical_consequence_v48_source.zip": "acbf62109b0ce666fc8dcb8da1066ec6e7fb347fdcfd1e5b932c4fe195ad9d4c"
+        }
+      }
+    }
+  },
+  "reviewed_prior_lean_evidence": {
+    "proof_commit": "ff0363b8ec2fdad87cbdc3b3c53d8d0f614fd71f",
+    "run": ".codex-work/verify-20261107T033748Z-uOYuIx",
+    "commands": 965,
+    "all_exit_zero": true,
+    "retained": 1274,
+    "current": 13290,
+    "module_count": 497,
+    "input_count": 1247,
+    "snapshot": "1501719b0ea7367bc54a95a5aeadb5a0160a074e521a2619f276ba2c37f059e9",
+    "axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "whole_manuscript_complete": false,
+    "remaining": [
+      "7.8 numerical named syntax and finite-inference realization in arbitrary parameter slices",
+      "8.1-8.6 Miller representation independence and its categorical incompleteness application",
+      "cosheaf derivation initiality and remaining stated applications"
+    ],
+    "proof_to_main_files": [
+      "docs/V46_SYNTAX_CONTINUATION_2026-11-05.md",
+      "docs/V46_SYNTAX_CONTINUATION_VERIFICATION_2026-11-05.json",
+      "docs/reviews/V46_SYNTAX_CONTINUATION_REVIEW_2026-11-05.md",
+      "docs/reviews/V46_SYNTAX_CONTINUATION_SOURCE_SHA256_2026-11-05.txt",
+      "docs/reviews/V46_SYNTAX_CONTINUATION_WRITING_2026-11-05.md"
+    ]
+  },
+  "prior_evidence_review_scope": [
+    "production-module inventory against main tree",
+    "recorded input-path inventory",
+    "snapshot digest recomputation",
+    "proof-to-main commit comparison",
+    "audit and verifier source",
+    "selected recorded source hashes",
+    "recent arithmetic proof chains",
+    "remaining numerical and cosheaf proof endpoints"
+  ]
+}
