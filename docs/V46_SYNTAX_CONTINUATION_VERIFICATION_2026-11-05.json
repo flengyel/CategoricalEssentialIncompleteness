@@ -109977,12 +109977,12 @@
   "pending_miller_application_batch": {
     "status": "TARGETED_COMPONENTS_VERIFIED_FINAL_APPLICATION_OPEN",
     "manuscript_version": 48,
-    "recorded_utc": "2026-11-08T20:15:45.051994+00:00",
-    "baseline_proof_commit": "e99e880519bcbbfcf1d5cd02b32f9f91b7f5991a",
-    "pairs": 31,
-    "canonical_files": 62,
-    "production_commands_zero": 124,
-    "strict_scratch_commands_zero": 62,
+    "recorded_utc": "2026-11-08T20:36:54.711917+00:00",
+    "baseline_proof_commit": "9228d4e",
+    "pairs": 34,
+    "canonical_files": 68,
+    "production_commands_zero": 136,
+    "strict_scratch_commands_zero": 68,
     "receipts": [
       {
         "path": ".codex-work/v46-concrete-named-comparison/miller-named-syntax-first12-FROZEN.json",
@@ -109999,6 +109999,18 @@
       {
         "path": ".codex-work/v46-concrete-named-comparison/miller-derivation-word-induction-FROZEN.json",
         "sha256": "5a92dffbc42b97d16cf0fab1f72272ce4db86e346b3f0172de29d8ad3e214bfc"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/run/named-syntax-frozen-pairs/V46MillerNamedSyntaxComparisonOptions.json",
+        "sha256": "d6663a4ec22f2743a48daf2c0ee830d995cb3cd6c05fb60248e071fbab9a4f87"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/run/named-syntax-frozen-pairs/V46MillerNamedSyntaxParameterFamily.json",
+        "sha256": "937d16ee1b6543e4c573eee04651884a1a318c5d55ea920d6d09f7a716391151"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/run/named-syntax-frozen-pairs/V46MillerNamedSyntaxParameterBaseChangeFamily.json",
+        "sha256": "a5c8f85439fbebf3af461b70c3603e7c8738334e3c94fea5d04fb54efa28fae4"
       }
     ],
     "main_and_statement_imports": true,
@@ -110014,7 +110026,8 @@
     "components_added": [
       "Finite-power normalization and intrinsic Boolean/equality/list operations through membership and deletion",
       "Actual word constructor decomposition, strict ordered-child rank and arbitrary external-predicate derivation induction",
-      "Actual first-order word induction over logical/Gamma axioms, generalization and ordered modus ponens"
+      "Actual first-order word induction over logical/Gamma axioms, generalization and ordered modus ponens",
+      "Full option/product and constant-family product/coproduct comparisons before and after arbitrary base isomorphism"
     ]
   }
 }

@@ -573,14 +573,22 @@ host memory usage.
 
 ## Concrete Miller field and axiom comparisons, 8 November
 
-The next thirty-one producer/Checks pairs have 124 successful production commands
-and 62 successful independent strict source checks. Twelve compare the literal
+The next thirty-four producer/Checks pairs have 136 successful production commands
+and 68 successful independent strict source checks. Twelve compare the literal
 word and list algebras and construct `presentedSyntax` and
 `canonicalPresentedSyntax`. They derive target initiality independently; the
 predicate interpretation F is not assumed faithful or to preserve initiality.
 The finite-power and constructor-polynomial normalization is proved explicitly.
 The intrinsic list folds preserve branching, equality, singleton, ordered append,
 membership and deletion under the actual chart.
+
+Three additional pairs prove the actual option/product comparisons, including
+failure and successful values, and the constant-family product/coproduct diagrams
+before and after an arbitrary base isomorphism. Coefficient maps and the two
+parameter objects remain explicit. They use only finite geometry; the predicate
+functor is not assumed to preserve initiality. All fourteen expanded option
+checks and the six/eight family and base-change checks pass independently.
+The full polynomial parameter comparison remains under development.
 
 The eleven field-theory pairs construct the arity-two ordered-field language,
 primitive-recursive membership in all literal sentence words, the actual
