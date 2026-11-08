@@ -109977,16 +109977,16 @@
   "pending_miller_application_batch": {
     "status": "TARGETED_COMPONENTS_VERIFIED_FINAL_APPLICATION_OPEN",
     "manuscript_version": 48,
-    "recorded_utc": "2026-11-08T19:16:05.279133+00:00",
-    "baseline_proof_commit": "932dffd",
-    "pairs": 18,
-    "canonical_files": 36,
-    "production_commands_zero": 72,
-    "strict_scratch_commands_zero": 36,
+    "recorded_utc": "2026-11-08T20:15:45.051994+00:00",
+    "baseline_proof_commit": "e99e880519bcbbfcf1d5cd02b32f9f91b7f5991a",
+    "pairs": 31,
+    "canonical_files": 62,
+    "production_commands_zero": 124,
+    "strict_scratch_commands_zero": 62,
     "receipts": [
       {
-        "path": ".codex-work/v46-concrete-named-comparison/miller-named-syntax-first5-FROZEN.json",
-        "sha256": "ba7d60dca8353a719981a8ac7b09b1437e7854d7afe55d534ea3ca68d50c7d01"
+        "path": ".codex-work/v46-concrete-named-comparison/miller-named-syntax-first12-FROZEN.json",
+        "sha256": "19fdbb4752575b191bf22994e6e98433aa6c2b83ee7e597a29ec1982c786ae20"
       },
       {
         "path": ".codex-work/v46-concrete-named-comparison/miller-field-theory-FROZEN.json",
@@ -109995,6 +109995,10 @@
       {
         "path": ".codex-work/v46-concrete-named-comparison/miller-axiom-subobjects-FROZEN.json",
         "sha256": "eb214459c5c5d67a934e8ed07ea5e4a3142cf218eb88fbd00b300ffd9dd6a794"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-derivation-word-induction-FROZEN.json",
+        "sha256": "5a92dffbc42b97d16cf0fab1f72272ce4db86e346b3f0172de29d8ad3e214bfc"
       }
     ],
     "main_and_statement_imports": true,
@@ -110002,10 +110006,15 @@
     "axiom_audit": "PENDING_AUTOMATIC_ALL_PRODUCTION_COVERAGE",
     "remaining": [
       "Named substitution/admissibility and concrete derivation-image comparison",
-      "Canonical syntax/sentence/inference/derivation-image comparison",
+      "Canonical syntax/sentence/inference/derivation-image comparison and arbitrary original axiom-mono recovery",
       "Actual Corollary4.3 application with proved sentence-consistency correspondence"
     ],
     "source_only_consistency_repair": ".codex-work/v46-concrete-named-comparison/miller-sentence-consistency-SOURCE-ONLY.json",
-    "not_whole_row_completion": true
+    "not_whole_row_completion": true,
+    "components_added": [
+      "Finite-power normalization and intrinsic Boolean/equality/list operations through membership and deletion",
+      "Actual word constructor decomposition, strict ordered-child rank and arbitrary external-predicate derivation induction",
+      "Actual first-order word induction over logical/Gamma axioms, generalization and ordered modus ponens"
+    ]
   }
 }

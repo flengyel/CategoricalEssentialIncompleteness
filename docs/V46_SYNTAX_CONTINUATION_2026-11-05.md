@@ -573,11 +573,14 @@ host memory usage.
 
 ## Concrete Miller field and axiom comparisons, 8 November
 
-The next eighteen producer/Checks pairs have 72 successful production commands
-and 36 successful independent strict source checks. The first five compare the
-literal word and list algebras and construct `presentedSyntax` and
+The next thirty-one producer/Checks pairs have 124 successful production commands
+and 62 successful independent strict source checks. Twelve compare the literal
+word and list algebras and construct `presentedSyntax` and
 `canonicalPresentedSyntax`. They derive target initiality independently; the
 predicate interpretation F is not assumed faithful or to preserve initiality.
+The finite-power and constructor-polynomial normalization is proved explicitly.
+The intrinsic list folds preserve branching, equality, singleton, ordered append,
+membership and deletion under the actual chart.
 
 The eleven field-theory pairs construct the arity-two ordered-field language,
 primitive-recursive membership in all literal sentence words, the actual
@@ -597,15 +600,25 @@ actual constants a(n) models the selected T_a words, and actual finite-proof
 soundness proves native consistency of T_a. These semantic constructions do
 not assume truth of an arbitrary consistent Gamma.
 
-The last two pairs construct the actual uniformly semidecidable axiom
+Two further pairs construct the actual uniformly semidecidable axiom
 subobjects and genuine sentence-word pullbacks. `SentenceAxiomPullbacks.givenPresentation`
 recovers every given axiom mono by its image codes. Sentence-point codes and
 formula words remain distinct. The finite carrier alone is represented by a
 PA predicate; arbitrary Gamma is not assumed PA definable. Inverses are used
 for monomorphisms, with no section of a proof-conclusion image.
 
-The immutable targeted receipts are `miller-named-syntax-first5-FROZEN.json`,
-`miller-field-theory-FROZEN.json` and `miller-axiom-subobjects-FROZEN.json` in
+Six word-induction pairs supply constructor decomposition of the actual
+successful derivation word, strict rank decrease for each ordered child with
+its own prescribed conclusion, and induction for any external predicate.
+`Miller.Derivation.WordInduction.word_rule_induction` and
+`conclusion_induction` use the proved initial algebra. The concrete
+`firstOrder_conclusion_induction` includes logical and Gamma nullary leaves,
+generalization and ordered modus ponens. No decidability or definability
+condition is imposed on the induction predicate.
+
+The immutable targeted receipts are `miller-named-syntax-first12-FROZEN.json`,
+`miller-field-theory-FROZEN.json`, `miller-axiom-subobjects-FROZEN.json` and
+`miller-derivation-word-induction-FROZEN.json` in
 `.codex-work/v46-concrete-named-comparison/`. Main and both statement audits
 import the completed pairs; full automatic axiom coverage and serialized replay
 are pending. These components do not close Theorem 8.6. Its remaining named
