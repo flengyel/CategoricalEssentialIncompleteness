@@ -344,11 +344,53 @@ No explicit OOM failure was observed. Completed profiled probes used about
 child-process resource measurements. All evidence is preserved and no
 heartbeat limit, linter, toolchain, dependency or axiom policy was relaxed.
 
-The completed full replay took 1 hour 56 minutes 9 seconds. Its GNU time
+The preceding unanimity/category replay at proof `bdfef37` took
+1 hour 56 minutes 9 seconds. Its GNU time
 profile recorded a maximum resident set of 3,108,560 kB (about 2.96 GiB),
 zero swaps and exit 0. No timeout or explicit memory-allocation failure was
 observed in that run. The verification record retains the resource-log path
 and distinguishes these completed measurements from development timeouts.
+
+## Miller cut reduction and categorical inseparability
+
+`Cut.separatingReal_program` is an unconditional construction of one oracle
+program before every p, e and k. Increasing finite halting stages have the
+proved bad-set images as finite unions of closed dyadic boxes. The weighted
+product distance has constructed nearest points; finite minima and the
+empty-set convention give the required positive loci. Primitive-recursive
+finite approximation and use algorithms, with proved series tail/error
+bounds, produce strict rational approximations to one separating real.
+Different representations may return different rational indices.
+
+`Cut.uniform_cut_reduction` specializes that actual program by one ordinary
+recursive map chosen before every Miller sequence. The printed Miller
+property gives its coordinate equation and both exact inverse images of
+the lower and upper cuts. No realizer, cozero or reduction premise remains.
+`Cut.printed_cut_contrast` applies the actual source Turing diagonal and
+source-conditionals argument, proves internal cut inseparability and gives
+the actual first-digit separator for every fixed representation.
+`Cut.mapped_tau_notTuring` concerns J of the original source tau in the full
+fixed-oracle target; its target oracle interpreter remains distinct.
+
+Two auxiliary pairs construct the actual source inclusion into its splitting
+with arbitrary complementary-idempotent recovery, and a single uniform
+program for both strict rational coordinate predicates. These are concrete
+application constituents, not a completion claim for 8.6. The literal
+fixed-p c.e.-carrier comparison is also not inferred from the inclusion.
+
+All 23 producer/check pairs passed the existing targeted and expanded strict
+checks; the combined audits and full replay are recorded below. Earlier
+proof bodies, manuscript, toolchain, dependencies and source pins are unchanged.
+The ignored 8.5 syntax/list/derivation/total-category and generated-theory
+proof bodies remain uncompiled and excluded from completed-result claims.
+
+The cut batch's completed full replay at proof `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9` took
+`2:03:36` wall-clock time. Its GNU time profile recorded
+3,115,672 kB maximum resident set size
+(2.97 GiB), zero swaps and exit 0.
+No wall-clock timeout or explicit memory-allocation failure occurred in
+this full run. Resource log: `.codex-work/v48-miller-cut-full-f15eeb1-resource.log`. Historical development
+timeouts and elaboration failures remain preserved separately.
 
 ## Verification and source identity
 
@@ -421,21 +463,22 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
 The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T085737Z-9kfET1`.
-All 1217 commands passed, including combined build, statement audits,
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T114347Z-mULAhc`.
+All 1263 commands passed, including combined build, statement audits,
 every strict source/check replay and the transitive axiom audits. The audit
-retains all 1,274 earlier declarations and covers 18,416
-current-production declarations in 623 production modules.
+retains all 1,274 earlier declarations and covers 19,101
+current-production declarations in 646 production modules.
 Its axiom union is exactly `propext`, `Quot.sound`, `Classical.choice`.
 All 16 dependencies were clean and pinned at start/end;
 356 imported-source pins and 25 manuscript files/artifacts passed.
-The frozen wrapper started at proof commit `bdfef37d344bb1c3d4403de31aae76d713a4b12d`; all
-1499 tested inputs match that commit's bytes and remained unchanged.
+The frozen wrapper started at proof commit `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`; all
+1545 tested inputs match that commit's bytes and remained unchanged.
 Its ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `b4e33179a690f0eebd0456d762fa18a1d6695fc1473fdb03ba06f7924447c58e`.
-Miller 8.1 and 8.2 are complete, including exact all-representation domain/value
-uniformity and the full fixed-oracle interpretation. Miller 8.3–8.6 remains open.
-There are 58 closed rows among 62 numbered results; this is coverage, not a
+Source-snapshot SHA-256: `3a3801254c0604b2549727ba171a8d212d06540af707c5ed803e68c37867fa78`.
+Miller 8.1–8.4 are complete. The cut reduction has no residual approximation
+or reduction premise, and the inseparability/relative-separator comparisons
+use the actual source Turing morphism and full fixed-oracle interpretation.
+Miller 8.5 and 8.6 remain open. There are 60 closed rows among 62 numbered results; this is coverage, not a
 percentage of proof effort. Earlier arithmetic, numerical and cosheaf results
 remain proved. The separate report commit and Downloads copies are checked by
 the existing committed-byte delivery procedure.
@@ -488,12 +531,13 @@ Theorem 7.6 now has one total q:E→S with the stated independence at each
 externally consistent standard fiber, using the actual chosen PA enumeration.
 
 Proposition 7.8 and the actual numerical 08d application remain proved.
-Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1 and 8.2
-are also complete. The four numbered Miller results 8.3–8.6 remain open,
-beginning with the ordinary recursive cut reduction. The later split-target
-presentation, total-category realization and actual theory application remain
-distinct obligations. There are 58 closed rows among 62 numbered results in
-the correspondence table; this is coverage, not a percentage of proof effort.
+Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1–8.4
+are complete. The remaining numbered Miller results are 8.5, the actual
+uniform total-category/syntax/list/derivation realization, and 8.6, its concrete
+theory and categorical application. The literal fixed-oracle carrier
+presentation remains a separate comparison. Ignored source bodies do not
+complete these obligations. There are 60 closed rows among 62 numbered results;
+this is coverage rather than a percentage of proof effort.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
 consistency is not a PA proof of Γ consistency. The fixed universal

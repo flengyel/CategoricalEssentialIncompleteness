@@ -1,7 +1,7 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: Miller unanimity 8.1, the actual uniform category 8.2 and its full
-fixed-oracle interpretation after main `9a49121`, against the manifest-selected
+Scope: Miller cut reduction 8.3, categorical inseparability 8.4 and concrete
+splitting/rational-cut constituents after main `d757a37`, against the manifest-selected
 current manuscript. Earlier proofs, pins and manuscript files are preserved.
 This is author-side and collaborating-agent source/type review; it does not
 independently certify the whole manuscript. The independent v48 review of
@@ -106,7 +106,7 @@ The application dependencies below still prevent a whole-current-manuscript comp
    transport this initiality. Its actual conclusion image is the least closed
    subfunctor and the previous t0; the selected endpoint extension quantifies
    over arbitrary c.e. axioms without a compatible-family premise. Miller
-   8.1 and 8.2 are now proved; 8.3–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
+   8.1–8.4 are now proved; 8.5–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
    numerical tuple comparison.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
@@ -212,7 +212,7 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full v48 verification exited 0 in `.codex-work/verify-20261108T085737Z-9kfET1`; all 1217 commands passed. The permitted axiom union and clean pinned dependencies were checked. All 1499 tested inputs match proof commit `bdfef37d344bb1c3d4403de31aae76d713a4b12d`, whose ordinary main push and remote ref were confirmed. Miller 8.1 and 8.2 are complete; 8.3–8.6 remains open. The delivery receipt records the report commit and all six copied-byte hashes.
+Full v48 verification exited 0 in `.codex-work/verify-20261108T114347Z-mULAhc`; all 1263 commands passed. The permitted axiom union and clean pinned dependencies were checked. All 1545 tested inputs match proof commit `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`, whose ordinary main push and remote ref were confirmed. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. The delivery receipt records the report commit and all six copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
 commands: the lexical gate matched an English word in a documentation
@@ -232,3 +232,9 @@ unique-preimage search. The source Turing morphism is the constructed τ.
 No claim of total-category syntax initiality or the final Miller application
 is inferred from these structures. Development timeouts are recorded without
 claiming an OOM event. Manuscript prose and definitions remain unchanged.
+
+The cut approximation index is chosen before every oracle and numerical
+input; the ordinary reduction precedes every Miller sequence. Both exact
+cut preimages and the categorical inseparability and relative-separator
+conclusions have their concrete premises discharged. The subsequent
+total-category realization and final theory application remain open.
