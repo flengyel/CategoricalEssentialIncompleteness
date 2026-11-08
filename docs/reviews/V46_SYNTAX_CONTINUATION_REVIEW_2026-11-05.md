@@ -1,15 +1,13 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the concrete cosheaf inference, diagram, image and endpoint batch after main
-`e5a95a4`, against the manifest-selected current manuscript. Earlier verified
-proofs, toolchain, dependencies and manuscript files are preserved. Codex made
-no manuscript edits. This author-side review concerns the changed endpoints
-and expanded intended-statement checks; it is not an independent whole-paper
-or kernel certification. The independent v48 review of `c51c34d` did not
-independently rerun Lean.
+Scope: Miller unanimity 8.1, the actual uniform category 8.2 and its full
+fixed-oracle interpretation after main `9a49121`, against the manifest-selected
+current manuscript. Earlier proofs, pins and manuscript files are preserved.
+This is author-side and collaborating-agent source/type review; it does not
+independently certify the whole manuscript. The independent v48 review of
+`c51c34d` did not independently rerun Lean.
 
-
-The present batch proves the original-carrier cosheaf algebra initial among
+The preceding cosheaf batch proved the original-carrier algebra initial among
 all target slice algebras. Its constructor and fold naturality are derived
 from the supplied global structure morphism. The literal numerical diagram
 and five-summand axiom comparisons preserve constructors and conclusion;
@@ -108,7 +106,7 @@ The application dependencies below still prevent a whole-current-manuscript comp
    transport this initiality. Its actual conclusion image is the least closed
    subfunctor and the previous t0; the selected endpoint extension quantifies
    over arbitrary c.e. axioms without a compatible-family premise. Miller
-   8.1–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
+   8.1 and 8.2 are now proved; 8.3–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
    numerical tuple comparison.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
@@ -214,13 +212,7 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full v48 verification exited 0 in `.codex-work/verify-20261108T032040Z-4hNYm7`;
-all 1175 commands passed. The permitted axiom union and clean pinned dependencies
-were checked. All 1457 tested inputs match proof commit
-`2839c102ede5feb5206da5e2977f89e20ef24505`, whose ordinary main push and remote
-ref were confirmed. The 9.3/9.4/9.6 obligations are complete; Miller 8.1–8.6
-remains open. The delivery receipt records the report commit and all six
-copied-byte hashes.
+Full v48 verification exited 0 in `.codex-work/verify-20261108T085737Z-9kfET1`; all 1217 commands passed. The permitted axiom union and clean pinned dependencies were checked. All 1499 tested inputs match proof commit `bdfef37d344bb1c3d4403de31aae76d713a4b12d`, whose ordinary main push and remote ref were confirmed. Miller 8.1 and 8.2 are complete; 8.3–8.6 remains open. The delivery receipt records the report commit and all six copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
 commands: the lexical gate matched an English word in a documentation
@@ -230,3 +222,13 @@ no proof, statement, axiom or verifier condition was relaxed.
 The scoped source/type review supports the stated completed endpoints and
 explicit remaining obligations. It does not replace the kernel/axiom checks,
 certify the whole current manuscript or revise the manuscript to weaken the target statements.
+
+Miller batch scope: one actual index precedes every representation and has
+exact graph and domain; the category uses that uniform morphism class, and
+the target contains all fixed-oracle relative partial-recursive functions.
+The positive-table search needs no off-family functionality assumption.
+Finite joins include the empty family; weak choice is proved by the actual
+unique-preimage search. The source Turing morphism is the constructed τ.
+No claim of total-category syntax initiality or the final Miller application
+is inferred from these structures. Development timeouts are recorded without
+claiming an OOM event. Manuscript prose and definitions remain unchanged.

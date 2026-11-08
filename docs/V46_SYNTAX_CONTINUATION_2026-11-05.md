@@ -310,6 +310,46 @@ Additional expanded projection and chosen-pullback comparison drafts are
 preserved in the ignored continuation area and are not counted as proofs.
 They do not change the literal sentence target of the constructed morphism.
 
+## Miller representation independence and category
+
+The literal binary map ρ is continuous and onto, with compact nonempty full
+fibers, including dyadic ambiguity and endpoints. Primitive-recursive finite
+cylinder coverage and dyadic separation certificates provide an enumerable
+finite-cover test. `Unanimity.search_correct` proves that a certificate exists
+exactly when all representations halt with the same output. The actual
+`OracleProgram.ofTable` compiler gives `Unanimity.unanimityIndex`, chosen before
+z, p, e and n. Its graph and domain equations prove the printed τ, including
+simultaneous undefinedness. No oracle selection or coherence premise remains.
+
+`Uniform.Object` uses the printed numerical objects. A morphism has one
+program before every representation, with equality of its full partial graph.
+Constructed instances supply restrictions, ranges, zeros, products, restriction
+coproducts, isotypical coding, finite compatible joins, local connectedness and
+weak choice. Its Turing morphism is literally `Unanimity.tau`, with ordinary
+computable parameter indices. The full characteristic-oracle comparison
+`OracleRelative.recursiveIn_iff_index` identifies the singleton-family target
+with every partial p-recursive function, preserving values and domains. Its
+reverse index is for fixed p; it does not infer a uniform source index from
+unrelated pointwise witnesses. The identity-value faithful range functor J
+preserves products and finite compatible joins. Source τ is kept distinct
+from the target's universal oracle interpreter.
+
+The subsequent Split(Rec^p) carrier presentation and Miller 8.3–8.6 are not
+claimed from these endpoints. Scoped source review found no confirmed drift;
+completion here is supported by the targeted, statement and full kernel runs.
+
+Development included wall-clock timeouts and ordinary elaboration failures.
+No explicit OOM failure was observed. Completed profiled probes used about
+2.2 GiB maximum RSS; unsuccessful timeout wrappers do not supply reliable
+child-process resource measurements. All evidence is preserved and no
+heartbeat limit, linter, toolchain, dependency or axiom policy was relaxed.
+
+The completed full replay took 1 hour 56 minutes 9 seconds. Its GNU time
+profile recorded a maximum resident set of 3,108,560 kB (about 2.96 GiB),
+zero swaps and exit 0. No timeout or explicit memory-allocation failure was
+observed in that run. The verification record retains the resource-log path
+and distinguishes these completed measurements from development timeouts.
+
 ## Verification and source identity
 
 The preceding complete v47 run is preserved at
@@ -381,25 +421,24 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
 The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T032040Z-4hNYm7`.
-All 1175 commands passed: combined build, both statement audits,
-every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 17,632 current-production declarations in
-602 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
-`Classical.choice`. All 16 dependencies were clean and pinned at start/end;
-356 imported-source pins and 25 current manuscript files and artifacts passed.
-The wrapper started with HEAD `2839c102ede5feb5206da5e2977f89e20ef24505`.
-The proof batch was committed before the frozen replay after the targeted
-proof, statement and combined axiom checks passed. All
-1457 tested inputs match its bytes at proof commit
-`2839c102ede5feb5206da5e2977f89e20ef24505`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `b313693c30cbe32d74aad4f1c4dc2b0cba804aead02582198da0081204cf7759`.
-Proposition 9.3 and the 9.4/9.6 image and endpoint identifications are
-complete. Proposition 7.8 and the numerical application remain proved.
-The six Miller results 8.1–8.6 remain open; whole-manuscript completion
-is not claimed.
-The separate report commit and Downloads copies are checked by the existing
-committed-byte delivery procedure.
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T085737Z-9kfET1`.
+All 1217 commands passed, including combined build, statement audits,
+every strict source/check replay and the transitive axiom audits. The audit
+retains all 1,274 earlier declarations and covers 18,416
+current-production declarations in 623 production modules.
+Its axiom union is exactly `propext`, `Quot.sound`, `Classical.choice`.
+All 16 dependencies were clean and pinned at start/end;
+356 imported-source pins and 25 manuscript files/artifacts passed.
+The frozen wrapper started at proof commit `bdfef37d344bb1c3d4403de31aae76d713a4b12d`; all
+1499 tested inputs match that commit's bytes and remained unchanged.
+Its ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `b4e33179a690f0eebd0456d762fa18a1d6695fc1473fdb03ba06f7924447c58e`.
+Miller 8.1 and 8.2 are complete, including exact all-representation domain/value
+uniformity and the full fixed-oracle interpretation. Miller 8.3–8.6 remains open.
+There are 58 closed rows among 62 numbered results; this is coverage, not a
+percentage of proof effort. Earlier arithmetic, numerical and cosheaf results
+remain proved. The separate report commit and Downloads copies are checked by
+the existing committed-byte delivery procedure.
 
 The first full replay of that core batch,
 `.codex-work/verify-20261106T112013Z-4QlbST`, completed all 905 Lean commands
@@ -449,11 +488,12 @@ Theorem 7.6 now has one total q:E→S with the stated independence at each
 externally consistent standard fiber, using the actual chosen PA enumeration.
 
 Proposition 7.8 and the actual numerical 08d application remain proved.
-Cosheaf 9.3 and its 9.4/9.6 identifications are complete. The six numbered
-Miller results 8.1–8.6 remain open, beginning with representation-independent
-definedness and values for every representation of a fixed sequence.
-There are 56 closed rows among 62 numbered results in the correspondence
-table; this is a coverage count, not a percentage of proof effort.
+Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1 and 8.2
+are also complete. The four numbered Miller results 8.3–8.6 remain open,
+beginning with the ordinary recursive cut reduction. The later split-target
+presentation, total-category realization and actual theory application remain
+distinct obligations. There are 58 closed rows among 62 numbered results in
+the correspondence table; this is coverage, not a percentage of proof effort.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
 consistency is not a PA proof of Γ consistency. The fixed universal
