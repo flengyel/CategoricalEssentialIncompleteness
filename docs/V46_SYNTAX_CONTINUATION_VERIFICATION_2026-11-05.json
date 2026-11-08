@@ -109911,5 +109911,67 @@
       "swaps": 0,
       "exit_status": 0
     }
+  },
+  "pending_realization_batch": {
+    "status": "UNDER_INTEGRATION_NOT_FULLY_VERIFIED",
+    "manuscript_version": 48,
+    "recorded_utc": "2026-11-08T17:59:50.366788+00:00",
+    "baseline_proof_commit": "f15eeb1f562d4d081edefb67821ca6b1a4ca57e9",
+    "completed_targeted_pairs": 78,
+    "production_commands_zero": 312,
+    "independent_strict_commands_zero": 156,
+    "canonical_files_hash_checked": 156,
+    "receipts": [
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-total-FROZEN.json",
+        "sha256": "800b9cd44bc72ee2789dbf496d16bb27de75f85c018bc45df08278789290d7b9"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-carrier-comparisons-FROZEN.json",
+        "sha256": "3c2c7eccddd44fb77b1bff620d1dab504770cffb3a1747153bb9f713b0647690"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-uniform-trees-FROZEN.json",
+        "sha256": "d0fea35dbf6d7e68b257075fdca8bb30136bf4b1306b3c65588d8c8d4cc0ed31"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-word-initiality-FROZEN.json",
+        "sha256": "0894d83598a3063c394aae56dfb2a9a4debba40e867f32ad118707c11433e011"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-lists-derivation-FROZEN.json",
+        "sha256": "b18afb1612cc816fbce4e05fca114db2dab23fcbae9ed89eb85c3bd6454f62d3"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-syntax-total-FROZEN.json",
+        "sha256": "b2f95335801fbb36f665f1ed8295856b94ddbf169dcf145375b92a4a839cabec"
+      }
+    ],
+    "new_universal_property_endpoints": [
+      "Miller.Syntax.Raw.parameterFoldHom",
+      "Miller.Syntax.Raw.parameterFoldHom_unique",
+      "Miller.Syntax.Raw.explicitWordInitial",
+      "Miller.Syntax.Raw.constantPolynomialSquare",
+      "Miller.Syntax.Raw.parameterWordAlgebraIso",
+      "Miller.Syntax.Raw.wordWithParametersInitial",
+      "Miller.Syntax.Raw.wordInitial",
+      "Miller.Lists.stable",
+      "Miller.Syntax.canonicalCategoricalSyntax",
+      "Miller.Derivation.derivationInitial",
+      "Miller.Derivation.wordInitial",
+      "Miller.Derivation.Canonical.derivationInitial",
+      "Miller.Derivation.Canonical.fold_underlying_unique",
+      "Miller.FirstOrder.proofInitial",
+      "Miller.FirstOrder.generatedSentence_least",
+      "Miller.FirstOrder.sentence_idempotent_represents"
+    ],
+    "central_imports_and_statement_coverage": true,
+    "axiom_audit": "PENDING_INTEGRATED_AUTOMATIC_AUDIT",
+    "full_verification": "PENDING",
+    "open_mathematics": [
+      "8.6 concrete named field-theory proof images and categorical application"
+    ],
+    "source_only_drafts_are_not_completion": true,
+    "mathematical_endpoint": "Proposition 8.5 concrete realization; integrated replay pending"
   }
 }

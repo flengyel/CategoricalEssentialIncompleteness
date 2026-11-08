@@ -515,6 +515,62 @@ comparison, and arithmetic incompleteness from its required categorical
 application. New source/type reviews and kernel runs here are author-side or
 collaborating-agent work, not an independent whole-paper certification.
 
+## Miller realization under integration, 8 November
+
+The actual uniform carrier category now has its total-splitting equivalence,
+regularity, extensivity and partial-map equivalence. The construction returns
+fiber-constant values when descending a surjection and the unique inverse
+value for a monomorphism. It does not supply arbitrary surjection sections.
+The public endpoints include `Miller.Total.pointPresentation`,
+`totalRegular`, `totalFinitaryExtensive`, `partialMapEquivalence` and
+`mono_has_partial_inverse`.
+
+For arbitrary uniform coefficient objects and every parameter object R,
+the literal word fold now commutes with every constructor. The graph of
+every actual algebra morphism satisfies the derived constructor root laws;
+structural word induction proves uniqueness among all such morphisms.
+`Miller.Syntax.Raw.parameterFoldHom_unique` and `explicitWordInitial` package
+that universal property. The constructed `constantPolynomialSquare` and
+`parameterWordAlgebraIso` transport it to the canonical parameter algebra,
+yielding `wordWithParametersInitial` and `wordInitial`. Operations remain
+arbitrary supported uniform morphisms, total on their actual carriers;
+no ordinary recursive or PA-total extension is required. Coefficient guards,
+named variables and ordered children are retained.
+
+The literal fixed-p target presentation also has a proved restriction
+comparison: `Miller.RelativeCarriers.splitEquivalence`, `morphism_iff` and
+`totalEquivalence`. `Miller.CarrierIdempotents.supportOrderIso` identifies
+idempotents on a carrier A with the appropriate semidecidable subsets of A;
+its top has support A. This does not assert fullness of the all-representation
+interpretation J into the fixed-oracle target.
+
+The stable list fold has nil/adjoin equations and uniqueness in every parameter slice; `Miller.Lists.stable` transports through the actual literal list-word algebra isomorphism. `Miller.Syntax.canonicalCategoricalSyntax` supplies the syntax/list instance in the actual total splitting. `Miller.Derivation.Canonical.derivationInitial` constructs the arbitrary-rule initial algebra there. Each child has its prescribed premise as conclusion; only an external parameter is shared. The successful pullback retains rule labels and ordered children, including nullary rules. Its `fold_underlying_unique` quantifies over every morphism satisfying the original conclusion and constructor equations. `Miller.FirstOrder.proofInitial` instantiates all seven schemes, generalization and ordered modus ponens for every axiom subobject. `generatedSentence_least` and `sentence_idempotent_represents` prove the actual least sentence image and its restriction idempotent. No initiality, consistency, decidability or soundness premise is added.
+
+These 78 producer/Checks pairs have 312 successful production commands and
+156 successful independent strict scratch checks, with all 156 canonical
+file hashes rechecked. They are imported by the main production entry point,
+`CurrentStatementAudit` and the retained `V46StatementAudit`. Automatic
+transitive axiom coverage and the full integrated replay remain pending.
+The source/version/archive/PDF gate passed for manuscript v48. The last full
+verification still selects proof commit
+`f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`; these new proofs are not covered by
+that earlier snapshot. Stable lists and arbitrary-rule derivations now complete
+the concrete canonical bundle of 8.5. The field-theory,
+named proof-image and categorical application proofs of 8.6 remain separate.
+
+The full baseline used 2:03:36 elapsed time, reported maximum RSS 3,115,672 KiB,
+zero swaps and exit 0. The new development encountered a heartbeat limit and
+a 45-second source-check cutoff in polynomial comparison proofs. Explicit
+morphism types, local composition lemmas and complete constructor diagrams
+removed those failures without increasing limits or disabling linters; the
+repaired producers and imported Checks passed. A final first-order statement check
+also encountered the 45-second cutoff. Making its dependent axiom binder explicit
+in each example preserved all 26 intended claims and passed the independent
+strict and production checks. A separate imported axiom control confirmed only
+the three permitted axioms; the full integrated audit remains pending. Retained logs show no confirmed
+out-of-memory failure. These resource observations do not measure aggregate
+host memory usage.
+
 ## Remaining mathematical dependencies
 
 The concrete Γ/PA axiom comparison, standard finite-proof bounds, elementary
@@ -532,11 +588,12 @@ externally consistent standard fiber, using the actual chosen PA enumeration.
 
 Proposition 7.8 and the actual numerical 08d application remain proved.
 Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1–8.4
-are complete. The remaining numbered Miller results are 8.5, the actual
-uniform total-category/syntax/list/derivation realization, and 8.6, its concrete
-theory and categorical application. The literal fixed-oracle carrier
-presentation remains a separate comparison. Ignored source bodies do not
-complete these obligations. There are 60 closed rows among 62 numbered results;
+are complete. Proposition 8.5 now has its actual carrier geometry, syntax/list and arbitrary-rule
+derivation realization, including the canonical first-order bundle. These targeted
+proofs await integrated verification. The remaining numbered Miller result is 8.6,
+its field theory, named substitution/proof images and categorical application.
+Ignored source-only bodies do not complete that obligation. There are 61 proved rows
+among 62 numbered results, with 8.5 awaiting integrated verification;
 this is coverage rather than a percentage of proof effort.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
