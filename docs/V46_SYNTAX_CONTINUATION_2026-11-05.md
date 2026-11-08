@@ -113,6 +113,42 @@ The integrated full verification below covers these completed
 comparisons and the actual numerical application. The preceding v47
 result and earlier v48 syntax checkpoint remain historical evidence.
 
+The cosheaf continuation starts from verified main/report commit
+`e5a95a4252edd1dceb6db997e4fa79b6098a9322` and numerical proof commit
+`bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`. All 1,431 inputs matched
+that completed 1,149-command checkpoint. The new batch proves Proposition
+9.3's actual initial-H presentation, identifies its conclusion image and
+endpoint theories in 9.4, and discharges the presentation comparison for
+9.6. It preserves the original finite-proof carrier and conclusion.
+
+Here S is the formula object, A and B are the two atomic axiom domains,
+Ax=S²+S³+S²+A+B, and M(Q,q) is the ordered modus-ponens premise pullback
+for q:Q→S.
+
+For every target slice algebra, the constructed fold is natural and total
+on its supported carrier, commutes with every constructor, and is unique
+among all algebra morphisms. The component construction evaluates the
+selected supported tree. It does not demand globally total ambient
+operations or a decidable or inhabited coefficient carrier. The literal
+WalkingSpan diagram in numerical tuples has the proved finite-power,
+ordered-premise, rule-label, constructor and five-summand axiom comparisons.
+The constructed initial conclusion image is the earlier t0, including its
+actual inclusion, leastness, atomic bounds and consistency under disjointness.
+Arbitrary c.e. axioms in either selected endpoint language are covered
+without a compatible family of extensions.
+
+All 13 producer/check pairs passed 52 production commands and 26 separate
+strict scratch-source checks before the combined statement and automatic
+axiom audits. Failed elaborations, timeouts and diagnostic snapshots remain
+preserved separately. Removing unused generated reassociation attributes,
+using generic categorical equations, and splitting large modules at actual
+proof boundaries resolved the measured elaboration costs. The development
+runner's per-command wall-time limit changed from 25 to 45 seconds; Lean
+heartbeat limits, the kernel,
+toolchain, dependency pins and mathematical hypotheses were unchanged.
+The user stopped a separate verification before the final targeted replay;
+its contribution to earlier timing problems is not established.
+
 ## Completed mathematics
 
 Prefixes below abbreviate `CategoricalEssentialIncompleteness.V46`.
@@ -143,8 +179,12 @@ statements, effective hypotheses and separate application obligations.
 | Arithmetic numeral dependency | `NamedArithmeticNumerals` proves the actual internal numeral graph, zero/successor equations and native primitive-recursive certificate. `NamedArithmeticNumeralCarriers.numeralCode_carrier_closed`, `numeralCode_closed` prove accepted term membership and numerical FV=0 for every internal input in every PA model, including nonstandard inputs. `NamedArithmeticNumerals.numeralMorphism` is the actual PA-total graph into closed terms; `numeralCode_standard` proves its exact standard external word. `translateFormula_freeVariables` and its unary specialization prove the external formula FV bound. `NamedArithmeticClosedSubstitution.substitutionFreeFor_closed`, `substitutionResult_closed`, `closedReplacement_PA` prove independent free-for and typed option success for every internal typed formula and typed FV-zero replacement, for arbitrary coefficients in every PA model. `NamedArithmeticFixedSubstitution.value_sentence` and the literal sentence realization below discharge the fixed-formula sentence-range obligation. |
 | 7.8, numerical realization | `NumericalDerivationInterpretation.interpretationAlgebraIso`, `mappedDerivationInitial` and both `interpretationCodeIso` word equations compare the actual PA and numerical inference algebras. `NumericalArithmetic.RuleComparison.proofIso`, `branch_constructor`, `inverse_branch_constructor`, `input_label` and `input_children` give the concrete inverse relabellings. `SentenceProofCodes.isPullback`, `ProofComparison.rho_conclusion`, `fixed_provability`, `canonical_forward_program` and `canonical_backward_program` identify the actual sentence image and both canonical computable directions. The literal syntax, substitution, sentence and parameter-stability comparisons are retained. |
 | Unnumbered 08d, actual numerical application | `NumericalArithmetic.Incompleteness.theorem_range`, `theorem_support`, `pa_theorems_le`, `domain_inclusions`, `theorem_refutation_disjoint`, `categorical_incompleteness` and `syntax_categorical_incompleteness` identify the actual constructed proof-conclusion image, derive the three diagonal bounds from printed PA-axiom inclusion, use external consistency for disjointness, and apply Corollary 4.3 on both literal and chosen syntax sentence objects. |
+| 9.3, actual cosheaf universal property | `ForkInference.inferenceIso` compares the actual ordered rule pullbacks to Ax+M. `ForkDerivation.Component.algebraIso` and `initial` prove the original component proof algebra initial. `constructorComponents_natural`, `foldComponents_natural`, `foldHom`, `fold_unique`, `inferenceInitial`, `printedInitial` and `printed_unique` construct and characterize the global fold. `ForkDerivation.Diagram.shapedInitial` and `shaped_unique` give the printed five-summand presentation on the same realized old carrier and conclusion, for every target slice algebra. |
+| 9.4, actual theorem image | `ForkDerivationImages.theoremRange_eq_t0`, `theoremSubobject_isLeast`, `proof_presentation` and `categoricalTheory_eq` identify the constructed initial conclusion image and its bounds. `LiteralDiagram.imageIso`, `imageIso_hom_inclusion`, `theoremObject_eq_t0_domain` and `shaped_theoremSubobject_isLeast` supply the literal numerical image, inclusion and leastness. Consistency retains the printed disjointness hypothesis. |
+| 9.6, arbitrary endpoint axiom extensions | `ForkDerivationImages.endpoint_axiom_extension_incomplete` applies to an arbitrary selected endpoint, arbitrary c.e. axiom set, its actual finite derivability relation and ordinary syntactic consistency. The constructed image is identified with the endpoint theory; no compatible extension family is required. |
 
-Initiality assumes only T extending PA, with arbitrary coefficient predicates,
+For the predicate and TotalSplit constructions, initiality assumes only T
+extending PA, with arbitrary coefficient predicates,
 arity bounds, parameters, target families and actual algebra operations proved
 supported and total in T. Target operations need not be primitive recursive
 or PA-provably total. No consistency, c.e., soundness or standardness hypothesis
@@ -341,23 +381,23 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
 The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
-existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261107T204745Z-Fc18Iv`.
-All 1149 commands passed: combined build, both statement audits,
+existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T032040Z-4hNYm7`.
+All 1175 commands passed: combined build, both statement audits,
 every strict source/check replay and transitive axioms. The audit retains
-all 1,274 earlier declarations and covers 16,416 current-production declarations in
-589 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
+all 1,274 earlier declarations and covers 17,632 current-production declarations in
+602 production modules. Its axiom union is exactly `propext`, `Quot.sound`,
 `Classical.choice`. All 16 dependencies were clean and pinned at start/end;
 356 imported-source pins and 25 current manuscript files and artifacts passed.
-The wrapper started with HEAD `a674168b60a06dcf4a379ef3da24673c0fcec8b3`.
-The proof batch was committed during the frozen replay after the targeted
+The wrapper started with HEAD `2839c102ede5feb5206da5e2977f89e20ef24505`.
+The proof batch was committed before the frozen replay after the targeted
 proof, statement and combined axiom checks passed. All
-1431 tested inputs match its bytes at proof commit
-`bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`, whose ordinary main push and remote ref were confirmed.
-Source-snapshot SHA-256: `b2840cb45f3b570665e6481ab12a8d8c3ea00ac3d70dbb5099b5df774f078689`.
-Proposition 7.8 and the unnumbered08d numerical categorical application
-are complete. The remaining realizations are Miller 8.1–8.6 and
-cosheaf 9.3, with 9.4/9.6 presentation identifications. The next authorized
-bounded batch is 9.3; whole-manuscript completion is not claimed.
+1457 tested inputs match its bytes at proof commit
+`2839c102ede5feb5206da5e2977f89e20ef24505`, whose ordinary main push and remote ref were confirmed.
+Source-snapshot SHA-256: `b313693c30cbe32d74aad4f1c4dc2b0cba804aead02582198da0081204cf7759`.
+Proposition 9.3 and the 9.4/9.6 image and endpoint identifications are
+complete. Proposition 7.8 and the numerical application remain proved.
+The six Miller results 8.1–8.6 remain open; whole-manuscript completion
+is not claimed.
 The separate report commit and Downloads copies are checked by the existing
 committed-byte delivery procedure.
 
@@ -408,9 +448,12 @@ A₀/D/P₀ coordinates and selected-program PA numeral-Prov equivalence.
 Theorem 7.6 now has one total q:E→S with the stated independence at each
 externally consistent standard fiber, using the actual chosen PA enumeration.
 
-Proposition 7.8 and the actual numerical 08d application are complete. The
-next bounded proof batch is cosheaf 9.3 and its 9.4/9.6 identifications;
-Miller 8.1–8.6 remains a separate substantial realization.
+Proposition 7.8 and the actual numerical 08d application remain proved.
+Cosheaf 9.3 and its 9.4/9.6 identifications are complete. The six numbered
+Miller results 8.1–8.6 remain open, beginning with representation-independent
+definedness and values for every representation of a fixed sequence.
+There are 56 closed rows among 62 numbered results in the correspondence
+table; this is a coverage count, not a percentage of proof effort.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
 consistency is not a PA proof of Γ consistency. The fixed universal

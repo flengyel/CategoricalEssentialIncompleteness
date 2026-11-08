@@ -1,15 +1,24 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the concrete numerical arithmetic source/check batch after main
-`a674168`, against the manifest-selected v48 manuscript. Earlier
-verified proofs and their source pins are preserved. Codex made no manuscript
-edits. The independent v48 review inspected `c51c34d` and recorded evidence;
-it did not independently rerun Lean. This author-side review concerns the
-changed endpoints, their expanded statement types and the verification
-record. It does not claim whole-manuscript completion or independent kernel
-certification.
+Scope: the concrete cosheaf inference, diagram, image and endpoint batch after main
+`e5a95a4`, against the manifest-selected current manuscript. Earlier verified
+proofs, toolchain, dependencies and manuscript files are preserved. Codex made
+no manuscript edits. This author-side review concerns the changed endpoints
+and expanded intended-statement checks; it is not an independent whole-paper
+or kernel certification. The independent v48 review of `c51c34d` did not
+independently rerun Lean.
 
-The numerical batch completes Proposition 7.8 and the unnumbered 08d
+
+The present batch proves the original-carrier cosheaf algebra initial among
+all target slice algebras. Its constructor and fold naturality are derived
+from the supplied global structure morphism. The literal numerical diagram
+and five-summand axiom comparisons preserve constructors and conclusion;
+the actual initial conclusion image is the earlier t0. These comparisons
+discharge 9.3, 9.4 and 9.6, including arbitrary c.e. axioms at a selected
+endpoint. The intended-statement checks name the actual carrier, conclusion,
+all-target uniqueness, image inclusion and endpoint extension hypotheses.
+
+The preceding numerical batch completed Proposition 7.8 and the unnumbered 08d
 application. The original proof isomorphism preserves constructors,
 conclusion and both literal proof words. Concrete arithmetic rule-label
 bijections preserve ordered premises and conclusions; their inverse tree
@@ -92,12 +101,15 @@ The application dependencies below still prevent a whole-current-manuscript comp
    independence assertion uses N. The all-PA-model numeral-Prov statement
    above is a distinct presentation theorem.
 
-4. **Later applications remain separate.** Proposition 7.8 and the actual
-   numerical 08d application are complete. The next bounded obligation is
-   cosheaf derivation initiality 9.3 and its 9.4/9.6 presentation
-   identifications. Miller representation independence 8.1–8.6 remains a
-   separate realization. Numerical tuple comparison 7.7 is proved; rows
-   9.1 and B.10 retain their corrected wording.
+4. **The cosheaf universal property and applications are complete.** The actual
+   old proof carrier has constructor and conclusion comparisons, a natural
+   fold into every supplied slice algebra and uniqueness among all algebra
+   morphisms. The literal numerical diagram and five-summand axiom comparisons
+   transport this initiality. Its actual conclusion image is the least closed
+   subfunctor and the previous t0; the selected endpoint extension quantifies
+   over arbitrary c.e. axioms without a compatible-family premise. Miller
+   8.1–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
+   numerical tuple comparison.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
 Θ-preimage and partial source conditional contradict categorical Corollary
@@ -118,7 +130,7 @@ existing generated-theory data. They do not supply an assumed evaluator,
 initiality or soundness factor. Targeted diagnostics and all failed
 snapshots/logs are preserved. The production proofs use the existing strict checker and permitted-axiom audit.
 
-**The indexed proof layers have targeted kernel evidence.** The numeral
+**The earlier indexed proof layers have targeted kernel evidence.** The numeral
 split stores maps together with generically proved primitive and copair
 laws. Its checked opaque body constructs those laws; it does not postulate
 them. The inference comparisons derive from original ordered-premise and
@@ -202,13 +214,13 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full v48 verification exited 0 in `.codex-work/verify-20261107T204745Z-Fc18Iv`;
-all 1149 commands passed. The three permitted axioms and clean
-pinned dependencies were checked. All 1431 tested input hashes
-match proof commit `bcf6db5127e8507d1cbfe7975879a2f97fb9a7b2`, whose ordinary main push
-and remote ref were confirmed. Proposition 7.8 and the actual 08d
-numerical application are complete. The delivery receipt
-records the report commit and all six copied-byte hashes.
+Full v48 verification exited 0 in `.codex-work/verify-20261108T032040Z-4hNYm7`;
+all 1175 commands passed. The permitted axiom union and clean pinned dependencies
+were checked. All 1457 tested inputs match proof commit
+`2839c102ede5feb5206da5e2977f89e20ef24505`, whose ordinary main push and remote
+ref were confirmed. The 9.3/9.4/9.6 obligations are complete; Miller 8.1–8.6
+remains open. The delivery receipt records the report commit and all six
+copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
 commands: the lexical gate matched an English word in a documentation
