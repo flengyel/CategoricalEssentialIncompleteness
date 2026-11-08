@@ -571,6 +571,54 @@ the three permitted axioms; the full integrated audit remains pending. Retained 
 out-of-memory failure. These resource observations do not measure aggregate
 host memory usage.
 
+## Concrete Miller field and axiom comparisons, 8 November
+
+The next eighteen producer/Checks pairs have 72 successful production commands
+and 36 successful independent strict source checks. The first five compare the
+literal word and list algebras and construct `presentedSyntax` and
+`canonicalPresentedSyntax`. They derive target initiality independently; the
+predicate interpretation F is not assumed faithful or to preserve initiality.
+
+The eleven field-theory pairs construct the arity-two ordered-field language,
+primitive-recursive membership in all literal sentence words, the actual
+recursive RCF axiom words and the uniform rational-cut enumeration. The exact
+sentence is `2*c_n<1`. `RealClosedBounds.lower_cut_gamma_theta` and
+`upper_cut_gamma_negtheta` construct finite native Gamma proofs under the
+printed derivability-extension condition. `extends_iff_proof_transport` uses
+finite axiom replacement; it adds no literal axiom-inclusion or Gamma-truth
+premise. The negative bound uses the actual named substitution instances.
+
+`RealClosedRaw.modelsRCF_iff_exists_realization` starts with an arbitrary total
+named interpretation, extracts all sixteen finite field/order matrices, and
+constructs a real-closed ordered field on the same carrier. Its function,
+constant and relation equations retain every original interpretation value.
+No supplied field or order structure is a premise. The real field with the
+actual constants a(n) models the selected T_a words, and actual finite-proof
+soundness proves native consistency of T_a. These semantic constructions do
+not assume truth of an arbitrary consistent Gamma.
+
+The last two pairs construct the actual uniformly semidecidable axiom
+subobjects and genuine sentence-word pullbacks. `SentenceAxiomPullbacks.givenPresentation`
+recovers every given axiom mono by its image codes. Sentence-point codes and
+formula words remain distinct. The finite carrier alone is represented by a
+PA predicate; arbitrary Gamma is not assumed PA definable. Inverses are used
+for monomorphisms, with no section of a proof-conclusion image.
+
+The immutable targeted receipts are `miller-named-syntax-first5-FROZEN.json`,
+`miller-field-theory-FROZEN.json` and `miller-axiom-subobjects-FROZEN.json` in
+`.codex-work/v46-concrete-named-comparison/`. Main and both statement audits
+import the completed pairs; full automatic axiom coverage and serialized replay
+are pending. These components do not close Theorem 8.6. Its remaining named
+substitution/admissibility, native derivation-image and canonical comparisons,
+and the final categorical application are still open.
+
+An uncompiled application draft used all-formula native consistency, stronger
+than the manuscript's sentence consistency. The source-only repair restricts
+it to closed sentences and proves the intended equivalence with the actual
+sentence-idempotent disjointness equation. That repair and its direct printed
+application endpoint remain uncompiled, and are not counted as completed.
+No manuscript statement was changed.
+
 ## Remaining mathematical dependencies
 
 The concrete Γ/PA axiom comparison, standard finite-proof bounds, elementary

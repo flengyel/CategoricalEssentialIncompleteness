@@ -109973,5 +109973,39 @@
     ],
     "source_only_drafts_are_not_completion": true,
     "mathematical_endpoint": "Proposition 8.5 concrete realization; integrated replay pending"
+  },
+  "pending_miller_application_batch": {
+    "status": "TARGETED_COMPONENTS_VERIFIED_FINAL_APPLICATION_OPEN",
+    "manuscript_version": 48,
+    "recorded_utc": "2026-11-08T19:16:05.279133+00:00",
+    "baseline_proof_commit": "932dffd",
+    "pairs": 18,
+    "canonical_files": 36,
+    "production_commands_zero": 72,
+    "strict_scratch_commands_zero": 36,
+    "receipts": [
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-named-syntax-first5-FROZEN.json",
+        "sha256": "ba7d60dca8353a719981a8ac7b09b1437e7854d7afe55d534ea3ca68d50c7d01"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-field-theory-FROZEN.json",
+        "sha256": "0621a4a80c77d82e7902242dc3aaf50a308ae3f31e6c39cfcf044ed975fef09d"
+      },
+      {
+        "path": ".codex-work/v46-concrete-named-comparison/miller-axiom-subobjects-FROZEN.json",
+        "sha256": "eb214459c5c5d67a934e8ed07ea5e4a3142cf218eb88fbd00b300ffd9dd6a794"
+      }
+    ],
+    "main_and_statement_imports": true,
+    "full_verification": "PENDING_INTEGRATED_REPLAY",
+    "axiom_audit": "PENDING_AUTOMATIC_ALL_PRODUCTION_COVERAGE",
+    "remaining": [
+      "Named substitution/admissibility and concrete derivation-image comparison",
+      "Canonical syntax/sentence/inference/derivation-image comparison",
+      "Actual Corollary4.3 application with proved sentence-consistency correspondence"
+    ],
+    "source_only_consistency_repair": ".codex-work/v46-concrete-named-comparison/miller-sentence-consistency-SOURCE-ONLY.json",
+    "not_whole_row_completion": true
   }
 }
