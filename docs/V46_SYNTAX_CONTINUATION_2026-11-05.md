@@ -645,6 +645,8 @@ Each of the five frozen pair receipts records two successful strict scratch comm
 
 Theorem 8.6 remains open. The remaining principal steps are the named substitution/admissibility and finite native-proof/sentence-image comparisons for F, the remaining canonical sentence/inference/derivation-image transport with recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application. No truth hypothesis on Γ or uniform proof selector is supplied. The five targeted pairs do not change the count of completed numbered results.
 
+Five additional producer/Checks pairs now have 30 successful targeted commands: the actual Option constructor cases, all seven syntax constructors and both algebra structure equations, substitution parameter/state charts, and every quantified and nonquantified substitution branch. In particular, `equal_name_keeps_original_with_recursive_failure` proves the equal-binder branch retains the original body even when the recursive result is `None`. These arbitrary-coefficient equations are imported by the production and intended-statement entry points. They do not yet identify the full substitution fold: parameter-slice transport, its algebra morphism and uniqueness remain pending. The two post-full batches comprise ten pairs and 60 successful targeted commands. New integrated full verification remains pending, and the recorded full-run source snapshot and counts remain unchanged.
+
 ## Remaining mathematical dependencies
 
 The concrete Γ/PA axiom comparison, standard finite-proof bounds, elementary
