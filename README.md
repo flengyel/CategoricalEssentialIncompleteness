@@ -23,15 +23,15 @@ three-point space realizes propositional logic. It gives two propositional
 theories whose consistent computably enumerable extensions in the same
 language are incomplete.
 
-The current manuscript and Lean formalization target are **version 49**,
+The current manuscript and Lean formalization target are **version 50**,
 dated 9 November 2026.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v49.pdf](manuscript/logical_consequence_and_essential_incompleteness_v49.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v50.pdf](manuscript/logical_consequence_and_essential_incompleteness_v50.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v49_source.zip](manuscript/logical_consequence_v49_source.zip) |
+| Complete source ZIP | [logical_consequence_v50_source.zip](manuscript/logical_consequence_v50_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
 
@@ -45,11 +45,11 @@ and Git blob hashes.
 ## Lean status
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V49.md](FORMALIZATION_STATUS_V49.md). It records all 62
+[FORMALIZATION_STATUS_V50.md](FORMALIZATION_STATUS_V50.md). It records all 62
 numbered results and three definitions and their Lean declarations. The earlier [v5 table](FORMALIZATION_STATUS.md) records the
 retained baseline.
 
-All 62 numbered results have proofs. The [continuation report](docs/V46_SYNTAX_CONTINUATION_2026-11-05.md) records the completed constructions and the successful integrated v48 verification at proof commit `d437827275d64f6500e6a3bca2ee318420d11edd`. Version 49 changes terminology for categorical morphisms; its mathematical statements and approved abstract are unchanged. The [Palomar editorial report](docs/PALOMAR_EDITORIAL_REVIEW_2026-11-09.md) records the subsequent source port and package preparation, whose verification is in progress.
+All 62 numbered results have proofs. The [continuation report](docs/V46_SYNTAX_CONTINUATION_2026-11-05.md) records the completed constructions and the successful integrated v48 verification at proof commit `d437827275d64f6500e6a3bca2ee318420d11edd`. Version 50 clarifies the prose while preserving the mathematical statements and approved abstract. The [v50 prose review](docs/reviews/V50_MANUSCRIPT_PROSE_2026-11-09.md) records the edits and manuscript checks. The [Palomar editorial report](docs/PALOMAR_EDITORIAL_REVIEW_2026-11-09.md) records the subsequent source port and package preparation, whose verification is in progress.
 
 Lean verification follows the current manuscript. Every manuscript revision
 must update `MANUSCRIPT_CURRENT.json`, the correspondence table, source archive,

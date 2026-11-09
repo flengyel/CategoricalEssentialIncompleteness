@@ -419,8 +419,8 @@ Lemma~\ref{lem:syntactic-derivation-initiality} with these rule labels.
 If $R_n$ has dimension $m_n$, store a label as a number
 $r\in\widehat{R_n}$ and decode it by $\kappa_{m_n}^{-1}$
 before applying $p_n$ or $q_n$. A code is valid when each stored
-label has this membership and the ordered children's conclusions
-are the premises of its decoded rule instance.
+label belongs to $\widehat{R_n}$ for its node's arity $n$ and the
+ordered children's conclusions are the premises of its decoded rule instance.
 There are finitely many nodes. Dovetailing their membership and
 computation tests semidecides validity, giving an object
 $P_A^{\mathrm{all}}$ of dimension one whose carrier is the
@@ -463,8 +463,8 @@ axioms, use the same axiom predicate as in
 Section~\ref{subsec:arithmetic-internal-comparison}, with $\Gamma=T$.
 Let
 $c_T^{\mathrm{all}}:\mathrm{Prf}_T^{\mathrm{all}}\to\Fm$
-be the full derivation conclusion of the proposition. Its sentence
-restriction is the pullback in $\mathcal C_{\mathrm{rec}}$
+be the conclusion morphism for all formulas from the proposition.
+Its restriction to sentence conclusions is the pullback in $\mathcal C_{\mathrm{rec}}$
 \[
 \begin{tikzcd}
  \mathrm{Prf}_T\arrow[r,hook]\arrow[d,"c_T"'] &

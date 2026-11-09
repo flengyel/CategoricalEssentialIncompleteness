@@ -58,7 +58,7 @@ test. Here $\pi_0,\pi_1$ are the projections of the fixed numerical
 pairing.
 
 PA proves by induction on the number of tests that a halting run
-returns the first successful test's first component. Conversely,
+returns the first component of the least successful code. Conversely,
 if there is a successful test, the least such code supplies a finite
 halting computation. Formalized least-number search and the
 computation coding therefore prove both displayed assertions.
@@ -151,8 +151,8 @@ program chooses the first coded witness of a preimage. Its graph
 is PA-provably functional, even though the transposed relation
 need not be functional. Provable surjectivity makes its domain
 $D$, and the support of $\varepsilon$ makes its outputs belong
-to $C$. It therefore defines $\sigma:D\to C$. The search
-correctness statement and functionality of $\varepsilon$ give
+to $C$. It therefore defines $\sigma:D\to C$. The correctness of
+the search and functionality of $\varepsilon$ give
 $\varepsilon\sigma=1_D$.
 
 Such a split epimorphism is the coequalizer of its kernel pair.
@@ -360,13 +360,13 @@ $\operatorname{Fm}(a)$ has the analogous conditions for formulas,
 including membership in $\Pi_k$ for relation labels and in $V$ for
 quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
 formulas $\Sigma_1$ by existentially quantifying membership witnesses.
-The constructor decomposition equivalences for these carrier
+The equivalences describing constructor decomposition for these carrier
 formulas are provable in $\mathrm{PA}$. For example,
 $\operatorname{Fm}(\operatorname{all}(x,a))
 \longleftrightarrow V(x)\land\operatorname{Fm}(a)$,
 where $\operatorname{all}$ is the numerical universal-quantifier
 constructor. The corresponding equivalences for a function or relation
-constructor include its coefficient-carrier predicate and the
+constructor include the predicate for its coefficient object and the
 carrier predicates of its ordered children.
 Write
 \[
@@ -420,11 +420,11 @@ are its label, the values already assigned to its children, and
 the fixed parameter $p$. Require the appropriate carrier and
 projection conditions for every assigned value. The last assigned
 value is the displayed output. Include $P(p)$ and the appropriate
-syntax-carrier predicate in the relation.
+term or formula predicate in the relation.
 
 All these requirements are $\Sigma_1$. Boundedly many carrier and
 projection requirements are combined using
-Lemma~\ref{lem:st-finite-sigma1}; the operation-trace requirements
+Lemma~\ref{lem:st-finite-sigma1}; the requirements on operation traces
 are decidable checks on the recorded traces. Existentially
 quantifying over the entire record therefore gives a
 $\Sigma_1$ formula.
@@ -619,7 +619,7 @@ test because $\operatorname{FV}(\eta x)=[x]$; absence of $x$
 passes it because deletion of the distinct variable $y$ does not
 remove $x$. The induction hypothesis supplies successful unchanged
 results for the bodies in both cases. These are the
-source-restricted graph equations at the end of
+graph equations restricted to their sources at the end of
 Appendix~\ref{app:substitution}.
 \end{proof}
 
@@ -691,7 +691,7 @@ Here $m_j$ and $r_j$ are the arity and label of the root of
 $d_j$.  For $n=0$, the condition in \((*)\) is
 $G_{u_0}(r,0)$.
 Lemma~\ref{lem:st-finite-sigma1} makes $P$ a $\Sigma_1$
-formula, with node-membership and computation witnesses existentially
+formula, with witnesses for node membership and computations existentially
 quantified.
 
 For a tree $d$ whose root has arity $n$ and label $r$, put
@@ -744,7 +744,7 @@ $y_1,\ldots,y_n$ and its own value is $y'$, then
 \]
 The tag and tuple code here is the chosen presentation of the
 $n$th summand of $H(Q,q)$.  This definition is $\Sigma_1$ by
-the finite-sequence argument above.  The functionality of $G_a$
+the argument for finite sequences above.  The functionality of $G_a$
 proves the functionality of $E_a$ in $\PA$: compare two value
 lists in their children-before-parent order and use induction on
 the position in the list.

@@ -1,0 +1,159 @@
+{
+  "baseline_commit": "c5d7d0e3a6b64d7546002a908d79c2a11db2a9dc",
+  "version": 50,
+  "changed_tex": [
+    "manuscript/latex/appendices/b-three-point-cosheaves.tex",
+    "manuscript/latex/appendices/d-faithful-family.tex",
+    "manuscript/latex/preamble.tex",
+    "manuscript/latex/sections/01-introduction.tex",
+    "manuscript/latex/sections/04-miller-sequences.tex",
+    "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+    "manuscript/latex/sections/05a-internal-syntax.tex",
+    "manuscript/latex/sections/06-interpretation-in-models.tex",
+    "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+    "manuscript/latex/sections/08a-uniform-theories.tex",
+    "manuscript/latex/sections/08c-numerical-realization.tex",
+    "manuscript/latex/sections/09-three-point-space.tex"
+  ],
+  "statement_prose_changes": [
+    {
+      "path": "manuscript/latex/appendices/d-faithful-family.tex",
+      "before": "\\label{cor:pair}\nLet $T\\supseteq\\PA$ be consistent.\nFix $U=\\omega$ and a Turing morphism\n$\\tau:U\\times U\\rightharpoonup U$ in $S_T$.\nChoose an isomorphism $b_0:U\\to U+U$ in $S_{\\PA}$ and put\n$b=Q_{\\PA,T}(b_0)$. Define\n\\[\n d=\\tau\\Delta_U,\\qquad\n a_0=(bd)^*(1_U+0_U),\\qquad a_1=(bd)^*(0_U+1_U).\n\\]\nThen $a_0,a_1$ are inseparable in $S_T$. For every consistent\nextension $T'\\supseteq T$, their images under $Q_{T,T'}$ are the\nidentically defined inseparable pair in $S_{T'}$.\n",
+      "after": "\\label{cor:pair}\nLet $T\\supseteq\\PA$ be consistent.\nFix $U=\\omega$ and a Turing morphism\n$\\tau:U\\times U\\rightharpoonup U$ in $S_T$.\nChoose an isomorphism $b_0:U\\to U+U$ in $S_{\\PA}$ and put\n$b=Q_{\\PA,T}(b_0)$. Define\n\\[\n d=\\tau\\Delta_U,\\qquad\n a_0=(bd)^*(1_U+0_U),\\qquad a_1=(bd)^*(0_U+1_U).\n\\]\nThen $a_0,a_1$ are inseparable in $S_T$. For every consistent\nextension $T'\\supseteq T$, their images under $Q_{T,T'}$ form the\ninseparable pair defined by the same formulas in $S_{T'}$.\n"
+    }
+  ],
+  "inline_math_additions": [
+    {
+      "path": "manuscript/latex/appendices/d-faithful-family.tex",
+      "operation": "insert",
+      "before": [],
+      "after": [
+        "$T$"
+      ]
+    },
+    {
+      "path": "manuscript/latex/sections/04-miller-sequences.tex",
+      "operation": "insert",
+      "before": [],
+      "after": [
+        "$\\tau_z$"
+      ]
+    },
+    {
+      "path": "manuscript/latex/sections/08c-numerical-realization.tex",
+      "operation": "insert",
+      "before": [],
+      "after": [
+        "$\\widehat{R_n}$",
+        "$n$"
+      ]
+    }
+  ],
+  "statement_counts": {
+    "definition": 3,
+    "proposition": 24,
+    "theorem": 13,
+    "lemma": 16,
+    "corollary": 9
+  },
+  "displayed_math_unchanged": true,
+  "labels_references_citations_unchanged": true,
+  "approved_abstract_unchanged": true,
+  "bibliography_unchanged": true,
+  "manuscript_verifier": {
+    "success": true,
+    "scope": "manuscript-only",
+    "commands": [],
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "current_manuscript": {
+      "version": 50,
+      "entry_point": "manuscript/latex/main.tex",
+      "correspondence": "FORMALIZATION_STATUS_V50.md",
+      "files_verified": [
+        "manuscript/latex/abstract.tex",
+        "manuscript/latex/appendices/a-syntax-and-theories.tex",
+        "manuscript/latex/appendices/b-three-point-cosheaves.tex",
+        "manuscript/latex/appendices/c-section-lifting.tex",
+        "manuscript/latex/appendices/d-faithful-family.tex",
+        "manuscript/latex/bibliography.tex",
+        "manuscript/latex/main.pdf",
+        "manuscript/latex/main.tex",
+        "manuscript/latex/preamble.tex",
+        "manuscript/latex/sections/01-introduction.tex",
+        "manuscript/latex/sections/02-categorical-preliminaries.tex",
+        "manuscript/latex/sections/03-sections-and-inseparability.tex",
+        "manuscript/latex/sections/03a-internal-theories.tex",
+        "manuscript/latex/sections/04-miller-sequences.tex",
+        "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+        "manuscript/latex/sections/05a-internal-syntax.tex",
+        "manuscript/latex/sections/06-interpretation-in-models.tex",
+        "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+        "manuscript/latex/sections/08a-uniform-theories.tex",
+        "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+        "manuscript/latex/sections/08c-numerical-realization.tex",
+        "manuscript/latex/sections/08d-numerical-incompleteness.tex",
+        "manuscript/latex/sections/09-three-point-space.tex",
+        "manuscript/logical_consequence_and_essential_incompleteness_v50.pdf",
+        "manuscript/logical_consequence_v50_source.zip"
+      ],
+      "tex_files": 22,
+      "source_archive_matches": true,
+      "pdf_copy_matches": true,
+      "sha256": {
+        "FORMALIZATION_STATUS_V50.md": "45966fa7cb500b49b9dce68749bb8f20e6f4941b35b25d641e90f401c707ab53",
+        "MANUSCRIPT_CURRENT.json": "a5d73a18c32775df26f8159733f453e268750554d511f720d5db9c8817e507bc",
+        "manuscript/latex/abstract.tex": "4e1419c03340c54acf83b02ea990d0d64deb6e935b7e23c835f4d96d0c9bb3cf",
+        "manuscript/latex/appendices/a-syntax-and-theories.tex": "f252bbfb0aaad19251f7a45bb5113de9d535d8101febaf85a2a0d208750e2d3a",
+        "manuscript/latex/appendices/b-three-point-cosheaves.tex": "67a2f0bd5a9ba2728dd10be8cc0523e5a808700a71fb2607b160672591a9df63",
+        "manuscript/latex/appendices/c-section-lifting.tex": "99080bdc9c2ca504209f62d901949df9c7baed7801dba716b9c67231b129f234",
+        "manuscript/latex/appendices/d-faithful-family.tex": "1fc426facba97d2cd681d041cde2bc428b15c8979b6bfc1b6bd11154899541d3",
+        "manuscript/latex/bibliography.tex": "96b58f4e7cc07d69f2add5bb42466ccc6437355d05383360e0582c99f196a172",
+        "manuscript/latex/main.pdf": "52571a6e5d1b5cd338f98228ccc746eb1453d5967fca6d67cd38363e7cfb5d6a",
+        "manuscript/latex/main.tex": "441faf69227ac9cdd305bf550d175e2a686455590871e6d51186d92ebf79af08",
+        "manuscript/latex/preamble.tex": "0ad3ae2e6520fa849218d13be7f57f7772b56a5c89b5f5fde24822127a591557",
+        "manuscript/latex/sections/01-introduction.tex": "4fbc440c9c5f4193e21c2fe01ad1a97b3e7d3521e09e95e44a686082fe712843",
+        "manuscript/latex/sections/02-categorical-preliminaries.tex": "45bf1ea27ec7d4da19c2d033b002ecb29fe88c86a66f3abfedc79727b86f1b02",
+        "manuscript/latex/sections/03-sections-and-inseparability.tex": "2a7483e37a7b41eb5976d22b5fc0d1518db0bd4301a5a0a9dc9fd024175546c3",
+        "manuscript/latex/sections/03a-internal-theories.tex": "9dde3c6215d0923bc8a9d5f0d52b87510ed3a20bbe22ea7144bcb5d249ed8662",
+        "manuscript/latex/sections/04-miller-sequences.tex": "11251b9b91dad5a7c2500fe821fb853c48798c524126bb80d5c207367c88d13c",
+        "manuscript/latex/sections/05-syntactic-recursion-category.tex": "b158ab85e1079c97102f1d1a15737c04a5540328fe73f3a0dca81affcebcf1c1",
+        "manuscript/latex/sections/05a-internal-syntax.tex": "204a18d2e1975402d45a4520a6406f02734b214ad185b9ac4fa34918468f6d61",
+        "manuscript/latex/sections/06-interpretation-in-models.tex": "4db64237721c68d91dfa5762a782472b4e8b58e8fa2e43c65534458f726e3004",
+        "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": "526e95718e0af2f4ab1801d883f575788910b5ada49a35a786e606812607cab6",
+        "manuscript/latex/sections/08a-uniform-theories.tex": "fa326cdcc72a395ce0bb33aecfd09d51d7534e903eaa1f5947eb047f07a07ba3",
+        "manuscript/latex/sections/08b-uniform-independent-sentences.tex": "d1b67b9b1834efb684071972297f624f3d018ca643904fd98273774670c0b1d0",
+        "manuscript/latex/sections/08c-numerical-realization.tex": "d52d31c07951a8978f2c826cf96bebf061a8f07943fa67f7c9270757b0ffa089",
+        "manuscript/latex/sections/08d-numerical-incompleteness.tex": "691e4984e083fbd825496de5c86a2c8319091c142bcbf7081a4d1184e0fa364b",
+        "manuscript/latex/sections/09-three-point-space.tex": "7c30d0e652cf5905338e1bcddc2232a8a32031a9dfd6dcbe4a6571de7a437321",
+        "manuscript/logical_consequence_and_essential_incompleteness_v50.pdf": "52571a6e5d1b5cd338f98228ccc746eb1453d5967fca6d67cd38363e7cfb5d6a",
+        "manuscript/logical_consequence_v50_source.zip": "e78a466e6d8e54131cb9bdf22ae9977b3b48640ab9586005be2833a825a9f2c8"
+      }
+    }
+  },
+  "pdf": {
+    "pages": 73,
+    "rendered_pages_inspected": [
+      1,
+      12,
+      16,
+      27,
+      31,
+      38,
+      42,
+      50,
+      61,
+      62,
+      70,
+      71
+    ],
+    "sha256": "52571a6e5d1b5cd338f98228ccc746eb1453d5967fca6d67cd38363e7cfb5d6a",
+    "build_exit_code": 0,
+    "warnings": []
+  },
+  "lean_source_changed": false,
+  "lean_run_performed": false
+}
