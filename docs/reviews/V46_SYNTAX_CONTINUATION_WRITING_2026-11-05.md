@@ -1,11 +1,11 @@
 # Writing review of the continuation records
 
-Scope: the full 86b Miller realization and its 22 subsequent targeted pairs,
-including literal Γ reflection, finite-support Gen/ordered MP and framed actual
-substitution/Option/equal-binder equations, against manuscript v48. Full native
-term/formula induction, proof-image equivalence and the final 4.3 application
-remain open. This is source/type and recorded-evidence reporting; no new full
-Lean replay, independent replay or whole-paper completion is claimed.
+Scope: the full 86b Miller realization and 28 later targeted pairs through
+actual standard/frame node geometry, operation transport and unconditional
+native term substitution. Actual formula Option/admissibility, Γ proof-image,
+canonical arbitrary-mono transport and the final 4.3 application remain open.
+This records source/types and existing evidence; no new full Lean replay,
+independent replay or whole-manuscript completion is claimed.
 
 The governing source already consulted in this conversation is Knuth,
 Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf),
@@ -141,3 +141,13 @@ Five further producer/Checks pairs pass all 30 targeted commands after `bb8a670`
 
 The post-full continuation now comprises 22 pairs and 132 successful targeted commands. This batch's exact source hashes and six-command receipts are recorded separately from the unchanged full `86b33ec` replay: 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. New combined verification and automatic axiom coverage remain pending. Full native term/formula substitution induction and independent admissibility, the native finite-proof/image equivalence, remaining canonical logical/inference/derivation-image transport and original-mono recovery, and the actual Corollary 4.3 application remain open. Theorem 8.6 remains partial, with 61 of 62 numbered results proved.
 <!-- V48_NATIVE_REFLECTION_SUBSTITUTION_PROGRESS_END -->
+
+<!-- V48_NATIVE_TERM_COMPARISON_PROGRESS_START -->
+Six further producer/Checks pairs pass all 36 targeted commands after `069d121`. `NativeSubstitution.Standard.rawCode_represents`, `liftData_comparison`, `operation_value` and `pure_operation_value` identify actual standard PA polynomial inputs and their parameter fibers. `PointFrame.realize_parameterComparison`, `realize_parameterTerm`, `realize_parameterFormula` and `nodeBaseArrow_code` compare the actual uniform framed nodes while preserving coefficient labels, binder names and ordered children. `term_node_realizes_hom` and `formula_node_realizes_hom` give their actual morphism equations.
+
+`pa_term_value`, `pa_formula_option_value`, `paTermState_native` and `paFormulaState_native` calculate the standard source values. `expectedTermState_native` and `expectedFormulaState_native` identify the corresponding transported expected states. `Standard.framed_operation_transport_normalized` compares the actual operation on finite framed inputs. The source formula calculation and expected-state chart remain separate from equality with the actual uniform formula-substitution fold.
+
+Native finite-term induction now proves `termState_comparison` and the unconditional `termValue_eq_native`: for every uniform family P, coefficient carriers σ and π, arity bound d, query x, replacement term t and input term r, the actual uniform term-substitution value is the named point of `r.substitute x t`. The checks also expose the original literal word graph and the variable, function and nullary cases.
+
+The post-full continuation now comprises 28 pairs and 168 successful targeted commands. The actual formula Option comparison and independent admissibility remain the first unresolved step, followed by Γ finite-proof/sentence-image equivalence, remaining canonical logical/inference/derivation-image transport and recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application. Formula drafts are excluded from this checkpoint. Theorem 8.6 remains partial and numbered coverage remains 61 of 62. The historical full `86b33ec` replay retains 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; no new full replay or automatic axiom count is claimed.
+<!-- V48_NATIVE_TERM_COMPARISON_PROGRESS_END -->
