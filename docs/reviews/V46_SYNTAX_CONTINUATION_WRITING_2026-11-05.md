@@ -1,12 +1,11 @@
 # Writing review of the continuation records
 
-Scope: the full 86b Miller realization and 45 later targeted pairs through
-native substitution/Γ proof images, genuine E seven-scheme parameters,
-generic arbitrary-rule inference transport and actual literal sentence/theorem
-word charts. Concrete canonical derivation/generated-image, chosen Γ pullback,
-original arbitrary-mono recovery and the final 4.3 application remain pending.
-This is source/type and recorded-evidence reporting; no new full or independent
-Lean replay, integrated axiom count or whole-paper completion is claimed.
+Scope: historical full86b and52 later targeted pairs, including the actual
+Theorem8.6 application on literal/canonical sentence objects and every original
+axiom mono. All62 numbered rows now have targeted proofs. Combined imports,
+strict statement checks, transitive axiom coverage and full serialized replay
+remain pending. No new full verification, audited counts, independent replay
+or whole-manuscript completion is claimed.
 
 The governing source already consulted in this conversation is Knuth,
 Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf),
@@ -182,3 +181,15 @@ Six further producer/Checks pairs pass all 36 targeted commands after `4be3782`.
 
 The post-full continuation now comprises 45 pairs and 270 successful targeted commands. The first unresolved step is the canonical actual derivation-algebra/generated-image comparison, followed by the chosen Γ axiom pullback, original arbitrary-mono recovery and the actual Corollary 4.3 application. The later comparison and application sources are excluded from this checkpoint. Theorem 8.6 remains partial, with 61 of 62 numbered results proved. The full `86b33ec` evidence remains 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; no new full replay, integrated axiom count or numbered completion is claimed.
 <!-- V48_CANONICAL_PARAMETERS_SENTENCE_IMAGES_PROGRESS_END -->
+
+<!-- V48_FINAL_MILLER_APPLICATION_PROGRESS_START -->
+Seven further producer/Checks pairs pass all 42 targeted commands after `d64f2b3`. `CanonicalPresentation.proofAlgebraIso`, `proofIso_conclusion`, `proof_constructor`, `sentenceProofIso_conclusion` and `canonical_sentenceTheory_eq` identify the actual canonical Γ initial derivation algebra, constructors, ordered premises, conclusion and generated sentence image through the genuine equivalence E. `canonicalAxiomIso`, `chosenProofInitial` and `chosen_canonical_sentenceTheory_eq` then identify the actual chosen Γ axiom pullback and chosen successful derivation algebra. No image equality, proof-fiber selector or desired initiality is supplied as a premise.
+
+`TheoryDomainApplication.lower_bound`, `upper_bound`, `extends_iff_theoremIdem_le`, `consistent_iff_disjoint` and `categorical_incompleteness` apply the actual categorical Corollary 4.3 to the constructed cut idempotents and Γ sentence theorem/refutation ranges. Extension means finite derivability of each T_a axiom; consistency concerns closed native formulas. `RealClosedConsistency.theoryAxioms_consistent` discharges consistency of T_a itself using its actual real model and two independently supported finite proofs. No semantic truth or real-model hypothesis is imposed on an arbitrary extension Γ.
+
+`Incompleteness.essential_incompleteness`, `theorem_wordset`, `refutation_wordset`, `native_word_noncoverage` and `native_incomplete` give the literal recursive-sentence version, including the actual theta and negation values and the native finite-proof meanings. Its restriction-isomorphism conjugacy recovers every complementary candidate separator. `CanonicalIncompleteness.theorem_regular_image`, `theorem_range_comparison`, `theorem_conjugacy`, `refutation_conjugacy` and `printed_categorical_incompleteness` transport these conclusions to the actual chosen canonical sentence object. Top remains that object's identity, or the proper recursive sentence set in literal coordinates.
+
+`CanonicalAxiomIncompleteness.sourceAxioms`, `axiomIso`, `axiom_subobject_recovery`, `sentence_image_recovery` and `range_recovery` recover every original axiom monomorphism, including its original domain, through E's inverse and counit. `finite_proof_transport_iff_theoremIdem_le` identifies the exact finite-derivability extension condition with generated-theory inclusion. `printed_essential_incompleteness`, `printed_native_incomplete` and `printed_categorical_incompleteness` therefore cover arbitrary original axiom subobjects, not only chosen pullback presentations. `printed_essential_incompleteness_of_consistent` and `printed_native_incomplete_of_consistent` take the native finite-derivability extension and sentence-consistency hypotheses directly and discharge categorical disjointness through the proved equivalence. Their hypotheses are the printed Miller property, actual semidecidability already carried by the object, finite-derivability extension and sentence consistency; they add no Γ truth, presentation-comparison or proof-selector premise.
+
+Theorem 8.6 now has its intended targeted proofs. The numbered correspondence records 62 proved rows among 62 numbered results. The post-full continuation comprises 52 pairs and 312 successful targeted commands. New combined imports, strict statement checking, transitive axiom coverage and the full serialized verification remain pending; `whole_current_manuscript_complete` remains false until that full verification exits zero. The historical full `86b33ec` evidence is unchanged: 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. This targeted checkpoint does not assign new module/declaration/axiom counts or claim a new full replay.
+<!-- V48_FINAL_MILLER_APPLICATION_PROGRESS_END -->
