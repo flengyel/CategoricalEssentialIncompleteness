@@ -135366,7 +135366,7 @@
   },
   "whole_current_manuscript_complete": false,
   "remaining": [
-    "Gamma native finite-proof/sentence-image equivalence; remaining canonical seven-scheme/arbitrary-rule/inference/derivation-image and original arbitrary-mono comparison; actual Corollary 4.3 application. Theorem 8.6 remains open. Unconditional native term and full formula Option substitution, graph, independent admissibility and failure are proved."
+    "Remaining canonical S1-to-S2 seven-scheme, arbitrary-rule/inference and generated-derivation-image comparisons, recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application. Theorem 8.6 remains open. Gamma native finite-proof, formula/sentence regular-image and literal range-idempotent comparisons are proved; new combined verification and automatic axiom coverage remain pending."
   ],
   "review": {
     "hostile_author_review": "docs/reviews/V46_SYNTAX_CONTINUATION_REVIEW_2026-11-05.md",
@@ -139103,6 +139103,1334 @@
       "receipt_sha256": "589fc53e9d355b11406224fb118bc0b4999200eae4a583c21b0bf212930e1e58",
       "exit_code": 0,
       "correspondence_sha256": "0593aa46957aa8559f0b070d5912ff8e3859784d2c96e6e79c3d5cbe0a448da7"
+    }
+  },
+  "post_full_gamma_native_image_20261109": {
+    "status": "TARGETED_EIGHT_GAMMA_NATIVE_IMAGE_PAIRS_VERIFIED_NEW_FULL_PENDING",
+    "manuscript_version": 48,
+    "parent_targeted_commit": "7ae92122f097a0bcef28abb90d087beab83c7c62",
+    "parent_full_proof_commit": "86b33eca560e389ac557e6d27b21e67a20b13c75",
+    "parent_full_run_directory": ".codex-work/verify-20261108T203846Z-oUfIlw",
+    "parent_full_commands": 1487,
+    "parent_full_inputs": 1769,
+    "parent_full_source_snapshot_sha256": "8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851",
+    "pair_count": 8,
+    "strict_scratch_commands_zero": 16,
+    "production_commands_zero": 32,
+    "cumulative_post_full_pairs": 39,
+    "cumulative_post_full_targeted_commands_zero": 234,
+    "whole_current_manuscript_complete": false,
+    "source_state": "Exactly SchemePoints, Schemes, Forward, SubstitutionReflection, LogicalReflection, AbsenceReflection, SchemeReflection and Reverse producer/Checks pairs are included at the hashes in these immutable receipts. All48 final established-runner commands are zero. Reverse has the final10 expanded independent Checks; its preceding6-check success is superseded and not counted separately. Main/current/retained leading8 imports are integrated. New combined build, transitive axiom enumeration and full replay remain pending; historical full evidence is unchanged.",
+    "completed_scope": [
+      "NamedProofImage.finite_realizes and finite_formula/sentence_range/image: actual validated derivations from native finite-support proofs, preserving logical/nonlogical leaves, generalization, ordered modus ponens and each child conclusion.",
+      "Native substitution, absence and logical-scheme reflection identify the actual seven parameterized schemes, including independent free-for substitution, equality and named binders, with no supplied image comparison.",
+      "NamedProofImage.conclusion_finite and realizes_iff_finite: original validated-word induction proves the converse and exact native finite-proof equivalence for arbitrary P, PA predicate coefficient carriers sigma/pi, d, Gamma and Uniform.Enumerable P Gamma.",
+      "formula_range_iff/formula_image_iff and sentence_range_iff/sentence_image_iff identify actual ranges and regular-image inclusions. sentence_word_value/sentence_word_range_iff keep the literal word chart distinct from chosen sentence-point coordinates.",
+      "formulaIdem_literal and sentenceIdem_literal identify actual range restriction idempotents on the proper formula/sentence carriers. The final10 independent Reverse checks explicitly expose finite provability, both regular images and chosen-sentence Idem membership."
+    ],
+    "pairs": [
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageSchemePoints.json",
+        "receipt_sha256": "165e64aa36e60f80f5f2d446f399da586c8f899cd382c74d728d4e9552af89cb",
+        "modules": [
+          "V46MillerNamedProofImageSchemePoints",
+          "V46MillerNamedProofImageSchemePointsChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemePoints.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemePoints.lean",
+            "sha256": "84fc362fbfad9b79059b0cdbc9370b2ae8d169b29f4f9ae80e0da9236892ba77"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemePointsChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemePointsChecks.lean",
+            "sha256": "2b91c0b30fdb83d579a2a10e493278f030833dd3dd6e4b07990dccc0014b17f0"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T070109563362Z",
+          "scratch-20261109T070243282938Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070109563362Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070109563362Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070243282938Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070243282938Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T070142797540Z",
+          "production-20261109T070322510821Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070142797540Z/0-build-V46MillerNamedProofImageSchemePoints.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemePoints.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070142797540Z/0-strict-V46MillerNamedProofImageSchemePoints.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePointsChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070322510821Z/0-build-V46MillerNamedProofImageSchemePointsChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemePointsChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070322510821Z/0-strict-V46MillerNamedProofImageSchemePointsChecks.log"
+          }
+        ],
+        "preserved_failures": []
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageSchemes.json",
+        "receipt_sha256": "d007aa4ca62cd8cc8dde420e072c48357eb63a5d8a9a798afa5957ca4975329a",
+        "modules": [
+          "V46MillerNamedProofImageSchemes",
+          "V46MillerNamedProofImageSchemesChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemes.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemes.lean",
+            "sha256": "b6257fb08654936ab4ba47bd5bc425e25d426962811a48ce529250d2d6df5a5f"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemesChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemesChecks.lean",
+            "sha256": "34e328a46ad46620129d2b48679971d9e99782330c350bc38e5b08b7c241bf8a"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T070418155751Z",
+          "scratch-20261109T070900057093Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070418155751Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070418155751Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070900057093Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T070900057093Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T070744235705Z",
+          "production-20261109T071000027156Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070744235705Z/0-build-V46MillerNamedProofImageSchemes.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemes.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070744235705Z/0-strict-V46MillerNamedProofImageSchemes.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemesChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T071000027156Z/0-build-V46MillerNamedProofImageSchemesChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemesChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T071000027156Z/0-strict-V46MillerNamedProofImageSchemesChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T064326496203Z",
+          "scratch-20261109T064644801124Z",
+          "scratch-20261109T064942627590Z",
+          "scratch-20261109T065225528109Z",
+          "scratch-20261109T065436229789Z",
+          "scratch-20261109T065709328816Z",
+          "production-20261109T065840517019Z",
+          "production-20261109T070512742431Z"
+        ]
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageForward.json",
+        "receipt_sha256": "320b171c7de4e0d52f24c656d8711b712a7fd4b69e0ca5b337e4046370f239b1",
+        "modules": [
+          "V46MillerNamedProofImageForward",
+          "V46MillerNamedProofImageForwardChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageForward.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageForward.lean",
+            "sha256": "f4318938ae014b6d75f85822534a535d7a195d5b9c6a157feb638e0eb4a492c6"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageForwardChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageForwardChecks.lean",
+            "sha256": "eb55a5ee462fa9c2184094e7ed51c26f1cfb0d5c28a8dfac50b6b4dc2c044618"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T071748848564Z",
+          "scratch-20261109T072016144715Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T071748848564Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T071748848564Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072016144715Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072016144715Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T071859128581Z",
+          "production-20261109T072112873663Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageForward"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T071859128581Z/0-build-V46MillerNamedProofImageForward.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageForward.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T071859128581Z/0-strict-V46MillerNamedProofImageForward.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageForwardChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072112873663Z/0-build-V46MillerNamedProofImageForwardChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageForwardChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072112873663Z/0-strict-V46MillerNamedProofImageForwardChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T071108147587Z",
+          "scratch-20261109T071414661010Z",
+          "scratch-20261109T071524478194Z"
+        ]
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageSubstitutionReflection.json",
+        "receipt_sha256": "902232809f74970c65f8e88457918224770d9e19946e1191348924d7d4c3ae8c",
+        "modules": [
+          "V46MillerNamedProofImageSubstitutionReflection",
+          "V46MillerNamedProofImageSubstitutionReflectionChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSubstitutionReflection.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSubstitutionReflection.lean",
+            "sha256": "8bbee012f0aee47385a4c3827f3525ebc1cfd912ddf739882569507ebd7259ab"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSubstitutionReflectionChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSubstitutionReflectionChecks.lean",
+            "sha256": "aeb7f133e2e4d746046b56d008cba7d5b2d25dc3c5d237a3e8b501c1e2e1e853"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T072434627601Z",
+          "scratch-20261109T072633395326Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072434627601Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072434627601Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072633395326Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072633395326Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T072527120518Z",
+          "production-20261109T072735383489Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflection"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072527120518Z/0-build-V46MillerNamedProofImageSubstitutionReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSubstitutionReflection.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072527120518Z/0-strict-V46MillerNamedProofImageSubstitutionReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflectionChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072735383489Z/0-build-V46MillerNamedProofImageSubstitutionReflectionChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSubstitutionReflectionChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T072735383489Z/0-strict-V46MillerNamedProofImageSubstitutionReflectionChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T072231217368Z"
+        ]
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageLogicalReflection.json",
+        "receipt_sha256": "1d8de521b8674e239549972b6f42d31c438b268296e3b44d7a071d5a3e171735",
+        "modules": [
+          "V46MillerNamedProofImageLogicalReflection",
+          "V46MillerNamedProofImageLogicalReflectionChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageLogicalReflection.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageLogicalReflection.lean",
+            "sha256": "1a6805916a148025d8d3e9a0331f6dc0fb58b1bf428466058cec81944492e0ef"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageLogicalReflectionChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageLogicalReflectionChecks.lean",
+            "sha256": "6e0f7444e8f3a813a3fef213d35b63c5a2f98cc338bc1f916897c5e9e9270382"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T073728045239Z",
+          "scratch-20261109T073919960216Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073728045239Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073728045239Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073919960216Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073919960216Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T073819207687Z",
+          "production-20261109T073949267444Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageLogicalReflection"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T073819207687Z/0-build-V46MillerNamedProofImageLogicalReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageLogicalReflection.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T073819207687Z/0-strict-V46MillerNamedProofImageLogicalReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageLogicalReflectionChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T073949267444Z/0-build-V46MillerNamedProofImageLogicalReflectionChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageLogicalReflectionChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T073949267444Z/0-strict-V46MillerNamedProofImageLogicalReflectionChecks.log"
+          }
+        ],
+        "preserved_failures": []
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageAbsenceReflection.json",
+        "receipt_sha256": "3f996612b0472c5b300e0a33b1765e8ae49b5c98f7d81fb90f2d3d9b89e03e45",
+        "modules": [
+          "V46MillerNamedProofImageAbsenceReflection",
+          "V46MillerNamedProofImageAbsenceReflectionChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageAbsenceReflection.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageAbsenceReflection.lean",
+            "sha256": "a4581a898b9e2cc8f27eb94c1a133888de52a8d101a463b4ec1748dda0913499"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageAbsenceReflectionChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageAbsenceReflectionChecks.lean",
+            "sha256": "4fd38dc8ad0ee5b0c8e170833cce7a36b882776f12dc29300e98ef9aeef7de27"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T082352986044Z",
+          "scratch-20261109T082528129847Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082352986044Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082352986044Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082528129847Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082528129847Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T082439738879Z",
+          "production-20261109T082606419990Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageAbsenceReflection"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082439738879Z/0-build-V46MillerNamedProofImageAbsenceReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageAbsenceReflection.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082439738879Z/0-strict-V46MillerNamedProofImageAbsenceReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageAbsenceReflectionChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082606419990Z/0-build-V46MillerNamedProofImageAbsenceReflectionChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageAbsenceReflectionChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082606419990Z/0-strict-V46MillerNamedProofImageAbsenceReflectionChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T074114381235Z",
+          "scratch-20261109T074253005353Z",
+          "scratch-20261109T074501538075Z",
+          "scratch-20261109T074600206473Z",
+          "scratch-20261109T074812190492Z",
+          "scratch-20261109T075043176841Z",
+          "scratch-20261109T075204267700Z",
+          "scratch-20261109T075550120278Z",
+          "scratch-20261109T075905842445Z",
+          "scratch-20261109T080033258036Z",
+          "scratch-20261109T080410353425Z",
+          "scratch-20261109T080531228713Z",
+          "scratch-20261109T080650981588Z",
+          "scratch-20261109T081201065913Z",
+          "scratch-20261109T081555014744Z",
+          "scratch-20261109T081810161162Z",
+          "scratch-20261109T081949784869Z"
+        ]
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageSchemeReflection.json",
+        "receipt_sha256": "3727a10e761a9b22ae1c339b27a57a1e638f3afbb6799b6c1ee7e83b240da7bd",
+        "modules": [
+          "V46MillerNamedProofImageSchemeReflection",
+          "V46MillerNamedProofImageSchemeReflectionChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemeReflection.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemeReflection.lean",
+            "sha256": "0ddcf15407bf6b3c309fb851b7a32aa052fe502dd5b899a93ade73a78c8e615f"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemeReflectionChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageSchemeReflectionChecks.lean",
+            "sha256": "1b354701102b213d045fbe02a3eba2be920c2da849afc06c8783dbf5a95ec792"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T082726820437Z",
+          "scratch-20261109T082954905167Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082726820437Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082726820437Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082954905167Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T082954905167Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T082857970231Z",
+          "production-20261109T083109161249Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemeReflection"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082857970231Z/0-build-V46MillerNamedProofImageSchemeReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemeReflection.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T082857970231Z/0-strict-V46MillerNamedProofImageSchemeReflection.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemeReflectionChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T083109161249Z/0-build-V46MillerNamedProofImageSchemeReflectionChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageSchemeReflectionChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T083109161249Z/0-strict-V46MillerNamedProofImageSchemeReflectionChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T072916219268Z",
+          "scratch-20261109T073120840015Z",
+          "scratch-20261109T073344940898Z"
+        ]
+      },
+      {
+        "receipt": ".codex-work/v46-concrete-named-comparison/run/miller-proof-image-FROZEN-pairs/V46MillerNamedProofImageReverse.json",
+        "receipt_sha256": "0db673f30e3431a89727d6b1b6a9bb12c382569e3cddf6aa4466d778c8e12db4",
+        "modules": [
+          "V46MillerNamedProofImageReverse",
+          "V46MillerNamedProofImageReverseChecks"
+        ],
+        "files": [
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageReverse.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageReverse.lean",
+            "sha256": "3cd0536c12ec32b87d98104be4b92c63943a2775471acb519623735df7d7b874"
+          },
+          {
+            "path": "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageReverseChecks.lean",
+            "draft_path": ".codex-work/v46-concrete-named-comparison/V46MillerNamedProofImageReverseChecks.lean",
+            "sha256": "3afb59d60ba016b21c19a91ee60e4651e6acf4478a6af2aff49f90589bf833a7"
+          }
+        ],
+        "scratch": [
+          "scratch-20261109T083745673491Z",
+          "scratch-20261109T084243056574Z"
+        ],
+        "strict_scratch_commands": [
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T083745673491Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T083745673491Z/scratch.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T084243056574Z/SourceBatch.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T084243056574Z/scratch.log"
+          }
+        ],
+        "production": [
+          "production-20261109T083849349269Z",
+          "production-20261109T084437894254Z"
+        ],
+        "production_commands": [
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T083849349269Z/0-build-V46MillerNamedProofImageReverse.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageReverse.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T083849349269Z/0-strict-V46MillerNamedProofImageReverse.log"
+          },
+          {
+            "command": [
+              "lake",
+              "build",
+              "CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverseChecks"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T084437894254Z/0-build-V46MillerNamedProofImageReverseChecks.log"
+          },
+          {
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              "CategoricalEssentialIncompleteness/V46MillerNamedProofImageReverseChecks.lean"
+            ],
+            "exit_code": 0,
+            "log": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T084437894254Z/0-strict-V46MillerNamedProofImageReverseChecks.log"
+          }
+        ],
+        "preserved_failures": [
+          "scratch-20261109T083223042479Z",
+          "scratch-20261109T083626038505Z"
+        ]
+      }
+    ],
+    "preserved_development_attempts": [
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/production-20261109T065840517019Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "1e3b6e93d3dd2de942bd6a0d2dff4992878542d2608889d3deddeb7a5f62dc23",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T065840517019Z/0-build-V46MillerNamedProofImageSchemes.log",
+            "sha256": "8c4669d83e2837b83ba0ea2b084c3632e25566953c0c627ddf9f2c1be0b408e8"
+          }
+        ]
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/production-20261109T070512742431Z",
+        "recorded_exit_codes": [
+          0,
+          124
+        ],
+        "results_sha256": "ce9890d0c8c523a4dbedfde5995952337f1adf2fa29d77462ae30c5316e56593",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070512742431Z/0-build-V46MillerNamedProofImageSchemes.log",
+            "sha256": "1ad2dae3af8e4cacef025565fe57f985ec8f3dd7d05d91dd5acd1c53f9a0f976"
+          },
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/production-20261109T070512742431Z/0-strict-V46MillerNamedProofImageSchemes.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T064326496203Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "269d51aedf5143a8f9efd195f1b28b160e7e9e8270e4e77491b26209bb65cbe9",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T064326496203Z/scratch.log",
+            "sha256": "49eef87b625bc2912a183803a3fc069822daf7139bad9e7b43825c1f1d895382"
+          }
+        ],
+        "preserved_source_sha256": "adcf24ba920679a7c3b84feb5330b47e1a2f10fe38fde54176de248097ed78b4"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T064644801124Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "4c7ba3be0e75527716d852460cfa3f86c9897cb96db3214d765f1bddc5015046",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T064644801124Z/scratch.log",
+            "sha256": "f015856500fa95f49826c8b9381fb06dffc0f6e1a1cfa9989e2440e04f907e9e"
+          }
+        ],
+        "preserved_source_sha256": "73eba0fff061fe2b1b70696145eb3c403968473954917b5802536f15113bf202"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T064942627590Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "1e9377535e9c4fa1f51f4a89a1503eadd269236467bf8ff46840eaeae6d0dd63",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T064942627590Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "2fbe61b3b90dd5d12ec71a9b146ebe56a564fdd3942015d8bc45666e659cde72"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T065225528109Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "a05dc34e19e58d9792a501ab8f13cdcc2a3bbfaa58c48e4e4a85590d28d82258",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T065225528109Z/scratch.log",
+            "sha256": "1c945d608e0e23d4b7b730a8dd7dc40b54912fd242bb88d303a966b62dd5ed40"
+          }
+        ],
+        "preserved_source_sha256": "25cbd2a873863375c7150d47074e22e35a34c8d1ba536e0ef8b8dd6ae9b44226"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T065436229789Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "918ff7efafd62d648bdae14a0c5e85fc6d63c62582d57171707537d530907283",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T065436229789Z/scratch.log",
+            "sha256": "f0267944a6f2cd422dfaf53af79d9cbcfe26552e4a10ea057bf399bc07054413"
+          }
+        ],
+        "preserved_source_sha256": "0a372c9a9081787803a107f48bf3d48cbd628cd09fc7db8a0c7ab9e2a10f2941"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T065709328816Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "e43f8d82156b51bacaff987df7e7a0fcbee825836bedf1aced4565e587397eed",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T065709328816Z/scratch.log",
+            "sha256": "8cb461d9f98d94b095a523e1b1e9459e0bafdaab6e217cb4c08185c7423a35e4"
+          }
+        ],
+        "preserved_source_sha256": "64c90e93b969015bcd30c83579c13da3f7f334171fd255514fc9ec1007d42cf0"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T071108147587Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "8e8bece5cd670842124f089d9be2bea96000baf6d6cde21c1e5b5e02010d3f69",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T071108147587Z/scratch.log",
+            "sha256": "71d2ba05271f9140b0212697fb4161b8f74004bde5607733a4ff942474b043de"
+          }
+        ],
+        "preserved_source_sha256": "63d1fff2392920f7ad71a838ed600860cd467c5c9d67f39d44725b5d52e91151"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T071414661010Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "d51d43812c97de378cc0523617b69badd901469b381b6efb4a9c9665f55e4ccf",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T071414661010Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "185e2cae0a7074a0f3710bb68120e148ce15e7566378e02025e67c111c60e043"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T071524478194Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "883c139ad07aecd7deec2707e2cedfe28c89ef14cee53017404f70e717d7cfe0",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T071524478194Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "1f006c1284fb55f66887236cff59e50f5fc77e296e759cfcc16901732e43e59e"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T072231217368Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "5f7b30f96c825d21423f4f6e483c1308e76d9813003957a42cbd78e58451fc1a",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072231217368Z/scratch.log",
+            "sha256": "b95cc98196a118e6d0cfcd79b20a1c1bb1a2a71f8851739ea154b7df7b179597"
+          }
+        ],
+        "preserved_source_sha256": "8d7103866c56d844cf3876cf39d6b9ee79912149564676a0819759af12d4c48d"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T072916219268Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "c00babde72fcc78debe787f950312828e1aae7cb157e3639761db0f8f422a10d",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T072916219268Z/scratch.log",
+            "sha256": "41ee8a8aec81ed4143a4c962ad932a0a1dd7365ccc3ab8aab9fec296c4e39850"
+          }
+        ],
+        "preserved_source_sha256": "fa57c54bb99ae049f12e6699bd72263f9e4646df61298339d6cd0e14dfa82aeb"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T073120840015Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "2e6057f6c7581b66b7f508512743f6d4cc59cc0fe170fc5c1d7499629e302479",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073120840015Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "7209ad9afc9b4b24c1587bda17c156bed4d219f6b68c56cf874b855267928207"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T073344940898Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "fee303ace25e7cc14e3215d268204001fa20d8587f128254099b0b5cca15a019",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T073344940898Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "f67b7554a1f9388d832bf99e1e146066b330af04c1e03dcc3d601125a52d3bed"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T074114381235Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "1a5f2cb8e2863b2f2af6ae010fd2cb5efff2ff77e59b6a96540828e158938117",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T074114381235Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "6bbe61153651f9184494bcf3a63bd7085433ce3006f6e925b378decd062403cc"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T074253005353Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "ad50ed27d4dddf921e723f55b1e2d4f53c0e4df16a6f2f0a9749ed275926cb82",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T074253005353Z/scratch.log",
+            "sha256": "4798cc3f84581bb3d788603d7bee38a542d5805654547e9e5af4e56d9a1b613e"
+          }
+        ],
+        "preserved_source_sha256": "516f009f74602bb2bfec274bdcaea6d787ecac2c44e37f5b32038a1b6a9a6129"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T074501538075Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "02104899c8c9d0125a558c36a68ebd3f76f93886a643babcb7decac5a62a555a",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T074501538075Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "12bee86788169ff4f585937fec327a4dc508291111b92b9edb6a8cb31d036c7f"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T074600206473Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "28cff3959bab5a34eb04e6f3afb746691dd82491a0f934fdf5e3dd0a4c41945e",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T074600206473Z/scratch.log",
+            "sha256": "1084a4cb1f32c6eb0125a71ab329f42f64cc1e5577edde5cefc3dd0c2ceece78"
+          }
+        ],
+        "preserved_source_sha256": "91c19116c5fbbf95cdec8017c0c2474686eb43234520bb1a7f00368771884452"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T074812190492Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "1aa7bd7c9b21566fe2a8fe679bd8b88ea167089a2a5d0c532f99f887f75ab3bb",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T074812190492Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "9a44c21ab2037466af146945129a4ae3547d1594efe382537e54746ba3dd60bd"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T075043176841Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "b6e5ccfcab3c0aecf657d155d9987af8654dd5accd95de789114d07c87abeddb",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T075043176841Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "abc405daa2ebe7e57c37d1d58aacf7a53ae125695e92e92d661972e64e3fde12"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T075204267700Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "5146e52cf094e86f561ae7e72af6ea58dfe53aa57f2d85de649bf7f120f0b92a",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T075204267700Z/scratch.log",
+            "sha256": "78c1b592407a28d2f34db1f1293f14800b69594414b576d7a4ff4eb23d858087"
+          }
+        ],
+        "preserved_source_sha256": "92898efef37189c8a6106990b3b4a3b05325d0bfabb885f97154c4469c745e66"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T075550120278Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "c3cb152ee2b600050f9f4ac0b1f2213ec72b8cdde91205fa19202b66faaaed50",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T075550120278Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "1e53bb19e823195320e09e63bd791c39abf03fec08b912789af283bf7c549f8e"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T075905842445Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "7297b345d228aaa0c69dc7363143b98c3781f51d4193405a282a8c412af6b435",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T075905842445Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "9fbe41aab4362bea2efefbcf8d0758d8268fefd9cc47c6ba6c9fd9ae4f031e99"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T080033258036Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "34d3704e771c0a7761263ab75aca9a72363969e0fff78808b7d31ff865e94216",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T080033258036Z/scratch.log",
+            "sha256": "ccd4267955da975d5d65b35180946ff6df396ff31fdf266a523a80b775b623e6"
+          }
+        ],
+        "preserved_source_sha256": "d72e6b33641d19c37125e85290644131c0279969935c987420a56a5e931cbe63"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T080410353425Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "bf54497ddb427c448538eb49de625e66aab3e99eaaa061c3893532e6e9460101",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T080410353425Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "8f491f9d8e86637c55fde5f3f9c7d92ac21c01a5c217cd27e1f7d3c53a06b91f"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T080531228713Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "5f102b1783f5f544d2274a57265392f88f0e225d746b4301bf9e8aeda578a0aa",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T080531228713Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "0c651691c668f391ed5512a5bca296fb0f78f2884c8cc2340274f1dfe2db67af"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T080650981588Z",
+        "recorded_exit_codes": [
+          124
+        ],
+        "results_sha256": "343e63c2248e38a2764076aac44f24b206ed130bab2138594a53d9dbc3a97df5",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T080650981588Z/scratch.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "preserved_source_sha256": "91a9d8a82c2fab9ca131b6fe9d15428b6118f1d1b029644cbdf776aa228edb61"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T081201065913Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "f6e896f2dc479fae56ba00916fd1d6634aecaa7980c88e20b7303a85f4d22d58",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T081201065913Z/scratch.log",
+            "sha256": "0056986ff1c97ae3f68e2a00c1133b3f7af57ff925d428714e30dd14cc8e06db"
+          }
+        ],
+        "preserved_source_sha256": "14cfdf517d091f4f5e7b554950ff7b6b88054ff1439fb56cbae825edd2efb482"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T081555014744Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "32e8c6828c54b25ac8bee70d3ffcdee12b5ddce47c4962b493b8a22c72851762",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T081555014744Z/scratch.log",
+            "sha256": "08092c0d62fab01bd7f12f8a798cc43c8a532f03c3b2ae387664ecae6ab5155d"
+          }
+        ],
+        "preserved_source_sha256": "eee45cb93b687f18b1331a80bf8d0c67e9d2bbf39e53f49659cb59b2d997e775"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T081810161162Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "6d0e9ad3aac69fbb986df624405da2b0c1326798649af022476172ab3c6ba1ed",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T081810161162Z/scratch.log",
+            "sha256": "557c5187536e1ba350dd46ce78d9a76eb8f1a397ebf629cf37c45277055b13f3"
+          }
+        ],
+        "preserved_source_sha256": "f45a5dbb478902dec11e938a2eeea37ae54df4f28af3362624cb079e8a228deb"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T081949784869Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "7dee6e90e5336ead36764d1aa7b3afb2dc525e3349f9909f0a91066bf5bd0848",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T081949784869Z/scratch.log",
+            "sha256": "25d9a2ca437a5bd6d8ed571e0930548e6b975d03c023a94bbf81e234078d98bd"
+          }
+        ],
+        "preserved_source_sha256": "3d45c8d13d397951546a449f99c1fabdee374580e2f37fbaf64f5d304146bcde"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T083223042479Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "63280acd7bf9e6767b56f38b76591900becddcee6b1945682da195f8acfb3d5d",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T083223042479Z/scratch.log",
+            "sha256": "6f2eede055f039ebc8df265ff42fbe6457d3a6acf5034f2d105d5a176b50234d"
+          }
+        ],
+        "preserved_source_sha256": "d05dafe95fe58d924dc15d41b6911d6bc7cf551b25b5bf51d05243d785d04558"
+      },
+      {
+        "run_directory": ".codex-work/v46-concrete-named-comparison/scratch-20261109T083626038505Z",
+        "recorded_exit_codes": [
+          1
+        ],
+        "results_sha256": "75a49cb4dcd337aadd22f41e914cbe174b2a76fe79f08ddf9486b8dd57daf1ab",
+        "logs": [
+          {
+            "path": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v46-concrete-named-comparison/scratch-20261109T083626038505Z/scratch.log",
+            "sha256": "a30befaf0e042ea417ceaef8cfe4867ee032dddf2dabd4f7f8286e2e94db5b01"
+          }
+        ],
+        "preserved_source_sha256": "3ce285c652d14824979b4ede73ae88f7ac3f905afacc5d124c14f0549832842a"
+      }
+    ],
+    "development_scope": "Failed elaborations and bounded timeouts are preserved in the immutable receipts and the attempt records below, separately from48 successful final commands. Successful generic source-point diagnostics and superseded six-check Reverse runs are not additional completion counts. Final checks use unchanged toolchain, pins and default Lean bounds under the serialized established runner.",
+    "remaining": [
+      "Remaining canonical S1-to-S2 seven-scheme, arbitrary-rule/inference and generated-derivation-image comparisons.",
+      "Recovery of an arbitrary original axiom mono.",
+      "Actual Corollary 4.3 application for Theorem 8.6; new combined verification and automatic axiom coverage."
+    ],
+    "manuscript_only_gate": {
+      "status": "PASS_MANUSCRIPT_ONLY_AFTER_REPORT_INTEGRATION",
+      "scope": "manuscript-only",
+      "command": [
+        "python3",
+        "scripts/verify.py",
+        "--manuscript-only"
+      ],
+      "log": ".codex-work/v46-concrete-named-comparison/run/gamma-eight-manuscript-gate-20261109T085132298160Z.log",
+      "log_sha256": "25092f9da886278bc4b8e27a3669813396a4a721d8619dfbfaa96d26801c7faa",
+      "receipt": ".codex-work/v46-concrete-named-comparison/run/gamma-eight-manuscript-gate-20261109T085132298160Z.json",
+      "receipt_sha256": "760eaab3e6fa4d4fa85afc56988a9cf376be1fe6f3c53d648614db7f56256cac",
+      "exit_code": 0,
+      "correspondence_sha256": "04cc8251dbc5b9a64828eedfc99ae6719c9521cf50b93da31abb04d34b3b25ca"
     }
   }
 }
