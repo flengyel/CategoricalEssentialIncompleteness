@@ -1,12 +1,12 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the full 86b Miller realization and 39 later targeted pairs through
-unconditional native term/formula substitution and the actual Γ native
-finite-proof, formula/sentence regular-image and range-idempotent comparisons.
-Remaining canonical S1-to-S2 scheme/rule/inference/generated-image and original
-arbitrary-mono comparisons, and the final 4.3 application, remain open. This is
-source/type and recorded-evidence reporting; no new full or independent Lean
-replay or whole-paper completion is claimed.
+Scope: the full 86b Miller realization and 45 later targeted pairs through
+native substitution/Γ proof images, genuine E seven-scheme parameters,
+generic arbitrary-rule inference transport and actual literal sentence/theorem
+word charts. Concrete canonical derivation/generated-image, chosen Γ pullback,
+original arbitrary-mono recovery and the final 4.3 application remain pending.
+This is source/type and recorded-evidence reporting; no new full or independent
+Lean replay, integrated axiom count or whole-paper completion is claimed.
 
 The preceding cosheaf batch proved the original-carrier algebra initial among
 all target slice algebras. Its constructor and fold naturality are derived
@@ -328,3 +328,13 @@ These statements quantify over `P : Uniform.Family`, PA predicate carriers `σ, 
 
 The post-full continuation now comprises 39 pairs and 234 successful targeted commands. The first unresolved step is the remaining canonical S1-to-S2 seven-scheme, arbitrary-rule/inference and generated-derivation-image comparisons, followed by recovery of an arbitrary original axiom mono and the actual Corollary 4.3 application. Theorem 8.6 remains partial, with 61 of 62 numbered results proved. The full `86b33ec` evidence remains 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; no new full replay, integrated axiom count or numbered completion is claimed.
 <!-- V48_GAMMA_NATIVE_IMAGE_PROGRESS_END -->
+
+<!-- V48_CANONICAL_PARAMETERS_SENTENCE_IMAGES_PROGRESS_START -->
+Six further producer/Checks pairs pass all 36 targeted commands after `4be3782`. `CanonicalPresentation.instantiationIso`, `distributionIso` and `equalitySchemeIso` compare the actual success pullbacks and occurrence-absence equalizer through the genuine equivalence E. Their inclusion and admissible-result equations retain the original parameter projections. `hilbertOne_comparison` through `hilbertEquality_comparison` and `logicalAxioms_comparison` prove all seven logical-scheme squares. These statements cover every point a, PA predicate variable/coefficient objects V, σ, π and arity bound d; E remains distinct from the finite-geometry predicate realization F.
+
+`CanonicalPresentation.Inference.inputIso`, `input_fst`, `input_snd` and `comparison` construct the arbitrary finite-rule inference natural isomorphism from the specified coefficient, ordered-premise and conclusion diagrams. `mappedInitial` derives initiality transport through the actual slice equivalence; inference comparison or initiality is not an assumed field of the rule data. Its concrete canonical Γ derivation-algebra/generated-image instantiation remains a separate pending comparison.
+
+`TheorySentenceWords.sentenceIso` identifies the actual S1 sentence object with the literal recursive ordered-field sentence carrier through the original sentence-word mono and its partial inverse. `negation_square`, `theta_word_value` and `negation_theta_word_value` identify the actual negation and fixed theta words. `TheorySentenceWordRanges.theorem_word_iff`, `regularImage_word_iff`, `theorem_words` and `refutation_word_iff` identify actual Γ theorem/refutation ranges with native finite-support proofs. Their actual idempotent supports and `literal_top_support` retain the proper sentence set as top. These Γ-image statements hold for every uniform family P and actual uniformly enumerable Γ, without consistency or Γ truth. Chosen sentence-point codes are compared through the proved chart and are not equated to formula words.
+
+The post-full continuation now comprises 45 pairs and 270 successful targeted commands. The first unresolved step is the canonical actual derivation-algebra/generated-image comparison, followed by the chosen Γ axiom pullback, original arbitrary-mono recovery and the actual Corollary 4.3 application. The later comparison and application sources are excluded from this checkpoint. Theorem 8.6 remains partial, with 61 of 62 numbered results proved. The full `86b33ec` evidence remains 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; no new full replay, integrated axiom count or numbered completion is claimed.
+<!-- V48_CANONICAL_PARAMETERS_SENTENCE_IMAGES_PROGRESS_END -->
