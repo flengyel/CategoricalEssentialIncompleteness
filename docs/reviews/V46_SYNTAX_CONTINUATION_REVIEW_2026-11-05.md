@@ -1,11 +1,9 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: Miller cut reduction 8.3, categorical inseparability 8.4 and concrete
-splitting/rational-cut constituents after main `d757a37`, against the manifest-selected
-current manuscript. Earlier proofs, pins and manuscript files are preserved.
-This is author-side and collaborating-agent source/type review; it does not
-independently certify the whole manuscript. The independent v48 review of
-`c51c34d` did not independently rerun Lean.
+Scope: the concrete Miller total-category realization 8.5 and the verified
+8.6 constituents through option/parameter-family comparison and original-word
+induction, against manuscript v48. This is scoped source/type and evidence review;
+no independent Lean replay or whole-paper certification is claimed.
 
 The preceding cosheaf batch proved the original-carrier algebra initial among
 all target slice algebras. Its constructor and fold naturality are derived
@@ -106,7 +104,7 @@ The application dependencies below still prevent a whole-current-manuscript comp
    transport this initiality. Its actual conclusion image is the least closed
    subfunctor and the previous t0; the selected endpoint extension quantifies
    over arbitrary c.e. axioms without a compatible-family premise. Miller
-   8.1–8.4 are now proved; 8.5–8.6 remains a separate realization. Rows 9.1/B.10 retain the proved 7.7
+   8.1–8.5 are now proved; the final 8.6 application remains open. Rows 9.1/B.10 retain the proved 7.7
    numerical tuple comparison.
 
 The direct Corollary 7.4 application is also proved: an actual recursive
@@ -212,7 +210,7 @@ its committed-byte delivery; it predates this indexed proof batch.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-Full v48 verification exited 0 in `.codex-work/verify-20261108T114347Z-mULAhc`; all 1263 commands passed. The permitted axiom union and clean pinned dependencies were checked. All 1545 tested inputs match proof commit `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`, whose ordinary main push and remote ref were confirmed. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. The delivery receipt records the report commit and all six copied-byte hashes.
+Historical checkpoint: full v48 verification exited 0 in `.codex-work/verify-20261108T114347Z-mULAhc`; all 1263 commands passed. The permitted axiom union and clean pinned dependencies were checked. All 1545 tested inputs match proof commit `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`, whose ordinary main push and remote ref were confirmed. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. The delivery receipt records the report commit and all six copied-byte hashes.
 
 An earlier full replay returned exit 1 only after the 905 successful Lean
 commands: the lexical gate matched an English word in a documentation
@@ -236,5 +234,38 @@ claiming an OOM event. Manuscript prose and definitions remain unchanged.
 The cut approximation index is chosen before every oracle and numerical
 input; the ordinary reduction precedes every Miller sequence. Both exact
 cut preimages and the categorical inseparability and relative-separator
-conclusions have their concrete premises discharged. The subsequent
-total-category realization and final theory application remain open.
+conclusions have their concrete premises discharged. The subsequent total-category realization 8.5 is now proved; the final theory application 8.6 remains open.
+
+<!-- V46_CURRENT_REVIEW_VERIFICATION_START -->
+The current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0**
+in `.codex-work/verify-20261108T203846Z-oUfIlw` at tested proof `86b33eca560e389ac557e6d27b21e67a20b13c75`. All 1487 recorded commands
+passed. The transitive audits retain 1,274 earlier declarations
+and cover 22,790 current declarations in
+758 production modules. The permitted union is
+exactly `Classical.choice`, `Quot.sound`, `propext`. All 16 dependency worktrees
+were clean and pinned at start/end; 356 imported-source
+pins and 25 manuscript artifacts passed.
+
+All 1769 measured input hashes match committed proof `86b33eca560e389ac557e6d27b21e67a20b13c75`;
+snapshot SHA-256: `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. No measured bytes
+changed during the full replay. The ordinary proof push and remote ref were checked.
+The measured verifier JSON and source-hash list remain tied to this proof commit.
+
+Proposition 8.5 is complete. Its 78 producer/Checks pairs and the
+34 completed 8.6 component pairs are covered by this full replay.
+Theorem 8.6 remains the first open principal result; its final named proof-image,
+canonical-presentation and Corollary 4.3 application drafts remain uncompiled.
+There are 61 proved rows among 62 numbered results; this is coverage, not proof effort.
+
+After the replay, only verification wording in `FORMALIZATION_STATUS_V48.md` was amended.
+Its before/after hashes, exact permitted patch and separate successful manuscript-only
+gate are recorded under `post_verification_correspondence`; these amended documentation
+bytes are not claimed as inputs to the earlier Lean replay. Every other measured input
+is unchanged. All six delivered payloads come from the separately pushed report commit.
+
+Completed wrapper resources: elapsed 3:19:33, maximum RSS
+3,410,772 KiB, swaps 0, exit 0.
+These are GNU time measurements, not an aggregate host-memory estimate.
+
+The earlier full-run paragraphs are retained as historical checkpoints.
+<!-- V46_CURRENT_REVIEW_VERIFICATION_END -->

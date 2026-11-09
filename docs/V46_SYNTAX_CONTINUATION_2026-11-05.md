@@ -462,7 +462,7 @@ committed-byte delivery. The indexed 7.5–7.6 proof batch is subsequent work.
 
 The intermediate 58-file indexed batch also completed full verification: run `.codex-work/verify-20261106T180328Z-2ogkTV`, exit 0, all 963 commands passed, 1,245 tested inputs, 13,224 current-production declarations in 496 modules and the same three permitted axioms. Snapshot SHA-256: `3f35a20b64bfb53459ef920167d689bec2c62e6a0b2c517ba80af7710b9eb5da`. The final batch additionally includes the explicit two-file printed-family specialization and its updated imports/correspondence.
 
-The required current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
+The preceding complete v48 `bash scripts/verify-wsl.sh` passed with exit **0** under the
 existing lock and `LEAN_NUM_THREADS=1`. Run: `.codex-work/verify-20261108T114347Z-mULAhc`.
 All 1263 commands passed, including combined build, statement audits,
 every strict source/check replay and the transitive axiom audits. The audit
@@ -515,7 +515,7 @@ comparison, and arithmetic incompleteness from its required categorical
 application. New source/type reviews and kernel runs here are author-side or
 collaborating-agent work, not an independent whole-paper certification.
 
-## Miller realization under integration, 8 November
+## Miller realization, verified at the recorded proof commit
 
 The actual uniform carrier category now has its total-splitting equivalence,
 regularity, extensivity and partial-map equivalence. The construction returns
@@ -550,11 +550,8 @@ These 78 producer/Checks pairs have 312 successful production commands and
 156 successful independent strict scratch checks, with all 156 canonical
 file hashes rechecked. They are imported by the main production entry point,
 `CurrentStatementAudit` and the retained `V46StatementAudit`. Automatic
-transitive axiom coverage and the full integrated replay remain pending.
-The source/version/archive/PDF gate passed for manuscript v48. The last full
-verification still selects proof commit
-`f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`; these new proofs are not covered by
-that earlier snapshot. Stable lists and arbitrary-rule derivations now complete
+transitive axiom coverage and the full integrated replay passed in `.codex-work/verify-20261108T203846Z-oUfIlw`
+at `86b33eca560e389ac557e6d27b21e67a20b13c75`. The prior f15eeb1 snapshot remains historical baseline evidence. Stable lists and arbitrary-rule derivations now complete
 the concrete canonical bundle of 8.5. The field-theory,
 named proof-image and categorical application proofs of 8.6 remain separate.
 
@@ -567,7 +564,7 @@ repaired producers and imported Checks passed. A final first-order statement che
 also encountered the 45-second cutoff. Making its dependent axiom binder explicit
 in each example preserved all 26 intended claims and passed the independent
 strict and production checks. A separate imported axiom control confirmed only
-the three permitted axioms; the full integrated audit remains pending. Retained logs show no confirmed
+the three permitted axioms; the new full integrated audit now confirms that same union. Retained logs show no confirmed
 out-of-memory failure. These resource observations do not measure aggregate
 host memory usage.
 
@@ -584,7 +581,7 @@ membership and deletion under the actual chart.
 
 Three additional pairs prove the actual option/product comparisons, including
 failure and successful values, and the constant-family product/coproduct diagrams
-before and after an arbitrary base isomorphism. Coefficient maps and the two
+before and after an arbitrary base isomorphism. Coefficient morphisms and the two
 parameter objects remain explicit. They use only finite geometry; the predicate
 functor is not assumed to preserve initiality. All fourteen expanded option
 checks and the six/eight family and base-change checks pass independently.
@@ -629,7 +626,7 @@ The immutable targeted receipts are `miller-named-syntax-first12-FROZEN.json`,
 `miller-derivation-word-induction-FROZEN.json` in
 `.codex-work/v46-concrete-named-comparison/`. Main and both statement audits
 import the completed pairs; full automatic axiom coverage and serialized replay
-are pending. These components do not close Theorem 8.6. Its remaining named
+passed at `86b33eca560e389ac557e6d27b21e67a20b13c75` in `.codex-work/verify-20261108T203846Z-oUfIlw`. These components do not close Theorem 8.6. Its remaining named
 substitution/admissibility, native derivation-image and canonical comparisons,
 and the final categorical application are still open.
 
@@ -658,11 +655,10 @@ externally consistent standard fiber, using the actual chosen PA enumeration.
 Proposition 7.8 and the actual numerical 08d application remain proved.
 Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1–8.4
 are complete. Proposition 8.5 now has its actual carrier geometry, syntax/list and arbitrary-rule
-derivation realization, including the canonical first-order bundle. These targeted
-proofs await integrated verification. The remaining numbered Miller result is 8.6,
+derivation realization, including the canonical first-order bundle. These proofs passed the integrated full verification recorded above. The remaining numbered Miller result is 8.6,
 its field theory, named substitution/proof images and categorical application.
 Ignored source-only bodies do not complete that obligation. There are 61 proved rows
-among 62 numbered results, with 8.5 awaiting integrated verification;
+among 62 numbered results, with 8.5 included in the completed integrated verification;
 this is coverage rather than a percentage of proof effort.
 
 Semantic K is distinct from arithmetic code models N/M. External Γ
@@ -675,3 +671,35 @@ and the uniform computation comparison are separate completed proofs.
 Rows 9.1 and B.10 retain the corrected status of the completed numerical tuple comparison
 in 7.7. Manuscript editing belongs to the manuscript chat; this proof
 batch preserves its integrated target.
+
+<!-- V46_CURRENT_VERIFICATION_START -->
+The current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0**
+in `.codex-work/verify-20261108T203846Z-oUfIlw` at tested proof `86b33eca560e389ac557e6d27b21e67a20b13c75`. All 1487 recorded commands
+passed. The transitive audits retain 1,274 earlier declarations
+and cover 22,790 current declarations in
+758 production modules. The permitted union is
+exactly `Classical.choice`, `Quot.sound`, `propext`. All 16 dependency worktrees
+were clean and pinned at start/end; 356 imported-source
+pins and 25 manuscript artifacts passed.
+
+All 1769 measured input hashes match committed proof `86b33eca560e389ac557e6d27b21e67a20b13c75`;
+snapshot SHA-256: `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. No measured bytes
+changed during the full replay. The ordinary proof push and remote ref were checked.
+The measured verifier JSON and source-hash list remain tied to this proof commit.
+
+Proposition 8.5 is complete. Its 78 producer/Checks pairs and the
+34 completed 8.6 component pairs are covered by this full replay.
+Theorem 8.6 remains the first open principal result; its final named proof-image,
+canonical-presentation and Corollary 4.3 application drafts remain uncompiled.
+There are 61 proved rows among 62 numbered results; this is coverage, not proof effort.
+
+After the replay, only verification wording in `FORMALIZATION_STATUS_V48.md` was amended.
+Its before/after hashes, exact permitted patch and separate successful manuscript-only
+gate are recorded under `post_verification_correspondence`; these amended documentation
+bytes are not claimed as inputs to the earlier Lean replay. Every other measured input
+is unchanged. All six delivered payloads come from the separately pushed report commit.
+
+Completed wrapper resources: elapsed 3:19:33, maximum RSS
+3,410,772 KiB, swaps 0, exit 0.
+These are GNU time measurements, not an aggregate host-memory estimate.
+<!-- V46_CURRENT_VERIFICATION_END -->

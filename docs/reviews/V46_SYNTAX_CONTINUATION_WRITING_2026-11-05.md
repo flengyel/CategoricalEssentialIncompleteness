@@ -1,9 +1,7 @@
 # Writing review of the continuation records
 
-Scope: Miller cut correspondence and implementation records after main `d757a37`.
-No manuscript edits. The records distinguish one uniform all-representation
-program from unrelated pointwise indices, values from domains, and the source
-Turing morphism from the target universal oracle interpreter.
+Scope: existing Miller realization/correspondence/evidence records after proof86b33ec;
+no manuscript edits, theorem weakening or independent Lean replay.
 
 The governing source already consulted in this conversation is Knuth,
 Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf),
@@ -37,8 +35,8 @@ arithmetic code models N/M.
 | Printed indexed coordinates | An intermediate raw pair or inverse-equivalence code could be read as the printed exponential pair or proof carrier. | Name the actual exponential axiom mono squares, product chart J(D)≅E×S, proof presentation J(P₀)≅P and γ_c:P₀→D conclusion comparison, selected program's PA graph/exact domain, and range/image splitting. |
 | Numeral-Prov scope | A standard word comparison could be read as the full PA statement. | State `printedProvability_numeral_PA` as ∀z, Prov(ē,z) ↔ Prov_Γe(z) for each standard e, with its all-PA-model theorem covering every internal word. Keep the standard native PA-axiom characterization separate. |
 | Uniform independence 7.6 | A family of choices depending on consistency could be mistaken for one morphism, or standard independence extended to nonstandard fibers. | State one actual q:E→S before e and consistency, identify its standard N word with a closed named formula, and retain only the external consistency hypothesis on the displayed Γ_e. The PA enumeration, representation and evidence bounds are proved dependencies. |
-| Miller 8.1–8.2 | A chosen oracle, extensional values alone or a restricted fixed-oracle target would weaken the statements. | State one index before every representation, the exact domain equation, all structural laws for the uniform morphism class, the full relative-recursive target and identity-value range interpretation. The cut comparisons are recorded in the next row; 8.5–8.6 remain open. |
-| Miller 8.3–8.4 | A cozero/approximation interface or a supplied reduction would leave the principal construction open. | State the actual all-oracle program, ordinary specialization before every Miller sequence, both exact cut preimages and the discharged categorical diagonal/relative-separator comparisons. Keep 8.5–8.6 open. |
+| Miller 8.1–8.2 | A chosen oracle, extensional values alone or a restricted fixed-oracle target would weaken the statements. | State one index before every representation, the exact domain equation, all structural laws for the uniform morphism class, the full relative-recursive target and identity-value range interpretation. The cut comparisons are recorded in the next row; 8.5 is now verified and 8.6 remains open. |
+| Miller 8.3–8.4 | A cozero/approximation interface or a supplied reduction would leave the principal construction open. | State the actual all-oracle program, ordinary specialization before every Miller sequence, both exact cut preimages and the discharged categorical diagonal/relative-separator comparisons. Record the subsequently verified realization 8.5 separately; the final 8.6 application remains open. |
 | Cosheaf 9.3–9.6 | Evaluator uniqueness, component folds or the earlier coded image could be mistaken for the printed universal property. | Name the original-carrier algebra isomorphism, derived constructor and fold naturality, uniqueness among all global algebra morphisms, literal diagram and five-summand axiom comparisons, actual initial conclusion image and selected-endpoint arbitrary c.e. axiom extension. |
 
 The records define namespace abbreviations and model roles before use, state
@@ -56,12 +54,12 @@ The 905-command full verification at proof `e08d21c` and report `1db7a66`,
 and its committed-byte delivery, remain historical baseline evidence.
 Proposition 7.8 and the actual numerical 08d application are complete.
 Cosheaf initiality 9.3 and the 9.4/9.6 presentation identifications are
-complete. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. Tuple
+complete. Miller 8.1–8.5 are complete; the final 8.6 application remains open. Tuple
 comparison 7.7 remains proved.
 
 The final concrete specialization is `ArithmeticIndexedPrintedFamily`: its coefficient data use the proved realized axiom square, its printed algebra is constructed by arbitrary-rule initiality, and its algebra isomorphism preserves the constructors and conclusion. The actual numeral fibers and sentence images are proved. Its P₀ presentation and conclusion equation identify the existing selected program with that printed initial algebra.
 
-The integrated full v48 verification passed with exit 0 in `.codex-work/verify-20261108T114347Z-mULAhc`. All 1263 commands passed, the permitted axiom union and clean pinned dependencies were checked, and every tested input matches committed proof `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. The separate report commit and Downloads copies are checked by the existing committed-byte delivery procedure.
+Historical checkpoint: the integrated full v48 verification passed with exit 0 in `.codex-work/verify-20261108T114347Z-mULAhc`. All 1263 commands passed, the permitted axiom union and clean pinned dependencies were checked, and every tested input matches committed proof `f15eeb1f562d4d081edefb67821ca6b1a4ca57e9`. Miller 8.1–8.4 are complete; 8.5–8.6 remain open. The separate report commit and Downloads copies are checked by the existing committed-byte delivery procedure.
 
 Final verification, permitted axioms, tested-source identity, ordinary push
 and committed-byte delivery are recorded from completed checks, not inferred
@@ -80,5 +78,38 @@ claiming an OOM event. Manuscript prose and definitions remain unchanged.
 The cut approximation index is chosen before every oracle and numerical
 input; the ordinary reduction precedes every Miller sequence. Both exact
 cut preimages and the categorical inseparability and relative-separator
-conclusions have their concrete premises discharged. The subsequent
-total-category realization and final theory application remain open.
+conclusions have their concrete premises discharged. The subsequent total-category realization 8.5 is now proved; the final theory application 8.6 remains open.
+
+<!-- V46_CURRENT_WRITING_VERIFICATION_START -->
+The current-manuscript v48 `bash scripts/verify-wsl.sh` passed with exit **0**
+in `.codex-work/verify-20261108T203846Z-oUfIlw` at tested proof `86b33eca560e389ac557e6d27b21e67a20b13c75`. All 1487 recorded commands
+passed. The transitive audits retain 1,274 earlier declarations
+and cover 22,790 current declarations in
+758 production modules. The permitted union is
+exactly `Classical.choice`, `Quot.sound`, `propext`. All 16 dependency worktrees
+were clean and pinned at start/end; 356 imported-source
+pins and 25 manuscript artifacts passed.
+
+All 1769 measured input hashes match committed proof `86b33eca560e389ac557e6d27b21e67a20b13c75`;
+snapshot SHA-256: `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. No measured bytes
+changed during the full replay. The ordinary proof push and remote ref were checked.
+The measured verifier JSON and source-hash list remain tied to this proof commit.
+
+Proposition 8.5 is complete. Its 78 producer/Checks pairs and the
+34 completed 8.6 component pairs are covered by this full replay.
+Theorem 8.6 remains the first open principal result; its final named proof-image,
+canonical-presentation and Corollary 4.3 application drafts remain uncompiled.
+There are 61 proved rows among 62 numbered results; this is coverage, not proof effort.
+
+After the replay, only verification wording in `FORMALIZATION_STATUS_V48.md` was amended.
+Its before/after hashes, exact permitted patch and separate successful manuscript-only
+gate are recorded under `post_verification_correspondence`; these amended documentation
+bytes are not claimed as inputs to the earlier Lean replay. Every other measured input
+is unchanged. All six delivered payloads come from the separately pushed report commit.
+
+Completed wrapper resources: elapsed 3:19:33, maximum RSS
+3,410,772 KiB, swaps 0, exit 0.
+These are GNU time measurements, not an aggregate host-memory estimate.
+
+Earlier full-run paragraphs retain their historical proof identities; the current result above is measured, not inferred from source review.
+<!-- V46_CURRENT_WRITING_VERIFICATION_END -->
