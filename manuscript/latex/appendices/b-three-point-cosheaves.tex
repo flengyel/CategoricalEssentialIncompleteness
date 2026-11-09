@@ -27,7 +27,7 @@ A\arrow[r]&A\amalg_C B.
 \]
 Any other members of a cover factor through these maximal members,
 so their identifications are already imposed by this pushout.
-A natural transformation induces a unique map of pushouts.
+A natural transformation induces a unique morphism of pushouts.
 This defines the quasi-inverse on morphisms; the same universal
 property gives both natural isomorphisms required for an equivalence.
 \end{proof}
@@ -76,14 +76,14 @@ disjoint pullback-stable finite coproducts, regular images, and
 computable sections of surjections in $\mathcal C_{\mathrm{rec}}$.
 
 Limits and tagged finite coproducts in $\mathcal E$ are formed
-componentwise. Their universal maps are natural because their
+componentwise. Their universal morphisms are natural because their
 components are uniquely determined by the corresponding numerical
 universal properties. For a natural transformation $f:Y\to Z$,
 the equations $r_i^Zf_0=f_i r_i^Y$ show that its component images
 form a subfunctor of $Z$.
 For a componentwise surjection $q:Y\to Z$, a natural transformation
 $u:Y\to W$ coequalizing its kernel pair descends componentwise.
-If $v_jq_j=u_j$ are the descended maps, then
+If $v_jq_j=u_j$ are the descended morphisms, then
 \[
  r_i^Wv_0q_0=r_i^Wu_0=u_i r_i^Y
  =v_iq_i r_i^Y=v_i r_i^Zq_0.
@@ -99,19 +99,19 @@ The three objects of $\mathcal E$
  H_1=(1\leftarrow0\to0),\qquad
  H_2=(0\leftarrow0\to1)
 \]
-detect component elements: total maps $H_j\to Y$ are in bijection
-with elements of $Y_j$. These maps are recursive because every
+detect component elements: total morphisms $H_j\to Y$ are in bijection
+with elements of $Y_j$. These morphisms are recursive because every
 nonempty component of their source $H_j$ is a singleton.
 If a morphism of $\mathcal E$ is monic,
-testing it on these maps proves that each component is injective.
+testing it on these morphisms proves that each component is injective.
 The converse follows by cancelling those component injections.
 An injective morphism of $\mathcal C_{\mathrm{rec}}$ has a partial recursive inverse
 on its c.e.\ image, obtained by preimage search.
 
-Finally, for a map $Y\to A+B$, the inverse images of the two
+Finally, for a morphism $Y\to A+B$, the inverse images of the two
 tags form c.e.\ subfunctors $Y^A,Y^B$ and give an isomorphism
-$Y^A+Y^B\cong Y$. Maps over $A+B$ restrict uniquely to maps
-over $A$ and $B$, and two such maps combine uniquely by tagged
+$Y^A+Y^B\cong Y$. Morphisms over $A+B$ restrict uniquely to morphisms
+over $A$ and $B$, and two such morphisms combine uniquely by tagged
 copairing. This proves the slice equivalence expressing extensivity.
 \end{proof}
 
@@ -192,9 +192,9 @@ including the empty join.
 
 Suppose that $p:Y\rightharpoonup Z$ is a partial monomorphism
 and let $D_p$ be its domain subfunctor. If two elements of $(D_p)_j$
-have the same image, their corresponding total maps
+have the same image, their corresponding total morphisms
 $H_j\to D_p\to Y$ have equal composites with $p$.
-Partial monicity makes the original maps equal, since their
+Partial monicity makes the original morphisms equal, since their
 images lie in $D_p$. Thus each $p_j$ is injective on $(D_p)_j$.
 Preimage search gives recursive inverse components on $I_p$;
 they form a natural transformation by injectivity and naturality of
@@ -485,7 +485,7 @@ The binary restriction products, coproducts, and prodominical
 zero law restrict from $\mathcal A$ to this full subcategory.
 The Turing morphism of Theorem~\ref{thm:fork-turing} has
 source $V\times V$ and target $V$ in the subcategory.
-Its total parameter maps for objects of $\mathscr R_X$ belong
+Its total parameter morphisms for objects of $\mathscr R_X$ belong
 to $\mathscr R_X$ by fullness. Hence it retains its Turing
 universal property there, proving that $\mathscr R_X$ is a
 recursion category.

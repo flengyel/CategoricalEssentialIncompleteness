@@ -1,10 +1,10 @@
-# LaTeX sources — version 48
+# LaTeX sources — version 49
 
 **Logical consequence and essential incompleteness in recursion categories**,
-7 November 2026.
+9 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v48.pdf`
-and `logical_consequence_v48_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v49.pdf`
+and `logical_consequence_v49_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All four appendices and
@@ -51,11 +51,15 @@ The output is `main.pdf`. The source package contains this directory as
 
 ## Revisions
 
+Version 49 uses “morphism” for categorical morphisms throughout the cosheaf
+construction and the numerical and Miller arguments. The abstract, definitions,
+theorem statements, hypotheses, equations and proofs are unchanged.
+
 Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 48 is the current manuscript and Lean verification target.
+Version 49 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.

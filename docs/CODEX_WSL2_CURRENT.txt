@@ -1,11 +1,11 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 7 November 2026
+Updated 9 November 2026
 
 The current target is Florian Lengyel's “Logical consequence and essential
-incompleteness in recursion categories,” version 48. The repository is
+incompleteness in recursion categories,” version 49. The repository is
 flengyel/CategoricalEssentialIncompleteness.
 
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V48.md, and
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V49.md, and
 manuscript/latex/main.tex with its nested inputs. The manifest identifies the
 active version and audit entry points. Follow the current manuscript after
 every revision; do not retain v46 or another earlier version as the active
@@ -24,7 +24,7 @@ another project.
 Continue the substantive proofs from the current correspondence table.
 The latest implementation report is
 docs/V46_SYNTAX_CONTINUATION_2026-11-05.md. Its completed constructions and
-remaining obligations are carried into FORMALIZATION_STATUS_V48.md.
+remaining obligations are carried into FORMALIZATION_STATUS_V49.md.
 The V46 module/namespace prefix is an implementation name; MANUSCRIPT_CURRENT
 selects the verification target.
 
@@ -64,4 +64,8 @@ bytes, identify the verified commit and commands, and distinguish completed
 proofs from remaining obligations. Preserve the current manuscript version
 rule in future continuation instructions.
 
-Next proof batch: docs/CODEX_CEI_V48_NUMERICAL_2026-11-07.md.
+All 62 numbered manuscript results have proofs. The numerical, Miller and
+cosheaf work in the earlier continuation instructions is complete.
+Current task: Palomar preparation, recorded in
+docs/PALOMAR_EDITORIAL_REVIEW_2026-11-09.md.
+Preserve the earlier verification records for their tested commits.

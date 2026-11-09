@@ -1,14 +1,14 @@
-# Manuscript version 48
+# Manuscript version 49
 
 **Logical consequence and essential incompleteness in recursion categories**,
-7 November 2026.
+9 November 2026.
 
 | Item | Location |
 | --- | --- |
-| PDF | [logical_consequence_and_essential_incompleteness_v48.pdf](logical_consequence_and_essential_incompleteness_v48.pdf) |
+| PDF | [logical_consequence_and_essential_incompleteness_v49.pdf](logical_consequence_and_essential_incompleteness_v49.pdf) |
 | LaTeX entry point | [latex/main.tex](latex/main.tex) |
 | Source directory and guide | [latex/](latex/) |
-| Complete source ZIP | [logical_consequence_v48_source.zip](logical_consequence_v48_source.zip) |
+| Complete source ZIP | [logical_consequence_v49_source.zip](logical_consequence_v49_source.zip) |
 | Older manuscripts and source packages | [archive/](archive/) |
 
 The PDF includes all four appendices. The source ZIP extracts to `latex/` and
@@ -25,8 +25,8 @@ The output is `main.pdf`. Earlier PDFs, standalone TeX sources, source ZIPs,
 and reference manuscripts have moved to `archive/` with their contents unchanged.
 See its [index](archive/INDEX.json) for the old and new paths and blob hashes.
 
-The [current Lean correspondence table](../FORMALIZATION_STATUS_V48.md) records
-proved results and remaining obligations. The
+The [current Lean correspondence table](../FORMALIZATION_STATUS_V49.md) records
+the proved results and their verification evidence. The
 [current Codex instructions](../docs/CODEX_WSL2_CURRENT.txt) govern further work.
 
 See [NOTICE.md](NOTICE.md) for manuscript licensing.
