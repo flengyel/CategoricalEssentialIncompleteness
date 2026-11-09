@@ -1,7 +1,10 @@
 # Writing review of the continuation records
 
-Scope: existing Miller realization/correspondence/evidence records after proof86b33ec;
-no manuscript edits, theorem weakening or independent Lean replay.
+Scope: existing Miller realization/correspondence/evidence records after proof
+`86b33ec`, including five later targeted comparison pairs. The occurrence-fold,
+actual option-success and genuine E canonical operation comparisons are recorded
+separately from the pending F named substitution/derivation-image chain and final
+4.3 application. No manuscript edits or independent Lean replay are included.
 
 The governing source already consulted in this conversation is Knuth,
 Larrabee and Roberts, [*Mathematical Writing*, Stanford CS-TR-89-1193](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf),
@@ -113,3 +116,9 @@ These are GNU time measurements, not an aggregate host-memory estimate.
 
 Earlier full-run paragraphs retain their historical proof identities; the current result above is measured, not inferred from source review.
 <!-- V46_CURRENT_WRITING_VERIFICATION_END -->
+
+## Subsequent targeted comparison evidence
+
+Each of the five frozen pair receipts records two successful strict scratch commands and four successful production commands, including an independently imported Checks module: 30 commands in total. The producers are imported by the main entry point, the Checks modules by `CurrentStatementAudit`, and both axiom audits import the main entry point. The separate manuscript-only gate `run/comparison-five-manuscript-gate-20261109T003131805695Z.json` exited 0. No new combined Lean build, transitive axiom audit or full replay is asserted for these additions. The last completed full replay remains proof `86b33eca560e389ac557e6d27b21e67a20b13c75`, with 1,487 commands and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; its measured declaration/module counts, raw verifier and source-hash list remain unchanged.
+
+Theorem 8.6 remains open. The remaining principal steps are the named substitution/admissibility and finite native-proof/sentence-image comparisons for F, the remaining canonical sentence/inference/derivation-image transport with recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application. No truth hypothesis on Γ or uniform proof selector is supplied. The five targeted pairs do not change the count of completed numbered results.

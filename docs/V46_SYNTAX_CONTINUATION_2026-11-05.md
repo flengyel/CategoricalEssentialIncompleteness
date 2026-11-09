@@ -637,6 +637,14 @@ sentence-idempotent disjointness equation. That repair and its direct printed
 application endpoint remain uncompiled, and are not counted as completed.
 No manuscript statement was changed.
 
+## Targeted comparison continuation after the completed full replay
+
+Five further producer/Checks pairs have passed targeted verification after proof `86b33ec`: the named occurrence-fold comparison, the actual option-success pullback, and the canonical constructor, transpose and operation comparisons. `NamedSyntaxComparison.occurrence_fold_comparison` uses algebra-morphism uniqueness to identify the full occurrence fold; `termOccurrences_comparison` and `formulaOccurrences_comparison` are its components. `NamedSyntaxComparison.Options.success_isPullback` and `successIso_fst`/`successIso_snd` compare the actual success pullbacks. Through the genuine equivalence `E = Total.pointPresentation a`, `CanonicalPresentation.forward_constructor` and `forward_fold` compare constructors and folds; `termSubstitution_comparison`, `formulaSubstitutionOption_comparison`, `admissibleIso_inclusion`, `admissibleIso_result` and `negation_comparison` give the canonical operation diagrams. These canonical E comparisons are distinct from the remaining named substitution and derivation-image comparisons for the finite-geometry functor F.
+
+Each of the five frozen pair receipts records two successful strict scratch commands and four successful production commands, including an independently imported Checks module: 30 commands in total. The producers are imported by the main entry point, the Checks modules by `CurrentStatementAudit`, and both axiom audits import the main entry point. The separate manuscript-only gate `run/comparison-five-manuscript-gate-20261109T003131805695Z.json` exited 0. No new combined Lean build, transitive axiom audit or full replay is asserted for these additions. The last completed full replay remains proof `86b33eca560e389ac557e6d27b21e67a20b13c75`, with 1,487 commands and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`; its measured declaration/module counts, raw verifier and source-hash list remain unchanged.
+
+Theorem 8.6 remains open. The remaining principal steps are the named substitution/admissibility and finite native-proof/sentence-image comparisons for F, the remaining canonical sentence/inference/derivation-image transport with recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application. No truth hypothesis on Γ or uniform proof selector is supplied. The five targeted pairs do not change the count of completed numbered results.
+
 ## Remaining mathematical dependencies
 
 The concrete Γ/PA axiom comparison, standard finite-proof bounds, elementary
@@ -656,7 +664,7 @@ Proposition 7.8 and the actual numerical 08d application remain proved.
 Cosheaf 9.3 and its 9.4/9.6 identifications are complete. Miller 8.1–8.4
 are complete. Proposition 8.5 now has its actual carrier geometry, syntax/list and arbitrary-rule
 derivation realization, including the canonical first-order bundle. These proofs passed the integrated full verification recorded above. The remaining numbered Miller result is 8.6,
-its field theory, named substitution/proof images and categorical application.
+the F named substitution/admissibility and finite native-proof images, remaining canonical sentence/inference/proof-image transport and categorical application. The concrete field/RCF constituents remain proved; the five new comparison pairs have targeted verification only.
 Ignored source-only bodies do not complete that obligation. There are 61 proved rows
 among 62 numbered results, with 8.5 included in the completed integrated verification;
 this is coverage rather than a percentage of proof effort.
