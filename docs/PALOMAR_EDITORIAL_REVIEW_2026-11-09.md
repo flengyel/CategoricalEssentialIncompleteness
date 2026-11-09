@@ -96,3 +96,12 @@ The checked-out workflow revision is
 `14aa8d6b3c2f14a8540605e37144560b9a00e7e7`;
 the policy revision is `28bd48b9b71bbb2a82c718ce761d5a4220ef8e60`.
 These will be checked again before the candidate preflight and intake.
+
+## Approved abstract for version 51
+
+The approved manuscript abstract is stored as plain text in
+[PALOMAR_ABSTRACT.txt](PALOMAR_ABSTRACT.txt). It matches the abstract in
+`manuscript/latex/abstract.tex` and the opening of `README.md`. Use it verbatim
+when preparing the Palomar abstract and check the assembled metadata and
+preview against this text. The abstract update does not change a theorem,
+definition, proof, or Lean source. The introduction remains unchanged.

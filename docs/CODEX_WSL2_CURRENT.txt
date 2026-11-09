@@ -2,10 +2,10 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 9 November 2026
 
 The current target is Florian Lengyel's “Logical consequence and essential
-incompleteness in recursion categories,” version 50. The repository is
+incompleteness in recursion categories,” version 51. The repository is
 flengyel/CategoricalEssentialIncompleteness.
 
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V50.md, and
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V51.md, and
 manuscript/latex/main.tex with its nested inputs. The manifest identifies the
 active version and audit entry points. Follow the current manuscript after
 every revision; do not retain v46 or another earlier version as the active
@@ -69,6 +69,11 @@ Current task: Palomar preparation, recorded in
 docs/PALOMAR_EDITORIAL_REVIEW_2026-11-09.md.
 Preserve the earlier verification records for their tested commits.
 
-Version 50 contains prose edits only. See
-docs/reviews/V50_MANUSCRIPT_PROSE_2026-11-09.md for the edits and manuscript checks.
+Version 51 updates the approved abstract. See
+docs/V51_ABSTRACT_UPDATE_2026-11-09.md for the changes and manuscript checks.
 The next integrated verification of the Palomar port must use this current target.
+
+Use docs/PALOMAR_ABSTRACT.txt verbatim for the Palomar abstract. It matches the
+approved manuscript and README abstract. Preserve this wording when generating
+submission metadata and check the assembled payload and preview before fixing
+the candidate commit.

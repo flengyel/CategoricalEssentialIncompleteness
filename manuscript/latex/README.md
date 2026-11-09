@@ -1,10 +1,10 @@
-# LaTeX sources — version 50
+# LaTeX sources — version 51
 
 **Logical consequence and essential incompleteness in recursion categories**,
 9 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v50.pdf`
-and `logical_consequence_v50_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v51.pdf`
+and `logical_consequence_v51_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All four appendices and
@@ -51,6 +51,10 @@ The output is `main.pdf`. The source package contains this directory as
 
 ## Revisions
 
+Version 51 replaces the abstract with the approved account of the motivation,
+categorical incompleteness result, and three applications. The introduction,
+definitions, hypotheses, conclusions, and proof arguments are unchanged.
+
 Version 50 removes redundant prose, expands compressed noun phrases, and
 clarifies references to mathematical objects. The approved abstract,
 definitions, hypotheses, conclusions, and proof arguments are unchanged.
@@ -63,7 +67,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 50 is the current manuscript and Lean verification target.
+Version 51 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.
