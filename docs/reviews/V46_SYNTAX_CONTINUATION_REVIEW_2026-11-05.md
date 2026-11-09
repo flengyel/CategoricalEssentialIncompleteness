@@ -1,13 +1,11 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: the concrete Miller total-category realization 8.5, its fully replayed
-8.6 constituents, and five subsequent targeted comparison pairs against manuscript
-v48. The additions identify the occurrence fold by uniqueness, compare the actual
-option-success pullback, and give the genuine E canonical constructor and full
-substitution/admissibility/negation diagrams. This is source/type and recorded-evidence
-review; no independent Lean replay, new full replay or whole-paper certification
-is claimed. The F named substitution/derivation-image chain and final 4.3
-application remain open.
+Scope: the full 86b Miller realization and its 22 subsequent targeted pairs,
+including literal Γ reflection, finite-support Gen/ordered MP and framed actual
+substitution/Option/equal-binder equations, against manuscript v48. Full native
+term/formula induction, proof-image equivalence and the final 4.3 application
+remain open. This is source/type and recorded-evidence reporting; no new full
+Lean replay, independent replay or whole-paper completion is claimed.
 
 The preceding cosheaf batch proved the original-carrier algebra initial among
 all target slice algebras. Its constructor and fold naturality are derived
@@ -289,3 +287,13 @@ Seven additional producer/Checks pairs pass all 42 targeted commands after `7290
 
 The actual canonical list/constructor and membership squares and native implication, equality and quantifier point equations also pass their independent checks. The native term/formula point bijections and inverse code equations are also proved, including exact named-binder and negation decoding. These results keep the native finite-proof image comparison separate from construction of the derivation carrier. The F substitution-fold/admissibility comparison, native proof-image equations, remaining canonical logical/inference/derivation-image comparison and recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application remain open. The latest seven pairs add to the ten previously recorded targeted pairs: 102 successful targeted commands after the unchanged full run at `86b33ec`. New combined verification and transitive axiom coverage remain pending; Theorem 8.6 is still partial and the numbered coverage remains 61 of 62.
 <!-- V48_SENTENCE_COMPONENT_PROGRESS_END -->
+
+<!-- V48_NATIVE_REFLECTION_SUBSTITUTION_PROGRESS_START -->
+Five further producer/Checks pairs pass all 30 targeted commands after `bb8a670`. `NamedProofImage.sentence_inclusion_closed`, `axiom_word_member` and `axiom_finite_proof` recover literal closed Γ axioms from the actual sentence pullback and give singleton finite supports. `generalization_finite` retains a child's finite support; `modusPonens_finite` combines the ordered antecedent and implication supports through native axiom replacement. These statements impose no truth hypothesis on Γ and choose no family of Γ proofs.
+
+`NamedProofImage.NativeSubstitution.PointFrame.realize_natural` gives finite framed polynomial inputs at an actual parameter. `optionEquiv`, `option_graph`, `success_iff` and `failure_iff` identify every native Option point with its actual categorical value, success pullback or failure branch. The success/failure statements concern the decoded categorical result; the full native substitution induction remains a separate dependency.
+
+`term_root_framed` and `formula_root_framed` prove the actual substitution fold's constructor equations on those framed inputs. `function_node_map` preserves the selected symbol and ordered children. `equal_binder_option`, `equal_binder_decoded`, `equal_binder_success` and `equal_binder_reflection` prove the whole Option result retains the original quantified formula when the binder equals the query, including when recursive substitution into its body fails.
+
+The post-full continuation now comprises 22 pairs and 132 successful targeted commands. This batch's exact source hashes and six-command receipts are recorded separately from the unchanged full `86b33ec` replay: 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. New combined verification and automatic axiom coverage remain pending. Full native term/formula substitution induction and independent admissibility, the native finite-proof/image equivalence, remaining canonical logical/inference/derivation-image transport and original-mono recovery, and the actual Corollary 4.3 application remain open. Theorem 8.6 remains partial, with 61 of 62 numbered results proved.
+<!-- V48_NATIVE_REFLECTION_SUBSTITUTION_PROGRESS_END -->
