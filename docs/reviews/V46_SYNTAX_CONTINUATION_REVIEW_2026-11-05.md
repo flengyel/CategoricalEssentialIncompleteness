@@ -1,11 +1,6 @@
 # Author-side review of the syntax and soundness continuation
 
-Scope: historical full86b and52 later targeted pairs, including the actual
-Theorem8.6 application on literal/canonical sentence objects and every original
-axiom mono. All62 numbered rows now have targeted proofs. Combined imports,
-strict statement checks, transitive axiom coverage and full serialized replay
-remain pending. No new full verification, audited counts, independent replay
-or whole-manuscript completion is claimed.
+Scope: all 62 numbered v48 results, including the original-mono Theorem8.6 endpoints, are covered by the completed full v48 verification at tested proof `d437827275d64f6500e6a3bca2ee318420d11edd` in `.codex-work/verify-20261109T102738Z-KM4dao` exited 0 (1591 commands, 1873 measured inputs, 810 current modules, 25752 current and 1274 retained audited declarations). This record reports actual source/types and established-runner evidence; the independent review did not separately rerun Lean. The historical86b and later targeted evidence remain preserved.
 
 The preceding cosheaf batch proved the original-carrier algebra initial among
 all target slice algebras. Its constructor and fold naturality are derived
@@ -349,3 +344,11 @@ Seven further producer/Checks pairs pass all 42 targeted commands after `d64f2b3
 
 Theorem 8.6 now has its intended targeted proofs. The numbered correspondence records 62 proved rows among 62 numbered results. The post-full continuation comprises 52 pairs and 312 successful targeted commands. New combined imports, strict statement checking, transitive axiom coverage and the full serialized verification remain pending; `whole_current_manuscript_complete` remains false until that full verification exits zero. The historical full `86b33ec` evidence is unchanged: 1487 commands, 1769 inputs and snapshot `8a65beb3d802488e970d729485bb535ef1fd5f3704f93e7fdb2fd460777cd851`. This targeted checkpoint does not assign new module/declaration/axiom counts or claim a new full replay.
 <!-- V48_FINAL_MILLER_APPLICATION_PROGRESS_END -->
+
+<!-- V48_FINAL_INTEGRATED_VERIFICATION_START -->
+full v48 verification at tested proof `d437827275d64f6500e6a3bca2ee318420d11edd` in `.codex-work/verify-20261109T102738Z-KM4dao` exited 0 (1591 commands, 1873 measured inputs, 810 current modules, 25752 current and 1274 retained audited declarations). All commands exited zero; run-local start/source/dependency artifacts bind the result to the exact pushed proof. The source snapshot is `970db2a2d77bd66b5fa8cecd2cac25bc199e4b6c912b4eb177671aead92060db`. Dependency worktrees are clean and pinned at both ends; imported-source pins and unchanged toolchain pass. The actual transitive axiom union is Classical.choice, Quot.sound, propext.
+
+This full replay includes the genuine named/canonical syntax and substitution comparisons, arbitrary-rule inference and Γ derivation/image comparisons, the chosen Γ pullback and arbitrary original axiom-mono recovery, the base real model and literal/canonical Corollary 4.3 applications. Every candidate separator is recovered; top is the proper sentence carrier. Arbitrary Γ is required to extend by finite derivability and satisfy sentence consistency; no Γ truth or uniform proof selector is added. All 62 numbered rows are proved.
+
+The tested proof remains `d437827275d64f6500e6a3bca2ee318420d11edd`. These later report bytes are a documented correspondence-evidence update, not a replacement of the measured snapshot. The original86b raw full result, source-hash list and all52 targeted pair receipts/312 command records remain unchanged. The new full input-hash map is embedded in the actual raw verifier record; no historical counts or resources are reassigned.
+<!-- V48_FINAL_INTEGRATED_VERIFICATION_END -->
