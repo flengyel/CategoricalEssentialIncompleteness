@@ -713,3 +713,9 @@ Completed wrapper resources: elapsed 3:19:33, maximum RSS
 3,410,772 KiB, swaps 0, exit 0.
 These are GNU time measurements, not an aggregate host-memory estimate.
 <!-- V46_CURRENT_VERIFICATION_END -->
+
+<!-- V48_SENTENCE_COMPONENT_PROGRESS_START -->
+Seven additional producer/Checks pairs pass all 42 targeted commands after `729021e`. The actual F sentence pullback, inclusion, negation and sentence-point/formula-word graph are compared. Named proof data now supplies actual sentence points, arbitrary uniformly enumerable Γ axiom leaves and the constructed finite-derivation carrier and conclusion. The genuine E equivalence compares the canonical sentence and Γ axiom pullbacks. `TheorySentenceMorphisms.theta` is total before Γ is chosen; its graph/value equations and sentence negation equations use the fixed integer-coefficient field syntax and the proper chosen sentence object.
+
+The actual canonical list/constructor and membership squares and native implication, equality and quantifier point equations also pass their independent checks. The native term/formula point bijections and inverse code equations are also proved, including exact named-binder and negation decoding. These results keep the native finite-proof image comparison separate from construction of the derivation carrier. The F substitution-fold/admissibility comparison, native proof-image equations, remaining canonical logical/inference/derivation-image comparison and recovery of an arbitrary original axiom mono, and the actual Corollary 4.3 application remain open. The latest seven pairs add to the ten previously recorded targeted pairs: 102 successful targeted commands after the unchanged full run at `86b33ec`. New combined verification and transitive axiom coverage remain pending; Theorem 8.6 is still partial and the numbered coverage remains 61 of 62.
+<!-- V48_SENTENCE_COMPONENT_PROGRESS_END -->
