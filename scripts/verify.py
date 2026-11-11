@@ -1298,6 +1298,36 @@ AUDITED = [
 ]
 
 
+def parse_axiom_reports(text: str) -> dict[str, list[str]]:
+    """Read every Lean axiom report, including declaration names with primes."""
+    reports: dict[str, list[str]] = {}
+    for name, contents in re.findall(
+            r"^'(.+)' depends on axioms:\s*\[([^\]]*)\]\s*$", text, re.MULTILINE):
+        reports[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
+    for name in re.findall(
+            r"^'(.+)' does not depend on any axioms\s*$", text, re.MULTILINE):
+        reports[name] = []
+
+    # Read the closing quote from the report suffix, independently of the
+    # regex captures, so a truncated name or a skipped report cannot pass.
+    raw_names = []
+    for line in text.splitlines():
+        for suffix in ("' depends on axioms:", "' does not depend on any axioms"):
+            if suffix in line:
+                quoted_name = line.rsplit(suffix, 1)[0]
+                if not quoted_name.startswith("'"):
+                    raise RuntimeError("Unrecognized axiom report: " + line)
+                raw_names.append(quoted_name[1:])
+                break
+    if len(raw_names) != len(reports) or set(raw_names) != set(reports):
+        raise RuntimeError("Axiom report names are missing, truncated, or repeated")
+    for name, axioms in reports.items():
+        extra = set(axioms) - ALLOWED_AXIOMS
+        if extra:
+            raise RuntimeError(f"Unexpected axioms in {name}: {sorted(extra)}")
+    return reports
+
+
 def git_blob(data: bytes) -> str:
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
@@ -1308,6 +1338,7 @@ def source_snapshot() -> dict[str, str]:
              LEAN / "lake-manifest.json", LEAN / "lean-toolchain",
              ROOT / "scripts/verify.py", ROOT / "scripts/setup-wsl.sh",
              ROOT / "scripts/verify-wsl.sh", ROOT / "scripts/check_manuscript.py",
+             ROOT / "scripts/test_verify_axiom_parser.py",
              ROOT / "MANUSCRIPT_SOURCE.json", ROOT / "SOURCE_PINS.json",
              ROOT / "LOCAL_PATCHES.json",
              *manuscript_paths(ROOT, target),
@@ -1435,6 +1466,8 @@ def main() -> int:
         if "version 4.35.0-rc2," not in report["lean_version"]:
             raise RuntimeError("Unexpected Lean version")
 
+        run([sys.executable, str(ROOT / "scripts/test_verify_axiom_parser.py")],
+            "axiom-parser-tests.log")
         run(["lake", "build", "CategoricalEssentialIncompleteness"], "build.log")
 
         run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/V5StatementAudit.lean"], "v5-statement-audit.log")
@@ -1453,17 +1486,9 @@ def main() -> int:
              target["statement_audit"].replace(".", "/") + ".lean"],
             "current-statement-audit.log")
         text = run(["lake", "env", "lean", "CategoricalEssentialIncompleteness/AxiomAudit.lean"], "axiom-audit.log")
-        found = {}
-        for name, contents in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text):
-            found[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
-        for name in re.findall(r"'([^']+)' does not depend on any axioms", text):
-            found[name] = []
+        found = parse_axiom_reports(text)
         if set(found) != set(AUDITED):
             raise RuntimeError(f"Axiom audit declaration set differs from the expected {len(AUDITED)} declarations")
-        for name, axioms in found.items():
-            extra = set(axioms) - ALLOWED_AXIOMS
-            if extra:
-                raise RuntimeError(f"Unexpected axioms in {name}: {sorted(extra)}")
         report["axioms"] = found
 
         current_text = run(["lake", "env", "lean", "-DwarningAsError=true",
@@ -1477,18 +1502,9 @@ def main() -> int:
         if actual_modules != expected_modules:
             raise RuntimeError("Current production module audit coverage mismatch: " +
                                str(sorted(actual_modules ^ expected_modules)))
-        current_axioms = {}
-        for name, contents in re.findall(
-                r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", current_text):
-            current_axioms[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
-        for name in re.findall(r"'([^']+)' does not depend on any axioms", current_text):
-            current_axioms[name] = []
+        current_axioms = parse_axiom_reports(current_text)
         if not current_axioms:
             raise RuntimeError("Current axiom audit produced no declarations")
-        for name, axioms in current_axioms.items():
-            extra = set(axioms) - ALLOWED_AXIOMS
-            if extra:
-                raise RuntimeError(f"Unexpected current axioms in {name}: {sorted(extra)}")
         for path in production:
             if re.search(r"\b(sorry|admit|native_decide|unsafe)\b", path.read_text()):
                 raise RuntimeError("Forbidden proof token in current production source: " + str(path))
