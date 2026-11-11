@@ -358,11 +358,11 @@ the implemented constructions; the v57 statement comparison remains open.
 
 | Namespace below `CategoricalEssentialIncompleteness.V46` | Principal declaration | Source location | Statement check |
 | --- | --- | --- | --- |
-| `FirstOrderGeneration` | `adjunction`, `presentationAdjunction` | `Lean/CategoricalEssentialIncompleteness/V46FirstOrderGeneration.lean:181`, `:227` | `V46FirstOrderGenerationChecks.lean` |
-| `FirstOrderPresentations` | `adjunction` | `Lean/CategoricalEssentialIncompleteness/V46FirstOrderPresentationAdjunction.lean:121` | `V46FirstOrderPresentationAdjunctionChecks.lean` |
-| `SyntacticGenerationAdjunction` | `adjunction`, `subobjectAdjunction` | `Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean:52`, `:72` | `V46SyntacticGenerationAdjunctionChecks.lean` |
-| `RulePresentation.Translation` | `closed_pullback`, `fold_constructor`, `fold_unique` | `Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean:149`, `:178`, `:221` | `V46InferenceTranslationChecks.lean` |
-| `RuleSystem` | `derivationFunctor`, `conclusion` | `Lean/CategoricalEssentialIncompleteness/V46InferenceFunctor.lean:79`, `:97` | `V46InferenceFunctorChecks.lean` |
+| `FirstOrderGeneration` | `adjunction`, `presentationAdjunction` | [subobject adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46FirstOrderGeneration.lean#L181), [presentation adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46FirstOrderGeneration.lean#L227) | `V46FirstOrderGenerationChecks.lean` |
+| `FirstOrderPresentations` | `adjunction` | [adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46FirstOrderPresentationAdjunction.lean#L121) | `V46FirstOrderPresentationAdjunctionChecks.lean` |
+| `SyntacticGenerationAdjunction` | `adjunction`, `subobjectAdjunction` | [presentation adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean#L52), [subobject adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean#L72) | `V46SyntacticGenerationAdjunctionChecks.lean` |
+| `RulePresentation.Translation` | `closed_pullback`, `fold_constructor`, `fold_unique` | [closure](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L149), [constructors](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L178), [uniqueness](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L221) | `V46InferenceTranslationChecks.lean` |
+| `RuleSystem` | `derivationFunctor`, `conclusion` | [functor](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceFunctor.lean#L79), [naturality](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceFunctor.lean#L97) | `V46InferenceFunctorChecks.lean` |
 
 ## Integrated local verification, 11 November 2026
 
@@ -412,6 +412,31 @@ not weakened. The resource repairs factor proofs of the same equations,
 and the module-port repairs change visibility and references. Lean's 4 GB
 budget was used throughout this full run; no command timed out or exhausted
 that budget.
+
+## Commit and delivery
+
+The proof batch is committed and pushed to main as
+`962f9474dcd543529692cbdf37a6db703f4abda2`. The ordinary SSH push exited 0,
+and `git ls-remote origin refs/heads/main` confirmed that commit. All 2,238
+measured inputs were compared with its committed blobs and matched. The
+comparison is recorded in
+`.codex-work/v57-continuation-20261110/committed-source-identity.json`.
+The report follow-up changes no measured input. Source links in the table
+above identify this proof commit.
+
+For the later appendix, `FirstOrderGeneration.generated_le_iff` at
+[line 149](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46FirstOrderGeneration.lean#L149)
+is a short representative proof. Its two directions use the axiom
+inclusion and leastness of the generated theory. The preceding tables
+identify the supporting declarations and their hypotheses. No manuscript
+appendix was edited.
+
+Delivery follows the existing procedure: read report bytes from the pushed
+report commit, compare all measured proof inputs with that commit, select a
+new Downloads directory to preserve differing files, and verify each copy
+by SHA-256. The delivery receipt records the report commit, proof commit,
+remote confirmation, destination paths and hashes. The requested manuscript
+version is 57; the verified available manuscript version is 51.
 
 ## Artifact and registration scope
 
