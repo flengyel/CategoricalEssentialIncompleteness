@@ -647,3 +647,182 @@ results are proved and verified; twelve remain open. Uncompiled drafts for
 the next syntax interpretation are kept separately in the ignored
 continuation directory and establish no additional correspondence row.
 No manuscript mathematical statement or proof was changed.
+
+
+## Ongoing Theorem 4.7: syntax comparisons
+
+The next development batch adds `V46VariableTests`,
+`V46StableListComparison`, `V46NullarySyntaxAlgebra`,
+`V46NullarySyntaxInterpretation` and `V46NullarySyntaxOccurrences`, with
+Checks, production imports and automatic axiom coverage. These additions
+follow the completed proof commit and are not part of its full-run snapshot.
+All ten targeted strict commands pass; their fourteen selected transitive
+axiom reports contain only the permitted three axioms. The record is
+`v57-free-prerequisites-targeted.json` in the continuation working directory.
+
+The equality test is determined by the diagonal. List initiality constructs
+the comparison isomorphism and proves preservation of singleton, append,
+deletion and membership. The six logical constructor equations give an
+algebra morphism for the manuscript polynomial with empty function
+coefficients and nullary predicate coefficient X. The fold interprets any
+morphism X→S_Q, commutes with constructors and is unique with those laws.
+Initiality also proves the occurrence-list comparison across the chosen
+list carriers. Pullback gives `sentenceInterpretation`; its value on the
+atomic sentence map is the supplied morphism.
+
+This is supporting work for 4.7. The later substitution batch below proves
+admissible-substitution compatibility. Logical-rule preservation, the two
+categories and functors, and their natural hom-set bijection remain open.
+The count remains 65 proved numbered results and twelve open. No manuscript
+source or mathematical statement changes.
+
+
+### Substitution comparison for Theorem 4.7
+
+`V46.NullaryInterpretation.variableIso` in `V46NullarySyntaxTerms` identifies the term object with V through
+its variable constructor. This follows from the initial-algebra structure
+and the initial empty-function input. `V46CategoricalVariableSubstitution`
+proves the variable constructor equation for the existing substitution fold.
+`V46.NullaryInterpretation.term_substitution` in `V46NullaryTermSubstitution` then proves the term equation
+required of the interpretation into any target first-order syntax.
+
+`V46OptionSyntaxNaturality` proves naturality of the option-valued binary and
+coefficient constructors by their coproduct-fiber decompositions. Occurrence
+and membership comparisons prove preservation of both variable equality and
+the capture test. `V46.NullaryInterpretation.quantifier_pair_comparison` in
+`V46NullarySubstitutionQuantifier`
+includes the equal-name branch, which returns the original body even when
+the recursive result fails.
+
+`V46.NullaryInterpretation.substitutionComparisonHom` in
+`V46NullarySubstitutionHom` interprets the output
+of the source substitution algebra. `V46NullaryInterpretedSubstitutionHom`
+constructs `interpretedSubstitutionHom`, which substitutes after interpretation.
+Both are algebra morphisms into the same algebra over the source substitution
+parameter. Initiality in that slice gives
+`V46.NullaryInterpretation.substitution_fold_comparison`.
+Its result projection proves `formula_substitution_option` in
+[V46NullaryFormulaSubstitution.lean](../Lean/CategoricalEssentialIncompleteness/V46NullaryFormulaSubstitution.lean).
+The pullback lift `admissibleInterpretation` preserves both its input inclusion
+and result, by `admissibleInterpretation_inclusion` and
+`admissibleInterpretation_result`.
+
+The target algebra operations and carriers are the supplied arbitrary
+morphisms and objects. The source coefficient morphism X→S_Q may identify
+predicate labels. No initiality is transferred to an axiom presentation or
+to an image of its labels, and no soundness or arithmetic hypothesis is added.
+
+The 21 supporting producer/Checks pairs are imported by the production entry
+point, both statement audits and the automatic transitive axiom audit. All
+42 targeted strict commands pass with `--memory=4096 -DwarningAsError=true`
+and `LEAN_NUM_THREADS=1`, serialized through the existing lock. Their 64
+selected axiom reports are parsed under complete declaration names and use
+only `propext`, `Quot.sound` and `Classical.choice`. The command, exit status,
+source hash and log for each check are retained in
+`.codex-work/v57-continuation-20261110/v57-substitution-targeted-1.json`.
+These are targeted checks of the new batch, not a replacement for the full
+run of proof commit `c93832d761347607906b11615bd56cb937cdfdff` recorded above.
+The next integrated full run remains pending.
+
+The later logical-scheme batch below proves logical-rule preservation.
+Theorem 4.7 remains open at its categorical adjunction. The proved/open count is unchanged: 65/12 among the 77 numbered
+results of manuscript v57. The manuscript, its artifacts and all dependency
+pins are unchanged.
+
+
+### Logical translations for Theorem 4.7
+
+`V46NullaryLogicalInstantiation`, `V46NullaryLogicalDistribution` and
+`V46NullaryLogicalEquality` construct maps on the seven scheme-parameter
+objects, including the pullbacks defining admissibility for instantiation
+and the two substitutions of the equality scheme. The free-variable test
+comparison gives the map on the quantifier-distribution fiber.
+`V46NullaryLogicalInterpretation.logicalParameterMap` is the coproduct of
+these maps; the namespace of its declarations is
+`CategoricalEssentialIncompleteness.V46.NullaryInterpretation`.
+
+Within that namespace, `logical_axioms_comparison` proves its axiom equation.
+`translation` supplies every field of `FirstOrderPresentation.Translation`.
+Its source `presentation` requires derivation initiality only for sentence
+subobjects. `translation_unique` proves uniqueness for any logical translation
+with the prescribed atomic sentence map; `translation_comp` identifies
+composition with a target translation. The term/formula uniqueness comes
+from syntax initiality, and equality of the sentence morphisms follows by
+cancelling the target sentence inclusion.
+
+The four producer/Checks pairs pass eight further strict commands and 22
+selected transitive axiom reports. The retained record is
+`.codex-work/v57-continuation-20261110/v57-logical-targeted-1.json`.
+Together with the substitution batch, this gives 50 passing strict commands
+and 86 selected axiom reports. All source hashes still match those records;
+the permitted axiom union is unchanged. These 25 pairs are imported by the
+production entry point, both statement audits and the automatic axiom audit.
+Their next integrated full replay remains pending.
+
+The first remaining step in 4.7 is to show that theorem/refutation-pair
+extraction takes values in the stated consistent-pair category. Both
+functors, their laws and the natural hom-set bijection remain to be assembled.
+The numbered-result count remains 65 proved and twelve open. This batch is
+local work following main `f4af420d06187a29d681cf54b055b711fb8cd8f8`; the
+full verification recorded earlier covers its own proof commit, not this
+later working tree.
+
+The exact types, including universe parameters and explicit hypotheses, of
+the principal interpretation, substitution and translation declarations are
+retained in `v57-free-interpretation-types-3.log` in the continuation working
+directory. The Checks modules give the associated statement types and
+selected transitive axiom commands. No mathematical statement, manuscript
+source, artifact or dependency pin changed.
+
+
+### Theorem 4.7: the adjunction
+
+The declarations in this final group complete the printed universal property.
+The source is the category of disjoint signed subobject pairs whose generated
+free theory is consistent. The target consists of presentations with a closed,
+consistent sentence theory. `V46.FirstOrderPresentation.ConsistentTheoryCategory.morphism_bound_iff`
+identifies its direct-image morphism condition with the printed
+σ_!T≤U condition. Thus the use of the existing theory category preserves the
+manuscript's morphisms.
+
+`V46.SignedFirstOrder.axioms` is the union of the images of the positive
+atomic and negative atomic inclusions. `theory` applies generation.
+`interpretation_theory_bound` identifies the bound on its interpreted image
+with the positive and negative pair inequalities.
+`evaluation_consistent` proves the object condition for extraction: sentence
+evaluation maps the generated signed theory into the supplied consistent
+closed theory, whose inverse image is consistent. Downward preservation of
+consistency gives the required source consistency.
+
+`V46SignedFirstOrderCategories` constructs `generation` and `extraction` on
+objects and morphisms, with their identity and composition laws.
+`V46.SignedFirstOrder.homEquiv` restricts a theory morphism to its atomic
+sentences and extends a pair morphism by the constructed interpretation.
+The inverse laws follow from interpretation uniqueness and the atomic
+constructor equation. Both naturality equations are proved.
+`V46.SignedFirstOrder.adjunction` packages this bijection;
+`unit_arrow` identifies the unit with θ_X and `counit_translation` identifies
+the counit with sentence evaluation.
+
+`NullaryPresentations` packages precisely the supplied syntax and derivation
+hypotheses for every nullary coefficient object X. Its derivation hypothesis
+quantifies over axiom subobjects, rather than all axiom-label morphisms. The
+interpretation, substitution comparison, rule maps, evaluation consistency
+and adjunction are constructed from those prerequisites. No field assumes
+any of these conclusions. The construction does not transfer initiality from
+an axiom image to a presentation with repeated labels.
+
+The final five producer/Checks pairs pass ten strict commands with sixteen
+selected axiom reports in
+`.codex-work/v57-continuation-20261110/v57-signed-adjunction-targeted-1.json`.
+The complete 30-pair batch therefore has 60 passing strict commands and 102
+selected transitive axiom reports. Every retained report is accounted for
+under its complete declaration name; all use only the permitted axioms.
+The production entry point, both statement audits and automatic axiom audit
+import all 30 pairs. The integrated full replay remains pending; the earlier
+1,616-command run is evidence for its own commit, not this later batch.
+
+There are now 66 proved counterparts among v57's 77 numbered results, with
+eleven open: 4.8, 5.1–5.3, 8.9–8.10, 9.6, 9.8 and 10.7–10.9.
+Corollary 4.8 is the next mathematical obligation. No manuscript statement,
+source artifact, toolchain or dependency pin changed.
