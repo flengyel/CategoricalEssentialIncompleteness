@@ -1,79 +1,41 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 9 November 2026
+Updated 11 November 2026
 
-The current target is Florian Lengyel's “Logical consequence and essential
-incompleteness in recursion categories,” version 51. The repository is
-flengyel/CategoricalEssentialIncompleteness.
+Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
+The current manuscript and verification target are version 57.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V57.md,
+manuscript/latex/main.tex and all its inputs, and
+ docs/CEI_v57_WSL2_instructions_2026-11-10.md.
 
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V51.md, and
-manuscript/latex/main.tex with its nested inputs. The manifest identifies the
-active version and audit entry points. Follow the current manuscript after
-every revision; do not retain v46 or another earlier version as the active
-target. Update the manifest, PDF, source archive, correspondence table, and
-affected Lean statements together.
+The v57 source, PDF, and source archive are included in the repository.
+The previous WSL2 continuation had only v51; its newer Lean work and
+verification records must be preserved. See
+ docs/V57_LEAN_CONTINUATION_2026-11-10.md for those proofs and checks.
+The verifier apostrophe parser repair is already integrated; retain it and
+run scripts/test_verify_axiom_parser.py rather than applying it again.
 
-Reuse the existing WSL2 checkout:
-/home/flengyel/src/CategoricalEssentialIncompleteness
-Resolve its root with git rev-parse --show-toplevel. Inspect its Git status,
-remote, worktrees, and recent commits before editing. Preserve unrelated
-changes and reconcile newer work rather than resetting to an earlier commit.
-Use SSH Git authentication and the existing pinned Lean toolchain and Lake
-manifest. Do not change Elan's global default or copy compiled objects from
-another project.
+The manuscript contains 77 numbered results and three definitions.
+There are 62 retained results with existing Lean counterparts and 15
+additional results requiring complete v57 statement comparisons and proofs.
+Generation-adjunction support was implemented in the WSL2 continuation;
+compare its full hypotheses and conclusions with Theorem 4.4 before marking
+that new correspondence row complete. Keep every unfinished row open.
 
-Use the current correspondence table for the proved statements and their
-verification evidence. The latest implementation report is
-docs/V46_SYNTAX_CONTINUATION_2026-11-05.md; all 62 numbered results have proofs.
-The V46 module/namespace prefix is an implementation name; MANUSCRIPT_CURRENT
-selects the verification target.
+Preserve the pinned Lean toolchain and dependency manifest, the designated
+Palomar challenge placeholders, and all later local work. Production proofs
+and their dependencies must not use sorry, admit, or sorryAx. Permitted
+logical axioms are propext, Quot.sound, and Classical.choice.
 
-Prove the printed statements with the printed definitions, hypotheses, and
-quantifiers. Do not replace a categorical universal property by an evaluator,
-assume the desired comparison, add an unprinted standardness or soundness
-hypothesis, or replace a categorical argument by an arithmetic theorem.
-Maintain arbitrary coefficient objects and parameter slices where stated.
-Record each unresolved comparison or application as an open obligation.
+Run from the repository root:
 
-The permitted axioms are propext, Quot.sound, and Classical.choice. New results
-must be imported by the main Lean entry point, checked at the intended statement
-type, and included in the transitive axiom audit. CurrentStatementAudit.lean
-and CurrentAxiomAudit.lean are the current audit entry points.
-
-For a prepared checkout, run from the repository root:
-
+    python3 scripts/test_verify_axiom_parser.py
+    python3 scripts/verify.py --manuscript-only
     bash scripts/verify-wsl.sh
 
-For initial setup:
+The manuscript-only check does not execute Lean. Report full Lean verification
+only for the exact source revision on which it completes.
 
-    bash scripts/setup-wsl.sh
-
-The wrapper serializes project builds and preserves logs and exit status.
-The underlying full verifier is:
-
-    python3 scripts/verify.py
-
-For the manuscript source/version/archive gate alone:
-
-    python3 scripts/verify.py --manuscript-only
-
-That command reports a manuscript-only scope. It does not run Lean.
-
-Commit completed work to main when authorized. Deliver reports from committed
-bytes, identify the verified commit and commands, and distinguish completed
-proofs from remaining obligations. Preserve the current manuscript version
-rule in future continuation instructions.
-
-All 62 numbered manuscript results have proofs. The numerical, Miller and
-cosheaf work in the earlier continuation instructions is complete.
-Current task: Palomar preparation, recorded in
-docs/PALOMAR_EDITORIAL_REVIEW_2026-11-09.md.
-Preserve the earlier verification records for their tested commits.
-
-Version 51 updates the approved abstract. See
-docs/V51_ABSTRACT_UPDATE_2026-11-09.md for the changes and manuscript checks.
-The next integrated verification of the Palomar port must use this current target.
-
-Use docs/PALOMAR_ABSTRACT.txt verbatim for the Palomar abstract. It matches the
-approved manuscript and README abstract. Preserve this wording when generating
-submission metadata and check the assembled payload and preview before fixing
-the candidate commit.
+Commit all completed changes to main and push to origin/main without force.
+Fetch and reconcile concurrent changes first. Verify the remote main commit
+and active manuscript version before reporting completion. Update sources,
+PDF, archive, manifest, correspondence table, and instructions together.

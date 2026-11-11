@@ -112,20 +112,20 @@ corresponding computable pairings and restrictions.
 
 The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
 $D=(n,D_0)$, choose their coproduct as the object of dimension one
-with tagged carrier
+with carrier
 \[
  |C+D|=\{2\kappa_m(c):c\in|C|\}
         \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
 \]
 with the two displayed encoding functions as injections.
-Copairing tests the tag, decodes, and runs the corresponding
-branch. These operations give the coproduct universal property.
+For copairing, an even input $2\kappa_m(c)$ uses the first morphism
+at $c$, and an odd input $2\kappa_n(d)+1$ uses the second at $d$. These operations give the coproduct universal property.
 For $f:X\to C+D$ in $\mathcal C$, let $X_C,X_D$ be the
 objects of the same dimension as $X$ whose carriers are the
 inverse images in $|X|$ of the even and odd summands. Both are c.e.
 and their inclusions give an isomorphism $X_C+X_D\cong X$:
-the inverse computes $f(x)$ to determine the tag and retains $x$.
-The tag sets are disjoint, so these coproducts are disjoint and
+the inverse uses the parity of $f(x)$ to choose the coproduct injection
+and retains $x$. The sets of even and odd values are disjoint, so these coproducts are disjoint and
 stable under pullback.
 
 For $f:C\to D$ in $\mathcal C$, define the image object
@@ -285,9 +285,9 @@ endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
 algebra of finite derivations.
 \end{proposition}
 \begin{proof}
-Use the syntax codes and constructor tags of
-Section~\ref{sec:st-parameterized-syntax}. The finite tree parser,
-the coefficient tests, and numerical equality decide the carriers
+Use the syntax codes of Section~\ref{sec:st-parameterized-syntax}.
+The primitive recursion recognizing finite syntax trees, membership
+in the recursive signature objects, and numerical equality decide the carriers
 of objects $\Tm,\Fm\in\mathcal C_{\mathrm{rec}}$. Each constructor is a primitive-recursive
 function on its displayed source. The unique root decomposition
 and the strictly smaller sizes of its children are the properties
@@ -396,7 +396,7 @@ Their primitive-recursive traversals therefore give morphisms
 in $\mathcal C_{\mathrm{rec}}$.
 Proposition~\ref{prop:st-substitution-realization}
 proves the carrier and constructor equations in $\PA$.
-They therefore hold in $\N$. Uniqueness of the parameterized folds
+They therefore hold in $\N$. Uniqueness of the algebra morphisms in the parameter slices
 identifies these numerical morphisms with the categorical ones.
 In particular,
 $\Adm=b_F^{-1}(\Fm\hookrightarrow1+\Fm)$ is the admissibility
@@ -416,9 +416,9 @@ $H_A:\mathcal C_{\mathrm{rec}}/\Fm\to
 \mathcal C_{\mathrm{rec}}/\Fm$ as in that appendix.
 Use the finite derivation-tree codes of
 Lemma~\ref{lem:syntactic-derivation-initiality} with these rule labels.
-If $R_n$ has dimension $m_n$, store a label as a number
+If $R_n$ has dimension $m_n$, represent a label by a number
 $r\in\widehat{R_n}$ and decode it by $\kappa_{m_n}^{-1}$
-before applying $p_n$ or $q_n$. A code is valid when each stored
+before applying $p_n$ or $q_n$. A code is valid when each numerical
 label belongs to $\widehat{R_n}$ for its node's arity $n$ and the
 ordered children's conclusions are the premises of its decoded rule instance.
 There are finitely many nodes. Dovetailing their membership and
@@ -504,9 +504,10 @@ rule constructions give bijections
  \rho_n:|R_n^{\mathrm{num}}|\xrightarrow{\cong}
                   G_{\N}R_n^{\mathrm{syn}}\quad(0\le n\le2).
 \]
-They match the constructor parameters, tuple entries, and tags of
-corresponding rule instances. These maps and their inverses are
-computable on their carriers by tuple encoding, decoding, and tag tests.
+They preserve each coproduct summand and match the constructor parameters
+and tuple entries of corresponding rule instances. These maps and their
+inverses are computable on their carriers by the tuple codings and
+their inverses, with a finite case distinction over the summands.
 The rule membership conditions coincide because they use the same
 syntax operations and axiom predicate. Let
 $\chi_n:G_{\N}((\Fm^{\mathrm{syn}})^n)\xrightarrow{\cong}|\Fm|^n$
@@ -530,7 +531,7 @@ Lemma~\ref{lem:syntactic-derivation-initiality}. Put
 \]
 Both $\eta_n$ and its inverse are computable on their carriers,
 by the representing programs of $u_n$ and $u_n^{-1}$.
-At a numerical derivation node of arity $n$ with stored label $r$,
+At a numerical derivation node of arity $n$ with numerical label $r$,
 replace that label by
 $\eta_n^{-1}\rho_n(\kappa_{m_n}^{-1}(r))\in C_n(\N)$ and
 recursively relabel its ordered children. The inverse replaces a

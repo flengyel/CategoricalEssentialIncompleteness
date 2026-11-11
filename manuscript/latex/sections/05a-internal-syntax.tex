@@ -10,7 +10,7 @@ $\Sigma_1$ formulas and provable graph equality are discussed by
 Robinson and Rosolini~\cite[pp.~108--109]{RobinsonRosolini}.
 
 Let $\mathcal P_T$ have as objects the $\Sigma_1$ arithmetic formulas
-$C(x)$ with the displayed free variable. A morphism from $C$ to $D$
+$C(x)$ with free variable $x$. A morphism from $C$ to $D$
 is represented by a $\Sigma_1$ formula $\Gamma(x,y)$ for which $T$
 proves
 \begin{align}
@@ -53,17 +53,17 @@ If $T$ proves that $\Gamma$ is functional, then
 Write $\Gamma(x,y)$ in the PA-provably equivalent form
 $\exists w\,R(x,y,w)$, with $R$ primitive recursive. Search the
 codes $n=0,1,\ldots$ in increasing order for
-$R(x,\pi_0n,\pi_1n)$, and return $\pi_0n$ at the first successful
-test. Here $\pi_0,\pi_1$ are the projections of the fixed numerical
+$R(x,\pi_0n,\pi_1n)$, and return $\pi_0n$ at the first $n$ satisfying
+this predicate. Here $\pi_0,\pi_1$ are the projections of the fixed numerical
 pairing.
 
 PA proves by induction on the number of tests that a halting run
-returns the first component of the least successful code. Conversely,
-if there is a successful test, the least such code supplies a finite
+returns $\pi_0n$ for the least $n$ satisfying $R(x,\pi_0n,\pi_1n)$. Conversely,
+if such an $n$ exists, its least value supplies a finite
 halting computation. Formalized least-number search and the
-computation coding therefore prove both displayed assertions.
+computation coding therefore prove the first two assertions.
 If $T$ also proves functionality, any pair satisfying $\Gamma$
-has the same output as this successful search. This gives the
+has the same output as this search. This gives the
 last universal graph equivalence.
 \end{proof}
 
@@ -184,14 +184,14 @@ This proves regularity and the asserted image formula.
 The false predicate is initial. If $C$ admits a morphism to it,
 totality gives $T\vdash\forall x\,\neg C(x)$, so $C$ is
 isomorphic to the false predicate; thus the initial object is
-strict. A coproduct is the tagged predicate
+strict. A coproduct is represented by the predicate
 \[
  (C+D)(z)\equiv
    \exists x\,(z=2x\land C(x))\;\lor\;
    \exists y\,(z=2y+1\land D(y)),
 \]
-with the even and odd injections. Copairing is defined by selecting
-the graph corresponding to the tag. The parity identities prove
+with the even and odd injections. Copairing selects the first graph
+on even inputs and the second on odd inputs. The parity identities prove
 the coproduct equations and disjointness of its injections.
 For $\Gamma:A\to C+D$, put
 \[
@@ -205,7 +205,8 @@ Totality and functionality of $\Gamma$ prove in $T$ that
  A(a)\longleftrightarrow A_C(a)\lor A_D(a),\qquad
  \neg(A_C(a)\land A_D(a)).
 \]
-The morphism $A_C+A_D\to A$ forgets the tag.
+The morphism $A_C+A_D\to A$ sends both summand representatives
+to their underlying element of $A$.
 Its inverse has graph
 \[
  (A_C(a)\land z=2a)\;\lor\;(A_D(a)\land z=2a+1).
@@ -304,11 +305,13 @@ are understood to be universally quantified.
 
 \begin{lemma}[Finite membership conditions]
 \label{lem:st-finite-sigma1}
-Let $C(x)$ be $\Sigma_1$. The assertion that all entries of a coded
-finite sequence satisfy $C$ is equivalent in $\mathrm{PA}$ to a
-$\Sigma_1$ formula. The same holds for finitely many different
-$\Sigma_1$ conditions selected by the primitive-recursive tags of
-the entries.
+Let $C(x)$ be $\Sigma_1$, and let $a$ code a finite sequence with
+entries $a_i$. The assertion that all entries satisfy $C$ is equivalent
+in $\mathrm{PA}$ to a $\Sigma_1$ formula. The same holds, for a positive
+integer $s$, for $\Sigma_1$ formulas
+$D_0(x),\ldots,D_{s-1}(x)$ and a primitive-recursive function
+$\ell:\N\to\{0,\ldots,s-1\}$ selecting the condition
+$D_{\ell(a_i)}(a_i)$ at the $i$th entry.
 \end{lemma}
 \begin{proof}
 Write $C(x)$ as $\exists v\,C_0(x,v)$ with $C_0$ primitive recursive.
@@ -321,8 +324,9 @@ For a sequence code $a$, use a coded sequence of witnesses:
 Reading the entries proves the reverse implication. For the forward implication,
 induction in $\PA$ on the length constructs a sequence of witnesses by
 appending one witness at a time.
-For finitely many tags, record the appropriate witness in each
-position and use the corresponding finite case distinction.
+For the finite family $(D_j)_{j<s}$, place a witness for
+$D_{\ell(a_i)}(a_i)$ in position $i$ and distinguish the finitely
+many values of $\ell$.
 \end{proof}
 
 Fix a nonnegative integer $d$ and objects
@@ -335,26 +339,33 @@ complement are therefore represented by the predicates
 $V(x)\land V(y)\land x=y$ and
 $V(x)\land V(y)\land x\ne y$, respectively.
 
-We choose codes for finite ordered syntax trees as follows.
-A code is a sequence of node records in postfix order.
-A record contains one of the finitely many constructor tags and,
-when the constructor has a label, that numeric label. Its ordered
-child blocks are recovered by parsing the preceding records with
-the arities specified by their tags. A term variable has arity zero; a
-$k$-ary function or relation record has arity $k$; equality and
-implication have arity two; negation and universal quantification
-have arity one. A universal-quantifier record also contains its
-variable label. A primitive-recursive stack parser checks the
-sorts of the children and that exactly one tree remains.
+Assign distinct natural numbers to the constructor forms for variables,
+$k$-ary function and relation symbols ($0\leq k\leq d$), equality,
+negation, implication, and universal quantification.
+Encode a node by its constructor number and, when required, its
+numerical symbol or variable label, using the fixed finite-sequence
+coding. The code of a tree is the finite
+sequence obtained by concatenating the codes of its ordered children
+and then adjoining the code of its root.
 
-Each constructor concatenates its ordered child blocks and appends
-its root record. Its decomposition is unique. The number of records
-is a primitive-recursive size function, and each child has smaller
-size. All these statements are proved in $\mathrm{PA}$ by induction
-on the length of the parsed sequence.
+Recover the tree by primitive recursion through this sequence,
+maintaining a finite sequence of completed subtrees. At a constructor
+of arity $k$, replace the last $k$ subtrees by the tree obtained by
+applying that constructor, in their order. The operation is defined
+only when these subtrees have the required term or formula sorts.
+A nullary constructor appends a one-node tree. A sequence represents
+a tree exactly when this recursion is defined and ends with one tree.
+A variable has arity zero, a $k$-ary function or relation has arity $k$,
+equality and implication have arity two, and negation and universal
+quantification have arity one. A universal quantifier also has a
+variable label.
 
-The formula $\operatorname{Tm}(t)$ asserts that this parser accepts
-$t$ as a term, that variable labels satisfy $V$, and that each
+The sequence operations are primitive recursive. They recover each
+constructor's ordered children uniquely. Sequence length is a
+primitive-recursive size function, and every child has smaller size.
+Induction on sequence length proves these assertions in $\mathrm{PA}$.
+
+The formula $\operatorname{Tm}(t)$ asserts that $t$ represents a term, that variable labels satisfy $V$, and that each
 function label of arity $k$ satisfies $\Sigma_k$. The formula
 $\operatorname{Fm}(a)$ has the analogous conditions for formulas,
 including membership in $\Pi_k$ for relation labels and in $V$ for
@@ -366,7 +377,7 @@ $\operatorname{Fm}(\operatorname{all}(x,a))
 \longleftrightarrow V(x)\land\operatorname{Fm}(a)$,
 where $\operatorname{all}$ is the numerical universal-quantifier
 constructor. The corresponding equivalences for a function or relation
-constructor include the predicate for its coefficient object and the
+constructor include the predicate for its signature object and the
 carrier predicates of its ordered children.
 Write
 \[
@@ -412,21 +423,21 @@ $X(x)\land\Xi(x,p)$. The other operations have the corresponding
 fiber-product sources and preserve their projection to $P$.
 
 Define relations $\operatorname{Ev}_{\mathrm{Tm}}(p,t,x)$ and
-$\operatorname{Ev}_{\mathrm{Fm}}(p,a,y)$ by finite evaluation
-records. A record assigns to every node its output value
-in $X$ or $Y$, as appropriate, together with a halting computation
-trace for the relevant algebra operation. At a node, the inputs
+$\operatorname{Ev}_{\mathrm{Fm}}(p,a,y)$ by finite sequences with
+one entry for each node. Each entry consists of a value in $X$ or
+$Y$, according to the node's sort, and a code of a halting computation
+of the algebra operation at that node. Its inputs
 are its label, the values already assigned to its children, and
 the fixed parameter $p$. Require the appropriate carrier and
 projection conditions for every assigned value. The last assigned
-value is the displayed output. Include $P(p)$ and the appropriate
+value is $x$ or $y$, respectively. Include $P(p)$ and the appropriate
 term or formula predicate in the relation.
 
 All these requirements are $\Sigma_1$. Boundedly many carrier and
 projection requirements are combined using
-Lemma~\ref{lem:st-finite-sigma1}; the requirements on operation traces
-are decidable checks on the recorded traces. Existentially
-quantifying over the entire record therefore gives a
+Lemma~\ref{lem:st-finite-sigma1}. The requirements on the halting
+computations are decidable predicates of their codes. Existentially
+quantifying over this finite sequence therefore gives a
 $\Sigma_1$ formula.
 
 Simultaneous induction in $T$ on node count $n$ proves that every
@@ -439,8 +450,8 @@ children of smaller size. The induction hypothesis supplies their
 values with the required common projection. They therefore form
 an input in the source of the algebra operation at the root.
 Its totality supplies an output in the correct fiber. Concatenating
-the child records and appending the root computation supplies
-the evaluation record. Functionality of the operation graphs,
+the child sequences and appending the root computation supplies
+the required evaluation sequence. Functionality of the operation graphs,
 together with the induction hypothesis, proves uniqueness of the
 value.
 
@@ -456,8 +467,8 @@ that they are total morphisms
  \qquad
  h_{\mathrm{Fm}}:P\times\Fm\longrightarrow Y,
 \]
-and that they commute with the projections to $P$. Decomposing a
-record at its root proves, in $T$, their algebra-morphism
+and that they commute with the projections to $P$. Decomposing an
+evaluation sequence at its root proves, in $T$, their algebra-morphism
 equations: evaluation of a constructor is the corresponding algebra
 operation applied to the evaluated children. Thus these morphisms form
 a $K_P$-algebra morphism in the slice.
@@ -499,11 +510,11 @@ $P$, and its cons operation has source
 $(P\times V)\times_P X$. Evaluate a list from its final entry
 back to its first entry, starting with the nil value in the fiber
 over $p$. A finite sequence records these values and the
-computation traces of the two algebra operations. As above, this
+codes of halting computations of the two algebra operations. As above, this
 defines a $\Sigma_1$ relation. Induction in $T$ on length proves
 its totality, functionality, and preservation of the projection to
 $P$. Lemma~\ref{lem:syntactic-functional-search} makes it a morphism.
-The nil and cons equations follow by splitting the record,
+The nil and cons equations follow by splitting the evaluation sequence,
 and induction in $T$ on length proves uniqueness of any morphism
 satisfying these equations.
 \end{proof}
@@ -512,15 +523,15 @@ satisfying these equations.
 \label{sec:st-substitution-realization}
 
 The preceding propositions supply the initiality hypotheses of
-Definition~\ref{def:categorical-syntax} for coefficient objects of bounded
-arity in $\mathcal B_T$. We realize the free-variable and substitution
-folds by algorithms.
+Definition~\ref{def:categorical-syntax} for the variable object and the
+signature objects of bounded arity in $\mathcal B_T$. We represent the free-variable and substitution
+morphisms by algorithms.
 
 \begin{proposition}
 \label{prop:st-substitution-realization}
 On the preceding codes, the list operations, free-variable morphisms,
-term substitution, and the option-valued formula-substitution morphism
-of Appendix~\ref{app:syntax-theories} are represented by algorithms whose
+term substitution, and the formula-substitution morphism with codomain
+$1+\Fm$ of Appendix~\ref{app:syntax-theories} are represented by algorithms whose
 defining equations and preservation of the specified carriers are
 provable in $\PA$. Restricting each graph to its source predicate
 gives a morphism of $\mathcal B_T$. These are the morphisms
@@ -540,9 +551,9 @@ inputs satisfy their carrier predicates. Thus the corresponding
 restricted graph equations define morphisms in $\mathcal B_T$.
 The uniqueness assertion of
 Proposition~\ref{prop:st-list-initiality} identifies them with the
-appendix's list folds.
+unique list-algebra morphisms in the appendix.
 
-A postfix traversal computes the free-variable list. At a variable
+Reading the node sequence in its defined order computes the free-variable list. At a variable
 it returns the singleton list; at function symbols, relation
 symbols, and equality it concatenates the child lists in their
 specified order; at negation it retains the child list; at
@@ -558,48 +569,62 @@ with the appendix's free-variable morphisms.
 For substitution, use a traversal which retains at each node both
 its original subtree and its computed result. Its parameters are
 a variable code $x$ satisfying $V(x)$ and a term code $t$
-satisfying $\operatorname{Tm}(t)$. Terms have a term result;
-formulas have either a failure tag or a successful formula result.
+satisfying $\operatorname{Tm}(t)$. Term substitution has values in $\Tm$, and formula substitution
+has values in $1+\Fm$. Write
+$\fail_{\Fm}:1\to1+\Fm$ and $\ok_{\Fm}:\Fm\to1+\Fm$ for the
+coproduct injections. The first summand represents inadmissible
+substitution. The second contains the substituted formulas.
+Negation uses $1_1+\neg:1+\Fm\to1+\Fm$.
+For implication, define
+$\widehat{\Rightarrow}:(1+\Fm)^2\to1+\Fm$ to restrict to
+$\ok_{\Fm}\mathord{\Rightarrow}$ on the $\Fm\times\Fm$ summand
+and to $\fail_{\Fm}$ composed with the unique morphism to $1$
+on each of the other three summands.
+For quantification, define
+$\widehat\forall:V\times(1+\Fm)\to1+\Fm$ to restrict to
+$\ok_{\Fm}\forall$ on $V\times\Fm$ and to $\fail_{\Fm}$ composed
+with the unique morphism to $1$ on $V\times1$.
+These are the morphisms used in Appendix~\ref{app:substitution}.
 At a term variable $v$, the result is $t$ if $v=x$ and is the
-original variable term otherwise. At a function symbol, rebuild
-the term from the substituted children. At an atomic formula,
-rebuild the formula from the substituted terms and attach the
-success tag. At negation and implication, use the lifted operations
-on success-or-failure values.
+original variable term otherwise. At a function symbol, apply the
+constructor to the substituted children. At an atomic formula,
+apply its constructor to the substituted terms, followed by
+$\ok_{\Fm}$. At negation and implication, apply the morphisms
+just defined to the values computed for the immediate subformulas.
 
 At a quantified formula $\forall y\,\varphi$, let $z$ be the
-computed option value for its body. The algorithm returns
+computed value in $1+\Fm$ for its body. The algorithm returns
 \[
  \begin{cases}
-  \operatorname{ok}(\forall y\,\varphi),&y=x,\\
+  \ok_{\Fm}(\forall y\,\varphi),&y=x,\\
   \widehat\forall(y,z),&y\ne x\text{ and }
        \bigl(x\notin\operatorname{FV}(\varphi)
              \text{ or }y\notin\operatorname{FV}(t)\bigr),\\
-  \operatorname{fail},&\text{otherwise}.
+  \fail_{\Fm},&\text{otherwise}.
  \end{cases}
 \]
-Here $x\notin\FV(\varphi)$ abbreviates failure of the numerical
-list-membership test, and the other occurrence assertions have the
+Here $x\notin\FV(\varphi)$ means that the numerical list
+contains no entry equal to $x$, and the other occurrence assertions have the
 same meaning. The first branch uses the original body, even if
-the recursive computation for that body has failed. These branches give
+the value computed for that body lies in the first summand. These branches give
 the quantified-constructor equation in Appendix~\ref{app:syntax-theories}.
 
 The traversal is primitive recursive: it runs through the finite
-postfix sequence, storing finite lists of original subtrees and
+node sequence, retaining finite lists of original subtrees and
 computed values, using only primitive-recursive coding operations.
 Induction in $\mathrm{PA}$ proves that the term result is a valid
-term and that every successful formula result is a valid formula.
+term and that every value in the second summand is the image of a valid formula.
 The same induction proves that the first component is the original
 subtree and verifies all the constructor equations of the
 $K_{V\times\Tm}$-algebra used in Appendix~\ref{app:syntax-theories}.
 By Proposition~\ref{prop:st-syntax-initiality}, its classes are
 therefore the appendix's $a_T$ and $b_F$.
 
-Success and failure are decidable tags of this total option-valued
-algorithm on its source. Their inverse images partition the source
-in $\mathcal B_T$, giving the complemented subobject $\Adm$.
-Write $\operatorname{Adm}(\varphi,x,t)$ for the numerical success
-predicate. Induction in $\PA$ identifies it with the recursive
+The two coproduct summands have decidable membership. Their inverse
+images under formula substitution partition its source in
+$\mathcal B_T$. The inverse image of the second summand is the
+complemented subobject $\Adm$. Write
+$\operatorname{Adm}(\varphi,x,t)$ for its numerical predicate. Induction in $\PA$ identifies it with the recursive
 free-for condition. At a quantifier, this condition is
 \[
  y=x\quad\text{or}\quad
@@ -608,16 +633,16 @@ free-for condition. At a quantifier, this condition is
         \text{ or }y\notin\operatorname{FV}(t))\ \land\
    \operatorname{Adm}(\varphi,x,t)\bigr).
 \]
-The success value satisfies the substitution equation on
+The formula in the second summand satisfies the substitution equation on
 each such branch.
 
 Finally, simultaneous induction in $\mathrm{PA}$ proves identity
 substitution and substitution at an absent variable. At a
 quantifier with $y=x$, the first branch returns the original
-formula. With $y\ne x$, identity substitution passes the capture
-test because $\operatorname{FV}(\eta x)=[x]$; absence of $x$
-passes it because deletion of the distinct variable $y$ does not
-remove $x$. The induction hypothesis supplies successful unchanged
+formula. With $y\ne x$, the condition for admissibility holds in the
+identity case because $\operatorname{FV}(\eta x)=[x]$. It holds in the
+absent-variable case because deletion of the distinct variable $y$
+does not remove $x$. The induction hypothesis gives the unchanged
 results for the bodies in both cases. These are the
 graph equations restricted to their sources at the end of
 Appendix~\ref{app:substitution}.
@@ -653,8 +678,8 @@ $\mathcal B_T/F$.  Its underlying object and conclusion morphism
 are represented by $\Sigma_1$ formulas.
 \end{lemma}
 \begin{proof}
-Choose $\Sigma_1$ formulas $F(z)$ and $R_n(r)$ for the displayed
-objects and indices $u_n,v_n$ for $p_n,q_n$, respectively.
+Choose $\Sigma_1$ formulas $F(z)$ and $R_n(r)$ for $F$ and $R_n$,
+and indices $u_n,v_n$ for $p_n,q_n$, respectively.
 The nullary product is represented by the singleton code $0$.
 
 Fix codes for finite ordered trees in which a node of arity
@@ -734,6 +759,9 @@ Represent $Q$ by $Q(y)$, $q$ by an index $b$, and $\alpha$ by
 an index $a$. The graph $G_a$ is $T$-provably total on the
 carrier of $H(Q,q)$.
 
+For $0\leq n\leq N$, let $\operatorname{tag}_n:\N^{n+1}\to\N$
+be the primitive-recursive function obtained from the fixed tuple
+and coproduct encodings for the $n$th summand of $H(Q,q)$.
 Define $E_a(d,y)$ to assert that $d$ is a tree and there is a
 finite list of values, one for each node occurrence, whose root
 value is $y$, with the following property.  At a node of arity
@@ -742,8 +770,7 @@ $y_1,\ldots,y_n$ and its own value is $y'$, then
 \[
  G_a\bigl(\operatorname{tag}_n(r,y_1,\ldots,y_n),y'\bigr).
 \]
-The tag and tuple code here is the chosen presentation of the
-$n$th summand of $H(Q,q)$.  This definition is $\Sigma_1$ by
+This definition is $\Sigma_1$ by
 the argument for finite sequences above.  The functionality of $G_a$
 proves the functionality of $E_a$ in $\PA$: compare two value
 lists in their children-before-parent order and use induction on
@@ -767,9 +794,9 @@ that its image under $q$ equals its conclusion under $c$.
 For the induction step, the induction hypotheses give values
 $y_j$ for the immediate subtrees, with
 $q(y_j)=c(d_j)$.  Equation~\eqref{eq:syntactic-derivation-domain}
-therefore places
-$\operatorname{tag}_n(r,y_1,\ldots,y_n)$ in the domain
-$B_n(Q,q)$ of $\alpha$.  Its $T$-provable totality supplies
+therefore places $(r,y_1,\ldots,y_n)$ in $B_n(Q,q)$, and hence
+its code $\operatorname{tag}_n(r,y_1,\ldots,y_n)$ in $H(Q,q)$,
+the domain of $\alpha$. Its $T$-provable totality supplies
 $y$, and its equation as a slice morphism supplies
 $q(y)=q_n(r)=c(d)$.  Equation~\eqref{eq:syntactic-derivation-fold}
 supplies the evaluation at $d$.  The same argument covers
@@ -835,7 +862,7 @@ Propositions~\ref{prop:st-syntax-initiality} and
 \ref{prop:st-list-initiality} give the required initial algebras,
 stable under every parameter object.
 Proposition~\ref{prop:st-substitution-realization} identifies
-their free-variable and substitution folds with the specified
+their free-variable and substitution morphisms with the specified
 numerical operations.
 
 Every rule object in Appendix~\ref{app:first-order-derivations}

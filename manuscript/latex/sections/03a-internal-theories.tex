@@ -1,4 +1,4 @@
-\section{Internal theories and semantic consistency}\label{sec:internal-theories}
+\section{Internal theories and essential incompleteness}\label{sec:internal-theories}
 
 \subsection{Theories and their interpretation}
 
@@ -23,9 +23,8 @@ The pullback in $\mathcal D$
 \]
 restricts conclusions to sentences. By
 Theorem~\ref{thm:first-order-theory}, the regular image
-$m_A:T_{A,S}\hookrightarrow S$ of $c_{A,S}$ is the sentence part
-of the least deductively closed formula subobject containing the
-axioms. Assume that $m_A$ is a restriction monomorphism in
+$m_A:T_{A,S}\hookrightarrow S$ of $c_{A,S}$ is the inverse image along $j$ of the least deductively closed formula
+subobject containing the axioms. Assume that $m_A$ is a restriction monomorphism in
 $\mathscr S$: it has a partial inverse
 $r_A:S\rightharpoonup T_{A,S}$ with
 $r_A m_A=1_{T_{A,S}}$ and $m_A r_A=\bar r_A$.
@@ -40,6 +39,8 @@ The restriction idempotent $\nu^*t_A$ represents refutable sentences.
 The sentence theory is \emph{consistent} when
 $t_A\nu^*t_A=0_S$, and \emph{complete} when
 $t_A\vee\nu^*t_A=1_S$.
+It is \emph{essentially incomplete} when it is consistent and
+every consistent internal sentence theory containing it is incomplete.
 
 Let $F:\mathscr R\to\mathcal A$ be a range functor, where
 $\mathcal A$ is a split restriction category. For each restriction
@@ -234,7 +235,8 @@ constructed in $\mathscr R$.
 
 Section~\ref{sec:arithmetic} applies
 Theorem~\ref{thm:logical-comparison} to a soundness factorization
-and a partial proof-search lift in $S_{\PA}$.
+and the lift in $S_{\PA}$ constructed in
+Lemma~\ref{lem:arithmetic-proof-search}.
 The numerical, Miller-sequence, and cosheaf realizations apply
 Corollary~\ref{cor:domain-incompleteness}. In each case,
 Appendix~\ref{app:syntax-theories} supplies the generated theorem

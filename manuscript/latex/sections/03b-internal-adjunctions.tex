@@ -1,0 +1,363 @@
+\subsection{Generation and logical translations}
+\label{sec:internal-adjunctions}
+
+Continue with $\mathscr S=\Split(\mathscr R)$ and
+$\mathcal D=\Tot(\mathscr S)$. Assume that $\mathcal D$ is regular,
+its finite coproducts are disjoint and stable under pullback, and
+the syntax and initial derivation algebras of
+Appendix~\ref{app:syntax-theories} exist for every axiom subobject
+under consideration. For an object $X$ of $\mathcal D$, write
+$\operatorname{Sub}_{\mathcal D}(X)$ for the ordered collection of
+subobjects of $X$, with order given by factorization. If
+$f:X\to Y$ is total, write $f^*B$ for the inverse image of
+$B\hookrightarrow Y$, and $f_!A$ for the image of
+$A\hookrightarrow X\xrightarrow{f}Y$.
+
+Let $j:S\hookrightarrow\Phi$ be the sentence inclusion. For
+$A\hookrightarrow S$, let $C(A)\hookrightarrow\Phi$ be the least
+closed formula subobject supplied by
+Theorem~\ref{thm:first-order-theory}, and put
+\[
+ \operatorname{Gen}(A)=j^*C(A)=T_{A,S}.
+\]
+Write $\operatorname{Th}_{\mathcal D}(S)$ for the sentence theories,
+ordered by inclusion. Equivalently, these are the subobjects $T$ with
+$\operatorname{Gen}(T)=T$.
+
+\begin{theorem}[Generation reflection]\label{thm:first-order-reflection}
+Under the preceding hypotheses, $\operatorname{Gen}$ is extensive,
+monotone, and idempotent. It is left adjoint to the inclusion
+$\iota:\operatorname{Th}_{\mathcal D}(S)\hookrightarrow
+\operatorname{Sub}_{\mathcal D}(S)$. Thus, for every axiom
+subobject $A$ and sentence theory $T$,
+\[
+ \operatorname{Gen}(A)\leq T\quad\Longleftrightarrow\quad A\leq T.
+\]
+Let $J:\operatorname{Th}_{\mathcal D}(S)\to\mathcal D/S$ send a
+theory to its inclusion. Then
+$\Gamma(a:A\to S)=\operatorname{Gen}(\im a)$ defines a functor
+$\Gamma:\mathcal D/S\to\operatorname{Th}_{\mathcal D}(S)$ with
+$\Gamma\dashv J$.
+\end{theorem}
+\begin{proof}
+Axiom introduction gives $A\leq\operatorname{Gen}(A)$, and
+leastness of $C(A)$ gives monotonicity. The closed formula
+subobject $C(A)$ contains $j_!\operatorname{Gen}(A)$, whence
+$C(\operatorname{Gen}(A))\leq C(A)$. Pullback along $j$ and
+extensivity prove idempotence. The equivalence follows
+from these three properties. A morphism in $\mathcal D/S$ from
+$a:A\to S$ to $J(T)$ exists uniquely exactly when $\im a\leq T$.
+The equivalence identifies this hom-set with the hom-set from
+$\Gamma(a)$ to $T$ in the theory order, naturally in both objects.
+\end{proof}
+
+A first-order presentation $P$ consists of the named-variable
+syntax of Definition~\ref{def:categorical-syntax} and the logical
+rule data of Appendix~\ref{app:first-order-derivations}. Its
+nonlogical axioms are specified separately. Write
+$\Tm_P,\Phi_P,S_P,j_P,\nu_P$ for its term object, formula object,
+sentence object, sentence inclusion, and sentence negation, and
+$\operatorname{Gen}_P$ for its generation operator.
+
+Fix a common variable object $V$ for two such presentations $P,Q$.
+A logical translation $\sigma:P\to Q$ consists of total morphisms
+\[
+ \sigma_{\Tm}:\Tm_P\to\Tm_Q,\qquad
+ \sigma_{\Phi}:\Phi_P\to\Phi_Q,\qquad
+ \sigma_S:S_P\to S_Q
+\]
+fixing the variables and preserving equality, the logical
+constructors, and admissible substitution. For $n\in\{0,1,2\}$, write $R_n^P$ for the object of logical
+rule instances with $n$ premises, with premise and conclusion morphisms
+\[
+ p_n^P:R_n^P\to\Phi_P^n,\qquad q_n^P:R_n^P\to\Phi_P,
+\]
+and use the corresponding notation for $Q$.
+Preservation of the logical rules means that there are morphisms
+$\rho_n:R_n^P\to R_n^Q$ with
+\[
+ p_n^Q\rho_n=\sigma_{\Phi}^{n}p_n^P,\qquad
+ q_n^Q\rho_n=\sigma_{\Phi}q_n^P.
+\]
+For $n=0$, these objects contain only the logical axioms. The
+existence of $\rho_n$ is a preservation condition; the witnesses
+are not part of the translation. In particular, a translation
+preserves the side conditions on substitution and quantification,
+and satisfies
+\[
+ \sigma_{\Phi}j_P=j_Q\sigma_S,\qquad
+ \sigma_S\nu_P=\nu_Q\sigma_S.
+\]
+Translations are composed componentwise. A nonlogical predicate
+may be interpreted by a formula. Put
+$\operatorname{Th}_P=\operatorname{Th}_{\mathcal D}(S_P)$.
+
+\begin{theorem}[Translation Galois connection]\label{thm:translation-galois}
+Let $\sigma:P\to Q$ be a logical translation between presentations
+satisfying the hypotheses of
+Theorem~\ref{thm:first-order-reflection}. Inverse image along
+$\sigma_S$ sends sentence theories to sentence theories, and
+\[
+ \sigma_\#:\operatorname{Th}_P\rightleftarrows
+ \operatorname{Th}_Q:\sigma^*,\qquad
+ \sigma_\#(T)=\operatorname{Gen}_Q(\sigma_!T),\qquad
+ \sigma_\#\dashv\sigma^*.
+\]
+Here $\sigma_!$ and $\sigma^*$ abbreviate the image and inverse-image
+operations for $\sigma_S$. Moreover,
+\[
+ \operatorname{Gen}_Q\sigma_!
+   =\sigma_\#\operatorname{Gen}_P.
+\]
+For composable logical translations $\sigma:P\to Q$ and
+$\rho:Q\to R$,
+\[
+ (\rho\sigma)_\#=\rho_\#\sigma_\#,\qquad
+ (\rho\sigma)^*=\sigma^*\rho^*.
+\]
+\end{theorem}
+\begin{proof}
+If $T$ is a $Q$-theory, $\sigma_{\Phi}^*C_Q(T)$ contains the
+logical axioms, is closed under the $P$-rules, and contains
+$j_{P,!}\sigma^*T$. Thus
+$C_P(\sigma^*T)\leq\sigma_{\Phi}^*C_Q(T)$.
+Pullback along $j_P$ gives
+$\operatorname{Gen}_P(\sigma^*T)\leq\sigma^*T$;
+extensivity gives equality. Now image and inverse image satisfy
+$\sigma_!A\leq B$ exactly when $A\leq\sigma^*B$.
+Combining this with Theorem~\ref{thm:first-order-reflection}
+proves the adjunction.
+
+Apply closure preservation to
+$T=\operatorname{Gen}_Q(\sigma_!A)$. The resulting inclusion
+$\sigma_!\operatorname{Gen}_P(A)
+\leq\operatorname{Gen}_Q(\sigma_!A)$, together with extensivity
+and idempotence, proves the generation identity. Composition of
+images and pullbacks then gives the two composition identities.
+\end{proof}
+
+Let $\mathsf{Ax}_V(\mathcal D)$ have pairs $(P,A)$ as objects,
+where $P$ has variable object $V$ and $A\hookrightarrow S_P$ is an
+axiom subobject. Its morphisms are logical translations
+$\sigma:(P,A)\to(Q,B)$ satisfying $\sigma_!A\leq B$.
+Let $\mathsf{Th}_V(\mathcal D)$ be its full subcategory on sentence
+theories. Theorem~\ref{thm:translation-galois} also gives a
+reflection
+\[
+ \mathsf{Ax}_V(\mathcal D)\rightleftarrows
+ \mathsf{Th}_V(\mathcal D),\qquad
+ (P,A)\longmapsto(P,\operatorname{Gen}_P(A)).
+\]
+The right adjoint is inclusion. The hom-set bijection leaves the
+translation unchanged, since, for a target theory $T$,
+$\sigma_!A\leq T$ exactly when
+$\sigma_!\operatorname{Gen}_P(A)\leq T$.
+
+\subsection{Change of the ambient category}
+\label{sec:deduction-change-of-base}
+
+Let $\mathscr S_i$ be split restriction categories and put
+$\mathcal D_i=\Tot(\mathscr S_i)$ for $i=1,2$. Assume the
+generation hypotheses above for a presentation in each
+$\mathcal D_i$, with sentence object $S_i$. Write
+$\operatorname{Th}_i=\operatorname{Th}_{\mathcal D_i}(S_i)$ and
+let $\Gamma_i\dashv J_i$ be the functors of
+Theorem~\ref{thm:first-order-reflection}. Let
+$F:\mathscr S_1\to\mathscr S_2$ preserve restrictions and induce
+a regular functor $G:\mathcal D_1\to\mathcal D_2$. A regular
+functor preserves finite limits and regular epimorphisms. Fix a
+total morphism $\sigma:GS_1\to S_2$ and define
+\[
+ L(A)=\im(\sigma G i_A),\qquad
+ K(a:A\to S_1)=\sigma Ga:GA\to S_2.
+\]
+Here $i_A:A\hookrightarrow S_1$ represents the subobject $A$.
+For each $A$, let $c_{A,S_1}:P_{A,S_1}\to S_1$ be the pullback
+of its conclusion morphism $c_A:P_A\to\Phi_1$ along the sentence
+inclusion $j_1:S_1\hookrightarrow\Phi_1$.
+
+\begin{proposition}[Comparison of deduction]\label{prop:deduction-comparison}
+With these data, suppose that for every $A\hookrightarrow S_1$
+there is a total morphism
+\[
+ p_A:GP_{A,S_1}\to P_{L(A),S_2},\qquad
+ c_{L(A),S_2}p_A=\sigma Gc_{A,S_1}.
+\]
+Then $L^{\mathrm{th}}(T)=\operatorname{Gen}_2L(T)$ defines a
+functor on theory orders satisfying
+\[
+ L^{\mathrm{th}}\operatorname{Gen}_1=\operatorname{Gen}_2L,
+ \qquad \Gamma_2K=L^{\mathrm{th}}\Gamma_1.
+\]
+Consequently the left-adjoint square in
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ \mathcal D_1/S_1\arrow[r,"K"]
+   \arrow[d,shift right=.8ex,"\Gamma_1"'] &
+ \mathcal D_2/S_2\arrow[d,shift right=.8ex,"\Gamma_2"']\\
+ \operatorname{Th}_1\arrow[r,"L^{\mathrm{th}}"']
+   \arrow[u,shift right=.8ex,"J_1"'] &
+ \operatorname{Th}_2\arrow[u,shift right=.8ex,"J_2"']
+\end{tikzcd}
+\qquad \Gamma_i\dashv J_i
+\]
+commutes. Factorization through the generated theory gives a natural
+transformation $KJ_1\to J_2L^{\mathrm{th}}$.
+If $L\dashv R$ on subobject orders, $R$ sends theories to theories
+and $L^{\mathrm{th}}\dashv R|_{\operatorname{Th}_2}$.
+\end{proposition}
+\begin{proof}
+Taking images of the derivation comparison gives
+$L\operatorname{Gen}_1\leq\operatorname{Gen}_2L$.
+Apply $\operatorname{Gen}_2$ and use extensivity and idempotence
+to obtain the first identity. Regularity identifies the image
+of $K(a)$ with $L(\im a)$, proving the second identity.
+The unique factorization through that image and its closure defines
+the comparison. Uniqueness proves naturality.
+For a closed $B$, adjunction gives $LRB\leq B$, and hence
+\[
+ L\operatorname{Gen}_1(RB)
+ \leq\operatorname{Gen}_2(LRB)\leq B.
+\]
+Thus $\operatorname{Gen}_1(RB)\leq RB$. Extensivity gives
+equality, and the restricted adjunction follows from the
+generation reflection.
+\end{proof}
+
+For example, if $G\dashv H$ has unit $\eta$, the operation $L$
+has right adjoint
+\[
+ R(B)=S_1\times_{HS_2}HB,
+\]
+where $S_1\to HS_2$ is $H\sigma\,\eta_{S_1}$.
+Transposition identifies the factorizations defining this
+adjunction. The derivation-comparison hypothesis can be proved
+from rule-instance morphisms as follows. Suppose
+$\sigma_{\Phi}:G\Phi_1\to\Phi_2$ extends $\sigma$, and put
+$K_{\Phi}(q)=\sigma_{\Phi}Gq$. Its right adjoint $R_{\Phi}$ is
+given by the same pullback construction. If the rule morphisms
+give a natural transformation
+\[
+ \lambda:K_{\Phi}H_A\to H_{L(A)}K_{\Phi},
+\]
+let $\delta':H_{L(A)}P'\to P'$ be the target initial algebra and
+$\epsilon:K_{\Phi}R_{\Phi}\to1$ the counit. Transpose
+\[
+ K_{\Phi}H_AR_{\Phi}P'
+ \xrightarrow{\lambda}H_{L(A)}K_{\Phi}R_{\Phi}P'
+ \xrightarrow{H_{L(A)}\epsilon}H_{L(A)}P'
+ \xrightarrow{\delta'}P'
+\]
+to give $R_{\Phi}P'$ a source algebra structure. Source initiality
+gives a morphism from $P_A$ to this algebra. Transposing it and
+restricting to sentence conclusions gives $p_A$.
+
+\subsection{Free first-order theories and inseparability}
+\label{sec:free-first-order-theories}
+
+Assume additionally that every monomorphism of $\mathcal D$ has a
+partial inverse in $\mathscr S$. Subobjects then identify with
+restriction idempotents. Corollary~\ref{cor:domain-incompleteness}
+implies essential incompleteness whenever an inseparable pair
+reduces to its theorem and refutation subobjects.
+
+Fix the decidable variable object $V$ of
+Appendix~\ref{app:categorical-hypotheses}. Suppose that for every
+$X\in\mathcal D$ the syntax and derivation hypotheses hold for
+the first-order language whose only nonlogical symbols are
+nullary predicates indexed by $X$. Write $P_X$ for this
+presentation. Its terms are variables. The atomic sentence
+constructor is $\theta_X:X\to S_X$.
+For disjoint subobjects $a,b\hookrightarrow X$, with inclusions
+$i_a,i_b$, put
+\[
+ A_{a,b}=\im(\theta_Xi_a)\vee\im(\nu_X\theta_Xi_b),
+ \qquad T_{a,b}=\operatorname{Gen}_{P_X}(A_{a,b}).
+\]
+
+Let $\mathsf{Pair}_c(\mathcal D)$ have triples $(X,a,b)$ as
+objects, where $a\wedge b=0$ and $T_{a,b}$ is consistent. A
+morphism $f:(X,a,b)\to(Y,c,d)$ is a total $f:X\to Y$ satisfying
+$a\leq f^*c$ and $b\leq f^*d$.
+Let $\mathsf{FO}_V(\mathcal D)$ have pairs $(P,T)$ as objects,
+where $P$ has variable object $V$ and $T$ is a consistent
+sentence theory. A morphism $(P,T)\to(Q,U)$ is a logical
+translation $\sigma:P\to Q$ with $\sigma_!T\leq U$.
+Define
+\[
+ \Sigma_{\mathrm{FO}}(X,a,b)=(P_X,T_{a,b}),\qquad
+ J_{\mathrm{FO}}(P,T)=(S_P,T,\nu_P^*T).
+\]
+The functor $\Sigma_{\mathrm{FO}}$ sends $f$ to the interpretation
+extending $\theta_Yf$, and $J_{\mathrm{FO}}$ sends $\sigma$ to
+$\sigma_S$.
+
+\begin{theorem}[Free first-order adjunction]
+\label{thm:free-first-order-adjunction}
+Under the syntax, derivation, and partial-inverse hypotheses of
+this subsection, $\Sigma_{\mathrm{FO}}$ and $J_{\mathrm{FO}}$ are functors with
+\[
+ \Sigma_{\mathrm{FO}}:
+ \mathsf{Pair}_c(\mathcal D)\rightleftarrows
+ \mathsf{FO}_V(\mathcal D):J_{\mathrm{FO}},\qquad
+ \Sigma_{\mathrm{FO}}\dashv J_{\mathrm{FO}}.
+\]
+The unit at $(X,a,b)$ is $\theta_X$. The counit at $(P,T)$
+interprets the nullary predicate indexed by a sentence of $P$
+as that sentence.
+\end{theorem}
+\begin{proof}
+A pair morphism $f:(X,a,b)\to(S_P,T,\nu_P^*T)$ interprets the
+nullary predicates by the closed sentences $f:X\to S_P$ and
+the variables by $V\to\Tm_P$. Initiality of the free syntax
+gives a unique term and formula interpretation $\widehat f$.
+Since the images of the predicates are closed, induction proves
+preservation of free variables, admissibility, and substitution.
+The logical constructors and rule side conditions are therefore
+preserved. The pair inequalities put the image of $A_{a,b}$
+inside $T$, so Theorem~\ref{thm:translation-galois} gives
+$\widehat f_!T_{a,b}\leq T$.
+
+Conversely, restriction of a theory morphism along $\theta_X$
+gives these pair inequalities. Uniqueness of the syntax interpretations makes the two
+assignments inverse and natural. It also proves identity and
+composition preservation of both functors.
+To verify that $J_{\mathrm{FO}}$ takes values in
+$\mathsf{Pair}_c(\mathcal D)$, interpret the free predicates
+indexed by $S_P$ as their indexing sentences. The inverse image
+of $T$ is a consistent closed theory containing the positive
+axioms indexed by $T$ and negative axioms indexed by $\nu_P^*T$.
+Its generated subtheory is consistent. Thus the required object
+condition holds.
+\end{proof}
+
+\begin{corollary}\label{cor:signed-first-order-incompleteness}
+Under the hypotheses of
+Theorem~\ref{thm:free-first-order-adjunction}, let $a,b$ be
+disjoint subobjects of $X$ and suppose $T_{a,b}$ is consistent.
+Then $T_{a,b}$ is essentially incomplete if and only if $(a,b)$
+is inseparable in $\mathscr S$.
+\end{corollary}
+\begin{proof}
+The atomic map $\theta_X$ reduces $(a,b)$ to the theorem and
+refutation subobjects of $T_{a,b}$.
+Corollary~\ref{cor:domain-incompleteness} proves essential
+incompleteness when the pair is inseparable.
+
+Conversely, a separator is equivalently a total $d:X\to\Two$
+with value $\mathbf{t}$ on $a$ and $\mathbf{f}$ on $b$, where
+$\mathbf{t},\mathbf{f}:1\to\Two$ are the coproduct injections.
+Interpret the nullary predicates by $d$, equality by
+$\mathbf{t}$, negation and implication by their Boolean truth
+functions, and quantification by $V\times\Two\to\Two$.
+Free syntax gives a total valuation $v:\Phi_X\to\Two$.
+Induction gives
+$v(\varphi[x:=t])=v(\varphi)$ whenever substitution is admissible.
+The instantiation and equality schemes therefore have value
+$\mathbf{t}$, and the quantifier distribution scheme does also.
+The propositional schemes and both inference rules preserve
+truth. Hence the inverse image of $\mathbf{t}$ along
+$v j_X:S_X\to\Two$ is a closed, consistent, complete sentence
+theory containing $A_{a,b}$ and therefore $T_{a,b}$.
+This contradicts essential incompleteness.
+\end{proof}

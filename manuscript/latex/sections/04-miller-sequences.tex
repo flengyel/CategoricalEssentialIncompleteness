@@ -57,8 +57,8 @@ chosen binary representation $p$.
 For a finite binary sequence $\sigma$, let
 $[\sigma]=\{p\in2^{\N}:p\mathbin{\upharpoonright}|\sigma|=\sigma\}$
 be its cylinder in Cantor space.
-The set $\rho([\sigma])$ is a computably specified finite
-union of closed dyadic boxes in $Q$, with restrictions on only finitely
+The set $\rho([\sigma])$ is a finite union of closed dyadic boxes
+in $Q$, computable from $\sigma$, with restrictions on finitely
 many coordinates. For each affected coordinate $n$, complete the
 prescribed binary digits to a finite initial segment of
 $j\mapsto p(\langle n,j\rangle)$. There are only finitely many such
@@ -82,7 +82,7 @@ computes $\tau_z$ from every binary representation of $z$.
 \end{proof}
 
 For the fixed sequence $a$, let $\mathcal E_a$ have the
-objects generated from $\N$ by binary Cartesian products and tagged
+objects generated from $\N$ by binary Cartesian products and
 disjoint unions, with fixed recursive codings. Every such object is
 recursively isomorphic to $\N$. A morphism $f:X\rightharpoonup Y$ belongs
 to $\mathcal E_a$ when one oracle program computes exactly $f$, including
@@ -99,8 +99,9 @@ is a Turing morphism.
 Composition of the representing programs gives the same composite
 partial function for every binary representation of $a$.
 The recursive projections, pairings,
-tagged injections, and case distinctions give the stated finite
-structure. Restriction is computed by running a program for $f(x)$ and,
+coproduct injections, and functions defined separately on the two
+summands give the restriction
+products and coproducts. Restriction is computed by running a program for $f(x)$ and,
 if it halts, returning $x$. To compute the range partial identity at
 $y$, dovetail the computations $f(x)$ over all coded inputs $x$ and
 return $y$ when one returns $y$. Although the discovered witness may
@@ -123,7 +124,7 @@ gives the partial inverse. This proves weak choice.
 
 Lemma~\ref{lem:miller-unanimity} puts $\tau_a$ in $\mathcal E_a$.
 Let $f:X\times\N\rightharpoonup\N$ be represented by a program with
-index $d$. The parameter theorem for oracle programs gives an ordinary
+index $d$. The parameter theorem for oracle programs gives a
 total recursive map $c:X\to\N$ with
 \[
  \Phi_{c(x)}^p(n)\simeq\Phi_d^p(x,n).
@@ -157,8 +158,9 @@ $\ell_c:X\to X+X$ with $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$,
 where $i_0,i_1:X\to X+X$ are the coproduct injections.
 Since $(I_pJ_p)(1_{\N})\ne0$, each composite
 $I_pJ_p$ satisfies the hypotheses of Corollary~\ref{cor:source-conditionals}.
-Using the recursive bijection $b:\N\to\N+\N$ which assigns the tag
-of $m$ according to its parity, that corollary gives inseparable
+Let $i_0,i_1:\N\to\N+\N$ be the coproduct injections, and define the
+recursive bijection $b:\N\to\N+\N$ by
+$b(2n)=i_0(n)$ and $b(2n+1)=i_1(n)$. Applying that corollary with $b$ gives inseparable
 restriction idempotents that are the partial identities on the sets
 \begin{equation}\label{eq:miller-diagonal-pair}
  A_i=\{e:\tau_a(e,e)\mathord\downarrow=m
@@ -176,7 +178,7 @@ inequalities can be recognized from approximations obtained from any
 binary representation of $a$.
 
 \begin{lemma}\label{lem:miller-cut-reduction}
-There is an ordinary total recursive map $h:\N\to\N$ such that
+There is a total recursive map $h:\N\to\N$ such that
 \[
  h^{-1}(L_a)=A_0,\qquad h^{-1}(R_a)=A_1.
 \]
@@ -186,8 +188,8 @@ For $e,m,t\in\N$, let $H_{e,m,t}$ be the finite union of halting
 cylinders enumerated by stage $t$ for the computation
 $\Phi_e^q(e)\mathord\downarrow=m$. Choose these finite unions increasing
 in $t$, and put $K_{e,m,t}=\rho(2^{\N}\setminus H_{e,m,t})\subseteq Q$.
-Each $K_{e,m,t}$ is a computably specified finite union of closed dyadic
-boxes. Compactness of $P_z$ gives
+Each $K_{e,m,t}$ is a finite union of closed dyadic boxes computable
+from $e,m,t$. Compactness of $P_z$ gives
 \begin{align*}
  U_e^i
  &:=\{z\in Q:\tau_z(e,e)\mathord\downarrow=m
@@ -305,12 +307,13 @@ algebra of finite derivations.
 \end{proposition}
 \begin{proof}
 A singleton is terminal. Finite products and equalizers are
-$\mathcal E_a$-semidecidable carriers, using parallel membership
-tests and numerical equality. The empty carrier and tagged unions
+$\mathcal E_a$-semidecidable carriers, using parallel semidecision
+procedures and numerical equality. The empty carrier and disjoint unions
 give finite coproducts.
-For a morphism $f:C\to D+E$, running $f$ and testing its output tag
+For a morphism $f:C\to D+E$, computing $f$ and deciding which
+coproduct summand contains its value
 gives two semidecidable inverse-image carriers. Their coproduct
-maps isomorphically to $C$, with inverse given by the same tag test.
+maps isomorphically to $C$, with inverse given by the same decision.
 The injections have disjoint images, so these coproducts are disjoint
 and stable under pullback.
 
@@ -339,8 +342,8 @@ domain. These assignments respect composition by pullback and give
 the displayed restriction equivalence.
 
 Numerical equality makes $V=\N$ decidable. Encode terms and formulas
-as finite labeled ordered trees with distinct constructor tags,
-and lists of variable names as finite sequences. Recursive parsing
+as finite labeled ordered trees with distinct numerical labels for
+the constructors, and lists of variable names as finite sequences. Recursive parsing
 and the recursive symbol carriers make these carriers and their
 constructors recursive. Fix an arbitrary object $P$ of $\mathcal D_a$
 and a $K_P$-algebra on two objects over $P$. On input $(w,t)$ or
@@ -356,10 +359,14 @@ proves uniqueness. This proves syntax initiality in every slice
 over $P$. Evaluation of finite lists, retaining the same parameter
 $w$, proves the corresponding assertion for the list algebra.
 
-The free-variable fold of Appendix~\ref{app:syntax-theories}
-computes finite lists of occurrences. The single-variable
-substitution fold returns either failure or a formula:
-it compares the bound and substituted variables and uses the finite
+The free-variable morphism of Appendix~\ref{app:syntax-theories}
+computes finite lists of occurrences. The formula-substitution morphism
+has codomain $1+\mathsf{Fm}$, with injections
+$\fail_{\mathsf{Fm}}:1\to1+\mathsf{Fm}$ and
+$\ok_{\mathsf{Fm}}:\mathsf{Fm}\to1+\mathsf{Fm}$.
+Its value belongs to the first summand when substitution is inadmissible
+and to the second summand otherwise. Its defining recursion
+compares the bound and substituted variables and uses the finite
 membership tests in~\eqref{eq:quantifier-fold}. These computations
 are recursive functions. The pullback in
 Proposition~\ref{prop:categorical-substitution} therefore gives the
@@ -373,7 +380,8 @@ A finite derivation tree records its rule instance and ordered
 children at every node. Tree shape, logical instance conditions,
 and agreement of child conclusions with the required premises are
 recursive tests. Run these tests together with the finitely many
-nonlogical axiom membership tests. They semidecide a carrier
+semidecision procedures for membership of nonlogical axiom leaves.
+Together these procedures semidecide a carrier
 $P_A$ with the same membership outcome for every $p\in P_a$.
 Reading the root gives a total conclusion morphism
 $c_A:P_A\to\mathsf{Fm}$, and adjoining a labeled root gives an
@@ -389,6 +397,63 @@ of $p\in P_a$, so it is a morphism of $\mathcal D_a$ over
 $\mathsf{Fm}$. Its recursive equations make it an algebra morphism;
 induction on derivations proves uniqueness. Thus the derivation
 algebra is initial.
+\end{proof}
+
+\begin{lemma}\label{lem:miller-parameterized-deduction}
+Let $X$ be an object of $\mathcal D_a$. The first-order language
+with variables $\N$, equality, and a nullary predicate for each
+label in $X$ has the syntax and list algebras of
+Definition~\ref{def:categorical-syntax}, stable under parameters.
+For this language and for every recursive signature covered by
+Proposition~\ref{prop:miller-theory-realization}, finite derivation
+algebras are also stable under parameters. More precisely, if $P$
+is an object of $\mathcal D_a$, $\mathsf{Fm}$ is the formula object,
+$S$ is the sentence object, and
+$A\hookrightarrow P\times S$ is an axiom subobject over $P$, the
+corresponding inference endofunctor on
+$\mathcal D_a/(P\times\mathsf{Fm})$ has an initial algebra.
+\end{lemma}
+\begin{proof}
+Represent $X$ and $P$ by $\mathcal E_a$-semidecidable numerical
+carriers. Terms of the nullary language are variables. A formula
+code is a finite ordered tree whose leaves are equalities of
+variables or nullary predicates labelled in $X$. Its other nodes
+are negation, implication, and quantification by a numerical
+variable. Check the finite tree shape and semidecide membership in
+$X$ for its finitely many labels. This semidecides
+the formula carrier with the same domain for every representation
+of $a$. The constructors, occurrence lists, and substitutions use
+finite numerical codes. Variable comparison is decidable, as
+required in Appendix~\ref{app:syntax-theories}.
+
+For an algebra over $P$, retain the parameter throughout the
+evaluation of a finite term, formula, or list. Every algebra
+operation is applied in that fiber. Its representing computation
+has domain and value independent of the representation of $a$.
+Induction on the finite tree therefore proves that evaluation
+terminates on the required carrier, is representation independent,
+and satisfies the algebra equations. The same induction proves
+uniqueness. Thus these are the required initial algebras in every
+parameter slice.
+
+Represent $A$ by its semidecidable image in $P\times S$.
+A numerical derivation code records a parameter $w$ and a finite tree
+of rule instances with ordered children. Semidecide $w\in P$ and
+membership of every formula parameter in its syntax carrier. For the
+nullary language, this includes membership in $X$ of every predicate
+label. Perform the recursive tests for tree shape, side conditions,
+and agreement of the ordered child conclusions with the premises,
+and semidecide $(w,\varphi)\in A$ at each nonlogical axiom leaf.
+These finitely many positive tests semidecide the derivation carrier,
+with the same domain for every representation of $a$.
+Adjoining a rule instance gives its inference algebra structure.
+Evaluate this tree in any target inference algebra over
+$P\times\mathsf{Fm}$, retaining $w$ at every node. Induction
+proves that the operation at each node receives inputs with the
+required conclusions, and hence terminates. The same argument as
+for syntax gives representation independence and the
+algebra-morphism equations. Induction also proves uniqueness.
+The derivation algebra is therefore initial in the parameter slice.
 \end{proof}
 
 Consider the language of ordered fields with additional constants
@@ -433,8 +498,9 @@ Proposition~\ref{prop:miller-theory-realization}, the inference
 endofunctor $H_{A_T}$ has an initial derivation algebra. Pull its
 conclusion morphism back to $S$, obtaining $c_T:\mathrm{Prf}_T\to S$.
 Theorem~\ref{thm:first-order-theory} identifies its image with the
-sentence theory generated by $A_T$. The realization proposition
-supplies a partial inverse for this image monomorphism in
+sentence theory generated by $A_T$.
+Proposition~\ref{prop:miller-theory-realization} supplies a partial
+inverse for this image monomorphism in
 $\operatorname{Split}(\mathcal E_a)$.
 Lemma~\ref{lem:range-regular-image} therefore identifies
 $t_T=\ran(c_T)$ with the partial identity on the theorem set in
@@ -460,5 +526,68 @@ while consistency gives $t_T\nu^*t_T=0_S$.
 Corollary~\ref{cor:domain-incompleteness} therefore makes
 $t_T,\nu^*t_T$ inseparable and gives
 $t_T\vee\nu^*t_T\ne1_S$.
+\end{proof}
+
+\subsection{The associated recursion categories}
+
+Write $\mathscr C_a=\Split(\mathcal E_a)$, and let
+$t_a:\mathsf T_a\hookrightarrow S$ be the generated sentence
+theory of $T_a$. A sentence theory $u:U\hookrightarrow S$ in
+$\mathcal D_a$ is understood to be closed under the field-language
+deduction rules above.
+
+\begin{corollary}\label{cor:miller-associated-categories}
+Let $a$ be a Miller sequence, and let $u:U\hookrightarrow S$ be a
+consistent internal sentence theory extending $t_a$. The category
+\[
+ \mathscr C_a[U]=\Par(\mathcal D_a/U,\Mono)
+\]
+is a Turing category, and its internal theory
+\[
+ 1_U\times u:U\times U\hookrightarrow U\times S
+\]
+is essentially incomplete. Its theorem and refutation domains are
+inseparable. Let $\delta_u:S\rightharpoonup\Two$ be the partial
+morphism with domain $u\vee\nu^*u$ taking the value true on $u$
+and false on $\nu^*u$. Then
+$1_U\times\delta_u:U\times S\rightharpoonup U\times\Two$
+has no total extension in $\mathscr C_a[U]$.
+
+If $u':U'\hookrightarrow S$ is another consistent internal
+sentence theory and $u=u'i$ for $i:U\hookrightarrow U'$, then
+postcomposition induces a fully faithful restriction functor
+\[
+ \Sigma_i:\mathscr C_a[U]\longrightarrow\mathscr C_a[U'].
+\]
+This functor is not essentially surjective when $i$ is proper.
+The associated categories, their internal theories, and these
+comparison functors are the instance of
+Theorems~\ref{thm:theory-extension}
+and~\ref{thm:associated-incompleteness} for $\mathcal E_a$.
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:miller-theory-realization} supplies regularity,
+disjoint stable finite coproducts, and the partial inverses of
+monomorphisms. Lemma~\ref{lem:miller-parameterized-deduction}
+supplies the syntax and finite derivations with parameters,
+including the languages with nullary predicate symbols used in the
+general construction.
+
+The real-field model of $T_a$ proves that $t_a$ and its refutation
+subobject are disjoint. The total morphism
+$\theta:\N\to S$, $\theta(n)=\ulcorner c_n<1/2\urcorner$,
+reduces the inseparable pair
+$1_{L_a},1_{R_a}$ to these subobjects, as in the proof of
+Theorem~\ref{thm:miller-incompleteness}.
+Corollary~\ref{cor:domain-incompleteness} therefore applies to
+every consistent internal sentence theory extending $t_a$.
+In particular, $u$ is essentially incomplete and its theorem and
+refutation domains are inseparable.
+
+The code of $0=0$ defines a total morphism $1\to S$ that factors
+through every such $u$. It supplies the section of $U$ required
+for the constant-family functor and its fiber retraction.
+Apply Theorems~\ref{thm:theory-extension}
+and~\ref{thm:associated-incompleteness}.
 \end{proof}
 

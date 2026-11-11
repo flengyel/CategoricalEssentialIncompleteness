@@ -1,7 +1,7 @@
 \section{Interpretation and soundness}\label{sec:models}
 
 In $\Pfn$, restriction products are Cartesian products and coproducts
-are tagged disjoint unions.
+are disjoint unions.
 
 Fix a model $M\models T$. Assign a set $X_M$ to each term
 $X\in\mathsf O$ by
@@ -51,7 +51,7 @@ function's domain. Similarly,
 \]
 so ranges are preserved. False predicates, conjunction, and disjunction
 give zeros, intersections, and unions. The PA-provable product and
-tagged-coproduct graph equations give the corresponding operations on
+coproduct graph equations give the corresponding operations on
 partial functions.
 \end{proof}
 
@@ -85,9 +85,9 @@ whose graph is $T$-provably equivalent to $R$. Thus $s=[e_s]_T$
 is total in $S_T$, and its graph gives $sc=i_1c$ and $sc'=i_0c'$.
 
 Interpret this graph equivalence in $M\models T$.
-Under the canonical coproduct identification, $F_M(s)$ sends
-$x$ to its second tagged copy when
-$M\models C(\gamma_X^M(x))$ and to its first tagged copy when
+Under the coproduct isomorphism $\chi_{X,X}^{-1}$, $F_M(s)$ sends
+$x$ to its image under the second coproduct injection when
+$M\models C(\gamma_X^M(x))$ and under the first when
 $M\models C'(\gamma_X^M(x))$.
 These conditions partition $X_M$, so
 $\chi_{X,X}^{-1}F_M(s)$ is the partial inverse of
@@ -150,7 +150,7 @@ $\Gamma,\Delta:C\to D$, the equalizer predicate
 \]
 is interpreted as the equalizer of the two functions. Hence $G_M$
 preserves finite limits. The even and odd coding bijections identify
-the interpreted coproduct predicate with the tagged disjoint union;
+the interpreted coproduct predicate with the disjoint union;
 the false predicate is interpreted as the empty set. Finally,
 the regular image of $\Gamma:C\to D$ has predicate
 $\exists x\,\Gamma(x,y)$. Its interpretation is the image
@@ -193,7 +193,7 @@ formulas.
 
 Let $j_{\Adm}:\Adm\hookrightarrow\Fm\times V\times\Tm$
 be the admissibility inclusion in $\mathcal B_{\PA}$.
-Composing $G_{\N}(j_{\Adm})$ with the canonical product
+Composing $G_{\N}(j_{\Adm})$ with the product
 comparison gives an injection of sets
 \[
  a_{\N}:G_{\N}\Adm\hookrightarrow
@@ -221,7 +221,10 @@ the image of $a_{\N}$, then
  K,\sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]
              \models\varphi.
 \end{equation}
-Here the expressions are decoded from the realized syntax objects.
+The substitution morphisms of
+Proposition~\ref{prop:st-substitution-realization}, interpreted by
+$G_{\N}$, give the codes of $r[x:=t]$ and, when admissible,
+$\varphi[x:=t]$.
 \end{lemma}
 \begin{proof}
 First, term values and formula truth depend only on the values
@@ -232,13 +235,13 @@ their semantic clauses. For $\forall y\,\psi$, assignments agreeing
 on its free variables yield, after changing $y$ to the same
 $b\in|K|$, assignments agreeing on the free variables of $\psi$.
 The induction hypothesis for $\psi$ therefore proves the assertion
-for the quantified formula. The free-variable lists realized in
-Proposition~\ref{prop:st-substitution-realization} satisfy these constructor equations.
+for the quantified formula. The free-variable lists of
+Proposition~\ref{prop:st-substitution-realization} satisfy these equations.
 
 Induction on $r$ proves the term identity. At a variable it is the
 two-case definition of substitution; at a function application it
 follows by applying the interpretation of the function symbol to
-the child identities. The atomic cases of
+the induction hypotheses for its arguments. The atomic cases of
 \eqref{eq:semantic-substitution} follow from this term identity.
 Negation and implication follow from their truth clauses and the
 induction hypotheses.
@@ -293,8 +296,9 @@ For universal instantiation, if $\forall x\,\varphi$ holds at
 $\sigma$, then $\varphi$ holds at
 $\sigma[x\mapsto\llbracket t\rrbracket^K_\sigma]$.
 Lemma~\ref{lem:semantic-substitution} gives
-$\varphi[x:=t]$ at $\sigma$, since its parameter object imposes
-admissibility. For universal distribution, suppose
+$\varphi[x:=t]$ at $\sigma$, since the parameters of universal
+instantiation are restricted to admissible substitutions.
+For universal distribution, suppose
 $\forall x(\varphi\Rightarrow\psi)$ and $\varphi$ hold at
 $\sigma$. The side condition says that $x$ is not free in
 $\varphi$. Thus $\varphi$ holds at $\sigma[x\mapsto b]$ for
@@ -314,10 +318,10 @@ $\sigma[x\mapsto b]$ for every assignment $\sigma$ and every
 $b\in|K|$.
 
 By Lemma~\ref{lem:syntactic-derivation-initiality}, each element
-of $G_{\N}P_A$ is the code of a finite derivation tree. Its
-parameter at each node satisfies the rule predicate;
-the child conclusions are the premises of that rule. Induction
-on the tree, using the preceding checks, shows that its root
+of $G_{\N}P_A$ is the code of a finite derivation tree. The
+rule instance at each node satisfies its defining predicate, and
+the conclusions of its immediate subderivations are its premises.
+Induction on the tree shows that its root
 formula is valid in $K$. Restriction to the pullback
 $G_{\N}P_{A,S}$ gives a sentence satisfied by $K$.
 Consequently $G_{\N}c_{A,S}$ takes values in $V_K$; its
@@ -330,11 +334,11 @@ the code of its negation. A sentence and its negation cannot
 both hold in $K$. This proves the empty-intersection assertion.
 \end{proof}
 
-\subsection{Ultrapowers of the code interpretation}
+\subsection{Ultrapowers of the interpretation functor}
 
 We use \L o\'s's theorem~\cite[Theorem~3.1]{Keisler} to compare
-an ultrapower of the code interpretation with interpretation in an
-arithmetic ultrapower.
+the ultrapower of $G_{\N}$ with the interpretation functor for
+an arithmetic ultrapower.
 
 Work in the set-theoretic metatheory with choice. Fix a
 nonempty set $I$ and a proper ultrafilter $\mathcal U$ on $I$.
@@ -369,16 +373,17 @@ definition of $\sim_{\mathcal U}$. Hence equalizers, and
 therefore finite limits, are preserved.
 
 For a family in $X\amalg Y$, exactly one of the sets of indices
-carrying the two tags belongs to $\mathcal U$. Retain that
-summand on this set and fill the other coordinates with one
+at which its value lies in the first or second coproduct summand
+belongs to $\mathcal U$. Retain that summand on this set and
+fill the other coordinates with one
 element of the same summand. The summand is nonempty because
 the retained set is nonempty. This proves surjectivity of
 \[
  \mathscr U(X)\amalg\mathscr U(Y)
        \longrightarrow\mathscr U(X\amalg Y).
 \]
-The two tags cannot agree on a member of $\mathcal U$, and
-equality within a tag is given by $\sim_{\mathcal U}$. Thus this
+The two summands are disjoint, and equality within either summand
+is given by $\sim_{\mathcal U}$. Thus this
 map is bijective. Finally, every surjection of sets has a section,
 so its image under $\mathscr U$ is surjective. Finite-limit
 preservation preserves monomorphisms; applying $\mathscr U$ to
@@ -404,7 +409,7 @@ On a predicate object $J_{\PA}(C)$ it is the map
 \end{equation}
 \end{lemma}
 \begin{proof}
-By \L o\'s's theorem, the displayed map is well defined and
+By \L o\'s's theorem, $\eta_{J_{\PA}(C)}$ is well defined and
 injective. If $a=[a_i]\in C(M)$, then
 $J=\{i:\N\models C(a_i)\}$ belongs to $\mathcal U$.
 Choose $c\in C(\N)$ from one coordinate in $J$, and replace
@@ -417,7 +422,7 @@ For a morphism represented by a functional graph
 $\Gamma:C\to D$, let $d_i$ be its value at $c_i$ in $\N$.
 Then $\N\models\Gamma(c_i,d_i)$ for every $i$.
 \L o\'s's theorem and functionality in $M$ show that the value
-at $[c_i]$ in $M$ is $[d_i]$. Thus the displayed maps are
+at $[c_i]$ in $M$ is $[d_i]$. Thus these components are
 natural on $\mathcal P_{\PA}$.
 
 To define the comparison on $\mathcal B_{\PA}$, for each
@@ -512,9 +517,10 @@ Then
  \quad\Longleftrightarrow\quad
  \{i:K\models\varphi_{s_i}\}\in\mathcal U.
 \]
-Indeed, membership on a set in $\mathcal U$ permits replacing
-all other coordinates by one member of $V_K$, and the reverse
-implication follows from a representative in $V_K^I$.
+If $\{i:K\models\varphi_{s_i}\}\in\mathcal U$, this set is
+nonempty. Replace the other coordinates by a member of $V_K$ to
+obtain a representative in $V_K^I$. Conversely, a representative
+in $V_K^I$ makes the displayed set belong to $\mathcal U$.
 This description is independent of representatives because two
 representatives agree on a set in $\mathcal U$. On a constant
 standard sentence code it agrees with satisfaction in $K$.

@@ -35,7 +35,7 @@ $\operatorname{Ax}(\bar e,z)$.
 Let $J=J_{\PA}:\mathcal P_{\PA}\to\mathcal B$ be the
 equivalence of Lemma~\ref{lem:syntactic-total-category}.
 Put $\operatorname{Top}(x)\equiv(x=x)$, so that
-$J(\operatorname{Top})=E$, and use the chosen object
+$J(\operatorname{Top})=E$, and use the object
 $S=J(\operatorname{Sent})$.
 Let $\pi_0^{\mathrm{num}},\pi_1^{\mathrm{num}}:\N\to\N$
 be the projections of the numerical pairing, and put
@@ -104,7 +104,7 @@ along $1_E\times j:E\times S\to F_E$, and let
 $m:\mathcal T\hookrightarrow E\times S$ be the regular image
 of $c$. Theorem~\ref{thm:least-theorem-subobject} identifies
 the image of $c^{\mathrm{all}}$ as the least subobject closed
-under the displayed rules. Stability of regular images identifies
+under these rules. Stability of regular images identifies
 $m$ with the pullback of that image along $1_E\times j$.
 By Lemma~\ref{lem:syntactic-total-category}, $m$ has a partial
 inverse $r:E\times S\rightharpoonup\mathcal T$ in
@@ -204,7 +204,7 @@ These are the premise and conclusion morphisms for an inference
 endofunctor
 $H_{\ne e}:\mathcal B/F_{\ne e}\to\mathcal B/F_{\ne e}$.
 Write $H_e=H_{A_{\Gamma_e}}:\mathcal B/\Fm\to\mathcal B/\Fm$
-for the inference endofunctor of the chosen axiom subobject.
+for the inference endofunctor of $A_{\Gamma_e}$.
 There is a natural isomorphism
 \[
  \zeta:\Xi_eH_E\xRightarrow{\cong}
@@ -291,7 +291,7 @@ Appendix~\ref{app:first-order-derivations} identifies that image
 with the generated sentence theory.
 \end{proof}
 
-Choose a $\Sigma_1$ predicate $P_0(d)$ and a presentation
+Choose a $\Sigma_1$ predicate $P_0(d)$ and an
 isomorphism $u:J(P_0)\xrightarrow{\cong}P$ in $\mathcal B$.
 By fullness of $J$, there is a morphism
 $\gamma_c:P_0\to D$ in $\mathcal P_{\PA}$ satisfying
@@ -300,8 +300,9 @@ $\gamma_c:P_0\to D$ in $\mathcal P_{\PA}$ satisfying
 \]
 Choose a standard program index $a_c\in\N$ whose graph
 $G_{a_c}(d,w)$ represents $\gamma_c$, as in
-Lemma~\ref{lem:syntactic-functional-search}. Its support and
-totality give
+Lemma~\ref{lem:syntactic-functional-search}. The defining conditions
+\eqref{eq:syntactic-support} and \eqref{eq:syntactic-totality}
+for $\gamma_c:P_0\to D$ give
 \[
  \PA\vdash\forall d\,
      \bigl(\exists w\,G_{a_c}(d,w)\leftrightarrow P_0(d)\bigr).

@@ -21,3 +21,11 @@ not determine the manuscript version.
 Use `morphism` and `Turing morphism`. Define notation before use, state morphism
 types, and remove empty modifiers, repeated definitions, and defensive asides.
 Preserve mathematical hypotheses and substantive counterexamples.
+
+Commit completed changes to `main` and push them to `origin/main`.
+A saved file or local commit is not completion. Before reporting completion,
+verify the remote `main` commit and the active manuscript version there.
+Preserve concurrent remote changes and use a non-force update. Include the
+source, PDF, archive, manifest, correspondence table, and current instructions
+in the same manuscript synchronization. This standing instruction also
+applies to reports and later revisions.

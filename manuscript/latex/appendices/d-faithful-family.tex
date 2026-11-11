@@ -1,4 +1,4 @@
-\section{Faithful families and theory extension}\label{sec:family}
+\section{Faithful model interpretations and theory extension}\label{sec:family}
 
 Fix a consistent theory $T\supseteq\PA$.
 Let $\mathcal M_T$ be the set of all structures for the language of
@@ -10,8 +10,9 @@ countably infinite model can be transported to the carrier $\N$.
 
 Define the product category
 $\mathcal D_T=\prod_{M\in\mathcal M_T}\Pfn$.
-An object is a family of sets $(A_M)_M$; a morphism is a family of partial
-functions with the indicated sources and targets. Composition and the
+An object is a family of sets $A=(A_M)_M$. A morphism
+$f:A\rightharpoonup B$ is a family
+$(f_M:A_M\rightharpoonup B_M)_M$. Composition and the
 restriction, range, restriction-product, and coproduct operations are coordinatewise.
 The functors of Proposition~\ref{prop:model} combine to give
 $F_T:S_T\to\mathcal D_T$, defined by $F_T(X)=(X_M)_M$ and
@@ -28,7 +29,7 @@ $F_T(1_\omega)\ne0$.
 \end{theorem}
 \begin{proof}
 Preservation follows coordinatewise from Proposition~\ref{prop:model}.
-If $[e]_T\ne[f]_T$, let $E$ denote the uniform graph-equality sentence
+If $[e]_T\ne[f]_T$, let $E$ denote the sentence
 in \eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
 Completeness and downward L\"owenheim--Skolem give
 $M\in\mathcal M_T$ in which the two graphs differ. Hence
@@ -127,7 +128,7 @@ supplies lifts for sections associated with complementary restriction
 idempotents of $S_T$.
 
 
-\subsection{Numeral observations}
+\subsection{Provability of numeral instances}
 
 Suppose in addition that $T$ is computably enumerable.
 For a restriction idempotent
@@ -154,14 +155,14 @@ $T$-provably equivalent to $C(\bar n)\land y=\bar n$, which gives
 the first equivalence.
 The second follows from faithfulness of $F_T$.
 
-\subsection{A complete ambient theory}
+\subsection{The theory of the standard model}
 
 For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
 $D:S_{\operatorname{Th}(\N)}\to\mathrm{Rec}$, defined by
 $D([e]_{\operatorname{Th}(\N)})=\varphi_e$, is an isomorphism:
-two classes are equal exactly when their uniform
-graph-equivalence sentence is true in $\N$, which is equivalent
-to equality of their standard partial functions.
+two classes are equal exactly when the sentence in \eqref{eq:uniform}
+is true in $\N$, equivalently when their interpreted partial functions
+are equal.
 The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
 although $T$ is complete.
 Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.

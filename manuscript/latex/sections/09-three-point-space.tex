@@ -41,7 +41,7 @@ $C(\{a,c\})\leftarrow C(\{c\})\to C(\{b,c\})$
 Use the category $\mathcal C_{\mathrm{rec}}$ of
 Section~\ref{subsec:numerical-realization}. Its objects are pairs
 $C=(m,C_0)$ with carrier $|C|=C_0$, and its morphisms are total
-computable functions on the specified carriers. For a c.e.\ subset
+computable functions on the carriers. For a c.e.\ subset
 $C_0\subseteq\N^m$, writing $C_0$ for the object $(m,C_0)$
 abbreviates this pair. Membership, subset and image expressions,
 and elementwise computations involving numerical objects refer
@@ -129,7 +129,7 @@ prodominical structure, it makes $\mathscr R_X$ a recursion category.
 Every object $Y$ of $\mathcal E$ admits a total morphism $m:Y\to V$ in
 $\mathcal A$ with a partial inverse $r:V\rightharpoonup Y$
 such that $rm=1_Y$ and $mr=\bar r$
-(Lemma~\ref{lem:fork-dominance}). In this sense $V$ is a
+(Lemma~\ref{lem:fork-dominance}). Thus $V$ is a
 \emph{universal object} of $\mathcal A$.
 These embeddings give the equivalence
 $\operatorname{Split}(\mathscr R_X)\simeq\mathcal A$
@@ -152,8 +152,8 @@ is $V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
 $q=[m,m']:C+C'\to V$ has bijective components
 $q_j:C_j+C'_j\to V_j$. Each inverse is
 computable by running the membership searches for $C_j$ and $C'_j$ in
-parallel and returning the corresponding tagged element. Naturality of $q$
-gives
+parallel and returning the element in the corresponding coproduct
+summand. Naturality of $q$ gives
 \[
  r_i^{C+C'}q_0^{-1}=q_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
  \qquad(i=1,2).
@@ -208,7 +208,7 @@ Component evaluation preserves identities, monomorphisms, and
 pullbacks in the total categories. Consequently \eqref{eq:endpoint-functor}
 is independent of the representative span and preserves partial-map
 composition. The stated operations are represented componentwise by
-partial identities, empty sets, images, products, tagged unions, and
+partial identities, empty sets, images, products, disjoint unions, and
 finite unions, respectively.
 
 Use the recursive bijection $\operatorname{encode}_2:\N^2\to\N$,
@@ -257,7 +257,7 @@ For a restriction idempotent $e$ on $Y$, put
 \end{equation}
 This is the c.e.\ subset on which $E_i(e)$ is the partial identity.
 
-The functor $E_0$ does not preserve this Turing morphism's universality.
+The morphism $E_0(\tau)$ is not a Turing morphism.
 The total function $F:V_0\to V_0$ given by
 $F(k,z,a,b)=(0,0,z,0)$ cannot equal $\tau_0(p,-)$ for any $p\in V_0$.
 Let $T\hookrightarrow V\times V$ be the domain subfunctor of
@@ -326,7 +326,7 @@ this full subcategory. Hence $A_i,B_i$ are recursively inseparable.
 
 The category $\mathcal E$ is regular with finite coproducts, and its
 images are componentwise images (Proposition~\ref{prop:fork-total}).
-We realize the propositional construction of
+Apply the propositional construction of
 Appendix~\ref{app:propositional-theories} in this category, with atom
 object $V$ and additional axioms determined by $A,B\subseteq V$.
 
@@ -337,7 +337,7 @@ with constructors
  \nu_j(\varphi)\quad(\varphi\in S_j),\qquad
  \varphi\Rightarrow_j\psi\quad(\varphi,\psi\in S_j).
 \]
-Distinct constructors have distinct tags. Recursive encodings with
+The constructor images are pairwise disjoint. Recursive encodings with
 recursive parsing make $S_j$ a recursive numerical carrier, since
 $V_j$ is recursive. For $i=1,2$, replacing every atom label $x$ by
 $r_i^V(x)$ and retaining the constructors gives a total recursive map
@@ -390,8 +390,8 @@ The morphism
 $[\theta|_A,\nu\theta|_B]:A+B\to S$ inserting the positive and negative
 atomic axioms is monic: each component is
 injective, because the constructors are
-injective and the atom and negation tags are distinct. It therefore
-presents the axiom subobject used in
+injective and the atom and negation constructors have disjoint images.
+It therefore presents the axiom subobject used in
 Appendix~\ref{app:propositional-theories}, with positive and negative
 labels retained. Put
 \[
@@ -401,8 +401,8 @@ labels retained. Put
                  \mathrm{Ax}\longrightarrow S.
  \end{gathered}
 \]
-A member of $\mathrm{Ax}_j$ records an axiom tag and its parameters;
-$\lambda_j$ gives its conclusion.
+Each element of $\mathrm{Ax}_j$ specifies an axiom instance.
+The morphism $\lambda_j$ gives its conclusion.
 
 Write $\pi_1,\pi_2:S^2\to S$ for the projections and put
 $\mu=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2$.
@@ -437,8 +437,8 @@ summand is initial, giving the displayed form of $\mathsf H$.
 
 At component $j$, a derivation is a finite rooted ordered tree.
 Each leaf is labeled by a member of $\mathrm{Ax}_j$ and concludes
-its image under $\lambda_j$. Each nonleaf has the modus-ponens tag
-and two children concluding $\alpha$ and
+its image under $\lambda_j$. Each nonleaf represents a modus-ponens
+inference and has two children concluding $\alpha$ and
 $\alpha\Rightarrow_j\beta$; it concludes $\beta$. Let
 $\mathrm{Prf}_j$ be the carrier of these trees. Tree shape, logical
 parameters, and premise matching are recursively decidable; the
@@ -448,7 +448,7 @@ $\mathrm{Prf}_j$ is c.e. Reading the conclusion gives a morphism
 $c_j:\mathrm{Prf}_j\to S_j$ of $\mathcal C_{\mathrm{rec}}$.
 
 For $i=1,2$, relabel formula parameters by $\sigma_i$ and atomic
-axiom labels by $r_i^V$, retaining each node tag. Since $A,B$ are
+axiom labels by $r_i^V$, retaining the rule at each node. Since $A,B$ are
 subfunctors, $r_i^V(A_0)\subseteq A_i$ and
 $r_i^V(B_0)\subseteq B_i$. Relabeling therefore preserves axiom
 leaves. Commutation of $\sigma_i$ with implication preserves premise
@@ -611,3 +611,211 @@ $T_i$ contains its $i$th component, the family is compatible.
 Theorem~\ref{thm:cosheaf-observation} therefore makes $U$ incomplete.
 \end{proof}
 
+\subsection{First-order theories in the functor category}
+\label{subsec:fork-first-order}
+
+Let $N_\Delta=\Delta\N$ be the constant functor on $J$ with value
+$\N$ and identity transition morphisms. We use $N_\Delta$ as the
+object of variables. For an object $D$ of $\mathcal E$, consider
+the first-order language with nullary predicate symbols labelled by
+$D$, equality, and no other nonlogical symbols. Its terms are variables.
+
+\begin{proposition}\label{prop:fork-first-order-realization}
+For every $D\in\mathcal E$, this language has the syntax,
+substitution, and initial derivation algebras of
+Appendix~\ref{app:syntax-theories}. The syntax and derivation
+constructions are stable under parameters in $\mathcal E$.
+\end{proposition}
+\begin{proof}
+The formula constructor endofunctor is
+\[
+ Q_D(Y)=N_\Delta^2+D+Y+Y^2+N_\Delta\times Y.
+\]
+For $f:Y\to Y'$, set
+$Q_D(f)=1_{N_\Delta^2}+1_D+f+(f\times f)+(1_{N_\Delta}\times f)$.
+Its five summands represent equality, atoms, negation, implication,
+and universal quantification. At each component, finite numerical
+tree codes form a c.e.\ carrier. Membership in the label carrier
+$D_j$ is semidecidable.
+For $i=1,2$, relabel each atomic label by $D(0\to i)$ and retain
+the variable names and constructors. This defines the transition
+morphisms of a formula object $F_D$.
+
+Given an algebra $\alpha:Q_D(Y)\to Y$, evaluate its finite trees
+from the leaves to the root using the components of $\alpha$.
+This is partial recursive and total on each formula carrier.
+Naturality of $\alpha$ makes evaluation commute with transitions,
+and induction on the trees gives the algebra equation and
+uniqueness. If an algebra has a parameter in an object $Z$ of
+$\mathcal E$, retain that parameter at every evaluation step.
+The same induction proves the parameterized initiality equation
+and uniqueness in $\mathcal E/Z$.
+
+Finite lists of variables and their operations are formed
+componentwise, with identity transitions on variable names.
+Equality of variables is decidable because the variable object
+is $N_\Delta$. The occurrence-list and substitution constructions
+of Proposition~\ref{prop:categorical-substitution} therefore apply.
+Their recursive clauses commute with transitions, since the
+atomic predicates are nullary and their relabelling does not
+change variable names. In particular, empty occurrence lists
+define the sentence subobject of $F_D$.
+
+For an axiom subobject of this sentence object, use the finite
+derivation trees for the seven schemes and two rules of
+Appendix~\ref{app:first-order-derivations}. At each component,
+tree form, matching of premises, and the substitution and
+free-variable side conditions are recursive on their numerical
+codes. Membership of nonlogical axiom leaves is semidecidable.
+Thus the derivation carrier is c.e.\ Relabelling preserves each
+logical scheme and rule, and preserves nonlogical axiom leaves
+because the axioms form a subfunctor.
+
+Evaluation of derivation trees in an algebra for the inference
+endofunctor is total on their carriers. Its algebra equation is
+proved by induction on the last rule. Naturality of the algebra
+operations makes the evaluations a natural transformation.
+Induction also gives uniqueness. Retaining a common parameter
+throughout each tree gives the same construction in every slice
+$\mathcal E/Z$, including axiom subobjects over $Z$.
+\end{proof}
+
+Take $D=V$. Write $F_{\mathrm f}$ for the formula object,
+$s_{\mathrm f}:S_{\mathrm f}\hookrightarrow F_{\mathrm f}$ for
+its sentence inclusion, and $\theta_{\mathrm f}:V\to S_{\mathrm f}$
+for its atomic constructor. The propositional formula
+object is $S$. Preserving atoms, negation, and implication defines
+a monomorphism $j:S\hookrightarrow S_{\mathrm f}$.
+Let $T_{\mathrm p}=D_{t_0}\hookrightarrow S$ be the
+propositional theory of Theorem~\ref{thm:fork-proof-presentation}.
+Let $T_{\mathrm f}^F\hookrightarrow F_{\mathrm f}$ be the
+formula theory generated by the positive atoms from $A$ and the
+negative atoms from $B$, and put
+$T_{\mathrm f}=s_{\mathrm f}^*T_{\mathrm f}^F$.
+
+\begin{proposition}\label{prop:fork-first-order-conservative}
+The theory $T_{\mathrm f}$ is consistent and essentially
+incomplete in $\mathcal A$. Its restriction to the propositional
+language is $T_{\mathrm p}$, that is,
+\[
+ j^*T_{\mathrm f}=T_{\mathrm p}.
+\]
+At either endpoint $i=1,2$, every consistent first-order extension
+of $(T_{\mathrm f})_i$ with a c.e.\ axiom set is incomplete.
+\end{proposition}
+\begin{proof}
+The components
+$(0,0,0,0)$, $(0,0)$, and $(0,0)$ give a global element of $V$.
+Let $p_*$ be its propositional atom and put
+$\top=(p_*\Rightarrow p_*)$. Define a morphism
+$r:F_{\mathrm f}\to S$ by the following clauses, writing $P_v$
+for the first-order atom with label $v$:
+\[
+\begin{aligned}
+ r(P_v)&=\theta(v),& r(x=y)&=\top,\\
+ r(\neg\varphi)&=\nu r(\varphi),&
+ r(\varphi\Rightarrow\psi)&=r(\varphi)\Rightarrow r(\psi),\\
+ r(\forall x\,\varphi)&=r(\varphi).
+\end{aligned}
+\]
+The clauses commute with transitions and satisfy
+$r s_{\mathrm f}j=1_S$. Induction on formulas gives
+\[
+ r(\varphi[x:=y])=r(\varphi)
+\]
+whenever the substitution is admissible.
+
+The subobject $r^*T_{\mathrm p}$ contains the generating positive
+and negative atoms. It is closed under modus ponens, and erasing
+quantification makes it closed under generalization. The first
+three logical schemes are sent to the corresponding
+propositional schemes. The remaining four schemes are sent to
+\[
+ H\Rightarrow H,\qquad
+ (H\Rightarrow K)\Rightarrow(H\Rightarrow K),\qquad
+ \top,\qquad
+ \top\Rightarrow(H\Rightarrow H).
+\]
+Each has a finite propositional derivation, uniformly in $H,K$.
+For example, the first two propositional schemes give
+\[
+\begin{aligned}
+ &H\Rightarrow((H\Rightarrow H)\Rightarrow H),\\
+ &H\Rightarrow(H\Rightarrow H),\\
+ &\bigl(H\Rightarrow((H\Rightarrow H)\Rightarrow H)\bigr)
+   \Rightarrow
+   \bigl((H\Rightarrow(H\Rightarrow H))
+                   \Rightarrow(H\Rightarrow H)\bigr).
+\end{aligned}
+\]
+Two applications of modus ponens yield $H\Rightarrow H$.
+Substitution gives the second and third displayed formulas, and
+the first propositional scheme then gives the fourth.
+Leastness of the generated formula theory proves
+\[
+ T_{\mathrm f}^F\le r^*T_{\mathrm p}.
+\]
+Every propositional derivation embeds in the first-order calculus.
+Pulling the last inclusion back along $s_{\mathrm f}j$, and using
+$r s_{\mathrm f}j=1_S$, proves
+$j^*T_{\mathrm f}=T_{\mathrm p}$. Since $r$ commutes with
+negation and $T_{\mathrm p}$ is consistent, the same inclusion
+proves consistency of $T_{\mathrm f}$.
+
+The inseparable domains $A,B\hookrightarrow V$ reduce along
+$\theta_{\mathrm f}$ to the theorem and refutation domains of
+$T_{\mathrm f}$. Corollary~\ref{cor:domain-incompleteness}
+therefore makes $T_{\mathrm f}$ essentially incomplete.
+
+For the endpoint assertion, let $U_i$ be the deductive closure
+of a consistent c.e.\ set of first-order axioms, and suppose
+$(T_{\mathrm f})_i\subseteq U_i$. The inverse image $j_i^*U_i$ is a
+consistent c.e.\ propositional theory extending
+$(T_{\mathrm p})_i$. Completeness of $U_i$ would imply
+completeness of $j_i^*U_i$, since $j_i$ preserves negation.
+This contradicts Corollary~\ref{cor:cosheaf-essential-incompleteness}.
+\end{proof}
+
+\subsection{Categories associated with theory extensions}
+
+\begin{corollary}\label{cor:fork-associated-theories}
+Let $t:T_{\mathrm f}\hookrightarrow S_{\mathrm f}$ be the
+first-order theory above, and let
+$u:U\hookrightarrow S_{\mathrm f}$ be any consistent internal
+sentence theory with $t=ui$ for a monomorphism
+$i:T_{\mathrm f}\hookrightarrow U$. Then
+\[
+ \mathcal A[T_{\mathrm f}]=\Par(\mathcal E/T_{\mathrm f},\Mono),
+ \qquad
+ \mathcal A[U]=\Par(\mathcal E/U,\Mono)
+\]
+are Turing categories, and postcomposition gives the fully
+faithful functor
+\[
+ \Sigma_i:\mathcal A[T_{\mathrm f}]\longrightarrow\mathcal A[U]
+\]
+of Theorem~\ref{thm:theory-extension}. It is not essentially
+surjective when $i$ is not an isomorphism. The theory
+\[
+ 1_U\times u:U\times U\hookrightarrow U\times S_{\mathrm f}
+\]
+is essentially incomplete in $\mathcal A[U]$. Its theorem and
+refutation domains are inseparable there.
+\end{corollary}
+\begin{proof}
+Propositions~\ref{prop:fork-total} and
+\ref{prop:fork-structure} identify $\mathcal E$ as regular and
+extensive and $\mathcal A$ as its split partial-map category.
+Proposition~\ref{prop:fork-recursion} identifies
+$\mathcal A\simeq\Split(\mathscr R_X)$.
+Proposition~\ref{prop:fork-first-order-realization} supplies the
+parameter-stable syntax and deduction required by the general
+theorem. The global sentence $j(\top)$ is a logical theorem, so
+it factors through $u$ and gives a total morphism $1\to U$.
+Proposition~\ref{prop:fork-first-order-conservative} and
+Corollary~\ref{cor:domain-incompleteness} show that every such
+$u$ is essentially incomplete and that its theorem and
+refutation domains are inseparable in $\mathcal A$.
+Theorems~\ref{thm:theory-extension} and
+\ref{thm:associated-incompleteness} give the assertions.
+\end{proof}
