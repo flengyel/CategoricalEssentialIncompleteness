@@ -9,8 +9,9 @@ checkout. Both artifact hashes match the supplied WSL2 instructions.
 check is distinct from Lean verification.
 
 The v57 implementation batch constructs Theorems 4.4 and 4.5 and
-Proposition 4.6 with their printed hypotheses. Targeted strict checks and
-the integrated verification state are recorded at the end of this report.
+Proposition 4.6 with their printed hypotheses. The full v57 verification passed at
+`c93832d761347607906b11615bd56cb937cdfdff`; its measured inputs and
+command results are recorded at the end of this report.
 The other twelve added results remain open. No manuscript source, artifact,
 mathematical statement or proof has been edited in this batch.
 
@@ -588,10 +589,61 @@ axiom audit include all seven new producers and Checks.
 
 ### Integrated v57 verification state
 
-The targeted checks above establish these declarations and their intended
-statement types. The repository-wide v57 replay is pending; the numbered
-correspondence rows retain that qualification. The first remaining
-mathematical construction is Theorem 4.7, followed by 4.8, 5.1–5.3 and the
-seven application results. Three of the fifteen additions have compiled
-proofs; twelve remain mathematically open. Full verification results and
-the tested commit will be appended here after the established verifier.
+`bash scripts/verify-wsl.sh` passed with exit **0** at proof commit
+`c93832d761347607906b11615bd56cb937cdfdff`. The run is
+`.codex-work/verify-20261111T180312Z-YL3Qyj`. All **1,616 commands** passed,
+including all sixteen strict commands for the seven new producer/Checks
+pairs and the updated concrete generation-adjunction pair, the combined
+statement checks and both transitive axiom audits.
+
+| Verification datum | Result |
+| --- | --- |
+| Active manuscript | v57, unchanged from synchronization commit `c61105d` |
+| Numbered results proved / open | 65 / 12 |
+| Production modules audited | 822 |
+| Current / retained declarations audited | 26,546 / 1,274 |
+| Transitive axiom union | `Classical.choice`, `Quot.sound`, `propext` |
+| Measured inputs | 2,254, all matching committed proof bytes |
+| Dependencies | All sixteen worktrees clean and pinned at start and end |
+| Imported-source pins | 356 checked, no mismatches |
+| Measured inputs changed during run | None |
+| Sum of command durations | 11,772.23 seconds |
+
+Snapshot SHA-256:
+`03bf086a498e9f6d7b077cf2c76e8d80d0bbb15c86f133a8b692a76a1c2a8128`.
+Preserved raw verification JSON SHA-256:
+`04851791204d6f8b7774af1c700828c31cae997b6691f265b10a03835fd53e7f`.
+`v57-committed-source-identity.json` records the comparison of all measured
+inputs with the proof commit. The wrapper started at that commit with no
+tracked edits; the two unrelated Palomar drafts remain untracked and
+unchanged. Lean used its 4 GB budget throughout this run. No command timed
+out or exhausted that budget.
+
+The following principal anchors identify the tested revision. The namespace
+prefix is `CategoricalEssentialIncompleteness.V46.`.
+
+| Manuscript result | Principal declarations | Tested source |
+| --- | --- | --- |
+| 4.4 | `FirstOrderReflection.adjunction`, `presentationAdjunction`, `presentationGeneration_obj` | [reflector](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflection.lean#L126), [presentations](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflection.lean#L155) |
+| 4.5 | `FirstOrderPresentation.Translation.adjunction`, `generation_functor_identity`, `pushforward_comp`, `inverseImage_comp` | [Galois connection](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46TranslationGalois.lean#L95) |
+| 4.5, following reflection | `FirstOrderPresentation.Axioms.adjunction`, `homEquiv_translation` | [reflection](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46FirstOrderTranslationReflection.lean#L117) |
+| 4.6 | `DeductionComparison.generation_square`, `presentation_square`, `inclusionComparison`, `restrictedAdjunction` | [comparison](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46DeductionComparison.lean#L130) |
+| 4.6, right adjoint | `DeductionSliceAdjunction.adjunction`, `orderAdjunction` | [pullback construction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46DeductionSliceAdjunction.lean#L129) |
+| 4.6, mate | `DeductionMates.comparisonMap`, `comparisonMap_conclusion`, `generation_square_from_rules`, `theoryAdjunction` | [constructed maps](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/c93832d761347607906b11615bd56cb937cdfdff/Lean/CategoricalEssentialIncompleteness/V46DeductionMates.lean#L137) |
+
+The post-verification update changes the correspondence's verification
+wording and counts, this report and the README status paragraph. It changes
+no Lean input, manuscript source, artifact, manifest, toolchain or dependency.
+The correspondence is the only measured input with a documentation-only
+change after the proof run; `v57-status-documentation-delta.json` preserves
+its before/after bytes and SHA-256 digests. The subsequent manuscript-only
+gate checks those documentation and target changes; it is not presented as
+a second Lean run. All other measured inputs must match the tested commit
+before delivery.
+
+The first remaining mathematical construction is Theorem 4.7, followed by
+4.8, 5.1–5.3 and the seven application results. Three of the fifteen added
+results are proved and verified; twelve remain open. Uncompiled drafts for
+the next syntax interpretation are kept separately in the ignored
+continuation directory and establish no additional correspondence row.
+No manuscript mathematical statement or proof was changed.

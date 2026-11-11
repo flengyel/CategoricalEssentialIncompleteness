@@ -57,11 +57,13 @@ and Git blob hashes.
 ## Lean status
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V57.md](FORMALIZATION_STATUS_V57.md). It records the 77 numbered results and three definitions: 62 retained results
-with existing Lean counterparts, and 15 additional results whose full v57
-statement comparisons and formalizations remain open. The generation-adjunction
-continuation proves supporting results for Theorem 4.4; its correspondence to
-the complete printed statement is recorded in the current table.
+[FORMALIZATION_STATUS_V57.md](FORMALIZATION_STATUS_V57.md). It records 77
+numbered results and three definitions. Of the numbered results, **65 are
+proved and twelve remain open**. The full v57 verification of
+`c93832d761347607906b11615bd56cb937cdfdff` passed all 1,616 commands,
+including the new generation, translation and deduction comparisons
+(4.4–4.6), intended-statement checks and transitive axiom audits.
+The first open result is the free first-order adjunction, Theorem 4.7.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
