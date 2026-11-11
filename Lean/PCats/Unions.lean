@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.DomSemilattice
+module
+
+public import PCats.DomSemilattice
 
 /-!
 # Unions of countable families of domains
@@ -27,6 +29,8 @@ agreement after the parts forces agreement after the whole. That is why
 `le_of_forall_le` and `HasRanges.ran_le_of_receives` have the same proof —
 instantiate at `β' = 1`.
 -/
+
+@[expose] public section
 
 universe v u
 

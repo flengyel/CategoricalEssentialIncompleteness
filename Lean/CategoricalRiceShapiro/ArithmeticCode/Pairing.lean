@@ -20,6 +20,8 @@ over the natural numbers is not part of this migration.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

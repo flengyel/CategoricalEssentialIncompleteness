@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerRationalCodes
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRationalCodes
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
 
 /-! # Real computation and the printed Miller property
 
@@ -8,6 +15,8 @@ indices may differ across representations. Ordinary oracle specialization
 then yields the coordinate equation required by the cut reduction. This
 module supplies no separating-real approximation algorithm.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller
 open OracleProgram

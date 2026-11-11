@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerUnanimity
-import CategoricalEssentialIncompleteness.OracleDomainNumbering
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerUnanimity
+public import CategoricalEssentialIncompleteness.OracleDomainNumbering
 
 /-! # Effective finite halting stages for the actual Miller diagonal
 
@@ -14,6 +16,8 @@ arguments; the diagonal stage revisits every shorter word with increasing
 fuel. In particular it does not attempt to evaluate the encoded stage-length
 word using only its own length as the computation bound.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxState
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxState
 
 /-! # An actual uniformly represented postfix step for arbitrary slice operations
 
@@ -12,6 +14,8 @@ status. Every successful constructor, including a nullary one, invokes
 the supplied algebra morphism. Its values are not built into an ordinary
 recursive initial state or an ordinary recursive transition function.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

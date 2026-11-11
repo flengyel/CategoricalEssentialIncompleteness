@@ -16,6 +16,8 @@ no representation chosen by `codeOfREPred` occurs in its definition.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

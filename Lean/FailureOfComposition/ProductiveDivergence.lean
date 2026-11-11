@@ -17,6 +17,8 @@ This module does not import or invoke second incompleteness.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

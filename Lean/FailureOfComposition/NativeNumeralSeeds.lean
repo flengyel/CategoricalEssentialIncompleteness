@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralSyntax
-import Foundation.Meta.ClProver
+module
+
+public import FailureOfComposition.NativeNumeralSyntax
+public import Foundation.Meta.ClProver
 
 /-!
 # Seven fixed arithmetic seeds
@@ -19,6 +21,8 @@ The body codes below encode fixed, computable literal formulas. They contain
 no theory-dependent proof selection. In particular, the reflexivity seed is
 later specialized at the addition **term**, not at a successor of its code.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

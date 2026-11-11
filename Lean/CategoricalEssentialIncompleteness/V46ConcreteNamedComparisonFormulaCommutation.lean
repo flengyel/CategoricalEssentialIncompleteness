@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal
 
 /-! # The computed formula-state arrow commutes with the actual full formula structure -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableCarriers
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableCarriers
 
 /-! # Coding c.e. subsets of finite powers and their partial recursive maps -/
+
+@[expose] public section
 
 noncomputable section
 

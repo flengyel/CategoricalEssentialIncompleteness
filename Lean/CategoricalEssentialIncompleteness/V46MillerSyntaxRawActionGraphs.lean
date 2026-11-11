@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawAction
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawAction
 
 /-! # Exact numerical child graphs of the actual polynomial action
 
@@ -11,6 +13,8 @@ Every leaf uses the supplied family morphism on its actual numerical code.
 Outer parameter equality, ordered product children, and literal sum tags
 are derived from the constructed raw action and its Over equations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

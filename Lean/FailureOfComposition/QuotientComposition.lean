@@ -13,6 +13,8 @@ Composition on program quotients and its obstruction.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition

@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
 /-! # The singleton tree accepted by the parser is the literal input word -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

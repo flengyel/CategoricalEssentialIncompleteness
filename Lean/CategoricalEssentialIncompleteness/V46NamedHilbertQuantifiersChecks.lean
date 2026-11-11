@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
+
+
+/-! # Statement checks in `V46NamedHilbertQuantifiersChecks` -/
+
+@[expose] public section
 open FFL
 namespace CategoricalEssentialIncompleteness.V46.NamedHilbertQuantifiersChecks
 open SyntacticPredicates NamedPostfixEncoding NamedFiniteSyntax

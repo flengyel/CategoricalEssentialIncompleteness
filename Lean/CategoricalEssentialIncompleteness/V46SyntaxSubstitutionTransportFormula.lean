@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
 
 /-! The equality, relation, negation and implication substitution
 operations inherit their comparisons from the actual ordinary constructors
 and actual option operations. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
-import Foundation.FirstOrder.Arithmetic.PeanoMinus.Basic
-import Foundation.FirstOrder.LK.Completeness
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
+public import Foundation.FirstOrder.Arithmetic.PeanoMinus.Basic
+public import Foundation.FirstOrder.LK.Completeness
 
 /-! # Source proof numerals matching the literal named recurrence
 
@@ -14,6 +16,8 @@ one is zero plus one. Expanded source numerals preserve this distinction
 and have an exact syntactic translation; their equality to Foundation's
 numerals is a separate actual PA theorem.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedProofNumerals

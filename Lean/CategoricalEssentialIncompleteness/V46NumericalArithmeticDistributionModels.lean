@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46LogicalSchemes
-import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertOperations
+module
+
+public import CategoricalEssentialIncompleteness.V46LogicalSchemes
+public import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertOperations
 
 /-! # The actual distribution parameter fiber in every arithmetic model -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

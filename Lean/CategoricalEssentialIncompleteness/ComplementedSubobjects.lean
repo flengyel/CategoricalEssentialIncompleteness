@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.CharacteristicArrows
-import CategoricalEssentialIncompleteness.SubobjectPredicates
+module
+
+public import CategoricalEssentialIncompleteness.CharacteristicArrows
+public import CategoricalEssentialIncompleteness.SubobjectPredicates
 
 /-!
 # Complemented subobjects and arrows to two truth values
@@ -12,6 +14,8 @@ import CategoricalEssentialIncompleteness.SubobjectPredicates
 In a regular finitely extensive category, a subobject is complemented exactly
 when it is the upper fiber of an arrow to `1 + 1`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyNumeralInstances
+module
+
+public import FailureOfComposition.NativeFamilyNumeralInstances
 
 /-!
 # Atomic equations for native numeral arithmetic
@@ -15,6 +17,8 @@ encoding: function tag 2, relation tag 0, and the vector with left operand
 first. Numerals retain the distinct zero and one constants; only positive
 numerals satisfy the literal successor identity.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

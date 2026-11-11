@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro
+module
+
+public import RiceShapiro
 
 /-!
 # Axiom envelope regression test
@@ -24,6 +26,8 @@ which prints the axioms of the whole `RiceShapiro` surface. The duplication is
 deliberate: this file is the short list that must never regress, and it is
 grouped with the signature guards it belongs to.
 -/
+
+@[expose] public section
 
 open CategoryTheory
 

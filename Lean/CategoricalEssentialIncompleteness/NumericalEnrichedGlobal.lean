@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnriched
-import CategoricalEssentialIncompleteness.GlobalTotals
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnriched
+public import CategoricalEssentialIncompleteness.GlobalTotals
 
 /-!
 # Global arrows of the numerical Set-enrichment
@@ -14,6 +16,8 @@ with numerical partial recursive arrows. Constant families give the inverse
 functor. The comparison preserves restriction, zeros, and partial products,
 and restricts to an equivalence of the total-arrow categories.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

@@ -18,6 +18,8 @@ over every PA extension.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

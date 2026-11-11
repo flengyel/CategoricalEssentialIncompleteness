@@ -1,14 +1,22 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticUniformPredicates
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityFibers
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration
-import CategoricalEssentialIncompleteness.V46ArithmeticInternalComparison
-
-/-! # Uniform independence in the actual indexed arithmetic family
-
-This final assembly uses the constructed joint family provability predicate,
-its proved numeral-fiber comparison, and the chosen native PA-axiom code
-predicate. Consistency is required only at the displayed numeral fiber.
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
 -/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticUniformPredicates
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityFibers
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration
+public import CategoricalEssentialIncompleteness.V46ArithmeticInternalComparison
+
+/-! # Uniform independent sentences for the indexed arithmetic family
+
+The family provability predicate and its numeral-fiber comparison give one
+sentence morphism. Independence requires consistency of the selected fiber.
+-/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -31,7 +39,7 @@ abbrev positive : 𝚺₁.Semisentence 2 :=
 abbrev negative : 𝚺₁.Semisentence 2 :=
   ArithmeticUniformSearch.negative provability NamedArithmeticDiagonalBounds.namedAlpha
 
-/-- This one morphism is defined before e or a consistency proof is given. -/
+/-- The uniform sentence morphism from the parameter object to sentences. -/
 def sentence : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence :=
   ArithmeticUniformSearch.proofSentenceMorphism provability
 
@@ -50,8 +58,8 @@ private theorem provability_standard_fiber (e z : ℕ) :
     (ArithmeticIndexedProvability.printedProvability_numeral ℕ
       ArithmeticIndexedPAEnumeration.axiomCodes e z)
 
-/-- This comparison comes from the actual numeral fiber of the family
-conclusion. It is not an axiom-admissibility or representation input. -/
+/-- Specializing the family conclusion at a numeral gives the positive
+proof-search predicate for that fiber. -/
 theorem positive_fiber (e x : ℕ) :
     positive.val.Evalb ![e,x] ↔
       (NamedArithmeticProofSearch.positive (gamma e)
@@ -92,8 +100,7 @@ theorem fiber_disjoint (e : ℕ)
       NamedArithmeticDiagonalBounds.namedAlpha NamedArithmeticDiagonalBounds.namedAlpha_freeVariables x)
     ⟨ht,hr⟩
 
-/-- The first bound is derived for every fiber from the actual chosen
-PA-axiom enumeration; consistency is unnecessary for it. -/
+/-- The PA-axiom enumeration gives the positive diagonal bound in every fiber. -/
 theorem alpha_bound (e x : ℕ) (hx : ArithmeticDiagonalCodes.alpha.val.Evalb ![x]) :
     positive.val.Evalb ![e,x] :=
   (positive_fiber e x).mpr
@@ -106,16 +113,14 @@ theorem beta_bound (e x : ℕ) (hx : ArithmeticDiagonalCodes.beta.val.Evalb ![x]
     (NamedArithmeticDiagonalBounds.semantic_negative ℕ (gamma e)
       (ArithmeticIndexedPAEnumeration.fiber_extendsPA e) x hx)
 
-/-- The same source-total g avoids provability and refutability at every
-consistent fiber. No source morphism is chosen in this theorem's proof. -/
+/-- The uniform source morphism avoids both predicates in every consistent fiber. -/
 theorem output_avoids (e : ℕ)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) :
     ¬ positive.val.Evalb ![e,output e] ∧ ¬ negative.val.Evalb ![e,output e] :=
   ArithmeticUniformSearch.output_avoids_at ℕ positive negative e
     (fiber_disjoint e hc) (alpha_bound e) (beta_bound e)
 
-/-- The value of the actual total sentence morphism is Θ applied to
-this common source output. -/
+/-- The sentence morphism has value Θ applied to the uniform source output. -/
 theorem sentence_value (e : ℕ) :
     ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map sentence
       (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ e)).val.val =
@@ -128,9 +133,8 @@ private theorem avoids_word_transport (R : Carrier) (u v : ℕ) (he : u = v)
     (h : ¬ R.val.Evalb ![v]) : ¬ R.val.Evalb ![u] :=
   fun hu => h (Eq.mp (congrArg (fun w : ℕ => R.val.Evalb ![w]) he) hu)
 
-/-- The actual generated theorem predicate and its actual Neg preimage
-both exclude the interpreted word of q. This conclusion does not depend
-on a converse from program evidence to native derivations. -/
+/-- The generated theorem predicate and its negation preimage both
+exclude the interpreted word of the sentence morphism. -/
 theorem sentence_code_avoids (e : ℕ)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) :
     let word := ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map sentence
@@ -161,7 +165,7 @@ theorem sentence_code_avoids (e : ℕ)
     avoids_word_transport _ _ _ (congrArg (NamedArithmeticProofSearch.negationWord ℕ)
       (sentence_value e)) hn⟩
 
-/-- The single morphism excludes the actual family theorem image and
+/-- The single morphism excludes the family theorem image and
 its negation preimage at each externally consistent numeral fiber. -/
 theorem uniform_independent_sentence_codes :
     ∃ q : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence,
@@ -175,7 +179,7 @@ theorem uniform_independent_sentence_codes :
               ![NamedArithmeticProofSearch.negationWord ℕ word] :=
   ⟨sentence,fun e hc => sentence_code_avoids e hc⟩
 
-/-- Both native proof possibilities are excluded at the actual named
+/-- Both native proof possibilities are excluded at the named
 numeral instance, with its original variable names and expanded numeral. -/
 theorem independent_instance (e : ℕ)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) :
@@ -195,8 +199,8 @@ theorem independent_instance (e : ℕ)
       (ArithmeticInternalComparison.native_instance_negative (gamma e)
         ArithmeticDiagonalCodes.alpha.val (output e) hd))
 
-/-- The printed uniform theorem: q is one actual morphism E→S in B_PA,
-and its interpreted code is independent at every consistent Γ_e. -/
+/-- Theorem 7.6: one morphism `q : E ⟶ S` in `B_PA` gives an
+independent sentence at every consistent fiber `Γ_e`. -/
 theorem uniform_independent_sentences :
     ∃ q : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence,
       ∀ e : ℕ, Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e)) →

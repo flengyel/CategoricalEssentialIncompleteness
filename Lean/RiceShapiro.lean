@@ -3,16 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.Approximation
-import RiceShapiro.ExtensionFamilies
-import RiceShapiro.Selection
-import RiceShapiro.Decisions
-import RiceShapiro.CaseLaws
-import RiceShapiro.ParameterizedRecursion
-import RiceShapiro.UpwardClosure
-import RiceShapiro.WitnessExistence
-import RiceShapiro.GeneratedRepresentation
-import RiceShapiro.LocalConnectedness
+module
+
+public import RiceShapiro.Approximation
+public import RiceShapiro.ExtensionFamilies
+public import RiceShapiro.Selection
+public import RiceShapiro.Decisions
+public import RiceShapiro.CaseLaws
+public import RiceShapiro.ParameterizedRecursion
+public import RiceShapiro.UpwardClosure
+public import RiceShapiro.WitnessExistence
+public import RiceShapiro.GeneratedRepresentation
+public import RiceShapiro.LocalConnectedness
 
 /-!
 # Countable extension families and the Rice–Shapiro theorem
@@ -51,3 +53,5 @@ The construction of the syntactic category `S_T` and the Appendix B
 formalization requires arithmetic syntax and computability and will be kept
 under a separate root.
 -/
+
+@[expose] public section

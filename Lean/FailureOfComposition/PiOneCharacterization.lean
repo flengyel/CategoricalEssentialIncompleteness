@@ -16,6 +16,8 @@ Characterization of congruence by Pi-one completeness.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonCore
-import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonCore
+public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
 
 /-! # Transposing actual comparison squares through the equivalence unit
 
@@ -10,6 +17,8 @@ forward signature. These lemmas transpose its equations through the unit;
 neither an inverse-choice coordinate identity nor a new operation equation
 is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

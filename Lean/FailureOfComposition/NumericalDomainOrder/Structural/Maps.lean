@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Structural.ProofGraph
 
 /-!
 # Arithmetic graph of domain-order transfer
@@ -12,6 +14,8 @@ The external primitive-recursive proof transformation has an internal value
 and a `𝚺₁` graph.  Two structural MP steps prove preservation for arbitrary
 elements of every PA model, including nonstandard proof codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

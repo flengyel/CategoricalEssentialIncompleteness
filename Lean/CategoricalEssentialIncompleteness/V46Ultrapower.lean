@@ -3,18 +3,22 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.Order.Filter.Germ.Basic
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.CategoryTheory.Limits.Types.Products
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
-import Mathlib.CategoryTheory.Limits.Types.Equalizers
-import Mathlib.CategoryTheory.Limits.Types.Images
-import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
-import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
+module
+
+public import Mathlib.Order.Filter.Germ.Basic
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.CategoryTheory.Limits.Types.Products
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
+public import Mathlib.CategoryTheory.Limits.Types.Equalizers
+public import Mathlib.CategoryTheory.Limits.Types.Images
+public import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
+public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
 
 /-! # The ultrapower functor on sets and its finite categorical constructions -/
+
+@[expose] public section
 
 noncomputable section
 

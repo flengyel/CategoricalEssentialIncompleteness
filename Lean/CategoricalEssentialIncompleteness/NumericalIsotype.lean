@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnumeration
-import CategoricalEssentialIncompleteness.NumericalProducts
-import PCats.Recursion
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnumeration
+public import CategoricalEssentialIncompleteness.NumericalProducts
+public import PCats.Recursion
 
 /-!
 # Isomorphisms between numerical objects
@@ -14,6 +16,8 @@ The increasing enumeration and counting function give inverse total arrows
 between `ℕ` and any numerical object. Restricting the counting function to its
 source carrier is essential for equality with the categorical identity.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

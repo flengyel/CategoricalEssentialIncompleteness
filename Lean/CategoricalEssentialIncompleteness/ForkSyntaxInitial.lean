@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkSyntaxEvaluation
-import CategoricalEssentialIncompleteness.ForkNumericalInitial
-import CategoricalEssentialIncompleteness.EffectiveForkCoproducts
-import CategoricalEssentialIncompleteness.RestrictionRanges
+module
+
+public import CategoricalEssentialIncompleteness.ForkSyntaxEvaluation
+public import CategoricalEssentialIncompleteness.ForkNumericalInitial
+public import CategoricalEssentialIncompleteness.EffectiveForkCoproducts
+public import CategoricalEssentialIncompleteness.RestrictionRanges
 
 /-! # Initiality of the actual finite syntax algebra -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

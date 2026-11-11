@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionParameters
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionParameters
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
 /-! # The actual arithmetic admissibility isomorphism and result square -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -22,7 +26,7 @@ local notation "U" => NumericalUnderlying.functor
 
 /-- The inverse pullback projection is an actual numerical morphism.
 Surjectivity here concerns the supplied points, including empty carriers. -/
-private theorem imageProjection_isIso {A B C : NumericalTuples.Object}
+theorem imageProjection_isIso {A B C : NumericalTuples.Object}
     (m : A ⟶ C) [Mono m] (g : B ⟶ C)
     (h : ∀ b : NumericalTuples.Point B, ∃ a, m.toFun a = g.toFun b) :
     IsIso (pullback.snd m g) := by
@@ -92,7 +96,7 @@ theorem admissible_image_iff
       exact ⟨a,(numericalInterpretation_value (S₀).admissibleInclusion a).symm.trans ha⟩
   exact (OperationValues.admissible_iff q).trans (hm.symm.trans hi)
 
-private theorem forward_image (a : NumericalTuples.Point (S).admissibleSubstitution) :
+theorem forward_image (a : NumericalTuples.Point (S).admissibleSubstitution) :
     ∃ b, (numericalInterpretation.map (S₀).admissibleInclusion).toFun b =
       ((S).admissibleInclusion ≫ formulaInputIso.hom).toFun a :=
   (admissible_image_iff ((S).admissibleInclusion.toFun a)).mp ⟨a,rfl⟩
@@ -106,7 +110,7 @@ def forward : (S).admissibleSubstitution ⟶
     (S).admissibleInclusion ≫ formulaInputIso.hom :=
   imageLift_comp _ _ forward_image
 
-private theorem backward_image
+theorem backward_image
     (a : NumericalTuples.Point (numericalInterpretation.obj (S₀).admissibleSubstitution)) :
     ∃ b, (S).admissibleInclusion.toFun b =
       (numericalInterpretation.map (S₀).admissibleInclusion ≫ formulaInputIso.inv).toFun a := by

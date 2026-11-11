@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonChosen
-import CategoricalEssentialIncompleteness.V46MillerIncompleteness
-import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
-import CategoricalEssentialIncompleteness.V46RegularImage
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonChosen
+public import CategoricalEssentialIncompleteness.V46MillerIncompleteness
+public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
+public import CategoricalEssentialIncompleteness.V46RegularImage
 
 /-! # Incompleteness of the actual chosen canonical Γ image
 
@@ -10,6 +17,8 @@ conclusion. Its identification with the literal sentence theory is derived
 from the proved generated-subobject comparison and the partial inverse of
 the actual regular-image mono. No proof-fiber selector is used.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -52,7 +61,7 @@ private theorem range_of_image_eq {X I Y : Total.CanonicalTotal a}
   have hh : Ranges.range (e≫m).hom=Ranges.range m.hom := range_factor a e m
   exact (congrArg (fun k : X ⟶ Y => Ranges.range k.hom) hfac).symm.trans hh
 
-private def idemIso {X Y : SplitObject (Uniform.PointObject a)} (i : X ≅ Y) :
+def idemIso {X Y : SplitObject (Uniform.PointObject a)} (i : X ≅ Y) :
     Idem X ≃o Idem Y where
   toEquiv := Idem.isoEquiv i
   map_rel_iff' := by

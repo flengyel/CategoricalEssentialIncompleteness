@@ -15,6 +15,8 @@ Arithmetic correctness of the compiled program operations.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxRecDepth 4096
 

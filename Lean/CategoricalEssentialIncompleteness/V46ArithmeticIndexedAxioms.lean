@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import CategoricalEssentialIncompleteness.V46UniformTrace
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import CategoricalEssentialIncompleteness.V46UniformTrace
 
 /-! # The actual Σ₁ indexed axiom subobject of E × Sent
 
@@ -14,6 +16,8 @@ AxPA is the chosen Σ₁ sentence-axiom predicate in the manuscript. The
 construction and its categorical universal properties do not require a
 soundness or initiality assumption on this coefficient predicate.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

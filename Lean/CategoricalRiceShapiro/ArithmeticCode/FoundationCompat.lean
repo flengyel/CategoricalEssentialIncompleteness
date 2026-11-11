@@ -22,6 +22,8 @@ functional in every model of `𝗣𝗔⁻`, under an arbitrary assignment.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace CategoricalRiceShapiro.ArithmeticCode

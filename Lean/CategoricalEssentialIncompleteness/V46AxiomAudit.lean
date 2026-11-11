@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness
-import Lean.Util.CollectAxioms
-import Lean.Elab.Command
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness
+public import Lean.Util.CollectAxioms
+public import Lean.Elab.Command
 
 /-! Transitive axiom inspection of every declaration, including generated
 declarations, in every imported v46 production module. -/
+
+@[expose] public section
 
 open Lean Elab Command in
 run_cmd do

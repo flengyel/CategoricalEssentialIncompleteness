@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalRangeProofs.Core
-import FailureOfComposition.PiOneExtensionality
+module
+
+public import FailureOfComposition.NumericalRangeProofs.Core
+public import FailureOfComposition.PiOneExtensionality
 
 /-!
 # Soundness of the numerical range-proof presentation
@@ -15,6 +17,8 @@ external indices `e` and `r` once a fixed PA derivation identifies the graph
 of `r` with the range partial identity of `e`.  No effective selection of `r`
 from `e` is used.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

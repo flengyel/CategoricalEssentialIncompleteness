@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERFiniteLimits
-import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
-import Mathlib.CategoryTheory.Limits.Shapes.Images
-import Mathlib.CategoryTheory.Limits.Shapes.KernelPair
+module
+
+public import CategoricalEssentialIncompleteness.PERFiniteLimits
+public import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
+public import Mathlib.CategoryTheory.Limits.Shapes.Images
+public import Mathlib.CategoryTheory.Limits.Shapes.KernelPair
 
 /-!
 # Regular images in the numerical PER category
@@ -19,6 +21,8 @@ related gives such a quotient. The function `f` induces a monomorphism from
 this quotient to the target. Every arrow therefore factors as a regular
 epimorphism followed by a monomorphism.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

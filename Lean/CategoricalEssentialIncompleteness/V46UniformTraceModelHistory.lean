@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceModelSnoc
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceModelSnoc
 
 /-! # History-vector prefix stability with arbitrary internal program indices
 
@@ -11,6 +13,8 @@ This proof reads the actual production history as the canonical arithmetic
 vector that it is. The lookup index is a model element throughout. It never
 replaces an arbitrary internal program index by a standard numeral.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

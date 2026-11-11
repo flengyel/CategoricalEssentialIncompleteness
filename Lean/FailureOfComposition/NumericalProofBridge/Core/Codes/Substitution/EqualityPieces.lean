@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.Ternary
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.Ternary
 
 /-!
 # Components of the uniform-equality sentence
@@ -11,6 +13,8 @@ import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.Ternary
 These named components support a branchwise primitive-recursiveness proof for
 the uniform graph-comparison sentence.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

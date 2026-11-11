@@ -3,18 +3,22 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationCoproducts
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesLimits
-import CategoricalEssentialIncompleteness.V46Ultrapower
-import Mathlib.CategoryTheory.Limits.Types.Products
-import Mathlib.CategoryTheory.Limits.Types.Equalizers
-import Mathlib.CategoryTheory.Limits.Types.Images
-import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
-import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+module
+
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationCoproducts
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesLimits
+public import CategoricalEssentialIncompleteness.V46Ultrapower
+public import Mathlib.CategoryTheory.Limits.Types.Products
+public import Mathlib.CategoryTheory.Limits.Types.Equalizers
+public import Mathlib.CategoryTheory.Limits.Types.Images
+public import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
+public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
 
 /-! # Preservation of the finite and regular predicate constructions -/
+
+@[expose] public section
 
 noncomputable section
 

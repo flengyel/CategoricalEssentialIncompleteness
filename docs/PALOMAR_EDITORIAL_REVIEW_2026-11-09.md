@@ -65,9 +65,10 @@ source archive, correspondence and verification records are retained.
 
 No exported declaration has been renamed so far. The module-system port
 exposes the previously private helpers `PCategory.Gen`,
-`Subdomain.comp_ambient_idem`, `Subdomain.inverseImageIso_comm`,
-`OracleProgram.universalTransition` and `universalTransition_partrec` where
-their use in exported definitions requires it. The final declaration map will
+`Subdomain.comp_ambient_idem` and `Subdomain.inverseImageIso_comm` where
+their use in exported definitions requires it. The oracle compiler indices
+retain their private implementation helpers and expose their proved graph
+laws. The final declaration map will
 give the complete names and any further visibility changes.
 
 The v49 manuscript rebuild succeeded (73 pages), and

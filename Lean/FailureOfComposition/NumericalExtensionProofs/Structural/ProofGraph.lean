@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Structural.Codes
-import FailureOfComposition.NumericalDomainOrder.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Codes
+public import FailureOfComposition.NumericalDomainOrder.Structural.ProofGraph
 
 /-!
 # Exact proof graph for the finite-extension presentation
@@ -14,6 +16,8 @@ finite-extension scheme leaves.  Its natural-number interpretation recovers
 the executable presentation exactly, including rejection of malformed formula
 and proof codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

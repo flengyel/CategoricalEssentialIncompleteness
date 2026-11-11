@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Core
-import FailureOfComposition.NumericalDomainOrder.Soundness
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Core
+public import FailureOfComposition.NumericalDomainOrder.Soundness
 
 /-!
 # Meaning soundness of the finite-extension proof presentation
@@ -13,6 +15,8 @@ The two new schemes compare graph tags at the exact checker and zero-test
 endpoints.  Their PA meaning follows from the independently proved graph laws;
 the zero-test tag is not treated as a native code of `extensionFormula`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

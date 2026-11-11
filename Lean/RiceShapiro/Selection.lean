@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.Approximation
+module
+
+public import RiceShapiro.Approximation
 
 /-!
 # Selection data
@@ -23,6 +25,8 @@ on which the index family `k` enters `s`, written `u_k` there. Clauses (F2) and
 The morphisms `F_s(i,k)` and `G_s(i,k)` are `evalAt` at `⟨i, k⟩`, the same
 operation used for `ε_i` and `α_a`.
 -/
+
+@[expose] public section
 
 universe v u
 

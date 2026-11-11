@@ -19,6 +19,8 @@ composition equation for the actual canonical composition indices.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

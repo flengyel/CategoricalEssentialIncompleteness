@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralMultiplicationGraph
-import FailureOfComposition.NativeNumeralInstances
+module
+
+public import FailureOfComposition.NativeNumeralMultiplicationGraph
+public import FailureOfComposition.NativeNumeralInstances
 
 /-!
 # Context-preserving arithmetic derivations at internal numerals
@@ -16,6 +18,8 @@ correctness of the actual recurrence output at every internal numeral value.
 In the multiplication step, the second premise is the output of addition's
 already-proved recurrence.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

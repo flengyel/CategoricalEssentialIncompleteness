@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.SigmaOneRealization
-import Foundation.FirstOrder.Arithmetic.Schemata
+module
+
+public import FailureOfComposition.SigmaOneRealization
+public import Foundation.FirstOrder.Arithmetic.Schemata
 
 /-! # The finite two-test switch
 
@@ -13,6 +15,8 @@ programs.  At the first successful bound the first test has priority.  The
 tests inspect finite computation certificates, including in nonstandard PA
 models.  All correctness statements below are proved uniformly in those models.
 -/
+
+@[expose] public section
 
 noncomputable section
 

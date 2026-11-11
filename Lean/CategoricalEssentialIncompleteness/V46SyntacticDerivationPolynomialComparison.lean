@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46Inference
-import CategoricalEssentialIncompleteness.V46CategoricalSyntax
-import CategoricalEssentialIncompleteness.V46AlgebraTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46Inference
+public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
+public import CategoricalEssentialIncompleteness.V46AlgebraTransport
 
 /-! # Finite rule coproducts and the ordered constructor polynomial -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

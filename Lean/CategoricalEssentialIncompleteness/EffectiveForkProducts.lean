@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkSplitting
-import CategoricalEssentialIncompleteness.EnumerablePCategory
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkSplitting
+public import CategoricalEssentialIncompleteness.EnumerablePCategory
 
 /-! # Componentwise restriction products on the effective fork -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

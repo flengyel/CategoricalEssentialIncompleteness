@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPredicates
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPredicates
 
 /-! # Uniform source equality and all-model interpretation checks -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory CategoryTheory.RestrictionCategory

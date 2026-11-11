@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Ranges
+module
+
+public import PCats.Ranges
 
 /-!
 # Coproducts, `P⁺`-categories, distributivity
@@ -32,6 +34,8 @@ ones, whereas `existsUnique_partialPairing` needs both given morphisms total.
 `copair_inj`, the eta rule `[i₀h, i₁h] = h`, is the dual of `partialPairing_proj`
 and holds for the same reason: `[i₀, i₁] = 1`.
 -/
+
+@[expose] public section
 
 universe v u
 

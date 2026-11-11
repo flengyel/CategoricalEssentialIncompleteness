@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOriginal
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrences
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOriginal
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrences
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # The payload's FV field is identified by actual stable initiality -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

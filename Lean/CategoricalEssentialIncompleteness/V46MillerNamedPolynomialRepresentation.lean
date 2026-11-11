@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxCharts
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxCharts
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 
 /-! # Exact scalar graph of the actual polynomial input chart
 
@@ -9,6 +16,8 @@ The polynomial comparison follows from its actual product and coproduct
 triangles. Surjectivity of the chart and the existing unique-code theorem
 give the reverse implication on every original word.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

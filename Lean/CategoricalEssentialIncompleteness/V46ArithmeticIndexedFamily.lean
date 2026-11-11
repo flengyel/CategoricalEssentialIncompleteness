@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
 
 /-! # One actual arithmetic derivation object for the indexed axiom family
 
@@ -11,6 +13,8 @@ The logical schemes and inference constructors are the realized named
 ones. The full initial algebra is constructed by arbitrary-rule initiality;
 its numeral fibers require the separate extensive algebra decomposition.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

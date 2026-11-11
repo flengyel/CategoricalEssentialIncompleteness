@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
+
+
+/-! # Statement checks in `V46MillerRealClosedAxiomsCharacterizationChecks` -/
+
+@[expose] public section
 open Polynomial
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedAxioms.Characterization
 open OrderedFieldSyntax Semantics

@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticCodedMaps
-import CategoricalEssentialIncompleteness.V46NumericalUnderlying
-import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
-import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCodedMaps
+public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
+public import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
+public import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
 
 /-! # A unary numerical image stores the output word alone -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -29,7 +33,7 @@ theorem membership (f : X ⟶ NumericalCoordinates.predicateObject C) (p : ℕ) 
     (object f).support p ↔ ∃ x : NumericalTuples.Point X, (f.toFun x).val = p :=
   CodedMaps.imagePredicate_eval f p
 
-private theorem supported (f : X ⟶ NumericalCoordinates.predicateObject C)
+theorem supported (f : X ⟶ NumericalCoordinates.predicateObject C)
     (p : NumericalTuples.Point (object f)) : C.val.Evalb (M := ℕ) ![p.val] := by
   obtain ⟨x,hx⟩ := (membership f p.val).mp p.property
   exact hx ▸ (f.toFun x).property

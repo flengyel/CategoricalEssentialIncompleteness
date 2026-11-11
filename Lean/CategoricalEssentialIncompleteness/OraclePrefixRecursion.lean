@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleRecursionComparison
+module
 
-/-! # Reading a finite oracle prefix is an actual oracle recursive computation -/
+public import CategoricalEssentialIncompleteness.OracleRecursionComparison
+
+/-! # Oracle recursion computes finite oracle prefixes -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -59,7 +63,7 @@ theorem prefixRec_recursiveIn (S : Set ℕ) : Nat.RecursiveIn (oracleSet S) (pre
 theorem prefixRec_succ (S : Set ℕ) (a n : ℕ) :
     prefixRec S (Nat.pair a (n+1))=(prefixRec S (Nat.pair a n)).bind
       (fun i => Part.some (prefixStep S (Nat.pair a (Nat.pair n i)))) := by
-  simp only [prefixRec,Nat.unpair_pair,Part.bind_eq_bind]
+  simp only [prefixRec,Nat.unpair_pair]
 
 theorem prefixRec_eq (S : Set ℕ) (a n : ℕ) :
     prefixRec S (Nat.pair a n)=Part.some (encode (oraclePrefix S n)) := by

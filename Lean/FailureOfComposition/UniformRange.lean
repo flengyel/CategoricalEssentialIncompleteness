@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.TypedRanges
+module
+
+public import FailureOfComposition.TypedRanges
 
 /-!
 # Uniform numerical representatives for categorical ranges
@@ -22,6 +24,8 @@ varying index `q` is primitive recursive.  Its graph equation holds for all
 internal inputs and outputs in every model of PA, and its PA-uniform class is
 the class of the existing selected range representative.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

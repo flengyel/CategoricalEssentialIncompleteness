@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWordRanges
-import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication
-import CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency
-import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWordRanges
+public import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency
+public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
 
 /-! # The actual Miller theory in literal recursive sentence coordinates
 
@@ -11,6 +18,8 @@ idempotents are recovered through its inverse. The nonlogical extension
 condition is derivability, and only T_a has the constructed real model.
 The separate canonical S₂ generated-theory comparison is not asserted here.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
@@ -19,11 +28,11 @@ namespace CategoricalEssentialIncompleteness.V46.Miller.Incompleteness
 attribute [instance 2000] Uniform.nativeRestriction
 open OrderedFieldSyntax
 
-private def splitTotalFunctor (P : Uniform.Family) :
+def splitTotalFunctor (P : Uniform.Family) :
     Total.TotalCategory P ⥤ SplitObject (Uniform.Object P) :=
   PreservesRestriction.totalInclusion (Total.Carrier P) ⋙ Total.inclusion (P := P)
 
-private def splitIdemOrderIso {P : Uniform.Family}
+def splitIdemOrderIso {P : Uniform.Family}
     {X Y : SplitObject (Uniform.Object P)} (i : X ≅ Y) : Idem X ≃o Idem Y where
   toEquiv := Idem.isoEquiv i
   map_rel_iff' := by

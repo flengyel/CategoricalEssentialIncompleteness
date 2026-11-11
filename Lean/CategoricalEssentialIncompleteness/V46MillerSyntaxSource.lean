@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
-import CategoricalEssentialIncompleteness.V46MillerSyntaxSimulation
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxSimulation
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
 
 /-! # Original accepted words supply the actual evaluator hypotheses
 
@@ -14,6 +16,8 @@ including its stored-word check. It does not add an acceptance or a
 correctness field to an algebra. Coefficient names and child order are
 unchanged throughout the comparisons.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

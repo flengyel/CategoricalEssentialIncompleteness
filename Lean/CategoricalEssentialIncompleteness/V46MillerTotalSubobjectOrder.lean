@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
-import Mathlib.CategoryTheory.Subobject.Limits
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
+public import Mathlib.CategoryTheory.Subobject.Limits
 
 /-! # Subobject order from actual numerical images
 
@@ -13,6 +15,8 @@ not choose a preimage in a general surjection or a proof from each nonempty
 proof fiber. This comparison applies to arbitrary uniformly semidecidable
 carriers, including the actual sentence carrier.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

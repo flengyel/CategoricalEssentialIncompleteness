@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.BooleanPresentations
+module
+
+public import CategoricalEssentialIncompleteness.BooleanPresentations
 
 /-!
 # Characteristic arrows of complementary subobjects
@@ -13,6 +15,8 @@ decomposition and hence a characteristic arrow to `1 + 1`. Conversely, the
 fibers of every arrow to `1 + 1` form such a decomposition. No subobject
 classifier for arbitrary subobjects is assumed.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

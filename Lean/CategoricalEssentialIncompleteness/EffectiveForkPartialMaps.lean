@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkConstruction
-import CategoricalEssentialIncompleteness.EffectiveForkLimits
-import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkConstruction
+public import CategoricalEssentialIncompleteness.EffectiveForkLimits
+public import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
 
 /-! # Comparison with the paper's partial-map category -/
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits

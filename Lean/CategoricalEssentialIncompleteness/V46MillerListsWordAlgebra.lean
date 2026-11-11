@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsWordInverse
-import CategoricalEssentialIncompleteness.V46MillerListsStable
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsWordInverse
+public import CategoricalEssentialIncompleteness.V46MillerListsStable
 
 /-! # Full constructor comparison between numerical lists and literal words
 
@@ -13,6 +15,8 @@ Their nil and ordered cons equations are proved before using the resulting
 algebra isomorphism. Thus no universal property is inferred from a bare
 carrier bijection.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

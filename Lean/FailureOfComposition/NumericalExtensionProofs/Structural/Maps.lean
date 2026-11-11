@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Structural.ProofGraph
-import FailureOfComposition.NumericalDomainOrder.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Structural.ProofGraph
+public import FailureOfComposition.NumericalDomainOrder.Structural.Maps
 
 /-!
 # Arithmetic graphs for the two finite-extension proof maps
@@ -13,6 +15,8 @@ Each conversion consists of a one-line instance of its recognized scheme and
 one numerical modus-ponens step.  The graphs below define the corresponding
 internal values on arbitrary, possibly nonstandard, model elements.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

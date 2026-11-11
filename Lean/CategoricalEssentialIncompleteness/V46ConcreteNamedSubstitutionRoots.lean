@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPayload
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPayload
 
 /-! Actual numerical roots of named term/formula substitution. The first
 quantifier branch retains the original body independently of recursive failure. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedRootsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

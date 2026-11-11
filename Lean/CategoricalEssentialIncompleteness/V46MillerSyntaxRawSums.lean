@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
-import Mathlib.CategoryTheory.Limits.Over
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
+public import Mathlib.CategoryTheory.Limits.Over
 
 /-! # Literal tagged sums in every uniform parameter slice
 
@@ -13,6 +15,8 @@ ordered value and tag 0 or 1. Copairing uses the supplied supported
 uniform morphisms themselves, including their partial values off their
 source carriers; no total recursive extension is required.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -73,7 +77,7 @@ theorem sumCopairValue_represented (f g : ℕ → Part ℕ)
 
 variable (R : Total.TotalCategory P) (X Y : Over R) (a b : SyntaxPolynomial (Total.TotalCategory P))
 
-private def sumCopairArrow {Z : Total.TotalCategory P}
+def sumCopairArrow {Z : Total.TotalCategory P}
     (f : (object R X Y a).left ⟶ Z) (g : (object R X Y b).left ⟶ Z) :
     (fiberCarrier R X Y (.sum a b)) ⟶ Z.obj :=
   Total.arrow (sumCopairValue (Total.val f.hom) (Total.val g.hom))
@@ -98,7 +102,7 @@ private def sumCopairArrow {Z : Total.TotalCategory P}
         (fun h => Total.val_target f.hom _ _ h.2)
         (fun h => Total.val_target g.hom _ _ h.2))
 
-private theorem sumCopairArrow_total {Z : Total.TotalCategory P}
+theorem sumCopairArrow_total {Z : Total.TotalCategory P}
     (f : (object R X Y a).left ⟶ Z) (g : (object R X Y b).left ⟶ Z) :
     isTotal (sumCopairArrow R X Y a b f g) := by
   apply (Total.total_iff _).mpr

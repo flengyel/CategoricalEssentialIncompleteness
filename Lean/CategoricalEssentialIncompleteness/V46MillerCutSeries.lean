@@ -1,9 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerBinaryCore
-import Mathlib.Analysis.Normed.Group.FunctionSeries
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerBinaryCore
+public import Mathlib.Analysis.Normed.Group.FunctionSeries
+public import Mathlib.Analysis.SpecificLimits.Basic
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
 
 /-! # Bounded positive series in the effective cut reduction
 
@@ -11,6 +18,8 @@ These are ordinary real-analysis lemmas. Actual bad-box distances and their
 numerical approximation algorithms must be supplied by their constructions;
 no unanimity comparison or realizer is assumed in this module.
 -/
+
+@[expose] public section
 noncomputable section
 open scoped BigOperators
 namespace CategoricalEssentialIncompleteness.V46.Miller.Cut.Series

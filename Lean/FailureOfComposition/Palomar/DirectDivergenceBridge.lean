@@ -18,6 +18,8 @@ routing the first obstruction proof through maintained quoted theorem codes.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

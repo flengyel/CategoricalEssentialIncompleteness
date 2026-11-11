@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.Computability.Ackermann
+module
+
+public import Mathlib.Computability.Ackermann
 
 /-!
 # An enumeration without primitive-recursive stage bounds
@@ -14,6 +16,8 @@ extensional enumeration and primitive recursiveness of a stage test alone
 do not imply effective stage selection. This counterexample does not identify
 the stage test selected by `reTheoryStageWitness`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

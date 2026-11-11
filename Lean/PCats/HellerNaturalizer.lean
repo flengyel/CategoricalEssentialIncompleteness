@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Widesubcategory
-import PCats.PCat
+module
+
+public import Mathlib.CategoryTheory.Widesubcategory
+public import PCats.PCat
 
 /-!
 # Heller's projection-generated subcategory
@@ -29,6 +31,8 @@ The closure API assumes only `Category` and `PCategoryStruct`; totality and the
 two naturality equations add `PCategory`.
 -/
 
+@[expose] public section
+
 universe v u
 
 namespace CategoryTheory
@@ -43,7 +47,7 @@ variable {C : Type u} [Category.{v} C] [PCategoryStruct C]
 
 /-- The generating closure: identities, the projections, composition, and the
 near product. -/
-private inductive Gen : {X Y : C} → (X ⟶ Y) → Prop
+inductive Gen : {X Y : C} → (X ⟶ Y) → Prop
   | id (X : C) : Gen (𝟙 X)
   | proj0 (X Y : C) : Gen (p0 X Y)
   | proj1 (X Y : C) : Gen (p1 X Y)

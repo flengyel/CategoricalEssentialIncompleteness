@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticNumericalSubstitution
-import CategoricalEssentialIncompleteness.ArithmeticSupports
-import CategoricalEssentialIncompleteness.NumericalInseparability
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticNumericalSubstitution
+public import CategoricalEssentialIncompleteness.ArithmeticSupports
+public import CategoricalEssentialIncompleteness.NumericalInseparability
 
 /-!
 # Arithmetic representation by substitution
@@ -17,6 +19,8 @@ theory, existence of a representing total numerical arrow is equivalent to
 strong numeralwise definability. Extensions of `PA⁻` represent every
 complementary pair of numerical restriction domains.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

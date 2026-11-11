@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.RETheory
-import FailureOfComposition.TypedNearProduct
+module
+
+public import FailureOfComposition.NumericalProofBridge.RETheory
+public import FailureOfComposition.TypedNearProduct
 
 /-!
 # Numerical product-definedness proof rules
@@ -14,6 +16,8 @@ product-definedness implication schemes, their primitive-recursive
 presentation, and the induced maps on numerical proof codes.  It extends the
 accepted numerical proof bridge without changing any old proof code.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -336,7 +340,7 @@ theorem primrec_componentsToPairAxiomCode :
 
 /-! ## Exact primitive-recursive schema recognition -/
 
-private def productTokenAt (i : ℕ) (s : FormulaString) : ℕ := s.getD i 0
+def productTokenAt (i : ℕ) (s : FormulaString) : ℕ := s.getD i 0
 
 private theorem primrec_productTokenAt (i : ℕ) :
     Primrec (productTokenAt i) :=
@@ -355,10 +359,10 @@ private theorem primrec_partrecCodePayload₂ : Primrec partrecCodePayload₂ :=
 
 /-- Recover the program placed inside a generated definedness tag.  Exact
 reconstruction below rejects every malformed use of this decoder. -/
-private def recoveredDefinednessProgram (s : FormulaString) : ℕ :=
+def recoveredDefinednessProgram (s : FormulaString) : ℕ :=
   partrecCodePayload₂ (partrecCodePayload₂ (productTokenAt 1 s))
 
-private def recoveredDefinednessInput (s : FormulaString) : ℕ :=
+def recoveredDefinednessInput (s : FormulaString) : ℕ :=
   productTokenAt 2 s
 
 private theorem primrec_recoveredDefinednessProgram :
@@ -384,10 +388,10 @@ private theorem primrec_recoveredDefinednessInput :
   simp [recoveredDefinednessInput, productTokenAt, definednessString,
     rightInstanceString]
 
-private def recoveredPairLeft (s : FormulaString) : ℕ :=
+def recoveredPairLeft (s : FormulaString) : ℕ :=
   partrecCodePayload₁ (recoveredDefinednessProgram s)
 
-private def recoveredPairRight (s : FormulaString) : ℕ :=
+def recoveredPairRight (s : FormulaString) : ℕ :=
   partrecCodePayload₂ (recoveredDefinednessProgram s)
 
 private theorem primrec_recoveredPairLeft : Primrec recoveredPairLeft :=
@@ -408,27 +412,27 @@ private theorem primrec_recoveredPairRight : Primrec recoveredPairRight :=
   simp [recoveredPairRight, pairIndex_eq_canonical,
     canonicalPartrecPairIndex_right]
 
-private def project0ToPairCandidate (s : FormulaString) : FormulaString :=
+def project0ToPairCandidate (s : FormulaString) : FormulaString :=
   let d := rhsString s
   project0ToPairAxiomString (recoveredPairLeft d) (recoveredPairRight d)
     (recoveredDefinednessInput d)
 
-private def project1ToPairCandidate (s : FormulaString) : FormulaString :=
+def project1ToPairCandidate (s : FormulaString) : FormulaString :=
   let d := rhsString s
   project1ToPairAxiomString (recoveredPairLeft d) (recoveredPairRight d)
     (recoveredDefinednessInput d)
 
-private def pairToLeftCandidate (s : FormulaString) : FormulaString :=
+def pairToLeftCandidate (s : FormulaString) : FormulaString :=
   let d := lhsString s
   pairToLeftAxiomString (recoveredPairLeft d) (recoveredPairRight d)
     (recoveredDefinednessInput d)
 
-private def pairToRightCandidate (s : FormulaString) : FormulaString :=
+def pairToRightCandidate (s : FormulaString) : FormulaString :=
   let d := lhsString s
   pairToRightAxiomString (recoveredPairLeft d) (recoveredPairRight d)
     (recoveredDefinednessInput d)
 
-private def componentsToPairCandidate (s : FormulaString) : FormulaString :=
+def componentsToPairCandidate (s : FormulaString) : FormulaString :=
   let dq := lhsString s
   let dr := lhsString (rhsString s)
   componentsToPairAxiomString (recoveredDefinednessProgram dq)
@@ -480,19 +484,19 @@ def ProductAxiomShape (s : FormulaString) : Prop :=
   s = pairToRightCandidate s ∨
   s = componentsToPairCandidate s
 
-private def project0ToPairAxiomTest (s : FormulaString) : Bool :=
+def project0ToPairAxiomTest (s : FormulaString) : Bool :=
   s == project0ToPairCandidate s
 
-private def project1ToPairAxiomTest (s : FormulaString) : Bool :=
+def project1ToPairAxiomTest (s : FormulaString) : Bool :=
   s == project1ToPairCandidate s
 
-private def pairToLeftAxiomTest (s : FormulaString) : Bool :=
+def pairToLeftAxiomTest (s : FormulaString) : Bool :=
   s == pairToLeftCandidate s
 
-private def pairToRightAxiomTest (s : FormulaString) : Bool :=
+def pairToRightAxiomTest (s : FormulaString) : Bool :=
   s == pairToRightCandidate s
 
-private def componentsToPairAxiomTest (s : FormulaString) : Bool :=
+def componentsToPairAxiomTest (s : FormulaString) : Bool :=
   s == componentsToPairCandidate s
 
 def productAxiomTest (s : FormulaString) : Bool :=

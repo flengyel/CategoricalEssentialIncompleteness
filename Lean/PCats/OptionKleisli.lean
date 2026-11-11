@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Coproducts
-import PCats.NCoproducts
-import PCats.Recursion
+module
+
+public import PCats.Coproducts
+public import PCats.NCoproducts
+public import PCats.Recursion
 
 /-!
 # The Kleisli category of `Option`
@@ -35,6 +37,8 @@ goal must first be beta-reduced and the instance projections unfolded; the
 `@[simp]` application lemmas between the two instance declarations do the
 latter.
 -/
+
+@[expose] public section
 
 universe u
 

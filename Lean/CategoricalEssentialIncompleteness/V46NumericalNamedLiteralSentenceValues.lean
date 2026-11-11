@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDomainValues
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDecoding
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDomainValues
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDecoding
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
 
 /-! # The numerical sentence pullback has exactly the closed named words -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

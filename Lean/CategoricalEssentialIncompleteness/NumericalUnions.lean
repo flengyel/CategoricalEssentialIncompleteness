@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalSubobjects
+module
+
+public import CategoricalEssentialIncompleteness.NumericalSubobjects
 
 /-!
 # Unions of enumerable PER supports
@@ -12,6 +14,8 @@ Dovetailing semidecision procedures gives a factorization through every common
 upper bound of two c.e. support inclusions. Thus their union represents their
 categorical join. The computable choice of summand uses enumerability of both supports.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleRestrictedTuring
-import CategoricalEssentialIncompleteness.OracleRestrictedInclusion
-import CategoricalEssentialIncompleteness.LocalLifting
+module
+
+public import CategoricalEssentialIncompleteness.OracleRestrictedTuring
+public import CategoricalEssentialIncompleteness.OracleRestrictedInclusion
+public import CategoricalEssentialIncompleteness.LocalLifting
 
 /-! # The literal diagonal pair in the oracle-domain category -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

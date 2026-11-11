@@ -2,6 +2,8 @@ name = "CategoricalEssentialIncompleteness"
 version = "0.1.0"
 keywords = ["math"]
 defaultTargets = ["PCats", "RiceShapiro", "Metamath", "Arith", "CategoricalRiceShapiro", "FailureOfComposition", "CategoricalEssentialIncompleteness"]
+# Resource limit only; weak arguments preserve the existing compiled cache.
+weakLeanArgs = ["--memory=4096"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`

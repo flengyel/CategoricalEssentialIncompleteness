@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralProof
-import FailureOfComposition.NativeNumeralPR
+module
+
+public import FailureOfComposition.NativeNumeralProof
+public import FailureOfComposition.NativeNumeralPR
 
 /-!
 # Fixed standard seeds and explicit arithmetic proof functions
@@ -17,6 +19,8 @@ the exact constructor graphs and are accepted by the canonical native
 checker. This supplies the addition and multiplication subcases of later
 truth-proof construction, not a selector for proofs of checker acceptance.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

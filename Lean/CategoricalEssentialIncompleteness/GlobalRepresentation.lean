@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.GlobalCartesian
-import CategoricalEssentialIncompleteness.InternalRepresentation
+module
+
+public import CategoricalEssentialIncompleteness.GlobalCartesian
+public import CategoricalEssentialIncompleteness.InternalRepresentation
 
 /-!
 # The global representation comparison
@@ -13,6 +15,8 @@ The internal section supplies representatives for the external diagonal data.
 The product isomorphism is included in the substitution arrow; its naturality
 identifies the external rows with the internal rows after that isomorphism.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

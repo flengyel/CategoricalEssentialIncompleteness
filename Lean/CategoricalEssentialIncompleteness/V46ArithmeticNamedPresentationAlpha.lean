@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationTerms
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationTerms
 
 /-! # Original-name quantifiers and computed alpha comparison
 
@@ -11,6 +13,8 @@ Only the single removed free name is bound. The remaining source free-name
 type excludes that name, so capture avoidance follows from actual name
 inequalities rather than a normal-form assumption on the given syntax.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation

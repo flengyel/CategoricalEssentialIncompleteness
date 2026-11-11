@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerDerivationInitial
-import CategoricalEssentialIncompleteness.V46MillerTotalRegular
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationInitial
+public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 
 /-! # Successful derivations carried by their original word alone
 
@@ -13,6 +15,8 @@ literal ordinary-tree carrier. Its image predicate existentially hides
 the pullback and conclusion witnesses. Both algebra constructors and
 conclusions are transported through the proved isomorphism.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

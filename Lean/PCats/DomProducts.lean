@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Domains
+module
+
+public import PCats.Domains
 
 /-!
 # Binary products in `Dom C`
@@ -49,6 +51,8 @@ diagonal `binaryProductLift (𝟙 B) (𝟙 B)` of this module; the finite-limit
 consequence of that corollary is not bundled as a Lean result, and no
 `Limits.HasEqualizers` and no finite-limit instance is declared.
 -/
+
+@[expose] public section
 
 universe v u
 

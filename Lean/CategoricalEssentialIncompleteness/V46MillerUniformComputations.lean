@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
-import CategoricalEssentialIncompleteness.OracleRestrictedCoding
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
+public import CategoricalEssentialIncompleteness.OracleRestrictedCoding
 
 /-! # One finite-table algorithm for every representation of a point
 
@@ -13,6 +15,8 @@ the representation quantifier. Its graph presentation is proved equivalent
 to the actual oracle-program presentation, including undefinedness. No
 ordinary partial-recursive value extension is required.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -163,7 +167,7 @@ end WitnessSearch
 /-- An ordinary partial-recursive positive choice for an arbitrary
 r.e. relation. No uniqueness condition is needed, including outside the
 oracle representations used later. -/
-def positiveChoice {α : Type} [Primcodable α]
+@[no_expose] def positiveChoice {α : Type} [Primcodable α]
     (Q : α × ℕ → Prop) (hQ : REPred Q) : α → Part ℕ := witnessSearch Q hQ
 
 theorem positiveChoice_partrec {α : Type} [Primcodable α]

@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
-import CategoricalEssentialIncompleteness.V46MillerFiniteCover
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
+public import CategoricalEssentialIncompleteness.V46MillerFiniteCover
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
 
 /-! # Finite covers characterize unanimity on the full representation fiber -/
+
+@[expose] public section
 noncomputable section
 open Set Encodable Denumerable
 namespace CategoricalEssentialIncompleteness.V46.Miller.Unanimity

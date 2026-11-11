@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
 /-! # Literal sentence codes are precisely plain formula codes with empty FV -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

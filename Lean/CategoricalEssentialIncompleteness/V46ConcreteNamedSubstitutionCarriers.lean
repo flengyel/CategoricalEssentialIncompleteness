@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
 /-! Positive Sigma-one payload invariants. The formula flag/result relation
 is proved for the actual numerical roots before the traversal invariant is
 instantiated; no validity or recursive result is supplied as an input field. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedCarriersDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

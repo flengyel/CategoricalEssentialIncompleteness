@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
-import Foundation.FirstOrder.Arithmetic.R0.Representation
-import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
+module
+
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
+public import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
 
 /-!
 # Joint computability of numeral substitution
@@ -14,6 +16,8 @@ The arithmetized substitution function agrees with Foundation's syntax
 encoding. Its Σ₁ definition gives computability on codes, and decoding gives
 computability of substitution jointly in the formula and the numeral.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticTranslationFreeVariables
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticTranslationFreeVariables
+
+
+/-! # Statement checks in `V46NamedArithmeticTranslationFreeVariablesChecks` -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.ArithmeticNamedTranslation
 example {n : ℕ} (next : ℕ) (names : Fin n → ℕ) (φ : ArithmeticSemisentence n) (x : ℕ)

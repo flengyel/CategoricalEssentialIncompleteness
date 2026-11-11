@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46RegularEquivalence
-import CategoricalEssentialIncompleteness.V46NumericalForkComparison
-import CategoricalEssentialIncompleteness.V46ForkRangeStability
+module
+
+public import CategoricalEssentialIncompleteness.V46RegularEquivalence
+public import CategoricalEssentialIncompleteness.V46NumericalForkComparison
+public import CategoricalEssentialIncompleteness.V46ForkRangeStability
 
 /-! # Ordinary monic spans of numerical fork diagrams -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

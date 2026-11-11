@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import CategoricalEssentialIncompleteness.TwoBoolean
-import Mathlib.CategoryTheory.Limits.Types.Equalizers
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import CategoricalEssentialIncompleteness.TwoBoolean
+public import Mathlib.CategoryTheory.Limits.Types.Equalizers
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
 
 /-! # Finite model geometry for concrete named-operation comparisons -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

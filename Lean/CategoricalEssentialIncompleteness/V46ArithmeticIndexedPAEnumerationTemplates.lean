@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords
+public import Mathlib.Tactic.FinCases
 
 /-! # The seventeen actual arithmetic/order seed templates
 
@@ -12,6 +14,8 @@ The names are numerical inputs of the word graphs. Instantiation returns
 native named syntax, and the graph compiler is proved to return its literal
 postfix code. The existential-variable freshness condition is retained.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -93,9 +97,9 @@ def existential (i : ℕ) (φ : FormulaSchema) : FormulaSchema := .neg (.all i (
 def le (s t : TermSchema) : FormulaSchema := disjunction (.equal s t) (.less s t)
 end FormulaSchema
 
-private abbrev x : TermSchema := .var 0
-private abbrev y : TermSchema := .var 1
-private abbrev z : TermSchema := .var 2
+abbrev x : TermSchema := .var 0
+abbrev y : TermSchema := .var 1
+abbrev z : TermSchema := .var 2
 
 def simpleTemplate (k : Fin 17) : FormulaSchema :=
   match k.val with

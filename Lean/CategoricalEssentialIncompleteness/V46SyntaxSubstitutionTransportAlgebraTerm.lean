@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterAlgebra
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterAlgebra
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
 
 /-! The actual term half of the substitution algebra comparison. The
 variable and function equations are derived from their proved base root
 comparisons, then combined by the actual source coproduct. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

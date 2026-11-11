@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainConstructorModels
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainConstructorModels
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
 
 /-! # Literal values of the concrete plain logical constructors -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.Feferman.ProofFormula
-import Foundation.FirstOrder.Arithmetic.HFS.PRF
-import Foundation.FirstOrder.Arithmetic.HFS.Vec
-import Metamath.Feferman.ProofCode
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import Arith.Feferman.ProofFormula
+public import Foundation.FirstOrder.Arithmetic.HFS.PRF
+public import Foundation.FirstOrder.Arithmetic.HFS.Vec
+public import Metamath.Feferman.ProofCode
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-!
 # A structural arithmetic formula for Feferman proof sequences
@@ -22,6 +24,8 @@ The numerical proof predicate and its encodings are unchanged. This module is
 in the upper `Arith` layer because its formulas use Foundation; the lower
 `Metamath` layer remains independent of Foundation.
 -/
+
+@[expose] public section
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open Metamath.Feferman
@@ -2234,12 +2238,12 @@ theorem nthDef_nat_iff
         y = nth (natVecOfList xs) i
       from by simp)
 
-private def logicalAxiomCodePred
+def logicalAxiomCodePred
     (Th : PRTheoryPresentation) : ℕ → Prop :=
   fun a => Th.toTheory.syn.logicalAxiom.Holds (decodeFormula a)
 
 /-- The theory-axiom branch as a predicate on numerical formula codes. -/
-private def theoryAxiomCodePred
+def theoryAxiomCodePred
     (Th : PRTheoryPresentation) : ℕ → Prop :=
   fun a => Th.toTheory.ax.Holds (decodeFormula a)
 

@@ -15,6 +15,8 @@ at the level of PA proofs, including for the chosen inverse representatives.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

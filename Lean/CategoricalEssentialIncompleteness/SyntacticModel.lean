@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PartialFunctions
-import FailureOfComposition.TypedChoice
+module
+
+public import CategoricalEssentialIncompleteness.PartialFunctions
+public import FailureOfComposition.TypedChoice
 
 /-! # Interpretation of uniformly provable program graphs in arithmetic models
 
@@ -13,6 +15,8 @@ in the theory. All semantic quantifiers range over the complete model carrier.
 The coded numerical types are interpreted as their arithmetic membership
 subsets in that carrier.
 -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -34,7 +38,7 @@ open CategoryTheory.CoprodStruct CategoryTheory.HasCoproducts
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-private theorem modelPA (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
+theorem modelPA (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
     (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 :=
   models_of_subtheory (U := T) inferInstance
 

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.Feferman.StructuralProof
-import Mathlib.Tactic.FinCases
+module
+
+public import Arith.Feferman.StructuralProof
+public import Mathlib.Tactic.FinCases
 
 /-!
 # Numerical specialization and graph-proof transfer
@@ -27,6 +29,8 @@ representatives use `mpGraph` and `proofGraphWithLogicalAxiom`, so the uniform
 PA results below concern the same numerical `Proof_T` after the explicit
 standard-model adequacy theorem, not the separately selected `proofTFormula`.
 -/
+
+@[expose] public section
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open Metamath.Feferman
@@ -241,7 +245,7 @@ theorem primrec_reverseAxiomCode :
 
 /-! ## The primitive-recursive presentation -/
 
-private def tokenAt (i : ℕ) (s : FormulaString) : ℕ := s.getD i 0
+def tokenAt (i : ℕ) (s : FormulaString) : ℕ := s.getD i 0
 
 abbrev LogicalAxiomShape (s : FormulaString) : Prop :=
   s = specializationAxiomString (tokenAt 3 s) (tokenAt 4 s)

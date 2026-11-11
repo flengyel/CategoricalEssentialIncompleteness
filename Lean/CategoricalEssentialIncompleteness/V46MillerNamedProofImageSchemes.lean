@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints
 
 /-! # Seven literal scheme witnesses in the actual uniform parameter objects -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -110,7 +114,7 @@ theorem distributionAbsence_comparison :
   exact (Category.assoc _ _ _).symm.trans (ht.trans
     ((Category.assoc _ _ _).trans (hg.trans ((Category.assoc _ _ _).symm.trans hb))))
 
-private theorem distributionMap_condition :
+theorem distributionMap_condition :
     ((F).map (S₀).distributionInclusion ≫ (distributionBaseChart P σ π d).hom) ≫
       (S).distributionAbsence=
     ((F).map (S₀).distributionInclusion ≫ (distributionBaseChart P σ π d).hom) ≫

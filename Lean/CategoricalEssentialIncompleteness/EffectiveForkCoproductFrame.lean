@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkFunctions
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkFunctions
 
 /-! # The parity coproduct frame on the universal fork -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -50,7 +54,7 @@ private theorem two_div_mod (n : ℕ) : 2*(n/2)+n%2=n := by omega
   simp [tagMerge,tagSplit,Nat.add_div,Nat.add_mod,Nat.mod_eq_of_lt hm,Nat.not_le.mpr hm,two_div_mod,
     Nat.pair_unpair]
 
-private theorem sum_support (x : ℕ) :
+theorem sum_support (x : ℕ) :
     x ∈ (EnumerableCarriers.coproduct natCarrier natCarrier).support := by
   by_cases he : x%2=0
   · exact Or.inl ⟨he,Set.mem_univ _⟩

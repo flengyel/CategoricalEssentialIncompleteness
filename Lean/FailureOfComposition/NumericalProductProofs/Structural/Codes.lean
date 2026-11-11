@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Soundness
-import FailureOfComposition.NumericalProofBridge.Structural
+module
+
+public import FailureOfComposition.NumericalProductProofs.Soundness
+public import FailureOfComposition.NumericalProofBridge.Structural
 
 /-!
 # Arithmetic graphs for product-definedness codes
@@ -14,6 +16,8 @@ fixed coding of partial-recursive programs.  We repeat those expressions
 inside arbitrary models of arithmetic and compose them with the existing
 graphs for tagged formulas and implication.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

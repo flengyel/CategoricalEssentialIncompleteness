@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipPreservation
-import FailureOfComposition.NativeMembershipPR
+module
+
+public import FailureOfComposition.NativeMembershipPreservation
+public import FailureOfComposition.NativeMembershipPR
 
 /-!
 # Native assembly from supplied totality and membership proofs
@@ -16,6 +18,8 @@ Sigma-one completeness. The explicit constructor consumes that extra proof
 The final hypotheses are proof acceptances only, not actual computation or
 membership truth.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

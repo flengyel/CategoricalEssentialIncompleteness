@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
 
 /-! The explicit naming context bounds all free names of a translated
 formula. This is a finite external syntax statement; internal PA numeral
 substitution and sentence-range proofs remain separate. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
-import CategoricalEssentialIncompleteness.V46MillerStrictRationalCuts
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+public import CategoricalEssentialIncompleteness.V46MillerStrictRationalCuts
 
 /-! # Literal ordered-field syntax and the actual uniformly enumerable cut axioms
 
@@ -10,6 +17,8 @@ the other labels are unary minus, binary addition/multiplication and strict
 order. Rational inequalities are integer-coefficient inequalities in this
 language. No real-closed-field axiom set is defined or assumed here.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates

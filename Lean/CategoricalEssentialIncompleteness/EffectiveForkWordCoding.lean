@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.WordTuples
-import CategoricalEssentialIncompleteness.EffectiveForkWords
+module
+
+public import CategoricalEssentialIncompleteness.WordTuples
+public import CategoricalEssentialIncompleteness.EffectiveForkWords
 
 /-! # The explicit length-preserving word frame functions -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

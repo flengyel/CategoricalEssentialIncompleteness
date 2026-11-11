@@ -1,6 +1,17 @@
-import CategoricalEssentialIncompleteness.V46MillerCutApplications
-import CategoricalEssentialIncompleteness.V46SplitCoproducts
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerCutApplications
+public import CategoricalEssentialIncompleteness.V46SplitCoproducts
+
+
+/-! # Definitions and theorems in `V46MillerCutInseparabilitySourceSplit` -/
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
@@ -28,7 +39,7 @@ instance (a : Point) : (inclusion a).Faithful where
 instance (a : Point) : (inclusion a).Full where
   map_surjective f := ⟨f.hom,SplitObject.Hom.ext rfl⟩
 
-private theorem comparison_hom (a : Point) (X Y : Uniform.PointObject a) :
+theorem comparison_hom (a : Point) (X Y : Uniform.PointObject a) :
     (coproductComparison (inclusion a) X Y).hom=𝟙 (coprod X Y) := by
   apply CategoryTheory.HasCoproducts.hom_ext
   · have h := congrArg SplitObject.Hom.hom
@@ -40,7 +51,7 @@ private theorem comparison_hom (a : Point) (X Y : Uniform.PointObject a) :
     simpa only [coproductComparison,inclusion,splittingInclusion,SplitObject.comp_hom,
       SplitObject.coproductInr_hom,Idem.top_hom,Category.id_comp,Category.comp_id] using h
 
-private def comparisonIso (a : Point) (X Y : Uniform.PointObject a) :
+def comparisonIso (a : Point) (X Y : Uniform.PointObject a) :
     coprod ((inclusion a).obj X) ((inclusion a).obj Y) ≅ (inclusion a).obj (coprod X Y) where
   hom := coproductComparison (inclusion a) X Y
   inv := ⟨𝟙 (coprod X Y),by

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.PrfEqTransportRepair.Core
+module
+
+public import FailureOfComposition.PrfEqTransportRepair.Core
 
 /-!
 # Soundness and standard compatibility of the transport repair
@@ -15,6 +17,8 @@ its intended arithmetic meaning.  At equality endpoints this gives a
 standard, existential translation back to the production checker; it does not
 construct a primitive-recursive proof-code backtranslation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

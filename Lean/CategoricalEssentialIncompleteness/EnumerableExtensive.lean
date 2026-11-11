@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
-import CategoricalEssentialIncompleteness.EnumerableFiniteCoproducts
-import Mathlib.CategoryTheory.Extensive
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
+public import CategoricalEssentialIncompleteness.EnumerableFiniteCoproducts
+public import Mathlib.CategoryTheory.Extensive
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
 /-! # Extensivity of total recursive maps on c.e. carriers -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

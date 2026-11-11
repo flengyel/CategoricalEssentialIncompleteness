@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
-import CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
+public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers
 
 /-! # Actual finite-power coordinates of uniform derivation words
 
@@ -8,6 +15,8 @@ The raw tuple uses the parser's left-associated ordered pairing. Only
 the finite structural charts are computed here; no extension of an
 arbitrary uniformly represented operation is required.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

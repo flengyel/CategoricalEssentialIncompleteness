@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Structural.ProofGraph
-import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
-import FailureOfComposition.NumericalProductProofs.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Structural.ProofGraph
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
+public import FailureOfComposition.NumericalProductProofs.Structural.Maps
 
 /-!
 # Arithmetic graphs of the composed B1(7) proof maps
@@ -16,6 +18,8 @@ common proof graph.  The old product and checker maps are re-established
 inside that graph, so arbitrary proofs accepted by the new checker are valid
 inputs.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

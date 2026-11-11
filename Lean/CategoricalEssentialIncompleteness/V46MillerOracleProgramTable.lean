@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
 
 /-! # Compiling an ordinary coherent table search into one oracle program
 
@@ -11,6 +13,8 @@ Fuel and oracle-prefix length are independent: at stage `t` the search tries
 all prefixes of length at most `t`, with ordinary evaluator fuel `t`. A fixed
 successful short prefix is therefore revisited with arbitrarily large fuel.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -170,8 +174,8 @@ private theorem transitionCode_eval (v : ℕ) :
   congrFun (Classical.choose_spec (Nat.Partrec.Code.exists_code.mp
     (Partrec.nat_iff.mp universalTransition_computable.partrec))) v
 
-/-- A compiler on ORDINARY program indices. No oracle is chosen here. -/
-def ofTableCode (e : Code) : Code := transitionCode.curry (encode e)
+/-- A compiler on ordinary program indices, chosen before the oracle. -/
+@[no_expose] def ofTableCode (e : Code) : Code := transitionCode.curry (encode e)
 
 theorem ofTableCode_computable : Computable ofTableCode :=
   Nat.Partrec.Code.primrec₂_curry.to_comp.comp (Computable.const transitionCode) Computable.encode

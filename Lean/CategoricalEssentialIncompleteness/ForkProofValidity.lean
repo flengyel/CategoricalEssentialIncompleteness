@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkProofComputability
-import CategoricalEssentialIncompleteness.EnumerableWords
+module
+
+public import CategoricalEssentialIncompleteness.ForkProofComputability
+public import CategoricalEssentialIncompleteness.EnumerableWords
 
 /-! # Effective validity of the manuscript's finite proof trees -/
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory

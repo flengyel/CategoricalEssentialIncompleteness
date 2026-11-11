@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsStandard
-import Foundation.FirstOrder.Tarski.Elementary
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsStandard
+public import Foundation.FirstOrder.Tarski.Elementary
 
 /-! # Fixed universal diagonal-bound sentences and elementary transfer
 
@@ -12,6 +14,8 @@ These are standard truth statements, not assertions that PA proves the
 uniform Γ bounds. Elementary equivalence transfers their universal
 closures and hence covers every internal element of the target model.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

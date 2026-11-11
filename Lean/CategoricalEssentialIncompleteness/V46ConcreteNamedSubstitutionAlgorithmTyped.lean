@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithm
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRootClosure
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithm
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRootClosure
 
 /-! PA typed preservation and branch equations for the actual primitive
 named substitution algorithm and the independent structural free-for flag. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedAlgorithmTypedDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

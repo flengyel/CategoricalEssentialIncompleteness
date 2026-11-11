@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutStages
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutStages
 
 /-! # Compact bad images and the actual open parity regions
 
@@ -11,6 +13,8 @@ This proves the finite-stage and compactness part of Lemma8.3 using the
 literal oracle programs, binary cylinders, rho, and tau. It also gives an
 explicit primitive-recursive finite-cylinder presentation of each complement.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

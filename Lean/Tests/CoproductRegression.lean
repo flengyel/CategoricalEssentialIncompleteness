@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Coproducts
+module
+
+public import PCats.Coproducts
 
 /-!
 # Coproduct API regression tests
@@ -29,6 +31,8 @@ as an auto-bound implicit and the guard would pass vacuously.
 Run by `scripts/syncpcats.sh`. These files sit outside the `PCats` and
 `RiceShapiro` libraries and are not part of `lake build`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

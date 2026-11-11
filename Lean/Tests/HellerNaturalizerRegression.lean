@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.HellerNaturalizer
+module
+
+public import PCats.HellerNaturalizer
 
 /-!
 # Signature guards for the projection-generated subcategory
@@ -20,6 +22,8 @@ totality and naturality. `check_axioms.lean` audits axiom dependencies.
 `leanOptions`, and an unbound identifier would otherwise be auto-bound and the
 guard would hold vacuously.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

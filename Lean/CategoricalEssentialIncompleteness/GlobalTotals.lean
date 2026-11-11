@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.GlobalCartesian
-import CategoricalEssentialIncompleteness.EnrichedDomains
-import Mathlib.CategoryTheory.Widesubcategory
-import Mathlib.CategoryTheory.Adjunction.Limits
+module
+
+public import CategoricalEssentialIncompleteness.GlobalCartesian
+public import CategoricalEssentialIncompleteness.EnrichedDomains
+public import Mathlib.CategoryTheory.Widesubcategory
+public import Mathlib.CategoryTheory.Adjunction.Limits
 
 /-!
 # Global total arrows
@@ -16,6 +18,8 @@ enriched restriction structure. Its total arrows form the wide subcategory
 defined by the existing `RestrictionCategory.isTotal` property. The finite-limit
 comparison extends to an equivalence of categories, preserving binary products.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

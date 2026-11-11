@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsEvaluation
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsEvaluation
 
 /-! # Actual parameter-preserving list folds and compatible-map uniqueness
 
@@ -12,6 +14,8 @@ operations. The uniqueness theorem covers every candidate morphism with
 the original nil and adjoin equations; no ordinary-recursive extension
 or inhabited target is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

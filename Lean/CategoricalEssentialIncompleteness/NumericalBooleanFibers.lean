@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalBooleanArrows
+module
+
+public import CategoricalEssentialIncompleteness.NumericalBooleanArrows
 
 /-!
 # Fibers of numerical Boolean arrows
@@ -12,6 +14,8 @@ The fibers of a total recursive Boolean function are its recursive inverse
 images of the two values. Every recursive subset of the natural numbers
 is the upper fiber of such an arrow.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

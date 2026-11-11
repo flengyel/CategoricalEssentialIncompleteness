@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication
+
+
+/-! # Statement checks in `V46MillerTheoryDomainApplicationChecks` -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory
 open CategoricalEssentialIncompleteness.LocalConnectedness

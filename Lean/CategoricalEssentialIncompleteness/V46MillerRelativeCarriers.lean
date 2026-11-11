@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
-import CategoricalEssentialIncompleteness.V46MillerTotalEquivalence
-import CategoricalEssentialIncompleteness.V46KaroubiRestriction
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
+public import CategoricalEssentialIncompleteness.V46MillerTotalEquivalence
+public import CategoricalEssentialIncompleteness.V46KaroubiRestriction
 
 /-! # The literal p-c.e.-carrier presentation of Split(Rec^p)
 
@@ -9,6 +16,8 @@ certificate. The morphisms reuse the existing supported partial arrows;
 their characterization below proves that these are exactly all supported
 p-relative partial functions, including their undefined inputs.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory
 open CategoricalEssentialIncompleteness.LocalConnectedness

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
 
 /-! # Inference base change from actual premise and conclusion diagrams
 
@@ -12,6 +14,8 @@ The natural isomorphism is derived from finite-power pullbacks, pullback
 pasting and universal finite coproducts. It is not an input assumption.
 The statement includes the nullary component and retains ordered children.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

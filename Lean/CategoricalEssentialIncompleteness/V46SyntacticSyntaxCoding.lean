@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRaw
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxWords
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRaw
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxWords
 
 /-! # Constructor records and ordered child blocks for literal postfix syntax -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

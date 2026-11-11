@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
 
 /-! # Literal constructor charts for the constructed derivation trees
 
@@ -13,6 +15,8 @@ These charts retain the original numerical tree word. Standard-code
 induction uses its node count; no preservation of initiality by a model
 interpretation functor is assumed.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

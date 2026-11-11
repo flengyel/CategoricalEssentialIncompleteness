@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxTotal
-import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxTotal
+public import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
 
 /-! # Actual arbitrary-rule derivations in Tot(Split(E_z))
 
@@ -16,6 +18,8 @@ through the proved polynomial comparison of the actual equivalence.
 The conservative singleton interpretation then proves the successful
 input comparison; it is not supplied as a hypothesis.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

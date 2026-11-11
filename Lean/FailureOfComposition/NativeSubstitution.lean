@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Formula.Functions
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Formula.Coding
-import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
+module
+
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Formula.Functions
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Formula.Coding
+public import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
 
 /-!
 # Uniform numerical substitution for arithmetic syntax
@@ -22,6 +24,8 @@ variable `d` is the variable being replaced.  This makes the binder-shifting
 convention explicit before the public depth-zero operation is defined.
 -/
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Encodable FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
@@ -35,13 +39,13 @@ abbrev ArithmeticSyntacticTerm := SyntacticTerm ℒₒᵣ
 
 abbrev ArithmeticFormulaBody := ArithmeticSemiproposition 1
 
-private def binaryVectorCode (a b : ℕ) : ℕ :=
+def binaryVectorCode (a b : ℕ) : ℕ :=
   Nat.pair a (Nat.pair b 0 + 1) + 1
 
-private def functionCode (arity symbol vector : ℕ) : ℕ :=
+def functionCode (arity symbol vector : ℕ) : ℕ :=
   Nat.pair 2 (Nat.pair arity (Nat.pair symbol vector)) + 1
 
-private def relationCode (tag arity symbol vector : ℕ) : ℕ :=
+def relationCode (tag arity symbol vector : ℕ) : ℕ :=
   Nat.pair tag (Nat.pair arity (Nat.pair symbol vector)) + 1
 
 /-- Substitute a depth-zero term code into a term code under `d` binders.
@@ -327,9 +331,9 @@ private theorem primrec_relationCode {A : Type} [Primcodable A]
       Primrec₂.natPair.comp harity <|
         Primrec₂.natPair.comp hsymbol hvector
 
-private abbrev FormulaSubstState := (ℕ × ℕ) × ℕ
+abbrev FormulaSubstState := (ℕ × ℕ) × ℕ
 
-private def formulaSubstState (state : FormulaSubstState) : ℕ :=
+def formulaSubstState (state : FormulaSubstState) : ℕ :=
   formulaSubstAtCode state.1.1 state.1.2 state.2
 
 private def formulaSubArgs (state : FormulaSubstState) :

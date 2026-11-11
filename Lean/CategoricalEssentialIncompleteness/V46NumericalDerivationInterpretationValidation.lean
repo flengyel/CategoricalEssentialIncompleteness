@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
-import CategoricalEssentialIncompleteness.V46NumericalUnderlying
-import Mathlib.CategoryTheory.Limits.Types.Products
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
+public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
+public import Mathlib.CategoryTheory.Limits.Types.Products
 
 /-! # Uniqueness of numerical validation from its exact successful pullback
 
@@ -14,6 +16,8 @@ same successful conclusion agree. Their failure values also agree because
 the failure coefficient is terminal. No evaluation or initiality premise
 is part of this uniqueness theorem.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

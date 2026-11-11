@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProofSearchMembership
+module
+
+public import FailureOfComposition.ProofSearchMembership
 
 /-!
 # An additive checker for equality-proof transport
@@ -20,6 +22,8 @@ input proof codes and all three program indices.  Its correctness theorem is
 deliberately about `transportRepairTheoryPresentation`, not the production
 presentation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -72,20 +76,20 @@ theorem primrec_transportAxiomCode :
       transportAxiomCode z.1.1 z.1.2 z.2) :=
   primrec_encodeFormula.comp primrec_transportAxiomString
 
-private def transportTokenAt (i : ℕ) (s : FormulaString) : ℕ :=
+def transportTokenAt (i : ℕ) (s : FormulaString) : ℕ :=
   s.getD i 0
 
 private theorem primrec_transportTokenAt (i : ℕ) :
     Primrec (transportTokenAt i) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const i)
 
-private def recoveredTransportLeft (s : FormulaString) : ℕ :=
+def recoveredTransportLeft (s : FormulaString) : ℕ :=
   transportTokenAt 1 (lhsString s)
 
-private def recoveredTransportMiddle (s : FormulaString) : ℕ :=
+def recoveredTransportMiddle (s : FormulaString) : ℕ :=
   transportTokenAt 2 (lhsString s)
 
-private def recoveredTransportRight (s : FormulaString) : ℕ :=
+def recoveredTransportRight (s : FormulaString) : ℕ :=
   transportTokenAt 2 (lhsString (rhsString s))
 
 private theorem primrec_recoveredTransportLeft :
@@ -101,7 +105,7 @@ private theorem primrec_recoveredTransportRight :
   (primrec_transportTokenAt 2).comp
     (primrec_lhsString.comp primrec_rhsString)
 
-private def transportAxiomCandidate (s : FormulaString) : FormulaString :=
+def transportAxiomCandidate (s : FormulaString) : FormulaString :=
   transportAxiomString (recoveredTransportLeft s)
     (recoveredTransportMiddle s) (recoveredTransportRight s)
 

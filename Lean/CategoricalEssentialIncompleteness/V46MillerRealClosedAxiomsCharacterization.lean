@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
-import Mathlib.Algebra.Polynomial.Degree.Support
-import Mathlib.Tactic.Ring
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
+public import Mathlib.Algebra.Polynomial.Degree.Support
+public import Mathlib.Tactic.Ring
 
 /-! # The chosen recursive RCF axioms characterize real closure
 
@@ -11,6 +18,8 @@ The converse uses the already constructed semantics of the same words.
 This is a model characterization of the actual axiom set, not a truth
 assumption for an arbitrary consistent extension.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open Polynomial

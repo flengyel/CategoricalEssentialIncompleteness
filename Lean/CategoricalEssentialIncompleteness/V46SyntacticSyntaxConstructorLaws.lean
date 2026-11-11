@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxChildrenTrace
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRootEquations
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxChildrenTrace
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRootEquations
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
 /-! # Actual constructor equations of finite-record evaluation -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

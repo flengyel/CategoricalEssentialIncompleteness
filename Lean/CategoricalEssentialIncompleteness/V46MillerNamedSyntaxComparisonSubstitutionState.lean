@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionConstructors
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionConstructors
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
 
 /-! # Concrete named-substitution parameters and recursive state charts -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

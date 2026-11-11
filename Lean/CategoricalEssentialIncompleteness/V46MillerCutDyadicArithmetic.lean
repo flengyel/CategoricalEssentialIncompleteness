@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerRationalCodes
-import Mathlib.Algebra.Order.Group.MinMax
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRationalCodes
+public import Mathlib.Algebra.Order.Group.MinMax
 
 /-! # Ordinary numerical arithmetic on nonnegative dyadic fractions
 
@@ -13,6 +15,8 @@ assumed. All operations below are actual primitive-recursive functions on
 pairs of natural numbers; their rational-output semantics uses the fixed
 ordinary enumeration from Miller.Rationals.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

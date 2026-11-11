@@ -16,6 +16,8 @@ functional graphs gives a monoid equivalence to the generated graph quotient.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

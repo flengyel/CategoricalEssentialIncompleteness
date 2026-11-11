@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputPullback
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputPullback
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
 
 /-! Literal arithmetic sources of the original inference endofunctor summands. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

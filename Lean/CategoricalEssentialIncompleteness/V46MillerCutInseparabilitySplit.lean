@@ -3,10 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
-import CategoricalEssentialIncompleteness.V46SplitCoproducts
-import CategoricalEssentialIncompleteness.V46SplitSplittings
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
+public import CategoricalEssentialIncompleteness.V46SplitCoproducts
+public import CategoricalEssentialIncompleteness.V46SplitSplittings
+
+
+/-! # Definitions and theorems in `V46MillerCutInseparabilitySplit` -/
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
@@ -36,7 +42,7 @@ instance (p : Bits) : (relativeInclusion p).Faithful where
 instance (p : Bits) : (relativeInclusion p).Full where
   map_surjective f := ⟨f.hom,SplitObject.Hom.ext rfl⟩
 
-private theorem inclusion_comparison_hom (p : Bits) (X Y : Uniform.RelativeObject p) :
+theorem inclusion_comparison_hom (p : Bits) (X Y : Uniform.RelativeObject p) :
     (coproductComparison (relativeInclusion p) X Y).hom = 𝟙 (coprod X Y) := by
   apply CategoryTheory.HasCoproducts.hom_ext
   · have h := congrArg SplitObject.Hom.hom
@@ -48,7 +54,7 @@ private theorem inclusion_comparison_hom (p : Bits) (X Y : Uniform.RelativeObjec
     simpa only [coproductComparison,relativeInclusion,splittingInclusion,SplitObject.comp_hom,
       SplitObject.coproductInr_hom,Idem.top_hom,Category.id_comp,Category.comp_id] using h
 
-private def inclusion_comparison_iso (p : Bits) (X Y : Uniform.RelativeObject p) :
+def inclusion_comparison_iso (p : Bits) (X Y : Uniform.RelativeObject p) :
     coprod ((relativeInclusion p).obj X) ((relativeInclusion p).obj Y) ≅
       (relativeInclusion p).obj (coprod X Y) where
   hom := coproductComparison (relativeInclusion p) X Y

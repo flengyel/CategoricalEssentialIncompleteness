@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.Approximation
+module
+
+public import RiceShapiro.Approximation
 
 /-!
 # Generated domains and extension spans
@@ -14,6 +16,8 @@ range of the span's left leg. It also characterizes membership in generated
 domains by total range lifting, proves extensionality of generated domains, and
 formalizes countable extension families and their representation theorem.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -1,7 +1,18 @@
-import CategoricalEssentialIncompleteness.V46MillerRealComputation
-import CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram
-import CategoricalEssentialIncompleteness.V46MillerCutDigits
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerRealComputation
+public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram
+public import CategoricalEssentialIncompleteness.V46MillerCutDigits
+
+
+/-! # Definitions and theorems in `V46MillerCutReduction` -/
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
@@ -29,7 +40,7 @@ def separatingPoint (e : ℕ) (z : Point) : Set.Icc (0:ℝ) 1 :=
     constructor <;> linarith⟩
 
 /-- Ordinary specialization of the single constructed approximation program. -/
-def reduction (e : ℕ) : ℕ := specializationIndex approximationIndex e
+@[no_expose] def reduction (e : ℕ) : ℕ := specializationIndex approximationIndex e
 
 theorem reduction_computable : Computable reduction :=
   specializedIndex_computable approximationIndex

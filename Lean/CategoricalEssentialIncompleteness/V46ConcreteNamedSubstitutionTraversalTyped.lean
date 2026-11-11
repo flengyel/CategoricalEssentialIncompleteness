@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalConstructors
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalConstructors
 
 /-! Positive typed-stack invariants for a numerical traversal. Local root
 closure is supplied by the concrete root equations; all nonstandard-length
 invariant witnesses are constructed by internal Sigma-one induction. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedTraversalTypedDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

@@ -14,6 +14,8 @@ assume a Delta-one presentation of the given theory. -/
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open FFL.FirstOrder.Arithmetic.Bootstrapping FFL.Entailment

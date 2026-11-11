@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCategoryJoins
-import CategoricalEssentialIncompleteness.V46MillerUnanimity
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCategoryJoins
+public import CategoricalEssentialIncompleteness.V46MillerUnanimity
 
 /-! # The actual unanimous evaluator is a Turing morphism
 
@@ -12,6 +14,8 @@ The realizer of tau is the fixed program from Lemma8.1. A parameter
 compiler uses only the ordinary recursive specialization of a supplied
 uniform index, before choosing any representation.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Metamath.Feferman.ProofCode
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import Metamath.Feferman.ProofCode
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-!
 # A Sigma-one arithmetic formula for the Feferman proof predicate
@@ -57,6 +59,8 @@ numerical `mp` operation. That object-language theorem remains absent.
 `scripts/syncpcats.sh` checks this root against
 `{propext, Classical.choice, Quot.sound}` through `check_arith_axioms.lean`.
 -/
+
+@[expose] public section
 
 open Metamath.Feferman FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 

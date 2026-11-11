@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Structural.Maps
 
 /-!
 # PA-internal domain-order preservation
@@ -13,6 +15,8 @@ indices, the input numeral, the composite index, all three endpoint formula
 codes, and the output proof code inside arithmetic.  Its proof uses the
 recognized scheme leaf and two structural MP steps in every PA model.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

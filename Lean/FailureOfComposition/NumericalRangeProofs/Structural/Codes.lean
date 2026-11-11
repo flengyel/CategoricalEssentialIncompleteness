@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.CodedObjectMembership
-import FailureOfComposition.NumericalRangeProofs.Soundness
-import FailureOfComposition.NumericalProofBridge.Structural.Codes
+module
+
+public import FailureOfComposition.CodedObjectMembership
+public import FailureOfComposition.NumericalRangeProofs.Soundness
+public import FailureOfComposition.NumericalProofBridge.Structural.Codes
 
 /-!
 # Arithmetic graphs for range-proof formula codes
@@ -15,6 +17,8 @@ builders used by the range proof map.  Their arguments may be arbitrary
 elements of a PA model.  Standard-natural-number agreement is proved
 separately at the end of the file.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

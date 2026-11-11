@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists
-import CategoricalEssentialIncompleteness.V46MillerSyntaxTotal
-import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxTotal
+public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 
 /-! # The explicitly presented named signature and its canonical push
 
@@ -14,6 +16,8 @@ The canonical realization is the actual pointPresentation push of this
 constructed algebra, rather than a claim that a chosen inverse-equivalence
 counit fixes word coordinates.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

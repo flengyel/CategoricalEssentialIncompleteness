@@ -1,4 +1,6 @@
-import RiceShapiro
+module
+
+public import RiceShapiro
 
 /-!
 # Axiom check for `RiceShapiro`
@@ -13,6 +15,8 @@ This file is separate from `check_axioms.lean` so that `PCats` and
 Future arithmetic-dependent modules will use a separate check file.
 Any occurrence of `sorryAx` is an error.
 -/
+
+@[expose] public section
 
 open CategoryTheory
 

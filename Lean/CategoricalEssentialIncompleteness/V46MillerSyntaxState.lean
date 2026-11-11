@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxOperations
-import CategoricalEssentialIncompleteness.V46MillerUniformFinite
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
-import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxOperations
+public import CategoricalEssentialIncompleteness.V46MillerUniformFinite
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
+public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
 
 /-! # Positive value-stack invariants for arbitrary uniform algebra operations
 
@@ -15,6 +17,8 @@ The stored stack uses the existing arithmetic list and ordered pair codes.
 Only temporary states and their positive operation witnesses are recorded;
 the input syntax retains its original word and coefficient labels.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

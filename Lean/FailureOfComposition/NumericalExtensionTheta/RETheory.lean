@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Structural.Preservation
-import FailureOfComposition.NumericalExtensionComposition.RETheory
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Structural.Preservation
+public import FailureOfComposition.NumericalExtensionComposition.RETheory
 
 /-!
 # B1(8) proof maps for recursively enumerable theories
@@ -15,6 +17,8 @@ presentation.  It gives exact proof-existence correspondences for the
 consumed `R`, `C`, and `X` tags and the produced `H` tag, followed by the two
 supplied-code maps and the PA and `T` preservation theorems.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

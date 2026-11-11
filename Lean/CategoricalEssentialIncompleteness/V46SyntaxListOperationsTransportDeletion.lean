@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras
 
 /-! Deletion transport is derived from the actual parameterized
 initial algebra, the equality classifier and the nil/cons diagrams. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -16,7 +25,7 @@ variable [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D]
 variable (E : C ≌ D)
 
 omit [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D] in
-private theorem deletionOverMap_left {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
+theorem deletionOverMap_left {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
     {A B : Over P} (f : A ⟶ B) :
     ((sliceEquivalence E b).functor.map f).left = E.functor.map f.left := rfl
 

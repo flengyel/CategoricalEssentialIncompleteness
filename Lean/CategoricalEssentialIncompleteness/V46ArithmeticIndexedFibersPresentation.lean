@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibers
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibers
 
 /-! # Comparison with the existing literal Gamma theorem presentation
 
 The sentence guard is eliminated by a proved identity-graph isomorphism.
 The binder syntax and all seven logical constructors remain unchanged.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -25,7 +29,7 @@ variable (AxPA : Carrier) (e : ℕ)
 abbrev gamma : Carrier := ArithmeticIndexedAxioms.fiberAxioms AxPA e
 abbrev oldAxiomCarrier : PredicateCategory 𝗣𝗔 := ArithmeticLiteralModel.axiomObject (gamma AxPA e)
 
-private theorem guardToFiberProof : 𝗣𝗔 ⊢ inclusionSentence (oldAxiomCarrier AxPA e) (gamma AxPA e) := by
+theorem guardToFiberProof : 𝗣𝗔 ⊢ inclusionSentence (oldAxiomCarrier AxPA e) (gamma AxPA e) := by
   apply complete.{0} 𝗣𝗔
   intro M _ _
   rw [models_iff,inclusionSentence_eval]
@@ -33,7 +37,7 @@ private theorem guardToFiberProof : 𝗣𝗔 ⊢ inclusionSentence (oldAxiomCarr
   exact ((SyntacticAxiomPredicates.axiomCarrier_literal 𝗣𝗔
     variableSymbols functionSymbols relationSymbols bound M (gamma AxPA e) z).mp hz).1
 
-private theorem fiberToGuardProof : 𝗣𝗔 ⊢ inclusionSentence (gamma AxPA e) (oldAxiomCarrier AxPA e) := by
+theorem fiberToGuardProof : 𝗣𝗔 ⊢ inclusionSentence (gamma AxPA e) (oldAxiomCarrier AxPA e) := by
   apply complete.{0} 𝗣𝗔
   intro M _ _
   rw [models_iff,inclusionSentence_eval]
@@ -212,7 +216,7 @@ def individual_oldGamma_formulaIso : (individualAlgebra AxPA e).a.left ≅
     (oldRules AxPA e) (singleRules AxPA e) (oldRuleData AxPA e) _ _
     (individual_oldGamma_comparison AxPA e)
 
-private theorem old_literal_sentence_pullback :
+theorem old_literal_sentence_pullback :
     IsPullback
       (pullback.fst (ArithmeticLiteralModel.formulaConclusion (gamma AxPA e))
         ArithmeticLiteralModel.sentenceSyntax.sentenceInclusion)
@@ -227,7 +231,7 @@ private theorem old_literal_sentence_pullback :
   · simp
   · simp
 
-private theorem individual_sentence_over_old :
+theorem individual_sentence_over_old :
     IsPullback
       (pullback.fst (individualAlgebra AxPA e).a.hom ArithmeticIndexedFamily.sentenceInclusion ≫
         (individual_oldGamma_formulaIso AxPA e).hom)
@@ -245,7 +249,7 @@ private theorem individual_sentence_over_old :
 
 section DiagramLaws
 universe u₃ v₃
-private theorem pullback_compare_snd {D : Type u₃} [Category.{v₃} D] [HasPullbacks D]
+theorem pullback_compare_snd {D : Type u₃} [Category.{v₃} D] [HasPullbacks D]
     {A B X Y Z : D} {a : A ⟶ X} {b : A ⟶ Y} {c : B ⟶ X} {d : B ⟶ Y}
     {f : X ⟶ Z} {g : Y ⟶ Z} (p : IsPullback a b f g) (q : IsPullback c d f g) :
     (p.isoPullback ≪≫ q.isoPullback.symm).hom ≫ d = b := by
@@ -258,7 +262,7 @@ private theorem pullback_compare_snd {D : Type u₃} [Category.{v₃} D] [HasPul
     _ = p.isoPullback.hom ≫ pullback.snd f g := congrArg (fun k => p.isoPullback.hom ≫ k) hd
     _ = b := p.isoPullback_hom_snd
 
-private theorem model_iso_conclusion {C : Type u₃} {D : Type v₃}
+theorem model_iso_conclusion {C : Type u₃} {D : Type v₃}
     [Category C] [Category D] (E : C ⥤ D) (H : D ⥤ Type) (G : C ⥤ Type)
     (pc : E ⋙ H ≅ G) {P S : C} {I : D} (c : I ≅ E.obj P)
     (f : P ⟶ S) (b : I ⟶ E.obj S) (h : c.hom ≫ E.map f = b) :

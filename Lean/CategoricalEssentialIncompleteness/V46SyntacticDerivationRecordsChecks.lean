@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationRecords
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRecords
 
 /-! Positive finite-record realization is arithmetic in every PA model. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

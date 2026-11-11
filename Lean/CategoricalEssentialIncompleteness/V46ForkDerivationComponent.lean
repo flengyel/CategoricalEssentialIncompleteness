@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
-import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
-import CategoricalEssentialIncompleteness.ForkNumericalProofs
-import Mathlib.CategoryTheory.Endofunctor.Algebra
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
+public import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
+public import CategoricalEssentialIncompleteness.ForkNumericalProofs
+public import Mathlib.CategoryTheory.Endofunctor.Algebra
+public import Mathlib.Tactic.FinCases
 
 /-! # The actual six-tag fork proof carrier as an inference algebra
 
@@ -17,6 +19,8 @@ comparison with the constructed numerical initial algebra is obtained from
 its fold and Lambek decomposition; no universal property of the old tree
 carrier is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

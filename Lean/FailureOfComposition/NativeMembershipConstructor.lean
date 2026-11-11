@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyPR
-import FailureOfComposition.NativeFamilyNat
+module
+
+public import FailureOfComposition.NativeFamilyPR
+public import FailureOfComposition.NativeFamilyNat
 
 /-!
 # Numerical pointwise and universal-closure assembly
@@ -14,6 +16,8 @@ to `(seed,Gamma,a,t,m,p,e,u,d)`. Closure assembly uses two specializations
 and two same-context MP steps. Both functions take an explicit natural
 template code; neither computes a theory graph or selects proof witnesses.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

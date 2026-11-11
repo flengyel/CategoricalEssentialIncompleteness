@@ -32,6 +32,8 @@ and no list semantics is attached to an arbitrary element of the model.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

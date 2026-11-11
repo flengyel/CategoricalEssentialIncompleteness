@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
 
 /-! # Constructor commutation of the actual uniform fold
 
@@ -7,6 +14,8 @@ The input is an arbitrary actual raw family, including the external
 parameter at each recursive leaf. The equation concerns the constructed
 polynomial morphism and the constructed literal family constructor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

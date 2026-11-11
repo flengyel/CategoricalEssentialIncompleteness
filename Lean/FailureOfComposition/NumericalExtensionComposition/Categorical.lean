@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.RETheory
-import FailureOfComposition.NumericalProductProofs.Typed
-import FailureOfComposition.TypedChoice
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.RETheory
+public import FailureOfComposition.NumericalProductProofs.Typed
+public import FailureOfComposition.TypedChoice
 
 /-!
 # The composed B1(7) rules in the typed program category
@@ -20,6 +22,8 @@ The first conclusion is only definedness: it does not choose a standard
 output of `o`.  The second conclusion consumes separately supplied proofs of
 the two component values.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

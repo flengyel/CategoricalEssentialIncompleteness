@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerAxiomSubobjects
-import CategoricalEssentialIncompleteness.RestrictionSpans
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerAxiomSubobjects
+public import CategoricalEssentialIncompleteness.RestrictionSpans
 
 /-! # External formula-word axioms on an actual sentence pullback
 
@@ -13,6 +15,8 @@ inverse is the already constructed partial inverse of a total mono.
 The resulting finite-support lift returns the unique sentence point
 over each formula word, and is guarded by that finite word support.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -122,7 +126,7 @@ theorem imageCodes_of_sentence_codes (s : S ⟶ (Syntax.predicateFunctor P).obj 
   rw [imageCodes_inclusion]
   exact Set.inter_eq_left.mpr hΓS
 
-private theorem wordProjection_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
+theorem wordProjection_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
     (Γ : Set ℕ) (hΓ : Uniform.Enumerable P (· ∈ Γ)) (x w : ℕ)
     (hw : w ∈ Total.val (inclusion s Γ hΓ ≫ s).hom x) :
     w ∈ Total.support (AxiomSubobjects.axiomIdem P Fm Γ hΓ) := by
@@ -152,7 +156,7 @@ theorem wordProjection_square (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
   exact (Total.intoSubcarrier_fac (inclusion s Γ hΓ ≫ s).hom
     (AxiomSubobjects.axiomIdem P Fm Γ hΓ) (wordProjection_supported s Γ hΓ)).symm
 
-private theorem cone_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
+theorem cone_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
     (Γ : Set ℕ) (hΓ : Uniform.Enumerable P (· ∈ Γ))
     {Z : Total.TotalCategory P} (f : Z ⟶ S) (g : Z ⟶ AxiomSubobjects.axCarrier P Fm Γ hΓ)
     (he : f ≫ s = g ≫ AxiomSubobjects.axiomInclusion P Fm Γ hΓ)
@@ -222,12 +226,12 @@ instance finiteFormulaInclusion_mono (s : S ⟶ (Syntax.predicateFunctor P).obj 
   AxiomSubobjects.finiteIntoSentence_mono P Fm L
     (fun w hw => AxiomSubobjects.imageCodes_sentence s w (hLS w hw))
 
-private def finiteToSentenceValue (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
+def finiteToSentenceValue (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
     (L : List ℕ) (hLS : ∀ w ∈ L,w ∈ AxiomSubobjects.imageCodes s) :
     ((Syntax.predicateFunctor P).obj (finiteCarrier L)).obj ⟶ S.obj :=
   (finiteFormulaInclusion s L hLS).hom ≫ PartialSpans.inverse s
 
-private theorem finiteToSentenceValue_graph (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
+theorem finiteToSentenceValue_graph (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
     (L : List ℕ) (hLS : ∀ w ∈ L,w ∈ AxiomSubobjects.imageCodes s) (w x : ℕ) :
     x ∈ Total.val (finiteToSentenceValue s L hLS) w ↔ w ∈ L ∧ w ∈ Total.val s.hom x := by
   change x ∈ Total.val ((finiteFormulaInclusion s L hLS).hom ≫ PartialSpans.inverse s) w ↔ _
@@ -281,7 +285,7 @@ instance finiteToSentence_mono (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [M
     apply (cancel_mono (finiteToSentence s L hLS).hom).mp
     exact congrArg (fun k => k.hom) he⟩
 
-private theorem finiteLift_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
+theorem finiteLift_supported (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) [Mono s]
     (Γ : Set ℕ) (hΓ : Uniform.Enumerable P (· ∈ Γ)) (L : List ℕ)
     (hLΓ : ∀ w ∈ L,w ∈ Γ) (hLS : ∀ w ∈ L,w ∈ AxiomSubobjects.imageCodes s)
     (w x : ℕ) (hx : x ∈ Total.val (finiteToSentence s L hLS).hom w) :
@@ -387,7 +391,7 @@ theorem pulled_given_support (x : ℕ) :
     exact ⟨w,hw,b,(Total.mem_val_comp _ _ b w).mpr ⟨x,hb,hw⟩⟩
 
 omit [Mono a] in
-private theorem given_supported (b x : ℕ) (hx : x ∈ Total.val a.hom b) :
+theorem given_supported (b x : ℕ) (hx : x ∈ Total.val a.hom b) :
     x ∈ Total.support (pulledIdem s (givenCodes s a) (givenCodes_enumerable s a)) :=
   (pulled_given_support s a x).mpr (by rw [Total.support_range]; exact ⟨b,hx⟩)
 
@@ -476,26 +480,26 @@ theorem given_subobject_eq :
     Subobject.mk a = Subobject.mk (inclusion s (givenCodes s a) (givenCodes_enumerable s a)) :=
   Subobject.mk_eq_mk_of_comm _ _ (givenPresentation s a) (givenPresentation_inclusion s a)
 
-private def imageForward : Total.imageObject a ⟶
+def imageForward : Total.imageObject a ⟶
     axCarrier s (givenCodes s a) (givenCodes_enumerable s a) :=
   AxiomSubobjects.supportInclusion (Total.imageObject a)
     (axCarrier s (givenCodes s a) (givenCodes_enumerable s a))
     (fun x hx => (pulled_given_support s a x).mpr hx)
 
-private def imageBackward : axCarrier s (givenCodes s a) (givenCodes_enumerable s a) ⟶
+def imageBackward : axCarrier s (givenCodes s a) (givenCodes_enumerable s a) ⟶
     Total.imageObject a :=
   AxiomSubobjects.supportInclusion (axCarrier s (givenCodes s a) (givenCodes_enumerable s a))
     (Total.imageObject a) (fun x hx => (pulled_given_support s a x).mp hx)
 
 omit [Mono a] in
-private theorem imageForward_graph (x y : ℕ) :
+theorem imageForward_graph (x y : ℕ) :
     y ∈ Total.val (imageForward s a).hom x ↔ x ∈ Total.support (Ranges.range a.hom) ∧ y=x :=
   AxiomSubobjects.supportInclusion_graph (Total.imageObject a)
     (axCarrier s (givenCodes s a) (givenCodes_enumerable s a))
     (fun x hx => (pulled_given_support s a x).mpr hx) x y
 
 omit [Mono a] in
-private theorem imageBackward_graph (x y : ℕ) :
+theorem imageBackward_graph (x y : ℕ) :
     y ∈ Total.val (imageBackward s a).hom x ↔
       x ∈ (axCarrier s (givenCodes s a) (givenCodes_enumerable s a)).obj.support ∧ y=x :=
   AxiomSubobjects.supportInclusion_graph

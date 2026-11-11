@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
 
 /-! # Constructor-compatible literal numerical tree charts
 
@@ -11,6 +13,8 @@ The coefficient-identity transport in mappedPlainPostfixData is eliminated
 by equality induction on the complete algebra, including its structure map.
 The resulting one-sort chart uses the actual plain postfix predicate.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

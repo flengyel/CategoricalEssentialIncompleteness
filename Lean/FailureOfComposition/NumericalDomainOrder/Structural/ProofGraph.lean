@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Structural.Codes
-import FailureOfComposition.NumericalProductProofs.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Structural.Codes
+public import FailureOfComposition.NumericalProductProofs.Structural.ProofGraph
 
 /-!
 # Exact proof graph for the domain-order presentation
@@ -14,6 +16,8 @@ single domain-order leaf.  Its standard-natural-number theorem identifies the
 resulting structural graph with the executable `Proof_T` predicate, including
 malformed proof and formula codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

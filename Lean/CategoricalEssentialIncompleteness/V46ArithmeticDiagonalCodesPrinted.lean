@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
-import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
+public import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
 
 /-! # The chosen diagonal in exponential-product and parity coordinates -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

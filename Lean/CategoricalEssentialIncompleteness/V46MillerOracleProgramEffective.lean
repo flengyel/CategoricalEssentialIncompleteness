@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerOracleProgram
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgram
 
 /-! # Effective finite halting cylinders and ordinary input specialization -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -212,9 +216,9 @@ private theorem universalTransition_partrec : Partrec universalTransition :=
       (Computable.snd.comp (Computable.unpair.comp (Computable.fst.comp Computable.unpair)))
       (Computable.snd.comp Computable.unpair))
 
-/-- One universal ORACLE interpreter, implemented by ordinary transition
+/-- A universal oracle interpreter, implemented by ordinary transition
 code. The simulated program number remains part of the numerical input. -/
-def universalCode : Code := Classical.choose (Nat.Partrec.Code.exists_code.mp
+@[no_expose] def universalCode : Code := Classical.choose (Nat.Partrec.Code.exists_code.mp
   (Partrec.nat_iff.mp universalTransition_partrec))
 
 theorem universalCode_transition (e : Code) (n s : ℕ) :

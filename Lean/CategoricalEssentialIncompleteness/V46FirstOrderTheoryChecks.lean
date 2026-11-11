@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46FirstOrderTheory
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46FirstOrderTheory
 
 /-! Theorem A.6 uses the actual scheme morphisms, not an unspecified logical map. -/
+
+@[expose] public section
 
 noncomputable section
 

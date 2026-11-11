@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ExponentialPairing
-import Mathlib.Computability.Primrec.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46ExponentialPairing
+public import Mathlib.Computability.Primrec.Basic
 
 /-! # A primitive-recursion certificate for the printed product pairing -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

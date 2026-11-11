@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46RecursiveUltrapowerComparison
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46RecursiveUltrapowerComparison
 
 /-! Literal chosen domains and their comparison on recursively interpreted carriers. -/
+
+@[expose] public section
 
 noncomputable section
 

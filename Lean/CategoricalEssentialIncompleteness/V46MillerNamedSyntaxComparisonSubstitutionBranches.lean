@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionQuantifier
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionQuantifier
 
 /-! # Every nonquantified branch of the actual named substitution fold
 
@@ -6,6 +13,8 @@ The two recursive term results are transported separately. Formula failures
 are transported by the constructed option comparison, rather than being
 replaced by a total substitution operation.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

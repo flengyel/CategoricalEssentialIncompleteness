@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalRangeProofs.Structural.Preservation
-import FailureOfComposition.TypedRanges
+module
+
+public import FailureOfComposition.NumericalRangeProofs.Structural.Preservation
+public import FailureOfComposition.TypedRanges
 
 /-!
 # The range proof map at typed representatives
@@ -17,6 +19,8 @@ indices have been fixed.  The effective selector from `q` to a range index
 required by the manuscript's uniform B1 statement is not proved here and
 remains a separate obligation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

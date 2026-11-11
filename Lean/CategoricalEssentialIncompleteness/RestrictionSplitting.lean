@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionRanges
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionRanges
 
 /-! # The restriction splitting and preservation of inseparability -/
+
+@[expose] public section
 
 universe v u
 

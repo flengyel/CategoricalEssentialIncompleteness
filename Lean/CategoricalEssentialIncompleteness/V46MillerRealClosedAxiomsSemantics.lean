@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
-import Mathlib.FieldTheory.IsRealClosed.Basic
-import Mathlib.Analysis.Polynomial.Order
-import Mathlib.Analysis.Real.Sqrt
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
+public import Mathlib.FieldTheory.IsRealClosed.Basic
+public import Mathlib.Analysis.Polynomial.Order
+public import Mathlib.Analysis.Real.Sqrt
 
 /-! # Literal field-axiom semantics and the actual real model of T_a
 
@@ -10,6 +17,8 @@ IsRealClosed class. Its real-number instance is constructed below from
 the proved real polynomial sign theorems and square roots. No truth
 assumption is made for a consistent extension of the word axiom set.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedAxioms.Semantics

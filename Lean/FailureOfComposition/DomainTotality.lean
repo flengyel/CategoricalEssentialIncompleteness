@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ConcreteWeakTotality
-import FailureOfComposition.SigmaOneRealization
+module
+
+public import FailureOfComposition.ConcreteWeakTotality
+public import FailureOfComposition.SigmaOneRealization
 
 /-!
 The domain partial identity and the manuscript's index formulation of R totality.
 The chosen domain program satisfies its graph equation in PA, so all following
 pointwise statements quantify over the fixed evaluator's natural-number indices.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

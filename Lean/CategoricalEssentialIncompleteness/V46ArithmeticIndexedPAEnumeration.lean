@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationInduction
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationInduction
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
 
 /-! # A chosen actual Σ₁ PA-axiom enumeration and every indexed PA extension
 
@@ -14,6 +16,8 @@ matrices under finite universal closure. Their equivalence with the
 canonical-closure generating condition is already proved by
 extendsPA_iff_canonical. This construction does not enumerate all PA theorems.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

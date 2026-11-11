@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticNullaryRules
-import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
-import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticNullaryRules
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
 
 /-! # Actual arithmetic rule-label and finite-proof relabellings -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -58,7 +62,7 @@ theorem labelBackward_graph (Γ : Carrier) (i : Fin 3) (n k : ℕ) :
           ((labelIso Γ i).inv.toFun x).val = k :=
   (labelIso Γ i).inv.restrictedProgram_graph n k
 
-private theorem restricted_inverse {C D : NumericalTuples.Object} (e : C ≅ D)
+theorem restricted_inverse {C D : NumericalTuples.Object} (e : C ≅ D)
     (x : NumericalTuples.Point C) :
     (e.hom.restrictedProgram (NumericalTuples.code C.dimension x.val)).bind e.inv.restrictedProgram =
       Part.some (NumericalTuples.code C.dimension x.val) := by
@@ -224,7 +228,7 @@ theorem branch_constructor (Γ : Carrier) (i : Fin 3) :
   have h := congrArg (fun k => (proofIso Γ).inv ≫ k) (proof_conclusion Γ)
   simpa only [← CategoryTheory.Category.assoc,Iso.inv_hom_id,CategoryTheory.Category.id_comp] using h.symm
 
-private def inverseInputMap {F G L L' X Y : NumericalTuples.Object} (n : ℕ)
+def inverseInputMap {F G L L' X Y : NumericalTuples.Object} (n : ℕ)
     (e : F ≅ G) (rho : L ≅ L') (gamma : X ≅ Y)
     (p : L ⟶ finitePower F n) (q : X ⟶ F)
     (p' : L' ⟶ finitePower G n) (q' : Y ⟶ G)

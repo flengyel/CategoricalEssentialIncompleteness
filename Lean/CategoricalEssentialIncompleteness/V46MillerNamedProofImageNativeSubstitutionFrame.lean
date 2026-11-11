@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
 
 /-! # Finite polynomial inputs at a fixed uniform parameter
 
@@ -8,6 +15,8 @@ Coefficients remain points of their original objects. Realization uses
 ordered products and coproduct injections and commutes with the actual
 polynomial action on morphisms, including powers and arity zero.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

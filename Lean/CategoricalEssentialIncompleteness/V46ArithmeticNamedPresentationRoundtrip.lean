@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationAlpha
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationAlpha
 
 /-! # Native proof-equivalence for the given named presentation
 
@@ -11,6 +13,8 @@ The statement ranges over every original named formula, including arbitrary
 repeated binders and implication/negation words. Its conclusion is an actual
 proof of equivalence in the seven-scheme native Hilbert calculus.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation

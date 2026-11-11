@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportCapture
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportCapture
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
 
 /-! The quantified substitution branch commutes with the equivalence.
 The equal-name branch is transported as the original quantified body,
 independently of the recursive body's option-valued result. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

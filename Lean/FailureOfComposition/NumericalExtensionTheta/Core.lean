@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Core
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Core
 
 /-!
 # Numerical proof transformations for the B1(8) theta computation
@@ -22,6 +24,8 @@ where `H(q,t,i)` is the graph tag for `thetaIndex q` at `(pair(t,i),i)`.
 The presentation and both proof transformations below are numerical: all
 displayed parameters are external natural numbers.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -135,23 +139,23 @@ theorem primrec_componentAndCheckerToThetaAxiomCode :
 
 /-! ## Exact primitive-recursive recognition -/
 
-private def thetaTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
+def thetaTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
   x.getD j 0
 
 private theorem primrec_thetaTokenAt (j : ℕ) :
     Primrec (thetaTokenAt j) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const j)
 
-private def recoveredThetaProgram (x : FormulaString) : ℕ :=
+def recoveredThetaProgram (x : FormulaString) : ℕ :=
   thetaTokenAt 1 (lhsString x)
 
-private def recoveredThetaInput (x : FormulaString) : ℕ :=
+def recoveredThetaInput (x : FormulaString) : ℕ :=
   thetaTokenAt 2 (lhsString x)
 
-private def recoveredThetaComponent (x : FormulaString) : ℕ :=
+def recoveredThetaComponent (x : FormulaString) : ℕ :=
   thetaTokenAt 3 (lhsString x)
 
-private def recoveredThetaParameter (x : FormulaString) : ℕ :=
+def recoveredThetaParameter (x : FormulaString) : ℕ :=
   thetaTokenAt 3 (rhsString (rhsString x))
 
 private theorem primrec_recoveredThetaProgram :
@@ -199,7 +203,7 @@ private theorem primrec_recoveredThetaParameter :
   simp [recoveredThetaParameter, componentAndCheckerToThetaAxiomString,
     thetaInstanceString, thetaTokenAt, rightInstanceString]
 
-private def componentAndCheckerToThetaAxiomCandidate
+def componentAndCheckerToThetaAxiomCandidate
     (x : FormulaString) : FormulaString :=
   componentAndCheckerToThetaAxiomString (recoveredThetaProgram x)
     (recoveredThetaInput x) (recoveredThetaComponent x)

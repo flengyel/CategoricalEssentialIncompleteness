@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticSyntax
-import CategoricalEssentialIncompleteness.ArithmeticFormulaSubstitution
-import CategoricalEssentialIncompleteness.NumericalTotalProducts
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticSyntax
+public import CategoricalEssentialIncompleteness.ArithmeticFormulaSubstitution
+public import CategoricalEssentialIncompleteness.NumericalTotalProducts
 
 /-!
 # Numerical substitution of arithmetic formulas
@@ -15,6 +17,8 @@ returns the index of the resulting sentence. Its numerical arrow is total.
 Precomposing its first coordinate with a total numerical arrow gives the
 two-variable substitution map used in the representation equations.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

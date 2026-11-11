@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.CodedObjectMembership
-import FailureOfComposition.SigmaOneRealization
-import FailureOfComposition.UniformIndexQuotient
-import Mathlib.CategoryTheory.Category.Basic
+module
+
+public import FailureOfComposition.CodedObjectMembership
+public import FailureOfComposition.SigmaOneRealization
+public import FailureOfComposition.UniformIndexQuotient
+public import Mathlib.CategoryTheory.Category.Basic
 
 /-!
 # The typed program category obtained from coded-object restrictions
@@ -23,6 +25,8 @@ with the accepted `Nat.Partrec.Code` numbering; no comparison with the
 manuscript's category `S_T`, categorical product or coproduct law, range,
 restriction-category structure, or numbering translation is asserted here.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

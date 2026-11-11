@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsModels
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsUltrapower
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsModels
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsUltrapower
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
 
 /-! # Diagonal bounds from derivability of the actual named PA axioms
 
@@ -13,6 +15,8 @@ The extension hypothesis is the native PA arithmetic/order and induction
 scheme with finite universal closure. Its comparison with source PA
 axioms is a proved theorem, not an additional premise of these results.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

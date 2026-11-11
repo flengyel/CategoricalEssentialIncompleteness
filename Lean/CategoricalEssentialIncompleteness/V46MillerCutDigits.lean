@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
-import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
+public import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
 
 /-! # The actual first-digit separator of the two coordinate cuts
 
@@ -12,6 +14,8 @@ One fixed finite-table program reads the first binary digit of coordinate n.
 Its output is total for every binary oracle. The decided set can depend on
 the oracle at dyadic coordinates; no representation independence is imposed.
 -/
+
+@[expose] public section
 noncomputable section
 
 open CategoryTheory CategoryTheory.RestrictionCategory
@@ -104,7 +108,7 @@ private theorem decisionTable_monotone : OracleComputation.MonotoneValues decisi
     ⟨b,OracleProgram.tableOracle_mono h (Nat.pair n 0) b hb,hby⟩
 
 /-- This one ordinary program index is chosen before every binary oracle. -/
-def decisionIndex : ℕ := encode (OracleProgram.ofTable decisionTable decisionTable_partrec)
+@[no_expose] def decisionIndex : ℕ := encode (OracleProgram.ofTable decisionTable decisionTable_partrec)
 
 theorem decisionIndex_eval (p : Bits) (n : ℕ) :
     OracleProgram.numberedEval decisionIndex p n = Part.some (decision p n) := by

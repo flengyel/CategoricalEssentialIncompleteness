@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
-import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
-import CategoricalEssentialIncompleteness.V46FirstOrderTheory
-import CategoricalEssentialIncompleteness.V46SentenceTheoryClosure
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
+public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
+public import CategoricalEssentialIncompleteness.V46FirstOrderTheory
+public import CategoricalEssentialIncompleteness.V46SentenceTheoryClosure
 
 /-! # Actual generated first-order theories in the Miller total splitting
 
@@ -16,6 +18,8 @@ and binary inference rules are instantiated with every supplied axiom
 subobject. Initiality is supplied by the constructed arbitrary-rule
 algebra, not by an additional assumption.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel
-import CategoricalEssentialIncompleteness.V46NumericalCoordinatesPresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel
+public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesPresentation
 
 /-! # The computable identity-on-word signature chart -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -59,14 +63,14 @@ def wordObject (formula : Bool) (σ π : ℕ → Carrier) (d : ℕ) : NumericalT
     (Postfix.plainCarrier formula (termPolynomial σ d) (formulaPolynomial π d) : PredicateCategory 𝗧𝗔)
 
 include h j in
-private theorem membership (b : Bool) (n : ℕ) :
+theorem membership (b : Bool) (n : ℕ) :
     (Postfix.plainCarrier b (termPolynomial σ d) (formulaPolynomial π d)).val.Evalb ![n] ↔
       (Postfix.plainCarrier b (termPolynomial τ d) (formulaPolynomial ρ d)).val.Evalb ![n] := by
   cases b
   · exact term_membership h n
   · exact formula_membership h j n
 
-private def predicateWordIso (C D : PredicateCategory 𝗧𝗔)
+def predicateWordIso (C D : PredicateCategory 𝗧𝗔)
     (hm : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n]) :
     NumericalCoordinates.predicateObject C ≅ NumericalCoordinates.predicateObject D where
   hom :=
@@ -78,12 +82,12 @@ private def predicateWordIso (C D : PredicateCategory 𝗧𝗔)
   hom_inv_id := NumericalTuples.Map.ext rfl
   inv_hom_id := NumericalTuples.Map.ext rfl
 
-private theorem predicateWordIso_hom_value (C D : PredicateCategory 𝗧𝗔)
+theorem predicateWordIso_hom_value (C D : PredicateCategory 𝗧𝗔)
     (hm : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n])
     (x : NumericalTuples.Point (NumericalCoordinates.predicateObject C)) :
     ((predicateWordIso C D hm).hom.toFun x).val = x.val := rfl
 
-private theorem predicateWordIso_inv_value (C D : PredicateCategory 𝗧𝗔)
+theorem predicateWordIso_inv_value (C D : PredicateCategory 𝗧𝗔)
     (hm : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n])
     (x : NumericalTuples.Point (NumericalCoordinates.predicateObject D)) :
     ((predicateWordIso C D hm).inv.toFun x).val = x.val := rfl

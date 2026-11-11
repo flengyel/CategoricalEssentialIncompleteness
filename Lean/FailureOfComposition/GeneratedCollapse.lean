@@ -17,6 +17,8 @@ sentence collapses it once extensional containment has been established.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationInitial
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
-import CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationInitial
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
+public import CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps
+public import Mathlib.Tactic.FinCases
 
 /-! # The derivation universal property in the literal numerical diagram category
 
@@ -14,6 +16,8 @@ The explicit unary equivalence retains the old scalar proof and formula
 coordinates. The existing generic inference transport constructs the
 premise-pullback and algebra comparisons from the coefficient diagrams.
 -/
+
+@[expose] public section
 noncomputable section
 universe u₁ u₂ v₁ v₂
 set_option backward.isDefEq.respectTransparency false
@@ -157,7 +161,7 @@ private theorem power_two :
     prod.map (𝟙 (realization.obj sentenceObject)) (𝟙 (realization.obj sentenceObject)) = _
   rw [prod.map_id_id,Category.comp_id]
 
-private theorem coefficient_premises (a b : Idem EffectiveFork.V) (i : Fin 3) :
+theorem coefficient_premises (a b : Idem EffectiveFork.V) (i : Fin 3) :
     realization.map ((ForkDerivation.rules a b).premises i) ≫
         (ArithmeticIndexedFibers.InferenceTransport.power equivalence sentenceObject i.val).hom =
       (coefficientIso a b i).hom ≫ (rules a b).premises i := by
@@ -170,7 +174,7 @@ private theorem coefficient_premises (a b : Idem EffectiveFork.V) (i : Fin 3) :
     rw [power_two]
     exact map_binary_premise realization sentenceObject ForkDerivation.implication
 
-private theorem coefficient_conclusion (a b : Idem EffectiveFork.V) (i : Fin 3) :
+theorem coefficient_conclusion (a b : Idem EffectiveFork.V) (i : Fin 3) :
     realization.map ((ForkDerivation.rules a b).conclusion i) =
       (coefficientIso a b i).hom ≫ (rules a b).conclusion i := by
   fin_cases i

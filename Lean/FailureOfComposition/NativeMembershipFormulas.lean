@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyApplications
+module
+
+public import FailureOfComposition.NativeFamilyApplications
 
 /-!
 # Native membership and totality assembly formulas
@@ -14,6 +16,8 @@ Membership existentially quantifies an output index and a native equality
 proof. The fixed schemas assemble totality and these existential witnesses
 inside derivations; their later applications consume proofs, not model truth.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

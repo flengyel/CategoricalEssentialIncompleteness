@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonEquality
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonInduction
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonEquality
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonInduction
 
 /-! # Concrete source PA admissibility for the literal named enumeration -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedAxiomComparison
 open NamedArithmeticSignature

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ClassicalSplitMaps
-import CategoricalEssentialIncompleteness.ArithmeticSyntax
-import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
+module
+
+public import CategoricalEssentialIncompleteness.ClassicalSplitMaps
+public import CategoricalEssentialIncompleteness.ArithmeticSyntax
+public import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
 
 /-! # Sentence and finite-proof objects in `Split(Rec)`
 
@@ -14,6 +16,8 @@ Craig axioms carry finite enumeration witnesses. The proof carrier is kept
 distinct from raw original-theory proof codes; the comparison below identifies
 its conclusion range exactly with the original theory's theorem codes.
 -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionSplitting
-import CategoricalEssentialIncompleteness.LocalSwitch
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionSplitting
+public import CategoricalEssentialIncompleteness.LocalSwitch
 
 /-! # Every restriction idempotent splits in the restriction splitting -/
+
+@[expose] public section
 
 universe v u
 

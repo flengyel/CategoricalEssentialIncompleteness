@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkCosheafCondition
+module
+
+public import CategoricalEssentialIncompleteness.ForkCosheafCondition
 
 /-! # The cosheaf axiom is exactly the empty value and whole-space pushout -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.PCat
+module
+
+public import PCats.PCat
 
 /-!
 # The erratum to Lemma 24 and Claim 25
@@ -29,6 +31,8 @@ component comparison used below is `eq_partialPairing_of_proj`; only totality of
 Corollary B(i) is `PCategory.diag_assoc`, already proved in `PCats.PCat`, where
 it is what makes `rst_comm'` go through.
 -/
+
+@[expose] public section
 
 universe v u
 

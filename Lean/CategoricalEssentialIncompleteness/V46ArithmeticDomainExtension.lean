@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDomainSplitting
-import CategoricalEssentialIncompleteness.V46ArithmeticLiteralCoordinates
-import CategoricalEssentialIncompleteness.SyntacticPreservation
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDomainSplitting
+public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralCoordinates
+public import CategoricalEssentialIncompleteness.SyntacticPreservation
 
 /-! # The explicit chosen-domain extension used in the arithmetic comparison
 
 The extension splits each interpreted idempotent through its actual fixed
 points. On total morphisms it is the existing canonical domain functor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

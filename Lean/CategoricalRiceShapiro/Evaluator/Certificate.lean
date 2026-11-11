@@ -32,6 +32,8 @@ concerns first-success minimality or standard-model semantics.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxTrace
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSimulation
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxTrace
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSimulation
 
 /-! # The actual uniform evaluator preserves the original parser skeleton
 
@@ -12,6 +14,8 @@ The simulation is numerical and uses no definability condition on algebra
 operations. A literal successful parser output forces exactly one value
 of the same sort; it cannot be an error or an unrelated value stack.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

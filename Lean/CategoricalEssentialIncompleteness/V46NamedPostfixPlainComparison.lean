@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixSemantics
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixSemantics
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # Standard named trees in the actual plain categorical syntax
 
 The comparison uses the proved constructor-preserving plain-parser
 isomorphism. Its action fixes the literal numerical word.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

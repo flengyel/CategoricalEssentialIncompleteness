@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSentenceMorphism
-import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
-import CategoricalEssentialIncompleteness.V46SyntacticOmegaRealization
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSentenceMorphism
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
+public import CategoricalEssentialIncompleteness.V46SyntacticOmegaRealization
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
 
 /-! The sentence morphism on the identity omega splitting. Its numerical
 coordinates follow from its proved source graph in every PA model. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

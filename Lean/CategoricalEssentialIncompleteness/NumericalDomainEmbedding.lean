@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalSupportLattice
-import CategoricalEssentialIncompleteness.NumericalDomainReindexing
+module
+
+public import CategoricalEssentialIncompleteness.NumericalSupportLattice
+public import CategoricalEssentialIncompleteness.NumericalDomainReindexing
 
 /-!
 # The natural numerical domain embedding
@@ -13,6 +15,8 @@ The support inclusion of a restriction idempotent defines a PER subobject.
 The embedding preserves the bounded lattice operations and commutes with
 inverse image along total numerical arrows.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

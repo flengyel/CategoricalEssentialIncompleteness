@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEmbedding
-import CategoricalEssentialIncompleteness.PERProducts
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEmbedding
+public import CategoricalEssentialIncompleteness.PERProducts
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
 /-!
 # Numerical binary products and their preservation
@@ -15,6 +17,8 @@ recursive. Its total projections form a categorical product. An explicit
 isomorphism identifies its image under J with the product of equality PERs,
 and J preserves all binary products.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

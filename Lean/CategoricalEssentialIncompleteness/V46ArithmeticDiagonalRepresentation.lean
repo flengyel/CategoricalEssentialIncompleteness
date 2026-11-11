@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal
 
 /-! # The printed diagonal representation on the proper sentence object
 
@@ -13,6 +15,8 @@ The sentence theory is the range of the actual realized Γ-conclusion map.
 The two inverse-image bounds use the canonical splitting-domain extension,
 and the code model is any structure elementarily equivalent to ℕ.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

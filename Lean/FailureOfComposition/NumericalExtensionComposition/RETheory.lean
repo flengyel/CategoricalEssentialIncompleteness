@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Soundness
-import FailureOfComposition.NumericalExtensionComposition.Structural.Preservation
-import FailureOfComposition.NumericalExtensionProofs.RETheory
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Soundness
+public import FailureOfComposition.NumericalExtensionComposition.Structural.Preservation
+public import FailureOfComposition.NumericalExtensionProofs.RETheory
 
 /-!
 # Composed B1(7) proof maps for recursively enumerable theories
@@ -17,6 +19,8 @@ records exact proof-existence correspondences for the mixed equality tag
 `X`.  The closed preservation sentences are proved first in PA and then
 lifted to the selected theory.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

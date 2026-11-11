@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
-import CategoricalEssentialIncompleteness.V46PartialMapRanges
-import CategoricalEssentialIncompleteness.EffectiveForkConstruction
-import CategoricalEssentialIncompleteness.EffectiveForkRegular
-import CategoricalEssentialIncompleteness.EffectiveForkRangeProducts
+module
+
+public import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
+public import CategoricalEssentialIncompleteness.V46PartialMapRanges
+public import CategoricalEssentialIncompleteness.EffectiveForkConstruction
+public import CategoricalEssentialIncompleteness.EffectiveForkRegular
+public import CategoricalEssentialIncompleteness.EffectiveForkRangeProducts
 
 /-! # Actual monic spans and total base change of effective fork ranges -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

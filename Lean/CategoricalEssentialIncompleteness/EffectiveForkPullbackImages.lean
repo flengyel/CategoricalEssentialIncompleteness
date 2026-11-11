@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkLimits
-import CategoricalEssentialIncompleteness.EffectiveForkEvaluation
-import CategoricalEssentialIncompleteness.EnumerablePullbackImages
-import Mathlib.CategoryTheory.Limits.FunctorCategory.Basic
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkLimits
+public import CategoricalEssentialIncompleteness.EffectiveForkEvaluation
+public import CategoricalEssentialIncompleteness.EnumerablePullbackImages
+public import Mathlib.CategoryTheory.Limits.FunctorCategory.Basic
 
 /-! # Component evaluation preserves total pullbacks and images are stable -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

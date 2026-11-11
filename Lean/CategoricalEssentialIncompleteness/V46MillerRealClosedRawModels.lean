@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedRawOrderedField
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawOrderedField
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
 
 /-! # Unstructured named models of the actual recursive RCF axioms
 
@@ -9,6 +16,8 @@ constructor/lt diagrams identify the interpretations, and the actual
 positive-square and odd-Horner schemes prove real closure. No field or
 order instance is an input of the final model characterization.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedRaw
 open OrderedFieldSyntax RealClosedAxioms

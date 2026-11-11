@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
-import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransportComponents
-import CategoricalEssentialIncompleteness.V46SyntaxOptionConstructorTransport
-import CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransportComponents
+public import CategoricalEssentialIncompleteness.V46SyntaxOptionConstructorTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport
 
 /-! Actual parameter and original/result carrier comparisons for named
 substitution. Recursive formula values use the option comparison. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonPreservation
-import FailureOfComposition.NativeNumeralProof
+module
+
+public import FailureOfComposition.NativeNumeralComparisonPreservation
+public import FailureOfComposition.NativeNumeralProof
 
 /-!
 # Canonical acceptance of constructed comparison proofs
@@ -14,6 +16,8 @@ constructor then gives a proof of its literal comparison target. The canonical
 native checker accepts that actual output code. The signed constructors have
 no comparison premise.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

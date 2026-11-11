@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Metamath.Feferman.MPSequence
-import Metamath.Feferman.ProofCode
+module
+
+public import Metamath.Feferman.MPSequence
+public import Metamath.Feferman.ProofCode
 
 /-!
 # Metamath
@@ -74,3 +76,5 @@ for no other: not for `proofList_mp`, not for the structural codec, not for
 pinned-Mathlib declarations the certificates are built from; some list
 `Classical.choice` and some do not.
 -/
+
+@[expose] public section

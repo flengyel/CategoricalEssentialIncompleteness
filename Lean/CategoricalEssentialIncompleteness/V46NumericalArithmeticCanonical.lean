@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
 
 /-! # The numerical presentation of the actual canonical arithmetic interpretation -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory

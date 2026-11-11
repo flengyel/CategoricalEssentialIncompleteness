@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainLogicalValidity
-import CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth
-import CategoricalEssentialIncompleteness.V46FirstOrderModelSoundness
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainLogicalValidity
+public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth
+public import CategoricalEssentialIncompleteness.V46FirstOrderModelSoundness
 
 /-! # Soundness of the constructed standard sentence derivations -/
+
+@[expose] public section
 
 universe w
 noncomputable section

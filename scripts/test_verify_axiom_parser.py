@@ -8,7 +8,7 @@ from verify import parse_axiom_reports
 
 class AxiomReportParserTests(unittest.TestCase):
     def test_complete_names(self):
-        names = ["Example.ordinary", "Example.terminal'", "Example.inner'.value",
+        names = ["Example.ordinary", "X.foo'", "X.a'b", "Example.terminal'", "Example.inner'.value",
                  "Example.inner'.terminal''"]
         for name in names:
             with self.subTest(name=name):
@@ -26,6 +26,11 @@ class AxiomReportParserTests(unittest.TestCase):
         self.assertEqual(parse_axiom_reports(text), {
             "Example.value": ["propext"], "Example.value'": [],
             "Example.inner'.value": ["Quot.sound"]})
+
+    def test_lake_message_prefix(self):
+        self.assertEqual(parse_axiom_reports(
+            "info: Example.lean:1:0: 'X.a'b' depends on axioms: [propext,\n"
+            " Classical.choice]\n"), {"X.a'b": ["Classical.choice", "propext"]})
 
     def test_unexpected_axioms_are_rejected(self):
         with self.assertRaisesRegex(RuntimeError, "Unexpected axioms in Example.bad'"):

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.BooleanQuotients
+module
+
+public import CategoricalEssentialIncompleteness.BooleanQuotients
 
 /-!
 # Consistency and completeness of Boolean presentations
@@ -11,6 +13,8 @@ import CategoricalEssentialIncompleteness.BooleanQuotients
 The bound fibers are subobjects, whereas the bound copairing is an arrow.
 This module proves the categorical comparison between these two descriptions.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

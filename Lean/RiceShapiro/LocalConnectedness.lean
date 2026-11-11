@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.GeneratedRepresentation
-import RiceShapiro.Decisions
+module
+
+public import RiceShapiro.GeneratedRepresentation
+public import RiceShapiro.Decisions
 
 /-!
 # Connected domains and local connectedness
@@ -36,6 +38,8 @@ The route through `complementedInvImage` is route (ii) of the manuscript, which
 is why the theorem assumes that every dense domain is total; no distributivity
 is used.
 -/
+
+@[expose] public section
 
 universe v u
 

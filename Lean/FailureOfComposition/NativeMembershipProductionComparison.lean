@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipTypedApplications
+module
+
+public import FailureOfComposition.NativeMembershipTypedApplications
 
 /-!
 # Standard membership comparison with the production checker
@@ -12,6 +14,8 @@ After existentially quantifying proof codes, Craig-native and production
 typed membership agree over natural numbers. This is neither an all-model
 comparison nor a primitive-recursive translation of proof witnesses.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 
 /-! # Native nodes in the actual parameter-word algebra
 
@@ -7,6 +14,8 @@ All points and point morphisms belong to the uniform target. The parameter
 chart is proved within that category. The input calculation retains the
 literal coefficient, name, summand tag, and ordered finite children.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

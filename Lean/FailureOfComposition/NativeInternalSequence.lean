@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalChecker
+module
+
+public import FailureOfComposition.NativeInternalChecker
 
 /-!
 # Finite-set encoding of Boolean histories
@@ -12,6 +14,8 @@ import FailureOfComposition.NativeInternalChecker
 index-bit pairs.  It is a comparison map into Foundation's HFS sequence
 representation, separate from Lean's encodable list representation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

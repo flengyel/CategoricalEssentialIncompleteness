@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveIndices
-import CategoricalEssentialIncompleteness.V46UniformTraceBuilders
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveIndices
+public import CategoricalEssentialIncompleteness.V46UniformTraceBuilders
 
 /-! # Native certificates for the actual composition and s-m-n index builders -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

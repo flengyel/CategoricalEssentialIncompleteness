@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
-import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
+public import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
 
 /-! # Actual ordinary rule-labelled tree algebra with uniform coefficients
 
@@ -14,6 +16,8 @@ object, including nullary rules. The literal constructor comparison is
 constructed before any initiality assertion. The base initiality proof
 is to be instantiated from the actual uniform syntax universal property.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

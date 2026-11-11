@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFold
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMapLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFold
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMapLaws
 
 /-! # The actual fold's ternary graphs are exactly the finite-record evaluators -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

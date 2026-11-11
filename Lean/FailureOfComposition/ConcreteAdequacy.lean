@@ -15,6 +15,8 @@ Standard-model adequacy of the concrete evaluator graph.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

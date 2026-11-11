@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnrichedDomains
-import CategoricalEssentialIncompleteness.NumericalPartialProducts
-import Mathlib.CategoryTheory.Limits.Types.Products
+module
+
+public import CategoricalEssentialIncompleteness.EnrichedDomains
+public import CategoricalEssentialIncompleteness.NumericalPartialProducts
+public import Mathlib.CategoryTheory.Limits.Types.Products
 
 /-!
 # Set-enrichment of the numerical restriction category
@@ -14,6 +16,8 @@ The hom-objects are the sets of extensional partial recursive arrows. Compositio
 restriction, and partial pairing act pointwise on families of arrows. Their
 equations give enriched restriction products and zeros over the category of types.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

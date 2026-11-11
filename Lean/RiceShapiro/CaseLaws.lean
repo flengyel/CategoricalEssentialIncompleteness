@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Unions
-import RiceShapiro.Decisions
+module
+
+public import PCats.Unions
+public import RiceShapiro.Decisions
 
 /-!
 # The case-distinction laws
@@ -28,6 +30,8 @@ coproducts, is not formalized.
 join equation alone. `case_law_zero` assumes it, for `(u_k r) ⊠ 1_X = 0` and
 for the meet equation of the complement.
 -/
+
+@[expose] public section
 
 universe v u
 

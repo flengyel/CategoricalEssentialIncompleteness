@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerDerivationWordInduction
-import CategoricalEssentialIncompleteness.V46FirstOrderInference
-import Mathlib.Tactic.FinCases
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInduction
+public import CategoricalEssentialIncompleteness.V46FirstOrderInference
+public import Mathlib.Tactic.FinCases
 
 /-! # First-order conclusion induction with arbitrary uniform axioms
 
@@ -8,6 +15,8 @@ This specializes the proved word-rank induction to the printed nullary,
 unary and ordered binary premise pullbacks. It makes no enumeration or
 decidability assumption on the external induction property.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

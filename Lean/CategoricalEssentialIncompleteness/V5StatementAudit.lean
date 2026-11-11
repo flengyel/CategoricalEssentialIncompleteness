@@ -1,6 +1,10 @@
-import CategoricalEssentialIncompleteness
+module
+
+public import CategoricalEssentialIncompleteness
 
 /-! Elaborated exported statements for the version 5 correspondence. -/
+
+@[expose] public section
 
 set_option pp.universes true
 set_option pp.explicit true

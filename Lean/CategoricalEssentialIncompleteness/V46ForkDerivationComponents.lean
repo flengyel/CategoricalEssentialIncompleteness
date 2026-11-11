@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationComponentsBase
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationComponentsBase
 
 /-! # Span naturality of the actual finite-rule inputs -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -99,7 +103,7 @@ theorem componentLabelTransition_conclusion (a b : Idem EffectiveFork.V)
     ← Category.assoc,← (componentTransition g).naturality,Category.assoc,component_formula_transition,
     ← Category.assoc,← component_rule_source_conclusion,Category.assoc]
 
-private theorem power_square {W X Y F G : NumericalTuples.Object} (n : ℕ)
+theorem power_square {W X Y F G : NumericalTuples.Object} (n : ℕ)
     (s : W ⟶ finitePower X n) (a : X ⟶ Y) (q₀ : X ⟶ F) (q₁ : Y ⟶ G) (f : F ⟶ G)
     (h : a ≫ q₁ = q₀ ≫ f) :
     (s ≫ finitePowerMap q₀ n) ≫ finitePowerMap f n =

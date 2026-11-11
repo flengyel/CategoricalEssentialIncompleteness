@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransport
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFamilyTransport
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
-import Mathlib.CategoryTheory.Limits.Over
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransport
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFamilyTransport
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
+public import Mathlib.CategoryTheory.Limits.Over
 
 /-! # Actual finite-geometry constant-family squares for Over.post
 
@@ -9,6 +16,8 @@ The functor is not assumed to be an equivalence. No preservation of syntax
 or list initiality is inferred. Only finite limits and coproducts are used
 in these structural diagrams.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

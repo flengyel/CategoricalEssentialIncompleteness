@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
-import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
-import CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
+public import CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate
 
 /-! # The literal numerical finite-rule tree constructor
 
@@ -13,6 +15,8 @@ The numerical input comparison is made from the ordered polynomial
 comparison and the actual tuple-code coefficient counits. Its value is
 the printed postfix constructor, with no comparison hypothesis.
 -/
+
+@[expose] public section
 noncomputable section
 universe v u
 set_option backward.isDefEq.respectTransparency false

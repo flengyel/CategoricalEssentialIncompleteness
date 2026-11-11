@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs
-import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs
+public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 
 /-! # The literal arithmetic sentence-proof word presentation
 
 The stored element is the original successful derivation word. Its
 conclusion and sentence witnesses are existential variables of the carrier.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -77,7 +81,7 @@ def conclusion (Γ : Carrier) : GraphMorphism 𝗣𝗔 (carrier Γ) sentences wh
     exact ((chosenGraph 𝗣𝗔 (formulaConclusion Γ)).total_model M p
       (((chosenGraph 𝗣𝗔 (formulaConclusion Γ)).support_model M p z hpz).1)).unique hpy hpz
 
-private theorem included (Γ : Carrier) :
+theorem included (Γ : Carrier) :
     𝗣𝗔 ⊢ inclusionSentence (carrier Γ) (allProofs Γ) := by
   apply complete.{0} 𝗣𝗔
   intro M _ _

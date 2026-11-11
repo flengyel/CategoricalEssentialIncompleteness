@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedGammaModel
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedGammaModel
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 
 /-! # Literal Gamma theorem/refutation disjointness from its semantic model
 
@@ -13,6 +15,8 @@ The arithmetic code model and semantic structure are separate. Predicate
 points are compared naturally with the canonical total-domain functor;
 chosen sentence codes are never identified with literal formula words.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

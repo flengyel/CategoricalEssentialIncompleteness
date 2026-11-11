@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Structural.ProofGraph
-import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Structural.ProofGraph
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
 
 /-!
 # Arithmetic graphs of the B1(8) proof transformations
@@ -14,6 +16,8 @@ The structural correctness theorems use the same theta proof graph for input
 and output predicates and therefore cover nonstandard proof and program-index
 codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

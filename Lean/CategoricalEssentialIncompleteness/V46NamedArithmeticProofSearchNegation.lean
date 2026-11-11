@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch
-import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch
+public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! # The printed primitive-recursive Neg extension and actual Γ refutation
 
@@ -15,6 +17,8 @@ given for an arbitrary raw polynomial and arbitrary typed model point.
 The arithmetic fixed-formula instance then uses its proved sentence range.
 No chosen sentence-point code is used in this comparison.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

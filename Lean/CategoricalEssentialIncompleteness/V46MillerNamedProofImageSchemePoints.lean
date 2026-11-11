@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImagePoints
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImagePoints
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
 
 /-! # Seven literal scheme witnesses in the actual uniform parameter objects -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

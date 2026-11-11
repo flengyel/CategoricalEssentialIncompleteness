@@ -21,6 +21,8 @@ enumerability or soundness assumption.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
 
 /-! Both recursive sorts and every coefficient label are compared categorically. -/
+
+@[expose] public section
 noncomputable section
 universe v₁ v₂ u₁ u₂ w
 open CategoryTheory CategoryTheory.Limits

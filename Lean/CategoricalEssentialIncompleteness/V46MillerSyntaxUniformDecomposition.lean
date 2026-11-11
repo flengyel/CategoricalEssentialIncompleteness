@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
 /-! # Decomposition with arbitrary uniform coefficient guards
 
@@ -8,6 +15,8 @@ Every actual coefficient guard is recovered from the root record, and all
 child guards are inherited from their literal subwords. The carrier keeps
 exactly the original numerical word coordinate.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

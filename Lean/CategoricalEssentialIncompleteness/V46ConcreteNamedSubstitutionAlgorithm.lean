@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
 
 /-! Literal named-variable substitution and its separately computed free-for
 flag. All functions are total on numbers; only source restrictions later assert
 that the input is a variable and the replacement and body have their types. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedAlgorithmDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

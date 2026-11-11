@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonSyntax
-import FailureOfComposition.NativeNumeralSeeds
+module
+
+public import FailureOfComposition.NativeNumeralComparisonSyntax
+public import FailureOfComposition.NativeNumeralSeeds
 
 /-!
 # Four comparison seeds
@@ -14,6 +16,8 @@ four sentences below. Matrices have reversed de Bruijn coordinates. Their
 operational specialization orders are `x,y,z,w`, `x,y,z`, and `x,y`.
 Both disequality seeds conclude `x ≠ y`; the reverse seed has premise `y < x`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

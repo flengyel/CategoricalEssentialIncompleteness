@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonSeeds
-import FailureOfComposition.NativeNumeralInstances
+module
+
+public import FailureOfComposition.NativeNumeralComparisonSeeds
+public import FailureOfComposition.NativeNumeralInstances
 
 /-!
 # Literal specialization of comparison seeds
@@ -13,6 +15,8 @@ Two-variable specialization first substitutes the outer variable `x`, then
 `y`. The remaining helpers retain the accepted three- and four-variable
 operational order. All formula identities below are identities of codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

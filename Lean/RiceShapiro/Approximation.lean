@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats
+module
+
+public import PCats
 
 /-!
 # Approximation data and extension spans
@@ -29,6 +31,8 @@ Stable countable unions are in `PCats.Unions` and `PCats.CountableUnions`,
 countable distributivity in `PCats.NCoproducts`, and countable extension
 families in `RiceShapiro.ExtensionFamilies`.
 -/
+
+@[expose] public section
 
 universe v u
 

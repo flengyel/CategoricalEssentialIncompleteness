@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedPolynomialRepresentation
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedPolynomialRepresentation
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # Constructor-preserving comparison with the original named PA syntax
 
@@ -13,6 +15,8 @@ The functor on predicates is only used with its proved finite-geometry
 comparison. Initiality in the larger uniform category is obtained from
 the actual uniform word algebra and its constructed constructor diagram.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -34,7 +38,7 @@ theorem mapped_structure (A : Endofunctor.Algebra (J₀)) :
       (FP).map A.str := by
   simp only [Syntax.Polynomial.mappedAlgebra,Iso.hom_inv_id_app_assoc]
 
-private theorem mappedHom_law {C D : Type*} [Category C] [Category D]
+theorem mappedHom_law {C D : Type*} [Category C] [Category D]
     (H : C ⥤ C) (K : D ⥤ D) (G : C ⥤ D) (e : H ⋙ G ≅ G ⋙ K)
     {A B : Endofunctor.Algebra H} (f : A ⟶ B) :
     K.map (G.map f.f) ≫ (e.inv.app B.a ≫ G.map B.str) =

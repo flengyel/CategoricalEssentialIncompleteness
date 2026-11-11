@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSentences
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSentences
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
 
 /-! # Compositional squares for the actual logical parameter diagrams -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

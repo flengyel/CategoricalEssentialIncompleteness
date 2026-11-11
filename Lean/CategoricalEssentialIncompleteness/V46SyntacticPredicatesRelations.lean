@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesImages
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesImages
 
 /-! # All-model semantics of provably total predicate graphs -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonLists
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonLists
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
 
 /-! # Ordered categorical collection agrees with the numerical root chart -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

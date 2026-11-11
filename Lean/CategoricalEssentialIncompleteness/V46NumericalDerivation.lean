@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalSyntax
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparisonCore
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalSyntax
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparisonCore
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
 
 /-! # Arbitrary finite-rule derivation initiality in numerical tuple carriers
 
@@ -13,6 +15,8 @@ The ordinary rule-labelled tree algebra is validated in the numerical
 category. Its successful pullback carries the original inference algebra;
 the slice and success adjunction prove its universal property.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

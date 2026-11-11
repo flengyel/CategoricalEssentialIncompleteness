@@ -1,15 +1,24 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
-import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
-import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
+public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
+public import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
 
 /-! # Finite standard-model inputs and their actual parameterized points
 
 Only interpreted standard points are used. No coefficient membership is
 promoted to an internal PA global point.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

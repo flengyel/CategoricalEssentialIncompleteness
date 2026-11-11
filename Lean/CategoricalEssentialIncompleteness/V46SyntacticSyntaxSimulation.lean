@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSorts
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluation
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSorts
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluation
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
 
 /-! # A value computation has exactly the parser's structural sort skeleton -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

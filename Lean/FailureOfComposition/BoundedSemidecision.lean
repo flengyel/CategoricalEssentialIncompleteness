@@ -14,6 +14,8 @@ calls, and PA induction proves its graph equation also at nonstandard bounds. -/
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open scoped FFL.FirstOrder.Arithmetic

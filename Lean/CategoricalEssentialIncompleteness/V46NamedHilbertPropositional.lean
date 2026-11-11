@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
-import Foundation.Propositional.Entailment.Cl
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
+public import Foundation.Propositional.Entailment.Cl
 
 /-! # Propositional proof rules in the literal named calculus
 
@@ -13,6 +15,8 @@ classical negation, conjunction and disjunction are derived from the actual
 three schemes and modus ponens. The constructed entailment instance exposes
 these proved rules for subsequent proof-presentation comparisons.
 -/
+
+@[expose] public section
 
 namespace CategoricalEssentialIncompleteness.V46.NamedHilbertPropositional
 open SyntacticPredicates

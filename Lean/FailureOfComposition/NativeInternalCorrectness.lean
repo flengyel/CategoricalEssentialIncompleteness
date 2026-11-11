@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalGraphs
+module
+
+public import FailureOfComposition.NativeInternalGraphs
 
 /-!
 # Correctness of the internal native checker
@@ -13,6 +15,8 @@ predicate under an exact hypothesis about the preceding history entries.
 Definable induction then establishes that hypothesis for tables of every
 internal length in a PA model.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

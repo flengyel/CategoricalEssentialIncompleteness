@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterProjections
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterProjections
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
 
 /-! # Actual result equations for the labelled function substitution branch -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparison
-import CategoricalEssentialIncompleteness.V46MillerListsStable
-import CategoricalEssentialIncompleteness.V46SyntacticLists
-import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparison
+public import CategoricalEssentialIncompleteness.V46MillerListsStable
+public import CategoricalEssentialIncompleteness.V46SyntacticLists
+public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
 /-! # The actual list comparison for a PA-described coefficient predicate
 
@@ -14,6 +16,8 @@ The scalar list code is unchanged in both directions. Nil and ordered
 adjoin are compared as morphisms, then their algebra isomorphism transports
 the already constructed arbitrary-target universal property.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -25,7 +29,7 @@ namespace CategoricalEssentialIncompleteness.V46.Miller.NamedSyntaxComparison
 variable (P : Uniform.Family) (C : PredicateCategory 𝗣𝗔)
 local notation "F" => Syntax.predicateFunctor P
 local notation "L₀" => SyntacticLists.algebra 𝗣𝗔 C
-private abbrev directListAlgebra (P : Uniform.Family) (C : PredicateCategory 𝗣𝗔) :
+abbrev directListAlgebra (P : Uniform.Family) (C : PredicateCategory 𝗣𝗔) :
     ListAlgebra ((Syntax.predicateFunctor P).obj C) := Lists.algebra ((Syntax.predicateFunctor P).obj C).obj
 local notation "L₁" => directListAlgebra P C
 
@@ -145,7 +149,7 @@ def listAlgebraIso : (L₁).asAlgebra ≅ (mappedListAlgebra P C).asAlgebra :=
 def mappedListInitial : IsInitial (mappedListAlgebra P C).asAlgebra :=
   (Lists.initial ((F).obj C).obj).ofIso (listAlgebraIso P C)
 
-private def parameterListIso {D : Type*} [Category D] [HasFiniteLimits D] [HasFiniteCoproducts D]
+def parameterListIso {D : Type*} [Category D] [HasFiniteLimits D] [HasFiniteCoproducts D]
     {U : D} (L B : ListAlgebra U) (i : L.carrier ≅ B.carrier)
     (hn : L.nil ≫ i.hom=B.nil) (hc : L.cons ≫ i.hom=prod.map (𝟙 U) i.hom ≫ B.cons)
     (R : D) : (L.withParameters R).asAlgebra ≅ (B.withParameters R).asAlgebra := by

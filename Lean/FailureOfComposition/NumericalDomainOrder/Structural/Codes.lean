@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Soundness
-import FailureOfComposition.NumericalProductProofs.Structural.Codes
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Soundness
+public import FailureOfComposition.NumericalProductProofs.Structural.Codes
 
 /-!
 # Arithmetic graph of the domain-order scheme code
@@ -14,6 +16,8 @@ the equality tag, the right-instance tag, and implication coding.  It therefore
 tracks the actual formula code at every PA-model element rather than merely the
 external standard builder.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceArithmetic
-import CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceArithmetic
+public import CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic
 
 /-! # Arithmetic codes for the chosen syntactic Turing diagonal
 
@@ -12,6 +14,8 @@ The numerical index represents the diagonal of the printed universal
 program from Lemma 5.1. Its comparison with the actual uniform graph
 holds at every element of every PA model.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

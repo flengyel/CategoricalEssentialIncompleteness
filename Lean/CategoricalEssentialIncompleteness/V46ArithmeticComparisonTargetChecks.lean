@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
 
 /-! # The categorical comparison on the actual arithmetic sentence carrier
 
@@ -13,6 +15,8 @@ This internal assembly lemma is used after deriving its bounds and consistency
 from the concrete Gamma hypotheses. Its target is the literal sentence object,
 not the ambient numerical carrier.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

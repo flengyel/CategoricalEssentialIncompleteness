@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46CategoricalListLaws
-import CategoricalEssentialIncompleteness.V46Inference
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
+public import CategoricalEssentialIncompleteness.V46Inference
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
 
 /-! Total option collection for the finite ordered premise powers. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

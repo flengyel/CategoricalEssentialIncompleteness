@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralInputValues
-import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
-import CategoricalEssentialIncompleteness.V46LogicalSchemes
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralInputValues
+public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
+public import CategoricalEssentialIncompleteness.V46LogicalSchemes
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
 
 /-! # The actual numerical absent-variable fiber under the literal equivalence -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

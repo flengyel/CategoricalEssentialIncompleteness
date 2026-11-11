@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
 
 /-! # Positive graphs of actual operations on arbitrary parameter families
 
@@ -12,6 +14,8 @@ fiber. Its uniform index, totality, and parameter equation follow from
 that morphism. Neither its values nor the parameter projection need an
 ordinary recursive extension.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

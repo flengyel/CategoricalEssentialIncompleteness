@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyFormulas
+module
+
+public import FailureOfComposition.NativeFamilyFormulas
 
 /-!
 # A standard arithmetic seed for each fixed theory
@@ -12,6 +14,8 @@ PA proves the extraction sentence. Provability inclusion gives a proof in
 the fixed target theory; the resulting standard code is then accepted in
 every PA model. The theory quantifier precedes the seed witness.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

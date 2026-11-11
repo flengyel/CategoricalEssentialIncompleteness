@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
 /-! # Actual parameter-comparison points and their product projections -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

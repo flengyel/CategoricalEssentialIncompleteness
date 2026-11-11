@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoordinates
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoordinates
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
 
 /-! # Forward polynomial charts for maps that depend on a fixed parameter -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

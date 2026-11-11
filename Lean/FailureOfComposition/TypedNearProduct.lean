@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProgramGraph
-import FailureOfComposition.TypedProgramCategory
-import PCats.PCat
+module
+
+public import FailureOfComposition.ProgramGraph
+public import FailureOfComposition.TypedProgramCategory
+public import PCats.PCat
 
 /-!
 # The near product on the typed program category
@@ -20,6 +22,8 @@ computed by running the two normalized representatives on the two coordinates
 of the input.  The restriction induced by this near product is identified with
 the partial identity on the computation domain of the normalized arrow.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

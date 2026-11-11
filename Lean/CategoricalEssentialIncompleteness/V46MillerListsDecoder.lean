@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsWordCodes
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsWordCodes
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
 
 /-! # An actual ordinary partial-recursive decoder for literal list words
 
@@ -14,6 +16,8 @@ and cons is the original adjoin operation. Its coefficient predicate is
 the full numerical carrier. Restriction to the actual uniform coefficient
 guard and both inverse equations are proved separately.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

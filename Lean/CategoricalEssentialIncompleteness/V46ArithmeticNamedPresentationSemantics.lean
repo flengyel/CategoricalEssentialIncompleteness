@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationRoundtrip
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationRoundtrip
 
 /-! # Semantic roundtrip for each literal named arithmetic sentence
 
 The semantic structure K is independent of the standard or nonstandard
 arithmetic structure carrying the word codes.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation

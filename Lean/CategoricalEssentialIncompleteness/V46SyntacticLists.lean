@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticListEvaluation
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
-import CategoricalEssentialIncompleteness.V46CategoricalLists
-import Mathlib.CategoryTheory.Limits.Constructions.Over.Products
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticListEvaluation
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
+public import CategoricalEssentialIncompleteness.V46CategoricalLists
+public import Mathlib.CategoryTheory.Limits.Constructions.Over.Products
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
 /-! # Canonical predicate-category list constructors -/
+
+@[expose] public section
 
 noncomputable section
 

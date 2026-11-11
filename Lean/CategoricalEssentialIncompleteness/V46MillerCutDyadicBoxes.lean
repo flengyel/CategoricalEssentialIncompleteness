@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutTopology
-import CategoricalEssentialIncompleteness.V46MillerCutDyadicArithmetic
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutTopology
+public import CategoricalEssentialIncompleteness.V46MillerCutDyadicArithmetic
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
 
 /-! # The actual image of a binary cylinder as finite closed dyadic boxes
 
@@ -14,6 +16,8 @@ Finite rectangular completions retain all prescribed bits. Surjectivity
 at the CLOSED right endpoint uses binary expansions of 1 as well as those
 of points below 1; no canonical choice of a dyadic expansion is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

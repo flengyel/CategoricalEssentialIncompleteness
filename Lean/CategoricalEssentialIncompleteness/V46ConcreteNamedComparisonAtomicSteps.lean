@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterProjections
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterSomeValues
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterProjections
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterSomeValues
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
 
 /-! # Actual equality/relation substitution results on ordered child states -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

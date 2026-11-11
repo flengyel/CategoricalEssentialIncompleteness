@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
-import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
+public import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
 
 /-! # Literal sentence and Gamma-leaf reflection
 
@@ -8,6 +15,8 @@ Every nonlogical leaf is recovered from the actual sentence-axiom
 pullback. Its finite support is the singleton of the original formula
 word. No proof is selected from an arbitrary family of nonempty fibers.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

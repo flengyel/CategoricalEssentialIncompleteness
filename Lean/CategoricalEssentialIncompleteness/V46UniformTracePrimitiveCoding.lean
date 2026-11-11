@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceProgram
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveHistory
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceProgram
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveHistory
 
 /-! # Native primitive certificates for the literal trace program
 
@@ -12,6 +14,8 @@ The actual all-model PA graph comparison was proved in UniformTraceProgram
 before any native certificate is used. The native code computation theorem
 below is used over the standard natural numbers only.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

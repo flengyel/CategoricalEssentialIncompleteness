@@ -204,6 +204,33 @@ completion of a manuscript result.
 
 ## First unresolved concrete inference
 
+The requested continuation targets v57 and its fifteen additional results.
+The accessible manuscript and manifest remain v51: the supplied v57 ZIP,
+PDF and audit files have not been located. Their expected hashes are
+recorded in [the continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md).
+The 62 numbered rows in this file describe the retained v51 scope; they do not
+establish completion of the 77-result v57 manuscript. For that continuation,
+comparison of `thm:first-order-reflection` with the supplied v57 statement
+is the first pending correspondence step. The remaining fourteen new
+results remain open.
+
+Generation adjunctions are now proved in `V46FirstOrderGeneration` and
+`V46FirstOrderPresentationAdjunction`. `V46SyntacticGenerationAdjunction`
+instantiates both adjunctions in `TotalSplit T` with the constructed
+initial derivation algebras, for arbitrary `T` extending PA and arbitrary
+coefficient objects. Its closure predicate and generated image agree with
+the existing sentence-theory definitions. Producer and statement checks
+pass strict Lean with only the permitted axioms. No v57 row is marked
+complete before its statement comparison and integrated verification.
+
+`V46InferenceTranslation` proves inverse-image closure preservation,
+constructor compatibility, uniqueness and composition of finite-proof
+translations. `V46InferenceFunctor` supplies the category of finite rule
+presentations, its derivation functor and natural conclusion morphism.
+These support `thm:translation-galois` and `prop:deduction-comparison`;
+the complete printed statements of those results remain open.
+
+
 The constructed syntax and arbitrary-rule derivation algebras have the full universal properties in every stated parameter slice, including transport to TotalSplit. Constructor commutation and uniqueness among all algebra morphisms are proved separately from unique evaluation. The concrete substitution/fold and independent free-for comparisons, generated-theory image/sentence/source-idempotent assembly, semantic substitution, standard soundness factor and concrete arithmetic-ultrapower transport are proved in the later continuation batch. The deterministic uniform trace bridge is also proved, separately from exponential/parity object coding.
 
 The concrete native PA arithmetic/order, equality and arbitrary induction comparisons now discharge the source-axiom premise of the full LK2/native proof translation for the original Γ enumeration. Standard finite PA proofs, the numeral-convention comparison and native proof realization give both literal Γ bounds in N. Their universal closures transfer to every M≡N and identify the two proper sentence-range inverse images, completing 7.1. External native consistency constructs a model K by the proved presentation roundtrip and finite-proof translation. Its soundness factor and the arithmetic-ultrapower transport discharge the consistency premises of Theorem 4.2, completing every printed conclusion of 7.3, including the actual total source g and its native undecidable sentence values. K is distinct from arithmetic code models N/M; no PA proof of Γ consistency is asserted and the search lift remains partial.

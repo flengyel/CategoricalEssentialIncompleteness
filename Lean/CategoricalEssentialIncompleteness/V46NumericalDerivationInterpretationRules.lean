@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
 
 /-! # The actual mapped PA inference signature
 
 Only the arithmetic interpretation functor's proved finite-limit
 preservation is used. No preservation of initial algebras is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -53,7 +57,7 @@ def interpretedRules : RulePresentation (K.obj F) N where
 
 abbrev overFunctor (_R : RulePresentation F N) : Over F ⥤ Over (K.obj F) := Over.post K
 
-private theorem input_square (Q : Over F) (i : Fin (N+1)) :
+theorem input_square (Q : Over F) (i : Fin (N+1)) :
     IsPullback
       (K.map (pullback.fst (R.premises i) (finitePowerMap Q.hom i.val)))
       (K.map (pullback.snd (R.premises i) (finitePowerMap Q.hom i.val)) ≫

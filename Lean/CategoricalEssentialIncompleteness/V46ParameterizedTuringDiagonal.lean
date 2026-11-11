@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.LocalLifting
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
+module
+
+public import CategoricalEssentialIncompleteness.LocalLifting
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
 
 /-! # The parameterized source equation for uniform independent sentences -/
+
+@[expose] public section
 noncomputable section
 universe u v
 open CategoryTheory CategoryTheory.RestrictionCategory

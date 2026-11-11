@@ -16,6 +16,8 @@ discharges the Delta-one presentation requirement of the proof predicate.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

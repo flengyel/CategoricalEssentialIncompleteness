@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalIsotype
-import CategoricalEssentialIncompleteness.NumericalTuring
+module
+
+public import CategoricalEssentialIncompleteness.NumericalIsotype
+public import CategoricalEssentialIncompleteness.NumericalTuring
 
 /-!
 # The numerical recursion category
@@ -14,6 +16,8 @@ a code for each partial recursive arrow defines an ordinary function on
 extensional hom-sets that supplies its total parameter map. The evaluation
 equation recovers the given partial arrow from that map.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

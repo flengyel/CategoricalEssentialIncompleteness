@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
-import CategoricalEssentialIncompleteness.OracleDomainRecursion
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
+public import CategoricalEssentialIncompleteness.OracleDomainRecursion
 
 /-! # Exact pointwise comparison of oracle machines and relative recursion
 
@@ -13,6 +15,8 @@ and returns the computed VALUE, rather than only detecting definedness. The
 reverse index is chosen for a fixed oracle. It does not assert that an
 arbitrary family of relative computations has one index for all oracles.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

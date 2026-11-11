@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProgramIndices
+module
+
+public import FailureOfComposition.ProgramIndices
 
 /-!
 Representation transport under the manuscript's explicit realization laws.
@@ -11,6 +13,8 @@ The translations are selected by classical choice and no effective compiler
 between arbitrary arithmetizations is asserted. They induce equivalences of
 quotient sets, not functors between categories with an assumed composition.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

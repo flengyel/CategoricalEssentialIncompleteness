@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceConstants
-import CategoricalEssentialIncompleteness.V46UniformTracePairing
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceConstants
+public import CategoricalEssentialIncompleteness.V46UniformTracePairing
 
 /-! # A genuine parameter compiler for each fixed standard program
 
@@ -13,6 +15,8 @@ external and fixed, which is exactly where the existing persistence theorem
 is used. The new dynamic constant/pair/composition indices are handled by
 their actual internal stage equations and independently proved soundness.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

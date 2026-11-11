@@ -1,4 +1,6 @@
-import Arith
+module
+
+public import Arith
 
 /-!
 # Axiom check for `Arith`
@@ -44,6 +46,8 @@ the two introduces a given axiom.
 `Metamath.Feferman.Proof_T` itself remains `[propext, Quot.sound]`; that record
 is enforced by `check_metamath_axioms.lean`, not by this file.
 -/
+
+@[expose] public section
 
 open Arith.Feferman
 

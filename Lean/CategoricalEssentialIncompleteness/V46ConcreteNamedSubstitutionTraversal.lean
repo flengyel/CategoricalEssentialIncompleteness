@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! A numerical forward stack traversal with explicit root computations.
 Every error test concerns only a sort tag, stack shape, or numerical equality.
 The root graphs are total numerical functions in PA; no signature-predicate
 nonmembership test and no categorical evaluator is supplied. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedTraversalDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

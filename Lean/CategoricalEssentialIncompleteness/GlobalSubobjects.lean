@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.GlobalDomains
-import CategoricalEssentialIncompleteness.EnrichedQuotients
-import Mathlib.CategoryTheory.Types.Basic
+module
+
+public import CategoricalEssentialIncompleteness.GlobalDomains
+public import CategoricalEssentialIncompleteness.EnrichedQuotients
+public import Mathlib.CategoryTheory.Types.Basic
 
 /-!
 # The global predicate functor and subobjects along `J`
@@ -16,6 +18,8 @@ induces a natural isomorphism of the underlying presheaves. The induced map
 from ordinary restriction domains to subobjects is a natural injective bounded
 lattice homomorphism.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

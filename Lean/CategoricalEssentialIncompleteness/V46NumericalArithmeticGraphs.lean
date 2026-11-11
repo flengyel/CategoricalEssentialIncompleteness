@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
-import CategoricalEssentialIncompleteness.V46SyntacticLists
-import Foundation.FirstOrder.Arithmetic.TA.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
+public import CategoricalEssentialIncompleteness.V46SyntacticLists
+public import Foundation.FirstOrder.Arithmetic.TA.Basic
 
 /-! # Unchanged PA graphs in the standard true arithmetic presentation -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

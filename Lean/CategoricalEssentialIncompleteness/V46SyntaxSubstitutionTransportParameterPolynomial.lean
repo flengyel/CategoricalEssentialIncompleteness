@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportNormalizedFamilies
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportNormalizedFamilies
 
 /-! The full two-sorted parameter polynomial is normalized by the same
 coefficient equalities as its component operations. This uses finite
 products/coproducts in slices, without a RegularOver hypothesis. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

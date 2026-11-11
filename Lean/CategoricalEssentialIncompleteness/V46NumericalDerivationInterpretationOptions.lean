@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationValidation
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationValidation
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 
 /-! # Option and root-input comparison for interpreted PA rules
 
@@ -12,6 +14,8 @@ The option comparison preserves the unique failure branch and the original
 formula-valued success branch. The root input retains the rule instance
 and the actual ordered tuple of successful child conclusions.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

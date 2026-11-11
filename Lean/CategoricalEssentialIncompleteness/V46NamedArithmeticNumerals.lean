@@ -1,11 +1,20 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
-import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
 
 /-! Internal arithmetic numerals are literal zero/add/one postfix words.
 The recursion has a PA-total graph in every PA model and an independent
 standard primitive-recursion certificate. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 
 /-! The regular extensive structure is on the actual predicate category
 and the actual total restriction splitting, for arbitrary theories extending PA. -/
+
+@[expose] public section
 
 noncomputable section
 

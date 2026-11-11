@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
-import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
+public import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
 
 /-! # The partial proof-search morphism for the constructed arithmetic theory
 
@@ -14,6 +16,8 @@ proof algebra. Their input is the actual fixed-formula substitution graph;
 refutation uses the graph of the actual negation constructor. The source
 morphism is chosen before an interpreting model or a disjointness proof.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

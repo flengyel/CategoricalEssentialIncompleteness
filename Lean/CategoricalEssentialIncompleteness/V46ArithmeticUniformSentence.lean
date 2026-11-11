@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticUniformSearchModels
-import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSearchModels
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
 
 /-! # The actual uniform sentence morphism
 
@@ -7,6 +14,8 @@ The source diagonal is chosen once from the joint two-input search. Its total
 identity-splitting image is composed with the constructed literal named sentence
 morphism. The numerical value comparison is proved for that exact composite.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.FixedFormulaNumeralSubstitution
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Proof.Primrec
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.CraigTrick
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
+module
+
+public import Arith.FixedFormulaNumeralSubstitution
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Proof.Primrec
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.CraigTrick
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
 
 /-!
 # Numerical modus ponens with a coded sequent context
@@ -16,6 +18,8 @@ modus ponens in Foundation's bootstrapped one-sided calculus.  Its first
 argument is the finite-set code of a sequent context; it is not a list of
 assumptions.  The constructor retains that context in its conclusion.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

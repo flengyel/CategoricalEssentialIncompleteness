@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution
-import CategoricalEssentialIncompleteness.V46SyntacticSentenceLiteralChart
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution
+public import CategoricalEssentialIncompleteness.V46SyntacticSentenceLiteralChart
 
 /-! The complete sentence-morphism construction for a generic finite
 named formula with its external free-name bound. Later specializations
 apply these theorems without reducing any selected arithmetic index. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERFiniteLimits
-import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
+module
+
+public import CategoricalEssentialIncompleteness.PERFiniteLimits
+public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
 
 /-!
 # Pullbacks of numerical PERs
@@ -13,6 +15,8 @@ The pullback restricts the product PER to pairs whose images are related in
 the common target. Recursive coordinate projections and pairing give its
 universal property. No enumerability condition is required on this support.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyPreservation
-import FailureOfComposition.NativeFamilySeed
-import FailureOfComposition.NativeFamilyNat
-import FailureOfComposition.NativeFamilyPR
-import FailureOfComposition.NativeFamilyNumeralInstances
+module
+
+public import FailureOfComposition.NativeFamilyPreservation
+public import FailureOfComposition.NativeFamilySeed
+public import FailureOfComposition.NativeFamilyNat
+public import FailureOfComposition.NativeFamilyPR
+public import FailureOfComposition.NativeFamilyNumeralInstances
 
 /-!
 # Native extraction and equality transport from family equality
@@ -17,6 +19,8 @@ formalized Sigma-one completeness. The numerical constructor then combines
 them with the supplied family proof. No S-proof is interpreted as model truth,
 and no selector for the completeness witnesses is asserted.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

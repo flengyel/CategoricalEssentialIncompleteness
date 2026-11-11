@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
-import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
+public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 
 /-! # Actual finite proof bounds for arbitrary extensions of T_a
 
@@ -7,6 +14,8 @@ An extension proves every literal T_a axiom. It need not contain the axiom
 codes literally, be enumerable, or have the real model of T_a. The negative
 bound uses two actual named instantiations of the closed asymmetry axiom.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedBounds

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyInstances
-import FailureOfComposition.NativeFamilyNat
-import FailureOfComposition.NativeFamilyPR
+module
+
+public import FailureOfComposition.NativeFamilyInstances
+public import FailureOfComposition.NativeFamilyNat
+public import FailureOfComposition.NativeFamilyPR
 
 /-!
 # Total unary and binary numeral-instance constructors
@@ -15,6 +17,8 @@ The numerical input `code` is supplied explicitly. Binary coordinates are
 then specializes `u`. The internal coding identities apply to arbitrary model
 elements, including nonstandard numerals.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

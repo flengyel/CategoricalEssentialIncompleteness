@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.Equality
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.Equality
 
 /-!
 # First-success sentence substitution
 
 This layer identifies the fixed left template with a closed first-success graph instance.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

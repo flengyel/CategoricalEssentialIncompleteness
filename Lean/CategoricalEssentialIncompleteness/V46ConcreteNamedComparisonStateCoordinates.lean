@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResults
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResults
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap
 
 /-! # Native payload coordinates on the actual substitution state objects -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

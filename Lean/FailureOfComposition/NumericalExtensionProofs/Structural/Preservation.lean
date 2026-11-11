@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Maps
 
 /-!
 # PA-internal preservation for the finite-extension proof maps
@@ -13,6 +15,8 @@ program index, both endpoint formula codes, and the output proof.  Thus the
 entire conversion, including endpoint construction, is expressed internally
 in arithmetic.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

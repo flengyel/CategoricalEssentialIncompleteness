@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.TypedTuringMorphism
-import Foundation.FirstOrder.Arithmetic.IOpen.Basic
+module
+
+public import FailureOfComposition.TypedTuringMorphism
+public import Foundation.FirstOrder.Arithmetic.IOpen.Basic
 
 /-!
 # The typed `P`-recursion category
@@ -22,6 +24,8 @@ uses even--odd coding inside arbitrary models of PA.
 These structures, together with the previously proved all-object Turing
 factorization, give the concrete `PRecursionCategory` instance.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,13 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeContextSpecialization
-import FailureOfComposition.ConcreteEvaluatorGraph
-import FailureOfComposition.UniformIndexQuotient
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Proof.Coding
-import Foundation.Meta.ClProver
-import Mathlib.Tactic.FinCases
+module
+
+public import FailureOfComposition.NativeContextSpecialization
+public import FailureOfComposition.ConcreteEvaluatorGraph
+public import FailureOfComposition.UniformIndexQuotient
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.Proof.Coding
+public import Foundation.Meta.ClProver
+public import Mathlib.Tactic.FinCases
 
 /-!
 # Native proof-code transport for equality of eventual graphs
@@ -22,6 +24,8 @@ every model of PA.  Finally, it relates the native sentence code to the
 standard uniform-index quotient.  The executable constructor never searches
 for a proof and never uses the production proof checker.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -555,7 +559,7 @@ private noncomputable def substTwoCodeValue
     (code : ℕ) (q r : V) : V :=
   substNumerals (k := 2) (ORingStructure.numeral code : V) ![q, r]
 
-private noncomputable def substTwoCodeGraph (code : ℕ) :
+noncomputable def substTwoCodeGraph (code : ℕ) :
     𝚺₁.Semisentence 3 :=
   (ssnums (k := 2)).rew
     (Rew.subst ![(#0 : ArithmeticSemiterm Empty 3),
@@ -660,7 +664,7 @@ private noncomputable def lastNumeralValue
     (^#0 ∷ ^#1 ∷ Arithmetic.numeral q ∷ 0)
     (ORingStructure.numeral code : V)
 
-private noncomputable def lastNumeralGraph (code : ℕ) :
+noncomputable def lastNumeralGraph (code : ℕ) :
     𝚺₁.Semisentence 2 := .mkSigma
   “y q.
     ∃ b0, !qqBvarDef b0 0 ∧
@@ -687,7 +691,7 @@ private noncomputable def lastTwoNumeralsValue
     (^#0 ∷ Arithmetic.numeral r ∷ Arithmetic.numeral q ∷ 0)
     (ORingStructure.numeral code : V)
 
-private noncomputable def lastTwoNumeralsGraph (code : ℕ) :
+noncomputable def lastTwoNumeralsGraph (code : ℕ) :
     𝚺₁.Semisentence 3 := .mkSigma
   “y q r.
     ∃ b0, !qqBvarDef b0 0 ∧
@@ -1215,7 +1219,7 @@ private theorem transportValueFor_fixed
 
 /-- Exact output-first graph of `transportValue`, in coordinate order
 `(output,k,Gamma,e,p,q,r,c)`. -/
-private noncomputable def transportGraphFor
+noncomputable def transportGraphFor
     (thetaNumber bodyNumber : ℕ) :
     HierarchySymbol.sigmaOne.Semisentence 8 := .mkSigma
   “y k Γ e p q r c.

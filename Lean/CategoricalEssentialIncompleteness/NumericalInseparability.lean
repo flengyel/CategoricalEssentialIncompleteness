@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalUnions
+module
+
+public import CategoricalEssentialIncompleteness.NumericalUnions
 
 /-!
 # Numerical domain separators and recursive inseparability
@@ -14,6 +16,8 @@ existence of a recursive separating set, for arbitrary distinguished supports.
 This is the support comparison in part (ii) of the manuscript's numerical
 essential-equivalence theorem.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

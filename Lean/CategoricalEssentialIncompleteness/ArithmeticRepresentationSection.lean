@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticAdequacy
-import CategoricalEssentialIncompleteness.NumericalEnrichedPredicates
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticAdequacy
+public import CategoricalEssentialIncompleteness.NumericalEnrichedPredicates
 
 /-!
 # Internal arithmetic representation
@@ -13,6 +15,8 @@ Numeral substitution and the theorem and refutation predicates define internal
 diagonal data in the numerical Set-enrichment. Strong numeralwise definability
 supplies a section of its representation pullback.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

@@ -17,6 +17,8 @@ All graph laws hold at arbitrary elements of every PA model.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Encodable FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Endofunctor.Algebra
-import Mathlib.CategoryTheory.Comma.Over.Basic
-import Mathlib.CategoryTheory.RegularCategory.Basic
-import CategoricalEssentialIncompleteness.LocalSwitch
-import Mathlib.CategoryTheory.Widesubcategory
+module
+
+public import Mathlib.CategoryTheory.Endofunctor.Algebra
+public import Mathlib.CategoryTheory.Comma.Over.Basic
+public import Mathlib.CategoryTheory.RegularCategory.Basic
+public import CategoricalEssentialIncompleteness.LocalSwitch
+public import Mathlib.CategoryTheory.Widesubcategory
 
 /-! # Initial derivation algebras and their images -/
+
+@[expose] public section
 
 noncomputable section
 
@@ -41,7 +45,7 @@ def derivationImage : Over F := Over.mk (image.ι A.a.hom)
 def derivationImageQuotient : A.a ⟶ derivationImage H A :=
   Over.homMk (factorThruImage A.a.hom) (image.fac A.a.hom)
 
-private theorem imageSquare :
+theorem imageSquare :
     CommSq (A.str.left ≫ factorThruImage A.a.hom)
       (H.map (derivationImageQuotient H A)).left (image.ι A.a.hom)
       (H.obj (derivationImage H A)).hom := by

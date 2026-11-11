@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalCategory
-import Mathlib.CategoryTheory.Widesubcategory
+module
+
+public import CategoricalEssentialIncompleteness.NumericalCategory
+public import Mathlib.CategoryTheory.Widesubcategory
 
 /-!
 # The category of numerical partial equivalence relations
@@ -14,6 +16,8 @@ recursive functions defined on the source support and respecting the relations.
 Arrows identify representing functions whose values are related at every supported input.
 No enumerability condition is imposed on a relation or its support.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

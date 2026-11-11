@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Structural.Codes
-import FailureOfComposition.NumericalExtensionProofs.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Structural.Codes
+public import FailureOfComposition.NumericalExtensionProofs.Structural.ProofGraph
 
 /-!
 # Exact proof graph for extension composition
@@ -13,6 +15,8 @@ The logical-axiom leaf is the accepted finite-extension leaf together with
 the two new scheme leaves.  Its natural-number interpretation is exactly the
 executable common checker, including malformed formula and proof codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

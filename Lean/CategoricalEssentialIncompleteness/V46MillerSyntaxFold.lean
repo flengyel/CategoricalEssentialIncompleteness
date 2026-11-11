@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxSource
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxSource
 
 /-! # Actual arbitrary-slice fold morphisms on the original literal words
 
@@ -12,6 +14,8 @@ predicate. The singleton and fiber theorems prove support, totality and
 the parameter equation. Constructor compatibility and the universal
 property are not assumptions of this construction.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

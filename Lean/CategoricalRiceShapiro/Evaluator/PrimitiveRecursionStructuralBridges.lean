@@ -54,6 +54,8 @@ the evaluator certificate nor persistence for every standard index.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace CategoricalRiceShapiro.PartialRecursive

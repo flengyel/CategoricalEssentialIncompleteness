@@ -12,6 +12,8 @@ The equations hold over arbitrary PA models, including nonstandard inputs. -/
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open scoped FFL.FirstOrder.Arithmetic

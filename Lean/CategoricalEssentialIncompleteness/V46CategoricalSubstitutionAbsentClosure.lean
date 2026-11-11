@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentCore
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentConstructors
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentCore
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentConstructors
 
 /-! The actual equalizer invariant is closed under every substitution constructor. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

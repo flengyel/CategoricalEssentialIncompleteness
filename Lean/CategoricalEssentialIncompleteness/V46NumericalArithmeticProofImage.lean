@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofWords
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
-import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofWords
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+public import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
 
 /-! # The fixed provability predicate is the image of the literal proof-word conclusion -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -21,7 +25,7 @@ open NumericalCoordinates
 
 abbrev provability (Γ : Carrier) : Carrier := ArithmeticLiteralModel.theoremPredicate Γ
 
-private theorem provability_sentence (Γ : Carrier) :
+theorem provability_sentence (Γ : Carrier) :
     𝗣𝗔 ⊢ inclusionSentence (provability Γ) ProofWords.sentences := by
   apply complete.{0} 𝗣𝗔
   intro M _ _
@@ -112,7 +116,7 @@ theorem factor (Γ : Carrier) : quotient Γ ≫ inclusion Γ = conclusion Γ := 
     (representedArrow 𝗣𝗔 (sourceInclusion Γ))).symm.trans
       (congrArg numericalInterpretation.map (source_factor Γ))
 
-private def mappedImage {C I D : PredicateCategory 𝗣𝗔}
+def mappedImage {C I D : PredicateCategory 𝗣𝗔}
     (q : C ⟶ I) (m : I ⟶ D) (f : C ⟶ D) (h : q ≫ m = f)
     [IsSplitEpi q] [Mono m] : StrongEpiMonoFactorisation (numericalInterpretation.map f) where
   I := numericalInterpretation.obj I

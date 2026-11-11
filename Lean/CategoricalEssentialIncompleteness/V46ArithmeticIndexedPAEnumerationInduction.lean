@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationSimple
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationSimple
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
 
 /-! # Literal induction-matrix enumeration through actual substitution graphs -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

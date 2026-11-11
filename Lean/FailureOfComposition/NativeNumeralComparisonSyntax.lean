@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralSyntax
+module
+
+public import FailureOfComposition.NativeNumeralSyntax
 
 /-!
 # Literal numeral comparison formulas
@@ -13,6 +15,8 @@ comparison targets apply the equality or order relation to these term codes,
 with the left operand first. Positive atoms have tag zero and negative atoms
 have tag one. Signed targets select an atom by comparing the numeral values.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

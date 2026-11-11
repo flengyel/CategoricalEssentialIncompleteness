@@ -16,6 +16,8 @@ stages, so divergent rejected candidates do not block later outputs.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

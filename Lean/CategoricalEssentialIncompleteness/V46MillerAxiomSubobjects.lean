@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
-import CategoricalEssentialIncompleteness.V46MillerTotalRegular
-import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
-import Mathlib.CategoryTheory.Subobject.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
+public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
+public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
+public import Mathlib.CategoryTheory.Subobject.Basic
 
 /-! # Uniform external axiom subobjects and finite axiom supports
 
@@ -16,6 +18,8 @@ axiom set is formed in the actual uniform total splitting; the external
 axiom set is never represented by an assumed PA formula. All inclusions
 below are guarded identity maps on their actual supports.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -27,10 +31,10 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.Miller.AxiomSubobjects
 variable {P : Uniform.Family}
 
-private def identityMap (X Y : Total.TotalCategory P) (h : X.obj.support ⊆ Y.obj.support) : X ⟶ Y :=
+def identityMap (X Y : Total.TotalCategory P) (h : X.obj.support ⊆ Y.obj.support) : X ⟶ Y :=
   ⟨Total.totalFromFunction id Computable.id h,Total.totalFromFunction_total _ _ _⟩
 
-private theorem identityMap_graph (X Y : Total.TotalCategory P) (h : X.obj.support ⊆ Y.obj.support)
+theorem identityMap_graph (X Y : Total.TotalCategory P) (h : X.obj.support ⊆ Y.obj.support)
     (n m : ℕ) : m ∈ Total.val (identityMap X Y h).hom n ↔ n ∈ X.obj.support ∧ m=n :=
   Total.mem_totalFromFunction id Computable.id h n m
 
@@ -46,7 +50,7 @@ private instance identityMap_mono (X Y : Total.TotalCategory P) (h : X.obj.suppo
     apply (cancel_mono (identityMap X Y h).hom).mp
     exact congrArg (fun k => k.hom) huv⟩
 
-private theorem identity_graph_ext {X Y : Total.TotalCategory P} (f g : X ⟶ Y)
+theorem identity_graph_ext {X Y : Total.TotalCategory P} (f g : X ⟶ Y)
     (hf : ∀ n m,m ∈ Total.val f.hom n ↔ n ∈ X.obj.support ∧ m=n)
     (hg : ∀ n m,m ∈ Total.val g.hom n ↔ n ∈ X.obj.support ∧ m=n) : f=g := by
   apply WideSubcategory.hom_ext
@@ -56,7 +60,7 @@ private theorem identity_graph_ext {X Y : Total.TotalCategory P} (f g : X ⟶ Y)
   intro m
   exact (hf n m).trans (hg n m).symm
 
-private theorem identity_graph_comp {X Y Z : Total.TotalCategory P} (f : X ⟶ Y) (g : Y ⟶ Z)
+theorem identity_graph_comp {X Y Z : Total.TotalCategory P} (f : X ⟶ Y) (g : Y ⟶ Z)
     (hf : ∀ n m,m ∈ Total.val f.hom n ↔ n ∈ X.obj.support ∧ m=n)
     (hg : ∀ n m,m ∈ Total.val g.hom n ↔ n ∈ Y.obj.support ∧ m=n)
     (n m : ℕ) : m ∈ Total.val (f ≫ g).hom n ↔ n ∈ X.obj.support ∧ m=n := by
@@ -72,11 +76,11 @@ private theorem identity_graph_comp {X Y Z : Total.TotalCategory P} (f : X ⟶ Y
     have hf' := (hf n n).mpr ⟨hn,rfl⟩
     exact ⟨n,hf',(hg n n).mpr ⟨Total.val_target f.hom n n hf',rfl⟩⟩
 
-private theorem identity_graph_id (X : Total.TotalCategory P) (n m : ℕ) :
+theorem identity_graph_id (X : Total.TotalCategory P) (n m : ℕ) :
     m ∈ Total.val (𝟙 X : X ⟶ X).hom n ↔ n ∈ X.obj.support ∧ m=n :=
   Total.mem_supportIdentity X.obj.support n m
 
-private def supportIso (X Y : Total.TotalCategory P) (h : ∀ n,n ∈ X.obj.support ↔ n ∈ Y.obj.support) :
+def supportIso (X Y : Total.TotalCategory P) (h : ∀ n,n ∈ X.obj.support ↔ n ∈ Y.obj.support) :
     X ≅ Y where
   hom := identityMap X Y (fun n hn => (h n).mp hn)
   inv := identityMap Y X (fun n hn => (h n).mpr hn)
@@ -259,7 +263,7 @@ private theorem imageQuotient_mono {X Y : Total.TotalCategory P} (a : X ⟶ Y) [
     have hh := congrArg (fun k => k ≫ Total.imageInclusion a) he
     simpa only [Category.assoc,Total.image_factorization] using hh
 
-private theorem imageQuotient_isIso {X Y : Total.TotalCategory P} (a : X ⟶ Y) [Mono a] :
+theorem imageQuotient_isIso {X Y : Total.TotalCategory P} (a : X ⟶ Y) [Mono a] :
     IsIso (Total.imageQuotient a) := by
   let := imageQuotient_mono a
   exact isIso_of_regularEpi_of_mono _

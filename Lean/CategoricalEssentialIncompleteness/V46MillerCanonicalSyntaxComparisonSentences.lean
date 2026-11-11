@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonOperations
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonOperations
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
 
 /-! # Chosen sentence pullbacks and arbitrary external Γ after the push -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

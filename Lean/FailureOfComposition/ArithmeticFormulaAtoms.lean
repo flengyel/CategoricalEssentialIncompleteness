@@ -15,6 +15,8 @@ and in arbitrary models of PA⁻ for their Boolean complements.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

@@ -3,19 +3,23 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticLiteralSignature
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureWords
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticAlgorithms
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues
-import CategoricalEssentialIncompleteness.V46NumericalSentenceMorphisms
-import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLiteralSignature
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureWords
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticAlgorithms
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues
+public import CategoricalEssentialIncompleteness.V46NumericalSentenceMorphisms
+public import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
 
 /-! # Actual arithmetic formula and sentence coordinates
 
 The comparisons preserve the named word. Each direction is a numerical
 morphism, with a partial-recursive program total on its carrier.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -41,7 +45,7 @@ abbrev originalSyntax := ArithmeticLiteralModel.sentenceSyntax
 def variableIso : NumericalNamed.variableObject ≅ numericalInterpretation.obj variableSymbols :=
   NumericalSentenceMorphisms.omegaIso
 
-private def wordIso (C D : PredicateCategory 𝗧𝗔)
+def wordIso (C D : PredicateCategory 𝗧𝗔)
     (h : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n]) :
     NumericalCoordinates.predicateObject C ≅ NumericalCoordinates.predicateObject D where
   hom :=
@@ -53,17 +57,17 @@ private def wordIso (C D : PredicateCategory 𝗧𝗔)
   hom_inv_id := NumericalTuples.Map.ext rfl
   inv_hom_id := NumericalTuples.Map.ext rfl
 
-private theorem wordIso_hom_value (C D : PredicateCategory 𝗧𝗔)
+theorem wordIso_hom_value (C D : PredicateCategory 𝗧𝗔)
     (h : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n])
     (x : NumericalTuples.Point (NumericalCoordinates.predicateObject C)) :
     ((wordIso C D h).hom.toFun x).val = x.val := rfl
 
-private theorem wordIso_inv_value (C D : PredicateCategory 𝗧𝗔)
+theorem wordIso_inv_value (C D : PredicateCategory 𝗧𝗔)
     (h : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n])
     (x : NumericalTuples.Point (NumericalCoordinates.predicateObject D)) :
     ((wordIso C D h).inv.toFun x).val = x.val := rfl
 
-private theorem wordChart_inverse_value {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
+theorem wordChart_inverse_value {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
     (h : ∀ n : ℕ, C.val.Evalb ![n] ↔ D.val.Evalb ![n])
     (i : A ≅ NumericalCoordinates.predicateObject C)
     (x : NumericalTuples.Point (NumericalCoordinates.predicateObject D)) :
@@ -71,7 +75,7 @@ private theorem wordChart_inverse_value {A : NumericalTuples.Object} (C D : Pred
   have hi := congrArg (fun f => f.toFun ((wordIso C D h).inv.toFun x)) i.inv_hom_id
   exact (congrArg Subtype.val hi).trans (wordIso_inv_value C D h x)
 
-private theorem term_membership (n : ℕ) :
+theorem term_membership (n : ℕ) :
     sourceSyntax.algebra.a.1.val.Evalb ![n] ↔ originalSyntax.algebra.a.1.val.Evalb ![n] := by
   change (Postfix.plainCarrier false
     (SyntaxPolynomial.termExpression (NumericalCoordinates.codedPredicate NumericalNamed.variableObject)
@@ -87,7 +91,7 @@ private theorem term_membership (n : ℕ) :
         (π := LiteralSignature.coefficients relationSymbols) (ρ := relationSymbols) (d := bound)
         (fun k m => (LiteralSignature.coefficient_membership functionSymbols k m).symm) n)
 
-private theorem formula_membership (n : ℕ) :
+theorem formula_membership (n : ℕ) :
     sourceSyntax.algebra.a.2.val.Evalb ![n] ↔ originalSyntax.algebra.a.2.val.Evalb ![n] := by
   change (Postfix.plainCarrier true
     (SyntaxPolynomial.termExpression (NumericalCoordinates.codedPredicate NumericalNamed.variableObject)
@@ -136,11 +140,11 @@ abbrev formulaIso_inverse_value
     sourceSyntax.algebra.a.2 (originalSyntax.algebra.a.2 : PredicateCategory 𝗧𝗔) formula_membership
     (NumericalNamed.literalFormulaPresentationIso NumericalNamed.variableObject functions relations bound) φ
 
-private def formulaSentence : numericalSyntax.sentenceObject ⟶
+def formulaSentence : numericalSyntax.sentenceObject ⟶
     numericalInterpretation.obj originalSyntax.algebra.a.2 :=
   numericalSyntax.sentenceInclusion ≫ formulaIso.hom
 
-private theorem closed (s : NumericalTuples.Point numericalSyntax.sentenceObject) :
+theorem closed (s : NumericalTuples.Point numericalSyntax.sentenceObject) :
     ArithmeticLiteralModel.sentencePredicate.val.Evalb (M := ℕ) ![(formulaSentence.toFun s).val] := by
   have hv := (NumericalNamed.literal_sentence_iff
     NumericalNamed.variableObject functions relations bound
@@ -160,14 +164,14 @@ private theorem closed (s : NumericalTuples.Point numericalSyntax.sentenceObject
 
 /-- Corestriction reuses the program of the formula-word map. It does
 not ask that program to halt outside the sentence carrier. -/
-private def wordCorestriction {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
+def wordCorestriction {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
     (f : A ⟶ NumericalCoordinates.predicateObject C)
     (hf : ∀ x : NumericalTuples.Point A, D.val.Evalb (M := ℕ) ![(f.toFun x).val]) :
     A ⟶ NumericalCoordinates.predicateObject D where
   toFun x := ⟨(f.toFun x).val,hf x⟩
   represented := f.represented
 
-private theorem wordCorestriction_value {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
+theorem wordCorestriction_value {A : NumericalTuples.Object} (C D : PredicateCategory 𝗧𝗔)
     (f : A ⟶ NumericalCoordinates.predicateObject C)
     (hf : ∀ x : NumericalTuples.Point A, D.val.Evalb (M := ℕ) ![(f.toFun x).val])
     (x : NumericalTuples.Point A) :

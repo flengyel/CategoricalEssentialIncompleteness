@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPA
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPA
 
 /-! PA sentences for the literal numerical constructor equations. The
 polynomial graph below keeps both substitution parameters free and applies
 the actual paired traversal independently at each ordered child. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedEquationsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

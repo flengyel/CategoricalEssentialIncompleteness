@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleComparison
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceProofCodes
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofImage
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleComparison
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceProofCodes
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofImage
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
 
 /-! # Actual arithmetic proof codes, canonical source proofs and fixed Prov_Gamma
 
@@ -16,6 +18,8 @@ Their two initial code algebras give the full-proof isomorphism, and the
 actual sentence pullbacks give the sentence-proof isomorphism. The fixed
 Gamma theorem predicate is then the regular image of this actual conclusion.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -92,7 +96,7 @@ sentence object, rather than equality of ambient numerical predicates. -/
   exact map_chain (SentenceProofCodes.pullbackIso Γ).inv
     (sentencePullback_conclusion Γ) sentence_chart_cancel
 
-private theorem original_word_conclusion (Γ : Carrier) :
+theorem original_word_conclusion (Γ : Carrier) :
     (ProofWords.iso Γ).inv ≫ representedArrow 𝗣𝗔 (ProofWords.conclusion Γ) =
       ArithmeticLiteralModel.conclusion Γ := by
   have h := congrArg (fun f => (ProofWords.iso Γ).inv ≫ f) (ProofWords.iso_conclusion Γ)
@@ -125,7 +129,7 @@ instance quotient_splitEpi (Γ : Carrier) : IsSplitEpi (quotient Γ) := by
 theorem factor (Γ : Carrier) : quotient Γ ≫ ProofImage.inclusion Γ = conclusion Γ := by
   rw [quotient,Category.assoc,ProofImage.factor,wordIso_conclusion]
 
-private theorem iso_comp_strongEpi {A B C : NumericalTuples.Object}
+theorem iso_comp_strongEpi {A B C : NumericalTuples.Object}
     (e : A ≅ B) (q : B ⟶ C) [IsSplitEpi q] : StrongEpi (e.hom ≫ q) := by
   infer_instance
 

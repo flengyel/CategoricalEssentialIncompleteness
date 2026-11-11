@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformDecomposition
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformDecomposition
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
 
 /-! # Arbitrary-property induction with all uniform coefficient objects
 
@@ -7,6 +14,8 @@ The induction predicate is external and unrestricted. Only the structural
 size function is read through the old arithmetic parser; all actual word
 and coefficient membership conditions remain uniform positive predicates.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSearch
-import CategoricalEssentialIncompleteness.SyntacticPreservation
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSearch
+public import CategoricalEssentialIncompleteness.SyntacticPreservation
 
 /-! # Partial search with reversed model fibers
 
@@ -13,6 +15,8 @@ Disjointness is required in the interpreting model, not provable in PA.
 The coproduct uses the production pair-and-tag code and its proved
 comparison with recursively interpreted sums.
 -/
+
+@[expose] public section
 
 noncomputable section
 

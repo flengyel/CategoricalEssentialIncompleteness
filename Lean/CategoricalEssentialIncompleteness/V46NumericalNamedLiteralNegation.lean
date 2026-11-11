@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
-import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
+public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 
 /-! # The actual numerical sentence negation in literal word coordinates -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

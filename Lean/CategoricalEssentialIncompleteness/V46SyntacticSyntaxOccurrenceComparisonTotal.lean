@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntaxMappedListOccurrenceComparison
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlainTotal
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxMappedListOccurrenceComparison
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlainTotal
 
 /-! # Concrete occurrence transport in the total restriction splitting -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

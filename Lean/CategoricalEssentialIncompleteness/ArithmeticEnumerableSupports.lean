@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticSupports
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.CraigTrick
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticSupports
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.Syntax.CraigTrick
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
 
 /-!
 # Enumerable theorem and refutation supports
@@ -15,6 +17,8 @@ theorem and refutation supports. The proof uses Craig's primitive recursive
 axiomatization and its equivalence with the original theory. The corresponding
 partial identities are numerical restriction domains.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

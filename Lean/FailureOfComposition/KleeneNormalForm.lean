@@ -16,6 +16,8 @@ All theorems in this module concern standard natural numbers, not PA derivations
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

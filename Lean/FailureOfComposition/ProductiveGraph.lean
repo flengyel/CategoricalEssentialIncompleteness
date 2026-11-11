@@ -19,6 +19,8 @@ The proof-search witnesses are a variant of v36's direct computation search.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

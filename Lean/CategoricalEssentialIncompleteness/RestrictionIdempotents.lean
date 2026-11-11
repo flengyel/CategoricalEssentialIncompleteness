@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Restriction
-import Mathlib.Order.Lattice
+module
+
+public import PCats.Restriction
+public import Mathlib.Order.Lattice
 
 /-!
 # Restriction idempotents and inverse image
@@ -12,6 +14,8 @@ import Mathlib.Order.Lattice
 Composition is diagrammatic: `f ≫ g` applies `f` first. The order on
 restriction idempotents is `a ≤ b` if `a ≫ b = a`.
 -/
+
+@[expose] public section
 
 universe v u
 

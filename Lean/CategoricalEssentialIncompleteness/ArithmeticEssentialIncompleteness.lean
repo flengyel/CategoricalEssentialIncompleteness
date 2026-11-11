@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
-import CategoricalEssentialIncompleteness.ArithmeticInseparability
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticEnumerableSupports
+public import CategoricalEssentialIncompleteness.ArithmeticInseparability
 
 /-!
 # Arithmetic essential incompleteness from recursive inseparability
@@ -20,6 +22,8 @@ The categorical diagonal theorem supplies this inseparability whenever the
 original theory strongly defines every recursive subset of the natural
 numbers. In particular, it applies to consistent extensions of `PA⁻`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

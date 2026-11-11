@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticUniformSentence
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsStandard
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSentence
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsStandard
 
 /-! # Joint substituted provability predicates
 
@@ -8,6 +15,8 @@ These use the actual named numeral-substitution and primitive-recursive
 negation graphs. Instantiating P with the constructed family provability
 predicate requires its proved numeral-fiber comparison.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

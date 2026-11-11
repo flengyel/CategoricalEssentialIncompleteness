@@ -1,14 +1,21 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflection
 /-
 Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSentenceReflection
-import CategoricalEssentialIncompleteness.V46MillerDerivationWordFirstOrderInduction
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflection
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSentenceReflection
+public import CategoricalEssentialIncompleteness.V46MillerDerivationWordFirstOrderInduction
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
+public import Mathlib.Tactic.FinCases
 
 /-! # All actual seven-scheme parameters yield finite native Γ proofs
 
@@ -18,6 +25,8 @@ through the actual false classifier and the PA false fiber. No logical
 scheme coverage, source axiom admissibility or semantic validity premise
 is supplied.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

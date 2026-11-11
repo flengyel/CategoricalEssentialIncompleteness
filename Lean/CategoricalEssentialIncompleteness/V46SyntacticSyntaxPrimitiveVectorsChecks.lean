@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
+
+
+/-! # Statement checks in `V46SyntacticSyntaxPrimitiveVectorsChecks` -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.SyntacticSyntax

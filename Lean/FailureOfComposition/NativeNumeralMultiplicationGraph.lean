@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralAdditionGraph
+module
+
+public import FailureOfComposition.NativeNumeralAdditionGraph
 
 /-!
 # Structural internal recurrence for multiplication proofs
@@ -14,6 +16,8 @@ addition seeds and context. The blueprint has nine parameters
 ten varying inputs afterward. It describes a numerical operation, not a
 predicate asserting existence of an arbitrary proof.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

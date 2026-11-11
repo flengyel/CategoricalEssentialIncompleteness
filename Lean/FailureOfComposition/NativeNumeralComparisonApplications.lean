@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonProof
+module
+
+public import FailureOfComposition.NativeNumeralComparisonProof
 
 /-!
 # Fixed standard comparison seeds
@@ -13,6 +15,8 @@ codes is chosen before the PA model and its numeral values. Embedding those
 codes gives accepted internal outputs of the two explicit signed functions.
 The executable functions use only the fixed codes and the numerical inputs.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

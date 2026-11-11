@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.RETheory
-import FailureOfComposition.NumericalExtensionComposition.Categorical
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.RETheory
+public import FailureOfComposition.NumericalExtensionComposition.Categorical
 
 /-!
 # The typed B1(8) theta arrow
@@ -15,6 +17,8 @@ the finite-extension partial identity, and finally takes the actual typed
 second projection.  A supported representative of `o` is chosen externally
 once; no effective choice from quotient classes is asserted.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

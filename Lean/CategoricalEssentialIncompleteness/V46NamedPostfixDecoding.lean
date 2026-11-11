@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixData
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixData
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
 /-! # Every standard accepted word encodes a literal named finite tree
 
 This standard-model statement does not assert that nonstandard model
 words are encodings of external finite trees.
 -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

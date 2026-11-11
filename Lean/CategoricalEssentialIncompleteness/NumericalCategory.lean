@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Restriction
-import Mathlib.Computability.RE
-import Mathlib.Data.Set.Finite.Basic
+module
+
+public import PCats.Restriction
+public import Mathlib.Computability.RE
+public import Mathlib.Data.Set.Finite.Basic
 
 /-!
 # The numerical restriction category
@@ -15,6 +17,8 @@ function on `ℕ` whose domain is contained in the source and whose values belon
 to the target. Equality is equality of partial functions.
 Composition is diagrammatic.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

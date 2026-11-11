@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonTranspose
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonTranspose
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegation
 
 /-! # Canonical occurrence, substitution and sentence charts
 
@@ -11,6 +18,8 @@ Every list comparison used below is derived in Transpose from the actual
 mapped list operations. The unit transposes the resulting fold equations
 to the forward presentation.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

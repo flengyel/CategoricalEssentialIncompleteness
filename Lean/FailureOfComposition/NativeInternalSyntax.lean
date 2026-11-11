@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeProofChecker
-import Foundation.FirstOrder.Arithmetic.HFS.PRF
+module
+
+public import FailureOfComposition.NativeProofChecker
+public import Foundation.FirstOrder.Arithmetic.HFS.PRF
 
 /-!
 # Internal syntax operations for the native proof checker
@@ -21,6 +23,8 @@ the sequent shift maps every coded member through that guarded operation.
 Thus its behavior on malformed finite sets is fixed independently of
 Foundation's unguarded `setShift`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -243,7 +247,7 @@ private instance formulaShiftValue_definable
 
 /-- Existence and uniqueness of the finite set obtained by mapping every
 member of `s` through the guarded arity-zero formula shift. -/
-private theorem sequentShift_existsUnique
+theorem sequentShift_existsUnique
     {V : Type*} [ORingStructure V] [V↓[ℒₒᵣ] ⊧* 𝗣𝗔]
     (s : V) :
     ∃! t : V, ∀ y, y ∈ t ↔ ∃ x ∈ s,

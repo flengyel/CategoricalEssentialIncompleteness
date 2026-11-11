@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralSeeds
+module
+
+public import FailureOfComposition.NativeNumeralSeeds
 
 /-!
 # Three and four operational numeral specializations
@@ -15,6 +17,8 @@ separate: the instance functions compute the final sentence, while the
 specialization functions compute its derivation tree. All supplied numerical
 codes, including malformed codes, have a specified output.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

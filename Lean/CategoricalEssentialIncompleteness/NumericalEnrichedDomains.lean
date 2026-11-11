@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnriched
-import CategoricalEssentialIncompleteness.NumericalDomainReindexing
-import CategoricalEssentialIncompleteness.TypeLattices
-import Mathlib.CategoryTheory.Limits.Types.Equalizers
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnriched
+public import CategoricalEssentialIncompleteness.NumericalDomainReindexing
+public import CategoricalEssentialIncompleteness.TypeLattices
+public import Mathlib.CategoryTheory.Limits.Types.Equalizers
 
 /-!
 # The internal lattice of numerical domains
@@ -16,6 +18,8 @@ numerical domain lattice. Families of equalizer elements therefore have
 pointwise bounded distributive lattice operations at every parameter type.
 Restriction inverse image acts pointwise and preserves binary joins.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

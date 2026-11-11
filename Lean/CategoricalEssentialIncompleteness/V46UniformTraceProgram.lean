@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceFlags
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
 /-! # A literal total arithmetic program for the actual trace predicate
 
@@ -11,6 +13,8 @@ The program uses the bounded earlier-stage fold and equality of actual
 numeric outputs. Its PA graph comparison is proved over all models before
 any standard primitive-recursion certificate is used.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

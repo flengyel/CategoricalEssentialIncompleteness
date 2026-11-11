@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPCategory
-import Mathlib.Computability.PartrecCode
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPCategory
+public import Mathlib.Computability.PartrecCode
 
 /-!
 # A Turing morphism for the numerical category
@@ -13,6 +15,8 @@ The evaluator applies a coded partial recursive function to its numerical
 argument. The parameter theorem gives a total numerical arrow assigning a
 program to each parameter, with equality of the resulting partial maps.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

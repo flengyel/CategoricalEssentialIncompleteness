@@ -15,6 +15,8 @@ No associativity, identity, or arithmetic hypothesis is required.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

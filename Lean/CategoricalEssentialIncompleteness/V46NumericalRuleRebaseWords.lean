@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalRuleRebase
-import CategoricalEssentialIncompleteness.V46NumericalDerivationTreeUniqueness
-import CategoricalEssentialIncompleteness.V46NumericalDerivationConstructorValues
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRebase
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationTreeUniqueness
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationConstructorValues
 
 /-! # Formula-coordinate changes preserve the original derivation word -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -131,7 +135,7 @@ theorem word_square :
   exact h₁.symm.trans ((Category.assoc _ _ _).symm.trans
     (h₂.trans (h₃.trans (NumericalDerivation.codeWordInclusion_tree R))))
 
-private theorem scalar_from_inclusions {C D W : NumericalTuples.Object}
+theorem scalar_from_inclusions {C D W : NumericalTuples.Object}
     (f : C ⟶ D) (i : C ⟶ W) (j : D ⟶ W)
     (vC : NumericalTuples.Point C → ℕ) (vD : NumericalTuples.Point D → ℕ)
     (vW : NumericalTuples.Point W → ℕ)
@@ -141,7 +145,7 @@ private theorem scalar_from_inclusions {C D W : NumericalTuples.Object}
   have h := congrArg (fun k => vW (k.toFun x)) he
   exact (hj (f.toFun x)).symm.trans (h.trans (hi x))
 
-private theorem inverse_scalar {C D : NumericalTuples.Object} (i : C ≅ D)
+theorem inverse_scalar {C D : NumericalTuples.Object} (i : C ≅ D)
     (vC : NumericalTuples.Point C → ℕ) (vD : NumericalTuples.Point D → ℕ)
     (he : ∀ x, vD (i.hom.toFun x) = vC x) (x : NumericalTuples.Point D) :
     vC (i.inv.toFun x) = vD x := by

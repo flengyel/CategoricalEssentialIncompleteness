@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
-import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
-import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
+public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
 
 /-! # The constructed real model is sound for actual finite T_a proofs
 
@@ -9,6 +16,8 @@ guard. Its truth follows from the actual T_a word set in the constructed
 real interpretation. The seven schemes and both inference rules are the
 already proved named-variable rules, with their original substitutions.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedSoundness
 open OrderedFieldSyntax RealClosedAxioms

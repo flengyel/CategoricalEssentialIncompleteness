@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralPreservation
-import FailureOfComposition.NativeInternalCorrectness
-import FailureOfComposition.NativeInternalAxiomGraph
+module
+
+public import FailureOfComposition.NativeNumeralPreservation
+public import FailureOfComposition.NativeInternalCorrectness
+public import FailureOfComposition.NativeInternalAxiomGraph
 
 /-!
 # Native checker acceptance of numeral-arithmetic outputs
@@ -16,6 +18,8 @@ The graph-based corollaries assume acceptance of the supplied seeds and
 conclude acceptance of the exact constructed output, not just existence of
 an arithmetical proof.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

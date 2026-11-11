@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.BooleanPresentations
+module
+
+public import CategoricalEssentialIncompleteness.BooleanPresentations
 
 /-!
 # The predicate lattice of subobjects
@@ -12,6 +14,8 @@ In a regular finitely extensive category, images commute with pullback and
 pullback preserves finite joins. Consequently, subobjects form bounded
 distributive lattices, with bounded lattice homomorphisms as reindexing maps.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

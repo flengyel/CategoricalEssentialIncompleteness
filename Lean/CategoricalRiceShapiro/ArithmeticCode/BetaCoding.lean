@@ -41,6 +41,8 @@ Nothing here uses `Nat.beta`, `Computes` or evaluation over standard `ℕ`.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

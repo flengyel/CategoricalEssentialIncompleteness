@@ -3,19 +3,23 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationInitial
-import CategoricalEssentialIncompleteness.V46ForkDerivationDiagram
-import CategoricalEssentialIncompleteness.V46ForkAxiomClosure
-import CategoricalEssentialIncompleteness.EffectiveForkRegular
-import CategoricalEssentialIncompleteness.V46RegularImage
-import CategoricalEssentialIncompleteness.V46RegularEquivalence
-import Mathlib.CategoryTheory.Subobject.Limits
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationInitial
+public import CategoricalEssentialIncompleteness.V46ForkDerivationDiagram
+public import CategoricalEssentialIncompleteness.V46ForkAxiomClosure
+public import CategoricalEssentialIncompleteness.EffectiveForkRegular
+public import CategoricalEssentialIncompleteness.V46RegularImage
+public import CategoricalEssentialIncompleteness.V46RegularEquivalence
+public import Mathlib.CategoryTheory.Subobject.Limits
 
 /-! # The concrete fork derivation image and its endpoint extensions
 
 The initial algebra is the constructed algebra on the existing finite-proof
 object. Its regular image is compared to the existing conclusion range.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -288,7 +292,7 @@ private instance realizedImageQuotient_regularEpi (a b : Idem V) :
   (RegularEquivalence.regularEpi_iff ForkDerivation.Diagram.equivalence _).mpr
     (inferInstance : IsRegularEpi (EffectiveFork.imageQuotient (ForkDerivation.conclusion a b)))
 
-private theorem realized_image_factorization (a b : Idem V) :
+theorem realized_image_factorization (a b : Idem V) :
     (F).map (EffectiveFork.imageQuotient (ForkDerivation.conclusion a b)) ≫
       theoremInclusion a b = conclusion a b := by
   exact (CategoryTheory.Functor.map_comp (F) _ _).symm.trans

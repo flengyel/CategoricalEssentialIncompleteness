@@ -26,6 +26,8 @@ evaluator code without importing Foundation or maintained project proofs.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition.Palomar.Arithmetic.Evaluator

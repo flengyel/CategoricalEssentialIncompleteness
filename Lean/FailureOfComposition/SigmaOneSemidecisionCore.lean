@@ -16,6 +16,8 @@ for every input vector in every model of PA.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

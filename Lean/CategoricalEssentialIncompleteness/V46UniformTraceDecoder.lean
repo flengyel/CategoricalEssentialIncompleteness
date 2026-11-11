@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceHalving
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceHalving
 
 /-! # Actual program-index decoding on arbitrary internal indices
 
@@ -11,6 +13,8 @@ Division and remainder below are the model's arithmetic operations. Their
 relationship to the literal Code decoder follows from internal halving,
 not from agreement on external standard numerals.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

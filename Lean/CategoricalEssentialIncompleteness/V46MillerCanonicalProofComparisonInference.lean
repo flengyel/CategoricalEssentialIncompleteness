@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSchemes
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
-import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSchemes
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
+public import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
 
 /-! # Finite-rule inference transport with the actual formula chart
 
@@ -9,6 +16,8 @@ with the final formula isomorphism included in the slice. All fields of
 the data below concern rule coefficients and their ordered diagrams;
 no inference comparison or initiality is a field.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -88,7 +97,7 @@ def sumIso (Q : Over F) : E.functor.obj (∐ R.ruleObject Q) ≅
     map_ι_comp_inv_sigmaComparison_assoc, Sigma.ι_mapIso_hom]
 
 omit [Regular C] [Regular D] in
-private theorem map_sum_ext {I : Type} [Finite I] (X : I → C) {Y : D}
+theorem map_sum_ext {I : Type} [Finite I] (X : I → C) {Y : D}
     (f g : E.functor.obj (∐ X) ⟶ Y)
     (hs : ∀ n, E.functor.map (Sigma.ι X n) ≫ f = E.functor.map (Sigma.ι X n) ≫ g) : f=g := by
   apply (cancel_epi (sigmaComparison E.functor X)).mp

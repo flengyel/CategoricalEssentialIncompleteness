@@ -20,6 +20,8 @@ elements. The constructor lemmas discharge every induction case.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

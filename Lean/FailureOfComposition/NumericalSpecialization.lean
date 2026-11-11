@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.Feferman.Specialization
-import FailureOfComposition.FirstSuccessGraph
-import FailureOfComposition.TheoryEnumerability
-import Foundation.FirstOrder.Incompleteness.Definability
-import Foundation.FirstOrder.Incompleteness.Halting
+module
+
+public import Arith.Feferman.Specialization
+public import FailureOfComposition.FirstSuccessGraph
+public import FailureOfComposition.TheoryEnumerability
+public import Foundation.FirstOrder.Incompleteness.Definability
+public import Foundation.FirstOrder.Incompleteness.Halting
 
 /-!
 # Numerical specialization for the first-success comparison
@@ -24,6 +26,8 @@ The resulting correspondence is deliberately stated for the structural
 `Arith.Feferman.Specialization.specializationProofGraph`.  It does not use the
 separately selected `Arith.Feferman.proofTFormula`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -85,7 +89,7 @@ private theorem rePred_PATheoremCode : REPred PATheoremCode :=
 
 /-- A fixed primitive-recursive finite-stage test enumerating exactly the
 codes of PA theorems.  The stage is a certificate, not a proof-code selector. -/
-noncomputable def paStageWitness : ℕ → ℕ → Bool :=
+@[no_expose] noncomputable def paStageWitness : ℕ → ℕ → Bool :=
   Classical.choose (exists_primrec_stage_witness rePred_PATheoremCode)
 
 theorem primrec_paStageWitness :

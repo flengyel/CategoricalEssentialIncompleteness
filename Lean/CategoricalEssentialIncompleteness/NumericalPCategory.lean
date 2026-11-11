@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Recursion
-import CategoricalEssentialIncompleteness.NumericalPartialProducts
+module
+
+public import PCats.Recursion
+public import CategoricalEssentialIncompleteness.NumericalPartialProducts
 
 /-!
 # The numerical P-category
@@ -13,6 +15,8 @@ Recursive tuple coding supplies the product action, diagonal, and projections.
 Their equations make the numerical category a P-category whose induced
 restriction is the partial identity on the domain of a partial recursive map.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

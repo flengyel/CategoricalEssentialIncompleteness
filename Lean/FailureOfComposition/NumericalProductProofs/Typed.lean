@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.RETheory
+module
+
+public import FailureOfComposition.NumericalProductProofs.RETheory
 
 /-!
 # Product proof maps at typed representatives
@@ -19,6 +21,8 @@ file are chosen explicitly:
 These representatives are PA-supported.  The numerical proof maps therefore
 apply without any separate transport between quotient-equivalent indices.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

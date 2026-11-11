@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonGraph
-import FailureOfComposition.NativeNumeralPreservation
+module
+
+public import FailureOfComposition.NativeNumeralComparisonGraph
+public import FailureOfComposition.NativeNumeralPreservation
 
 /-!
 # Same-context preservation of numeral comparisons
@@ -15,6 +17,8 @@ order, or reversed weak order of the numeral values. The signed results need
 no comparison hypothesis. The theory need only be delta-one definable;
 arithmetic inclusion is used later to obtain standard seeds.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

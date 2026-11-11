@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
-import CategoricalEssentialIncompleteness.V46CategoricalSyntax
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
+public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
 
 /-! # Actual positive polynomial fibers for arbitrary uniform slice families
 
@@ -13,6 +15,8 @@ the literal standard arithmetic syntax coding, rather than the parity code
 used for a chosen categorical coproduct. The constructor comparison with
 that chosen coproduct is a separate proved diagram.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

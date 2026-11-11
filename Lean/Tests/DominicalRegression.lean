@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Dominical
-import PCats.DominicalRecursion
+module
+
+public import PCats.Dominical
+public import PCats.DominicalRecursion
 
 /-!
 # Signature guards for the dominical axioms
@@ -24,6 +26,8 @@ properties are claims about the instance telescope:
 `leanOptions`, and an unbound identifier would otherwise be auto-bound and the
 guard would hold vacuously.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

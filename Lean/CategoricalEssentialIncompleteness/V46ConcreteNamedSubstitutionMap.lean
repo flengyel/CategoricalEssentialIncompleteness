@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! Literal ordered mapping of the recursive positions of a raw polynomial.
 Coefficient labels remain unchanged. This supplies the original/result
 projections for the paired named-substitution traversal. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedMapDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

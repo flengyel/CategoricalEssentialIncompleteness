@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Restriction
+module
+
+public import PCats.Restriction
 
 /-!
 # `P`-categories
@@ -42,6 +44,8 @@ different head constants, so `rw` and `simp` cannot cross between them —
 * Never repair a spelling mismatch with `rw [restrictionCategory_rst]`; it
   fires only when the projection spelling is already present syntactically.
 -/
+
+@[expose] public section
 
 universe v u
 

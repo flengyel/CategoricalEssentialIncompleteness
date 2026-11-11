@@ -36,6 +36,8 @@ constructor numbers nor persistence for all standard indices.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

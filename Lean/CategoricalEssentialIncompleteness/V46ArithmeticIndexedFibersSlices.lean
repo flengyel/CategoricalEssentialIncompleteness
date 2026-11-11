@@ -3,15 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAlgebraSplit
-import Mathlib.CategoryTheory.Comma.Over.Pullback
+module
 
-/-! # The proved extensive slice decomposition used by numeral fibers
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAlgebraSplit
+public import Mathlib.CategoryTheory.Comma.Over.Pullback
 
-Morphisms are reconstructed by actual coproduct-fiber case analysis.
-Fullness, faithfulness and essential surjectivity are proved explicitly.
+/-! # Extensive slice decomposition for numeral fibers
+
+Morphisms are reconstructed by case analysis on the coproduct fibers.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -100,8 +103,7 @@ instance splitSlice_essSurj : (splitSlice A B).EssSurj where
 
 instance splitSlice_isEquivalence : (splitSlice A B).IsEquivalence := {}
 
-/-- Finite extensivity gives the equivalence of the two actual pullback
-slice functors, including all slice morphisms. -/
+/-- Finite extensivity gives the equivalence of the two pullback slice functors. -/
 def coproductSliceEquivalence : Over (A ⨿ B) ≌ Over A × Over B :=
   (splitSlice A B).asEquivalence
 
@@ -116,7 +118,7 @@ def splitAtIso : Over C ⥤ Over A × Over B :=
     (Over.pullback ((coprod.inr : B ⟶ A ⨿ B) ≫ b.hom))
 
 omit [Regular D] in
-private theorem firstBaseSquare (Q : Over C) :
+theorem firstBaseSquare (Q : Over C) :
     IsPullback (pullback.fst (Q.hom ≫ b.inv) (coprod.inl : A ⟶ A ⨿ B))
       (pullback.snd (Q.hom ≫ b.inv) (coprod.inl : A ⟶ A ⨿ B))
       Q.hom ((coprod.inl : A ⟶ A ⨿ B) ≫ b.hom) := by
@@ -129,7 +131,7 @@ private theorem firstBaseSquare (Q : Over C) :
   · simp
 
 omit [Regular D] in
-private theorem secondBaseSquare (Q : Over C) :
+theorem secondBaseSquare (Q : Over C) :
     IsPullback (pullback.fst (Q.hom ≫ b.inv) (coprod.inr : B ⟶ A ⨿ B))
       (pullback.snd (Q.hom ≫ b.inv) (coprod.inr : B ⟶ A ⨿ B))
       Q.hom ((coprod.inr : B ⟶ A ⨿ B) ≫ b.hom) := by
@@ -155,8 +157,7 @@ def secondBaseIso (Q : Over C) :
       Over.mk (pullback.snd Q.hom ((coprod.inr : B ⟶ A ⨿ B) ≫ b.hom))
     exact Over.isoMk (secondBaseSquare A B b Q).isoPullback (by simp)
 
-/-- Transporting the codomain isomorphism gives the actual two pullback
-functors, rather than a replacement fiber construction. -/
+/-- Transporting the codomain isomorphism identifies the two pullback functors. -/
 def splitAtComparison : (splitOverIso A B b).functor ≅ splitAtIso A B b :=
   NatIso.ofComponents (fun Q => Iso.prod (firstBaseIso A B b Q) (secondBaseIso A B b Q)) (by
     intro Q R f
@@ -177,8 +178,8 @@ def splitAtEquivalence : Over C ≌ Over A × Over B := (splitAtIso A B b).asEqu
 
 end BaseIso
 
-/-- Cartesian product with a fixed object preserves the displayed
-binary coproduct, by its actual van Kampen pullback squares. -/
+/-- Cartesian product with a fixed object preserves the displayed binary coproduct,
+by its van Kampen pullback squares. -/
 def productSumIsColimit (X : D) :
     IsColimit (BinaryCofan.mk
       (prod.map (coprod.inl : A ⟶ A ⨿ B) (𝟙 X))

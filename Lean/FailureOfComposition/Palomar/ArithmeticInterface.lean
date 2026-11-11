@@ -33,6 +33,8 @@ field is used.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition.Palomar.Arithmetic

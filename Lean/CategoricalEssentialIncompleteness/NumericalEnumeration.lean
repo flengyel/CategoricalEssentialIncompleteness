@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalCategory
-import Mathlib.Data.Nat.Nth
+module
+
+public import CategoricalEssentialIncompleteness.NumericalCategory
+public import Mathlib.Data.Nat.Nth
 
 /-!
 # Computable enumeration of numerical objects
@@ -14,6 +16,8 @@ Counting its elements below a given bound supplies a computable inverse on the
 subset. These functions will give an isomorphism between each numerical object
 and the distinguished object of all natural numbers.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

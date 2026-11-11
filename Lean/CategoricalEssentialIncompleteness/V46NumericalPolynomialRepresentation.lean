@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
-import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
+public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
 
 /-! # Exact polynomial-input codes under the arithmetic numerical comparison -/
+
+@[expose] public section
 noncomputable section
 universe w
 set_option backward.isDefEq.respectTransparency false

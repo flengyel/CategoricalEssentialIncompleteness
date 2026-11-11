@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutDigits
-import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutDigits
+public import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
 
 /-! # Uniform finite certificates for the two strict coordinate cuts
 
@@ -12,6 +14,8 @@ These are the actual cut domains in the representation-independent source.
 Their enumeration uses only finite dyadic inequalities and retains the
 same numerical word for each representation.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoricalEssentialIncompleteness.LocalConnectedness
 open CategoryTheory CategoryTheory.RestrictionCategory

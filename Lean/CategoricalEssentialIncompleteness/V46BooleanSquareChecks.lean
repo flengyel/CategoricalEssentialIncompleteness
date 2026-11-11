@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46BooleanSquare
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46BooleanSquare
 
 /-! The Boolean square is a genuine product, compared with four terminal summands. -/
+
+@[expose] public section
 noncomputable section
 universe v u
 open CategoryTheory CategoryTheory.Limits

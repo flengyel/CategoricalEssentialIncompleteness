@@ -15,6 +15,8 @@ the same-index recursive lookup is handled by PA induction on the source stage.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

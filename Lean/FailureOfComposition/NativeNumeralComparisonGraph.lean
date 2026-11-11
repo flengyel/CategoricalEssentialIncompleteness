@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonConstructor
-import FailureOfComposition.NativeNumeralAdditionGraph
+module
+
+public import FailureOfComposition.NativeNumeralComparisonConstructor
+public import FailureOfComposition.NativeNumeralAdditionGraph
 
 /-!
 # Compositional graphs of comparison proof functions
@@ -15,6 +17,8 @@ Existential intermediate codes follow the executable operations in order.
 In particular, `subDef` computes the truncated differences; the graph never
 selects an output by a proof-acceptance condition.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

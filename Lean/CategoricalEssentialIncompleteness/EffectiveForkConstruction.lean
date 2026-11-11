@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkSpans
-import CategoricalEssentialIncompleteness.EffectiveForkTuring
-import CategoricalEssentialIncompleteness.FinitePowerCarriers
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkSpans
+public import CategoricalEssentialIncompleteness.EffectiveForkTuring
+public import CategoricalEssentialIncompleteness.FinitePowerCarriers
 
 /-! # Constructed restriction-category structure on the computational fork -/
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory

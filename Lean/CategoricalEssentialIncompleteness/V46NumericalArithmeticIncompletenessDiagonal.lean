@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
-import CategoricalEssentialIncompleteness.ClassicalRecursionCategory
-import CategoricalEssentialIncompleteness.ClassicalSplitMaps
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
+public import CategoricalEssentialIncompleteness.ClassicalRecursionCategory
+public import CategoricalEssentialIncompleteness.ClassicalSplitMaps
 
 /-! # The printed universal program's actual classical diagonal pair -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

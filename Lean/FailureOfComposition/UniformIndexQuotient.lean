@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.GeneratedQuotient
-import FailureOfComposition.NumericalProofBridge.RETheory
+module
+
+public import FailureOfComposition.GeneratedQuotient
+public import FailureOfComposition.NumericalProofBridge.RETheory
 
 /-!
 # The uniform-provability quotient of production program indices
@@ -22,6 +24,8 @@ proof presentation.  The quotient concerns only the production number object.
 No typed source objects, product or coproduct structure, or identification with
 the manuscript's full category `S_T` is asserted here.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

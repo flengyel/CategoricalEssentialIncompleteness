@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleParameters
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionValues
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleParameters
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionValues
 
 /-! # The actual arithmetic absent-variable scheme label comparison -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -18,8 +22,8 @@ open Coordinates SubstitutionParameters SubstitutionDomains RuleParameters Named
 local notation "S" => numericalSyntax
 local notation "S₀" => originalSyntax
 local notation "F" => PredicateInterpretation.functor 𝗣𝗔 ℕ
-private abbrev formulaObject := numericalSyntax.algebra.a.2
-private abbrev originalFormulaObject := originalSyntax.algebra.a.2
+abbrev formulaObject := numericalSyntax.algebra.a.2
+abbrev originalFormulaObject := originalSyntax.algebra.a.2
 local notation "Y" => formulaObject
 local notation "Y₀" => originalFormulaObject
 local notation "B" => NumericalNamed.variableObject ⨯ (Y ⨯ Y)
@@ -103,7 +107,7 @@ theorem image_iff (q : NumericalTuples.Point B) :
       exact ⟨a,(numericalInterpretation_value (S₀).distributionInclusion a).symm.trans ha⟩
   exact hn'.trans (hb.trans (hp'.symm.trans hi))
 
-private theorem forward_image (a : NumericalTuples.Point (S).distributionParameters) :
+theorem forward_image (a : NumericalTuples.Point (S).distributionParameters) :
     ∃ b, (numericalInterpretation.map (S₀).distributionInclusion).toFun b =
       ((S).distributionInclusion ≫ distributionBaseIso.hom).toFun a :=
   (image_iff ((S).distributionInclusion.toFun a)).mp ⟨a,rfl⟩
@@ -116,7 +120,7 @@ def forward : (S).distributionParameters ⟶ numericalInterpretation.obj (S₀).
     forward ≫ numericalInterpretation.map (S₀).distributionInclusion =
       (S).distributionInclusion ≫ distributionBaseIso.hom := imageLift_comp _ _ forward_image
 
-private theorem backward_image
+theorem backward_image
     (a : NumericalTuples.Point (numericalInterpretation.obj (S₀).distributionParameters)) :
     ∃ b, (S).distributionInclusion.toFun b =
       (numericalInterpretation.map (S₀).distributionInclusion ≫ distributionBaseIso.inv).toFun a := by

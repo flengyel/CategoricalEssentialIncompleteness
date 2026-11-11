@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProofSearchTemplate
-import Foundation.Vorspiel.Computability
+module
+
+public import FailureOfComposition.ProofSearchTemplate
+public import Foundation.Vorspiel.Computability
 
 /-!
 # Coded objects and their arithmetic membership formulas
@@ -26,6 +28,8 @@ Object expressions remain syntactic data.  No numerical encoding of all
 expressions, typed program admissibility condition, source-guarded equality,
 or categorical product or coproduct is introduced here.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

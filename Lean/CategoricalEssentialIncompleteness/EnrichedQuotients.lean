@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnrichedDomains
-import CategoricalEssentialIncompleteness.BooleanPresentations
+module
+
+public import CategoricalEssentialIncompleteness.EnrichedDomains
+public import CategoricalEssentialIncompleteness.BooleanPresentations
 
 /-!
 # Boolean quotient incompleteness from the enriched representation section
@@ -15,6 +17,8 @@ is used in this argument. `GlobalSubobjects` constructs the global predicate
 comparison along `J`; `RepresentedQuotients` applies it with ordinary
 restriction idempotents and total arrows.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

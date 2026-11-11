@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionCompatibility
-import Mathlib.CategoryTheory.Category.PartialFun
-import Mathlib.Tactic.Tauto
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionCompatibility
+public import Mathlib.CategoryTheory.Category.PartialFun
+public import Mathlib.Tactic.Tauto
 
 /-! # The category of sets and arbitrary partial functions
 
@@ -13,6 +15,8 @@ The morphisms are `Part`-valued functions, so their domains need not be
 decidable. Restrictions and ranges are the partial identities on domains
 and images, respectively.
 -/
+
+@[expose] public section
 
 universe u
 

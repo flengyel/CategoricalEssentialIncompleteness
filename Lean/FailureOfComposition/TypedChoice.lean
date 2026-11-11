@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.TypedRecursionCategory
-import PCats.DomSemilattice
+module
+
+public import FailureOfComposition.TypedRecursionCategory
+public import PCats.DomSemilattice
 
 /-!
 # Choice for the typed program category
@@ -22,6 +24,8 @@ After source-target normalization, the selected program defines a typed
 section.  Its two section equations hold in the uniform-provability quotient,
 giving categorical choice, weak choice, and total range lifting.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

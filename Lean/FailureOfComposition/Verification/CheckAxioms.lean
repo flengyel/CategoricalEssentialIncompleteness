@@ -3,8 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition
+module
 
+public import FailureOfComposition
+
+
+/-! # Definitions and theorems in `CheckAxioms` -/
+
+@[expose] public section
 #print axioms FailureOfComposition.NativeInternalApplications.canonical_checks_correct
 #print axioms FailureOfComposition.NativeInternalApplications.exists_craig_structural_checker
 #print axioms FailureOfComposition.NativeInternalApplications.craig_eq_acceptance_iff_eqIndex

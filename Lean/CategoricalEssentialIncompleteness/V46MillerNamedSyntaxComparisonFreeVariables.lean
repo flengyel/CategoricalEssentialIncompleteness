@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonNormalization
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonNormalization
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
 
 /-! # The concrete occurrence fold under the uniform named-word chart
 
@@ -8,6 +15,8 @@ The target occurrence algebra is the intrinsic one. Every list operation
 comparison is supplied by its constructed parameter-fold proof, rather
 than an extra hypothesis of this endpoint.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -109,7 +118,7 @@ private def algebraIso_from_diagram {C : Type*} [Category C] (G : C ⥤ C)
     _ = j.hom ≫ B.str := by rw [i.inv_hom_id,G.map_id,Category.id_comp]
     _ = _ := by simpa only [Category.assoc] using h.symm
 
-private def normalizedAlgebraIso
+def normalizedAlgebraIso
     (a b : SyntaxPolynomial (PredicateCategory 𝗣𝗔))
     (p q : SyntaxPolynomial (Total.TotalCategory P))
     (hp : Syntax.Polynomial.mapped P a = p) (hq : Syntax.Polynomial.mapped P b = q)
@@ -376,7 +385,7 @@ theorem formulaOccurrence_structure :
         (S₁).occurrenceAlgebra.str.2 := by
   exact formulaOccurrence_explicit_structure P V σ π d
 
-private theorem explicit_occurrence_structure_comparison : (FP).map (S₀).occurrenceAlgebra.str =
+theorem explicit_occurrence_structure_comparison : (FP).map (S₀).occurrenceAlgebra.str =
       (normalizedJointIso P a b p q (termExpression_mapped P V σ d)
         (formulaExpression_mapped P V π d)).hom.app (S₀).occurrenceAlgebra.a ≫
           (explicitOccurrenceAlgebra P V σ π d).str := by

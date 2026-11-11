@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionCarriers
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionCarriers
 
 /-! PA carrier preservation for the actual substitution roots, including the
 branch which succeeds at an equal binder despite recursive body failure. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedRootClosureDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

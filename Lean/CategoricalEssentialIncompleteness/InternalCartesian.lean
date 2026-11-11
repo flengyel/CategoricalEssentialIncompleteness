@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalLattices
+module
+
+public import CategoricalEssentialIncompleteness.InternalLattices
 
 /-!
 # The internal total-arrow and predicate structures
@@ -14,6 +16,8 @@ This is the total-arrow reduct needed by the internal diagonal argument.
 `EnrichedTotals` constructs it from enriched restriction hom-objects, and
 `EnrichedDomains` constructs its domain-predicate action.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

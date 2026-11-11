@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceFlags
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
 /-! # The actual halving program computes division in every PA model
 
 The input of the induction is an arbitrary model element. This supplies the
 internal-index decoder step that is unavailable from numeral-only evaluation.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

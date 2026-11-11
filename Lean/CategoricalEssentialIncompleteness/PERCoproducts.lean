@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERFiniteLimits
+module
+
+public import CategoricalEssentialIncompleteness.PERFiniteLimits
 
 /-!
 # Finite coproducts of numerical PERs
@@ -13,6 +15,8 @@ identify the summand. The second coordinates are compared in that summand's
 PER. Recursive injections and case distinction give the coproduct universal
 property. The empty PER is an initial object.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

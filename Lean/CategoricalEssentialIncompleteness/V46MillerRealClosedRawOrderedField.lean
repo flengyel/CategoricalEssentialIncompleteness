@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedRawStructure
-import Mathlib.Algebra.Field.MinimalAxioms
-import Mathlib.Algebra.Order.Ring.Defs
-import Mathlib.Order.RelClasses
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawStructure
+public import Mathlib.Algebra.Field.MinimalAxioms
+public import Mathlib.Algebra.Order.Ring.Defs
+public import Mathlib.Order.RelClasses
 
 /-! # Constructing the ordered field from the literal finite matrices
 
@@ -9,12 +16,14 @@ The selected inverse uses only the actual existential inverse matrix.
 All primitive field operations and strict order retain the interpretation's
 original values. No field or order instance is supplied as a premise.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedRaw
 universe u
 variable {K : Type u} (M : Interpretation K) (hM : MatricesValid M)
 
-private def inverseValue (x : K) : K := by
+def inverseValue (x : K) : K := by
   classical
   exact if hx : x=zeroValue M then zeroValue M
     else Classical.choose ((matrix_consequences M hM).inverse_exists x hx)

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalDomainEmbedding
-import CategoricalEssentialIncompleteness.SubobjectPredicates
-import CategoricalEssentialIncompleteness.GlobalSubobjects
+module
+
+public import CategoricalEssentialIncompleteness.NumericalDomainEmbedding
+public import CategoricalEssentialIncompleteness.SubobjectPredicates
+public import CategoricalEssentialIncompleteness.GlobalSubobjects
 
 /-!
 # Numerical restriction domains and subobject predicates
@@ -15,6 +17,8 @@ bounded distributive lattices on the category of total numerical arrows.
 The support inclusion of a domain defines an injective natural bounded lattice
 homomorphism between these families.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

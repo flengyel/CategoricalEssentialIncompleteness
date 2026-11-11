@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
 
 /-! # The seven named-variable schemes and their two inference rules
 
 These semantic lemmas are on external finite trees. Their application to
 the arithmetic derivation object requires the proved standard-code comparison.
 -/
+
+@[expose] public section
 
 universe u v w
 namespace CategoricalEssentialIncompleteness.V46.NamedFiniteSyntax.Formula

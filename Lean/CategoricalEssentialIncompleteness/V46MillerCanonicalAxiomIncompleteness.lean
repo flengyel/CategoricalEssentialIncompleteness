@@ -1,15 +1,22 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalIncompleteness
-import CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks
-
-/-! # Incompleteness for the original canonical axiom monomorphism
-
-An arbitrary given axiom mono is recovered from its actual literal image
-codes through the genuine point-presentation equivalence. The resulting
-axiom isomorphism is used in both directions between the constructed
-initial derivation algebras. Thus the final theory range is the range of
-the original conclusion, rather than the range of a replacement axiom
-object supplied as a new hypothesis.
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
 -/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalIncompleteness
+public import CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks
+
+/-! # Incompleteness for an arbitrary axiom monomorphism
+
+The point-presentation equivalence recovers an axiom monomorphism from
+its image of sentence words. The resulting isomorphism induces morphisms
+between the initial derivation algebras in both directions and identifies
+their conclusion ranges.
+-/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -32,8 +39,7 @@ local notation "S₂" => NamedSyntaxComparison.canonicalPresentedSyntax a (V) σ
 local notation "j" => CanonicalPresentation.mappedSentenceIso a (V) σ π d
 variable {A : Total.CanonicalTotal a}
 
-/-- This is a preimage of an actual morphism under the full equivalence E.
-It makes no choice in any Γ-proof fiber. -/
+/-- The preimage of the axiom morphism under the equivalence `E`. -/
 def sourceAxioms (m : A ⟶ (S₂).sentenceObject) :
     (E).inverse.obj A ⟶ (S₁).sentenceObject :=
   (E).functor.preimage (((E).counitIso.app A).hom≫m≫(j).inv)
@@ -54,8 +60,8 @@ theorem sourceAxioms_square (m : A ⟶ (S₂).sentenceObject) :
   rw [sourceAxioms_map a m]
   simp only [Category.assoc,Iso.inv_hom_id,Category.comp_id]
 
-/-- These are literal formula words, reached through the actual source
-sentence-word mono; they are not the codes of chosen sentence points. -/
+/-- The image of the source axiom monomorphism under the sentence-word
+encoding, as a set of formula words. -/
 def recoveredCodes (m : A ⟶ (S₂).sentenceObject) : Set ℕ :=
   SentenceAxiomPullbacks.givenCodes (NamedProofImage.sentenceWord (P) σ π d) (sourceAxioms a m)
 
@@ -87,8 +93,8 @@ theorem source_subobject_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   SentenceAxiomPullbacks.given_subobject_eq (NamedProofImage.sentenceWord (P) σ π d)
     (sourceAxioms a m)
 
-/-- Recover the original canonical mono itself, including its original
-domain, through E's counit and the proved chosen-pullback comparison. -/
+/-- Recover the axiom monomorphism and its domain using `E`'s counit
+and the comparison with the chosen pullback. -/
 def axiomIso (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     A ≅ CanonicalPresentation.chosenAxiomObject a σ π d
       (recoveredCodes a m) (recoveredCodes_enumerable a m) :=
@@ -161,8 +167,8 @@ def theoremIdem (m : A ⟶ (S₂).sentenceObject) : Idem (S₂).sentenceObject.o
 def refutationIdem (m : A ⟶ (S₂).sentenceObject) : Idem (S₂).sentenceObject.obj :=
   Idem.pull (S₂).sentenceNegation.hom (theoremIdem a m)
 
-/-- Both image inequalities are obtained from the actual initial algebras
-and the actual axiom iso, with no initiality or image equality premise. -/
+/-- The axiom isomorphism and initiality of the two derivation algebras
+identify the sentence-conclusion images. -/
 theorem sentence_image_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     imageSubobject (sentenceConclusion a m)=imageSubobject
       (CanonicalPresentation.chosenSentenceConclusion a σ π d
@@ -212,7 +218,7 @@ private theorem range_of_image_eq {X I Y : Total.CanonicalTotal a}
   rw [he] at hh
   exact hh
 
-/-- Equality of regular image subobjects gives equality of the actual
+/-- Equality of regular image subobjects gives equality of the
 restriction ranges, using the constructed monic partial inverses. -/
 theorem range_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     theoremIdem a m=CanonicalIncompleteness.theoremIdem a
@@ -224,8 +230,8 @@ theorem range_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   have hc := range_of_image_eq a c (image.ι c) (rfl : imageSubobject c=Subobject.mk (image.ι c))
   exact h.trans hc.symm
 
-/-- The recovered literal extension condition is exactly inclusion of
-T_a's chosen theory in the original mono's generated sentence theory. -/
+/-- Extension by finite derivability is equivalent to inclusion of
+the generated sentence theories. -/
 theorem extends_iff_theoremIdem_le (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     RealClosedBounds.Extends a (recoveredCodes a m) ↔
       CanonicalIncompleteness.theoremIdem a (RealClosedAxioms.theoryAxioms a)
@@ -234,8 +240,8 @@ theorem extends_iff_theoremIdem_le (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   exact CanonicalIncompleteness.extends_iff_theoremIdem_le a
     (recoveredCodes a m) (recoveredCodes_enumerable a m)
 
-/-- The extension condition uses actual finite derivability from T_a,
-not literal inclusion of its axiom words or a selected proof of each axiom. -/
+/-- Transport of finite proofs is equivalent to inclusion of the
+generated sentence theories. -/
 theorem finite_proof_transport_iff_theoremIdem_le
     (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     (∀ φ : OrderedFieldSyntax.Formula,
@@ -259,8 +265,8 @@ theorem literal_range_conjugacy (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   rw [range_recovery]
   exact CanonicalIncompleteness.theorem_conjugacy a (recoveredCodes a m) (recoveredCodes_enumerable a m)
 
-/-- Closed native consistency of the recovered literal Γ is equivalent
-to the exact consistency equation for the original categorical theory. -/
+/-- Consistency of finite proofs of sentences is equivalent to disjointness
+of the categorical theorem and refutation idempotents. -/
 theorem consistent_iff_disjoint (m : A ⟶ (S₂).sentenceObject) [Mono m] :
     TheoryDomainApplication.Consistent (recoveredCodes a m) ↔
       theoremIdem a m⊓Idem.pull (S₂).sentenceNegation.hom (theoremIdem a m)=⊥ := by
@@ -268,8 +274,7 @@ theorem consistent_iff_disjoint (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   exact CanonicalIncompleteness.consistent_iff_canonical_disjoint a
     (recoveredCodes a m) (recoveredCodes_enumerable a m)
 
-/-- Theorem 8.6 for every original axiom subobject of the actual canonical
-sentence object. Enumerability of the recovered Γ is proved above. -/
+/-- Theorem 8.6 for every axiom subobject of the sentence object. -/
 theorem printed_essential_incompleteness (m : A ⟶ (S₂).sentenceObject) [Mono m]
     (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))
     (hcons : theoremIdem a m⊓Idem.pull (S₂).sentenceNegation.hom (theoremIdem a m)=⊥) :
@@ -305,8 +310,8 @@ theorem printed_native_incomplete (m : A ⟶ (S₂).sentenceObject) [Mono m]
   exact CanonicalIncompleteness.printed_native_incomplete a ha
     (recoveredCodes a m) (recoveredCodes_enumerable a m) hext hc
 
-/-- Every original axiom subobject, with both extension and consistency
-stated directly on its actual generated categorical theory. -/
+/-- Incompleteness for every axiom subobject, with extension and consistency
+stated on its generated categorical theory. -/
 theorem printed_categorical_incompleteness (m : A ⟶ (S₂).sentenceObject) [Mono m]
     (ha : IsMiller a)
     (hext : CanonicalIncompleteness.theoremIdem a (RealClosedAxioms.theoryAxioms a)

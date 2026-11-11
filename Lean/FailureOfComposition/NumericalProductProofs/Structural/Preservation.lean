@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalProductProofs.Structural.Maps
 
 /-!
 # PA-internal preservation by the product proof maps
@@ -13,6 +15,8 @@ codes, proof codes, and map outputs.  Thus their content includes nonstandard
 elements in every model of PA.  Their proofs use the structural proof graph,
 not external computation on standard natural numbers.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

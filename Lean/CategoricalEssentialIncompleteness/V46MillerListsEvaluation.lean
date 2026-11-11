@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsCarrier
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsCarrier
 
 /-! # Actual positive value records for arbitrary uniform list algebras
 
@@ -12,6 +14,8 @@ operation. Every preceding entry is obtained by the actual cons operation
 on the given label and the next recorded value. No algebra result is an
 ordinary computable initial value.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

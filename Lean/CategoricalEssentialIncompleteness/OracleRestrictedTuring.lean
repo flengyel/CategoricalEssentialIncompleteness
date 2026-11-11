@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleRestrictedCoding
-import CategoricalEssentialIncompleteness.OracleProgramSpecialization
+module
+
+public import CategoricalEssentialIncompleteness.OracleRestrictedCoding
+public import CategoricalEssentialIncompleteness.OracleProgramSpecialization
 
 /-! # The actual oracle-domain Turing morphism with ordinary recursive values -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

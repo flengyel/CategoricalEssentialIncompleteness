@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith
+module
+
+public import Arith
 
 /-!
 # Regression test for the arithmetic formula of the Feferman proof predicate
@@ -38,6 +40,8 @@ numerical `mp` operation is proved either.
 `#print axioms` is informational and appears last. The enforced audit is
 `Lean/check_arith_axioms.lean`.
 -/
+
+@[expose] public section
 
 namespace Arith.Feferman.Test
 

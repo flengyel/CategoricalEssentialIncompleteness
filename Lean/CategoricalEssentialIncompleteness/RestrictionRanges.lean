@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionIdempotents
-import PCats.Coproducts
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionIdempotents
+public import PCats.Coproducts
 
 /-! # Ranges and binary restriction coproducts -/
+
+@[expose] public section
 
 universe v u
 

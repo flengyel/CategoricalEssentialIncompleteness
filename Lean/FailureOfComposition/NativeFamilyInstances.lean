@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeSigmaOneWitness
+module
+
+public import FailureOfComposition.NativeSigmaOneWitness
 
 /-!
 # Literal internal instances of the extraction seed
@@ -12,6 +14,8 @@ All substitutions here are operations on internal syntax, not semantic
 equivalences. The matrix valuation is `(y',y,u)`. Its conclusion is the
 existing `eqValue y y'`, with the original equality syntax unchanged.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -130,10 +134,20 @@ private theorem partial3_third (phi : Bootstrapping.Semiformula V ℒₒᵣ 3) (
   funext i
   fin_cases i <;> simp [toNumVec]
 
+-- Apply the typed-to-untyped substitution equation before instantiating
+-- the arithmetic formula, to avoid expanding its entire quotation.
+private theorem partial3_third_value (phi : ArithmeticSemisentence 3) (u y r : V) :
+    subst1Value (Arithmetic.numeral r)
+      ((⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 3).subst
+        ![Bootstrapping.Semiterm.bvar (0 : Fin 1), typedNumeral y, typedNumeral u]).val =
+      instanceValue phi ![r, y, u] :=
+  (partial3_third (⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 3) u y r).trans
+    (toNumVec_instance phi ![r, y, u])
+
 theorem third_specialization (M : 𝚺₁.Semisentence 1) (h k : ℕ) (u y r : V) :
     subst1Value (Arithmetic.numeral r) (matrixAfterY M h k u y).val =
       instanceValue (extractionMatrix M h k) ![r, y, u] := by
-  exact partial3_third (⌜extractionMatrix M h k⌝ : Bootstrapping.Semiformula V ℒₒᵣ 3) u y r
+  exact partial3_third_value (extractionMatrix M h k) u y r
 
 theorem instanceValue_imp {n : ℕ} (phi psi : ArithmeticSemisentence n) (v : Fin n → V) :
     instanceValue (phi 🡒 psi) v = imp ℒₒᵣ (instanceValue phi v) (instanceValue psi v) := by

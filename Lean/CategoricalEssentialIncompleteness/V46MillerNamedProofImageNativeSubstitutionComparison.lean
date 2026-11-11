@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSource
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSource
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeTransport
 
 /-! # Native term substitution through the actual uniform fold
 
@@ -7,6 +14,8 @@ The fixed-frame constructor law and the verified variable/function squares
 give native term induction, retaining nullary symbols and ordered children.
 Formula substitution is continued separately.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

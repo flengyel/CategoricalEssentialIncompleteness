@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxiomsExponential
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxiomsExponential
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
 
 /-! # The printed exponential coefficient and the actual indexed initial algebra
 
@@ -12,6 +14,8 @@ The proved coefficient mono square induces a comparison of the original
 ordered rules. Initiality, numeral fibers and sentence images are then
 transported with their constructor and conclusion equations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -26,7 +30,7 @@ namespace Signature
 variable {C : Type u} [Category.{v} C] [Regular C] [HasFiniteCoproducts C]
 
 omit [HasFiniteCoproducts C] in
-private theorem power_refl (F : C) (n : ℕ) :
+theorem power_refl (F : C) (n : ℕ) :
     (InferenceTransport.power (CategoryTheory.Equivalence.refl (C := C)) F n).hom = 𝟙 (finitePower F n) := by
   induction n with
   | zero => exact terminal.hom_ext _ _
@@ -44,7 +48,7 @@ variable (logical : L ⟶ F) (sentence : S ⟶ F)
 variable (axioms : A ⟶ E ⨯ S) (axioms' : A' ⟶ E ⨯ S)
 variable (all : V ⨯ F ⟶ F) (imp : F ⨯ F ⟶ F) (a : A ≅ A')
 
-private def coefficient : ∀ i : Fin 3,
+def coefficient : ∀ i : Fin 3,
     (ArithmeticIndexedRules.rules E logical sentence axioms all imp).instances i ≅
       (ArithmeticIndexedRules.rules E logical sentence axioms' all imp).instances i :=
   Fin.cases (coprod.mapIso (Iso.refl _) a)
@@ -153,7 +157,7 @@ def conclusion (AxPA : Carrier) : (algebra AxPA).a.left ⟶
 
 section GenericTransport
 variable {C : Type u} [Category.{v} C] [Regular C]
-private theorem pullbackSquare {P Q X Y : C} (f : P ⟶ X) (g : Q ⟶ X) (j : Y ⟶ X)
+theorem pullbackSquare {P Q X Y : C} (f : P ⟶ X) (g : Q ⟶ X) (j : Y ⟶ X)
     (i : P ≅ Q) (h : i.hom ≫ g = f) :
     IsPullback (pullback.fst f j ≫ i.hom) (pullback.snd f j) g j := by
   apply (IsPullback.of_hasPullback f j).of_iso (Iso.refl _) i (Iso.refl _) (Iso.refl _)
@@ -162,21 +166,21 @@ private theorem pullbackSquare {P Q X Y : C} (f : P ⟶ X) (g : Q ⟶ X) (j : Y 
   · simpa only [Iso.refl_hom,Category.comp_id] using h.symm
   · simp
 
-private def pullbackIso {P Q X Y : C} (f : P ⟶ X) (g : Q ⟶ X) (j : Y ⟶ X)
+def pullbackIso {P Q X Y : C} (f : P ⟶ X) (g : Q ⟶ X) (j : Y ⟶ X)
     (i : P ≅ Q) (h : i.hom ≫ g = f) : pullback f j ≅ pullback g j :=
   (pullbackSquare f g j i h).isoPullback
 
-@[reassoc] private theorem pullbackIso_snd {P Q X Y : C}
+@[reassoc] theorem pullbackIso_snd {P Q X Y : C}
     (f : P ⟶ X) (g : Q ⟶ X) (j : Y ⟶ X) (i : P ≅ Q) (h : i.hom ≫ g = f) :
     (pullbackIso f g j i h).hom ≫ pullback.snd g j = pullback.snd f j :=
   (pullbackSquare f g j i h).isoPullback_hom_snd
 
-private def carriedAlgebra {H : C ⥤ C} (A : Endofunctor.Algebra H) {X : C} (i : X ≅ A.a) :
+def carriedAlgebra {H : C ⥤ C} (A : Endofunctor.Algebra H) {X : C} (i : X ≅ A.a) :
     Endofunctor.Algebra H where
   a := X
   str := H.map i.hom ≫ A.str ≫ i.inv
 
-private def carriedIso {H : C ⥤ C} (A : Endofunctor.Algebra H) {X : C} (i : X ≅ A.a) :
+def carriedIso {H : C ⥤ C} (A : Endofunctor.Algebra H) {X : C} (i : X ≅ A.a) :
     carriedAlgebra A i ≅ A :=
   Endofunctor.Algebra.isoMk i (by simp only [carriedAlgebra,Category.assoc,Iso.inv_hom_id,Category.comp_id])
 

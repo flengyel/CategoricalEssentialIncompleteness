@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProofSearchMembership
+module
+
+public import FailureOfComposition.ProofSearchMembership
 
 /-!
 # Stage witnesses required by production equality transport
@@ -14,6 +16,8 @@ proof, so its stage is bounded by the numerical proof code. Consequently,
 primitive-recursive equality transport is equivalent to a primitive-recursive
 bound on the required stages. This concerns the unchanged production checker.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

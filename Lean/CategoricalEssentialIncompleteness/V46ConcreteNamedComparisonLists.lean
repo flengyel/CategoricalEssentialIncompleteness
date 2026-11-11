@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
-import CategoricalEssentialIncompleteness.V46SyntacticListsStable
-import CategoricalEssentialIncompleteness.V46CategoricalListLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
+public import CategoricalEssentialIncompleteness.V46SyntacticListsStable
+public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
 
 /-! # The actual categorical concatenation computes numerical append -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

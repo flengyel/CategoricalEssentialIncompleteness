@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion
-import CategoricalEssentialIncompleteness.V46SyntacticPredicates
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
 
 /-! Internal arithmetic induction for a carrier invariant of a constructed
 primitive recursion, before specializing its graph or carrier. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

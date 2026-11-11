@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyApplications
-import FailureOfComposition.ProofSearchMembership
+module
+
+public import FailureOfComposition.NativeFamilyApplications
+public import FailureOfComposition.ProofSearchMembership
 
 /-!
 # Typed application of native family extraction
@@ -14,6 +16,8 @@ parameters here. Their choices do not enter the executable numerical core.
 This separate import boundary also keeps typed model instances out of the
 general extraction layer.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

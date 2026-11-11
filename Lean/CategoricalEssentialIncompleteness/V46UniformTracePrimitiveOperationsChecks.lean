@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveOperations
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveOperations
+
+
+/-! # Statement checks in `V46UniformTracePrimitiveOperationsChecks` -/
+
+@[expose] public section
 open Nat Nat.ArithPart₁ CategoricalRiceShapiro.ArithmeticCode
 open CategoricalEssentialIncompleteness.V46.UniformTrace.PrimitiveCoding
 

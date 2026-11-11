@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonAtomicSteps
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonNegationStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonImplicationStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationCoproductValue
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonAtomicSteps
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonNegationStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonImplicationStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationCoproductValue
 
 /-! # The actual full formula-substitution structure has the numeric root result -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

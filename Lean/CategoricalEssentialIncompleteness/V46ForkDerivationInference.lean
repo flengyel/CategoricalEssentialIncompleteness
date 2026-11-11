@@ -3,16 +3,20 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46Inference
-import Mathlib.CategoryTheory.Extensive
-import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46Inference
+public import Mathlib.CategoryTheory.Extensive
+public import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
+public import Mathlib.Tactic.FinCases
 
 /-! # The printed nullary-and-modus-ponens inference functor
 
 This is the finite rule functor with no unary rules. Its comparison with
 Ax + M is constructed, without an initial-algebra premise.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -101,7 +105,7 @@ def unaryInputInitial (Q : Over S) : IsInitial ((rules axioms implication).ruleO
   let f : (rules axioms implication).ruleObject Q 1 ⟶ ⊥_ D := pullback.fst _ _
   exact IsInitial.ofStrict f initialIsInitial
 
-private def toPrintedLeft (Q : Over S) :
+def toPrintedLeft (Q : Over S) :
     ((rules axioms implication).inference.obj Q).left ⟶ ((printedH axioms implication).obj Q).left :=
   Sigma.desc (Fin.cases (pullback.fst _ _ ≫ coprod.inl)
     (Fin.cases ((unaryInputInitial axioms implication Q).to _)
@@ -119,7 +123,7 @@ private def toPrintedLeft (Q : Over S) :
   rw [toPrintedLeft,Sigma.ι_comp_desc]
   rfl
 
-private theorem toPrintedLeft_conclusion (Q : Over S) :
+theorem toPrintedLeft_conclusion (Q : Over S) :
     toPrintedLeft axioms implication Q ≫ ((printedH axioms implication).obj Q).hom =
       ((rules axioms implication).inference.obj Q).hom := by
   apply Sigma.hom_ext
@@ -143,13 +147,13 @@ def toPrinted (Q : Over S) :
     (rules axioms implication).inference.obj Q ⟶ (printedH axioms implication).obj Q :=
   Over.homMk (toPrintedLeft axioms implication Q) (toPrintedLeft_conclusion axioms implication Q)
 
-private def fromPrintedLeft (Q : Over S) :
+def fromPrintedLeft (Q : Over S) :
     ((printedH axioms implication).obj Q).left ⟶ ((rules axioms implication).inference.obj Q).left :=
   coprod.desc ((rules axioms implication).nullaryRule Q ≫
     Sigma.ι ((rules axioms implication).ruleObject Q) 0)
     (Sigma.ι ((rules axioms implication).ruleObject Q) 2)
 
-private theorem fromPrintedLeft_conclusion (Q : Over S) :
+theorem fromPrintedLeft_conclusion (Q : Over S) :
     fromPrintedLeft axioms implication Q ≫ ((rules axioms implication).inference.obj Q).hom =
       ((printedH axioms implication).obj Q).hom := by
   apply coprod.hom_ext

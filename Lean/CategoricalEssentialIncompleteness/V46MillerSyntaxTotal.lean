@@ -1,11 +1,18 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
-import CategoricalEssentialIncompleteness.V46MillerListsStable
-import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
-import CategoricalEssentialIncompleteness.V46MillerTotalRealization
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameterTransport
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTransport
-import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
-import CategoricalEssentialIncompleteness.V46DecidableVariablesTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
+public import CategoricalEssentialIncompleteness.V46MillerListsStable
+public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
+public import CategoricalEssentialIncompleteness.V46MillerTotalRealization
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameterTransport
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTransport
+public import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
+public import CategoricalEssentialIncompleteness.V46DecidableVariablesTransport
 
 /-! # The concrete syntax bundle in the actual Miller total splitting
 
@@ -14,6 +21,8 @@ and target families, then transported through the actual splitting
 equivalence with its polynomial and slice comparisons. The equivalence is
 not used to infer initiality in a larger, unproved morphism class.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

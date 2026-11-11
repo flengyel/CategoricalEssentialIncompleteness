@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
 
 /-! # An actual recursive ordered-field and real-closure axiom presentation
 
@@ -8,6 +15,8 @@ then included literally. Recognition computes the consecutive universal
 constructor suffix and checks equality with the corresponding generated
 word. The semantic real-closed-field comparison is a separate obligation.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedAxioms

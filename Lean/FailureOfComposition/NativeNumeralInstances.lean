@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralSpecialization
-import FailureOfComposition.NativeFamilyPreservation
+module
+
+public import FailureOfComposition.NativeNumeralSpecialization
+public import FailureOfComposition.NativeFamilyPreservation
 
 /-!
 # Literal instances of the arithmetic seeds
@@ -14,6 +16,8 @@ matrix. The identities below are identities of formula codes in the model,
 not merely equivalences of their meanings. The accompanying derivation
 lemmas follow the actual chain of context-preserving specializations.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

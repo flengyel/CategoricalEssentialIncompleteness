@@ -1,12 +1,21 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodes
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodes
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
 
 /-! # Finite standard-point charts and actual framed operation squares
 
 The finite polynomial and slice geometry are proved before specializing
 any branch square. No preservation of initiality is used.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

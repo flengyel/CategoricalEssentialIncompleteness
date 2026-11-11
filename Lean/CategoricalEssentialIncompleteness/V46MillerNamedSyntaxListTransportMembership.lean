@@ -3,7 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportOperations
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportOperations
+
+
+/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportMembership` -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -18,7 +25,7 @@ local notation "F" => Syntax.predicateFunctor P
 local notation "L" => SyntacticLists.stableListAlgebra 𝗣𝗔 V
 local notation "R" => NamedSyntaxComparison.mappedListStable P V
 variable (S : DecidableVariables V)
-private theorem slice_map_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
+theorem membershipOverMap_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
     ((sliceFunctor (F) U).map f).left=(F).map f.left := rfl
 /-- The coefficient and carrier isomorphisms are actual family
 comparisons. The equality-test square is derived from the diagonal. -/
@@ -42,7 +49,7 @@ def mappedMembershipAlgebraIso :
       have h₁ : B.nil.left ≫ prod.snd = Two.constant (⊤_ (Over ((F).obj V))).left false :=
         prod.lift_snd _ _
       dsimp only [H]
-      simp only [Over.comp_left,slice_map_left,Category.assoc]
+      simp only [Over.comp_left,membershipOverMap_left,Category.assoc]
       rw [coefficientComparison_snd,← Category.assoc,← (F).map_comp,h₀,h₁,
         map_constant (F) (⊤_ (Over V)).left false,Two.comp_constant]
       rfl
@@ -63,7 +70,7 @@ def mappedMembershipAlgebraIso :
       have heq := listStepComparison_test (F) (Derivation.booleanIso (F)) S
       have hval := listStepComparison_value (F) V V (Two (PredicateCategory 𝗣𝗔)) ((F).obj V) (Two (Total.TotalCategory P)) (Iso.refl _) (Derivation.booleanIso (F))
       dsimp only [H]
-      simp only [Over.comp_left,slice_map_left,Category.assoc]
+      simp only [Over.comp_left,membershipOverMap_left,Category.assoc]
       rw [coefficientComparison_snd,← Category.assoc,← (F).map_comp,h₀,h₁,
         map_boolean_binary (F) Bool.or,Two.comp_binary]
       rw [heq,hval]
@@ -89,7 +96,7 @@ theorem map_membership :
     simpa only [Category.assoc,Iso.inv_hom_id_assoc] using h
   have hh := congrArg (fun f => f.left ≫ prod.snd) hf
   dsimp only [H] at hh
-  simp only [Over.comp_left,slice_map_left,Category.assoc] at hh
+  simp only [Over.comp_left,membershipOverMap_left,Category.assoc] at hh
   rw [coefficientComparison_snd,← Category.assoc,← (F).map_comp] at hh
   change (F).map ((L).membership S) ≫ (Derivation.booleanIso (F)).hom=
     a.hom.left ≫ (R).membership (Derivation.mappedEquality (F) S) at hh

@@ -2,8 +2,8 @@
   {
     "path": "Lean/FailureOfComposition/Palomar/EvaluatorBridge.lean",
     "source_git_blob": "21f0dc59501748f46cca38abbd534f6691c23626",
-    "patched_git_blob": "a8c9bed6115d8e1e44da9555eee588f2f1317670",
-    "reason": "Use the proved eventualGraph_val interface instead of unfolding the previous mkSigma representation. The theorem statement is unchanged."
+    "patched_git_blob": "791fd067c97ebf447b5c85be97614356ffd3f948",
+    "reason": "Use the proved eventualGraph_val interface instead of unfolding the previous mkSigma representation. The theorem statement is unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/lake-manifest.json",
@@ -14,74 +14,74 @@
   {
     "path": "Lean/FailureOfComposition/GeneratedWitnessPointwise.lean",
     "source_git_blob": "cbff57d431daf1ae1c8223d85a74222e81273e4f",
-    "patched_git_blob": "5026fa0d8e2a1576316eadb9d2031080856f821e",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "27dac5ec1373665aa9a9312f9e32b911dd0e4f56",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/NativeSubstitution.lean",
     "source_git_blob": "905d707581f58040d5cbb78f2adce716fa4525ec",
-    "patched_git_blob": "3c33e28e30a798be8ba9397eca8eeddbb844cd98",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "a96fa53df178a97e66ec2460c234fa8bd6b6aee5",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/TypedChoice.lean",
     "source_git_blob": "24050d5fb0210e157626fbdac9779f2c80b69951",
-    "patched_git_blob": "70b69174115ffc6349e474a2987bdbd2a39f5611",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "7a3ea3d82ccbf635c8c66c991665f0a34e2bb641",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/TypedCoproducts.lean",
     "source_git_blob": "5bafcf0e574cc172f13d618149e1eb73b1e1df3a",
-    "patched_git_blob": "ecf0975a29f06113689591ed459391e261a9ba32",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "a10476d2050bcf071b25fa9bd9b75e3ee66701d5",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/Verification/CheckAxioms.lean",
     "source_git_blob": "0a6b54a6ccb57a09f456fc1db196432b469f9010",
-    "patched_git_blob": "83fdf337212cf9c17a935bd5dbfb78a344ae50ba",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "f9cfc1dc5dd7d0608e978c960e193d3066e5fc7e",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/Metamath/Feferman/MPSequence.lean",
     "source_git_blob": "c435afbf83ed643bfc032b70ee7c82e19f09b2ff",
-    "patched_git_blob": "802806d44ed4df1e0587308b7898c890439fcd5c",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "0012342a45b96c47ebe4c00e27dfd5d344271a51",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/PCats/Coproducts.lean",
     "source_git_blob": "753d90e38ee2b2706b5514485fc2586388526db8",
-    "patched_git_blob": "b59cea340884a7d616cb78f553009d447db9ceb3",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "6277db97a3d35b2713842fbd4e3e48c78947a584",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/PCats/OptionKleisli.lean",
     "source_git_blob": "4772295ba4964cf6e6403026fa9f018a015baf36",
-    "patched_git_blob": "cad3c0bdfc58fce609c467dd9a8eacb9d85e5a89",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "445bb44e41152edf525f738a70ff3314758e375f",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/PCats/PCat.lean",
     "source_git_blob": "f9e174b3baa0e8661ec42a509f02567fac2e0717",
-    "patched_git_blob": "b8f16ade91c2e278cbc9b9ab5f7f2f7152df3af5",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "94cd2b3a5558c169e53074f7e4ce05b2173168ab",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/Tests/FefermanMPSequenceRegression.lean",
     "source_git_blob": "d628f283902991cce25e5aff9c72a49d54cd33ee",
-    "patched_git_blob": "880120a000d80b45adae6d787837bab05b8862be",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "48de531fcb670c14ca8d2777a0e026c0cab14a41",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/check_axioms.lean",
     "source_git_blob": "2b981bb7c10b0115fee714ba5398ae7cd25798f1",
-    "patched_git_blob": "f51305b5499856d4c4e466d9fd8f28431cc44d80",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "2e273b99300c9b9dd4724f9c24718ce37b094e6f",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/Palomar/ArithmeticInterface.lean",
     "source_git_blob": "c8aef5a888be2a563a7a80d998b62c3cd3a536c3",
-    "patched_git_blob": "9e210b0ff0898e64fd79578fb8a331ff70a40366",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "865a8d4d7fefd1440d01075fbd0c1c46c7b7c72d",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "manuscript/archive/definability_comparison_v16.tex",
@@ -98,13 +98,2047 @@
   {
     "path": "Lean/Metamath/Feferman/ProofCode.lean",
     "source_git_blob": "060eb33685e6ef94bbbc8ba582256519fa6d5fe0",
-    "patched_git_blob": "367bcd3716ff73c92d22a0c00d7428396953146a",
-    "reason": "Author-requested editorial revision: remove development narration, redundant disclaimers, and stale toolchain references. Lean declarations and proofs are unchanged."
+    "patched_git_blob": "864ac444792db4798f2bfec06ab8391be9c39ba4",
+    "reason": "Author-requested editorial revision: remove development narration, redundant disclaimers, and stale toolchain references. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   },
   {
     "path": "Lean/FailureOfComposition/SigmaOneSearch.lean",
     "source_git_blob": "d10e79a55f5a3ef24dc3c7e25aea8a3a28261760",
-    "patched_git_blob": "db465717b47183c047619b1ed1067cb1edee3473",
-    "reason": "Expose four proved search-correctness lemmas for the manuscript's finite two-test switch. Only private visibility is removed; all statements and proof bodies are unchanged."
+    "patched_git_blob": "4cdcc1e7686a0eb701cf65348af21975c02ced87",
+    "reason": "Expose four proved search-correctness lemmas for the manuscript's finite two-test switch. Only private visibility is removed; all statements and proof bodies are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Arith.lean",
+    "source_git_blob": "ad808010888efec5b3c816d6d432959370a0803d",
+    "patched_git_blob": "0bbd7e67b896924983d43a6b252d2b72ba672d8f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Arith/Feferman/ProofFormula.lean",
+    "source_git_blob": "2dd3751826eb26c8900577f6345ef0d7ec909870",
+    "patched_git_blob": "1d3fd56ed7d2e207ff377452ca44113ed99ad19b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Arith/Feferman/Specialization.lean",
+    "source_git_blob": "d464fa91fc2d8c19f2752c66018963b071cc00b1",
+    "patched_git_blob": "1ff267be3da4de9db199158309f0ae0a654fffba",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Arith/Feferman/StructuralProof.lean",
+    "source_git_blob": "7c800ad438373ad341f4cd2e588a204212f4159d",
+    "patched_git_blob": "4d0d8d7bf3c305750f53fb70ab5e7d327cff2592",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Arith/FixedFormulaNumeralSubstitution.lean",
+    "source_git_blob": "6525d169fea675bed82c52acf3fa7b6245525b31",
+    "patched_git_blob": "37a079358df6457c7ff5d59c37a4dd9a1876e1f0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro.lean",
+    "source_git_blob": "7e24f15c342bcfe8e01c0473535af7c9a1d1abf1",
+    "patched_git_blob": "a3236bf1ae5573d17ac8b2f36b4d2f1c519fcd81",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Arithmetic.lean",
+    "source_git_blob": "0f72f3f6de7e38e2e9b26ab2b09e2b0e06df6f0e",
+    "patched_git_blob": "1c3b5bf9269112d1e37314e2f58e88c2b422cce0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Basic.lean",
+    "source_git_blob": "ad605be60235af679bd8d7bc09ee2f373b602d3f",
+    "patched_git_blob": "bed55c0de5eadeb1bd9ae5b215f34160725d3335",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/BetaCoding.lean",
+    "source_git_blob": "83d15048790a99c2f8160b1d6b46eca7d90765dc",
+    "patched_git_blob": "cf6034803c8be604f8c679953cbbded2ddbaa7a3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Conditional.lean",
+    "source_git_blob": "749fa766ef6e8884bd26257041517e781e681499",
+    "patched_git_blob": "939eea2dbf7db07303619f2e63645e09504eb65a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EncodedList.lean",
+    "source_git_blob": "041b57b3b49d2fe37678a27c285c755947761643",
+    "patched_git_blob": "2ec3839dab78dc546f2813c402455936081ff5d1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EncodedListEvaluation.lean",
+    "source_git_blob": "b7cb248440c06e808e9b350e26baa99a15225d87",
+    "patched_git_blob": "b24ff4fc35f38550f83c3fa09125189564570c77",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Evaluation.lean",
+    "source_git_blob": "21ee58d435b1333a9993b47c09ed1644315b18be",
+    "patched_git_blob": "c3aaacca3e311238b7340279ec11bbfff0c70813",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/EvaluationCongruence.lean",
+    "source_git_blob": "c210d97ed4e6d2cabedfe512811a712388e85582",
+    "patched_git_blob": "91b6e9b26a64a8d0966bee34b911cdb9b79f7dc2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/FoundationCompat.lean",
+    "source_git_blob": "70b8105dff22d8cc23062985463d8da856e7a401",
+    "patched_git_blob": "fb4200336c550239c9af2382edf1420366ce10e6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Minimization.lean",
+    "source_git_blob": "543cdf13150a627018098552ff07fb9cfa11ddc3",
+    "patched_git_blob": "472cc0570c12fa5492f8f729930898ccf7a30242",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/NumeralEvaluation.lean",
+    "source_git_blob": "cefcda34841efb3b736d926ec79dbde487d7a063",
+    "patched_git_blob": "3350e003209b46000910663e8d013751a5a0b8ec",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Pairing.lean",
+    "source_git_blob": "38dc15a18c1461d9a13c0b909a55ef7895235a8d",
+    "patched_git_blob": "705e6ce79a6aaab8e637dc31e23be1515b3193c6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/PartialRecursive.lean",
+    "source_git_blob": "8fc6125c772cb644ec7c4e3398ea935c5e495b42",
+    "patched_git_blob": "15caaa9b0232b78166dfbee6dc0b5bd68b8339da",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/PartialRecursiveEvaluation.lean",
+    "source_git_blob": "4e004aa7742a77631f9bb169b93ad15303d31349",
+    "patched_git_blob": "de509f11f9ac37e553f6db07963e1ef3c2d254fb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Recursion.lean",
+    "source_git_blob": "05395958c7c0b3b77ca74ece4aab1de0d228b20f",
+    "patched_git_blob": "14a36eedc73a7fb8b4f6c51e02b75c87390a78ce",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/RecursionEvaluation.lean",
+    "source_git_blob": "eae0752fc78374ed665666dcd4cf544fd7668717",
+    "patched_git_blob": "eb20a3857412fb36395a15c328c5660ef61c4c6b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/Cell.lean",
+    "source_git_blob": "641f3e9c2de53c7a5afbd5372013b6be81990534",
+    "patched_git_blob": "4bd47c91edb7f55a8bd84e15c7ddd48f1da42dff",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/CellCongruence.lean",
+    "source_git_blob": "0238aac7c9e3fb144d21c5b7d4c8fa23a5bfa627",
+    "patched_git_blob": "036ffe9bf2003fc3f7fba8a7103d6a39e2b50954",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/CellEvaluation.lean",
+    "source_git_blob": "c3b2424e1c7c45e927e07b884f14a2017ff7de08",
+    "patched_git_blob": "75b14d3c2b62d50f2f603546629ff13c738188cc",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/Certificate.lean",
+    "source_git_blob": "8e28d0511297f2f1069b98fd86f262b5b66a22b9",
+    "patched_git_blob": "bf19c0bb1bb3cf87e3ff80cc9cc4c7336147c57c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/CompositionDispatch.lean",
+    "source_git_blob": "8cfdcf3f1ebb2d75e2f04f353d97e47ea33dc389",
+    "patched_git_blob": "9d85a7c5d84d6837abcd7d115c8899a1231ef110",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/CompositionPersistence.lean",
+    "source_git_blob": "aaa6409c25a8338a46a491c555570bad37a01a54",
+    "patched_git_blob": "1760efd03e17462aec7258748a6db60a961cb993",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/History.lean",
+    "source_git_blob": "c9ddddec0b5f4eec33f340a181175d3535dfcc77",
+    "patched_git_blob": "136b0be38deecfd04463b73f68a5ad5cdcc1f8e3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/HistoryEvaluation.lean",
+    "source_git_blob": "328670ec8b7cf3b0bfaf4320e46f481622daa091",
+    "patched_git_blob": "9b894fd4280602a7668c84cb16410a5e04fe796f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/PairPersistence.lean",
+    "source_git_blob": "4ac3f217ff715b4c467149b89e3dc8274099ac7c",
+    "patched_git_blob": "645d2b311329b3b652a737e220362b0b0bf9bb44",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/PersistenceInduction.lean",
+    "source_git_blob": "0e6828be9f44de512148f72a1caba2699d764b5c",
+    "patched_git_blob": "0fdab6ffdcba4803e58d48774fed3a9db380a612",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/PrimitiveRecursionPersistence.lean",
+    "source_git_blob": "b7638ae26bf5f93c08800cd966a6e69e90d4e012",
+    "patched_git_blob": "892ae7aa26206ef30bffd39b0f5bf90807573134",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/PrimitiveRecursionStructuralBridges.lean",
+    "source_git_blob": "fad39d4f47d143449fc210d9a168869509db59a2",
+    "patched_git_blob": "47a10ec7f6c5a90a676e53b4172a3f62979a24d8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/TableLookup.lean",
+    "source_git_blob": "e573891b9a8f35c6db0350bf78d92fae8e05a26f",
+    "patched_git_blob": "4f86273eed01d0ec89857cbc7939a096630cabb8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/Evaluator/TableLookupEvaluation.lean",
+    "source_git_blob": "0ba47e197396acedfc1bc82e8ec81574dc73bf1d",
+    "patched_git_blob": "dc3eb2e68c86e8d26722fdd8806b872cdbac4c85",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/CategoricalRiceShapiro/PartialRecursive/CanonicalComposition.lean",
+    "source_git_blob": "03c915d996e38f8e87b9e5a613f14722480013cf",
+    "patched_git_blob": "ea4ae26bd11893337fca096f71e1002e4b8df00f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition.lean",
+    "source_git_blob": "2d56b398faea8a63a6001c12bcb3a1c7ee5150f9",
+    "patched_git_blob": "dafd70ebfdf16678de2e5caa2742954840821ff0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ArithmeticCodeCompiler.lean",
+    "source_git_blob": "2bbd996b078648a2c491e638d4449ca3a77c9f1f",
+    "patched_git_blob": "34d309f8df4068636993b67db6ba07e589729f0f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ArithmeticFormulaAtoms.lean",
+    "source_git_blob": "55e470174b18db2549034d05666a997f253178e5",
+    "patched_git_blob": "c1087d62fe1f949a9b625c52d2ec6978fc572169",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ArithmeticProgramOperations.lean",
+    "source_git_blob": "7c09f65eb24810f5ad4f2fb12516da7f78a01e91",
+    "patched_git_blob": "b352b21fa7ed806858ac719ff6a64990fb9a8cbe",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ArithmetizationTransport.lean",
+    "source_git_blob": "2fc358a90600131a66ab10cbcf649db011fa3162",
+    "patched_git_blob": "e97d01466fb42154b633002a3bd3153b91cb05f4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/AxiomEnumeration.lean",
+    "source_git_blob": "c7fff85ca8151e334f04acf7fd54928f26ac1df1",
+    "patched_git_blob": "d2d03cf607d5879a0a837b3e9dc7538e8ad3c29e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/BoundedSemidecision.lean",
+    "source_git_blob": "faa0d07bced65c3dffee8ca05fdb9e1b68ba82c6",
+    "patched_git_blob": "510eede695c6b5e4331d6a3c04cca3fd5b3bf821",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/CodedObjectMembership.lean",
+    "source_git_blob": "e125f82efa3e4304a2f9d169723881c6bc3911ce",
+    "patched_git_blob": "a885c70f9d35be932a4e672ddfff7f65a80dad56",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/CompositionClosure.lean",
+    "source_git_blob": "d86bd999b58afc95ed367ef77a0fbdbf4084254b",
+    "patched_git_blob": "ab91a58036c2ec7cccb0863d4957b209d898fb76",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ComputationSearchIndices.lean",
+    "source_git_blob": "f9a3e5a2e0317e02b4e3e71f4619b5d1e5364909",
+    "patched_git_blob": "28689a687aa0d73ed272e9ed14e85bdc97c80477",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteAdequacy.lean",
+    "source_git_blob": "e96ef6ad735bc68bbc6ffbff2bada7998b217f08",
+    "patched_git_blob": "0bb9d77eb47cf74d609acdbc74c910503859fdb9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteConstructorGraphs.lean",
+    "source_git_blob": "5ee257d107fc1a9e28fb14374e9d64e2dc58e567",
+    "patched_git_blob": "ca4bb57a562a552b981a3f8b70c994b6a9d8f005",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteDiagonal.lean",
+    "source_git_blob": "c8e49d1a343d4ee2e27f47268d49c0844fb9f264",
+    "patched_git_blob": "1b09035c07ee593aae07385b4c45520df8e4edda",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteEmptyGraph.lean",
+    "source_git_blob": "71999c9c3aec895c5cb984ae9e7ce33a75d54322",
+    "patched_git_blob": "7f224337eef76e37e6bd98245f0e422b6cf5a579",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteEvaluatorGraph.lean",
+    "source_git_blob": "5e1261420fee98cad12620decedb6e14866a2f1e",
+    "patched_git_blob": "ed4d296f01a5020cdd164335eca7e0c80790316c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteGeneratedCongruence.lean",
+    "source_git_blob": "34b649b33950c3f9b9d4cea0d3574f367c910a78",
+    "patched_git_blob": "e3cad1276abf520ba44d94bbcaa1933cc134d9b1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteGodel.lean",
+    "source_git_blob": "0af393398a4dcfa0f53c48da6bf4a10e5e7e3424",
+    "patched_git_blob": "436e029af4e86a0148f4c100de747ae00f6d1279",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteGodelRE.lean",
+    "source_git_blob": "116e67c963e49565d66c81023ab1c93ec1322f5c",
+    "patched_git_blob": "ae2f3890e36396e69f8af11859238711a8f75c92",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteIndexObstruction.lean",
+    "source_git_blob": "a02b2b998a37713d14edbe1aea3ad777a95d698b",
+    "patched_git_blob": "08eff535e145094c951b043ee1b2a937f3d337d7",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteMinimizationGraph.lean",
+    "source_git_blob": "91b3f4fcf6e6d9f57e9ec8c6e9819eed98fed23e",
+    "patched_git_blob": "97b01b9cc1662afd96453b758a0c816ea501d493",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteNormalForm.lean",
+    "source_git_blob": "6629a313f0902ae7e551a65e3ad1c5bc0381744f",
+    "patched_git_blob": "2bc16b76cda9b271499a167e54ad50b335c876ea",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained. The output-graph evaluation proof factors variable exchange through a lemma for arbitrary formulas, preventing expansion of the unpairing formula during kernel conversion. Graph definitions and theorem statements are unchanged."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcretePersistence.lean",
+    "source_git_blob": "4a3d2ada9f07c78905ed93f7e39f9bc262f1850c",
+    "patched_git_blob": "24d343d7594f0401ac0d941f564fb0e96eac86af",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcretePiOneCharacterization.lean",
+    "source_git_blob": "aaa39f5f3ab08e59bcbe9985235d8229de961570",
+    "patched_git_blob": "88d9e2da7fb96ba9ec7937d6865213fa5b5aedea",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteRecursionGraph.lean",
+    "source_git_blob": "2ed45420d8a36b0ecf140165a5cc13ce93c2f9cc",
+    "patched_git_blob": "41f8d33be8f4b422422b1d8732717999a01459eb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteTransport.lean",
+    "source_git_blob": "2207aec07c47797e92d8dbc39384a110e6c152a9",
+    "patched_git_blob": "7223df868b10abf0d68067fdddb29315fc62a878",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteWeakTotality.lean",
+    "source_git_blob": "b0e5fca0edc6cf87606545a87060bc559789934c",
+    "patched_git_blob": "ec9fcfbecd124a1b6184fbb578b9cb36d1a9a547",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConcreteWitnessGraphs.lean",
+    "source_git_blob": "80f6ca7232ae55da51f5a46b3e7b5acd757ab61f",
+    "patched_git_blob": "1d74e4bae8caa6e30b557b4c299b704640bbe374",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ConservativityConsequence.lean",
+    "source_git_blob": "7be566a4cd1a8d4e1737199bfc3281233b93cd50",
+    "patched_git_blob": "a5cebc44174614a4a19fd685396b2337b71a42d1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/CraigPresentation.lean",
+    "source_git_blob": "037644902faa1c16e6b17749a0d6087396f699bb",
+    "patched_git_blob": "482d13d48dae09b93ffbae33f338e30b9d08d6e8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/DomainTotality.lean",
+    "source_git_blob": "395ecbce02b2b08a8b64ae492aa5c123b5779ae8",
+    "patched_git_blob": "77932ecc005a3bbadd405c797c8159ff37e9cc83",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/FiniteExtensionChecker.lean",
+    "source_git_blob": "9e02d003e4b086552016ec482bcce53e0a770047",
+    "patched_git_blob": "ec4c3a83a503f818f86c7c8f6bf80247cc0a6ef4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/FiniteFunctionCoding.lean",
+    "source_git_blob": "bf4c15ca3241889ef044f3b7e63d0dd57a122095",
+    "patched_git_blob": "cbdcd3e7054b7d576ad576ce50db159322cbff7d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/FiniteFunctionEvaluator.lean",
+    "source_git_blob": "004859b7ce4bda8d27f4a80abab9390a82d70f84",
+    "patched_git_blob": "5aeb44c36162a51328c4c215d85b8de04bdb14bf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/FirstSuccessGraph.lean",
+    "source_git_blob": "3fb64357f7fbc22d6a27b1105c09d6995017a0c7",
+    "patched_git_blob": "1f89c18f7ad22f807c58ae7541f0e6470f689b00",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedClassification.lean",
+    "source_git_blob": "5d0539aec9dc2db9f0c9d64849e1865601866fb2",
+    "patched_git_blob": "71f5b988722cd4efb6946183f07f8f2ea7decb6a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedCollapse.lean",
+    "source_git_blob": "10ec0121c24da6f4e64c5efc1f3dc5552d4a9990",
+    "patched_git_blob": "0fd7a9a062a82917b86d3c59846560004d1b2c55",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedExtensionality.lean",
+    "source_git_blob": "19206d5346f7215055f0140c9dbf225b49f039ff",
+    "patched_git_blob": "4035f3540c885ca3d90f89b6123f7af895dfae5f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedGraphDefinitions.lean",
+    "source_git_blob": "4dede9d917be715f210a0b1c8c7ca30635974387",
+    "patched_git_blob": "2d00002bd3a07bc322e761a95d7e842dd2b3c44c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedIndexClassification.lean",
+    "source_git_blob": "60c5bf91b14da57f8873444b07880d6de5e52e2a",
+    "patched_git_blob": "08829d25eb039e2f20b9d16901fa05b3fc73a9f0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedIndexQuotient.lean",
+    "source_git_blob": "1fe6e53ac6fd4a4db717fbee61726b08412ddec5",
+    "patched_git_blob": "504a6b474d8ecbfcf6963dc7274aadd3615e454a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedIndexTransport.lean",
+    "source_git_blob": "f473a047f29e4c5d2ad5db1d1df10dbd62222210",
+    "patched_git_blob": "10bf98590b84eb711184a0e948b3889e388d487e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedQuotient.lean",
+    "source_git_blob": "73bf60a4f5b58c86d738d44f059eb3c3ec7113a4",
+    "patched_git_blob": "b38d032c42a5cd284d7d91a6e5bb7027d65510c9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedSoundness.lean",
+    "source_git_blob": "a1fd9153ea1a6edcb53dca37b4a06849bf6c4335",
+    "patched_git_blob": "0177cf457520ea4b6aebd289ae632a95b288c501",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GeneratedWitnessGraphs.lean",
+    "source_git_blob": "e9f1da87b6de7f8f9d9d869f9deef3ae7cc9d812",
+    "patched_git_blob": "1e311bb7fd3fe0ee1f0896c39f9b7b557dc18d78",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GodelGraph.lean",
+    "source_git_blob": "3276c9dbb0e2f4f7dd8e0e07e6662b5fc2745437",
+    "patched_git_blob": "5cb729797b23716fd33dca9e710403acf2996f49",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/GraphQuotient.lean",
+    "source_git_blob": "f8a488cde76a92111101e343eed15eb113f24128",
+    "patched_git_blob": "82f3566f96125f99eeddac55b10feb8858a41966",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/HistoryObstruction.lean",
+    "source_git_blob": "7573a6292f376bb06529661a4c25096bea1f76ae",
+    "patched_git_blob": "c2b6a18c322cb75347c3fd51022585aa290f617d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/HistoryWitnesses.lean",
+    "source_git_blob": "ac873ee27db549bc9dcb16892e00227a05687256",
+    "patched_git_blob": "5cf3faa3ee6f59ce2984adf99f5479c53a75f507",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/KleeneNormalForm.lean",
+    "source_git_blob": "2be3a1c761398f40da1edb4c981d92d154037f69",
+    "patched_git_blob": "d996ad062fbd615db741471637913fae3a2b4d02",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ManuscriptObstruction.lean",
+    "source_git_blob": "1c4d63914b6e1900ea65860928eb8b3493775d0e",
+    "patched_git_blob": "78f1acfd875c853cb1a02e813d6dd2dbed5654d9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/MinimizationPersistence.lean",
+    "source_git_blob": "4584d27b39debea22b99ff2fdae83b1e15b45df6",
+    "patched_git_blob": "1ad8b9fa0d9487646d6064def8b4ee98e99d68a0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeContextMP.lean",
+    "source_git_blob": "919db9835a781bf810bf621761a2d391ac0ac2b7",
+    "patched_git_blob": "faab14a7e36a184f7254401a5f259d624cb724fe",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeContextSpecialization.lean",
+    "source_git_blob": "fbf0d7f3e69eaee66dd7b232765ef3377e238a51",
+    "patched_git_blob": "6833286999713c60d93b26928d1d6810a1d49ba8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeContextSpecialization/AuditFixtures.lean",
+    "source_git_blob": "c9914588392aaeeb3086c752a911e22296d8e3ec",
+    "patched_git_blob": "faf00b4f8e5b8d3f44ab40712a0ad96e8ae9dfb0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeEqualityTransport.lean",
+    "source_git_blob": "f0c54a046da26eaee68b86ee408a6120ec6b8b47",
+    "patched_git_blob": "2849e45678a04cd4142136055a05167fe7bbf912",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyApplications.lean",
+    "source_git_blob": "bca5c65beebeb44bc38c2de4c1ac76d26eb80ca6",
+    "patched_git_blob": "9708512edcd7258d8fee89c75f563d235bbc5c60",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyConstructor.lean",
+    "source_git_blob": "88bb76b66c49360787f77286af8a727a8d3bcc8c",
+    "patched_git_blob": "f22de81a2f023133285c85d58653bbd2c5e939ff",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyFormulas.lean",
+    "source_git_blob": "2e8ed0047b9cac09c3e1a3ef2c28ae40df07f2c9",
+    "patched_git_blob": "54e70cc2b14170beef03fbdffadb2fae7e03ae5c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyInstances.lean",
+    "source_git_blob": "c0d3b04e3e3cb4f7aa9b6c3ec2c3a1801ebbeea3",
+    "patched_git_blob": "ee2e4f1473250f107c380a41f4da2fe32c5158a2",
+    "reason": "Lean module-system compatibility and factoring the existing typed-to-untyped substitution equality before formula instantiation to avoid kernel quotation expansion. Public theorem statements and syntax definitions are preserved."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyNat.lean",
+    "source_git_blob": "9a9df8665f01b4c50999626b31236239d74b6a3b",
+    "patched_git_blob": "2ecba6028dd101942366e8d30c5ed200d23bc96a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyNumeralInstances.lean",
+    "source_git_blob": "0054435dd3138cde559baf9a6e09deae35d8505a",
+    "patched_git_blob": "0f1dc2babba96757167323056840329bbf4cb6d9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyPR.lean",
+    "source_git_blob": "534e5f9586b6299b276740da529909a06e38710f",
+    "patched_git_blob": "46597ba4fc0a3750ee1d49b7c25dd8bcd2e8ec2f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyPreservation.lean",
+    "source_git_blob": "dd3c977a9effc9e4ea6c98032a011651f9aacb70",
+    "patched_git_blob": "025a7909e39e5486a8301f316f7809fd44a2d9a6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilySeed.lean",
+    "source_git_blob": "b4a0f7acecb74ab4c2aea9116a22191293f04b7e",
+    "patched_git_blob": "6b39a79d1456d8c546880b70b267f545b67bcf54",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeFamilyTypedApplications.lean",
+    "source_git_blob": "b9f90d05de265c2b223c0c67d4b00d5d6a894a7b",
+    "patched_git_blob": "12c8f6a34077a9e8fac43ec4e2240c09fecbc38b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalApplications.lean",
+    "source_git_blob": "ca627597c08521a1484e0850dcb034e310c31651",
+    "patched_git_blob": "ca28c610350f255aeba5de7cce885c76465ddc26",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalAxiomGraph.lean",
+    "source_git_blob": "ff871ed29f1dee29d4d071f77f07c72cfc412654",
+    "patched_git_blob": "4d708214788d178ac4e02366fb4c507cd50c07b0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalChecker.lean",
+    "source_git_blob": "c35a97e4b4e3a18e446218a9d5255e5ef2a13a24",
+    "patched_git_blob": "6077fd503e3c95781f54000ce56300eff1754b35",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalCorrectness.lean",
+    "source_git_blob": "c2eaec17307f10e8efccbaa525a1d2668974ffe7",
+    "patched_git_blob": "ff851c8d8d9ac66aa68a09f21b0a89abac38295e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalEquality.lean",
+    "source_git_blob": "37afa5afa7f224f9fc0bd394a70b4d2d6ed1005e",
+    "patched_git_blob": "ef16f2e30cb9164036101f61bee0b5d72b769dfb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalGraphs.lean",
+    "source_git_blob": "66c4fdd52f7f8def5108f0c4cd464b0a4be1be49",
+    "patched_git_blob": "8e0576d8eadc480b88d6e1f999058466122e4933",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalNat.lean",
+    "source_git_blob": "efa95f3d4da1507e4c6a5616c6f6acbab9cb7baa",
+    "patched_git_blob": "06cb2df3f87872d245e853ceb2aa39df4f2b64f8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalSequence.lean",
+    "source_git_blob": "7ea884313d7e0e904190f165890e34e9eedc2ee6",
+    "patched_git_blob": "bb85a2ca3978a2633a0094b41bef35cdc38da7f2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeInternalSyntax.lean",
+    "source_git_blob": "132d12a8f65302697212fa6b209c8f17f5dadc0a",
+    "patched_git_blob": "e3b2f876a774a9b57a7021dc7a98a31900b43a83",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipApplications.lean",
+    "source_git_blob": "548bf3aaa7ed6990e05ebe9bd9d8b614daae9220",
+    "patched_git_blob": "5a5e8e91d45da9d44c32103092ff63f034d8d30d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipConstructor.lean",
+    "source_git_blob": "d98d0df6261ead722673fc1462cc0c8961418119",
+    "patched_git_blob": "94c7a1f1efdd30f9c894b57eb952d1b239afeb10",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipFormulas.lean",
+    "source_git_blob": "47ceaf51a3812683987c4fbd5c84f55d4543b86d",
+    "patched_git_blob": "39fb33ae7b9e1bc551994c761872b493c76540fb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipInstances.lean",
+    "source_git_blob": "6632e27936c1dbdc6f71b7f0016eb4c37820f09b",
+    "patched_git_blob": "2e21d05e88159e6c0881dd979c4713858a0ef4c7",
+    "reason": "Lean module-system compatibility and applying the existing typed-to-untyped substitution equality before instantiating pointwise and closure matrices. Public statements, internal numerals and syntax definitions are preserved."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipPR.lean",
+    "source_git_blob": "639e7c5ef4e736a876cbb788b5a5a8fddbf32d66",
+    "patched_git_blob": "33b8362e3e360a26b63ac1bd17a594dff052cc69",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipPreservation.lean",
+    "source_git_blob": "77f5d0fb35034c7b1d53df586b547f41578affa1",
+    "patched_git_blob": "be239ae665017f2ce42d8f8036723ff4c578db01",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipProductionComparison.lean",
+    "source_git_blob": "4480944e9f33984c3725301d643e7e1db5f1ce23",
+    "patched_git_blob": "204b790b96d633d509eff6ff451615b3976e2dcf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeMembershipTypedApplications.lean",
+    "source_git_blob": "b959460b54aa25ec1f7feaa3d7d902837e67d7a0",
+    "patched_git_blob": "c1e1dd30d918292f0286df3c33f0277d36af8dd2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralAdditionGraph.lean",
+    "source_git_blob": "e315aabecdba857956bc51aef80b479b4aa60334",
+    "patched_git_blob": "1246e4364144d8be19ade3d10a3e5f9d660a6f53",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralApplications.lean",
+    "source_git_blob": "fd632a22a206b03ebf43ef317289809d1a527ae9",
+    "patched_git_blob": "8cb6bab03660015a0513fae330e68752a9e2e0db",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonApplications.lean",
+    "source_git_blob": "a37cd57e20abf0278688fd4dd01dd570f62c3490",
+    "patched_git_blob": "e8579bea38f368146db961fe525f8f933a0f0a32",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonConstructor.lean",
+    "source_git_blob": "6e14e38740503138a9059a53e2941dd226062ecb",
+    "patched_git_blob": "0e00d0f8613a54aa008a011003df99da026b81ec",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonGraph.lean",
+    "source_git_blob": "32b19bbed18d6a518fde1f0328fa0654f0e5f1c7",
+    "patched_git_blob": "33ee3f024523d78c5f1b298b0a71ad3751b314ca",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonInstances.lean",
+    "source_git_blob": "952e9e4691582d6a193e8710aaa90e5ef02207c2",
+    "patched_git_blob": "b7d919209345f867c3ef2ce355185359d2a7c481",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonPreservation.lean",
+    "source_git_blob": "d04791a88a1ca37f28c48ff106068207a8e47454",
+    "patched_git_blob": "9fa0a0e1ece804ea07ce3ee505df34159e57adf9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonProof.lean",
+    "source_git_blob": "952f4cd4eed6213f3463e82001533b629ab276c3",
+    "patched_git_blob": "22822ec02066fc8c66f2c92dba41208019149394",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonSeeds.lean",
+    "source_git_blob": "eb67ce8de937a1d829ec578e2a12f5be9fa00d71",
+    "patched_git_blob": "6aafaefaf95fdf00348a9922cc0f52f1b957754c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonSyntax.lean",
+    "source_git_blob": "07d40f1c50d798a2762c5f98978a53373a1aecc5",
+    "patched_git_blob": "1004be82ee855586b4671a464809dbe17fb63fc8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralComparisonTypedApplications.lean",
+    "source_git_blob": "cc7de2cc86da16907d041029bf49b74aba193ff0",
+    "patched_git_blob": "7fdc25a1b73d3a92844710435da02bee2b18d03a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralConstructor.lean",
+    "source_git_blob": "dccb1d40ef7f3ae5b688c2963d4b51c06975cb44",
+    "patched_git_blob": "5f7f5b522e41e42547630827b0e237f901c220e3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralInstances.lean",
+    "source_git_blob": "af046b92d6c1dea251cdab249543a4d0799d4a48",
+    "patched_git_blob": "0fd7518ec6005561e8ed8785191e5b2f78de58ec",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralMultiplicationGraph.lean",
+    "source_git_blob": "950b62a00b620af94dcacec5b06cfdb7214a77b6",
+    "patched_git_blob": "c991653300ebb3b5cf36ce6e4f3f4992a31cca63",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralPR.lean",
+    "source_git_blob": "f11c10b9c07db763e14b5da8f0553836fd0a5eb7",
+    "patched_git_blob": "ab8be84b5bce6520f3891c54aae44f458c2aa471",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralPreservation.lean",
+    "source_git_blob": "54346298558d70c0f926483535672fdf7775c4ec",
+    "patched_git_blob": "1e31c3eb69c762e346a8bb30c2f828101cf57fc5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralProof.lean",
+    "source_git_blob": "42ceb60fdada740e64d60cf4e737a60b8f123e89",
+    "patched_git_blob": "46eefaa7c999e0d99ab3383766cd0a9fa814e93a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralSeeds.lean",
+    "source_git_blob": "099c24a86227c1ad16847eda0d3220c96a9f656d",
+    "patched_git_blob": "6dd03e1a2f007fc0fb9e9430c7d22cad918120dd",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralSpecialization.lean",
+    "source_git_blob": "859b4421bb3ed2406be34a70c06d2c380ae5f813",
+    "patched_git_blob": "632b9c4f8aac36602a5191d21748bc4d1816c8aa",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeNumeralSyntax.lean",
+    "source_git_blob": "5dbc31e025fbdd0b1356d296b9e78e7cd6058de9",
+    "patched_git_blob": "4d038f7af494a422a477f40a3083c51e9431e35c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeProofChecker.lean",
+    "source_git_blob": "1758343db9581d67364ec0afae72b09911146315",
+    "patched_git_blob": "c11cd4823633229f9ab16e63e70f988cb59ab450",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeSigmaOneWitness.lean",
+    "source_git_blob": "bbdceaecdf1fe9e73258c2bfa64b0114038916f7",
+    "patched_git_blob": "57a5a6a245b235442dc74aa1420d0b3f3a6aa831",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NativeSyntaxShift.lean",
+    "source_git_blob": "3d96e67eacbc955f9f85ab3df943ccbae1040671",
+    "patched_git_blob": "e5e1e1615380227d25c26efbf7e76c6b8b61e82b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder.lean",
+    "source_git_blob": "e8d3c4fdcef9978ce8a562c9f418bb4ecd865eed",
+    "patched_git_blob": "891a90ee091e1418c103681b54886814922529df",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Categorical.lean",
+    "source_git_blob": "6e47176ed41b926eb1f4b203ab1d0102db7309b1",
+    "patched_git_blob": "95ef917d9350081a3884d326fe675629bad6b632",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Core.lean",
+    "source_git_blob": "9b96936172e3fd8e6c3a28b365cf146cc4d4ee49",
+    "patched_git_blob": "b9f7c686d1d7b3868b2ef9be2f66300251d57b76",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/RETheory.lean",
+    "source_git_blob": "9f50490076a31061833ec0875f8ebfd7fb396f28",
+    "patched_git_blob": "0e0614f8c055491018a2a2776ed5f212c856cdac",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Soundness.lean",
+    "source_git_blob": "4d360c8e2edaf8fea898580e87cf476d8b5127f2",
+    "patched_git_blob": "52a90edd2ce225f393ef548e91f2c23501f8c0e9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Codes.lean",
+    "source_git_blob": "7166ae8ec1453cd414810e4680a64359f74223e1",
+    "patched_git_blob": "0c989cd23f0947d5510e13169b3ae4b57cd3047b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Maps.lean",
+    "source_git_blob": "bc3c64cbf38195fd5884488af912d7fbc7f8e0b7",
+    "patched_git_blob": "c80de1f2f30803f6defc337ffc5c028e5790518c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/Preservation.lean",
+    "source_git_blob": "57e419e8c5fc91795c82a44a00b246b0353e6160",
+    "patched_git_blob": "1c1064a25679c228994803fc7b46e18a89944ae6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalDomainOrder/Structural/ProofGraph.lean",
+    "source_git_blob": "4a25f26b5a798c057d26827e4831bcf6111e3211",
+    "patched_git_blob": "5e662758612789de8b13e24145a405acdda5473b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition.lean",
+    "source_git_blob": "1bcd940ceeeed66ac11c215f77dfef6f7792155e",
+    "patched_git_blob": "0999ad876ea07c953fa3b0be505a48032a3f20b0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Application.lean",
+    "source_git_blob": "c15dc3168f7958d646cac6ddd926ded1ab596221",
+    "patched_git_blob": "01c191bf78cddc44b5b63d018044fa2dcad01649",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Categorical.lean",
+    "source_git_blob": "670923f9de59c6278353e7456b5fd15fe6e6579b",
+    "patched_git_blob": "f45b6b51abcf9ba3a8d99995255d5420dea2210e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Core.lean",
+    "source_git_blob": "e5aa42fc6914dfbc8c67322dd42e2e924e7f6064",
+    "patched_git_blob": "3cd26d3cac5fe0b343a5b0f84fdc1ae71a4ba678",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/RETheory.lean",
+    "source_git_blob": "7c0e2f18c4f3a36985629769218bb1187e5e6620",
+    "patched_git_blob": "e854cebc8ac6e4dec6b919ed6ef58cdcfc62774b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Soundness.lean",
+    "source_git_blob": "fa37152ac694b69e0103f7773064b3665e566f20",
+    "patched_git_blob": "6cefc27b93042acba7d4e7569445300ec2a51310",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Codes.lean",
+    "source_git_blob": "8ea702da1b7408c7a3262ae98843d1616b102641",
+    "patched_git_blob": "b314f53503410c76019ae8818aceeba72fde9e29",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Maps.lean",
+    "source_git_blob": "dd1dd5618e177f946bfd29bd7b34df92e529e886",
+    "patched_git_blob": "472bb1b81bb3b60cae17ab1edfb65f0f7719932a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/Preservation.lean",
+    "source_git_blob": "906120b4478213ee96243f09803655c042d2b8cc",
+    "patched_git_blob": "c5fbf0301278c3e21d1a959c933cb5d4f00bada1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionComposition/Structural/ProofGraph.lean",
+    "source_git_blob": "e31dd03180312162c89f01a173d5df10731ee6f2",
+    "patched_git_blob": "68a2b2d6cf69bc64c5824c5d6280f5d9c531d12e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs.lean",
+    "source_git_blob": "fa45d75566d4871cefc031aecc153d64fd6a95b6",
+    "patched_git_blob": "913384b34d6823c93de36adb0832f43f409a9695",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Core.lean",
+    "source_git_blob": "bec866524d8522e0bbc837b3e7c9a4bf07db75f8",
+    "patched_git_blob": "5540019b98b9f8d2bd6fcba2150d6a487591d3b0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/RETheory.lean",
+    "source_git_blob": "84b28dc692c6145a21f7357d85e5a10a3e877f72",
+    "patched_git_blob": "0c69062369057d4df8fcc3e4ef78e68f72766bfc",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Soundness.lean",
+    "source_git_blob": "995c972a4ae0f4de671961ad7d90f58159b44e27",
+    "patched_git_blob": "28c15767d9ee74447a7736f891859ca0cb915c61",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Codes.lean",
+    "source_git_blob": "2acd92b071110c8dfd870e31e16eadaeb3986084",
+    "patched_git_blob": "68affc7c95922b54eff71388d64f332d2abf8f75",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Maps.lean",
+    "source_git_blob": "cfad77ac0bc03a603cb557a400fea1ffe82b5ca9",
+    "patched_git_blob": "1dbd7d786454a6728f015be01ce0e4fc3030d4cb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/Preservation.lean",
+    "source_git_blob": "80f6d8981c9ccb0ac4a7c72f2fa8f322b5b81c28",
+    "patched_git_blob": "f94c1c9afaf09f96e0985947225db46c6cb499e3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionProofs/Structural/ProofGraph.lean",
+    "source_git_blob": "c2b785986f068dcf68e3cd5c162bc62a7f5ca871",
+    "patched_git_blob": "8b70ec3a6bf89126559fb1929ffe071fe3025e72",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta.lean",
+    "source_git_blob": "92a00ee0fdae12be576ae5f46edc7f88116f0659",
+    "patched_git_blob": "6350b152335ccf333d135d9d16b74b555f832c13",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Application.lean",
+    "source_git_blob": "5d31c3d04a20030802dcbd46c01ac3f0fc56d8c1",
+    "patched_git_blob": "cdcf3c21321c008c1de9c3d224806b3dfec5919a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Categorical.lean",
+    "source_git_blob": "b65abd2220d47656d8858d4a8f4da817de5b639f",
+    "patched_git_blob": "3bb5837d776c2e132dba9f8cca11a2cfd5d15c05",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Core.lean",
+    "source_git_blob": "05f5f242d343090444da37d250083f6419c0325c",
+    "patched_git_blob": "cb06bd14dc44dcef0d1bc00a75bcf921a0f28ffb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/RETheory.lean",
+    "source_git_blob": "fea9ffa49ffb96c4d9474e18152571278853e9d0",
+    "patched_git_blob": "d781eb7871e6f6fb6d75066bb026d2f1f061a44f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Soundness.lean",
+    "source_git_blob": "bf703cdef1ab2998e0e6c66a8f67b4321bf20624",
+    "patched_git_blob": "0f5b90cdc20ec175769afea377b336a18c38e172",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Codes.lean",
+    "source_git_blob": "d9e1e2afd45b57a67b20239ba409f40c7a090bb7",
+    "patched_git_blob": "4b7102479c2727ba5a7637166f5c9ebc0ce84075",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Maps.lean",
+    "source_git_blob": "07260cb9d17f7ad0fa03b7becedd01fa4a26f4c1",
+    "patched_git_blob": "86e7a4934bde5c7a601d44afc76784cc8cb093dc",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/Preservation.lean",
+    "source_git_blob": "837dcf933f9753917206576da3e048bffb3505b7",
+    "patched_git_blob": "725d364d1539a211df7489aaaa2f6a8ec20b6eb4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalExtensionTheta/Structural/ProofGraph.lean",
+    "source_git_blob": "567edc2cc92ccfab86fcf99dbd0a01273da35276",
+    "patched_git_blob": "dcb1d8a9a1c9bb30758a650884b46c01036f07c1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs.lean",
+    "source_git_blob": "30e70642669f9d622ef17a77af4ed8e01a0e13f4",
+    "patched_git_blob": "f2875dad00cce7ad52a349b82162e7d08ce51600",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Core.lean",
+    "source_git_blob": "1a4dcb5d4cfdc59440a87b54b3abbdb0c1328842",
+    "patched_git_blob": "a5a66a9a3b0c60ec0642a12bd973abbc96e6627d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/RETheory.lean",
+    "source_git_blob": "f6c62a6ee359c02d58da653b9a82bc13d8b68f2c",
+    "patched_git_blob": "da15f20cdc3a7be897c0d5bad91bd81b1b298033",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Soundness.lean",
+    "source_git_blob": "16388296397929e8be2754aabbde3689db8ad084",
+    "patched_git_blob": "4315650cb3e8b0be5fbc9b9d3028b145d88aa1c6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Codes.lean",
+    "source_git_blob": "891fdd8ffc4f2fffb402471635c47329f9252f36",
+    "patched_git_blob": "ffb53e4c1b1701fcf8e23d7c964206967c645e84",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Maps.lean",
+    "source_git_blob": "ee5711df2d60a868fa0d2f1d404c73fd584cbf95",
+    "patched_git_blob": "94410f5d55ee8ff5c36a4a88a9fbb00dbd1053f1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/Preservation.lean",
+    "source_git_blob": "b1b808bbb54227215a858948fd5d802849d03292",
+    "patched_git_blob": "6d321c49c5ea7a9154e9a67b6a960b646a1b6ba6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Structural/ProofGraph.lean",
+    "source_git_blob": "96dfa0b208db2a07835ce5e7c559500e89d401ce",
+    "patched_git_blob": "34c6fed92e457afa95a53f8db0e86b23a6eb710e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProductProofs/Typed.lean",
+    "source_git_blob": "04d777e60705ace71509c1b753ad87fecd0039f5",
+    "patched_git_blob": "86d8e9e52e195f50405d87ae5ade1dbb843c718e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge.lean",
+    "source_git_blob": "5bbc5b73a6a1a68f60fbcd3dd63c49fecd2dab2a",
+    "patched_git_blob": "47daa8346b061b866b61f87cd0ac9a010b4f83a0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core.lean",
+    "source_git_blob": "03a61b26ed864414dd51c27c58ccd7dff5f60e7b",
+    "patched_git_blob": "6240684f5eae62410825da3910f889f7b6fb0f38",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes.lean",
+    "source_git_blob": "07851ff14573a2a594b0708de309f63f692cc3e5",
+    "patched_git_blob": "278d0b629302cfa84c3f9728f4d616fecc7372d5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Base.lean",
+    "source_git_blob": "05773d6998074ed64a16998ec688c4fbd0fbd170",
+    "patched_git_blob": "99839035c98b74706362bb1a2c9f62595cb4993c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/PrimitiveRecursive.lean",
+    "source_git_blob": "affb7434410255480221bee516e57f656ac18885",
+    "patched_git_blob": "33c3991a975be473b81a24c5cbe484dbda87d44b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution.lean",
+    "source_git_blob": "cd60afbda57e1888bce294f0f9c0080d21422b49",
+    "patched_git_blob": "4ae892fe68fb0db46eabbbf96681da21779ab4e1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/DirectEquality.lean",
+    "source_git_blob": "085fabc08bcf27076047d428d49dac576f84894b",
+    "patched_git_blob": "b5a0495d859da28f5741ff30f599fedeb5840e44",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Equality.lean",
+    "source_git_blob": "b82c0b3a73a8b3e5ad2ec7bd16b518d0fc4d1315",
+    "patched_git_blob": "2be362de74d027622dbaef256e1184b55d155374",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/EqualityPieces.lean",
+    "source_git_blob": "e3b4100864abc26cffca760c9fd9b051c2a9266d",
+    "patched_git_blob": "5e8ab45fb689d981ac9ff28875a06c4c89e330f9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/FirstBinder.lean",
+    "source_git_blob": "39f468912278ee1957a748e61efecdb44017a90f",
+    "patched_git_blob": "419a30aaa3d18f6f45a3a5f722577b5a149ff8d1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/FirstSuccessValue.lean",
+    "source_git_blob": "6f3ac26f604df88e7b380eeea9ada4eda8a90f0e",
+    "patched_git_blob": "44ce064558f20a14c17bb882b3e60dd32f59abf0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Left.lean",
+    "source_git_blob": "9385c169043ae90707728f04ea989ccb2c33a4da",
+    "patched_git_blob": "e86b984d640e3f3f8d76b5cea1b702df34daf296",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/LeftEquality.lean",
+    "source_git_blob": "12de0e6560c2305ab550bbe3e634f3402082d54d",
+    "patched_git_blob": "88ee36c4c2da676ec6c7c9ac990a2787bdb86541",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/LeftTemplate.lean",
+    "source_git_blob": "89b8784511273cf5af27aa6d9c04521288faec9c",
+    "patched_git_blob": "679cb70f84779481c581599298853af2eab3388d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Right.lean",
+    "source_git_blob": "2dcdb8e7779345adcf00d36b0acc34da5869ee87",
+    "patched_git_blob": "127901ea20b67412fb943451773af41a36096f1e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/RightEquality.lean",
+    "source_git_blob": "77f0202503da128e93386996cc1077bb367953f9",
+    "patched_git_blob": "3d038d3f6bad47a7be24b4eb3f48e2274e85e03e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/SecondBinder.lean",
+    "source_git_blob": "0be1f387e190da3f20ff5f4fb2bb2b8c55500ec8",
+    "patched_git_blob": "8b410d27cc1fe06fdcca5f1a8c8354def02c78d3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/TemplateDirect.lean",
+    "source_git_blob": "3d544cf5478308d804ed0f0bc66c3586f22660d1",
+    "patched_git_blob": "d2e6b9bdebdde75d4f137a6b809b2e8d4d2a1a91",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Codes/Substitution/Ternary.lean",
+    "source_git_blob": "00ce007f77295a687d936c245c32046ff3e5fd3c",
+    "patched_git_blob": "06109c2cfb79440cd667f4d05f64d29df200408a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Presentation.lean",
+    "source_git_blob": "b652af48220a875a0d00fe4be976cff22b6b75ba",
+    "patched_git_blob": "ec17390ca8ce5676a7f5713ec965653ccd001068",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Core/Soundness.lean",
+    "source_git_blob": "5d1be50312152b26bde4667f74ddc13211c7fc86",
+    "patched_git_blob": "f25801d0005d93a011748c1ac1d210a59ccfdba6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/RETheory.lean",
+    "source_git_blob": "49627197d290049cd4ea81d6f703761764c8f33e",
+    "patched_git_blob": "28bfdefc748c210ece9213150998c2b6c7f95ae7",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural.lean",
+    "source_git_blob": "848b3586cff9b0d630f0577264360abe04d09b49",
+    "patched_git_blob": "c433352f3ee918d89f3dcd84347aa22bf5900c50",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/AxiomCodes.lean",
+    "source_git_blob": "bc8dd0ac65571383fa47fde2ea6d19654a4c473a",
+    "patched_git_blob": "b1cb44b9cc3748df0ef58a7cd5ccc99f8b38e2fd",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Base.lean",
+    "source_git_blob": "a4e0b209ba5d95bf7336d6751d84ea92a43dea9d",
+    "patched_git_blob": "b33c0bed752411812a6fafdc966e301564820248",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/BridgeMaps.lean",
+    "source_git_blob": "f74c216bfe756aec050abf42ea64e6f8ce66199b",
+    "patched_git_blob": "772e1ac454f0e1efe3a82d3149ae8764087306b9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Codes.lean",
+    "source_git_blob": "72c67976f8f26bf3aa8b92be246c71044911bc87",
+    "patched_git_blob": "dfdab5993ce07aae6e89e97abe02d8e3588b0c7b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/Preservation.lean",
+    "source_git_blob": "2e8c4c007c7893727cda6fea01a104dac257d0f4",
+    "patched_git_blob": "ad6f445153cfa946e1f50fa680040824bf3cf287",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Structural/ProofGraph.lean",
+    "source_git_blob": "5f542f699edb1bcaf77dc350e3933b752ec6f8ca",
+    "patched_git_blob": "e5839a10c1983d2d7898686a2efb341476a6c2cf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalProofBridge/Transfer.lean",
+    "source_git_blob": "e739a06c29d6a1d8308fbb1411e089c2673b3db5",
+    "patched_git_blob": "7c38dbdc93199560d655b9fc80e135cda35f4627",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs.lean",
+    "source_git_blob": "7b4a25134439fc1b4d538ad28f98fda61f2081be",
+    "patched_git_blob": "50842a0c6a56ab20f77d16212ddd8368b8390370",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Categorical.lean",
+    "source_git_blob": "ac3019992e864e53546af6215cc94554e6c86e26",
+    "patched_git_blob": "a893b103d4a240861612e1985cd68108b3960509",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Core.lean",
+    "source_git_blob": "5ed79543fcfe6d47f2feaa7f650e66eafee456e4",
+    "patched_git_blob": "19d3d7390f8072de2720853bc077095aae595333",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Soundness.lean",
+    "source_git_blob": "78238b2716f166ea726a6d4e2d84c39f53a27ee3",
+    "patched_git_blob": "c8cea67fe390089316a869e3b97b8f982040c4ba",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Codes.lean",
+    "source_git_blob": "364aabd739ce80cc3aa6eed94bdc38bc179b4827",
+    "patched_git_blob": "c611c746024df8281b3c705d9f0bc548a956117a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Maps.lean",
+    "source_git_blob": "8c8aac638e8768dceee11c71d5a6a6c6ad79eeee",
+    "patched_git_blob": "1cc05c9c849d498281b1bd8bb686ff5f06e20dc5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/Preservation.lean",
+    "source_git_blob": "29f5e0c5cd9cbc18af733093ccc572da6ef8dbda",
+    "patched_git_blob": "8f8db770c1e6bf1d76182e68ce215fb9bdc441f1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalRangeProofs/Structural/ProofGraph.lean",
+    "source_git_blob": "409a19bacf88e279a29edd90ec468499be0c5fba",
+    "patched_git_blob": "99f4b721c01dcd4d22ddc7e8d54daea761bc75dc",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/NumericalSpecialization.lean",
+    "source_git_blob": "a012e8d311f5ec8c0b8d49504c9dc664c62e3413",
+    "patched_git_blob": "140b7c69df5adbc604ab9b0776a23de319a97ab3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/Challenge.lean",
+    "source_git_blob": "1c3a6f65cdb8f0f8175624fa8e6b3ea0ca72f0de",
+    "patched_git_blob": "88611f8a4a042a43f1a3ad60dc1efad312b90546",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/CheckInterface.lean",
+    "source_git_blob": "fb0e79f476dc65ef01c86ee43844bbc0c9305c60",
+    "patched_git_blob": "f6ca41c38859f2f2d61e31dda316ce04262dd08b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/Solution.lean",
+    "source_git_blob": "a076f492a822ed6bb64fa42aa9f2a7e7ad51615c",
+    "patched_git_blob": "d9b829fd886c2c4d80076ef57d8b8f93fcc07575",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PartialRecursiveQuotient.lean",
+    "source_git_blob": "6bec33951fd8fa4e7f423588f5ccd13ddcb6eaa5",
+    "patched_git_blob": "26bd1a20110d58b10aeac885a59f7bfb8d4f8821",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneCharacterization.lean",
+    "source_git_blob": "36b8dd10318c9e4fc2c5d240ce664a8d03e94be4",
+    "patched_git_blob": "6051c9cd53d47bad1022cfb233b52591d7f24f92",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneCongruence.lean",
+    "source_git_blob": "2519cf5ae37ad0dcf309d054cd43587548e53244",
+    "patched_git_blob": "7712bcaa84841fb77016e53e2287f9041da88382",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneDefinitions.lean",
+    "source_git_blob": "e83b99289d6a5c9c7bf900bdc383a8f643cda7db",
+    "patched_git_blob": "2486319a2e30c9b89f30a31f89c95f2103aa69c4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneExtensionality.lean",
+    "source_git_blob": "91fea8494ef8375c38e112da10d11cf808c5c5ca",
+    "patched_git_blob": "4f12d2c17aa8175a6f0dc18033fe54fb48b13585",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneIndexCharacterization.lean",
+    "source_git_blob": "48cc593c4502f0465d21200ec8f98de3f0dfb6ef",
+    "patched_git_blob": "b0418f0928a33768b2f8bb7bd13d89a07ec92e91",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PiOneNecessity.lean",
+    "source_git_blob": "fe464f6a840678c81d427b9ae205f90faf79ca9b",
+    "patched_git_blob": "199e2c4f13cd5f384455300fe23aa5d65a9f4012",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PrfEqTransportRepair.lean",
+    "source_git_blob": "8809fef24059612aeb37b404928379d0c5aeae17",
+    "patched_git_blob": "ab555e9bc632379d147bb638ccf9a4822aaa9834",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Core.lean",
+    "source_git_blob": "bfcd0b8c456fcf6ba9b048a69017cb86431dafd5",
+    "patched_git_blob": "94011ca98655869ef904e6d36bae24ab5b526b21",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PrfEqTransportRepair/RETheory.lean",
+    "source_git_blob": "cba6a235db4091687ccdeb3fb4b5ffe6f0a7ab62",
+    "patched_git_blob": "16295c163ae0ba9f988066f094b834a7a61ed657",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Soundness.lean",
+    "source_git_blob": "61813ae7f0192564ae5805a25246ae1ec8758a72",
+    "patched_git_blob": "1a21d255ce924be9a4dbab53b0029a449a2bf7d4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/PrfEqTransportRepair/Structural.lean",
+    "source_git_blob": "fe1c401b48597041987e0f236842e6d05225038b",
+    "patched_git_blob": "5531d4b3cb599b031263f91bc0ed63d71f249c81",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProductionRepairClosure.lean",
+    "source_git_blob": "0fc9abb0805a1ec9acac4a34fc294e4a1b77b06f",
+    "patched_git_blob": "f954c88589db2aa2f06ebde41080c04ee6426040",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProductionStageClosure.lean",
+    "source_git_blob": "27c49fcd392de232c282b01920dffd5f44695806",
+    "patched_git_blob": "5ad5219405f7e3e9c0d0e0fe6176c67ef004dbed",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProductiveDivergence.lean",
+    "source_git_blob": "04fc855183148e6c08d18eca465039dd77d048b5",
+    "patched_git_blob": "88961d97f7ce627c582c60190191144a7467d2bf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProductiveGraph.lean",
+    "source_git_blob": "813d7a167baa1c016e3940af496bd578a95ba826",
+    "patched_git_blob": "992451d2ded70311eb3ea905786a8339279236aa",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Productiveness.lean",
+    "source_git_blob": "d10866d8329c97d64c59998328fa15bb76e54399",
+    "patched_git_blob": "2ca5a87796fb13f0ca7e8790979364525f2fa35d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProgramGraph.lean",
+    "source_git_blob": "c879c60dae704e1f9b23179bf648e051095d2783",
+    "patched_git_blob": "9ffff83a3b5b7231b152de786467df8faffb0760",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProgramIndices.lean",
+    "source_git_blob": "fc9995eb709e12548bd4aa2916804d37d2159ea5",
+    "patched_git_blob": "08cd9f26e4e2939d0a8333c4e51f0577110d36a4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProofSearchMembership.lean",
+    "source_git_blob": "0f7dba41f4e68df6bcd3424e870f2dfc31e52d87",
+    "patched_git_blob": "106116b25703335960bbc1665d53ac42a0d5d214",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/ProofSearchTemplate.lean",
+    "source_git_blob": "20d2aa3d21ee8b9f105aedb10ebb86372b2cc988",
+    "patched_git_blob": "0d1da91c0d3f468aa36b8d7d473b81e8a50893f6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/QuotientComposition.lean",
+    "source_git_blob": "02f2621f831c515fb8951170b5b876970bcdea01",
+    "patched_git_blob": "baa7dfd00cc67a7c0418ec1533a9186dab8e5af0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/QuotientObstruction.lean",
+    "source_git_blob": "14e4b7ff65c853a6b327f10680190934771c2089",
+    "patched_git_blob": "ec494089b3c650c14bf796c247be64343fc3a4d1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/RangeAssignment.lean",
+    "source_git_blob": "b0d0c78e92c039b769b77d044c498ca427edc756",
+    "patched_git_blob": "b17d58c8a5f5f1d16289e2fc1d4f59ea188b641d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/RangeGodel.lean",
+    "source_git_blob": "ee27bb6cad0b86aa8fcda6d19e105832420a9ab5",
+    "patched_git_blob": "e62a06f5bc6bb7fd34667daf07a71d23985be40c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/RangeProductive.lean",
+    "source_git_blob": "4e41bb21a09f834284ae7b47409f69cafb36c463",
+    "patched_git_blob": "30e494fb16a38e0bb1e11e3dbc49d8345267ebd0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/RangeWitness.lean",
+    "source_git_blob": "3faab39a6de8e4f19c5bdef7ee462702e079fa77",
+    "patched_git_blob": "8715dc308af142c740f730069ba972a9f877d47d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/SigmaOneGraphWitness.lean",
+    "source_git_blob": "35f1291a063edf78d6499c49969ea74283319e1e",
+    "patched_git_blob": "b0eadc64c24f750ded0c076953506026e0045805",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/SigmaOneRealization.lean",
+    "source_git_blob": "e313600169a9cfab1d8fd48d4a4b8fb11c253ff0",
+    "patched_git_blob": "e7e9a5ac105ae55dd6b34b7c4e3f65822d5f1b65",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/SigmaOneSemidecisionCore.lean",
+    "source_git_blob": "951febdd5577d622b9a48f8a6082eaa82e813029",
+    "patched_git_blob": "a7528a7b45c19e4d97fff20d084a8f850eec5550",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/StageEnumerationObstruction.lean",
+    "source_git_blob": "81439f9fe8985c9ab5564fb0439fe1f322aef9cc",
+    "patched_git_blob": "901fdea50cc4e3dbae5073202647915de8aae552",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TheoryEnumerability.lean",
+    "source_git_blob": "7a672aeab5b9675d26c73e8f78ad410feefa5faf",
+    "patched_git_blob": "557dc1f3afca849f435719e016d3be1a02d2ac4c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TruePiOneTheory.lean",
+    "source_git_blob": "66213beafcf50d783edc2a1a67c49908dafe3e57",
+    "patched_git_blob": "f9e5b1963f5f560a9dd8518a5f6ab64b1f3700bf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedNearProduct.lean",
+    "source_git_blob": "5de33f14ba147adbfcb858db6bcf04a66db93b79",
+    "patched_git_blob": "a7517b3050e189933bfa14a755e1a74249765179",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedProgramCategory.lean",
+    "source_git_blob": "eaec8335755e4b9245cd38a5a416acd27fba38f4",
+    "patched_git_blob": "99dea3c8016981d6dbfb12cb8b4464169cdec04f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedRanges.lean",
+    "source_git_blob": "8ba97a2f0fad9ca8c3e265336b4b57560bd32f8c",
+    "patched_git_blob": "2c479995cb61dba73d8befd2fb18c38b1201c6e3",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedRecursionCategory.lean",
+    "source_git_blob": "c882595fb274920b1d57c9a53f235b5ae9ee23c7",
+    "patched_git_blob": "2a24495259dfd23e8989735075ae92f1454ab579",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/TypedTuringMorphism.lean",
+    "source_git_blob": "0b51d6fe9c489f8d4ecc027ac956a226ab686190",
+    "patched_git_blob": "eee3a0f7f7a44e32021b2192c9cf8765926f957c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/UniformIndexQuotient.lean",
+    "source_git_blob": "ef8587d2cce18e233aa64b1a448ec964e061039f",
+    "patched_git_blob": "2686390ea6be1747e1663bbf5d80d9c7fa7054ca",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/UniformRange.lean",
+    "source_git_blob": "b5491a812cf478d2dc5516832220f5041a98e44e",
+    "patched_git_blob": "65d8290ed803f045196db2e009d5f6f8b6e6f699",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Verification/CheckDependencies.lean",
+    "source_git_blob": "1fa6018ff507e560387ddfb7696637a394d5c8fc",
+    "patched_git_blob": "2ce8ac91c89e0c9d393f549ddc7ad0e93a90eeb9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Verification/CheckTypes.lean",
+    "source_git_blob": "cf6479facf4b7abef7092acc340b782d7839a383",
+    "patched_git_blob": "99c9c0d31c0966aab0f940502e450efaf0b0b541",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Metamath.lean",
+    "source_git_blob": "64990ffc6680befe10d05ca53f35c6f1c341ac1e",
+    "patched_git_blob": "0944d4cddc47cdfe9b1f3108248eb874e26daafb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats.lean",
+    "source_git_blob": "eaaacc0cf5dd0a808b69b05bbe0429d0c4e6fb6a",
+    "patched_git_blob": "30a4b361d435b3392e3eef721c739916b705913b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/CountableUnions.lean",
+    "source_git_blob": "aec374eb8fe5da9cd9ff21642a98e783ebb588fd",
+    "patched_git_blob": "b484b6bd96e1787b21e15de36907cde641a00e9f",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomEqualizers.lean",
+    "source_git_blob": "a0fe49c0e2da6e202af24a4444671ef6d8daa0b1",
+    "patched_git_blob": "016a75479be89530de722ed122989613f20d9ad5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomProducts.lean",
+    "source_git_blob": "c21293b42ddb31bc4ae56b924028b6fe5dcb3de8",
+    "patched_git_blob": "4f8a1edb2aa0f14cb729f178825e5f743614e725",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomPullbacks.lean",
+    "source_git_blob": "dc6ea0ec50c29c9006b78adb088d4713508487ed",
+    "patched_git_blob": "64a6c5d4dd2bacc1faad04d6302a292c182c635b",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomSemilattice.lean",
+    "source_git_blob": "fda4756ab2149cab47bc06d9860e74071ce44129",
+    "patched_git_blob": "850834e5e1835e2a64bca3bea2f0b668c7f49b05",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomSubdomainMorphisms.lean",
+    "source_git_blob": "eabf8df24880a8453535ad75121f9f39dc9d1bc7",
+    "patched_git_blob": "06a5e952246d9cfb8b7aa0ca6dfa523a0c5467f2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomSubdomains.lean",
+    "source_git_blob": "62cd311de1380fa80e70d60a5bd4913c9414d447",
+    "patched_git_blob": "f05406704e2274827577afa42ed6567157594f0e",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DomTotalEmbedding.lean",
+    "source_git_blob": "da6aa38a6300e9920277599444ebe287fcd42841",
+    "patched_git_blob": "0464e85d9d689f1c2ee80ba2981ac762a0d5bfe2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Domains.lean",
+    "source_git_blob": "0d38fd4a914326b82b347128c37acc3649e1cdcf",
+    "patched_git_blob": "0c73eb5ce1b21f0a24137f5ba4af44f101737a74",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Dominical.lean",
+    "source_git_blob": "553c78167f78d13142938ee4caf823f7916733ce",
+    "patched_git_blob": "0044ea6f2a9767385198da42f24ba9fa0c20e9ee",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/DominicalRecursion.lean",
+    "source_git_blob": "685c7de7addb5b9482721f115b1d0e98bd239e64",
+    "patched_git_blob": "ef014d410a4aaf2aaf67e6308ad314e3e3bd2c59",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Erratum.lean",
+    "source_git_blob": "1b684b053f3fedf8cd4a14d2516641f4c45025eb",
+    "patched_git_blob": "69973d4788734d38c357bdad76e87c99e95b1d51",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/HellerNaturalizer.lean",
+    "source_git_blob": "4a3942a96824b0287e688984d4f69e36a6450325",
+    "patched_git_blob": "3f61c26dbddf407e33a69f7f3f19ab5aca7e02ad",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/NCoproducts.lean",
+    "source_git_blob": "564e61a08505c0e3d13e09a6cf7e7291ce2540be",
+    "patched_git_blob": "7b5f8e398d92b5bc918af5fb442a9f6b05efb41c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Ranges.lean",
+    "source_git_blob": "2968973816c262e877d985c0f775babe0f2d46e8",
+    "patched_git_blob": "7c3b71a249e83899b37a6f00512f92383f58957c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Recursion.lean",
+    "source_git_blob": "8353a4e1b71d0296d3182cc73d8e5f01dddcfdc9",
+    "patched_git_blob": "18578d48741a46df62fbc113add4811dd8335ed5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Restriction.lean",
+    "source_git_blob": "8be04e263211438f27484d6f83f8dd6865b9b4a2",
+    "patched_git_blob": "8a6ff8c49ef3c13c267ee62fa22f572867e56015",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/PCats/Unions.lean",
+    "source_git_blob": "d3fefbd4998792e20596af131de519ea8dfc50d8",
+    "patched_git_blob": "6403069e1b95c9459783fdb111ed7d22d7eb68c1",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro.lean",
+    "source_git_blob": "0ffd9a76f264b42754a252be30e6c6a6c483368b",
+    "patched_git_blob": "3cdbb80de1b59d75ad773009717ecdacd4a20a1c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/Approximation.lean",
+    "source_git_blob": "5a0fbeaef0c5749e5215a2c6d137fde66cd58f69",
+    "patched_git_blob": "0a16d305e8a320f2a0876be9190fbc89edb7f3a8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/CaseLaws.lean",
+    "source_git_blob": "4724da13ef7ff2f436efeb0e5dff5bc72221b10a",
+    "patched_git_blob": "b1aad664e3dcc2bceaa1d37f8e3acd30b52fae83",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/Decisions.lean",
+    "source_git_blob": "140ec3fd66fc965ba01f85d67ad168f78d2e9edd",
+    "patched_git_blob": "2a9330949eb5e9c8695620be174f7c7413540f45",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/ExtensionFamilies.lean",
+    "source_git_blob": "f1c102504cea89fbbac430ccf9f817a34d1ed038",
+    "patched_git_blob": "d7b80252e6e1ee4e0d47a89c47b42a765f24fe0d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/GeneratedRepresentation.lean",
+    "source_git_blob": "262d4cab56a3dc79ca046a5fc2c98f56366021b4",
+    "patched_git_blob": "6c1d97d611a56b1b215529094795dacd338ab142",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/LocalConnectedness.lean",
+    "source_git_blob": "2e04f5ab905c6dd21397c2388150cfba1f013f23",
+    "patched_git_blob": "5dfeef1c2bd3f2e563c84cfd6e0a97da3ef62a3d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/ParameterizedRecursion.lean",
+    "source_git_blob": "fbb18e70ae42e1225656627b030899ef67ca9bad",
+    "patched_git_blob": "144af3f981cbc7aa42f2c4fe43c8d88906d997f4",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/Selection.lean",
+    "source_git_blob": "636ff9e286290eee0b6674fd5e7e8082e2a09f00",
+    "patched_git_blob": "46b569ac32ffd22cfd59cc015a7e07cf7124be21",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/UpwardClosure.lean",
+    "source_git_blob": "df6897e8064ea37519495ab7eff5da90c4ba23c4",
+    "patched_git_blob": "ef6c95755db1c6f65b05ce3c6270feed0b1eb4a2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/RiceShapiro/WitnessExistence.lean",
+    "source_git_blob": "17f1993436f544131ef1e7fdb9bfb374aa49d360",
+    "patched_git_blob": "d82b4aaeb7dfac14ffd77518239498fdafd16d44",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/ArithProofFormulaRegression.lean",
+    "source_git_blob": "81bf3d4f310ce447023a1d81cd86de7d31bc2e48",
+    "patched_git_blob": "759ff842322fa5ce114cf7a1fe4861fd6fa91915",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/AxiomRegression.lean",
+    "source_git_blob": "b4db9ed92403b87430c539cf59b56a69c5952e37",
+    "patched_git_blob": "fdef5f290ab758977b3ccbabfdc8bcf200844f94",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/CoproductRegression.lean",
+    "source_git_blob": "e8deb4ee4ee24e2c9ef97ad9709a67ed7af65ab7",
+    "patched_git_blob": "ad81226dcbd71e5dc4e95bddafcba014578890ef",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomEqualizersRegression.lean",
+    "source_git_blob": "833315e32c505369b2f03386ae2a2a224cbff971",
+    "patched_git_blob": "5033eba3ad2e16ecdcff12f2ec46e3b8da0605a6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomProductsRegression.lean",
+    "source_git_blob": "a08482d99732b1ec1a239d0224519672ae14384d",
+    "patched_git_blob": "38a2bbda897445a2cb61331681e8858417a92e59",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomPullbacksRegression.lean",
+    "source_git_blob": "9d38767c10c9f0ed4ad1761b3d80d4604902c6f2",
+    "patched_git_blob": "db6e828f924594554c9296f6f4d12cfb03246516",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomSubdomainMorphismsRegression.lean",
+    "source_git_blob": "9343ebd7ea4e63d3a278b1814ee640cf25193ab9",
+    "patched_git_blob": "bcfd29cbe3faf0ee9df1a1b120bbe5fa9ad1bcda",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomSubdomainsRegression.lean",
+    "source_git_blob": "fa7f1f00e5e50dab7a94ca74cf6d9e1b550da29e",
+    "patched_git_blob": "2082a1630ebe43a83b4f4656971d3c7978d9bb85",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DomTotalEmbeddingRegression.lean",
+    "source_git_blob": "6fec59434e1c2e29cc7747331801a68f46f49403",
+    "patched_git_blob": "7bb446507addbab302ac33879409e739ec7a58c2",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DominicalRecursionRegression.lean",
+    "source_git_blob": "0c1c7c138c7d8519498447dbe6d366667cdce2e6",
+    "patched_git_blob": "78d3a4245bc56e0adb6dca28d0a94535af984e63",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/DominicalRegression.lean",
+    "source_git_blob": "d869f13c0970716b2e42cfad5e122442932c3300",
+    "patched_git_blob": "3a12c93b5b88bcb30b7d67664f0717fd685c2fdb",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/FefermanProofCodeRegression.lean",
+    "source_git_blob": "0542d27924b0b8f0a10db6f19662e598381ec54a",
+    "patched_git_blob": "4de7b11f51ea60c98cebff1effa6c5e5dd8b9505",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/HellerNaturalizerRegression.lean",
+    "source_git_blob": "2489ec49956bc3f2a6bdbe7c4ce1eb8f73017c49",
+    "patched_git_blob": "8a6d7a39b0cc196f7df0c9dad78e18b15deff237",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/Tests/RiceShapiroRegression.lean",
+    "source_git_blob": "dfdbcf207701a8ab7fc09e470627674f17260489",
+    "patched_git_blob": "03f09af7bfb1f58ec7e569f198f0e57dd126d5cc",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/check_arith_axioms.lean",
+    "source_git_blob": "0f71321206190e9c2f1ee110fda1251acd022fd1",
+    "patched_git_blob": "ba92d6771bcba7323e01a394a4897d0b51a01497",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/check_metamath_axioms.lean",
+    "source_git_blob": "37661cd213d0c039cb39daad37ae836dde25e4f3",
+    "patched_git_blob": "84ac04fc474155bcb2b2abcc76c4675e55f3df3a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/check_riceshapiro_axioms.lean",
+    "source_git_blob": "041c84debbda3d5baca6a75bd626785fdea52d7b",
+    "patched_git_blob": "0fdb52b87647f6a80fe6edd9deb15dc75e8bebb9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/ArithmeticBridge.lean",
+    "source_git_blob": "016cce5825c3c50ac0525012435795e08e763280",
+    "patched_git_blob": "9b389c077f362e7c0274dc4c8cac735192ba30f8",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/CheckNineInterface.lean",
+    "source_git_blob": "9a0cd328c91abb004ee5eccfa5568f077baecd12",
+    "patched_git_blob": "f72ba7937d3dacdef723a70beb5be6ea705d5aea",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/DirectDerivationEnumeration.lean",
+    "source_git_blob": "1c75430b54f6d39ec65a580d77b17963e40ca22f",
+    "patched_git_blob": "bb594131be03f9f1020bfeb007f14d0ca7aa8dbe",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/DirectDivergenceBridge.lean",
+    "source_git_blob": "7120b3cf36a8e9d185743893ab7fe0028219672e",
+    "patched_git_blob": "ab595f5687bde295b788b64e84dea78551a8fbc0",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/EvaluatorInterface.lean",
+    "source_git_blob": "0e9ef663576cf30cbfc42f597e276ae497905d78",
+    "patched_git_blob": "8e1decb335c86756bca22dadc9ec801da3eae5d5",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/GeneratedCongruenceBridge.lean",
+    "source_git_blob": "024c754b65692ee45190caa93d500706494526d3",
+    "patched_git_blob": "a57185a78e5b6d2f6bc23e78f8efb6c1e07c2794",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/GeneratedCongruenceInterface.lean",
+    "source_git_blob": "c90d20dc07052f44f94febef9d804c87af652e9c",
+    "patched_git_blob": "57bbda77dde2bad57ec899d11cd0587670a74e97",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/GeneratedQuotientBridge.lean",
+    "source_git_blob": "af79d65bfb240c43b11a38ce63095416ea89cbbb",
+    "patched_git_blob": "7b2850637b012a5e384e1dde8e576e5cc8b95c9c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/GeneratedQuotientInterface.lean",
+    "source_git_blob": "c5d9068a6271dcd6c1e1d4360aa2ae41275f9edf",
+    "patched_git_blob": "6a006c05f347f5260b9881aa7f5fe1882aa0105d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/GodelQuotientBridge.lean",
+    "source_git_blob": "7c72ad2588815cd0d1396ca94b2ef93e7d80b6f7",
+    "patched_git_blob": "8e21dbd66f161ee66616fca5aa9457d6d9d412f9",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/ObstructionBridge.lean",
+    "source_git_blob": "7430cf2fc918502d70ae096671562b61736e5601",
+    "patched_git_blob": "e7f16f9677e2cf7bcd5aa0d8b94300459e5131d6",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/PiOneBridge.lean",
+    "source_git_blob": "6956d808d6c626832de2a1057ed93710b7dcfa3c",
+    "patched_git_blob": "85567f4a059b7eaca2bff463374624072b544173",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/PiOneInterface.lean",
+    "source_git_blob": "7e2e419ea345edec5a1398d1e873780abdd3644f",
+    "patched_git_blob": "ef3081468f4c1c63703c5cdb15655e0b2ca617a7",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/QuotientBridge.lean",
+    "source_git_blob": "db14a098ec225d81521dac7a848bcff9e80f7555",
+    "patched_git_blob": "e228ef533ac3bbda8eec5801ffa77ae472da490a",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/RangeBridge.lean",
+    "source_git_blob": "1182631a690485034ddf1b2adeb6d69ea6f48fa3",
+    "patched_git_blob": "1dc2aa0850b69a0dd7ee97c4647468e6b66c7725",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/RangeInterface.lean",
+    "source_git_blob": "2fac6087b2f0f9785cf439943999022da84f2fbb",
+    "patched_git_blob": "a6ac6ccf22553bf59ce15a29f580d67a7f9606cf",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/RangeProductiveBridge.lean",
+    "source_git_blob": "259a05eb4f334fcdf47f6c52eb279fe684c2f641",
+    "patched_git_blob": "fe2ea70bc7a3d023d3bc3494ecadb22361bfea3d",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/SolutionNine.lean",
+    "source_git_blob": "84ae0eca88108fa4a906fe6477cdcd7216bf8ee5",
+    "patched_git_blob": "991a2f4d34a1ed864249e4aa75864690c1a7d45c",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+  },
+  {
+    "path": "Lean/FailureOfComposition/Palomar/WeakTotalityBridge.lean",
+    "source_git_blob": "f1ef301e786fd43b0181445f8cb5080a927da535",
+    "patched_git_blob": "bf96eda9821dc12622cf85ac3351e92ab6974814",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
   }
 ]

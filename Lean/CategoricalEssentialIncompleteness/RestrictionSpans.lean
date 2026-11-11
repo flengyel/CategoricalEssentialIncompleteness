@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.LocalSwitch
-import Mathlib.CategoryTheory.Widesubcategory
+module
+
+public import CategoricalEssentialIncompleteness.LocalSwitch
+public import Mathlib.CategoryTheory.Widesubcategory
 
 /-! # Monic spans in the total category of a split restriction category -/
+
+@[expose] public section
 
 universe v u
 set_option backward.isDefEq.respectTransparency false

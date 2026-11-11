@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionRank
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionRank
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
 
 /-! # External induction on the actual successful uniform derivations
 
@@ -7,6 +14,8 @@ The predicate is arbitrary and need not be uniformly enumerable. The
 proof uses the literal tree rank. It does not infer preservation of
 initiality by the underlying-set functor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

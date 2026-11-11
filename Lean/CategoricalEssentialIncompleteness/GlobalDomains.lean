@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.GlobalTotals
+module
+
+public import CategoricalEssentialIncompleteness.GlobalTotals
 
 /-!
 # Global restriction domains
@@ -13,6 +15,8 @@ idempotents in the ordinary category. The transported lattice has the
 restriction-domain order, composition as meet, and identity and zero as bounds.
 The comparison commutes with the restriction inverse image.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
 /-! # Sentence and theorem predicates use the same formula-code coordinate -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

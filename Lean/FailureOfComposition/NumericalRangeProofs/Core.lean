@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core
-import FailureOfComposition.RangeAssignment
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core
+public import FailureOfComposition.RangeAssignment
 
 /-!
 # Numerical proofs of range membership from computations
@@ -22,6 +24,8 @@ theorem assumes that the supplied stage really codes the displayed
 computation, so malformed inputs have defined but otherwise unspecified
 output proof codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -136,26 +140,26 @@ theorem primrec_computationAxiomCode :
       computationAxiomCode z.1.1.1 z.1.1.2 z.1.2 z.2) :=
   primrec_encodeFormula.comp primrec_computationAxiomString
 
-private def computationTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
+def computationTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
   x.getD j 0
 
 private theorem primrec_computationTokenAt (j : ℕ) :
     Primrec (computationTokenAt j) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const j)
 
-private def recoveredStagePayload (x : FormulaString) : ℕ :=
+def recoveredStagePayload (x : FormulaString) : ℕ :=
   computationTokenAt 2 x
 
-private def recoveredProgram (x : FormulaString) : ℕ :=
+def recoveredProgram (x : FormulaString) : ℕ :=
   (recoveredStagePayload x).unpair.1
 
-private def recoveredStage (x : FormulaString) : ℕ :=
+def recoveredStage (x : FormulaString) : ℕ :=
   (recoveredStagePayload x).unpair.2.unpair.1
 
-private def recoveredInput (x : FormulaString) : ℕ :=
+def recoveredInput (x : FormulaString) : ℕ :=
   (recoveredStagePayload x).unpair.2.unpair.2.unpair.1
 
-private def recoveredOutput (x : FormulaString) : ℕ :=
+def recoveredOutput (x : FormulaString) : ℕ :=
   (recoveredStagePayload x).unpair.2.unpair.2.unpair.2
 
 private theorem primrec_recoveredStagePayload :
@@ -206,7 +210,7 @@ private theorem primrec_recoveredOutput : Primrec recoveredOutput :=
   rw [recoveredOutput, hk]
   simp [computationStage]
 
-private def computationAxiomCandidate (x : FormulaString) : FormulaString :=
+def computationAxiomCandidate (x : FormulaString) : FormulaString :=
   computationAxiomString (recoveredProgram x) (recoveredStage x)
     (recoveredInput x) (recoveredOutput x)
 
@@ -289,10 +293,10 @@ theorem primrec_rangeIntroAxiomCode :
       rangeIntroAxiomCode z.1.1.1 z.1.1.2 z.1.2 z.2) :=
   primrec_encodeFormula.comp primrec_rangeIntroAxiomString
 
-private def recoveredRangeInput (x : FormulaString) : ℕ :=
+def recoveredRangeInput (x : FormulaString) : ℕ :=
   computationTokenAt 2 (lhsString x)
 
-private def recoveredRangeOutput (x : FormulaString) : ℕ :=
+def recoveredRangeOutput (x : FormulaString) : ℕ :=
   computationTokenAt 3 (lhsString x)
 
 private theorem primrec_recoveredRangeInput : Primrec recoveredRangeInput :=
@@ -311,7 +315,7 @@ private theorem primrec_recoveredRangeOutput : Primrec recoveredRangeOutput :=
   simp [recoveredRangeOutput, rangeIntroAxiomString, computationTokenAt,
     rightInstanceString]
 
-private def rangeIntroAxiomCandidate
+def rangeIntroAxiomCandidate
     (e r : ℕ) (x : FormulaString) : FormulaString :=
   rangeIntroAxiomString e r (recoveredRangeInput x)
     (recoveredRangeOutput x)

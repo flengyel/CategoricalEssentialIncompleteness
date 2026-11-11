@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Structural.Codes
-import FailureOfComposition.NumericalExtensionComposition.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Structural.Codes
+public import FailureOfComposition.NumericalExtensionComposition.Structural.ProofGraph
 
 /-!
 # Exact proof graph for the B1(8) common checker
@@ -14,6 +16,8 @@ with the one theta-scheme leaf.  Its natural-number interpretation agrees
 exactly with the executable presentation, including malformed formula and
 proof codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

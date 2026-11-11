@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate
 
 /-! # The actual numeral/complement split in the arithmetic total category
 
@@ -11,6 +13,8 @@ The primitive maps are defined first. The generic constructors derive their
 copair equations, and the concrete isomorphism/proof records are sealed only
 after all comparisons have been checked by the kernel.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency true
 set_option backward.isDefEq.respectTransparency.types true

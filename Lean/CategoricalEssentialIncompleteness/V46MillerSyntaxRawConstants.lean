@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantsCodes
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantsCodes
 
 /-! # The actual constant-polynomial chart in every parameter slice
 
@@ -12,6 +14,8 @@ source/target guards, parameter equations and inverse equations are proved
 on the original carriers, including when the parameter carrier is empty.
 No constant-family code comparison is supplied as a hypothesis.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

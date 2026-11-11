@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPER
-import Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts.ProdComparison
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPER
+public import Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts.ProdComparison
 
 /-!
 # Binary products of numerical PERs
@@ -13,6 +15,8 @@ Pairs are encoded with Mathlib's recursive pairing function on ℕ. The product
 relation compares the two decoded coordinates. Recursive projection and pairing
 functions establish the product universal property for every PER source.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

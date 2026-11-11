@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Structural.Preservation
-import FailureOfComposition.NumericalDomainOrder.RETheory
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Preservation
+public import FailureOfComposition.NumericalDomainOrder.RETheory
 
 /-!
 # Finite-extension proof conversion for recursively enumerable theories
@@ -15,6 +17,8 @@ the checker tag `C(c,i)`, the zero-test graph tag `X(c,i)`, and the closed
 formula `Ext(c,i)`.  Soundness is proved for every proof accepted by the new
 presentation, including proofs using either added scheme.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
+
+
+/-! # Statement checks in `V46MillerRealClosedAxiomsSemanticsChecks` -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedAxioms.Semantics
 open OrderedFieldSyntax
 universe u

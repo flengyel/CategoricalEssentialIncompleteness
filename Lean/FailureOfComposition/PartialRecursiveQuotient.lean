@@ -15,6 +15,8 @@ with partial composition as multiplication and the total identity as its unit.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

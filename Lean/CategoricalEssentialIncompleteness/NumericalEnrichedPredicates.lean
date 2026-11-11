@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnrichedTotals
-import CategoricalEssentialIncompleteness.NumericalEnrichedDomains
-import CategoricalEssentialIncompleteness.NumericalPredicates
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnrichedTotals
+public import CategoricalEssentialIncompleteness.NumericalEnrichedDomains
+public import CategoricalEssentialIncompleteness.NumericalPredicates
 
 /-!
 # Internal numerical predicates and domain embedding
@@ -14,6 +16,8 @@ All PER subobjects form the numerical predicate objects. Pullback acts
 pointwise on families of total numerical arrows. The actual restriction-domain
 equalizers embed naturally into these objects by their support subobjects.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

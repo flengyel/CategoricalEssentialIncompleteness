@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticUltrapower
-import CategoricalEssentialIncompleteness.V46PredicateInterpretation
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
-import CategoricalEssentialIncompleteness.V46UltrapowerTransport
-import Mathlib.CategoryTheory.Whiskering
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticUltrapower
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretation
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+public import CategoricalEssentialIncompleteness.V46UltrapowerTransport
+public import Mathlib.CategoryTheory.Whiskering
 
 /-! # Comparison of code interpretation with the arithmetic ultrapower -/
+
+@[expose] public section
 
 noncomputable section
 

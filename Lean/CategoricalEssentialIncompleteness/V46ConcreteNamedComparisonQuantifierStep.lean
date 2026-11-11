@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierValues
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierValues
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
 
 /-! # The actual shared-parameter quantifier step has the numeric root result -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.PCat
+module
+
+public import PCats.PCat
 
 /-!
 # `ℕ`-ary coproducts and countable distributivity
@@ -17,6 +19,8 @@ The manuscript's `rPΣ` context additionally assumes ranges, `IsRP`, binary
 coproducts, and binary distributivity. Stable countable unions of ranges are
 treated in `PCats.CountableUnions`.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
-import CategoricalEssentialIncompleteness.V46Inference
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+public import CategoricalEssentialIncompleteness.V46Inference
 
 /-! Occurrence-list and sentence types and their common finite-power convention. -/
+
+@[expose] public section
 
 noncomputable section
 

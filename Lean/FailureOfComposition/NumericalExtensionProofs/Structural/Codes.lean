@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Soundness
-import FailureOfComposition.NumericalDomainOrder.Structural.Codes
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Soundness
+public import FailureOfComposition.NumericalDomainOrder.Structural.Codes
 
 /-!
 # Arithmetic graphs for finite-extension endpoint and scheme codes
@@ -14,6 +16,8 @@ arithmetic pairing.  They then reuse the accepted right-instance and
 implication graphs, so their standard values are the exact external graph-tag
 codes from `NumericalExtensionProofs.Core`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.Topology.Sets.Opens
-import Mathlib.Data.Fintype.Powerset
-import Mathlib.CategoryTheory.Category.Preorder
-import Mathlib.Tactic.DeriveFintype
+module
+
+public import Mathlib.Topology.Sets.Opens
+public import Mathlib.Data.Fintype.Powerset
+public import Mathlib.CategoryTheory.Category.Preorder
+public import Mathlib.Tactic.DeriveFintype
 
 /-! # The manuscript's actual three-point space and its five opens -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

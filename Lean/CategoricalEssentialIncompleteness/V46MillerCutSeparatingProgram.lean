@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
-import CategoricalEssentialIncompleteness.V46MillerCutSeparatingReal
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
+public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingReal
 
 /-! # One ordinary index computing the actual separating real on every oracle
 
@@ -14,6 +16,8 @@ constructed use bound. Both that bound and the rational-index algorithm
 are ordinary primitive-recursive functions. Rational indices need not be
 constant on a representation fiber; the error is relative to one real.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

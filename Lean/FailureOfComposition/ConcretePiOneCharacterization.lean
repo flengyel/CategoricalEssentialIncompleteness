@@ -15,6 +15,8 @@ program indices and history graphs. The ambient theory may be non-enumerable.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

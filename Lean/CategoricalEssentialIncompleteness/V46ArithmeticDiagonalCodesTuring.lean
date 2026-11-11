@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesModels
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesModels
 
 /-! # A proved adapter from the old Turing map to the printed universal map
 
@@ -11,6 +13,8 @@ The two maps are not identified. The adapter is an actual PA-total
 specializer program, with a categorical factorization proved from the
 uniform graph equations at arbitrary internal indices and inputs.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

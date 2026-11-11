@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationEvaluation
-import CategoricalEssentialIncompleteness.V46ForkDerivationNaturality
-import CategoricalEssentialIncompleteness.V46NumericalRuleRebase
-import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
-import Mathlib.Tactic.FinCases
-import Mathlib.CategoryTheory.Limits.FunctorCategory.Finite
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationEvaluation
+public import CategoricalEssentialIncompleteness.V46ForkDerivationNaturality
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRebase
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
+public import Mathlib.Tactic.FinCases
+public import Mathlib.CategoryTheory.Limits.FunctorCategory.Finite
 
 /-! # The actual component objects and finite coefficient charts -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyConstructor
+module
+
+public import FailureOfComposition.NativeFamilyConstructor
 
 /-!
 # Joint primitive recursiveness of the nine-input constructor
@@ -11,6 +13,8 @@ import FailureOfComposition.NativeFamilyConstructor
 The template code is an explicit numerical parameter. No model-side or
 choice-based definition is evaluated by this proof constructor.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

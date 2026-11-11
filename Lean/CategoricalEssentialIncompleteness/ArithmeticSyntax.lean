@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnumeration
-import Foundation.FirstOrder.Arithmetic.Basic.Misc
-import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnumeration
+public import Foundation.FirstOrder.Arithmetic.Basic.Misc
+public import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
 
 /-!
 # Arithmetic syntax in the numerical category
@@ -20,6 +22,8 @@ Its increasing enumeration and rank function induce a computable bijection
 between natural numbers and arithmetic sentences. Unary formulas are decoded
 with the same syntax encoding, with falsity assigned to invalid codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableInverses
-import CategoricalEssentialIncompleteness.ClassicalRanges
-import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableInverses
+public import CategoricalEssentialIncompleteness.ClassicalRanges
+public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
 
 /-! # Finite limits of total maps between c.e. carriers -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

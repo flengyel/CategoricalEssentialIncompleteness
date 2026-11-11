@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerListsRawAlgebra
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsRawAlgebra
+
+
+/-! # Statement checks in `V46MillerListsRawAlgebraChecks` -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.Miller

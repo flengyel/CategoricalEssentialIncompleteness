@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsParameterInitial
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison
-import CategoricalEssentialIncompleteness.V46SyntacticListsTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsParameterInitial
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison
+public import CategoricalEssentialIncompleteness.V46SyntacticListsTransport
 
 /-! # Stable lists with the original nil and adjoin codes
 
@@ -15,6 +17,8 @@ Initiality therefore includes every parameter object and every target
 family. No condition on the ordinary computability of target values is
 introduced.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

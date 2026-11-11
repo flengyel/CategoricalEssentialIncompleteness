@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralConstructor
+module
+
+public import FailureOfComposition.NativeNumeralConstructor
 
 /-!
 # Joint primitive recursiveness of numeral proof functions
@@ -13,6 +15,8 @@ recursion. Every seed code and the common context remain varying inputs.
 The multiplication step invokes the proved addition function at its actual
 arguments, rather than choosing a proof of the needed equation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Metamath.Feferman.MPSequence
+module
+
+public import Metamath.Feferman.MPSequence
 
 /-!
 # Natural-number codes for formulas and proof sequences
@@ -93,6 +95,8 @@ necessary.
 `Primrec.nat_casesOn`, `Primrec.list_getD`, `Primrec.nat_div`,
 `Primrec.nat_mod`, `Primrec.nat_add`, and `Primrec.nat_mul`.
 -/
+
+@[expose] public section
 
 namespace Metamath.Feferman
 

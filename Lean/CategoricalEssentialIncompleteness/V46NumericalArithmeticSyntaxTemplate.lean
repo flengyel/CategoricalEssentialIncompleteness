@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
-import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
+public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain
 
 /-! # The actual arithmetic coefficient and polynomial-input charts -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -18,7 +22,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.SyntaxTemplate
 open Coordinates NamedArithmeticSignature SyntacticSyntax
-private abbrev E := NumericalSyntaxTreeChart.E
+abbrev E := NumericalSyntaxTreeChart.E
 
 /-- Roles remain distinct even if two coefficient predicates happen to coincide. -/
 inductive Label

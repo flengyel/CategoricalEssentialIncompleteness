@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
+
+
+/-! # Statement checks in `V46SyntacticFiniteNamedSchemesChecks` -/
+
+@[expose] public section
 noncomputable section
 universe v u
 open CategoryTheory CategoryTheory.Limits

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Domains
+module
+
+public import PCats.Domains
 
 /-!
 # Subdomains, composition, inverse images, and the comparison isomorphism
@@ -76,6 +78,8 @@ of the subdomain carried by the range of the diagonal; the finite-limit
 consequence of that corollary is not bundled as a Lean result.
 -/
 
+@[expose] public section
+
 universe v u
 
 namespace CategoryTheory
@@ -132,7 +136,7 @@ theorem inclusion_mono (s : Subdomain A) : Mono s.inclusion :=
 /-! ### Composition -/
 
 /-- An idempotent received by `s.idem` is received by `A.idem`. -/
-private lemma comp_ambient_idem (s : Subdomain A) {i : A.base ⟶ A.base}
+lemma comp_ambient_idem (s : Subdomain A) {i : A.base ⟶ A.base}
     (hi : i ≫ s.idem = i) : i ≫ A.idem = i :=
   calc i ≫ A.idem = (i ≫ s.idem) ≫ A.idem := by rw [hi]
     _ = i ≫ s.idem ≫ A.idem := Category.assoc _ _ _
@@ -282,7 +286,7 @@ theorem inverseImage_existsUnique (s : Subdomain B) (θ : A ⟶ B) {W : Dom C}
 /-! ### The comparison isomorphism -/
 
 /-- The compatibility equation for the comparison isomorphism. -/
-private lemma inverseImageIso_comm (s : Subdomain A) (i : A ≅ B) :
+lemma inverseImageIso_comm (s : Subdomain A) (i : A ≅ B) :
     (𝟙 s.toDom) ≫ s.inclusion = (s.inclusion ≫ i.hom) ≫ i.inv := by
   rw [Category.id_comp, Category.assoc, i.hom_inv_id, Category.comp_id]
 

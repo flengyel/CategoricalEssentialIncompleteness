@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ArithmeticCodeCompiler
-import FailureOfComposition.FirstSuccessGraph
-import FailureOfComposition.TypedCoproducts
-import PCats.Recursion
+module
+
+public import FailureOfComposition.ArithmeticCodeCompiler
+public import FailureOfComposition.FirstSuccessGraph
+public import FailureOfComposition.TypedCoproducts
+public import PCats.Recursion
 
 /-!
 # A Turing morphism on the typed program category
@@ -19,6 +21,8 @@ arrow stores the standard numeral for `q` beside its input.  This convention
 gives the factorization required by the maintained `IsTuringMorphism`
 interface for every coded parameter object.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

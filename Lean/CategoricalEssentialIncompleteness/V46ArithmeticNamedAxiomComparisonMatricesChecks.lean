@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices
+
+
+/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonMatricesChecks` -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedAxiomComparisonMatricesChecks
 open ArithmeticNamedAxiomComparison NamedArithmeticSignature

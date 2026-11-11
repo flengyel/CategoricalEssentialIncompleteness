@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.Computability.Primrec.List
+module
+
+public import Mathlib.Computability.Primrec.List
 
 /-!
 # Feferman proof sequences with modus ponens as the sole inference rule
@@ -85,6 +87,8 @@ primitive recursiveness of the coded proof predicate, Feferman's concrete
 `Fm_K` or the ten logical-axiom schemata `Ax_K`, substitution, or any
 arithmetic internalization.
 -/
+
+@[expose] public section
 
 namespace Metamath.Feferman
 

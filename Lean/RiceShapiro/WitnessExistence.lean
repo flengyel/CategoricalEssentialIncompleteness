@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.Selection
-import RiceShapiro.ParameterizedRecursion
-import RiceShapiro.UpwardClosure
+module
+
+public import RiceShapiro.Selection
+public import RiceShapiro.ParameterizedRecursion
+public import RiceShapiro.UpwardClosure
 
 /-!
 # Existence of extension witnesses
@@ -27,6 +29,8 @@ additionally uses it on `Z ⊠ X` for the reverse implication, which goes throug
 route (ii). The Di Paola–Heller fixed-point principle is the explicit hypothesis
 `HasImportedParameterizedRecursion`.
 -/
+
+@[expose] public section
 
 universe v u
 

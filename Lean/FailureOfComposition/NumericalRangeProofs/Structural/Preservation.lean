@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalRangeProofs.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalRangeProofs.Structural.Maps
 
 /-!
 # PA-internal preservation for the range proof map
@@ -14,6 +16,8 @@ quantified inside arithmetic.  This is the fixed-parameter uniformity required
 by B1(4); it does not assert an internal or primitive-recursive selector of a
 range index from a source index.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

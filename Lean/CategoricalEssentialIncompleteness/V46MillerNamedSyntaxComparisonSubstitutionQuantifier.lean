@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionState
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionState
 
 /-! # Actual quantified-substitution branch comparison
 
@@ -6,6 +13,8 @@ The equal-name branch retains the original body, even when the recursive
 option result is failure. Every Boolean/list/constructor comparison below
 is derived for the concrete records; none is a final diagram premise.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

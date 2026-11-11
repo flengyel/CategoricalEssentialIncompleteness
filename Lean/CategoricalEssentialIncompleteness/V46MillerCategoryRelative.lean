@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
-import CategoricalEssentialIncompleteness.V46MillerCategoryTuring
-import CategoricalEssentialIncompleteness.V46MillerOracleRelative
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
+public import CategoricalEssentialIncompleteness.V46MillerCategoryTuring
+public import CategoricalEssentialIncompleteness.V46MillerOracleRelative
 
 /-! # The actual fixed-oracle target and the faithful inclusion
 
@@ -13,6 +15,8 @@ The same closure construction is applied to the singleton oracle family.
 Its entire partial numerical functions are proved equivalent to usual
 relative recursiveness; no ordinary value-extension requirement occurs.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.PrfEqTransportRepair.Soundness
-import FailureOfComposition.NumericalProofBridge.Structural
+module
+
+public import FailureOfComposition.PrfEqTransportRepair.Soundness
+public import FailureOfComposition.NumericalProofBridge.Structural
 
 /-!
 # Structural graph and internal preservation for the transport repair
@@ -14,6 +16,8 @@ modus-ponens constructor inside arbitrary models of PA.  All proof codes,
 program indices, formula codes, and the output proof code are internal
 variables in the preservation sentence.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

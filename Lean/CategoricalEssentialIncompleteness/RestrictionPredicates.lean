@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.Diagonal
-import PCats.DomSemilattice
-import PCats.DomTotalEmbedding
+module
+
+public import CategoricalEssentialIncompleteness.Diagonal
+public import PCats.DomSemilattice
+public import PCats.DomTotalEmbedding
 
 /-!
 # Restriction idempotents as an indexed predicate lattice
@@ -14,6 +16,8 @@ The order and meet are the existing domain order and composition. Joins and
 their stability are additional data, as in the manuscript. Restriction zeros
 are assumed directly; ranges, coproducts, and density hypotheses are unnecessary.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

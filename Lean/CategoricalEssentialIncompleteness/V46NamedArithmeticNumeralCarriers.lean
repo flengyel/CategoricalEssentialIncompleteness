@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
-import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveInvariant
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveInvariant
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
 
 /-! PA proves that its internal numeral construction is a closed,
 accepted arithmetic term, including at nonstandard input indices. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

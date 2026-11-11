@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! Numeric collection of recursive-leaf lists in the exact ordered
 polynomial chart. Coefficient and unit entries contribute the empty list. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedGatherDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

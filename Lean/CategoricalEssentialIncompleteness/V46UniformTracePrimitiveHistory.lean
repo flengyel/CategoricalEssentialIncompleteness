@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveLists
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveLists
 
 /-! # The literal production history evaluator has a primitive native value
 
@@ -11,6 +13,8 @@ This is a closed derivation through the actual numeric cell, row and table
 constructors. It assumes no primitive certificate for an evaluator, a trace
 predicate, a program index, or a computation graph.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

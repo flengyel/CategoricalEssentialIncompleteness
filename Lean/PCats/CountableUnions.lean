@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Unions
-import PCats.Ranges
-import PCats.NCoproducts
+module
+
+public import PCats.Unions
+public import PCats.Ranges
+public import PCats.NCoproducts
 
 /-!
 # Ranges of countable copairings are stable unions
@@ -27,6 +29,8 @@ separating `IsUnion` from `IsStableUnion` in `PCats.Unions`.
   the section of `δ^L`. No inverse is selected, so `Classical.choice` does
   not enter.
 -/
+
+@[expose] public section
 
 universe v u
 

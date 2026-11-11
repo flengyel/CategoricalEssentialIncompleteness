@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RangeFunctor
-import CategoricalEssentialIncompleteness.RestrictionSplitting
-import CategoricalEssentialIncompleteness.V46SplitCoproducts
+module
+
+public import CategoricalEssentialIncompleteness.RangeFunctor
+public import CategoricalEssentialIncompleteness.RestrictionSplitting
+public import CategoricalEssentialIncompleteness.V46SplitCoproducts
 
 /-! # Extension to the restriction splitting by chosen target splittings -/
+
+@[expose] public section
 
 noncomputable section
 

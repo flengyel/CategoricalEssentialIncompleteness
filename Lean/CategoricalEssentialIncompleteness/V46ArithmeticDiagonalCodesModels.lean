@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
-import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
-import CategoricalEssentialIncompleteness.V46SyntacticPredicates
-import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
-import CategoricalEssentialIncompleteness.V46SyntacticComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
+public import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
+public import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
+public import CategoricalEssentialIncompleteness.V46SyntacticComparison
 
 /-! # The actual diagonal source arrow and its two restriction domains -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

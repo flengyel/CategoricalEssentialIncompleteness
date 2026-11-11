@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
-import Mathlib.CategoryTheory.Functor.ReflectsIso.Basic
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
+public import Mathlib.CategoryTheory.Functor.ReflectsIso.Basic
 
 /-! # Actual recursive-leaf, coefficient and unit slice comparisons
 
@@ -7,6 +14,8 @@ The graph carrier of a supplied family projection is isomorphic to that
 family. Bijection reflection uses the already constructed uniform inverse
 of an injective graph, not a section of an arbitrary surjection.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -15,7 +24,7 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 namespace CategoricalEssentialIncompleteness.V46.Miller.Syntax.Raw
 variable {P : Uniform.Family} (R : Total.TotalCategory P) (X Y : Over R)
 
-private theorem term_supported (n : ℕ)
+theorem term_supported (n : ℕ)
     (hn : n ∈ (object R X Y .term).left.obj.support) :
     (Nat.unpair n).2 ∈ X.left.obj.support :=
   Total.val_source X.hom.hom (Nat.unpair n).2 (Nat.unpair n).1 hn

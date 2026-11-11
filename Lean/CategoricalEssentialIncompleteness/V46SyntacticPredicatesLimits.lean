@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRelations
-import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
-import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
-import Mathlib.CategoryTheory.RegularCategory.Basic
-import Mathlib.CategoryTheory.Adjunction.Limits
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRelations
+public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+public import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
+public import Mathlib.CategoryTheory.RegularCategory.Basic
+public import Mathlib.CategoryTheory.Adjunction.Limits
 
 /-! # Finite limits of provably total predicate graphs -/
+
+@[expose] public section
 
 noncomputable section
 

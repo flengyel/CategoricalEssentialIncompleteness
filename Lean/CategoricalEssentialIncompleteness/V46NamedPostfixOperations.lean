@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
-import CategoricalEssentialIncompleteness.V46NamedStandardLists
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
+public import CategoricalEssentialIncompleteness.V46NamedStandardLists
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
 
 /-! # Standard polynomial operations on ordered named payloads -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
-import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
-import CategoricalEssentialIncompleteness.V46LogicalSchemes
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
-import CategoricalEssentialIncompleteness.V46ModelLogicalSoundness
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
+public import CategoricalEssentialIncompleteness.V46LogicalSchemes
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
+public import CategoricalEssentialIncompleteness.V46ModelLogicalSoundness
 
 /-! # Standard semantics of the actual plain categorical constructors -/
+
+@[expose] public section
 
 universe w
 

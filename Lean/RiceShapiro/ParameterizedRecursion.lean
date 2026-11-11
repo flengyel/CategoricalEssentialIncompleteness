@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Recursion
-import RiceShapiro.Approximation
+module
+
+public import PCats.Recursion
+public import RiceShapiro.Approximation
 
 /-!
 # Uniform indices and parameterized recursion
@@ -26,6 +28,8 @@ category satisfies it.
 together with the Turing property: for every `Φ : (Z ⊠ I) ⊠ X ⟶ Y` there is a
 total `h : Z ⟶ I` with `ε(h ⊠ 1_X) = Φ(⟨1_Z, h⟩ ⊠ 1_X)`.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalTyped
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalTyped
 
 /-! Actual numerical free-variable root functions on the manuscript's
 named charts. The traversal keeps repeated occurrences in left-to-right order. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedFreeVariablesRootsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

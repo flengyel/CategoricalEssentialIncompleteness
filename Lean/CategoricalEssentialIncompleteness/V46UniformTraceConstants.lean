@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceComposition
-import CategoricalEssentialIncompleteness.V46UniformTraceStageSelection
-import FailureOfComposition.ConcreteWitnessGraphs
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceComposition
+public import CategoricalEssentialIncompleteness.V46UniformTraceStageSelection
+public import FailureOfComposition.ConcreteWitnessGraphs
 
 /-! # A genuine internal compiler for constant-output program indices
 
@@ -14,6 +16,8 @@ recursion. Correctness for every successful computation and existence at
 sufficient fuel are separate internal inductions. No assertion of uniform
 persistence at arbitrary unknown program indices is used.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

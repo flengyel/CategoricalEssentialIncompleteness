@@ -3,13 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRealization
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
-import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRealization
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 
 /-! # Standard proof witnesses for the actual arithmetic diagonal predicates
 
@@ -17,6 +19,8 @@ The intermediate premise concerns individual PA axioms in the literal
 named calculus. The printed Γ-extension premise is discharged separately
 by the concrete arithmetic-axiom comparison before the final application.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

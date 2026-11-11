@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget
-import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
-import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget
+public import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
+public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
 
 /-! # The printed internal arithmetic comparison for the actual Gamma
 
@@ -16,6 +18,8 @@ proofs and external consistency. The target comparison supplies a total
 source morphism. Its standard numerical values give actual named numeral
 instances undecidable in the original native finite calculus.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

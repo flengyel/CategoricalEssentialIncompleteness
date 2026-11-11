@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportInputs
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportInputs
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
 
 /-! # Ordered tuple and symbol-occurrence transport -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

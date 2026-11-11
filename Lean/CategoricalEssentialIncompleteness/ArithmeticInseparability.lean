@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticRepresentationSection
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticRepresentationSection
 
 /-!
 # Arithmetic recursive inseparability from the internal diagonal theorem
@@ -13,6 +15,8 @@ points. A recursive separator of theorem and refutation indices would define
 such a global point. Hence strong numeralwise definability of all recursive
 sets implies recursive inseparability of those two sets of indices.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

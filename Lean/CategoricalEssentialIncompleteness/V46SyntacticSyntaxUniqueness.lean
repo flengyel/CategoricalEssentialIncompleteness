@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRootEquations
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRootEquations
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
 
 /-! # Numerical node-count comparison from actual constructor equations -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

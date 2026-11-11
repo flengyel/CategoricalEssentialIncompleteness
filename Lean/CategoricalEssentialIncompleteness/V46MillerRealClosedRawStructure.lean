@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
-import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
-import Mathlib.Tactic.FinCases
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
+public import Mathlib.Tactic.FinCases
 
 /-! # The actual sixteen field matrices in an arbitrary named structure
 
@@ -8,6 +15,8 @@ This interpretation has only the total functions and relations of the
 fixed bounded language. No algebraic or order structure is an input.
 Every law below is extracted from one of the original literal matrices.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedRaw
 open OrderedFieldSyntax RealClosedAxioms

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERCoproducts
-import CategoricalEssentialIncompleteness.PERPullbacks
+module
+
+public import CategoricalEssentialIncompleteness.PERCoproducts
+public import CategoricalEssentialIncompleteness.PERPullbacks
 
 /-!
 # Decomposition along PER coproduct injections
@@ -14,6 +16,8 @@ is an isomorphism. Its inverse evaluates a representing function and uses the
 first coordinate of its output to choose the summand. The remaining coordinates
 supply a representative in the corresponding pullback.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

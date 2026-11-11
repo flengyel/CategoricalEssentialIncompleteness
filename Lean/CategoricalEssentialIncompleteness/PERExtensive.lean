@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERCoproductDecomposition
-import CategoricalEssentialIncompleteness.PERCoproductSquares
-import CategoricalEssentialIncompleteness.PERRegular
-import Mathlib.CategoryTheory.Extensive
+module
+
+public import CategoricalEssentialIncompleteness.PERCoproductDecomposition
+public import CategoricalEssentialIncompleteness.PERCoproductSquares
+public import CategoricalEssentialIncompleteness.PERRegular
+public import Mathlib.CategoryTheory.Extensive
 
 /-!
 # Extensivity of the numerical PER category
@@ -18,6 +20,8 @@ property and hence finite extensivity. In particular, the coproduct injections
 are disjoint. Together with regularity, this supplies the target-category
 structure required in the numerical interpretation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityCore
-import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityCore
+public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-! # Essential incompleteness from the proved categorical separator obstruction -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

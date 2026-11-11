@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
-import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
+public import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
 
 /-! # Arithmetic named syntax presented by source NNF formulas
 
@@ -12,6 +14,8 @@ Free names use a finite type. A quantifier closes precisely its original
 name by a lifted source rewriting, so repeated binder names retain their
 shadowing behavior. The presentation does not identify different names.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation

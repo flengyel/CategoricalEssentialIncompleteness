@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalDiagonal
-import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
+module
+
+public import CategoricalEssentialIncompleteness.InternalDiagonal
+public import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
 
 /-!
 # The representation section and the internal separator
@@ -14,6 +16,8 @@ arbitrary finitely complete base. A section supplies representatives at every
 parameter. In particular it supplies the representative at the separator
 object, yielding the factorization through the equalizer of the bounds.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

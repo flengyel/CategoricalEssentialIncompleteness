@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
-import CategoricalEssentialIncompleteness.V46SyntacticPredicates
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
 
 /-! # The literal numerical variable carrier and the identity omega splitting
 
@@ -12,6 +14,8 @@ The predicate realization of all numerical variables has the actual identity
 restriction idempotent. Its comparison to the source identity splitting is
 proved from the universal T-model graph equations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

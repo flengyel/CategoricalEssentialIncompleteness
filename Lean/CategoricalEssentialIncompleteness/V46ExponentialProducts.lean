@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ExponentialPairing
-import CategoricalEssentialIncompleteness.V46SyntacticLists
+module
+
+public import CategoricalEssentialIncompleteness.V46ExponentialPairing
+public import CategoricalEssentialIncompleteness.V46SyntacticLists
 
 /-! # Actual predicate-product comparison for exponential pairing -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

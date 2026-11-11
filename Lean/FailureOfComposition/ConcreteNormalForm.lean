@@ -3,15 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ConcreteAdequacy
+module
+
+public import FailureOfComposition.ConcreteAdequacy
 
 /-!
-An explicit internal Kleene normal form for the accepted Mathlib numbering.
+An internal Kleene normal form for the Mathlib numbering.
 The computation witness pairs a history-evaluator stage with its output.
 PA proves equivalence to the existential-stage graph, and over natural numbers
 the predicate and output graph equal the existing primitive-recursive T₁ and U.
-No translation to a different historical numerical coding is asserted.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -24,8 +27,8 @@ open CategoricalRiceShapiro.Evaluator CategoricalRiceShapiro.ArithmeticCode
 namespace FailureOfComposition.ConcreteNormalForm
 open ProofSearch ConcreteEvaluator
 
-private def witnessPairCode : Code 2 := codePair (Code.proj 0) (Code.proj 1)
-private def outputCode : Code 1 := codeUnpair₂ (Code.proj 0)
+def witnessPairCode : Code 2 := codePair (Code.proj 0) (Code.proj 1)
+def outputCode : Code 1 := codeUnpair₂ (Code.proj 0)
 
 /-- The Sigma-one arithmetic formula for an encoded successful computation. -/
 def computationPredicate : 𝚺₁.Semisentence 3 := .mkSigma
@@ -57,18 +60,31 @@ private theorem witnessPairCode_eval [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
         (evalnCertificateFormula : ArithmeticSemisentence 4) := by
   simp [computationPredicate, witnessPairCode_eval]
 
-@[simp] theorem outputGraph_eval [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻] (w y : M) :
-    outputGraph.val.Evalb ![w,y] ↔ y = pi₂ w := by
+private theorem outputCode_eval [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻] (w y : M) :
+    Semiformula.Evalb ![y,w] (code outputCode) ↔ y = pi₂ w := by
   have h : Semiformula.Evalb ![pi₂ w,w] (code outputCode) :=
     eval_codeUnpair₂ (Code.proj 0) w ![w] ((eval_proj_iff _ _ _).mpr rfl)
-  have he : outputGraph.val.Evalb ![w,y] ↔ Semiformula.Evalb ![y,w] (code outputCode) := by
-    simp [outputGraph]
-  rw [he]
   constructor
   · intro hy
     exact eval_unique hy h
   · rintro rfl
     exact h
+
+/-- Keeping the formula abstract avoids expanding the decoder's arithmetic
+code during kernel conversion. -/
+private theorem swappedFormula_eval (φ : ArithmeticSemisentence 2)
+    (hφ : Hierarchy 𝚺 1 φ) (w y : M) :
+    (HierarchySymbol.Semiformula.mkSigma “w y. !φ y w” (by simp [hφ]) : Graph).val.Evalb
+      ![w,y] ↔ φ.Evalb ![y,w] := by
+  simp
+
+private theorem outputGraph_eval_code [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻] (w y : M) :
+    outputGraph.val.Evalb ![w,y] ↔ Semiformula.Evalb ![y,w] (code outputCode) :=
+  swappedFormula_eval (code outputCode) (code_sigma_one outputCode) w y
+
+@[simp] theorem outputGraph_eval [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻] (w y : M) :
+    outputGraph.val.Evalb ![w,y] ↔ y = pi₂ w :=
+  (outputGraph_eval_code w y).trans (outputCode_eval w y)
 
 /-- Every internal computation witness carries exactly its decoded output. -/
 theorem normalFormGraph_eval_iff [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] [M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻]
@@ -98,8 +114,8 @@ theorem normalFormGraph_realizes (q : ℕ) :
   intro x y
   exact (normalFormGraph_eval_iff q x y).symm
 
-/-- The arithmetic computation formula represents exactly the concrete
-primitive-recursive Kleene predicate already defined in `KleeneNormalForm`. -/
+/-- The arithmetic computation formula represents the primitive-recursive
+Kleene predicate defined in `KleeneNormalForm`. -/
 theorem computationPredicate_nat (e x w : ℕ) :
     computationPredicate.val.Evalb ![e,x,w] ↔ Kleene.T₁ e x w := by
   rw [computationPredicate_eval]
@@ -116,7 +132,7 @@ theorem computationPredicate_nat (e x w : ℕ) :
   · intro h
     exact ⟨w.unpair.1,w.unpair.2,(Nat.pair_unpair w).symm,h⟩
 
-/-- The arithmetic output graph represents exactly the concrete decoder U. -/
+/-- The arithmetic output graph represents the decoder U. -/
 theorem outputGraph_nat (w y : ℕ) : outputGraph.val.Evalb ![w,y] ↔ Kleene.U w = y := by
   rw [outputGraph_eval]
   have h : (pair w.unpair.1 w.unpair.2 : ℕ) = w := by

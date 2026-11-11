@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticLists
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import CategoricalEssentialIncompleteness.V46CategoricalSyntax
-import CategoricalEssentialIncompleteness.CharacteristicArrows
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticLists
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
+public import CategoricalEssentialIncompleteness.CharacteristicArrows
 
 /-! # Internal decidable equality for arbitrary Sigma-one variable predicates -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalApplications
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D3
+module
+
+public import FailureOfComposition.NativeInternalApplications
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D3
 
 /-!
 # Equality extraction for evaluator families
@@ -14,6 +16,8 @@ coordinate may be any internal element. Only the two external indices `h,k`
 are used with the PA functionality theorem. Family equality quantifies in
 the order `u,x,z`; the extraction seed quantifies in the order `u,y,y'`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

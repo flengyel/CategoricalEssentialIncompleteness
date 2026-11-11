@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeContextSpecialization
+module
+
+public import FailureOfComposition.NativeContextSpecialization
 
 /-!
 # Numerical free-variable shifts
@@ -17,6 +19,8 @@ the sequent operation inserts the guarded shift of each coded member.
 A sequent is a finite-set code, not a list.
 -/
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Encodable FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
@@ -28,19 +32,19 @@ open FFL.FirstOrder.Arithmetic.Bootstrapping
 open FailureOfComposition.NativeContextMP
 open FailureOfComposition.NativeSubstitution
 
-private def vector₂Code (a b : ℕ) : ℕ :=
+def vector₂Code (a b : ℕ) : ℕ :=
   Nat.pair a (Nat.pair b 0 + 1) + 1
 
-private def functionCode (k f v : ℕ) : ℕ :=
+def functionCode (k f v : ℕ) : ℕ :=
   Nat.pair 2 (Nat.pair k (Nat.pair f v)) + 1
 
-private def relationCode (tag k r v : ℕ) : ℕ :=
+def relationCode (tag k r v : ℕ) : ℕ :=
   Nat.pair tag (Nat.pair k (Nat.pair r v)) + 1
 
-private def firstTerm (e : ℕ) : ℕ :=
+def firstTerm (e : ℕ) : ℕ :=
   (e.unpair.2.unpair.2.unpair.2 - 1).unpair.1
 
-private def secondTerm (e : ℕ) : ℕ :=
+def secondTerm (e : ℕ) : ℕ :=
   ((e.unpair.2.unpair.2.unpair.2 - 1).unpair.2 - 1).unpair.1
 
 private theorem firstTerm_lt (e : ℕ) : firstTerm e < e + 1 := by

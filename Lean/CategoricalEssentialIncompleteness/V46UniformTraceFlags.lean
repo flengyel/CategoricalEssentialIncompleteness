@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceCoding
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceCoding
 
 /-! # A literal arithmetic program for bounded earlier-stage failure
 
 The program folds the actual total stage interpreter. Its all-model meaning
 is proved by PA-internal induction independently of any native certificate.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

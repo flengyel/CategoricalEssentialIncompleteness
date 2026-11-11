@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalRealization
-import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalRealization
+public import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
 
 /-! # Actual monic spans and partial inverses in the total realization
 
@@ -12,6 +14,8 @@ The already proved monic-span comparison is instantiated with the actual
 semidecidable carrier presentation. Its splitting and weak-choice
 hypotheses were constructed here; none is a new final assumption.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

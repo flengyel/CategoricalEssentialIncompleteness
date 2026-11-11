@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERProducts
-import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+module
+
+public import CategoricalEssentialIncompleteness.PERProducts
+public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
 
 /-!
 # Finite limits of numerical PERs
@@ -15,6 +17,8 @@ category contains arbitrary PERs, so this support need not be recursively
 enumerable. A function representing an equalizing arrow takes its supported
 inputs into this support and represents the unique factorization.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerUniformFinite
-import Mathlib.Data.List.GetD
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerUniformFinite
+public import Mathlib.Data.List.GetD
 
 /-! # Selected finite positive operation records
 
@@ -13,6 +15,8 @@ records carry its positive graph witnesses existentially; they are not
 new syntax labels. The input, hence its external parameter, is unchanged
 through every state. This module does not assert algebra initiality.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

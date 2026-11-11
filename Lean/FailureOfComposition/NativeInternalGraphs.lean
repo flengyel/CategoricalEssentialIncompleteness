@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalChecker
+module
+
+public import FailureOfComposition.NativeInternalChecker
 
 /-!
 # Output graphs for the internal native checker
@@ -13,6 +15,8 @@ The public graphs have output-first coordinates `(bit,derivationCode)`,
 Their values read the structurally generated table.  Totality depends only
 on the computational axiom-graph hypothesis.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

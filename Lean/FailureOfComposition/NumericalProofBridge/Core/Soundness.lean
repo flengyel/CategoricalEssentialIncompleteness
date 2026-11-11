@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core.Presentation
-import FailureOfComposition.NumericalSpecialization
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core.Presentation
+public import FailureOfComposition.NumericalSpecialization
 
 /-!
 # Soundness and exact correspondence for proof-presentation bridges
@@ -12,6 +14,8 @@ import FailureOfComposition.NumericalSpecialization
 This layer proves arithmetic soundness of the extended presentation and
 identifies PA provability with proofs at the numerical graph tags.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

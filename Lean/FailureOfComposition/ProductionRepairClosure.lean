@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ProductionStageClosure
-import FailureOfComposition.PrfEqTransportRepair.Soundness
+module
+
+public import FailureOfComposition.ProductionStageClosure
+public import FailureOfComposition.PrfEqTransportRepair.Soundness
 
 /-!
 # Stage bounds required by repair backtranslation
@@ -14,6 +16,8 @@ unchanged production presentation would supply production equality transport.
 It would therefore supply the joint stage bound characterized in
 `ProductionStageClosure`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

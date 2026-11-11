@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
-import CategoricalEssentialIncompleteness.ForkSyntaxObjects
-import CategoricalEssentialIncompleteness.NumericalInseparability
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
+public import CategoricalEssentialIncompleteness.ForkSyntaxObjects
+public import CategoricalEssentialIncompleteness.NumericalInseparability
 
 /-! # From numerical domain inseparability to recursive set inseparability -/
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory

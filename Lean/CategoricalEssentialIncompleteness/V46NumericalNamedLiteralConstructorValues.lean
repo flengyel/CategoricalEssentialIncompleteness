@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues
-import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
 
 /-! # Numerical constructors append the literal named postfix record -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

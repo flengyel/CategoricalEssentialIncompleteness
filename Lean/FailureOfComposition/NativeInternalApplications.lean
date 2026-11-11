@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalEquality
+module
+
+public import FailureOfComposition.NativeInternalEquality
 
 /-!
 # Canonical and Craig applications of the structural checker
@@ -17,6 +19,8 @@ such a test from an arbitrary external theory description.
 The final adequacy result concerns standard natural numbers.  The internal
 transport theorem uses literal equality formula codes and Foundation proofs.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

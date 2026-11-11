@@ -3,16 +3,20 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalEquivalence
-import CategoricalEssentialIncompleteness.V46MillerTotalRegular
-import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
-import CategoricalEssentialIncompleteness.V46RegularEquivalence
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalEquivalence
+public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
+public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
+public import CategoricalEssentialIncompleteness.V46RegularEquivalence
 
 /-! # Category-theoretic constituents of the printed total realization
 
 These conclusions concern the actual Tot(Split(E_z)). Parameter-stable
 syntax/list and derivation initiality are separate remaining obligations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

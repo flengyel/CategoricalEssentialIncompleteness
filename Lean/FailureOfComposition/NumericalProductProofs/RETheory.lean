@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Structural.Preservation
+module
+
+public import FailureOfComposition.NumericalProductProofs.Structural.Preservation
 
 /-!
 # Product proof maps for recursively enumerable theories
@@ -18,6 +20,8 @@ correspondence
 The five proof transformations and their PA-internal preservation sentences
 are then specialized to this same presentation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

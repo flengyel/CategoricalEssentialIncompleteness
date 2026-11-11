@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxioms
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersParameters
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFamily
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxioms
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersParameters
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFamily
 
 /-! # Cartesian numeral comparison of the actual Hilbert rule signature
 
 The two ordered MP children retain their own formulas. The comparison
 shares only the external numeral and uses the actual axiom pullback.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -72,13 +76,13 @@ theorem constantParameter_pullback_of_eq (f : X ⟶ Y)
   simpa only [hX,hY] using constantParameter_pullback ε f
 
 omit [FinitaryExtensive D] in
-private theorem constantUnary {V F : D} :
+theorem constantUnary {V F : D} :
     (prod.snd : V ⨯ F ⟶ F) ≫ constantParameter ε F =
       constantParameter ε (V ⨯ F) ≫ prod.lift prod.fst (prod.snd ≫ prod.snd) := by
   apply prod.hom_ext <;> simp [constantParameter]
 
 omit [FinitaryExtensive D] in
-private theorem constantBinary {F : D} (imp : F ⨯ F ⟶ F) :
+theorem constantBinary {F : D} (imp : F ⨯ F ⟶ F) :
     prod.lift prod.fst imp ≫ prod.map (constantParameter ε F) (constantParameter ε F) =
       constantParameter ε (F ⨯ F) ≫
         prod.lift (prod.lift prod.fst (prod.snd ≫ prod.fst))

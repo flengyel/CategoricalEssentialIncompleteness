@@ -15,6 +15,8 @@ the other two read that computation, with an optional second graph condition.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

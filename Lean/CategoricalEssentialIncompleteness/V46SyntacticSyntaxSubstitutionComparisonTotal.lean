@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOccurrenceComparisonTotal
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportMappedLists
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOccurrenceComparisonTotal
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportMappedLists
 
 /-! # Concrete substitution transport in the total restriction splitting
 
 The comparison uses the constructor-preserving algebra isomorphism already
 constructed from initiality, and the actual mapped stable-list record.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

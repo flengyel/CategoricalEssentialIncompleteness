@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.RangeAssignment
-import FailureOfComposition.TypedNearProduct
-import PCats.Ranges
+module
+
+public import FailureOfComposition.RangeAssignment
+public import FailureOfComposition.TypedNearProduct
+public import PCats.Ranges
 
 /-!
 # Categorical ranges on the typed program category
@@ -23,6 +25,8 @@ functionality of the production evaluator in arbitrary models of the ambient
 theory.  The construction is compatible with the effective near product and
 thus equips the category with its maintained `rP`-category structure.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

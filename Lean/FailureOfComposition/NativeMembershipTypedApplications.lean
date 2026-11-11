@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipApplications
-import FailureOfComposition.ProofSearchMembership
+module
+
+public import FailureOfComposition.NativeMembershipApplications
+public import FailureOfComposition.ProofSearchMembership
 
 /-!
 # Typed native membership assembly
@@ -13,6 +15,8 @@ Coded-object membership and normalized representatives are fixed at theorem
 level. Their chosen compiler dependencies remain outside the numerical and
 general internal layers. No effective selection of these templates is claimed.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.DomProducts
+module
+
+public import PCats.DomProducts
 
 /-!
 # Signature guards for binary products in `Dom C`
@@ -19,6 +21,8 @@ axiom dependencies are checked separately by `check_axioms.lean`.
 `leanOptions`, and an unbound identifier would otherwise be auto-bound and the
 guard would hold vacuously.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalGraphs
-import FailureOfComposition.NativeInternalSequence
+module
+
+public import FailureOfComposition.NativeInternalGraphs
+public import FailureOfComposition.NativeInternalSequence
 
 /-!
 # Comparison with the accepted numerical checker
@@ -13,6 +15,8 @@ Internal histories encode sequences as finite sets of index-bit pairs.
 The comparison below uses this encoding explicitly and requires agreement
 with the numerical axiom test only on valid formula codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

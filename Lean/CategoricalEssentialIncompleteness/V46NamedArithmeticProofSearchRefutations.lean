@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
+module
 
-/-! # The actual theorem/refutation image predicates in the partial lift -/
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
+
+/-! # Theorem and refutation image predicates in the partial lift -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -35,8 +39,8 @@ theorem positive_theorem_image (Γ : Carrier) (φ : Formula) (n : M) :
     (SyntacticGeneratedAxioms.literalTheoremCarrier_model 𝗣𝗔
       variableSymbols functionSymbols relationSymbols bound M Γ _)
 
-/-- The sentence guard is a theorem of the constructed fixed-formula map,
-not an additional assumption on its values. -/
+/-- The fixed-formula morphism has sentence values, so its negative
+proof-search predicate agrees with the refutation predicate. -/
 theorem negative_literal_refutation (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) (n : M) :
     (negative Γ φ).val.Evalb ![n] ↔
@@ -59,8 +63,8 @@ theorem negative_refutation_image (Γ : Carrier) (φ : Formula)
     (SyntacticGeneratedAxioms.refutationCarrier_literal 𝗣𝗔
       variableSymbols functionSymbols relationSymbols bound M Γ _).symm
 
-/-- Both fibers are identified with the actual constructed Γ images. The
-only condition is their disjointness in the particular interpreting model. -/
+/-- In a model where the theorem and refutation predicates are disjoint,
+they are the two reversed summand inverse images of the partial lift. -/
 theorem image_fibers (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0)
     (hd : ∀ n : M, ¬(
@@ -90,7 +94,7 @@ theorem image_fibers (Γ : Carrier) (φ : Formula)
 
 end Models
 
-/-- The model-independent source lift for the actual generated theory,
+/-- The model-independent source lift for the generated theory,
 with both of the manuscript's reversed theorem/refutation fibers. -/
 theorem actual_partial_proof_search (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :

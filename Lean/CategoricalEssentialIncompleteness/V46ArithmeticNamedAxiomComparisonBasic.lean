@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
 
 /-! # Named PA axiom matrices and universal closure
 
@@ -12,6 +14,8 @@ The matrices use the actual named arithmetic constructors. Universal
 closures retain their variable names, and sentencehood is checked by
 the literal free-variable list.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedAxiomComparison

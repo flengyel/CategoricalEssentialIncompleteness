@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalCartesian
+module
+
+public import CategoricalEssentialIncompleteness.InternalCartesian
 
 /-!
 # Diagonalization at arbitrary parameters
@@ -12,6 +14,8 @@ The representative in this module is a morphism from the parameter object into
 an internal hom-object. It need not be a global arrow. The representation section
 and the separator object are constructed in `InternalRepresentation`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

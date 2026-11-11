@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedHilbertPropositional
-import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedHilbertPropositional
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
 
 /-! # Derived first-order rules in the literal named calculus
 
@@ -12,6 +14,8 @@ Every proof below is built from the existing seven native schemes,
 generalization and ordered modus ponens. No first-order entailment
 instance or substitution-compatibility theorem is supplied as a field.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL
 namespace CategoricalEssentialIncompleteness.V46.NamedHilbertQuantifiers

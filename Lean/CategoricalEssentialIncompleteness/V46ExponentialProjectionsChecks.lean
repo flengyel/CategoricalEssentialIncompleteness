@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46ExponentialProjections
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ExponentialProjections
 
 /-! The literal bounded projections, their inverse equations and certificates. -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 open CategoricalEssentialIncompleteness.V46.ExponentialPairing
 

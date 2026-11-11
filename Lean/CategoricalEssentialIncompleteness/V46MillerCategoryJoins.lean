@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCategoryConnected
-import CategoricalEssentialIncompleteness.DisjointJoins
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCategoryConnected
+public import CategoricalEssentialIncompleteness.DisjointJoins
 
 /-! # Finite compatible unions of the actual uniform partial graphs -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -91,7 +95,7 @@ private theorem mem_unionRaw {α β : Type} (f g : α → Part β)
       · simpa only [unionRaw,dite_eq_left hf] using hc x ((f x).get hf) y (Part.get_mem hf) h
       · simpa only [unionRaw,dite_eq_right hf] using h.2
 
-def join {X Y : Object z} (f g : X ⟶ Y) (hc : Compatible f g) : X ⟶ Y :=
+@[no_expose] def join {X Y : Object z} (f g : X ⟶ Y) (hc : Compatible f g) : X ⟶ Y :=
   ⟨unionRaw f.val g.val,(represented_iff_graph_enumerable z X.type Y.type _).mpr
     (((graph_enumerable f).or (graph_enumerable g)).of_eq
       (fun a => (mem_unionRaw f.val g.val ((compatible_iff f g).mp hc) a.1 a.2).symm))⟩
@@ -203,7 +207,7 @@ private theorem finiteGraph_functional {X Y : Object z} (L : List (X ⟶ Y))
   obtain ⟨g,hg,hb⟩ := hb
   exact (compatible_iff f g).mp (hc f hf g hg) x a b ha hb
 
-def finiteJoin {X Y : Object z} (L : List (X ⟶ Y)) (hc : PairwiseCompatible L) : X ⟶ Y :=
+@[no_expose] def finiteJoin {X Y : Object z} (L : List (X ⟶ Y)) (hc : PairwiseCompatible L) : X ⟶ Y :=
   ⟨graphFunction (fun x y => ∃ f ∈ L,y ∈ f.val x),
     (represented_iff_graph_enumerable z X.type Y.type _).mpr
       ((finiteGraph_enumerable L).of_eq (fun a =>

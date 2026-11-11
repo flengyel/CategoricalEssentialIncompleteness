@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalTuples
-import CategoricalEssentialIncompleteness.EnumerableExtensive
-import CategoricalEssentialIncompleteness.RestrictionSpans
-import CategoricalEssentialIncompleteness.V46SplitSplittings
-import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalTuples
+public import CategoricalEssentialIncompleteness.EnumerableExtensive
+public import CategoricalEssentialIncompleteness.RestrictionSpans
+public import CategoricalEssentialIncompleteness.V46SplitSplittings
+public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 
 /-! # Regularity, extensive sums and actual partial inverses for tuple maps -/
+
+@[expose] public section
 
 noncomputable section
 

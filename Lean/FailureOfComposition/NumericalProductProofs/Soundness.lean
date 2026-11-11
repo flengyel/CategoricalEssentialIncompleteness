@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Core
+module
+
+public import FailureOfComposition.NumericalProductProofs.Core
 
 /-!
 # Soundness of the numerical product proof rules
@@ -12,6 +14,8 @@ The five added logical-axiom schemes express exactly the definedness laws of
 the partial pairing program.  This file proves their meaning in every model of
 PA and lifts that result through the numerical proof calculus.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

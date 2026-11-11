@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticModelCoding
-import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelCoding
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues
 
 /-! A fixed finite source formula may receive a nonstandard closed term.
 The output below is an arithmetic constructor word in the selected model;
 no external-finiteness assertion about its replacement word is used. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

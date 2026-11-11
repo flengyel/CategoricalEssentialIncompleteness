@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.LocalLifting
-import PCats.DomSemilattice
+module
+
+public import CategoricalEssentialIncompleteness.LocalLifting
+public import PCats.DomSemilattice
 
 /-! # Comparison with the existing P-category formalization -/
+
+@[expose] public section
 
 universe v u
 

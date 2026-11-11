@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipFormulas
+module
+
+public import FailureOfComposition.NativeMembershipFormulas
 
 /-!
 # Literal instances of the assembly schemas
@@ -13,6 +15,8 @@ in the order `e,d`. These identities use the actual internal numeral and
 substitution operations, including nonstandard numerals. They identify syntax
 codes, not just semantically equivalent formulas.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -126,6 +130,14 @@ private theorem partial3_third (phi : Bootstrapping.Semiformula V ℒₒᵣ 3) (
   funext i
   fin_cases i <;> simp [toNumVec]
 
+private theorem partial3_third_value (phi : ArithmeticSemisentence 3) (e u d : V) :
+    subst1Value (Arithmetic.numeral d)
+      ((⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 3).subst
+        ![Bootstrapping.Semiterm.bvar (0 : Fin 1), typedNumeral u, typedNumeral e]).val =
+      instanceValue phi ![d, u, e] :=
+  (partial3_third (⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 3) e u d).trans
+    (toNumVec_instance phi ![d, u, e])
+
 private theorem forall2_first (phi : ArithmeticSemisentence 2) (e : V) :
     subst1Value (Arithmetic.numeral e) (⌜∀¹ phi⌝ : V) =
       ^∀ ((⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 2).subst
@@ -150,6 +162,14 @@ private theorem partial2_second (phi : Bootstrapping.Semiformula V ℒₒᵣ 2) 
   funext i
   fin_cases i <;> simp [toNumVec]
 
+private theorem partial2_second_value (phi : ArithmeticSemisentence 2) (e d : V) :
+    subst1Value (Arithmetic.numeral d)
+      ((⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 2).subst
+        ![Bootstrapping.Semiterm.bvar (0 : Fin 1), typedNumeral e]).val =
+      instanceValue phi ![d, e] :=
+  (partial2_second (⌜phi⌝ : Bootstrapping.Semiformula V ℒₒᵣ 2) e d).trans
+    (toNumVec_instance phi ![d, e])
+
 theorem pointwise_first (S : ArithmeticTheory) [S.Δ₁]
     (M : 𝚺₁.Semisentence 1) (h k : ℕ) (e : V) :
     subst1Value (Arithmetic.numeral e) (⌜pointwiseBodyE S M h k⌝ : V) =
@@ -163,7 +183,8 @@ theorem pointwise_second (S : ArithmeticTheory) [S.Δ₁]
 theorem pointwise_third (S : ArithmeticTheory) [S.Δ₁]
     (M : 𝚺₁.Semisentence 1) (h k : ℕ) (e u d : V) :
     subst1Value (Arithmetic.numeral d) (pointwiseAfterU S M h k e u).val =
-      instanceValue (pointwiseMatrix S M h k) ![d, u, e] := partial3_third _ e u d
+      instanceValue (pointwiseMatrix S M h k) ![d, u, e] :=
+  partial3_third_value (pointwiseMatrix S M h k) e u d
 
 theorem closure_first (S : ArithmeticTheory) [S.Δ₁]
     (M : 𝚺₁.Semisentence 1) (h k : ℕ) (e : V) :
@@ -173,7 +194,8 @@ theorem closure_first (S : ArithmeticTheory) [S.Δ₁]
 theorem closure_second (S : ArithmeticTheory) [S.Δ₁]
     (M : 𝚺₁.Semisentence 1) (h k : ℕ) (e d : V) :
     subst1Value (Arithmetic.numeral d) (closureAfterE S M h k e).val =
-      instanceValue (closureMatrix S M h k) ![d, e] := partial2_second _ e d
+      instanceValue (closureMatrix S M h k) ![d, e] :=
+  partial2_second_value (closureMatrix S M h k) e d
 
 private theorem pointwiseFor_instance (A : ArithmeticSemisentence 1) (T : ArithmeticSentence)
     (M : ArithmeticSemisentence 1) (B D : ArithmeticSemisentence 2) (e u d : V) :

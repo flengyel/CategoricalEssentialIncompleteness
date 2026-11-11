@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEmbedding
-import CategoricalEssentialIncompleteness.NumericalDomains
-import Mathlib.CategoryTheory.Subobject.Basic
-import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEmbedding
+public import CategoricalEssentialIncompleteness.NumericalDomains
+public import Mathlib.CategoryTheory.Subobject.Basic
+public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
 
 /-!
 # Support inclusions as PER subobjects
@@ -16,6 +18,8 @@ Its subobject order reflects precisely inclusion of supports. Restriction
 domains therefore embed into PER subobjects, with image exactly the
 c.e. support inclusions.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ConcreteAdequacy
-import FailureOfComposition.FiniteFunctionCoding
-import FailureOfComposition.SigmaOneRealization
-import FailureOfComposition.TypedNearProduct
+module
+
+public import FailureOfComposition.ConcreteAdequacy
+public import FailureOfComposition.FiniteFunctionCoding
+public import FailureOfComposition.SigmaOneRealization
+public import FailureOfComposition.TypedNearProduct
 
 /-!
 # The finite-function evaluator
@@ -22,6 +24,8 @@ quantifies the code, input, and output internally over an arbitrary model of
 PA.  The selected index is external and fixed; no effective dependence on a
 formula or on an opaque derivation is asserted.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

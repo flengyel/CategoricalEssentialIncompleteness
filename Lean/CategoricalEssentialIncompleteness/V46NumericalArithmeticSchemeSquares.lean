@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticEqualityParameters
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionParameters
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticEqualityParameters
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionParameters
 
 /-! # Actual arithmetic diagrams for the Hilbert axiom schemes -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -19,8 +23,8 @@ open Coordinates SubstitutionParameters SubstitutionDomains RuleParameters Equal
 local notation "K" => numericalInterpretation
 local notation "S" => numericalSyntax
 local notation "S₀" => originalSyntax
-private abbrev formulaObject := numericalSyntax.algebra.a.2
-private abbrev originalFormulaObject := originalSyntax.algebra.a.2
+abbrev formulaObject := numericalSyntax.algebra.a.2
+abbrev originalFormulaObject := originalSyntax.algebra.a.2
 local notation "Y" => formulaObject
 local notation "Y₀" => originalFormulaObject
 

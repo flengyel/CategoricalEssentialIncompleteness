@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWords
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWords
 
 /-! # Actual Gamma theorem and refutation ranges in literal sentence coordinates
 
@@ -6,6 +13,8 @@ The comparison uses the constructed native finite-proof equivalence and
 the original sentence-word mono. It is valid for every uniformly enumerable
 external Gamma, independently of truth or consistency of Gamma.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

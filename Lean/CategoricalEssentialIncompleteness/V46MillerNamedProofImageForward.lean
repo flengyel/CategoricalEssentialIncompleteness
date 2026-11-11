@@ -1,11 +1,18 @@
-import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 /-
 Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
-import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
+public import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
 
 /-! # Finite native Γ proofs in the actual uniform generated images
 
@@ -13,6 +20,8 @@ Only the existing native relation on finite axiom supports is inducted
 on. All target witnesses are constructed with the actual seven schemes,
 ordered inference-input pullbacks and original word derivation algebra.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

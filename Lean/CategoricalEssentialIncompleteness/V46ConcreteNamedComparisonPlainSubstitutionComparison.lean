@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainTransportData
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionValues
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainTransportData
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionValues
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
 
 /-! # The actual plain substitution arrows through constructor comparisons -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

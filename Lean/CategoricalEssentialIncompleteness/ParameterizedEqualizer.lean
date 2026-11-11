@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.Diagonal
-import Mathlib.CategoryTheory.Limits.Shapes.Equalizers
-import Mathlib.CategoryTheory.Limits.Shapes.Terminal
-import Mathlib.CategoryTheory.Limits.Shapes.FiniteLimits
+module
+
+public import CategoricalEssentialIncompleteness.Diagonal
+public import Mathlib.CategoryTheory.Limits.Shapes.Equalizers
+public import Mathlib.CategoryTheory.Limits.Shapes.Terminal
+public import Mathlib.CategoryTheory.Limits.Shapes.FiniteLimits
 
 /-!
 # From a parameterized diagonal calculation to an equalizer factorization
@@ -17,6 +19,8 @@ together with interpretation of the two lattice bounds, gives a morphism to
 their equalizer. A calculation restricted to global elements does not supply
 these parameterized data.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

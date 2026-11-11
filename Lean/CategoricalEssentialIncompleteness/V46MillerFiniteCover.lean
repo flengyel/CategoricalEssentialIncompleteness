@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerBinaryCore
-import Mathlib.Computability.Primrec.List
-import Mathlib.Computability.Partrec
-import Mathlib.Data.List.OfFn
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerBinaryCore
+public import Mathlib.Computability.Primrec.List
+public import Mathlib.Computability.Partrec
+public import Mathlib.Data.List.OfFn
+public import Mathlib.Tactic.FinCases
 
 /-! # Deciding finite coverage by binary cylinders
 
@@ -16,6 +18,8 @@ explicit finite test on all binary words of that length. The finite
 enumeration, bound and bounded tests are primitive recursive. No
 decision procedure on Cantor space is supplied as a hypothesis.
 -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteCover
 
 def wordsStep (L : List Word) : List Word :=

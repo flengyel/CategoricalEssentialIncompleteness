@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
 
 /-! # The actual numeral-fiber comparison for uniform provability -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies
-import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies
+public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
 
 /-! Explicit polynomial equalities normalize base and parameter-slice
 inputs together. The transport proof reduces to the actual raw square;
 no cast of an entire initial algebra is required. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

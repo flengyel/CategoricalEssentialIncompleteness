@@ -15,6 +15,8 @@ these uniform graph equations already in PA, before passing to the theory T.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

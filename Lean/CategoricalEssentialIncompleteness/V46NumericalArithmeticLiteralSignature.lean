@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
 
 /-! # The chosen arithmetic signature and its actual numerical code labels -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates

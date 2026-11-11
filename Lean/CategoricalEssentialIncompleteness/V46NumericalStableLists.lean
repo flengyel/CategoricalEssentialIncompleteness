@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.StandardTrueTheory
-import CategoricalEssentialIncompleteness.V46KaroubiRestriction
-import CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps
-import CategoricalEssentialIncompleteness.V46SyntacticListsTotal
+module
+
+public import CategoricalEssentialIncompleteness.StandardTrueTheory
+public import CategoricalEssentialIncompleteness.V46KaroubiRestriction
+public import CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps
+public import CategoricalEssentialIncompleteness.V46SyntacticListsTotal
 
 /-! # Stable list algebras in the numerical tuple category -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

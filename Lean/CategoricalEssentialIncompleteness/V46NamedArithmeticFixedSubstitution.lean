@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralGraph
-import CategoricalEssentialIncompleteness.V46NamedArithmeticSubstitutionOccurrences
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralGraph
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticSubstitutionOccurrences
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
 
 /-! Numeral substitution for a generic finite named arithmetic formula.
 The complete PA range proof precedes every arithmetic-formula or chosen
 index specialization. No source numeral is evaluated during that proof. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

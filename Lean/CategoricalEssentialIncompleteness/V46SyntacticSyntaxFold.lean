@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecode
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecode
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
 
 /-! # The concrete two-sorted fold in an arbitrary parameter slice -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

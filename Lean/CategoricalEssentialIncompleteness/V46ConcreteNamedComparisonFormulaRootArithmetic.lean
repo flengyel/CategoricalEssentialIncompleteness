@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
 
 /-! # Scalar formula-result cases of the proved named traversal root -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

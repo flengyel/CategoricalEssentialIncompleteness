@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipConstructor
+module
+
+public import FailureOfComposition.NativeMembershipConstructor
 
 /-!
 # Joint primitive recursiveness of closure assembly
@@ -11,6 +13,8 @@ import FailureOfComposition.NativeMembershipConstructor
 The six varying arguments are packed as `((seed,Gamma),((a,t),(e,d)))`.
 The explicit template code is fixed; no canonical theory graph is evaluated.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

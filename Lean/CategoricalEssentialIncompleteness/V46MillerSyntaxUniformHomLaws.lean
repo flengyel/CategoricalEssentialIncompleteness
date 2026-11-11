@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
 
 /-! # Constructor laws for every morphism from the actual word algebra
 
@@ -8,6 +15,8 @@ Its guarded root law follows from that morphism's constructor equation,
 the actual polynomial chart naturality, and the literal constructor graph.
 The target coefficient objects and parameter families remain arbitrary.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

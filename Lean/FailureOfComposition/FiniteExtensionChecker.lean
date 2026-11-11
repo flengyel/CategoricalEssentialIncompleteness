@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.FiniteFunctionCoding
-import FailureOfComposition.FirstSuccessGraph
-import FailureOfComposition.SigmaOneRealization
-import FailureOfComposition.TypedNearProduct
-import PCats.DomSemilattice
+module
+
+public import FailureOfComposition.FiniteFunctionCoding
+public import FailureOfComposition.FirstSuccessGraph
+public import FailureOfComposition.SigmaOneRealization
+public import FailureOfComposition.TypedNearProduct
+public import PCats.DomSemilattice
 
 /-!
 # The finite-extension formula and checker
@@ -25,6 +27,8 @@ from the single closed `extensionFormula` instance to that family uses
 first-order completeness and the fact that every element below a standard
 bound is standard.  It assumes only `[PA ≼ T]`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

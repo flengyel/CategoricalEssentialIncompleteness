@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsRawSquares
-import CategoricalEssentialIncompleteness.V46CategoricalLists
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsRawSquares
+public import CategoricalEssentialIncompleteness.V46CategoricalLists
 
 /-! # Direct list initiality in every uniform parameter slice
 
@@ -12,6 +14,8 @@ The target algebra is arbitrary. Its nil value is obtained by its actual
 uniform morphism, and its cons operation acts only on its prescribed
 fiber. The proof of uniqueness uses every candidate algebra morphism.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalProducts
+module
+
+public import CategoricalEssentialIncompleteness.NumericalProducts
 
 /-!
 # Partial pairing in the numerical category
@@ -12,6 +14,8 @@ Partial pairing is defined exactly where both component arrows are defined.
 Its projections satisfy the restriction-product equations, and every arrow
 into a product is recovered by pairing its two projections.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

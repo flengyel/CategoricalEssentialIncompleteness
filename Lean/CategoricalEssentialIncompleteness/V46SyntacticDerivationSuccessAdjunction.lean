@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
-import Mathlib.CategoryTheory.Comma.Over.Pullback
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
+public import Mathlib.CategoryTheory.Comma.Over.Pullback
 
 /-! The success-fiber functor and its explicit option-extension right adjoint. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

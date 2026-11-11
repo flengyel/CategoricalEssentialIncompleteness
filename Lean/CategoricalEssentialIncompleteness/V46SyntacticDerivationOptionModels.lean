@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPowers
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPowers
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
 /-! Success reflection under every interpretation preserving sums and pullbacks.
 The interpretation need not preserve the terminal object, so the same
 lemmas apply to underlying model interpretations of parameter slices. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.Diagonal
-import Mathlib.CategoryTheory.RegularCategory.Basic
-import Mathlib.CategoryTheory.Subobject.Limits
-import Mathlib.CategoryTheory.Subobject.Lattice
+module
+
+public import CategoricalEssentialIncompleteness.Diagonal
+public import Mathlib.CategoryTheory.RegularCategory.Basic
+public import Mathlib.CategoryTheory.Subobject.Limits
+public import Mathlib.CategoryTheory.Subobject.Lattice
 
 /-!
 # Boolean quotients and represented bound fibers
@@ -16,6 +18,8 @@ precomposition. By Yoneda this is the internal Boolean-algebra structure.
 Presentations and quotients have regular epimorphisms as underlying
 arrows; their fibers are equalizer subobjects.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

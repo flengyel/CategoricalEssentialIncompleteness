@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTrace
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTrace
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! # A literal first-success trace code, uniform in the internal program index
 
@@ -14,6 +16,8 @@ file proves the all-model PA graph comparison and the standard output-reader
 certificate. The standard primitive-recursion certificate for the complete
 trace predicate is a separate obligation; totality alone is insufficient.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

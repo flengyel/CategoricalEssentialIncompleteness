@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle
 
 /-! # Explicit polynomial equalities in the concrete named comparison
 
@@ -6,6 +13,8 @@ Only literal mapCoefficients expression equalities are normalized here.
 The carrier comparisons are proved by dependent equality elimination;
 there is no assumption that an equivalence counit fixes scalar codes.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

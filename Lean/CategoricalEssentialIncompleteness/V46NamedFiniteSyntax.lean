@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.Data.List.OfFn
+module
+
+public import Mathlib.Data.List.OfFn
 
 /-! # Literal finite syntax with named binders
 
 These external trees retain all names and ordered children. The comparison
 with standard arithmetic postfix codes is a separate construction.
 -/
+
+@[expose] public section
 
 universe u v w
 namespace CategoricalEssentialIncompleteness.V46.NamedFiniteSyntax

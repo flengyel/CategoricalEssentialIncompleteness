@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
 
 /-! PA itself proves closed-replacement admissibility for the independent
 free-for algorithm, and existence of its actual typed option result. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

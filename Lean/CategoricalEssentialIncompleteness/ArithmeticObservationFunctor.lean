@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticCategoricalIncompleteness
-import CategoricalEssentialIncompleteness.RecursivePairs
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticCategoricalIncompleteness
+public import CategoricalEssentialIncompleteness.RecursivePairs
 
 /-! # Numeral observations as a functor on consistent c.e. PA extensions -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

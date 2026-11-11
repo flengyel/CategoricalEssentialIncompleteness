@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalCartesian
-import PCats.Restriction
+module
+
+public import CategoricalEssentialIncompleteness.InternalCartesian
+public import PCats.Restriction
 
 /-!
 # Restriction hom-objects and their finite-limit subobjects
@@ -15,6 +17,8 @@ The domain object is the fixed-point equalizer of restriction; the total-arrow
 object is its pullback along the identity. Their generalized points are proved
 to be exactly the restriction idempotents and total arrows, respectively.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

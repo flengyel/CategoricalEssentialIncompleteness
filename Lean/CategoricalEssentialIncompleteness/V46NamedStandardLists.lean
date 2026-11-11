@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
 
 /-! # Standard named-variable lists and their literal arithmetic codes
 
@@ -11,6 +13,8 @@ These equations compare the external lists with the actual PA-defined
 list functions at the standard model. The internal equations are proved
 separately in the imported numerical implementation.
 -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessDiagonal
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceMorphisms
-import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessDiagonal
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceMorphisms
+public import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
 
 /-! # Actual numerical sentence maps in the classical restriction splitting -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -74,7 +78,7 @@ abbrev S_rec : SplitObject ClassicalPrograms.Rec := numericalQ.obj NumericalSent
 private theorem omega_supported (n : ℕ) : n ∈ NumericalTuples.codedSupport NumericalSentenceMorphisms.omega :=
   ⟨n,Set.mem_univ _,rfl⟩
 
-private theorem omega_domain : E.domain.hom = 𝟙 ClassicalPrograms.U := by
+theorem omega_domain : E.domain.hom = 𝟙 ClassicalPrograms.U := by
   apply ClassicalPrograms.J.map_injective
   change ClassicalPrograms.J.map (E.domain.hom : ClassicalPrograms.U ⟶ ClassicalPrograms.U) =
     ClassicalPrograms.J.map (𝟙 ClassicalPrograms.U)

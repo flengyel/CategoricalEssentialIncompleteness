@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveBuilders
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveBuilders
 
 /-! # Comparison with production composition at fixed external indices
 
@@ -11,6 +13,8 @@ Sigma-one completeness is used only to interpret a closed native builder
 value at standard numerals. Equality of program graphs then follows from
 the actual all-model relational composition equations on both sides.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

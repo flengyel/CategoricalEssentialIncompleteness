@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46MillerBinaryCore
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.Linarith
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerBinaryCore
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.Linarith
 
 /-! # Finite dyadic certificates for separation of binary representations -/
+
+@[expose] public section
 noncomputable section
 open scoped BigOperators
 namespace CategoricalEssentialIncompleteness.V46.Miller

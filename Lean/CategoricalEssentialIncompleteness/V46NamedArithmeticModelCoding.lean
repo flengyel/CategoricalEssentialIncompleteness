@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticStandardCodes
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticStandardCodes
 
 /-! Finite named constructor charts in an arbitrary PA model. These are
 external finite tuples of model values, without replacing the internal
 postfix word carrier by an externally finite syntax type. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

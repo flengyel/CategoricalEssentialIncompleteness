@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SentenceImages
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46SentenceImages
+
+
+/-! # Statement checks in `V46SentenceImagesChecks` -/
+
+@[expose] public section
 noncomputable section
 
 open CategoryTheory CategoryTheory.Limits

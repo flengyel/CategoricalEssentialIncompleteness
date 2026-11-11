@@ -1302,10 +1302,10 @@ def parse_axiom_reports(text: str) -> dict[str, list[str]]:
     """Read every Lean axiom report, including declaration names with primes."""
     reports: dict[str, list[str]] = {}
     for name, contents in re.findall(
-            r"^'(.+)' depends on axioms:\s*\[([^\]]*)\]\s*$", text, re.MULTILINE):
+            r"'([^\n]+)' depends on axioms:\s*\[([^\]]*)\]\s*$", text, re.MULTILINE):
         reports[name] = sorted(x.strip() for x in contents.split(",") if x.strip())
     for name in re.findall(
-            r"^'(.+)' does not depend on any axioms\s*$", text, re.MULTILINE):
+            r"'([^\n]+)' does not depend on any axioms\s*$", text, re.MULTILINE):
         reports[name] = []
 
     # Read the closing quote from the report suffix, independently of the
@@ -1315,9 +1315,10 @@ def parse_axiom_reports(text: str) -> dict[str, list[str]]:
         for suffix in ("' depends on axioms:", "' does not depend on any axioms"):
             if suffix in line:
                 quoted_name = line.rsplit(suffix, 1)[0]
-                if not quoted_name.startswith("'"):
+                _, opening_quote, name = quoted_name.partition("'")
+                if not opening_quote:
                     raise RuntimeError("Unrecognized axiom report: " + line)
-                raw_names.append(quoted_name[1:])
+                raw_names.append(name)
                 break
     if len(raw_names) != len(reports) or set(raw_names) != set(reports):
         raise RuntimeError("Axiom report names are missing, truncated, or repeated")
@@ -1334,6 +1335,12 @@ def git_blob(data: bytes) -> str:
 
 def source_snapshot() -> dict[str, str]:
     target = read_target(ROOT)
+    lean_sources = []
+    for folder, directories, filenames in os.walk(LEAN):
+        directories[:] = [name for name in directories
+                          if name not in {".lake", ".codex-work", ".git"}]
+        lean_sources.extend(Path(folder) / name for name in filenames
+                            if name.endswith(".lean"))
     paths = [LEAN / "CategoricalEssentialIncompleteness.lean", LEAN / "lakefile.toml",
              LEAN / "lake-manifest.json", LEAN / "lean-toolchain",
              ROOT / "scripts/verify.py", ROOT / "scripts/setup-wsl.sh",
@@ -1343,7 +1350,7 @@ def source_snapshot() -> dict[str, str]:
              ROOT / "LOCAL_PATCHES.json",
              *manuscript_paths(ROOT, target),
              *sorted((ROOT / target["entry_point"]).parent.rglob("*.tex")),
-             *sorted((LEAN / "CategoricalEssentialIncompleteness").glob("*.lean"))]
+             *sorted(lean_sources)]
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in paths}
 
@@ -1389,6 +1396,8 @@ def main() -> int:
         (LOGS / report_name).write_text(json.dumps(report, indent=2) + "\n")
 
     def run(args: list[str], name: str) -> str:
+        if args[:3] == ["lake", "env", "lean"]:
+            args = [*args[:3], "--memory=4096", *args[3:]]
         print("Running:", " ".join(args), flush=True)
         started = time.monotonic()
         path = LOGS / name

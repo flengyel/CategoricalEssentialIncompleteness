@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionModels
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionModels
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
 
 /-! # The exact numerical distribution domain in literal word coordinates -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -21,7 +25,7 @@ local notation "F" => PredicateInterpretation.functor 𝗧𝗔 ℕ
 
 /-- Both directions of the point-image comparison use actual numerical
 isomorphisms, rather than an assumed equality of chosen syntax carriers. -/
-private theorem presented_image_iff {A B : NumericalTuples.Object}
+theorem presented_image_iff {A B : NumericalTuples.Object}
     (C D : PredicateCategory 𝗧𝗔) (f : A ⟶ B) (g : C ⟶ D)
     (i : A ≅ NumericalCoordinates.predicateObject C)
     (j : B ≅ NumericalCoordinates.predicateObject D)

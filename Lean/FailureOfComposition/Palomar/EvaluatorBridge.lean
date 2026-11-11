@@ -20,6 +20,8 @@ Foundation definitions used by the maintained concrete evaluator.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

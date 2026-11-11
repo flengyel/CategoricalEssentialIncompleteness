@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
 
 /-! # Actual sentence pullbacks under the named uniform syntax chart
 
@@ -6,6 +13,8 @@ Sentence objects are chosen pullbacks. Their formula coordinates are
 compared through the proved occurrence diagram, without identifying
 chosen pullback witnesses with literal formula words.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -37,7 +46,7 @@ private theorem inverse_comparison_leg {C : Type u₁} [Category.{v₁} C]
     _ = i.inv ≫ (i.hom ≫ f) := Category.assoc _ _ _
     _ = _ := congrArg (fun k => i.inv ≫ k) h
 
-private theorem inverse_comparison_square {C : Type u₁} [Category.{v₁} C]
+theorem inverse_comparison_square {C : Type u₁} [Category.{v₁} C]
     {A B X Y : C} (i : A ≅ B) (j : X ≅ Y) (f : A ⟶ X) (g : B ⟶ Y)
     (h : f ≫ j.hom = i.hom ≫ g) : i.inv ≫ f = g ≫ j.inv := by
   apply (cancel_epi i.hom).mp

@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalUnderlyingPullbacks
-import CategoricalEssentialIncompleteness.V46MillerTotalFiniteCoproducts
-import Mathlib.CategoryTheory.Extensive
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
-import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalUnderlyingPullbacks
+public import CategoricalEssentialIncompleteness.V46MillerTotalFiniteCoproducts
+public import Mathlib.CategoryTheory.Extensive
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+public import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
 
 /-! # Uniform semidecidable-carrier total splitting: Extensive -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalProductProofs.Structural.ProofGraph
 
 /-!
 # Arithmetic graphs of the product proof maps
@@ -12,6 +14,8 @@ Each external primitive-recursive transformation has a model-internal value
 and a `𝚺₁` graph.  The graph computes the external function over `ℕ`; over an
 arbitrary model of PA, the same value preserves the product proof graph.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

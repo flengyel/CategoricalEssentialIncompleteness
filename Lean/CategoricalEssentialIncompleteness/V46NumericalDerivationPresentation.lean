@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivation
-import CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart
-import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivation
+public import CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart
+public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessTransport
 
 /-! # Successful derivations as unary numerical code carriers
 
@@ -14,6 +16,8 @@ The code carrier is the successful-tree predicate. Its output and computation
 witnesses are existential. The constructor-preserving comparison is proved by
 the original successful pullback, and transports the universal property.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

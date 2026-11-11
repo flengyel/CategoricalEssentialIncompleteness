@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERImages
-import CategoricalEssentialIncompleteness.PERPullbacks
-import Mathlib.CategoryTheory.RegularCategory.Basic
+module
+
+public import CategoricalEssentialIncompleteness.PERImages
+public import CategoricalEssentialIncompleteness.PERPullbacks
+public import Mathlib.CategoryTheory.RegularCategory.Basic
 
 /-!
 # Regularity of the numerical PER category
@@ -14,6 +16,8 @@ A regular epimorphism has an invertible image inclusion. A function representing
 its inverse supplies preimages of target representatives. Applying this function
 to one coordinate constructs preimages for the projection from a pullback.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

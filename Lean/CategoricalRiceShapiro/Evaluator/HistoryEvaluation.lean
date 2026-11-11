@@ -82,6 +82,8 @@ and locates the supplied cell in them with `chain_match`.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

@@ -15,4 +15,6 @@ and evaluator declarations they extend. This focused re-export is used by the
 Solution-side correspondence proof; the eligible Challenge inlines the same
 readable definitions.
 -/
+
+@[expose] public section
 @[expose] public section

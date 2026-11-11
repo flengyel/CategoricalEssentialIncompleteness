@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalDomains
-import CategoricalEssentialIncompleteness.NumericalEmbedding
+module
+
+public import CategoricalEssentialIncompleteness.NumericalDomains
+public import CategoricalEssentialIncompleteness.NumericalEmbedding
 
 /-!
 # Inverse image of numerical restriction domains
@@ -13,6 +15,8 @@ Inverse image preserves the bottom domain, binary meets, and binary joins
 along every partial numerical arrow. Along total arrows it also preserves
 the top domain, giving contravariant bounded lattice homomorphisms.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

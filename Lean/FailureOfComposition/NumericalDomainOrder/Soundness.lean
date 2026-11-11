@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Core
-import FailureOfComposition.NumericalProductProofs.Soundness
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Core
+public import FailureOfComposition.NumericalProductProofs.Soundness
 
 /-!
 # Soundness of numerical domain-order transfer
@@ -15,6 +17,8 @@ eventual graphs distinct: it first applies their established PA comparison at
 the composite index and then uses composition and functionality of the
 eventual graph.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

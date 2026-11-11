@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyFormulas
+module
+
+public import FailureOfComposition.NativeFamilyFormulas
 
 /-!
 # Internal proofs of true fixed Sigma-one instances
@@ -12,6 +14,8 @@ The formula is fixed externally; its valuation ranges over the entire PA
 model. Formalized completeness supplies existence of a proof code, not a
 primitive-recursive selection of such a code.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

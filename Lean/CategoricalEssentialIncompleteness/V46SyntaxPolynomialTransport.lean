@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46CategoricalSyntax
-import CategoricalEssentialIncompleteness.V46AlgebraTransport
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
+public import CategoricalEssentialIncompleteness.V46AlgebraTransport
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
 /-! # Two-sorted polynomial comparison with arbitrary coefficient labels -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

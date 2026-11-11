@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformParameterAlgebra
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformParameterAlgebra
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
 
 /-! # The actual polynomial action on parameterized literal words
 
@@ -9,6 +16,8 @@ on the resulting output tuple is the actual morphism graph on each child,
 with coefficient labels and ordered tags retained. This comparison derives
 from the proved action graphs and does not assume a constructor equation.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

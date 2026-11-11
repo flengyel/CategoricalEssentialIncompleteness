@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticRules
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSchemeSquares
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRules
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSchemeSquares
 
 /-! # The actual seven-scheme and Gamma nullary label isomorphism -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -18,8 +22,8 @@ open Coordinates SubstitutionParameters SubstitutionDomains RuleParameters Equal
 local notation "K" => numericalInterpretation
 local notation "S" => numericalSyntax
 local notation "S₀" => originalSyntax
-private abbrev formulaObject := numericalSyntax.algebra.a.2
-private abbrev originalFormulaObject := originalSyntax.algebra.a.2
+abbrev formulaObject := numericalSyntax.algebra.a.2
+abbrev originalFormulaObject := originalSyntax.algebra.a.2
 local notation "Y" => formulaObject
 local notation "Y₀" => originalFormulaObject
 

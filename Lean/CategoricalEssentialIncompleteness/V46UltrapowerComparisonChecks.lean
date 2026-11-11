@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46UltrapowerComparison
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46UltrapowerComparison
 
 /-! The arithmetic comparison is checked on every total-split morphism. -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ArithmeticSyntax
-import CategoricalEssentialIncompleteness.ArithmeticRepresentation
-import CategoricalEssentialIncompleteness.NumericalPredicates
+module
+
+public import CategoricalEssentialIncompleteness.ArithmeticSyntax
+public import CategoricalEssentialIncompleteness.ArithmeticRepresentation
+public import CategoricalEssentialIncompleteness.NumericalPredicates
 
 /-!
 # Theorem and refutation predicates
@@ -15,6 +17,8 @@ an arithmetic theory with subsets of the natural numbers. Their support
 inclusions are predicates in the full PER subobject lattice. Consistency is
 equivalent to disjointness of these two supports.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

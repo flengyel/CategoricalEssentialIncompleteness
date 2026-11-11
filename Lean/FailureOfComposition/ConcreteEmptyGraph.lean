@@ -16,6 +16,8 @@ Its graph is proved empty inside every model of PA, including nonstandard models
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

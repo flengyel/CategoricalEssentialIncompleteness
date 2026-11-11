@@ -16,6 +16,8 @@ program descriptions, with arithmetic proofs for the encoded inputs.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

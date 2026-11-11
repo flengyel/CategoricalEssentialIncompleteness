@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleApproximationRecursion
+module
+
+public import CategoricalEssentialIncompleteness.OracleApproximationRecursion
 
 /-! # Finite oracle approximations commute with partial minimization -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -33,8 +37,8 @@ theorem Represents.map_mem {S : Set ℕ} {F : List ℕ × ℕ → Part ℕ} {f :
     exact (Part.mem_map_iff _).mpr ⟨z,(hF x z).mpr ⟨n,hz⟩,he⟩
 
 theorem finite_bound {P : ℕ → ℕ → Prop}
-    (hM : ∀ i k k',k ≤ k' → P i k → P i k') (n : ℕ)
-    (h : ∀ i,i ≤ n → ∃ k,P i k) : ∃ k,∀ i,i ≤ n → P i k := by
+    (hM : ∀ i k k', k ≤ k' → P i k → P i k') (n : ℕ)
+    (h : ∀ i, i ≤ n → ∃ k, P i k) : ∃ k, ∀ i, i ≤ n → P i k := by
   induction n with
   | zero =>
     obtain ⟨k,hk⟩ := h 0 le_rfl
@@ -88,12 +92,12 @@ theorem finiteSearch_represents {S : Set ℕ} {F : List ℕ × ℕ → Part ℕ}
       · subst i
         simpa [P] using (hf.map_mem _ _ true).mp ht
       · have hil : i<n := by omega
-        simpa only [P,if_neg he] using (hf.map_mem _ _ false).mp (hmin hil)
+        simpa only [P,ite_eq_right he] using (hf.map_mem _ _ false).mp (hmin hil)
     obtain ⟨k,hk⟩ := finite_bound hm n hex
     refine ⟨k,Nat.mem_rfind.mpr ⟨?_,?_⟩⟩
     · simpa [P] using hk n le_rfl
     · intro m hm
-      simpa only [P,if_neg (by omega : m≠n)] using hk m (Nat.le_of_lt hm)
+      simpa only [P,ite_eq_right (by omega : m≠n)] using hk m (Nat.le_of_lt hm)
   · rintro ⟨k,hk⟩
     obtain ⟨ht,hmin⟩ := Nat.mem_rfind.mp hk
     exact Nat.mem_rfind.mpr ⟨(hf.map_mem _ _ true).mpr ⟨k,ht⟩,

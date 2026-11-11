@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationBasic
-import Mathlib.Tactic.IntervalCases
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationBasic
+public import Mathlib.Tactic.IntervalCases
 
 /-! # Exact arithmetic-term and relation presentation
 
 The given symbol predicates have precisely their printed arithmetic arities.
 Their ordered children are retained in both directions.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation

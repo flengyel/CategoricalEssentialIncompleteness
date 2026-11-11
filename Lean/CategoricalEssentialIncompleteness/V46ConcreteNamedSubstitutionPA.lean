@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
 
 /-! Explicit PA-proof statements for the numerical realization. These
 proofs use all-PA-model numerical lemmas, rather than the totality of any
 arbitrary operation graph in a stronger theory T. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedPADecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

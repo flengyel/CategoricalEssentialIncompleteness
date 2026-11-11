@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeContextSpecialization
+module
+
+public import FailureOfComposition.NativeContextSpecialization
 
 /-!
 Audit-only declarations used to test the native-specialization dependency
 guard.  This module is not imported by the mathematical library umbrella.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

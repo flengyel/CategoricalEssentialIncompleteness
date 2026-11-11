@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerRealComputation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerRealComputation
+
+
+/-! # Statement checks in `V46MillerRealComputationChecks` -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Checks
 example (d : ℕ) (p : Bits) (r : ℝ) :
     ComputesReal d p r ↔ ∀ k : ℕ,∃ i : ℕ,i ∈ OracleProgram.numberedEval d p k ∧

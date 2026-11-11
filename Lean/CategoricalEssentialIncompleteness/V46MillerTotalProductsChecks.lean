@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerTotalProducts
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalProducts
+
+
+/-! # Statement checks in `V46MillerTotalProductsChecks` -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 open CategoricalEssentialIncompleteness.LocalConnectedness

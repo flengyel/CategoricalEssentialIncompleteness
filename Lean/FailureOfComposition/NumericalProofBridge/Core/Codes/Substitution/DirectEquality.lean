@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.RightEquality
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core.Codes.Substitution.RightEquality
 
 /-! # Direct and semantic uniform-equality sentences -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

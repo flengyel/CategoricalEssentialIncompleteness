@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
-import CategoricalEssentialIncompleteness.V46MillerSyntaxFold
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxFold
 
 /-! # Actual slice fold morphisms for arbitrary uniformly enumerable coefficients
 
@@ -13,6 +15,8 @@ Totality follows from the constructed positive-record evaluator and its
 singleton simulation. The source is the unchanged successful postfix
 word, paired only with the external parameter.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

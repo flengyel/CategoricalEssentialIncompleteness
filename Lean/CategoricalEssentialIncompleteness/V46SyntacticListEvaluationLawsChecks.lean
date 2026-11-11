@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntacticListEvaluationLaws
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticListEvaluationLaws
 
 /-! Nil/cons equations and uniqueness against arbitrary represented candidates. -/
+
+@[expose] public section
 
 noncomputable section
 

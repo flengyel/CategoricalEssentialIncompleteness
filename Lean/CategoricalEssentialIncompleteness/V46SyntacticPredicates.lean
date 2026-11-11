@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSearch
-import CategoricalEssentialIncompleteness.SyntacticModel
-import CategoricalEssentialIncompleteness.RestrictionSplitting
-import Mathlib.CategoryTheory.Widesubcategory
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSearch
+public import CategoricalEssentialIncompleteness.SyntacticModel
+public import CategoricalEssentialIncompleteness.RestrictionSplitting
+public import Mathlib.CategoryTheory.Widesubcategory
 
 /-! # Arithmetic predicates and total morphisms in the restriction splitting -/
+
+@[expose] public section
 
 noncomputable section
 

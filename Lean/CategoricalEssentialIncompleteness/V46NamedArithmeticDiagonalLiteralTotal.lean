@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
-import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
 
 /-! Exact diagonal specialization of the generic literal-Total sentence
 map. All proofs are applications of generic theorems; the selected index
 inside ArithmeticDiagonalCodes.alpha is never normalized. -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory

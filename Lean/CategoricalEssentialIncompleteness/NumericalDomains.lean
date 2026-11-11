@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalCategory
-import CategoricalEssentialIncompleteness.Diagonal
+module
+
+public import CategoricalEssentialIncompleteness.NumericalCategory
+public import CategoricalEssentialIncompleteness.Diagonal
 
 /-!
 # Numerical restriction domains and enumerable supports
@@ -14,6 +16,8 @@ Their lattice operations are intersection and union, and partial inverse image
 is the domain of composition. On ℕ, complementary pairs are exactly recursive
 sets together with their complements.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

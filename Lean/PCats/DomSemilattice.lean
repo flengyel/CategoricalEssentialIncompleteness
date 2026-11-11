@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Recursion
+module
+
+public import PCats.Recursion
 
 /-!
 # The domains on an object
@@ -28,6 +30,8 @@ proof needs zero-absorption and not merely the existence of zero morphisms:
 `⟨1, 0⟩ = Δ(1 ⊠ 0) = Δ0 = 0`, whose middle step is `Prodominical`. Both `bot`
 and `rst_zero` are therefore in a section assuming it.
 -/
+
+@[expose] public section
 
 universe v u
 

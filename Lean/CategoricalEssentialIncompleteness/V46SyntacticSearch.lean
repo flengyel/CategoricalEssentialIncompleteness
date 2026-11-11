@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.SigmaOneRealization
+module
+
+public import FailureOfComposition.SigmaOneRealization
 
 /-! # Functional search with functionality proved in the ambient theory -/
+
+@[expose] public section
 
 noncomputable section
 

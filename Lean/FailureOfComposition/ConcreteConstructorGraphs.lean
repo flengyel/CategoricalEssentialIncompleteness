@@ -16,6 +16,8 @@ computations using unconditional persistence.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

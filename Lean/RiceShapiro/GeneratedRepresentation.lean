@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.WitnessExistence
-import RiceShapiro.ExtensionFamilies
+module
+
+public import RiceShapiro.WitnessExistence
+public import RiceShapiro.ExtensionFamilies
 
 /-!
 # The generated-domain representation
@@ -24,6 +26,8 @@ restriction by `extensionalUnderRestriction_of_extensional`.
 Total range lifting is assumed only for `genHom (entryDomain s q)`. Neither
 final theorem assumes `IsRP C`.
 -/
+
+@[expose] public section
 
 universe v u
 

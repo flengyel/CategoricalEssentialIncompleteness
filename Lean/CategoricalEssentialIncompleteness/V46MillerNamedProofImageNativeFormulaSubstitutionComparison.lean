@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaTransport
 
 /-! # Native formula substitution and the actual full option output
 
@@ -6,6 +13,8 @@ Every branch is evaluated on the existing standard PA state and then
 transported by its proved morphism square. The actual slice fold is
 compared by native induction. Failure remains part of the formula state.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

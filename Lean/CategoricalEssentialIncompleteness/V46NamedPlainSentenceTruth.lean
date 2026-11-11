@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainSentenceSemantics
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceSemantics
 
 /-! # Truth of actual sentence codes is independent of the assignment -/
+
+@[expose] public section
 
 universe w
 noncomputable section

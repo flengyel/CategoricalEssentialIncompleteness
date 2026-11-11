@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceTemplates
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceTemplates
 
 /-! # Uniform composition and specialization by genuine template compilation
 
@@ -11,6 +13,8 @@ The arbitrary program indices are data for fixed universal templates. The
 parameter compiler builds actual program indices and has already been proved
 correct in every PA model, including at nonstandard parameter values.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

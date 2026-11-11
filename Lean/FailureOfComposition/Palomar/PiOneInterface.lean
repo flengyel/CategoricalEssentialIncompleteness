@@ -15,4 +15,6 @@ The permanent shared definitions live in `ArithmeticInterface` and
 are elaborated. This re-export gives the Π₁ bridge a focused import while the
 eligible Challenge continues to inline the same readable definitions.
 -/
+
+@[expose] public section
 @[expose] public section

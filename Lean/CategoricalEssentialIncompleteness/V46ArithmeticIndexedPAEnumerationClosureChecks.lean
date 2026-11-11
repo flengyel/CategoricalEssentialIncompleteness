@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
+
+
+/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationClosureChecks` -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPAEnumeration.ClosureChecks

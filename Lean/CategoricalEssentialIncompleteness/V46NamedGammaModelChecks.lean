@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46NamedGammaModel
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedGammaModel
+
+
+/-! # Statement checks in `V46NamedGammaModelChecks` -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.NamedGammaModel
 open NamedArithmeticSignature SyntacticPredicates

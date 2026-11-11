@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46Comparison
-import CategoricalEssentialIncompleteness.ForkEssentialIncompleteness
+module
+
+public import CategoricalEssentialIncompleteness.V46Comparison
+public import CategoricalEssentialIncompleteness.ForkEssentialIncompleteness
 
 /-! # Complementary conditionals in the generated fork recursion category -/
+
+@[expose] public section
 
 noncomputable section
 

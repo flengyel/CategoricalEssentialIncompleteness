@@ -1,11 +1,20 @@
-import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
-import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
+public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
 /-! # Actual option/product comparison for a finite-geometry functor
 
 This contains no equivalence or initiality-preservation assumption.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

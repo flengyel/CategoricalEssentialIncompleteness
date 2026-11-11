@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.FiniteExtensionChecker
-import FailureOfComposition.NumericalDomainOrder.Core
+module
+
+public import FailureOfComposition.FiniteExtensionChecker
+public import FailureOfComposition.NumericalDomainOrder.Core
 
 /-!
 # Numerical proof conversions for the finite-extension checker
@@ -20,6 +22,8 @@ meaning is PA-equivalent to the independently defined formula
 `extensionFormula`; it is not definitionally a native syntax code for that
 formula.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -136,20 +140,20 @@ theorem primrec_extensionToCheckerAxiomCode :
 
 /-! ## Exact primitive-recursive recognition -/
 
-private def extensionTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
+def extensionTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
   x.getD j 0
 
 private theorem primrec_extensionTokenAt (j : ℕ) :
     Primrec (extensionTokenAt j) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const j)
 
-private def recoveredPairCode (x : FormulaString) : ℕ :=
+def recoveredPairCode (x : FormulaString) : ℕ :=
   extensionTokenAt 2 (lhsString x)
 
-private def recoveredFiniteCode (x : FormulaString) : ℕ :=
+def recoveredFiniteCode (x : FormulaString) : ℕ :=
   (recoveredPairCode x).unpair.1
 
-private def recoveredProgramIndex (x : FormulaString) : ℕ :=
+def recoveredProgramIndex (x : FormulaString) : ℕ :=
   (recoveredPairCode x).unpair.2
 
 private theorem primrec_recoveredPairCode : Primrec recoveredPairCode :=
@@ -191,12 +195,12 @@ private theorem primrec_recoveredProgramIndex :
     extensionToCheckerAxiomString, extensionInstanceString,
     rightInstanceString, extensionTokenAt]
 
-private def checkerToExtensionCandidate
+def checkerToExtensionCandidate
     (x : FormulaString) : FormulaString :=
   checkerToExtensionAxiomString (recoveredFiniteCode x)
     (recoveredProgramIndex x)
 
-private def extensionToCheckerCandidate
+def extensionToCheckerCandidate
     (x : FormulaString) : FormulaString :=
   extensionToCheckerAxiomString (recoveredFiniteCode x)
     (recoveredProgramIndex x)

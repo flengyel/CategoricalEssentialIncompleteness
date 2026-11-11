@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkProofRelabeling
-import CategoricalEssentialIncompleteness.FinitePowerCarriers
+module
+
+public import CategoricalEssentialIncompleteness.ForkProofRelabeling
+public import CategoricalEssentialIncompleteness.FinitePowerCarriers
 
 /-! # C.e. proof carriers and their actual recursive conclusion maps -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

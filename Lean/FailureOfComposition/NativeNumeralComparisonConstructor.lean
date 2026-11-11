@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonInstances
-import FailureOfComposition.NativeNumeralPR
+module
+
+public import FailureOfComposition.NativeNumeralComparisonInstances
+public import FailureOfComposition.NativeNumeralPR
 
 /-!
 # Explicit numeral comparison proof functions
@@ -15,6 +17,8 @@ Thus every constructor has eleven ordinary numerical inputs. Seed codes and
 context codes may be malformed: computation remains total on those inputs.
 The truncated differences specify the actual addition proofs used as premises.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

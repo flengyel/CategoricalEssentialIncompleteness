@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Category.Basic
-import Mathlib.CategoryTheory.Iso
-import Mathlib.CategoryTheory.MorphismProperty.Composition
-import Mathlib.CategoryTheory.Limits.Shapes.ZeroMorphisms
+module
+
+public import Mathlib.CategoryTheory.Category.Basic
+public import Mathlib.CategoryTheory.Iso
+public import Mathlib.CategoryTheory.MorphismProperty.Composition
+public import Mathlib.CategoryTheory.Limits.Shapes.ZeroMorphisms
 
 /-!
 # Restriction categories
@@ -26,6 +28,8 @@ equation cited in its doc comment.
 Imports are inherited wholesale from the pre-split monolith and are wider than
 this module needs; prune only after each module is known to build on its own.
 -/
+
+@[expose] public section
 
 universe v u
 

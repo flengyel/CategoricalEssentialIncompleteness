@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.TwoBoolean
+module
+
+public import CategoricalEssentialIncompleteness.TwoBoolean
 
 /-!
 # Complete Boolean extensions and represented decisions
@@ -12,6 +14,8 @@ This module compares Boolean quotients with Boolean homomorphisms to
 the constructed internal algebra `1 + 1`. Characteristic arrows refer to
 particular complementary subobjects, not to arbitrary predicates.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

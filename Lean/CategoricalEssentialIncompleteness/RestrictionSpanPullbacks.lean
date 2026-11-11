@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionSpans
-import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Basic
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionSpans
+public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Basic
 
 /-! # Pullback composition of monic spans -/
+
+@[expose] public section
 
 universe v u
 set_option backward.isDefEq.respectTransparency false

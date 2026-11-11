@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFoldValues
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFoldValues
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
 
 /-! # The actual evaluator arrows form a two-sorted algebra morphism -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

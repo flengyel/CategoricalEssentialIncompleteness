@@ -1,4 +1,6 @@
-import CategoricalEssentialIncompleteness
+module
+
+public import CategoricalEssentialIncompleteness
 
 /-! Print the transitive axiom dependencies of the combined interface and all
 nine proved solution declarations, and the diagonal, quotient, Boolean
@@ -7,6 +9,8 @@ comparison, categorical essential-incompleteness, and numerical categorical
 and predicate constructions.
 The verification script rejects any axiom other than `propext`,
 `Classical.choice`, and `Quot.sound`. -/
+
+@[expose] public section
 
 #print axioms FailureOfComposition.Palomar.obstruction_four_properties
 #print axioms FailureOfComposition.Palomar.no_quotient_composition_productive

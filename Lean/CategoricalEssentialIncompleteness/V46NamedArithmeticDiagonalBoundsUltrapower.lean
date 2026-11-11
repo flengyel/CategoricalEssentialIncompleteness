@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsSentences
-import CategoricalEssentialIncompleteness.V46ArithmeticUltrapower
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsSentences
+public import CategoricalEssentialIncompleteness.V46ArithmeticUltrapower
 
 /-! # Elementary equivalence for the constructed arithmetic ultrapower -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic Filter

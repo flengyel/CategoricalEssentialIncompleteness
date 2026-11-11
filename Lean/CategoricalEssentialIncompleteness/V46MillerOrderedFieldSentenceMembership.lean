@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
-import Mathlib.Computability.Primrec.List
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
+public import Mathlib.Computability.Primrec.List
 
 /-! # Primitive-recursive membership in the actual ordered-field sentence words
 
@@ -8,6 +15,8 @@ explicit bounded field signature, and the empty free-variable test is the
 existing primitive-recursive traversal. No decision certificate for the
 sentence set is an input.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates

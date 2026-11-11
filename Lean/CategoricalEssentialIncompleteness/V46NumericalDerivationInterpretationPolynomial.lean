@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationConstructors
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationConstructors
 
 /-! # Canonical polynomial input comparison for the actual PA numerical functor
 
@@ -12,6 +14,8 @@ Only finite products and coproducts are transported. The factorization
 below identifies the already proved raw-code comparison with these
 canonical input maps; no preservation of initial algebras is presumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

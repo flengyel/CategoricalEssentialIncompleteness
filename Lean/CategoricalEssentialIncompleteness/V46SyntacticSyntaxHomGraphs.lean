@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
 
 /-! # Actual algebra-hom equations give the guarded scalar constructor laws -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

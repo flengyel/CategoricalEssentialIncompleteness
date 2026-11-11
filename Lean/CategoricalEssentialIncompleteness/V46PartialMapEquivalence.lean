@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46PartialMaps
-import CategoricalEssentialIncompleteness.V46PartialMapRanges
-import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
-import CategoricalEssentialIncompleteness.V46KaroubiRestriction
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Pullbacks
-import Mathlib.CategoryTheory.Functor.FullyFaithful
-import Mathlib.CategoryTheory.Functor.EpiMono
+module
+
+public import CategoricalEssentialIncompleteness.V46PartialMaps
+public import CategoricalEssentialIncompleteness.V46PartialMapRanges
+public import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
+public import CategoricalEssentialIncompleteness.V46KaroubiRestriction
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Pullbacks
+public import Mathlib.CategoryTheory.Functor.FullyFaithful
+public import Mathlib.CategoryTheory.Functor.EpiMono
 
 /-! # Ordinary monic spans and a split restriction category's total category -/
+
+@[expose] public section
 
 noncomputable section
 

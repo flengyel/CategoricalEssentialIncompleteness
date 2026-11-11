@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
 
 /-! The five coordinates of a quantified substitution input retain
 the original body independently of its recursive option-valued result. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

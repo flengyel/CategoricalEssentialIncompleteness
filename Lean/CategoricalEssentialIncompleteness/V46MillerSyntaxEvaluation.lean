@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxStep
-import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxStep
+public import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
 
 /-! # Constructed selected finite records for actual uniform slice operations
 
@@ -14,6 +16,8 @@ result, is obtained at a transition through the actual supplied morphism.
 This resource constructs evaluation and proves its graph and totality;
 constructor commutation and initiality are separate obligations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

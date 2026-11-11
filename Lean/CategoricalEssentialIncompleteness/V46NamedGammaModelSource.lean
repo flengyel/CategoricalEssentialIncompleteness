@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics
 
 /-! # The actual named Gamma enumeration and a consistent source theory
 
@@ -11,6 +13,8 @@ Only individual PA axioms need be supplied by the concrete arithmetic
 comparison. Every other source axiom is the proved presentation of an
 actual literal enumerated named sentence.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.NamedGammaModel

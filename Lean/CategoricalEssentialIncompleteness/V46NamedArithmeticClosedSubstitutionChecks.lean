@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
+
+
+/-! # Statement checks in `V46NamedArithmeticClosedSubstitutionChecks` -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46
 open SyntacticPredicates SyntacticSyntax ConcreteNamedSubstitution NamedArithmeticClosedSubstitution

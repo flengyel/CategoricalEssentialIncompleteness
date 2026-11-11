@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFunctionStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonVariableStep
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFunctionStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonVariableStep
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic
 
 /-! # The actual full term-substitution structure map has the numeric root result -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

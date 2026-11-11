@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Structural.Maps
 
 /-!
 # PA-internal preservation by the B1(8) proof maps
@@ -12,6 +14,8 @@ The two closed sentences quantify proof codes, program indices, computation
 parameters, endpoint codes, and output proof codes inside arithmetic.  The
 same exact theta proof graph occurs in every input and output predicate.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

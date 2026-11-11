@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Bicategory.Span.Basic
-import Mathlib.CategoryTheory.IsomorphismClasses
-import Mathlib.CategoryTheory.RegularCategory.Basic
-import CategoricalEssentialIncompleteness.RestrictionRanges
-import CategoricalEssentialIncompleteness.LocalSwitch
+module
+
+public import Mathlib.CategoryTheory.Bicategory.Span.Basic
+public import Mathlib.CategoryTheory.IsomorphismClasses
+public import Mathlib.CategoryTheory.RegularCategory.Basic
+public import CategoricalEssentialIncompleteness.RestrictionRanges
+public import CategoricalEssentialIncompleteness.LocalSwitch
 
 /-! # Partial maps in an arbitrary category with pullbacks -/
+
+@[expose] public section
 
 noncomputable section
 

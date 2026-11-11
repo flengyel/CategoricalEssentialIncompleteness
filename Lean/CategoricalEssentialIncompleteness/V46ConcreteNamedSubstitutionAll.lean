@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 /-! An actual Boolean conjunction of ordered recursive-leaf tests. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedAllDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

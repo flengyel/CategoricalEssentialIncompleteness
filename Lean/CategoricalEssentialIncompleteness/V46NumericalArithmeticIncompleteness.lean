@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessCoordinates
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofComparison
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
-import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
-import CategoricalEssentialIncompleteness.V46FirstOrderInference
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessCoordinates
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofComparison
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
+public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
+public import CategoricalEssentialIncompleteness.V46FirstOrderInference
 
 /-! # The numerical arithmetic application to the actual theorem range -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -102,19 +106,19 @@ def ruleExtension : RulePresentation.Hom (Rules.rules paAxioms) (Rules.rules Γ)
     (Rules.axioms paAxioms) (Rules.axioms Γ) Coordinates.numericalSyntax.quantifierConstructor
     Coordinates.numericalSyntax.implicationConstructor (axiomExtension Γ hPA) (axiomExtension_square Γ hPA)
 
-private def pulledRuleAlgebra {F : NumericalTuples.Object} {N : ℕ}
+def pulledRuleAlgebra {F : NumericalTuples.Object} {N : ℕ}
     {R R' : RulePresentation F N} (ι : RulePresentation.Hom R R')
     (P' : Endofunctor.Algebra R'.inference) : Endofunctor.Algebra R.inference where
   a := P'.a
   str := ι.inferenceTransformation.app P'.a ≫ P'.str
 
-private def initialRuleMap {F : NumericalTuples.Object} {N : ℕ}
+def initialRuleMap {F : NumericalTuples.Object} {N : ℕ}
     {R R' : RulePresentation F N} (ι : RulePresentation.Hom R R')
     (P : Endofunctor.Algebra R.inference) (hP : IsInitial P)
     (P' : Endofunctor.Algebra R'.inference) : P.a ⟶ P'.a :=
   (hP.to (pulledRuleAlgebra ι P')).f
 
-private theorem initialRuleMap_conclusion {F : NumericalTuples.Object} {N : ℕ}
+theorem initialRuleMap_conclusion {F : NumericalTuples.Object} {N : ℕ}
     {R R' : RulePresentation F N} (ι : RulePresentation.Hom R R')
     (P : Endofunctor.Algebra R.inference) (hP : IsInitial P)
     (P' : Endofunctor.Algebra R'.inference) :
@@ -131,7 +135,7 @@ abbrev proofExtension_conclusion :=
   initialRuleMap_conclusion (ruleExtension Γ hPA) (SentenceProofCodes.allAlgebra paAxioms)
     (SentenceProofCodes.allInitial paAxioms) (SentenceProofCodes.allAlgebra Γ)
 
-private def sentenceMap {P P' F S : NumericalTuples.Object}
+def sentenceMap {P P' F S : NumericalTuples.Object}
     (c : P ⟶ F) (c' : P' ⟶ F) (j : S ⟶ F) (f : P ⟶ P') (hf : f ≫ c' = c) :
     pullback c j ⟶ pullback c' j :=
   pullback.lift (pullback.fst c j ≫ f) (pullback.snd c j)
@@ -143,7 +147,7 @@ private theorem sentenceMap_conclusion {P P' F S : NumericalTuples.Object}
   pullback.lift_snd (pullback.fst c j ≫ f) (pullback.snd c j)
     (by rw [Category.assoc,hf,pullback.condition])
 
-private def sentencePullbackExtension :=
+def sentencePullbackExtension :=
   sentenceMap (SentenceProofCodes.allConclusion paAxioms) (SentenceProofCodes.allConclusion Γ)
     Coordinates.numericalSyntax.sentenceInclusion (proofExtension Γ hPA) (proofExtension_conclusion Γ hPA)
 

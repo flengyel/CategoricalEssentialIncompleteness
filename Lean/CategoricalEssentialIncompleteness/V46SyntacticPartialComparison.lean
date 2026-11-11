@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46PartialSearchLift
-import CategoricalEssentialIncompleteness.V46SyntacticComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46PartialSearchLift
+public import CategoricalEssentialIncompleteness.V46SyntacticComparison
 
 /-! # Diagonal comparison with model-disjoint Sigma-one predicates -/
+
+@[expose] public section
 
 noncomputable section
 

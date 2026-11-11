@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
-import CategoricalEssentialIncompleteness.V46CategoricalListOperations
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
+public import CategoricalEssentialIncompleteness.V46CategoricalListOperations
 
 /-! Constructor and cons-step coordinates under the genuine family,
 coefficient and product comparisons. These are categorical equations. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

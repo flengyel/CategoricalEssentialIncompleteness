@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Categorical
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Categorical
 
 /-!
 # Constant-zero and identity application of the B1(7) maps
@@ -15,6 +17,8 @@ finite-extension checker fixes this pairing is uniform in the internal input
 of every PA model: it uses vacuity of `Ext(0,i)` internally, rather than a
 family of closed standard instances.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

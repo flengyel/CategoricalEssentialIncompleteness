@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.TypedRanges
-import PCats.Coproducts
+module
+
+public import FailureOfComposition.TypedRanges
+public import PCats.Coproducts
 
 /-!
 # Distributive coproducts on the typed program category
@@ -20,6 +22,8 @@ equips `CodedProgramCategory T` with the maintained `CoprodStruct` and
 `HasCoproducts` interfaces.  Explicit rearrangement graphs then provide
 inverses to the generic distributivity morphisms.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

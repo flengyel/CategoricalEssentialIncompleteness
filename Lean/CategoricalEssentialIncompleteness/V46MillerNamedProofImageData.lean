@@ -1,8 +1,15 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSentences
-import CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks
-import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSentences
+public import CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks
+public import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
 
 /-! # Actual named points, arbitrary external axioms and constructed proofs
 
@@ -11,6 +18,8 @@ an arbitrary uniformly enumerable set; it is pulled back along the actual
 sentence inclusion. No code of a chosen sentence point is identified
 with the word of its formula.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

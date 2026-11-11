@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedOpenTranslation
-import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedOpenTranslation
+public import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
 
 /-! # Actual proof compatibility for arithmetic NNF connectives
 
@@ -13,6 +15,8 @@ translate by syntactic equality to the native implication constructor.
 The comparisons below are actual native proofs, using the constructed
 classical entailment instance and the derived native quantifier rules.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedProofConnectives

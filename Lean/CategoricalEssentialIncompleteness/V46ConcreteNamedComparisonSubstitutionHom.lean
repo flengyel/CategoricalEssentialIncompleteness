@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermCommutation
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaCommutation
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermCommutation
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaCommutation
 
 /-! # The numerical state traversal is the actual stable substitution fold -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

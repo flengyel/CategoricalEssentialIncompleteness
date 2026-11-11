@@ -22,6 +22,8 @@ no least-number or persistence argument is repeated here.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat Nat.ArithPart₁

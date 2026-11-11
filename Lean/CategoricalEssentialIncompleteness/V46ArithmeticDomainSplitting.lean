@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SplitExtension
-import CategoricalEssentialIncompleteness.PartialFunctions
+module
+
+public import CategoricalEssentialIncompleteness.V46SplitExtension
+public import CategoricalEssentialIncompleteness.PartialFunctions
 
 /-! # The chosen fixed-point splitting of an arbitrary Pfn-valued range functor
 
@@ -12,6 +14,8 @@ Each interpreted restriction idempotent is split through its actual fixed
 points. The existing chosen-splitting extension supplies preservation of
 restrictions, ranges, zeros and binary coproducts.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

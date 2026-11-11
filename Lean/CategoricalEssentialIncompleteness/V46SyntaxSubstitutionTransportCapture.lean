@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifierCoordinates
-import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifierCoordinates
+public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
 
 /-! Capture transport uses the proved free-variable folds and the actual
 membership diagram. The original body is the one tested for capture. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsStandard
-import CategoricalEssentialIncompleteness.V46SyntacticAxiomPredicates
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
-import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsStandard
+public import CategoricalEssentialIncompleteness.V46SyntacticAxiomPredicates
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
+public import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
 
 /-! # Seven named schemes, enumerated axioms and the two finite proof rules
 
@@ -14,6 +16,8 @@ Scheme instances retain the genuine parameter objects, including the two
 admissibility pullbacks and the distribution-absence fiber. These rules
 are interpreted in the constructed proof object, with ordered MP premises.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

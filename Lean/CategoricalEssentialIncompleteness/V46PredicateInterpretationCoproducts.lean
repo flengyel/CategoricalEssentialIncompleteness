@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46PredicateInterpretation
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRelations
-import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
+module
+
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretation
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRelations
+public import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
 
 /-! # Predicate coproducts and their interpretation as disjoint unions -/
+
+@[expose] public section
 
 noncomputable section
 

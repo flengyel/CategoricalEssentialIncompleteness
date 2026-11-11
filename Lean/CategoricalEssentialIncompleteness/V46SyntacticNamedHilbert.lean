@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
-import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
 
 /-! # Literal named finite Hilbert derivations for a Sigma-one enumeration
 
@@ -12,6 +14,8 @@ The proof constructors use the seven manuscript schemes, generalization
 and ordered modus ponens. Substitution is the existing named partial
 operation; its free-for condition remains independently defined.
 -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.SyntacticNamedHilbert
 open NamedFiniteSyntax NamedPostfixEncoding

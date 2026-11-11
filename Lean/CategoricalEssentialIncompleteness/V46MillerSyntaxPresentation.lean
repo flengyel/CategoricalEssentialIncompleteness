@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalUnderlying
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalUnderlying
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # The original recursive word data in the uniform carrier category
 
@@ -14,6 +16,8 @@ Only the ordinary source syntax data is embedded by this functor. Target
 algebras and their folds have arbitrary uniformly represented operations;
 no preservation of initiality by this inclusion is asserted.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

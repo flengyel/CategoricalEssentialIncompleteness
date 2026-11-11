@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeInternalCorrectness
-import FailureOfComposition.NativeInternalAxiomGraph
-import FailureOfComposition.NativeInternalNat
+module
+
+public import FailureOfComposition.NativeInternalCorrectness
+public import FailureOfComposition.NativeInternalAxiomGraph
+public import FailureOfComposition.NativeInternalNat
 
 /-!
 # Internal recognition and transport of equality proofs
@@ -16,6 +18,8 @@ proof checker.  All proof codes and indices in the preservation theorem
 range over the ambient PA model.  A separate theorem fixes one standard
 seed before quantifying over theories and models.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,4 +1,11 @@
-import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
 
 /-! # Actual oracle programs for ordinary finite-use algorithms
 
@@ -6,6 +13,8 @@ The algorithm may return different numbers from different representations.
 This construction supplies a single actual program and asserts no semantic
 representation independence of those numbers.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteUse
 open OracleProgram

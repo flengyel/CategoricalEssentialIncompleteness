@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
-import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
-import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
+public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
 
 /-! # Lemma 7.2 at the printed diagonal formula
 
@@ -13,6 +15,8 @@ The specialization is by theorem application, so the selected diagonal
 program index remains opaque. The input predicates are the actual generated
 Γ theorem/refutation images after the proved fixed-formula numeral map.
 -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

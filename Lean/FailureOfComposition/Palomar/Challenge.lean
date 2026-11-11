@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ManuscriptObstruction
-import FailureOfComposition.ConcretePiOneCharacterization
-import FailureOfComposition.PartialRecursiveQuotient
-import FailureOfComposition.RangeAssignment
+module
+
+public import FailureOfComposition.ManuscriptObstruction
+public import FailureOfComposition.ConcretePiOneCharacterization
+public import FailureOfComposition.PartialRecursiveQuotient
+public import FailureOfComposition.RangeAssignment
 
 /-!
 # Draft statement interface for Palomar preparation
@@ -41,6 +43,8 @@ pointwise provably empty is itself pointwise provably empty. `rangeIndex e`
 realizes the partial identity on the range, with its graph equation proved
 uniformly in PA; standard-model agreement alone is not the specification.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

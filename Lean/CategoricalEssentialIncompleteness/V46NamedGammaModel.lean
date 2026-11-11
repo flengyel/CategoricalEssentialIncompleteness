@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedGammaModelSource
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedGammaModelSource
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
 
 /-! # A semantic model of the printed consistent named Gamma
 
@@ -13,6 +15,8 @@ derivability of its actual named arithmetic axioms. Completeness is used only
 after both the finite proof comparison and each original formula roundtrip
 have been proved.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.NamedGammaModel

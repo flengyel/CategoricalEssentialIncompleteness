@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.DomSubdomains
+module
+
+public import PCats.DomSubdomains
 
 /-!
 # Morphisms isomorphic to canonical subdomain inclusions
@@ -53,6 +55,8 @@ is closed under composition, and admits a pullback representative in the family
 along every morphism. No bundled Lean definition or structure for dominions is
 provided. Rosolini's induced embedding of `C` remains unformalized.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutBoxDistance
-import CategoricalEssentialIncompleteness.V46MillerFiniteUse
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutBoxDistance
+public import CategoricalEssentialIncompleteness.V46MillerFiniteUse
 
 /-! # Effective finite rational approximation of the actual bad-set distance
 
@@ -12,6 +14,8 @@ Only finite binary words and natural-number dyadic codes are computed.
 The infinite point and its real coordinates occur in the correctness proof.
 The use bound contains every queried bit, for every binary oracle.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

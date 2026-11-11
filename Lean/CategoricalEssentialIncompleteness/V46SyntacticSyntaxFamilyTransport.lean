@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityParameters
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityParameters
 
 /-! # Constant-family comparisons over an equivalence -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

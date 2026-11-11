@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxState
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxState
 
 /-! # Canonical finite lists over arbitrary uniform carriers
 
 Membership witnesses are existential data of the positive finite guard.
 The numerical list itself has the existing zero/one-plus-pair code.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.Miller.Lists

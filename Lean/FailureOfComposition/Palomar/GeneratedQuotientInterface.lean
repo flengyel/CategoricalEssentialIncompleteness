@@ -17,6 +17,8 @@ operation are the independent definitions already used by the classification.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition.Palomar.Arithmetic.Evaluator

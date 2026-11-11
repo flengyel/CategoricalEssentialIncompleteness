@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticListsStable
-import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticListsStable
+public import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 
 /-! # Constructed stable lists in the total split syntactic category -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

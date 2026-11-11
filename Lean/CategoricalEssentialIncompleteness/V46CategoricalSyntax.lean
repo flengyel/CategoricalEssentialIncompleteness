@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46CategoricalLists
-import Mathlib.CategoryTheory.Products.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalLists
+public import Mathlib.CategoryTheory.Products.Basic
 
 /-! # The two-sorted syntax endofunctor and parameter-stable folds -/
+
+@[expose] public section
 
 noncomputable section
 

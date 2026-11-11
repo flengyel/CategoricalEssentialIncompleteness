@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
 
 /-! # Reflection of actual successful instances to literal named substitution
 
@@ -9,6 +16,8 @@ Its free-for condition and native output equation are proved from that
 point, using the full native option comparison and both projections of
 the success pullback.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

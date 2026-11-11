@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.SyntacticFamilyExtension
-import Mathlib.CategoryTheory.Whiskering
+module
+
+public import CategoricalEssentialIncompleteness.SyntacticFamilyExtension
+public import Mathlib.CategoryTheory.Whiskering
 
 /-! # Identity, composition and square coherence for theory-indexed families -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts.ProdComparison
-import Mathlib.Order.Hom.BoundedLattice
+module
+
+public import Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts.ProdComparison
+public import Mathlib.Order.Hom.BoundedLattice
 
 /-!
 # The external diagonal argument
@@ -13,6 +15,8 @@ The two indexed lattices `E` and `P` describe restriction idempotents and
 general predicates, respectively. Only specified complementary pairs are used.
 Composition is diagrammatic: `f ≫ g` applies `f` first.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

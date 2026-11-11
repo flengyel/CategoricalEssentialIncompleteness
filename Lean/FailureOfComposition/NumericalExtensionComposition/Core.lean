@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionProofs.Core
+module
+
+public import FailureOfComposition.NumericalExtensionProofs.Core
 
 /-!
 # Numerical composition of the B1(7) proof transformations
@@ -20,6 +22,8 @@ without changing any previously accepted proof code.  The four advertised
 maps use only the two new schemes, numerical modus ponens, and the existing
 `project1ToPair`, `pairToLeft`, and `checkerToExt` transformations.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -146,23 +150,23 @@ theorem primrec_componentValuesToCheckerAxiomCode :
 
 /-! ## Exact primitive-recursive recognition -/
 
-private def compositionTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
+def compositionTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
   x.getD j 0
 
 private theorem primrec_compositionTokenAt (j : ℕ) :
     Primrec (compositionTokenAt j) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const j)
 
-private def recoveredProjectionOuter (x : FormulaString) : ℕ :=
+def recoveredProjectionOuter (x : FormulaString) : ℕ :=
   compositionTokenAt 1 (lhsString x)
 
-private def recoveredProjectionInner (x : FormulaString) : ℕ :=
+def recoveredProjectionInner (x : FormulaString) : ℕ :=
   compositionTokenAt 2 (lhsString x)
 
-private def recoveredProjectionInput (x : FormulaString) : ℕ :=
+def recoveredProjectionInput (x : FormulaString) : ℕ :=
   compositionTokenAt 2 (lhsString (rhsString x))
 
-private def recoveredProjectionValue (x : FormulaString) : ℕ :=
+def recoveredProjectionValue (x : FormulaString) : ℕ :=
   compositionTokenAt 3 (lhsString (rhsString x))
 
 private theorem primrec_recoveredProjectionOuter :
@@ -211,7 +215,7 @@ private theorem primrec_recoveredProjectionValue :
   simp [recoveredProjectionValue, projectionDefinednessAxiomString,
     compositionTokenAt, rightInstanceString]
 
-private def projectionDefinednessAxiomCandidate
+def projectionDefinednessAxiomCandidate
     (x : FormulaString) : FormulaString :=
   projectionDefinednessAxiomString (recoveredProjectionOuter x)
     (recoveredProjectionInner x) (recoveredProjectionInput x)
@@ -225,19 +229,19 @@ private theorem primrec_projectionDefinednessAxiomCandidate :
       primrec_recoveredProjectionInput).pair
       primrec_recoveredProjectionValue)).of_eq (fun _ => rfl)
 
-private def recoveredComponentLeft (x : FormulaString) : ℕ :=
+def recoveredComponentLeft (x : FormulaString) : ℕ :=
   compositionTokenAt 1 (lhsString (rhsString x))
 
-private def recoveredComponentRight (x : FormulaString) : ℕ :=
+def recoveredComponentRight (x : FormulaString) : ℕ :=
   compositionTokenAt 1 (lhsString (rhsString (rhsString x)))
 
-private def recoveredComponentInput (x : FormulaString) : ℕ :=
+def recoveredComponentInput (x : FormulaString) : ℕ :=
   compositionTokenAt 2 (lhsString (rhsString x))
 
-private def recoveredComponentLeftValue (x : FormulaString) : ℕ :=
+def recoveredComponentLeftValue (x : FormulaString) : ℕ :=
   compositionTokenAt 3 (lhsString (rhsString x))
 
-private def recoveredComponentRightValue (x : FormulaString) : ℕ :=
+def recoveredComponentRightValue (x : FormulaString) : ℕ :=
   compositionTokenAt 3 (lhsString (rhsString (rhsString x)))
 
 private theorem primrec_recoveredComponentLeft :
@@ -300,7 +304,7 @@ private theorem primrec_recoveredComponentRightValue :
   simp [recoveredComponentRightValue, componentValuesToCheckerAxiomString,
     compositionTokenAt, rightInstanceString]
 
-private def componentValuesToCheckerAxiomCandidate
+def componentValuesToCheckerAxiomCandidate
     (x : FormulaString) : FormulaString :=
   componentValuesToCheckerAxiomString (recoveredComponentLeft x)
     (recoveredComponentRight x) (recoveredComponentInput x)

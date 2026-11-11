@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46RegularImage
-import CategoricalEssentialIncompleteness.V46Inference
-import Mathlib.CategoryTheory.Subobject.Basic
-import Mathlib.CategoryTheory.Subobject.Limits
-import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46RegularImage
+public import CategoricalEssentialIncompleteness.V46Inference
+public import Mathlib.CategoryTheory.Subobject.Basic
+public import Mathlib.CategoryTheory.Subobject.Limits
+public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Basic
 
 /-! # Sentence images and inclusion of generated theories -/
+
+@[expose] public section
 
 noncomputable section
 

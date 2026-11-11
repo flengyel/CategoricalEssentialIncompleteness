@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalLaws
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalLaws
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
 /-! Exact arithmetic constructor laws for the globally total numeric root
 traversal. Its output code is a numerical value, with no model-dependent choice. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedTraversalConstructorsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

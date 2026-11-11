@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Lean
+module
+
+public import Lean
 
 /-!
 # Local check of the draft Palomar interface
@@ -17,6 +19,8 @@ This is a local draft check, not Palomar Comparator, a kernel replay, or an
 eligibility check. In particular, it does not establish Palomar's restrictions
 on the Challenge import closure or compare the meanings of all imported names.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

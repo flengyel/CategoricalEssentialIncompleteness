@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalRangeProofs.Structural.Codes
-import FailureOfComposition.NumericalProofBridge.Structural.ProofGraph
+module
+
+public import FailureOfComposition.NumericalRangeProofs.Structural.Codes
+public import FailureOfComposition.NumericalProofBridge.Structural.ProofGraph
 
 /-!
 # Exact proof graph for the range-proof presentation
@@ -14,6 +16,8 @@ arithmetic and includes the fixed range-introduction family for the two
 external indices.  Its standard-model theorem identifies the structural graph
 with the executable `Proof_T` checker, including malformed codes.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

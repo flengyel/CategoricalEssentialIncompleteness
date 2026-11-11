@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralSpecialization
+module
+
+public import FailureOfComposition.NativeNumeralSpecialization
 
 /-!
 # Executable addition and multiplication derivation trees
@@ -19,6 +21,8 @@ The seven addition inputs are packed as
 `((((r0,z1),(refl,as)),((m0,m1),ms)),((Gamma,n),m))`. The six template body
 codes are the fixed computable literals in `NativeNumeralSeeds`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

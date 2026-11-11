@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionDomains
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionDomains
 
 /-! # The actual arithmetic scheme-parameter product and success comparisons -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -74,7 +78,7 @@ theorem pairedIso_lift {A B : PredicateCategory 𝗣𝗔} {X Y Z : NumericalTupl
           (prod.snd : X ⨯ Y ⟶ Y) ≫ j.hom := by
   rw [(K).map_comp,← Category.assoc,pairedIso_fst,Category.assoc,pairedIso_snd]
 
-private theorem comparisonSquare {A B C : PredicateCategory 𝗣𝗔}
+theorem comparisonSquare {A B C : PredicateCategory 𝗣𝗔}
     {A' B' C' : NumericalTuples.Object} (f : A ⟶ C) (g : B ⟶ C)
     (f' : A' ⟶ C') (g' : B' ⟶ C')
     (i : A' ≅ (K).obj A) (j : B' ≅ (K).obj B) (k : C' ≅ (K).obj C)

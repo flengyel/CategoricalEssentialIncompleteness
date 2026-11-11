@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Structural.Codes
+module
+
+public import FailureOfComposition.NumericalProofBridge.Structural.Codes
 
 /-!
 # Arithmetic graphs of the numerical proof bridge axioms
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 open Encodable FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -1,8 +1,15 @@
-import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
-import CategoricalEssentialIncompleteness.V46MillerRealClosedBounds
-import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
-import CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedBounds
+public import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
+public import CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit
 
 /-! # The categorical domain argument for the actual Miller theory images
 
@@ -12,6 +19,8 @@ proves the original T_a axioms; it need not contain their words literally
 or have a model on the real field. The source cut pair and the application
 of Corollary 4.3 remain categorical throughout.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -28,7 +37,7 @@ local notation "d" => OrderedFieldSyntax.bound
 local notation "S" => NamedProofImage.syntaxData (P) σ π d
 local notation "U" => (Total.underlying («P» := (P)))
 local notation "NUM" => TheorySentenceMorphisms.numericalObject (P)
-private abbrev sentenceCarrier : SplitObject (Uniform.Object (P)) :=
+abbrev sentenceCarrier : SplitObject (Uniform.Object (P)) :=
   CarrierIdempotents.SplitCarrier ((S).sentenceObject.obj)
 local notation "SC" => sentenceCarrier a
 local notation "N" => CutInseparability.SourceSplit.N a

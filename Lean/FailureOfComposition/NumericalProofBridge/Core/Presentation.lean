@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProofBridge.Core.Codes
+module
+
+public import FailureOfComposition.NumericalProofBridge.Core.Codes
 
 /-!
 # Proof-presentation bridge schemas and operations
@@ -11,6 +13,8 @@ import FailureOfComposition.NumericalProofBridge.Core.Codes
 This layer extends the numerical-specialization presentation with explicit
 bridge axioms and primitive-recursive proof transformations.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -153,7 +157,7 @@ theorem primrec_bridgeRightAxiomCode :
       bridgeRightAxiomCode z.1.1.1 z.1.1.2 z.1.2 z.2) :=
   primrec_encodeFormula.comp primrec_bridgeRightAxiomString
 
-private def bridgeTokenAt (i : ℕ) (s : FormulaString) : ℕ :=
+def bridgeTokenAt (i : ℕ) (s : FormulaString) : ℕ :=
   s.getD i 0
 
 def BridgeAxiomShape (s : FormulaString) : Prop :=

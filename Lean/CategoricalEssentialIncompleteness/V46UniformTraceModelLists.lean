@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceCoding
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceCoding
 
 /-! # Reading the actual list codes in arbitrary PA models
 
@@ -11,6 +13,8 @@ The numeric list carrier is the whole model, with its canonical zero/adjoin
 decomposition. All inductions here are internal arithmetic inductions; no
 standard finite-list decoder or external natural-number bound is used.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -20,7 +24,7 @@ open Nat.ArithPart₁ CategoricalRiceShapiro.ArithmeticCode
 
 namespace CategoricalEssentialIncompleteness.V46.UniformTrace.ModelLists
 
-private def dropCoreGraph : 𝚺₁.Semisentence 3 :=
+def dropCoreGraph : 𝚺₁.Semisentence 3 :=
   .mkSigma (code codeListDropCore) (code_sigma_one codeListDropCore)
 
 /-- Output, list, and index, in this order. -/

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
+module
+
+public import CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
 
 /-! # Model predicates and soundness of the constructed logical derivations
 
@@ -13,6 +15,8 @@ initial algebras and their actual sentence pullbacks. The predicate wrappers
 are definitions of the displayed graph conditions, used before specializing
 the syntax algebra to a concrete code presentation.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

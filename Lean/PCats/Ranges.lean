@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.PCat
+module
+
+public import PCats.PCat
 
 /-!
 # Ranges, `rP`-categories, sections
@@ -27,6 +29,8 @@ Two departures from the appendix, both weakenings of its hypotheses.
 The last section defines total range lifting and derives it from a section, and
 hence from the axiom of choice. Appendix B uses that derivation.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -17,6 +17,8 @@ No effective presentation of the ambient theory is required.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

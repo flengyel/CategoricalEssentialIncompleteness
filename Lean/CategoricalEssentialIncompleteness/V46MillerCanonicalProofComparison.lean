@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonInference
-import Mathlib.Tactic.FinCases
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonInference
+public import Mathlib.Tactic.FinCases
 
 /-! # The actual canonical Γ derivation algebra and generated sentence image
 
@@ -9,6 +16,8 @@ original word proof algebra is constructed from the two initial algebras.
 The final image comparison includes their conclusions and sentence
 pullbacks. No conclusion-image comparison is an input.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

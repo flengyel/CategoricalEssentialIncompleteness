@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalRiceShapiro.Evaluator.History
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
+module
+
+public import CategoricalRiceShapiro.Evaluator.History
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
 
 /-! # Constructing standard primitive values for the literal arithmetic codes
 
@@ -12,6 +14,8 @@ Each closure theorem constructs a function, its actual `Code.eval` proof and
 its `Primrec` certificate. No primitive certificate for the history evaluator
 is supplied as a hypothesis of the eventual history theorem.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

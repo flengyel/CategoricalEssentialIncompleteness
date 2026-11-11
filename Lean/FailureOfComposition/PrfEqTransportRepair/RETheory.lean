@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.PrfEqTransportRepair.Structural
+module
+
+public import FailureOfComposition.PrfEqTransportRepair.Structural
 
 /-!
 # The transport repair at a selected r.e. theory
@@ -13,6 +15,8 @@ selected by the production proof bridge.  It gives the repaired `PrfEq`
 endpoint an exact Sigma-one formula and exposes the PA proof that transport
 preserves that endpoint with all numerical data internally quantified.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

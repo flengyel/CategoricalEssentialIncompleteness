@@ -3,27 +3,29 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Restriction
-import PCats.PCat
-import PCats.HellerNaturalizer
-import PCats.Erratum
-import PCats.DomSemilattice
-import PCats.Unions
-import PCats.Ranges
-import PCats.Coproducts
-import PCats.NCoproducts
-import PCats.CountableUnions
-import PCats.Domains
-import PCats.DomProducts
-import PCats.DomSubdomains
-import PCats.DomSubdomainMorphisms
-import PCats.DomEqualizers
-import PCats.DomPullbacks
-import PCats.DomTotalEmbedding
-import PCats.Recursion
-import PCats.Dominical
-import PCats.DominicalRecursion
-import PCats.OptionKleisli
+module
+
+public import PCats.Restriction
+public import PCats.PCat
+public import PCats.HellerNaturalizer
+public import PCats.Erratum
+public import PCats.DomSemilattice
+public import PCats.Unions
+public import PCats.Ranges
+public import PCats.Coproducts
+public import PCats.NCoproducts
+public import PCats.CountableUnions
+public import PCats.Domains
+public import PCats.DomProducts
+public import PCats.DomSubdomains
+public import PCats.DomSubdomainMorphisms
+public import PCats.DomEqualizers
+public import PCats.DomPullbacks
+public import PCats.DomTotalEmbedding
+public import PCats.Recursion
+public import PCats.Dominical
+public import PCats.DominicalRecursion
+public import PCats.OptionKleisli
 
 /-!
 # Appendix A of the Rice-Shapiro paper
@@ -136,3 +138,5 @@ the image.
 Still unformalized as well are the `Pfn` remark; the classical recursion
 category `T`; and a model of `PRecursionCategory`.
 -/
+
+@[expose] public section

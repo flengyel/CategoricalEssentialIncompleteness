@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
-import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
+public import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
 
 /-! # Preserved inference inputs under the actual PA numerical functor
 
@@ -12,6 +14,8 @@ The natural isomorphism is derived from the already proved finite powers,
 pullbacks and finite coproducts. No equivalence or preservation of initial
 algebras is asserted for this functor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -38,7 +42,7 @@ def sumIso (Q : Over F) : K.obj (∐ R.ruleObject Q) ≅
   simp only [sumIso,Iso.trans_hom,Iso.symm_hom,asIso_inv,
     map_ι_comp_inv_sigmaComparison_assoc,Sigma.ι_mapIso_hom]
 
-private theorem mapSum_hom_ext {I : Type} [Finite I] (X : I → PredicateCategory 𝗣𝗔) {Y : NumericalTuples.Object}
+theorem mapSum_hom_ext {I : Type} [Finite I] (X : I → PredicateCategory 𝗣𝗔) {Y : NumericalTuples.Object}
     (f g : K.obj (∐ X) ⟶ Y)
     (hh : ∀ i, K.map (Sigma.ι X i) ≫ f = K.map (Sigma.ι X i) ≫ g) : f = g := by
   apply (cancel_epi (sigmaComparison K X)).mp

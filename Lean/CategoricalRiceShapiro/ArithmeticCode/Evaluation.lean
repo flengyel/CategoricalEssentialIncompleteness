@@ -30,6 +30,8 @@ composed-code context are proved from them.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open Nat.ArithPart₁

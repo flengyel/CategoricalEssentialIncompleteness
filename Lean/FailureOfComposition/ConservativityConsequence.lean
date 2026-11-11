@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ConcreteWeakTotality
+module
+
+public import FailureOfComposition.ConcreteWeakTotality
 
 /-!
 The program-index reading of Montagna's Theorem 2.3 fails: every standard-input
@@ -13,6 +15,8 @@ is Pi-one conservative, although the guard is not weakly total.
 Conservativity below refers to provability in the actual theory obtained by
 inserting the convergence sentence into PA.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

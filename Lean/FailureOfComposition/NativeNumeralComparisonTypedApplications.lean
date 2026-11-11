@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeNumeralComparisonApplications
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
+module
+
+public import FailureOfComposition.NativeNumeralComparisonApplications
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
 
 /-!
 # Typed and Craig comparison applications
@@ -15,6 +17,8 @@ r.e. theory extending PA-minus, the construction runs in its delta-one Craig
 companion. Craig equivalence gives typed derivability in the original theory.
 It does not identify proof codes of the two presentations.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

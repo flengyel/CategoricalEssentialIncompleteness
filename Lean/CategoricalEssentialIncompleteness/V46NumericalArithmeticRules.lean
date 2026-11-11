@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
 
 /-! # Actual arithmetic axiom labels and unary/binary rule-label comparisons -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

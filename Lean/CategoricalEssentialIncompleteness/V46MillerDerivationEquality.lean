@@ -3,12 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
-import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
-import CategoricalEssentialIncompleteness.V46MillerTotalRegular
-import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
-import CategoricalEssentialIncompleteness.V46CategoricalListLaws
-import Mathlib.CategoryTheory.Functor.EpiMono
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
+public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
+public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
+public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
+public import Mathlib.CategoryTheory.Functor.EpiMono
 
 /-! # Actual internal numerical equality on every uniform carrier
 
@@ -17,6 +19,8 @@ proved finite-geometry comparison. Every arbitrary uniform carrier
 embeds by the identity on values; monomorphism cancellation transports
 the actual diagonal pullback. No coefficient predicate is decided.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

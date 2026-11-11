@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalUnions
-import CategoricalEssentialIncompleteness.PERExtensive
-import Mathlib.CategoryTheory.Subobject.Lattice
+module
+
+public import CategoricalEssentialIncompleteness.NumericalUnions
+public import CategoricalEssentialIncompleteness.PERExtensive
+public import Mathlib.CategoryTheory.Subobject.Lattice
 
 /-!
 # Lattice operations on support subobjects
@@ -14,6 +16,8 @@ Full and empty supports represent the top and bottom subobjects of an equality
 PER. Intersections represent meets. For two c.e. supports, their union represents
 the categorical join by the dovetailing construction in `NumericalUnions`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsCarrier
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsCarrier
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 
 /-! # Literal constructor-preserving list-to-word code translation
 
@@ -14,6 +16,8 @@ the original label and ordered tail. Membership of an arbitrary uniform
 coefficient carrier is a positive support condition, not a code field.
 The inverse word translation and its comparison are separate obligations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

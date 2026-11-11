@@ -16,6 +16,8 @@ equations in this file concern arbitrary PA-model inputs, not only numerals.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

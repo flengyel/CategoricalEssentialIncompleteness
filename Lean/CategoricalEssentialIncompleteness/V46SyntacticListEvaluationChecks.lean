@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntacticListEvaluation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticListEvaluation
 
 /-! Exact graph-level evaluation for arbitrary T-provable parameter fibers. -/
+
+@[expose] public section
 
 noncomputable section
 

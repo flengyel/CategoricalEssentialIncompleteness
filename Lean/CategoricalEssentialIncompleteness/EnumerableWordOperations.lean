@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableWords
-import CategoricalEssentialIncompleteness.PartialListFold
-import CategoricalEssentialIncompleteness.EnumerablePCategory
-import CategoricalEssentialIncompleteness.EnumerableAssociativePrograms
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableWords
+public import CategoricalEssentialIncompleteness.PartialListFold
+public import CategoricalEssentialIncompleteness.EnumerablePCategory
+public import CategoricalEssentialIncompleteness.EnumerableAssociativePrograms
 
 /-! # Actual singleton insertion, concatenation and finite evaluation -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

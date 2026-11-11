@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityOptions
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentity
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityOptions
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentity
 
 /-! The exact quantified admissibility decomposition for the named-variable fold. -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

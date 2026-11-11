@@ -1,4 +1,6 @@
-import Metamath
+module
+
+public import Metamath
 
 /-!
 # Axiom check for `Metamath`
@@ -56,6 +58,8 @@ It appears nowhere in the computational content. `#print axioms` does not list
 of its proof term and does not distinguish the two, so nothing here should be
 read as a claim about which of the two introduces a given axiom.
 -/
+
+@[expose] public section
 
 open Metamath.Feferman
 

@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalCarriers
-import PCats.Recursion
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalCarriers
+public import PCats.Recursion
 
 /-! # Restriction products of arbitrary uniformly semidecidable carriers -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

@@ -18,6 +18,8 @@ arithmetization structure or realization premise is supplied by the caller.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

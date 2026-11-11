@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPredicates
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
-import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPredicates
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
+public import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
 
 /-! # Source equalities for the actual arithmetic theorem/refutation pullbacks
 
@@ -13,6 +15,8 @@ The raw source program is that of the constructed fixed-formula morphism.
 The two inverse-image predicates are identified by universal PA graph
 equality before interpreting any particular model.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkCosheafExamples
-import CategoricalEssentialIncompleteness.ForkObstruction
-import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
-import CategoricalEssentialIncompleteness.EffectiveForkIdempotents
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
+module
+
+public import CategoricalEssentialIncompleteness.ForkCosheafExamples
+public import CategoricalEssentialIncompleteness.ForkObstruction
+public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
+public import CategoricalEssentialIncompleteness.EffectiveForkIdempotents
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
 
 /-! # The actual terminal numerical and fork domain lattices have two and five elements -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerDerivationTrees
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationTrees
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
 
 /-! # Arbitrary finite-rule initiality for actual uniform carriers
 
@@ -15,6 +17,8 @@ matching, and the existing success adjunction proves its universal
 property. Neither initiality nor successful-tree comparison is supplied
 as a hypothesis.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

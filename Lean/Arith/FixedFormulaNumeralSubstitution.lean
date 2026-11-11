@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.FirstOrder.Arithmetic.Schemata
-import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
+module
+
+public import Foundation.FirstOrder.Arithmetic.Schemata
+public import Foundation.FirstOrder.Syntax.Classical.PrimrecCoding
 
 /-!
 # Primitive-recursive substitution of numerals into a fixed formula
@@ -13,6 +15,8 @@ For a fixed arithmetic formula, its syntax after substituting two or three
 numerals is primitive recursive in those numerals.  The result concerns the
 actual `Encodable` syntax, rather than a separate numbering of formulas.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

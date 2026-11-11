@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
+
+
+/-! # Statement checks in `V46MillerUniformTreesEvaluationChecks` -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.UniformTrees
 variable {P : Uniform.Family}

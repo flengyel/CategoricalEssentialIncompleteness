@@ -1,6 +1,15 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationRules
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRules
 
 /-! The positive literal matching carrier has the actual pullback universal property. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

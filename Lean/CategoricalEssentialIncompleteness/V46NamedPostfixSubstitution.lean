@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
 
 /-! # The numerical substitution traversal on standard named syntax -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

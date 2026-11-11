@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Categorical
-import FailureOfComposition.NumericalExtensionComposition.Application
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Categorical
+public import FailureOfComposition.NumericalExtensionComposition.Application
 
 /-!
 # Constant-zero application of the B1(8) theta computation
@@ -15,6 +17,8 @@ application, not the nowhere-defined categorical zero.  Internal vacuity of
 theta graph is the second-projection graph.  The quotient equality and the
 uniform supplied-proof examples follow from that statement.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

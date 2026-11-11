@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.CodedObjectMembership
-import Foundation.FirstOrder.Arithmetic.Exponential.Bit
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import FailureOfComposition.CodedObjectMembership
+public import Foundation.FirstOrder.Arithmetic.Exponential.Bit
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-!
 # Binary codes for finite partial functions
@@ -20,6 +22,8 @@ predicate and arithmetic pairing.  Its standard interpretation therefore uses
 `Nat.pair`; it is unrelated to the proof-syntax pairing operation used by the
 Feferman proof presentation.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

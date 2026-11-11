@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ExponentialProducts
-import CategoricalEssentialIncompleteness.V46KaroubiRestriction
-import FailureOfComposition.TypedRecursionCategory
-import Mathlib.CategoryTheory.InducedCategory
+module
+
+public import CategoricalEssentialIncompleteness.V46ExponentialProducts
+public import CategoricalEssentialIncompleteness.V46KaroubiRestriction
+public import FailureOfComposition.TypedRecursionCategory
+public import Mathlib.CategoryTheory.InducedCategory
 
 /-! # Formal object codes with exponential products -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

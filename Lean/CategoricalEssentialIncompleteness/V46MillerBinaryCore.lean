@@ -1,8 +1,17 @@
-import Mathlib.Analysis.Real.OfDigits
-import Mathlib.Topology.Compactness.Compact
-import Mathlib.Data.List.OfFn
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import Mathlib.Analysis.Real.OfDigits
+public import Mathlib.Topology.Compactness.Compact
+public import Mathlib.Data.List.OfFn
 
 /-! # Binary representations and their compact fibers for the Miller construction -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

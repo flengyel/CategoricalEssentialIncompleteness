@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PERCoproducts
-import CategoricalEssentialIncompleteness.PERPullbacks
+module
+
+public import CategoricalEssentialIncompleteness.PERCoproducts
+public import CategoricalEssentialIncompleteness.PERPullbacks
 
 /-!
 # Pullback squares for the coproduct of terminal PERs
@@ -13,6 +15,8 @@ The map to the coproduct of two terminal objects records the summand of a
 representative. Its fibers are the original summands. Decoding the second
 coordinate gives the mediating arrows in the two pullback squares.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

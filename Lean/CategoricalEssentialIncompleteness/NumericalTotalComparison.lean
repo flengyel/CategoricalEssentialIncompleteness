@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPCategory
-import CategoricalEssentialIncompleteness.NumericalTotalProducts
-import PCats.DomTotalEmbedding
-import Mathlib.CategoryTheory.Adjunction.Limits
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPCategory
+public import CategoricalEssentialIncompleteness.NumericalTotalProducts
+public import PCats.DomTotalEmbedding
+public import Mathlib.CategoryTheory.Adjunction.Limits
 
 /-!
 # Comparison of the numerical total-arrow categories
@@ -15,6 +17,8 @@ The restriction induced by the numerical P-category and the original numerical
 restriction have the same total arrows. The comparison functors preserve the
 underlying arrows and identify the two product pairings.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalRangeProofs.Structural.ProofGraph
-import FailureOfComposition.NumericalProofBridge.Structural.BridgeMaps
+module
+
+public import FailureOfComposition.NumericalRangeProofs.Structural.ProofGraph
+public import FailureOfComposition.NumericalProofBridge.Structural.BridgeMaps
 
 /-!
 # Arithmetic graph of the range proof map
@@ -14,6 +16,8 @@ functional Sigma-one graph.  The structural preservation lemmas below build
 the computation line, apply the ordinary right-instance bridge, and finally
 apply the fixed range-introduction line inside arbitrary PA models.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

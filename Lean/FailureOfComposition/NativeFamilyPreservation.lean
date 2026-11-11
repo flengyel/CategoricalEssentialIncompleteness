@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyInstances
-import FailureOfComposition.NativeFamilyConstructor
+module
+
+public import FailureOfComposition.NativeFamilyInstances
+public import FailureOfComposition.NativeFamilyConstructor
 
 /-!
 # Context-preserving internal extraction
@@ -14,6 +16,8 @@ Its validity follows from those derivations. The constructor theorem needs
 no arithmetic-strength, consistency, soundness, or totality hypothesis:
 the supplied seed already supplies the required arithmetic argument.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

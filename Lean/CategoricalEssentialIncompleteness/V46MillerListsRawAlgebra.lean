@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsFold
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsFold
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 
 /-! # The actual parameterized raw list constructors
 
@@ -13,6 +15,8 @@ A recursive list leaf is its actual family code pair(r,list), not the
 bare list coordinate. The cons constructor proves the shared parameter
 from the source projection and then reads that leaf's list coordinate.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -22,7 +26,7 @@ namespace CategoricalEssentialIncompleteness.V46.Miller.Lists
 open SyntacticSyntax.NatVectors
 variable {P : Uniform.Family}
 
-private def fromFunction {R : Total.TotalCategory P} {A B Z : Over R}
+def fromFunction {R : Total.TotalCategory P} {A B Z : Over R}
     (p : SyntaxPolynomial (Total.TotalCategory P)) (f : ℕ → ℕ) (hf : Computable f)
     (hs : ∀ n,n ∈ (Syntax.Raw.fiberCarrier R A B p).support → f n ∈ Z.left.obj.support)
     (hp : ∀ n,n ∈ (Syntax.Raw.fiberCarrier R A B p).support →

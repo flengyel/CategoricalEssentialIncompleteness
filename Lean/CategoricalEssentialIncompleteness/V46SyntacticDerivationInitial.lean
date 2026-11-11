@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparison
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessCarrier
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortInitial
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparison
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessCarrier
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortInitial
 
 /-! The actual finite-inference derivation initial algebra, for arbitrary rule data. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

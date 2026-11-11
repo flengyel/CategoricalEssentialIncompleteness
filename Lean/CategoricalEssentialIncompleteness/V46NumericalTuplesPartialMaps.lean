@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
-import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
-import CategoricalEssentialIncompleteness.V46PartialMapRanges
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
+public import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
+public import CategoricalEssentialIncompleteness.V46PartialMapRanges
 
 /-! # The full numerical tuple and ordinary monic-span realization -/
+
+@[expose] public section
 
 noncomputable section
 

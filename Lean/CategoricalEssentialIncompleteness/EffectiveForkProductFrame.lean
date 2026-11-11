@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkFunctions
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkFunctions
 
 /-! # The explicit product frame on the universal fork -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -82,7 +86,7 @@ theorem mergeCenter_computable : Computable mergeCenter := by
 @[simp] theorem split_merge_center (x : ℕ) : splitCenter (mergeCenter x)=x := by
   simp [mergeCenter,splitCenter,quadCode,Nat.pair_unpair]
 
-private theorem prod_support (x : ℕ) :
+theorem prod_support (x : ℕ) :
     x ∈ (EnumerableCarriers.product natCarrier natCarrier).support := ⟨Set.mem_univ _,Set.mem_univ _⟩
 
 theorem split_left (x : ℕ) :

@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
 
 /-! # Restriction structure on monic-span classes -/
+
+@[expose] public section
 
 universe v u
 set_option backward.isDefEq.respectTransparency false

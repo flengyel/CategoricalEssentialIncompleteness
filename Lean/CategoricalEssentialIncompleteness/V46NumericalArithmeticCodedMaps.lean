@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
-import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
+public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 
 /-! # The actual coded graph and image predicate of a numerical morphism -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -15,7 +19,7 @@ open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.CodedMaps
-private abbrev E := NumericalNamed.literalEquivalence
+abbrev E := NumericalNamed.literalEquivalence
 local notation "F" => PredicateInterpretation.functor 𝗧𝗔 ℕ
 variable {X Y : NumericalTuples.Object}
 

@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.RestrictionSplitting
-import Mathlib.CategoryTheory.Equivalence
-import Mathlib.CategoryTheory.Widesubcategory
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
-import Mathlib.CategoryTheory.Adjunction.Limits
-import Mathlib.SetTheory.Cardinal.Finite
+module
+
+public import CategoricalEssentialIncompleteness.RestrictionSplitting
+public import Mathlib.CategoryTheory.Equivalence
+public import Mathlib.CategoryTheory.Widesubcategory
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
+public import Mathlib.CategoryTheory.Adjunction.Limits
+public import Mathlib.SetTheory.Cardinal.Finite
 
 /-! # Restriction equivalences preserve splitting and total categories -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

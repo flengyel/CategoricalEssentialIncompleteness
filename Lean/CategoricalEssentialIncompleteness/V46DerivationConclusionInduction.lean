@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46DerivationStandardInduction
+module
+
+public import CategoricalEssentialIncompleteness.V46DerivationStandardInduction
 
 /-! # Conclusion induction through the original typed premises -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
 
 /-! The fixed arithmetic signature, with literal variable names and
 ordered children. Equality is the built-in formula constructor; the
 single ordinary relation symbol is strict order. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

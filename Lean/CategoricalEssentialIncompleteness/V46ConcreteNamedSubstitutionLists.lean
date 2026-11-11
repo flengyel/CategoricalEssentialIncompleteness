@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
-import CategoricalEssentialIncompleteness.V46SyntacticLists
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
+public import CategoricalEssentialIncompleteness.V46SyntacticLists
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
 /-! Numeric named-variable list operations, with PA equations and actual
 standard primitive-recursion certificates. Every repeated variable is retained
 until an explicitly named deletion. No predicate membership is decided. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedListsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

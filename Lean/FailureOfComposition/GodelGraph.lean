@@ -15,6 +15,8 @@ Graph witnesses for the second-incompleteness obstruction.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

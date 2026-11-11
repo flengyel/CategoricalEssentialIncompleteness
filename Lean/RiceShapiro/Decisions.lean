@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.Selection
+module
+
+public import RiceShapiro.Selection
 
 /-!
 # Joins, complemented domains, decisions, and case distinction
@@ -19,6 +21,8 @@ Route (i) and the derivation of decisions from local connectedness are not
 formalized here. The full case-distinction laws are proved in
 `RiceShapiro.CaseLaws`.
 -/
+
+@[expose] public section
 
 universe v u
 

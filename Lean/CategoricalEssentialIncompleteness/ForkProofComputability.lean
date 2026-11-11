@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkProofTreeRecursion
-import CategoricalEssentialIncompleteness.ForkSyntaxObjects
+module
+
+public import CategoricalEssentialIncompleteness.ForkProofTreeRecursion
+public import CategoricalEssentialIncompleteness.ForkSyntaxObjects
 
 /-! # Computable proof conclusions and finite signed-leaf lists -/
+
+@[expose] public section
 
 noncomputable section
 
@@ -125,7 +129,8 @@ theorem conclusion_computable : Computable conclusion := by
         match b with
         | .imp c d => if c=a then some d else none
         | _ => none))
-    cases conclusion t <;> cases conclusion u <;> simp only [Option.bind_none,Option.bind_some,mpResult_eq]
+    cases conclusion t <;> cases conclusion u <;>
+      simp only [Option.bind_none,Option.bind_some,mpResult_eq] <;> rfl
 
 def positiveList : ProofTree → List ℕ :=
   fold (fun _ => []) (fun _ => []) (fun _ => []) List.singleton (fun _ => []) (fun p => p.1++p.2)

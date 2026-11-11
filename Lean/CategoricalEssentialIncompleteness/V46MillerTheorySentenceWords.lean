@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSentenceMembership
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
-import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSentenceMembership
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
+public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
 
 /-! # The chosen sentence object and its actual literal-word carrier
 
@@ -8,6 +15,8 @@ The chart uses the existing sentence-word monomorphism and its proved
 partial inverse. The chosen sentence point keeps its own coordinate;
 only its image under the sentence-word morphism is a formula word.
 -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
@@ -80,7 +89,7 @@ theorem sentenceWord_image : Total.Subobjects.imageCodes (wordMap)=literalSet :=
     exact ⟨(NamedProofImage.sentencePoint P σ π d φ hc).val,
       NamedProofImage.sentencePoint_word P σ π d φ hc⟩
 
-private theorem literal_formula_supported (word : ℕ)
+theorem literal_formula_supported (word : ℕ)
     (hw : word∈(literalObject P).obj.support) : word∈((F).obj (S₀).algebra.a.2).obj.support := by
   apply (AxiomSubobjects.mapped_support P (S₀).algebra.a.2 word).mpr
   exact ((ConcreteNamedComparison.literalSentenceCarrier_eval 𝗣𝗔
@@ -167,7 +176,7 @@ theorem sentencePoint_value (φ : Formula) (hc : φ.freeVariables=[]) :
   Part.mem_unique ((toLiteral_graph P _ _).mp (Total.totalFunction_mem (sentenceIso P).hom _))
     (NamedProofImage.sentencePoint_word P σ π d φ hc)
 
-private theorem negation_supported (word : ℕ) (hw : word∈(literalObject P).obj.support) :
+theorem negation_supported (word : ℕ) (hw : word∈(literalObject P).obj.support) :
     negationWord word∈(literalObject P).obj.support := by
   obtain ⟨φ,hc,rfl⟩ := (literal_iff_native word).mp ((literal_support P word).mp hw)
   exact (literal_support P _).mpr (negation_sentence φ hc)

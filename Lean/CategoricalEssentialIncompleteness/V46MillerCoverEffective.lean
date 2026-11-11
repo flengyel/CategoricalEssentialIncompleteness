@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46MillerCoverSemantics
-import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
-import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCoverSemantics
+public import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
+public import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
 
 /-! # An ordinary semidecision program for successful finite covers -/
+
+@[expose] public section
 noncomputable section
 open Encodable Denumerable
 namespace CategoricalEssentialIncompleteness.V46.Miller.Unanimity

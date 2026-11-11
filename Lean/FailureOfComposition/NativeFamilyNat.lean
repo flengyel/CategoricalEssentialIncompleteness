@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeFamilyConstructor
+module
+
+public import FailureOfComposition.NativeFamilyConstructor
 
 /-!
 # Full-domain numerical comparison for family extraction
@@ -11,6 +13,8 @@ import FailureOfComposition.NativeFamilyConstructor
 These equalities have no well-formedness or proof-acceptance premises.
 Malformed numerical inputs retain the behavior fixed by the constructor.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

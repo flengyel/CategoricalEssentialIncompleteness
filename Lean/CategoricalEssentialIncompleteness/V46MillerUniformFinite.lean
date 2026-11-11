@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerUniformComputations
-import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerUniformComputations
+public import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
 
 /-! # Positive finite records for the actual uniform oracle families
 
@@ -8,6 +15,8 @@ obtained from the actual uniform machine graph characterization. Finite
 conjunction takes the maximum of finitely many required prefix lengths.
 No oracle is selected and the empty record needs no coefficient inhabitant.
 -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Uniform
 open OracleProgram

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.CharacteristicArrows
+module
+
+public import CategoricalEssentialIncompleteness.CharacteristicArrows
 
 /-!
 # The internal Boolean algebra on `1 + 1`
@@ -12,6 +14,8 @@ Operations are arrows, constructed by the universal coproduct
 decompositions. Their identities are checked after restriction to truth-value
 fibers, not merely at global points.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

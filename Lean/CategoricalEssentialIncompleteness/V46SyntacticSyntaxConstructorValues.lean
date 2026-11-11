@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
 
 /-! # Actual parameterized constructors retain the literal postfix coordinates -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

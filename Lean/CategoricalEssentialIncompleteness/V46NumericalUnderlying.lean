@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalSyntax
-import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
-import CategoricalEssentialIncompleteness.EnumerableExtensive
-import Mathlib.CategoryTheory.Limits.Yoneda
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalSyntax
+public import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
+public import CategoricalEssentialIncompleteness.EnumerableExtensive
+public import Mathlib.CategoryTheory.Limits.Yoneda
 
 /-! # The actual underlying carrier functor for numerical tuples -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.Limits Opposite
 open CategoricalEssentialIncompleteness.LocalConnectedness

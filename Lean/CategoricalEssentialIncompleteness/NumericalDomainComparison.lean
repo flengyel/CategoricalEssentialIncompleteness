@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPCategory
-import CategoricalEssentialIncompleteness.NumericalDomainReindexing
-import CategoricalEssentialIncompleteness.RestrictionPredicates
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPCategory
+public import CategoricalEssentialIncompleteness.NumericalDomainReindexing
+public import CategoricalEssentialIncompleteness.RestrictionPredicates
 
 /-!
 # Numerical domains and the P-category domain lattice
@@ -15,6 +17,8 @@ domains of the numerical P-category, with the same underlying arrows.
 The comparison transports the numerical joins and their inverse-image laws
 to the P-category domain lattice.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

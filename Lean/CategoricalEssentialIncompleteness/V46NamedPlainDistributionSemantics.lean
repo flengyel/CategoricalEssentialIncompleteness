@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
-import CategoricalEssentialIncompleteness.V46ModelQuantifierSoundness
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
-import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
-import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
+public import CategoricalEssentialIncompleteness.V46ModelQuantifierSoundness
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
+public import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
+public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
 
 /-! # The actual absent-variable parameter fiber and distribution soundness -/
+
+@[expose] public section
 
 universe w
 noncomputable section

@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraFormula
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraFormula
 
 /-! The actual two-sorted substitution algebra isomorphism. The only
 operation premises concern the independently constructed lists; every
 substitution branch equation has already been derived. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

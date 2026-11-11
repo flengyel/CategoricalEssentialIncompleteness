@@ -3,16 +3,20 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofConnectives
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofNumerals
-import Foundation.FirstOrder.LK.Simplified
+module
 
-/-! # Finite source proofs and literal named proofs
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofConnectives
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofNumerals
+public import Foundation.FirstOrder.LK.Simplified
 
-The source axiom premise below concerns individual axioms only. The
-translation is proved by induction on the actual LK2 derivation. Its
-concrete application still requires the chosen enumeration comparison.
+/-! # Translation of finite LK2 proofs to named proofs
+
+Induction on LK2 derivations translates proofs under the stated
+axiom-admissibility premise. The axiom-comparison modules instantiate
+this premise for PA.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedProofTranslation

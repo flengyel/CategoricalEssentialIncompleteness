@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Metamath
+module
+
+public import Metamath
 
 /-!
 # Regression test for the Feferman MP proof-sequence layer
@@ -36,6 +38,8 @@ propagating to `MPSequence.lean`'s downstream consumers.
 axiom grep to `Tests/`, so the output here is informational; the enforced
 check for this root is `check_metamath_axioms.lean`.
 -/
+
+@[expose] public section
 
 namespace Metamath.Feferman.Test
 

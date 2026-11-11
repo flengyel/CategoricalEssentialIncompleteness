@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeEqualityTransport
+module
+
+public import FailureOfComposition.NativeEqualityTransport
 
 /-!
 # An executable family-proof constructor
@@ -15,6 +17,8 @@ triples `(((seed,Gamma),e),(((m,pH),pK),((u,y),y')))`. Three specializations are
 by four context-preserving applications of modus ponens. Syntax projections
 are total even on malformed inputs; correctness requires the supplied proofs.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnumerableCarriers
-import PCats.Recursion
+module
+
+public import CategoricalEssentialIncompleteness.EnumerableCarriers
+public import PCats.Recursion
 
 /-! # Restriction products of arbitrary c.e. numerical carriers -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

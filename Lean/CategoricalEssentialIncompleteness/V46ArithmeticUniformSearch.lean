@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSearch
-import CategoricalEssentialIncompleteness.V46ExponentialPairing
-import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
-import CategoricalEssentialIncompleteness.V46ParameterizedTuringDiagonal
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSearch
+public import CategoricalEssentialIncompleteness.V46ExponentialPairing
+public import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
+public import CategoricalEssentialIncompleteness.V46ParameterizedTuringDiagonal
 
 /-! # Joint functional search for the uniform arithmetic construction
 
@@ -10,6 +17,8 @@ program is nevertheless functional. Its soundness and domain are proved
 without a disjointness hypothesis; exactness is used only at a supplied
 disjoint parameter fiber.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

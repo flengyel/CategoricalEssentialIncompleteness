@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Soundness
-import FailureOfComposition.NumericalExtensionProofs.Structural.Codes
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Soundness
+public import FailureOfComposition.NumericalExtensionProofs.Structural.Codes
 
 /-!
 # Arithmetic graphs of the extension-composition scheme codes
@@ -14,6 +16,8 @@ graphs expose every program-index constructor and endpoint-code constructor,
 so later preservation theorems do not treat external primitive-recursive
 functions as opaque.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

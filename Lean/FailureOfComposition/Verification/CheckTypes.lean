@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition
+module
+
+public import FailureOfComposition
 
 /-!
 Audit the complete types and hypotheses of the maintained public results.
 -/
+
+@[expose] public section
 
 -- Full theorem types expose mathematical hypotheses independently of axioms.
 #check @FailureOfComposition.ConcreteEvaluator.eventualGraph_functional

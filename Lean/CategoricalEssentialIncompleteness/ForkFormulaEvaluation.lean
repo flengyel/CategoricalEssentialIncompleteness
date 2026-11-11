@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkFormulaSubstitution
-import Mathlib.Computability.Partrec
+module
+
+public import CategoricalEssentialIncompleteness.ForkFormulaSubstitution
+public import Mathlib.Computability.Partrec
 
 /-! # Formula evaluation with partial recursive constructor operations
 
 The operations may be undefined away from the chosen algebra carrier.
 Correct recursive tables only query them on semantic values of formulas.
 -/
+
+@[expose] public section
 
 noncomputable section
 

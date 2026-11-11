@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationIndexAlgebra
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationStandardCoherence
-import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationIndexAlgebra
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationStandardCoherence
+public import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
 
 /-! # Literal word identity of the constructed PA derivation comparison
 
@@ -15,6 +17,8 @@ word algebra isomorphism is compared with it by algebra-morphism
 uniqueness. The resulting inclusion square proves equality of the
 original scalar proof words, in both directions.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -25,7 +29,7 @@ namespace CategoricalEssentialIncompleteness.V46.NumericalDerivationInterpretati
 open SyntacticSyntax SyntacticDerivation
 open NumericalSyntaxTreeChart (wordPresentationIso)
 
-private theorem scalar_comp {C : PredicateCategory 𝗣𝗔} {D H : PredicateCategory 𝗧𝗔}
+theorem scalar_comp {C : PredicateCategory 𝗣𝗔} {D H : PredicateCategory 𝗧𝗔}
     (a : K.obj C ≅ NumericalSyntaxTreeChart.E.functor.obj D)
     (b : NumericalSyntaxTreeChart.E.functor.obj D ≅ NumericalSyntaxTreeChart.E.functor.obj H)
     (ha : CarrierScalarIdentity C D a) (hb : IndexAlgebra.WordValue D H b.hom) :
@@ -33,7 +37,7 @@ private theorem scalar_comp {C : PredicateCategory 𝗣𝗔} {D H : PredicateCat
   intro x
   exact (hb (a.hom.toFun x)).trans (ha x)
 
-private theorem scalar_arrow {X Y Z : NumericalTuples.Object}
+theorem scalar_arrow {X Y Z : NumericalTuples.Object}
     (f : X ⟶ Z) (g : X ⟶ Y) (h : Y ⟶ Z) (he : f = g ≫ h)
     (vX : NumericalTuples.Point X → ℕ) (vZ : NumericalTuples.Point Z → ℕ)
     (hv : ∀ x, vZ (h.toFun (g.toFun x)) = vX x) (x : NumericalTuples.Point X) :
@@ -41,14 +45,14 @@ private theorem scalar_arrow {X Y Z : NumericalTuples.Object}
   (congrArg (fun k => vZ (k.toFun x)) he).trans
     ((congrArg vZ (NumericalTuples.composition_apply g h x)).trans (hv x))
 
-private theorem scalar_change {C D : NumericalTuples.Object} (f g : C ⟶ D) (he : f = g)
+theorem scalar_change {C D : NumericalTuples.Object} (f g : C ⟶ D) (he : f = g)
     (vC : NumericalTuples.Point C → ℕ) (vD : NumericalTuples.Point D → ℕ)
     (hg : ∀ x, vD (g.toFun x) = vC x) (x : NumericalTuples.Point C) :
     vD (f.toFun x) = vC x := by
   rw [he]
   exact hg x
 
-private theorem scalar_composition {C D H : NumericalTuples.Object} (f : C ⟶ D) (g : D ⟶ H)
+theorem scalar_composition {C D H : NumericalTuples.Object} (f : C ⟶ D) (g : D ⟶ H)
     (vC : NumericalTuples.Point C → ℕ) (vD : NumericalTuples.Point D → ℕ)
     (vH : NumericalTuples.Point H → ℕ)
     (hf : ∀ x, vD (f.toFun x) = vC x) (hg : ∀ x, vH (g.toFun x) = vD x)
@@ -96,7 +100,9 @@ theorem storedJointWordIso_first : IndexAlgebra.firstCarrierIso (storedJointWord
   exact CategoryTheory.Category.id_comp _
 
 /-- The complete joint algebra comparison fixes the raw postfix word. -/
-abbrev storedJointWordIso_value := by
+abbrev storedJointWordIso_value :
+    CarrierScalarIdentity (S).a.1 (NumericalSyntaxTreeChart.rawPairAlgebra pN .unit).a.1
+      (IndexAlgebra.firstCarrierIso (storedJointWordIso R)) := by
   have h := scalar_comp j₀ (IndexAlgebra.firstCarrierIso I).symm
     (realizedWordIso_value false p .unit) (IndexAlgebra.normalizedTemplateIsoTo_inverse_word p .unit pN .unit hp rfl)
   rw [← storedJointWordIso_first R] at h
@@ -153,7 +159,7 @@ def sourceProofWord : K.obj (SyntacticDerivation.derivationAlgebra 𝗣𝗔 R).a
     (NumericalDerivation.literalOrdinaryTree (interpretedRules R)).a :=
   K.map (SyntacticDerivation.treeInclusion 𝗣𝗔 R) ≫ (ordinaryWordIso R).hom.f
 
-private theorem success_inclusion_value {W F : PredicateCategory 𝗣𝗔}
+theorem success_inclusion_value {W F : PredicateCategory 𝗣𝗔}
     (v : W ⟶ OptionSyntax.obj F) (x : NumericalTuples.Point (K.obj (SuccessCarrier.carrier v))) :
     ((K.map (representedArrow 𝗣𝗔 (SuccessCarrier.inclusion v))).toFun x).val = x.val := by
   have h := (PredicateInterpretation.map_class_eq_iff 𝗣𝗔 ℕ (SuccessCarrier.inclusion v) x

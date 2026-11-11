@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
 
 /-! # One actual all-oracle rational program for each finite bad-set distance
 
@@ -12,6 +14,8 @@ DistanceApproximation. The finite-use compiler produces one index before
 any oracle or numerical parameter; no realizer or output uniformity across
 representations is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxUnique
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTerminal
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
-import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
-import CategoricalEssentialIncompleteness.V46SyntacticListsStable
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxUnique
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTerminal
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
+public import CategoricalEssentialIncompleteness.V46SyntacticListsStable
 
 /-! # The actual parameter-stable initial algebra on literal postfix syntax -/
+
+@[expose] public section
 
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

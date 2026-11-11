@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps
-import CategoricalEssentialIncompleteness.EffectiveForkExtensive
-import CategoricalEssentialIncompleteness.EffectiveForkSpans
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps
+public import CategoricalEssentialIncompleteness.EffectiveForkExtensive
+public import CategoricalEssentialIncompleteness.EffectiveForkSpans
 
 /-! # The numerical tuple presentation of total effective forks -/
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory CategoryTheory.Limits

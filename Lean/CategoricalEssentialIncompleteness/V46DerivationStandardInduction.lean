@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46DerivationStandardInductionRank
-import Mathlib.CategoryTheory.Limits.Types.Coproducts
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
+module
+
+public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionRank
+public import Mathlib.CategoryTheory.Limits.Types.Coproducts
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
 
 /-! # Rule induction on the constructed standard derivation codes
 
@@ -14,6 +16,8 @@ coproducts. Well-founded induction uses the proved decrease of the actual
 standard node count, without an assumption that the functor preserves
 initial algebras.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

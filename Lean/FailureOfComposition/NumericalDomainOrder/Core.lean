@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalProductProofs.Core
+module
+
+public import FailureOfComposition.NumericalProductProofs.Core
 
 /-!
 # Numerical transfer along a domain inequality
@@ -14,6 +16,8 @@ antecedents say that the composite index `compIndex s r` has the same graph as
 resulting proof transformation consists of a one-line scheme proof followed by
 two applications of numerical modus ponens.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -75,20 +79,20 @@ theorem primrec_domainOrderAxiomCode :
 
 /-! ## Exact primitive-recursive recognition -/
 
-private def domainOrderTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
+def domainOrderTokenAt (j : ℕ) (x : FormulaString) : ℕ :=
   x.getD j 0
 
 private theorem primrec_domainOrderTokenAt (j : ℕ) :
     Primrec (domainOrderTokenAt j) :=
   (Primrec.list_getD 0).comp Primrec.id (Primrec.const j)
 
-private def recoveredOuterProgram (x : FormulaString) : ℕ :=
+def recoveredOuterProgram (x : FormulaString) : ℕ :=
   domainOrderTokenAt 1 (rhsString (rhsString x))
 
-private def recoveredInnerProgram (x : FormulaString) : ℕ :=
+def recoveredInnerProgram (x : FormulaString) : ℕ :=
   domainOrderTokenAt 2 (lhsString x)
 
-private def recoveredInput (x : FormulaString) : ℕ :=
+def recoveredInput (x : FormulaString) : ℕ :=
   domainOrderTokenAt 2 (lhsString (rhsString x))
 
 private theorem primrec_recoveredOuterProgram :
@@ -119,7 +123,7 @@ private theorem primrec_recoveredInput : Primrec recoveredInput :=
   simp [recoveredInput, domainOrderAxiomString, domainOrderTokenAt,
     rightInstanceString]
 
-private def domainOrderAxiomCandidate (x : FormulaString) : FormulaString :=
+def domainOrderAxiomCandidate (x : FormulaString) : FormulaString :=
   domainOrderAxiomString (recoveredOuterProgram x)
     (recoveredInnerProgram x) (recoveredInput x)
 

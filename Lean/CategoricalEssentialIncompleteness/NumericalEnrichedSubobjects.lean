@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnrichedGlobal
-import CategoricalEssentialIncompleteness.NumericalEnrichedPredicates
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnrichedGlobal
+public import CategoricalEssentialIncompleteness.NumericalEnrichedPredicates
 
 /-!
 # Global numerical predicates as PER subobjects
@@ -15,6 +17,8 @@ identifies global predicates naturally with the full subobject lattices along
 this functor. The induced domain embedding agrees with the numerical support
 embedding.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

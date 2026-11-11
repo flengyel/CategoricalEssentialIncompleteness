@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkCosheafQuotient
-import CategoricalEssentialIncompleteness.EffectiveForkLimits
-import Mathlib.CategoryTheory.Subterminal
-import Mathlib.CategoryTheory.Limits.FunctorCategory.Shapes.Terminal
-import Mathlib.SetTheory.Cardinal.Finite
+module
+
+public import CategoricalEssentialIncompleteness.ForkCosheafQuotient
+public import CategoricalEssentialIncompleteness.EffectiveForkLimits
+public import Mathlib.CategoryTheory.Subterminal
+public import Mathlib.CategoryTheory.Limits.FunctorCategory.Shapes.Terminal
+public import Mathlib.SetTheory.Cardinal.Finite
 
 /-! # Products and monomorphisms of cosheaves are not computed at every open -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

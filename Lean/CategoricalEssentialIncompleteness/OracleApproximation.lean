@@ -3,9 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleDomainNumbering
+module
+
+public import CategoricalEssentialIncompleteness.OracleDomainNumbering
 
 /-! # Ordinary partial computations using finite oracle tables -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -26,7 +30,7 @@ namespace HasApproximation
 
 variable {S : Set ℕ} {f g : ℕ → Part ℕ}
 
-theorem of_eq (hf : HasApproximation S f) (h : ∀ x,f x=g x) : HasApproximation S g :=
+theorem of_eq (hf : HasApproximation S f) (h : ∀ x, f x = g x) : HasApproximation S g :=
   (funext h : f=g) ▸ hf
 
 theorem of_partrec (hf : Partrec f) : HasApproximation S f :=

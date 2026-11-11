@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
-import Mathlib.CategoryTheory.Limits.Constructions.Over.Basic
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
+public import Mathlib.CategoryTheory.Limits.Constructions.Over.Basic
 
 /-! # The actual ordered raw polynomial product in every parameter slice
 
@@ -13,6 +15,8 @@ separately. The lift uses the graphs of arbitrary supplied slice morphisms.
 Their common parameter follows from their Over equations, rather than from
 any equality condition on the child values themselves.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

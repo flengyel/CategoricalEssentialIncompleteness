@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPredicates
-import CategoricalEssentialIncompleteness.ComplementedSubobjects
-import CategoricalEssentialIncompleteness.NumericalBooleanFibers
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPredicates
+public import CategoricalEssentialIncompleteness.ComplementedSubobjects
+public import CategoricalEssentialIncompleteness.NumericalBooleanFibers
 
 /-!
 # Complemented numerical subobjects
@@ -14,6 +16,8 @@ The complemented subobjects of the equality PER on `ℕ` are exactly the
 recursive support inclusions. Equivalently, they are the upper fibers of
 Boolean arrows, or the images of complemented numerical restriction domains.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

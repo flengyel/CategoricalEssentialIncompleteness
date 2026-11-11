@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
 
 /-! # Occurrence comparison from the actual mapped list-algebra equality -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

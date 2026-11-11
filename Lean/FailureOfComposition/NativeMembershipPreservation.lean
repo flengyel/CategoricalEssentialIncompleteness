@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeMembershipInstances
-import FailureOfComposition.NativeMembershipConstructor
+module
+
+public import FailureOfComposition.NativeMembershipInstances
+public import FailureOfComposition.NativeMembershipConstructor
 
 /-!
 # Same-context preservation for native membership assembly
@@ -14,6 +16,8 @@ theorems use only same-context derivations, without assumptions of actual
 totality, source membership, soundness, or consistency. Formula instances are
 closed by internal numerals; this is not a general free-variable compiler.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

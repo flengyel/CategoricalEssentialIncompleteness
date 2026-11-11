@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
-import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
+public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
 
 /-! # Arbitrary uniformly semidecidable numerical carriers
 
@@ -13,6 +15,8 @@ ordinary partial-recursive value extension and no inhabited carrier is
 required. Restriction, image, and graph computations use the actual
 uniform oracle programs already constructed in Proposition 8.2.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

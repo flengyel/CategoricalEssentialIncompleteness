@@ -3,11 +3,13 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
-import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
-import CategoricalEssentialIncompleteness.V46LogicalComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
+public import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
+public import CategoricalEssentialIncompleteness.V46LogicalComparison
 
 /-! # The actual arithmetic sentence theory in literal model coordinates
 
@@ -15,6 +17,8 @@ The sentence carrier is the proved literal sentence predicate. The conclusion
 and negation maps are transported by the existing constructor-preserving
 sentence chart, so their image is the constructed Gamma theory.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

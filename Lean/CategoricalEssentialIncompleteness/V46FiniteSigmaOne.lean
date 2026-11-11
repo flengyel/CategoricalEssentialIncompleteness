@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.FirstOrder.Arithmetic.HFS.Vec
-import Foundation.FirstOrder.Arithmetic.Prenex
-import Foundation.Vorspiel.Computability
+module
+
+public import Foundation.FirstOrder.Arithmetic.HFS.Vec
+public import Foundation.FirstOrder.Arithmetic.Prenex
+public import Foundation.Vorspiel.Computability
 
 /-! # Finite membership conditions and explicit vectors of witnesses -/
+
+@[expose] public section
 
 noncomputable section
 

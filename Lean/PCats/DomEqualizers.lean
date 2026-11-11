@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.DomProducts
-import PCats.DomSubdomains
+module
+
+public import PCats.DomProducts
+public import PCats.DomSubdomains
 
 /-!
 # Equalizers in `Dom C`
@@ -48,6 +50,8 @@ object, so the "hence all finite limits" consequence of Corollary 2.4.10 is
 not bundled as a Lean result. Rosolini's induced embedding of `C` into a
 partial-map category remains unformalized.
 -/
+
+@[expose] public section
 
 universe v u
 
@@ -208,7 +212,7 @@ theorem equalizer_comm {A B : Dom C} (f g : A ⟶ B) :
 
 /-- The compatibility equation for the equalizer lift: a morphism equalizing
 `f` and `g` pairs with itself, hence factors through the diagonal. -/
-private lemma equalizerLift_comm {A B W : Dom C} (f g : A ⟶ B) (h : W ⟶ A)
+lemma equalizerLift_comm {A B W : Dom C} (f g : A ⟶ B) (h : W ⟶ A)
     (hfg : h ≫ f = h ≫ g) :
     ((h ≫ f) ≫ diagonalFactor B) ≫ (diagonalSubdomain B).inclusion
       = h ≫ binaryProductLift f g := by

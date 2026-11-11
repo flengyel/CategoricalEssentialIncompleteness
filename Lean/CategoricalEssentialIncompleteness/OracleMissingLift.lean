@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleRestrictedConstruction
-import CategoricalEssentialIncompleteness.OracleDiagonalSeparator
-import CategoricalEssentialIncompleteness.DisjointJoins
+module
+
+public import CategoricalEssentialIncompleteness.OracleRestrictedConstruction
+public import CategoricalEssentialIncompleteness.OracleDiagonalSeparator
+public import CategoricalEssentialIncompleteness.DisjointJoins
 
 /-! # Complementary separators and the section absent from the source -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

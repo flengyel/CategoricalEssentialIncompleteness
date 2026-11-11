@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPlainSubstitutionSemantics
-import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
-import CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth
-import CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPlainSubstitutionSemantics
+public import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
+public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth
+public import CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
 
 /-! # Soundness of the constructed standard sentence derivations -/
+
+@[expose] public section
 
 universe w
 noncomputable section

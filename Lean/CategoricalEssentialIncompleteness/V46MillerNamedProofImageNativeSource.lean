@@ -1,13 +1,22 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitution
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues
-import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitution
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues
+public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 
 /-! # Actual source PA substitution states at native named points
 
 The old standard-model algorithm determines the full option state. Actual
 uniform state charts transport these points without changing binder names.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

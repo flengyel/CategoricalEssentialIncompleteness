@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
 
 /-! # Literal values of the plain postfix constructor
 
 The actual structure map appends the printed root record to its ordered
 polynomial input. Membership witnesses remain outside the syntax word.
 -/
+
+@[expose] public section
 noncomputable section
 universe v u
 set_option backward.isDefEq.respectTransparency false

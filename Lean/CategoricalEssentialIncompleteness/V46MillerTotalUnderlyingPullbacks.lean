@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerTotalUnderlying
-import CategoricalEssentialIncompleteness.V46MillerTotalPullbackImages
-import Mathlib.CategoryTheory.Limits.Types.Pullbacks
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Pullbacks
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerTotalUnderlying
+public import CategoricalEssentialIncompleteness.V46MillerTotalPullbackImages
+public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Pullbacks
 
 /-! # Uniform semidecidable-carrier total splitting: UnderlyingPullbacks -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

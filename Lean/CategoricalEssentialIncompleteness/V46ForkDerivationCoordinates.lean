@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkSyntaxInitialAlgebra
-import CategoricalEssentialIncompleteness.ForkProofObjects
-import CategoricalEssentialIncompleteness.EffectiveForkExtensive
-import CategoricalEssentialIncompleteness.V46ForkDerivationInference
+module
+
+public import CategoricalEssentialIncompleteness.ForkSyntaxInitialAlgebra
+public import CategoricalEssentialIncompleteness.ForkProofObjects
+public import CategoricalEssentialIncompleteness.EffectiveForkExtensive
+public import CategoricalEssentialIncompleteness.V46ForkDerivationInference
 
 /-! # The actual fork formula, axiom and rule objects -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

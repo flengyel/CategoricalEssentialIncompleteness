@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationComponent
-import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
-import CategoricalEssentialIncompleteness.V46NumericalUnderlying
-import CategoricalEssentialIncompleteness.ForkProofObjects
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationComponent
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
+public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
+public import CategoricalEssentialIncompleteness.ForkProofObjects
 
 /-! # Folds and naturality on the actual valid fork proof carriers -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -36,7 +40,7 @@ def unaryFunctor : EnumerableCarriers.Total ⥤ NumericalTuples.Object where
     funext x
     exact ConcreteCategory.congr_hom (EnumerableCarriers.underlying.map_comp f g) x
 
-private theorem totalMap_ext {X Y : EnumerableCarriers.Total} (f g : X ⟶ Y)
+theorem totalMap_ext {X Y : EnumerableCarriers.Total} (f g : X ⟶ Y)
     (h : ∀ x, EnumerableCarriers.totalFunction f x = EnumerableCarriers.totalFunction g x) : f = g := by
   apply WideSubcategory.hom_ext
   apply EnumerableCarriers.val_ext_on_source
@@ -46,13 +50,13 @@ private theorem totalMap_ext {X Y : EnumerableCarriers.Total} (f g : X ⟶ Y)
     ((congrArg (fun z : {n // n ∈ Y.obj.support} => Part.some z.val) (h x)).trans
       (Part.eq_some_iff.mpr (EnumerableCarriers.totalFunction_mem g x)).symm)
 
-private theorem totalFunction_comp {X Y Z : EnumerableCarriers.Total}
+theorem totalFunction_comp {X Y Z : EnumerableCarriers.Total}
     (f : X ⟶ Y) (g : Y ⟶ Z) (x : {n // n ∈ X.obj.support}) :
     EnumerableCarriers.totalFunction (f ≫ g) x =
       EnumerableCarriers.totalFunction g (EnumerableCarriers.totalFunction f x) :=
   ConcreteCategory.congr_hom (EnumerableCarriers.underlying.map_comp f g) x
 
-private theorem totalFunction_eqToHom {X Y : EnumerableCarriers.Total} (h : X = Y)
+theorem totalFunction_eqToHom {X Y : EnumerableCarriers.Total} (h : X = Y)
     (x : {n // n ∈ X.obj.support}) :
     (EnumerableCarriers.totalFunction (eqToHom h) x).val = x.val := by
   cases h
@@ -365,7 +369,7 @@ def targetOperations (D : Endofunctor.Algebra (Component.rules A B hA hB).infere
     (Component.negativeLabel_conclusion A B hA hB x hx)
   mp := targetMP A B hA hB D
 
-private theorem fold_nullary (D : Endofunctor.Algebra (Component.rules A B hA hB).inference)
+theorem fold_nullary (D : Endofunctor.Algebra (Component.rules A B hA hB).inference)
     (r : NumericalTuples.Point ((Component.rules A B hA hB).instances 0))
     {t p} (ht : Concludes A B t p)
     (hr : (((Component.rules A B hA hB).conclusion 0).toFun r).val = p.encode)
@@ -391,7 +395,7 @@ private theorem mp_node_natural {Q Q' : Over Component.formulaObject} (m : Q ⟶
       (over_point_conclusion m x p hx) (over_point_conclusion m y (.imp p q) hy) :=
   Component.nodeInput_map A B hA hB m (.mp p q x y hx hy)
 
-private theorem fold_mp (D : Endofunctor.Algebra (Component.rules A B hA hB).inference)
+theorem fold_mp (D : Endofunctor.Algebra (Component.rules A B hA hB).inference)
     {t u p q} (ht : Concludes A B t p) (hu : Concludes A B u (.imp p q)) :
     foldValue A B hA hB D (Concludes.mp ht hu) =
       targetMP A B hA hB D p q (foldValue A B hA hB D ht) (foldValue A B hA hB D hu) := by

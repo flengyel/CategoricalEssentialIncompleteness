@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.GlobalSubobjects
-import CategoricalEssentialIncompleteness.GlobalRepresentation
-import CategoricalEssentialIncompleteness.BooleanDecisions
+module
+
+public import CategoricalEssentialIncompleteness.GlobalSubobjects
+public import CategoricalEssentialIncompleteness.GlobalRepresentation
+public import CategoricalEssentialIncompleteness.BooleanDecisions
 
 /-!
 # Incompleteness of represented Boolean quotients along `J`
@@ -22,6 +24,8 @@ conclusion; no recursion-category structure or Turing indexing is assumed here.
 This module does not establish the manuscript's proposed intrinsic construction
 from recursion categories to the predicates of a theory.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

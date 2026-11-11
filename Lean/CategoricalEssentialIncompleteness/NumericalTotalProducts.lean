@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPartialProducts
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPartialProducts
 
 /-!
 # Total numerical pairing and categorical products
@@ -12,6 +14,8 @@ Partial pairing of total arrows is the mediating arrow of the numerical
 product cone. The functor to PERs sends this pairing to the PER pairing,
 through the proved product comparison isomorphism.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

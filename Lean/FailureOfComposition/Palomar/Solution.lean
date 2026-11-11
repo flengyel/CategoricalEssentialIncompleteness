@@ -3,12 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ManuscriptObstruction
-import FailureOfComposition.ConcreteGodelRE
-import FailureOfComposition.ConcretePiOneCharacterization
-import FailureOfComposition.PartialRecursiveQuotient
-import FailureOfComposition.RangeGodel
-import FailureOfComposition.RangeProductive
+module
+
+public import FailureOfComposition.ManuscriptObstruction
+public import FailureOfComposition.ConcreteGodelRE
+public import FailureOfComposition.ConcretePiOneCharacterization
+public import FailureOfComposition.PartialRecursiveQuotient
+public import FailureOfComposition.RangeGodel
+public import FailureOfComposition.RangeProductive
 
 /-!
 # Proved counterpart of the draft Palomar statement interface
@@ -27,6 +29,8 @@ Their dependency separation is an audited property of these proofs, not a claim
 of logical independence between unspecified formal sentences. Mathematical and
 historical scope is documented in the draft and the manuscript coverage map.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

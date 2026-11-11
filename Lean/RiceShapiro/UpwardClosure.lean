@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro.CaseLaws
-import RiceShapiro.ParameterizedRecursion
+module
+
+public import RiceShapiro.CaseLaws
+public import RiceShapiro.ParameterizedRecursion
 
 /-!
 # Dense upward closure
@@ -27,6 +29,8 @@ fixed-point principle as the explicit hypothesis
 `HasImportedParameterizedRecursion`. The two dense-totality assumptions concern
 `Z ⊠ X` and `Z` separately.
 -/
+
+@[expose] public section
 
 universe v u
 

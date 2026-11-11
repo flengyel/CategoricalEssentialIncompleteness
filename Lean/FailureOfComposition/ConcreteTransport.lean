@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ArithmetizationTransport
-import FailureOfComposition.ConcreteGodel
+module
+
+public import FailureOfComposition.ArithmetizationTransport
+public import FailureOfComposition.ConcreteGodel
 
 /-!
 PA-provable representation transport into the fully constructed history
 arithmetization. The source representation retains its explicitly stated laws.
 Translations are selected indices, not claimed computable code-table maps.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
+
+
+/-! # Statement checks in `V46MillerSyntaxUniformRelationUniqueChecks` -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Syntax.Raw.Checks
 example {P : Uniform.Family} (p q : SyntaxPolynomial (Total.TotalCategory P)) (Q : ℕ → Prop)
     (op R S : Relations.Relation)

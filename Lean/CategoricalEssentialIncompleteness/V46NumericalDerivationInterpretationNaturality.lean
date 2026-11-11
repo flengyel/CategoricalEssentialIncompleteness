@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
 /-! # Naturality of the actual arithmetic polynomial comparison
 
@@ -11,6 +13,8 @@ This is the structural naturality equation for the proved input isomorphism.
 It permits the stored/plain word-algebra isomorphisms to be used without
 changing any literal constructor code or supposing a comparison square.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

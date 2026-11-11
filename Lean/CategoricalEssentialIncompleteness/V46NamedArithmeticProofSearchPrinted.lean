@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
-import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
 
 /-! # The printed partial Γ proof-search statement
 
@@ -12,6 +14,8 @@ The evidence predicates here are the selected program of the constructed
 Γ theory at Θ and its proved primitive-recursive Neg extension. The source
 morphism is quantified before every model and every disjointness witness.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

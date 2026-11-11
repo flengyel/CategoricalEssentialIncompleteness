@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.ForkActualCosheaves
-import CategoricalEssentialIncompleteness.EnumerableUnderlying
-import CategoricalEssentialIncompleteness.EffectiveForkTotal
-import CategoricalEssentialIncompleteness.EnumerableRelationPaths
+module
+
+public import CategoricalEssentialIncompleteness.ForkActualCosheaves
+public import CategoricalEssentialIncompleteness.EnumerableUnderlying
+public import CategoricalEssentialIncompleteness.EffectiveForkTotal
+public import CategoricalEssentialIncompleteness.EnumerableRelationPaths
 
 /-! # The whole-space value is the tagged-carrier quotient by finite paths -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
 
 /-! # Literal finite named proofs in the constructed Γ derivation object
 
@@ -12,6 +14,8 @@ Only standard finite named trees are used here. Their rule parameters
 are actual points of the constructed scheme domains; no comparison
 with a different deductive calculus is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

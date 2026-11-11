@@ -3,14 +3,18 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
 
 /-! # Actual inference transport across the predicate equivalence
 
 Only coefficient isomorphisms and their original premise/conclusion
 diagrams are supplied. The inference and algebra comparisons are derived.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -55,7 +59,7 @@ variable (h : Data E R R')
 abbrev overEquivalence : Over F ≌ Over (E.functor.obj F) := Over.postEquiv F E
 
 omit [HasFiniteCoproducts C] [HasFiniteCoproducts D] in
-private theorem input_square (Q : Over F) (i : Fin (N+1)) :
+theorem input_square (Q : Over F) (i : Fin (N+1)) :
     IsPullback
       (E.functor.map (pullback.fst (R.premises i) (finitePowerMap Q.hom i.val)) ≫ (h.coefficient i).hom)
       (E.functor.map (pullback.snd (R.premises i) (finitePowerMap Q.hom i.val)) ≫ (power E Q.left i.val).hom)

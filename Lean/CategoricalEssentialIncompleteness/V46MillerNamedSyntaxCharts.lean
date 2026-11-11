@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # Actual identical-word charts for PA-described uniform syntax
 
@@ -14,6 +16,8 @@ ordered child records. The input chart uses the proved polynomial
 finite-geometry comparison; no initiality property of the predicate
 functor is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

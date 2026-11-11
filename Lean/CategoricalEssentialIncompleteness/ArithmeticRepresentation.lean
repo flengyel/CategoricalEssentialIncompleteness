@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-!
 # Numeralwise representation of computable predicates
@@ -12,6 +14,8 @@ A representing formula proves each true numerical instance and refutes each
 false numerical instance. Consistency makes these implications equivalences,
 and representation persists under extension of the theory.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

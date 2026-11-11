@@ -1,10 +1,19 @@
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
-import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
 
 /-! Successful derivation codes retain exactly the original tree code.
 The validator value and all computation witnesses are existential. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

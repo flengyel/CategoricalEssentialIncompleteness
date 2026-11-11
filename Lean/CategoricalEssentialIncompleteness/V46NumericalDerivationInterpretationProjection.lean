@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPolynomial
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPolynomial
 
 /-! # Projection of the actual mapped constructor algebra
 
@@ -11,6 +13,8 @@ The canonical polynomial comparison commutes with the projection to the
 first recursive sort. The proof uses its proved naturality and the unique
 terminal morphism. No initial algebra is assumed to be preserved.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

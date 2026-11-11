@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
-import Foundation.FirstOrder.LK.Simplified
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
+public import Foundation.FirstOrder.LK.Simplified
 
 /-! # Named elaboration of arithmetic eigenvariables
 
@@ -12,6 +14,8 @@ The free-variable map is explicit. Bound-variable names and all quantifier
 names are retained separately, so LK's shift/free rewrites can be compared
 syntactically before any proof-compatibility theorem is stated.
 -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedOpenTranslation

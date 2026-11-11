@@ -15,6 +15,8 @@ U is the theory whose proofs are searched; T is the theory of pointwise equality
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

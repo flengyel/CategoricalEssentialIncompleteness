@@ -3,16 +3,20 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTraceDecoder
-import CategoricalEssentialIncompleteness.V46UniformTraceModelHistory
-import CategoricalEssentialIncompleteness.V46UniformTraceProgram
-import CategoricalRiceShapiro.Evaluator.CompositionDispatch
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTraceDecoder
+public import CategoricalEssentialIncompleteness.V46UniformTraceModelHistory
+public import CategoricalEssentialIncompleteness.V46UniformTraceProgram
+public import CategoricalRiceShapiro.Evaluator.CompositionDispatch
 
 /-! # Composition-stage certificates for arbitrary internal component indices
 
 This is the raw same-stage constructor equation. The later fixed-template
 compiler uses this equation together with fixed-standard-index persistence.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

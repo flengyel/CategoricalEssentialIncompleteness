@@ -16,6 +16,8 @@ Only PA standard soundness is used; no soundness or consistency of T is assumed.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

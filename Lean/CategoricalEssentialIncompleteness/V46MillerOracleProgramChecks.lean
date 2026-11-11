@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerOracleProgram
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerOracleProgram
+
+
+/-! # Statement checks in `V46MillerOracleProgramChecks` -/
+
+@[expose] public section
 noncomputable section
 open CategoricalEssentialIncompleteness.V46.Miller
 open CategoricalEssentialIncompleteness.V46.Miller.OracleProgram

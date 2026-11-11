@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerListsDecoder
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerListsDecoder
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
 
 /-! # Both inverse equations for the actual literal list-word translation
 
@@ -13,6 +15,8 @@ source guard is retained when it becomes a carrier morphism. Literal
 parser induction proves that each accepted word is the encoding of its
 decoded list, without assuming syntax initiality or code correctness.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

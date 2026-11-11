@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.Structural.Preservation
-import FailureOfComposition.NumericalProductProofs.RETheory
+module
+
+public import FailureOfComposition.NumericalDomainOrder.Structural.Preservation
+public import FailureOfComposition.NumericalProductProofs.RETheory
 
 /-!
 # Domain-order transfer for recursively enumerable theories
@@ -15,6 +17,8 @@ and proves exact equality-tag and right-instance-tag correspondences.  The
 forward directions embed old proof codes; the reverse directions interpret
 arbitrary proofs accepted by the new checker.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

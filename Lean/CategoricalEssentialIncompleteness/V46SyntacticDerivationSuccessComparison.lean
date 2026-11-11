@@ -1,12 +1,21 @@
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionAlgebra
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionRoots
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputGeometry
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessAdjunction
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial
-import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionAlgebra
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionRoots
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputGeometry
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessAdjunction
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial
+public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
 
 /-! The validator success functor is the original dependent rule functor. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

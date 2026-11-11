@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalPER
+module
+
+public import CategoricalEssentialIncompleteness.NumericalPER
 
 /-!
 # The numerical functor into PERs
@@ -12,6 +14,8 @@ The total-arrow category of the numerical restriction category maps to equality
 PERs. Restricting a representing function to the recursive source support proves fullness;
 extensional equality of canonical partial maps proves faithfulness.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

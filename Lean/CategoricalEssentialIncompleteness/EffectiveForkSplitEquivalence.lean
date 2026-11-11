@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkRecursion
-import CategoricalEssentialIncompleteness.EffectiveForkEncoding
-import CategoricalEssentialIncompleteness.RestrictionSplitting
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkRecursion
+public import CategoricalEssentialIncompleteness.EffectiveForkEncoding
+public import CategoricalEssentialIncompleteness.RestrictionSplitting
 
 /-! # The restriction splitting recovers all computational forks -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

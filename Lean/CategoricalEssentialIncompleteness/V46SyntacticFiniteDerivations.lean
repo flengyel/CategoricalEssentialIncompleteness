@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsPowers
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsPowers
 
 /-! # Explicit finite typed derivations and the constructed proof object
 
@@ -12,6 +14,8 @@ premise conclusions. Interpretation uses the actual rule-input pullback.
 The converse on standard codes uses the proved arithmetic size induction,
 not preservation of initial algebras by the model functor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

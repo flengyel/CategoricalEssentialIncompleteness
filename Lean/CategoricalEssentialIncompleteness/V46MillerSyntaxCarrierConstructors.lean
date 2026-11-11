@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
-import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
 /-! # Literal constructor membership for arbitrary uniform coefficients
 
@@ -13,6 +15,8 @@ Coefficient guards are forgotten only in the auxiliary ordinary parser
 used to prove a structural computation equation. Actual word membership
 retains the original arbitrary uniform coefficient predicates.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

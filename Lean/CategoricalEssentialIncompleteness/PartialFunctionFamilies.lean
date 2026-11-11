@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.PartialFunctions
-import Mathlib.CategoryTheory.Pi.Basic
+module
+
+public import CategoricalEssentialIncompleteness.PartialFunctions
+public import Mathlib.CategoryTheory.Pi.Basic
 
 /-! # Families of sets and partial functions -/
+
+@[expose] public section
 
 universe u w
 

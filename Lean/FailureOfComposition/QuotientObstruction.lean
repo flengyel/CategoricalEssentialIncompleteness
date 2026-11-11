@@ -14,6 +14,8 @@ This file alone makes no assertion about arithmetic or program indices.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition

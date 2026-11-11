@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeContextMP
-import FailureOfComposition.NativeSubstitution
+module
+
+public import FailureOfComposition.NativeContextMP
+public import FailureOfComposition.NativeSubstitution
 
 /-!
 # Numerical universal specialization with a coded sequent context
@@ -19,6 +21,8 @@ formula-body codes have their stated arities.  On valid syntax it constructs
 one explicit proof tree, using weakening, a logical axiom, existential
 introduction, and cut.  It does not test the context or derivation code.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

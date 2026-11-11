@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.TerminalForkSupports
-import CategoricalEssentialIncompleteness.ClassicalSplitEquivalence
-import CategoricalEssentialIncompleteness.EffectiveForkSplitEquivalence
+module
+
+public import CategoricalEssentialIncompleteness.TerminalForkSupports
+public import CategoricalEssentialIncompleteness.ClassicalSplitEquivalence
+public import CategoricalEssentialIncompleteness.EffectiveForkSplitEquivalence
 
 /-! # The nonnumerical recursion category is not restriction equivalent to classical Rec -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

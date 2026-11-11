@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
-import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
+public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 
 /-! # Original PA ordinary-tree words and literal numerical tree words
 
@@ -14,6 +16,8 @@ Both directions use the identical word number. The stored-word parser
 check is retained on the PA side and compared by the proved conservation
 law; coefficient labels are the actual unary arithmetic images.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

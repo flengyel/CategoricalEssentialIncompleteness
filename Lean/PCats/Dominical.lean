@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.PCat
+module
+
+public import PCats.PCat
 
 /-!
 # Dominical categories
@@ -42,6 +44,8 @@ the identity. Neither assumes `PCategory`; both install `toPCategory` locally.
 `Dominical.isTotal_iff_restrictionTotal` states the second as the comparison of
 the two totalities.
 -/
+
+@[expose] public section
 
 universe v u
 

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.SyntacticPreservation
-import Foundation.FirstOrder.Tarski.Skolemization
-import Mathlib.Basic.Denumerable
+module
+
+public import CategoricalEssentialIncompleteness.SyntacticPreservation
+public import Foundation.FirstOrder.Tarski.Skolemization
+public import Mathlib.Basic.Denumerable
 
 /-! # Arithmetic models with carrier `ℕ`
 
@@ -13,6 +15,8 @@ The carrier is fixed; its arithmetic operations range over all interpretations.
 In particular this index includes nonstandard models and does not require
 soundness in the standard model.
 -/
+
+@[expose] public section
 
 noncomputable section
 

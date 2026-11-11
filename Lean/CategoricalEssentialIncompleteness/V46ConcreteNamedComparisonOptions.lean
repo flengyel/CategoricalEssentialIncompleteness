@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
-import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionModels
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
+public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionModels
 
 /-! # The actual option object and its literal failure/success chart -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

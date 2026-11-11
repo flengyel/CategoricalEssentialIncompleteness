@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
 /-! Realization of total numerical predicate morphisms on the identity
 omega splitting, with source-morphism and model-graph comparisons. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.Vorspiel.Computability
+module
+
+public import Foundation.Vorspiel.Computability
 
 /-! # Finite conjunction and functional realization of enumerable relations
 
@@ -11,6 +13,8 @@ Finite conjunction uses a single fuel bound for the ordinary evaluator.
 Functionality permits an ordinary parallel search over a graph's output
 coordinate; no totality of that graph is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteSemidecision

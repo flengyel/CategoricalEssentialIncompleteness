@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawLeaves
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawProducts
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawSums
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawLeaves
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawProducts
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawSums
 
 /-! # Actual raw-fiber comparison for every parameter slice
 
@@ -9,6 +16,8 @@ actual product/coproduct universal cones. Both recursive sorts and ordered
 children are retained. Target families and their projection morphisms are
 arbitrary uniform slice objects.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.FixedFormulaNumeralSubstitution
-import FailureOfComposition.NumericalSpecialization
-import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
+module
+
+public import Arith.FixedFormulaNumeralSubstitution
+public import FailureOfComposition.NumericalSpecialization
+public import Foundation.FirstOrder.Arithmetic.Bootstrapping.FixedPoint
 
 /-!
 # Proof-presentation bridges for numerical specialization
@@ -15,6 +17,8 @@ sentences to the tagged formula codes consumed by the numerical
 specialization calculus.  The stage carried by a bridge is explicit numerical
 evidence; no proof search or stage extractor is hidden in the construction.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

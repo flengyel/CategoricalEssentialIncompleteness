@@ -19,6 +19,8 @@ No theorem in this file identifies standard-model equivalence with PA provabilit
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

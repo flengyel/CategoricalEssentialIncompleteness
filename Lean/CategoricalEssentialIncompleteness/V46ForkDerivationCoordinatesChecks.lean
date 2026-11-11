@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates
+
+
+/-! # Statement checks in `V46ForkDerivationCoordinatesChecks` -/
+
+@[expose] public section
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 open CategoricalEssentialIncompleteness.LocalConnectedness

@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
-import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
-import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
+public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular
+public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
 
 /-! # The original syntax polynomial under the ordinary word inclusion
 
@@ -11,6 +18,8 @@ faithful or to preserve initiality. Its algebra only transports the existing
 word carriers and constructor operations; the new universal property needs
 a fold into every uniform target algebra.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

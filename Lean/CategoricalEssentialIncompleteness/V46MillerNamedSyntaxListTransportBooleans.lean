@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
 
 /-! Boolean operations under the actual finite-geometry preserving functor. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

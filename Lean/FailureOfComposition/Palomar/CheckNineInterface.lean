@@ -19,7 +19,12 @@ parameters.
 
 This is a local interface and axiom check.  It is not Palomar Comparator or an
 external-kernel replay.  The separate source-policy command checks the Challenge
-import closure.
+public import closure.
+
+
+/-! # Definitions and theorems in `CheckNineInterface` -/
+
+@[expose] public section
 -/
 
 @[expose] public section

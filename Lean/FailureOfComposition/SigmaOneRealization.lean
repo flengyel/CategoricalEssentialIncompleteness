@@ -19,6 +19,8 @@ every correctness assertion quantifies over PA models rather than just ℕ.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

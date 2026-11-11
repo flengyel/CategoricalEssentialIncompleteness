@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalLattices
-import Mathlib.CategoryTheory.Types.Basic
+module
+
+public import CategoricalEssentialIncompleteness.InternalLattices
+public import Mathlib.CategoryTheory.Types.Basic
 
 /-!
 # Internal bounded distributive lattices in types
@@ -14,6 +16,8 @@ set of generalized elements has pointwise lattice operations. A bounded lattice
 homomorphism induces an internal lattice homomorphism; its underlying arrow is
 monic precisely when the original function is injective.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

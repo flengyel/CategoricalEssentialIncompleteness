@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
-import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
 
 /-! Boolean truth tables needed by the actual transported list and
 substitution algebras. The proofs use actual coproduct fibers. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

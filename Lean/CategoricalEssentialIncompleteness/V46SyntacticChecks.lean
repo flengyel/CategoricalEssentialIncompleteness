@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46SyntacticExtension
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticExtension
 
 /-! Explicit types for the syntactic complementary-conditional comparison
 and its preservation under theory extension. -/
+
+@[expose] public section
 
 open CategoryTheory CategoryTheory.RestrictionCategory
 open CategoryTheory.CoprodStruct

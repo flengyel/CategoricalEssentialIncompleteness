@@ -1,5 +1,17 @@
-import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
-import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
+public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
+
+
+/-! # Statement checks in `V46NumericalArithmeticCanonicalChecks` -/
+
+@[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory

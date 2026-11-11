@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameters
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameters
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
 
 /-! # Actual parameter-slice arrows for the original and FV payload fields -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

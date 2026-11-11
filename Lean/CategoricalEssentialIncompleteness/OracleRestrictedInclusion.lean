@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.OracleRestrictedCoproducts
-import CategoricalEssentialIncompleteness.OracleRestrictedJoins
-import CategoricalEssentialIncompleteness.OracleRestrictedCoding
+module
+
+public import CategoricalEssentialIncompleteness.OracleRestrictedCoproducts
+public import CategoricalEssentialIncompleteness.OracleRestrictedJoins
+public import CategoricalEssentialIncompleteness.OracleRestrictedCoding
 
 /-! # The faithful, zero-reflecting, product-preserving range inclusion -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

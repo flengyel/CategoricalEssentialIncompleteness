@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
-import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
-import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
-import CategoricalEssentialIncompleteness.V46SyntacticDerivationRecordLaws
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
+public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
+public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRecordLaws
 
 /-! # Literal constructor graphs used to enumerate native PA axiom matrices
 
@@ -14,6 +16,8 @@ Expressions compute only word codes. Their graphs are explicit Σ₁ formulas,
 and their values are proved in every PA model before standard native syntax
 is compared. No definition of PA axioms is supplied as a premise.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

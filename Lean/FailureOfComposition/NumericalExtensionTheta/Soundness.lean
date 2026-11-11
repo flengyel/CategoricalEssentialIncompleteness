@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionTheta.Core
-import FailureOfComposition.NumericalExtensionComposition.Soundness
-import FailureOfComposition.ConcreteAdequacy
+module
+
+public import FailureOfComposition.NumericalExtensionTheta.Core
+public import FailureOfComposition.NumericalExtensionComposition.Soundness
+public import FailureOfComposition.ConcreteAdequacy
 
 /-!
 # Graph semantics and PA meaning of the B1(8) theta scheme
@@ -15,6 +17,8 @@ arbitrary PA model, while `q` remains a fixed external program index.  The
 subsequent proof-code scheme concerns fixed external natural numbers.  These
 two levels are kept separate.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

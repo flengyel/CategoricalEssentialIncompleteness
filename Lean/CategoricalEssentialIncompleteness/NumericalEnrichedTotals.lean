@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalEnriched
-import CategoricalEssentialIncompleteness.NumericalTotalProducts
-import CategoricalEssentialIncompleteness.NumericalRecursion
+module
+
+public import CategoricalEssentialIncompleteness.NumericalEnriched
+public import CategoricalEssentialIncompleteness.NumericalTotalProducts
+public import CategoricalEssentialIncompleteness.NumericalRecursion
 
 /-!
 # Numerical total hom-objects and internal indexing
@@ -15,6 +17,8 @@ Its operations agree with numerical identities, composition, and pairing.
 The numerical parameter assignment lifts to this pullback and is a section
 of evaluation by the Turing morphism.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

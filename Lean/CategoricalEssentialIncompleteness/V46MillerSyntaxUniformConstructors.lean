@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFold
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFold
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
 
 /-! # Constructor equations for arbitrary uniformly enumerable coefficients
 
@@ -13,6 +15,8 @@ the auxiliary numerical parser forgets predicates, and its graph equality
 is proved. All target operation values are supplied by actual slice
 morphisms and occur positively in the selected finite records.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

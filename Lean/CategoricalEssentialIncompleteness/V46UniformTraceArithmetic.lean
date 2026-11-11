@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveCoding
-import CategoricalEssentialIncompleteness.V46UniformTraceSpecializers
-import CategoricalEssentialIncompleteness.V46UniformTraceComparison
+module
+
+public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveCoding
+public import CategoricalEssentialIncompleteness.V46UniformTraceSpecializers
+public import CategoricalEssentialIncompleteness.V46UniformTraceComparison
 
 /-! # The actual arithmetized-evaluation package for Lemma 5.1 -/
+
+@[expose] public section
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 

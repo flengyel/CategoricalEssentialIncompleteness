@@ -3,13 +3,17 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EffectiveForkEvaluation
-import CategoricalEssentialIncompleteness.EffectiveForkCoproductFrame
-import CategoricalEssentialIncompleteness.EffectiveForkRecursion
-import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
-import CategoricalEssentialIncompleteness.CompatibleLocalLifting
+module
+
+public import CategoricalEssentialIncompleteness.EffectiveForkEvaluation
+public import CategoricalEssentialIncompleteness.EffectiveForkCoproductFrame
+public import CategoricalEssentialIncompleteness.EffectiveForkRecursion
+public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
+public import CategoricalEssentialIncompleteness.CompatibleLocalLifting
 
 /-! # The actual endpoint diagonal pair is numerically inseparable -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
 
 /-! # The actual generated refutation image in sentence-word coordinates -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

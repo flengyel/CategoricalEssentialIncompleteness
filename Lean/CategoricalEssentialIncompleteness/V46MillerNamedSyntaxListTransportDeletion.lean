@@ -3,7 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportMembership
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportMembership
+
+
+/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportDeletion` -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -18,7 +25,7 @@ local notation "F" => Syntax.predicateFunctor P
 local notation "L" => SyntacticLists.stableListAlgebra 𝗣𝗔 V
 local notation "R" => NamedSyntaxComparison.mappedListStable P V
 variable (S : DecidableVariables V)
-private theorem slice_map_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
+theorem deletionOverMap_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
     ((sliceFunctor (F) U).map f).left=(F).map f.left := rfl
 /-- This is an isomorphism of complete list algebras. Its cons equation
 uses the proved transport of the actual equality-classified branch. -/
@@ -46,7 +53,7 @@ def mappedDeletionAlgebraIso :
           terminalComparison (F) = terminal.from ((F).obj (⊤_ (Over V)).left) :=
         terminalIsTerminal.hom_ext _ _
       dsimp only [H]
-      simp only [Over.comp_left,slice_map_left,Category.assoc]
+      simp only [Over.comp_left,deletionOverMap_left,Category.assoc]
       erw [coefficientComparison_snd]
       simp only [Iso.refl_hom,Category.comp_id]
       erw [← (F).map_comp,h₀,h₁,(F).map_comp]
@@ -107,7 +114,7 @@ def mappedDeletionAlgebraIso :
           (F).map (prod.lift _ _ ≫ (L).algebra.cons)
         rw [(F).map_comp,map_cons P V,← Category.assoc,hpair,Category.assoc]
       dsimp only [H]
-      simp only [Over.comp_left,slice_map_left,Category.assoc]
+      simp only [Over.comp_left,deletionOverMap_left,Category.assoc]
       erw [coefficientComparison_snd]
       simp only [Iso.refl_hom,Category.comp_id]
       erw [← (F).map_comp,h₀,h₁,map_branch (F),SyntaxOperationsTransport.branch_precomp,heq,hpre,hval]
@@ -130,7 +137,7 @@ theorem map_deletion : (F).map ((L).deletion S)=
     simpa only [Category.assoc,Iso.inv_hom_id_assoc] using h
   have hh := congrArg (fun f => f.left ≫ prod.snd) hf
   dsimp only [H] at hh
-  simp only [Over.comp_left,slice_map_left,Category.assoc] at hh
+  simp only [Over.comp_left,deletionOverMap_left,Category.assoc] at hh
   erw [coefficientComparison_snd] at hh
   simp only [Iso.refl_hom,Category.comp_id] at hh
   erw [← (F).map_comp] at hh

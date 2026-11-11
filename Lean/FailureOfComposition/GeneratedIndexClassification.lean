@@ -17,6 +17,8 @@ the generated relation is universal. No effective presentation is required.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 

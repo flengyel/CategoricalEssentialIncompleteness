@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerBinaryCore
-import CategoricalEssentialIncompleteness.OracleApproximationSearch
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerBinaryCore
+public import CategoricalEssentialIncompleteness.OracleApproximationSearch
 
 /-! # A single indexed finite-query oracle interpreter
 
@@ -15,6 +17,8 @@ Every index therefore describes a deterministic oracle program, without a
 coherence condition on the index. Finite-table evaluation uses the very same
 transition code and blocks when a requested bit is absent.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

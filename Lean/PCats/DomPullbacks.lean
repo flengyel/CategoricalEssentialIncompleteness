@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.DomEqualizers
+module
+
+public import PCats.DomEqualizers
 
 /-!
 # Pullbacks in `Dom C`
@@ -30,6 +32,8 @@ The construction assumes `Category`, `PCategoryStruct`, `PCategory`, and
 `HasRanges`. `IsRP`, choice, zero morphisms, prodominical structure, isotypes,
 and recursion data are not used.
 -/
+
+@[expose] public section
 
 universe v u
 
@@ -85,7 +89,7 @@ theorem pullback_comm {A B D : Dom C} (f : A ⟶ D) (g : B ⟶ D) :
 
 omit [HasRanges C] in
 /-- A commuting cone pairs to a morphism equalizing the two composites. -/
-private lemma binaryProductLift_comm {A B D W : Dom C} {f : A ⟶ D} {g : B ⟶ D}
+lemma binaryProductLift_comm {A B D W : Dom C} {f : A ⟶ D} {g : B ⟶ D}
     {h : W ⟶ A} {k : W ⟶ B} (hfg : h ≫ f = k ≫ g) :
     binaryProductLift h k ≫ (binaryProductFst A B ≫ f)
       = binaryProductLift h k ≫ (binaryProductSnd A B ≫ g) := by

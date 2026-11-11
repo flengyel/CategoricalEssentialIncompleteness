@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists
-import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists
+public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
 
 /-! # Parameter-list folds under the actual PA interpretation functor
 
@@ -13,6 +15,8 @@ The functor need only preserve finite geometry. Initiality of the target
 list algebra is supplied by the constructed uniform list folds, rather
 than inferred from preservation by the PA predicate functor.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -35,7 +39,7 @@ def mappedList (V : C) (W : D) (e : F.obj V ≅ W) (L : ListAlgebra V) : ListAlg
   nil := inv (terminalComparison F) ≫ F.map L.nil
   cons := prod.map e.inv (𝟙 _) ≫ inv (prodComparison F V L.carrier) ≫ F.map L.cons
 
-private def constructorsHom {V : D} (L B : ListAlgebra V) (f : L.carrier ⟶ B.carrier)
+def constructorsHom {V : D} (L B : ListAlgebra V) (f : L.carrier ⟶ B.carrier)
     (hn : L.nil ≫ f=B.nil) (hc : L.cons ≫ f=prod.map (𝟙 V) f ≫ B.cons) :
     L.asAlgebra ⟶ B.asAlgebra where
   f := f

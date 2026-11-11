@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
 
 /-! # Replacement of individual enumerated axioms in literal named proofs
 
@@ -11,6 +13,8 @@ The replacement premise concerns the actual sentence axioms only. The
 proof transforms the finite derivation and retains every original name,
 ordered premise, free-for proof and successful substitution equation.
 -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 namespace CategoricalEssentialIncompleteness.V46.SyntacticNamedHilbert
 open NamedFiniteSyntax NamedPostfixEncoding

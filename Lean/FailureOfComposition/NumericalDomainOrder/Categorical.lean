@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalDomainOrder.RETheory
-import FailureOfComposition.TypedChoice
+module
+
+public import FailureOfComposition.NumericalDomainOrder.RETheory
+public import FailureOfComposition.TypedChoice
 
 /-!
 # Categorical transfer along a domain inequality
@@ -15,6 +17,8 @@ for each omega endomorphism, proves that canonical index composition represents
 diagrammatic categorical composition, and translates `rho ≤ S` into the mixed
 first-success/eventual equality required by the numerical rule.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

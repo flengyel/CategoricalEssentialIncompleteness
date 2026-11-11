@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.NumericalBooleanObject
+module
+
+public import CategoricalEssentialIncompleteness.NumericalBooleanObject
 
 /-!
 # Recursive Boolean functions and PER arrows
@@ -12,6 +14,8 @@ Arrows from the equality PER on `ℕ` to the Boolean PER are exactly total
 recursive Boolean functions. Equality of arrows corresponds to equality of
 these functions at every natural number.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

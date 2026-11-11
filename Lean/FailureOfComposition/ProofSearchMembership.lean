@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.TypedProgramCategory
+module
+
+public import FailureOfComposition.TypedProgramCategory
 
 /-!
 # The exact proof-search membership boundary
@@ -26,6 +28,8 @@ primitive recursively and does not prove the corresponding arbitrary-model
 preservation statement.  Accordingly, no B1(2) completion theorem is asserted
 here.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -17,6 +17,8 @@ public import FailureOfComposition.Palomar.GeneratedQuotientBridge
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace FailureOfComposition.Palomar

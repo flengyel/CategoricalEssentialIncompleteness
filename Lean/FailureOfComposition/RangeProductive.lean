@@ -16,6 +16,8 @@ the internally quantified absence sentence is unprovable in the ambient theory.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

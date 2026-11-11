@@ -27,6 +27,8 @@ at `fCode` and `gCode`.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 namespace CategoricalRiceShapiro.PartialRecursive

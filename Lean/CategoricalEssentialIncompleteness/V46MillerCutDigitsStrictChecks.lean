@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerCutDigitsStrict
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerCutDigitsStrict
+
+
+/-! # Statement checks in `V46MillerCutDigitsStrictChecks` -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.CutDigits.Checks
 
 example (b : Bits) : Real.ofDigits b < 1/2 ↔ ∃ k,2*(numeral b k+1) < 2^k :=

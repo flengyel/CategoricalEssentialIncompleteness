@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NativeSyntaxShift
-import FailureOfComposition.NativeEqualityTransport
+module
+
+public import FailureOfComposition.NativeSyntaxShift
+public import FailureOfComposition.NativeEqualityTransport
 
 /-!
 # Primitive-recursive checking of native derivations
@@ -19,6 +21,8 @@ Proof conclusions are finite-set sequent codes.  A computation at code `d`
 uses a table of results at codes below `d`, so every recursive rule checks
 both its child derivations and their exact concluding sequents.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -45,7 +49,7 @@ def sequentMemCode (p s : ℕ) : Bool := decide (s / 2 ^ p % 2 = 1)
 def sequentSubsetCode (s t : ℕ) : Bool :=
   decide (∀ p ∈ List.range s, s / 2 ^ p % 2 = 1 → t / 2 ^ p % 2 = 1)
 
-private def childCheck (history : List Bool) (d s : ℕ) : Bool :=
+def childCheck (history : List Bool) (d s : ℕ) : Bool :=
   history.getD d false && (conclusionCode d == s)
 
 /-- The payload is decoded according to its tag.  In particular, tag one

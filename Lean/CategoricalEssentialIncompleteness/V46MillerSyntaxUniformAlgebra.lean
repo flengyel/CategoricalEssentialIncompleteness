@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
-import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
 
 /-! # The literal uniform-word algebra with arbitrary coefficient objects
 
@@ -7,6 +14,8 @@ The carrier is the constructed guarded postfix word predicate. Its
 constructors append the original literal root record, using the actual
 base polynomial comparison. No initiality or fold law is assumed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

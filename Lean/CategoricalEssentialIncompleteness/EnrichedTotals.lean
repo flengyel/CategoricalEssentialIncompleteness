@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.EnrichedRestriction
+module
+
+public import CategoricalEssentialIncompleteness.EnrichedRestriction
 
 /-!
 # Internal composition and products of total arrows
@@ -13,6 +15,8 @@ Identities, composition, and pairing therefore lift to the totality
 pullbacks. Monicity of their inclusions then proves the category and ordinary
 binary-product equations required by `InternalHom.CartesianLaws`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

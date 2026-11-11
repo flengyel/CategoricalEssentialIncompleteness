@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.NumericalExtensionComposition.Structural.Maps
+module
+
+public import FailureOfComposition.NumericalExtensionComposition.Structural.Maps
 
 /-!
 # PA-internal preservation by the composed B1(7) proof maps
@@ -14,6 +16,8 @@ codes inside arithmetic.  Their proofs work in every model of PA and use the
 common structural proof graph; they do not appeal to an external choice of a
 standard computation witness.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

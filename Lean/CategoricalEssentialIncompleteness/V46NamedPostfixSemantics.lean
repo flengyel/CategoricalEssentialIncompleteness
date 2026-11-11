@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
-import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
+public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
 
 /-! # Semantics on the actual standard accepted-word carriers
 
 The decoding equivalences retain every numerical name and symbol. The
 semantic structure is independent of the arithmetic model of the codes.
 -/
+
+@[expose] public section
 
 noncomputable section
 universe u

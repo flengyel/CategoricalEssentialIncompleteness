@@ -3,8 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutInseparability
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerCutInseparability
+
+
+/-! # Definitions and theorems in `V46MillerCutInseparabilityRelative` -/
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
@@ -40,7 +46,7 @@ theorem preimageDecision_value (p : Bits) (h : ℕ → ℕ) (hh : Computable h) 
   change (Part.some (h e)).bind (fun n => Part.some (CutDigits.decision p n)) = _
   exact Part.bind_some ..
 
-private theorem decisionPredicate_enumerable (p : Bits) (h : ℕ → ℕ) (hh : Computable h) (b : ℕ) :
+theorem decisionPredicate_enumerable (p : Bits) (h : ℕ → ℕ) (hh : Computable h) (b : ℕ) :
     Enumerable (Family.singleton p) (fun e => CutDigits.decision p (h e)=b) := by
   have hgraph := Enumerable.comp (Computable.pair Computable.id (Computable.const b))
     (Uniform.graph_enumerable (preimageDecision p h hh))

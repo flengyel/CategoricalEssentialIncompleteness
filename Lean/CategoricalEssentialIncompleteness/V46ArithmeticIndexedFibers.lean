@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersConstructors
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersConstructors
 
 /-! # Initial numeral fibers and the arithmetic sentence-theory pullback
 
@@ -11,6 +13,8 @@ Both comparisons of inference functors are derived from the actual rule
 coefficients. The extensive slice equivalence then transports the full
 family algebra to a product of algebras, whose first component is initial.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -128,7 +132,7 @@ def individualSentenceProof : TotalSplit 𝗣𝗔 :=
 def individualSentenceConclusion : individualSentenceProof AxPA e ⟶ ArithmeticIndexedFamily.sentence :=
   pullback.snd (individualAlgebra AxPA e).a.hom ArithmeticIndexedFamily.sentenceInclusion
 
-private theorem sentence_outer :
+theorem sentence_outer :
     IsPullback
       (pullback.fst (individualAlgebra AxPA e).a.hom ArithmeticIndexedFamily.sentenceInclusion ≫
         derivationMap AxPA e) (individualSentenceConclusion AxPA e)

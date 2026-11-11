@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticPredicates
-import CategoricalEssentialIncompleteness.V46RegularImage
-import Mathlib.CategoryTheory.Functor.EpiMono
-import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
+public import CategoricalEssentialIncompleteness.V46RegularImage
+public import Mathlib.CategoryTheory.Functor.EpiMono
+public import Mathlib.CategoryTheory.Limits.Shapes.RegularMono
 
 /-! # Predicate inclusions, witness selection and regular images -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -3,10 +3,12 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Arith.Feferman.ProofFormula
-import Arith.Feferman.StructuralProof
-import Arith.FixedFormulaNumeralSubstitution
-import Arith.Feferman.Specialization
+module
+
+public import Arith.Feferman.ProofFormula
+public import Arith.Feferman.StructuralProof
+public import Arith.FixedFormulaNumeralSubstitution
+public import Arith.Feferman.Specialization
 
 /-!
 # Arith
@@ -26,3 +28,5 @@ proof-presentation bridge.
 `Metamath` remains buildable in a Lake configuration with no Foundation
 requirement. `scripts/syncpcats.sh` checks the source-layer separation.
 -/
+
+@[expose] public section

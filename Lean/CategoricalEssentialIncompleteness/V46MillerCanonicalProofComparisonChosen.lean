@@ -1,5 +1,12 @@
-import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparison
-import CategoricalEssentialIncompleteness.V46FirstOrderInference
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparison
+public import CategoricalEssentialIncompleteness.V46FirstOrderInference
 
 /-! # The chosen canonical Γ pullback and its actual generated image
 
@@ -8,6 +15,8 @@ replaces it by the selected canonical pullback, then uses the two actual
 initial derivation algebras to prove equality of the sentence images.
 No selected proof of an axiom is needed.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -15,15 +24,15 @@ open CategoryTheory CategoryTheory.Limits
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.Miller.CanonicalPresentation
-private def selectedPullback {C : Type} [Category.{0} C] [HasPullbacks C]
+def selectedPullback {C : Type} [Category.{0} C] [HasPullbacks C]
     {X Y Z : C} (f : X ⟶ Z) (g : Y ⟶ Z) : C :=
   @pullback C _ X Y Z f g (HasLimitsOfShape.has_limit (cospan f g))
 
-private def selectedFst {C : Type} [Category.{0} C] [HasPullbacks C]
+def selectedFst {C : Type} [Category.{0} C] [HasPullbacks C]
     {X Y Z : C} (f : X ⟶ Z) (g : Y ⟶ Z) : selectedPullback f g ⟶ X :=
   @pullback.fst C _ X Y Z f g (HasLimitsOfShape.has_limit (cospan f g))
 
-private def selectedIso {C : Type} [Category.{0} C] [HasPullbacks C]
+def selectedIso {C : Type} [Category.{0} C] [HasPullbacks C]
     {W X Y Z : C} (p : W ⟶ X) (q : W ⟶ Y) (f : X ⟶ Z) (g : Y ⟶ Z)
     (h : IsPullback p q f g) : W ≅ selectedPullback f g := h.isoPullback
 
@@ -45,11 +54,11 @@ local notation "V" => (NamedPostfixEncoding.variableCarrier : PredicateCategory 
 local notation "S₀" => NamedSyntaxComparison.sourceSyntax (V) σ π d
 local notation "S₂" => NamedSyntaxComparison.canonicalPresentedSyntax a (V) σ π d
 
-private def firstArrow : (S₂).sentenceObject ⟶
+def firstArrow : (S₂).sentenceObject ⟶
     (E).functor.obj ((Syntax.predicateFunctor (P)).obj (S₀).algebra.a.2) :=
   canonicalSentenceWord a σ π d
 
-private def secondArrow :
+def secondArrow :
     (E).functor.obj (AxiomSubobjects.axCarrier (P) (S₀).algebra.a.2 Γ hΓ) ⟶
       (E).functor.obj ((Syntax.predicateFunctor (P)).obj (S₀).algebra.a.2) :=
   (E).functor.map (AxiomSubobjects.axiomInclusion (P) (S₀).algebra.a.2 Γ hΓ)

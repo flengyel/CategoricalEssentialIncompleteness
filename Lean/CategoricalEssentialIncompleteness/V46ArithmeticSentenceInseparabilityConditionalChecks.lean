@@ -1,4 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityConditional
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityConditional
+
+
+/-! # Statement checks in `V46ArithmeticSentenceInseparabilityConditionalChecks` -/
+
+@[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.CoprodStruct
 open FailureOfComposition.TypedProgramCategory

@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.SyntacticFamilyExtension
-import CategoricalEssentialIncompleteness.ClassicalProgramCategory
-import CategoricalEssentialIncompleteness.ArithmeticCategoricalIncompleteness
-import Foundation.FirstOrder.Arithmetic.TA.Basic
+module
+
+public import CategoricalEssentialIncompleteness.SyntacticFamilyExtension
+public import CategoricalEssentialIncompleteness.ClassicalProgramCategory
+public import CategoricalEssentialIncompleteness.ArithmeticCategoricalIncompleteness
+public import Foundation.FirstOrder.Arithmetic.TA.Basic
 
 /-! # The syntactic category of the full standard theory is classical Rec -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

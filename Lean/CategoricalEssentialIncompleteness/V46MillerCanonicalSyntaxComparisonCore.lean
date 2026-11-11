@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle
-import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle
+public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
 
 /-! # The forward coefficient comparison for the explicit canonical push
 
@@ -13,6 +15,8 @@ does not replace that signature by the inverse image of its forward image.
 The constructor equation is an algebra-morphism equation obtained from the
 two initial algebras, rather than a condition on their underlying carriers.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationInitial
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationCoherence
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationOptions
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationInitial
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationCoherence
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationOptions
 
 /-! # The actual interpreted validator and successful derivation pullback
 
@@ -14,6 +16,8 @@ not assumed of the arithmetic interpretation. Its unique fold then
 identifies the validator square, and the two actual successful pullbacks
 supply the comparison of derivation carriers and conclusions.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

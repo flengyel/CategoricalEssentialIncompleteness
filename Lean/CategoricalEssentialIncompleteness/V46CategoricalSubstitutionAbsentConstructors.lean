@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentFamilies
-import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentTuples
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentFamilies
+public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentTuples
 
 /-! Absence invariants for every finite function or relation arity. -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

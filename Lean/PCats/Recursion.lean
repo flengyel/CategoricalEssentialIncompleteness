@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.PCat
+module
+
+public import PCats.PCat
 
 /-!
 # `P`-recursion categories
@@ -15,6 +17,8 @@ redefinition. `Prodominical` is a Prop-valued mixin, `PRecursionCategory` takes
 the whole ambient structure as instance parameters, so no `extends` chain has to
 be resolved.
 -/
+
+@[expose] public section
 
 universe v u
 

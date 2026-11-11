@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstants
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstants
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
 
 /-! # The actual constant-family polynomial comparison square
 
@@ -13,6 +15,8 @@ Every chart is constructed. Parameter insertion at recursive leaves,
 ordered product projections, sum injections and the canonical
 parameterComparison are compared as morphisms, not as bare carriers.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

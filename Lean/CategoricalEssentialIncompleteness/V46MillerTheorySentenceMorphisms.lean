@@ -1,6 +1,13 @@
-import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
-import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
-import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
+public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
+public import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
 
 /-! # The actual ordered-field sentence morphisms
 
@@ -8,6 +15,8 @@ The numerical map is constructed before any external theory. Its value is
 the sentence c_n < 1/2 in the fixed integer-coefficient convention. Chosen
 sentence points retain their own coordinates throughout the comparison.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

@@ -3,15 +3,19 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
-import Foundation.FirstOrder.Arithmetic.Basic.Model
-import Mathlib.Tactic.FinCases
+module
+
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
+public import Foundation.FirstOrder.Arithmetic.Basic.Model
+public import Mathlib.Tactic.FinCases
 
 /-! # The literal named arithmetic signature and arithmetic semantics
 
 The arithmetic structure interpreting a formula is independent of the
 standard arithmetic structure used to interpret its symbol predicates.
 -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

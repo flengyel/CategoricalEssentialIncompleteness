@@ -1,5 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerRealClosedSoundness
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
 
+public import CategoricalEssentialIncompleteness.V46MillerRealClosedSoundness
+
+
+/-! # Statement checks in `V46MillerRealClosedSoundnessChecks` -/
+
+@[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedSoundness
 open OrderedFieldSyntax RealClosedAxioms
 

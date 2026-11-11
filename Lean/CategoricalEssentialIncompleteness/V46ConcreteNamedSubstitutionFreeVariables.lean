@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
 
 /-! The actual total numerical free-variable traversal, with PA equations,
 PA carrier preservation, and a separate standard primitive-recursion proof. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedFreeVariablesDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

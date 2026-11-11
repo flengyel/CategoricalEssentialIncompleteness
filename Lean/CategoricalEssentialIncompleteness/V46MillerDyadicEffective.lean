@@ -1,7 +1,16 @@
-import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
-import Foundation.Vorspiel.Computability
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
+public import Foundation.Vorspiel.Computability
 
 /-! # Primitive-recursive tests for the finite dyadic certificates -/
+
+@[expose] public section
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller
 

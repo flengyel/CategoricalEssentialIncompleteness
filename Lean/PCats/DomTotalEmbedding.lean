@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Mathlib.CategoryTheory.Widesubcategory
-import PCats.DomProducts
+module
+
+public import Mathlib.CategoryTheory.Widesubcategory
+public import PCats.DomProducts
 
 /-!
 # The total-object embedding and preservation of binary products
@@ -48,6 +50,8 @@ instance, are not formalized; the binary products of `Dom C` and the
 equalizers of `PCats.DomEqualizers` do not by themselves yield Mathlib's
 `HasFiniteLimits`, which also requires the empty diagram.
 -/
+
+@[expose] public section
 
 universe v u
 

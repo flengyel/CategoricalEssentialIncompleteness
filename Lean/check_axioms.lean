@@ -1,4 +1,6 @@
-import PCats
+module
+
+public import PCats
 
 /-!
 Axiom check. Run with `lake env lean check_axioms.lean`.
@@ -26,6 +28,8 @@ the domain calculus among those of `rst_nearProd_map`, and so on. A
 declaration that is not a transitive dependency of any root is untested
 here.
 -/
+
+@[expose] public section
 
 open CategoryTheory
 

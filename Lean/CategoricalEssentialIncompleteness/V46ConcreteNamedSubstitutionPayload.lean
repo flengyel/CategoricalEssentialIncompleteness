@@ -1,9 +1,18 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAll
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAll
 
 /-! A literal numerical payload records the original named subtree, its
 free-variable list, the substitution result, and an independently computed
 free-for Boolean. The formula result uses failure zero or pair(value,one). -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedPayloadDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

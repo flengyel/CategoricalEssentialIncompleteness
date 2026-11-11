@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
-import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
+module
+
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+public import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
 
 /-! # Named-variable substitution by an algebra in the parameter slice -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityDiagonal
-import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
-import CategoricalEssentialIncompleteness.NumericalInseparability
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityDiagonal
+public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
+public import CategoricalEssentialIncompleteness.NumericalInseparability
 
 /-! # The categorical recursive-separator argument for actual Gamma words -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

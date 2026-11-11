@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.InternalCartesian
+module
+
+public import CategoricalEssentialIncompleteness.InternalCartesian
 
 /-!
 # Global arrows and predicates
@@ -14,6 +16,8 @@ comparison with Mathlib's chosen products is an isomorphism, with explicit
 projection equations. Global predicates and the monic internal embedding
 give the external predicate lattice and its natural injective embedding.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

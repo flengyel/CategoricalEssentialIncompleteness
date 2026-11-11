@@ -1,7 +1,14 @@
-import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitialExplicit
-import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTerminal
-import CategoricalEssentialIncompleteness.V46MillerTotalRegular
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitialExplicit
+public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTerminal
+public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 
 /-! # Parameter-stable initiality of the literal uniform syntax algebra
 
@@ -10,6 +17,8 @@ parameter-word algebra by constructor-preserving isomorphisms. The carrier
 is the guarded literal word; witnesses remain in its membership predicate.
 No target operation is required to have an ordinary recursive extension.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

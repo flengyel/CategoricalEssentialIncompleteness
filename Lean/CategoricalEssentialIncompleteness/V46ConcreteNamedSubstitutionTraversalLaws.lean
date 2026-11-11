@@ -1,8 +1,17 @@
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversal
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversal
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
 /-! Internal PA composition and stack-frame laws for the actual numerical
 traversal. The root computations are the given globally total numeric functions. -/
+
+@[expose] public section
 noncomputable section
 local instance primitiveNamedTraversalLawsDecidableEqNat : DecidableEq ℕ := Classical.decEq ℕ
 set_option backward.isDefEq.respectTransparency false

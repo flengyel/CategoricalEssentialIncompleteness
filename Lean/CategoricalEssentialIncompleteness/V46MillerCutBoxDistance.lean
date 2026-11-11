@@ -3,9 +3,11 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46MillerCutDyadicBoxes
-import CategoricalEssentialIncompleteness.V46MillerCutSeries
-import Mathlib.Algebra.Order.Group.MinMax
+module
+
+public import CategoricalEssentialIncompleteness.V46MillerCutDyadicBoxes
+public import CategoricalEssentialIncompleteness.V46MillerCutSeries
+public import Mathlib.Algebra.Order.Group.MinMax
 
 /-! # Actual finite-box distances and their positive loci
 
@@ -13,6 +15,8 @@ The distance uses the printed weighted product formula. Each finite-box
 formula has a constructed nearest point, rather than an assumed distance
 comparison. The empty union has distance 1, as in the manuscript.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

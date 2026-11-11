@@ -17,6 +17,8 @@ standard-natural-number equations.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxRecDepth 4096
 

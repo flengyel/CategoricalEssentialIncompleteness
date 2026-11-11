@@ -14,6 +14,8 @@ The input quantifier in pointwise provability remains external throughout.
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

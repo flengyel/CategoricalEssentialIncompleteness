@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPullback
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPullback
 
 /-! # Full finite-derivation comparison under PA numerical interpretation
 
@@ -11,6 +13,8 @@ The comparison uses the original rule-input pullbacks, the proved ordinary
 initial algebra and validator fold, and the two successful pullbacks.
 Constructor compatibility is proved by their monic tree inclusions.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

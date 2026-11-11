@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import PCats.Ranges
+module
+
+public import PCats.Ranges
 
 /-!
 # The category of domains
@@ -22,6 +24,8 @@ The category structure needs no hypotheses beyond `PCategory`. The identity of
 Lemma A.4 is proved here; `PCats.DomPullbacks` specializes it to the explicit
 pullback.
 -/
+
+@[expose] public section
 
 universe v u
 

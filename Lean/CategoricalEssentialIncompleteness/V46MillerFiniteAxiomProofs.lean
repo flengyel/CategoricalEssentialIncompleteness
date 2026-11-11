@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-! # Literal named proofs from arbitrary external axiom sets
 
@@ -15,6 +17,8 @@ have the original literal sentence guard. The carrier comparison below
 concerns standard natural codes and makes no assertion about nonstandard
 finite-carrier evaluations.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

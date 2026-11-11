@@ -3,16 +3,20 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import Foundation.Vorspiel.Computability
-import Mathlib.Computability.PartrecCode
-import Mathlib.Computability.RecursiveIn
-import Mathlib.Data.List.Range
+module
+
+public import Foundation.Vorspiel.Computability
+public import Mathlib.Computability.PartrecCode
+public import Mathlib.Computability.RecursiveIn
+public import Mathlib.Data.List.Range
 
 /-! # Finite oracle prefixes and effective relative semidecision certificates
 
 This is an explicit finite-query presentation. The comparison with oracle
 recursive functions is developed separately before it is used for Appendix C.
 -/
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -49,7 +53,7 @@ namespace FiniteOracleRE
 variable {α β : Type} [Primcodable α] [Primcodable β]
   {S : Set ℕ} {p q : α → Prop}
 
-theorem of_eq (hp : FiniteOracleRE S p) (h : ∀ x,p x ↔ q x) : FiniteOracleRE S q := by
+theorem of_eq (hp : FiniteOracleRE S p) (h : ∀ x, p x ↔ q x) : FiniteOracleRE S q := by
   obtain ⟨Q,hQ,hM,hP⟩ := hp
   exact ⟨Q,hQ,hM,fun x => (h x).symm.trans (hP x)⟩
 

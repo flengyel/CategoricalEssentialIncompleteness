@@ -15,6 +15,8 @@ operations are provably Delta-one over IΣ1. -/
 
 @[expose] public section
 
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxRecDepth 4096
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

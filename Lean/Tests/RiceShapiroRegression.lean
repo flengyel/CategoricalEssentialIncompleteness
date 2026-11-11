@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import RiceShapiro
+module
+
+public import RiceShapiro
 
 /-!
 # Rice--Shapiro public API regression tests
@@ -25,6 +27,8 @@ would pass vacuously.
 
 Run by `scripts/syncpcats.sh`; outside `lake build`.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

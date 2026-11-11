@@ -3,12 +3,16 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46NumericalSyntax
-import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
-import CategoricalEssentialIncompleteness.EnumerableUnderlying
-import Foundation.FirstOrder.Arithmetic.R0.Representation
+module
+
+public import CategoricalEssentialIncompleteness.V46NumericalSyntax
+public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
+public import CategoricalEssentialIncompleteness.EnumerableUnderlying
+public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
 /-! # Literal predicate presentations of numerical tuples -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false

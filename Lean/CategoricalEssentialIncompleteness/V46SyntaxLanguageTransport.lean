@@ -3,10 +3,14 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
-import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
+module
+
+public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
+public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
 /-! # Constructor comparisons for the actual transported syntax language -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

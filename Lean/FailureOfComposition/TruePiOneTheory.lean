@@ -3,7 +3,9 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import FailureOfComposition.ConcretePiOneCharacterization
+module
+
+public import FailureOfComposition.ConcretePiOneCharacterization
 
 /-!
 The example after manuscript Theorem 3: adjoining every true Pi-one sentence
@@ -11,6 +13,8 @@ to PA gives a consistent Pi-one-complete theory. Its axiom and theorem codes
 are not recursively enumerable. The nonenumerability proof uses the existing
 productive obstruction and the characterization theorem.
 -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

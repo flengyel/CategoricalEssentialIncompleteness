@@ -3,8 +3,10 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates
-import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates
+public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
 
 /-! # Finite-rule inputs under component evaluation
 
@@ -12,6 +14,8 @@ The construction repeats the finite-power/pullback/coproduct comparison
 already proved for arithmetic interpretation, now with the source category
 of total forks. It transfers operations, without an initiality assertion.
 -/
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
@@ -56,7 +60,7 @@ def interpretedRules : RulePresentation (K.obj F) N where
 abbrev overFunctor (_R : RulePresentation F N) : Over F ⥤ Over (K.obj F) := Over.post K
 
 omit [PreservesFiniteCoproducts K] in
-private theorem input_square (Q : Over F) (i : Fin (N+1)) :
+theorem input_square (Q : Over F) (i : Fin (N+1)) :
     IsPullback
       (K.map (pullback.fst (R.premises i) (finitePowerMap Q.hom i.val)))
       (K.map (pullback.snd (R.premises i) (finitePowerMap Q.hom i.val)) ≫
@@ -98,7 +102,7 @@ def sumIso (Q : Over F) : K.obj (∐ R.ruleObject Q) ≅
     map_ι_comp_inv_sigmaComparison_assoc,Sigma.ι_mapIso_hom]
 
 omit [PreservesFiniteLimits K] in
-private theorem mapSum_hom_ext {I : Type} [Finite I] (X : I → EffectiveFork.Total) {Y : NumericalTuples.Object}
+theorem mapSum_hom_ext {I : Type} [Finite I] (X : I → EffectiveFork.Total) {Y : NumericalTuples.Object}
     (f g : K.obj (∐ X) ⟶ Y)
     (hh : ∀ i, K.map (Sigma.ι X i) ≫ f = K.map (Sigma.ι X i) ≫ g) : f = g := by
   apply (cancel_epi (sigmaComparison K X)).mp

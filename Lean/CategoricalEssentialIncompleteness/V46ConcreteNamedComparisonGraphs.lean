@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
-import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial
-import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
+public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial
+public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
 
 /-! # Actual quotient morphisms for the numerical occurrence traversal -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

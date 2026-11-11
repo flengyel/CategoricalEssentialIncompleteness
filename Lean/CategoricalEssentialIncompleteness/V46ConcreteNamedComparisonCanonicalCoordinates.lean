@@ -3,11 +3,15 @@ Copyright (c) 2026 Florian Lengyel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florian Lengyel
 -/
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaRootArithmetic
-import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation
+module
+
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaRootArithmetic
+public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation
 
 /-! # Canonical logical constructor values at the ordered raw coordinates -/
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
