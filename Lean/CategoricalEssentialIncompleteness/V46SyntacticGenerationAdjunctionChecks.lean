@@ -29,6 +29,22 @@ example : generation T V σ π d ⊣ inclusion T V σ π d := adjunction T V σ 
 example : subobjectGeneration T V σ π d ⊣ subobjectInclusion T V σ π d :=
   subobjectAdjunction T V σ π d
 
+example : sentenceGeneration T V σ π d ⊣ sentenceInclusion T V σ π d :=
+  sentenceAdjunction T V σ π d
+
+example : axiomGeneration T V σ π d ⊣ axiomInclusion T V σ π d :=
+  axiomAdjunction T V σ π d
+
+example (A : Over (S).sentenceObject) :
+    ((axiomGeneration T V σ π d).obj A).val =
+      SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d
+        (imageSubobject A.hom).arrow := axiomGeneration_image T V σ π d A
+
+example (A : Over (S).sentenceObject) :
+    ((axiomGeneration T V σ π d).obj A).val =
+      SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d A.hom :=
+  axiomGeneration_original T V σ π d A
+
 example : (inclusion T V σ π d).Full := inferInstance
 
 example : (inclusion T V σ π d).Faithful := inferInstance
@@ -50,3 +66,6 @@ example (B : Over (S).sentenceObject) :
 #print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.adjunction
 #print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.subobjectAdjunction
 #print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.closed_iff
+#print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.sentenceAdjunction
+#print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.axiomAdjunction
+#print axioms CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.axiomGeneration_original

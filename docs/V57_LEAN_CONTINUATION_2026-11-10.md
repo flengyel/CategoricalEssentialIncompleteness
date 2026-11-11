@@ -1,15 +1,23 @@
 # Lean continuation requested for manuscript v57
 
-The requested target is manuscript v57, whose mathematical statements and
-proofs are reported by the author to agree with v56. The source archive and
-the accompanying instructions for its fifteen additional results were not
-available in the checkout or Downloads when this continuation began.
-After fetching, `origin/main` was
-`de1466ac2fd820ed06931c467083a79f0481f84c`, whose manifest selects v51.
-The detailed v57 instructions were subsequently supplied. The source ZIP,
-PDF and independent audit files remain unavailable here; their filenames
-and expected hashes do not supply their contents. No v57 statement comparison
-or verification is claimed here.
+The active target is manuscript **v57**, supplied on main by
+`c61105d` after the earlier v51 verification reported below. The manifest,
+24 TeX source files, PDF and source archive now agree. The archive was
+unpacked into `/tmp/cei-v57-source-50vjv_yr`; every TeX file matches the
+checkout. Both artifact hashes match the supplied WSL2 instructions.
+`python3 scripts/verify.py --manuscript-only` passes for v57. This source
+check is distinct from Lean verification.
+
+The v57 implementation batch constructs Theorems 4.4 and 4.5 and
+Proposition 4.6 with their printed hypotheses. Targeted strict checks and
+the integrated verification state are recorded at the end of this report.
+The other twelve added results remain open. No manuscript source, artifact,
+mathematical statement or proof has been edited in this batch.
+
+The following sections preserve the preceding v51 development and
+verification record. At the start of that phase, the v57 archive and PDF
+were unavailable; `origin/main` selected v51 at
+`de1466ac2fd820ed06931c467083a79f0481f84c`.
 
 The checkout was fast-forwarded from `c5d7d0e` to that available main commit.
 Before integration, the available v51 source archive was extracted to a
@@ -70,9 +78,9 @@ module-system port is preserved. Its development build runs through the
 existing lock with `LEAN_NUM_THREADS=1`; module visibility repairs retain
 the mathematical definitions, statements and proofs.
 
-The available v51 manuscript-only gate passes. Full verification against
-v57 remains pending receipt and integration of that source and completion
-of the proof batch. The fifteen requested results remain open: 4.4–4.8,
+The available v51 manuscript-only gate passes. At that stage, full verification against
+v57 awaited its sources and the proof batch. The fifteen requested results
+were open: 4.4–4.8,
 5.1–5.3, 8.9–8.10, 9.6, 9.8 and 10.7–10.9. No correspondence row has been
 marked complete on the basis of the parser repair or a manuscript-only gate.
 
@@ -82,8 +90,9 @@ marked complete on the basis of the parser repair or a manuscript-only gate.
 compile. Both also pass independent raw Lean checks with
 `-DwarningAsError=true`. They are integrated into the production imports,
 both combined statement imports, and the current transitive axiom audit.
-The exact printed v57 statement comparison remains pending access to the
-source; row 4.4 is not yet marked complete.
+This earlier implementation had not yet been compared with the printed
+v57 assumptions. Its stronger initiality premise is corrected by the
+`FirstOrderReflection` construction recorded below.
 
 The construction quantifies over a regular category `D` with finite
 coproducts, variable object `V`, formula object `F`, logical-axiom coefficient
@@ -159,8 +168,8 @@ The producer and checks are integrated into the production and audit
 imports. The three transitive axiom reports contain only `propext`,
 `Quot.sound`, `Classical.choice`. `syntactic-adjunction-types.log` records
 the principal types with all universe and implicit arguments explicit.
-This proves the displayed Lean adjunctions; comparison with the complete
-printed v57 statement remains pending receipt of its sources.
+This proves the displayed Lean adjunctions; this earlier implementation has the stronger all-presentations initiality
+premise described below. The new reflector uses only axiom subobjects.
 
 ## Derivation translation implementation
 
@@ -193,8 +202,8 @@ with universe parameters and implicit arguments explicit. The eight axiom
 reports from `inference-closure-checks-strict.log` contain only
 `propext`, `Quot.sound` and `Classical.choice`. The closure pullback extension and its checks also pass strict Lean, recorded
 in `inference-closure-strict.log` and `inference-closure-checks-strict.log`.
-The exact statement comparison with v57 remains pending its sources; no
-numbered row is closed here.
+These supporting modules alone do not establish a complete v57 numbered
+result; the later statement comparisons are recorded below.
 
 ## Functor of finite derivations
 
@@ -293,8 +302,8 @@ fork conclusion-computability proof adds reflexivity after its final
 simplification; its statement is unchanged. Remaining repairs expose
 helpers needed by exported data or retain private compiler implementations
 behind their proved graph equations. The 21-module focused repair build now exits zero in
-`port-repairs-8-build.log`. Subsequent production integration and the full
-verifier remain pending. No passing integrated result is claimed yet.
+`port-repairs-8-build.log`. At that stage, production integration and the full verifier remained
+pending. The later passing run is recorded below.
 
 A subsequent development build of the production entry point exposed
 further private compatibility helpers in the Miller, numerical and fork
@@ -364,7 +373,7 @@ the implemented constructions; the v57 statement comparison remains open.
 | `RulePresentation.Translation` | `closed_pullback`, `fold_constructor`, `fold_unique` | [closure](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L149), [constructors](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L178), [uniqueness](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceTranslation.lean#L221) | `V46InferenceTranslationChecks.lean` |
 | `RuleSystem` | `derivationFunctor`, `conclusion` | [functor](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceFunctor.lean#L79), [naturality](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/962f9474dcd543529692cbdf37a6db703f4abda2/Lean/CategoricalEssentialIncompleteness/V46InferenceFunctor.lean#L97) | `V46InferenceFunctorChecks.lean` |
 
-## Integrated local verification, 11 November 2026
+## Integrated local verification of v51, 11 November 2026
 
 `bash scripts/verify-wsl.sh` passed with exit **0** in
 `.codex-work/verify-20261111T044232Z-gtWRUV`. All **1,602 commands** passed,
@@ -399,7 +408,7 @@ directory. A commit containing the measured bytes is identified in the
 delivery record below; it is not presented as the wrapper's starting HEAD.
 
 This is a new full verification of the available v51 integration. It does
-not verify the unavailable v57 manuscript or close its fifteen numbered
+not verify the subsequently supplied v57 manuscript or close its fifteen numbered
 correspondence rows. The generation adjunctions are proved; matching 4.4
 to its printed statement remains pending. The complete 4.5 and 4.6
 statements remain open despite the proved translation and functor
@@ -436,14 +445,14 @@ report commit, compare all measured proof inputs with that commit, select a
 new Downloads directory to preserve differing files, and verify each copy
 by SHA-256. The delivery receipt records the report commit, proof commit,
 remote confirmation, destination paths and hashes. The requested manuscript
-version is 57; the verified available manuscript version is 51.
+version was 57; that delivery records the completed v51 run. The v57
+integration below is a separate source state.
 
 ## Artifact and registration scope
 
-The received instructions specify these v57 hashes; verification of their
-bytes is pending access to the files:
+The subsequently supplied v57 artifacts match both instruction digests:
 
-| Artifact | Expected SHA-256 |
+| Artifact | Verified SHA-256 |
 | --- | --- |
 | `logical_consequence_v57_source.zip` | `e29741844891826680520b5a352e963d0f0e6b04035e3943806df159c27d2832` |
 | `logical_consequence_and_essential_incompleteness_v57.pdf` | `cec565fba1269765999a0f9f431f25beb34fa4e48882643d187d4500a9aa4dcb` |
@@ -460,3 +469,129 @@ is a separate project's draft, with nine designated placeholders:
 of the Challenge. Those placeholders are preserved; they are not CEI
 registration declarations. No general exception to production axiom or
 placeholder rejection has been introduced.
+
+
+## v57 integration: generation and deduction comparisons
+
+The v57 synchronization commit is `c61105d`. Its archive comparison is
+recorded in `v57-archive-comparison.json` under the continuation working
+directory. The two unrelated untracked Palomar drafts were preserved.
+The toolchain, dependency manifest, imported-source pins and manuscript
+bytes are unchanged by this proof batch.
+
+The complete principal declaration types, with universe parameters and
+implicit arguments displayed, are retained in `v57-principal-types.log`.
+All namespace names below are under
+`CategoricalEssentialIncompleteness.V46`. Composition `f ≫ g` applies `f`
+first. A `Subobject S` is an isomorphism class of monomorphisms into `S`;
+`Over S` also permits nonmonic presentations.
+
+### Theorem 4.4: the initiality premise
+
+The earlier `FirstOrderGeneration` construction requires initial finite
+derivation algebras for every axiom morphism `A ⟶ S`. That theorem remains
+valid under its stated stronger hypothesis. It does not establish 4.4 at
+the printed hypotheses. The repair is in Lean; no manuscript repair is
+needed.
+
+`V46FirstOrderReflection.lean` requires such algebras only for axiom
+**subobjects**. Its `extensive`, `monotone` and `idempotent` give the closure
+operator on sentence subobjects. `generated_eq_pullback` identifies it
+with the sentence pullback of the formula-conclusion image. `Theory` is
+defined by `generated T = T`. The functors `generation` and `inclusion`,
+the natural `homEquiv` and `adjunction` give the order reflection.
+
+For an arbitrary presentation `a : A ⟶ S`,
+`presentationGeneration` is defined as `generated (imageSubobject a)`.
+Its action on morphisms uses the image factorization; `presentationHomEquiv`
+and `presentationAdjunction` give the second reflection. No initiality
+statement is asserted for the derivations retaining the labels of `A`.
+The auxiliary `presentation_generated_comparison`, under the earlier
+stronger hypotheses, equates sentence images only. It does not identify
+or transfer initiality between derivation carriers.
+
+`SyntacticGenerationAdjunction.sentenceAdjunction` and `axiomAdjunction`
+instantiate these constructions with the previously constructed algebras
+in `TotalSplit T`. The arbitrary extending theory, coefficients and variable
+object are retained. `axiomGeneration_image` is the printed image formula;
+`axiomGeneration_original` compares the generated sentence subobjects with
+the earlier implementation. There is no extra initiality premise on the
+caller.
+
+The producer and Checks for the new reflector and its specialization pass
+four strict Lean commands. The record is `v57-reflection-targeted.json`;
+each command exits 0 and the printed transitive axiom reports contain only
+the permitted three axioms.
+
+### Theorem 4.5: translations and both reflections
+
+`V46LogicalTranslations.lean` defines first-order presentations and
+logical translations over the same variable object. Translation data are
+the term, formula and sentence morphisms. The laws preserve the named
+variables, logical constructors, successful admissible substitution and
+sentence inclusion. Rule witnesses are existence conditions, rather than
+additional choices determining equality of translations. Identity,
+composition and the category laws are proved.
+
+`Translation.rulesMap` constructs the finite-rule morphism including axiom
+leaves. `V46TranslationGalois.lean` uses its initial fold to prove
+`map_generated_le`, derives `inverse_closed`, and constructs `pushforward`
+and `inverseImage`. `adjunction` is their natural hom-set bijection.
+`generation_functor_identity`, `pushforward_comp`, `inverseImage_comp` and
+the identity laws are proved at the functor types.
+
+`V46FirstOrderTranslationReflection.lean` constructs the category `Axioms`
+of presentations with axiom subobjects and its full subcategory of theories.
+The generation and inclusion functors satisfy `Axioms.adjunction`.
+`homEquiv_translation` proves that the bijection leaves the translation
+unchanged. These three producer/Checks pairs pass six strict commands,
+recorded in `v57-translation-targeted.json`, with exit 0 and only the
+permitted axioms.
+
+### Proposition 4.6: change of category and the algebra mate
+
+`V46DeductionComparison.lean` defines the image functor `imageFunctor`
+and the presentation functor `presentationFunctor`, with their object and
+morphism actions. `image_presentation` derives image preservation from
+preservation of regular epimorphisms. This uses a consequence of the
+printed regularity hypothesis, rather than an additional assumption.
+
+From the stated conclusion-preserving sentence-derivation morphisms,
+`generation_square` and `presentation_square` prove the two functor
+identities. `inclusionComparison` supplies the natural transformation
+between the inclusion functors. For a subobject right adjoint,
+`right_closed` proves closure preservation and `restrictedAdjunction`
+constructs the restricted adjunction.
+
+`V46DeductionSliceAdjunction.lean` constructs the right adjoint for an
+ambient adjunction `G ⊣ H`. Its object over `S₁` is the pullback of `H b`
+along `η ≫ Hσ`; it acts on morphisms by the pullback universal property.
+`rightIso` is a natural isomorphism with the composed slice right adjoints,
+including both coordinate equations. `adjunction` proves the presentation
+adjunction, and `orderAdjunction` proves the corresponding image/pullback
+adjunction on subobjects.
+
+`V46DeductionMates.lean` transposes the inference algebra using the rule
+natural transformation and counit. `fold_constructor` proves the resulting
+constructor equation. `comparisonMap` specializes the initial fold and
+restricts to sentence conclusions; `comparisonMap_conclusion` proves its
+triangle. `generation_square_from_rules`, `presentation_square_from_rules`
+and `theoryAdjunction` apply the comparison with these constructed maps.
+The right adjoint and proof comparison are not left as unexplained fields.
+Initiality is used only for source axiom subobjects.
+
+All three producer/Checks pairs pass six strict Lean commands, recorded in
+`v57-deduction-targeted.json`. Their seventeen named transitive axiom
+reports contain only `propext`, `Quot.sound` and `Classical.choice`.
+The production import, both statement imports and the automatic current
+axiom audit include all seven new producers and Checks.
+
+### Integrated v57 verification state
+
+The targeted checks above establish these declarations and their intended
+statement types. The repository-wide v57 replay is pending; the numbered
+correspondence rows retain that qualification. The first remaining
+mathematical construction is Theorem 4.7, followed by 4.8, 5.1–5.3 and the
+seven application results. Three of the fifteen additions have compiled
+proofs; twelve remain mathematically open. Full verification results and
+the tested commit will be appended here after the established verifier.

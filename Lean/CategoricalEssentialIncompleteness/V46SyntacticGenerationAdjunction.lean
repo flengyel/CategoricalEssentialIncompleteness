@@ -6,6 +6,7 @@ Authors: Florian Lengyel
 module
 
 public import CategoricalEssentialIncompleteness.V46FirstOrderPresentationAdjunction
+public import CategoricalEssentialIncompleteness.V46FirstOrderReflection
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheoryTotal
 
 /-! # Generation adjunctions in the total restriction splitting
@@ -75,5 +76,36 @@ def subobjectAdjunction : subobjectGeneration T V σ π d ⊣ subobjectInclusion
 theorem generated_sentence_subobject (A : Subobject (S).sentenceObject) :
     ((subobjectGeneration T V σ π d).obj A).val =
       SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d A.arrow := rfl
+
+abbrev SentenceTheories := FirstOrderReflection.Theory
+  (fun A : Subobject (S).sentenceObject => (P) A.arrow)
+
+def sentenceInclusion : SentenceTheories T V σ π d ⥤ Subobject (S).sentenceObject :=
+  FirstOrderReflection.inclusion (fun A => (P) A.arrow)
+
+def sentenceGeneration : Subobject (S).sentenceObject ⥤ SentenceTheories T V σ π d :=
+  FirstOrderReflection.generation (fun A => (P) A.arrow) (fun A => (hP) A.arrow)
+
+def sentenceAdjunction : sentenceGeneration T V σ π d ⊣ sentenceInclusion T V σ π d :=
+  FirstOrderReflection.adjunction (fun A => (P) A.arrow) (fun A => (hP) A.arrow)
+
+def axiomInclusion : SentenceTheories T V σ π d ⥤ Over (S).sentenceObject :=
+  FirstOrderReflection.presentationInclusion (fun A => (P) A.arrow)
+
+def axiomGeneration : Over (S).sentenceObject ⥤ SentenceTheories T V σ π d :=
+  FirstOrderReflection.presentationGeneration (fun A => (P) A.arrow) (fun A => (hP) A.arrow)
+
+def axiomAdjunction : axiomGeneration T V σ π d ⊣ axiomInclusion T V σ π d :=
+  FirstOrderReflection.presentationAdjunction (fun A => (P) A.arrow) (fun A => (hP) A.arrow)
+
+theorem axiomGeneration_image (A : Over (S).sentenceObject) :
+    ((axiomGeneration T V σ π d).obj A).val =
+      SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d
+        (imageSubobject A.hom).arrow := rfl
+
+theorem axiomGeneration_original (A : Over (S).sentenceObject) :
+    ((axiomGeneration T V σ π d).obj A).val =
+      SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d A.hom :=
+  (FirstOrderReflection.presentation_generated_comparison (P) (hP) A.hom).symm
 
 end CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction
