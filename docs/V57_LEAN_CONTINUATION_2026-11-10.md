@@ -961,5 +961,41 @@ directory. Lean uses f ≫ g for the manuscript's gf.
 This batch changes no manuscript statement, artifact, toolchain, dependency
 or imported-source pin. There are now 67 proved numbered counterparts and
 ten open mathematical obligations: 5.1–5.3, 8.9–8.10, 9.6, 9.8 and 10.7–10.9.
-The integrated full replay for Corollary 4.8 is pending. The preceding full
-run continues to establish 66 numbered counterparts at its recorded commit.
+The integrated full replay for Corollary 4.8 passed at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a`.
+The completed replay below establishes 67 numbered counterparts; the preceding
+66-result run remains preserved for its own source snapshot.
+
+
+## Full integrated v57 verification of Corollary 4.8
+
+Proof commit `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed
+`bash scripts/verify-wsl.sh` in
+`.codex-work/verify-20261112T155244Z-TqJmof`, exit **0**.
+All **1,708 commands** passed on **2,346 measured inputs**: the combined
+production build, current intended-statement checks, every strict source and
+Checks replay, and both final transitive axiom audits. The audits cover
+**868 current production modules**, **27,399 current declarations** and
+**1,274 retained declarations**. Both axiom unions are exactly
+`propext`, `Quot.sound`, `Classical.choice`.
+
+All sixteen dependency worktrees were clean and pinned at the start and end.
+All 356 imported-source comparisons passed. Every measured input matches both
+the tested worktree and the committed proof bytes.
+Snapshot SHA-256:
+`9ef1a2c9287cb228366e13f9756cf01d7717889fa7af256155f393c71ab2cedf`.
+Raw verification JSON SHA-256:
+`b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49`.
+The [verification record](V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json) retains these results and
+the reporting change's measured correspondence-file delta.
+
+The preceding attempt at the same proof commit stopped after 1,063 recorded
+successful commands. Its report has `success: false`; the wrapper's saved
+exit-status `0` does not establish a completed verification. Its original
+logs, report and exit-status are preserved separately. The completed replay
+above supplies the full result. The interruption's cause is not established.
+
+The reporting change updates verification descriptions only. Lean sources,
+manuscript source, PDF, archive, manifest, toolchain, dependency pins and
+current instructions retain their tested bytes. There are **67 proved
+numbered results and ten open mathematical obligations**. Lemma 5.1 is the
+first remaining construction.

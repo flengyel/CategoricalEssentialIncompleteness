@@ -1,0 +1,91 @@
+{
+  "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+  "manuscript_version": 57,
+  "principal_declaration": "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable",
+  "run_directory": ".codex-work/verify-20261112T155244Z-TqJmof",
+  "exit_status": 0,
+  "full_success": true,
+  "commands": 1708,
+  "measured_inputs": 2346,
+  "current_production_modules": 868,
+  "current_declarations": 27399,
+  "retained_declarations": 1274,
+  "current_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_snapshot_sha256": "9ef1a2c9287cb228366e13f9756cf01d7717889fa7af256155f393c71ab2cedf",
+  "verification_json_sha256": "b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "all_dependency_worktrees_clean_and_pinned": true,
+  "dependency_worktrees": 16,
+  "imported_source_files_verified": 356,
+  "sum_command_seconds": 14914.49,
+  "targeted_commands": 32,
+  "targeted_axiom_reports": 70,
+  "interrupted_attempt": {
+    "recorded_at_utc": "2026-11-12T15:51:32.487263+00:00",
+    "classification": "interrupted; full verification not completed",
+    "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+    "recorded_success": false,
+    "successful_commands": 1063,
+    "failed_commands": 0,
+    "last_completed_command": {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46NumericalArithmeticEqualityParameters.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 17.55,
+      "log": "build-logs/strict-V46NumericalArithmeticEqualityParameters.log"
+    },
+    "wrapper_exit_status_preserved": "0",
+    "wrapper_exit_status_is_not_verification_success": true,
+    "missing_completion_evidence": [
+      "success=true",
+      "final current statement replay",
+      "retained and current final axiom audits",
+      "ending dependency/source snapshot"
+    ],
+    "raw_report_sha256": "29b5491cf32b437f3cecb5973d64029b948d6cbdae53d21484262688254e8630",
+    "original_report_mtime_utc": "2026-11-12T08:29:28.802200+00:00",
+    "system_boot_observed_local": "2026-11-12 10:43 EST",
+    "interruption_cause": "not established; previous Codex task interrupted; last log activity predates observed system boot",
+    "preservation": "All preexisting evidence retained verbatim; original exit-status is unchanged."
+  },
+  "unrelated_files_preserved": {
+    ".github/workflows/palomar-preflight.yml": "ea81838b19ea44a8dfd10ae3933bae32d6032a021fd5b4a337007a69704e406b",
+    "docs/PALOMAR_DECLARATIONS.md": "51c5885e7882d7b0afa1c4e37a5434bcc474a1e7dc7c15c529b3544260aa2828"
+  },
+  "proved_numbered_results": 67,
+  "open_mathematical_obligations": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "8.9",
+    "8.10",
+    "9.6",
+    "9.8",
+    "10.7",
+    "10.8",
+    "10.9"
+  ],
+  "recorded_at_utc": "2026-11-12T20:02:12.821435+00:00",
+  "reporting_scope": "Verification records and status descriptions only; mathematical statements and proofs unchanged.",
+  "measured_documentation_delta": {
+    "path": "FORMALIZATION_STATUS_V57.md",
+    "before_sha256": "4b2f40a2478cd38046d625465cb6b8ad674a1b5f49965418035c824deb6fe322",
+    "after_sha256": "1cb57e37a6c78f4d5f5c319a7b022aca9337726b3d9860b0af78208320dd3309"
+  }
+}
