@@ -819,10 +819,79 @@ The complete 30-pair batch therefore has 60 passing strict commands and 102
 selected transitive axiom reports. Every retained report is accounted for
 under its complete declaration name; all use only the permitted axioms.
 The production entry point, both statement audits and automatic axiom audit
-import all 30 pairs. The integrated full replay remains pending; the earlier
-1,616-command run is evidence for its own commit, not this later batch.
+import all 30 pairs. The subsequent integrated full replay passed at proof commit
+`c87ae0e3a7f1faed605c6bc1753f6309504527b7`, as recorded below. The earlier
+1,616-command run remains evidence for its own commit.
 
 There are now 66 proved counterparts among v57's 77 numbered results, with
 eleven open: 4.8, 5.1–5.3, 8.9–8.10, 9.6, 9.8 and 10.7–10.9.
 Corollary 4.8 is the next mathematical obligation. No manuscript statement,
 source artifact, toolchain or dependency pin changed.
+
+
+## Full verification of the free first-order adjunction
+
+The tested proof commit is `c87ae0e3a7f1faed605c6bc1753f6309504527b7`.
+The current manuscript remained v57. The combined entry point and current
+statement audit passed before the strict replays. The established command
+`bash scripts/verify-wsl.sh` completed with exit 0 in
+`.codex-work/verify-20261111T234522Z-22sulL`.
+
+| Verified item | Result |
+| --- | --- |
+| Commands | 1,676; all exit 0 |
+| Measured inputs | 2,314; all match committed proof bytes |
+| Current production modules | 852; automatic audit coverage matches the source inventory |
+| Current / retained declarations | 27,204 / 1,274; all raw reports accounted for under complete names |
+| Transitive axiom union | `propext`, `Quot.sound`, `Classical.choice` |
+| Dependency worktrees | All sixteen clean and pinned, at the start and end |
+| Imported-source comparisons | 356 passed |
+| Numbered results proved / open | 66 / 11 |
+
+The measured-input snapshot is
+`70f2b4c994c8408f3a7ae53f3940fa2bcfb833660f2c96282e93e0560ed5a214`.
+The SHA-256 of the preserved raw `verification.json` is
+`c1877888d61bb1a39fbe29239216a086f687e306aa89e5c9a0645af0abbee4b4`.
+The full run began at 2026-11-11T23:45:22Z; its completion record was written
+at 2026-11-12T02:18:58Z. Its commands took 9,205.52 seconds in aggregate.
+All 2,314 measured inputs were compared against both the working tree and
+Git blobs at the proof commit. The retained identity record is
+`v57-4.7-committed-source-identity.json` in the continuation working directory.
+
+The earlier run `.codex-work/verify-20261111T233434Z-fC4ub3` was interrupted
+by the tool-server restart after 84 successful commands. It has no recorded
+exit status. Its verbatim log snapshot and `interruption-record.json` remain
+separate from the completed run. The later persistence helper found that the
+verifier had finished and exited before changing any process; no third
+verification run was launched.
+
+The principal result is
+`CategoricalEssentialIncompleteness.V46.SignedFirstOrder.adjunction`.
+Its explicit source and target are `generation F` and `extraction F`.
+`F : NullaryPresentations V` supplies the printed syntax and derivation
+prerequisites for all coefficient objects X; the family contains no
+interpretation, rule-preservation, consistency-extraction or adjunction
+assumption. Those constructions are proved. The exact universe parameters,
+field types and principal theorem types are retained in
+`v57-free-first-order-principal-types.log`.
+
+The supporting results are `homEquiv` and its naturality proofs,
+`unit_arrow`, `counit_translation`, `evaluation_consistent` and
+`interpretation_theory_bound` in the same `V46.SignedFirstOrder` namespace.
+`V46.FirstOrderPresentation.ConsistentTheoryCategory.morphism_bound_iff`
+proves that the target category's morphisms have the printed closure bound.
+The corresponding Checks modules retain explicit intended-statement types;
+the full strict replay and automatic axiom audit include their production
+proofs and dependencies.
+
+The later report commit changes only the active status descriptions, README
+and this continuation report. Only the correspondence file is a measured
+input among those three files; its before/after bytes and SHA-256 are retained
+in `v57-4.7-status-documentation-delta.json`. All other measured inputs remain
+identical to the tested proof commit. No mathematical statement, manuscript
+artifact, toolchain, dependency pin or imported-source pin changed.
+
+Corollary 4.8 is now the first open result. Its remaining construction is the
+internal Boolean valuation for a separator, its substitution and truth laws,
+and the consistent complete extension. The other open rows remain 5.1–5.3,
+8.9–8.10, 9.6, 9.8 and 10.7–10.9.

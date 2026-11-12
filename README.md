@@ -58,14 +58,13 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V57.md](FORMALIZATION_STATUS_V57.md). It records 77
-numbered results and three definitions. Of the numbered results, **66 have
-proved counterparts and eleven remain open**. The full v57 verification of
-`c93832d761347607906b11615bd56cb937cdfdff` passed all 1,616 commands,
-including the new generation, translation and deduction comparisons
-(4.4–4.6), intended-statement checks and transitive axiom audits.
-The later free first-order adjunction (4.7) has passing targeted statement
-and axiom checks; its integrated full replay is pending. The first open
-result is the incompleteness–inseparability equivalence, Corollary 4.8.
+numbered results and three definitions. Of the numbered results, **66 are
+proved and eleven remain open**. The full v57 verification of
+`c87ae0e3a7f1faed605c6bc1753f6309504527b7` passed all 1,676 commands,
+including the generation, translation, deduction and free first-order
+adjunctions (4.4–4.7), intended-statement checks and transitive axiom audits.
+The first open result is the incompleteness–inseparability equivalence,
+Corollary 4.8.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
