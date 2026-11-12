@@ -895,3 +895,71 @@ Corollary 4.8 is now the first open result. Its remaining construction is the
 internal Boolean valuation for a separator, its substitution and truth laws,
 and the consistent complete extension. The other open rows remain 5.1–5.3,
 8.9–8.10, 9.6, 9.8 and 10.7–10.9.
+
+
+## Corollary 4.8: Boolean extension and inseparability
+
+The principal declaration is
+`V46.SignedFirstOrder.essential_incomplete_iff_inseparable` in
+[V46SignedFirstOrderIncompleteness.lean](../Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean).
+It retains the disjointness and consistency hypotheses, arbitrary coefficient
+object X, and the syntax/derivation family from Theorem 4.7. The ambient
+category is an arbitrary split restriction category C whose total category
+is regular and finitary extensive. `RestrictionSubobjects.MonoInverses C`
+is precisely the printed partial-inverse hypothesis on all monomorphisms of
+Tot(C); it assumes no incompleteness or comparison conclusion.
+`FirstOrderPresentation.EssentiallyIncomplete` includes the base consistency
+condition and quantifies over every closed consistent internal extension.
+
+`NullaryBooleanValuation.algebra` interprets terms in the terminal object,
+equality by true, nullary predicates by the given separator d:X→2, and
+negation and implication by their Boolean truth functions. Quantification
+is projection. `valuation` is the constructed syntax fold, with all five
+formula-constructor equations proved. Arbitrary generalized morphisms are
+used throughout; no pointwise semantics, standardness or choice of witnesses
+for carrier membership is assumed.
+
+`OptionSyntax.mask` retains an option's failure status and replaces its
+payload. Its composition, branching, unary, coefficient and binary laws
+support the substitution invariant. The `PairGood` equation compares the
+computed Boolean option with the mask of the original Boolean value.
+Constructor closure holds on arbitrary parameter families, including the
+equal-binder branch that returns the original formula even when recursive
+substitution fails. Initiality factors the substitution fold through the
+constructed equalizer subalgebra. `substitution_option_value` is its option
+equation, and `substitution_value` restricts that equation to the existing
+admissibility pullback.
+
+`logical_axioms_value` proves validity of all seven scheme morphisms.
+`modus_ponens`, `rule_value` and `truthAlgebra` construct the inference algebra
+on the true-formula fiber, with ordered premises and their own truth values.
+`sentence_closed` applies the existing least-image theorem to this algebra.
+`sentence_consistent` and `sentence_complete` identify the true and false
+fibers as complementary. `SignedFirstOrder.booleanTheory_extends` proves
+that the sentence theory contains both signed axiom images, hence their
+generation. Thus a separator supplies the required complete consistent
+extension.
+
+`RestrictionSubobjects.orderIso` constructs the identification of subobjects
+of Tot(C) with restriction idempotents of C. It proves the order equivalence
+using partial inverses of the subobject inclusions, and surjectivity using
+splittings. `complementary_iff` and `inseparable_iff` preserve the specified
+notions of complementary pairs and inseparability. They connect the
+subobject proof with the manuscript's restriction-category conclusion;
+the comparison is not an assumption.
+
+All sixteen producer/Checks pairs are imported by the production entry point,
+both statement audits and the automatic transitive axiom audit. The targeted
+run `v57-4.8-targeted-2.json` passed 32 strict commands, including 70 selected
+axiom reports with only `propext`, `Quot.sound` and `Classical.choice`.
+The earlier targeted run records development failures in imported namespaces
+and unused simp arguments; those logs are preserved. Exact principal types,
+universes, hypotheses and the final axiom report are retained in
+`v57-signed-incompleteness-principal-types.log` in the continuation working
+directory. Lean uses f ≫ g for the manuscript's gf.
+
+This batch changes no manuscript statement, artifact, toolchain, dependency
+or imported-source pin. There are now 67 proved numbered counterparts and
+ten open mathematical obligations: 5.1–5.3, 8.9–8.10, 9.6, 9.8 and 10.7–10.9.
+The integrated full replay for Corollary 4.8 is pending. The preceding full
+run continues to establish 66 numbered counterparts at its recorded commit.

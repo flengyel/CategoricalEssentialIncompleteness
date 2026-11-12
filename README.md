@@ -58,13 +58,15 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V57.md](FORMALIZATION_STATUS_V57.md). It records 77
-numbered results and three definitions. Of the numbered results, **66 are
-proved and eleven remain open**. The full v57 verification of
+numbered results and three definitions. There are **67 proved counterparts
+and ten open mathematical obligations**; the Corollary 4.8 batch has passed
+its targeted strict checks and awaits integrated verification. The full v57 verification of
 `c87ae0e3a7f1faed605c6bc1753f6309504527b7` passed all 1,676 commands,
 including the generation, translation, deduction and free first-order
 adjunctions (4.4–4.7), intended-statement checks and transitive axiom audits.
-The first open result is the incompleteness–inseparability equivalence,
-Corollary 4.8.
+Corollary 4.8 now has the incompleteness–inseparability equivalence, including
+the Boolean complete extension and subobject/domain comparison. The first
+open result is Lemma 5.1 on partial slices.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
