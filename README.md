@@ -66,7 +66,9 @@ adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
 equivalence, intended-statement checks and both transitive axiom audits.
 The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json)
 identifies the completed replay and exact tested bytes. The first open result
-is Lemma 5.1 on partial slices.
+is Lemma 5.1 on partial slices. The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
+records the new weak-choice, split-product and partial-map functor proofs
+and their incremental verification; the numbered-result count is unchanged.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)

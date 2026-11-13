@@ -999,3 +999,16 @@ manuscript source, PDF, archive, manifest, toolchain, dependency pins and
 current instructions retain their tested bytes. There are **67 proved
 numbered results and ten open mathematical obligations**. Lemma 5.1 is the
 first remaining construction.
+
+
+## Section 5 prerequisites, 13 November 2026
+
+The [prerequisite report](V57_SECTION5_PREREQUISITES_2026-11-13.md) records
+the drift check and proof commit `04b6acb8876a7faa0bf712e4633f27d8addc9dcf`.
+The weak-choice bridge, binary restriction-product construction and induced
+partial-map functor have explicit statement checks and current audit
+coverage. All 17 incremental commands passed; the complete transitive
+audits cover 871 current modules, 27,470 current declarations and 1,274
+retained declarations, using exactly the three permitted axioms. This run
+does not replace the preserved full replay. The active manuscript remains
+v57, with 67 proved numbered counterparts and ten open obligations.

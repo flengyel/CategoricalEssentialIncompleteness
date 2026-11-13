@@ -1,0 +1,348 @@
+{
+  "proof_commit": "04b6acb8876a7faa0bf712e4633f27d8addc9dcf",
+  "manuscript_version": 57,
+  "scope": "incremental-section5-prerequisites",
+  "success": true,
+  "full_replay": false,
+  "scope_note": "Rebuilds the project and both current statement entry points, strictly rechecks the six new files and three entry points, and reruns both complete transitive axiom audits. The unchanged production files were not individually re-elaborated in this run. The earlier full replay remains preserved.",
+  "run_directory": ".codex-work/v57-partial-slices-20261113/incremental-verification",
+  "commands": 17,
+  "strict_commands": 10,
+  "selected_axiom_reports": 17,
+  "measured_inputs": 2352,
+  "changed_or_added_measured_inputs": 11,
+  "current_production_modules": 871,
+  "current_declarations": 27470,
+  "retained_declarations": 1274,
+  "current_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "source_snapshot_sha256": "b19a1797703c3cd367392bbcbbea25a973889dbd1fb8db3bd659587adbb854db",
+  "verification_json_sha256": "a2f59e81939f8894a3baebf1c64ab5a4c19fb696b4494eb035117544d189c565",
+  "verification_runner_sha256": "4937a206d60dc79e9505dcb6f061f282ea6e24e69324a4b6baf4ffd97b268ea4",
+  "source_files_verified": 356,
+  "retained_manuscript_sources_verified": 4,
+  "all_dependency_worktrees_clean_and_pinned": true,
+  "dependency_worktrees": 16,
+  "started_at_utc": "2026-11-13T13:42:35.699974+00:00",
+  "finished_at_utc": "2026-11-13T13:47:36.140792+00:00",
+  "sum_command_seconds": 286.35,
+  "baseline_full_verification": {
+    "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+    "verification_json_sha256": "b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49",
+    "commands": 1708
+  },
+  "drift_check": {
+    "baseline_main": "f67911ae609f9a1e34bd7f0bce04869fe5529a09",
+    "measured_inputs": 2346,
+    "unexpected_changes": 0,
+    "recorded_correspondence_reporting_delta_validated": true,
+    "record_sha256": "6d51895e7d2e050faa4360066c5a33bbfa007533814c38d14e1a7ba03d798060"
+  },
+  "proof_status": {
+    "proved_numbered_counterparts": 67,
+    "open_numbered_obligations": 10,
+    "new_numbered_results_closed": 0,
+    "first_open_result": "Lemma 5.1"
+  },
+  "selected_axioms": {
+    "CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.section_of_partial_mono": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.weakChoice": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_ofTotal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_inverseMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_restriction": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_fst": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_snd": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_proj": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProduct_hom_ext": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProduct_existsUnique": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductFst_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductSnd_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_partialPairing": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_restriction": [
+      "propext"
+    ]
+  },
+  "command_records": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/lean-version.log",
+      "log_sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/axiom-parser-tests.log",
+      "log_sha256": "c6b9b1f09add0403cc07e90bfdf272129b1ddfa2f8f7675ea8218862f2516371"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 22.92,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/project-build.log",
+      "log_sha256": "5fa73f64931f2b1f659d062b226ffc02aeb462fd09706949ed237047a1f92ff5"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 13.36,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/CurrentStatementAudit-build.log",
+      "log_sha256": "76671791b3d53db2b293e2ef28fb5e924e9e37659d430f89280cd94b4fc2c00f"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 11.24,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/V46StatementAudit-build.log",
+      "log_sha256": "d0e656aaea18c3b71e3417490cc33756f7f713d115077ad3a2129bd395082200"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46MonoInversesChoice.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.69,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46MonoInversesChoice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46MonoInversesChoiceChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.45,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46MonoInversesChoiceChecks.log",
+      "log_sha256": "7a257bbdab697535e92f67df74808d7ba76d552e7a8e14b53be02da487f26ade"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialMapFunctor.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.14,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46PartialMapFunctor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialMapFunctorChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.81,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46PartialMapFunctorChecks.log",
+      "log_sha256": "df4d17d0666b621d7b854fc0d40d1a3d0e42279b5e20f7b9964a05dacfc8b551"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.58,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46SplitProducts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProductsChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.11,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46SplitProductsChecks.log",
+      "log_sha256": "648faef8ab723167a50bb0ce1c8a16d1df30b9e3df781c169c94b52e9421f391"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.54,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-CurrentStatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.56,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-V46StatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.02,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/strict-entry-point.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.18,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/retained-statement-audit.log",
+      "log_sha256": "76bc0660e2c171e1f4fbb4e4752f711d2957c3e5ea68794d2030989f8fad070f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.68,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/retained-axiom-audit.log",
+      "log_sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 175.9,
+      "log": ".codex-work/v57-partial-slices-20261113/incremental-verification/current-axiom-audit.log",
+      "log_sha256": "5ceced05f5c6d56e2786e5af6c73254cab31d459a45ff84b6c2f2d3689092443"
+    }
+  ],
+  "unchanged_unrelated_files": {
+    ".github/workflows/palomar-preflight.yml": "ea81838b19ea44a8dfd10ae3933bae32d6032a021fd5b4a337007a69704e406b",
+    "docs/PALOMAR_DECLARATIONS.md": "51c5885e7882d7b0afa1c4e37a5434bcc474a1e7dc7c15c529b3544260aa2828"
+  },
+  "manuscript_source_pdf_archive_manifest_and_instructions_changed": false
+}
