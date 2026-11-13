@@ -872,6 +872,10 @@ import all CategoricalEssentialIncompleteness.V46SignedFirstOrderGeneration
 import all CategoricalEssentialIncompleteness.V46MonoInversesChoice
 import all CategoricalEssentialIncompleteness.V46PartialMapFunctor
 import all CategoricalEssentialIncompleteness.V46SplitProducts
+import all CategoricalEssentialIncompleteness.V46SplitProductCategory
+import all CategoricalEssentialIncompleteness.V46SplitTuring
+import all CategoricalEssentialIncompleteness.V46RestrictionTerminal
+import all CategoricalEssentialIncompleteness.V46SliceTuringParameters
 meta import Lean.Util.CollectAxioms
 meta import Lean.Elab.Command
 

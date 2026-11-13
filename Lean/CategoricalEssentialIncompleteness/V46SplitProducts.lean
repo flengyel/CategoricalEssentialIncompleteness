@@ -11,8 +11,8 @@ public import PCats.DomProducts
 /-! # Binary restriction products in the restriction splitting
 
 The pairing, projections and their universal property use the existing
-restriction structure on `SplitObject`. The product data are not yet bundled
-as a `PCategory` instance.
+restriction structure on `SplitObject`. `V46SplitProductCategory` packages
+the product and prodominical laws.
 -/
 
 @[expose] public section

@@ -44,7 +44,7 @@ These comparisons preserve the retained 62 mappings. The completed full v57 repl
 
 | Result and source | Statement and types | Lean declarations | Effective hypotheses, constructions and dependencies | Status and missing obligation |
 |---|---|---|---|---|
-| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `V46.RestrictionSubobjects.weakChoice` and `LC.SplitObject.binaryProduct_existsUnique`, with the partial pairing and projection equations in `V46SplitProducts`; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. Construct the partial slices, Turing parameterization, full recursion subcategory and splitting equivalence, including products, zeros and the prodominical identity. |
+| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `LC.SplitObject.productLaws` and `prodominicalLaws`; `V46.SplitTuring.turing_object`; `V46.RestrictionTerminal.exists_restriction_terminal`; the ambient slice equations `V46.SliceTuringParameters.slice_parameterization` and `total_retract_over`; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. Construct the product structure on Par(D/T), identify its monic spans with the ambient slice equations, and prove the constant-object recursion subcategory and splitting equivalence. The split-category product/Turing constructions and ambient slice parameter and retraction equations are now proved. |
 | Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. | `V46.PartialMaps.inducedFunctor` and its preservation of restriction, total morphisms and monic partial inverses; no complete correspondence. | Lemma 5.1 and syntax/finite derivations in every parameter slice. The second adjunction unit is partial; proper i need not preserve the restriction terminal object. | Open. Define both functors on objects and partial spans; prove both natural hom-set bijections, full faithfulness, properness, composition and the displayed comparison square. |
 | Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `LC.domain_incompleteness` and existing partial-map constructions. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Construct B_U, E_U and E_UB_U≅1. | Open. Prove the retraction, preservation of closed theories, consistency and completeness; prove both Boolean-morphism equivalences and the conclusion for every consistent extension receiving an inseparable pair. |
 
@@ -386,3 +386,33 @@ recursion subcategory, its splitting equivalence, or the ambidextrous slice
 adjunctions. The count remains **67 proved numbered counterparts and ten
 open mathematical obligations**. The full completed verification cited
 above remains the evidence for its earlier proof snapshot.
+
+
+### Split-category Turing structure and slice equations, 13 November 2026
+
+`V46SplitProductCategory` packages all fourteen `PCategory` laws for the
+chosen split-object products and proves both prodominical zero-absorption
+laws. The product-derived restriction agrees with the existing restriction
+operation. The structures are available explicitly, without changing the
+existing restriction instance.
+
+`V46SplitTuring` proves Turing parameterization for arbitrary split inputs,
+outputs and parameter objects, with a total parameter relative to the split
+source domain. It constructs a universal object and evaluator and proves
+that every split object embeds totally into any fixed original object in
+an isotype, with a partial retraction. `V46RestrictionTerminal` proves
+restriction naturality of the terminal morphisms in a split restriction
+category whose total category has a terminal object.
+
+`V46SliceTuringParameters` proves the ambient slice computation equation
+with explicit total parameter <p,a> and evaluator 1_T×τ, with the required
+associator. Under the printed monic partial-inverse hypothesis, it also
+constructs the graph embedding <p,m> and a partial inverse that respects T
+on its domain of definition. The four new statement-check modules are
+imported by both statement audits and all four production modules are in
+the complete current axiom audit.
+
+Lemma 5.1 remains open. These equations must still be realized as morphisms
+of Par(D/T), its product structure established, and the constant-object
+recursion subcategory and splitting equivalence proved. There are still
+**67 proved numbered counterparts and ten open mathematical obligations**.
