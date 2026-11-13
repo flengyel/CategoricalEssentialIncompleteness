@@ -1,0 +1,453 @@
+{
+  "proof_commit": "7f361377d4f57b400c672fb30f495d85057dbdc0",
+  "manuscript_version": 57,
+  "scope": "incremental-split-turing-and-slice-equations",
+  "success": true,
+  "full_replay": false,
+  "scope_note": "Rebuilds the project and both statement entry points, strictly rechecks the eight new files, the earlier split-products pair and three entry points, and reruns both complete transitive axiom audits. Unchanged production files were not individually re-elaborated. Earlier incremental and full replays remain preserved.",
+  "run_directory": ".codex-work/v57-split-products-20261113/incremental-verification",
+  "commands": 21,
+  "strict_commands": 14,
+  "selected_axiom_reports": 28,
+  "new_selected_axiom_reports": 18,
+  "measured_inputs": 2360,
+  "changed_or_added_measured_inputs": 14,
+  "current_production_modules": 875,
+  "current_declarations": 27506,
+  "retained_declarations": 1274,
+  "current_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_snapshot_sha256": "93854acf291810b95951f81c2c42a95a9440a761c50e58673e45525d4aed50a1",
+  "verification_json_sha256": "59da18f52274a89f22e2209e43d761431bdaabbc8b8820721848dce76a7a5b8d",
+  "verification_runner_sha256": "b00a6c6929564f7abef923aae4fc176311f2542c2cde01c806ca8b1a7b621b1a",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "source_files_verified": 356,
+  "retained_manuscript_sources_verified": 4,
+  "all_dependency_worktrees_clean_and_pinned": true,
+  "dependency_worktrees": 16,
+  "started_at_utc": "2026-11-13T14:23:39.469027+00:00",
+  "finished_at_utc": "2026-11-13T14:28:46.732270+00:00",
+  "sum_command_seconds": 293.45,
+  "baseline_full_verification": {
+    "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+    "verification_json_sha256": "b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49",
+    "commands": 1708
+  },
+  "baseline_incremental_verification": {
+    "proof_commit": "04b6acb8876a7faa0bf712e4633f27d8addc9dcf",
+    "verification_json_sha256": "a2f59e81939f8894a3baebf1c64ab5a4c19fb696b4494eb035117544d189c565",
+    "commands": 17
+  },
+  "baseline_main": "4116a5c09d0f5553a1669cc8e37184bad9343c57",
+  "unexpected_measured_input_delta": [],
+  "principal_declarations": [
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productLaws",
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.prodominicalLaws",
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turing_object",
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.exists_restriction_terminal",
+    "CategoricalEssentialIncompleteness.V46.SliceTuringParameters.slice_parameterization",
+    "CategoricalEssentialIncompleteness.V46.SliceTuringParameters.total_retract_over"
+  ],
+  "proof_status": {
+    "proved_numbered_counterparts": 67,
+    "open_numbered_obligations": 10,
+    "new_numbered_results_closed": 0,
+    "first_open_result": "Lemma 5.1",
+    "remaining_5_1": [
+      "Actual Par(D/T) product structure and identification with ambient partial slice equations",
+      "Constant-object recursion subcategory",
+      "Restriction-splitting equivalence"
+    ]
+  },
+  "selected_axioms": {
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productLaws": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.prodominicalLaws": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_assoc_hom": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_swap_hom": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.retype": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.evaluator_isTuring": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.parameter_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.exists_total_retract": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turingFamily": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turing_object": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.terminate_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.terminate_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.terminate_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.terminate_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.exists_restriction_terminal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceTuringParameters.evaluation_formula": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceTuringParameters.slice_parameterization": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceTuringParameters.total_retract_over": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_restriction": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_fst": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_snd": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductPair_proj": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProduct_hom_ext": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProduct_existsUnique": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductFst_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.binaryProductSnd_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_partialPairing": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productData_restriction": [
+      "propext"
+    ]
+  },
+  "command_records": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/lean-version.log",
+      "log_sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/axiom-parser-tests.log",
+      "log_sha256": "c6b9b1f09add0403cc07e90bfdf272129b1ddfa2f8f7675ea8218862f2516371"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 15.78,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/project-build.log",
+      "log_sha256": "8fc74a4f978e529d3b7439fd1ed3266032a47ad25cd1391922693abf39c233e3"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 12.68,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/CurrentStatementAudit-build.log",
+      "log_sha256": "46f965cf93ba0c40e6e0bc98b4f95d36c482d57184c548730d4ba3ed58c721a9"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 10.52,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/V46StatementAudit-build.log",
+      "log_sha256": "564acaee5e8d4dece34d0b94deea24faaabf66b33ea1b37d34f3e50015d11fa6"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProductCategory.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.09,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitProductCategory.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProductCategoryChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.97,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitProductCategoryChecks.log",
+      "log_sha256": "03c28c4512c7b98ae2dd2e5c279394b828db30316613c09abd1d75201d630d6b"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitTuring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.53,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitTuring.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitTuringChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.61,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitTuringChecks.log",
+      "log_sha256": "cbbb2c9b6d76361917cf8a586aa2cfdc9f52d6cef889f30e8acfb5585fe544f4"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RestrictionTerminal.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.41,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46RestrictionTerminal.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RestrictionTerminalChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.11,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46RestrictionTerminalChecks.log",
+      "log_sha256": "ade181ead97d59386bf71abeb577937b215f89b86ffbc6c18c7d57c5d04f9b2b"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SliceTuringParameters.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.62,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SliceTuringParameters.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SliceTuringParametersChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.18,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SliceTuringParametersChecks.log",
+      "log_sha256": "c22e4d1f324d47dc8e72de12717dd651c3155023d00ce9e0a68408d019462448"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.39,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitProducts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitProductsChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.22,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46SplitProductsChecks.log",
+      "log_sha256": "648faef8ab723167a50bb0ce1c8a16d1df30b9e3df781c169c94b52e9421f391"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.05,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-CurrentStatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.62,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-V46StatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.15,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/strict-entry-point.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.49,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/retained-statement-audit.log",
+      "log_sha256": "76bc0660e2c171e1f4fbb4e4752f711d2957c3e5ea68794d2030989f8fad070f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.54,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/retained-axiom-audit.log",
+      "log_sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 185.33,
+      "log": ".codex-work/v57-split-products-20261113/incremental-verification/current-axiom-audit.log",
+      "log_sha256": "299530ce99095448a97e2c6618abe25af51cc461e3c0dade8f031440db1fa10b"
+    }
+  ],
+  "manuscript_gate_file_delta": [
+    "FORMALIZATION_STATUS_V57.md"
+  ],
+  "manuscript_source_pdf_archive_manifest_and_instructions_changed": false,
+  "unchanged_unrelated_files": {
+    ".github/workflows/palomar-preflight.yml": "ea81838b19ea44a8dfd10ae3933bae32d6032a021fd5b4a337007a69704e406b",
+    "docs/PALOMAR_DECLARATIONS.md": "51c5885e7882d7b0afa1c4e37a5434bcc474a1e7dc7c15c529b3544260aa2828"
+  }
+}

@@ -1012,3 +1012,20 @@ audits cover 871 current modules, 27,470 current declarations and 1,274
 retained declarations, using exactly the three permitted axioms. This run
 does not replace the preserved full replay. The active manuscript remains
 v57, with 67 proved numbered counterparts and ten open obligations.
+
+
+## Split Turing structure and slice equations, 13 November 2026
+
+The [split Turing report](V57_SPLIT_TURING_2026-11-13.md) records proof
+commit `7f361377d4f57b400c672fb30f495d85057dbdc0`. All fourteen product
+laws and both prodominical laws are proved, as are Turing parameterization
+for arbitrary split objects, total embeddings and partial retractions,
+the restriction-terminal property, and the ambient slice parameter and
+retraction equations.
+
+All 21 incremental commands passed. Complete transitive axiom audits cover
+875 current modules, 27,506 current declarations and 1,274 retained
+declarations, with exactly the three permitted axioms. Earlier verification
+runs remain preserved. The partial-map slice construction, constant-object
+recursion subcategory and splitting equivalence remain open, so the count
+remains 67 proved numbered counterparts and ten open obligations.
