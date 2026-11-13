@@ -1029,3 +1029,21 @@ declarations, with exactly the three permitted axioms. Earlier verification
 runs remain preserved. The partial-map slice construction, constant-object
 recursion subcategory and splitting equivalence remain open, so the count
 remains 67 proved numbered counterparts and ten open obligations.
+
+
+## Actual partial-slice comparison, 13 November 2026
+
+The [partial-slice report](V57_PARTIAL_SLICE_COMPARISON_2026-11-13.md)
+records proof commit `62aef20d5c22faa9f754bb3ee64218e3954f686a`. The monic-span comparison
+now works under the printed partial-inverse hypothesis without range or
+weak-choice premises. The actual partial-map slice is identified with
+ambient partial morphisms over T, preserving restriction and totality.
+Fixed-input restriction products and the universal computation with a
+total parameter are proved in the actual monic-span quotient.
+
+All 24 incremental commands passed. Complete transitive axiom audits cover
+881 current modules, 27,698 current declarations and
+1,274 retained declarations, with exactly the three permitted axioms.
+Lemma 5.1 still requires arbitrary slice-object products, the constant-object
+recursion subcategory and the splitting equivalence. The count remains
+67 proved numbered counterparts and ten open obligations.
