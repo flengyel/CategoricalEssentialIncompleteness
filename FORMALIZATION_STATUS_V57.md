@@ -44,8 +44,8 @@ These comparisons preserve the retained 62 mappings. The completed full v57 repl
 
 | Result and source | Statement and types | Lean declarations | Effective hypotheses, constructions and dependencies | Status and missing obligation |
 |---|---|---|---|---|
-| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | Existing partial-map and splitting constructions; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. Construct the partial slices, Turing parameterization, full recursion subcategory and splitting equivalence, including products, zeros and the prodominical identity. |
-| Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. | Existing partial-map and pullback constructions; no complete correspondence. | Lemma 5.1 and syntax/finite derivations in every parameter slice. The second adjunction unit is partial; proper i need not preserve the restriction terminal object. | Open. Define both functors on objects and partial spans; prove both natural hom-set bijections, full faithfulness, properness, composition and the displayed comparison square. |
+| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `V46.RestrictionSubobjects.weakChoice` and `LC.SplitObject.binaryProduct_existsUnique`, with the partial pairing and projection equations in `V46SplitProducts`; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. Construct the partial slices, Turing parameterization, full recursion subcategory and splitting equivalence, including products, zeros and the prodominical identity. |
+| Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. | `V46.PartialMaps.inducedFunctor` and its preservation of restriction, total morphisms and monic partial inverses; no complete correspondence. | Lemma 5.1 and syntax/finite derivations in every parameter slice. The second adjunction unit is partial; proper i need not preserve the restriction terminal object. | Open. Define both functors on objects and partial spans; prove both natural hom-set bijections, full faithfulness, properness, composition and the displayed comparison square. |
 | Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `LC.domain_incompleteness` and existing partial-map constructions. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Construct B_U, E_U and E_UB_U≅1. | Open. Prove the retraction, preservation of closed theories, consistency and completeness; prove both Boolean-morphism equivalences and the conclusion for every consistent extension receiving an inseparable pair. |
 
 ### Section 6
@@ -358,3 +358,31 @@ manuscript source, PDF, archive, manifest, toolchain, dependency pins and
 current instructions retain their tested bytes. There are **67 proved
 numbered results and ten open mathematical obligations**. Lemma 5.1 is the
 first remaining construction.
+
+
+### Section 5 prerequisites, 13 November 2026
+
+The drift check against the completed Corollary 4.8 replay found no change
+in the 2,346 measured inputs beyond the recorded correspondence-reporting
+delta. All sixteen dependency worktrees remained clean and pinned, and
+the active v57 manuscript artifacts matched their manifest.
+
+`V46MonoInversesChoice` derives local weak choice from splitting restriction
+idempotents and the printed partial-inverse hypothesis on total
+monomorphisms; it does not require a range premise. `V46SplitProducts`
+constructs products of arbitrary split objects, partial pairing and its
+restriction/projection equations, joint projection extensionality and the
+universal property for total morphisms. Its chosen product data induce the existing restriction operation;
+the bundled `PCategory` laws remain to be proved.
+`V46PartialMapFunctor` constructs the functor on monic partial maps induced
+by a monomorphism- and pullback-preserving functor, including preservation
+of restriction, total morphisms and monic partial inverses. The three
+statement-check modules are imported by both statement audits; all three
+production modules are included in the current transitive axiom audit.
+
+These are supporting constructions for Lemma 5.1 and Theorem 5.2. They do
+not establish the slice Turing parameterization, the constant-object
+recursion subcategory, its splitting equivalence, or the ambidextrous slice
+adjunctions. The count remains **67 proved numbered counterparts and ten
+open mathematical obligations**. The full completed verification cited
+above remains the evidence for its earlier proof snapshot.

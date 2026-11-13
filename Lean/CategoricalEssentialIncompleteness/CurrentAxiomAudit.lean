@@ -869,6 +869,9 @@ import all CategoricalEssentialIncompleteness.V46SignedSubobjectIncompleteness
 import all CategoricalEssentialIncompleteness.V46SubobjectInseparability
 import all CategoricalEssentialIncompleteness.V46SignedFirstOrderCategories
 import all CategoricalEssentialIncompleteness.V46SignedFirstOrderGeneration
+import all CategoricalEssentialIncompleteness.V46MonoInversesChoice
+import all CategoricalEssentialIncompleteness.V46PartialMapFunctor
+import all CategoricalEssentialIncompleteness.V46SplitProducts
 meta import Lean.Util.CollectAxioms
 meta import Lean.Elab.Command
 
