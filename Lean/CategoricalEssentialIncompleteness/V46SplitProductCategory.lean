@@ -6,6 +6,7 @@ Authors: Florian Lengyel
 module
 
 public import CategoricalEssentialIncompleteness.V46SplitProducts
+public import CategoricalEssentialIncompleteness.V46SplitSplittings
 public import PCats.Recursion
 
 /-! # The product and prodominical laws in the restriction splitting -/
@@ -197,6 +198,33 @@ theorem productLaws : PCategory (SplitObject R) where
       ((binaryProduct X Y).domain.hom ≫ swap X.base Y.base) ≫ nearProd_map g.hom f.hom
     rw [Category.assoc, ← PCategory.swap_nat, ← Category.assoc]
     exact congrArg (fun k => k ≫ swap X'.base Y'.base) (binaryProductMap f g).source.symm
+
+private theorem restriction_ext (a b : RestrictionCategory (SplitObject R))
+    (h : ∀ {X Y : SplitObject R} (f : X ⟶ Y),
+      @CategoryTheory.RestrictionCategory.rst (SplitObject R) inferInstance a X Y f =
+        @CategoryTheory.RestrictionCategory.rst (SplitObject R) inferInstance b X Y f) :
+    a = b := by
+  cases a with
+  | mk ra a1 a2 a3 a4 =>
+    cases b with
+    | mk rb b1 b2 b3 b4 =>
+      have he : @ra = @rb := by
+        funext X Y f
+        exact h f
+      cases he
+      rfl
+
+/-- The product-derived and existing restriction structures are equal. -/
+theorem productRestriction_eq :
+    @PCategory.inducedRestriction (SplitObject R) inferInstance productData productLaws =
+      (inferInstance : RestrictionCategory (SplitObject R)) :=
+  restriction_ext _ _ (fun f => productData_restriction f)
+
+/-- Splittings are available for the product-derived restriction structure. -/
+theorem productSplits : @Splits (SplitObject R) inferInstance
+    (@PCategory.inducedRestriction (SplitObject R) inferInstance productData productLaws) := by
+  rw [productRestriction_eq]
+  infer_instance
 
 variable [CategoryTheory.Limits.HasZeroMorphisms R] [RecursionCategory.Prodominical R]
 

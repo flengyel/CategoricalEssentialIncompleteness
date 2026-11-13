@@ -23,11 +23,12 @@ namespace CategoricalEssentialIncompleteness.LocalConnectedness.PartialSpans
 variable {C : Type u} [Category.{v} C] [RestrictionCategory C] [Splits C]
   [WeakChoice C] [Ranges C]
 
+omit [WeakChoice C] [Ranges C] in
 /-- A total pullback also lifts partial cones with the same restriction domain. -/
 theorem partial_pullback_lift {P A B Z : Total C}
     {fst : P ⟶ A} {snd : P ⟶ B} {f : A ⟶ Z} {g : B ⟶ Z}
     (hp : IsPullback fst snd f g) {W : C} (a : W ⟶ A.obj) (b : W ⟶ B.obj)
-    (hd : rst a=rst b) (he : a ≫ f.hom=b ≫ g.hom) :
+    (hd : rst a = rst b) (he : a ≫ f.hom = b ≫ g.hom) :
     ∃ h : W ⟶ P.obj, h ≫ fst.hom=a ∧ h ≫ snd.hom=b ∧ rst h=rst a := by
   obtain ⟨D,m,r,hm,hmr,hrm⟩ := Splits.splitting (Idem.ofRestrict a)
   change r ≫ m=rst a at hrm
