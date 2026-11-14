@@ -1157,3 +1157,34 @@ obligations**. Theorem 5.3 still requires closed-theory transfer using the
 parameterized deduction construction, the corresponding consistency and
 completeness preservation, and the full essential-incompleteness equivalence.
 The manuscript and earlier verification evidence remain preserved.
+
+
+## Closure transfer and v58 reconciliation, 14 November 2026
+
+The [v58 closure-transfer report](V58_CLOSED_THEORY_TRANSFER_2026-11-14.md) records proof commit
+`21821a893cf054d78696041eadc15a76124a2cd5`. The concurrent v58 source, PDF, archive, manifest,
+correspondence and instructions were merged with the local proof work.
+All 77 result and three definition environments are identical to v57.
+Explicit convention checks cover π₂ in the Boolean valuation, true as the
+second injection, the equality/fork convention and uniform trace composition.
+
+The generic rule-algebra construction now proves
+Gen(image A)≤image(Gen A), closure preservation and actual theory functors.
+Its ordinary constant-family and terminal-point evaluation instances are
+constructed. Regularity and finite extensivity of slices are derived.
+The earlier [v57 snapshot](V57_CLOSED_THEORY_TRANSFER_2026-11-14.md) passed
+24 commands and remains preserved separately.
+
+All 26 fresh v58 incremental commands passed, including
+18 strict checks and both complete transitive axiom
+audits. These cover 927 current modules,
+28,492 current declarations and
+1,274 retained declarations, with exactly the
+permitted three axioms. All 2,419 measured inputs
+match the tested proof commit. The active target is now v58.
+
+The count remains **69 proved numbered counterparts and eight open
+obligations**. Theorem 5.3 still needs the composed-calculus identification,
+consistency/completeness preservation and full essential-incompleteness
+assembly. The authored v58 source and artifacts retain their incoming bytes;
+earlier verification evidence and unrelated Palomar files are preserved.

@@ -88,8 +88,11 @@ composition and the sentence/theorem comparisons in the actual partial
 slices. This completes Theorem 5.2.
 The [associated-category continuation](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
 constructs the evaluation retraction and proves the Boolean totality and
-extension equivalences. Theorem 5.3 remains open for closed-theory transfer
-and the full essential-incompleteness equivalence.
+extension equivalences. Theorem 5.3 remains open for the composed-calculus comparison, consistency
+and completeness preservation, and the full essential-incompleteness equivalence.
+The [v58 closure-transfer continuation](docs/V58_CLOSED_THEORY_TRANSFER_2026-11-14.md)
+constructs mapped rule algebras and closed-theory functors, including ordinary
+constant-family and evaluation instances, and verifies the merged v58 target.
 
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
