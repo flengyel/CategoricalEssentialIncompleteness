@@ -75,6 +75,10 @@ and ambient slice parameter and retraction equations. Lemma 5.1 remains open.
 The [partial-slice comparison](docs/V57_PARTIAL_SLICE_COMPARISON_2026-11-13.md)
 identifies the actual monic partial slice and proves fixed-input restriction
 products and universal computations there.
+The [arbitrary slice-product continuation](docs/V57_SLICE_PRODUCTS_2026-11-13.md)
+adds all binary product laws, the actual slice Turing morphism, terminal
+morphisms, total retractions and splitting of slice restriction idempotents.
+The constant-object recursion subcategory and its splitting equivalence remain.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)

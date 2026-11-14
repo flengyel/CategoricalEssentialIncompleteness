@@ -1047,3 +1047,26 @@ All 24 incremental commands passed. Complete transitive axiom audits cover
 Lemma 5.1 still requires arbitrary slice-object products, the constant-object
 recursion subcategory and the splitting equivalence. The count remains
 67 proved numbered counterparts and ten open obligations.
+
+
+## Arbitrary partial-slice products, 13 November 2026
+
+The [slice-product report](V57_SLICE_PRODUCTS_2026-11-13.md) records proof commit `647deeeb12d3309d2aede19592e6d7d61bd070c8`.
+Arbitrary slice-object products now have all fourteen PCategory laws,
+and their induced restriction is proved equal to the existing one.
+The evaluator is a Turing morphism for that complete product structure.
+Restriction terminal morphisms, total embeddings into the constant
+universal family, partial retractions and splitting of every restriction
+idempotent are proved in the actual monic-span quotient. The original
+recursion-category data yield the universal slice object directly.
+
+All 25 incremental commands passed, including
+18 strict commands. Complete transitive axiom
+audits cover 890 current modules,
+27,874 current declarations and
+1,274 retained declarations, using exactly
+the permitted three axioms. All 2,377 measured
+inputs match the proof commit, and the earlier verification evidence is
+preserved. Lemma 5.1 remains open for the full constant-object recursion
+subcategory and its splitting equivalence. The count remains **67 proved
+numbered counterparts and ten open obligations**.

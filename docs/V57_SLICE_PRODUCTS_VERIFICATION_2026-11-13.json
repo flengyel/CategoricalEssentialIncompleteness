@@ -1,0 +1,859 @@
+{
+  "proof_commit": "647deeeb12d3309d2aede19592e6d7d61bd070c8",
+  "manuscript_version": 57,
+  "scope": "incremental-arbitrary-slice-products-and-turing-structure",
+  "success": true,
+  "full_replay": false,
+  "scope_note": "Rebuilds the project and both statement entry points, strictly checks all nine new producers and their combined statements, four selected existing interfaces/check modules and three entry points, and reruns both complete transitive axiom audits. Unchanged production files were not all individually re-elaborated. Earlier full and incremental evidence is preserved.",
+  "run_directory": ".codex-work/v57-slice-products-20261113/incremental-verification",
+  "commands": 25,
+  "strict_commands": 18,
+  "selected_axiom_reports": 74,
+  "construction_axiom_reports": 36,
+  "measured_inputs": 2377,
+  "changed_or_added_measured_inputs": 15,
+  "current_production_modules": 890,
+  "current_declarations": 27874,
+  "retained_declarations": 1274,
+  "current_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_snapshot_sha256": "740e999364a17d024de87d37d16aee0a16aa42edbf194efd82fc5236f0af1a22",
+  "verification_json_sha256": "022c982ae17de05700cfac98015118bf3d1606754b36c4194b4a4d2ef6ff1e3a",
+  "verification_runner_sha256": "20a42c57be9c1a00b2e9d780186aaf286530a3b99ee84077a6a1acb2b25662e8",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "source_files_verified": 356,
+  "retained_manuscript_sources_verified": 4,
+  "all_dependency_worktrees_clean_and_pinned": true,
+  "dependency_worktrees": 16,
+  "started_at_utc": "2026-11-14T00:42:08.687886+00:00",
+  "finished_at_utc": "2026-11-14T00:48:13.330770+00:00",
+  "sum_command_seconds": 347.05,
+  "baseline_full_verification": {
+    "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+    "verification_json_sha256": "b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49",
+    "commands": 1708
+  },
+  "baseline_incremental_verification": {
+    "proof_commit": "62aef20d5c22faa9f754bb3ee64218e3954f686a",
+    "verification_json_sha256": "740ce40eee1777eeccb977d1e19cd78fc3136db6bad8bb31351bbfe84764be27",
+    "commands": 24
+  },
+  "baseline_main": "52f90a2f725a4c8ca8f7d2def6aa80e539815c1a",
+  "unexpected_measured_input_delta": [],
+  "principal_declarations": [
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryLaws",
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.restrictionCategory_eq",
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.partial_pullback_hom_ext",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pcategoryLaws",
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.evaluator_isTuring",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.exists_total_retract",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.partialSliceSplits",
+    "CategoricalEssentialIncompleteness.V46.SplitSliceTuring.turing_object"
+  ],
+  "proof_status": {
+    "proved_numbered_counterparts": 67,
+    "open_numbered_obligations": 10,
+    "new_numbered_results_closed": 0,
+    "first_open_result": "Lemma 5.1",
+    "remaining_5_1": [
+      "Full constant-object recursion subcategory",
+      "Restriction-splitting equivalence"
+    ]
+  },
+  "selected_axioms": {
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.map_comp": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.associator_nat": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryLaws": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.restrictionCategory_eq": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.partial_pullback_hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.exists_pairing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.first_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.second_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pcategoryLaws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.restrictionCategory_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.evaluator_isTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.exists_total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.splitting": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.partialSliceSplits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitSliceTuring.turing_object": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.comp_pair": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pair_cross_masks": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.symmetry_nat": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.comparison_total": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.iso": [],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.ambient_splitting": [],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.PartialSpans.partial_pullback_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.inverse_comp": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.value_eq_of_isomorphic": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.isomorphic_of_value_eq": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.exists_value": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.inverse_pullback_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.value_pullbackComp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicPartialMapEquivalence.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicPartialMapEquivalence.selfEquivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicPartialMapEquivalence.preserves_restrictions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceEquivalence.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceEquivalence.preserves_restrictions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceEquivalence.inverse_preserves_restrictions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceEquivalence.total_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensorPair_restriction": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensorPair_fst": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensorPair_snd": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensorPair_proj": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensor_product_existsUnique": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensor_product_existsUnique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensorPair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensorPair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensorPair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensorPair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.tensorFunctor_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceTuring.tensorMap_eq_pair": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.evaluator_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.parameterization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productRestriction_eq": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.SplitObject.productSplits": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.MonicSpanValues.partial_inverse_unique": [],
+    "CategoricalEssentialIncompleteness.V46.AmbientPartialSlice.terminate_naturality": [],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.retype": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.evaluator_isTuring": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.parameter_total": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.exists_total_retract": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turingFamily": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turing_object": [
+      "propext"
+    ]
+  },
+  "construction_axioms": {
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.map_comp": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.associator_nat": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryLaws": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.restrictionCategory_eq": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.partial_pullback_hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.exists_pairing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.first_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.second_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pcategoryLaws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.restrictionCategory_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.evaluator_isTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.exists_total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.splitting": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.partialSliceSplits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitSliceTuring.turing_object": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.comp_pair": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pair_cross_masks": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.symmetry_nat": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.comparison_total": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.iso": [],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.ambient_splitting": []
+  },
+  "commands_detail": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/lean-version.log",
+      "log_sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/axiom-parser-tests.log",
+      "log_sha256": "c6b9b1f09add0403cc07e90bfdf272129b1ddfa2f8f7675ea8218862f2516371"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 19.2,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/project-build.log",
+      "log_sha256": "3dcee30f3734bf6a3357950f47a71d69c582ae2cdbb5f03877e7c47510b7912f"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 20.64,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/CurrentStatementAudit-build.log",
+      "log_sha256": "efd51a6f0dc5cc90899e9d2de08f9a418369790bd412629ca1b458e0a3997c02"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 11.42,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/V46StatementAudit-build.log",
+      "log_sha256": "8837c1b7c81688ff34d31af9bae6dd0f1aa09c7611624bdf159089e60b6c1416"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RestrictionProductData.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.73,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46RestrictionProductData.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RestrictionProductCategory.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.71,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46RestrictionProductCategory.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RestrictionProductComparison.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.65,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46RestrictionProductComparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46AmbientSliceProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.24,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46AmbientSliceProducts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.16,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceProducts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SliceProductTuring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.2,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46SliceProductTuring.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceRetractions.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.58,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceRetractions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceSplitting.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.65,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceSplitting.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitSliceTuring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.48,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46SplitSliceTuring.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceProductsChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.46,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceProductsChecks.log",
+      "log_sha256": "50f4962e8ce3ddea4861e303de3b1dd31988f8076c6b6272c1f5bef059045796"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceConstructionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.27,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceConstructionChecks.log",
+      "log_sha256": "f4975ae79c5b77557dff821edadd8e1a8ed8d37e9f52dfbfe85f09fcd6eb144b"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceTuring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.75,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46PartialSliceTuring.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitTuring.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.69,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46SplitTuring.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SplitTuringChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.23,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46SplitTuringChecks.log",
+      "log_sha256": "cbbb2c9b6d76361917cf8a586aa2cfdc9f52d6cef889f30e8acfb5585fe544f4"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.93,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-CurrentStatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.58,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-V46StatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.23,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/strict-entry-point.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.53,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/retained-statement-audit.log",
+      "log_sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.2,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/retained-axiom-audit.log",
+      "log_sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 191.37,
+      "log": ".codex-work/v57-slice-products-20261113/incremental-verification/current-axiom-audit.log",
+      "log_sha256": "c3f217833e466e32aed04a5be9e499d1cb2f0c3b337751494ffeb9a3f2208ae3"
+    }
+  ]
+}
