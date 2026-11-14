@@ -1,5 +1,11 @@
 # Codex continuation: formalization of manuscript v58
 
+Current update: Theorem 5.3 is complete at proof commit `7a07264ce4137e0c539f02b30faf4d2a709fb309`, with
+strict complete-statement checks and incremental integration including both
+complete transitive axiom audits. The count is **70/77 proved**, seven open;
+Lemma 8.9 is next. See [V58_ASSOCIATED_INCOMPLETENESS_2026-11-14.md](V58_ASSOCIATED_INCOMPLETENESS_2026-11-14.md). The brief below
+is retained as the specification and reference snapshot for that construction.
+
 Continue the Lean formalization of **Logical consequence and essential incompleteness in recursion categories** in `flengyel/CategoricalEssentialIncompleteness`. Complete the remaining part of Theorem 5.3 first. Preserve completed proofs and all later local or remote work. Keep completed work committed and pushed to `main`.
 
 ## 1. Establish the current state

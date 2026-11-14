@@ -5,8 +5,8 @@ Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
 The current manuscript and verification target are version 58.
 Follow docs/V58_LEAN_CONTINUATION_2026-11-14.md for the current proof task,
 v58 conventions, independent statement checks and commit requirements.
-Theorem 5.3 is the next incomplete result; first preserve and reconcile any
-later local or remote proof work.
+Theorem 5.3 is complete; Lemma 8.9 is the next incomplete result.
+Preserve and reconcile all later local or remote proof work.
 
 Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V58.md,
 manuscript/latex/main.tex and all its inputs, and
@@ -17,10 +17,11 @@ explicates the uniform composition program in Lemma 6.1;
 all 77 numbered statements and three definitions are unchanged.
 The source, PDF and archive are included in the repository.
 
-The current table records 69 proved counterparts and eight open results:
-5.3, 8.9, 8.10, 9.6, 9.8, 10.7, 10.8 and 10.9.
-Theorem 5.3 has the evaluation retraction and Boolean-morphism comparisons;
-its closed-theory and essential-incompleteness transfer remain open.
+The current table records 70 proved counterparts and seven open results:
+8.9, 8.10, 9.6, 9.8, 10.7, 10.8 and 10.9.
+Theorem 5.3 includes arbitrary closed slice extensions, both directions of
+closure, consistency and completeness transfer, the full equivalence and
+final reduction clause. See docs/V58_ASSOCIATED_INCOMPLETENESS_2026-11-14.md.
 The principal generation reflection uses initial algebras for axiom
 subobjects and sends arbitrary presentations through their regular images.
 The earlier stronger-premise mismatch is resolved.

@@ -58,15 +58,15 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V58.md](FORMALIZATION_STATUS_V58.md). It records 77
-numbered results and three definitions. There are **69 proved counterparts
-and eight open mathematical obligations**. Full v57 verification of
+numbered results and three definitions. There are **70 proved counterparts
+and seven open mathematical obligations**. Full v57 verification of
 `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed all 1,708 commands,
 including the generation, translation, deduction and free first-order
 adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
 equivalence, intended-statement checks and both transitive axiom audits.
 The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json)
 identifies that replay's 67-result snapshot and exact tested bytes. The first
-open result is now Theorem 5.3 on incompleteness in an associated category.
+open result is now Lemma 8.9 on the arithmetic diagonal theory.
 The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
 records the new weak-choice, split-product and partial-map functor proofs
 and their incremental verification; the numbered-result count is unchanged.
@@ -88,8 +88,10 @@ composition and the sentence/theorem comparisons in the actual partial
 slices. This completes Theorem 5.2.
 The [associated-category continuation](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
 constructs the evaluation retraction and proves the Boolean totality and
-extension equivalences. Theorem 5.3 remains open for the composed-calculus comparison, consistency
-and completeness preservation, and the full essential-incompleteness equivalence.
+extension equivalences. The [v58 completion](docs/V58_ASSOCIATED_INCOMPLETENESS_2026-11-14.md) proves
+closure, consistency and completeness transfer for arbitrary slice extensions,
+the full essential-incompleteness equivalence and the final reduction clause.
+This completes Theorem 5.3 with incremental integration and axiom verification.
 The [v58 closure-transfer continuation](docs/V58_CLOSED_THEORY_TRANSFER_2026-11-14.md)
 constructs mapped rule algebras and closed-theory functors, including ordinary
 constant-family and evaluation instances, and verifies the merged v58 target.
