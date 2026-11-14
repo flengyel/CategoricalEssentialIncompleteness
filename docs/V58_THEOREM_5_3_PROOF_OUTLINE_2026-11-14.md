@@ -65,3 +65,10 @@ constant-family witness; its output must lie in the ORIGINAL P.Theories.
 Check all initiality binders are Subobject-indexed, no preservation or
 incompleteness fields are introduced, and the three permitted axioms are
 the complete transitive union. Keep the 5.3 row open until every clause passes.
+
+Coordinate comparison constructed after the first integration checkpoint:
+`AssociatedSliceCoordinates.comparison` relates the chosen categorical
+products to the restriction products of the existing actual constant functor.
+`theory_value` identifies the theorem family, `actual_map` checks its total
+morphisms, and `evaluation_total` checks the actual evaluation functor on
+them. The independent checks include the existing `sourceTheory` morphism.

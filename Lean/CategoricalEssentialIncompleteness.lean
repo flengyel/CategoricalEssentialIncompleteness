@@ -1,5 +1,6 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46AssociatedSliceCoordinates
 public import CategoricalEssentialIncompleteness.V46SliceSubobjectPredicates
 public import CategoricalEssentialIncompleteness.V46OrdinaryEvaluationRetraction
 public import CategoricalEssentialIncompleteness.V46SliceEvaluationSubobjects

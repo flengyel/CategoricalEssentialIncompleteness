@@ -5,7 +5,7 @@ Authors: Florian Lengyel
 -/
 module
 
-public import CategoricalEssentialIncompleteness.V46AssociatedIncompleteness
+public import CategoricalEssentialIncompleteness.V46AssociatedSliceCoordinates
 
 /-! # Independent complete-statement checks of manuscript v58 Theorem 5.3 -/
 
@@ -23,6 +23,9 @@ local instance checkSliceExtensive (U : Tot C) : FinitaryExtensive (Over U) :=
   RegularSlices.finitaryExtensive U
 local instance checkConstantLimits (U : Tot C) : PreservesFiniteLimits (constantFamilyFunctor U) :=
   SliceBaseChangeGeometry.constant_preservesFiniteLimits U
+local instance checkActualLimits (U : Tot C) :
+    PreservesFiniteLimits (AssociatedSliceCoordinates.actualConstant U) :=
+  preservesFiniteLimits_of_natIso (AssociatedSliceCoordinates.comparison U)
 variable (inverses : MonoInverses C) {V Z : Tot C} (P : FirstOrderPresentation V)
 variable (Q : (U : Tot C) → AssociatedClosedTheories.SliceProofs P U)
 variable (hQ : ∀ U W, IsInitial (Q U W))
@@ -103,6 +106,34 @@ example (W : FirstOrderReflection.Theory (Q U))
       P.syntaxData.sentenceNegation W.val hcomp⟩
 end ArbitrarySlice
 
+section ActualCoordinates
+variable (U : Tot C)
+
+example : constantFamilyFunctor U ≅ AssociatedSliceCoordinates.actualConstant U :=
+  AssociatedSliceCoordinates.comparison U
+
+example {S : Tot C} (T : Subobject S) :
+    (Subobject.map ((AssociatedSliceCoordinates.comparison U).hom.app S)).obj
+        (FiniteLimitSubobjects.object (constantFamilyFunctor U) T) =
+      FiniteLimitSubobjects.object (AssociatedSliceCoordinates.actualConstant U) T :=
+  AssociatedSliceCoordinates.theory_value U T
+
+example (T : P.Theories) :
+    (PartialSliceTheoryFamilies.sourceTheory inverses T.val.arrow).hom =
+      PartialMaps.ofTotal ((AssociatedSliceCoordinates.actualConstant (T.val : Tot C)).map
+        T.val.arrow) :=
+  AssociatedSliceCoordinates.actual_map inverses (T.val : Tot C) T.val.arrow
+
+example (point : Z ⟶ U) {X Y : PartialMaps.Par (Over U)} (f : X.obj ⟶ Y.obj) :
+    (AssociatedCategory.evaluation inverses point).map (PartialMaps.ofTotal f) =
+      (((Over.pullback point).map f).left).hom :=
+  AssociatedSliceCoordinates.evaluation_total inverses point f
+end ActualCoordinates
+
+#print axioms AssociatedSliceCoordinates.comparison
+#print axioms AssociatedSliceCoordinates.theory_value
+#print axioms AssociatedSliceCoordinates.actual_map
+#print axioms AssociatedSliceCoordinates.evaluation_total
 #print axioms SliceSubobjectPredicates.orderIso
 #print axioms SliceSubobjectPredicates.underlying_pullback
 #print axioms SliceSubobjectPredicates.underlying_constant
