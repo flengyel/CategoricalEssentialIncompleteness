@@ -3,6 +3,11 @@ Updated 14 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
 The current manuscript and verification target are version 58.
+Follow docs/V58_LEAN_CONTINUATION_2026-11-14.md for the current proof task,
+v58 conventions, independent statement checks and commit requirements.
+Theorem 5.3 is the next incomplete result; first preserve and reconcile any
+later local or remote proof work.
+
 Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V58.md,
 manuscript/latex/main.tex and all its inputs, and
  docs/CEI_v58_WSL2_instructions_2026-11-14.md.
