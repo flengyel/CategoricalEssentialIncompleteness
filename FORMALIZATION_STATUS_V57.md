@@ -44,7 +44,7 @@ These comparisons preserve the retained 62 mappings. The completed full v57 repl
 
 | Result and source | Statement and types | Lean declarations | Effective hypotheses, constructions and dependencies | Status and missing obligation |
 |---|---|---|---|---|
-| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `LC.SplitObject.productLaws`, `prodominicalLaws`, `productRestriction_eq`; `V46.SplitTuring.turing_object`; `V46.MonicPartialMapEquivalence.selfEquivalence`; `V46.PartialSliceEquivalence.equivalence`; `V46.PartialSliceTuring.parameterization` and its restriction-product construction for a fixed input family; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. Complete binary restriction products for arbitrary slice-object pairs, the constant-object recursion subcategory, and its splitting equivalence. The actual monic-span comparison, products with a fixed input family, and universal computations in Par(D/T) are proved. |
+| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `LC.SplitObject.productLaws`, `prodominicalLaws`, `productRestriction_eq`; `V46.SplitTuring.turing_object`; `V46.MonicPartialMapEquivalence.selfEquivalence`; `V46.PartialSliceEquivalence.equivalence`; `V46.PartialSliceProducts.pcategoryLaws`, `restrictionCategory_eq`; `V46.SliceProductTuring.evaluator_isTuring`; `V46.PartialSliceRetractions.exists_total_retract`; `V46.PartialSliceSplitting.partialSliceSplits`; `V46.SplitSliceTuring.turing_object`; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. The constant-object recursion subcategory and its splitting equivalence remain. Arbitrary slice products with all PCategory laws, the actual slice Turing morphism, restriction terminal morphisms, total retractions into the constant universal family and splitting of slice restriction idempotents are proved. |
 | Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. | `V46.PartialMaps.inducedFunctor` and its preservation of restriction, total morphisms and monic partial inverses; no complete correspondence. | Lemma 5.1 and syntax/finite derivations in every parameter slice. The second adjunction unit is partial; proper i need not preserve the restriction terminal object. | Open. Define both functors on objects and partial spans; prove both natural hom-set bijections, full faithfulness, properness, composition and the displayed comparison square. |
 | Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `LC.domain_incompleteness` and existing partial-map constructions. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Construct B_U, E_U and E_UB_U≅1. | Open. Prove the retraction, preservation of closed theories, consistency and completeness; prove both Boolean-morphism equivalences and the conclusion for every consistent extension receiving an inseparable pair. |
 
@@ -445,3 +445,37 @@ Lemma 5.1 remains open: products of arbitrary slice-object pairs, the
 constant-object recursion subcategory and the restriction-splitting
 equivalence remain to be proved. The count remains **67 proved numbered
 counterparts and ten open mathematical obligations**.
+
+
+### Arbitrary slice products and Turing structure, 13 November 2026
+
+`V46RestrictionProductData` proves the partial pairing calculus for a
+restriction category with chosen binary restriction products.
+`V46RestrictionProductCategory` derives all fourteen `PCategory` laws
+and equality of the product-derived restriction structure with the
+existing one. `V46RestrictionProductComparison` constructs the canonical
+total comparison isomorphism between two product choices.
+
+`V46AmbientSliceProducts` builds products of arbitrary total families
+using pullbacks in Tot(C). A splitting of the common domain proves joint
+extensionality of the total pullback projections on partial morphisms.
+Partial cone lifting constructs pairing with its restriction and both
+projection equations. `V46PartialSliceProducts` lifts those products and
+all their laws into the actual monic-span quotient Par(Tot(C)/T,Mono).
+
+`V46SliceProductTuring` compares these products with the evaluator's
+fixed-input products, proves comparison naturality along total parameters
+and establishes the actual `IsTuringMorphism` statement for the complete
+slice product structure. `V46PartialSliceRetractions` supplies the
+restriction terminal morphisms and lifts total graph embeddings and their
+partial retractions into the same span quotient.
+`V46PartialSliceSplitting` proves that all its restriction idempotents
+split with total inclusions. `V46SplitSliceTuring` derives the universal
+evaluator and total retractions for C=Split(R) directly from the original
+recursion category, using the proved equality of restriction structures.
+
+Lemma 5.1 remains open: the full constant-object recursion subcategory
+and its restriction-splitting equivalence still require construction.
+These additions close its arbitrary-product and actual Turing-structure
+subgoals; the count remains **67 proved numbered counterparts and ten
+open mathematical obligations**.
