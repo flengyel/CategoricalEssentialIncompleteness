@@ -81,9 +81,19 @@ $k_e\in\N$ for which PA proves
 In particular, PA proves $\forall a\exists!p\,G_{k_e}(a,p)$.
 \end{lemma}
 \begin{proof}
-These are the formalized enumeration, composition, and
-parameterization properties of the computation coding used in
-\cite[p.~108; p.~115, Note~1]{Montagna}.
+Use the deterministic computation coding of
+Montagna~\cite[p.~108; p.~115, Note~1]{Montagna}.
+Its universal interpreter and formalized parameterization give $u$ and
+$\operatorname{s}$. Choose an index $c$ whose program, on input
+$\langle\langle f,e\rangle,x\rangle$, first simulates $e$ on $x$
+and then simulates $f$ on its output. Put
+$\operatorname{comp}(f,e)=\operatorname{s}(c,\langle f,e\rangle)$,
+which is primitive recursive. Combining the two halting traces gives
+a trace of this program; conversely, a halting trace of the program
+determines the two simulated traces and their intermediate value.
+These trace transformations are primitive recursive, and PA proves
+their defining identities, giving~\eqref{eq:composition}.
+Determinism proves functionality.
 The pairing can be replaced by the pairing fixed above, using
 the PA-provable inverse equations for the two numerical codings.
 For $k_e$, use an index for the primitive-recursive function

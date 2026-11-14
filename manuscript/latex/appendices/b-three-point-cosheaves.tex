@@ -565,9 +565,10 @@ Under this identification, restriction to total categories gives the
 equivalence $F:\mathcal B_{\mathrm{rec}}\to\mathcal C_{\mathrm{rec}}$
 of that proposition.
 
-\emph{Decidable equality} on $V$ means a morphism
-$\epsilon:V\times V\to1+1$ in $\mathcal E$ whose inverse image of
-the first summand is the diagonal subfunctor. Here $1$ is the terminal object of $\mathcal E$.
+Decidable equality on $V$ has the meaning fixed in
+Appendix~\ref{app:categorical-hypotheses}: it is a morphism
+$\epsilon:V\times V\to\Two$ in $\mathcal E$ whose inverse image
+of $\mathbf t:1\to\Two$ is the diagonal subfunctor.
 
 \begin{proposition}\label{prop:fork-distinction}
 The recursion category $\mathscr R_X$ is not equivalent, as a
@@ -591,7 +592,7 @@ Suppose that $\epsilon$ decides equality on $V$. The functor $1+1$
 is constant and sends both nonidentity morphisms of $J$ to
 identity functions. Choose distinct $u,v\in V_0$ differing only
 in their $z$ coordinate. Then $r_1^Vu=r_1^Vv$, so
-$\epsilon_1(r_1^Vu,r_1^Vv)$ lies in the first summand.
+$\epsilon_1(r_1^Vu,r_1^Vv)$ lies in the second summand.
 Naturality forces $\epsilon_0(u,v)$ to lie in the same summand,
 contrary to $u\ne v$ and the prescribed diagonal inverse image.
 \end{proof}

@@ -1,25 +1,28 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 11 November 2026
+Updated 14 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 57.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V57.md,
+The current manuscript and verification target are version 58.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V58.md,
 manuscript/latex/main.tex and all its inputs, and
- docs/CEI_v57_WSL2_instructions_2026-11-10.md.
+ docs/CEI_v58_WSL2_instructions_2026-11-14.md.
 
-The v57 source, PDF, and source archive are included in the repository.
-The previous WSL2 continuation had only v51; its newer Lean work and
-verification records must be preserved. See
- docs/V57_LEAN_CONTINUATION_2026-11-10.md for those proofs and checks.
-The verifier apostrophe parser repair is already integrated; retain it and
-run scripts/test_verify_axiom_parser.py rather than applying it again.
+Version 58 makes local notation, abstract and citation corrections, and
+explicates the uniform composition program in Lemma 6.1;
+all 77 numbered statements and three definitions are unchanged.
+The source, PDF and archive are included in the repository.
 
-The manuscript contains 77 numbered results and three definitions.
-There are 62 retained results with existing Lean counterparts and 15
-additional results requiring complete v57 statement comparisons and proofs.
-Generation-adjunction support was implemented in the WSL2 continuation;
-compare its full hypotheses and conclusions with Theorem 4.4 before marking
-that new correspondence row complete. Keep every unfinished row open.
+The current table records 69 proved counterparts and eight open results:
+5.3, 8.9, 8.10, 9.6, 9.8, 10.7, 10.8 and 10.9.
+Theorem 5.3 has the evaluation retraction and Boolean-morphism comparisons;
+its closed-theory and essential-incompleteness transfer remain open.
+The principal generation reflection uses initial algebras for axiom
+subobjects and sends arbitrary presentations through their regular images.
+The earlier stronger-premise mismatch is resolved.
+
+Retain all later local and remote proof work. Read
+ docs/V57_LEAN_CONTINUATION_2026-11-10.md and the later implementation reports.
+The parser repair is integrated. Run its tests; do not reapply its old patch.
 
 Preserve the pinned Lean toolchain and dependency manifest, the designated
 Palomar challenge placeholders, and all later local work. Production proofs
