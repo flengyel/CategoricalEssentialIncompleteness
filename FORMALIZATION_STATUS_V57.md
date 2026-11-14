@@ -1,6 +1,6 @@
 # Formalization correspondence for manuscript v57
 
-The source is **Logical consequence and essential incompleteness in recursion categories**, version 57, dated 10 November 2026. [MANUSCRIPT_CURRENT.json](MANUSCRIPT_CURRENT.json) selects its sources, artifacts and audit entry points. This table retains the 62 result mappings and verification records from the v51 table at remote commit `58940991133e2dca82b97b532d1a7b4caf6beecc`, renumbers them against v57, and adds fifteen results. The full v57 verification of proof commit `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed all 1,708 commands: **67 of the 77 numbered results have proved counterparts**, including Theorems 4.4–4.5 and 4.7, Proposition 4.6 and Corollary 4.8. Ten mathematical obligations remain open. The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json) identifies the tested proof, preserved interrupted attempt and completed replay. The later reporting change affects documentation only. The `V46` module and namespace prefix identifies implementations and does not select the manuscript version.
+The source is **Logical consequence and essential incompleteness in recursion categories**, version 57, dated 10 November 2026. [MANUSCRIPT_CURRENT.json](MANUSCRIPT_CURRENT.json) selects its sources, artifacts and audit entry points. This table retains the 62 result mappings and verification records from the v51 table at remote commit `58940991133e2dca82b97b532d1a7b4caf6beecc`, renumbers them against v57, and adds fifteen results. The full v57 verification of proof commit `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed all 1,708 commands and established 67 proved numbered counterparts. The subsequent partial-slice constructions complete Lemma 5.1: **68 of the 77 numbered results now have proved counterparts**, and nine mathematical obligations remain open. The [full verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json) retains the earlier replay; the [partial-slice completion report](docs/V57_PARTIAL_SLICE_COMPLETION_2026-11-14.md) records the later incremental verification. The `V46` module and namespace prefix identifies implementations and does not select the manuscript version.
 
 This table follows `main.tex` and its nested inputs. It covers **77 numbered results and three numbered definitions**. Section 8 includes `08a`–`08d`; the file named `04-miller-sequences.tex` is Section 9. The labels and numbers below match the v57 source and its compiled auxiliary file. Declaration names beginning `LC.` abbreviate `CategoricalEssentialIncompleteness.LocalConnectedness.`; `V46.` abbreviates `CategoricalEssentialIncompleteness.V46.`. A supporting declaration or module on an open row does not establish the complete printed result. The [implementation report](docs/V46_IMPLEMENTATION_2026-11-03.md), [continuation report](docs/V46_CONTINUATION_2026-11-03.md) and [verification record](docs/V46_CONTINUATION_VERIFICATION_2026-11-03.json) retain the earlier source evidence. The v51 table remains unchanged as the record of its own manuscript scope.
 
@@ -12,7 +12,7 @@ The [4 November proof report](docs/V46_NEXT_PROOFS_2026-11-04.md) records the ne
 
 The v51-to-v57 source comparison retains all 62 earlier result labels. Fifty-seven retained statement environments are identical after whitespace normalization. Five have expository changes without a changed hypothesis, conclusion or quantifier: `lem:semantic-substitution` (7.5), `lem:miller-cut-reduction` (9.3), `prop:st-substitution-realization` (6.7), `lem:st-finite-sigma1` (6.4), and `lem:arithmetic-proof-search` (8.2). The changes identify substitution codes and codomains, explicate finite coefficient families, or change wording and headings. The proof of `lem:syntactic-derivation-initiality` (6.8) now distinguishes the tuple in `B_n(Q,q)` from its tagged image in `H(Q,q)`, the domain of the algebra morphism. This corrects the written typing without changing the lemma statement.
 
-These comparisons preserve the retained 62 mappings. The completed full v57 replay covers five added rows, 4.4–4.8, including Corollary 4.8's equivalence, Boolean extension and subobject/domain comparison. Ten rows remain mathematically open. Each completion requires the full printed statement and its verification record.
+These comparisons preserve the retained 62 mappings. The completed full v57 replay covers five added rows, 4.4–4.8, including Corollary 4.8's equivalence, Boolean extension and subobject/domain comparison. The subsequent completion of Lemma 5.1 leaves nine mathematically open rows. Each completion requires the full printed statement and its verification record.
 
 ## Numbered statements
 
@@ -44,7 +44,7 @@ These comparisons preserve the retained 62 mappings. The completed full v57 repl
 
 | Result and source | Statement and types | Lean declarations | Effective hypotheses, constructions and dependencies | Status and missing obligation |
 |---|---|---|---|---|
-| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `LC.SplitObject.productLaws`, `prodominicalLaws`, `productRestriction_eq`; `V46.SplitTuring.turing_object`; `V46.MonicPartialMapEquivalence.selfEquivalence`; `V46.PartialSliceEquivalence.equivalence`; `V46.PartialSliceProducts.pcategoryLaws`, `restrictionCategory_eq`; `V46.SliceProductTuring.evaluator_isTuring`; `V46.PartialSliceRetractions.exists_total_retract`; `V46.PartialSliceSplitting.partialSliceSplits`; `V46.SplitSliceTuring.turing_object`; no complete correspondence. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Open. The constant-object recursion subcategory and its splitting equivalence remain. Arbitrary slice products with all PCategory laws, the actual slice Turing morphism, restriction terminal morphisms, total retractions into the constant universal family and splitting of slice restriction idempotents are proved. |
+| Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `V46.SplitTuring.turing_object`; `V46.SplitSliceTuring.turing_object`; `V46.ConstantSlice.Full.recursionCategory`, `productLaws`, `prodominical`, `isotype`; `actualInclusion_range`; `splittingEquivalence`, `splittingEquivalence_restriction`, `splittingEquivalence_inverse_restriction`. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Proved by constructed restriction equivalences. The literal full subcategory of original constant families has binary restriction products, inherited zeros, isotype and a Turing morphism. Its restriction splitting is equivalent to the actual monic partial-map slice, preserving restriction in both directions. The realization is full and faithful with exactly the stated constant objects as its object range. |
 | Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. | `V46.PartialMaps.inducedFunctor` and its preservation of restriction, total morphisms and monic partial inverses; no complete correspondence. | Lemma 5.1 and syntax/finite derivations in every parameter slice. The second adjunction unit is partial; proper i need not preserve the restriction terminal object. | Open. Define both functors on objects and partial spans; prove both natural hom-set bijections, full faithfulness, properness, composition and the displayed comparison square. |
 | Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `LC.domain_incompleteness` and existing partial-map constructions. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Construct B_U, E_U and E_UB_U≅1. | Open. Prove the retraction, preservation of closed theories, consistency and completeness; prove both Boolean-morphism equivalences and the conclusion for every consistent extension receiving an inseparable pair. |
 
@@ -237,7 +237,7 @@ completion of a manuscript result.
 
 The v57 source archive and PDF have been recovered and matched to the SHA-256 digests in the supplied WSL2 instructions. Their bytes are now the active manuscript inputs selected by `MANUSCRIPT_CURRENT.json`. The earlier [continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md) records why WSL2 work had continued with v51; its missing-file statement describes that earlier checkout.
 
-The first remaining mathematical construction is Lemma 5.1: the Turing structure of partial slices, its full recursion subcategory and splitting equivalence. Corollary 4.8 now has the Boolean valuation, admissible-substitution invariant, seven-scheme and inference-rule soundness, and the closed consistent complete extension. Its final equivalence uses the proved subobject/domain order isomorphism under the printed partial-inverse hypothesis. All 32 targeted strict commands and 70 selected axiom reports pass. The full v57 replay at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed 1,708 commands and establishes 67 proved numbered counterparts; ten mathematical obligations remain open. The preceding full replay at `c87ae0e3a7f1faed605c6bc1753f6309504527b7` remains preserved as evidence for its earlier 66-result snapshot.
+The first remaining mathematical construction is Theorem 5.2: postcomposition and reindexing on partial spans, their two adjunctions, full faithfulness, properness, composition and the displayed sentence/theorem comparison square. Lemma 5.1 is now proved, including the constant-object recursion subcategory and its restriction-splitting equivalence. Corollary 4.8 now has the Boolean valuation, admissible-substitution invariant, seven-scheme and inference-rule soundness, and the closed consistent complete extension. Its final equivalence uses the proved subobject/domain order isomorphism under the printed partial-inverse hypothesis. All 32 targeted strict commands and 70 selected axiom reports pass. The full v57 replay at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed 1,708 commands and established 67 proved numbered counterparts at that snapshot. The subsequent completion of Lemma 5.1 raises the current count to 68, with nine mathematical obligations open. The preceding full replay at `c87ae0e3a7f1faed605c6bc1753f6309504527b7` remains preserved as evidence for its earlier 66-result snapshot.
 
 `V46FirstOrderReflection` requires initial derivation algebras only for axiom subobjects. It defines theories by Gen(T)=T and constructs Γ(a)=Gen(im a), both adjunctions and the equation with the sentence pullback of the formula image. It does not transfer initiality to an arbitrary axiom-label presentation. The previous all-morphism implementation remains valid under its stated stronger hypothesis; only its generated sentence images are compared with the printed reflector. The constructed TotalSplit instance has no extra initiality premise.
 
@@ -479,3 +479,37 @@ and its restriction-splitting equivalence still require construction.
 These additions close its arbitrary-product and actual Turing-structure
 subgoals; the count remains **67 proved numbered counterparts and ten
 open mathematical obligations**.
+
+
+### Partial-slice Turing theorem completed, 14 November 2026
+
+`V46RestrictionCompletion` constructs the extension of a full faithful
+restriction functor to the restriction splitting, using chosen target
+splittings. Total retractions into its image prove essential surjectivity.
+The extension and its inverse preserve restriction.
+
+`V46FullRestrictionProducts` transfers chosen products and universal Turing
+morphisms to a full restriction subcategory. `V46ConstantFamilyProducts`
+constructs the constant-family functor and its product comparisons.
+`V46RestrictionProductZeros` derives both zero-absorption laws from
+restriction products and restriction zeros. `V46AmbientProductTuring`
+proves the Turing property for the ambient slice's full product structure.
+
+`V46ConstantSlice` and `V46ConstantSliceRecursion` construct the indexed
+presentation on original objects of R. `V46ConstantSliceFull` constructs
+the literal full subcategory of families T×X→T for original X in R. Its
+chosen binary products, existing restriction, zeros, isotype and universal
+Turing morphism give an actual `PRecursionCategory`. Its full faithful
+realization in Par(D/T) has exactly the stated constant-object range.
+The constructed equivalence Split(R[T])≃Par(D/T) preserves restriction
+in both directions. `V46PartialSliceRealization` supplies the full faithful
+restriction-preserving literal-family realization used in that comparison.
+
+The intended-statement checks cover the universal objects of Split(R)
+and the actual partial slice, the restriction terminal laws, the recursion
+category of the literal full subcategory, its exact object range and both
+directions of the restriction equivalence. Together with the earlier
+product and monic-span comparisons, these complete Lemma 5.1 under the
+printed hypotheses. The count is **68 proved numbered counterparts and
+nine open mathematical obligations**. Theorem 5.2 is the first remaining
+construction. The manuscript remains v57.
