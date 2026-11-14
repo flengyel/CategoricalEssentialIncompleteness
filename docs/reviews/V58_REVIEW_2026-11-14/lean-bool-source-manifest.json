@@ -1,0 +1,53 @@
+{
+  "commit": "df66b19853e6b243170725619bfabb71f4741065",
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/ForkNonEquivalence.lean",
+      "sha": "71688d0f3306a2c119c952f25c9a92a7629289ce"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/ForkObstruction.lean",
+      "sha": "0b706d32973c4dd8c056315101e95da24505d2e1"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/CharacteristicArrows.lean",
+      "sha": "38330b5e5b925769e724894753dc5eeec03817f2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/TwoBoolean.lean",
+      "sha": "7b68b6e9fc0d1c85547a0b68d3278acc5134c13b"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanValuation.lean",
+      "sha": "16461e22748937c3e93777620b8d8b69d136a4ce"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanValuationChecks.lean",
+      "sha": "ef5a85d5ebbe9722bb7ff5c2eb9ac6063843e262"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanSentenceTheory.lean",
+      "sha": "9c0162df853f61d355bdaf3865165196fcab4e93"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanTheoryClosure.lean",
+      "sha": "ff0650b3580ae8e1d59a63d02fd0d595ccb4bf8c"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanLogicalSoundness.lean",
+      "sha": "b2b9d91db351c9a08021298724fd2d45551b2290"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean",
+      "sha": "27e9add0bc3020a00c69273459355d3352b4cdf0"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean",
+      "sha": "0ba41bb5937de651f39cb96722d158ad1d7ce286"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/EffectiveForkUniversal.lean",
+      "sha": "5faa2a96c052f781f17c90e430076e1dc3ad3862"
+    }
+  ]
+}

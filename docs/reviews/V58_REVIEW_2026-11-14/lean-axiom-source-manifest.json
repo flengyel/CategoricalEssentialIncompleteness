@@ -1,0 +1,73 @@
+{
+  "commit": "df66b19853e6b243170725619bfabb71f4741065",
+  "files": [
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflection.lean",
+      "sha": "6c54401528c4523da6ac4f64acfe3115ccd91be2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46LogicalTranslations.lean",
+      "sha": "4a2e33e2a4d522046564839788e9e7408dc89fa7"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryPresentationAdjunction.lean",
+      "sha": "a1e6e8039f084b9574f881896e8f42b1e7acaf90"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46FirstOrderPresentationAdjunction.lean",
+      "sha": "b9c302aa6496d1ed0a632335cc5e2bf979534f4f"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46FirstOrderGeneration.lean",
+      "sha": "14dcf5068edf0508231686447ae7e49a02adfd1a"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46FirstOrderTranslationReflection.lean",
+      "sha": "bdd1ad498d32b1c44bed037fb6d68143cd819c44"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46DeductionComparison.lean",
+      "sha": "2c83a5533ff7dd5ffbb867698de9152761667329"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderGeneration.lean",
+      "sha": "12ac836dcaa2ecaff973993b423293972be8229e"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflectionChecks.lean",
+      "sha": "095b4df344afbd8484b03415ca1317627d0797bb"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationInitial.lean",
+      "sha": "51d7818e18bbd1c0306ed0adac093d34c8989162"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationSliceInitial.lean",
+      "sha": "c699828724e0c7afbe23bd41ca147269e0b979a2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerSyntaxPresentation.lean",
+      "sha": "08b1457079073723c60c64345563ae6ca1b24ed5"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerDerivationInitial.lean",
+      "sha": "bcc982cb995b158de8327df632039e5299ca42d2"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInterpretation.lean",
+      "sha": "6f52eb9cc9d384489fd47d1f85588c8139771e5e"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean",
+      "sha": "78877c998b008725040598be5793ccc6b73cc034"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunctionChecks.lean",
+      "sha": "16832b48ff77a972727e7a109c2878377b90381d"
+    },
+    {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticGeneratedTheoryTotal.lean",
+      "sha": "a92d8344cae66c8134f85e7f4561510a12714cdd"
+    }
+  ]
+}
