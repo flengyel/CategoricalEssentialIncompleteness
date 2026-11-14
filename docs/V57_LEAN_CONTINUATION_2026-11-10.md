@@ -1070,3 +1070,30 @@ inputs match the proof commit, and the earlier verification evidence is
 preserved. Lemma 5.1 remains open for the full constant-object recursion
 subcategory and its splitting equivalence. The count remains **67 proved
 numbered counterparts and ten open obligations**.
+
+
+## Lemma 5.1 completed, 14 November 2026
+
+The [partial-slice completion report](V57_PARTIAL_SLICE_COMPLETION_2026-11-14.md) records proof commit
+`d2acc5c940c75a8e8fd2e976db63453ed675cb4a`. The literal full subcategory R[T] on original
+constant families is a recursion category. Its restriction splitting is
+equivalent to the actual monic partial-map slice C[T], preserving
+restriction in both directions. The full faithful realization has
+exactly the stated constant objects as its object range. The general
+completion theorem uses target splittings and total retractions.
+
+The assembled intended-statement checks cover all clauses of the printed
+lemma. All 25 incremental integration commands passed,
+including 18 strict commands and both complete
+transitive axiom audits. These cover 899
+current modules, 28,078 current declarations
+and 1,274 retained declarations, with
+exactly the permitted three axioms. All 2,387
+measured inputs match the tested proof commit. Earlier verification
+evidence and manuscript v57 artifacts remain preserved.
+
+The count is now **68 proved numbered counterparts and nine open
+obligations**. Theorem 5.2 is next: define postcomposition and reindexing
+on partial spans, prove both natural hom-set bijections and the resulting
+two adjunctions, full faithfulness, properness, composition and the
+sentence/theorem comparison square. The second adjunction unit is partial.
