@@ -86,6 +86,10 @@ The [theory-extension completion](docs/V57_THEORY_EXTENSIONS_2026-11-14.md)
 constructs both change-of-base adjunctions, full faithfulness, properness,
 composition and the sentence/theorem comparisons in the actual partial
 slices. This completes Theorem 5.2.
+The [associated-category continuation](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
+constructs the evaluation retraction and proves the Boolean totality and
+extension equivalences. Theorem 5.3 remains open for closed-theory transfer
+and the full essential-incompleteness equivalence.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)

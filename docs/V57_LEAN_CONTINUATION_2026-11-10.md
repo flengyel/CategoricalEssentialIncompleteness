@@ -1126,3 +1126,34 @@ The count is now **69 proved numbered counterparts and eight open
 obligations**. Theorem 5.3 is next: construct the constant-family/evaluation
 retraction and prove transfer of closed theories, essential incompleteness
 and the Boolean partial morphism assertions.
+
+
+## Theorem 5.3 subgoals, 14 November 2026
+
+The [associated-category report](V57_ASSOCIATED_RETRACTION_2026-11-14.md) records proof commit
+`f147a49ecddc87509b02156a912b0b0dbbdbce68`. Evaluation in the actual monic partial slice equals
+ordinary pullback at the chosen logical theorem followed by the base
+functor. Its composite with the constant-family functor is naturally
+isomorphic to the identity. Restriction preservation yields faithfulness,
+totality reflection and preservation/reflection of total extensions.
+
+The Boolean partial morphism of a disjoint pair is constructed with the
+proved true/false values and restriction domain equal to the pair's join.
+Applied to theorem/refutation subobjects, this proves the two printed
+Boolean equivalences. The source restriction-idempotent version is included.
+The no-total-extension witness also holds for consistent extensions receiving
+total subobject reduction bounds.
+
+All 22 incremental commands passed, including
+15 strict checks and both complete transitive axiom
+audits. These cover 919 current modules,
+28,383 current declarations and
+1,274 retained declarations. All
+2,409 measured inputs match the proof commit. The
+axiom unions contain exactly the permitted three axioms.
+
+The count remains **69 proved numbered counterparts and eight open
+obligations**. Theorem 5.3 still requires closed-theory transfer using the
+parameterized deduction construction, the corresponding consistency and
+completeness preservation, and the full essential-incompleteness equivalence.
+The manuscript and earlier verification evidence remain preserved.
