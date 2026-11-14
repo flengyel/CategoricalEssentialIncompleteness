@@ -851,6 +851,7 @@ public import CategoricalEssentialIncompleteness.V46PartialSliceTuringTheoremChe
 public import CategoricalEssentialIncompleteness.V46TheoryExtensionsChecks
 public import CategoricalEssentialIncompleteness.V46AssociatedCategoryChecks
 public import CategoricalEssentialIncompleteness.V46ClosedTheoryTransferChecks
+public import CategoricalEssentialIncompleteness.V46V58ConventionChecks
 
 
 
