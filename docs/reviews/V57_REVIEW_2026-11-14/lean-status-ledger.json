@@ -1,0 +1,354 @@
+{
+  "repository": "flengyel/CategoricalEssentialIncompleteness",
+  "pinned_commit": "dfe6d3b9b948875d9d268ef8bbd332d65c6b53e5",
+  "manuscript_version": 57,
+  "review_type": "source correspondence and verification-record audit; no fresh Lean build",
+  "numbered_results": 77,
+  "retained_results": 62,
+  "retained_review_scope": "metadata, import/audit integration and baseline/current Git-tree continuity; not all 62 proof bodies independently checked",
+  "completed_new_results": 7,
+  "open_results": [
+    "5.3",
+    "8.9",
+    "8.10",
+    "9.6",
+    "9.8",
+    "10.7",
+    "10.8",
+    "10.9"
+  ],
+  "new_results": [
+    {
+      "kind": "Theorem",
+      "source": "Theorem 4.4; `thm:first-order-reflection`; [03b-internal-adjunctions.tex](manuscript/latex/sections/03b-internal-adjunctions.tex)",
+      "printed_statement": "Generation is extensive, monotone and idempotent, left adjoint to inclusion of closed sentence theories. \u0393(a:A\u2192S)=Gen(im a) is a functor D/S\u2192Th_D(S), left adjoint to J.",
+      "declarations": "`V46.FirstOrderReflection.extensive`, `monotone`, `idempotent`, `generated_eq_pullback`, `adjunction`, `presentationAdjunction`, `presentationGeneration_obj`; `V46.SyntacticGenerationAdjunction.sentenceAdjunction`, `axiomAdjunction`, `axiomGeneration_image`, `axiomGeneration_original`.",
+      "hypotheses": "Regular D with finite coproducts; initial finite-derivation algebras only for axiom subobjects. Theories are fixed points of Gen. \u0393 first takes the regular image of an arbitrary total presentation. The TotalSplit instance uses constructed derivation algebras.",
+      "repository_status": "Proved directly at the printed hypotheses. The integrated v57 run at `c93832d` passed all 1,616 commands, including these strict checks and automatic transitive axiom coverage: V46FirstOrderReflection/Checks and SyntacticGenerationAdjunction/Checks pass four strict commands with only the permitted axioms; see the continuation report. The earlier all-presentations hypothesis is confined to auxiliary comparisons and is not used by the principal reflector.",
+      "number": "4.4",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46FirstOrderReflectionChecks"
+      ]
+    },
+    {
+      "kind": "Theorem",
+      "source": "Theorem 4.5; `thm:translation-galois`; [03b-internal-adjunctions.tex](manuscript/latex/sections/03b-internal-adjunctions.tex)",
+      "printed_statement": "Inverse image along \u03c3_S preserves theories; \u03c3#(T)=Gen_Q(\u03c3!T) is left adjoint to \u03c3*. Generation and both composition identities hold.",
+      "declarations": "`V46.FirstOrderPresentation.Translation.inverse_closed`, `pushforward`, `inverseImage`, `adjunction`, `generation_functor_identity`, `pushforward_comp`, `inverseImage_comp`; `V46.FirstOrderPresentation.Axioms.adjunction`.",
+      "hypotheses": "Arbitrary first-order presentations over a common variable object. Translations have three morphisms, preserve constructors and successful substitution, and satisfy logical-rule preservation as an existence condition. Initiality is required only for axiom subobjects.",
+      "repository_status": "Proved directly. All printed conclusions and the following Ax_V/Th_V reflection pass the integrated v57 run at `c93832d`, including statement and transitive axiom checks. LogicalTranslations, TranslationGalois and FirstOrderTranslationReflection and their Checks pass six strict commands with only the permitted axioms. The bijection across presentations leaves the translation unchanged.",
+      "number": "4.5",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46LogicalTranslationsChecks",
+        "V46TranslationGaloisChecks",
+        "V46FirstOrderTranslationReflectionChecks"
+      ]
+    },
+    {
+      "kind": "Proposition",
+      "source": "Proposition 4.6; `prop:deduction-comparison`; [03b-internal-adjunctions.tex](manuscript/latex/sections/03b-internal-adjunctions.tex)",
+      "printed_statement": "The regular comparison and sentence-derivation morphisms give the two generation identities and commuting adjunction square, a natural KJ\u2081\u2192J\u2082L^th, and a restricted right adjoint when L\u22a3R.",
+      "declarations": "`V46.DeductionComparison.generation_square`, `presentation_square`, `inclusionComparison`, `restrictedAdjunction`; `V46.DeductionSliceAdjunction.adjunction`, `orderAdjunction`; `V46.DeductionMates.comparisonMap`, `comparisonMap_conclusion`, `generation_square_from_rules`, `presentation_square_from_rules`, `theoryAdjunction`.",
+      "hypotheses": "Arbitrary regular categories with generation data, total \u03c3 and conclusion-preserving p_A for axiom subobjects. Only the regular-epimorphism part of regularity is needed in the image argument. For G\u22a3H, the pullback right adjoint and inference-algebra mate construct p_A from the stated rule natural transformation.",
+      "repository_status": "Proved directly. All printed conclusions, the pullback subobject adjunction and the stated mate construction pass the integrated v57 run at `c93832d`, including statement and transitive axiom checks. All three producer/Checks pairs pass six strict commands; their seventeen named axiom reports contain only the permitted axioms. They are included in the production and audit entry points.",
+      "number": "4.6",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46DeductionComparisonChecks",
+        "V46DeductionSliceAdjunctionChecks",
+        "V46DeductionMatesChecks"
+      ]
+    },
+    {
+      "kind": "Theorem",
+      "source": "Theorem 4.7; `thm:free-first-order-adjunction`; [03b-internal-adjunctions.tex](manuscript/latex/sections/03b-internal-adjunctions.tex)",
+      "printed_statement": "\u03a3_FO:Pair_c(D)\u21c4FO_V(D):J_FO is an adjunction with atomic-map unit and sentence-interpretation counit.",
+      "declarations": "`V46.SignedFirstOrder.adjunction`, `homEquiv`, `unit_arrow`, `counit_translation`; `generation`, `extraction`; `evaluation_consistent`, `interpretation_theory_bound`; `V46.NullaryInterpretation.translation`, `translation_unique`, `formula_substitution_option`, `admissibleInterpretation`; `V46.FirstOrderPresentation.ConsistentTheoryCategory.morphism_bound_iff`.",
+      "hypotheses": "Every mono has a partial inverse; syntax and derivations exist for nullary predicates indexed by arbitrary X. Pair objects require disjointness and consistency of T_(a,b).",
+      "repository_status": "Proved; full v57 verification passed at `c87ae0e3a7f1faed605c6bc1753f6309504527b7` (1,676 commands; exit 0). The 30 producer/Checks pairs pass 60 strict commands and 102 selected transitive axiom reports, all within the permitted set. Syntax and parameter-slice initiality construct the interpretation and prove substitution compatibility, including the original-body equal-binder branch. All seven scheme maps are constructed. Inverse-image consistency and sentence evaluation prove the pair-extraction object condition. Both functors, their laws, the natural hom-set bijection, unit and counit are proved. The direct-image morphism bound is proved equivalent to the printed closure/direct-image bound. The family requires initial derivation algebras only for axiom subobjects. Production imports and both statement/axiom audits passed the integrated replay. All 2,314 measured inputs match the committed proof source; the 27,204 current and 1,274 retained declaration reports use only the permitted axioms.",
+      "number": "4.7",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46SignedFirstOrderAdjunctionChecks"
+      ]
+    },
+    {
+      "kind": "Corollary",
+      "source": "Corollary 4.8; `cor:signed-first-order-incompleteness`; [03b-internal-adjunctions.tex](manuscript/latex/sections/03b-internal-adjunctions.tex)",
+      "printed_statement": "For a disjoint pair with consistent free signed theory, that theory is essentially incomplete exactly when the pair is inseparable in the restriction category.",
+      "declarations": "`V46.SignedFirstOrder.essential_incomplete_iff_inseparable`; `booleanTheory_extends`; `V46.NullaryBooleanValuation.substitution_value`, `logical_axioms_value`, `truthAlgebra`, `sentence_closed`, `sentence_consistent`, `sentence_complete`; `V46.RestrictionSubobjects.orderIso`, `inseparable_iff`",
+      "hypotheses": "Arbitrary split restriction category C with regular finitary extensive Tot(C), partial inverses for all total monomorphisms, and the supplied parameter-stable nullary syntax/derivation family. Initiality is required only for axiom subobjects. Essential incompleteness includes base consistency and quantifies over all closed consistent internal extensions. The valuation fold interprets terms in 1, equality by true, and quantification by projection. Equalizer-subalgebra induction proves admissible substitution invariance, retaining the equal-binder branch. The seven schemes and both inference rules give the true-formula algebra and a closed, consistent, complete sentence extension containing the signed axioms. The constructed subobject/domain order isomorphism identifies inseparability with the source restriction-idempotent definition.",
+      "repository_status": "Proved; full v57 verification passed at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` (1,708 commands; exit 0). The sixteen producer/Checks pairs also pass all 32 targeted strict commands and 70 selected axiom reports. The integrated build, intended-statement replay and final transitive axiom audits passed with only `propext`, `Quot.sound` and `Classical.choice`.",
+      "number": "4.8",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46SignedFirstOrderIncompletenessChecks"
+      ]
+    },
+    {
+      "kind": "Lemma",
+      "source": "Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex)",
+      "printed_statement": "C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T\u00d7\u03c4. The full recursion subcategory R[T] on T\u00d7X has Split(R[T])\u2243C[T].",
+      "declarations": "`V46.SplitTuring.turing_object`; `V46.SplitSliceTuring.turing_object`; `V46.ConstantSlice.Full.recursionCategory`, `productLaws`, `prodominical`, `isotype`; `actualInclusion_range`; `splittingEquivalence`, `splittingEquivalence_restriction`, `splittingEquivalence_inverse_restriction`.",
+      "hypotheses": "R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T.",
+      "repository_status": "Proved by constructed restriction equivalences. The literal full subcategory of original constant families has binary restriction products, inherited zeros, isotype and a Turing morphism. Its restriction splitting is equivalent to the actual monic partial-map slice, preserving restriction in both directions. The realization is full and faithful with exactly the stated constant objects as its object range.",
+      "number": "5.1",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46PartialSliceTuringTheoremChecks"
+      ]
+    },
+    {
+      "kind": "Theorem",
+      "source": "Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex)",
+      "printed_statement": "For t=ui, \u03a3_i is fully faithful and \u03a3_i\u22a3i*\u22a3\u03a3_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. The sentence family is isomorphic to its pullback and the theorem family lies below the pulled-back theory.",
+      "declarations": "`V46.PartialSliceChangeBase.postcompose_full`, `postcompose_faithful`, `leftAdjunction`, `rightAdjunction`, `reindex_eq_spanPullback`, `not_essSurj`, `postcompose_comp`; `V46.PartialSliceTheoryFamilies.comparison_square`, `sentenceIso`, `theory_bound`; `V46.PartialSlicePostcomposeProducts.actualProductIso`.",
+      "hypotheses": "Lemma 5.1 hypotheses: split restriction products, pullbacks in Tot(C), and partial inverses for total monomorphisms. Total theory monos t:T\u2192S, u:U\u2192S and i:T\u2192U with i\u226bu=t. The construction works in the actual monic partial-map slices.",
+      "repository_status": "Proved. Postcomposition retains spans and reindexing equals ordinary span pullback. Both natural hom equivalences give the adjunctions. The second unit is the inverse of the pullback inclusion and is non-total at the terminal family for proper i. The total comparison square, sentence isomorphism and subobject inequality hold, as do identity, composition and binary restriction-product preservation.",
+      "number": "5.2",
+      "review_assessment": "completed_statement_match",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46TheoryExtensionsChecks"
+      ]
+    },
+    {
+      "kind": "Theorem",
+      "source": "Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex)",
+      "printed_statement": "Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U].",
+      "declarations": "`V46.AssociatedCategory.evaluation`, `retraction`, `constant_total_iff`, `hasTotalExtension_iff`; `V46.BooleanPartialDecision.decision`, `domain_eq`; `V46.AssociatedCategory.incomplete_iff_decision_not_total`, `inseparable_iff_no_total_extension`, `no_total_extension_of_reduction`.",
+      "hypotheses": "Theorem 5.2 plus a fixed global logical theorem \u03bb:1\u2192S factoring through every theory considered. Evaluation is actual span pullback along its factorization \u03bb_U followed by the base functor. The constructed natural isomorphism E_UB_U\u22451 yields faithfulness and totality/extension reflection. The Boolean domain is proved equal to the theorem/refutation join under the subobject/domain identification.",
+      "repository_status": "Open. The retraction and both Boolean-morphism equivalences are proved. The no-total-extension witness is also proved for every consistent extension with the stated total subobject reduction bounds. Transfer of closed sentence theories in both directions, consistency/completeness preservation for those theories, the full essential-incompleteness equivalence and its essential-incompleteness conclusion for extensions remain.",
+      "number": "5.3",
+      "review_assessment": "partial_open",
+      "review_scope": "current principal source and statement checks",
+      "statement_check_modules": [
+        "V46AssociatedCategoryChecks"
+      ]
+    },
+    {
+      "kind": "Lemma",
+      "source": "Lemma 8.9; `lem:arithmetic-signed-theory`; [08-essential-incompleteness-of-arithmetic.tex](manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex)",
+      "printed_statement": "The free first-order theory generated by the arithmetic diagonal pair is internally consistent and essentially incomplete.",
+      "declarations": "Existing arithmetic diagonal, syntax/list and domain-incompleteness constructions.",
+      "hypotheses": "PA total splitting and finite derivations with their finite positive predicate labels. This is distinct from the theory representing a c.e. arithmetic extension.",
+      "repository_status": "Open. Construct the finite-positive-label Boolean valuation on both derivations, prove the PA-provable exclusion of contradictory conclusions and apply the general free-theory criterion.",
+      "number": "8.9",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Corollary",
+      "source": "Corollary 8.10; `cor:arithmetic-associated-categories`; [08-essential-incompleteness-of-arithmetic.tex](manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex)",
+      "printed_statement": "Every consistent internal extension of the free theory on the arithmetic diagonal pair satisfies the associated-category extension and incompleteness conclusions.",
+      "declarations": "Existing PA splitting and Lemma 8.9 once completed.",
+      "hypotheses": "Verify every hypothesis of Theorems 5.2\u20135.3, including the common logical theorem and parameterized deduction.",
+      "repository_status": "Open. Instantiate both general theorems, construct the full recursion subcategory and faithful constant-family functor, and identify the no-total-extension witness.",
+      "number": "8.10",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Lemma",
+      "source": "Lemma 9.6; `lem:miller-parameterized-deduction`; [04-miller-sequences.tex](manuscript/latex/sections/04-miller-sequences.tex)",
+      "printed_statement": "Miller syntax and initial derivation algebras exist for arbitrary semidecidable nullary coefficients and axiom families in every parameter slice.",
+      "declarations": "Existing Miller recursive-signature and finite-derivation constructions.",
+      "hypotheses": "Arbitrary uniformly semidecidable coefficients and parameters; the inference endofunctor acts over P\u00d7Fm and validates parameter, formula, rule and axiom labels.",
+      "repository_status": "Open. Construct the parameterized carrier and constructor/evaluation morphisms; prove initiality and uniqueness among all algebra morphisms with the stated uniformity across representations.",
+      "number": "9.6",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Corollary",
+      "source": "Corollary 9.8; `cor:miller-associated-categories`; [04-miller-sequences.tex](manuscript/latex/sections/04-miller-sequences.tex)",
+      "printed_statement": "Every consistent internal extension of the expanded Miller field theory satisfies the associated-category theorem and has the no-total-extension witness.",
+      "declarations": "Existing Miller incompleteness and Lemma 9.6 once completed.",
+      "hypotheses": "Theorems 5.2\u20135.3 in the Miller completion with the stated representation-independent semidecision convention.",
+      "repository_status": "Open. Verify the slice hypotheses and global logical theorem, instantiate both general results and identify inseparability and the Boolean partial morphism in the associated category.",
+      "number": "9.8",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Proposition",
+      "source": "Proposition 10.7; `prop:fork-first-order-realization`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex)",
+      "printed_statement": "The fork total category has first-order syntax and initial finite-derivation algebras for arbitrary nullary coefficients, stable in every parameter slice.",
+      "declarations": "Existing fork propositional syntax and finite-derivation modules.",
+      "hypotheses": "Constant variable diagram, arbitrary coefficient objects and parameters; atom transitions may identify labels.",
+      "repository_status": "Open. Construct componentwise finite-tree folds, prove naturality under both transitions, and prove initiality among all algebra morphisms in every parameter slice.",
+      "number": "10.7",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Proposition",
+      "source": "Proposition 10.8; `prop:fork-first-order-conservative`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex)",
+      "printed_statement": "The first-order fork theory conservatively extends the propositional theory and is internally essentially incomplete; the printed endpoint conclusions hold.",
+      "declarations": "Existing fork propositional realization and endpoint incompleteness, with Proposition 10.7 once completed.",
+      "hypotheses": "The first-order embedding and erasure must be natural under atom-identifying transitions and compare the specified axiom families and generated theories.",
+      "repository_status": "Open. Construct embedding and erasure, prove conservativity and consistency, apply domain incompleteness and establish the endpoint conclusions.",
+      "number": "10.8",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    },
+    {
+      "kind": "Corollary",
+      "source": "Corollary 10.9; `cor:fork-associated-theories`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex)",
+      "printed_statement": "Every consistent internal extension of the first-order fork theory satisfies the associated-category extension and incompleteness conclusions.",
+      "declarations": "Existing fork category and the preceding first-order constructions once completed.",
+      "hypotheses": "Theorems 5.2\u20135.3 for the first-order fork theory, including every-parameter derivations and a common global logical theorem.",
+      "repository_status": "Open. Instantiate partial-slice extension and incompleteness transfer, retaining the internal sentence and theorem objects and identifying the no-total-extension witness.",
+      "number": "10.9",
+      "review_assessment": "open",
+      "review_scope": "open row, current inventory and supporting-source sampling",
+      "statement_check_modules": []
+    }
+  ],
+  "verification_records": [
+    {
+      "file": "V57_THEORY_EXTENSIONS_VERIFICATION_2026-11-14.json",
+      "proof_commit": "f4572a09adb61331ae07e64da235e35cda23cb40",
+      "commands": 30,
+      "full_replay": false,
+      "success": true,
+      "command_details_inspected": 30,
+      "selected_axiom_reports": 125
+    },
+    {
+      "file": "V57_ASSOCIATED_RETRACTION_VERIFICATION_2026-11-14.json",
+      "proof_commit": "f147a49ecddc87509b02156a912b0b0dbbdbce68",
+      "commands": 22,
+      "full_replay": false,
+      "success": true,
+      "command_details_inspected": 22,
+      "selected_axiom_reports": 125
+    },
+    {
+      "file": "V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json",
+      "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+      "commands": 1708,
+      "full_replay": true,
+      "success": true,
+      "command_details_inspected": 0,
+      "selected_axiom_reports": 0
+    },
+    {
+      "file": "V57_PARTIAL_SLICE_COMPLETION_VERIFICATION_2026-11-14.json",
+      "proof_commit": "d2acc5c940c75a8e8fd2e976db63453ed675cb4a",
+      "commands": 25,
+      "full_replay": false,
+      "success": true,
+      "command_details_inspected": 25,
+      "selected_axiom_reports": 106
+    }
+  ],
+  "latest_tested_lean_commit": "f147a49ecddc87509b02156a912b0b0dbbdbce68",
+  "current_lean_differences_from_latest_tested": [],
+  "changes_from_full_baseline": {
+    "changed_existing_lean_files": [
+      "Lean/CategoricalEssentialIncompleteness.lean",
+      "Lean/CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean",
+      "Lean/CategoricalEssentialIncompleteness/CurrentStatementAudit.lean",
+      "Lean/CategoricalEssentialIncompleteness/RestrictionSpanPullbacks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+    ],
+    "added_lean_files": [
+      "Lean/CategoricalEssentialIncompleteness/V46AmbientPartialSlice.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AmbientProductTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AmbientSliceProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AmbientSliceTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AssociatedBooleanDecision.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AssociatedCategoryChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AssociatedEvaluation.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46AssociatedExtensionWitness.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46BooleanPartialDecision.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46ConstantFamilyProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46ConstantFamilyRetraction.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46ConstantSlice.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46ConstantSliceFull.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46ConstantSliceRecursion.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46FullRestrictionProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46MonicPartialMapEquivalence.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46MonicSpanValues.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46MonoInversesChoice.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46MonoInversesChoiceChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialMapFunctor.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialMapFunctorChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialMapFunctorComposition.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceChangeBase.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceConstructionChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceEquivalence.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceLeftAdjunction.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSlicePostcompose.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSlicePostcomposeProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceProductsChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceProperness.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceRealization.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceReindex.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceRetractions.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceRightAdjunction.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSpanChangeBase.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSpanPullback.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSplitting.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTheoryComparison.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTheoryFamilies.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTheorySubobjects.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTuringTheoremChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionCompletion.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductCategory.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductComparison.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductData.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductZeros.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionRetraction.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionTerminal.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46RestrictionTerminalChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SliceProductTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SliceTuringParameters.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SliceTuringParametersChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitProductCategory.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitProductCategoryChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitProducts.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitProductsChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitSliceTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitTuring.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46SplitTuringChecks.lean",
+      "Lean/CategoricalEssentialIncompleteness/V46TheoryExtensionsChecks.lean"
+    ]
+  },
+  "parser_tests": {
+    "passed": 6,
+    "failed": 0,
+    "method": "existing unittest cases against AST-extracted exact current parse_axiom_reports"
+  },
+  "limitations": [
+    "No fresh Lean build",
+    "Raw .codex-work logs and complete measured-input snapshots unavailable in committed tree",
+    "Original 62 proof bodies not all independently re-audited"
+  ],
+  "confirmed_mismatches": [],
+  "stronger_auxiliary_hypothesis": {
+    "modules": [
+      "V46FirstOrderGeneration",
+      "V46FirstOrderPresentationAdjunction"
+    ],
+    "description": "initiality for all axiom presentations; no longer used by principal 4.4 reflector, which only assumes axiom-subobject initiality"
+  }
+}

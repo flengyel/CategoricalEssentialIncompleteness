@@ -1,0 +1,2280 @@
+{
+  "manuscript_version": 57,
+  "source_commit": "dfe6d3b9b948875d9d268ef8bbd332d65c6b53e5",
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "coverage_complete": true,
+  "mathematical_review": "No confirmed theorem-level gap; local notation findings listed in review summary.",
+  "results": [
+    {
+      "kind": "theorem",
+      "title": "Comparison theorem",
+      "label": "thm:comparison",
+      "number": "3.1",
+      "page": "6",
+      "file": "sections/03-sections-and-inseparability.tex",
+      "line": 17,
+      "statement": "\\label{thm:comparison}\nLet $\\mathscr R$ be a recursion category with ranges and binary\nrestriction coproducts, let $\\mathcal A$ be a restriction category with\nranges, restriction zeros, and binary restriction coproducts, and let\n$F:\\mathscr R\\to\\mathcal A$ be a range functor.\nChoose a Turing morphism $\\tau:U\\times U\\rightharpoonup U$ and an\nisomorphism $b:U\\to U+U$. Define\n\\[\n h=b\\tau\\Delta_U:U\\rightharpoonup U+U,\\qquad\n a_0=h^*(1_U+0_U),\\qquad a_1=h^*(0_U+1_U).\n\\]\nLet $P,N$ be disjoint restriction idempotents on $FU$ such that\n$F(a_0)\\le P$ and $F(a_1)\\le N$. Suppose that\n$s:FU\\rightharpoonup FU+FU$ satisfies\n\\[\n s^*(1_{FU}+0_{FU})=N,\\qquad\n s^*(0_{FU}+1_{FU})=P,\n\\]\nand that there is a morphism $\\ell:U\\rightharpoonup U+U$ with\n$F\\ell=\\chi_{U,U}s$.\nThen there is a total morphism $g:U\\to U$ such that\n\\[\n (Fg)^*P=(Fg)^*N=0_{FU}.\n\\]\nIf $F(1_U)\\ne0$ and inverse image along $Fg$ preserves the join\n$P\\vee N$, then $P\\vee N\\ne1_{FU}$.\n",
+      "proof": "\nPut $u=b^{-1}\\ell:U\\rightharpoonup U$. Apply the Turing property\nto $u\\pi_2:U\\times U\\rightharpoonup U$, obtaining a total morphism\n$g:U\\to U$ with $\\tau(g\\times1_U)=u\\pi_2$.\nPrecomposition with $\\langle1_U,g\\rangle:U\\to U\\times U$ gives\n$\\tau\\Delta_Ug=ug$, and therefore $hg=\\ell g$.\n\nWrite\n$E=Fg:FU\\to FU$ and\n$H=\\chi_{U,U}^{-1}Fh:FU\\rightharpoonup FU+FU$.\nApplying $F$ to the preceding identity gives $HE=sE$.\nThe coproduct comparison identifies the images of the source summand\nidempotents with the target summand idempotents. Preservation of\nrestrictions and composition therefore gives\n\\[\n E^*F(a_0)=E^*N,\\qquad E^*F(a_1)=E^*P.\n\\]\nThe inequalities imply\n\\[\n E^*N=E^*F(a_0)\\le E^*P,\\qquad\n E^*P=E^*F(a_1)\\le E^*N.\n\\]\nThe two inverse images are equal, and their meet is\n$E^*(PN)=0_{FU}$. Hence both are zero.\nIf $P\\vee N=1_{FU}$, totality of $E$ and preservation of this join\nwould give\n\\[\n 1_{FU}=E^*1_{FU}=E^*(P\\vee N)\n       =E^*P\\vee E^*N=0_{FU},\n\\]\ncontrary to $F(1_U)\\ne0$.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Source Turing property and isomorphism b; target restriction, zeros, coproducts; F preserves restrictions, ranges, zeros and coproducts; disjoint P,N and bounds; lifted switched conditional; final nonzero and join-preservation hypotheses only for noncoverage."
+      ],
+      "proof_reconstruction": [
+        "Apply source parameterization to b\u207b\u00b9\u2113\u03c0\u2082:U\u00d7U\u21c0U and precompose with \u27e81_U,g\u27e9, obtaining hg=\u2113g.",
+        "Apply F and its coproduct comparison to identify (Fg)*F(a\u2080)=(Fg)*N and (Fg)*F(a\u2081)=(Fg)*P.",
+        "The bounding inequalities force the latter two inverse images to coincide; their meet is the inverse image of PN=0, so both vanish.",
+        "If P\u2228N=1, totality and the explicitly assumed preservation of that join force 1_FU=0."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "corollary",
+      "title": "Lifted separators",
+      "label": "cor:separator",
+      "number": "3.2",
+      "page": "7",
+      "file": "sections/03-sections-and-inseparability.tex",
+      "line": 77,
+      "statement": "\\label{cor:separator}\nUnder the hypotheses of Theorem~\\ref{thm:comparison} on\n$\\mathscr R$, $\\mathcal A$, $F$, $\\tau$, and $b$, suppose that\n$F(1_U)\\ne0$ and inverse images along total morphisms in $\\mathcal A$ preserve\nbinary joins. A complementary pair $P,N$ on $FU$ satisfying\n$F(a_0)\\le P$ and $F(a_1)\\le N$ admits no pair of morphisms\n$s:FU\\rightharpoonup FU+FU$ and\n$\\ell:U\\rightharpoonup U+U$ with\n\\[\n s^*(1_{FU}+0_{FU})=N,\\qquad\n s^*(0_{FU}+1_{FU})=P,\\qquad\n F\\ell=\\chi_{U,U}s.\n\\]\n",
+      "proof": "\nSuch morphisms would give $P\\vee N\\ne1_{FU}$ by\nTheorem~\\ref{thm:comparison}, contradicting complementarity.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Exactly Theorem 3.1 hypotheses plus complementarity and total inverse-image preservation of binary joins."
+      ],
+      "proof_reconstruction": [
+        "The alleged s,\u2113 satisfy the hypotheses of Theorem 3.1.",
+        "Its noncoverage conclusion contradicts P\u2228N=1.",
+        "No product preservation by F is used."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "corollary",
+      "title": "Inseparability from complementary conditionals",
+      "label": "cor:source-conditionals",
+      "number": "3.3",
+      "page": "7",
+      "file": "sections/03-sections-and-inseparability.tex",
+      "line": 98,
+      "statement": "\n\\label{cor:source-conditionals}\nUnder the hypotheses of Theorem~\\ref{thm:comparison} on\n$\\mathscr R$, $\\mathcal A$, $F$, $\\tau$, and $b$, suppose that\n$F(1_U)\\ne0$ and inverse images along total morphisms in $\\mathcal A$ preserve\nbinary joins of restriction idempotents.\nSuppose that, for every complementary pair $c,c'$ on $U$, there\nis a total morphism $\\ell_c:U\\to U+U$ satisfying\n\\[\n \\ell_cc=i_1c,\\qquad \\ell_cc'=i_0c',\n\\]\nwhere $i_0,i_1:U\\to U+U$ are the coproduct injections.\nThen the restriction idempotents $a_0,a_1$ of\nTheorem~\\ref{thm:comparison} are inseparable in $\\mathscr R$.\n",
+      "proof": "\nPut $\\varepsilon_0=1_U+0_U$ and $\\varepsilon_1=0_U+1_U$.\nThe morphisms $\\varepsilon_0\\ell_c$ and $i_0c'$ agree after\ncomposition with both $c$ and $c'$. Hence they agree after\n$[c,c']:U+U\\rightharpoonup U$. Its range is\n$c\\vee c'=1_U$, so the agreement law for ranges gives\n$\\varepsilon_0\\ell_c=i_0c'$.\nThe same argument gives $\\varepsilon_1\\ell_c=i_1c$.\nTaking restrictions yields $\\ell_c^*\\varepsilon_0=c'$ and\n$\\ell_c^*\\varepsilon_1=c$.\n\nIf $c,c'$ separated $a_0,a_1$, put $P=F(c)$ and $N=F(c')$.\nThese are complementary target restriction idempotents.\nFor the canonical coproduct isomorphism\n$\\chi_{U,U}:FU+FU\\to F(U+U)$, define\n$s_c=\\chi_{U,U}^{-1}F(\\ell_c):FU\\to FU+FU$.\nRestriction preservation and the coproduct comparison give\n\\[\n s_c^*(1_{FU}+0_{FU})=N,\\qquad\n s_c^*(0_{FU}+1_{FU})=P.\n\\]\nTogether with $F(\\ell_c)=\\chi_{U,U}s_c$, these identities contradict\nCorollary~\\ref{cor:separator}.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Theorem 3.1 data; total conditional for every complementary pair on U; target joins and nonzero identity."
+      ],
+      "proof_reconstruction": [
+        "The conditional branch equations give \u03b5\u2080\u2113_c=i\u2080c\u2032 and \u03b5\u2081\u2113_c=i\u2081c after precomposition with c,c\u2032.",
+        "The agreement law cancels their copairing because ran[c,c\u2032]=c\u2228c\u2032=1.",
+        "Restrictions then give exactly the switched inverse-image equations.",
+        "A hypothetical source separator is sent by F to a complementary target separator, contradicting Corollary 3.2."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "proposition",
+      "title": null,
+      "label": "prop:disjoint-joins",
+      "number": "3.4",
+      "page": "7",
+      "file": "sections/03-sections-and-inseparability.tex",
+      "line": 138,
+      "statement": "\\label{prop:disjoint-joins}\nLet $\\mathcal C$ be a restriction category with restriction zeros and\nbinary restriction coproducts. Suppose every pair of parallel morphisms\nwhose restriction idempotents are disjoint has a join in the restriction\norder.\nFor complementary restriction idempotents $c,c'$ on $X$, the morphism\n\\[\n \\ell_c=(i_1c)\\vee(i_0c'):X\\rightharpoonup X+X\n\\]\nis total and satisfies $\\ell_cc=i_1c$ and $\\ell_cc'=i_0c'$.\n",
+      "proof": "\nThe restrictions of $i_1c$ and $i_0c'$ are $c$ and $c'$ because\nthe injections are total. The upper-bound equations for the join\ngive $\\ell_cc=i_1c$ and $\\ell_cc'=i_0c'$.\nBoth $c$ and $c'$ lie below $\\bar\\ell_c$, so\n$1_X=c\\vee c'\\le\\bar\\ell_c$ and $\\ell_c$ is total.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Restriction zeros, coproducts with total injections, existence of joins for parallel morphisms with disjoint restrictions."
+      ],
+      "proof_reconstruction": [
+        "The restrictions of i\u2081c and i\u2080c\u2032 are c and c\u2032.",
+        "Join upper-bound equations give the two prescribed branch values.",
+        "Both c,c\u2032 lie below the restriction of the join, and c\u2228c\u2032=1 forces totality."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "proposition",
+      "title": "Interpretation of a sentence theory",
+      "label": "prop:interpreted-theory",
+      "number": "4.1",
+      "page": "9",
+      "file": "sections/03a-internal-theories.tex",
+      "line": 93,
+      "statement": "\\label{prop:interpreted-theory}\nLet $F:\\mathscr R\\to\\mathcal A$ be a range functor with split\ntarget, let $\\widehat F:\\Split(\\mathscr R)\\to\\mathcal A$ be the\nextension by chosen splittings, and let $t_A=m_A r_A=\\ran(c_{A,S})$\nbe a sentence theory constructed above. Then\n\\begin{gather*}\n \\widehat F(t_A)=\\ran(\\widehat F(c_{A,S})),\\\\\n \\widehat F(m_A)\\widehat F(r_A)=\\widehat F(t_A),\\qquad\n \\widehat F(r_A)\\widehat F(m_A)=1_{\\widehat F(T_{A,S})}.\n\\end{gather*}\nSuppose moreover that $\\mathcal A=\\Par(\\mathcal E,\\Mono)$ for a\nregular category $\\mathcal E$. If the total morphism\n$\\widehat F(c_{A,S})$ factors in $\\mathcal E$ through a\nmonomorphism $v:V\\hookrightarrow\\widehat F S$, then\n$\\widehat F(m_A)$ is a subobject of $v$. Put\n\\[\n d_V=[\\widehat F S\\xleftarrow{v}V\\xrightarrow{v}\\widehat F S]:\n \\widehat F S\\rightharpoonup\\widehat F S.\n\\]\nIf $d_V(\\widehat F\\nu)^*d_V=0$, then\n$\\widehat F(t_A)(\\widehat F\\nu)^*\\widehat F(t_A)=0$.\n",
+      "proof": "\nRange preservation gives the first equation, and functoriality\ngives the two splitting equations. In $\\Par(\\mathcal E,\\Mono)$,\nevery monomorphism of $\\mathcal E$ has a partial inverse.\nLemma~\\ref{lem:range-regular-image} therefore identifies the range\nof $\\widehat F(c_{A,S})$ with the partial identity on its regular\nimage in $\\mathcal E$. Its splitting by $\\widehat F(m_A)$ and\n$\\widehat F(r_A)$ identifies $\\widehat F(m_A)$ with that image.\nFactorization through $v$ implies\n$\\widehat F(t_A)\\le d_V$. Monotonicity of inverse image and meet\nthen gives\n\\[\n \\widehat F(t_A)(\\widehat F\\nu)^*\\widehat F(t_A)\n \\le d_V(\\widehat F\\nu)^*d_V=0.\n\\]\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Chosen-splitting extension of range functor; sentence-range splitting; for final assertion target Par(E,Mono) with E regular and validity factorization."
+      ],
+      "proof_reconstruction": [
+        "Functoriality carries both splitting equations; range preservation carries t_A=ran(c_A,S).",
+        "In Par(E,Mono), Lemma A.7 identifies the range with the regular image.",
+        "Factorization of the conclusion through v bounds the interpreted theorem domain by d_V.",
+        "Monotonicity of inverse image and meet transfers d_V\u2227(F\u03bd)*d_V=0 to the interpreted domain."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": null,
+      "label": "thm:logical-comparison",
+      "number": "4.2",
+      "page": "9",
+      "file": "sections/03a-internal-theories.tex",
+      "line": 140,
+      "statement": "\\label{thm:logical-comparison}\nLet $\\mathscr R,\\mathcal A,F,U,\\tau,b,a_0,a_1$ satisfy the\ncategorical hypotheses and definitions of\nTheorem~\\ref{thm:comparison}. Suppose that $\\mathcal A$ is split,\nthat inverse images along total morphisms in $\\mathcal A$ preserve binary joins\nof restriction idempotents, and that $F(1_U)\\ne0$.\nLet $t_A=\\ran(c_{A,S})$ represent a sentence theory in\n$\\Split(\\mathscr R)$ as above, with total negation\n$\\nu:S\\to S$, and let $\\theta:U\\to S$ be total in\n$\\Split(\\mathscr R)$. Put\n\\[\n t=\\widehat F(t_A),\\qquad\n P=(\\widehat F\\theta)^*t,\\qquad\n N=(\\widehat F\\theta)^*(\\widehat F\\nu)^*t.\n\\]\nAssume that $t(\\widehat F\\nu)^*t=0$, $F(a_0)\\le P$, and\n$F(a_1)\\le N$.\nSuppose there are partial morphisms\n$s:FU\\rightharpoonup FU+FU$ and\n$\\ell:U\\rightharpoonup U+U$ satisfying\n\\[\n s^*(1_{FU}+0_{FU})=N,\\qquad\n s^*(0_{FU}+1_{FU})=P,\\qquad\n F\\ell=\\chi_{U,U}s.\n\\]\nThen there is a total $g:U\\to U$ in $\\mathscr R$ such that\n\\[\n (\\widehat F(\\theta g))^*t=0,\\qquad\n (\\widehat F(\\theta g))^*(\\widehat F\\nu)^*t=0.\n\\]\nIn particular,\n\\[\n t\\vee(\\widehat F\\nu)^*t\\ne1_{\\widehat F S},\\qquad\n t_A\\vee\\nu^*t_A\\ne1_S.\n\\]\n",
+      "proof": "\nPreservation of meets and zero by inverse image gives\n$PN=(\\widehat F\\theta)^*\\bigl(t(\\widehat F\\nu)^*t\\bigr)=0$.\nTheorem~\\ref{thm:comparison} therefore supplies a total $g:U\\to U$\nwith $(Fg)^*P=(Fg)^*N=0$. Since $\\widehat F$ agrees with $F$ on\n$\\mathscr R$, composition of inverse images gives the two equalities.\n\nIf $t\\vee(\\widehat F\\nu)^*t=1_{\\widehat F S}$, inverse image along\nthe total morphism $\\widehat F(\\theta g):FU\\to\\widehat F S$ would\ngive\n\\[\n 1_{FU}\n =(\\widehat F(\\theta g))^*\\bigl(t\\vee(\\widehat F\\nu)^*t\\bigr)\n =0\\vee0=0,\n\\]\ncontrary to $F(1_U)\\ne0$.\nIf $t_A\\vee\\nu^*t_A=1_S$, applying $\\widehat F$ and using\npreservation of joins and inverse images would give\n$t\\vee(\\widehat F\\nu)^*t=1_{\\widehat F S}$, a contradiction.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Theorem 3.1 data; split target; \u03b8 total; semantic consistency; both diagonal bounds and lifted switched conditional; total inverse images preserve binary joins; nonzero identity."
+      ],
+      "proof_reconstruction": [
+        "Pull back semantic consistency along F\u0302\u03b8 to get PN=0.",
+        "Theorem 3.1 supplies total g and zero inverse images of both pulled-back domains.",
+        "Compose inverse-image identities to obtain both asserted equalities for F\u0302(\u03b8g).",
+        "A complete interpreted theory would pull back to 1_FU=0; completeness in the source maps to completeness in the target, giving the second contradiction."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "corollary",
+      "title": null,
+      "label": "cor:domain-incompleteness",
+      "number": "4.3",
+      "page": "10",
+      "file": "sections/03a-internal-theories.tex",
+      "line": 202,
+      "statement": "\\label{cor:domain-incompleteness}\nLet $\\mathcal C$ be a restriction category with restriction zeros and\nbinary joins of restriction idempotents preserved by inverse image along total morphisms.\nLet $a,b$ be inseparable restriction idempotents on $U$. Suppose that\n$\\theta:U\\to S$ and $\\nu:S\\to S$ are total, and that a restriction\nidempotent $t_0$ on $S$ satisfies $a\\le\\theta^*t_0$ and\n$b\\le\\theta^*\\nu^*t_0$.\nFor every restriction idempotent $t\\ge t_0$ on $S$ with $t\\,\\nu^*t=0_S$,\nthe pair $t,\\nu^*t$ is inseparable. In particular,\n$t\\vee\\nu^*t\\ne1_S$.\n",
+      "proof": "\nSuppose complementary restriction idempotents $e,e'$ on $S$ satisfy\n$t\\le e$ and $\\nu^*t\\le e'$. Put\n$c=\\theta^*e$ and $c'=\\theta^*e'$. Inverse image preserves\nmeets and zero, so $cc'=\\theta^*(ee')=0_U$.\nPreservation of joins and totality of $\\theta$ give\n$c\\vee c'=\\theta^*(e\\vee e')=\\theta^*1_S=1_U$.\nMonotonicity gives\n$a\\le\\theta^*t_0\\le\\theta^*t\\le c$ and\n$b\\le\\theta^*\\nu^*t_0\\le\\theta^*\\nu^*t\\le c'$.\nThus $c,c'$ would separate $a,b$, a contradiction.\nIf $t\\vee\\nu^*t=1_S$, the disjoint pair $t,\\nu^*t$ would\nitself be such a complementary separator.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Inseparable pair a,b; total \u03b8 and \u03bd; t\u2080 bounds; total inverse images preserve joins; candidate extension t\u2265t\u2080 is consistent."
+      ],
+      "proof_reconstruction": [
+        "A complementary separator e,e\u2032 of t,\u03bd*t pulls back along \u03b8 to disjoint idempotents.",
+        "Totality and join preservation make those pullbacks complementary.",
+        "Monotonicity and the t\u2080 bounds make them a separator of a,b, impossible.",
+        "If t\u2228\u03bd*t=1, the consistent pair itself is such a separator."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": "Generation reflection",
+      "label": "thm:first-order-reflection",
+      "number": "4.4",
+      "page": "11",
+      "file": "sections/03b-internal-adjunctions.tex",
+      "line": 27,
+      "statement": "\\label{thm:first-order-reflection}\nUnder the preceding hypotheses, $\\operatorname{Gen}$ is extensive,\nmonotone, and idempotent. It is left adjoint to the inclusion\n$\\iota:\\operatorname{Th}_{\\mathcal D}(S)\\hookrightarrow\n\\operatorname{Sub}_{\\mathcal D}(S)$. Thus, for every axiom\nsubobject $A$ and sentence theory $T$,\n\\[\n \\operatorname{Gen}(A)\\leq T\\quad\\Longleftrightarrow\\quad A\\leq T.\n\\]\nLet $J:\\operatorname{Th}_{\\mathcal D}(S)\\to\\mathcal D/S$ send a\ntheory to its inclusion. Then\n$\\Gamma(a:A\\to S)=\\operatorname{Gen}(\\im a)$ defines a functor\n$\\Gamma:\\mathcal D/S\\to\\operatorname{Th}_{\\mathcal D}(S)$ with\n$\\Gamma\\dashv J$.\n",
+      "proof": "\nAxiom introduction gives $A\\leq\\operatorname{Gen}(A)$, and\nleastness of $C(A)$ gives monotonicity. The closed formula\nsubobject $C(A)$ contains $j_!\\operatorname{Gen}(A)$, whence\n$C(\\operatorname{Gen}(A))\\leq C(A)$. Pullback along $j$ and\nextensivity prove idempotence. The equivalence follows\nfrom these three properties. A morphism in $\\mathcal D/S$ from\n$a:A\\to S$ to $J(T)$ exists uniquely exactly when $\\im a\\leq T$.\nThe equivalence identifies this hom-set with the hom-set from\n$\\Gamma(a)$ to $T$ in the theory order, naturally in both objects.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Regularity; finite disjoint stable coproducts; initial syntax and derivation algebras for each relevant axiom subobject."
+      ],
+      "proof_reconstruction": [
+        "Leastness of the generated formula subobject gives extensivity and monotonicity.",
+        "C(A) contains j_!Gen(A), so C(Gen(A))\u2264C(A); restriction to sentences gives idempotence.",
+        "For closed T, Gen(A)\u2264T iff A\u2264T.",
+        "For arbitrary a:A\u2192S, regular image factorization gives Hom_D/S(a,J(T)) either empty or singleton according as im(a)\u2264T; this is equivalent to Gen(im(a))\u2264T, naturally.",
+        "Only image subobjects need initial derivation algebras; the proof does not assume an initial algebra for the unquotiented axiom morphism a."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": "Translation Galois connection",
+      "label": "thm:translation-galois",
+      "number": "4.5",
+      "page": "11",
+      "file": "sections/03b-internal-adjunctions.tex",
+      "line": 95,
+      "statement": "\\label{thm:translation-galois}\nLet $\\sigma:P\\to Q$ be a logical translation between presentations\nsatisfying the hypotheses of\nTheorem~\\ref{thm:first-order-reflection}. Inverse image along\n$\\sigma_S$ sends sentence theories to sentence theories, and\n\\[\n \\sigma_\\#:\\operatorname{Th}_P\\rightleftarrows\n \\operatorname{Th}_Q:\\sigma^*,\\qquad\n \\sigma_\\#(T)=\\operatorname{Gen}_Q(\\sigma_!T),\\qquad\n \\sigma_\\#\\dashv\\sigma^*.\n\\]\nHere $\\sigma_!$ and $\\sigma^*$ abbreviate the image and inverse-image\noperations for $\\sigma_S$. Moreover,\n\\[\n \\operatorname{Gen}_Q\\sigma_!\n   =\\sigma_\\#\\operatorname{Gen}_P.\n\\]\nFor composable logical translations $\\sigma:P\\to Q$ and\n$\\rho:Q\\to R$,\n\\[\n (\\rho\\sigma)_\\#=\\rho_\\#\\sigma_\\#,\\qquad\n (\\rho\\sigma)^*=\\sigma^*\\rho^*.\n\\]\n",
+      "proof": "\nIf $T$ is a $Q$-theory, $\\sigma_{\\Phi}^*C_Q(T)$ contains the\nlogical axioms, is closed under the $P$-rules, and contains\n$j_{P,!}\\sigma^*T$. Thus\n$C_P(\\sigma^*T)\\leq\\sigma_{\\Phi}^*C_Q(T)$.\nPullback along $j_P$ gives\n$\\operatorname{Gen}_P(\\sigma^*T)\\leq\\sigma^*T$;\nextensivity gives equality. Now image and inverse image satisfy\n$\\sigma_!A\\leq B$ exactly when $A\\leq\\sigma^*B$.\nCombining this with Theorem~\\ref{thm:first-order-reflection}\nproves the adjunction.\n\nApply closure preservation to\n$T=\\operatorname{Gen}_Q(\\sigma_!A)$. The resulting inclusion\n$\\sigma_!\\operatorname{Gen}_P(A)\n\\leq\\operatorname{Gen}_Q(\\sigma_!A)$, together with extensivity\nand idempotence, proves the generation identity. Composition of\nimages and pullbacks then gives the two composition identities.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Logical translation preserving syntax, admissible substitution and rule instances; generation hypotheses for both presentations."
+      ],
+      "proof_reconstruction": [
+        "Pulling C_Q(T) back along \u03c3_\u03a6 gives a P-rule-closed formula subobject containing \u03c3_S*T.",
+        "Initiality/leastness bounds C_P(\u03c3*T) by that pullback; restriction to sentences proves inverse-image closure.",
+        "The regular-image/pullback Galois correspondence and generation reflection yield \u03c3_#\u22a3\u03c3*.",
+        "Apply closure preservation to Gen_Q(\u03c3_!A), then extensivity and idempotence, to obtain the generation identity.",
+        "Composition of images and pullbacks yields both composition identities; these are equalities of subobject classes."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "proposition",
+      "title": "Comparison of deduction",
+      "label": "prop:deduction-comparison",
+      "number": "4.6",
+      "page": "12",
+      "file": "sections/03b-internal-adjunctions.tex",
+      "line": 179,
+      "statement": "\\label{prop:deduction-comparison}\nWith these data, suppose that for every $A\\hookrightarrow S_1$\nthere is a total morphism\n\\[\n p_A:GP_{A,S_1}\\to P_{L(A),S_2},\\qquad\n c_{L(A),S_2}p_A=\\sigma Gc_{A,S_1}.\n\\]\nThen $L^{\\mathrm{th}}(T)=\\operatorname{Gen}_2L(T)$ defines a\nfunctor on theory orders satisfying\n\\[\n L^{\\mathrm{th}}\\operatorname{Gen}_1=\\operatorname{Gen}_2L,\n \\qquad \\Gamma_2K=L^{\\mathrm{th}}\\Gamma_1.\n\\]\nConsequently the left-adjoint square in\n\\[\n\\begin{tikzcd}[column sep=large,row sep=large]\n \\mathcal D_1/S_1\\arrow[r,\"K\"]\n   \\arrow[d,shift right=.8ex,\"\\Gamma_1\"'] &\n \\mathcal D_2/S_2\\arrow[d,shift right=.8ex,\"\\Gamma_2\"']\\\\\n \\operatorname{Th}_1\\arrow[r,\"L^{\\mathrm{th}}\"']\n   \\arrow[u,shift right=.8ex,\"J_1\"'] &\n \\operatorname{Th}_2\\arrow[u,shift right=.8ex,\"J_2\"']\n\\end{tikzcd}\n\\qquad \\Gamma_i\\dashv J_i\n\\]\ncommutes. Factorization through the generated theory gives a natural\ntransformation $KJ_1\\to J_2L^{\\mathrm{th}}$.\nIf $L\\dashv R$ on subobject orders, $R$ sends theories to theories\nand $L^{\\mathrm{th}}\\dashv R|_{\\operatorname{Th}_2}$.\n",
+      "proof": "\nTaking images of the derivation comparison gives\n$L\\operatorname{Gen}_1\\leq\\operatorname{Gen}_2L$.\nApply $\\operatorname{Gen}_2$ and use extensivity and idempotence\nto obtain the first identity. Regularity identifies the image\nof $K(a)$ with $L(\\im a)$, proving the second identity.\nThe unique factorization through that image and its closure defines\nthe comparison. Uniqueness proves naturality.\nFor a closed $B$, adjunction gives $LRB\\leq B$, and hence\n\\[\n L\\operatorname{Gen}_1(RB)\n \\leq\\operatorname{Gen}_2(LRB)\\leq B.\n\\]\nThus $\\operatorname{Gen}_1(RB)\\leq RB$. Extensivity gives\nequality, and the restricted adjunction follows from the\ngeneration reflection.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "G regular; \u03c3:GS\u2081\u2192S\u2082 total; each specified p_A commutes with sentence conclusions; optional L\u22a3R for the final assertion."
+      ],
+      "proof_reconstruction": [
+        "The commuting p_A gives LGen\u2081(A)\u2264Gen\u2082L(A) after taking regular images.",
+        "Apply Gen\u2082 and combine this inequality with A\u2264Gen\u2081(A) to get Gen\u2082LGen\u2081=Gen\u2082L.",
+        "Regularity gives im K(a)=L(im a), proving the slice square.",
+        "The inclusion of each image in its closure is the natural comparison; uniqueness through monomorphisms proves naturality.",
+        "For closed B, LRB\u2264B and the displayed inequality give LGen\u2081(RB)\u2264B; adjunction and extensivity make RB closed and yield the restricted adjunction."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": "Free first-order adjunction",
+      "label": "thm:free-first-order-adjunction",
+      "number": "4.7",
+      "page": "14",
+      "file": "sections/03b-internal-adjunctions.tex",
+      "line": 295,
+      "statement": "\n\\label{thm:free-first-order-adjunction}\nUnder the syntax, derivation, and partial-inverse hypotheses of\nthis subsection, $\\Sigma_{\\mathrm{FO}}$ and $J_{\\mathrm{FO}}$ are functors with\n\\[\n \\Sigma_{\\mathrm{FO}}:\n \\mathsf{Pair}_c(\\mathcal D)\\rightleftarrows\n \\mathsf{FO}_V(\\mathcal D):J_{\\mathrm{FO}},\\qquad\n \\Sigma_{\\mathrm{FO}}\\dashv J_{\\mathrm{FO}}.\n\\]\nThe unit at $(X,a,b)$ is $\\theta_X$. The counit at $(P,T)$\ninterprets the nullary predicate indexed by a sentence of $P$\nas that sentence.\n",
+      "proof": "\nA pair morphism $f:(X,a,b)\\to(S_P,T,\\nu_P^*T)$ interprets the\nnullary predicates by the closed sentences $f:X\\to S_P$ and\nthe variables by $V\\to\\Tm_P$. Initiality of the free syntax\ngives a unique term and formula interpretation $\\widehat f$.\nSince the images of the predicates are closed, induction proves\npreservation of free variables, admissibility, and substitution.\nThe logical constructors and rule side conditions are therefore\npreserved. The pair inequalities put the image of $A_{a,b}$\ninside $T$, so Theorem~\\ref{thm:translation-galois} gives\n$\\widehat f_!T_{a,b}\\leq T$.\n\nConversely, restriction of a theory morphism along $\\theta_X$\ngives these pair inequalities. Uniqueness of the syntax interpretations makes the two\nassignments inverse and natural. It also proves identity and\ncomposition preservation of both functors.\nTo verify that $J_{\\mathrm{FO}}$ takes values in\n$\\mathsf{Pair}_c(\\mathcal D)$, interpret the free predicates\nindexed by $S_P$ as their indexing sentences. The inverse image\nof $T$ is a consistent closed theory containing the positive\naxioms indexed by $T$ and negative axioms indexed by $\\nu_P^*T$.\nIts generated subtheory is consistent. Thus the required object\ncondition holds.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "All monos have partial inverses; decidable variable object; free nullary-predicate syntax and derivation constructions for every coefficient object X; consistency conditions defining the two categories."
+      ],
+      "proof_reconstruction": [
+        "A pair morphism f:X\u2192S_P uniquely interprets the nullary predicates by closed sentences and variables identically.",
+        "Syntax initiality and induction preserve free variables, admissibility, substitution, and logical rules; the pair bounds put the generated axioms into T.",
+        "Restricting a logical translation to \u03b8_X recovers f, giving inverse hom-set assignments.",
+        "Uniqueness gives naturality, functor laws, the displayed unit and counit.",
+        "For J_FO to land in Pair_c, interpretation of each sentence-indexed predicate as that sentence pulls a consistent closed theory back to one containing both signed axiom families."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "corollary",
+      "title": null,
+      "label": "cor:signed-first-order-incompleteness",
+      "number": "4.8",
+      "page": "14",
+      "file": "sections/03b-internal-adjunctions.tex",
+      "line": 334,
+      "statement": "\\label{cor:signed-first-order-incompleteness}\nUnder the hypotheses of\nTheorem~\\ref{thm:free-first-order-adjunction}, let $a,b$ be\ndisjoint subobjects of $X$ and suppose $T_{a,b}$ is consistent.\nThen $T_{a,b}$ is essentially incomplete if and only if $(a,b)$\nis inseparable in $\\mathscr S$.\n",
+      "proof": "\nThe atomic map $\\theta_X$ reduces $(a,b)$ to the theorem and\nrefutation subobjects of $T_{a,b}$.\nCorollary~\\ref{cor:domain-incompleteness} proves essential\nincompleteness when the pair is inseparable.\n\nConversely, a separator is equivalently a total $d:X\\to\\Two$\nwith value $\\mathbf{t}$ on $a$ and $\\mathbf{f}$ on $b$, where\n$\\mathbf{t},\\mathbf{f}:1\\to\\Two$ are the coproduct injections.\nInterpret the nullary predicates by $d$, equality by\n$\\mathbf{t}$, negation and implication by their Boolean truth\nfunctions, and quantification by $V\\times\\Two\\to\\Two$.\nFree syntax gives a total valuation $v:\\Phi_X\\to\\Two$.\nInduction gives\n$v(\\varphi[x:=t])=v(\\varphi)$ whenever substitution is admissible.\nThe instantiation and equality schemes therefore have value\n$\\mathbf{t}$, and the quantifier distribution scheme does also.\nThe propositional schemes and both inference rules preserve\ntruth. Hence the inverse image of $\\mathbf{t}$ along\n$v j_X:S_X\\to\\Two$ is a closed, consistent, complete sentence\ntheory containing $A_{a,b}$ and therefore $T_{a,b}$.\nThis contradicts essential incompleteness.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Free-theory hypotheses; disjoint pair; generated free signed theory consistent."
+      ],
+      "proof_reconstruction": [
+        "The atomic inclusion reduces the pair to the theorem and refutation subobjects, so Corollary 4.3 proves the forward implication from inseparability.",
+        "A complementary separator gives a total Boolean map d:X\u21922 by the extensive coproduct decomposition.",
+        "Assign equality true, nullary predicates d, quantification the projection, and logical operations their Boolean truth functions.",
+        "Structural induction makes valuation invariant under admissible substitution; every logical axiom and rule preserves truth.",
+        "The true fiber is therefore a consistent complete extension, contradicting essential incompleteness when the pair is separable."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "lemma",
+      "title": "Turing structure in partial slices",
+      "label": "lem:partial-slice-turing",
+      "number": "5.1",
+      "page": "15",
+      "file": "sections/04-theory-extensions.tex",
+      "line": 32,
+      "statement": "\n\\label{lem:partial-slice-turing}\nUnder these assumptions, $\\mathscr C$ and every $\\mathscr C[T]$ are\nTuring categories. If $Q$ is the original Turing object, with\n$\\tau:Q\\times Q\\rightharpoonup Q$, the Turing object in $\\mathscr C[T]$\nis $T\\times Q\\to T$, with Turing morphism $1_T\\times\\tau$.\nLet $\\mathscr R[T]$ be the full restriction subcategory on the objects\n$T\\times X\\to T$ for $X\\in\\mathscr R$. Then $\\mathscr R[T]$ is a\nrecursion category and\n\\[\n \\Split(\\mathscr R[T])\\simeq\\mathscr C[T].\n\\]\n",
+      "proof": "\nThe terminal object of $\\mathcal D$ is restriction terminal in\n$\\mathscr C$. For $f:X\\rightharpoonup Y$, split $\\bar f=mr$.\nThe total morphism $fm$ satisfies $!_Yfm=!_Xm$, so composition with\n$r$ gives $!_Yf=!_X\\bar f$.\n\nEvery split object $(X,e)$ has a total embedding into $(X,1_X)$\nand a partial retraction. An isomorphism $X\\cong Q$ in $\\mathscr R$\nmakes it a retract of $Q$. If\n$f=\\tau(a\\times1_Q)$ represents a computation on $(X,e)\\times Q$,\nthen $f=\\tau((ae)\\times1_Q)$ and $ae:(X,e)\\to Q$ is total.\nThus $\\mathscr C$ is Turing.\n\nFor $p:X\\to T$, a total embedding $m_X:X\\to Q$ gives a monomorphism\n$\\langle p,m_X\\rangle:X\\hookrightarrow T\\times Q$, whose partial\ninverse is a retraction over $T$. A computation over $T$ with source\n$X\\times Q\\to T$ and target $T\\times Q\\to T$ is determined by a\npartial component $f:X\\times Q\\rightharpoonup Q$.\nChoose total $a:X\\to Q$ with $f=\\tau(a\\times1_Q)$.\nThe total parameter over $T$ is $\\langle p,a\\rangle$.\nThis proves the slice Turing property.\n\nThe objects of $\\mathscr R[T]$ are isomorphic and closed under binary\nrestriction products. Their zeros satisfy the prodominical identity,\nand the same parameterization proves the Turing property.\nEvery object of $\\mathscr C[T]$ is a retract of $T\\times Q\\to T$\nby a total embedding, so splitting $\\mathscr R[T]$ gives $\\mathscr C[T]$.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "R recursion category; C=Split(R); D=Tot(C) regular extensive; every D-mono has partial inverse in C."
+      ],
+      "proof_reconstruction": [
+        "D\u2019s terminal object is restriction terminal in C by splitting the domain of each partial map; binary restriction products are inherited.",
+        "For X=(X\u2080,e), extend f:X\u00d7Q\u21c0Q to its underlying R-morphism X\u2080\u00d7Q\u21c0Q, parameterize by total a\u2080:X\u2080\u2192Q, and restrict to a\u2080e, total on X.",
+        "For p:X\u2192T, the total mono \u27e8p,m_X\u27e9:X\u21aaT\u00d7Q has a partial inverse over T.",
+        "A partial slice computation p\u00d7_TQ_T\u2192Q_T has Q-component f:X\u00d7Q\u21c0Q; its total code a:X\u2192Q gives parameter \u27e8p,a\u27e9:p\u2192Q_T and evaluation 1_T\u00d7\u03c4.",
+        "For source T\u00d7X with X\u2208R the parameter may depend on both t and x; full R[T] contains it. Its objects are isomorphic, product-closed and prodominical; every partial-slice object is a restriction retract of Q_T, giving the split-completion equivalence."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": "Theory extensions and associated categories",
+      "label": "thm:theory-extension",
+      "number": "5.2",
+      "page": "15",
+      "file": "sections/04-theory-extensions.tex",
+      "line": 89,
+      "statement": "\n\\label{thm:theory-extension}\nLet $\\mathscr R,\\mathscr C,\\mathcal D$ and the deductive system\nsatisfy the preceding assumptions. For internal theories\n$t:T\\hookrightarrow S$ and $u:U\\hookrightarrow S$, let\n$i:T\\hookrightarrow U$ satisfy $t=ui$. Postcomposition defines a\nfully faithful restriction functor\n\\[\n \\Sigma_i:\\mathscr C[T]\\longrightarrow\\mathscr C[U].\n\\]\nPullback defines $i^*:\\mathscr C[U]\\to\\mathscr C[T]$, and the\nunderlying categories have adjunctions\n\\[\n \\Sigma_i\\dashv i^*\\dashv\\Sigma_i.\n\\]\nIf $i$ is proper, $\\Sigma_i$ is not essentially surjective.\nFor composable theory inclusions $i,j$,\n$\\Sigma_j\\Sigma_i=\\Sigma_{ji}$.\n\nThe sentence and theorem comparison morphisms in $\\mathcal D/U$\nare $i\\times1_S$ and $i\\times i$. They give the commutative square\n\\[\n\\begin{tikzcd}\n \\Sigma_i(T\\times T\\to T)\n   \\arrow[r,\"i\\times i\"]\\arrow[d,hook,\"\\Sigma_i\\widetilde t\"'] &\n (U\\times U\\to U)\\arrow[d,hook,\"\\widetilde u\"]\\\\\n \\Sigma_i\\widetilde S_T\\arrow[r,\"i\\times1_S\"'] & \\widetilde S_U.\n\\end{tikzcd}\n\\]\nEquivalently, $\\widetilde S_T\\cong i^*\\widetilde S_U$ and\n$\\widetilde t\\leq i^*\\widetilde u$.\n",
+      "proof": "\nPostcomposition sends $p:X\\to T$ to $ip:X\\to U$ and retains each\nspan. Monicity of $i$ makes commutation over $U$ equivalent to\ncommutation over $T$ for spans between such objects. This proves full\nfaithfulness, restriction preservation, and the composition law.\n\nFor $p:X\\to T$ and $q:Y\\to U$, a span from $\\Sigma_i p$ to $q$\nfactors its right leg uniquely through $T\\times_UY$. This gives\n\\[\n \\mathscr C[U](\\Sigma_i p,q)\\cong\\mathscr C[T](p,i^*q).\n\\]\nA span in the reverse direction factors its monic left leg through\n$T\\times_UY$. Conversely, the projection $T\\times_UY\\to Y$ is\nmonic, so it preserves monic left legs under composition.\nThese inverse assignments give\n\\[\n \\mathscr C[T](i^*q,p)\\cong\\mathscr C[U](q,\\Sigma_i p).\n\\]\nBoth assignments commute with pullback composition. They are natural,\nand prove the adjunctions. The unit of the second adjunction at $q$\nis the partial identity with domain $T\\times_UY\\hookrightarrow Y$.\n\nEvery image object factors through $i$. If $1_U:U\\to U$ were\nisomorphic to one, $1_U$ would factor through $i$. A monic split\nepimorphism is an isomorphism, proving properness.\nThe comparison identity\n$(1_U\\times u)(i\\times i)=(i\\times1_S)(1_T\\times t)$\nfollows from $ui=t$. Pullback of the sentence family gives $T\\times S$,\nand its theorem family contains $T\\times T$ by $1_T\\times i$.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Monic theory inclusion i:T\u21aaU; partial-map slice categories; pullbacks; preceding Turing setup only for their identification with split recursion categories."
+      ],
+      "proof_reconstruction": [
+        "Monicity of i makes a span between postcomposed objects commute over U iff it commutes over T, proving full faithfulness.",
+        "A span from \u03a3_i p to q factors its right leg through the pullback, giving \u03a3_i\u22a3i*.",
+        "A span from q to \u03a3_i p factors its monic left leg through the same pullback, giving i*\u22a3\u03a3_i; its unit has exactly that partial domain.",
+        "The assignments commute with pullback composition, hence are natural.",
+        "An isomorphism from 1_U to an image object would make i split epic and thus invertible; the square and composition law follow from ui=t."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": "Incompleteness in an associated category",
+      "label": "thm:associated-incompleteness",
+      "number": "5.3",
+      "page": "17",
+      "file": "sections/04-theory-extensions.tex",
+      "line": 190,
+      "statement": "\n\\label{thm:associated-incompleteness}\nUnder the hypotheses of Theorem~\\ref{thm:theory-extension} and the\nfactorization hypothesis on $\\lambda$, let $u:U\\hookrightarrow S$\nbe a consistent internal sentence theory. Then $u$ is essentially\nincomplete in $\\mathscr C$ if and only if $\\widetilde u=B_U(u)$ is\nessentially incomplete in $\\mathscr C[U]$. Moreover,\n\\[\n\\begin{aligned}\n u\\text{ is incomplete}\n &\\quad\\Longleftrightarrow\\quad\n \\widetilde\\delta_u\\text{ is not total},\\\\\n (u,\\nu^*u)\\text{ is inseparable in }\\mathscr C\n &\\quad\\Longleftrightarrow\\quad\n \\widetilde\\delta_u\\text{ has no total extension in }\\mathscr C[U].\n\\end{aligned}\n\\]\nIf a consistent theory $t:T\\hookrightarrow S$ admits a total reduction\nof an inseparable pair to its theorem and refutation subobjects, every\nconsistent extension $u\\geq t$ has an essentially incomplete theory\n$\\widetilde u$ in its associated category. The partial morphism $\\widetilde\\delta_u$ has no total extension.\n",
+      "proof": "\nProducts with $U$ and pullback along $\\lambda_U$ preserve the finite\nlimits, images, and finite coproducts used for consistency and\ncompleteness. They also preserve closed theories for the indicated\ncalculi. Let $v$ be a closed sentence theory in the domain of either\nfunctor, and let $C(v)$ be its closed formula subobject. Preservation\nof the finite rule diagrams gives a rule algebra on the image of\n$C(v)$ containing the image of the axioms $v$. The initial derivation\nalgebra for these image axioms maps to that rule algebra, so its\nconclusion morphism factors through the image of $C(v)$. Taking\nimages and restricting to sentences proves that the image of $v$\nis closed. This uses the assumed deduction construction in the\nslice when $v$ is a theory over $U$.\n\nA consistent complete extension of $u$ therefore gives one of $B_U(u)$\nby $B_U$, and such an extension of $B_U(u)$ gives one of $u$ by $E_U$.\nThe isomorphism $E_UB_U\\cong1$ identifies the base theory with $u$.\nThis proves the essential-incompleteness equivalence.\n\nThe same retraction proves that $\\delta_u$ is total exactly when\n$B_U(\\delta_u)$ is total. By definition, $\\delta_u$ is total exactly\nwhen $u$ is complete. A total extension of $\\delta_u$ is exactly a\nseparator of its theorem and refutation subobjects. Either functor\ncarries a total extension to a total extension. The retraction therefore\nproves the second equivalence.\nFinally, Corollary~\\ref{cor:domain-incompleteness} makes the theorem and\nrefutation subobjects of every consistent extension of $t$ inseparable.\nApply the two equivalences just proved.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Regular extensive D; partial-map identification; parameterized syntax/derivation construction in every slice; global \u03bb:1\u2192S factors through each relevant theory; u consistent."
+      ],
+      "proof_reconstruction": [
+        "B_U=U\u00d7\u2212 and E_U=\u03bb_U* preserve finite limits, regular images and finite coproducts in the displayed source and target slice categories.",
+        "Applying these functors to a closed formula subobject gives a rule algebra containing the transported axioms; initiality implies the transported sentence theory is closed.",
+        "They preserve consistency/completeness, while E_UB_U\u22451, so consistent complete extensions transfer both ways.",
+        "The same retraction reflects totality and transfers total extensions of \u03b4_u; total Boolean extensions correspond exactly to complementary separators.",
+        "Corollary 4.3 supplies inseparability for each consistent extension of a base theory admitting the given reduction."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "number": "6.1",
+      "label": "lem:arithmetized-evaluation",
+      "page": "18",
+      "file": "sections/05-syntactic-recursion-category.tex",
+      "line": 55,
+      "statement": "\\label{lem:arithmetized-evaluation}\nFor this computation coding, there are an index $u\\in\\N$ and\nprimitive-recursive functions\n$\\operatorname{s},\\operatorname{comp}:\\N^2\\to\\N$\nsuch that PA proves functionality\nof $G$ and the universal closures of\n\\begin{align}\n G_u(\\langle e,x\\rangle,y)\n   &\\leftrightarrow G(e,x,y),\n   \\label{eq:arithmetized-universal}\\\\\n G(\\operatorname{s}(e,a),x,y)\n   &\\leftrightarrow G(e,\\langle a,x\\rangle,y),\n   \\label{eq:arithmetized-specialization}\\\\\n G(\\operatorname{comp}(f,e),x,z)\n   &\\leftrightarrow\n     \\exists y\\,\\bigl(G(e,x,y)\\land G(f,y,z)\\bigr).\n   \\label{eq:composition}\n\\end{align}\nRegard $u$ as an element of $\\mathcal I(\\omega\\times\\omega,\\omega)$.\nFor each fixed $e\\in\\N$, there is an index\n$k_e\\in\\N$ for which PA proves\n\\[\n \\forall a\\forall p\\,\n \\bigl(G_{k_e}(a,p)\\leftrightarrow\n       p=\\operatorname{s}(\\bar e,a)\\bigr).\n\\]\nIn particular, PA proves $\\forall a\\exists!p\\,G_{k_e}(a,p)$.\n",
+      "explicit_hypotheses": [
+        "deterministic Kleene trace coding with PA representations",
+        "fixed primitive-recursive product coding"
+      ],
+      "reconstruction": [
+        "Determinism proves functionality in PA.",
+        "Formalized universal simulation, specialization and composition supply the three graph equivalences.",
+        "PA-provable inverse coding equations transport from the cited coding to the chosen pairing.",
+        "For fixed e, the primitive-recursive function a\u21a6s(e,a) has a PA-provably total representing index."
+      ],
+      "hypothesis_use_and_scope": [
+        "Determinism is needed for functionality; formalized parameterization is needed for total parameter morphisms.",
+        "The last conclusion quantifies over each fixed standard index e, not over an arbitrary external family of codes."
+      ],
+      "dependencies": [
+        "Montagna pp.108,115"
+      ],
+      "status": "checked; primary citation supports the setup, but the cited pages do not print all four displayed PA identities",
+      "confirmed_findings": [],
+      "proof_source_sha256": "3c4d706bf2b6702fa5cce2db60cd665890c87668d072418dbac01378eb3a8136"
+    },
+    {
+      "number": "6.2",
+      "label": "lem:syntactic-functional-search",
+      "page": "20",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 36,
+      "statement": "\\label{lem:syntactic-functional-search}\nFor every $\\Sigma_1$ formula $\\Gamma(x,y)$ there is an index\n$a_\\Gamma$ such that PA proves\n\\begin{gather*}\n \\forall x\\forall y\\,\n   \\bigl(G_{a_\\Gamma}(x,y)\\longrightarrow\\Gamma(x,y)\\bigr),\\\\\n \\forall x\\,\n   \\bigl(\\exists y\\,G_{a_\\Gamma}(x,y)\n          \\longleftrightarrow\\exists y\\,\\Gamma(x,y)\\bigr).\n\\end{gather*}\nIf $T$ proves that $\\Gamma$ is functional, then\n\\[\n T\\vdash\\forall x\\forall y\\,\n       \\bigl(G_{a_\\Gamma}(x,y)\\longleftrightarrow\\Gamma(x,y)\\bigr).\n\\]\n",
+      "explicit_hypotheses": [
+        "\u0393(x,y) is \u03a3\u2081",
+        "T extends PA; T proves functionality only for the final equivalence"
+      ],
+      "reconstruction": [
+        "Normalize \u0393 to \u2203w R with R primitive recursive.",
+        "Search paired output/witness codes in numerical order, returning the first output with R.",
+        "PA verifies both no false outputs and termination iff some witness exists.",
+        "If T proves functionality, its proof identifies any \u0393-output with the one returned."
+      ],
+      "hypothesis_use_and_scope": [
+        "\u03a3\u2081 permits witness search and the PA verification.",
+        "T-functionality is used only in graph equality, not in existence or domain equivalence."
+      ],
+      "dependencies": [],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "e8dbb2f032ba9611ec7a14331d547fbf867d8db98df89fb5e0f6c2ce280238a1"
+    },
+    {
+      "number": "6.3",
+      "label": "lem:syntactic-total-category",
+      "page": "20",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 70,
+      "statement": "\\label{lem:syntactic-total-category}\nThere is an equivalence $\\mathcal P_T\\simeq\\mathcal B_T$.\nThe category $\\mathcal B_T$ is regular, with finite coproducts\nthat are disjoint and stable under pullback. Every monomorphism\nof $\\mathcal B_T$ has a partial inverse in $\\Split(S_T)$.\nFor $\\Gamma:C\\to D$ in the predicate presentation, its regular\nimage is represented by the inclusion\n\\[\n R_\\Gamma(y)\\equiv\\exists x\\,\\Gamma(x,y)\n \\quad\\hookrightarrow\\quad D(y).\n\\]\nIn particular, every subobject of a predicate $D$ is isomorphic\nover $D$ to an inclusion of a $\\Sigma_1$ predicate.\n",
+      "explicit_hypotheses": [
+        "T is a consistent extension of PA in the surrounding section",
+        "morphisms are \u03a3\u2081 functional graphs with T-provable support and totality"
+      ],
+      "reconstruction": [
+        "Witness search sends a predicate graph to the corresponding total split morphism; inverse interpretation proves full faithfulness, and coding all original objects by \u03c9 proves essential surjectivity.",
+        "Explicit predicate products and equalizers give finite limits. A provably surjective morphism has a witness-search section and hence is the coequalizer of its kernel pair.",
+        "Image predicates give regular epi\u2013mono factorizations, with pullback stability. Parity gives disjoint stable coproducts.",
+        "For a mono, equality of kernel-pair projections proves T-injectivity; searching its transposed graph gives its partial inverse and an isomorphism onto its predicate image."
+      ],
+      "hypothesis_use_and_scope": [
+        "Graph equality is universal T-provability throughout.",
+        "\u03a3\u2081 and provable totality justify the searches; no standard soundness of T is used.",
+        "Consistency is not needed in these construction steps beyond the surrounding nontrivial source framework."
+      ],
+      "dependencies": [
+        "lem:syntactic-functional-search",
+        "lem:arithmetized-evaluation"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "fbb1eb0f005f05d7df7b4ef0d88d48c35c46f589e568d0f77276b878060a2068"
+    },
+    {
+      "number": "6.4",
+      "label": "lem:st-finite-sigma1",
+      "page": "23",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 306,
+      "statement": "\n\\label{lem:st-finite-sigma1}\nLet $C(x)$ be $\\Sigma_1$, and let $a$ code a finite sequence with\nentries $a_i$. The assertion that all entries satisfy $C$ is equivalent\nin $\\mathrm{PA}$ to a $\\Sigma_1$ formula. The same holds, for a positive\ninteger $s$, for $\\Sigma_1$ formulas\n$D_0(x),\\ldots,D_{s-1}(x)$ and a primitive-recursive function\n$\\ell:\\N\\to\\{0,\\ldots,s-1\\}$ selecting the condition\n$D_{\\ell(a_i)}(a_i)$ at the $i$th entry.\n",
+      "explicit_hypotheses": [
+        "fixed \u03a3\u2081 predicates",
+        "primitive-recursive finite-sequence operations",
+        "a fixed finite family with a primitive-recursive selector"
+      ],
+      "reconstruction": [
+        "Replace each \u03a3\u2081 membership assertion by existence of a witness for a primitive-recursive matrix.",
+        "One existentially quantified sequence stores all witnesses; its bounded component checks are primitive recursive.",
+        "PA induction on the sequence length proves existence of the witness sequence; projection proves the converse.",
+        "A finite case distinction handles the selected predicates."
+      ],
+      "hypothesis_use_and_scope": [
+        "Fixed finite family makes the disjunction finite; PA induction works on internal lengths, not merely standard lists."
+      ],
+      "dependencies": [],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "0f355521f4c6f51be9cb6c2cd35d2fba25639dd122faf417e9811583a88af44e"
+    },
+    {
+      "number": "6.5",
+      "label": "prop:st-syntax-initiality",
+      "page": "24",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 389,
+      "statement": "\n\\label{prop:st-syntax-initiality}\nLet $d$ be a nonnegative integer and let $V,\\Sigma_k,\\Pi_k$ be\nobjects of $\\mathcal B_T$ for $0\\leq k\\leq d$. Powers below\ndenote finite products. The endofunctor\n$K:\\mathcal B_T^2\\to\\mathcal B_T^2$ defined by\n\\[\n K(X,Y)=\\left(\n V+\\coprod_{k=0}^{d}\\Sigma_k\\times X^k,\n X^2+\\coprod_{k=0}^{d}\\Pi_k\\times X^k+Y+Y^2+V\\times Y\n \\right)\n\\]\nhas an initial algebra in $\\mathcal B_T^2$, with carriers\n$\\Tm$ and $\\Fm$. This algebra is stable\nunder parameters in the sense of Appendix~\\ref{app:syntax-theories}: for every object $P$,\nits pullback to $(\\mathcal B_T/P)^2$ is initial for $K_P$.\n",
+      "explicit_hypotheses": [
+        "T extends PA",
+        "finite arity bound d",
+        "arbitrary coefficient objects V,\u03a3k,\u03a0k in B_T",
+        "arbitrary parameter object P and arbitrary slice algebra"
+      ],
+      "reconstruction": [
+        "Ordered syntax codes and membership witnesses give \u03a3\u2081 carriers and constructor graphs.",
+        "For a target slice algebra, an evaluation sequence records each value and a halting computation for its operation, retaining the parameter.",
+        "Induction in T on node count proves totality, functionality and projection preservation; witness search gives the evaluation morphism.",
+        "Root decomposition gives the algebra equations, and a second induction compares it with every algebra morphism."
+      ],
+      "hypothesis_use_and_scope": [
+        "Finite arity gives finitely many operation graphs and membership predicates.",
+        "Target operations need only be T-provably total on their specified carriers.",
+        "Internal induction, rather than external finite-tree induction in a nonstandard model, establishes initiality in B_T."
+      ],
+      "dependencies": [
+        "lem:st-finite-sigma1",
+        "lem:syntactic-functional-search"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "f7090e1828ca3cbc448657212c7edd7b9b8f1e396fdffd1472ce27c42496feea"
+    },
+    {
+      "number": "6.6",
+      "label": "prop:st-list-initiality",
+      "page": "25",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 489,
+      "statement": "\n\\label{prop:st-list-initiality}\nFor every object $V$ of $\\mathcal B_T$, the endofunctor\n$Z\\mapsto1+V\\times Z$ has an initial algebra stable under\nparameters.\n",
+      "explicit_hypotheses": [
+        "T extends PA",
+        "arbitrary V in B_T",
+        "arbitrary parameter P and target slice algebra"
+      ],
+      "reconstruction": [
+        "The predicate that every coded entry belongs to V is \u03a3\u2081 by the finite-witness lemma.",
+        "Nil and cons give the constructor algebra.",
+        "Evaluate from the tail using the target nil and cons operations, keeping one parameter value.",
+        "T-induction on length proves totality, algebra equations and uniqueness."
+      ],
+      "hypothesis_use_and_scope": [
+        "T-totality of target operations suffices; no external choice or standardness premise is used."
+      ],
+      "dependencies": [
+        "lem:st-finite-sigma1",
+        "lem:syntactic-functional-search"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "bef9a94915f05484060f18b8b1a1163c3565372101956ba0b8d0b6d8fed652c3"
+    },
+    {
+      "number": "6.7",
+      "label": "prop:st-substitution-realization",
+      "page": "25",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 530,
+      "statement": "\n\\label{prop:st-substitution-realization}\nOn the preceding codes, the list operations, free-variable morphisms,\nterm substitution, and the formula-substitution morphism with codomain\n$1+\\Fm$ of Appendix~\\ref{app:syntax-theories} are represented by algorithms whose\ndefining equations and preservation of the specified carriers are\nprovable in $\\PA$. Restricting each graph to its source predicate\ngives a morphism of $\\mathcal B_T$. These are the morphisms\nconstructed there by parameterized initiality. In particular, the\nsubobject $\\Adm$ is the free-for substitution domain on\nthese named-variable codes, represented by a complemented\nsubobject in $\\mathcal B_T$.\n",
+      "explicit_hypotheses": [
+        "syntax/list objects and their parameterized initiality",
+        "numerical decidable variable equality",
+        "bounded finite signature"
+      ],
+      "reconstruction": [
+        "Primitive recursion gives concatenation, deletion, membership and free-variable lists, with PA-provable carrier and constructor equations.",
+        "A simultaneous traversal retains both the original subtree and substituted value.",
+        "The equal-binder case returns the original formula even if recursion in its body is inadmissible; the other case uses the exact capture condition.",
+        "PA induction identifies the second coproduct inverse image with the free-for domain and proves identity/absent-variable laws; initiality identifies these algorithms with the categorical morphisms."
+      ],
+      "hypothesis_use_and_scope": [
+        "Decidable equality drives binding and capture tests.",
+        "The source predicates guard all algorithms; no claim is made that arbitrary coefficient membership is decidable."
+      ],
+      "dependencies": [
+        "prop:st-syntax-initiality",
+        "prop:st-list-initiality",
+        "prop:categorical-substitution"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "76be85c19ae11afc0485a0e637b546c663e754a535feffe7498feeebad7dc9e0"
+    },
+    {
+      "number": "6.8",
+      "label": "lem:syntactic-derivation-initiality",
+      "page": "27",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 667,
+      "statement": "\\label{lem:syntactic-derivation-initiality}\nLet $T\\supseteq\\PA$, let $F$ be an object of $\\mathcal B_T$, and\nfix morphisms\n\\[\n p_n:R_n\\longrightarrow F^n,\\qquad\n q_n:R_n\\longrightarrow F\\qquad(0\\leq n\\leq N),\n\\]\nwhere $N$ is a fixed nonnegative integer.\nThe inference endofunctor $H$ of\nAppendix~\\ref{app:closed-subobjects} has an initial algebra in\n$\\mathcal B_T/F$.  Its underlying object and conclusion morphism\nare represented by $\\Sigma_1$ formulas.\n",
+      "explicit_hypotheses": [
+        "T extends PA",
+        "F and Rn arbitrary B_T objects",
+        "finite N",
+        "T-total premise/conclusion morphisms pn,qn"
+      ],
+      "reconstruction": [
+        "Strictly increasing node coding gives primitive-recursive tree shape and ordered node occurrences.",
+        "\u03a3\u2081 node conditions validate label membership and equality of child conclusions with prescribed premises.",
+        "A target-algebra evaluation relation is functional in PA; T-induction gives totality on valid trees and the required conclusion.",
+        "Witness search produces a total slice morphism; root decomposition gives its algebra equation, and T-induction proves uniqueness among all algebra morphisms."
+      ],
+      "hypothesis_use_and_scope": [
+        "The target algebra is applied to the coded tuple in H(Q,q), after the underlying tuple is shown to lie in the pullback Bn(Q,q).",
+        "Nullary rules are checked explicitly via the singleton code.",
+        "The proof does not infer internal totality from external termination."
+      ],
+      "dependencies": [
+        "lem:st-finite-sigma1",
+        "lem:syntactic-functional-search"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "d077ddea9fdf706c79dbfba921e5be2634205dc1e68168aef31d0f6467585d5d"
+    },
+    {
+      "number": "6.9",
+      "label": "thm:syntactic-generated-theory",
+      "page": "29",
+      "file": "sections/05a-internal-syntax.tex",
+      "line": 832,
+      "statement": "\\label{thm:syntactic-generated-theory}\nLet $T$ be a consistent extension of $\\PA$ and put\n$\\mathcal B_T=\\Tot(\\Split(S_T))$. Fix a nonnegative integer $d$\nand variable and signature objects $V,\\Sigma_k,\\Pi_k$ of\n$\\mathcal B_T$ for $0\\leq k\\leq d$.\nThe syntax, list, and substitution constructions above realize\nthe first-order structure of Appendix~\\ref{app:syntax-theories}\nin $\\mathcal B_T$. For every axiom subobject $i_A:A\\hookrightarrow S$\nof its sentence object, the inference endofunctor $H_A$ has an\ninitial algebra with conclusion morphism $c_A:P_A\\to\\Fm$.\nIts image is the least subobject of $\\Fm$ containing the logical\nand nonlogical axioms and closed under generalization and modus\nponens. The sentence pullback of this image is the least sentence\ntheory containing $A$.\n\nUse the sentence predicate above, and choose the derivation\npredicate $P_A(p)$ and conclusion index $e_A$ furnished by the\nconstruction. Put $\\operatorname{Th}_A(z)\\equiv\\exists p\\,G_{e_A}(p,z)$.\nThen the restriction idempotent\n\\[\n t_A=[\\operatorname{Sent}(z)\\land\\operatorname{Th}_A(z)]_T:\n                  \\omega\\rightharpoonup\\omega\n\\]\nbelongs to $S_T$, and its splitting represents that sentence theory.\n",
+      "explicit_hypotheses": [
+        "T consistent extension of PA",
+        "finite signature and arbitrary variable object",
+        "axiom mono A\u2192S"
+      ],
+      "reconstruction": [
+        "Regularity and partial inverses come from the predicate equivalence.",
+        "Parameterized syntax, lists and admissible substitution realize every finite rule source and conclusion.",
+        "The derivation initiality lemma and Appendix A image theorem yield the least closed formula object and sentence theory.",
+        "A PA-functional program for sentence-filtered conclusion has the indicated domain and range; its splitting is the regular image."
+      ],
+      "hypothesis_use_and_scope": [
+        "The formula theorem predicate is intersected with Sent before being used as the sentence domain.",
+        "The carrier/predicate presentation is essential for PA-provable functionality."
+      ],
+      "dependencies": [
+        "lem:syntactic-total-category",
+        "prop:st-syntax-initiality",
+        "prop:st-list-initiality",
+        "prop:st-substitution-realization",
+        "lem:syntactic-derivation-initiality",
+        "thm:first-order-theory",
+        "lem:range-regular-image"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "27850f520fa030eabcc609926700e710b002d584ee5589633bd4beae08e6531a"
+    },
+    {
+      "number": "7.1",
+      "label": "prop:model",
+      "page": "30",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 31,
+      "statement": "\\label{prop:model}\nFor every $M\\models T$, \\eqref{eq:model-functor} defines a covariant\nfunctor $F_M:S_T\\to\\Pfn$ preserving restrictions, zeros, binary\nrestriction products and coproducts, ranges, and finite joins of\nrestriction idempotents.\n",
+      "explicit_hypotheses": [
+        "M models T",
+        "universal T-provable equality of program graphs",
+        "PA-provable coding equations"
+      ],
+      "reconstruction": [
+        "Functionality makes each interpreted graph a partial function.",
+        "Provable graph equality makes the assignment well defined on classes; composition uses all M-elements as intermediate codes and the coding bijection.",
+        "Existential domain/range predicates interpret exactly as set-theoretic domain and image.",
+        "Predicate conjunction/disjunction and program product/coproduct equations give the remaining preservation claims."
+      ],
+      "hypothesis_use_and_scope": [
+        "Standard index numerals are distinguished from possibly nonstandard trace and value witnesses.",
+        "No claim is made that these interpreted partial functions are computable in the standard sense."
+      ],
+      "dependencies": [
+        "lem:arithmetized-evaluation"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "9e1b0676861bb3fecb405ebe10517fbfea1f85066872f2aee91a0338c9ffcdad"
+    },
+    {
+      "number": "7.2",
+      "label": "lem:switch",
+      "page": "30",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 60,
+      "statement": "\\label{lem:switch}\nLet $c,c'$ be complementary restriction idempotents on $X$ in $S_T$.\nThere is a total morphism $s:X\\to X+X$ with\n\\[\n sc=i_1c,\\qquad sc'=i_0c'.\n\\]\nFor every $M\\models T$, the morphism $\\chi_{X,X}^{-1}F_Ms$ is the\nunique section of $\\nabla_{F_MX}(F_Mc'+F_Mc)$, where\n$\\chi_{X,X}:F_MX+F_MX\\to F_M(X+X)$ is the coproduct isomorphism.\n",
+      "explicit_hypotheses": [
+        "c,c\u2032 complementary restriction idempotents in S_T",
+        "M models T"
+      ],
+      "reconstruction": [
+        "\u03a3\u2081 predicates for c,c\u2032 are T-provably disjoint and cover the input.",
+        "The even/odd conditional relation is thus T-functional and total; witness search gives a total source morphism.",
+        "In M it chooses the required summand and is the partial inverse of the codiagonal restricted to c\u2032+c.",
+        "That restricted map is an injection onto the whole target, proving uniqueness of the section."
+      ],
+      "hypothesis_use_and_scope": [
+        "Complementarity supplies both totality and uniqueness; source totality is T-provable."
+      ],
+      "dependencies": [
+        "lem:syntactic-functional-search",
+        "prop:model"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "23a746a02d2b4bdf0ceceb6c45c31df7afd9bcb5e5ca972166b3a6ec5abbabe1"
+    },
+    {
+      "number": "7.3",
+      "label": "cor:model-pair",
+      "page": "30",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 99,
+      "statement": "\\label{cor:model-pair}\nFor every $M\\models T$, the functor $F_M$ satisfies the hypotheses of\nCorollary~\\ref{cor:source-conditionals}. Thus, for a Turing morphism\n$\\tau:\\omega\\times\\omega\\rightharpoonup\\omega$ and an isomorphism\n$b:\\omega\\to\\omega+\\omega$ in $S_T$, the restriction idempotents\n\\[\n (b\\tau\\Delta_\\omega)^*(1_\\omega+0_\\omega),\\qquad\n (b\\tau\\Delta_\\omega)^*(0_\\omega+1_\\omega)\n\\]\nare inseparable in $S_T$.\n",
+      "explicit_hypotheses": [
+        "M models T",
+        "\u03c4 is a Turing morphism and b:\u03c9\u2245\u03c9+\u03c9"
+      ],
+      "reconstruction": [
+        "The model functor preserves the required structures.",
+        "Set-theoretic total inverse images preserve joins, and M is nonempty.",
+        "The previous lemma supplies all complementary source conditionals.",
+        "Corollary3.3 yields inseparability of the two diagonal source domains."
+      ],
+      "hypothesis_use_and_scope": [
+        "Nonempty M witnesses F(1\u03c9)\u22600.",
+        "The argument proves source inseparability, not inseparability of the image pair in Pfn."
+      ],
+      "dependencies": [
+        "prop:model",
+        "lem:switch",
+        "cor:source-conditionals"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "e581253463045eca7ead72a69dbe1957bc9306436d5830373b88f5778dd25892"
+    },
+    {
+      "number": "7.4",
+      "label": "prop:model-total-regular",
+      "page": "31",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 137,
+      "statement": "\\label{prop:model-total-regular}\nFor every $M\\models T$, the functor $G_M$ preserves finite limits,\nfinite coproducts, and regular images.\n",
+      "explicit_hypotheses": [
+        "M models T",
+        "predicate equivalence J_T"
+      ],
+      "reconstruction": [
+        "Work in the predicate presentation: terminal, product and equalizer predicates interpret as the corresponding set limits.",
+        "Parity identifies the interpreted coproduct with the disjoint union.",
+        "The existential image predicate interprets as the actual image because its witnesses range over all of M.",
+        "Transport along the equivalence proves the assertion for G_M."
+      ],
+      "hypothesis_use_and_scope": [
+        "The claim concerns total maps; no preservation of partial-map Turing universality is inferred."
+      ],
+      "dependencies": [
+        "lem:syntactic-total-category",
+        "prop:model"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "7c6ade3704d7a9bde32e989cb0d7fbc4690328a76baf61bc626c7d461b8e8d57"
+    },
+    {
+      "number": "7.5",
+      "label": "lem:semantic-substitution",
+      "page": "32",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 205,
+      "statement": "\\label{lem:semantic-substitution}\nLet $\\sigma:\\N\\to |K|$ be an assignment of values to variables.\nFor $x\\in\\N$ and $a\\in|K|$, write\n$\\sigma[x\\mapsto a]:\\N\\to|K|$ for the assignment obtained\nby changing the value of $x$ to $a$. For finite terms $r,t$,\n\\[\n \\llbracket r[x:=t]\\rrbracket^K_\\sigma\n =\\llbracket r\\rrbracket^K_{\n          \\sigma[x\\mapsto\\llbracket t\\rrbracket^K_\\sigma]}.\n\\]\nFor a finite formula $\\varphi$, if\n$(\\ulcorner\\varphi\\urcorner,x,\\ulcorner t\\urcorner)$ lies in\nthe image of $a_{\\N}$, then\n\\begin{equation}\\label{eq:semantic-substitution}\n K,\\sigma\\models\\varphi[x:=t]\n \\quad\\Longleftrightarrow\\quad\n K,\\sigma[x\\mapsto\\llbracket t\\rrbracket^K_\\sigma]\n             \\models\\varphi.\n\\end{equation}\nThe substitution morphisms of\nProposition~\\ref{prop:st-substitution-realization}, interpreted by\n$G_{\\N}$, give the codes of $r[x:=t]$ and, when admissible,\n$\\varphi[x:=t]$.\n",
+      "explicit_hypotheses": [
+        "K a nonempty first-order structure with identity equality",
+        "finite standard syntax",
+        "the displayed formula substitution is admissible"
+      ],
+      "reconstruction": [
+        "Simultaneous induction establishes dependence only on free-variable values.",
+        "Term substitution follows by constructor induction.",
+        "For \u2200y, y=x leaves the formula unchanged; when y\u2260x and x occurs, admissibility ensures y is absent from t, so updated assignments commute.",
+        "Quantification then yields the formula equivalence; realized constructor equations identify the codes."
+      ],
+      "hypothesis_use_and_scope": [
+        "Admissibility is used exactly in the capture-sensitive quantifier case.",
+        "The induction is on external finite syntax interpreted by G_N, not on nonstandard syntax."
+      ],
+      "dependencies": [
+        "prop:st-substitution-realization"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "24dfc6d27a67b95577efdfa309c08f06d4907117c343fae77a36079cc4253a83"
+    },
+    {
+      "number": "7.6",
+      "label": "prop:standard-code-soundness",
+      "page": "32",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 269,
+      "statement": "\n\\label{prop:standard-code-soundness}\nLet $\\Gamma$ be a computably enumerable set of arithmetic sentences,\nwith axiom subobject $i_A:A\\hookrightarrow S$ in\n$\\mathcal B_{\\PA}$, and let $K\\models\\Gamma$.\nThere is a unique function\n\\[\n e_K:G_{\\N}P_{A,S}\\longrightarrow V_K\n \\quad\\text{such that}\\quad\n v_Ke_K=G_{\\N}c_{A,S}.\n\\]\nIf $\\nu:S\\to S$ is sentence negation, then the subobjects\n$v_K$ and $(G_{\\N}\\nu)^*v_K$ of $G_{\\N}S$ have empty\nintersection.\n",
+      "explicit_hypotheses": [
+        "\u0393 c.e. arithmetic sentences",
+        "K models \u0393 with identity equality",
+        "G_N interpretation of the chosen finite derivation codes"
+      ],
+      "reconstruction": [
+        "The three propositional and four quantifier/equality schemes are valid under every assignment.",
+        "Nonlogical axioms are sentences true in K; modus ponens and unrestricted generalization preserve validity.",
+        "Induction on the externally finite derivation yields a conclusion in V_K.",
+        "Corestriction gives the unique function e_K, and negation semantics proves disjointness."
+      ],
+      "hypothesis_use_and_scope": [
+        "N interprets syntax and program graphs; K interprets decoded formulas.",
+        "No arithmetic axioms of K are needed for the pure logical soundness step."
+      ],
+      "dependencies": [
+        "lem:semantic-substitution",
+        "lem:syntactic-derivation-initiality"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "dde7382a2d925fb73a069d3f196bda9ba82fc0cc5d99d8a29562147b9b9be065"
+    },
+    {
+      "number": "7.7",
+      "label": "lem:ultrapower-regular",
+      "page": "33",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 356,
+      "statement": "\\label{lem:ultrapower-regular}\nThe functor $\\mathscr U:\\mathbf{Set}\\to\\mathbf{Set}$ preserves\nfinite limits, finite coproducts, and regular images.\n",
+      "explicit_hypotheses": [
+        "nonempty I",
+        "proper ultrafilter U",
+        "set-theoretic choice as declared"
+      ],
+      "reconstruction": [
+        "Coordinate pairing gives products; for an equalizing class, the set of coordinates in the equalizer is U-large.",
+        "Fill the complement with one equalizer element to obtain a representative in that subobject.",
+        "The ultrafilter chooses exactly one coproduct summand; fill its complement to get coproduct surjectivity, and disjointness gives injectivity.",
+        "A section of each set surjection survives functoriality, so image factorizations are preserved."
+      ],
+      "hypothesis_use_and_scope": [
+        "Properness makes every U-large set nonempty; ultrafilter maximality is used for the two summands.",
+        "Choice is used for sections of arbitrary surjections."
+      ],
+      "dependencies": [],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "fa43a5c94d80daa68f937fe664b21109fc9faae8794d90e991b6b55a14728d80"
+    },
+    {
+      "number": "7.8",
+      "label": "lem:ultrapower-comparison",
+      "page": "34",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 397,
+      "statement": "\n\\label{lem:ultrapower-comparison}\nThere is a natural isomorphism of functors\n\\[\n \\eta:\\mathscr U G_{\\N}\\xRightarrow{\\ \\cong\\ }G_M:\n             \\mathcal B_{\\PA}\\longrightarrow\\mathbf{Set}.\n\\]\nOn a predicate object $J_{\\PA}(C)$ it is the map\n\\begin{equation}\\label{eq:ultrapower-predicate-comparison}\n \\eta_{J_{\\PA}(C)}:\n \\mathscr U(C(\\N))\\longrightarrow C(M),\n \\qquad [c_i]\\longmapsto[c_i].\n\\end{equation}\n",
+      "explicit_hypotheses": [
+        "M=N^I/U",
+        "proper U on nonempty I",
+        "J_PA predicate equivalence",
+        "\u0141o\u015b theorem"
+      ],
+      "reconstruction": [
+        "A family of C(N)-elements maps to its arithmetic class in C(M).",
+        "\u0141o\u015b proves injectivity; if a class satisfies C, replace its coordinates outside the U-large satisfaction set by a satisfying value.",
+        "Interpreted functional graphs give the naturality square.",
+        "Transport by predicate-presentation isomorphisms extends uniquely to B_PA and proves independence of those choices."
+      ],
+      "hypothesis_use_and_scope": [
+        "Empty C(N) is handled explicitly.",
+        "The comparison is between internal arithmetic predicates and ultrapowers of their standard carriers, not a decoding of nonstandard formulas."
+      ],
+      "dependencies": [
+        "lem:ultrapower-regular",
+        "lem:syntactic-total-category",
+        "\u0141o\u015b theorem"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "13b4994ad5b4f7c885adb56e247bffe029b6e9dbfe87087353838f7ed11a9924"
+    },
+    {
+      "number": "7.9",
+      "label": "thm:ultrapower-soundness",
+      "page": "34",
+      "file": "sections/06-interpretation-in-models.tex",
+      "line": 450,
+      "statement": "\n\\label{thm:ultrapower-soundness}\nLet $i_A:A\\hookrightarrow S$ and $K$ satisfy the hypotheses of\nProposition~\\ref{prop:standard-code-soundness}, and let\n$\\nu:S\\to S$ be syntactic negation in $\\mathcal B_{\\PA}$.\nLet $I$ be nonempty,\nlet $\\mathcal U$ be a proper ultrafilter on $I$, and put\n$M=\\N^I/\\mathcal U$. Define\n\\[\n \\begin{aligned}\n V_{K,\\mathcal U}&=\\mathscr U(V_K),\\\\\n v_{K,\\mathcal U}\n   &=\\eta_S\\mathscr U(v_K):V_{K,\\mathcal U}\\hookrightarrow G_MS,\\\\\n e_{K,\\mathcal U}\n   &=\\mathscr U(e_K)\\eta_{P_{A,S}}^{-1}:\n       G_MP_{A,S}\\longrightarrow V_{K,\\mathcal U}.\n \\end{aligned}\n\\]\nThen\n\\begin{equation}\\label{eq:ultrapower-soundness-factorization}\n v_{K,\\mathcal U}e_{K,\\mathcal U}=G_Mc_{A,S},\n\\end{equation}\nand $v_{K,\\mathcal U}$ has empty intersection with its inverse\nimage along $G_M\\nu$. Consequently the interpreted theorem\nsubobject and its inverse image along $G_M\\nu$ have empty\nintersection. Equivalently, for the restriction idempotent\n$t_A=\\ran(c_{A,S})$ in $\\Split(S_{\\PA})$,\n\\[\n \\widehat F_M(t_A)\\,\n       (\\widehat F_M\\nu)^*\\widehat F_M(t_A)=0.\n\\]\n",
+      "explicit_hypotheses": [
+        "standard-code soundness for \u0393 in K",
+        "proper ultrafilter on nonempty I",
+        "M=N^I/U",
+        "choice as declared"
+      ],
+      "reconstruction": [
+        "Apply the ultrapower functor to the standard soundness factorization.",
+        "Naturality of \u03b7 identifies its composite with the M-interpreted conclusion.",
+        "Preservation of the empty intersection and naturality for negation transfer disjointness.",
+        "Regular-image preservation identifies the conclusion image with the interpreted theorem domain, proving both consistency formulations."
+      ],
+      "hypothesis_use_and_scope": [
+        "K is unchanged and need not be an ultrapower; M interprets code objects only.",
+        "No external semantic interpretation of a nonstandard formula is asserted."
+      ],
+      "dependencies": [
+        "prop:standard-code-soundness",
+        "lem:ultrapower-regular",
+        "lem:ultrapower-comparison",
+        "prop:model-total-regular",
+        "prop:interpreted-theory"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "6c0b4776d567159e52e65bea00dc3f86102f28cce130a3e2d6c124f8e655a984"
+    },
+    {
+      "number": "8.1",
+      "label": "lem:arithmetic-diagonal-representation",
+      "page": "36",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 85,
+      "statement": "\n\\label{lem:arithmetic-diagonal-representation}\nThere is a total morphism\n$\\theta:\\omega\\to S$ in $\\mathcal B_{\\PA}$ such that\n$(G_{\\N}\\theta)(n)=\\ulcorner\\alpha(\\bar n)\\urcorner$.\nSuppose that every axiom of PA is derivable from the c.e.\\\nsentence set $\\Gamma$. For every $M\\equiv\\N$, the following\ninequalities hold in $\\Pfn$:\n\\begin{align*}\n F_M(a_0)&\\le\n   (\\widehat F_M\\theta)^*\\widehat F_M(t_\\Gamma),\\\\\n F_M(a_1)&\\le\n   (\\widehat F_M\\theta)^*(\\widehat F_M\\nu)^*\n                   \\widehat F_M(t_\\Gamma).\n\\end{align*}\n",
+      "explicit_hypotheses": [
+        "PA-provable deterministic computation coding",
+        "\u0393 c.e. and derives every PA axiom",
+        "M\u2261N"
+      ],
+      "reconstruction": [
+        "Numeral construction and substitution in fixed \u03b1 give a PA-total sentence-code morphism \u03b8.",
+        "A standard halting trace proves \u03b1(n), or proves \u03b2(n) and hence \u00ac\u03b1(n), in PA.",
+        "Only finitely many PA axioms are used, so \u0393 derives these sentences.",
+        "The two universal reduction implications are true in N and therefore in every M\u2261N; interpreted image and inverse-image formulas give the inequalities."
+      ],
+      "hypothesis_use_and_scope": [
+        "The reduction implications are asserted true in N, not PA-provable uniformly from an external claim that \u0393 extends PA.",
+        "Elementary equivalence, stronger than M\u22a8PA, is used to transport those implications."
+      ],
+      "dependencies": [
+        "prop:st-substitution-realization",
+        "lem:arithmetized-evaluation",
+        "prop:model-total-regular"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "ae51229d2d8c741613a77f7f06934a161a32a99445124db9106a316ef7f7d684"
+    },
+    {
+      "number": "8.2",
+      "label": "lem:arithmetic-proof-search",
+      "page": "36",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 134,
+      "statement": "\n\\label{lem:arithmetic-proof-search}\nFor every c.e.\\ sentence set $\\Gamma$, there is a morphism\n$\\ell_\\Gamma:\\omega\\rightharpoonup\\omega+\\omega$ in\n$S_{\\PA}$ with the following property. In any $M\\models\\PA$\nfor which\n\\[\n C(x)=\\operatorname{Prov}_\\Gamma(\\Theta(x)),\\qquad\n C'(x)=\\operatorname{Prov}_\\Gamma(\\operatorname{Neg}(\\Theta(x)))\n\\]\nhave disjoint truth sets, the partial function\n\\[\n s_\\Gamma=\\chi_{\\omega,\\omega}^{-1}F_M(\\ell_\\Gamma):\n       F_M\\omega\\rightharpoonup F_M\\omega+F_M\\omega\n\\]\nin $\\Pfn$ satisfies\n\\[\n s_\\Gamma^*(1_{F_M\\omega}+0_{F_M\\omega})=[C'(M)],\\qquad\n s_\\Gamma^*(0_{F_M\\omega}+1_{F_M\\omega})=[C(M)].\n\\]\nHere $[C(M)]$ denotes the partial identity on\n$\\{x\\in M:M\\models C(x)\\}$, and $[C'(M)]$ is defined in the\nsame way.\n",
+      "explicit_hypotheses": [
+        "\u0393 arbitrary c.e. sentence set",
+        "M\u22a8PA",
+        "C and C\u2032 have disjoint truth sets in M"
+      ],
+      "reconstruction": [
+        "One \u03a3\u2081 search relation requests an odd output for C and an even output for C\u2032.",
+        "Witness search supplies a source index with the exact union domain and only valid outputs.",
+        "In M, disjointness makes the requested relation functional.",
+        "Existence plus functionality forces its graph to be exactly that relation, yielding the two inverse-image equations."
+      ],
+      "hypothesis_use_and_scope": [
+        "No PA proof of \u0393-consistency is assumed.",
+        "The source lift may be partial; disjointness is a target-model hypothesis."
+      ],
+      "dependencies": [
+        "lem:syntactic-functional-search"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "127551d72a1988c4d4ef3b2c590658f97d5877ace4aba344ff47b261e829fe32"
+    },
+    {
+      "number": "8.3",
+      "label": "thm:arithmetic-internal-comparison",
+      "page": "37",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 180,
+      "statement": "\n\\label{thm:arithmetic-internal-comparison}\nLet $\\Gamma$ be a consistent c.e.\\ set of arithmetic sentences\nfrom which every PA-axiom is derivable. Its sentence theory\n$t_\\Gamma$ in $\\Split(S_{\\PA})$ is incomplete.\nIts interpretations under $\\widehat F_{\\N}$ and under every\n$\\widehat F_M$, where $M=\\N^I/\\mathcal U$ for a proper ultrafilter\n$\\mathcal U$ on a nonempty set $I$, are incomplete.\nFor the standard interpretation, there is a total morphism\n$g:\\omega\\to\\omega$ in $S_{\\PA}$ such that, writing\n$\\gamma=F_{\\N}(g):\\N\\to\\N$, every sentence\n$\\alpha(\\overline{\\gamma(n)})$ is undecidable from $\\Gamma$.\n",
+      "explicit_hypotheses": [
+        "\u0393 consistent c.e. sentences deriving all PA axioms",
+        "M=N or an arithmetic ultrapower of N"
+      ],
+      "reconstruction": [
+        "Completeness gives K\u22a8\u0393. Standard-code soundness and ultrapower transport make the target theorem/refutation domains disjoint.",
+        "The diagonal representation supplies reductions and the search lemma supplies the required partial source lift.",
+        "The comparison theorem yields noncoverage in the target and source.",
+        "For N, the resulting single total source g supplies undecidable sentences at every input via \u0398."
+      ],
+      "hypothesis_use_and_scope": [
+        "Consistency is external and yields a model; no internal Cons(\u0393) proof is assumed.",
+        "Each arithmetic ultrapower is elementarily equivalent to N, as the reduction lemma requires."
+      ],
+      "dependencies": [
+        "prop:standard-code-soundness",
+        "thm:ultrapower-soundness",
+        "lem:arithmetic-diagonal-representation",
+        "lem:arithmetic-proof-search",
+        "thm:logical-comparison"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "128eefecf68f5299188f544eb514bf33ea05fdfecc0384ad9679f9373d748a9e"
+    },
+    {
+      "number": "8.4",
+      "label": "cor:arithmetic",
+      "page": "37",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 230,
+      "statement": "\n\\label{cor:arithmetic}\n\\label{thm:arithmetic-comparison-inseparability}\nFor every consistent c.e.\\ extension of PA, its theorem and\nrefutation sets of sentence codes are recursively inseparable.\nConsequently every consistent c.e.\\ extension of it is incomplete.\n",
+      "explicit_hypotheses": [
+        "\u0393 consistent c.e. extension of PA",
+        "standard recursive separator assumed for contradiction"
+      ],
+      "reconstruction": [
+        "Pull the separator of theorem/refutation codes back along recursive \u0398.",
+        "The diagonal reductions make it separate D0,D1. Its total recursive reversed conditional has a source program index.",
+        "Corollary3.2 contradicts the existence of that lifted separator.",
+        "A consistent complete c.e. extension would have disjoint c.e. theorem/refutation sets deciding sentence membership and hence give the forbidden separator."
+      ],
+      "hypothesis_use_and_scope": [
+        "All separator effectiveness is standard, with no claim of PA-provable totality for arbitrary recursive decisions.",
+        "The code outside the recursive sentence carrier is assigned false."
+      ],
+      "dependencies": [
+        "lem:arithmetic-diagonal-representation",
+        "cor:separator"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "1ed5e62e25f08cef021aed638108c3cd02f914028fe001d4585d1daccd0b7e02"
+    },
+    {
+      "number": "8.5",
+      "label": "prop:arithmetic-theory-fibers",
+      "page": "39",
+      "file": "sections/08a-uniform-theories.tex",
+      "line": 123,
+      "statement": "\n\\label{prop:arithmetic-theory-fibers}\nFor every $e\\in\\N$, the pullback of $c^{\\mathrm{all}}$ along\n$k_e^{\\Fm}$ is the underlying conclusion morphism of an initial\n$H_{A_{\\Gamma_e}}$-algebra in $\\mathcal B/\\Fm$.\nThere is an induced morphism $\\iota_e:P_{\\Gamma_e}\\to P$\nin $\\mathcal B$, and the square\n\\[\n\\begin{tikzcd}\n P_{\\Gamma_e}\\arrow[r,\"\\iota_e\"]\n       \\arrow[d,\"c_{\\Gamma_e}\"'] & P\\arrow[d,\"c\"]\\\\\n S\\arrow[r,\"k_e^S\"'] & E\\times S\n\\end{tikzcd}\n\\]\nis a pullback in $\\mathcal B$. Consequently\n$(k_e^S)^*m$ is the sentence theory generated by $A_{\\Gamma_e}$.\n",
+      "explicit_hypotheses": [
+        "e a standard numeral",
+        "finite extensivity of B_PA",
+        "rules retain a common E coordinate"
+      ],
+      "reconstruction": [
+        "The numeral fiber and its decidable complement split E and induce an equivalence of the two slice categories.",
+        "Rule sources and conclusions decompose under that equivalence; pullback pasting gives a natural isomorphism of inference endofunctors.",
+        "Consequently their algebra categories decompose. The initial pair has an initial first component, by pairing every comparison with the identity of the second.",
+        "Taking sentence pullbacks and stable regular images gives the square and theory fiber."
+      ],
+      "hypothesis_use_and_scope": [
+        "The proof establishes initiality after reindexing rather than assuming arbitrary pullback preserves initial algebras.",
+        "Only standard numeral e is used, and its complement is explicitly available."
+      ],
+      "dependencies": [
+        "lem:syntactic-total-category",
+        "lem:syntactic-derivation-initiality",
+        "thm:least-theorem-subobject"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "901134b4a898368d35044e1b57e74354e6e9095a93b5fdf9bbf43a4552386755"
+    },
+    {
+      "number": "8.6",
+      "label": "thm:uniform-independent-sentences",
+      "page": "41",
+      "file": "sections/08b-uniform-independent-sentences.tex",
+      "line": 4,
+      "statement": "\n\\label{thm:uniform-independent-sentences}\nFor the family $\\Gamma_e$ and objects\n$E,S\\in\\mathcal B=\\Tot(\\Split(S_{\\PA}))$ of\nSection~\\ref{subsec:indexed-arithmetic-theories}, there is a morphism\n$q:E\\to S$ in $\\mathcal B$ such that,\nfor every $e\\in\\N$ with $\\Gamma_e$ consistent, the\nsentence with code $(G_{\\N}q)(e)$ is neither provable nor\nrefutable from $\\Gamma_e$.\n",
+      "explicit_hypotheses": [
+        "\u0393e is the universal c.e. family with PA axioms adjoined",
+        "e is a standard numeral",
+        "consistency only of the selected \u0393e"
+      ],
+      "reconstruction": [
+        "The one family predicate Prov(e,z) gives a single \u03a3\u2081 reversed search relation R(e,x,z).",
+        "One source index for R and one Turing factorization give a total g before e and its consistency proof are chosen.",
+        "At n=F_N(g)(e), the identity hg=\u2113\u27e81,g\u27e9 turns either provability alternative into the opposite diagonal domain.",
+        "The diagonal reductions and disjointness contradict that alternative; q=\u03b8g yields one total morphism with the required independent value."
+      ],
+      "hypothesis_use_and_scope": [
+        "Uniformity is constructive in the order of choices: \u2113,g,q precede every selected e.",
+        "Consistency is used only to establish target disjointness, not to produce g.",
+        "The PA-provable numeral-fiber comparison equates Prov(e,\u2212) with the selected presentation."
+      ],
+      "dependencies": [
+        "lem:syntactic-functional-search",
+        "prop:arithmetic-theory-fibers",
+        "prop:standard-code-soundness",
+        "lem:arithmetic-diagonal-representation"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "e713e30694e0ea6e4e64e25d911f1241a17130ed9bd29229e103cb1f61804e6c"
+    },
+    {
+      "number": "8.7",
+      "label": "prop:numerical-structure",
+      "page": "42",
+      "file": "sections/08c-numerical-realization.tex",
+      "line": 38,
+      "statement": "\\label{prop:numerical-structure}\nThere is an equivalence\n\\[\n \\operatorname{Tot}(\\operatorname{Split}(\\mathrm{Rec}))\n       \\simeq\\mathcal C_{\\mathrm{rec}}.\n\\]\nThe category $\\mathcal C_{\\mathrm{rec}}$ is regular, with finite\ncoproducts that are disjoint and stable under pullback. Under the\ndisplayed equivalence, every monomorphism of $\\mathcal C_{\\mathrm{rec}}$\ncorresponds to a restriction monomorphism in\n$\\operatorname{Split}(\\mathrm{Rec})$, and\n\\[\n \\operatorname{Par}(\\mathcal C_{\\mathrm{rec}},\\operatorname{Mono})\n       \\simeq\\operatorname{Split}(\\mathrm{Rec}).\n\\]\n",
+      "explicit_hypotheses": [
+        "objects are c.e. finite-dimensional numerical carriers",
+        "total computable morphisms, with extensional equality"
+      ],
+      "reconstruction": [
+        "Encoding and decoding define Q and F with explicit natural isomorphisms.",
+        "Computable products/equalizers give limits; parity gives stable disjoint coproducts.",
+        "C.e. image carriers and preimage search show regular epis are surjections and monos are injections with computable partial inverses.",
+        "Monic spans correspond exactly to partial computable functions on c.e. subcarriers; explicit quasi-inverse functors and naturality prove the restriction equivalence."
+      ],
+      "hypothesis_use_and_scope": [
+        "Preimage searches terminate on their prescribed carrier only.",
+        "Equality of partial maps is checked by both their domains and values."
+      ],
+      "dependencies": [],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "3761f8d42fd51d2e4be2511bf339a04b221906ed11226e775c74791b7eabaacc"
+    },
+    {
+      "number": "8.8",
+      "label": "prop:arithmetic-theory-realization",
+      "page": "45",
+      "file": "sections/08c-numerical-realization.tex",
+      "line": 277,
+      "statement": "\\label{prop:arithmetic-theory-realization}\nFix $d\\ge0$, let $V=(1,\\N)$, and let\n$\\Sigma_k=(1,\\Sigma_{k,0})$ and $\\Pi_k=(1,\\Pi_{k,0})$\nhave recursive carriers for $0\\le k\\le d$. Then the\nsyntax and list algebras of Definition~\\ref{def:categorical-syntax}\nexist in $\\mathcal C_{\\mathrm{rec}}$ and are stable under parameters.\nFor every axiom subobject of the sentence object, the inference\nendofunctor of Theorem~\\ref{thm:first-order-theory} has an initial\nalgebra of finite derivations.\n",
+      "explicit_hypotheses": [
+        "finite recursive signature",
+        "variables N",
+        "arbitrary c.e. parameter and axiom objects",
+        "total computable target algebra operations"
+      ],
+      "reconstruction": [
+        "Recursive syntax carriers and parameter-retaining tree evaluation give initial syntax algebras in every slice.",
+        "List evaluation proves the same assertion for lists; constructor equations identify free-variable and substitution maps.",
+        "Finite rule membership and computation tests semidecide valid derivation codes.",
+        "Bottom-up evaluation in any target inference algebra is total on those codes; conclusion preservation, algebra equations and uniqueness follow by tree induction."
+      ],
+      "hypothesis_use_and_scope": [
+        "Recursive signatures are used for decidability of syntax carriers; axiom membership only needs semidecision.",
+        "Totality is relative to source carriers, not total computability on all natural numbers."
+      ],
+      "dependencies": [
+        "prop:numerical-structure",
+        "prop:st-substitution-realization"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "d4de51641cf2f537fd73cca9fde174f9230834b326f1061bc2ccc5678a0a8b53"
+    },
+    {
+      "number": "8.9",
+      "label": "lem:arithmetic-signed-theory",
+      "page": "49",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 336,
+      "statement": "\n\\label{lem:arithmetic-signed-theory}\nAssume that $\\PA$ is consistent. The pair $a_0,a_1$ is inseparable\nin $\\mathscr C_{\\PA}$, and the internal theory $t_{\\pm}$ is\nconsistent and essentially incomplete.\n",
+      "explicit_hypotheses": [
+        "PA consistent",
+        "free first-order theory generated by the diagonal signed atoms",
+        "same chosen \u03c4 and b"
+      ],
+      "reconstruction": [
+        "A hypothetical complementary separator in the splitting gives a source-total conditional on \u03c9.",
+        "Turing parameterization with \u03c02 and precomposition with \u27e81,g\u27e9 yield hg=\u2113g and contradictory complementary pullbacks.",
+        "For two allegedly contradictory derivations, collect positive leaf labels in a finite list; make exactly those nullary predicates true, every equality true, and erase quantifiers.",
+        "PA verifies that all leaves and logical rules preserve this valuation, contradicting simultaneous truth of a formula and its negation; the signed-theory criterion gives essential incompleteness."
+      ],
+      "hypothesis_use_and_scope": [
+        "PA consistency is used for 1\u03c9\u22600, not to infer internal soundness.",
+        "The valuation is computed from both derivations and its correctness is proved internally by PA induction.",
+        "Nullary predicates and equality-only terms permit quantifier erasure."
+      ],
+      "dependencies": [
+        "thm:syntactic-generated-theory",
+        "lem:arithmetic-diagonal-representation",
+        "cor:signed-first-order-incompleteness"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "6d493ad47c63779e5f8958052555b977dc23e837be62b2c43c774bba73e08a0e"
+    },
+    {
+      "number": "8.10",
+      "label": "cor:arithmetic-associated-categories",
+      "page": "50",
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "line": 407,
+      "statement": "\n\\label{cor:arithmetic-associated-categories}\nAssume that $\\PA$ is consistent. Let\n$u:U\\hookrightarrow S^{\\pm}$ be any consistent internal sentence\ntheory containing $t_{\\pm}$, and write $t_{\\pm}=ui$.\nThen\n\\[\n \\Sigma_i:\n \\Par(\\mathcal B_{\\PA}/T_{\\pm})\n \\longrightarrow\n \\Par(\\mathcal B_{\\PA}/U)\n\\]\nis fully faithful, and is not essentially surjective when $i$ is\nproper. Both categories are split Turing categories, and the\ntheory\n\\[\n 1_U\\times u:U\\times U\\hookrightarrow U\\times S^{\\pm}\n\\]\nin the latter category is essentially incomplete. Its partial\nBoolean morphism, true on the theorem domain and false on the\nrefutation domain, has no total extension.\n\nLet $\\mathscr R_{\\PA}[U]$ be the full restriction subcategory of\n$\\Par(\\mathcal B_{\\PA}/U)$ on the objects\n$U\\times X\\to U$, for $X$ in $S_{\\PA}$.\nIt is a recursion category, with\n$\\Split(\\mathscr R_{\\PA}[U])\\simeq\\Par(\\mathcal B_{\\PA}/U)$.\nThe functor\n\\[\n S_{\\PA}\\longrightarrow\\mathscr R_{\\PA}[U],\\qquad\n X\\longmapsto(U\\times X\\to U),\\qquad\n f\\longmapsto1_U\\times f\n\\]\nis faithful and sends $\\tau_{\\PA}$ to $1_U\\times\\tau_{\\PA}$,\na Turing morphism in $\\mathscr R_{\\PA}[U]$.\n",
+      "explicit_hypotheses": [
+        "PA consistent",
+        "U a consistent internal extension of the signed theory",
+        "full assumptions of Theorems5.2\u20135.3"
+      ],
+      "reconstruction": [
+        "The PA total splitting supplies regularity, extensivity and partial mono inverses.",
+        "Parameterized syntax and derivations come from the arithmetic constructions.",
+        "The closed equality theorem gives a global point of every extension U.",
+        "Apply the extension and incompleteness theorems and the constant-family recursion-subcategory construction."
+      ],
+      "hypothesis_use_and_scope": [
+        "This is the separate nullary signed theory, not the arbitrary arithmetical \u0393 theory of Theorem8.3.",
+        "Faithfulness is obtained from evaluation at the global theorem point."
+      ],
+      "dependencies": [
+        "lem:syntactic-total-category",
+        "thm:syntactic-generated-theory",
+        "lem:arithmetic-signed-theory",
+        "thm:theory-extension",
+        "thm:associated-incompleteness"
+      ],
+      "status": "checked, conditional on the general \u00a7\u00a74\u20135 theorems audited by the assigned reviewers",
+      "confirmed_findings": [],
+      "proof_source_sha256": "3c0dd30c277935f7565c57a2987e7b33a8b37a46bc65aed99e0aad2a5597a0f4"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:miller-unanimity",
+      "number": "9.1",
+      "page": "51",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 44,
+      "hypotheses": [
+        "Continuous onto binary representation map with nonempty compact fibers P_z",
+        "Acceptable oracle enumeration and effective rational/binary codings"
+      ],
+      "hypothesis_use": [
+        "Compactness turns a cover of P_z by equal-output halting cylinders into a finite cover",
+        "Effective dyadic image boxes and semidecision of strict inequalities enumerate the complement of P_z"
+      ],
+      "proof_reconstruction": [
+        "Enumerate cylinders disjoint from P_z by testing z outside their effective closed dyadic images.",
+        "For each m, enumerate halting cylinders on which the oracle computation returns m.",
+        "Search for a finite cover of Cantor space from those two enumerations; finite cylinder coverage is decidable.",
+        "Compactness gives termination exactly for unanimous output m, and nonempty P_z makes that m unique."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:miller-category",
+      "number": "9.2",
+      "page": "52",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 92,
+      "hypotheses": [
+        "Common partial-function domain and values across every p in P_a",
+        "Objects recursively isomorphic to N",
+        "Lemma 9.1"
+      ],
+      "hypothesis_use": [
+        "Common domains and values are preserved by composition, range search, and compatible parallel computations",
+        "Recursive coding supplies all required structural maps",
+        "Oracle specialization provides total parameter maps"
+      ],
+      "proof_reconstruction": [
+        "Composition, products, restrictions, and coproducts are computed with fixed common partial functions.",
+        "Parallel search computes ranges and compatible unions; witness choice cannot change output values.",
+        "Singleton partial identities detect equality and are connected; unique preimage search supplies weak choice.",
+        "Apply oracle specialization to an index of f and use Lemma 9.1 to obtain f=tau_a(c\u00d71)."
+      ],
+      "dependencies": [
+        "lem:miller-unanimity"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:miller-cut-reduction",
+      "number": "9.3",
+      "page": "53",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 180,
+      "hypotheses": [
+        "The fixed-index Miller property",
+        "The unanimous Turing morphism tau_z from 9.1",
+        "Effective finite cylinder approximations to oracle halting"
+      ],
+      "hypothesis_use": [
+        "Compactness equates unanimous halting with one finite stage covering the fiber",
+        "Disjoint parity opens prevent cancellation between the two nonnegative distance sums",
+        "Miller property identifies a(h(e)) with the total computable real r_e(a)"
+      ],
+      "proof_reconstruction": [
+        "Complement images of finite halting unions give closed finite dyadic unions K_{e,m,t}.",
+        "Weighted distances to these sets produce computable continuous nonnegative g_e^i positive exactly on the parity-i open.",
+        "Their signed difference gives r_e below or above 1/2 exactly on the corresponding open.",
+        "Oracle specialization supplies a total recursive h, and the Miller property yields both exact inverse-image equalities."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:miller-cuts-inseparable",
+      "number": "9.4",
+      "page": "53",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 249,
+      "hypotheses": [
+        "The inseparable diagonal pair A_0,A_1 obtained after 9.2",
+        "The total recursive h of 9.3"
+      ],
+      "hypothesis_use": [
+        "Pullback along h preserves complementary restriction idempotents",
+        "First binary digit separates strict cuts for each fixed representation"
+      ],
+      "proof_reconstruction": [
+        "A common-computation separator of the cuts pulls back along h to a forbidden separator of A_0,A_1.",
+        "For fixed p, reading p(<n,0>) separates a(n)<1/2 from a(n)>1/2.",
+        "The resulting sets cannot all agree, since agreement would define a common total separator in E_a."
+      ],
+      "dependencies": [
+        "cor:source-conditionals"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:miller-theory-realization",
+      "number": "9.5",
+      "page": "54",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 292,
+      "hypotheses": [
+        "Objects are E_a-semidecidable numerical carriers",
+        "Morphisms compute common domains and values",
+        "Recursive signature of bounded finite arity; variable object N"
+      ],
+      "hypothesis_use": [
+        "Numerical equality and finite searches construct limits, images, partial inverses and coproduct decompositions",
+        "Constancy on surjection fibers makes descent independent of oracle-dependent witnesses",
+        "Finite recursive tree shape and finitely many positive membership tests give syntax/derivation carriers"
+      ],
+      "proof_reconstruction": [
+        "Construct finite limits and disjoint stable coproducts by numerical computations on carriers.",
+        "Factor maps through semidecidable images; descent along a surjection searches for a preimage and returns its fiber-constant value.",
+        "Injective maps have unique-preimage partial inverses, identifying partial spans with split partial morphisms.",
+        "Finite syntax and proof trees are evaluated recursively, retaining parameters; induction gives totality, common values and unique algebra morphisms."
+      ],
+      "dependencies": [
+        "app:syntax-theories",
+        "prop:categorical-substitution",
+        "app:first-order-derivations"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:miller-parameterized-deduction",
+      "number": "9.6",
+      "page": "55",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 402,
+      "hypotheses": [
+        "X and P are arbitrary E_a-semidecidable numerical carriers",
+        "Variables N and equality",
+        "An axiom subobject A of P\u00d7S; either the nullary language or a recursive bounded-arity signature from 9.5"
+      ],
+      "hypothesis_use": [
+        "Finitely many label-membership tests allow nonrecursive semidecidable symbol objects",
+        "Retaining one parameter makes all operations fiberwise",
+        "Validation of every formula label prevents malformed tree codes from entering the carrier"
+      ],
+      "proof_reconstruction": [
+        "Encode formula trees with equality leaves and X-labeled nullary leaves, semideciding all labels.",
+        "Evaluate an arbitrary syntax algebra while retaining its parameter; induction gives totality and uniqueness.",
+        "Validate finite derivations including formula parameters, side conditions, premise agreement and axiom membership over the same parameter.",
+        "Evaluate any inference algebra in that fiber; induction proves the required conclusion, naturality over the base and uniqueness."
+      ],
+      "dependencies": [
+        "app:syntax-theories"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:miller-incompleteness",
+      "number": "9.7",
+      "page": "56",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 475,
+      "hypotheses": [
+        "Miller sequence a and T_a of real closed fields with rational cuts",
+        "Consistent extension with E_a-semidecidable axiom set",
+        "9.4, 9.5; Corollary 4.3"
+      ],
+      "hypothesis_use": [
+        "Semidecidability supplies an internal axiom subobject and finite proof carrier",
+        "Real field validates the base theory; extension consistency gives disjoint theorem/refutation domains",
+        "Recursive theta maps the strict cuts into theorem/refutation domains"
+      ],
+      "proof_reconstruction": [
+        "Use the initial finite derivation algebra to identify theorem and refutation sets with restriction idempotents.",
+        "For a(n)<1/2, theta(n) is a base axiom; for a(n)>1/2 its negation follows from ordered-field axioms.",
+        "The inseparable cut pair thus reduces along total theta to the base theory domains.",
+        "For every consistent extension, monotonicity and Corollary 4.3 give inseparability and incompleteness."
+      ],
+      "dependencies": [
+        "prop:miller-theory-realization",
+        "thm:first-order-theory",
+        "prop:miller-theory-realization",
+        "lem:range-regular-image",
+        "cor:miller-cuts-inseparable",
+        "thm:first-order-theory",
+        "cor:domain-incompleteness"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:miller-associated-categories",
+      "number": "9.8",
+      "page": "57",
+      "file": "sections/04-miller-sequences.tex",
+      "line": 539,
+      "hypotheses": [
+        "Consistent closed u:U\u21aaS extending t_a",
+        "9.5 and 9.6",
+        "Theorems 5.2\u20135.3; global logical theorem 0=0"
+      ],
+      "hypothesis_use": [
+        "9.5 supplies regularity, extensivity and partial inverses",
+        "9.6 supplies parameterized syntax and deduction, including arbitrary nullary symbol carriers",
+        "0=0 supplies a section of U used by the fiber retraction"
+      ],
+      "proof_reconstruction": [
+        "The cut reduction and base consistency make every consistent extension u essentially incomplete and its domains inseparable.",
+        "Apply the general slice Turing construction using 9.5\u20139.6.",
+        "The global theorem supplies the section required for equivalence under constant-family and fiber functors.",
+        "Theorems 5.2\u20135.3 yield fully faithful comparison functors, proper-image failure of essential surjectivity, and no total extension of the Boolean partial morphism."
+      ],
+      "dependencies": [
+        "prop:miller-theory-realization",
+        "lem:miller-parameterized-deduction",
+        "thm:miller-incompleteness",
+        "cor:domain-incompleteness",
+        "thm:theory-extension",
+        "thm:associated-incompleteness"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:endpoint",
+      "number": "10.1",
+      "page": "59",
+      "file": "sections/09-three-point-space.tex",
+      "line": 197,
+      "hypotheses": [
+        "Partial-map functor category A from Appendix B",
+        "Turing morphism of B.7; i=1,2 for its Turing-image claim"
+      ],
+      "hypothesis_use": [
+        "Componentwise pullbacks and images make evaluation respect partial maps and ranges",
+        "Endpoint formula is the ordinary universal partial-recursive computation; restriction to i=1,2 is essential"
+      ],
+      "proof_reconstruction": [
+        "Evaluate representative spans componentwise; pullbacks and isomorphism classes are respected.",
+        "Restrictions, zero, images, products, sums and finite unions are componentwise.",
+        "For a partial recursive endpoint computation F over any c.e. carrier Z, specialize its ordinary program.",
+        "The parameter z\u21a6(0,s(z)) is total on Z and gives F with exactly its specified domain."
+      ],
+      "dependencies": [
+        "app:fork-structure"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-syntax-initial",
+      "number": "10.2",
+      "page": "61",
+      "file": "sections/09-three-point-space.tex",
+      "line": 353,
+      "hypotheses": [
+        "P(Z)=V+Z+Z\u00b2 in E",
+        "Finite ordered propositional formula trees",
+        "An arbitrary P-algebra alpha:P(Z)\u2192Z"
+      ],
+      "hypothesis_use": [
+        "Finite trees make recursive evaluation terminate",
+        "Naturality of alpha makes evaluation commute with label relabeling"
+      ],
+      "proof_reconstruction": [
+        "At each component, recursively evaluate the tree in alpha.",
+        "Every operation is total on its carrier, so evaluation is partial recursive and defined on every formula.",
+        "Naturality of alpha and induction yield z_i u_0=u_i sigma_i.",
+        "Induction on constructors proves the algebra equation and uniqueness."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-proof-initial",
+      "number": "10.3",
+      "page": "62",
+      "file": "sections/09-three-point-space.tex",
+      "line": 471,
+      "hypotheses": [
+        "The inference endofunctor H on E/S and c.e. finite derivation object",
+        "An arbitrary H-algebra eta:(H(Q,q))\u2192(Q,q)"
+      ],
+      "hypothesis_use": [
+        "Slice algebra equations force values to have the recorded conclusions",
+        "Naturality makes every recursive step commute with the fork transitions"
+      ],
+      "proof_reconstruction": [
+        "Evaluate axiom leaves with eta, preserving their conclusions.",
+        "For modus ponens, the inductively obtained child values satisfy the pullback premise equations.",
+        "Apply the binary operation to get the required consequent; every finite evaluation terminates.",
+        "Induction gives naturality, the slice equation qu=c, the algebra equation and uniqueness."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:fork-proof-presentation",
+      "number": "10.4",
+      "page": "63",
+      "file": "sections/09-three-point-space.tex",
+      "line": 502,
+      "hypotheses": [
+        "Regularity of E from B.2",
+        "Initial proof algebra from 10.3",
+        "Disjoint atomic subfunctors A,B"
+      ],
+      "hypothesis_use": [
+        "Theorem A.5 identifies the image with least deductive closure",
+        "Componentwise images identify ordinary theorem sets",
+        "Disjointness permits a Boolean valuation satisfying every axiom in any two finite proofs"
+      ],
+      "proof_reconstruction": [
+        "The image of c is the least subobject containing axioms and closed under modus ponens.",
+        "One-node proofs give the two atomic domain inequalities.",
+        "For a putative contradictory proof pair, set true exactly the finitely many positive labels occurring in the pair.",
+        "All negative leaves and all logical axioms are true, while modus ponens preserves truth; the contradictory conclusions are impossible."
+      ],
+      "dependencies": [
+        "thm:least-theorem-subobject",
+        "prop:fork-proof-initial",
+        "lem:range-regular-image"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:cosheaf-observation",
+      "number": "10.5",
+      "page": "63",
+      "file": "sections/09-three-point-space.tex",
+      "line": 557,
+      "hypotheses": [
+        "i=1 or 2",
+        "Compatible consistent c.e. closed extension family T",
+        "Inseparable domains a,b and inequalities from 10.4"
+      ],
+      "hypothesis_use": [
+        "Corollary 4.3 transfers source inseparability to theorem/refutation domains",
+        "Endpoint recursiveness gives c.e. inverse images",
+        "Endpoint diagonal sets A_i,B_i were separately proved recursively inseparable"
+      ],
+      "proof_reconstruction": [
+        "Apply Corollary 4.3 in A to show that t_T and its negation pullback are inseparable.",
+        "Pull endpoint theorem and refutation sets back along the total recursive atomic map.",
+        "The resulting disjoint c.e. sets contain A_i and B_i, so a recursive separator would contradict their inseparability.",
+        "A complete endpoint theory would give complementary c.e. atom sets, hence such a separator; inclusions of families give identity pair morphisms."
+      ],
+      "dependencies": [
+        "cor:domain-incompleteness"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:cosheaf-essential-incompleteness",
+      "number": "10.6",
+      "page": "64",
+      "file": "sections/09-three-point-space.tex",
+      "line": 599,
+      "hypotheses": [
+        "i=1 or 2",
+        "Consistent same-language extension with c.e. axiom set"
+      ],
+      "hypothesis_use": [
+        "Finite proof coding makes its deductive closure c.e.",
+        "Endpoint-only enlargement preserves transition inclusions from unchanged central theory"
+      ],
+      "proof_reconstruction": [
+        "Take the c.e. deductive closure U of the extension axioms.",
+        "Replace only endpoint i of the base family by U.",
+        "The family is consistent and remains a subfunctor because U contains the prior endpoint theory.",
+        "Apply Theorem 10.5 to conclude U incomplete."
+      ],
+      "dependencies": [
+        "thm:cosheaf-observation"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-first-order-realization",
+      "number": "10.7",
+      "page": "64",
+      "file": "sections/09-three-point-space.tex",
+      "line": 623,
+      "hypotheses": [
+        "Arbitrary object D in E",
+        "Constant variable object Delta N",
+        "Nullary predicates D, equality, and no other nonlogical symbols"
+      ],
+      "hypothesis_use": [
+        "Constant variable transitions give decidable equality and preserve free-variable side conditions",
+        "Component label carriers and axiom carriers are c.e.",
+        "Finite trees permit arbitrary parameter retention"
+      ],
+      "proof_reconstruction": [
+        "The five-summand polynomial functor has c.e. finite-tree carriers with componentwise label relabeling.",
+        "Evaluation in an arbitrary algebra is recursive and natural by induction, including over a fixed parameter.",
+        "Occurrence lists and substitutions commute with transitions since nullary relabeling does not affect variables.",
+        "Validate and evaluate finite rule trees over each parameter; induction gives initial derivation algebras in all required slices."
+      ],
+      "dependencies": [
+        "prop:categorical-substitution",
+        "app:first-order-derivations"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-first-order-conservative",
+      "number": "10.8",
+      "page": "65",
+      "file": "sections/09-three-point-space.tex",
+      "line": 696,
+      "hypotheses": [
+        "First-order language from 10.7 with D=V",
+        "Base positive and negative atomic axioms",
+        "Consistent essentially incomplete propositional theory from 10.4\u201310.6"
+      ],
+      "hypothesis_use": [
+        "Terms are only variables, so all equality atoms can be sent to top and substitution erased",
+        "Global element of V provides a natural propositional tautology top",
+        "Atom reduction and endpoint restriction preserve negation"
+      ],
+      "proof_reconstruction": [
+        "Erase quantifiers, send equality atoms to top, and retain propositional connectives and nullary atoms.",
+        "The seven axiom schemes map to propositional theorems; both inference rules preserve the inverse image of the propositional theory.",
+        "Leastness yields first-order theory contained in that inverse image; embedded propositional proofs yield equality on restriction and consistency.",
+        "The same atomic reduction proves internal essential incompleteness; a complete endpoint extension would restrict to a complete c.e. propositional extension, contradiction."
+      ],
+      "dependencies": [
+        "cor:domain-incompleteness",
+        "cor:cosheaf-essential-incompleteness"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:fork-associated-theories",
+      "number": "10.9",
+      "page": "66",
+      "file": "sections/09-three-point-space.tex",
+      "line": 781,
+      "hypotheses": [
+        "Consistent internal u extending the first-order theory",
+        "B.2\u2013B.3 and B.8",
+        "10.7\u201310.8; Theorems 5.2\u20135.3"
+      ],
+      "hypothesis_use": [
+        "B.2\u2013B.3 give regular/extensive total category and partial inverses",
+        "10.7 gives all parameterized syntax and derivations",
+        "j(top) is a global logical theorem and hence a section of U"
+      ],
+      "proof_reconstruction": [
+        "Identify A with the restriction splitting of R_X and E with its total category.",
+        "The first-order atomic reduction makes every consistent extension u essentially incomplete and inseparable.",
+        "The global theorem provides the section for constant-family and fiber functors.",
+        "Apply the general theorems to obtain slice Turing categories, fully faithful comparison and inseparability in the associated category."
+      ],
+      "dependencies": [
+        "prop:fork-total",
+        "prop:fork-structure",
+        "prop:fork-recursion",
+        "prop:fork-first-order-realization",
+        "prop:fork-first-order-conservative",
+        "cor:domain-incompleteness",
+        "thm:theory-extension",
+        "thm:associated-incompleteness"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "definition",
+      "title": null,
+      "label": "def:categorical-syntax",
+      "number": "A.1",
+      "page": "68",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 188,
+      "statement": "\\label{def:categorical-syntax}\nA named-variable syntax object is an initial $K$-algebra\n$\\iota:K(\\Tm,\\Fm)\\to(\\Tm,\\Fm)$ stable under parameters.\nWe also require a list object $W=\\List V$, given by an initial\nalgebra $[\\nil,\\cons]:1+V\\times W\\to W$ stable under parameters.\n",
+      "proof": null,
+      "audit_status": "definition_checked",
+      "hypotheses_used": [
+        "Parameterized initial K-algebra; parameterized list algebra; decidable equality on V."
+      ],
+      "proof_reconstruction": [
+        "This is a definition, not an existence assertion.",
+        "The preceding polynomial expressions explicitly type K on objects and morphisms.",
+        "Lambek initiality supplies the constructor decomposition, and parameterization gives the stated induction and folds."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "definition",
+      "title": null,
+      "label": "def:sentence-object",
+      "number": "A.2",
+      "page": "69",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 261,
+      "statement": "\\label{def:sentence-object}\nThe sentence object $s:S\\hookrightarrow\\Fm$ is the pullback\n\\[\n\\begin{tikzcd}\n S\\arrow[r,hook,\"s\"]\\arrow[d] & \\Fm\\arrow[d,\"\\FV_{\\Fm}\"]\\\\\n 1\\arrow[r,\"\\nil\"'] & W.\n\\end{tikzcd}\n\\]\n",
+      "proof": null,
+      "audit_status": "definition_checked",
+      "hypotheses_used": [
+        "Formula free-variable map and list nil."
+      ],
+      "proof_reconstruction": [
+        "This is a pullback definition of the subobject of formulas with empty free-variable list.",
+        "Nil:1\u2192W is monic; pullback therefore gives a monic sentence inclusion.",
+        "The displayed free-variable equation for negation gives its total restriction \u03bd:S\u2192S."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "proposition",
+      "title": null,
+      "label": "prop:categorical-substitution",
+      "number": "A.3",
+      "page": "70",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 327,
+      "statement": "\\label{prop:categorical-substitution}\nParameterized initiality uniquely determines morphisms\n$a_T:\\Tm\\times E\\to\\Tm$ and\n$b_F:\\Fm\\times E\\to O(\\Fm)$.\nAdmissibility and formula substitution are defined by the pullback\n\\[\n\\begin{tikzcd}\n \\Adm\\arrow[r,\"a_F\"]\\arrow[d,hook,\"j\"'] &\n \\Fm\\arrow[d,hook,\"\\ok_{\\Fm}\"]\\\\\n \\Fm\\times E\\arrow[r,\"b_F\"'] & O(\\Fm).\n\\end{tikzcd}\n\\]\nThe monomorphism $j$ is complemented.\n",
+      "proof": "\nThe unique $K_E$-algebra morphism into $(X_T,X_F)$ has the original\nexpression and its substitution value as its two components. Composing this algebra morphism with the\nprojections to the original components gives an endomorphism of the\ninitial $K_E$-algebra, hence the identity. The result components,\nafter interchanging the parameter\nand syntax factors, are $a_T$ and $b_F$. The pullback defines\n$j$ and $a_F$; the coproduct hypotheses make $j$ complemented.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Parameterized K-initiality; total Boolean equality on V; extensive products/coproducts; defined algebra retaining original expressions and recursive values."
+      ],
+      "proof_reconstruction": [
+        "The specified K_E-algebra has carriers E\u00d7(Tm\u00d7Tm) and E\u00d7(Fm\u00d7(1+Fm)).",
+        "Its unique fold projects to the identity on the original syntax by initiality.",
+        "Its other components are the required total term-substitution and formula-result morphisms.",
+        "Pulling back the successful coproduct injection defines Adm and a_F; extensivity gives the complement of its inclusion."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "definition",
+      "title": null,
+      "label": "def:deductively-closed",
+      "number": "A.4",
+      "page": "71",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 438,
+      "statement": "\\label{def:deductively-closed}\nA subobject $m:T\\hookrightarrow F$ is closed under these rules if\nthere is a morphism $\\alpha:\\coprod_nB_n(T,m)\\to T$ with\n$m\\alpha=\\kappa_m$. Equivalently, $(T,m)$ admits an $H$-algebra\nstructure in $\\mathcal D/F$. When $F$ and the rule morphisms specify\na logical calculus, such a subobject is a deductively closed theory\nof formulas for that calculus.\n",
+      "proof": null,
+      "audit_status": "definition_checked",
+      "hypotheses_used": [
+        "Finite-rule endofunctor H in D/F and monic m:T\u21aaF."
+      ],
+      "proof_reconstruction": [
+        "This defines closure as an H-algebra over the formula object.",
+        "Monicity makes its structure unique when it exists.",
+        "For an inclusion of closed subobjects, composition with the target mono identifies the two algebra-morphism composites."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": null,
+      "label": "thm:least-theorem-subobject",
+      "number": "A.5",
+      "page": "72",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 457,
+      "statement": "\\label{thm:least-theorem-subobject}\nWith the rule data above, suppose\n$\\delta:H(P,c)\\to(P,c)$ is an initial algebra in $\\mathcal D/F$.\nThe image of its conclusion morphism $c:P\\to F$ is the least\nsubobject of $F$ closed under the rules.\n",
+      "proof": "\nFactor $c=me$ with $e:P\\twoheadrightarrow T$ regular epic and\n$m:T\\hookrightarrow F$ monic. The endofunctor $H$ preserves\nregular epimorphisms: finite products preserve them in a regular\ncategory, each $B_n(e)$ is a pullback of $e^n$, and finite coproducts\npreserve coequalizers. Thus $H(e)$ is regular epic.\n\nWriting $|H(P,c)|$ for the underlying object of the slice object,\nthe equations $c\\delta=\\kappa_c$ and\n$\\kappa_mH(e)=\\kappa_c$ give the commuting square\n\\[\n\\begin{tikzcd}[column sep=large]\n \\lvert H(P,c)\\rvert\\arrow[r,\"e\\delta\"]\\arrow[d,two heads,\"H(e)\"'] &\n T\\arrow[d,hook,\"m\"]\\\\\n \\lvert H(T,m)\\rvert\\arrow[r,\"\\kappa_m\"']\\arrow[ur,dashed,\"\\alpha\"] & F.\n\\end{tikzcd}\n\\]\nSince $m$ is monic, $e\\delta$ coequalizes the kernel pair of $H(e)$.\nThe regular epimorphism $H(e)$ is its kernel-pair coequalizer, so\nthere is a unique diagonal $\\alpha$. In particular, $m\\alpha=\\kappa_m$,\nso the image is closed. If $u:U\\hookrightarrow F$ is another\nclosed subobject, initiality gives an algebra morphism\n$v:(P,c)\\to(U,u)$, hence $uv=c$. The image factorization gives\na unique $w:T\\to U$ with $uw=m$.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Regular D; finite coproducts; finite rule arities; initial H-algebra."
+      ],
+      "proof_reconstruction": [
+        "Factor the conclusion c=me with e regular epic.",
+        "Finite products, pullback and coproduct of coequalizers show H(e) regular epic.",
+        "The commuting square against m makes e\u03b4 coequalize the kernel pair of H(e); descend to the unique rule algebra on the image.",
+        "For every closed subobject U, initiality provides a map P\u2192U over F; the image universal property gives T\u2192U.",
+        "Thus the image is closed and least."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "theorem",
+      "title": null,
+      "label": "thm:first-order-theory",
+      "number": "A.6",
+      "page": "73",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 553,
+      "statement": "\\label{thm:first-order-theory}\nSuppose $H_A$ has an initial algebra with conclusion morphism\n$c_A:P_A\\to F$. Its image $T_A\\hookrightarrow F$ is the least\nsubobject containing the logical and nonlogical axioms and closed\nunder generalization and modus ponens. The image of the pullback\n\\[\n\\begin{tikzcd}\n P_{A,S}\\arrow[r]\\arrow[d,\"c_{A,S}\"'] & P_A\\arrow[d,\"c_A\"]\\\\\n S\\arrow[r,hook,\"s\"'] & F\n\\end{tikzcd}\n\\]\nis $T_{A,S}=S\\times_F T_A\\hookrightarrow S$.\n",
+      "proof": "\nTheorem~\\ref{thm:least-theorem-subobject} gives the first assertion.\nRegular images are stable under pullback, giving the second.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "Syntax and admissible substitution; the seven explicitly typed schemes; H_A initial for axiom mono A\u21aaS."
+      ],
+      "proof_reconstruction": [
+        "The rule family is the preceding finite-rule construction with arities 0,1,2.",
+        "Theorem A.5 supplies the least closed formula image.",
+        "Regular-image stability under pullback along S\u21aaFm gives exactly the sentence image equality."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "lemma",
+      "title": "Regular images and ranges",
+      "label": "lem:range-regular-image",
+      "number": "A.7",
+      "page": "73",
+      "file": "appendices/a-syntax-and-theories.tex",
+      "line": 584,
+      "statement": "\\label{lem:range-regular-image}\nLet $\\mathcal S$ be a restriction category with ranges in which every\nrestriction idempotent splits. Suppose $\\mathcal D=\\Tot(\\mathcal S)$\nis regular, and let $f:X\\to Y$ have regular-image factorization\n$f=me$ in $\\mathcal D$, with $e:X\\twoheadrightarrow I$ and\n$m:I\\hookrightarrow Y$.\nIf $m$ has a partial inverse $r:Y\\rightharpoonup I$ in $\\mathcal S$,\nthen $\\ran(f)=mr=\\bar r$.\n",
+      "proof": "\nThe restriction idempotent $mr$ receives $f$, since $mrf=mrme=f$.\nLet $a:Y\\rightharpoonup Y$ be any restriction idempotent receiving $f$.\nChoose a splitting $a=js$, where $j:J\\to Y$ is total,\n$s:Y\\rightharpoonup J$, and $sj=1_J$.\nThen $f=j(sf)$, and $sf:X\\to J$ is total, since\n$\\overline{sf}=\\overline{jsf}=\\bar f=1_X$.\nThe morphism $j$ is monic in $\\mathcal D$, so the universal property\nof the regular image gives a unique $u:I\\to J$ with $ju=m$.\nConsequently, $am=jsju=ju=m$ and $a(mr)=mr$.\nThus $mr\\leq a$, so $mr=\\ran(f)$.\n",
+      "audit_status": "no_confirmed_defect",
+      "hypotheses_used": [
+        "S has ranges and all restriction idempotents split; D=Tot(S) regular; image mono m has partial inverse r."
+      ],
+      "proof_reconstruction": [
+        "mr receives f=me.",
+        "Split any receiving restriction idempotent a=js; sf is total because j is total and jsf=f.",
+        "Since j is a total mono receiving f, the regular image factors as m=ju.",
+        "Then am=m and a(mr)=mr, proving mr is the least receiving restriction idempotent."
+      ],
+      "hidden_hypothesis_found": false,
+      "note": "Source audit; no new Lean execution or literature authentication."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-cosheaves",
+      "number": "B.1",
+      "page": "74",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 9,
+      "hypotheses": [
+        "Three-point space with opens empty,D,L,R,X",
+        "Set-valued cosheaf definition with empty cover condition"
+      ],
+      "hypothesis_use": [
+        "Covers of proper nonempty opens contain that open",
+        "The only additional cover condition is the pushout for X=L\u222aR"
+      ],
+      "proof_reconstruction": [
+        "Restriction of a cosheaf gives the fork C\u2192A,C\u2192B.",
+        "Conversely assign empty set at empty and the pushout A amalg_C B at X.",
+        "Every cover reduces to an included maximal open or to L,R, so all cosheaf conditions hold.",
+        "Natural transformations act uniquely on pushouts; this gives the quasi-inverse and natural isomorphisms."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-total",
+      "number": "B.2",
+      "page": "75",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 66,
+      "hypotheses": [
+        "Regular/extensive numerical category C_rec from 8.7",
+        "Finite fork J and E=C_rec^J"
+      ],
+      "hypothesis_use": [
+        "Finite limits/coproduts formed componentwise",
+        "Componentwise surjective descent becomes natural by cancellation with q_0",
+        "Representable singleton probes detect injectivity"
+      ],
+      "proof_reconstruction": [
+        "Construct limits and finite coproducts componentwise and use uniqueness for naturality.",
+        "Component images form subfunctors; descent along componentwise surjections respects transitions by cancellation.",
+        "Pullback stability is inherited, and singleton probes prove that monos are exactly component injections.",
+        "Inverse images of coproduct summands yield the slice equivalence proving extensivity."
+      ],
+      "dependencies": [
+        "prop:numerical-structure"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-structure",
+      "number": "B.3",
+      "page": "75",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 120,
+      "hypotheses": [
+        "Regular/extensive E with componentwise images and monomorphisms",
+        "A=Par(E,Mono)"
+      ],
+      "hypothesis_use": [
+        "C.e. domain subfunctors are stable under the partial-map composite formula",
+        "Component images give ranges and the agreement law",
+        "Injectivity on a partial monomorphism domain gives natural preimage-search inverses"
+      ],
+      "proof_reconstruction": [
+        "Represent each partial map by a domain subfunctor and natural transformation; composition has the stated c.e. inverse-image domain.",
+        "Restrictions split through their domains; products and sums give prodominical structure.",
+        "Component images satisfy leastness and the agreement law; set formulas give product and pullback laws and inverse-image preservation.",
+        "Partial monomorphisms are componentwise injective on domains and have natural partial inverses by unique preimage search."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-local",
+      "number": "B.4",
+      "page": "76",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 207,
+      "hypotheses": [
+        "A as in B.3",
+        "Finite fork-generated subfunctors at central points and singleton endpoint subfunctors"
+      ],
+      "hypothesis_use": [
+        "A partition containing a central point must contain both transition images",
+        "Point probes detect definedness and values of each component"
+      ],
+      "proof_reconstruction": [
+        "The subfunctor generated by one central point is connected because its transition images must stay in the same partition part.",
+        "A singleton endpoint subfunctor is also connected.",
+        "Agreement after all these domain idempotents forces componentwise equality of domains and values.",
+        "Thus the connected restriction idempotents are jointly epimorphic."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:fork-dominance",
+      "number": "B.5",
+      "page": "77",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 237,
+      "hypotheses": [
+        "Arbitrary c.e. numerical fork object Y",
+        "Fixed recursive tuple injections into N"
+      ],
+      "hypothesis_use": [
+        "The central extra coordinate records y injectively",
+        "Endpoint encodings enforce naturality and give c.e. images"
+      ],
+      "proof_reconstruction": [
+        "Map endpoints y_i to (0,c_i(y_i)).",
+        "Map a central y to (0,c_0(y),c_1(r_1 y),c_2(r_2 y)).",
+        "These componentwise injections commute with transitions and have c.e. image.",
+        "Unique preimage search gives natural inverse components on that image and hence a restriction monomorphism."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:fork-frames",
+      "number": "B.6",
+      "page": "77",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 286,
+      "hypotheses": [
+        "V_0=N^4,V_1=V_2=N^2 with the displayed projections",
+        "Recursive pairing and uniform nonempty tuple encodings"
+      ],
+      "hypothesis_use": [
+        "Coordinatewise pairing commutes with the projection transitions",
+        "The shared first coordinate carries the coproduct tag or word length"
+      ],
+      "proof_reconstruction": [
+        "For V\u00d7V, decode each coordinate into a pair and use componentwise pairing for the inverse.",
+        "For V+V, use parity of the common first coordinate as tag and halve it.",
+        "For V#, encode the common first-coordinate word and decode all other coordinates to the same length.",
+        "Each map commutes with endpoint projection and the explicit inverse equations prove isomorphism."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:fork-turing",
+      "number": "B.7",
+      "page": "78",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 345,
+      "hypotheses": [
+        "A=Par(E,Mono), universal object V",
+        "Acceptable ordinary partial-recursive numbering with s-m-n",
+        "Any F:Y\u00d7V\u21c0V represented by domain subfunctor D and natural F|D"
+      ],
+      "hypothesis_use": [
+        "Subfunctor condition forces endpoint membership whenever a central input is defined",
+        "Naturality makes the three output computations agree under projection",
+        "s-m-n gives total parameter functions on ambient tuples"
+      ],
+      "proof_reconstruction": [
+        "Endpoint computations use ordinary universal evaluation; the central computation runs one central and both endpoint programs and checks projected equality.",
+        "The successful central inputs form a c.e. subfunctor and the output is natural.",
+        "Specialize programs for F restricted exactly to each D_j and assemble their indices into the displayed natural total c:Y\u2192V.",
+        "On D_0 all checks succeed; outside D_0 the central specialized computation cannot halt. Endpoint domains also agree exactly, proving tau(c\u00d71)=F."
+      ],
+      "dependencies": [],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-recursion",
+      "number": "B.8",
+      "page": "79",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 473,
+      "hypotheses": [
+        "Full subcategory on iterated V-products, sums and nonempty words",
+        "Frames B.6; Turing morphism B.7; dominance B.5"
+      ],
+      "hypothesis_use": [
+        "Frames make the subcategory isotypical",
+        "Fullness retains every parameter morphism and all endomorphism-based ranges",
+        "Dominance gives essential surjectivity of the splitting functor"
+      ],
+      "proof_reconstruction": [
+        "Structural operations restrict, all generated objects are isomorphic to V, and the Turing property restricts by fullness.",
+        "Restrictions and ranges lie in the full endomorphism sets, so the inclusion is a range functor.",
+        "Send a split object to its domain and f to r_d f m_e; the inverse hom assignment is g\u21a6m_d g r_e.",
+        "The split equations prove identities, composition, restrictions and full faithfulness; dominance makes every ambient object such a domain."
+      ],
+      "dependencies": [
+        "lem:fork-frames",
+        "thm:fork-turing",
+        "lem:fork-dominance"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:fork-karoubi",
+      "number": "B.9",
+      "page": "80",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 520,
+      "hypotheses": [
+        "A and R_X as above",
+        "Arbitrary partial idempotent p with p\u00b2=p"
+      ],
+      "hypothesis_use": [
+        "The idempotent equation makes its image lie in its domain and be fixed pointwise",
+        "C.e. images form subfunctors",
+        "B.5 realizes all objects as images on V"
+      ],
+      "proof_reconstruction": [
+        "The image I of p is a c.e. subfunctor; p fixes I and has I inside its domain.",
+        "Inclusion m and p viewed as a map r into I satisfy mr=p and rm=1_I.",
+        "For arbitrary Karoubi idempotents, f\u21a6r_d f m_e and g\u21a6m_d g r_e are inverse hom assignments and preserve restrictions.",
+        "Every ambient object is an image of a restriction idempotent on V, giving essential surjectivity."
+      ],
+      "dependencies": [
+        "prop:fork-recursion"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:fork-distinction",
+      "number": "B.10",
+      "page": "80",
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "line": 572,
+      "hypotheses": [
+        "Splitting equivalence B.8 and ordinary numerical splitting equivalence 8.7",
+        "Constant terminal singleton in E",
+        "Definition of decidable equality as a map to constant 1+1"
+      ],
+      "hypothesis_use": [
+        "Terminal subobject lattices are invariant under category equivalence",
+        "Naturality identifies decisions at equal endpoint projections"
+      ],
+      "proof_reconstruction": [
+        "The terminal fork has four subobjects with empty central component and one with nonempty central component.",
+        "The numerical terminal singleton has two subobjects, excluding equivalence of total categories and hence restriction categories.",
+        "Distinct central tuples differing only in z have equal endpoint projections.",
+        "Naturality would force their equality test to agree with the true endpoint test, contradicting the specified diagonal inverse image."
+      ],
+      "dependencies": [],
+      "verdict": "checked_with_minor_convention_inconsistency",
+      "failure_mode": "inconsistent_use",
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check.",
+      "severity": "minor",
+      "finding": {
+        "anchor": "Appendix B p. 80, appendices/b-three-point-cosheaves.tex:568\u2013570 and 594; Appendix A p. 67, appendices/a-syntax-and-theories.tex:37\u201338 and 130\u2013142",
+        "claim_as_written": "B defines equality by the first summand; A orders false first, true second and defines equality by true.",
+        "evidence_label": "derivation",
+        "why": "The named equality decision convention differs across the two definitions.",
+        "repair": "Replace first by second in both B occurrences.",
+        "downstream_impact": "No change to the nonexistence derivation, which is invariant under swapping both truth values.",
+        "repairability": "local notation correction"
+      }
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:missing-lift",
+      "number": "C.1",
+      "page": "81",
+      "file": "appendices/c-section-lifting.tex",
+      "line": 43,
+      "hypotheses": [
+        "K is the ordinary diagonal halting set",
+        "C_K maps have K-c.e. domains and ordinary partial recursive extensions",
+        "Fixed acceptable ordinary and K-oracle numberings"
+      ],
+      "hypothesis_use": [
+        "K-c.e. domains are closed under the composite, range and finite-union constructions",
+        "Separate specialization of extension program and domain oracle program yields ordinary total parameter maps",
+        "K decides parity-halting set A but A is not ordinarily recursive"
+      ],
+      "proof_reconstruction": [
+        "Compose restricted ordinary programs and use K-c.e. domain calculus to obtain the restriction category, products, sums and ranges.",
+        "Pair an ordinary extension index with an oracle-domain index; ordinary syntactic specialization yields a total Turing parameter.",
+        "The parity-halting set A separates the two diagonal domains and is K-decidable; a reduction from K proves it nonrecursive.",
+        "The target conditional is its total characteristic-summand map, which cannot lift to an ordinary total recursive morphism; the two disjoint restrictions therefore have no common upper bound."
+      ],
+      "dependencies": [
+        "cor:separator"
+      ],
+      "verdict": "checked_no_confirmed_gap",
+      "failure_mode": null,
+      "evidence_label": "derivation",
+      "scope_note": "Local reconstruction, conditional on cited general results. No Lean statement check."
+    },
+    {
+      "number": "D.1",
+      "label": "thm:faithful",
+      "page": "83",
+      "file": "appendices/d-faithful-family.tex",
+      "line": 21,
+      "statement": "\\label{thm:faithful}\nThe functor $F_T$ is faithful and preserves restrictions, zeros, binary\nrestriction products and coproducts, ranges, and finite joins of\nrestriction idempotents. The category\n$\\mathcal D_T$ is split and locally connected, satisfies weak choice,\nand has inverse images preserving binary joins of restriction\nidempotents. Moreover,\n$F_T(1_\\omega)\\ne0$.\n",
+      "explicit_hypotheses": [
+        "T consistent extension of PA",
+        "all N-carrier models of T form the indexing set",
+        "set-theoretic choice for standard model existence/relabelling"
+      ],
+      "reconstruction": [
+        "A failure of universal T-provable graph equality has a model of T+\u00acE; completeness and downward L\u00f6wenheim\u2013Skolem put an isomorphic model in the chosen set.",
+        "That coordinate distinguishes the two partial maps, proving faithfulness.",
+        "Coordinatewise structure gives preservation and splitting; singleton-at-one-coordinate domains detect all map values and domains, proving local connectedness.",
+        "Partial monos have injective coordinate restrictions with partial inverse sections; inverse images preserve unions and nonempty model carriers witness nonzero identity."
+      ],
+      "hypothesis_use_and_scope": [
+        "T need not be c.e. here.",
+        "The target family is allowed arbitrary partial functions, not merely those interpreted from source programs."
+      ],
+      "dependencies": [
+        "prop:model",
+        "first-order completeness",
+        "downward L\u00f6wenheim\u2013Skolem"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "bdc4a6e5dbdcec331871861858a095d6c19e984f0d9d677abab9423a979b2808"
+    },
+    {
+      "number": "D.2",
+      "label": "cor:pair",
+      "page": "84",
+      "file": "appendices/d-faithful-family.tex",
+      "line": 86,
+      "statement": "\\label{cor:pair}\nLet $T\\supseteq\\PA$ be consistent.\nFix $U=\\omega$ and a Turing morphism\n$\\tau:U\\times U\\rightharpoonup U$ in $S_T$.\nChoose an isomorphism $b_0:U\\to U+U$ in $S_{\\PA}$ and put\n$b=Q_{\\PA,T}(b_0)$. Define\n\\[\n d=\\tau\\Delta_U,\\qquad\n a_0=(bd)^*(1_U+0_U),\\qquad a_1=(bd)^*(0_U+1_U).\n\\]\nThen $a_0,a_1$ are inseparable in $S_T$. For every consistent\nextension $T'\\supseteq T$, their images under $Q_{T,T'}$ form the\ninseparable pair defined by the same formulas in $S_{T'}$.\n",
+      "explicit_hypotheses": [
+        "T consistent extension of PA",
+        "arbitrary chosen source Turing morphism \u03c4",
+        "b is image of a PA isomorphism",
+        "T\u2032 consistent extension of T"
+      ],
+      "reconstruction": [
+        "Completeness provides a model of T, so the source diagonal pair is inseparable by Corollary7.3.",
+        "The quotient functor retains objects and is surjective on each hom-set.",
+        "Lifting a target computation and mapping a source Turing factorization proves the image of \u03c4 remains Turing.",
+        "Apply Corollary7.3 for T\u2032 to the image pair."
+      ],
+      "hypothesis_use_and_scope": [
+        "No c.e. hypothesis is used in this corollary.",
+        "Surjective quotient maps need not be faithful; faithfulness is neither used nor claimed."
+      ],
+      "dependencies": [
+        "cor:model-pair"
+      ],
+      "status": "checked",
+      "confirmed_findings": [],
+      "proof_source_sha256": "aa80931c02f19a7d975d4d90b428426ca0a3efbe50ea3d8b033a3dd0dffa87c7"
+    }
+  ]
+}
