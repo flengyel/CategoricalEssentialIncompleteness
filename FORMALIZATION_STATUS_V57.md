@@ -586,3 +586,43 @@ numbered counterparts and eight open mathematical obligations**. The manuscript
 remains v57 with unchanged source, PDF, archive, manifest and instructions.
 The [associated-category report](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
 records the scope and verification of these subgoals.
+
+
+### Constructed finite-rule closure transfer, 14 November 2026
+
+`V46FiniteRuleTransport` constructs natural finite-premise tuple comparisons
+and the pullback isomorphisms for each typed rule. `V46MappedRuleAlgebras`
+uses their inverses to construct a target rule algebra on the image of a
+source algebra. `V46FirstOrderRuleTransport` constructs the actual nullary,
+unary and binary rule-instance morphisms for the mapped first-order rules,
+including the axiom representative comparison. Closure preservation is a
+conclusion of these constructions, rather than a supplied field.
+
+`V46FiniteLimitSubobjects` proves monotonicity and pullback compatibility of
+the subobject image under a finite-limit-preserving functor.
+`V46ClosedTheoryTransfer.generation_le_image` folds target initial derivations
+into the mapped closed source formula image. Its conclusion has the direction
+Gen(image A)≤image(Gen A). `closed_image` and `theoryFunctor` then construct
+the image of each closed sentence theory and its action on theory morphisms.
+Initiality is required only for axiom subobjects in the two indicated calculi.
+
+`V46RegularSlices` derives regularity and finite extensivity of ordinary
+slices from the corresponding base hypotheses. `V46SliceBaseChangeGeometry`
+constructs the constant-family right adjunction and proves finite-limit
+preservation for that functor and evaluation at a terminal-domain point.
+`V46SliceClosedTheories.constant_closed` and `evaluation_closed` instantiate
+the closure theorem for their literal mapped rule operations, giving actual
+functors on the corresponding closed-theory categories.
+
+These are supporting results for Theorem 5.3. The identification of the
+composed mapped calculus with the original calculus through the evaluation
+retraction, consistency/completeness preservation and the full essential-
+incompleteness equivalence remain to be assembled. The numbered-result
+status stays **69 proved counterparts and eight open obligations**.
+
+The author has announced four manuscript corrections; their statements and
+revised verification target are pending. This batch leaves manuscript
+statements, source artifacts, version manifest and numbered-result statuses
+unchanged. Its generic lemmas will be reconciled with the revised target.
+The [closure-transfer report](docs/V57_CLOSED_THEORY_TRANSFER_2026-11-14.md)
+records the verification scope.
