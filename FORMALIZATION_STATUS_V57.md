@@ -46,7 +46,7 @@ These comparisons preserve the retained 62 mappings. The completed full v57 repl
 |---|---|---|---|---|
 | Lemma 5.1; `lem:partial-slice-turing`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | C and C[T]=Par(D/T,Mono) are Turing categories with slice Turing morphism 1_T×τ. The full recursion subcategory R[T] on T×X has Split(R[T])≃C[T]. | `V46.SplitTuring.turing_object`; `V46.SplitSliceTuring.turing_object`; `V46.ConstantSlice.Full.recursionCategory`, `productLaws`, `prodominical`, `isotype`; `actualInclusion_range`; `splittingEquivalence`, `splittingEquivalence_restriction`, `splittingEquivalence_inverse_restriction`. | R a recursion category; D=Tot(Split(R)) regular with disjoint stable finite coproducts and partial inverses for all monos; arbitrary T. | Proved by constructed restriction equivalences. The literal full subcategory of original constant families has binary restriction products, inherited zeros, isotype and a Turing morphism. Its restriction splitting is equivalent to the actual monic partial-map slice, preserving restriction in both directions. The realization is full and faithful with exactly the stated constant objects as its object range. |
 | Theorem 5.2; `thm:theory-extension`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | For t=ui, Σ_i is fully faithful and Σ_i⊣i*⊣Σ_i. Proper i gives failure of essential surjectivity; composition and the sentence/theorem comparison square hold. The sentence family is isomorphic to its pullback and the theorem family lies below the pulled-back theory. | `V46.PartialSliceChangeBase.postcompose_full`, `postcompose_faithful`, `leftAdjunction`, `rightAdjunction`, `reindex_eq_spanPullback`, `not_essSurj`, `postcompose_comp`; `V46.PartialSliceTheoryFamilies.comparison_square`, `sentenceIso`, `theory_bound`; `V46.PartialSlicePostcomposeProducts.actualProductIso`. | Lemma 5.1 hypotheses: split restriction products, pullbacks in Tot(C), and partial inverses for total monomorphisms. Total theory monos t:T→S, u:U→S and i:T→U with i≫u=t. The construction works in the actual monic partial-map slices. | Proved. Postcomposition retains spans and reindexing equals ordinary span pullback. Both natural hom equivalences give the adjunctions. The second unit is the inverse of the pullback inclusion and is non-total at the terminal family for proper i. The total comparison square, sentence isomorphism and subobject inequality hold, as do identity, composition and binary restriction-product preservation. |
-| Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `LC.domain_incompleteness` and existing partial-map constructions. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Construct B_U, E_U and E_UB_U≅1. | Open. Prove the retraction, preservation of closed theories, consistency and completeness; prove both Boolean-morphism equivalences and the conclusion for every consistent extension receiving an inseparable pair. |
+| Theorem 5.3; `thm:associated-incompleteness`; [04-theory-extensions.tex](manuscript/latex/sections/04-theory-extensions.tex) | Essential incompleteness of u is equivalent to that of B_U(u). Incompleteness is equivalent to non-totality of the associated Boolean partial morphism; inseparability in C is equivalent to no total extension in C[U]. | `V46.AssociatedCategory.evaluation`, `retraction`, `constant_total_iff`, `hasTotalExtension_iff`; `V46.BooleanPartialDecision.decision`, `domain_eq`; `V46.AssociatedCategory.incomplete_iff_decision_not_total`, `inseparable_iff_no_total_extension`, `no_total_extension_of_reduction`. | Theorem 5.2 plus a fixed global logical theorem λ:1→S factoring through every theory considered. Evaluation is actual span pullback along its factorization λ_U followed by the base functor. The constructed natural isomorphism E_UB_U≅1 yields faithfulness and totality/extension reflection. The Boolean domain is proved equal to the theorem/refutation join under the subobject/domain identification. | Open. The retraction and both Boolean-morphism equivalences are proved. The no-total-extension witness is also proved for every consistent extension with the stated total subobject reduction bounds. Transfer of closed sentence theories in both directions, consistency/completeness preservation for those theories, the full essential-incompleteness equivalence and its essential-incompleteness conclusion for extensions remain. |
 
 ### Section 6
 
@@ -237,7 +237,7 @@ completion of a manuscript result.
 
 The v57 source archive and PDF have been recovered and matched to the SHA-256 digests in the supplied WSL2 instructions. Their bytes are now the active manuscript inputs selected by `MANUSCRIPT_CURRENT.json`. The earlier [continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md) records why WSL2 work had continued with v51; its missing-file statement describes that earlier checkout.
 
-The first remaining mathematical construction is Theorem 5.3: the constant-family/evaluation retraction and transfer of closed theories, essential incompleteness and Boolean partial morphisms to the associated category. Lemma 5.1 and Theorem 5.2 are now proved, including the constant-object recursion subcategory, its restriction-splitting equivalence, both change-of-base adjunctions and the sentence/theorem comparisons. Corollary 4.8 has the Boolean valuation, admissible-substitution invariant, seven-scheme and inference-rule soundness, and the closed consistent complete extension. Its final equivalence uses the proved subobject/domain order isomorphism under the printed partial-inverse hypothesis. All 32 targeted strict commands and 70 selected axiom reports for that result pass. The full v57 replay at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed 1,708 commands and established 67 proved numbered counterparts at that snapshot. The subsequent completions raise the current count to 69, with eight mathematical obligations open. The preceding full replay at `c87ae0e3a7f1faed605c6bc1753f6309504527b7` remains preserved as evidence for its earlier 66-result snapshot.
+The first remaining mathematical obligation is the rest of Theorem 5.3: transfer of closed sentence theories in both directions and the full essential-incompleteness equivalence. Its constant-family/evaluation retraction, totality and total-extension comparisons, and both Boolean-morphism equivalences are now proved. Lemma 5.1 and Theorem 5.2 are now proved, including the constant-object recursion subcategory, its restriction-splitting equivalence, both change-of-base adjunctions and the sentence/theorem comparisons. Corollary 4.8 has the Boolean valuation, admissible-substitution invariant, seven-scheme and inference-rule soundness, and the closed consistent complete extension. Its final equivalence uses the proved subobject/domain order isomorphism under the printed partial-inverse hypothesis. All 32 targeted strict commands and 70 selected axiom reports for that result pass. The full v57 replay at `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed 1,708 commands and established 67 proved numbered counterparts at that snapshot. The subsequent completions raise the current count to 69, with eight mathematical obligations open. The preceding full replay at `c87ae0e3a7f1faed605c6bc1753f6309504527b7` remains preserved as evidence for its earlier 66-result snapshot.
 
 `V46FirstOrderReflection` requires initial derivation algebras only for axiom subobjects. It defines theories by Gen(T)=T and constructs Γ(a)=Gen(im a), both adjunctions and the equation with the sentence pullback of the formula image. It does not transfer initiality to an arbitrary axiom-label presentation. The previous all-morphism implementation remains valid under its stated stronger hypothesis; only its generated sentence images are compared with the printed reflector. The constructed TotalSplit instance has no extra initiality premise.
 
@@ -548,3 +548,41 @@ is the first remaining construction. The manuscript remains v57. Its sources,
 PDF, source archive, manifest and current instructions retain their bytes.
 The verification evidence is recorded in the
 [theory-extension report](docs/V57_THEORY_EXTENSIONS_2026-11-14.md).
+
+
+### Associated-category retraction and Boolean morphisms, 14 November 2026
+
+`V46ConstantFamilyRetraction` constructs a natural comparison between constant
+families and their pullbacks along a total mono. At a global point from a
+terminal total object, this comparison and the terminal-product isomorphism
+give the evaluation retraction. Naturality holds for arbitrary partial
+morphisms. `V46AssociatedEvaluation` realizes evaluation on the actual monic
+partial slice and identifies it with ordinary span pullback followed by the
+base functor. Both evaluation and the constant-family functor preserve
+restrictions, and E_UB_U≅id_C is a constructed natural isomorphism.
+
+`V46RestrictionRetraction` proves faithfulness, totality reflection and the
+equivalence of total extensions under any such restriction-functor retraction.
+An extension is an actual total morphism g with rst(f)≫g=f; evaluation and
+conjugation by the natural isomorphism construct the reflected extension.
+
+`V46BooleanPartialDecision` constructs the Boolean partial morphism of an
+arbitrary disjoint pair of total subobjects. Its domain is their disjoint
+coproduct, its values are true and false, and its restriction is the domain
+idempotent of their join. It is total exactly when that join is top. Its total
+extensions correspond exactly to complementary-subobject separators.
+`V46AssociatedBooleanDecision` applies this construction to a theory and its
+refutation subobject and proves the two printed Boolean-morphism equivalences
+in the actual associated partial slice, including the source restriction-
+idempotent formulation of inseparability. `V46AssociatedExtensionWitness`
+proves the no-total-extension conclusion for every consistent extension
+receiving the total subobject reduction of an inseparable pair.
+
+Theorem 5.3 remains open. The transfer of closed sentence theories using the
+parameterized deduction construction, the corresponding consistency and
+completeness preservation, and the full essential-incompleteness equivalence
+are not supplied as assumptions or marked proved. The count stays **69 proved
+numbered counterparts and eight open mathematical obligations**. The manuscript
+remains v57 with unchanged source, PDF, archive, manifest and instructions.
+The [associated-category report](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
+records the scope and verification of these subgoals.
