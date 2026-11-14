@@ -1,0 +1,1298 @@
+{
+  "proof_commit": "f4572a09adb61331ae07e64da235e35cda23cb40",
+  "manuscript_version": 57,
+  "scope": "incremental-theory-extension-theorem-completion",
+  "success": true,
+  "full_replay": false,
+  "scope_note": "Rebuilds the project and both statement entry points, strictly checks the fourteen new producers and complete Theorem 5.2 statement checks, four selected existing interfaces/check modules and three entry points, and reruns both complete transitive axiom audits. Unchanged production files were not all individually re-elaborated. Earlier full and incremental evidence is preserved.",
+  "run_directory": ".codex-work/v57-theory-extensions-20261114/incremental-verification",
+  "commands": 30,
+  "strict_commands": 23,
+  "selected_axiom_reports": 125,
+  "construction_axiom_reports": 51,
+  "measured_inputs": 2402,
+  "changed_or_added_measured_inputs": 20,
+  "current_production_modules": 913,
+  "current_declarations": 28307,
+  "retained_declarations": 1274,
+  "current_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_snapshot_sha256": "8442d7960066fd0db38206fd95033893899b52b305552038588da03eeb441efb",
+  "verification_json_sha256": "693eb90cf57b55dd8501e20c7e9802ebf1a111e53eb440e701e7a4cb4ccb22fd",
+  "verification_runner_sha256": "baf15e45008ac2f2ea9c0fe43ab6a877ceab745edeb11468a5582bff5eb483a8",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "source_files_verified": 356,
+  "retained_manuscript_sources_verified": 4,
+  "all_dependency_worktrees_clean_and_pinned": true,
+  "dependency_worktrees": 16,
+  "started_at_utc": "2026-11-14T16:53:44.517171+00:00",
+  "finished_at_utc": "2026-11-14T17:04:51.002049+00:00",
+  "sum_command_seconds": 645.75,
+  "baseline_full_verification": {
+    "proof_commit": "45a8a6d017850a3a68fcecd01ad82f5a1a83674a",
+    "verification_json_sha256": "b50d91a19023f4c8d84631f0a562684d10466d2310896a70b686556c9d60ac49",
+    "commands": 1708
+  },
+  "baseline_incremental_verification": {
+    "proof_commit": "d2acc5c940c75a8e8fd2e976db63453ed675cb4a",
+    "verification_json_sha256": "6127c2d8c40a5449ab06a0d0dd2bd8a59b8f14e833cd8920a5c5a58eceae8678",
+    "commands": 25
+  },
+  "baseline_main": "06f3d0558c06026272d2b57e16e1ae35f03bc090",
+  "unexpected_measured_input_delta": [],
+  "principal_declarations": [
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_full",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_faithful",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_eq_spanPullback",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.leftAdjunction",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.rightAdjunction",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_span",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_not_total",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.not_essSurj",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_comp",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.comparison_square",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.sentenceIso",
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theory_bound",
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso"
+  ],
+  "proof_status": {
+    "proved_numbered_counterparts": 69,
+    "open_numbered_obligations": 8,
+    "new_numbered_results_closed": 1,
+    "completed_result": "Theorem 5.2",
+    "first_open_result": "Theorem 5.3",
+    "remaining_5_2": []
+  },
+  "selected_axioms": {
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.functor": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.full": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.compose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceReindex.functor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceReindex.preserves_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.homEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.adjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.domain_absorb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.homEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.adjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProperness.isIso_of_terminal_image": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProperness.not_essSurj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.ofSpan_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_eq_spanPullback": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_ofTotal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_inverseMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.leftAdjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.rightAdjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.left_naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.left_naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_span": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_not_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.not_essSurj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_id": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.comparison_square": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.sentenceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.theorem_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.comparison_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.sentenceComparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.comparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.sentenceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theorem_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theoremComparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theory_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.extension_restriction": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.extension_full": [
+      "Classical.choice"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.extension_essSurj": [
+      "Classical.choice"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.equivalence_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.inverse_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.FullRestrictionProducts.restrictionProducts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.FullRestrictionProducts.map_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.FullRestrictionProducts.evaluator_isTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantFamilyProducts.associatorIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantFamilyProducts.productIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.realization_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.realization_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTuring.realization_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientProductTuring.evaluator_isTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.fullProductIso": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.productLaws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.productRestriction_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.recursionCategory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.dense": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.splittingEquivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.productLaws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.productRestriction_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.prodominical": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.isotype": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.exists_evaluator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.recursionCategory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.actualInclusion_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.actualInclusion_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.actualInclusion_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.splittingEquivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.splittingEquivalence_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.splittingEquivalence_inverse_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitTuring.turing_object": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SplitSliceTuring.turing_object": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionTerminal.exists_restriction_terminal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.extension": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionCompletion.extension_faithful": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.prodominicalLaws": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.map_comp": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.associator_nat": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryLaws": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.restrictionCategory_eq": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.partial_pullback_hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.exists_pairing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AmbientSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.first_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.second_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pair_proj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.pcategoryLaws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProducts.restrictionCategory_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.productIso_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SliceProductTuring.evaluator_isTuring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.terminate_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRetractions.exists_total_retract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.splitting": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.partialSliceSplits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.comp_pair": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pair_cross_masks": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.symmetry_nat": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.comparison_total": [],
+    "CategoricalEssentialIncompleteness.V46.RestrictionProducts.BinaryProduct.iso": [],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceSplitting.ambient_splitting": []
+  },
+  "construction_axioms": {
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.functor": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.full": [
+      "Classical.choice",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcompose.compose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceReindex.functor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceReindex.preserves_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.homEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceLeftAdjunction.adjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.domain_absorb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.homEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceRightAdjunction.adjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProperness.isIso_of_terminal_image": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceProperness.not_essSurj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.inducedFunctor_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialMaps.ofSpan_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_eq_spanPullback": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_ofTotal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.reindex_inverseMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.leftAdjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.rightAdjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.left_naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.left_naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_naturality_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_naturality_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_span": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_not_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.not_essSurj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_id": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.comparison_square": [
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.sentenceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryComparison.theorem_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.comparison_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.sentenceComparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.comparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.sentenceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theorem_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theoremComparison_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSliceTheoryFamilies.theory_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso_fst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso_snd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "commands_detail": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/lean-version.log",
+      "log_sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/axiom-parser-tests.log",
+      "log_sha256": "62cfbeb2911bb226088bfb0918eb4b05008ea70b20bce854ee2ca8a564bd37a5"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 18.91,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/project-build.log",
+      "log_sha256": "f1fe92386e0754cd94ed2166354ed3063ed46836c6a6710386390330d75f0f29"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 19.02,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/CurrentStatementAudit-build.log",
+      "log_sha256": "bfec9833ead25584d3727efba929f374766ee5c312157a38b85ca028a4324127"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 20.82,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/V46StatementAudit-build.log",
+      "log_sha256": "941d83bce801694e54cbaf0599c0b600037d0c6b77dde7a58182f480dc43349c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSlicePostcompose.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.25,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSlicePostcompose.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceReindex.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.0,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceReindex.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceLeftAdjunction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.79,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceLeftAdjunction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceRightAdjunction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.46,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceRightAdjunction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceProperness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.3,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceProperness.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceChangeBase.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.6,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceChangeBase.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.42,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceAdjunctions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialMapFunctorComposition.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.44,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialMapFunctorComposition.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceSpanChangeBase.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.52,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceSpanChangeBase.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceTheoryComparison.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.33,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceTheoryComparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceTheoryFamilies.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.08,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceTheoryFamilies.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceTheorySubobjects.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.54,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceTheorySubobjects.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSlicePostcomposeProducts.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.42,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSlicePostcomposeProducts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceSpanPullback.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.57,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceSpanPullback.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46TheoryExtensionsChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.4,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46TheoryExtensionsChecks.log",
+      "log_sha256": "a8d0958bcbcdaeb0fe7dbea5c1fc2730a58689b91e8a0aa9bc385e6dc1b39e2b"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceTuringTheoremChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.94,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceTuringTheoremChecks.log",
+      "log_sha256": "a59112a2d776d083591726dcda58dc7795e18850cebb0204c57050fce1fd563c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceProductsChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.39,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceProductsChecks.log",
+      "log_sha256": "50f4962e8ce3ddea4861e303de3b1dd31988f8076c6b6272c1f5bef059045796"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialSliceEquivalence.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.63,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialSliceEquivalence.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PartialMapFunctor.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.58,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46PartialMapFunctor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.65,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-CurrentStatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.75,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-V46StatementAudit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.34,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/strict-entry-point.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 17.26,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/retained-statement-audit.log",
+      "log_sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.27,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/retained-axiom-audit.log",
+      "log_sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 376.8,
+      "log": ".codex-work/v57-theory-extensions-20261114/incremental-verification/current-axiom-audit.log",
+      "log_sha256": "25fbe508b648e73a44cc6df1f6bf46773a8df432b45959ee9b427b02f65c38ac"
+    }
+  ]
+}

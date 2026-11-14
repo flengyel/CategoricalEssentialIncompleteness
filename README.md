@@ -58,16 +58,16 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V57.md](FORMALIZATION_STATUS_V57.md). It records 77
-numbered results and three definitions. There are **68 proved counterparts
-and nine open mathematical obligations**. Full v57 verification of
+numbered results and three definitions. There are **69 proved counterparts
+and eight open mathematical obligations**. Full v57 verification of
 `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed all 1,708 commands,
 including the generation, translation, deduction and free first-order
 adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
 equivalence, intended-statement checks and both transitive axiom audits.
 The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json)
 identifies that replay's 67-result snapshot and exact tested bytes. The first
-open result is now Theorem 5.2 on theory-extension functors and their two
-adjunctions. The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
+open result is now Theorem 5.3 on incompleteness in an associated category.
+The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
 records the new weak-choice, split-product and partial-map functor proofs
 and their incremental verification; the numbered-result count is unchanged.
 The [split Turing continuation](docs/V57_SPLIT_TURING_2026-11-13.md) proves
@@ -82,6 +82,10 @@ morphisms, total retractions and splitting of slice restriction idempotents.
 The [partial-slice completion](docs/V57_PARTIAL_SLICE_COMPLETION_2026-11-14.md)
 constructs the literal full recursion subcategory and its splitting equivalence,
 preserving restriction in both directions. This completes Lemma 5.1.
+The [theory-extension completion](docs/V57_THEORY_EXTENSIONS_2026-11-14.md)
+constructs both change-of-base adjunctions, full faithfulness, properness,
+composition and the sentence/theorem comparisons in the actual partial
+slices. This completes Theorem 5.2.
 
 The [v57 synchronization report](docs/V57_MANUSCRIPT_SYNC_2026-11-11.md) records
 the source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)

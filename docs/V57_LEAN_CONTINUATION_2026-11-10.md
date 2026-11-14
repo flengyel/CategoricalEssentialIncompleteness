@@ -1097,3 +1097,32 @@ obligations**. Theorem 5.2 is next: define postcomposition and reindexing
 on partial spans, prove both natural hom-set bijections and the resulting
 two adjunctions, full faithfulness, properness, composition and the
 sentence/theorem comparison square. The second adjunction unit is partial.
+
+
+## Theorem 5.2 completed, 14 November 2026
+
+The [theory-extension report](V57_THEORY_EXTENSIONS_2026-11-14.md) records proof commit
+`f4572a09adb61331ae07e64da235e35cda23cb40`. Postcomposition retains each monic span; reindexing
+is proved equal to ordinary span pullback. Both natural hom equivalences
+give Σ_i⊣i*⊣Σ_i in the actual partial slices. Postcomposition is full,
+faithful and restriction preserving, fails essential surjectivity for
+proper i, and satisfies identity and composition. The second unit is the
+partial inverse of the pullback inclusion, and is non-total at the terminal
+family for proper i. Binary restriction products are preserved.
+
+The total sentence and theorem comparisons have the printed values i×id_S
+and i×i and satisfy the displayed square. The sentence-family isomorphism
+and the theorem-family inequality are proved in the actual total slice.
+All 30 incremental commands passed, including
+23 strict commands and both complete transitive
+axiom audits. These cover 913 current
+modules, 28,307 current declarations and
+1,274 retained declarations, with exactly the
+permitted three axioms. All 2,402 measured inputs
+match the tested proof commit. Earlier verification evidence and manuscript
+v57 artifacts remain preserved.
+
+The count is now **69 proved numbered counterparts and eight open
+obligations**. Theorem 5.3 is next: construct the constant-family/evaluation
+retraction and prove transfer of closed theories, essential incompleteness
+and the Boolean partial morphism assertions.
