@@ -5,6 +5,10 @@ Authors: Florian Lengyel
 -/
 module
 
+public import CategoricalEssentialIncompleteness.V46ParameterizedOptionChecks
+public import CategoricalEssentialIncompleteness.V46ConstantParameterAlgebraChecks
+public import CategoricalEssentialIncompleteness.V46ParameterizedBooleanSubstitutionChecks
+
 public import CategoricalEssentialIncompleteness.V46ParameterizedBooleanValuationChecks
 public import CategoricalEssentialIncompleteness.V46SignedFiniteFormulaValuationChecks
 
