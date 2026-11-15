@@ -1,5 +1,9 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46RestrictionSubobjectRanges
+public import CategoricalEssentialIncompleteness.V46MillerAssociatedData
+public import CategoricalEssentialIncompleteness.V46MillerAssociatedTheories
+
 public import CategoricalEssentialIncompleteness.V46MillerSliceDerivations
 public import CategoricalEssentialIncompleteness.V46MillerParameterizedDeduction
 
