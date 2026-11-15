@@ -1,5 +1,8 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ParameterizedBooleanValuationChecks
+public import CategoricalEssentialIncompleteness.V46SignedFiniteFormulaValuationChecks
+
 import CategoricalEssentialIncompleteness.V46SignedDerivationFiniteSupportChecks
 
 import CategoricalEssentialIncompleteness.V46SignedDerivationFiniteValuationChecks
