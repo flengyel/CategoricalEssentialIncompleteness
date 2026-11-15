@@ -58,12 +58,12 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V59.md](FORMALIZATION_STATUS_V59.md). It records 77
-numbered results and three definitions. There are **70 proved counterparts
-and seven open mathematical obligations**. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
+numbered results and three definitions. There are **71 proved counterparts
+and six open mathematical obligations**. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,798 commands at `8df18834734179186459d3c4c34d4c0cf20b6194`, including
 1,792 strict elaborations and both complete transitive axiom audits. The
-four new finite-support and internal-induction constructions support the
-still-open Lemma 8.9. The later [positive-support construction](docs/V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md)
+four new finite-support and internal-induction constructions support
+Lemma 8.9, completed by the later assembly below. The later [positive-support construction](docs/V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md)
 adds the canonical positive-leaf assignment, primitive-recursive extraction,
 PA finite atom valuations and their numerical lookup comparison. Its 21-command
 incremental verification includes both complete transitive axiom audits.
@@ -82,8 +82,11 @@ axiom audits. The later [consistency proof](docs/V59_SIGNED_CONSISTENCY_2026-11-
 proves PA consistency and the generated signed-theory consistency equation
 in the predicate category, with generation through regular axiom images.
 Its 22-command incremental verification includes both complete axiom audits.
-The printed restriction-splitting comparison and essential-incompleteness
-assembly remain open; the count stays 70/77.
+The later [diagonal signed-theory assembly](docs/V59_DIAGONAL_SIGNED_THEORY_2026-11-15.md)
+completes Lemma 8.9: the actual diagonal splittings, generated-theory
+consistency and all consistent closed extensions are covered. Its
+23-command incremental verification includes both complete axiom audits.
+The count is 71/77; Corollary 8.10 is next.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
@@ -94,7 +97,7 @@ adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
 equivalence, intended-statement checks and both transitive axiom audits.
 The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json)
 identifies that replay's 67-result snapshot and exact tested bytes. The first
-open result is now Lemma 8.9 on the arithmetic diagonal theory.
+open result is now Corollary 8.10, the arithmetic associated-category application.
 The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
 records the new weak-choice, split-product and partial-map functor proofs
 and their incremental verification; the numbered-result count is unchanged.

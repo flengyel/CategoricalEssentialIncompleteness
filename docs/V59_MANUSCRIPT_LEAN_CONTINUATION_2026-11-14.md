@@ -18,18 +18,19 @@ proves the PA sentence, formula and sentence image consistency, regular-image
 generation comparison and generated signed consistency in the predicate
 category. The presentation and its subobject-indexed initial proof family
 are constructed. Its 22-command incremental verification includes both
-complete axiom audits. Continue with the printed restriction-splitting
-comparison, source inseparability transfer and essential-incompleteness
-assembly with all extension quantifiers.
-Lemma 8.9 remains open; the count stays 70/77. The 1,798-command full replay
-below is the earlier baseline; this later batch has separate incremental
+complete axiom audits. The later [diagonal signed-theory assembly](V59_DIAGONAL_SIGNED_THEORY_2026-11-15.md)
+completes Lemma 8.9, including the actual split generators, target generated
+consistency, free-syntax initiality for arbitrary parameters and every closed
+consistent extension. Its 23-command incremental verification includes both
+complete axiom audits. The count is 71/77; Corollary 8.10 is next.
+The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 
 Repository: `flengyel/CategoricalEssentialIncompleteness`.
 Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 `FORMALIZATION_STATUS_V59.md` before editing. Preserve later local and remote
 work. The current manuscript is v59; Theorem 5.3 is complete. The recorded
-status is **70 of 77 numbered results proved**, with Lemma 8.9 next.
+status is **71 of 77 numbered results proved**, with Corollary 8.10 next.
 
 The [full v59 replay](V59_FULL_VERIFICATION_2026-11-14.md) passed all 1,798
 commands, including 1,792 strict elaborations and both complete transitive
@@ -59,8 +60,7 @@ equivalence and its quantifier over arbitrary closed slice extensions.
 
 | Result | Construction |
 | --- | --- |
-| Lemma 8.9 | Positive supports on actual signed derivations; internal Boolean soundness and PA-provable consistency; essential incompleteness of the specified generated theory. |
-| Corollary 8.10 | Apply the associated-category theorems after Lemma 8.9, with the full extension quantifier and Boolean witness. |
+| Corollary 8.10 | Apply Theorems 5.2–5.3 using the completed Lemma 8.9, every-parameter deduction, common logical theorem, full extension quantifier and Boolean witness. |
 | Lemma 9.6 | Miller syntax and finite-derivation initiality for the stated arbitrary coefficients in every parameter slice. |
 | Corollary 9.8 | Miller associated-category application. |
 | Proposition 10.7 | First-order fork syntax and finite-derivation initiality in every parameter slice. |

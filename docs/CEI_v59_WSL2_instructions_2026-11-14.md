@@ -9,8 +9,8 @@ text and all 77 numbered results and three definitions are unchanged from
 v58. The reviewed v58 artifacts are retained. The Google report and its
 assessment are in `docs/reviews/GOOGLE_V58_2026-11-14/`.
 
-Theorem 5.3 is complete. The count remains 70 proved results and seven open:
-8.9, 8.10, 9.6, 9.8, 10.7, 10.8 and 10.9. Lemma 8.9 is next. Preserve the
+Theorem 5.3 and Lemma 8.9 are complete. The count is 71 proved results and six open:
+8.10, 9.6, 9.8, 10.7, 10.8 and 10.9. Corollary 8.10 is next. Preserve the
 subobject-only initiality hypotheses, Boolean conventions and full extension
 quantifiers. Preserve later local and remote work.
 
@@ -29,9 +29,12 @@ complete axiom audits. The later [consistency proof](V59_SIGNED_CONSISTENCY_2026
 proves the PA sentence and generated signed-theory consistency equation
 in the predicate category, with regular-image generation and a constructed
 subobject-indexed proof family. Its 22-command incremental verification
-includes both complete axiom audits. Continue with the printed restriction-
-splitting comparison, source inseparability transfer and full essential-
-incompleteness assembly. Lemma 8.9 remains open.
+includes both complete axiom audits. The later [diagonal signed-theory assembly](V59_DIAGONAL_SIGNED_THEORY_2026-11-15.md)
+completes Lemma 8.9 through the proved predicate equivalence, with actual
+split generators and all closed consistent extensions. Its 23-command
+incremental verification includes both complete axiom audits. Continue with
+Corollary 8.10, retaining the every-parameter hypotheses of Theorems 5.2–5.3
+and the Boolean no-total-extension witness.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
