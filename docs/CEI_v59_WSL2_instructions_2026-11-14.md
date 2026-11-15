@@ -14,6 +14,12 @@ Theorem 5.3 is complete. The count remains 70 proved results and seven open:
 subobject-only initiality hypotheses, Boolean conventions and full extension
 quantifiers. Preserve later local and remote work.
 
+The positive-leaf assignment, primitive-recursive extraction and common finite
+atom valuation are now constructed. See [the proof report](V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md).
+Continue with the formula valuation and internal truth invariant; Lemma 8.9
+remains open. The new batch has incremental verification; the earlier full
+replay remains separate evidence.
+
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
 logical axioms are `propext`, `Quot.sound` and `Classical.choice`. The

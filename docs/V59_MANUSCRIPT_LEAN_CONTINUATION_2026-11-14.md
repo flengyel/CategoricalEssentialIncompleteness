@@ -1,5 +1,13 @@
 # Manuscript v59 and Lean continuation
 
+Continuation update: the canonical positive-leaf assignment, numerical
+extraction and common finite atom valuation are constructed and verified.
+See [the proof report](V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md) and its record.
+Continue with the Boolean formula valuation and internal truth invariant.
+Lemma 8.9 remains open; the count stays 70/77. The 1,798-command full replay
+below is the earlier baseline; this later batch has separate incremental
+verification. The original continuation instructions follow.
+
 Repository: `flengyel/CategoricalEssentialIncompleteness`.
 Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 `FORMALIZATION_STATUS_V59.md` before editing. Preserve later local and remote

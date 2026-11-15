@@ -29,11 +29,15 @@ dependencies, provenance checks and designated Palomar placeholders.
 Production proofs and their dependencies must use only propext, Quot.sound
 and Classical.choice, with no sorry, admit or sorryAx.
 
-Current v59 full replay: 1798 commands, including 1792 strict elaborations,
+Latest completed v59 full replay: 1798 commands, including 1792 strict elaborations,
 at 8df18834734179186459d3c4c34d4c0cf20b6194. See
-docs/V59_FULL_VERIFICATION_2026-11-14.md. Four new finite-support and internal
-induction producers are verified; the remaining positive-leaf assignment,
-valuation, truth invariant and internal-consistency construction remain open.
+docs/V59_FULL_VERIFICATION_2026-11-14.md. Four finite-support and internal-induction
+producers were verified in that full replay. The later positive-leaf assignment,
+numerical extraction and
+finite atom valuation have 21-command incremental verification at
+7f85f8a7ea729741d852987eeae6c783a117f6a9. See docs/V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md.
+The formula valuation, truth invariant, internal consistency and final
+essential-incompleteness assembly remain open.
 
 Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.
