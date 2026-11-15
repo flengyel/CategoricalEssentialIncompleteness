@@ -6,6 +6,13 @@ Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 work. The current manuscript is v59; Theorem 5.3 is complete. The recorded
 status is **70 of 77 numbered results proved**, with Lemma 8.9 next.
 
+The [full v59 replay](V59_FULL_VERIFICATION_2026-11-14.md) passed all 1,798
+commands, including 1,792 strict elaborations and both complete transitive
+axiom audits, at `8df18834734179186459d3c4c34d4c0cf20b6194`. The
+[construction report](V59_FINITE_SUPPORT_2026-11-14.md) records four new
+producer/Checks pairs for finite support and internal induction. Their
+completion does not prove Lemma 8.9.
+
 The Google review has been supplied. Its original text and the independent
 assessment are in `docs/reviews/GOOGLE_V58_2026-11-14/`. The alleged
 partial-monomorphism typo is absent from the reviewed v58 source and PDF:

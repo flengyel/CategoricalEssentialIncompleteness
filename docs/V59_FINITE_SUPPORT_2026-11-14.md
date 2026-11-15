@@ -56,8 +56,9 @@ use only `propext`, `Quot.sound` and `Classical.choice`. The
 [incremental record](V59_FINITE_SUPPORT_INCREMENTAL_VERIFICATION_2026-11-14.json)
 lists the exact commands and source hashes. The new modules are imported
 through the production entry, both statement entries and the complete current
-axiom audit. The full locked verification execution is recorded separately;
-the incremental record alone does not claim a full replay.
+axiom audit. The [full locked replay](V59_FULL_VERIFICATION_2026-11-14.md)
+passed all 1,798 commands, including 1,792 strict elaborations and both
+complete transitive axiom audits, against the published proof-commit bytes.
 
 The parser's six tests and the v59 manuscript gate pass. The article changes
 only bibliography typesetting and version metadata; the reviewed v58 artifacts
