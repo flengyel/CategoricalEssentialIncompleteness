@@ -22,7 +22,11 @@ complete axiom audits. The later [diagonal signed-theory assembly](V59_DIAGONAL_
 completes Lemma 8.9, including the actual split generators, target generated
 consistency, free-syntax initiality for arbitrary parameters and every closed
 consistent extension. Its 23-command incremental verification includes both
-complete axiom audits. The count is 71/77; Corollary 8.10 is next.
+complete axiom audits. The later [arithmetic associated-category proof](V59_ARITHMETIC_ASSOCIATED_CATEGORIES_2026-11-15.md)
+completes Corollary 8.10, including arbitrary closed consistent slice extensions,
+both split Turing categories, the literal full recursion subcategory and the
+specified original arithmetic evaluator. Its 16-command final incremental verification
+includes both complete axiom audits. The count is 72/77; Lemma 9.6 is next.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 
@@ -30,7 +34,7 @@ Repository: `flengyel/CategoricalEssentialIncompleteness`.
 Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 `FORMALIZATION_STATUS_V59.md` before editing. Preserve later local and remote
 work. The current manuscript is v59; Theorem 5.3 is complete. The recorded
-status is **71 of 77 numbered results proved**, with Corollary 8.10 next.
+status is **72 of 77 numbered results proved**, with Lemma 9.6 next.
 
 The [full v59 replay](V59_FULL_VERIFICATION_2026-11-14.md) passed all 1,798
 commands, including 1,792 strict elaborations and both complete transitive
@@ -60,7 +64,6 @@ equivalence and its quantifier over arbitrary closed slice extensions.
 
 | Result | Construction |
 | --- | --- |
-| Corollary 8.10 | Apply Theorems 5.2–5.3 using the completed Lemma 8.9, every-parameter deduction, common logical theorem, full extension quantifier and Boolean witness. |
 | Lemma 9.6 | Miller syntax and finite-derivation initiality for the stated arbitrary coefficients in every parameter slice. |
 | Corollary 9.8 | Miller associated-category application. |
 | Proposition 10.7 | First-order fork syntax and finite-derivation initiality in every parameter slice. |
