@@ -9,8 +9,8 @@ text and all 77 numbered results and three definitions are unchanged from
 v58. The reviewed v58 artifacts are retained. The Google report and its
 assessment are in `docs/reviews/GOOGLE_V58_2026-11-14/`.
 
-Theorem 5.3, Lemma 8.9 and Corollary 8.10 are complete. The count is 72 proved
-results and five open: 9.6, 9.8, 10.7, 10.8 and 10.9. Lemma 9.6 is next. Preserve the
+Theorem 5.3, Lemmas 8.9 and 9.6, and Corollary 8.10 are complete. The count
+is 73 proved results and four open: 9.8, 10.7, 10.8 and 10.9. Corollary 9.8 is next. Preserve the
 subobject-only initiality hypotheses, Boolean conventions and full extension
 quantifiers. Preserve later local and remote work.
 
@@ -37,8 +37,12 @@ incremental verification includes both complete axiom audits. The later
 including arbitrary closed consistent slice extensions, both split Turing
 categories, the literal full recursion subcategory and the specified original
 arithmetic evaluator. Its 16-command final incremental verification includes both
-complete axiom audits. Continue with Lemma 9.6 and reuse the constructed
-parameterized deduction comparison for the printed Miller coefficients.
+complete axiom audits. The later [Miller parameterized-deduction proof](V59_MILLER_PARAMETERIZED_DEDUCTION_2026-11-15.md)
+completes Lemma 9.6, including arbitrary nullary coefficients, numerical
+variables, syntax/list stability and all printed signatures in every parameter
+slice. Its 16-command incremental verification includes both complete axiom
+audits. Continue with Corollary 9.8, retaining all consistent internal
+extensions, the Miller-sequence assumption and the Boolean witness.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

@@ -7,9 +7,9 @@ Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V59.md,
 docs/V59_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md and
 docs/CEI_v59_WSL2_instructions_2026-11-14.md.
 
-Theorem 5.3, Lemma 8.9 and Corollary 8.10 are complete. The current count
-is 72 of 77 numbered results proved; Lemma 9.6 is next. The other open
-results are 9.8, 10.7, 10.8 and 10.9. Preserve all subsequent local
+Theorem 5.3, Lemmas 8.9 and 9.6, and Corollary 8.10 are complete.
+The current count is 73 of 77 numbered results proved; Corollary 9.8 is next.
+The other open results are 10.7, 10.8 and 10.9. Preserve all subsequent local
 and remote work.
 
 The Google review has been supplied and assessed in
@@ -64,9 +64,16 @@ closed consistent slice extensions, both split Turing categories, the literal
 full recursion subcategory and the specified original arithmetic evaluator.
 Its 16-command final incremental verification includes both complete axiom audits.
 See docs/V59_ARITHMETIC_ASSOCIATED_CATEGORIES_2026-11-15.md.
-Continue with Lemma 9.6, retaining arbitrary Miller coefficients, every
-parameter slice and representation independence. Reuse the generic
-SliceRuleObjects and SliceInference comparison.
+The later Miller parameterized-deduction batch at fe124f6f458439aa34135b0d2c48c13bdf27dd18
+completes Lemma 9.6: arbitrary nullary coefficients, full numerical variables,
+syntax/list stability, and finite derivation initiality in every parameter
+slice for all printed recursive signatures. Representation independence
+and subobject-only axiom indexing are retained. Its 16-command incremental
+verification includes both complete axiom audits. See docs/V59_MILLER_PARAMETERIZED_DEDUCTION_2026-11-15.md.
+Continue with Corollary 9.8, preserving the Miller-sequence assumption,
+all consistent internal extensions, arbitrary closed slice extensions,
+the common logical theorem point, the Boolean witness and the comparison
+restriction functors.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 
