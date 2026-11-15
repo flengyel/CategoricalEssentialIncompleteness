@@ -56,10 +56,16 @@ example (T : TotalSplit 𝗣𝗔) :
     @IsTuringMorphism (PartialMaps.Par (Over T)) inferInstance products laws Q Q Q τ ∧
     (∀ X : PartialMaps.Par (Over T), ∃ (j : X ⟶ Q) (s : Q ⟶ X),
       isTotal j ∧ j ≫ s = 𝟙 X ∧ s ≫ j = CategoryTheory.RestrictionCategory.rst s) ∧
+    (∃ (Z : PartialMaps.Par (Over T)) (toTerminal : ∀ X : PartialMaps.Par (Over T), X ⟶ Z),
+      (∀ X, isTotal (toTerminal X)) ∧ toTerminal Z = 𝟙 Z ∧
+      (∀ {X Y : PartialMaps.Par (Over T)} (f : X ⟶ Y),
+        f ≫ toTerminal Y = CategoryTheory.RestrictionCategory.rst f ≫ toTerminal X) ∧
+      (∀ {X : PartialMaps.Par (Over T)} (f : X ⟶ Z), isTotal f → f = toTerminal X)) ∧
     Nonempty (Splits (PartialMaps.Par (Over T))) := by
   let d := turingData T
   exact ⟨d.products, d.laws, d.restriction_eq, d.Q, d.evaluator, d.turing,
-    d.universal, ⟨d.splittings⟩⟩
+    d.universal, ⟨d.terminal, d.terminate, d.terminate_total, d.terminate_self,
+      d.terminate_naturality, d.terminate_unique⟩, ⟨d.splittings⟩⟩
 
 example (U : GlobalTheory) (hExt : (t).val ≤ U.val)
     (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) :
@@ -118,6 +124,17 @@ example (U : GlobalTheory) :
       ((originalFunctor U).obj (omegaObject 𝗣𝗔)) ((originalFunctor U).obj (omegaObject 𝗣𝗔))
       ((originalFunctor U).obj (omegaObject 𝗣𝗔)) (originalEvaluator U) := original_evaluator_isTuring U
 
+example (U : GlobalTheory) : PreservesRestriction (fullInclusion U) ∧
+    PreservesRestriction (splittingEquivalence U).functor ∧
+    PreservesRestriction (splittingEquivalence U).inverse :=
+  ⟨fullInclusion_restriction U, splitting_restriction U, splitting_inverse_restriction U⟩
+
+example (U : GlobalTheory) :
+    @PCategory.inducedRestriction (FullCategory U) inferInstance
+      (ConstantSlice.Full.productData (U.val : TotalSplit 𝗣𝗔).obj)
+      (ConstantSlice.Full.productLaws (U.val : TotalSplit 𝗣𝗔).obj) =
+        (inferInstance : RestrictionCategory (FullCategory U)) := fullProducts_restriction_eq U
+
 section OriginalPrograms
 local instance : RestrictionCategory Ambient := PCategory.inducedRestriction
 /-- The identity of a split object has underlying program its domain
@@ -149,3 +166,11 @@ end OriginalPrograms
 #print axioms ArithmeticAssociatedStructure.original_value
 #print axioms ArithmeticAssociatedStructure.original_evaluator_isTuring
 #print axioms ArithmeticAssociatedCategories.printed_statement
+
+#print axioms CompatibleSplitSlices.inclusion_restriction
+#print axioms CompatibleSplitSlices.splitting_restriction
+#print axioms CompatibleSplitSlices.splitting_inverse_restriction
+#print axioms ArithmeticAssociatedStructure.fullInclusion_restriction
+#print axioms ArithmeticAssociatedStructure.splitting_restriction
+#print axioms ArithmeticAssociatedStructure.splitting_inverse_restriction
+#print axioms ArithmeticAssociatedStructure.fullProducts_restriction_eq

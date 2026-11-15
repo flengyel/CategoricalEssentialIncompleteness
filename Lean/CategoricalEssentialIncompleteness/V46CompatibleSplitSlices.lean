@@ -70,12 +70,20 @@ restriction retract of it by a total embedding. -/
 structure TuringData (D : Type u) [Category.{v} D] [RestrictionCategory D] where
   products : PCategoryStruct D
   laws : @PCategory D inferInstance products
-  restriction_eq : @PCategory.inducedRestriction D inferInstance products laws = (inferInstance : RestrictionCategory D)
+  restriction_eq : @PCategory.inducedRestriction D inferInstance products laws =
+    (inferInstance : RestrictionCategory D)
   Q : D
   evaluator : @PCategoryStruct.nearProd D inferInstance products Q Q ⟶ Q
   turing : @IsTuringMorphism D inferInstance products laws Q Q Q evaluator
   universal : ∀ X : D, ∃ (j : X ⟶ Q) (s : Q ⟶ X),
     isTotal j ∧ j ≫ s = 𝟙 X ∧ s ≫ j = CategoryTheory.RestrictionCategory.rst s
+  terminal : D
+  terminate : ∀ X : D, X ⟶ terminal
+  terminate_total : ∀ X, isTotal (terminate X)
+  terminate_self : terminate terminal = 𝟙 terminal
+  terminate_naturality : ∀ {X Y : D} (f : X ⟶ Y),
+    f ≫ terminate Y = CategoryTheory.RestrictionCategory.rst f ≫ terminate X
+  terminate_unique : ∀ {X : D} (f : X ⟶ terminal), isTotal f → f = terminate X
   splittings : Splits D
 
 /-- The chosen product structure agrees with the actual partial-map
@@ -93,6 +101,12 @@ def turingData (rec : PRecursionCategory R) : TuringData (PartialMaps.Par (Over 
     evaluator := SliceProductTuring.evaluator inverses T τ
     turing := hτ.2.1
     universal := hτ.2.2
+    terminal := PartialSliceRetractions.terminalObject T
+    terminate := PartialSliceRetractions.terminate inverses T
+    terminate_total := PartialSliceRetractions.terminate_total inverses T
+    terminate_self := PartialSliceRetractions.terminate_self inverses T
+    terminate_naturality := PartialSliceRetractions.terminate_naturality inverses T
+    terminate_unique := PartialSliceRetractions.terminate_unique inverses T
     splittings := inferInstance
   }
 
@@ -110,5 +124,22 @@ theorem inclusion_range (Z : PartialMaps.Par (Over T)) :
       ∃ X : R, (inclusion hρ inverses T).obj (ConstantSlice.Full.object T.obj X) = Z := by
   subst ρ
   exact ConstantSlice.Full.actualInclusion_range inverses T Z
+
+omit [HasZeroMorphisms R] [Prodominical R] [Isotype R] in
+theorem inclusion_restriction : PreservesRestriction (inclusion hρ inverses T) := by
+  subst ρ
+  exact ConstantSlice.Full.actualInclusion_restriction inverses T
+
+omit [HasZeroMorphisms R] [Prodominical R] in
+theorem splitting_restriction (Q : R) :
+    PreservesRestriction (splittingEquivalence hρ inverses T Q).functor := by
+  subst ρ
+  exact ConstantSlice.Full.splittingEquivalence_restriction inverses T Q
+
+omit [HasZeroMorphisms R] [Prodominical R] in
+theorem splitting_inverse_restriction (Q : R) :
+    PreservesRestriction (splittingEquivalence hρ inverses T Q).inverse := by
+  subst ρ
+  exact ConstantSlice.Full.splittingEquivalence_inverse_restriction inverses T Q
 
 end CategoricalEssentialIncompleteness.V46.CompatibleSplitSlices

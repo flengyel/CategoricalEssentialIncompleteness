@@ -65,6 +65,11 @@ structure Conclusions (U : GlobalTheory) (hExt : (t).val ≤ U.val)
     ((constantFunctor U).map (decision U hc))
   full_subcategory : (fullInclusion U).Full
   faithful_subcategory : (fullInclusion U).Faithful
+  restriction_subcategory : PreservesRestriction (fullInclusion U)
+  products_restriction : @PCategory.inducedRestriction (FullCategory U) inferInstance
+    (ConstantSlice.Full.productData (U.val : TotalSplit 𝗣𝗔).obj)
+    (ConstantSlice.Full.productLaws (U.val : TotalSplit 𝗣𝗔).obj) =
+      (inferInstance : RestrictionCategory (FullCategory U))
   original_objects : ∀ Z : PartialMaps.Par (Over (U.val : TotalSplit 𝗣𝗔)),
     (∃ X : FullCategory U, (fullInclusion U).obj X = Z) ↔
       ∃ X : Source, (fullInclusion U).obj
@@ -76,6 +81,8 @@ structure Conclusions (U : GlobalTheory) (hExt : (t).val ≤ U.val)
     (ConstantSlice.Full.isotype (U.val : TotalSplit 𝗣𝗔).obj))
   splitting : Nonempty (SplitObject (FullCategory U) ≌
     PartialMaps.Par (Over (U.val : TotalSplit 𝗣𝗔)))
+  splitting_restriction : PreservesRestriction (splittingEquivalence U).functor
+  splitting_inverse_restriction : PreservesRestriction (splittingEquivalence U).inverse
   original_faithful : (originalFunctor U).Faithful
   original_evaluator : originalEvaluator U =
     (originalProductComparison U (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔)).hom ≫
@@ -105,10 +112,14 @@ theorem printed_statement (_hPA : Entailment.Consistent 𝗣𝗔) (U : GlobalThe
   no_total_extension := no_total_extension U hExt hc
   full_subcategory := fullInclusion_full U
   faithful_subcategory := fullInclusion_faithful U
+  restriction_subcategory := fullInclusion_restriction U
+  products_restriction := fullProducts_restriction_eq U
   original_objects := CompatibleSplitSlices.inclusion_range (ρ := actualRestriction)
     restriction_eq inverses (U.val : TotalSplit 𝗣𝗔)
   recursion := ⟨recursionCategory U⟩
   splitting := ⟨splittingEquivalence U⟩
+  splitting_restriction := ArithmeticAssociatedStructure.splitting_restriction U
+  splitting_inverse_restriction := ArithmeticAssociatedStructure.splitting_inverse_restriction U
   original_faithful := ArithmeticAssociatedStructure.original_faithful U
   original_evaluator := original_evaluator_value U
   original_turing := original_evaluator_isTuring U

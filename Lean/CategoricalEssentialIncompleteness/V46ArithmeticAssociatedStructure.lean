@@ -59,7 +59,8 @@ theorem postcompose_faithful {T U : TotalSplit 𝗣𝗔} (i : T ⟶ U) [Mono i] 
 
 theorem postcompose_not_essSurj {T U : TotalSplit 𝗣𝗔} (i : T ⟶ U) [Mono i]
     (proper : ¬ IsIso i) : ¬ (postcompose i).EssSurj :=
-  CompatiblePartialSlices.postcompose_not_essSurj (ρ := actualRestriction) restriction_eq inverses i proper
+  CompatiblePartialSlices.postcompose_not_essSurj (ρ := actualRestriction)
+    restriction_eq inverses i proper
 
 local notation "F₀" => ArithmeticSignedTheory.presentation
 local notation "ν" => ArithmeticSignedTotal.negation (F₀)
@@ -141,11 +142,32 @@ theorem decision_family_false (U : ArithmeticAssociatedIncompleteness.GlobalTheo
   rw [← CategoryTheory.Functor.map_comp, decision_false]
 
 
+theorem fullInclusion_restriction (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :
+    PreservesRestriction (fullInclusion U) :=
+  CompatibleSplitSlices.inclusion_restriction (ρ := actualRestriction) restriction_eq inverses _
+
+theorem splitting_restriction (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :
+    PreservesRestriction (splittingEquivalence U).functor :=
+  CompatibleSplitSlices.splitting_restriction (ρ := actualRestriction) restriction_eq inverses _ _
+
+theorem splitting_inverse_restriction (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :
+    PreservesRestriction (splittingEquivalence U).inverse :=
+  CompatibleSplitSlices.splitting_inverse_restriction (ρ := actualRestriction)
+    restriction_eq inverses _ _
+
 local instance originalPullbacks :
     HasPullbacks (@Tot Ambient inferInstance PCategory.inducedRestriction) :=
   CompatibleSplitSlices.pullbacks (ρ := actualRestriction) restriction_eq
 
-local instance originalRestriction : RestrictionCategory Ambient := PCategory.inducedRestriction
+local instance originalRestriction : RestrictionCategory Ambient :=
+  PCategory.inducedRestriction
+
+theorem fullProducts_restriction_eq (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :
+    @PCategory.inducedRestriction (FullCategory U) inferInstance
+      (ConstantSlice.Full.productData (U.val : TotalSplit 𝗣𝗔).obj)
+      (ConstantSlice.Full.productLaws (U.val : TotalSplit 𝗣𝗔).obj) =
+        (inferInstance : RestrictionCategory (FullCategory U)) :=
+  ConstantSlice.Full.productRestriction_eq _
 
 def originalFunctor (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :
     Source ⥤ FullCategory U := OriginalConstantFunctor.functor (U.val : TotalSplit 𝗣𝗔).obj
