@@ -36,8 +36,12 @@ producers were verified in that full replay. The later positive-leaf assignment,
 numerical extraction and
 finite atom valuation have 21-command incremental verification at
 7f85f8a7ea729741d852987eeae6c783a117f6a9. See docs/V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md.
-The formula valuation, truth invariant, internal consistency and final
-essential-incompleteness assembly remain open.
+The later Boolean formula valuation has 19-command incremental verification
+at e3d669ba3f299db26451fc1d1c76862148a06fff. See docs/V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md.
+Its five constructor laws, five schemes and both inference rules are proved,
+including signed-atom values in every PA model. Support-parameter admissible
+substitution, the instantiation/equality schemes, internal truth invariant,
+consistency and essential-incompleteness assembly remain open.
 
 Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.

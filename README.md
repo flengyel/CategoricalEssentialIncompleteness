@@ -67,6 +67,10 @@ still-open Lemma 8.9. The later [positive-support construction](docs/V59_SIGNED_
 adds the canonical positive-leaf assignment, primitive-recursive extraction,
 PA finite atom valuations and their numerical lookup comparison. Its 21-command
 incremental verification includes both complete transitive axiom audits.
+The [Boolean formula valuation](docs/V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md) now has its five
+constructor laws, five logical schemes, both inference rules and signed-atom
+values at arbitrary internal supports. Its 19-command incremental verification
+is separate from the earlier full replay; Lemma 8.9 remains open.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.

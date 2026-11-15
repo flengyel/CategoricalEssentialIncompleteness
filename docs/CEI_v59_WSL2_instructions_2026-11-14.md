@@ -16,9 +16,12 @@ quantifiers. Preserve later local and remote work.
 
 The positive-leaf assignment, primitive-recursive extraction and common finite
 atom valuation are now constructed. See [the proof report](V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md).
-Continue with the formula valuation and internal truth invariant; Lemma 8.9
-remains open. The new batch has incremental verification; the earlier full
-replay remains separate evidence.
+The [formula valuation](V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md) now has its five constructor laws, five logical
+schemes, both inference rules and signed-atom values on arbitrary internal
+supports. Its 19-command incremental verification is separate from the earlier
+full replay. Continue with support-parameter admissible-substitution invariance,
+the instantiation/equality schemes, internal truth invariant, consistency and
+essential-incompleteness assembly. Lemma 8.9 remains open.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

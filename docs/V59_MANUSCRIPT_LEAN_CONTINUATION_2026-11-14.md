@@ -3,7 +3,11 @@
 Continuation update: the canonical positive-leaf assignment, numerical
 extraction and common finite atom valuation are constructed and verified.
 See [the proof report](V59_SIGNED_DERIVATION_FINITE_SUPPORT_2026-11-14.md) and its record.
-Continue with the Boolean formula valuation and internal truth invariant.
+The later [Boolean formula valuation](V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md) has its five constructor equations,
+five schemes, both inference rules and signed-atom values in every PA model.
+Its 19-command incremental verification is separate from the full replay.
+Continue with support-parameter admissible substitution, the instantiation
+and equality schemes, the internal truth invariant, consistency and final assembly.
 Lemma 8.9 remains open; the count stays 70/77. The 1,798-command full replay
 below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
