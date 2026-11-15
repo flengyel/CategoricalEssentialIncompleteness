@@ -5,6 +5,8 @@ Authors: Florian Lengyel
 -/
 module
 
+public import CategoricalEssentialIncompleteness.V46MillerAssociatedCategoriesChecks
+
 public import CategoricalEssentialIncompleteness.V46MillerAssociatedTheoriesChecks
 
 public import CategoricalEssentialIncompleteness.V46MillerSliceDerivationsChecks
