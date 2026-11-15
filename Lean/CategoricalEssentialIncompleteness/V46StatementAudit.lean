@@ -5,6 +5,8 @@ Authors: Florian Lengyel
 -/
 module
 
+import CategoricalEssentialIncompleteness.V46SignedDerivationFiniteValuationChecks
+
 public import CategoricalEssentialIncompleteness.V46AssociatedIncompletenessChecks
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalAxiomIncompletenessChecks
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalIncompletenessChecks
