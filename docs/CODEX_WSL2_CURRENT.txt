@@ -39,6 +39,10 @@ Palomar challenge placeholders, and all later local work. Production proofs
 and their dependencies must not use sorry, admit, or sorryAx. Permitted
 logical axioms are propext, Quot.sound, and Classical.choice.
 
+Latest completed full replay: 1790 commands at
+f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.
+The current 70/77 status and unchanged v58 artifacts were verified there.
+
 Run from the repository root:
 
     python3 scripts/test_verify_axiom_parser.py

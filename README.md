@@ -59,7 +59,10 @@ and Git blob hashes.
 The current correspondence table is
 [FORMALIZATION_STATUS_V58.md](FORMALIZATION_STATUS_V58.md). It records 77
 numbered results and three definitions. There are **70 proved counterparts
-and seven open mathematical obligations**. Full v57 verification of
+and seven open mathematical obligations**. The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
+passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
+selected strict producer/check replay and both complete transitive axiom audits.
+The earlier full v57 verification of
 `45a8a6d017850a3a68fcecd01ad82f5a1a83674a` passed all 1,708 commands,
 including the generation, translation, deduction and free first-order
 adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
