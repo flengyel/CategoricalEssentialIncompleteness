@@ -5,6 +5,9 @@ Authors: Florian Lengyel
 -/
 module
 
+public import CategoricalEssentialIncompleteness.V46SliceFinitePowersChecks
+public import CategoricalEssentialIncompleteness.V46SyntacticSliceDerivationsChecks
+
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedEssentialChecks
 public import CategoricalEssentialIncompleteness.V46EquivalenceSubobjectsChecks
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedTheoryChecks
