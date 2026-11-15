@@ -5,6 +5,9 @@ Authors: Florian Lengyel
 -/
 module
 
+public import CategoricalEssentialIncompleteness.V46MillerSliceDerivationsChecks
+public import CategoricalEssentialIncompleteness.V46MillerParameterizedDeductionChecks
+
 public import CategoricalEssentialIncompleteness.V46ArithmeticAssociatedCategoriesChecks
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticAssociatedIncompletenessChecks

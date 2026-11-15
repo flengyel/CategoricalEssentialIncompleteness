@@ -1,5 +1,8 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46MillerSliceDerivations
+public import CategoricalEssentialIncompleteness.V46MillerParameterizedDeduction
+
 public import CategoricalEssentialIncompleteness.V46CompatiblePartialSlices
 public import CategoricalEssentialIncompleteness.V46OriginalConstantFunctor
 public import CategoricalEssentialIncompleteness.V46CompatibleSplitSlices
