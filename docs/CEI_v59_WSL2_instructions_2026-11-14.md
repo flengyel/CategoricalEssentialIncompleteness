@@ -19,9 +19,11 @@ atom valuation are now constructed. See [the proof report](V59_SIGNED_DERIVATION
 The [formula valuation](V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md) now has its five constructor laws, five logical
 schemes, both inference rules and signed-atom values on arbitrary internal
 supports. Its 19-command incremental verification is separate from the earlier
-full replay. Continue with support-parameter admissible-substitution invariance,
-the instantiation/equality schemes, internal truth invariant, consistency and
-essential-incompleteness assembly. Lemma 8.9 remains open.
+full replay. The later [parameterized substitution proof](V59_PARAMETERIZED_SUBSTITUTION_2026-11-15.md)
+proves admissible-substitution invariance, full Option failure preservation
+and all seven logical schemes. Its 25-command incremental verification is
+separate from the full replay. Continue with the internal truth invariant,
+consistency and essential-incompleteness assembly. Lemma 8.9 remains open.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

@@ -1,0 +1,2109 @@
+{
+  "success": true,
+  "scope": "incremental-v59-parameterized-substitution-and-seven-schemes",
+  "full_replay": false,
+  "proof_commit": "8a5f0cd7ee6d2ddd8b4f0619e20f7b35b8b08463",
+  "active_manuscript_version": 59,
+  "commands": 25,
+  "strict_commands": 17,
+  "current_production_modules": 961,
+  "current_declarations": 29208,
+  "retained_declarations": 1274,
+  "measured_inputs": 2465,
+  "measured_inputs_unchanged_and_matching_proof_commit": true,
+  "source_snapshot_sha256": "c61e81c0d1508752364cd5f39f43077d4004d393c4af3065a99bd14f9a589b87",
+  "verification_json_sha256": "c9a03a18bede87c3b1903b1809c39eaf528ca547e7fb68ea83f290afd558bd2f",
+  "baseline_full_verification": {
+    "proof_commit": "8df18834734179186459d3c4c34d4c0cf20b6194",
+    "commands": 1798,
+    "verification_json_sha256": "52eeee116d9479b6edc27799ccdd5463f7b605c06f084521d85eaa0065020e04"
+  },
+  "baseline_inputs_match_published_proof_commit": true,
+  "previous_incremental": {
+    "proof_commit": "e3d669ba3f299db26451fc1d1c76862148a06fff",
+    "commands": 19,
+    "verification_json_sha256": "0c9d7ac21fd451fca0a5296bf21fb2476fad9af0b343a6c6155d9caf8cc8efd1",
+    "all_published_inputs_match": true
+  },
+  "delta_from_full_baseline": {
+    "FORMALIZATION_STATUS_V59.md": {
+      "before": "cbb8421c1da52f1b09d8f6a095eaa302231369b7111d7d9d0114173e22f22432",
+      "after": "7e85a2f37ae98af349516cabd14a566a5a85f81ed1204b793254c15e5d0d8fba"
+    },
+    "Lean/CategoricalEssentialIncompleteness.lean": {
+      "before": "cb4acb7c71a09f7a17d418b295190ff0b5e57a169ae09cdbf0e1169439036062",
+      "after": "5379c8819da312cb9c251431a0e62482d3fb570b693fd46cd9d6de7f1bc0c095"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean": {
+      "before": "0520e3d151303a0698a7280545e131896c7027955d79430cae874e23e396caed",
+      "after": "2c01a2caeb9ce506f448b5151782e5585956be814b6ddb03fff7a07fcd4cc040"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentStatementAudit.lean": {
+      "before": "3240b7f92a6f3fdd27d85629ee5c7fb1f327d8ebbc517e68a50c27f18693e96a",
+      "after": "3e8ae2bc508e52a998b2b21c0865a34e83b6468242bc849bd4f7d0c00f2869b3"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterAlgebra.lean": {
+      "before": null,
+      "after": "9ec9ed04f31286f6bda63cacdc7d5d4d0ade88965d4767fcc4095c388746911d"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterAlgebraChecks.lean": {
+      "before": null,
+      "after": "f1cc97638ab7c9184b5ea74c76ba6d810a63d95bad1d85c847bcd317e6238621"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterConstructors.lean": {
+      "before": null,
+      "after": "cb68516c01be499dc9fac2f9260426838d0d7d951b626fecd0512f19bbace29f"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxAlgebraHom.lean": {
+      "before": null,
+      "after": "1b4cc4c08902a19f58c288f5988886c4ad610af47dfba60130e7e7bf84026b60"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanEquations.lean": {
+      "before": null,
+      "after": "ce177af79d4caa24ba65746f51b60b742155da26847a92c1ec05550c923dcba1"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogical.lean": {
+      "before": null,
+      "after": "3b375e2a841c82c030abe0c562ce157f90865ecb2e64026a0cdc9596ab44387e"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogicalSoundness.lean": {
+      "before": null,
+      "after": "a70623c3f220aeb0f20621b7c314324ec030535c86e8b8ac2f67527b7691d1f0"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanOption.lean": {
+      "before": null,
+      "after": "f31f3e482f5ba81b15889beaad9d9602ef02a749cfcb7e34b6159c926269a73a"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitution.lean": {
+      "before": null,
+      "after": "3888c78450d284424a491afe16d622879edb9f02ce4bd97264bbba742c22e9e1"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionChecks.lean": {
+      "before": null,
+      "after": "03d5c90c5626a5872ac9765bc0ffec0512323dbe41586425160e0d62495bfb90"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionInvariant.lean": {
+      "before": null,
+      "after": "f129182da84065474b755d447d283632195a68264b63e64e55b915ad7adba43a"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionSteps.lean": {
+      "before": null,
+      "after": "00f61738029fdb24275b0262732e161ec150453fea212bd20fe92b5593b6a6b1"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanValuation.lean": {
+      "before": null,
+      "after": "b50caece0f3444692ba0ec79ce4a91d62186bbc65c54f2a89fd325321958dcb4"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanValuationChecks.lean": {
+      "before": null,
+      "after": "355be52fe321ffbd05c6e5d89d1ca768ae5a9f05e2762d0a2d58196f29d5510a"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOption.lean": {
+      "before": null,
+      "after": "3c7b7db5bcb8fa4004b99fd7391ff9cfdfeb5a5c145ceb16bfb6b63375f71032"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOptionChecks.lean": {
+      "before": null,
+      "after": "31374a5ba8d4de97eaa7902297b2694fd202d3f60f6585f393ef9667c94759b3"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOptionConstructors.lean": {
+      "before": null,
+      "after": "370bc68eb190f507534aa662e5e2bfdfb17928e84cdbbfc057a634288e5ea37b"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedSubstitutionAlgebra.lean": {
+      "before": null,
+      "after": "83f7a5cb561c89261fb1e6b68a6469ffa85f3bc2eba492688dab0a011e430398"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46RuleRelabelling.lean": {
+      "before": null,
+      "after": "8ed7e8442a491f2b394baf8aad92def57e2650ef2fd88f87e3cb97c7c406afbf"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationCarrier.lean": {
+      "before": null,
+      "after": "92f391105adabbc7a07f96f52f9e387f86ed261c3f9a20608728f2de5b0dfb03"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationFiniteSupport.lean": {
+      "before": null,
+      "after": "36bc0227cfc6f4baf63de56e4e35f0b2d8415c70c2c4d0ee363c60a54631df18"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationFiniteSupportChecks.lean": {
+      "before": null,
+      "after": "01630004007f87b9520757c946a5a24a1939c7f38e067190e7a9465a6a7bd9e8"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationFiniteValuation.lean": {
+      "before": null,
+      "after": "a5b5778ced1574fca21a70a3b8047a69d768ff83f2699db5520d3b49803464c2"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationFiniteValuationChecks.lean": {
+      "before": null,
+      "after": "710d6ea0c281a7f9346597308b9d92414d01827c53fe78258144dee086890afb"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationLeafCodes.lean": {
+      "before": null,
+      "after": "f073ef89aef26ad775f78746633266ca5dc2509ed431840e2730f2b3a728292b"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationPositiveLabels.lean": {
+      "before": null,
+      "after": "0d4e85fb42db417fd4e14b5a8a346a487a074402d01af38809bbdc93a2b596b2"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationRules.lean": {
+      "before": null,
+      "after": "fe4524a71c7b9c26d5f64a7aca8ad6813d3f1bc4d368b9620b9bb682e465c96b"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedFiniteFormulaValuation.lean": {
+      "before": null,
+      "after": "d20ffce22b14712fdf4d62433523d90519900503f4f8f796cb5495f4baf7a330"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedFiniteFormulaValuationChecks.lean": {
+      "before": null,
+      "after": "6f3aaf95fca05c3b779914f5080f771c7f9a43e2df3f9e3a41e738d13a555dd4"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean": {
+      "before": "5fcd45a6d91c4750a8532a58fdd36047881393f18a5a31312ed98530b0cea2ce",
+      "after": "359bc7cf601a4aa2d5e52ef8ed5bf308a9e63a78f911183c41e0bfb663d7363d"
+    }
+  },
+  "delta_from_previous_incremental": {
+    "FORMALIZATION_STATUS_V59.md": {
+      "before": "2b6fd90ba8f467642e74e15087abce7b0501e0a1a76e8ba4cbbee0924e0f3b16",
+      "after": "7e85a2f37ae98af349516cabd14a566a5a85f81ed1204b793254c15e5d0d8fba"
+    },
+    "Lean/CategoricalEssentialIncompleteness.lean": {
+      "before": "2912eae9058793938a03457527c69826b8a9ba274f4c4be2c4bf5c39e4941bff",
+      "after": "5379c8819da312cb9c251431a0e62482d3fb570b693fd46cd9d6de7f1bc0c095"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean": {
+      "before": "6f83c5855fda952bc1b5fa64435feb91571b96897d61fa7f427a49fee6d48f3b",
+      "after": "2c01a2caeb9ce506f448b5151782e5585956be814b6ddb03fff7a07fcd4cc040"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentStatementAudit.lean": {
+      "before": "dae92efdb07acbc59933f153c14867040d0c8d23b95eeb4f3827ee9237dcb407",
+      "after": "3e8ae2bc508e52a998b2b21c0865a34e83b6468242bc849bd4f7d0c00f2869b3"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterAlgebra.lean": {
+      "before": null,
+      "after": "9ec9ed04f31286f6bda63cacdc7d5d4d0ade88965d4767fcc4095c388746911d"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterAlgebraChecks.lean": {
+      "before": null,
+      "after": "f1cc97638ab7c9184b5ea74c76ba6d810a63d95bad1d85c847bcd317e6238621"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ConstantParameterConstructors.lean": {
+      "before": null,
+      "after": "cb68516c01be499dc9fac2f9260426838d0d7d951b626fecd0512f19bbace29f"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogicalSoundness.lean": {
+      "before": null,
+      "after": "a70623c3f220aeb0f20621b7c314324ec030535c86e8b8ac2f67527b7691d1f0"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanOption.lean": {
+      "before": null,
+      "after": "f31f3e482f5ba81b15889beaad9d9602ef02a749cfcb7e34b6159c926269a73a"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitution.lean": {
+      "before": null,
+      "after": "3888c78450d284424a491afe16d622879edb9f02ce4bd97264bbba742c22e9e1"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionChecks.lean": {
+      "before": null,
+      "after": "03d5c90c5626a5872ac9765bc0ffec0512323dbe41586425160e0d62495bfb90"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionInvariant.lean": {
+      "before": null,
+      "after": "f129182da84065474b755d447d283632195a68264b63e64e55b915ad7adba43a"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionSteps.lean": {
+      "before": null,
+      "after": "00f61738029fdb24275b0262732e161ec150453fea212bd20fe92b5593b6a6b1"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOption.lean": {
+      "before": null,
+      "after": "3c7b7db5bcb8fa4004b99fd7391ff9cfdfeb5a5c145ceb16bfb6b63375f71032"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOptionChecks.lean": {
+      "before": null,
+      "after": "31374a5ba8d4de97eaa7902297b2694fd202d3f60f6585f393ef9667c94759b3"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedOptionConstructors.lean": {
+      "before": null,
+      "after": "370bc68eb190f507534aa662e5e2bfdfb17928e84cdbbfc057a634288e5ea37b"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ParameterizedSubstitutionAlgebra.lean": {
+      "before": null,
+      "after": "83f7a5cb561c89261fb1e6b68a6469ffa85f3bc2eba492688dab0a011e430398"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean": {
+      "before": "2cfcb42a979da7f63b80b25589c076605578f18ffcc07e70376b8465a7fcb9c4",
+      "after": "359bc7cf601a4aa2d5e52ef8ed5bf308a9e63a78f911183c41e0bfb663d7363d"
+    }
+  },
+  "dependency_worktrees": {
+    "start": [
+      {
+        "name": "Foundation",
+        "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "mathlib",
+        "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Forgive",
+        "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "doc-gen4",
+        "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "plausible",
+        "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "LeanSearchClient",
+        "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "importGraph",
+        "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "proofwidgets",
+        "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "aesop",
+        "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Qq",
+        "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "batteries",
+        "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Cli",
+        "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "leansqlite",
+        "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "UnicodeBasic",
+        "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "BibtexQuery",
+        "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "MD4Lean",
+        "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "worktree_clean": true,
+        "worktree_status": ""
+      }
+    ],
+    "end": [
+      {
+        "name": "Foundation",
+        "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "mathlib",
+        "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Forgive",
+        "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "doc-gen4",
+        "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "plausible",
+        "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "LeanSearchClient",
+        "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "importGraph",
+        "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "proofwidgets",
+        "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "aesop",
+        "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Qq",
+        "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "batteries",
+        "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Cli",
+        "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "leansqlite",
+        "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "UnicodeBasic",
+        "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "BibtexQuery",
+        "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "MD4Lean",
+        "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "worktree_clean": true,
+        "worktree_status": ""
+      }
+    ]
+  },
+  "source_files_verified": 356,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "principal_axiom_reports": {
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.comp_map_fail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.comp_map_ok": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_fail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_ok": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_precomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_branch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_natural": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_natural_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_binary_ok": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_binary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.map_ignore_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedOption.mask_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.Data.algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.Data.reindex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.pushHom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.pushHom_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.fold_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_precomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_inl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_inr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_coprod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConstantParameterAlgebra.component_parameter": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedSubstitution.data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedSubstitution.algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedSubstitution.fold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedSubstitution.formula_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedSubstitution.formula_structure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.evaluate_precomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.option_negation_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.option_implication_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.option_quantifier_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.PairGood": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.pairGood_precomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.equality_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.relation_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.negation_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.implication_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.quantifier_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.invariant_equation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.invariant_precomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.equality_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.relation_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.negation_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.implication_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.quantifier_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.constructor_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.fold_invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.substitution_pair_good": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.substitution_option_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.substitution_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.evaluate_equality_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.substitution_input_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.hilbert_instantiation_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.hilbert_equality_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ParameterizedBooleanValuation.logical_axioms_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "numbered_result_status": {
+    "proved": 70,
+    "total": 77,
+    "open_results": [
+      "Lemma 8.9",
+      "Corollary 8.10",
+      "Lemma 9.6",
+      "Corollary 9.8",
+      "Proposition 10.7",
+      "Proposition 10.8",
+      "Corollary 10.9"
+    ]
+  },
+  "lemma_8_9_complete": false,
+  "parameterized_substitution_complete": true,
+  "option_failure_preservation_complete": true,
+  "parameterized_logical_schemes_proved": [
+    "first propositional scheme",
+    "second propositional scheme",
+    "classical propositional scheme",
+    "quantifier distribution",
+    "equality reflexivity",
+    "universal instantiation",
+    "equality substitution"
+  ],
+  "parameterized_inference_rules_proved": [
+    "modus ponens",
+    "generalization"
+  ],
+  "internal_derivation_truth_invariant_complete": false,
+  "internal_consistency_complete": false,
+  "essential_incompleteness_assembly_complete": false,
+  "manuscript_bytes_unchanged_since_incoming_v59": true,
+  "current_audit_modules": [
+    "CategoricalEssentialIncompleteness.V46AlgebraTransport",
+    "CategoricalEssentialIncompleteness.V46AmbientPartialSlice",
+    "CategoricalEssentialIncompleteness.V46AmbientProductTuring",
+    "CategoricalEssentialIncompleteness.V46AmbientSliceProducts",
+    "CategoricalEssentialIncompleteness.V46AmbientSliceTuring",
+    "CategoricalEssentialIncompleteness.V46Applications",
+    "CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesModels",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesPrinted",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalRepresentation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension",
+    "CategoricalEssentialIncompleteness.V46ArithmeticDomainSplitting",
+    "CategoricalEssentialIncompleteness.V46ArithmeticFiniteLookup",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxiomsExponential",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFamily",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibers",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAlgebraSplit",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxioms",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxiomsPredicate",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersConstructors",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumerals",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersParameters",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationInduction",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationSimple",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationTemplates",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPrintedFamily",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvability",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityFibers",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityModels",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityPresentation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules",
+    "CategoricalEssentialIncompleteness.V46ArithmeticInternalComparison",
+    "CategoricalEssentialIncompleteness.V46ArithmeticLiteralCoordinates",
+    "CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonBasic",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonEquality",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonInduction",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedOpenTranslation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationAlpha",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationBasic",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationRoundtrip",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationTerms",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedProofConnectives",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedProofNumerals",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedTranslation",
+    "CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparability",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityConditional",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityCore",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityDiagonal",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSetModelLaws",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSignedFiniteSupport",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUltrapower",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformIndependent",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformPredicates",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformSearch",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformSearchModels",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformSentence",
+    "CategoricalEssentialIncompleteness.V46AssociatedBooleanDecision",
+    "CategoricalEssentialIncompleteness.V46AssociatedClosedTheories",
+    "CategoricalEssentialIncompleteness.V46AssociatedEvaluation",
+    "CategoricalEssentialIncompleteness.V46AssociatedExtensionWitness",
+    "CategoricalEssentialIncompleteness.V46AssociatedIncompleteness",
+    "CategoricalEssentialIncompleteness.V46AssociatedSliceCoordinates",
+    "CategoricalEssentialIncompleteness.V46BooleanFibers",
+    "CategoricalEssentialIncompleteness.V46BooleanPartialDecision",
+    "CategoricalEssentialIncompleteness.V46BooleanSquare",
+    "CategoricalEssentialIncompleteness.V46CategoricalDeletionLaws",
+    "CategoricalEssentialIncompleteness.V46CategoricalDeletionLawsBoolean",
+    "CategoricalEssentialIncompleteness.V46CategoricalFreeVariableLaws",
+    "CategoricalEssentialIncompleteness.V46CategoricalFreeVariables",
+    "CategoricalEssentialIncompleteness.V46CategoricalListLaws",
+    "CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters",
+    "CategoricalEssentialIncompleteness.V46CategoricalListOperations",
+    "CategoricalEssentialIncompleteness.V46CategoricalLists",
+    "CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibility",
+    "CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityBranches",
+    "CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityOptions",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitution",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsent",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentClosure",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentConstructors",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentCore",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentFamilies",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentInvariant",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentSteps",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentTuples",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionConstructors",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentity",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityParameters",
+    "CategoricalEssentialIncompleteness.V46CategoricalSubstitutionValues",
+    "CategoricalEssentialIncompleteness.V46CategoricalSyntax",
+    "CategoricalEssentialIncompleteness.V46CategoricalVariableSubstitution",
+    "CategoricalEssentialIncompleteness.V46ClosedTheoryTransfer",
+    "CategoricalEssentialIncompleteness.V46Comparison",
+    "CategoricalEssentialIncompleteness.V46ConcreteDecidableVariables",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonAdmissibleValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonAtomicSteps",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBooleans",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBraidedValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCapture",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonConstantMap",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCoordinates",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonDeletion",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaCommutation",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaRootArithmetic",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFreeFor",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFreeForTheory",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFunctionStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGather",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonImplicationStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonLists",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonNegationStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrenceOperations",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrences",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptionBranches",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptions",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOriginal",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterProjections",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterSomeValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameters",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPayloadOccurrences",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPayloads",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainFreeFor",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainFreeForTheory",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainResults",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionComparison",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainTransportData",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionLaws",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationCoproductValue",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResults",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionHom",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionValues",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermCommutation",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonVariableStep",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithm",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAll",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionCarriers",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionEquations",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPA",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPayload",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRootClosure",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversal",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalConstructors",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalLaws",
+    "CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalTyped",
+    "CategoricalEssentialIncompleteness.V46ConsistentFirstOrderTheories",
+    "CategoricalEssentialIncompleteness.V46ConstantFamilyProducts",
+    "CategoricalEssentialIncompleteness.V46ConstantFamilyRetraction",
+    "CategoricalEssentialIncompleteness.V46ConstantParameterAlgebra",
+    "CategoricalEssentialIncompleteness.V46ConstantParameterConstructors",
+    "CategoricalEssentialIncompleteness.V46ConstantSlice",
+    "CategoricalEssentialIncompleteness.V46ConstantSliceFull",
+    "CategoricalEssentialIncompleteness.V46ConstantSliceRecursion",
+    "CategoricalEssentialIncompleteness.V46DecidableVariablesTransport",
+    "CategoricalEssentialIncompleteness.V46DeductionComparison",
+    "CategoricalEssentialIncompleteness.V46DeductionMates",
+    "CategoricalEssentialIncompleteness.V46DeductionSliceAdjunction",
+    "CategoricalEssentialIncompleteness.V46DerivationConclusionInduction",
+    "CategoricalEssentialIncompleteness.V46DerivationFiniteSupport",
+    "CategoricalEssentialIncompleteness.V46DerivationInternalInduction",
+    "CategoricalEssentialIncompleteness.V46DerivationStandardInduction",
+    "CategoricalEssentialIncompleteness.V46DerivationStandardInductionCharts",
+    "CategoricalEssentialIncompleteness.V46DerivationStandardInductionInputs",
+    "CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers",
+    "CategoricalEssentialIncompleteness.V46DerivationStandardInductionRank",
+    "CategoricalEssentialIncompleteness.V46ExponentialPairing",
+    "CategoricalEssentialIncompleteness.V46ExponentialPairingPrimrec",
+    "CategoricalEssentialIncompleteness.V46ExponentialProducts",
+    "CategoricalEssentialIncompleteness.V46ExponentialProjections",
+    "CategoricalEssentialIncompleteness.V46FiniteLimitSubobjects",
+    "CategoricalEssentialIncompleteness.V46FiniteRuleTransport",
+    "CategoricalEssentialIncompleteness.V46FiniteSigmaOne",
+    "CategoricalEssentialIncompleteness.V46FirstOrderGeneration",
+    "CategoricalEssentialIncompleteness.V46FirstOrderInference",
+    "CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction",
+    "CategoricalEssentialIncompleteness.V46FirstOrderModelSoundness",
+    "CategoricalEssentialIncompleteness.V46FirstOrderPresentationAdjunction",
+    "CategoricalEssentialIncompleteness.V46FirstOrderReflection",
+    "CategoricalEssentialIncompleteness.V46FirstOrderRuleTransport",
+    "CategoricalEssentialIncompleteness.V46FirstOrderStandardInduction",
+    "CategoricalEssentialIncompleteness.V46FirstOrderTheory",
+    "CategoricalEssentialIncompleteness.V46FirstOrderTranslationReflection",
+    "CategoricalEssentialIncompleteness.V46ForkAxiomClosure",
+    "CategoricalEssentialIncompleteness.V46ForkComparison",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationAlgebra",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationComponent",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationComponents",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationComponentsBase",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationComponentsCoordinates",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationDiagram",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationEvaluation",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationGluing",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationImages",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationInference",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationInitial",
+    "CategoricalEssentialIncompleteness.V46ForkDerivationNaturality",
+    "CategoricalEssentialIncompleteness.V46ForkRangeStability",
+    "CategoricalEssentialIncompleteness.V46FullRestrictionProducts",
+    "CategoricalEssentialIncompleteness.V46Inference",
+    "CategoricalEssentialIncompleteness.V46InferenceFunctor",
+    "CategoricalEssentialIncompleteness.V46InferenceTranslation",
+    "CategoricalEssentialIncompleteness.V46Karoubi",
+    "CategoricalEssentialIncompleteness.V46KaroubiRestriction",
+    "CategoricalEssentialIncompleteness.V46LogicalComparison",
+    "CategoricalEssentialIncompleteness.V46LogicalSchemes",
+    "CategoricalEssentialIncompleteness.V46LogicalTranslations",
+    "CategoricalEssentialIncompleteness.V46MappedRuleAlgebras",
+    "CategoricalEssentialIncompleteness.V46MillerAxiomSubobjects",
+    "CategoricalEssentialIncompleteness.V46MillerBinaryCore",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalAxiomIncompleteness",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalIncompleteness",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalParameterGeometry",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparison",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonChosen",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonInference",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonCore",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonOperations",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonParameters",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSchemes",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSentences",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSquares",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonTranspose",
+    "CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents",
+    "CategoricalEssentialIncompleteness.V46MillerCategory",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryConnected",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryCoproducts",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryInclusion",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryJoins",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryProducts",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryRelative",
+    "CategoricalEssentialIncompleteness.V46MillerCategoryTuring",
+    "CategoricalEssentialIncompleteness.V46MillerCoverEffective",
+    "CategoricalEssentialIncompleteness.V46MillerCoverSemantics",
+    "CategoricalEssentialIncompleteness.V46MillerCutApplications",
+    "CategoricalEssentialIncompleteness.V46MillerCutBoxDistance",
+    "CategoricalEssentialIncompleteness.V46MillerCutDigits",
+    "CategoricalEssentialIncompleteness.V46MillerCutDigitsStrict",
+    "CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation",
+    "CategoricalEssentialIncompleteness.V46MillerCutDistanceProgram",
+    "CategoricalEssentialIncompleteness.V46MillerCutDyadicArithmetic",
+    "CategoricalEssentialIncompleteness.V46MillerCutDyadicBoxes",
+    "CategoricalEssentialIncompleteness.V46MillerCutInseparability",
+    "CategoricalEssentialIncompleteness.V46MillerCutInseparabilityRelative",
+    "CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit",
+    "CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySplit",
+    "CategoricalEssentialIncompleteness.V46MillerCutReduction",
+    "CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram",
+    "CategoricalEssentialIncompleteness.V46MillerCutSeparatingReal",
+    "CategoricalEssentialIncompleteness.V46MillerCutSeries",
+    "CategoricalEssentialIncompleteness.V46MillerCutStages",
+    "CategoricalEssentialIncompleteness.V46MillerCutTopology",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationEquality",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationInitial",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationTotal",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationTrees",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationValidation",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordFirstOrderInduction",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordInduction",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionCharts",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionInputs",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionPowers",
+    "CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionRank",
+    "CategoricalEssentialIncompleteness.V46MillerDyadicEffective",
+    "CategoricalEssentialIncompleteness.V46MillerDyadicSeparation",
+    "CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs",
+    "CategoricalEssentialIncompleteness.V46MillerFiniteCover",
+    "CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision",
+    "CategoricalEssentialIncompleteness.V46MillerFiniteUse",
+    "CategoricalEssentialIncompleteness.V46MillerFirstOrder",
+    "CategoricalEssentialIncompleteness.V46MillerIncompleteness",
+    "CategoricalEssentialIncompleteness.V46MillerListsCarrier",
+    "CategoricalEssentialIncompleteness.V46MillerListsDecoder",
+    "CategoricalEssentialIncompleteness.V46MillerListsEvaluation",
+    "CategoricalEssentialIncompleteness.V46MillerListsFold",
+    "CategoricalEssentialIncompleteness.V46MillerListsParameterInitial",
+    "CategoricalEssentialIncompleteness.V46MillerListsRawAlgebra",
+    "CategoricalEssentialIncompleteness.V46MillerListsRawSquares",
+    "CategoricalEssentialIncompleteness.V46MillerListsStable",
+    "CategoricalEssentialIncompleteness.V46MillerListsWordAlgebra",
+    "CategoricalEssentialIncompleteness.V46MillerListsWordCodes",
+    "CategoricalEssentialIncompleteness.V46MillerListsWordInverse",
+    "CategoricalEssentialIncompleteness.V46MillerNamedPolynomialRepresentation",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageAbsenceReflection",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageData",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageForward",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageLogicalReflection",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeClosure",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaInputs",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaTransport",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodeGeometry",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodes",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSource",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitution",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionComparison",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionValues",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeTransport",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImagePoints",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemeReflection",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSentenceReflection",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflection",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxCharts",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparison",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonNormalization",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionConstructors",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionSuccess",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptions",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSentences",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionQuantifier",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionState",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransport",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportBooleans",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportCoordinates",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportMembership",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportOperations",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxParameterBaseChangeFamily",
+    "CategoricalEssentialIncompleteness.V46MillerNamedSyntaxParameterFamily",
+    "CategoricalEssentialIncompleteness.V46MillerOracleProgram",
+    "CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective",
+    "CategoricalEssentialIncompleteness.V46MillerOracleProgramTable",
+    "CategoricalEssentialIncompleteness.V46MillerOracleRelative",
+    "CategoricalEssentialIncompleteness.V46MillerOrderedFieldSentenceMembership",
+    "CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax",
+    "CategoricalEssentialIncompleteness.V46MillerRationalCodes",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedBounds",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedRawModels",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedRawOrderedField",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedRawStructure",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedSoundness",
+    "CategoricalEssentialIncompleteness.V46MillerRealComputation",
+    "CategoricalEssentialIncompleteness.V46MillerRelativeCarriers",
+    "CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks",
+    "CategoricalEssentialIncompleteness.V46MillerStrictRationalCuts",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxChildren",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxComparison",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxConstructor",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxEvaluation",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxFold",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxOperations",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRaw",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawAction",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstants",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantsCodes",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawLeaves",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawProducts",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRawSums",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxRelationUnique",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxSimulation",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxSource",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxState",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxStep",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxTotal",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxTrace",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformConstructors",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformDecomposition",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFold",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldCommutation",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformHomLaws",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitialExplicit",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformParameterAlgebra",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique",
+    "CategoricalEssentialIncompleteness.V46MillerSyntaxWordInduction",
+    "CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication",
+    "CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms",
+    "CategoricalEssentialIncompleteness.V46MillerTheorySentenceWordRanges",
+    "CategoricalEssentialIncompleteness.V46MillerTheorySentenceWords",
+    "CategoricalEssentialIncompleteness.V46MillerTotalCarriers",
+    "CategoricalEssentialIncompleteness.V46MillerTotalCoproducts",
+    "CategoricalEssentialIncompleteness.V46MillerTotalEquivalence",
+    "CategoricalEssentialIncompleteness.V46MillerTotalExtensive",
+    "CategoricalEssentialIncompleteness.V46MillerTotalFiniteCoproducts",
+    "CategoricalEssentialIncompleteness.V46MillerTotalInverses",
+    "CategoricalEssentialIncompleteness.V46MillerTotalLimits",
+    "CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps",
+    "CategoricalEssentialIncompleteness.V46MillerTotalProducts",
+    "CategoricalEssentialIncompleteness.V46MillerTotalPullbackImages",
+    "CategoricalEssentialIncompleteness.V46MillerTotalRealization",
+    "CategoricalEssentialIncompleteness.V46MillerTotalRegular",
+    "CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder",
+    "CategoricalEssentialIncompleteness.V46MillerTotalUnderlying",
+    "CategoricalEssentialIncompleteness.V46MillerTotalUnderlyingPullbacks",
+    "CategoricalEssentialIncompleteness.V46MillerUnanimity",
+    "CategoricalEssentialIncompleteness.V46MillerUniformComputations",
+    "CategoricalEssentialIncompleteness.V46MillerUniformFinite",
+    "CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation",
+    "CategoricalEssentialIncompleteness.V46MillerUniformTreesTotal",
+    "CategoricalEssentialIncompleteness.V46ModelLogicalSoundness",
+    "CategoricalEssentialIncompleteness.V46ModelQuantifierSoundness",
+    "CategoricalEssentialIncompleteness.V46ModelSubstitutionSoundness",
+    "CategoricalEssentialIncompleteness.V46MonicPartialMapEquivalence",
+    "CategoricalEssentialIncompleteness.V46MonicSpanValues",
+    "CategoricalEssentialIncompleteness.V46MonoInversesChoice",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitutionTheory",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsModels",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsSentences",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsStandard",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsUltrapower",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSentenceMorphism",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticModelCoding",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticModelOccurrences",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticModelSubstitution",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralCarriers",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralGraph",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveInvariant",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPredicates",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchSource",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticQuantifierOccurrences",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticSignature",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticStandardCodes",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticSubstitutionOccurrences",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticTranslationFreeVariables",
+    "CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution",
+    "CategoricalEssentialIncompleteness.V46NamedBooleanReflection",
+    "CategoricalEssentialIncompleteness.V46NamedFiniteSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedFiniteSoundness",
+    "CategoricalEssentialIncompleteness.V46NamedFiniteSyntax",
+    "CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness",
+    "CategoricalEssentialIncompleteness.V46NamedGammaModel",
+    "CategoricalEssentialIncompleteness.V46NamedGammaModelSource",
+    "CategoricalEssentialIncompleteness.V46NamedGammaSoundness",
+    "CategoricalEssentialIncompleteness.V46NamedHilbertPropositional",
+    "CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers",
+    "CategoricalEssentialIncompleteness.V46NamedNumericalSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPlainConstructorModels",
+    "CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPlainLogicalValidity",
+    "CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels",
+    "CategoricalEssentialIncompleteness.V46NamedPlainSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPlainSentenceSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth",
+    "CategoricalEssentialIncompleteness.V46NamedPlainSoundness",
+    "CategoricalEssentialIncompleteness.V46NamedPlainSubstitutionSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPlainUltrapowerSoundness",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixComparison",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixData",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixDecoding",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixEncoding",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixOperations",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixPlainComparison",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixSemantics",
+    "CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution",
+    "CategoricalEssentialIncompleteness.V46NamedStandardLists",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanLogicalSoundness",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanSentenceTheory",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanSubstitution",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanSubstitutionInvariant",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanSubstitutionSteps",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanTheoryClosure",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanTruthTables",
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanValuation",
+    "CategoricalEssentialIncompleteness.V46NullaryFormulaSubstitution",
+    "CategoricalEssentialIncompleteness.V46NullaryInterpretedSubstitution",
+    "CategoricalEssentialIncompleteness.V46NullaryInterpretedSubstitutionHom",
+    "CategoricalEssentialIncompleteness.V46NullaryLogicalDistribution",
+    "CategoricalEssentialIncompleteness.V46NullaryLogicalEquality",
+    "CategoricalEssentialIncompleteness.V46NullaryLogicalInstantiation",
+    "CategoricalEssentialIncompleteness.V46NullaryLogicalInterpretation",
+    "CategoricalEssentialIncompleteness.V46NullaryPresentationAdjunction",
+    "CategoricalEssentialIncompleteness.V46NullarySubstitutionAlgebra",
+    "CategoricalEssentialIncompleteness.V46NullarySubstitutionCapture",
+    "CategoricalEssentialIncompleteness.V46NullarySubstitutionHom",
+    "CategoricalEssentialIncompleteness.V46NullarySubstitutionPairs",
+    "CategoricalEssentialIncompleteness.V46NullarySubstitutionQuantifier",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebra",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebraHom",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxInterpretation",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxOccurrences",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxParameterConstructors",
+    "CategoricalEssentialIncompleteness.V46NullarySyntaxTerms",
+    "CategoricalEssentialIncompleteness.V46NullaryTermSubstitution",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticAlgorithms",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticCodedMaps",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionModels",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionParameters",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionValues",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticEqualityParameters",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompleteness",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessCoordinates",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessDiagonal",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticLiteralSignature",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticNullaryRules",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticOperationValues",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticPA",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticProofComparison",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticProofImage",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticProofWords",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleComparison",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleParameters",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticRules",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSchemeSquares",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceMorphisms",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceProofCodes",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureWords",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionDomains",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionParameters",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticSyntaxTemplate",
+    "CategoricalEssentialIncompleteness.V46NumericalArithmeticUnaryImage",
+    "CategoricalEssentialIncompleteness.V46NumericalCoordinatesCoding",
+    "CategoricalEssentialIncompleteness.V46NumericalCoordinatesPresentation",
+    "CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivation",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationConstructorValues",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationCoherence",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationConstructors",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationIndexAlgebra",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationInitial",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationNaturality",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationOptions",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPolynomial",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationProjection",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPullback",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationStandardCoherence",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationValidation",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWordCoherence",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWords",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWordsFinal",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationTreeUniqueness",
+    "CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors",
+    "CategoricalEssentialIncompleteness.V46NumericalFirstOrder",
+    "CategoricalEssentialIncompleteness.V46NumericalForkComparison",
+    "CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralAlgorithms",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralCarrierNames",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDecoding",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDomainValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralInputValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralListValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralLogicalConstructorValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegation",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralPresentation",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSubstitutionValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSyntax",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables",
+    "CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate",
+    "CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation",
+    "CategoricalEssentialIncompleteness.V46NumericalRealization",
+    "CategoricalEssentialIncompleteness.V46NumericalRuleRebase",
+    "CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords",
+    "CategoricalEssentialIncompleteness.V46NumericalRuleRelabel",
+    "CategoricalEssentialIncompleteness.V46NumericalSentenceMorphisms",
+    "CategoricalEssentialIncompleteness.V46NumericalStableLists",
+    "CategoricalEssentialIncompleteness.V46NumericalSyntax",
+    "CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart",
+    "CategoricalEssentialIncompleteness.V46NumericalTuples",
+    "CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps",
+    "CategoricalEssentialIncompleteness.V46NumericalTuplesStructure",
+    "CategoricalEssentialIncompleteness.V46NumericalUnderlying",
+    "CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts",
+    "CategoricalEssentialIncompleteness.V46OptionMask",
+    "CategoricalEssentialIncompleteness.V46OptionSyntaxNaturality",
+    "CategoricalEssentialIncompleteness.V46OrdinaryEvaluationRetraction",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanEquations",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanLogical",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanLogicalSoundness",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanOption",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanSubstitution",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanSubstitutionInvariant",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanSubstitutionSteps",
+    "CategoricalEssentialIncompleteness.V46ParameterizedBooleanValuation",
+    "CategoricalEssentialIncompleteness.V46ParameterizedOption",
+    "CategoricalEssentialIncompleteness.V46ParameterizedOptionConstructors",
+    "CategoricalEssentialIncompleteness.V46ParameterizedSubstitutionAlgebra",
+    "CategoricalEssentialIncompleteness.V46ParameterizedTuringDiagonal",
+    "CategoricalEssentialIncompleteness.V46PartialMapEquivalence",
+    "CategoricalEssentialIncompleteness.V46PartialMapFunctor",
+    "CategoricalEssentialIncompleteness.V46PartialMapFunctorComposition",
+    "CategoricalEssentialIncompleteness.V46PartialMapRanges",
+    "CategoricalEssentialIncompleteness.V46PartialMapTheory",
+    "CategoricalEssentialIncompleteness.V46PartialMapTotals",
+    "CategoricalEssentialIncompleteness.V46PartialMaps",
+    "CategoricalEssentialIncompleteness.V46PartialSearchLift",
+    "CategoricalEssentialIncompleteness.V46PartialSliceAdjunctions",
+    "CategoricalEssentialIncompleteness.V46PartialSliceChangeBase",
+    "CategoricalEssentialIncompleteness.V46PartialSliceEquivalence",
+    "CategoricalEssentialIncompleteness.V46PartialSliceLeftAdjunction",
+    "CategoricalEssentialIncompleteness.V46PartialSlicePostcompose",
+    "CategoricalEssentialIncompleteness.V46PartialSlicePostcomposeProducts",
+    "CategoricalEssentialIncompleteness.V46PartialSliceProducts",
+    "CategoricalEssentialIncompleteness.V46PartialSliceProperness",
+    "CategoricalEssentialIncompleteness.V46PartialSliceRealization",
+    "CategoricalEssentialIncompleteness.V46PartialSliceReindex",
+    "CategoricalEssentialIncompleteness.V46PartialSliceRetractions",
+    "CategoricalEssentialIncompleteness.V46PartialSliceRightAdjunction",
+    "CategoricalEssentialIncompleteness.V46PartialSliceSpanChangeBase",
+    "CategoricalEssentialIncompleteness.V46PartialSliceSpanPullback",
+    "CategoricalEssentialIncompleteness.V46PartialSliceSplitting",
+    "CategoricalEssentialIncompleteness.V46PartialSliceTheoryComparison",
+    "CategoricalEssentialIncompleteness.V46PartialSliceTheoryFamilies",
+    "CategoricalEssentialIncompleteness.V46PartialSliceTheorySubobjects",
+    "CategoricalEssentialIncompleteness.V46PartialSliceTuring",
+    "CategoricalEssentialIncompleteness.V46PredicateInterpretation",
+    "CategoricalEssentialIncompleteness.V46PredicateInterpretationCoproducts",
+    "CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain",
+    "CategoricalEssentialIncompleteness.V46PredicateInterpretationRegular",
+    "CategoricalEssentialIncompleteness.V46PrimitiveRecursiveTags",
+    "CategoricalEssentialIncompleteness.V46PrintedObjectCoding",
+    "CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels",
+    "CategoricalEssentialIncompleteness.V46RecursiveDomainInterpretation",
+    "CategoricalEssentialIncompleteness.V46RecursiveModelRegular",
+    "CategoricalEssentialIncompleteness.V46RecursiveUltrapowerComparison",
+    "CategoricalEssentialIncompleteness.V46RegularEquivalence",
+    "CategoricalEssentialIncompleteness.V46RegularImage",
+    "CategoricalEssentialIncompleteness.V46RegularSlices",
+    "CategoricalEssentialIncompleteness.V46RestrictionCompletion",
+    "CategoricalEssentialIncompleteness.V46RestrictionProductCategory",
+    "CategoricalEssentialIncompleteness.V46RestrictionProductComparison",
+    "CategoricalEssentialIncompleteness.V46RestrictionProductData",
+    "CategoricalEssentialIncompleteness.V46RestrictionProductZeros",
+    "CategoricalEssentialIncompleteness.V46RestrictionRetraction",
+    "CategoricalEssentialIncompleteness.V46RestrictionSubobjectInseparability",
+    "CategoricalEssentialIncompleteness.V46RestrictionSubobjects",
+    "CategoricalEssentialIncompleteness.V46RestrictionTerminal",
+    "CategoricalEssentialIncompleteness.V46RetractedClosedTheories",
+    "CategoricalEssentialIncompleteness.V46RetractedRuleComparison",
+    "CategoricalEssentialIncompleteness.V46RuleRelabelling",
+    "CategoricalEssentialIncompleteness.V46SentenceImages",
+    "CategoricalEssentialIncompleteness.V46SentenceTheoryClosure",
+    "CategoricalEssentialIncompleteness.V46SignedBooleanExtension",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationCarrier",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationFiniteSupport",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationFiniteValuation",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationLeafCodes",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationPositiveLabels",
+    "CategoricalEssentialIncompleteness.V46SignedDerivationRules",
+    "CategoricalEssentialIncompleteness.V46SignedFiniteFormulaValuation",
+    "CategoricalEssentialIncompleteness.V46SignedFirstOrderAdjunction",
+    "CategoricalEssentialIncompleteness.V46SignedFirstOrderCategories",
+    "CategoricalEssentialIncompleteness.V46SignedFirstOrderGeneration",
+    "CategoricalEssentialIncompleteness.V46SignedFirstOrderIncompleteness",
+    "CategoricalEssentialIncompleteness.V46SignedSubobjectIncompleteness",
+    "CategoricalEssentialIncompleteness.V46SliceBaseChangeGeometry",
+    "CategoricalEssentialIncompleteness.V46SliceClosedTheories",
+    "CategoricalEssentialIncompleteness.V46SliceEvaluationSubobjects",
+    "CategoricalEssentialIncompleteness.V46SliceProductCoordinates",
+    "CategoricalEssentialIncompleteness.V46SliceProductTuring",
+    "CategoricalEssentialIncompleteness.V46SliceSubobjectPredicates",
+    "CategoricalEssentialIncompleteness.V46SliceTuringParameters",
+    "CategoricalEssentialIncompleteness.V46SplitCoproducts",
+    "CategoricalEssentialIncompleteness.V46SplitExtension",
+    "CategoricalEssentialIncompleteness.V46SplitProductCategory",
+    "CategoricalEssentialIncompleteness.V46SplitProducts",
+    "CategoricalEssentialIncompleteness.V46SplitSliceTuring",
+    "CategoricalEssentialIncompleteness.V46SplitSplittings",
+    "CategoricalEssentialIncompleteness.V46SplitTuring",
+    "CategoricalEssentialIncompleteness.V46StableListComparison",
+    "CategoricalEssentialIncompleteness.V46SubobjectInseparability",
+    "CategoricalEssentialIncompleteness.V46SyntacticAxiomPredicates",
+    "CategoricalEssentialIncompleteness.V46SyntacticComparison",
+    "CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationCheckedRoot",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationInputGeometry",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationInputPullback",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationModelPullbacks",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOperations",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionAlgebra",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionModels",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPowers",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPullbacks",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionRoots",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationOriginalInputs",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationPolynomialComparison",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationRecordLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationRecords",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationRules",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessAdjunction",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessCarrier",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparison",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparisonCore",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationTupleCompatibility",
+    "CategoricalEssentialIncompleteness.V46SyntacticDerivationTuples",
+    "CategoricalEssentialIncompleteness.V46SyntacticExtension",
+    "CategoricalEssentialIncompleteness.V46SyntacticFamilyCoherence",
+    "CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivations",
+    "CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsPowers",
+    "CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsStandard",
+    "CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedDerivations",
+    "CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes",
+    "CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms",
+    "CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations",
+    "CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory",
+    "CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheoryTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticGenerationAdjunction",
+    "CategoricalEssentialIncompleteness.V46SyntacticListEvaluation",
+    "CategoricalEssentialIncompleteness.V46SyntacticListEvaluationLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticLists",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsDecode",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsFold",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsInitial",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsStable",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticListsUnique",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertCoordinates",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertOperations",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRealization",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement",
+    "CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints",
+    "CategoricalEssentialIncompleteness.V46SyntacticOmegaRealization",
+    "CategoricalEssentialIncompleteness.V46SyntacticParityComparison",
+    "CategoricalEssentialIncompleteness.V46SyntacticPartialComparison",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicates",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicatesImages",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicatesLimits",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular",
+    "CategoricalEssentialIncompleteness.V46SyntacticPredicatesRelations",
+    "CategoricalEssentialIncompleteness.V46SyntacticSearch",
+    "CategoricalEssentialIncompleteness.V46SyntacticSentenceImages",
+    "CategoricalEssentialIncompleteness.V46SyntacticSentenceLiteralChart",
+    "CategoricalEssentialIncompleteness.V46SyntacticSentenceRanges",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidate",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxChildrenTrace",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoding",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxConservation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoordinates",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecode",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluationLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxFamilyTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxFibers",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxFold",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxFoldHom",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxFoldValues",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxHomGraphs",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxOccurrenceComparisonTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortInitial",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxOperationLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameterTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlainTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxPolynomialTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRaw",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawEvaluation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMap",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMapLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefill",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxRootEquations",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxSimulation",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxSorts",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTransport",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxState",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxSubstitutionComparisonTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxTerminal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxTotal",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxTrace",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxTraceConcat",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxUnique",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxUniqueness",
+    "CategoricalEssentialIncompleteness.V46SyntacticSyntaxWords",
+    "CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportInputs",
+    "CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportLists",
+    "CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxLanguageTransportComponents",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion",
+    "CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership",
+    "CategoricalEssentialIncompleteness.V46SyntaxMappedListOccurrenceComparison",
+    "CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxOptionClassifier",
+    "CategoricalEssentialIncompleteness.V46SyntaxOptionConstructorTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxOptionTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization",
+    "CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebra",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraFormula",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraTerm",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportCapture",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFormula",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportInputs",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportMappedLists",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportNormalizedFamilies",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterAlgebra",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterPolynomial",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifier",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifierCoordinates",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues",
+    "CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable",
+    "CategoricalEssentialIncompleteness.V46TotalSentenceImages",
+    "CategoricalEssentialIncompleteness.V46TranslationGalois",
+    "CategoricalEssentialIncompleteness.V46Ultrapower",
+    "CategoricalEssentialIncompleteness.V46UltrapowerComparison",
+    "CategoricalEssentialIncompleteness.V46UltrapowerTransport",
+    "CategoricalEssentialIncompleteness.V46UniformTrace",
+    "CategoricalEssentialIncompleteness.V46UniformTraceArithmetic",
+    "CategoricalEssentialIncompleteness.V46UniformTraceBuilders",
+    "CategoricalEssentialIncompleteness.V46UniformTraceCoding",
+    "CategoricalEssentialIncompleteness.V46UniformTraceComparison",
+    "CategoricalEssentialIncompleteness.V46UniformTraceComposition",
+    "CategoricalEssentialIncompleteness.V46UniformTraceConstants",
+    "CategoricalEssentialIncompleteness.V46UniformTraceDecoder",
+    "CategoricalEssentialIncompleteness.V46UniformTraceFlags",
+    "CategoricalEssentialIncompleteness.V46UniformTraceHalving",
+    "CategoricalEssentialIncompleteness.V46UniformTraceModelHistory",
+    "CategoricalEssentialIncompleteness.V46UniformTraceModelLists",
+    "CategoricalEssentialIncompleteness.V46UniformTraceModelSnoc",
+    "CategoricalEssentialIncompleteness.V46UniformTracePairing",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveBuilders",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveCoding",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveHistory",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveIndices",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveLists",
+    "CategoricalEssentialIncompleteness.V46UniformTracePrimitiveOperations",
+    "CategoricalEssentialIncompleteness.V46UniformTraceProgram",
+    "CategoricalEssentialIncompleteness.V46UniformTraceSpecializers",
+    "CategoricalEssentialIncompleteness.V46UniformTraceStageSelection",
+    "CategoricalEssentialIncompleteness.V46UniformTraceTemplates",
+    "CategoricalEssentialIncompleteness.V46VariableTests"
+  ],
+  "commands_detail": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/lean-version.log",
+      "sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/axiom-parser-tests.log",
+      "sha256": "62cfbeb2911bb226088bfb0918eb4b05008ea70b20bce854ee2ca8a564bd37a5"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/verify.py",
+        "--manuscript-only"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/manuscript-gate.log",
+      "sha256": "c4bb5e694270e250d5ce78c4a5ac65c0ead7ec205feaf90550a5600fcc89798e"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "exit_code": 0,
+      "seconds": 13.61,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/project-build.log",
+      "sha256": "ff475268c6c9c7144408c09c150df41104f79015ac893d3a0474660d0aa55705"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 10.96,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/CurrentStatementAudit-build.log",
+      "sha256": "c54cb5b4b25f8eb91e8d1e4ae5e0d729bc9b2230449ab2d6580a173529745236"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "exit_code": 0,
+      "seconds": 10.14,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/V46StatementAudit-build.log",
+      "sha256": "914fa221e9fdea366af5efbda0e24cf301ad307acc6acb8dea902c30b0b3191c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedOption.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.42,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedOption.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedOptionConstructors.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.6,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedOptionConstructors.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ConstantParameterAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.27,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ConstantParameterAlgebra.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ConstantParameterConstructors.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.79,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ConstantParameterConstructors.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedSubstitutionAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.18,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedSubstitutionAlgebra.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanOption.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.81,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanOption.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionSteps.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.15,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanSubstitutionSteps.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionInvariant.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.94,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanSubstitutionInvariant.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitution.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.95,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanSubstitution.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogicalSoundness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.32,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanLogicalSoundness.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedOptionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.04,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedOptionChecks.log",
+      "sha256": "760033b2bb9105ae771f3b7e38e8d080c04b2cb55b820c2694a7cb8a4e8962a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ConstantParameterAlgebraChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.0,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ConstantParameterAlgebraChecks.log",
+      "sha256": "3ba42c4aab6bab1f8d2e6d499e2a901e0202e4c3f0fe6b6b3921583655347b45"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitutionChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.62,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46ParameterizedBooleanSubstitutionChecks.log",
+      "sha256": "269266c327a75003b510059d3c1977d3d5e9d96ddf8e57329a8593981b6776ea"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.38,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-CurrentStatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.5,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-V46StatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 5.55,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/strict-entry-point.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.33,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/retained-statement-audit.log",
+      "sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.28,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/retained-axiom-audit.log",
+      "sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 201.31,
+      "log": ".codex-work/v59-parameterized-substitution-20261115/incremental-verification/current-axiom-audit.log",
+      "sha256": "632a553b69a77a618ff4e37bc1001e1753f4b9a5a625c7ee9149ff8ae306b27d"
+    }
+  ]
+}

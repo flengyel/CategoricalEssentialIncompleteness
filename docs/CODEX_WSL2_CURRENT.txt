@@ -1,5 +1,5 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 14 November 2026
+Updated 15 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
 The current manuscript and verification target are version 59.
@@ -39,9 +39,12 @@ finite atom valuation have 21-command incremental verification at
 The later Boolean formula valuation has 19-command incremental verification
 at e3d669ba3f299db26451fc1d1c76862148a06fff. See docs/V59_BOOLEAN_FORMULA_VALUATION_2026-11-14.md.
 Its five constructor laws, five schemes and both inference rules are proved,
-including signed-atom values in every PA model. Support-parameter admissible
-substitution, the instantiation/equality schemes, internal truth invariant,
-consistency and essential-incompleteness assembly remain open.
+including signed-atom values in every PA model. The later support-parameter substitution proof
+at 8a5f0cd7ee6d2ddd8b4f0619e20f7b35b8b08463 has 25-command incremental
+verification. See docs/V59_PARAMETERIZED_SUBSTITUTION_2026-11-15.md.
+Admissible-substitution invariance, full Option failure preservation and
+all seven logical schemes are proved. Continue with the internal truth
+invariant, consistency and essential-incompleteness assembly; these remain open.
 
 Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.
