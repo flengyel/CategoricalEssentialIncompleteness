@@ -43,8 +43,13 @@ including signed-atom values in every PA model. The later support-parameter subs
 at 8a5f0cd7ee6d2ddd8b4f0619e20f7b35b8b08463 has 25-command incremental
 verification. See docs/V59_PARAMETERIZED_SUBSTITUTION_2026-11-15.md.
 Admissible-substitution invariance, full Option failure preservation and
-all seven logical schemes are proved. Continue with the internal truth
-invariant, consistency and essential-incompleteness assembly; these remain open.
+all seven logical schemes are proved. The later internal truth batch at
+071fcd77c9b41aeab3c1c5a9aa94fe8590daef2a has 23-command incremental verification.
+See docs/V59_INTERNAL_TRUTH_2026-11-15.md. The coded Pi-one invariant and common-support
+contradiction cover arbitrary internal derivations in every PA model.
+Continue with the PA theorem, generated sentence-theory consistency,
+regular-image axiom comparison and essential-incompleteness assembly;
+these remain open.
 
 Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.

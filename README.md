@@ -74,8 +74,12 @@ is separate from the earlier full replay. The later
 [parameterized substitution proof](docs/V59_PARAMETERIZED_SUBSTITUTION_2026-11-15.md)
 proves admissible-substitution invariance, preserves Option failure and
 completes all seven logical schemes. Its 25-command incremental verification
-includes both complete axiom audits. The internal truth invariant, consistency
-and essential-incompleteness assembly remain open; the count stays 70/77.
+includes both complete axiom audits. The later
+[internal truth proof](docs/V59_INTERNAL_TRUTH_2026-11-15.md) excludes
+contradictory internal signed derivations in every PA model using a common
+finite support. Its 23-command incremental verification includes both complete
+axiom audits. Generated-theory consistency and essential-incompleteness
+assembly remain open; the count stays 70/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.

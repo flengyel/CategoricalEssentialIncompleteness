@@ -22,8 +22,12 @@ supports. Its 19-command incremental verification is separate from the earlier
 full replay. The later [parameterized substitution proof](V59_PARAMETERIZED_SUBSTITUTION_2026-11-15.md)
 proves admissible-substitution invariance, full Option failure preservation
 and all seven logical schemes. Its 25-command incremental verification is
-separate from the full replay. Continue with the internal truth invariant,
-consistency and essential-incompleteness assembly. Lemma 8.9 remains open.
+separate from the full replay. The [internal truth proof](V59_INTERNAL_TRUTH_2026-11-15.md) now
+excludes contradictory internal signed derivations in every PA model using
+a common support. Its 23-command incremental verification includes both
+complete axiom audits. Continue with the PA theorem, generated-theory
+consistency, regular-image axiom comparison and essential-incompleteness
+assembly. Lemma 8.9 remains open.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
