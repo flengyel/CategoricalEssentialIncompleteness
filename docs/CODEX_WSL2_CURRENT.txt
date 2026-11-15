@@ -2,57 +2,48 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 14 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 58.
-For the joint manuscript review, pending Google Deep Review and current
-Lean continuation, read docs/V58_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md.
-That prompt incorporates completion of Theorem 5.3 and begins the remaining
-formalization at Lemma 8.9.
-Follow docs/V58_LEAN_CONTINUATION_2026-11-14.md for the current proof task,
-v58 conventions, independent statement checks and commit requirements.
-Theorem 5.3 is complete; Lemma 8.9 is the next incomplete result.
-Preserve and reconcile all later local or remote proof work.
+The current manuscript and verification target are version 59.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V59.md,
+docs/V59_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md and
+docs/CEI_v59_WSL2_instructions_2026-11-14.md.
 
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V58.md,
-manuscript/latex/main.tex and all its inputs, and
- docs/CEI_v58_WSL2_instructions_2026-11-14.md.
+Theorem 5.3 is complete. The current count is 70 of 77 numbered results
+proved; Lemma 8.9 is next. The other open results are 8.10, 9.6, 9.8,
+10.7, 10.8 and 10.9. Preserve all subsequent local and remote work.
 
-Version 58 makes local notation, abstract and citation corrections, and
-explicates the uniform composition program in Lemma 6.1;
-all 77 numbered statements and three definitions are unchanged.
-The source, PDF and archive are included in the repository.
+The Google review has been supplied and assessed in
+docs/reviews/GOOGLE_V58_2026-11-14/. The alleged partial-monomorphism typo
+is absent from the v58 source and PDF. The confirmed publisher line break
+is corrected in v59. All mathematical text, statements and proofs remain
+unchanged. The reviewed v58 PDF and archive are retained.
 
-The current table records 70 proved counterparts and seven open results:
-8.9, 8.10, 9.6, 9.8, 10.7, 10.8 and 10.9.
-Theorem 5.3 includes arbitrary closed slice extensions, both directions of
-closure, consistency and completeness transfer, the full equivalence and
-final reduction clause. See docs/V58_ASSOCIATED_INCOMPLETENESS_2026-11-14.md.
-The principal generation reflection uses initial algebras for axiom
-subobjects and sends arbitrary presentations through their regular images.
-The earlier stronger-premise mismatch is resolved.
+The detailed mathematical tasks and conventions remain in
+docs/V58_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md; its pending-review
+section is superseded by the supplied report and assessment. Reuse the
+completed Theorem 5.3 proof and its arbitrary closed slice extensions.
+Retain subobject-only initiality, generation through regular images,
+the true/second-injection convention and the second-projection quantifier.
 
-Retain all later local and remote proof work. Read
- docs/V57_LEAN_CONTINUATION_2026-11-10.md and the later implementation reports.
-The parser repair is integrated. Run its tests; do not reapply its old patch.
+Use the printed hypotheses. Preserve the pinned Lean toolchain and
+dependencies, provenance checks and designated Palomar placeholders.
+Production proofs and their dependencies must use only propext, Quot.sound
+and Classical.choice, with no sorry, admit or sorryAx.
 
-Preserve the pinned Lean toolchain and dependency manifest, the designated
-Palomar challenge placeholders, and all later local work. Production proofs
-and their dependencies must not use sorry, admit, or sorryAx. Permitted
-logical axioms are propext, Quot.sound, and Classical.choice.
-
-Latest completed full replay: 1790 commands at
+Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.
-The current 70/77 status and unchanged v58 artifacts were verified there.
+The 70/77 status and the reviewed v58 artifacts were verified there.
 
-Run from the repository root:
+Run from the repository root, using the existing serial build lock:
 
     python3 scripts/test_verify_axiom_parser.py
     python3 scripts/verify.py --manuscript-only
     bash scripts/verify-wsl.sh
 
-The manuscript-only check does not execute Lean. Report full Lean verification
-only for the exact source revision on which it completes.
+The manuscript gate does not execute Lean. Record incremental and full
+verification separately. Do not reclassify a numbered result until every
+printed clause has a proved counterpart and independent statement checks.
 
-Commit all completed changes to main and push to origin/main without force.
-Fetch and reconcile concurrent changes first. Verify the remote main commit
-and active manuscript version before reporting completion. Update sources,
-PDF, archive, manifest, correspondence table, and instructions together.
+Commit verified batches promptly to main, push without force, and verify
+the live remote commit and selected manuscript version. Preserve concurrent
+changes and synchronize every manuscript revision's source, PDF, archive,
+manifest, correspondence and current instructions.
