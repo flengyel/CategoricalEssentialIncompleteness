@@ -1,0 +1,102 @@
+{
+  "kind": "incremental strict construction verification",
+  "manuscript": 59,
+  "baseline_commit": "a9b444ab657e2c5a5a995ccfad627ae7c5102832",
+  "strict_commands": [
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46ArithmeticFiniteLookup.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46ArithmeticFiniteLookupChecks.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46ArithmeticSignedFiniteSupport.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46ArithmeticSignedFiniteSupportChecks.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46DerivationFiniteSupport.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46DerivationFiniteSupportChecks.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46DerivationInternalInduction.lean",
+    "lake env lean -DwarningAsError=true CategoricalEssentialIncompleteness/V46DerivationInternalInductionChecks.lean"
+  ],
+  "strict_exit_status": 0,
+  "principal_axiom_reports": {
+    "CategoricalEssentialIncompleteness.V46.ArithmeticFiniteLookup.total_PA": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticFiniteLookup.recursive_comparison_PA": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticFiniteLookup.negative_label_PA": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticFiniteLookup.lookup_primrec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticSignedFiniteSupport.mem_append": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticSignedFiniteSupport.all_entries_append": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticSignedFiniteSupport.negative_on_combined_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ArithmeticSignedFiniteSupport.negative_PA": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.DerivationFiniteSupport.constructor_collect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.DerivationFiniteSupport.nullary_collect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.DerivationFiniteSupport.unary_collect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.DerivationFiniteSupport.binary_collect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SyntacticDerivation.InternalInduction.model_rule_induction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "principal_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_sha256": {
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticFiniteLookup.lean": "30e2f9883eca48b88828d41afde996467d1345271dc4142fd5443a193d408c48",
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticFiniteLookupChecks.lean": "29d2bbbee5c424f7ec78850ae5c0a5341abeec5305888e3091e633eeb8c5be7b",
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedFiniteSupport.lean": "d6603930d14a95ac32976b7a307e2537e7a9454dcc7090e7c542c160739bef9c",
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedFiniteSupportChecks.lean": "71f152bb8c6270b0cf088967d305d18818f19a7658dda7d89ef2e632139feb20",
+    "Lean/CategoricalEssentialIncompleteness/V46DerivationFiniteSupport.lean": "5720e5a8621e14661d528bd0e537c0b065b09bbdd73e7770c047e28c102b9089",
+    "Lean/CategoricalEssentialIncompleteness/V46DerivationFiniteSupportChecks.lean": "5605d32e032cc4a4b2a572e508a223ccc8d69caff1623329185bb20a354b987f",
+    "Lean/CategoricalEssentialIncompleteness/V46DerivationInternalInduction.lean": "b63b075fb338ed06177bba90922598cbfd2de632a205ffe07525320e5c7d4330",
+    "Lean/CategoricalEssentialIncompleteness/V46DerivationInternalInductionChecks.lean": "8afb674297e01da3b4a1c497f5152a61b38b2a2fa053d9ad7309856763aae747"
+  },
+  "log_sha256": "81cedc753f3b3d81eaf00d42f998404cb7c1f8cb7fb220a32f14dd6bc1c10b8f",
+  "scope": "Eight strict elaborations and thirteen principal transitive axiom reports. Full production-entry and complete generated-declaration audits are recorded separately when completed.",
+  "numbered_results_proved": 70,
+  "numbered_results_open": 7
+}

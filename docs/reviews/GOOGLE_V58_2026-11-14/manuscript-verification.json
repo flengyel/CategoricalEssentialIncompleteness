@@ -1,0 +1,25 @@
+{
+  "baseline_commit": "a9b444ab657e2c5a5a995ccfad627ae7c5102832",
+  "review_sha256": "21d3b15835dc15ad0a82a7d8a5bec1c35bd5c92b7f2e349a9868456143f17d56",
+  "manuscript_version": 59,
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "numbered_environments_identical": 80,
+  "tex_changed": [
+    "manuscript/latex/bibliography.tex",
+    "manuscript/latex/preamble.tex"
+  ],
+  "mathematical_text_unchanged": true,
+  "lean_changes_required_by_manuscript": false,
+  "pdf_pages": 87,
+  "latex_unresolved_references": false,
+  "latex_box_warnings": false,
+  "visual_checks": [
+    "v58 page 5: correct bar(p) placement",
+    "v58 page 86: U-niversity break",
+    "v59 page 86: University intact"
+  ],
+  "manuscript_gate": "passed",
+  "parser_tests": 6,
+  "full_lean_replay": "not claimed by this manuscript-only record"
+}
