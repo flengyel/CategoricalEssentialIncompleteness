@@ -58,8 +58,8 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V59.md](FORMALIZATION_STATUS_V59.md). It records 77
-numbered results and three definitions. There are **73 proved counterparts
-and four open mathematical obligations**. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
+numbered results and three definitions. There are **74 proved counterparts
+and three open mathematical obligations**. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,798 commands at `8df18834734179186459d3c4c34d4c0cf20b6194`, including
 1,792 strict elaborations and both complete transitive axiom audits. The
 four new finite-support and internal-induction constructions support
@@ -93,7 +93,10 @@ Its 16-command final incremental verification includes both complete axiom audit
 The later [Miller parameterized-deduction proof](docs/V59_MILLER_PARAMETERIZED_DEDUCTION_2026-11-15.md)
 completes Lemma 9.6 for arbitrary nullary coefficients and every printed
 signature in every parameter slice. Its 16-command incremental verification
-includes both complete axiom audits. The count is 73/77; Corollary 9.8 is next.
+includes both complete axiom audits. The later [Miller associated-category proof](docs/V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md)
+completes Corollary 9.8, including arbitrary slice extensions, the Boolean
+witness and all comparison functors. Its 22-command incremental verification
+includes both complete axiom audits. The count is 74/77; Proposition 10.7 is next.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
@@ -104,7 +107,7 @@ adjunctions (4.4–4.7), Corollary 4.8's incompleteness–inseparability
 equivalence, intended-statement checks and both transitive axiom audits.
 The [verification record](docs/V57_SIGNED_FIRST_ORDER_VERIFICATION_2026-11-12.json)
 identifies that replay's 67-result snapshot and exact tested bytes. The first
-open result is now Corollary 9.8, the Miller associated-category application.
+open result is now Proposition 10.7, on first-order fork syntax and parameterized deduction.
 The [Section 5 prerequisite report](docs/V57_SECTION5_PREREQUISITES_2026-11-13.md)
 records the new weak-choice, split-product and partial-map functor proofs
 and their incremental verification; the numbered-result count is unchanged.

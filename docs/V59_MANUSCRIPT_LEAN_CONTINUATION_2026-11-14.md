@@ -29,7 +29,11 @@ specified original arithmetic evaluator. Its 16-command final incremental verifi
 includes both complete axiom audits. The later [Miller parameterized-deduction proof](V59_MILLER_PARAMETERIZED_DEDUCTION_2026-11-15.md)
 completes Lemma 9.6 for arbitrary nullary coefficients and every printed
 signature in every parameter slice. Its 16-command incremental verification
-includes both complete axiom audits. The count is 73/77; Corollary 9.8 is next.
+includes both complete axiom audits. The later [Miller associated-category proof](V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md)
+completes Corollary 9.8 with the actual slice Turing structure, arbitrary
+extensions, inseparable domains, Boolean witness and all comparison functors.
+Its 22-command incremental verification includes both complete axiom audits.
+The count is 74/77; Proposition 10.7 is next.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 
@@ -37,7 +41,7 @@ Repository: `flengyel/CategoricalEssentialIncompleteness`.
 Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 `FORMALIZATION_STATUS_V59.md` before editing. Preserve later local and remote
 work. The current manuscript is v59; Theorem 5.3 is complete. The recorded
-status is **73 of 77 numbered results proved**, with Corollary 9.8 next.
+status is **74 of 77 numbered results proved**, with Proposition 10.7 next.
 
 The [full v59 replay](V59_FULL_VERIFICATION_2026-11-14.md) passed all 1,798
 commands, including 1,792 strict elaborations and both complete transitive
@@ -67,7 +71,6 @@ equivalence and its quantifier over arbitrary closed slice extensions.
 
 | Result | Construction |
 | --- | --- |
-| Corollary 9.8 | Miller associated-category application. |
 | Proposition 10.7 | First-order fork syntax and finite-derivation initiality in every parameter slice. |
 | Proposition 10.8 | Natural embedding and erasure, conservativity, consistency, essential incompleteness and endpoint conclusions. |
 | Corollary 10.9 | First-order fork associated-category application. |

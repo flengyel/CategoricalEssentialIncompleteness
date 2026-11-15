@@ -9,8 +9,8 @@ text and all 77 numbered results and three definitions are unchanged from
 v58. The reviewed v58 artifacts are retained. The Google report and its
 assessment are in `docs/reviews/GOOGLE_V58_2026-11-14/`.
 
-Theorem 5.3, Lemmas 8.9 and 9.6, and Corollary 8.10 are complete. The count
-is 73 proved results and four open: 9.8, 10.7, 10.8 and 10.9. Corollary 9.8 is next. Preserve the
+Theorem 5.3, Lemmas 8.9 and 9.6, and Corollaries 8.10 and 9.8 are complete.
+The count is 74 proved results and three open: 10.7, 10.8 and 10.9. Proposition 10.7 is next. Preserve the
 subobject-only initiality hypotheses, Boolean conventions and full extension
 quantifiers. Preserve later local and remote work.
 
@@ -41,8 +41,12 @@ complete axiom audits. The later [Miller parameterized-deduction proof](V59_MILL
 completes Lemma 9.6, including arbitrary nullary coefficients, numerical
 variables, syntax/list stability and all printed signatures in every parameter
 slice. Its 16-command incremental verification includes both complete axiom
-audits. Continue with Corollary 9.8, retaining all consistent internal
-extensions, the Miller-sequence assumption and the Boolean witness.
+audits. The later [Miller associated-category proof](V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md) completes
+Corollary 9.8 with arbitrary slice extensions, actual domain inseparability,
+the Boolean witness and every comparison functor. Its 22-command incremental
+verification includes both complete axiom audits. Continue with Proposition
+10.7: construct first-order fork syntax and parameterized finite derivations
+for arbitrary nullary coefficients, including both atom-identifying transitions.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

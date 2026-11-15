@@ -7,9 +7,9 @@ Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V59.md,
 docs/V59_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md and
 docs/CEI_v59_WSL2_instructions_2026-11-14.md.
 
-Theorem 5.3, Lemmas 8.9 and 9.6, and Corollary 8.10 are complete.
-The current count is 73 of 77 numbered results proved; Corollary 9.8 is next.
-The other open results are 10.7, 10.8 and 10.9. Preserve all subsequent local
+Theorem 5.3, Lemmas 8.9 and 9.6, and Corollaries 8.10 and 9.8 are complete.
+The current count is 74 of 77 numbered results proved; Proposition 10.7 is next.
+The other open results are 10.8 and 10.9. Preserve all subsequent local
 and remote work.
 
 The Google review has been supplied and assessed in
@@ -70,10 +70,17 @@ syntax/list stability, and finite derivation initiality in every parameter
 slice for all printed recursive signatures. Representation independence
 and subobject-only axiom indexing are retained. Its 16-command incremental
 verification includes both complete axiom audits. See docs/V59_MILLER_PARAMETERIZED_DEDUCTION_2026-11-15.md.
-Continue with Corollary 9.8, preserving the Miller-sequence assumption,
-all consistent internal extensions, arbitrary closed slice extensions,
-the common logical theorem point, the Boolean witness and the comparison
-restriction functors.
+The later Miller associated-category batch at a6d5023e1664e9065c97f053e7bb60aa6b31e5d3
+completes Corollary 9.8 with the actual partial-map slice Turing structure,
+arbitrary closed consistent extensions, actual domain inseparability,
+the Boolean no-total-extension witness and all comparison functors.
+The common 0 = 0 theorem point and restriction-structure comparisons are
+constructed. Its 22-command incremental verification includes both complete
+axiom audits. See docs/V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md.
+Continue with Proposition 10.7: construct first-order fork syntax and
+parameterized finite-derivation initiality for arbitrary nullary coefficients.
+Prove naturality under both atom-identifying transitions and uniqueness
+among all algebra morphisms. Preserve subobject-only axiom indexing.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 
