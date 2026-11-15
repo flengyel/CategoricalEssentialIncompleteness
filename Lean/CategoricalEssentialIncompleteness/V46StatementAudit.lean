@@ -5,6 +5,8 @@ Authors: Florian Lengyel
 -/
 module
 
+import CategoricalEssentialIncompleteness.V46SignedDerivationFiniteSupportChecks
+
 import CategoricalEssentialIncompleteness.V46SignedDerivationFiniteValuationChecks
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticFiniteLookupChecks

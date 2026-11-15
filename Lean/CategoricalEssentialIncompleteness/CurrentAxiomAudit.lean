@@ -1,5 +1,7 @@
 module
 
+import all CategoricalEssentialIncompleteness.V46SignedDerivationFiniteSupport
+
 import all CategoricalEssentialIncompleteness.V46RuleRelabelling
 import all CategoricalEssentialIncompleteness.V46SignedDerivationLeafCodes
 import all CategoricalEssentialIncompleteness.V46SignedDerivationPositiveLabels
