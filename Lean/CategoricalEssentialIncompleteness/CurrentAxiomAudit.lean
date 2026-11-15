@@ -1,5 +1,9 @@
 module
 
+import all CategoricalEssentialIncompleteness.V46NullaryLogicalPoint
+import all CategoricalEssentialIncompleteness.V46ArithmeticAssociatedDeduction
+import all CategoricalEssentialIncompleteness.V46ArithmeticAssociatedIncompleteness
+
 import all CategoricalEssentialIncompleteness.V46SliceFinitePowers
 import all CategoricalEssentialIncompleteness.V46SliceRuleObjects
 import all CategoricalEssentialIncompleteness.V46SliceInference

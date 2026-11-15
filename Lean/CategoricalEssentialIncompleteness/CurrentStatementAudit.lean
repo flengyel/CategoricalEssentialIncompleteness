@@ -1,5 +1,7 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ArithmeticAssociatedIncompletenessChecks
+
 public import CategoricalEssentialIncompleteness.V46SliceFinitePowersChecks
 public import CategoricalEssentialIncompleteness.V46SyntacticSliceDerivationsChecks
 
