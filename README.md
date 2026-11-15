@@ -78,7 +78,11 @@ includes both complete axiom audits. The later
 [internal truth proof](docs/V59_INTERNAL_TRUTH_2026-11-15.md) excludes
 contradictory internal signed derivations in every PA model using a common
 finite support. Its 23-command incremental verification includes both complete
-axiom audits. Generated-theory consistency and essential-incompleteness
+axiom audits. The later [consistency proof](docs/V59_SIGNED_CONSISTENCY_2026-11-15.md)
+proves PA consistency and the generated signed-theory consistency equation
+in the predicate category, with generation through regular axiom images.
+Its 22-command incremental verification includes both complete axiom audits.
+The printed restriction-splitting comparison and essential-incompleteness
 assembly remain open; the count stays 70/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every

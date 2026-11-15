@@ -47,9 +47,15 @@ all seven logical schemes are proved. The later internal truth batch at
 071fcd77c9b41aeab3c1c5a9aa94fe8590daef2a has 23-command incremental verification.
 See docs/V59_INTERNAL_TRUTH_2026-11-15.md. The coded Pi-one invariant and common-support
 contradiction cover arbitrary internal derivations in every PA model.
-Continue with the PA theorem, generated sentence-theory consistency,
-regular-image axiom comparison and essential-incompleteness assembly;
-these remain open.
+The later consistency batch at 3d48afb8750603111ec37b672b379dc344337f24 has
+22-command incremental verification. See docs/V59_SIGNED_CONSISTENCY_2026-11-15.md.
+PA proves the coded consistency sentence. The formula and sentence image
+consistency equations, regular-image generation comparison and consistency
+of the generated signed theory are proved in the PA predicate category.
+The nullary presentation and its subobject-indexed initial proof family are
+constructed. Continue with the printed restriction-splitting comparison,
+the actual source inseparability transfer and essential-incompleteness
+assembly with all extension quantifiers. These remain open.
 
 Baseline v58 full replay: 1790 commands at
 f0e4b78e83ea21e06b7d335bd8b72353ac25502f. See docs/V58_FULL_VERIFICATION_2026-11-14.md.

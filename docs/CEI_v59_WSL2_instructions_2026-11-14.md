@@ -25,9 +25,13 @@ and all seven logical schemes. Its 25-command incremental verification is
 separate from the full replay. The [internal truth proof](V59_INTERNAL_TRUTH_2026-11-15.md) now
 excludes contradictory internal signed derivations in every PA model using
 a common support. Its 23-command incremental verification includes both
-complete axiom audits. Continue with the PA theorem, generated-theory
-consistency, regular-image axiom comparison and essential-incompleteness
-assembly. Lemma 8.9 remains open.
+complete axiom audits. The later [consistency proof](V59_SIGNED_CONSISTENCY_2026-11-15.md)
+proves the PA sentence and generated signed-theory consistency equation
+in the predicate category, with regular-image generation and a constructed
+subobject-indexed proof family. Its 22-command incremental verification
+includes both complete axiom audits. Continue with the printed restriction-
+splitting comparison, source inseparability transfer and full essential-
+incompleteness assembly. Lemma 8.9 remains open.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

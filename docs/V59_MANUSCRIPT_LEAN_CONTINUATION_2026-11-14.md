@@ -13,8 +13,14 @@ verification is separate from the full replay. The later
 [internal truth proof](V59_INTERNAL_TRUTH_2026-11-15.md) constructs the coded Pi-one invariant and
 excludes contradictory internal signed derivations in every PA model on a
 single common support. Its 23-command incremental verification includes
-both complete axiom audits. Continue with the PA theorem, generated-theory
-consistency, regular-image axiom comparison and final assembly.
+both complete axiom audits. The later [consistency proof](V59_SIGNED_CONSISTENCY_2026-11-15.md)
+proves the PA sentence, formula and sentence image consistency, regular-image
+generation comparison and generated signed consistency in the predicate
+category. The presentation and its subobject-indexed initial proof family
+are constructed. Its 22-command incremental verification includes both
+complete axiom audits. Continue with the printed restriction-splitting
+comparison, source inseparability transfer and essential-incompleteness
+assembly with all extension quantifiers.
 Lemma 8.9 remains open; the count stays 70/77. The 1,798-command full replay
 below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
