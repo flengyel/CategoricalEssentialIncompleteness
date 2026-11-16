@@ -1,5 +1,7 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46CanonicalFormulaStabilityChecks
+
 public import CategoricalEssentialIncompleteness.V46SliceEvaluationChecks
 
 public import CategoricalEssentialIncompleteness.V46CanonicalDiagramSyntaxChecks
