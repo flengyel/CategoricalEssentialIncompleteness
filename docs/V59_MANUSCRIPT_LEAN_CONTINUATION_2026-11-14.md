@@ -42,9 +42,15 @@ remain open in Proposition 10.7. The later [parameterized component proof](V59_F
 constructs formula initiality in every numerical parameter slice and fold
 uniqueness across arbitrary parameter and atom-label morphisms. Its separate
 17-command incremental verification includes both complete axiom audits.
-The generic transition-naturality criterion is proved; its concrete fork
-constructor squares and global parameter-stability instantiation remain
-open. The count stays 74/77.
+The later [natural parameter fold proof](V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md)
+proves the actual source constructor square, natural folds and initiality
+among componentwise natural relative formula algebras for arbitrary target
+families, and a canonical constant-family carrier isomorphism. Its separate
+23-command incremental verification includes both complete axiom audits.
+The canonical global two-sort syntax interface comparison, variable lists
+and equality test, occurrence/substitution/sentence constructions and finite
+derivations remain open. The count stays 74/77. Resume from the new report;
+the WSL recovery archive is retained as historical evidence.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 

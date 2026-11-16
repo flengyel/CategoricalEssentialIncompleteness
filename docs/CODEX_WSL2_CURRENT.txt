@@ -12,13 +12,12 @@ The current count is 74 of 77 numbered results proved; Proposition 10.7 is next.
 The other open results are 10.8 and 10.9. Preserve all subsequent local
 and remote work.
 
-Recovery checkpoint: the user stopped work because VS Code cannot connect
-to WSL. See docs/V59_WSL_RECOVERY_2026-11-16.md. Five proof drafts and eight
-logs are saved outside the production tree under
+WSL recovery resumed: the concrete constructor square and natural
+parameterized formula folds are now verified and integrated. See
+docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md.
+The historical recovery note and its five drafts and eight logs remain
+verbatim at docs/V59_WSL_RECOVERY_2026-11-16.md and
 docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/.
-The active Lean process was stopped. These drafts are not integrated or
-fully verified; the production count remains 74/77. Read the recovery note
-before restoring drafts or restarting compilation.
 
 The Google review has been supplied and assessed in
 docs/reviews/GOOGLE_V58_2026-11-14/. The alleged partial-monomorphism typo
@@ -98,16 +97,23 @@ across every parameter and atom-label morphism, and proves the generic
 transition-naturality criterion using only the forward polynomial comparison.
 Its 17-command incremental verification includes both complete axiom audits.
 See docs/V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md.
-Proposition 10.7 remains open. First prove the concrete constructor squares
-for the actual constant-family fork transitions and arbitrary natural target
-parameter algebras, then instantiate LaxAlgebraAdjunction.fold_natural to
-assemble global parameter-stable initiality. Do not supply those squares as
-extra hypotheses of the printed result. Stable variable lists,
+The later natural parameter fold batch at 657efd171892e12adc973f4d0fc08a7471265fce
+proves the actual source constructor square, natural folds and initiality
+among componentwise natural relative formula algebras for arbitrary target
+families, and the canonical constant-family carrier isomorphism. The exact
+original numerical algebra is retained behind an equation-controlled
+reduction guard. Its 23-command incremental verification includes both
+complete axiom audits. See docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md.
+Proposition 10.7 remains open. Next compare this algebra category with the
+canonical global two-sort SyntaxPolynomial/CategoricalSyntax parameter
+interface. Stable variable lists and the variable equality test,
 occurrence/substitution/sentence objects and seven-scheme, two-rule finite
-derivations in every parameter slice are also open. Do not assume that
-equality of arbitrary formula labels is reflected by atom-identifying
-transitions. Preserve subobject-only axiom indexing and uniqueness among
-all algebra morphisms.
+derivations for axiom subobjects in every parameter slice also remain open.
+Do not assume equality of arbitrary formula labels is reflected by
+atom-identifying transitions. Preserve subobject-only initiality and
+uniqueness among all algebra morphisms. Keep compiler runs serial, bounded
+and interruptible after the WSL recovery; the successful targeted checks
+used 2 GB and integrated strict checks 3 GB, with explicit timeouts.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

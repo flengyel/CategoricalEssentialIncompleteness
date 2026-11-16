@@ -53,9 +53,15 @@ incremental verification includes both complete axiom audits. Proposition
 constructs component formula initiality for arbitrary target families, fold
 uniqueness across arbitrary parameter and atom-label morphisms, and the
 generic transition-naturality criterion. Its separate 17-command incremental
-verification includes both complete axiom audits. The concrete fork
-constructor squares and global parameter-stable formula initiality are next;
-lists, occurrence/substitution and finite derivations remain open.
+verification includes both complete axiom audits. The later [natural parameter fold proof](V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md)
+proves the actual source constructor square, natural folds and initiality
+among componentwise natural relative formula algebras for arbitrary target
+families, and a canonical constant-family carrier isomorphism. Its separate
+23-command incremental verification includes both complete axiom audits.
+The canonical global two-sort syntax interface comparison, variable lists
+and equality test, occurrence/substitution/sentence constructions and finite
+derivations remain open. The count stays 74/77. Resume from the new report;
+the WSL recovery archive is retained as historical evidence.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
