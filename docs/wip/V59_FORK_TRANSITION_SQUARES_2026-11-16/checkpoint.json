@@ -1,0 +1,86 @@
+{
+  "saved_at_utc": "2026-11-16T16:10:30.906243+00:00",
+  "reason": "User requested saving work before exiting because VS Code cannot connect to WSL",
+  "active_manuscript_version": 59,
+  "verified_production_main": "0f3a24b35468854f8b3af468c85998bf8429a683",
+  "numbered_results_proved": 74,
+  "total_numbered_results": 77,
+  "drafts": [
+    {
+      "source_path": "Lean/CategoricalEssentialIncompleteness/V46LaxPolynomialInputs.lean",
+      "saved_path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/V46LaxPolynomialInputs.lean.txt",
+      "sha256": "2550b06242849ef9515ac956024267d078cd8808a59c70a74a72a3f61970c388",
+      "bytes": 2682
+    },
+    {
+      "source_path": "Lean/CategoricalEssentialIncompleteness/V46PolynomialParameterValues.lean",
+      "saved_path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/V46PolynomialParameterValues.lean.txt",
+      "sha256": "8b1d7c65ef3e8c239b543ae22c35c33760158c6f7994240bd34374bf5177e278",
+      "bytes": 5628
+    },
+    {
+      "source_path": "Lean/CategoricalEssentialIncompleteness/V46PolynomialParameterSquares.lean",
+      "saved_path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/V46PolynomialParameterSquares.lean.txt",
+      "sha256": "cfbd01a451941ab7ff689dd2fba901a244e6d8ed1f1e91345659be347c6f407a",
+      "bytes": 11052
+    },
+    {
+      "source_path": "Lean/CategoricalEssentialIncompleteness/V46ForkFormulaTransitionSquares.lean",
+      "saved_path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/V46ForkFormulaTransitionSquares.lean.txt",
+      "sha256": "1f35ca18c3281ad7b1edb8c0d4ffe9a1e58e56effde818e95d62b1bd4566676b",
+      "bytes": 7705
+    },
+    {
+      "source_path": "Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedFormulaFolds.lean",
+      "saved_path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/V46ForkParameterizedFormulaFolds.lean.txt",
+      "sha256": "25bee6528095fba7d3feda896b80f877e71a8e836ecc76ce510a68d12f06c0e8",
+      "bytes": 6425
+    }
+  ],
+  "logs": [
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/fork-squares-profile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/fork-squares-strict.log",
+      "sha256": "d5081e31a6c7a2114fd09f72ee6cbd8daae25ae8f51c174c4873ea4d3611d913",
+      "bytes": 265
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/inputs-build.log",
+      "sha256": "3a0bc397dd25fb8895da1f94c0d428f444b3aefe4871eb5495bc574a0042c498",
+      "bytes": 126
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/inputs-strict.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/squares-build.log",
+      "sha256": "9588e606fc813519caf8a0132f816ed67470619de903b6b2ac65cfd052eb9ba9",
+      "bytes": 598
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/squares-strict.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/values-build.log",
+      "sha256": "02799919b1afa4d9c0730a94984c8fb7d98df933ec2b8f43fb8ba232155f421c",
+      "bytes": 135
+    },
+    {
+      "path": "docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/logs/values-strict.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "production_sources_unchanged": true,
+  "last_lean_session_stopped_by_ctrl_c": 57096,
+  "drafts_integrated_or_fully_verified": false,
+  "full_replay_performed": false
+}

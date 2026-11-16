@@ -1,0 +1,8 @@
+⚠ [1290/1290] Built CategoricalEssentialIncompleteness.V46PolynomialParameterSquares (7.2s)
+warning: CategoricalEssentialIncompleteness/V46PolynomialParameterSquares.lean:118:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: CategoricalEssentialIncompleteness/V46PolynomialParameterSquares.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+Build completed successfully (1290 jobs).

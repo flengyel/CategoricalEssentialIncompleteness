@@ -12,6 +12,14 @@ The current count is 74 of 77 numbered results proved; Proposition 10.7 is next.
 The other open results are 10.8 and 10.9. Preserve all subsequent local
 and remote work.
 
+Recovery checkpoint: the user stopped work because VS Code cannot connect
+to WSL. See docs/V59_WSL_RECOVERY_2026-11-16.md. Five proof drafts and eight
+logs are saved outside the production tree under
+docs/wip/V59_FORK_TRANSITION_SQUARES_2026-11-16/.
+The active Lean process was stopped. These drafts are not integrated or
+fully verified; the production count remains 74/77. Read the recovery note
+before restoring drafts or restarting compilation.
+
 The Google review has been supplied and assessed in
 docs/reviews/GOOGLE_V58_2026-11-14/. The alleged partial-monomorphism typo
 is absent from the v58 source and PDF. The confirmed publisher line break

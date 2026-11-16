@@ -1,0 +1,149 @@
+/-
+Copyright (c) 2026 Florian Lengyel. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Florian Lengyel
+-/
+module
+meta import Lean.Elab.Command
+public import CategoricalEssentialIncompleteness.V46PolynomialParameterSquares
+public import CategoricalEssentialIncompleteness.V46ForkFormulaParameterChange
+
+/-! # Constructor squares for the actual parameterized fork formula algebras -/
+@[expose] public section
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+set_option backward.isDefEq.respectTransparency.types false
+open CategoryTheory CategoryTheory.Limits
+namespace CategoricalEssentialIncompleteness.V46.ForkFormulaTransitionSquares
+open ForkFirstOrderFormula PolynomialParameterSquares
+local instance (P : C) : Regular (Over P) := RegularSlices.regular P
+
+abbrev labels (N D : C) (t : Bool) : C := if t then D else N
+
+def labelMap (N : C) {D E : C} (h : D ⟶ E) (t : Bool) : labels N D t ⟶ labels N E t :=
+  match t with
+  | false => 𝟙 N
+  | true => h
+
+variable (N : C) {D E P Q : C} (b : P ⟶ Q) (h : D ⟶ E)
+variable (k : (componentAlgebra N D).a ⟶ (componentAlgebra N E).a)
+
+abbrev sourcePair := (⊤_ C, (componentAlgebra N D).a)
+abbrev targetPair := (⊤_ C, (componentAlgebra N E).a)
+abbrev pairMap : sourcePair N (D := D) ⟶ targetPair N (E := E) := (𝟙 _, k)
+
+abbrev parameterMap :
+    (Over.map b).obj (ForkFormulaParameterComponents.algebra N D P).a ⟶
+      (ForkFormulaParameterComponents.algebra N E Q).a := familyMap b k
+
+set_option maxHeartbeats 0 in
+theorem relativeInput_eq_general (X Y : C) (m : X ⟶ Y) :
+    relativeInput b (labelMap N h) (⊤_ C, X) (⊤_ C, Y) (𝟙 _, m)
+        ForkFormulaParameterChange.template =
+      (ForkFormulaParameterChange.comparison N b h).app (constantFamily P X) ≫
+        (ForkFormulaParameterComponents.polynomial N E Q).map (familyMap b m) := by
+  have hc : (fun t => familyMap b (labelMap N h t)) =
+      ForkFormulaParameterChange.coefficientMap N b h := by
+    funext t
+    cases t <;> rfl
+  dsimp only [relativeInput, LaxPolynomialComparison.input]
+  rw [hc]
+  rfl
+
+run_cmd liftIO (IO.eprintln "checked relativeInput_eq_general")
+
+set_option maxHeartbeats 0 in
+theorem relativeInput_eq :
+    relativeInput b (labelMap N h) (sourcePair N (D := D)) (targetPair N (E := E)) (pairMap N (D := D) (E := E) k)
+        ForkFormulaParameterChange.template =
+      (ForkFormulaParameterChange.comparison N b h).app
+          (ForkFormulaParameterComponents.algebra N D P).a ≫
+        (ForkFormulaParameterComponents.polynomial N E Q).map (parameterMap N (D := D) (E := E) b k) :=
+  relativeInput_eq_general N (D := D) (E := E) b h
+    (componentAlgebra N D).a (componentAlgebra N E).a k
+
+run_cmd liftIO (IO.eprintln "checked relativeInput_eq")
+
+set_option maxHeartbeats 0 in
+/-- This is a constructed square for the actual constant-family morphism.
+The sole algebra equation here is the base constructor equation. -/
+theorem source_square
+    (hk : baseInput (labelMap N h) (sourcePair N (D := D)) (targetPair N (E := E)) (pairMap N (D := D) (E := E) k)
+        ForkFormulaParameterChange.template ≫ (componentAlgebra N E).str =
+      (componentAlgebra N D).str ≫ k) :
+    (ForkFormulaParameterChange.comparison N b h).app
+        (ForkFormulaParameterComponents.algebra N D P).a ≫
+      (ForkFormulaParameterComponents.polynomial N E Q).map (parameterMap N (D := D) (E := E) b k) ≫
+        (ForkFormulaParameterComponents.algebra N E Q).str =
+      (Over.map b).map (ForkFormulaParameterComponents.algebra N D P).str ≫
+        parameterMap N (D := D) (E := E) b k := by
+  rw [← Category.assoc, ← relativeInput_eq N (D := D) (E := E) b h k]
+  change relativeInput b (labelMap N h) (sourcePair N (D := D)) (targetPair N (E := E)) (pairMap N (D := D) (E := E) k)
+      ForkFormulaParameterChange.template ≫
+    (PolynomialParameterValues.comparison Q (labels N E) (targetPair N (E := E))
+      ForkFormulaParameterChange.template ≫
+        (constantFamilyFunctor Q).map (componentAlgebra N E).str) =
+    (Over.map b).map (PolynomialParameterValues.comparison P (labels N D) (sourcePair N (D := D))
+      ForkFormulaParameterChange.template ≫
+        (constantFamilyFunctor P).map (componentAlgebra N D).str) ≫ parameterMap N (D := D) (E := E) b k
+  rw [← Category.assoc,
+    comparison_square b (labelMap N h) (sourcePair N (D := D)) (targetPair N (E := E))
+      (pairMap N (D := D) (E := E) k) ForkFormulaParameterChange.template,
+    Category.assoc, Functor.map_comp, Category.assoc]
+  have ht {A B Z : C} (f : A ⟶ B) (g : B ⟶ Z) :
+      familyMap b f ≫ (constantFamilyFunctor Q).map g = familyMap b (f ≫ g) := by
+    apply Over.OverMorphism.ext
+    change prod.map b f ≫ prod.map (𝟙 Q) g = _
+    rw [prod.map_map, Category.comp_id]
+    rfl
+  have hs {A B Z : C} (f : A ⟶ B) (g : B ⟶ Z) :
+      (Over.map b).map ((constantFamilyFunctor P).map f) ≫ familyMap b g =
+        familyMap b (f ≫ g) := by
+    apply Over.OverMorphism.ext
+    change prod.map (𝟙 P) f ≫ prod.map b g = _
+    rw [prod.map_map, Category.id_comp]
+    rfl
+  rw [ht, hs, hk]
+
+run_cmd liftIO (IO.eprintln "checked source_square")
+
+set_option maxHeartbeats 0 in
+theorem baseInput_eq :
+    baseInput (labelMap N h) (sourcePair N (D := D)) (targetPair N (E := E)) (pairMap N (D := D) (E := E) k)
+        ForkFormulaParameterChange.template =
+      (ForkFirstOrderFormula.transition h N).app (componentAlgebra N D).a ≫
+        (ForkFirstOrderFormula.polynomial N E).map k := by
+  dsimp [baseInput, SyntaxCoefficientMorphisms.component,
+    ForkFormulaParameterChange.template, labelMap, labels, sourcePair, targetPair, pairMap,
+    ForkFirstOrderFormula.transition, ForkFirstOrderFormula.polynomial,
+    ForkFirstOrderFormula.insert, ForkFirstOrderFormula.expression,
+    SyntaxPolynomial.mapCoefficients, SyntaxPolynomial.eval, SyntaxPolynomial.sumFunctor,
+    SyntaxPolynomial.productFunctor]
+  simp only [prod.map_id_id]
+
+run_cmd liftIO (IO.eprintln "checked baseInput_eq")
+
+set_option maxHeartbeats 0 in
+/-- The actual fork transitions satisfy the source constructor square;
+no constructor compatibility is an additional hypothesis. -/
+theorem fork_source_square (D P : Object) {j l : WalkingSpan} (f : j ⟶ l) :
+    (ForkFormulaParameterChange.comparison (numbers.obj j) (P.map f) (D.map f)).app
+        (ForkFormulaParameterComponents.algebra (numbers.obj j) (D.obj j) (P.obj j)).a ≫
+      (ForkFormulaParameterComponents.polynomial (numbers.obj l) (D.obj l) (P.obj l)).map
+        (parameterMap (numbers.obj j) (D := D.obj j) (E := D.obj l) (P.map f) ((ForkFirstOrderFormula.algebra D).a.map f)) ≫
+      (ForkFormulaParameterComponents.algebra (numbers.obj l) (D.obj l) (P.obj l)).str =
+    (Over.map (P.map f)).map
+        (ForkFormulaParameterComponents.algebra (numbers.obj j) (D.obj j) (P.obj j)).str ≫
+      parameterMap (numbers.obj j) (D := D.obj j) (E := D.obj l) (P.map f) ((ForkFirstOrderFormula.algebra D).a.map f) := by
+  apply source_square (numbers.obj j) (D := D.obj j) (E := D.obj l)
+    (P.map f) (D.map f) ((ForkFirstOrderFormula.algebra D).a.map f)
+  rw [baseInput_eq (numbers.obj j) (D := D.obj j) (E := D.obj l)
+      (D.map f) ((ForkFirstOrderFormula.algebra D).a.map f),
+    ← (ForkFirstOrderFormula.transition (D.map f) (numbers.obj j)).naturality]
+  exact DiagramInitialAlgebras.transition_constructor (ForkFirstOrderFormula.polynomialDiagram D)
+    (fun j => componentAlgebra (numbers.obj j) (D.obj j))
+    (fun j => componentInitial (numbers.obj j) (D.obj j)) f
+
+run_cmd liftIO (IO.eprintln "checked fork_source_square")
+
+end CategoricalEssentialIncompleteness.V46.ForkFormulaTransitionSquares
