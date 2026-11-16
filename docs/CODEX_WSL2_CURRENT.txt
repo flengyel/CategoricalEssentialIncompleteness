@@ -1,5 +1,5 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 15 November 2026
+Updated 16 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
 The current manuscript and verification target are version 59.
@@ -77,10 +77,19 @@ the Boolean no-total-extension witness and all comparison functors.
 The common 0 = 0 theorem point and restriction-structure comparisons are
 constructed. Its 22-command incremental verification includes both complete
 axiom audits. See docs/V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md.
-Continue with Proposition 10.7: construct first-order fork syntax and
-parameterized finite-derivation initiality for arbitrary nullary coefficients.
-Prove naturality under both atom-identifying transitions and uniqueness
-among all algebra morphisms. Preserve subobject-only axiom indexing.
+The later first-order fork formula batch at 38d7eae3581ca88d80bc07d1e41a0899bd5e065b
+constructs the initial formula algebra for the printed five-summand Q_D,
+with arbitrary coefficient diagrams, identity numerical-variable transitions
+and unique natural folds under atom-identifying transitions. Its 17-command
+incremental verification includes both complete axiom audits. See
+docs/V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md.
+Proposition 10.7 remains open. Continue with parameter-stable formula
+initiality, stable variable lists, occurrence/substitution/sentence objects
+and the seven-scheme, two-rule finite derivations in every parameter slice.
+Compare parameterized component folds by pulling target families back along
+the parameter transitions. Do not assume that equality of arbitrary formula
+labels is reflected by atom-identifying transitions. Preserve subobject-only
+axiom indexing and uniqueness among all algebra morphisms.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

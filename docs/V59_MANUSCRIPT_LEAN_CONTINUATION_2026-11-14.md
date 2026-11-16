@@ -33,7 +33,12 @@ includes both complete axiom audits. The later [Miller associated-category proof
 completes Corollary 9.8 with the actual slice Turing structure, arbitrary
 extensions, inseparable domains, Boolean witness and all comparison functors.
 Its 22-command incremental verification includes both complete axiom audits.
-The count is 74/77; Proposition 10.7 is next.
+The later [first-order fork formula proof](V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md) constructs the initial
+formula algebra for every coefficient diagram, with the full numerical
+variable carrier and atom-identifying transitions. Its 17-command incremental
+verification includes both complete axiom audits. Parameter stability,
+variable lists, occurrence/substitution and parameterized finite derivations
+remain open in Proposition 10.7. The count stays 74/77.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 

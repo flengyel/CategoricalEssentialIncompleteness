@@ -44,9 +44,13 @@ slice. Its 16-command incremental verification includes both complete axiom
 audits. The later [Miller associated-category proof](V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md) completes
 Corollary 9.8 with arbitrary slice extensions, actual domain inseparability,
 the Boolean witness and every comparison functor. Its 22-command incremental
-verification includes both complete axiom audits. Continue with Proposition
-10.7: construct first-order fork syntax and parameterized finite derivations
-for arbitrary nullary coefficients, including both atom-identifying transitions.
+verification includes both complete axiom audits. The later
+[first-order fork formula proof](V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md) constructs the initial formula
+algebra for arbitrary coefficient diagrams, with the printed five summands
+and unique natural folds under atom-identifying transitions. Its 17-command
+incremental verification includes both complete axiom audits. Proposition
+10.7 remains open: parameter-stable syntax, lists, occurrence/substitution
+and initial finite derivations in every parameter slice are next.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

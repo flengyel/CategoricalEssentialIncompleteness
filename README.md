@@ -96,7 +96,11 @@ signature in every parameter slice. Its 16-command incremental verification
 includes both complete axiom audits. The later [Miller associated-category proof](docs/V59_MILLER_ASSOCIATED_CATEGORIES_2026-11-15.md)
 completes Corollary 9.8, including arbitrary slice extensions, the Boolean
 witness and all comparison functors. Its 22-command incremental verification
-includes both complete axiom audits. The count is 74/77; Proposition 10.7 is next.
+includes both complete axiom audits. The later [first-order fork formula proof](docs/V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md)
+constructs formula initiality for arbitrary coefficient diagrams and
+atom-identifying transitions. Its 17-command incremental verification
+includes both complete axiom audits. Proposition 10.7 remains open;
+the count stays 74/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
