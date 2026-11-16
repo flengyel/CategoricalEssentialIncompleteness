@@ -19,6 +19,8 @@ universe u v w
 open CategoryTheory CategoryTheory.Limits
 open CategoricalEssentialIncompleteness.V46
 
+namespace CategoricalEssentialIncompleteness.V46.ForkParameterizedFormulaFoldsStatementChecks
+
 section Generic
 variable {C : Type u} [Category.{v} C] [Regular C] [HasFiniteCoproducts C]
 local instance (P : C) : Regular (Over P) := RegularSlices.regular P
@@ -118,3 +120,5 @@ end ParameterizedChecks
 #print axioms ForkParameterizedFormulaFolds.fold_over
 #print axioms ForkParameterizedFormulaFolds.fold_constructor
 #print axioms ForkParameterizedFormulaFolds.fold_underlying_unique
+
+end CategoricalEssentialIncompleteness.V46.ForkParameterizedFormulaFoldsStatementChecks
