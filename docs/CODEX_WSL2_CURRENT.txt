@@ -104,16 +104,23 @@ families, and the canonical constant-family carrier isomorphism. The exact
 original numerical algebra is retained behind an equation-controlled
 reduction guard. Its 23-command incremental verification includes both
 complete axiom audits. See docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md.
-Proposition 10.7 remains open. Next compare this algebra category with the
-canonical global two-sort SyntaxPolynomial/CategoricalSyntax parameter
-interface. Stable variable lists and the variable equality test,
+The later canonical diagram syntax batch at 8c518d7585b1b9677a521db9611321e5e5a1773f
+constructs the complete ordinary polynomial isomorphism, algebra-category
+equivalence and initiality for the canonical global two-sort polynomial,
+including the exact canonical term/formula expressions. It also constructs
+decidable equality for the actual constant numerical-variable diagram,
+with truth as the second Boolean injection. Its 16-command incremental
+verification includes both complete axiom audits. See docs/V59_CANONICAL_DIAGRAM_SYNTAX_2026-11-16.md.
+Proposition 10.7 remains open. Next prove canonical parameterized two-sort
+initiality, comparing the actual constructor and carrier with the existing
+natural relative-algebra folds. Stable variable lists,
 occurrence/substitution/sentence objects and seven-scheme, two-rule finite
 derivations for axiom subobjects in every parameter slice also remain open.
 Do not assume equality of arbitrary formula labels is reflected by
 atom-identifying transitions. Preserve subobject-only initiality and
 uniqueness among all algebra morphisms. Keep compiler runs serial, bounded
-and interruptible after the WSL recovery; the successful targeted checks
-used 2 GB and integrated strict checks 3 GB, with explicit timeouts.
+and interruptible after the WSL recovery; targeted strict checks use 2 GB
+and integrated strict checks 3 GB, with explicit timeouts.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

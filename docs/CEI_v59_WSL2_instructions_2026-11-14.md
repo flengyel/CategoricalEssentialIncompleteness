@@ -58,10 +58,15 @@ proves the actual source constructor square, natural folds and initiality
 among componentwise natural relative formula algebras for arbitrary target
 families, and a canonical constant-family carrier isomorphism. Its separate
 23-command incremental verification includes both complete axiom audits.
-The canonical global two-sort syntax interface comparison, variable lists
-and equality test, occurrence/substitution/sentence constructions and finite
-derivations remain open. The count stays 74/77. Resume from the new report;
-the WSL recovery archive is retained as historical evidence.
+The later [canonical diagram syntax proof](V59_CANONICAL_DIAGRAM_SYNTAX_2026-11-16.md) constructs ordinary
+initiality for the exact canonical two-sort polynomial, with an actual
+polynomial isomorphism and algebra-category equivalence. It also constructs
+decidable equality for the specified constant numerical-variable diagram.
+Its separate 16-command incremental verification includes both complete
+axiom audits. Canonical parameter stability, stable variable lists,
+occurrence/substitution/sentence constructions and finite derivations remain
+open. The count stays 74/77. Resume from the latest report; the WSL recovery
+archive is retained as historical evidence.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

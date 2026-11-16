@@ -106,9 +106,12 @@ uniqueness across parameter and atom-label morphisms. Its separate
 The later [natural parameter fold proof](docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md) proves the actual
 fork constructor square and initiality among componentwise natural relative
 formula algebras for arbitrary target families. Its separate 23-command
-incremental verification includes both complete axiom audits. The canonical
-global syntax interface, lists, substitution and derivations remain open
-in Proposition 10.7; the count stays 74/77.
+incremental verification includes both complete axiom audits. The later [canonical diagram syntax proof](docs/V59_CANONICAL_DIAGRAM_SYNTAX_2026-11-16.md) constructs ordinary
+initiality for the exact canonical two-sort polynomial and decidable
+equality for the specified constant variable diagram. Its separate
+16-command incremental verification includes both complete axiom audits.
+Canonical parameter stability, lists, substitution and derivations remain
+open in Proposition 10.7; the count stays 74/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
