@@ -5,6 +5,8 @@ Authors: Florian Lengyel
 -/
 module
 
+public import CategoricalEssentialIncompleteness.V46ForkParameterizedFormulaFoldsChecks
+
 public import CategoricalEssentialIncompleteness.V46ForkFormulaParametersChecks
 
 public import CategoricalEssentialIncompleteness.V46ForkFirstOrderFormulaChecks

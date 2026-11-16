@@ -5,6 +5,7 @@ Authors: Florian Lengyel
 -/
 module
 public import CategoricalEssentialIncompleteness.V46NumericalDiagramSyntax
+public import Mathlib.Tactic.IrreducibleDef
 public import CategoricalEssentialIncompleteness.V46ForkDerivationDiagram
 
 /-! # First-order formula initiality with arbitrary fork atom labels -/
@@ -29,7 +30,20 @@ def insert : C ⥤ C × C := ((Functor.const C).obj (⊤_ C)).prod' (𝟭 C)
 
 def polynomial (N D : C) : C ⥤ C := insert ⋙ (expression N D).eval
 
-def pairAlgebra (N D : C) := (NumericalSyntax.data .unit (expression N D)).1
+/-- The equation is retained while the numerical construction is hidden
+from incidental kernel reduction through its carrier projections. -/
+irreducible_def pairAlgebra (N D : C) :
+    Endofunctor.Algebra (SyntaxPolynomial.jointFunctor .unit (expression N D)) :=
+  (NumericalSyntax.data .unit (expression N D)).1
+
+def pairInitial (N D : C) : IsInitial (pairAlgebra N D) := by
+  rw [pairAlgebra_def]
+  exact (NumericalSyntax.data .unit (expression N D)).2.1
+
+def pairStable (N D P : C) : IsInitial
+    (SyntaxPolynomial.algebraWithParameters .unit (expression N D) (pairAlgebra N D) P) := by
+  rw [pairAlgebra_def]
+  exact (NumericalSyntax.data .unit (expression N D)).2.2 P
 
 def componentAlgebra (N D : C) : Endofunctor.Algebra (polynomial N D) :=
   ⟨(pairAlgebra N D).a.2, (pairAlgebra N D).str.2⟩
@@ -40,8 +54,8 @@ def targetPair {N D : C} (B : Endofunctor.Algebra (polynomial N D)) :
 
 def componentFold {N D : C} (B : Endofunctor.Algebra (polynomial N D)) :
     componentAlgebra N D ⟶ B where
-  f := (((NumericalSyntax.data .unit (expression N D)).2.1).to (targetPair B)).f.2
-  h := congrArg Prod.snd ((((NumericalSyntax.data .unit (expression N D)).2.1).to
+  f := ((pairInitial N D).to (targetPair B)).f.2
+  h := congrArg Prod.snd (((pairInitial N D).to
     (targetPair B)).h)
 
 def componentInitial (N D : C) : IsInitial (componentAlgebra N D) :=
@@ -51,8 +65,8 @@ def componentInitial (N D : C) : IsInitial (componentAlgebra N D) :=
     let t : pairAlgebra N D ⟶ targetPair B := {
       f := (terminal.from _, m.f)
       h := Prod.ext (terminalIsTerminal.hom_ext _ _) m.h }
-    exact congrArg (fun k => k.f.2) ((NumericalSyntax.data .unit (expression N D)).2.1.hom_ext
-      t (((NumericalSyntax.data .unit (expression N D)).2.1).to (targetPair B))))
+    exact congrArg (fun k => k.f.2) ((pairInitial N D).hom_ext
+      t ((pairInitial N D).to (targetPair B))))
 
 /-- The numerical variables are all natural numbers, at every component. -/
 def numbers : Object := (Functor.const WalkingSpan).obj

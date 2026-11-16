@@ -40,8 +40,8 @@ def targetPair (B : Endofunctor.Algebra (polynomial N D P)) :
   ⟨(⊤_ (Over P), B.a), (terminal.from _, B.str)⟩
 
 def fold (B : Endofunctor.Algebra (polynomial N D P)) : algebra N D P ⟶ B where
-  f := (((NumericalSyntax.data .unit (expression N D)).2.2 P).to (targetPair N D P B)).f.2
-  h := congrArg Prod.snd ((((NumericalSyntax.data .unit (expression N D)).2.2 P).to
+  f := ((ForkFirstOrderFormula.pairStable N D P).to (targetPair N D P B)).f.2
+  h := congrArg Prod.snd (((ForkFirstOrderFormula.pairStable N D P).to
     (targetPair N D P B)).h)
 
 /-- The target carrier is any object over P, not merely a constant family. -/
@@ -52,8 +52,8 @@ def initial : IsInitial (algebra N D P) :=
     let t : pairAlgebra N D P ⟶ targetPair N D P B := {
       f := (terminal.from _, m.f)
       h := Prod.ext (terminalIsTerminal.hom_ext _ _) m.h }
-    exact congrArg (fun k => k.f.2) ((NumericalSyntax.data .unit (expression N D)).2.2 P |>.hom_ext
-      t (((NumericalSyntax.data .unit (expression N D)).2.2 P).to (targetPair N D P B))))
+    exact congrArg (fun k => k.f.2) ((ForkFirstOrderFormula.pairStable N D P).hom_ext
+      t ((ForkFirstOrderFormula.pairStable N D P).to (targetPair N D P B))))
 
 theorem fold_over (B : Endofunctor.Algebra (polynomial N D P)) :
     (fold N D P B).f.left ≫ B.a.hom = (constantFamily P (componentAlgebra N D).a).hom :=
