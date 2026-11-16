@@ -38,7 +38,13 @@ formula algebra for every coefficient diagram, with the full numerical
 variable carrier and atom-identifying transitions. Its 17-command incremental
 verification includes both complete axiom audits. Parameter stability,
 variable lists, occurrence/substitution and parameterized finite derivations
-remain open in Proposition 10.7. The count stays 74/77.
+remain open in Proposition 10.7. The later [parameterized component proof](V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md)
+constructs formula initiality in every numerical parameter slice and fold
+uniqueness across arbitrary parameter and atom-label morphisms. Its separate
+17-command incremental verification includes both complete axiom audits.
+The generic transition-naturality criterion is proved; its concrete fork
+constructor squares and global parameter-stability instantiation remain
+open. The count stays 74/77.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 

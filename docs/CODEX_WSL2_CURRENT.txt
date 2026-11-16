@@ -83,13 +83,23 @@ with arbitrary coefficient diagrams, identity numerical-variable transitions
 and unique natural folds under atom-identifying transitions. Its 17-command
 incremental verification includes both complete axiom audits. See
 docs/V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md.
-Proposition 10.7 remains open. Continue with parameter-stable formula
-initiality, stable variable lists, occurrence/substitution/sentence objects
-and the seven-scheme, two-rule finite derivations in every parameter slice.
-Compare parameterized component folds by pulling target families back along
-the parameter transitions. Do not assume that equality of arbitrary formula
-labels is reflected by atom-identifying transitions. Preserve subobject-only
-axiom indexing and uniqueness among all algebra morphisms.
+The later parameterized formula component batch at fab8223fd55efa813e437e4674f05edb33343f38
+constructs initial formula algebras in every numerical parameter slice,
+including arbitrary target families. It constructs folds and raw uniqueness
+across every parameter and atom-label morphism, and proves the generic
+transition-naturality criterion using only the forward polynomial comparison.
+Its 17-command incremental verification includes both complete axiom audits.
+See docs/V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md.
+Proposition 10.7 remains open. First prove the concrete constructor squares
+for the actual constant-family fork transitions and arbitrary natural target
+parameter algebras, then instantiate LaxAlgebraAdjunction.fold_natural to
+assemble global parameter-stable initiality. Do not supply those squares as
+extra hypotheses of the printed result. Stable variable lists,
+occurrence/substitution/sentence objects and seven-scheme, two-rule finite
+derivations in every parameter slice are also open. Do not assume that
+equality of arbitrary formula labels is reflected by atom-identifying
+transitions. Preserve subobject-only axiom indexing and uniqueness among
+all algebra morphisms.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

@@ -49,8 +49,13 @@ verification includes both complete axiom audits. The later
 algebra for arbitrary coefficient diagrams, with the printed five summands
 and unique natural folds under atom-identifying transitions. Its 17-command
 incremental verification includes both complete axiom audits. Proposition
-10.7 remains open: parameter-stable syntax, lists, occurrence/substitution
-and initial finite derivations in every parameter slice are next.
+10.7 remains open. The later [parameterized component proof](V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md)
+constructs component formula initiality for arbitrary target families, fold
+uniqueness across arbitrary parameter and atom-label morphisms, and the
+generic transition-naturality criterion. Its separate 17-command incremental
+verification includes both complete axiom audits. The concrete fork
+constructor squares and global parameter-stable formula initiality are next;
+lists, occurrence/substitution and finite derivations remain open.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
