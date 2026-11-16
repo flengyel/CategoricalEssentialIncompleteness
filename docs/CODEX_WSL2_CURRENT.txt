@@ -119,17 +119,24 @@ operation naturality and constructs natural folds into every canonical
 formula target, including nonconstant families, with component constructor
 laws and raw uniqueness. Its 17-command incremental verification includes
 both complete axiom audits. See docs/V59_SLICE_EVALUATION_TARGET_FOLDS_2026-11-16.md.
-Proposition 10.7 remains open. Next compare the canonical global source
-parameter constructor with the numerical component parameter constructors,
-derive the global constructor equation and assemble full two-sort
-parameterized initiality. Do not add source compatibility as a hypothesis.
-Stable lists, occurrence/substitution/sentence objects and seven-scheme,
+The later canonical formula parameter-initiality batch at d360f5d514494e7fd06b0d5aa2b1185f37fabc1b
+closes the source-constructor comparison and proves initiality in every
+global parameter slice for the exact canonical five-branch formula source.
+The full global constructor equation and raw uniqueness include arbitrary
+natural target families and every underlying morphism over the parameter.
+Its 17-command incremental verification includes both complete axiom audits.
+See docs/V59_CANONICAL_FORMULA_PARAMETER_INITIALITY_2026-11-16.md.
+Proposition 10.7 remains open. Next assemble the full term/formula
+CategoricalSyntax interface, its exact canonical expressions and parameter
+constructors, using the completed formula parameter initiality. Stable
+lists, occurrence/substitution/sentence constructions and seven-scheme,
 two-rule finite derivations for axiom subobjects in every parameter slice
-also remain open. Preserve arbitrary targets, all underlying natural
-morphisms, Boolean conventions and subobject-only initiality. Do not assume
-label equality is reflected by atom-identifying transitions. Keep compiler
-runs serial, bounded and interruptible; targeted strict checks use 2 GB
-and integrated strict checks 3 GB, with explicit timeouts.
+also remain open. Preserve actual constructor/carrier isomorphisms,
+arbitrary targets, all natural algebra morphisms, Boolean conventions and
+subobject-only initiality. Do not assume equality is reflected by
+atom-identifying transitions. Keep runs serial, bounded and interruptible;
+targeted strict checks use 2 GB and integrated strict checks 3 GB, with
+explicit timeouts (the completed targeted run allowed 120 seconds per command).
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

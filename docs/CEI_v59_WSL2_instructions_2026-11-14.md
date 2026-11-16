@@ -67,11 +67,14 @@ axiom audits. The later [slice evaluation and target folds](V59_SLICE_EVALUATION
 slice polynomial comparison, transition squares for arbitrary recursive
 families and natural folds into every canonical formula target. Component
 constructor laws and raw uniqueness are proved; the 17-command incremental
-verification includes both complete axiom audits. The canonical global
-source parameter constructor comparison and full two-sort stability remain
-open, as do stable lists, occurrence/substitution/sentence constructions
-and derivations. The count stays 74/77. Resume from the latest report;
-the WSL recovery archive is retained as historical evidence.
+verification includes both complete axiom audits. The later [canonical formula parameter-initiality proof](V59_CANONICAL_FORMULA_PARAMETER_INITIALITY_2026-11-16.md) closes the
+source-constructor comparison and proves the full global constructor law,
+initiality in every parameter slice and raw uniqueness for arbitrary target
+families. Its separate 17-command incremental verification includes both
+complete axiom audits. The full term/formula interface, stable lists,
+occurrence/substitution/sentence constructions and derivations remain open.
+The count stays 74/77. Resume from the latest report; the WSL recovery
+archive is retained as historical evidence.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
