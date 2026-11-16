@@ -63,10 +63,15 @@ initiality for the exact canonical two-sort polynomial, with an actual
 polynomial isomorphism and algebra-category equivalence. It also constructs
 decidable equality for the specified constant numerical-variable diagram.
 Its separate 16-command incremental verification includes both complete
-axiom audits. Canonical parameter stability, stable variable lists,
-occurrence/substitution/sentence constructions and finite derivations remain
-open. The count stays 74/77. Resume from the latest report; the WSL recovery
-archive is retained as historical evidence.
+axiom audits. The later [slice evaluation and target folds](V59_SLICE_EVALUATION_TARGET_FOLDS_2026-11-16.md) construct the complete
+slice polynomial comparison, transition squares for arbitrary recursive
+families and natural folds into every canonical formula target. Component
+constructor laws and raw uniqueness are proved; the 17-command incremental
+verification includes both complete axiom audits. The canonical global
+source parameter constructor comparison and full two-sort stability remain
+open, as do stable lists, occurrence/substitution/sentence constructions
+and derivations. The count stays 74/77. Resume from the latest report;
+the WSL recovery archive is retained as historical evidence.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted

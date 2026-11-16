@@ -111,15 +111,24 @@ including the exact canonical term/formula expressions. It also constructs
 decidable equality for the actual constant numerical-variable diagram,
 with truth as the second Boolean injection. Its 16-command incremental
 verification includes both complete axiom audits. See docs/V59_CANONICAL_DIAGRAM_SYNTAX_2026-11-16.md.
-Proposition 10.7 remains open. Next prove canonical parameterized two-sort
-initiality, comparing the actual constructor and carrier with the existing
-natural relative-algebra folds. Stable variable lists,
-occurrence/substitution/sentence objects and seven-scheme, two-rule finite
-derivations for axiom subobjects in every parameter slice also remain open.
-Do not assume equality of arbitrary formula labels is reflected by
-atom-identifying transitions. Preserve subobject-only initiality and
-uniqueness among all algebra morphisms. Keep compiler runs serial, bounded
-and interruptible after the WSL recovery; targeted strict checks use 2 GB
+The later slice-evaluation batch at b06ebaf0038c40018e220ceb6b2cfc9074e4ab97
+constructs evaluation and coefficient isomorphisms for the global and
+component slices, the complete two-sort polynomial comparison and actual
+transition squares for arbitrary recursive families. It derives target
+operation naturality and constructs natural folds into every canonical
+formula target, including nonconstant families, with component constructor
+laws and raw uniqueness. Its 17-command incremental verification includes
+both complete axiom audits. See docs/V59_SLICE_EVALUATION_TARGET_FOLDS_2026-11-16.md.
+Proposition 10.7 remains open. Next compare the canonical global source
+parameter constructor with the numerical component parameter constructors,
+derive the global constructor equation and assemble full two-sort
+parameterized initiality. Do not add source compatibility as a hypothesis.
+Stable lists, occurrence/substitution/sentence objects and seven-scheme,
+two-rule finite derivations for axiom subobjects in every parameter slice
+also remain open. Preserve arbitrary targets, all underlying natural
+morphisms, Boolean conventions and subobject-only initiality. Do not assume
+label equality is reflected by atom-identifying transitions. Keep compiler
+runs serial, bounded and interruptible; targeted strict checks use 2 GB
 and integrated strict checks 3 GB, with explicit timeouts.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.

@@ -110,8 +110,13 @@ incremental verification includes both complete axiom audits. The later [canonic
 initiality for the exact canonical two-sort polynomial and decidable
 equality for the specified constant variable diagram. Its separate
 16-command incremental verification includes both complete axiom audits.
-Canonical parameter stability, lists, substitution and derivations remain
-open in Proposition 10.7; the count stays 74/77.
+The later [slice evaluation and target folds](docs/V59_SLICE_EVALUATION_TARGET_FOLDS_2026-11-16.md) compare arbitrary
+recursive parameter families and construct natural folds into every
+canonical formula target, with component constructor laws and raw
+uniqueness. Its separate 17-command incremental verification includes both
+complete axiom audits. The canonical global source parameter constructor,
+full two-sort parameter stability, lists, substitution and derivations
+remain open in Proposition 10.7; the count stays 74/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
