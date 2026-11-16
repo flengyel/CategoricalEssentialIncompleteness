@@ -1,5 +1,7 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ForkFormulaParametersChecks
+
 public import CategoricalEssentialIncompleteness.V46ForkFirstOrderFormulaChecks
 
 public import CategoricalEssentialIncompleteness.V46MillerAssociatedCategoriesChecks

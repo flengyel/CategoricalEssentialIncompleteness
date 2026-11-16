@@ -143,7 +143,7 @@ The later Lemma 8.9 proof raises the current count to **71 proved counterparts a
 | Theorem 10.5; `thm:cosheaf-observation`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | Consistent extension families give internally inseparable theorem/refutation idempotents, recursively inseparable N² observations, covariant extension functor, and EACH endpoint theory incomplete. | `LC.ForkSyntax.cosheaf_observation`; `observationFunctor`; `tuplePositive_mem`; `tupleNegative_mem`; `tuple_observed_bounds`; new `cosheaf_observation_v46`, `endpoint_theory_incomplete`, `endpoint_complete_iff`, `essential_incompleteness_v46` | Theory is a consistent c.e. natural subfunctor extending categoricalTheory, with MP closure. Bool true/false selects endpoint 1/2. Pair coding compares N supports with actual N×N predicates. | Recovered by a proved comparison — Established component and endpoint conclusions for the actual coded fork theory; new source comparison chain, support equivalence and endpoint noncoverage compiled. The constructed initial-H presentation and its actual image identification are proved in 10.3–10.4. |
 | Corollary 10.6; `cor:cosheaf-essential-incompleteness`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | Every consistent c.e.-axiomatized extension of either endpoint theory is incomplete. | `V46.ForkDerivationImages.categoricalTheory_eq`, `endpoint_theorem_codes`, `endpoint_axiom_extension_incomplete`; retained `V46.ForkAxiomClosure.derives_iff_record`, `theoremCodes_re`, `endpoint_axiom_extension_incomplete` | Arbitrary selected endpoint i:Bool and c.e. axiom code set A. Its generated theorem set extends the actual endpoint theory, and it has no proofs of both φ and its negation. No compatible extension family at other components is required. | Recovered by a proved comparison — the constructed initial-H conclusion image and endpoint theory are proved equal to the existing coded t0 presentation. Actual supported finite-proof records enumerate the generated consequences of arbitrary c.e. axioms; the proved selected-endpoint extension theorem then supplies a formula with neither proof. All presentation premises are discharged. |
 
-| Proposition 10.7; `prop:fork-first-order-realization`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The fork total category has first-order syntax and initial finite-derivation algebras for arbitrary nullary coefficients, stable in every parameter slice. | `V46.DiagramInitialAlgebras.initial`; `V46.SyntaxCoefficientMorphisms.jointAction`; `V46.NumericalDiagramSyntax.initial`; `V46.ForkFirstOrderFormula.initial`, `polynomial_object`, `polynomial_transition`, `fold_natural`, `fold_underlying_unique`; independent `V46ForkFirstOrderFormulaChecks`. | Constant variable diagram, arbitrary coefficient objects and parameters; atom transitions may identify labels. | Open. Formula initiality for the printed five-summand Q_D is constructed for every coefficient diagram D, with the full constant numerical-variable carrier, arbitrary atom-identifying transitions and uniqueness among all natural algebra morphisms. Five targeted strict commands and 24 principal permitted-axiom reports pass. Parameter-stable syntax and lists, occurrence/substitution/sentence comparisons, and initial finite derivations for axiom subobjects in every parameter slice remain to be assembled and checked. |
+| Proposition 10.7; `prop:fork-first-order-realization`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The fork total category has first-order syntax and initial finite-derivation algebras for arbitrary nullary coefficients, stable in every parameter slice. | `V46.DiagramInitialAlgebras.initial`; `V46.SyntaxCoefficientMorphisms.jointAction`; `V46.NumericalDiagramSyntax.initial`; `V46.ForkFirstOrderFormula.initial`, `polynomial_object`, `polynomial_transition`, `fold_natural`, `fold_underlying_unique`; `V46.ForkFormulaParameterComponents.initial`; `ForkFormulaParameterChange.fold_constructor`, `unique`, `underlying_unique`; `LaxAlgebraAdjunction.fold_natural`; independent `V46ForkFirstOrderFormulaChecks` and `V46ForkFormulaParametersChecks`. | Constant variable diagram, arbitrary coefficient objects and parameters; atom transitions may identify labels. | Open. Formula initiality for the printed five-summand Q_D is constructed for every coefficient diagram D, with the full constant numerical-variable carrier, arbitrary atom-identifying transitions and uniqueness among all natural algebra morphisms. Five targeted strict commands and 24 principal permitted-axiom reports pass. Component formula initiality in every numerical parameter slice and fold uniqueness across arbitrary parameter and atom-label morphisms are also constructed, with arbitrary target families. The generic transition-naturality criterion is proved using the two constructor squares. Its concrete fork constructor-square instantiation, global parameter-stable syntax and lists, occurrence/substitution/sentence comparisons, and initial finite derivations for axiom subobjects in every parameter slice remain open. The parameter-component batch passes five further strict commands and 19 principal permitted-axiom reports. |
 | Proposition 10.8; `prop:fork-first-order-conservative`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The first-order fork theory conservatively extends the propositional theory and is internally essentially incomplete; the printed endpoint conclusions hold. | Existing fork propositional realization and endpoint incompleteness, with Proposition 10.7 once completed. | The first-order embedding and erasure must be natural under atom-identifying transitions and compare the specified axiom families and generated theories. | Open. Construct embedding and erasure, prove conservativity and consistency, apply domain incompleteness and establish the endpoint conclusions. |
 | Corollary 10.9; `cor:fork-associated-theories`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | Every consistent internal extension of the first-order fork theory satisfies the associated-category extension and incompleteness conclusions. | Existing fork category and the preceding first-order constructions once completed. | Theorems 5.2–5.3 for the first-order fork theory, including every-parameter derivations and a common global logical theorem. | Open. Instantiate partial-slice extension and incompleteness transfer, retaining the internal sentence and theorem objects and identifying the no-total-extension witness. |
 
@@ -886,3 +886,37 @@ scheme, two-rule derivation initiality in every parameter slice remain
 open. The count stays **74/77**. Integrated incremental verification is
 recorded separately from these targeted checks and the last completed
 full replay. Manuscript v59 and its artifacts remain unchanged.
+
+
+### Parameterized formula component folds, 16 November 2026
+
+`ForkFormulaParameterComponents.initial` constructs initial formula algebras
+in every numerical slice. Their carriers are exactly P × F_D, and their
+folds preserve the actual projection and constructor. Target carriers are
+arbitrary families over P. This uses the proved component parameterized
+two-sort initiality, with no new initiality or evaluation hypothesis.
+
+`LaxPolynomialComparison` supplies the forward comparison for polynomial
+coefficients under a coproduct-preserving functor. Products and coefficient
+morphisms need not be invertible. `LaxAlgebraAdjunction` constructs the
+right algebra from this comparison and the pullback adjunction, proves
+the constructor-equation equivalence and uniqueness of every underlying
+fold, and proves the generic transition-naturality criterion from the two
+constructor squares.
+
+`ForkFormulaParameterChange` instantiates these constructions for every
+parameter morphism b:P→Q and every atom-label morphism h:D→E. Both may
+identify labels. The fold is over b, and uniqueness covers every raw
+carrier morphism satisfying the projection and constructor equations.
+No preservation conclusion is imposed on b or h. The independent checks
+retain all these quantifiers and the actual variable/atom coefficient maps.
+
+Four producers and their Checks module pass five targeted strict commands
+and 19 principal permitted-axiom reports. This is partial progress toward
+Proposition 10.7. The concrete fork transition constructor squares and
+therefore global parameter-stable formula initiality remain to be proved;
+stable lists, occurrence/substitution/sentence objects and parameterized
+finite derivations are also open. The count stays **74/77**. Integrated
+incremental verification is recorded separately from these targeted checks
+and the last completed full replay. Manuscript v59 and its artifacts remain
+unchanged.
