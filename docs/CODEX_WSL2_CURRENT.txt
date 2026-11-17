@@ -153,10 +153,17 @@ erasure invariance, the full Option failure equation and the exact erasures
 of all seven logical schemes. Its 18-command incremental verification
 includes both complete axiom audits and 32 selected reports. The count
 remains 75/77. See docs/V59_ERASURE_SUBSTITUTION_SCHEMES_2026-11-17.md.
-Continue with uniform finite propositional derivations of the erased schemes,
-then inference and generated-theory comparisons, conservativity, consistency,
-internal essential incompleteness and every selected-endpoint extension
-conclusion. Reuse the actual carrier/code comparisons and proved retraction.
+The later uniform propositional derivation batch constructs finite
+derivations of all seven erased schemes in the original proof carrier.
+They assemble into one natural morphism with the prescribed conclusion
+and factor through the actual propositional theorem image. Its 17-command
+incremental verification includes both complete axiom audits and 32 selected
+reports. The count remains 75/77. See
+docs/V59_UNIFORM_PROPOSITIONAL_DERIVATIONS_2026-11-17.md.
+Continue with inference and generated-theory comparisons, conservativity,
+consistency, internal essential incompleteness and every selected-endpoint
+extension conclusion. Reuse the actual carrier/code comparisons, constructed
+uniform derivations and proved retraction.
 Then apply completed Theorems 5.2–5.3 for Corollary 10.9,
 using the constructed all-parameter deduction and a common global logical
 theorem. Preserve arbitrary closed consistent extensions, including

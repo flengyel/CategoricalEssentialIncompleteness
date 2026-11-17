@@ -102,8 +102,15 @@ The later [erasure substitution batch](V59_ERASURE_SUBSTITUTION_SCHEMES_2026-11-
 proves admissible-substitution erasure invariance, the full Option failure
 equation and the exact erased expressions of all seven logical schemes.
 Its 18-command incremental verification includes both complete axiom
+audits and 32 selected reports. The count remained 75/77 at that batch;
+uniform derivations and the theory comparisons were still open.
+
+The later [uniform propositional derivation batch](V59_UNIFORM_PROPOSITIONAL_DERIVATIONS_2026-11-17.md)
+constructs finite derivations of all seven erased logical schemes in the
+original proof carrier. They assemble into one natural morphism with the
+prescribed conclusion and factor through the actual theorem image.
+Its 17-command incremental verification includes both complete axiom
 audits and 32 selected reports. The count remains 75/77. Resume with
-uniform finite propositional derivations of the erased schemes, then
 the inference and generated-theory comparisons, conservativity,
 consistency, internal essential incompleteness and every endpoint
 extension conclusion. Proposition 10.8 and Corollary 10.9 remain open.
