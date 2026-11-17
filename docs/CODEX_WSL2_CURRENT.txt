@@ -2,15 +2,25 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 17 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 59.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V59.md,
-docs/V59_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md and
-docs/CEI_v59_WSL2_instructions_2026-11-14.md.
+The current manuscript and verification target are version 60.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V60.md and
+docs/reviews/V60_2026-11-17/review.md. The v59 continuation documents and
+the dated check records below describe the inherited constructions.
 
-Theorem 5.3, Lemmas 8.9 and 9.6, and Corollaries 8.10 and 9.8 are complete.
-Proposition 10.7 is also complete. The current count is 75 of 77 numbered
-results proved; Proposition 10.8 is next, followed by Corollary 10.9. Preserve all subsequent local
-and remote work.
+Corollary 10.9 is the next first-order application. Propositions 10.7
+and 10.8, Lemmas 8.9 and 9.6, Corollaries 8.10 and 9.8, and the
+first-order case of Theorem 5.3 are proved. Reuse the first-order result.
+The new coverage finding is confined to the standalone propositional
+calculus of Appendix A.6. Instantiate finite-rule closure transport for
+its three axiom schemes and modus ponens along constant family and
+evaluation, or prove a comparison that transports the entire theorem
+to this calculus. Preserve the quantifier over arbitrary closed slice
+extensions and the Boolean morphism conclusions. The current table
+records 75 full rows, the first-order case of 5.3, and one open row (10.9).
+Preserve subsequent local and remote work.
+
+The proofs and conventions of the v59 continuation still apply. Its
+dated verification counts below refer to the commits then checked.
 
 WSL recovery resumed: the concrete constructor square and natural
 parameterized formula folds are now verified and integrated. See
@@ -28,7 +38,7 @@ unchanged. The reviewed v58 PDF and archive are retained.
 The detailed mathematical tasks and conventions remain in
 docs/V58_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md; its pending-review
 section is superseded by the supplied report and assessment. Reuse the
-completed Theorem 5.3 proof and its arbitrary closed slice extensions.
+first-order Theorem 5.3 proof and its arbitrary closed slice extensions.
 Retain subobject-only initiality, generation through regular images,
 the true/second-injection convention and the second-projection quantifier.
 
@@ -160,15 +170,16 @@ and factor through the actual propositional theorem image. Its 17-command
 incremental verification includes both complete axiom audits and 32 selected
 reports. The count remains 75/77. See
 docs/V59_UNIFORM_PROPOSITIONAL_DERIVATIONS_2026-11-17.md.
-Continue with inference and generated-theory comparisons, conservativity,
-consistency, internal essential incompleteness and every selected-endpoint
-extension conclusion. Reuse the actual carrier/code comparisons, constructed
-uniform derivations and proved retraction.
-Then apply completed Theorems 5.2–5.3 for Corollary 10.9,
-using the constructed all-parameter deduction and a common global logical
-theorem. Preserve arbitrary closed consistent extensions, including
-nonconstant slice families. Do not add preservation or incompleteness as
-hypotheses. Keep v59 unchanged unless a mathematical defect is established.
+Proposition 10.8 was completed at f5176d08e6a7aed7a59d80432cc453eb947f18f3.
+ForkFirstOrderApplication.printed_statement and its independent statement
+checks cover conservativity, consistency, all consistent closed internal
+extensions, and all consistent c.e.-axiomatized extensions at each endpoint.
+
+Apply Theorem 5.2 and the first-order case of Theorem 5.3 to this theory for
+Corollary 10.9, using the constructed parameterized deduction and a common
+global logical theorem. Preserve arbitrary closed consistent extensions,
+including nonconstant slice families. Do not add preservation or
+incompleteness as hypotheses.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.

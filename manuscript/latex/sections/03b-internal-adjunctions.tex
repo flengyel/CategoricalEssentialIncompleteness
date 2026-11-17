@@ -344,9 +344,14 @@ refutation subobjects of $T_{a,b}$.
 Corollary~\ref{cor:domain-incompleteness} proves essential
 incompleteness when the pair is inseparable.
 
-Conversely, a separator is equivalently a total $d:X\to\Two$
-with value $\mathbf{t}$ on $a$ and $\mathbf{f}$ on $b$, where
-$\mathbf{t},\mathbf{f}:1\to\Two$ are the coproduct injections.
+Conversely, let $m:C\hookrightarrow X$ and $n:D\hookrightarrow X$
+be complementary subobjects containing $a$ and $b$, respectively.
+Disjointness and extensivity make $[m,n]:C+D\to X$ monic, and
+its image is the join of the two subobjects, hence all of $X$.
+Thus $[m,n]$ is an isomorphism. Let $\Two=1+1$ with injections
+$\mathbf{f},\mathbf{t}:1\to\Two$, in that order. The total morphism
+$d=[\mathbf{t}!_C,\mathbf{f}!_D][m,n]^{-1}:X\to\Two$
+is true on $a$ and false on $b$.
 Interpret the nullary predicates by $d$, equality by
 $\mathbf{t}$, negation and implication by their Boolean truth
 functions, and universal quantification by the projection

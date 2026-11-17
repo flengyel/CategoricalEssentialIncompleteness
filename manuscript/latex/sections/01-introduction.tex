@@ -1,87 +1,82 @@
 \section{Introduction}
 
-We construct internal deductive systems from categorical axioms for
-partial computation and prove essential incompleteness using inseparable
-pairs. G\"odel's arithmetization starts with formulas and finite proofs
-and represents their effective operations within arithmetic.
-Di Paola and Heller proposed an intrinsic recursion theory supplying the
-diagonalization and inseparability arguments needed for generalized
-incompleteness \cite[pp.~594--596]{DPH}.
+Di Paola and Heller asked how the recursion theory underlying generalized
+incompleteness theorems could be expressed in categorical terms
+\cite[pp.~594--596]{DPH}. We prove that a disjoint pair of computational
+domains generates a first-order theory which, if consistent, is essentially
+incomplete exactly when the pair is inseparable. We also construct a
+Turing category from a theory and show that passage to this category
+preserves and reflects essential incompleteness.
 
-For a recursion category $\mathscr R$, let
-$\mathcal D=\Tot(\Split(\mathscr R))$ be the category of total
-morphisms after splitting the restriction idempotents, which represent
-domains of partial computations. The deductive construction assumes that
-$\mathcal D$ is regular, has disjoint pullback-stable finite coproducts,
-and has the initial algebras for syntax, lists, and finite derivations
-specified in Appendix~\ref{app:syntax-theories}. For an axiom subobject,
-the image of the conclusion morphism, restricted to derivations of
-sentences, is the generated sentence theory. When its inclusion has a
-partial inverse, this image is represented by a restriction idempotent.
-Its inverse image under sentence negation represents the refutable
-sentences. Consistency means that the theorem and refutation domains are
-disjoint. Completeness means that their join is the identity. We verify these existence and representation hypotheses in
-the realizations below.
+Let $\mathscr R$ be a recursion category. Splitting its restriction
+idempotents makes the domains of partial morphisms into objects. Write
+$\mathscr C=\Split(\mathscr R)$ for this completion and
+$\mathcal D=\Tot(\mathscr C)$ for its category of total morphisms.
+Assume that $\mathcal D$ is regular, that its finite coproducts are
+disjoint and stable under pullback, and that every monomorphism in
+$\mathcal D$ has a partial inverse in $\mathscr C$. Subobjects then
+represent restriction idempotents. Two disjoint subobjects are
+\emph{inseparable} if no pair of complementary subobjects contains
+them respectively. For a sentence theory the refutation subobject is
+the inverse image of the theorem subobject under negation. The theory
+is consistent when the two subobjects are disjoint and complete when
+their join is the whole sentence object.
 
-A consistent internal theory is essentially incomplete if every
-consistent internal extension is incomplete. Two disjoint domains are
-inseparable when no disjoint pair of restriction idempotents whose join
-is the identity contains them, respectively. We prove two criteria.
-The first uses a functor $F:\mathscr R\to\mathcal A$ into a split
-restriction category that preserves restrictions, ranges, zero morphisms,
-and binary restriction coproducts. Such a functor is called a range functor.
-The functor extends to $\Split(\mathscr R)$ and interprets the theorem
-and refutation domains in $\mathcal A$. Soundness, together with
-disjointness of validity and its inverse image under negation, proves
-these interpreted domains disjoint. Assume also that inverse images along
-total morphisms in $\mathcal A$ preserve binary joins of restriction
-idempotents. Under the hypotheses of
-Theorem~\ref{thm:logical-comparison}, including a nonzero image of the
-identity on the Turing object and a specified partial morphism in
-$\mathcal A$ admitting a preimage under $F$, the comparison proves
-incompleteness of both the interpreted theory and the internal theory.
-The second criterion uses a total morphism mapping the two members of a
-fixed inseparable pair into the theorem and refutation domains of a base
-theory, respectively. This
-reduction proves incompleteness of every consistent internal extension
-(Corollary~\ref{cor:domain-incompleteness}).
+Given disjoint subobjects $a,b\hookrightarrow X$, take the language
+whose only nonlogical symbols are nullary predicates indexed by $X$.
+Assert the predicates indexed by $a$ and the negations of those indexed
+by $b$. We assume the parameterized syntax and list algebras and the
+initial algebras of finite derivations for axiom subobjects described in
+Appendix~\ref{app:syntax-theories}. The image of the conclusion morphism
+on derivations of sentences is the generated theory $T_{a,b}$. For
+consistent $T_{a,b}$ this construction is left adjoint to the functor
+taking a consistent theory to its theorem and refutation subobjects
+(Theorem~\ref{thm:free-first-order-adjunction}). The atomic sentence
+constructor takes $a$ into the theorems and $b$ into the refutations.
+A separator of the pair, on the other hand, supplies a Boolean valuation
+whose true sentences form a consistent complete extension. Thus every
+consistent internal extension of $T_{a,b}$ is incomplete exactly when
+$(a,b)$ is inseparable (Corollary~\ref{cor:signed-first-order-incompleteness}).
+More generally, any total reduction of an inseparable pair to the theorem
+and refutation subobjects of a consistent theory proves its essential
+incompleteness (Corollary~\ref{cor:domain-incompleteness}).
 
-Generation by finite deduction is left adjoint to the inclusion of
-closed sentence theories. Logical translations preserving syntax and
-inference rules induce Galois connections between theories ordered by
-inclusion. Assume further that every monomorphism in $\mathcal D$ has a
-partial inverse in $\Split(\mathscr R)$ and that the syntax and derivation
-constructions exist for languages with nullary predicates indexed by any
-object of $\mathcal D$. Theorem~\ref{thm:free-first-order-adjunction}
-then constructs a
-first-order theory whose nullary predicates are indexed by the object
-on which a disjoint pair of domains is defined. Its
-nonlogical axioms assert these predicates on one domain and their
-negations on the other. If that theory is consistent, it is
-essentially incomplete exactly when the pair is inseparable
-(Corollary~\ref{cor:signed-first-order-incompleteness}).
+For a theory $u:U\hookrightarrow S$ on a sentence object $S$, define its
+associated category to be the category of partial maps in $\mathcal D/U$.
+It is a Turing category (Lemma~\ref{lem:partial-slice-turing}).
+An inclusion of theories induces a fully faithful functor between their
+associated categories (Theorem~\ref{thm:theory-extension}).
+Assume that the deductive construction exists with parameters in every
+slice and that a fixed logical theorem $\lambda:1\to S$ factors through
+the theories under consideration. Then a consistent $u$ is essentially
+incomplete if and only if its constant family over $U$ is essentially
+incomplete. This quantifies over every consistent closed extension in
+the slice. Moreover, the partial Boolean morphism that is true on
+theorems and false on refutations in the constant family has a total
+extension exactly when the two subobjects in $\mathscr C$ are separable
+(Theorem~\ref{thm:associated-incompleteness}).
 
-For a sentence theory $T\hookrightarrow S$, the associated category
-is the category of partial maps in the slice $\mathcal D/T$.
-If the syntax and derivation constructions also exist in every slice
-$\mathcal D/P$, for $P\in\mathcal D$, these are Turing categories,
-and a theory inclusion induces a fully faithful functor between them
-(Theorem~\ref{thm:theory-extension}). Suppose a fixed logical theorem is
-represented by a total morphism $1\to S$ that factors through every
-theory under consideration. A consistent theory in $\Split(\mathscr R)$
-is essentially incomplete exactly when its corresponding internal theory
-is essentially incomplete in the associated category. The internal theory
-in the associated category defines a partial morphism that takes the value
-true on its theorem domain and false on its refutation domain. This partial
-morphism has no total extension in that category exactly when the theorem
-and refutation domains of the original theory are inseparable in
-$\Split(\mathscr R)$
-(Theorem~\ref{thm:associated-incompleteness}). The second criterion
-proves essential incompleteness and inseparability for the three
-instances of this construction described below.
+The diagonal argument compares a recursion category with an interpretation
+by a range functor $F:\mathscr R\to\mathcal A$, where $\mathcal A$
+is a split restriction category. A range functor preserves restrictions,
+ranges, zeros and binary restriction coproducts. Let $U$ be the Turing object of $\mathscr R$. Theorem~\ref{thm:comparison}
+uses a partial morphism $FU\rightharpoonup FU+FU$ whose summand inverse
+images are the specified target domains in reverse order. A lift to
+$\mathscr R$ gives a total source morphism whose interpretation has zero
+inverse image of both domains. Theorem~\ref{thm:logical-comparison}
+applies this argument to theorem and refutation domains. It gives
+incompleteness in the source and in the interpretation when the
+interpreted domains are disjoint, the specified reduction and lift
+exist, $F(1_U)\ne0$, and total inverse images in the target preserve
+binary joins of restriction idempotents.
 
 The arithmetic realization uses the syntactic recursion categories of
-Montagna and Di Paola--Montagna \cite{Montagna,DPM}. For Peano arithmetic ($\PA$), the completion of their category
+Montagna and Di Paola--Montagna \cite{Montagna,DPM}. Montagna asked
+how to relate the category for Peano arithmetic ($\PA$) to the
+recursion category of partial recursive functions
+\cite[pp.~114--115]{Montagna}. Section~\ref{sec:arithmetic} compares
+the two conclusion morphisms by a computable bijection on derivation
+codes. The completion of the syntactic category
 $S_{\PA}$ represents computably enumerable (c.e.) extensions of $\PA$
 by internal theories. Let $M$ be the standard arithmetic model $\N$ or
 an ultrapower of that model. Interpreting program graphs in $M$ gives a
@@ -115,25 +110,22 @@ instance of the associated-category construction
 The third realization uses cosheaves on a three-point space. The
 recursion category constructed from them is not equivalent as a
 restriction category to the category of partial recursive functions.
-Its completion realizes propositional logic. Evaluation at the two
-endpoints gives two consistent propositional theories, each of whose
-consistent extensions in the same language with a c.e.~axiom set is
+Its completion realizes propositional logic. At either endpoint the propositional theory is consistent and every
+consistent extension in the same language with a c.e.~axiom set is
 incomplete (Corollary~\ref{cor:cosheaf-essential-incompleteness}).
 A conservative first-order extension of the internal propositional theory
 supplies the third instance of
 the associated-category construction
 (Corollary~\ref{cor:fork-associated-theories}).
 
-Section~\ref{sec:lifting} proves the computational comparison criteria,
-and Section~\ref{sec:internal-theories} applies them to the sentence
-theories constructed in Appendix~\ref{app:syntax-theories}.
-Section~\ref{sec:theory-extensions} constructs the associated categories
-and proves the extension and transfer theorems.
-Sections~\ref{sec:syntactic} and~\ref{sec:models} establish the
-syntactic realization and soundness. Sections~\ref{sec:arithmetic},
-\ref{sec:miller}, and~\ref{sec:cosheaves} give the three applications.
-The remaining appendices supply the cosheaf construction, the lifting
-counterexample, and the faithful family of model interpretations.
+Section~\ref{sec:lifting} proves the diagonal comparison.
+Section~\ref{sec:internal-theories} constructs the internal theories,
+the adjunctions for generation and translation, and the free first-order
+theory of a pair. Section~\ref{sec:theory-extensions} proves the
+transfer theorem for associated categories. Sections~\ref{sec:syntactic}
+and~\ref{sec:models} give the syntactic category and its model
+interpretations for the arithmetic application. The three applications
+occupy Sections~\ref{sec:arithmetic}--\ref{sec:cosheaves}.
 
 \subsection{Related work}
 
@@ -157,13 +149,32 @@ and inseparability results from precomplete equivalence relations,
 including PA-provable equality of partial recursive functions among his
 examples \cite[Sections~2--3, pp.~125--128]{Bernardi}.
 Montagna obtained effectively inseparable pairs in his syntactic
-category \cite[Remark~3.1]{Montagna}.
+category \cite[Remark~3.1]{Montagna}. The diagonal pair in
+Theorem~\ref{thm:comparison} occurs in Lengyel's earlier comparison
+\cite[Theorem~4.1]{Lengyel2006}. Appendix~\ref{app:lifting-counterexample}
+gives a counterexample to that theorem as stated. For discrete Turing
+categories with finite compatible joins, Cockett proves the existence
+of inseparable restriction idempotents in every nontrivial case
+\cite[Section~7.1 and Theorem~7.8]{CockettComputability}.
+
+Murwanashyaka, Pakhomov, and Visser prove a numerical antecedent of
+Corollary~\ref{cor:signed-first-order-incompleteness}. They extend
+a theory of an equivalence relation by asserting sentences indexed by one c.e.~set
+and negating those indexed by another. For disjoint sets, the resulting
+theory is essentially undecidable exactly when the sets are recursively
+inseparable \cite[Section~4.4, p.~1169]{MPV}. Here the indices form an
+object of $\mathcal D$, and the first-order theory is free on the two
+subobjects in the sense of Theorem~\ref{thm:free-first-order-adjunction}.
 
 Di Paola and Heller also discussed the role of the formalized L\"ob
 theorem among the axioms of diagonalizable algebras and the modal
 provability logic $\mathrm{GL}$,
 and the obstacles to extending modal fixed-point theorems to numerals
-and quantification \cite[pp.~595--596]{DPH}.
+and quantification \cite[pp.~595--596]{DPH}. In categorical logic,
+van Dijk and Gietelink Oldenziel give Joyal's arithmetic-universe
+proofs of incompleteness and of the unprovability of consistency
+\cite[Theorems~5.19--5.20]{vanDijkGO}. Their construction uses an
+internal arithmetic universe in the initial arithmetic universe.
 
 Cockett and Hofstra relate Turing categories to partial combinatory
 algebras through idempotent splitting
@@ -172,9 +183,6 @@ theorem assumes a predicate expressing program restriction order and
 produces a restriction idempotent on the restriction terminal object
 that is neither zero nor the identity
 \cite[Section~7.5, Theorem~7.14]{CockettComputability}.
-Its assumed predicate and conclusion differ from the construction of
-generated sentence theories and the results for their consistent
-extensions.
 
 Bauer and Hanson use Miller's sequence in a parameterized realizability
 topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.

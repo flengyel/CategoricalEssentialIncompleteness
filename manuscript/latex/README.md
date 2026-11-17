@@ -1,10 +1,10 @@
-# LaTeX sources — version 59
+# LaTeX sources — version 60
 
 **Logical consequence and essential incompleteness in recursion categories**,
-14 November 2026.
+17 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v59.pdf`
-and `logical_consequence_v59_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v60.pdf`
+and `logical_consequence_v60_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All four appendices and
@@ -52,6 +52,8 @@ The output is `main.pdf`. The source package contains this directory as
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 60 states the free first-order construction and slice-transfer theorem in the abstract, adds the numerical and categorical antecedents, and identifies the earlier functorial assertion refuted by Appendix C. The numbered statements are unchanged.
 
 Version 59 prevents a single-letter line break in the publisher name in
 reference [18]. All mathematical text, numbered statements and proofs are
@@ -107,7 +109,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 59 is the current manuscript and Lean verification target.
+Version 60 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.
