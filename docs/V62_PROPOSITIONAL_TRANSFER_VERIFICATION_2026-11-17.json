@@ -1,0 +1,564 @@
+{
+  "proof_commit": "5f1485ebba91b4cef68755fef35716a9442af7a3",
+  "scope": "incremental-v62-propositional-transfer",
+  "full_replay": false,
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "source_files_verified": 356,
+  "source_snapshot_sha256": "8691d45af7071da3658ae638cbde0a2715dbeb6b952570dd70d1049da503f0b8",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "delta_from_previous_incremental": {
+    "FORMALIZATION_STATUS_V60.md": {
+      "before": "2cd096b009a022c4713ac039796a4d00a3b02f104868bd5287d146429aa6e561",
+      "after": null
+    },
+    "FORMALIZATION_STATUS_V62.md": {
+      "before": null,
+      "after": "c252e9b42f461a9793108596c9d15f863b79c5abfadbc99e315a3802998f1537"
+    },
+    "Lean/CategoricalEssentialIncompleteness.lean": {
+      "before": "3268270babe335348a1c787450a47f1c31e96c2a579ac534c045925b59911bc0",
+      "after": "f6dafaf9c708de8f95ebb7f3b10e61672e297661e2ceeee622c10bbf252d1004"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean": {
+      "before": "ccc2e3f06df6c337560c4ded42e0b350e2cc649865ba8e6bc475a20c2ce8b934",
+      "after": "c9f991c418ca75269464752b81b06eca04023b2492c248543ab07d67f6f1a44d"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentStatementAudit.lean": {
+      "before": "d3c8618b5106da56fd5b37b19b5750817c70f91636c36ce6bd2c4170de232031",
+      "after": "79d852d9deba6130a06b0bd36816ea2d5f00b5c4be9ec98a24ec8a76b2101203"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean": {
+      "before": null,
+      "after": "da03063011300f6451387175cb072c382df769ba8b14477a4e770e5fc9530a67"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompletenessChecks.lean": {
+      "before": null,
+      "after": "c25480e29e1400b28bca408516f5b7df355ddf309e2374998480169e262403bf"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46PropositionalClosureTransfer.lean": {
+      "before": null,
+      "after": "314fd4699a4c87680c4e0469a19f111871e2c9f95aa1a0b11b72bd0826a751db"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleComparison.lean": {
+      "before": null,
+      "after": "859d9b6fdca207c5d3a44d514853a111065ea8c197d12dcc8dcad87f1815f569"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean": {
+      "before": "52d3c31e2ca642d96ed951ea892099cb6d06a70419fb58d453c198eb25754c60",
+      "after": "07ecb7138ddd750dd0a0b767feff896c28fa6d2abdd4fb2d4bfd94174dd4d107"
+    },
+    "MANUSCRIPT_CURRENT.json": {
+      "before": "b8f11fdafa3d92baa3d93dad8a444c25ad6442638966bfd0575aa22a10084215",
+      "after": "acface7a41d1d94ba30e5f910ad9045b6451c52eb93588eac2388eced8b502dc"
+    },
+    "manuscript/latex/abstract.tex": {
+      "before": "23073188593d547f6c2d02abaa2760949d80768bbf048636f0c26a6f1efcd50d",
+      "after": "350d0cfb3319ad2a5ae7ded5a6cab55835587d0052867f6694bcffc44c4608dc"
+    },
+    "manuscript/latex/bibliography.tex": {
+      "before": "cb8cba25d8a944ac6c00e63fd51a0f307685ec94a0133f48e729d802d386a868",
+      "after": "53c9c9a00a3d5f6ee570cc9fa29a61d1bed76403ddf172773c5774919fa9308d"
+    },
+    "manuscript/latex/main.pdf": {
+      "before": "9e7bedeed9231fb5325808f0ec8898e9a1eca2ea11a4b451c34c26ba03047d52",
+      "after": "c6c1ca48d82975891998b379694a840e52481caeb37605b5c3b1981af274f00d"
+    },
+    "manuscript/latex/preamble.tex": {
+      "before": "eca9b8095b10ee9fc6611983dd1789c22729a7c85dd1ef14d3f633f0c48df53a",
+      "after": "5a22d03163c66634a10394ee8da02168dc477241a3bab71b020dee2d56adb297"
+    },
+    "manuscript/latex/sections/01-introduction.tex": {
+      "before": "15444618ae505d961e10c33fa99316977a927bfd99ff40f05abaf5997e2db869",
+      "after": "578ce9d5c996f35af3960d41f08c2c6b0eb91dfb7ed6af582f01a637f388c398"
+    },
+    "manuscript/latex/sections/03a-internal-theories.tex": {
+      "before": "8ed3410578b2bf2f4443b0c3a9599b13f0229fbe8d6453790d111f5ddfb089af",
+      "after": "d5c29eec3117a247454057d891bf44c351e203a18130e8933a7a83dbebd62bfd"
+    },
+    "manuscript/latex/sections/03b-internal-adjunctions.tex": {
+      "before": "71375b368b652c9d179437d4fa1e17e2a193b69fee77fa42b7ee54ed3e69d675",
+      "after": "6b5d72d3dfd1ed0761f153b3e19c00034e74d012e02fc1dcf4692ffb86e185c3"
+    },
+    "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": {
+      "before": "8a73884d487ce7fc48d44788e8fe950bbf99aca3ba48bfe6b93e5d2fba70a324",
+      "after": "601a7e3c5a80913475c430782d1f68723289dae9ab296d5c9cc78804143f4d02"
+    },
+    "manuscript/latex/sections/08b-uniform-independent-sentences.tex": {
+      "before": "6213322693fdd5e5db32a636947568bbb4d126bcd907fd38366d50996118fd79",
+      "after": "c9d6d4cc75238d2f2ba1d43a819439871ef9d1b186ee7702dcf7a4c18c6e55a4"
+    },
+    "manuscript/logical_consequence_and_essential_incompleteness_v60.pdf": {
+      "before": "9e7bedeed9231fb5325808f0ec8898e9a1eca2ea11a4b451c34c26ba03047d52",
+      "after": null
+    },
+    "manuscript/logical_consequence_and_essential_incompleteness_v62.pdf": {
+      "before": null,
+      "after": "c6c1ca48d82975891998b379694a840e52481caeb37605b5c3b1981af274f00d"
+    },
+    "manuscript/logical_consequence_v60_source.zip": {
+      "before": "2db4f5ff7c45cdf80bb6c084ccee9406d93c98075533263b8490a60eff4df0e5",
+      "after": null
+    },
+    "manuscript/logical_consequence_v62_source.zip": {
+      "before": null,
+      "after": "fe9f55cda42a256366d36f84e3ce94faf4e0039e56782ae35ed94f5b6eec288f"
+    }
+  },
+  "previous_incremental": {
+    "proof_commit": "dda8eed0a8ae44ecedb0652a98c4ae9d9111037f",
+    "commands": 17,
+    "all_published_inputs_match": true,
+    "verification_json_sha256": "0ab3019119b7e267ec8609c2a7fe61fbaf17a4d0c7d60222ff05c034fada75bc"
+  },
+  "started_at_utc": "2026-11-17T23:08:50.701447+00:00",
+  "finished_at_utc": "2026-11-17T23:15:31.432792+00:00",
+  "commands": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.08,
+      "log": ".codex-work/v62-final/incremental-verification/lean-version.log",
+      "sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.16,
+      "log": ".codex-work/v62-final/incremental-verification/axiom-parser-tests.log",
+      "sha256": "62cfbeb2911bb226088bfb0918eb4b05008ea70b20bce854ee2ca8a564bd37a5"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/verify.py",
+        "--manuscript-only"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.12,
+      "log": ".codex-work/v62-final/incremental-verification/manuscript-gate.log",
+      "sha256": "96477a8513f0e71a77195203bc3e30091f83c8220756d28b1d6e2346fd6caaf6"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 21.36,
+      "log": ".codex-work/v62-final/incremental-verification/project-build.log",
+      "sha256": "d9cf9b269063ce21ff6c85f2f2afcd651e07a9549c18d92be9e360512c78145c"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 13.96,
+      "log": ".codex-work/v62-final/incremental-verification/CurrentStatementAudit-build.log",
+      "sha256": "e8978bedbb9397977da3b3e84f46d7085c6f83efb6de629b9c85bd5a297980e8"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 12.46,
+      "log": ".codex-work/v62-final/incremental-verification/V46StatementAudit-build.log",
+      "sha256": "d2b76dbe36384be1ae61628149c984469f52f83e543e77d38f738dda4e104c04"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalRuleComparison.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 15.45,
+      "log": ".codex-work/v62-final/incremental-verification/strict-V46PropositionalRuleComparison.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalClosureTransfer.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 8.91,
+      "log": ".codex-work/v62-final/incremental-verification/strict-V46PropositionalClosureTransfer.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 11.57,
+      "log": ".codex-work/v62-final/incremental-verification/strict-V46PropositionalAssociatedIncompleteness.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompletenessChecks.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 9.07,
+      "log": ".codex-work/v62-final/incremental-verification/strict-V46PropositionalAssociatedIncompletenessChecks.log",
+      "sha256": "b7746f12b7f277b4d1547858020782a26938ce11d843d8eecebee98bee779d0c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 12.84,
+      "log": ".codex-work/v62-final/incremental-verification/strict-CurrentStatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.69,
+      "log": ".codex-work/v62-final/incremental-verification/strict-V46StatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.39,
+      "log": ".codex-work/v62-final/incremental-verification/strict-entry-point.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 12.08,
+      "log": ".codex-work/v62-final/incremental-verification/retained-statement-audit.log",
+      "sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.61,
+      "log": ".codex-work/v62-final/incremental-verification/retained-axiom-audit.log",
+      "sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "timeout_seconds": 900,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 258.93,
+      "log": ".codex-work/v62-final/incremental-verification/current-axiom-audit.log",
+      "sha256": "806c9be225aeed03830582f64fc21ed09a200900724e5e1fd2a653867da7e552"
+    }
+  ],
+  "strict_commands": 8,
+  "baseline_full_verification": {
+    "proof_commit": "8df18834734179186459d3c4c34d4c0cf20b6194",
+    "commands": 1798,
+    "verification_json_sha256": "52eeee116d9479b6edc27799ccdd5463f7b605c06f084521d85eaa0065020e04"
+  },
+  "raw_sha256": "1463f90594f290c1ad46eb6bd4f397966fca79bbaa6b0fce36c4f4bb7f3149b5",
+  "targeted_commands": [
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalRuleComparison.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.6,
+      "log": ".codex-work/v60-propositional-transfer/targeted-V46PropositionalRuleComparison.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "859d9b6fdca207c5d3a44d514853a111065ea8c197d12dcc8dcad87f1815f569"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalClosureTransfer.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 15.97,
+      "log": ".codex-work/v60-propositional-transfer/targeted-V46PropositionalClosureTransfer.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "314fd4699a4c87680c4e0469a19f111871e2c9f95aa1a0b11b72bd0826a751db"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 18.02,
+      "log": ".codex-work/v60-propositional-transfer/targeted-V46PropositionalAssociatedIncompleteness.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "da03063011300f6451387175cb072c382df769ba8b14477a4e770e5fc9530a67"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompletenessChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 25.75,
+      "log": ".codex-work/v60-propositional-transfer/targeted-V46PropositionalAssociatedIncompletenessChecks.log",
+      "sha256": "b7746f12b7f277b4d1547858020782a26938ce11d843d8eecebee98bee779d0c",
+      "source_sha256": "c25480e29e1400b28bca408516f5b7df355ddf309e2374998480169e262403bf"
+    }
+  ],
+  "selected_axiom_reports": 14,
+  "production_modules": 1068,
+  "current_declarations": 31944,
+  "retained_declarations": 1274,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "verification_inputs": 2603,
+  "dependency_worktrees": [
+    {
+      "name": "Foundation",
+      "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+      "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "mathlib",
+      "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Forgive",
+      "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+      "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "doc-gen4",
+      "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+      "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "plausible",
+      "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "importGraph",
+      "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "aesop",
+      "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Qq",
+      "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "batteries",
+      "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Cli",
+      "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "leansqlite",
+      "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+      "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "UnicodeBasic",
+      "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+      "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "BibtexQuery",
+      "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+      "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "MD4Lean",
+      "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "worktree_clean": true,
+      "worktree_status": ""
+    }
+  ],
+  "manuscript_version": 62,
+  "targeted_proof_commit": "0c2ab06c19b02fb82b9cbec7d15bcd05c2070e58",
+  "drift_record": "V62_STATEMENT_COMPARISON_2026-11-17.json"
+}

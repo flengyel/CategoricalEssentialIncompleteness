@@ -201,6 +201,11 @@ At the v60 proof commit 0c2ab06c19b02fb82b9cbec7d15bcd05c2070e58,
 15 incremental commands passed, including the project build, the strict
 statement checks and the retained axiom audit. The final current axiom
 audit reached its 900-second limit. This v60 run was incomplete.
+At manuscript v62, all 16 incremental commands passed, including 8 strict
+elaborations and the complete audits of 31,944 current and
+1,274 retained declarations. The selected statement check printed
+14 axiom reports. All 16 dependencies were clean at their pinned revisions.
+See docs/V62_PROPOSITIONAL_TRANSFER_VERIFICATION_2026-11-17.json.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.
