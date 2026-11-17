@@ -1,5 +1,5 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 16 November 2026
+Updated 17 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
 The current manuscript and verification target are version 59.
@@ -8,8 +8,8 @@ docs/V59_MANUSCRIPT_LEAN_CONTINUATION_2026-11-14.md and
 docs/CEI_v59_WSL2_instructions_2026-11-14.md.
 
 Theorem 5.3, Lemmas 8.9 and 9.6, and Corollaries 8.10 and 9.8 are complete.
-The current count is 74 of 77 numbered results proved; Proposition 10.7 is next.
-The other open results are 10.8 and 10.9. Preserve all subsequent local
+Proposition 10.7 is also complete. The current count is 75 of 77 numbered
+results proved; Proposition 10.8 is next, followed by Corollary 10.9. Preserve all subsequent local
 and remote work.
 
 WSL recovery resumed: the concrete constructor square and natural
@@ -133,19 +133,30 @@ admissible substitution and sentence/admissibility pullbacks. Naturality
 holds under all fork transitions, including atom-identifying transitions.
 Its 20-command incremental verification includes both complete axiom audits.
 See docs/V59_FULL_FORK_SYNTAX_2026-11-16.md.
-Proposition 10.7 remains open for initial finite derivation algebras in
-every parameter slice. Resume with the seven schemes and two rules for
-the actual ForkCategoricalSyntax.categoricalSyntax D and axiom subobjects
-over arbitrary parameters. Construct component derivation initiality,
-actual transition constructor squares, natural evaluation and uniqueness.
-Reuse the completed syntax, stable lists and substitution interface.
-Keep actual carrier/constructor isomorphisms when comparing independently
-constructed numerical code charts. Do not assume equality is reflected
-by atom-identifying transitions. Arbitrary axiom presentations still
-generate through regular images. Preserve Boolean conventions and full
-consistent-extension quantifiers. Keep runs serial, bounded and
-interruptible: targeted strict checks use 2 GB and integrated strict
-checks 3 GB, with explicit 120/600-second command limits.
+The later fork parameterized deduction batch at a575d8d8b6660628886d6a59c2f556ea211d75ba
+completes Proposition 10.7. The actual seven logical schemes and both
+rules have initial finite derivation algebras for every axiom subobject
+in every parameter slice, with actual component constructor isomorphisms,
+natural folds and uniqueness among all underlying algebra morphisms.
+Arbitrary presentations generate from their regular images. The existing
+rule-translation definitions and original relabelling module are retained.
+Its 18-command incremental verification includes both complete axiom audits.
+See docs/V59_FORK_PARAMETERIZED_DEDUCTION_2026-11-17.md.
+Continue Proposition 10.8: construct natural propositional embedding and
+erasure for the actual coefficient diagram V, erasure/substitution and
+logical-rule comparisons, conservativity, consistency, internal essential
+incompleteness and all selected-endpoint extension conclusions. Erasure
+sends equality to the printed global tautology and quantification to the
+second projection. Retain the actual total-category and numerical-code
+comparisons. Then apply completed Theorems 5.2–5.3 for Corollary 10.9,
+using the constructed all-parameter deduction and a common global logical
+theorem. Preserve arbitrary closed consistent extensions, including
+nonconstant slice families. Do not add preservation or incompleteness as
+hypotheses. Keep v59 unchanged unless a mathematical defect is established.
+Keep runs serial, bounded and interruptible: targeted strict checks use
+2 GB and integrated strict checks 3 GB. Selected strict sources have a
+600-second limit; the complete current axiom audit allows 900 seconds.
+Targeted strict sources have a 120-second limit.
 External reference paths supplied by the user on 16 November 2026:
 media files are at /mnt/c/User/fleng/Archive;
 project files are at /mnt/c/Users/fleng/Projects.

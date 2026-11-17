@@ -65,11 +65,17 @@ canonical term/formula bundle and parameter stability, stable lists,
 the variable/term isomorphism, occurrences, admissible substitution and
 sentence/admissibility pullbacks, naturally under all fork transitions.
 Its 20-command incremental verification includes both complete axiom audits.
-Initial finite derivations for all seven schemes and both rules, indexed
-only by axiom subobjects in every parameter slice, remain open. Preserve
-actual carrier and constructor comparisons between numerical realizations.
-The count stays 74/77. Resume with finite derivations from the latest report;
-the WSL recovery archive is retained as historical evidence.
+The later [fork parameterized deduction proof](V59_FORK_PARAMETERIZED_DEDUCTION_2026-11-17.md) completes
+Proposition 10.7, including all seven schemes, both rules, arbitrary
+parameter-dependent axiom subobjects, actual component constructor
+isomorphisms, natural folds and raw uniqueness. Generation of arbitrary
+presentations uses regular images. Its 18-command incremental verification
+includes both complete axiom audits. The count is 75/77. Resume with
+Proposition 10.8, on natural embedding/erasure, conservativity, consistency,
+essential incompleteness and all endpoint extension conclusions, then
+Corollary 10.9. Preserve actual carrier and constructor comparisons and
+arbitrary closed consistent slice extensions. The WSL recovery archive
+is retained as historical evidence.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 
@@ -77,7 +83,7 @@ Repository: `flengyel/CategoricalEssentialIncompleteness`.
 Read `AGENTS.md`, `MANUSCRIPT_CURRENT.json` and
 `FORMALIZATION_STATUS_V59.md` before editing. Preserve later local and remote
 work. The current manuscript is v59; Theorem 5.3 is complete. The recorded
-status is **74 of 77 numbered results proved**, with Proposition 10.7 next.
+status is **75 of 77 numbered results proved**, with Proposition 10.8 next.
 
 The [full v59 replay](V59_FULL_VERIFICATION_2026-11-14.md) passed all 1,798
 commands, including 1,792 strict elaborations and both complete transitive
@@ -107,7 +113,6 @@ equivalence and its quantifier over arbitrary closed slice extensions.
 
 | Result | Construction |
 | --- | --- |
-| Proposition 10.7 | First-order fork syntax and finite-derivation initiality in every parameter slice. |
 | Proposition 10.8 | Natural embedding and erasure, conservativity, consistency, essential incompleteness and endpoint conclusions. |
 | Corollary 10.9 | First-order fork associated-category application. |
 

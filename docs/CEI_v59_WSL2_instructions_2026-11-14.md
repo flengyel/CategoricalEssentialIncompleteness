@@ -10,7 +10,8 @@ v58. The reviewed v58 artifacts are retained. The Google report and its
 assessment are in `docs/reviews/GOOGLE_V58_2026-11-14/`.
 
 Theorem 5.3, Lemmas 8.9 and 9.6, and Corollaries 8.10 and 9.8 are complete.
-The count is 74 proved results and three open: 10.7, 10.8 and 10.9. Proposition 10.7 is next. Preserve the
+Proposition 10.7 is also complete. The count is 75 proved results and two
+open: 10.8 and 10.9. Proposition 10.8 is next. Preserve the
 subobject-only initiality hypotheses, Boolean conventions and full extension
 quantifiers. Preserve later local and remote work.
 
@@ -76,11 +77,17 @@ canonical term/formula bundle and parameter stability, stable lists,
 the variable/term isomorphism, occurrences, admissible substitution and
 sentence/admissibility pullbacks, naturally under all fork transitions.
 Its 20-command incremental verification includes both complete axiom audits.
-Initial finite derivations for all seven schemes and both rules, indexed
-only by axiom subobjects in every parameter slice, remain open. Preserve
-actual carrier and constructor comparisons between numerical realizations.
-The count stays 74/77. Resume with finite derivations from the latest report;
-the WSL recovery archive is retained as historical evidence.
+The later [fork parameterized deduction proof](V59_FORK_PARAMETERIZED_DEDUCTION_2026-11-17.md) completes
+Proposition 10.7, including all seven schemes, both rules, arbitrary
+parameter-dependent axiom subobjects, actual component constructor
+isomorphisms, natural folds and raw uniqueness. Generation of arbitrary
+presentations uses regular images. Its 18-command incremental verification
+includes both complete axiom audits. The count is 75/77. Resume with
+Proposition 10.8, on natural embedding/erasure, conservativity, consistency,
+essential incompleteness and all endpoint extension conclusions, then
+Corollary 10.9. Preserve actual carrier and constructor comparisons and
+arbitrary closed consistent slice extensions. The WSL recovery archive
+is retained as historical evidence.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
