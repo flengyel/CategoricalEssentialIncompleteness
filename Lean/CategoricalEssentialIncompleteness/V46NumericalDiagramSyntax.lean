@@ -48,13 +48,21 @@ def polynomials : J ⥤ ((NumericalTuples.Object × NumericalTuples.Object) ⥤
         SyntaxCoefficientMorphisms.component (fun i => (c i).map f) q X ≫ SyntaxCoefficientMorphisms.component (fun i => (c i).map g) q X
       simp only [Functor.map_comp, component_comp]
 
-def componentAlgebra (j : J) : Endofunctor.Algebra ((polynomials c p q).obj j) :=
+irreducible_def componentAlgebra (j : J) : Endofunctor.Algebra ((polynomials c p q).obj j) :=
   (NumericalSyntax.data (p.mapCoefficients (fun i => (c i).obj j))
     (q.mapCoefficients (fun i => (c i).obj j))).1
 
-def componentInitial (j : J) : IsInitial (componentAlgebra c p q j) :=
-  (NumericalSyntax.data (p.mapCoefficients (fun i => (c i).obj j))
+def componentInitial (j : J) : IsInitial (componentAlgebra c p q j) := by
+  rw [componentAlgebra_def]
+  exact (NumericalSyntax.data (p.mapCoefficients (fun i => (c i).obj j))
     (q.mapCoefficients (fun i => (c i).obj j))).2.1
+
+def componentStable (j : J) (P : NumericalTuples.Object) : IsInitial
+    (SyntaxPolynomial.algebraWithParameters (p.mapCoefficients (fun i => (c i).obj j))
+      (q.mapCoefficients (fun i => (c i).obj j)) (componentAlgebra c p q j) P) := by
+  rw [componentAlgebra_def]
+  exact (NumericalSyntax.data (p.mapCoefficients (fun i => (c i).obj j))
+    (q.mapCoefficients (fun i => (c i).obj j))).2.2 P
 
 def algebra : Endofunctor.Algebra (diagonal (polynomials c p q)) :=
   DiagramInitialAlgebras.algebra (polynomials c p q) (componentAlgebra c p q) (componentInitial c p q)
