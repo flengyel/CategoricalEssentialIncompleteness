@@ -1,34 +1,37 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-A disjoint pair of subobjects of an object $X$ determines a first-order
-theory with nullary predicates indexed by $X$. Its nonlogical axioms assert the
-predicates on one subobject and their negations on the other.
-We construct this theory in the category of total morphisms of the
-restriction idempotent completion of a recursion category. We assume
-regularity, disjoint pullback-stable finite coproducts, partial inverses
-for monomorphisms, and initial algebras for the indicated syntax and
-finite derivations. On pairs that generate consistent theories, the construction is left
-adjoint to the functor assigning to each consistent theory its theorem
-and refutation subobjects. For such a pair, inseparability is equivalent to essential incompleteness
-of the generated theory, that is, to incompleteness of every consistent
-internal extension.
+Given disjoint subobjects $a,b$ of $X$, we form a first-order theory
+with nullary predicates indexed by $X$. Its nonlogical axioms assert
+the predicates indexed by $a$ and negate those indexed by $b$.
+On pairs generating consistent theories, this construction is left
+adjoint to the functor taking a consistent theory to its theorem and
+refutation subobjects. For such a pair, inseparability is equivalent to essential
+incompleteness of the generated theory, meaning that every consistent
+internal extension is incomplete. We work in the category of total morphisms of the restriction
+idempotent completion of a recursion category. We assume regularity,
+disjoint pullback-stable finite coproducts, and initial algebras for
+parameterized syntax and finite derivations. Each monomorphism in the
+total category is assumed to have a partial inverse in the completion.
 
-For a theory with theorem subobject $U$, the partial maps in the slice
-over $U$ form a Turing category. With deduction in the parameter slices
-and a chosen global logical theorem, a consistent theory is essentially
-incomplete if and only if its constant family is essentially incomplete
-in this category. Theory inclusions induce fully faithful functors.
+For a consistent theory with theorem subobject $U$, the partial maps
+in the slice over $U$ form a Turing category. Given deduction in the
+parameter slices and a chosen global logical theorem, the original theory
+is essentially incomplete if and only if every consistent closed
+extension of its constant family over $U$ is incomplete.
+
 In the restriction idempotent completion of the syntactic recursion
-category for Peano arithmetic, a single total morphism assigns an
-independent sentence to each index for a consistent computably
-enumerable extension. For a theory of real closed fields with constants naming
-a Miller sequence, every consistent extension whose axioms one oracle
-program semidecides from every binary representation of the sequence is
-incomplete. In a cosheaf construction on a three-point space, the propositional
-theory at either endpoint is consistent and every consistent computably
-enumerable extension in its language is incomplete.
+category for Peano arithmetic (PA), we construct a total morphism
+whose numerical interpretation assigns an independent sentence to each
+index for a consistent computably enumerable extension of PA. For a Miller
+sequence, we add to the theory of real closed ordered fields constants
+naming its terms and axioms giving their strict rational bounds. Every
+consistent extension is incomplete if one oracle program semidecides
+its axioms from every binary representation of the sequence. A cosheaf
+construction on a three-point space gives consistent propositional
+theories at its two endpoints. Every consistent computably enumerable
+extension of either theory in its own language is incomplete.
 
-The current manuscript and Lean formalization target are **version 60**,
+The current manuscript and Lean formalization target are **version 61**,
 dated 17 November 2026.
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
@@ -39,10 +42,10 @@ axioms in its language is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v60.pdf](manuscript/logical_consequence_and_essential_incompleteness_v60.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v61.pdf](manuscript/logical_consequence_and_essential_incompleteness_v61.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v60_source.zip](manuscript/logical_consequence_v60_source.zip) |
+| Complete source ZIP | [logical_consequence_v61_source.zip](manuscript/logical_consequence_v61_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
@@ -54,12 +57,12 @@ standalone TeX files, source ZIPs, and reference manuscripts are kept in
 [archive index](manuscript/archive/INDEX.json) records their former locations
 and Git blob hashes.
 
-[Result-by-result review and literature comparison](docs/reviews/V60_2026-11-17/review.md) · [Manuscript outline](docs/reviews/V60_2026-11-17/outline.md)
+[Review of the v61 revisions](docs/reviews/V61_2026-11-17/review.md) · [Review of v60](docs/reviews/V60_2026-11-17/review.md) · [Literature comparisons](docs/reviews/V60_2026-11-17/literature-comparisons.md) · [Manuscript outline](docs/reviews/V60_2026-11-17/outline.md)
 
 ## Lean status
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V60.md](FORMALIZATION_STATUS_V60.md). It records 77
+[FORMALIZATION_STATUS_V61.md](FORMALIZATION_STATUS_V61.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
 Corollary 10.9 is proved for the two actual fork partial-map slices and every
 consistent closed extension. Theorem 5.3 covers both the first-order calculus and the
@@ -175,7 +178,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v60.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v61.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

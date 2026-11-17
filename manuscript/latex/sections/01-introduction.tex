@@ -5,8 +5,8 @@ incompleteness theorems could be expressed in categorical terms
 \cite[pp.~594--596]{DPH}. We prove that a disjoint pair of computational
 domains generates a first-order theory which, if consistent, is essentially
 incomplete exactly when the pair is inseparable. We also construct a
-Turing category from a theory and show that passage to this category
-preserves and reflects essential incompleteness.
+Turing category from a theory and prove that passage to the constant
+family in this category preserves and reflects essential incompleteness.
 
 Let $\mathscr R$ be a recursion category. Splitting its restriction
 idempotents makes the domains of partial morphisms into objects. Write
@@ -33,7 +33,7 @@ consistent $T_{a,b}$ this construction is left adjoint to the functor
 taking a consistent theory to its theorem and refutation subobjects
 (Theorem~\ref{thm:free-first-order-adjunction}). The atomic sentence
 constructor takes $a$ into the theorems and $b$ into the refutations.
-A separator of the pair, on the other hand, supplies a Boolean valuation
+A separator of the pair supplies a Boolean valuation
 whose true sentences form a consistent complete extension. Thus every
 consistent internal extension of $T_{a,b}$ is incomplete exactly when
 $(a,b)$ is inseparable (Corollary~\ref{cor:signed-first-order-incompleteness}).
@@ -49,62 +49,65 @@ associated categories (Theorem~\ref{thm:theory-extension}).
 Assume that the deductive construction exists with parameters in every
 slice and that a fixed logical theorem $\lambda:1\to S$ factors through
 the theories under consideration. Then a consistent $u$ is essentially
-incomplete if and only if its constant family over $U$ is essentially
-incomplete. This quantifies over every consistent closed extension in
-the slice. Moreover, the partial Boolean morphism that is true on
-theorems and false on refutations in the constant family has a total
-extension exactly when the two subobjects in $\mathscr C$ are separable
+incomplete if and only if every consistent closed extension of its
+constant family over $U$ is incomplete. The partial Boolean morphism
+that is true on theorems and false on refutations in the constant family has a total
+extension exactly when the original theorem and refutation subobjects are separable
 (Theorem~\ref{thm:associated-incompleteness}).
 
-The diagonal argument compares a recursion category with an interpretation
-by a range functor $F:\mathscr R\to\mathcal A$, where $\mathcal A$
-is a split restriction category. A range functor preserves restrictions,
-ranges, zeros and binary restriction coproducts. Let $U$ be the Turing object of $\mathscr R$. Theorem~\ref{thm:comparison}
-uses a partial morphism $FU\rightharpoonup FU+FU$ whose summand inverse
-images are the specified target domains in reverse order. A lift to
-$\mathscr R$ gives a total source morphism whose interpretation has zero
-inverse image of both domains. Theorem~\ref{thm:logical-comparison}
-applies this argument to theorem and refutation domains. It gives
-incompleteness in the source and in the interpretation when the
-interpreted domains are disjoint, the specified reduction and lift
-exist, $F(1_U)\ne0$, and total inverse images in the target preserve
-binary joins of restriction idempotents.
+To compare a recursion category $\mathscr R$ with an interpretation,
+let $F:\mathscr R\to\mathcal A$ be a range functor into a split
+restriction category. Such a functor preserves restrictions, ranges,
+zeros and binary restriction coproducts. Let $U$ be the Turing object
+and let $P,N$ be disjoint domains on $FU$ containing the images of the
+two diagonal domains of Section~\ref{sec:lifting}. Suppose a partial morphism
+$FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
+respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
+gives a total morphism $g:U\to U$ such that the inverse images of
+$P$ and $N$ under $Fg$ are both zero. Theorem~\ref{thm:logical-comparison}
+uses this result to prove incompleteness of an internal theory and
+of its interpretation.
 
 The arithmetic realization uses the syntactic recursion categories of
 Montagna and Di Paola--Montagna \cite{Montagna,DPM}. Montagna asked
 how to relate the category for Peano arithmetic ($\PA$) to the
 recursion category of partial recursive functions
-\cite[pp.~114--115]{Montagna}. Section~\ref{sec:arithmetic} compares
-the two conclusion morphisms by a computable bijection on derivation
-codes. The completion of the syntactic category
+\cite[pp.~114--115]{Montagna}. Section~\ref{sec:arithmetic} gives a computable bijection between
+numerical derivations and the standard interpretations of syntactic
+derivations. It preserves their conclusions. The completion of the syntactic category
 $S_{\PA}$ represents computably enumerable (c.e.) extensions of $\PA$
 by internal theories. Let $M$ be the standard arithmetic model $\N$ or
 an ultrapower of that model. Interpreting program graphs in $M$ gives a
 range functor $F_M:S_{\PA}\to\Pfn$, where $\Pfn$ is the category of
-sets and partial functions. A model of the represented axioms interprets the formulas
-encoded by the sentence codes. Soundness and the comparison theorem
+sets and partial functions. Soundness for a model of the represented axioms and the comparison theorem
 give incompleteness of both the internal theory and its interpretation
 for each consistent c.e.~extension of PA
-(Theorem~\ref{thm:arithmetic-internal-comparison}). We obtain recursively
-inseparable theorem and refutation sets and an independent sentence
-uniformly from an index for the axiom enumeration
+(Theorem~\ref{thm:arithmetic-internal-comparison}). The theorem and refutation sets are recursively inseparable.
+One total morphism assigns, under the standard interpretation, an
+independent sentence to each index for the axiom enumeration of a
+consistent extension
 (Corollary~\ref{cor:arithmetic} and
 Theorem~\ref{thm:uniform-independent-sentences}). The associated-category
 construction is applied separately to the first-order theory generated
 by the arithmetic diagonal pair, whose nonlogical symbols are nullary
 predicates (Corollary~\ref{cor:arithmetic-associated-categories}).
 
-The second first-order realization uses a sequence
-$a:\N\to[0,1]$ constructed by Miller \cite{Miller2004}.
-We form a recursion category of partial numerical functions computed
-by one oracle program with the same domain and values for every binary
-representation of $a$. Its completion contains the internal deductive
-system for a consistent theory of real closed fields expanded by
-constants naming the coordinates of $a$. Every consistent extension is
-incomplete if a single oracle program semidecides its axiom set using
-any binary representation of $a$ as oracle
-(Theorem~\ref{thm:miller-incompleteness}). This theory also supplies an
-instance of the associated-category construction
+The second realization uses a sequence $a:\N\to[0,1]$ constructed by
+Miller \cite{Miller2004}.
+Bauer and Hanson used it to construct a parameterized realizability
+topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
+We take the recursion category of partial numerical functions computable
+by one oracle program with the same domain and values from every binary
+representation of $a$. Each representation computes a separator of
+$\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
+separator from every representation
+(Corollary~\ref{cor:miller-cuts-inseparable}). In the completion we
+extend the axioms for real closed ordered fields by all strict rational
+bounds on constants $c_n$ satisfied by $a(n)$. Every consistent
+extension of this theory is incomplete if one oracle program semidecides
+its axioms from every binary representation of $a$
+(Theorem~\ref{thm:miller-incompleteness}). The constant family of each
+consistent internal extension is essentially incomplete in its associated category
 (Corollary~\ref{cor:miller-associated-categories}).
 
 The third realization uses cosheaves on a three-point space. The
@@ -118,19 +121,10 @@ supplies the third instance of
 the associated-category construction
 (Corollary~\ref{cor:fork-associated-theories}).
 
-Section~\ref{sec:lifting} proves the diagonal comparison.
-Section~\ref{sec:internal-theories} constructs the internal theories,
-the adjunctions for generation and translation, and the free first-order
-theory of a pair. Section~\ref{sec:theory-extensions} proves the
-transfer theorem for associated categories. Sections~\ref{sec:syntactic}
-and~\ref{sec:models} give the syntactic category and its model
-interpretations for the arithmetic application. The three applications
-occupy Sections~\ref{sec:arithmetic}--\ref{sec:cosheaves}.
-
 \subsection{Related work}
 
 Rosolini's $P$-categories generalized dominical categories
-\cite{RosoliniThesis,Rosolini}; Heller adopted them and defined
+\cite{RosoliniThesis,Rosolini}. Heller used them to define
 prodominical categories \cite[Section~5]{Heller}.
 We use the restriction categories of Cockett and Lack
 \cite{CockettLack}. Binary restriction products give their equivalent
@@ -152,17 +146,17 @@ Montagna obtained effectively inseparable pairs in his syntactic
 category \cite[Remark~3.1]{Montagna}. The diagonal pair in
 Theorem~\ref{thm:comparison} occurs in Lengyel's earlier comparison
 \cite[Theorem~4.1]{Lengyel2006}. Appendix~\ref{app:lifting-counterexample}
-gives a counterexample to that theorem as stated. For discrete Turing
-categories with finite compatible joins, Cockett proves the existence
-of inseparable restriction idempotents in every nontrivial case
+gives a counterexample to that theorem as stated. Cockett attributes
+to Lengyel the theorem that every nontrivial discrete Turing category
+with finite compatible joins has inseparable restriction idempotents
 \cite[Section~7.1 and Theorem~7.8]{CockettComputability}.
 
 Murwanashyaka, Pakhomov, and Visser prove a numerical antecedent of
-Corollary~\ref{cor:signed-first-order-incompleteness}. They extend
-a theory of an equivalence relation by asserting sentences indexed by one c.e.~set
-and negating those indexed by another. For disjoint sets, the resulting
-theory is essentially undecidable exactly when the sets are recursively
-inseparable \cite[Section~4.4, p.~1169]{MPV}. Here the indices form an
+Corollary~\ref{cor:signed-first-order-incompleteness}. Their theory of
+an equivalence relation asserts the existence of a class of size $n+1$
+for $n$ in one c.e.~set and denies it for $n$ in another. For disjoint
+sets, the resulting theory is essentially undecidable exactly when the
+sets are recursively inseparable \cite[Section~4.4, p.~1169]{MPV}. Here the indices form an
 object of $\mathcal D$, and the first-order theory is free on the two
 subobjects in the sense of Theorem~\ref{thm:free-first-order-adjunction}.
 
@@ -178,15 +172,12 @@ internal arithmetic universe in the initial arithmetic universe.
 
 Cockett and Hofstra relate Turing categories to partial combinatory
 algebras through idempotent splitting
-\cite[Theorem~4.9]{CockettHofstra}. Cockett's later incompleteness
-theorem assumes a predicate expressing program restriction order and
-produces a restriction idempotent on the restriction terminal object
-that is neither zero nor the identity
+\cite[Theorem~4.9]{CockettHofstra}. In a nontrivial Turing category with
+a restriction zero and a provability predicate for the restriction order
+on programs, Cockett constructs a restriction idempotent on the restriction
+terminal object distinct from zero and the identity
 \cite[Section~7.5, Theorem~7.14]{CockettComputability}.
-
-Bauer and Hanson use Miller's sequence in a parameterized realizability
-topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
-We use their binary representations to construct the recursion category
-and prove essential incompleteness for the theory of real closed fields
-expanded by constants.
+In Theorem~\ref{thm:associated-incompleteness}, incompleteness of
+an extension in the slice means that its theorem and refutation subobjects
+fail to cover the sentence object of the constant family.
 

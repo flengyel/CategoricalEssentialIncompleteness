@@ -2,10 +2,10 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 17 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 60.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V60.md and
-docs/reviews/V60_2026-11-17/review.md. The v59 continuation documents and
-the dated check records below describe the inherited constructions.
+The current manuscript and verification target are version 61.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V61.md.
+The v61 literature comparisons preserve the v60 statements, proofs and
+Lean audit entry points.
 
 All 77 numbered results have full Lean counterparts. Theorem 5.3 covers
 the first-order and standalone Appendix A.6 propositional calculi.
