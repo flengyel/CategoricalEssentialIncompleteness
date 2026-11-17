@@ -144,7 +144,7 @@ The later Lemma 8.9 proof raises the current count to **71 proved counterparts a
 | Corollary 10.6; `cor:cosheaf-essential-incompleteness`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | Every consistent c.e.-axiomatized extension of either endpoint theory is incomplete. | `V46.ForkDerivationImages.categoricalTheory_eq`, `endpoint_theorem_codes`, `endpoint_axiom_extension_incomplete`; retained `V46.ForkAxiomClosure.derives_iff_record`, `theoremCodes_re`, `endpoint_axiom_extension_incomplete` | Arbitrary selected endpoint i:Bool and c.e. axiom code set A. Its generated theorem set extends the actual endpoint theory, and it has no proofs of both φ and its negation. No compatible extension family at other components is required. | Recovered by a proved comparison — the constructed initial-H conclusion image and endpoint theory are proved equal to the existing coded t0 presentation. Actual supported finite-proof records enumerate the generated consequences of arbitrary c.e. axioms; the proved selected-endpoint extension theorem then supplies a formula with neither proof. All presentation premises are discharged. |
 
 | Proposition 10.7; `prop:fork-first-order-realization`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The fork total category has first-order syntax and initial finite-derivation algebras for arbitrary nullary coefficients, stable in every parameter slice. | `V46.DiagramInitialAlgebras.initial`; `V46.SyntaxCoefficientMorphisms.jointAction`; `V46.NumericalDiagramSyntax.initial`; `V46.ForkFirstOrderFormula.initial`, `polynomial_object`, `polynomial_transition`, `fold_natural`, `fold_underlying_unique`; `V46.ForkFormulaParameterComponents.initial`; `ForkFormulaParameterChange.fold_constructor`, `unique`, `underlying_unique`; `LaxAlgebraAdjunction.fold_natural`; `ForkFormulaTransitionSquares.fork_source_square`; `ForkParameterizedFormulaFolds.fold_natural`, `initial`, `parameterCarrierIso`, `fold_underlying_unique`; independent `V46ForkFirstOrderFormulaChecks`, `V46ForkFormulaParametersChecks` and `V46ForkParameterizedFormulaFoldsChecks`; `NumericalCanonicalDiagramSyntax.polynomialIso`, `algebraEquivalence`, `initial`, `syntaxData`; `DiagramDecidableVariables.fork`, `fork_diagonal`; independent `V46CanonicalDiagramSyntaxChecks`; `SlicePolynomialComparison.jointIso`, `transition_square`, `operation_square`; `ForkCanonicalParameterTargets.target`, `fold`, `fold_underlying_unique`, `constantFold`; independent `V46SliceEvaluationChecks`; `ForkCanonicalFormulaSource.source_square`, `source_hom`; `ForkCanonicalFormulaStability.initial`, `fold_constructor`, `fold_underlying_unique`; independent `V46CanonicalFormulaStabilityChecks`; `LabelledParameterAlgebras.comparison_data`, `algebra_data`; `SliceAlgebraInitiality.fold_natural`, `initial`; `NumericalDiagramParameterStability.stable`, `data`; `DiagramStableLists.stableListAlgebra`; `ForkCategoricalSyntax.categoricalSyntax`, `variableIso`, `occurrences_natural`, `substitution_natural`, `sentence_pullback`, `substitution_pullback`; independent `V46ForkCategoricalSyntaxChecks`. `ForwardRuleRelabelling.comparison`, `fold_constructor`, `unique`; `FiniteInferenceEvaluation.comparison`, `sum_transformation`, `algebra_transformation`; `InitialRuleDiagrams.sourceIso`, `initial`; `NumericalDiagramDerivations.initial`, `componentIso`, `Parameterized.initial`; `ForkParameterizedDeduction.nullaryPresentations`, `printedInitial`, `printedStatement`, `printedFold_underlying_unique`, `presentationGeneration_obj`; independent `V46ForkParameterizedDeductionChecks`. | Constant variable diagram, arbitrary coefficient objects and parameters; atom transitions may identify labels. | Proved. The completed canonical syntax bundle supplies the full numerical variable object, the variable/term isomorphism, stable lists, occurrences, admissible substitution and sentence pullbacks. Initial finite derivation algebras are now constructed for all seven logical schemes and both rules, for every nullary coefficient diagram and axiom subobject in every parameter slice. Numerical component algebras, actual source constructor/carrier isomorphisms, transition constructor squares and unique natural global folds are constructed. Every target family and every underlying natural algebra morphism satisfying the conclusion and constructor equations are included. The printed slice over P × Fm retains the common parameter in all ordered premises. Rule relabelling reuses the existing translation type and permits atom-identifying morphisms; no global formula-equality test or equality-reflection hypothesis is added. Required initiality is indexed only by axiom subobjects; arbitrary presentation morphisms generate from their regular images. Independent complete-statement checks cover the exact seven scheme objects and two rules, all-parameter initiality, projection and constructor laws, raw uniqueness, naturality and image generation, with 37 principal permitted-axiom reports. Targeted and integrated verification are recorded separately from the earlier full replay. |
-| Proposition 10.8; `prop:fork-first-order-conservative`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The first-order fork theory conservatively extends the propositional theory and is internally essentially incomplete; the printed endpoint conclusions hold. | Existing fork propositional realization and endpoint incompleteness, and completed Proposition 10.7. | The natural sentence embedding and erasure, all constructor laws, the printed tautology, retraction and monicity are proved. `V46ForkErasureSubstitution` now proves admissible-substitution invariance, the full Option failure equation and the exact erasures of all seven schemes, with independent statement checks. | Open. Construct uniform propositional derivations of the erased schemes, prove the inference and generated-theory comparisons, conservativity and consistency; then apply domain incompleteness and establish the endpoint conclusions. |
+| Proposition 10.8; `prop:fork-first-order-conservative`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | The first-order fork theory conservatively extends the propositional theory and is internally essentially incomplete; the printed endpoint conclusions hold. | Existing fork propositional realization and endpoint incompleteness, and completed Proposition 10.7. | The natural embedding/erasure and retraction, substitution invariance and all seven erasure equations are proved. `V46ForkErasedSchemeProofs` constructs uniform finite propositional derivations of all seven erased schemes in the actual original proof carrier, with naturality and factorization through the theorem image; independent statement checks cover the full scope. | Open. Prove the inference and generated-theory comparisons, conservativity and consistency; then apply domain incompleteness and establish the endpoint conclusions. |
 | Corollary 10.9; `cor:fork-associated-theories`; [09-three-point-space.tex](manuscript/latex/sections/09-three-point-space.tex) | Every consistent internal extension of the first-order fork theory satisfies the associated-category extension and incompleteness conclusions. | Existing fork category and the preceding first-order constructions once completed. | Theorems 5.2–5.3 for the first-order fork theory, including every-parameter derivations and a common global logical theorem. | Open. Instantiate partial-slice extension and incompleteness transfer, retaining the internal sentence and theorem objects and identifying the no-total-extension witness. |
 
 ### Section A
@@ -1230,10 +1230,47 @@ and fork equations, local success and failure cases, all seven erased
 scheme expressions, the actual coefficient object and the proved
 embedding retraction. It includes 32 principal permitted-axiom reports.
 
-The count remains **75/77**. This proves the substitution and expression
-calculations within Proposition 10.8; it does not assert uniform
-propositional derivability of those expressions. Those derivations,
-inference and generated-theory comparisons, conservativity, consistency,
-internal essential incompleteness and every endpoint extension conclusion
-remain open, followed by Corollary 10.9. Manuscript v59 and its artifacts
-are unchanged. This batch has separate incremental verification.
+At this substitution batch, the count remained **75/77**. It proved
+substitution and expression calculations within Proposition 10.8.
+Uniform propositional derivations, inference and generated-theory
+comparisons, conservativity, consistency, internal essential incompleteness
+and every endpoint extension conclusion remained open, followed by
+Corollary 10.9. Manuscript v59 and its artifacts were unchanged. That
+batch has separate incremental verification.
+
+
+### Proposition 10.8: uniform finite propositional derivations (17 November 2026)
+
+`V46PropositionalProofCombinators` constructs uniform derivations in an
+actual nullary-and-modus-ponens algebra. The ordered-premise pullback
+implements modus ponens. The identity H ⇒ H is the printed derivation
+using the first two schemes and exactly two MP applications; weakening
+is a further finite construction. All conclusions are proved.
+`V46PropositionalSchemeTransport` proves the three scheme equations
+under the actual binary and ternary product comparisons.
+
+`V46ForkPropositionalProofs` constructs the three scheme witnesses from
+the actual Fin 5 axiom coproduct and the existing propositional proof
+algebra. It proves the coefficient identifications, uniform identity and
+weakening, and a global derivation of the printed p_* ⇒ p_*.
+`V46ForkErasedSchemeProofs` constructs finite derivations of all seven
+erased schemes on their actual parameter objects. They assemble into
+one natural morphism to the original realized proof carrier, with the
+original realized conclusion equal to the logical-axiom morphism followed
+by erasure. Every erased logical instance therefore factors through the
+actual propositional theorem image. The construction has no derivability,
+initiality or compatibility hypothesis in its final fork statement.
+
+Independent `V46ForkErasedSchemeProofsChecks` checks ordered MP, the exact
+two-MP identity construction, weakening, actual carrier/conclusion and
+coefficient comparisons, all seven quantified derivation statements,
+the single uniform conclusion equation, naturality and theorem-image
+factorization. The parameters include arbitrary formula diagrams and
+atom-identifying transitions. It includes 32 principal permitted-axiom
+reports. Existing manuscript and proof sources are preserved.
+
+The count remains **75/77**. Proposition 10.8 still requires the inference
+and generated-theory comparisons, conservativity, consistency, internal
+essential incompleteness and every endpoint extension conclusion.
+Corollary 10.9 remains open. Manuscript v59 and its artifacts are
+unchanged. This batch has separate incremental verification.
