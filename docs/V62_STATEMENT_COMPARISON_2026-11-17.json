@@ -1,0 +1,44 @@
+{
+  "verification_scope": "manuscript and correspondence comparison",
+  "revisions": {
+    "59": {
+      "commit": "f5176d08e6a7aed7a59d80432cc453eb947f18f3",
+      "archive_sha256": "5dba93988a3008f8271be08b6a9bef063e6ee72dbdc0bb85adba1a4db7398ea2",
+      "tex_files": 24,
+      "ordered_statements_sha256": "c420196e22de0ee3c1a9ccbeed92ea7a159bd06675bbdf9d545250d4e86564c4",
+      "ordered_proofs_sha256": "022f55441f2ab74043e155415fffe503fec529c3fbe1f9ad5ad5bb466aad25dc"
+    },
+    "60": {
+      "commit": "0c2ab06c19b02fb82b9cbec7d15bcd05c2070e58",
+      "archive_sha256": "2db4f5ff7c45cdf80bb6c084ccee9406d93c98075533263b8490a60eff4df0e5",
+      "tex_files": 24,
+      "ordered_statements_sha256": "c420196e22de0ee3c1a9ccbeed92ea7a159bd06675bbdf9d545250d4e86564c4",
+      "ordered_proofs_sha256": "d7c91e6c338ab6044464899a4fc31f1a6427e2bdc3484dde7c4fc965803248ab"
+    },
+    "61": {
+      "commit": "9905823a8f2dbc6c00ad7361ac6661f86c648078",
+      "archive_sha256": "d651c86551a2c368a08d586b9e12f01b21245c53630344352b67ef964280eac5",
+      "tex_files": 24,
+      "ordered_statements_sha256": "c420196e22de0ee3c1a9ccbeed92ea7a159bd06675bbdf9d545250d4e86564c4",
+      "ordered_proofs_sha256": "d7c91e6c338ab6044464899a4fc31f1a6427e2bdc3484dde7c4fc965803248ab"
+    },
+    "62": {
+      "commit": "5f1485ebba91b4cef68755fef35716a9442af7a3",
+      "archive_sha256": "fe9f55cda42a256366d36f84e3ce94faf4e0039e56782ae35ed94f5b6eec288f",
+      "tex_files": 24,
+      "ordered_statements_sha256": "c420196e22de0ee3c1a9ccbeed92ea7a159bd06675bbdf9d545250d4e86564c4",
+      "ordered_proofs_sha256": "d7c91e6c338ab6044464899a4fc31f1a6427e2bdc3484dde7c4fc965803248ab"
+    }
+  },
+  "numbered_environments": {
+    "corollary": 13,
+    "definition": 3,
+    "lemma": 19,
+    "proposition": 27,
+    "theorem": 18
+  },
+  "identical_statement_count": 80,
+  "identical_proof_count_v60_to_v62": 77,
+  "lean_and_verifier_inputs_identical_v60_to_v62": true,
+  "active_manuscript_gate": 62
+}

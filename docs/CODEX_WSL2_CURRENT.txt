@@ -6,6 +6,10 @@ The current manuscript and verification target are version 62.
 Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V62.md.
 Version 62 revises the abstract. The statements, proofs and Lean audit
 entry points agree with version 61.
+An independent comparison of the versioned source archives and Git trees
+matched the 77 numbered results and three definitions from v59 through v62.
+All 77 proof environments and all Lean inputs also match from v60 to v62.
+See docs/V62_STATEMENT_COMPARISON_2026-11-17.json.
 
 All 77 numbered results have full Lean counterparts. Theorem 5.3 covers
 the first-order and standalone Appendix A.6 propositional calculi.
@@ -193,6 +197,10 @@ The standalone Appendix A.6 proof of Theorem 5.3 passed four strict
 elaborations and 14 selected axiom checks. Both functors transport native
 rule closure and the evaluation argument admits nonconstant families.
 The proof reuses the partial-slice retraction and Boolean decision morphism.
+At the v60 proof commit 0c2ab06c19b02fb82b9cbec7d15bcd05c2070e58,
+15 incremental commands passed, including the project build, the strict
+statement checks and the retained axiom audit. The final current axiom
+audit reached its 900-second limit. This v60 run was incomplete.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.
