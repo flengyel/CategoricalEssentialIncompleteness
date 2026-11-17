@@ -174,6 +174,14 @@ Proposition 10.8 was completed at f5176d08e6a7aed7a59d80432cc453eb947f18f3.
 ForkFirstOrderApplication.printed_statement and its independent statement
 checks cover conservativity, consistency, all consistent closed internal
 extensions, and all consistent c.e.-axiomatized extensions at each endpoint.
+The v59-to-v60 comparison matched the literal TeX of all 77 results and
+three definitions in document order. All 19 commands for the 10.8 batch
+passed, including 11 strict elaborations and the complete current and
+retained axiom audits. The switch to v60 changed the manuscript inputs
+before the v59 verifier's final snapshot check. A separate comparison
+verified the v60 manuscript gate, the log hashes, identical Lean inputs
+and all 16 pinned dependency worktrees. The last full replay remains
+the v59 replay cited above. See docs/V60_STATEMENT_COMPARISON_2026-11-17.json.
 
 Apply Theorem 5.2 and the first-order case of Theorem 5.3 to this theory for
 Corollary 10.9, using the constructed parameterized deduction and a common

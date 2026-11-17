@@ -1,0 +1,70 @@
+{
+  "proof_commit": "f5176d08e6a7aed7a59d80432cc453eb947f18f3",
+  "manuscript_commit": "cd734e6369d16604222be67a66c7f7fbfc877254",
+  "manuscript_version": 60,
+  "full_replay": false,
+  "numbered_statements": {
+    "corollary": 13,
+    "definition": 3,
+    "lemma": 19,
+    "proposition": 27,
+    "theorem": 18
+  },
+  "ordered_statement_bytes_sha256": "c420196e22de0ee3c1a9ccbeed92ea7a159bd06675bbdf9d545250d4e86564c4",
+  "manuscript_gate": 60,
+  "prior_record_sha256": "bc769b053a63344859c91bc8b4f15044dffde3edb2c55621ff6c043e0741fa3d",
+  "prior_successful_commands": 19,
+  "prior_strict_commands": 11,
+  "source_pins_verified": 356,
+  "verification_input_count": 2594,
+  "verification_input_snapshot_sha256": "3f3c91bfbea96394f00f0087c6a9869cfac1d445dd5025f2f9f4a06273a47007",
+  "all_lean_and_verifier_inputs_unchanged": true,
+  "verification_input_delta": [
+    "FORMALIZATION_STATUS_V59.md",
+    "FORMALIZATION_STATUS_V60.md",
+    "MANUSCRIPT_CURRENT.json",
+    "manuscript/latex/abstract.tex",
+    "manuscript/latex/appendices/a-syntax-and-theories.tex",
+    "manuscript/latex/appendices/c-section-lifting.tex",
+    "manuscript/latex/bibliography.tex",
+    "manuscript/latex/main.pdf",
+    "manuscript/latex/preamble.tex",
+    "manuscript/latex/sections/01-introduction.tex",
+    "manuscript/latex/sections/02-categorical-preliminaries.tex",
+    "manuscript/latex/sections/03b-internal-adjunctions.tex",
+    "manuscript/latex/sections/04-theory-extensions.tex",
+    "manuscript/logical_consequence_and_essential_incompleteness_v59.pdf",
+    "manuscript/logical_consequence_and_essential_incompleteness_v60.pdf",
+    "manuscript/logical_consequence_v59_source.zip",
+    "manuscript/logical_consequence_v60_source.zip"
+  ],
+  "clean_pinned_dependencies": 16,
+  "current_axiom_audit": {
+    "argv": [
+      "lake",
+      "env",
+      "lean",
+      "--memory=3072",
+      "-DwarningAsError=true",
+      "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+    ],
+    "timeout_seconds": 900,
+    "memory_mb": 3072,
+    "exit_code": 0,
+    "seconds": 609.2,
+    "log": ".codex-work/v59-fork-conservativity/incremental-verification/current-axiom-audit.log",
+    "sha256": "780fce6ee44607926ea9279469e9b540d3c35b610e417749ca41a2af014c2241"
+  },
+  "previous_verifier_final_snapshot_match": false,
+  "lean_inputs_equal_at_both_commits": true,
+  "current_declarations": 31701,
+  "retained_declarations": 1274,
+  "selected_reports": 34,
+  "production_modules": 1061,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "success": true
+}
