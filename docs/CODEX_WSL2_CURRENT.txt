@@ -186,7 +186,13 @@ the v59 replay cited above. See docs/V60_STATEMENT_COMPARISON_2026-11-17.json.
 Corollary 10.9 uses the actual fork partial-map slices, postcomposition
 on their monic spans, the finite proof of j(top), and the first-order
 transfer theorem. ForkAssociatedCategoriesChecks tests the complete
-printed conclusion and the Boolean obstruction. Resume with the
+printed conclusion and the Boolean obstruction.
+All 17 incremental commands passed, including 9 strict
+elaborations and the complete audits of 31,855 current and
+1,274 retained declarations. The selected statement check printed
+15 axiom reports. All 16 dependencies were clean at their pinned revisions.
+See docs/V60_FORK_ASSOCIATED_CATEGORIES_VERIFICATION_2026-11-17.json.
+Resume with the
 standalone Appendix A.6 specialization of Theorem 5.3. Preserve all
 closed consistent slice extensions and the printed Boolean conventions.
 Keep runs serial, bounded and interruptible: targeted strict checks use

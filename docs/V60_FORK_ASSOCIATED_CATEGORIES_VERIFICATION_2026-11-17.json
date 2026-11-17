@@ -1,0 +1,542 @@
+{
+  "proof_commit": "dda8eed0a8ae44ecedb0652a98c4ae9d9111037f",
+  "scope": "incremental-v60-fork-associated-categories",
+  "full_replay": false,
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "source_files_verified": 356,
+  "source_snapshot_sha256": "951bdf220823be381b09faa70460a58f5d17e154a47ed385bbc7efbdd8ce37e6",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "delta_from_previous_incremental": {
+    "FORMALIZATION_STATUS_V60.md": {
+      "before": "88eba7d6206f776140d0b834d38187367a36391e1785bfa26c3c35dab1fd6322",
+      "after": "2cd096b009a022c4713ac039796a4d00a3b02f104868bd5287d146429aa6e561"
+    },
+    "Lean/CategoricalEssentialIncompleteness.lean": {
+      "before": "686e304b3457f2515680ac06b45da94aea853b26a4290341df76f186e2523e63",
+      "after": "3268270babe335348a1c787450a47f1c31e96c2a579ac534c045925b59911bc0"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean": {
+      "before": "24b96f4cb2287cdcb60d7c1974ae59c72a4b85fd37fd68966dd2439d273836b5",
+      "after": "ccc2e3f06df6c337560c4ded42e0b350e2cc649865ba8e6bc475a20c2ce8b934"
+    },
+    "Lean/CategoricalEssentialIncompleteness/CurrentStatementAudit.lean": {
+      "before": "676bfd9391d906f4c2d94d9a26492f9d0d5d26b54a3b50830fd4c1e61695d85a",
+      "after": "d3c8618b5106da56fd5b37b19b5750817c70f91636c36ce6bd2c4170de232031"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedCategories.lean": {
+      "before": null,
+      "after": "e4a5a351b95cf4f5402e665aedb5e55df3bd140e2a2207ea6429dc879b3cedff"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedCategoriesChecks.lean": {
+      "before": null,
+      "after": "bce24161bb69d57c7d91943c9835bfc4521584b61427908e56784e4269ba97eb"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedTheories.lean": {
+      "before": null,
+      "after": "f02e43a9a6c1c5a948c6d8f37de5269c8d0266b003787df4d54c46daf1e752fb"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46MonicPartialSliceComparison.lean": {
+      "before": null,
+      "after": "968177ff078cee9973cdaabf1f0475f707b7ebdbd5fa7bed544715a0b4b3c37f"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46StatementAudit.lean": {
+      "before": "9bbf5b36478a2b634326d0270350772c7447bead0f667beec98895bf49ac1a8a",
+      "after": "52d3c31e2ca642d96ed951ea892099cb6d06a70419fb58d453c198eb25754c60"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46TuringRestrictionEquivalence.lean": {
+      "before": null,
+      "after": "e7be2773af0638d8124419f07083453515a184ec98f10c93b2908960c034407d"
+    }
+  },
+  "previous_incremental": {
+    "proof_commit": "f5176d08e6a7aed7a59d80432cc453eb947f18f3",
+    "manuscript_commit": "cd734e6369d16604222be67a66c7f7fbfc877254",
+    "commands": 19,
+    "all_published_inputs_match": true,
+    "verification_json_sha256": "bc769b053a63344859c91bc8b4f15044dffde3edb2c55621ff6c043e0741fa3d"
+  },
+  "started_at_utc": "2026-11-17T21:04:41.251819+00:00",
+  "finished_at_utc": "2026-11-17T21:18:35.449863+00:00",
+  "commands": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.19,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/lean-version.log",
+      "sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.3,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/axiom-parser-tests.log",
+      "sha256": "1e43b905e11ca028139fe5078016515111aaf7cebf8d6a3e224b7d03b9cb6ac9"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/verify.py",
+        "--manuscript-only"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.19,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/manuscript-gate.log",
+      "sha256": "f596ddb5d028af45bea3901a124e97746942c16fb4f221a6b50971ffe489dfb9"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 26.1,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/project-build.log",
+      "sha256": "e0b926a71b5e0e60972ebdbe7db8b25c7f5bdeb8ede76c5fb913cdf4b5a96f33"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 26.83,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/CurrentStatementAudit-build.log",
+      "sha256": "5713cc5f0ad88a2e8affe7782aa7d2e849f674940442e78acb1b6a811e90599c"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 20.15,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/V46StatementAudit-build.log",
+      "sha256": "cf52b9cf159409f608c2fb48ab9c28d507acdcd4b7c87ec4d16e7257e748e68b"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46TuringRestrictionEquivalence.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.68,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46TuringRestrictionEquivalence.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46MonicPartialSliceComparison.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 7.59,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46MonicPartialSliceComparison.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedTheories.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 8.2,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46ForkAssociatedTheories.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedCategories.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 9.61,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46ForkAssociatedCategories.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedCategoriesChecks.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 10.45,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46ForkAssociatedCategoriesChecks.log",
+      "sha256": "c78cbd0a206d265b95264b1e513fa1dda1a33ebd5b86b8ee6d4e002f920ab4e7"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 13.74,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-CurrentStatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 8.28,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-V46StatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 8.43,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/strict-entry-point.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 16.25,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/retained-statement-audit.log",
+      "sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 11.18,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/retained-axiom-audit.log",
+      "sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "timeout_seconds": 900,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 652.65,
+      "log": ".codex-work/v60-fork-associated/incremental-verification/current-axiom-audit.log",
+      "sha256": "97c167fce69262367f592f6a0fadb221d7a912e27924601576f8b16db056a985"
+    }
+  ],
+  "strict_commands": 9,
+  "baseline_full_verification": {
+    "proof_commit": "8df18834734179186459d3c4c34d4c0cf20b6194",
+    "commands": 1798,
+    "verification_json_sha256": "52eeee116d9479b6edc27799ccdd5463f7b605c06f084521d85eaa0065020e04"
+  },
+  "raw_sha256": "0ab3019119b7e267ec8609c2a7fe61fbaf17a4d0c7d60222ff05c034fada75bc",
+  "targeted_commands": [
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46TuringRestrictionEquivalence.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.78,
+      "log": ".codex-work/v60-fork-associated/targeted-V46TuringRestrictionEquivalence.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e7be2773af0638d8124419f07083453515a184ec98f10c93b2908960c034407d"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46MonicPartialSliceComparison.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.57,
+      "log": ".codex-work/v60-fork-associated/targeted-V46MonicPartialSliceComparison.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "968177ff078cee9973cdaabf1f0475f707b7ebdbd5fa7bed544715a0b4b3c37f"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedTheories.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.48,
+      "log": ".codex-work/v60-fork-associated/targeted-V46ForkAssociatedTheories.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "f02e43a9a6c1c5a948c6d8f37de5269c8d0266b003787df4d54c46daf1e752fb"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedCategories.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.53,
+      "log": ".codex-work/v60-fork-associated/targeted-V46ForkAssociatedCategories.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e4a5a351b95cf4f5402e665aedb5e55df3bd140e2a2207ea6429dc879b3cedff"
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=INT",
+        "--kill-after=5s",
+        "120s",
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ForkAssociatedCategoriesChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.4,
+      "log": ".codex-work/v60-fork-associated/targeted-V46ForkAssociatedCategoriesChecks.log",
+      "sha256": "c78cbd0a206d265b95264b1e513fa1dda1a33ebd5b86b8ee6d4e002f920ab4e7",
+      "source_sha256": "bce24161bb69d57c7d91943c9835bfc4521584b61427908e56784e4269ba97eb"
+    }
+  ],
+  "selected_axiom_reports": 15,
+  "production_modules": 1065,
+  "current_declarations": 31855,
+  "retained_declarations": 1274,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "verification_inputs": 2599,
+  "dependency_worktrees": [
+    {
+      "name": "Foundation",
+      "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+      "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "mathlib",
+      "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Forgive",
+      "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+      "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "doc-gen4",
+      "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+      "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "plausible",
+      "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "importGraph",
+      "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "aesop",
+      "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Qq",
+      "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "batteries",
+      "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "Cli",
+      "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "leansqlite",
+      "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+      "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "UnicodeBasic",
+      "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+      "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "BibtexQuery",
+      "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+      "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+      "worktree_clean": true,
+      "worktree_status": ""
+    },
+    {
+      "name": "MD4Lean",
+      "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+      "worktree_clean": true,
+      "worktree_status": ""
+    }
+  ],
+  "manuscript_version": 60
+}
