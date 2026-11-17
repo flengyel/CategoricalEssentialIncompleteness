@@ -37,6 +37,13 @@ the internal cosheaf theory.
 The current manuscript and Lean formalization target are **version 59**,
 dated 14 November 2026.
 
+The [natural embedding and erasure batch](docs/V59_FORK_EMBEDDING_ERASURE_2026-11-17.md) proves the syntax
+comparison and retraction in Proposition 10.8. Its 17-command incremental
+verification includes both complete axiom audits. The count remains
+**75/77**: substitution invariance, conservativity, consistency and
+incompleteness assembly in Proposition 10.8, followed by Corollary 10.9,
+remain open. The earlier completed full replay remains separate.
+
 | Item | Location |
 | --- | --- |
 | Current PDF | [logical_consequence_and_essential_incompleteness_v59.pdf](manuscript/logical_consequence_and_essential_incompleteness_v59.pdf) |

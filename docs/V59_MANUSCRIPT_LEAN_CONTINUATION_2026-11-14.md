@@ -76,6 +76,19 @@ essential incompleteness and all endpoint extension conclusions, then
 Corollary 10.9. Preserve actual carrier and constructor comparisons and
 arbitrary closed consistent slice extensions. The WSL recovery archive
 is retained as historical evidence.
+
+The later [natural embedding and erasure proof](V59_FORK_EMBEDDING_ERASURE_2026-11-17.md) constructs
+the actual propositional sentence embedding, all five erasure clauses,
+the printed global tautology, retraction and monicity, with naturality
+under atom-identifying transitions and the actual code comparisons.
+Its 17-command incremental verification includes both complete axiom
+audits. This is partial progress within Proposition 10.8; the count
+remains 75/77. Resume with admissible-substitution erasure invariance,
+then logical-rule and generated-theory comparisons, conservativity,
+consistency, internal essential incompleteness and every endpoint
+extension conclusion. Corollary 10.9 remains open. See the report for the
+exact continuation point.
+
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 

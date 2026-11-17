@@ -49,8 +49,8 @@ verification includes both complete axiom audits. The later
 [first-order fork formula proof](V59_FORK_FIRST_ORDER_FORMULA_2026-11-16.md) constructs the initial formula
 algebra for arbitrary coefficient diagrams, with the printed five summands
 and unique natural folds under atom-identifying transitions. Its 17-command
-incremental verification includes both complete axiom audits. Proposition
-10.7 remains open. The later [parameterized component proof](V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md)
+incremental verification includes both complete axiom audits. At that
+batch, Proposition 10.7 remained open. The later [parameterized component proof](V59_FORK_PARAMETER_COMPONENTS_2026-11-16.md)
 constructs component formula initiality for arbitrary target families, fold
 uniqueness across arbitrary parameter and atom-label morphisms, and the
 generic transition-naturality criterion. Its separate 17-command incremental
@@ -88,6 +88,18 @@ essential incompleteness and all endpoint extension conclusions, then
 Corollary 10.9. Preserve actual carrier and constructor comparisons and
 arbitrary closed consistent slice extensions. The WSL recovery archive
 is retained as historical evidence.
+
+The later [natural embedding and erasure proof](V59_FORK_EMBEDDING_ERASURE_2026-11-17.md) constructs
+the actual propositional sentence embedding, all five erasure clauses,
+the printed global tautology, retraction and monicity, with naturality
+under atom-identifying transitions and the actual code comparisons.
+Its 17-command incremental verification includes both complete axiom
+audits. This is partial progress within Proposition 10.8; the count
+remains 75/77. Resume with admissible-substitution erasure invariance,
+then logical-rule and generated-theory comparisons, conservativity,
+consistency, internal essential incompleteness and every endpoint
+extension conclusion. Corollary 10.9 remains open. See the report for the
+exact continuation point.
 
 Use the existing serial build lock and pinned dependencies. Production
 proofs and their dependencies must contain no proof placeholders; permitted
