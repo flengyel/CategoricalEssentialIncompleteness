@@ -7,7 +7,7 @@ Read AGENTS.md, MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V60.md and
 docs/reviews/V60_2026-11-17/review.md. The v59 continuation documents and
 the dated check records below describe the inherited constructions.
 
-Corollary 10.9 is the next first-order application. Propositions 10.7
+Corollary 10.9 is complete. Propositions 10.7
 and 10.8, Lemmas 8.9 and 9.6, Corollaries 8.10 and 9.8, and the
 first-order case of Theorem 5.3 are proved. Reuse the first-order result.
 The new coverage finding is confined to the standalone propositional
@@ -16,7 +16,7 @@ its three axiom schemes and modus ponens along constant family and
 evaluation, or prove a comparison that transports the entire theorem
 to this calculus. Preserve the quantifier over arbitrary closed slice
 extensions and the Boolean morphism conclusions. The current table
-records 75 full rows, the first-order case of 5.3, and one open row (10.9).
+records 76 full rows and the first-order case of 5.3.
 Preserve subsequent local and remote work.
 
 The proofs and conventions of the v59 continuation still apply. Its
@@ -183,11 +183,12 @@ verified the v60 manuscript gate, the log hashes, identical Lean inputs
 and all 16 pinned dependency worktrees. The last full replay remains
 the v59 replay cited above. See docs/V60_STATEMENT_COMPARISON_2026-11-17.json.
 
-Apply Theorem 5.2 and the first-order case of Theorem 5.3 to this theory for
-Corollary 10.9, using the constructed parameterized deduction and a common
-global logical theorem. Preserve arbitrary closed consistent extensions,
-including nonconstant slice families. Do not add preservation or
-incompleteness as hypotheses.
+Corollary 10.9 uses the actual fork partial-map slices, postcomposition
+on their monic spans, the finite proof of j(top), and the first-order
+transfer theorem. ForkAssociatedCategoriesChecks tests the complete
+printed conclusion and the Boolean obstruction. Resume with the
+standalone Appendix A.6 specialization of Theorem 5.3. Preserve all
+closed consistent slice extensions and the printed Boolean conventions.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.

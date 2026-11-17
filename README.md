@@ -60,9 +60,10 @@ and Git blob hashes.
 
 The current correspondence table is
 [FORMALIZATION_STATUS_V60.md](FORMALIZATION_STATUS_V60.md). It records 77
-numbered results and three definitions. There are **75 results with full recorded counterparts**.
-The first-order statement of Theorem 5.3 is proved. Its standalone propositional
-case and Corollary 10.9 remain open in Lean. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
+numbered results and three definitions. There are **76 results with full recorded counterparts**.
+Corollary 10.9 is proved for the two actual fork partial-map slices and every
+consistent closed extension. The standalone propositional case of Theorem 5.3
+is the remaining open obligation. The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,798 commands at `8df18834734179186459d3c4c34d4c0cf20b6194`, including
 1,792 strict elaborations and both complete transitive axiom audits. The
 four new finite-support and internal-induction constructions support
