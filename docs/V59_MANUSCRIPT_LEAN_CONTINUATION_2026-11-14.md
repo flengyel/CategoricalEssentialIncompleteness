@@ -60,10 +60,16 @@ verification includes both complete axiom audits. The later [canonical formula p
 source-constructor comparison and proves the full global constructor law,
 initiality in every parameter slice and raw uniqueness for arbitrary target
 families. Its separate 17-command incremental verification includes both
-complete axiom audits. The full term/formula interface, stable lists,
-occurrence/substitution/sentence constructions and derivations remain open.
-The count stays 74/77. Resume from the latest report; the WSL recovery
-archive is retained as historical evidence.
+complete axiom audits. The later [full fork syntax proof](V59_FULL_FORK_SYNTAX_2026-11-16.md) constructs the complete
+canonical term/formula bundle and parameter stability, stable lists,
+the variable/term isomorphism, occurrences, admissible substitution and
+sentence/admissibility pullbacks, naturally under all fork transitions.
+Its 20-command incremental verification includes both complete axiom audits.
+Initial finite derivations for all seven schemes and both rules, indexed
+only by axiom subobjects in every parameter slice, remain open. Preserve
+actual carrier and constructor comparisons between numerical realizations.
+The count stays 74/77. Resume with finite derivations from the latest report;
+the WSL recovery archive is retained as historical evidence.
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.
 

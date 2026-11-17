@@ -126,17 +126,29 @@ The full global constructor equation and raw uniqueness include arbitrary
 natural target families and every underlying morphism over the parameter.
 Its 17-command incremental verification includes both complete axiom audits.
 See docs/V59_CANONICAL_FORMULA_PARAMETER_INITIALITY_2026-11-16.md.
-Proposition 10.7 remains open. Next assemble the full term/formula
-CategoricalSyntax interface, its exact canonical expressions and parameter
-constructors, using the completed formula parameter initiality. Stable
-lists, occurrence/substitution/sentence constructions and seven-scheme,
-two-rule finite derivations for axiom subobjects in every parameter slice
-also remain open. Preserve actual constructor/carrier isomorphisms,
-arbitrary targets, all natural algebra morphisms, Boolean conventions and
-subobject-only initiality. Do not assume equality is reflected by
-atom-identifying transitions. Keep runs serial, bounded and interruptible;
-targeted strict checks use 2 GB and integrated strict checks 3 GB, with
-explicit timeouts (the completed targeted run allowed 120 seconds per command).
+The later full fork syntax batch at 5dab6347ce64c0a2e756ce81f939606c53b1028c
+constructs the complete canonical CategoricalSyntax bundle and parameter
+stability, stable lists, the variable/term isomorphism, occurrence lists,
+admissible substitution and sentence/admissibility pullbacks. Naturality
+holds under all fork transitions, including atom-identifying transitions.
+Its 20-command incremental verification includes both complete axiom audits.
+See docs/V59_FULL_FORK_SYNTAX_2026-11-16.md.
+Proposition 10.7 remains open for initial finite derivation algebras in
+every parameter slice. Resume with the seven schemes and two rules for
+the actual ForkCategoricalSyntax.categoricalSyntax D and axiom subobjects
+over arbitrary parameters. Construct component derivation initiality,
+actual transition constructor squares, natural evaluation and uniqueness.
+Reuse the completed syntax, stable lists and substitution interface.
+Keep actual carrier/constructor isomorphisms when comparing independently
+constructed numerical code charts. Do not assume equality is reflected
+by atom-identifying transitions. Arbitrary axiom presentations still
+generate through regular images. Preserve Boolean conventions and full
+consistent-extension quantifiers. Keep runs serial, bounded and
+interruptible: targeted strict checks use 2 GB and integrated strict
+checks 3 GB, with explicit 120/600-second command limits.
+External reference paths supplied by the user on 16 November 2026:
+media files are at /mnt/c/User/fleng/Archive;
+project files are at /mnt/c/Users/fleng/Projects.
 The free theory is realized through the proved predicate equivalence;
 no identity of inverse-equivalence numerical code charts is assumed.
 

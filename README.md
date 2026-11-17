@@ -118,9 +118,12 @@ complete axiom audits. The later [canonical formula parameter-initiality proof](
 the source-constructor comparison and proves the full global constructor
 law and initiality in every parameter slice, with arbitrary targets and
 raw uniqueness. Its separate 17-command incremental verification includes
-both complete axiom audits. The full term/formula interface, stable lists,
-substitution and derivations remain open in Proposition 10.7; the count
-stays 74/77.
+both complete axiom audits. The later [full fork syntax proof](docs/V59_FULL_FORK_SYNTAX_2026-11-16.md) constructs
+the complete term/formula interface and parameter stability, stable lists,
+the variable isomorphism, occurrence lists, admissible substitution and
+sentence pullbacks. Its separate 20-command incremental verification
+includes both complete axiom audits. Proposition 10.7 remains open for
+initial finite derivations in every parameter slice; the count stays 74/77.
 The [full v58 replay](docs/V58_FULL_VERIFICATION_2026-11-14.md)
 passed all 1,790 commands at `f0e4b78e83ea21e06b7d335bd8b72353ac25502f`, including every
 selected strict producer/check replay and both complete transitive axiom audits.
