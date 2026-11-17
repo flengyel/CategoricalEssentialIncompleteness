@@ -82,12 +82,19 @@ the actual propositional sentence embedding, all five erasure clauses,
 the printed global tautology, retraction and monicity, with naturality
 under atom-identifying transitions and the actual code comparisons.
 Its 17-command incremental verification includes both complete axiom
-audits. This is partial progress within Proposition 10.8; the count
-remains 75/77. Resume with admissible-substitution erasure invariance,
-then logical-rule and generated-theory comparisons, conservativity,
+audits. This was partial progress within Proposition 10.8; the count
+remained 75/77 at that batch. Substitution invariance and the theory-level
+arguments remained open.
+
+The later [erasure substitution batch](V59_ERASURE_SUBSTITUTION_SCHEMES_2026-11-17.md)
+proves admissible-substitution erasure invariance, the full Option failure
+equation and the exact erased expressions of all seven logical schemes.
+Its 18-command incremental verification includes both complete axiom
+audits and 32 selected reports. The count remains 75/77. Resume with
+uniform finite propositional derivations of the erased schemes, then
+the inference and generated-theory comparisons, conservativity,
 consistency, internal essential incompleteness and every endpoint
-extension conclusion. Corollary 10.9 remains open. See the report for the
-exact continuation point.
+extension conclusion. Proposition 10.8 and Corollary 10.9 remain open.
 
 The 1,798-command full replay below is the earlier baseline; this later batch has separate incremental
 verification. The original continuation instructions follow.

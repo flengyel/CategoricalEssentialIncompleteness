@@ -148,10 +148,15 @@ global tautology, the retraction and monicity. Its 17-command incremental
 verification includes both complete axiom audits. This is partial progress
 within Proposition 10.8; the count remains 75/77. See
 docs/V59_FORK_EMBEDDING_ERASURE_2026-11-17.md.
-Continue with admissible-substitution erasure invariance, then the logical-rule
-and generated-theory comparisons, conservativity, consistency, internal
-essential incompleteness and every selected-endpoint extension conclusion.
-Reuse the actual carrier and code comparisons and the constructed retraction.
+The later substitution and scheme batch proves admissible-substitution
+erasure invariance, the full Option failure equation and the exact erasures
+of all seven logical schemes. Its 18-command incremental verification
+includes both complete axiom audits and 32 selected reports. The count
+remains 75/77. See docs/V59_ERASURE_SUBSTITUTION_SCHEMES_2026-11-17.md.
+Continue with uniform finite propositional derivations of the erased schemes,
+then inference and generated-theory comparisons, conservativity, consistency,
+internal essential incompleteness and every selected-endpoint extension
+conclusion. Reuse the actual carrier/code comparisons and proved retraction.
 Then apply completed Theorems 5.2–5.3 for Corollary 10.9,
 using the constructed all-parameter deduction and a common global logical
 theorem. Preserve arbitrary closed consistent extensions, including
