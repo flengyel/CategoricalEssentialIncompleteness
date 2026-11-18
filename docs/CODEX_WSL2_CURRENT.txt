@@ -6,7 +6,15 @@ The current manuscript and verification target are version 64.
 Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V64.md.
 The proof of Lemma 5.1 cites Cockett–Hofstra, §3.5, for extending the
 Turing morphism to the restriction idempotent completion. The numbered
-statements and their Lean counterparts agree with version 63.
+statements and their Lean counterparts agree with version 63. Comparing
+the source archives by result label confirms that 5.1 is the only proof
+that changed from v63 to v64. The other 76 proof environments match.
+SplitTuring.parameter_total and SplitTuring.evaluator_isTuring prove the
+totality and evaluator equations in the revised paragraph.
+The v64 manuscript gate and strict elaboration of V46SplitTuring and
+V46SplitTuringChecks passed. All six selected declarations report only
+propext. The latest full replay is the v62 run recorded below.
+
 An independent comparison of the versioned source archives and Git trees
 matched the 77 numbered results and three definitions from v59 through v62.
 All 77 proof environments and all Lean inputs also match from v60 to v62.
