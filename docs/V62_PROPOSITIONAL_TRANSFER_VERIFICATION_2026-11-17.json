@@ -560,5 +560,15 @@
   ],
   "manuscript_version": 62,
   "targeted_proof_commit": "0c2ab06c19b02fb82b9cbec7d15bcd05c2070e58",
-  "drift_record": "V62_STATEMENT_COMPARISON_2026-11-17.json"
+  "drift_record": "V62_STATEMENT_COMPARISON_2026-11-17.json",
+  "subsequent_full_replay_finding": {
+    "stopped_at_command": 1508,
+    "strict_source": "V46SignedDerivationFiniteValuationChecks.lean",
+    "stale_compiled_module": "CategoricalEssentialIncompleteness.V46RuleRelabelling",
+    "current_declaration_count_scope": "The count and current axiom inventory in this record describe the compiled cache at the time. Four artifacts were later found to differ from their recorded Lake hashes.",
+    "recovered_from_committed_source": true,
+    "restored_expected_build_hashes": 4,
+    "strict_finite_valuation_reports_after_rebuild": 28,
+    "compiled_files_with_matching_lake_hash_after_rebuild": 81168
+  }
 }

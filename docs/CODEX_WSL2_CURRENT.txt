@@ -206,6 +206,13 @@ elaborations and the complete audits of 31,944 current and
 1,274 retained declarations. The selected statement check printed
 14 axiom reports. All 16 dependencies were clean at their pinned revisions.
 See docs/V62_PROPOSITIONAL_TRANSFER_VERIFICATION_2026-11-17.json.
+The first full v62 replay subsequently stopped at command 1,508 in
+V46SignedDerivationFiniteValuationChecks. Four cached outputs for
+V46RuleRelabelling differed from their recorded Lake hashes. The preceding
+audit count of 31,944 describes that cache. Rebuilding the module from its
+committed source restored the four expected hashes and all 28 strict
+finite-valuation axiom reports passed. A scan of 81,168 compiled files in
+the project and its dependencies matched their recorded Lake hashes.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.
