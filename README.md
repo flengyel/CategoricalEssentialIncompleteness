@@ -1,14 +1,15 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-From two disjoint domains in a recursion category we construct a
-first-order theory that, if consistent, is essentially incomplete
-exactly when the domains are inseparable. Its nonlogical axioms assert
-the nullary predicates indexed by one domain and negate those indexed
-by the other.
+From two disjoint domains in the restriction idempotent completion of a
+recursion category we construct a first-order theory that, if consistent,
+is essentially incomplete exactly when the domains are inseparable.
+The theory is internal to the category of total morphisms in this
+completion, with nonlogical axioms asserting the nullary predicates
+indexed by one domain and negating those indexed by the other.
 On pairs generating consistent theories, the construction is left adjoint
-to the functor taking a consistent theory to its theorem and refutation
-subobjects. We assume the total category of the restriction idempotent
-completion is regular with disjoint pullback-stable finite coproducts,
+to the functor taking a consistent internal theory to its theorem and
+refutation subobjects. We assume the total category is regular with
+disjoint pullback-stable finite coproducts,
 admits initial algebras for parameterized syntax and finite derivations,
 and has partial inverses in the completion for its monomorphisms.
 
@@ -30,7 +31,7 @@ In a cosheaf construction on a three-point space, each endpoint
 has a consistent propositional theory whose consistent computably
 enumerable extensions in its language are all incomplete.
 
-The current manuscript and Lean formalization target are **version 62**,
+The current manuscript and Lean formalization target are **version 63**,
 dated 17 November 2026.
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
@@ -41,10 +42,10 @@ axioms in its language is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v62.pdf](manuscript/logical_consequence_and_essential_incompleteness_v62.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v63.pdf](manuscript/logical_consequence_and_essential_incompleteness_v63.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v62_source.zip](manuscript/logical_consequence_v62_source.zip) |
+| Complete source ZIP | [logical_consequence_v63_source.zip](manuscript/logical_consequence_v63_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
@@ -61,7 +62,7 @@ and Git blob hashes.
 ## Lean status
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V62.md](FORMALIZATION_STATUS_V62.md). It records 77
+[FORMALIZATION_STATUS_V63.md](FORMALIZATION_STATUS_V63.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
@@ -179,7 +180,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v62.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v63.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

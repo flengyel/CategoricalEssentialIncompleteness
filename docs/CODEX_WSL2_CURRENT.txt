@@ -2,10 +2,10 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 17 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 62.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V62.md.
-Version 62 revises the abstract. The statements, proofs and Lean audit
-entry points agree with version 61.
+The current manuscript and verification target are version 63.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V63.md.
+Version 63 identifies the category in which the generated theories are internal.
+The statements, proofs and Lean audit entry points agree with version 62.
 An independent comparison of the versioned source archives and Git trees
 matched the 77 numbered results and three definitions from v59 through v62.
 All 77 proof environments and all Lean inputs also match from v60 to v62.
