@@ -50,9 +50,13 @@ $r$ gives $!_Yf=!_X\bar f$.
 
 Every split object $(X,e)$ has a total embedding into $(X,1_X)$
 and a partial retraction. An isomorphism $X\cong Q$ in $\mathscr R$
-makes it a retract of $Q$. If
-$f=\tau(a\times1_Q)$ represents a computation on $(X,e)\times Q$,
-then $f=\tau((ae)\times1_Q)$ and $ae:(X,e)\to Q$ is total.
+makes $(X,e)$ a retract of $Q$. The Turing morphism extends as in
+Cockett--Hofstra~\cite[Section 3.5]{CockettHofstra}.
+A morphism $(X,e)\times Q\rightharpoonup Q$ is represented in $\mathscr R$
+by $f:X\times Q\rightharpoonup Q$ with $f(e\times1_Q)=f$.
+Choose a total parameter $a:X\to Q$ with $f=\tau(a\times1_Q)$.
+Then $f=\tau((ae)\times1_Q)$, and $ae:(X,e)\to Q$ is total since
+$\overline{ae}=e$.
 Thus $\mathscr C$ is Turing.
 
 For $p:X\to T$, a total embedding $m_X:X\to Q$ gives a monomorphism
