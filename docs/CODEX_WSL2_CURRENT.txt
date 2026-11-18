@@ -213,6 +213,11 @@ audit count of 31,944 describes that cache. Rebuilding the module from its
 committed source restored the four expected hashes and all 28 strict
 finite-valuation axiom reports passed. A scan of 81,168 compiled files in
 the project and its dependencies matched their recorded Lake hashes.
+The subsequent 19-command incremental run passed 11 strict elaborations
+and the complete transitive audits of 31,896 current and 1,274 retained
+declarations with only the three permitted axioms. The new inventory
+contains both rule-relabelling image theorems and agrees with the finite-
+valuation and propositional statement checks. See docs/V62_REBUILT_RELABEL_VERIFICATION_2026-11-17.json.
 Keep runs serial, bounded and interruptible: targeted strict checks use
 2 GB and integrated strict checks 3 GB. Selected strict sources have a
 600-second limit; the complete current axiom audit allows 900 seconds.

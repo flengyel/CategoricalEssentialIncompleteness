@@ -1,0 +1,682 @@
+{
+  "proof_commit": "7f2c1b55a726ea01a9e8417ddf098b58ad2d66c6",
+  "scope": "incremental-v62-rebuilt-relabelling",
+  "full_replay": false,
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "source_files_verified": 356,
+  "source_snapshot_sha256": "8691d45af7071da3658ae638cbde0a2715dbeb6b952570dd70d1049da503f0b8",
+  "all_committed_inputs_match": true,
+  "all_worktree_inputs_match": true,
+  "started_at_utc": "2026-11-18T01:37:49.652024+00:00",
+  "finished_at_utc": "2026-11-18T01:43:31.867410+00:00",
+  "commands": [
+    {
+      "argv": [
+        "lean",
+        "--version"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.08,
+      "log": ".codex-work/v62-repaired/incremental-verification/lean-version.log",
+      "sha256": "354b3390ea25076466a12dd43a6b7a7a6b3295d5a003af3f97e599d9b30f497d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/test_verify_axiom_parser.py"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": ".codex-work/v62-repaired/incremental-verification/axiom-parser-tests.log",
+      "sha256": "c6b9b1f09add0403cc07e90bfdf272129b1ddfa2f8f7675ea8218862f2516371"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/verify.py",
+        "--manuscript-only"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 0.1,
+      "log": ".codex-work/v62-repaired/incremental-verification/manuscript-gate.log",
+      "sha256": "96477a8513f0e71a77195203bc3e30091f83c8220756d28b1d6e2346fd6caaf6"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 6.97,
+      "log": ".codex-work/v62-repaired/incremental-verification/project-build.log",
+      "sha256": "448ccebaa6d33be4a04304fd51d2fb563fc865dd1d48dc6314731aede338d04c"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.CurrentStatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 6.54,
+      "log": ".codex-work/v62-repaired/incremental-verification/CurrentStatementAudit-build.log",
+      "sha256": "d6225340076269f548c3874393a83d812eee53c3de401b0cea915fe5596fb454"
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "CategoricalEssentialIncompleteness.V46StatementAudit"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": null,
+      "exit_code": 0,
+      "seconds": 6.13,
+      "log": ".codex-work/v62-repaired/incremental-verification/V46StatementAudit-build.log",
+      "sha256": "bd7a07697f9296d17dcc3d9e34818c4a3f3c0efc4503488db49c59be634e7a0c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46RuleRelabelling.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 4.06,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46RuleRelabelling.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SignedDerivationRules.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 4.91,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46SignedDerivationRules.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SignedDerivationFiniteValuationChecks.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 4.88,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46SignedDerivationFiniteValuationChecks.log",
+      "sha256": "1055e0394d9b2504b79bc8fb24919a57189ad44de85adfbe34d64adc95163c23"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalRuleComparison.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 5.84,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46PropositionalRuleComparison.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalClosureTransfer.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 4.42,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46PropositionalClosureTransfer.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 5.8,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46PropositionalAssociatedIncompleteness.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompletenessChecks.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.94,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46PropositionalAssociatedIncompletenessChecks.log",
+      "sha256": "b7746f12b7f277b4d1547858020782a26938ce11d843d8eecebee98bee779d0c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentStatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 5.94,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-CurrentStatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 5.34,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-V46StatementAudit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 5.55,
+      "log": ".codex-work/v62-repaired/incremental-verification/strict-entry-point.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/V5StatementAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 9.58,
+      "log": ".codex-work/v62-repaired/incremental-verification/retained-statement-audit.log",
+      "sha256": "e5e4b2d81b758734796bd5b0e92f20b216e867378b6088889291aa9a84b523a8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "CategoricalEssentialIncompleteness/AxiomAudit.lean"
+      ],
+      "timeout_seconds": 600,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 6.54,
+      "log": ".codex-work/v62-repaired/incremental-verification/retained-axiom-audit.log",
+      "sha256": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=3072",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "timeout_seconds": 900,
+      "memory_mb": 3072,
+      "exit_code": 0,
+      "seconds": 249.66,
+      "log": ".codex-work/v62-repaired/incremental-verification/current-axiom-audit.log",
+      "sha256": "d5cc5fc7370c7f37b0c634f20add121b61d6ab91ebfdce9b360df13e2ba62258"
+    }
+  ],
+  "strict_commands": 11,
+  "baseline_full_verification": {
+    "proof_commit": "8df18834734179186459d3c4c34d4c0cf20b6194",
+    "commands": 1798,
+    "verification_json_sha256": "52eeee116d9479b6edc27799ccdd5463f7b605c06f084521d85eaa0065020e04"
+  },
+  "manuscript_version": 62,
+  "numbered_results_proved": 77,
+  "current_declarations": 31896,
+  "current_production_modules": 1068,
+  "retained_declarations": 1274,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "propositional_statement_reports": 14,
+  "finite_valuation_reports": 28,
+  "measured_inputs": 2603,
+  "dependencies": {
+    "start": [
+      {
+        "name": "Foundation",
+        "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "mathlib",
+        "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Forgive",
+        "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "doc-gen4",
+        "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "plausible",
+        "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "LeanSearchClient",
+        "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "importGraph",
+        "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "proofwidgets",
+        "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "aesop",
+        "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Qq",
+        "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "batteries",
+        "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Cli",
+        "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "leansqlite",
+        "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "UnicodeBasic",
+        "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "BibtexQuery",
+        "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "MD4Lean",
+        "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "worktree_clean": true,
+        "worktree_status": ""
+      }
+    ],
+    "end": [
+      {
+        "name": "Foundation",
+        "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "mathlib",
+        "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Forgive",
+        "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "doc-gen4",
+        "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "plausible",
+        "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "LeanSearchClient",
+        "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "importGraph",
+        "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "proofwidgets",
+        "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "aesop",
+        "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Qq",
+        "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "batteries",
+        "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Cli",
+        "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "leansqlite",
+        "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "UnicodeBasic",
+        "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "BibtexQuery",
+        "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "MD4Lean",
+        "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "worktree_clean": true,
+        "worktree_status": ""
+      }
+    ]
+  },
+  "rebuilt_module": "CategoricalEssentialIncompleteness.V46RuleRelabelling",
+  "compiled_artifacts_checked": 81168,
+  "compiled_artifact_hash_method": "Lake.computeFileHash over the project and dependency .olean, .olean.private, .olean.server, .ilean, .ir, .ir.sig and .c files with recorded Lake hashes. Hashes compared as unsigned hexadecimal values.",
+  "rebuilt_artifacts": [
+    {
+      "file": "Lean/.lake/build/lib/lean/CategoricalEssentialIncompleteness/V46RuleRelabelling.ir",
+      "expected": "586405d390d61420",
+      "actual": "a90442beee9682e0",
+      "restored_sha256": "baa87b47c997737da794408f46c13eae5dc7c2568e48b8099188f2d712ae5a38",
+      "prior_sha256": "1f37e7664036c1a7f81ad6682e1bd0d9d850d6322b4ad2c5b9df0740f5d7e2b7"
+    },
+    {
+      "file": "Lean/.lake/build/lib/lean/CategoricalEssentialIncompleteness/V46RuleRelabelling.olean",
+      "expected": "4200033fc052a63a",
+      "actual": "b4c428d23cd33726",
+      "restored_sha256": "15fd1d051875d269f87b28110d067613b0ff0f5a0ee070936cdd201af9330215",
+      "prior_sha256": "11ec4e984f66404464d333b6daf15e4a3a84529d22fe5e245f62e7f3c4547aaf"
+    },
+    {
+      "file": "Lean/.lake/build/lib/lean/CategoricalEssentialIncompleteness/V46RuleRelabelling.olean.private",
+      "expected": "620f91ea895af093",
+      "actual": "cd30a264b3a09ac9",
+      "restored_sha256": "9d9d0845510bdbb55aa67d24dffbceb1c48ece8e1f5a8a273b115d972d0fd1f0",
+      "prior_sha256": "a363371939a876db280db9a298170dcf9c606d7b865cf1217d1e7d41a08ff029"
+    },
+    {
+      "file": "Lean/.lake/build/lib/lean/CategoricalEssentialIncompleteness/V46RuleRelabelling.olean.server",
+      "expected": "b307b2db0eebd3fd",
+      "actual": "94be1c93d4739bb8",
+      "restored_sha256": "0f7deba5e9fefc2780583df461c03a989e8306592edf85cc706e5f9f650a880e",
+      "prior_sha256": "d5afcc3833dca1a1bf75ad85f192eba703ffbb765181b7fb164d6114e073aa09"
+    }
+  ],
+  "verification_json_sha256": "3a03041c0c74d1dcec6b830ccfd2a6747ac171510985fc0b4252f6bf60615351",
+  "earlier_incremental": {
+    "commit": "5f1485ebba91b4cef68755fef35716a9442af7a3",
+    "raw_sha256": "1463f90594f290c1ad46eb6bd4f397966fca79bbaa6b0fce36c4f4bb7f3149b5",
+    "current_declarations": 31944,
+    "record": "V62_PROPOSITIONAL_TRANSFER_VERIFICATION_2026-11-17.json"
+  },
+  "current_declaration_delta": {
+    "added": [
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.backward",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.backward._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.backward._proof_2",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.backward.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.conclusion_image_eq",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.forward",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.forward._proof_2",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.forward._proof_3",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.forward.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.rules",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.rules.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.sentence_image_eq"
+    ],
+    "removed": [
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling._sizeOf_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling._sizeOf_inst",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.base",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch.congr_simp",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch_conclusion",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch_fst",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch_fst_assoc",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch_snd",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.branch_snd_assoc",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.casesOn",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comp",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comp._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comp._proof_2",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comp.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comparison",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comparison._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comparison._proof_2",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.comparison._proof_3",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.conclusion",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.ctorIdx",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.ext",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.ext_iff",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.fold",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.fold._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.fold_constructor",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.identity",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.identity._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.identity._proof_2",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.identity.eq_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input.congr_simp",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_comp",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_comp._proof_1",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_conclusion",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_factor",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_factor_assoc",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_factor_hom",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_factor_hom_assoc",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_identity",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_identity._proof_3",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_iota",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.input_iota_assoc",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.labels",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk._flat_ctor",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk.congr_simp",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk.inj",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk.injEq",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk.noConfusion",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.mk.sizeOf_spec",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.noConfusion",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.noConfusionType",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.premises",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.rec",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.recOn",
+      "CategoricalEssentialIncompleteness.V46.RuleRelabelling.unique"
+    ],
+    "permitted_axiom_set_changed_for_shared_declarations": []
+  },
+  "first_full_attempt": {
+    "commands_passed": 1507,
+    "failed_command": {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46SignedDerivationFiniteValuationChecks.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 5.35,
+      "log": "build-logs/strict-V46SignedDerivationFiniteValuationChecks.log"
+    },
+    "failed_log_sha256": "6ae335336b31c6b9825b963a4045329e3a8863d4c3521495c52369ead7d58604",
+    "wrapper_exit": 1
+  }
+}
