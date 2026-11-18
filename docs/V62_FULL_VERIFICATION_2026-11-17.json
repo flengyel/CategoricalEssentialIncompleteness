@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "scope": "full",
+  "tested_commit": "5f1485ebba91b4cef68755fef35716a9442af7a3",
+  "tested_tree": "4c1a4013ebab02970932542f92bc258f7af51a23",
+  "manuscript_version": 62,
+  "numbered_results_proved": 77,
+  "numbered_results_total": 77,
+  "open_results": [],
+  "commands": 1965,
+  "strict_elaborations": 1959,
+  "retained_audited_declarations": 1274,
+  "current_audited_declarations": 31896,
+  "current_audited_modules": 1068,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "measured_inputs_unchanged_and_matching_proof_commit": 2603,
+  "source_snapshot_sha256": "8691d45af7071da3658ae638cbde0a2715dbeb6b952570dd70d1049da503f0b8",
+  "dependencies_clean_and_pinned_at_both_ends": 16,
+  "imported_source_files_verified": 356,
+  "retained_manuscript_files_verified": 4,
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "wrapper_exit_status": null,
+  "raw_directory": ".codex-work/v62-full-resume/evidence",
+  "wrapper_start_commit": "3f826fde8c077ce8005fc03f9d2fd0b8d00d5e3b",
+  "raw_report_sha256": "ba266dd9314d1aec31957d8637cade35f273016a330feb88e6b81f47938bb56b",
+  "full_record_file": "V62_FULL_VERIFICATION_2026-11-17.json.gz",
+  "execution": "full replay completed in two serial segments after a server restart",
+  "recovery": {
+    "kind": "full replay resumed after server restart",
+    "initial_wrapper_directory": ".codex-work/verify-20261118T014332Z-Uc9hae",
+    "wrapper_start_commit": "3f826fde8c077ce8005fc03f9d2fd0b8d00d5e3b",
+    "initial_wrapper_exit_status": null,
+    "completed_before_restart": 1804,
+    "initial_checkpoint_sha256": "5c087e2d78291102a84ab345bc9ca89e2e4bfa8d25aa8b74a1d7d8c7006af109",
+    "initial_transcript_sha256": "eb6ece06c6978581eef27e1bd61d1f13aee1c0b175771fbd267fa2b5607229bc",
+    "resume_commit": "1228add9b4c15209874b44ab8d9361ed9f43c267",
+    "input_snapshot_matches_corrected_incremental": true,
+    "all_measured_input_mtimes_precede_wrapper_start": true,
+    "dependency_worktrees_at_resume": [
+      {
+        "name": "Foundation",
+        "expected": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "actual": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "mathlib",
+        "expected": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "actual": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Forgive",
+        "expected": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "actual": "f20b5646a391cf3b1231d67415b44ed4a2ff3055",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "doc-gen4",
+        "expected": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "actual": "d736b237948ab1bdf316407a575f0d3c7f6ba772",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "plausible",
+        "expected": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "actual": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "LeanSearchClient",
+        "expected": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "actual": "95e037bfdc31d3916ac615446847fb01960e2719",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "importGraph",
+        "expected": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "actual": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "proofwidgets",
+        "expected": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "actual": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "aesop",
+        "expected": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "actual": "75d936c7af167cc93fac0d31237682fc2204591d",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Qq",
+        "expected": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "actual": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "batteries",
+        "expected": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "actual": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "Cli",
+        "expected": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "actual": "2842b9871b04862f944c032e34052cb9448ccb71",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "leansqlite",
+        "expected": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "actual": "0d36e6d34f6861ed37185646b2e5d7a9eff46281",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "UnicodeBasic",
+        "expected": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "actual": "1daff5db5b332b2aa094cecd6b6fea657ef9ced4",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "BibtexQuery",
+        "expected": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "actual": "d73123f5b70ae67d3650bfea3b74faf4eaee2cfc",
+        "worktree_clean": true,
+        "worktree_status": ""
+      },
+      {
+        "name": "MD4Lean",
+        "expected": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "actual": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+        "worktree_clean": true,
+        "worktree_status": ""
+      }
+    ],
+    "syntax_check_of_first_unfinished_command": [
+      "lake",
+      "env",
+      "lean",
+      "--memory=4096",
+      "-DwarningAsError=true",
+      "CategoricalEssentialIncompleteness/V46SyntacticSyntaxState.lean"
+    ],
+    "resumed_at_utc": "2026-11-18T04:16:20.828099+00:00",
+    "command_plan_sha256": "e3a1659714c74a016f170826a6f503f56c6eeec59d70ac688328f4c7ef54aca5",
+    "completed_after_restart": 161,
+    "completed_at_utc": "2026-11-18T04:34:55.111581+00:00"
+  },
+  "command_plan_validation": {
+    "verified_ordered_commands_and_exit_statuses": 1965,
+    "matched_verifier_postconditions": true,
+    "verifier_source_sha256": "d6590f7ac0871e8ca6aefd7ac04cef281a3d1b1339c90faa14f676a97e82a44f",
+    "method": "Evaluated the repository verifier with its command executor replaced by a lookup that requires the exact command, log name and successful saved result in order. The verifier rechecked its source, dependencies, complete production-module coverage and both axiom audits."
+  },
+  "compiled_build_artifacts_rehashed": 81168,
+  "preceding_verification": "V62_REBUILT_RELABEL_VERIFICATION_2026-11-17.json",
+  "full_record_uncompressed_sha256": "1d76528aecf646fdceb942eb613290bf8b8f819b7925c7a6427736cfccf58de8",
+  "full_record_compressed_sha256": "1658766d6807a5482977a9e927fd536e571e3e6e974fb3131c4c83b046a32509",
+  "full_record_bytes": 8060212,
+  "compressed_bytes": 504007
+}

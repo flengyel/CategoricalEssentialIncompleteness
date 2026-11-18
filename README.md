@@ -63,6 +63,8 @@ and Git blob hashes.
 The current correspondence table is
 [FORMALIZATION_STATUS_V62.md](FORMALIZATION_STATUS_V62.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
+The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
+and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
 Corollary 10.9 is proved for the two actual fork partial-map slices and every
 consistent closed extension. Theorem 5.3 covers both the first-order calculus and the
 standalone propositional calculus of Appendix A.6, including nonconstant slice

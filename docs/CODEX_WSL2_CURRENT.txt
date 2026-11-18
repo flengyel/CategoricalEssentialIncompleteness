@@ -18,6 +18,9 @@ and modus ponens, arbitrary closed slice extensions, both directions of
 essential incompleteness and the Boolean no-total-extension conclusion.
 ForkAssociatedCategoriesChecks covers Corollary 10.9 on the actual fork
 partial-map slices. Keep the dated review as the record at v60 publication.
+The full v62 replay passed 1,965 commands, including 1,959 strict elaborations.
+The server restart split the replay after 1,804 successful commands.
+See docs/V62_FULL_VERIFICATION_2026-11-17.md.
 Preserve subsequent local and remote work.
 
 The proofs and conventions of the v59 continuation still apply. Its
