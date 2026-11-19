@@ -1,10 +1,10 @@
-# LaTeX sources — version 64
+# LaTeX sources — version 65
 
 **Logical consequence and essential incompleteness in recursion categories**,
 18 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v64.pdf`
-and `logical_consequence_v64_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v65.pdf`
+and `logical_consequence_v65_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All four appendices and
@@ -52,6 +52,8 @@ The output is `main.pdf`. The source package contains this directory as
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 65 identifies the restriction idempotent split in Lemma 5.1 and applies that lemma to the syntactic category in §6.1. The proofs of Theorems 5.2 and 5.3 name the object outside the essential image and evaluate an arbitrary closed slice extension. The introduction specifies standard sentence codes, and §8.7 identifies the free first-order theory of the arithmetic diagonal pair.
 
 Version 64 cites Cockett–Hofstra §3.5 in the proof of Lemma 5.1 and gives the total parameter after splitting.
 
@@ -117,7 +119,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 64 is the current manuscript and Lean verification target.
+Version 65 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.

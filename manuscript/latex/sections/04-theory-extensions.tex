@@ -2,8 +2,11 @@
 \label{sec:theory-extensions}
 
 An inclusion of internal theories induces a fully faithful functor between
-the Turing categories constructed in this section. We prove that their
-internal theories retain essential incompleteness.
+the Turing categories constructed in this section. Evaluation at a chosen
+logical theorem compares a theory with its constant family in the
+associated category. Under the deduction hypotheses of
+Theorem~\ref{thm:associated-incompleteness}, a consistent theory is
+essentially incomplete if and only if its constant family is.
 
 \subsection{Categories associated with internal theories}
 
@@ -60,8 +63,9 @@ $\overline{ae}=e$.
 Thus $\mathscr C$ is Turing.
 
 For $p:X\to T$, a total embedding $m_X:X\to Q$ gives a monomorphism
-$\langle p,m_X\rangle:X\hookrightarrow T\times Q$, whose partial
-inverse is a retraction over $T$. A computation over $T$ with source
+$m=\langle p,m_X\rangle:X\hookrightarrow T\times Q$. Its partial inverse
+$m^\dagger:T\times Q\rightharpoonup X$ is a retraction over $T$.
+A computation over $T$ with source
 $X\times Q\to T$ and target $T\times Q\to T$ is determined by a
 partial component $f:X\times Q\rightharpoonup Q$.
 Choose total $a:X\to Q$ with $f=\tau(a\times1_Q)$.
@@ -71,8 +75,13 @@ This proves the slice Turing property.
 The objects of $\mathscr R[T]$ are isomorphic and closed under binary
 restriction products. Their zeros satisfy the prodominical identity,
 and the same parameterization proves the Turing property.
-Every object of $\mathscr C[T]$ is a retract of $T\times Q\to T$
-by a total embedding, so splitting $\mathscr R[T]$ gives $\mathscr C[T]$.
+For each $p:X\to T$, the graph embedding $m$ above satisfies
+$m^\dagger m=1_X$ and $mm^\dagger=\overline{m^\dagger}$ over $T$.
+Thus $m$ and $m^\dagger$ split the restriction idempotent
+$\overline{m^\dagger}$ on $T\times Q\to T$ through $p$.
+Since $\mathscr R[T]$ is full and $\mathscr C[T]$ is split,
+the inclusion $\mathscr R[T]\hookrightarrow\mathscr C[T]$ induces
+the claimed restriction equivalence.
 \end{proof}
 
 Fix a propositional or first-order deductive system in $\mathcal D$
@@ -145,8 +154,10 @@ and prove the adjunctions. The unit of the second adjunction at $q$
 is the partial identity with domain $T\times_UY\hookrightarrow Y$.
 
 Every image object factors through $i$. If $1_U:U\to U$ were
-isomorphic to one, $1_U$ would factor through $i$. A monic split
-epimorphism is an isomorphism, proving properness.
+isomorphic to one, the resulting factorization of $1_U$ through $i$
+would make $i$ a split epimorphism and hence, by monicity, an
+isomorphism. For proper $i$, the object $1_U$ therefore lies outside
+the essential image of $\Sigma_i$.
 The comparison identity
 $(1_U\times u)(i\times i)=(i\times1_S)(1_T\times t)$
 follows from $ui=t$. Pullback of the sentence family gives $T\times S$,
@@ -216,20 +227,21 @@ $\widetilde u$ in its associated category. The partial morphism $\widetilde\delt
 \begin{proof}
 Products with $U$ and pullback along $\lambda_U$ preserve the finite
 limits, images, and finite coproducts used for consistency and
-completeness. They also preserve closed theories for the indicated
-calculi. Let $v$ be a closed sentence theory in the domain of either
-functor, and let $C(v)$ be its closed formula subobject. Preservation
-of the finite rule diagrams gives a rule algebra on the image of
-$C(v)$ containing the image of the axioms $v$. The initial derivation
-algebra for these image axioms maps to that rule algebra, so its
-conclusion morphism factors through the image of $C(v)$. Taking
-images and restricting to sentences proves that the image of $v$
-is closed. This uses the assumed deduction construction in the
-slice when $v$ is a theory over $U$.
+completeness. Write $F$ for $B_U$ or $E_U$. For a closed sentence
+theory $v$ in its domain, let $C(v)$ be the formula subobject generated
+by $v$. Applying $F$ to the finite rule diagrams
+equips the transported formula subobject $F(C(v))$ with a rule algebra
+containing the axiom subobject $Fv$. The initial derivation algebra for
+$Fv$ in the target maps to this algebra, so the regular image of its
+conclusion morphism lies in $F(C(v))$. Since $C(v)$ restricts to $v$
+on sentences and $F$ preserves this pullback, restriction to sentences
+gives $\operatorname{Gen}(Fv)\leq Fv$. Axiom introduction gives the
+reverse inclusion. Thus $Fv$ is closed.
 
-A consistent complete extension of $u$ therefore gives one of $B_U(u)$
-by $B_U$, and such an extension of $B_U(u)$ gives one of $u$ by $E_U$.
-The isomorphism $E_UB_U\cong1$ identifies the base theory with $u$.
+A consistent complete closed extension of $u$ therefore gives one of
+$B_U(u)$ by $B_U$. Conversely, let $W$ be any consistent complete
+closed extension of $B_U(u)$ in the slice. Then $E_U(W)$ is a
+consistent complete closed extension of $E_UB_U(u)\cong u$.
 This proves the essential-incompleteness equivalence.
 
 The same retraction proves that $\delta_u$ is total exactly when

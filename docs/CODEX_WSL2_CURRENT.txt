@@ -2,18 +2,36 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 18 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 64.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V64.md.
-The proof of Lemma 5.1 cites Cockett–Hofstra, §3.5, for extending the
-Turing morphism to the restriction idempotent completion. The numbered
-statements and their Lean counterparts agree with version 63. Comparing
-the source archives by result label confirms that 5.1 is the only proof
-that changed from v63 to v64. The other 76 proof environments match.
-SplitTuring.parameter_total and SplitTuring.evaluator_isTuring prove the
-totality and evaluator equations in the revised paragraph.
-The v64 manuscript gate and strict elaboration of V46SplitTuring and
-V46SplitTuringChecks passed. All six selected declarations report only
-propext. The latest full replay is the v62 run recorded below.
+The current manuscript and verification target are version 65.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V65.md.
+The printed proofs of Lemma 5.1 and Theorems 5.2 and 5.3 now spell out
+the graph splitting, the obstruction to essential surjectivity and the
+closure argument for an arbitrary consistent complete slice extension.
+Section 6.1 applies Lemma 5.1 to the original evaluator of the syntactic
+category. The introduction names standard sentence codes, and Section
+8.7 introduces the free theory of the arithmetic diagonal pair.
+The v64 referee and writing reports are in docs/reviews/V64_2026-11-18/.
+Comparing the published source packages by label found all 77 printed
+result statements and three numbered definitions byte-identical, with 74
+identical proof environments. The archive rebuilt to 88 pages, with all
+39 bibliography entries cited. The v65 manuscript gate and all six
+axiom-parser tests passed.
+
+Incremental v65 checks used the following strict Lean modules, each with
+prefix CategoricalEssentialIncompleteness.V46 and suffix Checks:
+SplitTuring, SliceTuringParameters, PartialSliceTuringTheorem,
+TheoryExtensions, AssociatedIncompleteness, PropositionalAssociatedIncompleteness,
+SyntacticPredicatesRegular, ArithmeticSentenceInseparability,
+ArithmeticUniformIndependent, and ArithmeticSignedTheory.
+The supplemental axiom query covered SyntacticPredicates.totalSplitRegular,
+SyntacticPredicates.totalSplit_mono_partial_inverse,
+ArithmeticSentenceInseparability.recursively_inseparable, and
+ArithmeticUniformIndependent.uniform_independent_sentences. The 161 reports
+for 160 distinct declarations matched the full v62 audit and used only
+permitted axioms. All 16 dependencies were clean at their pins. The
+2,574 Lean, configuration, provenance and verification inputs matched
+the v62 replay snapshot by SHA-256, including all 2,563 Lean sources.
+The latest full replay is the v62 run recorded below.
 
 An independent comparison of the versioned source archives and Git trees
 matched the 77 numbered results and three definitions from v59 through v62.
