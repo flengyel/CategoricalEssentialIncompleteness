@@ -34,9 +34,9 @@ taking a consistent theory to its theorem and refutation subobjects
 (Theorem~\ref{thm:free-first-order-adjunction}). The atomic sentence
 constructor takes $a$ into the theorems and $b$ into the refutations.
 A separator of the pair supplies a Boolean valuation
-whose true sentences form a consistent complete extension. Thus every
-consistent internal extension of $T_{a,b}$ is incomplete exactly when
-$(a,b)$ is inseparable (Corollary~\ref{cor:signed-first-order-incompleteness}).
+whose true sentences form a consistent complete extension. If $T_{a,b}$ is consistent, every consistent internal extension of $T_{a,b}$
+is incomplete exactly when $(a,b)$ is inseparable
+(Corollary~\ref{cor:signed-first-order-incompleteness}).
 More generally, any total reduction of an inseparable pair to the theorem
 and refutation subobjects of a consistent theory proves its essential
 incompleteness (Corollary~\ref{cor:domain-incompleteness}).
@@ -58,9 +58,9 @@ extension exactly when the original theorem and refutation subobjects are separa
 To compare a recursion category $\mathscr R$ with an interpretation,
 let $F:\mathscr R\to\mathcal A$ be a range functor into a split
 restriction category. Such a functor preserves restrictions, ranges,
-zeros and binary restriction coproducts. Let $U$ be the Turing object
-and let $P,N$ be disjoint domains on $FU$ containing the images of the
-two diagonal domains of Section~\ref{sec:lifting}. Suppose a partial morphism
+zeros and binary restriction coproducts. Let $a_0,a_1$ be the diagonal domains on the Turing object $U$ defined in
+Section~\ref{sec:lifting}. Let $P,N$ be disjoint domains on $FU$ with
+$F(a_0)\le P$ and $F(a_1)\le N$. Suppose a partial morphism
 $FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
 respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
 gives a total morphism $g:U\to U$ such that the inverse images of
@@ -79,9 +79,10 @@ $S_{\PA}$ represents computably enumerable (c.e.) extensions of $\PA$
 by internal theories. Let $M$ be the standard arithmetic model $\N$ or
 an ultrapower of that model. Interpreting program graphs in $M$ gives a
 range functor $F_M:S_{\PA}\to\Pfn$, where $\Pfn$ is the category of
-sets and partial functions. Soundness for a model of the represented axioms and the comparison theorem
-give incompleteness of both the internal theory and its interpretation
-for each consistent c.e.~extension of PA
+sets and partial functions. For each consistent c.e.~extension of PA, choose a model $K$ of its axioms.
+Soundness in $K$ and the comparison theorem give incompleteness of the
+internal theory and of its interpretation under $F_M$ for each of the
+arithmetic models $M$ just specified
 (Theorem~\ref{thm:arithmetic-internal-comparison}).
 For each such extension, the sets of standard codes of its provable
 sentences and of its refutable sentences are recursively inseparable
@@ -97,9 +98,10 @@ The second realization uses a sequence $a:\N\to[0,1]$ constructed by
 Miller \cite{Miller2004}.
 Bauer and Hanson used it to construct a parameterized realizability
 topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
-We take the recursion category of partial numerical functions computable
-by one oracle program with the same domain and values from every binary
-representation of $a$. Each representation computes a separator of
+A partial numerical function $f$ is a morphism of the recursion category used
+here exactly when a single oracle program computes $f$ from every binary representation
+of $a$, with domain of definition exactly that of $f$.
+Each representation computes a separator of
 $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
 separator from every representation
 (Corollary~\ref{cor:miller-cuts-inseparable}). In the completion we
@@ -114,7 +116,10 @@ consistent internal extension is essentially incomplete in its associated catego
 The third realization uses cosheaves on a three-point space. The
 recursion category constructed from them is not equivalent as a
 restriction category to the category of partial recursive functions.
-Its completion realizes propositional logic. At either endpoint the propositional theory is consistent and every
+The total category of its completion contains an initial algebra of
+propositional formulas and an initial algebra of derivations from the signed
+atomic axioms and the logical schemes by modus ponens. At either endpoint
+the propositional theory is consistent and every
 consistent extension in the same language with a c.e.~axiom set is
 incomplete (Corollary~\ref{cor:cosheaf-essential-incompleteness}).
 A conservative first-order extension of the internal propositional theory
@@ -128,8 +133,8 @@ Rosolini's $P$-categories generalized dominical categories
 \cite{RosoliniThesis,Rosolini}. Heller used them to define
 prodominical categories \cite[Section~5]{Heller}.
 We use the restriction categories of Cockett and Lack
-\cite{CockettLack}. Binary restriction products give their equivalent
-$P$-category formulation \cite[Proposition~4.5]{CockettLackIII}.
+\cite{CockettLack}. A restriction category admits a $P$-category structure exactly when it has
+binary restriction products \cite[Proposition~4.5]{CockettLackIII}.
 Heller's existence theorem \cite[Sections~8--9]{Heller} and
 Lengyel's existence theorems using faithful iteration functors
 \cite{Lengyel2004,Corrections} concern the construction of recursion

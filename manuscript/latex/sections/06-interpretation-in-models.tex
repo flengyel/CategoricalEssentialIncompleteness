@@ -235,8 +235,9 @@ their semantic clauses. For $\forall y\,\psi$, assignments agreeing
 on its free variables yield, after changing $y$ to the same
 $b\in|K|$, assignments agreeing on the free variables of $\psi$.
 The induction hypothesis for $\psi$ therefore proves the assertion
-for the quantified formula. The free-variable lists of
-Proposition~\ref{prop:st-substitution-realization} satisfy these equations.
+for the quantified formula. The free-variable lists computed in
+Proposition~\ref{prop:st-substitution-realization} record the free occurrences
+used in this induction.
 
 Induction on $r$ proves the term identity. At a variable it is the
 two-case definition of substitution; at a function application it

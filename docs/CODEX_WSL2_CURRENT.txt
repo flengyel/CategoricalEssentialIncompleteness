@@ -2,36 +2,26 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 18 November 2026
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 65.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V65.md.
-The printed proofs of Lemma 5.1 and Theorems 5.2 and 5.3 now spell out
-the graph splitting, the obstruction to essential surjectivity and the
-closure argument for an arbitrary consistent complete slice extension.
-Section 6.1 applies Lemma 5.1 to the original evaluator of the syntactic
-category. The introduction names standard sentence codes, and Section
-8.7 introduces the free theory of the arithmetic diagonal pair.
-The v64 referee and writing reports are in docs/reviews/V64_2026-11-18/.
-Comparing the published source packages by label found all 77 printed
-result statements and three numbered definitions byte-identical, with 74
-identical proof environments. The archive rebuilt to 88 pages, with all
-39 bibliography entries cited. The v65 manuscript gate and all six
-axiom-parser tests passed.
+The current manuscript and verification target are version 66.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V66.md.
+The sentence review of v65 and the corrections made in v66 are in
+docs/reviews/V65_SENTENCES_2026-11-18/review.md. The section ledgers
+preserve the v65 wording and give the source lines of the v66 corrections.
 
-Incremental v65 checks used the following strict Lean modules, each with
-prefix CategoricalEssentialIncompleteness.V46 and suffix Checks:
-SplitTuring, SliceTuringParameters, PartialSliceTuringTheorem,
-TheoryExtensions, AssociatedIncompleteness, PropositionalAssociatedIncompleteness,
-SyntacticPredicatesRegular, ArithmeticSentenceInseparability,
-ArithmeticUniformIndependent, and ArithmeticSignedTheory.
-The supplemental axiom query covered SyntacticPredicates.totalSplitRegular,
-SyntacticPredicates.totalSplit_mono_partial_inverse,
-ArithmeticSentenceInseparability.recursively_inseparable, and
-ArithmeticUniformIndependent.uniform_independent_sentences. The 161 reports
-for 160 distinct declarations matched the full v62 audit and used only
-permitted axioms. All 16 dependencies were clean at their pins. The
-2,574 Lean, configuration, provenance and verification inputs matched
-the v62 replay snapshot by SHA-256, including all 2,563 Lean sources.
-The latest full replay is the v62 run recorded below.
+The v66 archive rebuilt to 88 pages. All 77 printed result statements
+and three numbered definitions match v65 byte for byte. Sixteen numbered
+proofs have prose revisions, listed in the v66 correspondence. All 39
+bibliography entries have citations. All six axiom-parser tests passed.
+
+Incremental v66 verification passed CurrentStatementAudit,
+V46ArithmeticSignedTheoryChecks, V46SignedFirstOrderAdjunctionChecks,
+V46AssociatedIncompletenessChecks and V46ForkFirstOrderErasureChecks.
+The complete CurrentAxiomAudit (31,896 declarations in 1,068 modules)
+and the retained AxiomAudit (1,274 declarations) matched the v62 results.
+All 16 dependencies were clean at their pins and all 2,574 Lean,
+toolchain, provenance and verification inputs matched the v62 replay
+snapshot, including all 2,563 Lean sources. The last full replay was v62.
+The v65 incremental verification record remains in FORMALIZATION_STATUS_V65.md.
 
 An independent comparison of the versioned source archives and Git trees
 matched the 77 numbered results and three definitions from v59 through v62.

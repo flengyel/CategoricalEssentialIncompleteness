@@ -214,8 +214,8 @@ finite unions, respectively.
 Use the recursive bijection $\operatorname{encode}_2:\N^2\to\N$,
 its inverse $\operatorname{decode}_2:\N\to\N^2$, and the acceptable numbering
 $(\varphi_p)_{p\in\N}$ chosen in the construction of $\tau$ in
-Appendix~\ref{app:fork-structure}. For $i=1,2$, its component is
-given by \eqref{eq:fork-turing-endpoint}.
+Appendix~\ref{app:fork-structure}. For $i=1,2$, the component $\tau_i$ is given by
+\eqref{eq:fork-turing-endpoint}.
 For a partial recursive map
 $F:Z\times\N^2\rightharpoonup\N^2$ with c.e.\ carrier $Z$,
 the parameter theorem gives a total recursive map $s:Z\to\N$ such that
@@ -667,9 +667,9 @@ Appendix~\ref{app:first-order-derivations}. At each component,
 tree form, matching of premises, and the substitution and
 free-variable side conditions are recursive on their numerical
 codes. Membership of nonlogical axiom leaves is semidecidable.
-Thus the derivation carrier is c.e.\ Relabelling preserves each
-logical scheme and rule, and preserves nonlogical axiom leaves
-because the axioms form a subfunctor.
+Thus the derivation carrier is computably enumerable. Relabelling preserves
+each logical scheme and rule and carries nonlogical axiom leaves to nonlogical
+axiom leaves because the axioms form a subfunctor.
 
 Evaluation of derivation trees in an algebra for the inference
 endofunctor is total on their carriers. Its algebra equation is
@@ -749,8 +749,10 @@ For example, the first two propositional schemes give
 \end{aligned}
 \]
 Two applications of modus ponens yield $H\Rightarrow H$.
-Substitution gives the second and third displayed formulas, and
-the first propositional scheme then gives the fourth.
+Taking $H\Rightarrow K$ and $p_*$ in turn as instances of the metavariable in
+the theorem $H\Rightarrow H$ gives the second formula and $\top$. The first
+propositional scheme and modus ponens applied to $H\Rightarrow H$ give
+$\top\Rightarrow(H\Rightarrow H)$.
 Leastness of the generated formula theory proves
 \[
  T_{\mathrm f}^F\le r^*T_{\mathrm p}.

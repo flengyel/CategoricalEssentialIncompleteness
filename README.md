@@ -3,15 +3,16 @@
 From two disjoint domains in the restriction idempotent completion of a
 recursion category we construct a first-order theory that, if consistent,
 is essentially incomplete exactly when the domains are inseparable.
-The theory is internal to the category of total morphisms in this
-completion, with nonlogical axioms asserting the nullary predicates
-indexed by one domain and negating those indexed by the other.
+The theory is internal to the category of total morphisms in the completion.
+Its nonlogical axioms assert the nullary predicates indexed by the first
+domain and the negations of the predicates indexed by the second.
 On pairs generating consistent theories, the construction is left adjoint
 to the functor taking a consistent internal theory to its theorem and
-refutation subobjects. We assume the total category is regular with
-disjoint pullback-stable finite coproducts,
-admits initial algebras for parameterized syntax and finite derivations,
-and has partial inverses in the completion for its monomorphisms.
+refutation subobjects. We assume that the total category is regular with
+disjoint pullback-stable
+finite coproducts and that its monomorphisms have partial inverses in the
+completion. We require parameter-stable syntax and list algebras and an
+initial derivation algebra for each axiom subobject under consideration.
 
 For a consistent theory, partial maps in the slice over its theorem
 subobject form a Turing category. With parameterized deduction in the
@@ -19,19 +20,20 @@ slices and a chosen global logical theorem, the theory is essentially
 incomplete exactly when every consistent closed extension of its
 constant family in that slice is incomplete.
 
-In the completed syntactic recursion category for Peano arithmetic, the
-numerical interpretation of one total morphism gives an independent
-sentence from each index for a consistent computably enumerable
-extension. For a Miller sequence, we expand the theory of real closed
+In the completed syntactic recursion category for Peano arithmetic (PA), the
+numerical interpretation of one total morphism takes each index for a
+computably enumerable axiom presentation of a consistent extension of PA
+to the code of a sentence independent of that extension.
+For a Miller sequence, we expand the theory of real closed
 ordered fields by constants naming its terms and axioms giving their
 strict rational bounds.
 Every consistent extension whose axioms one oracle program semidecides
 from every binary representation of the sequence is incomplete.
-In a cosheaf construction on a three-point space, each endpoint
-has a consistent propositional theory whose consistent computably
-enumerable extensions in its language are all incomplete.
+In a cosheaf construction on a three-point space, each endpoint has a
+consistent propositional theory. Every consistent extension in the same
+language with a computably enumerable axiom set is incomplete.
 
-The current manuscript and Lean formalization target are **version 65**,
+The current manuscript and Lean formalization target are **version 66**,
 dated 18 November 2026.
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
@@ -42,10 +44,10 @@ axioms in its language is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v65.pdf](manuscript/logical_consequence_and_essential_incompleteness_v65.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v66.pdf](manuscript/logical_consequence_and_essential_incompleteness_v66.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v65_source.zip](manuscript/logical_consequence_v65_source.zip) |
+| Complete source ZIP | [logical_consequence_v66_source.zip](manuscript/logical_consequence_v66_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
@@ -61,8 +63,10 @@ and Git blob hashes.
 
 ## Lean status
 
+The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
+
 The current correspondence table is
-[FORMALIZATION_STATUS_V65.md](FORMALIZATION_STATUS_V65.md). It records 77
+[FORMALIZATION_STATUS_V66.md](FORMALIZATION_STATUS_V66.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
@@ -180,7 +184,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v65.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v66.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

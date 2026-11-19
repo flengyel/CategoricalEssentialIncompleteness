@@ -63,8 +63,8 @@ if such an $n$ exists, its least value supplies a finite
 halting computation. Formalized least-number search and the
 computation coding therefore prove the first two assertions.
 If $T$ also proves functionality, any pair satisfying $\Gamma$
-has the same output as this search. This gives the
-last universal graph equivalence.
+has the same output as this search. Hence $T$ proves the universal equivalence of $G_{a_\Gamma}(x,y)$ and
+$\Gamma(x,y)$.
 \end{proof}
 
 \begin{lemma}\label{lem:syntactic-total-category}
@@ -498,8 +498,10 @@ $P$, and its cons operation has source
 $(P\times V)\times_P X$. Evaluate a list from its final entry
 back to its first entry, starting with the nil value in the fiber
 over $p$. A finite sequence records these values and the
-codes of halting computations of the two algebra operations. As above, this
-defines a $\Sigma_1$ relation. Induction in $T$ on length proves
+codes of halting computations of the two algebra operations. Lemma~\ref{lem:st-finite-sigma1} combines the finitely many carrier and
+computation conditions into a $\Sigma_1$ condition on the evaluation sequence.
+Existential quantification over its code gives a $\Sigma_1$ evaluation
+relation. Induction in $T$ on length proves
 its totality, functionality, and preservation of the projection to
 $P$. Lemma~\ref{lem:syntactic-functional-search} makes it a morphism.
 The nil and cons equations follow by splitting the evaluation sequence,

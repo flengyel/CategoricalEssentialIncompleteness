@@ -44,8 +44,8 @@ Axiom introduction gives $A\leq\operatorname{Gen}(A)$, and
 leastness of $C(A)$ gives monotonicity. The closed formula
 subobject $C(A)$ contains $j_!\operatorname{Gen}(A)$, whence
 $C(\operatorname{Gen}(A))\leq C(A)$. Pullback along $j$ and
-extensivity prove idempotence. The equivalence follows
-from these three properties. A morphism in $\mathcal D/S$ from
+extensivity prove idempotence. For a theory $T$, monotonicity and $\operatorname{Gen}(T)=T$ give
+$\operatorname{Gen}(A)\leq T$ if $A\leq T$. Extensivity gives the converse. A morphism in $\mathcal D/S$ from
 $a:A\to S$ to $J(T)$ exists uniquely exactly when $\im a\leq T$.
 The equivalence identifies this hom-set with the hom-set from
 $\Gamma(a)$ to $T$ in the theory order, naturally in both objects.
@@ -212,8 +212,8 @@ $L\operatorname{Gen}_1\leq\operatorname{Gen}_2L$.
 Apply $\operatorname{Gen}_2$ and use extensivity and idempotence
 to obtain the first identity. Regularity identifies the image
 of $K(a)$ with $L(\im a)$, proving the second identity.
-The unique factorization through that image and its closure defines
-the comparison. Uniqueness proves naturality.
+For each theory $T$, the unique factorization of $KJ_1(T)$ through
+$J_2L^{\mathrm{th}}(T)$ defines the component of the comparison at $T$. Uniqueness proves naturality.
 For a closed $B$, adjunction gives $LRB\leq B$, and hence
 \[
  L\operatorname{Gen}_1(RB)
@@ -234,8 +234,9 @@ Transposition identifies the factorizations defining this
 adjunction. The derivation-comparison hypothesis can be proved
 from rule-instance morphisms as follows. Suppose
 $\sigma_{\Phi}:G\Phi_1\to\Phi_2$ extends $\sigma$, and put
-$K_{\Phi}(q)=\sigma_{\Phi}Gq$. Its right adjoint $R_{\Phi}$ is
-given by the same pullback construction. If the rule morphisms
+$K_{\Phi}(q)=\sigma_{\Phi}Gq$. Under the same adjunction $G\dashv H$, its right adjoint $R_{\Phi}$ is given
+by pullback along $H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$ after
+applying $H$. If the rule morphisms
 give a natural transformation
 \[
  \lambda:K_{\Phi}H_A\to H_{L(A)}K_{\Phi},
@@ -257,9 +258,9 @@ restricting to sentence conclusions gives $p_A$.
 
 Assume additionally that every monomorphism of $\mathcal D$ has a
 partial inverse in $\mathscr S$. Subobjects then identify with
-restriction idempotents. Corollary~\ref{cor:domain-incompleteness}
-implies essential incompleteness whenever an inseparable pair
-reduces to its theorem and refutation subobjects.
+restriction idempotents. A consistent sentence theory is essentially incomplete if a total morphism
+reduces an inseparable pair to its theorem and refutation subobjects
+(Corollary~\ref{cor:domain-incompleteness}).
 
 Fix the decidable variable object $V$ of
 Appendix~\ref{app:categorical-hypotheses}. Suppose that for every

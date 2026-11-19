@@ -29,8 +29,9 @@ $F_T(1_\omega)\ne0$.
 \end{theorem}
 \begin{proof}
 Preservation follows coordinatewise from Proposition~\ref{prop:model}.
-If $[e]_T\ne[f]_T$, let $E$ denote the sentence
-in \eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
+Suppose $[e]_T\ne[f]_T$. Let $E$ be the sentence asserting that the program
+graphs $G_e$ and $G_f$ agree on every input and output, as in
+\eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
 Completeness and downward L\"owenheim--Skolem give
 $M\in\mathcal M_T$ in which the two graphs differ. Hence
 $F_M([e]_T)\ne F_M([f]_T)$, so $F_T([e]_T)\ne F_T([f]_T)$.

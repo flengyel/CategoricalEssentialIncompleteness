@@ -171,8 +171,8 @@ the functor $\Sigma_i$ can be written
 \]
 It preserves binary restriction products. For proper $i$, its image of
 the terminal object is $i:T\to U$, so it does not preserve the
-restriction terminal object. The unit described above is generally
-partial.
+restriction terminal object. At $q:Y\to U$, the unit is total precisely when $q$ factors through
+$i:T\hookrightarrow U$.
 
 \subsection{Essential incompleteness in the associated category}
 
@@ -246,13 +246,17 @@ This proves the essential-incompleteness equivalence.
 
 The same retraction proves that $\delta_u$ is total exactly when
 $B_U(\delta_u)$ is total. By definition, $\delta_u$ is total exactly
-when $u$ is complete. A total extension of $\delta_u$ is exactly a
-separator of its theorem and refutation subobjects. Either functor
+when $u$ is complete. The true and false fibers of a total extension of $\delta_u$ separate $u$ and
+$\nu^*u$. Conversely, a complementary separator of these subobjects defines a
+total extension of $\delta_u$. Either functor
 carries a total extension to a total extension. The retraction therefore
 proves the second equivalence.
 Finally, Corollary~\ref{cor:domain-incompleteness} makes the theorem and
 refutation subobjects of every consistent extension of $t$ inseparable.
-Apply the two equivalences just proved.
+Every consistent extension of $u$ also extends $t$, so $u$ is essentially
+incomplete. The equivalence for constant families gives essential
+incompleteness of $\widetilde u$, and inseparability of $u,\nu^*u$ excludes a
+total extension of $\widetilde\delta_u$.
 \end{proof}
 
 For example, in the category of partial recursive functions, every

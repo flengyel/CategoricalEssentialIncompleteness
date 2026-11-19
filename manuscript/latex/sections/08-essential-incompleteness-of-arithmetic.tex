@@ -210,9 +210,9 @@ joins, and $F_M(1_\omega)\ne0$ because $M$ is nonempty.
 Lemma~\ref{lem:arithmetic-diagonal-representation} gives the
 two reduction inequalities. Lemma~\ref{lem:arithmetic-proof-search}
 gives the partial conditional and its source lift.
-The theorem therefore proves that the join of the two interpreted
-restriction idempotents is not the identity, and gives
-$t_\Gamma\vee\nu^*t_\Gamma\ne1_S$.
+Theorem~\ref{thm:logical-comparison} shows that the interpreted theorem domain
+and its inverse image under interpreted negation have join strictly below the
+identity. In the source it gives $t_\Gamma\vee\nu^*t_\Gamma\ne1_S$.
 For $M=\N$, it supplies a total morphism $g:\omega\to\omega$
 in $S_{\PA}$. With $\gamma=F_{\N}(g)$, the two inverse-image
 equalities in that theorem become
@@ -391,19 +391,19 @@ when $n$ occurs in $L$. Assign every equality the value true,
 interpret negation and implication by their Boolean operations,
 and give $\forall v\,\psi$ the value of $\psi$.
 
-Every positive axiom leaf is true by construction. A negative
-axiom leaf has label satisfying $\beta$ and therefore cannot
-belong to $L$, by the disjointness formula. It too is true.
+Every positive axiom leaf is true by construction. The label of each negative axiom leaf satisfies $\beta$. Since every entry of
+$L$ satisfies $\alpha$, disjointness excludes this label from $L$. The negative axiom therefore has value true.
 Substitution leaves this valuation unchanged because predicates
 are nullary and equality is always true. Hence all the logical
 schemes are true, and modus ponens and generalization preserve
 truth. Induction on each derivation makes both $\varphi$ and its
 negation true, a contradiction.
 
-The list $L$, its membership test, and the two inductions are
-primitive recursive constructions on the derivation codes.
-Their correctness is provable in PA, using only the displayed
-disjointness formula and the syntax equations. Thus PA proves
+Extraction of the positive labels, membership in the resulting list, and
+Boolean evaluation of a formula are primitive recursive on the codes.
+In PA, induction on each coded derivation proves that its conclusion has value
+true for the common list $L$. The negative-leaf case uses the disjointness of
+$\alpha$ and $\beta$. Thus PA proves
 that no such pair of derivations exists. In the predicate
 presentation of $\mathcal B_{\PA}$ this is precisely
 \[
