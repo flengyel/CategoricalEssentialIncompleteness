@@ -1,0 +1,24 @@
+name: Palomar full mechanical preflight
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Full 40-character public candidate commit
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ inputs.commit }}
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: preflight001
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"project_path":"Lean","comparator_config_path":"Lean/comparator.json","formalization_metadata_path":"Lean/formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}'

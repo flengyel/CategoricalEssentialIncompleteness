@@ -41,3 +41,7 @@ name = "FailureOfComposition"
 
 [[lean_lib]]
 name = "CategoricalEssentialIncompleteness"
+
+[[lean_lib]]
+name = "CEIPalomar"
+globs = ["CEIPalomar.+"]
