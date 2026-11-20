@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
+          fetch-depth: 2
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           lake-package-directory: Lean
@@ -23,9 +24,27 @@ jobs:
           build: false
           use-github-cache: false
           use-mathlib-cache: true
+      - name: Inspect the original mismatch
+        if: github.event.before == '79ac85f14e11c33889472feaf752636cbc41a163'
+        working-directory: Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          solution=CEIPalomar/Solution.lean
+          saved="$RUNNER_TEMP/candidate-solution.lean"
+          cp "$solution" "$saved"
+          trap 'cp "$saved" "$solution"' EXIT
+          git show 'HEAD^:Lean/CEIPalomar/Solution.lean' > "$solution"
+          lake build +CEIPalomar.Challenge +CEIPalomar.Solution
+          for side in Challenge Solution; do
+            lake env leanexport "CEIPalomar.$side" -- CEIPalomar.Calculus.consistent > "$RUNNER_TEMP/original-$side.export"
+          done
+          python3 ../scripts/inspect_cei_exports.py "$RUNNER_TEMP/original-Challenge.export" "$RUNNER_TEMP/original-Solution.export"
       - name: Build the challenge and solution
         working-directory: Lean
-        run: lake build +CEIPalomar.Challenge +CEIPalomar.Solution
+        run: |
+          git diff --exit-code HEAD -- CEIPalomar
+          lake build +CEIPalomar.Challenge +CEIPalomar.Solution
       - name: Inspect the exported definition of consistency
         working-directory: Lean
         shell: bash
@@ -34,7 +53,7 @@ jobs:
           for side in Challenge Solution; do
             lake env leanexport "CEIPalomar.$side" -- CEIPalomar.Calculus.consistent > "$RUNNER_TEMP/$side.export"
           done
-          lake env lean --run ../scripts/inspect_cei_exports.lean "$RUNNER_TEMP/Challenge.export" "$RUNNER_TEMP/Solution.export"
+          python3 ../scripts/inspect_cei_exports.py "$RUNNER_TEMP/Challenge.export" "$RUNNER_TEMP/Solution.export"
       - name: Check the Comparator sandbox
         run: |
           if ! command -v bwrap >/dev/null; then
