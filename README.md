@@ -68,6 +68,7 @@ The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) index
 The current correspondence table is
 [FORMALIZATION_STATUS_V66.md](FORMALIZATION_STATUS_V66.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
+The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) links each result and definition to its Lean declarations.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
 Corollary 10.9 is proved for the two actual fork partial-map slices and every
