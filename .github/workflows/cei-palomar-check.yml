@@ -26,6 +26,15 @@ jobs:
       - name: Build the challenge and solution
         working-directory: Lean
         run: lake build +CEIPalomar.Challenge +CEIPalomar.Solution
+      - name: Inspect the exported definition of consistency
+        working-directory: Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          for side in Challenge Solution; do
+            lake env leanexport "CEIPalomar.$side" -- CEIPalomar.Calculus.consistent > "$RUNNER_TEMP/$side.export"
+          done
+          lake env lean --run ../scripts/inspect_cei_exports.lean "$RUNNER_TEMP/Challenge.export" "$RUNNER_TEMP/Solution.export"
       - name: Check the Comparator sandbox
         run: |
           if ! command -v bwrap >/dev/null; then
