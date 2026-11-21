@@ -1,0 +1,37 @@
+# Appendix E of *Logical consequence and essential incompleteness in recursion categories*
+
+Author-side mathematical review of [v67, pp. 86–88](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f43b0ceee74aa131fec24a8c82801f1b8fe6042d/manuscript/latex/appendices/e-reading-lean-proofs.tex). Source line numbers below refer to that appendix. The comparison uses the manuscript theorems and the [Lean source cited by v67](https://github.com/flengyel/CategoricalEssentialIncompleteness/tree/a65aeb4d5aae48ef9d71bd3352f8935e7612e434/Lean).
+
+## (A) Kill-shots / hard blockers
+
+No counterexample to a numbered theorem was found. E.5 conflates two subobjects in a sentence explaining deductive closure. E.4 omits the inference from totality of a particular interpreted morphism to totality of a proposed lift. Both defects admit local repairs.
+
+## (B) Major weaknesses
+
+- **E.5, p. 87, lines 101–103.** The claim that “initiality puts the conclusions of derivations in the evaluated subobject” is ill-typed if the evaluated subobject is the sentence subobject specified immediately before it. Derivations can conclude open formulas. For example, the reflexivity axiom of Appendix A admits the instance $x=x$. In Theorem 5.3 the conclusion image first lies in the transported *formula* subobject. Restricting to sentences gives the inclusion in the evaluated sentence subobject. Axiom introduction supplies the reverse inclusion. Evidence comes from the counterexample to the unrestricted wording and the derivation in the [proof of Theorem 5.3](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f43b0ceee74aa131fec24a8c82801f1b8fe6042d/manuscript/latex/sections/04-theory-extensions.tex#L228-L239). This affects the explanation of how a closed slice theory gives a closed theory in a fiber.
+
+## (C) Minor issues
+
+| Location and claim | Finding and consequence | Local repair and evidence |
+|---|---|---|
+| E.1, p. 86, lines 19–23, “substitution preserves the assignment” | Ambiguous. The assignment is a morphism into the object of sentences. The property needed for a translation concerns substitution into arbitrary formulas and terms. | State that admissible substitution fixes the closed images of nullary predicates and that induction makes the extended interpretation commute with substitution. The two inequalities place the images of the signed axioms in the target theory. See the [printed proof](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f43b0ceee74aa131fec24a8c82801f1b8fe6042d/manuscript/latex/sections/03b-internal-adjunctions.tex#L317-L327). |
+| E.2, p. 86, lines 47–52, application of the second conjunct to the Boolean theory | Unproved in the précis. A complete theory only contradicts essential incompleteness if it is a consistent closed *extension*. | The given assignment satisfies both signs, so its true sentences contain the generators. The three premises after the theory argument are visible in [the Lean application](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/a65aeb4d5aae48ef9d71bd3352f8935e7612e434/Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean#L63-L69). |
+| E.3, p. 87, lines 56–73, “consistency hypothesis for the arithmetic diagonal pair” | Ambiguous object of the consistency assertion. The pair is disjoint and inseparable. Its generated theory is consistent. | Name the theory $t_{\pm}$. Induction on coded derivations uses the truth of logical axioms and preservation of truth by the rules as well as the values of the signed nonlogical leaves. The [manuscript argument](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f43b0ceee74aa131fec24a8c82801f1b8fe6042d/manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex#L380-L411) proves the relevant PA sentence. |
+| E.4, p. 87, lines 85–93, “the two given inclusions” and “Hence the conditional has no lift” | Unproved inference in the précis. The statement of Theorem 3.1 permits a partial lift. A proposed lift need not have been assumed total. | Name the inclusions $F(a_0)\le P$, $F(a_1)\le N$ and the equations obtained from the reversed summands. In C.1 a lift has the same underlying partial function as the total conditional, so it is total and therefore recursive. [Lean proof of totality and the contradiction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/a65aeb4d5aae48ef9d71bd3352f8935e7612e434/Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean#L89-L103). |
+| E.6, p. 88, lines 109–117, “all consistent presentations” and “the diagonal output” | Ambiguous scope and referent. The indexed presentations contain the PA axioms. The argument of the proof-search predicates and the code of the independent sentence play different roles. | Name $n=F_{\mathbb N}(g)(e)$ and the code $\Theta(n)=(G_{\mathbb N}q)(e)$. A proof or refutation of the sentence would place $n$ in the respective proof-search domain. The witness is chosen before either $e$ or its consistency hypothesis. [Theorem 8.6](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f43b0ceee74aa131fec24a8c82801f1b8fe6042d/manuscript/latex/sections/08b-uniform-independent-sentences.tex#L58-L93). |
+
+## (D) Cross-section consistency failures
+
+The formula/sentence distinction in E.5 is explicit in §5. The signs in E.2 and E.4, the unit and counit in E.1, and the finite-support valuation in E.3 agree with their cited proofs. Internal induction in every model of PA supports the appeal to first-order completeness in E.3, including for models with nonstandard proof codes. The source linked in E.2 covers the subobject equivalence and Boolean assignment. The source linked in E.3 proves an existential consequence by exhibiting the arithmetic pair. The links do not establish registration of the full Lemma 8.9.
+
+## (E) Acceptance conditions, non-negotiable
+
+1. In E.5, restrict the conclusion image to sentences before asserting closure of the evaluated sentence theory. The unrestricted claim about conclusions must be dropped if this distinction is omitted.
+2. In E.4, show that a proposed lift is total in the example. In E.6, identify the input to proof search and the output sentence code, and specify the indexed family. These changes are necessary for the explanatory inferences in those passages.
+3. Read the revised E.1–E.3 against their cited declarations. Retain the targets of admissible substitution, the inclusion needed for the extension argument, the common support of both coded derivations, and the scope of the existential proof.
+
+## (F) Not checked / uncertainty log
+
+The strongest confirmed defect is the failure to restrict to sentences in E.5. No further blocker was substantiated. This review covers the six explanations and the corresponding proof passages. It does not establish a fresh Lean kernel replay, a public registry record, or a whole-manuscript correctness result. The local corrections follow from the available sources. The identified passages in v67 require revision.
+
+The revised appendix names the formula subobject, restricts its conclusion image to sentences and gives both inclusions for closure. E.4 proves that a proposed lift has full domain in the counterexample. E.6 identifies the diagonal output and its sentence code. The revisions to E.1–E.3 have been checked against the source passages cited above. No outstanding mathematical objection to these six explanations was found.

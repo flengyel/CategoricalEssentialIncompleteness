@@ -1,9 +1,10 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 21 November 2026
 
-The active manuscript is v67. Appendix E gives six readings of the Lean proofs.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V67.md.
-The v66 proof guide and numbered-result correspondence also apply to v67.
+The active manuscript is v68. It has a linked table of contents and a revised
+Appendix E. The reviews of the v67 appendix are in docs/reviews/V67_APPENDIX_E/.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V68.md.
+The v66 proof guide and numbered-result correspondence also apply to v68.
 Appendix E cites the source of the privately checked v66 proof at
 a65aeb4d5aae48ef9d71bd3352f8935e7612e434. See docs/V66_LEAN_WRITING_REPORT.md.
 
