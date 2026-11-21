@@ -1,0 +1,92 @@
+Original run 44694801440, job 136148875356
+https://github.com/flengyel/CategoricalEssentialIncompleteness/actions/runs/44694801440/job/136148875356
+2026-11-20T07:25:10.9673985Z 366eee1782cf8cf000ad58a5736c0545f8cc710a
+2026-11-20T07:48:19.2097540Z Build completed successfully (2247 jobs).
+2026-11-20T07:48:38.7511683Z Build completed successfully (1216 jobs).
+2026-11-20T07:48:44.9887176Z Build completed successfully (2246 jobs).
+2026-11-20T07:48:58.7371799Z error: Const does not match between challenge and target 'CEIPalomar.Calculus.consistent'
+2026-11-20T07:48:58.7418844Z ##[error]Process completed with exit code 1.
+
+Candidate run 44838168301, job 136639658305
+https://github.com/flengyel/CategoricalEssentialIncompleteness/actions/runs/44838168301/job/136639658305
+2026-11-20T23:37:42.4603908Z 44f66dd0f36dc26aaced3e0ed75d5f7409106998
+2026-11-20T23:38:17.3502142Z Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+
+Step 4. Reconstructed original Challenge and Solution
+2026-11-21T00:13:20.9749604Z CEIPalomar.Calculus.consistent
+2026-11-21T00:13:20.9750618Z all: equal
+2026-11-21T00:13:20.9751357Z hints: equal
+2026-11-21T00:13:20.9751781Z levelParams: equal
+2026-11-21T00:13:20.9752200Z name: equal
+2026-11-21T00:13:20.9752576Z safety: equal
+2026-11-21T00:13:20.9752960Z type: DIFFERS
+2026-11-21T00:13:20.9753386Z   constants only in Challenge: (none)
+2026-11-21T00:13:20.9754481Z   constants only in Solution: (none)
+2026-11-21T00:13:20.9755118Z   type.forallE.body.forallE.body.forallE.body.forallE.name
+2026-11-21T00:13:20.9755888Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:20.9756653Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:20.9757346Z   type.forallE.body.forallE.body.forallE.name
+2026-11-21T00:13:20.9758024Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:20.9758755Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:20.9759474Z   type.forallE.body.forallE.name
+2026-11-21T00:13:20.9760296Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:20.9761145Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:20.9761904Z value: DIFFERS
+2026-11-21T00:13:20.9762707Z   constants only in Challenge: CEIPalomar.Calculus.consistent._proof_2
+2026-11-21T00:13:20.9763768Z   constants only in Solution: CEIPalomar.ofNative._proof_2
+2026-11-21T00:13:20.9765220Z   value.lam.body.lam.body.lam.body.lam.body.lam.body.lam.body.lam.body.app.arg.app.arg.app.arg.app.fn.app.arg.app.fn.app.fn.app.fn.const.name
+2026-11-21T00:13:20.9766708Z     Challenge: CEIPalomar.Calculus.consistent._proof_2
+2026-11-21T00:13:20.9767402Z     Solution:  CEIPalomar.Calculus.consistent._proof_1
+2026-11-21T00:13:20.9768759Z   value.lam.body.lam.body.lam.body.lam.body.lam.body.lam.body.lam.body.app.arg.app.arg.app.arg.app.fn.app.fn.app.arg.app.fn.app.fn.app.fn.const.name
+2026-11-21T00:13:20.9771414Z     Challenge: CEIPalomar.Calculus.consistent._proof_1
+2026-11-21T00:13:20.9772067Z     Solution:  CEIPalomar.ofNative._proof_2
+2026-11-21T00:13:20.9772664Z   value.lam.body.lam.body.lam.body.lam.name
+2026-11-21T00:13:20.9773375Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:20.9774176Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:20.9774843Z   value.lam.body.lam.body.lam.name
+2026-11-21T00:13:20.9775718Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:20.9776694Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:20.9777394Z   value.lam.body.lam.name
+2026-11-21T00:13:20.9778001Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:20.9778783Z     Solution:  inst._@.CEIPalomar.Solution.1478091837._hygCtx._hyg.3
+
+Step 6. Candidate Challenge and Solution
+2026-11-21T00:13:35.6908151Z CEIPalomar.Calculus.consistent
+2026-11-21T00:13:35.6908981Z all: equal
+2026-11-21T00:13:35.6909615Z hints: equal
+2026-11-21T00:13:35.6910262Z levelParams: equal
+2026-11-21T00:13:35.6910666Z name: equal
+2026-11-21T00:13:35.6911041Z safety: equal
+2026-11-21T00:13:35.6911415Z type: DIFFERS
+2026-11-21T00:13:35.6911938Z   constants only in Challenge: (none)
+2026-11-21T00:13:35.6912461Z   constants only in Solution: (none)
+2026-11-21T00:13:35.6913070Z   type.forallE.body.forallE.body.forallE.body.forallE.name
+2026-11-21T00:13:35.6913852Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:35.6914664Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:35.6915404Z   type.forallE.body.forallE.body.forallE.name
+2026-11-21T00:13:35.6916082Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:35.6916888Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:35.6917589Z   type.forallE.body.forallE.name
+2026-11-21T00:13:35.6918207Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:35.6919029Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:35.6920111Z value: DIFFERS
+2026-11-21T00:13:35.6920635Z   constants only in Challenge: (none)
+2026-11-21T00:13:35.6921240Z   constants only in Solution: (none)
+2026-11-21T00:13:35.6921752Z   value.lam.body.lam.body.lam.body.lam.name
+2026-11-21T00:13:35.6922513Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:35.6923385Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.9
+2026-11-21T00:13:35.6924152Z   value.lam.body.lam.body.lam.name
+2026-11-21T00:13:35.6924793Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:35.6925613Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.6
+2026-11-21T00:13:35.6926332Z   value.lam.body.lam.name
+2026-11-21T00:13:35.6926912Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T00:13:35.6927813Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.3
+
+Candidate build and replay
+2026-11-21T00:13:27.7684789Z Build completed successfully (2248 jobs).
+2026-11-21T00:13:52.8860688Z Build completed successfully (1216 jobs).
+2026-11-21T00:13:56.9062021Z Build completed successfully (2247 jobs).
+2026-11-21T00:15:09.8148112Z con-ron kernel accepts the solution
+2026-11-21T00:15:25.9225583Z nanoda kernel accepts the solution
+2026-11-21T00:16:02.9274327Z Lean default kernel accepts the solution
+2026-11-21T00:16:02.9280662Z Your solution is okay!
