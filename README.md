@@ -50,6 +50,7 @@ axioms in its language is incomplete.
 | Complete source ZIP | [logical_consequence_v66_source.zip](manuscript/logical_consequence_v66_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
+| Private Palomar package for v66 | [Challenge](Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/V66_PALOMAR_PREPARATION_REPORT.md) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
 
 The source directory is `manuscript/latex/`. Its `main.tex` assembles the

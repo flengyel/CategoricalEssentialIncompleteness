@@ -1,0 +1,154 @@
+Private v66 Palomar verification
+
+Repository              flengyel/CategoricalEssentialIncompleteness (private)
+Project path            Lean
+Comparator path         Lean/comparator.json
+Registry metadata path  Lean/formalization.yaml
+Tested commit           e2168b55b1c7e3a291c39ad1e5c613a780406f0a
+Parent, tested earlier  44f66dd0f36dc26aaced3e0ed75d5f7409106998
+Private run             44856537123
+Private job             136699960832
+Job URL                 https://github.com/flengyel/CategoricalEssentialIncompleteness/actions/runs/44856537123/job/136699960832
+
+Private GitHub Actions job, selected lines in UTC
+Job conclusion  success
+Historical reconstruction (step 4) was run in 44838168301. This revision
+rechecked its own exports in step 6.
+Step 5  success  Build the challenge and solution
+Step 6  success  Inspect the exported definition of consistency
+Step 7  success  Check the Challenge imports and designated placeholders
+Step 8  success  Recover the manuscript statements and check transitive Solution axioms
+Step 9  success  Check the Comparator sandbox
+Step 10  success  Compare the statements and replay the proof
+
+2026-11-21T02:33:30.3783464Z e2168b55b1c7e3a291c39ad1e5c613a780406f0a
+2026-11-21T02:34:04.3111826Z Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+2026-11-21T02:36:39.3200569Z warning: CEIPalomar/Challenge.lean:58:4: declaration uses `sorry`
+2026-11-21T02:36:39.3240547Z warning: CEIPalomar/Challenge.lean:102:8: declaration uses `sorry`
+2026-11-21T02:36:39.3240807Z warning: CEIPalomar/Challenge.lean:111:8: declaration uses `sorry`
+2026-11-21T02:36:39.3241035Z warning: CEIPalomar/Challenge.lean:121:8: declaration uses `sorry`
+2026-11-21T02:54:52.5671853Z Build completed successfully (2248 jobs).
+2026-11-21T02:55:01.8596514Z CEIPalomar.Calculus.consistent
+2026-11-21T02:55:01.8596931Z all: equal
+2026-11-21T02:55:01.8597198Z hints: equal
+2026-11-21T02:55:01.8597518Z levelParams: equal
+2026-11-21T02:55:01.8597816Z name: equal
+2026-11-21T02:55:01.8598052Z safety: equal
+2026-11-21T02:55:01.8598282Z type: DIFFERS
+2026-11-21T02:55:01.8599689Z   constants only in Challenge: (none)
+2026-11-21T02:55:01.8600528Z   constants only in Solution: (none)
+2026-11-21T02:55:01.8601354Z   type.forallE.body.forallE.body.forallE.body.forallE.name
+2026-11-21T02:55:01.8601820Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T02:55:01.8602297Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.9
+2026-11-21T02:55:01.8602830Z   type.forallE.body.forallE.body.forallE.name
+2026-11-21T02:55:01.8607794Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T02:55:01.8608270Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.6
+2026-11-21T02:55:01.8608692Z   type.forallE.body.forallE.name
+2026-11-21T02:55:01.8609062Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T02:55:01.8609562Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.3
+2026-11-21T02:55:01.8609978Z value: DIFFERS
+2026-11-21T02:55:01.8610396Z   constants only in Challenge: (none)
+2026-11-21T02:55:01.8610712Z   constants only in Solution: (none)
+2026-11-21T02:55:01.8611045Z   value.lam.body.lam.body.lam.body.lam.name
+2026-11-21T02:55:01.8611458Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.9
+2026-11-21T02:55:01.8611942Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.9
+2026-11-21T02:55:01.8612363Z   value.lam.body.lam.body.lam.name
+2026-11-21T02:55:01.8612731Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.6
+2026-11-21T02:55:01.8613207Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.6
+2026-11-21T02:55:01.8613636Z   value.lam.body.lam.name
+2026-11-21T02:55:01.8613980Z     Challenge: inst._@.CEIPalomar.Challenge.1478091837._hygCtx._hyg.3
+2026-11-21T02:55:01.8614479Z     Solution:  inst._@.CEIPalomar.CalculusDefinitions.1478091837._hygCtx._hyg.3
+2026-11-21T02:55:03.1711040Z Challenge placeholders: [CEIPalomar.IsNullaryCalculus,
+2026-11-21T02:55:03.1711307Z  CEIPalomar.essential_incomplete_iff_inseparable,
+2026-11-21T02:55:03.1711493Z  CEIPalomar.exists_inseparable_example,
+2026-11-21T02:55:03.1711657Z  CEIPalomar.boolean_assignment]
+2026-11-21T02:55:03.1711871Z Checked 2695 transitive Challenge imports against Lean and Mathlib's pinned packages.
+2026-11-21T02:55:16.7442140Z info: CEIPalomar/ManuscriptChecks.lean:89:0: Checked transitive axioms of 52 package and recovery declarations.
+2026-11-21T02:55:16.7478026Z Build completed successfully (2250 jobs).
+2026-11-21T02:55:26.8831005Z Checked transitive axioms of 52 package and recovery declarations.
+2026-11-21T02:55:39.6020655Z Build completed successfully (1216 jobs).
+2026-11-21T02:55:40.8673260Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, CEIPalomar.essential_incomplete_iff_inseparable, CEIPalomar.boolean_assignment, CEIPalomar.exists_inseparable_example, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, CEIPalomar.IsNullaryCalculus] from CEIPalomar.Challenge
+2026-11-21T02:55:41.8582393Z Build completed successfully (2247 jobs).
+2026-11-21T02:55:54.1256384Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, CEIPalomar.essential_incomplete_iff_inseparable, CEIPalomar.boolean_assignment, CEIPalomar.exists_inseparable_example, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, CEIPalomar.IsNullaryCalculus] from CEIPalomar.Solution
+2026-11-21T02:56:23.7381081Z con-ron kernel accepts the solution
+2026-11-21T02:56:32.4803833Z nanoda kernel accepts the solution
+2026-11-21T02:56:57.9873818Z Lean default kernel accepts the solution
+2026-11-21T02:56:57.9880390Z Your solution is okay!
+
+Source identity (Git objects at the tested commit)
+df3b1c3e0099d8bf57b702dc49e056d88b729ac7  Lean (full tree, including all substantive Lean modules and pins)
+1635f291dc24722ee8253751e113ddab1bbdbba9  Lean/CEIPalomar (tree)
+ed539f6a8a0a8a7a6216c04311e2fd47bc1120f4  Lean/CEIPalomar/Challenge.lean
+c28b18d4e0433fd670e0011313a0b3201caab09c  Lean/CEIPalomar/Solution.lean
+e26235fc1307bf347a02ce4c55352c17b39390fe  Lean/CEIPalomar/CalculusDefinitions.lean
+831b7b0bb4416c8359f45eb677b88467a42581c2  Lean/CEIPalomar/ManuscriptChecks.lean
+cdaad9fd6c3cb4c12d8c7b0780a8df2260674ba1  Lean/comparator.json
+41492ef724dcf6135ddd89262d5a5382792ab9bd  Lean/formalization.yaml
+fd4e154f9eb48e0efeed04d1b4426bd7bba9532f  Lean/lakefile.toml
+489f82649891d939c7e7652afb5f5f703d73a118  Lean/lake-manifest.json
+acc704ffe6eefbbe8ec09452a276202748aac923  Lean/lean-toolchain
+07b7ef91d2b7e8890e4b49517e1d595a833e12df  .github/workflows/cei-palomar-check.yml
+5466670356728b112be1c66b827f2dd23e6213de  scripts/check_cei_challenge.lean
+f5f0a131142046a6b753db2069822b978ae55b4c  scripts/inspect_cei_exports.py
+
+WSL2 independent checks
+
+* The pinned Lean toolchain elaborated the Challenge, CalculusDefinitions, Solution
+  and ManuscriptChecks. Four deliberate Challenge holes were found. The compiled
+  Challenge audit visited 2,695 imported modules. The transitive axiom audit
+  accepted all 52 package and recovery declarations.
+* PalomarSubmission 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+  scripts.source_requirements.inspect_lean_sources: 2,568 files, zero issues.
+  lean --deps-json: 2,568 of 2,568 source module headers confirmed.
+  scripts.verify_submission.load_comparator_config: three theorems, one definition.
+  scripts.submission_contract.load_formalization_metadata: passed.
+  Toolchain release v4.35.0-rc2, one repository-root LICENSE, Apache-2.0.
+* The metadata passed Draft 2020-12 JSON Schema validation against
+  mathlib-initiative/formalization.yaml revision 99c678e569c7c4c0772db297c5ddd5e4c9b6322e.
+  Its three alignment entries match comparator.json by name and order.
+* All 16 dependency worktrees were clean at their pinned commits.
+  Canonical leanprover-community/mathlib4 revision 065356127b1dc0016f66b7283ce0ce2c4055aa55:
+    lean-toolchain      acc704ffe6eefbbe8ec09452a276202748aac923
+    lake-manifest.json  a0130809f3c73749870c75d90fe3c7ebc6f6f225
+  All eight pins in this Mathlib manifest match the submitted Lake manifest.
+* The following command exports only the two categorical theorems (run from Lean/).
+  lake env leanexport CEIPalomar.Solution -- CEIPalomar.essential_incomplete_iff_inseparable CEIPalomar.boolean_assignment
+  Exit 0. Both requested declaration names occurred. Of 29,228 string name
+  entries in the export, zero contained any of the following components or
+  substrings: FFL, ArithmeticSigned, ArithmeticDiagonal, SyntacticPredicates,
+  PrintedObjectCoding, pa_diagonal_witness, exists_inseparable_example.
+* Integrated manuscript check: python3 scripts/verify.py --manuscript-only
+  PASS: manuscript v66 source, archive, PDF, and target correspondence checks.
+  27 file records, 24 reachable TeX files, both PDF copies and the source ZIP.
+  The proof-guide table contains 18 theorems, 27 propositions, 19 lemmas,
+  13 corollaries and three numbered definitions.
+
+Supplementary WSL2 statement check (exit 0)
+Run from Lean/ after building CEIPalomar.ManuscriptChecks:
+  lake env lean -DwarningAsError=true /path/to/SplitSpecialization.lean
+BEGIN SplitSpecialization.lean
+module
+
+import CEIPalomar.ManuscriptChecks
+import CategoricalEssentialIncompleteness.V46SplitSplittings
+
+universe v u
+open CategoryTheory CategoryTheory.Limits CategoryTheory.RestrictionCategory
+open CategoricalEssentialIncompleteness CategoricalEssentialIncompleteness.V46
+open CategoricalEssentialIncompleteness.LocalConnectedness
+
+variable {R : Type u} [Category.{v} R] [RestrictionCategory R] [Ranges R]
+variable [CoprodStruct R] [CategoryTheory.HasCoproducts R] [RestrictionCoproducts R]
+variable [HasZeroMorphisms R] [RestrictionZero R]
+variable [Regular (RestrictionSubobjects.Tot (SplitObject R))]
+variable [FinitaryExtensive (RestrictionSubobjects.Tot (SplitObject R))]
+
+example (inverses : RestrictionSubobjects.MonoInverses (SplitObject R))
+    {V X : RestrictionSubobjects.Tot (SplitObject R)} (F : NullaryPresentations V)
+    (a b : Subobject X) (hab : a ⊓ b = ⊥)
+    (hc : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
+    (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) ↔
+      LocalConnectedness.Inseparable (RestrictionSubobjects.domain inverses a)
+        (RestrictionSubobjects.domain inverses b) :=
+  CEIPalomar.ManuscriptChecks.printed_corollary inverses F a b hab hc
+END SplitSpecialization.lean
