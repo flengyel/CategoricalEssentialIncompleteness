@@ -64,7 +64,8 @@ alias native_inseparable_iff := subobjectInseparable_iff_inseparable
 with `T ≤ U` and `generated U = U`. -/
 theorem essentiallyIncomplete_signedTheory_iff {V X : D} (F : NullaryPresentations V)
     (a b : Subobject X) :
-    (ofNullaryPresentation F X).essentiallyIncomplete ((ofNullaryPresentation F X).signedTheory a b) ↔
+    (ofNullaryPresentation F X).essentiallyIncomplete
+        ((ofNullaryPresentation F X).signedTheory a b) ↔
       (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) := by
   constructor
   · rintro ⟨hc, h⟩
@@ -123,7 +124,8 @@ theorem pa_diagonal_witness :
   let a := ArithmeticSignedAtoms.positiveSubobject
   let b := ArithmeticSignedAtoms.negativeSubobject
   have hP : IsNullaryCalculus N (ofNullaryPresentation F N) := ⟨F, rfl⟩
-  have hi := (subobjectInseparable_iff_inseparable a b).mp ArithmeticSignedEssential.diagonal_inseparable
+  have hi := (subobjectInseparable_iff_inseparable a b).mp
+    ArithmeticSignedEssential.diagonal_inseparable
   exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNullaryPresentation F N) hP a b hi.1
     (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
 
@@ -138,7 +140,8 @@ theorem exists_inseparable_example :
           P.essentiallyIncomplete (P.signedTheory a b) := by
   let X : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
   exact ⟨SyntacticPredicates.PredicateCategory 𝗣𝗔, inferInstance, inferInstance, inferInstance,
-    X, X, ofNullaryPresentation ArithmeticSignedTheory.presentation X, ArithmeticSignedAtoms.positiveSubobject,
-    ArithmeticSignedAtoms.negativeSubobject, pa_diagonal_witness⟩
+    X, X, ofNullaryPresentation ArithmeticSignedTheory.presentation X,
+    ArithmeticSignedAtoms.positiveSubobject, ArithmeticSignedAtoms.negativeSubobject,
+    pa_diagonal_witness⟩
 
 end CEIPalomar

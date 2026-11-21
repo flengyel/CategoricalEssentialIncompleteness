@@ -49,7 +49,8 @@ variable [Regular (RestrictionSubobjects.Tot C)] [FinitaryExtensive (Restriction
 
 /-- For a disjoint pair with consistent signed theory, essential incompleteness
 is equivalent to inseparability of the corresponding restriction idempotents. -/
-theorem essentiallyIncomplete_iff_inseparable_domains (inverses : RestrictionSubobjects.MonoInverses C)
+theorem essentiallyIncomplete_iff_inseparable_domains
+    (inverses : RestrictionSubobjects.MonoInverses C)
     {V X : RestrictionSubobjects.Tot C} (F : NullaryPresentations V)
     (a b : Subobject X) (hab : a ⊓ b = ⊥)
     (hc : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
@@ -91,7 +92,8 @@ end CEIPalomar.ManuscriptChecks
 open Lean Elab Command in
 run_cmd do
   let env ← getEnv
-  let corollary ← getConstInfo ``CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains
+  let corollary ← getConstInfo
+    ``CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains
   let some proof := corollary.value? (allowOpaque := true) | throwError "Recovery proof missing"
   for needed in #[``CEIPalomar.essential_incomplete_iff_inseparable,
       ``RestrictionSubobjects.inseparable_iff] do
