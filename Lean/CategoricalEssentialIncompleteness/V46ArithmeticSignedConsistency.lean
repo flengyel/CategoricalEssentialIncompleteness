@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticSignedConsistencyP
 public import CategoricalEssentialIncompleteness.V46PredicateImageConsistency
 public import CategoricalEssentialIncompleteness.V46ConsistentFirstOrderTheories
 
-/-! # Formula and sentence image consistency for the diagonal signed calculus -/
+/-! # Consistency of the formula and sentence subobjects of the diagonal signed calculus -/
 
 @[expose] public section
 noncomputable section
@@ -26,10 +26,12 @@ variable {V : PredicateCategory 𝗣𝗔}
 variable (S : CategoricalSyntax V (fun _ => ⊥_ (PredicateCategory 𝗣𝗔)) (fun _ => N) 0)
 local notation "Q" => derivationAlgebra 𝗣𝗔 (rules S)
 
-/-- The image of the actual canonical conclusion morphism. -/
+/-- The image of the conclusion morphism from the object of derivations to the
+formula object. -/
 def formulaTheory : Subobject S.algebra.a.2 := imageSubobject (Q).a.hom
 
-/-- The same conclusion image restricted to actual sentences. -/
+/-- The image of the conclusion morphism after pullback along the inclusion of
+sentences into formulas. -/
 def sentenceTheory : Subobject S.sentenceObject :=
   imageSubobject (pullback.snd (Q).a.hom S.sentenceInclusion)
 
@@ -42,8 +44,8 @@ theorem sentenceTheory_eq_pullback :
     sentenceTheory S = (Subobject.pullback S.sentenceInclusion).obj (formulaTheory S) :=
   sentenceImage_subobject (Q).a.hom S.sentenceInclusion
 
-/-- Internal consistency is the bottom-intersection equation for the
-actual generated sentence image. -/
+/-- The subobject of derivable sentences is disjoint from its inverse image under
+sentence negation. -/
 theorem sentence_consistent :
     sentenceTheory S ⊓ (Subobject.pullback S.sentenceNegation).obj (sentenceTheory S) = ⊥ := by
   have hn : (Subobject.pullback S.sentenceNegation).obj

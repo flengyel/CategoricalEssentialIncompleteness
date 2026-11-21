@@ -3,7 +3,7 @@ module
 public import CEIPalomar.CalculusDefinitions
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedTheory
 
-/-! # The signed-theory equivalence and its realization in the PA predicate category -/
+/-! # Essential incompleteness and inseparable subobjects -/
 
 @[expose] public section
 
@@ -21,8 +21,7 @@ variable [Regular D] [FinitaryExtensive D]
 
 open CategoricalEssentialIncompleteness CategoricalEssentialIncompleteness.V46
 
-/-- The sentence and formula objects, constructors, and initial derivation algebras
-of the specified first-order presentation at the index object. -/
+/-- The calculus of the family of nullary first-order presentations `F` at `X`. -/
 def ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
   formula := (F.syntaxData X).algebra.a.2
   sentence := (F.syntaxData X).sentenceObject
@@ -34,15 +33,14 @@ def ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
   proofs := F.proofs X
   initial := F.initial X
 
-/-- Membership in the family of nullary first-order calculi used in the
-manuscript: equality includes the syntax operations, rule functors and proof
-algebras recorded in the displayed calculus. -/
+/-- `P` is the calculus at `X` of a family of nullary first-order presentations
+with variable object `V`. -/
 def IsNullaryCalculus {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
     (V : D) {X : D} (P : Calculus X) : Prop :=
   ∃ F : NullaryPresentations V, P = ofNative F X
 
-/-- A subobject partition is precisely the two complementary subobjects
-quantified over in the Challenge's definition of inseparability. -/
+/-- A partition separating `a` and `b` consists of complementary subobjects
+`c` and `d` with `a ≤ c` and `b ≤ d`. -/
 theorem native_inseparable_iff {X : D} (a b : Subobject X) :
     SubobjectInseparable a b ↔ inseparable a b := by
   constructor
@@ -55,9 +53,8 @@ theorem native_inseparable_iff {X : D} (a b : Subobject X) :
     rintro ⟨p, hp, hq⟩
     exact hn ⟨p.positive, p.negative, p.complementary, hp, hq⟩
 
-/-- A closed theory is a sentence subobject together with a proof that
-generation fixes it. Quantifying over these pairs gives the Challenge's
-quantifier over all closed extensions in the same language. -/
+/-- The closed extensions of a theory `T` are the sentence subobjects `U`
+with `T ≤ U` and `generated U = U`. -/
 theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
     (a b : Subobject X) :
     (ofNative F X).essentiallyIncomplete ((ofNative F X).signedTheory a b) ↔
@@ -72,8 +69,9 @@ theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
     intro U closed hU hcU
     exact h ⟨U, closed⟩ hU hcU
 
-/-- A consistent signed atomic theory is essentially incomplete exactly when
-its two generating subobjects are inseparable. -/
+/-- Let `a` and `b` be disjoint subobjects of `X` whose signed theory is
+consistent. This theory is essentially incomplete if and only if `a` and `b`
+are inseparable. -/
 theorem essential_incomplete_iff_inseparable {V X : D}
     (P : Calculus X) (hP : IsNullaryCalculus V P) (a b : Subobject X)
     (hab : a ⊓ b = ⊥) (hc : P.consistent (P.signedTheory a b)) :
@@ -83,9 +81,10 @@ theorem essential_incomplete_iff_inseparable {V X : D}
     ((SignedFirstOrder.essential_incomplete_iff_subobject_inseparable F a b hab hc).trans
       (native_inseparable_iff a b))
 
-/-- A Boolean assignment to the atomic predicates gives a closed, consistent,
-complete theory extending every set of signed axioms respected by that assignment.
-The first coproduct injection denotes false and the second denotes true. -/
+/-- Let `1` be the terminal object. For each `d : X ⟶ 1 ⨿ 1` there is a closed,
+consistent, complete theory `T` containing `P.signedTheory a b` for every pair
+of subobjects `a, b` on which `d` restricts to true and false, respectively.
+The right coproduct injection denotes true and the left denotes false. -/
 theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V P)
     (d : X ⟶ (⊤_ D) ⨿ (⊤_ D)) :
     ∃ T : Subobject P.sentence, P.generated T = T ∧ P.consistent T ∧ P.complete T ∧
@@ -101,8 +100,8 @@ theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V 
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 
-/-- The two diagonal subobjects of the number object give an actual instance
-of the signed-theory criterion in the predicate category of PA. -/
+/-- In the predicate category of Peano arithmetic the two diagonal subobjects of
+the number object are inseparable and their signed theory is essentially incomplete. -/
 theorem pa_diagonal_witness :
     let N : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
     let P := ofNative ArithmeticSignedTheory.presentation N
@@ -118,9 +117,9 @@ theorem pa_diagonal_witness :
   exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNative F N) hP a b hi.1
     (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
 
-/-- There exists a calculus and an inseparable pair whose signed theory
-is consistent and essentially incomplete. The predicate category for Peano
-arithmetic and its diagonal pair furnish the witness. -/
+/-- There is a nullary first-order calculus with an inseparable pair whose signed
+theory is essentially incomplete. The diagonal subobjects of the number object
+in the predicate category of Peano arithmetic give such a pair. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext

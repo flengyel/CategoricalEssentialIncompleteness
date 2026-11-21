@@ -33,8 +33,8 @@ example {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V P)
         b.arrow ≫ d = terminal.from (b : D) ≫ coprod.inl → P.signedTheory a b ≤ T :=
   CEIPalomar.boolean_assignment P hP d
 
-/-- Any choice of the nullary syntax at every coefficient object and an initial
-derivation algebra for every axiom subobject supplies the Challenge hypothesis. -/
+/-- First-order syntax with nullary predicates at each index object and initial
+derivation algebras for all axiom subobjects give a nullary calculus at `X`. -/
 theorem isNullaryCalculus_of_data {V : D}
     (syntaxData : (Y : D) → CategoricalSyntax V (fun _ => ⊥_ D) (fun _ => Y) 0)
     (proofs : (Y : D) → (A : Subobject (syntaxData Y).sentenceObject) →
@@ -47,8 +47,8 @@ variable {C : Type u} [Category.{v} C] [RestrictionCategory C]
 variable [Splits C] [HasZeroMorphisms C] [RestrictionZero C] [BinaryJoins C]
 variable [Regular (RestrictionSubobjects.Tot C)] [FinitaryExtensive (RestrictionSubobjects.Tot C)]
 
-/-- The exported Palomar equivalence implies the printed equivalence on
-restriction idempotents, for the given arbitrary presentation and pair. -/
+/-- For a disjoint pair with consistent signed theory, essential incompleteness
+is equivalent to inseparability of the corresponding restriction idempotents. -/
 theorem printed_corollary (inverses : RestrictionSubobjects.MonoInverses C)
     {V X : RestrictionSubobjects.Tot C} (F : NullaryPresentations V)
     (a b : Subobject X) (hab : a ⊓ b = ⊥)
@@ -64,8 +64,8 @@ theorem printed_corollary (inverses : RestrictionSubobjects.MonoInverses C)
     _ ↔ SubobjectInseparable a b := (native_inseparable_iff a b).symm
     _ ↔ _ := (RestrictionSubobjects.inseparable_iff inverses a b).symm
 
-/-- The Boolean theorem supplies a closed complete extension for every
-complementary-subobject separator of the original pair. -/
+/-- If complementary subobjects separate `a` and `b`, the signed theory of
+`a` and `b` has a closed, consistent, complete extension. -/
 theorem complete_extension_of_separator {V X : D} (F : NullaryPresentations V)
     (a b : Subobject X) (hs : HasSubobjectSeparator a b) :
     ∃ U : (F.presentation X).Theories, (SignedFirstOrder.theory F a b).val ≤ U.val ∧

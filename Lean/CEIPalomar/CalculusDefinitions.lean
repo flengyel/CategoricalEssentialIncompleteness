@@ -6,7 +6,7 @@ public import Mathlib.CategoryTheory.Extensive
 public import Mathlib.CategoryTheory.RegularCategory.Basic
 public import Mathlib.CategoryTheory.Subobject.Limits
 
-/-! # The calculus and its subobject predicates -/
+/-! # Signed theories and inseparable subobjects -/
 
 @[expose] public section
 
@@ -20,9 +20,9 @@ namespace CEIPalomar
 
 variable {D : Type u} [Category.{v} D]
 
-/-- The formula and sentence objects, the atomic sentence and negation morphisms,
-and the initial algebra of derivations from each axiom subobject. An object
-of the slice over formulas is a family with its conclusion morphism. -/
+/-- A calculus with atomic sentences indexed by `X`. For each axiom subobject
+`A`, the derivations form an initial algebra for `inference A`. Its carrier
+in the slice over the formula object is the conclusion morphism. -/
 structure Calculus (X : D) where
   formula : D
   sentence : D
@@ -49,11 +49,11 @@ def signedTheory (a b : Subobject X) : Subobject P.sentence :=
   P.generated ((Subobject.«exists» P.atom).obj a ⊔
     (Subobject.«exists» (P.atom ≫ P.negate)).obj b)
 
-/-- Sentences whose negations belong to the given subobject. -/
+/-- The inverse image of `T` under sentence negation. -/
 def refutations (T : Subobject P.sentence) : Subobject P.sentence :=
   (Subobject.pullback P.negate).obj T
 
-/-- No sentence is both provable and refutable. -/
+/-- The theorem and refutation subobjects are disjoint. -/
 def consistent (T : Subobject P.sentence) : Prop :=
   T ⊓ P.refutations T = ⊥
 
@@ -69,7 +69,8 @@ def essentiallyIncomplete (T : Subobject P.sentence) : Prop :=
 
 end Calculus
 
-/-- Two disjoint subobjects which no complementary subobjects separate. -/
+/-- The subobjects `a` and `b` are disjoint and no pair of complementary
+subobjects separates them. -/
 def inseparable {X : D} (a b : Subobject X) : Prop :=
   a ⊓ b = ⊥ ∧
     ¬ ∃ c d : Subobject X, IsCompl c d ∧ a ≤ c ∧ b ≤ d

@@ -82,8 +82,8 @@ theorem trueAt_not_negation (l : Obj 𝗣𝗔 M P) (f : Obj 𝗣𝗔 M S.algebra
   rw [Functor.map_comp_apply, Functor.map_comp_apply] at he
   exact modelSum_disjoint 𝗣𝗔 M (⊤_ (PredicateCategory 𝗣𝗔)) (⊤_ (PredicateCategory 𝗣𝗔)) _ _ he
 
-/-- Every PA model excludes two actual internal proofs whose conclusions
-are a formula and its negation. -/
+/-- In every model of Peano arithmetic, no two internal derivations conclude
+a formula and its negation. -/
 theorem no_contradictory_derivations (p q : Obj 𝗣𝗔 M (Q).a.left)
     (h : (F 𝗣𝗔 M).map (Q).a.hom q =
       (F 𝗣𝗔 M).map S.negationConstructor ((F 𝗣𝗔 M).map (Q).a.hom p)) : False := by
