@@ -33,8 +33,8 @@ In a cosheaf construction on a three-point space, each endpoint has a
 consistent propositional theory. Every consistent extension in the same
 language with a computably enumerable axiom set is incomplete.
 
-The current manuscript and Lean formalization target are **version 66**,
-dated 18 November 2026.
+The current manuscript and Lean formalization target are **version 67**,
+dated 21 November 2026. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) explains six Lean proofs.
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
 completes Proposition 10.8. The generated first-order theory restricts to the
@@ -44,13 +44,13 @@ axioms in its language is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v66.pdf](manuscript/logical_consequence_and_essential_incompleteness_v66.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v67.pdf](manuscript/logical_consequence_and_essential_incompleteness_v67.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v66_source.zip](manuscript/logical_consequence_v66_source.zip) |
+| Complete source ZIP | [logical_consequence_v67_source.zip](manuscript/logical_consequence_v67_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
-| Private Palomar package for v66 | [Challenge](Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/V66_PALOMAR_PREPARATION_REPORT.md) |
+| Private Palomar package for v66 | [Challenge](Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/V66_LEAN_WRITING_REPORT.md) · [Release and citation instructions](docs/CODEX_WSL2_CURRENT.txt) |
 | WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
 
 The source directory is `manuscript/latex/`. Its `main.tex` assembles the
@@ -67,7 +67,7 @@ and Git blob hashes.
 The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
 
 The current correspondence table is
-[FORMALIZATION_STATUS_V66.md](FORMALIZATION_STATUS_V66.md). It records 77
+[FORMALIZATION_STATUS_V67.md](FORMALIZATION_STATUS_V67.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
 The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) links each result and definition to its Lean declarations.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
@@ -186,7 +186,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v66.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) target v67.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

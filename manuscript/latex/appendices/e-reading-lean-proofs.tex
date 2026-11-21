@@ -1,0 +1,117 @@
+\section{Reading the Lean proofs}\label{app:reading-lean-proofs}
+
+Lean writes \(f\mathbin{\gg}g\) for the composite written \(gf\) in the paper.
+In particular, \(\theta_X\mathbin{\gg}\sigma_S\) first forms an atomic sentence and then translates it.
+
+\newcommand{\CEIproof}[3]{\href{https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/a65aeb4d5aae48ef9d71bd3352f8935e7612e434/Lean/#1.lean\##2}{#3}}
+
+\subsection{Restriction and extension of an interpretation}
+
+In Theorem~\ref{thm:free-first-order-adjunction}, write $A=(X,a,b)$
+for an object of $\mathsf{Pair}_c(\mathcal D)$ and $B=(P,T)$ for a consistent theory in $\mathsf{FO}_V(\mathcal D)$. The bijection
+\[
+ \operatorname{Hom}_{\mathsf{FO}_V(\mathcal D)}(\Sigma_{\mathrm{FO}} A,B)
+ \cong
+ \operatorname{Hom}_{\mathsf{Pair}_c(\mathcal D)}(A,J_{\mathrm{FO}}B)
+\]
+sends a translation $\sigma$ to the composite
+$X\xrightarrow{\theta_X}S_X\xrightarrow{\sigma_S}S_P$.
+Thus \texttt{restrict} is composition with the atomic sentence morphism. In the opposite direction,
+\texttt{extend} takes a total morphism $f:X\to S_P$ satisfying
+$a\leq f^*T$ and $b\leq f^*(\nu_P^*T)$. It interprets the generating
+predicates by the sentences assigned by $f$. The variables retain their interpretation, and the assigned sentences are closed, so substitution preserves the assignment. The two inequalities put the images of the positive and negative axioms in $T$.
+Deductive closure then gives a morphism of theories.
+
+The two inverse identities in \texttt{homEquiv} use different facts.
+Restricting $\sigma$ and then extending gives a translation that agrees
+with $\sigma$ on each generating predicate. Uniqueness of interpretation
+makes the two translations equal. Extending $f$ and then restricting
+gives back $f$ by the interpretation rule for atomic sentences. 
+Restricting the identity of $\Sigma_{\mathrm{FO}}A$ gives
+the unit $\theta_X$. Extending the identity of $J_{\mathrm{FO}}B$
+gives the counit, which interprets the predicate indexed by a sentence
+$\varphi$ as $\varphi$ itself.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L27-L56}{Restriction, extension and the inverse identities},
+\CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L58-L91}{naturality, unit and counit}.}
+
+\subsection{Separators and complete extensions}
+
+Suppose $T_{a,b}$ is consistent, as in
+Corollary~\ref{cor:signed-first-order-incompleteness}. In the proof from
+inseparability, \texttt{intro U hU hc hcomp} introduces a closed
+extension $U$, the inclusion $T_{a,b}\leq U$, its consistency and its
+supposed completeness. Consistency makes $U$ and $\nu_X^*U$ disjoint.
+Completeness makes their join the whole sentence object. Their inverse
+images along $\theta_X$ are therefore complementary and contain $a$ and
+$b$, respectively. This contradicts inseparability.
+
+Conversely, a separator gives a morphism $d:X\to 1+1$ true on $a$ and
+false on $b$. Interpret the predicates by $d$ on a one-element domain.
+Equality is always true, and quantifying a formula leaves its value
+unchanged. The true sentences form the theory \texttt{booleanTheory}.
+If \texttt{h} asserts essential incompleteness, its second conjunct \texttt{h.2} says that every consistent closed extension of $T_{a,b}$ is incomplete. Applied to \texttt{booleanTheory}, it contradicts completeness.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness}{L43-L75}{The two implications},
+\CEIproof{CategoricalEssentialIncompleteness/V46SignedBooleanExtension}{L28-L74}{the theory of the Boolean valuation}. The Palomar proof source gives the \CEIproof{CEIPalomar/Solution}{L83-L110}{equivalence for subobjects and the Boolean assignment}.}
+
+\subsection{One valuation for two derivations}
+
+Lemma~\ref{lem:arithmetic-signed-theory} supplies the consistency
+hypothesis for the arithmetic diagonal pair. Suppose that derivations
+$p$ and $q$ conclude $\varphi$ and $\neg\varphi$. The definition
+\texttt{jointSupport} concatenates their lists of positive axiom labels.
+Give $P_n$ the value true exactly when $n$ occurs in this list.
+Every positive leaf of either derivation is true. Every negative leaf
+has label in the negative diagonal domain, which is disjoint from the
+positive domain, so the corresponding negated atom is true as well.
+
+Induction on each coded derivation gives truth of its conclusion for the
+same list. The line \texttt{rw [h] at hq} replaces the conclusion of
+$q$ by the negation of the conclusion of $p$ in the second truth
+assertion. The Boolean rule for negation now gives a contradiction.
+The list depends on $p$ and $q$, so it need only account for their
+leaves. A separator would have to assign the prescribed values at every
+label in either diagonal domain. In the formal proof the list
+and derivations are coded in an arbitrary model of $\PA$. Internal induction includes proof codes of nonstandard length when the model is nonstandard.
+First-order completeness therefore gives a proof in $\PA$ that no such pair of
+derivation codes exists.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction}{L32-L56}{The common list and its two truth assertions},
+\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction}{L85-L92}{the contradiction},
+\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA}{L45-L64}{the proof in PA}. The Palomar proof of the \CEIproof{CEIPalomar/Solution}{L114-L145}{existential consequence} takes the two diagonal subobjects in the predicate category of $\PA$ as its witness.}
+
+\subsection{The lift of a conditional}
+
+In Theorem~\ref{thm:comparison}, the conditional $s$ belongs to the
+category in which programs are interpreted. The proof needs a morphism
+$\ell:U\rightharpoonup U+U$ in the recursion category to which it can
+apply the Turing property. Lean's \texttt{turing\_diagonal} takes
+$\ell$ as an argument and gives a total $g:U\to U$ satisfying
+$hg=\ell g$, where $h=b\tau\Delta_U$. By hypothesis $s$ is the interpretation of $\ell$, up to the coproduct isomorphism, and its two summand domains are $N,P$, in that order. Pulling back
+the two given inclusions along $Fg$ therefore puts each of
+$(Fg)^*P$ and $(Fg)^*N$ below the other. Antisymmetry, written \texttt{le\_antisymm},
+gives $(Fg)^*P=(Fg)^*N$. Their meet is zero by disjointness, so each
+is zero.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46Comparison}{L35-L89}{The comparison proof}.}
+Proposition~\ref{prop:missing-lift} gives a conditional in partial
+functions whose output summand decides membership in a nonrecursive
+set. Every total source morphism in that example is recursive. Hence
+the conditional has no lift.\footnote{\CEIproof{CategoricalEssentialIncompleteness/OracleMissingLift}{L89-L103}{The conditional has no source lift}.}
+
+\subsection{Evaluation of a theory in the slice}
+
+In Theorem~\ref{thm:associated-incompleteness}, let $u:U\hookrightarrow S$
+be the theorem subobject. An extension $W$ of the constant family
+$B_U(u)$ can vary over $U$. The fixed logical theorem determines a
+point $\lambda_U:1\to U$. Pullback along this point evaluates $W$ at
+one fiber. Lean's \texttt{evaluationTheory} pairs the resulting
+sentence subobject with a proof of deductive closure. Evaluation transports the rule algebra, and initiality puts the conclusions of derivations in the evaluated subobject. If $W$ were consistent and complete, its
+fiber would be consistent and complete. It would extend $u$ because
+evaluation takes $B_U(u)$ back to $u$. Essential incompleteness of $u$ excludes such a fiber,
+and hence excludes every consistent complete closed extension of
+$B_U(u)$.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46AssociatedClosedTheories}{L68-L104}{Evaluation, closure, and the arbitrary slice extension}.}
+
+\Needspace{9\baselineskip}
+\subsection{One morphism for all consistent presentations}
+
+In Theorem~\ref{thm:uniform-independent-sentences}, the order of the
+first two proof steps gives the uniformity. Lean first supplies
+\texttt{sentence} as the morphism $q:E\to S$. Only then does
+\texttt{intro e hc} introduce the index $e$ and the hypothesis that
+$\Gamma_e$ is consistent. For this $e$, the proof identifies the
+numerical value $(G_{\N}q)(e)$ with the code of a closed formula.
+The lemma \texttt{output\_avoids} uses consistency at $e$ to show that the diagonal output belongs to neither the positive nor the negative proof-search domain. A derivation of the formula would put the output in the positive domain. A derivation of its negation would put it in the negative domain.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L184-L218}{The morphism and the two excluded derivations}. See also the \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L116-L121}{avoidance of both proof-search domains}.}

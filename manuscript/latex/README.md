@@ -1,13 +1,13 @@
-# LaTeX sources — version 66
+# LaTeX sources — version 67
 
 **Logical consequence and essential incompleteness in recursion categories**,
-18 November 2026.
+21 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v66.pdf`
-and `logical_consequence_v66_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v67.pdf`
+and `logical_consequence_v67_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
-do not necessarily match the printed section numbers. All four appendices and
+do not necessarily match the printed section numbers. All five appendices and
 the bibliography are included. This directory is named `latex/` in both the
 repository and the source ZIP.
 
@@ -49,9 +49,12 @@ The output is `main.pdf`. The source package contains this directory as
 | [appendices/b-three-point-cosheaves.tex](appendices/b-three-point-cosheaves.tex) | Appendix B: The three-point cosheaf construction |
 | [appendices/c-section-lifting.tex](appendices/c-section-lifting.tex) | Appendix: Necessity of section lifting for inseparability |
 | [appendices/d-faithful-family.tex](appendices/d-faithful-family.tex) | Appendix D: Faithful model interpretations, theory extension, and provability of numeral instances |
+| [appendices/e-reading-lean-proofs.tex](appendices/e-reading-lean-proofs.tex) | Appendix E: Reading the Lean proofs |
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 67 adds Appendix E on six proofs, with footnotes to the Lean declarations.
 
 Version 66 specifies the scope of the axiom and oracle quantifiers, distinguishes the two arithmetic model interpretations, and gives the induction invariant used for the finite Boolean valuation.
 
@@ -121,7 +124,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 66 is the current manuscript and Lean verification target.
+Version 67 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.

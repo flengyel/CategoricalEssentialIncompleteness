@@ -1,8 +1,47 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 20 November 2026
+Updated 21 November 2026
+
+The active manuscript is v67. Appendix E gives six readings of the Lean proofs.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V67.md.
+The v66 proof guide and numbered-result correspondence also apply to v67.
+Appendix E cites the source of the privately checked v66 proof at
+a65aeb4d5aae48ef9d71bd3352f8935e7612e434. See docs/V66_LEAN_WRITING_REPORT.md.
+
+Fixed release and Appendix E citations
+--------------------------------------
+Use the established Došen–Petrić instructions, especially §§1–3:
+https://github.com/flengyel/Dosen-Petric-Maximality/blob/874ea6bcd775ff21f7a84759f46adc1d3364a954/docs/PALOMAR_V25_CODEX_HANDOFF.md
+The release name, paths, existing entry ID, and version in that example belong
+to the Došen–Petrić paper. CEI uses project_path Lean.
+
+When preparing a CEI release, choose a fresh, durable tag name before making
+the release commit. Use the tag in source and claim links that must refer
+to the release itself. Assemble the intended paper, PDF, source archive,
+Lean sources and registry metadata, then commit. Record the full computed
+SHA independently. Bind the tag to that commit once, check that its remote
+peeled value agrees, and give Palomar the full SHA. Keep the v66 private
+check attached to its tested SHA. Follow the ordinary authorized preflight
+and registration workflow for the intended candidate.
+
+When an official CEI entry is available, read the versioned public record.
+Verify the repository, project path, full SHA and selected declarations.
+Use the issued ID and numeric version in the permanent entry URL. Where
+Appendix E discusses Corollary 4.8, cite essential_incomplete_iff_inseparable
+and boolean_assignment. In the finite-support subsection cite
+exists_inseparable_example specifically for the existential consequence of
+Lemma 8.9. Retain the direct proof-source links for the full lemma and the
+other readings. If the registered SHA differs from the appendix source pin,
+check the cited files and line anchors against the registered snapshot before
+updating them. Rebuild the PDF and ZIP, update the active correspondence and
+manifest, run the manuscript checks, and verify the embedded PDF links.
+Record this citation in a subsequent manuscript commit, preserving the
+original release tag at its registered SHA.
+
+v66 proof preparation and verification record
+---------------------------------------------
 
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness.
-The current manuscript and verification target are version 66.
+Version 66 was the manuscript target for the following verification.
 Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V66.md.
 For the v66 Palomar Challenge and registration package, follow
 docs/CODEX_WSL2_V66_PALOMAR_PREPARATION.md.
