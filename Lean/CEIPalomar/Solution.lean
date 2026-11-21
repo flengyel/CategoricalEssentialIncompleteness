@@ -22,7 +22,7 @@ variable [Regular D] [FinitaryExtensive D]
 open CategoricalEssentialIncompleteness CategoricalEssentialIncompleteness.V46
 
 /-- The calculus of the family of nullary first-order presentations `F` at `X`. -/
-def ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
+def ofNullaryPresentation {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
   formula := (F.syntaxData X).algebra.a.2
   sentence := (F.syntaxData X).sentenceObject
   inclusion := (F.syntaxData X).sentenceInclusion
@@ -33,15 +33,19 @@ def ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
   proofs := F.proofs X
   initial := F.initial X
 
+@[inherit_doc ofNullaryPresentation]
+abbrev ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X :=
+  ofNullaryPresentation F X
+
 /-- `P` is the calculus at `X` of a family of nullary first-order presentations
 with variable object `V`. -/
 def IsNullaryCalculus {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
     (V : D) {X : D} (P : Calculus X) : Prop :=
-  ∃ F : NullaryPresentations V, P = ofNative F X
+  ∃ F : NullaryPresentations V, P = ofNullaryPresentation F X
 
 /-- A partition separating `a` and `b` consists of complementary subobjects
 `c` and `d` with `a ≤ c` and `b ≤ d`. -/
-theorem native_inseparable_iff {X : D} (a b : Subobject X) :
+theorem subobjectInseparable_iff_inseparable {X : D} (a b : Subobject X) :
     SubobjectInseparable a b ↔ inseparable a b := by
   constructor
   · rintro ⟨hab, hn⟩
@@ -53,11 +57,14 @@ theorem native_inseparable_iff {X : D} (a b : Subobject X) :
     rintro ⟨p, hp, hq⟩
     exact hn ⟨p.positive, p.negative, p.complementary, hp, hq⟩
 
+@[inherit_doc subobjectInseparable_iff_inseparable]
+alias native_inseparable_iff := subobjectInseparable_iff_inseparable
+
 /-- The closed extensions of a theory `T` are the sentence subobjects `U`
 with `T ≤ U` and `generated U = U`. -/
-theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
+theorem essentiallyIncomplete_signedTheory_iff {V X : D} (F : NullaryPresentations V)
     (a b : Subobject X) :
-    (ofNative F X).essentiallyIncomplete ((ofNative F X).signedTheory a b) ↔
+    (ofNullaryPresentation F X).essentiallyIncomplete ((ofNullaryPresentation F X).signedTheory a b) ↔
       (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) := by
   constructor
   · rintro ⟨hc, h⟩
@@ -69,6 +76,9 @@ theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
     intro U closed hU hcU
     exact h ⟨U, closed⟩ hU hcU
 
+@[inherit_doc essentiallyIncomplete_signedTheory_iff]
+alias native_essential_iff := essentiallyIncomplete_signedTheory_iff
+
 /-- Let `a` and `b` be disjoint subobjects of `X` whose signed theory is
 consistent. This theory is essentially incomplete if and only if `a` and `b`
 are inseparable. -/
@@ -77,9 +87,9 @@ theorem essential_incomplete_iff_inseparable {V X : D}
     (hab : a ⊓ b = ⊥) (hc : P.consistent (P.signedTheory a b)) :
     P.essentiallyIncomplete (P.signedTheory a b) ↔ inseparable a b := by
   obtain ⟨F, rfl⟩ := hP
-  exact (native_essential_iff F a b).trans
+  exact (essentiallyIncomplete_signedTheory_iff F a b).trans
     ((SignedFirstOrder.essential_incomplete_iff_subobject_inseparable F a b hab hc).trans
-      (native_inseparable_iff a b))
+      (subobjectInseparable_iff_inseparable a b))
 
 /-- Let `1` be the terminal object. For each `d : X ⟶ 1 ⨿ 1` there is a closed,
 consistent, complete theory `T` containing `P.signedTheory a b` for every pair
@@ -104,7 +114,7 @@ open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 the number object are inseparable and their signed theory is essentially incomplete. -/
 theorem pa_diagonal_witness :
     let N : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
-    let P := ofNative ArithmeticSignedTheory.presentation N
+    let P := ofNullaryPresentation ArithmeticSignedTheory.presentation N
     let a := ArithmeticSignedAtoms.positiveSubobject
     let b := ArithmeticSignedAtoms.negativeSubobject
     IsNullaryCalculus N P ∧ inseparable a b ∧ P.essentiallyIncomplete (P.signedTheory a b) := by
@@ -112,9 +122,9 @@ theorem pa_diagonal_witness :
   let N : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
   let a := ArithmeticSignedAtoms.positiveSubobject
   let b := ArithmeticSignedAtoms.negativeSubobject
-  have hP : IsNullaryCalculus N (ofNative F N) := ⟨F, rfl⟩
-  have hi := (native_inseparable_iff a b).mp ArithmeticSignedEssential.diagonal_inseparable
-  exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNative F N) hP a b hi.1
+  have hP : IsNullaryCalculus N (ofNullaryPresentation F N) := ⟨F, rfl⟩
+  have hi := (subobjectInseparable_iff_inseparable a b).mp ArithmeticSignedEssential.diagonal_inseparable
+  exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNullaryPresentation F N) hP a b hi.1
     (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
 
 /-- There is a nullary first-order calculus with an inseparable pair whose signed
@@ -128,7 +138,7 @@ theorem exists_inseparable_example :
           P.essentiallyIncomplete (P.signedTheory a b) := by
   let X : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
   exact ⟨SyntacticPredicates.PredicateCategory 𝗣𝗔, inferInstance, inferInstance, inferInstance,
-    X, X, ofNative ArithmeticSignedTheory.presentation X, ArithmeticSignedAtoms.positiveSubobject,
+    X, X, ofNullaryPresentation ArithmeticSignedTheory.presentation X, ArithmeticSignedAtoms.positiveSubobject,
     ArithmeticSignedAtoms.negativeSubobject, pa_diagonal_witness⟩
 
 end CEIPalomar

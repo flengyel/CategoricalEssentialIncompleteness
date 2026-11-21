@@ -40,7 +40,7 @@ theorem isNullaryCalculus_of_data {V : D}
     (proofs : (Y : D) → (A : Subobject (syntaxData Y).sentenceObject) →
       Endofunctor.Algebra ((syntaxData Y).logicalRules A.arrow).inference)
     (initial : ∀ Y A, IsInitial (proofs Y A)) (X : D) :
-    IsNullaryCalculus V (ofNative ⟨syntaxData, proofs, initial⟩ X) :=
+    IsNullaryCalculus V (ofNullaryPresentation ⟨syntaxData, proofs, initial⟩ X) :=
   ⟨⟨syntaxData, proofs, initial⟩, rfl⟩
 
 variable {C : Type u} [Category.{v} C] [RestrictionCategory C]
@@ -49,7 +49,7 @@ variable [Regular (RestrictionSubobjects.Tot C)] [FinitaryExtensive (Restriction
 
 /-- For a disjoint pair with consistent signed theory, essential incompleteness
 is equivalent to inseparability of the corresponding restriction idempotents. -/
-theorem printed_corollary (inverses : RestrictionSubobjects.MonoInverses C)
+theorem essentiallyIncomplete_iff_inseparable_domains (inverses : RestrictionSubobjects.MonoInverses C)
     {V X : RestrictionSubobjects.Tot C} (F : NullaryPresentations V)
     (a b : Subobject X) (hab : a ⊓ b = ⊥)
     (hc : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
@@ -58,11 +58,14 @@ theorem printed_corollary (inverses : RestrictionSubobjects.MonoInverses C)
         (RestrictionSubobjects.domain inverses b) := by
   have hP := isNullaryCalculus_of_data F.syntaxData F.proofs F.initial X
   calc
-    _ ↔ _ := (native_essential_iff F a b).symm
+    _ ↔ _ := (essentiallyIncomplete_signedTheory_iff F a b).symm
     _ ↔ inseparable a b :=
-      CEIPalomar.essential_incomplete_iff_inseparable (ofNative F X) hP a b hab hc
-    _ ↔ SubobjectInseparable a b := (native_inseparable_iff a b).symm
+      CEIPalomar.essential_incomplete_iff_inseparable (ofNullaryPresentation F X) hP a b hab hc
+    _ ↔ SubobjectInseparable a b := (subobjectInseparable_iff_inseparable a b).symm
     _ ↔ _ := (RestrictionSubobjects.inseparable_iff inverses a b).symm
+
+@[inherit_doc essentiallyIncomplete_iff_inseparable_domains]
+alias printed_corollary := essentiallyIncomplete_iff_inseparable_domains
 
 /-- If complementary subobjects separate `a` and `b`, the signed theory of
 `a` and `b` has a closed, consistent, complete extension. -/
@@ -73,7 +76,7 @@ theorem complete_extension_of_separator {V X : D} (F : NullaryPresentations V)
   obtain ⟨d, ha, hb⟩ := (subobject_separator_iff_boolean a b).mp hs
   have hP := isNullaryCalculus_of_data F.syntaxData F.proofs F.initial X
   obtain ⟨T, closed, consistent, complete, extendsPair⟩ := CEIPalomar.boolean_assignment
-    (ofNative F X) hP d
+    (ofNullaryPresentation F X) hP d
   exact ⟨⟨T, closed⟩, extendsPair a b ha hb, consistent, complete⟩
 
 example : ∃ (D : Type) (cat : Category.{0} D), letI := cat
@@ -88,12 +91,12 @@ end CEIPalomar.ManuscriptChecks
 open Lean Elab Command in
 run_cmd do
   let env ← getEnv
-  let corollary ← getConstInfo ``CEIPalomar.ManuscriptChecks.printed_corollary
+  let corollary ← getConstInfo ``CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains
   let some proof := corollary.value? (allowOpaque := true) | throwError "Recovery proof missing"
   for needed in #[``CEIPalomar.essential_incomplete_iff_inseparable,
       ``RestrictionSubobjects.inseparable_iff] do
     unless proof.getUsedConstants.contains needed do
-      throwError "The printed corollary must use {needed}"
+      throwError "The restriction-idempotent equivalence must use {needed}"
   let packageModules := #[`CEIPalomar.CalculusDefinitions, `CEIPalomar.Solution]
   let allowed := #[``propext, ``Quot.sound, ``Classical.choice]
   let mut checked : Nat := 0

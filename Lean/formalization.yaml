@@ -92,7 +92,7 @@ fidelity:
     syntax and deduction data with those of the manuscript's nullary first-order
     calculus. For each choice of the stipulated syntax, proof algebras and
     initiality, ManuscriptChecks.isNullaryCalculus_of_data constructs the required
-    witness. ManuscriptChecks.printed_corollary applies the exported theorem in the
+    witness. ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains applies the exported theorem in the
     total category and identifies inseparability by
     RestrictionSubobjects.inseparable_iff. Extensions range over all consistent
     closed internal theories in the same language. A theory is complete when its
@@ -117,7 +117,7 @@ alignment:
     - source: Corollary 4.8 of manuscript v66, subobject formulation
       lean: CEIPalomar.essential_incomplete_iff_inseparable
       module: CEIPalomar.Solution
-      note: CEIPalomar.ManuscriptChecks.printed_corollary recovers the printed statement from this declaration.
+      note: CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains derives the restriction-idempotent equivalence from this declaration.
     - source: Proof of Corollary 4.8 of manuscript v66, Boolean assignment
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
