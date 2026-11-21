@@ -1,17 +1,20 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/formalization.schema.json
 version: v0.4
 project:
-  name: Inseparability and essential incompleteness of an internal first-order theory
+  name: Logical consequence and essential incompleteness in recursion categories
   description: >-
     Take two disjoint subobjects A and B of an object X in a regular category
     with disjoint pullback-stable finite coproducts. Form the first-order language with
-    one nullary predicate for each index in X. Take the predicates indexed by A
+    one nullary predicate for each index in X, with the parameter-stable syntax
+    and initial derivation algebras of Theorem 4.7. Take the predicates indexed by A
     and the negations of those indexed by B as axioms. If the generated theory
-    is consistent, every consistent closed internal extension of it is incomplete
-    if and only if A and B are inseparable. Inseparability means that no two
-    complementary subobjects of X contain A and B respectively. The arithmetic
-    diagonal pair gives an example in which the theory is consistent and the
-    pair is inseparable.
+    is consistent, it is essentially incomplete if and only if A and B are
+    inseparable. Essential incompleteness quantifies over every consistent closed
+    internal extension in the same language. A Boolean assignment gives one
+    closed, consistent, complete theory extending every pair of signed axioms
+    it respects. The predicate category of Peano arithmetic supplies the
+    witness for the existence of a calculus with an inseparable pair and
+    an essentially incomplete signed theory.
   authors: [Florian Lengyel]
   responsible_maintainers: [Florian Lengyel]
   license: Apache-2.0
@@ -26,7 +29,7 @@ sources:
     type: manuscript
     relationship: formalizes
     id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/02bc60e462c437b5502ba784bed7c707f15ab249/manuscript/logical_consequence_and_essential_incompleteness_v66.pdf
-    location: Version 66, 18 November 2026, Corollary 4.8 (p. 14) and Lemma 8.9 (p. 50).
+    location: Version 66, 18 November 2026, Theorem 4.7 and Corollary 4.8 (p. 14), and Lemma 8.9 (p. 50).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories
     authors: [Juvenal Murwanashyaka, Fedor Pakhomov, Albert Visser]
@@ -85,8 +88,12 @@ fidelity:
     the resulting order isomorphism and its preservation of inseparability.
     The comparison uses subobjects throughout. Its named definition
     CEIPalomar.IsNullaryCalculus identifies the displayed syntax and deduction
-    data with those of the manuscript's nullary first-order calculus. The
-    Solution supplies this definition. Extensions range over all
+    data with those of the manuscript's nullary first-order calculus. For each
+    choice of the stipulated syntax, proof algebras and initiality,
+    ManuscriptChecks.isNullaryCalculus_of_data constructs the required witness.
+    ManuscriptChecks.printed_corollary applies the exported theorem in the total
+    category and identifies inseparability by RestrictionSubobjects.inseparable_iff.
+    Extensions range over all
     consistent closed internal theories in the same language. A theory is
     complete when its theorem and refutation subobjects cover the sentence
     object. The concrete existential statement records the consequence of
@@ -97,10 +104,11 @@ review:
   status: agent-reviewed
   reviewers: [OpenAI Codex and ChatGPT]
   notes: >-
-    The author-side reviews and the statement-to-proof correspondence are recorded
-    in docs/reviews/ and FORMALIZATION_STATUS_V66.md. The underlying proof sources
-    match those of the full v62 Lean replay. The v66 record reports targeted
-    statement checks and both transitive axiom audits.
+    The manuscript guide covers 77 numbered results. This package compares
+    three theorem declarations and one auxiliary definition. The four designated
+    Challenge placeholders have corresponding values in the Solution. The
+    status counts refer to the proof-bearing Solution. The private verification
+    report records the exact source and the independent kernel results.
 
 alignment:
   namespace: CEIPalomar
@@ -108,10 +116,12 @@ alignment:
     - source: Corollary 4.8 of manuscript v66, subobject formulation
       lean: CEIPalomar.essential_incomplete_iff_inseparable
       module: CEIPalomar.Solution
-      note: The native equivalence is SignedFirstOrder.essential_incomplete_iff_subobject_inseparable in the CategoricalEssentialIncompleteness.V46 namespace.
+      note: CEIPalomar.ManuscriptChecks.printed_corollary recovers the printed statement from this declaration.
     - source: Proof of Corollary 4.8 of manuscript v66, Boolean assignment
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
+      note: The same complete closed theory extends every pair of signed axioms respected by the assignment.
     - source: Lemma 8.9 of manuscript v66, existence of an inseparable instance
       lean: CEIPalomar.exists_inseparable_example
       module: CEIPalomar.Solution
+      note: CEIPalomar.pa_diagonal_witness supplies the category, calculus and two diagonal subobjects used in the proof.

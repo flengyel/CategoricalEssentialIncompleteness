@@ -41,7 +41,9 @@ def IsNullaryCalculus {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensi
     (V : D) {X : D} (P : Calculus X) : Prop :=
   ∃ F : NullaryPresentations V, P = ofNative F X
 
-private theorem native_inseparable_iff {X : D} (a b : Subobject X) :
+/-- A subobject partition is precisely the two complementary subobjects
+quantified over in the Challenge's definition of inseparability. -/
+theorem native_inseparable_iff {X : D} (a b : Subobject X) :
     SubobjectInseparable a b ↔ inseparable a b := by
   constructor
   · rintro ⟨hab, hn⟩
@@ -53,7 +55,10 @@ private theorem native_inseparable_iff {X : D} (a b : Subobject X) :
     rintro ⟨p, hp, hq⟩
     exact hn ⟨p.positive, p.negative, p.complementary, hp, hq⟩
 
-private theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
+/-- A closed theory is a sentence subobject together with a proof that
+generation fixes it. Quantifying over these pairs gives the Challenge's
+quantifier over all closed extensions in the same language. -/
+theorem native_essential_iff {V X : D} (F : NullaryPresentations V)
     (a b : Subobject X) :
     (ofNative F X).essentiallyIncomplete ((ofNative F X).signedTheory a b) ↔
       (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) := by
@@ -96,6 +101,23 @@ theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V 
 
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
 
+/-- The two diagonal subobjects of the number object give an actual instance
+of the signed-theory criterion in the predicate category of PA. -/
+theorem pa_diagonal_witness :
+    let N : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
+    let P := ofNative ArithmeticSignedTheory.presentation N
+    let a := ArithmeticSignedAtoms.positiveSubobject
+    let b := ArithmeticSignedAtoms.negativeSubobject
+    IsNullaryCalculus N P ∧ inseparable a b ∧ P.essentiallyIncomplete (P.signedTheory a b) := by
+  let F := ArithmeticSignedTheory.presentation
+  let N : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
+  let a := ArithmeticSignedAtoms.positiveSubobject
+  let b := ArithmeticSignedAtoms.negativeSubobject
+  have hP : IsNullaryCalculus N (ofNative F N) := ⟨F, rfl⟩
+  have hi := (native_inseparable_iff a b).mp ArithmeticSignedEssential.diagonal_inseparable
+  exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNative F N) hP a b hi.1
+    (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
+
 /-- There exists a calculus and an inseparable pair whose signed theory
 is consistent and essentially incomplete. The predicate category for Peano
 arithmetic and its diagonal pair furnish the witness. -/
@@ -106,12 +128,8 @@ theorem exists_inseparable_example :
           IsNullaryCalculus V P ∧ inseparable a b ∧
           P.essentiallyIncomplete (P.signedTheory a b) := by
   let X : SyntacticPredicates.PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
-  let F := ArithmeticSignedTheory.presentation
-  let a := ArithmeticSignedAtoms.positiveSubobject
-  let b := ArithmeticSignedAtoms.negativeSubobject
-  refine ⟨SyntacticPredicates.PredicateCategory 𝗣𝗔, inferInstance, inferInstance, inferInstance,
-    X, X, ofNative F X, a, b, ⟨F, rfl⟩, ?_, ?_⟩
-  · exact (native_inseparable_iff a b).mp ArithmeticSignedEssential.diagonal_inseparable
-  · exact (native_essential_iff F a b).mpr (ArithmeticSignedEssential.essentially_incomplete F)
+  exact ⟨SyntacticPredicates.PredicateCategory 𝗣𝗔, inferInstance, inferInstance, inferInstance,
+    X, X, ofNative ArithmeticSignedTheory.presentation X, ArithmeticSignedAtoms.positiveSubobject,
+    ArithmeticSignedAtoms.negativeSubobject, pa_diagonal_witness⟩
 
 end CEIPalomar
