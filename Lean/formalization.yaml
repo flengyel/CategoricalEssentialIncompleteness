@@ -16,9 +16,8 @@ project:
 
     Each Boolean assignment to the atoms gives a closed, consistent, complete
     theory U. Whenever the assignment is true on A and false on B, U contains
-    T(A,B). The diagonal subobjects of the number object in the predicate category
-    of Peano arithmetic give an inseparable pair whose signed theory is
-    essentially incomplete.
+    T(A,B). There is a calculus of this kind with an inseparable pair of
+    subobjects A and B for which T(A,B) is essentially incomplete.
   authors: [Florian Lengyel]
   responsible_maintainers: [Florian Lengyel]
   license: Apache-2.0
@@ -32,8 +31,8 @@ sources:
     authors: [Florian Lengyel]
     type: manuscript
     relationship: formalizes
-    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v70-palomar/manuscript/logical_consequence_and_essential_incompleteness_v70.pdf
-    location: Version 70, 21 November 2026, Theorem 4.7 and Corollary 4.8 (p. 16), and Lemma 8.9 (p. 52).
+    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v70-palomar-r2/manuscript/logical_consequence_and_essential_incompleteness_v70.pdf
+    location: Version 70, 21 November 2026, Theorem 4.7 and Corollary 4.8 (p. 16), and the existential consequence of Lemma 8.9 (p. 52).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories
     authors: [Juvenal Murwanashyaka, Fedor Pakhomov, Albert Visser]
@@ -59,8 +58,8 @@ status:
   scope: >-
     Corollary 4.8 assumes a disjoint pair with consistent generated theory.
     Its proof constructs a complete extension from a Boolean assignment.
-    The third theorem asserts the existence of an inseparable pair with an
-    essentially incomplete signed theory, as in Lemma 8.9.
+    The third theorem asserts that some nullary first-order calculus has an
+    inseparable pair of subobjects whose signed theory is essentially incomplete.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: [propext, Quot.sound, Classical.choice]
@@ -111,7 +110,7 @@ alignment:
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
       note: The closed, consistent, complete theory depends only on the assignment. It contains the signed theory of each pair assigned true on the first subobject and false on the second.
-    - source: Lemma 8.9 of manuscript v70 (p. 52), existence of an inseparable instance
+    - source: Existential consequence of Lemma 8.9 of manuscript v70 (p. 52)
       lean: CEIPalomar.exists_inseparable_example
       module: CEIPalomar.Solution
-      note: CEIPalomar.pa_diagonal_witness gives the diagonal pair in the predicate category of Peano arithmetic.
+      note: The category, the variable and index objects, the calculus, and the two subobjects are existentially quantified.

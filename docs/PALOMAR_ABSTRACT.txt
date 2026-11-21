@@ -2,4 +2,4 @@ Let X index the nullary predicates of an internal first-order calculus in a regu
 
 A consistent theory is essentially incomplete if every consistent closed internal extension in the same language is incomplete. Suppose A and B are disjoint and T(A,B) is consistent. Then T(A,B) is essentially incomplete if and only if no complementary subobjects C and D of X satisfy A ≤ C and B ≤ D.
 
-Each Boolean assignment to the atoms gives a closed, consistent, complete theory U. Whenever the assignment is true on A and false on B, U contains T(A,B). The diagonal subobjects of the number object in the predicate category of Peano arithmetic give an inseparable pair whose signed theory is essentially incomplete.
+Each Boolean assignment to the atoms gives a closed, consistent, complete theory U. Whenever the assignment is true on A and false on B, U contains T(A,B). There is a calculus of this kind with an inseparable pair of subobjects A and B for which T(A,B) is essentially incomplete.

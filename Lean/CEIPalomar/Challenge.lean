@@ -118,9 +118,9 @@ theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V 
         b.arrow ≫ d = terminal.from (b : D) ≫ coprod.inl → P.signedTheory a b ≤ T := by
   sorry
 
-/-- There is a nullary first-order calculus with an inseparable pair whose signed
-theory is essentially incomplete. The diagonal subobjects of the number object
-in the predicate category of Peano arithmetic give the example of Lemma 8.9. -/
+/-- In some regular category with disjoint, pullback-stable finite coproducts,
+there is a nullary first-order calculus with an inseparable pair of subobjects
+of its index object. The signed theory of this pair is essentially incomplete. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext

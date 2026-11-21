@@ -129,9 +129,9 @@ theorem pa_diagonal_witness :
   exact ⟨hP, hi, (essential_incomplete_iff_inseparable (ofNullaryPresentation F N) hP a b hi.1
     (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
 
-/-- There is a nullary first-order calculus with an inseparable pair whose signed
-theory is essentially incomplete. The diagonal subobjects of the number object
-in the predicate category of Peano arithmetic give such a pair. -/
+/-- In some regular category with disjoint, pullback-stable finite coproducts,
+there is a nullary first-order calculus with an inseparable pair of subobjects
+of its index object. The signed theory of this pair is essentially incomplete. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext
