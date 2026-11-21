@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.ForkProofObjects
 public import CategoricalEssentialIncompleteness.EffectiveForkExtensive
 public import CategoricalEssentialIncompleteness.V46ForkDerivationInference
 
-/-! # The actual fork formula, axiom and rule objects -/
+/-! # The fork formula, axiom and rule objects -/
 
 @[expose] public section
 noncomputable section
@@ -21,7 +21,7 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 namespace CategoricalEssentialIncompleteness.V46.ForkDerivation
 open EffectiveFork (Total)
 
-/-- The native product coding is compared with the chosen categorical product. -/
+/-- The numerical product coding is compared with the chosen categorical product. -/
 def codedProduct (X Y : Total) : Total := ⟨EffectiveFork.product X.obj Y.obj⟩
 
 def codedFst (X Y : Total) : codedProduct X Y ⟶ X :=
@@ -111,8 +111,8 @@ def productComparison (X Y : Total) : X ⨯ Y ≅ codedProduct X Y :=
     (productComparison X Y).inv ≫ prod.snd = codedSnd X Y :=
   IsLimit.conePointUniqueUpToIso_inv_comp (prodIsProd X Y) (codedProductIsLimit X Y) ⟨.right⟩
 
-/-- The comparison is the actual restriction-product pairing of the
-chosen total projections, rather than an unspecified product isomorphism. -/
+/-- The comparison is the restriction-product pairing of the chosen total projections,
+rather than an unspecified product isomorphism. -/
 theorem productComparison_hom (X Y : Total) :
     (productComparison X Y).hom = codedPair (prod.fst : X ⨯ Y ⟶ X) prod.snd := by
   apply codedProduct_hom_ext <;> simp

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticUltrapower
 
-/-! Arithmetic truth in the actual quotient, including unbounded quantifiers. -/
+/-! Arithmetic truth in the quotient, including unbounded quantifiers. -/
 
 @[expose] public section
 

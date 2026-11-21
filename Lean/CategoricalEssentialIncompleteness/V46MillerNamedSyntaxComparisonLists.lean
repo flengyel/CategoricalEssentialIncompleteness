@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerListsStable
 public import CategoricalEssentialIncompleteness.V46SyntacticLists
 public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
-/-! # The actual list comparison for a PA-described coefficient predicate
+/-! # The list comparison for a PA-described coefficient predicate
 
 The scalar list code is unchanged in both directions. Nil and ordered
 adjoin are compared as morphisms, then their algebra isomorphism transports

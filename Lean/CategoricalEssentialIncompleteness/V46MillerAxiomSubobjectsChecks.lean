@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerAxiomSubobjects
 
 
-/-! # Statement checks in `V46MillerAxiomSubobjectsChecks` -/
+/-! # Uniform external axiom subobjects and finite axiom supports -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46DecidableVariablesTransport
 
-/-! Transport of the actual diagonal pullback, with independent universe levels. -/
+/-! Transport of the diagonal pullback, with independent universe levels. -/
 
 @[expose] public section
 noncomputable section

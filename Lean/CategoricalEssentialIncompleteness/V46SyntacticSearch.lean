@@ -30,7 +30,7 @@ theorem semidecisionCode_spec (F : Graph) : Semidecides F.val (semidecisionCode 
 
 def searchIndex (F : Graph) : ℕ := Encodable.encode (graphProgram (semidecisionCode F))
 
-/-- The two PA-provable sentences in Lemma 5.2. -/
+/-- The two PA-provable sentences in Lemma 6.2. -/
 def soundSentence (e : ℕ) (F : Graph) : ArithmeticSentence :=
   “∀ x y, !(eventualGraph e).val x y → !F.val x y”
 
@@ -109,8 +109,8 @@ theorem search_uniform_of_functional (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
     have hzy := hf x z y (search_sound_in_model F x z hz) hy
     simpa only [hzy] using hz
 
-/-- Lemma 5.2 in the fixed production graph presentation. The chosen index
-and its two PA proofs are independent of the ambient extension T. -/
+/-- Lemma 6.2 in the fixed production graph presentation. The chosen index and its two PA
+proofs are independent of the ambient extension T. -/
 theorem functional_search (F : Graph) :
     ∃ e : ℕ, (𝗣𝗔 ⊢ soundSentence e F) ∧ (𝗣𝗔 ⊢ domainSentence e F) ∧
       ∀ (T : ArithmeticTheory) [𝗣𝗔 ⪯ T],

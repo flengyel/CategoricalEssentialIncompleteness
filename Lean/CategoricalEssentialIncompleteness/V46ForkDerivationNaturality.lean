@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentat
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
 public import CategoricalEssentialIncompleteness.ForkProofObjects
 
-/-! # Folds and naturality on the actual valid fork proof carriers -/
+/-! # Folds and naturality on the valid fork proof carriers -/
 
 @[expose] public section
 noncomputable section
@@ -20,8 +20,8 @@ open CategoryTheory CategoryTheory.Limits
 open CategoricalEssentialIncompleteness.LocalConnectedness
 namespace CategoricalEssentialIncompleteness.V46.ForkDerivation.Naturality
 
-/-- The explicit unary presentation keeps every old carrier value as
-its actual dimension-one tuple. Its program is the given partial program. -/
+/-- The explicit unary presentation keeps every old carrier value as its dimension-one
+tuple. Its program is the given partial program. -/
 def unaryMap {X Y : EnumerableCarriers.Total} (f : X ⟶ Y) :
     NumericalTuples.unary X ⟶ NumericalTuples.unary Y where
   toFun := EnumerableCarriers.totalFunction f
@@ -63,8 +63,8 @@ theorem totalFunction_eqToHom {X Y : EnumerableCarriers.Total} (h : X = Y)
   exact congrArg Subtype.val
     (ConcreteCategory.congr_hom (EnumerableCarriers.underlying.map_id X) x)
 
-/-- This comparison is proved on the actual old carrier functions.
-It uses the proved unary coding equality, rather than an inverse choice. -/
+/-- This comparison is proved on the old carrier functions. It uses the proved unary
+coding equality, rather than an inverse choice. -/
 def unaryComparison : unaryFunctor ⋙ NumericalTuples.comparison ≅ 𝟭 EnumerableCarriers.Total :=
   NatIso.ofComponents (fun X => eqToIso (NumericalTuples.codedObject_unary X)) (by
     intro X Y f
@@ -225,9 +225,8 @@ structure Evaluation {A B : Set ℕ} (O : Operations A B) where
   mp : ∀ {t u p q} (ht : Concludes A B t p) (hu : Concludes A B u (.imp p q)),
     value (Concludes.mp ht hu) = O.mp p q (value ht) (value hu)
 
-/-- Only algebra-operation naturality is supplied. The value over each
-formula is mapped over its actual atom relabeling, with no injectivity
-assumption on the atom map. -/
+/-- Only algebra-operation naturality is supplied. The value over each formula is mapped
+over its atom relabeling, with no injectivity assumption on the atom map. -/
 structure NaturalOperations {A B A' B' : Set ℕ} (O : Operations A B) (O' : Operations A' B')
     (f : ℕ → ℕ) (ha : ∀ x ∈ A, f x ∈ A') (hb : ∀ x ∈ B, f x ∈ B') where
   map : ∀ p, O.Value p → O'.Value (p.mapAtoms f)
@@ -245,8 +244,8 @@ structure NaturalOperations {A B A' B' : Set ℕ} (O : Operations A B) (O' : Ope
     map q (O.mp p q x y) =
       O'.mp (p.mapAtoms f) (q.mapAtoms f) (map p x) (map (.imp p q) y)
 
-/-- Naturality is proved by induction on the actual valid selected
-proof. No operation is applied to an invalid child or an unmatched pair. -/
+/-- Naturality is proved by induction on the valid selected proof. No operation is applied
+to an invalid child or an unmatched pair. -/
 theorem evaluation_natural {A B A' B' : Set ℕ} {O : Operations A B} {O' : Operations A' B'}
     (E : Evaluation O) (E' : Evaluation O') (f : ℕ → ℕ)
     (ha : ∀ x ∈ A, f x ∈ A') (hb : ∀ x ∈ B, f x ∈ B')
@@ -411,8 +410,8 @@ theorem fold_mp (D : Endofunctor.Algebra (Component.rules A B hA hB).inference)
   exact (congrArg (fold A B hA hB D).toFun hs.symm).trans
     (hc.trans (congrArg D.str.left.toFun hn))
 
-/-- All six equations are derived from the actual algebra morphism.
-The proof labels and ordered children are those of the old proof carrier. -/
+/-- All six equations are derived from the algebra morphism. The proof labels and ordered
+children are those of the old proof carrier. -/
 def foldEvaluation (D : Endofunctor.Algebra (Component.rules A B hA hB).inference) :
     SelectedTrees.Evaluation (targetOperations A B hA hB D) where
   value := foldValue A B hA hB D
@@ -646,8 +645,8 @@ private theorem node_mp_congr {A B : Set ℕ} (Q : Over Component.formulaObject)
   subst y₁
   rfl
 
-/-- The node relabeling respects a commuting square of actual carrier
-maps over the fixed formula relabeling. -/
+/-- The node relabeling respects a commuting square of carrier maps over the fixed formula
+relabeling. -/
 theorem mapNode_square {A B A' B' : Set ℕ}
     {Q₀ Q₁ P₀ P₁ : Over Component.formulaObject}
     (f : ℕ → ℕ) (hf : Computable f)
@@ -719,8 +718,8 @@ structure AlgebraNaturality : Prop where
 def relabelNode : Component.Node A B D.a → Component.Node A' B' D'.a :=
   mapNode f hf ha hb h hc
 
-/-- Operation naturality holds on every actual input, by its complete
-root decomposition. The target map and its conclusion square are fixed. -/
+/-- Operation naturality holds on every input, by its complete root decomposition. The
+target map and its conclusion square are fixed. -/
 theorem node_natural (hn : AlgebraNaturality hA hB hA' hB' D D' f hf ha hb h hc)
     (n : Component.Node A B D.a) :
     h.toFun (D.str.left.toFun (Component.nodeInput A B hA hB D.a n)) =
@@ -768,8 +767,8 @@ theorem fold_natural_selected (hn : AlgebraNaturality hA hB hA' hB' D D' f hf ha
       (foldEvaluation A' B' hA' hB' D') f ha hb
       (selectedNaturality hA hB hA' hB' D D' f hf ha hb h hc hn) ht)
 
-/-- The actual numerical folds commute with the actual recursive proof
-relabeling. This applies in particular to each arrow of the fork. -/
+/-- The numerical folds commute with the recursive proof relabeling. This applies in
+particular to each morphism of the fork. -/
 theorem fold_natural (hn : AlgebraNaturality hA hB hA' hB' D D' f hf ha hb h hc) :
     fold A B hA hB D ≫ h = proofMap hA hB hA' hB' f hf ha hb ≫ fold A' B' hA' hB' D' := by
   apply NumericalTuples.Map.ext

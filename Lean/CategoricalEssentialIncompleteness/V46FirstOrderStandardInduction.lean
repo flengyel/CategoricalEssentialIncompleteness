@@ -25,8 +25,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- The actual model functor preserves the chosen binary coproduct;
-every point therefore comes from one of its two actual injections. -/
+/-- The model functor preserves the chosen binary coproduct; every point therefore comes
+from one of its two injections. -/
 theorem model_coprod_cases (A B : PredicateCategory T) (z : Obj T M (A ⨿ B)) :
     (∃ a : Obj T M A, (F T M).map (coprod.inl : A ⟶ A ⨿ B) a = z) ∨
       (∃ b : Obj T M B, (F T M).map (coprod.inr : B ⟶ A ⨿ B) b = z) := by
@@ -53,10 +53,9 @@ variable {V Fm L Sent A : PredicateCategory T}
 variable (logical : L ⟶ Fm) (sentence : Sent ⟶ Fm) (axioms : A ⟶ Sent)
 variable (all : V ⨯ Fm ⟶ Fm) (imp : Fm ⨯ Fm ⟶ Fm)
 
-/-- The constructed first-order derivations satisfy any formula
-predicate containing the actual axiom conclusions and closed under
-generalization and ordered modus ponens. Each premise is read through
-the original rule pullback. -/
+/-- The constructed first-order derivations satisfy any formula predicate containing the
+axiom conclusions and closed under generalization and ordered modus ponens. Each
+premise is read through the original rule pullback. -/
 theorem firstOrder_conclusion_induction (P : Obj T ℕ Fm → Prop)
     (hlogical : ∀ l : Obj T ℕ L, P ((F T ℕ).map logical l))
     (haxioms : ∀ a : Obj T ℕ A, P ((F T ℕ).map (axioms ≫ sentence) a))

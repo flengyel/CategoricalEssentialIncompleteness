@@ -57,8 +57,7 @@ theorem theory_subobject {P T S : Par D}
   ⟨totalValue_mono_of_retraction m hm r hmr,
     theory_subobject_factorization c hc m hm r hmr hrm v k hfac⟩
 
-/-- The partial identity of a validity subobject, constructed from its
-actual monic span. -/
+/-- The partial identity of a validity subobject, constructed from its monic span. -/
 def validityDomain {S : Par D} {V : D} (v : V ⟶ S.obj) [Mono v] : Idem S :=
   Idem.ofRestrict (inverseMono (X := Par.mk V) (Y := S) v)
 
@@ -86,9 +85,9 @@ variable [CoprodStruct C] [CategoryTheory.HasCoproducts C] [HasZeroMorphisms C]
 variable [CoprodStruct (Par D)] [CategoryTheory.HasCoproducts (Par D)]
 variable [HasZeroMorphisms (Par D)]
 
-/-- Proposition 4.1's subobject conclusion in the genuine category
-`Par(D,Mono)`. The inverse of the validity monomorphism is constructed
-by its span, rather than supplied as an extra hypothesis. -/
+/-- Proposition 4.1's subobject conclusion in the category `Par(D,Mono)`. The inverse of
+the validity monomorphism is constructed by its span, rather than supplied as an extra
+hypothesis. -/
 theorem interpreted_theory_subobject (G : RangeFunctor C (Par D)) {P T S : C}
     (c : P ⟶ S) (hc : isTotal c) (m : T ⟶ S) (hm : isTotal m)
     (r : S ⟶ T) (t : Idem S) (ht : t = Ranges.range c)

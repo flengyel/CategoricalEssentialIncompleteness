@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 
 /-! # Successful derivations carried by their original word alone
 
-The successful pullback is compared with its monomorphic image in the
-literal ordinary-tree carrier. Its image predicate existentially hides
-the pullback and conclusion witnesses. Both algebra constructors and
-conclusions are transported through the proved isomorphism.
+The successful pullback is compared with its monomorphic image in the ordinary-tree
+carrier. Its image predicate existentially hides the pullback and conclusion
+witnesses. Both algebra constructors and conclusions are transported through the
+proved isomorphism.
 -/
 
 @[expose] public section

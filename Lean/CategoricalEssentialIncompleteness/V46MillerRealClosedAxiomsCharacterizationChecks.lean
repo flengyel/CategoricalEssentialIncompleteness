@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
 
 
-/-! # Statement checks in `V46MillerRealClosedAxiomsCharacterizationChecks` -/
+/-! # The chosen recursive RCF axioms characterize real closure -/
 
 @[expose] public section
 open Polynomial

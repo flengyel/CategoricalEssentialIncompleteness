@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
-/-! # The actual success pullback through the option comparison -/
+/-! # The success pullback through the option comparison -/
 
 @[expose] public section
 
@@ -28,8 +28,8 @@ variable (f : W ⟶ OptionSyntax.obj Y) (f' : W' ⟶ OptionSyntax.obj Y')
 variable (hf : E.functor.map f ≫ (optionIso E j).hom = i.hom ≫ f')
 
 include hf in
-/-- The mapped success square is a pullback after the actual input,
-value and option comparison isomorphisms. -/
+/-- The mapped success square is a pullback after the input, value and option comparison
+isomorphisms. -/
 theorem success_isPullback :
     IsPullback (E.functor.map (pullback.fst f coprod.inr) ≫ i.hom)
       (E.functor.map (pullback.snd f coprod.inr) ≫ j.hom) f' coprod.inr := by
@@ -40,8 +40,8 @@ theorem success_isPullback :
   · exact hf
   · exact optionIso_inr E j
 
-/-- This is the canonical isomorphism of the two actual success
-pullbacks, with both of its projections specified below. -/
+/-- This is the canonical isomorphism of the two success pullbacks, with both of its
+projections specified below. -/
 def successIso : E.functor.obj (pullback f coprod.inr) ≅ pullback f' coprod.inr :=
   (success_isPullback E i j f f' hf).isoPullback
 

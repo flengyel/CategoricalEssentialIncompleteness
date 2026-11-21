@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionInputs
 
-/-! # Strict decrease for every actual typed child of a uniform proof -/
+/-! # Strict decrease for every typed child of a uniform proof -/
 
 @[expose] public section
 noncomputable section

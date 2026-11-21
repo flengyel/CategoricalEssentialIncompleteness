@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodeGeometry
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitution
 
-/-! # Literal native nodes of the actual uniform word algebra -/
+/-! # Named nodes of the uniform word algebra -/
 
 @[expose] public section
 noncomputable section
@@ -200,7 +200,7 @@ private theorem nodeFrame_point {R₁ X : Total.TotalCategory P} (r : (U).obj R�
     (congrArg (fun x => Points.pairPoint x ((U).map f ⟨0,rfl⟩))
       ((Total.pointHomEquiv R₁).left_inv r))
 
-/-- Every native term node realizes its exact frame and original term. -/
+/-- Every named term node realizes its exact frame and original term. -/
 theorem term_node_realizes (r : (U).obj (R)) (t : Tm) :
     (U).map (A).str.1.left
         ((U).map (PointFrame.realize (R) r (A).a (p) (termNodeInput P σ π d r t)).left ⟨0,rfl⟩)=
@@ -215,7 +215,7 @@ theorem term_node_realizes (r : (U).obj (R)) (t : Tm) :
       (termNodeInput P σ π d r t) ≫ (S).algebra.str.1)).trans
         (congrArg (Points.pairPoint r) (term_node_base_value P σ π d r t)))
 
-/-- Every native formula node realizes its exact frame and original formula. -/
+/-- Every named formula node realizes its exact frame and original formula. -/
 theorem formula_node_realizes (r : (U).obj (R)) (φ : Fm) :
     (U).map (A).str.2.left
         ((U).map (PointFrame.realize (R) r (A).a (q) (formulaNodeInput P σ π d r φ)).left ⟨0,rfl⟩)=
@@ -230,7 +230,7 @@ theorem formula_node_realizes (r : (U).obj (R)) (φ : Fm) :
       (formulaNodeInput P σ π d r φ) ≫ (S).algebra.str.2)).trans
         (congrArg (Points.pairPoint r) (formula_node_base_value P σ π d r φ)))
 
-/-- The point equation determines the actual morphism from the frame. -/
+/-- The point equation determines the morphism from the frame. -/
 theorem term_node_realizes_hom (r : (U).obj (R)) (t : Tm) :
     PointFrame.realize (R) r (A).a (p) (termNodeInput P σ π d r t) ≫ (A).str.1=
       PointFrame.constant (R) r (S).algebra.a.1 (termPoint P σ π d t) := by

@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
 
-/-! # Literal finite named proofs in the constructed Γ derivation object
+/-! # Finite named proofs in the constructed Γ derivation object
 
-Only standard finite named trees are used here. Their rule parameters
-are actual points of the constructed scheme domains; no comparison
-with a different deductive calculus is assumed.
+Only standard finite named trees are used here. Their rule parameters are points of
+the constructed scheme domains; no comparison with a different deductive calculus is
+assumed.
 -/
 
 @[expose] public section
@@ -32,8 +32,8 @@ local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 local notation "G" => F 𝗣𝗔 ℕ
 local notation "D" => SyntacticFiniteNamedDerivations.Derives 𝗣𝗔 variableCarrier σ π d Γ ℕ
 
-/-- Literal enumerated sentencehood supplies a point of the actual
-filtered axiom domain. Its word coordinate is the original formula. -/
+/-- Literal enumerated sentencehood supplies a point of the filtered axiom domain. Its
+word coordinate is the original formula. -/
 theorem axiom_point (φ : Fm) (henum : Γ.val.Evalb ![formulaCode φ])
     (hsent : φ.freeVariables = []) :
     ∃ p : Obj 𝗣𝗔 ℕ (SyntacticAxiomPredicates.axiomCarrier 𝗣𝗔 variableCarrier σ π d Γ),
@@ -52,8 +52,8 @@ theorem axiom_point (φ : Fm) (henum : Γ.val.Evalb ![formulaCode φ])
   exact (SyntacticAxiomPredicates.axioms_formula_value
     𝗣𝗔 variableCarrier σ π d ℕ Γ p).trans (formulaPoint_value σ π d φ).symm
 
-/-- Each constructor of the single literal named calculus is realized
-using its genuine seven-scheme parameter or original ordered rule label. -/
+/-- Each constructor of the single named calculus is realized using its seven-scheme
+parameter or original ordered rule label. -/
 theorem native_derives {φ : Fm} (h : Derives σ π d Γ φ) : D (formulaPoint σ π d φ) := by
   induction h with
   | «axiom» φ he hs =>
@@ -127,8 +127,8 @@ theorem native_derives {φ : Fm} (h : Derives σ π d Γ φ) : D (formulaPoint �
       erw [pairPoint_snd] at h
       exact h
 
-/-- A literal finite named proof supplies an actual point of the
-constructed Γ proof object with precisely the literal conclusion word. -/
+/-- A finite named proof supplies a point of the constructed Γ proof object with precisely
+the literal conclusion word. -/
 theorem native_realizes {φ : Fm} (h : Derives σ π d Γ φ) :
     ∃ p : Obj 𝗣𝗔 ℕ (SyntacticGeneratedAxioms.proofs 𝗣𝗔 variableCarrier σ π d Γ).a.left,
       ((G).map (SyntacticGeneratedAxioms.conclusion 𝗣𝗔 variableCarrier σ π d Γ) p).val =
@@ -154,9 +154,9 @@ theorem native_sentence_theorem {φ : Fm} (h : Derives σ π d Γ φ)
   · simpa only [formulaPoint_value,termPolynomial,formulaPolynomial] using (formulaPoint σ π d φ).property
   · exact (@sentence_formulaCode_iff σ π d φ).mpr hs
 
-/-- A finite literal named sentence proof yields its individual PA proof
-in the actual selected positive theorem predicate. This is Sigma-one
-completeness, rather than an identification of deductive calculi. -/
+/-- A finite named sentence proof yields its individual PA proof in the selected positive
+theorem predicate. This is Sigma-one completeness, rather than an identification of
+deductive calculi. -/
 theorem native_sentence_numeral_PA {φ : Fm} (h : Derives σ π d Γ φ)
     (hs : φ.freeVariables = []) :
     𝗣𝗔 ⊢ ((SyntacticGeneratedAxioms.literalTheoremCarrier

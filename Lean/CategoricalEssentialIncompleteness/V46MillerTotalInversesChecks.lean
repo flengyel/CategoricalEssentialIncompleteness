@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalInverses
 
 
-/-! # Statement checks in `V46MillerTotalInversesChecks` -/
+/-! # Uniform partial inverses on semidecidable images -/
 
 @[expose] public section
 noncomputable section

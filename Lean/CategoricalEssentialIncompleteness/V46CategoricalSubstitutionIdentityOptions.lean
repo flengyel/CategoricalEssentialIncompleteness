@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
 
-/-! Success equations for the actual option-valued constructors. -/
+/-! Success equations for the option-valued constructors. -/
 
 @[expose] public section
 

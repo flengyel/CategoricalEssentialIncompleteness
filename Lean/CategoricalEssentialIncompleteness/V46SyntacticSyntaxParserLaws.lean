@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
-/-! # Actual postfix constructors are accepted and preserve every stack frame -/
+/-! # Postfix constructors are accepted and preserve every stack frame -/
 
 @[expose] public section
 
@@ -47,8 +47,8 @@ theorem step_frame (a b : RawPolynomial) (record stack out tail : M)
         simp [step, hk₁, refill_frame b (π₁ record) stack u rest tail hr]
     · simp [step, hk₀, hk₁] at h
 
-/-- The frame theorem is proved by Pi-one induction on the actual
-number of consumed records, including nonstandard runPrefix lengths. -/
+/-- The frame theorem is proved by Pi-one induction on the number of consumed records,
+including nonstandard runPrefix lengths. -/
 theorem prefix_frame (a b : RawPolynomial) (word n stack out tail : M)
     (h : runPrefix a b word n (stack + 1) = out + 1) :
     runPrefix a b word n (Words.append stack tail + 1) = Words.append out tail + 1 := by
@@ -95,8 +95,8 @@ theorem finiteMembership_snoc (C : Carrier) (word record : M)
     simpa [hi0] using hr
   simpa only [Words.append_singleton] using finiteMembership_append C word (adjoin record (0 : M)) hw hs
 
-/-- Parsing the child words in their printed order produces precisely
-the stack consumed by the polynomial refiller. -/
+/-- Parsing the child words in their order produces precisely the stack consumed by the
+polynomial refiller. -/
 theorem children_run (a b q : RawPolynomial) (u stack : M)
     (h : (rawCarrier (carrier false a b) (carrier true a b) q).val.Evalb ![u]) :
     run a b (childrenWord q u) (stack + 1) = childStack q u stack + 1 := by
@@ -121,8 +121,8 @@ theorem children_run (a b q : RawPolynomial) (u stack : M)
       · simpa [childrenWord, childStack] using ic x stack hx
       · simpa [childrenWord, childStack] using id y stack hy
 
-/-- Actual coefficient assertions for child words combine into the
-coefficient assertion for their concatenated printed blocks. -/
+/-- Coefficient assertions for child words combine into the coefficient assertion for
+their concatenated blocks. -/
 theorem children_coefficients (a b q : RawPolynomial) (u : M)
     (h : (rawCarrier (carrier false a b) (carrier true a b) q).val.Evalb ![u]) :
     (coefficients a b).val.Evalb ![childrenWord q u] := by
@@ -146,8 +146,8 @@ theorem children_coefficients (a b q : RawPolynomial) (u : M)
       · simpa [childrenWord] using ic x hx
       · simpa [childrenWord] using id y hy
 
-/-- Every actual term constructor is accepted by the literal postfix
-carrier, with no tree representation substituted for that carrier. -/
+/-- Every term constructor is accepted by the postfix carrier, with no tree representation
+substituted for that carrier. -/
 theorem term_constructor_carrier (a b : RawPolynomial) (u : M)
     (h : (rawCarrier (carrier false a b) (carrier true a b) a).val.Evalb ![u]) :
     (carrier false a b).val.Evalb ![constructor false a u] := by

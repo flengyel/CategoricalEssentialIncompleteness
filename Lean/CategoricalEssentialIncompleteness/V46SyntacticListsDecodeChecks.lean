@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticListsDecode
 
-/-! # Checks for the actual arbitrary-family algebra decoder. -/
+/-! # Checks for the arbitrary-family algebra decoder. -/
 
 @[expose] public section
 

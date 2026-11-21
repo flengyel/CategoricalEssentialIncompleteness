@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
 
 
-/-! # Statement checks in `V46SyntacticSyntaxAcceptanceChecks` -/
+/-! # The plain singleton parser and the same literal-word object -/
 
 @[expose] public section
 noncomputable section

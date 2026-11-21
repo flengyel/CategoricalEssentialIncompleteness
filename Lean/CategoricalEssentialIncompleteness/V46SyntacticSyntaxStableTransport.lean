@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameterTransport
 
-/-! # Actual stable initiality transported through an equivalence -/
+/-! # Stable initiality transported through an equivalence -/
 
 @[expose] public section
 
@@ -30,8 +30,8 @@ variable (p q : SyntaxPolynomial I)
 variable (A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
   (p.mapCoefficients f) (q.mapCoefficients f)))
 
-/-- The base transported algebra keeps the actual images of both
-source carriers and both source constructor morphisms. -/
+/-- The base transported algebra keeps the images of both source carriers and both source
+constructor morphisms. -/
 def mappedAlgebra :=
   AlgebraTransport.mappedAlgebra (E.prod E)
     (SyntaxPolynomialTransport.jointIso E f g χ p q) A
@@ -67,8 +67,8 @@ theorem mappedParameters_component (r : SyntaxPolynomial I) {Y : C}
       (constantFamilyFunctor Q).map (E.functor.map s) at hn
   rw [← hn, ← Category.assoc, ← Functor.map_comp]
 
-/-- The mapped source parameter algebra and the parameter algebra of
-the mapped base algebra are isomorphic on their actual carriers. -/
+/-- The mapped source parameter algebra and the parameter algebra of the mapped base
+algebra are isomorphic on their carriers. -/
 def mappedParametersIso :
     AlgebraTransport.mappedAlgebra
         ((sliceEquivalence E b).prod (sliceEquivalence E b))

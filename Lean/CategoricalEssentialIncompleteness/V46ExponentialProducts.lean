@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ExponentialPairing
 public import CategoricalEssentialIncompleteness.V46SyntacticLists
 
-/-! # Actual predicate-product comparison for exponential pairing -/
+/-! # Predicate-product comparison for exponential pairing -/
 
 @[expose] public section
 
@@ -118,8 +118,8 @@ def decode (C D : Carrier) : GraphMorphism T (carrier C D) (productCarrier C D) 
     obtain ⟨rfl, rfl⟩ := ExponentialPairing.code_injective (hc.symm.trans hs)
     exact ht
 
-/-- Both code translations are actual morphisms modulo T-provable
-graph equality, for arbitrary Sigma-one coefficient carriers. -/
+/-- Both code translations are morphisms modulo T-provable graph equality, for arbitrary
+Sigma-one coefficient carriers. -/
 def rawProductIso (C D : PredicateCategory T) :
     CategoryTheory.Iso (C := PredicateCategory T) (productCarrier C D) (carrier C D) where
   hom := representedArrow T (encode T C D)
@@ -170,8 +170,8 @@ def chosenRawProductIso (C D : PredicateCategory T) :
   hom_inv_id := SyntacticLists.toRaw_fromRaw T C D
   inv_hom_id := SyntacticLists.fromRaw_toRaw T C D
 
-/-- The categorical binary product has the printed exponential
-numerical realization, through two proved morphism isomorphisms. -/
+/-- The categorical binary product has the exponential numerical realization, through two
+proved morphism isomorphisms. -/
 def productIso (C D : PredicateCategory T) :
     CategoryTheory.Iso (C := PredicateCategory T) (C ⨯ D) (carrier C D) :=
   chosenRawProductIso T C D ≪≫ rawProductIso T C D

@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 
-/-! The regular extensive structure is on the actual predicate category
-and the actual total restriction splitting, for arbitrary theories extending PA. -/
+/-!
+The regular extensive structure is on the predicate category and the total restriction
+splitting, for arbitrary theories extending PA.
+-/
 
 @[expose] public section
 

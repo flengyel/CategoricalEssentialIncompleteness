@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionParameters
 
 
-/-! # Statement checks in `V46NumericalArithmeticSubstitutionParametersChecks` -/
+/-! # Arithmetic substitution parameter and input comparisons -/
 
 @[expose] public section
 noncomputable section

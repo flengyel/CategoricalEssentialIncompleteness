@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityConditional
 
 
-/-! # Statement checks in `V46ArithmeticSentenceInseparabilityConditionalChecks` -/
+/-! # Recursive reversed conditionals with partial source lifts -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

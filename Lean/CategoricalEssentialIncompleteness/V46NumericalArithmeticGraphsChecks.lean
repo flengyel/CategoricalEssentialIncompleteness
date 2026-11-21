@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs
 
 
-/-! # Statement checks in `V46NumericalArithmeticGraphsChecks` -/
+/-! # Unchanged PA graphs in the standard true arithmetic presentation -/
 
 @[expose] public section
 noncomputable section

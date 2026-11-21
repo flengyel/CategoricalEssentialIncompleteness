@@ -49,8 +49,8 @@ theorem EqualityDecision.leftMap_injective {X : Diagram} (e : EqualityDecision X
   rw [e.natural_left]
   exact (e.left_eq _ _).mpr h
 
-/-- The component obstruction in Proposition A.9: no natural equality
-decision exists, even among all set maps. -/
+/-- The component obstruction in Proposition B.10: no natural equality decision exists,
+even among all set maps. -/
 theorem universal_no_decidable_equality : ¬ Nonempty (EqualityDecision universal) := by
   rintro ⟨e⟩
   have h : (0, 0, 0, 0) = (0, 1, 0, 0) :=

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDistanceProgram
 
 
-/-! # Statement checks in `V46MillerCutDistanceProgramChecks` -/
+/-! # One all-oracle rational program for each finite bad-set distance -/
 
 @[expose] public section
 noncomputable section

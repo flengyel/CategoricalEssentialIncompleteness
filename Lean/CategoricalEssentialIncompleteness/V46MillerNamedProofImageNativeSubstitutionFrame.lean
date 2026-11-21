@@ -10,10 +10,9 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonS
 
 /-! # Finite polynomial inputs at a fixed uniform parameter
 
-The recursive leaves are actual morphisms in the parameter slice.
-Coefficients remain points of their original objects. Realization uses
-ordered products and coproduct injections and commutes with the actual
-polynomial action on morphisms, including powers and arity zero.
+The recursive leaves are morphisms in the parameter slice. Coefficients remain points
+of their original objects. Realization uses ordered products and coproduct injections
+and commutes with the polynomial action on morphisms, including powers and arity zero.
 -/
 
 @[expose] public section
@@ -54,8 +53,8 @@ theorem point_natural {X Y : Total.TotalCategory P}
     Total.underlyingPoint ((U).map f x)=Total.underlyingPoint x ≫ f :=
   ConcreteCategory.congr_hom ((Total.underlyingHomComparison (P := P)).hom.naturality f) x
 
-/-- A point of an arbitrary family over the fixed frame gives an actual
-slice morphism. Only a point of the uniform target is used here. -/
+/-- A point of an arbitrary family over the fixed frame gives a slice morphism. Only a
+point of the uniform target is used here. -/
 def family (R : Total.TotalCategory P) (r : (U).obj R)
     (X : Over R) (x : (U).obj X.left) (hx : (U).map X.hom x=r) : source R r ⟶ X :=
   Over.homMk (Total.underlyingPoint x)
@@ -78,8 +77,8 @@ theorem constant_point (R : Total.TotalCategory P) (r : (U).obj R)
   change (U).map (prod.lift (Total.underlyingPoint r) (Total.underlyingPoint x)) ⟨0,rfl⟩=_
   exact (Points.lift_point _ _ _).trans (congrArg₂ Points.pairPoint (at_point r) (at_point x))
 
-/-- Finite constructor data at one fixed frame. Coefficients retain their
-own target points; recursive leaves are actual slice morphisms. -/
+/-- Finite constructor data at one fixed frame. Coefficients retain their own target
+points; recursive leaves are slice morphisms. -/
 def Data (R : Total.TotalCategory P) (r : (U).obj R) (A : Over R × Over R) :
     SyntaxPolynomial (Total.TotalCategory P) → Type
   | .term => source R r ⟶ A.1
@@ -177,8 +176,8 @@ theorem arityData_natural (R : Total.TotalCategory P) (r : (U).obj R)
         rw [ih]
         rfl
 
-/-- Polynomial action on the finite input is derived from its actual
-products and injections. No source-to-target slice chart is involved. -/
+/-- Polynomial action on the finite input is derived from its products and injections. No
+source-to-target slice chart is involved. -/
 theorem realize_natural (R : Total.TotalCategory P) (r : (U).obj R)
     {A B : Over R × Over R} (f : A ⟶ B)
     (p : SyntaxPolynomial (Total.TotalCategory P)) (z : Data R r A p) :

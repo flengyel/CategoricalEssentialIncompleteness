@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxParameterBaseChangeFamily
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxParameterBaseChangeFamilyChecks` -/
+/-! # Finite-geometry family charts after a base isomorphism -/
 
 @[expose] public section
 noncomputable section

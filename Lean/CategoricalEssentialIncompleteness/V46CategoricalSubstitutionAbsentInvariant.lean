@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityBranches
 
-/-! Conditional equality and actual equalizer-subalgebra induction. -/
+/-! Conditional equality and equalizer-subalgebra induction. -/
 
 @[expose] public section
 noncomputable section
@@ -76,8 +76,8 @@ namespace AlgebraInvariant
 variable {C : Type u'} [Category.{v'} C] [HasEqualizers C]
 variable {F : C ⥤ C}
 
-/-- Construct the actual subalgebra equalizing two morphisms whenever its
-constructor images equalize them. -/
+/-- Construct the subalgebra equalizing two morphisms whenever its constructor images
+equalize them. -/
 def equalizerAlgebra (B : Endofunctor.Algebra F) {Z : C} (f g : B.a ⟶ Z)
     (closed : ∀ {X : C} (m : X ⟶ B.a), m ≫ f = m ≫ g →
       (F.map m ≫ B.str) ≫ f = (F.map m ≫ B.str) ≫ g) :
@@ -93,8 +93,8 @@ def equalizerInclusion (B : Endofunctor.Algebra F) {Z : C} (f g : B.a ⟶ Z)
   f := equalizer.ι f g
   h := (equalizer.lift_ι _ _).symm
 
-/-- Initiality factors the actual algebra fold through the constructed
-closed equalizer subalgebra. -/
+/-- Initiality factors the algebra fold through the constructed closed equalizer
+subalgebra. -/
 theorem fold_equalizes (A B : Endofunctor.Algebra F) (hA : IsInitial A)
     {Z : C} (f g : B.a ⟶ Z)
     (closed : ∀ {X : C} (m : X ⟶ B.a), m ≫ f = m ≫ g →

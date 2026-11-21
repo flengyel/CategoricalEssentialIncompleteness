@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison
 
 
-/-! # Statement checks in `V46MillerSyntaxRawComparisonChecks` -/
+/-! # Raw-fiber comparison for every parameter slice -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.Limits

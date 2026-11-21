@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariabl
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 
-/-! # The actual coded graph and image predicate of a numerical morphism -/
+/-! # The coded graph and image predicate of a numerical morphism -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
 
 
-/-! # Statement checks in `V46NamedFiniteSoundnessChecks` -/
+/-! # The seven named-variable schemes and their two inference rules -/
 
 @[expose] public section
 universe u v w

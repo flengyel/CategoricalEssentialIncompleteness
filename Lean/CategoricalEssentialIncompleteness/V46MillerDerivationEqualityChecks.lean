@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
 
 
-/-! # Statement checks in `V46MillerDerivationEqualityChecks` -/
+/-! # Internal numerical equality on every uniform carrier -/
 
 @[expose] public section
 noncomputable section

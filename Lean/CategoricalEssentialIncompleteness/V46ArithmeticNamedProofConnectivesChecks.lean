@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofConnectives
 
 
-/-! # Statement checks in `V46ArithmeticNamedProofConnectivesChecks` -/
+/-! # Proof compatibility for arithmetic NNF connectives -/
 
 @[expose] public section
 noncomputable section

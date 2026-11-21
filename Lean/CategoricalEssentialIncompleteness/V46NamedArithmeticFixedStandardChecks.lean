@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
 
 
-/-! # Statement checks in `V46NamedArithmeticFixedStandardChecks` -/
+/-! # Standard output comparison for a generic finite named formula -/
 
 @[expose] public section
 noncomputable section

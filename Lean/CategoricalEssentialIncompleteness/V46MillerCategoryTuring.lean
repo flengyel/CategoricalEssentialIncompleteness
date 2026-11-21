@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryJoins
 public import CategoricalEssentialIncompleteness.V46MillerUnanimity
 
-/-! # The actual unanimous evaluator is a Turing morphism
+/-! # The unanimous evaluator is a Turing morphism
 
 The realizer of tau is the fixed program from Lemma8.1. A parameter
 compiler uses only the ordinary recursive specialization of a supplied

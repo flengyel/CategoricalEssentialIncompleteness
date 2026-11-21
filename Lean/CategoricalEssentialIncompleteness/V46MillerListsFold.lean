@@ -7,12 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerListsEvaluation
 
-/-! # Actual parameter-preserving list folds and compatible-map uniqueness
+/-! # Parameter-preserving list folds and compatible-map uniqueness
 
-Both list constructors are evaluated through actual uniformly represented
-operations. The uniqueness theorem covers every candidate morphism with
-the original nil and adjoin equations; no ordinary-recursive extension
-or inhabited target is assumed.
+Both list constructors are evaluated through uniformly represented operations. The
+uniqueness theorem covers every candidate morphism with the original nil and adjoin
+equations; no ordinary-recursive extension or inhabited target is assumed.
 -/
 
 @[expose] public section
@@ -107,9 +106,8 @@ theorem fold_adjoin (r a list value : ℕ) :
   · intro h;cases h with | cons ht hv => exact ⟨_,ht,hv⟩
   · rintro ⟨w,hw,hv⟩;exact .cons hw hv
 
-/-- These are the scalar forms of the literal nil/adjoin constructor
-squares for any actual candidate morphism. No existence or uniqueness
-of the candidate is assumed. -/
+/-- These are the scalar forms of the literal nil/adjoin constructor squares for any
+candidate morphism. No existence or uniqueness of the candidate is assumed. -/
 theorem fold_unique (f : family R V ⟶ X)
     (hzero : ∀ r ∈ R.obj.support,∀ value,
       value ∈ Total.val f.left.hom (Nat.pair r 0) ↔ value ∈ operation h0 (r,0))

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionRank
 
 
-/-! # Statement checks in `V46MillerDerivationWordInductionRankChecks` -/
+/-! # Strict decrease for every typed child of a uniform proof -/
 
 @[expose] public section
 noncomputable section

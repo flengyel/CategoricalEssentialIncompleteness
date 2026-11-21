@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies
 public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
 
-/-! Explicit polynomial equalities normalize base and parameter-slice
-inputs together. The transport proof reduces to the actual raw square;
-no cast of an entire initial algebra is required. -/
+/-!
+Explicit polynomial equalities normalize base and parameter-slice inputs together. The
+transport proof reduces to the raw square; no cast of an entire initial algebra is
+required.
+-/
 
 @[expose] public section
 noncomputable section

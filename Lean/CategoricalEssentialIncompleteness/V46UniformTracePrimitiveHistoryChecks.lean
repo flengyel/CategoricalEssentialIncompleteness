@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveHistory
 
 
-/-! # Statement checks in `V46UniformTracePrimitiveHistoryChecks` -/
+/-! # Primitive recursiveness of the history evaluator -/
 
 @[expose] public section
 open Nat Nat.ArithPart₁ CategoricalRiceShapiro.ArithmeticCode CategoricalRiceShapiro.Evaluator

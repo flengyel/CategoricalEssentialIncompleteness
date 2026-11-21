@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
 
 
-/-! # Statement checks in `V46MillerUniformTreesEvaluationChecks` -/
+/-! # Selected finite positive operation records -/
 
 @[expose] public section
 noncomputable section

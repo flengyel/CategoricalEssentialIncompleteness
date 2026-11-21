@@ -72,7 +72,7 @@ def formulaEmbedding : sentences ⟶ formulas := embedding ≫ (S).sentenceInclu
   rw [formulaEmbedding, ← Category.assoc, implication, Category.assoc,
     sentenceImplication_inclusion, ← Category.assoc, prod.map_map]
 
-/-- The printed retraction equation, with the actual original propositional carrier. -/
+/-- The retraction equation, with the original propositional carrier. -/
 theorem retraction : embedding ≫ (S).sentenceInclusion ≫ erase = 𝟙 sentences := by
   have h : formulaEmbedding ≫ erase = ForkPropositionalFolds.fold sentences
       ForkFirstOrderErasure.atom ForkFirstOrderErasure.negation

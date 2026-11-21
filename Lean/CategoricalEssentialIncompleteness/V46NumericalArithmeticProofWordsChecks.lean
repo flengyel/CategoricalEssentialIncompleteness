@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofWords
 
 
-/-! # Statement checks in `V46NumericalArithmeticProofWordsChecks` -/
+/-! # The arithmetic sentence-proof word presentation -/
 
 @[expose] public section
 noncomputable section

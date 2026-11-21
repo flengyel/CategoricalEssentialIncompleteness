@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMap
 
-/-! # Checks for the actual polynomial rawmap comparison -/
+/-! # Checks for the polynomial rawmap comparison -/
 
 @[expose] public section
 

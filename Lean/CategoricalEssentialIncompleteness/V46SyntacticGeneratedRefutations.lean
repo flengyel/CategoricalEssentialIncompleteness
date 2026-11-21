@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedAxioms
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
 
-/-! # The actual generated refutation image in sentence-word coordinates -/
+/-! # The generated refutation image in sentence-word coordinates -/
 
 @[expose] public section
 noncomputable section
@@ -26,8 +26,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 local notation "S" => plainCategoricalSyntax T V σ π d
 
-/-- Refutation keeps the original sentence as output; its proof
-concludes the negation of that sentence in the actual pullback. -/
+/-- Refutation keeps the original sentence as output; its proof concludes the negation of
+that sentence in the pullback. -/
 def refutationProofs (Γ : Carrier) : PredicateCategory T :=
   pullback (conclusion T V σ π d Γ) ((S).sentenceNegation ≫ (S).sentenceInclusion)
 
@@ -50,8 +50,8 @@ def literalRefutationCarrier (Γ : Carrier) : Carrier :=
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- The literal refutation predicate uses the original sentence word and
-an existential negative word linked by the actual negation graph. -/
+/-- The literal refutation predicate uses the original sentence word and an existential
+negative word linked by the negation graph. -/
 @[simp] theorem literalRefutationCarrier_eval (Γ : Carrier) (word : M) :
     (literalRefutationCarrier T V σ π d Γ).val.Evalb ![word] ↔
       (literalSentenceCarrier T V σ π d).val.Evalb ![word] ∧
@@ -66,16 +66,16 @@ theorem sentence_points (word : M) :
   exact (sentenceCarrier_literal T V σ π d M word).symm.trans
     (imageCarrier_points T M (S).sentenceInclusion word)
 
-/-- The actual sentence-negation square gives its literal formula
-coordinate without identifying the chosen sentence object's code. -/
+/-- The sentence-negation square gives its literal formula coordinate without identifying
+the chosen sentence object's code. -/
 theorem sentenceNegation_point (s : Obj T M (S).sentenceObject) :
     (F T M).map ((S).sentenceNegation ≫ (S).sentenceInclusion) s =
       (F T M).map (S).negationConstructor ((F T M).map (S).sentenceInclusion s) := by
   have h := congrArg (fun f => (F T M).map f s) (S).sentenceNegation_inclusion
   exact h.trans ((F T M).map_comp_apply (S).sentenceInclusion (S).negationConstructor s)
 
-/-- Generated refutability is the actual proof image after negation,
-expressed by the literal positive sentence/theorem predicates. -/
+/-- Generated refutability is the proof image after negation, expressed by the positive
+sentence/theorem predicates. -/
 theorem refutationCarrier_literal (Γ : Carrier) (word : M) :
     (refutationCarrier T V σ π d Γ).val.Evalb ![word] ↔
       (literalRefutationCarrier T V σ π d Γ).val.Evalb ![word] := by

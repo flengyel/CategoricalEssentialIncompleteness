@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsParameterInitial
 
 
-/-! # Statement checks in `V46MillerListsParameterInitialChecks` -/
+/-! # Direct list initiality in every uniform parameter slice -/
 
 @[expose] public section
 noncomputable section

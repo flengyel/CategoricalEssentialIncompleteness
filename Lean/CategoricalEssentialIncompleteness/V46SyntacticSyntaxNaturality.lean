@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMap
 
-/-! # Polynomial mapping agrees with the actual slice morphisms -/
+/-! # Polynomial mapping agrees with the slice morphisms -/
 
 @[expose] public section
 
@@ -25,7 +25,7 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- The preserved coproduct comparison commutes with actual slice maps. -/
+/-- The preserved coproduct comparison commutes with slice maps. -/
 theorem modelOverSum_map_inl {P : PredicateCategory T} {A B C D : Over P}
     (f : A ⟶ C) (g : B ⟶ D) (x : Obj T M A.left) :
     (F T M).map (coprod.map f g).left
@@ -53,9 +53,9 @@ theorem modelOverSum_map_inr {P : PredicateCategory T} {A B C D : Over P}
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable {P C D : PredicateCategory T} {A B : Over P}
 
-/-- Applying the finite raw polynomial to actual candidate arrows gives
-coordinates of the actual categorical polynomial map. This forward
-comparison requires neither a fold equation nor a comparison inverse. -/
+/-- Applying the finite raw polynomial to candidate morphisms gives coordinates of the
+categorical polynomial map. This forward comparison requires neither a fold equation
+nor a comparison inverse. -/
 theorem representation_arrow_map (f : constantFamily P C ⟶ A)
     (g : constantFamily P D ⟶ B) (a : SyntaxPolynomial (PredicateCategory T))
     (p : Obj T M P) (u v : M)

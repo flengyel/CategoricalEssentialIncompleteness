@@ -15,8 +15,8 @@ public import Mathlib.CategoryTheory.Subobject.Lattice
 
 Boolean algebras are specified on all generalized elements, naturally under
 precomposition. By Yoneda this is the internal Boolean-algebra structure.
-Presentations and quotients have regular epimorphisms as underlying
-arrows; their fibers are equalizer subobjects.
+Presentations and quotients have regular epimorphisms as underlying morphisms; their
+fibers are equalizer subobjects.
 -/
 
 @[expose] public section
@@ -44,7 +44,7 @@ namespace BooleanObject
 
 variable {C : Type u'} [Category.{v'} C] (B : BooleanObject C)
 
-/-- The representing arrow for complementation. -/
+/-- The representing morphism for complementation. -/
 def negate : B.obj ⟶ B.obj := (𝟙 B.obj)ᶜ
 
 theorem comp_negate {X : C} (f : X ⟶ B.obj) : f ≫ B.negate = fᶜ := by
@@ -52,10 +52,10 @@ theorem comp_negate {X : C} (f : X ⟶ B.obj) : f ≫ B.negate = fᶜ := by
 
 variable [HasBinaryProducts C]
 
-/-- The representing arrow for meet. -/
+/-- The representing morphism for meet. -/
 def meet : B.obj ⨯ B.obj ⟶ B.obj := prod.fst ⊓ prod.snd
 
-/-- The representing arrow for join. -/
+/-- The representing morphism for join. -/
 def join : B.obj ⨯ B.obj ⟶ B.obj := prod.fst ⊔ prod.snd
 
 theorem lift_meet {X : C} (f g : X ⟶ B.obj) :

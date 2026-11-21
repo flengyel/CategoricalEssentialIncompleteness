@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainResults
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainResultsChecks` -/
+/-! # Computed substitution states with the plain-syntax parameters -/
 
 @[expose] public section
 noncomputable section

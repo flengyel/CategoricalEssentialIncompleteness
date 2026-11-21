@@ -46,8 +46,8 @@ def productIso (V : C) (W : D) (e : E.functor.obj V ≅ W) :
   rw [← Category.assoc, map_inr_inv_coprodComparison, coprod.inr_map]
   rfl
 
-/-- The image test classifies the target diagonal under the actual
-terminal, binary-product and Boolean coproduct comparison isomorphisms. -/
+/-- The image test classifies the target diagonal under the terminal, binary-product and
+Boolean coproduct comparison isomorphisms. -/
 def mapped {V : C} (S : DecidableVariables V) (W : D) (e : E.functor.obj V ≅ W) :
     DecidableVariables W where
   test := (productIso E V W e).inv ≫ E.functor.map S.test ≫ (booleanIso E).hom

@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 public import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
 
-/-! # Actual ordinary rule-labelled tree algebra with uniform coefficients
+/-! # Ordinary rule-labelled tree algebra with uniform coefficients
 
-The coefficient in each finite summand is the supplied rule-instance
-object, including nullary rules. The literal constructor comparison is
-constructed before any initiality assertion. The base initiality proof
-is to be instantiated from the actual uniform syntax universal property.
+The coefficient in each finite summand is the supplied rule-instance object, including
+nullary rules. The constructor comparison is constructed before any initiality
+assertion. The base initiality proof is to be instantiated from the uniform syntax
+universal property.
 -/
 
 @[expose] public section
@@ -50,8 +50,8 @@ def ordinaryInputIso :
     asIso (SyntacticSyntax.constructorProjection (PolynomialComparison.coefficients R) N (treePair R)) ≪≫
       (PolynomialComparison.comparison R).app (ordinaryTree R).a
 
-/-- Under the actual input chart the constructor is the original
-successful-word constructor, preserving its rule label and child order. -/
+/-- Under the input chart the constructor is the original successful-word constructor,
+preserving its rule label and child order. -/
 theorem ordinaryInputIso_constructor :
     (ordinaryInputIso R).hom ≫ (ordinaryTree R).str=
       Syntax.Raw.rawWordConstructor (treePolynomial R) .unit false := by

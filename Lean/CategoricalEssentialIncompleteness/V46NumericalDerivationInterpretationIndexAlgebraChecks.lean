@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationIndexAlgebra
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationIndexAlgebraChecks` -/
+/-! # Full algebra comparison after substituting coefficient indices -/
 
 @[expose] public section
 noncomputable section

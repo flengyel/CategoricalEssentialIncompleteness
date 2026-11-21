@@ -72,8 +72,8 @@ def predicateComparison :
         simp only [germ_cons, coordinate_cons, Matrix.empty_eq] at hl
         exact hl.mpr h)
 
-/-- Arithmetic-ultrapower comparison on the actual total restriction
-splitting, for the model functors defined through predicate presentations. -/
+/-- Arithmetic-ultrapower comparison on the total restriction splitting, for the model
+functors defined through predicate presentations. -/
 def comparison :
     PredicateInterpretation.totalFunctor 𝗣𝗔 ℕ ⋙ Ultrapower.functor U ≅
       PredicateInterpretation.totalFunctor 𝗣𝗔 (Model U) :=
@@ -89,8 +89,8 @@ theorem comparison_naturality {X Y : TotalSplit 𝗣𝗔} (f : X ⟶ Y) :
         (PredicateInterpretation.totalFunctor 𝗣𝗔 (Model U)).map f :=
   (comparison U).hom.naturality f
 
-/-- Lemma 6.8 for the model functors obtained by the actual chosen
-domain splittings of the existing partial model interpretation. -/
+/-- Lemma 7.8 for the model functors obtained by the chosen domain splittings of the
+existing partial model interpretation. -/
 def canonicalComparison :
     PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ ⋙ Ultrapower.functor U ≅
       PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 (Model U) :=

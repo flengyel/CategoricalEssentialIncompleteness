@@ -7,11 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaTransport
 
-/-! # Native formula substitution and the actual full option output
+/-! # Substitution on named formulas and its interpretation in the slice
 
-Every branch is evaluated on the existing standard PA state and then
-transported by its proved morphism square. The actual slice fold is
-compared by native induction. Failure remains part of the formula state.
+Induction on a named formula identifies the result of the slice fold with the option
+returned by substitution, including failure.
 -/
 
 @[expose] public section
@@ -157,8 +156,8 @@ private theorem state_of_node_data (x : ℕ) (t : Tm) (φ : Fm)
   (formulaState_step P σ π d x t φ).trans
     ((congrArg (formulaStepValue P σ π d x t) h).trans (expectedFormulaState_step P σ π d x t φ))
 
-/-- Native formula induction compares the complete original/option pair.
-In particular, the equal-binder branch does not require recursive success. -/
+/-- Induction on named formulas compares the complete original/option pair. In particular,
+the equal-binder branch does not require recursive success. -/
 theorem formulaState_comparison (x : ℕ) (t : Tm) (φ : Fm) :
     formulaState P σ π d x t φ=expectedFormulaState P σ π d x t φ := by
   induction φ with
@@ -215,8 +214,8 @@ theorem formulaState_comparison (x : ℕ) (t : Tm) (φ : Fm) :
       convert hh using 1
       all_goals rfl
 
-/-- Both failure and success are compared in the actual uniform option
-object, with unchanged variable names and ordered term children. -/
+/-- Both failure and success are compared in the uniform option object, with unchanged
+variable names and ordered term children. -/
 theorem formulaOptionValue_eq_native (x : ℕ) (t : Tm) (φ : Fm) :
     formulaOptionValue P σ π d x t φ=optionPoint P σ π d (φ.substitute x t) := by
   have h := congrArg ((U).map (prod.snd : (S).substitutionCarriers.2 ⟶ OptionSyntax.obj (S).algebra.a.2))

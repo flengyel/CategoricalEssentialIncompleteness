@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs
 
-/-! # Restricted numerical occurrence arrows have the actual algebra target -/
+/-! # Restricted numerical occurrence morphisms have the algebra target -/
 
 @[expose] public section
 

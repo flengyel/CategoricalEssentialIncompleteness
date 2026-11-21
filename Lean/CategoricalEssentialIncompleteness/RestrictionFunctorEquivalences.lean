@@ -139,8 +139,8 @@ namespace PreservesRestriction
 variable {F : C ⥤ D} (hF : PreservesRestriction F)
 include hF
 
-/-- The domain cardinality of a total terminal object is invariant under
-restriction equivalence, using the actual full and faithful idempotent map. -/
+/-- The domain cardinality of a total terminal object is invariant under restriction
+equivalence, using the full and faithful idempotent map. -/
 theorem terminal_idem_card [F.IsEquivalence]
     (X : WideSubcategory (isTotal (C := C)))
     (Y : WideSubcategory (isTotal (C := D)))
@@ -182,8 +182,8 @@ theorem splitFunctor_essSurj_of_equivalence (e : C ≌ D)
     refine ⟨X,⟨splitIsoOfComm (e.counitIso.app Y.base) ?_⟩⟩
     exact e.counitIso.hom.naturality Y.domain.hom
 
-/-- A restriction equivalence induces an equivalence of the actual restriction
-splittings; preservation of other structure is not required for this step. -/
+/-- A restriction equivalence induces an equivalence of the restriction splittings;
+preservation of other structure is not required for this step. -/
 def splittingEquivalenceOfRestriction (e : C ≌ D)
     (hF : PreservesRestriction e.functor) (hG : PreservesRestriction e.inverse) :
     SplitObject C ≌ SplitObject D := by

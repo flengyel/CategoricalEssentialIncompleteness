@@ -20,8 +20,8 @@ open ForkFirstOrderFormula
 variable (N D P : C)
 local instance (X : C) : Regular (Over X) := RegularSlices.regular X
 
-/-- The actual two-sort parameter algebra already has initiality for
-arbitrary target families. Its unused first sort is retained here. -/
+/-- The two-sort parameter algebra already has initiality for arbitrary target families.
+Its unused first sort is retained here. -/
 def pairAlgebra := SyntaxPolynomial.algebraWithParameters .unit (expression N D)
   (ForkFirstOrderFormula.pairAlgebra N D) P
 

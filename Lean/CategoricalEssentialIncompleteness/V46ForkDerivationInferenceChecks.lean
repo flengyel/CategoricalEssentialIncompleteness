@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationInference
 
 
-/-! # Statement checks in `V46ForkDerivationInferenceChecks` -/
+/-! # The nullary-and-modus-ponens inference functor -/
 
 @[expose] public section
 noncomputable section

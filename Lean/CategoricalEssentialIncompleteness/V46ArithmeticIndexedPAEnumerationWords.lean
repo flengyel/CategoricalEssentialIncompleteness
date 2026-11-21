@@ -10,11 +10,11 @@ public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRecordLaws
 
-/-! # Literal constructor graphs used to enumerate native PA axiom matrices
+/-! # Constructor graphs used to enumerate named PA axiom matrices
 
-Expressions compute only word codes. Their graphs are explicit Σ₁ formulas,
-and their values are proved in every PA model before standard native syntax
-is compared. No definition of PA axioms is supplied as a premise.
+Expressions compute only word codes. Their graphs are explicit Σ₁ formulas, and their
+values are proved in every PA model before standard named syntax is compared. No
+definition of PA axioms is supplied as a premise.
 -/
 
 @[expose] public section

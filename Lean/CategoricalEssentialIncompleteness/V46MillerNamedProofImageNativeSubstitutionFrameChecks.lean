@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeSubstitutionFrameChecks` -/
+/-! # Finite polynomial inputs at a fixed uniform parameter -/
 
 @[expose] public section
 noncomputable section

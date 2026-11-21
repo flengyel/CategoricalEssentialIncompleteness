@@ -51,7 +51,7 @@ theorem base_input (N D E X Y : C) (h : D ⟶ E) (k : X ⟶ Y) :
     Functor.id_obj, Functor.id_map]
   simp only [prod.map_id_id]
 
-/-- The actual fork transitions satisfy the constructor square. -/
+/-- The fork transitions satisfy the constructor square. -/
 theorem fork_source_square (D P : Object) {j l : WalkingSpan} (f : j ⟶ l) :
     (ForkFormulaParameterChange.comparison (numbers.obj j) (P.map f) (D.map f)).app
         (constantFamily (P.obj j) (componentAlgebra (numbers.obj j) (D.obj j)).a) ≫

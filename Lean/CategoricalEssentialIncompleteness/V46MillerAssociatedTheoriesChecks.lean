@@ -36,8 +36,8 @@ example (U : Theory a) :
       RestrictionSubobjects.domain (inverses a)
         ((Subobject.pullback (syntaxData a).sentenceNegation).obj U.val) := refutation_domain a U
 
-/-- The extension is any closed internal theory, with the printed Miller
-assumption and actual generated-image inclusion and consistency equation. -/
+/-- The extension is any closed internal theory, with the Miller assumption and
+generated-image inclusion and consistency equation. -/
 example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ (Subobject.pullback (syntaxData a).sentenceNegation).obj U.val = ⊥) :
     SubobjectInseparable U.val ((Subobject.pullback (syntaxData a).sentenceNegation).obj U.val) ∧

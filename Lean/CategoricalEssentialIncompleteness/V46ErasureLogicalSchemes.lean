@@ -55,7 +55,7 @@ theorem hilbert_three : S.hilbertThree ≫ r = prod.map r r ≫ three neg imp :=
   have h := congrArg (fun k => k ≫ prod.fst) S.instantiation_admissible
   simpa [CategoricalSyntax.instantiationInput, Category.assoc] using h.symm
 
-/-- The instantiation scheme erases to H ⇒ H on its actual success pullback. -/
+/-- The instantiation scheme erases to H ⇒ H on its success pullback. -/
 theorem hilbert_instantiation : S.hilbertInstantiation ≫ r =
     prod.lift (S.instantiationInclusion ≫ prod.snd ≫ prod.fst ≫ r)
       (S.instantiationInclusion ≫ prod.snd ≫ prod.fst ≫ r) ≫ imp := by

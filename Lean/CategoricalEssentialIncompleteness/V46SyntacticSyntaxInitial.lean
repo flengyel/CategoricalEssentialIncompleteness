@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
 public import CategoricalEssentialIncompleteness.V46SyntacticListsStable
 
-/-! # The actual parameter-stable initial algebra on literal postfix syntax -/
+/-! # The parameter-stable initial algebra on postfix syntax -/
 
 @[expose] public section
 
@@ -23,8 +23,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Every actual algebra over an arbitrary parameter receives exactly
-one algebra morphism from the canonical postfix algebra over that parameter. -/
+/-- Every algebra over an arbitrary parameter receives exactly one algebra morphism from
+the canonical postfix algebra over that parameter. -/
 def withParametersInitial (P : PredicateCategory T)
     (a b : SyntaxPolynomial (PredicateCategory T)) :
     IsInitial (SyntaxPolynomial.algebraWithParameters a b (postfixAlgebra T a b) P) :=

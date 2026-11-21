@@ -140,8 +140,9 @@ theorem theorem_refutation_disjoint (T : ArithmeticTheory) [T.RE] (hT : Consiste
     exact hn.2)
   exact ArithmeticRepresentation.consistent_not_both T φ ⟨hp, hneg⟩
 
-/-- Corollary 6.7 applied to the classical pair constructed by Theorem 6.3,
-the actual sentence/proof objects, and the two proved base inclusions. -/
+/-- The domain-incompleteness corollary applied to the classical pair constructed by the
+section-lifting theorem, the sentence/proof objects, and the two proved base
+inclusions. -/
 theorem categorical_arithmetic (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] [T.RE] (hT : Consistent T) :
     Inseparable (theoremIdem T) (Idem.pull negation (theoremIdem T)) ∧
       theoremIdem T ⊔ Idem.pull negation (theoremIdem T) ≠ ⊤ :=

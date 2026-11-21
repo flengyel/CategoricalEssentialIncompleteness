@@ -29,8 +29,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 local notation "S" => SyntacticSyntax.plainCategoricalSyntax T V σ π d
 
-/-- The actual finite-rule algebra for the seven logical schemes,
-generalization, modus ponens and the given nonlogical axioms. -/
+/-- The finite-rule algebra for the seven logical schemes, generalization, modus ponens
+and the given nonlogical axioms. -/
 def proofAlgebra {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceObject) :
     Endofunctor.Algebra ((S).logicalRules axioms).inference :=
   SyntacticDerivation.derivationAlgebra T ((S).logicalRules axioms)
@@ -78,8 +78,8 @@ theorem sentence_theory_pullback {A : PredicateCategory T} (axioms : A ⟶ (S).s
       (Subobject.pullback (S).sentenceInclusion).obj (formulaTheory T V σ π d axioms) :=
   (generated_theory T V σ π d axioms).2.2.2
 
-/-- Nonlogical axioms factor through the actual image of the
-sentence-conclusion map, rather than merely through the formula image. -/
+/-- Nonlogical axioms factor through the image of the sentence-conclusion map, rather than
+merely through the formula image. -/
 theorem sentence_axioms_factor {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceObject) :
     ∃ a : A ⟶ image (sentenceConclusion T V σ π d axioms),
       a ≫ image.ι (sentenceConclusion T V σ π d axioms) = axioms := by
@@ -135,8 +135,7 @@ theorem sentence_theory_idempotent {A : PredicateCategory T}
   · exact imageSubobject_le_mk m (sentenceConclusion T V σ π d m) w hw
   · exact Subobject.mk_le_mk_of_comm a ha
 
-/-- Inclusion of nonlogical axioms induces inclusion of the actual
-generated sentence theories. -/
+/-- Inclusion of nonlogical axioms induces inclusion of the generated sentence theories. -/
 theorem sentence_theory_monotone {A A' : PredicateCategory T}
     (axioms : A ⟶ (S).sentenceObject) (axioms' : A' ⟶ (S).sentenceObject)
     (k : A ⟶ A') (hk : k ≫ axioms' = axioms) :
@@ -160,16 +159,16 @@ def sentenceRestriction {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceOb
     Idem (omegaObject T) :=
   SyntacticSentenceImages.theoryIdem T (conclusion T V σ π d axioms) (S).sentenceInclusion
 
-/-- The splitting of the actual source restriction idempotent is the
-constructed generated sentence theory. -/
+/-- The splitting of the source restriction idempotent is the constructed generated
+sentence theory. -/
 def sentenceRestrictionSplitting {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceObject) :
     interpretedObject T (sentencePredicate T V σ π d axioms) ≅
       (realization T).obj (image (sentenceConclusion T V σ π d axioms)) :=
   SyntacticSentenceImages.theorySplittingIso T
     (conclusion T V σ π d axioms) (S).sentenceInclusion
 
-/-- The explicit index uses the actual program graph, so its sentence
-filter is already PA-functional independently of ambient T-totality. -/
+/-- The explicit index uses the program graph, so its sentence filter is already
+PA-functional independently of ambient T-totality. -/
 def sentenceConclusionIndex {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceObject) : ℕ :=
   SyntacticSentenceImages.sentenceIndex T
     (conclusion T V σ π d axioms) (S).sentenceInclusion

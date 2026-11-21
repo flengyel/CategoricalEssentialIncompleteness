@@ -90,7 +90,7 @@ theorem carrier_induced_restriction {X Y : Carrier} (f : X ⟶ Y) :
   change @RestrictionCategory.rst Carrier _ PCategory.inducedRestriction X Y f=_
   rw [EnumerableCarriers.inducedRestriction_eq]
 
-/-- The actual endpoint component is universal for every c.e. parameter carrier. -/
+/-- The endpoint component is universal for every c.e. parameter carrier. -/
 theorem endpoint_isTuring : RecursionCategory.IsTuringMorphism endpointEvaluator := by
   intro X f
   refine ⟨endpointEncoding (specialize (program f)) (specialize_computable (program f)),?_,

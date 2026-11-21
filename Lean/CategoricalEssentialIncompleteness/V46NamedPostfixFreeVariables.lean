@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixOperations
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
 
-/-! # The actual standard occurrence algorithm computes named free variables -/
+/-! # The standard occurrence algorithm computes named free variables -/
 
 @[expose] public section
 

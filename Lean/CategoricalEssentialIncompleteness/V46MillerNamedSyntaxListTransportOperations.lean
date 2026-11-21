@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportCoordinates
 
 
-/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportOperations` -/
+/-! # Operations on lists of variable names -/
 
 @[expose] public section
 noncomputable section
@@ -24,8 +24,8 @@ local notation "F" => Syntax.predicateFunctor P
 local notation "L" => SyntacticLists.stableListAlgebra 𝗣𝗔 V
 local notation "R" => NamedSyntaxComparison.mappedListStable P V
 
-/-- The generic image constructors agree with the exact mapped list record
-used by presentedSyntax, including its actual carrier. -/
+/-- The generic image constructors agree with the exact mapped list record used by
+presentedSyntax, including its carrier. -/
 def baseListIso :
     (mappedList (F) V ((F).obj V) (Iso.refl _) (L).algebra).asAlgebra ≅ (R).algebra.asAlgebra := by
   refine constructorsIso _ _ (Iso.refl _) ?_ ?_
@@ -37,8 +37,8 @@ def baseListIso :
 
 theorem baseListIso_hom : (baseListIso P V).hom.f=𝟙 ((F).obj (L).algebra.carrier) := rfl
 
-/-- The parameterized source-to-target list algebra comparison is derived
-from terminal/product charts and both actual constructor maps. -/
+/-- The parameterized source-to-target list algebra comparison is derived from
+terminal/product charts and both constructor maps. -/
 def actualParametersIso (U : PredicateCategory 𝗣𝗔) :
     (mappedList (sliceFunctor (F) U) (constantFamily U V)
       (constantFamily ((F).obj U) ((F).obj V)) (coefficientComparison (F) U V ((F).obj V) (Iso.refl _))
@@ -153,7 +153,7 @@ private theorem map_swap (X : PredicateCategory 𝗣𝗔) :
   · simp only [Category.assoc,prodComparison_fst,prodComparison_snd,prod.lift_fst,← (F).map_comp]
   · simp only [Category.assoc,prodComparison_fst,prodComparison_snd,prod.lift_snd,← (F).map_comp]
 
-/-- Ordered concatenation follows from actual parameter-list folds. -/
+/-- Ordered concatenation follows from parameter-list folds. -/
 theorem map_append : (F).map (L).append=
     prodComparison (F) (L).algebra.carrier (L).algebra.carrier ≫ (R).append := by
   let H := sliceFunctor (F) (L).algebra.carrier

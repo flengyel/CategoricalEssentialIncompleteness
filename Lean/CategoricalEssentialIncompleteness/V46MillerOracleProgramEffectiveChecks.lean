@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
 
 
-/-! # Statement checks in `V46MillerOracleProgramEffectiveChecks` -/
+/-! # Effective finite halting cylinders and ordinary input specialization -/
 
 @[expose] public section
 noncomputable section

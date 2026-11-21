@@ -13,11 +13,11 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedStandard
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 
-/-! # Standard proof witnesses for the actual arithmetic diagonal predicates
+/-! # Standard proof witnesses for the arithmetic diagonal predicates
 
-The intermediate premise concerns individual PA axioms in the literal
-named calculus. The printed Γ-extension premise is discharged separately
-by the concrete arithmetic-axiom comparison before the final application.
+The intermediate premise concerns individual PA axioms in the named calculus. The
+Γ-extension premise is discharged separately by the concrete arithmetic-axiom
+comparison before the final application.
 -/
 
 @[expose] public section
@@ -33,8 +33,8 @@ namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticDiagonalBounds
 
 open NamedArithmeticSignature
 
-/-- The named output has the expanded source numeral and the same binder
-seed as the actual successful named substitution. -/
+/-- The named output has the expanded source numeral and the same binder seed as the
+successful named substitution. -/
 def instanceFormula (φ : ArithmeticSemisentence 1) (n : ℕ) : Formula :=
   ArithmeticNamedTranslation.translateFormula 1 ![]
     (φ/[ArithmeticNamedProofNumerals.expandedNumeral n] : ArithmeticSentence)
@@ -51,8 +51,8 @@ theorem standard_instance_result (φ : ArithmeticSemisentence 1) (n : ℕ) :
   subst out
   exact ⟨hvalue,hclosed⟩
 
-/-- An individual source PA proof is realized in the selected program of
-the actual generated Γ proof object, at the actual computed sentence word. -/
+/-- An individual source PA proof is realized in the selected program of the generated Γ
+proof object, at the computed sentence word. -/
 theorem instance_theorem_of_axioms_admissible (A : Carrier)
     (hPA : ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔)
     (φ : ArithmeticSemisentence 1) (n : ℕ)

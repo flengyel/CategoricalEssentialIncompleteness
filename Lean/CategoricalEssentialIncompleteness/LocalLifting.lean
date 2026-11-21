@@ -27,7 +27,7 @@ variable [HasZeroMorphisms C] [RestrictionZero C] [BinaryJoins C]
 variable [CoprodStruct C] [CategoryTheory.HasCoproducts C] [RestrictionCoproducts C]
 variable [Ranges C] [Splits C] [JoinInverse C] [LocallyConnected C] [WeakChoice C]
 
-/-- The unique section supplied by Proposition 6.2. -/
+/-- The unique section of the local switch. -/
 noncomputable def switchSection {X : C} (c c' : Idem X) (hc : Complementary c c') :
     X ⟶ coprod X X := Classical.choose (complementary_switch c c' hc)
 
@@ -76,8 +76,8 @@ variable [CoprodStruct A] [CategoryTheory.HasCoproducts A] [RestrictionCoproduct
 variable [Ranges R] [Ranges A]
 variable [Splits A] [JoinInverse A] [LocallyConnected A] [WeakChoice A]
 
-/-- Only the sections belonging to complementary source pairs have to lift.
-The source lifts are arbitrary partial arrows. -/
+/-- Only the sections belonging to complementary source pairs have to lift. The source
+lifts are arbitrary partial morphisms. -/
 def SectionLifting (F : RangeFunctor R A) (U : R) : Prop :=
   ∀ (c c' : Idem U) (hc : Complementary c c'), ∃ ℓ : U ⟶ coprod U U,
     F.toFunctor.map ℓ =
@@ -86,17 +86,16 @@ def SectionLifting (F : RangeFunctor R A) (U : R) : Prop :=
 
 open PCategoryStruct (nearProd diag)
 
-/-- The exact first diagonal restriction idempotent of Theorem 6.3. -/
+/-- The first restriction idempotent of the diagonal pair. -/
 def diagonal0 {U : R} (τ : nearProd U U ⟶ U) (b : U ≅ coprod U U) : Idem U :=
   Idem.pull (diag U ≫ τ ≫ b.hom) (summand0 U U)
 
-/-- The exact second diagonal restriction idempotent of Theorem 6.3. -/
+/-- The second restriction idempotent of the diagonal pair. -/
 def diagonal1 {U : R} (τ : nearProd U U ⟶ U) (b : U ≅ coprod U U) : Idem U :=
   Idem.pull (diag U ≫ τ ≫ b.hom) (summand1 U U)
 
-/-- Theorem 6.3. The source assumptions used by the proof are binary
-restriction products and a Turing morphism; prodominicality and isotypicality
-are unnecessary once `τ` and `b` have been chosen. -/
+/-- Binary restriction products and the chosen Turing morphism suffice for this
+section-lifting theorem. -/
 theorem local_lifting (F : RangeFunctor R A) {U : R}
     (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
     (b : U ≅ coprod U U) (hU : F.toFunctor.map (𝟙 U) ≠ 0)
@@ -158,7 +157,7 @@ theorem local_lifting (F : RangeFunctor R A) {U : R}
     rw [F.toFunctor.map_id]
     exact congrArg Idem.hom hone
 
-/-- Theorem 6.3 with the source recursion-category hypotheses of the paper. -/
+/-- The section-lifting theorem for a recursion category. -/
 theorem range_functor_lifting
     [RecursionCategory.Prodominical R] [RecursionCategory.Isotype R]
     (F : RangeFunctor R A) {U : R}
@@ -167,9 +166,8 @@ theorem range_functor_lifting
     (lift : SectionLifting F U) : Inseparable (diagonal0 τ b) (diagonal1 τ b) :=
   local_lifting F τ hτ b hU lift
 
-/-- The categorical essential-incompleteness theorem derives its pair by
-Theorem 6.3 and then applies Corollary 6.7. Total join preservation in the
-source is an additional, explicit assumption. -/
+/-- Section lifting gives an inseparable pair. Preservation of total joins in the source
+gives the domain-incompleteness conclusion. -/
 theorem categorical_essential_incompleteness [TotalJoinInverse R]
     (F : RangeFunctor R A) {U : R}
     (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)

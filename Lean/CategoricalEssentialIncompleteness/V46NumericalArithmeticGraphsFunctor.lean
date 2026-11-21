@@ -81,8 +81,8 @@ private theorem coordinate_id (C : PredicateCategory 𝗧𝗔) :
   erw [CategoryTheory.Functor.map_id]
   simp only [Category.id_comp,Iso.inv_hom_id]
 
-/-- The computable unary numerical presentation of the actual PA
-predicate category, with the same standard carrier coordinates. -/
+/-- The computable unary numerical presentation of the PA predicate category, with the
+same standard carrier coordinates. -/
 def numericalInterpretation : PredicateCategory 𝗣𝗔 ⥤ NumericalTuples.Object where
   obj C := NumericalCoordinates.predicateObject (C : PredicateCategory 𝗧𝗔)
   map f := NumericalCoordinates.predicateMap (theoryExtension.map f)

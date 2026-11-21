@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainAdmissibleValuesChecks` -/
+/-! # Admissible-substitution points and the independent numeric free-for flag -/
 
 @[expose] public section
 noncomputable section

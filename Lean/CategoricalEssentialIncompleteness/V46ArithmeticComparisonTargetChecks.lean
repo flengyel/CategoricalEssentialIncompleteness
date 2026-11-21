@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticComparisonTarget
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
 
-/-! # The categorical comparison on the actual arithmetic sentence carrier
+/-! # The categorical comparison on the arithmetic sentence carrier
 
-This internal assembly lemma is used after deriving its bounds and consistency
-from the concrete Gamma hypotheses. Its target is the literal sentence object,
-not the ambient numerical carrier.
+This internal assembly lemma is used after deriving its bounds and consistency from
+the concrete Gamma hypotheses. Its target is the sentence object, not the ambient
+numerical carrier.
 -/
 
 @[expose] public section

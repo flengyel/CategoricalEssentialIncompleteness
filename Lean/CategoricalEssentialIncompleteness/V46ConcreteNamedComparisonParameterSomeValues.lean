@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptions
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
 
-/-! # Actual successful constructor values after parameterization -/
+/-! # Successful constructor values after parameterization -/
 
 @[expose] public section
 

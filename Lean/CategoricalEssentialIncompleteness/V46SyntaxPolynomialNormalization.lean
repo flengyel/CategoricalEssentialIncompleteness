@@ -21,8 +21,8 @@ variable {C : Type u₁} {D : Type u₂} [Category.{v₁} C] [Category.{v₂} D]
 variable [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D]
 variable (E : C ≌ D) (A : C × C) (B : D × D) (i : (E.prod E).functor.obj A ≅ B)
 
-/-- These are explicit object-equality legs, around the existing
-constructor-preserving comparison at arbitrary, distinct sort pairs. -/
+/-- These are explicit object-equality legs, around the constructor-preserving comparison
+at arbitrary, distinct sort pairs. -/
 def normalizedPolynomialIso (p : SyntaxPolynomial D) (p₀ : SyntaxPolynomial C) (p₁ : SyntaxPolynomial D)
     (h₀ : p₀ = p.mapCoefficients E.inverse.obj) (h₁ : p.mapCoefficients id = p₁) :
     E.functor.obj (p₀.eval.obj A) ≅ p₁.eval.obj B :=

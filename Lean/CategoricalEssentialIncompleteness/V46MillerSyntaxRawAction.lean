@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison
 
-/-! # Actual raw polynomial action on arbitrary parameter-slice morphisms
+/-! # Raw polynomial action on arbitrary parameter-slice morphisms
 
-The action is constructed recursively from the raw universal products and
-sums. Its naturality comparison with the chosen polynomial action is proved
-from the actual cone triangles, with no child-action comparison premise.
+The action is constructed recursively from the raw universal products and sums. Its
+naturality comparison with the chosen polynomial action is proved from the cone
+triangles, with no child-action comparison premise.
 -/
 
 @[expose] public section

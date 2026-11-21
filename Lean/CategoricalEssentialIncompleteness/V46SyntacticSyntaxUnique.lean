@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFoldHom
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxHomGraphs
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluationLaws
 
-/-! # Uniqueness of actual parameter-slice algebra morphisms -/
+/-! # Uniqueness of parameter-slice algebra morphisms -/
 
 @[expose] public section
 
@@ -30,8 +30,8 @@ variable (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
   (a.withParameters P) (b.withParameters P)))
 variable (H : SyntaxPolynomial.algebraWithParameters a b (postfixAlgebra T a b) P ⟶ B)
 
-/-- These recursion equations are extracted from the actual categorical
-hom equation, rather than required as separate candidate data. -/
+/-- These recursion equations are extracted from the categorical hom equation, rather than
+required as separate candidate data. -/
 theorem hom_root_equations (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
     [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] :
     (decode T P a b B).RootEquations (M := M) (rawArrow T H.f.1) (rawArrow T H.f.2) := by
@@ -43,8 +43,8 @@ theorem hom_root_equations (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T
     exact candidateFormulaEquation T a b B H.f.1 H.f.2 M
       (congrArg Prod.snd H.h) p u x hp hu
 
-/-- Internal finite-word uniqueness proves equality of every actual
-algebra morphism with the constructed fold, in every parameter slice. -/
+/-- Internal finite-word uniqueness proves equality of every algebra morphism with the
+constructed fold, in every parameter slice. -/
 theorem foldHom_unique : H = foldHom T a b B := by
   apply Endofunctor.Algebra.Hom.ext
   apply Prod.ext

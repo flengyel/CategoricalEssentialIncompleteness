@@ -142,7 +142,7 @@ theorem partition_computable (p : SubobjectPartition (C := PredicateCategory �
   rw [← h]
   exact standardSet_re _
 
-/-- A categorical separator would give a recursive separator of the actual diagonal. -/
+/-- A categorical separator would give a recursive separator of the diagonal. -/
 theorem no_separator : ¬ HasSubobjectSeparator positiveSubobject negativeSubobject := by
   rintro ⟨p, hp, hn⟩
   apply ArithmeticSentenceInseparability.diagonal_no_recursive_separator

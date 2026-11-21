@@ -74,8 +74,8 @@ local notation "j₁" => realizedWordIso true p SyntaxPolynomial.unit
 local notation "c" => fun C : PredicateCategory 𝗣𝗔 => Iso.symm (NumericalSyntaxTreeChart.E.counitIso.app (K.obj C))
 local notation "I" => IndexAlgebra.normalizedTemplateIsoTo p SyntaxPolynomial.unit pN SyntaxPolynomial.unit hp rfl
 
-/-- Both branches commute by the actual postfix and coefficient-index
-comparisons, before projecting to the ordinary tree algebra. -/
+/-- Both branches commute by the postfix and coefficient-index comparisons, before
+projecting to the ordinary tree algebra. -/
 def storedJointWordIso : WordCoherence.mappedJointAlgebraTo σ τ N hp S ≅
     NumericalSyntaxTreeChart.normalizedPair pN .unit :=
   (WordCoherence.sourceMappedPairIsoTo σ τ N hp S).symm ≪≫
@@ -134,8 +134,8 @@ abbrev storedOneSortWordIso_value := scalar_arrow
   (wordPresentationIso (NumericalDerivation.rawTreePredicate (interpretedRules R))).hom
   (storedOneSortWordIso_first R) (fun x => x.val) (fun x => x.val) (storedJointWordIso_value R)
 
-/-- The ordinary comparison uses the manuscript's actual finite rule
-coproduct and the original coefficient objects at each used arity. -/
+/-- The ordinary comparison uses the manuscript's finite rule coproduct and the original
+coefficient objects at each used arity. -/
 def ordinaryWordIso : mappedOrdinaryAlgebra R (SyntacticDerivation.ordinaryTree 𝗣𝗔 R) ≅
     NumericalDerivation.literalOrdinaryTree (interpretedRules R) :=
   StandardCoherence.mappedAlgebraIso R (oneSortAlgebra 𝗣𝗔 σ N) ≪≫

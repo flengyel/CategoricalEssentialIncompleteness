@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibility
 
-/-! Exact domains, actual pullbacks, and the disjoint coproduct presentation. -/
+/-! Exact domains, pullbacks, and the disjoint coproduct presentation. -/
 
 @[expose] public section
 noncomputable section

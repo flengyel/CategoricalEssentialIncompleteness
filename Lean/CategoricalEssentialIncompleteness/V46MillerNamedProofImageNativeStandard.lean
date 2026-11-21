@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
 public import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
 
-/-! # Finite standard-model inputs and their actual parameterized points
+/-! # Finite standard-model inputs and their parameterized points
 
 Only interpreted standard points are used. No coefficient membership is
 promoted to an internal PA global point.
@@ -154,8 +154,8 @@ theorem mapData_arityData {X Y : PredicateCategory 𝗣𝗔 × PredicateCategory
         simp only [arityData,Fin.lastCases_castSucc,SyntaxPolynomial.constructors,mapData,ih]
         rfl
 
-/-- The literal finite input code is compared with the actual PA chosen
-polynomial object by its already proved representation graph. -/
+/-- The finite input code is compared with the PA chosen polynomial object by its already
+proved representation graph. -/
 theorem rawCode_represents (X : PredicateCategory 𝗣𝗔 × PredicateCategory 𝗣𝗔)
     (p : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) (z : Data X p) :
     (SyntacticSyntax.baseRepresentation 𝗣𝗔 X.1 X.2 p).val.Evalb
@@ -239,8 +239,8 @@ theorem liftData_parameter (R : PredicateCategory 𝗣𝗔) (r : (N).obj R)
     (N).map ((p.withParameters R).eval.obj (constantFamily R X.1,constantFamily R X.2)).hom
       (liftData R r X p z).val=r := (liftData R r X p z).property
 
-/-- Only the standard interpreted value is read from a parameterized
-polynomial point; its chosen code is retained in the actual point. -/
+/-- Only the standard interpreted value is read from a parameterized polynomial point; its
+chosen code is retained in the point. -/
 theorem liftData_value (R : PredicateCategory 𝗣𝗔) (r : (N).obj R)
     (X : PredicateCategory 𝗣𝗔 × PredicateCategory 𝗣𝗔)
     (p : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) (z : Data X p) :

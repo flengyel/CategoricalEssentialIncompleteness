@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparison
 
 
-/-! # Statement checks in `V46MillerCanonicalProofComparisonChecks` -/
+/-! # The canonical Γ derivation algebra and generated sentence image -/
 
 @[expose] public section
 noncomputable section

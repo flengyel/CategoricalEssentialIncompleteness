@@ -50,7 +50,7 @@ structure SliceAlgebra (T : ArithmeticTheory) (P V X : Carrier) where
   cons_support : T ⊢ consSupportSentence P V X projection.graph consOp
   cons_total : T ⊢ consTotalSentence P V X projection.graph consOp
 
-/-- The actual Sigma-one carrier of canonical V-lists. -/
+/-- The Sigma-one carrier of canonical V-lists. -/
 def listCarrier (V : Carrier) : Carrier := FiniteSigmaOne.finiteMembership V
 
 namespace SliceAlgebra

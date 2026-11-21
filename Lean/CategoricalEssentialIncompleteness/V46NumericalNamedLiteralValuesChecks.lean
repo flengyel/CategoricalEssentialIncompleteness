@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralValuesChecks` -/
+/-! # Numerical free-variable diagrams and primitive traversal values -/
 
 @[expose] public section
 noncomputable section

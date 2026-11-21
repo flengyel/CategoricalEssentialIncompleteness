@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics
 
 
-/-! # Statement checks in `V46ArithmeticNamedPresentationSemanticsChecks` -/
+/-! # Semantic roundtrip for each named arithmetic sentence -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

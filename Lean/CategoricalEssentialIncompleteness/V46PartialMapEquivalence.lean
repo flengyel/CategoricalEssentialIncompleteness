@@ -126,8 +126,8 @@ instance functor_faithful : (functor E).Faithful where
         apply reflect_span_iso E
         exact (mapSpan E s).isomorphic_of_value_eq (mapSpan E t) h
 
-/-- Fullness of the base equivalence pulls every actual monic span back
-to an ordinary mono-left span in D. -/
+/-- Fullness of the base equivalence pulls every monic span back to an ordinary mono-left
+span in D. -/
 def unmapSpan {X Y : PartialMaps.Par D}
     (s : PartialSpans.Span (E.functor.obj X.obj).obj (E.functor.obj Y.obj).obj) :
     PartialMaps.Raw X Y := by
@@ -167,8 +167,8 @@ instance functor_essSurj : (functor E).EssSurj where
 
 instance functor_isEquivalence : (functor E).IsEquivalence := {}
 
-/-- The comparison is an equivalence of the actual monic-span quotient
-with R, and uses the supplied equivalence only on its total category. -/
+/-- The comparison is an equivalence of the monic-span quotient with R, and uses the
+supplied equivalence only on its total category. -/
 def equivalence : PartialMaps.Par D ≌ R := (functor E).asEquivalence
 
 theorem preserves_restrictions {X Y : PartialMaps.Par D} (f : X ⟶ Y) :

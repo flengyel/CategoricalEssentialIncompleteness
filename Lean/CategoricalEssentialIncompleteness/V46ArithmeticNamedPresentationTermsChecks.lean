@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationTerms
 
 
-/-! # Statement checks in `V46ArithmeticNamedPresentationTermsChecks` -/
+/-! # Exact arithmetic-term and relation presentation -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

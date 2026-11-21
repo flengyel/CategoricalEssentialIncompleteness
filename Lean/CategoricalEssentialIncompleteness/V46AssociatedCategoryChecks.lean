@@ -7,11 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46AssociatedExtensionWitness
 
-/-! # Retraction and Boolean-morphism subgoals of manuscript v57 Theorem 5.3
-
-The essential-incompleteness equivalence still requires transfer of closed
-theories. These checks do not assert that remaining clause.
--/
+/-! # The restriction retraction and the partial Boolean morphism -/
 
 @[expose] public section
 noncomputable section

@@ -10,9 +10,8 @@ public import PCats.DomProducts
 
 /-! # Binary restriction products in the restriction splitting
 
-The pairing, projections and their universal property use the existing
-restriction structure on `SplitObject`. `V46SplitProductCategory` packages
-the product and prodominical laws.
+The pairing, projections and their universal property use the restriction structure on
+`SplitObject`. `V46SplitProductCategory` packages the product and prodominical laws.
 -/
 
 @[expose] public section
@@ -191,7 +190,7 @@ theorem productData_partialPairing {W X Y : SplitObject R}
   rw [Category.assoc]
   exact (binaryProductPair f g).source
 
-/-- The chosen product data induce the existing restriction operation. -/
+/-- The chosen product data induce the restriction operation. -/
 theorem productData_restriction {X Y : SplitObject R} (f : X ⟶ Y) :
     @PCategoryStruct.rst (SplitObject R) inferInstance productData X Y f = rst f := by
   unfold PCategoryStruct.rst

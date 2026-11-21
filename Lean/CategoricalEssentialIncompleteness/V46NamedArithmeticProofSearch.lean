@@ -11,10 +11,10 @@ public import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
 
 /-! # The partial proof-search morphism for the constructed arithmetic theory
 
-Both evidence predicates use the selected program of the actual generated
-proof algebra. Their input is the actual fixed-formula substitution graph;
-refutation uses the graph of the actual negation constructor. The source
-morphism is chosen before an interpreting model or a disjointness proof.
+Both evidence predicates use the selected program of the generated proof algebra.
+Their input is the fixed-formula substitution graph; refutation uses the graph of the
+negation constructor. The source morphism is chosen before an interpreting model or a
+disjointness proof.
 -/
 
 @[expose] public section
@@ -36,15 +36,15 @@ namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch
 open NamedArithmeticSignature
 local notation "S" => plainCategoricalSyntax 𝗣𝗔 variableSymbols functionSymbols relationSymbols bound
 
-/-- Provability after the actual numeral-substitution graph. Its graph
-coordinates are output/input, whereas represented morphisms use input/output. -/
+/-- Provability after the numeral-substitution graph. Its graph coordinates are
+output/input, whereas represented morphisms use input/output. -/
 def positive (Γ : Carrier) (φ : Formula) : Carrier :=
   let H := NamedArithmeticFixedSubstitution.graph φ
   let Th := SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
     variableSymbols functionSymbols relationSymbols bound Γ
   .mkSigma “n. ∃ word, !H.val word n ∧ !Th.val word”
 
-/-- Refutation after substitution uses the actual formula-negation graph. -/
+/-- Refutation after substitution uses the formula-negation graph. -/
 def negative (Γ : Carrier) (φ : Formula) : Carrier :=
   let H := NamedArithmeticFixedSubstitution.graph φ
   let Neg := (chosenGraph 𝗣𝗔 (S).negationConstructor).graph
@@ -52,8 +52,7 @@ def negative (Γ : Carrier) (φ : Formula) : Carrier :=
     variableSymbols functionSymbols relationSymbols bound Γ
   .mkSigma “n. ∃ word negative, !H.val word n ∧ !Neg.val word negative ∧ !Th.val negative”
 
-/-- The actual partial source lift. No consistency or totality hypothesis
-enters its definition. -/
+/-- The partial source lift. No consistency or totality hypothesis enters its definition. -/
 def ell (Γ : Carrier) (φ : Formula) :
     omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔) :=
   PartialSearchLift.lift (positive Γ φ) (negative Γ φ)
@@ -104,8 +103,8 @@ theorem ell_domain (Γ : Carrier) (φ : Formula)
       (positive Γ φ).val.Evalb ![x] ∨ (negative Γ φ).val.Evalb ![x] :=
   PartialSearchLift.model_lift_domain M (positive Γ φ) (negative Γ φ) hd x
 
-/-- The literal even/odd relation printed in Lemma 7.2. This does not assert
-that proof search is total on inputs for which neither predicate holds. -/
+/-- Under the disjointness hypothesis, Lemma 8.2 identifies the two output parities of
+partial proof search with the positive and negative predicates. -/
 theorem mem_numericalEll (Γ : Carrier) (φ : Formula)
     (hd : ∀ n : M, ¬((positive Γ φ).val.Evalb ![n] ∧ (negative Γ φ).val.Evalb ![n]))
     (x y : M) :
@@ -137,8 +136,8 @@ theorem ell_comparison (Γ : Carrier) (φ : Formula) :
 
 end Models
 
-/-- The source morphism is selected before all model structures and before
-the disjointness witness, for the actual generated Γ theory. -/
+/-- The source morphism is selected before all model structures and before the
+disjointness witness, for the generated Γ theory. -/
 theorem partial_proof_search (Γ : Carrier) (φ : Formula) :
     ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
       ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],

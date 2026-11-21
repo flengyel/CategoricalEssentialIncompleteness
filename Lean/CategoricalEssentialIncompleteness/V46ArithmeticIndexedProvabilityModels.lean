@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvability
 
-/-! # The uniform formula and the actual total family conclusion -/
+/-! # The uniform formula and the total family conclusion -/
 
 @[expose] public section
 noncomputable section
@@ -130,8 +130,8 @@ theorem provability_sentence (AxPA : Carrier) (e z : M)
   obtain ⟨rfl,rfl⟩ := (pair_eq_pair_iff e z a b).mp he
   exact hb
 
-/-- The formula represents the actual family conclusion image at the
-parameter and literal sentence coordinates, at every internal input. -/
+/-- The formula represents the family conclusion image at the parameter and sentence
+coordinates, at every internal input. -/
 theorem provability_model (AxPA : Carrier) (e z : M)
     (hs : NamedArithmeticLiteralTotal.literalPredicate.val.Evalb ![z]) :
     (provability AxPA).val.Evalb ![e,z] ↔

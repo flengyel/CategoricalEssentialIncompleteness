@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
 
-/-! # Numerical constructors append the literal named postfix record -/
+/-! # Numerical constructors append the named postfix record -/
 
 @[expose] public section
 noncomputable section

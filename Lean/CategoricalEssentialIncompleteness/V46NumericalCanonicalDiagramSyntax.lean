@@ -81,8 +81,8 @@ def initial : IsInitial (algebra c p q) :=
       (AlgebraTransport.mappedLiftIso pairing (polynomialIso c p q)
         (NumericalDiagramSyntax.algebra c p q)).symm)
 
-/-- This identifies the actual lifted algebra, including its constructor,
-with the previously proved componentwise numerical algebra. -/
+/-- This identifies the lifted algebra, including its constructor, with the previously
+proved componentwise numerical algebra. -/
 def constructorIso :
     AlgebraTransport.mappedAlgebra pairing (polynomialIso c p q) (algebra c p q) ≅
       NumericalDiagramSyntax.algebra c p q :=
@@ -103,8 +103,8 @@ theorem fold_underlying_unique (B : Endofunctor.Algebra (polynomial c p q))
   congrArg Endofunctor.Algebra.Hom.f ((initial c p q).hom_ext
     (⟨m, hm⟩ : algebra c p q ⟶ B) _)
 
-/-- The actual term/formula expressions of the canonical syntax interface
-have a constructed initial algebra, at every finite signature bound. -/
+/-- The term/formula expressions of the canonical syntax interface have a constructed
+initial algebra, at every finite signature bound. -/
 def syntaxData (V : J ⥤ C) (σ π : ℕ → J ⥤ C) (d : ℕ) :
     Σ A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       (SyntaxPolynomial.termExpression V σ d) (SyntaxPolynomial.formulaExpression V π d)),

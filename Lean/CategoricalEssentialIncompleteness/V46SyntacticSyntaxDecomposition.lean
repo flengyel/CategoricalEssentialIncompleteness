@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! # Root decomposition of accepted literal postfix words -/
+/-! # Root decomposition of accepted postfix words -/
 
 @[expose] public section
 
@@ -84,8 +84,8 @@ private theorem prefixStackInvariant_definable (a b : RawPolynomial) :
       (prefixStackInvariant a b).val.Evalb v
     rw [hv]
 
-/-- Sigma-one induction constructs the actual accepted-block invariant
-for every bounded runPrefix of a coefficient-valid word. -/
+/-- Sigma-one induction constructs the accepted-block invariant for every bounded
+runPrefix of a coefficient-valid word. -/
 theorem prefix_stack_valid (a b : RawPolynomial) (word n : M)
     (hw : (coefficients a b).val.Evalb ![word]) (hn : n ≤ len word) :
     runPrefix a b word n 1 = 0 ∨
@@ -152,8 +152,8 @@ theorem step_root (a b : RawPolynomial) (record stack word k : M)
       have hsu := (refill_sound b s stack u rest hu).1
       exact Or.inr ⟨hp'.2.symm, u, hraw, by simpa [constructor, hsu] using hp'.1.symm⟩
 
-/-- Every accepted literal word has a genuine last-record root and an
-ordered polynomial tuple of accepted child words. -/
+/-- Every accepted literal word has a last-record root and an ordered polynomial tuple of
+accepted child words. -/
 theorem carrier_decomposition (formula : Bool) (a b : RawPolynomial) (word : M)
     (hw : (carrier formula a b).val.Evalb ![word]) :
     ∃ u : M, (rawCarrier (carrier false a b) (carrier true a b)
@@ -190,8 +190,8 @@ theorem carrier_decomposition (formula : Bool) (a b : RawPolynomial) (word : M)
         · simp at hz
         · exact ⟨u, hu, he⟩
 
-/-- Ordered child words are recovered by running their literal common
-runPrefix, so equal printed constructor words have equal raw inputs. -/
+/-- Ordered child words are recovered by running their literal common runPrefix, so equal
+constructor words have equal raw inputs. -/
 theorem constructor_injective (formula : Bool) (a b q : RawPolynomial) (u v : M)
     (hu : (rawCarrier (carrier false a b) (carrier true a b) q).val.Evalb ![u])
     (hv : (rawCarrier (carrier false a b) (carrier true a b) q).val.Evalb ![v])

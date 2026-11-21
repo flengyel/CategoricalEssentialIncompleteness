@@ -113,8 +113,8 @@ def sliceJointIso (p q : SyntaxPolynomial I) :
     exact Prod.ext (sliceComponent_natural E b f g χ p k)
       (sliceComponent_natural E b f g χ q k)
 
-/-- The two actual constant-family carrier isomorphisms, paired in the
-category on which the two-sorted algebra endofunctor acts. -/
+/-- The two constant-family carrier isomorphisms, paired in the category on which the
+two-sorted algebra endofunctor acts. -/
 def carrierComparison (X : C × C) :
     (((sliceEquivalence E b).prod (sliceEquivalence E b)).functor.obj
       (constantFamily P X.1, constantFamily P X.2)) ≅

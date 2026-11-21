@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
 
 
-/-! # Statement checks in `V46NumericalRuleRelabelChecks` -/
+/-! # Computable relabelling of the constructed numerical derivation words -/
 
 @[expose] public section
 noncomputable section
@@ -36,8 +36,8 @@ example : (NumericalRuleRelabel.codeIso (F := F) (N := N) (R := R) (R' := R') ι
     NumericalDerivation.codeConclusion R = NumericalDerivation.codeConclusion R' :=
   NumericalRuleRelabel.inverse_conclusion (F := F) (N := N) (R := R) (R' := R') ι κ hικ hκι
 
-/-- A morphism in the algebra category carries the full constructor
-commutation equation in its `h` field. Its underlying map is the actual iso. -/
+/-- A morphism in the algebra category carries the full constructor commutation equation
+in its `h` field. Its underlying map is the iso. -/
 example : ∃ f : NumericalDerivation.codeAlgebra R ⟶
       NumericalRuleRelabel.targetAlgebra (F := F) (N := N) (R := R) (R' := R') ι,
     f.f = (NumericalRuleRelabel.overIso (F := F) (N := N) (R := R) (R' := R') ι κ hικ hκι).hom ∧

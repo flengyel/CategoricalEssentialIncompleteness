@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonTranspose
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonTransposeChecks` -/
+/-! # Transposing comparison squares through the equivalence unit -/
 
 @[expose] public section
 noncomputable section

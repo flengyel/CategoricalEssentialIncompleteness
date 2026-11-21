@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
 
-/-! The actual lifted constructors return the expected successful result. -/
+/-! The lifted constructors return the expected successful result. -/
 
 @[expose] public section
 

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Actual result projections of the substitution constructor algebra -/
+/-! # Result projections of the substitution constructor algebra -/
 
 @[expose] public section
 
@@ -21,8 +21,8 @@ namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
 variable {V : D} {σ π : ℕ → D} {d : ℕ} (S : CategoricalSyntax V σ π d)
 
-/-- Both original/result state components are projected by actual
-product arrows. The second target sort is a genuine option object. -/
+/-- Both original/result state components are projected by product morphisms. The second
+target sort is an option object. -/
 def optionResultProjection : S.substitutionCarriers ⟶
     (S.algebra.a.1,OptionSyntax.obj S.algebra.a.2) := (prod.snd,prod.snd)
 

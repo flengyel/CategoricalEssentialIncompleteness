@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralCarrierNames
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations
 
-/-! # Numerical word charts decode to the literal named finite syntax -/
+/-! # Numerical word charts decode to the named finite syntax -/
 
 @[expose] public section
 noncomputable section

@@ -9,12 +9,10 @@ public import CategoricalEssentialIncompleteness.V46MillerListsCarrier
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstructors
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 
-/-! # Literal constructor-preserving list-to-word code translation
+/-! # Translation from list codes to word codes
 
-This is an ordinary primitive-recursive code translation. It retains
-the original label and ordered tail. Membership of an arbitrary uniform
-coefficient carrier is a positive support condition, not a code field.
-The inverse word translation and its comparison are separate obligations.
+The primitive recursive translation preserves the constructor label and the order of
+the tail. Membership in a uniform coefficient carrier is a condition on the support.
 -/
 
 @[expose] public section

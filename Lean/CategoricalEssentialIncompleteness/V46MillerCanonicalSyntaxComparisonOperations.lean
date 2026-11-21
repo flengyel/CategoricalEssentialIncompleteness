@@ -12,11 +12,10 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegatio
 
 /-! # Canonical occurrence, substitution and sentence charts
 
-The existing equivalence transport is applied backwards, where its
-inverse-image signature is exactly the explicit forward signature.
-Every list comparison used below is derived in Transpose from the actual
-mapped list operations. The unit transposes the resulting fold equations
-to the forward presentation.
+The existing equivalence transport is applied backwards, where its inverse-image
+signature is exactly the explicit forward signature. Every list comparison used below
+is derived in Transpose from the mapped list operations. The unit transposes the
+resulting fold equations to the forward presentation.
 -/
 
 @[expose] public section

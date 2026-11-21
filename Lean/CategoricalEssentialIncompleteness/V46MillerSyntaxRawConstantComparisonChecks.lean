@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantComparison
 
 
-/-! # Statement checks in `V46MillerSyntaxRawConstantComparisonChecks` -/
+/-! # The constant-family polynomial comparison square -/
 
 @[expose] public section
 noncomputable section

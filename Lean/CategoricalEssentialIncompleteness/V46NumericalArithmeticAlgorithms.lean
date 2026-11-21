@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
 
-/-! # Literal arithmetic algorithms are independent of coefficient guards -/
+/-! # Arithmetic algorithms are independent of coefficient guards -/
 
 @[expose] public section
 noncomputable section

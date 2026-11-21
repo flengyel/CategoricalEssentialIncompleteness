@@ -9,12 +9,11 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTransl
 public import Foundation.FirstOrder.Arithmetic.PeanoMinus.Basic
 public import Foundation.FirstOrder.LK.Completeness
 
-/-! # Source proof numerals matching the literal named recurrence
+/-! # Source proof numerals matching the named recurrence
 
-Foundation's numeral one is its constant one. The literal named numeral
-one is zero plus one. Expanded source numerals preserve this distinction
-and have an exact syntactic translation; their equality to Foundation's
-numerals is a separate actual PA theorem.
+Foundation's numeral one is its constant one. The named numeral one is zero plus one.
+Expanded source numerals preserve this distinction and have an exact syntactic
+translation; their equality to Foundation's numerals is a separate PA theorem.
 -/
 
 @[expose] public section
@@ -65,8 +64,8 @@ theorem expandedNumeral_value (n : ℕ) :
 
 end Models
 
-/-- An actual source PA proof compares the two numeral conventions.
-This theorem alone is not a native proof translation. -/
+/-- A source PA proof compares the two numeral conventions. This theorem alone is not a
+Hilbert proof translation. -/
 theorem expandedNumeral_eq_standard_PA (n : ℕ) :
     𝗣𝗔 ⊢ (Semiformula.rel .eq ![expandedNumeral n,(↑n : ArithmeticSemiterm Empty 0)] : ArithmeticSentence) := by
   apply complete.{0} 𝗣𝗔
@@ -83,8 +82,8 @@ theorem expanded_instance_equivalence_PA (φ : ArithmeticSemisentence 1) (n : �
   intro M _ _
   simp [models_iff,expandedNumeral_value,numeral_eq_natCast]
 
-/-- A canonical numeral proof supplies the expanded instance needed by
-the literal named numeral-substitution algorithm. -/
+/-- A canonical numeral proof supplies the expanded instance needed by the named
+numeral-substitution algorithm. -/
 theorem expanded_instance_PA (φ : ArithmeticSemisentence 1) (n : ℕ)
     (h : 𝗣𝗔 ⊢ (φ/[(↑n : ArithmeticSemiterm Empty 0)] : ArithmeticSentence)) :
     𝗣𝗔 ⊢ (φ/[expandedNumeral n] : ArithmeticSentence) :=

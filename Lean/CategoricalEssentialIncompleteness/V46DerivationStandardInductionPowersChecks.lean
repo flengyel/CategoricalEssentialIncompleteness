@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers
 
 
-/-! # Statement checks in `V46DerivationStandardInductionPowersChecks` -/
+/-! # Ordered children in the finite powers of derivation objects -/
 
 @[expose] public section
 noncomputable section

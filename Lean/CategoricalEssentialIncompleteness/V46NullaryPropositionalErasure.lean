@@ -82,7 +82,7 @@ def erase : S.algebra.a.2 ⟶ Y := (S.fold (algebra V atom neg imp truth)).2
     SyntaxPolynomial.eval, SyntaxPolynomial.sumFunctor, SyntaxPolynomial.productFunctor,
     Category.assoc] using hh.symm
 
-/-- Uniqueness among all formula morphisms satisfying the five printed clauses. -/
+/-- Uniqueness among all formula morphisms satisfying the five clauses. -/
 theorem unique (m : S.algebra.a.2 ⟶ Y)
     (he : S.equalityConstructor ≫ m = terminal.from _ ≫ truth)
     (ha : NullaryInterpretation.atomFormula S ≫ m = atom)

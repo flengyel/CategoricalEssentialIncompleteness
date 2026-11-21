@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 public import CategoricalEssentialIncompleteness.V46ModelLogicalSoundness
 
-/-! # Standard semantics of the actual plain categorical constructors -/
+/-! # Standard semantics of the plain categorical constructors -/
 
 @[expose] public section
 

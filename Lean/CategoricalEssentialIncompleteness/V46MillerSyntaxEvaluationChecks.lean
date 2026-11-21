@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxEvaluation
 
 
-/-! # Statement checks in `V46MillerSyntaxEvaluationChecks` -/
+/-! # Evaluation of postfix words in a parameter slice -/
 
 @[expose] public section
 noncomputable section

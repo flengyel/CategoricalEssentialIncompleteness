@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
 public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
 
-/-! Boolean truth tables needed by the actual transported list and
-substitution algebras. The proofs use actual coproduct fibers. -/
+/-!
+Boolean truth tables needed by the transported list and substitution algebras. The
+proofs use coproduct fibers.
+-/
 
 @[expose] public section
 noncomputable section
@@ -53,8 +55,8 @@ variable {C : Type u₁} {D : Type u₂} [Category.{v₁} C] [Category.{v₂} D]
 variable [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D]
 variable (E : C ≌ D)
 
-/-- Every unary Boolean truth table commutes with the actual Boolean
-comparison, including complementation. -/
+/-- Every unary Boolean truth table commutes with the Boolean comparison, including
+complementation. -/
 theorem map_boolean_unary {X : C} (op : Bool → Bool) (f : X ⟶ Two C) :
     E.functor.map (Two.unary op f) ≫ (booleanIso E).hom =
       Two.unary op (E.functor.map f ≫ (booleanIso E).hom) := by
@@ -62,8 +64,8 @@ theorem map_boolean_unary {X : C} (op : Bool → Bool) (f : X ⟶ Two C) :
     map_constant E X (op false),map_constant E X (op true)]
   exact (boolean_unary_as_branch op (E.functor.map f ≫ (booleanIso E).hom)).symm
 
-/-- Every binary Boolean truth table commutes with the actual Boolean
-comparison; no chosen codes for either truth point are used. -/
+/-- Every binary Boolean truth table commutes with the Boolean comparison; no chosen codes
+for either truth point are used. -/
 theorem map_boolean_binary {X : C} (op : Bool → Bool → Bool) (f g : X ⟶ Two C) :
     E.functor.map (Two.binary op f g) ≫ (booleanIso E).hom =
       Two.binary op (E.functor.map f ≫ (booleanIso E).hom)

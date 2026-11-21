@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap
 
-/-! # Reading actual product and coproduct points from forward leaf relations -/
+/-! # Reading product and coproduct points from forward leaf relations -/
 
 @[expose] public section
 

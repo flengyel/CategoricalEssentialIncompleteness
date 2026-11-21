@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationComponents
 
 
-/-! # Statement checks in `V46ForkDerivationComponentsChecks` -/
+/-! # Span naturality of the finite-rule inputs -/
 
 @[expose] public section
 noncomputable section

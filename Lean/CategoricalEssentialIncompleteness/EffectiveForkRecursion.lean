@@ -255,8 +255,8 @@ theorem section_lifting : SectionLifting rangeFunctor U := by
 def pair0 : Idem U := diagonal0 turing sumFrame
 def pair1 : Idem U := diagonal1 turing sumFrame
 
-/-- The three-point example uses the actual checked evaluator and fullness
-to discharge section lifting in Theorem 6.3. -/
+/-- The three-point example uses the checked evaluator and fullness to discharge section
+lifting in the section-lifting theorem. -/
 theorem pair_inseparable : Inseparable pair0 pair1 :=
   range_functor_lifting rangeFunctor turing turing_isTuring sumFrame
     inclusion_nonzero section_lifting

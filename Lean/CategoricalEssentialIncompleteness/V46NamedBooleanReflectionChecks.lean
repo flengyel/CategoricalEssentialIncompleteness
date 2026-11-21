@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
 
 
-/-! # Statement checks in `V46NamedBooleanReflectionChecks` -/
+/-! # Reflection of literal membership by the Boolean comparison -/
 
 @[expose] public section
 noncomputable section

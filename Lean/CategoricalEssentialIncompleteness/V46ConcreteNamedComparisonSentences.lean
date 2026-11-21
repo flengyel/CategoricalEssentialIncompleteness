@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlain
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
 public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
-/-! # Literal sentence codes are precisely plain formula codes with empty FV -/
+/-! # Sentence codes are precisely plain formula codes with empty FV -/
 
 @[expose] public section
 
@@ -26,8 +26,8 @@ namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 
-/-- Both conjuncts concern the same literal formula word. The graph is
-that of the actual PA-total numerical free-variable traversal. -/
+/-- Both conjuncts concern the same formula word. The graph is that of the PA-total
+numerical free-variable traversal. -/
 def literalSentenceCarrier : Carrier :=
   let C := Postfix.plainCarrier true (SyntaxPolynomial.termExpression V σ d)
     (SyntaxPolynomial.formulaExpression V π d)
@@ -45,8 +45,8 @@ omit [𝗣𝗔 ⪯ T] [M↓[ℒₒᵣ] ⊧* T] in
           ConcreteNamedSubstitution.freeVariables V σ π d word = 0 := by
   simp [literalSentenceCarrier,eq_comm]
 
-/-- The chosen pullback object need not itself use formula coordinates;
-its actual inclusion has exactly this numeric image. -/
+/-- The chosen pullback object need not itself use formula coordinates; its inclusion has
+exactly this numeric image. -/
 theorem sentenceCarrier_literal (word : M) :
     (SyntacticSentenceImages.sentenceCarrier T
       (plainCategoricalSyntax T V σ π d).sentenceInclusion).val.Evalb ![word] ↔
@@ -88,8 +88,8 @@ theorem sentenceCarrier_literal (word : M) :
 
 end Models
 
-/-- This is a literal T-proof of the intended numerical sentence
-predicate, derived after identifying the actual occurrence fold. -/
+/-- This is a T-proof of the intended numerical sentence predicate, derived after
+identifying the occurrence fold. -/
 def sentenceCarrierLiteralSentence : ArithmeticSentence :=
   let C := SyntacticSentenceImages.sentenceCarrier T
     (plainCategoricalSyntax T V σ π d).sentenceInclusion

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
 
 
-/-! # Statement checks in `V46NamedArithmeticClosedSubstitutionChecks` -/
+/-! # Closed numerical terms are free for substitution in every typed formula -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

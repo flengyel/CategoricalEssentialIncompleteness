@@ -11,12 +11,12 @@ public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
 
-/-! # The printed internal arithmetic comparison for the actual Gamma
+/-! # The internal arithmetic comparison for the Gamma
 
-The hypotheses concern the given literal enumeration, its native PA axiom
-proofs and external consistency. The target comparison supplies a total
-source morphism. Its standard numerical values give actual named numeral
-instances undecidable in the original native finite calculus.
+The hypotheses concern the given literal enumeration, its named PA axiom proofs and
+external consistency. The target comparison supplies a total source morphism. Its
+standard numerical values give named numeral instances undecidable in the original
+named Hilbert calculus.
 -/
 
 @[expose] public section
@@ -34,8 +34,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticInternalComparison
 open NamedArithmeticSignature
 
-/-- A zero composite inverse image excludes its displayed predicate at
-every actual output. The proof is given before arithmetic specialization. -/
+/-- A zero composite inverse image excludes its displayed predicate at every output. The
+proof is given before arithmetic specialization. -/
 theorem avoid_composite_pull {A B C : Pfn} (f : A ⟶ B) (theta : B ⟶ C)
     (t : Idem C) (R : B → Prop)
     (hTheta : Idem.pull theta t = setIdem {b : B | R b})
@@ -53,8 +53,8 @@ theorem join_pull_congr {X : Pfn} {t u : Idem X} {f g : X ⟶ X}
     t ⊔ Idem.pull f t = u ⊔ Idem.pull g u :=
   congrArg₂ (fun (a : Idem X) (n : X ⟶ X) => a ⊔ Idem.pull n a) ht hf
 
-/-- A native proof of an actual named numeral instance lies in the
-constructed positive predicate, before the diagonal formula is specialized. -/
+/-- A Hilbert proof of a named numeral instance lies in the constructed positive
+predicate, before the diagonal formula is specialized. -/
 theorem native_instance_positive (A : Carrier) (φ : ArithmeticSemisentence 1) (n : ℕ)
     (hd : SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound A
       (NamedArithmeticDiagonalBounds.instanceFormula φ n)) :
@@ -71,8 +71,8 @@ theorem native_instance_positive (A : Carrier) (φ : ArithmeticSemisentence 1) (
     (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔 variableSymbols
       functionSymbols relationSymbols bound A).val.Evalb (M := ℕ) ![word]) hw) ht
 
-/-- The corresponding native negative proof lies in the actual
-refutation image of that same original sentence word. -/
+/-- The corresponding Hilbert proof of the negation lies in the refutation image of that
+same original sentence word. -/
 theorem native_instance_negative (A : Carrier) (φ : ArithmeticSemisentence 1) (n : ℕ)
     (hd : SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound A
       (.neg (NamedArithmeticDiagonalBounds.instanceFormula φ n))) :
@@ -95,8 +95,8 @@ variable (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
 variable (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system A))
 include hPA hc
 
-/-- The actual categorical comparison theorem, with every evidence and
-bound premise proved from the stated arithmetic Gamma hypotheses. -/
+/-- The categorical comparison theorem, with every evidence and bound premise proved from
+the stated arithmetic Gamma hypotheses. -/
 theorem standard_comparison :
     ∃ g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔, isTotal g ∧
       Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 ℕ).map g ≫
@@ -117,8 +117,8 @@ theorem standard_comparison :
   · exact NamedArithmeticDiagonalBounds.semantic_positive ℕ A hPA
   · exact NamedArithmeticDiagonalBounds.semantic_negative ℕ A hPA
 
-/-- The same categorical theorem applies to every actual arithmetic
-ultrapower, including all its nonstandard sentence and proof inputs. -/
+/-- The same categorical theorem applies to every arithmetic ultrapower, including all its
+nonstandard sentence and proof inputs. -/
 theorem ultrapower_comparison {I : Type} (U : Ultrafilter I) :
     ∃ g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔, isTotal g ∧
       Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 (ArithmeticUltrapower.Model U)).map g ≫
@@ -139,8 +139,8 @@ theorem ultrapower_comparison {I : Type} (U : Ultrafilter I) :
   · exact NamedArithmeticDiagonalBounds.semantic_positive (ArithmeticUltrapower.Model U) A hPA
   · exact NamedArithmeticDiagonalBounds.semantic_negative (ArithmeticUltrapower.Model U) A hPA
 
-/-- The standard interpretation of the actual constructed sentence range
-is not covered by that range together with its negated inverse image. -/
+/-- The standard interpretation of the constructed sentence range is not covered by that
+range together with its negated inverse image. -/
 theorem standard_incomplete :
     ArithmeticLiteralCoordinates.theory ℕ A ⊔
       Idem.pull (ArithmeticLiteralCoordinates.negationMap ℕ)
@@ -155,8 +155,8 @@ theorem ultrapower_incomplete {I : Type} (U : Ultrafilter I) :
   obtain ⟨_,_,_,_,h⟩ := ultrapower_comparison A hPA hc U
   exact h
 
-/-- The printed chosen-domain interpretation under N, exposed as
-mapIdem of the actual source sentence range and the actual source negation. -/
+/-- The chosen-domain interpretation under N, exposed as mapIdem of the source sentence
+range and the source negation. -/
 theorem interpreted_standard_incomplete :
     (ArithmeticDomainExtension.canonicalExtension ℕ).mapIdem
         (ArithmeticDomainExtension.sentenceTheory A) ⊔
@@ -170,8 +170,7 @@ theorem interpreted_standard_incomplete :
   intro h
   exact standard_incomplete A hPA hc (he.symm.trans h)
 
-/-- The same actual source objects are incomplete in every printed
-arithmetic ultrapower interpretation. -/
+/-- The same source objects are incomplete in every arithmetic ultrapower interpretation. -/
 theorem interpreted_ultrapower_incomplete {I : Type} (U : Ultrafilter I) :
     (ArithmeticDomainExtension.canonicalExtension (ArithmeticUltrapower.Model U)).mapIdem
         (ArithmeticDomainExtension.sentenceTheory A) ⊔
@@ -185,17 +184,17 @@ theorem interpreted_ultrapower_incomplete {I : Type} (U : Ultrafilter I) :
   intro h
   exact ultrapower_incomplete A hPA hc U (he.symm.trans h)
 
-/-- The actual source sentence-theory idempotent is incomplete. This is
-reflected from its proved standard canonical-domain interpretation. -/
+/-- The source sentence-theory idempotent is incomplete. This is reflected from its proved
+standard canonical-domain interpretation. -/
 theorem source_incomplete :
     ArithmeticDomainExtension.sentenceTheory A ⊔
       Idem.pull ArithmeticDomainExtension.sentenceNegation
         (ArithmeticDomainExtension.sentenceTheory A) ≠ ⊤ :=
   ArithmeticDomainExtension.source_noncoverage ℕ A (standard_incomplete A hPA hc)
 
-/-- The total source morphism provided by the categorical theorem has a
-standard numerical function of actual outputs. Every computed literal
-named numeral instance is closed and has neither native finite proof. -/
+/-- The total source morphism provided by the categorical theorem has a standard numerical
+function of outputs. Every computed named numeral instance is closed and has neither
+finite Hilbert proof. -/
 theorem total_undecidable_family :
     ∃ g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔, isTotal g ∧
       ∃ gamma : ℕ → ℕ,
@@ -244,9 +243,9 @@ theorem total_undecidable_family :
   · intro hd
     exact hn n (native_instance_negative A ArithmeticDiagonalCodes.alpha.val (gamma n) hd)
 
-/-- The full printed Theorem 7.3: source incompleteness, both printed
-interpretation scopes and the total source family of native undecidable
-instances. Each conclusion comes from the categorical comparison. -/
+/-- Theorem 8.3 gives incompleteness in the source, in its standard interpretation and in
+each arithmetic ultrapower. A total source morphism gives a family of sentences
+undecided by Γ. -/
 theorem internal_comparison :
     (ArithmeticDomainExtension.sentenceTheory A ⊔
       Idem.pull ArithmeticDomainExtension.sentenceNegation

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixData
 
 
-/-! # Statement checks in `V46NamedPostfixDataChecks` -/
+/-! # Ordered decomposition of standard polynomial payloads -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.NamedPostfixDataChecks

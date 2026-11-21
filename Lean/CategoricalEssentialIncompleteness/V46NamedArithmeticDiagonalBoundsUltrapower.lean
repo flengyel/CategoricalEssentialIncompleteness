@@ -18,8 +18,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 
 namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticDiagonalBounds
 
-/-- Łoś's sentence theorem gives the actual quotient's elementary
-equivalence; it is not an additional hypothesis on the ultrapower. -/
+/-- Łoś's sentence theorem gives the quotient's elementary equivalence; it is not an
+additional hypothesis on the ultrapower. -/
 instance ultrapower_elementary {I : Type} (U : Ultrafilter I) :
     ArithmeticUltrapower.Model U ≡ₑ[ℒₒᵣ] ℕ where
   models := ArithmeticUltrapower.sentence_iff U _

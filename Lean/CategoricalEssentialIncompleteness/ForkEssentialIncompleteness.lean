@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkProofPresentation
 public import CategoricalEssentialIncompleteness.EffectiveForkRecursion
 
-/-! # Essential incompleteness of the actual fork proof theory -/
+/-! # Essential incompleteness of the fork proof theory -/
 
 @[expose] public section
 
@@ -46,7 +46,7 @@ theorem categoricalTheory_consistent :
     categoricalTheory ⊓ Idem.pull nu categoricalTheory=⊥ :=
   t0_consistency _ _ EffectiveFork.Recursion.image_pair_inseparable.disjoint
 
-/-- The three-point application of Corollary 6.7, using the actual Turing
+/-- The three-point application of the domain-incompleteness corollary, using the Turing
 diagonal pair, finite proof object and conclusion range. -/
 theorem essential_incompleteness (t : Idem S) (ht : categoricalTheory ≤ t)
     (hconsistent : t ⊓ Idem.pull nu t=⊥) :

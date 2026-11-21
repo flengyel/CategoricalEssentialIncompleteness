@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerCutDyadicArithmetic
 public import Mathlib.Tactic.FieldSimp
 public import Mathlib.Tactic.Ring
 
-/-! # The actual image of a binary cylinder as finite closed dyadic boxes
+/-! # The image of a binary cylinder as finite closed dyadic boxes
 
 Finite rectangular completions retain all prescribed bits. Surjectivity
 at the CLOSED right endpoint uses binary expansions of 1 as well as those
@@ -93,8 +93,8 @@ private theorem packed_compatible (p : Bits) (s : Word) (hp : p ∈ cylinder s) 
   have hh := (mem_cylinder_iff p s).mp hp k hkl
   simpa only [List.getElem?_eq_getElem hkl,Option.getD_some] using hh
 
-/-- Every rectangle compatible with s has its entire box in the actual
-rho-image of [s]. This is a proved binary-prefix lifting comparison. -/
+/-- Every rectangle compatible with s has its entire box in the rho-image of [s]. This is
+a proved binary-prefix lifting comparison. -/
 theorem box_subset_image (s b : Word) (hb : Compatible s b) :
     box s.length b ⊆ rho '' cylinder s := by
   intro z hz

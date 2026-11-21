@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConstructors
 
 
-/-! # Statement checks in `V46NumericalDerivationWordConstructorsChecks` -/
+/-! # Literal values of the plain postfix constructor -/
 
 @[expose] public section
 noncomputable section

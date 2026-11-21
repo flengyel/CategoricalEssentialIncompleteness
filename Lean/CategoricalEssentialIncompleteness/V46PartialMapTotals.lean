@@ -110,8 +110,8 @@ instance toTotal_essSurj : (toTotal (D := D)).EssSurj where
 
 instance toTotal_isEquivalence : (toTotal (D := D)).IsEquivalence := {}
 
-/-- The canonical total-arrow embedding is an equivalence onto all
-total morphisms of the monic-span category. -/
+/-- The canonical total-morphism embedding is an equivalence onto all total morphisms of
+the monic-span category. -/
 def totalEquivalence : D ≌ Tot D := (toTotal (D := D)).asEquivalence
 
 /-- The domain span itself supplies a splitting of every restriction

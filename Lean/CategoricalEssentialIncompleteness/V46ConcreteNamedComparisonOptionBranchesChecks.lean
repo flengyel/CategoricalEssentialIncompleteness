@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptionBranches
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonOptionBranchesChecks` -/
+/-! # Failure branches and scalar option-operation equations -/
 
 @[expose] public section
 noncomputable section

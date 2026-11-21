@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonCore
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonCoreChecks` -/
+/-! # The forward coefficient comparison for the explicit canonical push -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesCoding
 public import CategoricalEssentialIncompleteness.V46SyntacticLists
 
-/-! # The actual values of the computable predicate-coordinate charts -/
+/-! # The values of the computable predicate-coordinate charts -/
 
 @[expose] public section
 noncomputable section
@@ -113,7 +113,7 @@ private theorem standard_natural {C D : PredicateCategory 𝗧𝗔} (f : C ⟶ D
   exact ((by rw [standard_scalar]; exact predicateProgram_graph f x y) :
     y ∈ scalar (L.map f) x ↔ relation 𝗧𝗔 f ℕ x y).trans (literal_scalar_graph f x y).symm
 
-/-- The predicate presentation is an actual numerical isomorphism. -/
+/-- The predicate presentation is a numerical isomorphism. -/
 def predicateMap {C D : PredicateCategory 𝗧𝗔} (f : C ⟶ D) :
     predicateObject C ⟶ predicateObject D :=
   (predicatePresentationIso C).inv ≫ NumericalSyntax.predicateEquivalence.functor.map f ≫
@@ -163,7 +163,7 @@ theorem predicateMap_value {C D : PredicateCategory 𝗧𝗔} (f : C ⟶ D)
     ((predicateMap f).toFun x).val = ((PredicateInterpretation.functor 𝗧𝗔 ℕ).map f x).val :=
   congrArg Subtype.val (predicateMap_value f x)
 
-/-- The diagram uses the actual presentation maps and their actual values. -/
+/-- The diagram uses the presentation maps and their values. -/
 theorem predicatePresentationIso_natural {C D : PredicateCategory 𝗧𝗔} (f : C ⟶ D) :
     NumericalSyntax.predicateEquivalence.functor.map f ≫ (predicatePresentationIso D).hom =
       (predicatePresentationIso C).hom ≫ predicateMap f := by

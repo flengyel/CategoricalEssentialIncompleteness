@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSente
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 public import CategoricalEssentialIncompleteness.V46MillerStrictRationalCuts
 
-/-! # Literal ordered-field syntax and the actual uniformly enumerable cut axioms
+/-! # Literal ordered-field syntax and the uniformly enumerable cut axioms
 
 The arity bound is two. Nullary labels are zero, one and the named c_n;
 the other labels are unary minus, binary addition/multiplication and strict

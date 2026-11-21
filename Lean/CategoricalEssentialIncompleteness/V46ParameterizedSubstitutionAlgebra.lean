@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConstantParameterConstructors
 
-/-! # The actual substitution fold with an additional parameter -/
+/-! # The substitution fold with an additional parameter -/
 
 @[expose] public section
 noncomputable section

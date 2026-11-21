@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortInitial
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTotal
 
-/-! # Initial finite-rule tree algebras in the actual total split category -/
+/-! # Initial finite-rule tree algebras in the total split category -/
 
 @[expose] public section
 

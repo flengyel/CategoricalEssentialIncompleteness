@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
 public import CategoricalEssentialIncompleteness.V46MillerCategoryTuring
 public import CategoricalEssentialIncompleteness.V46MillerOracleRelative
 
-/-! # The actual fixed-oracle target and the faithful inclusion
+/-! # The fixed-oracle target and the faithful inclusion
 
 The same closure construction is applied to the singleton oracle family.
 Its entire partial numerical functions are proved equivalent to usual

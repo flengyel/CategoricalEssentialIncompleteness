@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageForward
 
 
-/-! # Statement checks in `V46MillerNamedProofImageForwardChecks` -/
+/-! # Finite Hilbert derivations in the word algebra -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionConstructors
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonOptionConstructorsChecks` -/
+/-! # Lifted option constructors for the uniform syntax functor -/
 
 @[expose] public section
 noncomputable section
@@ -36,7 +36,7 @@ example {Y Z : C} {Y' Z' : D} (i : F.obj Y ≅ Y') (j : F.obj Z ≅ Z')
         OptionSyntax.binary h' := Options.map_binary F i j h h' hh
 
 
--- The source-fiber cover includes every actual option input.
+-- The source-fiber cover includes every option input.
 omit [Regular C] [Regular D] in
 example {W A B : C} (p : W ⟶ A ⨿ B) {Z : D} {u v : F.obj W ⟶ Z}
     (h₀ : F.map (pullback.fst p (coprod.inl : A ⟶ A ⨿ B)) ≫ u =

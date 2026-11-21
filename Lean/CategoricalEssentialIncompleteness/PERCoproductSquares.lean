@@ -12,8 +12,8 @@ public import CategoricalEssentialIncompleteness.PERPullbacks
 # Pullback squares for the coproduct of terminal PERs
 
 The map to the coproduct of two terminal objects records the summand of a
-representative. Its fibers are the original summands. Decoding the second
-coordinate gives the mediating arrows in the two pullback squares.
+representative. Its fibers are the original summands. Decoding the second coordinate
+gives the mediating morphisms in the two pullback squares.
 -/
 
 @[expose] public section

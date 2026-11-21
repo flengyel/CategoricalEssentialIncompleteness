@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTraceConstants
 public import CategoricalEssentialIncompleteness.V46UniformTracePairing
 
-/-! # A genuine parameter compiler for each fixed standard program
+/-! # A parameter compiler for each fixed standard program
 
-The parameter is arbitrary data in the PA model. Only the template index is
-external and fixed, which is exactly where the existing persistence theorem
-is used. The new dynamic constant/pair/composition indices are handled by
-their actual internal stage equations and independently proved soundness.
+The parameter is arbitrary data in the PA model. Only the template index is external
+and fixed, which is exactly where the existing persistence theorem is used. The new
+dynamic constant/pair/composition indices are handled by their internal stage
+equations and independently proved soundness.
 -/
 
 @[expose] public section
@@ -125,8 +125,8 @@ theorem template_stage_sound (v : ℕ) (a s input output : M)
   rw [hMiddle] at hV
   exact (standard_graph_stages_iff v ⟪a, input⟫ output).mpr ⟨s, hV⟩
 
-/-- This is an actual s-m-n parameter compiler for the fixed template.
-Its parameter and its ordinary input range over the entire PA model. -/
+/-- This is an s-m-n parameter compiler for the fixed template. Its parameter and its
+ordinary input range over the entire PA model. -/
 theorem templateIndex_graph (v : ℕ) (a input output : M) :
     graph.val.Evalb ![templateIndex v a, input, output] ↔
       graph.val.Evalb ![(v : M), ⟪a, input⟫, output] := by

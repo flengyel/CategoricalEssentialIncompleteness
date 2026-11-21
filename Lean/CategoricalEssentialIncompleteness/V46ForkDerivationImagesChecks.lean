@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationImages
 
 
-/-! # Statement checks in `V46ForkDerivationImagesChecks` -/
+/-! # The concrete fork derivation image and its endpoint extensions -/
 
 @[expose] public section
 noncomputable section

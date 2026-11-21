@@ -26,7 +26,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticSyntax.Coding
 namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticNumerals
 open NamedArithmeticSignature
 
-/-- The three finite-sum tags are the actual left-associated arity chart. -/
+/-- The three finite-sum tags are the left-associated arity chart. -/
 def zeroGraph : 𝚺₁.Semisentence 1 :=
   let C := constructorGraph false termPolynomial
   .mkSigma “out. ∃ a b c u, !pairDef.val a 0 0 ∧ !pairDef.val b a 0 ∧

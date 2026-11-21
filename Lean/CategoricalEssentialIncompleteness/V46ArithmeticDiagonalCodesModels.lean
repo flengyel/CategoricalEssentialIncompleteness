@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
 public import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
 public import CategoricalEssentialIncompleteness.V46SyntacticComparison
 
-/-! # The actual diagonal source arrow and its two restriction domains -/
+/-! # The diagonal source morphism and its two restriction domains -/
 
 @[expose] public section
 
@@ -29,8 +29,8 @@ open CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctions
 
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalCodes
 
-/-- The printed universal program receives the actual exponential product
-code, via the constructed object isomorphism. -/
+/-- The universal program receives the exponential product code, via the constructed
+object isomorphism. -/
 def sourceTau :
     PCategoryStruct.nearProd (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔) ⟶ omegaObject 𝗣𝗔 :=
   (PrintedObjectCoding.omegaProductIso 𝗣𝗔).hom ≫
@@ -59,8 +59,8 @@ def a1 : Idem (omegaObject 𝗣𝗔) :=
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Relate numerical graphs to the actual interpreted morphism before
-instantiating any large closed program expression. -/
+/-- Relate numerical graphs to the interpreted morphism before instantiating any large
+closed program expression. -/
 theorem mem_model_relation {Q R : CodedProgramCategory 𝗣𝗔} (f : Q ⟶ R)
     (x : SyntacticModel.interpretedType M (objectCode Q))
     (y : SyntacticModel.interpretedType M (objectCode R)) :
@@ -81,8 +81,8 @@ theorem universal_arrow_relation (input output : M) :
   simp only [numeral_eq_natCast_app] at h
   exact h.symm
 
-/-- The categorical source map is the printed program u in the
-manuscript's exponential input coordinates. -/
+/-- The categorical source map is the program u in the manuscript's exponential input
+coordinates. -/
 theorem sourceTau_relation (a b y : M) :
     SyntacticModel.programRelation 𝗣𝗔 M sourceTau.val (pair a b) y ↔
       UniformTrace.graph.val.Evalb ![a,b,y] := by
@@ -187,8 +187,8 @@ theorem model_summand1 :
   simp only [hc,Category.id_comp,Category.comp_id,F.toFunctor.map_id,F.map_zero] at h
   exact Idem.ext h
 
-/-- The first restriction is the partial identity on the actual alpha
-truth set, including its nonstandard members. -/
+/-- The first restriction is the partial identity on the alpha truth set, including its
+nonstandard members. -/
 theorem model_a0 :
     (SyntacticModel.modelRangeFunctor 𝗣𝗔 M).mapIdem
       a0 = setIdem {x : M | alpha.val.Evalb ![x]} := by
@@ -235,8 +235,8 @@ theorem model_a1 :
 
 end Models
 
-/-- Equality holds in the actual uniform source category, rather than
-only after the standard interpretation. -/
+/-- Equality holds in the uniform source category, rather than only after the standard
+interpretation. -/
 theorem diagonalIndex_represents : diagonalArrow = sourceDiagonal := by
   apply CodedHom.ext
   apply SyntacticPredicates.programClass_ext 𝗣𝗔

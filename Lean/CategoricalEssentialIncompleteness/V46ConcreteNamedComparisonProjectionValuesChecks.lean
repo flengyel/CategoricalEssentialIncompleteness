@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionValues
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonProjectionValuesChecks` -/
+/-! # Scalar original and FV projection identities follow from stable initiality -/
 
 @[expose] public section
 noncomputable section

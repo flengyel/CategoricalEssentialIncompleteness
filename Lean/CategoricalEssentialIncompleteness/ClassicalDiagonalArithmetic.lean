@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ClassicalRealization
 public import CategoricalEssentialIncompleteness.ArithmeticRepresentation
 
-/-! # Arithmetic formulas for the actual classical diagonal pair -/
+/-! # Arithmetic formulas for the classical diagonal pair -/
 
 @[expose] public section
 

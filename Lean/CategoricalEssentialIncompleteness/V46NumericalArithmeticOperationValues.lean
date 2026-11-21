@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralInputValues
 
-/-! # The actual arithmetic numerical substitution and admissibility values -/
+/-! # The arithmetic numerical substitution and admissibility values -/
 
 @[expose] public section
 noncomputable section
@@ -195,8 +195,8 @@ theorem formula_option_value
   have h := NumericalNamed.literal_formulaSubstitutionOption_value NumericalNamed.variableObject functions relations bound q
   exact h.trans (result_coordinates _ _ _ _ _ _ (formulaInput_name q) (formulaInput_replacement q) (formulaInput_word q))
 
-/-- This is the actual admissibility inclusion image and the independent
-primitive free-for flag, with the fixed PA arithmetic word coordinates. -/
+/-- This is the admissibility inclusion image and the independent primitive free-for flag,
+with the fixed PA arithmetic word coordinates. -/
 theorem admissible_iff
     (q : NumericalTuples.Point ((S).algebra.a.2 ⨯ (S).substitutionParameters)) :
     (∃ a, (S).admissibleInclusion.toFun a = q) ↔
@@ -220,8 +220,8 @@ private theorem admissible_input (a : NumericalTuples.Point (S).admissibleSubsti
       NumericalNamed.variableObject functions relations bound)
   exact (NumericalCoordinates.predicateMap_value (S₀).admissibleInclusion _).symm.trans h.symm
 
-/-- The actual successful substitution result is computed in the same PA
-word coordinates, at every point of its constructed admissibility object. -/
+/-- The successful substitution result is computed in the same PA word coordinates, at
+every point of its constructed admissibility object. -/
 theorem formula_substitution_value (a : NumericalTuples.Point (S).admissibleSubstitution) :
     let q := (S).admissibleInclusion.toFun a
     (formulaIso.hom.toFun (formulaSubstitutionArrow.toFun a)).val =

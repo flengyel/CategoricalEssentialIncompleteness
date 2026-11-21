@@ -7,12 +7,12 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantsCodes
 
-/-! # The actual constant-polynomial chart in every parameter slice
+/-! # The constant-polynomial chart in every parameter slice
 
-Both arrows are constructed from the ordinary recursive code maps. Their
-source/target guards, parameter equations and inverse equations are proved
-on the original carriers, including when the parameter carrier is empty.
-No constant-family code comparison is supplied as a hypothesis.
+Both morphisms are constructed from the ordinary recursive code maps. Their
+source/target guards, parameter equations and inverse equations are proved on the
+original carriers, including when the parameter carrier is empty. No constant-family
+code comparison is supplied as a hypothesis.
 -/
 
 @[expose] public section
@@ -83,8 +83,8 @@ theorem constantLiftCode_unliftCode (p : SyntaxPolynomial (Total.TotalCategory P
     (r:=(Nat.unpair n).1) (u:=(Nat.unpair n).2) hn
   simp only [constantLiftCode,constantUnliftCode,Nat.unpair_pair,h,Nat.pair_unpair]
 
-/-- The uniform structural map crosses two actual raw presentations. Its
-proper-support and parameter laws have already been proved above. -/
+/-- The uniform structural map crosses two raw presentations. Its proper-support and
+parameter laws have already been proved above. -/
 def constantForward (p : SyntaxPolynomial (Total.TotalCategory P)) :
     constantSource R A B X Y p ⟶ constantTarget R A B p := by
   let f : (constantSource R A B X Y p).left ⟶ (constantTarget R A B p).left :=

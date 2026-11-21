@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
 
-/-! # Occurrence comparison from the actual mapped list-algebra equality -/
+/-! # Occurrence comparison from the mapped list-algebra equality -/
 
 @[expose] public section
 
@@ -120,8 +120,8 @@ variable (hLists : S₁.lists = mappedStableListAlgebra E (E.inverse.obj V) V
   (E.counitIso.app V) S₀.lists)
 variable (c : mappedSyntaxAlgebra E V σ π d S₀ ≅ S₁.algebra)
 
-/-- The carrier comparison comes from equality of the complete actual
-list-algebra records, including their proved stability data. -/
+/-- The carrier comparison comes from equality of the complete list-algebra records,
+including their proved stability data. -/
 def syntaxListIso : E.functor.obj S₀.lists.algebra.carrier ≅ S₁.lists.algebra.carrier :=
   mappedListEqualityIso E (E.inverse.obj V) V (E.counitIso.app V) S₀.lists S₁.lists hLists
 
@@ -159,8 +159,8 @@ def formulaOccurrenceComparison : Prop :=
   E.functor.map S₀.formulaOccurrences ≫ (syntaxListIso E V σ π d S₀ S₁ hLists).hom =
     (syntaxFormulaIso (S₁ := S₁) E V σ π d S₀ c).hom ≫ S₁.formulaOccurrences
 
-/-- All local list-operation comparisons are derived before this
-application of the occurrence-algebra isomorphism and actual initiality. -/
+/-- All local list-operation comparisons are derived before this application of the
+occurrence-algebra isomorphism and initiality. -/
 theorem mapped_termOccurrence_comparison : termOccurrenceComparison E V σ π d S₀ S₁ hLists c :=
   map_termOccurrences E V σ π d S₀ S₁ (syntaxListIso E V σ π d S₀ S₁ hLists)
     (mapped_nil_equal E (E.inverse.obj V) V (E.counitIso.app V) S₀.lists S₁.lists hLists)

@@ -35,9 +35,9 @@ theorem tau_graph (z : Point) (e n m : ℕ) :
     let h : ∃ m', Unanimous z (e,n) m' := ⟨m,hm⟩
     exact ⟨h,unanimous_unique z (e,n) _ m (Classical.choose_spec h) hm⟩
 
-/-- The ordinary numerical index is chosen BEFORE z, its representation,
-and the numerical inputs. Both implications are proved from the actual
-finite-cover semidecision and the concrete uniform oracle compiler. -/
+/-- The ordinary numerical index is chosen BEFORE z, its representation, and the numerical
+inputs. Both implications are proved from the finite-cover semidecision and the
+concrete uniform oracle compiler. -/
 theorem exists_program_graph :
     ∃ d : ℕ, ∀ z : Point, ∀ p : Bits, p ∈ representations z → ∀ e n m : ℕ,
       m ∈ OracleProgram.numberedEval d p (Nat.pair e n) ↔ Unanimous z (e,n) m := by

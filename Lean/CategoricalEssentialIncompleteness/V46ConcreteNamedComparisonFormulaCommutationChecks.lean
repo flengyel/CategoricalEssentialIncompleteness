@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaCommutation
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonFormulaCommutationChecks` -/
+/-! # The computed formula-state morphism commutes with the full formula structure -/
 
 @[expose] public section
 noncomputable section

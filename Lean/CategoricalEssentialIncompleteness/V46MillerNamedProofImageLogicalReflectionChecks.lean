@@ -7,13 +7,12 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageLogicalReflection
 
-/-! # All actual seven-scheme parameters yield finite native Γ proofs
+/-! # All seven-scheme parameters yield finite Hilbert proofs from Γ
 
-The target success points prove both native FreeFor conditions and their
-literal substitution results. The distribution parameter is reflected
-through the actual false classifier and the PA false fiber. No logical
-scheme coverage, source axiom admissibility or semantic validity premise
-is supplied.
+The target success points prove both free-for conditions and their literal
+substitution results. The distribution parameter is reflected through the false
+classifier and the PA false fiber. No logical scheme coverage, source axiom
+admissibility or semantic validity premise is supplied.
 -/
 
 @[expose] public section

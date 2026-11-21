@@ -50,8 +50,8 @@ variable (happend : E.functor.map L₀.append ≫ ℓ.hom =
   (SyntaxOptionTransport.productIso E ℓ ℓ).hom ≫ L₁.append)
 
 include hnil happend in
-/-- Every ordered finite tuple is concatenated compatibly; arity zero
-uses the actual terminal comparison and arity one the given list iso. -/
+/-- Every ordered finite tuple is concatenated compatibly; arity zero uses the terminal
+comparison and arity one the given list iso. -/
 theorem tupleAppend_comparison (n : ℕ) :
     E.functor.map (L₀.tupleAppend n) ≫ ℓ.hom =
       (powerInputIso E ℓ n).hom ≫ L₁.tupleAppend n := by

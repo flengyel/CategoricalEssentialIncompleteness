@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportNormalizedFamilies
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportNormalizedFamiliesChecks` -/
+/-! # Explicit polynomial equalities normalize base and parameter-slice inputs together -/
 
 @[expose] public section
 noncomputable section

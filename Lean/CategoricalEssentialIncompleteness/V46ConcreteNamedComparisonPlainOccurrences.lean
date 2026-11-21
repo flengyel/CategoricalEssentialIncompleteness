@@ -23,8 +23,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- The actual inverse quotient arrow changes only the displayed
-predicate and fixes every word in every T-model. -/
+/-- The inverse quotient morphism changes only the displayed predicate and fixes every
+word in every T-model. -/
 theorem plainCarrierIso_inv_value (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
     (formula : Bool) (a b : RawPolynomial) (word : Obj T M (Postfix.plainCarrier formula a b)) :
     ((F T M).map (Postfix.plainCarrierIso T formula a b).inv word).val = word.val := by
@@ -35,8 +35,8 @@ theorem plainCarrierIso_inv_value (M : Type) [ORingStructure M] [M↓[ℒₒᵣ]
 
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 
-/-- The constructor-preserving plain algebra isomorphism transports the
-actual occurrence Hom, not a separately assumed evaluator. -/
+/-- The constructor-preserving plain algebra isomorphism transports the occurrence Hom,
+not a separately assumed evaluator. -/
 def plainOccurrenceHom : (plainCategoricalSyntax T V σ π d).algebra ⟶
     (plainCategoricalSyntax T V σ π d).occurrenceAlgebra :=
   (plainAlgebraIso T (SyntaxPolynomial.termExpression V σ d)

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 
-/-! Lemma 5.8 for arbitrary actual rule objects, ordered premise maps and conclusions. -/
+/-! Lemma 6.8 for arbitrary rule objects, ordered premise maps and conclusions. -/
 
 @[expose] public section
 noncomputable section

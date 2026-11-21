@@ -12,11 +12,10 @@ public import Mathlib.CategoryTheory.Subobject.Basic
 
 /-! # Uniform external axiom subobjects and finite axiom supports
 
-The axiom set is an arbitrary uniformly enumerable set of natural codes.
-Only the sentence carrier is a PA predicate. Its intersection with the
-axiom set is formed in the actual uniform total splitting; the external
-axiom set is never represented by an assumed PA formula. All inclusions
-below are guarded identity maps on their actual supports.
+The axiom set is an arbitrary uniformly enumerable set of natural codes. Only the
+sentence carrier is a PA predicate. Its intersection with the axiom set is formed in
+the uniform total splitting; the external axiom set is never represented by an assumed
+PA formula. All inclusions below are guarded identity maps on their supports.
 -/
 
 @[expose] public section
@@ -91,7 +90,7 @@ def supportIso (X Y : Total.TotalCategory P) (h : ∀ n,n ∈ X.obj.support ↔ 
     (identity_graph_comp _ _ (identityMap_graph _ _ _) (identityMap_graph _ _ _))
     (identity_graph_id Y)
 
-/-- Standard support of the actual predicate interpretation, with its original scalar code. -/
+/-- Standard support of the predicate interpretation, with its original scalar code. -/
 theorem mapped_support (P : Uniform.Family) (S : PredicateCategory 𝗣𝗔) (n : ℕ) :
     n ∈ ((Syntax.predicateFunctor P).obj S).obj.support ↔ S.val.Evalb (M := ℕ) ![n] := by
   rw [Syntax.predicateFunctor_object]
@@ -201,7 +200,7 @@ theorem finiteSubobject_le (P : Uniform.Family) (S : PredicateCategory 𝗣𝗔)
   Subobject.mk_le_mk_of_comm (finiteIntoAxioms P S A hA L hLA hLS)
     (finiteIntoAxioms_fac P S A hA L hLA hLS)
 
-/-- The actual range of an arbitrary axiom morphism, with no injective-program choice. -/
+/-- The range of an arbitrary axiom morphism, with no injective-program choice. -/
 def imageCodes {X : Total.TotalCategory P} {S : PredicateCategory 𝗣𝗔}
     (a : X ⟶ (Syntax.predicateFunctor P).obj S) : Set ℕ :=
   {n | ∃ x,n ∈ Total.val a.hom x}
@@ -216,7 +215,7 @@ theorem imageCodes_sentence {X : Total.TotalCategory P} {S : PredicateCategory �
   obtain ⟨x,hx⟩ := hn
   exact (mapped_support P S n).mp (Total.val_target a.hom x n hx)
 
-/-- This is a chart of actual uniform objects, with identity scalar programs in both directions. -/
+/-- This is a chart of uniform objects, with identity scalar programs in both directions. -/
 def imageCarrierIso {X : Total.TotalCategory P} {S : PredicateCategory 𝗣𝗔}
     (a : X ⟶ (Syntax.predicateFunctor P).obj S) :
     axCarrier P S (imageCodes a) (imageCodes_enumerable a) ≅ Total.imageObject a :=
@@ -269,7 +268,7 @@ theorem imageQuotient_isIso {X Y : Total.TotalCategory P} (a : X ⟶ Y) [Mono a]
   exact isIso_of_regularEpi_of_mono _
     (Total.regularEpiOfSurjective _ (Total.imageQuotient_surjective a))
 
-/-- A given axiom monomorphism is represented by its actual image code set. -/
+/-- A given axiom monomorphism is represented by its image code set. -/
 def monoPresentation {X : Total.TotalCategory P} {S : PredicateCategory 𝗣𝗔}
     (a : X ⟶ (Syntax.predicateFunctor P).obj S) [Mono a] :
     X ≅ axCarrier P S (imageCodes a) (imageCodes_enumerable a) := by

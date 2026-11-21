@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretatio
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
 
-/-! # Numerical node-count comparison from actual constructor equations -/
+/-! # Numerical node-count comparison from constructor equations -/
 
 @[expose] public section
 
@@ -54,10 +54,10 @@ private theorem pointwiseComparison_definable (H E : TernaryGraph) :
         (by definability) (by definability) (by definability)
     · definability
 
-/-- Internal Pi-one strong induction compares candidate outputs at
-arbitrary model node counts. The actual evaluator's root equations
-remain explicit arguments of this intermediate comparison lemma; its
-later public application must supply their proved finite-record laws. -/
+/-- Internal Pi-one strong induction compares candidate outputs at arbitrary model node
+counts. The evaluator's root equations remain explicit arguments of this intermediate
+comparison lemma; its later public application must supply their proved finite-record
+laws. -/
 theorem comparison_of_root_equations (hT hF : TernaryGraph)
     (hroot : A.RootEquations (M := M) hT hF)
     (eroot : A.RootEquations (M := M) (A.evaluationFormula false) (A.evaluationFormula true))

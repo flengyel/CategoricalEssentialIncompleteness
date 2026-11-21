@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFamilyTranspo
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
 public import Mathlib.CategoryTheory.Limits.Over
 
-/-! # Actual finite-geometry constant-family squares for Over.post
+/-! # Finite-geometry constant-family squares for Over.post
 
 The functor is not assumed to be an equivalence. No preservation of syntax
 or list initiality is inferred. Only finite limits and coproducts are used
@@ -36,8 +36,8 @@ instance slice_preservesFiniteCoproducts : PreservesFiniteCoproducts (sliceFunct
     infer_instance
   exact preservesFiniteCoproducts_of_reflects_of_preserves (sliceFunctor F R) (Over.forget (F.obj R))
 
-/-- The actual slice functor compares constant families naturally in the
-coefficient or recursive carrier, using the actual product comparison. -/
+/-- The slice functor compares constant families naturally in the coefficient or recursive
+carrier, using the product comparison. -/
 def familyNaturalIso :
     constantFamilyFunctor R ⋙ (sliceFunctor F R) ≅
       F ⋙ constantFamilyFunctor (F.obj R) := by
@@ -68,8 +68,8 @@ theorem family_unit :
   · exact terminalIsTerminal.hom_ext _ _
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] [PreservesFiniteCoproducts F] in
-/-- The product square follows from naturality of the universal product
-comparison. In particular, it compares the actual parameter projections. -/
+/-- The product square follows from naturality of the universal product comparison. In
+particular, it compares the parameter projections. -/
 theorem family_product (X Y : C) :
     prodComparison (sliceFunctor F R)
         (constantFamily R X) (constantFamily R Y) ≫

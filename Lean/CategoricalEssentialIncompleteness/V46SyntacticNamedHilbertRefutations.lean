@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRealization
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
 
-/-! # Literal native negation proofs in the actual refutation image -/
+/-! # Named negation proofs in the refutation image -/
 
 @[expose] public section
 noncomputable section
@@ -25,8 +25,8 @@ local notation "S" => plainCategoricalSyntax 𝗣𝗔 variableCarrier σ π d
 local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 local notation "G" => F 𝗣𝗔 ℕ
 
-/-- Negation is read through the graph of the actual categorical
-constructor; its input and output are literal formula words. -/
+/-- Negation is read through the graph of the categorical constructor; its input and
+output are literal formula words. -/
 theorem negation_graph_word (φ : Fm) :
     (chosenGraph 𝗣𝗔 (S).negationConstructor).graph.val.Evalb
       ![formulaCode φ,formulaCode (.neg φ)] := by
@@ -38,8 +38,8 @@ theorem negation_graph_word (φ : Fm) :
     (formulaPoint σ π d φ) (formulaCode (.neg φ))).mpr he
   simpa only [formulaPoint_value] using hg
 
-/-- A native proof of the negation supplies the actual refutation
-predicate of the original sentence, with an existential negative word. -/
+/-- A Hilbert proof of the negation supplies the refutation predicate of the original
+sentence, with an existential negative word. -/
 theorem native_sentence_refutation {φ : Fm} (h : Derives σ π d Γ (.neg φ))
     (hs : φ.freeVariables = []) :
     (SyntacticGeneratedAxioms.literalRefutationCarrier

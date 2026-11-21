@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSorts
 
 
-/-! # Statement checks in `V46SyntacticSyntaxSortsChecks` -/
+/-! # Decidable sort skeletons for parser and value stacks -/
 
 @[expose] public section
 noncomputable section

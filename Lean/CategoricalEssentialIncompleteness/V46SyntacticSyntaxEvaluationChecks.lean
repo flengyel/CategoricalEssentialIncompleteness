@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluation
 
 
-/-! # Statement checks in `V46SyntacticSyntaxEvaluationChecks` -/
+/-! # Finite state-and-operation records for postfix evaluation -/
 
 @[expose] public section
 noncomputable section

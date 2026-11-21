@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCutBoxDistance
 
-/-! # The actual separating real for the diagonal parity regions
+/-! # The separating real for the diagonal parity regions
 
 Each term is the constructed distance to the computed finite bad-set image.
 The positivity comparisons are proved from the halting-stage comparison;

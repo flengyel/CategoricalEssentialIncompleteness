@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxOperations
 
 
-/-! # Statement checks in `V46MillerSyntaxOperationsChecks` -/
+/-! # Positive graphs of operations on arbitrary parameter families -/
 
 @[expose] public section
 noncomputable section

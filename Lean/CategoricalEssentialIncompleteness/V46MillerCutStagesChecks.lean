@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutStages
 
 
-/-! # Statement checks in `V46MillerCutStagesChecks` -/
+/-! # Effective finite halting stages for the Miller diagonal -/
 
 @[expose] public section
 noncomputable section

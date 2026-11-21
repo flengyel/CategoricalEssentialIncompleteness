@@ -15,8 +15,8 @@ public import Mathlib.CategoryTheory.Subobject.Limits
 
 /-! # The concrete fork derivation image and its endpoint extensions
 
-The initial algebra is the constructed algebra on the existing finite-proof
-object. Its regular image is compared to the existing conclusion range.
+The initial algebra is the constructed algebra on the finite-proof object. Its regular
+image is compared to the existing conclusion range.
 -/
 
 @[expose] public section
@@ -81,8 +81,8 @@ private theorem explicitImageIso_inv {X Y : E} (f : X ⟶ Y) :
     (explicitImageIso f).inv ≫ image.ι f = EffectiveFork.imageInclusion f :=
   IsImage.isoExt_inv_m (Image.isImage f) (EffectiveFork.imageIsImage f)
 
-/-- The canonical regular image is the actual c.e. domain subfunctor of
-the partial identity given by the conclusion range. -/
+/-- The canonical regular image is the c.e. domain subfunctor of the partial identity
+given by the conclusion range. -/
 theorem theoremSubobject_eq_domain (a b : Idem V) :
     theoremSubobject a b = Subobject.mk (theoremInclusion a b) :=
   Subobject.mk_eq_mk_of_comm _ _ (explicitImageIso (conclusion a b))
@@ -122,8 +122,8 @@ theorem theoremSubobject_isLeast (a b : Idem V) :
     apply Subobject.le_of_comm ((imageSubobjectIso (conclusion a b)).hom ≫ w)
     rw [Category.assoc,hw,imageSubobject_arrow]
 
-/-- Leastness holds on the actual domain inclusion of the existing
-partial identity, rather than only on an isomorphic image carrier. -/
+/-- Leastness holds on the domain inclusion of the existing partial identity, rather than
+only on an isomorphic image carrier. -/
 theorem theoremInclusion_least (a b : Idem V) :
     ClosedUnder (ForkDerivation.rules a b).inference (theoremInclusion a b) ∧
       ∀ {U : E} (m : U ⟶ S) [Mono m],
@@ -139,8 +139,8 @@ theorem theoremInclusion_least (a b : Idem V) :
     rw [Category.assoc,hw]
     exact explicitImageIso_inv (conclusion a b)
 
-/-- In particular every actual logical or atomic nullary rule concludes
-in the constructed image. Its axiom tag and parameters remain available. -/
+/-- In particular every logical or atomic nullary rule concludes in the constructed image.
+Its axiom tag and parameters remain available. -/
 theorem image_contains_axioms (a b : Idem V) :
     ∃ w : (ForkDerivation.rules a b).instances 0 ⟶ image (conclusion a b),
       w ≫ image.ι (conclusion a b) = (ForkDerivation.rules a b).conclusion 0 := by
@@ -155,8 +155,8 @@ private theorem domainRetraction_restriction {X : EffectiveFork.Object} (e : Ide
     _ = rst e.hom := congrArg rst (EffectiveFork.retraction_inclusion e)
     _ = e.hom := e.restriction
 
-/-- Lemma A.7 identifies the partial identity of the regular image with
-the actual conclusion range in the effective partial fork category. -/
+/-- Lemma A.7 identifies the partial identity of the regular image with the conclusion
+range in the effective partial fork category. -/
 theorem range_regular_image (a b : Idem V) :
     (theoremRange a b).hom =
       EffectiveFork.domainRetraction (theoremRange a b) ≫ (theoremInclusion a b).hom := by
@@ -175,8 +175,8 @@ theorem range_regular_image (a b : Idem V) :
   rw [hf] at h
   exact h
 
-/-- The existing finite-proof leastness describes the components of the
-same image identified by concrete initiality above. -/
+/-- The finite-proof leastness describes the components of the same image identified by
+concrete initiality above. -/
 theorem component_theory_isLeast (a b : Idem V) :
     IsLeast {e | ForkSyntax.IsTheory a b e} (theoremRange a b) := by
   rw [theoremRange_eq_t0]
@@ -203,8 +203,8 @@ theorem right_theorem_codes (a b : Idem V) (n : ℕ) :
         (EnumerableCarriers.support (EffectiveFork.rightIdem b)) :=
   ForkSyntax.right_t0 a b n
 
-/-- Theorem 9.4, with its concrete initial image, component leastness,
-the two atomic bounds and consistency. -/
+/-- Theorem 10.4, with its concrete initial image, component leastness, the two atomic
+bounds and consistency. -/
 theorem proof_presentation (a b : Idem V) (hd : a ⊓ b = ⊥) :
     IsLeast {P : Subobject S |
       ClosedUnder (ForkDerivation.rules a b).inference P.arrow}
@@ -244,8 +244,8 @@ theorem endpoint_ce_extension_incomplete (i : Bool) (T : Set ℕ)
   apply ForkSyntax.endpoint_ce_extension_incomplete i T hT _ hc
   exact (congrArg EnumerableCarriers.support (endpoint_theorem_codes i)) ▸ hext
 
-/-- Corollary 9.6 for the deductive closure of an arbitrary c.e. axiom
-set in the selected endpoint language. -/
+/-- Corollary 10.6 for the deductive closure of an arbitrary c.e. axiom set in the
+selected endpoint language. -/
 theorem endpoint_axiom_extension_incomplete (i : Bool) (A : Set ℕ)
     (hA : REPred (· ∈ A))
     (hext : EnumerableCarriers.support (ForkSyntax.endpointTheory i categoricalTheory) ⊆
@@ -275,8 +275,8 @@ theorem conclusion_realization (a b : Idem V) :
 def theoremSubobject (a b : Idem V) : Subobject LS :=
   imageSubobject (conclusion a b)
 
-/-- The target is the realization of the old explicit conclusion image,
-including its actual effective-fork image carrier. -/
+/-- The target is the realization of the old explicit conclusion image, including its
+effective-fork image carrier. -/
 def theoremObject (a b : Idem V) : D :=
   (F).obj (EffectiveFork.imageObject (ForkDerivation.conclusion a b))
 
@@ -300,8 +300,8 @@ theorem realized_image_factorization (a b : Idem V) :
       (EffectiveFork.image_factorization (ForkDerivation.conclusion a b))).trans
         (conclusion_realization a b).symm)
 
-/-- Equivalence preserves the actual regular-epi/mono factorization.
-No stronger hypothesis on arbitrary epimorphisms is needed. -/
+/-- Equivalence preserves the regular-epi/mono factorization. No stronger hypothesis on
+arbitrary epimorphisms is needed. -/
 def imageIso (a b : Idem V) : image (conclusion a b) ≅ theoremObject a b :=
   (image.isoStrongEpiMono
     ((F).map (EffectiveFork.imageQuotient (ForkDerivation.conclusion a b)))
@@ -315,8 +315,8 @@ def imageIso (a b : Idem V) : image (conclusion a b) ≅ theoremObject a b :=
     (imageIso a b).inv ≫ image.ι (conclusion a b) = theoremInclusion a b :=
   image.isoStrongEpiMono_hom_comp_ι _ _ (realized_image_factorization a b)
 
-/-- The two literal numerical subfunctors coincide as subobjects of the
-actual realized formula diagram. The inclusion triangle is proved above. -/
+/-- The two numerical subfunctors coincide as subobjects of the realized formula diagram.
+The inclusion triangle is proved above. -/
 theorem theoremSubobject_eq_realizedImage (a b : Idem V) :
     theoremSubobject a b = Subobject.mk (theoremInclusion a b) :=
   Subobject.mk_eq_mk_of_comm _ _ (imageIso a b) (imageIso_hom_inclusion a b)
@@ -334,8 +334,8 @@ theorem theoremInclusion_eq_t0_domain (a b : Idem V) :
         (⟨EffectiveFork.domainObject (ForkSyntax.t0 a b)⟩ : EffectiveFork.Total) ⟶
           ForkDerivation.sentenceObject) := rfl
 
-/-- The actual literal-diagram initiality supplies Theorem A.5, for
-arbitrary monic numerical subfunctors and their natural rule operations. -/
+/-- The literal-diagram initiality supplies Theorem A.5, for arbitrary monic numerical
+subfunctors and their natural rule operations. -/
 theorem least_theorem_image (a b : Idem V) :
     ClosedUnder (ForkDerivation.Diagram.rules a b).inference
         (image.ι (conclusion a b)) ∧
@@ -390,7 +390,7 @@ theorem closed_shaped_iff (a b : Idem V) {U : D} (m : U ⟶ LS) :
   · rintro ⟨α⟩
     exact ⟨(shapedRuleIso a b).hom.app (Over.mk m) ≫ α⟩
 
-/-- Leastness for the actual printed H on literal numerical diagrams. -/
+/-- Leastness for the H on numerical diagrams. -/
 theorem shaped_least_theorem_image (a b : Idem V) :
     ClosedUnder (ForkDerivation.Diagram.shapedH a b) (image.ι (conclusion a b)) ∧
       ∀ {U : D} (m : U ⟶ LS) [Mono m],

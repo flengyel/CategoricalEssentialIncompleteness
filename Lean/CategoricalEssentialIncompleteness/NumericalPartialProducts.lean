@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.NumericalProducts
 /-!
 # Partial pairing in the numerical category
 
-Partial pairing is defined exactly where both component arrows are defined.
-Its projections satisfy the restriction-product equations, and every arrow
-into a product is recovered by pairing its two projections.
+Partial pairing is defined exactly where both component morphisms are defined. Its
+projections satisfy the restriction-product equations, and every morphism into a
+product is recovered by pairing its two projections.
 -/
 
 @[expose] public section
@@ -47,7 +47,7 @@ theorem partialFst_total (X Y : Numerical) : RestrictionCategory.isTotal (partia
 theorem partialSnd_total (X Y : Numerical) : RestrictionCategory.isTotal (partialSnd X Y) :=
   (snd (totalObject X) (totalObject Y)).property
 
-/-- Pair two partial numerical arrows on their common domain. -/
+/-- Pair two partial numerical morphisms on their common domain. -/
 def partialPair {W X Y : Numerical} (f : W ⟶ X) (g : W ⟶ Y) : W ⟶ product X Y where
   val n := (f.val n).bind fun a ↦ (g.val n).map (Nat.pair a)
   computable := f.computable.bind
@@ -127,7 +127,7 @@ theorem comp_partialPair {V W X Y : Numerical} (h : V ⟶ W) (f : W ⟶ X) (g : 
     subst l
     exact ⟨k, hk, a, ha, b, hb, hm⟩
 
-/-- An arrow into a numerical product is determined by its two projections. -/
+/-- A morphism into a numerical product is determined by its two projections. -/
 theorem partialPair_proj {W X Y : Numerical} (h : W ⟶ product X Y) :
     partialPair (h ≫ partialFst X Y) (h ≫ partialSnd X Y) = h := by
   apply Hom.ext; funext n; apply Part.ext; intro m

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxFold
 
-/-! # The actual ordered child computations of a uniform syntax constructor -/
+/-! # The ordered child computations of a uniform syntax constructor -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46Inference
 
 
-/-! # Statement checks in `V46InferenceChecks` -/
+/-! # The inference endofunctor of a finite typed rule presentation -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.Limits

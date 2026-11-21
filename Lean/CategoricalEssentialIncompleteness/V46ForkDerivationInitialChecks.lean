@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationInitial
 
 
-/-! # Statement checks in `V46ForkDerivationInitialChecks` -/
+/-! # Initiality on the natural fork of finite derivations -/
 
 @[expose] public section
 noncomputable section

@@ -33,8 +33,8 @@ variable {K : Type w}
   (functions : ∀ n : Fin (d + 1), Symbols σ n.val → (Fin n.val → K) → K)
   (relations : ∀ n : Fin (d + 1), Symbols π n.val → (Fin n.val → K) → Prop)
 
-/-- Term evaluation respects the actual categorical substitution morphism
-on every standard accepted term and every named parameter. -/
+/-- Term evaluation respects the categorical substitution morphism on every standard
+accepted term and every named parameter. -/
 theorem evaluate_termSubstitution (q : Obj 𝗣𝗔 ℕ (X ⨯ P)) (ρ : ℕ → K) :
     evaluate σ π d functions ((G).map (S).termSubstitution q) ρ =
       evaluate σ π d functions ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔) («X» := X) («Y» := P)) q)
@@ -49,10 +49,9 @@ theorem evaluate_termSubstitution (q : Obj 𝗣𝗔 ℕ (X ⨯ P)) (ρ : ℕ →
     ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔) («X» := X) («Y» := P)) q) ((G).map (S).termSubstitution q) ρ
     (plain_termSubstitution_value 𝗣𝗔 variableCarrier σ π d ℕ q).symm
 
-/-- The actual categorical substitution satisfies semantic substitution.
-Its input is a point of the constructed success pullback, not an extra
-free-for or successful-output assumption. The structure K is independent
-of the arithmetic code model ℕ. -/
+/-- The categorical substitution satisfies semantic substitution. Its input is a point of
+the constructed success pullback, not an extra free-for or successful-output
+assumption. The structure K is independent of the arithmetic code model ℕ. -/
 theorem holds_formulaSubstitution (a : Obj 𝗣𝗔 ℕ (S).admissibleSubstitution) (ρ : ℕ → K) :
     Holds σ π d functions relations ((G).map (S).formulaSubstitution a) ρ ↔
       Holds σ π d functions relations
@@ -69,8 +68,8 @@ theorem holds_formulaSubstitution (a : Obj 𝗣𝗔 ℕ (S).admissibleSubstituti
     ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔) («X» := Y) («Y» := P)) q) ((G).map (S).formulaSubstitution a) ρ
     (plain_formulaSubstitution_result 𝗣𝗔 variableCarrier σ π d ℕ a)
 
-/-- The instantiation scheme uses the actual admissibility restriction
-and the semantic substitution theorem just proved. -/
+/-- The instantiation scheme uses the admissibility restriction and the semantic
+substitution theorem just proved. -/
 theorem valid_hilbertInstantiation (z : Obj 𝗣𝗔 ℕ (S).instantiationParameters) :
     Valid σ π d functions relations ((G).map (S).hilbertInstantiation z) := by
   exact ModelSubstitutionSoundness.valid_instantiation (G) (S) (fun x => x.val)
@@ -79,8 +78,8 @@ theorem valid_hilbertInstantiation (z : Obj 𝗣𝗔 ℕ (S).instantiationParame
     (holds_implication σ π d functions relations)
     (holds_quantifier σ π d functions relations) z
 
-/-- Equality substitution uses the two separately admissible inputs,
-matched by the actual scheme pullback. -/
+/-- Equality substitution uses the two separately admissible inputs, matched by the scheme
+pullback. -/
 theorem valid_hilbertEquality (z : Obj 𝗣𝗔 ℕ (S).equalitySchemeParameters) :
     Valid σ π d functions relations ((G).map (S).hilbertEquality z) := by
   exact ModelSubstitutionSoundness.valid_equality (G) (S) (fun x => x.val)

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityPresentation
 
 
-/-! # Statement checks in `V46ArithmeticIndexedProvabilityPresentationChecks` -/
+/-! # The indexed conclusion program and its arithmetic image presentation -/
 
 @[expose] public section
 noncomputable section

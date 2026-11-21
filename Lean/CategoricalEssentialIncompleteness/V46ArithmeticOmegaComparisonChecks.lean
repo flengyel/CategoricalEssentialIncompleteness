@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
 
-/-! # The numerical source comparison at its actual TotalSplit type -/
+/-! # The numerical source comparison at its TotalSplit type -/
 
 @[expose] public section
 noncomputable section

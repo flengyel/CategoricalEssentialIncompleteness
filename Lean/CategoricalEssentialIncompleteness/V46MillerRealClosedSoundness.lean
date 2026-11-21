@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemant
 public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
 
-/-! # The constructed real model is sound for actual finite T_a proofs
+/-! # The constructed real model is sound for finite T_a proofs
 
-Each nonlogical leaf has its original finiteCarrier support and sentence
-guard. Its truth follows from the actual T_a word set in the constructed
-real interpretation. The seven schemes and both inference rules are the
-already proved named-variable rules, with their original substitutions.
+Each nonlogical leaf has its original finiteCarrier support and sentence guard. Its
+truth follows from the T_a word set in the constructed real interpretation. The seven
+schemes and both inference rules are the already proved named-variable rules, with
+their original substitutions.
 -/
 
 @[expose] public section
@@ -56,8 +56,8 @@ theorem finiteProof_real_sound (a : Point) {φ : Formula}
   obtain ⟨L,hL,hφ⟩ := h
   exact native_finite_real_sound a L hL hφ
 
-/-- Both proof supports are actual finite supports in T_a; no common
-enumeration or proof-selection assumption is introduced. -/
+/-- Both proof supports are finite supports in T_a; no common enumeration or
+proof-selection assumption is introduced. -/
 theorem no_finiteProof_pair (a : Point) (φ : Formula) :
     ¬(FiniteAxiomProof functionSymbols relationSymbols bound (theoryAxioms a) φ ∧
       FiniteAxiomProof functionSymbols relationSymbols bound (theoryAxioms a) (.neg φ)) := by

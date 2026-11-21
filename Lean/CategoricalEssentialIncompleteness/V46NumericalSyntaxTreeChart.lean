@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
 
-/-! # Constructor-compatible literal numerical tree charts
+/-! # Constructor-compatible numerical tree charts
 
-The coefficient-identity transport in mappedPlainPostfixData is eliminated
-by equality induction on the complete algebra, including its structure map.
-The resulting one-sort chart uses the actual plain postfix predicate.
+The coefficient-identity transport in mappedPlainPostfixData is eliminated by equality
+induction on the complete algebra, including its structure map. The resulting one-sort
+chart uses the plain postfix predicate.
 -/
 
 @[expose] public section
@@ -129,8 +129,8 @@ theorem coefficient_label_iff (C : NumericalTuples.Object) (n : ℕ) :
         NumericalTuples.code C.dimension x = n :=
   NumericalCoordinates.codedPredicate_eval C n
 
-/-- On every actual coefficient carrier, the input coordinate is precisely
-its guarded tuple code, including dimension zero. -/
+/-- On every coefficient carrier, the input coordinate is precisely its guarded tuple
+code, including dimension zero. -/
 theorem coefficient_code_arrow (C : NumericalTuples.Object) :
     (E.counitIso.app C).inv ≫ (wordPresentationIso (E.inverse.obj C)).hom =
       NumericalCoordinates.encode C := by
@@ -172,7 +172,7 @@ def normalizedPair (p q : SyntaxPolynomial NumericalTuples.Object) :=
   reindexAlgebra (SyntacticSyntax.mapCoefficients_id p)
     (SyntacticSyntax.mapCoefficients_id q) (mappedPair p q)
 
-/-- This iso compares the actual mappedPlainPostfixData structure maps. -/
+/-- This iso compares the mappedPlainPostfixData structure maps. -/
 def pairChart (p q : SyntaxPolynomial NumericalTuples.Object) :
     normalizedPair p q ≅ (coordinateData p q).1 := by
   change reindexAlgebra (SyntacticSyntax.mapCoefficients_id p)
@@ -194,7 +194,7 @@ abbrev treePredicate : PredicateCategory 𝗧𝗔 :=
     ((SyntaxPolynomial.constructors R N).mapCoefficients E.inverse.obj)
     ((SyntaxPolynomial.unit : SyntaxPolynomial NumericalTuples.Object).mapCoefficients E.inverse.obj)
 
-/-- Its carrier is the actual image of the plain-word predicate, not a freshly chosen tree type. -/
+/-- Its carrier is the image of the plain-word predicate, not a freshly chosen tree type. -/
 theorem oneSortNormalized_carrier : (oneSortNormalized R N).a = E.functor.obj (treePredicate R N) := rfl
 
 def coordinateOneSort : Endofunctor.Algebra (SyntacticSyntax.constructorFunctor R N) :=
@@ -228,8 +228,8 @@ def rawConstructorInput :
         (fun X => E.counitIso.app X) (SyntaxPolynomial.constructors R N)
         (oneSortRaw R N).a).inv
 
-/-- In particular, the transported constructor is the actual plain-parser
-constructor after these specified input comparisons. -/
+/-- In particular, the transported constructor is the plain-parser constructor after these
+specified input comparisons. -/
 theorem normalized_raw_constructor :
     (oneSortNormalized R N).str = rawConstructorInput R N ≫
       E.functor.map (oneSortRaw R N).str.1 := by

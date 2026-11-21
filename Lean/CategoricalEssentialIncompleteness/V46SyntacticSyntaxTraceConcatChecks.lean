@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTraceConcat
 
 
-/-! # Statement checks in `V46SyntacticSyntaxTraceConcatChecks` -/
+/-! # Concatenating forward computation records -/
 
 @[expose] public section
 noncomputable section

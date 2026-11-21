@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformFinite
 
 
-/-! # Statement checks in `V46MillerUniformFiniteChecks` -/
+/-! # Positive finite records for the uniform oracle families -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Uniform.Checks

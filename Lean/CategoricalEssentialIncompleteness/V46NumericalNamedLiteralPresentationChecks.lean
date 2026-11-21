@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralPresentation
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralPresentationChecks` -/
+/-! # Constructor-preserving initial algebras on numerical words -/
 
 @[expose] public section
 noncomputable section

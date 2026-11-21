@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithm
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRootClosure
 
-/-! PA typed preservation and branch equations for the actual primitive
-named substitution algorithm and the independent structural free-for flag. -/
+/-!
+PA typed preservation and branch equations for the primitive named substitution
+algorithm and the independent structural free-for flag.
+-/
 
 @[expose] public section
 noncomputable section
@@ -43,14 +45,14 @@ theorem substitutionPayload_carrier (formula : Bool) (x replacement word : M)
     (termRoot V σ d) (formulaRoot V π d) param TP FP
     (fun u hu => termRoot_carrier V σ π d param u hp hu) (formulaRoot_carrier V σ π d param) formula word hw
 
-/-- Numerical term substitution preserves the actual named term predicate
-in PA, before restriction to any stronger theory T. -/
+/-- Numerical term substitution preserves the named term predicate in PA, before
+restriction to any stronger theory T. -/
 theorem substitutionResult_term (x replacement word : M)
     (hrep : (Tm).val.Evalb ![replacement]) (hw : (Tm).val.Evalb ![word]) :
     (Tm).val.Evalb ![substitutionResult V σ π d x replacement word] :=
   termPayload_result V σ π d _ (substitutionPayload_carrier V σ π d false x replacement word hrep hw)
 
-/-- The formula traversal is total into the literal failure/success sum. -/
+/-- The formula traversal is total into the failure/success sum. -/
 theorem substitutionResult_formula (x replacement word : M)
     (hrep : (Tm).val.Evalb ![replacement]) (hw : (Fm).val.Evalb ![word]) :
     substitutionResult V σ π d x replacement word = 0 ∨ ∃ out : M,
@@ -64,8 +66,8 @@ theorem substitutionResult_formula (x replacement word : M)
   · exact Or.inl (her.trans hz)
   · exact Or.inr ⟨out,by simpa using ho,her.trans heq⟩
 
-/-- The independent free-for recursion agrees with the actual option tag.
-This is a proved invariant of the numeric traversal, rather than its definition. -/
+/-- The independent free-for recursion agrees with the option tag. This is a proved
+invariant of the numeric traversal, rather than its definition. -/
 theorem substitutionFreeFor_success (x replacement word : M)
     (hrep : (Tm).val.Evalb ![replacement]) (hw : (Fm).val.Evalb ![word]) :
     substitutionFreeFor V σ π d x replacement word =

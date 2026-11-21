@@ -78,8 +78,8 @@ def homEquiv (A : Endofunctor.Algebra F) (B : Endofunctor.Algebra G) :
   left_inv f := Endofunctor.Algebra.Hom.ext ((adj.homEquiv _ _).symm_apply_apply f.f)
   right_inv f := Endofunctor.Algebra.Hom.ext ((adj.homEquiv _ _).apply_symm_apply f.f)
 
-/-- No initiality or evaluation hypothesis is added on the target side:
-every target-algebra arrow is obtained by the proved adjunction equivalence. -/
+/-- No initiality or evaluation hypothesis is added on the target side: every
+target-algebra morphism is obtained by the proved adjunction equivalence. -/
 def initial (A : Endofunctor.Algebra F) (hA : IsInitial A) :
     IsInitial (leftAlgebra θ A) :=
   IsInitial.ofUniqueHom

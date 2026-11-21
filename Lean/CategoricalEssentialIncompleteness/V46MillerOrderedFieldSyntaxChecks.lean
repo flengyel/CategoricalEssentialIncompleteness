@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
 
 
-/-! # Statement checks in `V46MillerOrderedFieldSyntaxChecks` -/
+/-! # Literal ordered-field syntax and the uniformly enumerable cut axioms -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

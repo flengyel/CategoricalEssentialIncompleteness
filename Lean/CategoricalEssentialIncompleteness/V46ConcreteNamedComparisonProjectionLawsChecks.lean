@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProjectionLaws
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonProjectionLawsChecks` -/
+/-! # PA constructor equations for the two projected computations -/
 
 @[expose] public section
 noncomputable section

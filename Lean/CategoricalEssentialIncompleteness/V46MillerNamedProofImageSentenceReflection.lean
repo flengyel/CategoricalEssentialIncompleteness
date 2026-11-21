@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
 public import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
 
-/-! # Literal sentence and Gamma-leaf reflection
+/-! # Sentence and Gamma-leaf reflection
 
-Every nonlogical leaf is recovered from the actual sentence-axiom
-pullback. Its finite support is the singleton of the original formula
-word. No proof is selected from an arbitrary family of nonempty fibers.
+Every nonlogical leaf is recovered from the sentence-axiom pullback. Its finite
+support is the singleton of the original formula word. No proof is selected from an
+arbitrary family of nonempty fibers.
 -/
 
 @[expose] public section
@@ -81,8 +81,8 @@ theorem axiom_word_member (a : (U).obj (axiomCarrier P σ π d Γ hΓ)) :
   rw [CategoryTheory.Functor.map_comp_apply,decodeFormula_code]
   exact he ▸ hΓw
 
-/-- This is the actual finite leaf support extracted from any point of
-the nonlogical axiom carrier, including an arbitrary uniform Γ. -/
+/-- This is the finite leaf support extracted from any point of the nonlogical axiom
+carrier, including an arbitrary uniform Γ. -/
 theorem axiom_finite_proof (a : (U).obj (axiomCarrier P σ π d Γ hΓ)) :
     FiniteAxiomProof σ π d Γ (decodeFormula P σ π d
       ((U).map (axioms P σ π d Γ hΓ ≫ (S).sentenceInclusion) a)) := by

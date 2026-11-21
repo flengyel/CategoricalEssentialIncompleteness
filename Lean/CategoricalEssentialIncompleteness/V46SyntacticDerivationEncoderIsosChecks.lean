@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
 
-/-! The original chosen finite powers are actually isomorphic to literal premise tuples. -/
+/-! The original chosen finite powers are isomorphic to literal premise tuples. -/
 
 @[expose] public section
 noncomputable section

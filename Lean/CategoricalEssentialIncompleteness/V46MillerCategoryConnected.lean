@@ -119,8 +119,8 @@ instance locallyConnected : LocallyConnected (Object z) where
 def Injective {X Y : Object z} (f : X ⟶ Y) : Prop :=
   ∀ x x' y,y ∈ f.val x → y ∈ f.val x' → x = x'
 
-/-- Constant probes are ordinary recursive arrows. Partial monicity in
-this actual category therefore detects injectivity of its partial graph. -/
+/-- Constant probes are ordinary recursive morphisms. Partial monicity in this category
+therefore detects injectivity of its partial graph. -/
 theorem injective_of_partialMono {X Y : Object z} (f : X ⟶ Y) (hf : PartialMono f) : Injective f := by
   intro x x' y hy hy'
   let u : N z ⟶ X := totalFromFunction (fun _ => x) (Computable.const x)

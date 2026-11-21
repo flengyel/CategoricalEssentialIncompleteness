@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformComputations
 public import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
 
-/-! # Positive finite records for the actual uniform oracle families
+/-! # Positive finite records for the uniform oracle families
 
-`Enumerable` already has a proved persistent finite-prefix presentation,
-obtained from the actual uniform machine graph characterization. Finite
-conjunction takes the maximum of finitely many required prefix lengths.
-No oracle is selected and the empty record needs no coefficient inhabitant.
+`Enumerable` already has a proved persistent finite-prefix presentation, obtained from
+the uniform machine graph characterization. Finite conjunction takes the maximum of
+finitely many required prefix lengths. No oracle is selected and the empty record
+needs no coefficient inhabitant.
 -/
 
 @[expose] public section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSchemeSquares
 
 
-/-! # Statement checks in `V46NumericalArithmeticSchemeSquaresChecks` -/
+/-! # Arithmetic diagrams for the Hilbert axiom schemes -/
 
 @[expose] public section
 noncomputable section

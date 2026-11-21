@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ErasureLogicalSchemes
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
-/-! # The three propositional schemes under the actual product comparisons -/
+/-! # The three propositional schemes under the product comparisons -/
 
 @[expose] public section
 noncomputable section

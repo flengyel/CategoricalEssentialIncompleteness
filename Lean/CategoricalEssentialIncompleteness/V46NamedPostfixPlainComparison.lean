@@ -8,10 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSemantics
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Standard named trees in the actual plain categorical syntax
+/-! # Standard named trees in the plain categorical syntax
 
-The comparison uses the proved constructor-preserving plain-parser
-isomorphism. Its action fixes the literal numerical word.
+The comparison uses the proved constructor-preserving plain-parser isomorphism. Its
+action fixes the numerical word.
 -/
 
 @[expose] public section
@@ -26,8 +26,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.NamedPostfixPlainComparison
 open NamedPostfixEncoding NamedPostfixSemantics SyntacticSyntax
 
-/-- The actual interpreted comparison arrow keeps the same word in
-any model of T, not merely at closed standard inputs. -/
+/-- The interpreted comparison morphism keeps the same word in any model of T, not merely
+at closed standard inputs. -/
 theorem plainCarrierIso_value (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
     (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
     (sort : Bool) (a b : RawPolynomial) (word : Obj T M (Postfix.carrier sort a b)) :

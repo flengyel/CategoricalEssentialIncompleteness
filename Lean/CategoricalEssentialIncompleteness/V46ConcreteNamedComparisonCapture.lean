@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccur
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
 public import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
 
-/-! # The actual capture classifier reflects the numerical absence test -/
+/-! # The capture classifier reflects the numerical absence test -/
 
 @[expose] public section
 
@@ -48,9 +48,8 @@ def absenceOr {X : PredicateCategory T} (V : PredicateCategory T)
     (Two.unary Bool.not (prod.lift x body ≫ membershipArrow T V))
     (Two.unary Bool.not (prod.lift y replacement ≫ membershipArrow T V))
 
-/-- The finite truth-table calculation remains opaque in its four
-input arrows. Concrete syntax/product graphs are not unfolded under
-the conditional. -/
+/-- The finite truth-table calculation remains opaque in its four input morphisms.
+Concrete syntax/product graphs are not unfolded under the conditional. -/
 theorem absenceOr_point {X : PredicateCategory T} (V : PredicateCategory T)
     (x y : X ⟶ V) (body replacement : X ⟶ listObject T V) (q : Obj T M X) :
     (F T M).map (absenceOr T V x y body replacement) q =

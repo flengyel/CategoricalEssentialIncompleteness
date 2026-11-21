@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullaryPropositionalErasure
 public import CategoricalEssentialIncompleteness.V46ForkCategoricalSyntax
 
-/-! # Natural first-order erasure to the actual propositional fork object -/
+/-! # Natural first-order erasure to the propositional fork object -/
 
 @[expose] public section
 noncomputable section
@@ -40,14 +40,14 @@ def zeroPoint : ⊤_ Object ⟶ labels :=
 
 def distinguishedAtom : ⊤_ Object ⟶ sentences := zeroPoint ≫ atom
 
-/-- Exactly the proposition p_* ⇒ p_* used in the printed proof. -/
+/-- Exactly the proposition p_* ⇒ p_* used in the proof. -/
 def truth : ⊤_ Object ⟶ sentences :=
   prod.lift distinguishedAtom distinguishedAtom ≫ implication
 
 abbrev firstOrder := ForkCategoricalSyntax.categoricalSyntax labels
 abbrev formulas := firstOrder.algebra.a.2
 
-/-- A morphism of actual fork diagrams; naturality is part of its construction. -/
+/-- A morphism of fork diagrams; naturality is part of its construction. -/
 def erase : formulas ⟶ sentences :=
   NullaryPropositionalErasure.erase firstOrder atom negation implication truth
 

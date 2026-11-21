@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonOperations
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonOperationsChecks` -/
+/-! # Canonical occurrence, substitution and sentence charts -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRules
 
 
-/-! # Statement checks in `V46NumericalArithmeticRulesChecks` -/
+/-! # Arithmetic axiom labels and unary/binary rule-label comparisons -/
 
 @[expose] public section
 noncomputable section

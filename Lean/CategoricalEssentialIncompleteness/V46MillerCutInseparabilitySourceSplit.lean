@@ -9,18 +9,18 @@ public import CategoricalEssentialIncompleteness.V46MillerCutApplications
 public import CategoricalEssentialIncompleteness.V46SplitCoproducts
 
 
-/-! # Definitions and theorems in `V46MillerCutInseparabilitySourceSplit` -/
+/-! # Restriction idempotents on included objects of the split category -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
-/-! # The actual cut pair in the restriction splitting of the source
+/-! # The cut pair in the restriction splitting of the source
 
-Every endomorphism of an included object retains its original arrow.
-Consequently every complementary restriction-idempotent pair on that
-object recovers a complementary pair in the full uniform source category.
-This transfers the proved cut inseparability to the printed Split(E_a).
+Every endomorphism of an included object retains its original morphism. Consequently
+every complementary restriction-idempotent pair on that object recovers a
+complementary pair in the full uniform source category. This transfers the proved cut
+inseparability to the Split(E_a).
 -/
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory
@@ -198,7 +198,7 @@ theorem lowerIdem_support (a : Point) : support a (lowerIdem a)=CutDigits.lowerC
 theorem upperIdem_support (a : Point) : support a (upperIdem a)=CutDigits.upperCut a :=
   CutDigits.upperIdem_support a
 
-/-- The actual printed cut pair is inseparable in Split(E_a). -/
+/-- The cut pair is inseparable in Split(E_a). -/
 theorem printed_cut_inseparability (a : Point) (ha : IsMiller a) :
     Inseparable (lowerIdem a) (upperIdem a) :=
   map_inseparable a (Cut.printed_cut_inseparability a ha)

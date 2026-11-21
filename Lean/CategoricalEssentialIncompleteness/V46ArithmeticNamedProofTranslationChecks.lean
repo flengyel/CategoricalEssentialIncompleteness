@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofTranslation
 
 
-/-! # Statement checks in `V46ArithmeticNamedProofTranslationChecks` -/
+/-! # Translation of finite LK2 proofs to named proofs -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

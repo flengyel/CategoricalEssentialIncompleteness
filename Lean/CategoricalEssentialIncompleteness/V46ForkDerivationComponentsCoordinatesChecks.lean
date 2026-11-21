@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationComponentsCoordinates
 
 
-/-! # Statement checks in `V46ForkDerivationComponentsCoordinatesChecks` -/
+/-! # The component objects and finite coefficient charts -/
 
 @[expose] public section
 noncomputable section

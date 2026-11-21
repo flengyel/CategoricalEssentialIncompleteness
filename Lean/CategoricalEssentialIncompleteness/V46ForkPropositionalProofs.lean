@@ -76,7 +76,7 @@ def axiomProof (a b : Idem EffectiveFork.V) (i : Fin 5) :
     rw [axiomShapeIso_inverse_conclusion, shapedLambda_branch]
     rfl
 
-/-- The scheme witnesses are constructed from the actual Fin 5 coproduct. -/
+/-- The scheme witnesses are constructed from the Fin 5 coproduct. -/
 def schemes (a b : Idem EffectiveFork.V) :
     Schemes (inferenceAlgebra a b) ForkFirstOrderErasure.negation where
   one := (axiomProof a b 0).restate (coefficient_one a b)
@@ -90,7 +90,7 @@ def weaken (a b : Idem EffectiveFork.V) {W : Object} {f : W ⟶ sentences}
     (p : Proof (inferenceAlgebra a b) f) (g : W ⟶ sentences) :
     Proof (inferenceAlgebra a b) (implies implication g f) := (schemes a b).weaken p g
 
-/-- The printed p_* ⇒ p_* has an actual global finite derivation. -/
+/-- The p_* ⇒ p_* has a global finite derivation. -/
 def truth (a b : Idem EffectiveFork.V) :
     Proof (inferenceAlgebra a b) ForkFirstOrderErasure.truth :=
   identity a b ForkFirstOrderErasure.distinguishedAtom

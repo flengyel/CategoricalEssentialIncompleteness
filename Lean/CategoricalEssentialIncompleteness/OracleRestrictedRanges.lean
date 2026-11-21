@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.OracleRestrictedCategory
 public import CategoricalEssentialIncompleteness.OracleCodedDomains
 
-/-! # Restrictions, zeros and actual image ranges in the oracle-domain category -/
+/-! # Restrictions, zeros and image ranges in the oracle-domain category -/
 
 @[expose] public section
 

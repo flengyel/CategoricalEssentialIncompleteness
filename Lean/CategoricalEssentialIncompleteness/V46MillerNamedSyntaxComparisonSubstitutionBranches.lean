@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionQuantifier
 
-/-! # Every nonquantified branch of the actual named substitution fold
+/-! # Every nonquantified branch of the named substitution fold
 
 The two recursive term results are transported separately. Formula failures
 are transported by the constructed option comparison, rather than being
@@ -48,8 +48,8 @@ theorem substitution_product_square
       ((congrArg (fun u => u ≫ g') (Options.productIso_snd (F) k l).symm).trans
         (Category.assoc _ _ _))
 
-/-- Naturality of the recursive polynomial, followed by its actual
-constructor comparison, gives the whole substituted-constructor square. -/
+/-- Naturality of the recursive polynomial, followed by its constructor comparison, gives
+the whole substituted-constructor square. -/
 theorem substitution_polynomial_constructor
     {X X0 : PredicateCategory 𝗣𝗔 × PredicateCategory 𝗣𝗔}
     {Y Y0 : Total.TotalCategory P × Total.TotalCategory P}

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportLists
 
-/-! # The actual occurrence-algebra isomorphism and free-variable folds -/
+/-! # The occurrence-algebra isomorphism and free-variable folds -/
 
 @[expose] public section
 
@@ -81,9 +81,8 @@ theorem formulaOccurrence_structure :
   · exact hdeletion
 
 include hnil hsingleton happend hdeletion in
-/-- This is an isomorphism of the actual occurrence algebras. Its
-constructor proof is derived from the list operations, before any
-appeal to the uniqueness of the syntax fold. -/
+/-- This is an isomorphism of the occurrence algebras. Its constructor proof is derived
+from the list operations, before any appeal to the uniqueness of the syntax fold. -/
 def occurrenceAlgebraIso :
     AlgebraTransport.mappedAlgebra (E.prod E) (languageJointIso E V σ π d) S₀.occurrenceAlgebra ≅
       S₁.occurrenceAlgebra := by
@@ -113,8 +112,8 @@ def occurrenceAlgebraIso :
 variable (c : mappedSyntaxAlgebra E V σ π d S₀ ≅ S₁.algebra)
 
 include hnil hsingleton happend hdeletion in
-/-- The two actual algebra morphisms are equal by the proved mapped
-initiality. A fold equation is not supplied as a premise. -/
+/-- The two algebra morphisms are equal by the proved mapped initiality. A fold equation
+is not supplied as a premise. -/
 theorem occurrence_fold_comparison :
     (E.prod E).functor.map (S₀.fold S₀.occurrenceAlgebra) ≫ (listPairIso E ℓ).hom =
       c.hom.f ≫ S₁.fold S₁.occurrenceAlgebra := by

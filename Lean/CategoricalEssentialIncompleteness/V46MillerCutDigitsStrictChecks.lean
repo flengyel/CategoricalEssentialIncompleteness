@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDigitsStrict
 
 
-/-! # Statement checks in `V46MillerCutDigitsStrictChecks` -/
+/-! # Uniform finite certificates for the two strict coordinate cuts -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.CutDigits.Checks

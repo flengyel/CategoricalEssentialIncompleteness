@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46PartialSliceSpanChangeBase
 public import CategoricalEssentialIncompleteness.V46PartialSliceTheoryComparison
 
-/-! # Actual sentence and theorem family comparisons on partial spans -/
+/-! # Sentence and theorem family comparisons on partial spans -/
 
 @[expose] public section
 noncomputable section

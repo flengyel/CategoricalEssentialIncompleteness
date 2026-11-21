@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
 
 
-/-! # Statement checks in `V46NamedPostfixFreeVariablesChecks` -/
+/-! # The standard occurrence algorithm computes named free variables -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

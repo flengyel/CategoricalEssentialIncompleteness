@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedOpenTranslation
 
 
-/-! # Statement checks in `V46ArithmeticNamedOpenTranslationChecks` -/
+/-! # Named elaboration of arithmetic eigenvariables -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

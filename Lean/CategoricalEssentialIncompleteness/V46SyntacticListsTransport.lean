@@ -72,7 +72,7 @@ def polynomialComponent (X : C) :
         (prodComparison E.functor V X ≫ prod.map e.hom (𝟙 _))) = _
   rw [← Category.assoc, map_inr_inv_coprodComparison, coprod.inr_map, Category.assoc]
 
-/-- The actual natural comparison of the two list endofunctors. -/
+/-- The natural comparison of the two list endofunctors. -/
 def polynomialIso : listFunctor V ⋙ E.functor ≅ E.functor ⋙ listFunctor W := by
   refine NatIso.ofComponents (polynomialComponent E V W e) ?_
   intro X Y f
@@ -93,8 +93,8 @@ def polynomialIso : listFunctor V ⋙ E.functor ≅ E.functor ⋙ listFunctor W 
     simp only [E.functor.map_id, Category.assoc, coprod.inr_map,
       prod.map_map_assoc, Category.id_comp, Category.comp_id]
 
-/-- The transported list algebra uses the actual image of its two
-constructors and the canonical comparison isomorphisms. -/
+/-- The transported list algebra uses the image of its two constructors and the canonical
+comparison isomorphisms. -/
 def mappedListAlgebra (L : ListAlgebra V) : ListAlgebra W where
   carrier := E.functor.obj L.carrier
   nil := inv (terminalComparison E.functor) ≫ E.functor.map L.nil
@@ -122,8 +122,8 @@ theorem mappedList_structure (L : ListAlgebra V) :
       prod.map_id_id, IsIso.hom_inv_id_assoc,
       Category.id_comp, ← E.functor.map_comp]
 
-/-- The constructor presentation agrees with the complete algebra
-transport, via an identity map on its actual carrier. -/
+/-- The constructor presentation agrees with the complete algebra transport, via an
+identity map on its carrier. -/
 def mappedListIso (L : ListAlgebra V) :
     AlgebraTransport.mappedAlgebra E (polynomialIso E V W e) L.asAlgebra ≅
       (mappedListAlgebra E V W e L).asAlgebra := by
@@ -213,8 +213,8 @@ def terminalMappedIso {V : C} (L : ListAlgebra V) :
       rw [Category.assoc]
       exact hn) hc
 
-/-- Actual initiality in the terminal parameter slice implies actual
-base initiality; this does not assume the desired base universal property. -/
+/-- Initiality in the terminal parameter slice implies base initiality; this does not
+assume the desired base universal property. -/
 def initialOfTerminalParameters {V : C} (L : ListAlgebra V)
     (hL : IsInitial (L.withParameters (⊤_ C)).asAlgebra) : IsInitial L.asAlgebra :=
   (mappedListInitial (terminalSliceEquivalence (C := C)) (constantFamily (⊤_ C) V) V

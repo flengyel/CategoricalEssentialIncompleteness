@@ -154,7 +154,7 @@ theorem tau_parameterization {X : Object} (f : product X V ⟶ V) :
   Hom.ext (center_parameterization f) (endpoint_parameterization f.left)
     (endpoint_parameterization f.right)
 
-/-- Theorem A.7, including simultaneous undefinedness in the central component. -/
+/-- Theorem B.7, including simultaneous undefinedness in the central component. -/
 theorem tau_isTuring : RecursionCategory.IsTuringMorphism tau := by
   intro X f
   refine ⟨parameter f, ?_, tau_parameterization f⟩

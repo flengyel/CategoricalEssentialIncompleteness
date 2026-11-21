@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifier
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportQuantifierChecks` -/
+/-! # The quantified substitution branch commutes with the equivalence -/
 
 @[expose] public section
 noncomputable section

@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
 public import CategoricalEssentialIncompleteness.V46SyntaxMappedListOccurrenceComparison
 
-/-! The complete intrinsic substitution comparison from the actual
-mapped stable-list record equality. No list-operation or fold equality
-is an additional hypothesis at this endpoint. -/
+/-!
+The complete intrinsic substitution comparison from the mapped stable-list record
+equality. No list-operation or fold equality is an additional hypothesis at this
+endpoint.
+-/
 
 @[expose] public section
 noncomputable section

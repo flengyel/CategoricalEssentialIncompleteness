@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTraceCoding
 
 
-/-! # Statement checks in `V46UniformTraceCodingChecks` -/
+/-! # First-success traces with a variable program index -/
 
 @[expose] public section
 noncomputable section

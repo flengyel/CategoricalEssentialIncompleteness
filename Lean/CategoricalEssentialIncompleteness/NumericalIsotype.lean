@@ -12,9 +12,9 @@ public import PCats.Recursion
 /-!
 # Isomorphisms between numerical objects
 
-The increasing enumeration and counting function give inverse total arrows
-between `ℕ` and any numerical object. Restricting the counting function to its
-source carrier is essential for equality with the categorical identity.
+The increasing enumeration and counting function give inverse total morphisms between
+`ℕ` and any numerical object. Restricting the counting function to its source carrier
+is essential for equality with the categorical identity.
 -/
 
 @[expose] public section
@@ -26,12 +26,12 @@ open CategoryTheory
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- The total arrow given by the increasing enumeration of a numerical object. -/
+/-- The total morphism given by the increasing enumeration of a numerical object. -/
 def enumerationArrow (X : Numerical) : totalObject nat ⟶ totalObject X :=
   totalFromFunction (enumerate X) (enumerate_computable X)
     (fun n _ => enumerate_mem X n)
 
-/-- The total arrow given by counting, restricted to the numerical source. -/
+/-- The total morphism given by counting, restricted to the numerical source. -/
 def rankArrow (X : Numerical) : totalObject X ⟶ totalObject nat :=
   totalFromFunction (rank X) (rank_computable X) (fun _ _ => Set.mem_univ _)
 
@@ -82,7 +82,7 @@ def natIso (X : Numerical) : nat ≅ X where
   hom_inv_id := enumerationArrow_rankArrow X
   inv_hom_id := rankArrow_enumerationArrow X
 
-/-- The same isomorphism in the category of total numerical arrows. -/
+/-- The same isomorphism in the category of total numerical morphisms. -/
 def totalNatIso (X : Numerical) : totalObject nat ≅ totalObject X where
   hom := enumerationArrow X
   inv := rankArrow X

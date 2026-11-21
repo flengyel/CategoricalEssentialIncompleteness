@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformPredicates
 
 
-/-! # Statement checks in `V46ArithmeticUniformPredicatesChecks` -/
+/-! # Joint substituted provability predicates -/
 
 @[expose] public section
 noncomputable section

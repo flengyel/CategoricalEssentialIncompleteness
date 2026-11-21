@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedGammaModelSource
 
 
-/-! # Statement checks in `V46NamedGammaModelSourceChecks` -/
+/-! # The named Gamma enumeration and a consistent source theory -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

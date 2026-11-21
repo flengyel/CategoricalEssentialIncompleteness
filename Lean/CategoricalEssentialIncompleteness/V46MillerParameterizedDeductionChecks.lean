@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46MillerParameterizedDeduction
 
-/-! # Independent checks of the complete printed Lemma 9.6 -/
+/-! # Independent checks of the complete Lemma 9.6 -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -19,8 +19,8 @@ example (z : Point) : (numbers z).obj.base = Uniform.N (Uniform.Family.ofPoint z
 example (z : Point) : (numbers z).obj.domain.hom =
     𝟙 (Uniform.N (Uniform.Family.ofPoint z)) := numbers_domain z
 
-/-- Arbitrary nullary labels, the actual numerical variable object, and
-all bounded signatures occur before every parameter and axiom subobject. -/
+/-- Arbitrary nullary labels, the numerical variable object, and all bounded signatures
+occur before every parameter and axiom subobject. -/
 example (z : Point) :
     (∀ X : Total.CanonicalTotal z,
       Nonempty (CategoricalSyntax (numbers z) (fun _ => ⊥_ (Total.CanonicalTotal z))

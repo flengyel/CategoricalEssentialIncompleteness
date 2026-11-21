@@ -30,7 +30,7 @@ example (f g : W ⟶ F) (p : Proof A f) (q : Proof A (prod.lift f g ≫ imp)) :
 example (H : Schemes A neg) (f : W ⟶ F) :
     (H.identity f).hom ≫ A.a.hom = prod.lift f f ≫ imp := (H.identity f).conclusion
 
-/-- The identity proof is exactly the printed derivation with two MP applications. -/
+/-- The identity proof is exactly the derivation with two MP applications. -/
 example (H : Schemes A neg) (f : W ⟶ F) :
     H.identity f = Proof.mp (H.oneProof f f)
       (Proof.mp (H.oneProof f (implies imp f f)) (H.twoProof f (implies imp f f) f)) := rfl
@@ -97,7 +97,7 @@ example : ∃ p : firstOrder.equalitySchemeParameters ⟶
     p ≫ realization.map (ForkDerivation.conclusion a b) = firstOrder.hilbertEquality ≫ erase :=
   ⟨(ForkErasedSchemeProofs.equality a b).hom, (ForkErasedSchemeProofs.equality a b).conclusion⟩
 
-/-- The full printed scope has no derivability, initiality or compatibility hypothesis. -/
+/-- The full scope has no derivability, initiality or compatibility hypothesis. -/
 example : ∃ p : firstOrder.logicalParameters ⟶ realization.obj (ForkDerivation.proofObject a b),
     p ≫ realization.map (ForkDerivation.conclusion a b) = firstOrder.logicalAxioms ≫ erase :=
   ForkErasedSchemeProofs.printed_statement a b

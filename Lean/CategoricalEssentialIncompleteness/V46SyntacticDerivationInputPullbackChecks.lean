@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputPullback
 
-/-! The literal rule-input guards satisfy the actual categorical universal property. -/
+/-! The literal rule-input guards satisfy the categorical universal property. -/
 
 @[expose] public section
 noncomputable section

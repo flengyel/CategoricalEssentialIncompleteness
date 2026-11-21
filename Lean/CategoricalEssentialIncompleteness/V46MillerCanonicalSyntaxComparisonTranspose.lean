@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
 
-/-! # Transposing actual comparison squares through the equivalence unit
+/-! # Transposing comparison squares through the equivalence unit
 
 The inverse-signature transport library applies to E.symm and the explicit
 forward signature. These lemmas transpose its equations through the unit;

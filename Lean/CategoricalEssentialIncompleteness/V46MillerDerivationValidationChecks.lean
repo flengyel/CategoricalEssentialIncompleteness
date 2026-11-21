@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
 
 
-/-! # Statement checks in `V46MillerDerivationValidationChecks` -/
+/-! # Ordered-premise validation in the uniform carrier category -/
 
 @[expose] public section
 noncomputable section

@@ -8,8 +8,8 @@ public import CategoricalEssentialIncompleteness.V46ForkFormulaTransitionSquares
 
 /-! # Natural formula folds for arbitrary fork parameter families
 
-Target operations are componentwise relative polynomial operations whose
-constructor squares commute with the actual fork transitions.
+Target operations are componentwise relative polynomial operations whose constructor
+squares commute with the fork transitions.
 -/
 @[expose] public section
 noncomputable section
@@ -34,8 +34,8 @@ abbrev carrierTransition (X : Over P) {j l : WalkingSpan} (f : j ⟶ l) :
 abbrev polynomial (j : WalkingSpan) :=
   ForkFormulaParameterComponents.polynomial (numbers.obj j) (D.obj j) (P.obj j)
 
-/-- A target consists of an arbitrary family over P and natural operations
-for the five printed constructors, with relative products in each slice. -/
+/-- A target consists of an arbitrary family over P and natural operations for the five
+constructors, with relative products in each slice. -/
 structure Algebra where
   carrier : Over P
   str : ∀ j, (polynomial D P j).obj (component P carrier j) ⟶ component P carrier j

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationTrees
 
 
-/-! # Statement checks in `V46MillerDerivationTreesChecks` -/
+/-! # Ordinary rule-labelled tree algebra with uniform coefficients -/
 
 @[expose] public section
 noncomputable section

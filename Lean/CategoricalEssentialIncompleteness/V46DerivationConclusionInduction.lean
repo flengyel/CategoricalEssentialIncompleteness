@@ -22,8 +22,8 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticDerivation.StandardInd
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] {Fm : PredicateCategory T} {bound : ℕ}
 variable (R : RulePresentation Fm bound)
 
-/-- Read the kth prescribed premise at the actual rule label. The
-source is the original rule-input pullback, not a shared formula fiber. -/
+/-- Read the kth prescribed premise at the rule label. The source is the original
+rule-input pullback, not a shared formula fiber. -/
 def typedPremise (i : Fin (bound + 1)) (k : Fin i.val) :
     R.ruleObject (derivationAlgebra T R).a i ⟶ Fm :=
   pullback.fst (R.premises i) (finitePowerMap (derivationAlgebra T R).a.hom i.val) ≫

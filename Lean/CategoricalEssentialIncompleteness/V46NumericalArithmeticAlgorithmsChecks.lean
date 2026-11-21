@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticAlgorithms
 
 
-/-! # Statement checks in `V46NumericalArithmeticAlgorithmsChecks` -/
+/-! # Arithmetic algorithms are independent of coefficient guards -/
 
 @[expose] public section
 noncomputable section

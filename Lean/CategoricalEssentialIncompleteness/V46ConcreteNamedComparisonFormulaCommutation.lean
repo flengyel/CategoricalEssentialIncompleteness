@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaStep
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal
 
-/-! # The computed formula-state arrow commutes with the actual full formula structure -/
+/-! # The computed formula-state morphism commutes with the full formula structure -/
 
 @[expose] public section
 

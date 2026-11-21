@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTurin
 public import CategoricalEssentialIncompleteness.ClassicalRecursionCategory
 public import CategoricalEssentialIncompleteness.ClassicalSplitMaps
 
-/-! # The printed universal program's actual classical diagonal pair -/
+/-! # The universal program's classical diagonal pair -/
 
 @[expose] public section
 noncomputable section
@@ -23,7 +23,7 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 open CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctions
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.Incompleteness
 
-/-- The universal map is the denotation of the printed universal index. -/
+/-- The universal map is the denotation of the universal program index. -/
 def tauRec : PCategoryStruct.nearProd ClassicalPrograms.U ClassicalPrograms.U ⟶ ClassicalPrograms.U :=
   ClassicalPrograms.Q.map ArithmeticDiagonalCodes.sourceTau
 
@@ -63,8 +63,8 @@ private theorem quotient_summand1 :
       (summand1 ClassicalPrograms.U ClassicalPrograms.U)).hom
   exact congrArg Idem.hom ((ArithmeticDiagonalCodes.model_summand1 ℕ).trans ClassicalPrograms.J_summand1.symm)
 
-/-- This compares the actual diagonal restrictions, including the program
-and the parity coproduct map, before using their arithmetic supports. -/
+/-- This compares the diagonal restrictions, including the program and the parity
+coproduct map, before using their arithmetic supports. -/
 theorem quotient_a0 :
     ClassicalPrograms.quotientRangeFunctor.mapIdem ArithmeticDiagonalCodes.a0 = aRec := by
   unfold ArithmeticDiagonalCodes.a0 aRec diagonal0
@@ -93,8 +93,8 @@ theorem bRec_standard :
   rw [← quotient_a1]
   exact ArithmeticDiagonalCodes.model_a1 ℕ
 
-/-- The categorical diagonal theorem is applied to the printed map's
-actual classical denotation. No arithmetic incompleteness result is used. -/
+/-- The categorical diagonal theorem is applied to the map's classical denotation. No
+arithmetic incompleteness result is used. -/
 theorem diagonal_inseparable : Inseparable aRec bRec :=
   range_functor_lifting ClassicalPrograms.inclusionRangeFunctor tauRec tauRec_isTuring
     ClassicalPrograms.parityIso ClassicalPrograms.inclusion_nonzero

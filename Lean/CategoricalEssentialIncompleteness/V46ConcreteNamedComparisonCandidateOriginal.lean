@@ -32,8 +32,8 @@ local notation "K" => SyntaxPolynomial.jointFunctor
   (SyntaxPolynomial.withParameters
     (CategoricalSyntax.substitutionParameters (categoricalSyntax T V σ π d)) (SyntaxPolynomial.formulaExpression V π d))
 
-/-- This is only the actual pair of typed state arrows. Its algebra
-commutation is a separate result to be proved from all constructor cases. -/
+/-- This is only the pair of typed state morphisms. Its algebra commutation is a separate
+result to be proved from all constructor cases. -/
 def computedStatePair : (A).a ⟶ (S).substitutionAlgebra.a :=
   (computedTermState T V V σ π d,computedFormulaState T V V σ π d)
 
@@ -59,9 +59,9 @@ theorem computedStatePair_original :
     computedStatePair T V σ π d ≫ (S).substitutionOriginalHom.f = 𝟙 (A).a := by
   rw [computedStatePair_original_projection,originalProjectionPair_eq_id T V V σ π d]
 
-/-- The original components of the required commutation square already
-commute. This is derived from the actual generic original-projection
-Hom and the proved metadata identity, not from the missing full square. -/
+/-- The original components of the required commutation square already commute. This is
+derived from the generic original-projection Hom and the proved metadata identity, not
+from the missing full square. -/
 theorem computedStatePair_original_commutes :
     ((K).map (computedStatePair T V σ π d) ≫ (S).substitutionAlgebra.str) ≫
       (S).substitutionOriginalHom.f =

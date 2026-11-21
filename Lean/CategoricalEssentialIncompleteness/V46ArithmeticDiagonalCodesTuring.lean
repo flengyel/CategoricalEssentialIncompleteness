@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesModels
 
-/-! # A proved adapter from the old Turing map to the printed universal map
+/-! # Change of input coding for the universal Turing morphism
 
-The two maps are not identified. The adapter is an actual PA-total
-specializer program, with a categorical factorization proved from the
-uniform graph equations at arbitrary internal indices and inputs.
+A PA-total specialization program converts the exponential input code to that of the
+evaluator. Its graph equations give the factorization for arbitrary internal program
+indices and inputs.
 -/
 
 @[expose] public section
@@ -28,8 +28,8 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalCodes
 
-/-- This one fixed program presents the old Turing map with exponential
-input coordinates. The old parameter remains input data. -/
+/-- This one fixed program presents the old Turing morphism with exponential input
+coordinates. The old parameter remains input data. -/
 def oldTauTemplateGraph : Graph :=
   let E := ExponentialPairing.graph
   let H := tauGraph
@@ -74,8 +74,8 @@ theorem oldTauTemplate_uniform :
     Uniform 𝗣𝗔 (eventualGraph oldTauTemplateIndex) oldTauTemplateGraph :=
   SyntacticSearch.search_uniform_of_functional 𝗣𝗔 oldTauTemplateGraph oldTauTemplateGraph_functional
 
-/-- A genuine program computes q -> s(v,q); its PA totality was constructed
-in Lemma 5.1 rather than supplied as a choice of parameter arrows. -/
+/-- A program computes q -> s(v,q); its PA totality was constructed in Lemma 6.1 rather
+than supplied as a choice of parameter morphisms. -/
 def adapterIndex : ℕ := UniformTrace.specializerSectionIndex oldTauTemplateIndex
 
 def adapter : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔 :=
@@ -131,8 +131,8 @@ theorem adapter_total : isTotal adapter := by
   exact ⟨CodedObjectMembership.memberFormula_omega_eval q,
     (adapter_program_graph q _).mpr rfl,CodedObjectMembership.memberFormula_omega_eval _⟩
 
-/-- This is the source-category bridge, not an equality of the two
-Turing maps and not a standard-model extensionality argument. -/
+/-- This is the source-category bridge, not an equality of the two Turing morphisms and
+not a standard-model extensionality argument. -/
 theorem adapter_factorization :
     CategoryTheory.PCategoryStruct.nearProd_map adapter (𝟙 (omegaObject 𝗣𝗔)) ≫ sourceTau = typedTau 𝗣𝗔 := by
   apply CodedHom.ext
@@ -171,7 +171,7 @@ theorem adapter_factorization :
     · apply (sourceTau_relation M _ _ _).mpr
       exact (adapter_application q x y).mpr hy
 
-/-- The literal printed universal map satisfies the actual categorical
+/-- The literal universal morphism with exponential input coding satisfies the categorical
 Turing property, transferred along the constructed total adapter. -/
 theorem sourceTau_isTuring : RecursionCategory.IsTuringMorphism sourceTau := by
   intro V phi

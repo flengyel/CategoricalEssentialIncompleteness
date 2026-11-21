@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
 
-/-! # Actual arithmetic axiom labels and unary/binary rule-label comparisons -/
+/-! # Arithmetic axiom labels and unary/binary rule-label comparisons -/
 
 @[expose] public section
 noncomputable section
@@ -36,8 +36,8 @@ theorem axiom_membership (Γ : Carrier) (n : ℕ) :
     (axiomObject Γ).support n ↔ Γ.val.Evalb ![n] ∧ ArithmeticLiteralModel.sentencePredicate.val.Evalb ![n] :=
   SyntacticAxiomPredicates.axiomCarrier_literal 𝗣𝗔 variableSymbols functionSymbols relationSymbols bound ℕ Γ n
 
-/-- The actual nonlogical nullary conclusion square uses the same
-Gamma axiom inclusion and the proved sentence and formula charts. -/
+/-- The nonlogical nullary conclusion square uses the same Gamma axiom inclusion and the
+proved sentence and formula charts. -/
 theorem axioms_formula (Γ : Carrier) :
     axioms Γ ≫ numericalSyntax.sentenceInclusion ≫ formulaIso.hom =
       numericalInterpretation.map (ArithmeticLiteralModel.axioms Γ ≫ originalSyntax.sentenceInclusion) := by
@@ -59,8 +59,8 @@ def rules (Γ : Carrier) : RulePresentation numericalSyntax.algebra.a.2 2 :=
 def originalRules (Γ : Carrier) : RulePresentation originalSyntax.algebra.a.2 2 :=
   originalSyntax.logicalRules (ArithmeticLiteralModel.axioms Γ)
 
-/-- The finite-product comparison is applied to the actual variable and
-formula charts. Its inverse is a numerical morphism on the whole label carrier. -/
+/-- The finite-product comparison is applied to the variable and formula charts. Its
+inverse is a numerical morphism on the whole label carrier. -/
 def rho1 (Γ : Carrier) : (rules Γ).instances 1 ≅
     numericalInterpretation.obj ((originalRules Γ).instances 1) :=
   SubstitutionParameters.pairedIso variableIso formulaIso

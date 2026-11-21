@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSearchModels
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
 
-/-! # The actual uniform sentence morphism
+/-! # The uniform sentence morphism
 
 The source diagonal is chosen once from the joint two-input search. Its total
-identity-splitting image is composed with the constructed literal named sentence
-morphism. The numerical value comparison is proved for that exact composite.
+identity-splitting image is composed with the constructed named sentence morphism. The
+numerical value comparison is proved for that exact composite.
 -/
 
 @[expose] public section
@@ -49,7 +49,7 @@ def sourceComposite {D : Type u} [Category.{v} D] {X Y Z : D}
     (congrArg value (H.map_comp_apply f t x)).trans
       ((congrArg (fun a => value (H.map t a)) hf).trans ht)
 
-/-- The printed I(g), for an actual source-total g. -/
+/-- The I(g), for a source-total g. -/
 def totalEndomorphism (g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔) (hg : isTotal g) :
     ArithmeticOmegaComparison.identityOmega 𝗣𝗔 ⟶ ArithmeticOmegaComparison.identityOmega 𝗣𝗔 :=
   ⟨(splittingInclusion (C := CodedProgramCategory 𝗣𝗔)).map g,
@@ -66,8 +66,8 @@ def sentenceData (g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔) (hg : isTot
       (NamedArithmeticLiteralTotal.theta φ hφ) :=
   sourceComposite (totalEndomorphism g hg) (NamedArithmeticLiteralTotal.theta φ hφ)
 
-/-- The actual identity-splitting image followed by the constructed named
-sentence map. Its constructor carries a proved comparison with I(g)≫theta. -/
+/-- The identity-splitting image followed by the constructed named sentence map. Its
+constructor carries a proved comparison with I(g)≫theta. -/
 def sentenceFromTotal (g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔) (hg : isTotal g)
     (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :
     @Quiver.Hom (TotalSplit 𝗣𝗔) inferInstance
@@ -86,7 +86,7 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 local notation "F" => SyntacticModel.modelFunctor 𝗣𝗔 M
 local notation "G" => PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 M
 
-/-- An actual source output gives the exact canonical-domain value of I(g). -/
+/-- A source output gives the exact canonical-domain value of I(g). -/
 theorem totalEndomorphism_value (g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔)
     (hg : isTotal g) (e n : M) (hn : n ∈ (F).map g e) :
     (G).map (totalEndomorphism g hg) (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 M e) =
@@ -134,8 +134,8 @@ theorem output_mem (C C' : Predicate₂) (e : M) :
     ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).map_total
       (diagonal C C') (diagonal_total C C')) e
 
-/-- The same total sentence morphism has exactly the printed code Θ(n)
-when n is an actual output of the one source g at e. -/
+/-- The same total sentence morphism has exactly the code Θ(n) when n is an output of the
+one source g at e. -/
 theorem sentenceMorphism_value_at (C C' : Predicate₂) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) (e n : M)
     (hn : n ∈ (F).map (diagonal C C') e) :

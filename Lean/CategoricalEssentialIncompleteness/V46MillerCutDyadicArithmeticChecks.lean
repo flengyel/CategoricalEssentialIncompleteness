@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDyadicArithmetic
 
 
-/-! # Statement checks in `V46MillerCutDyadicArithmeticChecks` -/
+/-! # Ordinary numerical arithmetic on nonnegative dyadic fractions -/
 
 @[expose] public section
 noncomputable section

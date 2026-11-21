@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsWordCodes
 
 
-/-! # Statement checks in `V46MillerListsWordCodesChecks` -/
+/-! # Translation from list codes to word codes -/
 
 @[expose] public section
 noncomputable section

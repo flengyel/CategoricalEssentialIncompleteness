@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 public import CategoricalEssentialIncompleteness.V46UniformTrace
 
-/-! # The actual Σ₁ indexed axiom subobject of E × Sent
+/-! # The Σ₁ indexed axiom subobject of E × Sent
 
 AxPA is the chosen Σ₁ sentence-axiom predicate in the manuscript. The
 construction and its categorical universal properties do not require a
@@ -115,8 +115,8 @@ def rawProductIso : CategoryTheory.Iso (C := PredicateCategory 𝗣𝗔)
   hom_inv_id := SyntacticLists.fromRaw_toRaw 𝗣𝗔 variableSymbols sentencePredicate
   inv_hom_id := SyntacticLists.toRaw_fromRaw 𝗣𝗔 variableSymbols sentencePredicate
 
-/-- This is the proved v : J(D) ≅ E × S of the printed construction,
-including the actual identity-Ω comparison rather than a carrier change. -/
+/-- This is the proved v : J(D) ≅ E × S of the indexed axiom construction, including the
+identity-Ω comparison rather than a carrier change. -/
 def productIso : (realization 𝗣𝗔).obj productPredicate ≅ parameter ⨯ sentence :=
   (realization 𝗣𝗔).mapIso rawProductIso ≪≫
     asIso (prodComparison (realization 𝗣𝗔) variableSymbols sentencePredicate) ≪≫

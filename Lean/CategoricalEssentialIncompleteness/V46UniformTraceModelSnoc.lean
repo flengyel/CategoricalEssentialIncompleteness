@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceModelLists
 
-/-! # The actual arithmetic list-snoc code is internal vector concatenation -/
+/-! # The arithmetic list-snoc code is internal vector concatenation -/
 
 @[expose] public section
 

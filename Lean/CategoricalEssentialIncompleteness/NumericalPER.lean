@@ -13,8 +13,8 @@ public import Mathlib.CategoryTheory.Widesubcategory
 
 Objects are arbitrary symmetric transitive relations on ℕ. Representatives are partial
 recursive functions defined on the source support and respecting the relations.
-Arrows identify representing functions whose values are related at every supported input.
-No enumerability condition is imposed on a relation or its support.
+Morphisms identify representing functions whose values are related at every supported
+input. No enumerability condition is imposed on a relation or its support.
 -/
 
 @[expose] public section
@@ -151,7 +151,7 @@ def discrete (A : Set ℕ) : NumericalPER where
 @[simp] theorem discrete_support (A : Set ℕ) : (discrete A).support = A := by
   ext n; simp [support, discrete]
 
-/-- Equality of arrows into a discrete PER is equality of their supported values. -/
+/-- Equality of morphisms into a discrete PER is equality of their supported values. -/
 theorem discrete_arrow_eq_iff {R : NumericalPER} {A : Set ℕ}
     (f g : Representative R (discrete A)) :
     ofRepresentative f = ofRepresentative g ↔ ∀ n ∈ R.support, f.val n = g.val n := by

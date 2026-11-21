@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformConstructors
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformConstructorsChecks` -/
+/-! # Constructor equations for arbitrary uniformly enumerable coefficients -/
 
 @[expose] public section
 noncomputable section

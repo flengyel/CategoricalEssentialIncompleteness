@@ -14,11 +14,11 @@ Authors: Florian Lengyel
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
 public import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
 
-/-! # Finite native Γ proofs in the actual uniform generated images
+/-! # Finite Hilbert derivations in the word algebra
 
-Only the existing native relation on finite axiom supports is inducted
-on. All target witnesses are constructed with the actual seven schemes,
-ordered inference-input pullbacks and original word derivation algebra.
+Induction on a Hilbert derivation with finite axiom support gives its interpretation
+in the word algebra. The seven axiom schemes give the logical leaves, and the
+inference pullbacks keep the premises in order.
 -/
 
 @[expose] public section
@@ -72,7 +72,7 @@ theorem nonlogical_axiom (p : (U).obj (axiomCarrier P σ π d Γ hΓ)) :
     (axioms P σ π d Γ hΓ ≫ (S).sentenceInclusion)) ((U).map coprod.inr p)=_
   erw [← CategoryTheory.Functor.map_comp_apply,coprod.inr_desc]
 
-/-- The actual unary premise pullback has the supplied child proof. -/
+/-- The unary premise pullback has the supplied child proof. -/
 theorem generalization (p : (U).obj ((Syntax.predicateFunctor P).obj (variableCarrier : PredicateCategory 𝗣𝗔) ⨯
       (S).algebra.a.2))
     (h : Realizes P σ π d Γ hΓ ((U).map prod.snd p)) :
@@ -190,7 +190,7 @@ theorem native_realizes (L : List ℕ) (hL : ∀ x ∈ L,x ∈ Γ) {φ : Fm}
       exact h
 
 
-/-- The external Γ set is used only through finite literal axiom supports. -/
+/-- The external Γ set is used only through finite axiom supports. -/
 theorem finite_realizes {φ : Fm} (h : FiniteAxiomProof σ π d Γ φ) :
     ∃ p : (U).obj (proofObject P σ π d Γ hΓ),
       (U).map (conclusion P σ π d Γ hΓ) p=formulaPoint P σ π d φ := by
@@ -210,8 +210,8 @@ theorem finite_formula_image {φ : Fm} (h : FiniteAxiomProof σ π d Γ φ) :
   rw [Total.Subobjects.imageCodes_image_ι]
   exact finite_formula_range P σ π d Γ hΓ h
 
-/-- Sentence derivations are lifted through the genuine sentence pullback;
-its point coordinate is retained and is not identified with the formula word. -/
+/-- Sentence derivations are lifted through the sentence pullback; its point coordinate is
+retained and is not identified with the formula word. -/
 theorem finite_sentence_realizes {φ : Fm} (h : FiniteAxiomProof σ π d Γ φ)
     (hc : φ.freeVariables=[]) :
     ∃ p : (U).obj (sentenceProofObject P σ π d Γ hΓ),
@@ -237,7 +237,7 @@ theorem finite_sentence_image {φ : Fm} (h : FiniteAxiomProof σ π d Γ φ)
   rw [Total.Subobjects.imageCodes_image_ι]
   exact finite_sentence_range P σ π d Γ hΓ h hc
 
-/-- Literal formula-word output of the actual sentence conclusion image. -/
+/-- Literal formula-word output of the sentence conclusion image. -/
 theorem finite_sentence_word_range {φ : Fm} (h : FiniteAxiomProof σ π d Γ φ)
     (hc : φ.freeVariables=[]) :
     formulaCode φ∈Total.Subobjects.imageCodes

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRefutations
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertRefutationsChecks` -/
+/-! # Named negation proofs in the refutation image -/
 
 @[expose] public section
 noncomputable section

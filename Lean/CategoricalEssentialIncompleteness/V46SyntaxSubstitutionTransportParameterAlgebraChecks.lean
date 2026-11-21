@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterAlgebra
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportParameterAlgebraChecks` -/
+/-! # The canonical parameter-family carrier comparison is a complete syntax algebra isomorphism -/
 
 @[expose] public section
 noncomputable section

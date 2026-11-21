@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldCommutation
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformFoldCommutationChecks` -/
+/-! # Constructor commutation of the uniform fold -/
 
 @[expose] public section
 noncomputable section

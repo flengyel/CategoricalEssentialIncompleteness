@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonLists
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonListsChecks` -/
+/-! # The list comparison for a PA-described coefficient predicate -/
 
 @[expose] public section
 noncomputable section

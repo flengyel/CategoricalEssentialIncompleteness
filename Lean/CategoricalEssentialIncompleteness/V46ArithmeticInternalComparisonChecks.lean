@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticInternalComparison
 
-/-! # Exact Theorem 7.3 statements for the constructed Gamma -/
+/-! # Exact Theorem 8.3 statements for the constructed Gamma -/
 
 @[expose] public section
 noncomputable section

@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.ForkNumericalInitial
 public import CategoricalEssentialIncompleteness.EffectiveForkCoproducts
 public import CategoricalEssentialIncompleteness.RestrictionRanges
 
-/-! # Initiality of the actual finite syntax algebra -/
+/-! # Initiality of the finite syntax algebra -/
 
 @[expose] public section
 
@@ -124,9 +124,9 @@ theorem fold_algebra {Z : Object} (alpha : polynomial.obj Z ⟶ Z) (ht : isTotal
   · rw [← Category.assoc,impInj_iota,← Category.assoc,impInj_map,Category.assoc]
     exact (constructors alpha ht).imp_fold
 
-/-- Proposition B.1: existence and uniqueness of the total algebra morphism.
-No extension of the target operations to ambient total recursive functions is
-assumed; their actual partial computations were used to construct the fold. -/
+/-- Proposition 10.2: existence and uniqueness of the total algebra morphism. No extension
+of the target operations to ambient total recursive functions is assumed; their
+partial computations were used to construct the fold. -/
 theorem syntax_initial {Z : Object} (alpha : polynomial.obj Z ⟶ Z) (ht : isTotal alpha) :
     ∃! u : S ⟶ Z,isTotal u ∧ iota ≫ u=polynomial.map u ≫ alpha := by
   refine ⟨(constructors alpha ht).fold,⟨(constructors alpha ht).fold_total,

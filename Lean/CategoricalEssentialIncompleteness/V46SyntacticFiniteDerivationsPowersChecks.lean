@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsPowers
 
 
-/-! # Statement checks in `V46SyntacticFiniteDerivationsPowersChecks` -/
+/-! # Ordered finite-power points for finite typed derivation trees -/
 
 @[expose] public section
 noncomputable section

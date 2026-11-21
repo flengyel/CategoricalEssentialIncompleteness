@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOp
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticEqualityParameters
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionParameters
 
-/-! # Actual arithmetic diagrams for the Hilbert axiom schemes -/
+/-! # Arithmetic diagrams for the Hilbert axiom schemes -/
 
 @[expose] public section
 noncomputable section
@@ -115,8 +115,8 @@ theorem hilbertThree : formulaPairIso.hom ≫ (K).map (S₀).hilbertThree =
     (implication_lift formulaPairIso.hom _ _ _ _ hNotPsi hNotPhi)
     LogicalOperations.implication_square.symm
 
-/-- The quantifier scheme uses the actual successful-substitution map
-on its prescribed pullback domain. -/
+/-- The quantifier scheme uses the successful-substitution map on its prescribed pullback
+domain. -/
 theorem hilbertInstantiation : instantiationIso.hom ≫ (K).map (S₀).hilbertInstantiation =
     (S).hilbertInstantiation ≫ formulaIso.hom := by
   have hx := mapped_chain instantiation_inclusion instantiation_name
@@ -125,8 +125,8 @@ theorem hilbertInstantiation : instantiationIso.hom ≫ (K).map (S₀).hilbertIn
   have hsub := mapped_chain instantiation_admissible admissible_result
   exact implication_lift instantiationIso.hom _ _ _ _ hall hsub
 
-/-- Distribution uses the genuine absent-variable fiber; its two formula
-entries and named binder are the same parameters under the product chart. -/
+/-- Distribution uses the absent-variable fiber; its two formula entries and named binder
+are the same parameters under the product chart. -/
 theorem hilbertDistribution : DistributionParameters.iso.hom ≫ (K).map (S₀).hilbertDistribution =
     (S).hilbertDistribution ≫ formulaIso.hom := by
   have hx := DistributionParameters.name_coordinate
@@ -146,8 +146,8 @@ theorem hilbertReflexivity : termIso.hom ≫ (K).map (S₀).hilbertReflexivity =
   exact equality_lift termIso.hom (𝟙 _) (𝟙 _) (𝟙 _) (𝟙 _)
     (by simp) (by simp)
 
-/-- Both successful substitutions in the equality scheme are taken on
-its actual intersection of success pullbacks. -/
+/-- Both successful substitutions in the equality scheme are taken on its intersection of
+success pullbacks. -/
 theorem hilbertEquality : equalityIso.hom ≫ (K).map (S₀).hilbertEquality =
     (S).hilbertEquality ≫ formulaIso.hom := by
   have heq := mapped_chain equality_inclusion

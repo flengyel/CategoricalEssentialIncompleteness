@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46CompatibleSplitSlices
 
-/-! # Actual partial slices with a proved source restriction comparison -/
+/-! # Partial slices with a proved source restriction comparison -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -48,8 +48,8 @@ variable [ρ : RestrictionCategory R] (hρ : PCategory.inducedRestriction = ρ)
 variable [Splits (SplitObject R)] [HasPullbacks (Tot (SplitObject R))]
 variable (inverses : MonoInverses (SplitObject R))
 
-/-- The functor and its full retraction consequences are constructed
-in the actual source restriction structure. -/
+/-- The functor and its full retraction consequences are constructed in the source
+restriction structure. -/
 def constantData {Z U : Tot (SplitObject R)} (point : Z ⟶ U) (hZ : IsTerminal Z) :
     {K : SplitObject R ⥤ PartialMaps.Par (Over U) //
       K.Faithful ∧ PreservesRestriction K ∧
@@ -64,8 +64,8 @@ def constantData {Z U : Tot (SplitObject R)} (point : Z ⟶ U) (hZ : IsTerminal 
   exact CompatiblePartialSlices.constantData (ρ := δ) SplitObject.productRestriction_eq
     inverses point hZ
 
-/-- This is the actual postcomposition functor, with its restriction
-law and proper-inclusion obstruction retained together. -/
+/-- This is the postcomposition functor, with its restriction law and proper-inclusion
+obstruction retained together. -/
 def postcomposeData {T U : Tot (SplitObject R)} (i : T ⟶ U) [Mono i] :
     {K : PartialMaps.Par (Over T) ⥤ PartialMaps.Par (Over U) //
       K.Full ∧ K.Faithful ∧ PreservesRestriction K ∧ (¬ IsIso i → ¬ K.EssSurj)} := by

@@ -20,9 +20,9 @@ open CategoryTheory CategoryTheory.Limits CategoryTheory.RestrictionCategory
 
 namespace CategoricalEssentialIncompleteness.LocalConnectedness
 
-/-- Proposition A.9's categorical distinction. The equivalence is required
-only to preserve restrictions in its two directions; ranges, products and
-coproducts need not be included as additional hypotheses. -/
+/-- Proposition B.10's categorical distinction. The equivalence is required only to
+preserve restrictions in its two directions; ranges, products and coproducts need not
+be included as additional hypotheses. -/
 theorem fork_not_restriction_equivalent
     (e : EffectiveFork.Recursion.Rec ≌ ClassicalPrograms.Rec)
     (hF : PreservesRestriction e.functor) (hG : PreservesRestriction e.inverse) : False := by

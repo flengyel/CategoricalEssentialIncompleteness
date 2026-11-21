@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedGammaModel
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 
-/-! # Literal Gamma theorem/refutation disjointness from its semantic model
+/-! # Gamma theorem/refutation disjointness from its semantic model
 
 The arithmetic code model and semantic structure are separate. Predicate
 points are compared naturally with the canonical total-domain functor;
@@ -31,8 +31,8 @@ section Pullback
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- A scalar graph image at a supplied point has exactly the witnesses
-in the actual original pullback, whose second projection keeps that point. -/
+/-- A scalar graph image at a supplied point has exactly the witnesses in the original
+pullback, whose second projection keeps that point. -/
 theorem image_pullback_point {A B C : PredicateCategory T} (f : A ⟶ C) (g : B ⟶ C)
     (b : Obj T M B) :
     (imageCarrier (chosenGraph T f).graph).val.Evalb ![((F T M).map g b).val] ↔
@@ -63,9 +63,9 @@ section NaturalRanges
 universe u v
 variable {C : Type u} [Category C] {F H : C ⥤ Type v}
 
-/-- Both the sentence inclusion coordinates and the negation morphism
-are preserved by the actual natural isomorphism, so conclusion range
-consistency transports back to predicate points. -/
+/-- Both the sentence inclusion coordinates and the negation morphism are preserved by the
+natural isomorphism, so conclusion range consistency transports back to predicate
+points. -/
 theorem range_consistency_of_comparison (η : F ≅ H) {P S : C}
     (c : P ⟶ S) (negation : S ⟶ S)
     (hd : Disjoint (Set.range (H.map c))
@@ -115,8 +115,8 @@ local notation "c" => (SyntacticGeneratedTheory.sentenceConclusion T V σ π d a
     (SyntacticGeneratedTheory.sentenceProofObject T V σ π d a)
     (CategoricalSyntax.sentenceObject (plainCategoricalSyntax T V σ π d)))
 
-/-- Literal theorem words at an actual chosen sentence point are exactly
-the range of the original sentence-conclusion pullback. -/
+/-- Theorem words at a chosen sentence point are exactly the range of the original
+sentence-conclusion pullback. -/
 theorem literal_theorem_sentence_point (s : Obj T M (S).sentenceObject) :
     (literalTheoremCarrier T V σ π d A).val.Evalb
       ![((F T M).map (S).sentenceInclusion s).val] ↔
@@ -134,8 +134,8 @@ theorem literal_theorem_sentence_point (s : Obj T M (S).sentenceObject) :
   exact image_pullback_point T M (SyntacticGeneratedTheory.conclusion T V σ π d a)
     (S).sentenceInclusion s
 
-/-- Word-level theorem/refutation consistency uses the actual ordered
-finite derivations and sentence-negation square, for every model point. -/
+/-- Word-level theorem/refutation consistency uses the ordered finite derivations and
+sentence-negation square, for every model point. -/
 theorem word_disjoint_of_sentence_range
     (hd : Disjoint (Set.range ((F T M).map c))
       (((F T M).map (S).sentenceNegation) ⁻¹' Set.range ((F T M).map c)))
@@ -176,8 +176,8 @@ variable (relations : ∀ n : Fin (d+1), Symbols π n.val → (Fin n.val → K) 
 variable (ρ : ℕ → K) (hA : NamedGammaSoundness.Models σ π d A functions relations ρ)
 include functions relations ρ hA
 
-/-- The given semantic Gamma model supplies the proved standard validity
-factor, yielding actual literal theorem/refutation disjointness. -/
+/-- The given semantic Gamma model supplies the proved standard validity factor, yielding
+theorem/refutation disjointness. -/
 theorem standard_word_disjoint (word : ℕ) :
     ¬ ((literalTheoremCarrier 𝗣𝗔 V σ π d A).val.Evalb ![word] ∧
       (literalRefutationCarrier 𝗣𝗔 V σ π d A).val.Evalb ![word]) := by
@@ -208,8 +208,8 @@ theorem ultrapower_word_disjoint {I : Type} (U : Ultrafilter I) (word : Arithmet
   rw [sentence_range_plain 𝗣𝗔 H V σ π d a] at hd
   exact hd
 
-/-- The final arithmetic comparison can use any negative word linked by
-the proved actual negation graph, including nonstandard input words. -/
+/-- The final arithmetic comparison can use any negative word linked by the proved
+negation graph, including nonstandard input words. -/
 theorem ultrapower_negation_graph_disjoint {I : Type} (U : Ultrafilter I)
     (word negative : ArithmeticUltrapower.Model U)
     (hs : (literalSentenceCarrier 𝗣𝗔 V σ π d).val.Evalb ![word])
@@ -229,8 +229,8 @@ variable (A : Carrier) (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
 variable (hc : FFL.Entailment.Consistent (ArithmeticNamedProofConnectives.system A))
 include hPA hc
 
-/-- External consistency and actual named PA extension supply the
-semantic model used by the constructed standard soundness factor. -/
+/-- External consistency and named PA extension supply the semantic model used by the
+constructed standard soundness factor. -/
 theorem consistent_standard_word_disjoint (word : ℕ) :
     ¬ ((literalTheoremCarrier 𝗣𝗔 (variableCarrier : PredicateCategory 𝗣𝗔)
         functionSymbols relationSymbols bound A).val.Evalb ![word] ∧
@@ -242,8 +242,8 @@ theorem consistent_standard_word_disjoint (word : ℕ) :
   exact standard_word_disjoint functionSymbols relationSymbols bound A
     ArithmeticNamedTranslation.functions ArithmeticNamedTranslation.relations (fun _ => (0 : K)) hK word
 
-/-- The actual literal theorem and refutation sets are disjoint; no
-separation or standard-model-truth premise is supplied. -/
+/-- The theorem and refutation sets are disjoint; no separation or standard-model-truth
+premise is supplied. -/
 theorem consistent_standard_disjoint :
     Disjoint
       {word : ℕ | (literalTheoremCarrier 𝗣𝗔 (variableCarrier : PredicateCategory 𝗣𝗔)
@@ -266,8 +266,8 @@ theorem consistent_ultrapower_word_disjoint {I : Type} (U : Ultrafilter I)
   exact ultrapower_word_disjoint functionSymbols relationSymbols bound A
     ArithmeticNamedTranslation.functions ArithmeticNamedTranslation.relations (fun _ => (0 : K)) hK U word
 
-/-- The exact standard sentence-word endpoint used by the arithmetic
-comparison: its printed Neg extension is the actual negation constructor. -/
+/-- The exact standard sentence-word endpoint used by the arithmetic comparison: its Neg
+extension is the negation constructor. -/
 theorem standard_sentence_evidence_disjoint (word : ℕ)
     (hs : (ConcreteNamedComparison.literalSentenceCarrier 𝗣𝗔 variableSymbols
       functionSymbols relationSymbols bound).val.Evalb ![word]) :
@@ -284,8 +284,8 @@ theorem standard_sentence_evidence_disjoint (word : ℕ)
   exact ⟨ht,(literalRefutationCarrier_eval 𝗣𝗔 variableSymbols functionSymbols relationSymbols bound
     ℕ A word).mpr ⟨hs,NamedArithmeticProofSearch.negationWord ℕ word,hg,hn⟩⟩
 
-/-- The exact nonstandard arithmetic-ultrapower endpoint, at every
-literal sentence word, with the same fixed total Neg extension. -/
+/-- The exact nonstandard arithmetic-ultrapower endpoint, at every sentence word, with the
+same fixed total Neg extension. -/
 theorem ultrapower_sentence_evidence_disjoint {I : Type} (U : Ultrafilter I)
     (word : ArithmeticUltrapower.Model U)
     (hs : (ConcreteNamedComparison.literalSentenceCarrier 𝗣𝗔 variableSymbols

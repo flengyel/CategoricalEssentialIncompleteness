@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.EffectiveForkCoproducts
 public import CategoricalEssentialIncompleteness.EffectiveForkProbes
 public import CategoricalEssentialIncompleteness.ForkObstruction
 
-/-! # The actual universal fork, with recursively coded tuple carriers -/
+/-! # The universal fork, with recursively coded tuple carriers -/
 
 @[expose] public section
 

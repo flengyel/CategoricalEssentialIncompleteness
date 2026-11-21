@@ -10,9 +10,8 @@ public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplace
 
 /-! # Named PA axiom matrices and universal closure
 
-The matrices use the actual named arithmetic constructors. Universal
-closures retain their variable names, and sentencehood is checked by
-the literal free-variable list.
+The matrices use the named arithmetic constructors. Universal closures retain their
+variable names, and sentencehood is checked by the free-variable list.
 -/
 
 @[expose] public section
@@ -29,8 +28,8 @@ def le (s t : Tm) : Fm := ArithmeticNamedTranslation.disjunction (.equal s t) (l
 def inductionMatrix (x : ℕ) (φ φ0 φs : Fm) : Fm :=
   .imp φ0 (.imp (.all x (.imp φ φs)) (.all x φ))
 
-/-- The finite arithmetic/order matrices of PAminus, with native
-induction on an arbitrary named formula. -/
+/-- The arithmetic and order axiom matrices of PA⁻, together with the induction matrices
+for named formulas. -/
 inductive PASeed : Fm → Prop
   | addZero (x : ℕ) : PASeed (.equal (add (.var x) zero) (.var x))
   | addAssoc (x y z : ℕ) : PASeed

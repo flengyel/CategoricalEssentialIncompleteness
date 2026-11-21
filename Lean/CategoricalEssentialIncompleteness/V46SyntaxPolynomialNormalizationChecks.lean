@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
 
 
-/-! # Statement checks in `V46SyntaxPolynomialNormalizationChecks` -/
+/-! # Explicit normalization of polynomial comparison isomorphisms -/
 
 @[expose] public section
 noncomputable section

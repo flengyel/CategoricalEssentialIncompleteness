@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkCosheafCoequalizer
 public import Mathlib.CategoryTheory.Limits.Types.Pushouts
 
-/-! # The actual pushout extension of a set-valued fork -/
+/-! # The pushout extension of a set-valued fork -/
 
 @[expose] public section
 
@@ -82,7 +82,7 @@ theorem extension_cosheaf (Y : WalkingSpan ⥤ Type) : IsCosheaf (extension Y) :
   cosheaf_of_pushout _ (extension_empty_initial Y)
     (IsPushout.of_hasPushout (Y.map WalkingSpan.Hom.fst) (Y.map WalkingSpan.Hom.snd))
 
-/-- In particular, the whole-space value is an actual set pushout. -/
+/-- In particular, the whole-space value is a set pushout. -/
 theorem extension_whole (Y : WalkingSpan ⥤ Type) :
     (extension Y).obj .whole=pushout (Y.map WalkingSpan.Hom.fst) (Y.map WalkingSpan.Hom.snd) := rfl
 

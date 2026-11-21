@@ -8,13 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWords
 public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
-/-! # Literal postfix constructor comparison under arithmetic interpretation
+/-! # Postfix constructor comparison under arithmetic interpretation
 
-The raw polynomial-input comparison preserves its code. Consequently the
-actual two postfix constructors commute with the word comparisons. The
-only input data are coefficient and recursive-word isomorphisms preserving
-their scalar coordinates; the constructor square is proved from their
-representation equations and the printed postfix algorithm.
+The raw polynomial-input comparison preserves its code. Consequently the two postfix
+constructors commute with the word comparisons. The only input data are coefficient
+and recursive-word isomorphisms preserving their scalar coordinates; the constructor
+square is proved from their representation equations and the postfix algorithm.
 -/
 
 @[expose] public section

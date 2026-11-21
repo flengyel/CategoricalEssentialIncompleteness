@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationCoherence
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationCoherenceChecks` -/
+/-! # Ordered finite coproduct coherence for arithmetic interpretation -/
 
 @[expose] public section
 noncomputable section

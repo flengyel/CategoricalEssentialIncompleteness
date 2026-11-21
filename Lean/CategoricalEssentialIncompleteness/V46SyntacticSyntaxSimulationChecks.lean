@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSimulation
 
 
-/-! # Statement checks in `V46SyntacticSyntaxSimulationChecks` -/
+/-! # A value computation has exactly the parser's structural sort skeleton -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonRelationMapChecks` -/
+/-! # Forward polynomial charts with arbitrary target leaf relations -/
 
 @[expose] public section
 noncomputable section

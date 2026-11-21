@@ -52,8 +52,8 @@ variable (factors : ∀ U : P.Theories, P.Consistent U.val →
   ∃ point : Z ⟶ (U.val : Tot C), point ≫ U.val.arrow = logicalTheorem)
 
 include hQ factors hZ in
-/-- The full equivalence quantifies over all closed slice extensions.
-The displayed Boolean conclusions use the actual partial-slice functor. -/
+/-- The full equivalence quantifies over all closed slice extensions. The displayed
+Boolean conclusions use the partial-slice functor. -/
 theorem associated_incompleteness (U : P.Theories) (hcU : P.Consistent U.val) :
     (P.EssentiallyIncomplete U ↔
       AssociatedClosedTheories.EssentiallyIncomplete P (U.val : Tot C) (Q (U.val : Tot C))

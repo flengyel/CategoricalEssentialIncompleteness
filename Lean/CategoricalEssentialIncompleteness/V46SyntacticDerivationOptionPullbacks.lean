@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionMod
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 
-/-! Actual success-domain pullbacks in the predicate category and every parameter slice. -/
+/-! Success-domain pullbacks in the predicate category and every parameter slice. -/
 
 @[expose] public section
 noncomputable section

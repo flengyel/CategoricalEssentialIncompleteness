@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxConstructor
 
 
-/-! # Statement checks in `V46MillerSyntaxConstructorChecks` -/
+/-! # Constructor equations of the uniform finite-record evaluator -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentCore
 
-/-! The invariant is an actual family equation on original/result carriers. -/
+/-! The invariant is a family equation on original/result carriers. -/
 
 @[expose] public section
 noncomputable section

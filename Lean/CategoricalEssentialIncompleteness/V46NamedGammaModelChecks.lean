@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedGammaModel
 
 
-/-! # Statement checks in `V46NamedGammaModelChecks` -/
+/-! # A semantic model of the consistent named Gamma -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

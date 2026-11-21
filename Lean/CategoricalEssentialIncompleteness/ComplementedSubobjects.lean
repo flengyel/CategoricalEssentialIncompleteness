@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.CharacteristicArrows
 public import CategoricalEssentialIncompleteness.SubobjectPredicates
 
 /-!
-# Complemented subobjects and arrows to two truth values
+# Complemented subobjects and morphisms to two truth values
 
-In a regular finitely extensive category, a subobject is complemented exactly
-when it is the upper fiber of an arrow to `1 + 1`.
+In a regular finitely extensive category, a subobject is complemented exactly when it
+is the upper fiber of a morphism to `1 + 1`.
 -/
 
 @[expose] public section
@@ -40,7 +40,7 @@ theorem points_isCompl :
       (PresentationLemmas.image_eq_top_iff_regularEpi _).mpr (by rw [h]; infer_instance)
     simpa only [PresentationLemmas.image_copair, imageSubobject_mono] using ht
 
-/-- The two fibers of any arrow to two truth values are complementary. -/
+/-- The two fibers of any morphism to two truth values are complementary. -/
 theorem boundFibers_isCompl {X : C} (f : X ⟶ Two C) :
     IsCompl (boundFiber f (point false)) (boundFiber f (point true)) := by
   rw [PresentationLemmas.boundFiber_eq_pullback, PresentationLemmas.boundFiber_eq_pullback]

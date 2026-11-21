@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonDeletion
 
-/-! # The numerical deletion arrow is the specified categorical fold -/
+/-! # The numerical deletion morphism is the specified categorical fold -/
 
 @[expose] public section
 

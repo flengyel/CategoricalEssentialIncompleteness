@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTrace
 
-/-! # Concatenating actual forward computation records -/
+/-! # Concatenating forward computation records -/
 
 @[expose] public section
 
@@ -25,10 +25,9 @@ variable (A : SliceAlgebra T P X Y a b)
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Concatenation retains the first record's final state once and
-appends the second record's remaining states by the actual arithmetic
-whole-vector append. It neither chooses an external list nor drops any
-positive operation witness. -/
+/-- Concatenation retains the first record's final state once and appends the second
+record's remaining states by the arithmetic whole-vector append. It neither chooses an
+external list nor drops any positive operation witness. -/
 theorem traceRecord_concat {p word suffix initial states other : M}
     (h : A.TraceRecord p word initial (len word) states)
     (g : A.TraceRecord p suffix (nth states (len word)) (len suffix) other) :
@@ -87,8 +86,8 @@ theorem traceRecord_concat {p word suffix initial states other : M}
           exact g.2.2.2 j hj
     · rw [Words.len_append, hright]
 
-/-- A final root operation is appended as one actual extra record.
-The state vector is extended by arithmetic snoc. -/
+/-- A final root operation is appended as one extra record. The state vector is extended
+by arithmetic snoc. -/
 theorem traceRecord_snoc {p word initial states record new : M}
     (h : A.TraceRecord p word initial (len word) states)
     (hnew : A.valueStepGraph.val.Evalb ![p, record, nth states (len word), new]) :

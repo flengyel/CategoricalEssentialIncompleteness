@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
-/-! # Actual product charts for the numerical substitution parameters -/
+/-! # Product charts for the numerical substitution parameters -/
 
 @[expose] public section
 
@@ -22,8 +22,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Both the inner parameter product and the outer constant-family
-product are passed through their actual categorical comparisons. -/
+/-- Both the inner parameter product and the outer constant-family product are passed
+through their categorical comparisons. -/
 def parameterInput (V R C : PredicateCategory T) :
     @Quiver.Hom (PredicateCategory T) inferInstance ((V ⨯ R) ⨯ C)
       (productCarrier (productCarrier V R) C) :=

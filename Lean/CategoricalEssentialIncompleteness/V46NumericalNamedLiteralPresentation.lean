@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstru
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralListValues
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Constructor-preserving initial algebras on literal numerical words -/
+/-! # Constructor-preserving initial algebras on numerical words -/
 
 @[expose] public section
 noncomputable section

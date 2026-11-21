@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWordsFinal
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationWordsFinalChecks` -/
+/-! # Literal word identity of the constructed PA derivation comparison -/
 
 @[expose] public section
 noncomputable section

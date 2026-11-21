@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalUnderlyingPullbacks
 
 
-/-! # Statement checks in `V46MillerTotalUnderlyingPullbacksChecks` -/
+/-! # Uniform semidecidable-carrier total splitting: UnderlyingPullbacks -/
 
 @[expose] public section
 noncomputable section

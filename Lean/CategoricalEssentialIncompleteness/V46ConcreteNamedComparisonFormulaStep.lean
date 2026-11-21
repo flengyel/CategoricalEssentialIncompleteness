@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonImpli
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonQuantifierStep
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationCoproductValue
 
-/-! # The actual full formula-substitution structure has the numeric root result -/
+/-! # The full formula-substitution structure has the numeric root result -/
 
 @[expose] public section
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSentenceLiteralChart
 
 
-/-! # Statement checks in `V46SyntacticSentenceLiteralChartChecks` -/
+/-! # The sentence predicate and the chosen sentence object -/
 
 @[expose] public section
 noncomputable section

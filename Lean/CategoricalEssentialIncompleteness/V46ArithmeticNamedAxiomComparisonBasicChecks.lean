@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonBasic
 
 
-/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonBasicChecks` -/
+/-! # Named PA axiom matrices and universal closure -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

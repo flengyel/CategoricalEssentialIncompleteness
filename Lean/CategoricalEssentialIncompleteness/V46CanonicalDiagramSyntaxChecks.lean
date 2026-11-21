@@ -7,11 +7,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalCanonicalDiagramSyntax
 public import CategoricalEssentialIncompleteness.V46DiagramDecidableVariables
 
-/-! # Independent checks of canonical diagram syntax and variable equality
-
-Canonical parameter stability, stable lists, substitution and derivations
-remain open. No completed syntax bundle is asserted here.
--/
+/-! # Canonical diagram syntax and decidable variable equality -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -70,8 +66,8 @@ example (B : Endofunctor.Algebra (polynomial c p q))
 example (V : J ⥤ NumericalTuples.Object) (σ π : ℕ → J ⥤ NumericalTuples.Object) (d : ℕ) :
     IsInitial (syntaxData V σ π d).1 := (syntaxData V σ π d).2
 
-/-- The printed fork signature has no function symbols and arbitrary
-nullary predicates. The statement uses the exact canonical expressions. -/
+/-- The fork signature has no function symbols and arbitrary nullary predicates. The
+statement uses the exact canonical expressions. -/
 example (D : ForkFirstOrderFormula.Object) :
     Σ A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       (SyntaxPolynomial.termExpression ForkFirstOrderFormula.numbers

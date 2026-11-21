@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionClassifier
 
 
-/-! # Statement checks in `V46SyntaxOptionClassifierChecks` -/
+/-! # The Boolean classifier of an option's success pullback -/
 
 @[expose] public section
 noncomputable section

@@ -139,8 +139,8 @@ theorem family_complement_no_preimage {X : CodedProgramCategory T} (a b : Idem X
     exact Idem.le_def.mp hb
   exact hi.no_separator ⟨a,c,hcomp,le_rfl,hbc⟩
 
-/-- For the pair actually constructed by the specified finite switch and
-Theorem 6.3, this target complement is not an image of any source idempotent. -/
+/-- For the pair constructed by the specified finite switch and the section-lifting
+theorem, this target complement is not an image of any source idempotent. -/
 theorem family_pair_complement_no_preimage (hT : Consistent T) :
     ¬ ∃ c : Idem (omegaObject T),
       (familyRangeFunctor T).mapIdem c=

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
 
 
-/-! # Statement checks in `V46MillerNamedProofImageDataChecks` -/
+/-! # Named points, arbitrary external axioms and constructed proofs -/
 
 @[expose] public section
 noncomputable section

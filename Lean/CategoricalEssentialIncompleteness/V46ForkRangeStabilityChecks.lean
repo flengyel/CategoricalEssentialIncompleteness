@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ForkRangeStability
 
-/-! Actual monic-span presentation and every clause of the fork range structure. -/
+/-! Monic-span presentation and every clause of the fork range structure. -/
 
 @[expose] public section
 noncomputable section

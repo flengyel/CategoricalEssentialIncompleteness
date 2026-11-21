@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpret
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationCoherence
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationOptions
 
-/-! # The actual interpreted validator and successful derivation pullback
+/-! # The interpreted validator and successful derivation pullback
 
-Source ordinary-tree initiality is proved from the constructed TA algebra,
-not assumed of the arithmetic interpretation. Its unique fold then
-identifies the validator square, and the two actual successful pullbacks
-supply the comparison of derivation carriers and conclusions.
+Source ordinary-tree initiality is proved from the constructed TA algebra, not assumed
+of the arithmetic interpretation. Its unique fold then identifies the validator
+square, and the two successful pullbacks supply the comparison of derivation carriers
+and conclusions.
 -/
 
 @[expose] public section
@@ -39,7 +39,7 @@ def sourceOrdinaryIso :
       NumericalDerivation.ordinaryTree (interpretedRules R) :=
   (mappedOrdinaryInitial R).uniqueUpToIso (NumericalDerivation.ordinaryTreeInitial (interpretedRules R))
 
-/-- Equality is among actual algebra morphisms into the validator. -/
+/-- Equality is among algebra morphisms into the validator. -/
 theorem sourceValidator_square :
     K.map (SyntacticDerivation.validatorFold 𝗣𝗔 R).f ≫ (optionIso F).hom =
       (sourceOrdinaryIso R).hom.f ≫ (NumericalDerivation.validatorFold (interpretedRules R)).f := by

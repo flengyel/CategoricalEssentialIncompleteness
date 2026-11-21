@@ -82,8 +82,8 @@ example (A : Subobject ((constantFamilyFunctor P).obj (S).sentenceObject)) :
     (rules D P A.arrow).premises 2 = prod.lift prod.fst
       (FirstOrderRuleTransport.mappedImp (constantFamilyFunctor P) (S).implicationConstructor) := rfl
 
-/-- Every axiom subobject of P × S is included, with its actual projection
-to P. No constancy, recursive-membership or supplied initiality premise occurs. -/
+/-- Every axiom subobject of P × S is included, with its projection to P. No constancy,
+recursive-membership or supplied initiality premise occurs. -/
 example (A : Subobject (P ⨯ (S).sentenceObject)) :
     (axiomArrow D P A).left = A.arrow := rfl
 example (A : Subobject (P ⨯ (S).sentenceObject)) : Mono (axiomArrow D P A) := inferInstance
@@ -112,8 +112,8 @@ example (A : Subobject (P ⨯ (S).sentenceObject))
       (printedFold D P A B).f.left.app j ≫ B.a.left.map f :=
   (printedFold D P A B).f.left.naturality f
 
-/-- Both evaluation and the actual source constructor are compared by
-an algebra isomorphism to the numerical finite-tree construction. -/
+/-- Both evaluation and the source constructor are compared by an algebra isomorphism to
+the numerical finite-tree construction. -/
 example (A : Subobject (P ⨯ (S).sentenceObject)) (j : WalkingSpan) :
     FiniteInferenceEvaluation.algebra (InitialRuleDiagrams.evaluation j) (printedRules D P A)
         (printedAlgebra D P A) ≅ NumericalDiagramDerivations.componentAlgebra (printedRules D P A) j :=

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerFiniteUse
 
 
-/-! # Statement checks in `V46MillerFiniteUseChecks` -/
+/-! # Oracle programs for ordinary finite-use algorithms -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteUse.Checks

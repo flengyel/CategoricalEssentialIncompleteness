@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransportComponents
 
 
-/-! # Statement checks in `V46SyntaxLanguageTransportComponentsChecks` -/
+/-! # Explicit normalized polynomial components at arbitrary sort pairs -/
 
 @[expose] public section
 noncomputable section

@@ -375,8 +375,8 @@ theorem component_square (N : ℕ) (X : PredicateCategory 𝗣𝗔) :
 
 variable {F : PredicateCategory 𝗣𝗔} {N : ℕ} (R : RulePresentation F N)
 
-/-- Only the coefficients in the actual finite coproduct are changed.
-No equality of unused coefficients beyond the arity bound is asserted. -/
+/-- Only the coefficients in the finite coproduct are changed. No equality of unused
+coefficients beyond the arity bound is asserted. -/
 def mappedOrdinaryIso :
     PolynomialComparison.finiteSum (fun n => K.obj (PolynomialComparison.coefficients R n)) N ≅
       PolynomialComparison.ordinary (interpretedRules R) :=
@@ -397,8 +397,8 @@ def mappedOrdinaryIso :
     prod.mapIso_hom,CategoryTheory.Functor.mapIso_hom,eqToIso.hom,Iso.refl_hom]
   rfl
 
-/-- The ordinary-polynomial comparison uses the same coefficient chart
-as the constructor polynomial at each actual rule arity. -/
+/-- The ordinary-polynomial comparison uses the same coefficient chart as the constructor
+polynomial at each rule arity. -/
 theorem ordinary_square (X : PredicateCategory 𝗣𝗔) :
     K.map ((PolynomialComparison.ordinaryIso R).hom.app X) ≫ (ordinaryObjectIso R X).hom =
       (finiteSumIso (PolynomialComparison.coefficients R) N X).hom ≫
@@ -505,8 +505,8 @@ private theorem target_mapped_str
   simp [targetMappedAlgebra,AlgebraTransport.mappedAlgebra,targetEndofunctorComparison,
     mappedOneSortAlgebra]
 
-/-- This is equality of the actual structure morphisms, with the
-existing ordinary input comparison, rather than a carrier comparison. -/
+/-- This is equality of the structure morphisms, with the existing ordinary input
+comparison, rather than a carrier comparison. -/
 theorem mapped_structure
     (B : Endofunctor.Algebra (PolynomialComparison.nested (PolynomialComparison.coefficients R) N)) :
     (mappedOrdinaryAlgebra R (PolynomialComparison.mappedAlgebra R B)).str =

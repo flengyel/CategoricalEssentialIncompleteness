@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerBinaryCore
 
 
-/-! # Statement checks in `V46MillerBinaryCoreChecks` -/
+/-! # Binary representations and their compact fibers for the Miller construction -/
 
 @[expose] public section
 noncomputable section

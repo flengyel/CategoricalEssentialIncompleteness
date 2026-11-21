@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46PrintedObjectCodingModels
 
-/-! Recursive coding and the actual conjugated model graphs. -/
+/-! Recursive coding and the conjugated model graphs. -/
 
 @[expose] public section
 noncomputable section

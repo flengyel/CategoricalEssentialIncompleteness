@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAd
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSliceInitial
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortInitial
 
-/-! The actual finite-inference derivation initial algebra, for arbitrary rule data. -/
+/-! The finite-inference derivation initial algebra, for arbitrary rule data. -/
 
 @[expose] public section
 noncomputable section
@@ -57,8 +57,8 @@ def derivationConclusion : GraphMorphism T (derivationCarrier T R) F :=
 def derivationAlgebra : Endofunctor.Algebra R.inference :=
   SuccessCarrier.rawAlgebra (validatorFold T R).f R.inference (chosenAlgebra T R).str
 
-/-- Lemma 5.8 for every finite rule presentation, without a given
-evaluator, an assumed recursive solution, or a restriction on its nullary rules. -/
+/-- Lemma 6.8 for every finite rule presentation, without a given evaluator, an assumed
+recursive solution, or a restriction on its nullary rules. -/
 def derivationInitial : IsInitial (derivationAlgebra T R) :=
   SuccessCarrier.rawInitial (validatorFold T R).f R.inference (chosenAlgebra T R).str
     (chosenInitial T R)
@@ -69,8 +69,8 @@ theorem derivationAlgebra_carrier :
 def treeInclusion : (derivationAlgebra T R).a.left ⟶ (ordinaryTree T R).a :=
   representedArrow T (SuccessCarrier.inclusion (validatorFold T R).f)
 
-/-- The actual typed constructor keeps the original rule label and
-ordered child tree codes. Validation never adds a node label or value. -/
+/-- The typed constructor keeps the original rule label and ordered child tree codes.
+Validation never adds a node label or value. -/
 theorem derivationConstructor_tree :
     (derivationAlgebra T R).str.left ≫ treeInclusion T R =
       InputGeometry.forget R (derivationAlgebra T R).a ≫

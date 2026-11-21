@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SplitExtension
 
 
-/-! # Statement checks in `V46SplitExtensionChecks` -/
+/-! # Extension to the restriction splitting by chosen target splittings -/
 
 @[expose] public section
 noncomputable section

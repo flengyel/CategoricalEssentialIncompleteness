@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxWordInduction
 
 /-! # Constructor laws imply uniqueness for arbitrary standard-word relations
 
-Relations may be uniform-oracle graphs; no arithmetic definability is
-required. The categorical application must derive each candidate's root
-laws from its actual algebra-morphism equation. This is not an assumed
-initiality or an inference from evaluator-output uniqueness.
+Relations may be uniform-oracle graphs; no arithmetic definability is required. The
+categorical application must derive each candidate's root laws from its
+algebra-morphism equation. This is not an assumed initiality or an inference from
+evaluator-output uniqueness.
 -/
 
 @[expose] public section
@@ -78,8 +78,8 @@ theorem map_compare (Q : ℕ → Prop) (R S : Relation) (q : RawPolynomial) (p u
             _=⟪π₁ w,π₂ w⟫ := by rw [h1,hv1,hw1]
             _=w := pair_unpair w
 
-/-- A forward root law is extracted from each actual algebra homomorphism.
-It states constructor commutation; it contains no uniqueness conclusion. -/
+/-- A forward root law is extracted from each algebra homomorphism. It states constructor
+commutation; it contains no uniqueness conclusion. -/
 def RootLaw (a b : RawPolynomial) (Q : ℕ → Prop) (op R : Relation) : Prop :=
   ∀ (formula : Bool) (p u value : ℕ),
     (rawCarrier (Postfix.carrier false a b) (Postfix.carrier true a b)
@@ -87,8 +87,8 @@ def RootLaw (a b : RawPolynomial) (Q : ℕ → Prop) (op R : Relation) : Prop :=
     R formula p (constructor formula (if formula then b else a) u) value →
       ∃ v,map Q R (if formula then b else a) p u v ∧ op formula p v value
 
-/-- Comparison covers ALL relations satisfying the actual constructor law,
-so arbitrary categorical candidates are included once their law is derived. -/
+/-- Comparison covers ALL relations satisfying the constructor law, so arbitrary
+categorical candidates are included once their law is derived. -/
 theorem word_relation_unique (a b : RawPolynomial) (Q : ℕ → Prop) (op R S : Relation)
     (hOp : ∀ formula p u x y,op formula p u x → op formula p u y → x=y)
     (hR : RootLaw a b Q op R) (hS : RootLaw a b Q op S) :

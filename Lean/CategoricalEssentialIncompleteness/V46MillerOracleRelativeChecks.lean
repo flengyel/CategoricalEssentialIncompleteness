@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOracleRelative
 
 
-/-! # Statement checks in `V46MillerOracleRelativeChecks` -/
+/-! # Exact pointwise comparison of oracle machines and relative recursion -/
 
 @[expose] public section
 noncomputable section

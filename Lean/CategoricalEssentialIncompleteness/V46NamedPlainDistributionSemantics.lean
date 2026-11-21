@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46NamedBooleanReflection
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
 public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
 
-/-! # The actual absent-variable parameter fiber and distribution soundness -/
+/-! # The absent-variable parameter fiber and distribution soundness -/
 
 @[expose] public section
 
@@ -31,8 +31,8 @@ local notation "S" => plainCategoricalSyntax 𝗣𝗔 variableCarrier σ π d
 local notation "Y" => (Postfix.plainCarrier true (termPolynomial σ d) (formulaPolynomial π d) : PredicateCategory 𝗣𝗔)
 local notation "G" => F 𝗣𝗔 ℕ
 
-/-- The actual false-membership equalizer enforces absence in the
-decoded named formula, with its ordered numerical occurrence list. -/
+/-- The false-membership equalizer enforces absence in the decoded named formula, with its
+ordered numerical occurrence list. -/
 theorem distribution_absent (r : Obj 𝗣𝗔 ℕ (S).distributionParameters) :
     let q := (G).map (S).distributionInclusion r
     ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔)

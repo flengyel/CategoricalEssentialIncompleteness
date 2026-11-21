@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
 
-/-! # Actual standard primitive-recursion certificates for the postfix parser -/
+/-! # Standard primitive-recursion certificates for the postfix parser -/
 
 @[expose] public section
 
@@ -171,9 +171,8 @@ private theorem atLength_primrec {f : (ℕ × ℕ) × ℕ → ℕ} (hf : Primrec
     Primrec (fun p : ℕ × ℕ => f ((p.1, p.2), len p.1)) :=
   hf.comp (Primrec.pair (Primrec.pair Primrec.fst Primrec.snd) (len_primrec.comp Primrec.fst))
 
-/-- The numerical parser used in the PA graph theorems has an actual
-standard primitive-recursion certificate, for arbitrary fixed signature
-polynomials and arbitrary input stacks. -/
+/-- The numerical parser used in the PA graph theorems has a standard primitive-recursion
+certificate, for arbitrary fixed signature polynomials and arbitrary input stacks. -/
 theorem run_primrec (a b : RawPolynomial) : Primrec₂ (run a b : ℕ → ℕ → ℕ) := by
   exact Primrec.of_eq (atLength_primrec (runPrefix_primrec a b)) (fun _ => rfl)
 

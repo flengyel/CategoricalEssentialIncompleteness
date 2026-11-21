@@ -7,12 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerListsCarrier
 
-/-! # Actual positive value records for arbitrary uniform list algebras
+/-! # Positive value records for arbitrary uniform list algebras
 
-The last record entry is obtained by invoking the actual nullary
-operation. Every preceding entry is obtained by the actual cons operation
-on the given label and the next recorded value. No algebra result is an
-ordinary computable initial value.
+The last record entry is obtained by invoking the nullary operation. Every preceding
+entry is obtained by the cons operation on the given label and the next recorded
+value. No algebra result is an ordinary computable initial value.
 -/
 
 @[expose] public section

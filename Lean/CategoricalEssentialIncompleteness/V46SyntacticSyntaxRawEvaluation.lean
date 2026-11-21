@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
 
-/-! # Finite-polynomial action on actual literal-word evaluation graphs -/
+/-! # Finite-polynomial action on literal-word evaluation graphs -/
 
 @[expose] public section
 
@@ -51,9 +51,9 @@ variable (A : SliceAlgebra T P X Y a b)
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Every selected child has an actual finite-record value in its
-supplied parameter fiber. The induction is over the fixed finite
-polynomial, rather than over an external list of model children. -/
+/-- Every selected child has a finite-record value in its supplied parameter fiber. The
+induction is over the fixed finite polynomial, rather than over an external list of
+model children. -/
 theorem mapRaw_evaluation_exists (q : RawPolynomial) (p u : M)
     (hp : P.val.Evalb ![p])
     (hu : (rawCarrier (carrier false a b) (carrier true a b) q).val.Evalb ![u]) :

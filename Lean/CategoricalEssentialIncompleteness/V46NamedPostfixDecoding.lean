@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixData
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
-/-! # Every standard accepted word encodes a literal named finite tree
+/-! # Every standard accepted word encodes a named finite tree
 
 This standard-model statement does not assert that nonstandard model
 words are encodings of external finite trees.

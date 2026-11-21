@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearch
 
-/-! # Raw statement checks for the actual arithmetic partial lift -/
+/-! # Raw statement checks for the arithmetic partial lift -/
 
 @[expose] public section
 noncomputable section

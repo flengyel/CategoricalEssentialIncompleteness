@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParam
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalOperations
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
 
-/-! # Actual result equations for the labelled function substitution branch -/
+/-! # Result equations for the labelled function substitution branch -/
 
 @[expose] public section
 

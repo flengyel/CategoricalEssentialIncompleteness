@@ -23,8 +23,8 @@ abbrev data := NumericalDiagramParameterStability.data
   (SyntaxPolynomial.termExpression numbers (fun _ => ⊥_ Object) 0)
   (SyntaxPolynomial.formulaExpression numbers (fun _ => D) 0)
 
-/-- Definition A.1 for the printed language, with no function symbols,
-arbitrary nullary predicates, and full numerical variables. -/
+/-- Definition A.1 for the language, with no function symbols, arbitrary nullary
+predicates, and full numerical variables. -/
 def categoricalSyntax : CategoricalSyntax numbers (fun _ => ⊥_ Object) (fun _ => D) 0 where
   decidableVariables := DiagramDecidableVariables.fork
   algebra := (data D).1

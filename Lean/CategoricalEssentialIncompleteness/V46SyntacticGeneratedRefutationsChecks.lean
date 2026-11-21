@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
 
 
-/-! # Statement checks in `V46SyntacticGeneratedRefutationsChecks` -/
+/-! # The generated refutation image in sentence-word coordinates -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate
 
 
-/-! # Statement checks in `V46NumericalNamedValueCertificateChecks` -/
+/-! # Values obtained from proved operation and literal-coordinate squares -/
 
 @[expose] public section
 noncomputable section

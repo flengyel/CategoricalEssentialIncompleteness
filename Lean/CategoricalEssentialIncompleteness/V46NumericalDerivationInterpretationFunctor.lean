@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
 
-/-! # Preserved inference inputs under the actual PA numerical functor
+/-! # Preserved inference inputs under the PA numerical functor
 
 The natural isomorphism is derived from the already proved finite powers,
 pullbacks and finite coproducts. No equivalence or preservation of initial
@@ -110,8 +110,7 @@ def comparison : R.inference ⋙ (overFunctor R) ≅
     (overFunctor R) ⋙ (interpretedRules R).inference :=
   NatIso.ofComponents (overIso R) (fun f => overIso_natural R f)
 
-/-- Mapping a source algebra uses the proved comparison; its initiality
-is a separate literal-code obligation. -/
+/-- The comparison of inference functors transports a source algebra to the target slice. -/
 def mappedAlgebra (A : Endofunctor.Algebra R.inference) :
     Endofunctor.Algebra (interpretedRules R).inference where
   a := (overFunctor R).obj A.a
@@ -120,8 +119,8 @@ def mappedAlgebra (A : Endofunctor.Algebra R.inference) :
 theorem mappedAlgebra_conclusion (A : Endofunctor.Algebra R.inference) :
     (mappedAlgebra R A).a.hom = K.map A.a.hom := rfl
 
-/-- A rule-labelled ordinary-tree input retains the label and the ordered
-children under the actual arithmetic interpretation. -/
+/-- A rule-labelled ordinary-tree input retains the label and the ordered children under
+the arithmetic interpretation. -/
 def ordinaryInputIso (X : PredicateCategory 𝗣𝗔) (i : Fin (N+1)) :
     K.obj (R.instances i ⨯ finitePower X i.val) ≅
       (interpretedRules R).instances i ⨯ finitePower (K.obj X) i.val :=
@@ -173,8 +172,8 @@ theorem ordinaryObjectIso_natural {X Y : PredicateCategory 𝗣𝗔} (f : X ⟶ 
   · simp only [Category.assoc,ordinaryInputIso_snd,ordinaryInputIso_snd_assoc,prod.map_snd]
     rw [← Functor.map_comp_assoc,prod.map_snd,Functor.map_comp_assoc,finitePowerIso_natural]
 
-/-- The inference input comparison preserves the actual rule label and
-ordered children inside the ordinary tree input. -/
+/-- The inference input comparison preserves the rule label and ordered children inside
+the ordinary tree input. -/
 theorem input_forget_square (Q : Over F) (i : Fin (N+1)) :
     K.map (SyntacticDerivation.CheckedRoot.matchingMap R Q i) ≫
         (ordinaryInputIso R Q.left i).hom =
@@ -209,7 +208,7 @@ theorem forget_comparison (Q : Over F) :
   rw [← Category.assoc,input_forget_square,Category.assoc]
   rfl
 
-/-- The actual arithmetic functor intertwines the ordinary-tree functors. -/
+/-- The arithmetic functor intertwines the ordinary-tree functors. -/
 def ordinaryComparison :
     SyntacticDerivation.PolynomialComparison.ordinary R ⋙ K ≅
       K ⋙ SyntacticDerivation.PolynomialComparison.ordinary (interpretedRules R) :=

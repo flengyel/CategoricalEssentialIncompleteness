@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalLimits
 
 
-/-! # Statement checks in `V46MillerTotalLimitsChecks` -/
+/-! # Finite limits of all total uniform semidecidable-carrier maps -/
 
 @[expose] public section
 noncomputable section

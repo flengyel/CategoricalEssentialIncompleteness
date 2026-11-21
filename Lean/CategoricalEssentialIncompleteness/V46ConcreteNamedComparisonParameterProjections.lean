@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 public import CategoricalEssentialIncompleteness.V46CategoricalListLawsParameters
 
-/-! # Opaque evaluation of actual projections of constant-family operations -/
+/-! # Opaque evaluation of projections of constant-family operations -/
 
 @[expose] public section
 
@@ -31,9 +31,9 @@ theorem parameterHom_point_value {P X Y : PredicateCategory T} (f : P ⨯ X ⟶ 
       (F T M).map f q :=
   model_lift_snd T M (prod.fst : P ⨯ X ⟶ P) f q
 
-/-- Normalize the interpretation of a proved three-arrow diagram while
-its arrows remain opaque. This avoids re-elaborating quotient arrows
-inside a concrete model-point calculation. -/
+/-- Normalize the interpretation of a proved three-morphism diagram while its morphisms
+remain opaque. This avoids re-elaborating quotient morphisms inside a concrete
+model-point calculation. -/
 theorem model_three_composition_equality {A B C D E : PredicateCategory T}
     (f : A ⟶ B) (g : B ⟶ D) (h : A ⟶ C) (k : C ⟶ D) (v : D ⟶ E)
     (comm : (f ≫ g) ≫ v = (h ≫ k) ≫ v) (q : Obj T M A) :
@@ -42,8 +42,8 @@ theorem model_three_composition_equality {A B C D E : PredicateCategory T}
   have he := congrArg (fun arrow => (F T M).map arrow q) comm
   simpa only [Functor.map_comp_apply] using he
 
-/-- The structural arrow k and its projection remain opaque while the
-actual constant-family comparison is evaluated. -/
+/-- The structural morphism k and its projection remain opaque while the constant-family
+comparison is evaluated. -/
 theorem constant_projection_value {P A B : PredicateCategory T} {X : Over P}
     (k : X ⟶ constantFamily P A) (π : A ⟶ B) (r : X ⟶ constantFamily P B)
     (h : k ≫ (constantFamilyFunctor P).map π = r) (q : Obj T M X.left) :
@@ -70,8 +70,8 @@ theorem constant_projection_after_value {P A B : PredicateCategory T} {X W : Ove
     rw [Functor.map_comp_apply]
   exact hc.trans he
 
-/-- A retained-parameter state point is fixed by its actual original
-projection and its actual result point. -/
+/-- A retained-parameter state point is fixed by its original projection and its result
+point. -/
 theorem model_statePoint_ext {P A B : PredicateCategory T}
     (x y : Obj T M (P ⨯ (A ⨯ B)))
     (ho : (F T M).map ((constantFamilyFunctor P).map (prod.fst : A ⨯ B ⟶ A)).left x =

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformInductionChecks` -/
+/-! # Arbitrary-property induction with all uniform coefficient objects -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

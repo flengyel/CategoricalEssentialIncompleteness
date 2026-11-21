@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraFormula
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportAlgebraFormulaChecks` -/
+/-! # The formula half of the substitution algebra comparison -/
 
 @[expose] public section
 noncomputable section

@@ -71,8 +71,8 @@ private theorem erased_coefficient (i : Fin 5) :
   rw [← p.conclusion]
   exact imageSubobject_factors_comp_self _ p.hom
 
-/-- Factor the signed presentation into the sentence pullback and use
-image leastness to descend to the actual nonlogical axiom subobject. -/
+/-- Factor the signed presentation into the sentence pullback and use image leastness to
+descend to the nonlogical axiom subobject. -/
 theorem signed_le : axiomImage a b ≤
     (Subobject.pullback (S).sentenceInclusion).obj (erasedTheory a b) := by
   let U := (Subobject.pullback (S).sentenceInclusion).obj (erasedTheory a b)

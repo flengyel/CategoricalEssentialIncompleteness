@@ -26,9 +26,9 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ]
 variable (X Y : PredicateCategory T)
 local instance namedRepresentationModelDecidableEq : DecidableEq M := Classical.decEq M
 
-/-- A chart for a chosen product point restricts to charts for its actual
-categorical projections. This only eliminates a representation; no
-inverse for the general polynomial encoder is used. -/
+/-- A chart for a chosen product point restricts to charts for its categorical
+projections. This only eliminates a representation; no inverse for the general
+polynomial encoder is used. -/
 theorem representation_product_points (a b : SyntaxPolynomial (PredicateCategory T))
     (u : M) (z : Obj T M ((a.product b).eval.obj (X,Y)))
     (hz : (baseRepresentation T X Y (.product a b)).val.Evalb ![u,z.val]) :
@@ -47,8 +47,8 @@ theorem representation_product_points (a b : SyntaxPolynomial (PredicateCategory
     (prod.snd : a.eval.obj (X,Y) ⨯ b.eval.obj (X,Y) ⟶ _) z yy).mp hg
   exact ⟨v,w,hu,by simpa only [he] using hx,by simpa only [he'] using hy⟩
 
-/-- A represented chosen coproduct point comes from the indicated actual
-injection and the same numerical payload. -/
+/-- A represented chosen coproduct point comes from the indicated injection and the same
+numerical payload. -/
 theorem representation_sum_points (a b : SyntaxPolynomial (PredicateCategory T))
     (u : M) (z : Obj T M ((a.sum b).eval.obj (X,Y)))
     (hz : (baseRepresentation T X Y (.sum a b)).val.Evalb ![u,z.val]) :
@@ -65,8 +65,8 @@ theorem representation_sum_points (a b : SyntaxPolynomial (PredicateCategory T))
   · let yy : Obj T M (b.eval.obj (X,Y)) := ⟨y,(baseRepresentation_support T M X Y b w y hy).2⟩
     exact Or.inr ⟨w,yy,hu,hy,(chosenGraph_map_iff T M coprod.inr yy z).mp hg⟩
 
-/-- Numerical values on the summands give the value of the genuine
-categorical coproduct eliminator. -/
+/-- Numerical values on the summands give the value of the categorical coproduct
+eliminator. -/
 theorem representation_coprod_desc {a b : SyntaxPolynomial (PredicateCategory T)}
     {C : PredicateCategory T} (f : a.eval.obj (X,Y) ⟶ C) (g : b.eval.obj (X,Y) ⟶ C)
     (φ ψ : M → M)

@@ -13,9 +13,9 @@ public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
 
 /-! # Positive value-stack invariants for arbitrary uniform algebra operations
 
-The stored stack uses the existing arithmetic list and ordered pair codes.
-Only temporary states and their positive operation witnesses are recorded;
-the input syntax retains its original word and coefficient labels.
+The stored stack uses the arithmetic list and ordered pair codes. Only temporary
+states and their positive operation witnesses are recorded; the input syntax retains
+its original word and coefficient labels.
 -/
 
 @[expose] public section

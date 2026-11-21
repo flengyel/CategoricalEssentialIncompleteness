@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.InternalLattices
 
 /-!
-# The internal total-arrow and predicate structures
+# The internal total-morphism and predicate structures
 
 All operations are morphisms in the base. Their equations are stated at every
-parameter object, so they do not require the terminal object to be a generator.
-This is the total-arrow reduct needed by the internal diagonal argument.
+parameter object, so they do not require the terminal object to be a generator. This
+is the total-morphism reduct needed by the internal diagonal argument.
 `EnrichedTotals` constructs it from enriched restriction hom-objects, and
 `EnrichedDomains` constructs its domain-predicate action.
 -/
@@ -116,7 +116,7 @@ variable {H : InternalHom V O} (P : InternalPredicates H)
 
 end InternalPredicates
 
-/-- A monic internal bounded lattice map, natural for all total-arrow families. -/
+/-- A monic internal bounded lattice map, natural for all total-morphism families. -/
 structure InternalPredicateEmbedding {V : Type u} [Category.{v} V] [HasFiniteLimits V]
     {O : Type w} {H : InternalHom V O} (E P : InternalPredicates H) where
   app : ∀ X, InternalLatticeHom (E.lattice X) (P.lattice X)

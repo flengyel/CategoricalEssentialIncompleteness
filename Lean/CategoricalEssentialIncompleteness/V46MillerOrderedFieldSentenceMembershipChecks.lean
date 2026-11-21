@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSentenceMembership
 
 
-/-! # Statement checks in `V46MillerOrderedFieldSentenceMembershipChecks` -/
+/-! # Primitive-recursive membership in the ordered-field sentence words -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

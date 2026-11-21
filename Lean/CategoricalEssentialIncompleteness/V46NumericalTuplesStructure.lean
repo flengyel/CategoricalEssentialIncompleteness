@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46SplitSplittings
 public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 
-/-! # Regularity, extensive sums and actual partial inverses for tuple maps -/
+/-! # Regularity, extensive sums and partial inverses for tuple maps -/
 
 @[expose] public section
 
@@ -54,19 +54,18 @@ instance tupleRegular : Regular Object :=
 instance tupleHasFiniteCoproducts : HasFiniteCoproducts Object where
   out _ := Adjunction.hasColimitsOfShape_of_equivalence comparison
 
-/-- Extensivity supplies disjointness and pullback stability of every
-finite coproduct in the actual tuple-function category. -/
+/-- Extensivity supplies disjointness and pullback stability of every finite coproduct in
+the tuple-function category. -/
 instance tupleFinitaryExtensive : FinitaryExtensive Object :=
   finitaryExtensive_of_preserves_and_reflects_isomorphism comparison
 
-/-- The ordinary total comparison followed by the actual restriction
-splitting inclusion. -/
+/-- The ordinary total comparison followed by the restriction splitting inclusion. -/
 def splitComparison : Object ⥤ SplitObject ClassicalPrograms.Rec :=
   classicalTotalEquivalence.functor ⋙
     PreservesRestriction.totalInclusion (SplitObject ClassicalPrograms.Rec)
 
-/-- The partial inverse is an actual arrow of the classical splitting,
-constructed by the already proved choice/monomorphism inverse theorem. -/
+/-- The partial inverse is a morphism of the classical splitting, constructed by the
+already proved choice/monomorphism inverse theorem. -/
 def monoInverse {C D : Object} (m : C ⟶ D) [Mono m] :
     splitComparison.obj D ⟶ splitComparison.obj C :=
   EnumerableCarriers.inclusion.map (PartialSpans.inverse (comparison.map m))
@@ -86,8 +85,8 @@ def monoInverse {C D : Object} (m : C ⟶ D) [Mono m] :
     EnumerableCarriers.inclusion_rst]
   rfl
 
-/-- The actual partial inverse makes each mapped tuple mono a
-restriction monomorphism, with no choice assumption on the target. -/
+/-- The partial inverse makes each mapped tuple mono a restriction monomorphism, with no
+choice assumption on the target. -/
 theorem mappedMono_partialMono {C D : Object} (m : C ⟶ D) [Mono m] :
     PartialMono (splitComparison.map m) := by
   intro W g h he

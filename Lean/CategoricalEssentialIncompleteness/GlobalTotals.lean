@@ -11,12 +11,12 @@ public import Mathlib.CategoryTheory.Widesubcategory
 public import Mathlib.CategoryTheory.Adjunction.Limits
 
 /-!
-# Global total arrows
+# Global total morphisms
 
-The ordinary restriction category is the category of global arrows of the
-enriched restriction structure. Its total arrows form the wide subcategory
-defined by the existing `RestrictionCategory.isTotal` property. The finite-limit
-comparison extends to an equivalence of categories, preserving binary products.
+The ordinary restriction category is the category of global morphisms of the enriched
+restriction structure. Its total morphisms form the wide subcategory defined by the
+existing `RestrictionCategory.isTotal` property. The finite-limit comparison extends
+to an equivalence of categories, preserving binary products.
 -/
 
 @[expose] public section
@@ -34,18 +34,18 @@ variable {H : InternalHom V O} (R : EnrichedRestriction H)
 /-- The manuscript's underlying ordinary restriction category `K₀`. -/
 abbrev GlobalCategory := R.Parameterized (⊤_ V)
 
-/-- Its wide subcategory of total arrows. -/
+/-- Its wide subcategory of total morphisms. -/
 abbrev GlobalTotal := WideSubcategory (RestrictionCategory.isTotal (C := R.GlobalCategory))
 
 def globalObject (X : O) : R.GlobalCategory := ⟨X⟩
 def totalGlobalObject (X : O) : R.GlobalTotal := ⟨R.globalObject X⟩
 
-/-- A point of the totality pullback gives a total arrow of `K₀`. -/
+/-- A point of the totality pullback gives a total morphism of `K₀`. -/
 def globalTotalArrow {X Y : O} (f : ⊤_ V ⟶ R.totalObject X Y) :
     R.totalGlobalObject X ⟶ R.totalGlobalObject Y :=
   ⟨(f ≫ R.totalι X Y : ⊤_ V ⟶ H.hom X Y), R.total_condition f⟩
 
-/-- A total arrow of `K₀` lifts to a global point of the totality pullback. -/
+/-- A total morphism of `K₀` lifts to a global point of the totality pullback. -/
 def globalTotalPoint {X Y : R.GlobalTotal} (f : X ⟶ Y) :
     ⊤_ V ⟶ R.totalObject X.obj.obj Y.obj.obj := R.totalLift f.hom f.property
 
@@ -55,7 +55,7 @@ def globalTotalPoint {X Y : R.GlobalTotal} (f : X ⟶ Y) :
 
 variable (products : R.Products)
 
-/-- The inclusion of the totality pullbacks induces a functor on global arrows. -/
+/-- The inclusion of the totality pullbacks induces a functor on global morphisms. -/
 def toGlobalTotal : (R.totalHom products).Global ⥤ R.GlobalTotal where
   obj X := R.totalGlobalObject X.obj
   map := R.globalTotalArrow
@@ -121,7 +121,7 @@ theorem globalTotalPreservesBinaryProducts :
 
 variable [R.Zeros]
 
-/-- The internal zero arrows induce zero morphisms in every parameterized category. -/
+/-- The internal zero morphisms induce zero morphisms in every parameterized category. -/
 instance parameterizedZeroMorphisms (T : V) : HasZeroMorphisms (R.Parameterized T) where
   zero X Y := ⟨R.zeroAt T X.obj Y.obj⟩
   comp_zero := fun {_X _Y} f _Z ↦ Zeros.comp_zero f

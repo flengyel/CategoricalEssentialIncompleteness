@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentences
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralSentencesChecks` -/
+/-! # The sentence pullback under the numerical constructor comparison -/
 
 @[expose] public section
 noncomputable section

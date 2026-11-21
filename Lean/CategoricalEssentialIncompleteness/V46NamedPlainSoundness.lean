@@ -55,8 +55,8 @@ variable (haxioms : FirstOrderModelSoundness.AxiomsProperty 𝗣𝗔
   (A := A) axioms ℕ (Valid σ π d functions relations))
 
 include haxioms in
-/-- Rule induction uses the constructed derivation carrier and the seven
-proved actual scheme validities. No soundness factor is assumed. -/
+/-- Rule induction uses the constructed derivation carrier and the seven proved scheme
+validities. No soundness factor is assumed. -/
 theorem valid_conclusion :
     FirstOrderModelSoundness.ConclusionProperty 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms ℕ Q :=
   FirstOrderModelSoundness.conclusion_property 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms Q
@@ -70,7 +70,7 @@ theorem valid_sentenceConclusion :
   FirstOrderModelSoundness.sentenceProperty_of_conclusion 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms ℕ Q
     (valid_conclusion σ π d functions relations (A := A) axioms haxioms)
 
-/-- Corestriction of the actual sentence conclusion map to decoded validity. -/
+/-- Corestriction of the sentence conclusion map to decoded validity. -/
 def soundnessFactor :
     Obj 𝗣𝗔 ℕ (FirstOrderModelSoundness.sentenceProofObject 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms) ⟶
       (sentenceValiditySet σ π d functions relations : Type) :=
@@ -85,9 +85,9 @@ theorem soundnessFactor_inclusion :
     (valid_sentenceConclusion σ π d functions relations (A := A) axioms haxioms)
 
 include haxioms in
-/-- The unique validity factorization of the actual generated sentence
-conclusions. The generic algebra/object comparison with the original
-SyntacticGeneratedTheory definitions is literal equality. -/
+/-- The unique validity factorization of the generated sentence conclusions. The generic
+algebra/object comparison with the original SyntacticGeneratedTheory definitions is
+literal equality. -/
 theorem exists_unique_soundnessFactor :
     ∃! e : Obj 𝗣𝗔 ℕ (FirstOrderModelSoundness.sentenceProofObject 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms) ⟶
       (sentenceValiditySet σ π d functions relations : Type),
@@ -97,8 +97,8 @@ theorem exists_unique_soundnessFactor :
     (valid_sentenceConclusion σ π d functions relations (A := A) axioms haxioms)
 
 include functions relations haxioms in
-/-- Consistency is derived for the actual conclusion image and sentence
-negation. The semantic structure K is distinct from the code model N. -/
+/-- Consistency is derived for the conclusion image and sentence negation. The semantic
+structure K is distinct from the code model N. -/
 theorem sentenceConclusion_range_consistent [Nonempty K] :
     Disjoint (Set.range ((G).map
       (FirstOrderModelSoundness.sentenceConclusion 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms)))

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawOrderedField
 
 
-/-! # Statement checks in `V46MillerRealClosedRawOrderedFieldChecks` -/
+/-! # Constructing the ordered field from the finite matrices -/
 
 @[expose] public section
 noncomputable section

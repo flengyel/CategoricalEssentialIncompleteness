@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit
 
 
-/-! # Statement checks in `V46MillerCutInseparabilitySourceSplitChecks` -/
+/-! # Restriction idempotents on included objects of the split category -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

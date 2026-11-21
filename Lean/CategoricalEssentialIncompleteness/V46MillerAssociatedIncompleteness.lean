@@ -102,8 +102,8 @@ local instance partialTotalExtensive (P : Total.CanonicalTotal a) :
     FinitaryExtensive (PartialMaps.Tot (Over P)) :=
   SliceInseparability.PartialTotals.extensive (Over P)
 
-/-- This is the actual theorem-domain subobject in the total category of
-Par(D_a/U), under its canonical equivalence with D_a/U. -/
+/-- This is the theorem-domain subobject in the total category of Par(D_a/U), under its
+canonical equivalence with D_a/U. -/
 def actualTheoryDomain :=
   FiniteLimitSubobjects.object
     (PartialMaps.totalEquivalence (D := Over (U.val : Total.CanonicalTotal a))).functor
@@ -122,9 +122,9 @@ theorem actual_domains_inseparable (ha : IsMiller a) (hExt : base a ≤ U.val)
   rw [FiniteLimitSubobjects.object_pullback] at h
   exact h
 
-/-- This statement quantifies over all subobjects in the total category of
-the actual associated partial-map category. In particular, no closed
-consistent extension is required to be a constant family. -/
+/-- This statement quantifies over all subobjects in the total category of the associated
+partial-map category. In particular, no closed consistent extension is required to be
+a constant family. -/
 theorem actual_essentially_incomplete (ha : IsMiller a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ (refutation a U) = ⊥) :
     (actualTheoryDomain a U ⊓ (Subobject.pullback (actualNegation a U)).obj

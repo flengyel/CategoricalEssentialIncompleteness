@@ -7,11 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaInputs
 
-/-! # Native formula substitution and the actual full option output
+/-! # Inputs to substitution on named formulas
 
-Every branch is evaluated on the existing standard PA state and then
-transported by its proved morphism square. The actual slice fold is
-compared by native induction. Failure remains part of the formula state.
+The constructor morphisms transport the substitution state from the standard model of
+PA to the parameter slice. The state includes failure.
 -/
 
 @[expose] public section

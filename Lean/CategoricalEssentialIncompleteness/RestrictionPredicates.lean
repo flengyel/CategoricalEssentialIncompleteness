@@ -88,7 +88,7 @@ instance domainBoundedOrder [HasZeroMorphisms C] [RestrictionZeros C] (X : C) :
   bot := ⟨0, RestrictionZeros.rst_zero X X⟩
   bot_le a := by change (0 : X ⟶ X) ≫ a.hom = 0; simp
 
-/-- The existing near-product cone is a categorical product of total arrows. -/
+/-- The existing near-product cone is a categorical product of total morphisms. -/
 def totalBinaryProductLimit (X Y : TotalSubcategory C) :
     IsLimit (BinaryFan.mk (TotalSubcategory.binaryProductFst X Y)
       (TotalSubcategory.binaryProductSnd X Y)) :=
@@ -144,7 +144,7 @@ theorem restrictionPredicates_nontrivial (U : TotalSubcategory C)
   intro h
   exact hU (congrArg DomSemilattice.hom h).symm
 
-/-- The external diagonal theorem on restriction idempotents and total arrows. -/
+/-- The external diagonal theorem on restriction idempotents and total morphisms. -/
 theorem restriction_integration_diagonal
     {P : PredicateLattice (TotalSubcategory C)}
     (D : DiagonalData (restrictionPredicates (C := C)) P)

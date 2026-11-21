@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportOperations
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxListTransportOperationsChecks` -/
+/-! # Operations on lists of variable names -/
 
 @[expose] public section
 noncomputable section

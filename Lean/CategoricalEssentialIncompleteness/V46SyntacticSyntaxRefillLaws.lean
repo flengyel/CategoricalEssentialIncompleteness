@@ -40,8 +40,8 @@ theorem refillLeaf_frame (formula : Bool) (s st u rest tail : M)
       · simp [refillLeaf, hs, hk] at h
     · simp [refillLeaf, hs] at h
 
-/-- This is the stack framing property of the actual parser component,
-proved by induction on the finite polynomial, with no validity oracle. -/
+/-- This is the stack framing property of the parser component, proved by induction on the
+finite polynomial, with no validity oracle. -/
 theorem refill_frame (p : RawPolynomial) (s st u rest tail : M)
     (h : refill p s st = adjoin u rest) :
     refill p s (Words.append st tail) = adjoin u (Words.append rest tail) := by
@@ -111,8 +111,8 @@ theorem refillLeaf_sound (formula : Bool) (s st u rest : M)
       · simp [refillLeaf, hs, hk] at h
     · simp [refillLeaf, hs] at h
 
-/-- Every successful output of the actual structural parser is the
-unique inverse of its root-record shape and ordered child stack. -/
+/-- Every successful output of the structural parser is the unique inverse of its
+root-record shape and ordered child stack. -/
 theorem refill_sound (p : RawPolynomial) (s st u rest : M)
     (h : refill p s st = adjoin u rest) :
     shape p u = s ∧ childStack p u rest = st := by
@@ -174,7 +174,7 @@ theorem refill_sound (p : RawPolynomial) (s st u rest : M)
     ⟨π₁ record, π₂ record, (pair_unpair record).symm⟩
   simp [recordCarrier]
 
-/-- The actual Sigma-one condition on a typed parser-stack block. -/
+/-- The Sigma-one condition on a typed parser-stack block. -/
 def blockCarrier (X Y : Carrier) : Carrier := .mkSigma
   “block. (∃ w, !pairDef.val block w 0 ∧ !X.val w) ∨
     (∃ w, !pairDef.val block w 1 ∧ !Y.val w)”
@@ -212,9 +212,9 @@ def stackCarrier (X Y : Carrier) : Carrier :=
     · have hj : j < len st := by simpa using hi
       simpa using hs j hj
 
-/-- Replacing each consumed typed stack block by its numerical child
-word reconstructs an element of the actual polynomial source, retaining
-all positive coefficient-membership witnesses. -/
+/-- Replacing each consumed typed stack block by its numerical child word reconstructs an
+element of the polynomial source, retaining all positive coefficient-membership
+witnesses. -/
 theorem refill_typed (X Y : Carrier) (p : RawPolynomial) (s st u rest : M)
     (hs : (rawCarrier zeroCarrier zeroCarrier p).val.Evalb ![s])
     (hst : (stackCarrier X Y).val.Evalb ![st])

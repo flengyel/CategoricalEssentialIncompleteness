@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsDecoder
 
 
-/-! # Statement checks in `V46MillerListsDecoderChecks` -/
+/-! # An ordinary partial-recursive decoder for literal list words -/
 
 @[expose] public section
 noncomputable section

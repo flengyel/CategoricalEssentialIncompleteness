@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
 
 /-! # Arbitrary uniformly semidecidable numerical carriers
 
-Morphisms are the original supported split arrows. In particular, no
-ordinary partial-recursive value extension and no inhabited carrier is
-required. Restriction, image, and graph computations use the actual
-uniform oracle programs already constructed in Proposition 8.2.
+Morphisms are the original supported split morphisms. In particular, no ordinary
+partial-recursive value extension and no inhabited carrier is required. Restriction,
+image, and graph computations use the uniform oracle programs already constructed in
+Proposition 9.2.
 -/
 
 @[expose] public section

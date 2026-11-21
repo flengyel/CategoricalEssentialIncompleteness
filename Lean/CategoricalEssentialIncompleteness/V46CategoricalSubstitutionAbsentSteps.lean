@@ -216,8 +216,8 @@ theorem capture_allowed_of_body_absent {X : D} (p : X ⟶ S.substitutionParamete
   rw [h, ha, Two.unary_constant]
   exact top_sup_eq _
 
-/-- The actual quantifier operation fixes an absent-variable input under the
-recursive invariant; equal-name binding bypasses the recursive result. -/
+/-- The quantifier operation fixes an absent-variable input under the recursive invariant;
+equal-name binding bypasses the recursive result. -/
 theorem quantifier_absent_value {X : D} (p : X ⟶ S.substitutionParameters)
     (y : X ⟶ V) (a : X ⟶ S.substitutionCarriers.2)
     (good : S.formulaPairGood p a)

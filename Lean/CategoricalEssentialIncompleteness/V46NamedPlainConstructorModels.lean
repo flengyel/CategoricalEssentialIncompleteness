@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixPlainComparison
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
 
-/-! # Literal word values of the actual plain syntax constructors -/
+/-! # Literal word values of the plain syntax constructors -/
 
 @[expose] public section
 
@@ -57,8 +57,8 @@ theorem plainTerm_value (a b : SyntaxPolynomial (PredicateCategory T)) (u : M)
   exact (NamedPostfixPlainComparison.plainCarrierIso_value T M false a b
     ((F T M).map (postfixAlgebra T a b).str.1 input)).trans hv
 
-/-- The same actual comparison preserves every plain formula constructor;
-no inverse of an arbitrary polynomial encoder is assumed. -/
+/-- The same comparison preserves every plain formula constructor; no inverse of an
+arbitrary polynomial encoder is assumed. -/
 theorem plainFormula_value (a b : SyntaxPolynomial (PredicateCategory T)) (u : M)
     (z : Obj T M (b.eval.obj (plainPostfixAlgebra T a b).a))
     (h : (baseRepresentation T (Postfix.plainCarrier false a b)

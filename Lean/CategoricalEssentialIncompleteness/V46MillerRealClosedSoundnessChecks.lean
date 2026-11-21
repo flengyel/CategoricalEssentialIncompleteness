@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedSoundness
 
 
-/-! # Statement checks in `V46MillerRealClosedSoundnessChecks` -/
+/-! # The constructed real model is sound for finite T_a proofs -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedSoundness

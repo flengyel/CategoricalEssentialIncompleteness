@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.EffectiveForkRecursion
 public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
 public import CategoricalEssentialIncompleteness.CompatibleLocalLifting
 
-/-! # The actual endpoint diagonal pair is numerically inseparable -/
+/-! # The endpoint diagonal pair is numerically inseparable -/
 
 @[expose] public section
 
@@ -73,8 +73,8 @@ theorem endpoint_identity_nonzero :
   rw [hh] at h0
   exact h0.1
 
-/-- Numerical local connectedness and the actual endpoint Turing morphism
-instantiate the same categorical lifting theorem as the internal construction. -/
+/-- Numerical local connectedness and the endpoint Turing morphism instantiate the same
+categorical lifting theorem as the internal construction. -/
 theorem endpoint_pair_inseparable : Inseparable endpointPair0 endpointPair1 :=
   compatible_local_lifting EnumerableCarriers.inducedRestriction_eq
     EnumerableCarriers.identityRangeFunctor endpointEvaluator endpoint_isTuring endpointFrame

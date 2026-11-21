@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.TwoBoolean
 /-!
 # Complete Boolean extensions and represented decisions
 
-This module compares Boolean quotients with Boolean homomorphisms to
-the constructed internal algebra `1 + 1`. Characteristic arrows refer to
-particular complementary subobjects, not to arbitrary predicates.
+This module compares Boolean quotients with Boolean homomorphisms to the constructed
+internal algebra `1 + 1`. Characteristic morphisms refer to particular complementary
+subobjects, not to arbitrary predicates.
 -/
 
 @[expose] public section
@@ -51,7 +51,7 @@ def comp (r : BooleanMorphism B B') (s : BooleanMorphism B' B'') : BooleanMorphi
   postcomp X := (s.postcomp X).comp (r.postcomp X)
   postcomp_apply X f := by simp [r.postcomp_apply, s.postcomp_apply]
 
-/-- The inverse of a Boolean homomorphism whose underlying arrow is an isomorphism. -/
+/-- The inverse of a Boolean homomorphism whose underlying morphism is an isomorphism. -/
 def inverse (r : BooleanMorphism B B') [IsIso r.hom] : BooleanMorphism B' B where
   hom := inv r.hom
   postcomp X :=

@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46MillerListsFold
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawComparison
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 
-/-! # The actual parameterized raw list constructors
+/-! # The parameterized raw list constructors
 
-A recursive list leaf is its actual family code pair(r,list), not the
-bare list coordinate. The cons constructor proves the shared parameter
-from the source projection and then reads that leaf's list coordinate.
+A recursive list leaf is its family code pair(r,list), not the bare list coordinate.
+The cons constructor proves the shared parameter from the source projection and then
+reads that leaf's list coordinate.
 -/
 
 @[expose] public section

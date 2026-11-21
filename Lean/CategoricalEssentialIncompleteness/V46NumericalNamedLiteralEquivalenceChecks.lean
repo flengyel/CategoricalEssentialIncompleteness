@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralEquivalenceChecks` -/
+/-! # The same numerical equivalence with literal tuple-code predicate coordinates -/
 
 @[expose] public section
 noncomputable section

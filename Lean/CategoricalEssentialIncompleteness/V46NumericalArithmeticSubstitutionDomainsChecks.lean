@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionDomains
 
 
-/-! # Statement checks in `V46NumericalArithmeticSubstitutionDomainsChecks` -/
+/-! # The arithmetic admissibility isomorphism and result square -/
 
 @[expose] public section
 noncomputable section

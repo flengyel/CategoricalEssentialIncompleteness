@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSource
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeSourceChecks` -/
+/-! # Source PA substitution states at named points -/
 
 @[expose] public section
 noncomputable section

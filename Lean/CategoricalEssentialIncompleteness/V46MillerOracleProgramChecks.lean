@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOracleProgram
 
 
-/-! # Statement checks in `V46MillerOracleProgramChecks` -/
+/-! # A single indexed finite-query oracle interpreter -/
 
 @[expose] public section
 noncomputable section

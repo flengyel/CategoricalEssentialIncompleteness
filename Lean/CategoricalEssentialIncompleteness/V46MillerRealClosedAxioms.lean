@@ -7,13 +7,12 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
 
-/-! # An actual recursive ordered-field and real-closure axiom presentation
+/-! # Recognition of the ordered-field and real-closure axiom words
 
-The finite axioms present a commutative field with strict linear order.
-Positive square roots and every odd-degree polynomial-root scheme are
-then included literally. Recognition computes the consecutive universal
-constructor suffix and checks equality with the corresponding generated
-word. The semantic real-closed-field comparison is a separate obligation.
+The finite axioms present a strictly ordered field. A further axiom asserts that every
+positive element has a square root. For each odd degree a scheme asserts the existence
+of a polynomial root. The recognizer counts the final universal constructors and
+compares the input with the corresponding axiom word.
 -/
 
 @[expose] public section
@@ -315,7 +314,7 @@ theorem oddSentence_mem (n : ℕ) : formulaCode (oddSentence n)∈RCFAxiomWords 
   apply (odd_generator_iff _).mpr
   exact ⟨n,formulaCode_oddSentence n⟩
 
-/-- The actual word axiom set requested for the point a. -/
+/-- The word axiom set requested for the point a. -/
 def theoryAxioms (a : Point) : Set ℕ := RCFAxiomWords∪cutAxioms a
 
 theorem theoryAxioms_enumerable (a : Point) :

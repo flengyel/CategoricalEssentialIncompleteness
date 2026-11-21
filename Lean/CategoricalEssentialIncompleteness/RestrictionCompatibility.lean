@@ -25,8 +25,8 @@ section Coproducts
 variable {C : Type u} [Category.{v} C] [RestrictionCategory C]
 variable [HasZeroMorphisms C] [CoprodStruct C] [CategoryTheory.HasCoproducts C]
 
-/-- With zero arrows, each categorical coproduct injection has a left
-inverse, and hence is total. -/
+/-- With zero morphisms, each categorical coproduct injection has a left inverse, and
+hence is total. -/
 instance (priority := 100) restrictionCoproductsOfZeros : RestrictionCoproducts C where
   total_i0 X Y := total_of_comp_total (i0 X Y) (copair (𝟙 X) (0 : Y ⟶ X))
     (by rw [i0_copair]; exact rst_id X)

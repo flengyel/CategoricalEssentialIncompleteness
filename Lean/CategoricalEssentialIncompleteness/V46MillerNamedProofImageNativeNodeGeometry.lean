@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 
-/-! # Native nodes in the actual parameter-word algebra
+/-! # Named nodes in the parameter-word algebra
 
-All points and point morphisms belong to the uniform target. The parameter
-chart is proved within that category. The input calculation retains the
-literal coefficient, name, summand tag, and ordered finite children.
+All points and point morphisms belong to the uniform target. The parameter chart is
+proved within that category. The input calculation retains the coefficient, name,
+summand tag, and ordered finite children.
 -/
 
 @[expose] public section
@@ -91,7 +91,7 @@ namespace PointFrame
 variable {P : Uniform.Family}
 local notation "U" => Total.underlying (P := P)
 
-/-- Forget only the common frame, retaining the actual ordered input. -/
+/-- Forget only the common frame, retaining the ordered input. -/
 def nodeBaseArrow (R : Total.TotalCategory P) (r : (U).obj R)
     (X Y : Total.TotalCategory P) :
     (p : SyntaxPolynomial (Total.TotalCategory P)) →
@@ -155,9 +155,9 @@ theorem realize_parameterComparison (R : Total.TotalCategory P) (r : (U).obj R)
           rw [← Category.assoc,hq]
           exact nodeFrame_map (Total.underlyingPoint r) (nodeBaseArrow R r X Y q z) coprod.inr
 
-/-- The public second-projection form has no private frame constructor in
-its statement. It evaluates the actual parameter comparison, within one
-uniform category, on arbitrary framed polynomial data. -/
+/-- The public second-projection form has no private frame constructor in its statement.
+It evaluates the parameter comparison, within one uniform category, on arbitrary
+framed polynomial data. -/
 theorem realize_parameter_value (R : Total.TotalCategory P) (r : (U).obj R)
     (X Y : Total.TotalCategory P) (p : SyntaxPolynomial (Total.TotalCategory P))
     (z : Data R r (constantFamily R X,constantFamily R Y) p) :

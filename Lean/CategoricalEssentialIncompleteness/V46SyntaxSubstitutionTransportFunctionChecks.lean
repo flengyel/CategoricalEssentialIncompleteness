@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportFunctionChecks` -/
+/-! # Function substitution transports by the two projection squares and the ordinary constructor square -/
 
 @[expose] public section
 noncomputable section

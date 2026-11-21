@@ -34,8 +34,8 @@ variable (c : ∀ i, K.obj (s i) ≅ E.functor.obj (t i))
 variable (X Y : PredicateCategory 𝗣𝗔) (X' Y' : PredicateCategory 𝗧𝗔)
 variable (bX : K.obj X ≅ E.functor.obj X') (bY : K.obj Y ≅ E.functor.obj Y')
 
-/-- The canonical comparison uses the actual finite product and sum
-comparisons, and the actual coefficient charts. -/
+/-- The canonical comparison uses the finite product and sum comparisons, and the
+coefficient charts. -/
 def polynomialIso : (p : SyntaxPolynomial I) →
     K.obj ((p.mapCoefficients s).eval.obj (X,Y)) ≅
       E.functor.obj ((p.mapCoefficients t).eval.obj (X',Y'))
@@ -108,8 +108,8 @@ private theorem inverse_product_snd (A B : PredicateCategory 𝗧𝗔) :
   rw [← Category.assoc,NumericalArithmetic.Geometry.coproduct_inr,
     coprod.inr_map_assoc,coprodComparison_inr]
 
-/-- A commuting square of actual numerical maps gives equality of
-whole interpreted points, including their carrier witnesses. -/
+/-- A commuting square of numerical maps gives equality of whole interpreted points,
+including their carrier witnesses. -/
 theorem square_point {A B : PredicateCategory 𝗣𝗔} {A' B' : PredicateCategory 𝗧𝗔}
     (cA : K.obj A ≅ E.functor.obj A') (cB : K.obj B ≅ E.functor.obj B')
     (f : A ⟶ B) (g : A' ⟶ B')
@@ -129,7 +129,7 @@ theorem square_point {A B : PredicateCategory 𝗣𝗔} {A' B' : PredicateCatego
       (cA.hom.toFun z)) at hn
   exact hn.symm.trans hp
 
-/-- All projection comparisons are comparisons of actual model values. -/
+/-- All projection comparisons are comparisons of model values. -/
 theorem point_fst (p q : SyntaxPolynomial I)
     (z : Obj 𝗣𝗔 ℕ (((.product p q : SyntaxPolynomial I).mapCoefficients s).eval.obj (X,Y))) :
     (F 𝗧𝗔 ℕ).map prod.fst (point s t c X Y X' Y' bX bY (.product p q) z) =
@@ -240,8 +240,8 @@ variable (hC : ∀ i, ∀ z : Obj 𝗣𝗔 ℕ (s i),
   ((NumericalCoordinates.predicatePresentationIso (t i)).hom.toFun ((c i).hom.toFun z)).val = z.val)
 
 include hC hX hY in
-/-- The numerical polynomial code is unchanged through the actual
-product, sum and coefficient comparisons, in both recursive sorts. -/
+/-- The numerical polynomial code is unchanged through the product, sum and coefficient
+comparisons, in both recursive sorts. -/
 theorem baseRepresentation_iff (p : SyntaxPolynomial I)
     (u : ℕ) (z : Obj 𝗣𝗔 ℕ ((p.mapCoefficients s).eval.obj (X,Y))) :
     (baseRepresentation 𝗣𝗔 X Y (p.mapCoefficients s)).val.Evalb ![u,z.val] ↔

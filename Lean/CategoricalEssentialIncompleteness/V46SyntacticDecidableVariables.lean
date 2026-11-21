@@ -218,8 +218,8 @@ theorem test_true_iff {C : PredicateCategory T} (V : PredicateCategory T)
   rw [← rawTrue_booleanIso T C, ← Category.assoc, ← Category.assoc, cancel_mono]
   simpa only [Category.assoc] using raw_test_true_iff T V a
 
-/-- The equality test has the actual diagonal as its true pullback,
-with the universal property for arbitrary generalized names. -/
+/-- The equality test has the diagonal as its true pullback, with the universal property
+for arbitrary generalized names. -/
 def decidableVariables (V : PredicateCategory T) : DecidableVariables V where
   test := test T V
   diagonal := by

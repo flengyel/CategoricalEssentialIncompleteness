@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 public import CategoricalEssentialIncompleteness.V46MillerTotalUnderlying
 public import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
 
-/-! # Restriction idempotents on actual uniformly semidecidable carriers
+/-! # Restriction idempotents on uniformly semidecidable carriers
 
-The split object for A has base N and domain A. Its top restriction
-idempotent therefore has support A, including for proper sentence carriers
-and the empty carrier. The correspondence below reuses the existing split
-idempotents, actual uniform graphs, and concrete regular image construction.
+The split object for A has base N and domain A. Its top restriction idempotent
+therefore has support A, including for proper sentence carriers and the empty carrier.
+The correspondence below reuses the existing split idempotents, uniform graphs, and
+concrete regular image construction.
 -/
 
 @[expose] public section
@@ -70,8 +70,8 @@ theorem ofSet_support {A : Total.Carrier P} (c : Idem (SplitCarrier A)) :
     ofSet A (support c) (support_enumerable c) (support_subset c)=c :=
   support_injective (support_ofSet A _ _ _)
 
-/-- This is an order isomorphism of the existing actual idempotents, with
-the actual uniform enumerability and proper-carrier inclusion predicates. -/
+/-- This is an order isomorphism of the existing idempotents, with the uniform
+enumerability and proper-carrier inclusion predicates. -/
 def supportOrderIso (A : Total.Carrier P) : Idem (SplitCarrier A) ≃o
     {B : Set ℕ // Uniform.Enumerable P (·∈B) ∧ B⊆A.support} where
   toFun c := ⟨support c,support_enumerable c,support_subset c⟩
@@ -229,8 +229,8 @@ private theorem supportIdentity_domain (B : Set ℕ) (n : ℕ) :
   rw [Part.dom_iff_mem]
   simp only [Total.mem_supportIdentity,exists_eq_right]
 
-/-- The singleton-family target has exactly the ordinary p-semidecidable
-subset supports, expressed by their actual partial identities. -/
+/-- The singleton-family target has exactly the ordinary p-semidecidable subset supports,
+expressed by their partial identities. -/
 theorem singleton_enumerable_iff_recursive_identity (p : Bits) (B : Set ℕ) :
     Uniform.Enumerable (Uniform.Family.singleton p) (·∈B) ↔
       Nat.RecursiveIn (OracleComputation.oracleSet (OracleRelative.oracleSupport p))

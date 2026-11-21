@@ -177,7 +177,8 @@ instance enumerablePCategory : PCategory Carrier where
   assoc_nat := partialProdMap_assoc_nat
   swap_nat := partialProdMap_swap_nat
 
-/-- The two restriction structures agree as structures, including their operation on every arrow. -/
+/-- The two restriction structures agree as structures, including their operation on every
+morphism. -/
 theorem inducedRestriction_eq :
     (PCategory.inducedRestriction : RestrictionCategory Carrier) = carrierRestriction := by
   have h : @RestrictionCategory.rst Carrier carrierCategory PCategory.inducedRestriction =

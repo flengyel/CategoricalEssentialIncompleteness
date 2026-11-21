@@ -9,13 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerDerivationTrees
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
 
-/-! # Arbitrary finite-rule initiality for actual uniform carriers
+/-! # Arbitrary finite-rule initiality for uniform carriers
 
-The literal ordinary-tree algebra is initial by the proved uniform word
-construction. The successful pullback uses the original ordered premise
-matching, and the existing success adjunction proves its universal
-property. Neither initiality nor successful-tree comparison is supplied
-as a hypothesis.
+The ordinary-tree algebra is initial by the proved uniform word construction. The
+successful pullback uses the original ordered premise matching, and the existing
+success adjunction proves its universal property. Neither initiality nor
+successful-tree comparison is supplied as a hypothesis.
 -/
 
 @[expose] public section

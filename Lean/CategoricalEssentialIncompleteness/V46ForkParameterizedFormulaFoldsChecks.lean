@@ -6,11 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkParameterizedFormulaFolds
 
-/-! # Independent checks of natural parameterized formula folds
-
-The comparison with the canonical two-sort syntax interface, stable lists,
-substitution and finite derivations remain separate obligations.
--/
+/-! # Naturality of parameterized formula folds -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

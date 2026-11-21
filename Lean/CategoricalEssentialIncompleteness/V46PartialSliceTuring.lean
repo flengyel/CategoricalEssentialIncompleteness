@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46PartialSliceEquivalence
 public import CategoricalEssentialIncompleteness.V46AmbientSliceTuring
 
-/-! # Universal computations in the actual monic partial-map slice -/
+/-! # Universal computations in the monic partial-map slice -/
 
 @[expose] public section
 
@@ -54,7 +54,7 @@ theorem map_realization {X Y : AmbientPartialSlice.Family T.obj} (f : X ⟶ Y) :
 def constantObject (Q : C) : PartialMaps.Par (Over T) :=
   realizeObject T (AmbientSliceTuring.constantFamily T.obj Q)
 
-/-- Product with the fixed input family, expressed in the actual span quotient. -/
+/-- Product with the fixed input family, expressed in the span quotient. -/
 def tensorFunctor (Q : C) : PartialMaps.Par (Over T) ⥤ PartialMaps.Par (Over T) :=
   PartialSliceEquivalence.functor inverses T ⋙ AmbientSliceTuring.tensorFunctor T.obj Q ⋙
     realization inverses T
@@ -157,8 +157,8 @@ theorem tensorFunctor_restriction {Q : C} {X Y : PartialMaps.Par (Over T)} (f : 
   rw [map_realization, map_realization, PartialSliceEquivalence.preserves_restrictions,
     AmbientSliceTuring.tensorFunctor_restriction]
 
-/-- The chosen source is the product with the fixed input family on total
-morphisms, for arbitrary objects of the actual partial-map slice. -/
+/-- The chosen source is the product with the fixed input family on total morphisms, for
+arbitrary objects of the partial-map slice. -/
 theorem tensor_product_existsUnique {Q : C} {V X : PartialMaps.Par (Over T)}
     (f : V ⟶ X) (g : V ⟶ constantObject T Q) (hf : isTotal f) (hg : isTotal g) :
     ∃! h : V ⟶ (tensorFunctor inverses T Q).obj X, isTotal h ∧
@@ -204,8 +204,8 @@ theorem evaluator_value {Q : C} (τ : nearProd Q Q ⟶ Q) :
   rw [evaluator, map_realization]
   rfl
 
-/-- Every actual partial span with this source and target is computed by
-the slice evaluator along a total parameter in the same partial-map slice. -/
+/-- Every partial span with this source and target is computed by the slice evaluator
+along a total parameter in the same partial-map slice. -/
 theorem parameterization {Q : C} (τ : nearProd Q Q ⟶ Q)
     (hτ : RecursionCategory.IsTuringMorphism τ) (X : PartialMaps.Par (Over T))
     (φ : (tensorFunctor inverses T Q).obj X ⟶ constantObject T Q) :

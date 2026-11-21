@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxParameterFamily
 
-/-! # Finite-geometry family charts after an actual base isomorphism
+/-! # Finite-geometry family charts after a base isomorphism
 
 Only the base-change functor is an equivalence. The original functor needs
 its proved finite limits and coproducts, without any initiality assumption.
@@ -56,8 +56,8 @@ omit [FinitaryExtensive C] [FinitaryExtensive D] [PreservesFiniteCoproducts F] i
   change (familyComparison F b X).inv.left ≫ (familyComparison F b X).hom.left=𝟙 _ at h
   erw [h,Category.id_comp]
 
-/-- The actual slice functor compares constant families naturally in the
-coefficient or recursive carrier, using the actual product comparison. -/
+/-- The slice functor compares constant families naturally in the coefficient or recursive
+carrier, using the product comparison. -/
 def familyNaturalIso :
     constantFamilyFunctor R ⋙ (functor F b) ≅
       F ⋙ constantFamilyFunctor Q := by
@@ -88,8 +88,8 @@ theorem family_unit :
   · exact terminalIsTerminal.hom_ext _ _
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] [PreservesFiniteCoproducts F] in
-/-- The product square follows from naturality of the universal product
-comparison. In particular, it compares the actual parameter projections. -/
+/-- The product square follows from naturality of the universal product comparison. In
+particular, it compares the parameter projections. -/
 theorem family_product (X Y : C) :
     prodComparison (functor F b)
         (constantFamily R X) (constantFamily R Y) ≫

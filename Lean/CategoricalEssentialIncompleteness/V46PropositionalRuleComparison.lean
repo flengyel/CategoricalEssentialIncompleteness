@@ -121,7 +121,7 @@ def translation :
     · exact initial.hom_ext _ _
     · exact hr
 
-/-- Folding actual derivations bounds their image after the change of formula coordinates. -/
+/-- Folding derivations bounds their image after the change of formula coordinates. -/
 theorem generated_le (P : Proofs n i) (Q : Proofs n' i') (hQ : ∀ W, IsInitial (Q W))
     (τ : (rules n' i' W).Translation (FiniteRuleTransport.mappedRules K (rules n i A))) :
     generated n' i' Q W ≤ (Subobject.pullback τ.formula).obj

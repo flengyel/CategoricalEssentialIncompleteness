@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvability
 
 
-/-! # Statement checks in `V46ArithmeticIndexedProvabilityChecks` -/
+/-! # A uniform provability formula from the constructed family conclusion -/
 
 @[expose] public section
 noncomputable section

@@ -87,7 +87,7 @@ def sectionOfRepresentative (ρ : (E.lattice D.U).Complements ⟶ H.hom D.U D.U)
   sectionMap := pullback.lift ρ (𝟙 _) (by simpa using hρ)
   section_eq := by simp
 
-/-- Existence of a section is equivalent to existence of the representing arrow `rho`. -/
+/-- Existence of a section is equivalent to existence of the representing morphism `rho`. -/
 theorem representation_section_iff : Nonempty D.RepresentationSection ↔
     ∃ ρ, ρ ≫ D.representationLeft = D.representationRight := by
   constructor
@@ -162,7 +162,8 @@ theorem separator_bounds_eq (σ : D.RepresentationSection) :
     (⊥ : D.Sep ⟶ (E.lattice D.U).obj) = ⊤ :=
   D.diagonal_collapse D.separatorPair D.separatorPair_separates _ (D.separator_represented σ)
 
-/-- The factorization in `thm:internal-inseparability`, for the internal total-arrow reduct. -/
+/-- The factorization in `thm:internal-inseparability`, for the internal total-morphism
+reduct. -/
 def separatorFactor (σ : D.RepresentationSection) : D.Sep ⟶ D.ZeroLocus :=
   equalizer.lift (terminal.from D.Sep) (by simpa using D.separator_bounds_eq σ)
 
@@ -171,7 +172,7 @@ theorem separatorFactor_ι (σ : D.RepresentationSection) :
     D.separatorFactor σ ≫ equalizer.ι (⊥ : ⊤_ V ⟶ (E.lattice D.U).obj) ⊤ =
       terminal.from D.Sep := by simp [separatorFactor]
 
-/-- The structure arrow of the separator factors through the bound equalizer. -/
+/-- The structure morphism of the separator factors through the bound equalizer. -/
 theorem internal_inseparability (σ : D.RepresentationSection) :
     ∃ f : D.Sep ⟶ D.ZeroLocus,
       f ≫ equalizer.ι (⊥ : ⊤_ V ⟶ (E.lattice D.U).obj) ⊤ = terminal.from D.Sep :=

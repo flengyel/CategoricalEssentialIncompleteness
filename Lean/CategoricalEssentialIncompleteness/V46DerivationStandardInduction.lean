@@ -11,10 +11,9 @@ public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
 
 /-! # Rule induction on the constructed standard derivation codes
 
-The model functor is used only to preserve isomorphisms and finite
-coproducts. Well-founded induction uses the proved decrease of the actual
-standard node count, without an assumption that the functor preserves
-initial algebras.
+The model functor is used only to preserve isomorphisms and finite coproducts.
+Well-founded induction uses the proved decrease of the standard node count, without an
+assumption that the functor preserves initial algebras.
 -/
 
 @[expose] public section
@@ -64,9 +63,9 @@ section Standard
 variable [ℕ↓[ℒₒᵣ] ⊧* T]
 variable {F₀ : PredicateCategory T} {bound : ℕ} (R : RulePresentation F₀ bound)
 
-/-- Any external predicate on standard derivation codes that is closed
-under the actual typed constructors holds on the constructed carrier.
-For the standard-code soundness application, T is PA. -/
+/-- Any external predicate on standard derivation codes that is closed under the typed
+constructors holds on the constructed carrier. For the standard-code soundness
+application, T is PA. -/
 theorem nat_rule_induction
     (P : Obj T ℕ (derivationAlgebra T R).a.left → Prop)
     (step : ∀ (i : Fin (bound + 1)) (r : Obj T ℕ (R.ruleObject (derivationAlgebra T R).a i)),

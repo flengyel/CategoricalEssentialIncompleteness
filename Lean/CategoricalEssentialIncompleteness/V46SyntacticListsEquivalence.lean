@@ -24,8 +24,8 @@ variable [HasFiniteLimits C]
 variable [HasFiniteLimits D]
 variable (E : C ≌ D) {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
 
-/-- Apply the equivalence to a family, then compose its projection with
-the actual parameter isomorphism. -/
+/-- Apply the equivalence to a family, then compose its projection with the parameter
+isomorphism. -/
 def sliceEquivalence : Over P ≌ Over Q :=
   ((Over.post (X := P) E.functor) ⋙ Over.map b.hom).asEquivalence
 
@@ -83,9 +83,9 @@ section Parameters
 variable [HasFiniteCoproducts C] [HasFiniteCoproducts D]
 variable (V : C) (W : D) (e : E.functor.obj V ≅ W) (L : ListAlgebra V)
 
-/-- Compare the complete transported parameter algebra with the parameter
-algebra of the transported constructors. The comparison is the canonical
-product comparison on the actual carriers. -/
+/-- Compare the complete transported parameter algebra with the parameter algebra of the
+transported constructors. The comparison is the canonical product comparison on the
+carriers. -/
 def mappedParametersIso :
     (mappedListAlgebra (sliceEquivalence E b) (constantFamily P V) (constantFamily Q W)
       (coefficientComparison E b V W e) (L.withParameters P)).asAlgebra ≅
@@ -246,8 +246,8 @@ def mappedParametersIso :
       simp only [Category.assoc]
   exact constructorsIso A B k hn hc
 
-/-- Slice initiality is transported with its actual parameter and
-coefficient comparisons; no initiality is inserted into the data. -/
+/-- Slice initiality is transported with its parameter and coefficient comparisons; no
+initiality is inserted into the data. -/
 def mappedParametersInitial (hL : IsInitial (L.withParameters P).asAlgebra) :
     IsInitial ((mappedListAlgebra E V W e L).withParameters Q).asAlgebra :=
   (mappedListInitial (sliceEquivalence E b) (constantFamily P V) (constantFamily Q W)

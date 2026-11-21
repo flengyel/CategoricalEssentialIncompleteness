@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifierCoordinates
 public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
 
-/-! Capture transport uses the proved free-variable folds and the actual
-membership diagram. The original body is the one tested for capture. -/
+/-!
+Capture transport uses the proved free-variable folds and the membership diagram. The
+original body is the one tested for capture.
+-/
 
 @[expose] public section
 noncomputable section

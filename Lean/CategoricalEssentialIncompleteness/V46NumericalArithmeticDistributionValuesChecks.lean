@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionValues
 
 
-/-! # Statement checks in `V46NumericalArithmeticDistributionValuesChecks` -/
+/-! # The exact numerical distribution domain in literal word coordinates -/
 
 @[expose] public section
 noncomputable section

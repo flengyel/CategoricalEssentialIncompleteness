@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraph
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrenceOperations
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # The numerical occurrence traversal is the actual categorical fold -/
+/-! # The numerical occurrence traversal is the categorical fold -/
 
 @[expose] public section
 
@@ -27,8 +27,8 @@ namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 
-/-- The numerical PA constructor equations commute with the actual
-categorical operations, on every interpreted categorical source point. -/
+/-- The numerical PA constructor equations commute with the categorical operations, on
+every interpreted categorical source point. -/
 theorem occurrencesPair_commutes :
     (SyntaxPolynomial.jointFunctor (SyntaxPolynomial.termExpression V σ d)
       (SyntaxPolynomial.formulaExpression V π d)).map (occurrencesPair T V σ π d) ≫
@@ -96,8 +96,8 @@ theorem occurrencesPair_commutes :
     erw [hs,ConcreteNamedSubstitution.freeVariables_formula_constructor V σ π d u hp]
     exact occurrenceFormula_operation_value T V M π d _ _ hm
 
-/-- This is an actual endofunctor-algebra morphism. Its commutation law
-is proved from the numerical traversal and preserved finite geometry. -/
+/-- This is an endofunctor-algebra morphism. Its commutation law is proved from the
+numerical traversal and preserved finite geometry. -/
 def occurrenceHom : (categoricalSyntax T V σ π d).algebra ⟶
     (categoricalSyntax T V σ π d).occurrenceAlgebra where
   f := occurrencesPair T V σ π d
@@ -115,9 +115,8 @@ theorem formulaOccurrences_eq : (categoricalSyntax T V σ π d).formulaOccurrenc
     occurrencesArrow T V σ π d true :=
   (congrArg Prod.snd (occurrencesPair_eq_fold T V σ π d)).symm
 
-/-- Equality of the constructed quotient arrows is a literal T-proof
-of equality with the numerical graph, rather than only a statement
-about standard natural-number points. -/
+/-- Equality of the constructed quotient morphisms is a T-proof of equality with the
+numerical graph, rather than only a statement about standard natural-number points. -/
 theorem termOccurrences_graph_theory : Uniform T
     (chosenGraph T (categoricalSyntax T V σ π d).termOccurrences).graph
     (occurrencesGraph V σ π d false) := by

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46RestrictionTerminal
 public import CategoricalEssentialIncompleteness.V46SplitSplittings
 
-/-! # Restriction-terminal laws under the printed split total-category hypothesis -/
+/-! # Restriction-terminal laws under the split total-category hypothesis -/
 
 @[expose] public section
 

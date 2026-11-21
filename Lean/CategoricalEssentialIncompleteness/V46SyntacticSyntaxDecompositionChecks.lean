@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
 
-/-! # Statement checks in `V46SyntacticSyntaxDecompositionChecks` -/
+/-! # Root decomposition of accepted postfix words -/
 
 @[expose] public section
 noncomputable section

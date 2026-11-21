@@ -21,8 +21,8 @@ namespace CategoricalEssentialIncompleteness.V46.NumericalNamed
 local notation "E" => NumericalSyntax.predicateEquivalence
 local notation "χ" => NumericalCoordinates.coefficientIso
 
-/-- This inverse uses the actual c.e. set of tuple codes at every object.
-Its arrows are recovered through the already proved full numerical functor. -/
+/-- This inverse uses the c.e. set of tuple codes at every object. Its morphisms are
+recovered through the already proved full numerical functor. -/
 def literalInverse : NumericalTuples.Object ⥤ PredicateCategory 𝗧𝗔 where
   obj := NumericalCoordinates.codedPredicate
   map {C D} f := (E).functor.preimage ((χ C).hom ≫ f ≫ (χ D).inv)
@@ -53,8 +53,8 @@ def literalUnit : 𝟭 (PredicateCategory 𝗧𝗔) ≅ (E).functor ⋙ literalI
             (E).functor.map f ≫ (χ ((E).functor.obj D)).inv))
       simp only [Functor.map_comp, Functor.map_preimage, Iso.inv_hom_id_assoc])
 
-/-- The forward functor is unchanged. Only its explicit inverse coordinates
-are chosen to be the manuscript's actual tuple codes. -/
+/-- The forward functor is unchanged. Only its explicit inverse coordinates are chosen to
+be the manuscript's tuple codes. -/
 def literalEquivalence : PredicateCategory 𝗧𝗔 ≌ NumericalTuples.Object :=
   CategoryTheory.Equivalence.mk (E).functor literalInverse literalUnit literalCounit
 

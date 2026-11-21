@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedTranslation
 
 
-/-! # Statement checks in `V46ArithmeticNamedTranslationChecks` -/
+/-! # The named arithmetic signature and arithmetic semantics -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleParameters
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionValues
 
-/-! # The actual arithmetic absent-variable scheme label comparison -/
+/-! # The arithmetic absent-variable scheme label comparison -/
 
 @[expose] public section
 noncomputable section
@@ -67,8 +67,8 @@ private theorem occurrence_congr (V : Carrier) (σ π : ℕ → Carrier) (d : �
   cases hw
   rfl
 
-/-- The two actual false-fiber inclusions have the same point image
-under the already constructed name/formula product chart. -/
+/-- The two false-fiber inclusions have the same point image under the already constructed
+name/formula product chart. -/
 theorem image_iff (q : NumericalTuples.Point B) :
     (∃ a, (S).distributionInclusion.toFun a = q) ↔
       ∃ a : NumericalTuples.Point (numericalInterpretation.obj (S₀).distributionParameters),
@@ -137,8 +137,8 @@ def backward : numericalInterpretation.obj (S₀).distributionParameters ⟶ (S)
 @[reassoc] theorem backward_inclusion : backward ≫ (S).distributionInclusion =
     numericalInterpretation.map (S₀).distributionInclusion ≫ distributionBaseIso.inv := imageLift_comp _ _ backward_image
 
-/-- Its programs come from the actual pullback projection isomorphisms;
-they need not be total outside these coefficient carriers. -/
+/-- Its programs come from the pullback projection isomorphisms; they need not be total
+outside these coefficient carriers. -/
 def iso : (S).distributionParameters ≅ numericalInterpretation.obj (S₀).distributionParameters where
   hom := forward
   inv := backward

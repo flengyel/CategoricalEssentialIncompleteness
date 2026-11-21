@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationAlpha
 
 
-/-! # Statement checks in `V46ArithmeticNamedPresentationAlphaChecks` -/
+/-! # Original-name quantifiers and computed alpha comparison -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

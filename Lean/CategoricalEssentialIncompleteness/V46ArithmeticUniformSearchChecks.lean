@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSearch
 
 
-/-! # Statement checks in `V46ArithmeticUniformSearchChecks` -/
+/-! # Joint functional search for the uniform arithmetic construction -/
 
 @[expose] public section
 noncomputable section

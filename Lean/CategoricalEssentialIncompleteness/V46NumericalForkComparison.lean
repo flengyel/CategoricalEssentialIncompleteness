@@ -19,7 +19,7 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 
 namespace CategoricalEssentialIncompleteness.V46.NumericalTuples
 
-/-- The actual total fork category is equivalent to diagrams of numerical tuples. -/
+/-- The total fork category is equivalent to diagrams of numerical tuples. -/
 def forkEquivalence : EffectiveFork.Total ≌ (WalkingSpan ⥤ Object) :=
   EffectiveFork.totalEquivalence.trans (equivalence.symm.congrRight (E := WalkingSpan))
 

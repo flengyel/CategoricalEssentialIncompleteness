@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46RegularImage
 
 
-/-! # Statement checks in `V46RegularImageChecks` -/
+/-! # Initial derivation algebras and their images -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.Limits CategoryTheory.RestrictionCategory

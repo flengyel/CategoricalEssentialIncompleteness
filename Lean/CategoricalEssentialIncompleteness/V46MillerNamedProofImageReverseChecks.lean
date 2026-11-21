@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
 
 
-/-! # Statement checks in `V46MillerNamedProofImageReverseChecks` -/
+/-! # Exact Hilbert proof images for arbitrary uniformly enumerable Gamma -/
 
 @[expose] public section
 noncomputable section
@@ -40,7 +40,7 @@ example (φ : Fm) : NamedPostfixEncoding.formulaCode φ∈Total.support
     (NamedProofImage.formulaIdem P σ π d Γ hΓ) ↔ FiniteAxiomProof σ π d Γ φ :=
   NamedProofImage.formulaIdem_literal P σ π d Γ hΓ φ
 
-/-- The literal sentence-word comparison exposes the actual finite support. -/
+/-- The literal sentence-word comparison exposes the finite support. -/
 example (φ : Fm) : NamedPostfixEncoding.formulaCode φ∈Total.Subobjects.imageCodes
     (NamedProofImage.sentenceConclusion P σ π d Γ hΓ ≫ NamedProofImage.sentenceWord P σ π d) ↔
       (∃ L : List ℕ,(∀ code∈L,code∈Γ) ∧

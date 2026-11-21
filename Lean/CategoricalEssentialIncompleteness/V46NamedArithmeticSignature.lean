@@ -7,9 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
 
-/-! The fixed arithmetic signature, with literal variable names and
-ordered children. Equality is the built-in formula constructor; the
-single ordinary relation symbol is strict order. -/
+/-!
+The fixed arithmetic signature, with variable names and ordered children. Equality is
+the built-in formula constructor; the single ordinary relation symbol is strict order.
+-/
 
 @[expose] public section
 noncomputable section
@@ -76,7 +77,7 @@ def less (s t : Term) : Formula := .relation ⟨2,by decide⟩ ltSymbol ![s,t]
 @[simp] theorem mul_freeVariables (s t : Term) : (mul s t).freeVariables = s.freeVariables ++ t.freeVariables := by
   simp [mul,NamedFiniteSyntax.Term.freeVariables,List.ofFn_succ]
 
-/-- Literal arithmetic numerals use zero, one and binary addition. -/
+/-- Arithmetic numerals use zero, one and binary addition. -/
 def numeral : ℕ → Term
   | 0 => zero
   | n + 1 => add (numeral n) one

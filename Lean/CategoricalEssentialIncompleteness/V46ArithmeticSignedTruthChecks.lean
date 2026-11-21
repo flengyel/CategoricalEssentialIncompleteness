@@ -7,7 +7,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedContradiction
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Independent checks of truth for actual diagonal signed derivations -/
+/-! # Independent checks of truth for diagonal signed derivations -/
 @[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

@@ -8,12 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedGammaModelSource
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
 
-/-! # A semantic model of the printed consistent named Gamma
+/-! # A semantic model of the consistent named Gamma
 
-The enumeration is the given literal named enumeration. PA extension means
-derivability of its actual named arithmetic axioms. Completeness is used only
-after both the finite proof comparison and each original formula roundtrip
-have been proved.
+The enumeration is the given named enumeration. PA extension means derivability of its
+named arithmetic axioms. Completeness is used only after both the finite proof
+comparison and each original formula roundtrip have been proved.
 -/
 
 @[expose] public section
@@ -25,16 +24,16 @@ open NamedArithmeticSignature SyntacticPredicates
 variable (A : Carrier)
 local notation "S" => ArithmeticNamedProofConnectives.system A
 
-/-- The concrete given Gamma, extending actual named PA, has a consistent
-source presentation by the proved individual PA and Gamma axiom comparisons. -/
+/-- The concrete given Gamma, extending named PA, has a consistent source presentation by
+the proved individual PA and Gamma axiom comparisons. -/
 theorem source_consistent_of_extendsPA
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hc : Entailment.Consistent S) : Entailment.Consistent (sourceTheory A) :=
   source_consistent A (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hPA) hc
 
-/-- Genuine first-order completeness supplies a semantic K satisfying
-all literal Gamma sentences. K is distinct from the arithmetic code model;
-no standard-model truth or arithmetic proof of consistency is assumed. -/
+/-- First-order completeness supplies a semantic K satisfying all Gamma sentences. K is
+distinct from the arithmetic code model; no standard-model truth or arithmetic proof
+of consistency is assumed. -/
 theorem exists_model_all_assignments
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hc : Entailment.Consistent S) :
@@ -46,8 +45,8 @@ theorem exists_model_all_assignments
   have := hK
   exact ⟨K,s,fun ρ => source_model_models A ρ⟩
 
-/-- The actual Gamma soundness interface receives a model constructed
-from external consistency and the printed native PA extension. -/
+/-- The Gamma soundness interface receives a model constructed from external consistency
+and the named PA extension. -/
 theorem exists_model
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hc : Entailment.Consistent S) :

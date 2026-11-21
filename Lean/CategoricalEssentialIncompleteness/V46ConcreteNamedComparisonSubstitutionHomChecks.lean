@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionHom
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonSubstitutionHomChecks` -/
+/-! # The numerical state traversal is the stable substitution fold -/
 
 @[expose] public section
 noncomputable section

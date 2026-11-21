@@ -119,8 +119,8 @@ theorem substitution_preservation_PA (formula : Bool) :
   obtain rfl := (substitutionPayloadGraph_eval V σ π d out x replacement word).mp hout
   exact substitutionPayload_carrier V σ π d formula x replacement word hrep hw
 
-/-- This PA theorem identifies the independently computed free-for flag
-with the successful formula-value fiber, retaining its actual typed output. -/
+/-- This PA theorem identifies the independently computed free-for flag with the
+successful formula-value fiber, retaining its typed output. -/
 theorem freeFor_success_PA : 𝗣𝗔 ⊢ freeForSuccessSentence V σ π d := by
   apply complete.{0} 𝗣𝗔
   intro M _ _

@@ -67,8 +67,7 @@ end SyntaxPolynomial
 
 namespace SumFibers
 
-/-- The two pullbacks of an arrow into a coproduct exhibit its source
-as a coproduct. -/
+/-- The two pullbacks of a morphism into a coproduct exhibit its source as a coproduct. -/
 def isColimit {X A B : D} (f : X ⟶ A ⨿ B) :
     IsColimit (BinaryCofan.mk (pullback.fst f coprod.inl) (pullback.fst f coprod.inr)) := by
   have h := (BinaryCofan.isVanKampen_iff _).mp

@@ -147,7 +147,7 @@ theorem T_whole_subsingleton : Subsingleton (wholeFunctor.obj T) := by
   refine ⟨fun x y => e.toEquiv.injective ?_⟩
   exact (one_eq (e.hom x)).trans (one_eq (e.hom y)).symm
 
-/-- The same actual monomorphism has a noninjective whole-space component. -/
+/-- The same monomorphism has a noninjective whole-space component. -/
 theorem H_to_T_whole_not_injective : ¬ Function.Injective (wholeFunctor.map H_to_T) := by
   intro hi
   letI := T_whole_subsingleton

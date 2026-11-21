@@ -130,7 +130,7 @@ theorem embedding_injective (X : Object) : Injective (embedding X) := by
     obtain ⟨_, he'⟩ := (mem_endpointEncoding id Computable.id x' y).mp hx'y
     exact (Nat.pair_eq_pair.mp (he.symm.trans he')).2
 
-/-- Lemma A.5: every computational fork has the specified total restriction embedding. -/
+/-- Lemma B.5: every computational fork has the specified total restriction embedding. -/
 theorem dominance (X : Object) :
     ∃ (m : X ⟶ V) (s : V ⟶ X), isTotal m ∧ m ≫ s = 𝟙 X ∧ s ≫ m = rst s := by
   let m := embedding X

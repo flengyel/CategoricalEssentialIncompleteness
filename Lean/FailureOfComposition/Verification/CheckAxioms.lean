@@ -8,7 +8,7 @@ module
 public import FailureOfComposition
 
 
-/-! # Definitions and theorems in `CheckAxioms` -/
+/-! # Axiom dependencies of the arithmetic and evaluator theorems -/
 
 @[expose] public section
 #print axioms FailureOfComposition.NativeInternalApplications.canonical_checks_correct

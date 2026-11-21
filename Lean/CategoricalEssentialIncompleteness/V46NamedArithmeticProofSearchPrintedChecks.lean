@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted
 
-/-! # Full quantifier and ProvΓ(NegΘ) checks for printed Lemma 7.2 -/
+/-! # Full quantifier and ProvΓ(NegΘ) checks for Lemma 8.2 -/
 
 @[expose] public section
 noncomputable section

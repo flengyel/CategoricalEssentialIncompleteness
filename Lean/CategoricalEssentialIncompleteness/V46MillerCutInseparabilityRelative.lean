@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparability
 
 
-/-! # Definitions and theorems in `V46MillerCutInseparabilityRelative` -/
+/-! # Decision predicates relative to a single representation -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
@@ -16,9 +16,9 @@ set_option backward.isDefEq.respectTransparency.types false
 
 /-! # The fixed-oracle separator obstructs Turing universality of J_p(tau)
 
-This is a consequence of the displayed recursive reduction;
-CutApplications supplies the actual reduction proved in Lemma8.3. Its target is the full fixed-oracle category, not the earlier
-restricted category of ordinary value extensions.
+This is a consequence of the displayed recursive reduction; CutApplications supplies
+the reduction proved in Lemma 9.3. Its target is the full fixed-oracle category, not
+the earlier restricted category of ordinary value extensions.
 -/
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory

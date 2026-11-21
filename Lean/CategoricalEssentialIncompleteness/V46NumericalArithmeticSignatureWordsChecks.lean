@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureWords
 
 
-/-! # Statement checks in `V46NumericalArithmeticSignatureWordsChecks` -/
+/-! # The computable identity-on-word signature chart -/
 
 @[expose] public section
 noncomputable section

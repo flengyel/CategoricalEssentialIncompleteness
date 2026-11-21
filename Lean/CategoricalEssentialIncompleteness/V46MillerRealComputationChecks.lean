@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealComputation
 
 
-/-! # Statement checks in `V46MillerRealComputationChecks` -/
+/-! # Real computation and the Miller property -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Checks

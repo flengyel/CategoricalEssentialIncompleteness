@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
 
 
-/-! # Statement checks in `V46MillerRealClosedAxiomsChecks` -/
+/-! # Recognition of the ordered-field and real-closure axiom words -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

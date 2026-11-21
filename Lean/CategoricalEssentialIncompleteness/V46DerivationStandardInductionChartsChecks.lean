@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionCharts
 
 
-/-! # Statement checks in `V46DerivationStandardInductionChartsChecks` -/
+/-! # Constructor charts for the constructed derivation trees -/
 
 @[expose] public section
 noncomputable section

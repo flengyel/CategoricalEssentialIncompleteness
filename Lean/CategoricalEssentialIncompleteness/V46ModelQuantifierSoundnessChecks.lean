@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ModelQuantifierSoundness
 
 
-/-! # Statement checks in `V46ModelQuantifierSoundnessChecks` -/
+/-! # Distribution soundness with an opaque interpreted variable object -/
 
 @[expose] public section
 noncomputable section

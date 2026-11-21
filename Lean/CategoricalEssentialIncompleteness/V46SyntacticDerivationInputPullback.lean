@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRules
 
-/-! The positive literal matching carrier has the actual pullback universal property. -/
+/-! The positive literal matching carrier has the pullback universal property. -/
 
 @[expose] public section
 noncomputable section
@@ -20,7 +20,7 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticDerivation.RuleInput
 variable {T : ArithmeticTheory} [𝗣𝗔 ⪯ T] {A B F : Carrier}
 variable (p : GraphMorphism T A F) (q : GraphMorphism T B F)
 
-/-- A matching input is an actual subobject of the literal ordered product. -/
+/-- A matching input is a subobject of the literal ordered product. -/
 theorem toProductProof : T ⊢ inclusionSentence (carrier p q) (productCarrier A B) := by
   apply complete.{0} T
   intro M _ hM
@@ -108,8 +108,8 @@ variable (b : X ⟶ (B : PredicateCategory T))
 variable (h : a ≫ representedArrow T p = b ≫ representedArrow T q)
 
 include h in
-/-- The existing actual product lift already has the positive matching
-property whenever its two legs satisfy the given square. -/
+/-- The existing product lift already has the positive matching property whenever its two
+legs satisfy the given square. -/
 theorem lift_support : T ⊢ supportSentence X (carrier p q) (productLift T a b).graph := by
   apply complete.{0} T
   intro M _ hM
@@ -129,7 +129,7 @@ theorem lift_support : T ⊢ supportSentence X (carrier p q) (productLift T a b)
   exact ⟨(relation_support T a M x r har).1,
     (carrier_pair p q r d).mpr ⟨z, hpz, (relation_class T q M d z).mp hqz⟩⟩
 
-/-- This is the actual product-lift graph with its proved matching codomain. -/
+/-- This is the product-lift graph with its proved matching codomain. -/
 def lift : GraphMorphism T X (carrier p q) where
   graph := (productLift T a b).graph
   support := lift_support p q a b h
@@ -161,8 +161,8 @@ def lift : GraphMorphism T X (carrier p q) where
   rw [← toProduct_children, ← Category.assoc, lift_toProduct]
   exact productLift_snd T a b
 
-/-- The literal positive matching carrier presents the actual categorical
-pullback of the two supplied graph morphisms. -/
+/-- The positive matching carrier presents the categorical pullback of the two supplied
+graph morphisms. -/
 theorem isPullback :
     IsPullback (representedArrow T (label p q)) (representedArrow T (children p q))
       (representedArrow T p) (representedArrow T q) := by

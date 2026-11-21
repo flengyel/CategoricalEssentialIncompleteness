@@ -90,8 +90,8 @@ theorem GraphMorphism.regularEpi_iff_surjective {C D : PredicateCategory T}
     let : IsSplitEpi (representedArrow T f) := f.isSplitEpi_of_surjective hs
     infer_instance
 
-/-- The selected section transports through the actual comparison
-equivalence and its counit isomorphisms. -/
+/-- The selected section transports through the comparison equivalence and its counit
+isomorphisms. -/
 theorem totalSplit_strongEpi_split {X Y : TotalSplit T} (f : X ⟶ Y) [StrongEpi f] :
     IsSplitEpi f := by
   let E := predicateEquivalence T

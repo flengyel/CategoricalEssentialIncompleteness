@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariables
 
-/-! Literal named-variable substitution and its separately computed free-for
-flag. All functions are total on numbers; only source restrictions later assert
-that the input is a variable and the replacement and body have their types. -/
+/-!
+Named-variable substitution and its separately computed free-for flag. All functions
+are total on numbers; only source restrictions later assert that the input is a
+variable and the replacement and body have their types.
+-/
 
 @[expose] public section
 noncomputable section

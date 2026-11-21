@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralCoordinates
 
 
-/-! # Statement checks in `V46ArithmeticLiteralCoordinatesChecks` -/
+/-! # The sentence chart in the canonical split-domain interpretation -/
 
 @[expose] public section
 noncomputable section

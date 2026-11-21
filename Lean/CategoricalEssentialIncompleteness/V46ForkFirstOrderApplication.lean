@@ -36,7 +36,7 @@ def localInitial (H : Subobject (carrier i)) : IsInitial (localProofs i H) :=
 
 variable (Γ : Set (Tuple (carrier i).dimension)) (hΓ : REPred (· ∈ Γ))
 
-/-- Restrict the given c.e. tuple set to the actual endpoint sentence carrier. -/
+/-- Restrict the given c.e. tuple set to the endpoint sentence carrier. -/
 def axiomObject : NumericalTuples.Object :=
   ⟨(carrier i).dimension, Γ ∩ (carrier i).support, hΓ.and (carrier i).enumerable⟩
 
@@ -50,7 +50,7 @@ theorem axiom_membership (x : Point (carrier i)) :
 
 def localConclusion := FirstOrderReflection.conclusion (localProofs i) (imageSubobject (axiomMap i Γ hΓ))
 
-/-- Membership is witnessed by an actual finite derivation with a sentence conclusion. -/
+/-- Membership is witnessed by a finite derivation with a sentence conclusion. -/
 def closureSet : Set (Point (carrier i)) := Set.range (localConclusion i Γ hΓ).toFun
 
 theorem closure_image : imageSubobject (localConclusion i Γ hΓ) =

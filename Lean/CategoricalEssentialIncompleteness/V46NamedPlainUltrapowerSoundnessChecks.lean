@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainUltrapowerSoundness
 
 
-/-! # Statement checks in `V46NamedPlainUltrapowerSoundnessChecks` -/
+/-! # The constructed soundness factor in the arithmetic ultrapower -/
 
 @[expose] public section
 noncomputable section

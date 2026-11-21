@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.InternalCartesian
 
 /-!
-# Global arrows and predicates
+# Global morphisms and predicates
 
 Global points of the internal total hom-objects form an ordinary category.
 Its binary products are induced by the internal product operations. The
@@ -30,7 +30,7 @@ namespace InternalHom
 variable {V : Type u} [Category.{v} V] [HasFiniteLimits V] {O : Type w}
 variable (H : InternalHom V O)
 
-/-- Objects of the ordinary category of global arrows. -/
+/-- Objects of the ordinary category of global morphisms. -/
 structure Global (H : InternalHom V O) where
   obj : O
 
@@ -102,7 +102,7 @@ def globalProductIso (X Y : H.Global) : X ⨯ Y ≅ H.globalProduct X Y :=
       simp only [Category.assoc, H.globalProductIso_hom_snd, prod.lift_snd,
         H.globalPair_snd]
 
-/-- The product comparison respects the two-arrow product operation. -/
+/-- The product comparison respects the two-morphism product operation. -/
 theorem globalProductIso_naturality {X Y X' Y' : H.Global}
     (f : X ⟶ X') (g : Y ⟶ Y') :
     prod.map f g ≫ (H.globalProductIso X' Y').hom =

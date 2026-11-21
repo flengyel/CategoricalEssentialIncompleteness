@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessDiagonal
 
 
-/-! # Statement checks in `V46NumericalArithmeticIncompletenessDiagonalChecks` -/
+/-! # The universal program's classical diagonal pair -/
 
 @[expose] public section
 noncomputable section

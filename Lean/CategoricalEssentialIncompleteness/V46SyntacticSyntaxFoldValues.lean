@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFold
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawMapLaws
 
-/-! # The actual fold's ternary graphs are exactly the finite-record evaluators -/
+/-! # The fold's ternary graphs are exactly the finite-record evaluators -/
 
 @[expose] public section
 
@@ -48,8 +48,8 @@ theorem formulaFold_pairPoint (p : Obj T M P) (w : Obj T M (formulaCarrier a b))
   rw [pairPoint_fst, pairPoint_snd] at h
   exact h
 
-/-- The equivalence is unconditional on scalar inputs: both sides have
-their actual parameter, accepted-word and output support built in. -/
+/-- The equivalence is unconditional on scalar inputs: both sides have their parameter,
+accepted-word and output support built in. -/
 theorem termFold_rawArrow (p w x : M) :
     (rawArrow T (termFold T a b B)).val.Evalb ![p, w, x] ↔
       ((decode T P a b B).evaluationFormula false).val.Evalb ![p, w, x] := by
@@ -101,8 +101,8 @@ theorem formulaFold_rawArrow (p w x : M) :
       (pairPoint T M pp ww) xx hc).mpr ((formulaFold_pairPoint T a b B M pp ww xx).mpr h)
 
 
-/-- Polynomial application may read either the actual fold graphs or
-the proved evaluator graphs, on all scalar inputs. -/
+/-- Polynomial application may read either the fold graphs or the proved evaluator graphs,
+on all scalar inputs. -/
 theorem fold_mapRaw (q : RawPolynomial) (p u v : M) :
     (mapRaw P (rawArrow T (termFold T a b B)) (rawArrow T (formulaFold T a b B))
       q).val.Evalb ![p, u, v] ↔

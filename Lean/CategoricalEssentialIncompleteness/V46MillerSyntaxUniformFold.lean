@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxFold
 
-/-! # Actual slice fold morphisms for arbitrary uniformly enumerable coefficients
+/-! # Slice fold morphisms for arbitrary uniformly enumerable coefficients
 
 Both the coefficient objects and the target families are arbitrary.
 Totality follows from the constructed positive-record evaluator and its

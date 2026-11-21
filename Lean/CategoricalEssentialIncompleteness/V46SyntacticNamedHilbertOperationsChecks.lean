@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertOperations
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertOperationsChecks` -/
+/-! # Constructor values on named-rule parameter points -/
 
 @[expose] public section
 noncomputable section

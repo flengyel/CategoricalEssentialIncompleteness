@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignatureRelabel
 
 
-/-! # Statement checks in `V46NumericalArithmeticSignatureRelabelChecks` -/
+/-! # Identity-on-code signature comparisons preserve named finite syntax -/
 
 @[expose] public section
 noncomputable section

@@ -60,7 +60,7 @@ theorem product_comparison_value {X Y : Over P} {U W : D}
     prod.lift_snd, prod.comp_lift]
   exact congrArg₂ prod.lift hf hg
 
-/-- The traversal is the value coordinate of the actual polynomial comparison. -/
+/-- The traversal is the value coordinate of the polynomial comparison. -/
 theorem tupleMap_comparison {Y Z : D}
     (f : A ⟶ (constantFamily P Y, constantFamily P Z)) (n : ℕ) :
     (((SyntaxPolynomial.power .term n).withParameters P).eval.map f ≫

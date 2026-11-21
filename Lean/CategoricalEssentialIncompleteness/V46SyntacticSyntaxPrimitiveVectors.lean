@@ -80,9 +80,9 @@ def fold {k : ℕ} {B : VecRec.Blueprint k} (c : VecRec.Construction ℕ B)
               (fold c params (Nat.natToList n.unpair.2))
           rw [pack_natToList, ih n.unpair.2 (Nat.lt_succ_of_le (Nat.unpair_right_le n))]
 
-/-- This closure theorem proves a standard certificate from certificates
-for the actual nil and cons computations. It makes no inference about
-nonstandard models from standard extensional equality. -/
+/-- This closure theorem proves a standard certificate from certificates for the nil and
+cons computations. It makes no inference about nonstandard models from standard
+extensional equality. -/
  theorem vecRec_primrec {α : Type*} [Primcodable α] {k : ℕ} {B : VecRec.Blueprint k}
     (c : VecRec.Construction ℕ B) (params : α → Fin k → ℕ)
     (hnil : Primrec (fun a => c.nil (params a)))

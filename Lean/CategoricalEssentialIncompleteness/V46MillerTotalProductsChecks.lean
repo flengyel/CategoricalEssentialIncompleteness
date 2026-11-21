@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalProducts
 
 
-/-! # Statement checks in `V46MillerTotalProductsChecks` -/
+/-! # Restriction products of arbitrary uniformly semidecidable carriers -/
 
 @[expose] public section
 noncomputable section

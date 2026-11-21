@@ -29,8 +29,8 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticSentenceImages
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable {P Fm S : PredicateCategory T}
 
-/-- Sentence codes are formula codes in the image of the actual sentence
-inclusion; the chosen pullback object can have different raw codes. -/
+/-- Sentence codes are formula codes in the image of the sentence inclusion; the chosen
+pullback object can have different raw codes. -/
 def sentenceCarrier (j : S ⟶ Fm) : Carrier := imageCarrier (chosenGraph T j).graph
 
 theorem exists_sentenceChart (j : S ⟶ Fm) [Mono j] :
@@ -144,8 +144,8 @@ theorem restrictedImage_inclusion (c : P ⟶ Fm) (j : S ⟶ Fm) [Mono j] :
   intro z hz
   exact (restrictedImage_eval T M c j z).mp hz
 
-/-- The comparison is the actual partial-identity inclusion; its
-inverse is the represented converse graph supplied by model bijectivity. -/
+/-- The comparison is the partial-identity inclusion; its inverse is the represented
+converse graph supplied by model bijectivity. -/
 def restrictedImageIso (c : P ⟶ Fm) (j : S ⟶ Fm) [Mono j] :
     CategoryTheory.Iso (C := PredicateCategory T)
       (imageCarrier (chosenGraph T (restrictedConclusion T c j)).graph) (theoryCarrier T c j) :=
@@ -196,8 +196,8 @@ theorem theoryIdem_model (c : P ⟶ Fm) (j : S ⟶ Fm)
   · rintro ⟨hs, ht, he⟩
     exact ⟨⟨hs, ht⟩, he⟩
 
-/-- The splitting of the source idempotent represents the actual
-sentence-conclusion image after the proved predicate equivalence. -/
+/-- The splitting of the source idempotent represents the sentence-conclusion image after
+the proved predicate equivalence. -/
 def theorySplittingIso (c : P ⟶ Fm) (j : S ⟶ Fm) [Mono j] :
     interpretedObject T (theoryCarrier T c j) ≅
       (realization T).obj (image (pullback.snd c j)) :=

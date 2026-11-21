@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
 
 
-/-! # Statement checks in `V46NamedGammaSoundnessChecks` -/
+/-! # The Gamma axiom filter satisfies the soundness hypothesis -/
 
 @[expose] public section
 noncomputable section

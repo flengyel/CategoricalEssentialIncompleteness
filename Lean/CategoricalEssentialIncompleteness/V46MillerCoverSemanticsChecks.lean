@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCoverSemantics
 
 
-/-! # Statement checks in `V46MillerCoverSemanticsChecks` -/
+/-! # Finite covers characterize unanimity on the full representation fiber -/
 
 @[expose] public section
 noncomputable section

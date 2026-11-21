@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOriginalInputs
 
-/-! Positive arithmetic root operations of an actual inference algebra. -/
+/-! Positive arithmetic root operations of an inference algebra. -/
 
 @[expose] public section
 noncomputable section
@@ -22,8 +22,8 @@ variable (R : RulePresentation F N) (q : GraphMorphism T Q F)
 variable (α : R.inference.obj (Over.mk (representedArrow T q)) ⟶ Over.mk (representedArrow T q))
 variable (i : Fin (N + 1))
 
-/-- The supplied algebra is applied only on the proved matching input
-pullback, transported into its actual inference summand. -/
+/-- The supplied algebra is applied only on the proved matching input pullback,
+transported into its inference summand. -/
 def ruleOperationArrow : @Quiver.Hom (PredicateCategory T) inferInstance
     (ruleInputCarrier R q i) Q :=
   (ruleInputIso R q i).hom ≫
@@ -41,8 +41,8 @@ theorem ruleOperation_support :
     T ⊢ supportSentence (ruleInputCarrier R q i) Q (ruleOperation R q α i).graph :=
   (ruleOperation R q α i).support
 
-/-- The actual slice-morphism equation gives the parent conclusion;
-individual child conclusions remain the ordered premise tuple. -/
+/-- The slice-morphism equation gives the parent conclusion; individual child conclusions
+remain the ordered premise tuple. -/
 theorem ruleOperation_projection :
     representedArrow T (ruleOperation R q α i) ≫ representedArrow T q =
       representedArrow T (ruleInputConclusion R q i) := by

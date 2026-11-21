@@ -151,7 +151,7 @@ theorem toPlain_constructor_graph {M : Type} [ORingStructure M] [M↓[ℒₒᵣ]
       ![constructor formula (if formula then b else a) u, constructor formula (if formula then b else a) u] :=
   (GraphMorphism.identityGraph_eval _ _ _).mpr ⟨(plain_constructor_comparison formula a b u hu).1, rfl⟩
 
-/-- Actual inverse quotient arrows, fixing the same word on both sides. -/
+/-- Inverse quotient morphisms, fixing the same word on both sides. -/
 def plainCarrierIso (formula : Bool) (a b : RawPolynomial) :
     @CategoryTheory.Iso (PredicateCategory T) inferInstance
       (carrier formula a b) (plainCarrier formula a b) where

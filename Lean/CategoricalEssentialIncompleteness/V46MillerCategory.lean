@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformComputations
 public import CategoricalEssentialIncompleteness.PartialFunctions
 
-/-! # The actual representation-independent Miller category
+/-! # The representation-independent Miller category
 
-Objects retain their formal numerical product and coproduct expressions.
-An arrow has one oracle index for all representations, with equality of its
-entire partial graph; there is no ordinary value-extension field.
+Objects retain their formal numerical product and coproduct expressions. A morphism
+has one oracle index for all representations, with equality of its entire partial
+graph; there is no ordinary value-extension field.
 -/
 
 @[expose] public section

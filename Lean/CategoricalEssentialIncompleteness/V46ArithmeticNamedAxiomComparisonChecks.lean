@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
 
 
-/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonChecks` -/
+/-! # Concrete source PA admissibility for the named enumeration -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

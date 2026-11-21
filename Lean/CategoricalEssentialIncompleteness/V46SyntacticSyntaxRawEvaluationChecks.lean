@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawEvaluation
 
 
-/-! # Statement checks in `V46SyntacticSyntaxRawEvaluationChecks` -/
+/-! # Finite-polynomial action on literal-word evaluation graphs -/
 
 @[expose] public section
 noncomputable section

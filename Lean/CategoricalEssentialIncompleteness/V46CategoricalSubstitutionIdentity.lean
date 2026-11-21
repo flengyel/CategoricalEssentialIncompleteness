@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdent
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
 public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariableLaws
 
-/-! Identity substitution for the actual named-variable substitution fold. -/
+/-! Identity substitution for the named-variable substitution fold. -/
 
 @[expose] public section
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationInitial
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationInitialChecks` -/
+/-! # Initiality of the mapped PA constructor algebra -/
 
 @[expose] public section
 noncomputable section

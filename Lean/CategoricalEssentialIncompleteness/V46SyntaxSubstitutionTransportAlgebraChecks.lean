@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebra
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportAlgebraChecks` -/
+/-! # The two-sorted substitution algebra isomorphism -/
 
 @[expose] public section
 noncomputable section

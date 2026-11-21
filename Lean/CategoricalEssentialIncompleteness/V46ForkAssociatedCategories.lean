@@ -30,8 +30,8 @@ variable {D C : Type u} [Category.{v} D] [Category.{v} C] [HasPullbacks D]
   (Q : C) (τ : PCategoryStruct.nearProd Q Q ⟶ Q) (hτ : RecursionCategory.IsTuringMorphism τ)
   (hQ : ∀ X : C, ∃ (j : X ⟶ Q) (s : Q ⟶ X), isTotal j ∧ j ≫ s = 𝟙 X)
 
-/-- Base equivalence induces an equivalence on the two actual partial-map
-slices. Transport the parameterized evaluator and total retracts across it. -/
+/-- Base equivalence induces an equivalence on the two partial-map slices. Transport the
+parameterized evaluator and total retracts across it. -/
 def sliceTuring : CompatibleSplitSlices.TuringData (PartialMaps.Par (Over U)) := by
   subst ρ
   let T := E.functor.obj U
@@ -81,7 +81,7 @@ theorem extension : base ≤ U.val := Subobject.le_of_comm i hi
 
 abbrev comparison := MonicPartialSliceComparison.postcompose i
 
-/-- The Boolean morphism on the actual total-category theorem and refutation domains. -/
+/-- The Boolean morphism on the total-category theorem and refutation domains. -/
 def decision (hd : theoremDomain U ⊓ (Subobject.pullback (ForkAssociatedTheories.negation U)).obj
     (theoremDomain U) = ⊥) :=
   BooleanPartialDecision.decision MonicPartialSliceComparison.inverses (theoremDomain U)

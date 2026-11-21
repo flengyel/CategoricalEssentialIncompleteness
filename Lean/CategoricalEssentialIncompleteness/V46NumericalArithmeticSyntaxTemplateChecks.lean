@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSyntaxTemplate
 
 
-/-! # Statement checks in `V46NumericalArithmeticSyntaxTemplateChecks` -/
+/-! # The arithmetic coefficient and polynomial-input charts -/
 
 @[expose] public section
 noncomputable section

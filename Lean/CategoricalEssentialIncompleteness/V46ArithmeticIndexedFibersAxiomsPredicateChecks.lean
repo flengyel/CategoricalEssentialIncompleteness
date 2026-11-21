@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxiomsPredicate
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersAxiomsPredicateChecks` -/
+/-! # The numeral pullback of the indexed axiom predicate -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.ClassicalProgramBase
 
-/-! # Restriction products for extensional partial recursive arrows -/
+/-! # Restriction products for extensional partial recursive morphisms -/
 
 @[expose] public section
 

@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
 
 /-! # Model predicates and soundness of the constructed logical derivations
 
-All proof carriers and conclusion maps here are the constructed arbitrary-rule
-initial algebras and their actual sentence pullbacks. The predicate wrappers
-are definitions of the displayed graph conditions, used before specializing
-the syntax algebra to a concrete code presentation.
+All proof carriers and conclusion maps here are the constructed arbitrary-rule initial
+algebras and their sentence pullbacks. The predicate wrappers are definitions of the
+displayed graph conditions, used before specializing the syntax algebra to a concrete
+code presentation.
 -/
 
 @[expose] public section
@@ -128,8 +128,8 @@ end Models
 section Standard
 variable [ℕ↓[ℒₒᵣ] ⊧* T] (Q : Obj T ℕ S.algebra.a.2 → Prop)
 
-/-- Standard rule induction applies to the actual constructed proof carrier.
-The only axiom hypothesis is the stated predicate on its actual axiom points. -/
+/-- Standard rule induction applies to the constructed proof carrier. The only axiom
+hypothesis is the stated predicate on its axiom points. -/
 theorem conclusion_property
     (hlogical : ∀ l : Obj T ℕ S.logicalParameters, Q ((F T ℕ).map S.logicalAxioms l))
     (haxioms : AxiomsProperty T S axioms ℕ Q)

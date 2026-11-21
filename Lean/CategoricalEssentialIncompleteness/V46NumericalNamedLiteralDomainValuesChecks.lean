@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDomainValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralDomainValuesChecks` -/
+/-! # The numerical substitution domain is the independent free-for flag -/
 
 @[expose] public section
 noncomputable section

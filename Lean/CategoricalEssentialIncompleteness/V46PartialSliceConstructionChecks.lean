@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46PartialSliceEquivalence
 public import CategoricalEssentialIncompleteness.V46AmbientSliceTuring
 public import CategoricalEssentialIncompleteness.V46PartialSliceTuring
 
-/-! # Span comparison, actual partial slices and their universal computations -/
+/-! # Span comparison, partial slices and their universal computations -/
 
 @[expose] public section
 

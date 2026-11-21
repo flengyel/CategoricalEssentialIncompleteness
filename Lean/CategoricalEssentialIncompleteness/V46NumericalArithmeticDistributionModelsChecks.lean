@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionModels
 
 
-/-! # Statement checks in `V46NumericalArithmeticDistributionModelsChecks` -/
+/-! # The distribution parameter fiber in every arithmetic model -/
 
 @[expose] public section
 noncomputable section

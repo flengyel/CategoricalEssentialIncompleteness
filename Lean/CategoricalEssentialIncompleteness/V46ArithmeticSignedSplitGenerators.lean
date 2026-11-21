@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedTotal
 
-/-! # The printed split diagonal generators -/
+/-! # The split diagonal generators -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

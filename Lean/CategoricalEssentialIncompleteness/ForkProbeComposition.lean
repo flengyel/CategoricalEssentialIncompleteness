@@ -55,8 +55,8 @@ theorem probePoint_comp_iff (i : Bool) {X Y : Object} (f : X ⟶ Y)
       exact Hom.ext (CategoryTheory.Limits.zero_comp) (CategoryTheory.Limits.zero_comp)
         ((constant_comp_iff f.right x y).mpr h)
 
-/-- The transported functor is literally partial postcomposition on total
-probe arrows. This equation includes its precise definedness. -/
+/-- The transported functor is literally partial postcomposition on total probe morphisms.
+This equation includes its precise definedness. -/
 theorem probe_postcomposition (i : Bool) {X Y : Object} (f : X ⟶ Y)
     (p : ProbeTotal i X) (q : ProbeTotal i Y) :
     q ∈ (probeFunctor i).map f p ↔ p.val ≫ f=q.val := by

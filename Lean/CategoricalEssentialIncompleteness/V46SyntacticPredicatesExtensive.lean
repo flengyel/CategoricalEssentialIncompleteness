@@ -37,8 +37,8 @@ def converseGraph (F : Graph) : Graph := .mkSigma “x y. !F.val y x”
     (converseGraph F).val.Evalb ![x, y] ↔ F.val.Evalb ![y, x] := by
   simp [converseGraph]
 
-/-- Semantic bijectivity supplies the two first-order proofs required to
-make the actual converse graph a total predicate-category morphism. -/
+/-- Semantic bijectivity supplies the two first-order proofs required to make the converse
+graph a total predicate-category morphism. -/
 def converseOfModelsBijective {C D : PredicateCategory T} (f : GraphMorphism T C D)
     (h : ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T],
       Function.Bijective ((functor T M).map (representedArrow T f))) :
@@ -137,9 +137,9 @@ theorem isIso_of_models_bijective {C D : PredicateCategory T} (f : C ⟶ D)
   have hi := (isoOfModelsBijective T g hg).isIso_hom
   simpa only [isoOfModelsBijective, g, chosenGraph_class] using hi
 
-/-- The index includes every Type-zero arithmetic model used by the
-completeness theorem. This is a genuine model bundle, with no preservation
-or categorical conclusion stored as a field. -/
+/-- The index includes every Type-zero arithmetic model used by the completeness theorem.
+This is a model bundle, with no preservation or categorical conclusion stored as a
+field. -/
 structure ArithmeticModel (T : ArithmeticTheory) where
   carrier : Type
   arithmetic : ORingStructure carrier
@@ -149,8 +149,8 @@ instance (m : ArithmeticModel T) : ORingStructure m.carrier := m.arithmetic
 
 instance (m : ArithmeticModel T) : m.carrier↓[ℒₒᵣ] ⊧* T := m.models
 
-/-- Package all of the actual model functors into one functor to a
-functor category, where finite constructions are evaluated pointwise. -/
+/-- Package all of the model functors into one functor to a functor category, where finite
+constructions are evaluated pointwise. -/
 def allModels : PredicateCategory T ⥤ (Discrete (ArithmeticModel T) ⥤ Type) where
   obj C := Discrete.functor (fun m => Obj m.carrier C)
   map f := Discrete.natTrans (fun m => (functor T m.as.carrier).map f)
@@ -198,7 +198,7 @@ instance predicateFinitaryExtensive : FinitaryExtensive (PredicateCategory T) :=
 instance totalSplitHasFiniteCoproducts : HasFiniteCoproducts (TotalSplit T) where
   out _ := Adjunction.hasColimitsOfShape_of_equivalence (predicateEquivalence T).inverse
 
-/-- Extensivity transports to the actual category of total split program maps. -/
+/-- Extensivity transports to the category of total split program maps. -/
 instance totalSplitFinitaryExtensive : FinitaryExtensive (TotalSplit T) :=
   finitaryExtensive_of_preserves_and_reflects_isomorphism (predicateEquivalence T).inverse
 

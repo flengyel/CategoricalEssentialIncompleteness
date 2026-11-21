@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
 
 
-/-! # Statement checks in `V46MillerCategoryRelativeChecks` -/
+/-! # The fixed-oracle target and the faithful inclusion -/
 
 @[expose] public section
 noncomputable section

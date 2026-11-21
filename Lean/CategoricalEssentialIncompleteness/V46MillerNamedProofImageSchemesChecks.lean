@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemes
 
 
-/-! # Statement checks in `V46MillerNamedProofImageSchemesChecks` -/
+/-! # Seven scheme witnesses in the uniform parameter objects -/
 
 @[expose] public section
 noncomputable section

@@ -50,10 +50,9 @@ theorem constantLeaf_model (P C : PredicateCategory T) (p : Obj T M P) (u : M)
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable {P X Y C D : PredicateCategory T}
 
-/-- The parameter need not be encoded as a numerical pair. The two
-leaf-value hypotheses concern the actual fixed fiber, and the conclusion
-uses the actual slice-polynomial map. This finite AST theorem assumes no
-fold or initiality equation. -/
+/-- The parameter need not be encoded as a numerical pair. The two leaf-value hypotheses
+concern the fixed fiber, and the conclusion uses the slice-polynomial map. This finite
+AST theorem assumes no fold or initiality equation. -/
 theorem constantRepresentation_map (f : constantFamily P X ⟶ constantFamily P C)
     (g : constantFamily P Y ⟶ constantFamily P D) (p : Obj T M P) (φ ψ : M → M)
     (hf : ∀ z : Obj T M (P ⨯ X), (F T M).map (prod.fst : P ⨯ X ⟶ P) z = p →

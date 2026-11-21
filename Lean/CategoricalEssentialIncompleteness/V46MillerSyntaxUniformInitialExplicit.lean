@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformHomLaws
 
 /-! # The universal property on the original explicit parameter-word families
 
-Constructor commutation comes from the actual polynomial action, and
-uniqueness uses the root laws extracted from every algebra morphism.
-Targets are arbitrary uniform slice families. The canonical constant-family
-comparison is a separate constructed diagram, not an extra premise here.
+Constructor commutation comes from the polynomial action, and uniqueness uses the root
+laws extracted from every algebra morphism. Targets are arbitrary uniform slice
+families. The canonical constant-family comparison is a separate constructed diagram,
+not an extra premise here.
 -/
 
 @[expose] public section

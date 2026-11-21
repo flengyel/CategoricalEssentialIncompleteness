@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTrace
 
 
-/-! # Statement checks in `V46SyntacticSyntaxTraceChecks` -/
+/-! # Arithmetic framing of positive finite evaluation records -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerIncompleteness
 
 
-/-! # Statement checks in `V46MillerIncompletenessChecks` -/
+/-! # The Miller theory in recursive sentence coordinates -/
 
 @[expose] public section
 noncomputable section

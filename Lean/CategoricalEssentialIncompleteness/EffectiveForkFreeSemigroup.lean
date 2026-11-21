@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.EnumerableInternalSemigroup
 public import CategoricalEssentialIncompleteness.EffectiveForkWords
 public import CategoricalEssentialIncompleteness.EffectiveForkProducts
 
-/-! # Free semigroups in the actual total fork category -/
+/-! # Free semigroups in the total fork category -/
 
 @[expose] public section
 
@@ -149,8 +149,8 @@ theorem evaluate_singleton {Y M : Object} (mu : product M M ⟶ M) (f : Y ⟶ M)
   Hom.ext (EnumerableCarriers.evaluate_singleton _ _) (EnumerableCarriers.evaluate_singleton _ _)
     (EnumerableCarriers.evaluate_singleton _ _)
 
-/-- Component semigroup structures are required to be computed by the actual
-internal multiplication arrow. No total extension off the carriers is imposed. -/
+/-- Component semigroup structures are required to be computed by the internal
+multiplication morphism. No total extension off the carriers is imposed. -/
 theorem free_semigroup {Y M : Object}
     [Semigroup (Element M.center)] [Semigroup (Element M.left)] [Semigroup (Element M.right)]
     (mu : product M M ⟶ M) (ht : isTotal mu)
@@ -195,8 +195,8 @@ def wordInternalSemigroup (Y : Object) : InternalSemigroup where
   total := wordConcatenate_total Y
   associative := wordConcatenate_associative Y
 
-/-- The manuscript's free-semigroup property, for every actual internal
-semigroup and total arrow. Component algebra structures are derived here. -/
+/-- The manuscript's free-semigroup property, for every internal semigroup and total
+morphism. Component algebra structures are derived here. -/
 theorem internal_free_semigroup (M : InternalSemigroup) (Y : Object)
     (f : Y ⟶ M.carrier) (hf : isTotal f) :
     ∃! k : words Y ⟶ M.carrier,isTotal k ∧ wordSingleton Y ≫ k=f ∧

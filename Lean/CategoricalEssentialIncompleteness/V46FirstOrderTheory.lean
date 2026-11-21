@@ -22,9 +22,9 @@ namespace CategoricalEssentialIncompleteness.V46.CategoricalSyntax
 variable {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
 variable {V : D} {σ π : ℕ → D} {d : ℕ} (S : CategoricalSyntax V σ π d)
 
-/-- Theorem A.6 for the seven constructed logical schemes and the actual
-generalization and modus-ponens rules. Concrete derivation initiality is
-exactly the additional hypothesis in the manuscript statement. -/
+/-- Theorem A.6 for the seven constructed logical schemes and the generalization and
+modus-ponens rules. Concrete derivation initiality is exactly the additional
+hypothesis in the manuscript statement. -/
 theorem generated_firstOrder_theory {A : D} (axioms : A ⟶ S.sentenceObject)
     (P : Endofunctor.Algebra (S.logicalRules axioms).inference) (hP : IsInitial P) :
     ClosedUnder (S.logicalRules axioms).inference (image.ι P.a.hom) ∧

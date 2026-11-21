@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPayloads
 
-/-! # Actual projection arrows exist over an arbitrary name-parameter object -/
+/-! # Projection morphisms exist over an arbitrary name-parameter object -/
 
 @[expose] public section
 noncomputable section

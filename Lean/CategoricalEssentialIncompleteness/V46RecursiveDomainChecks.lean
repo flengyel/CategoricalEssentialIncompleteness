@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46RecursiveUltrapowerComparison
 
-/-! Literal chosen domains and their comparison on recursively interpreted carriers. -/
+/-! Chosen domains and their comparison on recursively interpreted carriers. -/
 
 @[expose] public section
 

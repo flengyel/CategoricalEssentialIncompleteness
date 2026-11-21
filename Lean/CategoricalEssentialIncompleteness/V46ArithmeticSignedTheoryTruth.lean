@@ -45,7 +45,7 @@ local notation "v" => SignedFiniteFormulaValuation.valuation 𝗣𝗔 S
 local notation "leaf" => SignedDerivation.positiveLeafAssignment 𝗣𝗔 S.logicalParameters
   ArithmeticDiagonalCodes.alpha ArithmeticDiagonalCodes.beta
 
-/-- The actual singleton fold has the canonical one-entry vector code. -/
+/-- The singleton fold has the canonical one-entry vector code. -/
 theorem singleton_value (C : PredicateCategory 𝗣𝗔) (a : Obj 𝗣𝗔 M C) :
     ((F 𝗣𝗔 M).map (stableListAlgebra 𝗣𝗔 C).singleton a).val = adjoin a.val 0 := by
   change ((F 𝗣𝗔 M).map
@@ -64,7 +64,7 @@ private theorem logical_true (l : Obj 𝗣𝗔 M P) (a : Obj 𝗣𝗔 M S.logica
   rw [Functor.map_comp_apply, hp, ha] at ht
   exact ht
 
-/-- All actual nullary labels are true on a covering alpha-support. -/
+/-- All nullary labels are true on a covering alpha-support. -/
 theorem leaf_truth (l : Obj 𝗣𝗔 M P)
     (hl : (FiniteSigmaOne.allEntriesCondition ArithmeticDiagonalCodes.alpha).Evalb ![l.val])
     (a : Obj 𝗣𝗔 M ((rules S).instances 0))

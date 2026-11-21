@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCutStages
 
-/-! # Compact bad images and the actual open parity regions
+/-! # Compact bad images and the open parity regions
 
-This proves the finite-stage and compactness part of Lemma8.3 using the
-literal oracle programs, binary cylinders, rho, and tau. It also gives an
-explicit primitive-recursive finite-cylinder presentation of each complement.
+This proves the finite-stage and compactness part of Lemma 9.3 using the literal
+oracle programs, binary cylinders, rho, and tau. It also gives an explicit
+primitive-recursive finite-cylinder presentation of each complement.
 -/
 
 @[expose] public section
@@ -45,7 +45,7 @@ private theorem coveredAt_prefix_iff (L : List Word) (p : Bits) :
     change bitPrefix p s.length = s at hp
     exact ⟨s,hs,(FiniteCover.take_prefix p (FiniteCover.length_le_depth hs)).trans hp⟩
 
-/-- An actual constructor-level finite-cylinder complement calculation. -/
+/-- A constructor-level finite-cylinder complement calculation. -/
 theorem complement_cylinderUnion (L : List Word) :
     (cylinderUnion L)ᶜ = cylinderUnion (complementWords L) := by
   ext p
@@ -64,7 +64,7 @@ theorem complement_cylinderUnion (L : List Word) :
       simpa only [hlen] using hp
     exact (of_decide_eq_true hnot) (he ▸ (coveredAt_prefix_iff L p).mpr hL)
 
-/-- The manuscript's ACTUAL closed bad set K_{e,m,t}. -/
+/-- The manuscript's Closed bad set K_{e,m,t}. -/
 def badImage (e m t : ℕ) : Set Point := rho '' (haltingStage e m t)ᶜ
 
 theorem badImage_isCompact (e m t : ℕ) : IsCompact (badImage e m t) :=
@@ -104,8 +104,8 @@ theorem openStage_mono (e m : ℕ) : Monotone (openStage e m) := by
   intro t u h z hz hu
   exact hz (badImage_antitone e m h hu)
 
-/-- This equivalence compares the actual rho-image, rather than assuming
-that a chosen representation decides membership in its image. -/
+/-- This equivalence compares the rho-image, rather than assuming that a chosen
+representation decides membership in its image. -/
 theorem openStage_spec (e m t : ℕ) (z : Point) :
     z ∈ openStage e m t ↔ ∀ p ∈ representations z, p ∈ haltingStage e m t := by
   constructor
@@ -132,7 +132,7 @@ theorem uniform_haltingStage (e m : ℕ) (z : Point)
   obtain ⟨t,ht,hpt⟩ := Set.mem_iUnion₂.mp (hF hp)
   exact haltingStage_mono e m (Finset.le_sup ht) hpt
 
-/-- The key compactness equivalence used by the printed cozero construction. -/
+/-- The key compactness equivalence used by the cozero construction. -/
 theorem openStage_iff_tau (e m : ℕ) (z : Point) :
     (∃ t, z ∈ openStage e m t) ↔ m ∈ Unanimity.tau z e e := by
   constructor
@@ -144,7 +144,7 @@ theorem openStage_iff_tau (e m : ℕ) (z : Point) :
     obtain ⟨t,ht⟩ := uniform_haltingStage e m z ((Unanimity.tau_graph z e e m).mp hm)
     exact ⟨t,(openStage_spec e m t z).mpr ht⟩
 
-/-- The actual open parity regions U_e^i, with the manuscript's diagonal. -/
+/-- The open parity regions U_e^i, with the manuscript's diagonal. -/
 def side (e i : ℕ) : Set Point :=
   {z | ∃ m, m % 2 = i ∧ m ∈ Unanimity.tau z e e}
 
@@ -171,13 +171,6 @@ theorem side_disjoint (e : ℕ) : Disjoint (side e 0) (side e 1) := by
   have he : m=n := Part.mem_unique hm hn
   omega
 
-/- Remaining Lemma8.3 work, not assumptions of the theorems above:
-(1) actual finite dyadic-box presentation of rho(cylinder s),
-(2) effective distance to the finite union and its weighted-series estimates,
-(3) one total all-oracle rational-approximation program in the fixed recursive
-rational coding, and its ordinary specialization-index transformer,
-(4) application of the printed Miller property to that proved program.
-No cozero, real-computability, rational-code, or final cut-reduction theorem
-is assumed or declared in these constituent modules. -/
+/- The two open sides are disjoint because a partial computation has at most one output. -/
 
 end CategoricalEssentialIncompleteness.V46.Miller.Cut

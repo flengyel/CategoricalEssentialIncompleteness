@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal
 
 
-/-! # Statement checks in `V46NamedArithmeticDiagonalLiteralTotalChecks` -/
+/-! # Exact diagonal specialization of the generic sentence morphism in the total category -/
 
 @[expose] public section
 noncomputable section

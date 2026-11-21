@@ -8,13 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparisonCore
 
-/-! # Actual ordered-premise validation in the uniform carrier category
+/-! # Ordered-premise validation in the uniform carrier category
 
-The successful source is the original pullback of the ordered child
-conclusion tuple along the prescribed premise tuple. Children may have
-different conclusions, and none is equated with the parent conclusion.
-The Boolean/conclusion algebra always returns the label's actual q_n
-conclusion, including at a failed validation node.
+The successful source is the original pullback of the ordered child conclusion tuple
+along the prescribed premise tuple. Children may have different conclusions, and none
+is equated with the parent conclusion. The Boolean/conclusion algebra always returns
+the label's q_n conclusion, including at a failed validation node.
 -/
 
 @[expose] public section

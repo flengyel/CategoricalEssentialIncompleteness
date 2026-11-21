@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
 public import CategoricalEssentialIncompleteness.V46ArithmeticSetModelLaws
 
 
-/-! # Statement checks in `V46ArithmeticLiteralModelChecks` -/
+/-! # The arithmetic sentence theory in model coordinates -/
 
 @[expose] public section
 noncomputable section

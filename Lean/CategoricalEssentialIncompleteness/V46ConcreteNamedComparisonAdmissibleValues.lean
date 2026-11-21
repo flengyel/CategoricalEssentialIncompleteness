@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionValues
 
-/-! # Actual admissible-substitution points and the independent numeric free-for flag -/
+/-! # Admissible-substitution points and the independent numeric free-for flag -/
 
 @[expose] public section
 
@@ -29,9 +29,8 @@ local notation "P" => CategoricalSyntax.substitutionParameters (categoricalSynta
 local notation "X" => (syntaxCarrier V σ π d false : PredicateCategory T)
 local notation "Y" => (syntaxCarrier V σ π d true : PredicateCategory T)
 
-/-- This at-point equation needs no free-for premise. Its source is
-already a point of the actual success pullback, and the real square
-identifies its successful output. -/
+/-- This at-point equation needs no free-for premise. Its source is already a point of the
+success pullback, and the real square identifies its successful output. -/
 theorem canonical_formulaSubstitution_result (a : Obj T M (S).admissibleSubstitution) :
     let q := (F T M).map (S).admissibleInclusion a
     ConcreteNamedSubstitution.substitutionResult V σ π d

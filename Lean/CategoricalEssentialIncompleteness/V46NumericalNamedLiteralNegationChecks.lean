@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegation
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralNegationChecks` -/
+/-! # The numerical sentence negation in literal word coordinates -/
 
 @[expose] public section
 noncomputable section

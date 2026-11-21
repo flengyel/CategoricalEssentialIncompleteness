@@ -12,9 +12,9 @@ public import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
 
 /-! # Seven named schemes, enumerated axioms and the two finite proof rules
 
-Scheme instances retain the genuine parameter objects, including the two
-admissibility pullbacks and the distribution-absence fiber. These rules
-are interpreted in the constructed proof object, with ordered MP premises.
+Scheme instances retain the parameter objects, including the two admissibility
+pullbacks and the distribution-absence fiber. These rules are interpreted in the
+constructed proof object, with ordered MP premises.
 -/
 
 @[expose] public section
@@ -32,7 +32,7 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 local notation "S" => plainCategoricalSyntax T V σ π d
 
-/-- The actual parameter objects of the constructed plain syntax. -/
+/-- The parameter objects of the constructed plain syntax. -/
 def schemeParameters : Fin 7 → PredicateCategory T :=
   SyntacticFiniteNamedSchemes.schemeParameters (S)
 
@@ -70,7 +70,7 @@ theorem logical_parameter (p : Obj T M (S).logicalParameters) :
   erw [← Functor.map_comp_apply,coprod.inl_desc] at h
   exact h
 
-/-- All seven schemes enter by their actual parameter injections. -/
+/-- All seven schemes enter by their parameter injections. -/
 theorem logical_scheme (i : Fin 7) (p : Obj T M (schemeParameters T V σ π d i)) :
     Derives T V σ π d Γ M ((F T M).map (schemeMorphism T V σ π d i) p) := by
   have h := logical_parameter T V σ π d Γ M
@@ -128,7 +128,7 @@ theorem modus_ponens (p : Obj T M ((S).algebra.a.2 ⨯ (S).algebra.a.2))
       exact himp
   exact SyntacticFiniteDerivations.Derives.node (T := T) (M := M) («R» := R) 2 p children
 
-/-- Finite named-rule derivability gives an actual generated-proof point. -/
+/-- Finite named-rule derivability gives a generated-proof point. -/
 theorem realizes {φ : Obj T M (S).algebra.a.2} (h : Derives T V σ π d Γ M φ) :
     ∃ p : Obj T M (SyntacticGeneratedTheory.proofAlgebra T V σ π d aΓ).a.left,
       (F T M).map (SyntacticGeneratedTheory.conclusion T V σ π d aΓ) p = φ :=

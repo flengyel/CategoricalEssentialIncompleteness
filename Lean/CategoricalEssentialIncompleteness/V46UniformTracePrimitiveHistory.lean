@@ -7,11 +7,9 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveLists
 
-/-! # The literal production history evaluator has a primitive native value
+/-! # Primitive recursiveness of the history evaluator
 
-This is a closed derivation through the actual numeric cell, row and table
-constructors. It assumes no primitive certificate for an evaluator, a trace
-predicate, a program index, or a computation graph.
+The evaluator is built from the numerical operations on cells, rows and tables.
 -/
 
 @[expose] public section
@@ -115,8 +113,8 @@ theorem tableStep {n : ℕ} {table : Code n} (ht : PrimitiveTotal table) :
 theorem evaluatorHistory : PrimitiveTotal codeEvaluatorHistory :=
   prec (listNil 0) (tableStep (proj 1))
 
-/-- The actual closed production interpreter is primitive recursive at
-each bounded stage. Its program index and input remain arbitrary numbers. -/
+/-- The closed production interpreter is primitive recursive at each bounded stage. Its
+program index and input remain arbitrary numbers. -/
 theorem historyEvaluator : PrimitiveTotal codeHistoryEvaluator := by
   have hh : PrimitiveTotal (codeEvaluatorHistory.comp
       ![codeSucc (codePair (Code.proj (0 : Fin 3)) (Code.proj (1 : Fin 3)))]) := by

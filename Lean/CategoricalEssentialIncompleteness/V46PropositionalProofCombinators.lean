@@ -24,7 +24,7 @@ variable (A : Endofunctor.Algebra (ForkInference.rules axioms imp).inference)
 
 def implies (imp : F ⨯ F ⟶ F) (f g : W ⟶ F) : W ⟶ F := prod.lift f g ≫ imp
 
-/-- A uniform derivation on its actual parameter object. -/
+/-- A uniform derivation on its parameter object. -/
 structure Proof (f : W ⟶ F) where
   hom : W ⟶ A.a.left
   conclusion : hom ≫ A.a.hom = f
@@ -44,7 +44,7 @@ def axiomInstance (k : W ⟶ Ax) : Proof A (k ≫ axioms) where
   hom := k ≫ (ForkInference.rules axioms imp).nullaryToProof A
   conclusion := by rw [Category.assoc, RulePresentation.nullaryToProof_conclusion]; rfl
 
-/-- The two children retain their printed order: H, then H ⇒ K. -/
+/-- The two children retain their order: H, then H ⇒ K. -/
 def mp {f g : W ⟶ F} (p : Proof A f) (q : Proof A (implies imp f g)) : Proof A g where
   hom := (pullback.lift (prod.lift f g) (prod.lift p.hom q.hom) (by
       change prod.lift f g ≫ ForkInference.premise imp =
@@ -88,7 +88,7 @@ def twoProof (f g h : W ⟶ F) : Proof A
     rw [Category.assoc, H.two.conclusion]
     simp [ErasureLogicalSchemes.two, implies, prod.comp_lift_assoc]
 
-/-- The printed two-modus-ponens derivation of H ⇒ H, uniformly in H. -/
+/-- The two-modus-ponens derivation of H ⇒ H, uniformly in H. -/
 def identity (f : W ⟶ F) : Proof A (implies imp f f) :=
   Proof.mp (H.oneProof f f)
     (Proof.mp (H.oneProof f (implies imp f f)) (H.twoProof f (implies imp f f) f))

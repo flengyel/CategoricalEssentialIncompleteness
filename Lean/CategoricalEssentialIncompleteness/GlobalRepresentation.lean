@@ -11,8 +11,8 @@ public import CategoricalEssentialIncompleteness.InternalRepresentation
 /-!
 # The global representation comparison
 
-The internal section supplies representatives for the external diagonal data.
-The product isomorphism is included in the substitution arrow; its naturality
+The internal section supplies representatives for the external diagonal data. The
+product isomorphism is included in the substitution morphism; its naturality
 identifies the external rows with the internal rows after that isomorphism.
 -/
 

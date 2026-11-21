@@ -92,8 +92,8 @@ private theorem coprod_scheme_true {A B : D} (f : A ⟶ S.algebra.a.2) (g : B �
     rw [hl]
     exact hg _ _
 
-/-- The finite coproduct of the seven actual scheme objects is true
-at every shared parameter, including on arbitrary input families. -/
+/-- The finite coproduct of the seven scheme objects is true at every shared parameter,
+including on arbitrary input families. -/
 theorem logical_axioms_value (a : W ⟶ S.logicalParameters) :
     evaluate S P d p (a ≫ S.logicalAxioms) = Two.constant W true := by
   unfold CategoricalSyntax.logicalAxioms

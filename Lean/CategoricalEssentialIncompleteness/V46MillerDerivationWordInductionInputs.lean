@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionCharts
 
-/-! # Ordered branch charts for actual uniform inference inputs -/
+/-! # Ordered branch charts for uniform inference inputs -/
 
 @[expose] public section
 noncomputable section

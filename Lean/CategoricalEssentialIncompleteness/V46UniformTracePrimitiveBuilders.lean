@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveIndices
 public import CategoricalEssentialIncompleteness.V46UniformTraceBuilders
 
-/-! # Native certificates for the actual composition and s-m-n index builders -/
+/-! # Primitive recursiveness of the composition and s-m-n index functions -/
 
 @[expose] public section
 

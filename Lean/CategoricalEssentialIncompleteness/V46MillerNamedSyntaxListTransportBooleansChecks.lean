@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportBooleans
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxListTransportBooleansChecks` -/
+/-! # Boolean operations under the finite-geometry preserving functor -/
 
 @[expose] public section
 noncomputable section

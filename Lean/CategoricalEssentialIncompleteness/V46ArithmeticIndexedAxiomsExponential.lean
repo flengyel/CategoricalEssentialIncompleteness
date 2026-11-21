@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential
 
-/-! # The actual indexed axiom coefficient in the exponential product chart -/
+/-! # The indexed axiom coefficient in the exponential product chart -/
 
 @[expose] public section
 noncomputable section
@@ -162,7 +162,7 @@ def decode (AxPA : Carrier) :
     intro target ht
     exact ((decodeGraph_code M AxPA e z target).mp ht).2
 
-/-- The original coefficient labels and the printed labels are related
+/-- The original coefficient labels and the exponential coefficient labels are related
 by the proved code translations, with the same parameter and sentence. -/
 def carrierIso (AxPA : Carrier) : CategoryTheory.Iso (C := PredicateCategory 𝗣𝗔)
     (ArithmeticIndexedAxioms.carrier AxPA) (printedCarrier AxPA) where
@@ -255,7 +255,7 @@ private theorem encoded_inclusion (AxPA : Carrier) :
     exact ⟨target,hp,(GraphMorphism.identityGraph_eval _ target target).mpr
       ⟨((encode AxPA).support_model M source target hp).2,rfl⟩⟩
 
-/-- The actual subobject square commutes in the PA-provable graph category. -/
+/-- The subobject square commutes in the PA-provable graph category. -/
 theorem mono_square (AxPA : Carrier) :
     (carrierIso AxPA).hom ≫ printedInclusion AxPA =
       ArithmeticIndexedAxioms.predicateInclusion AxPA ≫
@@ -283,8 +283,8 @@ private theorem product_chart :
       (ExponentialProducts.rawProductIso 𝗣𝗔 variableSymbols ArithmeticIndexedAxioms.sentencePredicate))
       ArithmeticIndexedAxioms.productIso.hom)
 
-/-- The same coefficient morphism over E×Sent is obtained in the printed
-chart. This is the nullary-rule coefficient comparison for the family. -/
+/-- The same coefficient morphism over E×Sent is obtained in the chart. This is the
+nullary-rule coefficient comparison for the family. -/
 theorem realized_square (AxPA : Carrier) :
     (realization 𝗣𝗔).map (carrierIso AxPA).hom ≫ printedAxioms AxPA =
       ArithmeticIndexedAxioms.axioms AxPA := by

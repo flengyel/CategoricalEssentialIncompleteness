@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
 
 
-/-! # Statement checks in `V46SyntacticSyntaxPrimitiveVectorsChecks` -/
+/-! # Standard primitive-recursion certificates for canonical vector operations -/
 
 @[expose] public section
 noncomputable section

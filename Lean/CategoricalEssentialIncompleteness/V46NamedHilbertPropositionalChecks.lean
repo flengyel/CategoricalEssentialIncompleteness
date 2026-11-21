@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedHilbertPropositional
 
-/-! # Raw literal named-calculus statement checks -/
+/-! # Raw named-calculus statement checks -/
 
 @[expose] public section
 

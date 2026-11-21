@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSearchModels
 
 
-/-! # Statement checks in `V46ArithmeticUniformSearchModelsChecks` -/
+/-! # Joint search in model coordinates and its single source diagonal -/
 
 @[expose] public section
 noncomputable section

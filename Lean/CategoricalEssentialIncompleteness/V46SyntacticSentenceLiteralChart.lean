@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 
-/-! # The literal sentence predicate and the actual chosen sentence object -/
+/-! # The sentence predicate and the chosen sentence object -/
 
 @[expose] public section
 noncomputable section
@@ -34,8 +34,8 @@ theorem toImageProof : T ⊢ inclusionSentence (literalSentenceCarrier T V σ π
   intro word hw
   exact (sentenceCarrier_literal T V σ π d M word).mpr hw
 
-/-- This morphism preserves the displayed word and has the actual
-image of the chosen sentence inclusion as its target. -/
+/-- This morphism preserves the displayed word and has the image of the chosen sentence
+inclusion as its target. -/
 def toImage : @Quiver.Hom (PredicateCategory T) inferInstance
     (literalSentenceCarrier T V σ π d) (sentenceCarrier T (S).sentenceInclusion) :=
   representedArrow T (GraphMorphism.inclusion (toImageProof T V σ π d))
@@ -75,7 +75,7 @@ def imageInclusion : @Quiver.Hom (PredicateCategory T) inferInstance
   representedArrow T
     (GraphMorphism.inclusion (chosenGraph T (S).sentenceInclusion).imageInclusionProof)
 
-/-- The triangle involves the actual chosen inclusion into formulas. -/
+/-- The triangle involves the chosen inclusion into formulas. -/
 theorem toSentence_over : toSentence T V σ π d ≫ (S).sentenceInclusion =
     toImage T V σ π d ≫ imageInclusion T V σ π d := by
   have hi : (sentenceChart T (S).sentenceInclusion).inv ≫ (S).sentenceInclusion =
@@ -90,8 +90,8 @@ theorem toSentence_over : toSentence T V σ π d ≫ (S).sentenceInclusion =
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Reading the formula coordinate after the actual chart keeps the
-literal input word in every T-model, including nonstandard ones. -/
+/-- Reading the formula coordinate after the chart keeps the input word in every T-model,
+including nonstandard ones. -/
 theorem toSentence_value (word : Obj T M (literalSentenceCarrier T V σ π d)) :
     ((F T M).map (S).sentenceInclusion
       ((F T M).map (toSentence T V σ π d) word)).val = word.val := by

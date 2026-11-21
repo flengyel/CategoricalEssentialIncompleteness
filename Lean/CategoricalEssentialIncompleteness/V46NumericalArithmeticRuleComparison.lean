@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticNullaryRu
 public import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
 public import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
 
-/-! # Actual arithmetic rule-label and finite-proof relabellings -/
+/-! # Arithmetic rule-label and finite-proof relabellings -/
 
 @[expose] public section
 noncomputable section
@@ -24,18 +24,18 @@ open Coordinates NamedArithmeticSignature
 /-- Formula conclusions are changed by the proved formula word chart;
 all source inference labels and ordered child slots remain unchanged. -/
 abbrev sourceRules (Γ : Carrier) := NumericalRuleRebase.rules (Rules.rules Γ) formulaIso
-/-- The target labels are the actual PA rule-instance objects under
-arithmetic interpretation, with its ordered finite-power comparison. -/
+/-- The target labels are the PA rule-instance objects under arithmetic interpretation,
+with its ordered finite-power comparison. -/
 abbrev targetRules (Γ : Carrier) := NumericalDerivationInterpretation.interpretedRules (Rules.originalRules Γ)
 
-/-- These are the actual computable rho_n, including all seven logical
-schemes and the unchanged Gamma axiom branch at n=0. -/
+/-- These are the computable rho_n, including all seven logical schemes and the unchanged
+Gamma axiom branch at n=0. -/
 def labelIso (Γ : Carrier) : ∀ i : Fin 3, (sourceRules Γ).instances i ≅ (targetRules Γ).instances i :=
   Fin.cases (NullaryRules.rho0 Γ) (Fin.cases (Rules.rho1 Γ)
     (Fin.cases (Rules.rho2 Γ) (fun i => Fin.elim0 i)))
 
-/-- Labels are decoded at their actual tuple dimensions. In particular,
-the zero-dimensional code image is not replaced by all natural numbers. -/
+/-- Labels are decoded at their tuple dimensions. In particular, the zero-dimensional code
+image is not replaced by all natural numbers. -/
 def labelForward (Γ : Carrier) (i : Fin 3) : ℕ → Part ℕ :=
   (labelIso Γ i).hom.restrictedProgram
 
@@ -107,16 +107,16 @@ theorem forward_backward (Γ : Carrier) (i : Fin 3) :
 theorem backward_forward (Γ : Carrier) (i : Fin 3) :
     (backward Γ).map i ≫ (forward Γ).map i = 𝟙 _ := (labelIso Γ i).inv_hom_id
 
-/-- Inverse constructor-preserving folds give the actual finite-proof
-relabelings; their programs are total on their respective proof carriers. -/
+/-- Inverse constructor-preserving folds give the finite-proof relabelings; their programs
+are total on their respective proof carriers. -/
 def proofIso (Γ : Carrier) : NumericalDerivation.codeObject (Rules.rules Γ) ≅
     NumericalDerivation.codeObject (targetRules Γ) :=
   NumericalRuleRebase.codeIso (Rules.rules Γ) formulaIso ≪≫
     NumericalRuleRelabel.codeIso (forward Γ) (backward Γ)
       (forward_backward Γ) (backward_forward Γ)
 
-/-- The actual constructor comparisons are supplied by the constructed
-base-change and inverse relabelling folds, including their original inputs. -/
+/-- The constructor comparisons are supplied by the constructed base-change and inverse
+relabelling folds, including their original inputs. -/
 abbrev rebase_constructor (Γ : Carrier) :=
   NumericalRuleRebase.constructor (Rules.rules Γ) formulaIso
 
@@ -134,8 +134,8 @@ abbrev relabel_branch_constructor (Γ : Carrier) :=
 
 abbrev rebase_word_coded (Γ : Carrier) := NumericalRuleRebase.code_word_coded (Rules.rules Γ) formulaIso
 
-/-- The composed input map changes precisely the actual rule label and
-each ordered child by the corresponding proof comparison. -/
+/-- The composed input map changes precisely the rule label and each ordered child by the
+corresponding proof comparison. -/
 def inputComparison (Γ : Carrier) (i : Fin 3) :
     (Rules.rules Γ).ruleObject (NumericalDerivation.codeAlgebra (Rules.rules Γ)).a i ⟶
       (targetRules Γ).ruleObject (NumericalDerivation.codeAlgebra (targetRules Γ)).a i :=
@@ -179,8 +179,8 @@ private theorem rebase_branch {F G : NumericalTuples.Object} {N : ℕ}
   simpa only [NumericalRuleRebase.inputRebase,CategoryTheory.Category.assoc,
     Sigma.ι_mapIso_hom_assoc,Sigma.ι_map_assoc] using hi.symm
 
-/-- The actual composite map obeys the node-label recursion: the input
-map carries rho on the label and this same map on every ordered child. -/
+/-- The composite map obeys the node-label recursion: the input map carries rho on the
+label and this same map on every ordered child. -/
 theorem branch_constructor (Γ : Carrier) (i : Fin 3) :
     inputComparison Γ i ≫ Sigma.ι ((targetRules Γ).ruleObject
         (NumericalDerivation.codeAlgebra (targetRules Γ)).a) i ≫

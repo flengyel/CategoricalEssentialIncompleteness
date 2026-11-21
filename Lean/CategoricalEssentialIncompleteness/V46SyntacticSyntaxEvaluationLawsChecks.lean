@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxEvaluationLaws
 
 
-/-! # Statement checks in `V46SyntacticSyntaxEvaluationLawsChecks` -/
+/-! # Constructor equations and uniqueness of finite-record evaluation -/
 
 @[expose] public section
 noncomputable section

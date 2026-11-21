@@ -11,11 +11,11 @@ public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqu
 /-!
 # Finite limits of numerical PERs
 
-The terminal PER has one equivalence class. Equalizers restrict the source PER
-to inputs where the two representing functions return related values. The
-category contains arbitrary PERs, so this support need not be recursively
-enumerable. A function representing an equalizing arrow takes its supported
-inputs into this support and represents the unique factorization.
+The terminal PER has one equivalence class. Equalizers restrict the source PER to
+inputs where the two representing functions return related values. The category
+contains arbitrary PERs, so this support need not be recursively enumerable. A
+function representing an equalizing morphism takes its supported inputs into this
+support and represents the unique factorization.
 -/
 
 @[expose] public section

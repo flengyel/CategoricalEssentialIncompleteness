@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxCompari
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
 public import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
 
-/-! # Finite-rule inference transport with the actual formula chart
+/-! # Finite-rule inference transport with the formula chart
 
-This is the existing finite-power, pullback and finite-sum construction,
-with the final formula isomorphism included in the slice. All fields of
-the data below concern rule coefficients and their ordered diagrams;
-no inference comparison or initiality is a field.
+This is the finite-power, pullback and finite-sum construction, with the final formula
+isomorphism included in the slice. All fields of the data below concern rule
+coefficients and their ordered diagrams; no inference comparison or initiality is a
+field.
 -/
 
 @[expose] public section

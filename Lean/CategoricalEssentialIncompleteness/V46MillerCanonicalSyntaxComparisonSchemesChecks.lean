@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSchemes
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonSchemesChecks` -/
+/-! # All seven logical parameters in the canonical syntax -/
 
 @[expose] public section
 noncomputable section
@@ -34,7 +34,7 @@ example : (E).functor.map (S₁).hilbertEquality ≫ (formulaIso a V σ π d).ho
     (equalitySchemeIso a V σ π d).hom ≫ (S₂).hilbertEquality := hilbertEquality_comparison a V σ π d
 
 
-/- Every displayed logical axiom is checked at its actual parameter object. -/
+/- Every displayed logical axiom is checked at its parameter object. -/
 example : (E).functor.map (S₁).hilbertOne ≫ (formulaIso a V σ π d).hom =
     (formulaPairIso a V σ π d).hom ≫ (S₂).hilbertOne :=
   hilbertOne_comparison a V σ π d

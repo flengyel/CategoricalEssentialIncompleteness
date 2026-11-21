@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModel
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
 public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
 
-/-! # Numerical list-membership values and the actual Boolean object -/
+/-! # Numerical list-membership values and the Boolean object -/
 
 @[expose] public section
 

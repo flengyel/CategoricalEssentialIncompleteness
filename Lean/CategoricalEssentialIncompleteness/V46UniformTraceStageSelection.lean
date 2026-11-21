@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
-/-! # Selecting a first trace from consistent actual stage computations -/
+/-! # Selecting a first trace from consistent stage computations -/
 
 @[expose] public section
 
@@ -25,9 +25,9 @@ local instance stageSelectionLocalInstance1 : M↓[ℒₒᵣ] ⊧* 𝗜𝚺 1 :=
 local instance stageSelectionLocalInstance2 : M↓[ℒₒᵣ] ⊧* 𝗜𝗢𝗽𝗲𝗻 :=
   models_of_subtheory (U := 𝗜𝚺 1) inferInstance
 
-/-- A successful stage yields the first-success graph when every actual
-successful stage has the same output. This lemma assumes neither persistence
-nor a first-success computation; the least stage is constructed internally. -/
+/-- A successful stage yields the first-success graph when every successful stage has the
+same output. This lemma assumes neither persistence nor a first-success computation;
+the least stage is constructed internally. -/
 theorem graph_of_consistent_stage (e x y : M)
     (hsound : ∀ s z : M, evalnGraphFormula.val.Evalb ![z + 1, s, e, x] → z = y)
     (s : M) (hs : evalnGraphFormula.val.Evalb ![y + 1, s, e, x]) :

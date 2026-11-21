@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquivalence
 public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
 
-/-! # Literal variable names and the effective coefficient-code diagrams -/
+/-! # Variable names and the effective coefficient-code diagrams -/
 
 @[expose] public section
 noncomputable section
@@ -41,8 +41,8 @@ theorem codedVariable_literal (n : ℕ) :
   · intro _
     exact codedVariable_member n
 
-/-- The numerical inverse coefficient chart encodes the actual tuple;
-the two presentation maps cancel as numerical morphisms. -/
+/-- The numerical inverse coefficient chart encodes the tuple; the two presentation maps
+cancel as numerical morphisms. -/
 theorem coefficient_inverse_code {C : NumericalTuples.Object} (x : NumericalTuples.Point C) :
     ((NumericalCoordinates.predicatePresentationIso (NumericalCoordinates.codedPredicate C)).hom.toFun
       ((NumericalCoordinates.coefficientIso C).inv.toFun x)).val =

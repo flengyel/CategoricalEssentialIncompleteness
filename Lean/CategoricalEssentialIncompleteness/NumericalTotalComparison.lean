@@ -14,8 +14,8 @@ public import Mathlib.CategoryTheory.Adjunction.Limits
 # Comparison of the numerical total-arrow categories
 
 The restriction induced by the numerical P-category and the original numerical
-restriction have the same total arrows. The comparison functors preserve the
-underlying arrows and identify the two product pairings.
+restriction have the same total morphisms. The comparison functors preserve the
+underlying morphisms and identify the two product pairings.
 -/
 
 @[expose] public section
@@ -26,21 +26,24 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- Total arrows for the induced restriction, regarded as original numerical total arrows. -/
+/-- Total morphisms for the induced restriction, regarded as original numerical total
+morphisms. -/
 def fromPCategoryTotal : RestrictionCategory.TotalSubcategory Numerical ⥤ Total where
   obj X := totalObject X.obj
   map f := ⟨f.hom, (pcategory_rst_eq f.hom).symm.trans f.property⟩
   map_id _ := rfl
   map_comp _ _ := rfl
 
-/-- Original numerical total arrows, regarded as total arrows for the induced restriction. -/
+/-- Original numerical total morphisms, regarded as total morphisms for the induced
+restriction. -/
 def toPCategoryTotal : Total ⥤ RestrictionCategory.TotalSubcategory Numerical where
   obj X := ⟨X.obj⟩
   map f := ⟨f.hom, (pcategory_rst_eq f.hom).trans f.property⟩
   map_id _ := rfl
   map_comp _ _ := rfl
 
-/-- The two total-arrow categories are equivalent by functors with unchanged underlying arrows. -/
+/-- The two total-arrow categories are equivalent by functors with unchanged underlying
+morphisms. -/
 def pcategoryTotalEquivalence : RestrictionCategory.TotalSubcategory Numerical ≌ Total where
   functor := fromPCategoryTotal
   inverse := toPCategoryTotal

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSyntax
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralSyntaxChecks` -/
+/-! # Parameter-stable numerical syntax on literal tuple-code labels -/
 
 @[expose] public section
 noncomputable section

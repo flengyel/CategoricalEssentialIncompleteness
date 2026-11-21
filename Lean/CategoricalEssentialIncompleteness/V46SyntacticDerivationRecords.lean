@@ -65,8 +65,8 @@ theorem run_raw_eval (word initial final : M) :
         e = nth edges i ∧ e = Arithmetic.pair s b ∧ b = Arithmetic.pair r t := by
   simp [run]
 
-/-- The Sigma-one formula describes exactly an actual state at every
-position of the word, even when the word has nonstandard model length. -/
+/-- The Sigma-one formula describes exactly a state at every position of the word, even
+when the word has nonstandard model length. -/
 theorem run_iff_trace (word initial final : M) :
     (run g).val.Evalb ![word, initial, final] ↔ ∃ states : M,
       len states = len word + 1 ∧ nth states 0 = initial ∧ nth states (len word) = final ∧
@@ -120,8 +120,8 @@ theorem run_iff_trace (word initial final : M) :
     refine ⟨adjoin initial 0, by simp, by simp, by simp, ?_⟩
     simp
 
-/-- PA induction compares the two actual vectors at each numerical
-position, including positions in nonstandard models. -/
+/-- PA induction compares the two vectors at each numerical position, including positions
+in nonstandard models. -/
 theorem run_functional
     (hfun : ∀ s r y z : M, g.val.Evalb ![s, r, y] → g.val.Evalb ![s, r, z] → y = z)
     (word initial y z : M)

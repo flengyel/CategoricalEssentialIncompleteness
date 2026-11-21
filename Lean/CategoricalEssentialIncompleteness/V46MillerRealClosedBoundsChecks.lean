@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedBounds
 
 
-/-! # Statement checks in `V46MillerRealClosedBoundsChecks` -/
+/-! # Finite proof bounds for arbitrary extensions of T_a -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

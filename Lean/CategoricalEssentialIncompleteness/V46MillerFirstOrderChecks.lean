@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerFirstOrder
 
 
-/-! # Statement checks in `V46MillerFirstOrderChecks` -/
+/-! # Generated first-order theories in the Miller total splitting -/
 
 @[expose] public section
 noncomputable section

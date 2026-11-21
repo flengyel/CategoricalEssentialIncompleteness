@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformFoldUniqueChecks` -/
+/-! # The uniform evaluator's root law and comparison of candidate graphs -/
 
 @[expose] public section
 noncomputable section

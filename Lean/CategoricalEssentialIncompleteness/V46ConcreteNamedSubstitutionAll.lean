@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
-/-! An actual Boolean conjunction of ordered recursive-leaf tests. -/
+/-! A Boolean conjunction of ordered recursive-leaf tests. -/
 
 @[expose] public section
 noncomputable section

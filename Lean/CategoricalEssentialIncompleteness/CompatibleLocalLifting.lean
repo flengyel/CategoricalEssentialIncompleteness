@@ -28,8 +28,8 @@ variable [CoprodStruct R] [CategoryTheory.HasCoproducts R] [RestrictionCoproduct
 variable [CoprodStruct A] [CategoryTheory.HasCoproducts A] [RestrictionCoproducts A]
 variable [Ranges R] [Ranges A] [Splits A] [JoinInverse A] [LocallyConnected A] [WeakChoice A]
 
-/-- Transport of the actual lifting theorem along equality of the source's
-given restriction and its P-category induced restriction. -/
+/-- Transport of the lifting theorem along equality of the source's given restriction and
+its P-category induced restriction. -/
 theorem compatible_local_lifting (he : PCategory.inducedRestriction=native)
     (F : RangeFunctor R A) {U : R} (tau : nearProd U U ⟶ U)
     (htau : RecursionCategory.IsTuringMorphism tau) (b : U ≅ coprod U U)

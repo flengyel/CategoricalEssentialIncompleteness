@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkProofRelabeling
 public import CategoricalEssentialIncompleteness.FinitePowerCarriers
 
-/-! # C.e. proof carriers and their actual recursive conclusion maps -/
+/-! # C.e. proof carriers and their recursive conclusion maps -/
 
 @[expose] public section
 

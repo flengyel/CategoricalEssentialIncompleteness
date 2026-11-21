@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemeR
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeClosure
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageForward
 
-/-! # Exact native proof images for arbitrary uniformly enumerable Gamma
+/-! # Exact Hilbert proof images for arbitrary uniformly enumerable Gamma
 
-The reverse implication uses the actual ordered-word derivation rank.
-Each nonlogical leaf contributes its literal formula word to a finite
-Gamma support; Gen retains that support and MP combines the two finite
-supports. No Gamma proof selector or PA description of Gamma is used.
+The reverse implication uses the ordered-word derivation rank. Each nonlogical leaf
+contributes its formula word to a finite Gamma support; Gen retains that support and
+MP combines the two finite supports. No Gamma proof selector or PA description of
+Gamma is used.
 -/
 
 @[expose] public section
@@ -34,8 +34,8 @@ local notation "S" => syntaxData P σ π d
 local notation "c" => conclusion P σ π d Γ hΓ
 local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 
-/-- Every actual constructed conclusion has a proof in the original
-native calculus using a finite subset of the external Gamma set. -/
+/-- Every constructed conclusion has a proof in the original named Hilbert calculus using
+a finite subset of the external Gamma set. -/
 theorem conclusion_finite (p : (U).obj (proofObject P σ π d Γ hΓ)) :
     FiniteAxiomProof σ π d Γ (decodeFormula P σ π d ((U).map (c) p)) := by
   apply Derivation.WordInduction.firstOrder_conclusion_induction
@@ -71,8 +71,8 @@ theorem formula_image_iff (φ : Fm) :
   rw [Total.Subobjects.imageCodes_image_ι]
   exact formula_range_iff P σ π d Γ hΓ φ
 
-/-- Sentence-range membership is stated at the actual chosen sentence
-point. It is not an equality between its selected code and formulaCode. -/
+/-- Sentence-range membership is stated at the chosen sentence point. It is not an
+equality between its selected code and formulaCode. -/
 theorem sentence_range_iff (φ : Fm) (hc : φ.freeVariables=[]) :
     (sentencePoint P σ π d φ hc).val∈Total.Subobjects.imageCodes
       (sentenceConclusion P σ π d Γ hΓ) ↔ FiniteAxiomProof σ π d Γ φ := by
@@ -108,8 +108,8 @@ theorem sentence_word_value (s : (U).obj (S).sentenceObject) :
       (Total.totalFunction_mem (NamedSyntaxComparison.formulaIso P
         (variableCarrier : PredicateCategory 𝗣𝗔) σ π d).hom ((U).map (S).sentenceInclusion s))).2
 
-/-- The formula-word image of the actual sentence conclusion consists
-exactly of the closed literal native Gamma theorems. -/
+/-- The formula-word image of the sentence conclusion consists exactly of the closed named
+Gamma theorems. -/
 theorem sentence_word_range_iff (φ : Fm) :
     formulaCode φ∈Total.Subobjects.imageCodes
       (sentenceConclusion P σ π d Γ hΓ ≫ sentenceWord P σ π d) ↔

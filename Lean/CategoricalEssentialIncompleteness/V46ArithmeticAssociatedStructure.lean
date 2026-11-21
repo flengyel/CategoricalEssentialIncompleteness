@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConstantSliceFull
 public import CategoricalEssentialIncompleteness.V46CompatibleSplitSlices
 public import CategoricalEssentialIncompleteness.V46SplitSliceTuring
 
-/-! # The actual arithmetic associated categories and their structural comparison -/
+/-! # The arithmetic associated categories and their structural comparison -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -65,8 +65,8 @@ theorem postcompose_not_essSurj {T U : TotalSplit 𝗣𝗔} (i : T ⟶ U) [Mono 
 local notation "F₀" => ArithmeticSignedTheory.presentation
 local notation "ν" => ArithmeticSignedTotal.negation (F₀)
 
-/-- The constructed Boolean partial morphism is true on the theorem
-subobject and false on its actual negation inverse image. -/
+/-- The constructed Boolean partial morphism is true on the theorem subobject and false on
+its negation inverse image. -/
 def decision (U : ArithmeticAssociatedIncompleteness.GlobalTheory)
     (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) :=
   BooleanPartialDecision.decision inverses U.val ((Subobject.pullback (ν)).obj U.val) hc
@@ -82,8 +82,8 @@ theorem decision_false (U : ArithmeticAssociatedIncompleteness.GlobalTheory)
       (Two.constant (((Subobject.pullback (ν)).obj U.val) : TotalSplit 𝗣𝗔) false).hom :=
   BooleanPartialDecision.negative_value inverses _ _ hc
 
-/-- Both directions of the existing restriction retraction are reused.
-The resulting morphism lies in the actual associated partial-map slice. -/
+/-- Both directions of the restriction retraction are reused. The resulting morphism lies
+in the associated partial-map slice. -/
 theorem no_total_extension (U : ArithmeticAssociatedIncompleteness.GlobalTheory)
     (hExt : (ArithmeticSignedTotal.theory (F₀)).val ≤ U.val)
     (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) :
@@ -94,17 +94,17 @@ theorem no_total_extension (U : ArithmeticAssociatedIncompleteness.GlobalTheory)
   intro he
   exact hn (((constantData U).property.2.2 _).mp he)
 
-/-- Every actual parameter slice has a split universal Turing object. -/
+/-- Every parameter slice has a split universal Turing object. -/
 def turingData (T : TotalSplit 𝗣𝗔) :=
   CompatibleSplitSlices.turingData (ρ := actualRestriction) restriction_eq inverses T
     (inferInstance : RecursionCategory.PRecursionCategory Source)
 
-/-- The literal full subcategory consists of U × X for original source objects. -/
+/-- The full subcategory consists of U × X for original source objects. -/
 abbrev FullCategory (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :=
   ConstantSlice.Full.FullCategory (U.val : TotalSplit 𝗣𝗔).obj
 
-/-- Its recursion-category structure is constructed from the existing
-arithmetic recursion category. -/
+/-- Its recursion-category structure is constructed from the arithmetic recursion
+category. -/
 @[instance_reducible] def recursionCategory (U : ArithmeticAssociatedIncompleteness.GlobalTheory) :=
   CompatibleSplitSlices.recursionCategory (ρ := actualRestriction) restriction_eq inverses
     (U.val : TotalSplit 𝗣𝗔) (inferInstance : RecursionCategory.PRecursionCategory Source)
@@ -178,7 +178,7 @@ theorem original_faithful (U : ArithmeticAssociatedIncompleteness.GlobalTheory) 
     (U.val : TotalSplit 𝗣𝗔) (ArithmeticAssociatedIncompleteness.point U)
     ArithmeticAssociatedDeduction.pointDomain_terminal
 
-/-- This is exactly the printed morphism f ↦ 1_U × f on underlying programs. -/
+/-- This is exactly the morphism f ↦ 1_U × f on underlying programs. -/
 theorem original_value (U : ArithmeticAssociatedIncompleteness.GlobalTheory)
     {X Y : Source} (f : X ⟶ Y) :
     (((originalFunctor U).map f).hom.hom).hom =

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
 
 
-/-! # Statement checks in `V46MillerOracleProgramTableChecks` -/
+/-! # Compiling an ordinary coherent table search into one oracle program -/
 
 @[expose] public section
 noncomputable section

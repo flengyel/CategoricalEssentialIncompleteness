@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticUnaryImage
 
 
-/-! # Statement checks in `V46NumericalArithmeticUnaryImageChecks` -/
+/-! # A unary numerical image stores the output word alone -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
-/-! # Checks for actual bounded earlier-stage flags -/
+/-! # Checks for bounded earlier-stage flags -/
 
 @[expose] public section
 

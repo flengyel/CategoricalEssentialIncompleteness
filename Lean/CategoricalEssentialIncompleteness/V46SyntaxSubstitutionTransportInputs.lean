@@ -10,8 +10,10 @@ public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransportCompo
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionConstructorTransport
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport
 
-/-! Actual parameter and original/result carrier comparisons for named
-substitution. Recursive formula values use the option comparison. -/
+/-!
+Parameter and original/result carrier comparisons for named substitution. Recursive
+formula values use the option comparison.
+-/
 
 @[expose] public section
 noncomputable section
@@ -103,8 +105,8 @@ theorem substitutionFormulaInputIso_hom (A : C × C) (B : D × D)
     (congrArg (fun p => p.eval.obj B) (formulaTargetExpressionEquality V π d))]
   simp only [substitutionPolynomialIso,formulaInputMap,Iso.trans_hom,Functor.mapIso_hom,Category.assoc]
 
-/-- The polynomial comparison respects an actual square on recursive
-carriers; this is naturality, with no assertion about a fold. -/
+/-- The polynomial comparison respects a square on recursive carriers; this is naturality,
+with no assertion about a fold. -/
 theorem substitutionPolynomialIso_natural {A A' : C × C} {B B' : D × D}
     (i : (E.prod E).functor.obj A ≅ B) (i' : (E.prod E).functor.obj A' ≅ B')
     (f : A ⟶ A') (g : B ⟶ B')
@@ -245,8 +247,8 @@ def substitutionStateIso :
   hom_inv_id := Prod.ext (Iso.hom_inv_id _) (Iso.hom_inv_id _)
   inv_hom_id := Prod.ext (Iso.inv_hom_id _) (Iso.inv_hom_id _)
 
-/-- The two original projections commute with the actual carrier
-comparisons. No identity of syntax or state codes is assumed. -/
+/-- The two original projections commute with the carrier comparisons. No identity of
+syntax or state codes is assumed. -/
 theorem substitutionOriginal_comparison :
     (E.prod E).functor.map S₀.originalProjection ≫ (syntaxCarrierIso E V σ π d S₀ c).hom =
       (substitutionStateIso E V σ π d S₀ S₁ c).hom ≫ S₁.originalProjection := by

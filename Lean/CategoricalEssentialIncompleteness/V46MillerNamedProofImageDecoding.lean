@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImagePoints
 
-/-! # Inverse literal named decoding of every actual formula point
+/-! # Inverse named decoding of every formula point
 
-The bijections are the proved plain-word bijections followed by the
-actual uniform carrier charts. Binder names and ordered children remain
-part of the literal word; no binder-erasing translation is involved.
+The bijections are the proved plain-word bijections followed by the uniform carrier
+charts. Binder names and ordered children remain part of the literal word; no
+binder-erasing translation is involved.
 -/
 
 @[expose] public section

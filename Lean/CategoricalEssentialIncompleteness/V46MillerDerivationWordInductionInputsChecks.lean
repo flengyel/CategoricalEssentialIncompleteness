@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionInputs
 
 
-/-! # Statement checks in `V46MillerDerivationWordInductionInputsChecks` -/
+/-! # Ordered branch charts for uniform inference inputs -/
 
 @[expose] public section
 noncomputable section

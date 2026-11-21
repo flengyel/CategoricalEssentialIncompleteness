@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46EquivalenceSubobjects
 public import CategoricalEssentialIncompleteness.V46PartialMapTotals
 public import CategoricalEssentialIncompleteness.V46RegularEquivalence
 
-/-! # Inseparability in actual parameter slices and their total categories -/
+/-! # Inseparability in parameter slices and their total categories -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -98,8 +98,8 @@ theorem extensive : FinitaryExtensive (PartialMaps.Tot D) :=
 
 local instance : FinitaryExtensive (PartialMaps.Tot D) := extensive D
 
-/-- The domains are subobjects in the total category of the actual monic
-partial-map category. Its total equivalence covers all such subobjects. -/
+/-- The domains are subobjects in the total category of the monic partial-map category.
+Its total equivalence covers all such subobjects. -/
 theorem inseparable {S : D} (A B : Subobject S) (hi : SubobjectInseparable A B) :
     SubobjectInseparable
       (FiniteLimitSubobjects.object (PartialMaps.totalEquivalence (D := D)).functor A)

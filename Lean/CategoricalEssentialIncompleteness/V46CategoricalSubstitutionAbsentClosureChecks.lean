@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentClosure
 
-/-! Closure is proved for the actual mutual syntax polynomial and substitution algebra. -/
+/-! Closure is proved for the mutual syntax polynomial and substitution algebra. -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
-/-! # Public word-first substitution inputs use the actual product braiding -/
+/-! # Public word-first substitution inputs use the product braiding -/
 
 @[expose] public section
 

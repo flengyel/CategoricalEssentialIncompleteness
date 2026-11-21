@@ -55,8 +55,8 @@ instance axiomArrow_mono (A : Subobject (P ⨯ (S).sentenceObject)) : Mono (axio
   dsimp only [axiomArrow]
   infer_instance
 
-/-- This is the inference endofunctor on the printed slice over P × Fm,
-with the same parameter in all ordered premises and in their conclusion. -/
+/-- This is the inference endofunctor on the slice over P × Fm, with the same parameter in
+all ordered premises and in their conclusion. -/
 def printedRules (A : Subobject (P ⨯ (S).sentenceObject)) :
     RulePresentation (P ⨯ (S).algebra.a.2) 2 :=
   SliceRuleObjects.rules (rules D P (axiomArrow D P A))

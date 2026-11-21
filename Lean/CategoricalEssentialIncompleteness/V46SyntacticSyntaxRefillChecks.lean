@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefill
 
-/-! Typed stack consumption is an actual PA-total graph, not a parsing interface assumption. -/
+/-! Typed stack consumption is a PA-total graph, not a parsing interface assumption. -/
 
 @[expose] public section
 noncomputable section

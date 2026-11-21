@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 
 
-/-! # Statement checks in `V46MillerSyntaxRawActionGraphsChecks` -/
+/-! # Exact numerical child graphs of the polynomial action -/
 
 @[expose] public section
 noncomputable section

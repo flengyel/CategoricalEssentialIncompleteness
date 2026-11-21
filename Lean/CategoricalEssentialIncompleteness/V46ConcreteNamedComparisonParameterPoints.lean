@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
-/-! # Actual parameter-comparison points and their product projections -/
+/-! # Parameter-comparison points and their product projections -/
 
 @[expose] public section
 
@@ -26,8 +26,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 variable (P X Y : PredicateCategory T)
 
-/-- Interpret a proved square with opaque arrows before specializing
-its nodes to parameterized polynomial evaluations. -/
+/-- Interpret a proved square with opaque morphisms before specializing its nodes to
+parameterized polynomial evaluations. -/
 theorem parameterPoint_diagram {A B C D : PredicateCategory T}
     (f : A ⟶ B) (g : B ⟶ D) (h : A ⟶ C) (k : C ⟶ D)
     (comm : f ≫ g = h ≫ k) (q : Obj T M A) :

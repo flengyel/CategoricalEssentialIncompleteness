@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPayloadOccurrences
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPayloadOccurrencesChecks` -/
+/-! # The payload's FV field is identified by stable initiality -/
 
 @[expose] public section
 noncomputable section

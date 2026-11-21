@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonEquality
 
 
-/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonEqualityChecks` -/
+/-! # Hilbert equality proofs for the source arithmetic equality axioms -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

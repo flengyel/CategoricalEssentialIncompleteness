@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerStrictRationalCuts
 
 
-/-! # Statement checks in `V46MillerStrictRationalCutsChecks` -/
+/-! # Strict lower and upper rational cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

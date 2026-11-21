@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.EnumerableUnderlyingPullbacks
 public import CategoricalEssentialIncompleteness.EnumerableExtensive
 public import Mathlib.CategoryTheory.Limits.Yoneda
 
-/-! # The actual underlying carrier functor for numerical tuples -/
+/-! # The underlying carrier functor for numerical tuples -/
 
 @[expose] public section
 noncomputable section
@@ -58,7 +58,7 @@ def homComparison : functor ≅ coyoneda.obj (op NumericalTuples.terminalObject)
     intro x
     exact NumericalTuples.Map.ext rfl)
 
-/-- All limits that exist are computed on the actual carrier functions. -/
+/-- All limits that exist are computed on the carrier functions. -/
 instance preservesLimits : PreservesLimits functor :=
   preservesLimits_of_natIso homComparison.symm
 

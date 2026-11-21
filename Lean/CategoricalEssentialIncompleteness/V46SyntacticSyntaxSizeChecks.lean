@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
 
 
-/-! # Statement checks in `V46SyntacticSyntaxSizeChecks` -/
+/-! # Every ordered child has smaller node count than its constructor -/
 
 @[expose] public section
 noncomputable section

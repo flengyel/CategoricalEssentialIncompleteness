@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionComparison
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeSubstitutionComparisonChecks` -/
+/-! # Named term substitution through the uniform fold -/
 
 @[expose] public section
 noncomputable section

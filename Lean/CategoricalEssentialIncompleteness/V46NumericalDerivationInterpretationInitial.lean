@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationProjection
 
-/-! # Initiality of the actual mapped PA constructor algebra
+/-! # Initiality of the mapped PA constructor algebra
 
-The target algebra is constructed from the literal TA plain-word algebra
-using the proved equivalence and polynomial comparison. Its initiality is
-therefore proved independently of the PA interpretation. The literal
-constructor squares identify the PA image with this constructed algebra.
+The target algebra is constructed from the literal TA plain-word algebra using the
+proved equivalence and polynomial comparison. Its initiality is therefore proved
+independently of the PA interpretation. The constructor squares identify the PA image
+with this constructed algebra.
 -/
 
 @[expose] public section
@@ -205,8 +205,8 @@ local notation "j₁" => realizedWordIso true p SyntaxPolynomial.unit
 local notation "hN" => SyntaxOperationsTransport.mapCoefficients_constructors K.obj σ N
 local notation "c" => fun C : PredicateCategory 𝗣𝗔 => Iso.symm (NumericalSyntaxTreeChart.E.counitIso.app (K.obj C))
 
-/-- The actual PA mapped joint algebra is initial, with every comparison
-and scalar code law supplied by the constructed syntax proofs. -/
+/-- The PA mapped joint algebra is initial, with every comparison and scalar code law
+supplied by the constructed syntax proofs. -/
 abbrev mappedStoredPairInitial :=
   mappedSourcePairInitial id labelMap c p .unit p .unit ((p).mapCoefficients labelMap) .unit pN .unit
     (mapCoefficients_id _) rfl rfl rfl hN rfl S B j₀ j₁
@@ -225,8 +225,8 @@ abbrev mappedStoredPairIso := mappedSourceConstructorIso σ N S
 def mappedJointInitial : IsInitial (Projection.mappedJointAlgebra σ N S) :=
   (mappedStoredPairInitial σ N).ofIso (mappedStoredPairIso σ N)
 
-/-- Initiality of the actual mapped first-sort algebra follows from the
-constructed joint algebra and the proved projection comparison. -/
+/-- Initiality of the mapped first-sort algebra follows from the constructed joint algebra
+and the proved projection comparison. -/
 def mappedOneSortInitial :
     IsInitial (Projection.mappedOneSortAlgebra σ N (oneSortAlgebra 𝗣𝗔 σ N)) := by
   have hp := projectedConstructorInitial (fun n => K.obj (σ n)) N _ (mappedJointInitial σ N)

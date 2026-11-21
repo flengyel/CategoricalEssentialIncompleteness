@@ -12,8 +12,8 @@ public import Mathlib.CategoryTheory.Limits.Types.Products
 /-!
 # Set-enrichment of the numerical restriction category
 
-The hom-objects are the sets of extensional partial recursive arrows. Composition,
-restriction, and partial pairing act pointwise on families of arrows. Their
+The hom-objects are the sets of extensional partial recursive morphisms. Composition,
+restriction, and partial pairing act pointwise on families of morphisms. Their
 equations give enriched restriction products and zeros over the category of types.
 -/
 
@@ -134,7 +134,7 @@ theorem enrichedProducts : enrichedRestriction.Products where
     simpa only [enriched_pair_apply, enriched_comp_apply, enriched_fst_apply,
       enriched_snd_apply] using partialPair_proj (f t)
 
-/-- The nowhere-defined numerical arrows give enriched zero morphisms. -/
+/-- The nowhere-defined numerical morphisms give enriched zero morphisms. -/
 instance enrichedZeros : enrichedRestriction.Zeros where
   zero X Y := ↾fun _ ↦ (0 : X ⟶ Y)
   zero_comp f := by

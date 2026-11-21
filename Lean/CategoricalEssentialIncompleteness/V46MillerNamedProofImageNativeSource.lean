@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeS
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 
-/-! # Actual source PA substitution states at native named points
+/-! # Source PA substitution states at named points
 
-The old standard-model algorithm determines the full option state. Actual
-uniform state charts transport these points without changing binder names.
+The old standard-model algorithm determines the full option state. Uniform state
+charts transport these points without changing binder names.
 -/
 
 @[expose] public section
@@ -69,8 +69,8 @@ theorem pa_term_value (x : ℕ) (t r : Tm) :
   exact hv.trans ((NamedPostfixEncoding.substitutionResult_termCode π r t x).trans
     (SyntacticNamedHilbert.termPoint_value σ π d (r.substitute x t)).symm)
 
-/-- The old source correctness supplies the complete option output,
-including failure, at the actual standard source input point. -/
+/-- The old source correctness supplies the complete option output, including failure, at
+the standard source input point. -/
 theorem pa_formula_option_value (x : ℕ) (t : Tm) (φ : Fm) :
     (N).map (S₀).formulaSubstitutionOption (SyntacticNamedHilbert.substitutionPoint σ π d x φ t)=
       paOptionPoint σ π d (φ.substitute x t) := by

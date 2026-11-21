@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformTreesTotal
 
 
-/-! # Statement checks in `V46MillerUniformTreesTotalChecks` -/
+/-! # The constructed positive-record evaluator is a total carrier morphism -/
 
 @[expose] public section
 noncomputable section

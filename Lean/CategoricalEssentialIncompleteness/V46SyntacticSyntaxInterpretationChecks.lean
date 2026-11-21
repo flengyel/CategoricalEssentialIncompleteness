@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInterpretation
 
 
-/-! # Statement checks in `V46SyntacticSyntaxInterpretationChecks` -/
+/-! # Sigma-one evaluation maps on the literal two-sort postfix carriers -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheory
 
-/-! # Actual generated sentence theories with no assumed derivation initiality -/
+/-! # Generated sentence theories with no assumed derivation initiality -/
 
 @[expose] public section
 

@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.EnrichedRestriction
 
 /-!
-# Internal composition and products of total arrows
+# Internal composition and products of total morphisms
 
-The restriction-product equations imply closure of total arrows under pairing.
-Identities, composition, and pairing therefore lift to the totality
-pullbacks. Monicity of their inclusions then proves the category and ordinary
-binary-product equations required by `InternalHom.CartesianLaws`.
+The restriction-product equations imply closure of total morphisms under pairing.
+Identities, composition, and pairing therefore lift to the totality pullbacks.
+Monicity of their inclusions then proves the category and ordinary binary-product
+equations required by `InternalHom.CartesianLaws`.
 -/
 
 @[expose] public section
@@ -69,7 +69,7 @@ end Products
 private theorem terminal_from_self : terminal.from (⊤_ V) = 𝟙 (⊤_ V) :=
   terminalIsTerminal.hom_ext _ _
 
-/-- The total-arrow reduct, with all operations constructed by pullback lifts. -/
+/-- The total-morphism reduct, with all operations constructed by pullback lifts. -/
 def totalHom (P : R.Products) : InternalHom V O where
   hom := R.totalObject
   unit X := R.totalLift (H.unit X) (by

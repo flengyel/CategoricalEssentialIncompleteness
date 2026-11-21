@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptions
 
-/-! # The genuine option-success pullback for a finite-geometry functor -/
+/-! # The option-success pullback for a finite-geometry functor -/
 
 @[expose] public section
 noncomputable section
@@ -26,8 +26,8 @@ variable (f : W ⟶ OptionSyntax.obj Y) (f' : W' ⟶ OptionSyntax.obj Y')
 variable (hf : F.map f ≫ (optionIso F j).hom = i.hom ≫ f')
 
 include hf in
-/-- The mapped success square is a pullback after the actual input,
-value and option comparison isomorphisms. -/
+/-- The mapped success square is a pullback after the input, value and option comparison
+isomorphisms. -/
 theorem success_isPullback :
     IsPullback (F.map (pullback.fst f coprod.inr) ≫ i.hom)
       (F.map (pullback.snd f coprod.inr) ≫ j.hom) f' coprod.inr := by
@@ -38,8 +38,8 @@ theorem success_isPullback :
   · exact hf
   · exact optionIso_inr F j
 
-/-- This is the canonical isomorphism of the two actual success
-pullbacks, with both of its projections specified below. -/
+/-- This is the canonical isomorphism of the two success pullbacks, with both of its
+projections specified below. -/
 def successIso : F.obj (pullback f coprod.inr) ≅ pullback f' coprod.inr :=
   (success_isPullback F i j f f' hf).isoPullback
 

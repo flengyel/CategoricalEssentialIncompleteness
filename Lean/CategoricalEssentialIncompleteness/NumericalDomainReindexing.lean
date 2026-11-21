@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.NumericalEmbedding
 /-!
 # Inverse image of numerical restriction domains
 
-Inverse image preserves the bottom domain, binary meets, and binary joins
-along every partial numerical arrow. Along total arrows it also preserves
-the top domain, giving contravariant bounded lattice homomorphisms.
+Inverse image preserves the bottom domain, binary meets, and binary joins along every
+partial numerical morphism. Along total morphisms it also preserves the top domain,
+giving contravariant bounded lattice homomorphisms.
 -/
 
 @[expose] public section
@@ -91,7 +91,8 @@ namespace Numerical
   · rintro ⟨k, hk, m, hm, he⟩
     exact ⟨m, ⟨k, hk, hm⟩, he⟩
 
-/-- Inverse image along a total numerical arrow preserves the bounded lattice operations. -/
+/-- Inverse image along a total numerical morphism preserves the bounded lattice
+operations. -/
 def domainInverseHom {X Y : Total} (f : X ⟶ Y) :
     BoundedLatticeHom (Domain Y.obj) (Domain X.obj) where
   toFun := domainInverse f.hom

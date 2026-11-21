@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAd
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSortTotal
 public import CategoricalEssentialIncompleteness.V46ConcreteDecidableVariables
 
-/-! Lemma 5.8 in the actual total split program category, for arbitrary rule data. -/
+/-! Lemma 6.8 in the total split program category, for arbitrary rule data. -/
 
 @[expose] public section
 noncomputable section
@@ -61,8 +61,8 @@ def totalChosenInitial : IsInitial (totalChosenAlgebra T R) :=
     (totalSuccessComparison T R) (totalValidatedSlice T R)
     (SliceInitial.initial _ _ (totalOrdinaryTree T R) (totalOrdinaryTreeInitial T R))
 
-/-- The carrier is presented by the explicit successful-word Sigma-one
-predicate, transported by the actual predicate/program equivalence. -/
+/-- The carrier is presented by the explicit successful-word Sigma-one predicate,
+transported by the predicate/program equivalence. -/
 def totalDerivationCarrier : Carrier :=
   SuccessTransport.carrier T (totalValidatorFold T R).f
 
@@ -93,8 +93,8 @@ theorem totalDerivation_conclusion :
 def totalTreeInclusion : (totalDerivationAlgebra T R).a.left ⟶ (totalOrdinaryTree T R).a :=
   SuccessTransport.inclusion T (totalValidatorFold T R).f
 
-/-- The actual program-category constructor retains the original rule label
-and the ordered child codes. The validation output remains existential. -/
+/-- The program-category constructor retains the original rule label and the ordered child
+codes. The validation output remains existential. -/
 theorem totalDerivationConstructor_tree :
     (totalDerivationAlgebra T R).str.left ≫ totalTreeInclusion T R =
       InputGeometry.forget R (totalDerivationAlgebra T R).a ≫

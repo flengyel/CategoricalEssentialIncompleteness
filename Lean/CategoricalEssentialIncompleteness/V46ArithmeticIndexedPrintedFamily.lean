@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxiomsExponential
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
 
-/-! # The printed exponential coefficient and the actual indexed initial algebra
+/-! # The exponential coefficient and the indexed initial algebra
 
 The proved coefficient mono square induces a comparison of the original
 ordered rules. Initiality, numeral fibers and sentence images are then
@@ -92,14 +92,14 @@ def data (h : a.hom ≫ axioms' = axioms) :
       exact (Category.id_comp _).symm
 end Signature
 
-/-- The printed A₀ coefficient is used directly in the manuscript rule signature. -/
+/-- The A₀ coefficient is used directly in the manuscript rule signature. -/
 def rules (AxPA : Carrier) : RulePresentation
     (ArithmeticIndexedFamily.parameter ⨯ ArithmeticIndexedFamily.formula) 2 :=
   ArithmeticIndexedRules.rules ArithmeticIndexedFamily.parameter ArithmeticIndexedFamily.logical
     ArithmeticIndexedFamily.sentenceInclusion (ArithmeticIndexedAxioms.Exponential.printedAxioms AxPA)
     ArithmeticIndexedFamily.generalization ArithmeticIndexedFamily.implication
 
-/-- The actual source/realized mono square supplies the concrete data. -/
+/-- The source/realized mono square supplies the concrete data. -/
 def coefficientData (AxPA : Carrier) : InferenceTransport.Data (CategoryTheory.Equivalence.refl (C := TotalSplit 𝗣𝗔))
     (ArithmeticIndexedFamily.rules AxPA) (rules AxPA) :=
   Signature.data ArithmeticIndexedFamily.parameter ArithmeticIndexedFamily.logical
@@ -117,7 +117,7 @@ def algebraEquivalence (AxPA : Carrier) :=
   InferenceTransport.algebraEquivalence (CategoryTheory.Equivalence.refl (C := TotalSplit 𝗣𝗔))
     (ArithmeticIndexedFamily.rules AxPA) (rules AxPA) (coefficientData AxPA)
 
-/-- The printed algebra is constructed by arbitrary-rule initiality. -/
+/-- The algebra is constructed by arbitrary-rule initiality. -/
 def algebra (AxPA : Carrier) : Endofunctor.Algebra (rules AxPA).inference :=
   ArithmeticIndexedRules.algebra 𝗣𝗔 ArithmeticIndexedFamily.parameter ArithmeticIndexedFamily.logical
     ArithmeticIndexedFamily.sentenceInclusion (ArithmeticIndexedAxioms.Exponential.printedAxioms AxPA)
@@ -229,7 +229,7 @@ def fiberInitial (AxPA : Carrier) (e : ℕ) : IsInitial (fiberAlgebra AxPA e) :=
   (ArithmeticIndexedFibers.fiberInitial AxPA e).ofIso
     (carriedIso (ArithmeticIndexedFibers.fiberAlgebra AxPA e) (fiberOverIso AxPA e)).symm
 
-/-- Constructor-preserving comparison with the original actual numeral fiber. -/
+/-- Constructor-preserving comparison with the original numeral fiber. -/
 def fiberAlgebraIso (AxPA : Carrier) (e : ℕ) :
     fiberAlgebra AxPA e ≅ ArithmeticIndexedFibers.fiberAlgebra AxPA e :=
   carriedIso (ArithmeticIndexedFibers.fiberAlgebra AxPA e) (fiberOverIso AxPA e)
@@ -259,13 +259,13 @@ def sentenceIso (AxPA : Carrier) : sentenceProof AxPA ≅ ArithmeticIndexedFamil
     (prod.map (𝟙 ArithmeticIndexedFamily.parameter) ArithmeticIndexedFamily.sentenceInclusion)
     (carrierIso AxPA) (carrierIso_conclusion AxPA)
 
-/-- The same selected predicate P₀ presents the printed family sentence proofs. -/
+/-- The same selected predicate P₀ presents the family sentence proofs. -/
 def proofPresentationIso (AxPA : Carrier) :
     (realization 𝗣𝗔).obj (ArithmeticIndexedProvability.proofCarrier AxPA) ≅ sentenceProof AxPA :=
   ArithmeticIndexedProvability.proofPresentationIso AxPA ≪≫ (sentenceIso AxPA).symm
 
-/-- The printed source conclusion is compared to the initial algebra using
-its printed coefficient, not only to the intermediate raw family. -/
+/-- The source conclusion is compared to the initial algebra using its coefficient, not
+only to the intermediate raw family. -/
 theorem printedConclusion_realization (AxPA : Carrier) :
     (realization 𝗣𝗔).map (ArithmeticIndexedProvability.printedConclusion AxPA) =
       (proofPresentationIso AxPA).hom ≫ sentenceConclusion AxPA ≫

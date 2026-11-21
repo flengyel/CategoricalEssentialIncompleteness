@@ -274,7 +274,7 @@ theorem consistent_iff_disjoint (m : A ⟶ (S₂).sentenceObject) [Mono m] :
   exact CanonicalIncompleteness.consistent_iff_canonical_disjoint a
     (recoveredCodes a m) (recoveredCodes_enumerable a m)
 
-/-- Theorem 8.6 for every axiom subobject of the sentence object. -/
+/-- Theorem 9.7 for every axiom subobject of the sentence object. -/
 theorem printed_essential_incompleteness (m : A ⟶ (S₂).sentenceObject) [Mono m]
     (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))
     (hcons : theoremIdem a m⊓Idem.pull (S₂).sentenceNegation.hom (theoremIdem a m)=⊥) :
@@ -322,8 +322,8 @@ theorem printed_categorical_incompleteness (m : A ⟶ (S₂).sentenceObject) [Mo
   printed_essential_incompleteness a m ha
     ((extends_iff_theoremIdem_le a m).mpr hext) hcons
 
-/-- The printed native consistency hypothesis supplies the categorical
-consistency equation for the original axiom monomorphism. -/
+/-- The Hilbert consistency hypothesis supplies the categorical consistency
+equation for the original axiom monomorphism. -/
 theorem printed_essential_incompleteness_of_consistent
     (m : A ⟶ (S₂).sentenceObject) [Mono m]
     (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))

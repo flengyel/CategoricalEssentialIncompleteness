@@ -112,7 +112,7 @@ theorem inverse_preserves_restrictions {X Y : C} (f : X ⟶ Y) :
   LocalConnectedness.V46.equivalence_inverse_preserves (equivalence inverses E)
     (preserves_restrictions inverses E) f
 
-/-- The comparison for the actual total category of C. -/
+/-- The comparison for the total category of C. -/
 def selfEquivalence : PartialMaps.Par (Tot C) ≌ C :=
   equivalence inverses (CategoryTheory.Equivalence.refl (C := Tot C))
 

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResul
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
 public import CategoricalEssentialIncompleteness.V46NamedPostfixPlainComparison
 
-/-! # Computed substitution states with the actual plain-syntax parameters -/
+/-! # Computed substitution states with the plain-syntax parameters -/
 
 @[expose] public section
 
@@ -40,9 +40,9 @@ def plainParameterIso :
       (U ⨯ (plainSyntaxCarrier V σ π d false : PredicateCategory T)) :=
   prod.mapIso (Iso.refl U) (syntaxPlainIso T V σ π d false)
 
-/-- Both the replacement and the source word use their actual
-constructor-preserving parser comparison. The parameter objects are
-not identified merely because their coordinates have the same values. -/
+/-- Both the replacement and the source word use their constructor-preserving parser
+comparison. The parameter objects are not identified merely because their coordinates
+have the same values. -/
 def plainInputIso (formula : Bool) :
     ((U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T)) ⨯
       (syntaxCarrier V σ π d formula : PredicateCategory T)) ≅

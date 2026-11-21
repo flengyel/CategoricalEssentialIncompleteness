@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationTotal
 
-/-! The actual B_T/F endpoint has no chosen evaluator or initiality premise. -/
+/-! The B_T/F endpoint has no chosen evaluator or initiality premise. -/
 
 @[expose] public section
 noncomputable section

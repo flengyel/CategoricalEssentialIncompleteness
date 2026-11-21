@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentClosure
 public import Mathlib.CategoryTheory.Limits.Constructions.Over.Basic
 
-/-! Substitution at an absent named variable on its actual term/formula fibers. -/
+/-! Substitution at an absent named variable on its term/formula fibers. -/
 
 @[expose] public section
 noncomputable section
@@ -141,7 +141,7 @@ theorem formulaAbsent_success :
     simpa only [formulaAbsentInclusion, formulaAbsentObject, formulaAbsentTest, S.formulaAbsenceTest_comp] using
       Two.fiberι_comp S.formulaAbsentTest false)
 
-/-- The actual absent-formula fiber factors through the actual successful-option pullback. -/
+/-- The absent-formula fiber factors through the successful-option pullback. -/
 def formulaAbsentAdmissible : S.formulaAbsentObject ⟶ S.admissibleSubstitution :=
   pullback.lift S.formulaAbsentInclusion (S.formulaAbsentInclusion ≫ prod.fst)
     (by simpa only [Category.assoc] using S.formulaAbsent_success)

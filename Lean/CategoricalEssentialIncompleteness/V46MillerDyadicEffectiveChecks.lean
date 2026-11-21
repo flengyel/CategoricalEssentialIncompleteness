@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
 
 
-/-! # Statement checks in `V46MillerDyadicEffectiveChecks` -/
+/-! # Primitive-recursive tests for the finite dyadic certificates -/
 
 @[expose] public section
 noncomputable section

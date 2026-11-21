@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrences
 
-/-! # The numerical free-variable candidates form an actual algebra Hom -/
+/-! # The numerical free-variable candidates form an algebra Hom -/
 
 @[expose] public section
 

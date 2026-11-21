@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
 
-/-! # One actual all-oracle rational program for each finite bad-set distance
+/-! # One all-oracle rational program for each finite bad-set distance
 
 The ordinary finite-word algorithm and its use bound are constructed in
 DistanceApproximation. The finite-use compiler produces one index before

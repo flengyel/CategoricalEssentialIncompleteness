@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.EffectiveForkPullbackImages
 public import CategoricalEssentialIncompleteness.EnumerableRegular
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
 
-/-! # Regularity of the actual total fork category -/
+/-! # Regularity of the total fork category -/
 
 @[expose] public section
 

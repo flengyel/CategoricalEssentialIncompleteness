@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46BooleanSquare
 
-/-! The Boolean square is a genuine product, compared with four terminal summands. -/
+/-! The Boolean square is a product, compared with four terminal summands. -/
 
 @[expose] public section
 noncomputable section

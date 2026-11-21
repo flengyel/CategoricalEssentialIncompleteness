@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAll
 
-/-! A literal numerical payload records the original named subtree, its
-free-variable list, the substitution result, and an independently computed
-free-for Boolean. The formula result uses failure zero or pair(value,one). -/
+/-!
+A numerical payload records the original named subtree, its free-variable list, the
+substitution result, and an independently computed free-for Boolean. The formula
+result uses failure zero or pair(value,one).
+-/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceBuilders
 
-/-! # Actual PA-total programs enumerating specialized program indices -/
+/-! # PA-total programs enumerating specialized program indices -/
 
 @[expose] public section
 
@@ -31,8 +31,8 @@ theorem specializerSectionGraph_functional (e : ℕ) :
   intro M _ _
   simp [models_iff, functionalSentence_eval, specializerSectionGraph]
 
-/-- This standard index is selected from the actual functional search
-program for a -> specialize(e,a). Its graph is total in PA below. -/
+/-- This standard index is selected from the functional search program for a ->
+specialize(e,a). Its graph is total in PA below. -/
 def specializerSectionIndex (e : ℕ) : ℕ := SyntacticSearch.searchIndex (specializerSectionGraph e)
 
 section Models

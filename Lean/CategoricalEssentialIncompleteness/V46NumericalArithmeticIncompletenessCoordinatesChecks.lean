@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompletenessCoordinates
 
 
-/-! # Statement checks in `V46NumericalArithmeticIncompletenessCoordinatesChecks` -/
+/-! # Numerical sentence maps in the classical restriction splitting -/
 
 @[expose] public section
 noncomputable section

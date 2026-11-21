@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticSubstitutionOccurrences
 
 
-/-! # Statement checks in `V46NamedArithmeticSubstitutionOccurrencesChecks` -/
+/-! # The free variables of substitution into a fixed finite named source formula, in any PA model and for an arbitrary internal closed replacement -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

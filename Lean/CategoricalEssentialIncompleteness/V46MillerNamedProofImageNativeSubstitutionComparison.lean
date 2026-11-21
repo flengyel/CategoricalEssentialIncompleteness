@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSource
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeTransport
 
-/-! # Native term substitution through the actual uniform fold
+/-! # Named term substitution through the uniform fold
 
-The fixed-frame constructor law and the verified variable/function squares
-give native term induction, retaining nullary symbols and ordered children.
-Formula substitution is continued separately.
+The fixed-frame constructor law and the verified variable/function squares give
+induction on named terms, retaining nullary symbols and ordered children. Formula
+substitution is continued separately.
 -/
 
 @[expose] public section
@@ -90,8 +90,8 @@ private theorem over_inr_value {C : Type} [Category.{0} C] [HasFiniteCoproducts 
     congrArg Over.Hom.left (coprod.inr_desc f g)
   exact (Functor.map_comp_apply G _ _ y).symm.trans (congrArg (fun k => G.map k y) hc)
 
-/-- The two term branches are the actual already proved morphism squares,
-evaluated at one standard parameter and one finite ordered input. -/
+/-- The two term branches are the morphism squares, evaluated at one standard parameter
+and one finite ordered input. -/
 theorem term_step_transport (r₀ : (N).obj (R₀))
     (z : Standard.Data (S₀).substitutionCarriers (a)) :
     (U).map (prod.snd : (R) ⨯ (S).substitutionCarriers.1 ⟶ _)
@@ -368,9 +368,9 @@ private theorem term_native_input_function (x : ℕ) (t : Tm) (k : Fin (d+1))
       (expectedTermState P σ π d x t (children i))
   rw [termLeaf_fold P σ π d x t (children i),ih i]
 
-/-- Native term induction is performed on the actual finite named tree.
-Neither an underlying preservation-of-initiality assertion nor a source
-global point for the replacement is required. -/
+/-- Induction on named terms is performed on the finite named tree. Neither an underlying
+preservation-of-initiality assertion nor a source global point for the replacement is
+required. -/
 theorem termState_comparison (x : ℕ) (t r : Tm) :
     termState P σ π d x t r=expectedTermState P σ π d x t r := by
   induction r with

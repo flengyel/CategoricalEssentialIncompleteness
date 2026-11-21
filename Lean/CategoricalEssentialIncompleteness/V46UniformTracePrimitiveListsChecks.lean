@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveLists
 
 
-/-! # Statement checks in `V46UniformTracePrimitiveListsChecks` -/
+/-! # Primitive recursion on codes for lists -/
 
 @[expose] public section
 open Nat Nat.ArithPart₁ CategoricalRiceShapiro.ArithmeticCode

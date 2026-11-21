@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
 
-/-! # Checks for the actual polynomial parameter comparison -/
+/-! # Checks for the polynomial parameter comparison -/
 
 @[expose] public section
 

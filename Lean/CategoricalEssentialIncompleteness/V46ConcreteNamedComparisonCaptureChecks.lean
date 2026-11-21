@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCapture
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonCaptureChecks` -/
+/-! # The capture classifier reflects the numerical absence test -/
 
 @[expose] public section
 noncomputable section

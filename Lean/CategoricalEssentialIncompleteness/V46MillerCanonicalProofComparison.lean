@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonInference
 public import Mathlib.Tactic.FinCases
 
-/-! # The actual canonical Γ derivation algebra and generated sentence image
+/-! # The canonical Γ derivation algebra and generated sentence image
 
 The target is the successful derivation algebra for S2.logicalRules on the
 transported arbitrary Γ sentence subobject. Its comparison with the mapped
@@ -115,8 +115,8 @@ def ruleData : Inference.Data (E) (ifm) (R₁) (canonicalRules a σ π d Γ hΓ)
   premises := rule_premises a σ π d Γ hΓ
   conclusion := rule_conclusion a σ π d Γ hΓ
 
-/-- The actual inference comparison includes each prescribed ordered
-premise pullback, its original rule label and the formula conclusion. -/
+/-- The inference comparison includes each prescribed ordered premise pullback, its
+original rule label and the formula conclusion. -/
 def inferenceIso : (R₁).inference ⋙ (Inference.slice (E) (ifm)).functor ≅
     (Inference.slice (E) (ifm)).functor ⋙ (canonicalRules a σ π d Γ hΓ).inference :=
   Inference.comparison (E) (ifm) (R₁) (canonicalRules a σ π d Γ hΓ) (ruleData a σ π d Γ hΓ)
@@ -169,8 +169,8 @@ theorem inverse_proofIso_conclusion :
     rw [← Category.assoc,i.inv_hom_id,Category.id_comp]
   exact hi.symm.trans h
 
-/-- Constructor preservation is the actual algebra-isomorphism law;
-it is proved before passing to any regular image. -/
+/-- Constructor preservation is the algebra-isomorphism law; it is proved before passing
+to any regular image. -/
 theorem proof_constructor :
     (canonicalProofAlgebra a σ π d Γ hΓ).str ≫ (proofOverIso a σ π d Γ hΓ).hom =
       (canonicalRules a σ π d Γ hΓ).inference.map (proofOverIso a σ π d Γ hΓ).hom ≫
@@ -252,8 +252,8 @@ theorem mappedSentenceImage_factorization :
   simp only [Category.assoc] at hmid hfinal ⊢
   exact hmid.trans hfinal
 
-/-- The actual canonical generated sentence image is the mapped uniform
-generated image, in its actual sentence coordinates. -/
+/-- The canonical generated sentence image is the mapped uniform generated image, in its
+sentence coordinates. -/
 def sentenceImageIso : image (canonicalSentenceConclusion a σ π d Γ hΓ) ≅
     (E).functor.obj (image (NamedProofImage.sentenceConclusion (P) σ π d Γ hΓ)) :=
   (image.isoStrongEpiMono (mappedSentenceImageQuotient a σ π d Γ hΓ)

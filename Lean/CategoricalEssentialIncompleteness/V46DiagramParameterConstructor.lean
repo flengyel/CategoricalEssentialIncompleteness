@@ -20,8 +20,8 @@ local instance (P : C) : Regular (Over P) := RegularSlices.regular P
 local instance (P : J ⥤ C) : Regular (Over P) := RegularSlices.regular P
 variable {I : Type w} (c : I → J ⥤ C) (P : J ⥤ C) (X : (J ⥤ C) × (J ⥤ C))
 
-/-- A proved ordinary constructor square supplies the full parameter
-constructor square, with both recursive sorts and the actual family maps. -/
+/-- A proved ordinary constructor square supplies the full parameter constructor square,
+with both recursive sorts and the family maps. -/
 theorem square (p : SyntaxPolynomial I) {Y : J ⥤ C}
     (s : (p.mapCoefficients c).eval.obj X ⟶ Y) (j : J)
     (t : (p.mapCoefficients (fun i => (c i).obj j)).eval.obj (X.1.obj j, X.2.obj j) ⟶ Y.obj j)

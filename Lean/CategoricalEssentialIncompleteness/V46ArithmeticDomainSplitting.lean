@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.PartialFunctions
 
 /-! # The chosen fixed-point splitting of an arbitrary Pfn-valued range functor
 
-Each interpreted restriction idempotent is split through its actual fixed
-points. The existing chosen-splitting extension supplies preservation of
-restrictions, ranges, zeros and binary coproducts.
+Each interpreted restriction idempotent is split through its fixed points. The
+existing chosen-splitting extension supplies preservation of restrictions, ranges,
+zeros and binary coproducts.
 -/
 
 @[expose] public section

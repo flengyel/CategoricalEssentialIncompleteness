@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
 
 
-/-! # Statement checks in `V46MillerTheorySentenceMorphismsChecks` -/
+/-! # The ordered-field sentence morphisms -/
 
 @[expose] public section
 noncomputable section

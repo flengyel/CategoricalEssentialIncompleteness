@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
 public import Mathlib.Logic.Function.Basic
 
-/-! # Semantics and capture-free substitution on literal named finite trees -/
+/-! # Semantics and capture-free substitution on named finite trees -/
 
 @[expose] public section
 

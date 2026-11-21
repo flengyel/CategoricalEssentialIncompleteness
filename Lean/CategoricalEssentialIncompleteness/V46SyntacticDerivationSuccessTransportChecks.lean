@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessTransport
 
-/-! The actual total split carrier is the image of an explicit Sigma-one word predicate. -/
+/-! The total split carrier is the image of an explicit Sigma-one word predicate. -/
 
 @[expose] public section
 noncomputable section

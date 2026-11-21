@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsRawSquares
 
 
-/-! # Statement checks in `V46MillerListsRawSquaresChecks` -/
+/-! # Constructor squares for every slice morphism -/
 
 @[expose] public section
 noncomputable section

@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerOracleProgramTable
 
-/-! # Actual oracle programs for ordinary finite-use algorithms
+/-! # Oracle programs for ordinary finite-use algorithms
 
-The algorithm may return different numbers from different representations.
-This construction supplies a single actual program and asserts no semantic
-representation independence of those numbers.
+The algorithm may return different numbers from different representations. This
+construction supplies a single program and asserts no semantic representation
+independence of those numbers.
 -/
 
 @[expose] public section

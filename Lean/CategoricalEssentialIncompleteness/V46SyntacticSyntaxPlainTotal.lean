@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTotal
 
-/-! # The plain postfix syntax bundle in the actual total split category -/
+/-! # The plain postfix syntax bundle in the total split category -/
 
 @[expose] public section
 
@@ -44,8 +44,8 @@ def mappedPlainPostfixData {D : Type u} [Category.{v} D] [Regular D] [FinitaryEx
       IsInitial B × (∀ R : D, IsInitial (SyntaxPolynomial.algebraWithParameters r s B R))
   exact Eq.mp (congrArg₂ S (mapCoefficients_id p) (mapCoefficients_id q)) h
 
-/-- The plain parser carriers and constructors give the required
-initial syntax algebra in every actual total-split parameter slice. -/
+/-- The plain parser carriers and constructors give the required initial syntax algebra in
+every total-split parameter slice. -/
 def plainTotalCategoricalSyntax (V : TotalSplit T) (σ π : ℕ → TotalSplit T) (d : ℕ) :
     CategoricalSyntax V σ π d where
   decidableVariables := ConcreteDecidableVariables.total T V

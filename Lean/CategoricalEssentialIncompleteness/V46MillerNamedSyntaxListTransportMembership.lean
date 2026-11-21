@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportOperations
 
 
-/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportMembership` -/
+/-! # Membership in lists of variable names -/
 
 @[expose] public section
 noncomputable section
@@ -27,8 +27,8 @@ local notation "R" => NamedSyntaxComparison.mappedListStable P V
 variable (S : DecidableVariables V)
 theorem membershipOverMap_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
     ((sliceFunctor (F) U).map f).left=(F).map f.left := rfl
-/-- The coefficient and carrier isomorphisms are actual family
-comparisons. The equality-test square is derived from the diagonal. -/
+/-- The coefficient and carrier isomorphisms are family comparisons. The equality-test
+square is derived from the diagonal. -/
 def mappedMembershipAlgebraIso :
     (mappedList (sliceFunctor (F) V) (constantFamily V V) (constantFamily ((F).obj V) ((F).obj V))
       (coefficientComparison (F) V V ((F).obj V) (Iso.refl _)) (StableListAlgebra.membershipAlgebra S)).asAlgebra ≅
@@ -76,8 +76,8 @@ def mappedMembershipAlgebraIso :
       rw [heq,hval]
 
 
-/-- Actual membership equality, derived from the mapped equality classifier
-and the unique parameterized fold. -/
+/-- Membership equality, derived from the mapped equality classifier and the unique
+parameterized fold. -/
 theorem map_membership :
     (F).map ((L).membership S) ≫ (Derivation.booleanIso (F)).hom=
       prodComparison (F) V (L).algebra.carrier ≫ (R).membership (Derivation.mappedEquality (F) S) := by

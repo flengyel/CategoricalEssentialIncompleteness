@@ -11,7 +11,7 @@ public import Mathlib.CategoryTheory.Limits.Types.Coproducts
 public import Mathlib.CategoryTheory.Limits.Types.Products
 public import Mathlib.CategoryTheory.Limits.Over
 
-/-! # Actual model coproduct and parameter-fiber geometry -/
+/-! # Model coproduct and parameter-fiber geometry -/
 
 @[expose] public section
 
@@ -115,7 +115,7 @@ theorem modelSum_graph_disjoint (A B : PredicateCategory T) (x y z : M)
     (((chosenGraph_map_iff T M coprod.inl xx zz).mp h).trans
       ((chosenGraph_map_iff T M coprod.inr yy zz).mp h').symm)
 
-/-- The chosen terminal predicate has an actual point in every model. -/
+/-- The chosen terminal predicate has a point in every model. -/
 def modelTerminalPoint : Obj T M (⊤_ (PredicateCategory T)) := by
   let C : PredicateCategory T := terminalCarrier
   let x : Obj T M C := ⟨0, by simp [C, terminalCarrier]⟩

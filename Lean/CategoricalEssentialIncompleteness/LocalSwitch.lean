@@ -58,8 +58,7 @@ theorem Idem.receives_of_le_pull {X Y : C} (a : Idem X) (f : X ⟶ Y) (b : Idem 
 
 variable [CoprodStruct C] [CategoryTheory.HasCoproducts C] [RestrictionCoproducts C]
 
-/-- Lemma 6.1: a total arrow maps a connected restriction idempotent into
-one summand. -/
+/-- A total morphism maps a connected restriction idempotent into one summand. -/
 theorem connected_alternative [JoinInverse C] {X Y Z : C}
     (a : Idem X) (ha : Connected a) (f : X ⟶ coprod Y Z) (hf : isTotal f) :
     a.hom ≫ f ≫ (summand0 Y Z).hom = a.hom ≫ f ∨
@@ -273,8 +272,8 @@ theorem switch_fibers [Ranges C] {X : C} {c c' : Idem X}
   · rw [Idem.pull_hom, he0, rst_comp_of_isTotal _ hs, c'.restriction]
   · rw [Idem.pull_hom, he1, rst_comp_of_isTotal _ hs, c.restriction]
 
-/-- Proposition 6.2, including partial monicity for arbitrary partial tests
-and uniqueness of the section. -/
+/-- The local switch is partially monic for arbitrary partial tests and has a unique
+section. -/
 theorem local_switch [Ranges C] [Splits C] [JoinInverse C] [LocallyConnected C]
     [WeakChoice C] {X : C} (a b : Idem X) (hab : a ⊓ b = ⊥) :
     PartialMono (copair a.hom b.hom) ∧

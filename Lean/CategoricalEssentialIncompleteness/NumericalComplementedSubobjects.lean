@@ -12,9 +12,9 @@ public import CategoricalEssentialIncompleteness.NumericalBooleanFibers
 /-!
 # Complemented numerical subobjects
 
-The complemented subobjects of the equality PER on `ℕ` are exactly the
-recursive support inclusions. Equivalently, they are the upper fibers of
-Boolean arrows, or the images of complemented numerical restriction domains.
+The complemented subobjects of the equality PER on `ℕ` are exactly the recursive
+support inclusions. Equivalently, they are the upper fibers of Boolean morphisms, or
+the images of complemented numerical restriction domains.
 -/
 
 @[expose] public section

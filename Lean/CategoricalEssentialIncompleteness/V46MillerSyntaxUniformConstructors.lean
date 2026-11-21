@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstruct
 
 /-! # Constructor equations for arbitrary uniformly enumerable coefficients
 
-The finite polynomial retains each actual coefficient predicate. Only
-the auxiliary numerical parser forgets predicates, and its graph equality
-is proved. All target operation values are supplied by actual slice
-morphisms and occur positively in the selected finite records.
+The finite polynomial retains each coefficient predicate. Only the auxiliary numerical
+parser forgets predicates, and its graph equality is proved. All target operation
+values are supplied by slice morphisms and occur positively in the selected finite
+records.
 -/
 
 @[expose] public section

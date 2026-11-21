@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsUltrapower
 
-/-! # Actual ultrapower model, without an assumed elementary-equivalence field -/
+/-! # Ultrapower model, without an assumed elementary-equivalence field -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic Filter

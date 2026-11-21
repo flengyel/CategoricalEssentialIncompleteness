@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityPresentation
 public import CategoricalEssentialIncompleteness.V46ExponentialProducts
 
-/-! # The indexed conclusion in the printed exponential product chart -/
+/-! # The indexed conclusion in the exponential product chart -/
 
 @[expose] public section
 noncomputable section
@@ -52,7 +52,7 @@ theorem printedConclusion_eq (AxPA : Carrier) :
           ArithmeticIndexedAxioms.sentencePredicate).hom)
       (chosenGraph_class 𝗣𝗔 (rawConclusion AxPA)))
 
-/-- The product chart has the printed exponential code on its predicate side. -/
+/-- The product chart has the exponential code on its predicate side. -/
 def printedProductIso :
     (realization 𝗣𝗔).obj printedProductPredicate ≅
       ArithmeticIndexedAxioms.parameter ⨯ ArithmeticIndexedAxioms.sentence :=

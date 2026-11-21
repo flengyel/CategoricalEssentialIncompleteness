@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFre
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial
 public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariables
 
-/-! # Actual quotient morphisms for the numerical occurrence traversal -/
+/-! # Quotient morphisms for the numerical occurrence traversal -/
 
 @[expose] public section
 
@@ -50,8 +50,8 @@ end ArithmeticModels
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 
-/-- This is a constructed graph morphism, using PA carrier preservation
-of the actual traversal, rather than an evaluator supplied as data. -/
+/-- This is a constructed graph morphism, using PA carrier preservation of the traversal,
+rather than an evaluator supplied as data. -/
 def occurrencesMorphism (formula : Bool) :
     GraphMorphism T (syntaxCarrier V σ π d formula) (listObject T V) where
   graph := occurrencesGraph V σ π d formula

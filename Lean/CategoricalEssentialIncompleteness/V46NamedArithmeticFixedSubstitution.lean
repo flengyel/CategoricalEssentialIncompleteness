@@ -133,8 +133,8 @@ private theorem fixedReplacement_primrec {f : ℕ × ℕ × ℕ → ℕ} (hf : P
       (substitutionResult_primrec variableSymbols functionSymbols relationSymbols bound)
       numeralCode_primrec (sourceWord φ)) (fun _ => by simp only [value,natCast_nat])
 
-/-- The only source condition is its explicit external free-name bound;
-PA range and totality are proved from the actual constructor algorithm. -/
+/-- The only source condition is its explicit external free-name bound; PA range and
+totality are proved from the constructor algorithm. -/
 def morphism (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) : GraphMorphism 𝗣𝗔 variableSymbols
     (ConcreteNamedComparison.literalSentenceCarrier 𝗣𝗔 variableSymbols functionSymbols relationSymbols bound) where
   graph :=

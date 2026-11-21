@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46PartialSliceRightAdjunction
 public import CategoricalEssentialIncompleteness.V46PartialSliceProperness
 public import CategoricalEssentialIncompleteness.V46PartialSliceRealization
 
-/-! # Postcomposition and reindexing in the actual monic-span quotient -/
+/-! # Postcomposition and reindexing in the monic-span quotient -/
 
 @[expose] public section
 noncomputable section

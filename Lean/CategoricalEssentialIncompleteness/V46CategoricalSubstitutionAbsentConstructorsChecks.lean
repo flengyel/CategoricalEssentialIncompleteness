@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentConstructors
 
-/-! Every arity and coefficient carrier participates in the actual invariant. -/
+/-! Every arity and coefficient carrier participates in the invariant. -/
 
 @[expose] public section
 noncomputable section

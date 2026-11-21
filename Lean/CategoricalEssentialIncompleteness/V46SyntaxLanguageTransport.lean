@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
-/-! # Constructor comparisons for the actual transported syntax language -/
+/-! # Constructor comparisons for the transported syntax language -/
 
 @[expose] public section
 
@@ -111,8 +111,8 @@ theorem targetLanguageEquality : SyntaxPolynomial.jointFunctor
     ((SyntaxPolynomial.formulaExpression V π d).mapCoefficients id) = K₁ := by
   simp only [mapCoefficients_termExpression,mapCoefficients_formulaExpression,id_eq]
 
-/-- The existing polynomial comparison, normalized by explicit functor
-equality isomorphisms. Every coefficient uses its actual counit. -/
+/-- The existing polynomial comparison, normalized by explicit functor equality
+isomorphisms. Every coefficient uses its counit. -/
 def languageJointIso : K₀ ⋙ (E.prod E).functor ≅ (E.prod E).functor ⋙ K₁ :=
   eqToIso (congrArg (fun F => F ⋙ (E.prod E).functor) (sourceLanguageEquality E V σ π d)) ≪≫
     SyntaxPolynomialTransport.jointIso E E.inverse.obj id (fun X => E.counitIso.app X)
@@ -173,8 +173,8 @@ def syntaxTermIso : E.functor.obj S₀.algebra.a.1 ≅ S₁.algebra.a.1 :=
 def syntaxFormulaIso : E.functor.obj S₀.algebra.a.2 ≅ S₁.algebra.a.2 :=
   (CategoryTheory.Prod.snd D D).mapIso (syntaxCarrierIso E V σ π d S₀ c)
 
-/-- The whole ordinary constructor square follows from the actual
-algebra isomorphism, before taking any free-variable or substitution fold. -/
+/-- The whole ordinary constructor square follows from the algebra isomorphism, before
+taking any free-variable or substitution fold. -/
 theorem language_structure_comparison :
     (E.prod E).functor.map S₀.algebra.str ≫ c.hom.f =
       (languageJointIso E V σ π d).hom.app S₀.algebra.a ≫ (K₁).map c.hom.f ≫ S₁.algebra.str := by

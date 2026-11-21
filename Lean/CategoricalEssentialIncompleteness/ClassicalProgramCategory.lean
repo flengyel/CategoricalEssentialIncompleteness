@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.ClassicalProducts
 
-/-! # Classical partial recursive arrows on the formal numerical types
+/-! # Classical partial recursive morphisms on the formal numerical types
 
-Objects retain their formal type expressions. Arrows are actual partial
-functions in the image of standard program evaluation, with equality of
-partial-function graphs. Thus no provability quotient remains on arrows.
+Objects retain their formal type expressions. Morphisms are partial functions in the
+image of standard program evaluation, with equality of partial-function graphs. Thus
+no provability quotient remains on morphisms.
 -/
 
 @[expose] public section

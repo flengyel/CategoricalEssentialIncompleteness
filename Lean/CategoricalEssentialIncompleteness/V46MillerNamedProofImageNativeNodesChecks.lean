@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodes
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeNodesChecks` -/
+/-! # Named nodes of the uniform word algebra -/
 
 @[expose] public section
 noncomputable section

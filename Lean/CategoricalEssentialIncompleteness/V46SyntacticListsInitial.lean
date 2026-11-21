@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticListsUnique
 
-/-! # Actual list initiality in every predicate-category parameter slice -/
+/-! # List initiality in every predicate-category parameter slice -/
 
 @[expose] public section
 
@@ -48,9 +48,9 @@ def foldHom (B : Endofunctor.Algebra (listFunctor (constantFamily P V))) :
       rw [Category.assoc]
       exact (fold_cons T (targetListAlgebra T P V B)).symm
 
-/-- The canonical list carrier and its actual pulled-back constructors
-are initial in `PredicateCategory T / P`, for every parameter predicate.
-The target algebra may be any family over `P`. -/
+/-- The canonical list carrier and its pulled-back constructors are initial in
+`PredicateCategory T / P`, for every parameter predicate. The target algebra may be
+any family over `P`. -/
 def withParametersInitial : IsInitial ((algebra T V).withParameters P).asAlgebra :=
   IsInitial.ofUniqueHom (foldHom T P V) (by
     intro B m

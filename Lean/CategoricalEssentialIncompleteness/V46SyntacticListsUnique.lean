@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticListsFold
 
-/-! # Uniqueness of the actual categorical fold -/
+/-! # Uniqueness of the categorical fold -/
 
 @[expose] public section
 
@@ -44,8 +44,8 @@ theorem candidate_eval (p : Obj T M P) (a : Obj T M (listObject T V))
   rw [Functor.map_comp]
   rfl
 
-/-- The canonical nil point over an arbitrary parameter is obtained by
-interpreting the actual terminal object of the slice. -/
+/-- The canonical nil point over an arbitrary parameter is obtained by interpreting the
+terminal object of the slice. -/
 theorem parameter_nil_point (p : Obj T M P) :
     (F T M).map ((algebra T V).withParameters P).nil.left
       ((F T M).map (terminalOverIso T P).inv p) =
@@ -166,9 +166,9 @@ theorem candidate_cons_typed
 
 end Models
 
-/-- Every actual slice morphism satisfying the constructor equations is
-the constructed fold. The only induction used here is the proved internal
-Pi-one candidate-graph induction of `evaluation_unique`. -/
+/-- Every slice morphism satisfying the constructor equations is the constructed fold. The
+only induction used here is the proved internal Pi-one candidate-graph induction of
+`evaluation_unique`. -/
 theorem fold_unique
     (hn : ((algebra T V).withParameters P).nil ≫ m = B.nil)
     (hc : ((algebra T V).withParameters P).cons ≫ m =

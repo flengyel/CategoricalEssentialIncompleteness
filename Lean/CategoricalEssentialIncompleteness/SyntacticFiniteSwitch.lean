@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.SyntacticFamily
 public import CategoricalEssentialIncompleteness.FiniteSwitch
 public import CategoricalEssentialIncompleteness.DisjointJoins
 
-/-! # Lemma 6.5: the specified switch in the syntactic category -/
+/-! # Lemma 7.2: the specified switch in the syntactic category -/
 
 @[expose] public section
 
@@ -209,7 +209,7 @@ theorem finiteSwitchArrow_branch0 {X : CodedProgramCategory T} (c c' : Idem X)
     exact ⟨x, hw, (mem_finiteSwitchArrow T c c' hc q r hq hr M x y).mpr
       (Or.inr ⟨hx, (mem_coded_i0 T M x y).mp hy⟩)⟩
 
-/-- Lemma 6.5, constructed by the increasing-bound, two-test program. -/
+/-- Lemma 7.2, constructed by the increasing-bound, two-test program. -/
 theorem syntactic_finite_switch {X : CodedProgramCategory T} (c c' : Idem X)
     (hc : Complementary c c') :
     ∃ s : X ⟶ coprod X X, isTotal s ∧
@@ -238,7 +238,7 @@ theorem section_lifting_finite_switch (X : CodedProgramCategory T) :
   obtain ⟨s, _, _, _, hs⟩ := family_finite_switch T c c' hc
   exact ⟨s, hs⟩
 
-/-- Corollary 6.6 through the specified switch and the source Turing morphism. -/
+/-- Corollary 7.3 through the specified switch and the source Turing morphism. -/
 theorem finite_switch_categorical_pair (hT : Consistent T) :
     Inseparable (syntacticPair0 T) (syntacticPair1 T) :=
   range_functor_lifting (familyRangeFunctor T)

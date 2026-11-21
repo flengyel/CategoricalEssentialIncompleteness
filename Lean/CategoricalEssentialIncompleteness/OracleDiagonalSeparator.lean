@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.OracleHalting
 
-/-! # The actual even-output separator is nonrecursive and decidable in K -/
+/-! # The even-output separator is nonrecursive and decidable in K -/
 
 @[expose] public section
 

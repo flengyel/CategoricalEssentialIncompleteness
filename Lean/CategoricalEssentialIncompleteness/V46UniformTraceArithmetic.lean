@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveCoding
 public import CategoricalEssentialIncompleteness.V46UniformTraceSpecializers
 public import CategoricalEssentialIncompleteness.V46UniformTraceComparison
 
-/-! # The actual arithmetized-evaluation package for Lemma 5.1 -/
+/-! # The arithmetized-evaluation package for Lemma 6.1 -/
 
 @[expose] public section
 

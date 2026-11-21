@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralListValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralListValuesChecks` -/
+/-! # Numerical list constructors have the finite-word values -/
 
 @[expose] public section
 noncomputable section

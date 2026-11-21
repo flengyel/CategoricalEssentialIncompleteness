@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityOptions
 
-/-! # The genuine Boolean classifier of an option's success pullback -/
+/-! # The Boolean classifier of an option's success pullback -/
 
 @[expose] public section
 
@@ -20,8 +20,8 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness.V46.SyntaxOptionTransport
 variable {C : Type u} [Category.{v} C] [Regular C] [FinitaryExtensive C]
 
-/-- This arrow classifies success of an option. It does not define any
-independently specified numerical admissibility or free-for algorithm. -/
+/-- This morphism classifies success of an option. It does not define any independently
+specified numerical admissibility or free-for algorithm. -/
 def optionTag (Y : C) : OptionSyntax.obj Y ⟶ Two C :=
   OptionSyntax.map (terminal.from Y)
 
@@ -34,8 +34,7 @@ def optionTag (Y : C) : OptionSyntax.obj Y ⟶ Two C :=
       terminal.from Y ≫ Two.point true := by
   simp only [optionTag,OptionSyntax.map,coprod.inr_map,Two.point]
 
-/-- The success injection itself is the actual pullback of true,
-including when Y is empty. -/
+/-- The success injection itself is the pullback of true, including when Y is empty. -/
 theorem optionTag_isPullback (Y : C) :
     IsPullback (coprod.inr : Y ⟶ OptionSyntax.obj Y) (terminal.from Y)
       (optionTag Y) (Two.point (C := C) true) := by
@@ -46,8 +45,8 @@ theorem optionTag_isPullback (Y : C) :
     (by simp [optionTag,OptionSyntax.map]) (by simp [optionTag,OptionSyntax.map])).mp
       ⟨coprodIsCoprod (⊤_ C) Y⟩).2
 
-/-- Pasting the actual success pullback with its classifier gives a
-pullback of true on the original input object. -/
+/-- Pasting the success pullback with its classifier gives a pullback of true on the
+original input object. -/
 theorem optionTag_success_isPullback {X Y : C} (f : X ⟶ OptionSyntax.obj Y) :
     IsPullback (pullback.fst f (coprod.inr : Y ⟶ OptionSyntax.obj Y))
       (terminal.from (pullback f (coprod.inr : Y ⟶ OptionSyntax.obj Y)))

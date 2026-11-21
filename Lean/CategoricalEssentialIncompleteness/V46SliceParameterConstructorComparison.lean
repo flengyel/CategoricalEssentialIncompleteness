@@ -8,7 +8,7 @@ public import CategoricalEssentialIncompleteness.V46PolynomialInputComposition
 public import CategoricalEssentialIncompleteness.V46SlicePolynomialComparison
 public import CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps
 
-/-! # Evaluation commutes with the actual parameter constructor comparison -/
+/-! # Evaluation commutes with the parameter constructor comparison -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -55,7 +55,7 @@ def relativeInput (p : SyntaxPolynomial I) (j : J) :
     (localFamilies P X j)
     ((SliceEvaluation.coefficientIso P X.1 j).hom, (SliceEvaluation.coefficientIso P X.2 j).hom)
 
-/-- This square compares values of the actual canonical parameter maps. -/
+/-- This square compares values of the canonical parameter maps. -/
 theorem value_square (p : SyntaxPolynomial I) (j : J) :
     ((evaluation J C).obj j).map (PolynomialParameterValues.value P c X p) ≫
         DiagramPolynomialComparison.component c X p j =

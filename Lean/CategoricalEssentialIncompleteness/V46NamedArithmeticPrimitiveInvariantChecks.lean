@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveInvariant
 
 
-/-! # Statement checks in `V46NamedArithmeticPrimitiveInvariantChecks` -/
+/-! # Internal arithmetic induction for a carrier invariant of a constructed primitive recursion, before specializing its graph or carrier -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

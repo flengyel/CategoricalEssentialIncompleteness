@@ -7,9 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
 
-/-! Actual constructor comparisons for transported list algebras. This
-layer needs only finite products and coproducts, so it also applies to the
-parameter-slice equivalences without any RegularOver assumption. -/
+/-!
+Constructor comparisons for transported list algebras. This layer needs only finite
+products and coproducts, so it also applies to the parameter-slice equivalences
+without any RegularOver assumption.
+-/
 
 @[expose] public section
 noncomputable section

@@ -31,9 +31,9 @@ private theorem standard_nonzero :
   change Part.some (0 : ℕ) = Part.none at h
   exact Part.notMem_none 0 (h ▸ Part.mem_some 0)
 
-/-- Corollary 3.2 rules out a recursive standard separator of the actual
-source diagonal domains. The source lift is the indexed partial morphism
-constructed from the recursive reversed conditional. -/
+/-- Corollary 3.2 rules out a recursive standard separator of the source diagonal domains.
+The source lift is the indexed partial morphism constructed from the recursive
+reversed conditional. -/
 theorem diagonal_no_recursive_separator :
     ¬ ∃ C : Set ℕ, ComputablePred (· ∈ C) ∧
       {n : ℕ | ArithmeticDiagonalCodes.alpha.val.Evalb ![n]} ⊆ C ∧

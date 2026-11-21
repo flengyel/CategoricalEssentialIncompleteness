@@ -71,9 +71,9 @@ def observationFunctor (i : Bool) : Theory ⥤ RecursivePairs.Object where
     apply RecursivePairs.Hom.ext
     exact (Category.id_comp (𝟙 ClassicalPrograms.U2)).symm
 
-/-- Theorem 8.2: internal inseparability and incompleteness, and recursive
-inseparability of the actual endpoint atomic observations. The c.e. predicates
-and both endpoint-pair inclusions are exported separately above. -/
+/-- The theorem and refutation domains of a theory are inseparable and do not cover the
+sentence object. At either endpoint their observed atomic supports are recursively
+inseparable. -/
 theorem coded_observation (i : Bool) (t : Theory) :
     Inseparable t.val (Idem.pull nu t.val) ∧
       Numerical.RecursivelyInseparable (support (observedPositive i t.val))
@@ -127,8 +127,7 @@ theorem tuple_observations_inseparable (i : Bool) (t : Theory) :
       change Nat.pair (Nat.unpair n).1 (Nat.unpair n).2 ∈ support (observedNegative i t.val)
       simpa only [Nat.pair_unpair] using hnN
 
-/-- Theorem 8.2 on the actual N² carrier, with recursive separators also
-quantified as predicates on N². -/
+/-- The endpoint observations in ℕ² are inseparable by recursive predicates on ℕ². -/
 theorem cosheaf_observation (i : Bool) (t : Theory) :
     Inseparable t.val (Idem.pull nu t.val) ∧
       (REPred (· ∈ tuplePositiveSet i t.val) ∧ REPred (· ∈ tupleNegativeSet i t.val)) ∧

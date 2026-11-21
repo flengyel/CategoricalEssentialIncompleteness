@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
 public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
 public import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
 
-/-! # The actual ordered-field sentence morphisms
+/-! # The ordered-field sentence morphisms
 
 The numerical map is constructed before any external theory. Its value is
 the sentence c_n < 1/2 in the fixed integer-coefficient convention. Chosen

@@ -73,8 +73,8 @@ theorem closed_image (A : Subobject S) (hA : FirstOrderReflection.generated proo
     rwa [hA] at h
   · exact FirstOrderReflection.extensive targetProofs _
 
-/-- The image of a closed theory is closed by the constructed rule-algebra
-fold, so direct image defines a functor on the actual theory categories. -/
+/-- The image of a closed theory is closed by the constructed rule-algebra fold, so direct
+image defines a functor on the theory categories. -/
 def theoryFunctor : FirstOrderReflection.Theory proofs ⥤
     FirstOrderReflection.Theory targetProofs where
   obj T := ⟨FiniteLimitSubobjects.object G T.val,

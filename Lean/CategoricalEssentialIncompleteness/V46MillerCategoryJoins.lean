@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryConnected
 public import CategoricalEssentialIncompleteness.DisjointJoins
 
-/-! # Finite compatible unions of the actual uniform partial graphs -/
+/-! # Finite compatible unions of the uniform partial graphs -/
 
 @[expose] public section
 noncomputable section
@@ -172,9 +172,9 @@ instance disjointArrowJoins : DisjointArrowJoins (Object z) where
       join_right f g (compatible_of_disjoint f g hd),
       fun h hf hg => join_least f g h (compatible_of_disjoint f g hd) hf hg⟩
 
-/-- This finite family hypothesis is exactly agreement of its actual
-partial outputs where both are defined. It contains no oracle index
-condition beyond the one already proved for every morphism. -/
+/-- This finite family hypothesis is exactly agreement of its partial outputs where both
+are defined. It contains no oracle index condition beyond the one already proved for
+every morphism. -/
 def PairwiseCompatible {X Y : Object z} (L : List (X ⟶ Y)) : Prop :=
   ∀ f ∈ L,∀ g ∈ L,Compatible f g
 

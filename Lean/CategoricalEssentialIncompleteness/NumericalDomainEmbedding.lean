@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.NumericalDomainReindexing
 /-!
 # The natural numerical domain embedding
 
-The support inclusion of a restriction idempotent defines a PER subobject.
-The embedding preserves the bounded lattice operations and commutes with
-inverse image along total numerical arrows.
+The support inclusion of a restriction idempotent defines a PER subobject. The
+embedding preserves the bounded lattice operations and commutes with inverse image
+along total numerical morphisms.
 -/
 
 @[expose] public section

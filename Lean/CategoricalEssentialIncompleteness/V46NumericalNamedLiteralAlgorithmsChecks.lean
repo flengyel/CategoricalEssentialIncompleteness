@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralAlgorithms
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralAlgorithmsChecks` -/
+/-! # Coefficient membership does not change the literal traversal algorithm -/
 
 @[expose] public section
 noncomputable section

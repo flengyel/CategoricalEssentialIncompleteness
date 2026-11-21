@@ -26,7 +26,7 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable {D C P Fm : PredicateCategory T}
 
-/-- Truth at the actual model points of the chosen parameter product. -/
+/-- Truth at the model points of the chosen parameter product. -/
 def TrueAt (v : P ⨯ Fm ⟶ Two (PredicateCategory T))
     (l : Obj T M P) (f : Obj T M Fm) : Prop :=
   ∀ q : Obj T M (P ⨯ Fm),
@@ -129,8 +129,8 @@ theorem formula_eval (d : Obj T M D) :
     exact congrArg Subtype.val (hb'.symm.trans ((h hc' ⟨q, qq⟩ hp'
       (hq'.trans hf'.symm)).trans ht'))
 
-/-- Internal rule induction with the finite-coverage truth property. The
-step is checked on the actual typed rule objects and their ordered children. -/
+/-- Internal rule induction with the finite-coverage truth property. The step is checked
+on the typed rule objects and their ordered children. -/
 theorem model_rule_induction {bound : ℕ} (R : RulePresentation Fm bound)
     (support : (SyntacticDerivation.derivationAlgebra T R).a.left ⟶ C)
     (step : ∀ (i : Fin (bound + 1))

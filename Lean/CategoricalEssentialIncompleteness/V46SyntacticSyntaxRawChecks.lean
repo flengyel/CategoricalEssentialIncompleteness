@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRaw
 
-/-! # Checks for genuine Sigma-one syntax operation inputs -/
+/-! # Checks for Sigma-one syntax operation inputs -/
 
 @[expose] public section
 

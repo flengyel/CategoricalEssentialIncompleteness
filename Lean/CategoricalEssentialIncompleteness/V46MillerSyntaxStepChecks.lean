@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxStep
 
 
-/-! # Statement checks in `V46MillerSyntaxStepChecks` -/
+/-! # A uniformly represented postfix step for arbitrary slice operations -/
 
 @[expose] public section
 noncomputable section

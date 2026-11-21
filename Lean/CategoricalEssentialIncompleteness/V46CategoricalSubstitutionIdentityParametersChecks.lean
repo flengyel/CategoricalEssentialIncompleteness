@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityParameters
 
-/-! Parameter change uses arbitrary arrows and arbitrary target families. -/
+/-! Parameter change uses arbitrary morphisms and arbitrary target families. -/
 
 @[expose] public section
 

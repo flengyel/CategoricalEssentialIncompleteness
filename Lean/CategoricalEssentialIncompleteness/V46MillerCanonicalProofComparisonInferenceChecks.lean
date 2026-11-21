@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonInference
 
 
-/-! # Statement checks in `V46MillerCanonicalProofComparisonInferenceChecks` -/
+/-! # Finite-rule inference transport with the formula chart -/
 
 @[expose] public section
 noncomputable section

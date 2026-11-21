@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxState
 
-/-! # An actual uniformly represented postfix step for arbitrary slice operations
+/-! # A uniformly represented postfix step for arbitrary slice operations
 
 Zero is a structural error status; one plus a stack is a successful
 status. Every successful constructor, including a nullary one, invokes

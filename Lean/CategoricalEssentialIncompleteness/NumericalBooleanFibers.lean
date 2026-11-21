@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.NumericalBooleanArrows
 
 /-!
-# Fibers of numerical Boolean arrows
+# Fibers of numerical Boolean morphisms
 
-The fibers of a total recursive Boolean function are its recursive inverse
-images of the two values. Every recursive subset of the natural numbers
-is the upper fiber of such an arrow.
+The fibers of a total recursive Boolean function are its recursive inverse images of
+the two values. Every recursive subset of the natural numbers is the upper fiber of
+such a morphism.
 -/
 
 @[expose] public section
@@ -43,7 +43,7 @@ theorem boolean_fiber_recursive (f : ℕ → Bool) (hf : Computable f) (b : Bool
     ComputablePred (fun n ↦ f n = b) :=
   ((Primrec.eq.decide.to_comp).comp hf (Computable.const b)).computablePred
 
-/-- Every fiber of an arrow to the Boolean PER is a recursive support inclusion. -/
+/-- Every fiber of a morphism to the Boolean PER is a recursive support inclusion. -/
 theorem boolean_fiber_is_recursive_support
     (f : discrete Set.univ ⟶ boolean) (b : Bool) :
     ∃ A : Set ℕ, ComputablePred (· ∈ A) ∧
@@ -51,7 +51,7 @@ theorem boolean_fiber_is_recursive_support
   obtain ⟨g, hg, rfl⟩ := booleanArrow_surjective f
   exact ⟨{n | g n = b}, boolean_fiber_recursive g hg b, booleanArrow_boundFiber g hg b⟩
 
-/-- A recursive support inclusion is the upper fiber of a Boolean arrow. -/
+/-- A recursive support inclusion is the upper fiber of a Boolean morphism. -/
 theorem recursive_support_is_boolean_fiber (A : Set ℕ)
     (hA : ComputablePred (· ∈ A)) :
     ∃ f : discrete Set.univ ⟶ boolean,
@@ -63,7 +63,7 @@ theorem recursive_support_is_boolean_fiber (A : Set ℕ)
   ext n
   exact (congrFun he n).symm.to_iff
 
-/-- The upper fibers of Boolean arrows are exactly the recursive support inclusions. -/
+/-- The upper fibers of Boolean morphisms are exactly the recursive support inclusions. -/
 theorem exists_boolean_fiber_iff_recursive_support (A : Subobject (discrete Set.univ)) :
     (∃ f : discrete Set.univ ⟶ boolean, boundFiber f (booleanPoint true) = A) ↔
       ∃ D : Set ℕ, ComputablePred (· ∈ D) ∧ supportSubobject D (Set.subset_univ _) = A := by

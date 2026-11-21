@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleParameters
 
 
-/-! # Statement checks in `V46NumericalArithmeticRuleParametersChecks` -/
+/-! # The arithmetic scheme-parameter product and success comparisons -/
 
 @[expose] public section
 noncomputable section

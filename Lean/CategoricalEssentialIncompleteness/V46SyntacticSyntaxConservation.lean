@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
-/-! # The singleton tree accepted by the parser is the literal input word -/
+/-! # The singleton tree accepted by the parser is the input word -/
 
 @[expose] public section
 
@@ -157,8 +157,8 @@ theorem childStack_word (q : RawPolynomial) (u rest : M) :
   | sum a b ia ib =>
       by_cases hk : π₂ u = 0 <;> simp [childStack, childrenWord, hk, ia, ib]
 
-/-- Every successful step consumes child blocks without losing or
-inventing a single literal node record. -/
+/-- Every successful step consumes child blocks without losing or inventing a single node
+record. -/
 theorem step_word (a b : RawPolynomial) (record stack out : M)
     (h : step a b record (stack + 1) = out + 1) :
     stackWord out = concat (stackWord stack) record := by
@@ -201,9 +201,9 @@ theorem run_word (a b : RawPolynomial) (word out : M)
     (h : run a b word 1 = out + 1) : stackWord out = word := by
   simpa using prefix_word a b word (len word) out h
 
-/-- The self-word equation in the carrier definition is a proved
-redundancy: acceptance means precisely coefficient validity and one
-final tree of the requested sort, as in the printed postfix parser. -/
+/-- The self-word equation in the carrier definition is a proved redundancy: acceptance
+means precisely coefficient validity and one final tree of the requested sort, as in
+the postfix parser. -/
 theorem carrier_iff_singleton (formula : Bool) (a b : RawPolynomial) (word : M) :
     (carrier formula a b).val.Evalb ![word] ↔
       (coefficients a b).val.Evalb ![word] ∧ ∃ stored : M,

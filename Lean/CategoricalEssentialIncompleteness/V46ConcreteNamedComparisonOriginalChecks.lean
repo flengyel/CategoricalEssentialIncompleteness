@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOriginal
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonOriginalChecks` -/
+/-! # The original payload field is identified by stable initiality -/
 
 @[expose] public section
 noncomputable section

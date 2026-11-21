@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationGluing
 
 
-/-! # Statement checks in `V46ForkDerivationGluingChecks` -/
+/-! # Compatible constructors and folds on the original proof fork -/
 
 @[expose] public section
 noncomputable section

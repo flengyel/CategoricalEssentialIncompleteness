@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSubstitutionValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralSubstitutionValuesChecks` -/
+/-! # The numerical substitution square has the literal primitive graph values -/
 
 @[expose] public section
 noncomputable section

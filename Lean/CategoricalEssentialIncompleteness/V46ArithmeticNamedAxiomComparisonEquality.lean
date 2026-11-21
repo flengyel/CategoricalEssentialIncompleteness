@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonBasic
 
-/-! # Native equality proofs for the source arithmetic equality axioms -/
+/-! # Hilbert equality proofs for the source arithmetic equality axioms -/
 
 @[expose] public section
 noncomputable section
@@ -50,7 +50,7 @@ private theorem substitute_less_native (r s : Tm) (x : ℕ) (t : Tm) :
   funext i
   fin_cases i <;> rfl
 
-/-- Symmetry uses the native equality scheme and reflexivity. -/
+/-- Symmetry uses the Hilbert equality scheme and reflexivity. -/
 theorem equality_symmetry :
     D (.imp (.equal (.var 0) (.var 1)) (.equal (.var 1) (.var 0))) := by
   have he : D (.imp (.equal (.var 0) (.var 1))

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFibers
 
-/-! # Signature checks for actual syntax fibers -/
+/-! # Signature checks for syntax fibers -/
 
 @[expose] public section
 

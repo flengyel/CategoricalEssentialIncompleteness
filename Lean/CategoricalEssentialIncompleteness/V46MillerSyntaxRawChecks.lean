@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
 
 
-/-! # Statement checks in `V46MillerSyntaxRawChecks` -/
+/-! # Positive polynomial fibers for arbitrary uniform slice families -/
 
 @[expose] public section
 noncomputable section

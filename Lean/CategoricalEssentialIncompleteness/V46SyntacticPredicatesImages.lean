@@ -373,8 +373,8 @@ theorem realized_mono_partial_inverse {C D : PredicateCategory T}
   let : Mono (representedArrow T g) := by rw [hg']; infer_instance
   simpa only [hg'] using represented_mono_partial_inverse T g
 
-/-- Every monomorphism in the total restriction splitting has a partial
-inverse in the actual restriction splitting. -/
+/-- Every monomorphism in the total restriction splitting has a partial inverse in the
+restriction splitting. -/
 theorem totalSplit_mono_partial_inverse {X Y : TotalSplit T} (m : X ⟶ Y) [Mono m] :
     ∃ r : Y.obj ⟶ X.obj, m.hom ≫ r = 𝟙 X.obj ∧ r ≫ m.hom = rst r := by
   let E := predicateEquivalence T

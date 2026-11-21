@@ -8,12 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparison
 public import CategoricalEssentialIncompleteness.V46FirstOrderInference
 
-/-! # The chosen canonical Γ pullback and its actual generated image
+/-! # The chosen canonical Γ pullback and its generated image
 
-The transported Γ object is a genuine pullback. This last comparison
-replaces it by the selected canonical pullback, then uses the two actual
-initial derivation algebras to prove equality of the sentence images.
-No selected proof of an axiom is needed.
+The transported Γ object is a pullback. This last comparison replaces it by the
+selected canonical pullback, then uses the two initial derivation algebras to prove
+equality of the sentence images. No selected proof of an axiom is needed.
 -/
 
 @[expose] public section

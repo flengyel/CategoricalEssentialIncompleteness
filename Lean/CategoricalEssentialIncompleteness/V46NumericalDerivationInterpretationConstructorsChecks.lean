@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationConstructors
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationConstructorsChecks` -/
+/-! # Postfix constructor comparison under arithmetic interpretation -/
 
 @[expose] public section
 noncomputable section

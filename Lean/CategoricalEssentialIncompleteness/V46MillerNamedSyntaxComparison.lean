@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
 /-! # Constructor-preserving comparison with the original named PA syntax
 
-The functor on predicates is only used with its proved finite-geometry
-comparison. Initiality in the larger uniform category is obtained from
-the actual uniform word algebra and its constructed constructor diagram.
+The functor on predicates is only used with its proved finite-geometry comparison.
+Initiality in the larger uniform category is obtained from the uniform word algebra
+and its constructed constructor diagram.
 -/
 
 @[expose] public section
@@ -78,9 +78,9 @@ private theorem mapped_support (C : PredicateCategory 𝗣𝗔) (n : ℕ) :
   rw [Syntax.predicateFunctor_object]
   rfl
 
-/-- A literal value equation for each of two actual operations gives
-their constructor square under the constructed polynomial chart. The
-premises concern operation values, not a desired comparison diagram. -/
+/-- A literal value equation for each of two operations gives their constructor square
+under the constructed polynomial chart. The premises concern operation values, not a
+desired comparison diagram. -/
 theorem operation_square (X Y Z : PredicateCategory 𝗣𝗔) (X' Y' Z' : Total.TotalCategory P)
     (iX : X' ≅ (F).obj X) (iY : Y' ≅ (F).obj Y) (iZ : Z' ≅ (F).obj Z)
     (hX : ∀ u v,v∈Total.val iX.hom.hom u ↔ u∈X'.obj.support ∧ v=u)

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionState
 
-/-! # Actual quantified-substitution branch comparison
+/-! # Quantified-substitution branch comparison
 
 The equal-name branch retains the original body, even when the recursive
 option result is failure. Every Boolean/list/constructor comparison below

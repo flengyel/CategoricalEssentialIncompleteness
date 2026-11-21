@@ -9,9 +9,9 @@ public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveBuilder
 
 /-! # Comparison with production composition at fixed external indices
 
-Sigma-one completeness is used only to interpret a closed native builder
-value at standard numerals. Equality of program graphs then follows from
-the actual all-model relational composition equations on both sides.
+Sigma-one completeness is used only to interpret a closed index function value at
+standard numerals. Equality of program graphs then follows from the all-model
+relational composition equations on both sides.
 -/
 
 @[expose] public section

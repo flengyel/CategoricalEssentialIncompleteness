@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates
 
 
-/-! # Statement checks in `V46NumericalArithmeticCoordinatesChecks` -/
+/-! # Arithmetic formula and sentence coordinates -/
 
 @[expose] public section
 noncomputable section

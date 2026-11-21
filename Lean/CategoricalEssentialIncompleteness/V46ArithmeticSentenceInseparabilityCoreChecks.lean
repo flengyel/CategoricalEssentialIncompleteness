@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityCore
 
 
-/-! # Statement checks in `V46ArithmeticSentenceInseparabilityCoreChecks` -/
+/-! # The categorical recursive-separator argument for Gamma words -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionParameters
 
 
-/-! # Statement checks in `V46NumericalArithmeticDistributionParametersChecks` -/
+/-! # The arithmetic absent-variable scheme label comparison -/
 
 @[expose] public section
 noncomputable section

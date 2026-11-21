@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFun
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
 public import CategoricalEssentialIncompleteness.V46PredicateInterpretationCoproducts
 
-/-! # The actual arithmetic finite-product, sum and pullback comparisons -/
+/-! # The arithmetic finite-product, sum and pullback comparisons -/
 
 @[expose] public section
 noncomputable section
@@ -20,8 +20,8 @@ open CategoryTheory CategoryTheory.Limits
 open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.Geometry
 
-/-- The components are identity maps on the literal standard carrier.
-Naturality uses the proved values of the represented graph programs. -/
+/-- The components are identity maps on the standard carrier. Naturality uses the proved
+values of the represented graph programs. -/
 def standardComparison : numericalInterpretation ⋙ NumericalUnderlying.functor ≅
     PredicateInterpretation.functor 𝗣𝗔 ℕ :=
   NatIso.ofComponents (fun _ => Iso.refl _) (by

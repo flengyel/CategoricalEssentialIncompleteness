@@ -65,9 +65,8 @@ theorem terminate_unique {X : PartialMaps.Par (Over T)} (f : X ⟶ terminalObjec
   exact AmbientPartialSlice.terminate_unique _
     ((PartialSliceEquivalence.total_iff inverses T f).mpr hf)
 
-/-- Every total base embedding into Q induces a total embedding of the
-actual partial-slice object into the constant family T×Q, with a partial
-retraction over T. -/
+/-- Every total base embedding into Q induces a total embedding of the partial-slice
+object into the constant family T×Q, with a partial retraction over T. -/
 theorem total_retract {Q : C} (X : PartialMaps.Par (Over T))
     (m : ((PartialSliceEquivalence.functor inverses T).obj X).base ⟶ Q)
     (hm : isTotal m) (r : Q ⟶ ((PartialSliceEquivalence.functor inverses T).obj X).base)

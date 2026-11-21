@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionState
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonSubstitutionStateChecks` -/
+/-! # Concrete named-substitution parameters and recursive state charts -/
 
 @[expose] public section
 noncomputable section
@@ -36,7 +36,7 @@ example : ((F).prod (F)).map (S₀).termResultProjection ≫
 
 
 -- All five quantifier-input coordinates, including independent original
--- body and option-valued recursive body, retain their actual charts.
+-- Body and option-valued recursive body, retain their charts.
 example : (NamedSyntaxComparison.substitutionQuantifierInputIso P V σ π d).hom ≫
     prod.snd ≫ prod.fst =
       (F).map ((prod.snd : (S₀).substitutionParameters ⨯

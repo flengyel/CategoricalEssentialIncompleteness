@@ -38,7 +38,7 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Read one prefix coordinate through the actual product projection. -/
+/-- Read one prefix coordinate through the product projection. -/
 theorem finiteChild_castSucc_point (X : PredicateCategory T) (n : ℕ) (k : Fin (n + 1))
     (z : Obj T M (finitePower X (n + 2))) :
     (F T M).map (finiteChild T X (n + 2) k.castSucc) z =
@@ -47,8 +47,8 @@ theorem finiteChild_castSucc_point (X : PredicateCategory T) (n : ℕ) (k : Fin 
   have h := congrArg (fun f => (F T M).map f z) (finiteChild_castSucc T X n k)
   exact h.trans ((F T M).map_comp_apply _ _ z)
 
-/-- Every finite ordered family has an actual point of the chosen power.
-The empty family uses the preserved terminal point, not a dummy formula. -/
+/-- Every finite ordered family has a point of the chosen power. The empty family uses the
+preserved terminal point, not a dummy formula. -/
 theorem powerPoints_exists (X : PredicateCategory T) (n : ℕ) (xs : Fin n → Obj T M X) :
     ∃ z : Obj T M (finitePower X n),
       ∀ k : Fin n, (F T M).map (finiteChild T X n k) z = xs k := by

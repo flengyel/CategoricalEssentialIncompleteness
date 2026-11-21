@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
 
 
-/-! # Statement checks in `V46MillerSyntaxChildrenChecks` -/
+/-! # The ordered child computations of a uniform syntax constructor -/
 
 @[expose] public section
 noncomputable section

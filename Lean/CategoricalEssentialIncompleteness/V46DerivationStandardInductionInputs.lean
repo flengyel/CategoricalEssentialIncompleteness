@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers
 
-/-! # Numerical charts for the actual ordered rule summands -/
+/-! # Numerical charts for the ordered rule summands -/
 
 @[expose] public section
 
@@ -23,8 +23,8 @@ open SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The actual summand comparison preserves the rule label and reads its
-children by the proved finite-power isomorphism. -/
+/-- The summand comparison preserves the rule label and reads its children by the proved
+finite-power isomorphism. -/
 theorem summand_representation (labels : ℕ → PredicateCategory T) (X : PredicateCategory T)
     (n : ℕ) (p : Obj T M (labels n ⨯ finitePower X n)) (tuple : M)
     (ht : (baseRepresentation T X (⊤_ (PredicateCategory T))

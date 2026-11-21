@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential
 
 
-/-! # Statement checks in `V46ArithmeticIndexedProvabilityExponentialChecks` -/
+/-! # The indexed conclusion in the exponential product chart -/
 
 @[expose] public section
 noncomputable section

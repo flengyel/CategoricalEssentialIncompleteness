@@ -301,7 +301,7 @@ theorem restriction_val {X Y : CodedProgramCategory T} (f : X ⟶ Y) :
   rw [← domainArrow_eq_restriction T f]
   rfl
 
-/-- The actual restriction idempotent realizing an arbitrary carrier. -/
+/-- The restriction idempotent realizing an arbitrary carrier. -/
 def predicateIdem (C : Carrier) : Idem (omegaObject T) where
   hom := omegaArrow T (predicateClass T C)
   restriction := by
@@ -394,8 +394,8 @@ theorem toTotal_congr (f g : GraphMorphism T C D) (h : Uniform T f.graph g.graph
 
 end GraphMorphism
 
-/-- The predicate presentation maps into the total restriction splitting
-by the actual functional-search realization. -/
+/-- The predicate presentation maps into the total restriction splitting by the
+functional-search realization. -/
 def realization : PredicateCategory T ⥤ TotalSplit T where
   obj := interpretedObject T
   map := Quotient.lift GraphMorphism.toTotal GraphMorphism.toTotal_congr
@@ -546,8 +546,8 @@ def rebaseObject (X : SplitObject (CodedProgramCategory T))
     SplitObject (CodedProgramCategory T) :=
   ⟨Y, Idem.pull i.inv X.domain⟩
 
-/-- Transporting the support along a coding isomorphism gives an actual
-isomorphism of split objects. -/
+/-- Transporting the support along a coding isomorphism gives an isomorphism of split
+objects. -/
 def rebaseIso (X : SplitObject (CodedProgramCategory T))
     {Y : CodedProgramCategory T} (i : X.base ≅ Y) : X ≅ rebaseObject T X i where
   hom :=

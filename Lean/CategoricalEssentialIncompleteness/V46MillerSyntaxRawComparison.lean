@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawLeaves
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawProducts
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawSums
 
-/-! # Actual raw-fiber comparison for every parameter slice
+/-! # Raw-fiber comparison for every parameter slice
 
 The recursive comparison uses constructed family-graph isomorphisms and
-actual product/coproduct universal cones. Both recursive sorts and ordered
-children are retained. Target families and their projection morphisms are
-arbitrary uniform slice objects.
+product/coproduct universal cones. Both recursive sorts and ordered children are
+retained. Target families and their projection morphisms are arbitrary uniform slice
+objects.
 -/
 
 @[expose] public section
@@ -34,8 +34,8 @@ def comparison : (p : SyntaxPolynomial (Total.TotalCategory P)) →
   | .product a b => productIso R X Y a b ≪≫ prod.mapIso (comparison a) (comparison b)
   | .sum a b => sumIso R X Y a b ≪≫ coprod.mapIso (comparison a) (comparison b)
 
-/-- The action is the actual polynomial action under the constructed raw
-charts. Its numerical child-map equations follow from the cone triangles. -/
+/-- The action is the polynomial action under the constructed raw charts. Its numerical
+child-map equations follow from the cone triangles. -/
 def expressionFunctor (p : SyntaxPolynomial (Total.TotalCategory P)) : Over R × Over R ⥤ Over R where
   obj Z := object R Z.1 Z.2 p
   map {Z W} k := (comparison R Z.1 Z.2 p).hom ≫

@@ -21,8 +21,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 open Coding
 
-/-- A value block records its actual value and its term/formula sort.
-The parameter projection is a positive graph assertion. -/
+/-- A value block records its value and its term/formula sort. The parameter projection is
+a positive graph assertion. -/
 def fiberBlockGraph (P X Y : Carrier) (ξ υ : Graph) : 𝚺₁.Semisentence 2 := .mkSigma
   “p block. (∃ x, !pairDef.val block x 0 ∧ !P.val p ∧ !X.val x ∧ !ξ.val x p) ∨
     (∃ y, !pairDef.val block y 1 ∧ !P.val p ∧ !Y.val y ∧ !υ.val y p)”
@@ -166,9 +166,9 @@ namespace SliceAlgebra
 variable {T : ArithmeticTheory} {P X Y : Carrier} {a b : RawPolynomial}
 variable (A : SliceAlgebra T P X Y a b)
 
-/-- The partiality test uses only structural zero/sort/stack tests.
-A successful root operation contributes all of its actual Sigma-one
-computation trace through the positive occurrence of termOp/formulaOp. -/
+/-- The partiality test uses only structural zero/sort/stack tests. A successful root
+operation contributes all of its Sigma-one computation trace through the positive
+occurrence of termOp/formulaOp. -/
 def valueStepGraph : 𝚺₁.Semisentence 4 :=
   let S := statusGraph P X Y A.termProjection.graph A.formulaProjection.graph
   let R := recordCarrier a b
@@ -190,8 +190,8 @@ def valueStepGraph : 𝚺₁.Semisentence 4 :=
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- An executable numerical structural test is followed, on success,
-by the actual given graph operation. -/
+/-- An executable numerical structural test is followed, on success, by the given graph
+operation. -/
 def StepOutcome (formula : Bool) (p s stack new : M) : Prop :=
   let q := if formula then b else a
   let op := if formula then A.formulaOp else A.termOp

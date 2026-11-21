@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeClosure
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeClosureChecks` -/
+/-! # Finite Gamma support under Gen and ordered MP -/
 
 @[expose] public section
 noncomputable section

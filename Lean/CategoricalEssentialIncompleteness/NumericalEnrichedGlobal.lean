@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.NumericalEnriched
 public import CategoricalEssentialIncompleteness.GlobalTotals
 
 /-!
-# Global arrows of the numerical Set-enrichment
+# Global morphisms of the numerical Set-enrichment
 
-Evaluation at the unique element of the terminal type identifies global arrows
-with numerical partial recursive arrows. Constant families give the inverse
-functor. The comparison preserves restriction, zeros, and partial products,
-and restricts to an equivalence of the total-arrow categories.
+Evaluation at the unique element of the terminal type identifies global morphisms with
+numerical partial recursive morphisms. Constant families give the inverse functor. The
+comparison preserves restriction, zeros, and partial products, and restricts to an
+equivalence of the total-arrow categories.
 -/
 
 @[expose] public section
@@ -26,14 +26,14 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- Evaluate a global numerical arrow at the unique point of the terminal type. -/
+/-- Evaluate a global numerical morphism at the unique point of the terminal type. -/
 def globalEvaluation : enrichedRestriction.GlobalCategory ⥤ Numerical where
   obj X := X.obj
   map f := (TypeCat.Hom.hom f) default
   map_id X := enriched_identity_apply X.obj default
   map_comp f g := enriched_comp_apply f g default
 
-/-- Regard a numerical arrow as a constant global family. -/
+/-- Regard a numerical morphism as a constant global family. -/
 def globalConstants : Numerical ⥤ enrichedRestriction.GlobalCategory where
   obj X := enrichedRestriction.globalObject X
   map f := ↾fun _ ↦ f
@@ -79,7 +79,7 @@ def enrichedGlobalEquivalence : enrichedRestriction.GlobalCategory ≌ Numerical
     change (𝟙 X.obj : X.obj ⟶ X.obj) ≫ 𝟙 X.obj = 𝟙 X.obj
     exact Category.id_comp _
 
-/-- Evaluation preserves the restriction of a global arrow. -/
+/-- Evaluation preserves the restriction of a global morphism. -/
 @[simp] theorem globalEvaluation_restrict {X Y : enrichedRestriction.GlobalCategory}
     (f : X ⟶ Y) :
     globalEvaluation.map (RestrictionCategory.rst f) = restrict (globalEvaluation.map f) := rfl
@@ -102,7 +102,7 @@ def enrichedGlobalEquivalence : enrichedRestriction.GlobalCategory ≌ Numerical
 @[simp] theorem globalEvaluation_snd (X Y : Numerical) :
     globalEvaluation.map (enrichedHom.snd X Y) = partialSnd X Y := rfl
 
-/-- Evaluate global total arrows as total numerical arrows. -/
+/-- Evaluate global total morphisms as total numerical morphisms. -/
 def globalTotalEvaluation : enrichedRestriction.GlobalTotal ⥤ Total where
   obj X := totalObject X.obj.obj
   map {X Y} f :=
@@ -119,7 +119,7 @@ def globalTotalEvaluation : enrichedRestriction.GlobalTotal ⥤ Total where
     apply WideSubcategory.hom_ext
     exact enriched_comp_apply f.hom g.hom default
 
-/-- Constant families of total numerical arrows are global total arrows. -/
+/-- Constant families of total numerical morphisms are global total morphisms. -/
 def globalTotalConstants : Total ⥤ enrichedRestriction.GlobalTotal where
   obj X := enrichedRestriction.totalGlobalObject X.obj
   map f :=
@@ -159,7 +159,7 @@ def globalTotalConstants : Total ⥤ enrichedRestriction.GlobalTotal where
   apply WideSubcategory.hom_ext
   rfl
 
-/-- The equivalence on global arrows restricts to the total-arrow categories. -/
+/-- The equivalence on global morphisms restricts to the total-arrow categories. -/
 def enrichedGlobalTotalEquivalence : enrichedRestriction.GlobalTotal ≌ Total where
   functor := globalTotalEvaluation
   inverse := globalTotalConstants
@@ -176,7 +176,7 @@ def enrichedGlobalTotalEquivalence : enrichedRestriction.GlobalTotal ≌ Total w
     change globalTotalEvaluation.map (𝟙 X) ≫ 𝟙 _ = _
     simp
 
-/-- Evaluation of global total arrows preserves binary products. -/
+/-- Evaluation of global total morphisms preserves binary products. -/
 instance globalTotalEvaluationPreservesBinaryProducts :
     PreservesLimitsOfShape (Discrete WalkingPair) globalTotalEvaluation :=
   inferInstanceAs

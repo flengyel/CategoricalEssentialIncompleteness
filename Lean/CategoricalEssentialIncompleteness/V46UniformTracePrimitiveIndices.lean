@@ -8,10 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTraceTemplates
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
-/-! # Actual native primitive-recursion certificates for index construction
+/-! # Primitive recursiveness of the index functions
 
-These are standard certificates only. The all-model semantic parameter
-equation is proved separately in UniformTraceTemplates.
+The index functions act on natural numbers. Their parameter equation in arbitrary
+models of PA is proved in `V46UniformTraceTemplates`.
 -/
 
 @[expose] public section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras
 
 
-/-! # Statement checks in `V46SyntaxListOperationsTransportAlgebrasChecks` -/
+/-! # Constructor comparisons for transported list algebras -/
 
 @[expose] public section
 noncomputable section

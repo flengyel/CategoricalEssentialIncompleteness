@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidate
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOperationLaws
 
-/-! # Scalar readings of actual candidate maps and decoded operations -/
+/-! # Scalar readings of candidate maps and decoded operations -/
 
 @[expose] public section
 
@@ -48,8 +48,8 @@ theorem rawArrow_value_iff {P C : PredicateCategory T} {X : Over P}
     subst v
     exact (rawArrow_model T M f p uu z ((F T M).map f.left z) hz).mpr rfl
 
-/-- The same scalar reading applies to a given actual algebra operation
-on its uniquely represented polynomial point. -/
+/-- The same scalar reading applies to a given algebra operation on its uniquely
+represented polynomial point. -/
 theorem decodedOperation_value_iff {P : PredicateCategory T}
     (X : Over P × Over P) (a : SyntaxPolynomial (PredicateCategory T)) {Z : Over P}
     (f : (a.withParameters P).eval.obj X ⟶ Z) (p : Obj T M P) (u v : M)

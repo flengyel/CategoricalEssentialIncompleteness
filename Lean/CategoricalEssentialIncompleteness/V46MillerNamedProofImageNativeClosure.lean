@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSentenceReflection
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordFirstOrderInduction
 
-/-! # Finite literal Gamma support under actual Gen and ordered MP
+/-! # Finite Gamma support under Gen and ordered MP
 
-Generalization retains the child's finite support. Modus ponens joins
-the two finite supports by the existing native axiom-replacement proof;
-the antecedent and implication keep their original premise order.
+Generalization retains the child's finite support. Modus ponens joins the two finite
+supports by the existing Hilbert axiom-replacement proof; the antecedent and
+implication keep their original premise order.
 -/
 
 @[expose] public section

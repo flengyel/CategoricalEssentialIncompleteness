@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationWordsChecks` -/
+/-! # Constructor graphs used to enumerate named PA axiom matrices -/
 
 @[expose] public section
 noncomputable section

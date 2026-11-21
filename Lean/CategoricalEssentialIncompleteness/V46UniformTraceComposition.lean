@@ -53,8 +53,8 @@ theorem select_if_zero {n : ℕ} (C A B : Code n) (o : M) (v : Fin n → M)
   rw [he] at hcase
   exact (hcase.resolve_left (fun hp => (Arithmetic.lt_irrefl (0 : M)) hp.1)).2
 
-/-- Positive fuel and the actual tag graph force the composition branch,
-including when the whole cell's supplied output is zero. -/
+/-- Positive fuel and the tag graph force the composition branch, including when the whole
+cell's supplied output is zero. -/
 theorem select_comp_branch {n : ℕ} (A X : Code n) (fuel o : M) (v : Fin n → M)
     (hFuel : Semiformula.Evalb (fuel :> v) (code (codeUnpair₁ (codeListLength A))))
     (hf : 0 < fuel)

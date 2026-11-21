@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonConstantMap
 
-/-! # A forward fixed-fiber chart lemma uses actual over-parameter arrows -/
+/-! # A forward fixed-fiber chart lemma uses over-parameter morphisms -/
 
 @[expose] public section
 noncomputable section

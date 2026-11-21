@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegatio
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCoordinates
 public import CategoricalEssentialIncompleteness.V46NumericalSentenceMorphisms
 
-/-! # Arithmetic sentence negation and named numeral substitution on actual syntax -/
+/-! # Arithmetic sentence negation and named numeral substitution on syntax -/
 
 @[expose] public section
 noncomputable section

@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalRealization
 public import CategoricalEssentialIncompleteness.V46PartialMapEquivalence
 
-/-! # Actual monic spans and partial inverses in the total realization
+/-! # Monic spans and partial inverses in the total realization
 
-The already proved monic-span comparison is instantiated with the actual
-semidecidable carrier presentation. Its splitting and weak-choice
-hypotheses were constructed here; none is a new final assumption.
+The already proved monic-span comparison is instantiated with the semidecidable
+carrier presentation. Its splitting and weak-choice hypotheses were constructed here;
+none is a new final assumption.
 -/
 
 @[expose] public section
@@ -79,8 +79,8 @@ private theorem conjugate_partial_inverse {C : Type*} [Category C] [RestrictionC
           (rst_comp_of_isTotal (j.inv ≫ b) (iso_total i)).symm
   exact ⟨r, hm, hr⟩
 
-/-- The inverse is an actual arrow in the original restriction splitting,
-with the given total mono, rather than a change of its carrier. -/
+/-- The inverse is a morphism in the original restriction splitting, with the given total
+mono, rather than a change of its carrier. -/
 theorem mono_has_partial_inverse (z : Point) {X Y : CanonicalTotal z}
     (m : X ⟶ Y) [Mono m] :
     ∃ r : Y.obj ⟶ X.obj,m.hom ≫ r = 𝟙 X.obj ∧ r ≫ m.hom = rst r := by

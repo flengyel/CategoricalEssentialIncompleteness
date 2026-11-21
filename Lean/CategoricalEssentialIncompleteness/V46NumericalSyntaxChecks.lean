@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalSyntax
 
 
-/-! # Statement checks in `V46NumericalSyntaxChecks` -/
+/-! # Parameter-stable syntax in the numerical tuple category -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 
 
-/-! # Statement checks in `V46NamedPlainOperationsModelsChecks` -/
+/-! # Literal values of the concrete plain logical constructors -/
 
 @[expose] public section
 noncomputable section

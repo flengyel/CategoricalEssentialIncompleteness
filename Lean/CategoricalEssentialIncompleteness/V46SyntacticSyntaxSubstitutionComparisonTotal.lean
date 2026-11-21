@@ -10,8 +10,8 @@ public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportM
 
 /-! # Concrete substitution transport in the total restriction splitting
 
-The comparison uses the constructor-preserving algebra isomorphism already
-constructed from initiality, and the actual mapped stable-list record.
+The comparison uses the constructor-preserving algebra isomorphism already constructed
+from initiality, and the mapped stable-list record.
 -/
 
 @[expose] public section
@@ -30,8 +30,8 @@ local notation "E" => predicateEquivalence T
 local notation "S₀" => sourceSyntax T V σ π d
 local notation "S₁" => targetSyntax T V σ π d
 
-/-- The actual term-substitution square, with the named parameter coordinate
-transported by the same constructor-preserving syntax comparison. -/
+/-- The term-substitution square, with the named parameter coordinate transported by the
+same constructor-preserving syntax comparison. -/
 theorem termSubstitution_comparison :
     termSubstitutionComparison (E) V σ π d (S₀) (S₁) (algebraIso T V σ π d) :=
   mapped_termSubstitution_comparison (E) V σ π d (S₀) (S₁)
@@ -44,7 +44,7 @@ theorem formulaSubstitutionOption_comparison :
   mapped_formulaSubstitutionOption_comparison (E) V σ π d (S₀) (S₁)
     (targetListsEquality T V σ π d) (algebraIso T V σ π d)
 
-/-- Transport of the actual success pullback defining admissibility. -/
+/-- Transport of the success pullback defining admissibility. -/
 def admissibleIso : (E).functor.obj (S₀).admissibleSubstitution ≅
     (S₁).admissibleSubstitution :=
   mappedAdmissibleSubstitutionIso (E) V σ π d (S₀) (S₁)

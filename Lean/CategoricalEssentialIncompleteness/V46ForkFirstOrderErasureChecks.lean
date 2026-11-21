@@ -7,11 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ForkPropositionalEmbedding
 
-/-! # Independent checks of the embedding and erasure in Proposition 10.8
-
-These check the syntax comparison. Conservativity, admissible substitution,
-consistency and the incompleteness conclusions remain separate obligations.
--/
+/-! # The embedding and erasure of Proposition 10.8 -/
 
 @[expose] public section
 noncomputable section

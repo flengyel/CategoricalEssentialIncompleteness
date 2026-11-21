@@ -10,13 +10,13 @@ public import CategoricalEssentialIncompleteness.V46SplitCoproducts
 public import CategoricalEssentialIncompleteness.V46SplitSplittings
 
 
-/-! # Definitions and theorems in `V46MillerCutInseparabilitySplit` -/
+/-! # Cut subobjects in the restriction splitting -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
-/-! # The actual full fixed-oracle restriction splitting and inclusion
+/-! # The full fixed-oracle restriction splitting and inclusion
 
 This uses the full singleton-family Rec^p, already compared with ordinary
 relative recursiveness. The structures below come from the existing generic
@@ -75,8 +75,8 @@ def inclusion_comparison_iso (p : Bits) (X Y : Uniform.RelativeObject p) :
     exact (congrArg (fun f:coprod X Y⟶coprod X Y => (𝟙 (coprod X Y)) ≫ f)
       (inclusion_comparison_hom p X Y)).trans (Category.id_comp _))
 
-/-- The printed I_p is a faithful full range functor into the actual
-restriction splitting of the full fixed-oracle category. -/
+/-- The I_p is a faithful full range functor into the restriction splitting of the
+full fixed-oracle category. -/
 def I (p : Bits) : RangeFunctor (Uniform.RelativeObject p) (SplitRelative p) where
   toFunctor := relativeInclusion p
   map_restrict _f := SplitObject.Hom.ext rfl

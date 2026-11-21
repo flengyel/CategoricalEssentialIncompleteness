@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationParserChecks` -/
+/-! # Literal parser comparison under coefficient relabeling -/
 
 @[expose] public section
 noncomputable section

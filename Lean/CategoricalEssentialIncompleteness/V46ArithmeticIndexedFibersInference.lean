@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
 
-/-! # Inference base change from actual premise and conclusion diagrams
+/-! # Inference base change from premise and conclusion diagrams
 
 The natural isomorphism is derived from finite-power pullbacks, pullback
 pasting and universal finite coproducts. It is not an input assumption.
@@ -27,8 +27,8 @@ variable {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
 variable {F F' : D} {N : ℕ} (j : F' ⟶ F)
 variable (R' : RulePresentation F' N) (R : RulePresentation F N)
 
-/-- A cartesian map of the actual rule coefficients. Its fields are
-premise/conclusion diagrams, with no evaluation or initiality conclusion. -/
+/-- A cartesian map of the rule coefficients. Its fields are premise/conclusion diagrams,
+with no evaluation or initiality conclusion. -/
 structure Data where
   instanceMap : ∀ i, R'.instances i ⟶ R.instances i
   premises : ∀ i, R'.premises i ≫ finitePowerMap j i.val = instanceMap i ≫ R.premises i
@@ -87,8 +87,8 @@ theorem inputCoefficientSquare (Q : Over F) (i : Fin (N+1)) :
     (IsPullback.of_hasPullback (R.premises i) (finitePowerMap Q.hom i.val)).flip
 
 omit [FinitaryExtensive D] in
-/-- Pasting the actual coefficient conclusion square gives the required
-base-change square for each inference arity, including arity zero. -/
+/-- Pasting the coefficient conclusion square gives the required base-change square for
+each inference arity, including arity zero. -/
 theorem component_isPullback (Q : Over F) (i : Fin (N+1)) :
     IsPullback (inputComponent j R' R h Q i)
       (R'.ruleConclusion ((fiber j).obj Q) i) (R.ruleConclusion Q i) j :=
@@ -177,8 +177,8 @@ theorem componentIso_natural {Q Q' : Over F} (f : Q ⟶ Q') :
     exact input_natural j R' R h f
   · exact (Over.w _).trans (Over.w _).symm
 
-/-- The actual constructor-compatible inference comparison is obtained
-from the proved pullback squares and their naturality. -/
+/-- The constructor-compatible inference comparison is obtained from the proved pullback
+squares and their naturality. -/
 def comparison : R.inference ⋙ fiber j ≅ fiber j ⋙ R'.inference :=
   (NatIso.ofComponents (componentIso j R' R h)
     (fun f => componentIso_natural j R' R h f)).symm

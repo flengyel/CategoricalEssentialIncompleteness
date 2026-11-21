@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
-/-! # Model evaluation of actual finite categorical conditionals -/
+/-! # Model evaluation of finite categorical conditionals -/
 
 @[expose] public section
 

@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonVaria
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermRootArithmetic
 
-/-! # The actual full term-substitution structure map has the numeric root result -/
+/-! # The full term-substitution structure map has the numeric root result -/
 
 @[expose] public section
 

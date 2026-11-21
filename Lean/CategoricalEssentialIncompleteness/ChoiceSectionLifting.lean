@@ -54,7 +54,7 @@ theorem map_switch_section (F : RangeFunctor R A) {U : R} (c c' : Idem U)
     rw [← F.toFunctor.map_comp, ← F.toFunctor.map_comp, hℓ.receives]
 
 omit [RestrictionCoproducts R] in
-/-- This sufficient condition is separate from Theorem 6.3's lifting
+/-- This sufficient condition is separate from the section-lifting theorem's lifting
 hypothesis. -/
 theorem section_lifting_of_choice [CategoryTheory.HasChoice R]
     (F : RangeFunctor R A) (U : R) : SectionLifting F U := by

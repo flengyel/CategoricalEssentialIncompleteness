@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
 
 
-/-! # Statement checks in `V46MillerTotalPartialMapsChecks` -/
+/-! # Monic spans and partial inverses in the total realization -/
 
 @[expose] public section
 noncomputable section

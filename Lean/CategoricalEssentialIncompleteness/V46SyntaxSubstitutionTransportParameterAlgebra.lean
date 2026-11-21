@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterPolynomial
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore
 
-/-! The canonical parameter-family carrier comparison is a complete
-syntax algebra isomorphism. Its proof uses the ordinary constructor
-comparison and the actual polynomial parameter comparison. -/
+/-!
+The canonical parameter-family carrier comparison is a complete syntax algebra
+isomorphism. Its proof uses the ordinary constructor comparison and the polynomial
+parameter comparison.
+-/
 
 @[expose] public section
 noncomputable section
@@ -108,8 +110,8 @@ theorem syntaxParameterFormula_structure :
   simpa only [← substitution_constantFamily_map,SyntaxPolynomial.algebraWithParameters,
     syntaxParameterFormulaInputIso] using h
 
-/-- The carrier is the genuine family comparison followed by the
-constant-family image of the original syntax carrier isomorphism. -/
+/-- The carrier is the family comparison followed by the constant-family image of the
+original syntax carrier isomorphism. -/
 def syntaxParameterAlgebraIso :
     AlgebraTransport.mappedAlgebra ((H).prod H) (syntaxParameterLanguageIso E b V σ π d)
         (SyntaxPolynomial.algebraWithParameters p₀ q₀ S₀.algebra P) ≅

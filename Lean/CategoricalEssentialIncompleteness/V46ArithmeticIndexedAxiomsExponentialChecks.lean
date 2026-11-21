@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxiomsExponential
 
 
-/-! # Statement checks in `V46ArithmeticIndexedAxiomsExponentialChecks` -/
+/-! # The indexed axiom coefficient in the exponential product chart -/
 
 @[expose] public section
 noncomputable section

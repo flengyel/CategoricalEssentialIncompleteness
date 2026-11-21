@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceProofCodes
 
 
-/-! # Statement checks in `V46NumericalArithmeticSentenceProofCodesChecks` -/
+/-! # Sentence derivations retain the original numerical proof word -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerParameterizedDeduction
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalPoint
 
-/-! # The actual Miller field theory and its common logical point -/
+/-! # The Miller field theory and its common logical point -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -40,7 +40,7 @@ def initial (A : Subobject (syntaxData a).sentenceObject) : IsInitial (proofs a 
 
 abbrev Theory := FirstOrderReflection.Theory (proofs a)
 
-/-- The printed t_a is the actual generated sentence-conclusion image. -/
+/-- The t_a is the generated sentence-conclusion image. -/
 def base : Subobject (syntaxData a).sentenceObject :=
   imageSubobject (CanonicalPresentation.chosenSentenceConclusion a (σ) (π) (d)
     (RealClosedAxioms.theoryAxioms a) (RealClosedAxioms.theoryAxioms_enumerable a))

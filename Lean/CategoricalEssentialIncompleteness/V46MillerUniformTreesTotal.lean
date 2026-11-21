@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalProducts
 
 /-! # The constructed positive-record evaluator is a total carrier morphism
 
-Its support is the supplied valid-input carrier. Transition hypotheses
-express the invariant/totality argument for the actual supplied algebra;
-they do not assume a fold or its universal property.
+Its support is the supplied valid-input carrier. Transition hypotheses express the
+invariant/totality argument for the supplied algebra; they do not assume a fold or its
+universal property.
 -/
 
 @[expose] public section

@@ -7,9 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPA
 
-/-! PA sentences for the literal numerical constructor equations. The
-polynomial graph below keeps both substitution parameters free and applies
-the actual paired traversal independently at each ordered child. -/
+/-!
+PA sentences for the numerical constructor equations. The polynomial graph below keeps
+both substitution parameters free and applies the paired traversal independently at
+each ordered child.
+-/
 
 @[expose] public section
 noncomputable section
@@ -168,8 +170,8 @@ variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
   all_goals exact parameterConstructorEquation_iff _ _ _ _ _ _ _
 end ArithmeticModels
 
-/-- PA proves all literal FV constructor equations on their actual raw
-source predicates, for arbitrary fixed Sigma-one coefficient predicates. -/
+/-- PA proves all literal FV constructor equations on their raw source predicates, for
+arbitrary fixed Sigma-one coefficient predicates. -/
 theorem freeVariables_constructor_PA (formula : Bool) :
     𝗣𝗔 ⊢ freeVariablesConstructorSentence V σ π d formula := by
   apply complete.{0} 𝗣𝗔
@@ -180,8 +182,8 @@ theorem freeVariables_constructor_PA (formula : Bool) :
   · exact freeVariables_term_constructor V σ π d u hu
   · exact freeVariables_formula_constructor V σ π d u hu
 
-/-- This PA equation uses the actual paired traversal and has no recursive
-child-success premise. Thus it includes the equal-binder original-body branch. -/
+/-- This PA equation uses the paired traversal and has no recursive child-success premise.
+Thus it includes the equal-binder original-body branch. -/
 theorem substitution_constructor_PA (formula : Bool) :
     𝗣𝗔 ⊢ substitutionConstructorSentence V σ π d formula := by
   apply complete.{0} 𝗣𝗔

@@ -6,11 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkCanonicalParameterTargets
 
-/-! # Independent checks of slice evaluation and canonical target folds
-
-The source constructor comparison required for full canonical parameter
-stability remains a separate obligation.
--/
+/-! # Evaluation in slices and folds into the canonical target -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -57,8 +53,8 @@ example (p : SyntaxPolynomial I) (X : Over P × Over P) {j k : J} (f : j ⟶ k) 
       SlicePolynomialComparison.input c P p X f :=
   SlicePolynomialComparison.transition_square c P p X f
 
-/-- Every actual global operation has the component constructor square;
-there is no supplied component evaluator or naturality premise. -/
+/-- Every global operation has the component constructor square; there is no supplied
+component evaluator or naturality premise. -/
 example (p : SyntaxPolynomial I) (X : Over P × Over P) (Y : Over P)
     (r : (p.mapCoefficients (fun i => constantFamily P (c i))).eval.obj X ⟶ Y)
     {j k : J} (f : j ⟶ k) :

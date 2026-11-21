@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! # Literal constructor membership for arbitrary uniform coefficients
+/-! # Constructor membership for arbitrary uniform coefficients
 
-Coefficient guards are forgotten only in the auxiliary ordinary parser
-used to prove a structural computation equation. Actual word membership
-retains the original arbitrary uniform coefficient predicates.
+Coefficient guards are forgotten only in the auxiliary ordinary parser used to prove a
+structural computation equation. Word membership retains the original arbitrary
+uniform coefficient predicates.
 -/
 
 @[expose] public section

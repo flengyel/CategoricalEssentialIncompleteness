@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
 
-/-! # Literal indexed axiom predicate, actual product chart and numeral fibers -/
+/-! # Indexed axiom predicate, product chart and numeral fibers -/
 
 @[expose] public section
 noncomputable section

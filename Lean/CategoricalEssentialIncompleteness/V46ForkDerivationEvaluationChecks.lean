@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationEvaluation
 
 
-/-! # Statement checks in `V46ForkDerivationEvaluationChecks` -/
+/-! # Finite-rule inputs under component evaluation -/
 
 @[expose] public section
 noncomputable section

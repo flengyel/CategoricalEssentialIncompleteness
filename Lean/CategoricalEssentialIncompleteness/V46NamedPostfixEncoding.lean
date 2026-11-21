@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! # Standard postfix codes of literal named finite syntax -/
+/-! # Standard postfix codes of named finite syntax -/
 
 @[expose] public section
 

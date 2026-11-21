@@ -23,8 +23,8 @@ open SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] {F₀ : PredicateCategory T} {bound : ℕ}
   (R : RulePresentation F₀ bound)
 
-/-- The coefficient equality changes only the chosen object spelling
-of the original rule instance, with its actual inverse transport. -/
+/-- The coefficient equality changes only the chosen object spelling of the original rule
+instance, with its inverse transport. -/
 def coefficientInput (X : PredicateCategory T) (i : Fin (bound + 1)) :
     R.instances i ⨯ finitePower X i.val ⟶
       PolynomialComparison.coefficients (D := PredicateCategory T) R i.val ⨯ finitePower X i.val :=
@@ -74,9 +74,9 @@ theorem treeInclusion_value (d : Obj T M (derivationAlgebra T R).a.left) :
 
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Each original child of a typed inference node has smaller literal
-node count than the parent. Its premise conclusion remains its own
-prescribed component of R.premises, rather than the parent conclusion. -/
+/-- Each original child of a typed inference node has smaller node count than the parent.
+Its premise conclusion remains its own prescribed component of R.premises, rather than
+the parent conclusion. -/
 theorem typed_children_smaller (i : Fin (bound + 1))
     (r : Obj T M (R.ruleObject (derivationAlgebra T R).a i)) (k : Fin i.val) :
     len ((F T M).map (typedChild T R i k) r).val <

@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarrierConstruct
 
 /-! # The literal uniform-word algebra with arbitrary coefficient objects
 
-The carrier is the constructed guarded postfix word predicate. Its
-constructors append the original literal root record, using the actual
-base polynomial comparison. No initiality or fold law is assumed.
+The carrier is the constructed guarded postfix word predicate. Its constructors append
+the original root record, using the base polynomial comparison. No initiality or fold
+law is assumed.
 -/
 
 @[expose] public section

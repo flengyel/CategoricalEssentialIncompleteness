@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentSteps
 
-/-! Actual named-variable constructor calculations under the induction invariant. -/
+/-! Named-variable constructor calculations under the induction invariant. -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.OracleRestrictedTuring
 public import CategoricalEssentialIncompleteness.OracleRestrictedInclusion
 public import CategoricalEssentialIncompleteness.LocalLifting
 
-/-! # The literal diagonal pair in the oracle-domain category -/
+/-! # The diagonal pair in the oracle-domain category -/
 
 @[expose] public section
 
@@ -53,7 +53,7 @@ def parityIso : N S ≅ coprod (N S) (N S) := (codeIso (coproduct (N S) (N S))).
 theorem parityIso_val : (parityIso S).hom.val=fun (n : ℕ) =>
     Part.some (if n%2=0 then Sum.inl (n/2) else Sum.inr (n/2)) := rfl
 
-/-- A view retaining the exact arrow of the P-category induced idempotent. -/
+/-- A view retaining the exact morphism of the P-category induced idempotent. -/
 def fromInduced {X : Restricted S}
     (a : @Idem (Restricted S) inferInstance PCategory.inducedRestriction X) : Idem X :=
   ⟨@Idem.hom _ _ PCategory.inducedRestriction X a,
@@ -137,7 +137,7 @@ theorem mem_range {X Y : Restricted S} (f : X ⟶ Y) (x y : carrier S Y) :
     y ∈ (Ranges.range f).hom.val x ↔ (∃ z,x ∈ f.val z) ∧ y=x :=
   mem_identityOn Y (image f) (image_enumerable f) x y
 
-/-- The actual image ranges commute with restriction products. -/
+/-- The image ranges commute with restriction products. -/
 theorem range_product {W X Y Z : Restricted S} (f : W ⟶ X) (g : Y ⟶ Z) :
     (Ranges.range (productMap f g)).hom=
       productMap (Ranges.range f).hom (Ranges.range g).hom := by

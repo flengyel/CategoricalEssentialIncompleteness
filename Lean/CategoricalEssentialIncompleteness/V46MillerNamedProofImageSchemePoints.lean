@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeF
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportDeletion
 
-/-! # Seven literal scheme witnesses in the actual uniform parameter objects -/
+/-! # Seven scheme witnesses in the uniform parameter objects -/
 
 @[expose] public section
 noncomputable section
@@ -32,8 +32,8 @@ local notation "S" => syntaxData P σ π d
 local notation "Tm" => NamedFiniteSyntax.Term (Symbols σ) d
 local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 
-/-- The full native option comparison supplies a point of the actual
-success pullback with its input and result projections. -/
+/-- The full substitution option comparison supplies a point of the success pullback with
+its input and result projections. -/
 theorem substitution_instance (x : ℕ) (φ : Fm) (t₀ : Tm) (ψ : Fm)
     (hff : φ.FreeFor x t₀) (hs : φ.substitute x t₀=some ψ) :
     ∃ a : (U).obj (S).admissibleSubstitution,
@@ -101,8 +101,8 @@ theorem hilbertReflexivity_point (t : Tm) :
   · apply Subtype.ext
     exact identity_value P ((S).algebra.a.1) (termPoint P σ π d t)
 
-/-- The original instantiation coordinates map to the public substitution
-input through its actual permutation morphism. -/
+/-- The original instantiation coordinates map to the public substitution input through
+its permutation morphism. -/
 theorem instantiationInput_point (x : ℕ) (φ : Fm) (t : Tm) :
     (U).map (S).instantiationInput
       (pairPoint (namePoint P x)

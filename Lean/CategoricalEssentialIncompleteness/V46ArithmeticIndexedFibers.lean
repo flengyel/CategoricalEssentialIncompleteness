@@ -9,9 +9,9 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersConst
 
 /-! # Initial numeral fibers and the arithmetic sentence-theory pullback
 
-Both comparisons of inference functors are derived from the actual rule
-coefficients. The extensive slice equivalence then transports the full
-family algebra to a product of algebras, whose first component is initial.
+Both comparisons of inference functors are derived from the rule coefficients. The
+extensive slice equivalence then transports the full family algebra to a product of
+algebras, whose first component is initial.
 -/
 
 @[expose] public section
@@ -40,8 +40,8 @@ def complementInferenceComparison :
     (complementMap e ArithmeticIndexedFamily.formula)
     (complementMap_primitive e ArithmeticIndexedFamily.formula)
 
-/-- The inference natural isomorphism over the actual two pullback
-functors follows from the constructor comparisons already proved. -/
+/-- The inference natural isomorphism over the two pullback functors follows from the
+constructor comparisons already proved. -/
 def inferenceComparison :
     (ArithmeticIndexedFamily.rules AxPA).inference ⋙
         (sliceEquivalence e ArithmeticIndexedFamily.formula).functor ≅
@@ -66,8 +66,8 @@ def algebraEquivalence :
       (ArithmeticIndexedAlgebraSplit.equivalence (singleRules AxPA e).inference
         (complementRules AxPA e).inference)
 
-/-- The first transported algebra is on the actual pullback of the
-full derivation conclusion, not a relabeled evaluator carrier. -/
+/-- The first transported algebra is on the pullback of the full derivation conclusion,
+not a relabeled evaluator carrier. -/
 def fiberAlgebra : Endofunctor.Algebra (singleRules AxPA e).inference :=
   ((algebraEquivalence AxPA e).functor.obj (ArithmeticIndexedFamily.algebra AxPA)).1
 
@@ -76,8 +76,8 @@ def fiberAlgebra : Endofunctor.Algebra (singleRules AxPA e).inference :=
       (Over.pullback (fiberMap e ArithmeticIndexedFamily.formula)).obj
         (ArithmeticIndexedFamily.algebra AxPA).a := rfl
 
-/-- Proposition 7.5's formula-level fiber universal property. All algebra
-morphisms are covered by the transported extensive equivalence. -/
+/-- Proposition 8.5's formula-level fiber universal property. All algebra morphisms are
+covered by the transported extensive equivalence. -/
 def fiberInitial : IsInitial (fiberAlgebra AxPA e) :=
   ArithmeticIndexedAlgebraSplit.productInitialFirst _
     (IsInitial.isInitialObj (algebraEquivalence AxPA e).functor
@@ -113,8 +113,8 @@ def derivationMap : (individualAlgebra AxPA e).a.left ⟶
   (individualFiberIso AxPA e).hom ≫ pullback.fst
     (ArithmeticIndexedFamily.conclusion AxPA) (fiberMap e ArithmeticIndexedFamily.formula)
 
-/-- The full derivation-object fiber is the actual cartesian square
-compatible with the conclusion and all rule constructors. -/
+/-- The full derivation-object fiber is the cartesian square compatible with the
+conclusion and all rule constructors. -/
 theorem derivation_pullback :
     IsPullback (derivationMap AxPA e) (individualAlgebra AxPA e).a.hom
       (ArithmeticIndexedFamily.conclusion AxPA) (fiberMap e ArithmeticIndexedFamily.formula) := by
@@ -155,8 +155,8 @@ def sentenceMap : individualSentenceProof AxPA e ⟶ ArithmeticIndexedFamily.sen
     (individualSentenceConclusion AxPA e ≫ fiberMap e ArithmeticIndexedFamily.sentence)
     (by simpa only [Category.assoc] using (sentence_outer AxPA e).w)
 
-/-- The printed square on sentence derivations is obtained by pullback
-pasting, after the proved inference-algebra comparison. -/
+/-- The square on sentence derivations is obtained by pullback pasting, after the proved
+inference-algebra comparison. -/
 theorem sentence_pullback :
     IsPullback (sentenceMap AxPA e) (individualSentenceConclusion AxPA e)
       (ArithmeticIndexedFamily.sentenceConclusion AxPA) (fiberMap e ArithmeticIndexedFamily.sentence) := by

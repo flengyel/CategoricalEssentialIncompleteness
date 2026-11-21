@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryCoproducts
 
 
-/-! # Statement checks in `V46MillerCategoryCoproductsChecks` -/
+/-! # Tagged restriction coproducts with one common oracle program -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.CoprodStruct

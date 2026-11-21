@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
 
-/-! # Statement checks in `V46SyntacticSyntaxRefillLawsChecks` -/
+/-! # Successful typed stack consumption preserves every underlying stack tail -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.ForkCosheafExtension
 
-/-! # Natural maps of actual pushout extensions -/
+/-! # Natural maps of pushout extensions -/
 
 @[expose] public section
 

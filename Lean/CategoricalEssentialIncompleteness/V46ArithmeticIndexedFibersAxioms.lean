@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxiom
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumerals
 
 
-/-! # Definitions and theorems in `V46ArithmeticIndexedFibersAxioms` -/
+/-! # Pullback of the axiom subobject at a program index -/
 
 @[expose] public section
 noncomputable section
@@ -90,7 +90,7 @@ def fiberToFamily (AxPA : Carrier) (e : ℕ) :
     fiberAxiomObject AxPA e ⟶ ArithmeticIndexedAxioms.axiomObject AxPA :=
   (realization 𝗣𝗔).map (fiberToFamilyPredicate AxPA e)
 
-/-- The actual numeral fiber of the actual indexed axiom subobject. -/
+/-- The numeral fiber of the indexed axiom subobject. -/
 theorem axiom_pullback (AxPA : Carrier) (e : ℕ) :
     IsPullback (fiberToFamily AxPA e) (fiberAxioms AxPA e)
       (ArithmeticIndexedAxioms.axioms AxPA)

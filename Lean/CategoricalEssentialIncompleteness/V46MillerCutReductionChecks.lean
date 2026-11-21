@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutReduction
 
 
-/-! # Statement checks in `V46MillerCutReductionChecks` -/
+/-! # Recursive reduction to the lower and upper cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

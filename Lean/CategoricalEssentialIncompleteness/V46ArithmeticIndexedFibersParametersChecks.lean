@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersParameters
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersParametersChecks` -/
+/-! # Parameter-preserving restriction of the finite inference data -/
 
 @[expose] public section
 noncomputable section

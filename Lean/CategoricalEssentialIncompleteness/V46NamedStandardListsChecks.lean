@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedStandardLists
 
 
-/-! # Statement checks in `V46NamedStandardListsChecks` -/
+/-! # Standard named-variable lists and their arithmetic codes -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

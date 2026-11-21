@@ -18,8 +18,8 @@ variable {C : Type u} [Category.{v} C] [Regular C] [HasFiniteCoproducts C]
 local instance (P : C) : Regular (Over P) := RegularSlices.regular P
 variable {I : Type w} (c : I → C) (P : C) (X : C × C)
 
-/-- Retain the polynomial and its comparison together, so the equality
-compares the actual morphisms across the change of coefficient expression. -/
+/-- Retain the polynomial and its comparison together, so the equality compares the
+morphisms across the change of coefficient expression. -/
 theorem comparison_data (p : SyntaxPolynomial I) :
     (⟨(p.mapCoefficients c).withParameters P,
       SyntaxPolynomial.parameterComparison P X (p.mapCoefficients c)⟩ :

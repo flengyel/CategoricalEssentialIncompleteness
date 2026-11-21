@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionPayload
 
-/-! Actual numerical roots of named term/formula substitution. The first
-quantifier branch retains the original body independently of recursive failure. -/
+/-!
+Numerical roots of named term/formula substitution. The first quantifier branch
+retains the original body independently of recursive failure.
+-/
 
 @[expose] public section
 noncomputable section

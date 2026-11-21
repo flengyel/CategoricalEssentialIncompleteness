@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
 
-/-! # Statement checks in `V46NumericalPolynomialRepresentationChecks` -/
+/-! # Exact polynomial-input codes under the arithmetic numerical comparison -/
 
 @[expose] public section
 noncomputable section

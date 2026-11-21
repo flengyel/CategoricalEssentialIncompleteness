@@ -40,8 +40,8 @@ private theorem recursive_map_conjugate {A : Type*} [Category A] {G H : A ⥤ Ty
   symm
   rw [η.hom.naturality, ← Category.assoc, η.inv_hom_id_app, Category.id_comp]
 
-/-- The image comparison for the recursive-domain interpretation is over
-the actual recursively interpreted codomain, for every total-split morphism. -/
+/-- The image comparison for the recursive-domain interpretation is over the recursively
+interpreted codomain, for every total-split morphism. -/
 theorem preserves_recursive_regularImage {X Y : TotalSplit T} (f : X ⟶ Y) :
     ∃ e : (recursiveDomainFunctor T M).obj (image f) ≅
       image ((recursiveDomainFunctor T M).map f),
@@ -81,8 +81,8 @@ def recursiveRegularImageIso {X Y : TotalSplit T} (f : X ⟶ Y) :
       (recursiveDomainFunctor T M).map (image.ι f) :=
   Classical.choose_spec (preserves_recursive_regularImage T M f)
 
-/-- Proposition 6.4 for the original recursive-carrier model interpretation
-with its literal chosen idempotent domains, without a preservation assumption. -/
+/-- Proposition 7.4 for the original recursive-carrier model interpretation with its
+chosen idempotent domains, without a preservation assumption. -/
 theorem recursive_regular : PreservesFiniteLimits (recursiveDomainFunctor T M) ∧
     PreservesFiniteCoproducts (recursiveDomainFunctor T M) ∧
     ∀ (X Y : TotalSplit T) (f : X ⟶ Y),

@@ -11,10 +11,10 @@ public import CategoricalEssentialIncompleteness.PERPullbacks
 /-!
 # Decomposition along PER coproduct injections
 
-For an arrow into a coproduct, the copairing of its two pullback projections
-is an isomorphism. Its inverse evaluates a representing function and uses the
-first coordinate of its output to choose the summand. The remaining coordinates
-supply a representative in the corresponding pullback.
+For a morphism into a coproduct, the copairing of its two pullback projections is an
+isomorphism. Its inverse evaluates a representing function and uses the first
+coordinate of its output to choose the summand. The remaining coordinates supply a
+representative in the corresponding pullback.
 -/
 
 @[expose] public section

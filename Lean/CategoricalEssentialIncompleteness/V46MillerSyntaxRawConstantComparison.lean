@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstants
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
 
-/-! # The actual constant-family polynomial comparison square
+/-! # The constant-family polynomial comparison square
 
 Every chart is constructed. Parameter insertion at recursive leaves,
 ordered product projections, sum injections and the canonical
@@ -485,8 +485,8 @@ private theorem liftIso_coefficient_strip (R A B C : Total.TotalCategory P) :
   simp only [constantLiftCode,constantLift,Nat.pair_unpair]
   rfl
 
-/-- The full diagram with the printed parameterComparison is proved for
-every finite polynomial and arbitrary coefficient and parameter carriers. -/
+/-- The full diagram with the parameterComparison is proved for every finite polynomial
+and arbitrary coefficient and parameter carriers. -/
 theorem constantPolynomialSquare (R A B : Total.TotalCategory P) (p : SyntaxPolynomial (Total.TotalCategory P)) :
     constantPolynomialLeft R A B p=constantPolynomialRight R A B p := by
   induction p with

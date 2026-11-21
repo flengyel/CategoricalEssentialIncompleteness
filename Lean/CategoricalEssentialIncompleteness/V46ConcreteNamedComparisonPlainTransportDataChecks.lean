@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainTransportData
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainTransportDataChecks` -/
+/-! # Canonical-to-plain comparison data for substitution transport -/
 
 @[expose] public section
 noncomputable section

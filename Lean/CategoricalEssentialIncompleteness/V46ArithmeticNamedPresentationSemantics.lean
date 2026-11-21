@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationRoundtrip
 
-/-! # Semantic roundtrip for each literal named arithmetic sentence
+/-! # Semantic roundtrip for each named arithmetic sentence
 
 The semantic structure K is independent of the standard or nonstandard
 arithmetic structure carrying the word codes.
@@ -87,8 +87,8 @@ theorem formula_semantics (n : ℕ) (φ : Formula) (hφ : Bound n φ) :
       exact forall_congr' (fun a => (eval_bindName ⟨x,hb.1⟩ (formula n φ) ρ a).trans
         (ih hb.2 (Function.update ρ x a)))
 
-/-- Sentence closure preserves the original named sentence's semantics
-in every arithmetic structure K, for every native variable assignment. -/
+/-- Sentence closure preserves the original named sentence's semantics in every arithmetic
+structure K, for every named variable assignment. -/
 theorem sentence_semantics (φ : Formula) (hφ : φ.freeVariables = []) (ρ : ℕ → K) :
     (sentence φ hφ).Evalb (s := Arithmetic.standardModel K) ![] ↔
       φ.Holds ArithmeticNamedTranslation.functions ArithmeticNamedTranslation.relations ρ := by

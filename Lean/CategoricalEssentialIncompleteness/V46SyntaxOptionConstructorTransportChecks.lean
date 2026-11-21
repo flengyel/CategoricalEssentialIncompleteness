@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionConstructorTransport
 
 
-/-! # Statement checks in `V46SyntaxOptionConstructorTransportChecks` -/
+/-! # Preservation of the lifted option constructors -/
 
 @[expose] public section
 noncomputable section

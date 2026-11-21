@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticNullaryRules
 
 
-/-! # Statement checks in `V46NumericalArithmeticNullaryRulesChecks` -/
+/-! # The seven-scheme and Gamma nullary label isomorphism -/
 
 @[expose] public section
 noncomputable section

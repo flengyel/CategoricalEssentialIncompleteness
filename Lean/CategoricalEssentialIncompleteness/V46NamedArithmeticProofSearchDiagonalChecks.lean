@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
 
-/-! # The exact diagonal instance of the actual partial Γ search -/
+/-! # The exact diagonal instance of the partial Γ search -/
 
 @[expose] public section
 noncomputable section

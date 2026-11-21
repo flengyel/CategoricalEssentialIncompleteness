@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerati
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAcceptance
 
-/-! # A chosen actual Σ₁ PA-axiom enumeration and every indexed PA extension
+/-! # A chosen Σ₁ PA-axiom enumeration and every indexed PA extension
 
-The chosen axioms are the closed native arithmetic/order and induction
-matrices under finite universal closure. Their equivalence with the
-canonical-closure generating condition is already proved by
-extendsPA_iff_canonical. This construction does not enumerate all PA theorems.
+The chosen axioms are the closed named arithmetic/order and induction matrices under
+finite universal closure. Their equivalence with the canonical-closure generating
+condition is already proved by extendsPA_iff_canonical. This construction does not
+enumerate all PA theorems.
 -/
 
 @[expose] public section
@@ -54,8 +54,8 @@ theorem sentence_formulaCode (ψ : Formula) :
   · intro h
     exact ⟨hf,(NamedPostfixEncoding.sentence_formulaCode_iff ψ).mpr h⟩
 
-/-- The standard extension is exactly the literal native PA-axiom codes,
-including all binder names and the actual substitution convention. -/
+/-- The standard extension is exactly the named PA-axiom codes, including all binder names
+and the substitution convention. -/
 theorem axiomCodes_standard (out : ℕ) :
     axiomCodes.val.Evalb ![out] ↔ ∃ ψ : Formula, PAAxiom ψ ∧ formulaCode ψ = out := by
   rw [axiomCodes_eval]
@@ -83,8 +83,8 @@ theorem canonicalClosure_mem (φ : Formula) (hφ : PASeed φ) :
   (axiomCodes_standard _).mpr ⟨canonicalClosure φ,
     ⟨canonicalClosure_sentence φ,φ,hφ,closure_isUniversal _ _⟩,rfl⟩
 
-/-- Every numeral fiber contains each actual native PA axiom as an axiom.
-Neither enumeration correctness nor source admissibility is an input field. -/
+/-- Every numeral fiber contains each named PA axiom as an axiom. Neither enumeration
+correctness nor source admissibility is an input field. -/
 theorem fiber_extendsPA (e : ℕ) :
     ExtendsPA (ArithmeticIndexedAxioms.fiberAxioms axiomCodes e) := by
   intro ψ hψ

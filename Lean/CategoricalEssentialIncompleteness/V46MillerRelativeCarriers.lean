@@ -11,10 +11,10 @@ public import CategoricalEssentialIncompleteness.V46KaroubiRestriction
 
 /-! # The literal p-c.e.-carrier presentation of Split(Rec^p)
 
-An object is a subset of N with an actual p-relative partial-identity
-certificate. The morphisms reuse the existing supported partial arrows;
-their characterization below proves that these are exactly all supported
-p-relative partial functions, including their undefined inputs.
+An object is a subset of N with a p-relative partial-identity certificate. The
+morphisms reuse the existing supported partial morphisms; their characterization below
+proves that these are exactly all supported p-relative partial functions, including
+their undefined inputs.
 -/
 
 @[expose] public section
@@ -185,8 +185,8 @@ theorem support_recursive {p : Bits} {A : Object p} (c : Idem A) :
   (CarrierIdempotents.singleton_enumerable_iff_recursive_identity p _).mp
     (Total.support_re (toCarrierIdem c))
 
-/-- Total morphisms in the literal p-c.e. presentation give precisely the
-total category of the actual restriction splitting. -/
+/-- Total morphisms in the literal p-c.e. presentation give precisely the total category
+of the restriction splitting. -/
 def totalEquivalence (p : Bits) :
     WideSubcategory (isTotal (C := Object p)) ≌
       WideSubcategory (isTotal (C := SplitObject (Uniform.RelativeObject p))) :=

@@ -38,13 +38,13 @@ theorem complementary_conditionals_v46
   · exact ObjectProperty.hom_ext _ h1
   · exact ObjectProperty.hom_ext _ h0
 
-/-- The actual generated fork diagonal pair follows from Corollary 3.3. -/
+/-- The generated fork diagonal pair follows from Corollary 3.3. -/
 theorem pair_inseparable_v46 : Inseparable pair0 pair1 :=
   source_inseparable_of_complementary_conditionals rangeFunctor
     turing turing_isTuring sumFrame inclusion_nonzero complementary_conditionals_v46
 
-/-- The fully faithful inclusion preserves and reflects every possible
-separator of the actual diagonal pair. -/
+/-- The fully faithful inclusion preserves and reflects every possible separator of the
+diagonal pair. -/
 theorem image_pair_inseparable_v46 :
     Inseparable (toIdem pair0) (toIdem pair1) := by
   let e := idemOrderIso U

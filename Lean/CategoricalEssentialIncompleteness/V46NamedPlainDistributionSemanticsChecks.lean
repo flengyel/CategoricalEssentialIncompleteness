@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainDistributionSemantics
 
 
-/-! # Statement checks in `V46NamedPlainDistributionSemanticsChecks` -/
+/-! # The absent-variable parameter fiber and distribution soundness -/
 
 @[expose] public section
 universe w

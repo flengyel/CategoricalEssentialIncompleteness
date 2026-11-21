@@ -8,12 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkErasureSubstitution
 public import CategoricalEssentialIncompleteness.V46ForkPropositionalEmbedding
 
-/-! # Independent substitution and logical-erasure statement checks
-
-The checks cover the printed substitution invariant and all seven erased
-scheme expressions. Their uniform propositional derivations and the
-generated-theory comparisons remain separate obligations.
--/
+/-! # Substitution under erasure and the seven logical schemes -/
 
 @[expose] public section
 noncomputable section

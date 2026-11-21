@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! # The actual two-sorted algebra on literal postfix words -/
+/-! # The two-sorted algebra on postfix words -/
 
 @[expose] public section
 
@@ -106,8 +106,8 @@ def formulaConstructorMorphism (a b : RawPolynomial) :
     intro w hw
     exact ((formulaConstructorGraph_eval a b u w).mp hw).2
 
-/-- The categorical polynomial is its actual chosen product/coproduct
-object; the numerical encoder and guarded constructor give its structure. -/
+/-- The categorical polynomial is its chosen product/coproduct object; the numerical
+encoder and guarded constructor give its structure. -/
 def postfixAlgebra (a b : SyntaxPolynomial (PredicateCategory T)) :
     Endofunctor.Algebra (SyntaxPolynomial.jointFunctor a b) where
   a := (termCarrier a b, formulaCarrier a b)
@@ -120,7 +120,7 @@ def postfixAlgebra (a b : SyntaxPolynomial (PredicateCategory T)) :
 section AlgebraModels
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The actual raw-input arrow appends exactly the literal root record. -/
+/-- The raw-input morphism appends exactly the root record. -/
 theorem termConstructor_value (a b : RawPolynomial)
     (u : Obj T M (rawCarrier (termCarrier a b) (formulaCarrier a b) a)) :
     ((F T M).map (representedArrow T (termConstructorMorphism T a b)) u).val =
@@ -137,8 +137,8 @@ theorem formulaConstructor_value (a b : RawPolynomial)
     u ((F T M).map (representedArrow T (formulaConstructorMorphism T a b)) u)).mp rfl
   exact ((formulaConstructorGraph_eval a b u.val _).mp h).2
 
-/-- The categorical term structure map is the printed postfix constructor
-on the coordinate of its actual chosen polynomial input. -/
+/-- The categorical term structure map is the postfix constructor on the coordinate of its
+chosen polynomial input. -/
 theorem postfixTerm_value (a b : SyntaxPolynomial (PredicateCategory T)) (u : M)
     (z : Obj T M (a.eval.obj ((postfixAlgebra T a b).a)))
     (h : (baseRepresentation T (termCarrier a b) (formulaCarrier a b) a).val.Evalb

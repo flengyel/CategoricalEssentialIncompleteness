@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBooleans
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonLists
 
-/-! # Numerical membership is the actual parameterized Boolean list fold -/
+/-! # Numerical membership is the parameterized Boolean list fold -/
 
 @[expose] public section
 
@@ -129,8 +129,8 @@ theorem membershipArrow_cons :
       (tail ≫ membershipArrow T V) q e b heq htail
   exact hleft.trans hright.symm
 
-/-- The numerical occurrence test is the actual categorical membership
-fold, proved for every T-model by stable initiality. -/
+/-- The numerical occurrence test is the categorical membership fold, proved for every
+T-model by stable initiality. -/
 theorem membershipArrow_eq : membershipArrow T V =
     (lists T V).membership (SyntacticDecidableVariables.decidableVariables T V) := by
   rw [(lists T V).membership_eq_parameterFold]

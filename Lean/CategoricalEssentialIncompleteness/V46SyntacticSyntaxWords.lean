@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46FiniteSigmaOne
 public import Mathlib.Tactic.FinCases
 
-/-! # Actual vector append for postfix syntax words -/
+/-! # Vector append for postfix syntax words -/
 
 @[expose] public section
 
@@ -110,8 +110,8 @@ theorem nth_append_left (a b i : M) (hi : i < len a) : nth (append a b) i = nth 
     rw [he, nth_adjoin_succ]
     exact ih
 
-/-- Every nonempty word has an actual final record and preceding prefix,
-including words of nonstandard model length. -/
+/-- Every nonempty word has a final record and preceding prefix, including words of
+nonstandard model length. -/
 theorem nil_or_snoc (a : M) : a = 0 ∨ ∃ b x : M, a = concat b x := by
   induction a using adjoin_ISigma1.sigma1_succ_induction
   · definability

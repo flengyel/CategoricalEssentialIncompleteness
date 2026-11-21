@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
 
-/-! Explicit predicate-presentation types for Lemma 5.3. -/
+/-! Explicit predicate-presentation types for Lemma 6.3. -/
 
 @[expose] public section
 

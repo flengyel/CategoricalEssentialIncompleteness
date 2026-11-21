@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedNumericalSemantics
 
 
-/-! # Statement checks in `V46NamedNumericalSemanticsChecks` -/
+/-! # Semantic substitution for the standard numerical algorithm -/
 
 @[expose] public section
 universe w

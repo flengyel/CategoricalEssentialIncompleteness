@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ParameterizedSubstitutionAlgebra
 
-/-! # Independent statements for changing parameters of actual algebra folds -/
+/-! # Independent statements for changing parameters of algebra folds -/
 
 @[expose] public section
 noncomputable section

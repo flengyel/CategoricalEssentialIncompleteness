@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.EffectiveForkConstruction
 public import CategoricalEssentialIncompleteness.EffectiveForkRegular
 public import CategoricalEssentialIncompleteness.EffectiveForkRangeProducts
 
-/-! # Actual monic spans and total base change of effective fork ranges -/
+/-! # Monic spans and total base change of effective fork ranges -/
 
 @[expose] public section
 
@@ -27,8 +27,8 @@ abbrev Total := EffectiveFork.Total
 abbrev Object := EffectiveFork.Object
 abbrev MonicSpanCategory := PartialMaps.Par Total
 
-/-- Ordinary monic spans, quotiented by actual apex isomorphisms, present
-all natural partial recursive fork maps. -/
+/-- Ordinary monic spans, quotiented by apex isomorphisms, present all natural partial
+recursive fork maps. -/
 def equivalence : MonicSpanCategory ≌ Object :=
   PartialMapEquivalence.equivalence (CategoryTheory.Equivalence.refl : Total ≌ Total)
 
@@ -56,15 +56,14 @@ theorem map_total {X Y : MonicSpanCategory} (f : X.obj ⟶ Y.obj) :
   rw [Category.id_comp] at h
   rw [h, Category.id_comp]
 
-/-- The range of the partial arrow represented by a span is the range
-of its total value leg, hence its componentwise regular image. -/
+/-- The range of the partial morphism represented by a span is the range of its total
+value leg, hence its componentwise regular image. -/
 theorem span_range {X Y : Object} (s : PartialSpans.Span X Y) :
     Ranges.range s.value = Ranges.range s.map.hom :=
   Ranges.precomp_split_epi (PartialSpans.inverse s.mono) s.mono.hom
     (PartialSpans.hom_inverse s.mono) s.map.hom
 
-/-- The ordinary monic-span range comparison is the regular image
-of its actual total value leg. -/
+/-- The ordinary monic-span range comparison is the regular image of its total value leg. -/
 theorem span_image {X Y : MonicSpanCategory} (s : PartialMaps.Raw X Y) :
     equivalence.functor.map (Ranges.range (PartialMaps.ofSpan s)).hom =
       (Ranges.range s.r.hom).hom := by
@@ -74,8 +73,8 @@ theorem span_image {X Y : MonicSpanCategory} (s : PartialMaps.Raw X Y) :
   rw [span_range]
   rfl
 
-/-- Pulling back the total value leg computes the inverse image of the
-range of the represented partial arrow. The monic domain leg is arbitrary. -/
+/-- Pulling back the total value leg computes the inverse image of the range of the
+represented partial morphism. The monic domain leg is arbitrary. -/
 theorem span_pullback_range {X Y : Object} (s : PartialSpans.Span X Y)
     {P Z : Total} {p : P ⟶ s.apex} {q : P ⟶ Z} (g : Z ⟶ (⟨Y⟩ : Total))
     (h : IsPullback p q s.map g) :

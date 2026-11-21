@@ -7,7 +7,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerAssociatedIncompleteness
 public import CategoricalEssentialIncompleteness.V46NativeSplitSlices
 
-/-! # Actual Miller associated Turing categories and their Boolean morphisms -/
+/-! # Miller associated Turing categories and their Boolean morphisms -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -18,8 +18,8 @@ namespace CategoricalEssentialIncompleteness.V46.Miller.AssociatedStructure
 open RestrictionSubobjects AssociatedData AssociatedTheories
 variable (a : Point)
 
-/-- The comparison is proved for the original uniform category; no fixed
-oracle representation replaces its actual restriction structure. -/
+/-- The comparison is proved for the original uniform category; no fixed oracle
+representation replaces its restriction structure. -/
 theorem source_restriction_eq :
     (PCategory.inducedRestriction : RestrictionCategory (Uniform.PointObject a)) =
       Uniform.nativeRestriction :=
@@ -72,8 +72,8 @@ theorem family_false (hc : U.val ⊓ refutation a U = ⊥) :
         (Two.constant ((refutation a U) : Total.CanonicalTotal a) false).hom := by
   rw [← CategoryTheory.Functor.map_comp, decision_false]
 
-/-- The existing inseparability criterion and both total-extension
-retraction directions are reused for the actual constant-family morphism. -/
+/-- The existing inseparability criterion and both total-extension retraction directions
+are reused for the constant-family morphism. -/
 theorem no_total_extension (ha : IsMiller a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ refutation a U = ⊥) :
     ¬ RestrictionRetraction.HasTotalExtension ((constantFunctor a U).map (decision a U hc)) := by

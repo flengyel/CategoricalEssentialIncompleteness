@@ -179,8 +179,8 @@ theorem uniform_independent_sentence_codes :
               ![NamedArithmeticProofSearch.negationWord ℕ word] :=
   ⟨sentence,fun e hc => sentence_code_avoids e hc⟩
 
-/-- Both native proof possibilities are excluded at the named
-numeral instance, with its original variable names and expanded numeral. -/
+/-- Both Hilbert proof possibilities are excluded at the named numeral instance, with its
+original variable names and expanded numeral. -/
 theorem independent_instance (e : ℕ)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) :
     let φ := NamedArithmeticDiagonalBounds.instanceFormula ArithmeticDiagonalCodes.alpha.val (output e)
@@ -199,8 +199,8 @@ theorem independent_instance (e : ℕ)
       (ArithmeticInternalComparison.native_instance_negative (gamma e)
         ArithmeticDiagonalCodes.alpha.val (output e) hd))
 
-/-- Theorem 7.6: one morphism `q : E ⟶ S` in `B_PA` gives an
-independent sentence at every consistent fiber `Γ_e`. -/
+/-- Theorem 8.6: one morphism `q : E ⟶ S` in `B_PA` gives an independent sentence at every
+consistent fiber `Γ_e`. -/
 theorem uniform_independent_sentences :
     ∃ q : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence,
       ∀ e : ℕ, Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e)) →

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationCoordinates
 
 
-/-! # Statement checks in `V46ForkDerivationCoordinatesChecks` -/
+/-! # The fork formula, axiom and rule objects -/
 
 @[expose] public section
 noncomputable section

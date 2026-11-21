@@ -12,9 +12,9 @@ public import CategoricalEssentialIncompleteness.NumericalPredicates
 /-!
 # Internal numerical predicates and domain embedding
 
-All PER subobjects form the numerical predicate objects. Pullback acts
-pointwise on families of total numerical arrows. The actual restriction-domain
-equalizers embed naturally into these objects by their support subobjects.
+All PER subobjects form the numerical predicate objects. Pullback acts pointwise on
+families of total numerical morphisms. The restriction-domain equalizers embed
+naturally into these objects by their support subobjects.
 -/
 
 @[expose] public section
@@ -33,7 +33,7 @@ attribute [local instance] typeHomDistribLattice typeHomBoundedOrder
 def enrichedPredicateLattice (X : Numerical) : InternalLattice Type :=
   typeLattice (predicates.obj (totalObject X))
 
-/-- The predicate action on a total-arrow element and a subobject. -/
+/-- The predicate action on a total-morphism element and a subobject. -/
 def enrichedPredicateAction (X Y : Numerical) :
     enrichedRestriction.totalObject X Y ⨯ predicates.obj (totalObject Y) ⟶
       predicates.obj (totalObject X) :=
@@ -44,7 +44,7 @@ def enrichedPredicateAction (X Y : Numerical) :
       ((prod.snd : enrichedRestriction.totalObject X Y ⨯ predicates.obj (totalObject Y) ⟶
         predicates.obj (totalObject Y)) p)
 
-/-- Pullback of predicate families along a family of total numerical arrows. -/
+/-- Pullback of predicate families along a family of total numerical morphisms. -/
 def enrichedPredicatePull {T : Type} {X Y : Numerical}
     (f : T ⟶ enrichedRestriction.totalObject X Y) :
     BoundedLatticeHom (T ⟶ predicates.obj (totalObject Y))
@@ -85,7 +85,7 @@ theorem enrichedPredicatePull_action {T : Type} {X Y : Numerical}
       ((prod.lift f a ≫ prod.snd) t)
   rw [prod.lift_fst, prod.lift_snd]
 
-/-- Full numerical subobject predicates with their internal total-arrow action. -/
+/-- Full numerical subobject predicates with their internal total-morphism action. -/
 def enrichedPredicates : InternalPredicates (enrichedRestriction.totalHom enrichedProducts) where
   lattice := enrichedPredicateLattice
   action := enrichedPredicateAction
@@ -127,7 +127,7 @@ theorem enrichedDomainSubobjectHom_injective (X : Numerical) :
     Function.Injective (enrichedDomainSubobjectHom X) :=
   (domainSubobjectHom_injective X).comp (enrichedDomainEquiv X).injective
 
-/-- The internal lattice map from the actual domain equalizer to all subobjects. -/
+/-- The internal lattice map from the domain equalizer to all subobjects. -/
 def enrichedDomainEmbeddingApp (X : Numerical) :
     InternalLatticeHom ((enrichedRestriction.domainPredicates enrichedProducts).lattice X)
       (enrichedPredicates.lattice X) :=

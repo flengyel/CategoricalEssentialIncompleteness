@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPolynomial
 
-/-! # Projection of the actual mapped constructor algebra
+/-! # Projection of the mapped constructor algebra
 
 The canonical polynomial comparison commutes with the projection to the
 first recursive sort. The proof uses its proved naturality and the unique
@@ -92,9 +92,9 @@ theorem projection_square
         (SyntaxPolynomial.constructors (fun n => K.obj (σ n)) N).eval.map targetLeg
   rw [← Category.assoc,constructorInputIso_natural,Category.assoc,← CategoryTheory.Functor.map_comp,he]
 
-/-- Mapping and first-sort projection give the same actual structure
-morphism. The inverse projection maps are justified by the existing
-constructor-polynomial theorem, including arity zero. -/
+/-- Mapping and first-sort projection give the same structure morphism. The inverse
+projection maps are justified by the constructor-polynomial theorem, including arity
+zero. -/
 theorem projected_mapping_str
     (A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor (SyntaxPolynomial.constructors σ N) .unit)) :
     (mappedOneSortAlgebra σ N (projectedConstructorAlgebra σ N A)).str =

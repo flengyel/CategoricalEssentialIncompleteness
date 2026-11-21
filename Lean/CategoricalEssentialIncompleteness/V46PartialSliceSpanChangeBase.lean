@@ -51,8 +51,8 @@ instance pullbackInclusion_mono (Y : PartialMaps.Par (Over U)) :
     infer_instance
   exact Over.mono_of_mono_left _
 
-/-- The second unit is the literal partial identity whose domain is the
-pullback monomorphism, in the actual monic-span quotient. -/
+/-- The second unit is the literal partial identity whose domain is the pullback
+monomorphism, in the monic-span quotient. -/
 theorem right_unit_span (Y : PartialMaps.Par (Over U)) :
     (rightAdjunction i inverses).unit.app Y =
       PartialMaps.inverseMono (pullbackInclusion i inverses Y) := by

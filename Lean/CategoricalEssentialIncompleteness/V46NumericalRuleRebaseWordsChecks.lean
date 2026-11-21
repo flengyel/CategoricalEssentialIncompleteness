@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalRuleRebaseWords
 
 
-/-! # Statement checks in `V46NumericalRuleRebaseWordsChecks` -/
+/-! # Formula-coordinate changes preserve the original derivation word -/
 
 @[expose] public section
 noncomputable section

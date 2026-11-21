@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingReal
 
 
-/-! # Statement checks in `V46MillerCutSeparatingRealChecks` -/
+/-! # The separating real for the diagonal parity regions -/
 
 @[expose] public section
 noncomputable section

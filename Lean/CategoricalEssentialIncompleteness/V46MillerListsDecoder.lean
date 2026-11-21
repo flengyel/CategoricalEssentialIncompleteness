@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerListsWordCodes
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
 
-/-! # An actual ordinary partial-recursive decoder for literal list words
+/-! # An ordinary partial-recursive decoder for literal list words
 
-The auxiliary PA algebra computes only code translations: nil is zero
-and cons is the original adjoin operation. Its coefficient predicate is
-the full numerical carrier. Restriction to the actual uniform coefficient
-guard and both inverse equations are proved separately.
+The auxiliary PA algebra computes only code translations: nil is zero and cons is the
+original adjoin operation. Its coefficient predicate is the full numerical carrier.
+Restriction to the uniform coefficient guard and both inverse equations are proved
+separately.
 -/
 
 @[expose] public section

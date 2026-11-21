@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs
 
-/-! # Literal constructor values of the canonical computed syntax -/
+/-! # Constructor values of the canonical computed syntax -/
 
 @[expose] public section
 noncomputable section
@@ -32,8 +32,7 @@ local notation "R" => SyntaxPolynomial.constructors π d
 local notation "I" => SyntaxPolynomial.power (SyntaxPolynomial.formula : SyntaxPolynomial (PredicateCategory T)) 2
 local notation "Q" => SyntaxPolynomial.product (SyntaxPolynomial.coefficient V) SyntaxPolynomial.formula
 
-/-- The actual variable constructor has the literal named-variable word
-value at every interpreted point. -/
+/-- The variable constructor has the named-variable word value at every interpreted point. -/
 theorem variable_value (x : Obj T M V) :
     ((F T M).map (S).variableConstructor x).val =
       Coding.constructor false (SyntaxPolynomial.termExpression V σ d) (Arithmetic.pair x.val 0) := by

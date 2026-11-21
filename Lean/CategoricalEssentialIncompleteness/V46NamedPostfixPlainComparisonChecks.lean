@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixPlainComparison
 
 
-/-! # Statement checks in `V46NamedPostfixPlainComparisonChecks` -/
+/-! # Standard named trees in the plain categorical syntax -/
 
 @[expose] public section
 noncomputable section

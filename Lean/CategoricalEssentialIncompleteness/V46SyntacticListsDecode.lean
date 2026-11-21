@@ -25,8 +25,8 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticLists
 
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- The chosen terminal object of the slice has its actual projection
-isomorphic to the identity family, independently of any numerical coding. -/
+/-- The chosen terminal object of the slice has its projection isomorphic to the identity
+family, independently of any numerical coding. -/
 def terminalOverIso (P : PredicateCategory T) : (⊤_ (Over P)).left ≅ P :=
   (Over.forget P).mapIso ((Limits.terminalIsTerminal (C := Over P)).uniqueUpToIso Over.mkIdTerminal)
 
@@ -52,8 +52,8 @@ def consFirst : (constantFamily P V ⨯ B.carrier).left ⟶ P ⨯ V :=
 def consSecond : (constantFamily P V ⨯ B.carrier).left ⟶ B.carrier.left :=
   (prod.snd : constantFamily P V ⨯ B.carrier ⟶ B.carrier).left
 
-/-- A literal Sigma-one graph for the cons operation, read through the
-actual projections of the product in the slice. -/
+/-- A literal Sigma-one graph for the cons operation, read through the projections of the
+product in the slice. -/
 def decodedCons : SyntacticListEvaluation.ConsGraph :=
   let f := (chosenGraph T (consFirst T B)).graph
   let fp := (chosenGraph T (prod.fst : P ⨯ V ⟶ P)).graph
@@ -155,8 +155,8 @@ theorem decodedCons_existsUnique (p : Obj T M P) (v : Obj T M V)
 
 end Models
 
-/-- An arbitrary algebra in an arbitrary parameter slice is translated
-into its actual graph operations. No evaluation map occurs in these data. -/
+/-- An arbitrary algebra in an arbitrary parameter slice is translated into its graph
+operations. No evaluation map occurs in these data. -/
 def decode : SyntacticListEvaluation.SliceAlgebra T P V B.carrier.left where
   projection := chosenGraph T B.carrier.hom
   nilOp := chosenGraph T (nilMap T B)

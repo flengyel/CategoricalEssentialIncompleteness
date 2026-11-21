@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 
-/-! # Naturality of the actual arithmetic polynomial comparison
+/-! # Naturality of the arithmetic polynomial comparison
 
-This is the structural naturality equation for the proved input isomorphism.
-It permits the stored/plain word-algebra isomorphisms to be used without
-changing any literal constructor code or supposing a comparison square.
+This is the structural naturality equation for the proved input isomorphism. It
+permits the stored/plain word-algebra isomorphisms to be used without changing any
+constructor code or supposing a comparison square.
 -/
 
 @[expose] public section

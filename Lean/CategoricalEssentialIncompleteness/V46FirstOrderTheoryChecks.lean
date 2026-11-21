@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46FirstOrderTheory
 
-/-! Theorem A.6 uses the actual scheme morphisms, not an unspecified logical map. -/
+/-! Theorem A.6 uses the scheme morphisms, not an unspecified logical map. -/
 
 @[expose] public section
 

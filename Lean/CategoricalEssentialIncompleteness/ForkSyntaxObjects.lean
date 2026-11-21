@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkFormulaSubstitution
 public import CategoricalEssentialIncompleteness.EffectiveForkFunctions
 
-/-! # The actual syntax fork and its natural constructors -/
+/-! # The syntax fork and its natural constructors -/
 
 @[expose] public section
 

@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras
 
-/-! Deletion transport is derived from the actual parameterized
-initial algebra, the equality classifier and the nil/cons diagrams. -/
+/-!
+Deletion transport is derived from the parameterized initial algebra, the equality
+classifier and the nil/cons diagrams.
+-/
 
 @[expose] public section
 noncomputable section
@@ -32,8 +34,8 @@ theorem deletionOverMap_left {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
 variable (V : C) (W : D) (e : E.functor.obj V ≅ W)
 variable (L : StableListAlgebra V) (S : DecidableVariables V) (T : DecidableVariables W)
 
-/-- This is an isomorphism of complete list algebras. Its cons equation
-uses the proved transport of the actual equality-classified branch. -/
+/-- This is an isomorphism of complete list algebras. Its cons equation uses the proved
+transport of the equality-classified branch. -/
 def mappedDeletionAlgebraIso :
     (mappedListAlgebra (sliceEquivalence E e) (constantFamily V V) (constantFamily W W)
       (coefficientComparison E e V W e) (L.deletionAlgebra S)).asAlgebra ≅

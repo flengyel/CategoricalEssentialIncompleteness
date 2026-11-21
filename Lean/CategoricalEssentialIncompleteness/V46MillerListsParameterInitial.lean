@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.V46CategoricalLists
 
 /-! # Direct list initiality in every uniform parameter slice
 
-The target algebra is arbitrary. Its nil value is obtained by its actual
-uniform morphism, and its cons operation acts only on its prescribed
-fiber. The proof of uniqueness uses every candidate algebra morphism.
+The target algebra is arbitrary. Its nil value is obtained by its uniform morphism,
+and its cons operation acts only on its prescribed fiber. The proof of uniqueness uses
+every candidate algebra morphism.
 -/
 
 @[expose] public section

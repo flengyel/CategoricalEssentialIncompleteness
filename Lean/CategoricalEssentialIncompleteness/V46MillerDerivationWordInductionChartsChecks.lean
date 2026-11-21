@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionCharts
 
 
-/-! # Statement checks in `V46MillerDerivationWordInductionChartsChecks` -/
+/-! # Exact raw charts after forgetting the unused formula sort -/
 
 @[expose] public section
 noncomputable section

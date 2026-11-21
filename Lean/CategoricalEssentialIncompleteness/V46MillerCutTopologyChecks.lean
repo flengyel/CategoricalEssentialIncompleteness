@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutTopology
 
 
-/-! # Statement checks in `V46MillerCutTopologyChecks` -/
+/-! # Compact bad images and the open parity regions -/
 
 @[expose] public section
 noncomputable section

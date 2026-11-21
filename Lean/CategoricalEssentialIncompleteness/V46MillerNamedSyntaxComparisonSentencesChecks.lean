@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSentences
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonSentencesChecks` -/
+/-! # Sentence pullbacks under the named uniform syntax chart -/
 
 @[expose] public section
 noncomputable section

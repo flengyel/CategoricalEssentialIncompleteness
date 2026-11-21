@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibility
 
-/-! The actual substitution results on the two quantified domain summands. -/
+/-! The substitution results on the two quantified domain summands. -/
 
 @[expose] public section
 noncomputable section
@@ -44,8 +44,8 @@ theorem quantified_equal_name {X : D} (k : X ⟶ S.quantifierAdmissibilityParame
       simpa only [Category.assoc] using hb
     _ = _ := by rw [S.quantified_fold_original_assoc]
 
-/-- The second domain summand carries the actual induced map to the
-body's admissibility pullback. -/
+/-- The second domain summand carries the induced map to the body's admissibility
+pullback. -/
 def quantifiedDistinctBody : (S.quantifiedDistinctAdmissibility : D) ⟶
     S.admissibleSubstitution := by
   have h : S.quantifiedDistinctAdmissibility ≤
@@ -120,16 +120,16 @@ theorem quantified_distinct_result :
   exact S.quantified_distinct_success S.quantifiedDistinctAdmissibility.arrow he hc
     S.quantifiedDistinctBody S.quantifiedDistinctBody_square.symm
 
-/-- Actual admissible input on the equal-name summand, returning the original
-quantified formula independently of recursive success. -/
+/-- Admissible input on the equal-name summand, returning the original quantified formula
+independently of recursive success. -/
 def quantifiedEqualAdmissible : (Two.fiberSubobject S.quantifiedEquality true : D) ⟶
     S.admissibleSubstitution :=
   pullback.lift ((Two.fiberSubobject S.quantifiedEquality true).arrow ≫ S.quantifiedInput)
     ((Two.fiberSubobject S.quantifiedEquality true).arrow ≫ prod.fst ≫ S.quantifierConstructor)
     (by simpa only [Category.assoc] using S.quantified_equal_result)
 
-/-- Actual admissible input on the distinct-name, capture-allowed, admissible-body
-summand, with the recursively substituted body. -/
+/-- Admissible input on the distinct-name, capture-allowed, admissible-body summand, with
+the recursively substituted body. -/
 def quantifiedDistinctAdmissible : (S.quantifiedDistinctAdmissibility : D) ⟶
     S.admissibleSubstitution :=
   pullback.lift (S.quantifiedDistinctAdmissibility.arrow ≫ S.quantifiedInput)

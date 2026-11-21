@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerListsRawAlgebra
 
-/-! # Literal constructor squares for every actual slice morphism
+/-! # Constructor squares for every slice morphism
 
-These equivalences connect the scalar nil/adjoin laws to the actual
-polynomial action, using its proved child graph. The recursive source
-leaf is the complete family code pair(r,list).
+These equivalences connect the scalar nil/adjoin laws to the polynomial action, using
+its proved child graph. The recursive source leaf is the complete family code
+pair(r,list).
 -/
 
 @[expose] public section

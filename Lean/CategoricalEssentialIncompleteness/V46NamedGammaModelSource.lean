@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics
 
-/-! # The actual named Gamma enumeration and a consistent source theory
+/-! # The named Gamma enumeration and a consistent source theory
 
-Only individual PA axioms need be supplied by the concrete arithmetic
-comparison. Every other source axiom is the proved presentation of an
-actual literal enumerated named sentence.
+Only individual PA axioms need be supplied by the concrete arithmetic comparison.
+Every other source axiom is the proved presentation of a literal enumerated named
+sentence.
 -/
 
 @[expose] public section
@@ -39,9 +39,9 @@ private theorem fromNative {φ : Formula} (h : D φ) : S ⊢ φ :=
   (NamedHilbertPropositional.system_provable_iff
     functionSymbols relationSymbols bound (ArithmeticNamedProofConnectives.system A) φ).mpr h
 
-/-- Ordinary native consistency is exactly the absence of a derivation
-of the closed arithmetic falsity, independently of the open formula used
-as the propositional system's neutral falsehood. -/
+/-- Ordinary Hilbert consistency is exactly the absence of a derivation of the closed
+arithmetic falsity, independently of the open formula used as the propositional
+system's neutral falsehood. -/
 theorem consistent_iff_no_falsity :
     Entailment.Consistent S ↔ ¬ D ArithmeticNamedTranslation.falsity := by
   constructor
@@ -55,8 +55,8 @@ theorem consistent_iff_no_falsity :
   · intro hn
     exact Consistent.of_unprovable (fun h => hn (toNative A h))
 
-/-- Actual enumerated sentences are admissible source axioms because the
-roundtrip is a native proof, not an assumed equality of word presentations. -/
+/-- Enumerated sentences are admissible source axioms because the roundtrip is a Hilbert
+proof, not an assumed equality of word presentations. -/
 theorem source_axioms_admissible
     (hPA : ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔) :
     ArithmeticNamedProofTranslation.AxiomsAdmissible A (sourceTheory A) := by
@@ -67,8 +67,8 @@ theorem source_axioms_admissible
     have he := ArithmeticNamedPresentation.sentence_zero_roundtrip A φ hφ
     exact toNative A ((K_right he) ⨀ ha')
 
-/-- Consistency transfers by the actual finite LK2-to-native derivation
-induction. It does not follow from standard-model truth of Gamma. -/
+/-- Consistency transfers by the finite LK2-to-Hilbert derivation induction. It does not
+follow from standard-model truth of Gamma. -/
 theorem source_consistent
     (hPA : ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔)
     (hc : Entailment.Consistent S) : Entailment.Consistent (sourceTheory A) := by
@@ -81,10 +81,9 @@ theorem source_consistent
 
 theorem PA_subset_source : 𝗣𝗔 ⊆ sourceTheory A := Set.subset_union_left
 
-/-- Genuine first-order completeness supplies a semantic arithmetic
-structure. The imported arithmetic completeness theorem performs the
-proved equality-model comparison before using the canonical arithmetic
-interpretation. -/
+/-- First-order completeness supplies a semantic arithmetic structure. The imported
+arithmetic completeness theorem performs the proved equality-model comparison before
+using the canonical arithmetic interpretation. -/
 theorem exists_source_model (hc : Entailment.Consistent (sourceTheory A)) :
     ∃ (K : Type) (s : ORingStructure K), letI := s; K↓[ℒₒᵣ] ⊧* sourceTheory A := by
   classical
@@ -97,8 +96,8 @@ theorem exists_source_model (hc : Entailment.Consistent (sourceTheory A)) :
     exact False.elim (h ⟨K,s,hK⟩))
   exact consistent_iff_unprovable_bot.mp hc hb
 
-/-- Every canonical arithmetic model of the source theory satisfies the
-literal named Gamma sentences in the semantic structure K. -/
+/-- Every canonical arithmetic model of the source theory satisfies the named Gamma
+sentences in the semantic structure K. -/
 theorem source_model_models {K : Type} [ORingStructure K]
     [hK : K↓[ℒₒᵣ] ⊧* sourceTheory A] (ρ : ℕ → K) :
     NamedGammaSoundness.Models functionSymbols relationSymbols bound A

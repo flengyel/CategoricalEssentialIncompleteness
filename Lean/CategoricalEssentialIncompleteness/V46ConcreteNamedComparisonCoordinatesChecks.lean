@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCoordinates
 
-/-! # The arbitrary arrow stays opaque in the actual product diagram -/
+/-! # The arbitrary morphism stays opaque in the product diagram -/
 
 @[expose] public section
 noncomputable section

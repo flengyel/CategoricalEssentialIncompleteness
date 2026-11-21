@@ -104,8 +104,8 @@ theorem fold_constructor (B : Endofunctor.Algebra (ForkCanonicalParameterTargets
 def fold (B : Endofunctor.Algebra (ForkCanonicalParameterTargets.polynomial D P)) :
     source D P ⟶ B := ⟨ForkCanonicalParameterTargets.constantFold D P B, fold_constructor D P B⟩
 
-/-- Initiality holds in the actual global slice algebra category, with
-uniqueness among all algebra morphisms. -/
+/-- Initiality holds in the global slice algebra category, with uniqueness among all
+algebra morphisms. -/
 def initial : IsInitial (source D P) :=
   IsInitial.ofUniqueHom (fold D P) (by
     intro B m

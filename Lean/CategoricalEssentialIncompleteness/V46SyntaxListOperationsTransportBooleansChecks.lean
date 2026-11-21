@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
 
 
-/-! # Statement checks in `V46SyntaxListOperationsTransportBooleansChecks` -/
+/-! # Boolean truth tables needed by the transported list and substitution algebras -/
 
 @[expose] public section
 noncomputable section

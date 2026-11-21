@@ -50,7 +50,7 @@ def coefficientIso (X : J ⥤ C) (j : J) :
   Over.isoMk (asIso (prodComparison ((evaluation J C).obj j) P X))
     (prodComparison_fst ((evaluation J C).obj j) P X)
 
-/-- This is postcomposition of evaluation's actual natural transformation. -/
+/-- This is postcomposition of evaluation's natural transformation. -/
 def transition (X : Over P) {j k : J} (f : j ⟶ k) :
     (Over.map (P.map f)).obj ((componentFunctor P j).obj X) ⟶
       (componentFunctor P k).obj X :=
@@ -67,8 +67,8 @@ def coefficientTransition (X : J ⥤ C) {j k : J} (f : j ⟶ k) :
   Over.homMk (prod.map (P.map f) (X.map f)) (by simp [constantFamily])
 
 omit [HasFiniteCoproducts C] in
-/-- Compatibility of the actual coefficient isomorphisms with transitions
-is proved, rather than supplied as an extra hypothesis. -/
+/-- Compatibility of the coefficient isomorphisms with transitions is proved, rather than
+supplied as an extra hypothesis. -/
 theorem coefficient_square (X : J ⥤ C) {j k : J} (f : j ⟶ k) :
     transition P (constantFamily P X) f ≫ (coefficientIso P X k).hom =
       (Over.map (P.map f)).map (coefficientIso P X j).hom ≫

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration
 
-/-! # The printed arithmetic PA-axiom inclusion supplies source admissibility -/
+/-! # The arithmetic PA-axiom inclusion supplies source admissibility -/
 
 @[expose] public section
 noncomputable section
@@ -17,7 +17,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic
 open NamedArithmeticSignature ArithmeticNamedAxiomComparison
 
-/-- Inclusion of the chosen, already compared native PA sentence axioms. -/
+/-- Inclusion of the chosen, already compared named PA sentence axioms. -/
 def ContainsPA (Γ : Carrier) : Prop :=
   ∀ word : ℕ, ArithmeticIndexedPAEnumeration.axiomCodes.val.Evalb ![word] → Γ.val.Evalb ![word]
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerAxiomSubobjects
 public import CategoricalEssentialIncompleteness.RestrictionSpans
 
-/-! # External formula-word axioms on an actual sentence pullback
+/-! # External formula-word axioms on a sentence pullback
 
 An arbitrary sentence monomorphism need not preserve scalar codes. Its
 inverse is the already constructed partial inverse of a total mono.
@@ -28,7 +28,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.Miller.SentenceAxiomPullbacks
 variable {P : Uniform.Family}
 
-/-- Both definedness and the value of the actual partial mono inverse. -/
+/-- Both definedness and the value of the partial mono inverse. -/
 theorem partialInverse_graph {X Y : Total.TotalCategory P} (s : X ⟶ Y) [Mono s] (w x : ℕ) :
     x ∈ Total.val (PartialSpans.inverse s) w ↔ w ∈ Total.val s.hom x := by
   constructor
@@ -49,7 +49,7 @@ theorem partialInverse_graph {X Y : Total.TotalCategory P} (s : X ⟶ Y) [Mono s
 
 variable {Fm : PredicateCategory 𝗣𝗔} {S : Total.TotalCategory P}
 
-/-- Formula-word membership pulled back along the actual sentence map. -/
+/-- Formula-word membership pulled back along the sentence map. -/
 def pulledSupport (s : S ⟶ (Syntax.predicateFunctor P).obj Fm) (Γ : Set ℕ) : Set ℕ :=
   {x | ∃ w,w ∈ Total.val s.hom x ∧ w ∈ Γ}
 
@@ -198,7 +198,7 @@ theorem coneLift_snd (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
     _ = f ≫ s := congrArg (fun k => k ≫ s) (coneLift_fst s Γ hΓ f g he)
     _ = _ := he
 
-/-- A genuine categorical pullback, not only equality of decoded supports. -/
+/-- A categorical pullback, not only equality of decoded supports. -/
 theorem axiomPullback (s : S ⟶ (Syntax.predicateFunctor P).obj Fm)
     (Γ : Set ℕ) (hΓ : Uniform.Enumerable P (· ∈ Γ)) :
     IsPullback (inclusion s Γ hΓ) (wordProjection s Γ hΓ) s
@@ -436,8 +436,8 @@ theorem givenBackward_graph (x b : ℕ) :
     exact ⟨x,(inclusion_graph s (givenCodes s a) (givenCodes_enumerable s a) x x).mpr ⟨hx,rfl⟩,
       (partialInverse_graph a x b).mpr hb⟩
 
-/-- The original arbitrary axiom mono is recovered on its actual sentence
-points. No formula-word identity or section of a proof image is used. -/
+/-- The original arbitrary axiom mono is recovered on its sentence points. No formula-word
+identity or section of a proof image is used. -/
 def givenPresentation : B ≅ axCarrier s (givenCodes s a) (givenCodes_enumerable s a) where
   hom := givenForward s a
   inv := givenBackward s a
@@ -506,9 +506,9 @@ theorem imageBackward_graph (x y : ℕ) :
     (axCarrier s (givenCodes s a) (givenCodes_enumerable s a)) (Total.imageObject a)
     (fun x hx => (pulled_given_support s a x).mp hx) x y
 
-/-- The actual image carrier and the pulled axiom carrier have identical
-sentence-point support. Both chart maps are guarded identities on those
-points, without identifying them with formula words. -/
+/-- The image carrier and the pulled axiom carrier have identical sentence-point support.
+Both chart maps are guarded identities on those points, without identifying them with
+formula words. -/
 def imagePresentation : Total.imageObject a ≅ axCarrier s (givenCodes s a) (givenCodes_enumerable s a) where
   hom := imageForward s a
   inv := imageBackward s a

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivation
 
 
-/-! # Statement checks in `V46NumericalDerivationChecks` -/
+/-! # Arbitrary finite-rule derivation initiality in numerical tuple carriers -/
 
 @[expose] public section
 noncomputable section

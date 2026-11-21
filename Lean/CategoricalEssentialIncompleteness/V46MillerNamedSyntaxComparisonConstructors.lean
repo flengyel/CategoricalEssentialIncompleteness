@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptions
 
-/-! # Every named constructor under the actual uniform syntax chart -/
+/-! # Every named constructor under the uniform syntax chart -/
 
 @[expose] public section
 noncomputable section
@@ -39,8 +39,8 @@ section PolynomialInjections
 universe u v
 variable {C : Type u} [Category.{v} C] [HasFiniteProducts C] [HasFiniteCoproducts C]
 
-/-- The actual coproduct injection, with its polynomial codomain fixed
-before specializing the category or either recursive carrier. -/
+/-- The coproduct injection, with its polynomial codomain fixed before specializing the
+category or either recursive carrier. -/
 def polynomialInl (a b : SyntaxPolynomial C) (X : C × C) :
     a.eval.obj X ⟶ (SyntaxPolynomial.sum a b).eval.obj X :=
   (coprod.inl : a.eval.obj X ⟶ a.eval.obj X ⨿ b.eval.obj X)
@@ -224,8 +224,8 @@ theorem constructorInput_natural {X X0 : PredicateCategory 𝗣𝗔 × Predicate
   rw [← Category.assoc,Syntax.Polynomial.component_natural P a f,Category.assoc,
     ← CategoryTheory.Functor.map_comp,hc,CategoryTheory.Functor.map_comp,← Category.assoc]
 
-/-- Project the constructed whole-algebra square before substituting the
-literal syntax objects. The comparison is the actual algebra isomorphism. -/
+/-- Project the constructed whole-algebra square before substituting the literal syntax
+objects. The comparison is the algebra isomorphism. -/
 theorem constructorInput_structure_first
     (a b : SyntaxPolynomial (PredicateCategory 𝗣𝗔))
     (r s : SyntaxPolynomial (Total.TotalCategory P))

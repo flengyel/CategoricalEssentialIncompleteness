@@ -27,8 +27,8 @@ variable (hall : ∀ (z : G.obj (V ⨯ Fm)) (ρ : ℕ → K), P (G.map quantifie
 
 include himp hall
 
-/-- The absence hypothesis is assignment invariance of the antecedent.
-The concrete application proves it from the actual false-membership fiber. -/
+/-- The absence hypothesis is assignment invariance of the antecedent. The concrete
+application proves it from the false-membership fiber. -/
 theorem valid_distribution (q : G.obj (V ⨯ (Fm ⨯ Fm)))
     (habs : ∀ (ρ : ℕ → K) (a : K),
       P (G.map (prod.fst : Fm ⨯ Fm ⟶ Fm) (G.map (prod.snd : V ⨯ (Fm ⨯ Fm) ⟶ _) q))

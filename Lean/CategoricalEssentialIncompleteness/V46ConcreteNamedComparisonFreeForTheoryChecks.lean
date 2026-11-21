@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFreeForTheory
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonFreeForTheoryChecks` -/
+/-! # A T-proof identifying the numerical admissibility predicate -/
 
 @[expose] public section
 noncomputable section

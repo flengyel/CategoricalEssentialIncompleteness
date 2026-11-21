@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptions
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonOptionsChecks` -/
+/-! # The option object and its failure/success chart -/
 
 @[expose] public section
 noncomputable section

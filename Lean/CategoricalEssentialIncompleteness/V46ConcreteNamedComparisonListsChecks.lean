@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonLists
 
-/-! # Actual stable-list initiality identifies numerical concatenation -/
+/-! # Stable-list initiality identifies numerical concatenation -/
 
 @[expose] public section
 

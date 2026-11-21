@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageData
 
-/-! # Literal named points of the actual uniform logical operations -/
+/-! # Named points of the uniform logical operations -/
 
 @[expose] public section
 noncomputable section

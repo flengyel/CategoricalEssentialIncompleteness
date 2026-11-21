@@ -60,8 +60,8 @@ theorem span_range {X Y : PartialMaps.Par Diagram} (s : PartialMaps.Raw X Y) :
       Ranges.range (totalEquivalence.functor.map s.r).hom :=
   ForkRangeStability.span_range (PartialMapEquivalence.mapSpan totalEquivalence s)
 
-/-- Every total pullback of a value leg computes the inverse image of
-the partial span's range, under the actual restriction/range comparison. -/
+/-- Every total pullback of a value leg computes the inverse image of the partial span's
+range, under the restriction/range comparison. -/
 theorem span_pullback_range {X Y : PartialMaps.Par Diagram} (s : PartialMaps.Raw X Y)
     {P Z : Diagram} {p : P ⟶ s.apex} {q : P ⟶ Z} (g : Z ⟶ Y.obj)
     (h : IsPullback p q s.r g) :

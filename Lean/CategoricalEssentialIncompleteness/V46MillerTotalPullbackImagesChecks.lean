@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalPullbackImages
 
 
-/-! # Statement checks in `V46MillerTotalPullbackImagesChecks` -/
+/-! # Uniform semidecidable-carrier total splitting: PullbackImages -/
 
 @[expose] public section
 noncomputable section

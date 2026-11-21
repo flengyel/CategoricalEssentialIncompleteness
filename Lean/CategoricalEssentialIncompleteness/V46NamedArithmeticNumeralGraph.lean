@@ -7,9 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralCarriers
 
-/-! The numeral words define an actual PA-total morphism into the closed
-term predicate. Its standard values are the unchanged literal named
-postfix encodings. -/
+/-!
+The numeral words define a PA-total morphism into the closed term predicate. Its
+standard values are the unchanged named postfix encodings.
+-/
 
 @[expose] public section
 noncomputable section

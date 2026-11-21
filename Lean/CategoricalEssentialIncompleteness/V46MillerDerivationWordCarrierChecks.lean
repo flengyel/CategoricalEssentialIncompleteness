@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
 
 
-/-! # Statement checks in `V46MillerDerivationWordCarrierChecks` -/
+/-! # Successful derivations carried by their original word alone -/
 
 @[expose] public section
 noncomputable section

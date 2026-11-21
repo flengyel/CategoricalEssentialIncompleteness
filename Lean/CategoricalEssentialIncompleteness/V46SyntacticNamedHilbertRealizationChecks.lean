@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertRealization
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertRealizationChecks` -/
+/-! # Finite named proofs in the constructed Γ derivation object -/
 
 @[expose] public section
 noncomputable section

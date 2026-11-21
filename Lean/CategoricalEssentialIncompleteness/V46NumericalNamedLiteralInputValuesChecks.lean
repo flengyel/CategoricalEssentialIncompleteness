@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralInputValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralInputValuesChecks` -/
+/-! # The coordinates of numerical substitution inputs -/
 
 @[expose] public section
 noncomputable section

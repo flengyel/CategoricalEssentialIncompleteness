@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationInitial
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationTreeUniqueness
 
-/-! # Coefficient-index coherence for the literal derivation words
+/-! # Coefficient-index coherence for the derivation words
 
 These structural identities compare the same constructor algebra before
 and after coefficient substitution. The original interpretation map is
@@ -79,8 +79,8 @@ theorem normalized_sum (p q : SyntaxPolynomial I)
   exact CategoryTheory.Category.id_comp _
 end Structural
 
-/-- Substituting coefficient indices commutes with the entire actual
-input comparison. Both source and target equality casts are included. -/
+/-- Substituting coefficient indices commutes with the entire input comparison. Both
+source and target equality casts are included. -/
 theorem coefficient_reindex {I : Type} (g : I → NumericalTuples.Object) (p : SyntaxPolynomial I)
     (A : PredicateCategory 𝗧𝗔 × PredicateCategory 𝗧𝗔) :
     (componentNormalized E.inverse.obj id (fun X => E.counitIso.app X)
@@ -161,8 +161,8 @@ def reindexPlainIso (hp : p = p') (hq : q = q') :
   cases hq
   exact reindexReflIso (plainPostfixAlgebra 𝗧𝗔 p q)
 
-/-- Equality transport of raw words fixes their scalar value in every
-TA model. It is proved before the actual parser predicates are supplied. -/
+/-- Equality transport of raw words fixes their scalar value in every TA model. It is
+proved before the parser predicates are supplied. -/
 theorem predicate_eq_value {C D : PredicateCategory 𝗧𝗔} (h : C = D)
     (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗧𝗔] (x : SyntacticLists.Obj 𝗧𝗔 M C) :
     ((SyntacticLists.F 𝗧𝗔 M).map (eqToHom h) x).val = x.val := by
@@ -239,9 +239,9 @@ theorem projection_squareTo
         (SyntaxPolynomial.constructors τ N).eval.map targetLeg
   rw [← CategoryTheory.Category.assoc,constructorInputIso_naturalTo,CategoryTheory.Category.assoc,← CategoryTheory.Functor.map_comp,he]
 
-/-- Mapping and first-sort projection give the same actual structure
-morphism. The inverse projection maps are justified by the existing
-constructor-polynomial theorem, including arity zero. -/
+/-- Mapping and first-sort projection give the same structure morphism. The inverse
+projection maps are justified by the constructor-polynomial theorem, including arity
+zero. -/
 theorem projected_mapping_strTo
     (A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor (SyntaxPolynomial.constructors σ N) .unit)) :
     (mappedOneSortAlgebraTo σ τ N hp (projectedConstructorAlgebra σ N A)).str =

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabi
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
 public import CategoricalEssentialIncompleteness.NumericalInseparability
 
-/-! # The categorical recursive-separator argument for actual Gamma words -/
+/-! # The categorical recursive-separator argument for Gamma words -/
 
 @[expose] public section
 noncomputable section
@@ -30,8 +30,8 @@ theorem mem_literal_set (C : SyntacticPredicates.Carrier) (w : ℕ)
     (h : C.val.Evalb (M := ℕ) ![w]) :
     w ∈ {z : ℕ | C.val.Evalb (M := ℕ) ![z]} := h
 
-/-- These are the actual selected conclusion-image programs on literal
-sentence words, including the constructed negation inverse image. -/
+/-- These are the selected conclusion-image programs on sentence words, including the
+constructed negation inverse image. -/
 def theoremSet (A : SyntacticPredicates.Carrier) : Set ℕ :=
   {word | (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
     variableSymbols functionSymbols relationSymbols bound A).val.Evalb (M := ℕ) ![word]}
@@ -95,9 +95,9 @@ theorem computable_preimage (R : Set ℕ) (hR : ComputablePred (· ∈ R))
   funext n
   exact congrFun he (f n)
 
-/-- The full separator proof is formula-generic. This keeps the source
-formula and its concrete numerical substitution value distinct until the
-actual diagonal formula is supplied with its proved bounds. -/
+/-- The full separator proof is formula-generic. This keeps the source formula and its
+concrete numerical substitution value distinct until the diagonal formula is supplied
+with its proved bounds. -/
 theorem no_recursive_separator_of_bounds (A : SyntacticPredicates.Carrier)
     (φ : NamedArithmeticSignature.Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0)
     (hAlpha : ∀ n : ℕ, ArithmeticDiagonalCodes.alpha.val.Evalb (M := ℕ) ![n] →
@@ -119,9 +119,8 @@ theorem no_recursive_separator_of_bounds (A : SyntacticPredicates.Carrier)
     intro n hnC hnBeta
     exact Set.disjoint_left.mp hRefutations hnC (negative_member A φ hφ n (hBeta n hnBeta))
 
-/-- The actual literal Gamma theorem and refutation sets have no
-recursive separator. Both concrete bounds are proved from native Γ≥PA;
-the actual Θ is identified by theta_eq_fixed. -/
+/-- The Gamma theorem and refutation sets have no recursive separator. Both concrete
+bounds are proved from the inclusion of PA in Γ; Θ is identified by theta_eq_fixed. -/
 theorem no_recursive_separator (A : SyntacticPredicates.Carrier)
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A) :
     ¬ ∃ R : Set ℕ, ComputablePred (· ∈ R) ∧ theoremSet A ⊆ R ∧

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutBoxDistance
 
 
-/-! # Statement checks in `V46MillerCutBoxDistanceChecks` -/
+/-! # Finite-box distances and their positive loci -/
 
 @[expose] public section
 noncomputable section

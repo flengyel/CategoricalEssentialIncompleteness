@@ -37,8 +37,8 @@ theorem parameterHom_component (P : D) (a : SyntaxPolynomial D) {X Y : D × D}
     Category.assoc, ← Functor.map_comp, h, Functor.map_comp]
   simp only [Category.assoc]
 
-/-- Parameterization acts on actual algebra morphisms. Its commutation
-equation follows from naturality of the specified parameterComparison. -/
+/-- Parameterization acts on algebra morphisms. Its commutation equation follows from
+naturality of the specified parameterComparison. -/
 def parameterAlgebraHom (a b : SyntaxPolynomial D) (P : D)
     {A B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor a b)} (f : A ⟶ B) :
     SyntaxPolynomial.algebraWithParameters a b A P ⟶

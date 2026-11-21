@@ -9,8 +9,10 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLis
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionGather
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversalTyped
 
-/-! Actual numerical free-variable root functions on the manuscript's
-named charts. The traversal keeps repeated occurrences in left-to-right order. -/
+/-!
+Numerical free-variable root functions on the manuscript's named charts. The traversal
+keeps repeated occurrences in left-to-right order.
+-/
 
 @[expose] public section
 noncomputable section

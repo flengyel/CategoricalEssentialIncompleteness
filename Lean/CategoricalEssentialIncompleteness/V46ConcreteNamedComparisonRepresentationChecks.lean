@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRepresentation
 
-/-! # Forward chart eliminators have the actual chosen categorical points -/
+/-! # Forward chart eliminators have the chosen categorical points -/
 
 @[expose] public section
 noncomputable section

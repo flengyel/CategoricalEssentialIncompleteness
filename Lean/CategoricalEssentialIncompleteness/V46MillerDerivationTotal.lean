@@ -10,13 +10,12 @@ public import CategoricalEssentialIncompleteness.V46MillerDerivationValidation
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOneSort
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationAlgebraAdjunction
 
-/-! # Actual arbitrary-rule derivations in Tot(Split(E_z))
+/-! # Arbitrary-rule derivations in Tot(Split(E_z))
 
-Every coefficient object, every formula object and every target algebra
-belong to the actual total splitting. The ordinary trees are constructed
-through the proved polynomial comparison of the actual equivalence.
-The conservative singleton interpretation then proves the successful
-input comparison; it is not supplied as a hypothesis.
+Every coefficient object, every formula object and every target algebra belong to the
+total splitting. The ordinary trees are constructed through the proved polynomial
+comparison of the equivalence. The conservative singleton interpretation then proves
+the successful input comparison; it is not supplied as a hypothesis.
 -/
 
 @[expose] public section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationProjection
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationProjectionChecks` -/
+/-! # Projection of the mapped constructor algebra -/
 
 @[expose] public section
 noncomputable section

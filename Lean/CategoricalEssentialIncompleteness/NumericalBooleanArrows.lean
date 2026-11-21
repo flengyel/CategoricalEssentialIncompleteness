@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.NumericalBooleanObject
 
 /-!
-# Recursive Boolean functions and PER arrows
+# Recursive Boolean functions and PER morphisms
 
-Arrows from the equality PER on `ℕ` to the Boolean PER are exactly total
-recursive Boolean functions. Equality of arrows corresponds to equality of
-these functions at every natural number.
+Morphisms from the equality PER on `ℕ` to the Boolean PER are exactly total recursive
+Boolean functions. Equality of morphisms corresponds to equality of these functions at
+every natural number.
 -/
 
 @[expose] public section
@@ -36,11 +36,11 @@ def booleanRepresentative (f : ℕ → Bool) (hf : Computable f) :
     obtain rfl := Part.mem_some_iff.mp hb
     exact ⟨by cases f n <;> simp [booleanSupport], rfl⟩
 
-/-- The PER arrow denoted by a total recursive Boolean function. -/
+/-- The PER morphism denoted by a total recursive Boolean function. -/
 def booleanArrow (f : ℕ → Bool) (hf : Computable f) :
     discrete Set.univ ⟶ boolean := ofRepresentative (booleanRepresentative f hf)
 
-/-- Equality of Boolean arrows is pointwise equality of their recursive functions. -/
+/-- Equality of Boolean morphisms is pointwise equality of their recursive functions. -/
 theorem booleanArrow_eq_iff (f g : ℕ → Bool) (hf : Computable f) (hg : Computable g) :
     booleanArrow f hf = booleanArrow g hg ↔ f = g := by
   constructor
@@ -54,7 +54,7 @@ theorem booleanArrow_eq_iff (f g : ℕ → Bool) (hf : Computable f) (hg : Compu
   · rintro rfl
     rfl
 
-/-- Every arrow to the Boolean PER has a total recursive Boolean representative. -/
+/-- Every morphism to the Boolean PER has a total recursive Boolean representative. -/
 theorem booleanArrow_surjective (f : discrete Set.univ ⟶ boolean) :
     ∃ g : ℕ → Bool, ∃ hg : Computable g, booleanArrow g hg = f := by
   induction f using Quotient.inductionOn with | _ f =>
@@ -72,7 +72,7 @@ theorem booleanArrow_surjective (f : discrete Set.univ ⟶ boolean) :
     rw [hgvalue]
     exact Part.some_get _
 
-/-- Total recursive Boolean functions correspond bijectively to Boolean PER arrows. -/
+/-- Total recursive Boolean functions correspond bijectively to Boolean PER morphisms. -/
 def booleanArrowEquiv : {f : ℕ → Bool // Computable f} ≃
     (discrete Set.univ ⟶ boolean) :=
   Equiv.ofBijective (fun f ↦ booleanArrow f.val f.property)

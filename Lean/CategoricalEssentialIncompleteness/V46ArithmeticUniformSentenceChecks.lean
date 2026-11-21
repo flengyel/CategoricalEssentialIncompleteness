@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformSentence
 
 
-/-! # Statement checks in `V46ArithmeticUniformSentenceChecks` -/
+/-! # The uniform sentence morphism -/
 
 @[expose] public section
 noncomputable section

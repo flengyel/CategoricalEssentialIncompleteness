@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.OracleRestrictedPCategory
 
-/-! # Exactly the ordinary total recursive functions are total source arrows -/
+/-! # Exactly the ordinary total recursive functions are total source morphisms -/
 
 @[expose] public section
 

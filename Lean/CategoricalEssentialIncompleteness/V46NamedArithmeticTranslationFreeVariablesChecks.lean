@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticTranslationFreeVariables
 
 
-/-! # Statement checks in `V46NamedArithmeticTranslationFreeVariablesChecks` -/
+/-! # The explicit naming context bounds all free names of a translated formula -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparability
 
 
-/-! # Statement checks in `V46ArithmeticSentenceInseparabilityChecks` -/
+/-! # Essential incompleteness from the proved categorical separator obstruction -/
 
 @[expose] public section
 noncomputable section

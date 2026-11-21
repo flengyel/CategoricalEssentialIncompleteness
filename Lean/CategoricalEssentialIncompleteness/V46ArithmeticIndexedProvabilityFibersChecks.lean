@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityFibers
 
 
-/-! # Statement checks in `V46ArithmeticIndexedProvabilityFibersChecks` -/
+/-! # The numeral-fiber comparison for uniform provability -/
 
 @[expose] public section
 noncomputable section

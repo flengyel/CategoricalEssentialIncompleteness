@@ -9,17 +9,17 @@ public import CategoricalEssentialIncompleteness.V46MillerCutDigitsStrict
 public import CategoricalEssentialIncompleteness.DisjointJoins
 
 
-/-! # Definitions and theorems in `V46MillerCutInseparability` -/
+/-! # Separators of the lower and upper cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
-/-! # The actual parity diagonal and the consequence of a cut reduction
+/-! # The parity diagonal and the consequence of a cut reduction
 
-The diagonal theorem and source conditionals apply to the constructed
-uniform category. The reusable cut consequence takes an ordinary recursive reduction.
-The concrete Lemma8.3 reduction is supplied by CutReduction/CutApplications.
+The diagonal theorem and source conditionals apply to the constructed uniform
+category. The reusable cut consequence takes an ordinary recursive reduction. The
+concrete Lemma 9.3 reduction is supplied by CutReduction/CutApplications.
 -/
 noncomputable section
 open CategoryTheory CategoryTheory.RestrictionCategory
@@ -123,9 +123,9 @@ private theorem forbids_right (c : Idem (N P))
   rw [Part.eq_some_iff.mpr hcx,Part.bind_some] at hm
   cases Part.mem_some_iff.mp hm
 
-/-- This is the categorical diagonal argument, with the actual source
-switch supplied by disjoint joins. It quantifies over every source
-complementary pair and uses the full Turing property on all partial arrows. -/
+/-- This is the categorical diagonal argument, with the source switch supplied by disjoint
+joins. It quantifies over every source complementary pair and uses the full Turing
+property on all partial morphisms. -/
 theorem turing_pair_inseparable (τ : product (N P) (N P) ⟶ N P)
     (hτ : RecursionCategory.IsTuringMorphism τ) : Inseparable (pair0 τ) (pair1 τ) := by
   constructor
@@ -159,8 +159,8 @@ theorem turing_pair_inseparable (τ : product (N P) (N P) ⟶ N P)
 def diagonal0 (z : Point) := pair0 (Uniform.tau z)
 def diagonal1 (z : Point) := pair1 (Uniform.tau z)
 
-/-- No Miller-property assumption is needed for this source categorical
-pair; the actual unanimous evaluator already has the Turing property. -/
+/-- No Miller-property assumption is needed for this source categorical pair; the
+unanimous evaluator already has the Turing property. -/
 theorem source_diagonal_inseparable (z : Point) :
     Inseparable (diagonal0 z) (diagonal1 z) :=
   turing_pair_inseparable (Uniform.tau z) (Uniform.tau_isTuring z)
@@ -189,8 +189,8 @@ theorem support_recursive_pull (h : ℕ → ℕ) (hh : Computable h) (a : Idem (
   simp only [Part.mem_some_iff,exists_eq_left]
 
 /-- The reusable reduction premise is displayed with its exact two inverse-image
-equations. This consequence does not prove or assume any further part of
-Lemma8.3, nor does it replace its ordinary recursive requirement. -/
+equations. This consequence does not prove or assume any further part of Lemma 9.3,
+nor does it replace its ordinary recursive requirement. -/
 theorem cuts_inseparable_of_recursive_reduction (z : Point) (h : ℕ → ℕ) (hh : Computable h)
     (h₀ : h ⁻¹' CutDigits.lowerCut z = Uniform.support (diagonal0 z))
     (h₁ : h ⁻¹' CutDigits.upperCut z = Uniform.support (diagonal1 z)) :

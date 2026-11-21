@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchDiagonal
 
-/-! # The printed partial Γ proof-search statement
+/-! # The partial Γ proof-search statement
 
 The evidence predicates here are the selected program of the constructed
 Γ theory at Θ and its proved primitive-recursive Neg extension. The source
@@ -32,8 +32,8 @@ namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch
 
 open NamedArithmeticSignature
 
-/-- The canonical comparison on recursively interpreted sums is the
-actual identity, so its inverse is the identity as well. -/
+/-- The canonical comparison on recursively interpreted sums is the identity, so its
+inverse is the identity as well. -/
 theorem coproduct_comparison_inv_eq_id (M : Type)
     [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] :
     ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).comparison
@@ -62,8 +62,8 @@ theorem ell_comparison_inv (Γ : Carrier) (φ : Formula) (M : Type)
     (ell_comparison M Γ φ)
   simpa only [Category.assoc,Iso.hom_inv_id,Category.comp_id] using h
 
-/-- The complete printed fibers, using the actual selected Γ program and
-the constructed numerical Θ and Neg graphs, for a fixed unary formula. -/
+/-- The complete fibers, using the selected Γ program and the constructed numerical Θ and
+Neg graphs, for a fixed unary formula. -/
 theorem printed_partial_proof_search (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :
     ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
@@ -102,8 +102,8 @@ theorem printed_partial_proof_search (Γ : Carrier) (φ : Formula)
   · erw [coproduct_comparison_inv_eq_id M,Category.comp_id]
     simpa only [positive_eval M Γ φ] using hone
 
-/-- Lemma 7.2 for the actual printed diagonal formula. The source lift is
-chosen before M; the hypothesis is only disjointness in that model. -/
+/-- Lemma 8.2 for the diagonal formula. The source lift is chosen before M; the hypothesis
+is only disjointness in that model. -/
 theorem printed_diagonal_partial_proof_search (Γ : Carrier) :
     ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
       ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],

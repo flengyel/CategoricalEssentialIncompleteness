@@ -11,10 +11,10 @@ public import CategoricalEssentialIncompleteness.NumericalTuring
 /-!
 # The numerical recursion category
 
-The numerical category is a prodominical isotype with a Turing morphism. Choosing
-a code for each partial recursive arrow defines an ordinary function on
-extensional hom-sets that supplies its total parameter map. The evaluation
-equation recovers the given partial arrow from that map.
+The numerical category is a prodominical isotype with a Turing morphism. Choosing a
+code for each partial recursive morphism defines an ordinary function on extensional
+hom-sets that supplies its total parameter map. The evaluation equation recovers the
+given partial morphism from that map.
 -/
 
 @[expose] public section
@@ -36,15 +36,15 @@ instance numericalRecursionCategory : RecursionCategory.PRecursionCategory Numer
   tau := turingEvaluator
   is_turing := turingEvaluator_isTuringMorphism
 
-/-- Choose a program code for each extensional partial arrow and form its total
+/-- Choose a program code for each extensional partial morphism and form its total
 parameter map. -/
 def turingIndexing (V : Numerical) (φ : product V nat ⟶ nat) :
     totalObject V ⟶ totalObject nat :=
   codeParameter V
     (Classical.choose (Code.exists_code.mp (Partrec.nat_iff.mp φ.computable)))
 
-/-- Evaluation of the chosen total parameter map recovers the original partial
-recursive arrow, including its domain of definition. -/
+/-- Evaluation of the chosen total parameter map recovers the original partial recursive
+morphism, including its domain of definition. -/
 theorem turingIndexing_evaluation (V : Numerical) (φ : product V nat ⟶ nat) :
     partialProdMap (turingIndexing V φ).hom (𝟙 nat) ≫ turingEvaluator = φ :=
   turingEvaluator_parameterization V φ _

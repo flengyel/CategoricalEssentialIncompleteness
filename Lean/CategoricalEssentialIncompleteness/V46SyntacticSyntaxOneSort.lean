@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
 
-/-! # One-sort constructor initiality obtained from the actual two-sort algebra -/
+/-! # One-sort constructor initiality obtained from the two-sort algebra -/
 
 @[expose] public section
 
@@ -95,8 +95,8 @@ theorem constructorProjection_factor {Y : D} (f : A.a.1 ⟶ Y) :
   congr 1
   exact Prod.ext (Category.id_comp f).symm (Category.comp_id _).symm
 
-/-- Every one-sort algebra morphism extends to an actual two-sort
-algebra morphism by the unique map to the terminal second coordinate. -/
+/-- Every one-sort algebra morphism extends to a two-sort algebra morphism by the unique
+map to the terminal second coordinate. -/
 def liftConstructorHom (B : Endofunctor.Algebra (constructorFunctor R N))
     (f : projectedConstructorAlgebra R N A ⟶ B) : A ⟶ liftConstructorAlgebra R N B where
   f := (f.f, terminal.from A.a.2)
@@ -132,8 +132,8 @@ def constructorFoldHom (hA : IsInitial A)
     rw [ht] at h
     exact h
 
-/-- The one-sort universal property is proved by lifting each candidate
-morphism and applying the actual joint-algebra uniqueness theorem. -/
+/-- The one-sort universal property is proved by lifting each candidate morphism and
+applying the joint-algebra uniqueness theorem. -/
 def projectedConstructorInitial (hA : IsInitial A) :
     IsInitial (projectedConstructorAlgebra R N A) :=
   IsInitial.ofUniqueHom (fun B => constructorFoldHom R N A hA B) (fun B f => by

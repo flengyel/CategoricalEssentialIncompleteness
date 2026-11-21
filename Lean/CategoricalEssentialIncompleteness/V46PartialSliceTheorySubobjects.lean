@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46PartialSliceTheoryFamilies
 public import Mathlib.CategoryTheory.Subobject.Basic
 
-/-! # The theorem-family subobject bound in the actual total slice -/
+/-! # The theorem-family subobject bound in the total slice -/
 
 @[expose] public section
 noncomputable section
@@ -99,8 +99,8 @@ def pulledTheorySubobject (u : U ⟶ S) [Mono u] : Subobject (constantTotal T S.
   let := total_mono (pulledTheory inverses i u) hm
   exact Subobject.mk (pulledTheory inverses i u)
 
-/-- The printed theory family is below the pulled-back theory family after
-the sentence-family isomorphism, as subobjects of the actual total slice. -/
+/-- The theory family is below the pulled-back theory family after the
+sentence-family isomorphism, as subobjects of the total slice. -/
 theorem theory_bound (t : T ⟶ S) (u : U ⟶ S) [Mono t] [Mono u] (ht : i ≫ u = t) :
     sourceTheorySubobject inverses t ≤ pulledTheorySubobject inverses i u := by
   let := total_mono (sourceTheory inverses t) (constant_mono inverses T t)

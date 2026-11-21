@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
 
 
-/-! # Statement checks in `V46NamedPlainSemanticsChecks` -/
+/-! # Standard semantics of the plain categorical constructors -/
 
 @[expose] public section
 universe w

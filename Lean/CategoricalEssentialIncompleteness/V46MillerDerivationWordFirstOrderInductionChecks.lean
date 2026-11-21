@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordFirstOrderInduction
 
 
-/-! # Statement checks in `V46MillerDerivationWordFirstOrderInductionChecks` -/
+/-! # First-order conclusion induction with arbitrary uniform axioms -/
 
 @[expose] public section
 noncomputable section

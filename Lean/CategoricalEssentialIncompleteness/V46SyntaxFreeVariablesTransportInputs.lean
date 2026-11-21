@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
 
-/-! # The actual polynomial input isomorphisms for occurrence folds -/
+/-! # The polynomial input isomorphisms for occurrence folds -/
 
 @[expose] public section
 
@@ -46,8 +46,8 @@ def listPairIso : (E.prod E).functor.obj (X,X) ≅ (Y,Y) where
   hom_inv_id := Prod.ext ℓ.hom_inv_id ℓ.hom_inv_id
   inv_hom_id := Prod.ext ℓ.inv_hom_id ℓ.inv_hom_id
 
-/-- This is the existing polynomial component followed by its actual
-action on the pair of list-carrier isomorphisms. -/
+/-- This is the existing polynomial component followed by its action on the pair of
+list-carrier isomorphisms. -/
 def listInputIso (p : SyntaxPolynomial D) :
     E.functor.obj ((p.mapCoefficients E.inverse.obj).eval.obj (X,X)) ≅
       (p.mapCoefficients id).eval.obj (Y,Y) :=

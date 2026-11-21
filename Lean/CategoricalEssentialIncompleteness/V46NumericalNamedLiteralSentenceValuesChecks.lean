@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenceValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralSentenceValuesChecks` -/
+/-! # The numerical sentence pullback has exactly the closed named words -/
 
 @[expose] public section
 noncomputable section

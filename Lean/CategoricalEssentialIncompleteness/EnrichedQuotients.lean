@@ -11,11 +11,11 @@ public import CategoricalEssentialIncompleteness.BooleanPresentations
 /-!
 # Boolean quotient incompleteness from the enriched representation section
 
-The separator obstruction uses the domain equalizers and totality
-pullbacks. Only the sentence-object component of the subobject identification
-is used in this argument. `GlobalSubobjects` constructs the global predicate
-comparison along `J`; `RepresentedQuotients` applies it with ordinary
-restriction idempotents and total arrows.
+The separator obstruction uses the domain equalizers and totality pullbacks. Only the
+sentence-object component of the subobject identification is used in this argument.
+`GlobalSubobjects` constructs the global predicate comparison along `J`;
+`RepresentedQuotients` applies it with ordinary restriction idempotents and total
+morphisms.
 -/
 
 @[expose] public section

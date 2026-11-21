@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedTheoryTotal
 
-/-! # Actual total-split sentence theories and their source idempotent -/
+/-! # Total-split sentence theories and their source idempotent -/
 
 @[expose] public section
 

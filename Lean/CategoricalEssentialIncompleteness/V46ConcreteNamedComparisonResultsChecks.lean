@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResults
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonResultsChecks` -/
+/-! # Typed numerical result morphisms into the substitution state objects -/
 
 @[expose] public section
 noncomputable section

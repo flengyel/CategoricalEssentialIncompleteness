@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
 
-/-! # Constructor commutation of the actual uniform fold
+/-! # Constructor commutation of the uniform fold
 
-The input is an arbitrary actual raw family, including the external
-parameter at each recursive leaf. The equation concerns the constructed
-polynomial morphism and the constructed literal family constructor.
+The input is an arbitrary raw family, including the external parameter at each
+recursive leaf. The equation concerns the constructed polynomial morphism and the
+constructed literal family constructor.
 -/
 
 @[expose] public section

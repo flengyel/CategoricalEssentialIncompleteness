@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
 
-/-! # Literal named finite Hilbert derivations for a Sigma-one enumeration
+/-! # Named finite Hilbert derivations for a Sigma-one enumeration
 
-The proof constructors use the seven manuscript schemes, generalization
-and ordered modus ponens. Substitution is the existing named partial
-operation; its free-for condition remains independently defined.
+The proof constructors use the seven manuscript schemes, generalization and ordered
+modus ponens. Substitution is the named partial operation; its free-for condition
+remains independently defined.
 -/
 
 @[expose] public section

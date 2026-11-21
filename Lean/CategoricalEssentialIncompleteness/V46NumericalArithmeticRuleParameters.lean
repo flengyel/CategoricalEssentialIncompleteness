@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionDomains
 
-/-! # The actual arithmetic scheme-parameter product and success comparisons -/
+/-! # The arithmetic scheme-parameter product and success comparisons -/
 
 @[expose] public section
 noncomputable section
@@ -160,8 +160,8 @@ theorem instantiation_input : (S).instantiationInput ≫ formulaInputIso.hom =
     post_mapped_lift,instantiation_formula,instantiation_name,instantiation_term,
     parameterIso,pairedIso_lift,Category.assoc]
 
-/-- The quantifier-instantiation labels are compared by their actual
-admissibility pullback, retaining the name, formula and replacement. -/
+/-- The quantifier-instantiation labels are compared by their admissibility pullback,
+retaining the name, formula and replacement. -/
 def instantiationIso : (S).instantiationParameters ≅ (K).obj (S₀).instantiationParameters :=
   pullbackComparison (S₀).instantiationInput (S₀).admissibleInclusion
     (S).instantiationInput (S).admissibleInclusion instantiationBaseIso admissibleIso formulaInputIso

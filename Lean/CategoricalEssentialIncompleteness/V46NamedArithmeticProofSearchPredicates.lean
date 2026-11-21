@@ -34,7 +34,7 @@ namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch
 
 variable (T : ArithmeticTheory)
 
-/-- Inverse-image membership is expressed by the given actual graph. -/
+/-- Inverse-image membership is expressed by the given graph. -/
 def graphPullCarrier {C D : Carrier} (f : GraphMorphism T C D) (E : Carrier) : Carrier :=
   let G := f.graph
   .mkSigma “x. ∃ y, !G.val x y ∧ !E.val y”
@@ -67,8 +67,8 @@ theorem graphPullCarrier_idem {C D : Carrier} (f : GraphMorphism T C D) (E : Car
   · rintro ⟨⟨w,hf,hE⟩,rfl⟩
     exact ⟨rfl,w,w,hf,hE,rfl⟩
 
-/-- The actual source predicate idempotent is interpreted as the partial
-identity on its truth set at every element of every T-model. -/
+/-- The source predicate idempotent is interpreted as the partial identity on its truth
+set at every element of every T-model. -/
 theorem model_predicateIdem (C : Carrier) (M : Type)
     [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] :
     (SyntacticModel.modelRangeFunctor T M).mapIdem (predicateIdem T C) =

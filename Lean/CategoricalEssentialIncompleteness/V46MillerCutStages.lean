@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUnanimity
 public import CategoricalEssentialIncompleteness.OracleDomainNumbering
 
-/-! # Effective finite halting stages for the actual Miller diagonal
+/-! # Effective finite halting stages for the Miller diagonal
 
 These are finite lists of the SAME halting cylinders used by the verified
 oracle interpreter. Prefix length and ordinary evaluator fuel are independent
@@ -27,7 +27,7 @@ namespace CategoricalEssentialIncompleteness.V46.Miller.Cut
 abbrev Code := Nat.Partrec.Code
 abbrev CertificateInput := (ℕ × ℕ) × Word
 
-/-- A finite certificate of the literal diagonal computation. -/
+/-- A finite certificate of the diagonal computation. -/
 def DiagonalCertificate (a : CertificateInput) : Prop :=
   Unanimity.HaltsOn (a.1.1,a.1.1) a.1.2 a.2
 
@@ -135,8 +135,8 @@ theorem stageWords_sound (e m t : ℕ) (s : Word) (hs : s ∈ stageWords e m t) 
     Unanimity.HaltsOn (e,e) m s :=
   accepted_sound e m s t ((mem_boundedWords e m t t s).mp hs).2
 
-/-- Every actual finite halting cylinder appears at some finite stage,
-regardless of the magnitude of its encoded input. -/
+/-- Every finite halting cylinder appears at some finite stage, regardless of the
+magnitude of its encoded input. -/
 theorem stageWords_complete (e m : ℕ) (s : Word)
     (h : Unanimity.HaltsOn (e,e) m s) : ∃ t, s ∈ stageWords e m t := by
   obtain ⟨fuel,hfuel⟩ := accepted_complete e m s h
@@ -165,7 +165,7 @@ theorem cylinderUnion_isClosed (L : List Word) : IsClosed (cylinderUnion L) := b
   | nil => simpa only [cylinderUnion_nil] using isClosed_empty
   | cons s L ih => rw [cylinderUnion_cons]; exact (cylinder_isClosed s).union ih
 
-/-- The actual increasing finite halting set H_{e,m,t}. -/
+/-- The increasing finite halting set H_{e,m,t}. -/
 def haltingStage (e m t : ℕ) : Set Bits := cylinderUnion (stageWords e m t)
 
 theorem haltingStage_mono (e m : ℕ) {t u : ℕ} (h : t ≤ u) :

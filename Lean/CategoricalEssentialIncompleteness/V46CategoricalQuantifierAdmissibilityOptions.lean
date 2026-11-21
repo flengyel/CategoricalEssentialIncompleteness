@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitution
 public import CategoricalEssentialIncompleteness.ComplementedSubobjects
 
-/-! Success subobjects of the actual option operations and Boolean branches. -/
+/-! Success subobjects of the option operations and Boolean branches. -/
 
 @[expose] public section
 
@@ -53,7 +53,7 @@ end Two
 
 namespace OptionSyntax
 
-/-- The actual success subobject is the inverse image of the success injection. -/
+/-- The success subobject is the inverse image of the success injection. -/
 def success {X Y : D} (f : X ⟶ obj Y) : Subobject X :=
   (Subobject.pullback f).obj (Subobject.mk (coprod.inr : Y ⟶ obj Y))
 

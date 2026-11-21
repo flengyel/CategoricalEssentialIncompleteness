@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationChecks` -/
+/-! # Full finite-derivation comparison under PA numerical interpretation -/
 
 @[expose] public section
 noncomputable section

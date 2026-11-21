@@ -290,7 +290,7 @@ theorem sumCopair_comp {Z W : Over R}
   · rw [← Category.assoc,sumInl_copair,sumInl_copair]
   · rw [← Category.assoc,sumInr_copair,sumInr_copair]
 
-/-- The actual raw tagged object has the full universal property in Over R. -/
+/-- The raw tagged object has the full universal property in Over R. -/
 def sumIsColimit : IsColimit (BinaryCofan.mk (sumInl R X Y a b) (sumInr R X Y a b)) :=
   BinaryCofan.isColimitMk (fun s => sumCopair R X Y a b s.inl s.inr)
     (fun s => sumInl_copair R X Y a b s.inl s.inr)

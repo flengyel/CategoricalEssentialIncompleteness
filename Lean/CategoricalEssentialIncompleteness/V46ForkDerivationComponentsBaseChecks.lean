@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationComponentsBase
 
 
-/-! # Statement checks in `V46ForkDerivationComponentsBaseChecks` -/
+/-! # Component rule and slice-algebra comparison -/
 
 @[expose] public section
 noncomputable section

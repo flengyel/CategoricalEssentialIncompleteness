@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxSimulation
 
 
-/-! # Statement checks in `V46MillerSyntaxSimulationChecks` -/
+/-! # The uniform evaluator preserves the original parser skeleton -/
 
 @[expose] public section
 noncomputable section

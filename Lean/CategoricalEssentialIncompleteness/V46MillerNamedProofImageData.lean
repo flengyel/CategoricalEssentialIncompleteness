@@ -11,12 +11,11 @@ public import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
 public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutations
 
-/-! # Actual named points, arbitrary external axioms and constructed proofs
+/-! # Named points, arbitrary external axioms and constructed proofs
 
-Only the recursive signature is PA-described. The external axiom set is
-an arbitrary uniformly enumerable set; it is pulled back along the actual
-sentence inclusion. No code of a chosen sentence point is identified
-with the word of its formula.
+Only the recursive signature is PA-described. The external axiom set is an arbitrary
+uniformly enumerable set; it is pulled back along the sentence inclusion. No code of a
+chosen sentence point is identified with the word of its formula.
 -/
 
 @[expose] public section
@@ -87,8 +86,8 @@ theorem formulaPoint_value (φ : Fm) : (formulaPoint P σ π d φ).val=formulaCo
   have hv := ((NamedSyntaxComparison.sourcePairIso_formula_graph P (V) σ π d _ _).mp h).2
   exact hv.symm.trans (SyntacticNamedHilbert.formulaPoint_value σ π d φ)
 
-/-- The source sentence point is chosen only from the actual PA sentence
-pullback. Its formula is fixed by its monic inclusion. -/
+/-- The source sentence point is chosen only from the PA sentence pullback. Its formula is
+fixed by its monic inclusion. -/
 theorem sourceSentencePoint_exists (φ : Fm) (hc : φ.freeVariables=[]) :
     ∃ s : PredicateInterpretation.Obj ℕ (S₀).sentenceObject,
       (N).map (S₀).sentenceInclusion s=SyntacticNamedHilbert.formulaPoint σ π d φ := by

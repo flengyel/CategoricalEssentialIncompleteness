@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
 
 
-/-! # Statement checks in `V46MillerDyadicSeparationChecks` -/
+/-! # Finite dyadic certificates for separation of binary representations -/
 
 @[expose] public section
 noncomputable section

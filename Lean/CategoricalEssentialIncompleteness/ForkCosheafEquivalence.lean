@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.ForkCosheafExtensionMaps
 public import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
 public import Mathlib.CategoryTheory.Whiskering
 
-/-! # Restriction and pushout extension give an actual cosheaf equivalence -/
+/-! # Restriction and pushout extension give a cosheaf equivalence -/
 
 @[expose] public section
 
@@ -94,8 +94,8 @@ def restrictionExtensionIso : 𝟭 (WalkingSpan ⥤ Type) ≅
     all_goals simp [restrictExtensionIso,extensionFunctor,restrictionFunctor,
       extensionNat,extensionComponent,basisFunctor,restrict])
 
-/-- Proposition A.1: restriction to the three basis opens, with inverse given
-by the actual set pushout at the whole space. -/
+/-- Proposition B.1: restriction to the three basis opens, with inverse given by the set
+pushout at the whole space. -/
 def cosheafEquivalence : CoSh ≌ (WalkingSpan ⥤ Type) where
   functor := restrictionFunctor
   inverse := extensionFunctor

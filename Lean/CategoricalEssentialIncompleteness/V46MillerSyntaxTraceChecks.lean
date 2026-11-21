@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxTrace
 
 
-/-! # Statement checks in `V46MillerSyntaxTraceChecks` -/
+/-! # Constructor framing and concatenation for the uniform evaluator -/
 
 @[expose] public section
 noncomputable section

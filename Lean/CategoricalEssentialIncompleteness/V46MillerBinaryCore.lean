@@ -88,7 +88,7 @@ theorem cylinder_isClosed (s : Word) : IsClosed (cylinder s) := by
 theorem cylinder_isCompact (s : Word) : IsCompact (cylinder s) :=
   (cylinder_isClosed s).isCompact
 
-/-- The printed binary expansion, with the fixed recursive pairing `Nat.pair`. -/
+/-- The binary expansion, with the fixed recursive pairing `Nat.pair`. -/
 def rho (p : Bits) : Point := fun n =>
   ⟨Real.ofDigits (fun j => p (Nat.pair n j)),
     Real.ofDigits_nonneg _, Real.ofDigits_le_one _⟩

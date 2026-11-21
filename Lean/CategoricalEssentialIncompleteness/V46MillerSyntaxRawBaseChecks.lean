@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawBase
 
 
-/-! # Statement checks in `V46MillerSyntaxRawBaseChecks` -/
+/-! # Literal polynomial carriers and their chosen categorical values -/
 
 @[expose] public section
 noncomputable section

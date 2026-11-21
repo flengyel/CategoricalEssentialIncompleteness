@@ -10,10 +10,9 @@ public import Mathlib.Algebra.Order.Group.MinMax
 
 /-! # Ordinary numerical arithmetic on nonnegative dyadic fractions
 
-A pair (a,k) denotes a/2^k. No computability instance for Rat or Real is
-assumed. All operations below are actual primitive-recursive functions on
-pairs of natural numbers; their rational-output semantics uses the fixed
-ordinary enumeration from Miller.Rationals.
+A pair (a,k) denotes a/2^k. No computability instance for Rat or Real is assumed. All
+operations below are primitive-recursive functions on pairs of natural numbers; their
+rational-output semantics uses the fixed ordinary enumeration from Miller.Rationals.
 -/
 
 @[expose] public section

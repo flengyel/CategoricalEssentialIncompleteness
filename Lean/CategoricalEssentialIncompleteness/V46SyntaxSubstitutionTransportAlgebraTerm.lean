@@ -9,9 +9,11 @@ public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportP
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFunction
 
-/-! The actual term half of the substitution algebra comparison. The
-variable and function equations are derived from their proved base root
-comparisons, then combined by the actual source coproduct. -/
+/-!
+The term half of the substitution algebra comparison. The variable and function
+equations are derived from their proved base root comparisons, then combined by the
+source coproduct.
+-/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationBasic
 
 
-/-! # Statement checks in `V46ArithmeticNamedPresentationBasicChecks` -/
+/-! # Arithmetic named syntax presented by source NNF formulas -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecomposition
 
 /-! # Decomposition with arbitrary uniform coefficient guards
 
-Erasing guards is used only for the proved ordinary parser decomposition.
-Every actual coefficient guard is recovered from the root record, and all
-child guards are inherited from their literal subwords. The carrier keeps
-exactly the original numerical word coordinate.
+Erasing guards is used only for the proved ordinary parser decomposition. Every
+coefficient guard is recovered from the root record, and all child guards are
+inherited from their subwords. The carrier keeps exactly the original numerical word
+coordinate.
 -/
 
 @[expose] public section
@@ -33,8 +33,8 @@ theorem guard_constructor_split (p q Q : SyntaxPolynomial (Total.TotalCategory P
   simp only [constructor,wordGuard,natToList_concat,List.forall_mem_append,
     List.mem_singleton,forall_eq,nat_pair_eq]
 
-/-- Actual guards and structural parser membership reconstruct the full
-polynomial input, including all nonrecursive coefficient predicates. -/
+/-- Guards and structural parser membership reconstruct the full polynomial input,
+including all nonrecursive coefficient predicates. -/
 theorem rawInput_of_erased (p q Q : SyntaxPolynomial (Total.TotalCategory P)) {u : ℕ}
     (hu : (SyntacticSyntax.rawCarrier (Postfix.carrier false (erased p) (erased q))
       (Postfix.carrier true (erased p) (erased q)) (erased Q)).val.Evalb (M := ℕ) ![u])

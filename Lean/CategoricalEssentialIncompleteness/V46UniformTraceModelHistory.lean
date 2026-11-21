@@ -9,9 +9,9 @@ public import CategoricalEssentialIncompleteness.V46UniformTraceModelSnoc
 
 /-! # History-vector prefix stability with arbitrary internal program indices
 
-This proof reads the actual production history as the canonical arithmetic
-vector that it is. The lookup index is a model element throughout. It never
-replaces an arbitrary internal program index by a standard numeral.
+This proof reads the production history as the canonical arithmetic vector that it is.
+The lookup index is a model element throughout. It never replaces an arbitrary
+internal program index by a standard numeral.
 -/
 
 @[expose] public section
@@ -65,8 +65,8 @@ instance history_definable' (Γ m) : Γ-[m + 1]-Function₁ (history : M → M) 
     (length_value (Code.proj (0 : Fin 1)) (history n) ![history n]
       ((eval_proj_iff _ _ _).mpr rfl))
 
-/-- The actual history step appends one actual row. No interpretation
-of that row or computation-certificate persistence is needed here. -/
+/-- The history step appends one row. No interpretation of that row or
+computation-certificate persistence is needed here. -/
 theorem history_step (n : M) : ∃ row : M,
     history (n + 1) = concat (history n) row := by
   obtain ⟨prev, hprev, hstep⟩ := eval_codePrec_succ (codeListNil (n := 0))
@@ -183,8 +183,8 @@ theorem stageValue_eq_lookup (k q input : M) :
       ((eval_proj_iff _ _ _).mpr rfl) ((eval_proj_iff _ _ _).mpr rfl)
       ((eval_proj_iff _ _ _).mpr rfl))
 
-/-- The missing earlier-row bridge is uniform in `q : M`. It reads an
-actual history at an arbitrary later internal length. -/
+/-- The missing earlier-row bridge is uniform in `q : M`. It reads a history at an
+arbitrary later internal length. -/
 theorem lookup_history_eq (N k q input : M) (hrow : ⟪k, q⟫ < N) :
     lookup (history N) k q input = stageValue k q input := by
   rw [stageValue_eq_lookup]

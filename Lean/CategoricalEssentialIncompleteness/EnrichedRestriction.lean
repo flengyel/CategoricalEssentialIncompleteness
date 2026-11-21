@@ -11,11 +11,11 @@ public import PCats.Restriction
 /-!
 # Restriction hom-objects and their finite-limit subobjects
 
-The restriction equations are equations at every generalized element. They
-induce an instance of the existing `RestrictionCategory` API at each parameter.
-The domain object is the fixed-point equalizer of restriction; the total-arrow
-object is its pullback along the identity. Their generalized points are proved
-to be exactly the restriction idempotents and total arrows, respectively.
+The restriction equations are equations at every generalized element. They induce an
+instance of the existing `RestrictionCategory` API at each parameter. The domain
+object is the fixed-point equalizer of restriction; the total-morphism object is its
+pullback along the identity. Their generalized points are proved to be exactly the
+restriction idempotents and total morphisms, respectively.
 -/
 
 @[expose] public section
@@ -51,7 +51,7 @@ namespace EnrichedRestriction
 variable {V : Type u} [Category.{v} V] [HasFiniteLimits V] {O : Type w}
 variable {H : InternalHom V O} (R : EnrichedRestriction H)
 
-/-- The objects of the category whose arrows have parameter `T`. -/
+/-- The objects of the category whose morphisms have parameter `T`. -/
 structure Parameterized (R : EnrichedRestriction H) (T : V) where
   obj : O
 
@@ -150,7 +150,7 @@ def totalLift {T : V} {X Y : O} (f : T ⟶ H.hom X Y)
     (f : T ⟶ H.hom X Y) (hf : R.restrict f = H.identity X) :
     R.totalLift f hf ≫ R.totalι X Y = f := by simp [totalLift, totalι]
 
-/-- Generalized points of the totality pullback are precisely total arrows. -/
+/-- Generalized points of the totality pullback are precisely total morphisms. -/
 def totalPointsEquiv (T : V) (X Y : O) :
     (T ⟶ R.totalObject X Y) ≃ {f : T ⟶ H.hom X Y // R.restrict f = H.identity X} where
   toFun f := ⟨f ≫ R.totalι X Y, R.total_condition f⟩

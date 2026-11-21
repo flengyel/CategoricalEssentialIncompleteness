@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSubstitutionSemantics
 
 
-/-! # Statement checks in `V46NamedPlainSubstitutionSemanticsChecks` -/
+/-! # Semantic substitution on the constructed admissibility pullback -/
 
 @[expose] public section
 noncomputable section

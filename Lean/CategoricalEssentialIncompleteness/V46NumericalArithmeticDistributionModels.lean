@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembe
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertOperations
 
-/-! # The actual distribution parameter fiber in every arithmetic model -/
+/-! # The distribution parameter fiber in every arithmetic model -/
 
 @[expose] public section
 noncomputable section

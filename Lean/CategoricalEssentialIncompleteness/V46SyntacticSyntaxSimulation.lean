@@ -77,8 +77,8 @@ theorem stepOutcome_sorts (formula : Bool) (p s parserStack valueStack new : M)
     · have ht : sorts tail = sorts rest := by simpa [hp, hf] using he
       cases formula <;> simp_all [step]
 
-/-- Every actual value-step trace simulates the total numerical parser
-on structural sorts, including the absorbing error case. -/
+/-- Every value-step trace simulates the total numerical parser on structural sorts,
+including the absorbing error case. -/
 theorem valueStep_sorts (p record parsed old new : M)
     (hs : statusSort parsed = statusSort old)
     (h : A.valueStepGraph.val.Evalb ![p, record, old, new]) :
@@ -96,8 +96,8 @@ theorem valueStep_sorts (p record parsed old new : M)
     · have ht : sorts parserStack = sorts stack := by simpa using hs
       exact A.stepOutcome_sorts true p s parserStack stack new ht ho
 
-/-- Pi-one induction compares the complete displayed finite record to
-the actual primitive-recursion parser at every runPrefix position. -/
+/-- Pi-one induction compares the complete displayed finite record to the
+primitive-recursion parser at every runPrefix position. -/
 theorem valueRecord_sorts {p word n states : M} (h : A.ValueRecord p word n states) :
     statusSort (runPrefix a b word n 1) = statusSort (nth states n) := by
   have hh : ∀ i ≤ n, statusSort (runPrefix a b word i 1) = statusSort (nth states i) := by

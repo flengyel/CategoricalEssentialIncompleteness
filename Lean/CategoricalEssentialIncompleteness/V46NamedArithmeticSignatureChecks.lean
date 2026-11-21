@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
 
 
-/-! # Statement checks in `V46NamedArithmeticSignatureChecks` -/
+/-! # The fixed arithmetic signature, with variable names and ordered children -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

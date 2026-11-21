@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitut
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralLogicalConstructorValues
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralNegation
 
-/-! # The actual arithmetic logical constructor squares -/
+/-! # The arithmetic logical constructor squares -/
 
 @[expose] public section
 noncomputable section
@@ -61,7 +61,7 @@ private abbrev term_value_after {A : NumericalTuples.Object}
     termIso.hom (NumericalNamed.literalTermPresentationIso NumericalNamed.variableObject functions relations bound).hom
     termIso_value p q _ rfl
 
-/-- Ordered implication arguments are preserved by the actual product chart. -/
+/-- Ordered implication arguments are preserved by the product chart. -/
 theorem implication_square : (S).implicationConstructor ≫ formulaIso.hom =
     (pairedIso formulaIso formulaIso).hom ≫ numericalInterpretation.map (S₀).implicationConstructor := by
   apply NumericalTuples.Map.ext

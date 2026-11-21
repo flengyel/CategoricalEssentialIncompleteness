@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
 public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingReal
 
-/-! # One ordinary index computing the actual separating real on every oracle
+/-! # One ordinary index computing the separating real on every oracle
 
 The numerical algorithm sums the first k+6 dyadic distance approximations
 in each parity. It reads one finite prefix long enough for every term's
@@ -245,9 +245,9 @@ theorem encodedAlgorithm_computable : Computable encodedAlgorithm :=
 
 end SeparatingProgram
 
-/-- A single actual program is selected before every representation and
-both numerical parameters. The theorem compares rational VALUES with the
-same separating real; it does not equate outputs across representations. -/
+/-- A single program is selected before every representation and both numerical
+parameters. The theorem compares rational VALUES with the same separating real; it
+does not equate outputs across representations. -/
 theorem separatingReal_program :
     ∃ d : ℕ,∀ p : Bits,∀ e k : ℕ,∃ i : ℕ,
       i∈OracleProgram.numberedEval d p (Nat.pair e k) ∧

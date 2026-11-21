@@ -26,8 +26,8 @@ variable {C : Type u₁} {D : Type u₂} [Category.{v₁} C] [Category.{v₂} D]
 variable [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D]
 variable (E : C ≌ D) {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
 
-/-- The slice equivalence compares constant families naturally in the
-coefficient or recursive carrier, using the actual product comparison. -/
+/-- The slice equivalence compares constant families naturally in the coefficient or
+recursive carrier, using the product comparison. -/
 def familyNaturalIso :
     constantFamilyFunctor P ⋙ (sliceEquivalence E b).functor ≅
       E.functor ⋙ constantFamilyFunctor Q := by
@@ -58,8 +58,8 @@ theorem family_unit :
   · exact terminalIsTerminal.hom_ext _ _
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] in
-/-- The product square follows from naturality of the universal product
-comparison. In particular, it compares the actual parameter projections. -/
+/-- The product square follows from naturality of the universal product comparison. In
+particular, it compares the parameter projections. -/
 theorem family_product (X Y : C) :
     prodComparison (sliceEquivalence E b).functor
         (constantFamily P X) (constantFamily P Y) ≫

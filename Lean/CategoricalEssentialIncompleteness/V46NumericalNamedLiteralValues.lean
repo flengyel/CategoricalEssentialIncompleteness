@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperati
 public import CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainOccurrences
 
-/-! # Literal numerical free-variable diagrams and primitive traversal values -/
+/-! # Numerical free-variable diagrams and primitive traversal values -/
 
 @[expose] public section
 noncomputable section

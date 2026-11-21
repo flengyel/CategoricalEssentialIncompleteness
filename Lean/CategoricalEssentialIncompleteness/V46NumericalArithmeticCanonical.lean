@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
 public import CategoricalEssentialIncompleteness.V46PredicateInterpretationDomain
 
-/-! # The numerical presentation of the actual canonical arithmetic interpretation -/
+/-! # The numerical presentation of the canonical arithmetic interpretation -/
 
 @[expose] public section
 noncomputable section

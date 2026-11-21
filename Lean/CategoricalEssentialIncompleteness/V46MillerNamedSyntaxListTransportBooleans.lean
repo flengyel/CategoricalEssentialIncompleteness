@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
 
-/-! Boolean operations under the actual finite-geometry preserving functor. -/
+/-! Boolean operations under the finite-geometry preserving functor. -/
 
 @[expose] public section
 noncomputable section
@@ -45,8 +45,8 @@ theorem map_constant (X : C) (b : Bool) :
   exact terminalIsTerminal.hom_ext _ _
 
 omit [Regular D] [FinitaryExtensive D] [PreservesFiniteLimits F] in
-/-- Images of the two actual source fibers remain jointly epimorphic.
-No identity of chosen source and target fiber codes is used. -/
+/-- Images of the two source fibers remain jointly epimorphic. No identity of chosen
+source and target fiber codes is used. -/
 theorem map_hom_ext {X : C} (χ : X ⟶ Two C) {Y : D}
     {f g : F.obj X ⟶ Y}
     (h₀ : F.map (Two.fiberι χ false) ≫ f = F.map (Two.fiberι χ false) ≫ g)
@@ -75,8 +75,8 @@ theorem map_branch {X Y : C} (χ : X ⟶ Two C) (f g : X ⟶ Y) :
     cases b <;> rfl
   exact map_hom_ext F χ (h false) (h true)
 
-/-- Every unary Boolean truth table commutes with the actual Boolean
-comparison, including complementation. -/
+/-- Every unary Boolean truth table commutes with the Boolean comparison, including
+complementation. -/
 theorem map_boolean_unary {X : C} (op : Bool → Bool) (f : X ⟶ Two C) :
     F.map (Two.unary op f) ≫ (booleanIso F).hom =
       Two.unary op (F.map f ≫ (booleanIso F).hom) := by
@@ -84,8 +84,8 @@ theorem map_boolean_unary {X : C} (op : Bool → Bool) (f : X ⟶ Two C) :
     map_constant F X (op false),map_constant F X (op true)]
   exact (SyntaxOperationsTransport.boolean_unary_as_branch op (F.map f ≫ (booleanIso F).hom)).symm
 
-/-- Every binary Boolean truth table commutes with the actual Boolean
-comparison; no chosen codes for either truth point are used. -/
+/-- Every binary Boolean truth table commutes with the Boolean comparison; no chosen codes
+for either truth point are used. -/
 theorem map_boolean_binary {X : C} (op : Bool → Bool → Bool) (f g : X ⟶ Two C) :
     F.map (Two.binary op f g) ≫ (booleanIso F).hom =
       Two.binary op (F.map f ≫ (booleanIso F).hom)
@@ -96,8 +96,8 @@ theorem map_boolean_binary {X : C} (op : Bool → Bool → Bool) (f g : X ⟶ Tw
     (F.map g ≫ (booleanIso F).hom)).symm
 
 
-/-- The concrete target equality is the already constructed image of the
-actual diagonal square; no equality-test comparison is a hypothesis. -/
+/-- The concrete target equality is the already constructed image of the diagonal square;
+no equality-test comparison is a hypothesis. -/
 theorem map_decidable_test {V : C} (S : DecidableVariables V) :
     F.map S.test ≫ (Derivation.booleanIso F).hom=
       prodComparison F V V ≫ (Derivation.mappedEquality F S).test := by

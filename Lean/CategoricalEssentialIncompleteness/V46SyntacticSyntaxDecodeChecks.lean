@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecode
 
-/-! # Signature checks for actual syntax decode -/
+/-! # Signature checks for syntax decode -/
 
 @[expose] public section
 

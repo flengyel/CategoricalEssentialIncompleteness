@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
 public import Foundation.FirstOrder.Arithmetic.Basic.Model
 public import Mathlib.Tactic.FinCases
 
-/-! # The literal named arithmetic signature and arithmetic semantics
+/-! # The named arithmetic signature and arithmetic semantics
 
 The arithmetic structure interpreting a formula is independent of the
 standard arithmetic structure used to interpret its symbol predicates.
@@ -61,7 +61,7 @@ theorem translateTerm_freeVariables {n : ℕ} (names : Fin n → ℕ)
 
 variable {K : Type w} [ORingStructure K]
 
-/-- Interpret the actual numerical function-symbol predicates in K. -/
+/-- Interpret the numerical function-symbol predicates in K. -/
 def functions : (n : Fin (bound + 1)) → FunctionSymbols n.val → (Fin n.val → K) → K
   | ⟨0,_⟩, symbol, _ => if symbol.val = 0 then 0 else 1
   | ⟨1,_⟩, symbol, _ => False.elim

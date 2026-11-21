@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceHalving
 
-/-! # Actual program-index decoding on arbitrary internal indices
+/-! # Program-index decoding on arbitrary internal indices
 
 Division and remainder below are the model's arithmetic operations. Their
 relationship to the literal Code decoder follows from internal halving,

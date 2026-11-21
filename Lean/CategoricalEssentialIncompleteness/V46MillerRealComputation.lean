@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRationalCodes
 public import CategoricalEssentialIncompleteness.V46MillerOracleProgramEffective
 
-/-! # Real computation and the printed Miller property
+/-! # Real computation and the Miller property
 
 An oracle computes a real by producing rational approximations. Rational
 indices may differ across representations. Ordinary oracle specialization
@@ -26,7 +26,7 @@ def ComputesReal (d : ℕ) (p : Bits) (r : ℝ) : Prop :=
   ∀ k : ℕ,∃ i : ℕ,i ∈ numberedEval d p k ∧
     |(Rationals.q i : ℝ)-r| < ((2 : ℝ)^k)⁻¹
 
-/-- The printed property for the fixed acceptable machine/rational enumerations. -/
+/-- The Miller property for the fixed acceptable machine/rational enumerations. -/
 def IsMiller (a : Point) : Prop :=
   ∀ d : ℕ,∀ r : Set.Icc (0 : ℝ) 1,
     (∀ p ∈ representations a,ComputesReal d p (r : ℝ)) → a d=r
@@ -41,9 +41,9 @@ theorem specializes_computesReal (d x : ℕ) (p : Bits) (r : ℝ)
 theorem specializedIndex_computable (d : ℕ) : Computable (specializationIndex d) :=
   specializationIndex_computable.comp (Computable.const d) Computable.id
 
-/-- Apply the Miller property after the actual approximation program is proved.
-The approximation premise is discharged by the concrete geometry/series code
-in the cut-reduction application, not added to its printed hypotheses. -/
+/-- Apply the Miller property after the approximation program is proved. The approximation
+premise is discharged by the concrete geometry/series code in the cut-reduction
+application, not added to its hypotheses. -/
 theorem miller_coordinate_of_approximation
     (a : Point) (ha : IsMiller a) (d : ℕ)
     (R : ℕ → Point → Set.Icc (0 : ℝ) 1)

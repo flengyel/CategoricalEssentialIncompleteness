@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.ForkNumericalProofs
 public import Mathlib.CategoryTheory.Endofunctor.Algebra
 public import Mathlib.Tactic.FinCases
 
-/-! # The actual six-tag fork proof carrier as an inference algebra
+/-! # The six-tag fork proof carrier as an inference algebra
 
 The coefficient predicates occur only in the positive and negative leaf
 objects. The binary input is the original ordered-premise pullback. The
@@ -55,7 +55,7 @@ def formulaAt (x : Point formulaObject) : Formula := Formula.decode x.val
   apply Subtype.ext
   exact Formula.encode_decode x.val
 
-/-- A fixed scalar algorithm on actual unary inputs. -/
+/-- A fixed scalar algorithm on unary inputs. -/
 def scalarMap {C D : Set ℕ} (hC : REPred (· ∈ C)) (hD : REPred (· ∈ D))
     (f : ℕ → ℕ) (hf : Computable f) (hs : ∀ n ∈ C,f n ∈ D) :
     scalarObject C hC ⟶ scalarObject D hD where
@@ -265,7 +265,7 @@ def rules : RulePresentation formulaObject 2 where
   conclusion := Fin.cases (axiomProof A B hA hB ≫ conclusion A B hA hB)
     (Fin.cases (initial.to _) (Fin.cases prod.snd (fun i => Fin.elim0 i)))
 
-/-! Point constructors are induced by the actual categorical limits. -/
+/-! Point constructors are induced by the categorical limits. -/
 
 theorem point_comp {X Y : Object} (x : Point X) (f : X ⟶ Y) :
     NumericalUnderlying.point x ≫ f = NumericalUnderlying.point (f.toFun x) :=
@@ -682,9 +682,11 @@ theorem algebra_mp {t u : ProofTree} {p q : Formula}
         (proofPoint_conclusion A B hA hB ht) (proofPoint_conclusion A B hA hB hu))).trans
       (proofAt_point A B hA hB u ⟨_,hu⟩)
 
-/-! Every inference input has exactly one of the printed root shapes.
-The following is a statement about points of the original pullbacks; it
-does not replace their carriers by a different syntax presentation. -/
+/-!
+Every inference input has exactly one of the root shapes. The following is a statement
+about points of the original pullbacks; it does not replace their carriers by a
+different syntax presentation.
+-/
 
 theorem sigmaPoint_cases {I : Type} [Finite I] (C : I → Object)
     (x : Point (∐ C)) : ∃ (i : I) (y : Point (C i)),(Sigma.ι C i).toFun y = x := by
@@ -933,8 +935,8 @@ theorem codeToOld_node (n : Node A B (NumericalDerivation.codeAlgebra (rules A B
   exact h.trans (congrArg (algebra A B hA hB).str.left.toFun
     (nodeInput_map A B hA hB (codeToOld A B hA hB).f n))
 
-/-- Lambek decomposition uses the actual structure morphism of the
-constructed numerical initial algebra, and the actual inference inputs. -/
+/-- Lambek decomposition uses the structure morphism of the constructed numerical initial
+algebra, and the inference inputs. -/
 theorem code_root (x : Point (NumericalDerivation.codeObject (rules A B hA hB))) :
     ∃ n : Node A B (NumericalDerivation.codeAlgebra (rules A B hA hB)).a,
       (NumericalDerivation.codeAlgebra (rules A B hA hB)).str.left.toFun
@@ -1002,8 +1004,8 @@ theorem codeToOld_fiber_conclusion {t : ProofTree} {p : Formula}
   rw [codeToOld_conclusion_value,hx]
   exact ForkSyntax.conclusionCode_of_concludes ht
 
-/-- Existence is induction on the given finite valid proof. The sole
-recursive calls are its two actual children in the MP case. -/
+/-- Existence is induction on the given finite valid proof. The sole recursive calls are
+its two children in the MP case. -/
 theorem codeToOld_surjective_tree {t : ProofTree} {p : Formula} (ht : Concludes A B t p) :
     ∃ x : Point (constructed A B hA hB).a.left,
       ((codeToOld A B hA hB).f.left.toFun x).val = t.encode := by
@@ -1184,8 +1186,8 @@ theorem codeToOld_bijective :
   · exact (ProofTree.encode_decode _).symm
   · exact (congrArg Subtype.val h).symm.trans (ProofTree.encode_decode _).symm
 
-/-- Bijectivity supplies an actual computable inverse in the numerical
-category, by its proved conservative actual-carrier functor. -/
+/-- Bijectivity supplies a computable inverse in the numerical category, by its proved
+conservative carrier functor. -/
 instance codeToOld_underlying_isIso : IsIso (codeToOld A B hA hB).f.left := by
   have : IsIso (NumericalUnderlying.functor.map (codeToOld A B hA hB).f.left) :=
     (CategoryTheory.isIso_iff_bijective _).mpr (codeToOld_bijective A B hA hB)
@@ -1196,8 +1198,8 @@ def codeToOldIso : NumericalDerivation.codeAlgebra (rules A B hA hB) ≅ algebra
     (Over.isoMk (asIso (codeToOld A B hA hB).f.left) (Over.w (codeToOld A B hA hB).f))
     (codeToOld A B hA hB).h
 
-/-- The comparison is an isomorphism of the printed inference algebras,
-including the original conclusion and every constructor. -/
+/-- The comparison is an isomorphism of the inference algebras, including the original
+conclusion and every constructor. -/
 def algebraIso : algebra A B hA hB ≅ NumericalDerivation.codeAlgebra (rules A B hA hB) :=
   (codeToOldIso A B hA hB).symm
 

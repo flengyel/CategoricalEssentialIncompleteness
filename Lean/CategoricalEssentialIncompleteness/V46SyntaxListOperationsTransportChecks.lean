@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
 
 
-/-! # Statement checks in `V46SyntaxListOperationsTransportChecks` -/
+/-! # List folds and concatenation under equivalence, parameter, and coefficient comparisons -/
 
 @[expose] public section
 noncomputable section

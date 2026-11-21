@@ -6,11 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkCategoricalSyntax
 
-/-! # Independent checks of the full fork syntax and substitution interface
-
-These statements cover the syntax clauses of Proposition 10.7. Initial
-finite derivation algebras remain a separate obligation.
--/
+/-! # Syntax and substitution for the fork category -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

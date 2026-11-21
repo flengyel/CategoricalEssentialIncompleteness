@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryInclusion
 
 
-/-! # Statement checks in `V46MillerCategoryInclusionChecks` -/
+/-! # The faithful range inclusion into partial functions -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.CoprodStruct

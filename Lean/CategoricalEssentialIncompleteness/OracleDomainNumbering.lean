@@ -46,8 +46,8 @@ theorem predicate_code {α : Type} [Primcodable α] {Q : α → Prop} (hQ : REPr
   change ((Part.assert (Q x) (fun _ => Part.some ())).map encode).Dom ↔ Q x
   simp [Part.assert]
 
-/-- Every finite-query relative semidecision predicate has an index in the
-constructed uniform enumeration, with equality of actual domains. -/
+/-- Every finite-query relative semidecision predicate has an index in the constructed
+uniform enumeration, with equality of domains. -/
 theorem oracleDomain_surjective (S : Set ℕ) {p : ℕ → Prop} (hp : FiniteOracleRE S p) :
     ∃ a,∀ x,oracleDomain S a x ↔ p x := by
   obtain ⟨Q,hQ,_,hp⟩ := hp

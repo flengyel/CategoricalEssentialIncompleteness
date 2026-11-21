@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationTuples
 
-/-! Positive rule-input guards and their actual root-conclusion graph. -/
+/-! Positive rule-input guards and their root-conclusion graph. -/
 
 @[expose] public section
 noncomputable section
@@ -21,8 +21,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticDerivation
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- The ordered premise graph is obtained from the actual categorical
-map and the constructed encoder of its chosen finite-power codomain. -/
+/-- The ordered premise graph is obtained from the categorical morphism and the
+constructed encoder of its chosen finite-power codomain. -/
 def encodedPremises {F : PredicateCategory T} {N : ℕ}
     (R : RulePresentation F N) (i : Fin (N + 1)) :
     GraphMorphism T (R.instances i) (tupleCarrier F i.val) :=
@@ -93,8 +93,8 @@ theorem carrier_components (u : M) (hu : (carrier p q).val.Evalb ![u]) :
       (And.intro (q.support_model M d z hq).1 ⟨z, hp, hq⟩)
 
 omit [𝗣𝗔 ⪯ T] in
-/-- On the actual positive matching domain, both premise computations
-have the same value, with no comparison of Sigma-one nonmembership. -/
+/-- On the positive matching domain, both premise computations have the same value, with
+no comparison of Sigma-one nonmembership. -/
 theorem match_iff (u z : M) (hu : (carrier p q).val.Evalb ![u]) :
     p.graph.val.Evalb ![π₁ u, z] ↔ q.graph.val.Evalb ![π₂ u, z] := by
   obtain ⟨hA, hB, w, hp, hq⟩ := carrier_components p q u hu
@@ -146,7 +146,7 @@ def children : GraphMorphism T (carrier p q) B where
     exact ⟨π₂ u, (childrenGraph_eval p q u _).mpr ⟨hu, rfl⟩,
       fun d hd => ((childrenGraph_eval p q u d).mp hd).2⟩
 
-/-- The two typed projections give the actual commutative matching square. -/
+/-- The two typed projections give the commutative matching square. -/
 theorem square :
     representedArrow T (label p q) ≫ representedArrow T p =
       representedArrow T (children p q) ≫ representedArrow T q := by
@@ -202,8 +202,8 @@ def ruleInputChildren (i : Fin (N + 1)) :
     GraphMorphism T (ruleInputCarrier R q i) (tupleCarrier Q i.val) :=
   RuleInput.children (encodedPremises T R i) (tupleMorphism q i.val)
 
-/-- The actual conclusion is q_n(r), independently of the individual
-child conclusion indices used to certify the premise match. -/
+/-- The conclusion is q_n(r), independently of the individual child conclusion indices
+used to certify the premise match. -/
 def ruleInputConclusion (i : Fin (N + 1)) :
     GraphMorphism T (ruleInputCarrier R q i) F :=
   (ruleInputLabel R q i).composition (encodedConclusion T R i)

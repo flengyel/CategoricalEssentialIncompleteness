@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionRank
 
 
-/-! # Statement checks in `V46DerivationStandardInductionRankChecks` -/
+/-! # The original typed rule constructors and their tree-word charts -/
 
 @[expose] public section
 noncomputable section

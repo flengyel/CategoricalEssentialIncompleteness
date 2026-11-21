@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParam
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGraphs
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionAlgorithmTyped
 
-/-! # Actual parameter-slice arrows for the original and FV payload fields -/
+/-! # Parameter-slice morphisms for the original and FV payload fields -/
 
 @[expose] public section
 
@@ -49,8 +49,8 @@ def value : PayloadProjection → M → M
     k.graph.val.Evalb ![out,payload] ↔ out = k.value payload := by
   cases k <;> simp [graph,value]
 
-/-- This uses the actually proved PA loop invariant of the algorithm.
-The variable parameter may lie in any chosen predicate U. -/
+/-- The PA loop invariant puts the output in the required carrier for any predicate on the
+variable parameter. -/
 theorem value_carrier (V : Carrier) (σ π : ℕ → Carrier) (d : ℕ)
     (k : PayloadProjection) (formula : Bool) (x replacement word : M)
     (ht : (syntaxCarrier V σ π d false).val.Evalb ![replacement])
@@ -67,8 +67,8 @@ theorem value_carrier (V : Carrier) (σ π : ℕ → Carrier) (d : ℕ)
 end Models
 end PayloadProjection
 
-/-- Input is the literal chart ((x,replacement),word); the source
-predicate for x is independent of the language's variable predicate. -/
+/-- Input is the chart ((x,replacement),word); the source predicate for x is independent
+of the language's variable predicate. -/
 def payloadInputCarrier (U V : Carrier) (σ π : ℕ → Carrier) (d : ℕ) (formula : Bool) : Carrier :=
   productCarrier (productCarrier U (syntaxCarrier V σ π d false)) (syntaxCarrier V σ π d formula)
 
@@ -154,7 +154,7 @@ def payloadProjectionArrow (k : PayloadProjection) (formula : Bool) :
   parameterInput T U (syntaxCarrier V σ π d false) (syntaxCarrier V σ π d formula) ≫
     representedArrow T (payloadProjectionMorphism T U V σ π d k formula)
 
-/-- The parameter coordinate is retained by the actual product lift. -/
+/-- The parameter coordinate is retained by the product lift. -/
 def payloadProjectionFamily (k : PayloadProjection) (formula : Bool) :
     constantFamily (U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T))
         (syntaxCarrier V σ π d formula : PredicateCategory T) ⟶
@@ -195,8 +195,8 @@ theorem payloadProjectionArrow_value (k : PayloadProjection) (formula : Bool)
     parameterInput_value T M U (syntaxCarrier V σ π d false) (syntaxCarrier V σ π d formula)]
   simp only [ConcreteNamedSubstitution.codedSubstitutionPayload,pi₁_pair,pi₂_pair]
 
-/-- The leaf equation required by fixed-fiber polynomial naturality:
-all numeric dependence on the parameter is read from its actual point. -/
+/-- The leaf equation required by fixed-fiber polynomial naturality: all numeric
+dependence on the parameter is read from its point. -/
 theorem payloadProjectionFamily_value (k : PayloadProjection) (formula : Bool)
     (p : Obj T M (U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T)))
     (z : Obj T M ((U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T)) ⨯

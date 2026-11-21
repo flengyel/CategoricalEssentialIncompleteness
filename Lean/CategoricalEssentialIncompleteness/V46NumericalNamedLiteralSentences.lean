@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations
 
-/-! # The actual sentence pullback under the numerical constructor comparison -/
+/-! # The sentence pullback under the numerical constructor comparison -/
 
 @[expose] public section
 noncomputable section

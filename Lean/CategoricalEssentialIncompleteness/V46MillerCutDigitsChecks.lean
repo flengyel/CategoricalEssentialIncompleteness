@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDigits
 
 
-/-! # Statement checks in `V46MillerCutDigitsChecks` -/
+/-! # The first-digit separator of the two coordinate cuts -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.CutDigits.Checks

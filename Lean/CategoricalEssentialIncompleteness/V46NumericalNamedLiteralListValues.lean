@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralValues
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
 
-/-! # Literal numerical list constructors have the finite-word values -/
+/-! # Numerical list constructors have the finite-word values -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveOperations
 
 
-/-! # Statement checks in `V46UniformTracePrimitiveOperationsChecks` -/
+/-! # Constructing standard primitive values for the arithmetic codes -/
 
 @[expose] public section
 open Nat Nat.ArithPart₁ CategoricalRiceShapiro.ArithmeticCode

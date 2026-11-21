@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerRationalCodes
 public import CategoricalEssentialIncompleteness.V46MillerUniformFinite
 
 
-/-! # Definitions and theorems in `V46MillerStrictRationalCuts` -/
+/-! # Strict lower and upper rational cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

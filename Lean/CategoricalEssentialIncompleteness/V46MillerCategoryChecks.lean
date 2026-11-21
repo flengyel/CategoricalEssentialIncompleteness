@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategory
 
 
-/-! # Statement checks in `V46MillerCategoryChecks` -/
+/-! # The representation-independent Miller category -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits

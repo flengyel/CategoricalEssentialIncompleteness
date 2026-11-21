@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalFiniteCoproducts
 
 /-! # Literal polynomial carriers and their chosen categorical values
 
-The comparison preserves the actual ordered product projections and tagged
-sum constructors. Every coefficient is an arbitrary uniform semidecidable
-carrier. The sum chart translates Nat.pair(value,tag) into 2*value+tag
-and proves the inverse translation on the appropriate carrier supports.
+The comparison preserves the ordered product projections and tagged sum constructors.
+Every coefficient is an arbitrary uniform semidecidable carrier. The sum chart
+translates Nat.pair(value,tag) into 2*value+tag and proves the inverse translation on
+the appropriate carrier supports.
 -/
 
 @[expose] public section
@@ -236,8 +236,8 @@ def taggedInr (C D : Total.TotalCategory P) : D ⟶ taggedSumObject C D :=
   have h := congrArg (fun f => f ≫ (taggedSumIso C D).inv) (taggedInr_chart C D)
   simpa only [Category.assoc,Iso.hom_inv_id,Category.comp_id] using h.symm
 
-/-- Every raw coefficient and every sort is compared without changing
-its carrier. Only the literal finite product/sum presentations are charted. -/
+/-- Every raw coefficient and every sort is compared without changing its carrier. Only
+the finite product/sum presentations are charted. -/
 def baseComparison (A B : Total.TotalCategory P) : (p : SyntaxPolynomial (Total.TotalCategory P)) →
     (⟨carrier A.obj B.obj p⟩ : Total.TotalCategory P) ≅ p.eval.obj (A,B)
   | .term => Iso.refl A

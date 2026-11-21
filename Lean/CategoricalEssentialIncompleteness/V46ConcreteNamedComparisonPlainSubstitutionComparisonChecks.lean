@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionComparison
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainSubstitutionComparisonChecks` -/
+/-! # The plain substitution morphisms through constructor comparisons -/
 
 @[expose] public section
 noncomputable section

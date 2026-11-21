@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportLists
 
 
-/-! # Statement checks in `V46SyntaxFreeVariablesTransportListsChecks` -/
+/-! # Ordered tuple and symbol-occurrence transport -/
 
 @[expose] public section
 noncomputable section

@@ -83,7 +83,7 @@ open ConcreteNamedSubstitution
       · intro c
         simp [SyntaxPolynomial.constructors, arityInput, Fin.lastCases_castSucc, gather, ih]
 
-/-- Literal numerical option tags used by the concrete traversal. -/
+/-- Numerical option tags used by the concrete traversal. -/
 def optionCode {σ π : ℕ → Carrier} {d : ℕ} :
     Option (NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d) → ℕ
   | none => 0

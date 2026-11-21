@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
-/-! # The actual halving program computes division in every PA model
+/-! # The halving program computes division in every PA model
 
 The input of the induction is an arbitrary model element. This supplies the
 internal-index decoder step that is unavailable from numeral-only evaluation.

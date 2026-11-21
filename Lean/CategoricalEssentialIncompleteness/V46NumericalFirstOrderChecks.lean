@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalFirstOrder
 
 
-/-! # Statement checks in `V46NumericalFirstOrderChecks` -/
+/-! # Generated numerical first-order theories for arbitrary axiom subobjects -/
 
 @[expose] public section
 noncomputable section

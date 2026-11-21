@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedDerivations
 
 
-/-! # Statement checks in `V46SyntacticFiniteNamedDerivationsChecks` -/
+/-! # Seven named schemes, enumerated axioms and the two finite proof rules -/
 
 @[expose] public section
 noncomputable section

@@ -103,9 +103,9 @@ This premise does not assert translation of any source proof. -/
 def AxiomsAdmissible (T : Theory ℒₒᵣ) : Prop :=
   ∀ φ ∈ T, D (ArithmeticNamedTranslation.translateFormula 0 ![] φ)
 
-/-- An actual finite LK2 derivation gives an actual native proof of its
-translated sequent, for every bounded explicit eigenvariable assignment.
-No injectivity, semantic soundness or standard-model hypothesis is used. -/
+/-- A finite LK2 derivation gives a Hilbert proof of its translated sequent, for every
+bounded explicit eigenvariable assignment. No injectivity, semantic soundness or
+standard-model hypothesis is used. -/
 theorem derivation (T : Theory ℒₒᵣ) (hA : AxiomsAdmissible A T)
     {Δ : Finset (Proposition ℒₒᵣ)} (b : LK2.Derivation T Δ) :
     ∀ (seed : ℕ) (fn : ℕ → ℕ), (∀ i, fn i < seed) →
@@ -235,8 +235,8 @@ theorem sentence (T : Theory ℒₒᵣ) (hA : AxiomsAdmissible A T)
   exact he ⨀ hc
 
 
-/-- The expanded source instance has exactly the successful literal
-named substitution output, with the original generated binder names. -/
+/-- The expanded source instance has exactly the successful named substitution output,
+with the original generated binder names. -/
 theorem expanded_instance_substitution (φ : ArithmeticSemisentence 1) (n : ℕ) :
     (ArithmeticNamedTranslation.translateFormula 1 ![0] φ).substitute 0
       (NamedArithmeticSignature.numeral n) =
@@ -264,8 +264,8 @@ theorem expanded_instance_substitution (φ : ArithmeticSemisentence 1) (n : ℕ)
     exact i.elim
   simpa only [formula_empty] using h hb hf
 
-/-- Under individual source PA-axiom admissibility, a source proof gives
-an actual native proof of the expanded instance computed by substitution. -/
+/-- Under individual source PA-axiom admissibility, a source proof gives a Hilbert proof
+of the expanded instance computed by substitution. -/
 theorem expanded_instance_proof (hPA : AxiomsAdmissible A 𝗣𝗔)
     (φ : ArithmeticSemisentence 1) (n : ℕ)
     (h : 𝗣𝗔 ⊢ (φ/[(↑n : ArithmeticSemiterm Empty 0)] : ArithmeticSentence)) :
@@ -282,8 +282,8 @@ theorem expanded_instance_proof (hPA : AxiomsAdmissible A 𝗣𝗔)
     simpa only [formula_empty] using K_left hs
   exact he ⨀ (provable A hp)
 
-/-- The negative source instance is transported by the same actual
-proof induction and the NNF-negation comparison. -/
+/-- The negative source instance is transported by the same proof induction and the
+NNF-negation comparison. -/
 theorem expanded_instance_refutation (hPA : AxiomsAdmissible A 𝗣𝗔)
     (φ : ArithmeticSemisentence 1) (n : ℕ)
     (h : 𝗣𝗔 ⊢ ∼(φ/[(↑n : ArithmeticSemiterm Empty 0)] : ArithmeticSentence)) :

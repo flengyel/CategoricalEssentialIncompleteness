@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationInitial
 
 
-/-! # Statement checks in `V46MillerDerivationInitialChecks` -/
+/-! # Arbitrary finite-rule initiality for uniform carriers -/
 
 @[expose] public section
 noncomputable section

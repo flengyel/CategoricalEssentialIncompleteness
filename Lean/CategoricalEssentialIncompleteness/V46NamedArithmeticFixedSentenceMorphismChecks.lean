@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSentenceMorphism
 
 
-/-! # Statement checks in `V46NamedArithmeticFixedSentenceMorphismChecks` -/
+/-! # The complete sentence-morphism construction for a generic finite named formula with its external free-name bound -/
 
 @[expose] public section
 noncomputable section

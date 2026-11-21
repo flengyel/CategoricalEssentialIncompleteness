@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParser
 
 
-/-! # Statement checks in `V46SyntacticSyntaxParserChecks` -/
+/-! # A left-to-right primitive-recursion parser for postfix words -/
 
 @[expose] public section
 noncomputable section

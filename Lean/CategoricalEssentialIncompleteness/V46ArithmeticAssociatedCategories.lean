@@ -32,8 +32,8 @@ local instance (P : TotalSplit 𝗣𝗔) : FinitaryExtensive (Over P) := Regular
 local instance (P : TotalSplit 𝗣𝗔) : PreservesFiniteLimits (constantFamilyFunctor P) :=
   SliceBaseChangeGeometry.constant_preservesFiniteLimits P
 
-/-- Every printed conclusion, with the original arithmetic theory and
-unrestricted closed slice-extension quantifier retained. -/
+/-- Every conclusion, with the original arithmetic theory and unrestricted closed
+slice-extension quantifier retained. -/
 structure Conclusions (U : GlobalTheory) (hExt : (t).val ≤ U.val)
     (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) : Prop where
   factorization : Subobject.ofLE (t).val U.val hExt ≫ U.val.arrow = (t).val.arrow
@@ -93,8 +93,8 @@ structure Conclusions (U : GlobalTheory) (hExt : (t).val ≤ U.val)
     ((originalFunctor U).obj (omegaObject 𝗣𝗔)) ((originalFunctor U).obj (omegaObject 𝗣𝗔))
     ((originalFunctor U).obj (omegaObject 𝗣𝗔)) (originalEvaluator U)
 
-/-- Corollary 8.10 uses only the printed assumptions. Deduction initiality,
-closure transfer, inseparability and all categorical structures are constructed. -/
+/-- Corollary 8.10 uses only the assumptions. Deduction initiality, closure transfer,
+inseparability and all categorical structures are constructed. -/
 theorem printed_statement (_hPA : Entailment.Consistent 𝗣𝗔) (U : GlobalTheory)
     (hExt : (t).val ≤ U.val)
     (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) : Conclusions U hExt hc where

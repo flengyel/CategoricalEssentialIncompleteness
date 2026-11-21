@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPolynomial
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationPolynomialChecks` -/
+/-! # Canonical polynomial input comparison for the PA numerical functor -/
 
 @[expose] public section
 noncomputable section

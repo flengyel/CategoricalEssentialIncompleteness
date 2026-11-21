@@ -65,8 +65,8 @@ variable {V X W : PredicateCategory T}
 variable (S : CategoricalSyntax V (fun _ => ⊥_ (PredicateCategory T)) (fun _ => X) 0)
 variable (p : W ⟶ listObject T X)
 
-/-- The actual constructed finite-support assignment needs no additional
-valuation or substitution-invariance hypothesis. -/
+/-- The constructed finite-support assignment needs no additional valuation or
+substitution-invariance hypothesis. -/
 example (i : W ⟶ S.admissibleSubstitution) :
     ParameterizedBooleanValuation.evaluate S (listObject T X)
         (SignedFiniteFormulaValuation.atomAssignment T X) p (i ≫ S.formulaSubstitution) =

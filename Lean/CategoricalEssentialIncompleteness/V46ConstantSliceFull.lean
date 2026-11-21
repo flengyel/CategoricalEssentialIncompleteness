@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConstantSliceRecursion
 public import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
 
-/-! # The literal full subcategory of constant families and its completion -/
+/-! # The full subcategory of constant families and its completion -/
 
 @[expose] public section
 noncomputable section

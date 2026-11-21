@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralLogicalConstructorValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralLogicalConstructorValuesChecks` -/
+/-! # Literal values of the numerical logical constructors -/
 
 @[expose] public section
 noncomputable section

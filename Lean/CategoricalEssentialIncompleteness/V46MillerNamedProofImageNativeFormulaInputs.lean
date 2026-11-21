@@ -7,11 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionComparison
 
-/-! # Native formula substitution and the actual full option output
+/-! # Inputs to substitution on named formulas
 
-Every branch is evaluated on the existing standard PA state and then
-transported by its proved morphism square. The actual slice fold is
-compared by native induction. Failure remains part of the formula state.
+The constructor morphisms transport the substitution state from the standard model of
+PA to the parameter slice. The state includes failure.
 -/
 
 @[expose] public section
@@ -44,8 +43,8 @@ local notation "c" => NamedSyntaxComparison.substitutionStateIso P (V) σ π d
 local notation "e" => NamedSyntaxComparison.substitutionParameterIso P (V) σ π d
 local notation "j" => NamedSyntaxComparison.substitutionFormulaStateIso P (V) σ π d
 
-/-- The actual five summands are retained explicitly. Only each selected
-finite input chart is normalized; the whole syntax record stays fixed. -/
+/-- The five summands are retained explicitly. Only each selected finite input chart is
+normalized; the whole syntax record stays fixed. -/
 def formulaStateInputData (r : (U).obj (R)) : Standard.Data (S₀).substitutionCarriers (b) →
     PointFrame.Data (R) r (S).substitutionAlgebra.a (q)
   | .inl (.inl (.inl (.inl z))) => .inl (.inl (.inl (.inl

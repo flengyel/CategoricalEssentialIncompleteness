@@ -145,7 +145,7 @@ def fold : sentences ⟶ Y := realization.map
   simp only [Category.assoc, IsIso.inv_hom_id_assoc, Iso.inv_hom_id,
     Category.comp_id, ← prod.map_map]
 
-/-- Uniqueness is transported through the actual full and faithful realization. -/
+/-- Uniqueness is transported through the full and faithful realization. -/
 theorem unique (m : sentences ⟶ Y) (ha : realization.map atom ≫ m = a)
     (hn : realization.map negation ≫ m = m ≫ n)
     (hi : Diagram.implication ≫ m = prod.map m m ≫ i) : m = fold Y a n i := by

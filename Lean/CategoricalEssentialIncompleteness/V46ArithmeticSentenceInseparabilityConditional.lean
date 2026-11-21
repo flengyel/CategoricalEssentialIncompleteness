@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ClassicalRealization
 public import CategoricalEssentialIncompleteness.V46SyntacticParityComparison
 
-/-! # Recursive reversed conditionals with actual partial source lifts -/
+/-! # Recursive reversed conditionals with partial source lifts -/
 
 @[expose] public section
 noncomputable section
@@ -66,9 +66,9 @@ theorem reversedConditional_fiber1 (g : ℕ → Bool) :
   cases he : g n <;>
     simp [reversedConditional,he,Part.mem_some_iff,PartialSearchLift.mem_support_summand1]
 
-/-- A recursive reversed conditional has an actual program-class lift.
-The proof uses its parity-coded total recursive function and the fixed
-source coproduct decoder; the resulting source morphism may be partial. -/
+/-- A recursive reversed conditional has a program-class lift. The proof uses its
+parity-coded total recursive function and the fixed source coproduct decoder; the
+resulting source morphism may be partial. -/
 theorem exists_reversedConditional_index (g : ℕ → Bool) (hg : Computable g) :
     ∃ q : ℕ,
       (SyntacticModel.modelFunctor 𝗣𝗔 ℕ).map

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationTotal
 
 
-/-! # Statement checks in `V46MillerDerivationTotalChecks` -/
+/-! # Arbitrary-rule derivations in Tot(Split(E_z)) -/
 
 @[expose] public section
 noncomputable section

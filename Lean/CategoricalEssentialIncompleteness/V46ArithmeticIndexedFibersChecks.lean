@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibers
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersChecks` -/
+/-! # Initial numeral fibers and the arithmetic sentence-theory pullback -/
 
 @[expose] public section
 noncomputable section

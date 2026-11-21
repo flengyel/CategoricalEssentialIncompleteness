@@ -50,8 +50,8 @@ omit [PreservesFiniteCoproducts K] in
 
 variable {F : EffectiveFork.Total} {N : ℕ} (R : RulePresentation F N)
 
-/-- The coefficients and conclusions are the actual source images;
-premises use the canonical ordered finite-power comparison. -/
+/-- The coefficients and conclusions are the source images; premises use the canonical
+ordered finite-power comparison. -/
 def interpretedRules : RulePresentation (K.obj F) N where
   instances i := K.obj (R.instances i)
   premises i := K.map (R.premises i) ≫ (finitePowerIso (K := K) F i.val).hom
@@ -171,8 +171,7 @@ def comparison : R.inference ⋙ (overFunctor (K := K) R) ≅
     (overFunctor (K := K) R) ⋙ (interpretedRules (K := K) R).inference :=
   NatIso.ofComponents (overIso (K := K) R) (fun f => overIso_natural (K := K) R f)
 
-/-- Mapping a source algebra uses the proved comparison; its initiality
-is a separate literal-code obligation. -/
+/-- The comparison of inference functors transports a source algebra to the target slice. -/
 def mappedAlgebra (A : Endofunctor.Algebra R.inference) :
     Endofunctor.Algebra (interpretedRules (K := K) R).inference where
   a := (overFunctor (K := K) R).obj A.a

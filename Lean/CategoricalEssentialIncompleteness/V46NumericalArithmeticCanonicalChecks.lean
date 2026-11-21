@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
 public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
 
 
-/-! # Statement checks in `V46NumericalArithmeticCanonicalChecks` -/
+/-! # The numerical presentation of the canonical arithmetic interpretation -/
 
 @[expose] public section
 noncomputable section

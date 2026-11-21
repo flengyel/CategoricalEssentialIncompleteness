@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTransport
 public import CategoricalEssentialIncompleteness.V46ConcreteDecidableVariables
 
-/-! # Stable named syntax in the actual total split category -/
+/-! # Stable named syntax in the total split category -/
 
 @[expose] public section
 
@@ -25,9 +25,9 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Transport the constructed postfix algebra for the preimage-labelled
-template. Both initiality proofs are transported with the actual algebra,
-before normalizing the identity relabelling at the target. -/
+/-- Transport the constructed postfix algebra for the preimage-labelled template. Both
+initiality proofs are transported with the algebra, before normalizing the identity
+relabelling at the target. -/
 def mappedPostfixData {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
     (E : PredicateCategory T ≌ D) (p q : SyntaxPolynomial D) :
     Σ A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor p q),

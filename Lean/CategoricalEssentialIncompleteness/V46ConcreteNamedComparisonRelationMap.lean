@@ -31,9 +31,9 @@ variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 section GeneralRelationMap
 variable {P : PredicateCategory T} {A B C D : Over P}
 
-/-- Arbitrary positive source and target leaf coordinates extend through
-all actual slice products and sums. Only the indicated forward leaf
-relations are used, so neither relation is required to be invertible. -/
+/-- Arbitrary positive source and target leaf coordinates extend through all slice
+products and sums. Only the indicated forward leaf relations are used, so neither
+relation is required to be invertible. -/
 theorem representation_relation_map (f : A ⟶ C) (g : B ⟶ D)
     (rT rF sT sF : TernaryGraph) (p : Obj T M P) (φ ψ : M → M)
     (hf : ∀ (u : M) (z : Obj T M A.left), rT.val.Evalb ![p.val,u,z.val] →

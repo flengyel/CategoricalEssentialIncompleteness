@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonL
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransport
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Over
 
-/-! # Parameter-list folds under the actual PA interpretation functor
+/-! # Parameter-list folds under the PA interpretation functor
 
 The functor need only preserve finite geometry. Initiality of the target
 list algebra is supplied by the constructed uniform list folds, rather
@@ -33,7 +33,7 @@ variable [HasFiniteLimits C] [HasFiniteCoproducts C]
 variable [HasFiniteLimits D] [HasFiniteCoproducts D]
 variable (F : C ⥤ D) [PreservesFiniteLimits F]
 
-/-- Actual image constructors; no preservation of list initiality is used. -/
+/-- Image constructors; no preservation of list initiality is used. -/
 def mappedList (V : C) (W : D) (e : F.obj V ≅ W) (L : ListAlgebra V) : ListAlgebra W where
   carrier := F.obj L.carrier
   nil := inv (terminalComparison F) ≫ F.map L.nil
@@ -89,10 +89,10 @@ def mappedHom (V : C) (W : D) (e : F.obj V ≅ W) {L B : ListAlgebra V}
           exact congrArg (fun h => prod.map e.inv h ≫ inv (prodComparison F V B.carrier) ≫ F.map B.cons)
             (Category.comp_id (F.map f.f)).symm
 
-/-- The actual postcomposition functor on parameter slices. -/
+/-- The postcomposition functor on parameter slices. -/
 abbrev sliceFunctor (U : C) : Over U ⥤ Over (F.obj U) := Over.post F
 
-/-- Product comparison identifies the actual image of a constant family. -/
+/-- Product comparison identifies the image of a constant family. -/
 def familyComparison (U X : C) :
     (sliceFunctor F U).obj (constantFamily U X) ≅ constantFamily (F.obj U) (F.obj X) :=
   Over.isoMk (asIso (prodComparison F U X)) (by
@@ -307,8 +307,8 @@ def mappedConstructorsIso (A : ListAlgebra V) (B : ListAlgebra W)
     rw [hc]
     simp only [IsIso.inv_hom_id_assoc,prod.map_map_assoc,e.inv_hom_id,Category.id_comp]
 
-/-- Extend an actual constructor-preserving list isomorphism to every
-parameter slice. This argument uses no preservation of initiality. -/
+/-- Extend a constructor-preserving list isomorphism to every parameter slice. This
+argument uses no preservation of initiality. -/
 def parametersIso {W : D} (L B : ListAlgebra W) (i : L.carrier ≅ B.carrier)
     (hn : L.nil ≫ i.hom=B.nil)
     (hc : L.cons ≫ i.hom=prod.map (𝟙 W) i.hom ≫ B.cons)

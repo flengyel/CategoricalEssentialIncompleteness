@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityOptions
 
-/-! Option success is computed from actual categorical pullbacks. -/
+/-! Option success is computed from categorical pullbacks. -/
 
 @[expose] public section
 noncomputable section

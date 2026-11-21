@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticOperationValues
 
-/-! # Actual arithmetic substitution parameter and input comparisons -/
+/-! # Arithmetic substitution parameter and input comparisons -/
 
 @[expose] public section
 noncomputable section

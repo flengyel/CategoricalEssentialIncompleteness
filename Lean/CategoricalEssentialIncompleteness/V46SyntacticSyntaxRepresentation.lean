@@ -24,8 +24,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Input is the canonical numerical polynomial code, output a point of
-the actual chosen categorical polynomial object. No syntax parser is used. -/
+/-- Input is the canonical numerical polynomial code, output a point of the chosen
+categorical polynomial object. No syntax parser is used. -/
 def baseRepresentation (X Y : PredicateCategory T) :
     SyntaxPolynomial (PredicateCategory T) → Graph
   | .term => .mkSigma “u z. !X.val z ∧ z = u”
@@ -138,8 +138,8 @@ theorem baseRepresentation_support (a : SyntaxPolynomial (PredicateCategory T))
           ((chosenGraph T (coprod.inr : b.eval.obj (X, Y) ⟶
             a.eval.obj (X, Y) ⨿ b.eval.obj (X, Y))).support_model M y z hg).2⟩
 
-/-- Every literal polynomial input has a point in the actual chosen
-categorical polynomial object, including zero-arity unit inputs. -/
+/-- Every literal polynomial input has a point in the chosen categorical polynomial
+object, including zero-arity unit inputs. -/
 theorem baseRepresentation_exists (a : SyntaxPolynomial (PredicateCategory T))
     (u : M) (hu : (rawCarrier X Y a).val.Evalb ![u]) :
     ∃ z : Obj T M (a.eval.obj (X, Y)),
@@ -273,8 +273,8 @@ theorem baseRepresentation_code_unique (a : SyntaxPolynomial (PredicateCategory 
 
 end Models
 
-/-- The numerical encoding is a genuine T-provably total morphism from
-the chosen polynomial object, constructed from its Sigma-one relation. -/
+/-- The numerical encoding is a T-provably total morphism from the chosen polynomial
+object, constructed from its Sigma-one relation. -/
 def encodePolynomial (X Y : PredicateCategory T)
     (a : SyntaxPolynomial (PredicateCategory T)) :
     GraphMorphism T (a.eval.obj (X, Y)) (rawCarrier X Y a) where

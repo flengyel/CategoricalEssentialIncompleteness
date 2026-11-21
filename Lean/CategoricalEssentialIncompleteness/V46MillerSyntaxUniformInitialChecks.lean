@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitial
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformInitialChecks` -/
+/-! # Parameter-stable initiality of the literal uniform syntax algebra -/
 
 @[expose] public section
 noncomputable section

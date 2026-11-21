@@ -30,8 +30,8 @@ section Identity
 
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- The quotient at an identity theory extension is the actual identity
-on every program class, independently of its chosen representative. -/
+/-- The quotient at an identity theory extension is the identity on every program class,
+independently of its chosen representative. -/
 theorem programMap_id (q : ProgramQuotient T) : SyntacticExtension.programMap T T q = q := by
   induction q using Quotient.inductionOn with
   | _ q => rfl
@@ -140,8 +140,8 @@ theorem projection_comp :
   funext s
   rfl
 
-/-- Paste the two actual extension squares, retaining the source and
-target parentheses so that the comparison has its full typed meaning. -/
+/-- Paste the two extension squares, retaining the source and target parentheses so that
+the comparison has its full typed meaning. -/
 def pastedSquare :
     (SyntacticExtension.functor T T' ⋙ SyntacticExtension.functor T' T'') ⋙
         familyFunctor T'' ≅
@@ -174,8 +174,8 @@ def directSquare :
   simp [directSquare]
   rfl
 
-/-- The direct square and the pasted square agree as natural
-isomorphisms, including their actual maps at every model coordinate. -/
+/-- The direct square and the pasted square agree as natural isomorphisms, including their
+maps at every model coordinate. -/
 theorem square_comp_coherence : pastedSquare T T' T'' = directSquare T T' T'' := by
   apply Iso.ext
   apply NatTrans.ext

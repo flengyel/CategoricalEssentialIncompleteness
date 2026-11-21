@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceMorphisms
 
 
-/-! # Statement checks in `V46NumericalArithmeticSentenceMorphismsChecks` -/
+/-! # Arithmetic sentence negation and named numeral substitution on syntax -/
 
 @[expose] public section
 noncomputable section

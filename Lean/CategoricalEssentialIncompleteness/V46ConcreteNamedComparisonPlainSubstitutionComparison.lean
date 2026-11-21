@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlain
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionValues
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
 
-/-! # The actual plain substitution arrows through constructor comparisons -/
+/-! # The plain substitution morphisms through constructor comparisons -/
 
 @[expose] public section
 

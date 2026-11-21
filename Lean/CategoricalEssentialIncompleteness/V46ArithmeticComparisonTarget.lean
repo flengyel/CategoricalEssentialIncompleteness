@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralCoordinates
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPrinted
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTuring
 
-/-! # The categorical comparison on the actual arithmetic sentence carrier
+/-! # The categorical comparison on the arithmetic sentence carrier
 
-This internal assembly lemma is used after deriving its bounds and consistency
-from the concrete Gamma hypotheses. Its target is the literal sentence object,
-not the ambient numerical carrier.
+This internal assembly lemma is used after deriving its bounds and consistency from
+the concrete Gamma hypotheses. Its target is the sentence object, not the ambient
+numerical carrier.
 -/
 
 @[expose] public section
@@ -39,8 +39,8 @@ theorem diagonalFormula_freeVariables : ∀ y, y ∈ diagonalFormula.freeVariabl
 
 variable (Γ : Carrier) (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Theorem4.2 is applied to the actual source Turing morphism and the
-constructed partial source lift. No arithmetic incompleteness theorem is used. -/
+/-- Theorem4.2 is applied to the source Turing morphism and the constructed partial source
+lift. No arithmetic incompleteness theorem is used. -/
 theorem comparison_of_evidence_bounds
     (hΓ : ∀ s : Obj 𝗣𝗔 M sentencePredicate,
       ¬ ((theoremPredicate Γ).val.Evalb ![s.val] ∧

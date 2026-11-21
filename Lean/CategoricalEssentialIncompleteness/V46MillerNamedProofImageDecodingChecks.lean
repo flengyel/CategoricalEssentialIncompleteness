@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
 
 
-/-! # Statement checks in `V46MillerNamedProofImageDecodingChecks` -/
+/-! # Inverse named decoding of every formula point -/
 
 @[expose] public section
 noncomputable section

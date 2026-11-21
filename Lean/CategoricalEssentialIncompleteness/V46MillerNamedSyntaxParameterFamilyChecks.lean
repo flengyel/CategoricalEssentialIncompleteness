@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxParameterFamily
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxParameterFamilyChecks` -/
+/-! # Finite-geometry constant-family squares for Over.post -/
 
 @[expose] public section
 noncomputable section

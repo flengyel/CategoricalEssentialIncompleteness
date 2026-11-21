@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
 
-/-! # The numerical membership arrow is the specified categorical fold -/
+/-! # The numerical membership morphism is the specified categorical fold -/
 
 @[expose] public section
 

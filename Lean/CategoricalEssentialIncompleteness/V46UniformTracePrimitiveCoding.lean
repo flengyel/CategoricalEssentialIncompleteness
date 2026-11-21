@@ -8,11 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTraceProgram
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveHistory
 
-/-! # Native primitive certificates for the literal trace program
+/-! # Primitive recursiveness of the first-success trace predicate
 
-The actual all-model PA graph comparison was proved in UniformTraceProgram
-before any native certificate is used. The native code computation theorem
-below is used over the standard natural numbers only.
+The computation on natural numbers gives a primitive recursive trace predicate. Its
+interpretation in every model of PA is proved in `V46UniformTraceProgram`.
 -/
 
 @[expose] public section
@@ -57,8 +56,8 @@ noncomputable def traceCheck (e x t : ℕ) : ℕ := by
   classical
   exact if traceFormula.val.Evalb ![e, x, t] then 1 else 0
 
-/-- The primitive function comes with its actual Code.eval proof.
-The standard model bridge identifies it with the chosen trace check. -/
+/-- The primitive function comes with its Code.eval proof. The standard model bridge
+identifies it with the chosen trace check. -/
 theorem traceCheck_primrec :
     Primrec (fun p : ℕ × ℕ × ℕ => traceCheck p.1 p.2.1 p.2.2) := by
   obtain ⟨f, hcf, hpf⟩ := PrimitiveCoding.PrimitiveTotal.traceProgram
@@ -76,8 +75,8 @@ theorem traceCheck_primrec :
     (traceCheck p.1 p.2.1 p.2.2) ![p.1, p.2.1, p.2.2]
   exact Part.mem_some_iff.mp (hm.mp (traceProgram_value p.1 p.2.1 p.2.2))
 
-/-- The certificate concerns the actual trace formula over Nat. It has
-no assumed primitive predicate or evaluator premise. -/
+/-- The certificate concerns the trace formula over Nat. It has no assumed primitive
+predicate or evaluator premise. -/
 theorem trace_primrec :
     PrimrecPred (fun p : ℕ × ℕ × ℕ => traceFormula.val.Evalb ![p.1, p.2.1, p.2.2]) := by
   have h := Primrec.eq.comp traceCheck_primrec (Primrec.const 1)

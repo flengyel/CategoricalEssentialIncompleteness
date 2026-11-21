@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues
 
-/-! # Actual admissible-substitution points and the independent numeric free-for flag -/
+/-! # Admissible-substitution points and the independent numeric free-for flag -/
 
 @[expose] public section
 
@@ -30,8 +30,8 @@ local notation "X" => (plainSyntaxCarrier V σ π d false : PredicateCategory T)
 local notation "Y" => (plainSyntaxCarrier V σ π d true : PredicateCategory T)
 
 omit [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] in
-/-- A point of the plain carrier has the same word in the canonical
-carrier, by the actual inverse identity-graph arrow. -/
+/-- A point of the plain carrier has the same word in the canonical carrier, by the
+inverse identity-graph morphism. -/
 theorem plainPoint_canonical (formula : Bool)
     (word : Obj T M (plainSyntaxCarrier V σ π d formula)) :
     (syntaxCarrier V σ π d formula).val.Evalb ![word.val] := by
@@ -41,9 +41,8 @@ theorem plainPoint_canonical (formula : Bool)
   erw [hv] at hw
   exact hw
 
-/-- This at-point equation needs no free-for premise. Its source is
-already a point of the actual success pullback, and the real square
-identifies its successful output. -/
+/-- This at-point equation needs no free-for premise. Its source is already a point of the
+success pullback, and the real square identifies its successful output. -/
 theorem plain_formulaSubstitution_result (a : Obj T M (S).admissibleSubstitution) :
     let q := (F T M).map (S).admissibleInclusion a
     ConcreteNamedSubstitution.substitutionResult V σ π d

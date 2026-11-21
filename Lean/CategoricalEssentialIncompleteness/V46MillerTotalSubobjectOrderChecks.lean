@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalSubobjectOrder
 
 
-/-! # Statement checks in `V46MillerTotalSubobjectOrderChecks` -/
+/-! # Subobject order from numerical images -/
 
 @[expose] public section
 noncomputable section

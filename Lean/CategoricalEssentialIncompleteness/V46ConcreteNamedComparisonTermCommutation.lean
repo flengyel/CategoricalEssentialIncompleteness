@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermStep
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal
 
-/-! # The computed term-state arrow commutes with the actual full term structure -/
+/-! # The computed term-state morphism commutes with the full term structure -/
 
 @[expose] public section
 

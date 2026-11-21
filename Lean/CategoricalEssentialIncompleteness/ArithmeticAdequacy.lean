@@ -12,12 +12,11 @@ public import CategoricalEssentialIncompleteness.NumericalInseparability
 /-!
 # Arithmetic representation by substitution
 
-The two representation equations are equalities of PER subobjects.
-Pullback of support inclusions identifies these equations with positive and
-negative provability of each numeral instance. For a consistent arithmetic
-theory, existence of a representing total numerical arrow is equivalent to
-strong numeralwise definability. Extensions of `PA⁻` represent every
-complementary pair of numerical restriction domains.
+The two representation equations are equalities of PER subobjects. Pullback of support
+inclusions identifies these equations with positive and negative provability of each
+numeral instance. For a consistent arithmetic theory, existence of a representing
+total numerical morphism is equivalent to strong numeralwise definability. Extensions
+of `PA⁻` represent every complementary pair of numerical restriction domains.
 -/
 
 @[expose] public section
@@ -136,7 +135,7 @@ theorem representsPair_iff (T : ArithmeticTheory)
   exact ⟨fun h x n => ⟨h.1 x n, h.2 x n⟩,
     fun h => ⟨fun x n => (h x n).1, fun x n => (h x n).2⟩⟩
 
-/-- A strong numeralwise definition gives a constant representing parameter arrow. -/
+/-- A strong numeralwise definition gives a constant representing parameter morphism. -/
 theorem representsPair_constant (T : ArithmeticTheory) [Entailment.Consistent T]
     (a : ComplementaryPair (Numerical.Domain Numerical.nat))
     (φ : ArithmeticSemisentence 1)
@@ -148,8 +147,8 @@ theorem representsPair_constant (T : ArithmeticTheory) [Entailment.Consistent T]
   rw [Numerical.complementary_support_compl]
   exact ⟨hφ.provable_iff n, hφ.provable_neg_iff n⟩
 
-/-- A complementary pair has a representing parameter arrow exactly when its
-positive support has a strong numeralwise definition. -/
+/-- A complementary pair has a representing parameter morphism exactly when its positive
+support has a strong numeralwise definition. -/
 theorem exists_representsPair_iff_strongNumeralwise (T : ArithmeticTheory)
     [Entailment.Consistent T] (a : ComplementaryPair (Numerical.Domain Numerical.nat)) :
     (∃ g, RepresentsPair T a g) ↔

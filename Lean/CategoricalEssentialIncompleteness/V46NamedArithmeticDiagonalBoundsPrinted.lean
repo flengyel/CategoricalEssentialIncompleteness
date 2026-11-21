@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBound
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsUltrapower
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparison
 
-/-! # Diagonal bounds from derivability of the actual named PA axioms
+/-! # Diagonal bounds from derivability of the named PA axioms
 
-The extension hypothesis is the native PA arithmetic/order and induction
-scheme with finite universal closure. Its comparison with source PA
-axioms is a proved theorem, not an additional premise of these results.
+The extension hypothesis is the named PA arithmetic/order and induction scheme with
+finite universal closure. Its comparison with source PA axioms is a proved theorem,
+not an additional premise of these results.
 -/
 
 @[expose] public section
@@ -53,9 +53,8 @@ theorem semantic_negative (A : Carrier) (hΓ : ArithmeticNamedAxiomComparison.Ex
   semantic_negative_of_axioms_admissible M A
     (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hΓ) n h
 
-/-- The two printed universal bounds refer to the selected literal
-conclusion program, the actual numeral-substitution function Θ, and
-the proved PA-total negation extension. -/
+/-- The two universal bounds refer to the selected literal conclusion program, the
+numeral-substitution function Θ, and the proved PA-total negation extension. -/
 theorem semantic_bounds (A : Carrier) (hΓ : ArithmeticNamedAxiomComparison.ExtendsPA A) :
     (∀ n : M, ArithmeticDiagonalCodes.alpha.val.Evalb ![n] →
       (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔

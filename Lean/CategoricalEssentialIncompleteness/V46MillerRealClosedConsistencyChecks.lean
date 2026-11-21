@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency
 
 
-/-! # Statement checks in `V46MillerRealClosedConsistencyChecks` -/
+/-! # Hilbert consistency of the concrete T_a in the categorical application -/
 
 @[expose] public section
 noncomputable section

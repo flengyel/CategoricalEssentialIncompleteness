@@ -59,8 +59,8 @@ theorem childHolds_of_smaller (a b : RawPolynomial) (H : Bool → ℕ → Prop)
       · simpa [ChildHolds] using ic x hx (by simpa [ChildSize] using hs)
       · simpa [ChildHolds] using id y hy (by simpa [ChildSize] using hs)
 
-/-- Every accepted literal constructor word is generated from its ordered
-strictly smaller children, for arbitrary external properties. -/
+/-- Every accepted constructor word is generated from its ordered strictly smaller
+children, for arbitrary external properties. -/
 theorem word_induction (a b : RawPolynomial) (H : Bool → ℕ → Prop)
     (root : ∀ (formula : Bool) (u : ℕ),
       (rawCarrier (Postfix.carrier false a b) (Postfix.carrier true a b)

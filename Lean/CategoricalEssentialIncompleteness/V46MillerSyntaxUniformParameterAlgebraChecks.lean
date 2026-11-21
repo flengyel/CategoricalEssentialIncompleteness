@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformParameterAlgebra
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformParameterAlgebraChecks` -/
+/-! # Literal constructors on the explicit parameter families -/
 
 @[expose] public section
 noncomputable section

@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLists
 
-/-! # Standard named-variable lists and their literal arithmetic codes
+/-! # Standard named-variable lists and their arithmetic codes
 
-These equations compare the external lists with the actual PA-defined
-list functions at the standard model. The internal equations are proved
-separately in the imported numerical implementation.
+These equations compare the external lists with the PA-defined list functions at the
+standard model. The internal equations are proved separately in the imported numerical
+implementation.
 -/
 
 @[expose] public section

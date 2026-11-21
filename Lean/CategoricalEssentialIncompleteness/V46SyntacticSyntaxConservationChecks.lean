@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConservation
 
 
-/-! # Statement checks in `V46SyntacticSyntaxConservationChecks` -/
+/-! # The singleton tree accepted by the parser is the input word -/
 
 @[expose] public section
 noncomputable section

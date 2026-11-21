@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationConclusionInduction
 
 
-/-! # Statement checks in `V46DerivationConclusionInductionChecks` -/
+/-! # Conclusion induction through the original typed premises -/
 
 @[expose] public section
 noncomputable section

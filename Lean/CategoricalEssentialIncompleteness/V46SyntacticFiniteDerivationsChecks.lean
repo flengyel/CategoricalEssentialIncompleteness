@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivations
 
 
-/-! # Statement checks in `V46SyntacticFiniteDerivationsChecks` -/
+/-! # Explicit finite typed derivations and the constructed proof object -/
 
 @[expose] public section
 noncomputable section

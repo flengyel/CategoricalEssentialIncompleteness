@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRelativeCarriers
 
 
-/-! # Statement checks in `V46MillerRelativeCarriersChecks` -/
+/-! # The literal p-c.e.-carrier presentation of Split(Rec^p) -/
 
 @[expose] public section
 noncomputable section

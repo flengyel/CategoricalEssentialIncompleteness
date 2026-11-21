@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedPolynomialRepresentation
 
 
-/-! # Statement checks in `V46MillerNamedPolynomialRepresentationChecks` -/
+/-! # Exact scalar graph of the polynomial input chart -/
 
 @[expose] public section
 noncomputable section

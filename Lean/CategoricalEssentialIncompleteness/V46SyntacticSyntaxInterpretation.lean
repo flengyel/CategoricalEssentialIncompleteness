@@ -48,8 +48,8 @@ omit [M↓[ℒₒᵣ] ⊧* T] in
           ![p, word, adjoin ⟪value, if formula then 1 else 0⟫ 0 + 1] := by
   cases formula <;> simp [evaluationFormula]
 
-/-- Internal PA record existence plus the parser/value sort simulation
-produces an actual value for every accepted literal word. -/
+/-- Internal PA record existence plus the parser/value sort simulation produces a value
+for every accepted literal word. -/
 theorem evaluation_existsUnique (formula : Bool) (p word : M)
     (hp : P.val.Evalb ![p]) (hw : (carrier formula a b).val.Evalb ![word]) :
     ∃! value : M, (A.evaluationFormula formula).val.Evalb ![p, word, value] := by
@@ -68,8 +68,8 @@ theorem evaluation_existsUnique (formula : Bool) (p word : M)
   simpa using congrArg (pi₁ : M → M) hb
 
 omit [M↓[ℒₒᵣ] ⊧* T] in
-/-- The final state's positive common-fiber assertion supplies the
-actual target membership and its supplied projection to the parameter. -/
+/-- The final state's positive common-fiber assertion supplies the target membership and
+its supplied projection to the parameter. -/
 theorem evaluation_fiber (formula : Bool) (p word value : M)
     (h : (A.evaluationFormula formula).val.Evalb ![p, word, value]) :
     P.val.Evalb ![p] ∧ (carrier formula a b).val.Evalb ![word] ∧

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPullbackPowers
 
-/-! The nullary and all ordered finite powers preserve actual pullback squares. -/
+/-! The nullary and all ordered finite powers preserve pullback squares. -/
 
 @[expose] public section
 noncomputable section

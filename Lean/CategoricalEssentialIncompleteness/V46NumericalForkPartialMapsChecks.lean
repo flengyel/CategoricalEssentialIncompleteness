@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps
 
-/-! The source of the span comparison is the literal numerical diagram category. -/
+/-! The source of the span comparison is the numerical diagram category. -/
 
 @[expose] public section
 noncomputable section

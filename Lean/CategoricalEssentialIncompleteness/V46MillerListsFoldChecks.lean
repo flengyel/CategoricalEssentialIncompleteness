@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsFold
 
 
-/-! # Statement checks in `V46MillerListsFoldChecks` -/
+/-! # Parameter-preserving list folds and compatible-map uniqueness -/
 
 @[expose] public section
 noncomputable section

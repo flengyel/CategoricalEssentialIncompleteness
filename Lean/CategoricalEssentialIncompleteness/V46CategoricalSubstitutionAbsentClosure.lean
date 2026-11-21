@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentCore
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentConstructors
 
-/-! The actual equalizer invariant is closed under every substitution constructor. -/
+/-! The equalizer invariant is closed under every substitution constructor. -/
 
 @[expose] public section
 noncomputable section
@@ -34,7 +34,7 @@ theorem absence_product_step_value {P U W Y : D} {A B : Over P}
     Category.assoc, prod.map_snd] using congrArg (fun v => v ≫ h) hv
 
 omit [FinitaryExtensive D] in
-/-- A coefficient-recursion product step retains the actual shared parameter. -/
+/-- A coefficient-recursion product step retains the shared parameter. -/
 theorem absence_parameter_step_value {P U W Y : D} {A B : Over P}
     (f : A ⟶ constantFamily P U) (g : B ⟶ constantFamily P W)
     (h : P ⨯ (U ⨯ W) ⟶ Y) :
@@ -207,8 +207,8 @@ theorem absence_quantifier_closed :
       (S.absence_recursive_formula_precomp m hm prod.snd)
 
 include hm in
-/-- Constructor closure is proved for the actual substitution algebra, with
-arbitrary coefficient objects and arbitrary parameter families. -/
+/-- Constructor closure is proved for the substitution algebra, with arbitrary coefficient
+objects and arbitrary parameter families. -/
 theorem absence_constructor_closed :
     ((SyntaxPolynomial.jointFunctor
       ((SyntaxPolynomial.termExpression V σ d).withParameters S.substitutionParameters)

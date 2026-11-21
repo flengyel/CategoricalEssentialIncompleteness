@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsWordInverse
 
 
-/-! # Statement checks in `V46MillerListsWordInverseChecks` -/
+/-! # Both inverse equations for the literal list-word translation -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46TotalSentenceImages
 
-/-! # Literal source sentence idempotents for arbitrary total-split arrows -/
+/-! # Literal source sentence idempotents for arbitrary total-split morphisms -/
 
 @[expose] public section
 

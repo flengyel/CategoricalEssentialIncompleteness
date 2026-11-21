@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstructorValues
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralConstructorValuesChecks` -/
+/-! # Numerical constructors append the named postfix record -/
 
 @[expose] public section
 noncomputable section

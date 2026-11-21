@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46MillerCutDyadicBoxes
 public import CategoricalEssentialIncompleteness.V46MillerCutSeries
 public import Mathlib.Algebra.Order.Group.MinMax
 
-/-! # Actual finite-box distances and their positive loci
+/-! # Finite-box distances and their positive loci
 
-The distance uses the printed weighted product formula. Each finite-box
-formula has a constructed nearest point, rather than an assumed distance
-comparison. The empty union has distance 1, as in the manuscript.
+The distance uses the weighted product formula. Each finite-box formula has a
+constructed nearest point, rather than an assumed distance comparison. The empty union
+has distance 1, as in the manuscript.
 -/
 
 @[expose] public section
@@ -146,7 +146,7 @@ theorem continuous_boxDistance (c : Boxes.BoxCode) : Continuous (boxDistance c) 
   unfold boxDistance intervalDistance
   fun_prop
 
-/-- The exact metric formula printed for Q. -/
+/-- The exact metric formula for Q. -/
 def productDistance (z w : Point) : ℝ := ∑' n,Series.weight n*|(z n:ℝ)-(w n:ℝ)|
 
 private theorem productDistance_summable (z w : Point) :
@@ -250,8 +250,8 @@ theorem familyDistance_attained (L : List Boxes.BoxCode) (hL : L≠[]) (z : Poin
       · exact ⟨c,by simp,min_eq_left hcb⟩
       · exact ⟨b,List.mem_cons_of_mem c hb,(min_eq_right (le_of_not_ge hcb)).trans hv⟩
 
-/-- An actual nearest point witnesses the minimum distance to every
-nonempty finite union. No minimum/distance property is a supplied premise. -/
+/-- A nearest point witnesses the minimum distance to every nonempty finite union. No
+minimum/distance property is a supplied premise. -/
 theorem familyDistance_minimum (L : List Boxes.BoxCode) (hL : L≠[]) (z : Point) :
     (∃ w ∈ Boxes.union L, productDistance z w=familyDistance L z) ∧
       ∀ w ∈ Boxes.union L, familyDistance L z ≤ productDistance z w := by

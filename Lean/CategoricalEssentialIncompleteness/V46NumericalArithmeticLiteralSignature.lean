@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSignature
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
 
-/-! # The chosen arithmetic signature and its actual numerical code labels -/
+/-! # The chosen arithmetic signature and its numerical code labels -/
 
 @[expose] public section
 noncomputable section
@@ -18,8 +18,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.LiteralSignature
 open NamedFiniteSyntax NamedPostfixEncoding
 
-/-- The literal quasi-inverse uses the actual unary numerical object,
-including its proved coefficient-code membership. -/
+/-- The literal quasi-inverse uses the unary numerical object, including its proved
+coefficient-code membership. -/
 def coefficients (σ : ℕ → Carrier) (k : ℕ) : Carrier :=
   NumericalCoordinates.codedPredicate (NumericalCoordinates.predicateObject (σ k : PredicateCategory 𝗧𝗔))
 
@@ -55,8 +55,8 @@ theorem freeFor (φ : Formula (Symbols σ) (Symbols π) d) (x : ℕ) (t : Term (
     (formulaEquiv φ).FreeFor x (termEquiv t) ↔ φ.FreeFor x t :=
   SignatureRelabel.formula_freeFor (coefficient_membership σ) (coefficient_membership π) φ x t
 
-/-- The literal Gamma axiom predicate is unchanged because formula codes,
-binder names, and all ordered children are unchanged. -/
+/-- The Gamma axiom predicate is unchanged because formula codes, binder names, and all
+ordered children are unchanged. -/
 theorem derives_iff (Γ : Carrier) (φ : Formula (Symbols σ) (Symbols π) d) :
     SyntacticNamedHilbert.Derives (coefficients σ) (coefficients π) d Γ (formulaEquiv φ) ↔
       SyntacticNamedHilbert.Derives σ π d Γ φ :=

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
 
-/-! # Finite constructor dispatch through actual slice coproducts -/
+/-! # Finite constructor dispatch through slice coproducts -/
 
 @[expose] public section
 

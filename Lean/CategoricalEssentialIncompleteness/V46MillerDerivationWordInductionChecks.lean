@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInduction
 
 
-/-! # Statement checks in `V46MillerDerivationWordInductionChecks` -/
+/-! # External induction on the successful uniform derivations -/
 
 @[expose] public section
 noncomputable section

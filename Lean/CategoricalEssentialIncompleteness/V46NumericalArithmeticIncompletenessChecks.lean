@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticIncompleteness
 
 
-/-! # Statement checks in `V46NumericalArithmeticIncompletenessChecks` -/
+/-! # The numerical arithmetic application to the theorem range -/
 
 @[expose] public section
 noncomputable section

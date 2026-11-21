@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticEqualityParameters
 
 
-/-! # Statement checks in `V46NumericalArithmeticEqualityParametersChecks` -/
+/-! # The equality scheme retains both independent admissibility pullbacks -/
 
 @[expose] public section
 noncomputable section

@@ -65,8 +65,8 @@ theorem imageCarrier_iff_range {C D : PredicateCategory T} (f : GraphMorphism T 
   · rintro ⟨x, hxy⟩
     exact ⟨x.val, (map_class_eq_iff T M f x y).mp hxy⟩
 
-/-- The image comparison is over the interpreted codomain. Its construction
-uses the actual represented witness section and inclusion. -/
+/-- The image comparison is over the interpreted codomain. Its construction uses the
+represented witness section and inclusion. -/
 theorem preserves_regularImage {C D : PredicateCategory T} (f : C ⟶ D) :
     ∃ e : (functor T M).obj (image f) ≅ image ((functor T M).map f),
       e.hom ≫ image.ι ((functor T M).map f) = (functor T M).map (image.ι f) := by
@@ -112,8 +112,8 @@ instance preservesTerminal :
     ((isLimitMapConeEmptyConeEquiv (functor T M) terminalCarrier).symm
       (mappedTerminalIsTerminal T M))
 
-/-- Arithmetic pairing identifies a product predicate with the actual
-Cartesian product of its two interpreted carriers. -/
+/-- Arithmetic pairing identifies a product predicate with the Cartesian product of its
+two interpreted carriers. -/
 def productCoding (C D : Carrier) : Obj M C × Obj M D → Obj M (productCarrier C D) := by
   letI : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 := models_of_subtheory (U := T) inferInstance
   exact fun p => ⟨Arithmetic.pair p.1.val p.2.val,
@@ -184,8 +184,8 @@ instance preservesFiniteProducts : PreservesFiniteProducts (functor T M) := by
   let := preservesLimitsOfShape_pempty_of_preservesTerminal (functor T M)
   exact PreservesFiniteProducts.of_preserves_binary_and_terminal (functor T M)
 
-/-- The equalizer predicate is interpreted as equality of the actual
-functions obtained from the quotient graphs. -/
+/-- The equalizer predicate is interpreted as equality of the functions obtained from the
+quotient graphs. -/
 def mappedEqualizerIsLimit {C D : PredicateCategory T} (f g : C ⟶ D) :
     IsLimit ((functor T M).mapCone
       (Fork.ofι (equalizerInclusion T f g) (equalizer_condition T f g))) := by
@@ -216,8 +216,8 @@ instance preservesEqualizers : PreservesLimitsOfShape WalkingParallelPair (funct
 instance preservesFiniteLimits : PreservesFiniteLimits (functor T M) :=
   preservesFiniteLimits_of_preservesEqualizers_and_finiteProducts (functor T M)
 
-/-- Proposition 6.4 in the arbitrary predicate presentation: all finite
-limits, all finite coproducts and the actual regular images are preserved. -/
+/-- Proposition 7.4 in the arbitrary predicate presentation: all finite limits, all finite
+coproducts and the regular images are preserved. -/
 theorem regular : PreservesFiniteLimits (functor T M) ∧
     PreservesFiniteCoproducts (functor T M) ∧
     ∀ (C D : PredicateCategory T) (f : C ⟶ D),
@@ -233,8 +233,8 @@ instance totalPreservesFiniteCoproducts : PreservesFiniteCoproducts (totalFuncto
   dsimp [totalFunctor]
   infer_instance
 
-/-- Equivalences preserve the actual chosen regular images over their
-codomains, by mapping the strong-epi/mono factorization. -/
+/-- Equivalences preserve the chosen regular images over their codomains, by mapping the
+strong-epi/mono factorization. -/
 def inverseImageIso {X Y : TotalSplit T} (f : X ⟶ Y) :
     (predicateEquivalence T).inverse.obj (image f) ≅
       image ((predicateEquivalence T).inverse.map f) :=
@@ -262,7 +262,7 @@ def totalRegularImageIso {X Y : TotalSplit T} (f : X ⟶ Y) :
   rw [regularImageIso_hom_ι, ← Functor.map_comp, inverseImageIso_hom_ι]
   rfl
 
-/-- Proposition 6.4 on the actual total restriction splitting. -/
+/-- Proposition 7.4 on the total restriction splitting. -/
 theorem total_regular : PreservesFiniteLimits (totalFunctor T M) ∧
     PreservesFiniteCoproducts (totalFunctor T M) ∧
     ∀ (X Y : TotalSplit T) (f : X ⟶ Y),
@@ -285,8 +285,8 @@ private theorem map_conjugate {A : Type*} [Category A] {G H : A ⥤ Type}
   rw [η.hom.naturality, ← Category.assoc,
     η.inv_hom_id_app, Category.id_comp]
 
-/-- Image preservation is transported through the actual canonical-domain
-comparison by conjugating the mapped image factorization. -/
+/-- Image preservation is transported through the canonical-domain comparison by
+conjugating the mapped image factorization. -/
 theorem preserves_canonical_regularImage {X Y : TotalSplit T} (f : X ⟶ Y) :
     ∃ e : (canonicalDomainFunctor T M).obj (image f) ≅
       image ((canonicalDomainFunctor T M).map f),
@@ -326,8 +326,8 @@ def canonicalRegularImageIso {X Y : TotalSplit T} (f : X ⟶ Y) :
       (canonicalDomainFunctor T M).map (image.ι f) :=
   Classical.choose_spec (preserves_canonical_regularImage T M f)
 
-/-- Proposition 6.4 for the literal chosen domain splitting of the existing
-model interpretation, including every total-split object and morphism. -/
+/-- Proposition 7.4 for the chosen domain splitting of the existing model interpretation,
+including every total-split object and morphism. -/
 theorem canonical_regular : PreservesFiniteLimits (canonicalDomainFunctor T M) ∧
     PreservesFiniteCoproducts (canonicalDomainFunctor T M) ∧
     ∀ (X Y : TotalSplit T) (f : X ⟶ Y),

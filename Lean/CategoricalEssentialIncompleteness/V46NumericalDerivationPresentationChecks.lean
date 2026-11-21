@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
 
 
-/-! # Statement checks in `V46NumericalDerivationPresentationChecks` -/
+/-! # Successful derivations as unary numerical code carriers -/
 
 @[expose] public section
 noncomputable section

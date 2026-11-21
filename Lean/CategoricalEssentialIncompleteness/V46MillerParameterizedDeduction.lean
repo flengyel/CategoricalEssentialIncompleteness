@@ -18,7 +18,7 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction
 variable (z : Point)
 
-/-- The full numerical variable carrier, in the actual total splitting. -/
+/-- The full numerical variable carrier, in the total splitting. -/
 def numbers : Total.CanonicalTotal z :=
   (Total.pointPresentation z).functor.obj (Derivation.numbers (P := Uniform.Family.ofPoint z))
 
@@ -66,8 +66,8 @@ local instance : FinitaryExtensive (Over P) := RegularSlices.finitaryExtensive P
 local instance : PreservesFiniteLimits (constantFamilyFunctor P) :=
   SliceBaseChangeGeometry.constant_preservesFiniteLimits P
 
-/-- These are the actual logical, generalization and ordered modus-ponens
-rules in the parameter slice, with arbitrary parameter-dependent axioms. -/
+/-- These are the logical, generalization and ordered modus-ponens rules in the parameter
+slice, with arbitrary parameter-dependent axioms. -/
 def rules {A : Over P} (axioms : A ⟶ (constantFamilyFunctor P).obj S.sentenceObject) :=
   firstOrderRules ((constantFamilyFunctor P).map S.logicalAxioms)
     ((constantFamilyFunctor P).map S.sentenceInclusion) axioms

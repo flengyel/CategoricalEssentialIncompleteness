@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedOpenTranslation
 public import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
 
-/-! # Actual proof compatibility for arithmetic NNF connectives
+/-! # Proof compatibility for arithmetic NNF connectives
 
-Foundation uses negation-normal forms, so its implication does not
-translate by syntactic equality to the native implication constructor.
-The comparisons below are actual native proofs, using the constructed
-classical entailment instance and the derived native quantifier rules.
+Foundation uses negation-normal forms, so its implication does not translate by
+syntactic equality to the Hilbert implication constructor. The comparisons below are
+Hilbert proofs, using the constructed classical entailment instance and the derived
+Hilbert quantifier rules.
 -/
 
 @[expose] public section
@@ -41,8 +41,8 @@ private theorem fromNative (φ : NamedArithmeticSignature.Formula) (h : D φ) : 
   (NamedHilbertPropositional.system_provable_iff
     functionSymbols relationSymbols bound (system Γ) φ).mpr h
 
-/-- Universal congruence comes from proved native monotonicity, rather
-than from any assumed first-order entailment class. -/
+/-- Universal congruence comes from proved Hilbert monotonicity, rather than from any
+assumed first-order entailment class. -/
 theorem all_equivalence (x : ℕ) {φ ψ : NamedArithmeticSignature.Formula}
     (h : S ⊢ φ 🡘 ψ) : S ⊢ (NamedFiniteSyntax.Formula.all x φ) 🡘 (.all x ψ) := by
   apply E_intro
@@ -51,8 +51,8 @@ theorem all_equivalence (x : ℕ) {φ ψ : NamedArithmeticSignature.Formula}
   · exact fromNative Γ _ (NamedHilbertQuantifiers.all_mono
       functionSymbols relationSymbols bound Γ x (toNative Γ _ (K_right h)))
 
-/-- De Morgan for the actual native encodings follows from ordinary
-classical proof combinators; no semantic entailment argument is used. -/
+/-- De Morgan for the named connective encodings follows from ordinary classical proof
+combinators; no semantic entailment argument is used. -/
 theorem deMorgan_and (φ ψ : NamedArithmeticSignature.Formula) :
     S ⊢ ArithmeticNamedTranslation.disjunction (.neg φ) (.neg ψ) 🡘
       (.neg (ArithmeticNamedTranslation.conjunction φ ψ)) := by
@@ -65,8 +65,8 @@ theorem deMorgan_or (φ ψ : NamedArithmeticSignature.Formula) :
       (.neg (ArithmeticNamedTranslation.disjunction φ ψ)) := by
   exact ENN_of_E (ECC_of_E_of_E E_id (E_symm (dn (φ := ψ))))
 
-/-- Translation of source NNF negation is provably equivalent to the
-literal native negation, including both quantifier constructors. -/
+/-- Translation of source NNF negation is provably equivalent to the named negation,
+including both quantifier constructors. -/
 theorem nnf_neg {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
     ∀ (next : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ),
       S ⊢ formula next bn fn (∼φ) 🡘 (.neg (formula next bn fn φ)) := by
@@ -94,8 +94,8 @@ theorem nnf_neg {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
       intro next bn fn
       exact E_trans (all_equivalence Γ next (ih (next+1) (Matrix.vecCons next bn) fn)) dn
 
-/-- Source implication is NNF disjunction with NNF negation. Its target
-has an actual proof-equivalence to the printed implication constructor. -/
+/-- Source implication is NNF disjunction with NNF negation. Its target has a
+proof-equivalence to the implication constructor. -/
 theorem implication {ξ : Type} {n : ℕ} (φ ψ : Semiformula ℒₒᵣ ξ n)
     (next : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ) :
     S ⊢ formula next bn fn (φ 🡒 ψ) 🡘
@@ -103,8 +103,8 @@ theorem implication {ξ : Type} {n : ℕ} (φ ψ : Semiformula ℒₒᵣ ξ n)
   have hn := nnf_neg Γ φ next bn fn
   exact E_trans (EAA_of_E_of_E hn E_id) (E_symm ECAN)
 
-/-- A source MP step is realized by actual ordered native MP after the
-proved implication comparison. -/
+/-- A source MP step is realized by ordered Hilbert MP after the proved implication
+comparison. -/
 theorem modusPonens {ξ : Type} {n : ℕ} (φ ψ : Semiformula ℒₒᵣ ξ n)
     (next : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ)
     (hp : D (formula next bn fn φ)) (hi : D (formula next bn fn (φ 🡒 ψ))) :
@@ -153,8 +153,8 @@ private theorem body_absent {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ
       exact hb j (by simpa only [Matrix.cons_val_succ] using hi)
   · exact hf i hi
 
-/-- The actual two-way alpha step is carried by computed substitutions
-under one common inner seed. Both query names are below all inner binders. -/
+/-- The two-way alpha step is carried by computed substitutions under one common inner
+seed. Both query names are below all inner binders. -/
 private theorem all_alpha_body {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ (n+1))
     (negative : Bool) (low high : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ)
     (hlt : low < high) (hb : ∀ i, bn i < low) (hf : ∀ i, fn i < low) :
@@ -207,9 +207,9 @@ private theorem all_alpha_body {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ
     (fromNative Γ _ (NamedHilbertQuantifiers.all_rename_forward functionSymbols relationSymbols bound Γ
       high low _ _ hfr' hr' hbv))
 
-/-- Changing the fresh binder seed has a native proof comparison. Inner
-binders are changed first; only then is the outer binder renamed through
-its genuine computed capture-free substitution. -/
+/-- Changing the fresh binder seed has a Hilbert proof comparison. Inner binders are
+changed first; only then is the outer binder renamed through its computed capture-free
+substitution. -/
 theorem seed_mono {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
     ∀ (low high : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ),
       (∀ i, bn i < low) → (∀ i, fn i < low) → low ≤ high →
@@ -245,9 +245,8 @@ theorem seed_mono {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
         exact E_trans (ENN_of_E (all_equivalence Γ low (ENN_of_E hbody)))
           (ENN_of_E (all_alpha_body Γ φ true low high bn fn hlt hb hf))
 
-/-- The LK universal eigenvariable body is converted by the exact free
-rewrite. The only side condition is the actual named antecedent absence
-needed by the printed distribution scheme. -/
+/-- The LK universal eigenvariable body is converted by the exact free rewrite. The only
+side condition is the named antecedent absence needed by the distribution scheme. -/
 theorem lk_all_under (φ : Semiproposition ℒₒᵣ 1) (next : ℕ) (fn : ℕ → ℕ)
     (δ : NamedArithmeticSignature.Formula) (hδ : next ∉ δ.freeVariables)
     (h : D (.imp δ (formula (next+1) ![] (freeCons next fn) (Rewriting.free φ)))) :
@@ -263,9 +262,9 @@ theorem lk_all_under (φ : Semiproposition ℒₒᵣ 1) (next : ℕ) (fn : ℕ �
   exact NamedHilbertQuantifiers.all_intro_under functionSymbols relationSymbols bound Γ
     next δ (formula (next+1) ![next] fn φ) hδ hb
 
-/-- The LK existential step is an actual native implication. Its source
-substitution is compared syntactically, and the one-step seed change is
-proved by alpha conversion; no semantic compatibility premise is used. -/
+/-- The LK existential step is a Hilbert implication. Its source substitution is compared
+syntactically, and the one-step seed change is proved by alpha conversion; no semantic
+compatibility premise is used. -/
 theorem lk_exs_instance (φ : Semiproposition ℒₒᵣ 1) (t : SyntacticTerm ℒₒᵣ)
     (next : ℕ) (fn : ℕ → ℕ) (hf : ∀ i, fn i < next) :
     D (.imp (formula next ![] fn (φ/[t])) (formula next ![] fn (∃¹ φ))) := by
@@ -285,8 +284,8 @@ theorem lk_exs_instance (φ : Semiproposition ℒₒᵣ 1) (t : SyntacticTerm �
     (toNative Γ _ (K_left he)) hi
 
 
-/-- The conjunction step in a one-sided source sequent is an actual
-propositional proof in the constructed native entailment. -/
+/-- The conjunction step in a one-sided source sequent is a propositional proof in the
+constructed Hilbert entailment. -/
 theorem disjunction_and (φ ψ δ : NamedArithmeticSignature.Formula)
     (hp : S ⊢ φ ⋎ δ) (hq : S ⊢ ψ ⋎ δ) : S ⊢ (φ ⋏ ψ) ⋎ δ := by
   apply of_C_of_C_of_A ?_ or₂ hp
@@ -295,7 +294,7 @@ theorem disjunction_and (φ ψ δ : NamedArithmeticSignature.Formula)
   apply FiniteContext.deduct
   exact or₁ ⨀ (K_intro FiniteContext.by_axm₁ FiniteContext.by_axm₀)
 
-/-- The native cut step combines two actual disjunction proofs. -/
+/-- The Hilbert cut step combines two disjunction proofs. -/
 theorem disjunction_cut (φ δ : NamedArithmeticSignature.Formula)
     (hp : S ⊢ φ ⋎ δ) (hn : S ⊢ (∼φ) ⋎ δ) : S ⊢ δ := by
   apply of_C_of_C_of_A ?_ C_id hp
@@ -304,8 +303,8 @@ theorem disjunction_cut (φ δ : NamedArithmeticSignature.Formula)
   apply FiniteContext.deduct
   exact of_O ((N_iff_CO.mp FiniteContext.by_axm₀) ⨀ FiniteContext.by_axm₁)
 
-/-- Universal quantification commutes past a disjunct with the printed
-absence guard. The derivation uses instantiation, Gen and distribution. -/
+/-- Universal quantification commutes past a disjunct with the absence guard. The
+derivation uses instantiation, Gen and distribution. -/
 theorem all_disjunction_right (x : ℕ) (φ δ : NamedArithmeticSignature.Formula)
     (hx : x ∉ δ.freeVariables) :
     D (.imp (.all x (ArithmeticNamedTranslation.disjunction φ δ))

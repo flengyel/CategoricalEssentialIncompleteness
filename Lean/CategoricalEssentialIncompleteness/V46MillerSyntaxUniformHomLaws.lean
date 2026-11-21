@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFoldUnique
 
-/-! # Constructor laws for every morphism from the actual word algebra
+/-! # Constructor laws for every morphism from the word algebra
 
-The candidate relation is the graph of the supplied algebra morphism.
-Its guarded root law follows from that morphism's constructor equation,
-the actual polynomial chart naturality, and the literal constructor graph.
-The target coefficient objects and parameter families remain arbitrary.
+The candidate relation is the graph of the supplied algebra morphism. Its guarded root
+law follows from that morphism's constructor equation, the polynomial chart
+naturality, and the constructor graph. The target coefficient objects and parameter
+families remain arbitrary.
 -/
 
 @[expose] public section
@@ -121,7 +121,7 @@ private theorem constructor_factorization {X Y Z : Over R}
   rw [hpair]
   exact hvalue
 
-/-- Every actual algebra morphism satisfies the guarded recursive root law. -/
+/-- Every algebra morphism satisfies the guarded recursive root law. -/
 theorem candidateRelation_rootLaw :
     UniformRootLaw p q (fun r => r∈R.obj.support)
       (operationRelation (algebraTermOperation B) (algebraFormulaOperation B))

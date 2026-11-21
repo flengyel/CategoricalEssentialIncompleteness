@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCaptu
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptionBranches
 
-/-! # The actual quantifier conditional uses originals and propagates genuine options -/
+/-! # The quantifier conditional uses originals and propagates options -/
 
 @[expose] public section
 
@@ -134,8 +134,8 @@ theorem quantifierSubstitutionResult_value (q : Obj T M Q) :
       erw [hg,optionCode_fail T M (C := Y) q]
       simp only [hyx,hc,↓reduceIte,false_and]
 
-/-- The same actual operation, in opaque scalar form for applying the
-five separately proved coordinate equations. -/
+/-- The same operation, in opaque scalar form for applying the five separately proved
+coordinate equations. -/
 theorem quantifierSubstitutionResult_coordinate_value (q : Obj T M Q) :
     optionCode T M Y ((F T M).map (S).quantifierSubstitutionResult q) =
       quantifierResultValue V σ π d

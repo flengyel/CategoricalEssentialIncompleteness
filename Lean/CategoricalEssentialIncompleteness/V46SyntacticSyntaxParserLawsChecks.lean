@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
 
-/-! # Statement checks in `V46SyntacticSyntaxParserLawsChecks` -/
+/-! # Postfix constructors are accepted and preserve every stack frame -/
 
 @[expose] public section
 noncomputable section

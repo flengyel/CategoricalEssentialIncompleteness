@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration
 
-/-! # Actual native PA axioms, actual literal codes and the indexed extension condition -/
+/-! # Named PA axioms, literal codes and the indexed extension condition -/
 
 @[expose] public section
 noncomputable section

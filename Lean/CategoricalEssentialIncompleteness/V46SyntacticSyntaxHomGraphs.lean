@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorVa
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidateValues
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
 
-/-! # Actual algebra-hom equations give the guarded scalar constructor laws -/
+/-! # Algebra-hom equations give the guarded scalar constructor laws -/
 
 @[expose] public section
 
@@ -32,8 +32,8 @@ variable (f : constantFamily P (termCarrier a b) ⟶ B.a.1)
 variable (g : constantFamily P (formulaCarrier a b) ⟶ B.a.2)
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The candidate term equation follows from the actual term component
-of an algebra-hom equation. Candidate values are not assumed in advance. -/
+/-- The candidate term equation follows from the term component of an algebra-hom
+equation. Candidate values are not assumed in advance. -/
 theorem candidateTermEquation
     (hcomm : (a.withParameters P).eval.map
       ((f, g) : (constantFamily P (termCarrier a b),

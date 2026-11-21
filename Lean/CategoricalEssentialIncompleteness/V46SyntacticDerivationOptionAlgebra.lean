@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPow
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationCheckedRoot
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPolynomialComparison
 
-/-! The total option algebra and validator for the actual finite rule presentation. -/
+/-! The total option algebra and validator for the finite rule presentation. -/
 
 @[expose] public section
 noncomputable section
@@ -38,8 +38,8 @@ def component (Q : Over F) (i : Fin (N + 1)) {Z : D} (h : R.ruleObject Q i ⟶ Z
     Category.comp_id, OptionPowers.collect_some,
     OptionPowers.liftRoot_some, CheckedRoot.operation_matching]
 
-/-- The supplied H_R-algebra is used only on the actual ordered-premise
-pullbacks. Every other branch is a computed mismatch or child failure. -/
+/-- The supplied H_R-algebra is used only on the ordered-premise pullbacks. Every other
+branch is a computed mismatch or child failure. -/
 def algebra (Q : Over F) (α : R.inference.obj Q ⟶ Q) :
     Endofunctor.Algebra (PolynomialComparison.ordinary R) where
   a := OptionSyntax.obj Q.left
@@ -49,8 +49,8 @@ def algebra (Q : Over F) (α : R.inference.obj Q ⟶ Q) :
 def judgementAlgebra : R.inference.obj (Over.mk (𝟙 F)) ⟶ Over.mk (𝟙 F) :=
   Over.homMk (R.inference.obj (Over.mk (𝟙 F))).hom (by simp)
 
-/-- Validation is an actual total algebra, hence its fold is obtained from
-the finite-tree initiality proved in 5.5. Its success fiber is not assumed. -/
+/-- Validation is a total algebra, hence its fold is obtained from the finite-tree
+initiality proved in 5.5. Its success fiber is not assumed. -/
 def validator : Endofunctor.Algebra (PolynomialComparison.ordinary R) where
   a := OptionSyntax.obj F
   str := Sigma.desc (fun i => component R E (Over.mk (𝟙 F)) i

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDyadicSeparation
 public import CategoricalEssentialIncompleteness.V46MillerCategoryRelative
 
-/-! # The actual first-digit separator of the two coordinate cuts
+/-! # The first-digit separator of the two coordinate cuts
 
 One fixed finite-table program reads the first binary digit of coordinate n.
 Its output is total for every binary oracle. The decided set can depend on
@@ -58,7 +58,7 @@ theorem coordinate_first_one (p : Bits) (n : ℕ) (h : n ∈ upperCut (rho p)) :
     p (Nat.pair n 0) = 1 :=
   first_one_of_gt (fun j => p (Nat.pair n j)) h
 
-/-- The printed C_p, with the fixed recursive coordinate pairing. -/
+/-- The C_p, with the fixed recursive coordinate pairing. -/
 def separator (p : Bits) : Set ℕ := {n | p (Nat.pair n 0) = 0}
 
 theorem separates_rho (p : Bits) :
@@ -131,8 +131,8 @@ theorem decisionIndex_eval (p : Bits) (n : ℕ) :
       exact Part.mem_some _
     · exact (Part.mem_some_iff.mp hy).symm
 
-/-- Fixed-p recursiveness follows from the actual full oracle-machine
-comparison, and concerns the numerical VALUE as well as totality. -/
+/-- Fixed-p recursiveness follows from the full oracle-machine comparison, and concerns
+the numerical VALUE as well as totality. -/
 theorem decision_recursiveIn (p : Bits) :
     Nat.RecursiveIn (OracleComputation.oracleSet (OracleRelative.oracleSupport p))
       (fun n => Part.some (decision p n)) :=

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsStable
 
 
-/-! # Statement checks in `V46MillerListsStableChecks` -/
+/-! # Stable lists with the original nil and adjoin codes -/
 
 @[expose] public section
 noncomputable section

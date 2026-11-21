@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks
 
 
-/-! # Statement checks in `V46MillerSentenceAxiomPullbacksChecks` -/
+/-! # External formula-word axioms on a sentence pullback -/
 
 @[expose] public section
 noncomputable section

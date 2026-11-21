@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawSums
 
 
-/-! # Statement checks in `V46MillerSyntaxRawSumsChecks` -/
+/-! # Literal tagged sums in every uniform parameter slice -/
 
 @[expose] public section
 noncomputable section

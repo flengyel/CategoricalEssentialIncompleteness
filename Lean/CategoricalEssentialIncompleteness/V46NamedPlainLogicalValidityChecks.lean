@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainLogicalValidity
 
 
-/-! # Statement checks in `V46NamedPlainLogicalValidityChecks` -/
+/-! # Soundness of the constructed standard sentence derivations -/
 
 @[expose] public section
 noncomputable section

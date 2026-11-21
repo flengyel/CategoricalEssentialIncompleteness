@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPullback
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationPullbackChecks` -/
+/-! # The interpreted validator and successful derivation pullback -/
 
 @[expose] public section
 noncomputable section

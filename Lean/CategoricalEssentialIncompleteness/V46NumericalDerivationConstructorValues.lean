@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46NumericalDerivationWordConst
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
 public import CategoricalEssentialIncompleteness.V46NumericalNamedValueCertificate
 
-/-! # The literal numerical finite-rule tree constructor
+/-! # The numerical finite-rule tree constructor
 
-The numerical input comparison is made from the ordered polynomial
-comparison and the actual tuple-code coefficient counits. Its value is
-the printed postfix constructor, with no comparison hypothesis.
+The numerical input comparison is made from the ordered polynomial comparison and the
+tuple-code coefficient counits. Its value is the postfix constructor, with no
+comparison hypothesis.
 -/
 
 @[expose] public section
@@ -38,8 +38,8 @@ abbrev treeInputPredicate : PredicateCategory 𝗧𝗔 :=
   ((SyntaxPolynomial.jointFunctor (treeTermPolynomial R N) (treeFormulaPolynomial R N)).obj
     (oneSortRaw R N).a).1
 
-/-- Projection, coefficient reindexing, and the polynomial comparison are
-all actual isomorphisms, including the nullary product. -/
+/-- Projection, coefficient reindexing, and the polynomial comparison are all
+isomorphisms, including the nullary product. -/
 def rawTreeInputIso :
     (SyntacticSyntax.constructorFunctor R N).obj (oneSortNormalized R N).a ≅
       E.functor.obj (treeInputPredicate R N) :=
@@ -62,8 +62,8 @@ def treeConstructorInputIso :
       (wordPresentationIso (treePredicate R N)).symm ≪≫
     rawTreeInputIso R N ≪≫ wordPresentationIso (treeInputPredicate R N)
 
-/-- The commuting square is derived from the checked raw constructor
-and the proved naturality of the actual predicate coordinate chart. -/
+/-- The commuting square is derived from the checked raw constructor and the proved
+naturality of the predicate coordinate chart. -/
 theorem treeConstructor_square :
     (literalOneSort R N).str ≫ (Iso.refl (treeObject R N)).hom =
       (treeConstructorInputIso R N).hom ≫
@@ -80,8 +80,8 @@ theorem treeConstructor_square :
     treeTermPolynomial,treeFormulaPolynomial,oneSortRaw,rawPairAlgebra,
     SyntacticSyntax.plainPostfixAlgebra,treePredicate] using h1)
 
-/-- The root word is the literal postfix constructor of its ordered
-raw polynomial input, for every numerical coefficient family. -/
+/-- The root word is the postfix constructor of its ordered raw polynomial input, for
+every numerical coefficient family. -/
 theorem treeConstructor_value
     (x : NumericalTuples.Point ((SyntacticSyntax.constructorFunctor R N).obj (treeObject R N))) :
     ((literalOneSort R N).str.toFun x).val =
@@ -131,8 +131,8 @@ theorem codeWordInclusion_tree :
   simpa only [codeTreeInclusion,rawTreeIso,Iso.trans_hom,Iso.symm_hom,
     ordinaryWordCarrierIso,algebra_forgetIso_hom,Category.assoc,codeWordInclusion,codeObject] using h
 
-/-- The successful constructor is compared to the literal ordinary-tree
-constructor with the original coefficient and ordered child inclusions. -/
+/-- The successful constructor is compared to the ordinary-tree constructor with the
+original coefficient and ordered child inclusions. -/
 theorem code_constructor_word :
     (codeAlgebra Q).str.left ≫ codeWordInclusion Q =
       InputGeometry.forget Q (codeAlgebra Q).a ≫
@@ -142,8 +142,8 @@ theorem code_constructor_word :
     (codeAlgebra Q).str.left (InputGeometry.forget Q (codeAlgebra Q).a)
     (codeTreeInclusion Q) (codeWordInclusion Q) (codeWordInclusion_tree Q) (code_constructor_tree Q)
 
-/-- This is the actual inference input: each child conclusion is matched
-to its prescribed premise by the original pullback before forgetting. -/
+/-- This is the inference input: each child conclusion is matched to its prescribed
+premise by the original pullback before forgetting. -/
 def successfulNodeInput
     (u : NumericalTuples.Point ((Q.inference.obj (codeAlgebra Q).a).left)) :
     NumericalTuples.Point ((PolynomialComparison.ordinary Q).obj (literalOrdinaryTree Q).a) :=
@@ -169,8 +169,8 @@ theorem literalOrdinaryTree_value
                 (ordinaryNodeInput Q x))).val) :=
   treeConstructor_value (PolynomialComparison.coefficients Q) N (ordinaryNodeInput Q x)
 
-/-- A successful inference node has exactly the printed root word. Output
-and computation witnesses remain existential properties of that word. -/
+/-- A successful inference node has exactly the root word. Output and computation
+witnesses remain existential properties of that word. -/
 theorem code_node
     (u : NumericalTuples.Point ((Q.inference.obj (codeAlgebra Q).a).left)) :
     ((codeAlgebra Q).str.left.toFun u).val =

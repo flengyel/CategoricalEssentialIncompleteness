@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionTraversal
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefillLaws
 
-/-! Internal PA composition and stack-frame laws for the actual numerical
-traversal. The root computations are the given globally total numeric functions. -/
+/-!
+Internal PA composition and stack-frame laws for the numerical traversal. The root
+computations are the given globally total numeric functions.
+-/
 
 @[expose] public section
 noncomputable section

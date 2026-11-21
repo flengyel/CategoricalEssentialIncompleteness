@@ -12,12 +12,12 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
 public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
 public import Mathlib.CategoryTheory.Functor.EpiMono
 
-/-! # Actual internal numerical equality on every uniform carrier
+/-! # Internal numerical equality on every uniform carrier
 
-The full numerical carrier has its ordinary equality test under the
-proved finite-geometry comparison. Every arbitrary uniform carrier
-embeds by the identity on values; monomorphism cancellation transports
-the actual diagonal pullback. No coefficient predicate is decided.
+The full numerical carrier has its ordinary equality test under the proved
+finite-geometry comparison. Every arbitrary uniform carrier embeds by the identity on
+values; monomorphism cancellation transports the diagonal pullback. No coefficient
+predicate is decided.
 -/
 
 @[expose] public section

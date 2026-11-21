@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAxiom
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersParameters
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFamily
 
-/-! # Cartesian numeral comparison of the actual Hilbert rule signature
+/-! # Cartesian numeral comparison of the Hilbert rule signature
 
-The two ordered MP children retain their own formulas. The comparison
-shares only the external numeral and uses the actual axiom pullback.
+The two ordered MP children retain their own formulas. The comparison shares only the
+external numeral and uses the axiom pullback.
 -/
 
 @[expose] public section
@@ -38,8 +38,8 @@ omit [FinitaryExtensive D] in
   apply prod.hom_ext <;> simp [constantParameter]
 
 omit [FinitaryExtensive D] in
-/-- Every actual constructor has the cartesian constant-parameter square,
-regardless of whether that constructor is monic or computable. -/
+/-- Every constructor has the cartesian constant-parameter square, regardless of whether
+that constructor is monic or computable. -/
 theorem constantParameter_pullback (f : X ⟶ Y) :
     IsPullback (constantParameter ε X) f (prod.map (𝟙 E) f) (constantParameter ε Y) := by
   refine IsPullback.mk' (constantParameter_natural ε f) ?_ ?_
@@ -60,8 +60,8 @@ theorem constantParameter_pullback (f : X ⟶ Y) :
       simpa only [Category.assoc,prod.map_snd,constantParameter,prod.lift_snd,Category.comp_id] using he
 
 omit [FinitaryExtensive D] in
-/-- Actual supplied maps are compared by proved equations; they need
-not reduce definitionally to the constant-parameter expression. -/
+/-- Supplied maps are compared by proved equations; they need not reduce definitionally to
+the constant-parameter expression. -/
 theorem constantParameter_natural_of_eq (f : X ⟶ Y)
     (kX : X ⟶ E ⨯ X) (kY : Y ⟶ E ⨯ Y)
     (hX : kX = constantParameter ε X) (hY : kY = constantParameter ε Y) :
@@ -138,8 +138,8 @@ abbrev singleRules : RulePresentation ArithmeticIndexedFamily.formula 2 :=
   firstOrderRules ArithmeticIndexedFamily.logical ArithmeticIndexedFamily.sentenceInclusion
     (fiberAxioms AxPA e) ArithmeticIndexedFamily.generalization ArithmeticIndexedFamily.implication
 
-/-- The coefficient maps are the actual constant numeral on logical,
-generalization and MP instances, and the proved axiom-fiber inclusion. -/
+/-- The coefficient maps are the constant numeral on logical, generalization and MP
+instances, and the proved axiom-fiber inclusion. -/
 def numeralRuleMap : ∀ i : Fin 3, (singleRules AxPA e).instances i ⟶
     (ArithmeticIndexedFamily.rules AxPA).instances i :=
   Fin.cases (coprod.map (fiberMap e ArithmeticIndexedFamily.logicalParameters) (fiberToFamily AxPA e))

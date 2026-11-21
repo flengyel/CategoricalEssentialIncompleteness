@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationConstructors
 
-/-! # Canonical polynomial input comparison for the actual PA numerical functor
+/-! # Canonical polynomial input comparison for the PA numerical functor
 
 Only finite products and coproducts are transported. The factorization
 below identifies the already proved raw-code comparison with these
@@ -188,8 +188,8 @@ theorem normalized_component_factorization (p : SyntaxPolynomial I)
     eqToIso_refl,Functor.mapIso_refl,Iso.refl_symm,Iso.refl_trans,Iso.trans_refl] using
     component_factorization s t c X Y X' Y' bX bY p
 
-/-- A proved literal constructor square becomes the actual algebra square
-for the canonical mapped structure maps. No universal property is supplied. -/
+/-- A proved constructor square becomes the algebra square for the canonical mapped
+structure maps. No universal property is supplied. -/
 theorem normalized_algebra_square (p : SyntaxPolynomial I)
     (p₀ : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) (p₁ : SyntaxPolynomial (PredicateCategory 𝗧𝗔))
     (pN : SyntaxPolynomial NumericalTuples.Object)

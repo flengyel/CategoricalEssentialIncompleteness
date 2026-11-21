@@ -8,13 +8,13 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawOrderedField
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsCharacterization
 
-/-! # Unstructured named models of the actual recursive RCF axioms
+/-! # Unstructured named models of the recursive RCF axioms
 
-An input has only the original total interpretations of the bounded named
-signature. The literal finite matrices construct its ordered field, exact
-constructor/lt diagrams identify the interpretations, and the actual
-positive-square and odd-Horner schemes prove real closure. No field or
-order instance is an input of the final model characterization.
+An input has only the original total interpretations of the bounded named signature.
+The finite matrices construct its ordered field, exact constructor/lt diagrams
+identify the interpretations, and the positive-square and odd-Horner schemes prove
+real closure. No field or order instance is an input of the final model
+characterization.
 -/
 
 @[expose] public section
@@ -24,7 +24,7 @@ open OrderedFieldSyntax RealClosedAxioms
 universe u
 variable {K : Type u}
 
-/-- Actual word satisfaction, with the original literal formula code. -/
+/-- Word satisfaction, with the original literal formula code. -/
 def ModelsWords (M : Interpretation K) (A : Set ℕ) : Prop := ∀ word∈A,
   ∃ φ : Formula,formulaCode φ=word ∧ ∀ ρ : ℕ → K,Holds M φ ρ
 
@@ -67,8 +67,8 @@ private theorem nullary_comparison (M : Interpretation K) (symbol : FunctionSymb
         omega)
       exact congrArg (fun s => M.functions ⟨0,by decide⟩ s Fin.elim0) hs
 
-/-- All arities and every actual symbol label are compared, including the
-nullary c_n labels. The structure uses the original total functions. -/
+/-- All arities and every symbol label are compared, including the nullary c_n labels. The
+structure uses the original total functions. -/
 theorem functions_comparison (M : Interpretation K) (hM : MatricesValid M) :
     let : Field K := fieldStructure M hM
     let : LinearOrder K := linearOrderStructure M hM
@@ -153,9 +153,9 @@ theorem realClosed_of_models (M : Interpretation K) (h : ModelsWords M RCFAxiomW
   obtain ⟨φ,hcode,hvalid⟩ := h word hw
   exact ⟨φ,hcode,fun ρ => (holds_comparison M hM φ ρ).mp (hvalid ρ)⟩
 
-/-- Exact identification for arbitrary actual total named structures.
-The ordered field and all comparisons are constructed in the forward
-implication; they are not extra premises on the input model. -/
+/-- Exact identification for arbitrary total named structures. The ordered field and all
+comparisons are constructed in the forward implication; they are not extra premises on
+the input model. -/
 theorem modelsRCF_iff_exists_realization (M : Interpretation K) : ModelsWords M RCFAxiomWords ↔
     ∃ fieldInst : Field K,∃ orderInst : LinearOrder K,
       let : Field K := fieldInst
@@ -183,8 +183,8 @@ theorem modelsRCF_iff_exists_realization (M : Interpretation K) : ModelsWords M 
     rw [hfunctions,hrelations]
     exact hvalid ρ
 
-/-- The actual T_a adds exactly its literal cut words to this recursive
-field theory. No claim of truth is made for arbitrary consistent Γ. -/
+/-- The T_a adds exactly its literal cut words to this recursive field theory. No claim of
+truth is made for arbitrary consistent Γ. -/
 theorem modelsTheory_iff (M : Interpretation K) (a : Point) :
     ModelsWords M (theoryAxioms a) ↔ ModelsWords M RCFAxiomWords ∧ ModelsWords M (cutAxioms a) := by
   constructor

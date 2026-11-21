@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerDerivationWordCarrier
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionPowers
 
-/-! # Actual finite-power coordinates of uniform derivation words
+/-! # Finite-power coordinates of uniform derivation words
 
 The raw tuple uses the parser's left-associated ordered pairing. Only
 the finite structural charts are computed here; no extension of an

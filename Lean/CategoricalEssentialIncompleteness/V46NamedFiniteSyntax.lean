@@ -7,7 +7,7 @@ module
 
 public import Mathlib.Data.List.OfFn
 
-/-! # Literal finite syntax with named binders
+/-! # Finite syntax with named binders
 
 These external trees retain all names and ordered children. The comparison
 with standard arithmetic postfix codes is a separate construction.

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationPolynomialComparison
 
 
-/-! # Statement checks in `V46SyntacticDerivationPolynomialComparisonChecks` -/
+/-! # Finite rule coproducts and the ordered constructor polynomial -/
 
 @[expose] public section
 noncomputable section

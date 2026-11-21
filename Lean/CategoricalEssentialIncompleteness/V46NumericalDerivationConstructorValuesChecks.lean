@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationConstructorValues
 
 
-/-! # Statement checks in `V46NumericalDerivationConstructorValuesChecks` -/
+/-! # The numerical finite-rule tree constructor -/
 
 @[expose] public section
 noncomputable section

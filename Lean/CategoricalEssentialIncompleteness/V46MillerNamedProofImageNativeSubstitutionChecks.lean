@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitution
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeSubstitutionChecks` -/
+/-! # Substitution states, framed constructor equations, and equal binders -/
 
 @[expose] public section
 noncomputable section

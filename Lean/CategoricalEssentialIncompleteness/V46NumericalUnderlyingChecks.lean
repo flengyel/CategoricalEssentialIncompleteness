@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
 
 
-/-! # Statement checks in `V46NumericalUnderlyingChecks` -/
+/-! # The underlying carrier functor for numerical tuples -/
 
 @[expose] public section
 noncomputable section

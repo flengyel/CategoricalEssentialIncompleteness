@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainSubstitutionValues
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainSubstitutionValuesChecks` -/
+/-! # Categorical substitution outputs have the proved numeric graph values -/
 
 @[expose] public section
 noncomputable section

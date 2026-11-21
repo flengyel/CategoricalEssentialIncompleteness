@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformHomLaws
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformHomLawsChecks` -/
+/-! # Constructor laws for every morphism from the word algebra -/
 
 @[expose] public section
 noncomputable section

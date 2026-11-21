@@ -26,9 +26,9 @@ namespace CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel
 
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Corollary 6.3 in the coded syntactic presentation, with an arbitrary
-chosen Turing morphism and coproduct isomorphism. The model interpretation
-and the constructed finite-switch program instantiate Corollary 3.3. -/
+/-- Corollary 7.3 in the coded syntactic presentation, with an arbitrary chosen Turing
+morphism and coproduct isomorphism. The model interpretation and the constructed
+finite-switch program instantiate Corollary 3.3. -/
 theorem syntactic_pair_inseparable_v46_of_model
     (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
     (τ : nearProd (omegaObject T) (omegaObject T) ⟶ omegaObject T)

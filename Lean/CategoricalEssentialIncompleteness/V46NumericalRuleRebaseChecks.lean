@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalRuleRebase
 
 
-/-! # Statement checks in `V46NumericalRuleRebaseChecks` -/
+/-! # Changing formula coordinates in numerical derivation algebras -/
 
 @[expose] public section
 noncomputable section

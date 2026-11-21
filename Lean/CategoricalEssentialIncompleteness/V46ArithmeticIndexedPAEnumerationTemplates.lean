@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords
 public import Mathlib.Tactic.FinCases
 
-/-! # The seventeen actual arithmetic/order seed templates
+/-! # The seventeen arithmetic/order seed templates
 
-The names are numerical inputs of the word graphs. Instantiation returns
-native named syntax, and the graph compiler is proved to return its literal
-postfix code. The existential-variable freshness condition is retained.
+The names are numerical inputs of the word graphs. Instantiation returns named syntax,
+and the graph compiler is proved to return its postfix code. The existential-variable
+freshness condition is retained.
 -/
 
 @[expose] public section

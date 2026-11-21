@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentFamilies
 
-/-! The invariant compares value arrows over one unchanged parameter. -/
+/-! The invariant compares value morphisms over one unchanged parameter. -/
 
 @[expose] public section
 noncomputable section

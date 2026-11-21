@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonMatrices
 
 
-/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonMatricesChecks` -/
+/-! # Direct comparison of the arithmetic/order axiom matrices -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

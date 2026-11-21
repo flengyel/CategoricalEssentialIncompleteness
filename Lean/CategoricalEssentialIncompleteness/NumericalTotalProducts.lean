@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.NumericalPartialProducts
 /-!
 # Total numerical pairing and categorical products
 
-Partial pairing of total arrows is the mediating arrow of the numerical
-product cone. The functor to PERs sends this pairing to the PER pairing,
-through the proved product comparison isomorphism.
+Partial pairing of total morphisms is the mediating morphism of the numerical product
+cone. The functor to PERs sends this pairing to the PER pairing, through the proved
+product comparison isomorphism.
 -/
 
 @[expose] public section
@@ -23,7 +23,7 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- Pairing of total numerical arrows is total. -/
+/-- Pairing of total numerical morphisms is total. -/
 theorem partialPair_isTotal {W X Y : Numerical} {f : W ⟶ X} {g : W ⟶ Y}
     (hf : RestrictionCategory.isTotal f) (hg : RestrictionCategory.isTotal g) :
     RestrictionCategory.isTotal (partialPair f g) := by

@@ -11,10 +11,9 @@ public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 
 /-! # The explicitly presented named signature and its canonical push
 
-The source signature is PA-described. Its words retain those labels.
-The canonical realization is the actual pointPresentation push of this
-constructed algebra, rather than a claim that a chosen inverse-equivalence
-counit fixes word coordinates.
+The source signature is PA-described. Its words retain those labels. The canonical
+realization is the pointPresentation push of this constructed algebra, rather than a
+claim that a chosen inverse-equivalence counit fixes word coordinates.
 -/
 
 @[expose] public section
@@ -107,9 +106,8 @@ section Push
 variable {Q : Uniform.Family} {D : Type*} [Category D] [Regular D] [FinitaryExtensive D]
 variable (E : Total.TotalCategory Q ≌ D) (p q : SyntaxPolynomial (Total.TotalCategory Q))
 
-/-- Actual polynomial transport through an equivalence, starting from
-the supplied constructed source algebra, with only mapCoefficients-id
-normalizations at its source. -/
+/-- Polynomial transport through an equivalence, starting from the supplied constructed
+source algebra, with only mapCoefficients-id normalizations at its source. -/
 def pushedData (A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor p q))
     (hA : IsInitial A) (hs : ∀ R,IsInitial (SyntaxPolynomial.algebraWithParameters p q A R)) :
     Σ B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor

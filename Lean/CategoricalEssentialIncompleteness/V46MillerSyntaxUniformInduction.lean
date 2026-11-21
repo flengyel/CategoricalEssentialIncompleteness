@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSize
 
 /-! # Arbitrary-property induction with all uniform coefficient objects
 
-The induction predicate is external and unrestricted. Only the structural
-size function is read through the old arithmetic parser; all actual word
-and coefficient membership conditions remain uniform positive predicates.
+The induction predicate is external and unrestricted. Only the structural size
+function is read through the old arithmetic parser; all word and coefficient
+membership conditions remain uniform positive predicates.
 -/
 
 @[expose] public section

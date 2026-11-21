@@ -24,8 +24,8 @@ namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (U V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 
-/-- The already identified intrinsic occurrence morphism, chosen by
-sort; both codomains are the same actual list object. -/
+/-- The already identified intrinsic occurrence morphism, chosen by sort; both codomains
+are the same list object. -/
 def intrinsicOccurrences : (formula : Bool) →
     @Quiver.Hom (PredicateCategory T) inferInstance
       (syntaxCarrier V σ π d formula) (listObject T V)

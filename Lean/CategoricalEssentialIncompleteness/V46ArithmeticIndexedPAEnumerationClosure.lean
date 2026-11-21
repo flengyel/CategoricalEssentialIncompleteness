@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationWords
 public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
 
-/-! # Positive finite records for actual named universal closure
+/-! # Positive finite records for named universal closure
 
-The record peels the outer quantifiers. Its standard interpretation is
-proved equivalent to the native UniversalClosure relation. The accepted
-inner formula is an existential witness rather than an additional label.
+The record peels the outer quantifiers. Its standard interpretation is proved
+equivalent to the named UniversalClosure relation. The accepted inner formula is an
+existential witness rather than an additional label.
 -/
 
 @[expose] public section
@@ -75,8 +75,8 @@ theorem allGraph_formulaCode (name : ℕ) (φ : Formula) :
   apply (allGraph_eval _ _ _).mpr
   rfl
 
-/-- Each standard finite record is an actual finite sequence of named
-quantifier constructors; no nonstandard Set initiality is asserted. -/
+/-- Each standard finite record is a finite sequence of named quantifier constructors; no
+nonstandard Set initiality is asserted. -/
 theorem closure_run_codes (φ ψ : Formula) (names : ℕ)
     (hr : (SyntacticDerivation.Records.run closureStep).val.Evalb
       ![names,formulaCode ψ,formulaCode φ]) : UniversalClosure φ ψ := by

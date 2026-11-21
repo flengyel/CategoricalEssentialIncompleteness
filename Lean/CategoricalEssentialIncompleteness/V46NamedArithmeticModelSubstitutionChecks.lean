@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelSubstitution
 
 
-/-! # Statement checks in `V46NamedArithmeticModelSubstitutionChecks` -/
+/-! # A fixed finite source formula may receive a nonstandard closed term -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

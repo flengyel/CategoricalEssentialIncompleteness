@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparability
 
 
-/-! # Statement checks in `V46MillerCutInseparabilityChecks` -/
+/-! # Separators of the lower and upper cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

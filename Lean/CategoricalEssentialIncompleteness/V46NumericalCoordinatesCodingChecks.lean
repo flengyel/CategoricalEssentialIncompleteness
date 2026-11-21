@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesCoding
 
 
-/-! # Statement checks in `V46NumericalCoordinatesCodingChecks` -/
+/-! # Effective coefficient coordinates at the tuple dimension -/
 
 @[expose] public section
 noncomputable section

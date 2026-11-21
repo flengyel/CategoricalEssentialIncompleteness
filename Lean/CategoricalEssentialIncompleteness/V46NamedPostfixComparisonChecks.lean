@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
 
 
-/-! # Statement checks in `V46NamedPostfixComparisonChecks` -/
+/-! # Named finite syntax and standard accepted words -/
 
 @[expose] public section
 noncomputable section

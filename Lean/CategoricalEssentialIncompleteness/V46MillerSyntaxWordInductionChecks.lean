@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxWordInduction
 
 
-/-! # Statement checks in `V46MillerSyntaxWordInductionChecks` -/
+/-! # Arbitrary-property induction on the original standard syntax words -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

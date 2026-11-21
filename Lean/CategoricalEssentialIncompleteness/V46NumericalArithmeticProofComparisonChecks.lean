@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofComparison
 
 
-/-! # Statement checks in `V46NumericalArithmeticProofComparisonChecks` -/
+/-! # Arithmetic proof codes, canonical source proofs and fixed Prov_Gamma -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ModelLogicalSoundness
 
 
-/-! # Statement checks in `V46ModelLogicalSoundnessChecks` -/
+/-! # Semantic propositional schemes with an opaque model functor -/
 
 @[expose] public section
 noncomputable section

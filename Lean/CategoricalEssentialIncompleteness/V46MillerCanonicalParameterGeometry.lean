@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSquares
 
 
-/-! # Definitions and theorems in `V46MillerCanonicalParameterGeometry` -/
+/-! # Instantiation and equality under change of parameters -/
 
 @[expose] public section
 noncomputable section

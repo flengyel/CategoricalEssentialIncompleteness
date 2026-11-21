@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplication
 
 
-/-! # Statement checks in `V46MillerTheoryDomainApplicationChecks` -/
+/-! # The categorical domain argument for the Miller theory images -/
 
 @[expose] public section
 noncomputable section
@@ -53,7 +53,7 @@ example (a : Point) (ha : IsMiller a) (Γ : Set ℕ)
 
 
 
-/- The idempotent is the actual chosen sentence-conclusion range. -/
+/- The idempotent is the chosen sentence-conclusion range. -/
 example (a : Point) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (Uniform.Family.ofPoint a) (·∈Γ)) :
     theoremIdem a Γ hΓ=Total.toSplitIdem
@@ -101,7 +101,7 @@ example (a : Point) (Γ : Set ℕ)
         OrderedFieldSyntax.functionSymbols OrderedFieldSyntax.relationSymbols OrderedFieldSyntax.bound Γ hΓ :=
   sentenceTheory_mono a Γ hΓ hext
 
-/- Coverage is relative to the actual proper sentence carrier. -/
+/- Coverage is relative to the proper sentence carrier. -/
 example (a : Point) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (Uniform.Family.ofPoint a) (·∈Γ)) :
     theoremIdem a Γ hΓ⊔Idem.pull (negation a) (theoremIdem a Γ hΓ)=⊤ ↔

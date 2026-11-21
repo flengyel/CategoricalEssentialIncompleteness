@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlyingCoproducts
 
 
-/-! # Statement checks in `V46NumericalUnderlyingCoproductsChecks` -/
+/-! # Finite coproducts on the numerical carriers -/
 
 @[expose] public section
 noncomputable section

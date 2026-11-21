@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticUniformIndependent
 
 
-/-! # Statement checks in `V46ArithmeticUniformIndependentChecks` -/
+/-! # Uniform independent sentences for the indexed arithmetic family -/
 
 @[expose] public section
 noncomputable section

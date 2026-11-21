@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxEvaluation
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTrace
 
-/-! # Constructor framing and concatenation for the actual uniform evaluator
+/-! # Constructor framing and concatenation for the uniform evaluator
 
-The trace stores the original ordered input records. Its transitions
-are the actual arbitrary algebra operations; only finite computation
-witnesses are existential. Framing applies to successful computations,
-so an ambient tail cannot supply a missing child of the original word.
+The trace stores the original ordered input records. Its transitions are the arbitrary
+algebra operations; only finite computation witnesses are existential. Framing applies
+to successful computations, so an ambient tail cannot supply a missing child of the
+original word.
 -/
 
 @[expose] public section

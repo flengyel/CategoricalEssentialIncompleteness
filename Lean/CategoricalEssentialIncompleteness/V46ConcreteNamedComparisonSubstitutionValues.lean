@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionHom
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBraidedValues
 
-/-! # Actual categorical substitution outputs have the proved numeric graph values -/
+/-! # Categorical substitution outputs have the proved numeric graph values -/
 
 @[expose] public section
 

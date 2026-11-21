@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46AmbientSliceProducts
 public import CategoricalEssentialIncompleteness.V46RestrictionProductCategory
 public import CategoricalEssentialIncompleteness.V46PartialSliceTuring
 
-/-! # Binary restriction products in the actual monic partial-map slice -/
+/-! # Binary restriction products in the monic partial-map slice -/
 
 @[expose] public section
 

@@ -81,8 +81,8 @@ theorem conclusion_square (Γ : Carrier) :
     inclusion Γ ≫ allConclusion Γ = conclusion Γ ≫ numericalSyntax.sentenceInclusion :=
   (isPullback Γ).w
 
-/-- The support is exactly the set of original valid derivation words
-whose conclusion has an actual sentence lift. -/
+/-- The support is exactly the set of original valid derivation words whose conclusion has
+a sentence lift. -/
 theorem membership (Γ : Carrier) (p : ℕ) :
     (object Γ).support p ↔ ∃ q : NumericalTuples.Point (allProofs Γ), q.val = p ∧
       ∃ s : NumericalTuples.Point numericalSyntax.sentenceObject,

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixDecoding
 
 
-/-! # Statement checks in `V46NamedPostfixDecodingChecks` -/
+/-! # Every standard accepted word encodes a named finite tree -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

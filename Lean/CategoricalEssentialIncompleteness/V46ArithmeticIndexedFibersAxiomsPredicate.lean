@@ -8,10 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPullbacks
 
-/-! # The actual numeral pullback of the indexed axiom predicate
+/-! # The numeral pullback of the indexed axiom predicate
 
-The square is first proved for the literal pair presentation in every PA
-model. Its labels remain formula words and parameter/formula pairs.
+The square is first proved for the pair presentation in every PA model. Its labels
+remain formula words and parameter/formula pairs.
 -/
 
 @[expose] public section

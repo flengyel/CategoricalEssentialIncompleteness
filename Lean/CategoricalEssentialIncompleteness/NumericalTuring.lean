@@ -11,9 +11,9 @@ public import Mathlib.Computability.PartrecCode
 /-!
 # A Turing morphism for the numerical category
 
-The evaluator applies a coded partial recursive function to its numerical
-argument. The parameter theorem gives a total numerical arrow assigning a
-program to each parameter, with equality of the resulting partial maps.
+The evaluator applies a coded partial recursive function to its numerical argument.
+The parameter theorem gives a total numerical morphism assigning a program to each
+parameter, with equality of the resulting partial maps.
 -/
 
 @[expose] public section

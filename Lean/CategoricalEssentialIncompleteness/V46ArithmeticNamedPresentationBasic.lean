@@ -85,7 +85,7 @@ def term (n : ℕ) : Term → Semiterm ℒₒᵣ (Fin n) 0
         else .func .mul ![term n (children ⟨0,by omega⟩),term n (children ⟨1,by omega⟩)]
       else .func .zero Fin.elim0
 
-/-- Closing one name uses Foundation's actual bound-variable rewrite. -/
+/-- Closing one name uses Foundation's bound-variable rewrite. -/
 def bindName {n : ℕ} (x : Fin n) : Rew ℒₒᵣ (Fin n) 0 (Fin n) 1 :=
   Rew.bind Fin.elim0 (fun y => if y = x then .bvar 0 else .fvar y)
 

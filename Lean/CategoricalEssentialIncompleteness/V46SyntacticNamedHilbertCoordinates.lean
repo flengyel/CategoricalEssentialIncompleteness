@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 
-/-! # Genuine model points for literal named derivation instances -/
+/-! # Model points for named derivation instances -/
 
 @[expose] public section
 noncomputable section
@@ -95,14 +95,14 @@ theorem quantifier_point (x : ℕ) (φ : Fm) :
   erw [decode_quantifier,pairPoint_fst,pairPoint_snd,decode_formulaPoint]
   rfl
 
-/-- The public source is word-first, with its genuine nested chosen
-product point. No underlying product code is identified with a pair. -/
+/-- The public source is word-first, with its nested chosen product point. No underlying
+product code is identified with a pair. -/
 def substitutionPoint (x : ℕ) (φ : Fm) (t : Tm) :
     Obj 𝗣𝗔 ℕ (Y ⨯ (S).substitutionParameters) :=
   pairPoint 𝗣𝗔 ℕ (formulaPoint σ π d φ)
     (pairPoint 𝗣𝗔 ℕ (namePoint x) (termPoint σ π d t))
 
-/-- Scalar functions read only the actual three product projections. -/
+/-- Scalar functions read only the three product projections. -/
 theorem substitutionInput_scalar (k : ℕ → ℕ → ℕ → ℕ) (x : ℕ) (φ : Fm) (t : Tm) :
     k ((G).map (prod.fst : (S).substitutionParameters ⟶ variableCarrier)
         ((G).map prod.snd (substitutionPoint σ π d x φ t))).val
@@ -113,8 +113,8 @@ theorem substitutionInput_scalar (k : ℕ → ℕ → ℕ → ℕ) (x : ℕ) (φ
   simp only [substitutionPoint,pairPoint_fst,pairPoint_snd,
     termPoint_value,formulaPoint_value,namePoint]
 
-/-- The separately defined named free-for condition constructs an
-actual point of the categorical success pullback. -/
+/-- The separately defined named free-for condition constructs a point of the categorical
+success pullback. -/
 theorem admissiblePoint_exists (x : ℕ) (φ : Fm) (t : Tm) (h : φ.FreeFor x t) :
     ∃ a : Obj 𝗣𝗔 ℕ (S).admissibleSubstitution,
       (G).map (S).admissibleInclusion a = substitutionPoint σ π d x φ t := by
@@ -124,8 +124,8 @@ theorem admissiblePoint_exists (x : ℕ) (φ : Fm) (t : Tm) (h : φ.FreeFor x t)
   simpa only [substitutionPoint,pairPoint_fst,pairPoint_snd,
     termPoint_value,formulaPoint_value,namePoint] using hf
 
-/-- An actual admissibility point with the specified public coordinates
-has exactly the successful literal named output. -/
+/-- An admissibility point with the specified public coordinates has exactly the
+successful named output. -/
 theorem substitution_point (x : ℕ) (φ : Fm) (t : Tm) (ψ : Fm)
     (a : Obj 𝗣𝗔 ℕ (S).admissibleSubstitution)
     (ha : (G).map (S).admissibleInclusion a = substitutionPoint σ π d x φ t)

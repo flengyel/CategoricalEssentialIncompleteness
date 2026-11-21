@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSentences
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonSentencesChecks` -/
+/-! # Chosen sentence pullbacks and arbitrary external Γ after the push -/
 
 @[expose] public section
 noncomputable section

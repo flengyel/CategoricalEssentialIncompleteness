@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixEncoding
 
 
-/-! # Statement checks in `V46NamedPostfixEncodingChecks` -/
+/-! # Standard postfix codes of named finite syntax -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

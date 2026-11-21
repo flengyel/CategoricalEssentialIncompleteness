@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCodedMaps
 
 
-/-! # Statement checks in `V46NumericalArithmeticCodedMapsChecks` -/
+/-! # The coded graph and image predicate of a numerical morphism -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemeReflection
 
 
-/-! # Statement checks in `V46MillerNamedProofImageSchemeReflectionChecks` -/
+/-! # All seven-scheme parameters yield finite Hilbert proofs from Γ -/
 
 @[expose] public section
 noncomputable section

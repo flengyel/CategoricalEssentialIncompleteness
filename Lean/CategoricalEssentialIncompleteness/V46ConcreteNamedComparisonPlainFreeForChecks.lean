@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainFreeFor
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonPlainFreeForChecks` -/
+/-! # The substitution-domain classifier realizes independent free-for -/
 
 @[expose] public section
 noncomputable section

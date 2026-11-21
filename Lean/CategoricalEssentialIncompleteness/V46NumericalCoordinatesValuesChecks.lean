@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesValues
 
 
-/-! # Statement checks in `V46NumericalCoordinatesValuesChecks` -/
+/-! # The values of the computable predicate-coordinate charts -/
 
 @[expose] public section
 noncomputable section

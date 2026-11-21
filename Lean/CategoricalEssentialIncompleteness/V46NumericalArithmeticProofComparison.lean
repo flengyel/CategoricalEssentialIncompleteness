@@ -11,12 +11,12 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofImag
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticCanonical
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretation
 
-/-! # Actual arithmetic proof codes, canonical source proofs and fixed Prov_Gamma
+/-! # Arithmetic proof codes, canonical source proofs and fixed Prov_Gamma
 
-The inference signatures are compared before any proof object is compared.
-Their two initial code algebras give the full-proof isomorphism, and the
-actual sentence pullbacks give the sentence-proof isomorphism. The fixed
-Gamma theorem predicate is then the regular image of this actual conclusion.
+The inference signatures are compared before any proof object is compared. Their two
+initial code algebras give the full-proof isomorphism, and the sentence pullbacks give
+the sentence-proof isomorphism. The fixed Gamma theorem predicate is then the regular
+image of this conclusion.
 -/
 
 @[expose] public section
@@ -31,8 +31,8 @@ open Coordinates RuleParameters
 local notation "K" => numericalInterpretation
 local notation "U" => NumericalUnderlying.functor
 
-/-- This targets the exact PA derivation object used by the earlier
-arithmetic source construction, with its actual seven-scheme signature. -/
+/-- This targets the exact PA derivation object used by the earlier arithmetic source
+construction, with its seven-scheme signature. -/
 def fullIso (Γ : Carrier) : SentenceProofCodes.allProofs Γ ≅ (K).obj (ProofWords.allProofs Γ) :=
   RuleComparison.proofIso Γ ≪≫
     NumericalDerivationInterpretation.interpretationCodeIso (Rules.originalRules Γ)
@@ -66,8 +66,8 @@ def sentencePullbackIso (Γ : Carrier) : SentenceProofCodes.chosenPullback Γ �
       pullback.snd (SentenceProofCodes.allConclusion Γ) numericalSyntax.sentenceInclusion ≫ sentenceIso.hom :=
   pullbackComparison_snd _ _ _ _ _ _ _ _ _
 
-/-- The actual original-word numerical carrier is compared to the exact
-source sentence-derivation object, including its chosen pullback chart. -/
+/-- The original-word numerical carrier is compared to the exact source
+sentence-derivation object, including its chosen pullback chart. -/
 def rho (Γ : Carrier) : SentenceProofCodes.object Γ ≅ (K).obj (ArithmeticLiteralModel.proofObject Γ) :=
   (SentenceProofCodes.pullbackIso Γ).symm ≪≫ sentencePullbackIso Γ
 
@@ -88,8 +88,8 @@ private theorem map_chain
     (i ≫ j) ≫ (K).map (f ≫ g) = (i ≫ p) ≫ l := by
   rw [(K).map_comp,Category.assoc,← Category.assoc j,h,Category.assoc,c,← Category.assoc]
 
-/-- This is the printed conclusion diagram on the actual literal
-sentence object, rather than equality of ambient numerical predicates. -/
+/-- This is the conclusion diagram on the sentence object, rather than equality of ambient
+numerical predicates. -/
 @[reassoc] theorem rho_conclusion (Γ : Carrier) :
     (rho Γ).hom ≫ (K).map (ArithmeticLiteralModel.conclusion Γ) =
       SentenceProofCodes.conclusion Γ ≫ literalSentence := by
@@ -117,8 +117,8 @@ def conclusion (Γ : Carrier) : SentenceProofCodes.object Γ ⟶ ProofImage.sent
   rw [Category.assoc,← (K).map_comp,original_word_conclusion,rho_conclusion]
   rfl
 
-/-- The quotient has the fixed literal Prov_Gamma predicate as target.
-Its domain is the actual numerical finite-derivation word carrier. -/
+/-- The quotient has the fixed literal Prov_Gamma predicate as target. Its domain is the
+numerical finite-derivation word carrier. -/
 def quotient (Γ : Carrier) : SentenceProofCodes.object Γ ⟶ ProofImage.theoryObject Γ :=
   (wordIso Γ).hom ≫ ProofImage.quotient Γ
 
@@ -133,8 +133,8 @@ theorem iso_comp_strongEpi {A B C : NumericalTuples.Object}
     (e : A ≅ B) (q : B ⟶ C) [IsSplitEpi q] : StrongEpi (e.hom ≫ q) := by
   infer_instance
 
-/-- The actual fixed theorem predicate is a categorical regular image,
-with its literal inclusion, and not only an extensionally equal set. -/
+/-- The fixed theorem predicate is a categorical regular image, with its literal
+inclusion, and not only an extensionally equal set. -/
 def imageFactorisation (Γ : Carrier) : StrongEpiMonoFactorisation (conclusion Γ) where
   I := ProofImage.theoryObject Γ
   e := quotient Γ
@@ -145,8 +145,8 @@ def imageFactorisation (Γ : Carrier) : StrongEpiMonoFactorisation (conclusion �
 def isImage (Γ : Carrier) : IsImage (imageFactorisation Γ).toMonoFactorisation :=
   (imageFactorisation Γ).toMonoIsImage
 
-/-- Both implications concern the actual fixed source program selected
-from the constructed Gamma conclusion, with no comparison hypothesis. -/
+/-- Both implications concern the fixed source program selected from the constructed Gamma
+conclusion, with no comparison hypothesis. -/
 theorem fixed_provability (Γ : Carrier) (s : NumericalTuples.Point ProofImage.sentenceObject) :
     (∃ p : NumericalTuples.Point (SentenceProofCodes.object Γ), (conclusion Γ).toFun p = s) ↔
       (ArithmeticLiteralModel.theoremPredicate Γ).val.Evalb (M := ℕ) ![s.val] := by
@@ -168,8 +168,8 @@ def canonicalRho (Γ : Carrier) : (U).obj (SentenceProofCodes.object Γ) ≅
       ((realization 𝗣𝗔).obj (ArithmeticLiteralModel.proofObject Γ)) :=
   (U).mapIso (rho Γ) ≪≫ canonicalComparison.app (ArithmeticLiteralModel.proofObject Γ)
 
-/-- Computability is supplied in both directions on the actual proof
-carriers. The programs may remain partial away from those carriers. -/
+/-- Computability is supplied in both directions on the proof carriers. The programs may
+remain partial away from those carriers. -/
 theorem canonical_forward_program (Γ : Carrier) :
     ∃ r : ℕ → Part ℕ, Partrec r ∧
       ∀ p : NumericalTuples.Point (SentenceProofCodes.object Γ),
@@ -191,8 +191,8 @@ theorem canonical_backward_program (Γ : Carrier) :
     (canonicalComparison_inverse_value (ArithmeticLiteralModel.proofObject Γ) p).symm).trans
       ((rho Γ).inv.program_apply (canonicalComparison.inv.app _ p))
 
-/-- The canonical source conclusion and the actual numerical conclusion
-commute under the constructed proof-code isomorphism. -/
+/-- The canonical source conclusion and the numerical conclusion commute under the
+constructed proof-code isomorphism. -/
 theorem canonical_conclusion (Γ : Carrier)
     (p : NumericalTuples.Point (SentenceProofCodes.object Γ)) :
     canonicalComparison.hom.app ArithmeticLiteralModel.sentencePredicate ((conclusion Γ).toFun p) =

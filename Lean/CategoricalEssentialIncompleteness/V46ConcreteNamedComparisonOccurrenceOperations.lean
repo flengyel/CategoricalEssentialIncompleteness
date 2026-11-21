@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonDelet
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxInitial
 
-/-! # The actual occurrence-algebra operations have the numerical PA root values -/
+/-! # The occurrence-algebra operations have the numerical PA root values -/
 
 @[expose] public section
 
@@ -25,9 +25,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 
 namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] (V : PredicateCategory T)
-/-- Retain the ambient theory in the finite polynomial's type before
-forming its actual categorical evaluation. The underlying AST is the
-literal arithmetic formulaLeft template. -/
+/-- Retain the ambient theory in the finite polynomial's type before forming its
+categorical evaluation. The underlying AST is the arithmetic formulaLeft template. -/
 def formulaLeftPolynomial (π : ℕ → PredicateCategory T) (d : ℕ) :
     SyntaxPolynomial (PredicateCategory T) := ConcreteNamedSubstitution.formulaLeft π d
 

@@ -9,9 +9,11 @@ public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportA
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFormula
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifier
 
-/-! The actual formula half of the substitution algebra comparison.
-The pure constructor branches and both guarded quantifier branches are
-transported before the actual coproduct universality is applied. -/
+/-!
+The formula half of the substitution algebra comparison. The pure constructor branches
+and both guarded quantifier branches are transported before the coproduct universality
+is applied.
+-/
 
 @[expose] public section
 noncomputable section
@@ -176,9 +178,8 @@ theorem quantifierSubstitutionParameter_structure :
     S₀.quantifierSubstitutionPair S₁.quantifierSubstitutionPair hroot
 
 include hnil hsingleton happend hdeletion hmembership in
-/-- All five formula summands are combined by genuine coproduct
-universality. The quantifier equation has already accounted for both
-success and failure branches. -/
+/-- All five formula summands are combined by coproduct universality. The quantifier
+equation has already accounted for both success and failure branches. -/
 theorem substitutionTargetFormula_structure :
     (H).functor.map S₀.substitutionAlgebra.str.2 ≫
       (coefficientComparison E b S₀.substitutionCarriers.2 S₁.substitutionCarriers.2 f).hom =

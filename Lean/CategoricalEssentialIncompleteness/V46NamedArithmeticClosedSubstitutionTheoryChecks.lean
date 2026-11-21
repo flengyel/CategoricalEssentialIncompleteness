@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitutionTheory
 
 
-/-! # Statement checks in `V46NamedArithmeticClosedSubstitutionTheoryChecks` -/
+/-! # PA itself proves closed-replacement admissibility for the independent free-for algorithm, and existence of its typed option result -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

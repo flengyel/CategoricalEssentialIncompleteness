@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchNegation
 
-/-! # Printed PR-total negation and actual Γ negative evidence -/
+/-! # PR-total negation and Γ negative evidence -/
 
 @[expose] public section
 noncomputable section

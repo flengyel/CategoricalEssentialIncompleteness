@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedProofNumerals
 
 
-/-! # Statement checks in `V46ArithmeticNamedProofNumeralsChecks` -/
+/-! # Source proof numerals matching the named recurrence -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

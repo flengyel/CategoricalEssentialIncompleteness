@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxCharts
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxChartsChecks` -/
+/-! # Identical-word charts for PA-described uniform syntax -/
 
 @[expose] public section
 noncomputable section

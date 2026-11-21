@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWordRanges
 
 
-/-! # Statement checks in `V46MillerTheorySentenceWordRangesChecks` -/
+/-! # Gamma theorem and refutation ranges in sentence coordinates -/
 
 @[expose] public section
 noncomputable section

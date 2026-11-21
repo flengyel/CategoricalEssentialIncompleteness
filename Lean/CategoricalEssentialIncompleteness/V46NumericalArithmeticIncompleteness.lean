@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
 public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
 public import CategoricalEssentialIncompleteness.V46FirstOrderInference
 
-/-! # The numerical arithmetic application to the actual theorem range -/
+/-! # The numerical arithmetic application to the theorem range -/
 
 @[expose] public section
 noncomputable section
@@ -54,8 +54,8 @@ private theorem range_of_split_factor {X I Y : NumericalTuples.Object}
   apply Ranges.precomp_split_epi (numericalQ.map q) (numericalQ.map (section_ q))
   rw [← numericalQ.map_comp,IsSplitEpi.id,CategoryTheory.Functor.map_id]
 
-/-- This is the range of the actual numerical finite-proof conclusion,
-with the manuscript's literal named-word sentence presentation. -/
+/-- This is the range of the numerical finite-proof conclusion, with the manuscript's
+named-word sentence presentation. -/
 def theoremIdem (Γ : Carrier) : Idem S_rec :=
   Ranges.range (numericalQ.map (ProofComparison.conclusion Γ))
 
@@ -80,8 +80,8 @@ theorem theorem_support (Γ : Carrier) : ClassicalPrograms.splitSupport (theorem
 section Extension
 variable (Γ : Carrier) (hPA : ContainsPA Γ)
 
-/-- The standard axiom inclusion is a genuine total numerical morphism.
-Its graph need not have a PA proof of the inclusion of enumerations. -/
+/-- The standard axiom inclusion is a total numerical morphism. Its graph need not have a
+PA proof of the inclusion of enumerations. -/
 def axiomExtension : Rules.axiomObject paAxioms ⟶ Rules.axiomObject Γ where
   toFun a := ⟨a.val,(Rules.axiom_membership Γ a.val).mpr
     ⟨hPA a.val ((Rules.axiom_membership paAxioms a.val).mp a.property).1,
@@ -125,8 +125,8 @@ theorem initialRuleMap_conclusion {F : NumericalTuples.Object} {N : ℕ}
     (initialRuleMap ι P hP P').left ≫ P'.a.hom = P.a.hom :=
   Over.w (initialRuleMap ι P hP P')
 
-/-- Initiality transforms actual ordered finite derivations, changing
-only the enumerated nullary labels and retaining every conclusion. -/
+/-- Initiality transforms ordered finite derivations, changing only the enumerated nullary
+labels and retaining every conclusion. -/
 def proofExtension :=
   (initialRuleMap (ruleExtension Γ hPA) (SentenceProofCodes.allAlgebra paAxioms)
     (SentenceProofCodes.allInitial paAxioms) (SentenceProofCodes.allAlgebra Γ)).left
@@ -167,8 +167,8 @@ theorem sentenceExtension_literal : sentenceExtension Γ hPA ≫ ProofComparison
   rfl
 
 include hPA in
-/-- The third printed inequality follows from actual finite-proof
-extension in the numerical category, not PA-provability of Gamma's consistency. -/
+/-- The third inequality follows from finite-proof extension in the numerical category,
+not PA-provability of Gamma's consistency. -/
 theorem pa_theorems_le : theoremIdem paAxioms ≤ theoremIdem Γ := by
   have h : numericalQ.map (ProofComparison.conclusion paAxioms) =
       numericalQ.map (sentenceExtension Γ hPA) ≫ numericalQ.map (ProofComparison.conclusion Γ) :=
@@ -248,8 +248,8 @@ private theorem nu_support (b : Idem S_rec) :
       {n : ℕ | ∃ w, w ∈ ClassicalPrograms.J.map nu.hom n ∧ w ∈ ClassicalPrograms.splitSupport b} :=
   ClassicalPrograms.splitSupport_pull nu b
 
-/-- The source arithmetic bound is transported to the actual numerical
-range with the axiom predicate kept opaque during the support comparison. -/
+/-- The source arithmetic bound is transported to the numerical range with the axiom
+predicate kept opaque during the support comparison. -/
 theorem support_positive (Γ : Carrier) (hExt : ArithmeticNamedAxiomComparison.ExtendsPA Γ) :
     includedA ≤ Idem.pull theta (theoremIdem Γ) :=
   pull_bound_from_sets ClassicalPrograms.parameterObject S_rec includedA theta (theoremIdem Γ)
@@ -260,7 +260,7 @@ theorem support_positive (Γ : Carrier) (hExt : ArithmeticNamedAxiomComparison.E
     positiveValue
     includedA_support (theorem_support Γ) theta_hits (semantic_positive_target Γ hExt)
 
-/-- The negative bound uses literal Neg after the same actual Theta. -/
+/-- The negative bound uses literal Neg after the same Theta. -/
 theorem support_negative (Γ : Carrier) (hExt : ArithmeticNamedAxiomComparison.ExtendsPA Γ) :
     includedB ≤ Idem.pull theta (Idem.pull nu (theoremIdem Γ)) :=
   pull_twice_bound_from_sets ClassicalPrograms.parameterObject S_rec S_rec includedB theta nu (theoremIdem Γ)
@@ -274,16 +274,16 @@ theorem support_negative (Γ : Carrier) (hExt : ArithmeticNamedAxiomComparison.E
     negativeValue
     includedB_support (theorem_support Γ) theta_hits nu_hits (semantic_negative_target Γ hExt)
 
-/-- First printed inequality for the chosen PA sentence-axiom presentation. -/
+/-- First inequality for the chosen PA sentence-axiom presentation. -/
 theorem positive_bound : includedA ≤ Idem.pull theta (theoremIdem paAxioms) :=
   support_positive paAxioms (extendsPA paAxioms pa_containsPA)
 
-/-- Second printed inequality for the same literal PA presentation. -/
+/-- Second inequality for the same literal PA presentation. -/
 theorem negative_bound : includedB ≤ Idem.pull theta (Idem.pull nu (theoremIdem paAxioms)) :=
   support_negative paAxioms (extendsPA paAxioms pa_containsPA)
 
-/-- The three inequalities in the numerical arithmetic application,
-on their actual restriction-idempotent objects. -/
+/-- The three inequalities in the numerical arithmetic application, on their
+restriction-idempotent objects. -/
 theorem domain_inclusions (Γ : Carrier) (hPA : ContainsPA Γ) :
     includedA ≤ Idem.pull theta (theoremIdem paAxioms) ∧
       includedB ≤ Idem.pull theta (Idem.pull nu (theoremIdem paAxioms)) ∧
@@ -334,8 +334,8 @@ theorem theorem_refutation_disjoint (Γ : Carrier) (hPA : ContainsPA Γ)
     {word : ℕ | (ArithmeticLiteralModel.theoremPredicate Γ).val.Evalb (M := ℕ) ![word]}
     (theorem_support Γ) (support_no_both Γ hPA hc)
 
-/-- Corollary 4.3 is applied to the actual numerical proof-conclusion
-range in Split(Rec), after all three printed bounds are proved. -/
+/-- Corollary 4.3 is applied to the numerical proof-conclusion range in Split(Rec), after
+all three bounds are proved. -/
 theorem categorical_incompleteness (Γ : Carrier) (hPA : ContainsPA Γ)
     (hc : Consistent (ArithmeticNamedProofConnectives.system Γ)) :
     Inseparable (theoremIdem Γ) (Idem.pull nu (theoremIdem Γ)) ∧
@@ -344,8 +344,8 @@ theorem categorical_incompleteness (Γ : Carrier) (hPA : ContainsPA Γ)
     positive_bound negative_bound (theoremIdem Γ) (pa_theorems_le Γ hPA)
     (theorem_refutation_disjoint Γ hPA hc)
 
-/-- The chosen categorical-syntax presentation has the same actual
-range after the proved literal sentence chart. -/
+/-- The chosen categorical-syntax presentation has the same range after the proved
+sentence chart. -/
 def syntaxTheoremIdem (Γ : Carrier) : Idem (numericalQ.obj Coordinates.numericalSyntax.sentenceObject) :=
   Ranges.range (numericalQ.map (SentenceProofCodes.conclusion Γ))
 

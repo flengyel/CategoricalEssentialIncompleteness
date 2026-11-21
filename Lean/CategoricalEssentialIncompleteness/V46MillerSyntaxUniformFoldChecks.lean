@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformFold
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformFoldChecks` -/
+/-! # Slice fold morphisms for arbitrary uniformly enumerable coefficients -/
 
 @[expose] public section
 noncomputable section

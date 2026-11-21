@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptionSuccess
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonOptionSuccessChecks` -/
+/-! # The option-success pullback for a finite-geometry functor -/
 
 @[expose] public section
 noncomputable section

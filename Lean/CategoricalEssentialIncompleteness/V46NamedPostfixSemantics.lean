@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSoundness
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
 
-/-! # Semantics on the actual standard accepted-word carriers
+/-! # Semantics on the standard accepted-word carriers
 
 The decoding equivalences retain every numerical name and symbol. The
 semantic structure is independent of the arithmetic model of the codes.
@@ -25,8 +25,8 @@ namespace CategoricalEssentialIncompleteness.V46.NamedPostfixSemantics
 open NamedPostfixEncoding
 variable {σ π : ℕ → Carrier} {d : ℕ} {K : Type u}
 
-/-- The term-word subtype is the actual standard interpretation of the
-constructed predicate-category term carrier. -/
+/-- The term-word subtype is the standard interpretation of the constructed
+predicate-category term carrier. -/
 def termModelEquiv (σ π : ℕ → Carrier) (d : ℕ) :
     NamedFiniteSyntax.Term (Symbols σ) d ≃
       (PredicateInterpretation.functor 𝗣𝗔 ℕ).obj
@@ -68,8 +68,8 @@ def Valid (φ : formulaWords σ π d) : Prop :=
       NamedFiniteSyntax.Formula.Valid functions relations φ := by
   simp [Valid, NamedFiniteSyntax.Formula.Valid]
 
-/-- The semantic negation acts by the literal printed constructor. Its
-comparison with the categorical sentence morphism is a further equation. -/
+/-- The semantic negation acts by the literal constructor. Its comparison with the
+categorical sentence morphism is a further equation. -/
 def negWord (φ : formulaWords σ π d) : formulaWords σ π d :=
   formulaEquiv σ π d (.neg ((formulaEquiv σ π d).symm φ))
 
@@ -91,8 +91,8 @@ theorem valid_negation_disjoint [Nonempty K] (φ : formulaWords σ π d)
   let assignment : ℕ → K := fun _ => Classical.choice inferInstance
   exact (holds_negWord functions relations φ assignment).mp (hn assignment) (hφ assignment)
 
-/-- Semantics on encoded terms agrees with the proved literal named
-term substitution, before the numerical algorithm comparison is applied. -/
+/-- Semantics on encoded terms agrees with the proved named term substitution, before the
+numerical algorithm comparison is applied. -/
 theorem termValue_substitute (r t : NamedFiniteSyntax.Term (Symbols σ) d)
     (x : ℕ) (assignment : ℕ → K) :
     termValue functions (termEquiv σ π d (r.substitute x t)) assignment =

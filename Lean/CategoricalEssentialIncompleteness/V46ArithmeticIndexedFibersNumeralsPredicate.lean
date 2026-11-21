@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices
 
-/-! # Numeral/complement splitting in the actual arithmetic category
+/-! # Numeral/complement splitting in the arithmetic category
 
 The inverse of the displayed copair is justified in every PA model and
 then reflected to the predicate category. It is transported through the
@@ -119,8 +119,8 @@ private theorem dispatch_inr_value (e : ℕ) (x : Obj 𝗣𝗔 M (complementPred
     exact (GraphMorphism.identityGraph_eval (complementPredicate e) x.val z.val).mpr ⟨x.property,rfl⟩
   exact congrArg Subtype.val h
 
-/-- The numeral and its complement give a genuine bijection at every
-code-model point, including nonstandard parameters different from e. -/
+/-- The numeral and its complement give a bijection at every code-model point, including
+nonstandard parameters different from e. -/
 theorem rawDispatch_bijective (e : ℕ) :
     Function.Bijective ((F 𝗣𝗔 M).map (representedArrow 𝗣𝗔 (rawDispatch e))) := by
   classical

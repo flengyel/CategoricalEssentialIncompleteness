@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 
-/-! # Semantic substitution for the actual standard numerical algorithm -/
+/-! # Semantic substitution for the standard numerical algorithm -/
 
 @[expose] public section
 
@@ -32,16 +32,16 @@ theorem numerical_termSubstitution_result (x : ℕ) (t r : Obj 𝗣𝗔 ℕ X) :
   have h := substitutionResult_termCode π (decodeTerm σ π d r) (decodeTerm σ π d t) x
   simpa only [decodeTerm_code] using h
 
-/-- This is the actual numerical traversal at arbitrary standard
-accepted inputs, rather than a new encoding of its claimed output. -/
+/-- This is the numerical traversal at arbitrary standard accepted inputs, rather than a
+new encoding of its claimed output. -/
 theorem numerical_substitution_result (x : ℕ) (t : Obj 𝗣𝗔 ℕ X) (φ : Obj 𝗣𝗔 ℕ Y) :
     substitutionResult variableCarrier σ π d x t.val φ.val =
       optionCode ((decodeFormula σ π d φ).substitute x (decodeTerm σ π d t)) := by
   have h := substitutionResult_formulaCode (decodeFormula σ π d φ) (decodeTerm σ π d t) x
   simpa only [decodeFormula_code,decodeTerm_code] using h
 
-/-- Successful numerical output identifies the literal named formula
-substitution. Option-code injectivity preserves the failure branch. -/
+/-- Successful numerical output identifies the named formula substitution. Option-code
+injectivity preserves the failure branch. -/
 theorem numerical_substitution_some_iff (x : ℕ) (t : Obj 𝗣𝗔 ℕ X)
     (φ ψ : Obj 𝗣𝗔 ℕ Y) :
     substitutionResult variableCarrier σ π d x t.val φ.val = ok ψ.val ↔
@@ -75,9 +75,9 @@ theorem numerical_evaluate_substitute (x : ℕ) (t r out : Obj 𝗣𝗔 ℕ X) (
   exact NamedFiniteSyntax.Term.evaluate_substitute functions
     (decodeTerm σ π d r) (decodeTerm σ π d t) x ρ
 
-/-- The semantic structure K is independent of the standard arithmetic
-code model. The actual categorical admissibility comparison supplies
-this numerical success equation in Lemma 6.5's application. -/
+/-- The semantic structure K is independent of the standard arithmetic code model. The
+categorical admissibility comparison supplies this numerical success equation in Lemma
+7.5's application. -/
 theorem numerical_holds_substitute (x : ℕ) (t : Obj 𝗣𝗔 ℕ X)
     (φ ψ : Obj 𝗣𝗔 ℕ Y) (ρ : ℕ → K)
     (h : substitutionResult variableCarrier σ π d x t.val φ.val = ok ψ.val) :

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Products
 
-/-! # Actual inference transport across the predicate equivalence
+/-! # Inference transport across the predicate equivalence
 
 Only coefficient isomorphisms and their original premise/conclusion
 diagrams are supplied. The inference and algebra comparisons are derived.
@@ -87,7 +87,7 @@ omit [HasFiniteCoproducts C] [HasFiniteCoproducts D] in
       E.functor.map (pullback.snd (R.premises i) (finitePowerMap Q.hom i.val)) ≫ (power E Q.left i.val).hom := by
   exact (input_square E R R' h Q i).isoPullback_hom_snd
 
-/-- This comparison includes the actual arity-zero coefficient object. -/
+/-- This comparison includes the arity-zero coefficient object. -/
 def sumIso (Q : Over F) : E.functor.obj (∐ R.ruleObject Q) ≅
     ∐ R'.ruleObject ((overEquivalence E).functor.obj Q) :=
   (asIso (sigmaComparison E.functor (R.ruleObject Q))).symm ≪≫ Sigma.mapIso (inputIso E R R' h Q)

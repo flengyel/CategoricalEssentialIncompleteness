@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationTemplates
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationTemplatesChecks` -/
+/-! # The seventeen arithmetic/order seed templates -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonFreeVariables
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonFreeVariablesChecks` -/
+/-! # The concrete occurrence fold under the uniform named-word chart -/
 
 @[expose] public section
 noncomputable section

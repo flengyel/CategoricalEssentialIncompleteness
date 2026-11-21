@@ -10,11 +10,11 @@ public import Mathlib.Algebra.Field.MinimalAxioms
 public import Mathlib.Algebra.Order.Ring.Defs
 public import Mathlib.Order.RelClasses
 
-/-! # Constructing the ordered field from the literal finite matrices
+/-! # Constructing the ordered field from the finite matrices
 
-The selected inverse uses only the actual existential inverse matrix.
-All primitive field operations and strict order retain the interpretation's
-original values. No field or order instance is supplied as a premise.
+The selected inverse uses only the existential inverse matrix. All primitive field
+operations and strict order retain the interpretation's original values. No field or
+order instance is supplied as a premise.
 -/
 
 @[expose] public section
@@ -54,8 +54,8 @@ matrix consequences using the pinned minimal-axiom constructor. -/
     (by change inverseValue M hM (zeroValue M)=zeroValue M; simp [inverseValue])
     h.distrib ⟨zeroValue M,oneValue M,h.zero_ne_one⟩
 
-/-- The actual interpreted relation is strict, transitive and total,
-so the pinned strict-total-order constructor yields its linear order. -/
+/-- The interpreted relation is strict, transitive and total, so the pinned
+strict-total-order constructor yields its linear order. -/
 @[instance_reducible] def linearOrderStructure : LinearOrder K := by
   let h := matrix_consequences M hM
   letI : IsStrictTotalOrder K (ltValue M) := {

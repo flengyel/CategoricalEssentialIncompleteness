@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46FirstOrderModelSoundness
 
 
-/-! # Statement checks in `V46FirstOrderModelSoundnessChecks` -/
+/-! # Model predicates and soundness of the constructed logical derivations -/
 
 @[expose] public section
 noncomputable section

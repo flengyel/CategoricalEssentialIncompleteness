@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs
 public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 
-/-! # The literal arithmetic sentence-proof word presentation
+/-! # The arithmetic sentence-proof word presentation
 
 The stored element is the original successful derivation word. Its
 conclusion and sentence witnesses are existential variables of the carrier.
@@ -131,7 +131,7 @@ theorem square (Γ : Carrier) :
     (ArithmeticLiteralModel.chart_value M ((F 𝗣𝗔 M).map
       (representedArrow 𝗣𝗔 (conclusion Γ)) p)).symm
 
-/-- The map into the actual sentence-conclusion pullback. -/
+/-- The map into the sentence-conclusion pullback. -/
 def comparison (Γ : Carrier) : @Quiver.Hom (PredicateCategory 𝗣𝗔) inferInstance
     (carrier Γ) (ArithmeticLiteralModel.proofObject Γ) :=
   pullback.lift (representedArrow 𝗣𝗔 (inclusion Γ))
@@ -210,8 +210,8 @@ theorem comparison_isIso (Γ : Carrier) : IsIso (comparison Γ) := by
   · apply (cancel_mono (pullback.fst (formulaConclusion Γ) arithmeticSyntax.sentenceInclusion)).mp
     rw [Category.assoc,comparison_tree,backward_tree,Category.id_comp]
 
-/-- This is an isomorphism over the literal sentence object, and its
-underlying tree map retains the original successful word. -/
+/-- This is an isomorphism over the sentence object, and its underlying tree map retains
+the original successful word. -/
 def iso (Γ : Carrier) : @CategoryTheory.Iso (PredicateCategory 𝗣𝗔) inferInstance
     (carrier Γ) (ArithmeticLiteralModel.proofObject Γ) := by
   letI := comparison_isIso Γ

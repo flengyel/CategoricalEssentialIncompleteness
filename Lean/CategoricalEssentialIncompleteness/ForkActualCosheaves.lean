@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkCosheafEquivalence
 public import Mathlib.CategoryTheory.ObjectProperty.Equivalence
 
-/-! # Cosheaves on the literal topological open-set category -/
+/-! # Cosheaves on the topological open-set category -/
 
 @[expose] public section
 
@@ -98,7 +98,7 @@ def actualPresentationEquivalence : ActualCoSh ≌ CoSh :=
     funext F
     exact propext (actualIsCosheaf_iff F).symm)
 
-/-- Proposition A.1 on the actual category of opens of the three-point space. -/
+/-- Proposition B.1 on the category of opens of the three-point space. -/
 def actualCosheafEquivalence : ActualCoSh ≌ (WalkingSpan ⥤ Type) :=
   actualPresentationEquivalence.trans cosheafEquivalence
 

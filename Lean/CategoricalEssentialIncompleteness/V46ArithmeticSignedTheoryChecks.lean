@@ -6,10 +6,10 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedTheory
 
-/-! # Independent checks of every printed clause of Lemma 8.9
+/-! # Independent checks of every clause of Lemma 8.9
 
-The axiom join, proof construction, actual split generators, free syntax
-and all closed extensions are stated explicitly here.
+The axiom join, proof construction, split generators, free syntax and all closed
+extensions are stated explicitly here.
 -/
 @[expose] public section
 noncomputable section
@@ -64,8 +64,8 @@ example : (ArithmeticSignedTotal.syntaxAlgebra (F₀)).a =
     ((G).obj (S).algebra.a.1, (G).obj (S).algebra.a.2) :=
   ArithmeticSignedTotal.syntax_carrier (F₀)
 
-/-- The complete printed conclusion, with the actual initial proof
-family, literal signed image join and both consistency equations. -/
+/-- The complete conclusion, with the initial proof family, literal signed image join and
+both consistency equations. -/
 example (_hPA : Entailment.Consistent 𝗣𝗔) :
     let ν := (G).map (S).sentenceNegation
     let θ := (G).map (NullaryInterpretation.atomSentence (S))

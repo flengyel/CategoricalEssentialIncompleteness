@@ -23,8 +23,8 @@ open SyntaxOperationsTransport
 local notation "E" => NumericalNamed.literalEquivalence
 local notation "F" => PredicateInterpretation.functor 𝗧𝗔 ℕ
 
-/-- Both directions of the point-image comparison use actual numerical
-isomorphisms, rather than an assumed equality of chosen syntax carriers. -/
+/-- Both directions of the point-image comparison use numerical isomorphisms, rather than
+an assumed equality of chosen syntax carriers. -/
 theorem presented_image_iff {A B : NumericalTuples.Object}
     (C D : PredicateCategory 𝗧𝗔) (f : A ⟶ B) (g : C ⟶ D)
     (i : A ≅ NumericalCoordinates.predicateObject C)
@@ -144,7 +144,7 @@ def fiberPresentation := presentedFiber V σ π d (S₀) (S₁)
 abbrev inclusion_square := presented_inclusion_square V σ π d (S₀) (S₁)
   (NumericalNamed.literalListsEquality V σ π d) (NumericalNamed.literalAlgebraIso V σ π d)
 
-/-- The binder coordinate is the actual guarded tuple code. -/
+/-- The binder coordinate is the guarded tuple code. -/
 theorem base_name_value (q : NumericalTuples.Point (targetBase V σ π d)) :
     ((F).map (prod.fst : @Quiver.Hom (PredicateCategory 𝗧𝗔) inferInstance
       (sourceBase V σ π d) (NumericalCoordinates.codedPredicate V))
@@ -169,8 +169,8 @@ theorem base_formula_value (q : NumericalTuples.Point (targetBase V σ π d)) :
   congrArg Subtype.val
     (presentedBase_formula V σ π d (S₀) (S₁) (NumericalNamed.literalAlgebraIso V σ π d) q)
 
-/-- The actual numerical label fiber is characterized by the independently
-proved named membership flag at the literal input word coordinates. -/
+/-- The numerical label fiber is characterized by the independently proved named
+membership flag at the input word coordinates. -/
 abbrev parameter_image_iff (q : NumericalTuples.Point (targetBase V σ π d)) :=
   (presented_image_iff (S₀).distributionParameters (sourceBase V σ π d)
     (S₁).distributionInclusion (S₀).distributionInclusion

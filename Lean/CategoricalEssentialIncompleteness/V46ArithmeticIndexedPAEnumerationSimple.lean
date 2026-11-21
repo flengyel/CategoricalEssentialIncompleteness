@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationTemplates
 
-/-! # The actual Σ₁ enumeration of the finite arithmetic/order schemes -/
+/-! # The Σ₁ enumeration of the finite arithmetic/order schemes -/
 
 @[expose] public section
 noncomputable section
@@ -112,8 +112,8 @@ def NativeInduction (φ : Formula) : Prop :=
     body.substitute x NamedArithmeticSignature.zero = some base ∧
     body.substitute x (NamedArithmeticSignature.add (.var x) NamedArithmeticSignature.one) = some step
 
-/-- This is a constructor-by-constructor classification of the actual
-native PASeed inductive family, not a representation assumption. -/
+/-- This is a constructor-by-constructor classification of the named PASeed inductive
+family, not a representation assumption. -/
 theorem seed_cases {φ : Formula} (h : PASeed φ) :
     (∃ k : Fin 17, ∃ env : ℕ, fresh k env ∧ (simpleTemplate k).instantiate env = φ) ∨
       NativeInduction φ := by

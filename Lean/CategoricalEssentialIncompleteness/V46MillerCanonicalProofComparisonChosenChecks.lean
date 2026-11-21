@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalProofComparisonChosen
 
 
-/-! # Statement checks in `V46MillerCanonicalProofComparisonChosenChecks` -/
+/-! # The chosen canonical Γ pullback and its generated image -/
 
 @[expose] public section
 noncomputable section

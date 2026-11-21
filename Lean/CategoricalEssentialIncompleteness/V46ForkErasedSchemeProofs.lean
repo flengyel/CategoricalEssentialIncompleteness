@@ -57,8 +57,8 @@ def equality (a b : Idem EffectiveFork.V) :
       (firstOrder.equalitySchemeInclusion ≫ prod.fst ≫ prod.snd ≫ erase))
     (terminal.from _ ≫ truth)).restate hilbert_equality.symm
 
-/-- One natural morphism assigns a finite propositional derivation to
-every instance in the actual seven-summand logical parameter object. -/
+/-- One natural morphism assigns a finite propositional derivation to every instance in
+the seven-summand logical parameter object. -/
 def logicalProof (a b : Idem EffectiveFork.V) :
     Proof (inferenceAlgebra a b) (firstOrder.logicalAxioms ≫ erase) where
   hom := coprod.desc (coprod.desc (coprod.desc (coprod.desc
@@ -85,7 +85,7 @@ theorem naturality (a b : Idem EffectiveFork.V) {j k : WalkingSpan} (f : j ⟶ k
       (logicalProof a b).hom.app j ≫ (realization.obj (ForkDerivation.proofObject a b)).map f :=
   (logicalProof a b).hom.naturality f
 
-/-- Every erased logical instance factors through the actual propositional theorem image. -/
+/-- Every erased logical instance factors through the propositional theorem image. -/
 theorem image_factor (a b : Idem EffectiveFork.V) :
     ∃ p : firstOrder.logicalParameters ⟶
         (imageSubobject (realization.map (ForkDerivation.conclusion a b)) : Object),

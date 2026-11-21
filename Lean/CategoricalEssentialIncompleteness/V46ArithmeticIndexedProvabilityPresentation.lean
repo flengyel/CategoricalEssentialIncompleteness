@@ -44,7 +44,7 @@ theorem rawConclusion_realization (AxPA : Carrier) :
   inverse_conclusion (predicateEquivalence 𝗣𝗔)
     (ArithmeticIndexedFamily.sentenceConclusion AxPA ≫ ArithmeticIndexedAxioms.productIso.inv)
 
-/-- The standard index is selected once from the actual family graph. -/
+/-- The standard index is selected once from the family graph. -/
 def conclusionIndex (AxPA : Carrier) : ℕ :=
   SyntacticSearch.searchIndex (chosenGraph 𝗣𝗔 (rawConclusion AxPA)).graph
 
@@ -120,8 +120,8 @@ theorem programProvability_comparison_PA (AxPA : Carrier) :
   intro M _ _
   simpa [models_iff,programProvabilityComparisonSentence] using programProvability_eval M AxPA
 
-/-- The range of any total conclusion is its actual regular image,
-with the constructed partial inverse of its image inclusion. -/
+/-- The range of any total conclusion is its regular image, with the constructed partial
+inverse of its image inclusion. -/
 theorem total_range_regular_image (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
     {P Q : TotalSplit T} (c : P ⟶ Q) :
     ∃ r : Q.obj ⟶ (image c).obj,
@@ -134,7 +134,7 @@ theorem total_range_regular_image (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
     congrArg (fun f : P ⟶ Q => f.hom) (image.fac c)
   simpa only [hfac] using h
 
-/-- The indexed conclusion range splits through its actual image inclusion. -/
+/-- The indexed conclusion range splits through its image inclusion. -/
 theorem sentence_range_regular_image (AxPA : Carrier) :
     ∃ r : (ArithmeticIndexedFamily.parameter ⨯ ArithmeticIndexedFamily.sentence).obj ⟶
         (image (ArithmeticIndexedFamily.sentenceConclusion AxPA)).obj,

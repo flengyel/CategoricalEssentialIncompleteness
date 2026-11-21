@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralOperations
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralOperationsChecks` -/
+/-! # Folds and admissibility for numerical syntax -/
 
 @[expose] public section
 noncomputable section

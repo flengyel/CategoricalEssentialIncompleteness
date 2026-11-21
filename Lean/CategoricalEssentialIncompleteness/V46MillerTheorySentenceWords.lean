@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSentenceMe
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse
 public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms
 
-/-! # The chosen sentence object and its actual literal-word carrier
+/-! # The chosen sentence object and its literal-word carrier
 
 The chart uses the existing sentence-word monomorphism and its proved
 partial inverse. The chosen sentence point keeps its own coordinate;
@@ -59,8 +59,8 @@ theorem literal_iff_native (word : ℕ) : word∈literalSet ↔
   · rintro ⟨φ,hc,rfl⟩
     exact (sentence_formulaCode φ).mpr hc
 
-/-- Every chosen sentence point is the actual point over its decoded
-formula. This states equality of points through their monic inclusion. -/
+/-- Every chosen sentence point is the point over its decoded formula. This states
+equality of points through their monic inclusion. -/
 theorem sentencePoint_surjective (s : (U).obj (S).sentenceObject) :
     ∃ φ : Formula,∃ hc : φ.freeVariables=[],NamedProofImage.sentencePoint P σ π d φ hc=s := by
   let φ := NamedProofImage.decodeFormula P σ π d ((U).map (S).sentenceInclusion s)
@@ -95,7 +95,7 @@ theorem literal_formula_supported (word : ℕ)
   exact ((ConcreteNamedComparison.literalSentenceCarrier_eval 𝗣𝗔
     variableSymbols σ π d ℕ word).mp ((literal_support P word).mp hw)).1
 
-/-- Guarded identity into the actual mapped plain formula object. -/
+/-- Guarded identity into the mapped plain formula object. -/
 def literalInclusion : literalObject P ⟶ (F).obj (S₀).algebra.a.2 :=
   AxiomSubobjects.supportInclusion (literalObject P) ((F).obj (S₀).algebra.a.2)
     (literal_formula_supported P)
@@ -119,7 +119,7 @@ theorem literalInclusion_image : Total.Subobjects.imageCodes (literalInclusion P
   · intro hw
     exact ⟨word,(literalInclusion_graph P word word).mpr ⟨hw,rfl⟩⟩
 
-/-- The total chart is constructed from the actual mono inverse. -/
+/-- The total chart is constructed from the mono inverse. -/
 def toLiteral : (S).sentenceObject ⟶ literalObject P :=
   Total.Subobjects.factorThroughMono (wordMap) (literalInclusion P) (by
     simpa only [sentenceWord_image,literalInclusion_image] using (Set.Subset.refl literalSet))
@@ -209,7 +209,7 @@ private theorem total_ext {X Y : Total.TotalCategory P} (f g : X ⟶ Y)
     ((congrArg Part.some (congrArg Subtype.val (h s))).trans
       (Part.eq_some_iff.mpr (Total.totalFunction_mem g s)).symm)
 
-/-- The square concerns the actual S₁ sentence-negation morphism. -/
+/-- The square concerns the S₁ sentence-negation morphism. -/
 theorem negation_square : TheorySentenceMorphisms.negation P ≫ (sentenceIso P).hom=
     (sentenceIso P).hom ≫ literalNegation P := by
   apply total_ext

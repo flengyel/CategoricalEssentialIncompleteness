@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsCarrier
 
 
-/-! # Statement checks in `V46MillerListsCarrierChecks` -/
+/-! # Canonical finite lists over arbitrary uniform carriers -/
 
 @[expose] public section
 noncomputable section

@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxSource
 
 /-! # Original postfix words with arbitrary uniformly enumerable coefficients
 
-The carrier uses the original numerical parser and a positive finite
-record of actual coefficient predicates. Coefficient objects need not
-come from ordinary arithmetic predicates. Successful-word coordinates
-contain no membership or computation witnesses.
+The carrier uses the original numerical parser and a positive finite record of
+coefficient predicates. Coefficient objects need not come from ordinary arithmetic
+predicates. Successful-word coordinates contain no membership or computation
+witnesses.
 -/
 
 @[expose] public section

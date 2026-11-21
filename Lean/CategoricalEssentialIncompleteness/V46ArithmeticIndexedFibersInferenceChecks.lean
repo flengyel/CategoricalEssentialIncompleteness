@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersInferenceChecks` -/
+/-! # Inference base change from premise and conclusion diagrams -/
 
 @[expose] public section
 noncomputable section

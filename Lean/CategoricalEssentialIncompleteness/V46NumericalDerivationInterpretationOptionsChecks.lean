@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationOptions
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationOptionsChecks` -/
+/-! # Option and root-input comparison for interpreted PA rules -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionCharts
 
-/-! # Ordered children in the actual finite powers of derivation objects -/
+/-! # Ordered children in the finite powers of derivation objects -/
 
 @[expose] public section
 
@@ -65,8 +65,8 @@ theorem powerProjection_natural {X Y X' Y' : PredicateCategory T}
               (prod.fst ≫ powerProjection T X Y (n + 1) j) ≫ f
             simp only [prod.map_fst_assoc, Category.assoc, ih]
 
-/-- Actual chosen finite-power coordinates are read through the proved
-finite-power/polynomial isomorphism. -/
+/-- Chosen finite-power coordinates are read through the proved finite-power/polynomial
+isomorphism. -/
 def finiteChild (X : PredicateCategory T) (n : ℕ) (i : Fin n) : finitePower X n ⟶ X :=
   (PolynomialComparison.powerIso X n).hom ≫ powerProjection T X (⊤_ (PredicateCategory T)) n i
 
@@ -78,8 +78,8 @@ theorem finiteChild_natural {X Y : PredicateCategory T} (f : X ⟶ Y) (n : ℕ) 
 
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- A represented raw power with the internal child-size certificate
-bounds every actual interpreted categorical projection. -/
+/-- A represented raw power with the internal child-size certificate bounds every
+interpreted categorical projection. -/
 theorem power_children_smaller (X Y : PredicateCategory T) (n : ℕ) (bound u : M)
     (z : Obj T M ((SyntaxPolynomial.power .term n).eval.obj (X,Y)))
     (hz : (baseRepresentation T X Y (SyntaxPolynomial.power .term n)).val.Evalb ![u,z.val])

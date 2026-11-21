@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportInputs
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportInputsChecks` -/
+/-! # Parameter and original/result carrier comparisons for named substitution -/
 
 @[expose] public section
 noncomputable section

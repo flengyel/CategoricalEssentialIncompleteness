@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.EnumerableExtensive
 public import CategoricalEssentialIncompleteness.EffectiveForkRegular
 
-/-! # Extensivity of the actual total fork category -/
+/-! # Extensivity of the total fork category -/
 
 @[expose] public section
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxFold
 
 
-/-! # Statement checks in `V46MillerSyntaxFoldChecks` -/
+/-! # Arbitrary-slice fold morphisms on the original literal words -/
 
 @[expose] public section
 noncomputable section

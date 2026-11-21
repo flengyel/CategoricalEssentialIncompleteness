@@ -38,8 +38,8 @@
   {
     "path": "Lean/FailureOfComposition/Verification/CheckAxioms.lean",
     "source_git_blob": "0a6b54a6ccb57a09f456fc1db196432b469f9010",
-    "patched_git_blob": "f9cfc1dc5dd7d0608e978c960e193d3066e5fc7e",
-    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+    "patched_git_blob": "ab2c123de7f00435fc048164c9781415e84023fe",
+    "reason": "Editorial revision requested by the author: replace redundant assurances and vague proof descriptions with precise mathematical prose. Lean declarations and proofs are unchanged. Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained. V66 terminology review of the local module heading."
   },
   {
     "path": "Lean/Metamath/Feferman/MPSequence.lean",
@@ -140,8 +140,8 @@
   {
     "path": "Lean/CategoricalRiceShapiro.lean",
     "source_git_blob": "7e24f15c342bcfe8e01c0473535af7c9a1d1abf1",
-    "patched_git_blob": "a3236bf1ae5573d17ac8b2f36b4d2f1c519fcd81",
-    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+    "patched_git_blob": "061847d102b778138480a36561f5d6c3f634a3f7",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained. V66 terminology review of the local module heading."
   },
   {
     "path": "Lean/CategoricalRiceShapiro/ArithmeticCode/Arithmetic.lean",
@@ -2036,8 +2036,8 @@
   {
     "path": "Lean/FailureOfComposition/Palomar/CheckNineInterface.lean",
     "source_git_blob": "9a0cd328c91abb004ee5eccfa5568f077baecd12",
-    "patched_git_blob": "f72ba7937d3dacdef723a70beb5be6ea705d5aea",
-    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained."
+    "patched_git_blob": "7ffe6cea14f8024db9767d2f775158f4a5f15008",
+    "reason": "Palomar module-system port: public imports and declarations, with exposed definition bodies; mathematical statements and proofs retained. V66 terminology review of the local module heading."
   },
   {
     "path": "Lean/FailureOfComposition/Palomar/DirectDerivationEnumeration.lean",

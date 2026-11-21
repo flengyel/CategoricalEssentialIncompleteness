@@ -8,13 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxStep
 public import CategoricalEssentialIncompleteness.V46MillerUniformTreesEvaluation
 
-/-! # Constructed selected finite records for actual uniform slice operations
+/-! # Evaluation of postfix words in a parameter slice
 
-The input is the original parameter and postfix word. The initial state
-is the empty stack status 1. Every algebra result, including a nullary
-result, is obtained at a transition through the actual supplied morphism.
-This resource constructs evaluation and proves its graph and totality;
-constructor commutation and initiality are separate obligations.
+Evaluation starts with the empty stack, whose code is 1. Each transition applies the
+algebra morphism for the next constructor, including nullary constructors. The
+evaluation records define a total morphism.
 -/
 
 @[expose] public section

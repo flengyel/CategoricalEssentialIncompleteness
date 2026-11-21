@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.OracleRestrictedRanges
 
-/-! # Actual cartesian restriction products of the formal numerical types -/
+/-! # Cartesian restriction products of the formal numerical types -/
 
 @[expose] public section
 

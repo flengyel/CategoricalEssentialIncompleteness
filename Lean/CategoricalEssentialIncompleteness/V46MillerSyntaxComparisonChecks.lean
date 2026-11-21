@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
 
 
-/-! # Statement checks in `V46MillerSyntaxComparisonChecks` -/
+/-! # The original syntax polynomial under the ordinary word inclusion -/
 
 @[expose] public section
 noncomputable section

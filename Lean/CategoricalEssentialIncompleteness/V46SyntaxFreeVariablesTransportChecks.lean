@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransport
 
 
-/-! # Statement checks in `V46SyntaxFreeVariablesTransportChecks` -/
+/-! # The occurrence-algebra isomorphism and free-variable folds -/
 
 @[expose] public section
 noncomputable section

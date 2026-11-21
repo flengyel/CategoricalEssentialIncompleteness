@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.EffectiveFork
 
-/-! # Comparison with the actual functor category on the walking span -/
+/-! # Comparison with the functor category on the walking span -/
 
 @[expose] public section
 
@@ -96,7 +96,7 @@ def fromFunctor : (WalkingSpan ⥤ EnumerableCarriers.Total) ⥤ Total where
   map_id F := by apply WideSubcategory.hom_ext; apply Hom.ext <;> rfl
   map_comp f g := by apply WideSubcategory.hom_ext; apply Hom.ext <;> rfl
 
-/-- The total arrows form the paper's functor category `C_rec^J`. -/
+/-- The total morphisms form the paper's functor category `C_rec^J`. -/
 def totalEquivalence : Total ≌ (WalkingSpan ⥤ EnumerableCarriers.Total) where
   functor := totalFunctor
   inverse := fromFunctor

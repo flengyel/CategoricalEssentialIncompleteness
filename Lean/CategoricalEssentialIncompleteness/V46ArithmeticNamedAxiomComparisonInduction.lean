@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonBasic
 
-/-! # Actual named induction and the source PA universal closure -/
+/-! # Named induction and the source PA universal closure -/
 
 @[expose] public section
 noncomputable section
@@ -40,8 +40,8 @@ theorem closureContext_bound (start n : ℕ) : ∀ i, closureContext start n i <
       · exact Nat.lt_succ_self _
       · exact Nat.lt_succ_of_lt (ih j)
 
-/-- Source universal closure is realized by the actual native Gen rule,
-with its source binder order and every fresh name retained. -/
+/-- Source universal closure is realized by the Hilbert Gen rule, with its source binder
+order and every fresh name retained. -/
 theorem derives_allClosure {ξ : Type} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n)
     (start : ℕ) (fn : ξ → ℕ)
     (h : D (formula (start+n) (closureContext start n) fn φ)) :
@@ -83,8 +83,8 @@ private theorem successor_substitution (φ : ArithmeticSemiformula ℕ 1)
       NamedFiniteSyntax.Term.var (fn i)
     exact ite_eq_right (Nat.ne_of_lt (hf i))
 
-/-- Native induction applies to an arbitrary source formula, using the
-computed zero/successor substitutions and independent free-for proofs. -/
+/-- The induction scheme for the translated formula uses substitution of zero and
+successor. Both terms are free for the induction variable. -/
 theorem succInd_admissible (hΓ : ExtendsPA A) (φ : ArithmeticSemiformula ℕ 1)
     (x : ℕ) (fn : ℕ → ℕ) (hf : ∀ i, fn i < x) :
     D (formula x ![] fn (succInd φ)) := by
@@ -138,8 +138,8 @@ theorem succInd_admissible (hΓ : ExtendsPA A) (φ : ArithmeticSemiformula ℕ 1
       (E_trans heInner (ECC_of_E_of_E heStep E_id)))
   exact nativeInduction A _ ((K_right he) ⨀ propositionalInduction A _ hp)
 
-/-- Every source PA induction axiom has an actual proof over the given
-literal named enumeration. No source-axiom admissibility is assumed. -/
+/-- Every source PA induction axiom has a proof over the given named enumeration. No
+source-axiom admissibility is assumed. -/
 theorem induction_admissible (hΓ : ExtendsPA A) (φ : ArithmeticSemiformula ℕ 1) :
     D (ArithmeticNamedTranslation.translateFormula 0 ![] (.univCl (succInd φ))) := by
   let k := (succInd φ).fvSup

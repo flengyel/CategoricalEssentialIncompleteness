@@ -38,8 +38,8 @@ abbrev extend : Over F ⥤ Over (OptionSyntax.obj F) where
       coprod.map (𝟙 _) f.left ≫ coprod.map (𝟙 _) g.left
     rw [coprod.map_map, Category.comp_id]
 
-/-- The option extension square is a pullback even when the conclusion
-arrow is neither monic nor epic. -/
+/-- The option extension square is a pullback even when the conclusion morphism is neither
+monic nor epic. -/
 theorem extensionSquare (Q : Over F) :
     IsPullback (coprod.inr : Q.left ⟶ OptionSyntax.obj Q.left) Q.hom
       (OptionSyntax.map Q.hom) (some F) := by

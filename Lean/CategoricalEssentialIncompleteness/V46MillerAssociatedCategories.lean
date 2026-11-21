@@ -26,8 +26,8 @@ local instance (P : Total.CanonicalTotal a) : Regular (PartialMaps.Tot (Over P))
 local instance (P : Total.CanonicalTotal a) : FinitaryExtensive (PartialMaps.Tot (Over P)) :=
   SliceInseparability.PartialTotals.extensive (Over P)
 
-/-- All printed conclusions refer to the actual monic partial-map slice.
-The stronger subobject quantifier includes every closed consistent extension. -/
+/-- All conclusions refer to the monic partial-map slice. The stronger subobject
+quantifier includes every closed consistent extension. -/
 structure Conclusions (U : Theory a) (hc : U.val ⊓ refutation a U = ⊥) : Prop where
   turing : Nonempty (CompatibleSplitSlices.TuringData
     (PartialMaps.Par (Over (U.val : Total.CanonicalTotal a))))
@@ -74,8 +74,8 @@ structure Conclusions (U : Theory a) (hc : U.val ⊓ refutation a U = ⊥) : Pro
     (postcompose a i).Full ∧ (postcompose a i).Faithful ∧
       PreservesRestriction (postcompose a i) ∧ (¬ IsIso i → ¬ (postcompose a i).EssSurj)
 
-/-- Corollary 9.8 uses the printed Miller, closed-theory, extension and
-consistency hypotheses; all deduction and comparison data are constructed. -/
+/-- Corollary 9.8 uses the Miller, closed-theory, extension and consistency hypotheses;
+all deduction and comparison data are constructed. -/
 theorem printed_statement (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ refutation a U = ⊥) : Conclusions a U hc where
   turing := ⟨turingData a U⟩

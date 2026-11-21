@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportMappedLists
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportMappedListsChecks` -/
+/-! # The complete intrinsic substitution comparison from the mapped stable-list record equality -/
 
 @[expose] public section
 noncomputable section

@@ -33,8 +33,8 @@ example : IsTerminal pointDomain := pointDomain_terminal
 example (U : GlobalTheory) :
     ∃ p : pointDomain ⟶ (U.val : TotalSplit 𝗣𝗔), p ≫ U.val.arrow = theoremPoint := point_factors U
 
-/-- The actual theorem family is the image of 1_U times the original
-subobject arrow; its closure is constructed by the parameterized proof family. -/
+/-- The theorem family is the image of 1_U times the original subobject morphism; its
+closure is constructed by the parameterized proof family. -/
 example (U : GlobalTheory) : (constantTheory U).val =
     Subobject.mk ((constantFamilyFunctor (U.val : TotalSplit 𝗣𝗔)).map U.val.arrow) :=
   constantTheory_value U

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSoundness
 
 
-/-! # Statement checks in `V46NamedPlainSoundnessChecks` -/
+/-! # Soundness of the constructed standard sentence derivations -/
 
 @[expose] public section
 noncomputable section

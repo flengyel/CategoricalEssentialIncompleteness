@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalStableLists
 
-/-! Stable initiality in the actual numerical total category and all its slices. -/
+/-! Stable initiality in the numerical total category and all its slices. -/
 
 @[expose] public section
 

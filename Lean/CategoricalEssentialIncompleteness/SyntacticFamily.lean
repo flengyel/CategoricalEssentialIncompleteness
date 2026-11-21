@@ -100,9 +100,8 @@ theorem family_nonzero (hT : Consistent T) :
   change Part.some (0 : ℕ) = Part.none at h
   exact Part.notMem_none 0 (h ▸ Part.mem_some 0)
 
-/-- The exact model family instantiates Theorem 6.3.  The finite two-test
-construction of Lemma 6.5 is recorded separately from the source-choice
-sufficient condition used here. -/
+/-- The model family satisfies the section-lifting hypotheses. Lemma 7.2 gives the finite
+two-test construction. -/
 theorem family_categorical_inseparable (hT : Consistent T) :
     Inseparable (syntacticPair0 T) (syntacticPair1 T) :=
   range_functor_lifting (familyRangeFunctor T) (typedTau T) (typedTau_isTuringMorphism T)

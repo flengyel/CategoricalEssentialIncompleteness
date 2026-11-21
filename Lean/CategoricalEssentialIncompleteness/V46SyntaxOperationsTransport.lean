@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTransport
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Fold equations under the actual polynomial and algebra comparisons -/
+/-! # Fold equations under the polynomial and algebra comparisons -/
 
 @[expose] public section
 
@@ -25,8 +25,8 @@ variable (E : C ≌ D) {F₀ : C ⥤ C} {G₀ : D ⥤ D}
 variable (α : F₀ ⋙ E.functor ≅ E.functor ⋙ G₀)
 variable (A : Endofunctor.Algebra F₀) (hA : IsInitial A)
 
-/-- Mapping the actual initial fold gives the actual target fold. This
-is an equality of algebra morphisms, hence includes constructor compatibility. -/
+/-- Mapping the initial fold gives the target fold. This is an equality of algebra
+morphisms, hence includes constructor compatibility. -/
 theorem mapped_fold (B : Endofunctor.Algebra F₀) :
     (AlgebraTransport.functor E α).map (hA.to B) =
       (AlgebraTransport.initial E α A hA).to (AlgebraTransport.mappedAlgebra E α B) :=
@@ -37,8 +37,8 @@ theorem mapped_fold_underlying (B : Endofunctor.Algebra F₀) :
       ((AlgebraTransport.initial E α A hA).to (AlgebraTransport.mappedAlgebra E α B)).f :=
   congrArg Endofunctor.Algebra.Hom.f (mapped_fold E α A hA B)
 
-/-- Actual constructor-preserving comparison isomorphisms transport the
-fold through their hom and inverse, without any numerical identity premise. -/
+/-- Constructor-preserving comparison isomorphisms transport the fold through their hom
+and inverse, without any numerical identity premise. -/
 theorem mapped_fold_comparison (B : Endofunctor.Algebra F₀)
     {A' B' : Endofunctor.Algebra G₀}
     (a : AlgebraTransport.mappedAlgebra E α A ≅ A')
@@ -58,8 +58,8 @@ variable (p q : SyntaxPolynomial D)
 local notation "a" => SyntaxPolynomial.mapCoefficients E.inverse.obj p
 local notation "b" => SyntaxPolynomial.mapCoefficients E.inverse.obj q
 
-/-- The concrete source fold is the proved plain postfix fold. The
-target comparison uses the actual counit at each coefficient object. -/
+/-- The concrete source fold is the proved plain postfix fold. The target comparison uses
+the counit at each coefficient object. -/
 theorem plain_mapped_fold
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor a b)) :
     (E.prod E).functor.map ((plainPostfixInitial T a b).to B).f =

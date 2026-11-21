@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersNumeralsPredicateChecks` -/
+/-! # Numeral/complement splitting in the arithmetic category -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertReplacementChecks` -/
+/-! # Replacement of individual enumerated axioms in named proofs -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

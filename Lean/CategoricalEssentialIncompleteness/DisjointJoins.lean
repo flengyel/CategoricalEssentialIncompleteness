@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.LocalLifting
 
-/-! # Disjoint arrow joins supply section lifts -/
+/-! # Disjoint morphism joins supply section lifts -/
 
 @[expose] public section
 
@@ -21,7 +21,7 @@ namespace CategoricalEssentialIncompleteness.LocalConnectedness
 
 variable {C : Type u₁} [Category.{v₁} C] [RestrictionCategory C]
 
-/-- The restriction order on parallel partial arrows. -/
+/-- The restriction order on parallel partial morphisms. -/
 def ArrowLE {X Y : C} (f g : X ⟶ Y) : Prop := rst f ≫ g = f
 
 theorem ArrowLE.domain {X Y : C} {f g : X ⟶ Y} (h : ArrowLE f g) :
@@ -29,7 +29,7 @@ theorem ArrowLE.domain {X Y : C} {f g : X ⟶ Y} (h : ArrowLE f g) :
   change rst f ≫ rst g = rst f
   rw [← rst_comp_rst, show rst f ≫ g = f from h]
 
-/-- Least upper bounds of arrows whose restrictions are disjoint. -/
+/-- Least upper bounds of morphisms whose restrictions are disjoint. -/
 class DisjointArrowJoins (C : Type u₁) [Category.{v₁} C] [RestrictionCategory C]
     [HasZeroMorphisms C] [RestrictionZero C] : Prop where
   exists_join : ∀ {X Y : C} (f g : X ⟶ Y),
@@ -40,8 +40,7 @@ class DisjointArrowJoins (C : Type u₁) [Category.{v₁} C] [RestrictionCategor
 variable [HasZeroMorphisms C] [RestrictionZero C]
 variable [CoprodStruct C] [CategoryTheory.HasCoproducts C] [RestrictionCoproducts C]
 
-/-- Proposition 6.4, the construction of the total switch as a disjoint
-join in the restriction order. -/
+/-- The disjoint join of the branches gives a total switch. -/
 theorem disjoint_joins_switch [DisjointArrowJoins C] {X : C}
     (c c' : Idem X) (hc : PairComplementary c c') :
     ∃ ℓ : X ⟶ coprod X X, isTotal ℓ ∧
@@ -107,7 +106,7 @@ theorem image_switch_eq (F : RangeFunctor C A) {X : C}
   have hh := congrArg (fun k => k ≫ (F.comparison X X).hom) he
   simpa only [Category.assoc, Iso.inv_hom_id, Category.comp_id] using hh
 
-/-- Proposition 6.4, its range-functor conclusion. -/
+/-- A range functor carries the disjoint-join construction to the target. -/
 theorem disjoint_joins_lift [DisjointArrowJoins C] (F : RangeFunctor C A)
     {X : C} (c c' : Idem X) (hc : Complementary c c') :
     ∃ ℓ : X ⟶ coprod X X, isTotal ℓ ∧

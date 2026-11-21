@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelOccurrences
 
 
-/-! # Statement checks in `V46NamedArithmeticModelOccurrencesChecks` -/
+/-! # Occurrence equations on finite external constructor charts with arbitrary internal children -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

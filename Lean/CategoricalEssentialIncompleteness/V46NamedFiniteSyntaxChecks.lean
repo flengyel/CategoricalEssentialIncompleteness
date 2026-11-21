@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSyntax
 
 
-/-! # Statement checks in `V46NamedFiniteSyntaxChecks` -/
+/-! # Finite syntax with named binders -/
 
 @[expose] public section
 universe u v w

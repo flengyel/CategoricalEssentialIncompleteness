@@ -273,7 +273,7 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.SubobjectPredicates.pullbackHom
 #print axioms CategoricalEssentialIncompleteness.subobjectPredicates
 
--- Boolean arrows and complemented numerical subobjects.
+-- Boolean morphisms and complemented numerical subobjects.
 #print axioms CategoricalEssentialIncompleteness.Two.points_isCompl
 #print axioms CategoricalEssentialIncompleteness.Two.boundFibers_isCompl
 #print axioms CategoricalEssentialIncompleteness.isComplemented_iff_exists_characteristic
@@ -964,7 +964,7 @@ The verification script rejects any axiom other than `propext`,
 #print axioms CategoricalEssentialIncompleteness.LocalConnectedness.EnumerableCarriers.classicalSplitEquivalence
 #print axioms CategoricalEssentialIncompleteness.LocalConnectedness.fork_not_restriction_equivalent
 
--- Appendix C: actual oracle domains and the missing source section.
+-- Appendix C: oracle domains and the missing source section.
 #print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.HasApproximation.of_eq
 #print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.HasApproximation.of_partrec
 #print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.HasApproximation.oracle

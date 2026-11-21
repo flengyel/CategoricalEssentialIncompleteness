@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveOperations
 
-/-! # Native primitive certificates for the actual list codes
+/-! # Primitive recursive certificates for the list codes
 
-The length code contains minimization, so its primitive certificate requires
-the explicit bound furnished by the canonical list decoder. The other list
-constructors use the actual composition and recursion codes unchanged.
+The length code contains minimization, so its primitive certificate requires the
+explicit bound furnished by the canonical list decoder. The other list constructors
+use the composition and recursion codes unchanged.
 -/
 
 @[expose] public section

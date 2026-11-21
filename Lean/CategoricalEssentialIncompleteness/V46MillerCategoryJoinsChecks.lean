@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryJoins
 
 
-/-! # Statement checks in `V46MillerCategoryJoinsChecks` -/
+/-! # Finite compatible unions of the uniform partial graphs -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory

@@ -18,7 +18,7 @@ open CategoryTheory CategoryTheory.RestrictionCategory CategoryTheory.Limits
 
 namespace CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork
 
-/-- Actual isomorphism classes of total spans with monic domain leg. -/
+/-- Isomorphism classes of total spans with monic domain leg. -/
 abbrev PartialMapCategory := PartialSpans.Par Object
 
 /-- The effective partial functions used in the construction present

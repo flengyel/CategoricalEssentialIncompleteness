@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
 
 
-/-! # Statement checks in `V46NamedArithmeticLiteralTotalChecks` -/
+/-! # The sentence morphism on the identity omega splitting -/
 
 @[expose] public section
 noncomputable section

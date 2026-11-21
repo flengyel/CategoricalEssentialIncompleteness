@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformLiftedAction
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformLiftedActionChecks` -/
+/-! # The polynomial action on parameterized literal words -/
 
 @[expose] public section
 noncomputable section

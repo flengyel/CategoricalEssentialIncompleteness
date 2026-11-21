@@ -43,8 +43,8 @@ theorem oracleFunction_eq (p : Bits) :
   funext k
   simp [oracleFunction,OracleProgram.oracle]
 
-/-- The old characteristic-oracle prefix and the actual binary word have
-identical numerical entries, including negative oracle answers. -/
+/-- The old characteristic-oracle prefix and the binary word have identical numerical
+entries, including negative oracle answers. -/
 theorem oraclePrefix_eq (p : Bits) (k : ℕ) :
     oraclePrefix (oracleSupport p) k = OracleProgram.numericalPrefix p k := by
   apply List.ext_getElem
@@ -108,8 +108,8 @@ private theorem searchValues_recursiveIn (S : Set ℕ) (c : Code) :
   intro x
   simp [searchValues,Seq.seq,Part.bind_eq_bind,Part.bind_map]
 
-/-- The successful dovetail stage returns an actual value of the original
-ordinary computation on the indicated finite oracle prefix. -/
+/-- The successful dovetail stage returns a value of the original ordinary computation on
+the indicated finite oracle prefix. -/
 private theorem successful_value (S : Set ℕ) (c : Code) (x t : ℕ)
     (ht : t ∈ numberedSemidecision S c x) :
     trialValue S c (Nat.pair x t) ∈ c.eval
@@ -155,9 +155,9 @@ private theorem searchValues_graph (S : Set ℕ) (c : Code) (x y : ℕ)
     have he := hcoh (Nat.unpair t).1 k (trialValue S c (Nat.pair x t)) y hvalue hk
     exact Part.mem_bind_iff.mpr ⟨t,ht,Part.mem_some_iff.mpr he.symm⟩
 
-/-- Value-complete converse of the finite-query approximation theorem.
-The least successful search stage is an actual relative recursive
-computation, with the same values and the same undefined inputs as `f`. -/
+/-- Value-complete converse of the finite-query approximation theorem. The least
+successful search stage is a relative recursive computation, with the same values and
+the same undefined inputs as `f`. -/
 theorem hasApproximation_recursiveIn {S : Set ℕ} {f : ℕ → Part ℕ}
     (hf : HasApproximation S f) : Nat.RecursiveIn (oracleSet S) f := by
   obtain ⟨F,hF,hM,hf⟩ := hf
@@ -188,8 +188,8 @@ theorem hasApproximation_iff_recursiveIn (S : Set ℕ) (f : ℕ → Part ℕ) :
     HasApproximation S f ↔ Nat.RecursiveIn (oracleSet S) f :=
   ⟨hasApproximation_recursiveIn,recursiveIn_hasApproximation⟩
 
-/-- Every actual finite-query machine has the SAME value graph as a relative
-recursive function at the fixed binary oracle. -/
+/-- Every finite-query machine has the SAME value graph as a relative recursive function
+at the fixed binary oracle. -/
 theorem eval_hasApproximation (e : Code) (p : Bits) :
     HasApproximation (oracleSupport p) (OracleProgram.eval e p) := by
   have hinput : Computable (fun a : List ℕ × ℕ => ((e,a.1),a.2)) :=

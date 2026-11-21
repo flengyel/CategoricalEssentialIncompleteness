@@ -9,12 +9,12 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformParameterAlgebra
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
 
-/-! # The actual polynomial action on parameterized literal words
+/-! # The polynomial action on parameterized literal words
 
-The chart inserts the external parameter at recursive leaves. The relation
-on the resulting output tuple is the actual morphism graph on each child,
-with coefficient labels and ordered tags retained. This comparison derives
-from the proved action graphs and does not assume a constructor equation.
+The chart inserts the external parameter at recursive leaves. The relation on the
+resulting output tuple is the morphism graph on each child, with coefficient labels
+and ordered tags retained. This comparison derives from the proved action graphs and
+does not assume a constructor equation.
 -/
 
 @[expose] public section

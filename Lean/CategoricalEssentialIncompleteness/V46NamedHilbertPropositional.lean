@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
 public import Foundation.Propositional.Entailment.Cl
 
-/-! # Propositional proof rules in the literal named calculus
+/-! # Propositional proof rules in the named calculus
 
-Local hypotheses are closed only under propositional rules. Deduction,
-classical negation, conjunction and disjunction are derived from the actual
-three schemes and modus ponens. The constructed entailment instance exposes
-these proved rules for subsequent proof-presentation comparisons.
+Local hypotheses are closed only under propositional rules. Deduction, classical
+negation, conjunction and disjunction are derived from the three schemes and modus
+ponens. The constructed entailment instance exposes these proved rules for subsequent
+proof-presentation comparisons.
 -/
 
 @[expose] public section

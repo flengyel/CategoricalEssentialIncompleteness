@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformRelationUniqueChecks` -/
+/-! # Constructor uniqueness for every uniform coefficient signature -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Syntax.Raw.Checks

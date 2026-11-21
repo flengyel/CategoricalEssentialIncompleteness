@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
 public import Mathlib.Tactic.FinCases
 
-/-! # The actual sixteen field matrices in an arbitrary named structure
+/-! # The sixteen field matrices in an arbitrary named structure
 
 This interpretation has only the total functions and relations of the
 fixed bounded language. No algebraic or order structure is an input.
@@ -110,8 +110,8 @@ theorem close_elim (M : Interpretation K) (names : List ℕ) (φ : Formula) (ρ 
 
 private def assignment (x y z : K) (i : ℕ) : K := if i=0 then x else if i=1 then y else z
 
-/-- These are consequences of the printed matrices, not additional
-hypotheses on the final model comparison. -/
+/-- These are consequences of the matrices, not additional hypotheses on the final model
+comparison. -/
 structure MatrixConsequences (M : Interpretation K) : Prop where
   add_assoc : ∀ x y z,addValue M (addValue M x y) z=addValue M x (addValue M y z)
   add_comm : ∀ x y,addValue M x y=addValue M y x
@@ -131,7 +131,7 @@ structure MatrixConsequences (M : Interpretation K) : Prop where
     ltValue M (zeroValue M) (mulValue M x y)
   zero_lt_one : ltValue M (zeroValue M) (oneValue M)
 
-/-- All sixteen fields are extracted from their actual literal matrix. -/
+/-- All sixteen fields are extracted from their literal matrix. -/
 theorem matrix_consequences (M : Interpretation K) (hM : MatricesValid M) : MatrixConsequences M where
   add_assoc := by
     intro x y z

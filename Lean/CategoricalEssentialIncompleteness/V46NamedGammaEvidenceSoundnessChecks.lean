@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedGammaEvidenceSoundness
 
 
-/-! # Statement checks in `V46NamedGammaEvidenceSoundnessChecks` -/
+/-! # Gamma theorem/refutation disjointness from its semantic model -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModel
 public import CategoricalEssentialIncompleteness.V46SyntacticDecidableVariables
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionModels
 
-/-! # The actual option object and its literal failure/success chart -/
+/-! # The option object and its failure/success chart -/
 
 @[expose] public section
 
@@ -28,8 +28,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 abbrev RawOption (C : PredicateCategory T) : PredicateCategory T :=
   PredicateInterpretation.sumCarrier terminalCarrier C
 
-/-- The chosen coproduct is related to literal codes by an actual
-isomorphism. No chosen coproduct code is declared to be a native tag. -/
+/-- The chosen coproduct is related to literal codes by an isomorphism. No chosen
+coproduct code is declared to be a numerical tag. -/
 def optionIso (C : PredicateCategory T) : RawOption T C ≅ OptionSyntax.obj C :=
   (PredicateInterpretation.sumIsColimit T terminalCarrier C).coconePointUniqueUpToIso
     (coprodIsCoprod (C := PredicateCategory T) terminalCarrier C) ≪≫
@@ -154,9 +154,8 @@ theorem optionCode_reconstruct (C : PredicateCategory T) (x : Obj T M (OptionSyn
   · simp [hzero,pi₂_zero]
   · simp only [hcode,pi₂_pair,↓reduceIte,pi₁_pair]
 
-/-- Functoriality of the option chart uses the actual coproduct map.
-The only scalar premise is the already proved value of the component
-arrow on its own interpreted points. -/
+/-- Functoriality of the option chart uses the coproduct map. The only scalar premise is
+the already proved value of the component morphism on its own interpreted points. -/
 theorem optionCode_map {C D : PredicateCategory T} (f : C ⟶ D) (φ : M → M)
     (hf : ∀ y : Obj T M C, ((F T M).map f y).val = φ y.val)
     (x : Obj T M (OptionSyntax.obj C)) :
@@ -190,9 +189,9 @@ theorem optionCode_map_identity {C D : PredicateCategory T} (f : C ⟶ D)
   rw [optionCode_map T M f id hf x]
   exact optionCode_reconstruct T M C x
 
-/-- Success of an arbitrary actual option arrow is its actual
-pullback fiber. This statement uses preservation of the pullback,
-independently of the origin or initiality of that arrow. -/
+/-- Success of an arbitrary option morphism is its pullback fiber. This statement uses
+preservation of the pullback, independently of the origin or initiality of that
+morphism. -/
 theorem model_successFiber_iff {C D : PredicateCategory T} (f : C ⟶ OptionSyntax.obj D)
     (q : Obj T M C) :
     (∃ a : Obj T M (pullback f (coprod.inr : D ⟶ OptionSyntax.obj D)),

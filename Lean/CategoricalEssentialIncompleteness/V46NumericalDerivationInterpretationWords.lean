@@ -10,11 +10,11 @@ public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpret
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 
-/-! # Original PA ordinary-tree words and literal numerical tree words
+/-! # Original PA ordinary-tree words and numerical tree words
 
-Both directions use the identical word number. The stored-word parser
-check is retained on the PA side and compared by the proved conservation
-law; coefficient labels are the actual unary arithmetic images.
+Both directions use the identical word number. The stored-word parser check is
+retained on the PA side and compared by the proved conservation law; coefficient
+labels are the unary arithmetic images.
 -/
 
 @[expose] public section
@@ -83,8 +83,8 @@ theorem realizeCarrierIdentityIso_value (C : PredicateCategory 𝗣𝗔) (D : Pr
       Iso.inv_hom_id,Category.comp_id]
   exact congrArg (fun f => (f.toFun x).val) he
 
-/-- The target is the actual literal equivalence image of the plain word
-predicate; its chosen object is compared through the proved word chart. -/
+/-- The target is the literal equivalence image of the plain word predicate; its chosen
+object is compared through the proved word chart. -/
 def realizedWordIso (b : Bool) (p q : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) :
     K.obj (Postfix.carrier b p q) ≅ NumericalSyntaxTreeChart.E.functor.obj
       (Postfix.plainCarrier b (p.mapCoefficients labelMap) (q.mapCoefficients labelMap)) :=

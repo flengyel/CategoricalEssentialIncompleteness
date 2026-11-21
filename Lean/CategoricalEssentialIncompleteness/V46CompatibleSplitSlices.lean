@@ -35,8 +35,8 @@ theorem pullbacks :
 variable [HasZeroMorphisms R] [Prodominical R] [Isotype R]
 variable (inverses : MonoInverses (SplitObject R)) (T : Tot (SplitObject R))
 
-/-- The literal full constant-object subcategory has its previously
-constructed recursion-category structure for the actual base object. -/
+/-- The full constant-object subcategory has its previously constructed recursion-category
+structure for the base object. -/
 @[instance_reducible] def recursionCategory (rec : PRecursionCategory R) :
     letI := pullbacks hρ
     @PRecursionCategory (ConstantSlice.Full.FullCategory T.obj) inferInstance
@@ -59,7 +59,7 @@ theorem inclusion_faithful : (inclusion hρ inverses T).Faithful := by
   subst ρ
   exact ConstantSlice.Full.actualInclusion_faithful inverses T
 
-/-- Restriction splitting recovers every actual partial-map slice object. -/
+/-- Restriction splitting recovers every partial-map slice object. -/
 def splittingEquivalence (Q : R) :
     SplitObject (ConstantSlice.Full.FullCategory T.obj) ≌ PartialMaps.Par (Over T) := by
   subst ρ
@@ -86,8 +86,8 @@ structure TuringData (D : Type u) [Category.{v} D] [RestrictionCategory D] where
   terminate_unique : ∀ {X : D} (f : X ⟶ terminal), isTotal f → f = terminate X
   splittings : Splits D
 
-/-- The chosen product structure agrees with the actual partial-map
-restriction, and every actual slice object embeds into the Turing object. -/
+/-- The chosen product structure agrees with the partial-map restriction, and every slice
+object embeds into the Turing object. -/
 def turingData (rec : PRecursionCategory R) : TuringData (PartialMaps.Par (Over T)) := by
   subst ρ
   let ex := SplitSliceTuring.turing_object inverses T rec
@@ -112,7 +112,7 @@ def turingData (rec : PRecursionCategory R) : TuringData (PartialMaps.Par (Over 
 
 omit [HasZeroMorphisms R] [Prodominical R] [Isotype R] in
 include hρ inverses in
-/-- The original-source functor is faithful for the actual total structure. -/
+/-- The original-source functor is faithful for the total structure. -/
 theorem original_faithful {Z : Tot (SplitObject R)} (point : Z ⟶ T) (hZ : IsTerminal Z) :
     (OriginalConstantFunctor.functor T.obj).Faithful := by
   subst ρ

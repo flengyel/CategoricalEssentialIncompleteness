@@ -7,10 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceCoding
 
-/-! # A literal arithmetic program for bounded earlier-stage failure
+/-! # An arithmetic program for bounded earlier-stage failure
 
-The program folds the actual total stage interpreter. Its all-model meaning
-is proved by PA-internal induction independently of any native certificate.
+The program folds the total stage interpreter. Its all-model meaning is proved by
+PA-internal induction independently of any primitive recursive certificate.
 -/
 
 @[expose] public section
@@ -65,8 +65,8 @@ theorem stage_inputs_value {n : ℕ} (S E X : Code n) (s e x : M) (v : Fin n →
   · exact hE
   · exact hX
 
-/-- The branch decision concerns a numerical value already supplied by
-the actual stage graph. It never negates an arbitrary Sigma-one relation. -/
+/-- The branch decision concerns a numerical value already supplied by the stage graph. It
+never negates an arbitrary Sigma-one relation. -/
 theorem if_zero_value {n : ℕ} (C A B : Code n) (c a b : M) (v : Fin n → M)
     (hC : Semiformula.Evalb (c :> v) (code C))
     (hA : Semiformula.Evalb (a :> v) (code A))

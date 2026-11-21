@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonStateCoordinatesChecks` -/
+/-! # Numerical payload coordinates on the substitution state objects -/
 
 @[expose] public section
 noncomputable section

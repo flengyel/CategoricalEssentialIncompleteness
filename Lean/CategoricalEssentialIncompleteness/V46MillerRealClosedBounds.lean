@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxioms
 public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 
-/-! # Actual finite proof bounds for arbitrary extensions of T_a
+/-! # Finite proof bounds for arbitrary extensions of T_a
 
-An extension proves every literal T_a axiom. It need not contain the axiom
-codes literally, be enumerable, or have the real model of T_a. The negative
-bound uses two actual named instantiations of the closed asymmetry axiom.
+An extension proves every literal T_a axiom. It need not contain the axiom codes
+literally, be enumerable, or have the real model of T_a. The negative bound uses two
+named instantiations of the closed asymmetry axiom.
 -/
 
 @[expose] public section
@@ -109,7 +109,7 @@ theorem upper_cut_gamma_negtheta (a : Point) (Γ : Set ℕ) (hΓ : Extends a Γ)
   have hp : Proof Γ (upperHalfSentence n) := hΓ (upperHalfSentence n) (theory_upper_cut_axiom a n h)
   exact FiniteAxiomProof.modusPonens functionSymbols relationSymbols bound hp (asymmetry_instance n ha)
 
-/-- Both supports are actual finite subsets of the arbitrary external Γ. -/
+/-- Both supports are finite subsets of the arbitrary external Γ. -/
 theorem lower_finite_support (a : Point) (Γ : Set ℕ) (hΓ : Extends a Γ)
     (n : ℕ) (h : (a n : ℝ)<1/2) : ∃ L : List ℕ,(∀ word∈L,word∈Γ) ∧
       SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound (finiteCarrier L) (thetaSentence n) :=

@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorVa
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
 
-/-! # The actual evaluator arrows form a two-sorted algebra morphism -/
+/-! # The evaluator morphisms form a two-sorted algebra morphism -/
 
 @[expose] public section
 
@@ -111,8 +111,8 @@ theorem formulaFold_commutes_model
 
 end Models
 
-/-- Constructor commutation is proved for actual quotient arrows, by
-joint faithfulness over all T-models after the finite-record root laws. -/
+/-- Constructor commutation is proved for quotient morphisms, by joint faithfulness over
+all T-models after the finite-record root laws. -/
 theorem termFold_commutes :
     (a.withParameters P).eval.map (fold T a b B) ≫ B.str.1 =
       (SyntaxPolynomial.algebraWithParameters a b (postfixAlgebra T a b) P).str.1 ≫
@@ -143,8 +143,8 @@ theorem formulaFold_commutes :
   intro q
   exact formulaFold_commutes_model T a b B M q
 
-/-- The finite-record evaluator is now an actual algebra morphism into
-every algebra in the supplied parameter slice. -/
+/-- The finite-record evaluator is now an algebra morphism into every algebra in the
+supplied parameter slice. -/
 def foldHom : (SyntaxPolynomial.algebraWithParameters a b (postfixAlgebra T a b) P) ⟶ B where
   f := fold T a b B
   h := Prod.ext (termFold_commutes T a b B) (formulaFold_commutes T a b B)

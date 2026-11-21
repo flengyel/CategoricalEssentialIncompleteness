@@ -90,8 +90,8 @@ theorem total_target_fixed {X Y : TotalSplit T} (f : X ⟶ Y) (x y : M)
   obtain ⟨hf, he⟩ := (domain_graph T M Y z y).mp hz
   simpa only [he] using hf
 
-/-- The total arrow obtained by restricting the original interpreted
-partial graph to the two chosen splitting domains. -/
+/-- The total morphism obtained by restricting the original interpreted partial graph to
+the two chosen splitting domains. -/
 def domainValue {X Y : TotalSplit T} (f : X ⟶ Y) (x : Domain T M X) : Domain T M Y :=
   ⟨Classical.choose (total_domain_exists T M f x),
     total_target_fixed T M f x.val _ (Classical.choose_spec (total_domain_exists T M f x)).1⟩
@@ -193,8 +193,8 @@ def canonicalDomainFunctor : TotalSplit T ⥤ Type where
     apply congrArg (canonicalDomainEquiv T M Z)
     exact ConcreteCategory.congr_hom ((domainFunctor T M).map_comp f g) _
 
-/-- The objectwise identification with the actual splitting domains is
-natural on all total arrows. -/
+/-- The objectwise identification with the splitting domains is natural on all total
+morphisms. -/
 def domainCanonicalComparison : domainFunctor T M ≅ canonicalDomainFunctor T M :=
   NatIso.ofComponents (fun X => (canonicalDomainEquiv T M X).toIso) (by
     intro X Y f

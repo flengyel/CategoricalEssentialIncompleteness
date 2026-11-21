@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPlainSemantics
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
 public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
 
-/-! # Validity on the actual standard sentence object -/
+/-! # Validity on the standard sentence object -/
 
 @[expose] public section
 
@@ -27,8 +27,8 @@ variable (σ π : ℕ → Carrier) (d : ℕ)
 local notation "S" => plainCategoricalSyntax 𝗣𝗔 variableCarrier σ π d
 local notation "G" => F 𝗣𝗔 ℕ
 
-/-- The formula obtained through the actual sentence inclusion is closed;
-the pullback object's own raw value is not taken as a formula word. -/
+/-- The formula obtained through the sentence inclusion is closed; the pullback object's
+own raw value is not taken as a formula word. -/
 theorem decode_sentence_closed (s : Obj 𝗣𝗔 ℕ (S).sentenceObject) :
     (decodeFormula σ π d ((G).map (S).sentenceInclusion s)).freeVariables = [] := by
   let word := (G).map (S).sentenceInclusion s
@@ -46,13 +46,13 @@ variable {K : Type w}
   (functions : ∀ n : Fin (d + 1), Symbols σ n.val → (Fin n.val → K) → K)
   (relations : ∀ n : Fin (d + 1), Symbols π n.val → (Fin n.val → K) → Prop)
 
-/-- Sentence validity is a subset of the actual interpreted pullback
-object, defined through its proved inclusion into formula syntax. -/
+/-- Sentence validity is a subset of the interpreted pullback object, defined through its
+proved inclusion into formula syntax. -/
 def validSentenceSet : Set (Obj 𝗣𝗔 ℕ (S).sentenceObject) :=
   {s | Valid σ π d functions relations ((G).map (S).sentenceInclusion s)}
 
-/-- The intended negation-preimage intersection is empty on the actual
-sentence object, for every nonempty semantic structure. -/
+/-- The intended negation-preimage intersection is empty on the sentence object, for every
+nonempty semantic structure. -/
 theorem sentence_validity_disjoint [Nonempty K] :
     Disjoint (validSentenceSet σ π d functions relations)
       ((fun s : Obj 𝗣𝗔 ℕ (S).sentenceObject => (G).map (S).sentenceNegation s) ⁻¹'

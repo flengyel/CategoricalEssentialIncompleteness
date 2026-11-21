@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparis
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonEquality
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonInduction
 
-/-! # Concrete source PA admissibility for the literal named enumeration -/
+/-! # Concrete source PA admissibility for the named enumeration -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic
@@ -57,8 +57,8 @@ theorem peanoMinus_admissible (hΓ : ExtendsPA A) {φ : ArithmeticSentence}
   | ltTrans => exact ltTrans_admissible A hΓ
   | ltTri => exact ltTri_admissible A hΓ
 
-/-- The printed native Γ≥PA condition supplies the actual source PA
-axioms needed by the previously proved finite-proof translation. -/
+/-- If Γ proves the PA axioms in the named Hilbert calculus, every translated source PA
+axiom is admissible in Γ. -/
 theorem axiomsAdmissible_PA (hΓ : ExtendsPA A) :
     ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔 := by
   intro φ hφ
@@ -71,8 +71,8 @@ theorem axiomsAdmissible_of_extendsPA (hΓ : ExtendsPA A) :
     ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔 :=
   axiomsAdmissible_PA A hΓ
 
-/-- An individual finite source PA proof is translated into an actual
-literal named Γ proof under the printed native PA extension condition. -/
+/-- If Γ extends PA in the named Hilbert calculus, a finite PA proof of a sentence gives a
+Γ-proof of its translation. -/
 theorem sentence_PA_of_extendsPA (hΓ : ExtendsPA A) (φ : ArithmeticSentence)
     (hφ : 𝗣𝗔 ⊢ φ) : D (ArithmeticNamedTranslation.translateFormula 0 ![] φ) :=
   ArithmeticNamedProofTranslation.sentence A 𝗣𝗔 (axiomsAdmissible_PA A hΓ) φ hφ

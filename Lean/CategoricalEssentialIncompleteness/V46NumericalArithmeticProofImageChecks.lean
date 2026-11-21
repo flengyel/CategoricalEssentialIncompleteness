@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticProofImage
 
 
-/-! # Statement checks in `V46NumericalArithmeticProofImageChecks` -/
+/-! # The fixed provability predicate is the image of the literal proof-word conclusion -/
 
 @[expose] public section
 noncomputable section

@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionLis
 public import CategoricalEssentialIncompleteness.V46SyntacticListsStable
 public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
 
-/-! # The actual categorical concatenation computes numerical append -/
+/-! # The categorical concatenation computes numerical append -/
 
 @[expose] public section
 
@@ -134,8 +134,8 @@ theorem appendParameter_cons :
   simp only [Functor.map_comp_apply,SyntacticSyntax.Words.append_adjoin]
   rfl
 
-/-- Actual stable initiality identifies the numerical recursion with
-the specified categorical concatenation fold. -/
+/-- Stable initiality identifies the numerical recursion with the specified categorical
+concatenation fold. -/
 theorem appendParameter_eq :
     appendParameterArrow T V = (lists T V).appendParameterValue := by
   rw [(lists T V).appendParameterValue_eq_parameterFold]

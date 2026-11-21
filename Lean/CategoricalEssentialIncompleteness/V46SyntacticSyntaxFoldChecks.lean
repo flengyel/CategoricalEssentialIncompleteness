@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFold
 
-/-! # The concrete evaluator gives actual arrows into every parameter-family algebra -/
+/-! # The concrete evaluator gives morphisms into every parameter-family algebra -/
 
 @[expose] public section
 

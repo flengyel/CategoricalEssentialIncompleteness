@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertSchemePoints
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertSchemePointsChecks` -/
+/-! # Named formulas at logical-scheme parameters -/
 
 @[expose] public section
 noncomputable section

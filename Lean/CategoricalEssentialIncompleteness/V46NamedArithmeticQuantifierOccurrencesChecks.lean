@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticQuantifierOccurrences
 
 
-/-! # Statement checks in `V46NamedArithmeticQuantifierOccurrencesChecks` -/
+/-! # The quantified-constructor occurrence equation on arbitrary internal child words -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

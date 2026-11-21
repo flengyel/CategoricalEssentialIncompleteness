@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
 
-/-! # Signature checks for actual syntax geometry -/
+/-! # Signature checks for syntax geometry -/
 
 @[expose] public section
 

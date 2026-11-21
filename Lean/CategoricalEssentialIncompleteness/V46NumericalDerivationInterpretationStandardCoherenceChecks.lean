@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationStandardCoherence
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationStandardCoherenceChecks` -/
+/-! # Coherence with the original interpreted rule coefficients -/
 
 @[expose] public section
 noncomputable section

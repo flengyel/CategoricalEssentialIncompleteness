@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalAxiomIncompleteness
 
 
-/-! # Statement checks in `V46MillerCanonicalAxiomIncompletenessChecks` -/
+/-! # Incompleteness for an arbitrary axiom monomorphism -/
 
 @[expose] public section
 noncomputable section
@@ -163,8 +163,8 @@ example (m : A ⟶ (S₂).sentenceObject) [Mono m] :
         (RealClosedAxioms.theoryAxioms_enumerable a) ≤ theoremIdem a m :=
   finite_proof_transport_iff_theoremIdem_le a m
 
-/- The final statement accepts finite derivability and native sentence
-consistency; its categorical disjointness premise has been discharged. -/
+/- The final statement accepts finite derivability and named sentence consistency; its
+categorical disjointness premise has been discharged. -/
 example (m : A ⟶ (S₂).sentenceObject) [Mono m] (ha : IsMiller a)
     (hext : ∀ φ : OrderedFieldSyntax.Formula,
       OrderedFieldSyntax.formulaCode φ∈RealClosedAxioms.theoryAxioms a →

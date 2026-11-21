@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal
 
-/-! # The printed diagonal representation on the proper sentence object
+/-! # The diagonal representation on the proper sentence object
 
-The sentence theory is the range of the actual realized Γ-conclusion map.
-The two inverse-image bounds use the canonical splitting-domain extension,
-and the code model is any structure elementarily equivalent to ℕ.
+The sentence theory is the range of the realized Γ-conclusion map. The two
+inverse-image bounds use the canonical splitting-domain extension, and the code model
+is any structure elementarily equivalent to ℕ.
 -/
 
 @[expose] public section
@@ -35,8 +35,8 @@ abbrev theta := NamedArithmeticDiagonalLiteralTotal.theta
 
 theorem theta_total : isTotal theta.hom := theta.property
 
-/-- The standard value is the literal named α-instance with the already
-compared expanded numeral, with all generated binder names retained. -/
+/-- The standard value is the named α-instance with the already compared expanded numeral,
+with all generated binder names retained. -/
 theorem theta_standard (n : ℕ) :
     ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map theta
       (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ n)).val.val =
@@ -62,8 +62,8 @@ theorem modelTheta_eq : modelTheta M theta =
     ArithmeticLiteralCoordinates.thetaMap M NamedArithmeticDiagonalBounds.namedAlpha
       NamedArithmeticDiagonalBounds.namedAlpha_freeVariables := rfl
 
-/-- The inverse image through the actual sentence-valued morphism agrees
-with interpretation of the source numerical inverse image. -/
+/-- The inverse image through the sentence-valued morphism agrees with interpretation of
+the source numerical inverse image. -/
 theorem positive_comparison (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :
     Idem.pull (ArithmeticLiteralCoordinates.thetaMap M φ hφ)
@@ -98,8 +98,8 @@ theorem negative_comparison (Γ : Carrier) (φ : Formula)
 
 end PA
 
-/-- The two bounds of Lemma 7.1 have only the printed native Γ-extension
-hypothesis. PA holds in the code model by elementary equivalence. -/
+/-- Both bounds of Lemma 8.1 hold when Γ extends PA in the named calculus. Elementary
+equivalence gives PA in the code model. -/
 theorem bounds (Γ : Carrier) (hΓ : ArithmeticNamedAxiomComparison.ExtendsPA Γ)
     (M : Type) [ORingStructure M] [M ≡ₑ[ℒₒᵣ] ℕ] :
     letI : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 := Tarski.Structure.ElementaryEquiv.modelsTheory' M ℕ 𝗣𝗔
@@ -129,8 +129,8 @@ theorem bounds (Γ : Carrier) (hΓ : ArithmeticNamedAxiomComparison.ExtendsPA Γ
   exact ⟨hp.symm ▸ NamedArithmeticDiagonalBounds.model_positive M Γ hΓ,
     hn.symm ▸ NamedArithmeticDiagonalBounds.model_negative M Γ hΓ⟩
 
-/-- The total sentence morphism is chosen before Γ and the code model.
-Its standard value and both interpreted bounds are the printed ones. -/
+/-- One total sentence morphism gives the diagonal instance at every standard numeral and
+satisfies both bounds of Lemma 8.1 for every Γ and code model in the statement. -/
 theorem printed_representation :
     ∃ f : ArithmeticOmegaComparison.identityOmega 𝗣𝗔 ⟶
         NamedArithmeticLiteralTotal.literalSentence,

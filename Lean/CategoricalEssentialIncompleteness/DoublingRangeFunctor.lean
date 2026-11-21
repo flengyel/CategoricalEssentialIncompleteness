@@ -113,8 +113,8 @@ def doublingRangeFunctor : RangeFunctor Pfn Pfn where
 def doublingProductComparison (X Y : Pfn) : ((X × Y) × Bool) → (X × Bool) × (Y × Bool) :=
   fun p => ((p.1.1,p.2),(p.1.2,p.2))
 
-/-- Pairing the images of the two actual product projections gives precisely
-the diagonal-tag comparison displayed in Section 2. -/
+/-- Pairing the images of the two product projections gives precisely the diagonal-tag
+comparison displayed in Section 2. -/
 theorem doubling_product_comparison (X Y : Pfn) :
     (fun p : (X × Y) × Bool =>
       (doubling.map (PFun.lift (Prod.fst : X × Y → X)) p).bind fun x =>

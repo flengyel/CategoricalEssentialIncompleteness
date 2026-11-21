@@ -120,8 +120,8 @@ instance functor_essSurj : (functor inverses T).EssSurj where
 
 instance functor_isEquivalence : (functor inverses T).IsEquivalence := {}
 
-/-- The actual monic-span quotient in the total slice is the category of
-ambient partial morphisms satisfying the partial over-T equation. -/
+/-- The monic-span quotient in the total slice is the category of ambient partial
+morphisms satisfying the partial over-T equation. -/
 def equivalence : PartialMaps.Par (Over T) ≌ AmbientPartialSlice.Family T.obj :=
   (functor inverses T).asEquivalence
 

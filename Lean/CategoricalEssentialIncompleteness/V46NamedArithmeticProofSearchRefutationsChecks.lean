@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
 
-/-! # Actual Γ image predicates, with no assumed comparison -/
+/-! # Γ image predicates, with no assumed comparison -/
 
 @[expose] public section
 noncomputable section

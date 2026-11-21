@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46UniformTraceComposition
 public import CategoricalEssentialIncompleteness.V46UniformTraceStageSelection
 public import FailureOfComposition.ConcreteWitnessGraphs
 
-/-! # A genuine internal compiler for constant-output program indices
+/-! # An internal compiler for constant-output program indices
 
 The parameter is encoded as program syntax by an arithmetic primitive
 recursion. Correctness for every successful computation and existence at
@@ -148,8 +148,8 @@ theorem constantIndex_correct (a s input output : M)
       simpa only [he] using ho
   exact hall a s input output ((stageFormula_eval (output + 1) s (constantIndex a) input).mp h).symm
 
-/-- The actual constant program succeeds at every internal stage that
-is strictly above both the prescribed value and the supplied input. -/
+/-- The constant program succeeds at every internal stage that is strictly above both the
+prescribed value and the supplied input. -/
 theorem constantIndex_sufficient_stage (a s input : M) (ha : a < s) (hx : input < s) :
     evalnGraphFormula.val.Evalb ![a + 1, s, constantIndex a, input] := by
   have hall : ∀ a : M, a < s →

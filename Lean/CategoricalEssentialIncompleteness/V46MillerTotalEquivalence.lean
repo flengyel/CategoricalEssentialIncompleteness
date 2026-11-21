@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerTotalCarriers
 
-/-! # The actual semidecidable presentation of the total splitting -/
+/-! # The semidecidable presentation of the total splitting -/
 
 @[expose] public section
 noncomputable section

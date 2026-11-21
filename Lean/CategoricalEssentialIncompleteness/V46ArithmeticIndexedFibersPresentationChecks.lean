@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersPresentationChecks` -/
+/-! # Comparison with the existing Gamma theorem presentation -/
 
 @[expose] public section
 noncomputable section

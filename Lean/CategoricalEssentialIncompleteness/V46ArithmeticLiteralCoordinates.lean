@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
 public import CategoricalEssentialIncompleteness.V46ArithmeticSetModelLaws
 
-/-! # The literal sentence chart in the canonical split-domain interpretation
+/-! # The sentence chart in the canonical split-domain interpretation
 
 These comparisons use the existing natural domain comparisons and the proved
 sentence morphism. No equality with an unproved source projection is needed.
@@ -84,8 +84,8 @@ theorem theta_chart (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 
   apply Subtype.ext
   exact NamedArithmeticLiteralTotal.canonical_value φ hφ M x
 
-/-- This is the image of the actual realized sentence-conclusion map,
-on the canonical chosen splitting domain. -/
+/-- This is the image of the realized sentence-conclusion map, on the canonical chosen
+splitting domain. -/
 def theory (Γ : Carrier) : Idem (PartialFun.of ((H).obj ((E).obj sentencePredicate))) :=
   Ranges.range (fun p => Part.some ((H).map ((E).map (conclusion Γ)) p))
 

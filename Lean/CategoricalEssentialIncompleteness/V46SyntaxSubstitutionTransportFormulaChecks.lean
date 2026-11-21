@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFormula
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportFormulaChecks` -/
+/-! # The equality, relation, negation and implication substitution operations inherit their comparisons from the ordinary constructors and option operations -/
 
 @[expose] public section
 noncomputable section

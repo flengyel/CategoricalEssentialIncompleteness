@@ -296,8 +296,8 @@ def regularImageIso {X Y : Type u} (f : X ⟶ Y) :
       (functor U).map (image.ι f) :=
   image.isoStrongEpiMono_hom_comp_ι _ _ _
 
-/-- Lemma 6.7: the ultrapower functor on sets preserves finite limits,
-finite coproducts and regular images, including empty carriers. -/
+/-- Lemma 7.7: the ultrapower functor on sets preserves finite limits, finite coproducts
+and regular images, including empty carriers. -/
 theorem regular : PreservesFiniteLimits (functor U) ∧
     PreservesFiniteCoproducts (functor U) ∧
     ∀ (X Y : Type u) (f : X ⟶ Y),

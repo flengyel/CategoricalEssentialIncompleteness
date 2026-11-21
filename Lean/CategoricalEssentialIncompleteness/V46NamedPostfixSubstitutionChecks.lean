@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSubstitution
 
 
-/-! # Statement checks in `V46NamedPostfixSubstitutionChecks` -/
+/-! # The numerical substitution traversal on standard named syntax -/
 
 @[expose] public section
 noncomputable section

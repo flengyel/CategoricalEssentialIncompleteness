@@ -129,7 +129,7 @@ theorem codeWordInclusion_value (x : NumericalTuples.Point (codeObject R)) :
       (representedArrow 𝗧𝗔 (SuccessCarrier.inclusion (predicateValidator R))) x)).mp rfl
   exact ((SuccessCarrier.inclusionGraph_eval (predicateValidator R) ℕ _ _).mp h).2.symm
 
-/-- The output coordinate is the actual tuple code of the conclusion. -/
+/-- The output coordinate is the tuple code of the conclusion. -/
 def codeEncodedConclusion : codeObject R ⟶
     NumericalCoordinates.predicateObject (codeEquivalence.inverse.obj F) :=
   codeConclusion R ≫ (codeEquivalence.counitIso.app F).inv ≫

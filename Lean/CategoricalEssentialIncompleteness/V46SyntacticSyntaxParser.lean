@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRefill
 
-/-! # A left-to-right primitive-recursion parser for actual postfix words -/
+/-! # A left-to-right primitive-recursion parser for postfix words -/
 
 @[expose] public section
 
@@ -137,7 +137,7 @@ instance step_definable (a b : RawPolynomial) : 𝚺₁-Function₂ (step a b : 
 @[simp] theorem step_zero (a b : RawPolynomial) (record : M) : step a b record 0 = 0 := by
   simp [step]
 
-/-- This is an actual Foundation finite computation-record construction. -/
+/-- This is a Foundation finite computation-record construction. -/
 def construction (a b : RawPolynomial) : PR.Construction M (blueprint a b) where
   zero v := v 1
   succ v i prev := step a b (nth (v 0) i) prev
@@ -217,8 +217,8 @@ theorem prefix_congr (a b : RawPolynomial) (word other n initial : M)
       fun i hi => h i (lt_trans hi (by simp))
     rw [prefix_succ, prefix_succ, ih word other initial hp, h n (by simp)]
 
-/-- Processing an appended suffix is genuine left-to-right composition
-of the two stack computations. -/
+/-- Processing an appended suffix is left-to-right composition of the two stack
+computations. -/
 theorem prefix_append (a b : RawPolynomial) (word suffix k initial : M) :
     runPrefix a b (Words.append word suffix) (len word + k) initial =
       runPrefix a b suffix k (run a b word initial) := by
@@ -238,8 +238,8 @@ theorem run_append (a b : RawPolynomial) (word suffix initial : M) :
   rw [Words.len_append, prefix_append]
   rfl
 
-/-- A final record is executed after the entire preceding word. This
-is the ordering required by the printed postfix constructors. -/
+/-- A final record is executed after the entire preceding word. This is the ordering
+required by the postfix constructors. -/
 @[simp] theorem run_snoc (a b : RawPolynomial) (word record initial : M) :
     run a b (concat word record) initial = step a b record (run a b word initial) := by
   rw [← Words.append_singleton, run_append]
@@ -248,8 +248,8 @@ is the ordering required by the printed postfix constructors. -/
   rw [hlen, prefix_succ]
   simp
 
-/-- The canonical term constructor consumes exactly its ordered child
-stack and pushes its complete literal postfix word. -/
+/-- The canonical term constructor consumes exactly its ordered child stack and pushes its
+complete postfix word. -/
 theorem step_term_constructor {X Y : Carrier} (a b : RawPolynomial) (u st : M)
     (h : (rawCarrier X Y a).val.Evalb ![u]) :
     step a b ⟪shape a u, 0⟫ (childStack a u st + 1) =

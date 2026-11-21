@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ModelLogicalSoundness
 public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 
-/-! # Instantiation and equality through the actual admissibility diagrams -/
+/-! # Instantiation and equality through the admissibility diagrams -/
 
 @[expose] public section
 

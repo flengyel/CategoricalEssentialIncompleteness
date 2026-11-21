@@ -227,8 +227,8 @@ def formulaEquiv : Formula (Symbols σ) (Symbols π) d ≃ Formula (Symbols τ) 
       rw [constructor_formula ρ π]
       simp only [formulaCode,ih]
 
-/-- The seven schemes and both ordered rules are preserved with the same
-literal axiom enumeration. -/
+/-- The seven schemes and both ordered rules are preserved with the same axiom
+enumeration. -/
 theorem derives (Γ : Carrier) {φ : Formula (Symbols σ) (Symbols π) d}
     (hp : SyntacticNamedHilbert.Derives σ π d Γ φ) :
     SyntacticNamedHilbert.Derives τ ρ d Γ (formula h j φ) := by

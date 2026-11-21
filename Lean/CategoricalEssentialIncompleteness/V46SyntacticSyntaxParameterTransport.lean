@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPolynomialTransport
 
-/-! # Polynomial transport commutes with the actual parameter comparison -/
+/-! # Polynomial transport commutes with the parameter comparison -/
 
 @[expose] public section
 
@@ -53,9 +53,9 @@ theorem parameterComponent_sum (a c : SyntaxPolynomial I) (X : C × C) :
   rw [Category.assoc, coprod.map_map]
   rfl
 
-/-- The full comparison square is proved structurally. Its left edge
-is the actual parameterComparison used by the manuscript interface,
-and its right edge is the actual comparison in the target category. -/
+/-- The full comparison square is proved structurally. Its left edge is the
+parameterComparison used by the manuscript interface, and its right edge is the
+comparison in the target category. -/
 theorem parameterComponent_comparison (p : SyntaxPolynomial I) (X : C × C) :
     (parameterComponent E b f g χ p X).hom ≫
       SyntaxPolynomial.parameterComparison Q

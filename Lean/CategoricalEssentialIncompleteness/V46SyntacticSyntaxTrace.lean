@@ -151,8 +151,8 @@ variable (A : SliceAlgebra T P X Y a b)
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Error is absorbing throughout an actual finite record. The proof
-uses internal Pi-one induction, with arbitrary model index i. -/
+/-- Error is absorbing throughout a finite record. The proof uses internal Pi-one
+induction, with arbitrary model index i. -/
 theorem ValueRecord.error_suffix {p word n states i : M}
     (h : A.ValueRecord p word n states) (hi : i ≤ n) (hz : nth states i = 0) :
     nth states n = 0 := by
@@ -207,8 +207,8 @@ theorem valueStep_frame (p record old new tail : M)
       exact Or.inr ⟨u, Words.append rest tail, value,
         refill_frame b s stack u rest tail hu, hv, by simp⟩
 
-/-- A trace starts at a displayed numerical status, so actual child
-computations can be framed and concatenated in printed word order. -/
+/-- A trace starts at a displayed numerical status, so child computations can be framed
+and concatenated in word order. -/
 def traceRecordGraph : 𝚺₁.Semisentence 5 :=
   let S := statusGraph P X Y A.termProjection.graph A.formulaProjection.graph
   let R := A.valueStepGraph

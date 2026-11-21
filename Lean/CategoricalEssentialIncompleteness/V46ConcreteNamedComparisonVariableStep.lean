@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanon
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBooleans
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
 
-/-! # The actual variable substitution branch has the numerical result -/
+/-! # The variable substitution branch has the numerical result -/
 
 @[expose] public section
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionValues
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeSubstitutionValuesChecks` -/
+/-! # Complete option points and success of the substitution morphism -/
 
 @[expose] public section
 noncomputable section

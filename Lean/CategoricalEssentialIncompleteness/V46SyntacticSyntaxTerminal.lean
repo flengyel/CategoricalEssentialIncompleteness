@@ -24,8 +24,8 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 section ConstantFamilies
 variable {C : Type u} [Category.{v} C] [HasFiniteLimits C]
 
-/-- The usual inverse to forgetting a terminal parameter agrees with
-constant families through the actual product left unitor. -/
+/-- The usual inverse to forgetting a terminal parameter agrees with constant families
+through the product left unitor. -/
 def terminalCFIso :
     (Over.equivalenceOfIsTerminal (terminalIsTerminal (C := C))).inverse ≅
       constantFamilyFunctor (⊤_ C) :=
@@ -40,9 +40,9 @@ def terminalCFIso :
         (Limits.prod.leftUnitor X).inv ≫ prod.map (𝟙 _) f
       exact (prod.leftUnitor_inv_naturality f).symm)
 
-/-- The functor is literally the constant-family functor. This makes
-transported algebra structures comparable to algebraWithParameters by
-an equality of their structure arrows. -/
+/-- The functor is literally the constant-family functor. This makes transported algebra
+structures comparable to algebraWithParameters by an equality of their structure
+morphisms. -/
 def terminalCFEquivalence : C ≌ Over (⊤_ C) := by
   let : (constantFamilyFunctor (⊤_ C)).IsEquivalence :=
     Functor.isEquivalence_of_iso (terminalCFIso (C := C))
@@ -110,8 +110,8 @@ theorem terminalParameterComparison_isIso (X : D × D) (p : SyntaxPolynomial D) 
           coprodComparison F (p.eval.obj X) (q.eval.obj X))
       infer_instance
 
-/-- The inverse components are the actual parameterComparison arrows.
-No coefficient-relabel transport or constructor comparison is assumed. -/
+/-- The inverse components are the parameterComparison morphisms. No coefficient-relabel
+transport or constructor comparison is assumed. -/
 def terminalPolynomialIso (p : SyntaxPolynomial D) :
     p.eval ⋙ constantFamilyFunctor (⊤_ D) ≅
       (constantFamilyFunctor (⊤_ D)).prod (constantFamilyFunctor (⊤_ D)) ⋙
@@ -133,8 +133,8 @@ theorem terminalPolynomialIso_inv_app (p : SyntaxPolynomial D) (X : D × D) :
     (terminalPolynomialIso p).inv.app X =
       SyntaxPolynomial.parameterComparison (⊤_ D) X p := rfl
 
-/-- The actual paired endofunctor comparison retains both term/formula
-structure arrows and all algebra morphisms. -/
+/-- The paired endofunctor comparison retains both term/formula structure morphisms and
+all algebra morphisms. -/
 def terminalJointIso (p q : SyntaxPolynomial D) :
     SyntaxPolynomial.jointFunctor p q ⋙
       (constantFamilyFunctor (⊤_ D)).prod (constantFamilyFunctor (⊤_ D)) ≅

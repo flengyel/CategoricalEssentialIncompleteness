@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpret
 
 /-! # Full stored/plain constructor comparison
 
-The stored and plain syntax presentations are related by the existing
-algebra isomorphism. Its leaf graphs are numerical identity throughout
-arithmetic models. Conjugating the proved stored constructor comparison
-therefore gives the actual canonical plain constructor comparison.
+The stored and plain syntax presentations are related by the existing algebra
+isomorphism. Its leaf graphs are numerical identity throughout arithmetic models.
+Conjugating the proved stored constructor comparison therefore gives the canonical
+plain constructor comparison.
 -/
 
 @[expose] public section

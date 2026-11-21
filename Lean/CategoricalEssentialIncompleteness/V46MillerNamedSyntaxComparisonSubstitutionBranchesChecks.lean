@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonSubstitutionBranchesChecks` -/
+/-! # Every nonquantified branch of the named substitution fold -/
 
 @[expose] public section
 noncomputable section

@@ -9,9 +9,11 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticLiteralTotal
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
 
-/-! Exact diagonal specialization of the generic literal-Total sentence
-map. All proofs are applications of generic theorems; the selected index
-inside ArithmeticDiagonalCodes.alpha is never normalized. -/
+/-!
+Exact diagonal specialization of the generic sentence morphism in the total category.
+All proofs are applications of generic theorems; the selected index inside
+ArithmeticDiagonalCodes.alpha is never normalized.
+-/
 
 @[expose] public section
 noncomputable section

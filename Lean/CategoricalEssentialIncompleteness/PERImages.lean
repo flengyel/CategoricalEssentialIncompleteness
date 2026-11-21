@@ -13,13 +13,12 @@ public import Mathlib.CategoryTheory.Limits.Shapes.KernelPair
 /-!
 # Regular images in the numerical PER category
 
-Enlarging a PER relation without changing its support gives a regular
-epimorphism represented by the identity. Its coequalizer property uses
-the PER of pairs of source representatives related in the enlarged relation.
-For a representing function `f`, identifying source elements whose outputs are
-related gives such a quotient. The function `f` induces a monomorphism from
-this quotient to the target. Every arrow therefore factors as a regular
-epimorphism followed by a monomorphism.
+Enlarging a PER relation without changing its support gives a regular epimorphism
+represented by the identity. Its coequalizer property uses the PER of pairs of source
+representatives related in the enlarged relation. For a representing function `f`,
+identifying source elements whose outputs are related gives such a quotient. The
+function `f` induces a monomorphism from this quotient to the target. Every morphism
+therefore factors as a regular epimorphism followed by a monomorphism.
 -/
 
 @[expose] public section

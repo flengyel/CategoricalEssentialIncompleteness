@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersSlices
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersSlicesChecks` -/
+/-! # Extensive slice decomposition for numeral fibers -/
 
 @[expose] public section
 noncomputable section

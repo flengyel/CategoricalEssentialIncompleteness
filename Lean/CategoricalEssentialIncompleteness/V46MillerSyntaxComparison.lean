@@ -12,11 +12,10 @@ public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialTransport
 
 /-! # The original syntax polynomial under the ordinary word inclusion
 
-Finite geometry is proved through the actual standard-model comparison and
-reflection by the uniform carrier functor. This inclusion is not assumed
-faithful or to preserve initiality. Its algebra only transports the existing
-word carriers and constructor operations; the new universal property needs
-a fold into every uniform target algebra.
+Finite geometry is proved through the standard-model comparison and reflection by the
+uniform carrier functor. This inclusion is not assumed faithful or to preserve
+initiality. Its algebra only transports the existing word carriers and constructor
+operations; the new universal property needs a fold into every uniform target algebra.
 -/
 
 @[expose] public section
@@ -45,7 +44,7 @@ namespace Polynomial
 abbrev mapped (p : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) : SyntaxPolynomial (Total.TotalCategory P) :=
   p.mapCoefficients (predicateFunctor P).obj
 
-/-- Ordered products and tagged sums have the actual chosen comparisons. -/
+/-- Ordered products and tagged sums have the chosen comparisons. -/
 def component : (p : SyntaxPolynomial (PredicateCategory 𝗣𝗔)) →
     (X : PredicateCategory 𝗣𝗔 × PredicateCategory 𝗣𝗔) →
     (predicateFunctor P).obj (p.eval.obj X) ≅

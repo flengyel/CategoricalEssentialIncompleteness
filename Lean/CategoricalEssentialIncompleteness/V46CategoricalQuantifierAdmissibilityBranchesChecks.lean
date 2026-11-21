@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityBranches
 
-/-! Actual result maps on both summands of the quantified domain. -/
+/-! Result maps on both summands of the quantified domain. -/
 
 @[expose] public section
 noncomputable section

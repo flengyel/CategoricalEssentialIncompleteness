@@ -14,12 +14,12 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxStableTranspo
 public import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
 public import CategoricalEssentialIncompleteness.V46DecidableVariablesTransport
 
-/-! # The concrete syntax bundle in the actual Miller total splitting
+/-! # The concrete syntax bundle in the Miller total splitting
 
-Initiality is first constructed for arbitrary uniform coefficient carriers
-and target families, then transported through the actual splitting
-equivalence with its polynomial and slice comparisons. The equivalence is
-not used to infer initiality in a larger, unproved morphism class.
+Initiality is first constructed for arbitrary uniform coefficient carriers and target
+families, then transported through the splitting equivalence with its polynomial and
+slice comparisons. The equivalence is not used to infer initiality in a larger,
+unproved morphism class.
 -/
 
 @[expose] public section
@@ -80,8 +80,8 @@ def mappedCategoricalSyntax (E : Total.TotalCategory P ≌ D) (V : D) (σ π : �
   lists := SyntacticLists.Transport.mappedStableListAlgebra E (E.inverse.obj V) V
     (E.counitIso.app V) (Lists.stable (E.inverse.obj V).obj)
 
-/-- Syntax and lists in the actual Tot(Split(E_z)), including every parameter
-object there, with the proved coefficient counit comparisons. -/
+/-- Syntax and lists in the Tot(Split(E_z)), including every parameter object there, with
+the proved coefficient counit comparisons. -/
 def canonicalCategoricalSyntax (z : Point) (V : Total.CanonicalTotal z)
     (σ π : ℕ → Total.CanonicalTotal z) (d : ℕ) : CategoricalSyntax V σ π d :=
   mappedCategoricalSyntax (Total.pointPresentation z) V σ π d

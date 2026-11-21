@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
 public import Mathlib.CategoryTheory.Limits.Constructions.Over.Basic
 
-/-! # The actual ordered raw polynomial product in every parameter slice
+/-! # The ordered raw polynomial product in every parameter slice
 
 An input carries the external parameter once and the two ordered children
 separately. The lift uses the graphs of arbitrary supplied slice morphisms.
@@ -249,8 +249,8 @@ def productIsLimit : IsLimit (BinaryFan.mk (productFst R X Y a b) (productSnd R 
     (fun s => productLift_snd R X Y a b s.fst s.snd)
     (fun s m hm₁ hm₂ => productLift_unique R X Y a b s.fst s.snd m hm₁ hm₂)
 
-/-- The raw constructor input is compared with the chosen slice product
-by its proved universal property, with both actual projection triangles. -/
+/-- The raw constructor input is compared with the chosen slice product by its proved
+universal property, with both projection triangles. -/
 def productIso : object R X Y (.product a b) ≅ object R X Y a ⨯ object R X Y b :=
   (productIsLimit R X Y a b).conePointUniqueUpToIso (limit.isLimit (Limits.pair (object R X Y a) (object R X Y b)))
 

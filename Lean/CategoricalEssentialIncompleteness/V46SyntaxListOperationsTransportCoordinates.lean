@@ -9,8 +9,10 @@ public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTranspor
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
 public import CategoricalEssentialIncompleteness.V46CategoricalListOperations
 
-/-! Constructor and cons-step coordinates under the genuine family,
-coefficient and product comparisons. These are categorical equations. -/
+/-!
+Constructor and cons-step coordinates under the family, coefficient and product
+comparisons. These are categorical equations.
+-/
 
 @[expose] public section
 noncomputable section
@@ -50,8 +52,8 @@ theorem map_list_cons : E.functor.map L.algebra.cons =
   simp only [prod.map_map_assoc,e.hom_inv_id,Category.id_comp,
     prod.map_id_id,IsIso.hom_inv_id_assoc]
 
-/-- The singleton comparison is derived from the actual nil/cons
-diagrams, including the terminal comparison. -/
+/-- The singleton comparison is derived from the nil/cons diagrams, including the terminal
+comparison. -/
 theorem map_list_singleton : E.functor.map L.singleton = e.hom ≫
     (mappedStableListAlgebra E V W e L).singleton := by
   let R := mappedStableListAlgebra E V W e L

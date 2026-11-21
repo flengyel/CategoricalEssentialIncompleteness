@@ -166,8 +166,8 @@ def finiteMembershipSentence (C : Carrier) : ArithmeticSentence :=
         (finiteMembership C).val.Evalb ![a] := by
   simp [finiteMembershipSentence]
 
-/-- Lemma 5.4 for an arbitrary Sigma-one entry condition, using explicit
-canonical vector codes and a vector of witnesses for its bounded matrix. -/
+/-- Lemma 6.4 for an arbitrary Sigma-one entry condition, using explicit canonical vector
+codes and a vector of witnesses for its bounded matrix. -/
 theorem finite_membership_PA (C : Carrier) : 𝗣𝗔 ⊢ finiteMembershipSentence C := by
   apply complete.{0} 𝗣𝗔
   intro M _ _
@@ -294,8 +294,8 @@ theorem pair_payload_tagged_membership_model {k : ℕ} (conditions : Fin k → C
     pair_tagged_membership_model (fun j => onPayload (conditions j)) a
 
 
-/-- The selected-case version requires an actual tag in the finite range;
-records with any other tag are excluded by this Sigma-one predicate. -/
+/-- The selected-case version requires a tag in the finite range; records with any other
+tag are excluded by this Sigma-one predicate. -/
 def selectedPayloadCondition {k : ℕ} (conditions : Fin k → Carrier) : Carrier :=
   .mkSigma (Finset.udisj (fun j : Fin k =>
     (pairTag j.val).val ⋏ (onPayload (conditions j)).val)) (by

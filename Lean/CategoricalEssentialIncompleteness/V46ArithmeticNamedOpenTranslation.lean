@@ -115,7 +115,7 @@ theorem term_rew {ξ : Type u} {ζ : Type v} {n m : ℕ}
       | add => exact congrArg₂ NamedArithmeticSignature.add (ih 0) (ih 1)
       | mul => exact congrArg₂ NamedArithmeticSignature.mul (ih 0) (ih 1)
 
-/-- Source variable renaming is kept as literal named variable renaming. -/
+/-- Source variable renaming is kept as named variable renaming. -/
 theorem term_map {ξ : Type u} {ζ : Type v} {n m : ℕ}
     (b : Fin n → Fin m) (f : ξ → ζ) (bn : Fin m → ℕ) (fn : ζ → ℕ)
     (r : Semiterm ℒₒᵣ ξ n) :
@@ -147,8 +147,8 @@ theorem term_free {n : ℕ} (bn : Fin n → ℕ) (fn : ℕ → ℕ)
   · intro i
     simp only [Rew.free_fvar,term]
 
-/-- The exact variable-valued rewrite comparison extends through every
-NNF constructor. Quantifiers use the actual lifted source rewriting q. -/
+/-- The exact variable-valued rewrite comparison extends through every NNF constructor.
+Quantifiers use the lifted source rewriting q. -/
 theorem formula_rew {ξ : Type u} {ζ : Type v} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
     ∀ {m : ℕ} (ω : Rew ℒₒᵣ ξ n ζ m) (next : ℕ)
       (bn : Fin m → ℕ) (fn : ζ → ℕ) (sb : Fin n → ℕ) (sf : ξ → ℕ),
@@ -249,8 +249,8 @@ theorem formula_emb {n : ℕ} (φ : ArithmeticSemisentence n)
   exact (formula_rew φ Rew.emb next bn fn bn Empty.elim
     (by intro i; rfl) (by intro x; exact x.elim)).trans (formula_empty φ next bn)
 
-/-- Every name in an elaborated arithmetic term comes from an explicit
-source-variable map; this is a literal finite-list statement. -/
+/-- Every name in an elaborated arithmetic term comes from an explicit source-variable
+map; this is a finite-list statement. -/
 theorem term_names {ξ : Type u} {n : ℕ} (r : Semiterm ℒₒᵣ ξ n)
     (bn : Fin n → ℕ) (fn : ξ → ℕ) (z : ℕ)
     (hz : z ∈ (term bn fn r).freeVariables) :
@@ -344,8 +344,8 @@ private theorem substitute_mul (r s : NamedArithmeticSignature.Term) (x : ℕ) (
   funext i
   fin_cases i <;> rfl
 
-/-- Substitution compatibility for arithmetic terms is proved from the
-actual source rewriting's variable leaves, not inferred from evaluation. -/
+/-- Substitution compatibility for arithmetic terms is proved from the source rewriting's
+variable leaves, not inferred from evaluation. -/
 theorem term_substitution_rew {ξ : Type u} {ζ : Type v} {n m : ℕ}
     (ω : Rew ℒₒᵣ ξ n ζ m) (bn : Fin m → ℕ) (fn : ζ → ℕ)
     (sb : Fin n → ℕ) (sf : ξ → ℕ) (x : ℕ) (t : NamedArithmeticSignature.Term)
@@ -384,9 +384,9 @@ private theorem substitution_q_bvar {ξ : Type u} {ζ : Type v} {n m : ℕ}
     exact ite_eq_right (Ne.symm (Nat.ne_of_lt hx))
   · simpa only [Matrix.cons_val_succ,Rew.q_bvar_succ,term_bShift] using hb j
 
-/-- Actual named substitution commutes with an arithmetic source rewrite
-when its variable leaves match. The explicit bounds ensure that every
-new binder is distinct from the query and absent from the replacement. -/
+/-- Named substitution commutes with an arithmetic source rewrite when its variable leaves
+match. The explicit bounds ensure that every new binder is distinct from the query and
+absent from the replacement. -/
 theorem formula_substitution_rew {ξ : Type u} {ζ : Type v} {n : ℕ}
     (φ : Semiformula ℒₒᵣ ξ n) :
     ∀ {m : ℕ} (ω : Rew ℒₒᵣ ξ n ζ m) (next : ℕ)
@@ -480,8 +480,8 @@ theorem formula_substitution_rew {ξ : Type u} {ζ : Type v} {n : ℕ}
       simp [ArithmeticNamedTranslation.existential,NamedFiniteSyntax.Formula.substitute,
         Ne.symm (Nat.ne_of_lt hx),hn,hi]
 
-/-- The actual substitution equation needed at an LK existential step.
-All replacement names lie below the fresh outer name by an explicit map bound. -/
+/-- The substitution equation needed at an LK existential step. All replacement names lie
+below the fresh outer name by an explicit map bound. -/
 theorem instance_substitution (φ : Semiproposition ℒₒᵣ 1)
     (t : SyntacticTerm ℒₒᵣ) (next : ℕ) (fn : ℕ → ℕ) (hf : ∀ i, fn i < next) :
     (formula (next+1) ![next] fn φ).substitute next (term ![] fn t) =
@@ -497,8 +497,8 @@ theorem instance_substitution (φ : Semiproposition ℒₒᵣ 1)
   · intro i
     simp only [NamedFiniteSyntax.Term.substitute,ite_eq_right (Nat.ne_of_lt (hf i)),Rew.subst_fvar,term]
 
-/-- Free target names come from source variable maps; target quantifier
-names are removed by the actual named FV filter. No freshness is assumed. -/
+/-- Free target names come from source variable maps; target quantifier names are removed
+by the named FV filter. No freshness is assumed. -/
 theorem formula_names {ξ : Type u} {n : ℕ} (φ : Semiformula ℒₒᵣ ξ n) :
     ∀ (next : ℕ) (bn : Fin n → ℕ) (fn : ξ → ℕ) (z : ℕ),
       z ∈ (formula next bn fn φ).freeVariables →

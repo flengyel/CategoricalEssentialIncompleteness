@@ -77,7 +77,7 @@ theorem search_graph_in_model (C D : Carrier)
 
 end Models
 
-/-- A fixed partial source arrow, chosen before any model or disjointness witness. -/
+/-- A fixed partial source morphism, chosen before any model or disjointness witness. -/
 def lift (C D : Carrier) : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔) :=
   arrowOfIndex 𝗣𝗔 .omega (.coproduct .omega .omega)
     (SyntacticSearch.searchIndex (reversedGraph C D))
@@ -196,9 +196,9 @@ theorem pull_summand1 (C D : Carrier)
     exact ⟨Sum.inr x, (mem_model_lift M C D hd x (Sum.inr x)).mpr ⟨hx, rfl⟩,
       x, rfl⟩
 
-/-- Lemma 7.2's search construction for arbitrary Sigma-one evidence
-predicates. Concrete provability predicates may be substituted after
-their categorical syntax comparison has been established. -/
+/-- Lemma 8.2's search construction for arbitrary Sigma-one evidence predicates. Concrete
+provability predicates may be substituted after their categorical syntax comparison
+has been established. -/
 theorem partial_lift (C D : Carrier) :
     ∃ ell : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
       ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawProducts
 
 
-/-! # Statement checks in `V46MillerSyntaxRawProductsChecks` -/
+/-! # The ordered raw polynomial product in every parameter slice -/
 
 @[expose] public section
 noncomputable section

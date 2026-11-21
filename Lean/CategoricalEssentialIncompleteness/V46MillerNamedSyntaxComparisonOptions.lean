@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerDerivationEquality
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
-/-! # Actual option/product comparison for a finite-geometry functor
+/-! # Option/product comparison for a finite-geometry functor
 
 This contains no equivalence or initiality-preservation assumption.
 -/
@@ -100,7 +100,7 @@ theorem map_none {W X : C} {X' : D} (i : F.obj X ≅ X') (x : W ⟶ ⊤_ C) :
       (F.map x ≫ (asIso (terminalComparison F)).hom) ≫ coprod.inl := by
   rw [F.map_comp,Category.assoc,optionIso_inl,← Category.assoc]
 
-/-- A value-map square induces the actual option-map square. -/
+/-- A value-map square induces the option-map square. -/
 theorem map_option_map {X Y : C} {X' Y' : D}
     (i : F.obj X ≅ X') (j : F.obj Y ≅ Y') (f : X ⟶ Y) (g : X' ⟶ Y')
     (hf : F.map f ≫ j.hom = i.hom ≫ g) :
@@ -132,8 +132,8 @@ theorem map_option_map {X Y : C} {X' Y' : D}
       _ = _ := by
         rw [optionIso_inr_assoc,OptionSyntax.map,coprod.inr_map]
 
-/-- The ordinary constructor square also determines its successful
-option-valued square, including the actual product comparison. -/
+/-- The ordinary constructor square also determines its successful option-valued square,
+including the product comparison. -/
 theorem map_pair_some {W X Y Z : C} {X' Y' Z' : D}
     (i : F.obj X ≅ X') (j : F.obj Y ≅ Y') (k : F.obj Z ≅ Z')
     (h : X ⨯ Y ⟶ Z) (h' : X' ⨯ Y' ⟶ Z')

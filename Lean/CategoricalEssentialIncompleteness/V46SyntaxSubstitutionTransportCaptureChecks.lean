@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportCapture
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportCaptureChecks` -/
+/-! # Capture transport uses the proved free-variable folds and the membership diagram -/
 
 @[expose] public section
 noncomputable section

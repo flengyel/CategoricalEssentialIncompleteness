@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.V46SyntacticFiniteDerivationsPo
 
 /-! # Explicit finite typed derivations and the constructed proof object
 
-The external tree retains the original rule label and its own ordered
-premise conclusions. Interpretation uses the actual rule-input pullback.
-The converse on standard codes uses the proved arithmetic size induction,
-not preservation of initial algebras by the model functor.
+The external tree retains the original rule label and its own ordered premise
+conclusions. Interpretation uses the rule-input pullback. The converse on standard
+codes uses the proved arithmetic size induction, not preservation of initial algebras
+by the model functor.
 -/
 
 @[expose] public section
@@ -37,8 +37,8 @@ inductive Derives : Obj T M Fm → Prop
         Derives ((F T M).map (R.premises i ≫ finiteChild T Fm i.val k) r)) :
       Derives ((F T M).map (R.conclusion i) r)
 
-/-- Every external finite derivation is realized by a genuine point
-of the constructed Sigma-one proof carrier. -/
+/-- Every external finite derivation is realized by a point of the constructed Sigma-one
+proof carrier. -/
 theorem realizes {φ : Obj T M Fm} (h : Derives T M R φ) :
     ∃ p : Obj T M (derivationAlgebra T R).a.left,
       (F T M).map (derivationAlgebra T R).a.hom p = φ := by

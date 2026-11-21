@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImagePoints
 
 
-/-! # Statement checks in `V46MillerNamedProofImagePointsChecks` -/
+/-! # Named points of the uniform logical operations -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationTupleCompatibility
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 
-/-! Actual isomorphisms between chosen finite powers and literal ordered tuples. -/
+/-! Isomorphisms between chosen finite powers and literal ordered tuples. -/
 
 @[expose] public section
 noncomputable section
@@ -36,8 +36,8 @@ theorem modelTerminal_ext (x y : Obj T M (⊤_ (PredicateCategory T))) : x = y :
 
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Finite-power raw coordinates determine an actual categorical point;
-this is proved only from the actual unit and product universal properties. -/
+/-- Finite-power raw coordinates determine a categorical point; this is proved only from
+the unit and product universal properties. -/
 theorem powerRepresentation_point_unique (F : PredicateCategory T) (n : ℕ) (u : M)
     (x y : Obj T M ((SyntaxPolynomial.power .term n).eval.obj (F, F)))
     (hx : (baseRepresentation T F F (SyntaxPolynomial.power .term n)).val.Evalb ![u, x.val])
@@ -82,8 +82,8 @@ theorem powerRepresentation_point_unique (F : PredicateCategory T) (n : ℕ) (u 
 
 end Models
 
-/-- The inverse is obtained from the existing all-model converse-graph
-construction after proving bijectivity of these particular actual encoders. -/
+/-- The inverse is obtained from the existing all-model converse-graph construction after
+proving bijectivity of these particular encoders. -/
 theorem powerPolynomialEncoder_isIso (F : PredicateCategory T) (n : ℕ) :
     IsIso (representedArrow T (encodePolynomial T F F (SyntaxPolynomial.power .term n))) := by
   apply PredicateInterpretation.isIso_of_models_bijective T

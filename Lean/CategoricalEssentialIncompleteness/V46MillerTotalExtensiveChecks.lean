@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
 
 
-/-! # Statement checks in `V46MillerTotalExtensiveChecks` -/
+/-! # Uniform semidecidable-carrier total splitting: Extensive -/
 
 @[expose] public section
 noncomputable section

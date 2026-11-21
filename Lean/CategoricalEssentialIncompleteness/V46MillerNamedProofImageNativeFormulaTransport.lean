@@ -7,11 +7,9 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaInputs
 
-/-! # Native formula substitution and the actual full option output
+/-! # Transport of substitution on named formulas
 
-Every branch is evaluated on the existing standard PA state and then
-transported by its proved morphism square. The actual slice fold is
-compared by native induction. Failure remains part of the formula state.
+The constructor squares compare the full option values, including failure.
 -/
 
 @[expose] public section
@@ -44,8 +42,8 @@ local notation "c" => NamedSyntaxComparison.substitutionStateIso P (V) σ π d
 local notation "e" => NamedSyntaxComparison.substitutionParameterIso P (V) σ π d
 local notation "j" => NamedSyntaxComparison.substitutionFormulaStateIso P (V) σ π d
 
-/-- Each branch uses its frozen actual state square; the quantifier
-square carries its full option input, including a failed recursive child. -/
+/-- Each branch uses its frozen state square; the quantifier square carries its full
+option input, including a failed recursive child. -/
 theorem formula_step_transport (r₀ : (N).obj (R₀))
     (z : Standard.Data (S₀).substitutionCarriers (b)) :
     (U).map (prod.snd : (R) ⨯ (S).substitutionCarriers.2 ⟶ _)

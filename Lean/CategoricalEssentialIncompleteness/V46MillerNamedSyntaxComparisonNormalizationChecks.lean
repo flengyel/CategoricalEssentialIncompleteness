@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonNormalization
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonNormalizationChecks` -/
+/-! # Explicit polynomial equalities in the concrete named comparison -/
 
 @[expose] public section
 noncomputable section

@@ -41,8 +41,8 @@ theorem postcompose_not_essSurj (inverses : MonoInverses C) {T U : Tot C} (i : T
   subst ρ
   exact PartialSliceChangeBase.not_essSurj i inverses proper
 
-/-- The old retraction and both total-extension directions are transported
-together, retaining the actual constant-family functor. -/
+/-- The old retraction and both total-extension directions are transported together,
+retaining the constant-family functor. -/
 def constantData (inverses : MonoInverses C) {Z U : Tot C}
     (point : Z ⟶ U) (hZ : IsTerminal Z) :
     {K : C ⥤ PartialMaps.Par (Over U) //

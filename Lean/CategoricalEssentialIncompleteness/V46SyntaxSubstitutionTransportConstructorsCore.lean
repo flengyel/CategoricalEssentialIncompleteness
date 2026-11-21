@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxPolynomialNormalization
 
-/-! Actual constructor squares for distinct term/formula carriers.
-Coefficient-template equalities are retained as explicit comparison legs. -/
+/-!
+Constructor squares for distinct term/formula carriers. Coefficient-template
+equalities are retained as explicit comparison legs.
+-/
 
 @[expose] public section
 noncomputable section

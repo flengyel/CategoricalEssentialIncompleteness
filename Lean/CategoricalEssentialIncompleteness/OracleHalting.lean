@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.OracleRestrictedCategory
 public import Mathlib.Computability.Halting
 
-/-! # The actual diagonal halting oracle decides every ordinary c.e. predicate -/
+/-! # The diagonal halting oracle decides every ordinary c.e. predicate -/
 
 @[expose] public section
 
@@ -95,8 +95,8 @@ theorem oracle_complement (S : Set ℕ) : FiniteOracleRE S (fun n => n ∉ S) :=
   · intro hx
     exact ⟨x+1,by simp [oraclePrefix,List.getElem?_map,List.getElem?_range (by omega : x<x+1),answer,hx]⟩
 
-/-- In particular every ordinary c.e. set and its complement are c.e. in
-the actual diagonal halting oracle. -/
+/-- In particular every ordinary c.e. set and its complement are c.e. in the diagonal
+halting oracle. -/
 theorem K_decides_re {p : ℕ → Prop} (hp : REPred p) :
     FiniteOracleRE K p ∧ FiniteOracleRE K (fun n => ¬p n) := by
   obtain ⟨h,hh,he⟩ := re_reduces_K hp

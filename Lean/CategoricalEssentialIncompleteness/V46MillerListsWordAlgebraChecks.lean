@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsWordAlgebra
 
 
-/-! # Statement checks in `V46MillerListsWordAlgebraChecks` -/
+/-! # Full constructor comparison between numerical lists and literal words -/
 
 @[expose] public section
 noncomputable section

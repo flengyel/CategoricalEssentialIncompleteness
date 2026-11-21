@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.PartialListFold
 public import CategoricalEssentialIncompleteness.EnumerablePCategory
 public import CategoricalEssentialIncompleteness.EnumerableAssociativePrograms
 
-/-! # Actual singleton insertion, concatenation and finite evaluation -/
+/-! # Singleton insertion, concatenation and finite evaluation -/
 
 @[expose] public section
 

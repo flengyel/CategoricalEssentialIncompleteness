@@ -48,8 +48,8 @@ theorem standard_complete (p : Obj T ℕ (derivationAlgebra T R).a.left) :
   erw [Functor.map_comp_apply]
   exact h
 
-/-- Finite typed rule trees coincide with the conclusions of the
-actual constructed standard proof carrier. -/
+/-- Finite typed rule trees coincide with the conclusions of the constructed standard
+proof carrier. -/
 theorem standard_iff (φ : Obj T ℕ Fm) :
     Derives T ℕ R φ ↔ ∃ p : Obj T ℕ (derivationAlgebra T R).a.left,
       (F T ℕ).map (derivationAlgebra T R).a.hom p = φ := by

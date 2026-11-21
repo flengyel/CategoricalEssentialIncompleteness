@@ -194,7 +194,7 @@ theorem spanClassValue_surjective {X Y : C} :
   obtain ⟨s,hs⟩ := Span.exists_value f
   exact ⟨Quotient.mk _ s,hs⟩
 
-/-- Isomorphism classes of monic spans are precisely the partial arrows. -/
+/-- Isomorphism classes of monic spans are precisely the partial morphisms. -/
 def homEquiv (X Y : C) : Quotient (spanSetoid X Y) ≃ (X ⟶ Y) :=
   Equiv.ofBijective spanClassValue ⟨spanClassValue_injective,spanClassValue_surjective⟩
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeStandard
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeStandardChecks` -/
+/-! # Finite standard-model inputs and their parameterized points -/
 
 @[expose] public section
 noncomputable section

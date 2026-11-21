@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLiteralSignature
 
 
-/-! # Statement checks in `V46NumericalArithmeticLiteralSignatureChecks` -/
+/-! # The chosen arithmetic signature and its numerical code labels -/
 
 @[expose] public section
 noncomputable section

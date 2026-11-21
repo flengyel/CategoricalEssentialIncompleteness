@@ -147,8 +147,8 @@ private theorem member_append_one (name s t : M) :
       · simp only [ite_eq_left hn,zero_ne_one,and_false]
       · simp only [ite_eq_right hn,ih]
 
-/-- An internal numerical list with no named members is zero. The proof
-uses its actual nil/adjoin decomposition, not external finiteness. -/
+/-- An internal numerical list with no named members is zero. The proof uses its
+nil/adjoin decomposition, not external finiteness. -/
 theorem list_eq_zero_of_no_members (list : M) (h : ∀ name : M,member name list ≠ 1) : list = 0 := by
   rcases nil_or_adjoin list with hz | ⟨name,tail,he⟩
   · exact hz

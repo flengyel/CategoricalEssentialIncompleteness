@@ -11,12 +11,11 @@ public import Mathlib.Tactic.Ring
 
 /-! # The chosen recursive RCF axioms characterize real closure
 
-For an arbitrary supplied ordered field, validity of the literal positive
-square-root sentence and all literal odd Horner-root sentences supplies
-the two criteria in the existing IsRealClosed.of_linearOrderedField theorem.
-The converse uses the already constructed semantics of the same words.
-This is a model characterization of the actual axiom set, not a truth
-assumption for an arbitrary consistent extension.
+For an arbitrary supplied ordered field, validity of the positive square-root sentence
+and all literal odd Horner-root sentences supplies the two criteria in the existing
+IsRealClosed.of_linearOrderedField theorem. The converse uses the already constructed
+semantics of the same words. This is a model characterization of the axiom set, not a
+truth assumption for an arbitrary consistent extension.
 -/
 
 @[expose] public section
@@ -31,7 +30,7 @@ variable {K : Type u} [Field K] [ord : LinearOrder K] [IsStrictOrderedRing K]
 variable (constants : ℕ → K)
 
 omit [IsStrictOrderedRing K] in
-/-- Instantiate all the actual universal binders at the given assignment. -/
+/-- Instantiate all the universal binders at the given assignment. -/
 theorem close_elim (names : List ℕ) (φ : Formula) (ρ : ℕ → K)
     (h : Holds constants (close names φ) ρ) : Holds constants φ ρ := by
   induction names generalizing ρ with
@@ -41,8 +40,8 @@ theorem close_elim (names : List ℕ) (φ : Formula) (ρ : ℕ → K)
       simpa only [Function.update_eq_self] using ih _ (h (ρ name))
 
 omit [LinearOrder K] [IsStrictOrderedRing K] in
-/-- Coefficients are in ascending order, exactly as in the printed
-Horner term. The final zero remains the original literal zero. -/
+/-- Coefficients are in ascending order, exactly as in the Horner term. The final zero
+remains the original literal zero. -/
 theorem horner_append_singleton (coefficients : List K) (a : K) :
     hornerPolynomial (coefficients++[a])=
       hornerPolynomial coefficients+C a*X^coefficients.length := by
@@ -65,16 +64,16 @@ theorem horner_range_sum (coefficients : ℕ → K) (n : ℕ) :
         horner_append_singleton,List.length_map,List.length_range,ih,Finset.sum_range_succ]
 
 omit [LinearOrder K] [IsStrictOrderedRing K] in
-/-- Every polynomial, not only a supplied Horner presentation, is covered
-by the literal scheme at its actual coefficient assignment. -/
+/-- Every polynomial, not only a supplied Horner presentation, is covered by the literal
+scheme at its coefficient assignment. -/
 theorem horner_coefficients (f : K[X]) :
     hornerPolynomial ((List.range (f.natDegree+1)).map f.coeff)=f := by
   rw [horner_range_sum]
   exact f.as_sum_range_C_mul_X_pow.symm
 
 omit [IsStrictOrderedRing K] in
-/-- Positive-square validity includes the missing zero case by its actual
-zero witness, yielding precisely the nonnegative-square criterion. -/
+/-- Positive-square validity includes the missing zero case by its zero witness, yielding
+precisely the nonnegative-square criterion. -/
 theorem isSquare_of_nonneg_of_positiveSquare
     (h : ∀ ρ : ℕ → K,Holds constants positiveSquare ρ) {x : K} (hx : @LE.le K ord.toPartialOrder.toPreorder.toLE 0 x) : IsSquare x := by
   have hs : ∀ x : K,0<x → ∃ y : K,y*y=x := by
@@ -113,8 +112,8 @@ theorem odd_root_of_oddSentences
   rw [hcoeff] at hx
   exact ⟨x,hx⟩
 
-/-- No characterization or root-existence field is assumed: both criteria
-are derived from the actual named sentences. -/
+/-- No characterization or root-existence field is assumed: both criteria are derived from
+the named sentences. -/
 theorem isRealClosed_of_scheme_validity
     (hSquare : ∀ ρ : ℕ → K,Holds constants positiveSquare ρ)
     (hOdd : ∀ n : ℕ,∀ ρ : ℕ → K,Holds constants (oddSentence n) ρ) : IsRealClosed K :=
@@ -122,8 +121,8 @@ theorem isRealClosed_of_scheme_validity
     (fun hx => isSquare_of_nonneg_of_positiveSquare constants hSquare hx)
     (fun hf => odd_root_of_oddSentences constants hOdd _ hf)
 
-/-- Satisfaction of the original word axiom set in the actual field
-interpretation. The words and decoded named formulas are unchanged. -/
+/-- Satisfaction of the original word axiom set in the field interpretation. The words and
+decoded named formulas are unchanged. -/
 def ModelsWords (A : Set ℕ) : Prop := ∀ word∈A,
   ∃ φ : Formula,formulaCode φ=word ∧ ∀ ρ : ℕ → K,Holds constants φ ρ
 
@@ -159,8 +158,8 @@ theorem formula_axioms_iff_isRealClosed :
   · intro h φ hφ
     exact formula_valid_of_models constants ((modelsRCF_iff_isRealClosed constants).mpr h) φ hφ
 
-/-- The actual T_a adds precisely its original strict cut sentences to
-that real-closed-field axiom set. This concerns T_a, not arbitrary Γ. -/
+/-- The T_a adds precisely its original strict cut sentences to that real-closed-field
+axiom set. This concerns T_a, not arbitrary Γ. -/
 theorem modelsTheory_iff (a : Point) : ModelsWords constants (theoryAxioms a) ↔
     IsRealClosed K ∧ ModelsWords constants (cutAxioms a) := by
   constructor

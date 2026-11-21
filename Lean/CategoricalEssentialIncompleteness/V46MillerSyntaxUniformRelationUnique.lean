@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxRelationUnique
 
 /-! # Constructor uniqueness for every uniform coefficient signature
 
-Coefficient guards may be forgotten only in comparing two output tuples:
-both actions preserve each coefficient value. Actual word/input guards
-remain in the root laws and structural induction. The categorical
-application still derives these laws for every actual algebra morphism.
+Coefficient guards may be forgotten only in comparing two output tuples: both actions
+preserve each coefficient value. Word/input guards remain in the root laws and
+structural induction. The categorical application still derives these laws for every
+algebra morphism.
 -/
 
 @[expose] public section
@@ -48,7 +48,7 @@ theorem children_erased (H : Bool → ℕ → Prop) (Q : SyntaxPolynomial (Total
       · simpa only [ite_eq_left h] using ic (Nat.unpair u).1
       · simpa only [ite_eq_right h] using id (Nat.unpair u).1
 
-/-- The actual guarded constructor equation for a candidate relation. -/
+/-- The guarded constructor equation for a candidate relation. -/
 def UniformRootLaw (p q : SyntaxPolynomial (Total.TotalCategory P)) (Q : ℕ → Prop)
     (op R : Relations.Relation) : Prop :=
   ∀ (formula : Bool) (r u value : ℕ),

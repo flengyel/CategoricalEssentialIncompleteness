@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxChildren
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! # Constructor equations of the actual uniform finite-record evaluator
+/-! # Constructor equations of the uniform finite-record evaluator
 
-The source is the original postfix word; the intermediate raw value
-retains the original coefficients and ordered evaluated children. The
-proof constructs framed child traces and appends the actual operation
-at the root. No constructor equation is supplied to the evaluator.
+The source is the original postfix word; the intermediate raw value retains the
+original coefficients and ordered evaluated children. The proof constructs framed
+child traces and appends the operation at the root. No constructor equation is
+supplied to the evaluator.
 -/
 
 @[expose] public section

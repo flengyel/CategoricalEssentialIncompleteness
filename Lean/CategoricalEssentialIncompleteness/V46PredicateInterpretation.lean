@@ -73,8 +73,8 @@ def map {C D : PredicateCategory T} (f : C ⟶ D) : Obj M C → Obj M D :=
 @[simp] theorem map_class {C D : PredicateCategory T} (f : GraphMorphism T C D) :
     map T M (classOfGraph T f) = value T M f := rfl
 
-/-- The actual covariant model functor on the arbitrary Sigma-one
-predicate category. No enumeration or standardness of the model is assumed. -/
+/-- The covariant model functor on the arbitrary Sigma-one predicate category. No
+enumeration or standardness of the model is assumed. -/
 def functor : PredicateCategory T ⥤ Type where
   obj C := Obj M C
   map f := ↾(map T M f)
@@ -109,8 +109,8 @@ theorem map_program_graph {C D : PredicateCategory T} (f : GraphMorphism T C D)
       SyntacticModel.programRelation T M f.programClass x.val y.val :=
   (map_class_eq_iff T M f x y).trans (f.programClass_model M x.val y.val).symm
 
-/-- The total interpretation on the actual total restriction splitting,
-transported along the proved predicate-presentation equivalence. -/
+/-- The total interpretation on the total restriction splitting, transported along the
+proved predicate-presentation equivalence. -/
 def totalFunctor : TotalSplit T ⥤ Type :=
   (predicateEquivalence T).inverse ⋙ functor T M
 

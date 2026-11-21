@@ -23,8 +23,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticIndexedProvability
 open NamedArithmeticSignature
 
-/-- The predicate presentation of the actual family sentence-proof object.
-Its graph coordinates are transported through the proved equivalence. -/
+/-- The predicate presentation of the family sentence-proof object. Its graph coordinates
+are transported through the proved equivalence. -/
 def proofCarrier (AxPA : Carrier) : PredicateCategory 𝗣𝗔 :=
   (predicateEquivalence 𝗣𝗔).inverse.obj (ArithmeticIndexedFamily.sentenceProof AxPA)
 
@@ -39,8 +39,8 @@ def rawConclusion (AxPA : Carrier) :
 def jointImage (C : Graph) : 𝚺₁.Semisentence 2 :=
   .mkSigma “e z. ∃ p w, !natPairFormula.val w e z ∧ !C.val p w”
 
-/-- This is an existential image of the actual conclusion graph. The
-parameter remains an input; no per-theory proof object or index is chosen. -/
+/-- This is an existential image of the conclusion graph. The parameter remains an input;
+no per-theory proof object or index is chosen. -/
 def provability (AxPA : Carrier) : 𝚺₁.Semisentence 2 :=
   jointImage (chosenGraph 𝗣𝗔 (rawConclusion AxPA)).graph
 

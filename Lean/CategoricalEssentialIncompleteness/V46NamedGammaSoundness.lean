@@ -8,11 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainUltrapowerSoundness
 public import CategoricalEssentialIncompleteness.V46SyntacticAxiomPredicates
 
-/-! # The actual Gamma axiom filter satisfies the soundness hypothesis
+/-! # The Gamma axiom filter satisfies the soundness hypothesis
 
-Gamma enumerates literal named formula words. The actual axiom object filters
-it by the constructed sentence image. Its chosen sentence code is not assumed
-to be the formula word.
+Gamma enumerates named formula words. The axiom object filters it by the constructed
+sentence image. Its chosen sentence code is not assumed to be the formula word.
 -/
 
 @[expose] public section
@@ -41,8 +40,8 @@ def Models (ρ : ℕ → K) : Prop :=
     Γ.val.Evalb ![formulaCode φ] → φ.freeVariables = [] →
       φ.Holds functions relations ρ
 
-/-- The literal Gamma model hypothesis implies validity of the actual
-axiom morphism, through its proved formula-coordinate chart. -/
+/-- The Gamma model hypothesis implies validity of the axiom morphism, through its proved
+formula-coordinate chart. -/
 theorem axioms_valid (ρ : ℕ → K) (hΓ : Models σ π d Γ functions relations ρ) :
     FirstOrderModelSoundness.AxiomsProperty 𝗣𝗔
       (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S)
@@ -69,8 +68,8 @@ theorem axioms_valid (ρ : ℕ → K) (hΓ : Models σ π d Γ functions relatio
       (S).sentenceInclusion) a)
   simpa only [Functor.map_comp_apply] using hv
 
-/-- The actual Gamma-filtered sentence conclusion has the unique
-standard validity factor, from literal satisfaction of Gamma. -/
+/-- The Gamma-filtered sentence conclusion has the unique standard validity factor, from
+literal satisfaction of Gamma. -/
 theorem exists_unique_factor (ρ : ℕ → K) (hΓ : Models σ π d Γ functions relations ρ) :
     ∃! e : Obj 𝗣𝗔 ℕ
         (FirstOrderModelSoundness.sentenceProofObject 𝗣𝗔

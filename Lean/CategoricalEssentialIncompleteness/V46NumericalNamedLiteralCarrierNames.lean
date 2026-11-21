@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralAlgorit
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
 public import CategoricalEssentialIncompleteness.V46NamedPostfixComparison
 
-/-! # The coded numerical variable object has exactly the literal named words -/
+/-! # The coded numerical variable object has exactly the named words -/
 
 @[expose] public section
 noncomputable section

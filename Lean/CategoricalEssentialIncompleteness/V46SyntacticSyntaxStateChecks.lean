@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxState
 
 
-/-! # Statement checks in `V46SyntacticSyntaxStateChecks` -/
+/-! # Positive fiber conditions and one graph-defined postfix evaluation step -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxTrace
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSimulation
 
-/-! # The actual uniform evaluator preserves the original parser skeleton
+/-! # The uniform evaluator preserves the original parser skeleton
 
 The simulation is numerical and uses no definability condition on algebra
 operations. A literal successful parser output forces exactly one value

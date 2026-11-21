@@ -7,9 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebraFormula
 
-/-! The actual two-sorted substitution algebra isomorphism. The only
-operation premises concern the independently constructed lists; every
-substitution branch equation has already been derived. -/
+/-!
+The two-sorted substitution algebra isomorphism. The only operation premises concern
+the independently constructed lists; every substitution branch equation has already
+been derived.
+-/
 
 @[expose] public section
 noncomputable section
@@ -86,8 +88,8 @@ def substitutionAlgebraIso :
       ℓ hnil hsingleton happend hdeletion hmembership).symm
 
 include hnil hsingleton happend hdeletion hmembership in
-/-- Initiality is applied to the mapped parameterized syntax itself.
-Both compared arrows are actual algebra homomorphisms. -/
+/-- Initiality is applied to the mapped parameterized syntax itself. Both compared
+morphisms are algebra homomorphisms. -/
 theorem substitutionFold_comparison :
     ((H).prod H).functor.map S₀.substitutionFold ≫
         (substitutionAlgebraIso E V σ π d S₀ S₁ c ℓ hnil hsingleton happend hdeletion hmembership).hom.f =

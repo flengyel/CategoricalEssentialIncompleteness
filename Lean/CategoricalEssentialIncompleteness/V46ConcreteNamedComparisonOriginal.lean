@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProje
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorValues
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # The original payload field is identified by actual stable initiality -/
+/-! # The original payload field is identified by stable initiality -/
 
 @[expose] public section
 
@@ -44,9 +44,8 @@ def originalProjectionPair : (projectionSourceAlgebra T U V σ π d).a ⟶
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Full model-point equality is proved by the actual product
-projections. Neither the parameter nor the whole product point is
-identified with a numerical pair. -/
+/-- Full model-point equality is proved by the product projections. Neither the parameter
+nor the whole product point is identified with a numerical pair. -/
 theorem original_term_commutes_model
     (q : Obj T M (((SyntaxPolynomial.termExpression V σ d).withParameters
       (projectionParameters T U V σ π d)).eval.obj (projectionSourceAlgebra T U V σ π d).a).left) :
@@ -145,8 +144,8 @@ theorem original_formula_commutes_model
 
 end Models
 
-/-- This is an actual algebra endomorphism, obtained before invoking
-initiality or identifying the field with the input word. -/
+/-- This is an algebra endomorphism, obtained before invoking initiality or identifying
+the field with the input word. -/
 def originalProjectionHom : (projectionSourceAlgebra T U V σ π d) ⟶
     (projectionSourceAlgebra T U V σ π d) where
   f := originalProjectionPair T U V σ π d

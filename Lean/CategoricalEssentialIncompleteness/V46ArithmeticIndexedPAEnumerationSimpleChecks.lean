@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationSimple
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationSimpleChecks` -/
+/-! # The Σ₁ enumeration of the finite arithmetic/order schemes -/
 
 @[expose] public section
 noncomputable section

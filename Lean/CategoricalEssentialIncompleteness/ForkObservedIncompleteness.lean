@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.ForkEndpointInseparability
 public import CategoricalEssentialIncompleteness.ForkEssentialIncompleteness
 public import CategoricalEssentialIncompleteness.EnumerableInseparability
 
-/-! # Effective endpoint observations of the actual theorem domains -/
+/-! # Effective endpoint observations of the theorem domains -/
 
 @[expose] public section
 

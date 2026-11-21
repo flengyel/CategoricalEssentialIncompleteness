@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxUniqueness
 
-/-! # Actual constructor equations and uniqueness of finite-record evaluation -/
+/-! # Constructor equations and uniqueness of finite-record evaluation -/
 
 @[expose] public section
 
@@ -26,9 +26,9 @@ variable (A : SliceAlgebra T P X Y a b)
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- The unguarded whole-word recursion law keeps the actual raw input
-and all child/operation witnesses existential. Their positive graph
-conditions supply the source guards, including parameter membership. -/
+/-- The unguarded whole-word recursion law keeps the raw input and all child/operation
+witnesses existential. Their positive graph conditions supply the source guards,
+including parameter membership. -/
 theorem evaluation_iff_root (formula : Bool) (p word value : M) :
     ((A.evaluationFormula formula).val.Evalb ![p, word, value] ↔ ∃ u v : M,
       (constructorGraph formula (if formula then b else a)).val.Evalb ![word, u] ∧
@@ -47,9 +47,9 @@ theorem evaluation_iff_root (formula : Bool) (p word value : M) :
     rw [hw]
     exact A.evaluation_of_mapRaw formula p u v value hm hop
 
-/-- Every graph candidate obeying the actual constructor equations
-agrees with the canonical evaluator on each accepted literal word.
-Candidate totality and support are not assumed by this comparison. -/
+/-- Every graph candidate obeying the constructor equations agrees with the canonical
+evaluator on each accepted literal word. Candidate totality and support are not
+assumed by this comparison. -/
 theorem evaluation_unique (hT hF : TernaryGraph)
     (hroot : A.RootEquations (M := M) hT hF)
     (formula : Bool) (p word x y : M)

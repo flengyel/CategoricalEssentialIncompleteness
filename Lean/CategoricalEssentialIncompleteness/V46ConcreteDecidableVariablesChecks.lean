@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteDecidableVariables
 
-/-! Concrete internal equality in the syntactic total and literal numerical categories. -/
+/-! Concrete internal equality in the syntactic total and numerical categories. -/
 
 @[expose] public section
 noncomputable section

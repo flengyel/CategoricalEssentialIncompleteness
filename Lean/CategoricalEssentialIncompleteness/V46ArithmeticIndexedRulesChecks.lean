@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules
 
-/-! # Actual parameter-preserving rule data and constructed family initiality -/
+/-! # Parameter-preserving rule data and constructed family initiality -/
 
 @[expose] public section
 noncomputable section

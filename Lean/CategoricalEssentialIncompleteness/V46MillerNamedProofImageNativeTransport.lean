@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeS
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodes
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionBranches
 
-/-! # Finite standard-point charts and actual framed operation squares
+/-! # Finite standard-point charts and framed operation squares
 
 The finite polynomial and slice geometry are proved before specializing
 any branch square. No preservation of initiality is used.
@@ -117,8 +117,8 @@ private theorem point_value {X : Total.TotalCategory P} (x : (U).obj X) :
   exact Part.mem_unique (Total.totalFunction_mem (Total.underlyingPoint x) ⟨0,rfl⟩)
     (Part.eq_some_iff.mp (Total.underlyingPoint_value x 0 rfl))
 
-/-- Ordinary source polynomial charts act on actual standard points,
-before any substitution fold or slice comparison is considered. -/
+/-- Ordinary source polynomial charts act on standard points, before any substitution fold
+or slice comparison is considered. -/
 theorem mappedFrameData_base (R : Total.TotalCategory P) (r : (U).obj R)
     (X : PredicateCategory 𝗣𝗔 × PredicateCategory 𝗣𝗔)
     (Y : Total.TotalCategory P × Total.TotalCategory P) (c : (FP).obj X ≅ Y)
@@ -393,8 +393,8 @@ theorem mappedFrameData_arity (R : Total.TotalCategory P) (r : (U).obj R)
         rw [castFrameData_inl P hp hq]
         exact congrArg Sum.inl (ih j label children)
 
-/-- The same actual point calculation with the explicitly normalized
-polynomial header used by the frozen branch squares. -/
+/-- The same point calculation with the explicitly normalized polynomial header used by
+the frozen branch squares. -/
 theorem framed_operation_transport_normalized
     (R₀ : PredicateCategory 𝗣𝗔) (R₁ : Total.TotalCategory P) (e : (F).obj R₀ ≅ R₁)
     (r₀ : (N).obj R₀)

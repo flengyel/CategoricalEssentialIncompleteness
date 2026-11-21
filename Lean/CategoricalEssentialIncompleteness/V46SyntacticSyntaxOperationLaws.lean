@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxDecode
 
-/-! # The decoded operation agrees with the actual categorical operation -/
+/-! # The decoded operation agrees with the categorical operation -/
 
 @[expose] public section
 
@@ -27,8 +27,8 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ]
 variable {P : PredicateCategory T} (X : Over P × Over P)
 variable (a : SyntaxPolynomial (PredicateCategory T)) {Z : Over P}
 
-/-- Fixing a raw coordinate fixes its actual slice-polynomial point.
-Decoding the operation therefore loses no information about its value. -/
+/-- Fixing a raw coordinate fixes its slice-polynomial point. Decoding the operation
+therefore loses no information about its value. -/
 theorem decodedOperation_model (f : (a.withParameters P).eval.obj X ⟶ Z)
     (p : Obj T M P) (u : M)
     (z : Obj T M ((a.withParameters P).eval.obj X).left) (v : Obj T M Z.left)

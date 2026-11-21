@@ -25,8 +25,8 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 abbrev RawPolynomial := SyntaxPolynomial Carrier
 abbrev TernaryGraph := 𝚺₁.Semisentence 3
 
-/-- Literal numerical presentation of a polynomial value. Products use
-pairing and sums the same pair tags zero and one as the predicate coproduct. -/
+/-- Numerical presentation of a polynomial value. Products use pairing and sums the same
+pair tags zero and one as the predicate coproduct. -/
 def rawCarrier (X Y : Carrier) : RawPolynomial → Carrier
   | .term => X
   | .formula => Y
@@ -42,8 +42,8 @@ def rawCarrier (X Y : Carrier) : RawPolynomial → Carrier
       .mkSigma “u. (∃ v, !pairDef.val u v 0 ∧ !A.val v) ∨
         (∃ w, !pairDef.val u w 1 ∧ !B.val w)”
 
-/-- A polynomial value in one common parameter fiber. The projections
-are actual given graph operations and need only be provable in T. -/
+/-- A polynomial value in one common parameter fiber. The projections are given graph
+operations and need only be provable in T. -/
 def rawFiber (P X Y : Carrier) (ξ υ : Graph) : RawPolynomial → 𝚺₁.Semisentence 2
   | .term => .mkSigma “p u. !P.val p ∧ !X.val u ∧ !ξ.val u p”
   | .formula => .mkSigma “p u. !P.val p ∧ !Y.val u ∧ !υ.val u p”

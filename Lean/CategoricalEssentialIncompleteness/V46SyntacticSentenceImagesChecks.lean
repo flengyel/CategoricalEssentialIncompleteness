@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSentenceImages
 
-/-! # Formula-code sentence images and their actual source restriction splitting -/
+/-! # Formula-code sentence images and their source restriction splitting -/
 
 @[expose] public section
 

@@ -11,11 +11,11 @@ public import CategoricalEssentialIncompleteness.V46SyntacticGeneratedRefutation
 public import CategoricalEssentialIncompleteness.V46NamedGammaSoundness
 public import CategoricalEssentialIncompleteness.V46LogicalComparison
 
-/-! # The actual arithmetic sentence theory in literal model coordinates
+/-! # The arithmetic sentence theory in model coordinates
 
-The sentence carrier is the proved literal sentence predicate. The conclusion
-and negation maps are transported by the existing constructor-preserving
-sentence chart, so their image is the constructed Gamma theory.
+The sentence carrier is the proved sentence predicate. The conclusion and negation
+maps are transported by the constructor-preserving sentence chart, so their image is
+the constructed Gamma theory.
 -/
 
 @[expose] public section
@@ -122,8 +122,8 @@ theorem conclusion_word (Γ : Carrier) (p : Obj 𝗣𝗔 M (proofObject Γ)) :
         (SyntacticSentenceImages.sentenceChart_value 𝗣𝗔 M j ((G).map c p))
   exact hl.trans hr.symm
 
-/-- The actual Gamma program image uses the existing restricted-image
-comparison, before choosing literal sentence coordinates. -/
+/-- The Gamma program image uses the existing restricted-image comparison, before choosing
+sentence coordinates. -/
 theorem theorem_iff_image (Γ : Carrier) (s : Obj 𝗣𝗔 M sentencePredicate) :
     (theoremPredicate Γ).val.Evalb ![s.val] ↔
       ∃ p : Obj 𝗣𝗔 M (proofObject Γ), (G).map (conclusion Γ) p = s := by

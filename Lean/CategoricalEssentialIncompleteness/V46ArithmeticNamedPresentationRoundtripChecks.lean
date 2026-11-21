@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationRoundtrip
 
 
-/-! # Statement checks in `V46ArithmeticNamedPresentationRoundtripChecks` -/
+/-! # Hilbert proof-equivalence for the given named presentation -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

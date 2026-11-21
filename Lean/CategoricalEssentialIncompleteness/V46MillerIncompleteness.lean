@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerTheoryDomainApplicatio
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency
 public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
 
-/-! # The actual Miller theory in literal recursive sentence coordinates
+/-! # The Miller theory in recursive sentence coordinates
 
 The source categorical domain argument is transported through the proved
 sentence-word isomorphism inside Split(E_a). All complementary candidate
@@ -68,12 +68,12 @@ local notation "S₁" => NamedProofImage.syntaxData P functionSymbols relationSy
 local notation "SC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (CategoricalSyntax.sentenceObject (S₁)))
 local notation "LC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (TheorySentenceWords.literalObject P))
 
-/-- This is the actual restriction isomorphism; both maps are the
-underlying maps of the constructed total sentence-word chart. -/
+/-- This is the restriction isomorphism; both maps are the underlying maps of the
+constructed total sentence-word chart. -/
 def splitSentenceIso : (SC) ≅ (LC) :=
   (splitTotalFunctor P).mapIso (TheorySentenceWords.sentenceIso P)
 
-/-- The existing restriction-idempotent conjugation, with its actual order. -/
+/-- The restriction-idempotent conjugation, with its order. -/
 def chartIdemIso : Idem (SC) ≃o Idem (LC) :=
   splitIdemOrderIso (splitSentenceIso P)
 
@@ -102,8 +102,8 @@ theorem recover_complementary (c d : Idem (LC)) (h : Complementary c d) :
   · change (chartIdemIso P).symm c ⊔ (chartIdemIso P).symm d=⊤
     rw [← (chartIdemIso P).symm.map_sup,h.cover,(chartIdemIso P).symm.map_top]
 
-/-- In particular, an arbitrary proposed separator recovers an actual
-separator in the original chosen sentence object. -/
+/-- In particular, an arbitrary proposed separator recovers a separator in the original
+chosen sentence object. -/
 theorem recover_separator (a b : Idem (SC)) (c d : Idem (LC))
     (h : Complementary c d) (ha : chartIdemIso P a≤c) (hb : chartIdemIso P b≤d) :
     Complementary (recoverIdem P c) (recoverIdem P d) ∧
@@ -135,7 +135,7 @@ local notation "SC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (Cat
 local notation "LC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (TheorySentenceWords.literalObject (P)))
 local notation "N" => CutInseparability.SourceSplit.N a
 
-/-- The actual interpreted Gamma theorem range, on the proper sentence set. -/
+/-- The interpreted Gamma theorem range, on the proper sentence set. -/
 def theoremIdem (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) : Idem (LC) :=
   Total.toSplitIdem (TheorySentenceWordRanges.theoremIdem (P) Γ hΓ)
 
@@ -229,8 +229,8 @@ theorem refutation_conjugacy_hom (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (�
   rw [← refutation_conjugacy]
   exact chartIdemIso_hom (P) _
 
-/-- Closed native consistency agrees exactly with consistency of the
-literal sentence theory in the restriction splitting. -/
+/-- Closed Hilbert consistency agrees exactly with consistency of the sentence theory in
+the restriction splitting. -/
 theorem consistent_iff_literal_disjoint (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     TheoryDomainApplication.Consistent Γ ↔
@@ -248,8 +248,8 @@ theorem consistent_iff_literal_disjoint (Γ : Set ℕ)
       theorem_conjugacy,refutation_conjugacy]
     exact hd
 
-/-- The numerical source is the actual included N, and the output is
-exactly the original sentence 2*c_n<1. -/
+/-- The numerical source is the included N, and the output is exactly the original
+sentence 2*c_n<1. -/
 theorem theta_value (n : ℕ) : (theta a).hom.val n=Part.some (OrderedFieldSyntax.theta n) := by
   apply Part.eq_some_iff.mpr
   let s := NamedProofImage.sentencePoint (P) σ π d (thetaSentence n) (thetaSentence_closed n)
@@ -291,7 +291,7 @@ def nativeTheoremWords (Γ : Set ℕ) : Set ℕ :=
 def nativeRefutationWords (Γ : Set ℕ) : Set ℕ :=
   {word | ∃ φ : Formula,formulaCode φ=word ∧ φ.freeVariables=[] ∧ RealClosedBounds.Proof Γ (.neg φ)}
 
-/-- The whole interpreted theorem support is the actual finite native proof set. -/
+/-- The whole interpreted theorem support is the finite Hilbert proof set. -/
 theorem theorem_wordset (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     CarrierIdempotents.support (theoremIdem a Γ hΓ)=nativeTheoremWords Γ :=
   (theoremIdem_support a Γ hΓ).trans (TheorySentenceWordRanges.theorem_words (P) Γ hΓ)
@@ -309,8 +309,8 @@ theorem refutation_wordset (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ
   · rintro ⟨φ,rfl,hc,hp⟩
     exact (refutation_word_iff a Γ hΓ φ).mpr ⟨hp,hc⟩
 
-/-- The exact source categorical theorem transferred by a restriction
-isomorphism, for every derivability extension with ordinary native consistency. -/
+/-- The exact source categorical theorem transferred by a restriction isomorphism, for
+every derivability extension with ordinary Hilbert consistency. -/
 theorem essential_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (hext : RealClosedBounds.Extends a Γ)
     (hcons : TheoryDomainApplication.Consistent Γ) :
@@ -327,8 +327,7 @@ theorem essential_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
       theorem_conjugacy,refutation_conjugacy]
     exact hc
 
-/-- Theorem 8.6 with precisely the printed sentence-idempotent
-consistency hypothesis. -/
+/-- Theorem 9.7 with precisely the sentence-idempotent consistency hypothesis. -/
 theorem printed_essential_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (hext : RealClosedBounds.Extends a Γ)
     (hcons : theoremIdem a Γ hΓ ⊓ Idem.pull (nu a) (theoremIdem a Γ hΓ)=⊥) :
@@ -357,7 +356,7 @@ theorem native_word_noncoverage (ha : IsMiller a) (Γ : Set ℕ)
   rw [← theorem_wordset a Γ hΓ,← refutation_wordset a Γ hΓ]
   exact literal_noncoverage a ha Γ hΓ hext hcons
 
-/-- A literal closed native sentence is independent of every such Γ. -/
+/-- A closed named sentence is independent of every such Γ. -/
 theorem native_incomplete (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (hext : RealClosedBounds.Extends a Γ)
     (hcons : TheoryDomainApplication.Consistent Γ) :
@@ -395,7 +394,7 @@ theorem printed_native_incomplete (ha : IsMiller a) (Γ : Set ℕ)
   native_incomplete a ha Γ hΓ hext
     ((consistent_iff_literal_disjoint a Γ hΓ).mpr hcons)
 
-/-- Consistency of T_a itself is supplied by its actual real model. -/
+/-- Consistency of T_a itself is supplied by its real model. -/
 theorem base_native_incomplete (ha : IsMiller a) :
     ∃ φ : Formula,φ.freeVariables=[] ∧
       ¬RealClosedBounds.Proof (RealClosedAxioms.theoryAxioms a) φ ∧

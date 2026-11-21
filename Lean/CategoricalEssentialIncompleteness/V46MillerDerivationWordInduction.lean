@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionRank
 public import Mathlib.CategoryTheory.Limits.Types.Coproducts
 
-/-! # External induction on the actual successful uniform derivations
+/-! # External induction on the successful uniform derivations
 
 The predicate is arbitrary and need not be uniformly enumerable. The
 proof uses the literal tree rank. It does not infer preservation of
@@ -41,8 +41,8 @@ theorem constructor_cases (d : (U).obj (A).a.left) :
   erw [constructor,CategoryTheory.Functor.map_comp_apply,hr]
   exact hd
 
-/-- Every actual child tuple is ordered by its original finite power;
-the nullary case has no induction premises. -/
+/-- Every child tuple is ordered by its original finite power; the nullary case has no
+induction premises. -/
 theorem word_rule_induction (H : (U).obj (A).a.left → Prop)
     (step : ∀ (i : Fin (N+1)) (r : (U).obj (R.ruleObject (A).a i)),
       (∀ k : Fin i.val,H ((U).map (typedChild R i k) r)) →
@@ -62,8 +62,8 @@ theorem word_rule_induction (H : (U).obj (A).a.left → Prop)
   intro d
   exact aux (FFL.FirstOrder.Arithmetic.len d.val) d rfl
 
-/-- Closure of any external formula property under the original typed
-rules suffices for every actual constructed conclusion. -/
+/-- Closure of any external formula property under the original typed rules suffices for
+every constructed conclusion. -/
 theorem conclusion_induction (H : (U).obj F → Prop)
     (step : ∀ (i : Fin (N+1)) (r : (U).obj (R.ruleObject (A).a i)),
       (∀ k : Fin i.val,H ((U).map (typedPremise R i k) r)) →

@@ -7,9 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionRoots
 
-/-! Success geometry from a concrete conservative family of interpretations.
-This is instantiated by all arithmetic models for predicates, and by the
-actual inverse equivalence followed by those models for total split maps. -/
+/-!
+Success geometry from a concrete conservative family of interpretations. This is
+instantiated by all arithmetic models for predicates, and by the inverse equivalence
+followed by those models for total split maps.
+-/
 
 @[expose] public section
 noncomputable section

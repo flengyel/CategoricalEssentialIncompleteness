@@ -64,8 +64,8 @@ unchanged, on arbitrary numerical inputs. -/
   | sum a b ia ib =>
       by_cases h : π₂ u = 0 <;> simp [mapChildren,shape,ia,ib,h]
 
-/-- This is a local polynomial chart lemma. The later applications prove
-the two leaf-preservation hypotheses for their actual numeric functions. -/
+/-- This is a local polynomial chart lemma. The later applications prove the two
+leaf-preservation hypotheses for their numeric functions. -/
 theorem rawCarrier_mapChildren {X Y Z W : SyntacticPredicates.Carrier}
     (q : RawPolynomial) (f g : M → M)
     (hf : ∀ x : M,X.val.Evalb ![x] → Z.val.Evalb ![f x])
@@ -87,7 +87,7 @@ theorem rawCarrier_mapChildren {X Y Z W : SyntacticPredicates.Carrier}
       · exact (rawCarrier_sum_eval Z W a b _).mpr (Or.inl ⟨_,by simp [mapChildren],ia x hx⟩)
       · exact (rawCarrier_sum_eval Z W a b _).mpr (Or.inr ⟨_,by simp [mapChildren],ib y hy⟩)
 
-/-- No numerical unit normalization is used without its actual chart guard. -/
+/-- No numerical unit normalization is used without its chart guard. -/
 theorem mapChildren_id {X Y : SyntacticPredicates.Carrier} (q : RawPolynomial)
     (u : M) (hu : (rawCarrier X Y q).val.Evalb ![u]) :
     mapChildren id id q u = u := by

@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46MillerAssociatedCategories
 
-/-! # Independent checks of every printed clause of Corollary 9.8 -/
+/-! # Independent checks of every clause of Corollary 9.8 -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -30,8 +30,8 @@ example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ refutation a U = ⊥) : AssociatedCategories.Conclusions a U hc :=
   AssociatedCategories.printed_statement a ha U hExt hc
 
-/-- The universal object covers every actual slice object; the products,
-restriction terminal object and splittings belong to that same category. -/
+/-- The universal object covers every slice object; the products, restriction terminal
+object and splittings belong to that same category. -/
 example (U : Theory a) :
     ∃ (products : PCategoryStruct (PartialMaps.Par (Over (U.val : Total.CanonicalTotal a))))
       (laws : @PCategory (PartialMaps.Par (Over (U.val : Total.CanonicalTotal a))) inferInstance products),
@@ -68,8 +68,8 @@ example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
         (syntaxData a).sentenceNegation)).obj W.val ≠ ⊤ :=
   ⟨constantTheory_value a U, essentially_incomplete a U ha hExt hc⟩
 
-/-- All subobjects of the actual associated total category are quantified;
-there is no constant-family or presentation restriction on W. -/
+/-- All subobjects of the associated total category are quantified; there is no
+constant-family or presentation restriction on W. -/
 example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ refutation a U = ⊥) :
     (actualTheoryDomain a U ⊓ (Subobject.pullback (actualNegation a U)).obj
@@ -109,8 +109,8 @@ example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     family_domain a U hc, family_true a U hc, family_false a U hc,
     no_total_extension a U ha hExt hc⟩
 
-/-- The target theory need only satisfy the printed consistency and
-factorization hypotheses; no essential-surjectivity conclusion is assumed. -/
+/-- The target theory need only satisfy the consistency and factorization hypotheses; no
+essential-surjectivity conclusion is assumed. -/
 example (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
     (hc : U.val ⊓ refutation a U = ⊥) :
     ∀ (U' : Theory a)

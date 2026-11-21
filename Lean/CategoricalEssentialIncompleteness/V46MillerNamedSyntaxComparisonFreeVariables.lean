@@ -288,8 +288,8 @@ def explicitOccurrenceAlgebra : Endofunctor.Algebra (SyntaxPolynomial.jointFunct
         ((L₁).deletion (Derivation.mappedEquality (F)
           (SyntacticDecidableVariables.decidableVariables 𝗣𝗔 V))))
 
-/-- Both actual constructors, the lists, and the variable classifier agree
-with the chosen syntax record. No initiality comparison is assumed. -/
+/-- Both constructors, the lists, and the variable classifier agree with the chosen syntax
+record. No initiality comparison is assumed. -/
 theorem explicitOccurrenceAlgebra_eq :
     explicitOccurrenceAlgebra P V σ π d = (S₁).occurrenceAlgebra := by
   rfl
@@ -419,7 +419,7 @@ private theorem explicitOccurrenceAlgebraIso_hom :
     (explicitOccurrenceAlgebra P V σ π d).str
     (explicit_occurrence_structure_comparison P V σ π d)
 
-/-- Restore the actual target algebra through the proved record equality. -/
+/-- Restore the target algebra through the proved record equality. -/
 def occurrenceAlgebraIso :
     castAlgebra (termExpression_mapped P V σ d) (formulaExpression_mapped P V π d)
       (Syntax.Polynomial.mappedAlgebra P a b (S₀).occurrenceAlgebra) ≅ (S₁).occurrenceAlgebra :=

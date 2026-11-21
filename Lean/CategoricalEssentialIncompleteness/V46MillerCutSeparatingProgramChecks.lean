@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram
 
 
-/-! # Statement checks in `V46MillerCutSeparatingProgramChecks` -/
+/-! # One ordinary index computing the separating real on every oracle -/
 
 @[expose] public section
 noncomputable section

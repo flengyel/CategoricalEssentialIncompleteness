@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsEvaluation
 
 
-/-! # Statement checks in `V46MillerListsEvaluationChecks` -/
+/-! # Positive value records for arbitrary uniform list algebras -/
 
 @[expose] public section
 noncomputable section

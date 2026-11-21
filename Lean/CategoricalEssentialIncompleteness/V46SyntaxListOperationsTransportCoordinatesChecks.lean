@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
 
 
-/-! # Statement checks in `V46SyntaxListOperationsTransportCoordinatesChecks` -/
+/-! # Constructor and cons-step coordinates under the family, coefficient and product comparisons -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedHilbertQuantifiers
 
 
-/-! # Statement checks in `V46NamedHilbertQuantifiersChecks` -/
+/-! # Derived first-order rules in the named calculus -/
 
 @[expose] public section
 open FFL

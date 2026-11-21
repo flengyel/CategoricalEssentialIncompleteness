@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTrans
 public import CategoricalEssentialIncompleteness.V46NumericalForkPartialMaps
 public import Mathlib.Tactic.FinCases
 
-/-! # The derivation universal property in the literal numerical diagram category
+/-! # The derivation universal property in the numerical diagram category
 
 The explicit unary equivalence retains the old scalar proof and formula
 coordinates. The existing generic inference transport constructs the
@@ -78,8 +78,8 @@ def coefficientShapeIso (a b : Idem EffectiveFork.V) :
 def axiomShapeIso (a b : Idem EffectiveFork.V) : axioms a b ≅ ∐ coefficientShape a b :=
   (axiomCoproductIso a b).symm ≪≫ Sigma.mapIso (coefficientShapeIso a b)
 
-/-- Each displayed parameter object is related by its actual ordered
-product comparison to the mapped source coefficient. -/
+/-- Each displayed parameter object is related by its ordered product comparison to the
+mapped source coefficient. -/
 def coefficientShapeConclusion (a b : Idem EffectiveFork.V) (i : Fin 5) :
     coefficientShape a b i ⟶ sentences :=
   (coefficientShapeIso a b i).inv ≫ realization.map (axiomConclusions a b i)
@@ -182,7 +182,7 @@ theorem coefficient_conclusion (a b : Idem EffectiveFork.V) (i : Fin 3) :
   · exact (IsInitial.isInitialObj realization (⊥_ EffectiveFork.Total) initialIsInitial).hom_ext _ _
   · exact (prodComparison_snd realization sentenceObject sentenceObject).symm
 
-/-- Every field is an actual coefficient or premise/conclusion comparison. -/
+/-- Every field is a coefficient or premise/conclusion comparison. -/
 def transportData (a b : Idem EffectiveFork.V) :
     ArithmeticIndexedFibers.InferenceTransport.Data equivalence (ForkDerivation.rules a b) (rules a b) where
   coefficient := coefficientIso a b
@@ -319,8 +319,8 @@ def shapedInputIso (a b : Idem EffectiveFork.V) (Q : Over sentences) :
       exact axiomShapeIso_conclusion a b
     · simp only [coprod.inr_map_assoc,coprod.inr_desc,Category.id_comp])
 
-/-- This natural isomorphism preserves the actual axiom constructors and
-keeps the same matched ordered MP input. -/
+/-- This natural isomorphism preserves the axiom constructors and keeps the same matched
+ordered MP input. -/
 def shapedInferenceIso (a b : Idem EffectiveFork.V) : printedH a b ≅ shapedH a b :=
   NatIso.ofComponents (shapedInputIso a b) (by
     intro Q Q' f

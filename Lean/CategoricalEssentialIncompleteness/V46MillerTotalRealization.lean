@@ -10,11 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
 public import CategoricalEssentialIncompleteness.V46RegularEquivalence
 
-/-! # Category-theoretic constituents of the printed total realization
-
-These conclusions concern the actual Tot(Split(E_z)). Parameter-stable
-syntax/list and derivation initiality are separate remaining obligations.
--/
+/-! # Finite limits, coproducts and images in the total category of the restriction splitting -/
 
 @[expose] public section
 noncomputable section

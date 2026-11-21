@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportConstructorsCoreChecks` -/
+/-! # Constructor squares for distinct term/formula carriers -/
 
 @[expose] public section
 noncomputable section

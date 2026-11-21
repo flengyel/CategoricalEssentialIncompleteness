@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutSeries
 
 
-/-! # Statement checks in `V46MillerCutSeriesChecks` -/
+/-! # Bounded positive series in the effective cut reduction -/
 
 @[expose] public section
 open scoped BigOperators

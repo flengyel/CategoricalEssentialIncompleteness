@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoding
 
-/-! Genuine ordered postfix child words and root constructor records. -/
+/-! Ordered postfix child words and root constructor records. -/
 
 @[expose] public section
 noncomputable section

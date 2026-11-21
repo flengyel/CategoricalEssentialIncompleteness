@@ -115,8 +115,8 @@ def evaluator {Q : C} (τ : nearProd Q Q ⟶ Q) :
       constantObject T Q :=
   (productIso inverses T (constantObject T Q) Q).hom ≫ PartialSliceTuring.evaluator inverses T τ
 
-/-- The slice evaluator is a Turing morphism for its chosen binary products,
-with parameters ranging over every object of the actual span quotient. -/
+/-- The slice evaluator is a Turing morphism for its chosen binary products, with
+parameters ranging over every object of the span quotient. -/
 theorem evaluator_isTuring {Q : C} (τ : nearProd Q Q ⟶ Q)
     (hτ : RecursionCategory.IsTuringMorphism τ) :
     @RecursionCategory.IsTuringMorphism (PartialMaps.Par (Over T)) inferInstance

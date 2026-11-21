@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportMembership
 
 
-/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportDeletion` -/
+/-! # Deletion from lists of variable names -/
 
 @[expose] public section
 noncomputable section
@@ -27,8 +27,8 @@ local notation "R" => NamedSyntaxComparison.mappedListStable P V
 variable (S : DecidableVariables V)
 theorem deletionOverMap_left {U : PredicateCategory 𝗣𝗔} {A B : Over U} (f : A ⟶ B) :
     ((sliceFunctor (F) U).map f).left=(F).map f.left := rfl
-/-- This is an isomorphism of complete list algebras. Its cons equation
-uses the proved transport of the actual equality-classified branch. -/
+/-- This is an isomorphism of complete list algebras. Its cons equation uses the proved
+transport of the equality-classified branch. -/
 def mappedDeletionAlgebraIso :
     (mappedList (sliceFunctor (F) V) (constantFamily V V) (constantFamily ((F).obj V) ((F).obj V))
       (coefficientComparison (F) V V ((F).obj V) (Iso.refl _)) ((L).deletionAlgebra S)).asAlgebra ≅
@@ -120,8 +120,8 @@ def mappedDeletionAlgebraIso :
       erw [← (F).map_comp,h₀,h₁,map_branch (F),SyntaxOperationsTransport.branch_precomp,heq,hpre,hval]
 
 
-/-- Deletion uses the actual transported equality classifier and the
-constructed conditional, with no supplied operation comparison. -/
+/-- Deletion uses the transported equality classifier and the constructed conditional,
+with no supplied operation comparison. -/
 theorem map_deletion : (F).map ((L).deletion S)=
     prodComparison (F) V (L).algebra.carrier ≫ (R).deletion (Derivation.mappedEquality (F) S) := by
   let H := sliceFunctor (F) V

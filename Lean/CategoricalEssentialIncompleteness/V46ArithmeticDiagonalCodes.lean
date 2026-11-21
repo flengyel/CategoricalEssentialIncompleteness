@@ -10,9 +10,8 @@ public import CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic
 
 /-! # Arithmetic codes for the chosen syntactic Turing diagonal
 
-The numerical index represents the diagonal of the printed universal
-program from Lemma 5.1. Its comparison with the actual uniform graph
-holds at every element of every PA model.
+The numerical index represents the diagonal of the universal program from Lemma 6.1.
+Its comparison with the uniform graph holds at every element of every PA model.
 -/
 
 @[expose] public section
@@ -26,8 +25,8 @@ open FailureOfComposition.ProofSearch FailureOfComposition.TypedTuringMorphism
 
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalCodes
 
-/-- The actual printed diagonal applies the program encoded by its own
-input index to that same input. -/
+/-- The diagonal applies the program encoded by its own input index to that same
+input. -/
 def diagonalGraph : Graph :=
   let G := UniformTrace.graph
   .mkSigma “x y. !G.val x x y”
@@ -43,13 +42,13 @@ theorem diagonalGraph_functional : 𝗣𝗔 ⊢ functionalSentence diagonalGraph
     simpa [diagonalGraph] using hz
   exact UniformTrace.output_unique x x y z hy' hz'
 
-/-- Functional Sigma-one search supplies the actual closed program index. -/
+/-- Functional Sigma-one search supplies the closed program index. -/
 def diagonalIndex : ℕ := SyntacticSearch.searchIndex diagonalGraph
 
 theorem diagonalIndex_uniform : Uniform 𝗣𝗔 (eventualGraph diagonalIndex) diagonalGraph :=
   SyntacticSearch.search_uniform_of_functional 𝗣𝗔 diagonalGraph diagonalGraph_functional
 
-/-- The unary predicate uses the literal even/odd output arithmetic. -/
+/-- The unary predicate uses the even/odd output arithmetic. -/
 def outputPredicate (j : ℕ) : 𝚺₁.Semisentence 1 :=
   let G := UniformTrace.graph
   .mkSigma “x. ∃ m, !G.val !!diagonalIndex x (2 * m + !!j)”
@@ -70,8 +69,8 @@ omit [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] in
       UniformTrace.graph.val.Evalb ![x,x,y] := by
   simp [diagonalGraph]
 
-/-- The output graph at the actual chosen index agrees with the printed
-universal diagonal at every input of every PA model. -/
+/-- The output graph at the chosen index agrees with the universal diagonal at every input
+of every PA model. -/
 theorem diagonal_graph (x y : M) :
     UniformTrace.graph.val.Evalb ![(diagonalIndex : M),x,y] ↔
       UniformTrace.graph.val.Evalb ![x,x,y] := by
@@ -153,8 +152,8 @@ theorem disjoint_PA : 𝗣𝗔 ⊢ disjointSentence := by
     LogicalConnective.Prop.neg_eq,LogicalConnective.Prop.and_eq] using
       (output_disjoint (M := M))
 
-/-- A standard successful computation yields a proof of its individual
-numeral instance. This statement uses the actual newly chosen predicate. -/
+/-- A standard successful computation yields a proof of its individual numeral instance.
+This statement uses the newly chosen predicate. -/
 theorem output_numeral_PA (j n : ℕ)
     (h : (outputPredicate j).val.Evalb (M := ℕ) ![n]) :
     𝗣𝗔 ⊢ ((outputPredicate j).val/[(↑n : ArithmeticSemiterm Empty 0)] :

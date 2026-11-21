@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWords
 
-/-! # Actual Gamma theorem and refutation ranges in literal sentence coordinates
+/-! # Gamma theorem and refutation ranges in sentence coordinates
 
-The comparison uses the constructed native finite-proof equivalence and
-the original sentence-word mono. It is valid for every uniformly enumerable
-external Gamma, independently of truth or consistency of Gamma.
+The comparison uses the equivalence for finite Hilbert proofs and the original
+sentence-word mono. It is valid for every uniformly enumerable external Gamma,
+independently of truth or consistency of Gamma.
 -/
 
 @[expose] public section
@@ -29,7 +29,7 @@ local notation "S" => NamedProofImage.syntaxData P σ π d
 local notation "U" => (Total.underlying (P := P))
 variable (Γ : Set ℕ) (hΓ : Uniform.Enumerable P (·∈Γ))
 
-/-- The actual sentence conclusion followed by the proved literal chart. -/
+/-- The sentence conclusion followed by the proved chart. -/
 def literalConclusion : NamedProofImage.sentenceProofObject P σ π d Γ hΓ ⟶ literalObject P :=
   NamedProofImage.sentenceConclusion P σ π d Γ hΓ ≫ (sentenceIso P).hom
 
@@ -81,7 +81,7 @@ theorem theorem_words : Total.Subobjects.imageCodes (literalConclusion P Γ hΓ)
   · rintro ⟨φ,rfl,hc,hφ⟩
     exact (theorem_word_iff P Γ hΓ φ).mpr ⟨hφ,hc⟩
 
-/-- The interpreted theorem idempotent on the proper literal sentence carrier. -/
+/-- The interpreted theorem idempotent on the proper sentence carrier. -/
 def theoremIdem : Idem (literalObject P).obj := Ranges.range (literalConclusion P Γ hΓ).hom
 
 def refutationIdem : Idem (literalObject P).obj :=
@@ -102,7 +102,7 @@ theorem refutationIdem_support : Total.support (refutationIdem P Γ hΓ)=
   · rintro ⟨hs,hΓword⟩
     exact ⟨negationWord word,(literalNegation_graph P word _).mpr ⟨hs,rfl⟩,hΓword⟩
 
-/-- Refutation is the actual negation inverse image of the theorem range. -/
+/-- Refutation is the negation inverse image of the theorem range. -/
 theorem refutation_word_iff (φ : Formula) :
     formulaCode φ∈Total.support (refutationIdem P Γ hΓ) ↔
       FiniteAxiomProof σ π d Γ (.neg φ) ∧ φ.freeVariables=[] := by

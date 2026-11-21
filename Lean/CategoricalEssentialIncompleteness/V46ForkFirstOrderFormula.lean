@@ -111,7 +111,7 @@ def initial : IsInitial (algebra D) :=
     (fun j => componentAlgebra (numbers.obj j) (D.obj j))
     (fun j => componentInitial (numbers.obj j) (D.obj j))
 
-/-- The displayed five summands are the actual object part of Q_D. -/
+/-- The displayed five summands are the object part of Q_D. -/
 theorem polynomial_object (Y : Object) (j : WalkingSpan) :
     ((DiagramInitialAlgebras.diagonal (polynomialDiagram D)).obj Y).obj j =
       (((((numbers.obj j ⨯ numbers.obj j) ⨿ D.obj j) ⨿ Y.obj j) ⨿

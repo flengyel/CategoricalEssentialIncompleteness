@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUnanimity
 
 
-/-! # Statement checks in `V46MillerUnanimityChecks` -/
+/-! # One oracle program for unanimity over all binary representations -/
 
 @[expose] public section
 noncomputable section

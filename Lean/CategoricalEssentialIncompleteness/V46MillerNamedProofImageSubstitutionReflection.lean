@@ -9,12 +9,11 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeF
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageDecoding
 
-/-! # Reflection of actual successful instances to literal named substitution
+/-! # Reflection of successful instances to named substitution
 
-The input of the theorem is a point of the constructed success pullback.
-Its free-for condition and native output equation are proved from that
-point, using the full native option comparison and both projections of
-the success pullback.
+The input of the theorem is a point of the constructed success pullback. Its free-for
+condition and output equation for named substitution are proved from that point, using
+the full substitution option comparison and both projections of the success pullback.
 -/
 
 @[expose] public section
@@ -58,8 +57,8 @@ theorem source_success_native (a : PredicateInterpretation.Obj ℕ (S₀).admiss
   apply nativeOptionCode_injective σ π d
   exact he
 
-/-- Both the independently defined FreeFor condition and the literal
-successful substitution equation follow from the actual target point. -/
+/-- Both the independently defined FreeFor condition and the literal successful
+substitution equation follow from the target point. -/
 theorem substitution_reflects_native (a : (U).obj (S).admissibleSubstitution)
     (x : ℕ) (φ : Fm) (t : Tm) (ψ : Fm)
     (hi : (U).map (S).admissibleInclusion a=Points.substitutionPoint P σ π d x φ t)

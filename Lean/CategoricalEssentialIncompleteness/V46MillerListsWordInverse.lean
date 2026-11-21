@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsDecoder
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInduction
 
-/-! # Both inverse equations for the actual literal list-word translation
+/-! # Both inverse equations for the literal list-word translation
 
 The reverse value program is ordinary partial recursive. Its uniform
 source guard is retained when it becomes a carrier morphism. Literal

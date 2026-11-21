@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonGather
 
-/-! # Actual ordered argument concatenation computes the PA root function -/
+/-! # Ordered argument concatenation computes the PA root function -/
 
 @[expose] public section
 noncomputable section

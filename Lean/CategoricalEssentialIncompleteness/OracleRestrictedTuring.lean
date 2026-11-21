@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.OracleRestrictedCoding
 public import CategoricalEssentialIncompleteness.OracleProgramSpecialization
 
-/-! # The actual oracle-domain Turing morphism with ordinary recursive values -/
+/-! # The oracle-domain Turing morphism with ordinary recursive values -/
 
 @[expose] public section
 

@@ -134,8 +134,8 @@ def targetAlgebra : Endofunctor.Algebra R.inference :=
 def relabelFold : NumericalDerivation.codeAlgebra R ⟶ targetAlgebra ι :=
   (NumericalDerivation.codeInitial R).to _
 
-/-- The actual checked folds and their laws are sealed together, so
-point-value statements do not unfold the chosen initiality implementation. -/
+/-- The checked folds and their laws are sealed together, so point-value statements do not
+unfold the chosen initiality implementation. -/
 opaque relabelData :
     FoldComparisonData (A := NumericalDerivation.codeAlgebra R)
       (B := NumericalDerivation.codeAlgebra R') (inferenceIso ι κ hικ hκι)
@@ -160,7 +160,7 @@ def codeIso : NumericalDerivation.codeObject R ≅ NumericalDerivation.codeObjec
       NumericalDerivation.codeConclusion R' :=
   Over.w (overIso ι κ hικ hκι).inv
 
-/-- The actual relabelling fold satisfies the proved constructor law. -/
+/-- The relabelling fold satisfies the proved constructor law. -/
 abbrev constructor := (relabelData ι κ hικ hκι).hom_constructor
 abbrev inverse_constructor := (relabelData ι κ hικ hκι).inv_constructor
 abbrev relabel_is_fold := (relabelData ι κ hικ hκι).hom_fold

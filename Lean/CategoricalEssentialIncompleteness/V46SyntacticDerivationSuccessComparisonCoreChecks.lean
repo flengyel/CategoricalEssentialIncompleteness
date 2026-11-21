@@ -7,7 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessComparisonCore
 
-/-! The comparison follows from actual conservative interpretations and computed premise equality. -/
+/-!
+The comparison follows from conservative interpretations and computed premise
+equality.
+-/
 
 @[expose] public section
 noncomputable section

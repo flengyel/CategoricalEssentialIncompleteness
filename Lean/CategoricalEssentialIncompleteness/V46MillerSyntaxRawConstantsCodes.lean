@@ -194,8 +194,8 @@ theorem constantUnlift_supported (p : SyntaxPolynomial (Total.TotalCategory P)) 
         (Nat.unpair (constantUnlift (.sum a b) u)).1∈(carrier A.obj B.obj b).support)
       simpa only [constantUnlift,Nat.unpair_pair,ite_eq_right ht0] using Or.inr ⟨ht,hs.2⟩
 
-/-- The reverse equation uses the actual fiber condition: every recursive
-leaf's stored parameter is forced to equal the external r. -/
+/-- The reverse equation uses the fiber condition: every recursive leaf's stored parameter
+is forced to equal the external r. -/
 theorem constantLift_unlift (p : SyntaxPolynomial (Total.TotalCategory P)) {r u : ℕ}
     (h:fiber R (constantObject R A) (constantObject R B) p (r,u)) :
     constantLift p r (constantUnlift p u)=u := by

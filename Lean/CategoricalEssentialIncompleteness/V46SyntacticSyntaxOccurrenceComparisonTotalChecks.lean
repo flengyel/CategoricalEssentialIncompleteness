@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxOccurrenceComparisonTotal
 
 
-/-! # Statement checks in `V46SyntacticSyntaxOccurrenceComparisonTotalChecks` -/
+/-! # Concrete occurrence transport in the total restriction splitting -/
 
 @[expose] public section
 noncomputable section

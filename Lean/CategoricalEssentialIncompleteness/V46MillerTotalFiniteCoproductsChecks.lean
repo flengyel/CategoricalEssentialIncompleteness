@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalFiniteCoproducts
 
 
-/-! # Statement checks in `V46MillerTotalFiniteCoproductsChecks` -/
+/-! # Uniform semidecidable-carrier total splitting: FiniteCoproducts -/
 
 @[expose] public section
 noncomputable section

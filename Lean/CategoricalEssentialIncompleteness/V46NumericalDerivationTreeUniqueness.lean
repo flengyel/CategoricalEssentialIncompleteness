@@ -19,8 +19,8 @@ open SyntacticDerivation
 variable {F : NumericalTuples.Object} {N : ℕ} (R : RulePresentation F N)
 variable (B : Endofunctor.Algebra (PolynomialComparison.ordinary R))
 
-/-- Pair an arbitrary ordinary-tree algebra with the prescribed conclusion.
-The target remains a genuine algebra for the original inference functor. -/
+/-- Pair an arbitrary ordinary-tree algebra with the prescribed conclusion. The target
+remains an algebra for the original inference functor. -/
 def treePairAlgebra : Endofunctor.Algebra R.inference where
   a := Over.mk (prod.fst : F ⨯ B.a ⟶ F)
   str := Over.homMk (prod.lift

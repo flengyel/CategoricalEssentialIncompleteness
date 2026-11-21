@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
 
 
-/-! # Statement checks in `V46NamedFiniteSemanticsChecks` -/
+/-! # Semantics and capture-free substitution on named finite trees -/
 
 @[expose] public section
 universe u v w

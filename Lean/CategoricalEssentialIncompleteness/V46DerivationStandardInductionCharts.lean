@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPolynomial
 
-/-! # Literal constructor charts for the constructed derivation trees
+/-! # Constructor charts for the constructed derivation trees
 
 These charts retain the original numerical tree word. Standard-code
 induction uses its node count; no preservation of initiality by a model
@@ -74,8 +74,8 @@ end Rules
 
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- A represented ordered input to the concrete unary tree algebra
-produces the same word number as the literal postfix constructor. -/
+/-- A represented ordered input to the concrete unary tree algebra produces the same word
+number as the postfix constructor. -/
 theorem projected_constructor_value (u : M)
     (z : Obj T M ((SyntaxPolynomial.constructors labels N).eval.obj
       (postfixAlgebra T (SyntaxPolynomial.constructors labels N) .unit).a))
@@ -147,8 +147,8 @@ theorem mapChildren_constructors_second (families : ℕ → Carrier)
       simp only [SyntaxPolynomial.constructors, ConcreteNamedSubstitution.mapChildren, ih,
         mapChildren_power_second M f g h]
 
-/-- A metatheoretic extension of an interpreted arrow is used only to
-state the finite chart equation. No computability of the arrow is inferred. -/
+/-- A metatheoretic extension of an interpreted morphism is used only to state the finite
+chart equation. No computability of the morphism is inferred. -/
 def scalarExtension {X Y : PredicateCategory T} (f : X ⟶ Y) (u : M) : M := by
   classical
   exact if hu : X.val.Evalb ![u] then ((F T M).map f ⟨u,hu⟩).val else 0
@@ -183,8 +183,8 @@ theorem projectedInput_chart (u : M)
     ConcreteNamedSubstitution.mapChildren_id (SyntaxPolynomial.constructors labels N) u hu] at hr
   exact hr
 
-/-- Every actual interpreted input to the ordinary tree constructor has
-an ordered numerical chart and the printed size-decrease certificate. -/
+/-- Every interpreted input to the ordinary tree constructor has an ordered numerical
+chart and the size-decrease certificate. -/
 theorem ordinary_input_chart {F₀ : PredicateCategory T} {bound : ℕ}
     (R : RulePresentation F₀ bound)
     (z : Obj T M ((PolynomialComparison.ordinary R).obj (ordinaryTree T R).a)) :

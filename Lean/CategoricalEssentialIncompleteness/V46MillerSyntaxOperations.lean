@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
 
-/-! # Positive graphs of actual operations on arbitrary parameter families
+/-! # Positive graphs of operations on arbitrary parameter families
 
 The operation is a supplied morphism from the constructed raw polynomial
 fiber. Its uniform index, totality, and parameter equation follow from

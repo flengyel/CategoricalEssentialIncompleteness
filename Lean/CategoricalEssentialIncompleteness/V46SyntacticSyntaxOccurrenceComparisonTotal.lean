@@ -33,8 +33,8 @@ def targetSyntax : CategoricalSyntax V σ π d := plainTotalCategoricalSyntax T 
 local notation "S₀" => sourceSyntax T V σ π d
 local notation "S₁" => targetSyntax T V σ π d
 
-/-- Both sides are already proved initial algebras of the actual
-polynomial; their comparison includes all constructor equations. -/
+/-- Both sides are already proved initial algebras of the polynomial; their comparison
+includes all constructor equations. -/
 def algebraIso : mappedSyntaxAlgebra (E) V σ π d (S₀) ≅ (S₁).algebra :=
   syntaxAlgebraIso (E) V σ π d (S₀) (S₁)
 
@@ -52,9 +52,9 @@ theorem targetListsEquality : (S₁).lists =
 def listIso : (E).functor.obj (S₀).lists.algebra.carrier ≅ (S₁).lists.algebra.carrier :=
   syntaxListIso (E) V σ π d (S₀) (S₁) (targetListsEquality T V σ π d)
 
-/-- The predicate unfolds to the actual term occurrence diagram. All
-list-operation equations and fold uniqueness were proved before E was
-specialized to the concrete predicate equivalence. -/
+/-- The predicate unfolds to the term occurrence diagram. All list-operation equations and
+fold uniqueness were proved before E was specialized to the concrete predicate
+equivalence. -/
 theorem termOccurrences_comparison :
     termOccurrenceComparison (E) V σ π d (S₀) (S₁)
       (targetListsEquality T V σ π d) (algebraIso T V σ π d) :=

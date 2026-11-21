@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.ClassicalRealization
 
-/-! # The actual recursive isomorphism between the formal N² and N types -/
+/-! # The recursive isomorphism between the formal N² and N types -/
 
 @[expose] public section
 

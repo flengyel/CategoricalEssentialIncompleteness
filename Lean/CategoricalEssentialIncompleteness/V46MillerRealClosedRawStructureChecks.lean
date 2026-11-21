@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawStructure
 
 
-/-! # Statement checks in `V46MillerRealClosedRawStructureChecks` -/
+/-! # The sixteen field matrices in an arbitrary named structure -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedRaw

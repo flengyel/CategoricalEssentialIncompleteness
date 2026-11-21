@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSyntax
 
-/-! # Actual folds and admissibility for literal numerical syntax -/
+/-! # Folds and admissibility for numerical syntax -/
 
 @[expose] public section
 noncomputable section
@@ -62,7 +62,7 @@ def literalAdmissibleIso : (E).functor.obj (S₀).admissibleSubstitution ≅ (S�
   mappedAdmissibleSubstitutionIso_result (E) V σ π d (S₀) (S₁)
     (literalListsEquality V σ π d) (literalAlgebraIso V σ π d)
 
-/-- These are morphisms to the literal accepted words with actual tuple-code labels. -/
+/-- These are morphisms to the literal accepted words with tuple-code labels. -/
 def literalTermPresentationIso : (S₁).algebra.a.1 ≅
     NumericalCoordinates.predicateObject (S₀).algebra.a.1 :=
   (literalTermIso V σ π d).symm ≪≫ NumericalCoordinates.predicatePresentationIso (S₀).algebra.a.1

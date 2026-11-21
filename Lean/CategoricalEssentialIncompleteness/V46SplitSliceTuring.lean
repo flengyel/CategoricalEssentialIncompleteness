@@ -38,9 +38,9 @@ local instance baseRestriction : RestrictionCategory (SplitObject R) :=
 variable [HasPullbacks (Tot (SplitObject R))]
 variable (inverses : MonoInverses (SplitObject R)) (T : Tot (SplitObject R))
 
-/-- The original index object is universal in every actual partial slice.
-Both the total parameter and each total embedding are morphisms of that
-slice; the evaluator uses its complete binary product structure. -/
+/-- The original index object is universal in every partial slice. Both the total
+parameter and each total embedding are morphisms of that slice; the evaluator uses its
+complete binary product structure. -/
 theorem turing_object (rec : PRecursionCategory R) :
     let Q := (splittingInclusion (C := R)).obj rec.W
     ∃ τ : nearProd Q Q ⟶ Q, IsTuringMorphism τ ∧

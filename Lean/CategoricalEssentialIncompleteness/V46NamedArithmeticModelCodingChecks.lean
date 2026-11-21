@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelCoding
 
 
-/-! # Statement checks in `V46NamedArithmeticModelCodingChecks` -/
+/-! # Finite named constructor charts in an arbitrary PA model -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

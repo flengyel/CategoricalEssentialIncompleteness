@@ -10,13 +10,12 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
 public import CategoricalEssentialIncompleteness.V46FirstOrderTheory
 public import CategoricalEssentialIncompleteness.V46SentenceTheoryClosure
 
-/-! # Actual generated first-order theories in the Miller total splitting
+/-! # Generated first-order theories in the Miller total splitting
 
-The syntax is the constructed parameter-stable named syntax in
-Tot(Split(E_z)). The actual seven logical schemes and the ordered unary
-and binary inference rules are instantiated with every supplied axiom
-subobject. Initiality is supplied by the constructed arbitrary-rule
-algebra, not by an additional assumption.
+The syntax is the constructed parameter-stable named syntax in Tot(Split(E_z)). The
+seven logical schemes and the ordered unary and binary inference rules are
+instantiated with every supplied axiom subobject. Initiality is supplied by the
+constructed arbitrary-rule algebra, not by an additional assumption.
 -/
 
 @[expose] public section
@@ -33,8 +32,8 @@ local notation "S" => Syntax.canonicalCategoricalSyntax z V σ π d
 abbrev rules {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
     RulePresentation (S).algebra.a.2 2 := (S).logicalRules axioms
 
-/-- The actual finite-rule algebra for the seven logical schemes,
-generalization, modus ponens and the given nonlogical axioms. -/
+/-- The finite-rule algebra for the seven logical schemes, generalization, modus ponens
+and the given nonlogical axioms. -/
 def proofAlgebra {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
     Endofunctor.Algebra ((S).logicalRules axioms).inference :=
   Derivation.Canonical.derivationAlgebra z ((S).logicalRules axioms)
@@ -106,8 +105,8 @@ theorem sentence_theory_pullback {A : Total.CanonicalTotal z} (axioms : A ⟶ (S
       (Subobject.pullback (S).sentenceInclusion).obj (formulaTheory z V σ π d axioms) :=
   (generated_theory z V σ π d axioms).2.2.2
 
-/-- Nonlogical axioms factor through the actual image of the
-sentence-conclusion map, rather than merely through the formula image. -/
+/-- Nonlogical axioms factor through the image of the sentence-conclusion map, rather than
+merely through the formula image. -/
 theorem sentence_axioms_factor {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
     ∃ a : A ⟶ image (sentenceConclusion z V σ π d axioms),
       a ≫ image.ι (sentenceConclusion z V σ π d axioms) = axioms := by
@@ -163,8 +162,7 @@ theorem sentence_theory_idempotent {A : Total.CanonicalTotal z}
   · exact imageSubobject_le_mk m (sentenceConclusion z V σ π d m) w hw
   · exact Subobject.mk_le_mk_of_comm a ha
 
-/-- Inclusion of nonlogical axioms induces inclusion of the actual
-generated sentence theories. -/
+/-- Inclusion of nonlogical axioms induces inclusion of the generated sentence theories. -/
 theorem sentence_theory_monotone {A A' : Total.CanonicalTotal z}
     (axioms : A ⟶ (S).sentenceObject) (axioms' : A' ⟶ (S).sentenceObject)
     (k : A ⟶ A') (hk : k ≫ axioms' = axioms) :
@@ -174,8 +172,8 @@ theorem sentence_theory_monotone {A A' : Total.CanonicalTotal z}
     (proofAlgebra z V σ π d axioms) (proofInitial z V σ π d axioms)
     (proofAlgebra z V σ π d axioms')
 
-/-- The actual sentence-conclusion range splits through its regular
-image using the constructed partial inverse of the total image mono. -/
+/-- The sentence-conclusion range splits through its regular image using the constructed
+partial inverse of the total image mono. -/
 theorem sentence_range_regular_image {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
     ∃ r : (S).sentenceObject.obj ⟶ (image (sentenceConclusion z V σ π d axioms)).obj,
       (image.ι (sentenceConclusion z V σ π d axioms)).hom ≫ r = 𝟙 _ ∧
@@ -192,8 +190,8 @@ theorem sentence_range_regular_image {A : Total.CanonicalTotal z} (axioms : A �
       (image.fac c)
   simpa only [hfac] using h
 
-/-- The representing restriction idempotent lies on the actual formula
-object of the total splitting, not on an unrelated numerical carrier. -/
+/-- The representing restriction idempotent lies on the formula object of the total
+splitting, not on an unrelated numerical carrier. -/
 def formulaIdem {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
     Idem (S).algebra.a.2.obj := Ranges.range (conclusion z V σ π d axioms).hom
 
@@ -221,7 +219,7 @@ theorem sentence_idempotent_represents {A : Total.CanonicalTotal z} (axioms : A 
       (sentenceIdem z V σ π d axioms).hom=r ≫ (image.ι (sentenceConclusion z V σ π d axioms)).hom :=
   sentence_range_regular_image z V σ π d axioms
 
-/-- The construction is defined on every actual sentence axiom subobject. -/
+/-- The construction is defined on every sentence axiom subobject. -/
 def generatedSentence (A : Subobject (S).sentenceObject) : Subobject (S).sentenceObject :=
   sentenceTheory z V σ π d A.arrow
 

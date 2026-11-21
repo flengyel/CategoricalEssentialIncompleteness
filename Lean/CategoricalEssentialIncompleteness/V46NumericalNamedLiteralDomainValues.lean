@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSubstit
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
 
-/-! # The genuine numerical substitution domain is the independent free-for flag -/
+/-! # The numerical substitution domain is the independent free-for flag -/
 
 @[expose] public section
 noncomputable section
@@ -91,8 +91,8 @@ theorem literal_admissible_iff
     obtain ⟨x, hx⟩ := hp.mpr h
     exact ⟨x, (NumericalCoordinates.predicateMap_value (S₀).admissibleInclusion x).trans hx⟩
 
-/-- At an actual admissibility point the primitive successful result is
-the value of the categorical substitution morphism. No flag premise is added. -/
+/-- At an admissibility point the primitive successful result is the value of the
+categorical substitution morphism. No flag premise is added. -/
 theorem literal_formulaSubstitution_value (a : NumericalTuples.Point (S₁).admissibleSubstitution) :
     let a₀ := (literalAdmissiblePresentationIso V σ π d).hom.toFun a
     let q₀ := (PredicateInterpretation.functor 𝗧𝗔 ℕ).map (S₀).admissibleInclusion a₀

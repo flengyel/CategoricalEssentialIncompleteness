@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCandidate
 
-/-! # Actual slice maps act on every valid raw polynomial input -/
+/-! # Slice maps act on every valid raw polynomial input -/
 
 @[expose] public section
 
@@ -26,9 +26,9 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable {P C D : PredicateCategory T} {A B : Over P}
 
-/-- Totality of the actual two slice arrows extends through the finite
-polynomial AST. The source is guarded by the coefficient and child-word
-predicates; neither a chosen evaluator nor a fold law occurs as a premise. -/
+/-- Totality of the two slice morphisms extends through the finite polynomial AST. The
+source is guarded by the coefficient and child-word predicates; neither a chosen
+evaluator nor a fold law occurs as a premise. -/
 theorem mapRaw_arrow_exists (f : constantFamily P C ⟶ A) (g : constantFamily P D ⟶ B)
     (a : SyntaxPolynomial (PredicateCategory T)) (p : Obj T M P) (u : M)
     (h : (rawCarrier C D a).val.Evalb ![u]) :

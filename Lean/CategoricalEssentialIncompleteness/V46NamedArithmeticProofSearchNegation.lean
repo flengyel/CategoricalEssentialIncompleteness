@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
-/-! # The printed primitive-recursive Neg extension and actual Γ refutation
+/-! # The primitive-recursive Neg extension and Γ refutation
 
 The primitive-recursion, PA-totality and constructor-graph proofs are first
 given for an arbitrary raw polynomial and arbitrary typed model point.
@@ -74,8 +74,8 @@ local notation "S" => plainCategoricalSyntax T V σ π d
 local notation "Y" => (Postfix.plainCarrier true (SyntaxPolynomial.termExpression V σ d)
   (SyntaxPolynomial.formulaExpression V π d) : PredicateCategory T)
 
-/-- An arbitrary typed formula point, including a nonstandard one, has
-the literal constructor word as the output of the actual negation graph. -/
+/-- An arbitrary typed formula point, including a nonstandard one, has the constructor
+word as the output of the negation graph. -/
 theorem constructor_graph (x : SyntacticLists.Obj T M Y) (y : M) :
     (chosenGraph T (S).negationConstructor).graph.val.Evalb ![x.val,y] ↔
       y = word (SyntaxPolynomial.formulaExpression V π d) x.val := by
@@ -123,7 +123,7 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
     negationWordGraph.val.Evalb ![out,w] ↔ out = negationWord M w :=
   NegationCoding.graph_eval formulaPolynomial out w
 
-/-- This is exactly the printed C'(n)=ProvΓ(Neg(Θ(n))) equation. The
+/-- This is exactly the C'(n)=ProvΓ(Neg(Θ(n))) equation. The
 sentence-range premise is proved by the fixed-formula construction. -/
 theorem negative_eval_word (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) (n : M) :

@@ -49,8 +49,8 @@ theorem base_domain : domain (inverses a) (base a) =
       (RealClosedAxioms.theoryAxioms_enumerable a) :=
   domain_image (inverses a) _
 
-/-- The Miller assumption and the printed extension/consistency equations
-suffice; generation and idempotent comparisons are proved above. -/
+/-- The Miller assumption and the extension/consistency equations suffice; generation and
+idempotent comparisons are proved above. -/
 theorem global_incompleteness (ha : IsMiller a) (U : Theory a)
     (hExt : base a ≤ U.val)
     (hc : U.val ⊓ (refutation a U) = ⊥) :

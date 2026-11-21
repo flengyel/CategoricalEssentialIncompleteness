@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonState
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameterPoints
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
 
-/-! # The actual shared-parameter quantifier step has the numeric root result -/
+/-! # The shared-parameter quantifier step has the numeric root result -/
 
 @[expose] public section
 

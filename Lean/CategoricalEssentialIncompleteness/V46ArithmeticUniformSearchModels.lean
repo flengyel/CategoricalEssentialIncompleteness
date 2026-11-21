@@ -88,8 +88,8 @@ theorem mem_lift_graph (C C' : Predicate₂) (e x : M) (y : M ⊕ M) :
     y ∈ (F).map (omegaCoprodIso 𝗣𝗔).inv z) ↔ _
   exact exists_congr fun z => and_congr (mem_numberLift M C C' e x z) Iff.rfl
 
-/-- Even in an inconsistent fiber, every defined output has actual proof
-or refutation evidence. The converse needs no fiber disjointness either. -/
+/-- Even in an inconsistent fiber, every defined output has proof or refutation evidence.
+The converse needs no fiber disjointness either. -/
 theorem model_lift_domain (C C' : Predicate₂) (e x : M) :
     (∃ y : M ⊕ M, y ∈ (F).map (lift C C') (e,x)) ↔
       C.val.Evalb ![e,x] ∨ C'.val.Evalb ![e,x] := by
@@ -125,8 +125,8 @@ theorem negative_lift_value (C C' : Predicate₂) (e : M)
   · exact (reversedRelation_eval C C' e x _).mpr (Or.inr ⟨hx,rfl⟩)
   · exact (PartialSearchLift.mem_parity_decode_inl M _ _).mpr rfl
 
-/-- The partial pairing retains the actual external parameter and uses
-an actual output of the common source morphism as its second coordinate. -/
+/-- The partial pairing retains the external parameter and uses an output of the common
+source morphism as its second coordinate. -/
 theorem mem_parameter_pairing (g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔)
     (e n : M) (hn : n ∈ (F).map g e) :
     (e,n) ∈ (F).map (partialPairing (𝟙 (omegaObject 𝗣𝗔)) g) e := by

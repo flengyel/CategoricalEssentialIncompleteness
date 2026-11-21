@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDyadicBoxes
 
 
-/-! # Statement checks in `V46MillerCutDyadicBoxesChecks` -/
+/-! # The image of a binary cylinder as finite closed dyadic boxes -/
 
 @[expose] public section
 noncomputable section

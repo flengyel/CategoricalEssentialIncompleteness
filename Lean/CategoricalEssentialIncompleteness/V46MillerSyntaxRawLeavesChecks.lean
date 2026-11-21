@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawLeaves
 
 
-/-! # Statement checks in `V46MillerSyntaxRawLeavesChecks` -/
+/-! # Recursive-leaf, coefficient and unit slice comparisons -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.Limits

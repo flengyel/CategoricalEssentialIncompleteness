@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerUniformComputations
 
 
-/-! # Statement checks in `V46MillerUniformComputationsChecks` -/
+/-! # One finite-table algorithm for every representation of a point -/
 
 @[expose] public section
 open CategoricalEssentialIncompleteness.LocalConnectedness

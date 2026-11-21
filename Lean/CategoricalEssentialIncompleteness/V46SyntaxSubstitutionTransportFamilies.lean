@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportInputs
 
-/-! Parameter-dependent constructor squares are lifted to the actual
-constant-family arrows, using both product projections. -/
+/-!
+Parameter-dependent constructor squares are lifted to the constant-family morphisms,
+using both product projections.
+-/
 
 @[expose] public section
 noncomputable section
@@ -154,9 +156,9 @@ theorem substitution_parameterize_square {X Y : C} {X' Y' : D}
   rw [Functor.map_comp,Category.assoc,hf,← Category.assoc,
     ← SyntaxOptionTransport.productIso_snd,Category.assoc]
 
-/-- Polynomial transport, the parameter comparison, and replacement of
-the actual recursive carriers commute. Both parameter coordinates remain
-in the comparison throughout the square. -/
+/-- Polynomial transport, the parameter comparison, and replacement of the recursive
+carriers commute. Both parameter coordinates remain in the comparison throughout the
+square. -/
 theorem substitutionParameterInput_comparison (A : C × C) (B : D × D)
     (i : (E.prod E).functor.obj A ≅ B) (p : SyntaxPolynomial D) :
     (substitutionParameterInputIso E b A B i p).hom ≫
@@ -187,8 +189,8 @@ theorem substitutionParameterInput_comparison (A : C × C) (B : D × D)
     Category.assoc,Functor.map_comp]
   rfl
 
-/-- This lifts a proved parameter-dependent root square all the way
-from its actual slice polynomial input to its actual output family. -/
+/-- This lifts a proved parameter-dependent root square all the way from its slice
+polynomial input to its output family. -/
 theorem map_substitution_parameterOperation (A : C × C) (B : D × D)
     (i : (E.prod E).functor.obj A ≅ B) (p : SyntaxPolynomial D)
     {Z : C} {Z' : D} (j : E.functor.obj Z ≅ Z')

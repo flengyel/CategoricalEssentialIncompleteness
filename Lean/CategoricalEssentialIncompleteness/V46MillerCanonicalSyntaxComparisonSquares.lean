@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSentences
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
 
-/-! # Compositional squares for the actual logical parameter diagrams -/
+/-! # Compositional squares for the logical parameter diagrams -/
 
 @[expose] public section
 noncomputable section

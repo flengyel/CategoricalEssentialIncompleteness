@@ -7,8 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelOccurrences
 
-/-! The actual quantified-constructor occurrence equation on arbitrary
-internal child words. -/
+/-! The quantified-constructor occurrence equation on arbitrary internal child words. -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstantsCodes
 
 
-/-! # Statement checks in `V46MillerSyntaxRawConstantsCodesChecks` -/
+/-! # Explicit recursive constant-family polynomial codes -/
 
 @[expose] public section
 noncomputable section

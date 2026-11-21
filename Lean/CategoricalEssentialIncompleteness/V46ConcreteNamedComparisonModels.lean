@@ -66,9 +66,9 @@ theorem model_sum_map_inr {A B C D : PredicateCategory T} (f : A ⟶ C) (g : B �
   have h := congrArg (fun k => (F T M).map k x) (coprod.inr_map f g)
   simpa only [Functor.map_comp_apply] using h
 
-/-- A model point in a true or false equalizer fiber evaluates the
-actual categorical conditional by that branch. Only preserved finite
-geometry is used; no interpretation of initiality in Set is assumed. -/
+/-- A model point in a true or false equalizer fiber evaluates the categorical conditional
+by that branch. Only preserved finite geometry is used; no interpretation of
+initiality in Set is assumed. -/
 theorem model_branch {X Y : PredicateCategory T} (χ : X ⟶ Two (PredicateCategory T))
     (f g : X ⟶ Y) (x : Obj T M X) (b : Bool)
     (hb : (F T M).map χ x = (F T M).map (Two.constant X b) x) :

@@ -24,8 +24,8 @@ namespace CategoricalEssentialIncompleteness.V46.SignedDerivation
 
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] {F : PredicateCategory T}
 
-/-- Successful validation retains the coefficient condition of the
-original word, including its actual nonlogical axiom labels. -/
+/-- Successful validation retains the coefficient condition of the original word,
+including its nonlogical axiom labels. -/
 theorem derivation_coefficients (R : RulePresentation F 2)
     {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
     (word : M) (hw : (SyntacticDerivation.derivationCarrier T R).val.Evalb ![word]) :
@@ -65,7 +65,7 @@ theorem signed_derivation_labels
     (Limits.prod (C := PredicateCategory T) F F) word
     (signed_derivation_coefficients T logical sentence axioms all imp word hw)
 
-/-- A common finite assignment for two actual constructed derivations. -/
+/-- A common finite assignment for two constructed derivations. -/
 theorem signed_derivation_values
     {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
     (hd : ∀ n : M, ¬ (A.val.Evalb ![n] ∧ B.val.Evalb ![n]))

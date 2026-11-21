@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralCarrierNames
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralCarrierNamesChecks` -/
+/-! # The coded numerical variable object has exactly the named words -/
 
 @[expose] public section
 noncomputable section

@@ -38,8 +38,8 @@ theorem finiteOracleRE_coded {α : Type} [Primcodable α] (S : Set ℕ) (p : α 
     · intro hp
       exact ⟨x,rfl,hp⟩
 
-/-- Relative c.e. membership on an arbitrary coded carrier is compared through
-its actual encoding, including exclusion of codes outside that carrier. -/
+/-- Relative c.e. membership on an arbitrary coded carrier is compared through its
+encoding, including exclusion of codes outside that carrier. -/
 theorem finiteOracleRE_iff_coded_recursiveIn_domain {α : Type} [Primcodable α]
     (S : Set ℕ) (p : α → Prop) : FiniteOracleRE S p ↔
       ∃ f : ℕ → Part ℕ,Nat.RecursiveIn (oracleSet S) f ∧

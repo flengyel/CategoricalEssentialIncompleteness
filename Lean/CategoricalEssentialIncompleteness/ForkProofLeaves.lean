@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.ForkProofObjects
 
-/-! # The actual one-node proof morphisms -/
+/-! # The one-node proof morphisms -/
 
 @[expose] public section
 

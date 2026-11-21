@@ -9,9 +9,9 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationT
 
 /-! # Original-name quantifiers and computed alpha comparison
 
-Only the single removed free name is bound. The remaining source free-name
-type excludes that name, so capture avoidance follows from actual name
-inequalities rather than a normal-form assumption on the given syntax.
+Only the single removed free name is bound. The remaining source free-name type
+excludes that name, so capture avoidance follows from name inequalities rather than a
+normal-form assumption on the given syntax.
 -/
 
 @[expose] public section
@@ -62,9 +62,9 @@ private theorem body_absent {ξ : Type} (φ : Semiformula ℒₒᵣ ξ 1)
     exact hz (by simpa using hi.symm)
   · exact hf i hi
 
-/-- The universal alpha step is a pair of actual native derivations.
-The body can have arbitrary nested binders; only the two displayed names
-must be distinct from its remaining free-name map. -/
+/-- The universal alpha step is a pair of Hilbert derivations. The body can have arbitrary
+nested binders; only the two displayed names must be distinct from its remaining
+free-name map. -/
 theorem body_alpha {ξ : Type} (φ : Semiformula ℒₒᵣ ξ 1)
     (seed x y : ℕ) (fn : ξ → ℕ) (hx : x < seed) (hy : y < seed)
     (hxy : x ≠ y) (hfx : ∀ i, fn i ≠ x) (hfy : ∀ i, fn i ≠ y) :
@@ -99,8 +99,7 @@ theorem body_alpha {ξ : Type} (φ : Semiformula ℒₒᵣ ξ 1)
     (fromNative Γ _ (NamedHilbertQuantifiers.all_rename_forward functionSymbols relationSymbols bound Γ
       y x B A hfr hr hbv))
 
-/-- Removing the binder name and then giving its bound slot the original
-name recovers exactly the given source body's native elaboration. -/
+/-- Binding a free name and then restoring that name in the bound slot preserves the translated formula. -/
 theorem bindRemove_original {n : ℕ} (x : Fin n) (φ : Semiformula ℒₒᵣ (Fin n) 0)
     (seed : ℕ) :
     ArithmeticNamedOpenTranslation.formula seed ![x.val] (fun y => y.val.val)

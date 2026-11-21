@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateProjections
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates
 
-/-! # The actual negation substitution step propagates the numeric option result -/
+/-! # The negation substitution step propagates the numeric option result -/
 
 @[expose] public section
 

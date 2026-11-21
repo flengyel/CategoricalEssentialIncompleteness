@@ -99,8 +99,8 @@ theorem run_status (word : M)
         (runPrefix a b F G f g param word n 1) (hr n hlt) hs
   exact h (len word) le_rfl
 
-/-- The success shape proved independently from numerical parsing turns
-the positive stack invariant into actual output carrier preservation. -/
+/-- The success shape proved independently from numerical parsing turns the positive stack
+invariant into output carrier preservation. -/
 theorem output_typed (formula : Bool) (word : M)
     (hw : (Postfix.carrier formula a b).val.Evalb ![word]) :
     (if formula then Y else X).val.Evalb ![output a b F G f g param word] := by

@@ -10,8 +10,8 @@ public import CategoricalEssentialIncompleteness.BooleanQuotients
 /-!
 # Consistency and completeness of Boolean presentations
 
-The bound fibers are subobjects, whereas the bound copairing is an arrow.
-This module proves the categorical comparison between these two descriptions.
+The bound fibers are subobjects, whereas the bound copairing is a morphism. This
+module proves the categorical comparison between these two descriptions.
 -/
 
 @[expose] public section
@@ -49,7 +49,8 @@ theorem image_copair [HasImages C] [HasBinaryCoproducts C]
     · simpa using imageSubobject_comp_le (coprod.inl : A ⟶ A ⨿ B) (coprod.desc f g)
     · simpa using imageSubobject_comp_le (coprod.inr : B ⟶ A ⨿ B) (coprod.desc f g)
 
-/-- In a regular category, an arrow has full image exactly when it is a regular epimorphism. -/
+/-- In a regular category, a morphism has full image exactly when it is a regular
+epimorphism. -/
 theorem image_eq_top_iff_regularEpi [Regular C] {X Y : C} (f : X ⟶ Y) :
     imageSubobject f = ⊤ ↔ IsRegularEpi f := by
   constructor
@@ -62,7 +63,7 @@ theorem image_eq_top_iff_regularEpi [Regular C] {X Y : C} (f : X ⟶ Y) :
     exact ExtremalEpi.subobject_eq_top f
       (by simpa using imageSubobject_factors_comp_self f (𝟙 X))
 
-/-- If a composite is a regular epimorphism, its second arrow is a regular epimorphism. -/
+/-- If a composite is a regular epimorphism, its second morphism is a regular epimorphism. -/
 theorem regularEpi_of_comp [Regular C] {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z)
     [IsRegularEpi (f ≫ g)] : IsRegularEpi g := by
   have : ExtremalEpi g := ExtremalEpi.mk_of_hasEqualizers g (by

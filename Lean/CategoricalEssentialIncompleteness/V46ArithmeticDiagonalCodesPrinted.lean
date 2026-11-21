@@ -26,8 +26,8 @@ namespace CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalCodes
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The actual comparison functor turns the chosen diagonal into the
-literal exponential diagonal of the printed formal product. -/
+/-- The comparison functor turns the chosen diagonal into the exponential diagonal of the
+formal product. -/
 theorem printed_diagonal (x z : M) :
     SyntacticModel.programRelation 𝗣𝗔 M
       ((PrintedObjectCoding.comparison 𝗣𝗔).map
@@ -51,8 +51,8 @@ theorem printed_diagonal (x z : M) :
     obtain ⟨ha,hb⟩ := ExponentialPairing.code_injective he
     exact Prod.ext ha hb
 
-/-- The selected printed source Turing map is conjugated by the proved
-product isomorphism and applies exactly the internal program index. -/
+/-- The selected source Turing morphism is conjugated by the proved product isomorphism
+and applies exactly the internal program index. -/
 theorem printed_tau (a b y : M) :
     SyntacticModel.programRelation 𝗣𝗔 M
       ((PrintedObjectCoding.comparison 𝗣𝗔).map sourceTau).hom.val
@@ -70,8 +70,8 @@ theorem printed_tau_program (input y : M) :
   obtain ⟨a,b,rfl⟩ := ExponentialPairing.code_surjective input
   exact (printed_tau M a b y).trans (UniformTrace.universal_eval a b y).symm
 
-/-- The source even/odd decoding isomorphism has the identity numerical
-graph after the actual recursive sum-coordinate comparison. -/
+/-- The source even/odd decoding isomorphism has the identity numerical graph after the
+recursive sum-coordinate comparison. -/
 theorem printed_parity_program (input output : M) :
     SyntacticModel.programRelation 𝗣𝗔 M
       ((PrintedObjectCoding.comparison 𝗣𝗔).map
@@ -100,8 +100,8 @@ theorem printed_sourceDiagonal (x y : M) :
   rw [mem_model_relation] at hs
   exact h.trans hs
 
-/-- In printed sum coordinates the even-output part is exactly alpha's
-actual output graph, with no standardness restriction. -/
+/-- In sum coordinates the even-output part is exactly alpha's output graph, with no
+standardness restriction. -/
 theorem printed_parity_inl (x m : M) :
     SyntacticModel.programRelation 𝗣𝗔 M
       ((PrintedObjectCoding.comparison 𝗣𝗔).map sourceParityDiagonal).hom.val x (2 * m) ↔
@@ -122,8 +122,8 @@ theorem printed_parity_inr (x m : M) :
 
 end Models
 
-/-- In the manuscript's numerical object coordinates, the actual
-Turing morphism is exactly the arrow of the printed universal index. -/
+/-- In the manuscript's numerical object coordinates, the Turing morphism is exactly the
+morphism of the universal program index. -/
 theorem printed_tau_is_universal :
     ((PrintedObjectCoding.comparison 𝗣𝗔).map sourceTau).hom =
       arrowOfIndex 𝗣𝗔 .omega .omega UniformTrace.universalIndex := by

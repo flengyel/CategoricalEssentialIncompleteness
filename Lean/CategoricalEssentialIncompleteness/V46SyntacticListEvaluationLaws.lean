@@ -215,8 +215,8 @@ theorem evaluation_unique_model
 
 end UniquenessModels
 
-/-- Equality as actual predicate-category arrows follows from the internal
-uniqueness induction, for arbitrary candidate morphisms satisfying the laws. -/
+/-- Equality as predicate-category morphisms follows from the internal uniqueness
+induction, for arbitrary candidate morphisms satisfying the laws. -/
 theorem evaluation_unique
     (H : GraphMorphism T (productCarrier P (listCarrier V)) X)
     (hn : ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] (p y : M),

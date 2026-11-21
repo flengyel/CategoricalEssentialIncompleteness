@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxTraceConcat
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRawEvaluation
 
-/-! # Framed traces for the actual ordered child blocks of a constructor -/
+/-! # Framed traces for the ordered child blocks of a constructor -/
 
 @[expose] public section
 
@@ -50,8 +50,8 @@ theorem fiber_childStack (q : RawPolynomial) (p v tail : M)
       · simpa [childStack] using ic x tail hx ht
       · simpa [childStack] using id y tail hy ht
 
-/-- Evaluation's existential witness is an actual finite forward
-record, including its displayed final singleton value. -/
+/-- Evaluation's existential witness is a finite forward record, including its displayed
+final singleton value. -/
 theorem evaluation_record (formula : Bool) (p word value : M)
     (h : (A.evaluationFormula formula).val.Evalb ![p, word, value]) :
     ∃ states : M, A.ValueRecord p word (len word) states ∧
@@ -71,9 +71,9 @@ theorem evaluation_framed_record (formula : Bool) (p word value tail : M)
   rw [nth_frameVector states tail (len word) (by rw [hs.1]; simp), he]
   simp
 
-/-- Actual child values from mapRaw yield one actual framed trace for
-all child blocks, in their printed left-to-right order. The finite
-polynomial induction concatenates arithmetic computation records. -/
+/-- Child values from mapRaw yield one framed trace for all child blocks, in their printed
+left-to-right order. The finite polynomial induction concatenates arithmetic
+computation records. -/
 theorem children_trace (q : RawPolynomial) (p u v tail : M)
     (hp : P.val.Evalb ![p])
     (hm : (mapRaw P (A.evaluationFormula false) (A.evaluationFormula true) q).val.Evalb ![p, u, v])

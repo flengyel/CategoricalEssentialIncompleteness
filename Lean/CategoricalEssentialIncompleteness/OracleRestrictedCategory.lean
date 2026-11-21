@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.OracleDomainRecursion
 public import CategoricalEssentialIncompleteness.PartialFunctions
 
-/-! # Formal numerical types and arrows restricted to oracle-c.e. domains -/
+/-! # Formal numerical types and morphisms restricted to oracle-c.e. domains -/
 
 @[expose] public section
 
@@ -88,8 +88,8 @@ theorem composite_domain {α β γ : Type} [Primcodable α] [Primcodable β] [Pr
     obtain ⟨y,hy,hg⟩ := Part.mem_bind_iff.mp hz
     exact ⟨y,hy.1,he x y hy,hg.1⟩
 
-/-- The two arrow requirements are independent. The extension is allowed to
-have a larger domain; equality of arrows is equality of actual partial graphs. -/
+/-- The two morphism requirements are independent. The extension is allowed to have a
+larger domain; equality of morphisms is equality of partial graphs. -/
 @[ext] structure Arrow (S : Set ℕ) (X Y : Ty) where
   val : X.carrier → Part Y.carrier
   domain : FiniteOracleRE S (fun x => (val x).Dom)

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPayloads
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptions
 
-/-! # Typed numerical result arrows into the actual substitution state objects -/
+/-! # Typed numerical result morphisms into the substitution state objects -/
 
 @[expose] public section
 
@@ -118,8 +118,8 @@ def computedFormulaResult :
       (OptionSyntax.obj (syntaxCarrier V σ π d true : PredicateCategory T)) :=
   rawResultArrow T U V σ π d true ≫ (optionIso T (syntaxCarrier V σ π d true)).hom
 
-/-- These two state maps retain original and result as actual chosen
-products, and retain the actual parameter in the outer product. -/
+/-- These two state maps retain original and result as chosen products, and retain the
+parameter in the outer product. -/
 def computedTermState :
     constantFamily (U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T))
       (syntaxCarrier V σ π d false : PredicateCategory T) ⟶

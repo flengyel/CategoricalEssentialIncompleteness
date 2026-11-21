@@ -9,8 +9,8 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralEquival
 
 /-! # Literal values of the plain postfix constructor
 
-The actual structure map appends the printed root record to its ordered
-polynomial input. Membership witnesses remain outside the syntax word.
+The structure map appends the root record to its ordered polynomial input. Membership
+witnesses remain outside the syntax word.
 -/
 
 @[expose] public section
@@ -33,8 +33,8 @@ section PlainValues
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
   (a b : SyntaxPolynomial (PredicateCategory T))
 
-/-- The raw input is encoded from the actual ordered polynomial input;
-the inverse plain comparison fixes every child word. -/
+/-- The raw input is encoded from the ordered polynomial input; the inverse plain
+comparison fixes every child word. -/
 def plainRawInput :
     @Quiver.Hom (PredicateCategory T) inferInstance
       (a.eval.obj (SyntacticSyntax.plainPostfixAlgebra T a b).a)

@@ -11,10 +11,10 @@ public import Mathlib.CategoryTheory.Types.Basic
 /-!
 # Internal bounded distributive lattices in types
 
-A bounded distributive lattice determines an internal lattice in `Type`: each
-set of generalized elements has pointwise lattice operations. A bounded lattice
-homomorphism induces an internal lattice homomorphism; its underlying arrow is
-monic precisely when the original function is injective.
+A bounded distributive lattice determines an internal lattice in `Type`: each set of
+generalized elements has pointwise lattice operations. A bounded lattice homomorphism
+induces an internal lattice homomorphism; its underlying morphism is monic precisely
+when the original function is injective.
 -/
 
 @[expose] public section

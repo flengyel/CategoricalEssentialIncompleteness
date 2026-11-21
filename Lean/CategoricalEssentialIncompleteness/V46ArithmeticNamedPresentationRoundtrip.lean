@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationAlpha
 
-/-! # Native proof-equivalence for the given named presentation
+/-! # Hilbert proof-equivalence for the given named presentation
 
-The statement ranges over every original named formula, including arbitrary
-repeated binders and implication/negation words. Its conclusion is an actual
-proof of equivalence in the seven-scheme native Hilbert calculus.
+The statement ranges over every original named formula, including arbitrary repeated
+binders and implication/negation words. Its conclusion is a proof of equivalence in
+the seven-scheme Hilbert calculus.
 -/
 
 @[expose] public section
@@ -114,12 +114,12 @@ theorem formula_closed (n : ℕ) (φ : Formula) (hφ : Bound n φ)
   have h := formula_fvar n φ hφ y hy
   simp [hclosed] at h
 
-/-- A source sentence attached to the literal given native sentence. -/
+/-- A source sentence attached to the literal given named sentence. -/
 def sentence (φ : Formula) (hφ : φ.freeVariables = []) : ArithmeticSentence :=
   (formula (nameBound φ) φ).toEmpty (formula_closed (nameBound φ) φ (bound_nameBound φ) hφ)
 
-/-- Closing the free-name type preserves the actual native proof
-comparison to each original named sentence. -/
+/-- Closing the free-name type preserves the Hilbert proof comparison to each original
+named sentence. -/
 theorem sentence_roundtrip (φ : Formula) (hφ : φ.freeVariables = []) :
     S ⊢ ArithmeticNamedTranslation.translateFormula (nameBound φ) ![] (sentence φ hφ) 🡘 φ := by
   have hr := formula_roundtrip Γ (nameBound φ) φ (bound_nameBound φ) (nameBound φ) le_rfl
@@ -133,8 +133,8 @@ theorem sentence_roundtrip (φ : Formula) (hφ : φ.freeVariables = []) :
       ArithmeticNamedOpenTranslation.formula_empty] using he
   exact he' ▸ hr
 
-/-- The fixed source-to-native proof translation starts with seed zero.
-Changing its fresh binders uses the already proved actual alpha steps. -/
+/-- The fixed source-to-Hilbert proof translation starts with seed zero. Changing its
+fresh binders uses the already proved alpha steps. -/
 theorem sentence_zero_roundtrip (φ : Formula) (hφ : φ.freeVariables = []) :
     S ⊢ ArithmeticNamedTranslation.translateFormula 0 ![] (sentence φ hφ) 🡘 φ := by
   have hs := ArithmeticNamedProofConnectives.seed_mono Γ (sentence φ hφ)

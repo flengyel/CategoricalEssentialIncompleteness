@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionCarriers
 
-/-! PA carrier preservation for the actual substitution roots, including the
-branch which succeeds at an equal binder despite recursive body failure. -/
+/-!
+PA carrier preservation for the substitution roots, including the branch which
+succeeds at an equal binder despite recursive body failure.
+-/
 
 @[expose] public section
 noncomputable section

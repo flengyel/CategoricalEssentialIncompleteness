@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkNumericalProofs
 public import CategoricalEssentialIncompleteness.EffectiveForkSplitting
 
-/-! # The actual fork of finite proofs and its natural conclusion morphism -/
+/-! # The fork of finite proofs and its natural conclusion morphism -/
 
 @[expose] public section
 

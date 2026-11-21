@@ -21,8 +21,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticLists
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Every object of the actual total split category carries a stable
-list algebra, obtained from its arbitrary Sigma-one predicate presentation. -/
+/-- Every object of the total split category carries a stable list algebra, obtained from
+its arbitrary Sigma-one predicate presentation. -/
 def totalStableListAlgebra (V : TotalSplit T) : StableListAlgebra V :=
   Transport.mappedStableListAlgebra (predicateEquivalence T)
     ((predicateEquivalence T).inverse.obj V) V ((predicateEquivalence T).counitIso.app V)

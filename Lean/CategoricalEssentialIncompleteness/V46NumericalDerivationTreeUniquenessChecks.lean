@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationTreeUniqueness
 
 
-/-! # Statement checks in `V46NumericalDerivationTreeUniquenessChecks` -/
+/-! # Uniqueness of folds retaining the underlying derivation tree -/
 
 @[expose] public section
 noncomputable section

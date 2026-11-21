@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticFiniteNamedSchemes
 
 
-/-! # Statement checks in `V46SyntacticFiniteNamedSchemesChecks` -/
+/-! # The seven parameter injections of a syntax algebra -/
 
 @[expose] public section
 noncomputable section

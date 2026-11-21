@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 public import Mathlib.Tactic.FinCases
 
-/-! # The seven actual parameter injections of a syntax algebra -/
+/-! # The seven parameter injections of a syntax algebra -/
 
 @[expose] public section
 noncomputable section

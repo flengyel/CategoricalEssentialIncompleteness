@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSubstitutionReflection
 
 
-/-! # Statement checks in `V46MillerNamedProofImageSubstitutionReflectionChecks` -/
+/-! # Reflection of successful instances to named substitution -/
 
 @[expose] public section
 noncomputable section

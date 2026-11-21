@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenc
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsFormula
 public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 
-/-! # The actual numerical sentence negation in literal word coordinates -/
+/-! # The numerical sentence negation in literal word coordinates -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxUniqueness
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxConstructorLaws
 
 
-/-! # Statement checks in `V46SyntacticSyntaxUniquenessChecks` -/
+/-! # Numerical node-count comparison from constructor equations -/
 
 @[expose] public section
 noncomputable section

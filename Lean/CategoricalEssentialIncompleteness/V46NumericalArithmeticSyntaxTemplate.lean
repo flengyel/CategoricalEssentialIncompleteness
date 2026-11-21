@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralConstru
 public import CategoricalEssentialIncompleteness.V46NumericalPolynomialRepresentation
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain
 
-/-! # The actual arithmetic coefficient and polynomial-input charts -/
+/-! # The arithmetic coefficient and polynomial-input charts -/
 
 @[expose] public section
 noncomputable section
@@ -124,8 +124,8 @@ theorem formula_representation (u : ℕ) (z : Obj 𝗣𝗔 ℕ (sourceFormula.ev
     originalSyntax.algebra.a.1 originalSyntax.algebra.a.2 sourceSyntax.algebra.a.1 sourceSyntax.algebra.a.2
     termChart formulaChart term_value formula_value coefficient_value formula sourceFormula targetFormula formula_source formula_target u z
 
-/-- The actual arithmetic term constructor square, using the canonical
-plain polynomial-input chart and the proved ordered coefficient charts. -/
+/-- The arithmetic term constructor square, using the canonical plain polynomial-input
+chart and the proved ordered coefficient charts. -/
 abbrev term_constructor :=
   NumericalDerivationInterpretation.normalized_plain_term_constructor
     source target coefficientChart term formula sourceTerm sourceFormula targetTerm targetFormula
@@ -140,8 +140,8 @@ abbrev formula_constructor :=
     term_source formula_source term_target formula_target termChart formulaChart
     term_value formula_value coefficient_value
 
-/-- The actual numerical constructor source follows the full polynomial
-comparison through the already constructed literal syntax algebra isomorphism. -/
+/-- The numerical constructor source follows the full polynomial comparison through the
+already constructed literal syntax algebra isomorphism. -/
 def numericalTermInputIso : numericalInterpretation.obj (sourceTerm.eval.obj originalSyntax.algebra.a) ≅
     (SyntaxPolynomial.termExpression NumericalNamed.variableObject functions bound).eval.obj numericalSyntax.algebra.a :=
   termInputIso ≪≫ NumericalNamed.termConstructorInputIso E NumericalNamed.variableObject functions relations bound

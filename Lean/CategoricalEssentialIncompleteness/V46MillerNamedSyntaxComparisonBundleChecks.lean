@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonBundle
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonBundleChecks` -/
+/-! # The explicitly presented named signature and its canonical push -/
 
 @[expose] public section
 noncomputable section

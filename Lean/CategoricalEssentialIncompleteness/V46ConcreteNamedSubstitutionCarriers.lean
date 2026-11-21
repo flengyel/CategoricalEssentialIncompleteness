@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! Positive Sigma-one payload invariants. The formula flag/result relation
-is proved for the actual numerical roots before the traversal invariant is
-instantiated; no validity or recursive result is supplied as an input field. -/
+/-!
+Positive Sigma-one payload invariants. The formula flag/result relation is proved for
+the numerical roots before the traversal invariant is instantiated; no validity or
+recursive result is supplied as an input field.
+-/
 
 @[expose] public section
 noncomputable section

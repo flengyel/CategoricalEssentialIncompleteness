@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkSyntaxInitial
 public import Mathlib.CategoryTheory.Endofunctor.Algebra
 
-/-! # The initial polynomial algebra in the actual total fork category -/
+/-! # The initial polynomial algebra in the total fork category -/
 
 @[expose] public section
 
@@ -59,7 +59,7 @@ def foldHom (A : Endofunctor.Algebra polynomialTotal) : syntaxAlgebra ⟶ A wher
     apply WideSubcategory.hom_ext
     exact (fold_algebra A.str.hom A.str.property).symm
 
-/-- Proposition B.1 in the actual category of total recursive fork maps. -/
+/-- Proposition 10.2 in the category of total recursive fork maps. -/
 def syntaxAlgebra_isInitial : IsInitial syntaxAlgebra :=
   IsInitial.ofUniqueHom foldHom (by
     intro A m

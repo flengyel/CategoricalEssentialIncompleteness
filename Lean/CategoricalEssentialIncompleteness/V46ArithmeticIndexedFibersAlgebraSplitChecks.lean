@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersAlgebraSplit
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersAlgebraSplitChecks` -/
+/-! # The product-algebra step in the extensive fiber argument -/
 
 @[expose] public section
 noncomputable section

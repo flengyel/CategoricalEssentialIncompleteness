@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceTruth
 
 
-/-! # Statement checks in `V46NamedPlainSentenceTruthChecks` -/
+/-! # Truth of sentence codes is independent of the assignment -/
 
 @[expose] public section
 universe w

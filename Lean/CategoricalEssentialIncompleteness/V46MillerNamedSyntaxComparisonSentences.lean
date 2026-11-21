@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
 
-/-! # Actual sentence pullbacks under the named uniform syntax chart
+/-! # Sentence pullbacks under the named uniform syntax chart
 
 Sentence objects are chosen pullbacks. Their formula coordinates are
 compared through the proved occurrence diagram, without identifying
@@ -157,8 +157,8 @@ theorem formula_negation_comparison :
     (sentenceIso_inclusion P V σ π d) (formula_negation_comparison P V σ π d)
     hs (CategoricalSyntax.sentenceNegation_inclusion (S₁))
 
-/-- The input is a point code of the chosen sentence pullback. Its output
-is a formula word, obtained through the actual inclusion and formula chart. -/
+/-- The input is a point code of the chosen sentence pullback. Its output is a formula
+word, obtained through the inclusion and formula chart. -/
 theorem sentenceInclusion_graph (point word : ℕ) :
     word ∈ Total.val ((S₁).sentenceInclusion ≫ (formulaIso P V σ π d).hom).hom point ↔
       ∃ q : PredicateInterpretation.Obj ℕ (S₀).sentenceObject,

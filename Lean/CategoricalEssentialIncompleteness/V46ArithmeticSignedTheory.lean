@@ -9,10 +9,10 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticSignedTotalSyntax
 
 /-! # The arithmetic diagonal signed theory
 
-This is the predicate-equivalence realization of the printed free theory
-in the total restriction splitting. The target proof carrier is generated
-from the join of the two signed images. Every axiom presentation is handled
-through its regular image, and initiality is indexed only by subobjects.
+This is the predicate-equivalence realization of the free theory in the total
+restriction splitting. The target proof carrier is generated from the join of the two
+signed images. Every axiom presentation is handled through its regular image, and
+initiality is indexed only by subobjects.
 -/
 @[expose] public section
 noncomputable section

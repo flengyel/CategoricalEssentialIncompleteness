@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxGeometry
 
-/-! # Sigma-one coordinates of actual polynomial objects in parameter slices -/
+/-! # Sigma-one coordinates of polynomial objects in parameter slices -/
 
 @[expose] public section
 
@@ -59,9 +59,9 @@ theorem fiberInput_rawFiber (P X Y : Carrier) (ξ υ : Graph) (a : RawPolynomial
 
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- A coordinate graph for each term/formula leaf is extended through
-actual products and coproducts of the slice. Coefficients always use the
-second projection from their constant family. -/
+/-- A coordinate graph for each term/formula leaf is extended through products and
+coproducts of the slice. Coefficients always use the second projection from their
+constant family. -/
 def representation (P : PredicateCategory T) (X : Over P × Over P)
     (rT rF : TernaryGraph) : SyntaxPolynomial (PredicateCategory T) → TernaryGraph
   | .term => rT
@@ -346,8 +346,8 @@ section CoordinateModels
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable (P : PredicateCategory T) (X : Over P × Over P) (rT rF : TernaryGraph)
 
-/-- Each valid raw input supplies an actual polynomial point in its parameter
-fiber. Only the two leaf-coordinate existence statements are used. -/
+/-- Each valid raw input supplies a polynomial point in its parameter fiber. Only the two
+leaf-coordinate existence statements are used. -/
 theorem representation_exists (t f : 𝚺₁.Semisentence 2)
     (ht : ∀ (p : Obj T M P) (u : M), t.val.Evalb ![p.val, u] →
       ∃ z : Obj T M X.1.left, rT.val.Evalb ![p.val, u, z.val] ∧
@@ -409,8 +409,8 @@ theorem representation_exists (t f : 𝚺₁.Semisentence 2)
             (chosenGraph_map_iff T M (coprod.inr : B ⟶ A ⨿ B).left y z).mpr rfl⟩), ?_⟩
         exact (over_value T M coprod.inr y).trans hyp
 
-/-- A fixed raw coordinate denotes at most one actual polynomial point.
-This is proved through the preserved slice products and coproducts. -/
+/-- A fixed raw coordinate denotes at most one polynomial point. This is proved through
+the preserved slice products and coproducts. -/
 theorem representation_point_unique
     (ht : ∀ (p u : M) (z z' : Obj T M X.1.left),
       rT.val.Evalb ![p, u, z.val] → rT.val.Evalb ![p, u, z'.val] → z = z')

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedAxioms
 
-/-! # One actual arithmetic derivation object for the indexed axiom family
+/-! # One arithmetic derivation object for the indexed axiom family
 
 The logical schemes and inference constructors are the realized named
 ones. The full initial algebra is constructed by arbitrary-rule initiality;

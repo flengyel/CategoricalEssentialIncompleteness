@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ModelSubstitutionSoundness
 
 
-/-! # Statement checks in `V46ModelSubstitutionSoundnessChecks` -/
+/-! # Instantiation and equality through the admissibility diagrams -/
 
 @[expose] public section
 noncomputable section

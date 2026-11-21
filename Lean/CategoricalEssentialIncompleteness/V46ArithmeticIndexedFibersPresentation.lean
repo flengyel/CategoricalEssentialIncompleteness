@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibers
 
-/-! # Comparison with the existing literal Gamma theorem presentation
+/-! # Comparison with the existing Gamma theorem presentation
 
 The sentence guard is eliminated by a proved identity-graph isomorphism.
 The binder syntax and all seven logical constructors remain unchanged.
@@ -67,8 +67,8 @@ def guardIso : CategoryTheory.Iso (C := PredicateCategory 𝗣𝗔)
     apply Subtype.ext
     simp only [Functor.map_comp_apply,PredicateInterpretation.map_inclusion_val,Functor.map_id_apply]
 
-/-- The old chosen-sentence axiom morphism and the literal-sentence one
-are identified over the actual formula object. -/
+/-- The old chosen-sentence axiom morphism and the literal-sentence one are identified
+over the formula object. -/
 @[reassoc] theorem guard_axioms :
     ArithmeticLiteralModel.axioms (gamma AxPA e) =
       (guardIso AxPA e).hom ≫ fiberSentencePredicate AxPA e ≫ ArithmeticLiteralModel.sentenceChart.hom := by
@@ -183,8 +183,8 @@ def oldRuleData : InferenceTransport.Data (predicateEquivalence 𝗣𝗔)
 
 abbrev oldCoefficientIso := (oldRuleData AxPA e).coefficient
 
-/-- The old concrete Gamma algebra is transported with its actual
-constructors into the individual literal-sentence inference signature. -/
+/-- The old concrete Gamma algebra is transported with its constructors into the
+individual literal-sentence inference signature. -/
 def oldMappedAlgebra : Endofunctor.Algebra (singleRules AxPA e).inference :=
   (InferenceTransport.algebraEquivalence (predicateEquivalence 𝗣𝗔)
     (oldRules AxPA e) (singleRules AxPA e) (oldRuleData AxPA e)).functor.obj
@@ -196,8 +196,8 @@ def oldMappedInitial : IsInitial (oldMappedAlgebra AxPA e) :=
     (SyntacticGeneratedTheory.proofInitial 𝗣𝗔 variableSymbols functionSymbols relationSymbols bound
       (ArithmeticLiteralModel.axioms (gamma AxPA e)))
 
-/-- The required comparison is an actual algebra isomorphism, preserving
-all inference constructors and the original named formula conclusion. -/
+/-- The required comparison is an algebra isomorphism, preserving all inference
+constructors and the original named formula conclusion. -/
 def individual_oldGamma_comparison : individualAlgebra AxPA e ≅ oldMappedAlgebra AxPA e :=
   (individualInitial AxPA e).uniqueUpToIso (oldMappedInitial AxPA e)
 
@@ -288,8 +288,8 @@ private theorem iso_range_iff {A B X Y : Type} (i : A ≅ B) (j : X ≅ Y)
     exact ⟨i.hom a,(ConcreteCategory.congr_hom h a).trans (congrArg (fun z => j.hom z) ha)⟩
 end DiagramLaws
 
-/-- The sentence comparison is over the chosen literal sentence object,
-including the actual independent and old finite-derivation carriers. -/
+/-- The sentence comparison is over the chosen sentence object, including the independent
+and old finite-derivation carriers. -/
 def individual_oldGamma_sentenceIso : individualSentenceProof AxPA e ≅
     (realization 𝗣𝗔).obj (ArithmeticLiteralModel.proofObject (gamma AxPA e)) :=
   (individual_sentence_over_old AxPA e).isoPullback ≪≫
@@ -322,8 +322,8 @@ def oldGammaModelIso :
     (individual_oldGamma_sentenceIso AxPA e) (ArithmeticLiteralModel.conclusion (gamma AxPA e))
     (individualSentenceConclusion AxPA e) (individual_oldGamma_sentence_conclusion AxPA e)
 
-/-- Uniformly in every PA model, the individual derivation range is
-exactly the existing literal Gamma_e theorem predicate. -/
+/-- Uniformly in every PA model, the individual derivation range is exactly the existing
+Gamma_e theorem predicate. -/
 theorem individual_oldGamma_model (s : (PredicateInterpretation.totalFunctor 𝗣𝗔 M).obj
     ArithmeticIndexedAxioms.sentence) :
     (ArithmeticLiteralModel.theoremPredicate (gamma AxPA e)).val.Evalb

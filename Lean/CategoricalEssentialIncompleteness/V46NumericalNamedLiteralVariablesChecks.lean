@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralVariables
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralVariablesChecks` -/
+/-! # Variable names and the effective coefficient-code diagrams -/
 
 @[expose] public section
 noncomputable section

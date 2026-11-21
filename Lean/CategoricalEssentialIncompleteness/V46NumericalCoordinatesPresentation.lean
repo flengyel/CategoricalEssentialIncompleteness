@@ -72,8 +72,8 @@ theorem standardPredicate_object (C : PredicateCategory 𝗧𝗔) :
     (⟨⟨ClassicalPrograms.U, e⟩⟩ : PartialSpans.Total (SplitObject ClassicalPrograms.Rec)))
       (standardPredicate_domain C)
 
-/-- The map is an actual numerical isomorphism, so both directions have
-partial-recursive realizers total on their respective carriers. -/
+/-- The map is a numerical isomorphism, so both directions have partial-recursive
+realizers total on their respective carriers. -/
 def predicatePresentationIso (C : PredicateCategory 𝗧𝗔) :
     NumericalSyntax.predicateEquivalence.functor.obj C ≅ predicateObject C :=
   NumericalTuples.classicalTotalEquivalence.functor.preimageIso

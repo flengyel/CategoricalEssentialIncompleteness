@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationRules
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationRulesChecks` -/
+/-! # The mapped PA inference signature -/
 
 @[expose] public section
 noncomputable section

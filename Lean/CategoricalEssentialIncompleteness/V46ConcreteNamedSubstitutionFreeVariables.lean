@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionFreeVariablesRoots
 
-/-! The actual total numerical free-variable traversal, with PA equations,
-PA carrier preservation, and a separate standard primitive-recursion proof. -/
+/-!
+The total numerical free-variable traversal, with PA equations, PA carrier
+preservation, and a separate standard primitive-recursion proof.
+-/
 
 @[expose] public section
 noncomputable section
@@ -64,7 +66,7 @@ theorem freeVariables_carrier (formula : Bool) (word : M)
         (SyntacticLists.listCarrier V) (SyntacticLists.listCarrier V)
         (freeVarsTermRoot_carrier V σ d 0) (freeVarsFormulaRoot_carrier V π d 0) formula word hw
 
-/-- Complete PA term-constructor equation on the actual raw chart. -/
+/-- Complete PA term-constructor equation on the raw chart. -/
 theorem freeVariables_term_constructor (u : M)
     (hu : (rawCarrier
       (Postfix.carrier false (SyntaxPolynomial.termExpression V σ d) (SyntaxPolynomial.formulaExpression V π d))
@@ -124,8 +126,8 @@ private theorem fixedZeroParameter_primrec {f : ℕ × ℕ → ℕ} (hf : Primre
     Primrec (fun word : ℕ => f (0,word)) :=
   hf.comp (Primrec.pair (Primrec.const 0) Primrec.id)
 
-/-- This is the actual standard primitive-recursion certificate for the
-numerical function whose all-model PA equations were proved above. -/
+/-- This is the standard primitive-recursion certificate for the numerical function whose
+all-model PA equations were proved above. -/
 theorem freeVariables_primrec : Primrec (freeVariables V σ π d : ℕ → ℕ) := by
   exact Primrec.of_eq (fixedZeroParameter_primrec
     (Traversal.output_primrec _ _ _ _ (freeVarsTermRoot σ d) (freeVarsFormulaRoot π d)

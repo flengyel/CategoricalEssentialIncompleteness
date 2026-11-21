@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46FirstOrderStandardInduction
 
 
-/-! # Statement checks in `V46FirstOrderStandardInductionChecks` -/
+/-! # Standard conclusion induction for the original first-order rules -/
 
 @[expose] public section
 noncomputable section

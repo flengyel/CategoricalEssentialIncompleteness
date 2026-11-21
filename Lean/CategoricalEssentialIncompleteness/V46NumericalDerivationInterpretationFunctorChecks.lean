@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationFunctor
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationFunctorChecks` -/
+/-! # Preserved inference inputs under the PA numerical functor -/
 
 @[expose] public section
 noncomputable section

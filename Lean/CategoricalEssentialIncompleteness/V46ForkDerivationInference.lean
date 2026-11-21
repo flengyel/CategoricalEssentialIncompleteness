@@ -10,7 +10,7 @@ public import Mathlib.CategoryTheory.Extensive
 public import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
 public import Mathlib.Tactic.FinCases
 
-/-! # The printed nullary-and-modus-ponens inference functor
+/-! # The nullary-and-modus-ponens inference functor
 
 This is the finite rule functor with no unary rules. Its comparison with
 Ax + M is constructed, without an initial-algebra premise.

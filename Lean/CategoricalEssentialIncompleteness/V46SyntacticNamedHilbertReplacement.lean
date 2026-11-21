@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
 
-/-! # Replacement of individual enumerated axioms in literal named proofs
+/-! # Replacement of individual enumerated axioms in named proofs
 
-The replacement premise concerns the actual sentence axioms only. The
-proof transforms the finite derivation and retains every original name,
-ordered premise, free-for proof and successful substitution equation.
+The replacement premise concerns the sentence axioms only. The proof transforms the
+finite derivation and retains every original name, ordered premise, free-for proof and
+successful substitution equation.
 -/
 
 @[expose] public section
@@ -22,8 +22,8 @@ variable (σ π : ℕ → SyntacticPredicates.Carrier) (d : ℕ)
 variable (Γ Δ : SyntacticPredicates.Carrier)
 local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 
-/-- Replacing each enumerated sentence axiom by a finite Δ-proof
-transforms every literal Γ-proof into a literal Δ-proof. -/
+/-- Replacing each enumerated sentence axiom by a finite Δ-proof transforms every Γ-proof
+into a literal Δ-proof. -/
 theorem replace_axioms
     (hAxiom : ∀ ψ : Fm, Γ.val.Evalb ![formulaCode ψ] → ψ.freeVariables = [] →
       Derives σ π d Δ ψ)

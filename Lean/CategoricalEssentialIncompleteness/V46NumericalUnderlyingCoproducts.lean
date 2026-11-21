@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalUnderlying
 public import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
 public import Mathlib.CategoryTheory.Limits.Types.Coproducts
 
-/-! # Finite coproducts on the actual numerical carriers -/
+/-! # Finite coproducts on the numerical carriers -/
 
 @[expose] public section
 noncomputable section

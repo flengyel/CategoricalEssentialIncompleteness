@@ -54,14 +54,14 @@ theorem represents_partrec (f : ℕ → Part ℕ) (hf : Partrec f) :
   change y ∈ Nat.Partrec.Code.eval (Denumerable.ofNat _ (encode c)) x ↔ y ∈ f x
   rw [Denumerable.ofNat_encode, hc]
 
-/-- Every ordinary unary partial recursive function is an arrow. -/
+/-- Every ordinary unary partial recursive function is a morphism. -/
 def omegaArrow (f : ℕ → Part ℕ) (hf : Partrec f) : U ⟶ U :=
   ⟨f, represents_partrec f hf⟩
 
 @[simp] theorem omegaArrow_val (f : ℕ → Part ℕ) (hf : Partrec f) :
     (omegaArrow f hf).val = f := rfl
 
-/-- Every unary arrow is an ordinary partial recursive function. -/
+/-- Every unary morphism is an ordinary partial recursive function. -/
 theorem omegaArrow_partrec (f : U ⟶ U) :
     @Partrec ℕ ℕ inferInstance inferInstance (fun n => f.val n) := by
   obtain ⟨q, hq⟩ := all_arrows_have_programs f

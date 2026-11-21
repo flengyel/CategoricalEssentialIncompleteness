@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxSimulation
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationParser
 
-/-! # Original accepted words supply the actual evaluator hypotheses
+/-! # Original accepted words supply the evaluator hypotheses
 
 This compares the positive coefficient guard and the full parser run,
 including its stored-word check. It does not add an acceptance or a

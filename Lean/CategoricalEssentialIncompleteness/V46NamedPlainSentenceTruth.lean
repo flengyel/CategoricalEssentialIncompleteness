@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceSemantics
 
-/-! # Truth of actual sentence codes is independent of the assignment -/
+/-! # Truth of sentence codes is independent of the assignment -/
 
 @[expose] public section
 
@@ -36,8 +36,8 @@ theorem holds_sentence_congr (s : Obj 𝗣𝗔 ℕ (S).sentenceObject) (ρ τ : 
   rw [decode_sentence_closed] at hx
   exact (List.not_mem_nil hx).elim
 
-/-- On the actual sentence inclusion, validity is truth at any chosen
-assignment. Thus the validity factor uses sentence satisfaction. -/
+/-- On the sentence inclusion, validity is truth at any chosen assignment. Thus the
+validity factor uses sentence satisfaction. -/
 theorem sentence_valid_iff (s : Obj 𝗣𝗔 ℕ (S).sentenceObject) (ρ : ℕ → K) :
     Valid σ π d functions relations ((G).map (S).sentenceInclusion s) ↔
       Holds σ π d functions relations ((G).map (S).sentenceInclusion s) ρ := by

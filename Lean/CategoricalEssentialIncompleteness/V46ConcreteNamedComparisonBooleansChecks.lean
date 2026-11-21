@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBooleans
 
-/-! # Numeric Boolean records have the actual categorical truth points -/
+/-! # Numeric Boolean records have the categorical truth points -/
 
 @[expose] public section
 

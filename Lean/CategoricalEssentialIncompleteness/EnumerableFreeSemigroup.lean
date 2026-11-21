@@ -218,8 +218,8 @@ theorem evaluate_unique {Y M : Carrier} [Semigroup (Element M)]
   · exact ⟨fun h => False.elim (hn (val_source k n y h)),
       fun h => False.elim (hn (val_source (evaluate mu f) n y h))⟩
 
-/-- The universal arrow exists in the actual computable total category,
-even when the multiplication is partial off its c.e. carrier. -/
+/-- The universal morphism exists in the computable total category, even when the
+multiplication is partial off its c.e. carrier. -/
 theorem free_semigroup {Y M : Carrier} [Semigroup (Element M)]
     (mu : product M M ⟶ M) (ht : isTotal mu)
     (hm : ∀ a b : Element M,(a*b).val ∈ val mu (Nat.pair a.val b.val))

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
 
-/-! # Statement checks in `V46SyntaxOptionTransportChecks` -/
+/-! # Option and product comparisons through an equivalence -/
 
 @[expose] public section
 noncomputable section

@@ -7,11 +7,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SlicePolynomialComparison
 public import CategoricalEssentialIncompleteness.V46ForkParameterizedFormulaFolds
 
-/-! # Natural folds into arbitrary canonical parameterized formula algebras
-
-The comparison with the parameterization of the global source constructor
-remains a separate obligation.
--/
+/-! # Natural folds into parameterized formula algebras -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -70,8 +66,8 @@ theorem fold_constructor (B : Endofunctor.Algebra (polynomial D P)) (j : Walking
       ForkParameterizedFormulaFolds.componentHom P (fold D P B) j :=
   ForkParameterizedFormulaFolds.fold_constructor D P (target D P B) j
 
-/-- Every underlying natural morphism over P satisfying the actual
-component constructor equations is the constructed fold. -/
+/-- Every underlying natural morphism over P satisfying the component constructor
+equations is the constructed fold. -/
 theorem fold_underlying_unique (B : Endofunctor.Algebra (polynomial D P))
     (m : ForkParameterizedFormulaFolds.parameterCarrier D P ⟶ B.a)
     (hm : ∀ j, (ForkParameterizedFormulaFolds.polynomial D P j).map

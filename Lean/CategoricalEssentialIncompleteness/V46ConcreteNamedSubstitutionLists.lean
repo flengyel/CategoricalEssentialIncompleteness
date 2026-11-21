@@ -9,9 +9,11 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitivePars
 public import CategoricalEssentialIncompleteness.V46SyntacticLists
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParserLaws
 
-/-! Numeric named-variable list operations, with PA equations and actual
-standard primitive-recursion certificates. Every repeated variable is retained
-until an explicitly named deletion. No predicate membership is decided. -/
+/-!
+Numeric named-variable list operations, with PA equations and standard
+primitive-recursion certificates. Every repeated variable is retained until an
+explicitly named deletion. No predicate membership is decided.
+-/
 
 @[expose] public section
 noncomputable section
@@ -194,8 +196,8 @@ end Models
 
 open SyntacticSyntax.NatVectors
 
-/-- This certificate concerns the actual standard numerical computation,
-separately from the all-model PA equations above. -/
+/-- This certificate concerns the standard numerical computation, separately from the
+all-model PA equations above. -/
 theorem member_primrec : Primrec₂ (member : ℕ → ℕ → ℕ) := by
   have hn : Primrec (fun x : ℕ => (memberConstruction (M := ℕ)).nil ![x]) := Primrec.const 0
   have hs : Primrec₂ (fun x (t : ℕ × List ℕ × ℕ) =>

@@ -70,7 +70,7 @@ theorem instantiation_admissible :
     S.instantiationInclusion ≫ S.instantiationInput =
       S.instantiationAdmissible ≫ S.admissibleInclusion := pullback.condition
 
-/-- `(∀x φ) ⇒ φ[x:=t]`, with its actual admissibility parameter object. -/
+/-- `(∀x φ) ⇒ φ[x:=t]`, with its admissibility parameter object. -/
 def hilbertInstantiation : S.instantiationParameters ⟶ S.algebra.a.2 :=
   prod.lift
     (prod.lift (S.instantiationInclusion ≫ prod.fst)
@@ -170,7 +170,7 @@ def hilbertEquality : S.equalitySchemeParameters ⟶ S.algebra.a.2 :=
       (S.equalitySecondAdmissible ≫ S.formulaSubstitution) ≫ S.implicationConstructor) ≫
         S.implicationConstructor
 
-/-- The finite coproduct of the seven actual scheme parameter objects. -/
+/-- The finite coproduct of the seven scheme parameter objects. -/
 def logicalParameters : D :=
   ((((((S.algebra.a.2 ⨯ S.algebra.a.2) ⨿
     ((S.algebra.a.2 ⨯ S.algebra.a.2) ⨯ S.algebra.a.2)) ⨿

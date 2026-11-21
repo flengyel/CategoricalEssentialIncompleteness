@@ -8,11 +8,11 @@ module
 public import CategoricalRiceShapiro.Evaluator.History
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveVectors
 
-/-! # Constructing standard primitive values for the literal arithmetic codes
+/-! # Constructing standard primitive values for the arithmetic codes
 
-Each closure theorem constructs a function, its actual `Code.eval` proof and
-its `Primrec` certificate. No primitive certificate for the history evaluator
-is supplied as a hypothesis of the eventual history theorem.
+Each closure theorem constructs a function, its `Code.eval` proof and its `Primrec`
+certificate. No primitive certificate for the history evaluator is supplied as a
+hypothesis of the eventual history theorem.
 -/
 
 @[expose] public section
@@ -124,9 +124,9 @@ theorem pair {n : ℕ} {c d : Code n} (hc : PrimitiveTotal c) (hd : PrimitiveTot
     PrimitiveTotal (codePair c d) :=
   ifPos (lt hc hd) (add (mul hd hd) hc) (add (add (mul hc hc) hc) hd)
 
-/-- Primitive recursion is certified from its actual nil and step
-computations. The literal arithmetic code still contains its beta-history
-search; the existing computation theorem proves that it performs this fold. -/
+/-- Primitive recursion is certified from its nil and step computations. The arithmetic
+code still contains its beta-history search; the existing computation theorem proves
+that it performs this fold. -/
 theorem prec {n : ℕ} {c : Code n} {d : Code (n + 2)}
     (hc : PrimitiveTotal c) (hd : PrimitiveTotal d) : PrimitiveTotal (codePrec c d) := by
   obtain ⟨f, hcf, hpf⟩ := hc

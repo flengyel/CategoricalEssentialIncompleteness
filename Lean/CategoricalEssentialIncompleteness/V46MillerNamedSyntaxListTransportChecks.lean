@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransport
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxListTransportChecks` -/
+/-! # Parameter-list folds under the PA interpretation functor -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSetModelLaws
 
 
-/-! # Statement checks in `V46ArithmeticSetModelLawsChecks` -/
+/-! # Set and total-function laws before arithmetic specialization -/
 
 @[expose] public section
 noncomputable section

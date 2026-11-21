@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerFiniteSemidecision
 
 
-/-! # Statement checks in `V46MillerFiniteSemidecisionChecks` -/
+/-! # Finite conjunction and functional realization of enumerable relations -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteSemidecision.Checks

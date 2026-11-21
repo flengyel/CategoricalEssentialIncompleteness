@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportBooleans
 
-/-! The named-variable branch is transported with the actual equality
-classifier and both coordinates of the substitution parameter. -/
+/-!
+The named-variable branch is transported with the equality classifier and both
+coordinates of the substitution parameter.
+-/
 
 @[expose] public section
 noncomputable section

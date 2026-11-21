@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
 
-/-! # Statement checks in `V46SyntacticSyntaxPrimitiveParserChecks` -/
+/-! # Standard primitive-recursion certificates for the postfix parser -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

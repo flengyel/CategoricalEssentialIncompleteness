@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOptionPullbacks
 
-/-! Every actual predicate object has the constructed finite option-success pullback. -/
+/-! Every predicate object has the constructed finite option-success pullback. -/
 
 @[expose] public section
 noncomputable section

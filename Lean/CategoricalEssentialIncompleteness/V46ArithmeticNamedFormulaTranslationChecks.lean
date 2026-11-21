@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedFormulaTranslation
 
 
-/-! # Statement checks in `V46ArithmeticNamedFormulaTranslationChecks` -/
+/-! # An explicit named presentation of arithmetic formulas -/
 
 @[expose] public section
 noncomputable section

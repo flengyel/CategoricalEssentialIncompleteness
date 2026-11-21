@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
 
-/-! # Signature checks for actual syntax representation -/
+/-! # Signature checks for syntax representation -/
 
 @[expose] public section
 

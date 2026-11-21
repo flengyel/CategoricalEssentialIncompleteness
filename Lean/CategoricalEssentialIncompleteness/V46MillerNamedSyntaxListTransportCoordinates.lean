@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTranspo
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportBooleans
 
 
-/-! # Definitions and theorems in `V46MillerNamedSyntaxListTransportCoordinates` -/
+/-! # Coordinates of lists of variable names -/
 
 @[expose] public section
 noncomputable section

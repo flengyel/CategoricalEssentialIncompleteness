@@ -11,8 +11,8 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 /-! # Option and root-input comparison for interpreted PA rules
 
 The option comparison preserves the unique failure branch and the original
-formula-valued success branch. The root input retains the rule instance
-and the actual ordered tuple of successful child conclusions.
+formula-valued success branch. The root input retains the rule instance and the
+ordered tuple of successful child conclusions.
 -/
 
 @[expose] public section
@@ -192,8 +192,8 @@ def targetValidatorStr :
       (OptionSyntax.obj (K.obj F)) ⟶ OptionSyntax.obj (K.obj F) :=
   (NumericalDerivation.validator (interpretedRules R)).str
 
-/-- Constructor compatibility of the actual option validator for every
-finite rule signature, with all premise coordinates retained. -/
+/-- Constructor compatibility of the option validator for every finite rule signature,
+with all premise coordinates retained. -/
 theorem validator_constructor :
     (mappedOrdinaryAlgebra R (SuccessComparison.validator 𝗣𝗔 R)).str ≫ (optionIso F).hom =
       (SyntacticDerivation.PolynomialComparison.ordinary (interpretedRules R)).map
@@ -222,8 +222,8 @@ def validatorAlgebraIso :
       NumericalDerivation.validator (interpretedRules R) :=
   Endofunctor.Algebra.isoMk (optionIso F) (validator_constructor R).symm
 
-/-- The source fold is mapped as a genuine algebra morphism and then
-uses the proved validator algebra comparison. -/
+/-- The source fold is mapped as an algebra morphism and then uses the proved validator
+algebra comparison. -/
 def mappedValidatorFold :
     mappedOrdinaryAlgebra R (SyntacticDerivation.ordinaryTree 𝗣𝗔 R) ⟶
       NumericalDerivation.validator (interpretedRules R) :=

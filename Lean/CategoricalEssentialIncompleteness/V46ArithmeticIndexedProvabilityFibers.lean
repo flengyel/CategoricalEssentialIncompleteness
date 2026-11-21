@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityExponential
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersPresentation
 
-/-! # The actual numeral-fiber comparison for uniform provability -/
+/-! # The numeral-fiber comparison for uniform provability -/
 
 @[expose] public section
 noncomputable section
@@ -45,8 +45,8 @@ theorem sentencePoint_value (z : M)
   congrArg Subtype.val (((PredicateInterpretation.predicateComparison 𝗣𝗔 M).app
     ArithmeticIndexedAxioms.sentencePredicate).toEquiv.apply_symm_apply ⟨z,hs⟩)
 
-/-- The product point is the actual interpreted numeral leg. This uses
-its constructor-preserving categorical equality, not an arbitrary fiber chart. -/
+/-- The product point is the interpreted numeral leg. This uses its constructor-preserving
+categorical equality, not an arbitrary fiber chart. -/
 theorem productPoint_numeral (e : ℕ) (z : M)
     (hs : NamedArithmeticLiteralTotal.literalPredicate.val.Evalb ![z]) :
     productPoint M (e : M) z hs =
@@ -110,8 +110,8 @@ private theorem provability_numeral_guarded (AxPA : Carrier) (e : ℕ) (z : M)
     (ArithmeticLiteralModel.theoremPredicate (ArithmeticIndexedAxioms.fiberAxioms AxPA e)).val.Evalb ![w]) hval)
   exact (provability_fiber M AxPA e z hs).trans (hOld.symm.trans hv)
 
-/-- The uniform formula represents the given literal Gamma_e theorem
-program in every PA model, on every internal sentence-code input. -/
+/-- The uniform formula represents the given Gamma_e theorem program in every PA model, on
+every internal sentence-code input. -/
 theorem provability_numeral (AxPA : Carrier) (e : ℕ) (z : M) :
     (provability AxPA).val.Evalb ![(e : M),z] ↔
       (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔 variableSymbols functionSymbols
@@ -123,23 +123,23 @@ theorem provability_numeral (AxPA : Carrier) (e : ℕ) (z : M) :
     exact (provability_numeral_guarded M AxPA e z
       (literal_theorem_sentence M (ArithmeticIndexedAxioms.fiberAxioms AxPA e) z ht)).mpr ht
 
-/-- The selected-program definition of Prov has the same actual numeral
-fiber, on every internal word of every PA model. -/
+/-- The selected-program definition of Prov has the same numeral fiber, on every internal
+word of every PA model. -/
 theorem programProvability_numeral (AxPA : Carrier) (e : ℕ) (z : M) :
     (programProvability AxPA).val.Evalb ![(e : M),z] ↔
       (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔 variableSymbols functionSymbols
         relationSymbols bound (ArithmeticIndexedAxioms.fiberAxioms AxPA e)).val.Evalb ![z] :=
   (programProvability_eval M AxPA (e : M) z).trans (provability_numeral M AxPA e z)
 
-/-- Exponential object-code transport gives the printed selected-program
-predicate the same numeral fiber, universally in PA models. -/
+/-- Exponential object-code transport gives the selected-program predicate the same
+numeral fiber, universally in PA models. -/
 theorem printedProvability_numeral (AxPA : Carrier) (e : ℕ) (z : M) :
     (printedProvability AxPA).val.Evalb ![(e : M),z] ↔
       (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔 variableSymbols functionSymbols
         relationSymbols bound (ArithmeticIndexedAxioms.fiberAxioms AxPA e)).val.Evalb ![z] :=
   (printedProvability_eval M AxPA (e : M) z).trans (provability_numeral M AxPA e z)
 
-/-- The printed PA sentence quantifies over every internal formula word. -/
+/-- The PA sentence quantifies over every internal formula word. -/
 def numeralComparisonSentence (AxPA : Carrier) (e : ℕ) : ArithmeticSentence :=
   let P := provability AxPA
   let Q := SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔 variableSymbols functionSymbols

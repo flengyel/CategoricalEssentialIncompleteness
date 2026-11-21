@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersTransport
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersTransportChecks` -/
+/-! # Inference transport across the predicate equivalence -/
 
 @[expose] public section
 noncomputable section

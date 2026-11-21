@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionRoots
 
-/-! # Scalar result equations used to compare the actual term algebra step -/
+/-! # Scalar result equations used to compare the term algebra step -/
 
 @[expose] public section
 

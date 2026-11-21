@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationGluing
 public import CategoricalEssentialIncompleteness.V46AlgebraTransport
 
-/-! # Initiality on the actual natural fork of finite derivations -/
+/-! # Initiality on the natural fork of finite derivations -/
 
 @[expose] public section
 noncomputable section
@@ -47,8 +47,8 @@ theorem component_inferenceConstructor_native (a b : Idem EffectiveFork.V) (j : 
   rw [component_inferenceConstructor]
   exact constructorComponent_native a b j
 
-/-- Mapping the constructed global constructor recovers the actual
-pointwise algebra, not an evaluator supplied as an assumption. -/
+/-- Mapping the constructed global constructor recovers the pointwise algebra, not an
+evaluator supplied as an assumption. -/
 def component_inferenceIso (a b : Idem EffectiveFork.V) (j : WalkingSpan) :
     componentAlgebra a b (inferenceAlgebra a b) j ≅ pointwiseAlgebra a b j :=
   Endofunctor.Algebra.isoMk (Iso.refl _) (by
@@ -146,8 +146,8 @@ def printedInitial (a b : Idem EffectiveFork.V) : IsInitial (printedAlgebra a b)
 @[simp] theorem printed_carrier (a b : Idem EffectiveFork.V) :
     (printedAlgebra a b).a = proofSlice a b := rfl
 
-/-- The printed universal property for every supplied algebra structure,
-with uniqueness among all natural computable slice morphisms. -/
+/-- The universal property for every supplied algebra structure, with uniqueness among all
+natural computable slice morphisms. -/
 theorem printed_unique (a b : Idem EffectiveFork.V) (Q : EffectiveFork.Total)
     (q : Q ⟶ sentenceObject)
     (η : (printedH a b).obj (Over.mk q) ⟶ Over.mk q) :

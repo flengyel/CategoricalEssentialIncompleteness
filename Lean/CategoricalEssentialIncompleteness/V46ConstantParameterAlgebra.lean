@@ -101,8 +101,8 @@ theorem pushHom_commutes {p q : SyntaxPolynomial D} {X : D × D} (B : Data p q Q
     simpa only [Functor.map_comp, Category.assoc, pushHom] using
       congrArg (fun k => (Over.map r).map k ≫ baseMap r X.2) h
 
-/-- The reindexed fold compares to the original fold by the actual
-changing-parameter algebra equation. -/
+/-- The reindexed fold compares to the original fold by the changing-parameter algebra
+equation. -/
 theorem fold_comparison {V : D} {σ π : ℕ → D} {n : ℕ}
     (S : CategoricalSyntax V σ π n) (X : D × D)
     (B : Data (SyntaxPolynomial.termExpression V σ n)

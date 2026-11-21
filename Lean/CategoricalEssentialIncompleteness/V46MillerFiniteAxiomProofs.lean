@@ -8,14 +8,13 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertReplacement
 public import Foundation.FirstOrder.Arithmetic.R0.Representation
 
-/-! # Literal named proofs from arbitrary external axiom sets
+/-! # Named proofs from arbitrary external axiom sets
 
-The original named Hilbert relation is reused on a finite PA Sigma-one
-carrier. The surrounding axiom set is an arbitrary set of natural codes;
-it need not be PA definable, computably enumerable, or sound. Axioms still
-have the original literal sentence guard. The carrier comparison below
-concerns standard natural codes and makes no assertion about nonstandard
-finite-carrier evaluations.
+The original named Hilbert relation is reused on a finite PA Sigma-one carrier. The
+surrounding axiom set is an arbitrary set of natural codes; it need not be PA
+definable, computably enumerable, or sound. Axioms still have the original sentence
+guard. The carrier comparison below concerns standard natural codes and makes no
+assertion about nonstandard finite-carrier evaluations.
 -/
 
 @[expose] public section
@@ -33,7 +32,7 @@ private theorem finiteMembership_re (L:List ℕ) : REPred (fun n:ℕ => n∈L) :
     simpa only [List.mem_cons,id_eq] using
       (((Primrec.eq.comp Primrec.id (Primrec.const c)).computablePred.to_re).or ih)
 
-/-- An actual PA Sigma-one carrier for the given finite numerical list. -/
+/-- A PA Sigma-one carrier for the given finite numerical list. -/
 def finiteCarrier (L:List ℕ) : SyntacticPredicates.Carrier :=
   .mkSigma (codeOfREPred (fun n:ℕ => n∈L)) (by simp [codeOfREPred,codeOfPartrec'])
 
@@ -62,7 +61,7 @@ def FiniteAxiomProof (A:Set ℕ) (φ:Fm) : Prop :=
 
 namespace FiniteAxiomProof
 
-/-- Finite-carrier transport uses the already proved native axiom replacement. -/
+/-- Finite-carrier transport uses the Hilbert axiom replacement. -/
 theorem finite_native_mono (L K:List ℕ) (hLK:∀c∈L,c∈K) {φ:Fm}
     (h:SyntacticNamedHilbert.Derives σ π d (finiteCarrier L) φ) :
     SyntacticNamedHilbert.Derives σ π d (finiteCarrier K) φ := by
@@ -189,8 +188,8 @@ private theorem finite_family_support {A:Set ℕ} (L:List ℕ)
       · exact False.elim (hc ⟨χ,hχcode,hclosed⟩)
       · exact hK χ hχ hclosed
 
-/-- External axiom replacement is implemented by an actual common finite
-target support followed by the existing native replace_axioms theorem. -/
+/-- External axiom replacement is implemented by a common finite target support followed
+by the axiom-replacement theorem. -/
 theorem replace_axioms {A B:Set ℕ}
     (hAxiom:∀ψ:Fm,formulaCode ψ∈A → ψ.freeVariables=[] → FiniteAxiomProof σ π d B ψ)
     {φ:Fm} (hφ:FiniteAxiomProof σ π d A φ) : FiniteAxiomProof σ π d B φ := by
@@ -202,8 +201,8 @@ theorem replace_axioms {A B:Set ℕ}
   intro ψ hψ hclosed
   exact hK ψ ((finiteCarrier_eval L _).mp hψ) hclosed
 
-/-- Non-sentence and non-formula codes in an external set create no axioms.
-The comparison is by literal formula code, and transfers actual proofs. -/
+/-- Non-sentence and non-formula codes in an external set create no axioms. The comparison
+is by literal formula code, and transfers proofs. -/
 theorem congr_axioms {A B:Set ℕ}
     (h:∀ψ:Fm,ψ.freeVariables=[] → (formulaCode ψ∈A ↔ formulaCode ψ∈B)) (φ:Fm) :
     FiniteAxiomProof σ π d A φ ↔ FiniteAxiomProof σ π d B φ := by
@@ -213,8 +212,8 @@ theorem congr_axioms {A B:Set ℕ}
   · exact replace_axioms σ π d
       (fun ψ hψ hclosed => axiom_of_mem σ π d ψ ((h ψ hclosed).mpr hψ) hclosed)
 
-/-- Support may be chosen entirely among actual closed literal axioms.
-The additional witnesses describe support membership, not syntax labels. -/
+/-- Support may be chosen entirely among closed literal axioms. The additional witnesses
+describe support membership, not syntax labels. -/
 theorem closed_support {A:Set ℕ} {φ:Fm} (h:FiniteAxiomProof σ π d A φ) :
     ∃L:List ℕ,(∀c∈L,c∈A) ∧ (∀c∈L,∃ψ:Fm,formulaCode ψ=c ∧ ψ.freeVariables=[]) ∧
       SyntacticNamedHilbert.Derives σ π d (finiteCarrier L) φ := by
@@ -224,8 +223,8 @@ theorem closed_support {A:Set ℕ} {φ:Fm} (h:FiniteAxiomProof σ π d A φ) :
   obtain ⟨L,hL,hφ⟩ := hB
   exact ⟨L,fun c hc => (hL c hc).1,fun c hc => (hL c hc).2,hφ⟩
 
-/-- Finiteness extraction from an existing native proof retains its actual
-sentence-axiom filter and every substitution/generalization/MP premise. -/
+/-- Finiteness extraction from an existing Hilbert proof retains its sentence-axiom filter
+and every substitution/generalization/MP premise. -/
 theorem of_native (Γ:SyntacticPredicates.Carrier) {φ:Fm}
     (h:SyntacticNamedHilbert.Derives σ π d Γ φ) :
     FiniteAxiomProof σ π d {c:ℕ | Γ.val.Evalb (M:=ℕ) ![c]} φ := by

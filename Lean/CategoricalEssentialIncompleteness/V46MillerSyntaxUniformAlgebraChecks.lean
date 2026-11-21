@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformAlgebraChecks` -/
+/-! # The literal uniform-word algebra with arbitrary coefficient objects -/
 
 @[expose] public section
 open CategoryTheory

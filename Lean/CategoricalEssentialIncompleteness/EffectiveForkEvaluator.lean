@@ -138,7 +138,7 @@ theorem centerEvaluator_right : Respects (product V V).rightMap V.rightMap
   rw [hu', endpoint_right, Nat.pair_unpair, hv]
   exact hh.2.2
 
-/-- The endpoint computations and the central compatibility check have their actual domains. -/
+/-- The endpoint computations and the central compatibility check have their domains. -/
 def tau : product V V ⟶ V :=
   ⟨centerEvaluator, endpointEvaluator, endpointEvaluator,
     centerEvaluator_left, centerEvaluator_right⟩

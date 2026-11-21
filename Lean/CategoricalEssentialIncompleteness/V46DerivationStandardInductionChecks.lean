@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInduction
 
 
-/-! # Statement checks in `V46DerivationStandardInductionChecks` -/
+/-! # Rule induction on the constructed standard derivation codes -/
 
 @[expose] public section
 noncomputable section

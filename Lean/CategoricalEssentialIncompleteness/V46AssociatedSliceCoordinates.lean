@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46AssociatedIncompleteness
 public import PCats.DomTotalEmbedding
 public import CategoricalEssentialIncompleteness.V46PartialSliceTheorySubobjects
 
-/-! # Chosen-product coordinates of the actual associated constant-family functor -/
+/-! # Chosen-product coordinates of the associated constant-family functor -/
 
 @[expose] public section
 noncomputable section
@@ -112,8 +112,8 @@ local instance coordinateActualLimits (U : Tot C) : PreservesFiniteLimits (actua
   preservesFiniteLimits_of_natIso (comparison U)
 
 omit [Splits C] in
-/-- The transported theorem subobject is the theorem family of the actual
-partial functor, in its restriction-product coordinates. -/
+/-- The transported theorem subobject is the theorem family of the partial functor, in its
+restriction-product coordinates. -/
 theorem theory_value (U : Tot C) {S : Tot C} (T : Subobject S) :
     (Subobject.map ((comparison U).hom.app S)).obj
         (FiniteLimitSubobjects.object (constantFamilyFunctor U) T) =

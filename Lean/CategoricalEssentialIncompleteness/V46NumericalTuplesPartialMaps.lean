@@ -23,17 +23,16 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 
 namespace CategoricalEssentialIncompleteness.V46.NumericalTuples
 
-/-- The category uses ordinary monic spans of the actual tuple-function
-category, quotiented by apex isomorphism. -/
+/-- The category uses ordinary monic spans of the tuple-function category, quotiented by
+apex isomorphism. -/
 abbrev PartialMapCategory := PartialMaps.Par Object
 
-/-- Ordinary spans of actual tuple functions represent every partial
-recursive numerical carrier map. -/
+/-- Ordinary spans of tuple functions represent every partial recursive numerical carrier
+map. -/
 def numericalPartialMapEquivalence : PartialMapCategory ≌ EnumerableCarriers.Carrier :=
   PartialMapEquivalence.equivalence equivalence
 
-/-- The numerical monic-span category presents the entire actual
-classical restriction splitting. -/
+/-- The numerical monic-span category presents the entire classical restriction splitting. -/
 def partialMapEquivalence : PartialMapCategory ≌ SplitObject ClassicalPrograms.Rec :=
   numericalPartialMapEquivalence.trans EnumerableCarriers.classicalSplitEquivalence
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonConstructors
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonConstructorsChecks` -/
+/-! # Every named constructor under the uniform syntax chart -/
 
 @[expose] public section
 noncomputable section
@@ -46,7 +46,7 @@ example : (F).map (S₀).quantifierConstructor ≫ (f).hom=
       (S₁).quantifierConstructor :=
   NamedSyntaxComparison.quantifier_constructor P V σ π d
 
--- Both complete structure squares use the actual constructed carrier chart.
+-- Both complete structure squares use the constructed carrier chart.
 example : (F).map (S₀).algebra.str.1 ≫ (t).hom =
     (NamedSyntaxComparison.termInput P V σ π d).hom ≫ (S₁).algebra.str.1 :=
   NamedSyntaxComparison.term_structure P V σ π d
@@ -78,8 +78,8 @@ example : (F).map (coprod.inr : b.eval.obj X ⟶ a.eval.obj X ⨿ b.eval.obj X) 
     simpa only [NamedSyntaxComparison.polynomialInr] using
       NamedSyntaxComparison.constructorInput_inr P X Y c a b r s ha hb
 
--- These identify the factored arrows with the original chosen coproduct
--- injections independently, on both sides of the actual uniform functor.
+-- These identify the factored morphisms with the original chosen coproduct
+-- Injections independently, on both sides of the uniform functor.
 example : NamedSyntaxComparison.polynomialInl (C := PredicateCategory 𝗣𝗔) a b X =
     (coprod.inl : a.eval.obj X ⟶ a.eval.obj X ⨿ b.eval.obj X) :=
   NamedSyntaxComparison.polynomialInl_eq a b X

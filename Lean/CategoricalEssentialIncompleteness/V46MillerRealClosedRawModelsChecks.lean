@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedRawModels
 
 
-/-! # Statement checks in `V46MillerRealClosedRawModelsChecks` -/
+/-! # Unstructured named models of the recursive RCF axioms -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedRaw

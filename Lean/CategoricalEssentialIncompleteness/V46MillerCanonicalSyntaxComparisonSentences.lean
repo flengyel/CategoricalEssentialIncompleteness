@@ -143,8 +143,8 @@ instance canonicalAxioms_mono : Mono (canonicalAxioms a σ π d Γ hΓ) := by
   dsimp only [canonicalAxioms]
   infer_instance
 
-/-- Literal formula words are reached only through the genuine formula
-chart. The chosen sentence point itself is not a word coordinate. -/
+/-- Literal formula words are reached only through the formula chart. The chosen sentence
+point itself is not a word coordinate. -/
 def canonicalSentenceWord : (T₂).sentenceObject ⟶
     (E).functor.obj ((Syntax.predicateFunctor (P)).obj
       (NamedSyntaxComparison.sourceSyntax (Vn) σ π d).algebra.a.2) :=

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport
 
 
-/-! # Statement checks in `V46SyntaxOptionPullbackTransportChecks` -/
+/-! # The success pullback through the option comparison -/
 
 @[expose] public section
 noncomputable section

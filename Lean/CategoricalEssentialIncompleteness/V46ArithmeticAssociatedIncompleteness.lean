@@ -40,8 +40,8 @@ def point : pointDomain ⟶ (U.val : TotalSplit 𝗣𝗔) := (point_factors U).c
 
 theorem point_over : point U ≫ U.val.arrow = theoremPoint := (point_factors U).choose_spec
 
-/-- This is the actual constant theorem family, with its closure proved
-from the constructed parameterized deduction algebras. -/
+/-- This is the constant theorem family, with its closure proved from the constructed
+parameterized deduction algebras. -/
 def constantTheory : FirstOrderReflection.Theory (proofs (U.val : TotalSplit 𝗣𝗔)) :=
   (SliceClosedTheories.constantTheoryFunctor (U.val : TotalSplit 𝗣𝗔)
     (ArithmeticSignedTotal.proofs (F₀)) (ArithmeticSignedTotal.initial (F₀))
@@ -105,8 +105,8 @@ theorem essentially_incomplete
     (ArithmeticSignedTotal.negation (F₀)) U.val hcU,
     every_consistent_extension_incomplete U hExt⟩
 
-/-- Theorem and refutation domains of every consistent global extension
-inherit the actual arithmetic reduction's inseparability. -/
+/-- Theorem and refutation domains of every consistent global extension inherit the
+arithmetic reduction's inseparability. -/
 theorem extension_inseparable
     (hExt : (ArithmeticSignedTotal.theory (F₀)).val ≤ U.val)
     (hcU : U.val ⊓ (Subobject.pullback (ArithmeticSignedTotal.negation (F₀))).obj U.val = ⊥) :

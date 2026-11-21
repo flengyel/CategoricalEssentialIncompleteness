@@ -170,7 +170,7 @@ def internalUniversalPair : ComplementaryPair
       Numerical.enrichedRestriction.domainObject Numerical.nat) :=
   ⟨_, _, (Numerical.enrichedRestriction.domainLattice Numerical.nat).complement_isCompl⟩
 
-/-- A choice of numerical representatives determines an internal representing arrow. -/
+/-- A choice of numerical representatives determines an internal representing morphism. -/
 def internalRepresentative (T : ArithmeticTheory) [Entailment.Consistent T]
     (hrep : ∀ a : ComplementaryPair (Numerical.Domain Numerical.nat),
       ∃ g, RepresentsPair T a g) :

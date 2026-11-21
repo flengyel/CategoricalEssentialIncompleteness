@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceCoding
 
-/-! # Reading the actual list codes in arbitrary PA models
+/-! # Reading the list codes in arbitrary PA models
 
 The numeric list carrier is the whole model, with its canonical zero/adjoin
 decomposition. All inductions here are internal arithmetic inductions; no
@@ -57,8 +57,8 @@ theorem drop_exists (l i : M) :
     (fun j _ z => ⟨sndIdx z,
       tail_value _ z ![j, z, l] ((eval_proj_iff _ _ _).mpr rfl)⟩)
 
-/-- This chosen function is backed by the actual total list-drop code.
-Its graph and its arithmetic recursion equations are proved below. -/
+/-- This chosen function is backed by the total list-drop code. Its graph and its
+arithmetic recursion equations are proved below. -/
 noncomputable def drop (l i : M) : M := Classical.choose (drop_exists l i)
 
 theorem drop_spec (l i : M) :

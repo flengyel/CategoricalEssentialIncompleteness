@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerDerivationWordInductionPowers
 
 
-/-! # Statement checks in `V46MillerDerivationWordInductionPowersChecks` -/
+/-! # Finite-power coordinates of uniform derivation words -/
 
 @[expose] public section
 noncomputable section

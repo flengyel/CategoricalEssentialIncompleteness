@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryProducts
 
 
-/-! # Statement checks in `V46MillerCategoryProductsChecks` -/
+/-! # Restriction products in the representation-independent category -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory

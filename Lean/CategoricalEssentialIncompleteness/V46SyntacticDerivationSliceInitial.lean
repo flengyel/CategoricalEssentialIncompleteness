@@ -54,9 +54,9 @@ def fold (A : Endofunctor.Algebra S) (hA : IsInitial A)
     apply Over.OverMorphism.ext
     exact (hA.to (underlying S V B)).h
 
-/-- Arbitrary slice-algebra arrows are unique because their underlying
-arrows are ordinary algebra arrows; the slice condition is derived from
-the validator fold, rather than assumed on the candidate evaluation. -/
+/-- Arbitrary slice-algebra morphisms are unique because their underlying morphisms are
+ordinary algebra morphisms; the slice condition is derived from the validator fold,
+rather than assumed on the candidate evaluation. -/
 def initial (A : Endofunctor.Algebra S) (hA : IsInitial A) :
     IsInitial (algebra S V A hA) :=
   IsInitial.ofUniqueHom (fold S V A hA) (by

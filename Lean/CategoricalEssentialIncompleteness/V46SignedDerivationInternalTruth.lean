@@ -37,8 +37,8 @@ local notation "supp" => positiveSupport T S.logicalAxioms S.sentenceInclusion a
 local notation "val" => value S P d
 local notation "leaf" => positiveLeafAssignment T S.logicalParameters A B
 
-/-- Internal soundness with explicit truth conditions on the assigned leaves.
-The induction covers every actual proof code in the arithmetic model. -/
+/-- Internal soundness with explicit truth conditions on the assigned leaves. The
+induction covers every proof code in the arithmetic model. -/
 theorem truth_from_leaves (l : Obj T M P)
     (hleaf : ∀ a : Obj T M ((R).instances 0),
       ArithmeticFiniteCoverage.Covers ((F T M).map leaf a).val l.val →

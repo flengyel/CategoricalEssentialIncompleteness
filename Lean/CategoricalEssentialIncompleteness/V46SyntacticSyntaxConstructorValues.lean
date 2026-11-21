@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxParameter
 
-/-! # Actual parameterized constructors retain the literal postfix coordinates -/
+/-! # Parameterized constructors retain the postfix coordinates -/
 
 @[expose] public section
 
@@ -25,8 +25,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.SyntacticSyntax
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Parameterization changes only the parameter coordinate; its value
-projection is the actual original operation on the base polynomial. -/
+/-- Parameterization changes only the parameter coordinate; its value projection is the
+original operation on the base polynomial. -/
 theorem parameterOperation_snd (P X Y Z : PredicateCategory T)
     (a : SyntaxPolynomial (PredicateCategory T)) (f : a.eval.obj (X, Y) ⟶ Z) :
     (SyntaxPolynomial.parameterComparison P (X, Y) a ≫
@@ -55,8 +55,8 @@ theorem parameterOperation_value (P X Y Z : PredicateCategory T)
   rw [Functor.map_comp, Functor.map_comp] at h
   exact ConcreteCategory.congr_hom h q
 
-/-- The term constructor in the actual parameter slice appends the
-same record as the base constructor, on the same child-word input. -/
+/-- The term constructor in the parameter slice appends the same record as the base
+constructor, on the same child-word input. -/
 theorem parameterTerm_value (P : PredicateCategory T)
     (a b : SyntaxPolynomial (PredicateCategory T)) (p : Obj T M P) (u : M)
     (q : Obj T M ((a.withParameters P).eval.obj

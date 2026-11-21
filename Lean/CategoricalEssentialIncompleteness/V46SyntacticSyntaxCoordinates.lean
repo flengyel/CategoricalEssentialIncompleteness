@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFibers
 
-/-! # Coordinates cover every actual point of the syntax polynomial -/
+/-! # Coordinates cover every point of the syntax polynomial -/
 
 @[expose] public section
 
@@ -26,9 +26,9 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable (P : PredicateCategory T) (X : Over P × Over P) (rT rF : TernaryGraph)
 
-/-- Covering the two leaf families covers every actual polynomial point.
-In particular this quantifies over all model elements, without restricting
-the parameter or the represented point to a standard numeral. -/
+/-- Covering the two leaf families covers every polynomial point. In particular this
+quantifies over all model elements, without restricting the parameter or the
+represented point to a standard numeral. -/
 theorem representation_cover
     (ht : ∀ (p : Obj T M P) (z : Obj T M X.1.left),
       (F T M).map X.1.hom z = p → ∃ u : M, rT.val.Evalb ![p.val, u, z.val])

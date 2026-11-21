@@ -24,8 +24,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T) (d : ℕ)
 local notation "S" => plainCategoricalSyntax T V σ π d
 
-/-- A Sigma-one enumeration is filtered by the actual sentence image.
-The source word remains its formula coordinate, not the pullback code. -/
+/-- A Sigma-one enumeration is filtered by the sentence image. The source word remains its
+formula coordinate, not the pullback code. -/
 def axiomCarrier (Γ : Carrier) : Carrier :=
   let Sent := sentenceCarrier T (S).sentenceInclusion
   .mkSigma “word. !Γ.val word ∧ !Sent.val word”
@@ -45,7 +45,7 @@ def axiomImageInclusion (Γ : Carrier) :
       (axiomCarrier T V σ π d Γ) (sentenceCarrier T (S).sentenceInclusion) :=
   representedArrow T (GraphMorphism.inclusion (axiomInclusionProof T V σ π d Γ))
 
-/-- The actual axiom subobject of the chosen sentence pullback. -/
+/-- The axiom subobject of the chosen sentence pullback. -/
 def axioms (Γ : Carrier) :
     @Quiver.Hom (PredicateCategory T) inferInstance (axiomCarrier T V σ π d Γ) (S).sentenceObject :=
   axiomImageInclusion T V σ π d Γ ≫ (sentenceChart T (S).sentenceInclusion).inv
@@ -88,8 +88,8 @@ theorem axioms_formula_value (Γ : Carrier) (a : Obj T M (axiomCarrier T V σ π
   rw [axioms_formula,Functor.map_comp_apply]
   simp only [axiomImageInclusion,PredicateInterpretation.map_inclusion_val]
 
-/-- The actual formula-coordinate axiom image is the supplied
-enumeration intersected with the intended sentence codes. -/
+/-- The formula-coordinate axiom image is the supplied enumeration intersected with the
+intended sentence codes. -/
 theorem axioms_formula_image (Γ : Carrier) (word : M) :
     (imageCarrier (chosenGraph T (axioms T V σ π d Γ ≫ (S).sentenceInclusion)).graph).val.Evalb ![word] ↔
       Γ.val.Evalb ![word] ∧ (literalSentenceCarrier T V σ π d).val.Evalb ![word] := by

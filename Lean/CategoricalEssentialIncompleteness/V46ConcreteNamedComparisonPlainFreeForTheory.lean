@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 
-/-! # A literal T-proof identifying the numerical admissibility predicate -/
+/-! # A T-proof identifying the numerical admissibility predicate -/
 
 @[expose] public section
 
@@ -29,9 +29,9 @@ local notation "P" => CategoricalSyntax.substitutionParameters (plainCategorical
 local notation "X" => (plainSyntaxCarrier V σ π d false : PredicateCategory T)
 local notation "Y" => (plainSyntaxCarrier V σ π d true : PredicateCategory T)
 
-/-- The source is the actual chosen word/parameter product. The chart
-converts it to the literal code ((x,replacement),word) before invoking
-the separately defined primitive recursive free-for graph. -/
+/-- The source is the chosen word/parameter product. The chart converts it to the literal
+code ((x,replacement),word) before invoking the separately defined primitive recursive
+free-for graph. -/
 def plainFreeForPredicate : Carrier :=
   let D : PredicateCategory T := Y ⨯ P
   let I := (chosenGraph T (publicParameterInput T V X Y)).graph
@@ -40,8 +40,8 @@ def plainFreeForPredicate : Carrier :=
     !I.val input raw ∧ !pairDef.val raw names word ∧
       !pairDef.val names x replacement ∧ !H.val 1 x replacement word”
 
-/-- This is the actual image of the already constructed admissibility
-inclusion, with its actual graph representative. -/
+/-- This is the image of the already constructed admissibility inclusion, with its graph
+representative. -/
 def plainAdmissibleCarrier : Carrier :=
   imageCarrier (chosenGraph T (S).admissibleInclusion).graph
 
@@ -113,8 +113,8 @@ theorem plainAdmissibleCarrier_freeFor (input : M) :
 
 end Models
 
-/-- This is a literal T-sentence equating the actual admissible image
-with the positive predicate computed by the independent raw flag. -/
+/-- This is a T-sentence equating the admissible image with the positive predicate
+computed by the independent raw flag. -/
 def plainFreeForDomainSentence : ArithmeticSentence :=
   let A := plainAdmissibleCarrier T V σ π d
   let B := plainFreeForPredicate T V σ π d

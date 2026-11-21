@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46PartialSearchLift
 public import FailureOfComposition.TypedRecursionCategory
 
-/-! # Even/odd comparison for the actual model coproduct and partial lift -/
+/-! # Even/odd comparison for the model coproduct and partial lift -/
 
 @[expose] public section
 

@@ -8,13 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxCharts
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawActionGraphs
 
-/-! # Exact scalar graph of the actual polynomial input chart
+/-! # Exact scalar graph of the polynomial input chart
 
-Only the recursive-sort charts have scalar identity hypotheses. In the
-application they are the constructed stored-word identity isomorphisms.
-The polynomial comparison follows from its actual product and coproduct
-triangles. Surjectivity of the chart and the existing unique-code theorem
-give the reverse implication on every original word.
+Only the recursive-sort charts have scalar identity hypotheses. In the application
+they are the constructed stored-word identity isomorphisms. The polynomial comparison
+follows from its product and coproduct triangles. Surjectivity of the chart and the
+existing unique-code theorem give the reverse implication on every original word.
 -/
 
 @[expose] public section

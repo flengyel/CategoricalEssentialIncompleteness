@@ -10,8 +10,8 @@ public import Mathlib.Tactic.IntervalCases
 
 /-! # Exact arithmetic-term and relation presentation
 
-The given symbol predicates have precisely their printed arithmetic arities.
-Their ordered children are retained in both directions.
+The given symbol predicates have precisely their arithmetic arities. Their ordered
+children are retained in both directions.
 -/
 
 @[expose] public section
@@ -20,8 +20,8 @@ open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticNamedPresentation
 open NamedArithmeticSignature
 
-/-- The actual arithmetic symbol predicates exclude the other arities and
-labels. This induction principle retains the given ordered children. -/
+/-- The arithmetic symbol predicates exclude the other arities and labels. This induction
+principle retains the given ordered children. -/
 theorem term_induction {C : Term → Prop}
     (hvar : ∀ x, C (.var x)) (hzero : C zero) (hone : C one)
     (hadd : ∀ r t, C r → C t → C (add r t))
@@ -92,8 +92,8 @@ theorem relation_presentation (k : Fin (bound+1)) (s : RelationSymbols k.val)
     term n (mul r t) = .func .mul ![term n r,term n t] := by
   simp [term,mul,mulSymbol]
 
-/-- Back translation followed by elaboration retains literal names and
-all ordered arithmetic children; it is equality of native terms. -/
+/-- Back translation followed by elaboration retains literal names and all ordered
+arithmetic children; it is equality of named terms. -/
 theorem term_roundtrip (n : ℕ) (r : Term) (hr : TermBound n r) :
     ArithmeticNamedOpenTranslation.term ![] Fin.val (term n r) = r := by
   induction r using term_induction with
@@ -113,7 +113,7 @@ theorem term_roundtrip (n : ℕ) (r : Term) (hr : TermBound n r) :
       simpa only [term_mul,ArithmeticNamedOpenTranslation.term,Matrix.cons_val_zero,
         Matrix.cons_val_one] using congrArg₂ mul (ir hb.1) (it hb.2)
 
-/-- Every free source name occurs in the original native term. -/
+/-- Every free source name occurs in the original named term. -/
 theorem term_fvar (n : ℕ) (r : Term) (x : Fin n)
     (hx : (term n r).FVar? x) : x.val ∈ r.freeVariables := by
   induction r using term_induction with
@@ -138,8 +138,8 @@ theorem term_fvar (n : ℕ) (r : Term) (x : Fin n)
 universe w
 variable {K : Type w} [ORingStructure K]
 
-/-- Native and source term semantics agree in the semantic arithmetic
-structure K, independently of the arithmetic word-code model. -/
+/-- Named and de Bruijn term semantics agree in the semantic arithmetic structure K,
+independently of the arithmetic word-code model. -/
 theorem term_value (n : ℕ) (r : Term) (hr : TermBound n r) (ρ : ℕ → K) :
     (term n r).val (s := Arithmetic.standardModel K) ![] (fun i => ρ i.val) =
       r.evaluate ArithmeticNamedTranslation.functions ρ := by

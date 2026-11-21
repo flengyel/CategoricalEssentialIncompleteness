@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportFamiliesChecks` -/
+/-! # Parameter-dependent constructor squares are lifted to the constant-family morphisms, using both product projections -/
 
 @[expose] public section
 noncomputable section

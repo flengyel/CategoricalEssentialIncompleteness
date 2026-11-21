@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutBoxDistance
 public import CategoricalEssentialIncompleteness.V46MillerFiniteUse
 
-/-! # Effective finite rational approximation of the actual bad-set distance
+/-! # Effective finite rational approximation of the bad-set distance
 
 Only finite binary words and natural-number dyadic codes are computed.
 The infinite point and its real coordinates occur in the correctness proof.

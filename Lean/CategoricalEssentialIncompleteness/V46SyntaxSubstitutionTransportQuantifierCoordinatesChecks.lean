@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportQuantifierCoordinates
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportQuantifierCoordinatesChecks` -/
+/-! # The five coordinates of a quantified substitution input retain the original body independently of its recursive option-valued result -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ExponentialPairing
 
-/-! The printed exponential pairing has provable inverse equations in PA. -/
+/-! The exponential pairing has provable inverse equations in PA. -/
 
 @[expose] public section
 noncomputable section

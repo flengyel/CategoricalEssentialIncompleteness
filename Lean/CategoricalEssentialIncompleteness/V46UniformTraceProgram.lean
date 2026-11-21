@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceFlags
 
-/-! # A literal total arithmetic program for the actual trace predicate
+/-! # A literal total arithmetic program for the trace predicate
 
-The program uses the bounded earlier-stage fold and equality of actual
-numeric outputs. Its PA graph comparison is proved over all models before
-any standard primitive-recursion certificate is used.
+The program uses the bounded earlier-stage fold and equality of numeric outputs. Its
+PA graph comparison is proved over all models before any standard primitive-recursion
+certificate is used.
 -/
 
 @[expose] public section
@@ -70,8 +70,8 @@ theorem earlier_inputs_value {n : ℕ} (S E X : Code n) (s e x : M) (v : Fin n �
   · exact hE
   · exact hX
 
-/-- The positive and negative values are proved from the actual finite
-program; no decision procedure for an arbitrary Sigma-one graph is assumed. -/
+/-- The positive and negative values are proved from the finite program; no decision
+procedure for an arbitrary Sigma-one graph is assumed. -/
 theorem traceProgram_value (e x t : M) :
     Semiformula.Evalb ![if traceFormula.val.Evalb ![e, x, t] then (1 : M) else 0, e, x, t]
       (code traceProgram) := by

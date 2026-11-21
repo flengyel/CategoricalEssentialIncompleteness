@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
 public import Mathlib.CategoryTheory.Subobject.Limits
 
-/-! # Subobject order from actual numerical images
+/-! # Subobject order from numerical images
 
-A factor through a monomorphism uses its proved partial inverse. It does
-not choose a preimage in a general surjection or a proof from each nonempty
-proof fiber. This comparison applies to arbitrary uniformly semidecidable
-carriers, including the actual sentence carrier.
+A factor through a monomorphism uses its proved partial inverse. It does not choose a
+preimage in a general surjection or a proof from each nonempty proof fiber. This
+comparison applies to arbitrary uniformly semidecidable carriers, including the
+sentence carrier.
 -/
 
 @[expose] public section
@@ -28,8 +28,8 @@ variable {P : Uniform.Family}
 def imageCodes {X Y : TotalCategory P} (f : X ⟶ Y) : Set ℕ :=
   {y | ∃ x, y ∈ val f.hom x}
 
-/-- The existing categorical partial inverse of a mono has its exact
-reversed graph. Its uniqueness makes this graph representation independent. -/
+/-- The categorical partial inverse of a mono has its exact reversed graph. Its uniqueness
+makes this graph representation independent. -/
 theorem inverse_graph {X Y : TotalCategory P} (m : X ⟶ Y) [Mono m] (y x : ℕ) :
     x ∈ val (PartialSpans.inverse m) y ↔ y ∈ val m.hom x := by
   constructor
@@ -49,8 +49,8 @@ theorem inverse_graph {X Y : TotalCategory P} (m : X ⟶ Y) [Mono m] (y x : ℕ)
     have he : z=y := Part.mem_unique hz hy
     exact he ▸ hx
 
-/-- This actual composition is total precisely because each output of f
-lies in the mono's image. Only the unique inverse of that mono is searched. -/
+/-- This composition is total precisely because each output of f lies in the mono's image.
+Only the unique inverse of that mono is searched. -/
 def factorThroughMono {X Y Z : TotalCategory P} (f : X ⟶ Z) (m : Y ⟶ Z) [Mono m]
     (h : imageCodes f ⊆ imageCodes m) : X ⟶ Y :=
   ⟨f.hom ≫ PartialSpans.inverse m,(total_iff _).mpr (by
@@ -110,8 +110,8 @@ theorem mk_le_mk_iff_imageCodes_subset {X Y Z : TotalCategory P} (f : X ⟶ Z) (
   · intro h
     exact Subobject.mk_le_mk_of_comm (factorThroughMono f m h) (factorThroughMono_fac f m h)
 
-/-- Range inclusion gives an actual factor through the given image mono.
-No program selecting derivations is required when the image is a theorem set. -/
+/-- Range inclusion gives a factor through the given image mono. No program selecting
+derivations is required when the image is a theorem set. -/
 theorem imageSubobject_le_mk_of_imageCodes_subset {X Y Z : TotalCategory P}
     (f : X ⟶ Z) (m : Y ⟶ Z) [Mono m] (h : imageCodes f ⊆ imageCodes m) :
     imageSubobject f ≤ Subobject.mk m :=
@@ -138,8 +138,8 @@ theorem imageSubobject_le_mk_iff {X Y Z : TotalCategory P} (f : X ⟶ Z) (m : Y 
   change Subobject.mk (image.ι f) ≤ Subobject.mk m ↔ _
   rw [mk_le_mk_iff_imageCodes_subset,imageCodes_image_ι]
 
-/-- These are the actual regular images of the supplied maps, independently
-of the chosen representation of either image object. -/
+/-- These are the regular images of the supplied maps, independently of the chosen
+representation of either image object. -/
 theorem imageSubobject_le_iff {X X' Y : TotalCategory P} (f : X ⟶ Y) (g : X' ⟶ Y) :
     imageSubobject f ≤ imageSubobject g ↔ imageCodes f ⊆ imageCodes g := by
   change imageSubobject f ≤ Subobject.mk (image.ι g) ↔ _

@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46NamedPostfixFreeVariables
 public import CategoricalEssentialIncompleteness.V46NamedStandardLists
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonMembership
 
-/-! # Literal named formulas at genuine logical-scheme parameters -/
+/-! # Named formulas at logical-scheme parameters -/
 
 @[expose] public section
 noncomputable section
@@ -96,8 +96,8 @@ theorem hilbertReflexivity_point (t : Tm) :
   · apply Subtype.ext
     exact identity_value 𝗣𝗔 ℕ ((S).algebra.a.1) (termPoint σ π d t)
 
-/-- The original instantiation coordinates map to the public substitution
-input through its actual permutation morphism. -/
+/-- The original instantiation coordinates map to the public substitution input through
+its permutation morphism. -/
 theorem instantiationInput_point (x : ℕ) (φ : Fm) (t : Tm) :
     (G).map (S).instantiationInput
       (pairPoint 𝗣𝗔 ℕ (namePoint x)
@@ -131,8 +131,8 @@ theorem hilbertInstantiation_point (x : ℕ) (φ : Fm) (t : Tm) (ψ : Fm)
   · exact ((G).map_comp_apply _ _ z).trans
       ((congrArg ((G).map (S).formulaSubstitution) ha'').trans hr)
 
-/-- The absence condition is checked by the independently computed
-ordered FV list and then lifted through the genuine false fiber. -/
+/-- The absence condition is checked by the independently computed ordered FV list and
+then lifted through the false fiber. -/
 theorem distributionPoint_exists (x : ℕ) (φ ψ : Fm) (h : x ∉ φ.freeVariables) :
     ∃ z : Obj 𝗣𝗔 ℕ (S).distributionParameters,
       (G).map (S).distributionInclusion z =

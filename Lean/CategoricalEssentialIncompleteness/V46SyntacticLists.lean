@@ -132,8 +132,8 @@ def consMorphism (V : PredicateCategory T) :
     obtain ⟨hvv, haa⟩ := (pair_eq_pair_iff _ _ _ _).mp (he'.symm.trans he)
     simpa only [hvv, haa] using hy'
 
-/-- The map from the chosen categorical product to its literal arithmetic
-pair presentation is constructed from the two categorical projections. -/
+/-- The map from the chosen categorical product to its arithmetic pair presentation is
+constructed from the two categorical projections. -/
 def toRawProduct (C D : PredicateCategory T) :
     @Quiver.Hom (PredicateCategory T) inferInstance (C ⨯ D) (productCarrier C D) :=
   representedArrow T (productLift T prod.fst prod.snd)
@@ -168,7 +168,7 @@ def fromRawProduct (C D : PredicateCategory T) :
     simp only [fromRawProduct, prod.lift_snd, Category.id_comp]
     rfl
 
-/-- The actual list algebra for an arbitrary Sigma-one coefficient object. -/
+/-- The list algebra for an arbitrary Sigma-one coefficient object. -/
 def algebra (V : PredicateCategory T) : ListAlgebra (D := PredicateCategory T) V where
   carrier := listObject T V
   nil := representedArrow T (nilMorphism T (⊤_ (PredicateCategory T)) V)
@@ -180,7 +180,7 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
 abbrev F := PredicateInterpretation.functor T M
 
-/-- A quotient arrow and its represented graph have the same model values. -/
+/-- A quotient morphism and its represented graph have the same model values. -/
 theorem map_eq_iff_relation {C D : PredicateCategory T} (f : C ⟶ D)
     (x : Obj T M C) (y : Obj T M D) :
     (F T M).map f x = y ↔ relation T f M x.val y.val := by
@@ -225,8 +225,8 @@ theorem modelProduct_exists (C D : PredicateCategory T) (x : Obj T M C) (y : Obj
   · exact ConcreteCategory.congr_hom (BinaryFan.IsLimit.lift_fst hlim a b) PUnit.unit
   · exact ConcreteCategory.congr_hom (BinaryFan.IsLimit.lift_snd hlim a b) PUnit.unit
 
-/-- The slice product is interpreted as the actual fiber product, for
-arbitrary carrier predicates and arbitrary projections to the parameter. -/
+/-- The slice product is interpreted as the fiber product, for arbitrary carrier
+predicates and arbitrary projections to the parameter. -/
 theorem modelOverProduct_exists {P : PredicateCategory T} (A B : Over P)
     (a : Obj T M A.left) (b : Obj T M B.left)
     (h : (F T M).map A.hom a = (F T M).map B.hom b) :

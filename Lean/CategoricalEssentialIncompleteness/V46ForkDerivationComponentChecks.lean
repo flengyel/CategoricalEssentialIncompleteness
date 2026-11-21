@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationComponent
 
 
-/-! # Statement checks in `V46ForkDerivationComponentChecks` -/
+/-! # The six-tag fork proof carrier as an inference algebra -/
 
 @[expose] public section
 noncomputable section

@@ -10,10 +10,10 @@ public import CategoricalEssentialIncompleteness.OracleRestrictedCoding
 
 /-! # One finite-table algorithm for every representation of a point
 
-Uniform enumerability places the ordinary finite-table predicate before
-the representation quantifier. Its graph presentation is proved equivalent
-to the actual oracle-program presentation, including undefinedness. No
-ordinary partial-recursive value extension is required.
+Uniform enumerability places the ordinary finite-table predicate before the
+representation quantifier. Its graph presentation is proved equivalent to the
+oracle-program presentation, including undefinedness. No ordinary partial-recursive
+value extension is required.
 -/
 
 @[expose] public section

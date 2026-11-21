@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesPresentation
 
-/-! # Effective coefficient coordinates at the actual tuple dimension -/
+/-! # Effective coefficient coordinates at the tuple dimension -/
 
 @[expose] public section
 noncomputable section
@@ -47,8 +47,8 @@ def decode (C : NumericalTuples.Object) : predicateObject (codedPredicate C) ⟶
       Part.eq_some_iff.mpr ((NumericalTuples.mem_decodeTuple C.dimension _ _).mpr
         (NumericalTuples.pointEquiv_symm_code C ⟨z.val, (codedPredicate_eval C z.val).mp z.property⟩))⟩
 
-/-- Decoding is guarded at the actual dimension, including the proper
-singleton image of dimension zero. -/
+/-- Decoding is guarded at the dimension, including the proper singleton image of
+dimension zero. -/
 def codedObjectIso (C : NumericalTuples.Object) : predicateObject (codedPredicate C) ≅ C where
   hom := decode C
   inv := encode C

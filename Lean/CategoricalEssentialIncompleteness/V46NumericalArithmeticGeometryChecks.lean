@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
 
 
-/-! # Statement checks in `V46NumericalArithmeticGeometryChecks` -/
+/-! # The arithmetic finite-product, sum and pullback comparisons -/
 
 @[expose] public section
 noncomputable section

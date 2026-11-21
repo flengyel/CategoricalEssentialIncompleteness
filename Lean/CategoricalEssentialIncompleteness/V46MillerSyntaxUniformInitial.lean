@@ -12,10 +12,10 @@ public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 
 /-! # Parameter-stable initiality of the literal uniform syntax algebra
 
-The canonical parameter algebra is compared with the actual explicit
-parameter-word algebra by constructor-preserving isomorphisms. The carrier
-is the guarded literal word; witnesses remain in its membership predicate.
-No target operation is required to have an ordinary recursive extension.
+The canonical parameter algebra is compared with the explicit parameter-word algebra
+by constructor-preserving isomorphisms. The carrier is the guarded literal word;
+witnesses remain in its membership predicate. No target operation is required to have
+an ordinary recursive extension.
 -/
 
 @[expose] public section
@@ -105,7 +105,7 @@ def wordWithParametersInitial :
     IsInitial (SyntaxPolynomial.algebraWithParameters p q (wordAlgebra p q) R) :=
   (explicitWordInitial R p q).ofIso (parameterWordAlgebraIso R p q)
 
-/-- The actual base algebra, obtained through the proved terminal comparison. -/
+/-- The base algebra, obtained through the proved terminal comparison. -/
 def wordInitial (p q : SyntaxPolynomial (Total.TotalCategory P)) : IsInitial (wordAlgebra p q) :=
   SyntacticSyntax.initialOfTerminalParameters p q (wordAlgebra p q)
     (wordWithParametersInitial (⊤_ (Total.TotalCategory P)) p q)

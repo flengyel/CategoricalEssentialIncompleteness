@@ -82,8 +82,8 @@ theorem omegaProduct_value : (omegaProductIso T).hom.val = encodeProgram T := by
   change encodeProgram T * (TypedRecursionCategory.omegaProductToOmega T).val = _
   rw [TypedRecursionCategory.omegaProductToOmega_val, mul_one]
 
-/-- The actual quotient-program isomorphism realizes every recursive coding
-clause, including arbitrary nonstandard entries of products and sums. -/
+/-- The quotient-program isomorphism realizes every recursive coding clause, including
+arbitrary nonstandard entries of products and sums. -/
 theorem value_model (Q : STObjectCode) (x : SyntacticModel.interpretedType M Q) :
     SyntacticModel.programRelation T M (isoToOmega T Q).hom.val
       (SyntacticModel.codingEquiv T M Q x).val (value M Q x) := by

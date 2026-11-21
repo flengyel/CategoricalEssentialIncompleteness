@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeFormulaSubstitutionComparison
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeFormulaSubstitutionComparisonChecks` -/
+/-! # Substitution on named formulas and its interpretation in the slice -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.EffectiveForkEvaluation
 public import CategoricalEssentialIncompleteness.EffectiveForkProbes
 public import CategoricalEssentialIncompleteness.EnumerableFreeSemigroup
 
-/-! # Endpoint probes and their actual partial observation functors -/
+/-! # Endpoint probes and their partial observation functors -/
 
 @[expose] public section
 

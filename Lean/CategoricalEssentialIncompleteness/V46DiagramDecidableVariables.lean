@@ -47,8 +47,8 @@ def productIso (V : C) (W : D) (e : F.obj V ≅ W) :
   rw [← Category.assoc, map_inr_inv_coprodComparison, coprod.inr_map]
   rfl
 
-/-- The image test classifies the target diagonal under the actual
-terminal, binary-product and Boolean coproduct comparison isomorphisms. -/
+/-- The image test classifies the target diagonal under the terminal, binary-product and
+Boolean coproduct comparison isomorphisms. -/
 def mapped {V : C} (S : DecidableVariables V) (W : D) (e : F.obj V ≅ W) :
     DecidableVariables W where
   test := (productIso F V W e).inv ≫ F.map S.test ≫ (booleanIso F).hom
@@ -66,8 +66,8 @@ def mapped {V : C} (S : DecidableVariables V) (W : D) (e : F.obj V ≅ W) :
     · simp only [Iso.hom_inv_id_assoc]
     · exact booleanIso_inr F
 
-/-- A constant diagram retains the internal variable equality test under
-its actual terminal, product and Boolean comparison isomorphisms. -/
+/-- A constant diagram retains the internal variable equality test under its terminal,
+product and Boolean comparison isomorphisms. -/
 def constant {J : Type u₃} [Category.{v₃} J] {V : C} (S : DecidableVariables V) :
     DecidableVariables ((Functor.const J).obj V) :=
   mapped (Functor.const J) S _ (Iso.refl _)
@@ -76,7 +76,7 @@ def constant {J : Type u₃} [Category.{v₃} J] {V : C} (S : DecidableVariables
 def fork : DecidableVariables ForkFirstOrderFormula.numbers :=
   constant (ConcreteDecidableVariables.numerical _)
 
-/-- Truth is the second Boolean injection, as in the printed convention. -/
+/-- Truth is the second Boolean injection. -/
 theorem fork_diagonal :
     IsPullback (prod.lift (𝟙 ForkFirstOrderFormula.numbers) (𝟙 _))
       (terminal.from _) fork.test coprod.inr := fork.diagonal

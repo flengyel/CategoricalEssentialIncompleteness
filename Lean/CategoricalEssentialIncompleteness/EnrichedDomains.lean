@@ -29,7 +29,7 @@ namespace EnrichedRestriction
 variable {V : Type u} [Category.{v} V] [HasFiniteLimits V] {O : Type w}
 variable {H : InternalHom V O} (R : EnrichedRestriction H)
 
-/-- Restriction inverse image, without a totality assumption on the arrow. -/
+/-- Restriction inverse image, without a totality assumption on the morphism. -/
 def domainInverse {T : V} {X Y : O} (f : T ⟶ H.hom X Y)
     (e : T ⟶ R.domainObject Y) : T ⟶ R.domainObject X :=
   R.domainLift (R.restrict (H.comp f (e ≫ R.domainι Y))) (R.restrict_restrict _)
@@ -58,7 +58,7 @@ theorem domainInverse_comp {T : V} {X Y Z : O}
   exact RestrictionCategory.rst_comp_rst_right (C := R.Parameterized T)
     (X := ⟨X⟩) (Y := ⟨Y⟩) (Z := ⟨Z⟩) f (H.comp g (e ≫ R.domainι Z))
 
-/-- The manuscript's inverse-image morphism, defined for all partial arrows. -/
+/-- The manuscript's inverse-image morphism, defined for all partial morphisms. -/
 def partialDomainAction (X Y : O) : H.hom X Y ⨯ R.domainObject Y ⟶ R.domainObject X :=
   R.domainInverse prod.fst prod.snd
 
@@ -67,7 +67,7 @@ theorem partialDomainAction_apply {T : V} {X Y : O}
     R.domainInverse f e = prod.lift f e ≫ R.partialDomainAction X Y := by
   simp [partialDomainAction, R.precomp_domainInverse]
 
-/-- The restriction of the partial-arrow action to the totality pullback. -/
+/-- The restriction of the partial-morphism action to the totality pullback. -/
 def domainAction (X Y : O) : R.totalObject X Y ⨯ R.domainObject Y ⟶ R.domainObject X :=
   prod.map (R.totalι X Y) (𝟙 _) ≫ R.partialDomainAction X Y
 

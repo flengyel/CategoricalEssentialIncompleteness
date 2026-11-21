@@ -10,7 +10,7 @@ public import Mathlib.Data.Fintype.Powerset
 public import Mathlib.CategoryTheory.Category.Preorder
 public import Mathlib.Tactic.DeriveFintype
 
-/-! # The manuscript's actual three-point space and its five opens -/
+/-! # The manuscript's three-point space and its five opens -/
 
 @[expose] public section
 

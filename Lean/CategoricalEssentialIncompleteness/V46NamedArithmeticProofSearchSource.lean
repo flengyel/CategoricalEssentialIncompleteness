@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchPr
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRefutations
 public import CategoricalEssentialIncompleteness.V46ArithmeticOmegaComparison
 
-/-! # Source equalities for the actual arithmetic theorem/refutation pullbacks
+/-! # Source equalities for the arithmetic theorem/refutation pullbacks
 
 The raw source program is that of the constructed fixed-formula morphism.
 The two inverse-image predicates are identified by universal PA graph
@@ -36,8 +36,8 @@ namespace CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch
 
 open NamedArithmeticSignature
 
-/-- The source program is obtained from the actual graph morphism, rather
-than selected from a standard extensional equality. -/
+/-- The source program is obtained from the graph morphism, rather than selected from a
+standard extensional equality. -/
 def sourceTheta (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :
     omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔 :=
   omegaArrow 𝗣𝗔 (NamedArithmeticFixedSubstitution.morphism φ hφ).programClass
@@ -125,8 +125,8 @@ theorem negative_source_pull_model (Γ : Carrier) (φ : Formula)
   rw [negative_source_pull]
   exact model_predicateIdem 𝗣𝗔 (negative Γ φ) M
 
-/-- The lift's fibers are the interpretations of the actual source
-theorem/refutation inverse-image idempotents. -/
+/-- The lift's fibers are the interpretations of the source theorem/refutation
+inverse-image idempotents. -/
 theorem ell_source_fibers (Γ : Carrier) (φ : Formula)
     (hφ : ∀ y, y ∈ φ.freeVariables → y = 0)
     (hd : ∀ n : M, ¬((positive Γ φ).val.Evalb ![n] ∧ (negative Γ φ).val.Evalb ![n])) :

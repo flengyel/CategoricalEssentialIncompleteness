@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxFreeVariablesTransportInputs
 
 
-/-! # Statement checks in `V46SyntaxFreeVariablesTransportInputsChecks` -/
+/-! # The polynomial input isomorphisms for occurrence folds -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46FirstOrderStandardInduction
 public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 
-/-! # Predicates on the actual seven logical scheme families -/
+/-! # Predicates on the seven logical scheme families -/
 
 @[expose] public section
 
@@ -25,8 +25,8 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 variable {V : PredicateCategory T} {σ π : ℕ → PredicateCategory T} {d : ℕ}
 variable (S : CategoricalSyntax V σ π d) (Q : Obj T M S.algebra.a.2 → Prop)
 
-/-- Each point of the actual logical-axiom coproduct belongs to one of
-its seven specified parameter families. -/
+/-- Each point of the logical-axiom coproduct belongs to one of its seven specified
+parameter families. -/
 theorem logicalAxioms_predicate
     (h₁ : ∀ z : Obj T M (S.algebra.a.2 ⨯ S.algebra.a.2), Q ((F T M).map S.hilbertOne z))
     (h₂ : ∀ z : Obj T M ((S.algebra.a.2 ⨯ S.algebra.a.2) ⨯ S.algebra.a.2),

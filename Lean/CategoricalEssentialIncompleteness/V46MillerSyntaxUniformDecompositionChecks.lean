@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformDecomposition
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformDecompositionChecks` -/
+/-! # Decomposition with arbitrary uniform coefficient guards -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

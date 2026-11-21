@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCategory
 
-/-! # Actual restriction products in the representation-independent category -/
+/-! # Restriction products in the representation-independent category -/
 
 @[expose] public section
 noncomputable section

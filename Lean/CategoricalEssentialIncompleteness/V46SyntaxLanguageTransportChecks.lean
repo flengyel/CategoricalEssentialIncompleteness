@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxLanguageTransport
 
 
-/-! # Statement checks in `V46SyntaxLanguageTransportChecks` -/
+/-! # Constructor comparisons for the transported syntax language -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSubstitutionParameters
 public import Mathlib.CategoryTheory.Limits.Types.Pullbacks
 
-/-! # The actual arithmetic admissibility isomorphism and result square -/
+/-! # The arithmetic admissibility isomorphism and result square -/
 
 @[expose] public section
 noncomputable section
@@ -24,8 +24,8 @@ local notation "S₀" => originalSyntax
 local notation "F" => PredicateInterpretation.functor 𝗣𝗔 ℕ
 local notation "U" => NumericalUnderlying.functor
 
-/-- The inverse pullback projection is an actual numerical morphism.
-Surjectivity here concerns the supplied points, including empty carriers. -/
+/-- The inverse pullback projection is a numerical morphism. Surjectivity here concerns
+the supplied points, including empty carriers. -/
 theorem imageProjection_isIso {A B C : NumericalTuples.Object}
     (m : A ⟶ C) [Mono m] (g : B ⟶ C)
     (h : ∀ b : NumericalTuples.Point B, ∃ a, m.toFun a = g.toFun b) :
@@ -129,8 +129,8 @@ def backward : numericalInterpretation.obj (S₀).admissibleSubstitution ⟶ (S)
     numericalInterpretation.map (S₀).admissibleInclusion ≫ formulaInputIso.inv :=
   imageLift_comp _ _ backward_image
 
-/-- The comparison is constructed from the actual success domain and
-the independently proved arithmetic admissibility flag. -/
+/-- The comparison is constructed from the success domain and the independently proved
+arithmetic admissibility flag. -/
 def admissibleIso : (S).admissibleSubstitution ≅ numericalInterpretation.obj (S₀).admissibleSubstitution where
   hom := forward
   inv := backward

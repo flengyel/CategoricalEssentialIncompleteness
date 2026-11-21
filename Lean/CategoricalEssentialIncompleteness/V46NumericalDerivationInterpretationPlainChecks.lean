@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationPlain
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationPlainChecks` -/
+/-! # Full stored/plain constructor comparison -/
 
 @[expose] public section
 noncomputable section

@@ -130,7 +130,7 @@ theorem decoded_coded (f : α → Part β) : decodedPartial (codedPartial f) = f
   simp only [mem_decodedPartial, codedPartial_encode, Part.mem_map_iff,
     encode_injective.eq_iff, exists_eq_right]
 
-/-- Every actual arrow between coded carriers comes from an ambient partial recursive map. -/
+/-- Every morphism between coded carriers comes from an ambient partial recursive map. -/
 theorem coded_decoded {A : Set α} {B : Set β}
     (hA : REPred (· ∈ A)) (hB : REPred (· ∈ B))
     (f : codedCarrier A hA ⟶ codedCarrier B hB) :

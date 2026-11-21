@@ -12,10 +12,10 @@ public import CategoricalEssentialIncompleteness.NumericalTotalProducts
 /-!
 # Numerical substitution of arithmetic formulas
 
-The substitution function decodes a unary formula, substitutes a numeral, and
-returns the index of the resulting sentence. Its numerical arrow is total.
-Precomposing its first coordinate with a total numerical arrow gives the
-two-variable substitution map used in the representation equations.
+The substitution function decodes a unary formula, substitutes a numeral, and returns
+the index of the resulting sentence. Its numerical morphism is total. Precomposing its
+first coordinate with a total numerical morphism gives the two-variable substitution
+map used in the representation equations.
 -/
 
 @[expose] public section
@@ -54,7 +54,7 @@ theorem substitutionFunction_of_invalid {a : ℕ}
   rw [substitutionFunction, unaryFormula_of_invalid ha]
   rfl
 
-/-- The total numerical substitution arrow on coded pairs of natural numbers. -/
+/-- The total numerical substitution morphism on coded pairs of natural numbers. -/
 def substitutionArrow :
     Numerical.totalObject (Numerical.product Numerical.nat Numerical.nat) ⟶
       Numerical.totalObject Numerical.nat :=
@@ -77,7 +77,7 @@ def substitutionArrow :
     substitutionArrow.hom.val (Nat.pair a n) = Part.some (substitutionFunction a n) := by
   simp only [substitutionArrow_val, Nat.unpair_pair]
 
-/-- Precompose the first coordinate of substitution by a total numerical arrow. -/
+/-- Precompose the first coordinate of substitution by a total numerical morphism. -/
 def substitutionRow (g : Numerical.totalObject Numerical.nat ⟶
     Numerical.totalObject Numerical.nat) :
     Numerical.totalObject (Numerical.product Numerical.nat Numerical.nat) ⟶

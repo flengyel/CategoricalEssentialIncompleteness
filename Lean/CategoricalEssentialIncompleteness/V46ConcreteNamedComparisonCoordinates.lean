@@ -22,8 +22,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- The operation is an arbitrary opaque arrow here. The coordinate
-lemmas therefore normalize only the finite product diagram. -/
+/-- The operation is an arbitrary opaque morphism here. The coordinate lemmas therefore
+normalize only the finite product diagram. -/
 def recursionLift {P A C X : PredicateCategory T} (f : P ⨯ C ⟶ X) :
     P ⨯ (A ⨯ C) ⟶ P ⨯ (A ⨯ X) :=
   prod.lift prod.fst (prod.lift (prod.snd ≫ prod.fst)

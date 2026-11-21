@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRules
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSchemeSquares
 
-/-! # The actual seven-scheme and Gamma nullary label isomorphism -/
+/-! # The seven-scheme and Gamma nullary label isomorphism -/
 
 @[expose] public section
 noncomputable section
@@ -83,8 +83,8 @@ private theorem copaired_square {A B : PredicateCategory 𝗣𝗔} {X Z : Numeri
       _ = g' ≫ formulaIso.hom := hg
       _ = _ := by simp only [coprod.inr_desc_assoc]
 
-/-- Every summand is the actual scheme parameter object. In particular,
-Q1 and equality retain their success pullbacks and Q2 its false fiber. -/
+/-- Every summand is the scheme parameter object. In particular, Q1 and equality retain
+their success pullbacks and Q2 its false fiber. -/
 def logicalIso : (S).logicalParameters ≅ (K).obj (S₀).logicalParameters :=
   copairedIso (copairedIso (copairedIso (copairedIso
     (copairedIso (copairedIso formulaPairIso formulaTripleIso) formulaPairIso)
@@ -109,8 +109,8 @@ theorem logical_square : logicalIso.hom ≫ (K).map (S₀).logicalAxioms =
       formulaPairIso) instantiationIso) DistributionParameters.iso) termIso) equalityIso _ _ _ _
       h₁₂₃₄₅₆ SchemeSquares.hilbertEquality
 
-/-- The Gamma leaf branch is the actual PA sentence axiom object,
-with the identity label map; only the seven logical branches are relabelled. -/
+/-- The Gamma leaf branch is the PA sentence axiom object, with the identity label map;
+only the seven logical branches are relabelled. -/
 def rho0 (Γ : Carrier) : (Rules.rules Γ).instances 0 ≅ (K).obj ((Rules.originalRules Γ).instances 0) :=
   copairedIso (A := (S₀).logicalParameters) (B := ArithmeticLiteralModel.axiomObject Γ)
     logicalIso (Iso.refl (Rules.axiomObject Γ))

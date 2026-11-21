@@ -173,7 +173,7 @@ theorem inverse_isPullback {X Y A : Set ℕ} (f : Representative (discrete X) (d
 end NumericalPER
 namespace Numerical
 
-/-- The support inclusion associated with an numerical restriction idempotent. -/
+/-- The support inclusion associated with a numerical restriction idempotent. -/
 def domainSubobject (X : Numerical) : Domain X ↪o Subobject (NumericalPER.discrete X.carrier) where
   toFun e := NumericalPER.supportSubobject e.support
     (fun _ hn ↦ e.hom.source (Part.get_mem hn))

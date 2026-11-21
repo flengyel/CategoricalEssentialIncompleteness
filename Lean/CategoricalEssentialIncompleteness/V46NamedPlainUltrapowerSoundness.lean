@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSoundness
 public import CategoricalEssentialIncompleteness.V46UltrapowerComparison
 
-/-! # The constructed soundness factor in the actual arithmetic ultrapower -/
+/-! # The constructed soundness factor in the arithmetic ultrapower -/
 
 @[expose] public section
 
@@ -23,8 +23,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.NamedPlainSemantics
 open SyntacticSyntax NamedPostfixEncoding SyntacticGeneratedTheory
 
-/-- The actual predicate presentation and chosen total-domain
-interpretation agree naturally, including the program graphs. -/
+/-- The predicate presentation and chosen total-domain interpretation agree naturally,
+including the program graphs. -/
 def canonicalCodeComparison :
     F 𝗣𝗔 ℕ ≅ realization 𝗣𝗔 ⋙ PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ :=
   (PredicateInterpretation.predicateComparison 𝗣𝗔 ℕ).symm ≪≫
@@ -126,8 +126,8 @@ theorem canonical_ultrapower_soundness [Nonempty K] {I : Type} (U : Ultrafilter 
     (canonicalValidity_disjoint σ π d functions relations)
 
 include functions relations haxioms in
-/-- Consistency of the actual realized conclusion image in the arithmetic
-ultrapower, obtained from the proved standard soundness factor. -/
+/-- Consistency of the realized conclusion image in the arithmetic ultrapower, obtained
+from the proved standard soundness factor. -/
 theorem canonical_ultrapower_conclusion_consistent [Nonempty K]
     {I : Type} (U : Ultrafilter I) :
     Disjoint

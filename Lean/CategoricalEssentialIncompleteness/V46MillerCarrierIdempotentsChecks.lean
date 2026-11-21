@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
 
 
-/-! # Statement checks in `V46MillerCarrierIdempotentsChecks` -/
+/-! # Restriction idempotents on uniformly semidecidable carriers -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory

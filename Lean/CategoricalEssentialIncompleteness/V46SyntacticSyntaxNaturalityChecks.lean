@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxNaturality
 
-/-! # Checks for the actual polynomial naturality comparison -/
+/-! # Checks for the polynomial naturality comparison -/
 
 @[expose] public section
 

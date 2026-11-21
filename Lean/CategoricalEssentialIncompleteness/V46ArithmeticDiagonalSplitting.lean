@@ -8,7 +8,7 @@ public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesTurin
 public import CategoricalEssentialIncompleteness.V46ArithmeticSignedGeneration
 public import CategoricalEssentialIncompleteness.RestrictionSplitting
 
-/-! # The diagonal predicates and the actual restriction splitting -/
+/-! # The diagonal predicates and the restriction splitting -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

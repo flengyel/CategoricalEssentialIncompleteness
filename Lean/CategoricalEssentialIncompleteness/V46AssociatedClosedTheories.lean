@@ -33,8 +33,8 @@ local instance evaluationLimits {Z U : D} (point : Z ⟶ U) (hZ : IsTerminal Z) 
 
 variable {V : D} (P : FirstOrderPresentation V) (U : D)
 
-/-- The parameterized deduction assumption at axiom subobjects of the actual
-constant sentence family, with the original logical operations transported. -/
+/-- The parameterized deduction assumption at axiom subobjects of the constant sentence
+family, with the original logical operations transported. -/
 abbrev SliceProofs :=
   (W : Subobject ((constantFamilyFunctor U).obj P.syntaxData.sentenceObject)) →
   Endofunctor.Algebra (firstOrderRules ((constantFamilyFunctor U).map P.syntaxData.logicalAxioms)

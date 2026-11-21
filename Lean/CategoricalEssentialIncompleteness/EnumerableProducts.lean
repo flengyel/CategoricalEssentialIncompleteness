@@ -143,7 +143,7 @@ theorem comp_partialPair {V W X Y : Carrier} (h : V ⟶ W) (f : W ⟶ X) (g : W 
     subst l
     exact ⟨k, hk, a, ha, b, hb, hm⟩
 
-/-- An arrow into a numerical product is determined by its two projections. -/
+/-- A morphism into a numerical product is determined by its two projections. -/
 theorem partialPair_proj {W X Y : Carrier} (h : W ⟶ product X Y) :
     partialPair (h ≫ partialFst X Y) (h ≫ partialSnd X Y) = h := by
   apply val_injective; funext n; apply Part.ext; intro m

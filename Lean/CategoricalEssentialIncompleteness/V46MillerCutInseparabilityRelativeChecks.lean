@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparabilityRelative
 
 
-/-! # Statement checks in `V46MillerCutInseparabilityRelativeChecks` -/
+/-! # Decision predicates relative to a single representation -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

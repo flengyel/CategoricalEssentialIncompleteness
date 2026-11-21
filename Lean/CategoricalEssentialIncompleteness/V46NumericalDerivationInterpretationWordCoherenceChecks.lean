@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWordCoherence
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationWordCoherenceChecks` -/
+/-! # Coefficient-index coherence for the derivation words -/
 
 @[expose] public section
 noncomputable section

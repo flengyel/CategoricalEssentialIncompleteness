@@ -8,12 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformConstructors
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformRelationUnique
 
-/-! # The actual uniform evaluator's root law and comparison of candidate graphs
+/-! # Uniqueness of the fold on accepted words
 
-The root law is derived from the constructed fold, including the actual
-coefficient guards. A categorical candidate still has to obtain its root
-law from its algebra-morphism equation; no such equation is assumed in a
-printed initiality theorem here.
+A fold on accepted words is determined by its value at each constructor.
+For an algebra morphism the constructor equation gives this value.
 -/
 
 @[expose] public section

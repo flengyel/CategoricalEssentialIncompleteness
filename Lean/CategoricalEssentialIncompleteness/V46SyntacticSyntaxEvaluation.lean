@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxState
 
-/-! # Actual finite state-and-operation records for postfix evaluation -/
+/-! # Finite state-and-operation records for postfix evaluation -/
 
 @[expose] public section
 
@@ -23,9 +23,9 @@ open Coding
 variable {T : ArithmeticTheory} {P X Y : Carrier} {a b : RawPolynomial}
 variable (A : SliceAlgebra T P X Y a b)
 
-/-- Index zero is the empty value stack. At index i+1 the record stores
-the result after reading input position i. All actual root-operation
-traces occur positively inside valueStepGraph. -/
+/-- Index zero is the empty value stack. At index i+1 the record stores the result after
+reading input position i. All root-operation traces occur positively inside
+valueStepGraph. -/
 def valueRecordGraph : 𝚺₁.Semisentence 4 :=
   let S := statusGraph P X Y A.termProjection.graph A.formulaProjection.graph
   let R := A.valueStepGraph
@@ -96,9 +96,9 @@ theorem valueRecord_append {p word n states new : M}
       have hn : n < len states := by rw [h.1]; simp
       simpa only [concat_nth_lt states new hn, ← h.1, concat_nth_len] using hnew
 
-/-- Internal Sigma-one induction on the actual number of input records
-constructs all operation witnesses and states, including at nonstandard
-lengths. No total evaluator is supplied as an assumption. -/
+/-- Internal Sigma-one induction on the number of input records constructs all operation
+witnesses and states, including at nonstandard lengths. No total evaluator is supplied
+as an assumption. -/
 theorem valueRecord_exists (p word : M) (hp : P.val.Evalb ![p])
     (hword : (coefficients a b).val.Evalb ![word]) :
     ∃ states : M, A.ValueRecord p word (len word) states := by
@@ -118,8 +118,8 @@ theorem valueRecord_exists (p word : M) (hp : P.val.Evalb ![p])
       exact ⟨concat states new, A.valueRecord_append hs hnew⟩
   exact hh (len word) (by rfl)
 
-/-- Pi-one induction compares every pair of displayed states, using the
-actual graph-operation functionality at each successor position. -/
+/-- Pi-one induction compares every pair of displayed states, using the graph-operation
+functionality at each successor position. -/
 theorem valueRecord_unique {p word n states other : M}
     (h : A.ValueRecord p word n states) (g : A.ValueRecord p word n other) :
     nth states n = nth other n := by
@@ -159,8 +159,8 @@ omit [M↓[ℒₒᵣ] ⊧* T] in
         ∃ states : M, A.ValueRecord p word (len word) states ∧ status = nth states (len word) := by
   simp [loopEvaluationGraph]
 
-/-- Arbitrary graph-defined slice operations have a unique
-finite computation on every coefficient-valid literal input word. -/
+/-- Arbitrary graph-defined slice operations have a unique finite computation on every
+coefficient-valid input word. -/
 theorem loopEvaluation_existsUnique (p word : M) (hp : P.val.Evalb ![p])
     (hw : (coefficients a b).val.Evalb ![word]) :
     ∃! status : M, A.loopEvaluationGraph.val.Evalb ![p, word, status] := by

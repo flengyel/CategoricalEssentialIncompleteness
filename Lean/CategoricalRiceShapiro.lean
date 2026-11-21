@@ -33,6 +33,6 @@ public import CategoricalRiceShapiro.Evaluator.TableLookupEvaluation
 public import CategoricalRiceShapiro.PartialRecursive.CanonicalComposition
 
 
-/-! # Definitions and theorems in `CategoricalRiceShapiro` -/
+/-! # Arithmetic coding and the categorical Rice–Shapiro theorem -/
 
 @[expose] public section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46FirstOrderLogicalInduction
 
 
-/-! # Statement checks in `V46FirstOrderLogicalInductionChecks` -/
+/-! # Predicates on the seven logical scheme families -/
 
 @[expose] public section
 noncomputable section

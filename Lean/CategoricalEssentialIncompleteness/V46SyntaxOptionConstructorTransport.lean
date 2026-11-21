@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionTransport
 
-/-! # Preservation of the actual lifted option constructors -/
+/-! # Preservation of the lifted option constructors -/
 
 @[expose] public section
 
@@ -23,8 +23,8 @@ variable (E : C ≌ D)
 local notation "F" => E.functor
 
 omit [Regular C] [Regular D] in
-/-- Equivalences preserve the actual source-fiber coproduct cover.
-The target fibers do not have to use the same chosen objects. -/
+/-- Equivalences preserve the source-fiber coproduct cover. The target fibers do not have
+to use the same chosen objects. -/
 theorem map_sumFibers_hom_ext {W A B : C} (f : W ⟶ A ⨿ B) {Z : D}
     {g h : E.functor.obj W ⟶ Z}
     (h₀ : E.functor.map (pullback.fst f coprod.inl) ≫ g = E.functor.map (pullback.fst f coprod.inl) ≫ h)
@@ -126,8 +126,8 @@ private theorem map_binary_success {W Y Z : C} {Y' Z' : D}
       rw [← E.functor.map_comp,binary_success h u y z hy hz,map_pair_some E i i j h h' hh]
     _ = _ := (binary_success h' _ _ _ ht₁ ht₂).symm
 
-/-- Both operand failures and the simultaneous success case are
-transported for the actual binary option operation. -/
+/-- Both operand failures and the simultaneous success case are transported for the binary
+option operation. -/
 theorem map_binary {Y Z : C} {Y' Z' : D}
     (i : E.functor.obj Y ≅ Y') (j : E.functor.obj Z ≅ Z') (h : Y ⨯ Y ⟶ Z) (h' : Y' ⨯ Y' ⟶ Z')
     (hh : E.functor.map h ≫ j.hom = (productIso E i i).hom ≫ h') :

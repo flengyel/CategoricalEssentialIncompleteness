@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.ForkCosheafCriterion
 public import Mathlib.CategoryTheory.Limits.Shapes.Equalizers
 
-/-! # The actual coproduct/coequalizer form of every cover axiom -/
+/-! # The coproduct/coequalizer form of every cover axiom -/
 
 @[expose] public section
 

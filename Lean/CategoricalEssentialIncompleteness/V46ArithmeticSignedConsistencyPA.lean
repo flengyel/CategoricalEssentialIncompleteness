@@ -25,7 +25,7 @@ variable {V : PredicateCategory 𝗣𝗔}
 variable (S : CategoricalSyntax V (fun _ => ⊥_ (PredicateCategory 𝗣𝗔)) (fun _ => N) 0)
 local notation "Q" => derivationAlgebra 𝗣𝗔 (rules S)
 
-/-- The carrier and graphs are those of the actual signed proof algebra. -/
+/-- The carrier and graphs are those of the signed proof algebra. -/
 def consistencySentence : ArithmeticSentence :=
   let D := (Q).a.left
   let C := (chosenGraph 𝗣𝗔 (Q).a.hom).graph

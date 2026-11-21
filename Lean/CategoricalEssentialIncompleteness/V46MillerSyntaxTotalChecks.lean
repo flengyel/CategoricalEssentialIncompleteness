@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxTotal
 
 
-/-! # Statement checks in `V46MillerSyntaxTotalChecks` -/
+/-! # The concrete syntax bundle in the Miller total splitting -/
 
 @[expose] public section
 noncomputable section

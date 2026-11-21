@@ -12,10 +12,10 @@ public import CategoricalEssentialIncompleteness.NumericalRecursion
 /-!
 # Numerical total hom-objects and internal indexing
 
-The totality pullback in `Type` represents the set of total numerical arrows.
-Its operations agree with numerical identities, composition, and pairing.
-The numerical parameter assignment lifts to this pullback and is a section
-of evaluation by the Turing morphism.
+The totality pullback in `Type` represents the set of total numerical morphisms. Its
+operations agree with numerical identities, composition, and pairing. The numerical
+parameter assignment lifts to this pullback and is a section of evaluation by the
+Turing morphism.
 -/
 
 @[expose] public section
@@ -27,13 +27,13 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- The numerical identity and zero are distinct as global enriched arrows. -/
+/-- The numerical identity and zero are distinct as global enriched morphisms. -/
 theorem enriched_nat_nontrivial :
     enrichedHom.unit nat ≠ EnrichedRestriction.Zeros.zero enrichedRestriction nat nat := by
   intro h
   exact nat_nontrivial (ConcreteCategory.congr_hom h default)
 
-/-- A point of the totality pullback determines a total numerical arrow. -/
+/-- A point of the totality pullback determines a total numerical morphism. -/
 def enrichedTotalArrow {X Y : Numerical} (a : enrichedRestriction.totalObject X Y) :
     totalObject X ⟶ totalObject Y where
   hom := enrichedRestriction.totalι X Y a
@@ -44,7 +44,7 @@ def enrichedTotalArrow {X Y : Numerical} (a : enrichedRestriction.totalObject X 
     simpa only [enriched_restrict_apply, types_comp_apply, types_id_apply,
       enriched_identity_apply] using h
 
-/-- The inclusion of total numerical arrows lifts to the totality pullback. -/
+/-- The inclusion of total numerical morphisms lifts to the totality pullback. -/
 def enrichedTotalLift (X Y : Numerical) :
     (totalObject X ⟶ totalObject Y) ⟶ enrichedRestriction.totalObject X Y :=
   enrichedRestriction.totalLift (TypeCat.ofHom fun f => f.hom) (by
@@ -58,7 +58,7 @@ def enrichedTotalLift (X Y : Numerical) :
     enrichedRestriction.totalι X Y (enrichedTotalLift X Y f) = f.hom := by
   exact ConcreteCategory.congr_hom (enrichedRestriction.totalLift_ι _ _) f
 
-/-- The actual totality pullback is equivalent to the numerical total hom-set. -/
+/-- The totality pullback is equivalent to the numerical total hom-set. -/
 def enrichedTotalEquiv (X Y : Numerical) :
     enrichedRestriction.totalObject X Y ≃ (totalObject X ⟶ totalObject Y) where
   toFun := enrichedTotalArrow
@@ -131,14 +131,14 @@ def internalIndexing (V : Numerical) :
     enrichedRestriction.totalι V nat (internalIndexing V φ) = (turingIndexing V φ).hom := by
   exact enrichedTotalLift_ι V nat _
 
-/-- Evaluation of a total parameter arrow by the numerical Turing morphism. -/
+/-- Evaluation of a total parameter morphism by the numerical Turing morphism. -/
 def internalEvaluation (V : Numerical) :
     enrichedRestriction.totalObject V nat ⟶ enrichedHom.hom (product V nat) nat :=
   TypeCat.ofHom fun g =>
     partialProdMap (enrichedRestriction.totalι V nat g) (𝟙 nat) ≫ turingEvaluator
 
-/-- Internal evaluation is composition with the Turing morphism after the
-product of the total parameter arrow and the identity. -/
+/-- Internal evaluation is composition with the Turing morphism after the product of the
+total parameter morphism and the identity. -/
 theorem internalEvaluation_composition {T : Type} (V : Numerical)
     (g : T ⟶ enrichedRestriction.totalObject V nat) :
     g ≫ internalEvaluation V =

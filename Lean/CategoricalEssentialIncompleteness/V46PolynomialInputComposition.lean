@@ -66,8 +66,8 @@ variable {C : Type u₁} [Category.{v₁} C] [Regular C] [HasFiniteCoproducts C]
 local instance (P : C) : Regular (Over P) := RegularSlices.regular P
 variable {I : Type w}
 
-/-- The canonical parameter comparison's value is the polynomial input
-of the forgetful functor, with the actual value projections. -/
+/-- The canonical parameter comparison's value is the polynomial input of the forgetful
+functor, with the value projections. -/
 theorem value_as_input (P : C) (c : I → C) (X : C × C) (p : SyntaxPolynomial I) :
     value P c X p =
       LaxPolynomialComparison.input (Over.forget P) (fun i => (prod.snd : P ⨯ c i ⟶ c i)) p

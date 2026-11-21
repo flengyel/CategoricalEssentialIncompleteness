@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticRuleComparison
 
 
-/-! # Statement checks in `V46NumericalArithmeticRuleComparisonChecks` -/
+/-! # Arithmetic rule-label and finite-proof relabellings -/
 
 @[expose] public section
 noncomputable section

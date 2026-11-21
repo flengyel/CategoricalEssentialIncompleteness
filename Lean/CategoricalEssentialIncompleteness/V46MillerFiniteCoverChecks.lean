@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerFiniteCover
 
 
-/-! # Statement checks in `V46MillerFiniteCoverChecks` -/
+/-! # Deciding finite coverage by binary cylinders -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.FiniteCover

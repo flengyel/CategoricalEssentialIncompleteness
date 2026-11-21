@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationRules
 
-/-! The actual arithmetic sources of typed finite-inference summands. -/
+/-! The arithmetic sources of typed finite-inference summands. -/
 
 @[expose] public section
 noncomputable section

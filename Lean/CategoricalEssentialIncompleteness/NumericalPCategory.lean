@@ -184,7 +184,8 @@ instance numericalPCategory : PCategory Numerical where
   assoc_nat := partialProdMap_assoc_nat
   swap_nat := partialProdMap_swap_nat
 
-/-- The two restriction structures agree as structures, including their operation on every arrow. -/
+/-- The two restriction structures agree as structures, including their operation on every
+morphism. -/
 theorem inducedRestriction_eq :
     (PCategory.inducedRestriction : RestrictionCategory Numerical) = numericalRestriction := by
   have h : @RestrictionCategory.rst Numerical numericalCategory PCategory.inducedRestriction =

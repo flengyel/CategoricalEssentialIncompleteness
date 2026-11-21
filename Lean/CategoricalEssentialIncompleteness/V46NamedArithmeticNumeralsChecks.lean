@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumerals
 
 
-/-! # Statement checks in `V46NamedArithmeticNumeralsChecks` -/
+/-! # Internal arithmetic numerals are literal zero/add/one postfix words -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

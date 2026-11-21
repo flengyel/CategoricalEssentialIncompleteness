@@ -9,9 +9,10 @@ public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 public import CategoricalEssentialIncompleteness.V46SyntacticListsEquivalence
 public import CategoricalEssentialIncompleteness.V46CategoricalListLaws
 
-/-! List folds and concatenation under actual equivalence, parameter,
-and coefficient comparisons. No code of a chosen product is identified
-with a literal pair. -/
+/-!
+List folds and concatenation under equivalence, parameter, and coefficient
+comparisons. No code of a chosen product is identified with a literal pair.
+-/
 
 @[expose] public section
 noncomputable section
@@ -60,9 +61,9 @@ def listMappedParameterIso :
     (coefficientComparison E b V W e) (L.algebra.withParameters P) ≪≫
       mappedParametersIso E b V W e L.algebra
 
-/-- Actual target-algebra constructor comparisons transport the source
-fold. The target parameter may be related to the source by any actual
-isomorphism, including a counit; no inverse object is collapsed. -/
+/-- Target-algebra constructor comparisons transport the source fold. The target parameter
+may be related to the source by any isomorphism, including a counit; no inverse object
+is collapsed. -/
 theorem listParameterFold_comparison
     (B₀ : ListAlgebra (constantFamily P V)) (B₁ : ListAlgebra (constantFamily Q W))
     (i : (mappedListAlgebra (sliceEquivalence E b) (constantFamily P V)
@@ -128,7 +129,7 @@ private def mappedAppendAlgebraIso :
     exact h
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] in
-/-- A canonical product comparison respects the actual swapping map. -/
+/-- A canonical product comparison respects the swapping map. -/
 theorem list_map_swap (X : C) :
     E.functor.map (prod.lift (prod.snd : X ⨯ X ⟶ X) prod.fst) ≫
       prodComparison E.functor X X =
@@ -140,8 +141,8 @@ theorem list_map_swap (X : C) :
   · simp only [Category.assoc,prodComparison_fst,prodComparison_snd,
       prod.lift_snd,← E.functor.map_comp]
 
-/-- Concatenation is transported in manuscript order. Its actual
-parameter is the second list, and that swap is included explicitly. -/
+/-- Concatenation is transported in manuscript order. Its parameter is the second list,
+and that swap is included explicitly. -/
 theorem map_list_append :
     E.functor.map L.append = prodComparison E.functor L.algebra.carrier L.algebra.carrier ≫
       (mappedStableListAlgebra E V W e L).append := by

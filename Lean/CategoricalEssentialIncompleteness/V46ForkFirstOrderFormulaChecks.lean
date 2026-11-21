@@ -6,11 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkFirstOrderFormula
 
-/-! # Independent checks of fork formula initiality
-
-These checks cover the constructed formula algebra. Parameter stability,
-substitution and initial finite derivations remain separate obligations.
--/
+/-! # Initiality of the fork formula algebra -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

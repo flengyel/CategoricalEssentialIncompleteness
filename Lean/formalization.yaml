@@ -3,18 +3,19 @@ version: v0.4
 project:
   name: Logical consequence and essential incompleteness in recursion categories
   description: >-
-    Take two disjoint subobjects A and B of an object X in a regular category
-    with disjoint pullback-stable finite coproducts. Form the first-order language with
-    one nullary predicate for each index in X, with the parameter-stable syntax
-    and initial derivation algebras of Theorem 4.7. Take the predicates indexed by A
-    and the negations of those indexed by B as axioms. If the generated theory
-    is consistent, it is essentially incomplete if and only if A and B are
-    inseparable. Essential incompleteness quantifies over every consistent closed
-    internal extension in the same language. A Boolean assignment gives one
-    closed, consistent, complete theory extending every pair of signed axioms
-    it respects. The predicate category of Peano arithmetic supplies the
-    witness for the existence of a calculus with an inseparable pair and
-    an essentially incomplete signed theory.
+    Take two disjoint subobjects A and B of an object X in a regular category with
+    disjoint pullback-stable finite coproducts. Form the first-order language whose
+    nullary predicates are indexed by X, with the parameter-stable syntax and
+    initial derivation algebras of Theorem 4.7. The direct images of A under the
+    atomic sentence morphism and of B under its composite with negation generate the
+    signed theory. If the generated theory is consistent, it is essentially
+    incomplete if and only if A and B are inseparable. Essential incompleteness
+    quantifies over every consistent closed internal extension in the same language.
+    A Boolean assignment gives one closed, consistent, complete theory containing
+    the signed theory of every pair on which the assignment has the prescribed
+    values. The predicate category of Peano arithmetic supplies the witness for the
+    existence of a calculus with an inseparable pair and an essentially incomplete
+    signed theory.
   authors: [Florian Lengyel]
   responsible_maintainers: [Florian Lengyel]
   license: Apache-2.0
@@ -53,13 +54,14 @@ related_formalizations:
 
 status:
   scope: >-
-    The general equivalence assumes internal first-order syntax with the
-    indicated nullary predicates, the initial derivation algebras for axiom
-    subobjects, disjointness of the pair, and consistency of the generated
-    theory. A Boolean assignment to the atomic predicates gives a closed,
-    consistent, complete theory extending every set of signed axioms that it
-    satisfies. The existence assertion supplies a category, a calculus and a pair
-    satisfying these hypotheses for which both sides of the equivalence hold.
+    The general equivalence assumes internal first-order syntax with the indicated
+    nullary predicates, the initial derivation algebras for axiom subobjects,
+    disjointness of the pair, and consistency of the generated theory. A Boolean
+    assignment to the atomic predicates gives a closed, consistent, complete theory
+    that contains each signed theory whose positive and negative generators have the
+    prescribed truth values. The existence assertion supplies a category, a calculus
+    and a pair satisfying these hypotheses for which both sides of the equivalence
+    hold.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: [propext, Quot.sound, Classical.choice]
@@ -81,24 +83,23 @@ automation:
 
 fidelity:
   divergences: >-
-    The compared equivalence is the subobject form of Corollary 4.8. To obtain
-    its printed restriction-idempotent formulation, the manuscript passes to
-    the total category of a split restriction category in which each total
-    monomorphism has a partial inverse. The substantive Lean development proves
-    the resulting order isomorphism and its preservation of inseparability.
-    The comparison uses subobjects throughout. Its named definition
-    CEIPalomar.IsNullaryCalculus identifies the displayed syntax and deduction
-    data with those of the manuscript's nullary first-order calculus. For each
-    choice of the stipulated syntax, proof algebras and initiality,
-    ManuscriptChecks.isNullaryCalculus_of_data constructs the required witness.
-    ManuscriptChecks.printed_corollary applies the exported theorem in the total
-    category and identifies inseparability by RestrictionSubobjects.inseparable_iff.
-    Extensions range over all
-    consistent closed internal theories in the same language. A theory is
-    complete when its theorem and refutation subobjects cover the sentence
-    object. The concrete existential statement records the consequence of
-    Lemma 8.9 that such an inseparable example exists. The Solution uses the
-    predicate category for Peano arithmetic to furnish its witness.
+    The compared equivalence is the subobject form of Corollary 4.8. To obtain its
+    printed restriction-idempotent formulation, the manuscript passes to the total
+    category of a split restriction category in which each total monomorphism has a
+    partial inverse. The Lean development proves the resulting order isomorphism and
+    its preservation of inseparability. The comparison uses subobjects throughout.
+    Its named definition CEIPalomar.IsNullaryCalculus identifies the displayed
+    syntax and deduction data with those of the manuscript's nullary first-order
+    calculus. For each choice of the stipulated syntax, proof algebras and
+    initiality, ManuscriptChecks.isNullaryCalculus_of_data constructs the required
+    witness. ManuscriptChecks.printed_corollary applies the exported theorem in the
+    total category and identifies inseparability by
+    RestrictionSubobjects.inseparable_iff. Extensions range over all consistent
+    closed internal theories in the same language. A theory is complete when its
+    theorem and refutation subobjects cover the sentence object. The existence
+    statement records the consequence of Lemma 8.9 that such an inseparable example
+    exists. The Solution uses the predicate category for Peano arithmetic to furnish
+    its witness.
 
 review:
   status: agent-reviewed

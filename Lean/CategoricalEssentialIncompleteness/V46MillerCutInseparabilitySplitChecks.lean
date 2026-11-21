@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySplit
 
 
-/-! # Statement checks in `V46MillerCutInseparabilitySplitChecks` -/
+/-! # Cut subobjects in the restriction splitting -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersConstructors
 
 
-/-! # Statement checks in `V46ArithmeticIndexedFibersConstructorsChecks` -/
+/-! # Cartesian numeral comparison of the Hilbert rule signature -/
 
 @[expose] public section
 noncomputable section

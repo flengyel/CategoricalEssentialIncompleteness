@@ -8,13 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46UniformTrace
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPrimitiveParser
 
-/-! # A literal first-success trace code, uniform in the internal program index
+/-! # First-success traces with a variable program index
 
-The trace code is the pair of its stage and displayed output. Its arithmetic
-predicate checks the actual production history and every earlier stage. This
-file proves the all-model PA graph comparison and the standard output-reader
-certificate. The standard primitive-recursion certificate for the complete
-trace predicate is a separate obligation; totality alone is insufficient.
+A trace is coded by its stage and output. The predicate checks the computation at that
+stage and excludes success at each earlier stage. The graph comparison holds in every
+model of PA. The output reader acts on standard natural numbers.
 -/
 
 @[expose] public section
@@ -38,8 +36,8 @@ def traceFormula : 𝚺₁.Semisentence 3 :=
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- This is the actual total fixed-stage evaluator, selected from its
-proved production graph. No totality premise is supplied by a caller. -/
+/-- This is the total fixed-stage evaluator, selected from its proved production graph. No
+totality premise is supplied by a caller. -/
 noncomputable def stageValue (s e x : M) : M :=
   Classical.choose (eval_codeHistoryEvaluator_exists s e x)
 
@@ -123,8 +121,8 @@ theorem trace_comparison_PA : 𝗣𝗔 ⊢ traceComparisonSentence := by
   have h := graph_iff_trace (M := M)
   simpa [models_iff, traceComparisonSentence, out, eq_comm] using h
 
-/-- An actual standard primitive-recursion certificate for the output
-reader. It is independent of the still separate trace-predicate certificate. -/
+/-- A standard primitive-recursion certificate for the output reader. It is independent of
+the still separate trace-predicate certificate. -/
 theorem out_primrec : Primrec (out : ℕ → ℕ) :=
   SyntacticSyntax.NatVectors.pi2_primrec
 

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.EnumerableLocalConnectedness
 public import CategoricalEssentialIncompleteness.EnumerableLimits
 public import CategoricalEssentialIncompleteness.RestrictionSpanPullbacks
 
-/-! # Actual monic spans present partial recursive numerical maps -/
+/-! # Monic spans present partial recursive numerical maps -/
 
 @[expose] public section
 

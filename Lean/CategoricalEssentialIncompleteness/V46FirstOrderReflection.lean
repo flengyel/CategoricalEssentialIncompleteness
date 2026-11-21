@@ -149,9 +149,8 @@ theorem image_monotone {A B : Over S} (f : A ⟶ B) :
   rw [← Over.w f]
   exact imageSubobject_comp_le f.left B.hom
 
-/-- The object action is the formula printed for Γ: generate the image
-of the axiom presentation. No derivation algebra for that presentation
-is required. -/
+/-- The object action is the formula for Γ: generate the image of the axiom presentation.
+No derivation algebra for that presentation is required. -/
 def presentationGeneration : Over S ⥤ Theory proofs where
   obj A := ⟨generated proofs (imageSubobject A.hom),
     idempotent proofs proofInitial (imageSubobject A.hom)⟩

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticDistributionTransport
 
 
-/-! # Statement checks in `V46NumericalArithmeticDistributionTransportChecks` -/
+/-! # The numerical absent-variable fiber under the literal equivalence -/
 
 @[expose] public section
 noncomputable section

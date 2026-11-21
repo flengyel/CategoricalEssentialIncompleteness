@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalSyntaxTreeChart
 
 
-/-! # Statement checks in `V46NumericalSyntaxTreeChartChecks` -/
+/-! # Constructor-compatible numerical tree charts -/
 
 @[expose] public section
 noncomputable section

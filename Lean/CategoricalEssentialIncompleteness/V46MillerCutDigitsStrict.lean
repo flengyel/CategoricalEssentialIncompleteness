@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.V46MillerDyadicEffective
 
 /-! # Uniform finite certificates for the two strict coordinate cuts
 
-These are the actual cut domains in the representation-independent source.
-Their enumeration uses only finite dyadic inequalities and retains the
-same numerical word for each representation.
+These are the cut domains in the representation-independent source. Their enumeration
+uses only finite dyadic inequalities and retains the same numerical word for each
+representation.
 -/
 
 @[expose] public section

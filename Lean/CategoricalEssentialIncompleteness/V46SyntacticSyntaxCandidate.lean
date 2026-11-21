@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFibers
 
-/-! # Ternary graphs of actual morphisms from constant parameter families -/
+/-! # Ternary graphs of morphisms from constant parameter families -/
 
 @[expose] public section
 
@@ -42,8 +42,8 @@ def rawArrow (f : constantFamily P C ⟶ X) : TernaryGraph :=
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- A candidate graph has the full source and target-fiber support solely
-because the original arrow is a morphism over the parameter. -/
+/-- A candidate graph has the full source and target-fiber support solely because the
+original morphism is a morphism over the parameter. -/
 theorem rawArrow_support (f : constantFamily P C ⟶ X) (p u v : M)
     (h : (rawArrow T f).val.Evalb ![p, u, v]) :
     P.val.Evalb ![p] ∧ C.val.Evalb ![u] ∧ X.left.val.Evalb ![v] ∧
@@ -78,8 +78,8 @@ theorem rawArrow_existsUnique (f : constantFamily P C ⟶ X)
   exact hf.symm.trans (congrArg ((F T M).map f.left) he)
 
 
-/-- On the unique product point over the given parameter and child word,
-the ternary candidate graph is exactly the original categorical arrow. -/
+/-- On the unique product point over the given parameter and child word, the ternary
+candidate graph is exactly the original categorical morphism. -/
 theorem rawArrow_model (f : constantFamily P C ⟶ X)
     (p : Obj T M P) (u : Obj T M C) (z : Obj T M (P ⨯ C))
     (v : Obj T M X.left)
@@ -104,8 +104,8 @@ theorem rawArrow_model (f : constantFamily P C ⟶ X)
       ⟨z.val, hz, (chosenGraph_map_iff T M f.left z v).mpr h⟩
 
 
-/-- Applying an actual slice arrow changes the raw child-word coordinate
-into the full underlying target value, while retaining the parameter. -/
+/-- Applying a slice morphism changes the raw child-word coordinate into the full
+underlying target value, while retaining the parameter. -/
 theorem rawArrow_fiberLeaf (f : constantFamily P C ⟶ X)
     (p : Obj T M P) (u v : M) (z : Obj T M (P ⨯ C))
     (hz : (constantLeaf T P C).val.Evalb ![p.val, u, z.val])

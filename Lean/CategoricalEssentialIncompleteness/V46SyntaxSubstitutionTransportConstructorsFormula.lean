@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore
 
-/-! Formula constructor comparisons obtained from the actual algebra
-isomorphism, with explicit coefficient-template normalization. -/
+/-!
+Formula constructor comparisons obtained from the algebra isomorphism, with explicit
+coefficient-template normalization.
+-/
 
 @[expose] public section
 noncomputable section

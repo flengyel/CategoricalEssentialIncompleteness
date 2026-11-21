@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCutDistanceApproximation
 
 
-/-! # Statement checks in `V46MillerCutDistanceApproximationChecks` -/
+/-! # Effective finite rational approximation of the bad-set distance -/
 
 @[expose] public section
 noncomputable section

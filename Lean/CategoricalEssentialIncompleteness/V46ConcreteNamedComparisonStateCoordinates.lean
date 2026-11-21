@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonProje
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonResults
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationMap
 
-/-! # Native payload coordinates on the actual substitution state objects -/
+/-! # Numerical payload coordinates on the substitution state objects -/
 
 @[expose] public section
 
@@ -66,10 +66,10 @@ def nativePayloadCarrier (V : Carrier) (σ π : ℕ → Carrier) (d : ℕ) : Boo
   | false => ConcreteNamedSubstitution.termPayloadCarrier V σ π d
   | true => ConcreteNamedSubstitution.formulaPayloadCarrier V σ π d
 
-/-- The FV metadata is related to the original word by the proved
-numerical graph. This is a positive relation, used only in the forward
-polynomial chart. Its truth for computed leaves will be derived from
-the two actual projection Homs, not assumed as an evaluator field. -/
+/-- The FV metadata is related to the original word by the proved numerical graph. This is
+a positive relation, used only in the forward polynomial chart. Its truth for computed
+leaves will be derived from the two projection Homs, not assumed as an evaluator
+field. -/
 def stateLeaf (formula : Bool) : TernaryGraph :=
   let C := nativePayloadCarrier V σ π d formula
   let Fp := (chosenGraph T (prod.fst : P ⨯ computationState T V σ π d formula ⟶ P)).graph
@@ -185,10 +185,9 @@ theorem stateLeaf_computed (formula : Bool)
       x.property t.property w.property
     exact hv.trans (congrArg (ConcreteNamedSubstitution.freeVariables V σ π d) ho).symm
 
-/-- The actual finite polynomial map of the computed state morphisms
-has the native payload coordinates obtained by the proved numeric loop.
-This only uses a forward chart, so no chosen-product-code identity or
-generic representation inverse is required. -/
+/-- The finite polynomial map of the computed state morphisms has the numerical payload
+coordinates obtained by the proved numeric loop. This only uses a forward chart, so no
+chosen-product-code identity or generic representation inverse is required. -/
 theorem computedState_polynomialCoordinates
     (p : Obj T M (U ⨯ (syntaxCarrier V σ π d false : PredicateCategory T)))
     (a : SyntaxPolynomial (PredicateCategory T)) (u : M)

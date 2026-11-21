@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationInduction
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationInductionChecks` -/
+/-! # Literal induction-matrix enumeration through substitution graphs -/
 
 @[expose] public section
 noncomputable section

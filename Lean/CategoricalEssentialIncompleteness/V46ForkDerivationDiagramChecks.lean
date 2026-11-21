@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationDiagram
 
 
-/-! # Statement checks in `V46ForkDerivationDiagramChecks` -/
+/-! # The derivation universal property in the numerical diagram category -/
 
 @[expose] public section
 noncomputable section

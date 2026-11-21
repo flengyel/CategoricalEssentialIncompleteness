@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationNaturality
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationNaturalityChecks` -/
+/-! # Naturality of the arithmetic polynomial comparison -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ExponentialPairing
 public import Mathlib.Computability.Primrec.Basic
 
-/-! # A primitive-recursion certificate for the printed product pairing -/
+/-! # A primitive-recursion certificate for the product pairing -/
 
 @[expose] public section
 

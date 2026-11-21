@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticDomainExtension
 
-/-! # The actual canonical domain interpretation and source Γ range -/
+/-! # The canonical domain interpretation and source Γ range -/
 
 @[expose] public section
 noncomputable section

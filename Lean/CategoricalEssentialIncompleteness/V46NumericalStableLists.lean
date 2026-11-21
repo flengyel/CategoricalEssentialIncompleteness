@@ -24,7 +24,7 @@ open CategoricalEssentialIncompleteness.LocalConnectedness
 
 namespace CategoricalEssentialIncompleteness.V46.NumericalStableLists
 
-/-- The actual standard-model comparison preserves restriction domains. -/
+/-- The standard-model comparison preserves restriction domains. -/
 theorem standardComparison_preserves : PreservesRestriction StandardTrueTheory.comparison := by
   intro X Y f
   apply FunctorImage.Hom.ext
@@ -39,8 +39,8 @@ theorem standardInverse_preserves :
   exact LocalConnectedness.V46.equivalence_inverse_preserves
     StandardTrueTheory.equivalence standardComparison_preserves f
 
-/-- The full standard theory and ordinary recursive maps have equivalent
-restriction splittings, with the actual idempotent and morphism maps. -/
+/-- The full standard theory and ordinary recursive maps have equivalent restriction
+splittings, with the idempotent and morphism maps. -/
 def standardSplittingEquivalence :
     SplitObject (FailureOfComposition.TypedProgramCategory.CodedProgramCategory 𝗧𝗔) ≌
       SplitObject ClassicalPrograms.Rec :=
@@ -51,13 +51,13 @@ theorem standardSplitting_preserves :
     PreservesRestriction standardSplittingEquivalence.functor :=
   PreservesRestriction.splitFunctor_rst standardComparison_preserves
 
-/-- Total arrows, rather than merely underlying set functions, are compared. -/
+/-- Total morphisms, rather than merely underlying set functions, are compared. -/
 def standardTotalEquivalence : SyntacticPredicates.TotalSplit 𝗧𝗔 ≌
     PartialSpans.Total (SplitObject ClassicalPrograms.Rec) :=
   PreservesRestriction.totalEquivalence standardSplitting_preserves
 
-/-- The syntactic total category of the full standard theory presents
-the literal numerical tuple category. -/
+/-- The syntactic total category of the full standard theory presents the numerical tuple
+category. -/
 def numericalEquivalence : SyntacticPredicates.TotalSplit 𝗧𝗔 ≌ NumericalTuples.Object :=
   standardTotalEquivalence.trans NumericalTuples.classicalTotalEquivalence.symm
 

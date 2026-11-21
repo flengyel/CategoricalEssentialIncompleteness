@@ -10,12 +10,12 @@ public import CategoricalEssentialIncompleteness.V46MillerIncompleteness
 public import CategoricalEssentialIncompleteness.V46MillerTotalPartialMaps
 public import CategoricalEssentialIncompleteness.V46RegularImage
 
-/-! # Incompleteness of the actual chosen canonical Γ image
+/-! # Incompleteness of the chosen canonical Γ image
 
-The theory idempotent here is the range of the chosen canonical sentence
-conclusion. Its identification with the literal sentence theory is derived
-from the proved generated-subobject comparison and the partial inverse of
-the actual regular-image mono. No proof-fiber selector is used.
+The theory idempotent here is the range of the chosen canonical sentence conclusion.
+Its identification with the sentence theory is derived from the proved
+generated-subobject comparison and the partial inverse of the regular-image mono. No
+proof-fiber selector is used.
 -/
 
 @[expose] public section
@@ -45,8 +45,8 @@ private theorem range_factor {X I Y : Total.CanonicalTotal a}
     simpa only [show (𝟙 I : I ⟶ I).hom=𝟙 I.obj from rfl,Category.id_comp] using hm
   exact h.trans hm'.symm
 
-/-- Equality to the actual image subobject determines the restriction range.
-The isomorphism is obtained from equality in Subobject, not postulated. -/
+/-- Equality to the image subobject determines the restriction range. The isomorphism is
+obtained from equality in Subobject, not postulated. -/
 private theorem range_of_image_eq {X I Y : Total.CanonicalTotal a}
     (f : X ⟶ Y) (m : I ⟶ Y) [Mono m]
     (h : imageSubobject f=Subobject.mk m) :
@@ -114,8 +114,8 @@ local notation "SC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (Cat
 local notation "LC" => CarrierIdempotents.SplitCarrier (WideSubcategory.obj (TheorySentenceWords.literalObject (P)))
 local notation "CS" => WideSubcategory.obj (CategoricalSyntax.sentenceObject (S₂))
 
-/-- The actual equivalence uses the original source sentence coordinate.
-This equality does not identify a chosen sentence point with a formula word. -/
+/-- The equivalence uses the original source sentence coordinate. This equality does not
+identify a chosen sentence point with a formula word. -/
 theorem mapped_sentence_object : ((E).functor.obj (S₁).sentenceObject).obj=(SC) :=
   congrArg (fun X : Total.CanonicalTotal a => X.obj)
     (Total.pointPresentation_object a (S₁).sentenceObject)
@@ -133,8 +133,8 @@ def sourceSentenceIso : (SC) ≅ (CS) where
   inv_hom_id := congrArg (fun k : (S₂).sentenceObject ⟶ (S₂).sentenceObject => k.hom)
     (CanonicalPresentation.mappedSentenceIso a (V) σ π d).inv_hom_id
 
-/-- The fixed chart from the genuine canonical sentence pullback to literal
-recursive sentences; it is independent of Γ. -/
+/-- The fixed chart from the canonical sentence pullback to recursive sentences; it is
+independent of Γ. -/
 def sentenceChart : (CS) ≅ (LC) :=
   (sourceSentenceIso a).symm≪≫Incompleteness.splitSentenceIso (P)
 
@@ -144,8 +144,8 @@ def chartIdemIso : Idem (CS) ≃o Idem (LC) := idemIso a (sentenceChart a)
 def theoremIdem (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) : Idem (CS) :=
   Ranges.range (CanonicalPresentation.chosenSentenceConclusion a σ π d Γ hΓ).hom
 
-/-- The displayed idempotent represents the regular image of this exact
-chosen conclusion, through the inverse of its actual image inclusion. -/
+/-- The displayed idempotent represents the regular image of this exact chosen conclusion,
+through the inverse of its image inclusion. -/
 theorem theorem_regular_image (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     ∃ r : (CS) ⟶ (image (CanonicalPresentation.chosenSentenceConclusion a σ π d Γ hΓ)).obj,
       (image.ι (CanonicalPresentation.chosenSentenceConclusion a σ π d Γ hΓ)).hom≫r=𝟙 _ ∧
@@ -172,8 +172,8 @@ def refutationIdem (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) : Ide
 
 theorem nu_total : isTotal (nu a) := (S₂).sentenceNegation.property
 
-/-- The canonical chosen image and the source image have the same range,
-using the actual regular image and its constructed monic partial inverse. -/
+/-- The canonical chosen image and the source image have the same range, using the regular
+image and its constructed monic partial inverse. -/
 theorem theorem_range_comparison (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     theoremIdem a Γ hΓ=Ranges.range
       (((E).functor.map (NamedProofImage.sentenceConclusion (P) σ π d Γ hΓ)).hom≫
@@ -201,8 +201,8 @@ theorem theorem_range_comparison (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (�
         (S₂).sentenceObject => Ranges.range k.hom) hfac).symm.trans hf
   exact hc.trans hfac'.symm
 
-/-- The fixed point-presentation functor is the actual inclusion on
-supported arrows, so its range is the included original sentence range. -/
+/-- The fixed point-presentation functor is the inclusion on supported morphisms, so its
+range is the included original sentence range. -/
 theorem mapped_source_range (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     Ranges.range ((E).functor.map
       (NamedProofImage.sentenceConclusion (P) σ π d Γ hΓ)).hom=
@@ -216,8 +216,8 @@ theorem source_theorem_conjugacy (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (�
     (sourceSentenceIso a).hom_inv_id,Idem.pull_id]
   exact mapped_source_range a Γ hΓ
 
-/-- Extension of T_a is equivalent to inclusion of the actual chosen
-canonical generated theory ranges. -/
+/-- Extension of T_a is equivalent to inclusion of the chosen canonical generated theory
+ranges. -/
 theorem extends_iff_theoremIdem_le (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     RealClosedBounds.Extends a Γ ↔
       theoremIdem a (RealClosedAxioms.theoryAxioms a)
@@ -292,8 +292,8 @@ theorem refutation_conjugacy_hom (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (�
   rw [← refutation_conjugacy]
   exact Idem.isoEquiv_hom (sentenceChart a) _
 
-/-- The printed canonical consistency hypothesis is exactly closed native
-consistency, with no truth assumption on Γ. -/
+/-- The canonical consistency hypothesis is exactly closed Hilbert consistency, with no
+truth assumption on Γ. -/
 theorem consistent_iff_canonical_disjoint (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     TheoryDomainApplication.Consistent Γ ↔
@@ -312,8 +312,8 @@ theorem consistent_iff_canonical_disjoint (Γ : Set ℕ)
     simpa only [(chartIdemIso a).map_inf,(chartIdemIso a).map_bot,
       theorem_conjugacy a Γ hΓ,refutation_conjugacy a Γ hΓ] using hh
 
-/-- Theorem 8.6 for the actual chosen canonical Γ initial-algebra image.
-The top is the identity of the genuine chosen sentence object. -/
+/-- Theorem 9.7 for the chosen canonical Γ initial-algebra image. The top is the identity
+of the chosen sentence object. -/
 theorem printed_essential_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (hext : RealClosedBounds.Extends a Γ)
     (hcons : theoremIdem a Γ hΓ⊓Idem.pull (nu a) (theoremIdem a Γ hΓ)=⊥) :
@@ -354,8 +354,8 @@ theorem printed_noncoverage (ha : IsMiller a) (Γ : Set ℕ)
     theoremIdem a Γ hΓ⊔Idem.pull (nu a) (theoremIdem a Γ hΓ)≠(⊤ : Idem (CS)) :=
   (printed_essential_incompleteness a ha Γ hΓ hext hcons).2
 
-/-- The canonical categorical formulation uses actual theory inclusion
-and the actual sentence consistency equation. -/
+/-- The canonical categorical formulation uses theory inclusion and the sentence
+consistency equation. -/
 theorem printed_categorical_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ))
     (hext : theoremIdem a (RealClosedAxioms.theoryAxioms a)

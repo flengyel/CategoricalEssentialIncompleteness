@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermCommutation
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFormulaCommutation
 
-/-! # The numerical state traversal is the actual stable substitution fold -/
+/-! # The numerical state traversal is the stable substitution fold -/
 
 @[expose] public section
 
@@ -56,8 +56,8 @@ theorem computedFormula_commutes :
   intro q
   exact computedFormula_commutes_model T V σ π d M q
 
-/-- Every constructor equation has been proved before this actual
-algebra morphism is formed; no commutation or initiality field is supplied. -/
+/-- Every constructor equation has been proved before this algebra morphism is formed; no
+commutation or initiality field is supplied. -/
 def computedSubstitutionHom : (A₀) ⟶ (S).substitutionAlgebra where
   f := computedStatePair T V σ π d
   h := Prod.ext (computedTerm_commutes T V σ π d) (computedFormula_commutes T V σ π d)

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxSource
 
-/-! # Actual arbitrary-slice fold morphisms on the original literal words
+/-! # Arbitrary-slice fold morphisms on the original literal words
 
 The selected evaluator is restricted to the original syntax word
 predicate. The singleton and fiber theorems prove support, totality and

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBound
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodesModels
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchSource
 
-/-! # Interpreted diagonal bounds for the actual source inverse images -/
+/-! # Interpreted diagonal bounds for the source inverse images -/
 
 @[expose] public section
 
@@ -32,8 +32,8 @@ section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable [M ≡ₑ[ℒₒᵣ] ℕ]
 
-/-- The bound is an order relation on the full interpreted natural-number
-carrier. Its right side interprets the actual source theorem inverse image. -/
+/-- The bound is an order relation on the full interpreted natural-number carrier. Its
+right side interprets the source theorem inverse image. -/
 theorem model_positive_of_axioms_admissible (A : Carrier)
     (hPA : ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔) :
     (SyntacticModel.modelRangeFunctor 𝗣𝗔 M).mapIdem ArithmeticDiagonalCodes.a0 ≤
@@ -47,8 +47,8 @@ theorem model_positive_of_axioms_admissible (A : Carrier)
   rw [support_setIdem,support_setIdem]
   exact semantic_positive_of_axioms_admissible M A hPA
 
-/-- The second diagonal domain is contained in the actual source
-refutation inverse image, at every internal code of the model. -/
+/-- The second diagonal domain is contained in the source refutation inverse image, at
+every internal code of the model. -/
 theorem model_negative_of_axioms_admissible (A : Carrier)
     (hPA : ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔) :
     (SyntacticModel.modelRangeFunctor 𝗣𝗔 M).mapIdem ArithmeticDiagonalCodes.a1 ≤

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalRegular
 
 
-/-! # Statement checks in `V46MillerTotalRegularChecks` -/
+/-! # Regularity from uniform fiber-constant descent -/
 
 @[expose] public section
 noncomputable section

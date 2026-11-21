@@ -13,7 +13,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralSentenc
 public import CategoricalEssentialIncompleteness.V46NumericalSentenceMorphisms
 public import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
 
-/-! # Actual arithmetic formula and sentence coordinates
+/-! # Arithmetic formula and sentence coordinates
 
 The comparisons preserve the named word. Each direction is a numerical
 morphism, with a partial-recursive program total on its carrier.
@@ -108,8 +108,8 @@ theorem formula_membership (n : ℕ) :
         (fun k m => (LiteralSignature.coefficient_membership functionSymbols k m).symm)
         (fun k m => (LiteralSignature.coefficient_membership relationSymbols k m).symm) n)
 
-/-- These are actual numerical isomorphisms onto the fixed PA named-word
-carriers. The inverse coefficient formulas are compared, not identified. -/
+/-- These are numerical isomorphisms onto the fixed PA named-word carriers. The inverse
+coefficient formulas are compared, not identified. -/
 def termIso : numericalSyntax.algebra.a.1 ≅ numericalInterpretation.obj originalSyntax.algebra.a.1 :=
   NumericalNamed.literalTermPresentationIso NumericalNamed.variableObject functions relations bound ≪≫
     wordIso sourceSyntax.algebra.a.1 (originalSyntax.algebra.a.1 : PredicateCategory 𝗧𝗔) term_membership
@@ -277,7 +277,7 @@ def sentenceIso : numericalSyntax.sentenceObject ≅
     numericalInterpretation.obj originalSyntax.sentenceObject :=
   asIso literalSentence ≪≫ numericalInterpretation.mapIso ArithmeticLiteralModel.sentenceChart
 
-/-- The square uses the actual formula chart and the actual PA inclusion. -/
+/-- The square uses the formula chart and the PA inclusion. -/
 theorem sentence_inclusion : sentenceIso.hom ≫ numericalInterpretation.map originalSyntax.sentenceInclusion =
     numericalSyntax.sentenceInclusion ≫ formulaIso.hom := by
   apply NumericalTuples.Map.ext

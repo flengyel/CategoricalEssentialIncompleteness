@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalCoproducts
 
 
-/-! # Statement checks in `V46MillerTotalCoproductsChecks` -/
+/-! # Tagged coproducts of arbitrary uniformly semidecidable carriers -/
 
 @[expose] public section
 noncomputable section

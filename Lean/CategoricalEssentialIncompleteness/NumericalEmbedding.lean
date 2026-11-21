@@ -101,7 +101,7 @@ instance toPER_full : toPER.Full where
       change (supportIdentity X.obj.carrier n).bind f.val = f.val n
       rw [supportIdentity, Part.assert_pos hn.1, Part.bind_some]
 
-/-- A total recursive numerical function, as a total categorical arrow. -/
+/-- A total recursive numerical function, as a total categorical morphism. -/
 def natArrow (f : ℕ → ℕ) (hf : Computable f) : totalObject nat ⟶ totalObject nat where
   hom :=
     { val n := Part.some (f n)
@@ -110,7 +110,7 @@ def natArrow (f : ℕ → ℕ) (hf : Computable f) : totalObject nat ⟶ totalOb
       target := fun _ ↦ Set.mem_univ _ }
   property := (total_iff _).mpr (fun _ _ ↦ Part.some_dom _)
 
-/-- The ordinary numerical function denoted by a total arrow on ℕ. -/
+/-- The ordinary numerical function denoted by a total morphism on ℕ. -/
 def natFunction (f : totalObject nat ⟶ totalObject nat) (n : ℕ) : ℕ :=
   (f.hom.val n).get ((total_iff f.hom).mp f.property n (Set.mem_univ _))
 

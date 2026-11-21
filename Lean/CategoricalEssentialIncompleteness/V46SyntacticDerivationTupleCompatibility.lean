@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationTuples
 
-/-! Literal ordered tuple action agrees with the actual polynomial power map. -/
+/-! Literal ordered tuple action agrees with the polynomial power map. -/
 
 @[expose] public section
 noncomputable section
@@ -85,7 +85,7 @@ theorem hom_eq_of_relation_imp {A B : PredicateCategory T} (f g : A ⟶ B)
 section ModelsForCompatibility
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- The actual product-map equations determine both component relations. -/
+/-- The product-map equations determine both component relations. -/
 theorem product_map_components {A B C D : PredicateCategory T} (f : A ⟶ C) (g : B ⟶ D)
     (x y a b c d : M)
     (hm : relation T (prod.map f g) M x y)
@@ -108,8 +108,8 @@ theorem product_map_components {A B C D : PredicateCategory T} (f : A ⟶ C) (g 
 
 variable [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- This compares the actual chosen categorical power map with its raw
-coordinates, using given representation graphs in every model of T. -/
+/-- This compares the chosen categorical power map with its raw coordinates, using given
+representation graphs in every model of T. -/
 theorem power_map_coordinates {F G : PredicateCategory T} (f : GraphMorphism T F G)
     (n : ℕ) (u v x y : M)
     (hu : (baseRepresentation T F F (SyntaxPolynomial.power .term n)).val.Evalb ![u, x])

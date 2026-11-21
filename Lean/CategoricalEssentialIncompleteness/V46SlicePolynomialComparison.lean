@@ -84,8 +84,8 @@ def input (p : SyntaxPolynomial I) (X : Over P × Over P) {j k : J} (f : j ⟶ k
     (localCarrier P X j) (localCarrier P X k)
     (SliceEvaluation.transition P X.1 f, SliceEvaluation.transition P X.2 f)
 
-/-- The actual evaluation and coefficient comparisons commute with every
-parameter transition, for arbitrary recursive families. -/
+/-- The evaluation and coefficient comparisons commute with every parameter transition,
+for arbitrary recursive families. -/
 theorem transition_square (p : SyntaxPolynomial I) (X : Over P × Over P)
     {j k : J} (f : j ⟶ k) :
     SliceEvaluation.transition P ((p.mapCoefficients (globalCoefficients c P)).eval.obj X) f ≫
@@ -99,8 +99,8 @@ theorem transition_square (p : SyntaxPolynomial I) (X : Over P × Over P)
     (Over.postMap (X := P) ((evaluation J C).map f))
     (fun i => SliceEvaluation.coefficient_square P (c i) f) p X
 
-/-- Every global polynomial operation induces an actual component
-operation, using the inverse of the proved evaluation comparison. -/
+/-- Every global polynomial operation induces a component operation, using the inverse of
+the proved evaluation comparison. -/
 def operation (p : SyntaxPolynomial I) (X : Over P × Over P) (Y : Over P)
     (r : (p.mapCoefficients (globalCoefficients c P)).eval.obj X ⟶ Y) (j : J) :
     (p.mapCoefficients (localCoefficients c P j)).eval.obj (localCarrier P X j) ⟶

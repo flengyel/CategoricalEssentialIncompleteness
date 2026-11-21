@@ -28,8 +28,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 variable {Fm : PredicateCategory T} {bound : ℕ} (R : RulePresentation Fm bound)
 
-/-- A Pi-one predicate closed under the actual typed rule constructors
-holds on every internal derivation code, including nonstandard codes. -/
+/-- A Pi-one predicate closed under the typed rule constructors holds on every internal
+derivation code, including nonstandard codes. -/
 theorem model_rule_induction (φ : 𝚷₁.Semiformula M 1)
     (step : ∀ (i : Fin (bound + 1))
       (r : Obj T M (R.ruleObject (derivationAlgebra T R).a i)),

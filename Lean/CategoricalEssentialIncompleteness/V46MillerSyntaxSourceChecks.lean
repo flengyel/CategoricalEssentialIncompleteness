@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxSource
 
 
-/-! # Statement checks in `V46MillerSyntaxSourceChecks` -/
+/-! # Original accepted words supply the evaluator hypotheses -/
 
 @[expose] public section
 noncomputable section

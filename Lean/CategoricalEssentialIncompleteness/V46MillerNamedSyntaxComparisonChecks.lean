@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparison
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonChecks` -/
+/-! # Constructor-preserving comparison with the original named PA syntax -/
 
 @[expose] public section
 noncomputable section

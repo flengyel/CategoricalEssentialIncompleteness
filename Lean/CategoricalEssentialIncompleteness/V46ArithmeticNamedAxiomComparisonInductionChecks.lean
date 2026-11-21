@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticNamedAxiomComparisonInduction
 
 
-/-! # Statement checks in `V46ArithmeticNamedAxiomComparisonInductionChecks` -/
+/-! # Named induction and the source PA universal closure -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

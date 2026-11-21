@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticListsTotal
 
-/-! # Checks for actual stable lists in both syntactic presentations -/
+/-! # Checks for stable lists in both syntactic presentations -/
 
 @[expose] public section
 

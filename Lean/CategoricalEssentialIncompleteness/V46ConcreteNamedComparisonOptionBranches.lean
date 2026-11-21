@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptions
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
 
-/-! # Actual failure branches and scalar option-operation equations -/
+/-! # Failure branches and scalar option-operation equations -/
 
 @[expose] public section
 
@@ -144,8 +144,8 @@ theorem model_binary_success {C D : PredicateCategory T} (h : C ⨯ C ⟶ D)
   rw [← hz,← Functor.map_comp_apply,OptionSyntax.binary_ok_map,Functor.map_comp_apply,optionCode_inr]
   exact congrArg (fun w => Arithmetic.pair w 1) (by simpa only [hzx,hzy] using hf z)
 
-/-- Failure propagation is computed from the actual coproduct fibers;
-the successful values use the actual product projections of h. -/
+/-- Failure propagation is computed from the coproduct fibers; the successful values use
+the product projections of h. -/
 theorem optionCode_binary {C D : PredicateCategory T} (h : C ⨯ C ⟶ D)
     (φ : M → M → M)
     (hf : ∀ z : Obj T M (C ⨯ C), ((F T M).map h z).val =

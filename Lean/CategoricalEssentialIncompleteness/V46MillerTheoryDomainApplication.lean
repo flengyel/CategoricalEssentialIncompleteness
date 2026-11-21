@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46MillerRealClosedBounds
 public import CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents
 public import CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit
 
-/-! # The categorical domain argument for the actual Miller theory images
+/-! # The categorical domain argument for the Miller theory images
 
 The sentence object is the constructed named syntax. Its proof image is
 the range of the constructed finite-derivation conclusion. An extension
@@ -55,7 +55,7 @@ theorem support_range (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) (s
   rw [Total.support_range]
   rfl
 
-/-- The verified literal proof-image theorem on the actual split carrier. -/
+/-- The verified literal proof-image theorem on the split carrier. -/
 private theorem literal_theorem_mem (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (φ : OrderedFieldSyntax.Formula)
     (hc : φ.freeVariables=[]) :
@@ -107,7 +107,7 @@ theorem numerical_domain :
   rw [Uniform.mem_identityOn,Part.mem_some_iff]
   exact ⟨fun h => h.2,fun h => ⟨TheorySentenceMorphisms.numerical_support (P) n,h⟩⟩
 
-/-- This is a chart of the actual included source N, with identity values. -/
+/-- This is a chart of the included source N, with identity values. -/
 def numbersIso : (N) ≅ CarrierIdempotents.SplitCarrier (NUM).obj :=
   splitIsoOfComm (Iso.refl (Uniform.N (P))) (by
     change (𝟙 (Uniform.N (P))) ≫ 𝟙 _=
@@ -204,8 +204,8 @@ theorem theoremIdem_mono (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ))
     ((theorem_mem a (RealClosedAxioms.theoryAxioms a)
       (RealClosedAxioms.theoryAxioms_enumerable a) s).mp hn)
 
-/-- Derivability extension is exactly inclusion of the actual generated
-sentence theories, rather than literal inclusion of axiom words. -/
+/-- Derivability extension is exactly inclusion of the generated sentence theories, rather
+than literal inclusion of axiom words. -/
 theorem extends_iff_theoremIdem_le (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     RealClosedBounds.Extends a Γ ↔ baseIdem a ≤ theoremIdem a Γ hΓ := by
   constructor
@@ -258,8 +258,8 @@ theorem consistency_disjoint (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈
     (.neg (decodedSentence a s)) (decodedSentence_closed a s)).mp hns
   exact hcons (decodedSentence a s) (decodedSentence_closed a s) ⟨hp,hnp⟩
 
-/-- Native consistency is exactly the manuscript's sentence consistency
-for the constructed Gamma derivation image. -/
+/-- Hilbert consistency is exactly the manuscript's sentence consistency for the
+constructed Gamma derivation image. -/
 theorem consistent_iff_disjoint (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ)) :
     Consistent Γ ↔
       theoremIdem a Γ hΓ ⊓ Idem.pull (negation a) (theoremIdem a Γ hΓ)=⊥ := by
@@ -280,8 +280,8 @@ theorem consistent_iff_disjoint (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·
     have hs := (CarrierIdempotents.disjoint_iff _ _).mp hd
     exact Set.disjoint_left.mp hs ht hn
 
-/-- The printed extension and consistency hypotheses discharge all premises
-of the categorical Corollary 4.3 on the actual source splitting. -/
+/-- The extension and consistency hypotheses discharge all premises of the categorical
+Corollary 4.3 on the source splitting. -/
 theorem categorical_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ)) (hext : RealClosedBounds.Extends a Γ)
     (hcons : Consistent Γ) :
@@ -297,8 +297,8 @@ theorem categorical_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
     (upper_bound a _ (RealClosedAxioms.theoryAxioms_enumerable a) hb)
     (theoremIdem a Γ hΓ) (theoremIdem_mono a Γ hΓ hext) (consistency_disjoint a Γ hΓ hcons)
 
-/-- The same Corollary 4.3 application with both hypotheses expressed
-on the actual generated restriction idempotents. -/
+/-- The same Corollary 4.3 application with both hypotheses expressed on the generated
+restriction idempotents. -/
 theorem categorical_incompleteness_of_theory_extension (ha : IsMiller a) (Γ : Set ℕ)
     (hΓ : Uniform.Enumerable (P) (·∈Γ))
     (hext : baseIdem a ≤ theoremIdem a Γ hΓ)

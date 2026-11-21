@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ForkDerivationComponentsBase
 
-/-! # Span naturality of the actual finite-rule inputs -/
+/-! # Span naturality of the finite-rule inputs -/
 
 @[expose] public section
 noncomputable section
@@ -228,8 +228,8 @@ private theorem sum_natural
       congrArg (fun k => k ≫ Limits.Sigma.map t) (h₀ i).symm
     _ = _ := by simp only [← Category.assoc,ι_comp_sigmaComparison]
 
-/-- The full input chart is natural for both span arrows and identities,
-using the original rule-label pullbacks and finite coproduct maps. -/
+/-- The full input chart is natural for both span morphisms and identities, using the
+original rule-label pullbacks and finite coproduct maps. -/
 theorem componentInputIso_transition (a b : Idem EffectiveFork.V) (Q : Over sentenceObject)
     {j k : WalkingSpan} (g : j ⟶ k) :
     (componentTransition g).app ((rules a b).inference.obj Q).left ≫ (componentInputIso a b Q k).hom =
@@ -589,8 +589,8 @@ private theorem componentInputTransition_mp (a b : Idem EffectiveFork.V)
               (componentSupport_re k a) (componentSupport_re k b) (componentOver Q k)
               (p.mapAtoms (spanAtoms g)) (q.mapAtoms (spanAtoms g)) (h.toFun x) (h.toFun y) hcx hcy).symm))
 
-/-- Every selected root and both ordered children have the actual
-span relabeling under the canonical input maps. -/
+/-- Every selected root and both ordered children have the span relabeling under the
+canonical input maps. -/
 theorem componentInputTransition_node (a b : Idem EffectiveFork.V) (Q : Over sentenceObject)
     {j k : WalkingSpan} (g : j ⟶ k)
     (n : Component.Node (componentSupport j a) (componentSupport j b) (componentOver Q j)) :
@@ -663,8 +663,8 @@ theorem componentAlgebra_node_natural (a b : Idem EffectiveFork.V)
   have hc := congrArg (fun f => f.toFun x) ((componentTransition g).naturality B.str.left)
   exact hc.trans (congrArg ((componentFunctor k).map B.str.left).toFun he)
 
-/-- The operation compatibility used for component folds is derived
-from the given GLOBAL algebra's actual natural structure morphism. -/
+/-- The operation compatibility used for component folds is derived from the given GLOBAL
+algebra's natural structure morphism. -/
 theorem componentAlgebra_naturality (a b : Idem EffectiveFork.V)
     (B : Endofunctor.Algebra (rules a b).inference) {j k : WalkingSpan} (g : j ⟶ k) :
     Naturality.AlgebraNaturality

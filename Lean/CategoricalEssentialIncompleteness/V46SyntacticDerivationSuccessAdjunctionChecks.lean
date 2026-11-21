@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationSuccessAdjunction
 
-/-! The actual success-pullback functor has the explicitly constructed option extension. -/
+/-! The success-pullback functor has the explicitly constructed option extension. -/
 
 @[expose] public section
 noncomputable section

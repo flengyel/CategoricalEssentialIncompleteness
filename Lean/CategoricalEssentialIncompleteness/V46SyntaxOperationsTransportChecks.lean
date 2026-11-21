@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxOperationsTransport
 
 
-/-! # Statement checks in `V46SyntaxOperationsTransportChecks` -/
+/-! # Fold equations under the polynomial and algebra comparisons -/
 
 @[expose] public section
 noncomputable section

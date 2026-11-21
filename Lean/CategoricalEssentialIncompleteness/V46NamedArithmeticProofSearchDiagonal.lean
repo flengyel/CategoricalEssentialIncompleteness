@@ -9,11 +9,11 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticProofSearchRe
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
 public import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalCodes
 
-/-! # Lemma 7.2 at the printed diagonal formula
+/-! # Lemma 8.2 at the diagonal formula
 
-The specialization is by theorem application, so the selected diagonal
-program index remains opaque. The input predicates are the actual generated
-Γ theorem/refutation images after the proved fixed-formula numeral map.
+The specialization is by theorem application, so the selected diagonal program index
+remains opaque. The input predicates are the generated Γ theorem/refutation images
+after the proved fixed-formula numeral map.
 -/
 
 @[expose] public section
@@ -62,8 +62,8 @@ theorem diagonalNegative_refutation_image (Γ : Carrier) (n : M) :
 
 end Models
 
-/-- The source arrow is chosen before M and before disjointness, and its
-fibers are the actual arithmetic Γ theorem/refutation images. -/
+/-- The source morphism is chosen before M and before disjointness, and its fibers are the
+arithmetic Γ theorem/refutation images. -/
 theorem diagonal_partial_proof_search (Γ : Carrier) :
     ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
       ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],

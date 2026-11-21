@@ -7,13 +7,12 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageAbsenceReflection
 
-/-! # All actual seven-scheme parameters yield finite native Γ proofs
+/-! # All seven-scheme parameters yield finite Hilbert proofs from Γ
 
-The target success points prove both native FreeFor conditions and their
-literal substitution results. The distribution parameter is reflected
-through the actual false classifier and the PA false fiber. No logical
-scheme coverage, source axiom admissibility or semantic validity premise
-is supplied.
+The target success points prove both free-for conditions and their literal
+substitution results. The distribution parameter is reflected through the false
+classifier and the PA false fiber. No logical scheme coverage, source axiom
+admissibility or semantic validity premise is supplied.
 -/
 
 @[expose] public section
@@ -153,8 +152,8 @@ theorem equality (p : (U).obj (S).equalitySchemeParameters) :
   rw [hv,decode_formulaPoint]
   exact FiniteAxiomProof.equality σ π d x φ u t ψ χ hfu hft hsu hst
 
-/-- Finite coproduct decomposition uses the actual preserved injections;
-no scalar parity convention for a chosen logical-parameter coproduct is imposed. -/
+/-- Finite coproduct decomposition uses the preserved injections; no scalar parity
+convention for a chosen logical-parameter coproduct is imposed. -/
 private theorem coproduct_point_cases {A B : Total.TotalCategory P} (p : (U).obj (A ⨿ B)) :
     (∃ a,(U).map (coprod.inl : A ⟶ A ⨿ B) a=p) ∨
       ∃ b,(U).map (coprod.inr : B ⟶ A ⨿ B) b=p :=
@@ -174,8 +173,8 @@ private theorem copair_finite {A B : Total.TotalCategory P}
 
 end SchemeReflection
 
-/-- Every point of the actual seven-scheme coproduct gives a finite native
-proof; no extra Γ enumeration premise is needed for logical schemes. -/
+/-- Every point of the seven-scheme coproduct gives a finite Hilbert proof; no extra Γ
+enumeration premise is needed for logical schemes. -/
 theorem logical_parameter_finite (P : Uniform.Family) (σ π : ℕ → Carrier) (d : ℕ)
     (Γ : Set ℕ) (l : Total.underlying.obj (syntaxData P σ π d).logicalParameters) :
     FiniteAxiomProof σ π d Γ (decodeFormula P σ π d

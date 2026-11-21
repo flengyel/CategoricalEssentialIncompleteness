@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptions
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonOptionsChecks` -/
+/-! # Option/product comparison for a finite-geometry functor -/
 
 @[expose] public section
 noncomputable section

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46Inference
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
 
-/-! Literal ordered premise tuples and their actual graph-defined action. -/
+/-! Ordered premise tuples and their graph-defined action. -/
 
 @[expose] public section
 noncomputable section
@@ -162,8 +162,8 @@ theorem finitePower_eq_polynomial (n : ℕ) :
         ((SyntaxPolynomial.power .term (n + 1)).eval.obj (F, F) ⨯ F)
       rw [ih]
 
-/-- Actual chosen finite powers are encoded by the already constructed
-polynomial graph. This introduces no representation hypothesis. -/
+/-- Chosen finite powers are encoded by the already constructed polynomial graph. This
+introduces no representation hypothesis. -/
 def finitePowerEncoder (n : ℕ) :
     GraphMorphism T (finitePower (D := PredicateCategory T) F n) (tupleCarrier F n) :=
   (chosenGraph T (eqToHom (C := PredicateCategory T) (finitePower_eq_polynomial T F n) :

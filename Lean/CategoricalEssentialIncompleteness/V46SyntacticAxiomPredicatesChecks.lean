@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticAxiomPredicates
 
 
-/-! # Statement checks in `V46SyntacticAxiomPredicatesChecks` -/
+/-! # The concrete sentence-axiom subobject of a Sigma-one enumeration -/
 
 @[expose] public section
 noncomputable section

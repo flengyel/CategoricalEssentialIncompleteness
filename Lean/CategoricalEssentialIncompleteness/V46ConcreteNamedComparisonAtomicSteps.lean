@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParam
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCanonicalCoordinates
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSubstitutionComponents
 
-/-! # Actual equality/relation substitution results on ordered child states -/
+/-! # Equality/relation substitution results on ordered child states -/
 
 @[expose] public section
 

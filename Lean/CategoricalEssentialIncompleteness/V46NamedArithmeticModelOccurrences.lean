@@ -7,9 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticModelCoding
 
-/-! Occurrence equations on finite external constructor charts with
-arbitrary internal children. All equations use actual PA constructor
-closure, and the children may be nonstandard model words. -/
+/-!
+Occurrence equations on finite external constructor charts with arbitrary internal
+children. All equations use PA constructor closure, and the children may be
+nonstandard model words.
+-/
 
 @[expose] public section
 noncomputable section

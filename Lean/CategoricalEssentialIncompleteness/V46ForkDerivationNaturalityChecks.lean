@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ForkDerivationNaturality
 
 
-/-! # Statement checks in `V46ForkDerivationNaturalityChecks` -/
+/-! # Folds and naturality on the valid fork proof carriers -/
 
 @[expose] public section
 noncomputable section

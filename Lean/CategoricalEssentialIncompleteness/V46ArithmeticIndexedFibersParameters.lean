@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersInference
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedRules
 
-/-! # Parameter-preserving restriction of the actual finite inference data
+/-! # Parameter-preserving restriction of the finite inference data
 
 Every child keeps its own formula coordinate. Only its external parameter
 is identified with that of its rule instance.
@@ -36,8 +36,8 @@ def parameterRule (i : Fin 3) : D := pullback (R.conclusion i ≫ prod.fst) m
 def parameterRuleConclusion (i : Fin 3) : parameterRule R m i ⟶ P ⨯ F :=
   prod.lift (pullback.snd _ _) (pullback.fst _ _ ≫ R.conclusion i ≫ prod.snd)
 
-/-- Restriction changes coefficient objects by the actual parameter
-pullbacks and repeats that same parameter in each ordered premise. -/
+/-- Restriction changes coefficient objects by the parameter pullbacks and repeats that
+same parameter in each ordered premise. -/
 def parameterRules : RulePresentation (P ⨯ F) 2 where
   instances := parameterRule R m
   premises := Fin.cases (terminal.from _)
@@ -67,8 +67,8 @@ theorem parameterRuleSquare (i : Fin 3) :
       (IsPullback.of_hasPullback (R.conclusion i ≫ prod.fst) m)
   exact outer.of_bot hw (IsPullback.of_prod_fst_with_id m F).flip
 
-/-- These are the two printed shared-parameter equations, used to derive
-the premise comparison; no fiber comparison is assumed. -/
+/-- These are the two shared-parameter equations, used to derive the premise comparison;
+no fiber comparison is assumed. -/
 def parameterRuleData (h : ParameterPreserving R) :
     RuleBaseChange.Data (prod.map m (𝟙 F)) (parameterRules R m) R where
   instanceMap i := pullback.fst (R.conclusion i ≫ prod.fst) m
@@ -105,8 +105,7 @@ def parameterRuleData (h : ParameterPreserving R) :
         · simp; rfl
   conclusion := parameterRuleSquare R m
 
-/-- Actual parameter preservation of the family rules, including the two
-distinct MP conclusions. -/
+/-- Parameter preservation of the family rules, including the two distinct MP conclusions. -/
 theorem familyParameterPreserving (E : D) {V L S A : D}
     (logical : L ⟶ F) (sentence : S ⟶ F) (axioms : A ⟶ E ⨯ S)
     (all : V ⨯ F ⟶ F) (imp : F ⨯ F ⟶ F) :
@@ -115,15 +114,15 @@ theorem familyParameterPreserving (E : D) {V L S A : D}
     ArithmeticIndexedRules.binary_first_parameter E logical sentence axioms all imp,
     ArithmeticIndexedRules.binary_second_parameter E logical sentence axioms all imp⟩
 
-/-- The complement's inference functor is the actual coefficient
-restriction prescribed in the manuscript, with derived base change. -/
+/-- The complement's inference functor is the coefficient restriction prescribed in the
+manuscript, with derived base change. -/
 def parameterInferenceComparison (h : ParameterPreserving R) :
     R.inference ⋙ Over.pullback (prod.map m (𝟙 F)) ≅
       Over.pullback (prod.map m (𝟙 F)) ⋙ (parameterRules R m).inference :=
   RuleBaseChange.comparison _ _ _ (parameterRuleData R m h)
 
-/-- Equality of the original base morphisms induces the actual pullback
-functor comparison, independently of their chosen graph expressions. -/
+/-- Equality of the original base morphisms induces the pullback functor comparison,
+independently of their chosen graph expressions. -/
 def pullbackEqIso {A B : D} {f g : A ⟶ B} (h : f = g) :
     Over.pullback f ≅ Over.pullback g := by
   cases h

@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.V46NullarySyntaxParameterConstr
 
 /-! # Boolean formula valuations with an internal parameter
 
-The atom assignment may vary with the parameter. The formula valuation is
-one morphism, obtained from the stable initial syntax algebra. Its values
-lie in the constant family of the actual Boolean object of the base category.
+The atom assignment may vary with the parameter. The formula valuation is one
+morphism, obtained from the stable initial syntax algebra. Its values lie in the
+constant family of the Boolean object of the base category.
 -/
 
 @[expose] public section

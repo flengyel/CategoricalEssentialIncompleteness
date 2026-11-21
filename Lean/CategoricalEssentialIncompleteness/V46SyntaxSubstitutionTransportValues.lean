@@ -8,9 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportAlgebra
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionPullbackTransport
 
-/-! Intrinsic term substitution and option-valued formula substitution
-commute with the actual input and output comparisons. Their admissibility
-objects are then compared by the genuine option-success pullback. -/
+/-!
+Intrinsic term substitution and option-valued formula substitution commute with the
+input and output comparisons. Their admissibility objects are then compared by the
+option-success pullback.
+-/
 
 @[expose] public section
 noncomputable section
@@ -31,8 +33,8 @@ private theorem substitutionValueFamilyMap_left {A B : Over P} (f : A ⟶ B) :
     ((sliceEquivalence E b).functor.map f).left = E.functor.map f.left := rfl
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] in
-/-- An equality of actual constant-family arrows gives the corresponding
-ordinary value square after applying the second product projection. -/
+/-- An equality of constant-family morphisms gives the corresponding ordinary value square
+after applying the second product projection. -/
 theorem substitutionFamilyValue_square {X Y : C} {X' Y' : D}
     (i : E.functor.obj X ≅ X') (j : E.functor.obj Y ≅ Y')
     (f : constantFamily P X ⟶ constantFamily P Y)
@@ -48,8 +50,8 @@ theorem substitutionFamilyValue_square {X Y : C} {X' Y' : D}
   exact hh
 
 omit [FinitaryExtensive C] [FinitaryExtensive D] in
-/-- A map into the actual product comparison can be projected without
-assuming either source or target product has numerical coordinates. -/
+/-- A map into the product comparison can be projected without assuming either source or
+target product has numerical coordinates. -/
 theorem substitutionValue_snd_square {X Y Z : C} {X' Y' Z' : D}
     (k : E.functor.obj X ≅ X') (i : E.functor.obj Y ≅ Y') (j : E.functor.obj Z ≅ Z')
     (f : X ⟶ Y ⨯ Z) (f' : X' ⟶ Y' ⨯ Z')

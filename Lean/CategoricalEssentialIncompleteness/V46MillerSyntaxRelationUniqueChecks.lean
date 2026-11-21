@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRelationUnique
 
 
-/-! # Statement checks in `V46MillerSyntaxRelationUniqueChecks` -/
+/-! # Constructor laws imply uniqueness for arbitrary standard-word relations -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

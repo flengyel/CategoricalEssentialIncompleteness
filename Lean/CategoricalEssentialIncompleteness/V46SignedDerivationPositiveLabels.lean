@@ -93,8 +93,8 @@ instance positiveLabels_definable : 𝚺₁-Function₁ (positiveLabels : M → 
 instance positiveLabels_definable' (Γ m) : Γ-[m + 1]-Function₁ (positiveLabels : M → M) :=
   positiveLabels_definable.of_sigmaOne
 
-/-- Occurrence is in the actual numerical word, with its model-internal
-length. The extraction retains every occurrence, including repetitions. -/
+/-- Occurrence is in the numerical word, with its model-internal length. The extraction
+retains every occurrence, including repetitions. -/
 theorem member_positiveLabels (n word : M) :
     member n (positiveLabels word) = 1 ↔ MemVec (leaf n 0) word := by
   classical

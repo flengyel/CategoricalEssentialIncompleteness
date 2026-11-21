@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBound
 
 /-! # Joint substituted provability predicates
 
-These use the actual named numeral-substitution and primitive-recursive
-negation graphs. Instantiating P with the constructed family provability
-predicate requires its proved numeral-fiber comparison.
+These use the named numeral-substitution and primitive-recursive negation graphs.
+Instantiating P with the constructed family provability predicate requires its proved
+numeral-fiber comparison.
 -/
 
 @[expose] public section
@@ -55,8 +55,8 @@ variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
 end Models
 
-/-- The printed sentence morphism for one joint provability matrix P.
-Its definition contains no fiber consistency or model-soundness proof. -/
+/-- The sentence morphism for one joint provability matrix P. Its definition contains no
+fiber consistency or model-soundness proof. -/
 def proofSentenceMorphism (P : Predicate₂) :
     ArithmeticOmegaComparison.identityOmega 𝗣𝗔 ⟶ NamedArithmeticLiteralTotal.literalSentence :=
   sentenceMorphism (positive P NamedArithmeticDiagonalBounds.namedAlpha)

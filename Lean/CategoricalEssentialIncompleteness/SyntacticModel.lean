@@ -255,8 +255,8 @@ theorem comparison_eq_sumIso (Q R : CodedProgramCategory T) :
     rw [Part.mem_some_iff]
     exact ⟨fun h => Subtype.ext h.2, fun h => ⟨y.property, congrArg Subtype.val h⟩⟩
 
-/-- The model interpretation preserves the exact structures required in
-Theorem 6.3, including the canonical coproduct comparison. -/
+/-- The model interpretation preserves the exact structures required in the
+section-lifting theorem, including the canonical coproduct comparison. -/
 def rangeFunctor : RangeFunctor (CodedProgramCategory T) Pfn where
   toFunctor := functor T M
   map_restrict := map_restriction T M

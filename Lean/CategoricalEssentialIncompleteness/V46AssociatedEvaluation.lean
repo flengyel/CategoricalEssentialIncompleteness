@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46RestrictionRetraction
 public import CategoricalEssentialIncompleteness.V46PartialSliceTheoryFamilies
 public import CategoricalEssentialIncompleteness.V46PartialSliceSpanPullback
 
-/-! # Evaluation of actual partial slices and the constant-family retraction -/
+/-! # Evaluation of partial slices and the constant-family retraction -/
 
 @[expose] public section
 noncomputable section

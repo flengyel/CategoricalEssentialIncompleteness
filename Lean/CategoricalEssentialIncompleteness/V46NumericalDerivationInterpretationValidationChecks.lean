@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationValidation
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationValidationChecks` -/
+/-! # Uniqueness of numerical validation from its exact successful pullback -/
 
 @[expose] public section
 noncomputable section

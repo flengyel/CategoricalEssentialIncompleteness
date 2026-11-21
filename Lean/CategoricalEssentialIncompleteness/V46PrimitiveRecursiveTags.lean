@@ -138,8 +138,8 @@ omit [M↓[ℒₒᵣ] ⊧* 𝗣𝗔] in
       (precBlueprint A B).resultDef.val.Evalb ![y, π₂ x, π₁ x] := by
   simp [precGraph]
 
-/-- This is the actual instantiation of Foundation's coded primitive
-recursion construction from two already proved child graphs. -/
+/-- This is the instantiation of Foundation's coded primitive recursion construction from
+two already proved child graphs. -/
 def precConstruction (A B : Graph) (f g : M → M)
     (hA : ∀ x y : M, A.val.Evalb ![y, x] ↔ y = f x)
     (hB : ∀ x y : M, B.val.Evalb ![y, x] ↔ y = g x) :
@@ -332,9 +332,9 @@ def codeFor {f : ℕ → ℕ} (hf : Nat.Primrec f) : Code := Classical.choose (e
 theorem codeFor_spec {f : ℕ → ℕ} (hf : Nat.Primrec f) : (codeFor hf).eval = f :=
   Classical.choose_spec (exists_code hf)
 
-/-- Every numerical primitive-recursion derivation yields a Sigma-one
-and a Pi-one arithmetic graph, with totality and their equivalence proved
-in PA, and with their actual standard interpretation equal to the input function. -/
+/-- Every numerical primitive-recursion derivation yields a Sigma-one and a Pi-one
+arithmetic graph, with totality and their equivalence proved in PA, and with their
+standard interpretation equal to the input function. -/
 theorem natPrimrec_representation {f : ℕ → ℕ} (hf : Nat.Primrec f) :
     ∃ (A : Graph) (P : 𝚷₁.Semisentence 2),
       (𝗣𝗔 ⊢ totalSentence A) ∧ (𝗣𝗔 ⊢ piTotalSentence P) ∧
@@ -399,8 +399,8 @@ def primrecTagPi {f : ℕ → ℕ} (hf : _root_.Primrec f) (j : ℕ) : 𝚷₁.S
 @[simp] theorem primrecTagPi_nat {f : ℕ → ℕ} (hf : _root_.Primrec f) (j x : ℕ) :
     (primrecTagPi hf j).val.Evalb ![x] ↔ f x = j := tagPi_nat _ j x
 
-/-- A real finite tag test for an arbitrary primitive-recursive reader,
-with an actual PA-total interpretation on all nonstandard inputs. -/
+/-- A real finite tag test for an arbitrary primitive-recursive reader, with a PA-total
+interpretation on all nonstandard inputs. -/
 def selectedCondition {f : ℕ → ℕ} (hf : Nat.Primrec f) {k : ℕ}
     (C : Fin k → FiniteSigmaOne.Carrier) : FiniteSigmaOne.Carrier :=
   .mkSigma (Finset.udisj (fun j : Fin k => (tagSigma hf j.val).val ⋏ (C j).val)) (by

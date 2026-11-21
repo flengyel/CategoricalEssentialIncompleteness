@@ -8,12 +8,12 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalExtensive
 public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
 
-/-! # Actual positive polynomial fibers for arbitrary uniform slice families
+/-! # Positive polynomial fibers for arbitrary uniform slice families
 
-Products retain their ordered numerical entries. Sums use Nat.pair(value,tag),
-the literal standard arithmetic syntax coding, rather than the parity code
-used for a chosen categorical coproduct. The constructor comparison with
-that chosen coproduct is a separate proved diagram.
+Products retain their ordered numerical entries. Sums use Nat.pair(value,tag), the
+standard arithmetic syntax coding, rather than the parity code used for a chosen
+categorical coproduct. The constructor comparison with that chosen coproduct is a
+separate proved diagram.
 -/
 
 @[expose] public section

@@ -78,8 +78,8 @@ theorem encode_decode : encodeProgram T * decodeProgram T = 1 := by
   rw [predicateClass_one T C (exponential_full T)] at hv
   exact hv
 
-/-- Exponential and square codes are compared by actual inverse program
-classes on the original number object. -/
+/-- Exponential and square codes are compared by inverse program classes on the original
+number object. -/
 def omegaCodeIso : omegaObject T ≅ omegaObject T where
   hom := omegaArrow T (encodeProgram T)
   inv := omegaArrow T (decodeProgram T)

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOrigi
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrences
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # The payload's FV field is identified by actual stable initiality -/
+/-! # The payload's FV field is identified by stable initiality -/
 
 @[expose] public section
 
@@ -208,8 +208,8 @@ def payloadOccurrenceProjectionHom : (projectionSourceAlgebra T U V σ π d) ⟶
       intro q
       exact payloadOccurrence_formula_commutes_model T U V σ π d M q
 
-/-- The comparison morphism is the parameterization of the already
-proved actual occurrence Hom, not an assumed payload-field equation. -/
+/-- The comparison morphism is the parameterization of the already proved occurrence Hom,
+not an assumed payload-field equation. -/
 def knownOccurrenceProjectionHom : (projectionSourceAlgebra T U V σ π d) ⟶
     (projectionOccurrenceAlgebra T U V σ π d) :=
   parameterAlgebraHom (SyntaxPolynomial.termExpression V σ d) (SyntaxPolynomial.formulaExpression V π d)

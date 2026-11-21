@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphsFunctor
 
 
-/-! # Statement checks in `V46NumericalArithmeticGraphsFunctorChecks` -/
+/-! # The arithmetic graph-extension functor with unchanged carrier formulas -/
 
 @[expose] public section
 noncomputable section

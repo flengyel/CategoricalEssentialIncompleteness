@@ -80,8 +80,8 @@ def numericalComparison : numericalFunctor P ⋙ Total.underlying ≅ NumericalU
     Functor.isoWhiskerLeft NumericalTuples.comparison (ordinaryComparison P) ≪≫
       NumericalUnderlying.comparison.symm
 
-/-- A natural comparison of the actual underlying carrier functions.
-It asserts no faithfulness of standard interpretation or initiality. -/
+/-- A natural comparison of the underlying carrier functions. It asserts no faithfulness
+of standard interpretation or initiality. -/
 def standardComparison : predicateFunctor P ⋙ Total.underlying ≅
     PredicateInterpretation.functor 𝗣𝗔 ℕ :=
   Functor.associator _ _ _ ≪≫

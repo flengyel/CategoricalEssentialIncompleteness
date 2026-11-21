@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SignedFiniteFormulaValuation
 public import CategoricalEssentialIncompleteness.V46CoveredDerivationInvariant
 public import CategoricalEssentialIncompleteness.V46PrintedObjectCoding
 
-/-! # Actual diagonal labels and their finite-support truth values -/
+/-! # Diagonal labels and their finite-support truth values -/
 
 @[expose] public section
 noncomputable section
@@ -24,8 +24,8 @@ open CategoricalEssentialIncompleteness.V46.SyntacticLists
 namespace CategoricalEssentialIncompleteness.V46.ArithmeticSignedAtoms
 open CoveredDerivationInvariant
 
-/-- Every arithmetic predicate has its numerical inclusion into the printed
-number object. This inclusion retains the literal code. -/
+/-- Every arithmetic predicate has its numerical inclusion into the number object. This
+inclusion retains the literal code. -/
 def numberInclusion (C : PredicateCategory 𝗣𝗔) :
     C ⟶ (PrintedObjectCoding.Number : PredicateCategory 𝗣𝗔) :=
   representedArrow 𝗣𝗔 (GraphMorphism.inclusion (T := 𝗣𝗔) (C := C) (D := PrintedObjectCoding.Number)

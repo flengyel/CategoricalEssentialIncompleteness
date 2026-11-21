@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSentenceRanges
 public import Mathlib.CategoryTheory.Functor.EpiMono
 
-/-! # The literal sentence idempotent represents total-split sentence images -/
+/-! # The sentence idempotent represents total-split sentence images -/
 
 @[expose] public section
 
@@ -75,8 +75,8 @@ instance sourceImageM_mono (c : P ⟶ Fm) (j : S ⟶ Fm) : Mono (sourceImageM E 
   rw [Category.assoc, ← E.functor.map_comp_assoc, image.fac]
   exact sentencePullbackIso_snd E c j
 
-/-- An actual strong epi/mono factorization identifies the source-chart
-sentence image with the target image, including its inclusion triangle. -/
+/-- A strong epi/mono factorization identifies the source-chart sentence image with the
+target image, including its inclusion triangle. -/
 def sourceSentenceImageIso (c : P ⟶ Fm) (j : S ⟶ Fm) :
     E.functor.obj (image (pullback.snd (E.inverse.map c) (E.inverse.map j))) ≅
       image (pullback.snd c j) :=
@@ -95,8 +95,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable {P Fm S : TotalSplit T}
 local notation "E" => predicateEquivalence T
 
-/-- The formula and sentence coordinates are the actual inverse
- equivalence chart, not an assumed identity on chosen pullback codes. -/
+/-- The formula and sentence coordinates are the inverse equivalence chart, not an assumed
+identity on chosen pullback codes. -/
 def sourceConclusion (c : P ⟶ Fm) :
     (E).inverse.obj P ⟶ (E).inverse.obj Fm := (E).inverse.map c
 
@@ -139,8 +139,8 @@ def sentencePredicate (c : P ⟶ Fm) (j : S ⟶ Fm) : Carrier :=
 def sentenceIdem (c : P ⟶ Fm) (j : S ⟶ Fm) : Idem (omegaObject T) :=
   predicateIdem T (sentencePredicate T c j)
 
-/-- The splitting of [Sent(z) ∧ ∃p G_e(p,z)]_T represents the actual
-sentence image in Tot(Split(S_T)), for arbitrary total arrows. -/
+/-- The splitting of [Sent(z) ∧ ∃p G_e(p,z)]_T represents the sentence image in
+Tot(Split(S_T)), for arbitrary total morphisms. -/
 def sentenceSplittingIso (c : P ⟶ Fm) (j : S ⟶ Fm) [Mono j] :
     interpretedObject T (sentencePredicate T c j) ≅ image (pullback.snd c j) :=
   SyntacticSentenceImages.programTheorySplittingIso T

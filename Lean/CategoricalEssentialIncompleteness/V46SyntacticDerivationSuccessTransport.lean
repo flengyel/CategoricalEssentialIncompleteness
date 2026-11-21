@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesRegular
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicatesExtensive
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
-/-! A literal Sigma-one successful-code carrier in the actual total split category. -/
+/-! A literal Sigma-one successful-code carrier in the total split category. -/
 
 @[expose] public section
 noncomputable section

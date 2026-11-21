@@ -133,8 +133,8 @@ theorem karoubiInclusion_preserves_restrictions {P Q : Karoubi Rec} (f : P ⟶ Q
   rw [show (P.p ≫ rst f.f).hom = P.p.hom ≫ (rst f.f).hom from rfl]
   rw [restriction_hom]
 
-/-- The actual equivalence to natural partial fork maps preserves
-restrictions, including at arbitrary idempotents of the Karoubi envelope. -/
+/-- The equivalence to natural partial fork maps preserves restrictions, including at
+arbitrary idempotents of the Karoubi envelope. -/
 theorem karoubiEquivalence_preserves_restrictions {P Q : Karoubi Rec} (f : P ⟶ Q) :
     karoubiEquivalence.functor.map (rst f) =
       rst (karoubiEquivalence.functor.map f) := by

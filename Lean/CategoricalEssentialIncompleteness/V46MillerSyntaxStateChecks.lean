@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxState
 
 
-/-! # Statement checks in `V46MillerSyntaxStateChecks` -/
+/-! # Positive value-stack invariants for arbitrary uniform algebra operations -/
 
 @[expose] public section
 noncomputable section

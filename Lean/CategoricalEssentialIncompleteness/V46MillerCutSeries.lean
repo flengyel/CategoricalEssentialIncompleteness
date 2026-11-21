@@ -14,9 +14,9 @@ public import Mathlib.Tactic.Ring
 
 /-! # Bounded positive series in the effective cut reduction
 
-These are ordinary real-analysis lemmas. Actual bad-box distances and their
-numerical approximation algorithms must be supplied by their constructions;
-no unanimity comparison or realizer is assumed in this module.
+These are ordinary real-analysis lemmas. Bad-box distances and their numerical
+approximation algorithms must be supplied by their constructions; no unanimity
+comparison or realizer is assumed in this module.
 -/
 
 @[expose] public section

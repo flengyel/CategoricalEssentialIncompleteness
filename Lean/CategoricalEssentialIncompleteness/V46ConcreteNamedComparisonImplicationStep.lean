@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParam
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonRelationPoints
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOptionBranches
 
-/-! # The actual implication substitution step has the numeric failure/success rule -/
+/-! # The implication substitution step has the numeric failure/success rule -/
 
 @[expose] public section
 

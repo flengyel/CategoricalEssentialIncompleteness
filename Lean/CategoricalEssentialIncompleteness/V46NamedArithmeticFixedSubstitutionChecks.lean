@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSubstitution
 
 
-/-! # Statement checks in `V46NamedArithmeticFixedSubstitutionChecks` -/
+/-! # Numeral substitution for a generic finite named arithmetic formula -/
 
 @[expose] public section
 noncomputable section

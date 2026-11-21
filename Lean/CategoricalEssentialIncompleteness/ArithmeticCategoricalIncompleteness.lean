@@ -50,7 +50,8 @@ theorem separators_complementary (D : Set ℕ) (hD : ComputablePred (· ∈ D)) 
     simp only [Set.mem_union, Set.mem_inter_iff, Set.mem_compl_iff]
     tauto
 
-/-- The recursive-set formulation of Corollary 7.1 on the actual sentence codes. -/
+/-- No recursive predicate on sentence codes separates the theorems from the refutable
+sentences. -/
 theorem theorem_refutation_recursivelyInseparable (T : ArithmeticTheory)
     [𝗣𝗔 ⪯ T] [T.RE] (hT : Consistent T) :
     Numerical.RecursivelyInseparable (theoremCodes T) (refutationCodes T) := by
@@ -92,8 +93,8 @@ theorem arithmetic_incomplete (T : ArithmeticTheory) [𝗣𝗔 ⪯ T] [T.RE] (hT
   letI := hc
   exact (categorical_arithmetic T hT).2 (completeness_covers_domains T)
 
-/-- Corollary 7.1, through the new source Turing/local-lifting construction
-and domain-incompleteness corollary, under consistency alone. -/
+/-- The Turing diagonal and section lifting give essential incompleteness under the
+consistency hypothesis. -/
 theorem essential_incompleteness_of_arithmetic (T : ArithmeticTheory)
     [𝗣𝗔 ⪯ T] [T.RE] (hT : Consistent T) :
     Numerical.RecursivelyInseparable (theoremCodes T) (refutationCodes T) ∧ Incomplete T :=

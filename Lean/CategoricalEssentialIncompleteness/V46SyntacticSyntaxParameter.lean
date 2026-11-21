@@ -39,9 +39,9 @@ theorem constantProduct_value {P U W : PredicateCategory T} {X Y : Over P}
     prod.lift_snd, prod.comp_lift]
   exact congrArg₂ prod.lift hf hg
 
-/-- The base polynomial value of a point of its parameterized polynomial.
-Only the value projection is erased; the actual parameterized source and
-its chosen product/coproduct objects are retained. -/
+/-- The base polynomial value of a point of its parameterized polynomial. Only the value
+projection is erased; the parameterized source and its chosen product/coproduct
+objects are retained. -/
 def parameterValueMap (P : PredicateCategory T) (X Y : PredicateCategory T)
     (a : SyntaxPolynomial (PredicateCategory T)) :
     ((a.withParameters P).eval.obj (constantFamily P X, constantFamily P Y)).left ⟶
@@ -128,9 +128,9 @@ theorem parameterValueMap_sum_inr (P X Y : PredicateCategory T)
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Every valid raw input has an actual point of the parameterized
-polynomial. This supplies the domain point when extracting a guarded
-constructor equation from an actual categorical algebra-hom equation. -/
+/-- Every valid raw input has a point of the parameterized polynomial. This supplies the
+domain point when extracting a guarded constructor equation from a categorical
+algebra-hom equation. -/
 theorem constantRepresentation_exists (P C D : PredicateCategory T)
     (a : SyntaxPolynomial (PredicateCategory T)) (p : Obj T M P) (u : M)
     (h : (rawCarrier C D a).val.Evalb ![u]) :
@@ -171,9 +171,9 @@ theorem constantLeaf_value (P C : PredicateCategory T) (p u : M)
   exact graph_functional_model (chosenGraph T (prod.snd : P ⨯ C ⟶ C)) z.val y.val u
     ((chosenGraph_map_iff T M prod.snd z y).mpr rfl) hh.2
 
-/-- The exact parameter-comparison arrow sends a raw constant-family
-coordinate to the same base-polynomial coordinate. No inverse to the
-constant coproduct comparison is assumed. -/
+/-- The exact parameter-comparison morphism sends a raw constant-family coordinate to the
+same base-polynomial coordinate. No inverse to the constant coproduct comparison is
+assumed. -/
 theorem parameterValueMap_representation (P X Y : PredicateCategory T)
     (a : SyntaxPolynomial (PredicateCategory T)) (p : Obj T M P) (u : M)
     (z : Obj T M ((a.withParameters P).eval.obj

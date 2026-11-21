@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalParameterGeometry
 
 
-/-! # Statement checks in `V46MillerCanonicalParameterGeometryChecks` -/
+/-! # Instantiation and equality under change of parameters -/
 
 @[expose] public section
 noncomputable section

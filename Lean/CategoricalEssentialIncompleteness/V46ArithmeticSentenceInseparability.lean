@@ -78,9 +78,9 @@ theorem refutationCarrier_variables_eq (A : SyntacticPredicates.Carrier) :
       (show (variableSymbols : SyntacticPredicates.PredicateCategory 𝗣𝗔) =
         NamedPostfixEncoding.variableCarrier from rfl)
 
-/-- Printed Corollary 7.4 for the actual literal theorem/refutation
-programs. The semantic model used for disjointness is constructed from
-external consistency; the nonseparator is the categorical Corollary 3.2. -/
+/-- Corollary 8.4 for the theorem/refutation programs. The semantic model used for
+disjointness is constructed from external consistency; the nonseparator is the
+categorical Corollary 3.2. -/
 theorem recursively_inseparable (A : SyntacticPredicates.Carrier)
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system A)) :
@@ -126,8 +126,8 @@ theorem recursive_fiber_gap (P Q : Set ℕ) (hd : Disjoint P Q)
   intro n hnP hnBeta
   exact Set.disjoint_left.mp hd hnP (hBeta n hnBeta)
 
-/-- Actual literal substituted instances inherit the opaque-set result
-through the proved positive and negative literal-word charts. -/
+/-- Literal substituted instances inherit the opaque-set result through the proved
+positive and negative literal-word charts. -/
 theorem exists_independent_value_of_bounds (A : SyntacticPredicates.Carrier)
     (φ : NamedArithmeticSignature.Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0)
     (hd : Disjoint (theoremSet A) (refutationSet A))
@@ -144,8 +144,8 @@ theorem exists_independent_value_of_bounds (A : SyntacticPredicates.Carrier)
     (fun n hn => positive_member A φ n (hAlpha n hn))
     (fun n hn => negative_member A φ hφ n (hBeta n hn))
 
-/-- A formula-generic proof returns an actual closed native sentence.
-All syntax and value computations remain on the same named presentation. -/
+/-- A formula-generic proof returns a closed named sentence. All syntax and value
+computations remain on the same named presentation. -/
 theorem sentence_incomplete_of_bounds (A : SyntacticPredicates.Carrier)
     (φ : NamedArithmeticSignature.Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0)
     (hd : Disjoint (theoremSet A) (refutationSet A))
@@ -175,9 +175,8 @@ theorem sentence_incomplete_of_bounds (A : SyntacticPredicates.Carrier)
         (carrier_eval_transport (refutationCarrier_variables_eq A).symm _ h)
     exact hnegative (hvalue.symm ▸ hm)
 
-/-- Printed essential incompleteness for the actual literal Gamma.
-The model/disjointness and both bounds are proved from the printed
-consistency and PA-extension hypotheses. -/
+/-- Essential incompleteness for the Gamma. The model/disjointness and both bounds are
+proved from the consistency and PA-extension hypotheses. -/
 theorem sentence_incomplete (A : SyntacticPredicates.Carrier)
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system A)) :
@@ -191,9 +190,8 @@ theorem sentence_incomplete (A : SyntacticPredicates.Carrier)
     (NamedArithmeticDiagonalBounds.standard_negative_of_axioms_admissible A
       (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hPA))
 
-/-- Derivability of each original enumerated sentence is the concrete
-extension condition; the already proved native replacement induction
-then transports the actual PA axiom proofs. -/
+/-- Derivability of each original enumerated sentence is the concrete extension condition;
+the Hilbert replacement induction then transports the PA axiom proofs. -/
 theorem extendsPA_of_axiom_extension (A B : SyntacticPredicates.Carrier)
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hAB : ∀ φ : NamedArithmeticSignature.Formula,
@@ -203,8 +201,8 @@ theorem extendsPA_of_axiom_extension (A B : SyntacticPredicates.Carrier)
   exact SyntacticNamedHilbert.replace_axioms functionSymbols relationSymbols bound A B
     hAB (hPA φ hφ)
 
-/-- Every consistent c.e. literal sentence extension is incomplete,
-using the actual axiom-extension comparison and the categorical result. -/
+/-- Every consistent c.e. sentence extension is incomplete, using the axiom-extension
+comparison and the categorical result. -/
 theorem extension_sentence_incomplete (A B : SyntacticPredicates.Carrier)
     (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
     (hAB : ∀ φ : NamedArithmeticSignature.Formula,

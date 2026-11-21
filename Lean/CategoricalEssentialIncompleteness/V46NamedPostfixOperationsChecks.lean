@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixOperations
 
 
-/-! # Statement checks in `V46NamedPostfixOperationsChecks` -/
+/-! # Standard polynomial operations on ordered named payloads -/
 
 @[expose] public section
 noncomputable section

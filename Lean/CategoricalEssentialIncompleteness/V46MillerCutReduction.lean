@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram
 public import CategoricalEssentialIncompleteness.V46MillerCutDigits
 
 
-/-! # Definitions and theorems in `V46MillerCutReduction` -/
+/-! # Recursive reduction to the lower and upper cuts -/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
@@ -18,9 +18,9 @@ set_option backward.isDefEq.respectTransparency.types false
 
 /-! # The ordinary recursive cut reduction
 
-The actual finite-box/series program is selected before the Miller sequence.
-The only sequence hypothesis in the final theorem is the printed Miller
-property. No numerical approximation or axiom-comparison premise remains.
+The finite-box/series program is selected before the Miller sequence. The only
+sequence hypothesis in the final theorem is the Miller property. No numerical
+approximation or axiom-comparison premise remains.
 -/
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Cut
@@ -72,8 +72,8 @@ theorem reduction_upper (a : Point) (ha : IsMiller a) (e : ℕ) :
   change 1/2<separatingReal e a ↔ ∃ m,m%2=1 ∧ m ∈ Unanimity.tau a e e at h
   simpa only [and_comm] using h
 
-/-- One ordinary recursive reduction works for every sequence having the
-printed property for the fixed acceptable enumerations. -/
+/-- One ordinary recursive reduction works for every sequence having the Miller property
+for the fixed acceptable enumerations. -/
 theorem uniform_cut_reduction :
     ∃ h : ℕ → ℕ,Computable h ∧ ∀ a : Point,IsMiller a →
       h ⁻¹' CutDigits.lowerCut a = {e | ∃ m,m ∈ Unanimity.tau a e e ∧ m%2=0} ∧
@@ -81,7 +81,7 @@ theorem uniform_cut_reduction :
   ⟨reduction,reduction_computable,fun a ha =>
     ⟨Set.ext (reduction_lower a ha),Set.ext (reduction_upper a ha)⟩⟩
 
-/-- Lemma 8.3 at its printed hypotheses and both exact inverse-image equations. -/
+/-- Lemma 9.3 at its hypotheses and both exact inverse-image equations. -/
 theorem printed_cut_reduction (a : Point) (ha : IsMiller a) :
     ∃ h : ℕ → ℕ,Computable h ∧
       h ⁻¹' CutDigits.lowerCut a = {e | ∃ m,m ∈ Unanimity.tau a e e ∧ m%2=0} ∧

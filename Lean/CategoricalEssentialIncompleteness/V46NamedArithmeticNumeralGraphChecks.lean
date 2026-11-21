@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralGraph
 
 
-/-! # Statement checks in `V46NamedArithmeticNumeralGraphChecks` -/
+/-! # The numeral words define a PA-total morphism into the closed term predicate -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

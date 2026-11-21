@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportConstructorsCore
 
-/-! Function substitution transports by the actual two projection
-squares and the ordinary constructor square. -/
+/-!
+Function substitution transports by the two projection squares and the ordinary
+constructor square.
+-/
 
 @[expose] public section
 noncomputable section

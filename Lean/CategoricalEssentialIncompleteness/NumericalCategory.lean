@@ -12,10 +12,9 @@ public import Mathlib.Data.Set.Finite.Basic
 /-!
 # The numerical restriction category
 
-Objects are infinite recursive subsets of `ℕ`. An arrow is a partial recursive
-function on `ℕ` whose domain is contained in the source and whose values belong
-to the target. Equality is equality of partial functions.
-Composition is diagrammatic.
+Objects are infinite recursive subsets of `ℕ`. A morphism is a partial recursive
+function on `ℕ` whose domain is contained in the source and whose values belong to the
+target. Equality is equality of partial functions. Composition is diagrammatic.
 -/
 
 @[expose] public section
@@ -124,7 +123,7 @@ instance numericalCategory : Category Numerical where
 @[simp] theorem comp_val {X Y Z : Numerical} (f : X ⟶ Y) (g : Y ⟶ Z) (n : ℕ) :
     (f ≫ g).val n = (f.val n).bind g.val := rfl
 
-/-- Restriction is partial identity on the domain of an arrow. -/
+/-- Restriction is partial identity on the domain of a morphism. -/
 def restrict {X Y : Numerical} (f : X ⟶ Y) : X ⟶ X where
   val := supportIdentity {n | (f.val n).Dom}
   computable := supportIdentity_partrec _ f.computable.dom_re

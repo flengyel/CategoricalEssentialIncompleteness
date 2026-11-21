@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxSubstitutionComparisonTotal
 
 
-/-! # Statement checks in `V46SyntacticSyntaxSubstitutionComparisonTotalChecks` -/
+/-! # Concrete substitution transport in the total restriction splitting -/
 
 @[expose] public section
 noncomputable section

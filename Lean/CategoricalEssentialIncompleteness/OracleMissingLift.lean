@@ -177,8 +177,8 @@ theorem specified_switch_has_no_lift : ¬ ∃ l : N K ⟶ coprod (N K) (N K),
     ← missingSection_eq_switchSection]
   exact missingSection_has_no_lift
 
-/-- This is exactly the source-pair lifting premise of the compatible form
-of Theorem 6.3; the partial source lifts are not required to be total. -/
+/-- This is exactly the source-pair lifting premise of the compatible form of the
+section-lifting theorem; the partial source lifts are not required to be total. -/
 theorem source_section_lifting_fails : ¬ (∀ (c c' : Idem (N K))
     (hc : Complementary c c'),∃ l : N K ⟶ coprod (N K) (N K),
       (rangeFunctor K).toFunctor.map l=

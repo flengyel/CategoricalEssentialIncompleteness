@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationOriginalInputs
 
-/-! Literal arithmetic inputs present the original H_R summands over F. -/
+/-! Arithmetic inputs present the original H_R summands over F. -/
 
 @[expose] public section
 noncomputable section

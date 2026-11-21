@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DecidableVariablesTransport
 public import CategoricalEssentialIncompleteness.TwoBoolean
 
-/-! # Boolean constants and branches under the actual equivalence -/
+/-! # Boolean constants and branches under the equivalence -/
 
 @[expose] public section
 
@@ -48,8 +48,8 @@ theorem map_constant (X : C) (b : Bool) :
   exact terminalIsTerminal.hom_ext _ _
 
 omit [Regular D] in
-/-- Images of the two actual source fibers remain jointly epimorphic.
-No identity of chosen source and target fiber codes is used. -/
+/-- Images of the two source fibers remain jointly epimorphic. No identity of chosen
+source and target fiber codes is used. -/
 theorem map_hom_ext {X : C} (χ : X ⟶ Two C) {Y : D}
     {f g : E.functor.obj X ⟶ Y}
     (h₀ : E.functor.map (Two.fiberι χ false) ≫ f = E.functor.map (Two.fiberι χ false) ≫ g)
@@ -78,8 +78,8 @@ theorem map_branch {X Y : C} (χ : X ⟶ Two C) (f g : X ⟶ Y) :
     cases b <;> rfl
   exact map_hom_ext E χ (h false) (h true)
 
-/-- General precomposition of the categorical branch, proved on the
-actual fibers of the composite classifier. -/
+/-- General precomposition of the categorical branch, proved on the fibers of the
+composite classifier. -/
 theorem branch_precomp {X Y Z : D} (χ : X ⟶ Two D) (f g : X ⟶ Y) (k : Z ⟶ X) :
     k ≫ Two.branch χ f g = Two.branch (k ≫ χ) (k ≫ f) (k ≫ g) := by
   have h (b : Bool) :

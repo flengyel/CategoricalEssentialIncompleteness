@@ -8,12 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerOrderedFieldSyntax
 public import Mathlib.Computability.Primrec.List
 
-/-! # Primitive-recursive membership in the actual ordered-field sentence words
+/-! # Primitive-recursive membership in the ordered-field sentence words
 
-The parser runs on the original postfix records. Its label test uses the
-explicit bounded field signature, and the empty free-variable test is the
-existing primitive-recursive traversal. No decision certificate for the
-sentence set is an input.
+The parser runs on the original postfix records. Its label test uses the explicit
+bounded field signature, and the empty free-variable test is the primitive-recursive
+traversal. No decision certificate for the sentence set is an input.
 -/
 
 @[expose] public section
@@ -149,7 +148,7 @@ theorem formula_membership_primrec : PrimrecPred (fun word : ℕ =>
     rw [← carrier_plain_model,carrier_eval]
     rfl)
 
-/-- Primitive-recursive membership in the literal recursive sentence carrier. -/
+/-- Primitive-recursive membership in the recursive sentence carrier. -/
 theorem sentence_membership_primrec : PrimrecPred
     (fun word : ℕ => sentencePredicate.val.Evalb ![word]) :=
   (formula_membership_primrec.and (Primrec.eq.comp
@@ -158,8 +157,8 @@ theorem sentence_membership_primrec : PrimrecPred
         (fun word => (ConcreteNamedComparison.literalSentenceCarrier_eval 𝗣𝗔
           variableSymbols functionSymbols relationSymbols bound ℕ word).symm)
 
-/-- An ordinary total decision program for the full literal set, with no
-restriction to already decoded syntax inputs. -/
+/-- An ordinary total decision program for the full set, with no restriction to already
+decoded syntax inputs. -/
 theorem sentence_membership_computable : ∃ dec : ℕ → Bool,
     Computable dec ∧ ∀ word,dec word=true ↔ sentencePredicate.val.Evalb ![word] := by
   obtain ⟨inst,h⟩ := sentence_membership_primrec

@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticSignature
 public import CategoricalEssentialIncompleteness.V46SyntacticPredicates
 
-/-! # The literal numerical variable carrier and the identity omega splitting
+/-! # The numerical variable carrier and the identity omega splitting
 
-The predicate realization of all numerical variables has the actual identity
-restriction idempotent. Its comparison to the source identity splitting is
-proved from the universal T-model graph equations.
+The predicate realization of all numerical variables has the identity restriction
+idempotent. Its comparison to the source identity splitting is proved from the
+universal T-model graph equations.
 -/
 
 @[expose] public section

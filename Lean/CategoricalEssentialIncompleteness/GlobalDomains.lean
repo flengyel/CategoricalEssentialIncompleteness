@@ -57,7 +57,8 @@ def globalDomainInverse {X Y : O} (f : R.globalObject X ⟶ R.globalObject Y)
     (e : R.GlobalDomain Y) : R.GlobalDomain X :=
   ⟨RestrictionCategory.rst (f ≫ e.hom), R.restrict_restrict (H.comp f e.hom)⟩
 
-/-- The equalizer comparison is natural for restriction inverse image, even for partial arrows. -/
+/-- The equalizer comparison is natural for restriction inverse image, even for partial
+morphisms. -/
 theorem globalDomainInverse_comparison {X Y : O}
     (f : R.globalObject X ⟶ R.globalObject Y) (e : ⊤_ V ⟶ R.domainObject Y) :
     R.globalDomainEquiv X (R.domainInverse f e) =

@@ -7,8 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticClosedSubstitution
 
-/-! PA itself proves closed-replacement admissibility for the independent
-free-for algorithm, and existence of its actual typed option result. -/
+/-!
+PA itself proves closed-replacement admissibility for the independent free-for
+algorithm, and existence of its typed option result.
+-/
 
 @[expose] public section
 noncomputable section

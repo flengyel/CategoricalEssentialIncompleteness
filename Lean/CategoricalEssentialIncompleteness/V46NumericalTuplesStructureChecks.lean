@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
 
-/-! Explicit regularity, extensive coproducts and actual monomorphism inverse equations. -/
+/-! Explicit regularity, extensive coproducts and monomorphism inverse equations. -/
 
 @[expose] public section
 

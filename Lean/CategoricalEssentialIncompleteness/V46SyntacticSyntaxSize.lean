@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxCoding
 
-/-! # Every ordered child has smaller literal node count than its constructor -/
+/-! # Every ordered child has smaller node count than its constructor -/
 
 @[expose] public section
 
@@ -77,8 +77,8 @@ theorem ChildSize.mono (q : RawPolynomial) (n m u : M)
       · exact (by simpa [ChildSize, hk] using ia (π₁ u) (by simpa [ChildSize, hk] using h))
       · exact (by simpa [ChildSize, hk] using ib (π₁ u) (by simpa [ChildSize, hk] using h))
 
-/-- Since a constructor appends one actual node record, every recursive
-child has strictly smaller numerical node count, in every PA model. -/
+/-- Since a constructor appends one node record, every recursive child has strictly
+smaller numerical node count, in every PA model. -/
 theorem children_smaller (formula : Bool) (q : RawPolynomial) (u : M) :
     (childSizeGraph q).val.Evalb ![len (constructor formula q u), u] := by
   rw [childSizeGraph_eval, constructor_length]

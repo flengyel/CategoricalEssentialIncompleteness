@@ -11,7 +11,7 @@ public import Mathlib.CategoryTheory.Limits.Over
 public import Mathlib.CategoryTheory.Adjunction.Limits
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.BinaryProducts
 
-/-! Parameter change for the actual syntax folds. -/
+/-! Parameter change for the syntax folds. -/
 
 @[expose] public section
 
@@ -298,8 +298,8 @@ theorem mate_counit {A : Over P × Over P} {B : Over Q × Over Q}
       (g := (Over.mapPullbackAdj r).homEquiv A.2 B.2 f.2)).symm.trans
         (((Over.mapPullbackAdj r).homEquiv A.2 B.2).symm_apply_apply f.2)
 
-/-- The actual algebra pulled to the new parameter by adjunction.
-The polynomial comparison is constructed above, rather than assumed. -/
+/-- The algebra pulled to the new parameter by adjunction. The polynomial comparison is
+constructed above, rather than assumed. -/
 def reindexAlgebra (p q : SyntaxPolynomial D)
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       (p.withParameters Q) (q.withParameters Q))) :
@@ -380,8 +380,8 @@ variable {P Q : D} (r : P ⟶ Q)
 def parameterSyntaxFamilies (R : D) : Over R × Over R :=
   (constantFamily R S.algebra.a.1, constantFamily R S.algebra.a.2)
 
-/-- The actual old-parameter fold, precomposed with the canonical map
-that changes only the parameter coordinate. -/
+/-- The old-parameter fold, precomposed with the canonical map that changes only the
+parameter coordinate. -/
 def crossParameterFold
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       ((SyntaxPolynomial.termExpression V σ d).withParameters Q)
@@ -438,8 +438,8 @@ theorem crossParameterFold_commutes
       parameter_algebra_str, Category.assoc]
     rfl
 
-/-- A constructor-preserving map over `r` agrees with the actual fold
-over `Q`. This uses initiality over `P`, not an elementwise argument. -/
+/-- A constructor-preserving map over `r` agrees with the fold over `Q`. This uses
+initiality over `P`, not an elementwise argument. -/
 theorem crossParameterFold_unique
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       ((SyntaxPolynomial.termExpression V σ d).withParameters Q)
@@ -466,8 +466,8 @@ theorem crossParameterFold_unique
     (congrArg Prod.fst (S.crossParameterFold_commutes r B))
     (congrArg Prod.snd (S.crossParameterFold_commutes r B))
 
-/-- The reindexed actual fold is the fold into the actual reindexed
-algebra, with the comparison constructed from the slice adjunction. -/
+/-- The reindexed fold is the fold into the reindexed algebra, with the comparison
+constructed from the slice adjunction. -/
 theorem fold_parameter_change
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       ((SyntaxPolynomial.termExpression V σ d).withParameters Q)

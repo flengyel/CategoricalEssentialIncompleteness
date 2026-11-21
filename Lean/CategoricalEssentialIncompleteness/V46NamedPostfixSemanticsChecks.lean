@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPostfixSemantics
 
 
-/-! # Statement checks in `V46NamedPostfixSemanticsChecks` -/
+/-! # Semantics on the standard accepted-word carriers -/
 
 @[expose] public section
 noncomputable section

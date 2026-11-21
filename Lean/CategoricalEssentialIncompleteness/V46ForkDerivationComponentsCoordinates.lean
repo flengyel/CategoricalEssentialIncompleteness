@@ -12,7 +12,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalRuleRelabel
 public import Mathlib.Tactic.FinCases
 public import Mathlib.CategoryTheory.Limits.FunctorCategory.Finite
 
-/-! # The actual component objects and finite coefficient charts -/
+/-! # The component objects and finite coefficient charts -/
 
 @[expose] public section
 noncomputable section
@@ -166,7 +166,7 @@ theorem component_conclusion (a b : Idem EffectiveFork.V) (j : WalkingSpan) :
     ((componentProofIso a b j).hom.toFun x).val = x.val := by
   rcases j with _ | (_ | _) <;> rfl
 
-/-- The compatible unary components give an actual natural transformation. -/
+/-- The compatible unary components give a natural transformation. -/
 def componentNatural {X Y : EffectiveFork.Total}
     (f : ∀ j, (componentFunctor j).obj X ⟶ (componentFunctor j).obj Y)
     (hn : ∀ ⦃j k : WalkingSpan⦄ (g : j ⟶ k),
@@ -215,7 +215,7 @@ theorem fromComponents_unique {X Y : EffectiveFork.Total}
   erw [component_fromComponents]
   exact hu j
 
-/-- Component maps retain their actual old partial-program graph. -/
+/-- Component maps retain their old partial-program graph. -/
 theorem component_map_mem {X Y : EffectiveFork.Total} (j : WalkingSpan) (f : X ⟶ Y)
     (x : NumericalTuples.Point ((componentFunctor j).obj X)) :
     (((componentFunctor j).map f).toFun x).val ∈

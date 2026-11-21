@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTheorySentenceWords
 
 
-/-! # Statement checks in `V46MillerTheorySentenceWordsChecks` -/
+/-! # The chosen sentence object and its literal-word carrier -/
 
 @[expose] public section
 noncomputable section

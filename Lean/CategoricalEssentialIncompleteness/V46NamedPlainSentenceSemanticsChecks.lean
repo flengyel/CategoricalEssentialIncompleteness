@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedPlainSentenceSemantics
 
 
-/-! # Statement checks in `V46NamedPlainSentenceSemanticsChecks` -/
+/-! # Validity on the standard sentence object -/
 
 @[expose] public section
 universe w

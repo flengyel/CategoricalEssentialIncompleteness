@@ -35,8 +35,8 @@ variable (z : Point) {P : Total.CanonicalTotal z}
 local instance : Regular (Over P) := RegularSlices.regular P
 variable {F : Over P} {N : ℕ} (R : RulePresentation F N)
 
-/-- This algebra lies over an arbitrary formula family in the actual
-Tot(Split(E_z)); neither the family nor the target algebra is assumed constant. -/
+/-- This algebra lies over an arbitrary formula family in the Tot(Split(E_z)); neither the
+family nor the target algebra is assumed constant. -/
 def algebra : Endofunctor.Algebra R.inference :=
   SliceInference.algebra R (Canonical.derivationAlgebra z (SliceRuleObjects.rules R))
 

@@ -48,7 +48,7 @@ example {X Y : PartialMaps.Par (Over (T : Object))} (f : X.obj ⟶ Y.obj) :
       PartialMaps.ofTotal ((Over.map i).map f) :=
   MonicPartialSliceComparison.postcompose_total i f
 
-/-- The constant-family theorem subobject has the printed inclusion 1_U × u. -/
+/-- The constant-family theorem subobject has the inclusion 1_U × u. -/
 example : (constantTheory U).val = Subobject.mk ((Bᵤ).map U.val.arrow) := rfl
 
 include hi hc in

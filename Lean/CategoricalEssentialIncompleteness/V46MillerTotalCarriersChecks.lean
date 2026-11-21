@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalCarriers
 
 
-/-! # Statement checks in `V46MillerTotalCarriersChecks` -/
+/-! # Arbitrary uniformly semidecidable numerical carriers -/
 
 @[expose] public section
 noncomputable section

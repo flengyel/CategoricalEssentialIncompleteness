@@ -91,8 +91,8 @@ theorem endpoint_extension_has_undecidable_code (i : Bool) (t : Idem natCarrier)
   · exact Or.inl hp
   · exact Or.inr (not_not.mp (fun hneg => hn ⟨n, hp, hneg⟩))
 
-/-- A c.e. set of endpoint sentence codes gives its actual restriction
-idempotent; consistency and extension inclusion yield an undecidable code. -/
+/-- A c.e. set of endpoint sentence codes gives its restriction idempotent; consistency
+and extension inclusion yield an undecidable code. -/
 theorem endpoint_ce_extension_incomplete (i : Bool) (T : Set ℕ)
     (hT : REPred (· ∈ T))
     (hext : support (endpointTheory i categoricalTheory) ⊆ T)
@@ -118,8 +118,8 @@ theorem endpoint_ce_extension_incomplete (i : Bool) (T : Set ℕ)
     · exact False.elim
   simpa only [hs] using endpoint_extension_has_undecidable_code i t ht hc
 
-/-- The component conclusions of Theorem 9.5, including incompleteness of
-the selected endpoint theory and the actual numerical pair inclusions. -/
+/-- The component conclusions of Theorem 10.5, including incompleteness of the selected
+endpoint theory and the numerical pair inclusions. -/
 theorem cosheaf_observation_v46 (i : Bool) (t : Theory) :
     Inseparable t.val (Idem.pull nu t.val) ∧
       (REPred (· ∈ tuplePositiveSet i t.val) ∧

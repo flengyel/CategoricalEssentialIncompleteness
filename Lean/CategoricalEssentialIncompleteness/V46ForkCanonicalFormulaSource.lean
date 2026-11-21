@@ -59,8 +59,8 @@ theorem parameter_structure : (algebra D P).str =
     PolynomialParameterValues.comparison P (coefficients D) (baseCarriers D) template ≫
       (constantFamilyFunctor P).map (constructor D) := rfl
 
-/-- Evaluation identifies the actual global parameter constructor with
-the already proved numerical parameter constructor. -/
+/-- Evaluation identifies the global parameter constructor with the already proved
+numerical parameter constructor. -/
 theorem source_square (j : WalkingSpan) :
     (SliceEvaluation.componentFunctor P j).map (algebra D P).str ≫
         (SliceEvaluation.coefficientIso P (carrier D) j).hom =

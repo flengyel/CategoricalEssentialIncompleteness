@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonBooleans
 
-/-! # Reflection of literal membership by the actual Boolean comparison -/
+/-! # Reflection of literal membership by the Boolean comparison -/
 
 @[expose] public section
 

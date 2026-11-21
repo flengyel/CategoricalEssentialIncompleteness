@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalSyntaxComparisonSquares
 
 
-/-! # Statement checks in `V46MillerCanonicalSyntaxComparisonSquaresChecks` -/
+/-! # Compositional squares for the logical parameter diagrams -/
 
 @[expose] public section
 noncomputable section

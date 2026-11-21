@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRationalCodes
 
 
-/-! # Statement checks in `V46MillerRationalCodesChecks` -/
+/-! # A concrete recursive rational enumeration for Miller real computations -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Rationals.Checks

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformInitialExplicit
 
 
-/-! # Statement checks in `V46MillerSyntaxUniformInitialExplicitChecks` -/
+/-! # The universal property on the original explicit parameter-word families -/
 
 @[expose] public section
 noncomputable section

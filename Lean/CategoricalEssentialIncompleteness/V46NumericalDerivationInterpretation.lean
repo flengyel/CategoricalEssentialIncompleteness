@@ -35,8 +35,8 @@ variable {F : NumericalTuples.Object} {N : ℕ} (R : RulePresentation F N)
     (PolynomialComparison.ordinary R).map jB ≫ W.str)
   (e : A.a ≅ B.a) (he : e.hom.left ≫ jB = jA)
 
-/-- A comparison of the actual successful pullbacks is an algebra iso
-once their proved constructor-to-tree diagrams commute. -/
+/-- A comparison of the successful pullbacks is an algebra iso once their proved
+constructor-to-tree diagrams commute. -/
 def ofTree : A ≅ B :=
   Endofunctor.Algebra.isoMk e (by
     apply Over.OverMorphism.ext
@@ -59,8 +59,8 @@ def ofTree : A ≅ B :=
       _ = _ := by rw [← he,CategoryTheory.Category.assoc])
 
 include W jA jB hA hB he in
-/-- The whole constructor equation is derived before actual proof
-carriers are substituted; its body is the constructed algebra morphism law. -/
+/-- The whole constructor equation is derived before proof carriers are substituted; its
+body is the constructed algebra morphism law. -/
 theorem ofTree_constructor :
     R.inference.map e.hom ≫ B.str = A.str ≫ e.hom :=
   (ofTree R W A B jA jB hA hB e he).hom.h
@@ -144,8 +144,8 @@ theorem mappedDerivation_tree :
       (SyntacticDerivation.ordinaryTree 𝗣𝗔 R) (SyntacticDerivation.treeInclusion 𝗣𝗔 R)
       (SyntacticDerivation.derivationConstructor_tree 𝗣𝗔 R)) (sourceOrdinaryIso R)
 
-/-- The actual comparison preserves every inference constructor in the
-original formula slice; all morphisms are included in its universal property. -/
+/-- The comparison preserves every inference constructor in the original formula slice;
+all morphisms are included in its universal property. -/
 def interpretationAlgebraIso :
     NumericalDerivation.codeAlgebra (interpretedRules R) ≅
       mappedAlgebra R (SyntacticDerivation.derivationAlgebra 𝗣𝗔 R) :=
@@ -157,7 +157,7 @@ def interpretationAlgebraIso :
     (NumericalDerivation.code_constructor_tree (interpretedRules R)) (mappedDerivation_tree R)
     (interpretationOverIso R) (interpretationCarrierIso_tree R)
 
-/-- Original PA derivation carrier, actual numerical successful-tree carrier. -/
+/-- Original PA derivation carrier, numerical successful-tree carrier. -/
 def interpretationCodeIso : NumericalDerivation.codeObject (interpretedRules R) ≅
     K.obj (SyntacticDerivation.derivationAlgebra 𝗣𝗔 R).a.left := interpretationCarrierIso R
 

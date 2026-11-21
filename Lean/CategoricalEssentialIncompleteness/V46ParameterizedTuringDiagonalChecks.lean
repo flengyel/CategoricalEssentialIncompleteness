@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ParameterizedTuringDiagonal
 
 
-/-! # Statement checks in `V46ParameterizedTuringDiagonalChecks` -/
+/-! # The parameterized source equation for uniform independent sentences -/
 
 @[expose] public section
 noncomputable section

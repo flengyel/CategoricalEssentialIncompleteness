@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPrintedFamily
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPrintedFamilyChecks` -/
+/-! # The exponential coefficient and the indexed initial algebra -/
 
 @[expose] public section
 noncomputable section

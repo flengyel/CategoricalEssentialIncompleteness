@@ -7,10 +7,10 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalParameterGeometry
 
-/-! # All seven logical parameters in the actual canonical syntax
+/-! # All seven logical parameters in the canonical syntax
 
 The Q1 and equality parameters are the prescribed pullbacks of successful
-substitution. Q2 is the actual false equalizer of the occurrence classifier.
+substitution. Q2 is the false equalizer of the occurrence classifier.
 -/
 
 @[expose] public section

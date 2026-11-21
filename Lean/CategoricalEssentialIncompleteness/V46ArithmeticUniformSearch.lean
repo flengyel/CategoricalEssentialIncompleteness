@@ -33,7 +33,7 @@ namespace CategoricalEssentialIncompleteness.V46.ArithmeticUniformSearch
 
 abbrev Predicate₂ := 𝚺₁.Semisentence 2
 
-/-- These are precisely the printed reversed even/odd output clauses. -/
+/-- These are precisely the reversed even/odd output clauses. -/
 def reversedRelation (C C' : Predicate₂) : 𝚺₁.Semisentence 3 :=
   .mkSigma “e x z. (!C.val e x ∧ z = 2 * x + 1) ∨ (!C'.val e x ∧ z = 2 * x)”
 
@@ -133,8 +133,8 @@ theorem search_exact_at (C C' : Predicate₂) (e : M)
 
 end Models
 
-/-- Pairing is stated by its graph, so the printed PA statements have
-only the original arithmetic-language symbols. -/
+/-- Pairing is stated by its graph, so the PA statements have only the original
+arithmetic-language symbols. -/
 def soundSentence (C C' : Predicate₂) : ArithmeticSentence :=
   let Pair := ExponentialPairing.graph
   let G := eventualGraph (index C C')
@@ -170,8 +170,8 @@ theorem domain_PA (C C' : Predicate₂) : 𝗣𝗔 ⊢ domainSentence C C' := by
     exact search_domain_at C C' e x
   simpa [models_iff,domainSentence] using h
 
-/-- One actual source morphism is chosen before any e or consistency
-hypothesis. Its numerical output uses the fixed parity coding. -/
+/-- One source morphism is chosen before any e or consistency hypothesis. Its numerical
+output uses the fixed parity coding. -/
 def numberSearch (C C' : Predicate₂) : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔 :=
   arrowOfIndex 𝗣𝗔 .omega .omega (index C C')
 
@@ -179,9 +179,9 @@ def lift (C C' : Predicate₂) : nearProd (omegaObject 𝗣𝗔) (omegaObject �
     coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔) :=
   (PrintedObjectCoding.omegaProductIso 𝗣𝗔).hom ≫ numberSearch C C' ≫ (omegaCoprodIso 𝗣𝗔).inv
 
-/-- The actual source lift, conjugated to the printed exponential input
-and parity output coordinates, is the selected numerical search program.
-This is source-category equality, before choosing a model or a fiber. -/
+/-- The source lift, conjugated to the exponential input and parity output coordinates, is
+the selected numerical search program. This is source-category equality, before
+choosing a model or a fiber. -/
 theorem lift_printed_coordinates (C C' : Predicate₂) :
     (PrintedObjectCoding.omegaProductIso 𝗣𝗔).inv ≫ lift C C' ≫
       (omegaCoprodIso 𝗣𝗔).hom = numberSearch C C' := by

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModel
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedSubstitutionMap
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRepresentation
 
-/-! # Forward polynomial charts for actual morphisms with numerical values -/
+/-! # Forward polynomial charts for morphisms with numerical values -/
 
 @[expose] public section
 
@@ -27,9 +27,9 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 variable {X Y C D : PredicateCategory T}
 
-/-- Known scalar values of the two actual recursive-position morphisms
-give a chart for the actual categorical polynomial map. This forward
-statement uses only the representation and the finite AST. -/
+/-- Known scalar values of the two recursive-position morphisms give a chart for the
+categorical polynomial map. This forward statement uses only the representation and
+the finite AST. -/
 theorem representation_map (f : X ⟶ C) (g : Y ⟶ D) (φ ψ : M → M)
     (hf : ∀ x : Obj T M X, ((F T M).map f x).val = φ x.val)
     (hg : ∀ y : Obj T M Y, ((F T M).map g y).val = ψ y.val)

@@ -12,10 +12,9 @@ public import CategoricalEssentialIncompleteness.RestrictionPredicates
 /-!
 # Numerical domains and the P-category domain lattice
 
-The original numerical restriction domains are order isomorphic to the
-domains of the numerical P-category, with the same underlying arrows.
-The comparison transports the numerical joins and their inverse-image laws
-to the P-category domain lattice.
+The original numerical restriction domains are order isomorphic to the domains of the
+numerical P-category, with the same underlying morphisms. The comparison transports
+the numerical joins and their inverse-image laws to the P-category domain lattice.
 -/
 
 @[expose] public section
@@ -26,7 +25,7 @@ open CategoryTheory
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- The two domain presentations have identical arrows and the same restriction order. -/
+/-- The two domain presentations have identical morphisms and the same restriction order. -/
 def domainOrderIso (X : Numerical) : Domain X ≃o DomSemilattice X where
   toFun e := ⟨e.hom, (pcategory_rst_eq e.hom).trans e.isDomain⟩
   invFun e := ⟨e.hom, (pcategory_rst_eq e.hom).symm.trans e.isDomain⟩
@@ -47,7 +46,7 @@ theorem domainOrderIso_symm_meet {X : Numerical} (a b : DomSemilattice X) :
   apply Domain.ext
   exact (Domain.inf_hom ((domainOrderIso X).symm a) ((domainOrderIso X).symm b)).symm
 
-/-- The domain comparison commutes with restriction inverse image along partial arrows. -/
+/-- The domain comparison commutes with restriction inverse image along partial morphisms. -/
 theorem domainOrderIso_inverse {X Y : Numerical} (f : X ⟶ Y) (e : Domain Y) :
     domainOrderIso X (domainInverse f e) = domainInverseImage f (domainOrderIso Y e) := by
   apply DomSemilattice.ext'

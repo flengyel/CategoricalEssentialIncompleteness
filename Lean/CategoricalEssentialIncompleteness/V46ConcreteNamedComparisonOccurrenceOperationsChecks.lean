@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonOccurrenceOperations
 
-/-! # Actual categorical operation values use the same named PA root code -/
+/-! # Categorical operation values use the same named PA root code -/
 
 @[expose] public section
 

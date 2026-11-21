@@ -148,8 +148,8 @@ theorem sum_transformation (Q : Over F) :
   simp only [← Category.assoc]
   erw [sumIso_iota]
 
-/-- Naturality of every global algebra operation supplies its actual
-local constructor square; it is not an extra compatibility hypothesis. -/
+/-- Naturality of every global algebra operation supplies its local constructor square; it
+is not an extra compatibility hypothesis. -/
 theorem algebra_transformation (B : Endofunctor.Algebra R.inference) :
     (relabelling K R L α).input (algebra K R B).a (algebra L R B).a
         (α.app B.a.left) (α.naturality B.a.hom).symm ≫ (algebra L R B).str.left =

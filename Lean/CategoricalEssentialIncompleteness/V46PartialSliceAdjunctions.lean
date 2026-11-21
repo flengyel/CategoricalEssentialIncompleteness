@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46PartialSliceChangeBase
 
-/-! # Both adjunctions in the actual monic partial-map slices -/
+/-! # Both adjunctions in the monic partial-map slices -/
 
 @[expose] public section
 noncomputable section

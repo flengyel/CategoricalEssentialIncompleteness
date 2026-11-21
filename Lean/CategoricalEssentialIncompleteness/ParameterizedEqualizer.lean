@@ -13,11 +13,10 @@ public import Mathlib.CategoryTheory.Limits.Shapes.FiniteLimits
 /-!
 # From a parameterized diagonal calculation to an equalizer factorization
 
-For an enriched application, the category and predicate lattices in `D` must
-be those of arrows parameterized by `T`. A representation at that parameter,
-together with interpretation of the two lattice bounds, gives a morphism to
-their equalizer. A calculation restricted to global elements does not supply
-these parameterized data.
+For an enriched application, the category and predicate lattices in `D` must be those
+of morphisms parameterized by `T`. A representation at that parameter, together with
+interpretation of the two lattice bounds, gives a morphism to their equalizer. A
+calculation restricted to global elements does not supply these parameterized data.
 -/
 
 @[expose] public section

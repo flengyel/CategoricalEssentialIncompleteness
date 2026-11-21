@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalNamedLiteralDecoding
 
 
-/-! # Statement checks in `V46NumericalNamedLiteralDecodingChecks` -/
+/-! # Numerical word charts decode to the named finite syntax -/
 
 @[expose] public section
 noncomputable section

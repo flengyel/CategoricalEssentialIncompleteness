@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalEquivalence
 
 
-/-! # Statement checks in `V46MillerTotalEquivalenceChecks` -/
+/-! # The semidecidable presentation of the total splitting -/
 
 @[expose] public section
 noncomputable section

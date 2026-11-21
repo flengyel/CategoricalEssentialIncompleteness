@@ -155,8 +155,8 @@ end Models
 
 open SyntacticSyntax.NatVectors
 
-/-- A certificate is derived from the actual numerical root functions.
-This lemma does not infer primitive recursion from an arbitrary T-total graph. -/
+/-- A certificate is derived from the numerical root functions. This lemma does not infer
+primitive recursion from an arbitrary T-total graph. -/
 theorem step_primrec (a b : RawPolynomial) (f g : ℕ → ℕ → ℕ)
     (hf : Primrec₂ f) (hg : Primrec₂ g) :
     Primrec (fun p : ℕ × ℕ × ℕ => step a b f g p.1 p.2.1 p.2.2) := by

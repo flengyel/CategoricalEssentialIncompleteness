@@ -93,8 +93,8 @@ def naturalIso (p : SyntaxPolynomial I) :
       (E.prod E).functor ⋙ (p.mapCoefficients g).eval :=
   NatIso.ofComponents (component E f g χ p) (fun k => component_natural E f g χ p k)
 
-/-- The paired comparison uses the product equivalence on the actual
-term/formula algebra categories. -/
+/-- The paired comparison uses the product equivalence on the term/formula algebra
+categories. -/
 def jointIso (p q : SyntaxPolynomial I) :
     SyntaxPolynomial.jointFunctor (p.mapCoefficients f) (q.mapCoefficients f) ⋙
         (E.prod E).functor ≅

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawAction
 
 
-/-! # Statement checks in `V46MillerSyntaxRawActionChecks` -/
+/-! # Raw polynomial action on arbitrary parameter-slice morphisms -/
 
 @[expose] public section
 noncomputable section

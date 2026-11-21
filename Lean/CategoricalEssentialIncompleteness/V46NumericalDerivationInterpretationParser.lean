@@ -74,7 +74,7 @@ theorem runGraph_map (a b : RawPolynomial) :
 section Models
 variable {M : Type} [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- Reused from the arithmetic signature-relabel draft with its original labels. -/
+/-- Changing the coefficient morphisms preserves the shape of a polynomial word. -/
 theorem shape_map (p : RawPolynomial) (u : M) :
     shape (p.mapCoefficients f) u = shape p u := by
   induction p generalizing u with
@@ -103,7 +103,7 @@ theorem constructor_map (p : RawPolynomial) (formula : Bool) (u : M) :
     constructor formula (p.mapCoefficients f) u = constructor formula p u := by
   simp only [constructor,shape_map,childrenWord_map]
 
-/-- Equality of the actual graph formulas covers nonstandard prefix lengths. -/
+/-- Equality of the graph formulas covers nonstandard prefix lengths. -/
 theorem runPrefix_map (a b : RawPolynomial) (word n initial : M) :
     Postfix.runPrefix (a.mapCoefficients f) (b.mapCoefficients f) word n initial =
       Postfix.runPrefix a b word n initial := by

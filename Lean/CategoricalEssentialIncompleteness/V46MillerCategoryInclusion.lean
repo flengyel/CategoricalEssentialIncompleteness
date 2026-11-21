@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerCategoryJoins
 
-/-! # The actual faithful range inclusion into partial functions
+/-! # The faithful range inclusion into partial functions
 
-This functor records the underlying partial graph. The fixed-oracle
-recursive target is a separate construction, requiring the actual
-oracle-machine/relative-recursion comparison.
+This functor records the underlying partial graph. The fixed-oracle recursive target
+is a separate construction, requiring the oracle-machine/relative-recursion
+comparison.
 -/
 
 @[expose] public section

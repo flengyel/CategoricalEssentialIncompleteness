@@ -87,8 +87,8 @@ instance functor_essSurj : (functor E α).EssSurj where
 
 instance functor_isEquivalence : (functor E α).IsEquivalence := {}
 
-/-- The base comparison induces an actual equivalence of the
-algebra categories, including all algebra morphisms. -/
+/-- The base comparison induces an equivalence of the algebra categories, including all
+algebra morphisms. -/
 def equivalence : Endofunctor.Algebra F ≌ Endofunctor.Algebra G :=
   (functor E α).asEquivalence
 

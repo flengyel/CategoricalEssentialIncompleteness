@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainResults
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportInputs
 
-/-! # Actual canonical-to-plain comparison data for substitution transport -/
+/-! # Canonical-to-plain comparison data for substitution transport -/
 
 @[expose] public section
 
@@ -28,8 +28,8 @@ section IdentityComparisons
 variable {C : Type u} [Category.{v} C] [Regular C] [FinitaryExtensive C]
 
 omit [FinitaryExtensive C] in
-/-- Identity base equivalence still uses genuine product comparisons;
-product extensionality identifies the resulting isomorphism. -/
+/-- Identity base equivalence still uses product comparisons; product extensionality
+identifies the resulting isomorphism. -/
 theorem identity_productIso {A B A' B' : C} (i : A ≅ A') (j : B ≅ B') :
     SyntaxOptionTransport.productIso (CategoryTheory.Equivalence.refl : C ≌ C) i j =
       prod.mapIso i j := by
@@ -40,8 +40,8 @@ theorem identity_productIso {A B A' B' : C} (i : A ≅ A') (j : B ≅ B') :
   · simp only [SyntaxOptionTransport.productIso_snd,prod.mapIso_hom,prod.map_snd]
     rfl
 
-/-- The option comparison for the identity functor is the actual
-functorial option map, not a numerical carrier identification. -/
+/-- The option comparison for the identity functor is the functorial option map, not a
+numerical carrier identification. -/
 theorem identity_optionIso_hom {A B : C} (i : A ≅ B) :
     (SyntaxOptionTransport.optionIso (CategoryTheory.Equivalence.refl : C ≌ C) i).hom =
       OptionSyntax.map i.hom := by
@@ -88,8 +88,8 @@ local notation "E" => (CategoryTheory.Equivalence.refl : PredicateCategory T ≌
 local notation "S₀" => categoricalSyntax T V σ π d
 local notation "S₁" => plainCategoricalSyntax T V σ π d
 
-/-- The comparison has the actual constructor square supplied by two
-algebra isomorphisms; no fold or substitution equation is assumed. -/
+/-- The comparison has the constructor square supplied by two algebra isomorphisms; no
+fold or substitution equation is assumed. -/
 def plainTransportAlgebraIso :
     SyntaxOperationsTransport.mappedSyntaxAlgebra E V σ π d (S₀) ≅ (S₁).algebra :=
   SyntaxOperationsTransport.languageIdentityIso V σ π d (S₀) ≪≫
@@ -154,8 +154,8 @@ theorem plainTransportFormulaPublicInputIso :
   rw [plainTransportFormulaIso,plainTransportParameterIso,identity_productIso]
   rfl
 
-/-- The word-first and parameter-first comparisons commute with the
-actual chosen product symmetry. -/
+/-- The word-first and parameter-first comparisons commute with the chosen product
+symmetry. -/
 theorem plainInputIso_braiding (formula : Bool) :
     (plainPublicInputIso T V σ π d formula).inv ≫
       (prod.braiding (C := PredicateCategory T)
@@ -195,9 +195,9 @@ theorem plainTransport_formulaOccurrences :
   rw [Iso.hom_inv_id_assoc]
   exact formulaOccurrences_eq T V σ π d
 
-/-- The list object and its chosen recursive structure are shared by
-the two actual syntax bundles. This is an algebra isomorphism, not an
-identification inferred from numerical codes. -/
+/-- The list object and its chosen recursive structure are shared by the two syntax
+bundles. This is an algebra isomorphism, not an identification inferred from numerical
+codes. -/
 def plainTransportListIso :
     (E).functor.obj (S₀).lists.algebra.carrier ≅ (S₁).lists.algebra.carrier :=
   Iso.refl _

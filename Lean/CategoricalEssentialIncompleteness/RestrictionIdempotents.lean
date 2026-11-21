@@ -88,7 +88,7 @@ instance : OrderTop (Idem X) where
 
 @[simp] theorem top_hom : (⊤ : Idem X).hom = 𝟙 X := rfl
 
-/-- The restriction idempotent of an arrow. -/
+/-- The restriction idempotent of a morphism. -/
 def ofRestrict {Y : C} (f : X ⟶ Y) : Idem X := ⟨rst f, restrict_restrict f⟩
 
 /-- Inverse image along an arbitrary partial morphism. -/
@@ -136,7 +136,7 @@ theorem pull_top_of_total {X Y : C} (f : X ⟶ Y) (hf : isTotal f) : pull f ⊤ 
 
 end Idem
 
-/-- The zero arrows have empty restriction domain. -/
+/-- The zero morphisms have empty restriction domain. -/
 class RestrictionZero (C : Type u) [Category.{v} C] [RestrictionCategory C]
     [HasZeroMorphisms C] : Prop where
   restrict_zero : ∀ X Y : C, rst (0 : X ⟶ Y) = 0
@@ -218,8 +218,7 @@ theorem Complementary.pull [TotalJoinInverse C] {X Y : C} {a b : Idem Y}
   · rw [← Idem.pull_inf, h.disjoint, Idem.pull_bot]
   · rw [← TotalJoinInverse.pull_sup f hf, h.cover, Idem.pull_top_of_total f hf]
 
-/-- Corollary 6.7: the theorem and refutation domains of a consistent
-extension remain inseparable. -/
+/-- The theorem and refutation domains of a consistent extension remain inseparable. -/
 theorem domain_incompleteness [TotalJoinInverse C] {U S : C}
     {a b : Idem U} (hab : Inseparable a b)
     (θ : U ⟶ S) (hθ : isTotal θ) (ν : S ⟶ S) (_hν : isTotal ν)

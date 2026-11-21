@@ -58,8 +58,8 @@ end CategoricalEssentialIncompleteness.LocalConnectedness.V46
 
 namespace CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork
 
-/-- Every idempotent natural partial fork map splits in the actual ambient
-partial-map category, not only the restriction idempotents. -/
+/-- Every idempotent natural partial fork map splits in the ambient partial-map category,
+not only the restriction idempotents. -/
 theorem idempotentComplete_v46 : IsIdempotentComplete Object :=
   V46.idempotentComplete
 
@@ -121,8 +121,8 @@ instance karoubiInclusion_isEquivalence : karoubiInclusion.IsEquivalence := by
   let := karoubiInclusion_essSurj
   exact {}
 
-/-- The Karoubi envelope of the generated recursion category is equivalent
-to the actual ambient partial-map category. -/
+/-- The Karoubi envelope of the generated recursion category is equivalent to the ambient
+partial-map category. -/
 def karoubiEquivalence : Karoubi Rec ≌ Object := by
   letI := idempotentComplete_v46
   exact karoubiInclusion.asEquivalence.trans (toKaroubiEquivalence Object).symm

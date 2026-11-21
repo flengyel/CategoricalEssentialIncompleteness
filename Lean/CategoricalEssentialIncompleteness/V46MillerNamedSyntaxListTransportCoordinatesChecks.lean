@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxListTransportCoordinates
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxListTransportCoordinatesChecks` -/
+/-! # Coordinates of lists of variable names -/
 
 @[expose] public section
 noncomputable section

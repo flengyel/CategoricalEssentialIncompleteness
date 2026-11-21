@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGeometry
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationPresentation
 
-/-! # The actual mapped PA inference signature
+/-! # The mapped PA inference signature
 
 Only the arithmetic interpretation functor's proved finite-limit
 preservation is used. No preservation of initial algebras is assumed.
@@ -48,8 +48,8 @@ def finitePowerIso (X : PredicateCategory 𝗣𝗔) :
 
 variable {F : PredicateCategory 𝗣𝗔} {N : ℕ} (R : RulePresentation F N)
 
-/-- The coefficients and conclusions are the actual source images;
-premises use the canonical ordered finite-power comparison. -/
+/-- The coefficients and conclusions are the source images; premises use the canonical
+ordered finite-power comparison. -/
 def interpretedRules : RulePresentation (K.obj F) N where
   instances i := K.obj (R.instances i)
   premises i := K.map (R.premises i) ≫ (finitePowerIso F i.val).hom

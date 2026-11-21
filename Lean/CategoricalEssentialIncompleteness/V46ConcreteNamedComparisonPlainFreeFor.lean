@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonPlainAdmissibleValues
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonFreeFor
 
-/-! # The actual substitution-domain classifier realizes independent free-for -/
+/-! # The substitution-domain classifier realizes independent free-for -/
 
 @[expose] public section
 
@@ -36,8 +36,8 @@ def plainFreeForClassifier : @Quiver.Hom (PredicateCategory T) inferInstance
     (Y ⨯ P) (Two (PredicateCategory T)) :=
   (S).formulaSubstitutionOption ≫ SyntaxOptionTransport.optionTag (C := PredicateCategory T) Y
 
-/-- This is a genuine pullback of the true point by the actual
-classifier; it precedes comparison with any numerical flag. -/
+/-- This is a pullback of the true point by the classifier; it precedes comparison with
+any numerical flag. -/
 theorem plainFreeForClassifier_isPullback :
     IsPullback (S).admissibleInclusion (terminal.from (S).admissibleSubstitution)
       (plainFreeForClassifier T V σ π d)
@@ -48,8 +48,8 @@ theorem plainFreeForClassifier_isPullback :
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The native flag is the separate primitive recursive loop field,
-not a definition in terms of this categorical success classifier. -/
+/-- The numerical free-for flag is the separate primitive recursive loop field, not a
+definition in terms of this categorical success classifier. -/
 theorem plainFreeForClassifier_model_iff (q : Obj T M (Y ⨯ P)) :
     (F T M).map (plainFreeForClassifier T V σ π d) q =
       (F T M).map (Two.constant (C := PredicateCategory T) (Y ⨯ P) true) q ↔

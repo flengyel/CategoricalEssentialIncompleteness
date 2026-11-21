@@ -11,11 +11,10 @@ public import CategoricalEssentialIncompleteness.NumericalEnrichedPredicates
 /-!
 # Global numerical predicates as PER subobjects
 
-Evaluation of global total arrows, followed by the numerical functor to PERs,
+Evaluation of global total morphisms, followed by the numerical functor to PERs,
 preserves binary products. Evaluation at the unique point of the terminal type
-identifies global predicates naturally with the full subobject lattices along
-this functor. The induced domain embedding agrees with the numerical support
-embedding.
+identifies global predicates naturally with the full subobject lattices along this
+functor. The induced domain embedding agrees with the numerical support embedding.
 -/
 
 @[expose] public section
@@ -27,18 +26,18 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- The PER-valued functor on global total numerical arrows. -/
+/-- The PER-valued functor on global total numerical morphisms. -/
 def enrichedToPER : enrichedRestriction.GlobalTotal ⥤ NumericalPER :=
   globalTotalEvaluation ⋙ toPER
 
-/-- The functor on global total arrows preserves binary products. -/
+/-- The functor on global total morphisms preserves binary products. -/
 instance enrichedToPERPreservesBinaryProducts :
     PreservesLimitsOfShape (Discrete WalkingPair) enrichedToPER :=
   inferInstanceAs
     (PreservesLimitsOfShape (Discrete WalkingPair) (globalTotalEvaluation ⋙ toPER))
 
-/-- Evaluation of a global point of the totality pullback agrees with evaluation
-of the underlying total arrow. -/
+/-- Evaluation of a global point of the totality pullback agrees with evaluation of the
+underlying total morphism. -/
 @[simp] theorem enrichedTotal_globalTotalPoint
     {X Y : enrichedRestriction.GlobalTotal} (f : X ⟶ Y) :
     enrichedTotalEquiv X.obj.obj Y.obj.obj

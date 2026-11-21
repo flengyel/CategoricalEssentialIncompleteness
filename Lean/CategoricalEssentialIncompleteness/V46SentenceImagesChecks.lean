@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SentenceImages
 
 
-/-! # Statement checks in `V46SentenceImagesChecks` -/
+/-! # Sentence images and inclusion of generated theories -/
 
 @[expose] public section
 noncomputable section

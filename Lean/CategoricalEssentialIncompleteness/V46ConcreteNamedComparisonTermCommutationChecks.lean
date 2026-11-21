@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonTermCommutation
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonTermCommutationChecks` -/
+/-! # The computed term-state morphism commutes with the full term structure -/
 
 @[expose] public section
 noncomputable section

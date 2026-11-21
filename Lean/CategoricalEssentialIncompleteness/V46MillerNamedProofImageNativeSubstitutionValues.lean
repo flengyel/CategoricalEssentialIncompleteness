@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdent
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionFrame
 public import CategoricalEssentialIncompleteness.V46NamedPlainOperationsModels
 
-/-! # Complete option points and success of the actual substitution morphism -/
+/-! # Complete option points and success of the substitution morphism -/
 
 @[expose] public section
 noncomputable section
@@ -84,7 +84,7 @@ theorem variable_point (x : ℕ) :
   simpa only [CategoryTheory.Functor.map_comp_apply,Points.namePoint,map_sourcePoint,
     hs,termPoint,sourceTermPoint] using h.symm
 
-/-- A point of the actual chosen terminal object. -/
+/-- A point of the chosen terminal object. -/
 def terminalPoint : (U).obj (⊤_ (Total.TotalCategory P)) :=
   (U).map (terminal.from (⟨Total.terminalCarrier⟩ : Total.TotalCategory P)) ⟨0,rfl⟩
 
@@ -93,8 +93,8 @@ theorem terminalPoint_unique (q : (U).obj (⊤_ (Total.TotalCategory P))) :
   apply (Total.pointHomEquiv (⊤_ (Total.TotalCategory P))).injective
   exact terminalIsTerminal.hom_ext _ _
 
-/-- The actual uniform option coproduct, rather than the PA traversal's
-raw numerical option encoding. -/
+/-- The uniform option coproduct, rather than the PA traversal's raw numerical option
+encoding. -/
 def optionPoint : Option Fm → (U).obj (OptionSyntax.obj (S).algebra.a.2)
   | none => (U).map (coprod.inl : ⊤_ (Total.TotalCategory P) ⟶
       OptionSyntax.obj (S).algebra.a.2) (terminalPoint P)
@@ -134,8 +134,8 @@ theorem optionPoint_injective : Function.Injective (optionPoint P σ π d) := by
           exact congrArg some (formulaPoint_injective P σ π d
             ((option_coproduct P σ π d).2.1 hab))
 
-/-- Every point of the actual option object is either its failure point
-or the successful point of a unique literal native formula. -/
+/-- Every point of the option object is either its failure point or the successful point
+of a unique named formula. -/
 theorem optionPoint_surjective : Function.Surjective (optionPoint P σ π d) := by
   intro q
   have h := (option_coproduct P σ π d).2.2
@@ -179,8 +179,7 @@ def decodeOption : (U).obj (OptionSyntax.obj (S).algebra.a.2) → Option Fm :=
     optionPoint P σ π d (decodeOption P σ π d q)=q :=
   (optionEquiv P σ π d).apply_symm_apply q
 
-/-- This function decodes the actual complete option output. Its equality
-with native `Formula.substitute` remains a separate proof obligation. -/
+/-- Decode the option as a named formula on success and as `none` on failure. -/
 def decodedResult (x : ℕ) (t : Tm) (φ : Fm) : Option Fm :=
   decodeOption P σ π d (formulaOptionValue P σ π d x t φ)
 
@@ -191,7 +190,7 @@ theorem identity_parameter_point (x : ℕ) :
   rw [Points.lift_point,CategoryTheory.Functor.map_id_apply,variable_point]
   rfl
 
-/-- Actual identity substitution at every literal term point. -/
+/-- Identity substitution at every literal term point. -/
 theorem identity_term (x : ℕ) (r : Tm) :
     termValue P σ π d x (.var x) r=termPoint P σ π d r := by
   let z := Points.pairPoint (termPoint P σ π d r) (Points.namePoint P x)
@@ -202,8 +201,8 @@ theorem identity_term (x : ℕ) (r : Tm) :
   have h := congrArg (fun k => (U).map k z) (S).term_substitution_identity
   simpa only [CategoryTheory.Functor.map_comp_apply,hi,z,Points.pairPoint_fst,termValue] using h
 
-/-- The complete actual option output for identity substitution, with
-arbitrary native formula and original names. -/
+/-- The complete option output for identity substitution, with arbitrary named formula and
+original names. -/
 theorem identity_option (x : ℕ) (φ : Fm) :
     formulaOptionValue P σ π d x (.var x) φ=optionPoint P σ π d (some φ) := by
   let z := Points.pairPoint (formulaPoint P σ π d φ) (Points.namePoint P x)

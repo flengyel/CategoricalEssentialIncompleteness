@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonParameters
 
-/-! # Both chosen input products have actual comparison arrows -/
+/-! # Both chosen input products have comparison morphisms -/
 
 @[expose] public section
 noncomputable section

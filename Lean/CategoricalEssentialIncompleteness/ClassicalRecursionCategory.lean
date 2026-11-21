@@ -80,7 +80,7 @@ theorem inclusion_nonzero : J.map (𝟙 U) ≠ 0 := by
 def evenDiagonal : Idem U := diagonal0 tau parityIso
 def oddDiagonal : Idem U := diagonal1 tau parityIso
 
-/-- The actual self-application pair is constructed by Theorem 6.3 in the
+/-- The self-application pair is constructed by the section-lifting theorem in the
 classical recursion category. -/
 theorem diagonal_inseparable : Inseparable evenDiagonal oddDiagonal :=
   range_functor_lifting inclusionRangeFunctor tau tau_isTuring parityIso inclusion_nonzero

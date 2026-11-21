@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticGraphs
 public import CategoricalEssentialIncompleteness.V46ArithmeticLiteralModel
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalLiteralTotal
 
-/-! # Numerical negation and the literal numeral-substitution morphism -/
+/-! # Numerical negation and the numeral-substitution morphism -/
 
 @[expose] public section
 noncomputable section
@@ -62,7 +62,7 @@ theorem theta_value (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 
     ((PredicateInterpretation.map_class_eq_iff 𝗣𝗔 ℕ
       (NamedArithmeticLiteralTotal.literalMorphism φ hφ) (omegaIso.hom.toFun (omegaPoint n)) _).mp rfl)
 
-/-- The numeral is the manuscript's zero/add-one term, with its actual word. -/
+/-- The numeral is the manuscript's zero/add-one term, with its word. -/
 theorem standard_literal_result (φ : Formula) (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) (n : ℕ) :
     ∃ out : Formula, φ.substitute 0 (numeral n) = some out ∧
       ((theta φ hφ).toFun (omegaPoint n)).val = formulaCode out ∧ out.freeVariables = [] := by

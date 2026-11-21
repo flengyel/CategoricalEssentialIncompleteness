@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalRealization
 
 
-/-! # Statement checks in `V46NumericalRealizationChecks` -/
+/-! # Numerical logical realization on finite derivation-word carriers -/
 
 @[expose] public section
 noncomputable section

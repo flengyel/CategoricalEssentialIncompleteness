@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedFibersNumeralsPredicate
 
-/-! # The actual numeral/complement split in the arithmetic total category
+/-! # The numeral/complement split in the arithmetic total category
 
 The primitive maps are defined first. The generic constructors derive their
 copair equations, and the concrete isomorphism/proof records are sealed only
@@ -84,8 +84,8 @@ def transportSpecifiedInverse (w₀ : W' ≅ E.functor.obj W)
     (by simpa only [Iso.symm_hom] using hl)
     (by simpa only [Iso.symm_hom] using hr)
 
-/-- The actual morphisms and their primitive comparisons are returned
-by one generic construction. No concrete morphism equation is an input. -/
+/-- The morphisms and their primitive comparisons are returned by one generic
+construction. No concrete morphism equation is an input. -/
 structure TransportedSplitData (w₀ : W' ≅ E.functor.obj W)
     (f : A ⟶ W) (g : B ⟶ W) where
   left : A' ⟶ W'
@@ -118,8 +118,8 @@ def realizedTerminalIso : (predicateEquivalence 𝗣𝗔).functor.obj terminalCa
   ((predicateEquivalence 𝗣𝗔).functor.mapIso predicateTerminalIso).symm ≪≫
     asIso (terminalComparison (predicateEquivalence 𝗣𝗔).functor)
 
-/-- The original literal predicate split is transported once, together
-with its maps and all primitive and coproduct equations. -/
+/-- The original predicate split is transported once, together with its maps and all
+primitive and coproduct equations. -/
 opaque numeralData (e : ℕ) : TransportedSplitData (predicateEquivalence 𝗣𝗔)
     realizedTerminalIso (ArithmeticOmegaComparison.omegaIso 𝗣𝗔)
     (numeralPredicate e) (complementPredicateInclusion e) :=
@@ -127,7 +127,7 @@ opaque numeralData (e : ℕ) : TransportedSplitData (predicateEquivalence 𝗣�
     (ArithmeticOmegaComparison.omegaIso 𝗣𝗔) (numeralPredicate e)
     (complementPredicateInclusion e) (predicateSplitIso_inl e) (predicateSplitIso_inr e)
 
-/-- The primitive numeral morphism from the printed terminal object. -/
+/-- The primitive numeral morphism from the terminal object. -/
 def numeral (e : ℕ) : ⊤_ (TotalSplit 𝗣𝗔) ⟶ parameter := (numeralData e).left
 
 def complementInclusion (e : ℕ) : complement e ⟶ parameter := (numeralData e).right

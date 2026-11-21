@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeTransport
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeTransportChecks` -/
+/-! # Finite standard-point charts and framed operation squares -/
 
 @[expose] public section
 noncomputable section

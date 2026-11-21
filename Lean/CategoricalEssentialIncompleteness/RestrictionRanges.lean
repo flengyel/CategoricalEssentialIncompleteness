@@ -168,7 +168,7 @@ end Summands
 
 section Sections
 
-/-- Partial monicity tests all partial arrows. -/
+/-- Partial monicity tests all partial morphisms. -/
 def PartialMono {X Y : C} (p : X ⟶ Y) : Prop :=
   ∀ {W : C} (u v : W ⟶ X), u ≫ p = v ≫ p → u ≫ rst p = v ≫ rst p
 

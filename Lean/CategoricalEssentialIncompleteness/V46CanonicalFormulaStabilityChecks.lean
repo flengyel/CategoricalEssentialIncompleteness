@@ -6,12 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkCanonicalFormulaStability
 
-/-! # Independent checks of canonical formula parameter initiality
-
-This checks the complete five-branch formula algebra in every global
-parameter slice. The full term/formula interface, lists, substitution
-and derivations remain separate obligations in Proposition 10.7.
--/
+/-! # Initiality of the five-constructor formula algebra in a parameter slice -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -30,8 +25,8 @@ example : (ForkCanonicalFormulaSource.algebra D P).str =
         (ForkCanonicalParameterTargets.coefficients D))
       (ForkCanonicalFormulaSource.jointAlgebra D) P).str.2 := rfl
 
-/-- The relative polynomial has all five printed summands in their
-specified order, using the chosen products in the global slice. -/
+/-- The relative polynomial has all five summands in their specified order, using the
+chosen products in the global slice. -/
 example (Y : Over P) : (ForkCanonicalParameterTargets.polynomial D P).obj Y =
     (((((constantFamily P numbers ⨯ constantFamily P numbers) ⨿ constantFamily P D) ⨿ Y) ⨿
       (Y ⨯ Y)) ⨿ (constantFamily P numbers ⨯ Y)) := rfl
@@ -44,8 +39,8 @@ statement has no supplied constructor-compatibility or initiality premise. -/
 example : IsInitial (ForkCanonicalFormulaSource.algebra D P) :=
   ForkCanonicalFormulaStability.initial D P
 
-/-- The target is any algebra in the actual global slice category;
-its carrier may be nonconstant over P. -/
+/-- The target is any algebra in the global slice category; its carrier may be nonconstant
+over P. -/
 example (B : Endofunctor.Algebra (ForkCanonicalParameterTargets.polynomial D P)) :
     (ForkCanonicalParameterTargets.polynomial D P).map
         (ForkCanonicalFormulaStability.fold D P B).f ≫ B.str =

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticListsDecode
 public import CategoricalEssentialIncompleteness.V46SyntacticListEvaluationLaws
 
-/-! # The actual fold into an arbitrary parameter-family algebra -/
+/-! # The fold into an arbitrary parameter-family algebra -/
 
 @[expose] public section
 
@@ -33,8 +33,8 @@ def foldMap : P ⨯ listObject T V ⟶ B.carrier.left :=
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Evaluation of the actual categorical fold is exactly the arithmetic
-record formula, read at the two source product projections. -/
+/-- Evaluation of the categorical fold is exactly the arithmetic record formula, read at
+the two source product projections. -/
 theorem foldMap_eval (q : Obj T M (P ⨯ listObject T V))
     (y : Obj T M B.carrier.left) :
     (F T M).map (foldMap T B) q = y ↔
@@ -67,8 +67,8 @@ theorem foldMap_over : foldMap T B ≫ B.carrier.hom =
   exact (chosenGraph_map_iff T M B.carrier.hom
     ((F T M).map (foldMap T B) q) ((F T M).map prod.fst q)).mp hf
 
-/-- This fold is a morphism in the actual slice, for arbitrary fibers and
-arbitrary projections to the parameter object. -/
+/-- This fold is a morphism in the slice, for arbitrary fibers and arbitrary projections
+to the parameter object. -/
 def fold : constantFamily P (listObject T V) ⟶ B.carrier :=
   Over.homMk (foldMap T B) (foldMap_over T B)
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentityOptions
 
-/-! # Actual option and product comparisons through an equivalence -/
+/-! # Option and product comparisons through an equivalence -/
 
 @[expose] public section
 
@@ -99,7 +99,7 @@ theorem map_none {W X : C} {X' : D} (i : E.functor.obj X ≅ X') (x : W ⟶ ⊤_
       (E.functor.map x ≫ (terminalIso E).hom) ≫ coprod.inl := by
   rw [E.functor.map_comp,Category.assoc,optionIso_inl,← Category.assoc]
 
-/-- A value-map square induces the actual option-map square. -/
+/-- A value-map square induces the option-map square. -/
 theorem map_option_map {X Y : C} {X' Y' : D}
     (i : E.functor.obj X ≅ X') (j : E.functor.obj Y ≅ Y') (f : X ⟶ Y) (g : X' ⟶ Y')
     (hf : E.functor.map f ≫ j.hom = i.hom ≫ g) :
@@ -131,8 +131,8 @@ theorem map_option_map {X Y : C} {X' Y' : D}
       _ = _ := by
         rw [optionIso_inr_assoc,OptionSyntax.map,coprod.inr_map]
 
-/-- The ordinary constructor square also determines its successful
-option-valued square, including the actual product comparison. -/
+/-- The ordinary constructor square also determines its successful option-valued square,
+including the product comparison. -/
 theorem map_pair_some {W X Y Z : C} {X' Y' Z' : D}
     (i : E.functor.obj X ≅ X') (j : E.functor.obj Y ≅ Y') (k : E.functor.obj Z ≅ Z')
     (h : X ⨯ Y ⟶ Z) (h' : X' ⨯ Y' ⟶ Z')

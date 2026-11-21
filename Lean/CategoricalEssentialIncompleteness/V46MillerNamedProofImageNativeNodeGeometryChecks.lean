@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeNodeGeometry
 
 
-/-! # Statement checks in `V46MillerNamedProofImageNativeNodeGeometryChecks` -/
+/-! # Named nodes in the parameter-word algebra -/
 
 @[expose] public section
 noncomputable section

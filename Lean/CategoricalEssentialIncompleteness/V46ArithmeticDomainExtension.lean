@@ -11,8 +11,8 @@ public import CategoricalEssentialIncompleteness.SyntacticPreservation
 
 /-! # The explicit chosen-domain extension used in the arithmetic comparison
 
-The extension splits each interpreted idempotent through its actual fixed
-points. On total morphisms it is the existing canonical domain functor.
+The extension splits each interpreted idempotent through its fixed points. On total
+morphisms it is the existing canonical domain functor.
 -/
 
 @[expose] public section

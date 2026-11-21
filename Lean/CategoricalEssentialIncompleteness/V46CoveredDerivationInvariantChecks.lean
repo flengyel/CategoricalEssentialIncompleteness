@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46SignedDerivationInternalTruth
 
-/-! # Independent checks of the coded invariant and actual rule geometry -/
+/-! # Independent checks of the coded invariant and rule geometry -/
 @[expose] public section
 noncomputable section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment

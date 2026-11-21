@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryConnected
 
 
-/-! # Statement checks in `V46MillerCategoryConnectedChecks` -/
+/-! # Connected points, finite domain joins and uniform partial inverses -/
 
 @[expose] public section
 open CategoryTheory CategoryTheory.RestrictionCategory

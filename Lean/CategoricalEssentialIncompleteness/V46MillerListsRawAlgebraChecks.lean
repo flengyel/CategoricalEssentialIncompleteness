@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerListsRawAlgebra
 
 
-/-! # Statement checks in `V46MillerListsRawAlgebraChecks` -/
+/-! # The parameterized raw list constructors -/
 
 @[expose] public section
 noncomputable section

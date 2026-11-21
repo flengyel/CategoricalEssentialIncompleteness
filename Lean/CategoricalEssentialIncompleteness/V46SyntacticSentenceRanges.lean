@@ -28,7 +28,7 @@ namespace CategoricalEssentialIncompleteness.V46.SyntacticSentenceImages
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable {P Fm S : PredicateCategory T}
 
-/-- A standard program index for the actual constructed conclusion arrow. -/
+/-- A standard program index for the constructed conclusion morphism. -/
 def conclusionIndex (c : P ⟶ Fm) : ℕ :=
   SyntacticSearch.searchIndex (chosenGraph T c).graph
 
@@ -85,8 +85,8 @@ theorem programTheoryCarrier_theory (c : P ⟶ Fm) (j : S ⟶ Fm)
   simpa [sentenceGraph, conclusionIndex] using
     and_congr h (Iff.refl ((sentenceCarrier T j).val.Evalb ![z]))
 
-/-- The filtered program graph is functional in PA even when totality
-of the original categorical conclusion arrow is proved only in T. -/
+/-- The filtered program graph is functional in PA even when totality of the original
+categorical conclusion morphism is proved only in T. -/
 theorem sentenceGraph_functional_pa (c : P ⟶ Fm) (j : S ⟶ Fm) :
     𝗣𝗔 ⊢ functionalSentence (sentenceGraph T c j) := by
   apply complete.{0} 𝗣𝗔
@@ -115,8 +115,8 @@ theorem sentenceIndex_uniform_pa (c : P ⟶ Fm) (j : S ⟶ Fm) :
       ∃ z : M, (sentenceGraph T c j).val.Evalb ![p,z] := by
   simp [sentenceDomain]
 
-/-- Witness search represents the actual filtered conclusion relation.
-Its functionality has already been proved in PA above. -/
+/-- Witness search represents the filtered conclusion relation. Its functionality has
+already been proved in PA above. -/
 def sentenceMorphism (c : P ⟶ Fm) (j : S ⟶ Fm) :
     GraphMorphism T (sentenceDomain T c j) (sentenceCarrier T j) where
   graph := sentenceGraph T c j
@@ -215,8 +215,8 @@ def programTheoryIso (c : P ⟶ Fm) (j : S ⟶ Fm) :
           ⟨y.val, (programTheoryCarrier_theory T c j M y.val).mpr y.property⟩
         exact ⟨x, Subtype.ext (PredicateInterpretation.map_inclusion_val T M _ x)⟩)
 
-/-- The literal source idempotent's splitting represents the actual
-generated sentence image, with the sentence chart proved above. -/
+/-- The literal source idempotent's splitting represents the generated sentence image,
+with the sentence chart proved above. -/
 def programTheorySplittingIso (c : P ⟶ Fm) (j : S ⟶ Fm) [Mono j] :
     interpretedObject T (programTheoryCarrier T c j) ≅
       (realization T).obj (image (CategoryTheory.Limits.pullback.snd c j)) :=

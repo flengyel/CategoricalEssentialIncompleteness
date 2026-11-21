@@ -6,11 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ForkFormulaParameterChange
 
-/-! # Independent checks of parameterized component folds
-
-Global fork naturality, stable lists, substitution and finite derivations
-remain separate obligations in Proposition 10.7.
--/
+/-! # Component folds with parameters in the fork category -/
 @[expose] public section
 noncomputable section
 universe u

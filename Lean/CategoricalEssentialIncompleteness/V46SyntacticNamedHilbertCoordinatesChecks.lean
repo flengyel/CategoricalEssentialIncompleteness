@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertCoordinates
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertCoordinatesChecks` -/
+/-! # Model points for named derivation instances -/
 
 @[expose] public section
 noncomputable section

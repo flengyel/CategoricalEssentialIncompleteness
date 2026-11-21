@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityDiagonal
 
 
-/-! # Statement checks in `V46ArithmeticSentenceInseparabilityDiagonalChecks` -/
+/-! # The categorical obstruction to a recursive diagonal separator -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

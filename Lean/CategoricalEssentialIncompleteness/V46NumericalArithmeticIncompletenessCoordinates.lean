@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NumericalArithmeticSentenceM
 public import CategoricalEssentialIncompleteness.V46NumericalTuplesStructure
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticDiagonalBoundsPrinted
 
-/-! # Actual numerical sentence maps in the classical restriction splitting -/
+/-! # Numerical sentence maps in the classical restriction splitting -/
 
 @[expose] public section
 noncomputable section
@@ -24,7 +24,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.NumericalArithmetic.Incompleteness
 abbrev numericalQ := NumericalTuples.splitComparison
 
-/-- The graph includes the genuine guarded tuple encoding at both dimensions. -/
+/-- The graph includes the guarded tuple encoding at both dimensions. -/
 theorem numericalQ_graph {X Y : NumericalTuples.Object} (f : X ⟶ Y) (a b : ℕ) :
     b ∈ ClassicalPrograms.J.map (numericalQ.map f).hom a ↔
       ∃ x : NumericalTuples.Point X, NumericalTuples.code X.dimension x.val = a ∧
@@ -49,8 +49,8 @@ theorem numericalQ_range_support {X Y : NumericalTuples.Object} (f : X ⟶ Y) :
     exact ⟨NumericalTuples.code X.dimension x.val,
       (NumericalTuples.comparisonMap_graph f _ b).mpr ⟨x,rfl,hx⟩⟩
 
-/-- A proved numerical sentence chart conjugates the actual range
-idempotent, including all its coded points. -/
+/-- A proved numerical sentence chart conjugates the range idempotent, including all its
+coded points. -/
 theorem numericalQ_range_iso {X Y Z : NumericalTuples.Object} (f : X ⟶ Y) (i : Y ≅ Z) :
     Idem.pull (numericalQ.map i.hom) (Ranges.range (numericalQ.map (f ≫ i.hom))) =
       Ranges.range (numericalQ.map f) := by
@@ -90,8 +90,8 @@ theorem omega_domain : E.domain.hom = 𝟙 ClassicalPrograms.U := by
   rw [mem_supportIdentity,Part.mem_some_iff]
   exact and_iff_right (omega_supported x)
 
-/-- The numerical variable carrier is compared with I(omega) by its
-actual kappa_1 code, rather than by an assumed definitional equality. -/
+/-- The numerical variable carrier is compared with I(omega) by its kappa_1 code, rather
+than by an assumed definitional equality. -/
 def omegaIso : ClassicalPrograms.parameterObject ≅ E where
   hom :=
     { hom := 𝟙 ClassicalPrograms.U
@@ -180,8 +180,8 @@ theorem nu_graph (n w : ℕ) : w ∈ ClassicalPrograms.J.map nu.hom n ↔
     change (NumericalSentenceMorphisms.negation.toFun s).val = w
     exact (NumericalSentenceMorphisms.negation_value s).trans hw.symm
 
-/-- The word carrier is the proved sentence presentation of the actual
-constructed categorical syntax, with its genuine sentence pullback. -/
+/-- The word carrier is the proved sentence presentation of the constructed categorical
+syntax, with its sentence pullback. -/
 def syntaxSentenceIso : numericalQ.obj Coordinates.numericalSyntax.sentenceObject ≅ S_rec :=
   numericalQ.mapIso (asIso Coordinates.literalSentence)
 

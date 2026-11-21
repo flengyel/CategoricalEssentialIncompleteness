@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerRealClosedAxiomsSemantics
 
 
-/-! # Statement checks in `V46MillerRealClosedAxiomsSemanticsChecks` -/
+/-! # Literal field-axiom semantics and the real model of T_a -/
 
 @[expose] public section
 namespace CategoricalEssentialIncompleteness.V46.Miller.RealClosedAxioms.Semantics

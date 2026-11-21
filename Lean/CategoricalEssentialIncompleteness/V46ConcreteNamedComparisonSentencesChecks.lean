@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonSentences
 
-/-! # The actual sentence image is the positive formula-and-empty-FV predicate -/
+/-! # The sentence image is the positive formula-and-empty-FV predicate -/
 
 @[expose] public section
 

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
 
 
-/-! # Statement checks in `V46ArithmeticIndexedPAEnumerationClosureChecks` -/
+/-! # Positive finite records for named universal closure -/
 
 @[expose] public section
 noncomputable section

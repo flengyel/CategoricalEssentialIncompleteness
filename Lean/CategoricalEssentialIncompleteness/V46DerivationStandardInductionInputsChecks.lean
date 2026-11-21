@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46DerivationStandardInductionInputs
 
 
-/-! # Statement checks in `V46DerivationStandardInductionInputsChecks` -/
+/-! # Numerical charts for the ordered rule summands -/
 
 @[expose] public section
 noncomputable section

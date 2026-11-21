@@ -117,7 +117,7 @@ theorem le_supportIdem_iff (a : Idem ClassicalPrograms.U) (P : Set ℕ)
     rw [ClassicalPrograms.J.map_comp]
     exact Idem.le_def.mp hm
 
-/-- The identity pair morphism from the actual categorical diagonal pair. -/
+/-- The identity pair morphism from the categorical diagonal pair. -/
 def diagonalToObservation (T : Theory) : diagonalPair ⟶ observedPair T where
   map := 𝟙 ClassicalPrograms.U
   total := rst_id _

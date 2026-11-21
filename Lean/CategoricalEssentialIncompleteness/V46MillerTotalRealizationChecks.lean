@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerTotalRealization
 
 
-/-! # Statement checks in `V46MillerTotalRealizationChecks` -/
+/-! # Finite limits, coproducts and images in the total category of the restriction splitting -/
 
 @[expose] public section
 noncomputable section

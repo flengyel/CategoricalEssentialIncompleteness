@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonSubstitutionQuantifier
 
 
-/-! # Statement checks in `V46MillerNamedSyntaxComparisonSubstitutionQuantifierChecks` -/
+/-! # Quantified-substitution branch comparison -/
 
 @[expose] public section
 noncomputable section

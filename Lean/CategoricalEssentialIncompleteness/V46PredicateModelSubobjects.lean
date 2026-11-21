@@ -81,7 +81,7 @@ theorem factorThruImage_isSplitEpi {C D : PredicateCategory T} (f : C ⟶ D) :
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Every point of the actual categorical image has a source witness. -/
+/-- Every point of the categorical image has a source witness. -/
 theorem image_point {C D : PredicateCategory T} (f : C ⟶ D)
     (x : PredicateInterpretation.Obj M (image (C := PredicateCategory T) f)) :
     ∃ c : PredicateInterpretation.Obj M C,

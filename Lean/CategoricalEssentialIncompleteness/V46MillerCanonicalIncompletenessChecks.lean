@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCanonicalIncompleteness
 
 
-/-! # Statement checks in `V46MillerCanonicalIncompletenessChecks` -/
+/-! # Incompleteness of the chosen canonical Γ image -/
 
 @[expose] public section
 noncomputable section
@@ -30,7 +30,7 @@ local notation "d" => OrderedFieldSyntax.bound
 local notation "S₁" => NamedProofImage.syntaxData (P) σ π d
 local notation "S₂" => NamedSyntaxComparison.canonicalPresentedSyntax a (V) σ π d
 
--- The object and arrow coordinate statements concern the actual E.
+-- The object and morphism coordinate statements concern the E.
 example : ((E).functor.obj (S₁).sentenceObject).obj=
     CarrierIdempotents.SplitCarrier (S₁).sentenceObject.obj := mapped_sentence_object a
 

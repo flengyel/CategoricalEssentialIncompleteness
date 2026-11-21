@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbertCoordinates
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonModels
 
-/-! # Constructor values on actual named-rule parameter points -/
+/-! # Constructor values on named-rule parameter points -/
 
 @[expose] public section
 noncomputable section
@@ -39,8 +39,8 @@ theorem pullback_point_exists {A B C : PredicateCategory T}
       (F T M).map (pullback.fst f g) z = a ∧ (F T M).map (pullback.snd f g) z = b :=
   Types.exists_of_isPullback ((IsPullback.of_hasPullback f g).map (F T M)) a b h
 
-/-- Every genuine Boolean fiber point is obtained from its equalizing
-model point, using preservation of the actual equalizer. -/
+/-- Every Boolean fiber point is obtained from its equalizing model point, using
+preservation of the equalizer. -/
 theorem booleanFiber_point_exists {A : PredicateCategory T}
     (f : A ⟶ Two (PredicateCategory T)) (b : Bool) (a : Obj T M A)
     (h : (F T M).map f a = (F T M).map (Two.constant A b) a) :

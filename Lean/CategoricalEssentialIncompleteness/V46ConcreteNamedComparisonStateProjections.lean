@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonStateCoordinates
 
-/-! # Actual state projections respect the native payload coordinates -/
+/-! # State projections respect the numerical payload coordinates -/
 
 @[expose] public section
 
@@ -172,9 +172,9 @@ theorem stateOriginal_polynomialCoordinates (p : Obj T M P)
     (fun v w hw => stateOriginalFamily_coordinates T P V σ π d M false p v w hw)
     (fun v w hw => stateOriginalFamily_coordinates T P V σ π d M true p v w hw) a u z hz
 
-/-- Only the term result is selected on formula-free constructor
-polynomials. The second map is the actual original projection; its
-numeric function will be eliminated by the proved term-only AST law. -/
+/-- Only the term result is selected on formula-free constructor polynomials. The second
+map is the original projection; its numeric function will be eliminated by the proved
+term-only AST law. -/
 theorem stateResults_polynomialCoordinates (p : Obj T M P)
     (a : SyntaxPolynomial (PredicateCategory T)) (u : M)
     (z : Obj T M ((a.withParameters P).eval.obj
@@ -199,9 +199,8 @@ theorem stateResults_polynomialCoordinates (p : Obj T M P)
     (fun v w hw => stateTermResultFamily_coordinates T P V σ π d M p v w hw)
     (fun v w hw => stateOriginalFamily_coordinates T P V σ π d M true p v w hw) a u z hz
 
-/-- For polynomials with formula children, read formula results through
-the actual option chart. This includes failure values without choosing
-or inventing a successful formula point. -/
+/-- For polynomials with formula children, read formula results through the option chart.
+This includes failure values without choosing or inventing a successful formula point. -/
 theorem stateResultsCode_polynomialCoordinates (p : Obj T M P)
     (a : SyntaxPolynomial (PredicateCategory T)) (u : M)
     (z : Obj T M ((a.withParameters P).eval.obj

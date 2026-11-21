@@ -8,8 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportCoordinates
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportAlgebras
 
-/-! Membership is transported by its actual parameter algebra and its
-proved Boolean constructor diagrams, rather than by an assumed fold law. -/
+/-!
+Membership is transported by its parameter algebra and its proved Boolean constructor
+diagrams, rather than by an assumed fold law.
+-/
 
 @[expose] public section
 noncomputable section
@@ -32,8 +34,8 @@ theorem membershipOverMap_left {P : C} {Q : D} (b : E.functor.obj P ≅ Q)
 variable (V : C) (W : D) (e : E.functor.obj V ≅ W)
 variable (S : DecidableVariables V) (T : DecidableVariables W)
 
-/-- The coefficient and carrier isomorphisms are actual family
-comparisons. The equality-test square is derived from the diagonal. -/
+/-- The coefficient and carrier isomorphisms are family comparisons. The equality-test
+square is derived from the diagonal. -/
 def mappedMembershipAlgebraIso :
     (mappedListAlgebra (sliceEquivalence E e) (constantFamily V V) (constantFamily W W)
       (coefficientComparison E e V W e) (StableListAlgebra.membershipAlgebra S)).asAlgebra ≅
@@ -82,8 +84,8 @@ def mappedMembershipAlgebraIso :
 
 variable (L : StableListAlgebra V)
 
-/-- Actual membership in the transported list is the image of source
-membership, under the real variable, product and Boolean comparisons. -/
+/-- Membership in the transported list is the image of source membership, under the real
+variable, product and Boolean comparisons. -/
 theorem map_list_membership :
     E.functor.map (L.membership S) ≫ (booleanIso E).hom =
       prodComparison E.functor V L.algebra.carrier ≫ prod.map e.hom (𝟙 _) ≫

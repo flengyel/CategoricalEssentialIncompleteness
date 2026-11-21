@@ -214,8 +214,8 @@ private theorem component_coefficient_conclusion (a b : Idem EffectiveFork.V) (j
     erw [native_negative_conclusion]
     exact component_negative j b
 
-/-- The finite axiom-family comparison commutes with the actual
-conclusion maps, on every logical and nonlogical branch. -/
+/-- The finite axiom-family comparison commutes with the conclusion maps, on every logical
+and nonlogical branch. -/
 theorem component_lambda (a b : Idem EffectiveFork.V) (j : WalkingSpan) :
     (componentFunctor j).map (lambda a b) ≫ (componentFormulaIso j).hom =
       (componentAxiomIso a b j).hom ≫
@@ -528,7 +528,7 @@ theorem component_proof_transition (a b : Idem EffectiveFork.V)
         componentFunctor,EffectiveFork.totalEquivalence,Functor.comp_obj,Iso.refl_hom,
         Category.id_comp,Category.comp_id] using (Naturality.proofMap_unary _ _ _ _ _ _ _ _).symm
 
-/-- The map of target components lies over the actual formula relabeling. -/
+/-- The map of target components lies over the formula relabeling. -/
 theorem componentOver_transition (Q : Over sentenceObject)
     {j k : WalkingSpan} (g : j ⟶ k) :
     (componentTransition g).app Q.left ≫ (componentOver Q k).hom =

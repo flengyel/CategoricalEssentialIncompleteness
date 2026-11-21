@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
 
 
-/-! # Statement checks in `V46SyntaxBooleanTransportChecks` -/
+/-! # Boolean constants and branches under the equivalence -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxPresentation
 
 
-/-! # Statement checks in `V46MillerSyntaxPresentationChecks` -/
+/-! # The original recursive word data in the uniform carrier category -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.EnumerableUnderlying
 public import CategoricalEssentialIncompleteness.ClassicalSplitEquivalence
 
-/-! # Finite-dimensional c.e. carriers with actual tuple-valued maps -/
+/-! # Finite-dimensional c.e. carriers with tuple-valued maps -/
 
 @[expose] public section
 
@@ -97,8 +97,8 @@ theorem decodeTuple_domain (m n : ℕ) : (decodeTuple m n).Dom ↔ n ∈ codeSet
   exact ⟨fun ⟨x, hx⟩ => ⟨x, (mem_decodeTuple m n x).mp hx⟩,
     fun ⟨x, hx⟩ => ⟨x, (mem_decodeTuple m n x).mpr hx⟩⟩
 
-/-- An object is a dimension and an actual c.e. subset of that tuple
-space. No numerical carrier is substituted for its tuple carrier. -/
+/-- An object is a dimension and a c.e. subset of that tuple space. No numerical carrier
+is substituted for its tuple carrier. -/
 structure Object where
   dimension : ℕ
   support : Set (Tuple dimension)
@@ -106,8 +106,8 @@ structure Object where
 
 abbrev Point (C : Object) := {x : Tuple C.dimension // x ∈ C.support}
 
-/-- A morphism is a function on the actual carriers. Its program can be
-partial elsewhere, but computes that function on every carrier input. -/
+/-- A morphism is a function on the carriers. Its program can be partial elsewhere, but
+computes that function on every carrier input. -/
 structure Map (C D : Object) where
   toFun : Point C → Point D
   represented : ∃ p : Tuple C.dimension → Part (Tuple D.dimension),
@@ -146,13 +146,13 @@ instance : Category Object where
 @[simp] theorem composition_apply {C D E : Object} (f : C ⟶ D) (g : D ⟶ E) (x : Point C) :
     (f ≫ g).toFun x = g.toFun (f.toFun x) := rfl
 
-/-- Tuple-function equality is exactly categorical arrow equality. -/
+/-- Tuple-function equality is exactly categorical morphism equality. -/
 theorem map_eq_iff {C D : Object} (f g : C ⟶ D) :
     f = g ↔ ∀ x : Point C, f.toFun x = g.toFun x :=
   ⟨fun h => h ▸ fun _ => rfl, fun h => Map.ext (funext h)⟩
 
-/-- The manuscript's zero-dimensional singleton, with its literal unit
-carrier, is an actual terminal object of the tuple-function category. -/
+/-- The manuscript's zero-dimensional singleton, with its literal unit carrier, is a
+terminal object of the tuple-function category. -/
 def terminalObject : Object := ⟨0, Set.univ, REPred.const True⟩
 
 def terminalMap (C : Object) : C ⟶ terminalObject where
@@ -167,7 +167,7 @@ def terminalIsTerminal : CategoryTheory.Limits.IsTerminal (C := Object) terminal
     apply Subtype.ext
     exact Subsingleton.elim (α := Unit) _ _)
 
-/-- The numerical support is the actual coding image of the tuple set. -/
+/-- The numerical support is the coding image of the tuple set. -/
 def codedSupport (C : Object) : Set ℕ := code C.dimension '' C.support
 
 theorem codedSupport_re (C : Object) : REPred (· ∈ codedSupport C) := by
@@ -195,7 +195,7 @@ theorem codedSupport_re (C : Object) : REPred (· ∈ codedSupport C) := by
 def codedCarrier (C : Object) : EnumerableCarriers.Carrier := ⟨codedSupport C, codedSupport_re C⟩
 def codedObject (C : Object) : EnumerableCarriers.Total := ⟨codedCarrier C⟩
 
-/-- Coding and guarded decoding are inverse on the actual carrier. -/
+/-- Coding and guarded decoding are inverse on the carrier. -/
 def pointEquiv (C : Object) : Point C ≃ {n // n ∈ codedSupport C} where
   toFun x := ⟨code C.dimension x.val, x.val, x.property, rfl⟩
   invFun z := ⟨Classical.choose z.property, (Classical.choose_spec z.property).1⟩
@@ -212,8 +212,8 @@ def pointEquiv (C : Object) : Point C ≃ {n // n ∈ codedSupport C} where
     code C.dimension ((pointEquiv C).symm z).val = z.val :=
   congrArg Subtype.val ((pointEquiv C).apply_symm_apply z)
 
-/-- The chosen tuple program is only an implementation witness; arrow
-equality and category composition are equality/composition of functions. -/
+/-- The chosen tuple program is only an implementation witness; morphism equality and
+category composition are equality/composition of functions. -/
 def Map.program {C D : Object} (f : C ⟶ D) : Tuple C.dimension → Part (Tuple D.dimension) :=
   Classical.choose f.represented
 
@@ -344,8 +344,8 @@ instance comparison_faithful : comparison.Faithful where
     rw [comparisonMap_function, comparisonMap_function] at he
     exact congrArg Subtype.val he
 
-/-- Recover an actual tuple function from any total numerical arrow between
-coded carriers, using the proved inverse coding on its output. -/
+/-- Recover a tuple function from any total numerical morphism between coded carriers,
+using the proved inverse coding on its output. -/
 def recoverMap {C D : Object} (g : codedObject C ⟶ codedObject D) : C ⟶ D where
   toFun x := (pointEquiv D).symm (EnumerableCarriers.totalFunction g (pointEquiv C x))
   represented := by
@@ -412,8 +412,8 @@ instance comparison_essSurj : comparison.EssSurj where
 
 instance comparison_isEquivalence : comparison.IsEquivalence := {}
 
-/-- The actual finite-tuple function category is equivalent to the
-existing total category of c.e. numerical carriers. -/
+/-- The finite-tuple function category is equivalent to the total category of c.e.
+numerical carriers. -/
 def equivalence : Object ≌ EnumerableCarriers.Total := comparison.asEquivalence
 
 /-- Hence it presents every total object of the classical restriction

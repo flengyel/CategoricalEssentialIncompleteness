@@ -67,7 +67,7 @@ example (i : Bool) (U : Set ℕ) (hu : REPred (· ∈ U))
       NumericalTuples.code _ (((S).sentenceNegation.app (node i)).toFun x).val ∉ U :=
   ForkEndpointSentences.extension_incomplete i U hu he hc
 
-/-- All printed clauses with the actual domain inclusion and local proof conclusions. -/
+/-- All clauses with the domain inclusion and local proof conclusions. -/
 example :
     (T ⊓ (Subobject.pullback (S).sentenceNegation).obj T = ⊥) ∧
     (∀ W : FirstOrderReflection.Theory proofFamily, T ≤ W.val →

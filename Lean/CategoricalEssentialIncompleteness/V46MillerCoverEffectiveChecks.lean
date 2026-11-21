@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCoverEffective
 
 
-/-! # Statement checks in `V46MillerCoverEffectiveChecks` -/
+/-! # An ordinary semidecision program for successful finite covers -/
 
 @[expose] public section
 noncomputable section

@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46PartialSliceTuring
 
-/-! # Splitting restriction idempotents in actual partial slices -/
+/-! # Splitting restriction idempotents in partial slices -/
 
 @[expose] public section
 
@@ -51,8 +51,8 @@ variable [HasPullbacks (Tot C)]
 variable (inverses : MonoInverses C) (T : Tot C)
 
 include inverses in
-/-- The literal family model allows the splitting object and both morphisms
-to be lifted back into the actual monic-span quotient. -/
+/-- The literal family model allows the splitting object and both morphisms to be lifted
+back into the monic-span quotient. -/
 theorem splitting {X : PartialMaps.Par (Over T)} (a : Idem X) :
     ∃ (Z : PartialMaps.Par (Over T)) (m : Z ⟶ X) (r : X ⟶ Z),
       isTotal m ∧ m ≫ r = 𝟙 Z ∧ r ≫ m = a.hom := by

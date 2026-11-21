@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalCoordinatesPresentation
 
 
-/-! # Statement checks in `V46NumericalCoordinatesPresentationChecks` -/
+/-! # Literal predicate presentations of numerical tuples -/
 
 @[expose] public section
 noncomputable section

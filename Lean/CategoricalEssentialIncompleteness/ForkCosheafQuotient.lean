@@ -167,8 +167,8 @@ theorem eqvGen_image_iff {α β : Type} (f : α → β) (hf : Function.Injective
     | symm _ _ _ ih => exact .symm _ _ ih
     | trans _ _ _ _ _ ih1 ih2 => exact .trans _ _ _ ih1 ih2
 
-/-- Equality in the actual whole-space quotient is exactly the c.e.
-finite-path relation on its tagged numerical representatives. -/
+/-- Equality in the whole-space quotient is exactly the c.e. finite-path relation on its
+tagged numerical representatives. -/
 theorem quotient_eq_iff_numeric_paths (Y : EffectiveFork.Object)
     (u v : {n // n ∈ Y.left.support} ⊕ {n // n ∈ Y.right.support}) :
     (Quot.mk _ u : Types.Pushout

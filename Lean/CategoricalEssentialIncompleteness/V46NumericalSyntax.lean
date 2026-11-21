@@ -25,7 +25,7 @@ namespace CategoricalEssentialIncompleteness.V46.NumericalSyntax
 def predicateEquivalence : PredicateCategory 𝗧𝗔 ≌ NumericalTuples.Object :=
   (SyntacticPredicates.predicateEquivalence 𝗧𝗔).trans NumericalStableLists.numericalEquivalence
 
-/-- The literal postfix algebra is transported with its parameterized initiality. -/
+/-- The postfix algebra is transported with its parameterized initiality. -/
 def data (p q : SyntaxPolynomial NumericalTuples.Object) :
     Σ A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor p q),
       IsInitial A × (∀ P : NumericalTuples.Object,

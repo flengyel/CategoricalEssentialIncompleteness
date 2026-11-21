@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSchemePoints
 
-/-! # Seven literal scheme witnesses in the actual uniform parameter objects -/
+/-! # Seven scheme witnesses in the uniform parameter objects -/
 
 @[expose] public section
 noncomputable section

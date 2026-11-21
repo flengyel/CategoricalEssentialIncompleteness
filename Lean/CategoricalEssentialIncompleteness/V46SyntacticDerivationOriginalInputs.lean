@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInputPullback
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationEncoderIsos
 
-/-! Literal arithmetic sources of the original inference endofunctor summands. -/
+/-! Arithmetic sources of the original inference endofunctor summands. -/
 
 @[expose] public section
 noncomputable section
@@ -42,8 +42,8 @@ theorem original_square :
   rw [← encodedPremises_arrow, ruleInput_square]
   simp only [← finitePowerIso_hom, Iso.inv_hom_id_assoc]
 
-/-- Transport of the proved literal matching pullback gives the actual
-inference pullback, with each child over its own premise conclusion. -/
+/-- Transport of the proved literal matching pullback gives the inference pullback, with
+each child over its own premise conclusion. -/
 theorem original_isPullback :
     IsPullback (representedArrow T (ruleInputLabel R q i)) (originalChildren R q i)
       (R.premises i) (finitePowerMap (representedArrow T q) i.val) := by
@@ -70,7 +70,7 @@ theorem original_isPullback :
     rw [← Category.assoc, hv]
     simp only [Category.assoc, Iso.hom_inv_id, Category.comp_id]
 
-/-- The isomorphism is over the actual conclusion object F. -/
+/-- The isomorphism is over the conclusion object F. -/
 def ruleInputIso : CategoryTheory.Iso (C := PredicateCategory T)
     (ruleInputCarrier R q i) (R.ruleObject (Over.mk (representedArrow T q)) i) :=
   (original_isPullback R q i).isoPullback

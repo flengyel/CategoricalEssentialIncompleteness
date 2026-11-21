@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonAdmissibleValues
 public import CategoricalEssentialIncompleteness.V46SyntaxOptionClassifier
 
-/-! # The actual substitution-domain classifier realizes independent free-for -/
+/-! # The substitution-domain classifier realizes independent free-for -/
 
 @[expose] public section
 
@@ -27,9 +27,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 section ModelGeometry
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
 
-/-- Interpret an actual true-fiber pullback. The arrow and classifier
-remain opaque; neither a point-image property nor a free-for fact is
-assumed as a construction field. -/
+/-- Interpret a true-fiber pullback. The morphism and classifier remain opaque; neither a
+point-image property nor a free-for fact is assumed as a construction field. -/
 theorem model_classifier_image_iff {A D : PredicateCategory T}
     (ι : A ⟶ D) (χ : D ⟶ Two (PredicateCategory T))
     (h : IsPullback ι (terminal.from A) χ
@@ -70,8 +69,8 @@ def canonicalFreeForClassifier : @Quiver.Hom (PredicateCategory T) inferInstance
     (Y ⨯ P) (Two (PredicateCategory T)) :=
   (S).formulaSubstitutionOption ≫ SyntaxOptionTransport.optionTag (C := PredicateCategory T) Y
 
-/-- This is a genuine pullback of the true point by the actual
-classifier; it precedes comparison with any numerical flag. -/
+/-- This is a pullback of the true point by the classifier; it precedes comparison with
+any numerical flag. -/
 theorem canonicalFreeForClassifier_isPullback :
     IsPullback (S).admissibleInclusion (terminal.from (S).admissibleSubstitution)
       (canonicalFreeForClassifier T V σ π d)
@@ -82,8 +81,8 @@ theorem canonicalFreeForClassifier_isPullback :
 section Models
 variable (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
 
-/-- The native flag is the separate primitive recursive loop field,
-not a definition in terms of this categorical success classifier. -/
+/-- The numerical free-for flag is the separate primitive recursive loop field, not a
+definition in terms of this categorical success classifier. -/
 theorem canonicalFreeForClassifier_model_iff (q : Obj T M (Y ⨯ P)) :
     (F T M).map (canonicalFreeForClassifier T V σ π d) q =
       (F T M).map (Two.constant (C := PredicateCategory T) (Y ⨯ P) true) q ↔

@@ -6,7 +6,7 @@ Authors: Florian Lengyel
 module
 public import CategoricalEssentialIncompleteness.V46ArithmeticAssociatedCategories
 
-/-! # Independent checks of every printed clause of Corollary 8.10 -/
+/-! # Independent checks of every clause of Corollary 8.10 -/
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -44,8 +44,8 @@ example (U : GlobalTheory) (hExt : (t).val ≤ U.val) :
   ⟨Subobject.ofLE_arrow hExt, postcompose_full _, postcompose_faithful _,
     postcompose_not_essSurj _⟩
 
-/-- Both T_pm and every U have genuine universal objects in their actual
-partial-map slices, including all nonconstant slice objects. -/
+/-- Both T_pm and every U have universal objects in their partial-map slices, including
+all nonconstant slice objects. -/
 example (T : TotalSplit 𝗣𝗔) :
     ∃ (products : PCategoryStruct (PartialMaps.Par (Over T)))
       (laws : @PCategory (PartialMaps.Par (Over T)) inferInstance products),
@@ -138,7 +138,7 @@ example (U : GlobalTheory) :
 section OriginalPrograms
 local instance : RestrictionCategory Ambient := PCategory.inducedRestriction
 /-- The identity of a split object has underlying program its domain
-idempotent; this checks the literal printed 1_U × f at program level. -/
+idempotent; this checks the morphism 1_U × f at program level. -/
 example (U : GlobalTheory) {X Y : Source} (f : X ⟶ Y) :
     (((originalFunctor U).map f).hom.hom).hom =
       PCategoryStruct.nearProd_map (U.val : TotalSplit 𝗣𝗔).obj.domain.hom f := original_value U f

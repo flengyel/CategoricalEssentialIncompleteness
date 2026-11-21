@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxAlgebra
 
-/-! # The literal postfix algebra has the exact arbitrary-coefficient K type -/
+/-! # The postfix algebra has the exact arbitrary-coefficient K type -/
 
 @[expose] public section
 

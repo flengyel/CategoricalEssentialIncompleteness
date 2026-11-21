@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalDerivationInterpretationWords
 
 
-/-! # Statement checks in `V46NumericalDerivationInterpretationWordsChecks` -/
+/-! # Original PA ordinary-tree words and numerical tree words -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticOperationValues
 
 
-/-! # Statement checks in `V46NumericalArithmeticOperationValuesChecks` -/
+/-! # The arithmetic numerical substitution and admissibility values -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxCarriers
 
 
-/-! # Statement checks in `V46MillerSyntaxCarriersChecks` -/
+/-! # Original postfix words with arbitrary uniformly enumerable coefficients -/
 
 @[expose] public section
 noncomputable section

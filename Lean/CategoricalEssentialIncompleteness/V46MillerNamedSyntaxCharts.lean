@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46MillerSyntaxComparison
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxUniformAlgebra
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 
-/-! # Actual identical-word charts for PA-described uniform syntax
+/-! # Identical-word charts for PA-described uniform syntax
 
 The charts preserve scalar words, including stored binder names and
 ordered child records. The input chart uses the proved polynomial
@@ -95,8 +95,8 @@ theorem storedWordIso_graph (a b : SyntacticSyntax.RawPolynomial) (formula : Boo
     exact (Syntax.Raw.uniformWords_mapped a b formula word).trans
       (SyntacticSyntax.Postfix.carrier_plain_model formula a b word).symm) word output
 
-/-- Literal raw inputs, including ordered children and original tags,
-are compared with the actual image of the source chosen polynomial. -/
+/-- Literal raw inputs, including ordered children and original tags, are compared with
+the image of the source chosen polynomial. -/
 def inputIso (X Y : PredicateCategory 𝗣𝗔) (X' Y' : Total.TotalCategory P)
     (iX : X' ≅ (Syntax.predicateFunctor P).obj X)
     (iY : Y' ≅ (Syntax.predicateFunctor P).obj Y)

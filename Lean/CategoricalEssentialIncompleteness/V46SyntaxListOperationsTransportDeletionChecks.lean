@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
 
 
-/-! # Statement checks in `V46SyntaxListOperationsTransportDeletionChecks` -/
+/-! # Deletion transport is derived from the parameterized initial algebra, the equality classifier and the nil/cons diagrams -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentFamilies
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsentSteps
 
-/-! The actual absence equalizer on the original/result substitution carriers. -/
+/-! The absence equalizer on the original/result substitution carriers. -/
 
 @[expose] public section
 noncomputable section

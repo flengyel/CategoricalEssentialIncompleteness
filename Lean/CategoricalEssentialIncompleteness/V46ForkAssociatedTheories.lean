@@ -108,8 +108,8 @@ theorem domains_inseparable (hc : U.val ⊓ refutation U.val = ⊥) :
   exact h
 
 include hExt in
-/-- The theorem and refutation subobjects of every consistent extension in the
-actual partial-map category have join strictly below the top subobject. -/
+/-- The theorem and refutation subobjects of every consistent extension in the partial-map
+category have join strictly below the top subobject. -/
 theorem actual_incompleteness (hc : U.val ⊓ refutation U.val = ⊥) :
     (theoremDomain U ⊓ (Subobject.pullback (negation U)).obj (theoremDomain U) = ⊥) ∧
     ∀ W : Subobject ((PartialMaps.totalEquivalence (D := Over (U.val : Object))).functor.obj

@@ -12,10 +12,10 @@ public import CategoricalEssentialIncompleteness.GlobalSubobjects
 /-!
 # Numerical restriction domains and subobject predicates
 
-Restriction domains and all PER subobjects give two contravariant families of
-bounded distributive lattices on the category of total numerical arrows.
-The support inclusion of a domain defines an injective natural bounded lattice
-homomorphism between these families.
+Restriction domains and all PER subobjects give two contravariant families of bounded
+distributive lattices on the category of total numerical morphisms. The support
+inclusion of a domain defines an injective natural bounded lattice homomorphism
+between these families.
 -/
 
 @[expose] public section
@@ -26,7 +26,7 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- Restriction domains, reindexed along total numerical arrows. -/
+/-- Restriction domains, reindexed along total numerical morphisms. -/
 def domainPredicates : PredicateLattice Total where
   obj X := Domain X.obj
   lattice _ := inferInstance

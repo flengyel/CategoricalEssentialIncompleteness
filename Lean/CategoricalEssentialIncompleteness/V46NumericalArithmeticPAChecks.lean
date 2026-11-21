@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticPA
 
 
-/-! # Statement checks in `V46NumericalArithmeticPAChecks` -/
+/-! # The arithmetic PA-axiom inclusion supplies source admissibility -/
 
 @[expose] public section
 noncomputable section

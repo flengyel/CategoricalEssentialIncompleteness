@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46FirstOrderTheory
 public import CategoricalEssentialIncompleteness.V46SentenceTheoryClosure
 public import CategoricalEssentialIncompleteness.V46TotalSentenceImages
 
-/-! # The generated first-order theory in the actual total split category -/
+/-! # The generated first-order theory in the total split category -/
 
 @[expose] public section
 
@@ -29,8 +29,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable (V : TotalSplit T) (σ π : ℕ → TotalSplit T) (d : ℕ)
 local notation "S" => SyntacticSyntax.plainTotalCategoricalSyntax T V σ π d
 
-/-- The actual finite-rule algebra for the seven logical schemes,
-generalization, modus ponens and the given nonlogical axioms. -/
+/-- The finite-rule algebra for the seven logical schemes, generalization, modus ponens
+and the given nonlogical axioms. -/
 def proofAlgebra {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) :
     Endofunctor.Algebra ((S).logicalRules axioms).inference :=
   SyntacticDerivation.totalDerivationAlgebra T ((S).logicalRules axioms)
@@ -78,8 +78,8 @@ theorem sentence_theory_pullback {A : TotalSplit T} (axioms : A ⟶ (S).sentence
       (Subobject.pullback (S).sentenceInclusion).obj (formulaTheory T V σ π d axioms) :=
   (generated_theory T V σ π d axioms).2.2.2
 
-/-- Nonlogical axioms factor through the actual image of the
-sentence-conclusion map, rather than merely through the formula image. -/
+/-- Nonlogical axioms factor through the image of the sentence-conclusion map, rather than
+merely through the formula image. -/
 theorem sentence_axioms_factor {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) :
     ∃ a : A ⟶ image (sentenceConclusion T V σ π d axioms),
       a ≫ image.ι (sentenceConclusion T V σ π d axioms) = axioms := by
@@ -135,8 +135,7 @@ theorem sentence_theory_idempotent {A : TotalSplit T}
   · exact imageSubobject_le_mk m (sentenceConclusion T V σ π d m) w hw
   · exact Subobject.mk_le_mk_of_comm a ha
 
-/-- Inclusion of nonlogical axioms induces inclusion of the actual
-generated sentence theories. -/
+/-- Inclusion of nonlogical axioms induces inclusion of the generated sentence theories. -/
 theorem sentence_theory_monotone {A A' : TotalSplit T}
     (axioms : A ⟶ (S).sentenceObject) (axioms' : A' ⟶ (S).sentenceObject)
     (k : A ⟶ A') (hk : k ≫ axioms' = axioms) :
@@ -146,8 +145,8 @@ theorem sentence_theory_monotone {A A' : TotalSplit T}
     (proofAlgebra T V σ π d axioms) (proofInitial T V σ π d axioms)
     (proofAlgebra T V σ π d axioms')
 
-/-- The actual sentence-conclusion range splits through its regular
-image using the constructed partial inverse of the total image mono. -/
+/-- The sentence-conclusion range splits through its regular image using the constructed
+partial inverse of the total image mono. -/
 theorem sentence_range_regular_image {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) :
     ∃ r : (S).sentenceObject.obj ⟶ (image (sentenceConclusion T V σ π d axioms)).obj,
       (image.ι (sentenceConclusion T V σ π d axioms)).hom ≫ r = 𝟙 _ ∧
@@ -164,8 +163,8 @@ theorem sentence_range_regular_image {A : TotalSplit T} (axioms : A ⟶ (S).sent
       (image.fac c)
   simpa only [hfac] using h
 
-/-- The literal source predicate Sent(z) ∧ ∃p G_e(p,z), in the actual
-inverse equivalence chart, presents the sentence image. -/
+/-- The literal source predicate Sent(z) ∧ ∃p G_e(p,z), in the inverse equivalence chart,
+presents the sentence image. -/
 def sentenceSourceCarrier {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) : Carrier :=
   TotalSentenceImages.sentencePredicate T (conclusion T V σ π d axioms) (S).sentenceInclusion
 
@@ -177,8 +176,8 @@ def sentenceSourceIso {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) :
       image (sentenceConclusion T V σ π d axioms) :=
   TotalSentenceImages.sentenceSplittingIso T (conclusion T V σ π d axioms) (S).sentenceInclusion
 
-/-- The representation also gives the sentence subobject, by composing
-its actual isomorphism with the actual image inclusion. -/
+/-- The representation also gives the sentence subobject, by composing its isomorphism
+with the image inclusion. -/
 def sentenceSourceInclusion {A : TotalSplit T} (axioms : A ⟶ (S).sentenceObject) :
     interpretedObject T (sentenceSourceCarrier T V σ π d axioms) ⟶ (S).sentenceObject :=
   (sentenceSourceIso T V σ π d axioms).hom ≫ image.ι (sentenceConclusion T V σ π d axioms)

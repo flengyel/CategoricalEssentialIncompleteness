@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerFiniteAxiomProofs
 
 
-/-! # Statement checks in `V46MillerFiniteAxiomProofsChecks` -/
+/-! # Named proofs from arbitrary external axiom sets -/
 
 @[expose] public section
 noncomputable section

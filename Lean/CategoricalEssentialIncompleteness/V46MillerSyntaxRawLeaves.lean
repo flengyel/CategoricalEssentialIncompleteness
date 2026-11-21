@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRaw
 public import Mathlib.CategoryTheory.Functor.ReflectsIso.Basic
 
-/-! # Actual recursive-leaf, coefficient and unit slice comparisons
+/-! # Recursive-leaf, coefficient and unit slice comparisons
 
 The graph carrier of a supplied family projection is isomorphic to that
 family. Bijection reflection uses the already constructed uniform inverse

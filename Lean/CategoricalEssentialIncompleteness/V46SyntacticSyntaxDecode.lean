@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxFibers
 
-/-! # Actual root-operation graphs of arbitrary categorical syntax algebras -/
+/-! # Root-operation graphs of arbitrary categorical syntax algebras -/
 
 @[expose] public section
 
@@ -26,8 +26,8 @@ variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 variable {P : PredicateCategory T} (X : Over P × Over P)
 variable (a : SyntaxPolynomial (PredicateCategory T)) {Z : Over P}
 
-/-- Decode a given operation in the slice through the actual polynomial
-representation. This defines a Sigma-one graph without choosing a fold. -/
+/-- Decode a given operation in the slice through the polynomial representation. This
+defines a Sigma-one graph without choosing a fold. -/
 def decodedOperation (f : (a.withParameters P).eval.obj X ⟶ Z) : TernaryGraph :=
   let R := fiberRepresentation T P X a
   let g := (chosenGraph T f.left).graph
@@ -40,8 +40,8 @@ def decodedOperation (f : (a.withParameters P).eval.obj X ⟶ Z) : TernaryGraph 
         (chosenGraph T f.left).graph.val.Evalb ![z, v] := by
   simp [decodedOperation]
 
-/-- The actual algebra arrow supplies the full output-fiber condition;
-there is no assumption that its target is a constant family. -/
+/-- The algebra morphism supplies the full output-fiber condition; there is no assumption
+that its target is a constant family. -/
 theorem decodedOperation_support (f : (a.withParameters P).eval.obj X ⟶ Z) :
     T ⊢ operationSupportSentence P X.1.left X.2.left Z.left
       (chosenGraph T X.1.hom).graph (chosenGraph T X.2.hom).graph
@@ -61,8 +61,8 @@ theorem decodedOperation_support (f : (a.withParameters P).eval.obj X ⟶ Z) :
   simpa [models_iff, operationSupportSentence] using hs
 
 
-/-- Totality and uniqueness are derived from the unique actual source
-point and the given operation arrow, in every model of T. -/
+/-- Totality and uniqueness are derived from the unique source point and the given
+operation morphism, in every model of T. -/
 theorem decodedOperation_total (f : (a.withParameters P).eval.obj X ⟶ Z) :
     T ⊢ operationTotalSentence P X.1.left X.2.left
       (chosenGraph T X.1.hom).graph (chosenGraph T X.2.hom).graph
@@ -89,9 +89,9 @@ theorem decodedOperation_total (f : (a.withParameters P).eval.obj X ⟶ Z) :
     exact graph_functional_model (chosenGraph T f.left) z.val v' v hg' hv
   simpa [models_iff, operationTotalSentence] using ht
 
-/-- Every actual two-sorted algebra in an arbitrary parameter slice has
-concrete Sigma-one root operations satisfying the arithmetic fiber laws.
-The data contain no chosen evaluator and no initiality assertion. -/
+/-- Every two-sorted algebra in an arbitrary parameter slice has concrete Sigma-one root
+operations satisfying the arithmetic fiber laws. The data contain no chosen evaluator
+and no initiality assertion. -/
 def decode (P : PredicateCategory T) (a b : SyntaxPolynomial (PredicateCategory T))
     (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       (a.withParameters P) (b.withParameters P))) :

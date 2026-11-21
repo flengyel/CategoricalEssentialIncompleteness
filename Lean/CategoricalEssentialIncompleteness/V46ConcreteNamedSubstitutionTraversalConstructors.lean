@@ -61,8 +61,8 @@ instance output_definable : 𝚺₁-Function₂ (output a b F G f g : M → M �
 instance output_definable' (Γ m) : Γ-[m + 1]-Function₂ (output a b F G f g : M → M → M) :=
   (output_definable a b F G f g).of_sigmaOne
 
-/-- This states a property of the actual numerical computation; it is not
-an input to the final totality theorem. -/
+/-- This states a property of the numerical computation; it is not an input to the final
+totality theorem. -/
 def Good (formula : Bool) (word : M) : Prop :=
   run a b F G f g param word 1 =
     adjoin ⟪output a b F G f g param word,if formula then 1 else 0⟫ 0 + 1
@@ -105,8 +105,8 @@ theorem children_run (q : RawPolynomial) (n u stack : M)
       · have hd : ChildSize d n y := by simpa [ChildSize] using hsize
         simpa [childrenWord,childStack,mapChildren] using id y stack hy hd
 
-/-- An actual term root consumes exactly the computed child values.
-The coefficient labels and sum tags are preserved by mapChildren. -/
+/-- A term root consumes exactly the computed child values. The coefficient labels and sum
+tags are preserved by mapChildren. -/
 theorem step_term_constructor (u stack : M)
     (hu : (rawCarrier (Postfix.carrier false a b) (Postfix.carrier true a b) a).val.Evalb ![u]) :
     step a b f g param ⟪shape a u,0⟫
@@ -214,7 +214,7 @@ theorem accepted_good (formula : Bool) (word : M)
   · exact (h (len word)).1 word rfl hw
   · exact (h (len word)).2 word rfl hw
 
-/-- This is the PA defining equation of the actual numeric term fold. -/
+/-- This is the PA defining equation of the numeric term fold. -/
 theorem output_term_constructor (u : M)
     (hu : (rawCarrier (Postfix.carrier false a b) (Postfix.carrier true a b) a).val.Evalb ![u]) :
     output a b F G f g param (constructor false a u) =
@@ -233,7 +233,7 @@ theorem output_term_constructor (u : M)
     exact step_term_constructor a b F G f g param u 0 hu
   simp [output,hr]
 
-/-- This is the PA defining equation of the actual numeric formula fold. -/
+/-- This is the PA defining equation of the numeric formula fold. -/
 theorem output_formula_constructor (u : M)
     (hu : (rawCarrier (Postfix.carrier false a b) (Postfix.carrier true a b) b).val.Evalb ![u]) :
     output a b F G f g param (constructor true b u) =

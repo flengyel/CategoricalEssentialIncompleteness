@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationSimple
 public import CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumerationClosure
 
-/-! # Literal induction-matrix enumeration through actual substitution graphs -/
+/-! # Literal induction-matrix enumeration through substitution graphs -/
 
 @[expose] public section
 noncomputable section

@@ -27,7 +27,7 @@ open CategoryTheory CategoryTheory.Limits
 namespace CategoricalEssentialIncompleteness
 namespace Numerical
 
-/-- Elements of the actual domain equalizer are numerical restriction domains. -/
+/-- Elements of the domain equalizer are numerical restriction domains. -/
 def enrichedDomainEquiv (X : Numerical) : enrichedRestriction.domainObject X ≃ Domain X :=
   (Types.equalizerIso (enrichedRestriction.restriction X X)
     (𝟙 (enrichedHom.hom X X))).toEquiv.trans

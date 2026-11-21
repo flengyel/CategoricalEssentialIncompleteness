@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.RestrictionFunctorEquivalences
 public import CategoricalEssentialIncompleteness.EffectiveForkIdempotents
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
 
-/-! # The actual terminal numerical and fork domain lattices have two and five elements -/
+/-! # The terminal numerical and fork domain lattices have two and five elements -/
 
 @[expose] public section
 
@@ -109,8 +109,8 @@ def patternIdem (p : Fork.TerminalSupport) : Idem terminalFork :=
         (EnumerableCarriers.terminalIdemEquiv.symm p.val.2.2))=p.val.2.2 at h
       exact of_decide_eq_true (h.trans (p.property hc).2))
 
-/-- Every closed terminal-support pattern is an actual computably enumerable
-partial identity, and every such partial identity has exactly one pattern. -/
+/-- Every closed terminal-support pattern is a computably enumerable partial identity, and
+every such partial identity has exactly one pattern. -/
 def terminalIdemEquiv : Idem terminalFork ≃ Fork.TerminalSupport where
   toFun := terminalPattern
   invFun := patternIdem

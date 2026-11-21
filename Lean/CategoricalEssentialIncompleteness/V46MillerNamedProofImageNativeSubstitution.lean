@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageNativeSubstitutionValues
 public import CategoricalEssentialIncompleteness.V46CategoricalQuantifierAdmissibilityBranches
 
-/-! # Actual substitution states, framed constructor equations, and equal binders -/
+/-! # Substitution states, framed constructor equations, and equal binders -/
 
 @[expose] public section
 noncomputable section
@@ -156,8 +156,8 @@ def formulaNodeInput (r : (U).obj (R)) : Fm → PointFrame.Data (R) r (A).a (q)
       (formulaLeaf P σ π d r left,formulaLeaf P σ π d r right))
   | .all x body => Sum.inr (Points.namePoint P x,formulaLeaf P σ π d r body)
 
-/-- At a function node, functoriality changes exactly the ordered child
-arrows. The selected symbol label and arity do not change. -/
+/-- At a function node, functoriality changes exactly the ordered child morphisms. The
+selected symbol label and arity do not change. -/
 theorem function_node_map (r : (U).obj (R)) (k : Fin (d+1))
     (c : Symbols σ k.val) (children : Fin k.val → Tm) :
     PointFrame.mapData (R) r (S).substitutionFold (p)
@@ -180,8 +180,8 @@ theorem quantified_node_map (r : (U).obj (R)) (x : ℕ) (body : Fm) :
 
 end NativeNodeInputs
 
-/-- A full-option calculation for the actual fold. There is no assumption
-about whether recursively substituting into the original body succeeds. -/
+/-- A full-option calculation for the fold. There is no assumption about whether
+recursively substituting into the original body succeeds. -/
 theorem equal_binder_option (x : ℕ) (t : Tm) (φ : Fm) :
     formulaOptionValue P σ π d x t (.all x φ)=optionPoint P σ π d (some (.all x φ)) := by
   let Z : Total.TotalCategory P := ⟨Total.terminalCarrier⟩

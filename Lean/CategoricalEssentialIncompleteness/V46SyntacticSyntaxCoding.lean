@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxRaw
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxWords
 
-/-! # Constructor records and ordered child blocks for literal postfix syntax -/
+/-! # Constructor records and ordered child blocks for postfix syntax -/
 
 @[expose] public section
 
@@ -70,7 +70,7 @@ def recordCarrier (a b : RawPolynomial) : Carrier :=
 def coefficients (a b : RawPolynomial) : Carrier :=
   FiniteSigmaOne.finiteMembership (recordCarrier a b)
 
-/-- Appending the root record is literal postfix construction. -/
+/-- Appending the root record is postfix construction. -/
 def constructorGraph (formula : Bool) (p : RawPolynomial) : 𝚺₁.Semisentence 2 :=
   let S := shapeGraph p
   let W := childrenWordGraph p

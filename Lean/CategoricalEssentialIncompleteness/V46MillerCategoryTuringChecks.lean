@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerCategoryTuring
 
 
-/-! # Statement checks in `V46MillerCategoryTuringChecks` -/
+/-! # The unanimous evaluator is a Turing morphism -/
 
 @[expose] public section
 noncomputable section

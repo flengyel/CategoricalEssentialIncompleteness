@@ -10,7 +10,7 @@ public import Mathlib.FieldTheory.IsRealClosed.Basic
 public import Mathlib.Analysis.Polynomial.Order
 public import Mathlib.Analysis.Real.Sqrt
 
-/-! # Literal field-axiom semantics and the actual real model of T_a
+/-! # Literal field-axiom semantics and the real model of T_a
 
 The polynomial-root premise in the generic theorem is the standard
 IsRealClosed class. Its real-number instance is constructed below from

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticNamedHilbert
 
 
-/-! # Statement checks in `V46SyntacticNamedHilbertChecks` -/
+/-! # Named finite Hilbert derivations for a Sigma-one enumeration -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

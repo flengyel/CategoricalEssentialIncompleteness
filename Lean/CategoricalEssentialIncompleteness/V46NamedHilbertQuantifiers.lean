@@ -8,11 +8,11 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedHilbertPropositional
 public import CategoricalEssentialIncompleteness.V46NamedFiniteSemantics
 
-/-! # Derived first-order rules in the literal named calculus
+/-! # Derived first-order rules in the named calculus
 
-Every proof below is built from the existing seven native schemes,
-generalization and ordered modus ponens. No first-order entailment
-instance or substitution-compatibility theorem is supplied as a field.
+Every proof below is built from the seven Hilbert schemes, generalization and ordered
+modus ponens. No first-order entailment instance or substitution-compatibility theorem
+is supplied as a field.
 -/
 
 @[expose] public section
@@ -83,14 +83,14 @@ local notation "Tm" => NamedFiniteSyntax.Term (Symbols σ) d
 local notation "Fm" => NamedFiniteSyntax.Formula (Symbols σ) (Symbols π) d
 local notation "D" => SyntacticNamedHilbert.Derives σ π d Γ
 
-/-- Self-instantiation is the actual native instantiation constructor,
-with its independently proved free-for and substitution equations. -/
+/-- Self-instantiation is the Hilbert instantiation constructor, with its independently
+proved free-for and substitution equations. -/
 theorem all_elim_self (x : ℕ) (φ : Fm) : D (.imp (.all x φ) φ) :=
   .instantiation x φ (.var x) φ (formula_freeFor_self φ x) (formula_substitute_self φ x)
 
-/-- Global implication proofs are mapped by universal quantification.
-The printed distribution scheme is used with antecedent ∀xφ, whose
-absence side condition follows from the literal FV definition. -/
+/-- Global implication proofs are mapped by universal quantification. The distribution
+scheme is used with antecedent ∀xφ, whose absence side condition follows from the
+literal FV definition. -/
 theorem all_mono (x : ℕ) {φ ψ : Fm} (h : D (.imp φ ψ)) :
     D (.imp (.all x φ) (.all x ψ)) := by
   have he : D (.imp (.all x φ) ψ) :=
@@ -103,17 +103,17 @@ theorem all_congr (x : ℕ) {φ ψ : Fm}
     D (.imp (.all x φ) (.all x ψ)) ∧ D (.imp (.all x ψ) (.all x φ)) :=
   ⟨all_mono σ π d Γ x hp,all_mono σ π d Γ x hq⟩
 
-/-- Vacuous quantification follows from the actual distribution scheme
-and a proved identity implication. -/
+/-- Vacuous quantification follows from the distribution scheme and a proved identity
+implication. -/
 theorem all_vacuous (x : ℕ) (φ : Fm) (hx : x ∉ φ.freeVariables) :
     D (.imp φ (.all x φ)) := by
   have hi : D (.all x (.imp φ φ)) :=
     .generalization x (NamedHilbertPropositional.implication_identity σ π d Γ φ)
   exact .modusPonens hi (.distribution x φ φ hx)
 
-/-- A concrete capture-free named substitution and genuine absence
-condition give the corresponding universal binder-renaming implication.
-No alpha-equivalence or first-order proof comparison is assumed. -/
+/-- A concrete capture-free named substitution and absence condition give the
+corresponding universal binder-renaming implication. No alpha-equivalence or
+first-order proof comparison is assumed. -/
 theorem all_rename_forward (x y : ℕ) (φ ψ : Fm)
     (hff : φ.FreeFor x (.var y)) (hs : φ.substitute x (.var y) = some ψ)
     (hy : y ∉ (Formula.all x φ).freeVariables) :
@@ -128,8 +128,8 @@ theorem all_intro_under (x : ℕ) (δ φ : Fm)
     (hx : x ∉ δ.freeVariables) (h : D (.imp δ φ)) : D (.imp δ (.all x φ)) :=
   .modusPonens (.generalization x h) (.distribution x δ φ hx)
 
-/-- Existential introduction is derived from actual universal
-instantiation and the existing third propositional scheme. -/
+/-- Existential introduction is derived from universal instantiation and the existing
+third propositional scheme. -/
 theorem exists_intro (x : ℕ) (φ ψ : Fm) (t : Tm)
     (hff : φ.FreeFor x t) (hs : φ.substitute x t = some ψ) :
     D (.imp ψ (.neg (.all x (.neg φ)))) := by

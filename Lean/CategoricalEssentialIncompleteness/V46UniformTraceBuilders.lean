@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTraceTemplates
 
-/-! # Uniform composition and specialization by genuine template compilation
+/-! # Uniform composition and specialization by template compilation
 
-The arbitrary program indices are data for fixed universal templates. The
-parameter compiler builds actual program indices and has already been proved
-correct in every PA model, including at nonstandard parameter values.
+The arbitrary program indices are data for fixed universal templates. The parameter
+compiler builds program indices and has already been proved correct in every PA model,
+including at nonstandard parameter values.
 -/
 
 @[expose] public section
@@ -167,7 +167,7 @@ theorem specialize_eval (e a input output : M) :
   simpa only [specialize, specializationTemplateIndex, specializationTemplateGraph_model,
     pi₁_pair, pi₂_pair] using h
 
-/-- Actual relational composition at arbitrary internal program indices. -/
+/-- Relational composition at arbitrary internal program indices. -/
 theorem compose_eval (f e input output : M) :
     graph.val.Evalb ![compose f e, input, output] ↔ ∃ middle : M,
       graph.val.Evalb ![e, input, middle] ∧ graph.val.Evalb ![f, middle, output] := by

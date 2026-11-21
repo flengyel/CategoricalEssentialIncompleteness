@@ -11,9 +11,9 @@ public import CategoricalEssentialIncompleteness.V46SyntacticDerivationTotal
 
 /-! # The diagonal signed theory in the total restriction splitting
 
-The rule morphisms are transported by the constructed predicate equivalence.
-The proof algebras in the target are the actual coded derivation algebras,
-indexed only by axiom subobjects.
+The rule morphisms are transported by the constructed predicate equivalence. The proof
+algebras in the target are the coded derivation algebras, indexed only by axiom
+subobjects.
 -/
 @[expose] public section
 noncomputable section
@@ -31,7 +31,7 @@ local notation "N" => (PrintedObjectCoding.Number : PredicateCategory 𝗣𝗔)
 variable {V : PredicateCategory 𝗣𝗔} (F : NullaryPresentations V)
 local notation "S" => NullaryPresentations.syntaxData F N
 
-/-- The actual transported first-order rule presentation. -/
+/-- The transported first-order rule presentation. -/
 def rules (A : Subobject ((G).obj (S).sentenceObject)) :=
   firstOrderRules ((G).map (S).logicalAxioms) ((G).map (S).sentenceInclusion) A.arrow
     (FirstOrderRuleTransport.mappedAll (G) (S).quantifierConstructor)
@@ -72,7 +72,7 @@ theorem axioms_comparison : axioms F =
   simp only [axioms, atom, negation, positive, negative, Functor.map_comp]
   rfl
 
-/-- These are the images of the actual split-subobject inclusions. -/
+/-- These are the images of the split-subobject inclusions. -/
 theorem axioms_image : axioms F =
     imageSubobject ((G).map (numberInclusion ArithmeticDiagonalCodes.alpha) ≫ atom F) ⊔
       imageSubobject ((G).map (numberInclusion ArithmeticDiagonalCodes.beta) ≫
@@ -130,8 +130,8 @@ theorem atomic_bounds :
 theorem inseparable : SubobjectInseparable positive negative :=
   EquivalenceSubobjects.inseparable (E) ArithmeticSignedEssential.diagonal_inseparable
 
-/-- All internal extensions are covered, including arbitrary closed
-subobjects of the actual target sentence object. -/
+/-- All internal extensions are covered, including arbitrary closed subobjects of the
+target sentence object. -/
 theorem every_consistent_extension_incomplete
     (U : FirstOrderReflection.Theory (proofs F))
     (hExt : (theory F).val ≤ U.val)

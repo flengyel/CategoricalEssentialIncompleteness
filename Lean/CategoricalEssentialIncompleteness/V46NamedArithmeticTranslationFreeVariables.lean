@@ -113,7 +113,7 @@ theorem translateUnary_freeVariables (α : ArithmeticSemisentence 1) (x : ℕ)
   fin_cases i
   simpa using hi.symm
 
-/-- Empty source contexts produce literal named sentences. -/
+/-- Empty source contexts produce named sentences. -/
 theorem translateSentence_freeVariables (φ : ArithmeticSentence) (next : ℕ) :
     (translateFormula next ![] φ).freeVariables = [] := by
   cases hv : (translateFormula next ![] φ).freeVariables with

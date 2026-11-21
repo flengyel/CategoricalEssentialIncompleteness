@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionAbsent
 
-/-! The manuscript's actual absent-variable fibers and admissibility factorization. -/
+/-! The manuscript's absent-variable fibers and admissibility factorization. -/
 
 @[expose] public section
 noncomputable section

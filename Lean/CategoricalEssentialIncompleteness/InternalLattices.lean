@@ -68,10 +68,10 @@ theorem comp_top {T T' : V} (k : T' ⟶ T) : k ≫ (⊤ : T ⟶ L.obj) = ⊤ := 
 
 variable [HasFiniteLimits V]
 
-/-- The representing arrow of meet. -/
+/-- The representing morphism of meet. -/
 def meet : L.obj ⨯ L.obj ⟶ L.obj := prod.fst ⊓ prod.snd
 
-/-- The representing arrow of join. -/
+/-- The representing morphism of join. -/
 def join : L.obj ⨯ L.obj ⟶ L.obj := prod.fst ⊔ prod.snd
 
 @[simp]
@@ -82,7 +82,7 @@ theorem lift_meet {T : V} (a b : T ⟶ L.obj) : prod.lift a b ≫ L.meet = a ⊓
 theorem lift_join {T : V} (a b : T ⟶ L.obj) : prod.lift a b ≫ L.join = a ⊔ b := by
   simp [join]
 
-/-- The arrow sending a pair to its meet and join. -/
+/-- The morphism sending a pair to its meet and join. -/
 def meetJoin : L.obj ⨯ L.obj ⟶ L.obj ⨯ L.obj := prod.lift L.meet L.join
 
 /-- The pair of global bounds. -/

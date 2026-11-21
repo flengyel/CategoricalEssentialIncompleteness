@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxChildrenTrace
 
 
-/-! # Statement checks in `V46SyntacticSyntaxChildrenTraceChecks` -/
+/-! # Framed traces for the ordered child blocks of a constructor -/
 
 @[expose] public section
 noncomputable section

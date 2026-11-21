@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerNamedProofImageSentenceReflection
 
 
-/-! # Statement checks in `V46MillerNamedProofImageSentenceReflectionChecks` -/
+/-! # Sentence and Gamma-leaf reflection -/
 
 @[expose] public section
 noncomputable section

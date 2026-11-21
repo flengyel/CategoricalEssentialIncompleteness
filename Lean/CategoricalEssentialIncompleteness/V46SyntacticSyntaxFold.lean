@@ -29,8 +29,8 @@ variable {P : PredicateCategory T} (a b : SyntaxPolynomial (PredicateCategory T)
 variable (B : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
   (a.withParameters P) (b.withParameters P)))
 
-/-- The evaluator graph supplies an actual arrow from the constant term
-family, with its finite record hidden only as an existential witness. -/
+/-- The evaluator graph supplies a morphism from the constant term family, with its finite
+record hidden only as an existential witness. -/
 def termFoldMap : P ⨯ termCarrier a b ⟶ B.a.1.left :=
   toRawProduct T P (termCarrier a b) ≫
     representedArrow T ((decode T P a b B).evaluationMorphism false)
@@ -112,7 +112,7 @@ theorem formulaFoldMap_over : formulaFoldMap T a b B ≫ B.a.2.hom =
   exact (chosenGraph_map_iff T M B.a.2.hom
     ((F T M).map (formulaFoldMap T a b B) q) ((F T M).map prod.fst q)).mp hf
 
-/-- Both components are actual morphisms in the supplied parameter slice. -/
+/-- Both components are morphisms in the supplied parameter slice. -/
 def termFold : constantFamily P (termCarrier a b) ⟶ B.a.1 :=
   Over.homMk (termFoldMap T a b B) (termFoldMap_over T a b B)
 

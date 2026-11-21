@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticUnarySubstitution
 
 
-/-! # Statement checks in `V46NamedArithmeticUnarySubstitutionChecks` -/
+/-! # Unary arithmetic formulas specialize the already proved generic finite-source numeral-substitution construction -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46ConcreteNamedComparisonCandidateOriginal
 
 
-/-! # Statement checks in `V46ConcreteNamedComparisonCandidateOriginalChecks` -/
+/-! # The computed state pair preserves originals before the fold comparison -/
 
 @[expose] public section
 noncomputable section

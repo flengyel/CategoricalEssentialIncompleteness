@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NamedPostfixDecoding
 
-/-! # Literal named finite syntax and standard accepted words -/
+/-! # Named finite syntax and standard accepted words -/
 
 @[expose] public section
 
@@ -128,8 +128,8 @@ def termWords (σ π : ℕ → Carrier) (d : ℕ) :=
 def formulaWords (σ π : ℕ → Carrier) (d : ℕ) :=
   {word : ℕ // (carrier true (termPolynomial σ d) (formulaPolynomial π d)).val.Evalb ![word]}
 
-/-- The standard interpretation is compared by the actual word number.
-All variable, symbol and binder labels are retained literally. -/
+/-- The standard interpretation is compared by the word number. All variable, symbol and
+binder labels are retained literally. -/
 def termEquiv (σ π : ℕ → Carrier) (d : ℕ) :
     NamedFiniteSyntax.Term (Symbols σ) d ≃ termWords σ π d :=
   Equiv.ofBijective (fun r => ⟨termCode r, termCode_member π r⟩)

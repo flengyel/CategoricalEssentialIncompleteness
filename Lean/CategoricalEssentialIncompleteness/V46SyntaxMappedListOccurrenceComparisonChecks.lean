@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxMappedListOccurrenceComparison
 
 
-/-! # Statement checks in `V46SyntaxMappedListOccurrenceComparisonChecks` -/
+/-! # Occurrence comparison from the mapped list-algebra equality -/
 
 @[expose] public section
 noncomputable section

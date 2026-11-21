@@ -21,8 +21,8 @@ variable {R : Type u} [Category.{v} R] [PCategoryStruct R] [PCategory R]
 attribute [local instance] SplitObject.productData SplitObject.productLaws SplitObject.productSplits
 local instance baseRestriction : RestrictionCategory (SplitObject R) := PCategory.inducedRestriction
 
-/-- The literal full subcategory contains precisely the original constant
-objects, and this functor sends a morphism to its product with the identity. -/
+/-- The full subcategory contains precisely the original constant objects, and this
+functor sends a morphism to its product with the identity. -/
 def functor (T : SplitObject R) : R ⥤ ConstantSlice.Full.FullCategory T where
   obj := ConstantSlice.Full.object T
   map f := ObjectProperty.homMk

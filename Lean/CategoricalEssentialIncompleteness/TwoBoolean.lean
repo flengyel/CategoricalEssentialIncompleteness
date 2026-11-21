@@ -10,9 +10,9 @@ public import CategoricalEssentialIncompleteness.CharacteristicArrows
 /-!
 # The internal Boolean algebra on `1 + 1`
 
-Operations are arrows, constructed by the universal coproduct
-decompositions. Their identities are checked after restriction to truth-value
-fibers, not merely at global points.
+Operations are morphisms, constructed by the universal coproduct decompositions. Their
+identities are checked after restriction to truth-value fibers, not merely at global
+points.
 -/
 
 @[expose] public section
@@ -30,7 +30,7 @@ namespace Two
 
 variable {C : Type u} [Category.{v} C] [Regular C] [FinitaryExtensive C]
 
-/-- An arrow obtained by choosing between two arrows on the two fibers of `f`. -/
+/-- A morphism obtained by choosing between two morphisms on the two fibers of `f`. -/
 def branch {X Y : C} (f : X ⟶ Two C) (g₀ g₁ : X ⟶ Y) : X ⟶ Y :=
   BinaryCofan.IsColimit.desc (fibersIsColimit f)
     (fiberι f false ≫ g₀) (fiberι f true ≫ g₁)
@@ -41,7 +41,7 @@ theorem fiberι_branch {X Y : C} (f : X ⟶ Two C) (g₀ g₁ : X ⟶ Y) (b : Bo
   · exact BinaryCofan.IsColimit.inl_desc (fibersIsColimit f) _ _
   · exact BinaryCofan.IsColimit.inr_desc (fibersIsColimit f) _ _
 
-/-- The branch equation holds for every arrow landing in a specified fiber. -/
+/-- The branch equation holds for every morphism landing in a specified fiber. -/
 theorem comp_branch {X Y Z : C} (f : X ⟶ Two C) (g₀ g₁ : X ⟶ Y)
     (k : Z ⟶ X) (b : Bool) (hk : k ≫ f = constant Z b) :
     k ≫ branch f g₀ g₁ = k ≫ (if b then g₁ else g₀) := by
@@ -50,7 +50,7 @@ theorem comp_branch {X Y Z : C} (f : X ⟶ Two C) (g₀ g₁ : X ⟶ Y)
   have hl : l ≫ fiberι f b = k := equalizer.lift_ι _ _
   rw [← hl, Category.assoc, fiberι_branch, ← Category.assoc]
 
-/-- A unary Boolean truth table represented by an arrow out of the coproduct. -/
+/-- A unary Boolean truth table represented by a morphism out of the coproduct. -/
 def unary {X : C} (op : Bool → Bool) (f : X ⟶ Two C) : X ⟶ Two C :=
   f ≫ coprod.desc (point (op false)) (point (op true))
 
@@ -63,7 +63,7 @@ theorem unary_constant (X : C) (op : Bool → Bool) (b : Bool) :
     unary op (constant X b) = constant X (op b) := by
   cases b <;> simp [unary, constant, point]
 
-/-- The representing arrow of a binary Boolean truth table. -/
+/-- The representing morphism of a binary Boolean truth table. -/
 def binaryArrow (op : Bool → Bool → Bool) : Two C ⨯ Two C ⟶ Two C :=
   branch prod.fst (unary (op false) prod.snd) (unary (op true) prod.snd)
 
@@ -241,8 +241,8 @@ theorem constant_boundCopair (X : C) (b : Bool) :
     Two.constant X b ≫ B.boundCopair = if b then ⊤ else ⊥ := by
   cases b <;> simp [Two.constant, Two.point, boundCopair, constant_bot, constant_top]
 
-/-- The canonical arrow from `1 + 1` to an internal Boolean algebra preserves
-all Boolean operations on generalized elements. -/
+/-- The canonical morphism from `1 + 1` to an internal Boolean algebra preserves all
+Boolean operations on generalized elements. -/
 def boundMorphism : BooleanMorphism (twoBooleanObject (C := C)) B where
   hom := B.boundCopair
   postcomp X :=

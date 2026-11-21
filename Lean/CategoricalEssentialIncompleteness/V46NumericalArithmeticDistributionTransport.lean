@@ -11,7 +11,7 @@ public import CategoricalEssentialIncompleteness.V46SyntaxBooleanTransport
 public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Equalizers
 
-/-! # The actual numerical absent-variable fiber under the literal equivalence -/
+/-! # The numerical absent-variable fiber under the literal equivalence -/
 
 @[expose] public section
 noncomputable section
@@ -36,8 +36,8 @@ private theorem inverse_square (h : A ⟶ B) (h' : A' ⟶ B')
   rw [Category.assoc,← hh,← Category.assoc,Iso.inv_hom_id,Category.id_comp]
   simp
 
-/-- The equalizer comparison changes its actual ambient coordinates;
-its point is not replaced by a witness for equalization. -/
+/-- The equalizer comparison changes its ambient coordinates; its point is not replaced by
+a witness for equalization. -/
 def equalizerChart : equalizer f g ≅ equalizer f' g' where
   hom := equalizer.lift (equalizer.ι f g ≫ i.hom) (by
     rw [Category.assoc,hf,← Category.assoc,equalizer.condition,Category.assoc,← hg,Category.assoc])
@@ -111,8 +111,8 @@ theorem occurrenceInput_square :
       _ = _ := by simp only [Category.assoc]
 
 include hLists in
-/-- The comparison of the Boolean occurrence classifiers follows
-from the actual membership fold and occurrence-algebra diagrams. -/
+/-- The comparison of the Boolean occurrence classifiers follows from the membership fold
+and occurrence-algebra diagrams. -/
 theorem absence_square :
     E.functor.map S₀.distributionAbsence ≫ (DecidableVariables.Transport.booleanIso E).hom =
       (baseIso E V σ π d S₀ S₁ c).hom ≫ S₁.distributionAbsence := by
@@ -122,8 +122,8 @@ theorem absence_square :
     ← Category.assoc,occurrenceInput_square,Category.assoc]
 
 include hLists in
-/-- The actual Q2 label comparison is an isomorphism of the prescribed
-false fibers. Its ambient name and two formula entries are preserved. -/
+/-- The Q2 label comparison is an isomorphism of the prescribed false fibers. Its ambient
+name and two formula entries are preserved. -/
 def fiberIso : E.functor.obj S₀.distributionParameters ≅ S₁.distributionParameters :=
   PreservesEqualizer.iso E.functor S₀.distributionAbsence (Two.constant _ false) ≪≫
     equalizerChart (E.functor.map S₀.distributionAbsence)

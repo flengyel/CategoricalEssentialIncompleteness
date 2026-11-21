@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NumericalArithmeticLogicalOperations
 
 
-/-! # Statement checks in `V46NumericalArithmeticLogicalOperationsChecks` -/
+/-! # The arithmetic logical constructor squares -/
 
 @[expose] public section
 noncomputable section

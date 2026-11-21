@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerNamedSyntaxComparisonOptions
 
-/-! # Lifted option constructors for the actual uniform syntax functor -/
+/-! # Lifted option constructors for the uniform syntax functor -/
 
 @[expose] public section
 noncomputable section
@@ -22,8 +22,8 @@ variable [Regular C] [FinitaryExtensive C] [Regular D] [FinitaryExtensive D]
 variable (F : C ⥤ D) [PreservesFiniteLimits F] [PreservesFiniteCoproducts F]
 
 omit [Regular C] [Regular D] [FinitaryExtensive D] [PreservesFiniteLimits F] in
-/-- Finite-geometry functors preserve the actual source-fiber coproduct cover.
-The target fibers do not have to use the same chosen objects. -/
+/-- Finite-geometry functors preserve the source-fiber coproduct cover. The target fibers
+do not have to use the same chosen objects. -/
 theorem map_sumFibers_hom_ext {W A B : C} (f : W ⟶ A ⨿ B) {Z : D}
     {g h : F.obj W ⟶ Z}
     (h₀ : F.map (pullback.fst f (coprod.inl : A ⟶ A ⨿ B)) ≫ g =
@@ -130,8 +130,8 @@ theorem map_binary_success {W Y Z : C} {Y' Z' : D}
       rw [← F.map_comp,binary_success h u y z hy hz,map_pair_some F i i j h h' hh]
     _ = _ := (binary_success h' _ _ _ ht₁ ht₂).symm
 
-/-- Both operand failures and the simultaneous success case are
-transported for the actual binary option operation. -/
+/-- Both operand failures and the simultaneous success case are transported for the binary
+option operation. -/
 theorem map_binary {Y Z : C} {Y' Z' : D}
     (i : F.obj Y ≅ Y') (j : F.obj Z ≅ Z') (h : Y ⨯ Y ⟶ Z) (h' : Y' ⨯ Y' ⟶ Z')
     (hh : F.map h ≫ j.hom = (productIso F i i).hom ≫ h') :

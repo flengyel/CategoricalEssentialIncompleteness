@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportVariable
 
 
-/-! # Statement checks in `V46SyntaxSubstitutionTransportVariableChecks` -/
+/-! # The named-variable branch is transported with the equality classifier and both coordinates of the substitution parameter -/
 
 @[expose] public section
 noncomputable section

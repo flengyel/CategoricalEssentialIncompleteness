@@ -7,11 +7,11 @@ module
 
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawAction
 
-/-! # Exact numerical child graphs of the actual polynomial action
+/-! # Exact numerical child graphs of the polynomial action
 
-Every leaf uses the supplied family morphism on its actual numerical code.
-Outer parameter equality, ordered product children, and literal sum tags
-are derived from the constructed raw action and its Over equations.
+Every leaf uses the supplied family morphism on its numerical code. Outer parameter
+equality, ordered product children, and literal sum tags are derived from the
+constructed raw action and its Over equations.
 -/
 
 @[expose] public section
@@ -280,8 +280,8 @@ theorem rawAction_graph (f:X⟶X') (g:Y⟶Y') (p:SyntaxPolynomial (Total.TotalCa
     subst s
     exact (rawAction_graph_same_parameter R X Y X' Y' f g p r u v).mpr h
 
-/-- This is the actual chosen polynomial action conjugated by the proved
-chart isomorphisms, not a newly supplied relation or comparison field. -/
+/-- This is the chosen polynomial action conjugated by the proved chart isomorphisms, not
+a newly supplied relation or comparison field. -/
 theorem transportedAction_graph (f:X⟶X') (g:Y⟶Y') (p:SyntaxPolynomial (Total.TotalCategory P)) (r u s v:ℕ) :
     Nat.pair s v∈Total.val (((comparison R X Y p).hom ≫
       (p.withParameters R).eval.map (f,g) ≫ (comparison R X' Y' p).inv).left.hom) (Nat.pair r u) ↔
@@ -304,8 +304,8 @@ theorem transportedAction_unit_graph (f:X⟶X') (g:Y⟶Y') (r u s v:ℕ) :
       s=r ∧ r∈R.obj.support ∧ u=0 ∧ v=u :=
   transportedAction_graph R X Y X' Y' f g .unit r u s v
 
-/-- The term input to f is its actual family code. In a constant word
-family that code is pair(r,word), not the bare word. -/
+/-- The term input to f is its family code. In a constant word family that code is
+pair(r,word), not the bare word. -/
 theorem transportedAction_coefficient_term_graph (f:X⟶X') (g:Y⟶Y')
     (C:Total.TotalCategory P) (r label word s label' value:ℕ) :
     Nat.pair s (Nat.pair label' value)∈Total.val (((comparison R X Y (.product (.coefficient C) .term)).hom ≫

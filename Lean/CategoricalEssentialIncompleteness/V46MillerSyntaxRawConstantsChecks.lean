@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46MillerSyntaxRawConstants
 
 
-/-! # Statement checks in `V46MillerSyntaxRawConstantsChecks` -/
+/-! # The constant-polynomial chart in every parameter slice -/
 
 @[expose] public section
 noncomputable section

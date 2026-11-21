@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NumericalTuplesPartialMaps
 
-/-! Actual tuple total category and ordinary monic-span restriction equivalences. -/
+/-! Tuple total category and ordinary monic-span restriction equivalences. -/
 
 @[expose] public section
 

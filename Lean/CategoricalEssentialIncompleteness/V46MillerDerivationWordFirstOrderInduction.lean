@@ -11,7 +11,7 @@ public import Mathlib.Tactic.FinCases
 
 /-! # First-order conclusion induction with arbitrary uniform axioms
 
-This specializes the proved word-rank induction to the printed nullary,
+This specializes the proved word-rank induction to the nullary,
 unary and ordered binary premise pullbacks. It makes no enumeration or
 decidability assumption on the external induction property.
 -/

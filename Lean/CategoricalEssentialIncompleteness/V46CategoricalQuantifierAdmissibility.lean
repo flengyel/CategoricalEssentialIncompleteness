@@ -27,7 +27,7 @@ variable {V : D} {σ π : ℕ → D} {d : ℕ} (S : CategoricalSyntax V σ π d)
 attribute [local simp] prod.comp_lift_assoc prod.lift_fst_assoc prod.lift_snd_assoc
   prod.map_fst_assoc prod.map_snd_assoc
 
-/-- The option-success decomposition of the actual quantifier algebra step. -/
+/-- The option-success decomposition of the quantifier algebra step. -/
 theorem quantifier_result_success :
     OptionSyntax.success S.quantifierSubstitutionResult =
       Two.fiberSubobject S.quantifierEquality true ⊔
@@ -72,8 +72,8 @@ theorem quantifier_fold_input_slice :
     exact congrArg₂ prod.lift (parameterStep_map_head S.substitutionFold.2)
       (parameterStep_map_value S.substitutionFold.2)
 
-/-- The quantifier constructor equation of the actual substitution fold,
-retaining its parameter in the slice. -/
+/-- The quantifier constructor equation of the substitution fold, retaining its parameter
+in the slice. -/
 theorem quantifier_fold_in_slice :
     (constantFamilyFunctor S.substitutionParameters).map S.quantifierConstructor ≫
         S.substitutionFold.2 =
@@ -186,8 +186,8 @@ def quantifiedCapture : S.quantifierAdmissibilityParameters ⟶ Two D :=
         prod.lift_snd, prod.lift_snd_assoc, Category.assoc] using
           congrArg (fun k => k ≫ S.substitutionFold.2.left ≫ prod.snd) h
 
-/-- The actual formula fold has the displayed quantified branch equation
-on the manuscript's parameter object `B`. -/
+/-- The formula fold has the displayed quantified branch equation on the manuscript's
+parameter object `B`. -/
 theorem quantified_substitution_equation :
     S.quantifiedInput ≫ S.formulaSubstitutionOption =
       S.quantifiedFoldInput ≫ S.quantifierSubstitutionResult := by
@@ -196,8 +196,8 @@ theorem quantified_substitution_equation :
   simp only [Category.assoc, S.quantified_formula_fold,
     S.quantified_fold_input_reassociate_assoc]
 
-/-- The manuscript's admissibility-subobject identity, with actual pullback
-intersection and join in the subobject lattice of `B`. -/
+/-- The manuscript's admissibility-subobject identity, with pullback intersection and join
+in the subobject lattice of `B`. -/
 theorem quantified_admissibility_subobjects :
     (Subobject.pullback S.quantifiedInput).obj (Subobject.mk S.admissibleInclusion) =
       Two.fiberSubobject S.quantifiedEquality true ⊔
