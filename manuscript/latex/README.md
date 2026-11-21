@@ -1,10 +1,10 @@
-# LaTeX sources — version 69
+# LaTeX sources — version 70
 
 **Logical consequence and essential incompleteness in recursion categories**,
 21 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v69.pdf`
-and `logical_consequence_v69_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v70.pdf`
+and `logical_consequence_v70_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All five appendices and
@@ -53,6 +53,8 @@ The output is `main.pdf`. The source package contains this directory as
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 70 specifies the interpretation of variables in Appendix E.1.
 
 Version 69 prints the numbered sections and appendices in blue in the table of contents.
 
@@ -128,7 +130,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 69 is the current manuscript and Lean verification target.
+Version 70 is the current manuscript and Lean verification target.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.

@@ -1,12 +1,15 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 21 November 2026
 
-The active manuscript is v69. The numbered sections and appendices appear in blue in the contents.
+The active manuscript is v70. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
 Appendix E explains six Lean proofs. The reviews of the v67 appendix are in docs/reviews/V67_APPENDIX_E/.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V69.md.
-The v66 proof guide and numbered-result correspondence also apply to v69.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V70.md.
+The v66 proof guide and numbered-result correspondence also apply to v70.
 Appendix E cites the source of the privately checked v66 proof at
 a65aeb4d5aae48ef9d71bd3352f8935e7612e434. See docs/V66_LEAN_WRITING_REPORT.md.
+
+For the ordinary CEI submission and registration, follow
+docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 Fixed release and Appendix E citations
 --------------------------------------

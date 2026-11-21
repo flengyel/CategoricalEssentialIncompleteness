@@ -18,8 +18,9 @@ the atomic sentence morphism $\theta_X:X\to S_X$. Lean writes this
 composite as $\theta_X\mathbin{\gg}\sigma_S$.
 Conversely, \texttt{extend} takes an assignment $f:X\to S_P$ satisfying
 $a\leq f^*T$ and $b\leq f^*(\nu_P^*T)$, where $\nu_P$ denotes negation.
-The interpretation $\widehat f$ sends each generating predicate to the
-closed sentence assigned by $f$. Substitution fixes these sentences.
+The interpretation $\widehat f$ sends each variable to its variable term
+in $P$ and each generating predicate to the closed sentence assigned by $f$.
+Substitution fixes these sentences.
 Induction on formulas shows that the interpretation commutes with
 admissible substitution. The inequalities
 put the translated axioms in $T$. Closure under deduction gives
