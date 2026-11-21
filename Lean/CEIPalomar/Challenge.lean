@@ -92,8 +92,8 @@ def essentiallyIncomplete (T : Subobject P.sentence) : Prop :=
 
 end Calculus
 
-/-- The subobjects `a` and `b` are disjoint and no pair of complementary
-subobjects separates them. -/
+/-- The subobjects `a` and `b` are disjoint, and there are no complementary
+subobjects `c` and `d` of `X` with `a ≤ c` and `b ≤ d`. -/
 def inseparable {X : D} (a b : Subobject X) : Prop :=
   a ⊓ b = ⊥ ∧
     ¬ ∃ c d : Subobject X, IsCompl c d ∧ a ≤ c ∧ b ≤ d
@@ -120,7 +120,7 @@ theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V 
 
 /-- There is a nullary first-order calculus with an inseparable pair whose signed
 theory is essentially incomplete. The diagonal subobjects of the number object
-in the predicate category of Peano arithmetic give such a pair. -/
+in the predicate category of Peano arithmetic give the example of Lemma 8.9. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext
