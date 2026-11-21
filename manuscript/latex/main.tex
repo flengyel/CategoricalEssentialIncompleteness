@@ -7,7 +7,17 @@
 \clearpage
 \pdfbookmark[1]{Contents}{contents}
 \begingroup
-\hypersetup{linktoc=all,linkcolor=black}
+\hypersetup{linktoc=all}
+\ExplSyntaxOn
+\NewCommandCopy \PrintContentsEntry \contentsline
+\RenewDocumentCommand \contentsline { m m m m }
+  {
+    \regex_match:nnTF { \A (section|appendix) \. } {#4}
+      { \hypersetup{linkcolor=blue} }
+      { \hypersetup{linkcolor=black} }
+    \PrintContentsEntry{#1}{#2}{#3}{#4}
+  }
+\ExplSyntaxOff
 \small
 \tableofcontents
 \endgroup
