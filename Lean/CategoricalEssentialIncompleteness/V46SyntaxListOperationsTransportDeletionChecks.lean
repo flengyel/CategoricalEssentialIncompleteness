@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportDeletion
 
 
-/-! # Deletion transport is derived from the parameterized initial algebra, the equality classifier and the nil/cons diagrams -/
+/-! # Transport of deletion from a list -/
 
 @[expose] public section
 noncomputable section

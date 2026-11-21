@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticPrimitiveRecursion
 
 
-/-! # Empty-parameter primitive recursion, proved before specializing the blueprint to the concrete arithmetic syntax operations -/
+/-! # Primitive recursion with no parameters -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

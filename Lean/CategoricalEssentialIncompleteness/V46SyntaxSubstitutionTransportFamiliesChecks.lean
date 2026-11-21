@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFamilies
 
 
-/-! # Parameter-dependent constructor squares are lifted to the constant-family morphisms, using both product projections -/
+/-! # Transport of parameterized constructor squares -/
 
 @[expose] public section
 noncomputable section

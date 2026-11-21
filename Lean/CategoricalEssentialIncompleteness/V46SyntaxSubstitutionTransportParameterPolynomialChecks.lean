@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportParameterPolynomial
 
 
-/-! # The full two-sorted parameter polynomial is normalized by the same coefficient equalities as its component operations -/
+/-! # The two-sorted parameter polynomial under change of coefficients -/
 
 @[expose] public section
 noncomputable section

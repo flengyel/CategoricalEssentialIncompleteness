@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportValues
 
 
-/-! # Intrinsic term substitution and option-valued formula substitution commute with the input and output comparisons -/
+/-! # Transport of term substitution and option-valued formula substitution -/
 
 @[expose] public section
 noncomputable section

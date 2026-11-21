@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntacticOmegaRealization
 
 
-/-! # Realization of total numerical predicate morphisms on the identity omega splitting, with source-morphism and model-graph comparisons -/
+/-! # Total numerical morphisms on the identity splitting of the number object -/
 
 @[expose] public section
 noncomputable section

@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticNumeralCarriers
 
 
-/-! # PA proves that its internal numeral construction is a closed, accepted arithmetic term, including at nonstandard input indices -/
+/-! # Closed numeral terms at arbitrary indices in a model of PA -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

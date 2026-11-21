@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticFixedSentenceMorphism
 
 
-/-! # The complete sentence-morphism construction for a generic finite named formula with its external free-name bound -/
+/-! # The sentence morphism for a formula with bounded free names -/
 
 @[expose] public section
 noncomputable section

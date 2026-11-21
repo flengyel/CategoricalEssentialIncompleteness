@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxSubstitutionTransportFormula
 
 
-/-! # The equality, relation, negation and implication substitution operations inherit their comparisons from the ordinary constructors and option operations -/
+/-! # Substitution under equality, relation, negation and implication -/
 
 @[expose] public section
 noncomputable section

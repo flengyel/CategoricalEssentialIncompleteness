@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NamedArithmeticStandardCodes
 
 
-/-! # Positive Sigma-one graph instances commute with standard numeral parameters in every PA model -/
+/-! # Positive Σ₁ graphs at standard numerals -/
 
 @[expose] public section
 open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic

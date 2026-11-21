@@ -99,7 +99,7 @@ theorem body_alpha {ξ : Type} (φ : Semiformula ℒₒᵣ ξ 1)
     (fromNative Γ _ (NamedHilbertQuantifiers.all_rename_forward functionSymbols relationSymbols bound Γ
       y x B A hfr hr hbv))
 
-/-- Binding a free name and then restoring that name in the bound slot preserves the translated formula. -/
+/-- Binding a free name and then restoring it in the bound slot preserves the translation. -/
 theorem bindRemove_original {n : ℕ} (x : Fin n) (φ : Semiformula ℒₒᵣ (Fin n) 0)
     (seed : ℕ) :
     ArithmeticNamedOpenTranslation.formula seed ![x.val] (fun y => y.val.val)

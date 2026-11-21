@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46SyntaxListOperationsTransportMembership
 
 
-/-! # Membership is transported by its parameter algebra and its proved Boolean constructor diagrams, rather than by an assumed fold law -/
+/-! # Transport of list membership -/
 
 @[expose] public section
 noncomputable section
