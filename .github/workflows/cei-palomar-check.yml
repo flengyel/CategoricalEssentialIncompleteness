@@ -1,0 +1,91 @@
+name: CEI candidate proof check
+
+on:
+  push:
+    branches:
+      - palomar/cei-v66
+
+permissions:
+  contents: read
+
+jobs:
+  comparator:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 2
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          lake-package-directory: Lean
+          auto-config: false
+          build: false
+          use-github-cache: false
+          use-mathlib-cache: true
+      - name: Inspect the original mismatch
+        if: github.event.before == '79ac85f14e11c33889472feaf752636cbc41a163'
+        working-directory: Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          solution=CEIPalomar/Solution.lean
+          saved="$RUNNER_TEMP/candidate-solution.lean"
+          cp "$solution" "$saved"
+          trap 'cp "$saved" "$solution"' EXIT
+          git show 'HEAD^:Lean/CEIPalomar/Solution.lean' > "$solution"
+          lake build +CEIPalomar.Challenge +CEIPalomar.Solution
+          for side in Challenge Solution; do
+            lake env leanexport "CEIPalomar.$side" -- CEIPalomar.Calculus.consistent > "$RUNNER_TEMP/original-$side.export"
+          done
+          python3 ../scripts/inspect_cei_exports.py "$RUNNER_TEMP/original-Challenge.export" "$RUNNER_TEMP/original-Solution.export"
+      - name: Build the challenge and solution
+        working-directory: Lean
+        run: |
+          git diff --exit-code HEAD -- CEIPalomar
+          lake build +CEIPalomar.Challenge +CEIPalomar.Solution
+      - name: Inspect the exported definition of consistency
+        working-directory: Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          for side in Challenge Solution; do
+            lake env leanexport "CEIPalomar.$side" -- CEIPalomar.Calculus.consistent > "$RUNNER_TEMP/$side.export"
+          done
+          python3 ../scripts/inspect_cei_exports.py "$RUNNER_TEMP/Challenge.export" "$RUNNER_TEMP/Solution.export"
+      - name: Check the Challenge imports and designated placeholders
+        working-directory: Lean
+        run: lake env lean -DwarningAsError=true ../scripts/check_cei_challenge.lean
+      - name: Recover the manuscript statements and check transitive Solution axioms
+        working-directory: Lean
+        run: |
+          lake build +CEIPalomar.ManuscriptChecks
+          lake env lean -DwarningAsError=true CEIPalomar/ManuscriptChecks.lean
+      - name: Check the Comparator sandbox
+        run: |
+          if ! command -v bwrap >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y bubblewrap
+          fi
+          bwrap --unshare-all --ro-bind / / --dev /dev --proc /proc -- /usr/bin/true
+      - name: Compare the statements and replay the proof
+        working-directory: Lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          config="$RUNNER_TEMP/cei-comparator.json"
+          python3 - "$config" "$(lean --print-prefix)" <<'PY'
+          import json
+          from pathlib import Path
+          import sys
+
+          destination, prefix = map(Path, sys.argv[1:])
+          config = json.loads(Path("comparator.json").read_text())
+          kernels = {"nanoda": "nanoda_bin", "con-ron": "con-ron"}
+          config["external_kernels"] = {
+              name: [str(prefix / "bin" / program)] for name, program in kernels.items()
+          }
+          destination.write_text(json.dumps(config))
+          PY
+          lake comparator --config "$config"
