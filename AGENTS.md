@@ -22,6 +22,15 @@ Use `morphism` and `Turing morphism`. Define notation before use, state morphism
 types, and remove empty modifiers, repeated definitions, and defensive asides.
 Preserve mathematical hypotheses and substantive counterexamples.
 
+Apply the mathematical writing standard to project-owned Lean module documentation,
+docstrings, comments and declaration names. Use the term from the manuscript, the
+mathematical literature or Mathlib. When the paper introduces a concept, cite
+its definition at first use. Describe a construction directly if it has no name.
+Keep a modifier when it distinguishes a hypothesis, construction or conclusion.
+Describe the mathematics in the source and keep verification history in reports.
+Check public names against their callers and the Comparator configuration before
+renaming them. See Knuth, Larrabee and Roberts, [*Mathematical Writing*, §1](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf).
+
 Commit completed changes to `main` and push them to `origin/main`.
 A saved file or local commit is not completion. Before reporting completion,
 verify the remote `main` commit and the active manuscript version there.

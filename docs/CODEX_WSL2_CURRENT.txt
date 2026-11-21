@@ -6,6 +6,8 @@ The current manuscript and verification target are version 66.
 Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V66.md.
 For the v66 Palomar Challenge and registration package, follow
 docs/CODEX_WSL2_V66_PALOMAR_PREPARATION.md.
+For the writing review of the Lean sources and the patch against the tested
+v66 package, follow docs/CODEX_WSL2_V66_LEAN_WRITING.md.
 The sentence review of v65 and the corrections made in v66 are in
 docs/reviews/V65_SENTENCES_2026-11-18/review.md. The section ledgers
 preserve the v65 wording and give the source lines of the v66 corrections.
