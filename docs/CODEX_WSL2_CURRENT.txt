@@ -27,22 +27,22 @@ peeled value agrees, and give Palomar the full SHA. Keep the v66 private
 check attached to its tested SHA. Follow the ordinary authorized preflight
 and registration workflow for the intended candidate.
 
-Appendix E cites PALOMAR-2026-11-22-000009, version 2, registered from
-cd08f0a42a6e8e182805db84396e40fdddc1b2ca. The permanent entry is
+Manuscript v71 at 170f14c13366e1a10dca9a77fc6fda4cd1c8acda cites
+PALOMAR-2026-11-22-000009, version 2. Its registered source was
+cd08f0a42a6e8e182805db84396e40fdddc1b2ca, which contains manuscript v70.
 https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2
-For later registrations, read the versioned public record.
-Verify the repository, project path, full SHA and selected declarations.
-Use the issued ID and numeric version in the permanent entry URL. Where
-Appendix E discusses Corollary 4.8, cite essential_incomplete_iff_inseparable
-and boolean_assignment. In the finite-support subsection cite
-exists_inseparable_example specifically for the existential consequence of
-Lemma 8.9. Retain the direct proof-source links for the full lemma and the
-other readings. If the registered SHA differs from the appendix source pin,
-check the cited files and line anchors against the registered snapshot before
-updating them. Rebuild the PDF and ZIP, update the active correspondence and
-manifest, run the manuscript checks, and verify the embedded PDF links.
-Record this citation in a subsequent manuscript commit, preserving the
-original release tag at its registered SHA.
+
+For the next authorized candidate, use the current version history to choose
+the target version. Include its version-specific permalink in Appendix E.2
+for Corollary 4.8 and the Boolean assignment and in E.3 for the existential
+consequence of Lemma 8.9. Retain the direct Lean proof link for the full
+lemma. Use neutral citation wording before registration. Point Appendix E's
+release-source links and the manuscript link in Lean/formalization.yaml at
+the fresh candidate tag. Build and inspect all six subsections of Appendix E
+and both versioned hyperlinks in the PDF. Update the archive, manifest and
+correspondence before committing the snapshot and running full preflight.
+After registration, verify the issued version and SHA against that snapshot
+and its tag. Report any mismatch before manuscript publication.
 
 v66 proof preparation and verification record
 ---------------------------------------------
