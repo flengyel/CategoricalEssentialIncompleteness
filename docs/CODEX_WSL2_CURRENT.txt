@@ -1,10 +1,10 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 21 November 2026
+Updated 22 November 2026
 
-The active manuscript is v70. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
+The active manuscript is v71. The manuscript and Lean proof share the public main branch of flengyel/CategoricalEssentialIncompleteness. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
 Appendix E explains six Lean proofs. The reviews of the v67 appendix are in docs/reviews/V67_APPENDIX_E/.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V70.md.
-The v66 proof guide and numbered-result correspondence also apply to v70.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V71.md.
+The v66 proof guide and numbered-result correspondence also apply to v71.
 Appendix E cites the source of the privately checked v66 proof at
 a65aeb4d5aae48ef9d71bd3352f8935e7612e434. See docs/V66_LEAN_WRITING_REPORT.md.
 
@@ -27,7 +27,10 @@ peeled value agrees, and give Palomar the full SHA. Keep the v66 private
 check attached to its tested SHA. Follow the ordinary authorized preflight
 and registration workflow for the intended candidate.
 
-When an official CEI entry is available, read the versioned public record.
+Appendix E cites PALOMAR-2026-11-22-000009, version 2, registered from
+cd08f0a42a6e8e182805db84396e40fdddc1b2ca. The permanent entry is
+https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2
+For later registrations, read the versioned public record.
 Verify the repository, project path, full SHA and selected declarations.
 Use the issued ID and numeric version in the permanent entry URL. Where
 Appendix E discusses Corollary 4.8, cite essential_incomplete_iff_inseparable
