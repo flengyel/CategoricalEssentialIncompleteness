@@ -31,6 +31,8 @@ Describe the mathematics in the source and keep verification history in reports.
 Check public names against their callers and the Comparator configuration before
 renaming them. See Knuth, Larrabee and Roberts, [*Mathematical Writing*, §1](https://www-cs-faculty.stanford.edu/~knuth/papers/cs1193.pdf).
 
+For a Palomar release, use the [WSL2 prompt template](docs/CODEX_WSL2_PALOMAR_SUBMISSION.md#reusable-prompt). Locate and preserve the author’s requested local manuscript edition before integrating remote changes.
+
 Commit completed changes to `main` and push them to `origin/main`.
 A saved file or local commit is not completion. Before reporting completion,
 verify the remote `main` commit and the active manuscript version there.

@@ -1,10 +1,28 @@
-# Codex prompt — submit the CEI formalization to Palomar
+# WSL2 Codex prompt for a synchronized Palomar release
 
-Work in WSL2 at `/home/flengyel/src/CategoricalEssentialIncompleteness`. Prepare and submit Florian Lengyel’s *Logical consequence and essential incompleteness in recursion categories*. Take the submission through mechanical verification and editorial review. Obtain Florian’s decision on the returned review, then complete registration if he elects to register. Resume an existing attempt whenever possible.
+## Reusable prompt
+
+Replace `<edition>` with the author's manuscript version (for example, `v72`). Give WSL2 Codex the following prompt when authorizing a candidate push to the public repository.
+
+```text
+Use my existing local manuscript <edition> of Logical consequence and essential incompleteness in recursion categories. I authorize committing the synchronized candidate and pushing it to flengyel/CategoricalEssentialIncompleteness on origin/main.
+
+Start in /home/flengyel/src/CategoricalEssentialIncompleteness. Before switching branches or integrating remote changes, locate the requested edition and preserve its tracked and untracked source. Inspect git status, git worktree list, and the local manuscript files. The committed manifest identifies the committed edition. If the requested local edition cannot be found, report the paths checked and stop before changing the manuscript.
+
+Fetch origin. Read AGENTS.md and the release procedure with git show origin/main:docs/CODEX_WSL2_PALOMAR_SUBMISSION.md. Integrate current main with the preserved local edition. Verify that the candidate still contains the author's local changes.
+
+Check the public version history and any pending attempt for PALOMAR-2026-11-22-000009. Choose the intended next version and an unused permanent tag (cei-<edition>-palomar-v<number>). Before committing, put that version's permalink in Appendix E.2 for Corollary 4.8 and the Boolean-assignment theorem, and in E.3 for the existential consequence of Lemma 8.9. Retain the proof link for the full lemma. Use the candidate tag in the Appendix E proof links and the manuscript PDF URL in Lean/formalization.yaml.
+
+Build the complete paper. Inspect all six Appendix E subsections, both versioned hyperlinks in the rendered PDF and the Lean links and line anchors. Check the source ZIP against the manuscript. Update the manifest, correspondence and metadata. Stage only the release files. Commit the complete candidate, push it to origin/main and bind the chosen tag once to that exact commit. Fetch the remote tag and verify its peeled SHA against the independently recorded candidate SHA.
+
+Run the official full preflight on that SHA with project Lean, configuration Lean/comparator.json and metadata Lean/formalization.yaml. After the report says pass, obtain my intake approval for that SHA. Resume a matching submission or submit under the existing ID. Present the complete review and its digest for my registration decision. After approval, verify the public receipt's ID, version, permanent URL and source SHA against the tag and the links already in the candidate PDF and metadata. Report any mismatch before publication. Archive the public evidence in a later report-only commit and identify both SHAs in the handoff.
+```
+
+## Release procedure
 
 ### 1. Establish the source and scope
 
-Fetch `origin/main` for `flengyel/CategoricalEssentialIncompleteness`, preserve local and concurrent work, and read `AGENTS.md`, `MANUSCRIPT_CURRENT.json`, `docs/CODEX_WSL2_CURRENT.txt` and `Lean/formalization.yaml`. [Palomar version 2](palomar/PALOMAR-2026-11-22-000009-v2/README.md) records `cd08f0a42a6e8e182805db84396e40fdddc1b2ca`, which contains manuscript v70. Manuscript v71 at `170f14c13366e1a10dca9a77fc6fda4cd1c8acda` added the v2 citation. Preserve both snapshots. Prepare the next authorized submission from current main.
+After locating and preserving the requested local edition, fetch `origin/main` for `flengyel/CategoricalEssentialIncompleteness` and read `AGENTS.md`, `MANUSCRIPT_CURRENT.json`, `docs/CODEX_WSL2_CURRENT.txt` and `Lean/formalization.yaml`. [Palomar version 2](palomar/PALOMAR-2026-11-22-000009-v2/README.md) records `cd08f0a42a6e8e182805db84396e40fdddc1b2ca`, which contains manuscript v70. Manuscript v71 at `170f14c13366e1a10dca9a77fc6fda4cd1c8acda` added the v2 citation. Preserve both snapshots. Integrate any concurrent commits while retaining the author’s requested manuscript as the source for the candidate.
 
 Preserve the names in `Lean/comparator.json`.
 
