@@ -1,12 +1,12 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 22 November 2026
 
-The active manuscript is v71. The manuscript and Lean proof share the public main branch of flengyel/CategoricalEssentialIncompleteness. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
+The active manuscript is v72. The manuscript and Lean proof share the public main branch of flengyel/CategoricalEssentialIncompleteness. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
 Appendix E explains six Lean proofs. The reviews of the v67 appendix are in docs/reviews/V67_APPENDIX_E/.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V71.md.
-The v66 proof guide and numbered-result correspondence also apply to v71.
-Appendix E cites the source of the privately checked v66 proof at
-a65aeb4d5aae48ef9d71bd3352f8935e7612e434. See docs/V66_LEAN_WRITING_REPORT.md.
+Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V72.md.
+The v66 proof guide and numbered-result correspondence also apply to v72.
+Appendix E links to Lean sources at cei-v72-palomar-v3. The private v66 check
+in docs/V66_LEAN_WRITING_REPORT.md applies to a65aeb4d5aae48ef9d71bd3352f8935e7612e434.
 
 For the ordinary CEI submission and registration, follow
 docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
@@ -32,8 +32,9 @@ PALOMAR-2026-11-22-000009, version 2. Its registered source was
 cd08f0a42a6e8e182805db84396e40fdddc1b2ca, which contains manuscript v70.
 https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2
 
-For the next authorized candidate, use the current version history to choose
-the target version. Include its version-specific permalink in Appendix E.2
+The v72 candidate uses cei-v72-palomar-v3 and targets version 3 of the existing
+entry. The tagged PDF cites https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3
+For a later candidate, use the current version history to choose its target version. Include its version-specific permalink in Appendix E.2
 for Corollary 4.8 and the Boolean assignment and in E.3 for the existential
 consequence of Lemma 8.9. Retain the direct Lean proof link for the full
 lemma. Use neutral citation wording before registration. Point Appendix E's
@@ -42,7 +43,9 @@ the fresh candidate tag. Build and inspect all six subsections of Appendix E
 and both versioned hyperlinks in the PDF. Update the archive, manifest and
 correspondence before committing the snapshot and running full preflight.
 After registration, verify the issued version and SHA against that snapshot
-and its tag. Report any mismatch before manuscript publication.
+and its tag. Read the manuscript identifier from the public entry, resolve its tag
+to that SHA and compare the linked PDF bytes with the manifest. Report any mismatch
+before manuscript publication.
 
 v66 proof preparation and verification record
 ---------------------------------------------

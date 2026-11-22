@@ -1,7 +1,7 @@
 \section{Reading the Lean proofs}\label{app:reading-lean-proofs}
 
-\newcommand{\CEIproof}[3]{\href{https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/a65aeb4d5aae48ef9d71bd3352f8935e7612e434/Lean/#1.lean\##2}{#3}}
-\newcommand{\CEIregistration}{\href{https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2}{PALOMAR-2026-11-22-000009, version~2}}
+\newcommand{\CEIproof}[3]{\href{https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/#1.lean\##2}{#3}}
+\newcommand{\CEIregistration}{\href{https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3}{PALOMAR-2026-11-22-000009, version~3}}
 
 \subsection{Restriction and extension of an interpretation}
 
@@ -56,9 +56,9 @@ and hence $T_{a,b}$. Boolean negation interchanges true and false, so
 the theory is consistent and complete. If \texttt{h} asserts essential incompleteness of $T_{a,b}$, then
 \texttt{h.2} makes this consistent closed extension incomplete, a contradiction.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness}{L43-L75}{The two implications}
 and \CEIproof{CategoricalEssentialIncompleteness/V46SignedBooleanExtension}{L28-L74}{the Boolean extension}.
-The \CEIproof{CEIPalomar/Solution}{L83-L110}{Lean declarations} for the
-subobject formulation of Corollary~\ref{cor:signed-first-order-incompleteness}
-and the Boolean-assignment theorem are registered in \CEIregistration.}
+For the subobject formulation of Corollary~\ref{cor:signed-first-order-incompleteness}
+and the Boolean-assignment theorem, see \CEIregistration{} and the corresponding
+\CEIproof{CEIPalomar/Solution}{L83-L110}{Lean declarations}.}
 
 \subsection{One valuation for two derivations}
 
@@ -86,8 +86,8 @@ that no two derivations in the signed calculus conclude a formula and its
 negation.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction}{L32-L56}{The common list},
 \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction}{L85-L92}{the contradiction},
 and \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA}{L45-L64}{provability in PA}.
-Entry \CEIregistration{} records the existential consequence of
-Lemma~\ref{lem:arithmetic-signed-theory}. Its
+For the existential consequence of Lemma~\ref{lem:arithmetic-signed-theory},
+see \CEIregistration. The
 \CEIproof{CEIPalomar/Solution}{L114-L145}{Lean proof} uses the two diagonal
 subobjects in the predicate category of $\PA$ as its witness.}
 

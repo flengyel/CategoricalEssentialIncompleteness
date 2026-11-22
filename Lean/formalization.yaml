@@ -49,8 +49,8 @@ sources:
     authors: [Florian Lengyel]
     type: manuscript
     relationship: formalizes
-    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v70-palomar-r2/manuscript/logical_consequence_and_essential_incompleteness_v70.pdf
-    location: Version 70, 21 November 2026, Theorem 4.7 and Corollary 4.8 (p. 16), and the existential consequence of Lemma 8.9 (p. 52).
+    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/manuscript/logical_consequence_and_essential_incompleteness_v72.pdf
+    location: Version 72, 22 November 2026, Theorem 4.7 and Corollary 4.8 (p. 16), and the existential consequence of Lemma 8.9 (p. 52).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories
     authors: [Juvenal Murwanashyaka, Fedor Pakhomov, Albert Visser]
@@ -120,15 +120,15 @@ review:
 alignment:
   namespace: CEIPalomar
   statements:
-    - source: Corollary 4.8 of manuscript v70 (p. 16), subobject formulation
+    - source: Corollary 4.8 of manuscript v72 (p. 16), subobject formulation
       lean: CEIPalomar.essential_incomplete_iff_inseparable
       module: CEIPalomar.Solution
       note: CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains derives the restriction-idempotent equivalence from this declaration.
-    - source: Proof of Corollary 4.8 of manuscript v70 (p. 16), Boolean assignment
+    - source: Proof of Corollary 4.8 of manuscript v72 (p. 16), Boolean assignment
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
       note: The closed, consistent, complete theory depends only on the assignment. It contains the signed theory of each pair assigned true on the first subobject and false on the second.
-    - source: Existential consequence of Lemma 8.9 of manuscript v70 (p. 52)
+    - source: Existential consequence of Lemma 8.9 of manuscript v72 (p. 52)
       lean: CEIPalomar.exists_inseparable_example
       module: CEIPalomar.Solution
       note: The category, the variable and index objects, the calculus, and the two subobjects are existentially quantified.
