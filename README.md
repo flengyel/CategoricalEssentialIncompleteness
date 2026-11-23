@@ -56,7 +56,7 @@ with computably enumerable axioms is incomplete.
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | Registered v70 snapshot | [PALOMAR-2026-11-22-000009, version 2](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2) · [Challenge](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cd08f0a42a6e8e182805db84396e40fdddc1b2ca/Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/palomar/PALOMAR-2026-11-22-000009-v2/README.md) |
-| WSL2 Codex instructions | [Current instructions](docs/CODEX_WSL2_CURRENT.txt) · [v74 proof tasks](docs/CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md) |
+| WSL2 Codex instructions | [v76 Lean handoff and WSL2 prompt](docs/CODEX_WSL2_CEI_V76_LEAN_HANDOFF.md) · [Current instructions](docs/CODEX_WSL2_CURRENT.txt) |
 
 The source directory is `manuscript/latex/`. Its `main.tex` assembles the
 sections and appendices. The source ZIP extracts to `latex/`. Earlier PDFs,

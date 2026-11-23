@@ -1,19 +1,15 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 22 November 2026
 
-The current manuscript is v76. Read AGENTS.md, MANUSCRIPT_CURRENT.json,
-FORMALIZATION_STATUS_V76.md and docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md.
-The v75 review in docs/reviews/V75_MATHEMATICAL_EXPOSITION.md identifies
-the comparisons of the postfix parser and Appendix C to check on WSL2.
-Continue also with docs/CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md.
-The v74 proof tasks specify the mathematical claims and the verification required.
-The statement-by-statement audit of v73 is in docs/reviews/V73_MANUSCRIPT_AUDIT.md.
+Active WSL2 assignment — manuscript v76
 
-Palomar version 3 records manuscript v72 at
-efda31344ec6420142468ab28af9d96deab571e7. Appendix E links to the
-proof sources at cei-v72-palomar-v3. The private v66 check in
-docs/V66_LEAN_WRITING_REPORT.md applies to a65aeb4d5aae48ef9d71bd3352f8935e7612e434.
-For an authorized Palomar submission, follow docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
+Fetch origin/main and execute docs/CODEX_WSL2_CEI_V76_LEAN_HANDOFF.md in full.
+The manuscript baseline is e11906faf32720516d36f3bfd30a9d4ca278f3c9.
+Update the active v76 correspondence, run full Lean verification, and push
+the tested proofs and report to public origin/main. Return the verified SHAs
+and report to the originating manuscript chat. The current assignment is
+Lean verification. The release procedures and earlier records below apply
+to their respective releases.
 
 Fixed release and Appendix E citations
 --------------------------------------
