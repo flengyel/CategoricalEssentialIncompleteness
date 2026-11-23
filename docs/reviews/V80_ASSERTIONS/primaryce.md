@@ -1,0 +1,23 @@
+## Historical verification of Appendix C, lines 201–217
+
+Appendix C correctly identifies the unsupported source-index step in Theorem 4.1 of Florian Lengyel’s *Locally connected recursion categories*, CUNY Graduate Center Computer Science Technical Report TR-2006011 (2006). The theorem occupies printed pp. 11–12. Its statement and the disputed inference both appear on p. 11. [CUNY institutional record](https://academicworks.cuny.edu/gc_cs_tr/277/)
+
+### Primary witnesses
+
+| Witness | Evidence inspected |
+|---|---|
+| Author-held source, `LOC18Jul06.tex` | SHA-256 `bc7819127e4c4ff4b798fa3e1163d76b7585c9eddb1b6b58b70842b5f8f45272`. Title at line 79, theorem at lines 872–880, reduction to the identity functor at 894–896, section and index at 897–910. |
+| Author-held PDF, `LOC18Jul06.pdf` | 12 pages, 311,468 bytes, SHA-256 `b1e8c826aeb6afcb382e70bbfdc58a5efcb7d68060ceabc20ba265bc780e2960`. The title, hypotheses, conclusion and proof step agree with the TeX. The metadata dates this PDF build to 16 May 2026. |
+| Public bibliographic record | The institutional page identifies the author, title, report number and year. The linked deposit returned HTTP 403 during this audit. The digest above identifies the inspected author-held PDF. Equality of its bytes with the institutional deposit was not checked. |
+
+### Original hypotheses and conclusion
+
+Section 2.4, pp. 4–5, distinguishes a weak Turing morphism from an idempotent weak Turing morphism. Given an endomorphism $u:X\to X$, a weak Turing morphism $t:X\times X\to X$ supplies a total $e:X\to X$ with $t(e\times1_X)=u\pi_2$, where `π₂` denotes projection to the second factor. The optional idempotence requirement is $e^2=e$. See `LOC18Jul06.tex:371–385`. Section 3.2, p. 7, defines local connectedness by joint epimorphy of connected domains. Section 3.3, p. 7, requires a range functor to preserve restrictions, coproducts, ranges and zero arrows, and defines its kernel by arrows sent to zero. See `LOC18Jul06.tex:593–605`. Section 4.1, p. 9, defines weak choice by the existence of a section for every partial monomorphism. Proposition 4.0.3, p. 10, produces the unique section of the restricted codiagonal for disjoint domains in a split, locally connected category with weak choice.
+
+Theorem 4.1, §4.2, p. 11, assumes a P-recursion category $C$ with coproducts and ranges, a split locally connected range restriction category $D$ with coproducts, a system of zeros and weak choice, and a range functor $F:C\to D$. It takes a weak Turing morphism $t:X\times X\to X$ in $C$, requires $F(1_X)\ne0$, and chooses an isomorphism $b:X\to X+X$ in $C$. It claims that the inverse images of the two summand domains along $bt\Delta_X$ form a recursively inseparable pair in the source domain lattice. Immediately before the theorem, separation is defined by a complemented domain containing the first member and whose complement contains the second. No source-lifting premise appears.
+
+### The inference and the counterexample
+
+On p. 11 the proof assumes a source separator $\gamma,\gamma^\perp$, replaces the functor by the identity for the argument, invokes Proposition 4.0.3 to choose the section $f$ of the restricted codiagonal, and then chooses an idempotent $t$-index of $b^{-1}f$. Equation (10) is the resulting diagonal identity. Keeping the categories explicit, Proposition 4.0.3 gives a section $s:FX\to FX+FX$ in $D$. The source weak Turing property applies to an endomorphism in $C$. To use it in this argument requires a source arrow $\ell:X\rightharpoonup X+X$ with $F\ell=\chi s$, where $\chi:FX+FX\to F(X+X)$ is the coproduct comparison. The hypotheses give no such arrow. Page 12 uses the diagonal identity to finish the contradiction.
+
+For v80, `manuscript/latex/appendices/c-section-lifting.tex:123–155,165–191,201–214` verifies the old hypotheses and falsifies the old conclusion. In the target, every partial identity splits, singletons detect equality, and partial injections admit sections. In the source, the full Turing property supplies the weak one by specializing $u\pi_2$. Even if an idempotent numerical index were separately demanded, a constant total recursive parameter with value an index for $u$ is idempotent. The source diagonal domains nevertheless admit the complementary separator $1_A,1_{A^c}$. Its target section has output tag equal to the characteristic function of the nonrecursive set $A$; a total source arrow would compute that tag. Thus the claimed inseparability fails for this range functor. This comparison verifies a historical claim from the author’s text. The kernel-checked results for the counterexample are documented separately in the appendix inventory.

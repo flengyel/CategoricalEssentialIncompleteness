@@ -10,8 +10,8 @@ partial recursive functions $\N\rightharpoonup\N$. For a partial
 numerical function $f$, write $f(x)\mathord\downarrow$ when $f$ is
 defined at $x$. Put $K=\{e:\varphi_e(e)\mathord\downarrow\}$.
 The set $K$ is not recursive.
-Fix the standard enumeration of finite oracle-machine programs. Let
-$W_a^K$ be the domain of program $a$ run with oracle $K$.
+Fix the standard enumeration of finite oracle-machine programs. For an
+oracle $A\subseteq\N$, let $W_a^A$ be the domain of program $a$ run with oracle $A$.
 Fix a recursive bijective pairing function
 $\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
 
@@ -103,15 +103,20 @@ To prove its Turing property, let
 $v:\N\times\N\rightharpoonup\N$ be a morphism, with ordinary
 partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
 domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
-for $v_0$ gives an ordinary total recursive function $e:\N\to\N$ with
-$\varphi_{e(z)}(x)\simeq v_0(z,x)$.
-Specializing an oracle program for $D_v$ gives an ordinary total
-recursive function $a:\N\to\N$ with
-$W_{a(z)}^K=\{x:(z,x)\in D_v\}$.
-The latter specialization is ordinary recursive because it only
-inserts the finite numeral for $z$ into program code; the oracle is
-used when the resulting program runs. Thus the function
-$r:\N\to\N$ given by $r(z)=\langle e(z),a(z)\rangle$ is a total
+for $v_0$ gives a total recursive function $t:\N\to\N$ such that
+$\varphi_{t(z)}(x)\simeq v_0(z,x)$.
+For oracle programs, let $s(e,z)$ be the index of the program that,
+on input $x$, computes $\langle z,x\rangle$ and runs program $e$
+on that input with the same oracle. This construction on program codes
+is ordinary total recursive and satisfies, for every oracle $A\subseteq\N$,
+\[
+ x\in W_{s(e,z)}^A\quad\Longleftrightarrow\quad
+ \langle z,x\rangle\in W_e^A.
+\]
+Choose an index $d$ with
+$W_d^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
+Then $W_{s(d,z)}^K=\{x:(z,x)\in D_v\}$.
+Thus $r(z)=\langle t(z),s(d,z)\rangle$ defines a total
 morphism of $\mathcal C_K$, and
 $v=\tau_K(r\times1_{\N})$, with equality of domains and values.
 For $w:X\times\N\rightharpoonup\N$, apply this construction to
