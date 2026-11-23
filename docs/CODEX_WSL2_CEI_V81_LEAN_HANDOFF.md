@@ -29,7 +29,7 @@ Read all inputs to the active TeX in printed order, including the abstract and A
 
 Include the following questions in that inventory.
 
-- §9 invokes the existence of a Miller sequence. Identify or prove a checked witness for the representation and approximation convention of §9. Theorem 9.7 takes `ha : IsMiller a`; its conclusion about extensions of the cut theory uses that hypothesis.
+- §9 invokes the existence of a Miller sequence. Identify or prove a checked witness for the representation and approximation convention of §9. The [fixed-point reduction](reviews/V81_PROOF_COMPARISONS/miller-fixed-point.md) applies finite-dimensional Brouwer or Kakutani and compactness to the closed interval graphs. The external Lean implementation named there has a different toolchain and dependency pin. Verify any required lemma at this repository’s pins. Theorem 9.7 takes `ha : IsMiller a`; its conclusion about extensions of the cut theory uses that hypothesis.
 - §8.6 cites Bernardi on inseparability of distinct classes of a precomplete equivalence relation and gives a PA example. Trace both assertions, including the corollary about disjoint nonempty unions of classes.
 - Appendix D cites Di Paola and Montagna for failure of local connectedness of $S_T$ for consistent c.e. $T\supseteq\mathrm{PA}$. Locate a checked theorem with these hypotheses for this category or prove the cited assertion. Record its role separately from the faithful-family theorem.
 
