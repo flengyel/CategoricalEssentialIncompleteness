@@ -1,5 +1,6 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ManuscriptExamplesChecks
 public import CategoricalEssentialIncompleteness.V46RuleClosureFactors
 public import CategoricalEssentialIncompleteness.V46ForkErasureClosure
 public import CategoricalEssentialIncompleteness.V46ForkConservativeRestriction
