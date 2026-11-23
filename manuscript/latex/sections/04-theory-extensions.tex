@@ -270,12 +270,26 @@ incompleteness of $\widetilde u$, and inseparability of $u,\nu^*u$ excludes a
 total extension of $\widetilde\delta_u$.
 \end{proof}
 
-For example, let $A\subseteq\mathbb N$ be infinite and computably
-enumerable. Splitting the partial recursive identity on $A$ gives an
-object with carrier $A$. Removing repetitions from an enumeration of
-$A$ gives a total recursive bijection $e:\mathbb N\to A$: to compute
-$e(n)$, wait for the $(n+1)$st distinct output. Its inverse on $A$
-is the partial recursive search $x\mapsto\min\{n:e(n)=x\}$.
-Transport along this isomorphism identifies the partial-map slices
-over $A$ and $\mathbb N$.
+For example, let $A\subseteq\N$ be infinite and computably enumerable.
+Its partial identity $1_A$ splits through an object with carrier $A$.
+To construct an isomorphism with $\N$, fix a program that halts on $x$
+exactly when $x\in A$. Encode an input and a stage by a recursive
+pairing and put
+\[
+ D=\{\langle x,s\rangle:\text{the program first halts on $x$ at stage $s$}\}.
+\]
+A simulation for $s$ steps decides membership in $D$. Each $x\in A$
+occurs at exactly one such stage, so the first projection maps $D$
+bijectively onto $A$. Since $D$ is infinite and recursive, its
+increasing enumeration $d:\N\to D$ is total recursive. Thus
+$e(n)=\pi_1(d(n))$ enumerates $A$ without repetitions. The inverse
+search $r(x)=\min\{n:e(n)=x\}$ is partial recursive, with domain $A$.
+As partial functions on $\N$ these maps satisfy
+\[
+     r e=1_{\N},\qquad e r=1_A .
+\]
+In the restriction splitting they give inverse total morphisms between
+$\N$ and the object with carrier $A$. Postcomposition with these
+morphisms identifies the slices over the two objects and hence their
+categories of partial maps.
 

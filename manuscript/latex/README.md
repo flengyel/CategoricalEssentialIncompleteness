@@ -1,10 +1,10 @@
-# LaTeX sources — version 73
+# LaTeX sources — version 74
 
 **Logical consequence and essential incompleteness in recursion categories**,
 22 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v73.pdf`
-and `logical_consequence_v73_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v74.pdf`
+and `logical_consequence_v74_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All five appendices and
@@ -53,6 +53,10 @@ The output is `main.pdf`. The source package contains this directory as
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 74 gives the recursive enumeration and partial inverse for an infinite
+computably enumerable carrier in Section 5. Theorem 9.7 and Proposition 10.8
+specify the language in which the extensions are taken.
 
 Version 73 revises the mathematical exposition throughout the manuscript, including the Miller sequence and three-point cosheaf constructions. Appendix E.7 explains the finite proof construction for a Miller sequence. Appendices E.2 and E.3 cite the three theorem declarations registered with manuscript v72 in Palomar version 3.
 
@@ -136,7 +140,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 73 is the current manuscript. The registered Lean submission belongs to manuscript v72.
+Version 74 is the current manuscript. The registered Lean submission belongs to manuscript v72.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.

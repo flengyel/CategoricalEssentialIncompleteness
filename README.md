@@ -30,33 +30,34 @@ to the code of a sentence independent of that extension.
 For a Miller sequence, we expand the theory of real closed
 ordered fields by constants naming its terms and axioms giving their
 strict rational bounds.
-Every consistent extension whose axioms one oracle program semidecides
-from every binary representation of the sequence is incomplete.
+Every consistent extension in this language is incomplete if a single
+oracle program semidecides its axioms from every binary representation
+of the sequence.
 In a cosheaf construction on a three-point space, each endpoint has a
 consistent propositional theory. Every consistent extension in the same
 language with a computably enumerable axiom set is incomplete.
 
-The current manuscript is **version 73**,
-dated 22 November 2026. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) includes a new subsection on finite proofs and the theorem domain for a Miller sequence. In the contents, numbered sections and appendices appear in blue. [Referee review](docs/reviews/V67_APPENDIX_E/referee.md) · [Mathematical writing review](docs/reviews/V67_APPENDIX_E/writing.md)
+The current manuscript is **version 74**,
+dated 22 November 2026. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) includes a subsection on finite proofs and the theorem domain for a Miller sequence. In the contents, numbered sections and appendices appear in blue. [Referee review](docs/reviews/V67_APPENDIX_E/referee.md) · [Mathematical writing review](docs/reviews/V67_APPENDIX_E/writing.md)
 
-Version 73 revises the mathematical exposition throughout the manuscript, including the Miller sequence and three-point cosheaf constructions. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
+Section 5 constructs an isomorphism between an infinite computably enumerable carrier and the natural numbers. Theorem 9.7 and Proposition 10.8 specify the language of the extensions they quantify over. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
 completes Proposition 10.8. The generated first-order theory restricts to the
 original propositional theory and is consistent and essentially incomplete.
-At either endpoint, every consistent extension with computably enumerable
-axioms in its language is incomplete.
+At either endpoint, every consistent extension in its first-order language
+with computably enumerable axioms is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v73.pdf](manuscript/logical_consequence_and_essential_incompleteness_v73.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v74.pdf](manuscript/logical_consequence_and_essential_incompleteness_v74.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v73_source.zip](manuscript/logical_consequence_v73_source.zip) |
+| Complete source ZIP | [logical_consequence_v74_source.zip](manuscript/logical_consequence_v74_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | Registered v70 snapshot | [PALOMAR-2026-11-22-000009, version 2](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2) · [Challenge](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cd08f0a42a6e8e182805db84396e40fdddc1b2ca/Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/palomar/PALOMAR-2026-11-22-000009-v2/README.md) |
-| WSL2 Codex instructions | [docs/CODEX_WSL2_CURRENT.txt](docs/CODEX_WSL2_CURRENT.txt) |
+| WSL2 Codex instructions | [Current instructions](docs/CODEX_WSL2_CURRENT.txt) · [v74 proof tasks](docs/CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md) |
 
 The source directory is `manuscript/latex/`. Its `main.tex` assembles the
 sections and appendices. The source ZIP extracts to `latex/`. Earlier PDFs,
@@ -72,7 +73,7 @@ and Git blob hashes.
 The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
 
 The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) compares the numbered results with their Lean declarations and records the scope of the comparisons. The current correspondence table is
-[FORMALIZATION_STATUS_V73.md](FORMALIZATION_STATUS_V73.md). It records 77
+[FORMALIZATION_STATUS_V74.md](FORMALIZATION_STATUS_V74.md). It records 77
 numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
 The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) links each result and definition to its Lean declarations.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
@@ -191,7 +192,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v73 and the v72 registration.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v74 and the v72 registration.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

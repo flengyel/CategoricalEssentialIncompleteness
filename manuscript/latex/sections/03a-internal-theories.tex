@@ -235,12 +235,16 @@ diagonal pair to provability and refutability to find an independent
 sentence in each consistent extension with semidecidable provability
 \cite[Definitions~7, 17 and Theorem~20]{KirstPeters}.
 Corollary~\ref{cor:domain-incompleteness} gives inseparability of
-the theorem and refutation domains. Its conclusion concerns their join
-as a subobject. Inferring the existence of a global sentence outside
-a proper subobject would require global elements to detect that it is
-proper. For example, in the category of $G$-sets for a nontrivial group
-$G$, the inclusion $1\hookrightarrow 1+G$ is proper and contains
-every global element: the regular action on $G$ has no fixed point.
+the theorem and refutation domains. In the split case, let
+$j:J\hookrightarrow S$ represent their join $t\vee\nu^*t$.
+Properness means that $1_S:S\to S$ does not factor through $j$.
+If the total category has a terminal object $1$, a global point
+outside the join is a morphism $s:1\to S$ that does not factor
+through $j$. A proper subobject can contain every global element. For
+example, let a nontrivial group $G$ act on itself by left
+multiplication. The inclusion $1\hookrightarrow 1+G$ of $G$-sets is
+proper, but every morphism $1\to 1+G$ factors through it because the
+second summand has no fixed point.
 
 An inseparable pair on an object of $\mathscr R$ remains inseparable
 in $\Split(\mathscr R)$: the fully faithful inclusion

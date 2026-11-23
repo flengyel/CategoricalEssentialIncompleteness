@@ -1,15 +1,16 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 22 November 2026
 
-The current manuscript is v73. It revises the mathematical exposition throughout the manuscript. The source registered in Palomar version 3 is manuscript v72 at efda31344ec6420142468ab28af9d96deab571e7. In Appendix E.1 the interpretation sends each variable to its variable term in the target presentation.
-Appendix E includes a new subsection on finite proofs and the theorem domain for a Miller sequence. The reviews of the v67 appendix are in docs/reviews/V67_APPENDIX_E/.
-Read AGENTS.md, MANUSCRIPT_CURRENT.json and FORMALIZATION_STATUS_V73.md.
-The v66 proof guide and numbered-result correspondence also apply to v73.
-Appendix E links to Lean sources at cei-v72-palomar-v3. The private v66 check
-in docs/V66_LEAN_WRITING_REPORT.md applies to a65aeb4d5aae48ef9d71bd3352f8935e7612e434.
+The current manuscript is v74. Read AGENTS.md, MANUSCRIPT_CURRENT.json,
+FORMALIZATION_STATUS_V74.md and docs/CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md.
+The v74 proof tasks specify the mathematical claims and the verification required.
+The statement-by-statement audit of v73 is in docs/reviews/V73_MANUSCRIPT_AUDIT.md.
 
-For the ordinary CEI submission and registration, follow
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
+Palomar version 3 records manuscript v72 at
+efda31344ec6420142468ab28af9d96deab571e7. Appendix E links to the
+proof sources at cei-v72-palomar-v3. The private v66 check in
+docs/V66_LEAN_WRITING_REPORT.md applies to a65aeb4d5aae48ef9d71bd3352f8935e7612e434.
+For an authorized Palomar submission, follow docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 Fixed release and Appendix E citations
 --------------------------------------
