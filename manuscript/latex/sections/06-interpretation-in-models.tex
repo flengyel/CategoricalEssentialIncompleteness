@@ -1,7 +1,10 @@
 \section{Interpretation and soundness}\label{sec:models}
 
-In $\Pfn$, restriction products are Cartesian products and coproducts
-are disjoint unions.
+The restriction product of $X$ and $Y$ in $\Pfn$ has underlying set
+$X\times Y$. The pairing of $f:W\rightharpoonup X$ and
+$g:W\rightharpoonup Y$ sends $w$ to $(f(w),g(w))$ on
+$\operatorname{dom}(f)\cap\operatorname{dom}(g)$. The coproduct
+is the disjoint union $X\amalg Y$.
 
 Fix a model $M\models T$. Assign a set $X_M$ to each term
 $X\in\mathsf O$ by
@@ -176,9 +179,9 @@ $V=(\omega,1_\omega)\in\mathcal B_{\PA}$, so that
 $G_{\N}V=\N$. Use the syntax of
 Section~\ref{sec:st-parameterized-syntax} and the proof-tree
 algebra of Lemma~\ref{lem:syntactic-derivation-initiality}. Write $j:S\hookrightarrow\Fm$ for the sentence inclusion. Let $\Gamma$ be
-a computably enumerable set of arithmetic sentences, choose a
-$\Sigma_1$ predicate $\operatorname{Ax}_\Gamma(z)$ enumerating
-their codes, and let $i_A:A=A_\Gamma\hookrightarrow S$
+a computably enumerable set of arithmetic sentences. Choose a
+$\Sigma_1$ formula $\operatorname{Ax}_\Gamma(z)$ whose solutions
+in $\N$ are the codes of the sentences in $\Gamma$, and let $i_A:A=A_\Gamma\hookrightarrow S$
 be the subobject with carrier predicate
 $\operatorname{Sent}(z)\land\operatorname{Ax}_\Gamma(z)$. Write
 \[

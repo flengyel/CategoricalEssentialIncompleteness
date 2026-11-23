@@ -49,8 +49,13 @@ $P\vee N$, then $P\vee N\ne1_{FU}$.
 Put $u=b^{-1}\ell:U\rightharpoonup U$. Apply the Turing property
 to $u\pi_2:U\times U\rightharpoonup U$, obtaining a total morphism
 $g:U\to U$ with $\tau(g\times1_U)=u\pi_2$.
-Precomposition with $\langle1_U,g\rangle:U\to U\times U$ gives
-$\tau\Delta_Ug=ug$, and therefore $hg=\ell g$.
+Since $g$ is total,
+\[
+ (g\times1_U)\langle1_U,g\rangle=\langle g,g\rangle=\Delta_Ug,
+ \qquad \pi_2\langle1_U,g\rangle=g.
+\]
+Precomposing with $\langle1_U,g\rangle$ therefore gives
+$\tau\Delta_Ug=ug$. Composing with $b$ gives $hg=\ell g$.
 
 Write
 $E=Fg:FU\to FU$ and

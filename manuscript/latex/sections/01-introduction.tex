@@ -46,14 +46,15 @@ on derivations of sentences from $A_{a,b}$ is the generated theory $T_{a,b}$. Fo
 consistent $T_{a,b}$ this construction is left adjoint to the functor
 taking a consistent theory to its theorem and refutation subobjects
 (Theorem~\ref{thm:free-first-order-adjunction}).
-A separator of the pair supplies a Boolean valuation
-whose true sentences form a consistent complete extension.
-Conversely, the inverse images under $\theta_X$ of the theorem and
-refutation subobjects of a consistent complete extension would separate
-$a$ from $b$ (Corollary~\ref{cor:signed-first-order-incompleteness}).
-More generally, any total reduction of an inseparable pair to the theorem
-and refutation subobjects of a consistent theory proves its essential
-incompleteness (Corollary~\ref{cor:domain-incompleteness}).
+A separator of $a,b$ supplies a Boolean valuation whose true sentences
+form a consistent complete extension of $T_{a,b}$
+(Corollary~\ref{cor:signed-first-order-incompleteness}).
+For the converse, let $t\hookrightarrow S$ be a consistent theory
+and suppose a total $f:X\to S$ satisfies $a\le f^*t$ and
+$b\le f^*(\nu^*t)$. The theorem and refutation subobjects of any
+complete consistent closed extension of $t$ would pull back along
+$f$ to complementary subobjects separating $a$ and $b$
+(Corollary~\ref{cor:domain-incompleteness}). For $T_{a,b}$ take $f=\theta_X$.
 
 For a theory $u:U\hookrightarrow S$ on a sentence object $S$, define its
 associated category to be the category of partial maps in $\mathcal D/U$.

@@ -182,12 +182,13 @@ In fact, take $P=F(1_A)$ and $N=F(1_{A^c})$ in
 Theorem~\ref{thm:comparison}. For any
 $s:\N\rightharpoonup\N+\N$ with
 $s^{-1}(i_0(\N))=A^c$ and $s^{-1}(i_1(\N))=A$,
-these inverse images cover $\N$, so $s$ is total. If
-$F\ell=\chi_{\N,\N}s$ for a source morphism
-$\ell:\N\rightharpoonup\N+\N$, the total recursive function $\ell$
-would decide membership in $A$ by the summand of its output in the
-fixed coproduct coding.
-Hence no $s$ with the prescribed inverse images lifts.
+these inverse images cover $\N$, so $s$ is total. Here the coproduct
+comparison $\chi_{\N,\N}$ is the identity on the tagged union. A source
+lift $\ell$ would therefore be a total recursive function. Let
+$\operatorname{tag}:\N+\N\to\N$ send $i_j(k)$ to $j$ for $j=0,1$.
+Then $\operatorname{tag}\,\ell$ would be the characteristic function of
+$A$: its value is $1$ exactly on $s^{-1}(i_1(\N))=A$.
+This contradicts the nonrecursiveness of $A$.
 
 The morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
 $\mathcal C_K$: they have the total recursive extensions $i_1$

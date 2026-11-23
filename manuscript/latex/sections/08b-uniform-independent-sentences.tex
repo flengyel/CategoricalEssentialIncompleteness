@@ -78,19 +78,24 @@ $K\models\Gamma_e$ by completeness.
 Proposition~\ref{prop:standard-code-soundness} and
 Proposition~\ref{prop:arithmetic-theory-fibers} show that
 $C(e,x)$ and $C'(e,x)$ have disjoint truth sets in $\N$.
-The graph and domain equations determine the
-value of $F_{\N}(\ell):\N\times\N\rightharpoonup\N\amalg\N$
-at $(e,n)$, as in Lemma~\ref{lem:arithmetic-proof-search}.
-If $\N\models C(e,n)$, this partial function sends $(e,n)$
-to the image of $n$ under the second coproduct injection.
-The identity for $hg$ then puts
-$n$ in $D_1\subseteq\N$.
-Lemma~\ref{lem:arithmetic-diagonal-representation} gives
-$\N\models C'(e,n)$, a contradiction.
-If $\N\models C'(e,n)$, the same identity puts $n$ in
-$D_0\subseteq\N$, and that lemma gives
-$\N\models C(e,n)$, again a contradiction.
-Thus neither predicate holds. For the sentence $\varphi$ with code
+Let $s=F_{\N}(\ell):\N\times\N\rightharpoonup\N\amalg\N$ and
+let $i_0,i_1$ be the coproduct injections. For every $x\in\N$ the
+graph and domain equations for $a_\ell$, together with disjointness, give
+\[
+ \begin{aligned}
+ ((e,x),i_0(x))\in\operatorname{graph}(s)
+     &\quad\Longleftrightarrow\quad \N\models C'(e,x),\\
+ ((e,x),i_1(x))\in\operatorname{graph}(s)
+     &\quad\Longleftrightarrow\quad \N\models C(e,x).
+ \end{aligned}
+\]
+At $x=n$, the identity $hg=\ell\langle1_\omega,g\rangle$
+identifies $F_{\N}(h)(n)$ and $s(e,n)$ as partial values.
+If $C(e,n)$ holds, the second equivalence gives $n\in D_1$,
+so Lemma~\ref{lem:arithmetic-diagonal-representation} gives
+$C'(e,n)$. If $C'(e,n)$ holds, the first gives $n\in D_0$,
+so the same lemma gives $C(e,n)$. Disjointness rules out both cases.
+For the sentence $\varphi$ with code
 $(G_{\N}q)(e)=\Theta(n)$, a finite derivation of $\varphi$ or
 $\neg\varphi$ from $\Gamma_e$ would witness $C(e,n)$ or $C'(e,n)$,
 respectively. Hence $\varphi$ is independent of $\Gamma_e$.

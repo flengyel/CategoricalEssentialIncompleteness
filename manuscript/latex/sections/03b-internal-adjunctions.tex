@@ -419,8 +419,15 @@ $x\in\FV_X(\varphi)$ and $y\in\FV_{\Tm}(t)$ that determine
 capture in~\eqref{eq:quantifier-fold}. At a nullary predicate,
 substitution fixes its interpreting sentence by the absent-variable
 identity of Appendix~\ref{app:substitution}. At an equality $u=v$,
-substitution acts on the two terms. The constructor equations
-identify the two substitution folds by initiality with parameters.
+substitution acts on the two terms. Put $E_X=V\times\Tm_X$,
+$E_P=V\times\Tm_P$ and $e=1_V\times\widehat f_{\Tm}:E_X\to E_P$.
+Write $b_X:\Phi_X\times E_X\to 1+\Phi_X$ and
+$b_P:\Phi_P\times E_P\to 1+\Phi_P$ for formula substitution with
+failure in the first summand. The constructor equations and initiality
+over $E_X$ give
+\[
+ (1_1+\widehat f_\Phi)b_X=b_P(\widehat f_\Phi\times e).
+\]
 Pulling back the success summand gives $s:\Adm_X\to\Adm_P$ with
 the two substitution equations above. These equations translate the
 instantiation and equality-substitution instances, and preservation
@@ -501,10 +508,23 @@ implication by their Boolean truth functions, and universal quantification
 by the projection
 $\pi_2:V\times\Two\to\Two$.
 Free syntax gives a total valuation $v:\Phi_X\to\Two$.
-On the admissibility subobject
-$i:\Adm\hookrightarrow\Phi_X\times V\times\Tm_X$, let
-$a_F:\Adm\to\Phi_X$ be substitution. Induction gives the identity
-$v a_F=v\pi_{\Phi_X} i:\Adm\to\Two$. Thus instantiation and
+In the substitution fold of Appendix~\ref{app:substitution}, consider
+the pairs of an original formula and a substitution result. In
+$\Phi_X\times(1+\Phi_X)$ take the coproduct of the failure summand
+$\Phi_X\times1$ and the equalizer of $v\pi_1,v\pi_2:\Phi_X^2\to\Two$
+in the success summand.
+The atomic results lie in this subobject because a nullary predicate
+retains its index and every equality has value $\mathbf t$. Negation and implication
+preserve equality of values whenever their substituted arguments succeed.
+At $\forall y\,\varphi$, substitution for $x$ returns the original
+formula when $y=x$. When $y\ne x$, a successful result has the value
+of the substituted body, hence of $\varphi$. Every failure belongs to
+the first summand. Thus the subobject, with the full term carrier, is
+closed under the substitution algebra in the parameter slice.
+Initiality puts the fold in this subobject. On the success summand
+$i:\Adm\hookrightarrow\Phi_X\times V\times\Tm_X$, with result
+$a_F:\Adm\to\Phi_X$, this gives $v a_F=v\pi_{\Phi_X}i$.
+Thus instantiation and
 substitutivity of equality have value
 $\mathbf{t}$. Reflexivity has that value by the interpretation of
 equality, and quantifier distribution has it because quantification leaves
