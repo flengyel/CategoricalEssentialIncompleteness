@@ -1,0 +1,34 @@
+# Appendix C historical theorem and Appendix E proof locators, v81
+
+At v81 commit `986dee4d54d202a452009146cc29d19a544b0000`, the Appendix C example satisfies the stated 2006 hypotheses and contradicts the stated conclusion. All twenty Appendix E source links lead to the indicated passages at the historical commit; all fourteen distinct linked Lean files are byte-identical at v81. No new Lean run was performed.
+
+## C201–222. What is proved, specialized, and attributed
+
+Lean paths in this section start at `Lean/CategoricalEssentialIncompleteness/`. TeX lines refer to `manuscript/latex/appendices/c-section-lifting.tex`.
+
+| Passage and claim | Exact evidence and scope |
+|---|---|
+| C201–203, the two disjoint branches have no common upper bound | `OracleMissingLift.lean:191–205,207–238`. The restriction order implies agreement on each branch. Together their complementary domains force the total specified switch, excluded by `missingSection_has_no_lift` at lines 89–103. This stronger failure of arrow joins is separate from the historical conclusion. |
+| C206, historical source hypotheses | `LOC18Jul06.tex:872–880`, §4.2, printed p. 11. Source P-recursion, binary coproducts, ranges: `OracleRestrictedPCategory.lean:93,174`, `OracleRestrictedCoding.lean:97–114`, `OracleRestrictedTuring.lean:64–77`, `OracleRestrictedCoproducts.lean:61,91`, `OracleRestrictedRanges.lean:50,93`. These supply the prodominical isotype and Turing morphism, including isomorphisms between every two source objects. |
+| C207–213, target hypotheses | `PartialFunctions.lean:66,100,118,170,242,260` supplies restriction structure, zero, ranges and coproducts. Lines 296–318 split through the support. Lines 320–357 establish singleton connectedness and joint epimorphy by evaluation at each point. `RestrictionRanges.lean:172–182` is the historical definition of partial monicity and the pair of section laws. To derive the manuscript’s test, choose x,x′ in dom(p) with p(x)=p(x′) and apply partial monicity to the two total points from a singleton. Their composites with the restriction of p are precisely x,x′, so x=x′. Thus the inverse on the image is unique and satisfies both equations pointwise. The named formal result `PartialFunctions.lean:359–392` proves the stronger section-existence statement for *every* partial map by choosing one preimage. This proves weak choice directly. |
+| C214–218, weak Turing, functor and nonzero | Given u:N→N partial, apply `tau_parameterization K (N K) (second (N K) (N K) ≫ u)` from `OracleRestrictedTuring.lean:47–62` with `second` from `OracleRestrictedProducts.lean:63`. The resulting r is total and (r×1)≫τ = π₂≫u, exactly the weaker quantifiers of `LOC18Jul06.tex:369–385`. The abstract weak-index assertion is a specialization. If idempotence of this index is desired, evaluate r at zero and use the constant ordinary recursive index e(z)=r(0); the displayed equation at (0,x) proves e still indexes u and e²=e. Theorem 4.1 only states the weak hypothesis. `OracleRestrictedInclusion.lean:27–44,60–65` gives preservation of restrictions, zeros, ranges and coproducts and F(id_N)≠0. |
+| C218–222, negated conclusion and the failed proof step | At `OracleRestrictedConstruction.lean:51–79`, b is the parity isomorphism and the two source idempotents are exactly the inverse images along bτΔ. `OracleMissingLift.lean:26–58,243–252` supplies the complementary separator and both inclusions, hence negates the printed source inseparability. `OracleMissingLift.lean:132–178` identifies the unique target section with this switch, and excludes a source lift. `V46OracleSeparatorLift.lean:50–62,66–109` also excludes arbitrary conditionals with the same two output domains. The documentary identification is `LOC18Jul06.tex:894–910`, §4.2, p. 11: after passing to the target the author invokes the section and takes a source t-index of its composite with b⁻¹. Theorem 4.1 gives no lift. Original definitions of range functor/kernel and partial mono/section/weak choice are at lines 592–605 and 710–717. |
+
+Historical source is Florian Lengyel, *Locally Connected Recursion Categories*, TR-2006011 (2006), [CUNY catalogue](https://academicworks.cuny.edu/gc_cs_tr/277/). Full PDF/TeX witness hashes and source provenance appear in the standalone primary-source check. There is no need to formalize the old theorem as a Lean proposition to verify the documentary attribution. The concrete hypotheses and failure have the separate sources listed above.
+
+## E3–4,39–239. Historical and current proof links
+
+A live Git ref query returned `efda31344ec6420142468ab28af9d96deab571e7` for both the [author’s release tag](https://github.com/flengyel/CategoricalEssentialIncompleteness/tree/cei-v72-palomar-v3) and the [preserved archive tag](https://github.com/PalomarArchive/flengyel--CategoricalEssentialIncompleteness--ec03dec4ce63/tree/palomar/PALOMAR-2026-11-22-000009-v3/efda31344ec6420142468ab28af9d96deab571e7). Every macro-expanded path and line range below was read from that commit and compared to the v81 file. The listed paths are under `Lean/CategoricalEssentialIncompleteness/`, except `Solution`, which is `Lean/CEIPalomar/Solution.lean`.
+
+| v81 E lines | Release file and exact lines, in citation order |
+|---|---|
+| 39,40 | V46SignedFirstOrderAdjunction 27–56, 58–91 |
+| 64,65,68 | V46SignedSubobjectIncompleteness 43–75; V46SignedBooleanExtension 28–74; Solution 83–110 |
+| 99,100,101,104 | V46ArithmeticSignedContradiction 32–56, 85–92; V46ArithmeticSignedConsistencyPA 45–64; Solution 114–145 |
+| 127,134 | V46Comparison 35–89; OracleMissingLift 89–103 |
+| 166 | V46AssociatedClosedTheories 68–111 |
+| 187,188 | V46ArithmeticUniformIndependent 116–128, 184–218 |
+| 209,210 | V46MillerParameterizedDeduction 97–126, 130–151 |
+| 236,237,238,239 | V46MillerCanonicalProofComparison 155–178; V46MillerTheoryDomainApplication 59–95; V46MillerCanonicalAxiomIncompleteness 139–175, 327–342 |
+
+The archived v72 Appendix E itself has six subsections and fourteen proof links. The v81 text has seven and twenty. The comparison above verifies the **referenced source** at both commits; it does not transfer an old verification run to the v81 manuscript. The archived `Lean/comparator.json:2–10` and both JSON reports in `docs/palomar/PALOMAR-2026-11-22-000009-v3/` identify three Comparator theorems and the auxiliary predicate `CEIPalomar.IsNullaryCalculus`. Both reports have `status=pass` and the historical source commit. E66–68 correctly identifies the subobject equivalence and Boolean assignment. E102–105 correctly cites only the existential consequence of the arithmetic lemma: `Solution.lean:116–130` supplies the PA witness for lines 135–145. The separate PA-provability proof is `V46ArithmeticSignedConsistencyPA.lean:45–64`. The live version-specific registry JSON could not be independently downloaded in this check; the archive ref, committed reports and source targets were verified.
