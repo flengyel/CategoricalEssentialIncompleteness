@@ -556,15 +556,21 @@ Regular images are stable under pullback, giving the second.
 Suppose these initial derivation algebras exist for every axiom
 subobject of $S$. A \emph{sentence theory} is a subobject
 $u:U\hookrightarrow S$ through which $c_{U,S}$ factors.
-Then $T_{A,S}$ is the least sentence theory containing $A$.
-Axiom introduction gives $A\subseteq T_{A,S}$; since $T_A$
-is closed and contains $T_{A,S}$, leastness gives
-$T_{T_{A,S}}\subseteq T_A$. Pullback proves closure of $T_{A,S}$.
-If $U$ is a sentence theory containing $A$, leastness gives
-$T_A\subseteq T_U$, hence
-$T_{A,S}\subseteq T_{U,S}\subseteq U$.
-It also follows that $A\subseteq A'$ implies
-$T_{A,S}\subseteq T_{A',S}$.
+Write $G(A)=s^*T_A=T_{A,S}$ in $\operatorname{Sub}(S)$.
+Axiom introduction gives $A\leq G(A)$. If $A\leq A'$, every formula
+subobject closed under the rules for $A'$ is closed under those for $A$.
+Thus $T_A\leq T_{A'}$ in $\operatorname{Sub}(F)$ and
+$G(A)\leq G(A')$ in $\operatorname{Sub}(S)$.
+
+Let $m_A:G(A)\hookrightarrow S$ denote the inclusion. By definition
+of pullback, $s m_A$ factors through $T_A\hookrightarrow F$. Hence
+$T_A$ contains the axioms from $G(A)$ and is closed under the logical
+rules, so $T_{G(A)}\leq T_A$. Pulling back along $s$ gives
+$G(G(A))\leq G(A)$. The reverse inequality is axiom introduction.
+Consequently $G(G(A))=G(A)$. A subobject $U$ is a sentence theory
+exactly when $G(U)\leq U$. If $A\leq U$ and $U$ is a sentence theory,
+then $G(A)\leq G(U)\leq U$. This proves that $G(A)$ is the least
+sentence theory containing $A$.
 
 \begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
 Let $\mathcal S$ be a restriction category with ranges in which every
@@ -631,7 +637,10 @@ $i_A:A\hookrightarrow S$, let $L=S^2+S^3+S^2$ and let
 $\lambda:L\to S$ be given by
 \eqref{eq:hilbert-one}--\eqref{eq:hilbert-three}, with $\nu$ for
 negation. Use $R_0=L+A$, $q_0=[\lambda,i_A]$, and $R_1=0$.
-The binary rule has $R_2=S^2$, premise morphism
+The unary rule imposes no closure condition. Indeed, its premise and
+conclusion are the unique morphism $0\to S$, so the pullback
+projection $b_{1,q}:B_1(Q,q)\to Q$ satisfies $q b_{1,q}=q_1a_{1,q}$
+for every $q:Q\to S$. The binary rule has $R_2=S^2$, premise morphism
 $p_2=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2$, and conclusion
 morphism $q_2=\pi_2:S^2\to S$.
 If the resulting inference endofunctor has an initial algebra,

@@ -312,9 +312,17 @@ For a sequence code $a$, use a coded sequence of witnesses:
 Reading the entries proves the reverse implication. For the forward implication,
 induction in $\PA$ on the length constructs a sequence of witnesses by
 appending one witness at a time.
-For the finite family $(D_j)_{j<s}$, place a witness for
-$D_{\ell(a_i)}(a_i)$ in position $i$ and distinguish the finitely
-many values of $\ell$.
+For the finite family, take a $\Sigma_1$ graph $L(x,w)$ for $\ell$
+whose unique totality is provable in $\PA$. Such a graph is supplied
+by a primitive-recursive program for $\ell$. Use $w\bmod s$ as
+the tag. It equals $\ell(x)$ on standard inputs, and $\PA$ proves
+that it lies below $s$ on every input. The condition on a single
+entry $x$ is the $\Sigma_1$ formula
+\[
+ \exists w\,\left(L(x,w)\land
+    \bigvee_{j=0}^{s-1}(w\bmod s=\bar j\land D_j(x))\right).
+\]
+Apply the first assertion to this formula.
 \end{proof}
 
 Fix a nonnegative integer $d$ and objects

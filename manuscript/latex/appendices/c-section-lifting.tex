@@ -70,12 +70,15 @@ are inherited from partial functions. Restriction is the partial
 identity on $D_f$, which has the identity as an extension.
 Empty partial functions give restriction zeros.
 
-Cartesian products and copairings preserve the morphism class.
-Their domains are respectively products and disjoint unions of the given
-domains, and their extensions are the corresponding ordinary partial
-recursive programs. Consequently the set-theoretic restriction
-products and coproducts have their universal properties in
-$\mathcal C_K$. Product with a zero morphism is zero, and the chosen
+For $f:X\rightharpoonup Y$ and $g:X\rightharpoonup Z$, the
+restriction pairing $\langle f,g\rangle:X\rightharpoonup Y\times Z$
+has domain $D_f\cap D_g$ and ordinary partial recursive extension
+$\langle f_0,g_0\rangle$. For $u:X\rightharpoonup Z$ and
+$v:Y\rightharpoonup Z$, the copairing $[u,v]:X+Y\rightharpoonup Z$
+has domain $D_u+D_v$ and extension $[u_0,v_0]$. These domains are
+c.e.\ relative to $K$. The projections and injections are recursive,
+so the restriction product and coproduct of partial functions have
+their universal properties in $\mathcal C_K$. Product with a zero morphism is zero, and the chosen
 recursive coding isomorphisms make the category isotypical.
 
 The set $f(D_f)$ is c.e.\ relative to $K$: enumerate $D_f$ and run

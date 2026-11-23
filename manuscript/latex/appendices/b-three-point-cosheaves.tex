@@ -15,19 +15,20 @@ A quasi-inverse assigns to this functor the cosheaf whose values at
 $D,L,R,X$ are respectively $C,A,B,A\amalg_C B$.
 \end{proposition}
 \begin{proof}
-Every cover of $D$, $L$, or $R$ contains the covered open. A cover
-of $X$ either contains $X$ or contains both $L$ and $R$. Thus the
-only additional cosheaf condition is that the following square be
-a pushout:
+Let $F:\mathcal O(X)\to\mathbf{Set}$ satisfy $F(\varnothing)=\varnothing$.
+Every cover of $D$, $L$, or $R$ contains the open it covers.
+A cover of $X$ contains $X$ or contains both $L$ and $R$.
+Since $L\cap R=D$, the remaining cosheaf condition is that the
+canonical map
 \[
-\begin{tikzcd}
-C\arrow[r,"s"]\arrow[d,"r"']&B\arrow[d]\\
-A\arrow[r]&A\amalg_C B.
-\end{tikzcd}
+ F(L)\amalg_{F(D)}F(R)\longrightarrow F(X)
 \]
-Any other members of a cover factor through these maximal members,
-so their identifications are already imposed by this pushout.
-A natural transformation induces a unique morphism between the pushouts.
+be a bijection. Every other member of a cover without $X$ lies
+in $L$ or $R$. Thus a cocone on the cover is determined by its maps
+on $L$ and $R$ agreeing on $D$.
+Given $A\xleftarrow{r}C\xrightarrow{s}B$, take the value at $X$ to
+be $A\amalg_C B$ and the maps from $A,B$ to be its coprojections.
+A natural transformation of such diagrams induces a unique map of pushouts.
 This defines the quasi-inverse on morphisms; the same universal
 property gives both natural isomorphisms required for an equivalence.
 \end{proof}
@@ -154,12 +155,14 @@ identities of partial functions. Every restriction idempotent
 splits through its domain subfunctor: the inclusion is total,
 and its partial inverse is the identity with that domain.
 Empty domains give restriction zeros. The restriction product
-uses componentwise Cartesian products; a pairing is defined on
-the intersection of the two domains and has the ordered pair
-of values there. At each component the projection equations determine the domain of the pairing
-as the intersection of the two domains and determine its value there as the
-ordered pair of values. Coproducts
-use disjoint unions of carriers. The domain of a partial copairing is
+uses componentwise Cartesian products. For $f:W\rightharpoonup Y$
+and $g:W\rightharpoonup Z$, the projection equations determine the pairing by
+\[
+ (D_{\langle f,g\rangle})_j=(D_f)_j\cap(D_g)_j,\qquad
+ \langle f,g\rangle_j(w)=(f_j(w),g_j(w))
+ \quad(w\in (D_f)_j\cap(D_g)_j).
+\]
+Coproducts use disjoint unions of carriers. The domain of a partial copairing is
 the disjoint union of the two domains. A product with an empty domain
 is empty, which proves the prodominical zero law.
 
@@ -249,8 +252,11 @@ coding of the ambient finite power. Define
 \]
 These maps are total and injective, and satisfy
 $r_i^Vm_0=m_i r_i^Y$ for $i=1,2$.
-Their image is a c.e.\ subfunctor. The inverses on that image
-are natural and give the required partial inverse.
+Their images form a c.e.\ subfunctor $I\subseteq V$. The inverses
+$m_j^{-1}:I_j\to Y_j$ are computable and satisfy
+$r_i^Y m_0^{-1}=m_i^{-1}r_i^I$. They define a partial morphism
+$r:V\rightharpoonup Y$ with $rm=1_Y$ and $mr=\bar r$, the partial
+identity on $I\subseteq V$.
 \end{proof}
 
 Use the sequence encodings fixed in Section~\ref{sec:cosheaves}.

@@ -178,8 +178,9 @@ for the conclusion morphism and its pullback to sentences.
 The standard interpretation of $i_A$ is the inclusion of the
 codes of the sentences in $\Gamma$.
 
-For $s\in G_{\N}S$, let $\varphi_s$ be the finite sentence with
-code $s$. Let $K\models\Gamma$ be a nonempty first-order
+Let $j:S\hookrightarrow\Fm$ be the sentence inclusion. For
+$s\in G_{\N}S$, let $\varphi_s$ be the finite sentence decoded
+from the formula code $G_{\N}(j)(s)$. Let $K\models\Gamma$ be a nonempty first-order
 structure for the arithmetic signature, with equality interpreted
 as identity. Define a subobject in $\mathbf{Set}$ by
 \[
@@ -419,12 +420,15 @@ $C(\N)^I$ and represents $a$, proving surjectivity. If
 $C(\N)$ is empty, \L o\'s's theorem gives $C(M)=\varnothing$,
 so the same conclusion holds.
 
-For a morphism represented by a functional graph
-$\Gamma:C\to D$, let $d_i$ be its value at $c_i$ in $\N$.
-Then $\N\models\Gamma(c_i,d_i)$ for every $i$.
-\L o\'s's theorem and functionality in $M$ show that the value
-at $[c_i]$ in $M$ is $[d_i]$. Thus these components are
-natural on $\mathcal P_{\PA}$.
+For a morphism $\Gamma:C\to D$ in $\mathcal P_{\PA}$, write
+$\Gamma_\N:C(\N)\to D(\N)$ and $\Gamma_M:C(M)\to D(M)$ for
+the functions defined by its graph. For $c_i\in C(\N)$ put
+$d_i=\Gamma_\N(c_i)$. Since $\N\models\Gamma(c_i,d_i)$ for every
+$i$, \L o\'s's theorem gives $M\models\Gamma([c_i],[d_i])$.
+Functionality in $M$ gives the naturality equation on predicates:
+\[
+ \Gamma_M([c_i])=[\Gamma_\N(c_i)]\quad\text{in }D(M).
+\]
 
 To define the comparison on $\mathcal B_{\PA}$, for each
 object $B$ choose an isomorphism

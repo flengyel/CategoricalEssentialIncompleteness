@@ -161,3 +161,45 @@ diagonal bounds put $n$ in the negative domain if it belongs to the positive one
 conversely. Thus \texttt{output\_avoids} excludes both possibilities. Neither
 $\alpha(\bar n)$ nor its negation is derivable from $\Gamma_e$.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L116-L128}{The diagonal output and the sentence code}
 and \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L184-L218}{the two excluded derivations and the uniform morphism}.}
+
+\subsection{Finite proofs and the theorem domain for a Miller sequence}
+
+In Lemma~\ref{lem:miller-parameterized-deduction}, let $P$ be the
+parameter object and let $A\hookrightarrow P\times S$ specify the
+axioms. A derivation with parameter $w$ has conclusion $(w,\varphi)$.
+For the inference endofunctor $H$ on
+$\mathcal D_a/(P\times\Fm)$, write $\delta:H(D_A,c_A)\to(D_A,c_A)$
+for the algebra of finite derivations. Given an algebra
+$\beta:H(Q,q)\to(Q,q)$ in this slice, its interpretation of derivations
+is the unique $e:D_A\to Q$ satisfying
+\[
+     qe=c_A,\qquad e\delta=\beta H(e).
+\]
+The first equation fixes both the parameter and the conclusion. The
+second determines $e$ at each leaf and at each application of an
+inference rule. Lean constructs this initial algebra for every axiom
+subobject $A$, including those whose fibers vary with $w$.\footnote{%
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction}{L97-L126}{The inference algebra and the two equations}
+and \CEIproof{CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction}{L130-L151}{initiality for every axiom subobject}.}
+
+For Theorem~\ref{thm:miller-incompleteness}, let $\Gamma$ be the
+$\mathcal E_a$-semidecidable set of axiom codes for an extension
+of $T_a$. Let $c_\Gamma:\mathrm{Prf}_\Gamma\to S$ take a derivation
+whose conclusion is a sentence to its conclusion. In the numerical
+presentation of $S$, the comparison with finite Hilbert proofs states
+that for each closed formula $\varphi$,
+\[
+  \ulcorner\varphi\urcorner\in\operatorname{dom}(\ran(c_\Gamma))
+    \quad\Longleftrightarrow\quad \Gamma\vdash\varphi .
+\]
+The comparison of proof objects preserves conclusions and inference
+rules. For an arbitrary axiom monomorphism $m:A\hookrightarrow S$,
+taking its image on sentence codes and then reconstructing the axiom
+subobject gives the original subobject. The corresponding conclusion
+morphisms have the same image. This identifies the theorem domain
+for $m$ with the domain in the displayed equivalence. Pulling it back
+along negation gives the refutation domain.\footnote{%
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison}{L155-L178}{Preservation of conclusions and inference rules},
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication}{L59-L95}{the equivalence with finite provability}, and
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness}{L139-L175}{recovery of the axiom subobject and conclusion image}.
+See also \CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness}{L327-L342}{inseparability and the independent sentence}.}

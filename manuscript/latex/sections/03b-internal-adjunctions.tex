@@ -79,9 +79,11 @@ $\rho_n:R_n^P\to R_n^Q$ with
  p_n^Q\rho_n=\sigma_{\Phi}^{n}p_n^P,\qquad
  q_n^Q\rho_n=\sigma_{\Phi}q_n^P.
 \]
-For $n=0$, these objects contain only the logical axioms. The
-existence of $\rho_n$ is a preservation condition; the witnesses
-are not part of the translation. In particular, a translation
+For $n=0$, $\rho_0$ sends instances of the seven logical axiom
+schemes to logical axiom instances. For generalization and modus ponens
+one may take $\rho_1=1_V\times\sigma_\Phi$ and
+$\rho_2=\sigma_\Phi\times\sigma_\Phi$, respectively. Only existence
+of the rule morphisms is required. In particular, a translation
 preserves the side conditions on substitution and quantification,
 and satisfies
 \[
@@ -264,11 +266,16 @@ reduces an inseparable pair to its theorem and refutation subobjects
 
 Fix the decidable variable object $V$ of
 Appendix~\ref{app:categorical-hypotheses}. Suppose that for every
-$X\in\mathcal D$ the syntax and derivation hypotheses hold for
-the first-order language whose only nonlogical symbols are
-nullary predicates indexed by $X$. Write $P_X$ for this
-presentation. Its terms are variables. The atomic sentence
-constructor is $\theta_X:X\to S_X$.
+$X\in\mathcal D$ the first-order language whose only nonlogical
+symbols are nullary predicates indexed by $X$ has the syntax of
+Definition~\ref{def:categorical-syntax}, including initiality of the
+syntax and variable-list algebras in every parameter slice. For every
+axiom subobject of its sentence object, assume an initial derivation
+algebra as in Appendix~\ref{app:first-order-derivations}. Write
+$P_X$ for this presentation. Its terms are variables. A generalized index
+$x:W\to X$ determines the atomic sentence $\theta_Xx:W\to S_X$,
+where $\theta_X:X\to S_X$ is the atomic sentence constructor.
+For $h:W'\to W$, the sentence at $xh$ is $(\theta_Xx)h$.
 For disjoint subobjects $a,b\hookrightarrow X$, with inclusions
 $i_a,i_b$, put
 \[
@@ -326,10 +333,25 @@ preserved. The pair inequalities put the image of $A_{a,b}$
 inside $T$, so Theorem~\ref{thm:translation-galois} gives
 $\widehat f_!T_{a,b}\leq T$.
 
-Conversely, restriction of a theory morphism along $\theta_X$
-gives these pair inequalities. Uniqueness of the syntax interpretations makes the two
-assignments inverse and natural. It also proves identity and
-composition preservation of both functors.
+Conversely, a theory morphism $\sigma:(P_X,T_{a,b})\to(P,T)$
+restricts to $f=\sigma_S\theta_X:X\to S_P$. Preservation of negation
+and the definition of the signed axioms give
+\[
+ a\leq f^*T,\qquad b\leq f^*\nu_P^*T.
+\]
+The extension satisfies $\widehat f_S\theta_X=f$, and uniqueness gives
+$\widehat{\sigma_S\theta_X}=\sigma$. These equations make the two
+assignments inverse. For a morphism of pairs $k$ with underlying
+morphism $X'\to X$ and a theory translation $\rho:(P,T)\to(Q,U)$,
+both sides of
+\[
+ \widehat{\rho_S f k}=\rho\,\widehat f\,\Sigma_{\mathrm{FO}}(k)
+\]
+take each generating predicate to the same sentence in $Q$.
+Uniqueness of extension gives the equation, proving naturality in both
+variables. The same uniqueness gives the functor laws for
+$\Sigma_{\mathrm{FO}}$. For $J_{\mathrm{FO}}$ they follow from
+composition of sentence morphisms.
 To verify that $J_{\mathrm{FO}}$ takes values in
 $\mathsf{Pair}_c(\mathcal D)$, interpret the free predicates
 indexed by $S_P$ as their indexing sentences. The inverse image
@@ -347,10 +369,16 @@ Then $T_{a,b}$ is essentially incomplete if and only if $(a,b)$
 is inseparable in $\mathscr S$.
 \end{corollary}
 \begin{proof}
-The atomic map $\theta_X$ reduces $(a,b)$ to the theorem and
-refutation subobjects of $T_{a,b}$.
-Corollary~\ref{cor:domain-incompleteness} proves essential
-incompleteness when the pair is inseparable.
+Let $U\geq T_{a,b}$ be any consistent closed theory of $P_X$.
+Axiom introduction and monotonicity of inverse image give
+\[
+ a\leq\theta_X^*T_{a,b}\leq\theta_X^*U,\qquad
+ b\leq\theta_X^*\nu_X^*T_{a,b}\leq\theta_X^*\nu_X^*U .
+\]
+If $U$ were complete, $U$ and $\nu_X^*U$ would be complementary.
+Their inverse images under $\theta_X$ would separate $a,b$, as in
+Corollary~\ref{cor:domain-incompleteness}. Thus inseparability
+implies essential incompleteness.
 
 Conversely, let $m:C\hookrightarrow X$ and $n:D\hookrightarrow X$
 be complementary subobjects containing $a$ and $b$, respectively.

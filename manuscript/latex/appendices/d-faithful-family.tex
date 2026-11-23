@@ -111,17 +111,20 @@ of the image pair.
 \end{proof}
 
 The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
-Fix $M\in\mathcal M_T$. The partial functions
-$x\mapsto F_M(\tau_T)(a,x)$, indexed by all $a\in|M|$, form a
-countable family, whereas there are uncountably many partial
-functions $|M|\rightharpoonup|M|$.
-Choose one outside this family and use it at coordinate $M$,
-with zero partial functions at the other coordinates.
-The resulting morphism
-$\mathbf1\times F_T\omega\rightharpoonup F_T\omega$,
-where $\mathbf1$ is the family of singleton sets, cannot factor
-through $F_T(\tau_T)$ with a total parameter
-$\mathbf1\to F_T\omega$.
+Fix $M\in\mathcal M_T$ and put
+$t=F_M(\tau_T):|M|\times|M|\rightharpoonup |M|$.
+Define $h:|M|\rightharpoonup|M|$ to have constant value $0^M$ on
+the domain
+\[
+ \operatorname{dom}(h)=\{x\in|M|:(x,x)\notin\operatorname{dom}(t)\}.
+\]
+Let $\mathbf1$ be the family of singleton sets. Take the morphism
+$\mathbf1\times F_T\omega\rightharpoonup F_T\omega$ whose
+$M$-coordinate is $h$ under $1\times|M|\cong|M|$, and whose other
+coordinates are zero. A Turing factorization with a total parameter
+$\mathbf1\to F_T\omega$ would give an $m\in|M|$ with
+$h(x)\simeq t(m,x)$ for every $x$. At $x=m$ this asserts equality
+of two partial values exactly one of which is defined.
 
 The restriction lattices of $\mathcal D_T$ are Boolean, so every image
 of a disjoint source pair has a separator. Lemma~\ref{lem:switch}
@@ -158,12 +161,21 @@ The second follows from faithfulness of $F_T$.
 
 \subsection{The theory of the standard model}
 
-For $T=\operatorname{Th}(\N)$, the identity-on-objects assignment
-$D:S_{\operatorname{Th}(\N)}\to\mathrm{Rec}$, defined by
-$D([e]_{\operatorname{Th}(\N)})=\varphi_e$, is an isomorphism:
-two classes are equal exactly when the sentence in \eqref{eq:uniform}
-is true in $\N$, equivalently when their interpreted partial functions
-are equal.
+For $T=\operatorname{Th}(\N)$, use the same numerical objects in
+$S_T$ and $\mathrm{Rec}$. Standard interpretation sends $[e]_T$ to
+the partial recursive function $\varphi_e$ of the indicated type.
+For each pair of objects $X,Y$ it gives a bijection
+\[
+ S_T(X,Y)\longrightarrow\mathrm{Rec}(X,Y),\qquad
+ [e]_T\longmapsto\varphi_e .
+\]
+Indeed, the inverse sends a partial recursive function to the class
+of any program computing it on its indicated type. Two such programs
+represent the same class because their graph equality in
+\eqref{eq:uniform} is true in $\N$, hence belongs to $T$.
+Standard interpretation preserves identities and composition.
+These bijections therefore give an isomorphism of categories with
+the indicated common objects.
 The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
 although $T$ is complete.
 Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.

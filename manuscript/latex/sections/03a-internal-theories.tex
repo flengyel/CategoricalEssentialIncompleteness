@@ -39,8 +39,12 @@ The restriction idempotent $\nu^*t_A$ represents refutable sentences.
 The sentence theory is \emph{consistent} when
 $t_A\nu^*t_A=0_S$, and \emph{complete} when
 $t_A\vee\nu^*t_A=1_S$.
-It is \emph{essentially incomplete} when it is consistent and
-every consistent internal sentence theory containing it is incomplete.
+It is \emph{essentially incomplete} when it is consistent and, for every
+deductively closed sentence subobject $U\hookrightarrow S$ in the same language,
+\[
+ T_{A,S}\leq U,\quad U\wedge\nu^*U=\bot
+ \quad\Longrightarrow\quad U\vee\nu^*U\ne\top.
+\]
 
 Let $F:\mathscr R\to\mathcal A$ be a range functor, where
 $\mathcal A$ is a split restriction category. For each restriction
@@ -129,11 +133,12 @@ then gives
 \]
 \end{proof}
 
-For an interpretation of the syntax with a validity subobject
-$v:V\hookrightarrow\widehat F S$, a proof of soundness supplies
-the factorization of $\widehat F(c_{A,S})$ through $v$.
-If $d_V(\widehat F\nu)^*d_V=0$, the proposition gives consistency
-of the interpreted sentence theory.
+For an interpretation with validity subobject
+$v:V\hookrightarrow\widehat F S$, soundness means that there is a morphism
+$k:\widehat F(P_{A,S})\to V$ in $\mathcal E$ such that
+$v k=\widehat F(c_{A,S})$. If validity and its inverse image under
+negation are disjoint, the proposition then gives consistency of the
+interpreted sentence theory.
 
 \subsection{Incompleteness from semantic consistency}
 
@@ -230,8 +235,12 @@ diagonal pair to provability and refutability to find an independent
 sentence in each consistent extension with semidecidable provability
 \cite[Definitions~7, 17 and Theorem~20]{KirstPeters}.
 Corollary~\ref{cor:domain-incompleteness} gives inseparability of
-the theorem and refutation domains. Their join is proper, but it can
-contain every global element of the sentence object.
+the theorem and refutation domains. Its conclusion concerns their join
+as a subobject. Inferring the existence of a global sentence outside
+a proper subobject would require global elements to detect that it is
+proper. For example, in the category of $G$-sets for a nontrivial group
+$G$, the inclusion $1\hookrightarrow 1+G$ is proper and contains
+every global element: the regular action on $G$ has no fixed point.
 
 An inseparable pair on an object of $\mathscr R$ remains inseparable
 in $\Split(\mathscr R)$: the fully faithful inclusion

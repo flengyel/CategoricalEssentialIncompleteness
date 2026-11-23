@@ -34,13 +34,19 @@ The numerical pairing, its two projections, and division with
 remainder by $2$ are primitive recursive; PA proves their defining
 and inverse equations.
 
-Use the deterministic computation coding for Kleene's trace
-predicate as in \cite[p.~115, Note~1]{Montagna}.
-Let $e,x,t$ range over $\N$, and write
-$\mathsf{Tr}(e,x,t)$ for the primitive-recursive predicate
-that $t$ is a halting computation trace with index $e$ and input
-$x$, and let $\mathsf{out}:\N\to\N$ be the primitive-recursive
-function that extracts the output. Put
+Use a deterministic form of Kleene's computation predicate as in
+Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,s)$ be the
+primitive-recursive bounded evaluator for the partial-recursive programs:
+its value at stage $s$ is $0$ for failure and $y+1$ for output $y$.
+Encode a halting trace $t$ by its first successful stage $s$ and its
+output $y$, with primitive-recursive projections
+$\mathsf{st}(t)=s$ and $\mathsf{out}(t)=y$. Thus
+\[
+ \mathsf{Tr}(e,x,t)\quad\Longleftrightarrow\quad
+ E(e,x,\mathsf{st}(t))=\mathsf{out}(t)+1
+ \ \land\ \forall r<\mathsf{st}(t)\; E(e,x,r)=0.
+\]
+The graph of evaluation is
 \[
  G(e,x,y)\equiv
  \exists t\,\bigl(\mathsf{Tr}(e,x,t)\land\mathsf{out}(t)=y\bigr),
@@ -81,19 +87,21 @@ $k_e\in\N$ for which PA proves
 In particular, PA proves $\forall a\exists!p\,G_{k_e}(a,p)$.
 \end{lemma}
 \begin{proof}
-Use the deterministic computation coding of
-Montagna~\cite[p.~108; p.~115, Note~1]{Montagna}.
-Its universal interpreter and formalized parameterization give $u$ and
+The universal interpreter and formalized parameterization
+\cite[p.~108; p.~115, Note~1]{Montagna} give $u$ and
 $\operatorname{s}$. Choose an index $c$ whose program, on input
-$\langle\langle f,e\rangle,x\rangle$, first simulates $e$ on $x$
-and then simulates $f$ on its output. Put
+$\langle\langle f,e\rangle,x\rangle$, searches successive codes
+of pairs $(t,v)$ for which
+\[
+ \mathsf{Tr}(e,x,t)\land\mathsf{Tr}(f,\mathsf{out}(t),v).
+\]
+At the first such pair it returns $\mathsf{out}(v)$. Put
 $\operatorname{comp}(f,e)=\operatorname{s}(c,\langle f,e\rangle)$,
-which is primitive recursive. Combining the two halting traces gives
-a trace of this program; conversely, a halting trace of the program
-determines the two simulated traces and their intermediate value.
-These trace transformations are primitive recursive, and PA proves
-their defining identities, giving~\eqref{eq:composition}.
-Determinism proves functionality.
+which is primitive recursive. PA proves that the code of any
+witnessing pair bounds the search, and that a successful search
+supplies witnesses to both graphs, with intermediate value
+$\mathsf{out}(t)$. Determinism gives functionality and ensures that
+all witnessing pairs give the same output. This proves~\eqref{eq:composition}.
 The pairing can be replaced by the pairing fixed above, using
 the PA-provable inverse equations for the two numerical codings.
 For $k_e$, use an index for the primitive-recursive function

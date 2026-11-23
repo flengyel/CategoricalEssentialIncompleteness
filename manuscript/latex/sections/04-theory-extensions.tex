@@ -65,12 +65,17 @@ Thus $\mathscr C$ is Turing.
 For $p:X\to T$, a total embedding $m_X:X\to Q$ gives a monomorphism
 $m=\langle p,m_X\rangle:X\hookrightarrow T\times Q$. Its partial inverse
 $m^\dagger:T\times Q\rightharpoonup X$ is a retraction over $T$.
-A computation over $T$ with source
-$X\times Q\to T$ and target $T\times Q\to T$ is determined by a
-partial component $f:X\times Q\rightharpoonup Q$.
-Choose total $a:X\to Q$ with $f=\tau(a\times1_Q)$.
-The total parameter over $T$ is $\langle p,a\rangle$.
-This proves the slice Turing property.
+Let $\varphi:X\times Q\rightharpoonup T\times Q$ be a computation
+over $T$, and put $f=\pi_2\varphi$. Commutation over $T$ on the
+domain of definition gives
+$\pi_1\varphi=p\pi_1\overline\varphi$.
+Choose a total $a:X\to Q$ with $f=\tau(a\times1_Q)$. The total
+parameter $\langle p,a\rangle:X\to T\times Q$ then satisfies
+\[
+ \varphi=(1_T\times\tau)(\langle p,a\rangle\times1_Q),
+\]
+using the product associativity isomorphism. This is the required
+parameterization in the slice.
 
 The objects of $\mathscr R[T]$ are isomorphic and closed under binary
 restriction products. Their zeros satisfy the prodominical identity,
@@ -150,8 +155,14 @@ These inverse assignments give
  \mathscr C[T](i^*q,p)\cong\mathscr C[U](q,\Sigma_i p).
 \]
 Both assignments commute with pullback composition. They are natural,
-and prove the adjunctions. The unit of the second adjunction at $q$
-is the partial identity with domain $T\times_UY\hookrightarrow Y$.
+and prove the adjunctions. Put $Y_T=T\times_U Y$, and write
+$m:Y_T\hookrightarrow Y$ for the pullback of $i$. The unit of
+$i^*\dashv\Sigma_i$ at $q$ is represented by the span
+\[
+ Y\xleftarrow{m}Y_T\xrightarrow{1_{Y_T}}Y_T
+\]
+over $U$. Thus the unit is $m^\dagger:q\rightharpoonup\Sigma_i i^*q$;
+its restriction is $mm^\dagger$.
 
 Every image object factors through $i$. If $1_U:U\to U$ were
 isomorphic to one, the resulting factorization of $1_U$ through $i$
@@ -259,7 +270,12 @@ incompleteness of $\widetilde u$, and inseparability of $u,\nu^*u$ excludes a
 total extension of $\widetilde\delta_u$.
 \end{proof}
 
-For example, in the category of partial recursive functions, every
-infinite computably enumerable carrier is computably isomorphic to
-$\mathbb N$, by injective enumeration and inverse search. The slice categories over these carriers are consequently equivalent.
+For example, let $A\subseteq\mathbb N$ be infinite and computably
+enumerable. Splitting the partial recursive identity on $A$ gives an
+object with carrier $A$. Removing repetitions from an enumeration of
+$A$ gives a total recursive bijection $e:\mathbb N\to A$: to compute
+$e(n)$, wait for the $(n+1)$st distinct output. Its inverse on $A$
+is the partial recursive search $x\mapsto\min\{n:e(n)=x\}$.
+Transport along this isomorphism identifies the partial-map slices
+over $A$ and $\mathbb N$.
 

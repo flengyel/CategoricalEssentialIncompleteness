@@ -28,15 +28,18 @@ $P_z=\rho^{-1}(\{z\})$ for the set of these representations.
 The map $\rho$ is continuous and onto, so every $P_z$ is nonempty
 and compact.
 
-Miller's construction gives a sequence $a\in Q$ with the following
-property: if an oracle program with index $d$ computes the same real $r\in[0,1]$ from
-every $p\in P_a$, then
+Miller's construction gives a sequence $a\in Q$ such that, for every
+$d\in\N$ and $r\in[0,1]$,
 \begin{equation}\label{eq:miller-property}
- a(d)=r.
+ \left[
+  (\forall p\in P_a)(\forall k\in\N)(\exists j\in\N)\;
+  \bigl(\Phi_d^p(k)\mathord\downarrow=j
+       \ \land\ |q_j-r|<2^{-k}\bigr)
+ \right]\ \Longrightarrow\ a(d)=r.
 \end{equation}
-Such a sequence is called a \emph{Miller sequence}.
-The program may produce different rational approximations from different
-representations of $a$; all approximate the same real $r$.
+Such an $a$ is called a \emph{Miller sequence}. The program index $d$
+is fixed. The rational approximation $q_j$ may depend on both the
+representation $p$ and the precision $k$.
 
 \subsection{Computation independent of the binary representation}
 \label{sec:miller-category}
@@ -81,13 +84,21 @@ nonempty, at most one $m$ satisfies this condition. Thus the search
 computes $\tau_z$ from every binary representation of $z$.
 \end{proof}
 
-For the fixed sequence $a$, let $\mathcal E_a$ have the
-objects generated from $\N$ by binary Cartesian products and
-disjoint unions, with fixed recursive codings. Every such object is
-recursively isomorphic to $\N$. A morphism $f:X\rightharpoonup Y$ belongs
-to $\mathcal E_a$ when one oracle program computes exactly $f$, including
-its domain of definition, for every $p\in P_a$. Equality of morphisms is
-equality of partial functions.
+The objects of $\mathcal E_a$ are generated from $\N$ by binary
+Cartesian products and disjoint unions. Fix for each object $X$ a
+recursive bijection $\iota_X:X\to\N$. For a partial function
+$f:X\rightharpoonup Y$, write $\widehat f=\iota_Y f\iota_X^{-1}$.
+Then
+\[
+ f\in\mathcal E_a(X,Y)
+ \quad\Longleftrightarrow\quad
+ (\exists e\in\N)(\forall p\in P_a)(\forall n\in\N)\;
+       \Phi_e^p(n)\simeq\widehat f(n).
+\]
+Here $u\simeq v$ means that both sides are undefined or both are
+defined with the same value. Thus a single index must compute the
+entire partial function from each representation of $a$. Two morphisms
+are equal when their partial functions are equal.
 
 \begin{proposition}\label{prop:miller-category}
 The category $\mathcal E_a$ is a locally connected recursion category
@@ -129,7 +140,6 @@ total recursive map $c:X\to\N$ with
 \[
  \Phi_{c(x)}^p(n)\simeq\Phi_d^p(x,n).
 \]
-Here $\simeq$ includes simultaneous undefinedness.
 If $f(x,n)=m$, every $p\in P_a$ gives this same output; if $f(x,n)$ is
 undefined, every $p\in P_a$ gives an undefined computation. The definition
 of $\tau_a$ gives $f=\tau_a(c\times1_{\N})$.
@@ -256,13 +266,19 @@ If complementary restriction idempotents in $\mathcal E_a$ separated
 $1_{L_a},1_{R_a}$, their inverse images under $h$ would separate
 $1_{A_0},1_{A_1}$, contrary to
 Corollary~\ref{cor:source-conditionals} as applied above.
-For a fixed binary representation $p\in P_a$, the set
-$C_p=\{n:p(\langle n,0\rangle)=0\}$
-is $p$-decidable and satisfies $L_a\subseteq C_p$ and
-$C_p\cap R_a=\varnothing$. At $a(n)=1/2$, either first binary digit
-is allowed. Thus the single program reading that digit produces a
-separator from every binary representation of $a$, but the set it decides
-cannot be independent of the representation.
+For $p\in P_a$, put $C_p=\{n:p(\langle n,0\rangle)=0\}$. A binary
+expansion beginning with $0$ represents a number at most $1/2$,
+and one beginning with $1$ represents a number at least $1/2$. Hence
+\[
+ L_a\subseteq C_p\subseteq\N\setminus R_a
+ \qquad(p\in P_a).
+\]
+One program decides $C_p$ by reading the first digit. At $a(n)=1/2$
+the two expansions $0.0111\ldots$ and $0.1000\ldots$ give different
+answers. If a single set $C$ separating the cuts were decided by one
+program for every $p\in P_a$, the complementary partial identities
+$1_C$ and $1_{\N\setminus C}$ would separate the cuts in $\mathcal E_a$.
+
 \end{proof}
 
 If $J_p\tau_a$ were a Turing morphism, Corollary~\ref{cor:source-conditionals},
@@ -277,8 +293,16 @@ morphism, although $\mathrm{Rec}^{p}$ has a Turing morphism.
 \subsection{A theory of real closed fields}
 \label{def:miller-splitting}
 
-Call a subset $D$ of a numerical object \emph{$\mathcal E_a$-semidecidable}
-when its partial identity $1_D$ is a morphism of $\mathcal E_a$.
+A subset $D\subseteq X$ is \emph{$\mathcal E_a$-semidecidable} if
+its partial identity $1_D$ belongs to $\mathcal E_a$. In the chosen
+coding this says
+\[
+ (\exists e\in\N)(\forall p\in P_a)\quad
+ \operatorname{dom}(\Phi_e^p)=\iota_X(D).
+\]
+Indeed, a computation with this domain computes the partial identity
+if it returns its input whenever it halts.
+
 We use the presentation of $\operatorname{Split}(\mathcal E_a)$
 in which such a subset $D\subseteq X$ represents $(X,1_D)$.
 For another $\mathcal E_a$-semidecidable subset $E\subseteq Y$,
@@ -306,40 +330,60 @@ endofunctor of Theorem~\ref{thm:first-order-theory} has an initial
 algebra of finite derivations.
 \end{proposition}
 \begin{proof}
-A singleton is terminal. Finite products and equalizers are
-$\mathcal E_a$-semidecidable carriers, using parallel semidecision
-procedures and numerical equality. The empty carrier and disjoint unions
-give finite coproducts.
-For a morphism $f:C\to D+E$, computing $f$ and deciding which
-coproduct summand contains its value
-gives two semidecidable inverse-image carriers. Their coproduct
-maps isomorphically to $C$, with inverse given by the same decision.
-The injections have disjoint images, so these coproducts are disjoint
-and stable under pullback.
+A singleton is terminal. Products have carriers $C\times D$, and the
+equalizer of $f,g:C\to D$ has carrier $\{x\in C:f(x)=g(x)\}$.
+Parallel semidecision and numerical equality semidecide these carriers.
+The empty carrier and disjoint unions give finite coproducts.
+For $f:C\to D+E$, write $i_D,i_E$ for the coproduct injections and put
+\[
+ C_D=f^{-1}(i_D(D)),\qquad C_E=f^{-1}(i_E(E)).
+\]
+Each carrier is semidecidable by running $f$ and reading its summand.
+They are disjoint. The inclusions induce an isomorphism
+$C_D+C_E\to C$ whose inverse sends $x$ to the summand determined by
+$f(x)$. Thus pulling back the coproduct injections along $f$ gives a
+coproduct decomposition of $C$.
 
-For $f:C\to D$, dovetail its computations over all numerical inputs
-to semidecide its image. A surjection $e:C\to D$ is the coequalizer
-of its kernel pair. Indeed, for $h:C\to Z$ constant on the fibers
-of $e$, search on input $y$ for $x$ with $e(x)=y$ and return $h(x)$.
-This computation has domain exactly $D$. The witness found may
-depend on the binary representation of $a$, but its $h$-value does
-not. It therefore defines the unique descended morphism $D\to Z$.
-Every morphism factors through its image in this way, and pullbacks
-preserve surjections, proving regularity. Conversely, a regular
-epimorphism is surjective, since its image factorization and
-extremality force the image inclusion to be an isomorphism.
+For $f:C\to D$, dovetail the computations of $f(x)$ over all coded
+inputs $x$. This semidecides $f(C)$ and gives the image factorization
+$C\twoheadrightarrow f(C)\hookrightarrow D$. For a surjection
+$e:C\to D$, the kernel pair has carrier
+\[
+ C\times_D C=\{(x,x')\in C\times C:e(x)=e(x')\}.
+\]
+Let $p_1,p_2:C\times_D C\to C$ be its projections. If $h:C\to Z$
+satisfies $hp_1=hp_2$, then there is a unique $k:D\to Z$ with
+\[
+ k(y)=h(x)\quad\text{whenever } e(x)=y.
+\]
+Indeed, on input $y$, dovetail the computations of $e(x)$ until one
+returns $y$, then return $h(x)$. The search succeeds exactly on $D$.
+Different binary representations of $a$ may yield different witnesses
+$x$, but $hp_1=hp_2$ makes the returned value independent of the
+witness. Thus $k$ is a morphism of $\mathcal D_a$, and $e$ is the coequalizer
+of its kernel pair. Conversely, if $f$ is a regular epimorphism, its
+extremality makes the inclusion $f(C)\hookrightarrow D$ an
+isomorphism, so $f$ is surjective. For any $g:B\to D$, the projection
+$B\times_D C\to B$ is surjective when $e$ is. Hence regular
+epimorphisms are stable under pullback, proving regularity.
 
-Singleton maps detect noninjectivity, so the monomorphisms are
-exactly the injections. For an injection $m:C\to D$, preimage
-search returns the unique $x$ with $m(x)=y$. Its domain is $m(C)$,
-and both its domain and its value are independent of the binary
-representation. This gives a partial inverse $m^\dagger$ in the
-restriction splitting. Thus every monomorphism of $\mathcal D_a$
-is a restriction monomorphism in $\operatorname{Split}(\mathcal E_a)$. A span
-$C\xleftarrow{m}B\xrightarrow{g}D$ represents $gm^\dagger$;
-conversely, every partial morphism is total on its semidecidable
-domain. These assignments respect composition by pullback and give
-the displayed restriction equivalence.
+Singleton morphisms detect failure of injectivity, so the monomorphisms
+of $\mathcal D_a$ are the injections. For an injection $m:C\to D$,
+the same preimage search computes the partial morphism
+$m^\dagger:D\rightharpoonup C$ with
+\[
+ m^\dagger m=1_C,\qquad mm^\dagger=1_{m(C)}.
+\]
+For $y\in m(C)$ the witness is unique. The span
+$C\xleftarrow{m}B\xrightarrow{g}D$ represents the partial morphism
+$gm^\dagger:C\rightharpoonup D$. Conversely, a partial morphism
+$u:C\rightharpoonup D$ is represented by
+$C\hookleftarrow\operatorname{dom}(u)
+\xrightarrow{u|_{\operatorname{dom}(u)}}D$.
+For $v:D\rightharpoonup E$, the domain of $vu$ is the inverse image of $\operatorname{dom}(v)$
+under the total restriction of $u$ to $\operatorname{dom}(u)$.
+This is the pullback used to compose the spans. The two assignments
+therefore give the stated restriction equivalence.
 
 Numerical equality makes $V=\N$ decidable. Encode terms and formulas
 as finite labeled ordered trees with distinct numerical labels for
@@ -415,45 +459,67 @@ $\mathcal D_a/(P\times\mathsf{Fm})$ has an initial algebra.
 \end{lemma}
 \begin{proof}
 Represent $X$ and $P$ by $\mathcal E_a$-semidecidable numerical
-carriers. Terms of the nullary language are variables. A formula
-code is a finite ordered tree whose leaves are equalities of
-variables or nullary predicates labelled in $X$. Its other nodes
-are negation, implication, and quantification by a numerical
-variable. Check the finite tree shape and semidecide membership in
-$X$ for its finitely many labels. This semidecides
-the formula carrier with the same domain for every representation
-of $a$. The constructors, occurrence lists, and substitutions use
-finite numerical codes. Variable comparison is decidable, as
-required in Appendix~\ref{app:syntax-theories}.
+carriers. In the nullary language the term and formula functor of
+Definition~\ref{def:categorical-syntax} reduces to
+\[
+ K(Y,Z)=(\N,\;Y^2+X+Z+Z^2+\N\times Z).
+\]
+Its formula constructors are equality, a predicate with label in $X$,
+negation, implication and universal quantification. To recognize a
+formula tree, check its shape and run the membership tests for its
+finitely many predicate labels in parallel. This gives a semidecision
+uniform in $p\in P_a$. Occurrence lists and substitution are computed
+on these trees as in Proposition~\ref{prop:miller-theory-realization}.
 
-For an algebra over $P$, retain the parameter throughout the
-evaluation of a finite term, formula, or list. Every algebra
-operation is applied in that fiber. Its representing computation
-has domain and value independent of the representation of $a$.
-Induction on the finite tree therefore proves that evaluation
-terminates on the required carrier, is representation independent,
-and satisfies the algebra equations. The same induction proves
-uniqueness. Thus these are the required initial algebras in every
-parameter slice.
+Let $\iota$ denote the constructor algebra, and let $\iota_P$ be its
+pullback to the slice over $P$. For a $K_P$-algebra
+$\alpha:K_P(Y,Z)\to(Y,Z)$, evaluate each constructor at the given
+parameter $w\in P$. If $t$ is a valid term or formula tree, induction
+on $t$ shows that evaluation terminates in the fiber over $w$ and gives
+the same value for every $p\in P_a$. Testing $w\in P$ and validity
+before evaluation gives a pair of total morphisms over $P$,
+\[
+ h:(P\times\Tm,P\times\Fm)\longrightarrow(Y,Z),
+ \qquad h\iota_P=\alpha K_P(h).
+\]
+The equation determines $h$ on every constructor, hence on every tree.
+For lists the same recursion on the empty list and on cons gives the
+unique algebra morphism from $P\times\List\N$ in the slice.
 
-Represent $A$ by its semidecidable image in $P\times S$.
-A numerical derivation code records a parameter $w$ and a finite tree
-of rule instances with ordered children. Semidecide $w\in P$ and
-membership of every formula parameter in its syntax carrier. For the
-nullary language, this includes membership in $X$ of every predicate
-label. Perform the recursive tests for tree shape, side conditions,
-and agreement of the ordered child conclusions with the premises,
-and semidecide $(w,\varphi)\in A$ at each nonlogical axiom leaf.
-These finitely many positive tests semidecide the derivation carrier,
-with the same domain for every representation of $a$.
-Adjoining a rule instance gives its inference algebra structure.
-Evaluate this tree in any target inference algebra over
-$P\times\mathsf{Fm}$, retaining $w$ at every node. Induction
-proves that the operation at each node receives inputs with the
-required conclusions, and hence terminates. The same argument as
-for syntax gives representation independence and the
-algebra-morphism equations. Induction also proves uniqueness.
-The derivation algebra is therefore initial in the parameter slice.
+For either language put $F_P=P\times\Fm$. Let $L$ be the coproduct of the seven parameter objects for the logical
+axiom schemes. Let $R_1$ and $R_2$ be the objects of generalization and
+modus ponens instances of Appendix~\ref{app:first-order-derivations}. For
+$A\hookrightarrow P\times S$ the rule objects are
+\[
+ R_0^P=(P\times L)+A,\qquad R_1^P=P\times R_1,\qquad
+ R_2^P=P\times R_2.
+\]
+Giving every premise and the conclusion of each rule the same parameter
+$w$ defines the inference endofunctor $H$ on $\mathcal D_a/F_P$. A derivation at $w$ is
+a finite tree of these rule instances in which the ordered child
+conclusions agree with the premises at each node.
+For a nonlogical axiom leaf labelled $\varphi$, the test is
+$(w,\varphi)\in A$. Run all leaf tests, the syntax and rule-instance
+tests, and the test $w\in P$ in parallel. Agreement of codes is
+decidable. Thus the carrier $D_A$ of valid pairs $(w,t)$ is
+$\mathcal E_a$-semidecidable. Reading the root defines
+$c_A:D_A\to F_P$ by $c_A(w,t)=(w,\varphi)$ for root conclusion
+$\varphi$. Adjoining a rule above its premises gives
+$\delta:H(D_A,c_A)\to(D_A,c_A)$.
+
+Let $\beta:H(Q,q)\to(Q,q)$ be an algebra over $F_P$. Evaluate each
+valid tree from the leaves to the root using $\beta$. Inductively,
+each child value lies over its premise at $w$, so the rule and its
+child values belong to the domain of the corresponding operation of
+$\beta$. For every $p\in P_a$ it returns the same value over the rule
+conclusion. With the test for membership in $D_A$
+this gives a total morphism $e:D_A\to Q$ satisfying
+\[
+ qe=c_A,\qquad e\delta=\beta H(e).
+\]
+The second equation forces the value at each leaf and at each node
+once its children have been evaluated. Induction gives uniqueness,
+so $(D_A,c_A,\delta)$ is initial.
 \end{proof}
 
 Consider the language of ordered fields with additional constants
@@ -508,24 +574,34 @@ $\operatorname{Split}(\mathcal E_a)$.
 The inverse image $\nu^*t_T$ is the partial identity on the set of
 sentence codes whose negations are provable in $T$.
 
-For $n\in L_a$, the sentence $c_n<1/2$ is an axiom of $T_a$.
-For $n\in R_a$, the axiom $1/2<c_n$ and the ordered-field axioms prove
-$\neg(c_n<1/2)$. Consequently
+Let $T\supseteq T_a$ be a consistent extension with
+$\mathcal E_a$-semidecidable axioms. Every axiom of $T_a$ is derivable in $T$. Replacing the uses of those
+axioms in a finite derivation gives $t_{T_a}\le t_T$. For $n\in L_a$, the
+sentence $c_n<1/2$ is an axiom of $T_a$. For $n\in R_a$, the
+axiom $1/2<c_n$ and the ordered-field axioms prove $\neg(c_n<1/2)$.
+Thus
 \[
- 1_{L_a}\le\theta^*t_{T_a},\qquad
- 1_{R_a}\le\theta^*\nu^*t_{T_a}.
+ 1_{L_a}\le\theta^*t_{T_a}\le\theta^*t_T,\qquad
+ 1_{R_a}\le\theta^*\nu^*t_{T_a}\le\theta^*\nu^*t_T .
 \]
-By Corollary~\ref{cor:miller-cuts-inseparable}, the restriction idempotents
-$1_{L_a},1_{R_a}$ are inseparable; the full inclusion into the restriction
-splitting preserves this property. Joins of restriction idempotents in
-the splitting are partial identities on unions, and their inverse images
-are partial identities on the corresponding set preimages.
-For a consistent extension $T\supseteq T_a$, leastness in
-Theorem~\ref{thm:first-order-theory} gives $t_{T_a}\le t_T$,
-while consistency gives $t_T\nu^*t_T=0_S$.
-Corollary~\ref{cor:domain-incompleteness} therefore makes
-$t_T,\nu^*t_T$ inseparable and gives
-$t_T\vee\nu^*t_T\ne1_S$.
+Suppose complementary restriction idempotents $u,v$ on $S$ satisfy
+$t_T\le u$ and $\nu^*t_T\le v$. Their inverse images under $\theta$
+are complementary, since inverse image preserves disjointness and
+unions of domains. The displayed inequalities give
+$1_{L_a}\le\theta^*u$ and $1_{R_a}\le\theta^*v$. These would
+separate the cuts, contrary to Corollary~\ref{cor:miller-cuts-inseparable}:
+the full inclusion into the restriction splitting preserves the
+restriction idempotents on $\N$ and their order. This is the application of
+Corollary~\ref{cor:domain-incompleteness} to the morphism $\theta$.
+
+Consistency gives $t_T\nu^*t_T=0_S$. If the join were $1_S$, the
+theorem and refutation domains would themselves be complementary.
+Hence $t_T\vee\nu^*t_T\ne1_S$. A sentence code outside this union
+is the code of a sentence $\varphi$ for which
+\[
+ T\nvdash\varphi \qquad\text{and}\qquad T\nvdash\neg\varphi .
+\]
+
 \end{proof}
 
 \subsection{The associated recursion categories}

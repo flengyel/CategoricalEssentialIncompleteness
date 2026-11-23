@@ -2,11 +2,15 @@
 
 We construct a recursion category $\mathscr R_X$ from set-valued
 cosheaves in the sense of Curry~\cite[Definition~2.6]{CurryCosheaves}
-on a three-point space $X$. Formula and derivation objects in the Karoubi
-envelope $\operatorname{Kar}(\mathscr R_X)$
-give, by evaluation at components $1$ and $2$, consistent propositional
-theories whose consistent extensions with computably enumerable axiom
-sets are incomplete.
+on a three-point space $X$. We construct an internal propositional theory
+in $\operatorname{Kar}(\mathscr R_X)$ and evaluate it at the two endpoints
+of $J=(1\leftarrow 0\to 2)$. Each endpoint theory is consistent.
+The indices of its provable atoms and those of its refutable atoms
+contain, respectively, the two members of a recursively inseparable pair.
+Thus every consistent extension there with a computably enumerable axiom set
+leaves an atom undecided. The internal first-order theory constructed
+in Section~\ref{subsec:fork-first-order} restricts to this propositional
+theory.
 
 For a topological space $X$, let $\mathcal O(X)$ be the category
 of open sets and inclusions. A \emph{set-valued cosheaf} is a
@@ -587,9 +591,14 @@ zero make them disjoint. Applying $E_i$ to
 \eqref{eq:atomic-inequalities} and using $t_0\le t_T$ gives
 the two inclusions. A recursive separator would consequently
 separate $A_i,B_i$, which is impossible.
-If $T_i\cup\nu_i^{-1}(T_i)=S_i$, then $P_{i,T}$ and $N_{i,T}$
-would be complementary c.e.\ subsets of $\N^2$, and hence recursive.
-This would contradict their recursive inseparability.
+If $P_{i,T}\cup N_{i,T}=\N^2$, simultaneous enumeration of these
+disjoint c.e.\ sets would decide membership in $P_{i,T}$ and hence
+separate the pair. Take $x\in\N^2\setminus(P_{i,T}\cup N_{i,T})$.
+By the definitions of the two inverse images,
+\[
+  \theta_i(x)\notin T_i,\qquad \nu_i\theta_i(x)\notin T_i .
+\]
+Thus an atomic sentence is undecided at endpoint $i$.
 
 If $T\subseteq T'$, monotonicity gives inclusions of both component
 sets, so the identity of $\omega\times\omega$ is the required pair morphism.
@@ -764,10 +773,17 @@ $j^*T_{\mathrm f}=T_{\mathrm p}$. Since $r$ commutes with
 negation and $T_{\mathrm p}$ is consistent, the same inclusion
 proves consistency of $T_{\mathrm f}$.
 
-The inseparable domains $A,B\hookrightarrow V$ reduce along
-$\theta_{\mathrm f}$ to the theorem and refutation domains of
-$T_{\mathrm f}$. Corollary~\ref{cor:domain-incompleteness}
-therefore makes $T_{\mathrm f}$ essentially incomplete.
+Let $U\hookrightarrow S_{\mathrm f}$ be a consistent closed extension of
+$T_{\mathrm f}$, and let $\nu_{\mathrm f}:S_{\mathrm f}\to S_{\mathrm f}$
+be sentence negation. The positive and negative axioms give
+\[
+ A\leq \theta_{\mathrm f}^{*}U,\qquad
+ B\leq \theta_{\mathrm f}^{*}\nu_{\mathrm f}^{*}U .
+\]
+If $U$ were complete, $U$ and $\nu_{\mathrm f}^{*}U$ would be
+complementary. Their inverse images under $\theta_{\mathrm f}$
+would separate $A$ and $B$, contrary to their inseparability.
+This is Corollary~\ref{cor:domain-incompleteness} in $\mathcal A$.
 
 For the endpoint assertion, let $U_i$ be the deductive closure
 of a consistent c.e.\ set of first-order axioms, and suppose
