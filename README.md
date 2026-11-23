@@ -44,8 +44,8 @@ space, the propositional theory at each endpoint is consistent, and every
 consistent extension in its language with a computably enumerable axiom
 set is incomplete.
 
-The current manuscript is **version 79**,
-dated 23 November 2026. The [v79 review](docs/reviews/V79_PROOFS_AND_WSL_VERIFICATION.md) gives the corrected proof steps and the [WSL2 v78 verification](docs/V78_WSL2_LEAN_VERIFICATION.md) records the last full Lean run. The [v78 review](docs/reviews/V78_SENTENCE_AND_DEFINITION_REVIEW.md) records the changes to the definitions and prose. The [v77 manuscript review](docs/reviews/V77_MANUSCRIPT_REVIEW.md) records the changes and their scope. The [v76 comparison](docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md) gives the hypotheses on first-order presentations and the transport of closed theories in a slice. The [v75 section-by-section review](docs/reviews/V75_MATHEMATICAL_EXPOSITION.md) records the corrections to the proofs and their correspondence with Lean. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
+The current manuscript is **version 80**,
+dated 23 November 2026. The [v80 audit checkpoint](docs/reviews/V80_LATEX_AUDIT.md) records the numbering convention in Appendix C. The [v79 review](docs/reviews/V79_PROOFS_AND_WSL_VERIFICATION.md) gives the corrected proof steps and the [WSL2 v78 verification](docs/V78_WSL2_LEAN_VERIFICATION.md) records the last full Lean run. The [v78 review](docs/reviews/V78_SENTENCE_AND_DEFINITION_REVIEW.md) records the changes to the definitions and prose. The [v77 manuscript review](docs/reviews/V77_MANUSCRIPT_REVIEW.md) records the changes and their scope. The [v76 comparison](docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md) gives the hypotheses on first-order presentations and the transport of closed theories in a slice. The [v75 section-by-section review](docs/reviews/V75_MATHEMATICAL_EXPOSITION.md) records the corrections to the proofs and their correspondence with Lean. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
 completes Proposition 10.8. The generated first-order theory restricts to the
@@ -55,10 +55,10 @@ with computably enumerable axioms is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v79.pdf](manuscript/logical_consequence_and_essential_incompleteness_v79.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v80.pdf](manuscript/logical_consequence_and_essential_incompleteness_v80.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v79_source.zip](manuscript/logical_consequence_v79_source.zip) |
+| Complete source ZIP | [logical_consequence_v80_source.zip](manuscript/logical_consequence_v80_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | Registered v70 snapshot | [PALOMAR-2026-11-22-000009, version 2](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2) · [Challenge](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cd08f0a42a6e8e182805db84396e40fdddc1b2ca/Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/palomar/PALOMAR-2026-11-22-000009-v2/README.md) |
@@ -77,7 +77,7 @@ and Git blob hashes.
 
 The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
 
-The [v79 correspondence table](FORMALIZATION_STATUS_V79.md) gives the Lean declarations for the 77 numbered results and three definitions. The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) gives the hypotheses used in the comparisons. The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) groups the declarations by result.
+The [v80 correspondence table](FORMALIZATION_STATUS_V80.md) gives the Lean declarations for the 77 numbered results and three definitions. The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) gives the hypotheses used in the comparisons. The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) groups the declarations by result.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
 Corollary 10.9 is proved for the two partial-map slices in the fork example and every
@@ -194,7 +194,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v79 and the v72 registration.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v80 and the v72 registration.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.
