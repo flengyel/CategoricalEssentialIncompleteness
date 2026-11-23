@@ -1,5 +1,6 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ForkTupleTuringChecks
 public import CategoricalEssentialIncompleteness.V46DiscreteTuringInseparabilityChecks
 public import CategoricalEssentialIncompleteness.V46IndexedAxiomPresentationsChecks
 
