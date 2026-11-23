@@ -76,8 +76,8 @@ theorem sectionIndex_computable : Computable₂ sectionIndex :=
   Computable.encode.comp₂ (sectionCode_computable.comp
     ((Computable.ofNat Code).comp Computable.fst) Computable.snd)
 
-/-- The compiler inserts a finite parameter numeral and is ordinary recursive,
-uniformly for every oracle. No oracle answer is used during specialization. -/
+/-- At every oracle `S`, the domain of `sectionIndex a z` is the section
+`{x | oracleDomain S a (Nat.pair z x)}`. -/
 theorem oracleDomain_section (S : Set ℕ) (a z x : ℕ) :
     oracleDomain S (sectionIndex a z) x ↔ oracleDomain S a (Nat.pair z x) := by
   simp only [oracleDomain,sectionIndex,Denumerable.ofNat_encode,sectionCode_eval]

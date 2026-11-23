@@ -22,7 +22,9 @@ open CategoryTheory.PCategoryStruct (nearProd diag)
 
 namespace CategoricalEssentialIncompleteness.LocalConnectedness
 
-private theorem no_lift_of_compatible_restriction {R : Type*} [Category R]
+/-- Identify the restriction structure induced by the partial products before
+applying the diagonal comparison to a proposed lift. -/
+theorem no_lift_of_compatible_restriction {R : Type*} [Category R]
     [PCategoryStruct R] [PCategory R] [native : RestrictionCategory R]
     [Limits.HasZeroMorphisms R] [RestrictionZero R] [CoprodStruct R]
     [CategoryTheory.HasCoproducts R] [RestrictionCoproducts R] [Ranges R]

@@ -42,8 +42,8 @@ theorem mem_tau (q x y : ℕ) : y ∈ (tau S).val (q,x) ↔
     oracleDomain S (Nat.unpair q).2 x ∧ y ∈ ordinaryEval (Nat.unpair q).1 x := by
   simp only [tau,Part.mem_assert_iff,exists_prop]
 
-/-- Both the ordinary extension program and the oracle-domain program are
-specialized by ordinary recursive compilers. Equality includes all domains. -/
+/-- For a fixed domain index `d` and an ordinary value specialization `t`, the
+parameter sends `z` to `Nat.pair (t z) (sectionIndex d (encode z))`. -/
 theorem tau_parameterization (Y : Restricted S) (f : product Y (N S) ⟶ N S) :
     ∃ r : Y ⟶ N S,isTotal r ∧ productMap r (𝟙 (N S)) ≫ tau S=f := by
   obtain ⟨f₀,hf,he⟩ := f.extension
