@@ -68,11 +68,18 @@ A logical translation $\sigma:P\to Q$ consists of total morphisms
 \[
  \sigma_{\Tm}:\Tm_P\to\Tm_Q,\qquad
  \sigma_{\Phi}:\Phi_P\to\Phi_Q,\qquad
- \sigma_S:S_P\to S_Q
+ \sigma_S:S_P\to S_Q.
 \]
-subject to the following conditions. The term and formula morphisms
-fix the variables and preserve equality and the logical constructors.
-The sentence morphism must satisfy $j_Q\sigma_S=\sigma_\Phi j_P$.
+The term morphism fixes variables, $\sigma_{\Tm}\eta_P=\eta_Q$,
+where $\eta_P:V\to\Tm_P$ and $\eta_Q:V\to\Tm_Q$ are the variable constructors.
+The formula morphism preserves equality, negation, implication, and quantification by the equations
+\begin{align*}
+ \sigma_\Phi\mathsf{eq}_P&=\mathsf{eq}_Q(\sigma_{\Tm}\times\sigma_{\Tm}),&
+ \sigma_\Phi\neg_P&=\neg_Q\sigma_\Phi,\\
+ \sigma_\Phi({\Rightarrow}_P)&=({\Rightarrow}_Q)(\sigma_\Phi\times\sigma_\Phi),&
+ \sigma_\Phi{\forall}_P&={\forall}_Q(1_V\times\sigma_\Phi).
+\end{align*}
+The sentence morphism satisfies $j_Q\sigma_S=\sigma_\Phi j_P$.
 Since $j_Q$ is monic and formula negation restricts to sentence
 negation in each presentation, $\sigma_S\nu_P=\nu_Q\sigma_S$.
 
@@ -106,9 +113,10 @@ $\rho_n:R_n^P\to R_n^Q$ with
 For $n=0$, $\rho_0$ sends instances of the seven logical axiom
 schemes to logical axiom instances. For generalization and modus ponens
 one may take $\rho_1=1_V\times\sigma_\Phi$ and
-$\rho_2=\sigma_\Phi\times\sigma_\Phi$, respectively. Only existence
-of the rule morphisms is required.
-Translations are composed componentwise. A nonlogical predicate
+$\rho_2=\sigma_\Phi\times\sigma_\Phi$, respectively.
+The three morphisms $\sigma_{\Tm},\sigma_\Phi,\sigma_S$ determine the
+translation. The conditions on $s$ and $\rho_n$ require their existence.
+Composition is componentwise. A nonlogical predicate
 may be interpreted by a formula. Put
 $\operatorname{Th}_P=\operatorname{Th}_{\mathcal D}(S_P)$.
 
@@ -260,7 +268,8 @@ equality, and the restricted adjunction follows from the
 generation reflection.
 \end{proof}
 
-Suppose $G\dashv H$ with unit $\eta$. Put
+Suppose $G$ has a right adjoint $H:\mathcal D_2\to\mathcal D_1$
+with unit $\eta:1_{\mathcal D_1}\to HG$. Put
 $\sigma^\flat=H\sigma\,\eta_{S_1}:S_1\to HS_2$.
 For $i_B:B\hookrightarrow S_2$, let $R(B)=(\sigma^\flat)^*(H i_B)$.
 The right adjoint $H$ preserves monomorphisms.
@@ -282,6 +291,8 @@ $K_{\Phi}(q)=\sigma_{\Phi}Gq$ on objects and $K_\Phi(k)=Gk$ on
 slice morphisms. Its right adjoint $R_\Phi$ sends $b:B\to\Phi_2$
 to the pullback of $Hb$ along
 $H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$.
+On a morphism $k:(B,b)\to(B',b')$ over $\Phi_2$, $R_\Phi(k)$
+is induced by $1_{\Phi_1}$ and $Hk:HB\to HB'$ on these pullbacks.
 For each $A$, suppose the comparison of rule instances supplies a
 natural transformation
 \[
@@ -392,22 +403,23 @@ Let $\ell:W_X\xrightarrow{\sim}W_P$ be the unique isomorphism
 of the two initial variable-list algebras. Write
 $\FV_X:\Phi_X\to W_X$ and $\FV_P:\Phi_P\to W_P$ for the
 free-variable occurrence morphisms. Since $f$ takes values in
-sentences, its atomic images have empty occurrence list.
+sentences, each interpreted nullary predicate has empty occurrence list.
 At a quantifier, $\ell$ commutes with deletion of the bound variable;
 at equality and implication it commutes with concatenation.
 The occurrence folds therefore give
-$\FV_P\widehat f_\Phi=\ell\FV_X$, with the corresponding equation
-for terms. Pullback along the empty-list inclusion gives the sentence
-morphism $\widehat f_S:S_X\to S_P$.
+$\FV_P\widehat f_\Phi=\ell\FV_X$ on formulas and
+$\FV_{\Tm_P}\widehat f_{\Tm}=\ell\FV_{\Tm_X}$ on terms.
+Pullback along the empty-list inclusion gives the sentence morphism $\widehat f_S:S_X\to S_P$.
 
 For substitution of $t$ for $x$ in $\forall y\,\varphi$, the branch
 $y=x$ retains the quantified formula. On the branch $y\ne x$,
 membership in the occurrence lists is preserved by $\ell$.
 Hence the two interpretations give the same values for the tests
 $x\in\FV_X(\varphi)$ and $y\in\FV_{\Tm}(t)$ that determine
-capture in~\eqref{eq:quantifier-fold}. At an atom, substitution fixes
-its interpreting sentence by the absent-variable identity of
-Appendix~\ref{app:syntax-theories}. The constructor equations now
+capture in~\eqref{eq:quantifier-fold}. At a nullary predicate,
+substitution fixes its interpreting sentence by the absent-variable
+identity of Appendix~\ref{app:substitution}. At an equality $u=v$,
+substitution acts on the two terms. The constructor equations
 identify the two substitution folds by initiality with parameters.
 Pulling back the success summand gives $s:\Adm_X\to\Adm_P$ with
 the two substitution equations above. These equations translate the

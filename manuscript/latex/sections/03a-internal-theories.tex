@@ -7,8 +7,8 @@ zeros, and binary restriction coproducts. Put
 $\mathscr S=\Split(\mathscr R)$ and $\mathcal D=\Tot(\mathscr S)$.
 Assume that $\mathcal D$ is regular with disjoint, pullback-stable finite
 coproducts and has the syntax of Definition~\ref{def:categorical-syntax}.
-Let $\Phi\in\mathcal D$ be the formula object and
-$j:S\hookrightarrow\Phi$ its sentence subobject. For an axiom
+Write $\Phi$ for the formula object ($\Fm$ in Appendix~\ref{app:first-order-syntax})
+and $j:S\hookrightarrow\Phi$ for its sentence subobject. For an axiom
 subobject $i_A:A\hookrightarrow S$, suppose the inference
 endofunctor $H_A:\mathcal D/\Phi\to\mathcal D/\Phi$ of
 Appendix~\ref{app:first-order-derivations} has an initial algebra
@@ -38,8 +38,12 @@ The restriction idempotent $\nu^*t_A$ represents refutable sentences.
 The sentence theory is \emph{consistent} when
 $t_A\nu^*t_A=0_S$, and \emph{complete} when
 $t_A\vee\nu^*t_A=1_S$.
-It is \emph{essentially incomplete} when it is consistent and, for every
-deductively closed sentence subobject $U\hookrightarrow S$ in the same language,
+A sentence subobject $u:U\hookrightarrow S$ is \emph{deductively closed}
+if it contains every sentence derivable with $U$ as axioms. When the initial
+derivation algebra for $U$ exists, this says that its sentence conclusion
+$c_{U,S}:P_{U,S}\to S$ factors through $u$.
+The theory $T_{A,S}$ is \emph{essentially incomplete} when it is consistent
+and, for every deductively closed $U$ in the same language,
 \[
  T_{A,S}\leq U,\quad U\wedge\nu^*U=\bot
  \quad\Longrightarrow\quad U\vee\nu^*U\ne\top.
@@ -69,10 +73,11 @@ $\overline{r_d F(f)m_e}=r_e F(\bar f)m_e$.
 This extension preserves ranges. To see this, write
 $a=\ran(f)\le d$, where the same restriction idempotent represents
 the range in $\mathscr R$ and in $\mathscr S$.
-The restriction idempotent $r_d F(a)m_d$ receives
-$\widehat F(f)$. If a restriction idempotent $q$ on $E_d$
-receives $\widehat F(f)$, then $m_d q r_d$ is a restriction
-idempotent on $FY$ receiving $F(f)$. Consequently
+Since $af=f$ and $a\le d$,
+$(r_d F(a)m_d)\widehat F(f)=\widehat F(f)$.
+If a restriction idempotent $q$ on $E_d$ satisfies
+$q\widehat F(f)=\widehat F(f)$, then $m_d q r_d$ is a restriction
+idempotent on $FY$ and $(m_d q r_d)F(f)=F(f)$. Consequently
 $F(a)=\ran(F(f))\le m_d q r_d$, and hence
 $r_d F(a)m_d\le q$. Thus
 $\ran(\widehat F(f))=\widehat F(\ran(f))$.
@@ -261,8 +266,5 @@ Theorem~\ref{thm:logical-comparison} to a soundness factorization
 and the lift in $S_{\PA}$ constructed in
 Lemma~\ref{lem:arithmetic-proof-search}.
 The numerical, Miller-sequence, and cosheaf realizations apply
-Corollary~\ref{cor:domain-incompleteness}. For axiom subobjects $A\leq B$ on the same sentence object,
-the least closed formula subobjects containing them satisfy
-$T_A\leq T_B$ by Theorem~\ref{thm:first-order-theory}.
-Pullback along the sentence inclusion gives $T_{A,S}\leq T_{B,S}$.
+Corollary~\ref{cor:domain-incompleteness}.
 

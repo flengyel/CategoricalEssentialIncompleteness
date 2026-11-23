@@ -1,12 +1,13 @@
 \section{Theory extensions and recursion categories}
 \label{sec:theory-extensions}
 
-An inclusion of internal theories induces a fully faithful functor between
-the Turing categories constructed in this section. Evaluation at a chosen
-logical theorem compares a theory with its constant family in the
-associated category. Under the deduction hypotheses of
-Theorem~\ref{thm:associated-incompleteness}, a consistent theory is
-essentially incomplete if and only if its constant family is.
+To an internal theory $t:T\hookrightarrow S$ we associate the category of
+partial maps in the slice of the total category over $T$.
+An inclusion of theories induces a fully
+faithful functor between their associated categories. Under the hypotheses of
+Theorem~\ref{thm:associated-incompleteness}, the constant family is essentially
+incomplete exactly when $t$ is. Evaluation at a logical theorem recovers
+$t$ from this family.
 
 \subsection{Categories associated with internal theories}
 
@@ -38,8 +39,9 @@ For $T\in\mathcal D$, set
  \mathscr C[T]=\Par(\mathcal D/T,\Mono).
 \]
 An object is a total morphism $p:X\to T$. A partial morphism from
-$p:X\to T$ to $q:Y\to T$ is an isomorphism class of spans
-$X\xleftarrow{m}A\xrightarrow{f}Y$ with $m$ monic and $pm=qf$.
+$p:X\to T$ to $q:Y\to T$ is a span $X\xleftarrow{m}A\xrightarrow{f}Y$
+with $m$ monic and $pm=qf$, up to isomorphism of its middle object
+commuting with both legs.
 Composition is by pullback. Its total category is $\mathcal D/T$.
 
 \begin{lemma}[Turing structure in partial slices]
@@ -165,6 +167,11 @@ Postcomposition sends $p:X\to T$ to $ip:X\to U$ and retains each
 span. Monicity of $i$ makes commutation over $U$ equivalent to
 commutation over $T$ for spans between such objects. This proves full
 faithfulness, restriction preservation, and the composition law.
+The functor $i^*$ sends $q:Y\to U$ to the projection $T\times_U Y\to T$.
+It sends $Y\xleftarrow{m}A\xrightarrow{f}Z$ over $U$ to
+$T\times_UY\xleftarrow{i^*m}T\times_UA\xrightarrow{i^*f}T\times_UZ$
+over $T$. The left leg remains monic, and pullback preserves the pullbacks
+defining span composition.
 
 For $p:X\to T$ and $q:Y\to U$, a span from $\Sigma_i p$ to $q$
 factors its right leg uniquely through $T\times_UY$. This gives

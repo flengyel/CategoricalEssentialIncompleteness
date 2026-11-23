@@ -1,14 +1,14 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 22 November 2026
 
-Active WSL2 assignment — manuscript v77
+Active WSL2 assignment — manuscript v78
 
 Fetch origin/main and execute docs/CODEX_WSL2_CEI_V76_LEAN_HANDOFF.md in full.
 The proof assignment started from manuscript v76 at
-e11906faf32720516d36f3bfd30a9d4ca278f3c9. Read the v77 comparisons
-in docs/reviews/V77_MANUSCRIPT_REVIEW.md and update the correspondence
-selected by MANUSCRIPT_CURRENT.json (FORMALIZATION_STATUS_V77.md), run full Lean verification, and push
-the tested proofs and report to public origin/main. Return the verified SHAs
+e11906faf32720516d36f3bfd30a9d4ca278f3c9. Read the v77 and v78 reviews linked in the
+handoff, update the correspondence selected by MANUSCRIPT_CURRENT.json
+(FORMALIZATION_STATUS_V78.md), run full Lean verification, and push the
+tested proofs and report to public origin/main. Return the verified SHAs
 and report to the originating manuscript chat. The current assignment is
 Lean verification. The release procedures and earlier records below apply
 to their respective releases.

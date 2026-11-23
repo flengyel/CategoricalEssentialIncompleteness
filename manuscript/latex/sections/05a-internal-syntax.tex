@@ -1,13 +1,11 @@
 \subsection{The total restriction splitting}
 \label{subsec:syntactic-total-splitting}
 
-We apply the syntax and theory construction of
-Appendix~\ref{app:syntax-theories} in
-$\mathcal B_T=\Tot(\Split(S_T))$.
-We describe this category by arithmetic predicates. Syntactic partial
-maps presented by functional
-$\Sigma_1$ formulas and provable graph equality are discussed by
-Robinson and Rosolini~\cite[pp.~108--109]{RobinsonRosolini}.
+To construct syntax and theories in
+$\mathcal B_T=\Tot(\Split(S_T))$, we present its objects by
+arithmetic predicates. Robinson and Rosolini~\cite[pp.~108--109]{RobinsonRosolini}
+present syntactic partial maps by functional $\Sigma_1$ formulas
+up to provable graph equality.
 
 Let $\mathcal P_T$ have as objects the $\Sigma_1$ arithmetic formulas
 $C(x)$ with free variable $x$. A morphism from $C$ to $D$
@@ -100,8 +98,9 @@ $(\omega,[D]_T)$ has a graph satisfying
 \eqref{eq:syntactic-support}--\eqref{eq:syntactic-totality} in $T$.
 Equality of these morphisms is universal $T$-provable graph
 equivalence. The functor is therefore full and faithful.
-For essential surjectivity, use the coding isomorphism $X\cong\omega$
-to transport any object $(X,e)$ of $\Split(S_T)$ to $(\omega,e')$.
+For an object $(X,e)$ of $\Split(S_T)$, let $j:X\to\omega$ be
+the coding isomorphism and put $e'=jej^{-1}$. The morphism
+$je:(X,e)\to(\omega,e')$ is an isomorphism with inverse $ej^{-1}$.
 If $b$ represents $e'$, put $C(x)\equiv\exists y\,G_b(x,y)$.
 The equation $e'=\bar e'$ says that $T$ proves
 \[
@@ -147,12 +146,10 @@ Call a represented morphism $\varepsilon:C\to D$
 \]
 Every such morphism has a section. Apply the first two assertions
 of Lemma~\ref{lem:syntactic-functional-search} to the relation
-$\varepsilon(x,y)$ with input $y$ and output $x$. The resulting
-program chooses the first coded witness of a preimage. Its graph
-is PA-provably functional, even though the transposed relation
-need not be functional. Provable surjectivity makes its domain
-$D$, and the support of $\varepsilon$ makes its outputs belong
-to $C$. It therefore defines $\sigma:D\to C$. The correctness of
+$\varepsilon(x,y)$ with input $y$ and output $x$. The program returns the preimage from the first witness it finds.
+Its graph is PA-provably functional. In $T$, surjectivity and
+support give domain $D$ and values in $C$, so the program
+defines $\sigma:D\to C$. The correctness of
 the search and functionality of $\varepsilon$ give
 $\varepsilon\sigma=1_D$.
 
@@ -251,10 +248,9 @@ In particular, there is a restriction equivalence
 A span $C\xleftarrow{m}E\xrightarrow{g}D$ is sent
 to $gm^{-1}$, where $m^{-1}$ is the partial inverse.
 Conversely, a partial morphism is represented by its domain
-inclusion and its total restriction to that domain. In the predicate
-presentation the domain is $\exists y\,G_f(x,y)$; relational
-composition identifies composition of these spans by pullback with
-composition in $\Split(S_T)$.
+inclusion and its total restriction to that domain. For a program index $e$ representing the partial morphism, its domain
+predicate is $\exists y\,G_e(x,y)$. By the pullback calculation in Section~\ref{sec:theory-extensions},
+composition of spans agrees with composition in $\Split(S_T)$.
 
 By Lemma~\ref{lem:syntactic-total-category}, $\mathcal B_T$ is regular
 with disjoint stable finite coproducts, and its monomorphisms have
@@ -336,14 +332,13 @@ complement are therefore represented by the predicates
 $V(x)\land V(y)\land x=y$ and
 $V(x)\land V(y)\land x\ne y$, respectively.
 
-Assign distinct natural numbers to the constructor forms for variables,
+Assign distinct natural numbers to the constructors for variables,
 $k$-ary function and relation symbols ($0\leq k\leq d$), equality,
 negation, implication, and universal quantification.
 Encode a node by its constructor number and, when required, its
 numerical symbol or variable label, using the fixed finite-sequence
-coding. The code of a tree is the finite
-sequence obtained by concatenating the codes of its ordered children
-and then adjoining the code of its root.
+coding. The word for a tree consists of the words for its children, in order,
+followed by one entry for the root.
 
 Recover the tree by primitive recursion through this sequence,
 maintaining a finite sequence of completed subtrees. At a constructor
@@ -362,8 +357,9 @@ constructor's ordered children uniquely. Sequence length is a
 primitive-recursive size function, and every child has smaller size.
 Induction on sequence length proves these assertions in $\mathrm{PA}$.
 
-The formula $\operatorname{Tm}(t)$ asserts that $t$ represents a term, that variable labels satisfy $V$, and that each
-function label of arity $k$ satisfies $\Sigma_k$. The formula
+The predicate $\operatorname{Tm}(t)$ requires that $t$ parse as a term,
+that its variable labels satisfy $V$, and that each function label of
+arity $k$ satisfy $\Sigma_k$. The formula
 $\operatorname{Fm}(a)$ has the analogous conditions for formulas,
 including membership in $\Pi_k$ for relation labels and in $V$ for
 quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
@@ -441,12 +437,10 @@ require $P(p)\land\operatorname{Tm}(t)$ and root value $x$.
 For $\operatorname{Ev}_{\mathrm{Fm}}(p,a,y)$ require
 $P(p)\land\operatorname{Fm}(a)$ and root value $y$.
 
-All these requirements are $\Sigma_1$. Boundedly many carrier and
-projection requirements are combined using
-Lemma~\ref{lem:st-finite-sigma1}. The requirements on the halting
-computations are decidable predicates of their codes. Existentially
-quantifying over this finite sequence therefore gives a
-$\Sigma_1$ formula.
+The carrier and projection conditions are $\Sigma_1$, and the tests on
+halting traces are primitive recursive. By Lemma~\ref{lem:st-finite-sigma1},
+existential quantification over the evaluation sequence gives a $\Sigma_1$
+formula for each relation.
 
 Simultaneous induction in $T$ on node count $n$ proves that every
 valid input of size at most $n$, with every parameter satisfying $P$,
@@ -463,19 +457,15 @@ the required evaluation sequence. Functionality of the operation graphs,
 together with the induction hypothesis, proves uniqueness of the
 value.
 
-This argument uses the finitely many totality and projection
-equations of the given algebra as theorems of $T$. Its induction formula is an arithmetic formula, so the required
-induction is available from $\PA$.
-
-Lemma~\ref{lem:syntactic-functional-search} now supplies indices for
-the two evaluation relations. The preceding proof verifies in $T$
-that they are total morphisms
+This induction takes place in $T$, using PA induction and the totality and
+projection equations of the algebra. By Lemma~\ref{lem:syntactic-functional-search}
+the two evaluation relations define total morphisms over $P$
 \[
  h_{\mathrm{Tm}}:P\times\Tm\longrightarrow X,
  \qquad
- h_{\mathrm{Fm}}:P\times\Fm\longrightarrow Y,
+ h_{\mathrm{Fm}}:P\times\Fm\longrightarrow Y.
 \]
-and that they commute with the projections to $P$. Decomposing an
+Decomposing an
 evaluation sequence at its root proves, in $T$, their algebra-morphism
 equations: evaluation of a constructor is the corresponding algebra
 operation applied to the evaluated children. Thus these morphisms form
@@ -532,11 +522,6 @@ satisfying these equations.
 \subsection{Free variables and substitution}
 \label{sec:st-substitution-realization}
 
-The preceding propositions supply the initiality hypotheses of
-Definition~\ref{def:categorical-syntax} for the variable object and the
-signature objects of bounded arity in $\mathcal B_T$. We represent the free-variable and substitution
-morphisms by algorithms.
-
 \begin{proposition}
 \label{prop:st-substitution-realization}
 On the preceding codes, the list operations, free-variable morphisms,
@@ -556,12 +541,10 @@ primitive recursive. Membership compares numerical variable labels;
 deletion removes every entry equal to the specified label.
 Induction in $\mathrm{PA}$ on sequence length proves their nil and
 cons equations and the two membership identities displayed in
-Appendix~\ref{app:syntax-theories}. Each operation preserves its carrier whenever its
-inputs satisfy their carrier predicates. Thus the corresponding
-restricted graph equations define morphisms in $\mathcal B_T$.
-The uniqueness assertion of
-Proposition~\ref{prop:st-list-initiality} identifies them with the
-unique list-algebra morphisms in the appendix.
+Appendix~\ref{app:syntax-theories}. Concatenation and deletion return
+lists of variables, and membership returns a Boolean value.
+By Proposition~\ref{prop:st-list-initiality}, these equations determine
+the three list operations.
 
 Write $L_V$ for the list object of Proposition~\ref{prop:st-list-initiality}.
 The free-variable maps $\FV_{\Tm}:\Tm\to L_V$ and
@@ -574,7 +557,7 @@ that its output satisfies $\operatorname{List}_V$ and proves the
 constructor equations. These are the equations of the
 $K$-algebra on lists, so
 Proposition~\ref{prop:st-syntax-initiality} identifies this algorithm
-with the appendix's free-variable morphisms.
+with $\FV_{\Tm}$ and $\FV_{\Fm}$.
 
 For substitution, use a traversal which retains at each node both
 its original subtree and its computed result. Its parameters are
@@ -631,13 +614,13 @@ term and that every value in the second summand is the image of a valid formula.
 The same induction proves that the first component is the original
 subtree and verifies all the constructor equations of the
 $K_{V\times\Tm}$-algebra used in Appendix~\ref{app:syntax-theories}.
-By Proposition~\ref{prop:st-syntax-initiality}, its classes are
-therefore the appendix's $a_T$ and $b_F$.
+Uniqueness in Proposition~\ref{prop:st-syntax-initiality} identifies
+the result morphisms with $a_T$ and $b_F$.
 
 Let $D(\varphi,x,t)$ be the source predicate
 $\operatorname{Fm}(\varphi)\land V(x)\land\operatorname{Tm}(t)$.
 Let $b(\varphi,x,t)$ be the numerical tag of the result of the
-traversal, with $1$ for success and $0$ for failure. Assign tag $0$ to malformed raw input. The traversal
+traversal, with $1$ for success and $0$ for failure. Set $b=0$ if $\varphi$ does not parse as a formula or $t$ as a term. The traversal
 parses constructor tags and tests equality of numerical labels, so
 $b$ is primitive recursive independently of signature membership. On the source $D$, induction in $\PA$
 identifies success with the free-for condition. Thus the two
@@ -724,10 +707,9 @@ children precede their parent.  Its constructor equations and
 the unique decomposition of a tree are provable in $\PA$ by
 induction on its numerical code.
 
-Define $P(d)$ to assert that $d$ is such a tree and that, at every
-node with label $r$, arity $n$, and immediate subtrees
-$d_1,\ldots,d_n$, the following hold: $R_n(r)$, and there is an
-$n$-tuple $(z_1,\ldots,z_n)$ such that
+Let $P(d)$ assert that $d$ is a tree and that each node, with label $r$,
+arity $n$, and immediate subtrees $d_1,\ldots,d_n$, satisfies $R_n(r)$
+and admits an $n$-tuple $(z_1,\ldots,z_n)$ such that
 \[
  G_{u_n}(r,\langle z_1,\ldots,z_n\rangle)
  \quad\text{and}\quad
@@ -879,7 +861,7 @@ belongs to $S_T$, and its splitting represents that sentence theory.
 \begin{proof}
 Lemma~\ref{lem:syntactic-total-category} supplies regularity,
 disjoint stable finite coproducts, and partial inverses for
-monomorphisms. Numerical equality makes $V$ decidable.
+monomorphisms. Numerical equality gives decidable equality on $V$.
 Propositions~\ref{prop:st-syntax-initiality} and
 \ref{prop:st-list-initiality} give the required initial algebras,
 stable under every parameter object.

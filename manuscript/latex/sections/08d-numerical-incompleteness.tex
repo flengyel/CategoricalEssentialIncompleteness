@@ -34,8 +34,10 @@ products and coproducts by their numerical descriptions.
 In $\Pfn$, inverse images along total morphisms preserve binary joins of restriction
 idempotents.
 For complementary restriction idempotents $c,c':W\rightharpoonup W$
-in $\mathrm{Rec}$, let $C,C'\subseteq|W|$ be their domains. These complementary c.e.\
-subsets are recursive. The morphism $s:W\to W+W$ in $\mathrm{Rec}$
+in $\mathrm{Rec}$, let $C,C'\subseteq|W|$ be their domains. For
+$x\in|W|$, parallel enumeration of $C$ and $C'$ in the coding
+$\gamma_W:|W|\to\N$ decides which contains $x$. The morphism
+$s:W\to W+W$ in $\mathrm{Rec}$
 given by
 \[
  s(x)=
@@ -61,10 +63,8 @@ axioms, use $S_{\mathrm{rec}},\nu,\theta,t_T$ from
 Section~\ref{subsec:numerical-realization}. The code comparison there
 identifies their underlying numerical functions and domains with
 the standard interpretations in
-Lemma~\ref{lem:arithmetic-diagonal-representation}. Applying that
-lemma at $\N$, with $\Gamma$ the chosen PA presentation, gives
-the first two inequalities below. Inclusion of the PA axioms in
-$T$ gives the third:
+Lemma~\ref{lem:arithmetic-diagonal-representation}. For $n\in A$, PA proves $\alpha(\bar n)$, and for $n\in B$, it
+proves $\neg\alpha(\bar n)$. Since $T$ contains the PA axioms, we obtain
 \begin{equation}\label{eq:arithmetic-domain-inclusions}
  I(a)\le\theta^*t_{\PA},\qquad
  I(b)\le\theta^*\nu^*t_{\PA},\qquad t_{\PA}\le t_T.

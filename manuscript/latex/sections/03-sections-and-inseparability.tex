@@ -1,9 +1,10 @@
 \section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
 
-Let $P,N$ contain the images of the two domains of a diagonal computation
-under a range functor $F:\mathscr R\to\mathcal A$. If a
-partial morphism with summand inverse images $N,P$ lifts along $F$,
-we construct a total $g$ in $\mathscr R$ with $(Fg)^*P=(Fg)^*N=0$.
+The diagonal computation on a Turing object $U$ has two disjoint
+domains $a_0,a_1$, one for each output summand. Let $F:\mathscr R\to\mathcal A$
+be a range functor. The comparison theorem gives conditions under which
+disjoint domains $P\geq F(a_0)$ and $N\geq F(a_1)$ satisfy
+$P\vee N\ne1_{FU}$.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
@@ -135,8 +136,8 @@ Interchanging the summands gives $\varepsilon_1\ell_c=i_1c$.
 Taking restrictions yields $\ell_c^*\varepsilon_0=c'$ and
 $\ell_c^*\varepsilon_1=c$.
 
-Put $P=F(c)$ and $N=F(c')$.
-These are complementary target restriction idempotents.
+Since $F$ preserves meets, joins, zeros, and identities,
+$P=F(c)$ and $N=F(c')$ are complementary on $FU$.
 For the canonical coproduct isomorphism
 $\chi_{U,U}:FU+FU\to F(U+U)$, define
 $s_c=\chi_{U,U}^{-1}F(\ell_c):FU\to FU+FU$.

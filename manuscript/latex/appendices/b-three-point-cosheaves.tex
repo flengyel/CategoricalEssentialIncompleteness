@@ -183,11 +183,10 @@ the disjoint union of the two domains. A product with an empty domain
 is empty, which proves the prodominical zero law.
 
 The component images $f_j((D_f)_j)$ form a c.e.\ subfunctor
-$I_f\subseteq Z$. Its partial identity receives $f$. If a restriction
-idempotent receives $f$, its subfunctor contains each component image,
-and hence contains $I_f$.
-This proves the range property and agreement with the regular
-image of $D_f\to Z$. For $g,h:Z\rightharpoonup W$ with
+$I_f\subseteq Z$. Its partial identity satisfies $1_{I_f}f=f$.
+If a restriction idempotent $e$ on $Z$ satisfies $ef=f$, its domain
+contains $f_j((D_f)_j)$ at each $j$. Thus $1_{I_f}\leq e$, and
+$\ran(f)=1_{I_f}$. For $g,h:Z\rightharpoonup W$ with
 $gf=hf$, choose a preimage of each $z\in(I_f)_j$. Equality of the two partial composites shows
 that $g_j$ is defined at $z$ exactly when $h_j$ is, and their
 values there agree. Hence $g\ran(f)=h\ran(f)$, including
@@ -275,11 +274,8 @@ $r:V\rightharpoonup Y$ with $rm=1_Y$ and $mr=\bar r$, the partial
 identity on $I\subseteq V$.
 \end{proof}
 
-Use the sequence encodings fixed in Section~\ref{sec:cosheaves}.
-For $Y\in\mathcal E$, define $Y^\#$ by
-$(Y^\#)_j=(Y_j)^\#$.
-The map $(Y^\#)(0\to i):(Y_0)^\#\to(Y_i)^\#$ decodes a sequence,
-applies $r_i^Y$ to each entry, and encodes the result.
+For $Y\in\mathcal E$, let $Y^\#$ be the object of nonempty words
+defined in Section~\ref{sec:cosheaves}.
 For a partial morphism $f:Y\rightharpoonup Z$ of $\mathcal A$
 with domain subfunctor $D_f$, define
 $f^\#:Y^\#\rightharpoonup Z^\#$ to have, at component $j$, domain
@@ -514,12 +510,10 @@ to $\mathscr R_X$ by fullness. Hence it retains its Turing
 universal property there, proving that $\mathscr R_X$ is a
 recursion category.
 
-Restrictions and ranges of morphisms between objects of $\mathscr R_X$
-are endomorphisms of objects of $\mathscr R_X$, so belong to the subcategory.
-Every endomorphism of an object of $\mathscr R_X$ lies in this full
-subcategory, so the restriction and range universal properties are unchanged.
-The chosen coproducts and their copairings are inherited from $\mathcal A$.
-Thus the inclusion is a range functor.
+By fullness, the restriction idempotents on each object of $\mathscr R_X$
+are the same as in $\mathcal A$. Hence the least $e$ satisfying $ef=f$
+is the same in both categories. The inclusion preserves restrictions,
+ranges and the chosen coproducts, so it is a range functor.
 
 For a restriction idempotent $e$ on an object $Y$ of $\mathscr R_X$,
 write $m_e:D_e\to Y$ and $r_e:Y\rightharpoonup D_e$ for its
@@ -617,9 +611,8 @@ Suppose that $\epsilon$ decides equality on $V$. The functor $1+1$
 is constant and sends both nonidentity morphisms of $J$ to
 identity functions. Choose distinct $u,v\in V_0$ differing only
 in their $z$ coordinate. Then $r_1^Vu=r_1^Vv$, so
-$\epsilon_1(r_1^Vu,r_1^Vv)$ lies in the second summand.
-Naturality forces $\epsilon_0(u,v)$ to lie in the same summand,
-contrary to $u\ne v$ and the prescribed diagonal inverse image.
+$\epsilon_1(r_1^Vu,r_1^Vv)=\mathbf t_1(*)$.
+Naturality gives $\epsilon_0(u,v)=\mathbf t_0(*)$, contrary to $u\ne v$.
 \end{proof}
 
 

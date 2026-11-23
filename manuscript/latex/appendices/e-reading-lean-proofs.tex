@@ -44,10 +44,10 @@ and \CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{
 Let $i_a:A\hookrightarrow X$ and $i_b:B\hookrightarrow X$ represent
 disjoint subobjects $a,b$. In Corollary~\ref{cor:signed-first-order-incompleteness},
 $T_{a,b}$ is the least sentence theory containing the images of
-$\theta_X i_a$ and $\nu_X\theta_X i_b$. Assume it is consistent. Suppose $(a,b)$ is
-inseparable. In Lean, \texttt{intro U hU hc hcomp} assumes that $U$ is a
-closed extension of $T_{a,b}$ that is both consistent and complete. Its
-theorem and refutation subobjects $U$ and $\nu_X^*U$ are then complementary in the sentence object $S_X$. Pullback along $\theta_X$ gives complementary
+$\theta_X i_a$ and $\nu_X\theta_X i_b$. Suppose that $T_{a,b}$ is consistent and $(a,b)$ is inseparable.
+If a consistent closed extension $U$ of $T_{a,b}$ were complete, its
+theorem and refutation subobjects $U$ and $\nu_X^*U$ would be
+complementary in $S_X$. Pullback along $\theta_X$ gives complementary
 subobjects of $X$, and the signed axioms give the two inequalities
 \[
    a\leq\theta_X^*U,\qquad b\leq\theta_X^*(\nu_X^*U).
@@ -60,8 +60,8 @@ and $\forall v\,\varphi$ by the value of $\varphi$. The logical axioms
 are true and the rules preserve truth, so the true sentences form a
 closed theory, \texttt{booleanTheory}. It contains the signed axioms
 and hence $T_{a,b}$. Boolean negation interchanges true and false, so
-the theory is consistent and complete. If \texttt{h} asserts essential incompleteness of $T_{a,b}$, then
-\texttt{h.2} makes this consistent closed extension incomplete, a contradiction.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness}{L43-L75}{The two implications}
+the theory is consistent and complete. This extension rules out
+essential incompleteness of $T_{a,b}$.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness}{L43-L75}{The two implications}
 and \CEIproof{CategoricalEssentialIncompleteness/V46SignedBooleanExtension}{L28-L74}{the Boolean extension}.
 For the subobject formulation of Corollary~\ref{cor:signed-first-order-incompleteness}
 and the Boolean-assignment theorem, see \CEIregistration{} and the corresponding
@@ -90,12 +90,10 @@ so $\neg P_n$ is true as well.
 
 The logical schemes are true, and modus ponens and generalization preserve
 truth. Induction in $M$ therefore gives truth of both conclusions for the
-same $L$, even for derivations of nonstandard length. In the assertion
-\texttt{hq} that the conclusion of $q$ is true, \texttt{rw [h] at hq}
-replaces that conclusion by the negation of the conclusion of $p$.
-Boolean negation now gives a contradiction. The valuation depends on
-the two derivations. A separator would have to assign the prescribed
-values on both entire diagonal domains. Since the argument holds in
+same $L$, even for derivations of nonstandard length. But Boolean
+negation gives the conclusions of $p$ and $q$ opposite truth values. The
+valuation uses only the axiom leaves of $p$ and $q$; a separator
+must assign the prescribed values on both entire diagonal domains. Since the argument holds in
 every model of $\PA$, first-order completeness gives a proof in $\PA$
 that no two derivations in the signed calculus conclude a formula and its
 negation.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction}{L32-L56}{The common list},
@@ -125,8 +123,8 @@ Taking inverse images of the two summand domains along this common morphism give
  E^*N=E^*F(a_0)\leq E^*P,\qquad
  E^*P=E^*F(a_1)\leq E^*N.
 \]
-Thus \texttt{le\_antisymm} identifies $E^*P$ and $E^*N$. Their meet is
-zero by disjointness, so both are zero.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46Comparison}{L35-L89}{The two inverse images under $Fg$}.}
+The inequalities give $E^*P=E^*N$. Since $P$ and $N$ are disjoint
+and inverse image preserves meets and zero, both inverse images are zero.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46Comparison}{L35-L89}{The two inverse images under $Fg$}.}
 
 In Proposition~\ref{prop:missing-lift} the output summand of the total
 conditional decides membership in a nonrecursive set. The inclusion
@@ -169,24 +167,24 @@ slice.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46AssociatedClosed
 
 \subsection{A uniform choice of independent sentences}
 
-Theorem~\ref{thm:uniform-independent-sentences} gives one total morphism
-$q:E\to S$ for the c.e.\ presentations $\Gamma_e$ of extensions of $\PA$.
-Lean supplies the witness \texttt{sentence} for $q$ before
-\texttt{intro e hc} introduces $e$ and the hypothesis that $\Gamma_e$ is
-consistent.
+In Theorem~\ref{thm:uniform-independent-sentences},
+$E=(\omega,1_\omega)$ is the number object and $S$ the arithmetic sentence
+object in $\mathcal B=\Tot(\Split(S_{\PA}))$. Let $\Gamma_e$ consist
+of the axioms of $\PA$ and the sentences on whose codes program $e$
+halts. The Turing property gives a total morphism $g:\omega\to\omega$
+in $S_{\PA}$. Composing its image $I(g):E\to E$ with the diagonal
+sentence morphism $\theta:E\to S$ gives one morphism
+$q=\theta I(g)$ for all $e$. For $e\in\N$, put $n=F_{\N}(g)(e)$.
+Then $(G_{\N}q)(e)=\ulcorner\alpha(\bar n)\urcorner$, where
+$\alpha(x)$ asserts that the diagonal computation at $x$ has an even output.
 
-Let $g:\omega\to\omega$ be the total morphism obtained from the Turing
-property in the proof. In the total category $\mathcal B$,
-$q=\theta I(g):E\to S$. For a standard index $e\in\N$, put
-$n=F_{\N}(g)(e)$. Interpretation in $\N$ gives
-$(G_{\N}q)(e)=\Theta(n)=\ulcorner\alpha(\bar n)\urcorner$.
-For this $e$, the positive proof-search domain consists of the $x$
-such that $\Gamma_e\vdash\alpha(\bar x)$, and the negative domain consists of
-those such that $\Gamma_e\vdash\neg\alpha(\bar x)$. Consistency makes
-the domains disjoint. At $x=n$, the diagonal identity and the two
-diagonal bounds put $n$ in the negative domain if it belongs to the positive one, and
-conversely. Thus \texttt{output\_avoids} excludes both possibilities. Neither
-$\alpha(\bar n)$ nor its negation is derivable from $\Gamma_e$.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L116-L128}{The diagonal output and the sentence code}
+Suppose $\Gamma_e$ is consistent. If it proves $\alpha(\bar n)$,
+the proof search selects the odd summand at $(e,n)$. The diagonal
+identity puts $n$ in the odd diagonal domain, whence
+$\PA\vdash\neg\alpha(\bar n)$. If $\Gamma_e$ proves
+$\neg\alpha(\bar n)$, the even summand gives
+$\PA\vdash\alpha(\bar n)$. Both alternatives contradict consistency
+because $\Gamma_e$ extends $\PA$.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L116-L128}{The diagonal output and the sentence code}
 and \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent}{L184-L218}{the two excluded derivations and the uniform morphism}.}
 
 \subsection{Finite proofs and the theorem domain for a Miller sequence}
@@ -194,6 +192,7 @@ and \CEIproof{CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent
 In Lemma~\ref{lem:miller-parameterized-deduction}, let $P$ be the
 parameter object and let $A\hookrightarrow P\times S$ specify the
 axioms. A derivation with parameter $w$ has conclusion $(w,\varphi)$.
+Here $S$ is the sentence object and $\Fm$ the formula object.
 For the inference endofunctor $H$ on
 $\mathcal D_a/(P\times\Fm)$, write $\delta:H(D_A,c_A)\to(D_A,c_A)$
 for the algebra of finite derivations. Given an algebra
@@ -204,8 +203,8 @@ is the unique $e:D_A\to Q$ satisfying
 \]
 The first equation fixes both the parameter and the conclusion. The
 second determines $e$ at each leaf and at each application of an
-inference rule. Lean constructs this initial algebra for every axiom
-subobject $A$, including those whose fibers vary with $w$.\footnote{%
+inference rule. An axiom leaf with sentence $\psi$ at $w$ requires
+$(w,\psi)\in A$, so the allowed leaves may vary with $w$.\footnote{%
 \CEIproof{CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction}{L97-L126}{The inference algebra and the two equations}
 and \CEIproof{CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction}{L130-L151}{initiality for every axiom subobject}.}
 
@@ -225,10 +224,12 @@ The comparison of proof objects preserves conclusions and inference
 rules. For an arbitrary axiom monomorphism $m:A\hookrightarrow S$,
 let $\Gamma_m$ be the set of sentence words encoding its image in the
 numerical presentation. Write $i_{\Gamma_m}:A_{\Gamma_m}\hookrightarrow S$
-for the axiom subobject reconstructed from these words. Lean constructs
-an isomorphism $u:A\xrightarrow{\cong}A_{\Gamma_m}$ with
-$i_{\Gamma_m}u=m$. The sentence conclusion morphisms therefore have
-the same image in $S$. Thus the displayed equivalence applies to $m$
+for the axiom subobject reconstructed from these words.
+The isomorphism $u:A\xrightarrow{\cong}A_{\Gamma_m}$ satisfies
+$i_{\Gamma_m}u=m$. Relabelling axiom leaves by $u$ preserves their
+sentences; initiality extends this relabelling to derivations, preserving
+conclusions. Relabelling by $u^{-1}$ gives the reverse inclusion of
+sentence-conclusion images in $S$. Thus the displayed equivalence applies to $m$
 with $\Gamma=\Gamma_m$. Pullback of this theorem domain along
 $\nu:S\to S$ gives the refutation domain.\footnote{%
 \CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison}{L155-L178}{Preservation of conclusions and inference rules},

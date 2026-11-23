@@ -3,11 +3,9 @@
 \subsection{Partial maps and restriction idempotents}
 
 Composition is written $gf=g\circ f$, so $f$ is applied first.
-A \emph{restriction category}, in the sense of Cockett and
-Lack~\cite[Section~2.1.1]{CockettLack}, is a category equipped with an assignment
-that sends every morphism
-$f:X\rightharpoonup Y$ to a morphism
-$\bar f:X\rightharpoonup X$ satisfying
+A \emph{restriction category} is a category $\mathcal C$ with a
+morphism $\bar f:X\rightharpoonup X$ for each $f:X\rightharpoonup Y$,
+subject to the identities of Cockett and Lack~\cite[Section~2.1.1]{CockettLack},
 \[
  f\bar f=f,\qquad
  \bar f\bar g=\bar g\bar f,\qquad
@@ -15,14 +13,12 @@ $\bar f:X\rightharpoonup X$ satisfying
  \bar h f=f\overline{hf}.
 \]
 Here $g:X\rightharpoonup Z$ and $h:Y\rightharpoonup Z$.
-The morphisms $\bar f$ are idempotent and are called
+The morphisms $\bar f$ are idempotent. They are called
 \emph{restriction idempotents}, or \emph{domains} in
 recursion-category terminology \cite[Section~5]{Heller}.
 The morphism $f$ is \emph{total} when $\bar f=1_X$.
-For a restriction category $\mathcal C$, let
-$\operatorname{Tot}(\mathcal C)$ be its \emph{category of total morphisms}:
-the subcategory with all objects of $\mathcal C$ and its
-total morphisms.
+The \emph{category of total morphisms} $\operatorname{Tot}(\mathcal C)$
+has the objects of $\mathcal C$ and its total morphisms.
 A \emph{restriction functor} $F:\mathcal C\to\mathcal D$ between
 restriction categories satisfies $F(\bar f)=\overline{F(f)}$ for every
 morphism $f$. A \emph{restriction equivalence} consists of restriction
@@ -60,10 +56,9 @@ and a restriction idempotent $c$ on $Z$, the composition law is
 \]
 Thus inverse image is order-preserving (it preserves meets), and it
 preserves the greatest restriction idempotent when $f$ is total.
-A restriction idempotent $r$ on $Y$ \emph{receives} $f$ when $rf=f$
-\cite[Section 6]{Heller}.
-The \emph{range} $\ran(f)$ is the least restriction idempotent receiving $f$;
-we require the agreement law
+The \emph{range} $\ran(f)$ of $f:X\rightharpoonup Y$ is the least
+restriction idempotent $r$ on $Y$ for which $rf=f$
+\cite[Section~6]{Heller}. We require the agreement law
 \[
  gf=hf\quad\Longrightarrow\quad
  g\ran(f)=h\ran(f)
@@ -136,6 +131,8 @@ Binary \emph{restriction coproducts} are categorical coproducts with
 total injections $i_0:X\to X+Y$ and $i_1:Y\to X+Y$.
 For morphisms $f:X\rightharpoonup Z$ and $g:Y\rightharpoonup Z$,
 write $[f,g]:X+Y\rightharpoonup Z$ for their copairing.
+For $f:X\rightharpoonup X'$ and $g:Y\rightharpoonup Y'$, write
+$f+g=[i_0 f,i_1 g]:X+Y\rightharpoonup X'+Y'$.
 The \emph{codiagonal} is
 $\nabla_X=[1_X,1_X]:X+X\to X$.
 For restriction idempotents $a,b$ on $X$, their copairing is

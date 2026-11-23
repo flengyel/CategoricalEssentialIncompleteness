@@ -175,8 +175,7 @@ Fix the arithmetic signature and the variable object
 $V=(\omega,1_\omega)\in\mathcal B_{\PA}$, so that
 $G_{\N}V=\N$. Use the syntax of
 Section~\ref{sec:st-parameterized-syntax} and the proof-tree
-algebra of Lemma~\ref{lem:syntactic-derivation-initiality}. Let
-$S\hookrightarrow\Fm$ be the sentence object. Let $\Gamma$ be
+algebra of Lemma~\ref{lem:syntactic-derivation-initiality}. Write $j:S\hookrightarrow\Fm$ for the sentence inclusion. Let $\Gamma$ be
 a computably enumerable set of arithmetic sentences, choose a
 $\Sigma_1$ predicate $\operatorname{Ax}_\Gamma(z)$ enumerating
 their codes, and let $i_A:A=A_\Gamma\hookrightarrow S$
@@ -190,9 +189,8 @@ for the conclusion morphism and its pullback to sentences.
 The standard interpretation of $i_A$ is the inclusion of the
 codes of the sentences in $\Gamma$.
 
-Let $j:S\hookrightarrow\Fm$ be the sentence inclusion. For
-$s\in G_{\N}S$, let $\varphi_s$ be the finite sentence decoded
-from the formula code $G_{\N}(j)(s)$. Let $K\models\Gamma$ be a nonempty first-order
+For $s\in G_{\N}S$, let $\varphi_s$ be the sentence with formula code
+$G_{\N}(j)(s)$. Let $K\models\Gamma$ be a nonempty first-order
 structure for the arithmetic signature, with equality interpreted
 as identity. Define a subobject in $\mathbf{Set}$ by
 \[
@@ -212,8 +210,9 @@ comparison gives an injection of sets
  a_{\N}:G_{\N}\Adm\hookrightarrow
              G_{\N}\Fm\times\N\times G_{\N}\Tm.
 \]
-For a finite term $t$ and formula $\varphi$, their codes belong
-to $G_{\N}\Tm$ and $G_{\N}\Fm$, respectively.
+Write $\ulcorner t\urcorner\in G_{\N}\Tm$ and
+$\ulcorner\varphi\urcorner\in G_{\N}\Fm$ for the codes of a finite term
+$t$ and formula $\varphi$, respectively.
 
 \begin{lemma}[Semantic substitution]\label{lem:semantic-substitution}
 Let $\sigma:\N\to |K|$ be an assignment of values to variables.
@@ -269,9 +268,8 @@ the required equivalence. Suppose $y\ne x$. If $x$ is not free
 in $\psi$, substitution leaves $\psi$ unchanged, by
 Proposition~\ref{prop:st-substitution-realization}; dependence on free variables gives the equivalence. Otherwise admissibility
 requires that $y$ is not free in $t$ and that substitution into
-$\psi$ is admissible. For every $b\in|K|$, the free-variable
-assertion gives
-$\llbracket t\rrbracket^K_{\sigma[y\mapsto b]}=a$, and hence
+$\psi$ is admissible. For every $b\in|K|$, independence of the value of $t$ from $y$ gives
+$\llbracket t\rrbracket^K_{\sigma[y\mapsto b]}=a$. Since $x\ne y$,
 \[
  \sigma[y\mapsto b][x\mapsto a]
    =\sigma[x\mapsto a][y\mapsto b].
@@ -299,12 +297,8 @@ intersection.
 Call a finite formula valid in $K$ if it holds under every
 assignment $\N\to|K|$. We check validity for the seven logical
 axiom schemes of Appendix~\ref{app:first-order-derivations}.
-The first three are the classical propositional
-tautologies: the first retains its antecedent under a further
-implication, the second composes two implications with the same
-antecedent, and the third expresses contraposition. Their truth
-follows in each assignment from the two-valued clauses for
-negation and implication.
+The truth tables for negation and implication give validity of
+\eqref{eq:hilbert-one}--\eqref{eq:hilbert-three}.
 
 For universal instantiation, if $\forall x\,\varphi$ holds at
 $\sigma$, then $\varphi$ holds at
@@ -349,10 +343,6 @@ both hold in $K$. This proves the empty-intersection assertion.
 \end{proof}
 
 \subsection{Ultrapowers of the interpretation functor}
-
-We use \L o\'s's theorem~\cite[Theorem~3.1]{Keisler} to compare
-the ultrapower of $G_{\N}$ with the interpretation functor for
-an arithmetic ultrapower.
 
 Work in the set-theoretic metatheory with choice. Fix a
 nonempty set $I$ and a proper ultrafilter $\mathcal U$ on $I$.
@@ -399,14 +389,13 @@ the retained set is nonempty. This proves surjectivity of
 The two summands are disjoint, and equality within either summand
 is given by $\sim_{\mathcal U}$. Thus this
 map is bijective. Finally, every surjection of sets has a section,
-so its image under $\mathscr U$ is surjective. Finite-limit
-preservation preserves monomorphisms; applying $\mathscr U$ to
-the surjection--inclusion factorization of a function therefore
-preserves its regular image.
+so its image under $\mathscr U$ is surjective. Since $\mathscr U$ preserves finite limits, it also preserves
+monomorphisms. It therefore takes the image factorization of a function
+to the image factorization of its ultrapower.
 \end{proof}
 
 Let $M=\N^I/\mathcal U$ be the arithmetic ultrapower.
-\L o\'s's theorem gives $M\models\PA$.
+By \L o\'s's theorem~\cite[Theorem~3.1]{Keisler}, $M\models\PA$.
 
 \begin{lemma}[Comparison with the arithmetic ultrapower]
 \label{lem:ultrapower-comparison}
@@ -428,9 +417,7 @@ injective. If $a=[a_i]\in C(M)$, then
 $J=\{i:\N\models C(a_i)\}$ belongs to $\mathcal U$.
 Choose $c\in C(\N)$ from one coordinate in $J$, and replace
 $a_i$ by $c$ outside $J$. The resulting family belongs to
-$C(\N)^I$ and represents $a$, proving surjectivity. If
-$C(\N)$ is empty, \L o\'s's theorem gives $C(M)=\varnothing$,
-so the same conclusion holds.
+$C(\N)^I$ and represents $a$, proving surjectivity.
 
 For a morphism $\Gamma:C\to D$ in $\mathcal P_{\PA}$, write
 $\Gamma_\N:C(\N)\to D(\N)$ and $\Gamma_M:C(M)\to D(M)$ for
@@ -547,8 +534,6 @@ satisfies
   \delta_S(t)\in\im(v_{K,\mathcal U})
     \quad\Longleftrightarrow\quad K\models\varphi_t .
 \]
-For an arbitrary $s$, the formulas evaluated in $K$ are the
-coordinate sentences $\varphi_{s_i}$.
 
 Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
 in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.

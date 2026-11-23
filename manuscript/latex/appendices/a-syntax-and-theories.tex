@@ -52,29 +52,13 @@ $\wedge_2,\vee_2:\Two\times\Two\to\Two$ by
  \qquad
  \vee_2=[\mathbf{f},\mathbf{t},\mathbf{t},\mathbf{t}]\gamma^{-1}.
 \]
-Evaluating these copairings on the four injections in $\gamma$ gives
-\[
-\begin{array}{cc|cc}
- \mathbf{a}&\mathbf{b}&
- \wedge_2\langle\mathbf{a},\mathbf{b}\rangle&
- \vee_2\langle\mathbf{a},\mathbf{b}\rangle\\\hline
- \mathbf{f}&\mathbf{f}&\mathbf{f}&\mathbf{f}\\
- \mathbf{f}&\mathbf{t}&\mathbf{f}&\mathbf{t}\\
- \mathbf{t}&\mathbf{f}&\mathbf{f}&\mathbf{t}\\
- \mathbf{t}&\mathbf{t}&\mathbf{t}&\mathbf{t}.
-\end{array}
-\]
-Also $\neg_2\mathbf{f}=\mathbf{t}$ and
-$\neg_2\mathbf{t}=\mathbf{f}$.
-
 These morphisms make $\Two$ a Boolean algebra object in $\mathcal D$.
 Distributivity expresses each finite power $\Two^n$ as a
 coproduct of $2^n$ copies of $1$, indexed by the ordered choices of
 $\mathbf{f}$ or $\mathbf{t}$ in each coordinate. These
-coproduct injections are jointly epimorphic. On each summand the two
-sides of each Boolean algebra identity agree by the displayed table
-and the equations for $\neg_2$. Hence they agree as morphisms
-in $\mathcal D$.
+coproduct injections are jointly epimorphic. On each summand the
+copairings give the ordinary Boolean operations on the two truth values.
+Hence every Boolean algebra identity holds as an equality of morphisms.
 
 For $p:X\to\Two$, let $[p=\mathbf{t}]\hookrightarrow X$ and
 $[p=\mathbf{f}]\hookrightarrow X$ be the pullbacks along $p$ of
@@ -222,8 +206,8 @@ Parameterized list induction gives the identities
 Give $(W,W)$ the $K$-algebra defined by singleton lists at variables,
 ordered concatenation at function and relation symbols and equality,
 the identity at negation, concatenation at implication, and deletion
-at quantification. Its unique algebra morphism defines
-$\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$ by
+at quantification. The unique morphism from the initial $K$-algebra to this algebra
+defines $\FV_{\Tm}:\Tm\to W$ and $\FV_{\Fm}:\Fm\to W$ by
 \begin{align*}
  \FV_{\Tm}(\eta x)&=[x],&
  \FV_{\Tm}(f_k(s,\vec t))&=\FV_{\Tm}(t_1)+\!+\cdots+\!+\FV_{\Tm}(t_k),\\
@@ -301,8 +285,6 @@ component is $\forall y\,\varphi$ and the result component is
    \mathsf{if}\bigl(C(y,\varphi,x,t);
           \widehat\forall(y,z),\fail_{\Fm}\bigr)\right).
 \end{equation}
-For $y=x$, the second component is
-$\ok_{\Fm}(\forall y\,\varphi)$, independently of $z$.
 
 \begin{proposition}\label{prop:categorical-substitution}
 Parameterized initiality uniquely determines morphisms
@@ -431,10 +413,9 @@ part includes all axioms, and its other parts express closure under
 the inference rules. An inclusion of closed subobjects is
 an algebra morphism, by composing with the target monomorphism.
 
-The following proof equips the regular image of the derivation algebra
-with an algebra structure. This is an instance of lifting a factorization
-system to algebras for an endofunctor preserving its left class; see
-Wi\ss{}mann~\cite[Lemma 3.6]{Wissmann}.
+The image construction below is an instance of Wi\ss{}mann's lifting of a
+factorization system to algebras for an endofunctor preserving its left
+class~\cite[Lemma 3.6]{Wissmann}.
 
 \begin{theorem}\label{thm:least-theorem-subobject}
 With the rule data above, suppose
@@ -553,21 +534,10 @@ Regular images are stable under pullback, giving the second.
 Suppose these initial derivation algebras exist for every axiom
 subobject of $S$. A \emph{sentence theory} is a subobject
 $u:U\hookrightarrow S$ through which $c_{U,S}$ factors.
-Write $G(A)=s^*T_A=T_{A,S}$ in $\operatorname{Sub}(S)$.
-Axiom introduction gives $A\leq G(A)$. If $A\leq A'$, every formula
-subobject closed under the rules for $A'$ is closed under those for $A$.
-Thus $T_A\leq T_{A'}$ in $\operatorname{Sub}(F)$ and
-$G(A)\leq G(A')$ in $\operatorname{Sub}(S)$.
-
-Let $m_A:G(A)\hookrightarrow S$ denote the inclusion. By definition
-of pullback, $s m_A$ factors through $T_A\hookrightarrow F$. Hence
-$T_A$ contains the axioms from $G(A)$ and is closed under the logical
-rules, so $T_{G(A)}\leq T_A$. Pulling back along $s$ gives
-$G(G(A))\leq G(A)$. The reverse inequality is axiom introduction.
-Consequently $G(G(A))=G(A)$. A subobject $U$ is a sentence theory
-exactly when $G(U)\leq U$. If $A\leq U$ and $U$ is a sentence theory,
-then $G(A)\leq G(U)\leq U$. This proves that $G(A)$ is the least
-sentence theory containing $A$.
+Since $T_{U,S}$ is the image of $c_{U,S}$, this condition is
+$T_{U,S}\leq U$. Axiom introduction gives the reverse inclusion.
+Theorem~\ref{thm:first-order-reflection} therefore identifies $T_{A,S}$
+as the least sentence theory containing $A$.
 
 \begin{lemma}[Regular images and ranges]\label{lem:range-regular-image}
 Let $\mathcal S$ be a restriction category with ranges in which every
@@ -579,8 +549,8 @@ If $m$ has a partial inverse $r:Y\rightharpoonup I$ in $\mathcal S$,
 then $\ran(f)=mr=\bar r$.
 \end{lemma}
 \begin{proof}
-The restriction idempotent $mr$ receives $f$, since $mrf=mrme=f$.
-Let $a:Y\rightharpoonup Y$ be any restriction idempotent receiving $f$.
+The restriction idempotent $mr$ satisfies $mrf=mrme=f$.
+Let $a:Y\rightharpoonup Y$ be any restriction idempotent with $af=f$.
 Choose a splitting $a=js$, where $j:J\to Y$ is total,
 $s:Y\rightharpoonup J$, and $sj=1_J$.
 Then $f=j(sf)$, and $sf:X\to J$ is total, since

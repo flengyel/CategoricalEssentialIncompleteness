@@ -3,12 +3,11 @@
 We realize Di Paola and Heller's objective to give an algebraic account of
 generalized incompleteness theorems in recursion categories
 \cite[pp.~594--596, 629]{DPH}. Given two disjoint domains, we construct an
-internal first-order theory. Suppose it is consistent. The domains are
-inseparable if and only if the theory is essentially incomplete, meaning
-that every consistent closed extension in the same language is incomplete.
-We also construct a
-Turing category from a theory and prove that passage to the constant
-family in this category preserves and reflects essential incompleteness.
+internal first-order theory. If it is consistent, the domains are
+inseparable if and only if the theory is essentially incomplete:
+every consistent deductively closed extension in the same language is
+incomplete. From a theory we also construct a Turing category in which its
+constant family is essentially incomplete exactly when the theory is.
 
 Let $\mathscr R$ be a recursion category. Splitting its restriction
 idempotents makes the domains of partial morphisms into objects. Write
@@ -21,10 +20,11 @@ represents the restriction idempotent $mr:X\rightharpoonup X$.
 Conversely, splitting a restriction idempotent on $X$ gives its
 representing subobject. Two disjoint subobjects of $X$ are
 \emph{inseparable} if no pair of complementary subobjects contains
-them respectively. For a sentence theory the refutation subobject is
-the inverse image of the theorem subobject under negation. The theory
-is consistent when the two subobjects are disjoint and complete when
-their join is the whole sentence object.
+them respectively. If $t:T\hookrightarrow S$ is the subobject of
+derivable sentences and $\nu:S\to S$ is negation, the inverse image
+$\nu^*T$ is the subobject of refutable sentences. The theory is consistent when
+$T\wedge\nu^*T=\bot$ and complete when $T\vee\nu^*T=\top$
+in $\operatorname{Sub}(S)$.
 
 Fix a variable object $V$ with decidable equality. Given disjoint
 subobjects $i_a:a\hookrightarrow X$ and $i_b:b\hookrightarrow X$,
@@ -45,8 +45,7 @@ Appendix~\ref{app:syntax-theories}. The image of the conclusion morphism
 on derivations of sentences from $A_{a,b}$ is the generated theory $T_{a,b}$. For
 consistent $T_{a,b}$ this construction is left adjoint to the functor
 taking a consistent theory to its theorem and refutation subobjects
-(Theorem~\ref{thm:free-first-order-adjunction}). The atomic sentence
-constructor takes $a$ into the theorems and $b$ into the refutations.
+(Theorem~\ref{thm:free-first-order-adjunction}).
 A separator of the pair supplies a Boolean valuation
 whose true sentences form a consistent complete extension.
 Conversely, the inverse images under $\theta_X$ of the theorem and
@@ -77,8 +76,7 @@ Section~\ref{sec:lifting}. Let $P,N$ be disjoint domains on $FU$ with
 $F(a_0)\le P$ and $F(a_1)\le N$. Suppose a partial morphism
 $FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
 respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
-gives a total morphism $g:U\to U$ such that the inverse images of
-$P$ and $N$ under $Fg$ are both zero. When $\mathcal A$ is split,
+gives a total morphism $g:U\to U$ with $(Fg)^*P=(Fg)^*N=0$. When $\mathcal A$ is split,
 extend $F$ to $\widehat F:\Split(\mathscr R)\to\mathcal A$, choosing the
 identity splitting of $F(1_U)$ so that $\widehat F(U,1_U)=FU$.
 Let $t:S\rightharpoonup S$ be the theorem domain on a sentence object $S$ in
@@ -100,7 +98,7 @@ how to relate the category for Peano arithmetic ($\PA$) to the
 recursion category of partial recursive functions
 \cite[pp.~114--115]{Montagna}. Section~\ref{sec:arithmetic} gives a computable bijection between
 numerical derivations and the standard interpretations of syntactic
-derivations. It preserves their conclusions. The completion of the syntactic category
+derivations, preserving the conclusion of each derivation. The completion of the syntactic category
 $S_{\PA}$ represents computably enumerable (c.e.) extensions of $\PA$
 by internal theories. Let $M$ be the standard arithmetic model $\N$ or
 an ultrapower of that model. Interpreting program graphs in $M$ gives a
@@ -108,8 +106,8 @@ range functor $F_M:S_{\PA}\to\Pfn$, where $\Pfn$ is the category of
 sets and partial functions. Its extension
 $\widehat F_M:\Split(S_{\PA})\to\Pfn$ interprets the sentence theory.
 For each consistent c.e.~extension of PA, choose a model $K$ of its axioms.
-Soundness in $K$ and the comparison theorem give incompleteness of the
-internal theory and of its interpretation under $\widehat F_M$
+Soundness in $K$ and the comparison theorem show that both the
+internal theory and its interpretation under $\widehat F_M$ are incomplete
 (Theorem~\ref{thm:arithmetic-internal-comparison}).
 For each such extension, the sets of standard codes of its provable
 sentences and of its refutable sentences are recursively inseparable
@@ -125,15 +123,16 @@ The second realization uses a sequence $a:\N\to[0,1]$ constructed by
 Miller \cite{Miller2004}.
 Bauer and Hanson used it to construct a parameterized realizability
 topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
-A partial numerical function $f$ is a morphism of this category exactly
-when one oracle program, run with any binary representation of $a$, has
-domain $\operatorname{dom}f$ and value $f(n)$ at each $n$ in this domain.
+In the recursion category $\mathcal E_a$ of Section~\ref{sec:miller},
+a partial function $f:\N\rightharpoonup\N$ is a morphism precisely when
+one oracle program, run with any binary representation of $a$, halts at
+$n$ exactly when $f(n)$ is defined and then returns $f(n)$.
 Each representation computes a separator of
 $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
 separator from every representation
-(Corollary~\ref{cor:miller-cuts-inseparable}). In the completion we
-extend the axioms for real closed ordered fields by all strict rational
-bounds on constants $c_n$ satisfied by $a(n)$. Every consistent
+(Corollary~\ref{cor:miller-cuts-inseparable}). In $\Split(\mathcal E_a)$
+we extend the theory of real closed ordered fields by constants $c_n$
+and all strict rational bounds on $c_n$ that hold at $a(n)$. Every consistent
 extension in this language is incomplete if one oracle program
 semidecides its axioms from every binary representation of $a$
 (Theorem~\ref{thm:miller-incompleteness}). The constant family of each
@@ -143,10 +142,11 @@ consistent internal extension is essentially incomplete in its associated catego
 The third realization uses cosheaves on a three-point space. The
 recursion category constructed from them is not equivalent as a
 restriction category to the category of partial recursive functions.
-The total category of its completion contains an initial algebra of
-propositional formulas and an initial algebra of derivations from the signed
-atomic axioms and the logical schemes by modus ponens. At either endpoint
-the propositional theory is consistent and every
+In the total category of its Karoubi envelope we construct an initial
+algebra of propositional formulas and an initial algebra of derivations
+from the signed atomic axioms and the logical schemes by modus ponens.
+Evaluating at either endpoint of the diagram $1\leftarrow0\to2$
+gives a consistent propositional theory. Every
 consistent extension in the same language with a c.e.~axiom set is
 incomplete (Corollary~\ref{cor:cosheaf-essential-incompleteness}).
 A conservative first-order extension of the internal propositional theory

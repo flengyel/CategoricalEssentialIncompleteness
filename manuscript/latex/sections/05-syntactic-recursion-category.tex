@@ -1,14 +1,15 @@
 \section{The syntactic recursion category}\label{sec:syntactic}
 
-We present the syntactic recursion categories of Montagna and
-Di Paola--Montagna~\cite{Montagna,DPM} using formal product and
-coproduct objects.
-
 Let $T$ be a consistent extension of $\PA$ in the language of arithmetic.
-Fix in the metatheory the algebra of closed terms
-$\mathsf O$ for a signature with one constant $\omega$ and two
-binary operations, written $\times$ and $+$. Equality in $\mathsf O$
-is syntactic equality of terms. Assign a set $|X|$ to each
+Its nonlogical symbols are the constants $0,1$, the binary operations
+$+,\cdot$, and the binary relation $<$. Equality is logical. The numeral for $n\in\N$ is the closed term
+given by $\bar 0=0$ and $\overline{n+1}=(\bar n+1)$.
+
+In the syntactic recursion category $S_T$ of Montagna and
+Di Paola--Montagna~\cite{Montagna,DPM}, we use formal product and
+coproduct objects. Let $\mathsf O$ be the set of terms generated
+by the constant $\omega$ and the binary operations $\times$ and $+$,
+with syntactic equality. Assign a set $|X|$ to each
 $X\in\mathsf O$ by
 \[
  |\omega|=\N,\qquad
@@ -35,9 +36,9 @@ remainder by $2$ are primitive recursive; PA proves their defining
 and inverse equations.
 
 Use a deterministic form of Kleene's computation predicate as in
-Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,s)$ be the
-primitive-recursive bounded evaluator for the partial-recursive programs:
-its value at stage $s$ is $0$ for failure and $y+1$ for output $y$.
+Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,s)$ be the primitive-recursive bounded evaluator for program
+$e$ on input $x$. At stage $s$ it returns $0$ if no output has been
+found and $y+1$ for output $y$.
 Write $[a,x]$ for the pairing of the underlying program coding, with
 primitive-recursive projections whose inverse equations are provable
 in $\PA$. A halting trace has code $t=[s,y]$, where $s$ is its
@@ -214,7 +215,7 @@ composition equation and PA-provable functionality of $G_e$ give
 A witness $x$ to $R_e(y)$ can be used in the equality of
 the composite graphs, and functionality identifies the intermediate
 output with $y$. Hence $g[R_e]_T=h[R_e]_T$ in $S_T$.
-The index $j_{R_e}$ is independent of the theory, so its class
+The search program $j_{R_e}$ depends only on $e$, so its class
 represents the range over every extension of $T$.
 
 For $[e]_T:W\rightharpoonup X$ and $[f]_T:W\rightharpoonup Y$,

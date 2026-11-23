@@ -19,16 +19,15 @@ The objects of $\mathcal C_K$ are generated from $\N$ by binary
 products and disjoint unions. For each such object $X$, let
 $\gamma_X:X\to\N$ be the coding bijection obtained from the identity
 on $\N$, the pairing function for products, and the even and odd
-tags for disjoint unions. Each coding has a recursive inverse. A morphism $f:X\rightharpoonup Y$ is a partial function whose
-domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
-recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
-on every element of $D_f$ and agrees with $f$ there. Equality is equality
-of partial-function graphs. The total morphisms of $\mathcal C_K$ are exactly
+tags for disjoint unions. A morphism $f:X\rightharpoonup Y$ with domain
+$D_f$ is a partial function such that $\gamma_X(D_f)$ is c.e.\ relative
+to $K$ and $\gamma_Y f\gamma_X^{-1}$ has an ordinary partial recursive
+extension. Write $f_0:X\rightharpoonup Y$ for such an extension in the
+chosen codings. Two morphisms are equal if their graphs are equal. The total morphisms of $\mathcal C_K$ are exactly
 the total functions $f:X\to Y$ for which
 $\gamma_Y f\gamma_X^{-1}:\N\to\N$ is recursive.
 
-Let $F:\mathcal C_K\to\Pfn$ send each numerical carrier to the same
-set and each morphism to the same partial function.
+Let $F:\mathcal C_K\to\Pfn$ be the inclusion.
 
 On $\N$, the morphisms are precisely the functions
 \[
@@ -163,11 +162,10 @@ simulation halts. Then
  n\in K\quad\Longleftrightarrow\quad
  \langle h(n),a_*\rangle\in A.
 \]
-For $B\subseteq\N$, write $1_B:\N\rightharpoonup\N$ for the
-partial identity on $B$. The source morphism
+For a subset $B$ of a set $Y$, write $1_B:Y\rightharpoonup Y$ for
+the partial identity on $B$. The source morphism
 $p_A=\nabla_{\N}(1_{A^c}+1_A):\N+\N\rightharpoonup\N$
-is sent to the partial injection whose unique section
-$s_A:\N\to\N+\N$ in $\Pfn$ is
+is a partial injection. Its unique section $s_A:\N\to\N+\N$ in $\Pfn$ is
 \[
  s_A(n)=
  \begin{cases}

@@ -10,8 +10,8 @@ $f:X\rightharpoonup Y$ in $S_{\PA}$.
 Use the syntax realized in $\mathcal B$ by
 Theorem~\ref{thm:syntactic-generated-theory}. In particular,
 $S,\Fm\in\mathcal B$, and $j:S\hookrightarrow\Fm$ is the
-sentence inclusion. All products, coproducts, and pullbacks in
-the family construction below are taken in $\mathcal B$.
+sentence inclusion. We take products, coproducts and pullbacks in
+$\mathcal B$.
 The parameter object is $E=I(\omega)=(\omega,1_\omega)$.
 The interpretation $G_{\N}:\mathcal B\to\mathbf{Set}$ of
 Section~\ref{sec:models} satisfies $G_{\N}E=\N$.
@@ -30,10 +30,10 @@ $\N$. Let $\Gamma_e$ be the set of sentences whose codes
 satisfy $\operatorname{Ax}(e,z)$ in $\N$.
 For each $e\in\N$, use the formula $\operatorname{Ax}(\bar e,z)$,
 with $\bar e$ the numeral for $e$, to present the axiom subobject
-$A_{\Gamma_e}\hookrightarrow S$. The notation
-$\operatorname{Prov}_{\Gamma_e}$ below refers to this presentation.
-Two enumerations with the same standard axiom codes need not define
-provably equivalent predicates in $\PA$.
+$A_{\Gamma_e}\hookrightarrow S$ and define
+$\operatorname{Prov}_{\Gamma_e}$ from this presentation. Equality of two
+axiom sets in $\N$ need not imply PA-provable equivalence of their
+axiom predicates.
 
 Let $J=J_{\PA}:\mathcal P_{\PA}\to\mathcal B$ be the
 equivalence of Lemma~\ref{lem:syntactic-total-category}.
@@ -238,9 +238,6 @@ of the pullback morphisms gives the naturality equation
  (H_e\times H_{\ne e})(\Xi_e f)\,\zeta_{(Q,q)}
    =\zeta_{(Q',q')}\,\Xi_e(H_Ef).
 \]
-Both sides are morphisms from $\Xi_eH_E(Q,q)$ to
-$(H_e\times H_{\ne e})\Xi_e(Q',q')$ in the product of
-the two slice categories.
 
 The equivalence $\Xi_e$ and the natural isomorphism $\zeta$
 induce an equivalence
@@ -257,15 +254,19 @@ components of
  \Xi_e(\delta)\,\zeta_{(Q,q)}^{-1}:
  (H_e\times H_{\ne e})\Xi_e(Q,q)\longrightarrow\Xi_e(Q,q).
 \]
-For an algebra morphism
-$a:((Q,q),\delta)\to((Q',q'),\delta')$ in
-$\operatorname{Alg}(H_E)$, let
-$f:(Q,q)\to(Q',q')$ be its underlying slice morphism.
-Then $\Lambda_e(a)$ has underlying slice morphisms
-$(f_e,f_{\ne e})$. Naturality of $\zeta$ identifies the
-algebra-morphism equations in the two categories. Full faithfulness
-of $\Xi_e$ therefore gives full faithfulness of $\Lambda_e$.
-For essential surjectivity let $K=H_e\times H_{\ne e}$ and take a pair
+On algebra morphisms $\Lambda_e$ acts by $\Xi_e$. For any slice
+morphism $f:(Q,q)\to(Q',q')$, put $K=H_e\times H_{\ne e}$.
+Naturality of $\zeta$ and faithfulness of $\Xi_e$ give
+\[
+ f\delta=\delta' H_E(f)
+ \quad\Longleftrightarrow\quad
+ (\Xi_e f)(\Xi_e\delta)\zeta_{(Q,q)}^{-1}
+   =(\Xi_e\delta')\zeta_{(Q',q')}^{-1} K(\Xi_e f).
+\]
+By fullness of $\Xi_e$, every pair of
+algebra morphisms between the two images lifts uniquely along
+$\Lambda_e$.
+For essential surjectivity take a pair
 of algebras with structure morphism $b:KD\to D$ in the product
 of the slices. Put $Q=\Psi_e D$, and let
 $\epsilon_D:\Xi_e Q\xrightarrow{\cong}D$ be the counit.
@@ -327,9 +328,9 @@ Define $\operatorname{Prov}(e,z)
 \equiv\exists d\,G_{a_c}(d,\langle e,z\rangle)$.
 The product isomorphism $v$ makes this a $\Sigma_1$
 predicate for $m:\mathcal T\hookrightarrow E\times S$.
-For each $e\in\N$,
-Proposition~\ref{prop:arithmetic-theory-fibers} identifies the
-represented subobjects of $S$, giving
+For each $e\in\N$, the fiber at $\epsilon_e$ is the image of
+$c_{\Gamma_e}$ by Proposition~\ref{prop:arithmetic-theory-fibers}. Equality
+of these subobjects means
 \[
  \PA\vdash\forall z\,
    \bigl(\operatorname{Prov}(\bar e,z)

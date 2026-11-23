@@ -2,8 +2,8 @@
 
 Fix a consistent theory $T\supseteq\PA$.
 Let $\mathcal M_T$ be the set of all structures for the language of
-arithmetic with underlying set $\N$ that satisfy $T$. Arithmetic
-operations and numeral interpretations are those of each model. Completeness and
+arithmetic with underlying set $\N$ that satisfy $T$. Each structure interprets the arithmetic symbols on this carrier.
+Completeness and
 the downward L\"owenheim--Skolem theorem imply
 $\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
 countably infinite model can be transported to the carrier $\N$.
@@ -48,11 +48,12 @@ or are defined and equal. If these equations hold for every $M,x$,
 then $f_M=g_M$ for every $M$, whence $f=g$.
 This proves local connectedness.
 
-A partial monomorphism has injective coordinate functions: test its
-defining property on objects with a singleton at one coordinate
-and the empty set at every other coordinate.
-The partial inverses of these injections form a section, proving weak
-choice. Inverse images commute with unions coordinatewise. Finally,
+Let $p:A\rightharpoonup B$ be a partial monomorphism. If
+$p_M(x)=p_M(x')$ is defined, take the family with a singleton at $M$
+and the empty set elsewhere. The two total maps from this family to $A$
+selecting $x,x'$ have equal composites with $p$. Their composites with
+$\bar p$ are therefore equal, so $x=x'$. The inverses of the coordinate
+injections, defined on their images, form a section of $p$. Inverse images commute with unions coordinatewise. Finally,
 $\mathcal M_T$ is nonempty and each $X_M$ is nonempty, so the
 identity of $F_T(X)$ differs from zero.
 \end{proof}
@@ -153,8 +154,8 @@ Thus $E_T$ maps the restriction idempotents on $\omega$ in $S_T$
 to $\mathcal P(\N)$. It preserves order, finite meets, top and
 bottom. For a consistent c.e.\ extension $T'\supseteq T$, every
 $T$-proof is also a proof from $T'$, so
-$E_T(c)\subseteq E_{T'}(Q_{T,T'}c)$. Choose a constant-function index
-$\operatorname{const}(n)\in\N$ for which
+$E_T(c)\subseteq E_{T'}(Q_{T,T'}c)$. For $n\in\N$ choose a constant-function index
+$\operatorname{const}(n)$ for which
 $\PA\vdash\forall x\forall y\,
 (G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
 $\kappa_n=[\operatorname{const}(n)]_T:\omega\to\omega$. Then
@@ -174,9 +175,10 @@ $M\models C(\bar n)$ for every $M\in\mathcal M_T$.
 
 \subsection{The theory of the standard model}
 
-For $T=\operatorname{Th}(\N)$, use the same numerical objects in
-$S_T$ and $\mathrm{Rec}$. Standard interpretation sends $[e]_T$ to
-the partial recursive function $\varphi_e$ of the indicated type.
+Put $T=\operatorname{Th}(\N)$. Both $S_T$ and $\mathrm{Rec}$ have
+the terms in $\mathsf O$ as objects. On a morphism $[e]_T:X\rightharpoonup Y$,
+standard interpretation gives $\varphi_e:|X|\rightharpoonup|Y|$ as in
+Section~\ref{subsec:numerical-realization}.
 For each pair of objects $X,Y$ it gives a bijection
 \[
  S_T(X,Y)\longrightarrow\mathrm{Rec}(X,Y),\qquad
@@ -189,7 +191,6 @@ represent the same class because their graph equality in
 Standard interpretation preserves identities and composition.
 These bijections therefore give an isomorphism of categories with
 the indicated common objects.
-The functor $F_T$ still exists, and $S_T$ has inseparable pairs,
-although $T$ is complete.
-Thus inseparability in $S_T$ alone does not imply incompleteness of $T$.
+By Corollary~\ref{cor:pair}, $S_T$ has an inseparable pair although
+$T=\operatorname{Th}(\N)$ is complete.
 

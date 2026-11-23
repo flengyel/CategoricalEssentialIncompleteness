@@ -102,12 +102,14 @@ $v:QF\Rightarrow1_{\mathcal B_{\mathrm{rec}}}$ are natural
 isomorphisms, proving the first equivalence.
 
 The singleton $(0,\{()\})$ is terminal in $\mathcal C$.
-Products are Cartesian products of carriers, represented by
-concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to D$ are parallel morphisms, their
+For objects of dimensions $m,n$, the product has the Cartesian product
+of their carriers, represented by concatenated tuples in $\N^{m+n}$.
+Pairing concatenates the two output tuples. If $f,g:C\to D$ are
+parallel morphisms, their
 equalizer is the object of the same dimension as $C$ with carrier
 $\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
 enumerate $|C|$, run the two computations in parallel, and compare
-their outputs. The pairing concatenates the two output tuples. A morphism $h:Z\to C$
+their outputs. A morphism $h:Z\to C$
 with $fh=gh$ factors through the equalizer by the same program for $h$,
 with its values regarded as elements of the equalizer carrier.
 
@@ -119,8 +121,9 @@ with carrier
         \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
 \]
 with the two displayed encoding functions as injections.
-For copairing, an even input $2\kappa_m(c)$ uses the first morphism
-at $c$, and an odd input $2\kappa_n(d)+1$ uses the second at $d$. These operations give the coproduct universal property.
+For $f:C\to Z$ and $g:D\to Z$, parity determines the unique
+copairing: $[f,g](2\kappa_m(c))=f(c)$ and
+$[f,g](2\kappa_n(d)+1)=g(d)$.
 For $f:X\to C+D$ in $\mathcal C$, let $X_C,X_D$ be the
 objects of the same dimension as $X$ whose carriers are the
 inverse images in $|X|$ of the even and odd summands. Both are c.e.
@@ -379,10 +382,10 @@ $h_L:P\times W\to Z$ with
  zh_L=\pi_P.
  \end{aligned}
 \]
-Induction on list length proves halting on $|P|\times|W|$ and
-uniqueness. Equivalently,
-$h_L\iota^L_P=\beta L_P(h_L)$ as morphisms from
-$L_P(P\times W,\pi_P)$ to $(Z,z)$ in the slice.
+The two recursion equations give $h_L\iota^L_P=\beta L_P(h_L)$
+in the slice. Induction on list length proves that the computation
+halts on $|P|\times|W|$ and that every algebra morphism agrees with
+$h_L$.
 
 
 The free-variable and substitution algorithms in
@@ -589,6 +592,9 @@ $\nu=Q(\nu_{\mathrm{num}}):S_{\mathrm{rec}}\to S_{\mathrm{rec}}$
 and $\theta=Q(\theta_{\mathrm{num}}):E\to S_{\mathrm{rec}}$
 in $\mathscr S_{\mathrm{rec}}$.
 Because the syntax codes coincide, their underlying functions are
-the standard denotations of the negation and numeral-substitution
-morphisms of Lemma~\ref{lem:arithmetic-diagonal-representation}.
+$G_{\N}(\nu^{\mathrm{syn}})$ and $G_{\N}(\theta^{\mathrm{syn}})$,
+where $\nu^{\mathrm{syn}}:S^{\mathrm{syn}}\to S^{\mathrm{syn}}$ is negation and
+$\theta^{\mathrm{syn}}:\omega\to S^{\mathrm{syn}}$ substitutes a numeral
+in the fixed formula $\alpha(x)$ as in
+Lemma~\ref{lem:arithmetic-diagonal-representation}.
 

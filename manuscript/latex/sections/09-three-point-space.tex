@@ -2,9 +2,9 @@
 
 We construct a recursion category $\mathscr R_X$ from set-valued
 cosheaves in the sense of Curry~\cite[Definition~2.6]{CurryCosheaves}
-on a three-point space $X$. We construct an internal propositional theory
-in $\operatorname{Kar}(\mathscr R_X)$ and evaluate it at the two endpoints
-of $J=(1\leftarrow 0\to 2)$. Each endpoint theory is consistent.
+on a three-point space $X$. A cosheaf on $X$ is determined up to isomorphism
+by a diagram of shape $J=(1\leftarrow 0\to 2)$. Evaluating an internal propositional theory
+of $\operatorname{Kar}(\mathscr R_X)$ at either endpoint gives a consistent theory.
 The indices of its provable atoms and those of its refutable atoms
 contain, respectively, the two members of a recursively inseparable pair.
 In that endpoint language, every consistent extension with a computably
@@ -88,8 +88,6 @@ $r_i^V=V(0\to i)$:
  r_2^V:V_0\to V_2,\qquad r_2^V(k,z,a,b)=(k,b).
  \end{gathered}
 \end{equation}
-We regard $V$ also as an object of $\mathcal A$, whose objects
-are those of $\mathcal E$.
 For $A=(m,A_0)$ in $\mathcal C_{\mathrm{rec}}$, put
 $m(A)=m$. Thus $|A|\subseteq\N^{m(A)}$,
 $m(V_0)=4$, and $m(V_1)=m(V_2)=2$.
@@ -105,11 +103,10 @@ are recursive. For an object $A$ of $\mathcal C_{\mathrm{rec}}$, put
  A^\#=\{\operatorname{code}_{m(A)}(a_1,\ldots,a_n):
                  n\ge1,\ a_1,\ldots,a_n\in A\}\subseteq W_{m(A)}.
 \]
-This is a c.e.\ numerical carrier. Let $V^\#$ have components
-$(V^\#)_j=(V_j)^\#$.
-Its map $(V^\#)(0\to i):(V_0)^\#\to(V_i)^\#$ decodes a sequence,
-applies $r_i^V$ to each entry, and encodes the resulting sequence,
-for $i=1,2$.
+This is a c.e.\ numerical carrier. For each $Y\in\mathcal E$, let
+$(Y^\#)_j=(Y_j)^\#$. Its morphism
+$(Y^\#)(0\to i):(Y_0)^\#\to(Y_i)^\#$ applies $r_i^Y$ to each
+entry of a word, for $i=1,2$.
 Choose isomorphisms in $\mathcal E$
 $V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
 Together with their inverses, these form a \emph{frame} at $V$
@@ -400,9 +397,7 @@ $[\theta|_A,\nu\theta|_B]:A+B\to S$ inserting the positive and negative
 atomic axioms is monic: each component is
 injective, because the constructors are
 injective and the atom and negation constructors have disjoint images.
-It therefore presents the axiom subobject used in
-Appendix~\ref{app:propositional-theories}, with positive and negative
-labels retained. Put
+Its image is the subobject of signed axioms. Put
 \[
  \begin{gathered}
  \mathrm{Ax}=S^2+S^3+S^2+A+B,\\
@@ -423,7 +418,7 @@ For $q:Q\to S$ in $\mathcal E/S$, let $M(Q,q)$ be the pullback
  S\times S\arrow[r,"\mu"'] & S\times S.
 \end{tikzcd}
 \]
-Its component members $(p_1,p_2,\alpha,\beta)$ satisfy
+An element $(p_1,p_2,\alpha,\beta)$ of $M(Q,q)_j$ satisfies
 $q_j(p_1)=\alpha$ and $q_j(p_2)=\alpha\Rightarrow_j\beta$.
 The conclusion morphism is
 $\kappa_q=\pi_2w_q:M(Q,q)\to S$. Define
@@ -775,8 +770,8 @@ For example, the first two propositional schemes give
 \end{aligned}
 \]
 Two applications of modus ponens yield $H\Rightarrow H$.
-Taking $H\Rightarrow K$ and $p_*$ in turn as instances of the metavariable in
-the theorem $H\Rightarrow H$ gives the second formula and $\top$. The first
+Substituting $H\Rightarrow K$ and $p_*$ for $H$ gives the second
+formula and $\top$, respectively. The first
 propositional scheme and modus ponens applied to $H\Rightarrow H$ give
 $\top\Rightarrow(H\Rightarrow H)$.
 Leastness of the generated formula theory proves
