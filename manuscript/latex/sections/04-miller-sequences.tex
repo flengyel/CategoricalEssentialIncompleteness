@@ -546,8 +546,10 @@ recursive, and each strict rational inequality can be recognized from
 every binary representation of $a$ with the same membership outcome.
 
 \begin{theorem}\label{thm:miller-incompleteness}
-Let $a$ be a Miller sequence with property~\eqref{eq:miller-property},
-and let $T_a$ be the theory~\eqref{eq:miller-theory}.
+Let $a$ be a Miller sequence with property~\eqref{eq:miller-property}.
+In the language of ordered fields with constants $c_n$ for $n\in\N$,
+let $T_a$ be the deductive closure of the axioms for real closed
+ordered fields together with the rational bounds in~\eqref{eq:miller-theory}.
 For every consistent extension of $T_a$ in the same language with
 an $\mathcal E_a$-semidecidable axiom set, the partial identities on its
 theorem and refutation sets are inseparable in
@@ -587,7 +589,8 @@ Let $T\supseteq T_a$ be a consistent extension with
 $\mathcal E_a$-semidecidable axioms. Every member of $\Gamma_a$ is derivable in $T$. Replacing the uses of those
 axioms in a finite derivation gives $t_{T_a}\le t_T$. For $n\in L_a$, the
 sentence $c_n<1/2$ belongs to $\Gamma_a$. For $n\in R_a$, the
-axiom $1/2<c_n$ and the ordered-field axioms prove $\neg(c_n<1/2)$.
+axiom $1/2<c_n$ and asymmetry of the strict order give
+$\neg(c_n<1/2)$.
 Thus
 \[
  1_{L_a}\le\theta^*t_{T_a}\le\theta^*t_T,\qquad

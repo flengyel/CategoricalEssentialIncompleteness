@@ -1,9 +1,10 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 22 November 2026
 
-The current manuscript is v75. Read AGENTS.md, MANUSCRIPT_CURRENT.json,
-FORMALIZATION_STATUS_V75.md and docs/reviews/V75_MATHEMATICAL_EXPOSITION.md.
-The review identifies the v75 comparisons to check on WSL2.
+The current manuscript is v76. Read AGENTS.md, MANUSCRIPT_CURRENT.json,
+FORMALIZATION_STATUS_V76.md and docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md.
+The v75 review in docs/reviews/V75_MATHEMATICAL_EXPOSITION.md identifies
+the comparisons of the postfix parser and Appendix C to check on WSL2.
 Continue also with docs/CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md.
 The v74 proof tasks specify the mathematical claims and the verification required.
 The statement-by-statement audit of v73 is in docs/reviews/V73_MANUSCRIPT_AUDIT.md.

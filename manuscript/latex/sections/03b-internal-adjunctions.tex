@@ -55,12 +55,13 @@ $\Gamma(a)$ to $T$ in the theory order, naturally in both objects.
 \end{proof}
 
 A first-order presentation $P$ consists of the named-variable
-syntax of Definition~\ref{def:categorical-syntax} and the logical
-rule data of Appendix~\ref{app:first-order-derivations}. Its
-nonlogical axioms are specified separately. Write
-$\Tm_P,\Phi_P,S_P,j_P,\nu_P$ for its term object, formula object,
-sentence object, sentence inclusion, and sentence negation, and
-$\operatorname{Gen}_P$ for its generation operator.
+syntax of Definition~\ref{def:categorical-syntax}, the logical rules of
+Appendix~\ref{app:first-order-derivations}, and a choice of initial
+derivation algebra for each subobject $A\hookrightarrow S_P$ of its
+sentence object. Choosing $A$ specifies the nonlogical axioms of a
+theory in $P$. Write $\Tm_P,\Phi_P,S_P,j_P,\nu_P$ for the term
+object, formula object, sentence object, sentence inclusion, and
+sentence negation. Write $\operatorname{Gen}_P$ for generation.
 
 Fix a common variable object $V$ for two such presentations $P,Q$.
 A logical translation $\sigma:P\to Q$ consists of total morphisms
@@ -69,8 +70,28 @@ A logical translation $\sigma:P\to Q$ consists of total morphisms
  \sigma_{\Phi}:\Phi_P\to\Phi_Q,\qquad
  \sigma_S:S_P\to S_Q
 \]
-fixing the variables and preserving equality, the logical
-constructors, and admissible substitution. For $n\in\{0,1,2\}$, write $R_n^P$ for the object of logical
+subject to the following conditions. The term and formula morphisms
+fix the variables and preserve equality and the logical constructors.
+The sentence morphism must satisfy $j_Q\sigma_S=\sigma_\Phi j_P$.
+Since $j_Q$ is monic and formula negation restricts to sentence
+negation in each presentation, $\sigma_S\nu_P=\nu_Q\sigma_S$.
+
+For substitution, put $E_P=V\times\Tm_P$, $E_Q=V\times\Tm_Q$ and
+$e=1_V\times\sigma_{\Tm}:E_P\to E_Q$. Write
+$a_{T,P}:\Tm_P\times E_P\to\Tm_P$ for term substitution and
+$i_P:\Adm_P\hookrightarrow\Phi_P\times E_P$,
+$a_{F,P}:\Adm_P\to\Phi_P$ for the admissibility inclusion and
+formula substitution. Use the corresponding notation for $Q$.
+We require $\sigma_{\Tm}a_{T,P}=a_{T,Q}(\sigma_{\Tm}\times e)$
+and a morphism $s:\Adm_P\to\Adm_Q$ satisfying
+\[
+ i_Q s=(\sigma_\Phi\times e)i_P,\qquad
+ a_{F,Q}s=\sigma_\Phi a_{F,P}.
+\]
+Thus each admissible substitution in $P$ translates to an admissible
+substitution in $Q$ with the indicated value.
+
+For $n\in\{0,1,2\}$, write $R_n^P$ for the object of logical
 rule instances with $n$ premises, with premise and conclusion morphisms
 \[
  p_n^P:R_n^P\to\Phi_P^n,\qquad q_n^P:R_n^P\to\Phi_P,
@@ -86,13 +107,7 @@ For $n=0$, $\rho_0$ sends instances of the seven logical axiom
 schemes to logical axiom instances. For generalization and modus ponens
 one may take $\rho_1=1_V\times\sigma_\Phi$ and
 $\rho_2=\sigma_\Phi\times\sigma_\Phi$, respectively. Only existence
-of the rule morphisms is required. In particular, a translation
-preserves the side conditions on substitution and quantification,
-and satisfies
-\[
- \sigma_{\Phi}j_P=j_Q\sigma_S,\qquad
- \sigma_S\nu_P=\nu_Q\sigma_S.
-\]
+of the rule morphisms is required.
 Translations are composed componentwise. A nonlogical predicate
 may be interpreted by a formula. Put
 $\operatorname{Th}_P=\operatorname{Th}_{\mathcal D}(S_P)$.
@@ -337,7 +352,10 @@ inverse in $\mathscr S$. Fix a decidable variable object $V$. For every
 $X\in\mathcal D$, assume that $P_X$ has the syntax and variable-list
 algebras of Definition~\ref{def:categorical-syntax}, initial in every
 parameter slice, and an initial derivation algebra for each axiom
-subobject. Then
+subobject. In $\mathsf{FO}_V(\mathcal D)$, each presentation $P$
+has an initial derivation algebra for every $A\hookrightarrow S_P$,
+and $T$ in an object $(P,T)$ is a consistent sentence theory of $P$.
+Then
 \[
  \Sigma_{\mathrm{FO}}:
  \mathsf{Pair}_c(\mathcal D)\rightleftarrows
@@ -352,8 +370,32 @@ is the translation extending $1_{S_P}:S_P\to S_P$.
 Let $f:X\to S_P$ assign a sentence to each nullary predicate, and
 interpret variables by $V\to\Tm_P$. Initiality of the free syntax
 gives a unique term and formula interpretation $\widehat f$.
-Since the images of the predicates are closed, induction proves
-preservation of free variables, admissibility, and substitution.
+Let $\ell:W_X\xrightarrow{\sim}W_P$ be the unique isomorphism
+of the two initial variable-list algebras. Write
+$\FV_X:\Phi_X\to W_X$ and $\FV_P:\Phi_P\to W_P$ for the
+free-variable occurrence morphisms. Since $f$ takes values in
+sentences, its atomic images have empty occurrence list.
+At a quantifier, $\ell$ commutes with deletion of the bound variable;
+at equality and implication it commutes with concatenation.
+The occurrence folds therefore give
+$\FV_P\widehat f_\Phi=\ell\FV_X$, with the corresponding equation
+for terms. Pullback along the empty-list inclusion gives the sentence
+morphism $\widehat f_S:S_X\to S_P$.
+
+For substitution of $t$ for $x$ in $\forall y\,\varphi$, the branch
+$y=x$ retains the quantified formula. On the branch $y\ne x$,
+membership in the occurrence lists is preserved by $\ell$.
+Hence the two interpretations give the same values for the tests
+$x\in\FV_X(\varphi)$ and $y\in\FV_{\Tm}(t)$ that determine
+capture in~\eqref{eq:quantifier-fold}. At an atom, substitution fixes
+its interpreting sentence by the absent-variable identity of
+Appendix~\ref{app:syntax-theories}. The constructor equations now
+identify the two substitution folds by initiality with parameters.
+Pulling back the success summand gives $s:\Adm_X\to\Adm_P$ with
+the two substitution equations above. These equations translate the
+instantiation and equality-substitution instances, and preservation
+of the free-variable test translates quantifier distribution.
+The other four logical schemes are preserved by their constructors.
 Thus $\widehat f:P_X\to P$ is a logical translation.
 
 Take $X=S_P$ and $f=1_{S_P}$, and denote the resulting translation

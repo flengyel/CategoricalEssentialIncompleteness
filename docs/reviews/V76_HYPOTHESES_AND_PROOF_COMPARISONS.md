@@ -1,0 +1,52 @@
+# Hypotheses and proof comparisons in manuscript v76
+
+The preceding [section-by-section review](V75_MATHEMATICAL_EXPOSITION.md) left four passages where the reader still had to supply a hypothesis, an identification, or a choice. The most consequential occurs in Theorem 9.7. The rational bounds by themselves admit a decidable complete extension. The intended theorem uses the real closed ordered field axioms, as does the Lean proof. The other three passages concern the target of the free adjunction, closure under evaluation at a theorem point, and the presentation of an indexed arithmetic theory.
+
+## Theorem 9.7. Which axioms are in the Miller theory?
+
+In v75, the definition before the theorem correctly included a recursive axiomatization of real closed ordered fields. The theorem itself identified its theory by a reference to a displayed equation giving just the rational bounds on the constants. The conclusion depends on which axioms are meant. [v75 statement](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/356985902b4f0d1735016d4303606aa0366682b6/manuscript/latex/sections/04-miller-sequences.tex#L534)
+
+Take the one-element structure in the same first-order language. Interpret every constant by its element, every function by the unique possible function, and the symbol $<$ by the full binary relation. Each bound, written as an inequality with integer coefficients, is then true. The complete theory of the structure is decidable because all atomic formulas can be evaluated and quantifiers range over one element. Its sentences therefore provide a recursive axiom set, recognizable independently of any binary representation of the sequence. This gives a consistent complete extension of the *bounds alone*.
+
+In the theory of real closed ordered fields, asymmetry gives $1/2<c_n\Rightarrow\neg(c_n<1/2)$. This inference puts the upper cut into the refutation domain for the same atomic test that places the lower cut in the theorem domain. Lean instantiates asymmetry for the integer-coefficient formulas. The revised theorem names both families of axioms and retains the fixed language and the uniform semidecision requirement on extension axioms. The existence of a Miller sequence is the external input cited in §9. The Lean theorem takes its fixed-point property as a hypothesis. [Revised theorem](../../manuscript/latex/sections/04-miller-sequences.tex) · [Asymmetry in Lean](../../Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedBounds.lean#L90) · [Miller hypothesis](../../Lean/CategoricalEssentialIncompleteness/V46MillerRealComputation.lean#L30)
+
+## §§4.4 and 4.6. Which translations and target presentations?
+
+A translation has a morphism $\sigma_\Phi:\Phi_P\to\Phi_Q$ on formulas and a morphism $\sigma_S:S_P\to S_Q$ on sentences. As both are given, compatibility with the sentence inclusions is a condition
+$$
+j_Q\sigma_S=\sigma_\Phi j_P.
+$$
+The rule equations on formula objects alone do not imply this condition. In ordinary syntax with two nullary predicates $p,q$, take the identity on terms, formulas and rule instances, but interchange $p$ and $q$ throughout the sentence map. The rule equations still hold. At the sentence $p$, the two sides of the displayed square are $q$ and $p$. Once the square is imposed, monicity of $j_Q$ and preservation of formula negation imply preservation of sentence negation. The revised definition also types the forward map on admissible substitutions and states its two equations. [v75 definition](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/356985902b4f0d1735016d4303606aa0366682b6/manuscript/latex/sections/03b-internal-adjunctions.tex#L65) · [Fields of a Lean translation](../../Lean/CategoricalEssentialIncompleteness/V46LogicalTranslations.lean#L60)
+
+Theorem 4.7 gives an adjunction with targets $(P,T)$ in the category of consistent internal theories. Which $P$ are admitted? The section's standing assumption referred to the axiom subobjects under consideration. The theorem explicitly quantified over all axiom subobjects only when specifying the free presentations $P_X$. The revision defines a presentation $P$ with an initial derivation algebra for each $A\hookrightarrow S_P$. Its axiom subobject can therefore vary throughout the generation and translation arguments. This is precisely the data of the Lean target. For the free interpretation, the variable-occurrence lists in the two presentations are compared through the canonical isomorphism of the chosen list algebras. The quantifier case of admissible substitution compares equality of binders and tests membership in these lists. [Revised definition and proof](../../manuscript/latex/sections/03b-internal-adjunctions.tex) · [Lean presentation](../../Lean/CategoricalEssentialIncompleteness/V46LogicalTranslations.lean#L34) · [Occurrence lists](../../Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxOccurrences.lean) · [Quantifier case](../../Lean/CategoricalEssentialIncompleteness/V46NullarySubstitutionQuantifier.lean#L30)
+
+## Theorem 5.3. Why evaluation preserves closure
+
+The partial-map functors of §5 induce functors on the categories of total morphisms,
+$$
+B:\mathcal D\longrightarrow\mathcal D/U,\qquad E:\mathcal D/U\longrightarrow\mathcal D.
+$$
+Generation is an operation on subobjects in these total categories. The abstract theorem assumes, for every parameter $P$ and every axiom subobject of the constant sentence family over $P$, that its inference endofunctor has an initial algebra. It also uses a logical theorem whose point factors through each consistent theory under consideration. Regularity alone does not supply the parameterized algebras. [v75 proof](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/356985902b4f0d1735016d4303606aa0366682b6/manuscript/latex/sections/04-theory-extensions.tex#L255) · [Lean hypotheses](../../Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompleteness.lean#L45)
+
+Let $j:S\hookrightarrow\Phi$ be the sentence inclusion, let $W\hookrightarrow BS$ be any closed slice theory and let $C(W)\hookrightarrow B\Phi$ be its generated formula subobject. Its restriction to sentences is $W$. The comparison is a natural isomorphism $e:EB\cong 1_{\mathcal D}$. Its components are needed to put the evaluated subobjects on $S$ and $\Phi$. Define
+$$
+W_0=(e_S^{-1})^*E(W),\qquad C_0=(e_\Phi^{-1})^*E(C(W)).
+$$
+Naturality gives $(EBj)e_S^{-1}=e_\Phi^{-1}j$. Preservation of pullbacks by $E$ now gives $j^*C_0=W_0$. Transporting the rule operations makes $C_0$ closed and it contains the sentence axioms $W_0$. Initiality then gives $\operatorname{Gen}(W_0)\le W_0$, and axiom introduction gives equality. This works for parameter-dependent $W$. The Lean proof supplies the square and the transport of rule operations; the argument needs no claim that $E$ preserves an initial algebra. [Revised proof](../../manuscript/latex/sections/04-theory-extensions.tex) · [Closure in Lean](../../Lean/CategoricalEssentialIncompleteness/V46RetractedClosedTheories.lean#L53) · [Transport of rules](../../Lean/CategoricalEssentialIncompleteness/V46RetractedRuleComparison.lean#L69)
+
+## §§8.2–8.3. Standard axiom sets and their presentations in PA
+
+An externally c.e. set of sentence codes can have two enumerating predicates that PA does not prove equivalent. For example, let $c$ be the code of a fixed sentence whose well-formedness PA proves. Take the two predicates
+$$
+D(z)\equiv z\ne z,\qquad
+D'(z)\equiv z=\bar c\ \land\ \operatorname{Pr}_{\rm PA}(\ulcorner 0=1\urcorner),
+$$
+where $\operatorname{Pr}_{\rm PA}$ is the ordinary arithmetized provability predicate. If PA is consistent, both predicates define the empty set in the standard model. A PA proof that they agree on sentence codes, specialized to $\bar c$, would prove $\neg\operatorname{Pr}_{\rm PA}(\ulcorner0=1\urcorner)$. Gödel's second incompleteness theorem excludes such a proof under the same consistency assumption. This example concerns the internally presented *axiom subobjects*. It makes no assertion that deductive closure distinguishes them. [Gödel’s second incompleteness theorem, §3](https://plato.stanford.edu/entries/goedel-incompleteness/)
+
+The numeral fiber of the universal proof object is compared with the **specific** presentation $\operatorname{Ax}(\bar e,z)$. Section 8.2 now fixes that presentation for $A_{\Gamma_e}$ and $\operatorname{Prov}_{\Gamma_e}$. In Theorem 8.6, a finite derivation of the output sentence from $\Gamma_e$ supplies standard evidence for the theorem predicate. A derivation of its negation supplies standard evidence for the refutation predicate. The diagonal argument excludes both. The resulting syntactic independence requires consistency of the extension, even if its axioms include false arithmetic sentences. [v75 passage](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/356985902b4f0d1735016d4303606aa0366682b6/manuscript/latex/sections/08a-uniform-theories.tex#L29) · [Numeral-fiber theorem](../../Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedProvabilityFibers.lean#L174) · [Uniform syntactic independence](../../Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean#L204)
+
+## Remaining evidence
+
+These checks compared the proof arguments above with the named Lean declarations. They found no need to weaken the conclusions of Theorems 4.7, 5.3, 8.6, or 9.7 for their stated data. They do not give a completeness claim for every unnumbered argument in the paper. In particular the slice equivalence in the example over an arbitrary infinite c.e. carrier, the obstruction in the product of model interpretations, and the example about global points in a category of group actions are among the WSL2 comparisons still outstanding. Appendix C has a written proof excluding every candidate lift. The status of its exact specialization in Lean is recorded separately. No new Lean or Comparator run was made for this edition. [WSL2 obligations](../CODEX_WSL2_CEI_V74_PROOF_REPAIRS.md) · [Appendix C comparison](V75_MATHEMATICAL_EXPOSITION.md) · [v76 correspondence](../../FORMALIZATION_STATUS_V76.md)
+
+The PDF built from the v76 source archive has 99 pages. All 80 numbered results and definitions retain their numbers. Only the statement text of Theorems 4.7, 5.3 and 9.7 changed. The 21 tagged Lean links in Appendix E and both links to Palomar version 3 agree with the registered v72 references. The manuscript verifier passed.

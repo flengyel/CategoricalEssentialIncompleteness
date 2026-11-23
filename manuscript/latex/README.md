@@ -1,10 +1,10 @@
-# LaTeX sources — version 75
+# LaTeX sources — version 76
 
 **Logical consequence and essential incompleteness in recursion categories**,
 22 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v75.pdf`
-and `logical_consequence_v75_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v76.pdf`
+and `logical_consequence_v76_source.zip`.
 
 `main.tex` assembles the paper. Follow its input order; source filename numbers
 do not necessarily match the printed section numbers. All five appendices and
@@ -53,6 +53,8 @@ The output is `main.pdf`. The source package contains this directory as
 | [bibliography.tex](bibliography.tex) | References |
 
 ## Revisions
+
+Version 76 specifies the derivation algebras required of every first-order presentation and the morphisms used to evaluate closed theories in a slice. Section 8 fixes the presentation of each indexed theory and identifies the proof witnesses ruled out by the uniform independence theorem.
 
 Version 75 corrects the domain of the postfix constructor calculation in Section 6 and specifies the morphisms, slices, and predicates used in the proofs.
 
@@ -142,7 +144,7 @@ Version 48 updates the abstract to include arithmetic recursive inseparability
 and uniform independent sentences. The introduction and all numbered results,
 definitions, hypotheses, and proofs of version 47 are unchanged.
 
-Version 75 is the current manuscript. The registered Lean submission belongs to manuscript v72.
+Version 76 is the current manuscript. The registered Lean submission belongs to manuscript v72.
 `MANUSCRIPT_CURRENT.json` at the repository root records the active source
 hashes, PDF, archive, correspondence table, and audit entry points.
 Later manuscript revisions update that target in the same change.
