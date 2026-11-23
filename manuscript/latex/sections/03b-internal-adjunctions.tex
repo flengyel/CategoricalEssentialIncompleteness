@@ -33,8 +33,9 @@ subobject $A$ and sentence theory $T$,
 \[
  \operatorname{Gen}(A)\leq T\quad\Longleftrightarrow\quad A\leq T.
 \]
-Let $J:\operatorname{Th}_{\mathcal D}(S)\to\mathcal D/S$ send a
-theory to its inclusion. Then
+For each theory $T$ choose a representative $i_T:|T|\hookrightarrow S$.
+Let $J:\operatorname{Th}_{\mathcal D}(S)\to\mathcal D/S$ send $T$
+to $i_T$ and $T\leq U$ to the unique factorization of $i_T$ through $i_U$. Then
 $\Gamma(a:A\to S)=\operatorname{Gen}(\im a)$ defines a functor
 $\Gamma:\mathcal D/S\to\operatorname{Th}_{\mathcal D}(S)$ with
 $\Gamma\dashv J$.
@@ -45,8 +46,10 @@ leastness of $C(A)$ gives monotonicity. The closed formula
 subobject $C(A)$ contains $j_!\operatorname{Gen}(A)$, whence
 $C(\operatorname{Gen}(A))\leq C(A)$. Pullback along $j$ and
 extensivity prove idempotence. For a theory $T$, monotonicity and $\operatorname{Gen}(T)=T$ give
-$\operatorname{Gen}(A)\leq T$ if $A\leq T$. Extensivity gives the converse. A morphism in $\mathcal D/S$ from
-$a:A\to S$ to $J(T)$ exists uniquely exactly when $\im a\leq T$.
+$\operatorname{Gen}(A)\leq T$ if $A\leq T$. Extensivity gives the converse. If $k:(a:A\to S)\to(b:B\to S)$ lies over $S$, then $a=bk$,
+so $\im a\leq\im b$. Applying generation gives $\Gamma(k)$.
+A morphism in $\mathcal D/S$ from $a$ to $J(T)$ exists uniquely
+exactly when $\im a\leq T$.
 The equivalence identifies this hom-set with the hom-set from
 $\Gamma(a)$ to $T$ in the theory order, naturally in both objects.
 \end{proof}
@@ -119,9 +122,13 @@ $\rho:Q\to R$,
 \]
 \end{theorem}
 \begin{proof}
-If $T$ is a $Q$-theory, $\sigma_{\Phi}^*C_Q(T)$ contains the
-logical axioms, is closed under the $P$-rules, and contains
-$j_{P,!}\sigma^*T$. Thus
+Let $T$ be a $Q$-theory. Put $D=C_Q(T)\hookrightarrow\Phi_Q$ and
+$E=\sigma_\Phi^*D\hookrightarrow\Phi_P$. Closure of $D$ under the
+$n$-premise rule means $(p_n^Q)^*(D^n)\leq(q_n^Q)^*D$ in
+$\operatorname{Sub}_{\mathcal D}(R_n^Q)$. Pulling back along $\rho_n$
+gives $(p_n^P)^*(E^n)\leq(q_n^P)^*E$. For $n=0$, the left side is
+the whole object of logical axiom instances. Since
+$j_P^*E=\sigma_S^* j_Q^*D=\sigma^*T$, also $j_{P,!}\sigma^*T\leq E$. Thus
 $C_P(\sigma^*T)\leq\sigma_{\Phi}^*C_Q(T)$.
 Pullback along $j_P$ gives
 $\operatorname{Gen}_P(\sigma^*T)\leq\sigma^*T$;
@@ -174,6 +181,10 @@ total morphism $\sigma:GS_1\to S_2$ and define
  K(a:A\to S_1)=\sigma Ga:GA\to S_2.
 \]
 Here $i_A:A\hookrightarrow S_1$ represents the subobject $A$.
+Thus $L:\operatorname{Sub}_{\mathcal D_1}(S_1)\to
+\operatorname{Sub}_{\mathcal D_2}(S_2)$ is monotone. The functor
+$K:\mathcal D_1/S_1\to\mathcal D_2/S_2$ sends a morphism $k$ over $S_1$
+to $Gk$ over $S_2$.
 For each $A$, let $c_{A,S_1}:P_{A,S_1}\to S_1$ be the pullback
 of its conclusion morphism $c_A:P_A\to\Phi_1$ along the sentence
 inclusion $j_1:S_1\hookrightarrow\Phi_1$.
@@ -235,7 +246,9 @@ where $S_1\to HS_2$ is $H\sigma\,\eta_{S_1}$.
 Transposition identifies the factorizations defining this
 adjunction. The derivation-comparison hypothesis can be proved
 from rule-instance morphisms as follows. Suppose
-$\sigma_{\Phi}:G\Phi_1\to\Phi_2$ extends $\sigma$, and put
+$\sigma_{\Phi}:G\Phi_1\to\Phi_2$ satisfies
+$\sigma_\Phi G j_1=j_2\sigma$, where $j_i:S_i\hookrightarrow\Phi_i$.
+Put
 $K_{\Phi}(q)=\sigma_{\Phi}Gq$. Under the same adjunction $G\dashv H$, its right adjoint $R_{\Phi}$ is given
 by pullback along $H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$ after
 applying $H$. If the rule morphisms
@@ -252,8 +265,16 @@ $\epsilon:K_{\Phi}R_{\Phi}\to1$ the counit. Transpose
  \xrightarrow{\delta'}P'
 \]
 to give $R_{\Phi}P'$ a source algebra structure. Source initiality
-gives a morphism from $P_A$ to this algebra. Transposing it and
-restricting to sentence conclusions gives $p_A$.
+gives a morphism from $P_A$ to this algebra. Its transpose has
+underlying morphism $h:GP_A\to P_{L(A)}$ with
+$c_{L(A)}h=\sigma_\Phi Gc_A$. Write $k_A:P_{A,S_1}\to P_A$ for the
+pullback projection. Then
+\[
+ c_{L(A)}h\,Gk_A=\sigma_\Phi G j_1\,Gc_{A,S_1}
+                 =j_2\sigma Gc_{A,S_1}.
+\]
+The pullback $P_{L(A),S_2}=P_{L(A)}\times_{\Phi_2} S_2$ therefore gives
+$p_A$ with components $h\,Gk_A$ and $\sigma Gc_{A,S_1}$.
 
 \subsection{Free first-order theories and inseparability}
 \label{sec:free-first-order-theories}
@@ -309,28 +330,48 @@ $b\leq f^*\nu_P^*T$.
 
 \begin{theorem}[Free first-order adjunction]
 \label{thm:free-first-order-adjunction}
-Under the syntax, derivation, and partial-inverse hypotheses of
-this subsection, $\Sigma_{\mathrm{FO}}$ and $J_{\mathrm{FO}}$ are functors with
+Let $\mathcal D=\Tot(\mathscr S)$ be regular with disjoint,
+pullback-stable finite coproducts, where $\mathscr S$ is a split
+restriction category and every monomorphism of $\mathcal D$ has a partial
+inverse in $\mathscr S$. Fix a decidable variable object $V$. For every
+$X\in\mathcal D$, assume that $P_X$ has the syntax and variable-list
+algebras of Definition~\ref{def:categorical-syntax}, initial in every
+parameter slice, and an initial derivation algebra for each axiom
+subobject. Then
 \[
  \Sigma_{\mathrm{FO}}:
  \mathsf{Pair}_c(\mathcal D)\rightleftarrows
  \mathsf{FO}_V(\mathcal D):J_{\mathrm{FO}},\qquad
  \Sigma_{\mathrm{FO}}\dashv J_{\mathrm{FO}}.
 \]
-The unit at $(X,a,b)$ is $\theta_X$. The counit at $(P,T)$
-interprets the nullary predicate indexed by a sentence of $P$
-as that sentence.
+The unit at $(X,a,b)$ has underlying morphism $\theta_X:X\to S_X$.
+The counit $\Sigma_{\mathrm{FO}}J_{\mathrm{FO}}(P,T)\to(P,T)$
+is the translation extending $1_{S_P}:S_P\to S_P$.
 \end{theorem}
 \begin{proof}
-A pair morphism $f:(X,a,b)\to(S_P,T,\nu_P^*T)$ interprets the
-nullary predicates by the closed sentences $f:X\to S_P$ and
-the variables by $V\to\Tm_P$. Initiality of the free syntax
+Let $f:X\to S_P$ assign a sentence to each nullary predicate, and
+interpret variables by $V\to\Tm_P$. Initiality of the free syntax
 gives a unique term and formula interpretation $\widehat f$.
 Since the images of the predicates are closed, induction proves
 preservation of free variables, admissibility, and substitution.
-The logical constructors and rule side conditions are therefore
-preserved. The pair inequalities put the image of $A_{a,b}$
-inside $T$, so Theorem~\ref{thm:translation-galois} gives
+Thus $\widehat f:P_X\to P$ is a logical translation.
+
+Take $X=S_P$ and $f=1_{S_P}$, and denote the resulting translation
+by $\epsilon:P_{S_P}\to P$. The theory $\epsilon_S^*T$ is closed by
+Theorem~\ref{thm:translation-galois}. It is consistent because
+$\epsilon_S$ commutes with negation and its inverse-image map preserves
+meets and bottom. As $\epsilon_S\theta_{S_P}=1_{S_P}$, it contains
+the positive axioms indexed by $T$ and the negative axioms indexed
+by $\nu_P^*T$. Their generated theory is therefore consistent.
+This proves that $J_{\mathrm{FO}}(P,T)$ is an object of
+$\mathsf{Pair}_c(\mathcal D)$. For a theory morphism
+$\sigma:(P,T)\to(Q,U)$, the bound $T\leq\sigma_S^*U$ and
+$\sigma_S\nu_P=\nu_Q\sigma_S$ give
+$\nu_P^*T\leq\sigma_S^*\nu_Q^*U$. Thus $\sigma_S$ is a morphism of pairs.
+
+For a pair morphism $f:(X,a,b)\to J_{\mathrm{FO}}(P,T)$, the
+defining inequalities put $\widehat f_!A_{a,b}$ inside $T$.
+Theorem~\ref{thm:translation-galois} gives
 $\widehat f_!T_{a,b}\leq T$.
 
 Conversely, a theory morphism $\sigma:(P_X,T_{a,b})\to(P,T)$
@@ -352,13 +393,6 @@ Uniqueness of extension gives the equation, proving naturality in both
 variables. The same uniqueness gives the functor laws for
 $\Sigma_{\mathrm{FO}}$. For $J_{\mathrm{FO}}$ they follow from
 composition of sentence morphisms.
-To verify that $J_{\mathrm{FO}}$ takes values in
-$\mathsf{Pair}_c(\mathcal D)$, interpret the free predicates
-indexed by $S_P$ as their indexing sentences. The inverse image
-of $T$ is a consistent closed theory containing the positive
-axioms indexed by $T$ and negative axioms indexed by $\nu_P^*T$.
-Its generated subtheory is consistent. Thus the required object
-condition holds.
 \end{proof}
 
 \begin{corollary}\label{cor:signed-first-order-incompleteness}
@@ -366,7 +400,8 @@ Under the hypotheses of
 Theorem~\ref{thm:free-first-order-adjunction}, let $a,b$ be
 disjoint subobjects of $X$ and suppose $T_{a,b}$ is consistent.
 Then $T_{a,b}$ is essentially incomplete if and only if $(a,b)$
-is inseparable in $\mathscr S$.
+is inseparable in $\mathscr S$, that is, if and only if no complementary
+subobjects $C,D$ of $X$ satisfy $a\leq C$ and $b\leq D$.
 \end{corollary}
 \begin{proof}
 Let $U\geq T_{a,b}$ be any consistent closed theory of $P_X$.
@@ -388,18 +423,25 @@ Thus $[m,n]$ is an isomorphism. Let $\Two=1+1$ with injections
 $\mathbf{f},\mathbf{t}:1\to\Two$, in that order. The total morphism
 $d=[\mathbf{t}!_C,\mathbf{f}!_D][m,n]^{-1}:X\to\Two$
 is true on $a$ and false on $b$.
-Interpret the nullary predicates by $d$, equality by
-$\mathbf{t}$, negation and implication by their Boolean truth
-functions, and universal quantification by the projection
+Interpret the terms in $1$, the nullary predicates by $d$, equality
+by $\mathbf{t}:1\to\Two$ under $1\times1\cong1$, negation and
+implication by their Boolean truth functions, and universal quantification
+by the projection
 $\pi_2:V\times\Two\to\Two$.
 Free syntax gives a total valuation $v:\Phi_X\to\Two$.
-Induction gives
-$v(\varphi[x:=t])=v(\varphi)$ whenever substitution is admissible.
-The instantiation and equality schemes therefore have value
-$\mathbf{t}$, and the quantifier distribution scheme does also.
-The propositional schemes and both inference rules preserve
-truth. Hence the inverse image of $\mathbf{t}$ along
-$v j_X:S_X\to\Two$ is a closed, consistent, complete sentence
-theory containing $A_{a,b}$ and therefore $T_{a,b}$.
+On the admissibility subobject
+$i:\Adm\hookrightarrow\Phi_X\times V\times\Tm_X$, let
+$a_F:\Adm\to\Phi_X$ be substitution. Induction gives the identity
+$v a_F=v\pi_{\Phi_X} i:\Adm\to\Two$. Thus instantiation and
+substitutivity of equality have value
+$\mathbf{t}$. Reflexivity has that value by the interpretation of
+equality, and quantifier distribution has it because quantification leaves
+each truth value unchanged. The propositional schemes have value
+$\mathbf{t}$, and modus ponens and generalization preserve truth.
+Thus $U=(v j_X)^*\mathbf{t}\hookrightarrow S_X$ is closed. Negation
+interchanges true and false, so $\nu_X^*U=(v j_X)^*\mathbf{f}$.
+The two fibers are complementary, proving consistency and completeness.
+Since $v j_X\theta_X=d$, the signed axioms lie in $U$, whence
+$T_{a,b}\leq U$.
 This contradicts essential incompleteness.
 \end{proof}

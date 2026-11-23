@@ -138,12 +138,15 @@ such that $rm=1_Y$ and $mr=\bar r$
 These embeddings give the equivalence
 $\operatorname{Split}(\mathscr R_X)\simeq\mathcal A$
 proved in Proposition~\ref{prop:fork-recursion}.
-Every idempotent in $\mathcal A$ splits through its image, so also
-$\operatorname{Kar}(\mathscr R_X)\simeq\mathcal A$
-(Corollary~\ref{cor:fork-karoubi}).
-The formula and derivation objects below are constructed in
-$\mathcal E$, identified with $\operatorname{Tot}(\mathcal A)$. Their images under
-component evaluation give propositional formulas and derivations.
+Every idempotent in $\mathcal A$ splits through its image.
+Corollary~\ref{cor:fork-karoubi} gives a restriction equivalence
+$Q:\operatorname{Kar}(\mathscr R_X)\to\mathcal A$. We construct the
+formula and derivation objects in $\mathcal E$, canonically isomorphic to
+$\operatorname{Tot}(\mathcal A)$.
+A quasi-inverse to $Q$ transports them to the total category of
+$\operatorname{Kar}(\mathscr R_X)$. At an endpoint $i$, the evaluation
+of a transported object is given, up to the counit isomorphism, by
+its original $i$th component.
 
 \subsection{Complementary restriction idempotents and inseparability}
 
@@ -261,8 +264,10 @@ For a restriction idempotent $e$ on $Y$, put
 \end{equation}
 This is the c.e.\ subset on which $E_i(e)$ is the partial identity.
 
-The morphism $E_0(\tau)$ is not a Turing morphism.
-The total function $F:V_0\to V_0$ given by
+The morphism $E_0(\tau)$ is not a Turing morphism. For the parameter
+object $1$, its universal property would represent each partial recursive
+$F:V_0\rightharpoonup V_0$ by a total point $1\to V_0$, using
+$1\times V_0\cong V_0$. The total function $F:V_0\to V_0$ given by
 $F(k,z,a,b)=(0,0,z,0)$ cannot equal $\tau_0(p,-)$ for any $p\in V_0$.
 Let $T\hookrightarrow V\times V$ be the domain subfunctor of
 $\tau$ constructed in Appendix~\ref{app:fork-turing}.
@@ -561,10 +566,11 @@ is the partial identity on $\nu_j^{-1}(T_j)$.
 \begin{theorem}\label{thm:cosheaf-observation}
 Fix $i\in\{1,2\}$. Let $T\subseteq S$ be a compatible family of
 consistent c.e.\ theory extensions as above, and let
-$t_T:S\rightharpoonup S$ be its partial identity. Define
+$t_T:S\rightharpoonup S$ be its partial identity. The total morphism $E_i\theta$ induces the function
+$\theta_i:|V_i|=\N^2\to |S_i|$ on carriers. Define
 \[
- P_{i,T}=(E_i\theta)^{-1}(|t_T|_i),\qquad
- N_{i,T}=(E_i\theta)^{-1}(|\nu^*t_T|_i).
+ P_{i,T}=\{x\in\N^2:\theta_i(x)\in T_i\},\qquad
+ N_{i,T}=\{x\in\N^2:\nu_i(\theta_i(x))\in T_i\}.
 \]
 The restriction idempotents $t_T,\nu^*t_T$ are inseparable in $\mathcal A$.
 The sets $P_{i,T},N_{i,T}$ are disjoint c.e.\ subsets of $\N^2$ satisfying
@@ -670,13 +676,16 @@ atomic predicates are nullary and their relabelling does not
 change variable names. In particular, empty occurrence lists
 define the sentence subobject of $F_D$.
 
-For an axiom subobject of this sentence object, use the finite
-derivation trees for the seven schemes and two rules of
-Appendix~\ref{app:first-order-derivations}. At each component,
-tree form, matching of premises, and the substitution and
-free-variable side conditions are recursive on their numerical
-codes. Membership of nonlogical axiom leaves is semidecidable.
-Thus the derivation carrier is computably enumerable. Relabelling preserves
+Write $S_D\hookrightarrow F_D$ for the sentence inclusion and let
+$A\hookrightarrow S_D$ be an axiom subobject. Use the seven schemes
+and two rules of Appendix~\ref{app:first-order-derivations}. At component
+$j$, parse a proposed derivation and its rule parameters. Check the
+tree form, premise codes, and substitution and free-variable conditions.
+For every predicate label $d$ occurring in a formula parameter, run the
+test for $d\in D_j$, including at logical axiom leaves. For each
+nonlogical axiom leaf also test its sentence for membership in $A_j$.
+These finitely many semidecisions succeed together exactly on the
+derivation carrier, so that carrier is computably enumerable. Relabelling preserves
 each logical scheme and rule and carries nonlogical axiom leaves to nonlogical
 axiom leaves because the axioms form a subfunctor.
 
@@ -684,9 +693,16 @@ Evaluation of derivation trees in an algebra for the inference
 endofunctor is total on their carriers. Its algebra equation is
 proved by induction on the last rule. Naturality of the algebra
 operations makes the evaluations a natural transformation.
-Induction also gives uniqueness. Retaining a common parameter
-throughout each tree gives the same construction in every slice
-$\mathcal E/Z$, including axiom subobjects over $Z$.
+Induction also gives uniqueness. For $Z\in\mathcal E$ and an axiom
+subobject $A\hookrightarrow Z\times S_D$, the conclusion of a tree
+at component $j$ is $(z,\varphi)\in Z_j\times (F_D)_j$. Its nodes
+retain $z$, and its nonlogical leaves test $(z,\psi)\in A_j$.
+Thus the conclusion morphism $c_{Z,A}:P_{Z,A}\to Z\times F_D$
+and the inference algebra lie over $Z\times F_D$. For any other
+algebra with carrier $q:Q\to Z\times F_D$, evaluation is the unique
+algebra morphism $h:P_{Z,A}\to Q$ with $qh=c_{Z,A}$. This gives the initial algebra for the inference endofunctor on
+$\mathcal E/(Z\times F_D)$, equivalently on the slice of $\mathcal E/Z$
+over $\pi_1:Z\times F_D\to Z$.
 \end{proof}
 
 Take $D=V$. Write $F_{\mathrm f}$ for the formula object,

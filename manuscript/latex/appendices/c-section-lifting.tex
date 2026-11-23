@@ -174,8 +174,16 @@ Since $i_1(\N)$ is recursive in the fixed coproduct coding and
 $A$ is not recursive, $s_A$ is not recursive.
 If it had a preimage under $F$, that source morphism would
 be total and hence ordinary total recursive, a contradiction.
-For $P=F(1_A)$ and $N=F(1_{A^c})$, this is the target conditional
-of Corollary~\ref{cor:separator}, and it has no source lift.
+In fact, take $P=F(1_A)$ and $N=F(1_{A^c})$ in
+Theorem~\ref{thm:comparison}. For any
+$s:\N\rightharpoonup\N+\N$ with
+$s^{-1}(i_0(\N))=A^c$ and $s^{-1}(i_1(\N))=A$,
+these inverse images cover $\N$, so $s$ is total. If
+$F\ell=\chi_{\N,\N}s$ for a source morphism
+$\ell:\N\rightharpoonup\N+\N$, the total recursive function $\ell$
+would decide membership in $A$ by the summand of its output in the
+fixed coproduct coding.
+Hence no $s$ with the prescribed inverse images lifts.
 
 Finally, the morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
 $\mathcal C_K$: they have the total recursive extensions $i_1$
@@ -188,9 +196,14 @@ is not a source morphism. Thus no such upper bound exists.
 This example also disproves \cite[Theorem~4.1]{Lengyel2006} as stated.
 Its target $\Pfn$ is split: each partial identity splits through its
 domain. Singleton partial identities are connected and jointly
-epimorphic, and every partial injection has a partial inverse.
-Thus the target is locally connected and satisfies weak choice.
-The Turing morphism $\tau_K$ is in particular a weak Turing morphism,
+epimorphic, so the target is locally connected. For a partial
+monomorphism $p:X\rightharpoonup Y$, testing on maps $1\to X$
+shows that $p$ is injective on $D_p$. Its inverse on $p(D_p)$
+is a section, giving weak choice.
+For every $u:\N\rightharpoonup\N$ in $\mathcal C_K$, the Turing
+property applied to $u\pi_2$, where $\pi_2(z,x)=x$, gives a total
+$e:\N\to\N$ with $\tau_K(e\times1_{\N})=u\pi_2$.
+This is the weak Turing hypothesis,
 and $F(1_{\N})\ne0$. Nevertheless $1_A$ and $1_{A^c}$ separate
 the diagonal pair in $\mathcal C_K$. The earlier argument
 \cite[p.~11]{Lengyel2006} takes a source index for the section

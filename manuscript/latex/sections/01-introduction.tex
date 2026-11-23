@@ -29,7 +29,9 @@ subobjects $i_a:a\hookrightarrow X$ and $i_b:b\hookrightarrow X$,
 take the language whose only nonlogical symbols are nullary predicates
 indexed by $X$. Its atomic sentence constructor is a morphism
 $\theta_X:X\to S_X$ in $\mathcal D$. Thus an index $x:W\to X$ gives
-the sentence $\theta_Xx:W\to S_X$ over $W$. Write $\nu_X:S_X\to S_X$
+the sentence $\theta_Xx:W\to S_X$ over $W$. The index belongs to $a$
+over $W$ precisely when $x=i_a y$ for some $y:W\to a$.
+Write $\nu_X:S_X\to S_X$
 for negation. The axiom subobject is
 \[
  A_{a,b}=\im(\theta_Xi_a)\vee\im(\nu_X\theta_Xi_b)
@@ -75,10 +77,15 @@ $FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
 respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
 gives a total morphism $g:U\to U$ such that the inverse images of
 $P$ and $N$ under $Fg$ are both zero. When $\mathcal A$ is split,
-$F$ extends to $\Split(\mathscr R)$. For an internal theory take $P,N$
-to be the inverse images of its interpreted theorem and refutation
-domains along the interpretation of a total sentence morphism.
-Suppose these theorem and refutation domains are disjoint,
+choose an extension $\widehat F:\Split(\mathscr R)\to\mathcal A$ of $F$.
+Let $t:S\rightharpoonup S$ be the theorem domain on a sentence object $S$ in
+$\Split(\mathscr R)$, with negation $\nu:S\to S$. For a total sentence
+morphism $\theta:U\to S$, take the two domains on $FU$ to be
+\[
+ P=(\widehat F\theta)^*\widehat F(t),\qquad
+ N=\bigl(\widehat F(\nu\theta)\bigr)^*\widehat F(t).
+\]
+Suppose the interpreted theorem and refutation domains are disjoint,
 $F(1_U)\ne0$, and inverse images along total morphisms in $\mathcal A$
 preserve binary joins of restriction idempotents. Under the preceding
 bounds and lifting hypothesis, Theorem~\ref{thm:logical-comparison}
@@ -95,10 +102,11 @@ $S_{\PA}$ represents computably enumerable (c.e.) extensions of $\PA$
 by internal theories. Let $M$ be the standard arithmetic model $\N$ or
 an ultrapower of that model. Interpreting program graphs in $M$ gives a
 range functor $F_M:S_{\PA}\to\Pfn$, where $\Pfn$ is the category of
-sets and partial functions. For each consistent c.e.~extension of PA, choose a model $K$ of its axioms.
+sets and partial functions. Its extension
+$\widehat F_M:\Split(S_{\PA})\to\Pfn$ interprets the sentence theory.
+For each consistent c.e.~extension of PA, choose a model $K$ of its axioms.
 Soundness in $K$ and the comparison theorem give incompleteness of the
-internal theory and of its interpretation under $F_M$ for each of the
-arithmetic models $M$ just specified
+internal theory and of its interpretation under $\widehat F_M$
 (Theorem~\ref{thm:arithmetic-internal-comparison}).
 For each such extension, the sets of standard codes of its provable
 sentences and of its refutable sentences are recursively inseparable

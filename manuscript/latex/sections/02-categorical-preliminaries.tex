@@ -53,8 +53,13 @@ the restriction identities give
  f^*(ab)=(f^*a)(f^*b),\qquad
  f^*0_Y=0_X,\qquad f^*1_Y=\bar f.
 \]
-The middle equality assumes restriction zeros. In particular, a total
-morphism preserves the greatest restriction idempotent under inverse image.
+The middle equality assumes restriction zeros. For $g:Y\rightharpoonup Z$
+and a restriction idempotent $c$ on $Z$, the composition law is
+\[
+ (gf)^*c=\overline{cgf}=\overline{\overline{cg}\,f}=f^*(g^*c).
+\]
+Thus inverse image is order-preserving (it preserves meets), and it
+preserves the greatest restriction idempotent when $f$ is total.
 A restriction idempotent $r$ on $Y$ \emph{receives} $f$ when $rf=f$
 \cite[Section 6]{Heller}.
 The \emph{range} $\ran(f)$ is the least restriction idempotent receiving $f$;
@@ -119,7 +124,8 @@ with
  \pi_2\langle f,g\rangle=g\bar f,\qquad
  \overline{\langle f,g\rangle}=\bar f\bar g.
 \]
-Products of morphisms are obtained by this pairing and the projections.
+For $f:X\rightharpoonup X'$ and $g:Y\rightharpoonup Y'$, their product is
+$\langle f\pi_1,g\pi_2\rangle:X\times Y\rightharpoonup X'\times Y'$.
 The total diagonal is
 $\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
 A restriction category has a $P$-category structure if and only if
@@ -172,8 +178,8 @@ partial inverse of an injection on its domain.
 \subsection{Recursion categories}
 
 A restriction category with binary restriction products and zeros is
-\emph{prodominical} if $f\times0=0$ for every morphism $f$ and every
-zero morphism of the required type. It is \emph{isotypical} if any
+\emph{prodominical} if $f\times0_{A,B}=0_{X\times A,Y\times B}$ for
+every $f:X\rightharpoonup Y$ and all objects $A,B$. It is \emph{isotypical} if any
 two of its objects are isomorphic.
 
 A \emph{Turing morphism} on $U$ is a morphism

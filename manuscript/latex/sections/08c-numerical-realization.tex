@@ -472,8 +472,14 @@ Its restriction to sentence conclusions is the pullback in $\mathcal C_{\mathrm{
  S\arrow[r,hook,"j"'] & \Fm.
 \end{tikzcd}
 \]
-Thus $|\mathrm{Prf}_T|$ consists of the derivation codes whose
-conclusions belong to $|S|$. Theorem~\ref{thm:first-order-theory}
+Choose this pullback as the dimension-one object with carrier
+\[
+ |\mathrm{Prf}_T|
+  =\{d\in|\mathrm{Prf}_T^{\mathrm{all}}|:
+                 c_T^{\mathrm{all}}(d)\in |S|\}.
+\]
+Its upper leg is inclusion and $c_T(d)=c_T^{\mathrm{all}}(d)$
+in $|S|$. Theorem~\ref{thm:first-order-theory}
 identifies the regular image $m_T:\mathcal T_T\hookrightarrow S$
 of $c_T$ as the sentence part of the least deductively closed
 formula subobject containing the axioms of $T$.

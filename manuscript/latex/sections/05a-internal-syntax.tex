@@ -367,14 +367,21 @@ $\operatorname{Fm}(a)$ has the analogous conditions for formulas,
 including membership in $\Pi_k$ for relation labels and in $V$ for
 quantifier labels. Lemma~\ref{lem:st-finite-sigma1} makes these
 formulas $\Sigma_1$ by existentially quantifying membership witnesses.
-The equivalences describing constructor decomposition for these carrier
-formulas are provable in $\mathrm{PA}$. For example,
-$\operatorname{Fm}(\operatorname{all}(x,a))
-\longleftrightarrow V(x)\land\operatorname{Fm}(a)$,
-where $\operatorname{all}$ is the numerical universal-quantifier
-constructor. The corresponding equivalences for a function or relation
-constructor include the predicate for its signature object and the
-carrier predicates of its ordered children.
+For example, let $w$ be a word whose parse tree has a relation
+symbol $r$ of arity $k$ at its root and ordered term subtrees
+with words $t_1,\ldots,t_k$. Then $\PA$ proves, under this
+parsing hypothesis,
+\[
+  \operatorname{Fm}(w)\ \longleftrightarrow\
+  \Pi_k(r)\land\bigwedge_{j=1}^k\operatorname{Tm}(t_j).
+\]
+Indeed, the label test at the root is $\Pi_k(r)$, and every
+remaining label lies in exactly one of the parsed children.
+The same argument gives the carrier equations for the other
+constructors. Conversely, concatenating words that each parse
+as a tree of the required sort, then appending the root node,
+recovers precisely those children. Parsing determines the child
+boundaries in both assertions.
 Write
 \[
  \Tm=(\omega,[\operatorname{Tm}]_T),\qquad
@@ -551,12 +558,12 @@ The uniqueness assertion of
 Proposition~\ref{prop:st-list-initiality} identifies them with the
 unique list-algebra morphisms in the appendix.
 
-Reading the node sequence in its defined order computes the free-variable list. At a variable
-it returns the singleton list; at function symbols, relation
-symbols, and equality it concatenates the child lists in their
-specified order; at negation it retains the child list; at
-implication it concatenates the two lists; and at a quantifier it
-deletes the bound variable. This is a primitive-recursive traversal
+Write $L_V$ for the list object of Proposition~\ref{prop:st-list-initiality}.
+The free-variable maps $\FV_{\Tm}:\Tm\to L_V$ and
+$\FV_{\Fm}:\Fm\to L_V$ read the nodes in children-before-parent order. A variable contributes
+the singleton list. Function symbols, relation symbols, equality, and
+implication concatenate the child lists in argument order. Negation
+retains its child list, and quantification deletes the bound variable. This is a primitive-recursive traversal
 on finite codes. Induction in $\mathrm{PA}$ on node count proves
 that its output satisfies $\operatorname{List}_V$ and proves the
 constructor equations. These are the equations of the
@@ -567,8 +574,12 @@ with the appendix's free-variable morphisms.
 For substitution, use a traversal which retains at each node both
 its original subtree and its computed result. Its parameters are
 a variable code $x$ satisfying $V(x)$ and a term code $t$
-satisfying $\operatorname{Tm}(t)$. Term substitution has values in $\Tm$, and formula substitution
-has values in $1+\Fm$. Write
+satisfying $\operatorname{Tm}(t)$. Put $E=V\times\Tm$.
+The result maps, with the expression first, have types
+\[
+ a_T:\Tm\times E\longrightarrow\Tm,\qquad
+ b_F:\Fm\times E\longrightarrow1+\Fm .
+\] Write
 $\fail_{\Fm}:1\to1+\Fm$ and $\ok_{\Fm}:\Fm\to1+\Fm$ for the
 coproduct injections. The first summand represents inadmissible
 substitution. The second contains the substituted formulas.
@@ -878,10 +889,16 @@ The graph $G_{e_A}(p,z)\land\operatorname{Sent}(z)$
 is $\Sigma_1$ and PA-provably functional. By
 Lemma~\ref{lem:syntactic-functional-search} it has a program
 index $e_{A,S}$ with PA-provably equivalent graph.
-It represents the sentence-conclusion pullback
-$c_{A,S}:P_{A,S}\to S$. Its range in $S_T$ is $t_A$.
-By Lemma~\ref{lem:range-regular-image}, the same range in
-$\Split(S_T)$ splits through the regular image of $c_{A,S}$.
+Put $D_{A,S}(p)\equiv\exists z\,
+(G_{e_A}(p,z)\land\operatorname{Sent}(z))$.
+The program $e_{A,S}$ represents the total conclusion map
+$c_{A,S}:(\omega,[D_{A,S}]_T)\to
+(\omega,[\operatorname{Sent}]_T)=S$.
+The range of $[e_{A,S}]_T:\omega\rightharpoonup\omega$ in $S_T$ is $t_A$.
+Since $t_A\leq[\operatorname{Sent}]_T$, the same program class
+for this partial identity defines $\ran(c_{A,S}):S\rightharpoonup S$
+in $\Split(S_T)$. By Lemma~\ref{lem:range-regular-image}, it
+splits through the regular image of $c_{A,S}$.
 Thus its splitting is the asserted sentence theory.
 \end{proof}
 

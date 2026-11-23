@@ -29,7 +29,7 @@ $F_T(1_\omega)\ne0$.
 \end{theorem}
 \begin{proof}
 Preservation follows coordinatewise from Proposition~\ref{prop:model}.
-Suppose $[e]_T\ne[f]_T$. Let $E$ be the sentence asserting that the program
+Suppose $[e]_T,[f]_T:X\rightharpoonup Y$ are distinct. Let $E$ be the sentence asserting that the program
 graphs $G_e$ and $G_f$ agree on every input and output, as in
 \eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
 Completeness and downward L\"owenheim--Skolem give
@@ -102,10 +102,12 @@ inseparable pair defined by the same formulas in $S_{T'}$.
 Corollary~\ref{cor:model-pair} gives the first assertion, since
 $\mathcal M_T\ne\varnothing$.
 The functor $Q_{T,T'}$ preserves the operations defining the pair.
-It is the identity on objects and surjective on each hom-set.
-Consequently it preserves a Turing morphism: a preimage of a
-target morphism has a Turing factorization in $S_T$, whose image is
-the required factorization in $S_{T'}$.
+Write $Q=Q_{T,T'}$. Given $f:X\times U\rightharpoonup U$ in
+$S_{T'}$, its program index represents a morphism $\tilde f$ of
+the same type in $S_T$ with $Q(\tilde f)=f$.
+Choose a total $g:X\to U$ in $S_T$ with
+$\tilde f=\tau(g\times1_U)$. Then $Q(g)$ is total and
+$f=Q(\tau)(Q(g)\times1_U)$ in $S_{T'}$.
 Applying Corollary~\ref{cor:model-pair} to $T'$ gives inseparability
 of the image pair.
 \end{proof}
@@ -140,9 +142,13 @@ $c=[C]_T$ on $\omega$, define the subset of the standard natural numbers
 \begin{equation}\label{eq:observation}
  E_T(c)=\{n\in\N:T\vdash C(\bar n)\}.
 \end{equation}
-It is computably enumerable by proof enumeration and is independent of
-the representative. The operation is monotone, preserves finite meets,
-and preserves top and bottom. Choose a constant-function index
+Proof enumeration makes $E_T(c)$ computably enumerable, and
+\eqref{eq:domain-order} makes it independent of the representative.
+Thus $E_T$ maps the restriction idempotents on $\omega$ in $S_T$
+to $\mathcal P(\N)$. It preserves order, finite meets, top and
+bottom. For a consistent c.e.\ extension $T'\supseteq T$, every
+$T$-proof is also a proof from $T'$, so
+$E_T(c)\subseteq E_{T'}(Q_{T,T'}c)$. Choose a constant-function index
 $\operatorname{const}(n)\in\N$ for which
 $\PA\vdash\forall x\forall y\,
 (G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
@@ -157,7 +163,9 @@ The composition formula makes
 $G_{\operatorname{comp}(j_C,\operatorname{const}(n))}(x,y)$
 $T$-provably equivalent to $C(\bar n)\land y=\bar n$, which gives
 the first equivalence.
-The second follows from faithfulness of $F_T$.
+The second follows from faithfulness of $F_T$. In the product
+category the last equality holds exactly when
+$M\models C(\bar n)$ for every $M\in\mathcal M_T$.
 
 \subsection{The theory of the standard model}
 

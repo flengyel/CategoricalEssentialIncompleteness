@@ -133,9 +133,12 @@ For an endofunctor on the $r$-fold product category $\mathcal D^r$
 defined using finite products, coproducts, and constant objects, its version on
 $(\mathcal D/P)^r$ is obtained
 by replacing each constant $X$ by $P\times X\to P$ and using
-products and coproducts in that slice. An initial algebra is
-\emph{stable under parameters} if, for every $P\in\mathcal D$,
-its pullback along $P\to1$ is initial for this slice endofunctor.
+products and coproducts in that slice. Write $K_P$ for this endofunctor
+when $K$ is the original one. An initial $K$-algebra
+$\iota:K(A)\to A$ is \emph{stable under parameters} if its pullback
+$\iota_P:K_P(A_P)\to A_P$ along $P\to1$ is initial for every
+$P\in\mathcal D$. Here $A_P$ consists of the projections
+$P\times A_i\to P$ for the $r$ sorts $A_i$ of $A$.
 
 \subsection{Terms, formulas, and free variables}
 \label{app:first-order-syntax}
@@ -199,9 +202,10 @@ $(u,v):(\Tm,\Fm)\to(X,Y)$ making the square
 \end{tikzcd}
 \]
 commute. The same property holds in every slice with parameters.
-Induction means applying this property to a monic subalgebra:
-the unique morphism into that subalgebra is an inverse to its
-inclusion. Thus parameterized induction is also available.
+For a subalgebra inclusion $m:B\hookrightarrow(\Tm,\Fm)$,
+initiality gives an algebra morphism $h:(\Tm,\Fm)\to B$.
+Then $mh=1$ by uniqueness, and $hm=1$ by monicity. The same
+argument applied to $\iota_P$ gives induction in the slice over $P$.
 
 List initiality with parameters gives concatenation
 $+\!+:W^2\to W$, membership $\mem:V\times W\to\Two$, and
@@ -290,16 +294,17 @@ term components. At negation and implication, reconstruct the
 original formula and apply $O(\neg)$ or
 $\widehat{\Rightarrow}$ to the result components.
 
-For quantification, the operation has source
-$E\times V\times\Fm\times O(\Fm)$.
-Denote its projections by $(x,t,y,\varphi,z)$, with $(x,t)$ the
-$E$-coordinate. Define
+Put $B=V\times\Fm\times E$, with coordinates $(y,\varphi,x,t)$,
+and define the test $C:B\to\Two$ by
 \[
  C(y,\varphi,x,t)=
  \neg_2\mem(x,\FV_{\Fm}(\varphi))
  \vee_2\neg_2\mem(y,\FV_{\Tm}(t)).
 \]
-The original component is $\forall y\,\varphi$; the result component is
+At the quantifier the input is $(x,t,y,\varphi,z)$ in
+$E\times V\times\Fm\times O(\Fm)$. The test uses the projection
+$(x,t,y,\varphi,z)\mapsto(y,\varphi,x,t)$ to $B$. The original
+component is $\forall y\,\varphi$ and the result component is
 \begin{equation}\label{eq:quantifier-fold}
  \mathsf{if}\left(\epsilon(y,x);
    \ok_{\Fm}(\forall y\,\varphi),
@@ -333,7 +338,7 @@ and syntax factors, are $a_T$ and $b_F$. The pullback defines
 $j$ and $a_F$; the coproduct hypotheses make $j$ complemented.
 \end{proof}
 
-Put $B=V\times\Fm\times E$ and define
+On $B$ define
 \[
  q=\langle\forall\pi_{V\times\Fm},\pi_E\rangle:B\to\Fm\times E,
  \qquad
@@ -349,8 +354,9 @@ Equation~\eqref{eq:quantifier-fold} gives
 Here meet is pullback intersection and the disjoint join in
 \eqref{eq:admissibility-subobjects} is the coproduct inclusion into $B$. On $D_=$ the substitution
 result is $\forall y\,\varphi$; on the other summand it is
-$\forall(y,a_F\widetilde p)$, where
-$\widetilde p$ is the induced morphism to $\Adm$.
+$\forall\langle y\circ i,a_F\widetilde p\rangle$, where
+$i:Z\hookrightarrow B$ represents $D_{\ne}\wedge D_C\wedge p^*\Adm$
+and $\widetilde p:Z\to\Adm$ satisfies $j\widetilde p=p\circ i$.
 Thus quantification binds its named variable and prevents capture
 of free occurrences of the replacement term.
 
@@ -414,6 +420,7 @@ Put
  H(Q,q)=\left(\coprod_{n=0}^N B_n(Q,q),\kappa_q\right),\qquad
  \kappa_q=[q_na_{n,q}]_{n=0}^N.
 \]
+Here $B_0(Q,q)\cong R_0$ since $Q^0=F^0=1$ and $q^0=1_1$.
 For a slice morphism $h:(Q,q)\to(Q',q')$, define $B_n(h)$ by
 $a_{n,q'}B_n(h)=a_{n,q}$ and
 $b_{n,q'}B_n(h)=h^n b_{n,q}$.
@@ -618,11 +625,12 @@ $m_A$ to have a partial inverse
 $r_A:S\rightharpoonup T_{A,S}$ in $\Split(\mathcal R)$.
 The same lemma gives $\ran(c_{A,S})=m_A r_A=\bar r_A$.
 
-Let $G:\mathcal S\to\mathcal S'$ be a restriction functor
-preserving ranges. Applying $G$ to the splitting in
-Lemma~\ref{lem:range-regular-image} gives
+In Lemma~\ref{lem:range-regular-image}, a range-preserving
+restriction functor $G:\mathcal S\to\mathcal S'$ sends
+$m:I\to Y$ and $r:Y\rightharpoonup I$ to a splitting of the
+range of $G(f):G(X)\to G(Y)$, since
 \[
- G(m)G(r)=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
+ G(m)G(r)=G(\ran(f))=\ran(G(f)),\qquad G(r)G(m)=1_{G(I)}.
 \]
 
 \subsection{Propositional theories}
@@ -650,5 +658,7 @@ Its partial identity belongs to $\Par(\mathcal D,\Mono)$.
 In particular, subobjects $i_+:A_+\hookrightarrow V$ and
 $i_-:A_-\hookrightarrow V$ specify positive and negative atomic
 axioms by the image of
-$[\theta i_+,\nu\theta i_-]:A_++A_-\to S$.
+$[\theta i_+,\nu\theta i_-]:A_++A_-\to S$. For a generalized
+index $x:Z\to A_-$ the corresponding negative axiom is the
+composite $\nu\theta i_-x:Z\to S$.
 

@@ -124,8 +124,12 @@ For $e\in\mathcal I(X,Y)$ and $f\in\mathcal I(Y,Z)$, define
 $[f]_T[e]_T=[\operatorname{comp}(f,e)]_T$.
 Substitution of T-provably equivalent graphs in
 \eqref{eq:composition} proves independence of representatives.
-The identity and associativity equations follow from these
-graph identities.
+Choose an index $i$ for the identity program, so that
+$\PA\vdash\forall x\forall y\,(G_i(x,y)\leftrightarrow y=x)$.
+Its class in $\mathcal I(X,X)/{\equiv_T}$ is $1_X$.
+The identity and associativity equations follow by substituting
+the graph of $i$ and reassociating the existential quantifiers
+in~\eqref{eq:composition}.
 
 Montagna's objects are the sets generated from $\N$ by
 Cartesian products and the displayed disjoint unions
@@ -200,11 +204,21 @@ output with $y$. Hence $g[R_e]_T=h[R_e]_T$ in $S_T$.
 The index $j_{R_e}$ is independent of the theory, so its class
 represents the range over every extension of $T$.
 
-The pairing and coproduct constructions on indices have
-PA-provable graph equations: pairing requires both component
-computations to halt, and copairing selects the computation
-specified by the coproduct summand of the input. They supply the restriction products
-and coproducts in $S_T$.
+For $[e]_T:W\rightharpoonup X$ and $[f]_T:W\rightharpoonup Y$,
+a program $h$ runs both computations and pairs their outputs.
+For $[p]_T:X\rightharpoonup Z$ and $[q]_T:Y\rightharpoonup Z$,
+a program $k$ reads the input tag and runs the indicated program.
+Their graphs satisfy the following equivalences in $\PA$:
+\[
+ \begin{aligned}
+ G_h(w,\langle x,y\rangle)&\longleftrightarrow G_e(w,x)\land G_f(w,y),\\
+ G_k(2x,z)&\longleftrightarrow G_p(x,z),\\
+ G_k(2y+1,z)&\longleftrightarrow G_q(y,z).
+ \end{aligned}
+\]
+Together with the numerical projections and tagged injections,
+these give the restriction pairing $[h]_T:W\rightharpoonup X\times Y$
+and the copairing $[k]_T:X+Y\rightharpoonup Z$.
 Put $\tau_T=[u]_T:\omega\times\omega\rightharpoonup\omega$.
 For $f=[e]_T:X\times\omega\rightharpoonup\omega$, put
 $r=[k_e]_T:X\to\omega$. Lemma~\ref{lem:arithmetized-evaluation}
@@ -217,9 +231,11 @@ proves that $r$ is total and gives a PA-proof of
 for all numerical codes $a,x,y$.
 The composition and product graph equations therefore give
 $f=\tau_T(r\times1_\omega)$ in $S_T$.
-Thus $\tau_T$ is a Turing morphism. The coding bijections give
-isomorphisms from each object to $\omega$, and the product
-of any morphism with a zero morphism is zero. Hence $S_T$ is a
-prodominical recursion category.
+Thus $\tau_T$ is a Turing morphism. The class of $i$ in
+$S_T(X,\omega)$ represents $\gamma_X$ on the decoded sets.
+The same program in $S_T(\omega,X)$ represents $\gamma_X^{-1}$.
+Both composites have identity graph by~\eqref{eq:composition}.
+The product of any morphism with a nowhere-defined program has
+empty graph. Hence $S_T$ is a recursion category.
 
 

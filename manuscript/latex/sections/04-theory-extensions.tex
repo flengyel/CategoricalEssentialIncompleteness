@@ -37,7 +37,10 @@ Composition is by pullback. Its total category is $\mathcal D/T$.
 Under these assumptions, $\mathscr C$ and every $\mathscr C[T]$ are
 Turing categories. If $Q$ is the original Turing object, with
 $\tau:Q\times Q\rightharpoonup Q$, the Turing object in $\mathscr C[T]$
-is $T\times Q\to T$, with Turing morphism $1_T\times\tau$.
+is $T\times Q\to T$. Under the product identification
+$(T\times Q)\times_T(T\times Q)\cong T\times(Q\times Q)$, its
+Turing morphism is
+$1_T\times\tau:T\times(Q\times Q)\rightharpoonup T\times Q$ over $T$.
 Let $\mathscr R[T]$ be the full restriction subcategory on the objects
 $T\times X\to T$ for $X\in\mathscr R$. Then $\mathscr R[T]$ is a
 recursion category and
@@ -65,21 +68,30 @@ Thus $\mathscr C$ is Turing.
 For $p:X\to T$, a total embedding $m_X:X\to Q$ gives a monomorphism
 $m=\langle p,m_X\rangle:X\hookrightarrow T\times Q$. Its partial inverse
 $m^\dagger:T\times Q\rightharpoonup X$ is a retraction over $T$.
-Let $\varphi:X\times Q\rightharpoonup T\times Q$ be a computation
-over $T$, and put $f=\pi_2\varphi$. Commutation over $T$ on the
-domain of definition gives
+The slice product of $p$ and $T\times Q\to T$ is
+$X\times_T(T\times Q)\cong X\times Q$, with structure map $p\pi_1$.
+Let $\varphi:(X\times Q,p\pi_1)\rightharpoonup(T\times Q,\pi_1)$
+be a partial morphism over $T$. Its second component is
+$f=\pi_2\varphi:X\times Q\rightharpoonup Q$ in $\mathscr C$.
+Commutation over $T$ on the domain of definition gives
 $\pi_1\varphi=p\pi_1\overline\varphi$.
 Choose a total $a:X\to Q$ with $f=\tau(a\times1_Q)$. The total
-parameter $\langle p,a\rangle:X\to T\times Q$ then satisfies
+parameter $\langle p,a\rangle:(X,p)\to(T\times Q,\pi_1)$ induces,
+under the two slice product identifications, the morphism
 \[
- \varphi=(1_T\times\tau)(\langle p,a\rangle\times1_Q),
+ \langle p\pi_1,\langle a\pi_1,\pi_2\rangle\rangle:
+ X\times Q\longrightarrow T\times(Q\times Q).
 \]
-using the product associativity isomorphism. This is the required
-parameterization in the slice.
+Its composite with $1_T\times\tau$ has second component $f$ and first
+component $p\pi_1\bar\varphi$, so it equals $\varphi$.
 
-The objects of $\mathscr R[T]$ are isomorphic and closed under binary
-restriction products. Their zeros satisfy the prodominical identity,
-and the same parameterization proves the Turing property.
+An isomorphism $X\cong Y$ in $\mathscr R$ induces
+$T\times X\cong T\times Y$ over $T$. The restriction product of two
+such families is represented by $T\times(X\times Y)\to T$.
+The zero span has domain the initial object of $\mathcal D/T$;
+pullback stability of this initial object makes its product with any
+partial map a zero span. Fullness supplies the parameter
+$\langle p,a\rangle$ above whenever $p$ is a constant family.
 For each $p:X\to T$, the graph embedding $m$ above satisfies
 $m^\dagger m=1_X$ and $mm^\dagger=\overline{m^\dagger}$ over $T$.
 Thus $m$ and $m^\dagger$ split the restriction idempotent
@@ -147,9 +159,12 @@ factors its right leg uniquely through $T\times_UY$. This gives
 \[
  \mathscr C[U](\Sigma_i p,q)\cong\mathscr C[T](p,i^*q).
 \]
-A span in the reverse direction factors its monic left leg through
-$T\times_UY$. Conversely, the projection $T\times_UY\to Y$ is
-monic, so it preserves monic left legs under composition.
+In the reverse direction let $Y\xleftarrow{m}A\xrightarrow{f}X$
+represent $q\rightharpoonup\Sigma_i p$, so $qm=ipf$.
+The pair $\langle pf,m\rangle:A\to T\times_UY$ is monic because its
+composite with the projection to $Y$ is $m$. It is the left leg of a
+span $i^*q\rightharpoonup p$. Conversely, composing a monic left leg
+with $T\times_UY\hookrightarrow Y$ recovers a monic left leg over $U$.
 These inverse assignments give
 \[
  \mathscr C[T](i^*q,p)\cong\mathscr C[U](q,\Sigma_i p).
@@ -181,8 +196,8 @@ the functor $\Sigma_i$ can be written
  \Split(\mathscr R[T])\xrightarrow{\Sigma_i}\Split(\mathscr R[U]).
 \]
 It preserves binary restriction products. For proper $i$, its image of
-the terminal object is $i:T\to U$, so it does not preserve the
-restriction terminal object. At $q:Y\to U$, the unit is total precisely when $q$ factors through
+the restriction terminal object $1_T:T\to T$ is $i:T\to U$, so it
+does not preserve the restriction terminal object. At $q:Y\to U$, the unit is total precisely when $q$ factors through
 $i:T\hookrightarrow U$.
 
 \subsection{Essential incompleteness in the associated category}
@@ -195,8 +210,12 @@ Define
  B_U:\mathscr C\to\mathscr C[U],\qquad
  B_U(X)=(U\times X\to U),\qquad B_U(f)=1_U\times f.
 \]
-Pullback along $\lambda_U$ gives $E_U:\mathscr C[U]\to\mathscr C$ and
-a natural isomorphism $E_UB_U\cong1_{\mathscr C}$.
+Pullback along $\lambda_U$ sends $p:X\to U$ to
+$E_U(p)=1\times_U X$ and pulls back both legs of a partial-map span.
+Identifying $\mathcal D/1$ with $\mathcal D$ gives
+$E_U:\mathscr C[U]\to\mathscr C$. The projections
+$1\times_U(U\times X)\cong X$ give a natural isomorphism
+$E_UB_U\cong1_{\mathscr C}$.
 The isomorphism makes $B_U$ faithful. By construction $B_U$ preserves
 restrictions, totality, and finite restriction products. It sends $\tau$ to $1_U\times\tau$, the Turing morphism
 of Lemma~\ref{lem:partial-slice-turing}. It restricts to
@@ -250,9 +269,14 @@ gives $\operatorname{Gen}(Fv)\leq Fv$. Axiom introduction gives the
 reverse inclusion. Thus $Fv$ is closed.
 
 A consistent complete closed extension of $u$ therefore gives one of
-$B_U(u)$ by $B_U$. Conversely, let $W$ be any consistent complete
-closed extension of $B_U(u)$ in the slice. Then $E_U(W)$ is a
-consistent complete closed extension of $E_UB_U(u)\cong u$.
+$B_U(u)$ by $B_U$. Conversely, let $W\hookrightarrow U\times S$ be any consistent
+complete closed extension of $B_U(u)$ in $\mathcal D/U$. Under
+$E_U B_U(S)\cong S$ its fiber is the subobject
+\[
+ E_U(W)=\langle\lambda_U !_S,1_S\rangle^*W\hookrightarrow S .
+\]
+It is closed, consistent and complete by the preceding argument.
+The inclusion $B_U(u)\leq W$ gives $u\leq E_U(W)$.
 This proves the essential-incompleteness equivalence.
 
 The same retraction proves that $\delta_u$ is total exactly when

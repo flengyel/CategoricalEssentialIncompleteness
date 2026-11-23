@@ -3,25 +3,26 @@
 We realize Di Paola and Heller's objective to give an algebraic account
 of generalized incompleteness theorems in recursion categories.
 In the restriction idempotent completion of a recursion category,
-two disjoint domains generate a first-order theory internal to its
-category of total morphisms. If the theory is consistent, it is
+two disjoint domains on an object $X$ generate a first-order theory
+internal to the category of total morphisms. If the theory is consistent, it is
 essentially incomplete exactly when the domains are inseparable.
-Its nonlogical axioms assert the nullary predicates indexed by the first
-domain and the negations of the predicates indexed by the second.
+The atomic sentence morphism $\theta_X:X\to S_X$ sends a family of indices $x:W\to X$ to the family $\theta_Xx:W\to S_X$.
+The nonlogical axioms assert the atoms on the first domain and the negations
+of the atoms on the second.
 On pairs generating consistent theories, the construction is left adjoint
 to the functor taking a consistent internal theory to its theorem and
 refutation subobjects. We assume that the total category is regular with
-disjoint pullback-stable
-finite coproducts and that its monomorphisms have partial inverses in the
+disjoint pullback-stable finite coproducts and that its monomorphisms have partial inverses in the
 completion. We take a variable object with decidable equality and assume
 that the syntax and list algebras are stable under parameters and that
 each axiom subobject under consideration has an initial algebra of derivations.
 
-For a consistent theory, partial maps in the slice over its theorem
-subobject form a Turing category. With parameterized deduction in the
-slices and a chosen global logical theorem, the theory is essentially
-incomplete exactly when every consistent closed extension of its
-constant family in that slice is incomplete.
+If $t:T\hookrightarrow S$ is the theorem subobject of a consistent theory,
+partial maps in the slice over $T$ form a Turing category.
+With parameterized deduction in the slices and a chosen global logical
+theorem, the theory is essentially incomplete exactly when every consistent
+closed extension of $1_T\times t:T\times T\hookrightarrow T\times S$ in
+that slice is incomplete.
 
 In the completed syntactic recursion category for Peano arithmetic (PA), the
 numerical interpretation of one total morphism takes each index for a
@@ -37,10 +38,8 @@ In a cosheaf construction on a three-point space, each endpoint has a
 consistent propositional theory. Every consistent extension in the same
 language with a computably enumerable axiom set is incomplete.
 
-The current manuscript is **version 74**,
-dated 22 November 2026. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) includes a subsection on finite proofs and the theorem domain for a Miller sequence. In the contents, numbered sections and appendices appear in blue. [Referee review](docs/reviews/V67_APPENDIX_E/referee.md) · [Mathematical writing review](docs/reviews/V67_APPENDIX_E/writing.md)
-
-Section 5 constructs an isomorphism between an infinite computably enumerable carrier and the natural numbers. Theorem 9.7 and Proposition 10.8 specify the language of the extensions they quantify over. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
+The current manuscript is **version 75**,
+dated 22 November 2026. The [section-by-section review](docs/reviews/V75_MATHEMATICAL_EXPOSITION.md) records the corrections to the proofs and their correspondence with Lean. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
 completes Proposition 10.8. The generated first-order theory restricts to the
@@ -50,10 +49,10 @@ with computably enumerable axioms is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v74.pdf](manuscript/logical_consequence_and_essential_incompleteness_v74.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v75.pdf](manuscript/logical_consequence_and_essential_incompleteness_v75.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v74_source.zip](manuscript/logical_consequence_v74_source.zip) |
+| Complete source ZIP | [logical_consequence_v75_source.zip](manuscript/logical_consequence_v75_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | Registered v70 snapshot | [PALOMAR-2026-11-22-000009, version 2](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2) · [Challenge](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cd08f0a42a6e8e182805db84396e40fdddc1b2ca/Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/palomar/PALOMAR-2026-11-22-000009-v2/README.md) |
@@ -73,8 +72,8 @@ and Git blob hashes.
 The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
 
 The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) compares the numbered results with their Lean declarations and records the scope of the comparisons. The current correspondence table is
-[FORMALIZATION_STATUS_V74.md](FORMALIZATION_STATUS_V74.md). It records 77
-numbered results and three definitions. **All 77 numbered results have full Lean counterparts.**
+[FORMALIZATION_STATUS_V75.md](FORMALIZATION_STATUS_V75.md). It records 77
+numbered results and three definitions. The table identifies the Lean declarations for each result and records the scope of the comparison.
 The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) links each result and definition to its Lean declarations.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
@@ -192,7 +191,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v74 and the v72 registration.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v75 and the v72 registration.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

@@ -2,25 +2,26 @@
 We realize Di Paola and Heller's objective to give an algebraic account
 of generalized incompleteness theorems in recursion categories.
 In the restriction idempotent completion of a recursion category,
-two disjoint domains generate a first-order theory internal to its
-category of total morphisms. If the theory is consistent, it is
+two disjoint domains on an object $X$ generate a first-order theory
+internal to the category of total morphisms. If the theory is consistent, it is
 essentially incomplete exactly when the domains are inseparable.
-Its nonlogical axioms assert the nullary predicates indexed by the first
-domain and the negations of the predicates indexed by the second.
+The atomic sentence morphism $\theta_X:X\to S_X$ sends a family of indices $x:W\to X$ to the family $\theta_Xx:W\to S_X$.
+The nonlogical axioms assert the atoms on the first domain and the negations
+of the atoms on the second.
 On pairs generating consistent theories, the construction is left adjoint
 to the functor taking a consistent internal theory to its theorem and
 refutation subobjects. We assume that the total category is regular with
-disjoint pullback-stable
-finite coproducts and that its monomorphisms have partial inverses in the
+disjoint pullback-stable finite coproducts and that its monomorphisms have partial inverses in the
 completion. We take a variable object with decidable equality and assume
 that the syntax and list algebras are stable under parameters and that
 each axiom subobject under consideration has an initial algebra of derivations.
 
-For a consistent theory, partial maps in the slice over its theorem
-subobject form a Turing category. With parameterized deduction in the
-slices and a chosen global logical theorem, the theory is essentially
-incomplete exactly when every consistent closed extension of its
-constant family in that slice is incomplete.
+If $t:T\hookrightarrow S$ is the theorem subobject of a consistent theory,
+partial maps in the slice over $T$ form a Turing category.
+With parameterized deduction in the slices and a chosen global logical
+theorem, the theory is essentially incomplete exactly when every consistent
+closed extension of $1_T\times t:T\times T\hookrightarrow T\times S$ in
+that slice is incomplete.
 
 In the completed syntactic recursion category for Peano arithmetic (PA), the
 numerical interpretation of one total morphism takes each index for a

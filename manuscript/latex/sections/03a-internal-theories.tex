@@ -108,7 +108,8 @@ Suppose moreover that $\mathcal A=\Par(\mathcal E,\Mono)$ for a
 regular category $\mathcal E$. If the total morphism
 $\widehat F(c_{A,S})$ factors in $\mathcal E$ through a
 monomorphism $v:V\hookrightarrow\widehat F S$, then
-$\widehat F(m_A)$ is a subobject of $v$. Put
+there is a unique $h:\widehat F(T_{A,S})\to V$ in $\mathcal E$
+such that $v h=\widehat F(m_A)$. Put
 \[
  d_V=[\widehat F S\xleftarrow{v}V\xrightarrow{v}\widehat F S]:
  \widehat F S\rightharpoonup\widehat F S.
@@ -150,8 +151,9 @@ that inverse images along total morphisms in $\mathcal A$ preserve binary joins
 of restriction idempotents, and that $F(1_U)\ne0$.
 Let $t_A=\ran(c_{A,S})$ represent a sentence theory in
 $\Split(\mathscr R)$ as above, with total negation
-$\nu:S\to S$, and let $\theta:U\to S$ be total in
-$\Split(\mathscr R)$. Put
+$\nu:S\to S$, and let $\theta:(U,1_U)\to S$ be total in
+$\Split(\mathscr R)$. With the identity splitting at $1_U$,
+$\widehat F\theta:FU\to\widehat F S$. Put
 \[
  t=\widehat F(t_A),\qquad
  P=(\widehat F\theta)^*t,\qquad

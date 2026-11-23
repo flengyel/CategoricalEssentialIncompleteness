@@ -125,6 +125,14 @@ functor $\widehat F_M:\Split(S_T)\to\Pfn$ to total morphisms gives
  G_M:\mathcal B_T\longrightarrow\mathbf{Set},
  \qquad \mathcal B_T=\Tot(\Split(S_T)).
 \]
+Explicitly, put $D_e=\operatorname{dom}F_M(e)\subseteq X_M$ for a
+split object $(X,e)$. A morphism
+$f:(X,e)\rightharpoonup(Y,d)$ satisfies $f=dfe$.
+Thus $\widehat F_M(X,e)=D_e$, and
+$\widehat F_M(f):D_e\rightharpoonup D_d$ sends $x$ to $F_M(f)(x)$
+where this value is defined. For a total split morphism,
+$\bar f=e$, so the domain is all of $D_e$. This restriction of
+$F_M(f)$ is the function $G_M(f):D_e\to D_d$.
 Let $J_T:\mathcal P_T\to\mathcal B_T$ denote the equivalence
 constructed in Lemma~\ref{lem:syntactic-total-category}. Thus
 $J_T(C)=(\omega,[C]_T)$. With the indicated splittings,
@@ -526,9 +534,16 @@ If $\{i:K\models\varphi_{s_i}\}\in\mathcal U$, this set is
 nonempty. Replace the other coordinates by a member of $V_K$ to
 obtain a representative in $V_K^I$. Conversely, a representative
 in $V_K^I$ makes the displayed set belong to $\mathcal U$.
-This description is independent of representatives because two
-representatives agree on a set in $\mathcal U$. On a constant
-standard sentence code it agrees with satisfaction in $K$.
+Two representatives of $s$ agree on a set in $\mathcal U$,
+so the criterion is independent of the family. In particular, the
+map $\delta_S:G_{\N}S\to G_MS$, $t\mapsto\eta_S([(t)_{i\in I}])$,
+satisfies
+\[
+  \delta_S(t)\in\im(v_{K,\mathcal U})
+    \quad\Longleftrightarrow\quad K\models\varphi_t .
+\]
+For an arbitrary $s$, the formulas evaluated in $K$ are the
+coordinate sentences $\varphi_{s_i}$.
 
 Likewise, for $p\in G_MP_{A,S}$, choose a family $(p_i)_{i\in I}$
 in $G_{\N}P_{A,S}$ such that $p=\eta_{P_{A,S}}([p_i])$.
