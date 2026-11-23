@@ -38,8 +38,10 @@ Use a deterministic form of Kleene's computation predicate as in
 Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,s)$ be the
 primitive-recursive bounded evaluator for the partial-recursive programs:
 its value at stage $s$ is $0$ for failure and $y+1$ for output $y$.
-Encode a halting trace $t$ by its first successful stage $s$ and its
-output $y$, with primitive-recursive projections
+Write $[a,x]$ for the pairing of the underlying program coding, with
+primitive-recursive projections whose inverse equations are provable
+in $\PA$. A halting trace has code $t=[s,y]$, where $s$ is its
+first successful stage and $y$ its output. The projections are
 $\mathsf{st}(t)=s$ and $\mathsf{out}(t)=y$. Thus
 \[
  \mathsf{Tr}(e,x,t)\quad\Longleftrightarrow\quad
@@ -87,9 +89,21 @@ $k_e\in\N$ for which PA proves
 In particular, PA proves $\forall a\exists!p\,G_{k_e}(a,p)$.
 \end{lemma}
 \begin{proof}
-The universal interpreter and formalized parameterization
-\cite[p.~108; p.~115, Note~1]{Montagna} give $u$ and
-$\operatorname{s}$. Choose an index $c$ whose program, on input
+Use the universal interpreter and formalized parameterization
+\cite[p.~108; p.~115, Note~1]{Montagna}. For the program pairing,
+the parameter function $s_0$ satisfies
+$G(s_0(d,a),x,y)\leftrightarrow G(d,[a,x],y)$ in $\PA$.
+On input $\langle e,x\rangle$, let $u$ decode $e,x$ and apply the
+interpreter to $[e,x]$. Choose a program $v$ that, on input
+$[e,[a,x]]$, computes $\langle a,x\rangle$ and runs $e$ on that input.
+The inverse equations for the two pairings give in $\PA$
+\[
+ G_v([e,[a,x]],y)\longleftrightarrow G(e,\langle a,x\rangle,y).
+\]
+Two applications of the parameter equation now give
+\eqref{eq:arithmetized-specialization} for the primitive-recursive
+function $\operatorname{s}(e,a)=s_0(s_0(v,e),a)$.
+Choose an index $c$ whose program, on input
 $\langle\langle f,e\rangle,x\rangle$, searches successive codes
 of pairs $(t,v)$ for which
 \[
@@ -100,10 +114,9 @@ $\operatorname{comp}(f,e)=\operatorname{s}(c,\langle f,e\rangle)$,
 which is primitive recursive. PA proves that the code of any
 witnessing pair bounds the search, and that a successful search
 supplies witnesses to both graphs, with intermediate value
-$\mathsf{out}(t)$. Determinism gives functionality and ensures that
-all witnessing pairs give the same output. This proves~\eqref{eq:composition}.
-The pairing can be replaced by the pairing fixed above, using
-the PA-provable inverse equations for the two numerical codings.
+$\mathsf{out}(t)$. Two traces for the same input have the same least successful stage
+and the same value of $E$ there. Thus $\PA$ proves functionality of
+$G$, and all witnessing pairs give the same output, proving~\eqref{eq:composition}.
 For $k_e$, use an index for the primitive-recursive function
 $a\mapsto\operatorname{s}(e,a)$; its defining equation and
 totality are provable in PA.

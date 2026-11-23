@@ -1,39 +1,42 @@
 \begin{abstract}
 We realize Di Paola and Heller's objective to give an algebraic account
 of generalized incompleteness theorems in recursion categories.
-In the restriction idempotent completion of a recursion category,
-two disjoint domains on an object $X$ generate a first-order theory
-internal to the category of total morphisms. If the theory is consistent, it is
-essentially incomplete exactly when the domains are inseparable.
-The atomic sentence morphism $\theta_X:X\to S_X$ sends a family of indices $x:W\to X$ to the family $\theta_Xx:W\to S_X$.
-The nonlogical axioms assert the atoms on the first domain and the negations
-of the atoms on the second.
-On pairs generating consistent theories, the construction is left adjoint
-to the functor taking a consistent internal theory to its theorem and
-refutation subobjects. We assume that the total category is regular with
-disjoint pullback-stable finite coproducts and that its monomorphisms have partial inverses in the
-completion. We take a variable object with decidable equality and assume
-that the syntax and list algebras are stable under parameters. For each
-presentation, we assume an initial derivation algebra for every axiom subobject.
+Let $a,b$ be disjoint domains on an object $X$ in the restriction
+idempotent completion of a recursion category. They generate a first-order
+theory internal to the total category of the completion. The atomic sentence
+morphism $\theta_X:X\to S_X$ takes each generalized index $x:W\to X$ to
+the sentence $\theta_Xx:W\to S_X$ over $W$. The theory asserts the
+atoms on $a$ and the negations of the atoms on $b$.
+If the theory is consistent, it is essentially incomplete if and only if
+no complementary domains $C,D$ on $X$ satisfy $a\leq C$ and $b\leq D$.
+Here essential incompleteness means that every consistent closed extension
+in the same language is incomplete.
 
-If $t:T\hookrightarrow S$ is the theorem subobject of a consistent theory,
-partial maps in the slice over $T$ form a Turing category.
-With parameterized deduction in the slices and a chosen global logical
-theorem, the theory is essentially incomplete exactly when every consistent
-closed extension of $1_T\times t:T\times T\hookrightarrow T\times S$ in
-that slice is incomplete.
+On pairs generating consistent theories, generation is left adjoint to
+the functor taking a consistent theory to its theorem and refutation
+subobjects. The total category is assumed regular with disjoint,
+pullback-stable finite coproducts. Its monomorphisms have partial
+inverses in the completion. The variable object has decidable equality,
+the syntax and list algebras are stable under parameters, and each
+presentation has an initial derivation algebra for every axiom subobject.
 
-In the completed syntactic recursion category for Peano arithmetic (PA), the
-numerical interpretation of one total morphism takes each index for a
+For a theory $t:T\hookrightarrow S$, partial maps in the slice over $T$
+form a Turing category. Assume parameterized deduction in the slices and
+a logical theorem $\lambda:1\to S$ factoring through each consistent theory.
+Then passage from $t$ to its constant family
+$1_T\times t:T\times T\hookrightarrow T\times S$ preserves and reflects
+essential incompleteness of consistent theories.
+
+In the completed syntactic recursion category for Peano arithmetic (PA),
+the numerical interpretation of one total morphism sends each index for a
 computably enumerable axiom presentation of a consistent extension of PA
-to the code of a sentence independent of that extension.
-For a Miller sequence, we expand the theory of real closed
-ordered fields by constants naming its terms and axioms giving their
-strict rational bounds.
-Every consistent extension in this language is incomplete if a single
-oracle program semidecides its axioms from every binary representation
-of the sequence.
-In a cosheaf construction on a three-point space, each endpoint has a
-consistent propositional theory. Every consistent extension in the same
-language with a computably enumerable axiom set is incomplete.
+to the code of an independent sentence for that extension.
+For a Miller sequence, we expand the theory of real closed ordered fields
+by constants naming its terms and axioms giving their strict rational
+bounds. Every consistent extension in this language is incomplete if it
+admits an axiom set semidecided by one oracle program from every binary
+representation of the sequence. In a cosheaf construction on a three-point
+space, the propositional theory at each endpoint is consistent, and every
+consistent extension in its language with a computably enumerable axiom
+set is incomplete.
 \end{abstract}

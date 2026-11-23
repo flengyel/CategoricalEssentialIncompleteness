@@ -16,12 +16,22 @@ and assume that $\mathcal D$ is regular with disjoint stable finite
 coproducts. Assume also that every monomorphism $m:A\hookrightarrow X$
 of $\mathcal D$ has a partial inverse $m^\dagger:X\rightharpoonup A$
 with $m^\dagger m=1_A$ and $mm^\dagger=\overline{m^\dagger}$.
-Splitting the restriction idempotent of each partial morphism gives an equivalence
+A monic span $X\xleftarrow{m}A\xrightarrow{f}Y$ in $\mathcal D$
+represents $fm^\dagger$ in $\mathscr C$. Conversely, if
+$h:X\rightharpoonup Y$ and $\bar h=mm^\dagger$, then $hm$ is total
+and $h=(hm)m^\dagger$. Any two splittings of $\bar h$ give isomorphic
+spans. For a second span $Y\xleftarrow{n}B\xrightarrow{g}Z$,
+write $a:A\times_Y B\to A$ and $b:A\times_Y B\to B$ for the
+pullback projections. The monomorphism $a$ represents the domain of
+$n^\dagger f$. Indeed, a total $k:W\to A$ factors through $a$
+if and only if $fk$ factors through $n$, equivalently if and only if
+$n^\dagger f k$ is total. Hence $a a^\dagger=\overline{n^\dagger f}$.
+Since $n^\dagger f a=b$, we have $n^\dagger f=b a^\dagger$ and
+\[
+ (g n^\dagger)(f m^\dagger)=(g b)(m a)^\dagger .
+\]
+The identity span represents the identity morphism, giving
 $\mathscr C\simeq\Par(\mathcal D,\Mono)$.
-Indeed, a span $X\xleftarrow{m}A\xrightarrow{f}Y$ represents
-$fm^\dagger$. Conversely, splitting the restriction of a morphism gives
-such a span. The restriction identities and the pullback property
-identify composites under these assignments.
 
 For $T\in\mathcal D$, set
 \[
@@ -197,10 +207,14 @@ the functor $\Sigma_i$ can be written
 \[
  \Split(\mathscr R[T])\xrightarrow{\Sigma_i}\Split(\mathscr R[U]).
 \]
-It preserves binary restriction products. For proper $i$, its image of
-the restriction terminal object $1_T:T\to T$ is $i:T\to U$, so it
-does not preserve the restriction terminal object. At $q:Y\to U$, the unit is total precisely when $q$ factors through
-$i:T\hookrightarrow U$.
+For $p:X\to T$ and $q:Y\to T$, monicity of $i$ gives
+$ipx=iqy$ if and only if $px=qy$ for every $x:W\to X$, $y:W\to Y$.
+Thus $X\times_T Y\to X\times_U Y$ is an isomorphism preserving the
+two projections, so $\Sigma_i$ preserves binary restriction products.
+Its value at the restriction terminal object $1_T:T\to T$ is $i:T\to U$,
+which is restriction terminal precisely when $i$ is an isomorphism.
+For $q:Y\to U$, the unit $m^\dagger$ above is total precisely when
+$m:T\times_UY\to Y$ is an isomorphism, that is, when $q$ factors through $i$.
 
 \subsection{Essential incompleteness in the associated category}
 

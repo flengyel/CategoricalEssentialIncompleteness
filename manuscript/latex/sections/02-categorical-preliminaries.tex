@@ -125,7 +125,7 @@ with
  \overline{\langle f,g\rangle}=\bar f\bar g.
 \]
 For $f:X\rightharpoonup X'$ and $g:Y\rightharpoonup Y'$, their product is
-$\langle f\pi_1,g\pi_2\rangle:X\times Y\rightharpoonup X'\times Y'$.
+$f\times g=\langle f\pi_1,g\pi_2\rangle:X\times Y\rightharpoonup X'\times Y'$.
 The total diagonal is
 $\Delta_X=\langle1_X,1_X\rangle:X\to X\times X$.
 A restriction category has a $P$-category structure if and only if
@@ -138,8 +138,11 @@ For morphisms $f:X\rightharpoonup Z$ and $g:Y\rightharpoonup Z$,
 write $[f,g]:X+Y\rightharpoonup Z$ for their copairing.
 The \emph{codiagonal} is
 $\nabla_X=[1_X,1_X]:X+X\to X$.
-In a category with ranges and restriction coproducts,
-$a\vee b=\ran[a,b]$ for restriction idempotents on the same object.
+For restriction idempotents $a,b$ on $X$, their copairing is
+$[a,b]:X+X\rightharpoonup X$. A restriction idempotent $r$ on $X$
+satisfies $r[a,b]=[a,b]$ precisely when $ra=a$ and $rb=b$, by the
+coproduct property. The least such $r$ is therefore
+$\ran[a,b]=a\vee b$ whenever ranges exist.
 
 A range functor in the sense of Cockett, Guo, and Hofstra
 \cite[p.~424]{CGHRangeI} preserves restrictions and ranges. Following
@@ -149,9 +152,16 @@ restriction zeros and binary restriction coproducts. In particular, the canonica
 $\chi_{X,Y}=[F i_0,F i_1]:FX+FY\to F(X+Y)$
 is an isomorphism, and
 $F[f,g]\chi_{X,Y}=[Ff,Fg]$ for $f:X\rightharpoonup Z$ and
-$g:Y\rightharpoonup Z$. A range functor preserves binary
-joins of restriction idempotents by the preceding formula, and hence
-complementary pairs.
+$g:Y\rightharpoonup Z$. For restriction idempotents $a,b$ on $X$, put
+$h=F[a,b]:F(X+X)\rightharpoonup FX$ and $u=\chi_{X,X}$.
+For every restriction idempotent $r$ on $FX$, one has
+$rhu=hu$ if and only if $rh=h$, since $u$ is an isomorphism.
+Thus $\ran(h)=\ran(hu)$, giving
+\[
+ F(a\vee b)=\ran(F[a,b])=\ran[F(a),F(b)]=F(a)\vee F(b).
+\]
+Since $F$ also preserves composition, zeros, and identities, it sends
+complementary pairs to complementary pairs.
 It need not preserve restriction products. Let $\Pfn$ denote the
 category of sets and partial functions. For example, the functor
 $F:\Pfn\to\Pfn$ given by $F(X)=X\times\{0,1\}$ and

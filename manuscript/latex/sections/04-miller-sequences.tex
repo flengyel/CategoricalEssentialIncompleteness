@@ -66,9 +66,23 @@ many coordinates. For each affected coordinate $n$, complete the
 prescribed binary digits to a finite initial segment of
 $j\mapsto p(\langle n,j\rangle)$. There are only finitely many such
 completions.
-From a binary representation $p$ of $z$, strict rational inequalities for the coordinates
-of $z$ are semidecidable. We can therefore enumerate all cylinders
-$[\sigma]$ for which $z\notin\rho([\sigma])$. Their union is exactly
+Given $p\in P_z$, put
+\[
+ b_{n,N}(p)=\sum_{j<N}p(\langle n,j\rangle)2^{-j-1}.
+\]
+Then $b_{n,N}(p)\le z(n)\le b_{n,N}(p)+2^{-N}$. For $c\in\mathbb Q$,
+\[
+ \begin{aligned}
+ c<z(n)&\iff(\exists N)\ c<b_{n,N}(p),\\
+ z(n)<c&\iff(\exists N)\ b_{n,N}(p)+2^{-N}<c .
+ \end{aligned}
+\]
+These tests use finitely many bits for each $N$ and work for every
+$p\in P_z$, including either expansion of a dyadic coordinate.
+A point lies outside a closed box if it violates one of its interval
+bounds. Running the tests for all boxes in $\rho([\sigma])$ therefore
+enumerates the cylinders $[\sigma]$ for which $z\notin\rho([\sigma])$.
+Their union is exactly
 $2^{\N}\setminus P_z$: if $\rho(q)\ne z$, a sufficiently long initial
 segment of $q$ already forces a different value in one coordinate.
 
@@ -78,7 +92,9 @@ Finite halting computations enumerate this open set as a union of
 cylinders, uniformly in $e,n,m$. For each $m$, search for a finite cover
 of Cantor space by cylinders from $H_{e,n,m}$ and
 $2^{\N}\setminus P_z$, dovetailing these searches over $m$. Whether finitely
-many cylinders cover Cantor space is decidable. Such a cover exists
+many cylinders cover Cantor space is decidable. For a nonempty list,
+check whether every word of the maximum listed length extends a listed
+prefix. Such a cover exists
 exactly when $P_z\subseteq H_{e,n,m}$, by compactness. Since $P_z$ is
 nonempty, at most one $m$ satisfies this condition. Thus the search
 computes $\tau_z$ from every binary representation of $z$.
@@ -226,18 +242,25 @@ $\sum_n2^{-n-1}\operatorname{dist}(z(n),I_n)$ over those coordinates.
 Distance to a nonempty finite union is the minimum of these distances.
 Define $\delta_{e,m,t}:Q\to[0,1]$ by
 $\delta_{e,m,t}(z)=d(z,K_{e,m,t})$ when $K_{e,m,t}$ is nonempty, and
-$\delta_{e,m,t}(z)=1$ when it is empty. These functions are uniformly
-computable and continuous, and $\delta_{e,m,t}(z)>0$ exactly when
-$z\notin K_{e,m,t}$.
+$\delta_{e,m,t}(z)=1$ when it is empty. In each box formula, replacing
+$z(n)$ by $b_{n,N}(p)$ changes the distance by at most
+$2^{-N}\sum_n2^{-n-1}=2^{-N}$, since distance to an interval is
+$1$-Lipschitz. Taking a finite minimum preserves this error bound.
+Thus the distances are computable uniformly in $e,m,t$ from each
+$p\in P_z$. They are continuous, and $\delta_{e,m,t}(z)>0$ exactly
+when $z\notin K_{e,m,t}$.
 For each $i$, take a fixed recursive enumeration
 $(m_j,t_j)_{j\geq0}$ of all pairs with $m_j\equiv i\pmod2$, and define
 \[
  g_e^i:Q\to[0,1],\qquad
  g_e^i(z)=\sum_{j\geq0}2^{-j-1}\delta_{e,m_j,t_j}(z).
 \]
-The tail bound is uniform, so $g_e^i$ is computable and continuous,
-with $0\leq g_e^i\leq1$ and $g_e^i(z)>0$ exactly on $U_e^i$.
-Consequently the computable continuous function
+Since $0\le\delta_{e,m,t}\le1$, the tail from $j=N$ onward is at most
+$2^{-N}$. Approximating each of the first $N$ distances to within $2^{-N}$
+gives a rational approximation to $g_e^i(z)$ with error at most
+$2^{1-N}$. This proves computability from every $p\in P_z$, and uniform
+convergence gives continuity. The sum belongs to $[0,1]$ and is positive
+exactly on $U_e^i$. The computable continuous function
 \[
  r_e:Q\to[1/4,3/4],\qquad
  r_e(z)=\frac12+\frac{g_e^1(z)-g_e^0(z)}4
@@ -672,10 +695,16 @@ In particular, $u$ is essentially incomplete and its theorem and
 refutation domains are inseparable.
 
 Let $q:1\to S$ select the code of $0=0$. Since $T_a$ proves $0=0$,
-$q$ factors as $u q_U$ for $q_U:1\to U$. Pullback along $q_U$ takes
-a family over $U$ to its fiber at this theorem. On a constant family
-$U\times Y\to U$ that fiber is canonically isomorphic to $Y$.
-Apply Theorems~\ref{thm:theory-extension}
-and~\ref{thm:associated-incompleteness}.
+$q$ factors as $u q_U$ for $q_U:1\to U$. Suppose complementary
+subobjects of $U\times S$ in the slice separated $1_U\times u$
+from $1_U\times\nu^*u$. Their inverse images along
+\[
+ \langle q_U !_S,1_S\rangle:S\longrightarrow U\times S
+\]
+would be complementary subobjects of $S$ containing $u$ and
+$\nu^*u$, respectively. This contradicts inseparability in the base.
+Theorems~\ref{thm:theory-extension} and~\ref{thm:associated-incompleteness}
+give the conclusions about the category, its internal theory, the
+partial Boolean morphism, and the comparison functor.
 \end{proof}
 

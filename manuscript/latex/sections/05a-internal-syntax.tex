@@ -91,7 +91,8 @@ $T$-provably equivalent to $\Gamma$. Conditions
  [a_\Gamma]_T=[D]_T[a_\Gamma]_T[C]_T,
  \qquad\overline{[a_\Gamma]_T}=[C]_T.
 \]
-Thus it is a total morphism between the indicated split objects.
+These are the support and totality equations for a morphism
+$(\omega,[C]_T)\to(\omega,[D]_T)$ in $\mathcal B_T$.
 The arithmetized composition equation proves functoriality.
 
 Conversely, a total morphism from $(\omega,[C]_T)$ to
@@ -380,8 +381,7 @@ remaining label lies in exactly one of the parsed children.
 The same argument gives the carrier equations for the other
 constructors. Conversely, concatenating words that each parse
 as a tree of the required sort, then appending the root node,
-recovers precisely those children. Parsing determines the child
-boundaries in both assertions.
+recovers those children in order.
 Write
 \[
  \Tm=(\omega,[\operatorname{Tm}]_T),\qquad
@@ -407,9 +407,12 @@ under parameters in the sense of Appendix~\ref{app:syntax-theories}: for every o
 its pullback to $(\mathcal B_T/P)^2$ is initial for $K_P$.
 \end{proposition}
 \begin{proof}
-The primitive-recursive constructors, restricted to their displayed
-sources, are morphisms in $\mathcal B_T$ by the constructor
-decomposition equivalences. They define a $K$-algebra.
+On a pair of morphisms $(f:X\to X',g:Y\to Y')$, the functor $K$
+acts by the identity on the symbol and variable coefficients, by $f$
+on term factors, and by $g$ on formula factors. At $(\Tm,\Fm)$, the
+constructor decomposition equivalences give the carrier conditions for
+the primitive-recursive operations on these summands. These operations
+are therefore morphisms of $\mathcal B_T$ and define a $K$-algebra.
 
 Fix an object $P$ and a $K_P$-algebra with
 carriers $\xi:X\to P$ and $\upsilon:Y\to P$. Choose graph indices for their projections and for the
@@ -431,10 +434,12 @@ one entry for each node. Each entry consists of a value in $X$ or
 $Y$, according to the node's sort, and a code of a halting computation
 of the algebra operation at that node. Its inputs
 are its label, the values already assigned to its children, and
-the fixed parameter $p$. Require the appropriate carrier and
-projection conditions for every assigned value. The last assigned
-value is $x$ or $y$, respectively. Include $P(p)$ and the appropriate
-term or formula predicate in the relation.
+the fixed parameter $p$. At a term node with value $u$, require
+$X(u)\land\Xi(u,p)$; at a formula node with value $v$, require
+$Y(v)\land\Upsilon(v,p)$. For $\operatorname{Ev}_{\mathrm{Tm}}(p,t,x)$
+require $P(p)\land\operatorname{Tm}(t)$ and root value $x$.
+For $\operatorname{Ev}_{\mathrm{Fm}}(p,a,y)$ require
+$P(p)\land\operatorname{Fm}(a)$ and root value $y$.
 
 All these requirements are $\Sigma_1$. Boundedly many carrier and
 projection requirements are combined using
@@ -629,12 +634,20 @@ $K_{V\times\Tm}$-algebra used in Appendix~\ref{app:syntax-theories}.
 By Proposition~\ref{prop:st-syntax-initiality}, its classes are
 therefore the appendix's $a_T$ and $b_F$.
 
-The two coproduct summands have decidable membership. Their inverse
-images under formula substitution partition its source in
-$\mathcal B_T$. The inverse image of the second summand is the
-complemented subobject $\Adm$. Write
-$\operatorname{Adm}(\varphi,x,t)$ for its numerical predicate. Induction in $\PA$ identifies it with the recursive
-free-for condition. At a quantifier, this condition is
+Let $D(\varphi,x,t)$ be the source predicate
+$\operatorname{Fm}(\varphi)\land V(x)\land\operatorname{Tm}(t)$.
+Let $b(\varphi,x,t)$ be the numerical tag of the result of the
+traversal, with $1$ for success and $0$ for failure. Assign tag $0$ to malformed raw input. The traversal
+parses constructor tags and tests equality of numerical labels, so
+$b$ is primitive recursive independently of signature membership. On the source $D$, induction in $\PA$
+identifies success with the free-for condition. Thus the two
+inverse images of the summands of $1+\Fm$ are represented by
+\[
+ \operatorname{Adm}(\varphi,x,t)\equiv D(\varphi,x,t)\land b(\varphi,x,t)=1,
+ \qquad D(\varphi,x,t)\land b(\varphi,x,t)=0 .
+\]
+They are complements in the subobject order of $\Fm\times V\times\Tm$.
+For a quantified formula on this source the free-for condition is
 \[
  y=x\quad\text{or}\quad
  \bigl(y\ne x\ \land\

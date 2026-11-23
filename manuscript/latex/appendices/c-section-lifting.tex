@@ -15,14 +15,17 @@ numbering of partial functions recursive relative to $K$.
 Fix a recursive bijective pairing function
 $\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
 
-The objects of $\mathcal C_K$ are the numerical carriers generated
-from $\N$ by binary Cartesian products and disjoint unions,
-with fixed recursive codings. A morphism $f:X\rightharpoonup Y$ is a partial function whose
+The objects of $\mathcal C_K$ are generated from $\N$ by binary
+products and disjoint unions. For each such object $X$, let
+$\gamma_X:X\to\N$ be the coding bijection obtained from the identity
+on $\N$, the pairing function for products, and the even and odd
+tags for disjoint unions. Each coding has a recursive inverse. A morphism $f:X\rightharpoonup Y$ is a partial function whose
 domain $D_f$ is c.e.\ relative to $K$ and which has an ordinary partial
 recursive extension $f_0:X\rightharpoonup Y$. Thus $f_0$ is defined
 on every element of $D_f$ and agrees with $f$ there. Equality is equality
 of partial-function graphs. The total morphisms of $\mathcal C_K$ are exactly
-the ordinary total recursive functions between the indicated types.
+the total functions $f:X\to Y$ for which
+$\gamma_Y f\gamma_X^{-1}:\N\to\N$ is recursive.
 
 Let $F:\mathcal C_K\to\Pfn$ send each numerical carrier to the same
 set and each morphism to the same partial function.
@@ -112,8 +115,11 @@ used when the resulting program runs. Thus the function
 $r:\N\to\N$ given by $r(z)=\langle e(z),a(z)\rangle$ is a total
 morphism of $\mathcal C_K$, and
 $v=\tau_K(r\times1_{\N})$, with equality of domains and values.
-The fixed recursive codings give the same argument for every parameter
-object of $\mathcal C_K$. Hence $\tau_K$ is a Turing morphism.
+For $w:X\times\N\rightharpoonup\N$, apply this construction to
+$v=w(\gamma_X^{-1}\times1_{\N})$. The parameter for $w$ is
+$r\gamma_X:X\to\N$, since
+$\tau_K((r\gamma_X)\times1_{\N})=v(\gamma_X\times1_{\N})=w$.
+Hence $\tau_K$ is a Turing morphism.
 
 The functor $F$ is faithful and preserves restrictions, zeros,
 ranges, binary restriction products, and coproducts. It also reflects
@@ -185,7 +191,7 @@ would decide membership in $A$ by the summand of its output in the
 fixed coproduct coding.
 Hence no $s$ with the prescribed inverse images lifts.
 
-Finally, the morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
+The morphisms $i_1 1_A$ and $i_0 1_{A^c}$ belong to
 $\mathcal C_K$: they have the total recursive extensions $i_1$
 and $i_0$, respectively. Their domains are disjoint. Any common
 upper bound would agree with the first morphism on $A$ and the second
@@ -198,8 +204,9 @@ Its target $\Pfn$ is split: each partial identity splits through its
 domain. Singleton partial identities are connected and jointly
 epimorphic, so the target is locally connected. For a partial
 monomorphism $p:X\rightharpoonup Y$, testing on maps $1\to X$
-shows that $p$ is injective on $D_p$. Its inverse on $p(D_p)$
-is a section, giving weak choice.
+shows that $p$ is injective on $D_p$. Define $s:Y\rightharpoonup X$
+on $p(D_p)$ by $s(p(x))=x$ for $x\in D_p$. Then
+$ps=1_{p(D_p)}=\bar s$ and $psp=p$, as weak choice requires.
 For every $u:\N\rightharpoonup\N$ in $\mathcal C_K$, the Turing
 property applied to $u\pi_2$, where $\pi_2(z,x)=x$, gives a total
 $e:\N\to\N$ with $\tau_K(e\times1_{\N})=u\pi_2$.

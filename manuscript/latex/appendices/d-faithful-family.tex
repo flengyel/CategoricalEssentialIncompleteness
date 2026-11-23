@@ -38,11 +38,15 @@ $F_M([e]_T)\ne F_M([f]_T)$, so $F_T([e]_T)\ne F_T([f]_T)$.
 
 A restriction idempotent in $\mathcal D_T$ is a family of partial
 identities on subsets. Its splitting uses those subsets as the
-coordinate sets. For an object $A=(A_M)_M$, take the partial identity
-on a singleton $\{x\}\subseteq A_M$ at one coordinate $M$ and the zero
-morphism elsewhere. This restriction idempotent is connected. These
-restriction idempotents detect the definedness and value of every coordinate of a partial morphism. Hence
-$\mathcal D_T$ is locally connected.
+coordinate sets. For $M\in\mathcal M_T$ and $x\in A_M$, let $e_{M,x}$ be the
+partial identity on $\{x\}$ at $M$ and zero elsewhere.
+Every idempotent below $e_{M,x}$ is zero or $e_{M,x}$, since a subset
+of $\{x\}$ is empty or all of $\{x\}$. Hence $e_{M,x}$ is connected.
+For $f,g:A\rightharpoonup B$, equality
+$fe_{M,x}=ge_{M,x}$ means $f_M(x)$ and $g_M(x)$ are both undefined
+or are defined and equal. If these equations hold for every $M,x$,
+then $f_M=g_M$ for every $M$, whence $f=g$.
+This proves local connectedness.
 
 A partial monomorphism has injective coordinate functions: test its
 defining property on objects with a singleton at one coordinate
@@ -59,11 +63,12 @@ is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
 For an inclusion $T\subseteq T'$ of consistent theories, define
 $Q_{T,T'}:S_T\to S_{T'}$ by $Q_{T,T'}X=X$ and
 $Q_{T,T'}[e]_T=[e]_{T'}$.
-Provability is monotone, so this is a well-defined covariant functor.
+Every $T$-proof of graph equivalence is a $T'$-proof; composition
+uses the same program index in both quotients.
 It preserves restrictions, zeros, ranges, binary restriction products
 and coproducts, and satisfies $Q_{T,T'}(\tau_T)=\tau_{T'}$.
 Since $\mathcal M_{T'}\subseteq\mathcal M_T$, restriction of families
-defines a covariant projection
+defines the projection
 $\pi_{T,T'}:\mathcal D_T\to\mathcal D_{T'}$. Fixing the assignments
 $X\mapsto X_M$ once for each arithmetic structure gives a strictly
 commuting square:

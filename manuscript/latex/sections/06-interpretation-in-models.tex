@@ -43,13 +43,16 @@ The bijection $\gamma_Y^M$ converts that code into the intermediate
 element of $Y_M$, proving preservation of composition. The identity
 graph gives the identity function on $X_M$.
 
-The definedness predicate $\exists y\,G_e(x,y)$ gives the interpreted
-function's domain. Similarly,
+For $[e]_T:X\rightharpoonup Y$ the domain is
+$\{x\in X_M:M\models\exists b\,G_e(\gamma_X^M(x),b)\}$.
+Every witness $a\in|M|$ to $R_e(\gamma_Y^M(y))$ is the code
+of $(\gamma_X^M)^{-1}(a)$, so
 \[
  \{y\in Y_M:M\models R_e(\gamma_Y^M(y))\}
  =\operatorname{im}(F_M[e]_T),
 \]
-so ranges are preserved. False predicates, conjunction, and disjunction
+where $R_e(b)\equiv\exists a\,G_e(a,b)$. Hence $F_M$ preserves ranges.
+False predicates, conjunction, and disjunction
 give zeros, intersections, and unions. The PA-provable product and
 coproduct graph equations give the corresponding operations on
 partial functions.
@@ -135,7 +138,7 @@ $\bar f=e$, so the domain is all of $D_e$. This restriction of
 $F_M(f)$ is the function $G_M(f):D_e\to D_d$.
 Let $J_T:\mathcal P_T\to\mathcal B_T$ denote the equivalence
 constructed in Lemma~\ref{lem:syntactic-total-category}. Thus
-$J_T(C)=(\omega,[C]_T)$. With the indicated splittings,
+$J_T(C)=(\omega,[C]_T)$. Splitting by domain inclusions gives
 \[
  G_MJ_T(C)=C(M):=\{a\in |M|:M\models C(a)\},
 \]
@@ -170,8 +173,9 @@ over all of $|M|$.
 
 Fix the arithmetic signature and the variable object
 $V=(\omega,1_\omega)\in\mathcal B_{\PA}$, so that
-$G_{\N}V=\N$. Use the syntax and derivation objects
-constructed in Section~\ref{sec:st-parameterized-syntax}. Let
+$G_{\N}V=\N$. Use the syntax of
+Section~\ref{sec:st-parameterized-syntax} and the proof-tree
+algebra of Lemma~\ref{lem:syntactic-derivation-initiality}. Let
 $S\hookrightarrow\Fm$ be the sentence object. Let $\Gamma$ be
 a computably enumerable set of arithmetic sentences, choose a
 $\Sigma_1$ predicate $\operatorname{Ax}_\Gamma(z)$ enumerating
@@ -448,16 +452,17 @@ Lemma~\ref{lem:syntactic-total-category}, and set
        \mathscr U(G_{\N}(u_B^{-1})):
        \mathscr U(G_{\N}B)\longrightarrow G_MB.
 \]
-Fullness of $J_{\PA}$ and naturality on $\mathcal P_{\PA}$ imply
-naturality for every $f:B\to B'$ in $\mathcal B_{\PA}$:
+For $f:B\to B'$, full faithfulness gives a unique
+$g:C_B\to C_{B'}$ with $J_{\PA}(g)=u_{B'}^{-1}fu_B$.
+Apply naturality on predicates to $g$, compose on the left with
+$G_M(u_{B'})$ and on the right with $\mathscr U(G_{\N}(u_B^{-1}))$.
+This gives
 \[
  G_M(f)\eta_B=\eta_{B'}\mathscr U(G_{\N}(f)):
        \mathscr U(G_{\N}B)\longrightarrow G_MB'.
 \]
-They also show that changing $u_B$ does not change $\eta_B$: the
-transition
-isomorphism between two predicate presentations is a morphism in
-the image of $J_{\PA}$.
+Taking $f=1_B$ and using two presentations of $B$ in this calculation
+gives equality of the two formulas for $\eta_B$.
 \end{proof}
 
 \begin{theorem}[Soundness in the arithmetic ultrapower]

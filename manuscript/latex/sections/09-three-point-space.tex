@@ -783,16 +783,20 @@ Leastness of the generated formula theory proves
 \[
  T_{\mathrm f}^F\le r^*T_{\mathrm p}.
 \]
-Every propositional derivation embeds in the first-order calculus.
-Pulling the last inclusion back along $s_{\mathrm f}j$, and using
-$r s_{\mathrm f}j=1_S$, proves
-$j^*T_{\mathrm f}=T_{\mathrm p}$. Since $r$ commutes with
-negation and $T_{\mathrm p}$ is consistent, the same inclusion
-proves consistency of $T_{\mathrm f}$.
+The inclusion $j$ preserves the signed axioms, the three propositional
+schemes, and modus ponens, so $T_{\mathrm p}\le j^*T_{\mathrm f}$.
+Put $k=r s_{\mathrm f}:S_{\mathrm f}\to S$. Restricting the formula
+inclusion to sentences gives $T_{\mathrm f}\le k^*T_{\mathrm p}$.
+Since $kj=1_S$, this gives $j^*T_{\mathrm f}\le T_{\mathrm p}$.
+Writing $\nu_{\mathrm f}$ for sentence negation, we have
+$k\nu_{\mathrm f}=\nu k$, and hence
+\[
+ T_{\mathrm f}\wedge\nu_{\mathrm f}^*T_{\mathrm f}
+ \le k^*(T_{\mathrm p}\wedge\nu^*T_{\mathrm p})=\bot .
+\]
 
 Let $U\hookrightarrow S_{\mathrm f}$ be a consistent closed extension of
-$T_{\mathrm f}$, and let $\nu_{\mathrm f}:S_{\mathrm f}\to S_{\mathrm f}$
-be sentence negation. The positive and negative axioms give
+$T_{\mathrm f}$. The positive and negative axioms give
 \[
  A\leq \theta_{\mathrm f}^{*}U,\qquad
  B\leq \theta_{\mathrm f}^{*}\nu_{\mathrm f}^{*}U .
@@ -846,11 +850,16 @@ $\mathcal A\simeq\Split(\mathscr R_X)$.
 Proposition~\ref{prop:fork-first-order-realization} supplies the
 parameter-stable syntax and deduction required by the general
 theorem. The global sentence $j(\top)$ is a logical theorem, so
-it factors through $u$ and gives a total morphism $1\to U$.
+it factors through $u$ by a total morphism $q:1\to U$.
 Proposition~\ref{prop:fork-first-order-conservative} and
 Corollary~\ref{cor:domain-incompleteness} show that every such
 $u$ is essentially incomplete and that its theorem and
-refutation domains are inseparable in $\mathcal A$.
+refutation domains are inseparable in $\mathcal A$. If the constant
+domains had a separator in the slice, its inverse image along
+$\langle q !_{S_{\mathrm f}},1_{S_{\mathrm f}}\rangle:
+ S_{\mathrm f}\to U\times S_{\mathrm f}$ would separate $u$ and
+$\nu_{\mathrm f}^*u$ in $\mathcal A$.
 Theorems~\ref{thm:theory-extension} and
-\ref{thm:associated-incompleteness} give the assertions.
+\ref{thm:associated-incompleteness} give the assertions about the
+comparison functor and essential incompleteness.
 \end{proof}

@@ -76,9 +76,9 @@ $F:\mathcal B_{\mathrm{rec}}\to\mathcal C$ by
 for a total split morphism $f:(X,e)\to(Y,d)$, so that
 $F(f):F(X,e)\to F(Y,d)$ belongs to $\mathcal C$.
 The restriction equation $\bar f=e$ makes the displayed function defined
-on all of $D_e$, and $f=dfe$ makes its values belong to $D_d$. Composition and identities
-are the corresponding partial-function equations in the numerical
-coordinates.
+on all of $D_e$, and $f=dfe$ makes its values belong to $D_d$. In the composite $F(g)F(f)$ the intermediate coding and its inverse
+cancel, so $F(g)F(f)=F(gf)$. The identity of $(X,e)$ restricts to
+the identity function on $D_e$.
 Tuple decoding gives isomorphisms
 \[
  u_C:FQ(C)\xrightarrow{\cong}C
@@ -107,8 +107,9 @@ concatenated tuples in $\N^{m+n}$ for objects of dimensions $m,n$. If $f,g:C\to 
 equalizer is the object of the same dimension as $C$ with carrier
 $\{x\in|C|:f(x)=g(x)\}$, included in $C$. This carrier is c.e.:
 enumerate $|C|$, run the two computations in parallel, and compare
-their outputs. The product and equalizer universal morphisms are the
-corresponding computable pairings and restrictions.
+their outputs. The pairing concatenates the two output tuples. A morphism $h:Z\to C$
+with $fh=gh$ factors through the equalizer by the same program for $h$,
+with its values regarded as elements of the equalizer carrier.
 
 The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
 $D=(n,D_0)$, choose their coproduct as the object of dimension one
@@ -453,7 +454,7 @@ $h_A:P_A^{\mathrm{all}}\to Q$ in $\mathcal C_{\mathrm{rec}}$ with
 The second equation is in $\mathcal C_{\mathrm{rec}}/\Fm$, from
 $H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})$ to $(Q,q)$.
 Root decomposition proves the equation, and induction on tree
-size proves uniqueness of $h_A$. 
+size proves uniqueness of $h_A$.
 \end{proof}
 
 For arithmetic, choose the signature labels and numerical
@@ -510,12 +511,21 @@ rule constructions give bijections
  \rho_n:|R_n^{\mathrm{num}}|\xrightarrow{\cong}
                   G_{\N}R_n^{\mathrm{syn}}\quad(0\le n\le2).
 \]
-They preserve each coproduct summand and match the constructor parameters
-and tuple entries of corresponding rule instances. These maps and their
-inverses are computable on their carriers by the tuple codings and
-their inverses, with a finite case distinction over the summands.
-The rule membership conditions coincide because they use the same
-syntax operations and axiom predicate. Let
+Here $\rho_1$ sends the generalization label $(x,\varphi)$ to the
+interpreted pair with entries $x,\varphi$. For modus ponens,
+$\rho_2$ sends $(\varphi,\psi)$ to the pair with these entries;
+the ordered premises are $\varphi,\varphi\Rightarrow\psi$ and the
+conclusion is $\psi$ in both presentations.
+For $n=0$, retain the coproduct tag of the axiom.
+On a nonlogical axiom, retain its sentence code.
+For a logical scheme, decode its parameters and encode them in the
+target product. Instantiation requires that substitution succeed,
+equality substitution requires success for both terms, and quantifier
+distribution requires that the variable be absent from the antecedent.
+The common substitution and occurrence-list computations above
+preserve these tests in both directions. Reversing the product
+encodings therefore gives the inverse on each summand. These
+procedures are computable on the carriers. Let
 $\chi_n:G_{\N}((\Fm^{\mathrm{syn}})^n)\xrightarrow{\cong}|\Fm|^n$
 be the finite-product comparison, using the fixed equality
 $G_{\N}\Fm^{\mathrm{syn}}=|\Fm|$. The definitions give

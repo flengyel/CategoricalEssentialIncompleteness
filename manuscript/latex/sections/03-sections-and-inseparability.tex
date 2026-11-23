@@ -1,10 +1,9 @@
 \section{Diagonal comparison and complementary conditionals}\label{sec:lifting}
 
-The comparison theorem constructs a total source morphism whose
-interpretation has zero inverse images of two disjoint target restriction
-idempotents. It uses a lift of a partial morphism whose summand inverse
-images are the target idempotents in reverse order. Complementary source
-conditionals then give an inseparability criterion.
+Let $P,N$ contain the images of the two domains of a diagonal computation
+under a range functor $F:\mathscr R\to\mathcal A$. If a
+partial morphism with summand inverse images $N,P$ lifts along $F$,
+we construct a total $g$ in $\mathscr R$ with $(Fg)^*P=(Fg)^*N=0$.
 
 For a coproduct $Y+Z$, let
 $\varepsilon_0=1_Y+0_Z$ and $\varepsilon_1=0_Y+1_Z$ be its summand
@@ -123,16 +122,20 @@ The diagonal domains are disjoint, since
 \[
  a_0a_1=h^*(\varepsilon_0\varepsilon_1)=h^*0_{U+U}=0_U.
 \]
-The morphisms $\varepsilon_0\ell_c$ and $i_0c'$ agree after
-composition with both $c$ and $c'$. Hence they agree after
-$[c,c']:U+U\rightharpoonup U$. Its range is
-$c\vee c'=1_U$, so the agreement law for ranges gives
-$\varepsilon_0\ell_c=i_0c'$.
-The same argument gives $\varepsilon_1\ell_c=i_1c$.
+Suppose $c,c'$ separate $a_0,a_1$. The defining equations of
+$\ell_c$ give
+\[
+ (\varepsilon_0\ell_c)c=0=(i_0c')c,\qquad
+ (\varepsilon_0\ell_c)c'=i_0c'=(i_0c')c'.
+\]
+Thus $\varepsilon_0\ell_c$ and $i_0c'$ agree after precomposition
+with $[c,c']:U+U\rightharpoonup U$. Its range is
+$c\vee c'=1_U$, so the agreement law gives $\varepsilon_0\ell_c=i_0c'$.
+Interchanging the summands gives $\varepsilon_1\ell_c=i_1c$.
 Taking restrictions yields $\ell_c^*\varepsilon_0=c'$ and
 $\ell_c^*\varepsilon_1=c$.
 
-If $c,c'$ separated $a_0,a_1$, put $P=F(c)$ and $N=F(c')$.
+Put $P=F(c)$ and $N=F(c')$.
 These are complementary target restriction idempotents.
 For the canonical coproduct isomorphism
 $\chi_{U,U}:FU+FU\to F(U+U)$, define

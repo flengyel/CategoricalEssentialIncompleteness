@@ -28,9 +28,19 @@ in $L$ or $R$. Thus a cocone on the cover is determined by its maps
 on $L$ and $R$ agreeing on $D$.
 Given $A\xleftarrow{r}C\xrightarrow{s}B$, take the value at $X$ to
 be $A\amalg_C B$ and the maps from $A,B$ to be its coprojections.
-A natural transformation of such diagrams induces a unique map of pushouts.
-This defines the quasi-inverse on morphisms; the same universal
-property gives both natural isomorphisms required for an equivalence.
+A morphism to a second diagram $A'\xleftarrow{r'}C'\xrightarrow{s'}B'$
+consists of $u:C\to C'$, $v:A\to A'$, and $w:B\to B'$ with
+$vr=r'u$ and $ws=s'u$. Its component at $X$ is the unique map
+$h:A\amalg_C B\to A'\amalg_{C'}B'$ satisfying
+\[
+ h\iota_A=\iota_{A'}v,\qquad h\iota_B=\iota_{B'}w,
+\]
+where $\iota$ denotes a coprojection. Uniqueness gives preservation of
+identities and composition. Restricting this extension to $D,L,R$
+recovers the original diagram and its morphisms. For a cosheaf $F$,
+the comparison from the extension of its restriction to $F$ is the
+identity on the proper opens and the canonical bijection above at $X$.
+Naturality at $X$ follows from the two equations for $h$.
 \end{proof}
 
 For an object $Y$ of $\mathcal E$, the pushout has a

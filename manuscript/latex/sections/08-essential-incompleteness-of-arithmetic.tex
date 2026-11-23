@@ -369,12 +369,19 @@ consistent and essentially incomplete.
 \begin{proof}
 Suppose that complementary restriction idempotents $d,d'$ on
 $\omega$ separate $a_0,a_1$, with $a_0\le d$ and $a_1\le d'$.
-The disjoint stable coproducts and partial inverses in
-$\mathcal B_{\PA}$ give the total conditional
-$\ell:\omega\to\omega+\omega$ that is the second coproduct
-injection on $d$ and the first on $d'$. Its source and target
-are objects of $S_{\PA}$, which is full in its restriction
-splitting, so $\ell$ is represented in $S_{\PA}$.
+Let $m:C\hookrightarrow\omega$ and $m':C'\hookrightarrow\omega$
+be the total inclusions of their splitting objects in $\mathscr C_{\PA}$.
+In $\mathcal B_{\PA}$ the subobjects are complementary, so
+$[m,m']:C+C'\to\omega$ is an isomorphism.
+For the injections $i_0,i_1:\omega\to\omega+\omega$, put
+\[
+ \ell=[i_1m,i_0m'][m,m']^{-1}:\omega\to\omega+\omega.
+\]
+Thus $\ell m=i_1m$ and $\ell m'=i_0m'$.
+Its source and target in the splitting are
+$(\omega,1_\omega)$ and $(\omega+\omega,1_{\omega+\omega})$.
+Between identity splittings the morphisms and their restrictions are
+those of $S_{\PA}$, so $\ell$ is total in $S_{\PA}$.
 Apply the Turing property to the total morphism
 $b^{-1}\ell\pi_2:\omega\times\omega\to\omega$.
 It gives a total $g:\omega\to\omega$ with

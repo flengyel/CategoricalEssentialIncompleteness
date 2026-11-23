@@ -2,44 +2,47 @@
 
 We realize Di Paola and Heller's objective to give an algebraic account
 of generalized incompleteness theorems in recursion categories.
-In the restriction idempotent completion of a recursion category,
-two disjoint domains on an object $X$ generate a first-order theory
-internal to the category of total morphisms. If the theory is consistent, it is
-essentially incomplete exactly when the domains are inseparable.
-The atomic sentence morphism $\theta_X:X\to S_X$ sends a family of indices $x:W\to X$ to the family $\theta_Xx:W\to S_X$.
-The nonlogical axioms assert the atoms on the first domain and the negations
-of the atoms on the second.
-On pairs generating consistent theories, the construction is left adjoint
-to the functor taking a consistent internal theory to its theorem and
-refutation subobjects. We assume that the total category is regular with
-disjoint pullback-stable finite coproducts and that its monomorphisms have partial inverses in the
-completion. We take a variable object with decidable equality and assume
-that the syntax and list algebras are stable under parameters. For each
-presentation, we assume an initial derivation algebra for every axiom subobject.
+Let $a,b$ be disjoint domains on an object $X$ in the restriction
+idempotent completion of a recursion category. They generate a first-order
+theory internal to the total category of the completion. The atomic sentence
+morphism $\theta_X:X\to S_X$ takes each generalized index $x:W\to X$ to
+the sentence $\theta_Xx:W\to S_X$ over $W$. The theory asserts the
+atoms on $a$ and the negations of the atoms on $b$.
+If the theory is consistent, it is essentially incomplete if and only if
+no complementary domains $C,D$ on $X$ satisfy $a\leq C$ and $b\leq D$.
+Here essential incompleteness means that every consistent closed extension
+in the same language is incomplete.
 
-If $t:T\hookrightarrow S$ is the theorem subobject of a consistent theory,
-partial maps in the slice over $T$ form a Turing category.
-With parameterized deduction in the slices and a chosen global logical
-theorem, the theory is essentially incomplete exactly when every consistent
-closed extension of $1_T\times t:T\times T\hookrightarrow T\times S$ in
-that slice is incomplete.
+On pairs generating consistent theories, generation is left adjoint to
+the functor taking a consistent theory to its theorem and refutation
+subobjects. The total category is assumed regular with disjoint,
+pullback-stable finite coproducts. Its monomorphisms have partial
+inverses in the completion. The variable object has decidable equality,
+the syntax and list algebras are stable under parameters, and each
+presentation has an initial derivation algebra for every axiom subobject.
 
-In the completed syntactic recursion category for Peano arithmetic (PA), the
-numerical interpretation of one total morphism takes each index for a
+For a theory $t:T\hookrightarrow S$, partial maps in the slice over $T$
+form a Turing category. Assume parameterized deduction in the slices and
+a logical theorem $\lambda:1\to S$ factoring through each consistent theory.
+Then passage from $t$ to its constant family
+$1_T\times t:T\times T\hookrightarrow T\times S$ preserves and reflects
+essential incompleteness of consistent theories.
+
+In the completed syntactic recursion category for Peano arithmetic (PA),
+the numerical interpretation of one total morphism sends each index for a
 computably enumerable axiom presentation of a consistent extension of PA
-to the code of a sentence independent of that extension.
-For a Miller sequence, we expand the theory of real closed
-ordered fields by constants naming its terms and axioms giving their
-strict rational bounds.
-Every consistent extension in this language is incomplete if a single
-oracle program semidecides its axioms from every binary representation
-of the sequence.
-In a cosheaf construction on a three-point space, each endpoint has a
-consistent propositional theory. Every consistent extension in the same
-language with a computably enumerable axiom set is incomplete.
+to the code of an independent sentence for that extension.
+For a Miller sequence, we expand the theory of real closed ordered fields
+by constants naming its terms and axioms giving their strict rational
+bounds. Every consistent extension in this language is incomplete if it
+admits an axiom set semidecided by one oracle program from every binary
+representation of the sequence. In a cosheaf construction on a three-point
+space, the propositional theory at each endpoint is consistent, and every
+consistent extension in its language with a computably enumerable axiom
+set is incomplete.
 
-The current manuscript is **version 76**,
-dated 22 November 2026. The [v76 comparison](docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md) gives the hypotheses on first-order presentations and the transport of closed theories in a slice. The [v75 section-by-section review](docs/reviews/V75_MATHEMATICAL_EXPOSITION.md) records the corrections to the proofs and their correspondence with Lean. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
+The current manuscript is **version 77**,
+dated 22 November 2026. The [v77 manuscript review](docs/reviews/V77_MANUSCRIPT_REVIEW.md) records the changes and their scope. The [v76 comparison](docs/reviews/V76_HYPOTHESES_AND_PROOF_COMPARISONS.md) gives the hypotheses on first-order presentations and the transport of closed theories in a slice. The [v75 section-by-section review](docs/reviews/V75_MATHEMATICAL_EXPOSITION.md) records the corrections to the proofs and their correspondence with Lean. Appendix E cites the theorem declarations registered in [Palomar version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). The registered source is manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`, tagged `cei-v72-palomar-v3`. [Registration record](docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md)
 
 The [first-order fork proof](Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplicationChecks.lean)
 completes Proposition 10.8. The generated first-order theory restricts to the
@@ -49,14 +52,14 @@ with computably enumerable axioms is incomplete.
 
 | Item | Location |
 | --- | --- |
-| Current PDF | [logical_consequence_and_essential_incompleteness_v76.pdf](manuscript/logical_consequence_and_essential_incompleteness_v76.pdf) |
+| Current PDF | [logical_consequence_and_essential_incompleteness_v77.pdf](manuscript/logical_consequence_and_essential_incompleteness_v77.pdf) |
 | LaTeX entry point | [manuscript/latex/main.tex](manuscript/latex/main.tex) |
 | All LaTeX sources | [manuscript/latex/](manuscript/latex/) |
-| Complete source ZIP | [logical_consequence_v76_source.zip](manuscript/logical_consequence_v76_source.zip) |
+| Complete source ZIP | [logical_consequence_v77_source.zip](manuscript/logical_consequence_v77_source.zip) |
 | Earlier manuscripts and source packages | [manuscript/archive/](manuscript/archive/) |
 | Palomar abstract | [docs/PALOMAR_ABSTRACT.txt](docs/PALOMAR_ABSTRACT.txt) |
 | Registered v70 snapshot | [PALOMAR-2026-11-22-000009, version 2](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2) · [Challenge](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cd08f0a42a6e8e182805db84396e40fdddc1b2ca/Lean/CEIPalomar/Challenge.lean) · [Verification report](docs/palomar/PALOMAR-2026-11-22-000009-v2/README.md) |
-| WSL2 Codex instructions | [v76 Lean handoff and WSL2 prompt](docs/CODEX_WSL2_CEI_V76_LEAN_HANDOFF.md) · [Current instructions](docs/CODEX_WSL2_CURRENT.txt) |
+| WSL2 Codex instructions | [Lean handoff and WSL2 prompt](docs/CODEX_WSL2_CEI_V76_LEAN_HANDOFF.md) · [Current instructions](docs/CODEX_WSL2_CURRENT.txt) |
 
 The source directory is `manuscript/latex/`. Its `main.tex` assembles the
 sections and appendices. The source ZIP extracts to `latex/`. Earlier PDFs,
@@ -71,13 +74,10 @@ and Git blob hashes.
 
 The [v65 sentence review](docs/reviews/V65_SENTENCES_2026-11-18/review.md) indexes the paper sentence by sentence and records the wording corrected in v66.
 
-The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) compares the numbered results with their Lean declarations and records the scope of the comparisons. The current correspondence table is
-[FORMALIZATION_STATUS_V76.md](FORMALIZATION_STATUS_V76.md). It records 77
-numbered results and three definitions. The table identifies the Lean declarations for each result and records the scope of the comparison.
-The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) links each result and definition to its Lean declarations.
+The [v77 correspondence table](FORMALIZATION_STATUS_V77.md) gives the Lean declarations for the 77 numbered results and three definitions. The [v73 manuscript audit](docs/reviews/V73_MANUSCRIPT_AUDIT.md) gives the hypotheses used in the comparisons. The [guide to the Lean proofs](docs/LEAN_GUIDE_V66.md) groups the declarations by result.
 The full v62 replay passed 1,965 commands, including 1,959 strict elaborations
 and both complete axiom audits. [Full verification record](docs/V62_FULL_VERIFICATION_2026-11-17.md)
-Corollary 10.9 is proved for the two actual fork partial-map slices and every
+Corollary 10.9 is proved for the two partial-map slices in the fork example and every
 consistent closed extension. Theorem 5.3 covers both the first-order calculus and the
 standalone propositional calculus of Appendix A.6, including nonconstant slice
 extensions and the final reduction. See the [independent propositional check](Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompletenessChecks.lean). The [full v59 replay](docs/V59_FULL_VERIFICATION_2026-11-14.md)
@@ -104,7 +104,7 @@ proves PA consistency and the generated signed-theory consistency equation
 in the predicate category, with generation through regular axiom images.
 Its 22-command incremental verification includes both complete axiom audits.
 The later [diagonal signed-theory assembly](docs/V59_DIAGONAL_SIGNED_THEORY_2026-11-15.md)
-completes Lemma 8.9: the actual diagonal splittings, generated-theory
+completes Lemma 8.9: the splittings of the diagonal domains, generated-theory
 consistency and all consistent closed extensions are covered. Its
 23-command incremental verification includes both complete axiom audits.
 The later [arithmetic associated-category proof](docs/V59_ARITHMETIC_ASSOCIATED_CATEGORIES_2026-11-15.md)
@@ -124,7 +124,7 @@ includes both complete axiom audits. The later [parameterized component proof](d
 constructs formula folds for arbitrary numerical parameter families and
 uniqueness across parameter and atom-label morphisms. Its separate
 17-command incremental verification includes both complete axiom audits.
-The later [natural parameter fold proof](docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md) proves the actual
+The later [natural parameter fold proof](docs/V59_FORK_NATURAL_PARAMETER_FOLDS_2026-11-16.md) proves commutativity of the
 fork constructor square and initiality among componentwise natural relative
 formula algebras for arbitrary target families. Its separate 23-command
 incremental verification includes both complete axiom audits. The later [canonical diagram syntax proof](docs/V59_CANONICAL_DIAGRAM_SYNTAX_2026-11-16.md) constructs ordinary
@@ -166,17 +166,17 @@ The [split Turing continuation](docs/V57_SPLIT_TURING_2026-11-13.md) proves
 the split product laws, universal evaluator, restriction-terminal property
 and ambient slice parameter and retraction equations.
 The [partial-slice comparison](docs/V57_PARTIAL_SLICE_COMPARISON_2026-11-13.md)
-identifies the actual monic partial slice and proves fixed-input restriction
+identifies the category of monic spans in the slice and proves fixed-input restriction
 products and universal computations there.
 The [arbitrary slice-product continuation](docs/V57_SLICE_PRODUCTS_2026-11-13.md)
-adds all binary product laws, the actual slice Turing morphism, terminal
+adds all binary product laws, the slice Turing morphism, terminal
 morphisms, total retractions and splitting of slice restriction idempotents.
 The [partial-slice completion](docs/V57_PARTIAL_SLICE_COMPLETION_2026-11-14.md)
 constructs the literal full recursion subcategory and its splitting equivalence,
 preserving restriction in both directions. This completes Lemma 5.1.
 The [theory-extension completion](docs/V57_THEORY_EXTENSIONS_2026-11-14.md)
 constructs both change-of-base adjunctions, full faithfulness, properness,
-composition and the sentence/theorem comparisons in the actual partial
+composition and the sentence/theorem comparisons in the partial-map
 slices. This completes Theorem 5.2.
 The [associated-category continuation](docs/V57_ASSOCIATED_RETRACTION_2026-11-14.md)
 constructs the evaluation retraction and proves the Boolean totality and
@@ -191,7 +191,7 @@ constant-family and evaluation instances, and verifies the merged v58 target.
 The [v58 review](docs/reviews/V58_REVIEW_2026-11-14/summary.md) records
 the corrections, reference audit, and source and artifact checks. The [Lean continuation report](docs/V57_LEAN_CONTINUATION_2026-11-10.md)
 retains the subsequent proof work and its verification evidence. The current
-[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v76 and the v72 registration.
+[WSL2 instructions](docs/CODEX_WSL2_CURRENT.txt) cover manuscript v77 and the v72 registration.
 
 The [Google review assessment](docs/reviews/GOOGLE_V58_2026-11-14/assessment.md)
 checks its objections against the reviewed v58 text and Lean statements.

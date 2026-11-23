@@ -16,8 +16,10 @@ $\mathscr C=\Split(\mathscr R)$ for this completion and
 $\mathcal D=\Tot(\mathscr C)$ for its category of total morphisms.
 Assume that $\mathcal D$ is regular, that its finite coproducts are
 disjoint and stable under pullback, and that every monomorphism in
-$\mathcal D$ has a partial inverse in $\mathscr C$. Subobjects then
-represent restriction idempotents. Two disjoint subobjects are
+$\mathcal D$ has a partial inverse in $\mathscr C$. A subobject $m:A\hookrightarrow X$ with partial inverse $r$ then
+represents the restriction idempotent $mr:X\rightharpoonup X$.
+Conversely, splitting a restriction idempotent on $X$ gives its
+representing subobject. Two disjoint subobjects of $X$ are
 \emph{inseparable} if no pair of complementary subobjects contains
 them respectively. For a sentence theory the refutation subobject is
 the inverse image of the theorem subobject under negation. The theory
@@ -77,10 +79,11 @@ $FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
 respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
 gives a total morphism $g:U\to U$ such that the inverse images of
 $P$ and $N$ under $Fg$ are both zero. When $\mathcal A$ is split,
-choose an extension $\widehat F:\Split(\mathscr R)\to\mathcal A$ of $F$.
+extend $F$ to $\widehat F:\Split(\mathscr R)\to\mathcal A$, choosing the
+identity splitting of $F(1_U)$ so that $\widehat F(U,1_U)=FU$.
 Let $t:S\rightharpoonup S$ be the theorem domain on a sentence object $S$ in
 $\Split(\mathscr R)$, with negation $\nu:S\to S$. For a total sentence
-morphism $\theta:U\to S$, take the two domains on $FU$ to be
+morphism $\theta:(U,1_U)\to S$, take the two domains on $FU$ to be
 \[
  P=(\widehat F\theta)^*\widehat F(t),\qquad
  N=\bigl(\widehat F(\nu\theta)\bigr)^*\widehat F(t).
@@ -122,9 +125,9 @@ The second realization uses a sequence $a:\N\to[0,1]$ constructed by
 Miller \cite{Miller2004}.
 Bauer and Hanson used it to construct a parameterized realizability
 topos with countable Dedekind reals \cite[Theorem~6.4]{BauerHanson}.
-A partial numerical function $f$ is a morphism of the recursion category used
-here exactly when a single oracle program computes $f$ from every binary representation
-of $a$, with domain of definition exactly that of $f$.
+A partial numerical function $f$ is a morphism of this category exactly
+when one oracle program, run with any binary representation of $a$, has
+domain $\operatorname{dom}f$ and value $f(n)$ at each $n$ in this domain.
 Each representation computes a separator of
 $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
 separator from every representation
@@ -157,8 +160,7 @@ Rosolini's $P$-categories generalized dominical categories
 \cite{RosoliniThesis,Rosolini}. Heller used them to define
 prodominical categories \cite[Section~5]{Heller}.
 We use the restriction categories of Cockett and Lack
-\cite{CockettLack}. A restriction category admits a $P$-category structure exactly when it has
-binary restriction products \cite[Proposition~4.5]{CockettLackIII}.
+\cite{CockettLack} (Section~\ref{sec:preliminaries}).
 Heller's existence theorem \cite[Sections~8--9]{Heller} and
 Lengyel's existence theorems using faithful iteration functors
 \cite{Lengyel2004,Corrections} concern the construction of recursion
@@ -178,8 +180,9 @@ Theorem~\ref{thm:comparison} occurs in Lengyel's earlier comparison
 \cite[Theorem~4.1]{Lengyel2006}. Appendix~\ref{app:lifting-counterexample}
 gives a counterexample to that theorem as stated. Cockett attributes
 to Lengyel the theorem that every nontrivial discrete Turing category
-with finite compatible joins has inseparable restriction idempotents
-\cite[Section~7.1 and Theorem~7.8]{CockettComputability}.
+with finite joins of compatible morphisms stable under composition
+has inseparable restriction idempotents
+\cite[Sections~5.3 and 7.1, Theorem~7.8]{CockettComputability}.
 
 Murwanashyaka, Pakhomov, and Visser prove a numerical antecedent of
 Corollary~\ref{cor:signed-first-order-incompleteness}. Their theory of

@@ -2,11 +2,11 @@
 \label{sec:internal-adjunctions}
 
 Continue with $\mathscr S=\Split(\mathscr R)$ and
-$\mathcal D=\Tot(\mathscr S)$. Assume that $\mathcal D$ is regular,
-its finite coproducts are disjoint and stable under pullback, and
-the syntax and initial derivation algebras of
-Appendix~\ref{app:syntax-theories} exist for every axiom subobject
-under consideration. For an object $X$ of $\mathcal D$, write
+$\mathcal D=\Tot(\mathscr S)$. Assume that $\mathcal D$ is regular
+with disjoint, pullback-stable finite coproducts. Fix a first-order
+syntax as in Definition~\ref{def:categorical-syntax}. For every
+axiom subobject of its sentence object, assume an initial algebra
+of derivations as in Appendix~\ref{app:first-order-derivations}. For an object $X$ of $\mathcal D$, write
 $\operatorname{Sub}_{\mathcal D}(X)$ for the ordered collection of
 subobjects of $X$, with order given by factorization. If
 $f:X\to Y$ is total, write $f^*B$ for the inverse image of
@@ -235,11 +235,19 @@ If $L\dashv R$ on subobject orders, $R$ sends theories to theories
 and $L^{\mathrm{th}}\dashv R|_{\operatorname{Th}_2}$.
 \end{proposition}
 \begin{proof}
-Taking images of the derivation comparison gives
-$L\operatorname{Gen}_1\leq\operatorname{Gen}_2L$.
-Apply $\operatorname{Gen}_2$ and use extensivity and idempotence
-to obtain the first identity. Regularity identifies the image
-of $K(a)$ with $L(\im a)$, proving the second identity.
+Factor $c_{A,S_1}$ through its image $\operatorname{Gen}_1(A)$.
+Since $G$ preserves the regular epimorphism in this factorization,
+\[
+ L(\operatorname{Gen}_1(A))
+ =\im(\sigma Gc_{A,S_1})
+ =\im(c_{L(A),S_2}p_A)
+ \leq\operatorname{Gen}_2(L(A)).
+\]
+Applying $\operatorname{Gen}_2$ gives one inequality in the first
+identity by idempotence. The other follows from
+$A\leq\operatorname{Gen}_1(A)$ by monotonicity of $L$ and
+$\operatorname{Gen}_2$. Factoring $a$ through its image in the same
+way gives $\im(K(a))=L(\im a)$, proving the second identity.
 For each theory $T$, the unique factorization of $KJ_1(T)$ through
 $J_2L^{\mathrm{th}}(T)$ defines the component of the comparison at $T$. Uniqueness proves naturality.
 For a closed $B$, adjunction gives $LRB\leq B$, and hence
@@ -252,26 +260,36 @@ equality, and the restricted adjunction follows from the
 generation reflection.
 \end{proof}
 
-For example, if $G\dashv H$ has unit $\eta$, the operation $L$
-has right adjoint
+Suppose $G\dashv H$ with unit $\eta$. Put
+$\sigma^\flat=H\sigma\,\eta_{S_1}:S_1\to HS_2$.
+For $i_B:B\hookrightarrow S_2$, let $R(B)=(\sigma^\flat)^*(H i_B)$.
+The right adjoint $H$ preserves monomorphisms.
+For $i_A:A\hookrightarrow S_1$, a factorization
+$k:GA\to B$ with $i_Bk=\sigma G i_A$ transposes to
+$k^\flat=Hk\,\eta_A:A\to HB$ satisfying
 \[
- R(B)=S_1\times_{HS_2}HB,
+ H i_B\,k^\flat=\sigma^\flat i_A .
 \]
-where $S_1\to HS_2$ is $H\sigma\,\eta_{S_1}$.
-Transposition identifies the factorizations defining this
-adjunction. The derivation-comparison hypothesis can be proved
-from rule-instance morphisms as follows. Suppose
+Conversely this equation transposes back to the factorization through
+$i_B$. By the pullback defining $R(B)$, it follows that
+$L(A)\leq B$ exactly when $A\leq R(B)$.
+
+To construct the derivation comparison, suppose
 $\sigma_{\Phi}:G\Phi_1\to\Phi_2$ satisfies
 $\sigma_\Phi G j_1=j_2\sigma$, where $j_i:S_i\hookrightarrow\Phi_i$.
-Put
-$K_{\Phi}(q)=\sigma_{\Phi}Gq$. Under the same adjunction $G\dashv H$, its right adjoint $R_{\Phi}$ is given
-by pullback along $H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$ after
-applying $H$. If the rule morphisms
-give a natural transformation
+Define $K_\Phi:\mathcal D_1/\Phi_1\to\mathcal D_2/\Phi_2$ by
+$K_{\Phi}(q)=\sigma_{\Phi}Gq$ on objects and $K_\Phi(k)=Gk$ on
+slice morphisms. Its right adjoint $R_\Phi$ sends $b:B\to\Phi_2$
+to the pullback of $Hb$ along
+$H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$.
+For each $A$, suppose the comparison of rule instances supplies a
+natural transformation
 \[
- \lambda:K_{\Phi}H_A\to H_{L(A)}K_{\Phi},
+ \lambda:K_{\Phi}H_A\to H_{L(A)}K_{\Phi}.
 \]
-let $\delta':H_{L(A)}P'\to P'$ be the target initial algebra and
+Its component at $q$ sends a rule instance with premise derivations
+over $q$ to a target rule instance with premises over $K_\Phi(q)$
+and the translated conclusion. Let $\delta':H_{L(A)}P'\to P'$ be the target initial algebra and
 $\epsilon:K_{\Phi}R_{\Phi}\to1$ the counit. Transpose
 \[
  K_{\Phi}H_AR_{\Phi}P'
