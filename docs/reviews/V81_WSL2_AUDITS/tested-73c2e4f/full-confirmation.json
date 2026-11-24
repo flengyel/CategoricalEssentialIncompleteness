@@ -1,0 +1,12 @@
+{
+  "source_commit": "73c2e4fa2bc633a3af012b1c4f85a7882018f962",
+  "wrapper_exit": 0,
+  "receipt_sha256": "6e4ace0ffe31629bfc186bf22122f09c12d3011237c6d3aca9ccc9111664d615",
+  "verified_commands": 2101,
+  "verified_input_blobs": 2744,
+  "verified_dependencies": 16,
+  "current_axiom_entries": 35094,
+  "retained_axiom_entries": 1274,
+  "independent_checker_sha256": "b2328060084ab321781541ba99f466b0a5bda518f9f7b303949871eb4d490b63",
+  "independent_checker": "second/proof-checks.tar.gz, confirm-full.py"
+}

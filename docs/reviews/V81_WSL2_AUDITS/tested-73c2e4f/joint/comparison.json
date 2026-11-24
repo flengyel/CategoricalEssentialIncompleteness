@@ -1,0 +1,787 @@
+{
+  "source_commit": "73c2e4fa2bc633a3af012b1c4f85a7882018f962",
+  "blind_reading_source_commit": "ae816e93c11712a2b1fe16f99c763a8c934f80dc",
+  "verdict_and_report_sha256": {
+    "first": {
+      "verdict.json": "9ca80179ccb6e29c4c005349820ffca576a93f5480969c25e2afbeaf2e0c6463",
+      "report.md": "ba2def89c4f4e78931a52d0f592a4060c5cddab33ead7bd6d88c230ca5b4014a"
+    },
+    "second": {
+      "verdict.json": "44895df964b719dab4734b2c52d6f9c27f1fc14820300f96316f61a6ef561111",
+      "report.md": "730fcde312e8e006571030e5263716b9b654e02841a257afc54843eb62f733ce"
+    }
+  },
+  "original_reading_seals": {
+    "first": {
+      "file": "first-reading.sha256",
+      "sha256": "1889126863f620e79412c5c6915330591d1e32d955c40d8c1d882be40587a3a4"
+    },
+    "second": {
+      "file": "seal.sha256",
+      "sha256": "b10b9a92f00725406e96d84990cb33a2b1c2060d3e91d5ad36fd749c9584d4d7"
+    }
+  },
+  "active_TeX_digests_identical": 25,
+  "four_counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 2,
+    "lean_omissions": 6,
+    "proof_gaps": 1
+  },
+  "counting_convention": {
+    "mathematical_errors": "False assertions in the mathematical text at the printed hypotheses.",
+    "ambiguities": "Identified mathematical quantifier or typing ambiguities. A bibliographic locator is counted separately.",
+    "lean_omissions": "Identified missing conclusions at their cited hypotheses, counted once per historical theorem. An external witness cannot replace a distinct internal conclusion.",
+    "proof_gaps": "Invalid or missing mathematical inferences in the printed text. T1 accounts for both the mathematical-error count and this column.",
+    "broader_proof_gap_count_including_missing_formal_proofs": 7,
+    "numbered_proof_gaps": 0,
+    "bibliographic_locators": 1
+  },
+  "numbered_proof_gaps": 0,
+  "qualifying_clean_reports": 0,
+  "required_consecutive_clean_reports": 2,
+  "issues": {
+    "H1": {
+      "first_reader_id": "Bauer–Hanson 6.4",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "124–127",
+      "second_reader_lines": [
+        124,
+        127
+      ]
+    },
+    "H2": {
+      "first_reader_id": "Heller 9.2",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "166–171",
+      "second_reader_lines": [
+        166,
+        171
+      ]
+    },
+    "H3": {
+      "first_reader_id": "Lengyel 21",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "166–171",
+      "second_reader_lines": [
+        166,
+        171
+      ]
+    },
+    "H4": {
+      "first_reader_id": "Lengyel corrected 26",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "166–171",
+      "second_reader_lines": [
+        166,
+        171
+      ]
+    },
+    "T1": {
+      "first_reader_id": "Di Paola–Heller 8.15",
+      "categories": [
+        "invalid mathematical inference",
+        "mathematical error"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "173–175",
+      "second_reader_lines": [
+        173,
+        175
+      ]
+    },
+    "H5": {
+      "first_reader_id": "van Dijk–Gietelink Oldenziel 5.19",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "203–206",
+      "second_reader_lines": [
+        203,
+        206
+      ]
+    },
+    "H6": {
+      "first_reader_id": "van Dijk–Gietelink Oldenziel 5.20",
+      "categories": [
+        "lean omission"
+      ],
+      "source": "manuscript/latex/sections/01-introduction.tex",
+      "first_reader_lines": "203–206",
+      "second_reader_lines": [
+        203,
+        206
+      ]
+    },
+    "B1": {
+      "first_reader_id": "Page of Di Paola–Heller item (3)",
+      "categories": [
+        "bibliographic locator"
+      ],
+      "source": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+      "first_reader_lines": "239–244",
+      "second_reader_lines": [
+        239,
+        242
+      ]
+    },
+    "T2": {
+      "first_reader_id": "Effective extensibility",
+      "categories": [
+        "ambiguity"
+      ],
+      "source": "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+      "first_reader_lines": "4–9",
+      "second_reader_lines": [
+        4,
+        9
+      ]
+    },
+    "T3": {
+      "first_reader_id": "Two types of d",
+      "categories": [
+        "ambiguity"
+      ],
+      "source": "manuscript/latex/appendices/c-section-lifting.tex",
+      "first_reader_lines": "114–116,137–139",
+      "second_reader_lines": [
+        [
+          114,
+          123
+        ],
+        [
+          137,
+          139
+        ]
+      ]
+    }
+  },
+  "numbered_kind_counts": {
+    "Theorem": 18,
+    "Corollary": 13,
+    "Proposition": 27,
+    "Lemma": 19,
+    "Definition": 3
+  },
+  "shared_numbered_direct_declarations_and_individual_axiom_sets": 852,
+  "numbered_rows": [
+    {
+      "number": "3.1",
+      "kind": "Theorem",
+      "label": "thm:comparison",
+      "ledger_line": 162,
+      "direct_name_count": 2
+    },
+    {
+      "number": "3.2",
+      "kind": "Corollary",
+      "label": "cor:separator",
+      "ledger_line": 163,
+      "direct_name_count": 1
+    },
+    {
+      "number": "3.3",
+      "kind": "Corollary",
+      "label": "cor:source-conditionals",
+      "ledger_line": 164,
+      "direct_name_count": 1
+    },
+    {
+      "number": "3.4",
+      "kind": "Proposition",
+      "label": "prop:disjoint-joins",
+      "ledger_line": 165,
+      "direct_name_count": 2
+    },
+    {
+      "number": "4.1",
+      "kind": "Proposition",
+      "label": "prop:interpreted-theory",
+      "ledger_line": 171,
+      "direct_name_count": 5
+    },
+    {
+      "number": "4.2",
+      "kind": "Theorem",
+      "label": "thm:logical-comparison",
+      "ledger_line": 172,
+      "direct_name_count": 5
+    },
+    {
+      "number": "4.3",
+      "kind": "Corollary",
+      "label": "cor:domain-incompleteness",
+      "ledger_line": 173,
+      "direct_name_count": 1
+    },
+    {
+      "number": "4.4",
+      "kind": "Theorem",
+      "label": "thm:first-order-reflection",
+      "ledger_line": 175,
+      "direct_name_count": 11
+    },
+    {
+      "number": "4.5",
+      "kind": "Theorem",
+      "label": "thm:translation-galois",
+      "ledger_line": 176,
+      "direct_name_count": 8
+    },
+    {
+      "number": "4.6",
+      "kind": "Proposition",
+      "label": "prop:deduction-comparison",
+      "ledger_line": 177,
+      "direct_name_count": 11
+    },
+    {
+      "number": "4.7",
+      "kind": "Theorem",
+      "label": "thm:free-first-order-adjunction",
+      "ledger_line": 178,
+      "direct_name_count": 13
+    },
+    {
+      "number": "4.8",
+      "kind": "Corollary",
+      "label": "cor:signed-first-order-incompleteness",
+      "ledger_line": 179,
+      "direct_name_count": 10
+    },
+    {
+      "number": "5.1",
+      "kind": "Lemma",
+      "label": "lem:partial-slice-turing",
+      "ledger_line": 185,
+      "direct_name_count": 14
+    },
+    {
+      "number": "5.2",
+      "kind": "Theorem",
+      "label": "thm:theory-extension",
+      "ledger_line": 186,
+      "direct_name_count": 11
+    },
+    {
+      "number": "5.3",
+      "kind": "Theorem",
+      "label": "thm:associated-incompleteness",
+      "ledger_line": 187,
+      "direct_name_count": 19
+    },
+    {
+      "number": "6.1",
+      "kind": "Lemma",
+      "label": "lem:arithmetized-evaluation",
+      "ledger_line": 193,
+      "direct_name_count": 16
+    },
+    {
+      "number": "6.2",
+      "kind": "Lemma",
+      "label": "lem:syntactic-functional-search",
+      "ledger_line": 194,
+      "direct_name_count": 4
+    },
+    {
+      "number": "6.3",
+      "kind": "Lemma",
+      "label": "lem:syntactic-total-category",
+      "ledger_line": 195,
+      "direct_name_count": 7
+    },
+    {
+      "number": "6.4",
+      "kind": "Lemma",
+      "label": "lem:st-finite-sigma1",
+      "ledger_line": 196,
+      "direct_name_count": 7
+    },
+    {
+      "number": "6.5",
+      "kind": "Proposition",
+      "label": "prop:st-syntax-initiality",
+      "ledger_line": 197,
+      "direct_name_count": 9
+    },
+    {
+      "number": "6.6",
+      "kind": "Proposition",
+      "label": "prop:st-list-initiality",
+      "ledger_line": 198,
+      "direct_name_count": 12
+    },
+    {
+      "number": "6.7",
+      "kind": "Proposition",
+      "label": "prop:st-substitution-realization",
+      "ledger_line": 199,
+      "direct_name_count": 19
+    },
+    {
+      "number": "6.8",
+      "kind": "Lemma",
+      "label": "lem:syntactic-derivation-initiality",
+      "ledger_line": 200,
+      "direct_name_count": 13
+    },
+    {
+      "number": "6.9",
+      "kind": "Theorem",
+      "label": "thm:syntactic-generated-theory",
+      "ledger_line": 201,
+      "direct_name_count": 9
+    },
+    {
+      "number": "7.1",
+      "kind": "Proposition",
+      "label": "prop:model",
+      "ledger_line": 207,
+      "direct_name_count": 5
+    },
+    {
+      "number": "7.2",
+      "kind": "Lemma",
+      "label": "lem:switch",
+      "ledger_line": 208,
+      "direct_name_count": 3
+    },
+    {
+      "number": "7.3",
+      "kind": "Corollary",
+      "label": "cor:model-pair",
+      "ledger_line": 209,
+      "direct_name_count": 3
+    },
+    {
+      "number": "7.4",
+      "kind": "Proposition",
+      "label": "prop:model-total-regular",
+      "ledger_line": 210,
+      "direct_name_count": 6
+    },
+    {
+      "number": "7.5",
+      "kind": "Lemma",
+      "label": "lem:semantic-substitution",
+      "ledger_line": 211,
+      "direct_name_count": 6
+    },
+    {
+      "number": "7.6",
+      "kind": "Proposition",
+      "label": "prop:standard-code-soundness",
+      "ledger_line": 212,
+      "direct_name_count": 11
+    },
+    {
+      "number": "7.7",
+      "kind": "Lemma",
+      "label": "lem:ultrapower-regular",
+      "ledger_line": 213,
+      "direct_name_count": 5
+    },
+    {
+      "number": "7.8",
+      "kind": "Lemma",
+      "label": "lem:ultrapower-comparison",
+      "ledger_line": 214,
+      "direct_name_count": 8
+    },
+    {
+      "number": "7.9",
+      "kind": "Theorem",
+      "label": "thm:ultrapower-soundness",
+      "ledger_line": 215,
+      "direct_name_count": 5
+    },
+    {
+      "number": "8.1",
+      "kind": "Lemma",
+      "label": "lem:arithmetic-diagonal-representation",
+      "ledger_line": 221,
+      "direct_name_count": 8
+    },
+    {
+      "number": "8.2",
+      "kind": "Lemma",
+      "label": "lem:arithmetic-proof-search",
+      "ledger_line": 222,
+      "direct_name_count": 8
+    },
+    {
+      "number": "8.3",
+      "kind": "Theorem",
+      "label": "thm:arithmetic-internal-comparison",
+      "ledger_line": 223,
+      "direct_name_count": 6
+    },
+    {
+      "number": "8.4",
+      "kind": "Corollary",
+      "label": "cor:arithmetic",
+      "ledger_line": 224,
+      "direct_name_count": 6
+    },
+    {
+      "number": "8.5",
+      "kind": "Proposition",
+      "label": "prop:arithmetic-theory-fibers",
+      "ledger_line": 225,
+      "direct_name_count": 15
+    },
+    {
+      "number": "8.6",
+      "kind": "Theorem",
+      "label": "thm:uniform-independent-sentences",
+      "ledger_line": 226,
+      "direct_name_count": 6
+    },
+    {
+      "number": "8.7",
+      "kind": "Proposition",
+      "label": "prop:numerical-structure",
+      "ledger_line": 227,
+      "direct_name_count": 10
+    },
+    {
+      "number": "8.8",
+      "kind": "Proposition",
+      "label": "prop:arithmetic-theory-realization",
+      "ledger_line": 228,
+      "direct_name_count": 54
+    },
+    {
+      "number": "8.9",
+      "kind": "Lemma",
+      "label": "lem:arithmetic-signed-theory",
+      "ledger_line": 230,
+      "direct_name_count": 76
+    },
+    {
+      "number": "8.10",
+      "kind": "Corollary",
+      "label": "cor:arithmetic-associated-categories",
+      "ledger_line": 231,
+      "direct_name_count": 13
+    },
+    {
+      "number": "9.1",
+      "kind": "Lemma",
+      "label": "lem:miller-unanimity",
+      "ledger_line": 237,
+      "direct_name_count": 10
+    },
+    {
+      "number": "9.2",
+      "kind": "Proposition",
+      "label": "prop:miller-category",
+      "ledger_line": 238,
+      "direct_name_count": 15
+    },
+    {
+      "number": "9.3",
+      "kind": "Lemma",
+      "label": "lem:miller-cut-reduction",
+      "ledger_line": 239,
+      "direct_name_count": 7
+    },
+    {
+      "number": "9.4",
+      "kind": "Corollary",
+      "label": "cor:miller-cuts-inseparable",
+      "ledger_line": 240,
+      "direct_name_count": 7
+    },
+    {
+      "number": "9.5",
+      "kind": "Proposition",
+      "label": "prop:miller-theory-realization",
+      "ledger_line": 241,
+      "direct_name_count": 15
+    },
+    {
+      "number": "9.6",
+      "kind": "Lemma",
+      "label": "lem:miller-parameterized-deduction",
+      "ledger_line": 242,
+      "direct_name_count": 10
+    },
+    {
+      "number": "9.7",
+      "kind": "Theorem",
+      "label": "thm:miller-incompleteness",
+      "ledger_line": 243,
+      "direct_name_count": 80
+    },
+    {
+      "number": "9.8",
+      "kind": "Corollary",
+      "label": "cor:miller-associated-categories",
+      "ledger_line": 245,
+      "direct_name_count": 15
+    },
+    {
+      "number": "10.1",
+      "kind": "Proposition",
+      "label": "prop:endpoint",
+      "ledger_line": 251,
+      "direct_name_count": 9
+    },
+    {
+      "number": "10.2",
+      "kind": "Proposition",
+      "label": "prop:fork-syntax-initial",
+      "ledger_line": 252,
+      "direct_name_count": 4
+    },
+    {
+      "number": "10.3",
+      "kind": "Proposition",
+      "label": "prop:fork-proof-initial",
+      "ledger_line": 253,
+      "direct_name_count": 14
+    },
+    {
+      "number": "10.4",
+      "kind": "Theorem",
+      "label": "thm:fork-proof-presentation",
+      "ledger_line": 254,
+      "direct_name_count": 13
+    },
+    {
+      "number": "10.5",
+      "kind": "Theorem",
+      "label": "thm:cosheaf-observation",
+      "ledger_line": 255,
+      "direct_name_count": 9
+    },
+    {
+      "number": "10.6",
+      "kind": "Corollary",
+      "label": "cor:cosheaf-essential-incompleteness",
+      "ledger_line": 256,
+      "direct_name_count": 6
+    },
+    {
+      "number": "10.7",
+      "kind": "Proposition",
+      "label": "prop:fork-first-order-realization",
+      "ledger_line": 258,
+      "direct_name_count": 65
+    },
+    {
+      "number": "10.8",
+      "kind": "Proposition",
+      "label": "prop:fork-first-order-conservative",
+      "ledger_line": 259,
+      "direct_name_count": 10
+    },
+    {
+      "number": "10.9",
+      "kind": "Corollary",
+      "label": "cor:fork-associated-theories",
+      "ledger_line": 260,
+      "direct_name_count": 11
+    },
+    {
+      "number": "A.1",
+      "kind": "Definition",
+      "label": "def:categorical-syntax",
+      "ledger_line": 266,
+      "direct_name_count": 6
+    },
+    {
+      "number": "A.2",
+      "kind": "Definition",
+      "label": "def:sentence-object",
+      "ledger_line": 267,
+      "direct_name_count": 6
+    },
+    {
+      "number": "A.3",
+      "kind": "Proposition",
+      "label": "prop:categorical-substitution",
+      "ledger_line": 268,
+      "direct_name_count": 7
+    },
+    {
+      "number": "A.4",
+      "kind": "Definition",
+      "label": "def:deductively-closed",
+      "ledger_line": 269,
+      "direct_name_count": 1
+    },
+    {
+      "number": "A.5",
+      "kind": "Theorem",
+      "label": "thm:least-theorem-subobject",
+      "ledger_line": 270,
+      "direct_name_count": 3
+    },
+    {
+      "number": "A.6",
+      "kind": "Theorem",
+      "label": "thm:first-order-theory",
+      "ledger_line": 271,
+      "direct_name_count": 7
+    },
+    {
+      "number": "A.7",
+      "kind": "Lemma",
+      "label": "lem:range-regular-image",
+      "ledger_line": 272,
+      "direct_name_count": 1
+    },
+    {
+      "number": "B.1",
+      "kind": "Proposition",
+      "label": "prop:fork-cosheaves",
+      "ledger_line": 278,
+      "direct_name_count": 2
+    },
+    {
+      "number": "B.2",
+      "kind": "Proposition",
+      "label": "prop:fork-total",
+      "ledger_line": 279,
+      "direct_name_count": 8
+    },
+    {
+      "number": "B.3",
+      "kind": "Proposition",
+      "label": "prop:fork-structure",
+      "ledger_line": 280,
+      "direct_name_count": 12
+    },
+    {
+      "number": "B.4",
+      "kind": "Proposition",
+      "label": "prop:fork-local",
+      "ledger_line": 281,
+      "direct_name_count": 1
+    },
+    {
+      "number": "B.5",
+      "kind": "Lemma",
+      "label": "lem:fork-dominance",
+      "ledger_line": 282,
+      "direct_name_count": 1
+    },
+    {
+      "number": "B.6",
+      "kind": "Lemma",
+      "label": "lem:fork-frames",
+      "ledger_line": 283,
+      "direct_name_count": 3
+    },
+    {
+      "number": "B.7",
+      "kind": "Theorem",
+      "label": "thm:fork-turing",
+      "ledger_line": 284,
+      "direct_name_count": 7
+    },
+    {
+      "number": "B.8",
+      "kind": "Proposition",
+      "label": "prop:fork-recursion",
+      "ledger_line": 285,
+      "direct_name_count": 3
+    },
+    {
+      "number": "B.9",
+      "kind": "Corollary",
+      "label": "cor:fork-karoubi",
+      "ledger_line": 286,
+      "direct_name_count": 5
+    },
+    {
+      "number": "B.10",
+      "kind": "Proposition",
+      "label": "prop:fork-distinction",
+      "ledger_line": 287,
+      "direct_name_count": 2
+    },
+    {
+      "number": "C.1",
+      "kind": "Proposition",
+      "label": "prop:missing-lift",
+      "ledger_line": 293,
+      "direct_name_count": 7
+    },
+    {
+      "number": "D.1",
+      "kind": "Theorem",
+      "label": "thm:faithful",
+      "ledger_line": 299,
+      "direct_name_count": 4
+    },
+    {
+      "number": "D.2",
+      "kind": "Corollary",
+      "label": "cor:pair",
+      "ledger_line": 300,
+      "direct_name_count": 5
+    }
+  ],
+  "numerical_tests": [
+    {
+      "reader": "first",
+      "theorem": "IndependentV81Reader.membership_in_the_printed_algebra",
+      "source": "IndependentChecks.lean",
+      "source_sha256": "a89833ae4b9385bbe90b6093a26c036a8ea3c76ea312d16196448f98788da48d",
+      "output_sha256": "8fe9f3c94af955d2fb6d5bc1f1a4e258bbcff079acde875ae3101dd9e31f3856",
+      "type": "Separate total computable term and formula predicates on every word in the two supports of NumericalNamed.literalWordAlgebra.",
+      "transitive_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "reader": "second",
+      "theorem": "V81SecondReading.simultaneous_support_decision",
+      "source": "Applications.lean",
+      "source_sha256": "015e73730ce455db0f8aebcff1093d438d4da1f4ab2ec81bc8acf0e421869564",
+      "output_sha256": "626484a0030e39af9dbdc51453d1c044e8457c359827c270bcb08d6eba29d1ca",
+      "type": "A total computable function returning both membership bits on every word in the two unary NumericalCoordinates.predicateObject supports of the literal postfix carriers.",
+      "transitive_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "postseal_numerical_support_equality": {
+    "declaration": "V81Reconciliation.literal_supports",
+    "source_sha256": "288bd5139b7e12b2393b6dfc09228e9e08b6b58f1c9ac32b62ca3b9cdcc4884e",
+    "output_sha256": "c9273602a18660b31363e4b041fa449bfb1c59d2de1eb113ee33d26cc7456292",
+    "Lean_flags": [
+      "-j1",
+      "-DwarningAsError=true",
+      "-DautoImplicit=false"
+    ],
+    "exit_code": 0,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "material_disagreements": []
+}

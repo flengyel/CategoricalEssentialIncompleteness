@@ -1,0 +1,227 @@
+{
+  "reader": "independent second reader",
+  "manuscript_version": 81,
+  "source_commit": "73c2e4fa2bc633a3af012b1c4f85a7882018f962",
+  "counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 2,
+    "lean_omissions": 6,
+    "proof_gaps": 1
+  },
+  "counting_convention": {
+    "mathematical_errors": "False assertions in the mathematical text at the printed hypotheses.",
+    "ambiguities": "Identified mathematical quantifier or typing ambiguities. A bibliographic locator is counted separately.",
+    "lean_omissions": "Identified missing conclusions at their cited hypotheses, counted once per historical theorem. An external witness cannot replace a distinct internal conclusion.",
+    "proof_gaps": "Invalid or missing mathematical inferences in the printed text. T1 accounts for both the mathematical-error count and this column.",
+    "broader_proof_gap_count_including_missing_formal_proofs": 7,
+    "numbered_proof_gaps": 0,
+    "bibliographic_locators": 1
+  },
+  "numbered_proof_gaps": 0,
+  "qualifying_clean_reports": 0,
+  "required_consecutive_clean_reports": 2,
+  "qualifies_as_clean": false,
+  "whole_paper_formalization_established": false,
+  "independence": {
+    "blind_source_commit": "ae816e93c11712a2b1fe16f99c763a8c934f80dc",
+    "active_TeX_files": 25,
+    "blind_order": "The prose reconstruction and printed-order passage inventory were sealed before opening Lean, correspondence, manuscript returns, and earlier reports. The tests and this verdict were completed without consulting the other current reader's findings.",
+    "checks_after_seal": "All 25 inputs match the tested revision. The older second reader's names and locators were rechecked against current sources after the seal. Names resolved all backticked items in the numbered correspondence, and moved line anchors were matched by identical text.",
+    "sealed_sha256": {
+      "reconstruction.md": "161700d9896973b08710f46ba1ae60b8ca5122c737ad977fd884d929886ead08",
+      "printed-assertions.tsv": "a0897e8abf82907f1a576f8a5ae74b3ae7bb95efa9c27e142deba3fc938bd833",
+      "tex-order.tsv": "33703be59c31e70e6275fbabf2bcc5d2e593f350b568ff5deb4535d71505ae3b",
+      "expand.py": "c894ea1703a3debb4daa0f4dfc299e3690baabca1152949e90eaca9de8a006aa"
+    }
+  },
+  "coverage": {
+    "printed_fragments_including_typesetting": 3624,
+    "printed_parts": [
+      "front matter and abstract",
+      "§1",
+      "§2",
+      "§3",
+      "§4",
+      "§5",
+      "§6",
+      "§7",
+      "§8",
+      "§9",
+      "§10",
+      "Appendix A",
+      "Appendix B",
+      "Appendix C",
+      "Appendix D",
+      "Appendix E",
+      "bibliography"
+    ],
+    "numbered": {
+      "theorems": 18,
+      "corollaries": 13,
+      "definitions": 3,
+      "propositions": 27,
+      "lemmas": 19
+    },
+    "resolved_numbered_names": 852,
+    "defining_modules": 366,
+    "additional_typed_applications": 5,
+    "additional_axiom_queries_including_those_applications": 7
+  },
+  "closed_on_this_revision": {
+    "source": "manuscript/latex/sections/08c-numerical-realization.tex",
+    "lines": [
+      281,
+      302
+    ],
+    "statement": "For each finite arity bound and arbitrary recursive unary symbol supports up to it, both predicates of membership in the chosen unary numerical term or formula object have total boolean deciders on all natural-number words.",
+    "definition_and_application": "V46.NumericalSyntaxMembership.numerical_word_membership specializes at both Boolean tags and combines with V81SecondReading.simultaneous_support_decision."
+  },
+  "references": {
+    "report": "report.md",
+    "sealed_reading": "blind-reading.tar.gz",
+    "independent_probes_and_local_receipt": "proof-checks.tar.gz",
+    "official_kernel_receipt": "../../../../V81_WSL2_LEAN_VERIFICATION_73c2e4f.json.gz",
+    "whole_paper_correspondence": "../../../../../FORMALIZATION_STATUS_V81.md",
+    "whole_paper_assertions": "../../../V81_WSL2_ASSERTIONS/README.md",
+    "earlier_manuscript_return": "../../../V81_MANUSCRIPT_RETURN/README.md"
+  },
+  "issues": [
+    {
+      "id": "H1",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        124,
+        127
+      ],
+      "statement_or_missing_inference": "Bauer–Hanson 6.4. In the parameterized realizability topos for the chosen Miller sequence, construct the internal Dedekind reals and an epimorphism from its natural numbers object.",
+      "downstream_use": "Section 9 uses the external existence of a Miller sequence. No numbered result uses the internal epimorphism."
+    },
+    {
+      "id": "H2",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        166,
+        171
+      ],
+      "statement_or_missing_inference": "Heller 9.2. From a uniformly generated isotypical B-sharp subcategory in a locally connected iteration category, construct its Turing completion and evaluator.",
+      "downstream_use": "The arithmetic, Miller and fork examples each construct their own evaluators."
+    },
+    {
+      "id": "H3",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        166,
+        171
+      ],
+      "statement_or_missing_inference": "Lengyel 21. Construct the Turing completion of the uniformly generated isotypical B-sharp subcategory in a separated iteration category. Corrected Theorem 26 with the identity functor suffices.",
+      "downstream_use": "No numbered result invokes this absolute existence theorem."
+    },
+    {
+      "id": "H4",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        166,
+        171
+      ],
+      "statement_or_missing_inference": "Corrected Lengyel 26. From a faithful iteration functor into a separated category and a uniformly generated isotypical B-sharp subcategory, construct the weak evaluator that simulates every development with equality of partial domains and values, then the Turing completion and its universal morphism.",
+      "downstream_use": "This relative statement implies the absolute case of H3 by the identity functor. No numbered result uses either theorem."
+    },
+    {
+      "id": "T1",
+      "category": [
+        "mathematical error",
+        "invalid mathematical inference"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        173,
+        175
+      ],
+      "statement_or_missing_inference": "The section and coproduct hypotheses admit a one-object, one-morphism dominical category with a Turing evaluator. Its top equals bottom, and a complementary separator exists. Nonzero identity is required for the contradiction.",
+      "downstream_use": "The numbered Corollary 3.3 assumes the identity differs from zero. The error is confined to the §1 attribution."
+    },
+    {
+      "id": "H5",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        203,
+        206
+      ],
+      "statement_or_missing_inference": "Van Dijk–Gietelink Oldenziel 5.19. Construct the setting of the internal arithmetic-universe object in the initial arithmetic universe and show every syntactically complete arithmetic universe in the theorem's scope is trivial. The original proof discusses a special case.",
+      "downstream_use": "No signed-theory or partial-slice proof uses the arithmetic-universe implication."
+    },
+    {
+      "id": "H6",
+      "category": [
+        "Lean omission"
+      ],
+      "source_file": "manuscript/latex/sections/01-introduction.tex",
+      "lines": [
+        203,
+        206
+      ],
+      "statement_or_missing_inference": "Van Dijk–Gietelink Oldenziel 5.20. In the consistent initial arithmetic universe, prove the equalizer of the two classifying maps for truth and falsity is distinct from bottom.",
+      "downstream_use": "No numbered proof uses this arithmetic-universe consistency assertion."
+    },
+    {
+      "id": "B1",
+      "category": [
+        "bibliographic locator"
+      ],
+      "source_file": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+      "lines": [
+        239,
+        242
+      ],
+      "statement_or_missing_inference": "Item (3) is on Di Paola–Heller's printed p. 595. The printed reference gives p. 594.",
+      "downstream_use": "Corollary 8.4 separately pulls any recursive separator back to the diagonal pair."
+    },
+    {
+      "id": "T2",
+      "category": [
+        "ambiguity"
+      ],
+      "source_file": "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+      "lines": [
+        4,
+        9
+      ],
+      "statement_or_missing_inference": "Effective extensibility is a property of a fixed presentation. One total recursive extender must work for every index of additional c.e. axioms in the given language whenever the extension is consistent. A consistent complete base at the empty addition rules out unconditional existence.",
+      "downstream_use": "The numbered Theorem 8.6 constructs the required uniform assignment for the stated PA presentation."
+    },
+    {
+      "id": "T3",
+      "category": [
+        "ambiguity"
+      ],
+      "source_file": "manuscript/latex/appendices/c-section-lifting.tex",
+      "lines": [
+        [
+          114,
+          123
+        ],
+        [
+          137,
+          139
+        ]
+      ],
+      "statement_or_missing_inference": "The symbol d denotes a natural-number oracle-domain program and then a partial endomorphism of the natural numbers. The two printed types determine the intended variables.",
+      "downstream_use": "The ordinary total compiler is uniform in all oracles, a single index handles all parameters of one morphism, and no source lift exists for any target with the prescribed switched summand preimages."
+    }
+  ]
+}

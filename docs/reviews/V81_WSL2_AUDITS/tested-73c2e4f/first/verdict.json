@@ -1,0 +1,164 @@
+{
+  "manuscript_version": 81,
+  "source_commit": "73c2e4fa2bc633a3af012b1c4f85a7882018f962",
+  "reading_source_commit": "ae816e93c11712a2b1fe16f99c763a8c934f80dc",
+  "reader": "Independent first reader",
+  "signed_utc": "2026-11-24",
+  "four_counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 2,
+    "lean_omissions": 6,
+    "proof_gaps": 1
+  },
+  "mathematical_errors": 1,
+  "ambiguities": 2,
+  "lean_omissions": 6,
+  "proof_gaps": 1,
+  "invalid_mathematical_inferences": 1,
+  "numbered_proof_gaps": 0,
+  "numbered_mathematical_proof_gaps": 0,
+  "proof_gaps_including_missing_kernel_proofs": 7,
+  "bibliographic_locators": 1,
+  "qualifying_count": 0,
+  "required_consecutive_clean_reports": 2,
+  "whole_paper_formalization_verified": false,
+  "proof_gap_convention": "The main proof-gap count records invalid mathematical inferences in the text; adding absent formal proofs gives the separately reported inclusive count. The false implication and invalid inference are the same passage.",
+  "issues": [
+    {
+      "id": "Bauer–Hanson 6.4",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:124–127",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "Construct the object of internal Dedekind reals and an epimorphism to it from the NNO in the parameterized realizability topos for the Miller sequence.",
+      "downstream": "Introductory topos comparison. The external Miller sequence needed by §9 has a witness."
+    },
+    {
+      "id": "Heller 9.2",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:166–171",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "In the given locally connected iteration category construct the Turing completion and its evaluator for the uniformly generated isotypical B-sharp subcategory.",
+      "downstream": "Introductory existence comparison; the concrete categories have independent evaluators."
+    },
+    {
+      "id": "Lengyel 21",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:166–171",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "Construct the absolute Turing completion and its universal morphism in a separated iteration category.",
+      "downstream": "Would follow by applying the relative theorem to the identity; no numbered proof requires that completion."
+    },
+    {
+      "id": "Lengyel corrected 26",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:166–171",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "Construct relative developments under the faithful iteration functor into the separated target, obtain its weak evaluator and prove the Turing equation with equality of partial domains.",
+      "downstream": "Introductory attribution; the faithful model family has a separate proof."
+    },
+    {
+      "id": "Di Paola–Heller 8.15",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:173–175",
+      "categories": [
+        "mathematical_error",
+        "invalid_mathematical_inference"
+      ],
+      "conclusion": "Add nonzero identity to obtain the contradiction. The sole idempotent in the one-object, one-morphism category is a complementary separator.",
+      "downstream": "The unrestricted introductory implication is false. Corollary 3.3 has the needed nonzero hypothesis."
+    },
+    {
+      "id": "van Dijk–Gietelink Oldenziel 5.19",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:203–206",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "Construct the relevant internal AU and prove for every AU object of the initial arithmetic universe that syntactic completeness implies triviality.",
+      "downstream": "Introductory comparison. The signed and slice theorems do not require it."
+    },
+    {
+      "id": "van Dijk–Gietelink Oldenziel 5.20",
+      "TeX": "manuscript/latex/sections/01-introduction.tex:203–206",
+      "categories": [
+        "lean_omission"
+      ],
+      "conclusion": "For a consistent initial arithmetic universe prove that the equalizer of the indicated truth values is a subobject of 1 different from bottom.",
+      "downstream": "Introductory comparison. Arithmetic consistency is established with the designated model."
+    },
+    {
+      "id": "Page of Di Paola–Heller item (3)",
+      "TeX": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex:239–244",
+      "categories": [
+        "bibliographic_locator"
+      ],
+      "conclusion": "Item (3) starts on printed page 595.",
+      "downstream": "The independent diagonal proof is unaffected."
+    },
+    {
+      "id": "Effective extensibility",
+      "TeX": "manuscript/latex/sections/08b-uniform-independent-sentences.tex:4–9",
+      "categories": [
+        "ambiguity"
+      ],
+      "conclusion": "The existence of one recursive selector is a property of the fixed presentation. Unconditional existence for every consistent theory fails at the empty extension of a complete theory.",
+      "downstream": "Theorem 8.6 supplies the selector for the stated PA presentation."
+    },
+    {
+      "id": "Two types of d",
+      "TeX": "manuscript/latex/appendices/c-section-lifting.tex:114–116,137–139",
+      "categories": [
+        "ambiguity"
+      ],
+      "conclusion": "The same proof uses d first as a natural-number oracle-machine domain index and later as the partial endomorphism obtained by diagonal application.",
+      "downstream": "The two local types and the equalities of domains and values are checked in Proposition C.1."
+    }
+  ],
+  "independence": {
+    "reading": "Only the 25 active TeX inputs in printed order until the manuscript reconstruction was sealed. No previous proof source, project correspondence, returned review or other reader was consulted before sealing.",
+    "first_reading_manifest_sha256": "1889126863f620e79412c5c6915330591d1e32d955c40d8c1d882be40587a3a4",
+    "sealed_utc": "2026-11-24T09:36:00Z",
+    "all_TeX_identical_at_tested_source": true,
+    "first_reading_archive": "manuscript-reading.tar.gz",
+    "proof_archive": "proof-comparison.tar.gz",
+    "postseal": "Public historical name resolution was used to expand the still-identical declaration cells and select further checks; Lean produced new types and axiom results at the tested commit."
+  },
+  "coverage": {
+    "printed_inputs": 25,
+    "sections": 10,
+    "appendices": 5,
+    "numbered_results": 77,
+    "numbered_definitions": 3,
+    "numbered_rows": 80,
+    "individual_theorems": 18,
+    "individual_lemmas": 19,
+    "individual_propositions": 27,
+    "individual_corollaries": 13,
+    "manual_argument_groups": 130,
+    "source_blocks": 821,
+    "lexical_spans": 3282,
+    "in_text_citation_occurrences": 78,
+    "distinct_bibliography_keys": 39,
+    "numbered_direct_distinct": 852,
+    "numbered_expanded_additional_distinct": 226,
+    "numbered_typed_and_axiom_checked_distinct": 1078,
+    "supplementary_typed_and_axiom_checked_distinct": 579,
+    "reader_command_count": 13,
+    "reader_all_commands_exit_zero": true,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "resolved_obligation": "Proposition 8.8 unnumbered numerical full-domain word membership for both sorts, using the actual polynomial maps and literal word algebra."
+  },
+  "whole_paper_correspondence": "../../../../../FORMALIZATION_STATUS_V81.md",
+  "assertion_inventory": "../../../V81_WSL2_ASSERTIONS/README.md",
+  "whole_project_kernel_receipt": "../../../../V81_WSL2_LEAN_VERIFICATION_73c2e4f.json.gz",
+  "archive_sha256": {
+    "manuscript-reading.tar.gz": "781d79bab3ac695302ad83f32aaae6afad88480a13d43c4b905c198469e35cc1",
+    "proof-comparison.tar.gz": "a573657a147c5b49a05acb6ef1844f2a8f7eff82612c1decbbe46a51265d92d9"
+  }
+}
