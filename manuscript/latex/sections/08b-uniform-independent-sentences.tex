@@ -1,13 +1,15 @@
 \subsection{Uniform independent sentences}
 \label{subsec:uniform-independent-sentences}
 
-Fix the axioms and inference rules of a presentation of a consistent
-theory. In Pour-El's terminology \cite{PourEl}, the presentation is
-\emph{effectively extensible} if there is a total recursive function
-$g:\N\to\N$ with the following property. Whenever $e$ indexes a
-c.e.\ set of sentences in the same language whose addition to the axioms
-preserves consistency, $g(e)$ codes a sentence such that neither it nor
-its negation is derivable from the enlarged axiom set by the given rules.
+Fix a presentation $(A,R)$ of a consistent theory with a c.e.\ axiom
+set $A$ and a uniformly c.e.\ family $R$ of finitary inference rules.
+In Pour-El's terminology \cite{PourEl}, the presentation is
+\emph{effectively extensible} if there is a total recursive function $g:\N\to\N$ with the following
+property. Whenever $e$ indexes a c.e.\ set $W_e$ of sentences in the
+same language and $A\cup W_e$ is consistent under $R$, the number
+$g(e)$ codes a sentence $\varphi_e$ such that
+$A\cup W_e\nvdash_R\varphi_e$ and $A\cup W_e\nvdash_R\neg\varphi_e$
+\cite[p.~274, Definitions~5 and~8]{PourEl1970}.
 For PA we construct this assignment in
 $\mathcal B$ using the Turing morphism of $S_{\PA}$.
 

@@ -236,9 +236,13 @@ Thus neither $\alpha(\overline{\gamma(n)})$ nor its negation
 is derivable from $\Gamma$, for any $n\in\N$.
 \end{proof}
 
-Di Paola and Heller list recursive inseparability of the theorem and
-refutation sets as a consequence of definability of every recursive set
-in a consistent arithmetical theory \cite[p.~595, (3)]{DPH}.
+Di Paola and Heller record the following implication for a consistent
+arithmetical theory $H$ \cite[p.~595, (3)]{DPH}. Suppose that for
+each recursive set $B\subseteq\N$ there is a formula $\beta_B(x)$
+such that $H\vdash\beta_B(\bar n)$ whenever $n\in B$ and
+$H\vdash\neg\beta_B(\bar n)$ whenever $n\notin B$.
+Then the sets of codes of the provable and the refutable sentences
+of $H$ are recursively inseparable.
 For a c.e.\ extension of PA, the function $\Theta$ sends $D_0$ into
 its theorem set and $D_1$ into its refutation set by
 Lemma~\ref{lem:arithmetic-diagonal-representation}.

@@ -1,14 +1,12 @@
 \section{Introduction}
 
-We realize Di Paola and Heller's objective to give an algebraic account of
-generalized incompleteness theorems in recursion categories
-\cite[pp.~594--596, 629]{DPH}. Given two disjoint domains, we construct an
-internal first-order theory. If it is consistent, the domains are
-inseparable if and only if the theory is essentially incomplete:
-every consistent deductively closed extension in the same language is
-incomplete. Under the hypotheses of Theorem~\ref{thm:associated-incompleteness},
-a theory is essentially incomplete exactly when its constant family
-is essentially incomplete in the associated Turing category.
+Di Paola and Heller sought an algebraic account of generalized
+incompleteness theorems in recursion categories
+\cite[pp.~594--596, 629]{DPH}. We ask when a disjoint pair of domains
+generates an internal first-order theory with no complete consistent
+deductively closed extension in its language.
+For a consistent generated theory this happens exactly when the two
+domains are inseparable (Corollary~\ref{cor:signed-first-order-incompleteness}).
 
 Let $\mathscr R$ be a recursion category. Splitting its restriction
 idempotents makes the domains of partial morphisms into objects. Write
@@ -19,34 +17,46 @@ disjoint and stable under pullback, and that every monomorphism in
 $\mathcal D$ has a partial inverse in $\mathscr C$. A subobject $m:A\hookrightarrow X$ with partial inverse $r$ then
 represents the restriction idempotent $mr:X\rightharpoonup X$.
 Conversely, splitting a restriction idempotent on $X$ gives its
-representing subobject. Two disjoint subobjects of $X$ are
+representing subobject (Section~\ref{subsec:restriction-idempotents}).
+Two disjoint subobjects of $X$ are
 \emph{inseparable} if no pair of complementary subobjects contains
 them respectively. If $t:T\hookrightarrow S$ is the subobject of
 derivable sentences and $\nu:S\to S$ is negation, the inverse image
 $\nu^*T$ is the subobject of refutable sentences. The theory is consistent when
 $T\wedge\nu^*T=\bot$ and complete when $T\vee\nu^*T=\top$
-in $\operatorname{Sub}(S)$.
+in $\operatorname{Sub}(S)$. A consistent theory $T$ is
+\emph{essentially incomplete} if every deductively closed extension
+$H\ge T$ in this language satisfies
+\[
+ H\wedge\nu^*H=\bot\quad\Longrightarrow\quad H\vee\nu^*H\ne\top
+\]
+(Section~\ref{subsec:theories-and-interpretation}).
 
-Fix a variable object $V$ with decidable equality. Given disjoint
-subobjects $i_a:a\hookrightarrow X$ and $i_b:b\hookrightarrow X$,
-take the language whose only nonlogical symbols are nullary predicates
-indexed by $X$. Its atomic sentence constructor is a morphism
-$\theta_X:X\to S_X$ in $\mathcal D$. Thus an index $x:W\to X$ gives
+Fix a variable object $V$ with decidable equality. For each
+$X\in\mathcal D$, take the first-order language whose only nonlogical
+symbols are nullary predicates indexed by $X$. Let $a,b$ be disjoint
+subobjects of $X$ with inclusions $i_a:A\hookrightarrow X$ and
+$i_b:B\hookrightarrow X$. Write $S_X$ for the sentence object of this
+language and $\theta_X:X\to S_X$ for its atomic sentence constructor. Thus an index $x:W\to X$ gives
 the sentence $\theta_Xx:W\to S_X$ over $W$. The index belongs to $a$
-over $W$ precisely when $x=i_a y$ for some $y:W\to a$.
-Write $\nu_X:S_X\to S_X$
-for negation. The axiom subobject is
+over $W$ precisely when $x=i_a y$ for some $y:W\to A$.
+Write $\nu_X:S_X\to S_X$ for negation. The axiom subobject is
 \[
  A_{a,b}=\im(\theta_Xi_a)\vee\im(\nu_X\theta_Xi_b)
  \quad\text{in }\operatorname{Sub}(S_X).
 \]
-We assume the parameterized syntax and list algebras and the
-initial algebras of finite derivations for axiom subobjects described in
-Appendix~\ref{app:syntax-theories}. The image of the conclusion morphism
-on derivations of sentences from $A_{a,b}$ is the generated theory $T_{a,b}$. For
-consistent $T_{a,b}$ this construction is left adjoint to the functor
-taking a consistent theory to its theorem and refutation subobjects
-(Theorem~\ref{thm:free-first-order-adjunction}).
+For each $X$, assume that the syntax and variable-list algebras of
+this language are initial in every parameter slice. For each first-order presentation
+under consideration, assume an initial derivation algebra for every
+axiom subobject of its sentence object (Appendix~\ref{app:syntax-theories}).
+Let $T_{a,b}$ be the image of the conclusion morphism for sentence
+derivations from $A_{a,b}$. Under these hypotheses, if $T_{a,b}$ is
+consistent, it is essentially incomplete exactly when $a,b$ are
+inseparable. On pairs generating consistent theories, the construction
+is left adjoint to the functor taking a consistent theory $H$ with
+sentence object $S$ and negation $\nu$ to $(S,H,\nu^*H)$.
+Section~\ref{sec:free-first-order-theories} defines the two categories
+and their morphisms. Theorem~\ref{thm:free-first-order-adjunction} gives the adjunction.
 A separator of $a,b$ supplies a Boolean valuation whose true sentences
 form a consistent complete extension of $T_{a,b}$
 (Corollary~\ref{cor:signed-first-order-incompleteness}).
@@ -62,11 +72,18 @@ associated category to be the category of partial maps in $\mathcal D/U$.
 It is a Turing category (Lemma~\ref{lem:partial-slice-turing}).
 An inclusion of theories induces a fully faithful functor between their
 associated categories (Theorem~\ref{thm:theory-extension}).
-Assume that the deductive construction exists with parameters in every
-slice and that a fixed logical theorem $\lambda:1\to S$ factors through
-the theories under consideration. Then a consistent $u$ is essentially
-incomplete if and only if every consistent closed extension of its
-constant family over $U$ is incomplete. The partial Boolean morphism
+For each parameter object $P$ and each axiom subobject
+$A\hookrightarrow P\times S$ over $P$, assume that the inference
+endofunctor on $\mathcal D/(P\times\Phi)$ for the parameterized rules
+has an initial algebra, where $\Phi$ is the formula object
+(Section~\ref{subsec:essential-incompleteness-slice}).
+Assume also that a fixed logical theorem $\lambda:1\to S$ factors
+through every consistent closed theory. Then a consistent $u$ is
+essentially incomplete if and only if every consistent closed extension of
+$1_U\times u:U\times U\hookrightarrow U\times S$ in $\mathcal D/U$
+is incomplete. An extension here is a subobject of $U\times S$ over
+$U$ and may vary with the parameter.
+The partial Boolean morphism
 that is true on theorems and false on refutations in the constant family has a total
 extension exactly when the original theorem and refutation subobjects are separable
 (Theorem~\ref{thm:associated-incompleteness}).
@@ -113,9 +130,11 @@ internal theory and its interpretation under $\widehat F_M$ are incomplete
 (Theorem~\ref{thm:arithmetic-internal-comparison}).
 For each such extension, the sets of standard codes of its provable
 sentences and of its refutable sentences are recursively inseparable
-(Corollary~\ref{cor:arithmetic}). Under the standard interpretation,
-one total morphism assigns an independent sentence to each index for
-the axiom enumeration of a consistent extension
+(Corollary~\ref{cor:arithmetic}). Fix the PA axioms and let $\Gamma_e$ adjoin to them the
+arithmetic sentences on whose codes program $e$ halts. In
+$\Tot(\Split(S_{\PA}))$ there is one morphism from the numerical object to
+the sentence object whose standard interpretation sends every $e$ with
+$\Gamma_e$ consistent to the code of a sentence independent of $\Gamma_e$
 (Theorem~\ref{thm:uniform-independent-sentences}). The associated-category
 construction is applied separately to the first-order theory generated
 by the arithmetic diagonal pair, whose nonlogical symbols are nullary
@@ -134,9 +153,10 @@ $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
 separator from every representation
 (Corollary~\ref{cor:miller-cuts-inseparable}). In $\Split(\mathcal E_a)$
 we extend the theory of real closed ordered fields by constants $c_n$
-and all strict rational bounds on $c_n$ that hold at $a(n)$. Every consistent
-extension in this language is incomplete if one oracle program
-semidecides its axioms from every binary representation of $a$
+and all strict rational bounds on $c_n$ that hold at $a(n)$. Let $T_a$ be
+the theory generated by these axioms. Every consistent extension of $T_a$
+in this language is incomplete if it admits an axiom set that one oracle
+program semidecides from every binary representation of $a$
 (Theorem~\ref{thm:miller-incompleteness}). The constant family of each
 consistent internal extension is essentially incomplete in its associated category
 (Corollary~\ref{cor:miller-associated-categories}).
@@ -170,12 +190,28 @@ categories. Di Paola and Montagna's syntactic examples raised the
 question of extending Heller's theorem beyond locally connected categories
 \cite{DPM}.
 
-In a dominical recursion category with binary coproducts, assume that
-every morphism has a section. Let $\tau:X\times X\rightharpoonup X+X$
-be a Turing morphism and put $h=\tau\Delta_X:X\rightharpoonup X+X$.
-If $1_X\ne0$, the argument
-of Di Paola and Heller \cite[Theorem~8.15]{DPH} proves that the domains
-$h^*(1_X+0_X)$ and $h^*(0_X+1_X)$ are recursively inseparable.
+Di Paola and Heller's Theorem~8.15 assumes a dominical category
+with binary coproducts in which every $f:Y\rightharpoonup Z$ has
+a section $s:Z\rightharpoonup Y$ satisfying $fs=\bar s$ and $fsf=f$.
+They also assume that $f+g$ is total whenever $f$ and $g$ are total
+and that each canonical morphism
+$(X\times Y)+(X\times Z)\to X\times(Y+Z)$ is an isomorphism
+\cite[Definitions~6.1, 6.2 and~7.1]{DPH}.
+For a dominical category with binary coproducts and the stated sections,
+let $\tau:X\times X\rightharpoonup X+X$ be a Turing morphism as in
+\cite[Definition~4.1]{DPH}. Thus for every
+$p:X\times X\rightharpoonup X+X$ there is a total $k:X\to X$ such
+that $p=\tau(k\times1_X)$. Put $h=\tau\Delta_X:X\rightharpoonup X+X$.
+The domains $h^*(1_X+0_X)$ and $h^*(0_X+1_X)$ are disjoint.
+If a complementary pair $c,d$ separated them, the diagonal construction
+of \cite[Theorem~8.15]{DPH} would give a total $g:X\to X$ with
+$g^*c=g^*d=0_X$. Thus $cg=dg=0_X$, and the range agreement law
+(Section~\ref{sec:preliminaries}) gives $c\ran(g)=d\ran(g)=0_X$.
+Restriction idempotents commute, so $\ran(g)[c,d]=0$. Since
+$\ran[c,d]=c\vee d=1_X$, range agreement gives $\ran(g)=0_X$.
+Then $g=0_X$, and totality gives $1_X=\bar g=0_X$. Hence the
+diagonal domains are recursively inseparable if $1_X\ne0_X$.
+
 Bernardi obtained categorical fixed-point
 and inseparability results from precomplete equivalence relations,
 including PA-provable equality of partial recursive functions among his

@@ -1,13 +1,14 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v82
+Active WSL2 assignment — manuscript v83
 
 Fetch origin/main. Read AGENTS.md, MANUSCRIPT_CURRENT.json and
-FORMALIZATION_STATUS_V82.md. Execute docs/CODEX_WSL2_CEI_V82_LEAN_HANDOFF.md.
-Verify the five revised passages, continue the six proofs of cited results, and
-return the v82 statement checks, complete replay, axiom receipt and independent
-readings at the tested source SHA. The consecutive-clean count begins at 0 of 2.
+FORMALIZATION_STATUS_V83.md. Execute docs/CODEX_WSL2_CEI_V83_LEAN_HANDOFF.md.
+Check the revised statements and the restriction-domain form of Corollary 4.8
+with joins induced by subobjects. Continue the six historical proofs. Return a
+pinned full replay, axiom receipt and independent readings of the v83 inputs.
+The consecutive-clean count is 0 of 2.
 
 The completed v81 full replay tested 73c2e4fa2bc633a3af012b1c4f85a7882018f962.
 Its report and machine-readable receipt are
@@ -18,7 +19,7 @@ Report commit: 8a0d852ee1a5002c4e82a275a51afd258df0c18f.
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-The v82 assignment above covers manuscript and Lean verification only.
+The v83 assignment above covers manuscript and Lean verification only.
 Submission, release preparation and Palomar registration are outside this assignment.
 
 Fixed release and Appendix E citations

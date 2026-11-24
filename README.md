@@ -1,68 +1,40 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-**Florian Lengyel** · Manuscript v82 · 24 November 2026
+**Florian Lengyel** · Manuscript v83 · 24 November 2026
 
-[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v82.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v82_source.zip)
+[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v83.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v83_source.zip)
 
 ## Reading the Lean proofs
 
-Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V82.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
+Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V83.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
 
-## The construction
+## Abstract
 
-We realize Di Paola and Heller's objective to give an algebraic account
-of generalized incompleteness theorems in recursion categories.
-Let $a,b$ be disjoint domains on an object $X$ in the restriction
-idempotent completion of a recursion category. In its total category the
-domains have inclusions $i_a:A\hookrightarrow X$ and $i_b:B\hookrightarrow X$.
+We characterize the disjoint pairs of domains that generate essentially
+incomplete first-order theories in the restriction idempotent completion
+of a recursion category. The object on which the domains lie indexes
+the nullary predicates, the only nonlogical symbols. The axioms are the
+atomic sentences indexed by the first domain and the negated atomic
+sentences indexed by the second. Under the hypotheses of
+[Theorem 4.7](manuscript/latex/sections/03b-internal-adjunctions.tex#L376), a consistent theory so
+generated is essentially incomplete if and only if no two complementary
+domains contain the given domains, respectively. Here essential incompleteness
+means that in every consistent deductively closed extension in the same
+language, the join of the theorem and refutation subobjects is a proper subobject
+of the sentence object. On pairs generating consistent theories, this
+construction is left adjoint to the functor assigning to a consistent
+theory its theorem and refutation subobjects.
 
-Take $X$ as the object of predicate symbols. These are the only nonlogical
-symbols, and they take no arguments. Let $S_X$ be the object of sentences.
-The atomic sentence constructor is a morphism $\theta_X:X\to S_X$.
-For any object $W$, a morphism $x:W\to X$ specifies a predicate symbol
-over $W$. Its atomic sentence over $W$ is $\theta_X\circ x:W\to S_X$.
-
-Restricting the constructor to $a$ gives the positive axiom family
-$\theta_X\circ i_a:A\to S_X$. For the negative axioms, restrict it to
-$b$ and apply sentence negation $\nu_X:S_X\to S_X$. This gives
-$\nu_X\circ\theta_X\circ i_b:B\to S_X$.
-The join of the two image subobjects gives the nonlogical axioms.
-Closing them under the rules of deduction gives the theory $T$.
-
-A consistent $T$ is essentially
-incomplete if every consistent deductively closed extension in the same
-language is incomplete. We prove that, for consistent $T$, this holds
-if and only if no complementary domains $c,d$ on $X$ satisfy
-$a\leq c$ and $b\leq d$.
-
-For pairs generating consistent theories, this construction is left adjoint
-to the functor taking a consistent theory to its theorem and refutation
-subobjects. We assume that the total category is regular with disjoint,
-pullback-stable finite coproducts and that its monomorphisms have partial
-inverses in the completion. The variable object has decidable equality,
-the syntax and variable-list algebras are initial in each parameter slice,
-and each presentation has an initial derivation algebra for every axiom subobject.
-
-For a sentence theory $u:U\hookrightarrow S$, partial maps in the slice
-over $U$ form a Turing category. Assume that every axiom subobject in
-each slice has an initial derivation algebra and that a logical theorem
-$\lambda:1\to S$ factors through each consistent theory.
-Then passage from $u$ to its constant family
-$1_U\times u:U\times U\hookrightarrow U\times S$ preserves and reflects
-essential incompleteness of consistent theories.
-
-In the completed syntactic recursion category for Peano arithmetic (PA),
-the numerical interpretation of one total morphism sends each index for a
-computably enumerable axiom presentation of a consistent extension of PA
-to the code of an independent sentence for that extension.
-For a Miller sequence, we add to the theory of real closed ordered fields
-constants for its terms and axioms giving their strict rational bounds.
-Every consistent extension in this language is incomplete if it
-admits an axiom set semidecided by one oracle program from every binary
-representation of the sequence. In a cosheaf construction on a three-point
-space, the propositional theory at each endpoint is consistent, and every
-consistent extension in its language with a computably enumerable axiom
-set is incomplete.
+Under the hypotheses of [Theorem 5.3](manuscript/latex/sections/04-theory-extensions.tex#L261), a
+consistent theory is essentially incomplete if and only if its constant
+family is essentially incomplete in the slice over its theorem object.
+For Peano arithmetic (PA), the numerical interpretation of one total
+morphism sends each index for a computably enumerable set of additional
+axioms consistent with PA to the code of a sentence independent of the
+resulting theory. The other applications concern
+real closed ordered fields with constants for the entries of a Miller
+sequence and propositional theories obtained from cosheaves on a
+three-point space.
 
 ## Build and verify
 
