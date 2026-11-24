@@ -1,32 +1,17 @@
-# Manuscript version 51
+# Logical consequence and essential incompleteness in recursion categories
 
-**Logical consequence and essential incompleteness in recursion categories**,
-9 November 2026.
+**Florian Lengyel** · Manuscript v81 · 23 November 2026
 
-| Item | Location |
-| --- | --- |
-| PDF | [logical_consequence_and_essential_incompleteness_v51.pdf](logical_consequence_and_essential_incompleteness_v51.pdf) |
-| LaTeX entry point | [latex/main.tex](latex/main.tex) |
-| Source directory and guide | [latex/](latex/) |
-| Complete source ZIP | [logical_consequence_v51_source.zip](logical_consequence_v51_source.zip) |
-| Older manuscripts and source packages | [archive/](archive/) |
+[Read the PDF](logical_consequence_and_essential_incompleteness_v81.pdf) · [Download the complete LaTeX source](logical_consequence_v81_source.zip)
 
-The PDF includes all four appendices. The source ZIP extracts to `latex/` and
-contains the same 22 TeX files as the source directory, plus its README.
+The paper has ten sections and five appendices. Appendix E follows seven arguments into their Lean proofs. The correspondence table lists the declarations for all 77 numbered results and three numbered definitions. [Appendix E](latex/appendices/e-reading-lean-proofs.tex) · [Lean correspondence](../FORMALIZATION_STATUS_V81.md#numbered-statements)
 
-From the repository root, build with:
+## Build the PDF
+
+The source ZIP extracts to `latex/`. From that directory, run
 
 ```bash
-cd manuscript/latex
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The output is `main.pdf`. Earlier PDFs, standalone TeX sources, source ZIPs,
-and reference manuscripts have moved to `archive/` with their contents unchanged.
-See its [index](archive/INDEX.json) for the old and new paths and blob hashes.
-
-The [current Lean correspondence table](../FORMALIZATION_STATUS_V51.md) records
-the proved results and their verification evidence. The
-[current Codex instructions](../docs/CODEX_WSL2_CURRENT.txt) govern further work.
-
-See [NOTICE.md](NOTICE.md) for manuscript licensing.
+The output is `main.pdf`. [LaTeX entry point](latex/main.tex) · [Sections and appendices](latex/README.md#files) · [Manuscript terms](NOTICE.md)
