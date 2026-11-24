@@ -118,6 +118,8 @@ example (s : ℕ →. (ℕ ⊕ ℕ))
 
 end Oracle
 
-#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.K_iff_simulation_mem_A
-#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.missingSection_endomorphism_has_no_lift
-#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.total_and_noncomputable_of_output_summands
+open CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation
+
+#print axioms K_iff_simulation_mem_A
+#print axioms Restricted.missingSection_endomorphism_has_no_lift
+#print axioms Restricted.total_and_noncomputable_of_output_summands

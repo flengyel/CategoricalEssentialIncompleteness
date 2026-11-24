@@ -146,7 +146,8 @@ theorem total_and_noncomputable_of_output_summands (s : ℕ →. (ℕ ⊕ ℕ))
   · rintro ⟨f, hf, rfl⟩
     apply A_not_recursive
     have ht : Computable (fun n => (f n).isRight) := by
-      apply (Computable.sumCasesOn hf (Computable.const false).to₂ (Computable.const true).to₂).of_eq
+      apply (Computable.sumCasesOn hf (Computable.const false).to₂
+        (Computable.const true).to₂).of_eq
       intro n
       cases f n <;> rfl
     have hd : ComputablePred (fun n => (f n).isRight = true) := ⟨inferInstance, by simpa using ht⟩

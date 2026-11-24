@@ -30,7 +30,7 @@ example (inverses : RestrictionSubobjects.MonoInverses C)
         (RestrictionSubobjects.domain inverses b) :=
   SignedFirstOrder.essential_incomplete_iff_inseparable inverses F a b hab hc
 
-#print axioms CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable
+#print axioms SignedFirstOrder.essential_incomplete_iff_inseparable
 
 section TotalSubobjects
 
@@ -52,6 +52,21 @@ example {V X : Tot S} (F : NullaryPresentations V) (a b : Subobject X) (hab : a 
     refine ⟨hab, ?_⟩
     rintro ⟨p, ha, hb⟩
     exact hs ⟨p.positive, p.negative, p.complementary, ha, hb⟩
+
+example (inv : MonoInverses S) {V X : Tot S} (F : NullaryPresentations V)
+    (a b : Subobject X) (hab : a ⊓ b = ⊥)
+    (hc : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
+    (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) ↔
+      ¬ ∃ p n : Idem X.obj,
+        (p ⊓ n = orderIso inv X ⊥ ∧
+          orderIso inv X ((orderIso inv X).symm p ⊔ (orderIso inv X).symm n) = ⊤) ∧
+        orderIso inv X a ≤ p ∧ orderIso inv X b ≤ n :=
+  SignedFirstOrder.essential_incomplete_iff_no_complementary_domains inv F a b hab hc
+
+example [HasZeroMorphisms S] [RestrictionZero S] [BinaryJoins S] (inv : MonoInverses S)
+    (X : Tot S) (p n : Idem X.obj) :
+    (p ⊓ n = orderIso inv X ⊥ ∧ (domainJoins inv).join p n = ⊤) ↔ Complementary p n :=
+  complementaryDomains_iff_complementary inv X p n
 
 end TotalSubobjects
 
@@ -79,5 +94,8 @@ example (rec : PRecursionCategory R) {V X : Tot (SplitObject R)} (F : NullaryPre
 
 end SplitDomains
 
-#print axioms CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.domainJoins
-#print axioms CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_no_domain_separator
+#print axioms RestrictionSubobjects.domainJoins
+#print axioms RestrictionSubobjects.complementaryDomains_iff
+#print axioms RestrictionSubobjects.complementaryDomains_iff_complementary
+#print axioms SignedFirstOrder.essential_incomplete_iff_no_complementary_domains
+#print axioms SignedFirstOrder.essential_incomplete_iff_no_domain_separator
