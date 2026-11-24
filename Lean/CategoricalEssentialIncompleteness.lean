@@ -1,5 +1,8 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46NumericalSyntaxMembership
+public import CategoricalEssentialIncompleteness.V46NumericalSyntaxMembershipChecks
+
 public import CategoricalEssentialIncompleteness.V46ApplicativeCodes
 public import CategoricalEssentialIncompleteness.V46ApplicativePolynomials
 public import CategoricalEssentialIncompleteness.V46ComputablePowerInclusion

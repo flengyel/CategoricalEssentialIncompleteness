@@ -55,6 +55,10 @@ Equal intervals carry the earlier assertion and proof references into v81. The c
 | appendices/c-section-lifting.tex | 106–114 | 106–119 | replace |
 | appendices/c-section-lifting.tex | 115–217 | 120–222 | equal |
 
+## Numerical syntax in the proof of Proposition 8.8
+
+At §8.4, lines 292–296, recursive coefficient supports give two recursive predicates on all numerical word codes. The finite-signature statement checks the term and formula tests separately. The proof uses the dimension-one coefficient comparison, the bounded check of all word entries and the final parser equality. This supplies the unnumbered membership step identified by the manuscript review. The initial-algebra proof occupies the following paragraphs. [Printed passage](../../../manuscript/latex/sections/08c-numerical-realization.tex#L292) · [Numerical membership](../../../Lean/CategoricalEssentialIncompleteness/V46NumericalSyntaxMembership.lean) · [Typed check](../../../Lean/CategoricalEssentialIncompleteness/V46NumericalSyntaxMembershipChecks.lean) · [Manuscript review](../V81_MANUSCRIPT_RETURN/numerical-syntax.md)
+
 ## Literature and use in proofs
 
 For the external mathematical comparisons, the historical ledger gives the resolved declaration types, two counterexamples, a corrected primary-source locator and the first missing inferences for the external constructions. It traces their relationship to the manuscript’s own results. [Historical comparison ledger](historical-comparisons.md).
