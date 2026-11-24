@@ -14,15 +14,23 @@ Keep existing proof status accurate. A prose revision does not turn an open
 proof obligation into a proved result. A changed mathematical statement
 requires a corresponding Lean proof or an identified open obligation.
 
-For a claim of whole-paper formalization, work from the active TeX in reading
-order. Record every mathematical assertion, including those in the abstract,
-proofs, examples, remarks and appendices. Give its source location and the
-checked declaration or proof step that establishes it at the printed types
-and hypotheses. Several assertions may share a proof. Distinguish a definition,
-a hypothesis, a theorem conditional on that hypothesis, and a claim that the
-hypothesis has a witness. Identify the precise Lean import and application for
-each result taken from the literature. A citation alone leaves the assertion
-outside the kernel check. Trace any open assertion to the conclusions using it.
+Formalize the paper’s results and the mathematical inputs used to prove them.
+Read the active LaTeX in recursive input order and record every mathematical
+assertion, including those in the abstract, proofs, examples, remarks and
+appendices. For each assertion proved in the paper, identify the Lean
+declaration or proof step establishing it at the printed types and hypotheses.
+For each external result used in a proof, identify the inference that uses it,
+the precise statement it requires, and the checked declaration or import and
+application supplying that statement. Distinguish a theorem conditional on a
+hypothesis from the existence of a witness to that hypothesis.
+
+Retain the literature discussion. For a historical attribution or comparison,
+check the cited source, its hypotheses and conclusion, and the role of the
+comparison in the manuscript. Record it as a source-checked attribution when
+no proof uses it. The absence of a Lean proof for such an attribution does
+not count as a Lean omission or proof gap. An inaccurate attribution is a
+manuscript finding. If a proof invokes a result previously listed only for
+comparison, record that use and check its required instance in Lean.
 
 Have a second reader reconstruct the statements from the manuscript before
 consulting the Lean declarations or the correspondence table. Compare their

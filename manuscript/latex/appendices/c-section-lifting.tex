@@ -3,7 +3,15 @@
 
 The lifting hypothesis in Theorem~\ref{thm:comparison} cannot be
 omitted, even for a faithful range functor that preserves restriction
-products and reflects zero morphisms.
+products and reflects zero morphisms. We construct a source category
+containing the partial identities on a nonrecursive set $A\subseteq\N$
+and its complement. In the target category of partial functions, the
+codiagonal restricted to $A^c$ in the left summand and $A$ in the right
+has a section $\N\to\N+\N$. Its value at $n$ lies in the right summand
+exactly when $n\in A$. Every total source morphism is recursive in the
+chosen codings, so reading the output summand of a lift would decide
+membership in $A$. This example disproves
+\cite[Theorem~4.1]{Lengyel2006} as stated.
 
 Fix an acceptable numbering $(\varphi_e)_{e\in\N}$ of the ordinary
 partial recursive functions $\N\rightharpoonup\N$. For a partial
@@ -42,6 +50,7 @@ is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every morphism has this
 form by taking an index of its extension and an oracle index of its
 domain.
 
+\Needspace{18\baselineskip}
 \begin{proposition}\label{prop:missing-lift}
 The category $\mathcal C_K$ is a prodominical recursion category with
 binary restriction coproducts and ranges. The functor $F$ is a faithful range functor, preserves restriction products and
@@ -54,8 +63,16 @@ $b:\N\to\N+\N$ for which the restriction idempotents
  a_0=(b\tau_K\Delta_{\N})^*(1_{\N}+0_{\N}),\qquad
  a_1=(b\tau_K\Delta_{\N})^*(0_{\N}+1_{\N})
 \]
-are separated by complementary restriction idempotents in
-$\mathcal C_K$. Moreover, there are parallel morphisms in $\mathcal C_K$
+are separated by the partial identities on $A$ and $A^c$ for some
+nonrecursive set $A\subseteq\N$. Both partial identities belong to
+$\mathcal C_K$, and $D_{a_0}\subseteq A$, $D_{a_1}\subseteq A^c$.
+There exists a partial function $s:\N\rightharpoonup\N+\N$ with
+\[
+ s^{-1}(i_0(\N))=A^c,\qquad s^{-1}(i_1(\N))=A.
+\]
+For every such $s$, there is no morphism
+$\ell:\N\rightharpoonup\N+\N$ in $\mathcal C_K$ with $F(\ell)=s$.
+Moreover, there are parallel morphisms in $\mathcal C_K$
 with disjoint restriction idempotents and no common upper bound in
 the restriction order, although finite joins of restriction idempotents
 exist.
@@ -203,9 +220,8 @@ on $A^c$. It would therefore be the total function $s_A$, which
 is not a source morphism. Thus no such upper bound exists.
 \end{proof}
 
-This example also disproves \cite[Theorem~4.1]{Lengyel2006} as stated.
-Its target $\Pfn$ is split: each partial identity splits through its
-domain. Singleton partial identities are connected and jointly
+The target $\Pfn$ is split because each partial identity splits through
+its domain. Singleton partial identities are connected and jointly
 epimorphic, so the target is locally connected. For a partial
 monomorphism $p:X\rightharpoonup Y$, testing on maps $1\to X$
 shows that $p$ is injective on $D_p$. Define $s:Y\rightharpoonup X$
@@ -216,7 +232,10 @@ property applied to $u\pi_2$, where $\pi_2(z,x)=x$, gives a total
 $e:\N\to\N$ with $\tau_K(e\times1_{\N})=u\pi_2$.
 This is the weak Turing hypothesis,
 and $F(1_{\N})\ne0$. Nevertheless $1_A$ and $1_{A^c}$ separate
-the diagonal pair in $\mathcal C_K$. The earlier argument
-\cite[p.~11]{Lengyel2006} takes a source index for the section
-constructed in the target. Here that section is $s_A$, which has no
-source preimage.
+the diagonal pair in $\mathcal C_K$. The earlier proof
+\cite[p.~11]{Lengyel2006} chooses a Turing index for $b^{-1}f$, where
+$f$ is the section of the restricted codiagonal. Here the corresponding
+target endomorphism is $F(b)^{-1}s_A:\N\to\N$. A source morphism
+$u:\N\rightharpoonup\N$ with $F(u)=F(b)^{-1}s_A$ would give a lift
+$\ell=bu:\N\rightharpoonup\N+\N$, since $F(bu)=s_A$.
+Proposition~\ref{prop:missing-lift} excludes such a lift.

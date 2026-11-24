@@ -1,13 +1,18 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v83
+Active WSL2 assignment — manuscript v84
 
 Fetch origin/main. Read AGENTS.md, MANUSCRIPT_CURRENT.json and
-FORMALIZATION_STATUS_V83.md. Execute docs/CODEX_WSL2_CEI_V83_LEAN_HANDOFF.md.
-Check the revised statements and the restriction-domain form of Corollary 4.8
-with joins induced by subobjects. Continue the six historical proofs. Return a
-pinned full replay, axiom receipt and independent readings of the v83 inputs.
+FORMALIZATION_STATUS_V84.md. Execute docs/CODEX_WSL2_CEI_V84_LEAN_HANDOFF.md.
+Check Proposition C.1 for every target morphism with the prescribed summand
+inverse images, and the halting reduction for every second coordinate. Check
+the restriction-domain form of Corollary 4.8 with joins induced by subobjects.
+Verify every mathematical input used in a CEI proof at the hypotheses invoked,
+including the §9 Miller witness and its use in Lemma 9.3. Check comparison-only
+attributions against their sources. The six listed historical comparisons carry
+no Lean proof obligation. Return a pinned full replay, axiom receipt and
+independent readings of the v84 inputs under this scope.
 The consecutive-clean count is 0 of 2.
 
 The completed v81 full replay tested 73c2e4fa2bc633a3af012b1c4f85a7882018f962.
@@ -19,7 +24,7 @@ Report commit: 8a0d852ee1a5002c4e82a275a51afd258df0c18f.
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-The v83 assignment above covers manuscript and Lean verification only.
+The v84 assignment above covers manuscript and Lean verification only.
 Submission, release preparation and Palomar registration are outside this assignment.
 
 Fixed release and Appendix E citations
