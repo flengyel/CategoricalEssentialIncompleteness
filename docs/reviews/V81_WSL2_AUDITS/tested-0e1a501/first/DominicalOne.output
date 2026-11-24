@@ -1,0 +1,4 @@
+'FirstReaderDominical.evaluator_turing' does not depend on any axioms
+'FirstReaderDominical.identity_eq_zero' does not depend on any axioms
+'FirstReaderDominical.diagonal_pair_has_separator' depends on axioms: [propext]
+'FirstReaderDominical.diagonal_pair_separated' depends on axioms: [propext]

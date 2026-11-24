@@ -1,0 +1,13 @@
+{
+  "source": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+  "test": "PinComparisons.lean",
+  "sha256": "2daa2a6c4394054bc2183c82e933b42d75cddd313524b526a9991bf41e1e6ad8",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "arguments": [
+    "-j1",
+    "-M5200"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 7.28,
+  "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

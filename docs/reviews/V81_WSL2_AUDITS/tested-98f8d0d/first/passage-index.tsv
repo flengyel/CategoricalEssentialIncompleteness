@@ -1,0 +1,542 @@
+reading_order	TeX	first	last	reading_groups	explicit_numbered_references	correspondence_lines
+1	manuscript/latex/abstract.tex	1	15	1		171 174 175 262 265 267
+2	manuscript/latex/abstract.tex	17	23	1		171 174 175 262 265 267
+3	manuscript/latex/abstract.tex	25	31	2		181 182 183 222 239 252 255 256
+4	manuscript/latex/abstract.tex	33	45	2		181 182 183 222 239 252 255 256
+5	manuscript/latex/sections/01-introduction.tex	1	1			
+6	manuscript/latex/sections/01-introduction.tex	3	11	3	5.3	169 171 174 175 181 182 183 265 267
+7	manuscript/latex/sections/01-introduction.tex	13	28	3		169 171 174 175 181 182 183 265 267
+8	manuscript/latex/sections/01-introduction.tex	30	58	3	4.7 4.8 4.3	169 171 174 175 181 182 183 265 267
+9	manuscript/latex/sections/01-introduction.tex	60	72	3	5.1 5.2 5.3	169 171 174 175 181 182 183 265 267
+10	manuscript/latex/sections/01-introduction.tex	74	95	4	3.1 4.2	42 158 168 203 211 219 220 222 224 227 236 239 241 252 255 256 283
+11	manuscript/latex/sections/01-introduction.tex	97	122	4	8.3 8.4 8.6 8.10	42 158 168 203 211 219 220 222 224 227 236 239 241 252 255 256 283
+12	manuscript/latex/sections/01-introduction.tex	124	142	4	9.4 9.7 9.8	42 158 168 203 211 219 220 222 224 227 236 239 241 252 255 256 283
+13	manuscript/latex/sections/01-introduction.tex	144	157	4	10.6 10.9	42 158 168 203 211 219 220 222 224 227 236 239 241 252 255 256 283
+14	manuscript/latex/sections/01-introduction.tex	159	159	5		29 30 66 77 78 79 80 158 160 174 175 183 289
+15	manuscript/latex/sections/01-introduction.tex	161	171	5		29 30 66 77 78 79 80 158 160 174 175 183 289
+16	manuscript/latex/sections/01-introduction.tex	173	187	5	3.1	29 30 66 77 78 79 80 158 160 174 175 183 289
+17	manuscript/latex/sections/01-introduction.tex	189	196	5	4.8 4.7	29 30 66 77 78 79 80 158 160 174 175 183 289
+18	manuscript/latex/sections/01-introduction.tex	198	206	5		29 30 66 77 78 79 80 158 160 174 175 183 289
+19	manuscript/latex/sections/01-introduction.tex	208	217	5	5.3	29 30 66 77 78 79 80 158 160 174 175 183 289
+20	manuscript/latex/sections/02-categorical-preliminaries.tex	1	1			
+21	manuscript/latex/sections/02-categorical-preliminaries.tex	3	3			
+22	manuscript/latex/sections/02-categorical-preliminaries.tex	5	26	6		158 268
+23	manuscript/latex/sections/02-categorical-preliminaries.tex	28	42	6		158 268
+24	manuscript/latex/sections/02-categorical-preliminaries.tex	44	69	6		158 268
+25	manuscript/latex/sections/02-categorical-preliminaries.tex	71	88	6 7		31 52 158 181 268 282
+26	manuscript/latex/sections/02-categorical-preliminaries.tex	90	97	7		31 52 181 268 282
+27	manuscript/latex/sections/02-categorical-preliminaries.tex	99	108	7		31 52 181 268 282
+28	manuscript/latex/sections/02-categorical-preliminaries.tex	110	110	7		31 52 181 268 282
+29	manuscript/latex/sections/02-categorical-preliminaries.tex	112	128	7		31 52 181 268 282
+30	manuscript/latex/sections/02-categorical-preliminaries.tex	130	142	7		31 52 181 268 282
+31	manuscript/latex/sections/02-categorical-preliminaries.tex	144	168	8		158 167 168 203 268
+32	manuscript/latex/sections/02-categorical-preliminaries.tex	170	183	8		158 167 168 203 268
+33	manuscript/latex/sections/02-categorical-preliminaries.tex	185	185	9		31 181 280
+34	manuscript/latex/sections/02-categorical-preliminaries.tex	187	190	9		31 181 280
+35	manuscript/latex/sections/02-categorical-preliminaries.tex	192	198	9		31 181 280
+36	manuscript/latex/sections/02-categorical-preliminaries.tex	200	210	9		31 181 280
+37	manuscript/latex/sections/03-sections-and-inseparability.tex	1	1			
+38	manuscript/latex/sections/03-sections-and-inseparability.tex	3	7	10		32 158
+39	manuscript/latex/sections/03-sections-and-inseparability.tex	9	17	10		32 158
+40	manuscript/latex/sections/03-sections-and-inseparability.tex	19	19	10		32 158
+41	manuscript/latex/sections/03-sections-and-inseparability.tex	21	58	10 11	3.1	32 158 159
+42	manuscript/latex/sections/03-sections-and-inseparability.tex	60	87	11		158 159
+43	manuscript/latex/sections/03-sections-and-inseparability.tex	89	106	11	3.2 3.1	158 159
+44	manuscript/latex/sections/03-sections-and-inseparability.tex	108	108	12		158 159 160 161
+45	manuscript/latex/sections/03-sections-and-inseparability.tex	110	142	12	3.3 3.1	158 159 160 161
+46	manuscript/latex/sections/03-sections-and-inseparability.tex	144	156	12	3.2	158 159 160 161
+47	manuscript/latex/sections/03-sections-and-inseparability.tex	158	175	12	3.4	158 159 160 161
+48	manuscript/latex/sections/03-sections-and-inseparability.tex	177	178	12		158 159 160 161
+49	manuscript/latex/sections/03a-internal-theories.tex	1	1			
+50	manuscript/latex/sections/03a-internal-theories.tex	3	3			
+51	manuscript/latex/sections/03a-internal-theories.tex	5	50	13	A.1 A.6 A.7	167 262 266 267 268
+52	manuscript/latex/sections/03a-internal-theories.tex	52	71	14		167 168 268
+53	manuscript/latex/sections/03a-internal-theories.tex	73	85	14		167 168 268
+54	manuscript/latex/sections/03a-internal-theories.tex	87	100	14		167 168 268
+55	manuscript/latex/sections/03a-internal-theories.tex	102	140	15	4.1 A.7	33 167 268
+56	manuscript/latex/sections/03a-internal-theories.tex	142	147	15		33 167 268
+57	manuscript/latex/sections/03a-internal-theories.tex	149	149	16		158 168 203
+58	manuscript/latex/sections/03a-internal-theories.tex	151	193	16	4.2 3.1	158 168 203
+59	manuscript/latex/sections/03a-internal-theories.tex	195	207	16		158 168 203
+60	manuscript/latex/sections/03a-internal-theories.tex	209	209	17		131 168 169 218
+61	manuscript/latex/sections/03a-internal-theories.tex	211	235	17	4.3	131 168 169 218
+62	manuscript/latex/sections/03a-internal-theories.tex	237	254	17	4.3	131 168 169 218
+63	manuscript/latex/sections/03a-internal-theories.tex	256	262	17	4.3	131 168 169 218
+64	manuscript/latex/sections/03a-internal-theories.tex	264	269	17	4.2 8.2 4.3	131 168 169 218
+65	manuscript/latex/sections/03b-internal-adjunctions.tex	1	2			
+66	manuscript/latex/sections/03b-internal-adjunctions.tex	4	14	18	A.1	171 262 265 266 267
+67	manuscript/latex/sections/03b-internal-adjunctions.tex	16	25	18	A.6	171 262 265 266 267
+68	manuscript/latex/sections/03b-internal-adjunctions.tex	27	55	18	4.4	171 262 265 266 267
+69	manuscript/latex/sections/03b-internal-adjunctions.tex	57	64	19	A.1	65 171 172 262 263 264
+70	manuscript/latex/sections/03b-internal-adjunctions.tex	66	84	19		65 171 172 262 263 264
+71	manuscript/latex/sections/03b-internal-adjunctions.tex	86	99	19		65 171 172 262 263 264
+72	manuscript/latex/sections/03b-internal-adjunctions.tex	101	121	19		65 171 172 262 263 264
+73	manuscript/latex/sections/03b-internal-adjunctions.tex	123	161	19	4.5 4.4	65 171 172 262 263 264
+74	manuscript/latex/sections/03b-internal-adjunctions.tex	163	169	19		65 171 172 262 263 264
+75	manuscript/latex/sections/03b-internal-adjunctions.tex	171	186	19	4.5	65 171 172 262 263 264
+76	manuscript/latex/sections/03b-internal-adjunctions.tex	188	189	20		171 173
+77	manuscript/latex/sections/03b-internal-adjunctions.tex	191	213	20	4.4	171 173
+78	manuscript/latex/sections/03b-internal-adjunctions.tex	215	269	20	4.6	171 173
+79	manuscript/latex/sections/03b-internal-adjunctions.tex	271	284	20		171 173
+80	manuscript/latex/sections/03b-internal-adjunctions.tex	286	321	21		173
+81	manuscript/latex/sections/03b-internal-adjunctions.tex	323	324	22		169 174 175 262
+82	manuscript/latex/sections/03b-internal-adjunctions.tex	326	330	22	4.3	169 174 175 262
+83	manuscript/latex/sections/03b-internal-adjunctions.tex	332	349	22	A.1	169 174 175 262
+84	manuscript/latex/sections/03b-internal-adjunctions.tex	351	366	22		169 174 175 262
+85	manuscript/latex/sections/03b-internal-adjunctions.tex	368	373	22		169 174 175 262
+86	manuscript/latex/sections/03b-internal-adjunctions.tex	375	412	22 23	4.7 A.1	91 169 172 174 175 262 264
+87	manuscript/latex/sections/03b-internal-adjunctions.tex	414	436	23		91 172 174 264
+88	manuscript/latex/sections/03b-internal-adjunctions.tex	438	449	23	4.5	91 172 174 264
+89	manuscript/latex/sections/03b-internal-adjunctions.tex	451	454	23	4.5	91 172 174 264
+90	manuscript/latex/sections/03b-internal-adjunctions.tex	456	475	23		91 172 174 264
+91	manuscript/latex/sections/03b-internal-adjunctions.tex	477	495	24	4.8 4.7 4.3	33 63 64 169 174 175
+92	manuscript/latex/sections/03b-internal-adjunctions.tex	497	539	24		33 63 64 169 174 175
+93	manuscript/latex/sections/04-theory-extensions.tex	1	2			
+94	manuscript/latex/sections/04-theory-extensions.tex	4	10		5.3	183
+95	manuscript/latex/sections/04-theory-extensions.tex	12	12			
+96	manuscript/latex/sections/04-theory-extensions.tex	14	35	25		31 181
+97	manuscript/latex/sections/04-theory-extensions.tex	37	45	25		31 181
+98	manuscript/latex/sections/04-theory-extensions.tex	47	67	25	5.1	31 181
+99	manuscript/latex/sections/04-theory-extensions.tex	69	78	25		31 181
+100	manuscript/latex/sections/04-theory-extensions.tex	80	98	25		31 181
+101	manuscript/latex/sections/04-theory-extensions.tex	100	114	25		31 181
+102	manuscript/latex/sections/04-theory-extensions.tex	116	129	26		34 181 182
+103	manuscript/latex/sections/04-theory-extensions.tex	131	131	26		34 181 182
+104	manuscript/latex/sections/04-theory-extensions.tex	133	150	26	5.2	34 181 182
+105	manuscript/latex/sections/04-theory-extensions.tex	152	174	26		34 181 182
+106	manuscript/latex/sections/04-theory-extensions.tex	176	199	26		34 181 182
+107	manuscript/latex/sections/04-theory-extensions.tex	201	212	26		34 181 182
+108	manuscript/latex/sections/04-theory-extensions.tex	214	226	26	5.1	34 181 182
+109	manuscript/latex/sections/04-theory-extensions.tex	228	228	27		34 169 181 182 183
+110	manuscript/latex/sections/04-theory-extensions.tex	230	247	27	5.1	34 169 181 182 183
+111	manuscript/latex/sections/04-theory-extensions.tex	249	258	27		34 169 181 182 183
+112	manuscript/latex/sections/04-theory-extensions.tex	260	295	27	5.3 5.2	34 169 181 182 183
+113	manuscript/latex/sections/04-theory-extensions.tex	297	304	27		34 169 181 182 183
+114	manuscript/latex/sections/04-theory-extensions.tex	306	321	27		34 169 181 182 183
+115	manuscript/latex/sections/04-theory-extensions.tex	323	333	27		34 169 181 182 183
+116	manuscript/latex/sections/04-theory-extensions.tex	335	348	27	4.3	34 169 181 182 183
+117	manuscript/latex/sections/04-theory-extensions.tex	350	373	28		133 183
+118	manuscript/latex/sections/05-syntactic-recursion-category.tex	1	1			
+119	manuscript/latex/sections/05-syntactic-recursion-category.tex	3	6	29		35 189 203
+120	manuscript/latex/sections/05-syntactic-recursion-category.tex	8	36	29		35 189 203
+121	manuscript/latex/sections/05-syntactic-recursion-category.tex	38	62	29		35 189 203
+122	manuscript/latex/sections/05-syntactic-recursion-category.tex	64	124	29	6.1	35 189 203
+123	manuscript/latex/sections/05-syntactic-recursion-category.tex	126	135	30		35 135 189 203
+124	manuscript/latex/sections/05-syntactic-recursion-category.tex	137	146	30		35 135 189 203
+125	manuscript/latex/sections/05-syntactic-recursion-category.tex	148	173	30		35 135 189 203
+126	manuscript/latex/sections/05-syntactic-recursion-category.tex	175	187	30		35 135 189 203
+127	manuscript/latex/sections/05-syntactic-recursion-category.tex	189	229	31		189 190 191 203 268
+128	manuscript/latex/sections/05-syntactic-recursion-category.tex	231	263	31	6.1	189 190 191 203 268
+129	manuscript/latex/sections/05a-internal-syntax.tex	1	2			
+130	manuscript/latex/sections/05a-internal-syntax.tex	4	8	32		190 191
+131	manuscript/latex/sections/05a-internal-syntax.tex	10	32	32		190 191
+132	manuscript/latex/sections/05a-internal-syntax.tex	34	56	32	6.2	190 191
+133	manuscript/latex/sections/05a-internal-syntax.tex	58	66	32		190 191
+134	manuscript/latex/sections/05a-internal-syntax.tex	68	94	32	6.3 6.2	190 191
+135	manuscript/latex/sections/05a-internal-syntax.tex	96	109	32		190 191
+136	manuscript/latex/sections/05a-internal-syntax.tex	111	139	33		181 190 191 206 268
+137	manuscript/latex/sections/05a-internal-syntax.tex	141	154	33	6.2	181 190 191 206 268
+138	manuscript/latex/sections/05a-internal-syntax.tex	156	166	33		181 190 191 206 268
+139	manuscript/latex/sections/05a-internal-syntax.tex	168	180	33		181 190 191 206 268
+140	manuscript/latex/sections/05a-internal-syntax.tex	182	213	33		181 190 191 206 268
+141	manuscript/latex/sections/05a-internal-syntax.tex	215	242	33	6.2	181 190 191 206 268
+142	manuscript/latex/sections/05a-internal-syntax.tex	244	253	33		181 190 191 206 268
+143	manuscript/latex/sections/05a-internal-syntax.tex	255	267	33	6.3 5.1	181 190 191 206 268
+144	manuscript/latex/sections/05a-internal-syntax.tex	269	275	33	A.7	181 190 191 206 268
+145	manuscript/latex/sections/05a-internal-syntax.tex	277	278	34		36 143 192 193
+146	manuscript/latex/sections/05a-internal-syntax.tex	280	289	34		36 143 192 193
+147	manuscript/latex/sections/05a-internal-syntax.tex	291	323	34	6.4	36 143 192 193
+148	manuscript/latex/sections/05a-internal-syntax.tex	325	333	34		36 143 192 193
+149	manuscript/latex/sections/05a-internal-syntax.tex	335	341	34		36 143 192 193
+150	manuscript/latex/sections/05a-internal-syntax.tex	343	353	34		36 143 192 193
+151	manuscript/latex/sections/05a-internal-syntax.tex	355	358	34		36 143 192 193
+152	manuscript/latex/sections/05a-internal-syntax.tex	360	386	34	6.4	36 143 192 193
+153	manuscript/latex/sections/05a-internal-syntax.tex	388	411	35	6.5	143 190 192 193 194
+154	manuscript/latex/sections/05a-internal-syntax.tex	413	425	35		143 190 192 193 194
+155	manuscript/latex/sections/05a-internal-syntax.tex	427	438	35		143 190 192 193 194
+156	manuscript/latex/sections/05a-internal-syntax.tex	440	443	35	6.4	143 190 192 193 194
+157	manuscript/latex/sections/05a-internal-syntax.tex	445	458	35		143 190 192 193 194
+158	manuscript/latex/sections/05a-internal-syntax.tex	460	472	35	6.2	143 190 192 193 194
+159	manuscript/latex/sections/05a-internal-syntax.tex	474	485	35		143 190 192 193 194
+160	manuscript/latex/sections/05a-internal-syntax.tex	487	503	35	6.6 6.4	143 190 192 193 194
+161	manuscript/latex/sections/05a-internal-syntax.tex	505	520	35	6.4 6.2	143 190 192 193 194
+162	manuscript/latex/sections/05a-internal-syntax.tex	522	523	36		147 193 194 195
+163	manuscript/latex/sections/05a-internal-syntax.tex	525	547	36	6.7 6.6	147 193 194 195
+164	manuscript/latex/sections/05a-internal-syntax.tex	549	560	36	6.6 6.5	147 193 194 195
+165	manuscript/latex/sections/05a-internal-syntax.tex	562	590	36		147 193 194 195
+166	manuscript/latex/sections/05a-internal-syntax.tex	592	607	36		147 193 194 195
+167	manuscript/latex/sections/05a-internal-syntax.tex	609	618	36	6.5	147 193 194 195
+168	manuscript/latex/sections/05a-internal-syntax.tex	620	642	36		147 193 194 195
+169	manuscript/latex/sections/05a-internal-syntax.tex	644	654	36		147 193 194 195
+170	manuscript/latex/sections/05a-internal-syntax.tex	657	658	37		191 192 196 197 263 266
+171	manuscript/latex/sections/05a-internal-syntax.tex	660	669	37	A.2	191 192 196 197 263 266
+172	manuscript/latex/sections/05a-internal-syntax.tex	671	698	37	6.8 6.3	191 192 196 197 263 266
+173	manuscript/latex/sections/05a-internal-syntax.tex	700	718	37		191 192 196 197 263 266
+174	manuscript/latex/sections/05a-internal-syntax.tex	720	734	37	6.4	191 192 196 197 263 266
+175	manuscript/latex/sections/05a-internal-syntax.tex	736	752	37		191 192 196 197 263 266
+176	manuscript/latex/sections/05a-internal-syntax.tex	754	769	37		191 192 196 197 263 266
+177	manuscript/latex/sections/05a-internal-syntax.tex	771	774	37		191 192 196 197 263 266
+178	manuscript/latex/sections/05a-internal-syntax.tex	776	803	37		191 192 196 197 263 266
+179	manuscript/latex/sections/05a-internal-syntax.tex	805	834	37		191 192 196 197 263 266
+180	manuscript/latex/sections/05a-internal-syntax.tex	836	844	37		191 192 196 197 263 266
+181	manuscript/latex/sections/05a-internal-syntax.tex	846	859	38	6.9	190 191 193 194 195 196 197 267 268
+182	manuscript/latex/sections/05a-internal-syntax.tex	861	880	38	6.3 6.5 6.6 6.7	190 191 193 194 195 196 197 267 268
+183	manuscript/latex/sections/05a-internal-syntax.tex	882	889	38	6.8 A.6	190 191 193 194 195 196 197 267 268
+184	manuscript/latex/sections/05a-internal-syntax.tex	891	908	38	6.2 A.7	190 191 193 194 195 196 197 267 268
+185	manuscript/latex/sections/05a-internal-syntax.tex	910	916	38	6.9	190 191 193 194 195 196 197 267 268
+186	manuscript/latex/sections/06-interpretation-in-models.tex	1	1			
+187	manuscript/latex/sections/06-interpretation-in-models.tex	3	7	39		160 190 203 204 205
+188	manuscript/latex/sections/06-interpretation-in-models.tex	9	32	39		160 190 203 204 205
+189	manuscript/latex/sections/06-interpretation-in-models.tex	34	47	39	7.1	160 190 203 204 205
+190	manuscript/latex/sections/06-interpretation-in-models.tex	49	62	39		160 190 203 204 205
+191	manuscript/latex/sections/06-interpretation-in-models.tex	64	64	39		160 190 203 204 205
+192	manuscript/latex/sections/06-interpretation-in-models.tex	66	91	39	7.2 6.2	160 190 203 204 205
+193	manuscript/latex/sections/06-interpretation-in-models.tex	93	103	39		160 190 203 204 205
+194	manuscript/latex/sections/06-interpretation-in-models.tex	105	122	39	7.3 3.3 7.1 7.2	160 190 203 204 205
+195	manuscript/latex/sections/06-interpretation-in-models.tex	125	125	40		191 196 206
+196	manuscript/latex/sections/06-interpretation-in-models.tex	127	149	40	6.3	191 196 206
+197	manuscript/latex/sections/06-interpretation-in-models.tex	151	173	40	7.4	191 196 206
+198	manuscript/latex/sections/06-interpretation-in-models.tex	175	175	40		191 196 206
+199	manuscript/latex/sections/06-interpretation-in-models.tex	177	193	40	6.8	191 196 206
+200	manuscript/latex/sections/06-interpretation-in-models.tex	195	206	40		191 196 206
+201	manuscript/latex/sections/06-interpretation-in-models.tex	208	218	41		195 196 207 208
+202	manuscript/latex/sections/06-interpretation-in-models.tex	220	255	41	7.5 6.7	195 196 207 208
+203	manuscript/latex/sections/06-interpretation-in-models.tex	257	263	41		195 196 207 208
+204	manuscript/latex/sections/06-interpretation-in-models.tex	265	282	41	6.7	195 196 207 208
+205	manuscript/latex/sections/06-interpretation-in-models.tex	284	304	41	7.6	195 196 207 208
+206	manuscript/latex/sections/06-interpretation-in-models.tex	306	322	41	7.5	195 196 207 208
+207	manuscript/latex/sections/06-interpretation-in-models.tex	324	329	41		195 196 207 208
+208	manuscript/latex/sections/06-interpretation-in-models.tex	331	340	41	6.8	195 196 207 208
+209	manuscript/latex/sections/06-interpretation-in-models.tex	342	346	41	6.7	195 196 207 208
+210	manuscript/latex/sections/06-interpretation-in-models.tex	348	348	42		191 209 210
+211	manuscript/latex/sections/06-interpretation-in-models.tex	350	361	42		191 209 210
+212	manuscript/latex/sections/06-interpretation-in-models.tex	363	380	42	7.7	191 209 210
+213	manuscript/latex/sections/06-interpretation-in-models.tex	382	398	42		191 209 210
+214	manuscript/latex/sections/06-interpretation-in-models.tex	400	401	42		191 209 210
+215	manuscript/latex/sections/06-interpretation-in-models.tex	403	423	42	7.8	191 209 210
+216	manuscript/latex/sections/06-interpretation-in-models.tex	425	433	42		191 209 210
+217	manuscript/latex/sections/06-interpretation-in-models.tex	435	456	42	6.3	191 209 210
+218	manuscript/latex/sections/06-interpretation-in-models.tex	458	509	43	7.9 7.6 7.7	167 206 208 209 211
+219	manuscript/latex/sections/06-interpretation-in-models.tex	511	518	43	7.4 4.1	167 206 208 209 211
+220	manuscript/latex/sections/06-interpretation-in-models.tex	520	539	43		167 206 208 209 211
+221	manuscript/latex/sections/06-interpretation-in-models.tex	541	545	43		167 206 208 209 211
+222	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	1	1			
+223	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	3	4			
+224	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	6	13	44	6.9	197 217 218
+225	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	15	36	44	6.9	197 217 218
+226	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	38	51	44		197 217 218
+227	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	53	88	44		197 217 218
+228	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	90	114	45	8.1 6.7	190 195 211 217 218 219
+229	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	116	138	45		190 195 211 217 218 219
+230	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	140	176	45	8.2 6.2	190 195 211 217 218 219
+231	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	178	184	45		190 195 211 217 218 219
+232	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	186	213	46	8.3 7.6 4.1 7.9	159 167 168 208 211 217 218 219 220
+233	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	215	237	46	4.2 8.1 8.2	159 167 168 208 211 217 218 219 220
+234	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	239	244	46	8.1	159 167 168 208 211 217 218 219 220
+235	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	246	270	46	8.4 8.1 3.2	159 167 168 208 211 217 218 219 220
+236	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	272	280	46		159 167 168 208 211 217 218 219 220
+237	manuscript/latex/sections/08a-uniform-theories.tex	1	2			
+238	manuscript/latex/sections/08a-uniform-theories.tex	4	17	47	6.9	37 191 196 197 221 266 268
+239	manuscript/latex/sections/08a-uniform-theories.tex	19	36	47		37 191 196 197 221 266 268
+240	manuscript/latex/sections/08a-uniform-theories.tex	38	60	47	6.3	37 191 196 197 221 266 268
+241	manuscript/latex/sections/08a-uniform-theories.tex	62	119	47	6.8 A.5 6.3 A.7	37 191 196 197 221 266 268
+242	manuscript/latex/sections/08a-uniform-theories.tex	121	124	47		37 191 196 197 221 266 268
+243	manuscript/latex/sections/08a-uniform-theories.tex	126	184	48	8.5	221
+244	manuscript/latex/sections/08a-uniform-theories.tex	186	240	48		221
+245	manuscript/latex/sections/08a-uniform-theories.tex	242	279	49		190 197 221
+246	manuscript/latex/sections/08a-uniform-theories.tex	281	298	49	6.9	190 197 221
+247	manuscript/latex/sections/08a-uniform-theories.tex	300	309	49		190 197 221
+248	manuscript/latex/sections/08a-uniform-theories.tex	311	341	49	6.2 8.5	190 197 221
+249	manuscript/latex/sections/08b-uniform-independent-sentences.tex	1	2			
+250	manuscript/latex/sections/08b-uniform-independent-sentences.tex	4	9	50		38 41 67 190 208 217 221 222
+251	manuscript/latex/sections/08b-uniform-independent-sentences.tex	11	52	50	8.6 8.1 6.2	38 41 67 190 208 217 221 222
+252	manuscript/latex/sections/08b-uniform-independent-sentences.tex	54	73	50		38 41 67 190 208 217 221 222
+253	manuscript/latex/sections/08b-uniform-independent-sentences.tex	75	102	50	7.6 8.5 8.1	38 41 67 190 208 217 221 222
+254	manuscript/latex/sections/08c-numerical-realization.tex	1	2			
+255	manuscript/latex/sections/08c-numerical-realization.tex	4	16	51		223
+256	manuscript/latex/sections/08c-numerical-realization.tex	18	28	51		223
+257	manuscript/latex/sections/08c-numerical-realization.tex	30	35	51		223
+258	manuscript/latex/sections/08c-numerical-realization.tex	38	67	51	8.7	223
+259	manuscript/latex/sections/08c-numerical-realization.tex	69	102	51		223
+260	manuscript/latex/sections/08c-numerical-realization.tex	104	114	52		223
+261	manuscript/latex/sections/08c-numerical-realization.tex	116	133	52		223
+262	manuscript/latex/sections/08c-numerical-realization.tex	135	157	52		223
+263	manuscript/latex/sections/08c-numerical-realization.tex	159	174	52		223
+264	manuscript/latex/sections/08c-numerical-realization.tex	176	193	52		223
+265	manuscript/latex/sections/08c-numerical-realization.tex	195	239	52		223
+266	manuscript/latex/sections/08c-numerical-realization.tex	241	279	52		223
+267	manuscript/latex/sections/08c-numerical-realization.tex	281	302	53	8.8 A.1 A.6 6.5	193 194 195 196 224 262 267
+268	manuscript/latex/sections/08c-numerical-realization.tex	304	327	53		193 194 195 196 224 262 267
+269	manuscript/latex/sections/08c-numerical-realization.tex	329	356	53		193 194 195 196 224 262 267
+270	manuscript/latex/sections/08c-numerical-realization.tex	358	388	53		193 194 195 196 224 262 267
+271	manuscript/latex/sections/08c-numerical-realization.tex	391	410	53	6.6 6.7	193 194 195 196 224 262 267
+272	manuscript/latex/sections/08c-numerical-realization.tex	412	438	53	6.8	193 194 195 196 224 262 267
+273	manuscript/latex/sections/08c-numerical-realization.tex	440	461	53		193 194 195 196 224 262 267
+274	manuscript/latex/sections/08c-numerical-realization.tex	463	489	54	A.6	139 191 196 217 224 267 268
+275	manuscript/latex/sections/08c-numerical-realization.tex	491	571	54	6.3 6.8	139 191 196 217 224 267 268
+276	manuscript/latex/sections/08c-numerical-realization.tex	573	599	54	A.7 8.1	139 191 196 217 224 267 268
+277	manuscript/latex/sections/08d-numerical-incompleteness.tex	1	3			
+278	manuscript/latex/sections/08d-numerical-incompleteness.tex	5	10	55		160 161 168 169 189 217 219 220 223 224
+279	manuscript/latex/sections/08d-numerical-incompleteness.tex	12	28	55	6.1	160 161 168 169 189 217 219 220 223 224
+280	manuscript/latex/sections/08d-numerical-incompleteness.tex	30	59	55	3.3	160 161 168 169 189 217 219 220 223 224
+281	manuscript/latex/sections/08d-numerical-incompleteness.tex	61	80	55	8.1 4.3	160 161 168 169 189 217 219 220 223 224
+282	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	288	288	56		39 40 137 139 160 220
+283	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	290	314	56		39 40 137 139 160 220
+284	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	316	327	56	3.3	39 40 137 139 160 220
+285	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	329	330	57		149 175 197 217 226
+286	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	332	342	57	6.9	149 175 197 217 226
+287	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	344	361	57		149 175 197 217 226
+288	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	363	410	57	8.9	149 175 197 217 226
+289	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	412	426	57	6.9 8.1	149 175 197 217 226
+290	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	428	443	57	4.8	149 175 197 217 226
+291	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	445	465	58	8.10	113 169 182 183 191 196 197 226 227
+292	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	467	491	58	6.3 6.9	113 169 182 183 191 196 197 226 227
+293	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	493	506	58	6.8	113 169 182 183 191 196 197 226 227
+294	manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex	508	518	58	8.9 4.3 5.2 5.3	113 169 182 183 191 196 197 226 227
+295	manuscript/latex/sections/04-miller-sequences.tex	1	1			
+296	manuscript/latex/sections/04-miller-sequences.tex	3	10	59		42 233
+297	manuscript/latex/sections/04-miller-sequences.tex	12	33	59		42 233
+298	manuscript/latex/sections/04-miller-sequences.tex	35	46	59		42 233
+299	manuscript/latex/sections/04-miller-sequences.tex	48	49	59		42 233
+300	manuscript/latex/sections/04-miller-sequences.tex	51	92	59	9.1	42 233
+301	manuscript/latex/sections/04-miller-sequences.tex	94	106	59		42 233
+302	manuscript/latex/sections/04-miller-sequences.tex	108	126	60		160 161 233 234
+303	manuscript/latex/sections/04-miller-sequences.tex	128	150	60	9.2	160 161 233 234
+304	manuscript/latex/sections/04-miller-sequences.tex	152	159	60		160 161 233 234
+305	manuscript/latex/sections/04-miller-sequences.tex	161	175	60	9.1	160 161 233 234
+306	manuscript/latex/sections/04-miller-sequences.tex	177	190	60		160 161 233 234
+307	manuscript/latex/sections/04-miller-sequences.tex	192	207	60	9.2 3.4 3.3	160 161 233 234
+308	manuscript/latex/sections/04-miller-sequences.tex	209	210	61		43 160 233 235 236
+309	manuscript/latex/sections/04-miller-sequences.tex	212	215	61	9.1	43 160 233 235 236
+310	manuscript/latex/sections/04-miller-sequences.tex	217	237	61	9.3	43 160 233 235 236
+311	manuscript/latex/sections/04-miller-sequences.tex	239	275	61		43 160 233 235 236
+312	manuscript/latex/sections/04-miller-sequences.tex	277	292	61		43 160 233 235 236
+313	manuscript/latex/sections/04-miller-sequences.tex	294	315	61	9.4 3.3	43 160 233 235 236
+314	manuscript/latex/sections/04-miller-sequences.tex	317	317	61		43 160 233 235 236
+315	manuscript/latex/sections/04-miller-sequences.tex	319	325	61	3.3	43 160 233 235 236
+316	manuscript/latex/sections/04-miller-sequences.tex	328	329			
+317	manuscript/latex/sections/04-miller-sequences.tex	331	339	62		237 262 264 267
+318	manuscript/latex/sections/04-miller-sequences.tex	341	347	62		237 262 264 267
+319	manuscript/latex/sections/04-miller-sequences.tex	349	378	62	9.5 A.1 A.6	237 262 264 267
+320	manuscript/latex/sections/04-miller-sequences.tex	380	401	62		237 262 264 267
+321	manuscript/latex/sections/04-miller-sequences.tex	403	419	62		237 262 264 267
+322	manuscript/latex/sections/04-miller-sequences.tex	421	437	62		237 262 264 267
+323	manuscript/latex/sections/04-miller-sequences.tex	439	451	62	A.3	237 262 264 267
+324	manuscript/latex/sections/04-miller-sequences.tex	453	465	62		237 262 264 267
+325	manuscript/latex/sections/04-miller-sequences.tex	467	477	62		237 262 264 267
+326	manuscript/latex/sections/04-miller-sequences.tex	479	505	63	9.6 A.1 9.5	44 233 237 238 262
+327	manuscript/latex/sections/04-miller-sequences.tex	507	520	63		44 233 237 238 262
+328	manuscript/latex/sections/04-miller-sequences.tex	522	541	63		44 233 237 238 262
+329	manuscript/latex/sections/04-miller-sequences.tex	543	556	63		44 233 237 238 262
+330	manuscript/latex/sections/04-miller-sequences.tex	558	581	63	9.5 9.1	44 233 237 238 262
+331	manuscript/latex/sections/04-miller-sequences.tex	583	621	64	9.7 9.5 A.6 A.7	44 45 169 182 183 236 237 238 239 241 267 268
+332	manuscript/latex/sections/04-miller-sequences.tex	623	642	64	9.4 4.3	44 45 169 182 183 236 237 238 239 241 267 268
+333	manuscript/latex/sections/04-miller-sequences.tex	644	650	64		44 45 169 182 183 236 237 238 239 241 267 268
+334	manuscript/latex/sections/04-miller-sequences.tex	652	652	64		44 45 169 182 183 236 237 238 239 241 267 268
+335	manuscript/latex/sections/04-miller-sequences.tex	654	654	64		44 45 169 182 183 236 237 238 239 241 267 268
+336	manuscript/latex/sections/04-miller-sequences.tex	656	659	64		44 45 169 182 183 236 237 238 239 241 267 268
+337	manuscript/latex/sections/04-miller-sequences.tex	661	676	64	9.8	44 45 169 182 183 236 237 238 239 241 267 268
+338	manuscript/latex/sections/04-miller-sequences.tex	678	696	64	5.2 5.3 9.5 9.6	44 45 169 182 183 236 237 238 239 241 267 268
+339	manuscript/latex/sections/04-miller-sequences.tex	698	707	64	9.7 4.3	44 45 169 182 183 236 237 238 239 241 267 268
+340	manuscript/latex/sections/04-miller-sequences.tex	709	721	64	5.2 5.3	44 45 169 182 183 236 237 238 239 241 267 268
+341	manuscript/latex/sections/09-three-point-space.tex	1	1			
+342	manuscript/latex/sections/09-three-point-space.tex	3	13	65		46 47 247 274 275 276 278 279 280 281 282
+343	manuscript/latex/sections/09-three-point-space.tex	15	28	65		46 47 247 274 275 276 278 279 280 281 282
+344	manuscript/latex/sections/09-three-point-space.tex	30	43	65	B.1	46 47 247 274 275 276 278 279 280 281 282
+345	manuscript/latex/sections/09-three-point-space.tex	45	52	65		46 47 247 274 275 276 278 279 280 281 282
+346	manuscript/latex/sections/09-three-point-space.tex	54	70	65		46 47 247 274 275 276 278 279 280 281 282
+347	manuscript/latex/sections/09-three-point-space.tex	72	79	65	B.3	46 47 247 274 275 276 278 279 280 281 282
+348	manuscript/latex/sections/09-three-point-space.tex	81	119	65	B.6	46 47 247 274 275 276 278 279 280 281 282
+349	manuscript/latex/sections/09-three-point-space.tex	121	128	65	B.7	46 47 247 274 275 276 278 279 280 281 282
+350	manuscript/latex/sections/09-three-point-space.tex	130	146	65	B.5 B.8 B.9	46 47 247 274 275 276 278 279 280 281 282
+351	manuscript/latex/sections/09-three-point-space.tex	148	148	66		47 49 160 223 247 251 276 280 283
+352	manuscript/latex/sections/09-three-point-space.tex	150	178	66	B.3 3.3 B.10	47 49 160 223 247 251 276 280 283
+353	manuscript/latex/sections/09-three-point-space.tex	180	180	66		47 49 160 223 247 251 276 280 283
+354	manuscript/latex/sections/09-three-point-space.tex	182	199	66	8.7 B.7	47 49 160 223 247 251 276 280 283
+355	manuscript/latex/sections/09-three-point-space.tex	201	216	66	10.1 B.7	47 49 160 223 247 251 276 280 283
+356	manuscript/latex/sections/09-three-point-space.tex	218	233	66		47 49 160 223 247 251 276 280 283
+357	manuscript/latex/sections/09-three-point-space.tex	235	262	66		47 49 160 223 247 251 276 280 283
+358	manuscript/latex/sections/09-three-point-space.tex	264	277	66		47 49 160 223 247 251 276 280 283
+359	manuscript/latex/sections/09-three-point-space.tex	279	279			
+360	manuscript/latex/sections/09-three-point-space.tex	281	312	67	B.6 3.3 10.1	48 49 54 160 247 248 275 279 280 283
+361	manuscript/latex/sections/09-three-point-space.tex	314	331	67	3.3	48 49 54 160 247 248 275 279 280 283
+362	manuscript/latex/sections/09-three-point-space.tex	333	337	67	B.2	48 49 54 160 247 248 275 279 280 283
+363	manuscript/latex/sections/09-three-point-space.tex	339	357	67		48 49 54 160 247 248 275 279 280 283
+364	manuscript/latex/sections/09-three-point-space.tex	359	370	67	10.2	48 49 54 160 247 248 275 279 280 283
+365	manuscript/latex/sections/09-three-point-space.tex	372	379	67		48 49 54 160 247 248 275 279 280 283
+366	manuscript/latex/sections/09-three-point-space.tex	381	409	67		48 49 54 160 247 248 275 279 280 283
+367	manuscript/latex/sections/09-three-point-space.tex	411	440	67		48 49 54 160 247 248 275 279 280 283
+368	manuscript/latex/sections/09-three-point-space.tex	442	452	68		249 250 266 268
+369	manuscript/latex/sections/09-three-point-space.tex	454	463	68		249 250 266 268
+370	manuscript/latex/sections/09-three-point-space.tex	465	473	68		249 250 266 268
+371	manuscript/latex/sections/09-three-point-space.tex	475	491	68	10.3	249 250 266 268
+372	manuscript/latex/sections/09-three-point-space.tex	493	500	68		249 250 266 268
+373	manuscript/latex/sections/09-three-point-space.tex	502	504	68		249 250 266 268
+374	manuscript/latex/sections/09-three-point-space.tex	506	529	68	10.4 A.5 10.3 A.7	249 250 266 268
+375	manuscript/latex/sections/09-three-point-space.tex	531	544	68		249 250 266 268
+376	manuscript/latex/sections/09-three-point-space.tex	546	559	68		249 250 266 268
+377	manuscript/latex/sections/09-three-point-space.tex	561	585	69	10.5 4.3	49 169 251 252
+378	manuscript/latex/sections/09-three-point-space.tex	587	602	69		49 169 251 252
+379	manuscript/latex/sections/09-three-point-space.tex	604	607	69		49 169 251 252
+380	manuscript/latex/sections/09-three-point-space.tex	609	622	69	10.6 10.5	49 169 251 252
+381	manuscript/latex/sections/09-three-point-space.tex	624	625	70		254 264
+382	manuscript/latex/sections/09-three-point-space.tex	627	631	70		254 264
+383	manuscript/latex/sections/09-three-point-space.tex	633	652	70	10.7	254 264
+384	manuscript/latex/sections/09-three-point-space.tex	654	662	70		254 264
+385	manuscript/latex/sections/09-three-point-space.tex	664	672	70	A.3	254 264
+386	manuscript/latex/sections/09-three-point-space.tex	674	685	70		254 264
+387	manuscript/latex/sections/09-three-point-space.tex	687	701	70		254 264
+388	manuscript/latex/sections/09-three-point-space.tex	703	714	71	10.4	169 250 252 255
+389	manuscript/latex/sections/09-three-point-space.tex	716	747	71	10.8	169 250 252 255
+390	manuscript/latex/sections/09-three-point-space.tex	749	791	71		169 250 252 255
+391	manuscript/latex/sections/09-three-point-space.tex	793	802	71	4.3	169 250 252 255
+392	manuscript/latex/sections/09-three-point-space.tex	804	811	71	10.6	169 250 252 255
+393	manuscript/latex/sections/09-three-point-space.tex	813	813	72		169 182 183 254 255 256 275 276 281
+394	manuscript/latex/sections/09-three-point-space.tex	815	860	72	10.9 5.2 B.2 B.3 B.8 10.7 10.8 4.3 5.3	169 182 183 254 255 256 275 276 281
+395	manuscript/latex/appendices/a-syntax-and-theories.tex	1	3			
+396	manuscript/latex/appendices/a-syntax-and-theories.tex	5	8	73		50 51 262
+397	manuscript/latex/appendices/a-syntax-and-theories.tex	10	11	73		50 51 262
+398	manuscript/latex/appendices/a-syntax-and-theories.tex	13	16	73		50 51 262
+399	manuscript/latex/appendices/a-syntax-and-theories.tex	18	26	73		50 51 262
+400	manuscript/latex/appendices/a-syntax-and-theories.tex	28	35	73		50 51 262
+401	manuscript/latex/appendices/a-syntax-and-theories.tex	37	61	73		50 51 262
+402	manuscript/latex/appendices/a-syntax-and-theories.tex	63	77	73		50 51 262
+403	manuscript/latex/appendices/a-syntax-and-theories.tex	79	83	73		50 51 262
+404	manuscript/latex/appendices/a-syntax-and-theories.tex	85	101	73		50 51 262
+405	manuscript/latex/appendices/a-syntax-and-theories.tex	103	117	73		50 51 262
+406	manuscript/latex/appendices/a-syntax-and-theories.tex	119	120	74		262 263
+407	manuscript/latex/appendices/a-syntax-and-theories.tex	122	127	74		262 263
+408	manuscript/latex/appendices/a-syntax-and-theories.tex	129	135	74		262 263
+409	manuscript/latex/appendices/a-syntax-and-theories.tex	137	149	74		262 263
+410	manuscript/latex/appendices/a-syntax-and-theories.tex	151	156	74	A.1	262 263
+411	manuscript/latex/appendices/a-syntax-and-theories.tex	158	184	74		262 263
+412	manuscript/latex/appendices/a-syntax-and-theories.tex	186	204	74		262 263
+413	manuscript/latex/appendices/a-syntax-and-theories.tex	206	221	74		262 263
+414	manuscript/latex/appendices/a-syntax-and-theories.tex	223	234	74	A.2	262 263
+415	manuscript/latex/appendices/a-syntax-and-theories.tex	236	237	75		91 172 264
+416	manuscript/latex/appendices/a-syntax-and-theories.tex	239	251	75		91 172 264
+417	manuscript/latex/appendices/a-syntax-and-theories.tex	253	269	75		91 172 264
+418	manuscript/latex/appendices/a-syntax-and-theories.tex	271	287	75		91 172 264
+419	manuscript/latex/appendices/a-syntax-and-theories.tex	289	311	75	A.3	91 172 264
+420	manuscript/latex/appendices/a-syntax-and-theories.tex	313	333	75		91 172 264
+421	manuscript/latex/appendices/a-syntax-and-theories.tex	335	356	75		91 172 264
+422	manuscript/latex/appendices/a-syntax-and-theories.tex	358	368	75		91 172 264
+423	manuscript/latex/appendices/a-syntax-and-theories.tex	370	371	76		52 81 82 265 266
+424	manuscript/latex/appendices/a-syntax-and-theories.tex	373	400	76		52 81 82 265 266
+425	manuscript/latex/appendices/a-syntax-and-theories.tex	402	409	76	A.4	52 81 82 265 266
+426	manuscript/latex/appendices/a-syntax-and-theories.tex	411	414	76		52 81 82 265 266
+427	manuscript/latex/appendices/a-syntax-and-theories.tex	416	418	76		52 81 82 265 266
+428	manuscript/latex/appendices/a-syntax-and-theories.tex	420	431	76	A.5	52 81 82 265 266
+429	manuscript/latex/appendices/a-syntax-and-theories.tex	433	450	76		52 81 82 265 266
+430	manuscript/latex/appendices/a-syntax-and-theories.tex	452	453	77		171 196 262 265 266 267 268
+431	manuscript/latex/appendices/a-syntax-and-theories.tex	455	501	77	A.1	171 196 262 265 266 267 268
+432	manuscript/latex/appendices/a-syntax-and-theories.tex	503	514	77		171 196 262 265 266 267 268
+433	manuscript/latex/appendices/a-syntax-and-theories.tex	516	532	77	A.6 A.5	171 196 262 265 266 267 268
+434	manuscript/latex/appendices/a-syntax-and-theories.tex	534	540	77	4.4	171 196 262 265 266 267 268
+435	manuscript/latex/appendices/a-syntax-and-theories.tex	542	562	77	A.7	171 196 262 265 266 267 268
+436	manuscript/latex/appendices/a-syntax-and-theories.tex	564	568	77		171 196 262 265 266 267 268
+437	manuscript/latex/appendices/a-syntax-and-theories.tex	570	586	77	A.7	171 196 262 265 266 267 268
+438	manuscript/latex/appendices/a-syntax-and-theories.tex	588	594	77	A.7	171 196 262 265 266 267 268
+439	manuscript/latex/appendices/a-syntax-and-theories.tex	596	597	78		53 83 84 266 267 268
+440	manuscript/latex/appendices/a-syntax-and-theories.tex	599	623	78	A.5	53 83 84 266 267 268
+441	manuscript/latex/appendices/b-three-point-cosheaves.tex	1	1			
+442	manuscript/latex/appendices/b-three-point-cosheaves.tex	3	3			
+443	manuscript/latex/appendices/b-three-point-cosheaves.tex	5	7	79		46 274
+444	manuscript/latex/appendices/b-three-point-cosheaves.tex	9	44	79	B.1	46 274
+445	manuscript/latex/appendices/b-three-point-cosheaves.tex	46	59	79		46 274
+446	manuscript/latex/appendices/b-three-point-cosheaves.tex	61	81	79		46 274
+447	manuscript/latex/appendices/b-three-point-cosheaves.tex	83	93	80	B.2 8.7	223 275 276 277
+448	manuscript/latex/appendices/b-three-point-cosheaves.tex	95	111	80		223 275 276 277
+449	manuscript/latex/appendices/b-three-point-cosheaves.tex	113	126	80		223 275 276 277
+450	manuscript/latex/appendices/b-three-point-cosheaves.tex	128	133	80		223 275 276 277
+451	manuscript/latex/appendices/b-three-point-cosheaves.tex	135	135	80		223 275 276 277
+452	manuscript/latex/appendices/b-three-point-cosheaves.tex	137	166	80	B.3	223 275 276 277
+453	manuscript/latex/appendices/b-three-point-cosheaves.tex	168	183	80		223 275 276 277
+454	manuscript/latex/appendices/b-three-point-cosheaves.tex	185	193	80		223 275 276 277
+455	manuscript/latex/appendices/b-three-point-cosheaves.tex	195	210	80		223 275 276 277
+456	manuscript/latex/appendices/b-three-point-cosheaves.tex	212	224	80		223 275 276 277
+457	manuscript/latex/appendices/b-three-point-cosheaves.tex	226	240	80	B.4	223 275 276 277
+458	manuscript/latex/appendices/b-three-point-cosheaves.tex	242	250	80		223 275 276 277
+459	manuscript/latex/appendices/b-three-point-cosheaves.tex	252	252	81		278 279
+460	manuscript/latex/appendices/b-three-point-cosheaves.tex	254	275	81	B.5	278 279
+461	manuscript/latex/appendices/b-three-point-cosheaves.tex	277	297	81		278 279
+462	manuscript/latex/appendices/b-three-point-cosheaves.tex	299	303	81		278 279
+463	manuscript/latex/appendices/b-three-point-cosheaves.tex	305	314	81	B.6	278 279
+464	manuscript/latex/appendices/b-three-point-cosheaves.tex	316	320	81		278 279
+465	manuscript/latex/appendices/b-three-point-cosheaves.tex	322	339	81		278 279
+466	manuscript/latex/appendices/b-three-point-cosheaves.tex	341	341	82		47 280
+467	manuscript/latex/appendices/b-three-point-cosheaves.tex	343	345	82		47 280
+468	manuscript/latex/appendices/b-three-point-cosheaves.tex	347	362	82		47 280
+469	manuscript/latex/appendices/b-three-point-cosheaves.tex	364	378	82	B.7	47 280
+470	manuscript/latex/appendices/b-three-point-cosheaves.tex	380	386	82		47 280
+471	manuscript/latex/appendices/b-three-point-cosheaves.tex	388	412	82		47 280
+472	manuscript/latex/appendices/b-three-point-cosheaves.tex	414	426	82		47 280
+473	manuscript/latex/appendices/b-three-point-cosheaves.tex	428	451	82		47 280
+474	manuscript/latex/appendices/b-three-point-cosheaves.tex	453	463	82		47 280
+475	manuscript/latex/appendices/b-three-point-cosheaves.tex	465	489	82		47 280
+476	manuscript/latex/appendices/b-three-point-cosheaves.tex	491	491	83		54 223 278 279 280 281 282 283
+477	manuscript/latex/appendices/b-three-point-cosheaves.tex	493	511	83	B.8 B.6 B.7	54 223 278 279 280 281 282 283
+478	manuscript/latex/appendices/b-three-point-cosheaves.tex	513	516	83		54 223 278 279 280 281 282 283
+479	manuscript/latex/appendices/b-three-point-cosheaves.tex	518	536	83	B.5	54 223 278 279 280 281 282 283
+480	manuscript/latex/appendices/b-three-point-cosheaves.tex	538	553	83	B.9	54 223 278 279 280 281 282 283
+481	manuscript/latex/appendices/b-three-point-cosheaves.tex	555	571	83	B.8	54 223 278 279 280 281 282 283
+482	manuscript/latex/appendices/b-three-point-cosheaves.tex	573	585	83	8.7	54 223 278 279 280 281 282 283
+483	manuscript/latex/appendices/b-three-point-cosheaves.tex	587	590	83		54 223 278 279 280 281 282 283
+484	manuscript/latex/appendices/b-three-point-cosheaves.tex	592	608	83	B.10	54 223 278 279 280 281 282 283
+485	manuscript/latex/appendices/b-three-point-cosheaves.tex	610	616	83		54 223 278 279 280 281 282 283
+486	manuscript/latex/appendices/c-section-lifting.tex	1	2			
+487	manuscript/latex/appendices/c-section-lifting.tex	4	6	84	3.1	55 145 158 289
+488	manuscript/latex/appendices/c-section-lifting.tex	8	16	84		55 145 158 289
+489	manuscript/latex/appendices/c-section-lifting.tex	18	28	84		55 145 158 289
+490	manuscript/latex/appendices/c-section-lifting.tex	30	30	84		55 145 158 289
+491	manuscript/latex/appendices/c-section-lifting.tex	32	43	84		55 145 158 289
+492	manuscript/latex/appendices/c-section-lifting.tex	45	62	84	C.1	55 145 158 289
+493	manuscript/latex/appendices/c-section-lifting.tex	64	73	84		55 145 158 289
+494	manuscript/latex/appendices/c-section-lifting.tex	75	84	84		55 145 158 289
+495	manuscript/latex/appendices/c-section-lifting.tex	86	95	84		55 145 158 289
+496	manuscript/latex/appendices/c-section-lifting.tex	97	126	85		55 145 158 289
+497	manuscript/latex/appendices/c-section-lifting.tex	128	131	85		55 145 158 289
+498	manuscript/latex/appendices/c-section-lifting.tex	133	160	85		55 145 158 289
+499	manuscript/latex/appendices/c-section-lifting.tex	162	196	85	3.1	55 145 158 289
+500	manuscript/latex/appendices/c-section-lifting.tex	198	204	85		55 145 158 289
+501	manuscript/latex/appendices/c-section-lifting.tex	206	222	86		55 159 289
+502	manuscript/latex/appendices/d-faithful-family.tex	1	1			
+503	manuscript/latex/appendices/d-faithful-family.tex	3	9	87		56 57 141 203 295
+504	manuscript/latex/appendices/d-faithful-family.tex	11	19	87	7.1	56 57 141 203 295
+505	manuscript/latex/appendices/d-faithful-family.tex	21	37	87	D.1 7.1	56 57 141 203 295
+506	manuscript/latex/appendices/d-faithful-family.tex	39	49	87		56 57 141 203 295
+507	manuscript/latex/appendices/d-faithful-family.tex	51	59	87		56 57 141 203 295
+508	manuscript/latex/appendices/d-faithful-family.tex	61	62	87		56 57 141 203 295
+509	manuscript/latex/appendices/d-faithful-family.tex	64	89	88		56 57 204 205 296
+510	manuscript/latex/appendices/d-faithful-family.tex	91	91	88		56 57 204 205 296
+511	manuscript/latex/appendices/d-faithful-family.tex	93	119	88	D.2 7.3	56 57 204 205 296
+512	manuscript/latex/appendices/d-faithful-family.tex	121	140	88		56 57 204 205 296
+513	manuscript/latex/appendices/d-faithful-family.tex	142	145	88	7.2	56 57 204 205 296
+514	manuscript/latex/appendices/d-faithful-family.tex	148	148	89		39 57 220 296
+515	manuscript/latex/appendices/d-faithful-family.tex	150	179	89		39 57 220 296
+516	manuscript/latex/appendices/d-faithful-family.tex	181	181	89		39 57 220 296
+517	manuscript/latex/appendices/d-faithful-family.tex	183	200	89	D.2	39 57 220 296
+518	manuscript/latex/appendices/e-reading-lean-proofs.tex	1	1			
+519	manuscript/latex/appendices/e-reading-lean-proofs.tex	3	4			
+520	manuscript/latex/appendices/e-reading-lean-proofs.tex	6	6	90		33 91 174 175
+521	manuscript/latex/appendices/e-reading-lean-proofs.tex	8	30	90	4.7	33 91 174 175
+522	manuscript/latex/appendices/e-reading-lean-proofs.tex	32	40	90		33 91 174 175
+523	manuscript/latex/appendices/e-reading-lean-proofs.tex	42	42	90		33 91 174 175
+524	manuscript/latex/appendices/e-reading-lean-proofs.tex	44	55	90	4.8	33 91 174 175
+525	manuscript/latex/appendices/e-reading-lean-proofs.tex	57	68	90	4.8	33 91 174 175
+526	manuscript/latex/appendices/e-reading-lean-proofs.tex	70	70	91		149 226
+527	manuscript/latex/appendices/e-reading-lean-proofs.tex	72	89	91	8.9	149 226
+528	manuscript/latex/appendices/e-reading-lean-proofs.tex	91	105	91	8.9	149 226
+529	manuscript/latex/appendices/e-reading-lean-proofs.tex	107	107	92		55 158 159 183 289
+530	manuscript/latex/appendices/e-reading-lean-proofs.tex	109	114	92	3.1	55 158 159 183 289
+531	manuscript/latex/appendices/e-reading-lean-proofs.tex	116	127	92		55 158 159 183 289
+532	manuscript/latex/appendices/e-reading-lean-proofs.tex	129	134	92	C.1	55 158 159 183 289
+533	manuscript/latex/appendices/e-reading-lean-proofs.tex	136	136	92		55 158 159 183 289
+534	manuscript/latex/appendices/e-reading-lean-proofs.tex	138	147	92	5.3	55 158 159 183 289
+535	manuscript/latex/appendices/e-reading-lean-proofs.tex	149	166	92		55 158 159 183 289
+536	manuscript/latex/appendices/e-reading-lean-proofs.tex	168	168	93		41 44 45 222 238 239
+537	manuscript/latex/appendices/e-reading-lean-proofs.tex	170	179	93	8.6	41 44 45 222 238 239
+538	manuscript/latex/appendices/e-reading-lean-proofs.tex	181	188	93		41 44 45 222 238 239
+539	manuscript/latex/appendices/e-reading-lean-proofs.tex	190	190	93		41 44 45 222 238 239
+540	manuscript/latex/appendices/e-reading-lean-proofs.tex	192	210	93	9.6	41 44 45 222 238 239
+541	manuscript/latex/appendices/e-reading-lean-proofs.tex	212	239	93	9.7	41 44 45 222 238 239

@@ -1,0 +1,61 @@
+{
+  "tested_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "signer": "Codex, first independent mathematical reader",
+  "source_verdict_sha256": {
+    "first": "873698d6ddeafed22eaa462af9ee50f5bd4bc50fe1184da5298662ada37772cc",
+    "second": "36edc3944e3cbcd94e05e6e82ced9bb1dc4e0c9f677a633631621f1d0a5c93d1",
+    "second_historical_ledger": "f9a48a6b21feafd2e2ca2c459d38ac0f4c648c8f08a376fd53fafe0432da536c"
+  },
+  "sealed_first_count": {
+    "external_positive_groups_missing_original_application": 9,
+    "external_groups_including_false_theorem": 10,
+    "positive_conclusions_using_first_grouping": 12,
+    "false_historical_assertions": 1,
+    "ambiguities": 1,
+    "incorrect_bibliographic_locators": 1,
+    "paper_owned_missing_dependencies": 0,
+    "paper_owned_proof_gaps": 0
+  },
+  "reconciled_broad_count": {
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "lean_omissions_positive_original_conclusions": 15,
+    "broad_proof_gaps_including_missing_kernel_evidence": 16,
+    "individual_invalid_inferences_in_attributed_proofs": 1,
+    "introduction_positive_conclusions_missing": 11,
+    "appendix_a_positive_conclusions_missing": 4,
+    "external_positive_groups_when_keeping_lengyel_theorems_together": 11,
+    "external_groups_including_false_theorem_on_that_convention": 12,
+    "incorrect_bibliographic_locators": 1,
+    "additional_unconfirmed_original_bibliographic_locators": 1,
+    "separately_listed_positive_repair_of_false_theorem": 1,
+    "consecutive_clean_whole_paper_reports": 0
+  },
+  "paper_owned_results_and_adopted_mathematical_inputs": {
+    "numbered_results": 77,
+    "numbered_definitions": 3,
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0,
+    "unresolved_inputs_to_numbered_conclusions": 0
+  },
+  "coverage": {
+    "tex_inputs": 25,
+    "indexed_reading_blocks": 667,
+    "unread_manuscript_blocks": 0,
+    "unverified_positive_conclusions_in_verified_source_inventory": 15,
+    "unconfirmed_original_locator": "Appendix A, lines 13–16, Cockett 1990, Lemma 2.2 and Definition 2.3"
+  },
+  "change_from_first_twelve_positive_conclusions": {
+    "H02": "Count the separated Lengyel theorem separately from the relative theorem H03. The identity functor supplies the specialization.",
+    "A03": "Count the original M-stable factorization on total morphisms of every split range category.",
+    "A04": "Count the regular-epi/mono characterization of a stable factorization system on a finitely complete category."
+  },
+  "reconciled_positive_ids_in_reading_order": ["H11", "H01", "H02", "H03", "H04", "H05", "H06", "H07", "H08", "H09", "H10", "A01", "A02", "A03", "A04"],
+  "first_missing_type": "H11, an epimorphism from the natural numbers object onto the Dedekind real object in the parameterized realizability topos of the actual Miller sequence",
+  "counterexample": "D1, Di Paola–Heller Theorem 8.15 with 1_X = 0",
+  "ambiguity": "Q1, scope of effective extensibility for Pour-El presentations",
+  "incorrect_locator": "L1, numerical criterion (3) is on the journal page 595",
+  "reconciliation_precedes_complete_official_wrapper_confirmation": true
+}

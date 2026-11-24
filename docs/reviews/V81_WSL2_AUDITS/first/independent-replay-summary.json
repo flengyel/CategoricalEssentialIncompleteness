@@ -1,0 +1,62 @@
+{
+  "frozen_source": "3dbbf8e15a7cd2f650564f4fbe6974935fd52826",
+  "Q": "cb455f79853241e0214d710f1a73a6e94b9c02be",
+  "comparison_utc": "2026-11-23T19:22:42.060708+00:00",
+  "counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0,
+    "unchecked_mathematical_passages": 0
+  },
+  "named_index": {
+    "item_count": 80,
+    "support_references": 858,
+    "distinct_declarations": 844,
+    "all_files": 371,
+    "declaring_files": 360
+  },
+  "numbered_axioms": {
+    "count": 844,
+    "sets": {
+      "none": 6,
+      "Classical.choice / propext": 4,
+      "Classical.choice / Quot.sound / propext": 827,
+      "propext": 5,
+      "Quot.sound / propext": 2
+    }
+  },
+  "selected_axioms": {
+    "fixed-point-axioms.log": {
+      "count": 11,
+      "sets": {
+        "Classical.choice / Quot.sound / propext": 11
+      }
+    },
+    "fork-diagonal-axioms.log": {
+      "count": 5,
+      "sets": {
+        "Classical.choice / Quot.sound / propext": 5
+      }
+    },
+    "manuscript-passage-axioms.log": {
+      "count": 3,
+      "sets": {
+        "Classical.choice / Quot.sound / propext": 3
+      }
+    }
+  },
+  "all_q_new_declarations_axioms": null,
+  "official_fresh_replay": "pending at reader close",
+  "official_receipt": "docs/V81_WSL2_LEAN_VERIFICATION.json.gz",
+  "public_file_sha256": {
+    "independent-reconciliation.md": "4d99d8925e6cd2fc1a4380974b90bd57c9c2705bce8abbc496df3aa08c2dd55e",
+    "manuscript-only.md": "42155368f771c5b2710f07f24b76c35048bdb8cf3155a440542cb4ee9b1e37af",
+    "numbered-independent-witnesses.md": "bcfe6aeee0c5933a9ee3f2454f9f87c6a74481cab9592c7d54ef5dd6f6afb356",
+    "primary-applications.md": "aef20949cd8f840d32805914a355e55466d79a38431a3614344da10eadececa2",
+    "citation-occurrences.md": "5b79f820034438accebef6ddac2c9bae96dd97f8172c82f23000b5f0e7de03ca",
+    "appendix-e-historical-links.md": "96e2ae70496564be7d0ba8b396f5d75141be6ac363252d450a54702e2fdb7a7b",
+    "fixed-point-provenance.md": "b66cbb538288f5b245ad32b4526a211b83c58e0470fbfc8b0a59cfb9ae92d6bc"
+  },
+  "verified_pinned_links": 406
+}

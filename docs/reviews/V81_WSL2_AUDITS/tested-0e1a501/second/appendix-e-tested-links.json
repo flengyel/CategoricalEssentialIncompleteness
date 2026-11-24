@@ -1,0 +1,582 @@
+[
+  {
+    "tex": 39,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "lo": 27,
+    "hi": 56,
+    "text": "The hom-set bijection",
+    "taggedFileSHA256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+    "pinnedFileSHA256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.restrict",
+        27
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.extend",
+        38
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.homEquiv",
+        45
+      ]
+    ],
+    "preceding": null,
+    "unchangedLines": true
+  },
+  {
+    "tex": 40,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "lo": 58,
+    "hi": 91,
+    "text": "its naturality, unit and counit",
+    "taggedFileSHA256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+    "pinnedFileSHA256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.adjunction",
+        58
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.unit_arrow",
+        84
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.counit_translation",
+        89
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.homEquiv",
+      45
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 64,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean",
+    "lo": 43,
+    "hi": 75,
+    "text": "The two implications",
+    "taggedFileSHA256": "fbd9d2e767845e7062af51c976fa745cfcd1315784443d571ed013e986e17d63",
+    "pinnedFileSHA256": "fbd9d2e767845e7062af51c976fa745cfcd1315784443d571ed013e986e17d63",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_of_subobject_inseparable",
+        43
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.no_subobject_separator_of_essential_incomplete",
+        63
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_subobject_inseparable",
+        71
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.EssentiallyIncomplete",
+      33
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 65,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean",
+    "lo": 28,
+    "hi": 74,
+    "text": "the Boolean extension",
+    "taggedFileSHA256": "46c924a7cd8d1c616a1f595b33aa90c8a6208baab092899f09494019d90f4a6e",
+    "pinnedFileSHA256": "46c924a7cd8d1c616a1f595b33aa90c8a6208baab092899f09494019d90f4a6e",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.Separates",
+        28
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory",
+        31
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory_consistent",
+        35
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory_complete",
+        39
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory_contains_axioms",
+        44
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory_extends",
+        70
+      ]
+    ],
+    "preceding": null,
+    "unchangedLines": true
+  },
+  {
+    "tex": 68,
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "lo": 83,
+    "hi": 110,
+    "text": "Lean declarations",
+    "taggedFileSHA256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+    "pinnedFileSHA256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CEIPalomar.essential_incomplete_iff_inseparable",
+        86
+      ],
+      [
+        "CEIPalomar.boolean_assignment",
+        99
+      ]
+    ],
+    "preceding": [
+      "CEIPalomar.essentiallyIncomplete_signedTheory_iff",
+      65
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 99,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "lo": 32,
+    "hi": 56,
+    "text": "The common list",
+    "taggedFileSHA256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+    "pinnedFileSHA256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.jointSupport",
+        34
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.jointSupport_alpha",
+        39
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.joint_left_truth",
+        48
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.joint_right_truth",
+        53
+      ]
+    ],
+    "preceding": null,
+    "unchangedLines": true
+  },
+  {
+    "tex": 100,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "lo": 85,
+    "hi": 92,
+    "text": "the contradiction",
+    "taggedFileSHA256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+    "pinnedFileSHA256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.no_contradictory_derivations",
+        87
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.trueAt_not_negation",
+      59
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 101,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean",
+    "lo": 45,
+    "hi": 64,
+    "text": "provability in PA",
+    "taggedFileSHA256": "26e13f45fc78ea25c5bce088597797aed009d3414c8eb6790af50b1b8eb690ac",
+    "pinnedFileSHA256": "26e13f45fc78ea25c5bce088597797aed009d3414c8eb6790af50b1b8eb690ac",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.consistency_PA",
+        46
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.consistencySentence_eval",
+      35
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 104,
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "lo": 114,
+    "hi": 145,
+    "text": "Lean proof",
+    "taggedFileSHA256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+    "pinnedFileSHA256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CEIPalomar.pa_diagonal_witness",
+        116
+      ],
+      [
+        "CEIPalomar.exists_inseparable_example",
+        135
+      ]
+    ],
+    "preceding": [
+      "CEIPalomar.boolean_assignment",
+      99
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 127,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean",
+    "lo": 35,
+    "hi": 89,
+    "text": "The two inverse images under $Fg$",
+    "taggedFileSHA256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9",
+    "pinnedFileSHA256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.LocalConnectedness.comparison_zero_inverse_images",
+        35
+      ]
+    ],
+    "preceding": null,
+    "unchangedLines": true
+  },
+  {
+    "tex": 134,
+    "file": "Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean",
+    "lo": 89,
+    "hi": 103,
+    "text": "Nonexistence of the lift",
+    "taggedFileSHA256": "c6be582e829347e24fd19ec8fae864b7a736a7dfe6b2a8e8b6b16f7c49c6cbbe",
+    "pinnedFileSHA256": "c6be582e829347e24fd19ec8fae864b7a736a7dfe6b2a8e8b6b16f7c49c6cbbe",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.missingSection_has_no_lift",
+        89
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.switchValue_not_computable",
+      74
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 166,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean",
+    "lo": 68,
+    "hi": 111,
+    "text": "Closure under evaluation and the two implications",
+    "taggedFileSHA256": "97162b1dcb7d2152cce6676166f72c628a25a249faa22fa451354769c5c58d0b",
+    "pinnedFileSHA256": "97162b1dcb7d2152cce6676166f72c628a25a249faa22fa451354769c5c58d0b",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.evaluate_closed",
+        69
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.evaluationTheory",
+        84
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.essential_incomplete_iff",
+        88
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.constantTheory_value",
+      62
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 187,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "lo": 116,
+    "hi": 128,
+    "text": "The diagonal output and the sentence code",
+    "taggedFileSHA256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+    "pinnedFileSHA256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.output_avoids",
+        117
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.sentence_value",
+        124
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.beta_bound",
+      110
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 188,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "lo": 184,
+    "hi": 218,
+    "text": "the two excluded derivations and the uniform morphism",
+    "taggedFileSHA256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+    "pinnedFileSHA256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.independent_instance",
+        184
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences",
+        204
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentence_codes",
+      170
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 209,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "lo": 97,
+    "hi": 126,
+    "text": "The inference algebra and the two equations",
+    "taggedFileSHA256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+    "pinnedFileSHA256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedRules",
+        97
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedAlgebra",
+        101
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedInitial",
+        105
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold",
+        109
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_conclusion",
+        113
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_constructor",
+        117
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_unique",
+        123
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.axiomArrow_mono",
+      90
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 210,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "lo": 130,
+    "hi": 151,
+    "text": "initiality for every axiom subobject",
+    "taggedFileSHA256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+    "pinnedFileSHA256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.Conclusions",
+        133
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedStatement",
+        145
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_unique",
+      123
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 236,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean",
+    "lo": 155,
+    "hi": 178,
+    "text": "Preservation of conclusions and inference rules",
+    "taggedFileSHA256": "807d9d3b558ec4e5e31910b66d4315e8bdf99ba5f4121fea409d4c8ec5663e9d",
+    "pinnedFileSHA256": "807d9d3b558ec4e5e31910b66d4315e8bdf99ba5f4121fea409d4c8ec5663e9d",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalPresentation.proofIso_conclusion",
+        155
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalPresentation.inverse_proofIso_conclusion",
+        161
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalPresentation.proof_constructor",
+        174
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalPresentation.proofIso",
+      151
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 237,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean",
+    "lo": 59,
+    "hi": 95,
+    "text": "the equivalence with finite provability",
+    "taggedFileSHA256": "414f8d579d00937adaed4aa1ea5b47295ae95a3ad8b71f9b8b21040fe5aef156",
+    "pinnedFileSHA256": "414f8d579d00937adaed4aa1ea5b47295ae95a3ad8b71f9b8b21040fe5aef156",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.literal_theorem_mem",
+        59
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.decodedSentence",
+        68
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.decodedSentence_closed",
+        71
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.point_eta",
+        75
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.theorem_mem",
+        88
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.support_range",
+      51
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 238,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "lo": 139,
+    "hi": 175,
+    "text": "recovery of the axiom subobject and conclusion image",
+    "taggedFileSHA256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+    "pinnedFileSHA256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.axiom_subobject_recovery",
+        140
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.rules",
+        145
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.proofAlgebra",
+        148
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.proofInitial",
+        151
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.conclusion",
+        154
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.sentenceProofObject",
+        157
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.sentenceConclusion",
+        160
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.theoremIdem",
+        164
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.refutationIdem",
+        167
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.sentence_image_recovery",
+        172
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.axiomIso_inverse_inclusion",
+      126
+    ],
+    "unchangedLines": true
+  },
+  {
+    "tex": 239,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "lo": 327,
+    "hi": 342,
+    "text": "inseparability and the independent sentence",
+    "taggedFileSHA256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+    "pinnedFileSHA256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+    "sourceRangeExists": true,
+    "declarations": [
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent",
+        327
+      ],
+      [
+        "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_native_incomplete_of_consistent",
+        335
+      ]
+    ],
+    "preceding": [
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_categorical_incompleteness",
+      315
+    ],
+    "unchangedLines": true
+  }
+]

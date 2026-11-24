@@ -1,0 +1,2000 @@
+{
+ "tested_commit": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+ "manuscript": 81,
+ "lean": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+ "thread_limit": 1,
+ "memory_limit_mib": 4096,
+ "scope": "Reader-local type elaboration and independent applications against the checkout cache with locally rebuilt missing modules. The official serial receipt establishes clean dependency replay and its permitted-axiom results.",
+ "archive_tex_sha256_agree": 25,
+ "manifest_files_checked": 28,
+ "assertion_groups": 463,
+ "numbered_results": 77,
+ "definitions": 3,
+ "distinct_named_numbered_types": 850,
+ "distinct_named_types_in_all_packets": 1081,
+ "anonymous_examples": 7,
+ "reader_commands": {
+  "Independent.lean": {
+   "exit": 0,
+   "seconds": 8.47,
+   "input_sha256": "f2c85dbc7845628f383f02ca938de8623f0d04359cb52d417d26a271fd710eac",
+   "stdout_sha256": "e9efd06c52ccb4fd7ab491da7892fff67e5524fc392b8c1c8639e13c55f0aa6a",
+   "check_commands": 2,
+   "anonymous_examples": 7
+  },
+  "Types10.lean": {
+   "exit": 0,
+   "seconds": 5.8,
+   "input_sha256": "626ea7b5684e5f9e54b30f8de6e011eac6b63d02ce96ce5d5566bbf6f4708a76",
+   "stdout_sha256": "0c4acf7f070eaf8d154a19fd1141fbbc54aedc25d82993d3fe507d644d40f105",
+   "check_commands": 141,
+   "anonymous_examples": 0
+  },
+  "Types3.lean": {
+   "exit": 0,
+   "seconds": 2.88,
+   "input_sha256": "6b978ed72025710c6b6d2919a0d057f00ad21330f20effed144753ff38701b6d",
+   "stdout_sha256": "c39a4cca6dd2a6357d9d2df7bfa52899bd543a4bf9c019cfe40f6ce8f9c49a6b",
+   "check_commands": 6,
+   "anonymous_examples": 0
+  },
+  "Types4.lean": {
+   "exit": 0,
+   "seconds": 5.08,
+   "input_sha256": "eebd40575fcc500c5d1581fe8baeaab89c5ff94e6fece09fe0bf392aaf15b652",
+   "stdout_sha256": "eadbd18409fb8688b12ee18c35225dbc0e1913ab4ef6743c8a91824c15fdf617",
+   "check_commands": 64,
+   "anonymous_examples": 0
+  },
+  "Types5.lean": {
+   "exit": 0,
+   "seconds": 5.3,
+   "input_sha256": "ea41060e5cb1f7a8a3460c49bf024d299946bd3024e67c6d6520a063e75f4713",
+   "stdout_sha256": "108bab02dca2edce7841def419a1f1e1fe9ef76d7d943aa1371ae14867d063d0",
+   "check_commands": 44,
+   "anonymous_examples": 0
+  },
+  "Types6.lean": {
+   "exit": 0,
+   "seconds": 5.0,
+   "input_sha256": "1ce0834e0b25de09636c027d4f0cfe51a33d574cdcfe27cee66d8abb9d58aeb4",
+   "stdout_sha256": "f69518326f454ea9d5ff82c883828aac0e10ac69d5ee16cf30989c372423c01f",
+   "check_commands": 96,
+   "anonymous_examples": 0
+  },
+  "Types7.lean": {
+   "exit": 0,
+   "seconds": 4.89,
+   "input_sha256": "ae35c5db4843d4cf426449c9b19eac07f5338c6bd1446cf1fb5bbad2722a3a06",
+   "stdout_sha256": "84f139e90a9e74e6d7b4e5a1151da6870b63b835890b7eb12275d0d9cbd98193",
+   "check_commands": 52,
+   "anonymous_examples": 0
+  },
+  "Types8.lean": {
+   "exit": 0,
+   "seconds": 7.0,
+   "input_sha256": "ddb3865da6114a11dba9ac4914c752b31a5dbf7b20f56b5ba518b3a709ca1fe3",
+   "stdout_sha256": "846c87a16b875822ad14544b25f94463f6ad9aed5c4fa7ae9e29b63849922b40",
+   "check_commands": 201,
+   "anonymous_examples": 0
+  },
+  "Types9.lean": {
+   "exit": 0,
+   "seconds": 7.51,
+   "input_sha256": "d14500e2e1b302425ec034fb73b682fa4759d3d3660d3e1934d6a0e377cb2e94",
+   "stdout_sha256": "428d99465f1e92e997f2503001848389a23996c527aea00f9481fc3c007cfb6b",
+   "check_commands": 158,
+   "anonymous_examples": 0
+  },
+  "TypesA.lean": {
+   "exit": 0,
+   "seconds": 3.63,
+   "input_sha256": "1657e7e74c6e9e44b1e639a59f8311907b53fa9450f3d2ab8123a00ba5f2354c",
+   "stdout_sha256": "ed66b421a1b474e2898b3dc4f101b79ef158cee4cec1387de60de1f41bfd14a3",
+   "check_commands": 31,
+   "anonymous_examples": 0
+  },
+  "TypesB.lean": {
+   "exit": 0,
+   "seconds": 4.44,
+   "input_sha256": "986832a19413fe5eeade1c0c7bca875221f2775e1eafc6a8a16b4fff60ab6365",
+   "stdout_sha256": "e76cbccb18e95ac25baa66db808f9aa10317d197ff970b8bd36719996bd5d0c6",
+   "check_commands": 44,
+   "anonymous_examples": 0
+  },
+  "TypesC.lean": {
+   "exit": 0,
+   "seconds": 3.68,
+   "input_sha256": "d92788ceb4bc888759ed67f423e28c132b69ff8e2d2ba80ee56b789bfd90d1b2",
+   "stdout_sha256": "723eca579c38e762ecf851e7e235c637cddce1586914f3ca3db99d0aa5101d22",
+   "check_commands": 7,
+   "anonymous_examples": 0
+  },
+  "TypesD.lean": {
+   "exit": 0,
+   "seconds": 3.98,
+   "input_sha256": "80e30fc87488b03336b21c0ef9160a53703a8d293c0149ce495bc81ef9c78c97",
+   "stdout_sha256": "1060f1c83f4b860f9e984198f9ac0589d816fe2beaecbe051da47cd9d5281102",
+   "check_commands": 9,
+   "anonymous_examples": 0
+  },
+  "TypesExtra.lean": {
+   "exit": 0,
+   "seconds": 9.94,
+   "input_sha256": "e0d4b2964693787e672de14c5e75421ed69ba88cec09f50aefa907a8d17fba05",
+   "stdout_sha256": "27f44306ed9b0924c01a85f1382553ab10dfba721925ddee056f641f29b707ce",
+   "check_commands": 66,
+   "anonymous_examples": 0
+  },
+  "TypesProse.lean": {
+   "exit": 0,
+   "seconds": 8.0,
+   "input_sha256": "2628c7c7514c82462229da4550acf82f445a61652e1f7d54935c3a3621cbf4e8",
+   "stdout_sha256": "41d2085c8d2e8095224b7d19c067a761c1aba0cc6c68d0ced3da9381a025b126",
+   "check_commands": 171,
+   "anonymous_examples": 0
+  }
+ },
+ "checked_checkout_inputs": {
+  "FORMALIZATION_STATUS_V81.md": {
+   "git_blob": "0c2b3865a6a02d6943e14f79881e15fb005b9f5e",
+   "sha256": "a898a84cfc9d2a01b3795e548d66c9ae966b5035a481bbb458934c468018e508"
+  },
+  "Lean/CategoricalEssentialIncompleteness/CountableArithmeticModels.lean": {
+   "git_blob": "e4094da3c52c7badb3651228d649f77dda2d0939",
+   "sha256": "cda0be183b1238f2159fb3ed162494208d795744b5d23b0c37c6a3ee0be02e82"
+  },
+  "Lean/CategoricalEssentialIncompleteness/DisjointJoins.lean": {
+   "git_blob": "4ffdce276556f1bf2607a5f9563be8ad28effc63",
+   "sha256": "af9d42edde6024c05d53171bf7f46971b62186641ae8c47ffa63c07763cbcfce"
+  },
+  "Lean/CategoricalEssentialIncompleteness/DoublingRangeFunctor.lean": {
+   "git_blob": "bac9cb0002ccf021f3d2a236e13e612564547b28",
+   "sha256": "2f9711b19997b9c110590ee1bdbe3d6ce68868bc4944e146a879958c2741c119"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkConstruction.lean": {
+   "git_blob": "d070ea27c9cf7bb238a3566a04503368babc0db7",
+   "sha256": "dc79059207e13602290bfa0809662cfe04e41edf5acf2614f6135c1b065ff05f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkCoproductFrame.lean": {
+   "git_blob": "fe2272e0cd79a2f5db19e5488056deb8d4565204",
+   "sha256": "53b8e76f528b4dc08f6a175f6d9283a4db0fb3f54595117175be39ae85c5df90"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkEncoding.lean": {
+   "git_blob": "645a605400a3958c1051c9f0a002ed6bd8623ffa",
+   "sha256": "9e51222b76eeb92e3528e1954e7a23e4bb3224ef27bbe1d3574989f359a3975d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkExtensive.lean": {
+   "git_blob": "b75cd248ca157105e688a36c8b3d7b3c693637ea",
+   "sha256": "f1539d43dc5295554385f634b9c58dc570220c344815ca730dc7097269bd9c7a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkProductFrame.lean": {
+   "git_blob": "cd485af025e969e7e94c76279d5a6c1bf0189ff9",
+   "sha256": "1677f2ef269e35a368a499a60971bf2edeced8c33105ee6d71410797c445a709"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkRangeProducts.lean": {
+   "git_blob": "8131fd04334811a14152f18c5cab25dbc1794917",
+   "sha256": "de05ea997b7945a0ce0dd16956a56aa56c280a8d59bece6157e77562307c3b79"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkRecursion.lean": {
+   "git_blob": "2985b6eec115d2add80ec309abe155aa73cc4184",
+   "sha256": "7b12ebee4241ea95e02341e750b3c44e3255752f1ceb2f10983102ed52ab6255"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkRegular.lean": {
+   "git_blob": "6aa0e4eb050c2469263f84153c236e04e0566f59",
+   "sha256": "d1431231971d04ee87170765acb2d29912eba23b4ab7ed5cda89c70c234d41b8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkSpans.lean": {
+   "git_blob": "c31790d0d30edbdb768f52cb90a5118798919795",
+   "sha256": "c7a868e31939373e31ccd0c4371fb8bb2486fa10e2dc4d5f8ab2a907680d080d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkSplitEquivalence.lean": {
+   "git_blob": "aad733fd9319905635e8f2ac9779752706c7dadd",
+   "sha256": "05b46f4dd443dd55e95a4c43fb6d45192dcf3771aef787aaa6d64239a5d27e4e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkTotal.lean": {
+   "git_blob": "7f179f4e2b1f180f0c24845599f58c81eb7183b6",
+   "sha256": "b97afe3f4e26474e6a9baf475d2a2a5924aa1f2fef36d3d45702bdac0a647ad9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkUniversal.lean": {
+   "git_blob": "b223f361a644363ad72d4579dce5173cada1d03d",
+   "sha256": "b02971aa4ff58fc2c23ba5596d0c95171e7097821b370c3e8ee8db0bd878b601"
+  },
+  "Lean/CategoricalEssentialIncompleteness/EffectiveForkWordFrame.lean": {
+   "git_blob": "cb345d236d8e59bf46578b4d9da24059006c1b1c",
+   "sha256": "8cce5a242ccfa6f9824a4d847331b9cb7100d789ac85d35f8a4d7b24100e14c0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkActualCosheaves.lean": {
+   "git_blob": "04e9c4c3f78f6a09857d212e15befe275366f453",
+   "sha256": "ca6ab78710072012f0130925c8732e42cc0f25ddc5684316e7c4176eae99ca2a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkCentralNonuniversality.lean": {
+   "git_blob": "e2f096d56d5eafd4147767811cb4da5f9c761bf7",
+   "sha256": "26fc0cda7763fb892706b59129cf456ccf74b3747dae3ad2630a1ffff890cbc6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkCosheafCriterion.lean": {
+   "git_blob": "23f6ca1e5164746cd6f1c0a85fe99f449ae02e49",
+   "sha256": "9c6a7ca8007e91107f3fdaa7fc4abced002a27ce31c764007730a44da7017d8a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkCosheafEquivalence.lean": {
+   "git_blob": "56f1eb0ba51a605539c2522001b9f4abf1124e98",
+   "sha256": "f7a577c82ce136fde9158e4da2e89d3303eabff744c04cbdfacccf14fbe702cd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkCosheafExamples.lean": {
+   "git_blob": "f26a68e66fa76dfd4b31fac2d26e93b33c140a75",
+   "sha256": "fbbe23155cc130408b964420bc08961f37e33acb9299939e8fa9ea275952ed9e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkCosheafQuotient.lean": {
+   "git_blob": "108a79dc68d2580cf7581f3fb0d4083612d6e768",
+   "sha256": "789d64e975108488affe67aa2015dcd5bc577e695848b72e046a2c9dd0b846a4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkNonEquivalence.lean": {
+   "git_blob": "a56829323e87e401555a13bbf2961adf8cff621a",
+   "sha256": "662fcb2e911c5368397fad1e7ebfa6d3ac1962ae3a529f769b5c30e419ddfa9d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkObservationFunctor.lean": {
+   "git_blob": "dadbbcc7ac946bb616baf0c0828f2021ff927c8e",
+   "sha256": "2869241510dd5dac7069c8e6e0ac2b2a43d9996204b0264138ccf9554c3b2804"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkProofObjects.lean": {
+   "git_blob": "045daae1ffe8e492a0dc990057540466612f8df3",
+   "sha256": "23adf85c33a2ea9b4d7fd9283b0468930e6ea13b92ca57714c9c3a0fee10ae4f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkProofPresentation.lean": {
+   "git_blob": "ec5e1a655b8946e125e51fc992ee5febd0894d30",
+   "sha256": "b806bf828225f06f4bd8b6e6057c31935cb0e4d4df8e6ece3f3f5845d70fb03e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/ForkSyntaxInitialAlgebra.lean": {
+   "git_blob": "6f06a2a051bb1d67e9ad738391ffd1daaa876f76",
+   "sha256": "4396149526e70053fbf403b40d198ac9d312f1b3ba96f2f9b4ff0c414e0b4ee5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean": {
+   "git_blob": "76092c55df25326fa6e55e67cf6b3f059382d7b8",
+   "sha256": "c6be582e829347e24fd19ec8fae864b7a736a7dfe6b2a8e8b6b16f7c49c6cbbe"
+  },
+  "Lean/CategoricalEssentialIncompleteness/OracleRestrictedInclusion.lean": {
+   "git_blob": "f6d2a63b55df9643196ff9012f03a694a9409b33",
+   "sha256": "5d8e610175487847fa8a02a2d269286cf08be7aa080956a76c176990a75f96cb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/OracleRestrictedTotal.lean": {
+   "git_blob": "77d7148123e102af08b820a4e2d52cd5b6a2334b",
+   "sha256": "1e1b12e38c5d725c4591b0c86552845aaa7991544f9cf48a6ce58a83bbe8bb85"
+  },
+  "Lean/CategoricalEssentialIncompleteness/OracleRestrictedTuring.lean": {
+   "git_blob": "91a720de8bc2a52598aef73a5f51c0b0b0a4c8db",
+   "sha256": "299310dbc4cd31e18fe9ae08804d867eb8221a5a28be23f25df12d27c93894f2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/PartialFunctionFamilies.lean": {
+   "git_blob": "ee6ec784a17c8aa4be4fdc7422facbcd4a850038",
+   "sha256": "d48bc6fc3634bc5db37446f1f5a3e35553b81c521ff310b28c8c3788795258dc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/RangeFunctor.lean": {
+   "git_blob": "3aa5d1f92652c63bb08e29e376f7d0b3b8c61220",
+   "sha256": "44c8aff5f7f89a377e20dfaacc28b7d1ded2bf41c68cfaaeb49ddab099e841d4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/RestrictionIdempotents.lean": {
+   "git_blob": "91664c1661b299a85d4de37bfe3b17fa68428acb",
+   "sha256": "efabdbbec45b8e084359a5c8ec79d7d6676d4d5f3b3291b0cbb973a39aa4d297"
+  },
+  "Lean/CategoricalEssentialIncompleteness/RestrictionRanges.lean": {
+   "git_blob": "aff1d036446bd4a4da70d83d8f0daf0b31301598",
+   "sha256": "a5a9a9e992b83f4ec67aa594b665b2e08b89c66b9453dc0d37fb8801381ee247"
+  },
+  "Lean/CategoricalEssentialIncompleteness/RestrictionSplitting.lean": {
+   "git_blob": "1db2393f64325c2f03ee7524d5b35d9630b0e18f",
+   "sha256": "99481583e1d60ff35d2d3f542eaa4fa0b47980656a4a0fd4b21474c7a885562e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticExtension.lean": {
+   "git_blob": "8e2e59e6dd435cf9eb17909c4329f498c014140f",
+   "sha256": "5756451093cdc67817ae4a1a9c362360a0f80e0cda38676d7c8ead029a6395d2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticFamily.lean": {
+   "git_blob": "fe00cf51529d72aa662c6bf4d783f6ce59ffe2d9",
+   "sha256": "1bdb24f07a6e08ca88d2190ab6b17133f30042116365a2ca7490bc6ad2d754db"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticFamilyExtension.lean": {
+   "git_blob": "6cabed47ff4e2782f2d1045356b63d4714d05c78",
+   "sha256": "5d7934a079c68089ac6b80a4a0fb5c354b35b974a0f137b6b46fda5db7dd8975"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticFiniteSwitch.lean": {
+   "git_blob": "52c200c6af6da7367fff4824ce8fb3130de70bde",
+   "sha256": "449c7d6690ff2597a5399e4b79265ee6c3efc31d5e96fd82133e1d9828e272aa"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticModel.lean": {
+   "git_blob": "61c5ea4f11096551a83d5dedafc4f68dd072757d",
+   "sha256": "cb430bbfab20f7084daf0f0c286d683e56b7fee1efd01ee08c55cb43925732a6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/SyntacticPreservation.lean": {
+   "git_blob": "eea7c258b83ce99a2e675be9e2e60eb6174ea965",
+   "sha256": "0d4342a5cadd6dc180654a931b654a0ee3f79aa610bad837c8f6933e1d219316"
+  },
+  "Lean/CategoricalEssentialIncompleteness/TwoBoolean.lean": {
+   "git_blob": "0fcaf524834752b76b9decee70691cc5232b6e9c",
+   "sha256": "0f02d2fc2faf461a62c928ec74646e3ff29d48083d0683896a3100c8939500c2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46Applications.lean": {
+   "git_blob": "cc7d1dc925b215b91687e173cc1b4f78f04612d2",
+   "sha256": "06b479e8d95802de6d841e32f67c2f1c4f9b26a2cb87b2d77c0aa05b70d5a26c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticAssociatedCategories.lean": {
+   "git_blob": "0bc9ed7e13901723d1ea459fd6dcde6f9bf3a597",
+   "sha256": "bc308a69f6b852cbfd460490406fe3f38456974327bb2b90721cec80744c4447"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticAssociatedDeduction.lean": {
+   "git_blob": "c31bdab3d8ffc0ee4f483c2e3ad667fc2a759757",
+   "sha256": "a63949bbffc5b5d700c4de2231190921309186a13d73dbeba5e58a480b80af34"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticAssociatedIncompleteness.lean": {
+   "git_blob": "44374ccec02a2c6f6222e201de6f4015c25dca85",
+   "sha256": "2bc969ba7a5c6588c15c30a928e978d01d7a93539a6571e29526d5cae5a37ce2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticAssociatedStructure.lean": {
+   "git_blob": "9ad476a6a12a2d9a8823b7fb9d9adab36eeccca5",
+   "sha256": "0b71b752f4a1c6c6419eb2e86308f90cdb8b64b2dec966e38e0e7bd0a1482f90"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticComparisonTarget.lean": {
+   "git_blob": "4133c4a772b508d1a1190589d98985c06ebe037c",
+   "sha256": "b2e43a3fc5e7624e0cc8edafddbce87db4df1982b6e9cd7dac371cc7085334eb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticComplementaryInclusions.lean": {
+   "git_blob": "873c8b0196c5c700165b80c1e38ae48e84708cee",
+   "sha256": "1cf895e53b646f5ddb0825feb914160c73a888a113d76c6c0d4770186681be51"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.lean": {
+   "git_blob": "0216882f326cc6ff4728c45a7257dd75182a88ed",
+   "sha256": "e839443be7347662a1cf288fea84112d5d6532bcfa5bdf64cf3b54622cd68941"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticDiagonalSplitting.lean": {
+   "git_blob": "04176afcc4a2d0317e82ed938131c1321bafd3c5",
+   "sha256": "9eb754aa0b1c0f8810b6e325e6628c296968f44e427230bec02e93d94e9e823b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticDomainExtension.lean": {
+   "git_blob": "25ee7d9f5e6951ae3a1ccdb86297d7c37ee2539c",
+   "sha256": "575c2cba36b6f894c3dc38735fe68250dbf27a15f3adbcff42da1e72b9998b32"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticFiniteCoverage.lean": {
+   "git_blob": "c56e0cb90a8055cbf11e7a2b8a8bf71169ff6828",
+   "sha256": "1a20d3706bd93328755340df8481196f3aeb948bba964473eaaae864217eecb0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticFiniteLookup.lean": {
+   "git_blob": "5b75b3d52915e167f242a72c7f431581b7e2438b",
+   "sha256": "30e2f9883eca48b88828d41afde996467d1345271dc4142fd5443a193d408c48"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedAxiomsExponential.lean": {
+   "git_blob": "9bb8562995f7c5bdc40bfbb7601bd0be0e46345f",
+   "sha256": "8b5409c86a710b846c2132b7f233e189759248d9f1982f697a02f7fd093d57c4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedFibers.lean": {
+   "git_blob": "fa4e6a71fdafda038127576a1105e89cb6333d29",
+   "sha256": "ec522f961954198805e6055f86adfc6e6de418ec7889101021b345cdf600aef3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedFibersPresentation.lean": {
+   "git_blob": "94699d28b08b5525201230601f711cd903f9bafc",
+   "sha256": "54bced15eca7bc9ad27cc6f526eca73af593c25d394bb3430c38a0b6f9c1c7e6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedPAEnumeration.lean": {
+   "git_blob": "595a5eef2b40a169efd7ea990487eb37880b3dab",
+   "sha256": "bf590cf0577ae76332e2e6f0a095250873d5d9e30d84f87643bca7a8c5539e70"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedPrintedFamily.lean": {
+   "git_blob": "eb37c345b1a87a0d8b8bb6f22c1f7f62b3ea2c9a",
+   "sha256": "2664d3eefe14a8c4cfce63cd40abf31d1ac9334cf5be9f3dce3cd308a603c5a1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedProvabilityFibers.lean": {
+   "git_blob": "2d3701126f2193fdcf776a627806d0dc95ab0605",
+   "sha256": "0701fb271d6188b9348aa73a8417699108ce896ed9e03e9efba7985b46d852cb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticInternalComparison.lean": {
+   "git_blob": "0044453ec685be00e79a06faeaa6bfdfb5ffcdfe",
+   "sha256": "9d4459275a0483f8909ea5fd98895f3f20c99babf4a74c5d2f451eeb4f1fb1cf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticLiteralCoordinates.lean": {
+   "git_blob": "0c3ce95331fe6a985f6ea43bd04a9cdab13981fb",
+   "sha256": "118c897fefebe46a01f417348fb6ced716e11f409f54a898848278d5d35afaa0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticNamedAxiomComparison.lean": {
+   "git_blob": "d13380795fccd17633a958ba2d9246bb83b8d102",
+   "sha256": "0bed19685c5a50674b06d55e2d18bff01cd72b66fc7fac055b515f4cd29e702a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparability.lean": {
+   "git_blob": "e4dfcc149e6859accffdd26ccbcf24d4e4665d8e",
+   "sha256": "f68c9cc1d0b7caa9785a745ab64dcb1e572dc177e64bc8f818af7fbaaf475d31"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.lean": {
+   "git_blob": "a4ffdfec9818759ca505bf65243fcfd7504f1f2b",
+   "sha256": "b414f8d5147b5c54a19e9b1f1dff024e522e42c8d5d8cdc33bb00ad59b63041b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistency.lean": {
+   "git_blob": "58386c8beb172df097d7ca8af631f263a099ff5a",
+   "sha256": "661ab27c7504d269d4900d73fad385121befeba6a9817db08717c455f8be7c2a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean": {
+   "git_blob": "cb6fae4e795b2540c06722305c309e7aae396137",
+   "sha256": "26e13f45fc78ea25c5bce088597797aed009d3414c8eb6790af50b1b8eb690ac"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean": {
+   "git_blob": "52920c9f0ef8d2e7cf10b795c511d49b7a64e5a6",
+   "sha256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedEssential.lean": {
+   "git_blob": "3fc0230924c982762a15cde1a3633b65e3982839",
+   "sha256": "388a861f7dbb76695de4b53ee74face9cb6010e7aac2c0af18e6473876f083f3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedFiniteSupport.lean": {
+   "git_blob": "0e9a25429858974945d7be5c6edaebb40f5e09fe",
+   "sha256": "d6603930d14a95ac32976b7a307e2537e7a9454dcc7090e7c542c160739bef9c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedGeneration.lean": {
+   "git_blob": "742d6f1857aae3faf7d4096cd0861c10b7f6dc62",
+   "sha256": "610cd382e55897af60ecc046e2b2d8d2a3755e087b4ee96e88516fe4b923c91d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedSeparator.lean": {
+   "git_blob": "6d86b5fe004b8c4eecaa7bb37aadf11069a43813",
+   "sha256": "fbabd9ede1972fa82cabe23827c16effe6f69e7bb06fd273f4cebf2ef6311aa0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedSplitGenerators.lean": {
+   "git_blob": "31601693e8104a32b990e24cb08f1037d809602d",
+   "sha256": "d27d678baf4f936c1028a43c69c1e2200e311de94321aa61967eb37e7464369e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean": {
+   "git_blob": "a367200b74a549ea13418e1ecce3ae6fe538c313",
+   "sha256": "48ab1745120d219ba874308d10d99e18568ab1fd1b54a5d22a8d4a9d22198a8e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheoryTruth.lean": {
+   "git_blob": "1eaa0e7fbe3d5a1be853730d1e41bb45e7ac6d06",
+   "sha256": "60bcc7387e96e09e8c1624b9d5b814d32439deab0a164ab98f747b9c32f3d6d9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTotal.lean": {
+   "git_blob": "5df03c9cd79fd1cb2d533af16d8c85b92f3909eb",
+   "sha256": "92fc9446e1300978af2e94ff4e7833f345c95b3c57f5af35435c27bf9a10a5ba"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTotalSyntax.lean": {
+   "git_blob": "64f61cae11badb92cedbc738ebe2e5d0efb87b98",
+   "sha256": "8376acb7b9c203cf281dda5da4029914b8bbf717b1c26f6286eb1338af3601ff"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUltrapower.lean": {
+   "git_blob": "efb89a151ca70df1d6791690acece4aeb1c37130",
+   "sha256": "6c0efa545c04ce7880897f7c3d447c03b7410d882ec4b45fbf3d7fc8474c5343"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean": {
+   "git_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9",
+   "sha256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformSearch.lean": {
+   "git_blob": "497dca6f213196060d70209a592621b10bfb044b",
+   "sha256": "ff0c40756f9d71ecf105f24b38529b3f425eae782e21b1fc8da7b63967ac71e9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformSentence.lean": {
+   "git_blob": "7ea74f45a27a1d2114ea3608e39240b1b0bdc43c",
+   "sha256": "bc0bfceff4b7e081de33f4176524d27143c033c5a389b38f7f47e982b103a4a2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean": {
+   "git_blob": "94c04b8ddd60bff6f32023ac0f022ed1078ac5f1",
+   "sha256": "97162b1dcb7d2152cce6676166f72c628a25a249faa22fa451354769c5c58d0b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompleteness.lean": {
+   "git_blob": "85821e8c2fd9239c0fef8b6bf9535cb9e8af035c",
+   "sha256": "0577384075a959105c07323d6564aaaeb495367395af65087eb0fb0c3bd63248"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46AssociatedSliceCoordinates.lean": {
+   "git_blob": "d88c93f078abe63bc547ad04051ddd6288830a8a",
+   "sha256": "6c6442a3e37d02dc0d568c994712fe2f41fe665fc7a7c87298713818ee395f21"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CategoricalFreeVariables.lean": {
+   "git_blob": "9814bbfecd654cfdb9e681d06ecd8465577896ac",
+   "sha256": "c2df912f757b6f078713cc3e0a3db227046d08847da5d8fb7f08cbb208eddb93"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CategoricalLists.lean": {
+   "git_blob": "5dd417d4be66dc5618e9542d6ff32a6c7e342069",
+   "sha256": "4237ae29f29a9a3957f3dc8713395df7bb4048eb66637824eb82533ad898590d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CategoricalSubstitution.lean": {
+   "git_blob": "a4975cd622b96b5931831d61e52073f5ee81b6f9",
+   "sha256": "82a8fd3f3a11c9853c4bfd26b36fbb848cbb3d35c5c3802bcacc024bf0cbcde7"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CategoricalSyntax.lean": {
+   "git_blob": "2b7d32a1830a42d2d68c6f92f1acde8d1e0871ad",
+   "sha256": "7db7f87ec44658d72427bd823add7e92d044c065fff2dae7a2fef66f224da488"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean": {
+   "git_blob": "17086177e64d41af5ae394ca55d021f60a79f2e0",
+   "sha256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CompatibleSplitSlices.lean": {
+   "git_blob": "06d214772344707aba17da79bfea0bab501a5610",
+   "sha256": "ba00c497e59649f438953cd235949e6bfddc687199af7c88236ebbfec4366567"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonPlainAdmissibleValues.lean": {
+   "git_blob": "82f6fc17a7b4b9bf38f843635e21ce3d2a3a4045",
+   "sha256": "9eb4f74c37276fac7dcfdc23336218e752b0aa6937f8416b3d0b673e9bd0c54e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonPlainFreeFor.lean": {
+   "git_blob": "c2de317beb73dc00dadf278e0ca6a92df153dd00",
+   "sha256": "abd5e6996827e7cbba3d0b0e4d9a4ff961492058f2a7eeb5fe0466419cc427b0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonPlainFreeForTheory.lean": {
+   "git_blob": "7c38744bda5a9e16b10a32d804f1b11ab84a4bd7",
+   "sha256": "1137cb69fe534396af6eef55a8ff5ff5525c4e4faf164714d7dfd66a631387ae"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonPlainSubstitutionValues.lean": {
+   "git_blob": "28044dcc32a361f281f4edd0a1bce9c2f2317a8b",
+   "sha256": "dcc89485fae06f17744d2c19aef20b44147e538e03358a87d187e86e633309d4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonSubstitutionHom.lean": {
+   "git_blob": "a0e3242c07b36e68a824b87ea467f87a726c3266",
+   "sha256": "1f74f66ca61ef7958a0c3bb1f4e7b323a4ebd2ce10a832d84a8fee1cf474ad3a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConsistentFirstOrderTheories.lean": {
+   "git_blob": "260c9f49b04487c39654b0cd235152fe9006298a",
+   "sha256": "a465a61fa4959f6799cffc7f36ff94231b8722ea7489184d332ade15e7e59a11"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConstantSlice.lean": {
+   "git_blob": "540f46a6e37fdd9d05caf1d11bf574415ecaf1a8",
+   "sha256": "6359a5387010770990ef25f99358bed2cdd0f9ebf62c38c9f95410b30f85d79e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ConstantSliceFull.lean": {
+   "git_blob": "d899c26d27f6517e56d4ebc5b51d212474af7a6a",
+   "sha256": "d1a8c2441e558af75bd9067ee1efe2cb4be88944f6a5a311fd266cef8344434a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46CoveredDerivationInvariant.lean": {
+   "git_blob": "f68c28dc6adc8c16a835b02800cd65a4f2ec20d8",
+   "sha256": "e641a8deb9d850f5baafc553a6cbfbeab8fb506f2b566ba4042ed463b4089107"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DeductionComparison.lean": {
+   "git_blob": "2c83a5533ff7dd5ffbb867698de9152761667329",
+   "sha256": "f1038177ce909b7904bd639d2baac0b97c57c0e3de4100b9c9a1bc5a33bd7f53"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DeductionMates.lean": {
+   "git_blob": "12962250edb8dcabf18e83f0160336f0ddaf5a16",
+   "sha256": "0c8356334dcdf8733495005d82e071979fb6bd9ebb00334d5883548b23e278cd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DeductionSliceAdjunction.lean": {
+   "git_blob": "3fd1bb3875de3cf2dce4edcb70655584178b0fc0",
+   "sha256": "78b67a2fc22093e0141ae75ccddff34a89cec01dc121fe6f9d82e326968876d3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DerivationFiniteSupport.lean": {
+   "git_blob": "2a6be01798794a53760da5c9a96bd79cda1b31e6",
+   "sha256": "5720e5a8621e14661d528bd0e537c0b065b09bbdd73e7770c047e28c102b9089"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DerivationInternalInduction.lean": {
+   "git_blob": "77982beaac8987a94de2a73252de881f2596b79f",
+   "sha256": "6db07777da25377589089f84502152e280175b051a6e2bcaa899c7ff06fbd63a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DiagramDecidableVariables.lean": {
+   "git_blob": "5632ecf87c5b57d3dcef7ab19a47546d805ae661",
+   "sha256": "c52098f690649b08c2fb97398b386df139cec4a3444f251af2d51f0d881d0858"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DiagramInitialAlgebras.lean": {
+   "git_blob": "b7544f30c01a4b1ca68ccaa2c8bacb601b1c1918",
+   "sha256": "c5fee6a52b16d84ae97dff28ed5ce9902af38b6ad97e57bd2e3ebe42bbc01f05"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DiagramStableLists.lean": {
+   "git_blob": "8498aff971ec066b3c40f08186c0691d92ad7914",
+   "sha256": "c8ba2e753c573d9f7e70771fe241fe355fc64b8ce49eb11e2dd8d8975b3ae7dc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DiscreteTuringInseparability.lean": {
+   "git_blob": "b7c08b4a4979fca2f3d52daacdc5b02eef6cd33a",
+   "sha256": "465be00b2ef442fc0aa0c29bdf142b97da56770cbe2642d0ae453e605f7938de"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46DisjointProgramPoints.lean": {
+   "git_blob": "bde4f715ddb0f689cb6a326d398d5385a8effe86",
+   "sha256": "3cb6bcfae82e76192d9f069dafffe5b91c37f9d6dadba367cdc0be7144763b9e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46EnumerableCarrierEnumeration.lean": {
+   "git_blob": "2df6d528835fa830fd09275ab10f161035e35c27",
+   "sha256": "29edf46c0cc12a31281205fd895c4fd166a826d862e0304875bb5f94845dc331"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46EquivalenceSubobjects.lean": {
+   "git_blob": "7ff8121626da7da90167f563a3edc89bd035ed22",
+   "sha256": "5196efab5139f2acb45077d8383e8219ce0e8aa4cca78128681d62306432ec38"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FiniteBooleanPowers.lean": {
+   "git_blob": "fbf3e249a5d3e67e9bb01f8a29de2e940d1d00a9",
+   "sha256": "69b6f057f9895c1da17f23c97621811b0117128a862b1a1dc52ea02692d90f79"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FiniteInferenceEvaluation.lean": {
+   "git_blob": "20c3e3c73c12be44f2cdf1cd47d07213ddddb354",
+   "sha256": "1b4d474092f8f9943b2c5b56cde22c56bcab60615e34e848064f2228e8715efc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FiniteSigmaOne.lean": {
+   "git_blob": "12f481ae29a3e7703424de523f5c4345b668c6ac",
+   "sha256": "36ceba234a6112b9132057a56c5cca438c8aae40e5e6e22df237925dc62c5a2d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FiniteSortPolynomials.lean": {
+   "git_blob": "710c9d47a34237df6bea9fbfa552e3fdc17e9b00",
+   "sha256": "e7ea5275aba33fe8e8afa7a10f2d3a8e75bc531132eefd95797ecc684008c931"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FirstOrderInference.lean": {
+   "git_blob": "1da7a8a78a98b1349865a279128023ba27bf7b5a",
+   "sha256": "43c0e446eb9de63c6ddc4ea88589d62e59612576b8fc374728559b4003aeaa2d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FirstOrderModelSoundness.lean": {
+   "git_blob": "e1eb52302644ff67aa952fe29b2597df95a1e8d4",
+   "sha256": "e68a6ae5854f569b88144f0bb1a33bdf9f96c543b61e959a39ad4bca740649a6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflection.lean": {
+   "git_blob": "32211bbce1c871b24c73fd79f2b5a22a146dbcbe",
+   "sha256": "e0d6ccf0379698a3df58652e2d481a53efdb4363ff5f78d991138ec4ff951d0a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FirstOrderTheory.lean": {
+   "git_blob": "aa64d4e04e151d556072934dd18112fc13b5060e",
+   "sha256": "f503cbe8dcebb504e99985425e8786c1063079de0d7fb7260ca4243cc61ab7e8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46FirstOrderTranslationReflection.lean": {
+   "git_blob": "bdd1ad498d32b1c44bed037fb6d68143cd819c44",
+   "sha256": "baae8efbf4940b4eadcf750d609d9fb896a2264346705ae2796522204dacb9f3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedCategories.lean": {
+   "git_blob": "a0af42c02ed0acda3726bdc95d0e96b9f22c2454",
+   "sha256": "3c77c4f6ee264c34b33adfc3e4d6f0d5a9508f543ef5cd523ce44d3af211fc8d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedTheories.lean": {
+   "git_blob": "ae4e435f1c0fe144ef79357a65ccca645b674898",
+   "sha256": "8eefdff85db304746699741dca8418e472e367cde3fcd5e9a3606e11bb52f344"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkAxiomClosure.lean": {
+   "git_blob": "8e9eefdd548a9a7a0d51fbb76dcdd44e7c3f8b15",
+   "sha256": "a3df1f0795c39e256516202c8f0ec5a96d06c644bb03071749f0cc872421a662"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkCanonicalFormulaSource.lean": {
+   "git_blob": "49ce71a239060b334df9c4df5403a1b986fa6aba",
+   "sha256": "b91b4b7e8f4dc0945c295703cbc5f9efa6c4bea9787826c43a318d4e83d13c28"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkCanonicalFormulaStability.lean": {
+   "git_blob": "28c3e139375d39e6f643cf7ec11e503719ecf383",
+   "sha256": "b660ed4df8b96ce162f41957a2fee46e9a847b717fabaef70f23a51c5cad0a09"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkCanonicalParameterTargets.lean": {
+   "git_blob": "1c6d224223fa48aa9fd005c593df53c10eea2248",
+   "sha256": "74a8c2996cf6460338351235c23e1050653c413c48c04fb15df090e8691ea238"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkCategoricalSyntax.lean": {
+   "git_blob": "b221b1428a8a835cd7b2c0a4e1d4c798a35b9b8d",
+   "sha256": "170e462b5d1b07d2f1306460a202f8e016836708f13d7d4340e731d2e7f9f95c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkComparison.lean": {
+   "git_blob": "622f1ed213132c4c2262da369db307f0b14ed4f9",
+   "sha256": "2be66a89ec05e820becd2f6107b3e23abc4e8b2d69b2db47ff47eb099c533124"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkConservativeRestriction.lean": {
+   "git_blob": "e9b5e97dc7481ab4bf1274b4577282497e3b724f",
+   "sha256": "03db6ec813c0fdfe7e1c2dd238d3c04a4fed6469073bf3232c1e4b305e29ebf8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationComponent.lean": {
+   "git_blob": "d138d49c309fffab9d7853f2d2065246ad89cbf3",
+   "sha256": "d93cb7430008b99525e0f99e6018f531ebd2b20d6005330637c69f90625c7c7c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationComponents.lean": {
+   "git_blob": "54e53ca6eabd151c58efbbd19430326c8a6f9579",
+   "sha256": "c504a1b48e921462df12e289febfe3a970ea3317e46bf656473a315c7f4897a5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationDiagram.lean": {
+   "git_blob": "2fa96a70df5b8bc9431207d557e62d943768de26",
+   "sha256": "10199814007f7bdd6baf0eac2c381289a13b5d4a098a78256051db17d958e35c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationGluing.lean": {
+   "git_blob": "258f9a746e31020c0073fac0ce0d7dfc541020b0",
+   "sha256": "152006810ce8c823f459dbd35f23c76c6e3482eedf3e2651e4d546678015d9e8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationImages.lean": {
+   "git_blob": "b493512c7b3182f14dd678ffc15f0ce53f55e179",
+   "sha256": "deac5e571b1ad529aa31297217cfe802ec85acd8e379cf26a9f5dab8f33c6983"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationInference.lean": {
+   "git_blob": "c680166dd952079757b071741bb6a35de0dd93ab",
+   "sha256": "51c31c8133392b4dc594ee18b977b8aa44368bc5ff45f1d02114ee7f89e26527"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationInitial.lean": {
+   "git_blob": "c6cccf66511aba79fdfed13acaadf2499ff3784c",
+   "sha256": "3483ca2b370c7bb7d30ac76764048ca4f50c0db79577bba2118d3ef636f66aeb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDerivationNaturality.lean": {
+   "git_blob": "417ad3b5b8bea80c55ce71b78d70e9ce6b97fc8a",
+   "sha256": "94ea120b38738645763b8cea21497ecd768ea78ba579adcf50fc62445c36f178"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstruction.lean": {
+   "git_blob": "2e3dda0666c366ba8e218fa9f1d3e4024d06bbf3",
+   "sha256": "68f86f7ecdcf1b609063383d03e2bca39e39d5f589ee6a8da4e2322724fe9f41"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstructionTuples.lean": {
+   "git_blob": "b78e02768bf30329f409cd39d96c433734c240ab",
+   "sha256": "1f82f021bf3b21155f0dee6d243dc6204248e42b4d0ff5379060b9735def4fa3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkEndpointSentences.lean": {
+   "git_blob": "e8a5d1e327631a388279570c36ad284f2b9b2d8a",
+   "sha256": "4c1e0b98bd952f5433e1a6cbb18092c86e43ee275f10b853231301c072d630b4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkErasureClosure.lean": {
+   "git_blob": "fcbda1bfc7a4d022158a0e9c27f9d037771fb041",
+   "sha256": "2e8d74bf4428b3f3cafae187af3031b64f7cd762109cb9b21b87d33b3de76639"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplication.lean": {
+   "git_blob": "940339aaa2ccf0f4c2c714d4f79076f238c04eb5",
+   "sha256": "903b25c6d6eb166d81574dd24b82fc4d2719d0809976e3ab8953915b12ae877d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderFormula.lean": {
+   "git_blob": "e88b6f22c7ef8189375410e635cf4e743130830b",
+   "sha256": "045690e767dcffe2a1784b8cc2f3de9ecc5ba0aa66f2432f0d42114990d7c183"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkFormulaParameterChange.lean": {
+   "git_blob": "60672ad2cc81ba96f26e9a12bd821e4b49c2124a",
+   "sha256": "a3a3fd30ecaf61c563c4fc33a8e82bdc741f6f53bb6b54a25708df2854a2803f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkFormulaParameterComponents.lean": {
+   "git_blob": "c851eb1238732b8fc4b58962c0ce418ad5f5c3b9",
+   "sha256": "4f05aeb899ff6427ca0c6f4a913aa81af47c1320cc285d47c967dc9ec2c4bd05"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkFormulaTransitionSquares.lean": {
+   "git_blob": "e171e15c4d31cdaab9cae0e57b316ce8769e7e0d",
+   "sha256": "a906127fd3c7d2c81ce075fe9e1fafbe8d3f125154fb3e12b83191e324dcb502"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkInternalIncompleteness.lean": {
+   "git_blob": "b308d3445177ef54d569f6241569d899e8c6931d",
+   "sha256": "68d774de2c806b8779f94b4df703bc7892b9bca59b447d7d57ddc7e295b6a1db"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkOpenGluing.lean": {
+   "git_blob": "6dfff0dbb3eafefb794bfe5819ecb165a5ca30dc",
+   "sha256": "518fd6fb7e54b2ba656f4169700a58e5afc9e81d82ba446da0ebe36c79269a64"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedDeduction.lean": {
+   "git_blob": "40311ad3b827ea01a75c7a4fdea822bef361d460",
+   "sha256": "630ff09c52027694bfe82f90a509aa2b96aae4b576ccad0ce53ffbb35208c4a7"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedFormulaFolds.lean": {
+   "git_blob": "5c1e45f11b8e4972da7353c5bf18ceb27a9fde23",
+   "sha256": "8f086da5a835ec746afc828c2b7b08a28ce9028ea3b31f882745c068c82f73fe"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkRangeStability.lean": {
+   "git_blob": "3a88ade3bfd5ba04f8a32414f6125f995fccf50a",
+   "sha256": "f43cceeb4dddbf1d27a328e6528ccfa16f272e7ee2435279ae40dfb8f641141e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkSignedAtomInclusion.lean": {
+   "git_blob": "67f634a0dc57ed82da9144f22ee0494eaf5e7de5",
+   "sha256": "5b44a03e9a27631332ce5271f98214650e47d9fee4b628c122a0d144a33bfbba"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluation.lean": {
+   "git_blob": "8779b8c57cab104f9b939006822242afcf8aacde",
+   "sha256": "41c29af224a5d55ab64d530c57efe3f79122bae425b7c6ad980fbf8177f9fd1c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationComparisons.lean": {
+   "git_blob": "0ba8503fbf64368cf972c19fd22da6a75bdd3744",
+   "sha256": "bad212019d019db26bc29361d0e17d20ca57aa94c48e8ff1a09a79f0312a0d18"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationCoproducts.lean": {
+   "git_blob": "372b3fdde58ea8e48cb3cbf9e0997aa1bffd1e4c",
+   "sha256": "ab28b8789f9afba38255342d84f25f871a3659fd99a0c303c7261da6c21eb135"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean": {
+   "git_blob": "79ebc4344b0703f5905cd9621f1ef922c2950c3c",
+   "sha256": "cc0e601637b1aa71cc2331dd3cbc5a7570474d82b31f34ab450636c023e65c33"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebraCoordinates.lean": {
+   "git_blob": "0eed58c24cc4603bf25a8b6ac7ae35583fbf9fbe",
+   "sha256": "c0bc578353677dbe5dbcd0890186250cc13a95ce71b37ad7a32e9434bdeab9b5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean": {
+   "git_blob": "324778040ad96811efcac24f19d769daf41aba19",
+   "sha256": "fe4036710799678156f8dfc167455fe7fdde6a6c02ebd3b44f3ab16c1b435c5a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringChecks.lean": {
+   "git_blob": "bf84f87f9bb1b4dd64c3d2e1b1c92cc8fb8bca60",
+   "sha256": "d9d7d896a1ca2bfb2631bb258db90d9f6671a9f2226ee8eb6a75f19e55a3dfc9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringComponents.lean": {
+   "git_blob": "63d84f0031d0fc989dc1c836b12a74d8c019cc37",
+   "sha256": "c16affef8f83dea16fbb126adb3f259fdfea683ea3dc2cfb1682c37892771d43"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringFibres.lean": {
+   "git_blob": "9bcb113eae38562c140d106b52bac41ec683427e",
+   "sha256": "9dc57a593f12ff79d5be874c612c5f262489a0f25e37d4a810c2fb2695855ea2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringParameters.lean": {
+   "git_blob": "69e5f57830d331c924e523688d8106073892a194",
+   "sha256": "56851aa73e12451df0628bf73486ec75659e84dcf823f19d42e8066523f0a361"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringPoints.lean": {
+   "git_blob": "219fab1128ed8c5987fc03601c3535193bb7535f",
+   "sha256": "1ff01205992c37af9a54a166a1c2546b5a64db4d803da9e84249e5a2cf2c5168"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringSpecialization.lean": {
+   "git_blob": "bc97329af61a3c551c5df7757e8e5c50cf1a9f1f",
+   "sha256": "3058c0c655b6cbbda17b3c05234bd4ad1e04d9994ff09163025bb8fcd8235dd0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForkUndecidedAtoms.lean": {
+   "git_blob": "4c71c38fb0723fa34e9ed0a4ab61cb8b31d5e3ee",
+   "sha256": "843b16f40ca117220e38e5df6422936cba94e01db4116c1db9ac9523f194c466"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ForwardRuleRelabelling.lean": {
+   "git_blob": "2841b58d749a99e88e59ff53f80c08a06d88137e",
+   "sha256": "79bdfa90da8aa937ed9cc69b685d6420b205d80a9d387405f46dc648a0c974f3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentations.lean": {
+   "git_blob": "d300a5d29dc79e63224869d3aa5bbb40da16415d",
+   "sha256": "d7419ab1e665c620057ec54e5deda456717715cce8264a9956e739fc3b78ae12"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentationsChecks.lean": {
+   "git_blob": "2513d856da35fad9b809dd6c5c85688aadb647ad",
+   "sha256": "b4f65d427631231139822f0013e5541fc1253b51806380ce681f7d5845112a00"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46Inference.lean": {
+   "git_blob": "eab3a57a4358879e50871aeefea1c1c443f40931",
+   "sha256": "e5fa0caff1e0b28266aeef54c704523ff35c3fa72ede5fa5c44dcff6a597f6bc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46InitialRuleDiagrams.lean": {
+   "git_blob": "570b986b0e357f85d650216997e65fc8c27c2bfa",
+   "sha256": "cb1e4cef105555d3b31f570295fc351591aa9bf854d45af0c769e466b84e0c36"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46JaniczakFOL.lean": {
+   "git_blob": "ac856237eb0e7dab3c8d7e237be5a5ab9b76b1b3",
+   "sha256": "a9560f7197d788c050ae1b24a17cc306e036964e6ef86a2bcb58f9462399b038"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46JaniczakNativeDecision.lean": {
+   "git_blob": "de856dd5d6d07efd61109ad2beff32890476a947",
+   "sha256": "15df3830a66f0a71e8fd98d607859ef7eb79400a29cafd00f65ac285061006e7"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheory.lean": {
+   "git_blob": "1e912ee47b2560c0720f6ed40e7c6cbf79513d07",
+   "sha256": "d1408cc9fe04debb7ce430a36d310387d1e54afde162c669472ed53c42b700c1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheoryChecks.lean": {
+   "git_blob": "e805e143ab7e2cfb8640eb240485751d11335788",
+   "sha256": "a82dcbbdd4d0e3e0538deeb355f5b08d84d01da1f3429518b7ac31e820e965d9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46Karoubi.lean": {
+   "git_blob": "7cdd8a9579a2285f55c6492e21e1537df0a6b258",
+   "sha256": "fa21d424fb85519924617febeec87c47f0123c49777ce0d5b2941d6df8d27c32"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46KaroubiRestriction.lean": {
+   "git_blob": "af3fc351bdc69a7fb5c71f26b5aa37cca5e405a8",
+   "sha256": "c840bbe35e630b4b78c3cc0583ac639532468f18ec962a277c8f7b5ae74a4657"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46LabelledParameterAlgebras.lean": {
+   "git_blob": "ea40f5b82d87a0c858a26061efed1e9e420160f2",
+   "sha256": "6da93cb97eb16cbed3d008d45cf40d9e736fa0ed80fdb50bd2500a348c8fe811"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46LaxAlgebraAdjunction.lean": {
+   "git_blob": "93241b65111513adb6059d6d23c299c6fb43f6bf",
+   "sha256": "18fa4305864b6cd5f86cb5d13b147ff7623964e294b19a209c04773ea47b5f85"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46LogicalComparison.lean": {
+   "git_blob": "9f41863824b0f3a3a5abef3ed57a3ac3b2b3c297",
+   "sha256": "330a143f63deeb5cc713354705d64aca5a1977aa638dae572a1f9aa325714bfa"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46LogicalSchemes.lean": {
+   "git_blob": "7070f45f91997651567820bb40caf545a2dc42cf",
+   "sha256": "2966a1a165cbd713c1eb8fe1ef684773a51fcb26bcd63b8d32dd99ce27cd85f1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean": {
+   "git_blob": "7b832585b1f4040fd1383b86be3badb8ffd74c60",
+   "sha256": "9f749a5b8dbfb6fd2fc079507cd2cdd608db4d398bfe614e1bfe99a94f3c6db6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean": {
+   "git_blob": "5646b33b7f073e13ebba802c9d1051fcc65d713c",
+   "sha256": "aa5d296d749cda692e8d94b20946edc7e7d25c0fecaa12547134b5735eb6d0ea"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedCategories.lean": {
+   "git_blob": "4cbc4f9ae1e8233cbed70c57a9772315470136f1",
+   "sha256": "5017ccd1b5208f2aeee12bd7f06a2d5acc4299dd77f4acddbff9cbe8073c023c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedData.lean": {
+   "git_blob": "0e0163231049dcbefa59f74504d14a9a3426c718",
+   "sha256": "fd6b2c715d14abf9cd7ed461a33b567a55bf621d5236cd0120513e793ec8b77d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedIncompleteness.lean": {
+   "git_blob": "000d96a8d6fd47fba8fc6ce9d2b817dd6ae84053",
+   "sha256": "6a232a43c18ab39ea403d6e460372e44a0ef57097b48ec15652ab4c45aaedd55"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedStructure.lean": {
+   "git_blob": "7aa119b32bda4c8a5297cb0409b8dcaa06919c3c",
+   "sha256": "8c1ff5ececa88d4eb74d37db6105a1ba88a138d1f231ad041b1ce7d9f4cacfd6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedTheories.lean": {
+   "git_blob": "8892a71f0513ed56afa81f2da7872133dd9c752f",
+   "sha256": "6b6b2e2e7d004e41e3e350aeb91c83e5bbc6e66830121542d93c50f7d4ad7e79"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerBinaryCore.lean": {
+   "git_blob": "624760a463d6690c78730dfffce5dd0f373603c5",
+   "sha256": "d24153a9efa4b00b44f8435b8da2d02bc7536caa9ba63dcca23f778f3f5c04b5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean": {
+   "git_blob": "7236247590411462f6f4c020edd2e89e3f03db84",
+   "sha256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalIncompleteness.lean": {
+   "git_blob": "a9d6162fdb9df95f60a18107acaa670bab325f8c",
+   "sha256": "afc657970445cdda4ee59086f6f8419f427f46b18d88252447523d50d5ee0cc3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean": {
+   "git_blob": "26604c477922892aac8f81612d9480f764430443",
+   "sha256": "807d9d3b558ec4e5e31910b66d4315e8bdf99ba5f4121fea409d4c8ec5663e9d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparisonChosen.lean": {
+   "git_blob": "a33945e46b9936e62722b626312cd68528c569ad",
+   "sha256": "bc7e3edf07d54a7babb4611dd4cadfebabe0c89a092736fb16f3b9f4b03a3939"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparisonInference.lean": {
+   "git_blob": "18622cc62b5a9a4c8a9f0c2d72df58e6da480427",
+   "sha256": "b6249bac91f2cea230edf18037b58a44c9240972d086f069edb06f4c29dfc3e0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalSyntaxComparisonParameters.lean": {
+   "git_blob": "46ca5735b51198cd02fda743f7dcca6e3bc6d141",
+   "sha256": "6fa7f9b6ba724f74a27a7bb2aee634bd539c202532a68864bbea993132a18acf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalSyntaxComparisonSchemes.lean": {
+   "git_blob": "4e524fa0cd8b453ca96b2c212681207cab08a68e",
+   "sha256": "3c716152a2aa4578de24d870fa8a0daa582f4e9ffe2d414b9bb0057d2d9a18aa"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalSyntaxComparisonSentences.lean": {
+   "git_blob": "7f35225f253a045448b87d7b59a99797d520bb6e",
+   "sha256": "dc13fed377b13bb3681b281022a2e61978325f1ca244012c14f8577e981efbad"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCategory.lean": {
+   "git_blob": "2a42e8c248516c9531e0f6bb5a6cd224a7f0d4af",
+   "sha256": "98e584fb1ebcaf1bc626373969351c4e2915d2302edd2d64587135a4764a7ccf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCategoryConnected.lean": {
+   "git_blob": "2d8015bfb469f622152c3f4dedcfa61dbfc9552b",
+   "sha256": "7fc36df0e52d42c41777aa71d00bfc04b2f03e9e4b2e871a3266dcaf40dfde8b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCategoryJoins.lean": {
+   "git_blob": "97b59f096e644e813c0fe6e946ffefde2886599b",
+   "sha256": "02ffe1962a82a3679625cbc922c365835bef792a5cbbf172ffd84b77f9b660f1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCategoryRelative.lean": {
+   "git_blob": "80a5b5909c4cfa7ea1f59bec42c9aec53d992e13",
+   "sha256": "e823763aaabb4770f9a9630a2047df6f32ad1263f985131f9fa4b2dbb8737ba4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCategoryTuring.lean": {
+   "git_blob": "d54ac302692ea118a4b854d5d00cc9411107b21b",
+   "sha256": "b1bff90c26d9aecc1c4fc5978ad975d665d6224a0d682dc1cd8476dca9113cf0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCoverSemantics.lean": {
+   "git_blob": "5cb4d25fe3f758ab9f39e4536704588788ff03c6",
+   "sha256": "0331a741879c79af4d0854021445330a842b9ead0d6e07d90e33d1f5549b3f39"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutApplications.lean": {
+   "git_blob": "6232e71f1a9446f50ecac6018decdd5f29dac1a3",
+   "sha256": "5d88654e97ed415ff3a1e42de03970e11e9ba50ffe59c5afac1a4ecf1b99d955"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutDigits.lean": {
+   "git_blob": "9c64b45e8fc326184fdf32fad0409bf938138d9c",
+   "sha256": "b172fb3d0d6c114530ed99bc73a6cae726bc291005a0e1c3f0c7b4059fed7294"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutDigitsStrict.lean": {
+   "git_blob": "ccd69b6fa6c33b2a04ae841f9c9acc4261ddd581",
+   "sha256": "a77dc2f97e3aa5ca1cc69459aab49149e0c3a3b591ca8e60b8ac659639de9f2a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutInseparability.lean": {
+   "git_blob": "b20edb4c903943129381958c1c12106f8951af22",
+   "sha256": "d08d84e30857248f824c6c778d33ca70801ca824a73c255007ef74c57cc817e9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean": {
+   "git_blob": "d71277362c34e6f02a9f65a05907b104e901b818",
+   "sha256": "5a7da2959bdc8e25022d96f49e677bd3e4e4839380cf0e0a6247d482f57a8e0f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerCutSeparatingProgram.lean": {
+   "git_blob": "59093c19aeef0c65cc33171fa2e2c14a80466cbb",
+   "sha256": "82e7983e12c74e52ff8319137364c860a9ff39d3c4cbb17d9c6d8ccda4e74738"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerDerivationTotal.lean": {
+   "git_blob": "233a77056e9b646bf0f46cdab8d3b3f20f1ff737",
+   "sha256": "f712555c372bf66ae2046d89dbd579c8c85cb179963087c340f40fb54076ead4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerFiniteCover.lean": {
+   "git_blob": "7a5c17b5aa3d6ec875dd04aeb617deebda6c3399",
+   "sha256": "1d83a734998917f67be41312be45f659dd05a908998e218907efa2578e02e7a8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerFirstOrder.lean": {
+   "git_blob": "79dd8ae4687084be74ee76671847d8fbe637bb30",
+   "sha256": "f030765561820c52ca4aa8678b608bf98909368aa47850ed3bb87f25c8995513"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean": {
+   "git_blob": "d061a98e59798b20fb963958ccc32b4cd3f33581",
+   "sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPointIntervals.lean": {
+   "git_blob": "fe9d1b9e9eadd5edef44186f1ae6788a69c9bd43",
+   "sha256": "e9ca0a6aec50df3f65e16c55610b05b91c7fc236d7cb4edc9310bfff09b960ae"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerIncompleteness.lean": {
+   "git_blob": "e926285fcdc642600438647239bf19fe73aa8842",
+   "sha256": "886a6064645278b2fd55a88ddd00f1fbb23e4bbca49ad048c6ee5128680928fd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerListsStable.lean": {
+   "git_blob": "a481c9560f918134dcf50e9d1f7aaa7c922bbabd",
+   "sha256": "008908539f01eb9e88d25ed21b20e5c38347c678c4e2afa7335ee8ff3128ddc4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageData.lean": {
+   "git_blob": "f3e3c3c6bbcc4cfc3f8ccef4934d13080b41c6ee",
+   "sha256": "3f764a5485de26b61c0b896d47ed820372a5e2e5f2439803059d78f7332d0be8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageForward.lean": {
+   "git_blob": "6c521c41084837629144dc6b361bbf6701aeb610",
+   "sha256": "e6cfae49a2586368944a459dd0f8357f464479e62408b7b4684faa5562711d95"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeClosure.lean": {
+   "git_blob": "d0b18d97725d21e443a11eda91e6bd2e9d3d6de1",
+   "sha256": "34c2be870d0236f7873e2f57e01531381500cd361541a66b18e232fdbf7b65d0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeFormulaSubstitutionComparison.lean": {
+   "git_blob": "03898aaa8ee9a381e669d63304a8d71f4282831c",
+   "sha256": "320160afef413c8c8bdcd6f813de37230f91c5835a0029b0364d32190fb9f0e9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeNodeGeometry.lean": {
+   "git_blob": "b1220f8436cddf076732c1447a81d30e937e56a8",
+   "sha256": "ea92287e5d5806f5519797398e94ca6017ac1c813b5b0910db8af2306d3dcda3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeNodes.lean": {
+   "git_blob": "80233546495010784f04f4e636476dd20f24879b",
+   "sha256": "2fc5a5b1d61e08a52335769925080210103f0f960bcb02f0a85b065e4f96f1df"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeStandard.lean": {
+   "git_blob": "1669b97dce82e7ca7d5f8fdc4e4869f40580d1e0",
+   "sha256": "457303b567459bb035b27b341be3934c5bdc8fcefc8eaba05e1329a7135ce24c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeSubstitution.lean": {
+   "git_blob": "719e9c38a5bc00619fa7d7ee4b8ee8d97f90eb92",
+   "sha256": "7686e44bd1fe4215177b7364884058a579148cf177759b48c5554bc46325a587"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeSubstitutionComparison.lean": {
+   "git_blob": "f01788874c78df292e3fe7950e508fa9149a3f4f",
+   "sha256": "99a84c9009753a3f72c46b1303daec868d3840693ed0ce307d57aa6f9045aa4d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeSubstitutionValues.lean": {
+   "git_blob": "e563ff99cde1ec3e23a744dce0f94d461fdaa68f",
+   "sha256": "0c500294c8c93c1b71f4bdc1c4fa9a9d9b639ad3991d7f346a9a0068d8424ebd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageNativeTransport.lean": {
+   "git_blob": "108050e492c242b228100df1539959005802facc",
+   "sha256": "0ffd99d0ccd411f4b4095a128a3d2507681310942b6c9a3438744f50a56090d0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageReverse.lean": {
+   "git_blob": "65b8b852f8775e8391ea4dff8be82edccda5c1e4",
+   "sha256": "96c8a7a4bdcf36ef77636dc75c4a2e085dc09d319a408a5fefb3a7449f4a80ff"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedProofImageSentenceReflection.lean": {
+   "git_blob": "b052ce1086fd4767e58c78bcf4d9f95f8c9e7702",
+   "sha256": "31e5d2255861d381e55532b63dae6d9fec0b7f1c8d314b6d56fa0313f089682f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedSyntaxComparisonBundle.lean": {
+   "git_blob": "9fa6f79182511736cc79aa5c670d2421f9ecd70a",
+   "sha256": "b2d394ad00f87696065c9bded34c25d9412fffdab5efa748e7fedddd2f8cbb82"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerNamedSyntaxComparisonSentences.lean": {
+   "git_blob": "0d7faf73ead23aa432ab30939590561eb655af5d",
+   "sha256": "24349387f27e50606d8e6be60d3c57327eff29961f3680fee6cbcd86d19ef15f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerOracleRelative.lean": {
+   "git_blob": "d9aa6a0dfa6c549126590a7e72657ebc46a71424",
+   "sha256": "1ff4c0fa9bc83eba17722884fd984caedd8793aeca913977564293e2fb8f4e14"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerOrderedFieldSentenceMembership.lean": {
+   "git_blob": "5d4b40b23a3b78db4d3fe58a1adae7acc08644dc",
+   "sha256": "6806c7648b183af9139f544d3826194722ed639e284dfcfe654c03614083b39e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean": {
+   "git_blob": "ac2f493114c942ae7d663d897b357183a411b128",
+   "sha256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedAxioms.lean": {
+   "git_blob": "c205b1af06eeeb14c763a6976f77543c40fa6dcc",
+   "sha256": "cd2116f92a2cf48e07e8b8369c310d73e06dd09a2c2abb6bd7f65750589d57ee"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedBounds.lean": {
+   "git_blob": "543465b38f2e15ed7a82f8280079bcd613fee5d7",
+   "sha256": "aa6ebf5a187aef9df8989f9f5d857ba9870045e14eb09455f353ddfbf4d6f448"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedConsistency.lean": {
+   "git_blob": "d07819e156b586758e9933c294327eeb8fa9df5e",
+   "sha256": "c6e494dd9428078ca508f7ea8f6ac0b9ac3b0d152eae7fcff15effee4e4126dc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedRawModels.lean": {
+   "git_blob": "b1be9d17fc7ed5638b9037fdd8426af4a168a492",
+   "sha256": "d14974df3515fa76be56c63a846ad0406125afd3aa103fc98b22f05f33b0f527"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedSoundness.lean": {
+   "git_blob": "7e11979aedf47038d96a716b77330b8df93feab7",
+   "sha256": "a59f1f6096bb7bbbceacacfe44aee6b4756ea3fffb63d6529b3ddd9ddf6643d6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerSentenceAxiomPullbacks.lean": {
+   "git_blob": "29ed5be58192186f5291009be5b73e93d90a8990",
+   "sha256": "66b1c2ea03176e62a12448d6a092d5a0cad03dd5cda6249d7f0d47551f881232"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerSliceDerivations.lean": {
+   "git_blob": "7478bd4fee7b4093861edcc5c8d1494fe67260ab",
+   "sha256": "044535beadcf5847ed3c5fa36935caf73d67e2985e7f4075d7f7a051bc0af1b1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerSyntaxTotal.lean": {
+   "git_blob": "9bf5e8c2ca2d3160d7297a18bcaf613c15a6aa73",
+   "sha256": "05b640f69690959deebad9c0aa22cadf5793a44216f586e6e81c4e56ade9c6de"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerSyntaxUniformInitial.lean": {
+   "git_blob": "e0f14269726f5f0a35377ef418ecf08480a55e22",
+   "sha256": "cd41a12b524fab2d2dbe507ce2d8d8e089c2cabc645c8a5422c066769cb34c89"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerSyntaxUniformInitialExplicit.lean": {
+   "git_blob": "2c0c0ec4c2721dd8b3d6f21570dff4a6aa45f4b3",
+   "sha256": "9d3bfd9e03f7b38bd24d4f52e8f48ced5f11717e5f23bd0f7bc636e9ff8867e1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean": {
+   "git_blob": "479f04475f9226685bf91c96f1b447216ec13186",
+   "sha256": "414f8d579d00937adaed4aa1ea5b47295ae95a3ad8b71f9b8b21040fe5aef156"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTheorySentenceMorphisms.lean": {
+   "git_blob": "052d28a8979fd193c7de48775598a5863032b73c",
+   "sha256": "0fa1c37c693d1d6c68d8496dda62ea9d2c0afcd134801731abb40f9f6cbf6fe9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTheorySentenceWordRanges.lean": {
+   "git_blob": "5416f8857487604e266af64025f845f3ee65ed5f",
+   "sha256": "65842a6f7d0a19569fac29fee9148b6d7302baac2053d7858721715bd6854534"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTheorySentenceWords.lean": {
+   "git_blob": "648b7b1e91febe3ffd4655a72433a80c21af681e",
+   "sha256": "d916433b44ff36aafeb12437da0ecfdfaffe492b3c6954c29bfbaeae55c1f7e8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTotalEquivalence.lean": {
+   "git_blob": "6424f55cdc3bccf5e99bd0b062203f44897f1a86",
+   "sha256": "94fbb58eb7da9e13e96886378420c4f9a6ea1118ef1fe6f35ac5ee9f011a5523"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTotalExtensive.lean": {
+   "git_blob": "8247cded10d2defb3057622853da2b6cb66fa0dc",
+   "sha256": "3cb01b72ef5b74ccf4cf7fca4a381e19b4a9f873357015b2fa3119702f8504d4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTotalPartialMaps.lean": {
+   "git_blob": "1771101bd3307f1b601136ae22d48610bdad0187",
+   "sha256": "f0278ea1e9f6c1de7fd4c785806fb2539b88f28f231580db835816b4e8d89df6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerTotalRegular.lean": {
+   "git_blob": "e155f82ee806314ec29269d96a100dc116bae1a4",
+   "sha256": "83ab7c822d10885cb4773c962b2d3d3ff7c64258f4fe15d9fe79c36d2b20261e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MillerUnanimity.lean": {
+   "git_blob": "27820c2ba789fe6646c7dc199fa6faf56dda6b29",
+   "sha256": "d6031dd697fd32af7e913d4d2f5893be419e9901898aa963d4b81f115406aba3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ModelFamilyDiagonal.lean": {
+   "git_blob": "7a2a797224ce328a144671e3002890992c9cc257",
+   "sha256": "eaed8c3b4199fedd8428917556c30f994fdff211adabd36e88a16fe264e5a58b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46MonicPartialSliceComparison.lean": {
+   "git_blob": "7f31063e391f4ca22e922cece8341e51ac9ab3dd",
+   "sha256": "968177ff078cee9973cdaabf1f0475f707b7ebdbd5fa7bed544715a0b4b3c37f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticDiagonalBoundsPrinted.lean": {
+   "git_blob": "66841d8e1b95045d801650df809f2a565ec28282",
+   "sha256": "29bdd482f9c9342f399c4191113e0fa42eb801c0047cc1418bb85f264ed1785d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticProofSearchNegation.lean": {
+   "git_blob": "6ed854adea9eca5cef87b4d0fda17f0675731216",
+   "sha256": "cf991fb4f8b20904d182da53391da300ab162f33f1d6ad21f2f4a47494a487de"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticProofSearchPrinted.lean": {
+   "git_blob": "9ae0edb21901797b6b00cdebfd9561b41e21f70f",
+   "sha256": "cbdd915063fd06f78d0dfd8a6605142313482238b719ee33a6929a1ec8bb156e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticProofSearchSource.lean": {
+   "git_blob": "2062fbd196e6fb23620e6d1076e924710f529717",
+   "sha256": "50dbf73bef978787bc4dd801e1e62675f61bdf46ce84bf43481f417c7d2bbdca"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedFiniteSemantics.lean": {
+   "git_blob": "66861fa91f594d71cc22710535fbf6c09d974104",
+   "sha256": "8e284c9675d4edd6e320870d0631d7b7c155257d58b56c636369d6558fb45e6d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedFiniteSyntax.lean": {
+   "git_blob": "58ee9e8069f59507d8f59775bf6567dc93b1f353",
+   "sha256": "53078605553f711f98bf5bec62751ceeff926b539420008035facce900bd7a58"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedGammaEvidenceSoundness.lean": {
+   "git_blob": "88c636aee65a0cacb10d501b8408eba61c233827",
+   "sha256": "43a13854dd38cd11ad619cf343935d2a10b2a34d055da8650dadc4764d7ec54f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedGammaModel.lean": {
+   "git_blob": "2acd82b0ab1a33137b1f2a58f19a71c2d8c8f8c6",
+   "sha256": "c527fc8ffd34c531cda102dc66f0876fb5b3d920608c9676bdc0ad888988611e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedPlainLogicalValidity.lean": {
+   "git_blob": "07bce0e060b0f6b1c7241faefa9055cd61046667",
+   "sha256": "3ba1085c9505041af0510ddb922febda9882a733ce8de609ce67ee13edf7b042"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedPlainSoundness.lean": {
+   "git_blob": "e28bf390cf3a226ad4c5be08dd0ccf1eaeb102bc",
+   "sha256": "7eb08571a1a157e55a0e5f19ddbf967a4245cff7a276cbc40251bf5bac6b8d26"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedPlainSubstitutionSemantics.lean": {
+   "git_blob": "e47c93eeeee2916fafc6780bd2db357c515a1b93",
+   "sha256": "f7e0ee2cdeb5265b32a6f9826f8b1f251b4401195a4c74fd3aea4a8214853857"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedPlainUltrapowerSoundness.lean": {
+   "git_blob": "ca60dcfe427459e64d7305ad6714cd931ef7c14d",
+   "sha256": "82d36da238379ac177daec2775c050d2f2992606cbb5a3aabd7f9d91f35e94bd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean": {
+   "git_blob": "ab03dd15baee73c9c1c1714d47bb80774387bf91",
+   "sha256": "e0ea18c27422edcce08d49ae2e059ec299f6e74ef7b55b1a83283b78869bcfe5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean": {
+   "git_blob": "a358b1ff5d099129b1edd5d002a231abf9d8e670",
+   "sha256": "3a9b6ee0766a032da27eab76550ac7c23efca45e28eba6011fa953e55e03b37e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanLogicalSoundness.lean": {
+   "git_blob": "b2b9d91db351c9a08021298724fd2d45551b2290",
+   "sha256": "c808646f2068e588559eab3bd9fc19e9dc84e9f89762d14954d4ce76a9737732"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanSentenceTheory.lean": {
+   "git_blob": "9c0162df853f61d355bdaf3865165196fcab4e93",
+   "sha256": "0bc594920eefe8fcfdda5607d43ddefcffd60323b699c64b72dcfc044a120622"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanSubstitution.lean": {
+   "git_blob": "07892377a42cdb2a7a61c55f773c421b4f95ae03",
+   "sha256": "15ba645087a5ecf7ee419d9eee3ea26d85471b57796805ce70a494b6ba9c804a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanTheoryClosure.lean": {
+   "git_blob": "ff0650b3580ae8e1d59a63d02fd0d595ccb4bf8c",
+   "sha256": "06380a5502d905f7f9a7eb4570032d74cadf2d1fda1dcf22d4933daedf48f340"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryFormulaSubstitution.lean": {
+   "git_blob": "e9c104ef5288bce16202267339b6e8261d1031b7",
+   "sha256": "cbf0ce8bf5357fd475bdecf53cca55b39afdd5d3b67ddca419595f0c6f8c210f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInterpretation.lean": {
+   "git_blob": "6f52eb9cc9d384489fd47d1f85588c8139771e5e",
+   "sha256": "0b2e2603deafbeba07302be602d03ef2bdaec74fadb56c696df49692aecf85d2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticNullaryRules.lean": {
+   "git_blob": "c63b7ae9c2fd08c9a34fe3d6cf44d9fc716920b6",
+   "sha256": "8ca360bb7a4784ee232af5d13588dc803f1a4c68f6e7db53841860f196962cc6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticProofComparison.lean": {
+   "git_blob": "03fc714f04d3a5b3e4aa17ccccdb9b63fb75bc3f",
+   "sha256": "994cad1a42097e50c49542722fe03c3817ab5370460493856084d592cb458299"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticRuleComparison.lean": {
+   "git_blob": "784ec5ed956d07a52aaff5abf290d19aa561ea81",
+   "sha256": "4cffffb69b2a1d089b8658b367497711e7e607d9d26768a8bc91a0e217f46408"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticRules.lean": {
+   "git_blob": "e067381b03576d33cafe140bcd0feb1f429cc837",
+   "sha256": "6d0a53aca3106b466d0a573b5414f4e64f07f233fa2bf706c806deede60c09ee"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticSentenceMorphisms.lean": {
+   "git_blob": "204180250bc2cb83a022551f01e85a3b930e06ac",
+   "sha256": "e3a35ad87c5e0f1f78e0dd0b0853959ec71f2cded22c8144ea15f59d2ce61cbf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticSentenceProofCodes.lean": {
+   "git_blob": "80530801c027152167371a9145961b287da64e39",
+   "sha256": "75b06a344be2696ba11d4c3cedeebffac24b99b27bfd05c6da2dccd9939b7a6a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticSubstitutionDomains.lean": {
+   "git_blob": "7617bf35aac2e6060034c2a449213dc2d981f0f6",
+   "sha256": "18516d02ec668472f61ea7656ef8dba6abcf11aef01f39b528e8d4702979840b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticSyntaxTemplate.lean": {
+   "git_blob": "20b72b68e7904bf1cd602c6bd4bcfcbd0dbd76d2",
+   "sha256": "8ddadd36410d22a6cbf96f8f875421344611d199fa074cf3c91c4c31fec3ebb1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalCanonicalDiagramSyntax.lean": {
+   "git_blob": "1dee3f0e20954c33a0da093c1053ab6acf4ea411",
+   "sha256": "419eb5f867416ae5f91476b5e8441107092ad5fbe81c28f138f9dd8787dcda0d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalCoordinatesCoding.lean": {
+   "git_blob": "53b684ab16132021a2c467bee9d2542a1d340e67",
+   "sha256": "477fe16b2bc887e525cdacbb77c898e085d17d25bc0dc47f7604c7110102b485"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalCoordinatesPresentation.lean": {
+   "git_blob": "04dffe1724ad679352cf8950d68a162263345782",
+   "sha256": "914741c736ac083303db338fe27adc1a2e4a3bb1968bd819383d24ffa541c2bb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivation.lean": {
+   "git_blob": "2c13e7086f2e7435582e6d3272e5c8843b8985dd",
+   "sha256": "c5da9d628cfb871d3e45e16f327390c3d76d555aab0f868923c6a81cce1b2f36"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivationConstructorValues.lean": {
+   "git_blob": "981d8b5da7b6374cd78a4656e0d58c64908664a6",
+   "sha256": "1e08b3212e7d145ea72bd8fc11d610497a088095bb6cab7cde84cd2d0a1aff58"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivationInterpretation.lean": {
+   "git_blob": "92099a0927ac2b2f8a7f763555d3ca7a08810648",
+   "sha256": "8bd989694136ae2dca654ebd74907e00926976c36ba13f1c3a3ec729eaf34f72"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivationInterpretationStandardCoherence.lean": {
+   "git_blob": "641936419515924993f64ebccd37264bb1922c56",
+   "sha256": "65407f5cea9d72d45d508f587167c89abbd534d25fe3d47065fd441a0ad3644f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivationInterpretationWordsFinal.lean": {
+   "git_blob": "fb7bd201e30f18c86b0802b5688c3e20d7bc4f21",
+   "sha256": "1980c32a6aba88eae3483b6ab258d2df8fc1b9eee10956d797dcc19ea1e202c4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDerivationPresentation.lean": {
+   "git_blob": "f80127721aa4863b51e48249781abccdcc92c5c6",
+   "sha256": "933fcda628fb979865315104d2e595892237ccbe6259809532b5c6dac173c2f8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDiagramDerivations.lean": {
+   "git_blob": "61cb9b3fdd119b2e80b33748b13fe8d91ba41bad",
+   "sha256": "968bc2bfee23db75020a34a2d3929968ae2e22361f2e1c48b5bab17c166be91b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDiagramParameterStability.lean": {
+   "git_blob": "18a5336d4cdaea5586ba8962a79b39412abe6ab3",
+   "sha256": "95d15ee2629ea4136c6aeda40d6e94e4a9698fa576b067e2e444a40ab188af82"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalDiagramSyntax.lean": {
+   "git_blob": "baffe55494facd37379e2573d8decf6fea60acff",
+   "sha256": "3c39c9a797ed5db325f5a0cd008fdcb51e138ccdf3c8ae19445141ca7d9b38cf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalForkComparison.lean": {
+   "git_blob": "22a09a4c65ced25666c9c2e11dcad23eff0f064b",
+   "sha256": "b9c8ad0a2fac7bcab6636d8823fbf8a1b1e26dca9b855ec75b7bdb1456402566"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalForkPartialMaps.lean": {
+   "git_blob": "c1d23d2445b0f2adec52a9ccdecbfa4bb4470ce9",
+   "sha256": "fd961366677e62c38d8e424ce0aa3160ffe770efdd7075201fc5014ece4cff89"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralDecoding.lean": {
+   "git_blob": "f2e713e6ccf5225d16fb86b0a23fe4f41a470de2",
+   "sha256": "f456f6f04cbd9c0833ad96dd6ab30b16472719b49c6073b79b3016fcb7c24b12"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralDomainValues.lean": {
+   "git_blob": "f1b4ab60fa78e33e6bfb8f7eb6cce698571a85e3",
+   "sha256": "f15a39e53507ac7f404b1d4719cbf76fdddf0f8749af1b7965b90cfedab76d37"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralPresentation.lean": {
+   "git_blob": "a57489ed79b8f1726bea7af6d45f1b6ab9078347",
+   "sha256": "52782a1183e4e8bbbf43b716e10725ae8e7567458c2db1850636249a48cf4453"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralSentenceValues.lean": {
+   "git_blob": "c822ce57143733bda6b43bbb91a490c2937d43a2",
+   "sha256": "c579ab91405dc338bdb3766d2d6e4762fc2865ef32cfa4819ef8d281d0daf3be"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralSentences.lean": {
+   "git_blob": "93d8bd679578bbb5298654825178c3faf8f79dd5",
+   "sha256": "8834aa76832df7d80bcdbb2f5d3f4ff5ddaaa2d22a3d45750b5067caa1e35161"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralSubstitutionValues.lean": {
+   "git_blob": "b44d4f773dbf088ba7b75792a5424cacc576a266",
+   "sha256": "2afc094b06d972d08646313c6ef705828676fc57c76b5874631e188b5ed29e82"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralSyntax.lean": {
+   "git_blob": "f6164363135a06df6b57049c29021e8b743b02ab",
+   "sha256": "d0199a24f363e7b8faaa8cd975a883eabc45fed064d2c313fb48fba3b38136da"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalNamedLiteralValues.lean": {
+   "git_blob": "7ac5a139ad23b7bb5931cf24fc4ec33baa1f98da",
+   "sha256": "fe71640a8923f453c365bcafb7869d14a110b1f7583ad6bef99e2ba13a753511"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalRealization.lean": {
+   "git_blob": "af24d0b6be63493dae974fe76f6bbeb508da14f6",
+   "sha256": "29368c7f6fd423ad44a5c9b16d04ba7853ac9fa848dabecbecfa9fda8e3076c0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalStableLists.lean": {
+   "git_blob": "15c05bc93f4355cdb5ec26f8f0816012022ebdb8",
+   "sha256": "7e931eebed25ad8ddb5193f4363bd220fa7f41872f09795f0d94244183181a65"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalSyntax.lean": {
+   "git_blob": "8b0dc28101449078327225cee70f9d633c724376",
+   "sha256": "1030a5795b069b6f0e1dc35c2514e64931c9d4484481596357ccabbe2d3e76f9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalTuples.lean": {
+   "git_blob": "b3444eaf6022b1a4da48c3c864d1ddadb4438f4f",
+   "sha256": "fa4d6735df18ff7f1a12632c6f3080775c6360af5a7e9a137eda71aafc717253"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalTuplesPartialMaps.lean": {
+   "git_blob": "989122acf04d3ecd3a1c0a3ca39f6c72e3eba0f8",
+   "sha256": "ac4da9423d4d62ae6b605c39e6aa9cc8ab2dbf0397f23a66e19a14138ee72f56"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46NumericalTuplesStructure.lean": {
+   "git_blob": "89dbc91c709cbf4048b9590b591c181a1630b4de",
+   "sha256": "b3de1573eee52e0cc136a2c5c3c8622eef7da1426ff747d84586a915af3c9e28"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46OracleMachineDomains.lean": {
+   "git_blob": "e0cde0f9144fda966b28ceb4dc2c08349d942e5c",
+   "sha256": "d27a3cddb504fd8c3373c7a21ad30cfc999f92fd258886b93f01a0c84684d6d4"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean": {
+   "git_blob": "bf32286e70f36fbc5f0b96b529d61ddc795d116c",
+   "sha256": "90e7603c112a403230720b810e6a6ace998c5c9bbe94eb0ae5b81baa52befff5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46OriginalConstantFunctor.lean": {
+   "git_blob": "6816974af9823f43157b1c31f8a2d7b23674a255",
+   "sha256": "707d71a3015b4bbda8ef8bb1b6f1435fcdf7096eb9242a6f6857b5b4b0932166"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanEquations.lean": {
+   "git_blob": "c840778e1e477eadd4d119ffbeceea44dc8cc62b",
+   "sha256": "ce177af79d4caa24ba65746f51b60b742155da26847a92c1ec05550c923dcba1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogical.lean": {
+   "git_blob": "b444f9866ac8d36d8855a282c12f5133c801d33e",
+   "sha256": "3b375e2a841c82c030abe0c562ce157f90865ecb2e64026a0cdc9596ab44387e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanLogicalSoundness.lean": {
+   "git_blob": "7ed6dd4773662cd483930d11ae5c0c58b11a679e",
+   "sha256": "fd6e981bc5a496a9cfb28924ef5914b237c1a4ed023672d303d45368dbc8523d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanSubstitution.lean": {
+   "git_blob": "207bde06a9d581edf90d84664cbb78a9aeb268d3",
+   "sha256": "3888c78450d284424a491afe16d622879edb9f02ce4bd97264bbba742c22e9e1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedBooleanValuation.lean": {
+   "git_blob": "66818ffc8f174fc6877cb9b20c367b4c125c752a",
+   "sha256": "0d12de4f1ca7f80b25b7fadf05b730ad83bee275376c205cb6a707a46d9acaff"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ParameterizedSubstitutionAlgebra.lean": {
+   "git_blob": "eb5c6aa8133677f88a41a52088fb4c4a314e4a3e",
+   "sha256": "647f9fe7b3337595ddaa4b65df924a75844a0769099c5e63fb9baf275491ef30"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialMapTheory.lean": {
+   "git_blob": "4074b5023bf72be416f2d67c3c77ab4742671eb9",
+   "sha256": "2c789d85aab8d5d5d164e63b6d096f982b52f1ed54124be2450d942107d562f6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialMapTotals.lean": {
+   "git_blob": "84606efbdc226dece2baf56f5f3217e116b9fcb3",
+   "sha256": "aaafd57ae0b50cc5133acb9c8f23f0c3a054102ea851b1806e374ae747d2a2ae"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialMaps.lean": {
+   "git_blob": "d5692202bca253d8fcf27450ac2d1efb8fc95389",
+   "sha256": "d9df6efb710fd26549c007f3f5ce687020cd186eb57d4ccd301307b8036329e6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSearchLift.lean": {
+   "git_blob": "82badc1760ff2b607b304c891d1e5d2a2eefc5a4",
+   "sha256": "78f2d545323691d3370c6d8d638fcb271d59278ec94e11e84f355adeac106367"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.lean": {
+   "git_blob": "8db68012ec19fd8a92aece92ab4bb7411a9be86a",
+   "sha256": "52bca382a5e33b54e245e0ddf19a73728bd2c3f587e7315b5fcd721dd93aff9e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceChangeBase.lean": {
+   "git_blob": "31f650872c4bf8282a42bd2d8798c221ea65aef0",
+   "sha256": "e6e237da101cbda0a5135e9b7b306cb8e7f9041c0ec03fc393600354478a424f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSlicePostcomposeProducts.lean": {
+   "git_blob": "df11caf4fe3757e56c17b21a43d3f3dd97d6b60f",
+   "sha256": "e29ba2cc3955bfbc2f3488d971fcb0b308205912bdc4c132d0e4e1ce39d74bcc"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSpanChangeBase.lean": {
+   "git_blob": "ce78a9396babad35fcdae31a4b815ab8bbccd002",
+   "sha256": "77b60cb9ed7d11fed02595841b004ce820f7210056c7aa6c31eabb35af34b3af"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSpanPullback.lean": {
+   "git_blob": "d64aca582bec16e8e2fc747d7f49e2f8c89be4c9",
+   "sha256": "db335b3d4617f0924abc6877fa72a69c373023c7001416b80c434166f0fa63bb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTheoryFamilies.lean": {
+   "git_blob": "42868ee255a562383f1fb5e15dcdf94862e143cc",
+   "sha256": "3f7cf8eeb895feb0ec40171c82accbafb0764ac8026ec87c307bab232addbaeb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PartialSliceTheorySubobjects.lean": {
+   "git_blob": "35143bf48db6e8048dfd69593efa4b46d8b0fd10",
+   "sha256": "7b25eba73393eb167ae1659894617ebf1ea7605e3a39876633b961baa1fb15d0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PrecompleteClasses.lean": {
+   "git_blob": "6c12562d052b0ea8eef4cdaa39d2e22119e56e6e",
+   "sha256": "4c5e077b9b509a5d903c3f71865872342d48a791394103f7bec4e09af782e02d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PredicateInterpretationRegular.lean": {
+   "git_blob": "bea97c74e25c6aeac0a9d0010767becd9fe577bf",
+   "sha256": "e67de76a5191670ef83192db4b638f611147462b92e4881b2ae484926295335a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PredicateModelSubobjects.lean": {
+   "git_blob": "5338d717fc51e9efb2d6ad3cfd93aeaa6cb0f724",
+   "sha256": "b779dc221faae06410fb216d175eb25497a8d464e81e9196baf08c43813661ba"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PrimitiveRecursiveTags.lean": {
+   "git_blob": "6a34eec9112b7d21cc885b0ef4c18e897931c732",
+   "sha256": "e9fcf4775f7d4bd78a26c71e1ebd824980fe91a9a6afaffc9c6d7f73cccfe3cd"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ProgramOrder.lean": {
+   "git_blob": "af58652ebd0eeec654808feb49470491caa8db96",
+   "sha256": "adc323c94be78b4935399bdec2a18f7cc43de2393ad8f3bdf527af329c2639eb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean": {
+   "git_blob": "d46d1dc6888a619f64c3bf454bcac5d220ffdbe0",
+   "sha256": "da03063011300f6451387175cb072c382df769ba8b14477a4e770e5fc9530a67"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PropositionalClosureTransfer.lean": {
+   "git_blob": "cfbfabc4a46d27d7d8f7f706e0ac618f2c66e471",
+   "sha256": "314fd4699a4c87680c4e0469a19f111871e2c9f95aa1a0b11b72bd0826a751db"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleClosure.lean": {
+   "git_blob": "555c248ae3fc8c93059e2561275295cc2da27520",
+   "sha256": "23ae9883f56e036b6da84ba0204033459f8b054e8858b3d38cd600295e7ea337"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleComparison.lean": {
+   "git_blob": "7177682fbcf973b6936f9fc74f4e6bc4bd37e6d2",
+   "sha256": "5cce816a928b28c2e76b605e3890be77cc6d8301b315a34bb1ce1e9bb4e73ab5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean": {
+   "git_blob": "adcba3fd1c62b7920b40faa063f916d0dccd004c",
+   "sha256": "d2458f48d407064346a581cd17db270f44a8a03bbd624dadd7b08d5e17535810"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSets.lean": {
+   "git_blob": "92474754f29a8f2b8ad88e70ee0e0f1614ad8231",
+   "sha256": "0097af1a124affdeff068af26bee78f5ae956b0781d03519c83167a9ac1f13ff"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSetsCategory.lean": {
+   "git_blob": "6ae69aad893f36ee3852ce04cb081d0cf2627387",
+   "sha256": "0f316b09f672e4f4618c4c56b52171918644644cb88d03c5aeb448f3cb4aeb76"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RecursiveDomainInterpretation.lean": {
+   "git_blob": "0f70c4438524837bffc9d9b6a844d2e08604ce56",
+   "sha256": "30c649208a41742ea48b2ffee163bddf5c8491dabbb95338aa67ca6b9e28fd51"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RecursiveModelRegular.lean": {
+   "git_blob": "ea03045bdf15c187299d0188d902b83c6d98303a",
+   "sha256": "0fec6688cd244baec07510c0d8389be0596f896c04ea9d6bbcc10f4cdfd6ed5e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RecursiveUltrapowerComparison.lean": {
+   "git_blob": "3fd7c76104a2c053d8aa20ad7e9d7c978d74d724",
+   "sha256": "a1a5656fae84294c681ca05916b5aa0efd620afbc2bacd140c7a912a92e284ff"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RegularActionPoints.lean": {
+   "git_blob": "5467ccbf81b84287722544bf685111342db748e9",
+   "sha256": "e5401e66baeceb433932435e27f3b1c09d320edbb64679828afeac72d686fb73"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean": {
+   "git_blob": "8a003e710adff46d65bc196b77895487c6426584",
+   "sha256": "e5fd87fca34c9e989c51b90ef6c2038b4ffb294569cb01872db0a3ea2a747c69"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RestrictionCompletion.lean": {
+   "git_blob": "319dae60836fdde3b4f52d93ca64e44749a3b3b5",
+   "sha256": "757e81bdeeda5d2382504cd47ccd92ebdf4ae2fdb0bd56313e98578f96b52b4b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RestrictionSubobjectInseparability.lean": {
+   "git_blob": "6047c680f8118ddc40a56781f85e3706711608f9",
+   "sha256": "d5b12cff6e40b0bfc7d5177b306d76587a6e994d0623f88f61393b310b3e484c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RestrictionSubobjects.lean": {
+   "git_blob": "17bc13bb949b6647468d43734ec8aa1d5698ad14",
+   "sha256": "a84b0e85823ad2311eb583c5ad4ab634267f6b94a2e1499bc4157c563192c39c"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RetractedClosedTheories.lean": {
+   "git_blob": "5053901014243a8bcb9a93464bc293e4259c0a4e",
+   "sha256": "38ec6ef958f2c453ebd178be0f7d65e5fdc2627390556f6554edfe8acf1987ad"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean": {
+   "git_blob": "a61b2ca77472478ad8ab2cb0380ba3d7378f608a",
+   "sha256": "9ed6cd8e5d6d5b164d9325858fade0a4ba2bc91b793198232e8ed58f2a93340f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean": {
+   "git_blob": "ec53a1d4d369ae3f98112accbcd572280126f392",
+   "sha256": "2a7b2d0e097d85c997d1a7529c23ddf442205bca7300b07271b4df163b06f63e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SentenceImages.lean": {
+   "git_blob": "09048e41ec23edf09d661d8a99e484a30df1f36b",
+   "sha256": "fb166aa1757b953fa6db51f5b0d37068990fbb9b105f0da6214a2312479e3505"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean": {
+   "git_blob": "27e9add0bc3020a00c69273459355d3352b4cdf0",
+   "sha256": "46c924a7cd8d1c616a1f595b33aa90c8a6208baab092899f09494019d90f4a6e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationCarrier.lean": {
+   "git_blob": "0a5fb7ec28c2fd27a0bdf373a2dd27b38dbbef8f",
+   "sha256": "80be39ef700edc89e03b5afdaf607e3a1311c95513d534c22423e090a0bddfd8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationFiniteSupport.lean": {
+   "git_blob": "5f16b385a745bb7a205c6d496bb767b5bd6159f2",
+   "sha256": "36bc0227cfc6f4baf63de56e4e35f0b2d8415c70c2c4d0ee363c60a54631df18"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationInternalTruth.lean": {
+   "git_blob": "59508920852aad616a2c598b2bf4e076b02078a7",
+   "sha256": "3890859beaad8563621fac44f5920e8adaaf4c78904db4f0c67c9e89474a00b5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationPositiveLabels.lean": {
+   "git_blob": "367d8d83b73d93b8872fa5d92f7b847a20788fc9",
+   "sha256": "4a75d69e6514738ae3962b6cc6e1db1b131b2fba47028112a48369bed19601ab"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedDerivationRules.lean": {
+   "git_blob": "959ac67e018a960f6748cbfc56e1564390eafa7f",
+   "sha256": "fe4524a71c7b9c26d5f64a7aca8ad6813d3f1bc4d368b9620b9bb682e465c96b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedFiniteFormulaValuation.lean": {
+   "git_blob": "fc98c2b0e4585b2ff681688c15eb7c4822568027",
+   "sha256": "d20ffce22b14712fdf4d62433523d90519900503f4f8f796cb5495f4baf7a330"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean": {
+   "git_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0",
+   "sha256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderCategories.lean": {
+   "git_blob": "87448375b2f555af4458fbc1ece3d7229f649b5c",
+   "sha256": "3a3998ddcf4f71759d53a165bea6154be320a582863089d8279e84abf795744f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderGeneration.lean": {
+   "git_blob": "12ac836dcaa2ecaff973993b423293972be8229e",
+   "sha256": "1c73f7c10fa158b4c58439adc253dd0b7b9c41c379288c63c3d01ac2ea155e89"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean": {
+   "git_blob": "0ba41bb5937de651f39cb96722d158ad1d7ce286",
+   "sha256": "70164111cd627a9ae670ed68e585ec382c3ea1f2ed1ea05e0aa7901b60849fb2"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SliceAlgebraInitiality.lean": {
+   "git_blob": "c8af4cff92ed9a491a199d324b7294342876d7d8",
+   "sha256": "39e0ba79005c437d316fca2dd5bbbb234aa12b207716161414c3f6473b828b68"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SlicePolynomialComparison.lean": {
+   "git_blob": "ca25d0daa3910d5698ab3956a230033e80481c1a",
+   "sha256": "ab224408ef62800e3669d2dae9498bdef14be1f021298931c7280590bfeb67ef"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SliceSubobjectPredicates.lean": {
+   "git_blob": "1b82ae5a321cc2e3878c5d5a4487a637f6011ffc",
+   "sha256": "afa94cd59d713f156103cec065ad817d20d85ff5c3a68ac56b6196daa66dbf35"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SliceTuringParameters.lean": {
+   "git_blob": "93beac78148e2c251f94ece66bc6e9606f95ba29",
+   "sha256": "823dd6c2a3fa97b1a38b47e08611895edaea26c77d69f6c141e971cc9bacd2ee"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SliceUnitFactorization.lean": {
+   "git_blob": "df868df655150a550ab6054f850f35f24a9d8074",
+   "sha256": "d1fd75451e0d58a48ad48089c14f2bb7c75184a558be1e104f2b8382eab373fa"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SplitExtension.lean": {
+   "git_blob": "a7132650377a7b58689940da44306de1d62fdc6a",
+   "sha256": "f610fa8e755ded1afbeafdec58af24f9605598f8e02ee0088b390d3456a8fdd6"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SplitSliceTuring.lean": {
+   "git_blob": "66d451b8080b8171abfe76372de42ceca6f1faef",
+   "sha256": "ddc0e08143d417132181a0380733911dba93353a3c3e8033826b34b0ab07a4cf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SplitTuring.lean": {
+   "git_blob": "d5d81f80736f4491d7f705eb81f9a40a511ca120",
+   "sha256": "f476677607adc7e5217588e673a3048a44c7266f38b2552fb182192d935981a1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean": {
+   "git_blob": "01c7152d5b2d444aca56ddf4a4fd70f4091a892f",
+   "sha256": "66c43d3c5f2dbf72cd556f92b552c88ccc1d2effab170e9265be55c3dc81bb17"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SubstitutionSource.lean": {
+   "git_blob": "3aa170e82ae6ae0a0624efa7a27cbf6271579043",
+   "sha256": "424fe427e04efb7682203a64f87b43f0fd73cf4c27d2b34c39aa4cc090811174"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SummandBounds.lean": {
+   "git_blob": "56e26f80f01b7f9fd3ce02d0d34388dab38cc661",
+   "sha256": "7c1c331367da72062a0aca2ff3bf9f65e23ca84ce06ce10b7a047d0364bd8307"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticComparison.lean": {
+   "git_blob": "c45cb099bfef754ee1fb505c0bcc28613b51e672",
+   "sha256": "d7854aa80a71cba03a1fa7b33ae0d921a48d06add31e1f066185694160435bed"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationInitial.lean": {
+   "git_blob": "b785bbd2cd5cd98e07e14cf8519c38cf80ce6960",
+   "sha256": "5a73610a32e9906f33d9272e37b66e480a00d44242e63b6601e6b96c712427c8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationTotal.lean": {
+   "git_blob": "f6c05abd89df02099499ed26cdb239eed8fed120",
+   "sha256": "4f2e4aa3e13bb562e3bbde24aa9f8d11552898d11854e421997e71bcd20c0f6e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticExtension.lean": {
+   "git_blob": "1290846ec789e5caef0d6fcc484536442f09b871",
+   "sha256": "9d6debbbf616605eb159602b6bb4d0a078e6d8d499cfe7bf5e9cad2b754f51ba"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticFamilyCoherence.lean": {
+   "git_blob": "9c777b06c7683c58578d121408a2983f782263ef",
+   "sha256": "522e4026d7af9c8d47db85046672d497114bce37dce925e93b678254abf52b1d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticGeneratedTheory.lean": {
+   "git_blob": "0de9bc7ac10dc111d8805bcb397ea549f203ddb1",
+   "sha256": "d45e45003c08cef262472fe3e6c17a5fbdcb348cc40ad523d6d5f8366f56a697"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticGeneratedTheoryTotal.lean": {
+   "git_blob": "3d6b00b9f4355c56206e8f9fb953c66d8ea3bf38",
+   "sha256": "f3a542363ad3d1fff36b625103662e40fe8a6a6d43ad995888826f0d65bc6c49"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean": {
+   "git_blob": "78877c998b008725040598be5793ccc6b73cc034",
+   "sha256": "c5caccea2da690bd6c0411febed96431787ca55c53c0520003e5ff294d04d6d9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListEvaluation.lean": {
+   "git_blob": "50e39992601426373254aa9ff57c08dd44b63793",
+   "sha256": "833d7abd4e2d04241476f87e7c44c405e77a22ac45c7b9296d6f513826e85ea3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListEvaluationLaws.lean": {
+   "git_blob": "1e8c6ff811494a414eca32fff2a30c2502c91607",
+   "sha256": "23989616808c07a855492823f7bfd1d939cf6c06a896cc37e62f1aeab7662500"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticLists.lean": {
+   "git_blob": "e7f31fe75264bdef090723d143128a0220a0d3cb",
+   "sha256": "8a5fec57fec8970074ecaed019790899307b46f50e0fde26e4bddd2db23ce587"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsDecode.lean": {
+   "git_blob": "d12beb551e084c08d9cd7614cd89d1c336ec9e93",
+   "sha256": "07482bb99b006393c369a8d9e0bd160d303eb659c1f3e8f809c6f006805c0c02"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsEquivalence.lean": {
+   "git_blob": "e3f9d7fa9f25a47782c6ed0cf60b39e5479f3805",
+   "sha256": "4e2f628e853404b0bc1841bc53c2b48f44080e0228b0fa18523461bae1b48104"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsFold.lean": {
+   "git_blob": "5e57463495868387d1cfc579c77375dca8d94c65",
+   "sha256": "5ca1dea0781b687d3867b4cf37a3539dd809d72de3552403b8fe504ec138daad"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsInitial.lean": {
+   "git_blob": "ca3f4f7bfb8d16fca06f1129219d05152222f5da",
+   "sha256": "4492edcfacf18bf657fdafef67475e21709654d2a8070ee9147efcbd27b60e1f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsStable.lean": {
+   "git_blob": "dad61932b8771697b9bc1e086685429ebb2c7f5b",
+   "sha256": "715c15de166c5d54c764dcad0e67f46fb487599206fcee493b4accfd1b3be31e"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsTotal.lean": {
+   "git_blob": "c185045d49e0757c828e1cf19bbc91d7dccfccd2",
+   "sha256": "503c2c85ec1304f9a0e6f88b56a5b75d212296200f1cd0d458f49d370a6b3786"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticListsUnique.lean": {
+   "git_blob": "f7e4f6e683946fcd25f5442ba792a79ff052e28d",
+   "sha256": "053d16cecaa590561a8c3d5cc44dbb04bb0657773e1d47cf524bf52a282959e7"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean": {
+   "git_blob": "f49d22c3c626f4e82f24f2f048427a02db30f209",
+   "sha256": "be2da1358bdf568d673b29bd36a488034f71aa827a761614119de782f43f728b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticNullaryPresentations.lean": {
+   "git_blob": "48961421b132be3b1cb41bd7ddb01f77dd963d43",
+   "sha256": "8068366381957a0a66b1bd0ddf935c78dca99367aac7bd66fd25d98c8d7518c7"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicates.lean": {
+   "git_blob": "7bbfba7d35e87a6cb4f927117b6429e4e660be2c",
+   "sha256": "7e6ddfc930b52876812eec873119a29f70cdc2e60e9682fb876deb011f2f0aa5"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicatesExtensive.lean": {
+   "git_blob": "84dcd3de629e7790be77476e824db92f96a2b224",
+   "sha256": "6be149df4d0ce4c0554103d4a325e8c5aaee49b9e07d21ea46bb8a96ed121d30"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicatesImages.lean": {
+   "git_blob": "ba3b4b2e21afb937f90532414edd9e59f57f2d06",
+   "sha256": "c3f9c45e804996dfe83c4df4a61ecfc94e2e4516630ce963388fb59e7ab5f705"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicatesRegular.lean": {
+   "git_blob": "dbdf199ce3f303f91c07357e250e53cc66bcd98c",
+   "sha256": "3da20baa9143cb4ffbc6628a09556e52830efc1713e5acb648c4c4f6ec5af508"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean": {
+   "git_blob": "3aa7a81802a13d8468c369f3e6fde28de1c688b0",
+   "sha256": "052bb36b70c6b9c5281456dba88ec6deee4a397e66d3b040d4b422655262fdaf"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSliceDerivations.lean": {
+   "git_blob": "178962f7a6bfdf821292b9f64a483a02c4f3dea3",
+   "sha256": "93c7e46d1f04af3375a1ebe6ace4c06a00fa69c3c45b04ba857336b052a11f9b"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxAcceptance.lean": {
+   "git_blob": "0d792e53f0736a4728ea4f9cc79e876c3be5fecd",
+   "sha256": "8ca459a8ad997746b6f0763d6568617db55d084a43900987cd4cfb1c15c722b1"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxFoldHom.lean": {
+   "git_blob": "981b3755b3ddff2a74bb26039b8855dd5a36c604",
+   "sha256": "1ad7ceb625c88d03223f029bb4fba0306e7324e94f6fdfdb300547eb1e02c301"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxInitial.lean": {
+   "git_blob": "45244d9a74519d7abd94515945d7dfb6227895dd",
+   "sha256": "273816a97d00cab133b663467af1254c5536df502101b20ca74763e8cc4a821a"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxPrimitiveParser.lean": {
+   "git_blob": "80c15149f45011e89ce1463b2b2e73518e7b451e",
+   "sha256": "441659930926df3985488a128f180505c4dfef47ee32d3ae4d048e2837a1dfd9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxSubstitutionComparisonTotal.lean": {
+   "git_blob": "307f934f1d3bbc38798089b5eb6ae9e38a709aa5",
+   "sha256": "a17338fe8990e79e239ec4762ae07237f930ebfbd933aa92b48aec5f0a9cc930"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxTotal.lean": {
+   "git_blob": "8249f7ff6d08846d1722b8c3642cfa55e30ec811",
+   "sha256": "1d49090eb5a97547e88812beb1eea4e017a18e4c0cc06b9a274cc83e321ca82f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxUnique.lean": {
+   "git_blob": "3c8d35bcaa6061c3bc4dff3c6e52d56c7c619e41",
+   "sha256": "68daeaca6d83a5e790a13c2095004bf29aa21b073692ba0c2d3224acd5625eed"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntaxCoefficientMorphisms.lean": {
+   "git_blob": "1bd11bf0c88b78f65914c01b8265ca7077a9f794",
+   "sha256": "4cbe1ade4f0d0920a661a4315b186e3673b1f55763c6ce6e217fb661d1601538"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntaxSubstitutionTransportAlgebra.lean": {
+   "git_blob": "7c51308870e8f34f22b43299d82e3d303499bc0f",
+   "sha256": "abd14e3b55097246846ee8f3e2b8ad0ec4d77904eba6b86e2e5f38da8879599d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46SyntaxSubstitutionTransportMappedLists.lean": {
+   "git_blob": "3a176966bb83bc3ada6aaebf4acdda1ae4254903",
+   "sha256": "1a20762b837700b43fcc4fc224b119b2025063f734f59e04ee231b4a48e2fb6f"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46TranslationGalois.lean": {
+   "git_blob": "ce500533b0f7082921fa9dc65cd7fba491dbd723",
+   "sha256": "55152cc686c46add6730fa91eed0ecb30291750c4079552066fe1639b9a87ce8"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean": {
+   "git_blob": "7348f80b97bee7e0252c2a78516f291f57566d5c",
+   "sha256": "b2c55aa6951cfb0af9195d0bca8d4d33337c9f92bee5410df96bd00551a1ae95"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46Ultrapower.lean": {
+   "git_blob": "d54ce32a97ebf74579cf5b33fb7506d5e2df738a",
+   "sha256": "b640ae4b1130c3d5ab49fce351d953b12b8b120e0ab2a4a2d1bb9e2da0edf9f3"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UltrapowerComparison.lean": {
+   "git_blob": "ca8f82b5735cd6be4c308199834c14ede712011b",
+   "sha256": "987a0629d7e062274f711b51c630a3b83cc895c031b7687320302cf5bf00c498"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTrace.lean": {
+   "git_blob": "9c2439391862e0dee5285bbe4e200752c158b496",
+   "sha256": "850ba80b9c4c5008cc0fc152ca2dd6ec13bbe38e29d6b62708d7c5e7963245bb"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceArithmetic.lean": {
+   "git_blob": "d35689ce8badeb62acc4a996d7c89d5f4dc538de",
+   "sha256": "c2a4051231ad123c56ebca3dcc46aca7d182659449654ef11d3274f123ef5869"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceBuilders.lean": {
+   "git_blob": "b8add973b46a15ba3dbba9a653ca4da8f07cccf1",
+   "sha256": "740e1d4175e7f693948ecf784543ee2f21690dd4c62e6d646c4bc476bafe06de"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceCoding.lean": {
+   "git_blob": "00a1b3be331e39499e9fbfda6d16439032213845",
+   "sha256": "7bae5a3040eb87e83f38e43b38d0b32d181d0937118ad63e2debe9cea293f1da"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceComparison.lean": {
+   "git_blob": "36f29504c9c0ec40d848642dcc2ab881f4fdef1d",
+   "sha256": "0de883508ed28d08270b680efb8c8e57a8d8af726a398fbfeea50aaa47f1d0a0"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTracePrimitiveBuilders.lean": {
+   "git_blob": "fd7887adfb6cef6385f68d5c3dbd3446fa4e6f34",
+   "sha256": "7a56356277315688d7b0be3d933958b939311e8263235fd840f22dfc6171a5d9"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTracePrimitiveCoding.lean": {
+   "git_blob": "75e419af088ed4c9c5c441e5eb3391695e3036d3",
+   "sha256": "5f78f0ee6dfe468728245b8e9c289a61d441e0a1eb9788690a25f47a02b4a926"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceProgram.lean": {
+   "git_blob": "a88680dc2fc209ecd412982346a516340081d1a4",
+   "sha256": "6d8f34faad8a1137012bec574a417b9b4869e4dfaf07eb52908dff3693a781ad"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46UniformTraceSpecializers.lean": {
+   "git_blob": "a788e1c0c77869da961be0364b14fcc1b4b8ad02",
+   "sha256": "4f7b0ff60a81455381fb2444e2ab14c6f34a59d8a464c86d044cf1728a044d3d"
+  },
+  "Lean/CategoricalEssentialIncompleteness/V46WeightedCubeTopology.lean": {
+   "git_blob": "c5ab39f085739f4cdba4f09e66ffb00b6948ffb4",
+   "sha256": "f9ca17b82e7a6adf7406f4089f3d26fd8ecd2d4082d4ed2dc0f27d472c0873ce"
+  },
+  "Lean/FailureOfComposition/ConcreteGodelRE.lean": {
+   "git_blob": "ae2f3890e36396e69f8af11859238711a8f75c92",
+   "sha256": "bace18475d880065f21184d98db920e78bef9ab7d8382217e15cfb23d908c557"
+  },
+  "Lean/FailureOfComposition/QuotientObstruction.lean": {
+   "git_blob": "ec494089b3c650c14bf796c247be64343fc3a4d1",
+   "sha256": "d95c3f835442302514b63299b8a5fcc098c9ca7e14ee2aa09f31c12ef2d13443"
+  },
+  "Lean/PCats/Coproducts.lean": {
+   "git_blob": "6277db97a3d35b2713842fbd4e3e48c78947a584",
+   "sha256": "9006b93035c16ae594c3477ae38a693fbe5a4304cbbf7954471702645c798de8"
+  },
+  "Lean/PCats/PCat.lean": {
+   "git_blob": "94cd2b3a5558c169e53074f7e4ce05b2173168ab",
+   "sha256": "08971843bd6c3cf98105ef97edb96778a382fa2d2aca2117d7750e631cb1c657"
+  },
+  "Lean/PCats/Recursion.lean": {
+   "git_blob": "18578d48741a46df62fbc113add4811dd8335ed5",
+   "sha256": "ef6a2d2566396c15deb3c691dea7fb0196ac60d6249ba7d61d29687fc84169f8"
+  },
+  "Lean/lake-manifest.json": {
+   "git_blob": "489f82649891d939c7e7652afb5f5f703d73a118",
+   "sha256": "dd5f7f867d71fe154419da53bf44efc1b981c7f395ad2eb899bca923d27626a3"
+  },
+  "Lean/lakefile.toml": {
+   "git_blob": "fd4e154f9eb48e0efeed04d1b4426bd7bba9532f",
+   "sha256": "8d7e5a0cb07b1ae2038529d2ec9ca395a49d6853f7f3da0d63eab8e2f4d5af4e"
+  },
+  "Lean/lean-toolchain": {
+   "git_blob": "acc704ffe6eefbbe8ec09452a276202748aac923",
+   "sha256": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
+  },
+  "MANUSCRIPT_CURRENT.json": {
+   "git_blob": "55bb86a3a66403f9fd51751c6bed036fa6647428",
+   "sha256": "587117faf60ba36800a3e4941106b4480f7aafd1605115d0a0ffdaaeaf24db62"
+  },
+  "manuscript/latex/abstract.tex": {
+   "git_blob": "f5bfdca3f4232ece497a8ce0e7ae91695cd301da",
+   "sha256": "142c4cebaf4929cf49a87ca0ad7457061031675be7554a253fca378cb5683889"
+  },
+  "manuscript/latex/appendices/a-syntax-and-theories.tex": {
+   "git_blob": "b333611c7395b012315f78f6eed56b97a591322d",
+   "sha256": "4fb1837ce419e43817245837a0e30c8406c03c8328b6911a66b859daac7ad583"
+  },
+  "manuscript/latex/appendices/b-three-point-cosheaves.tex": {
+   "git_blob": "75d75d1d138013f7033913ffa0201fd2f732bf9b",
+   "sha256": "ac971d8a951f88656d47dfdb4c0db0380a9fe7f17897ea91a6830b2f400d93da"
+  },
+  "manuscript/latex/appendices/c-section-lifting.tex": {
+   "git_blob": "df5d2db111b721a9e6f8fff717f51fb4f2242a3b",
+   "sha256": "af3dee797792c058ffc9d96680687680f25232c3f8d862dca97817613373611b"
+  },
+  "manuscript/latex/appendices/d-faithful-family.tex": {
+   "git_blob": "c0c425caaff0c704f2292ccc708a7268e78d2d48",
+   "sha256": "552d17536a53920274574abf0a321bc64ba2d798ce469a1686e4e9b3585c5460"
+  },
+  "manuscript/latex/appendices/e-reading-lean-proofs.tex": {
+   "git_blob": "9191722caa87c63827a7fb23d61d4d36cb674b23",
+   "sha256": "a014501e2dcbe331beb371f44d163180b4956b85319be37777b59695b08794f1"
+  },
+  "manuscript/latex/bibliography.tex": {
+   "git_blob": "268650ed416a7d51ee139930321eafdbf11d348d",
+   "sha256": "c5cd6e7149c6b0853164cdfa75faddb7bd22f2b10f9eaccae438eb5044c23931"
+  },
+  "manuscript/latex/main.pdf": {
+   "git_blob": "02898c03cccf005ddfd0de14d065037bd6ed7496",
+   "sha256": "22a678408cbf8878ea35d318e943e0b63d3c1639cc3382be71bce2294122fd48"
+  },
+  "manuscript/latex/main.tex": {
+   "git_blob": "df5f0eedbc3d4b220de2cffa7af7e926b172fff2",
+   "sha256": "37a07846825410efb4eed7f7b0028f1d4670d6f8c1c9870406f15aeaf7121102"
+  },
+  "manuscript/latex/preamble.tex": {
+   "git_blob": "4d8c6ae376d8ebe8a5e00ffd0c435f019bca1183",
+   "sha256": "308375437b4580fbc0070b136fb57a2d8d91961d43e4b9d699d10a9468abfda7"
+  },
+  "manuscript/latex/sections/01-introduction.tex": {
+   "git_blob": "f1fe83008be88a7b32da29085b1317c94b08ed5b",
+   "sha256": "3eadb3c9b89e13d8fbd1f216bcd90cb745125fcdec0d58cf9866e2263052f1f1"
+  },
+  "manuscript/latex/sections/02-categorical-preliminaries.tex": {
+   "git_blob": "16b266ac04321afe44ec312e1b0ab2eb52cfc120",
+   "sha256": "6211e705016f1769a728afba12be8259e973532af16c52ef85addc2be4e059c3"
+  },
+  "manuscript/latex/sections/03-sections-and-inseparability.tex": {
+   "git_blob": "1164ab363d8d42da28a18714fe3410c0180652e3",
+   "sha256": "3a72481666c54e4772df21c1e30c0bbe14ce6234c6e329a76f37b3faaeb1d70c"
+  },
+  "manuscript/latex/sections/03a-internal-theories.tex": {
+   "git_blob": "9fd4610a2d89ef4933a9214e8868d983cd666a70",
+   "sha256": "0fb0c2aa97bd0c116b46e65fbf04432e330bd84251fb94c04fcdcab4c0a7a362"
+  },
+  "manuscript/latex/sections/03b-internal-adjunctions.tex": {
+   "git_blob": "7562242ae0484756d43831af3c9ffddfcb34aacc",
+   "sha256": "5c52905586048b2a39ddd68241653a256990137db170aed29b5d44cd03c3f423"
+  },
+  "manuscript/latex/sections/04-miller-sequences.tex": {
+   "git_blob": "17f4679f729c60906e47ff441098df9eab2eaaef",
+   "sha256": "df3ad33029894f3c301c9681ea7337c269d9fee9a16c9029c909aa35969af211"
+  },
+  "manuscript/latex/sections/04-theory-extensions.tex": {
+   "git_blob": "5f9e98e2af3cd29a1017b36ab3f981a582fcd6f7",
+   "sha256": "0023506999303792b595b569baf59ff4fd0e5d02bd774cf8e344567a139ceb23"
+  },
+  "manuscript/latex/sections/05-syntactic-recursion-category.tex": {
+   "git_blob": "53e055a500ac8efddc97dc3af1d05031d0fe3946",
+   "sha256": "74f11e96ea932f82b48972eba707f83edcddb5afaf068e628e9663644d0a0962"
+  },
+  "manuscript/latex/sections/05a-internal-syntax.tex": {
+   "git_blob": "4f02023814bddda68ff5e6f1bc7aeb58a6bb7d59",
+   "sha256": "2afafb146d44b1ea0233977032b782a1ef0f3af5be058bc7104c1ae43af3ab8a"
+  },
+  "manuscript/latex/sections/06-interpretation-in-models.tex": {
+   "git_blob": "c5dd42535d4bc7893decf65269a4e0bada03b22d",
+   "sha256": "5f6b3ce89275cde13a846a322970b0c4237c20661998986ad7993850b1273c33"
+  },
+  "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": {
+   "git_blob": "479206a247f486564672f94b4d10ec9410be6d08",
+   "sha256": "39f0d53e28240e41c95d269cb04685e580f8fe7ff4fdb7c83fa459df6419ed70"
+  },
+  "manuscript/latex/sections/08a-uniform-theories.tex": {
+   "git_blob": "842ea150003a40535bc0140c006ab9d0e7eaa9d0",
+   "sha256": "6c17055501ded676f8b3d596c7df0b7915a94c7930e757535ce11a11a18214e0"
+  },
+  "manuscript/latex/sections/08b-uniform-independent-sentences.tex": {
+   "git_blob": "a606c003d6b34daa1b9e8c8b9fc2788828688f45",
+   "sha256": "c4c9a4c700e234bb6f8c733801d569524329a149bc461453da9a25f2bfea7916"
+  },
+  "manuscript/latex/sections/08c-numerical-realization.tex": {
+   "git_blob": "315a6a14eb05b8b3319baa8d3ccfda36b030d1f3",
+   "sha256": "8f8a8ff060bc00a26a1c8c79942b7dc26016ff63dbe40098c455feb5d4c3417e"
+  },
+  "manuscript/latex/sections/08d-numerical-incompleteness.tex": {
+   "git_blob": "9772eb67135a47698fd71b27e52717db9b223b79",
+   "sha256": "6bc0f9996ceece0e811fef0d0a2a82fb7b0027be34ad92184d90745bd3934676"
+  },
+  "manuscript/latex/sections/09-three-point-space.tex": {
+   "git_blob": "e3374989f863f9b4e8e7731974c09609f1eba6df",
+   "sha256": "4f121b1695b391d92cd403e8abb90731c95f2acc6032ff8726e14263fe8d4a40"
+  },
+  "manuscript/logical_consequence_and_essential_incompleteness_v81.pdf": {
+   "git_blob": "02898c03cccf005ddfd0de14d065037bd6ed7496",
+   "sha256": "22a678408cbf8878ea35d318e943e0b63d3c1639cc3382be71bce2294122fd48"
+  },
+  "manuscript/logical_consequence_v81_source.zip": {
+   "git_blob": "f929de5502ed3181dd09a7e58a1b688bdde43bb4",
+   "sha256": "9db20398b92f6b5d1fe8b30e0d6ad5f83f3be69bee5d34f0ea43fd3e77d69e81"
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "source": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "arguments": [
+    "-j1",
+    "-M3100",
+    "VisserTheoremExtension.lean"
+  ],
+  "test": "VisserTheoremExtension.lean",
+  "exitCode": 0,
+  "sha256": "f0c037da7c87ccb4dfdeb819d08af2cb2aafe078ab9288f48dca13c9849435b4",
+  "stdoutAndStderr": "@SecondReading.Tested.undecidable_theorem_extensions_of_reduction : ∀ {L : Language} [inst : Encodable (Sentence L)]\n  (T : Theory L) (P N : Set ℕ),\n  Numerical.RecursivelyInseparable P N →\n    ∀ (f : ℕ → Sentence L),\n      (Computable fun n => Encodable.encode (f n)) →\n        (∀ n ∈ P, T ⊢ f n) →\n          (∀ n ∈ N, T ⊢ ∼f n) →\n            ∀ (U : Theory L),\n              {φ | T ⊢ φ} ⊆ {φ | U ⊢ φ} →\n                Entailment.Consistent U → ¬ComputablePred fun w => ∃ φ, Encodable.encode φ = w ∧ U ⊢ φ\n'SecondReading.Tested.undecidable_theorem_extensions_of_reduction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+  "dependencyRevisions": {
+    "Foundation": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+    "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+  }
+}

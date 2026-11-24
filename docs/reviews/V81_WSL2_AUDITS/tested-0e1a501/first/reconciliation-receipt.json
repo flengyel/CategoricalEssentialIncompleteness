@@ -1,0 +1,161 @@
+{
+  "checked_utc": "2026-11-23T21:17:59.425811+00:00",
+  "tested_commit": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+  "version": 81,
+  "prior_seals_sha256": {
+    "blind-seal.sha256": "c90da4d0c892b15fc591b5e0f76aede0b726d05499d27393d132fc2f375cb507",
+    "source-seal.sha256": "aebf977c0abe82ce1e7c7208c12ae8c99b86012cd68db82be4b6a4d62f3a6fb8",
+    "primary-seal.sha256": "ea2e8617a1b6a304aadfe3e7890abf624ab225c95c7e6a6a0c6ce62b6f5f2e41",
+    "montagna-seal.sha256": "0a1e3ffbd19d868d85002df71c3ea4ba9c594a3064cdcdbc6e48249c96bdd73d"
+  },
+  "previously_sealed_inputs_sha256": {
+    "first": "5dfcc342a9d03f1f9ea56f0d9929efc089cccda37566f313656a090d598e37b0",
+    "second": "ccc863d642dd78ac21be9f48ee67f3b041dd36bd14ae61e6c98ebf10f3e1fb6c",
+    "second_proof": "2daa2a6c4394054bc2183c82e933b42d75cddd313524b526a9991bf41e1e6ad8"
+  },
+  "reference_scan_sha256": {
+    "Paola-DominicalCategoriesRecursion-1987.pdf": "84930c7a61bc5d834926bce55c7ef4962f5a2ebc4510395814fb1cc97a67f463",
+    "Montanga1989PathologiesInSyntactic.pdf": "3f5fb158ea099e07d680bb94a0eb1a1399ebce075fbd934d7c144d38b6bf0212",
+    "Cockett-TuringCateg.pdf": "ed06ee0bfda4da4278e37e61b10e7c34712dbc7e918a6d5b85f3183faf06403d"
+  },
+  "reference_scan_locations": {
+    "Paola-DominicalCategoriesRecursion-1987.pdf": {
+      "locator_printed": [
+        594,
+        595
+      ],
+      "theorem_printed": [
+        625,
+        626
+      ],
+      "theorem_pdf": [
+        33,
+        34
+      ],
+      "separation_definition": "8.14",
+      "definitions": [
+        "2.0",
+        "2.2",
+        "2.3",
+        "4.1",
+        "4.2",
+        "6.2",
+        "7.1"
+      ],
+      "visually_checked_printed": [
+        595,
+        625,
+        626
+      ]
+    },
+    "Montanga1989PathologiesInSyntactic.pdf": "Remark 3.1, printed p. 114",
+    "Cockett-TuringCateg.pdf": "Theorem 4.9, printed p. 200"
+  },
+  "project_imports_and_linked_Q_inputs": {
+    "FORMALIZATION_STATUS_V81.md": {
+      "sha256": "a898a84cfc9d2a01b3795e548d66c9ae966b5035a481bbb458934c468018e508",
+      "git_blob": "0c2b3865a6a02d6943e14f79881e15fb005b9f5e"
+    },
+    "Lean/CategoricalEssentialIncompleteness/ArithmeticInseparability.lean": {
+      "sha256": "badf4ed694366f943d13d25584739d80247a402a0422d7d9afcdc5bd217b6d1f",
+      "git_blob": "af1106303ce71e5de2ed3e7283bd41883bb0a662"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean": {
+      "sha256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+      "git_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean": {
+      "sha256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9",
+      "git_blob": "17086177e64d41af5ae394ca55d021f60a79f2e0"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46JaniczakNativeDecision.lean": {
+      "sha256": "15df3830a66f0a71e8fd98d607859ef7eb79400a29cafd00f65ac285061006e7",
+      "git_blob": "de856dd5d6d07efd61109ad2beff32890476a947"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46JaniczakNativeTheories.lean": {
+      "sha256": "1a26a6c4eab1396383cb589b9b17ccb37fbfbb511838fcacc83d05c7d9ed995a",
+      "git_blob": "c3d7715d16f4a3040b451d6fa109f12d603c5713"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheory.lean": {
+      "sha256": "d1408cc9fe04debb7ce430a36d310387d1e54afde162c669472ed53c42b700c1",
+      "git_blob": "1e912ee47b2560c0720f6ed40e7c6cbf79513d07"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean": {
+      "sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+      "git_blob": "d061a98e59798b20fb963958ccc32b4cd3f33581"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46PrecompleteClasses.lean": {
+      "sha256": "4c5e077b9b509a5d903c3f71865872342d48a791394103f7bec4e09af782e02d",
+      "git_blob": "6c12562d052b0ea8eef4cdaa39d2e22119e56e6e"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean": {
+      "sha256": "d2458f48d407064346a581cd17db270f44a8a03bbd624dadd7b08d5e17535810",
+      "git_blob": "adcba3fd1c62b7920b40faa063f916d0dccd004c"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean": {
+      "sha256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+      "git_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SplitSliceTuring.lean": {
+      "sha256": "ddc0e08143d417132181a0380733911dba93353a3c3e8033826b34b0ab07a4cf",
+      "git_blob": "66d451b8080b8171abfe76372de42ceca6f1faef"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SplitTuring.lean": {
+      "sha256": "f476677607adc7e5217588e673a3048a44c7266f38b2552fb182192d935981a1",
+      "git_blob": "d5d81f80736f4491d7f705eb81f9a40a511ca120"
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean": {
+      "sha256": "b2c55aa6951cfb0af9195d0bca8d4d33337c9f92bee5410df96bd00551a1ae95",
+      "git_blob": "7348f80b97bee7e0252c2a78516f291f57566d5c"
+    },
+    "Lean/PCats/DominicalRecursion.lean": {
+      "sha256": "f640c95d6ae3e0d14a5f2e2e7abc426b9c4b256a838933c2dcb0edbfc12c8d05",
+      "git_blob": "ef014d410a4aaf2aaf67e6308ad314e3e3bd2c59"
+    },
+    "manuscript/latex/sections/01-introduction.tex": {
+      "sha256": "3eadb3c9b89e13d8fbd1f216bcd90cb745125fcdec0d58cf9866e2263052f1f1",
+      "git_blob": "f1fe83008be88a7b32da29085b1317c94b08ed5b"
+    },
+    "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": {
+      "sha256": "39f0d53e28240e41c95d269cb04685e580f8fe7ff4fdb7c83fa459df6419ed70",
+      "git_blob": "479206a247f486564672f94b4d10ec9410be6d08"
+    }
+  },
+  "foundation_extension_definition": {
+    "revision": "01f617fbe240a84aaf1c45b31b9d65e0a2e21c1d",
+    "path": "Foundation/Logic/Entailment.lean",
+    "git_blob": "932a5b71a2341889334c55419529f57bd3f39802",
+    "sha256": "fa0cc73d6ab52d0590470024812cd277d699bc60fe0d744cad4bd8354abafdb5",
+    "extension_condition": "WeakerThan.subset, line 91, inclusion of theorem sets"
+  },
+  "scope_counts": {
+    "adopted": {
+      "mathematical_errors": 0,
+      "ambiguities": 1,
+      "lean_omissions": 0,
+      "gaps_in_v81_proofs": 0
+    },
+    "all_printed_including_historical_attributions": {
+      "mathematical_errors": 0,
+      "ambiguities": 1,
+      "lean_omissions": 9,
+      "gaps_in_v81_proofs": 0
+    },
+    "all_printed_with_Di_Paola_Heller_read_as_the_unqualified_universal": {
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions": 9,
+      "gaps_in_v81_proofs": 0
+    }
+  },
+  "historical_groups": 9,
+  "historical_groups_without_positive_replay_including_reader_proofs": 8,
+  "wrong_bibliographic_page_locators": 1,
+  "explicit_countermodels": [
+    "§8.3 general existence reading",
+    "Di Paola–Heller 8.15 without nonzero source identity"
+  ],
+  "probe_runs_file": "reconciliation-probe-runs.json",
+  "probe_runs_sha256": "a638b834dcabe4b149709a358ac7fb199fc7247db520815ffca9d1f7c266efbe",
+  "scope": "Post-seal reconciliation using the primary works and auxiliary Lean source against Q. The project clean-run result is recorded separately."
+}

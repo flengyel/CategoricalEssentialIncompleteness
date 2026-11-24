@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "tested_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "git_tree": "e7faadff3596ef05277a126a1645248c26ef5ff2",
+  "signer": "Codex, independent second reader",
+  "comparison_stage": "after both independent source verdicts, before final official receipt",
+  "source_seals": {
+    "reader_one": "6f74c9c2fc84a82c81cf4307a6a658f5a196b44953793967edffc695da04a796",
+    "reader_two": "ed47103fe48a7053516a6c5a8072d498eb55e85df79e0ba49f14bc6c4cb2cf2b"
+  },
+  "source_report_digests": {
+    "reader_one": "873698d6ddeafed22eaa462af9ee50f5bd4bc50fe1184da5298662ada37772cc",
+    "reader_two": "36edc3944e3cbcd94e05e6e82ced9bb1dc4e0c9f677a633631621f1d0a5c93d1"
+  },
+  "original_counts": {
+    "reader_one": {
+      "positive_groups": 9,
+      "positive_conclusions_separately_counted": 12,
+      "counterexample_groups": 1,
+      "ambiguous_passages": 1,
+      "citation_locator_corrections": 1,
+      "additional_repair_obligation_counterfactual": 1
+    },
+    "reader_two": {
+      "positive_conclusions_separately_counted": 15,
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions": 15,
+      "proof_gaps_including_missing_kernel_proofs": 16,
+      "paper_level_invalid_inferences": 1,
+      "citation_locator_corrections": 1
+    }
+  },
+  "reconciled_counts": {
+    "broad": {
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions": 15,
+      "proof_gaps": 16,
+      "positive_groups": 11,
+      "individual_positive_conclusions": 15,
+      "paper_level_invalid_inferences": 1,
+      "bibliographic_locator_corrections": 1
+    },
+    "numbered_and_applied": {
+      "numbered_results": 77,
+      "numbered_definitions": 3,
+      "mathematical_errors": 0,
+      "ambiguities": 0,
+      "lean_omissions": 0,
+      "proof_gaps": 0
+    },
+    "clean_consecutive_reports_added": 0
+  },
+  "positive_conclusions": [
+    {
+      "id": "H11",
+      "original": "Bauer–Hanson 6.4",
+      "group": "Bauer–Hanson",
+      "passage": "§1:124–127",
+      "conclusion": "topos Tμ with epi from its NNO to its Dedekind reals",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H01",
+      "original": "Heller 9.2",
+      "group": "Heller",
+      "passage": "§1:166–171",
+      "conclusion": "recursion-category Turing completion under local connectedness",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H02",
+      "original": "Lengyel 21",
+      "group": "Lengyel",
+      "passage": "§1:166–171",
+      "conclusion": "recursion-category Turing completion under separation",
+      "comparison_with_first": "stated as a specialization",
+      "possible_derivation": "H03 at identity functor",
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H03",
+      "original": "Lengyel 26, corrected",
+      "group": "Lengyel",
+      "passage": "§1:166–171",
+      "conclusion": "recursion-category Turing completion under an iteration functor into a separated target that is faithful",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H04",
+      "original": "Bernardi §3 Theorem 1",
+      "group": "Bernardi",
+      "passage": "§1:175–178",
+      "conclusion": "total fixed-point morphism for an internal precomplete equivalence relation",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H05",
+      "original": "Bernardi §3 Theorem 2",
+      "group": "Bernardi",
+      "passage": "§1:175–178",
+      "conclusion": "recursive inseparability of disjoint nonzero saturated domains in the stated category",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H06",
+      "original": "Montagna Remark 3.1",
+      "group": "Montagna",
+      "passage": "§1:179–180",
+      "conclusion": "one total productive morphism escapes every two indexed disjoint supersets in the unprimed syntactic category",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H07",
+      "original": "van Dijk–Gietelink Oldenziel 5.19",
+      "group": "van Dijk–Gietelink Oldenziel",
+      "passage": "§1:203–206",
+      "conclusion": "syntactically complete arithmetic-universe object in Urec is trivial",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H08",
+      "original": "van Dijk–Gietelink Oldenziel 5.20",
+      "group": "van Dijk–Gietelink Oldenziel",
+      "passage": "§1:203–206",
+      "conclusion": "internal true-equals-false subobject of 1 differs from bottom under consistency of U₀",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H09",
+      "original": "Cockett–Hofstra 4.9(i)",
+      "group": "Cockett–Hofstra",
+      "passage": "§1:208–210",
+      "conclusion": "PCA yields the Turing category of its computable morphisms",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "H10",
+      "original": "Cockett–Hofstra 4.9(ii)",
+      "group": "Cockett–Hofstra",
+      "passage": "§1:208–210",
+      "conclusion": "Turing object is an internal PCA and an idempotent splitting of its computable maps recovers the category",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "A01",
+      "original": "Aczel 1.1.4, 1.4.5, finitary",
+      "group": "Aczel",
+      "passage": "Appendix A:373–375",
+      "conclusion": "finitary rules with arbitrary finite premise counts generate exactly the conclusions of finite proof trees",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "A02",
+      "original": "Wißmann 3.6",
+      "group": "Wißmann",
+      "passage": "Appendix A:416–418",
+      "conclusion": "the entire factorization system lifts to algebras if the endofunctor preserves its left class",
+      "comparison_with_first": "reported",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "A03",
+      "original": "Cockett–Guo–Hofstra I 4.7",
+      "group": "Cockett–Guo–Hofstra I",
+      "passage": "Appendix A:564–566",
+      "conclusion": "every split range category gives an M-stable factorization system on its total maps from range-total maps and total partial isomorphisms",
+      "comparison_with_first": "not counted in first source report",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "A04",
+      "original": "Cockett–Guo–Hofstra II 3.17",
+      "group": "Cockett–Guo–Hofstra II",
+      "passage": "Appendix A:567–568",
+      "conclusion": "in a finitely complete category the stable system is regular-epi/mono iff the right class is all monos",
+      "comparison_with_first": "not counted in first source report",
+      "possible_derivation": null,
+      "kernel_application_at_original_type": "not located",
+      "used_by_numbered_result": false
+    }
+  ],
+  "other_findings": [
+    {
+      "id": "D1",
+      "status": "false at the stated hypotheses",
+      "paper": "§1:173–175",
+      "native": "CategoricalEssentialIncompleteness.V46.TrivialDominicalCategory.diagonal_pair_separated",
+      "premises_allow_identity_zero": true,
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "Q1",
+      "status": "ambiguity",
+      "paper": "§8.3:4–8",
+      "distinction": "definition at a presentation vs. existence for every consistent presentation",
+      "native": "CategoricalEssentialIncompleteness.V46.EffectiveExtensibility.exists_complete_presentation_without_extender",
+      "used_by_numbered_result": false
+    },
+    {
+      "id": "L1",
+      "status": "locator",
+      "paper": "§8 cited item (3)",
+      "printed_page": 594,
+      "actual_page": 595,
+      "proof_result": "proved at original arithmetic type",
+      "used_as_erroneous_inference": false
+    },
+    {
+      "id": "R01",
+      "status": "possible corrected theorem on original DPH category, additional to the stated manuscript",
+      "requirement": "add nonzero identity and derive a reversed total switch for arbitrary complementary domains from c⁺; use the specified sum-valued Turing morphism",
+      "counted_among_positive_conclusions": false
+    }
+  ],
+  "numbered_proof_result": "source proofs match at printed hypotheses; final official receipt reported independently when available",
+  "receipts": {
+    "correspondence": "../../../../../FORMALIZATION_STATUS_V81.md",
+    "planned_official_receipt": "../../../../V81_WSL2_LEAN_VERIFICATION.json.gz"
+  }
+}

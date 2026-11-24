@@ -1,0 +1,94 @@
+{
+  "tested_commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+  "sealed_input_digests": {
+    "first_verdict": "cedc77827d839cc3f69c15dc6c429a9a235bff925cbbc4f368afc89dc2128344",
+    "first_verdict_seal": "46059744c890b4830bbcfbdb406c8d4950051a00768af0c8945eccdb0d43c14b",
+    "first_blind_seal": "226057c1eb897c301a170edf2b5e78b47107d86e88c98f6b1b8c0f3b1dc8c407",
+    "second_verdict": "c2d8d7f791bcd131eaaf4a6aa4cbed430bf776352d7f9a2f9bf88e63fb5093ef",
+    "second_verdict_seal": "ce37a74d35bcec8cc5a1b4f8c94daeaf3a2350b62f1ba717f2ad6e7b3570a280",
+    "second_reconstruction": "7839f90be5433ba7b1fa3ee54363d87fce2445b116b3d52dd7b9662c1985ece1"
+  },
+  "agreed_counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "lean_omissions": 8,
+    "proof_gaps": 8
+  },
+  "agreed_unnumbered_mathematical_error": "§1, omission of a nonzero identity on the Turing object in the report of Di Paola–Heller 8.15",
+  "agreed_ambiguity": "§8.3, universal existence versus definition of effective extensibility",
+  "positive_omissions_with_missing_kernel_derivation": [
+    "Heller 9.2",
+    "Lengyel 21",
+    "Lengyel 26",
+    "van Dijk–Gietelink Oldenziel 5.19",
+    "van Dijk–Gietelink Oldenziel 5.20",
+    "Cockett–Hofstra 4.9(i)",
+    "Cockett–Hofstra 4.9(ii)",
+    "Bauer–Hanson 6.4"
+  ],
+  "agreed_locator": "Di Paola–Heller introductory item (3) is on journal page 595",
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "printed_numbered_rows_compared": 80,
+  "all_reference_sets_equal_row_by_row": true,
+  "named_reference_occurrences": 855,
+  "module_references": 11,
+  "distinct_named_references": 852,
+  "distinct_reference_set_sha256": "f7d8ab2439dcdc59798e81e4adcd094aa0d0601c29a999e4f6d20f3af6862719",
+  "appendix_e_intervals": 20,
+  "original_scans_verified_here": [
+    {
+      "original_pdf": "Heller-ExistenceTheoremRecursion-1990.pdf",
+      "sha256": "9464807984ec2949473ae83c44071d76bd32b57e2884600c01cf8536137634f2",
+      "checked_passage": "Heller, Theorem 9.2 and the catalogue and weak Turing morphism in its proof."
+    },
+    {
+      "original_pdf": "Paola-DominicalCategoriesRecursion-1987.pdf",
+      "sha256": "84930c7a61bc5d834926bce55c7ef4962f5a2ebc4510395814fb1cc97a67f463",
+      "checked_passage": "Di Paola–Heller, journal p. 595 item (3), §8 Definition 8.14 and Theorem 8.15 including its final identity=zero step."
+    },
+    {
+      "original_pdf": "LOC18Jul06.pdf",
+      "sha256": "b1e8c826aeb6afcb382e70bbfdc58a5efcb7d68060ceabc20ba265bc780e2960",
+      "checked_passage": "Lengyel, Theorem 4.1 and its inference from a section in the target to an index in the source."
+    },
+    {
+      "original_pdf": "LengyelExistenceTheorems.pdf",
+      "sha256": "128a9647654cafe45e0e9c9399b8e671de89b387057c9eb2aef23045bce952b6",
+      "checked_passage": "Lengyel, Theorem 21 in a separated iteration category and Theorem 26 over a separating iteration functor."
+    },
+    {
+      "original_pdf": "Cockett-TuringCateg.pdf",
+      "sha256": "ed06ee0bfda4da4278e37e61b10e7c34712dbc7e918a6d5b85f3183faf06403d",
+      "checked_passage": "Cockett–Hofstra, Theorems 3.4 and 4.9(i),(ii)."
+    },
+    {
+      "original_pdf": "Montanga1989PathologiesInSyntactic.pdf",
+      "sha256": "3f5fb158ea099e07d680bb94a0eb1a1399ebce075fbd934d7c144d38b6bf0212",
+      "checked_passage": "Montagna, Remark 3.1 and its effectively inseparable pair in the unprimed category."
+    },
+    {
+      "original_pdf": "PaolaMontanga-PropertiesSyntacticpRecursion-1991.pdf",
+      "sha256": "535737e5013aba7aa9decf766dcecfeafc1517c65be657091b82b309f6938b5a",
+      "checked_passage": "Di Paola–Montagna, statement distinguishing the unprimed and primed categories and treatment of connected domains."
+    }
+  ],
+  "original_page_limit": "The original PDFs listed here were hash matched. The two manuscript inventories cover all 39 bibliography keys. Individual original page scans for all 39 works were not independently compared, and a mathematical application does not certify a pagination claim.",
+  "corrected_reader2_locator": {
+    "reported": "ProductData.pcategory",
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryStruct",
+      "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.pcategoryLaws",
+      "CategoricalEssentialIncompleteness.V46.RestrictionProducts.ProductData.restrictionCategory_eq"
+    ],
+    "source": "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductCategory.lean",
+    "lines": [
+      74,
+      100,
+      164
+    ]
+  },
+  "unresolved_disagreement_between_readers": [],
+  "numbered_proof_gaps": 0,
+  "clean_streak": 0
+}

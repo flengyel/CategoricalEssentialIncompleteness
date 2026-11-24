@@ -1,0 +1,5 @@
+# Independent readings of the first v81 proof candidate
+
+Both readers examined [the same candidate](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/cb455f79853241e0214d710f1a73a6e94b9c02be). Each reconstructed the paper in printed order before consulting the Lean declarations. The first reader recorded four zeros. The second identified three missing applications and a wording ambiguity. The readers reconciled their inventories after recording their findings. [First report](../first/independent-reconciliation.md) · [Second report](../second/reader-2.md) · [Comparison of the two readings](../second/reader-2-reconciliation.md).
+
+At this candidate, 108 targeted commands exited 0. They included the parser tests and the manuscript-only verification. The full wrapper was stopped to test the additional proof inputs the second reading called for. Nineteen official commands had completed with exit 0. The candidate has no completed full replay. The final report and receipt give the revision at which the full verifier was run. [Final verification](../../../V81_WSL2_LEAN_VERIFICATION.md) · [Final receipt](../../../V81_WSL2_LEAN_VERIFICATION.json.gz).

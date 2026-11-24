@@ -1,0 +1,846 @@
+{"unit": 1, "file": "main.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 2, "file": "main.tex", "first": 2, "last": 2, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 3, "file": "preamble.tex", "first": 1, "last": 21, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 4, "file": "preamble.tex", "first": 23, "last": 44, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 5, "file": "main.tex", "first": 3, "last": 4, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 6, "file": "main.tex", "first": 6, "last": 6, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 7, "file": "abstract.tex", "first": 1, "last": 15, "role": "exposition", "reconstructionLines": [11], "printedCrossReferences": []}
+{"unit": 8, "file": "abstract.tex", "first": 17, "last": 23, "role": "exposition", "reconstructionLines": [11], "printedCrossReferences": []}
+{"unit": 9, "file": "abstract.tex", "first": 25, "last": 31, "role": "exposition", "reconstructionLines": [12], "printedCrossReferences": []}
+{"unit": 10, "file": "abstract.tex", "first": 33, "last": 45, "role": "exposition", "reconstructionLines": [12], "printedCrossReferences": []}
+{"unit": 11, "file": "main.tex", "first": 7, "last": 24, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 12, "file": "main.tex", "first": 25, "last": 25, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 13, "file": "sections/01-introduction.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 14, "file": "sections/01-introduction.tex", "first": 3, "last": 11, "role": "exposition", "reconstructionLines": [13], "printedCrossReferences": ["5.3"], "literatureKeys": ["DPH"]}
+{"unit": 15, "file": "sections/01-introduction.tex", "first": 13, "last": 28, "role": "exposition", "reconstructionLines": [13], "printedCrossReferences": []}
+{"unit": 16, "file": "sections/01-introduction.tex", "first": 30, "last": 58, "role": "exposition", "reconstructionLines": [13], "printedCrossReferences": ["4.3", "4.7", "4.8"]}
+{"unit": 17, "file": "sections/01-introduction.tex", "first": 60, "last": 72, "role": "exposition", "reconstructionLines": [13, 14], "printedCrossReferences": ["5.1", "5.2", "5.3"]}
+{"unit": 18, "file": "sections/01-introduction.tex", "first": 74, "last": 95, "role": "exposition", "reconstructionLines": [14], "printedCrossReferences": ["3.1", "4.2"]}
+{"unit": 19, "file": "sections/01-introduction.tex", "first": 97, "last": 122, "role": "exposition", "reconstructionLines": [14], "printedCrossReferences": ["8.3", "8.4", "8.6", "8.10"], "literatureKeys": ["Montagna,DPM", "Montagna"]}
+{"unit": 20, "file": "sections/01-introduction.tex", "first": 124, "last": 142, "role": "exposition", "reconstructionLines": [14], "printedCrossReferences": ["9.4", "9.7", "9.8"], "literatureKeys": ["Miller2004", "BauerHanson"]}
+{"unit": 21, "file": "sections/01-introduction.tex", "first": 144, "last": 157, "role": "exposition", "reconstructionLines": [14], "printedCrossReferences": ["10.6", "10.9"]}
+{"unit": 22, "file": "sections/01-introduction.tex", "first": 159, "last": 159, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": []}
+{"unit": 23, "file": "sections/01-introduction.tex", "first": 161, "last": 171, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": [], "literatureKeys": ["RosoliniThesis,Rosolini", "Heller", "CockettLack", "Heller", "Lengyel2004,Corrections", "DPM"]}
+{"unit": 24, "file": "sections/01-introduction.tex", "first": 173, "last": 187, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": ["3.1"], "literatureKeys": ["DPH", "Bernardi", "Montagna", "Lengyel2006", "CockettComputability"]}
+{"unit": 25, "file": "sections/01-introduction.tex", "first": 189, "last": 196, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": ["4.7", "4.8"], "literatureKeys": ["MPV"]}
+{"unit": 26, "file": "sections/01-introduction.tex", "first": 198, "last": 206, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": [], "literatureKeys": ["DPH", "vanDijkGO"]}
+{"unit": 27, "file": "sections/01-introduction.tex", "first": 208, "last": 217, "role": "exposition", "reconstructionLines": [15], "printedCrossReferences": ["5.3"], "literatureKeys": ["CockettHofstra", "CockettComputability"]}
+{"unit": 28, "file": "main.tex", "first": 26, "last": 26, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 29, "file": "sections/02-categorical-preliminaries.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 30, "file": "sections/02-categorical-preliminaries.tex", "first": 3, "last": 3, "role": "exposition", "reconstructionLines": [16], "printedCrossReferences": []}
+{"unit": 31, "file": "sections/02-categorical-preliminaries.tex", "first": 5, "last": 26, "role": "exposition", "reconstructionLines": [16], "printedCrossReferences": [], "literatureKeys": ["CockettLack", "Heller"]}
+{"unit": 32, "file": "sections/02-categorical-preliminaries.tex", "first": 28, "last": 42, "role": "exposition", "reconstructionLines": [16], "printedCrossReferences": []}
+{"unit": 33, "file": "sections/02-categorical-preliminaries.tex", "first": 44, "last": 69, "role": "exposition", "reconstructionLines": [16], "printedCrossReferences": [], "literatureKeys": ["Heller"]}
+{"unit": 34, "file": "sections/02-categorical-preliminaries.tex", "first": 71, "last": 88, "role": "exposition", "reconstructionLines": [17], "printedCrossReferences": [], "literatureKeys": ["CockettLack"]}
+{"unit": 35, "file": "sections/02-categorical-preliminaries.tex", "first": 90, "last": 97, "role": "exposition", "reconstructionLines": [17], "printedCrossReferences": [], "literatureKeys": ["CockettLack"]}
+{"unit": 36, "file": "sections/02-categorical-preliminaries.tex", "first": 99, "last": 108, "role": "exposition", "reconstructionLines": [17], "printedCrossReferences": [], "literatureKeys": ["CockettLack"]}
+{"unit": 37, "file": "sections/02-categorical-preliminaries.tex", "first": 110, "last": 110, "role": "exposition", "reconstructionLines": [18], "printedCrossReferences": []}
+{"unit": 38, "file": "sections/02-categorical-preliminaries.tex", "first": 112, "last": 128, "role": "exposition", "reconstructionLines": [18], "printedCrossReferences": [], "literatureKeys": ["CockettLackIII"]}
+{"unit": 39, "file": "sections/02-categorical-preliminaries.tex", "first": 130, "last": 142, "role": "exposition", "reconstructionLines": [18], "printedCrossReferences": []}
+{"unit": 40, "file": "sections/02-categorical-preliminaries.tex", "first": 144, "last": 168, "role": "exposition", "reconstructionLines": [18, 19], "printedCrossReferences": [], "literatureKeys": ["CGHRangeI", "Lengyel2006"]}
+{"unit": 41, "file": "sections/02-categorical-preliminaries.tex", "first": 170, "last": 183, "role": "exposition", "reconstructionLines": [19], "printedCrossReferences": []}
+{"unit": 42, "file": "sections/02-categorical-preliminaries.tex", "first": 185, "last": 185, "role": "exposition", "reconstructionLines": [19], "printedCrossReferences": []}
+{"unit": 43, "file": "sections/02-categorical-preliminaries.tex", "first": 187, "last": 190, "role": "exposition", "reconstructionLines": [19], "printedCrossReferences": []}
+{"unit": 44, "file": "sections/02-categorical-preliminaries.tex", "first": 192, "last": 198, "role": "exposition", "reconstructionLines": [19], "printedCrossReferences": [], "literatureKeys": ["Heller"]}
+{"unit": 45, "file": "sections/02-categorical-preliminaries.tex", "first": 200, "last": 210, "role": "exposition", "reconstructionLines": [19], "printedCrossReferences": [], "literatureKeys": ["CockettHofstra"]}
+{"unit": 46, "file": "main.tex", "first": 27, "last": 27, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 47, "file": "sections/03-sections-and-inseparability.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 48, "file": "sections/03-sections-and-inseparability.tex", "first": 3, "last": 7, "role": "exposition", "reconstructionLines": [23], "printedCrossReferences": []}
+{"unit": 49, "file": "sections/03-sections-and-inseparability.tex", "first": 9, "last": 17, "role": "exposition", "reconstructionLines": [23], "printedCrossReferences": []}
+{"unit": 50, "file": "sections/03-sections-and-inseparability.tex", "first": 19, "last": 19, "role": "exposition", "reconstructionLines": [23], "printedCrossReferences": []}
+{"unit": 51, "file": "sections/03-sections-and-inseparability.tex", "first": 21, "last": 46, "role": "theorem", "reconstructionLines": [23], "printedCrossReferences": ["3.1"]}
+{"unit": 52, "file": "sections/03-sections-and-inseparability.tex", "first": 47, "last": 47, "role": "theorem", "reconstructionLines": [23], "printedCrossReferences": []}
+{"unit": 53, "file": "sections/03-sections-and-inseparability.tex", "first": 48, "last": 58, "role": "proof", "reconstructionLines": [24], "printedCrossReferences": []}
+{"unit": 54, "file": "sections/03-sections-and-inseparability.tex", "first": 60, "last": 86, "role": "proof", "reconstructionLines": [24], "printedCrossReferences": []}
+{"unit": 55, "file": "sections/03-sections-and-inseparability.tex", "first": 87, "last": 87, "role": "proof", "reconstructionLines": [24], "printedCrossReferences": []}
+{"unit": 56, "file": "sections/03-sections-and-inseparability.tex", "first": 89, "last": 101, "role": "corollary", "reconstructionLines": [24], "printedCrossReferences": ["3.1", "3.2"]}
+{"unit": 57, "file": "sections/03-sections-and-inseparability.tex", "first": 102, "last": 102, "role": "corollary", "reconstructionLines": [24], "printedCrossReferences": []}
+{"unit": 58, "file": "sections/03-sections-and-inseparability.tex", "first": 103, "last": 105, "role": "proof", "reconstructionLines": [24], "printedCrossReferences": ["3.1"]}
+{"unit": 59, "file": "sections/03-sections-and-inseparability.tex", "first": 106, "last": 106, "role": "proof", "reconstructionLines": [24], "printedCrossReferences": []}
+{"unit": 60, "file": "sections/03-sections-and-inseparability.tex", "first": 108, "last": 108, "role": "exposition", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 61, "file": "sections/03-sections-and-inseparability.tex", "first": 110, "last": 123, "role": "corollary", "reconstructionLines": [25], "printedCrossReferences": ["3.1", "3.3"]}
+{"unit": 62, "file": "sections/03-sections-and-inseparability.tex", "first": 124, "last": 124, "role": "corollary", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 63, "file": "sections/03-sections-and-inseparability.tex", "first": 125, "last": 142, "role": "proof", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 64, "file": "sections/03-sections-and-inseparability.tex", "first": 144, "last": 155, "role": "proof", "reconstructionLines": [25], "printedCrossReferences": ["3.2"]}
+{"unit": 65, "file": "sections/03-sections-and-inseparability.tex", "first": 156, "last": 156, "role": "proof", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 66, "file": "sections/03-sections-and-inseparability.tex", "first": 158, "last": 167, "role": "proposition", "reconstructionLines": [25], "printedCrossReferences": ["3.4"]}
+{"unit": 67, "file": "sections/03-sections-and-inseparability.tex", "first": 168, "last": 168, "role": "proposition", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 68, "file": "sections/03-sections-and-inseparability.tex", "first": 169, "last": 174, "role": "proof", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 69, "file": "sections/03-sections-and-inseparability.tex", "first": 175, "last": 175, "role": "proof", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 70, "file": "sections/03-sections-and-inseparability.tex", "first": 177, "last": 178, "role": "exposition", "reconstructionLines": [25], "printedCrossReferences": []}
+{"unit": 71, "file": "main.tex", "first": 28, "last": 28, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 72, "file": "sections/03a-internal-theories.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 73, "file": "sections/03a-internal-theories.tex", "first": 3, "last": 3, "role": "exposition", "reconstructionLines": [26], "printedCrossReferences": []}
+{"unit": 74, "file": "sections/03a-internal-theories.tex", "first": 5, "last": 50, "role": "exposition", "reconstructionLines": [26], "printedCrossReferences": ["A.1", "A.6", "A.7"]}
+{"unit": 75, "file": "sections/03a-internal-theories.tex", "first": 52, "last": 71, "role": "exposition", "reconstructionLines": [27], "printedCrossReferences": []}
+{"unit": 76, "file": "sections/03a-internal-theories.tex", "first": 73, "last": 85, "role": "exposition", "reconstructionLines": [27], "printedCrossReferences": []}
+{"unit": 77, "file": "sections/03a-internal-theories.tex", "first": 87, "last": 100, "role": "exposition", "reconstructionLines": [27], "printedCrossReferences": []}
+{"unit": 78, "file": "sections/03a-internal-theories.tex", "first": 102, "last": 123, "role": "proposition", "reconstructionLines": [28], "printedCrossReferences": ["4.1"]}
+{"unit": 79, "file": "sections/03a-internal-theories.tex", "first": 124, "last": 124, "role": "proposition", "reconstructionLines": [28], "printedCrossReferences": []}
+{"unit": 80, "file": "sections/03a-internal-theories.tex", "first": 125, "last": 139, "role": "proof", "reconstructionLines": [28], "printedCrossReferences": ["A.7"]}
+{"unit": 81, "file": "sections/03a-internal-theories.tex", "first": 140, "last": 140, "role": "proof", "reconstructionLines": [28], "printedCrossReferences": []}
+{"unit": 82, "file": "sections/03a-internal-theories.tex", "first": 142, "last": 147, "role": "exposition", "reconstructionLines": [28], "printedCrossReferences": []}
+{"unit": 83, "file": "sections/03a-internal-theories.tex", "first": 149, "last": 149, "role": "exposition", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 84, "file": "sections/03a-internal-theories.tex", "first": 151, "last": 186, "role": "theorem", "reconstructionLines": [29], "printedCrossReferences": ["3.1", "4.2"]}
+{"unit": 85, "file": "sections/03a-internal-theories.tex", "first": 187, "last": 187, "role": "theorem", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 86, "file": "sections/03a-internal-theories.tex", "first": 188, "last": 193, "role": "proof", "reconstructionLines": [29], "printedCrossReferences": ["3.1"]}
+{"unit": 87, "file": "sections/03a-internal-theories.tex", "first": 195, "last": 206, "role": "proof", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 88, "file": "sections/03a-internal-theories.tex", "first": 207, "last": 207, "role": "proof", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 89, "file": "sections/03a-internal-theories.tex", "first": 209, "last": 209, "role": "exposition", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 90, "file": "sections/03a-internal-theories.tex", "first": 211, "last": 220, "role": "corollary", "reconstructionLines": [29], "printedCrossReferences": ["4.3"]}
+{"unit": 91, "file": "sections/03a-internal-theories.tex", "first": 221, "last": 221, "role": "corollary", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 92, "file": "sections/03a-internal-theories.tex", "first": 222, "last": 234, "role": "proof", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 93, "file": "sections/03a-internal-theories.tex", "first": 235, "last": 235, "role": "proof", "reconstructionLines": [29], "printedCrossReferences": []}
+{"unit": 94, "file": "sections/03a-internal-theories.tex", "first": 237, "last": 254, "role": "exposition", "reconstructionLines": [30], "printedCrossReferences": ["4.3"], "literatureKeys": ["VisserEHU", "KirstPeters"]}
+{"unit": 95, "file": "sections/03a-internal-theories.tex", "first": 256, "last": 262, "role": "exposition", "reconstructionLines": [30], "printedCrossReferences": ["4.3"]}
+{"unit": 96, "file": "sections/03a-internal-theories.tex", "first": 264, "last": 269, "role": "exposition", "reconstructionLines": [30], "printedCrossReferences": ["4.2", "4.3", "8.2"]}
+{"unit": 97, "file": "main.tex", "first": 29, "last": 29, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 98, "file": "sections/03b-internal-adjunctions.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [31], "printedCrossReferences": []}
+{"unit": 99, "file": "sections/03b-internal-adjunctions.tex", "first": 4, "last": 14, "role": "exposition", "reconstructionLines": [31], "printedCrossReferences": ["A.1"]}
+{"unit": 100, "file": "sections/03b-internal-adjunctions.tex", "first": 16, "last": 25, "role": "exposition", "reconstructionLines": [31], "printedCrossReferences": ["A.6"]}
+{"unit": 101, "file": "sections/03b-internal-adjunctions.tex", "first": 27, "last": 41, "role": "theorem", "reconstructionLines": [31], "printedCrossReferences": ["4.4"]}
+{"unit": 102, "file": "sections/03b-internal-adjunctions.tex", "first": 42, "last": 42, "role": "theorem", "reconstructionLines": [31], "printedCrossReferences": []}
+{"unit": 103, "file": "sections/03b-internal-adjunctions.tex", "first": 43, "last": 54, "role": "proof", "reconstructionLines": [31], "printedCrossReferences": []}
+{"unit": 104, "file": "sections/03b-internal-adjunctions.tex", "first": 55, "last": 55, "role": "proof", "reconstructionLines": [31], "printedCrossReferences": []}
+{"unit": 105, "file": "sections/03b-internal-adjunctions.tex", "first": 57, "last": 64, "role": "exposition", "reconstructionLines": [31, 32], "printedCrossReferences": ["A.1"]}
+{"unit": 106, "file": "sections/03b-internal-adjunctions.tex", "first": 66, "last": 84, "role": "exposition", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 107, "file": "sections/03b-internal-adjunctions.tex", "first": 86, "last": 99, "role": "exposition", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 108, "file": "sections/03b-internal-adjunctions.tex", "first": 101, "last": 121, "role": "exposition", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 109, "file": "sections/03b-internal-adjunctions.tex", "first": 123, "last": 145, "role": "theorem", "reconstructionLines": [32], "printedCrossReferences": ["4.4", "4.5"]}
+{"unit": 110, "file": "sections/03b-internal-adjunctions.tex", "first": 146, "last": 146, "role": "theorem", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 111, "file": "sections/03b-internal-adjunctions.tex", "first": 147, "last": 161, "role": "proof", "reconstructionLines": [32], "printedCrossReferences": ["4.4"]}
+{"unit": 112, "file": "sections/03b-internal-adjunctions.tex", "first": 163, "last": 168, "role": "proof", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 113, "file": "sections/03b-internal-adjunctions.tex", "first": 169, "last": 169, "role": "proof", "reconstructionLines": [32], "printedCrossReferences": []}
+{"unit": 114, "file": "sections/03b-internal-adjunctions.tex", "first": 171, "last": 186, "role": "exposition", "reconstructionLines": [32], "printedCrossReferences": ["4.5"]}
+{"unit": 115, "file": "sections/03b-internal-adjunctions.tex", "first": 188, "last": 189, "role": "exposition", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 116, "file": "sections/03b-internal-adjunctions.tex", "first": 191, "last": 213, "role": "exposition", "reconstructionLines": [33], "printedCrossReferences": ["4.4"]}
+{"unit": 117, "file": "sections/03b-internal-adjunctions.tex", "first": 215, "last": 243, "role": "proposition", "reconstructionLines": [33], "printedCrossReferences": ["4.6"]}
+{"unit": 118, "file": "sections/03b-internal-adjunctions.tex", "first": 244, "last": 244, "role": "proposition", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 119, "file": "sections/03b-internal-adjunctions.tex", "first": 245, "last": 268, "role": "proof", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 120, "file": "sections/03b-internal-adjunctions.tex", "first": 269, "last": 269, "role": "proof", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 121, "file": "sections/03b-internal-adjunctions.tex", "first": 271, "last": 284, "role": "exposition", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 122, "file": "sections/03b-internal-adjunctions.tex", "first": 286, "last": 321, "role": "exposition", "reconstructionLines": [33], "printedCrossReferences": []}
+{"unit": 123, "file": "sections/03b-internal-adjunctions.tex", "first": 323, "last": 324, "role": "exposition", "reconstructionLines": [34], "printedCrossReferences": []}
+{"unit": 124, "file": "sections/03b-internal-adjunctions.tex", "first": 326, "last": 330, "role": "exposition", "reconstructionLines": [34], "printedCrossReferences": ["4.3"]}
+{"unit": 125, "file": "sections/03b-internal-adjunctions.tex", "first": 332, "last": 349, "role": "exposition", "reconstructionLines": [34], "printedCrossReferences": ["A.1"]}
+{"unit": 126, "file": "sections/03b-internal-adjunctions.tex", "first": 351, "last": 366, "role": "exposition", "reconstructionLines": [34], "printedCrossReferences": []}
+{"unit": 127, "file": "sections/03b-internal-adjunctions.tex", "first": 368, "last": 373, "role": "exposition", "reconstructionLines": [34], "printedCrossReferences": [], "literatureKeys": ["Voutsadakis"]}
+{"unit": 128, "file": "sections/03b-internal-adjunctions.tex", "first": 375, "last": 396, "role": "theorem", "reconstructionLines": [34], "printedCrossReferences": ["4.7", "A.1"]}
+{"unit": 129, "file": "sections/03b-internal-adjunctions.tex", "first": 397, "last": 397, "role": "theorem", "reconstructionLines": [34], "printedCrossReferences": []}
+{"unit": 130, "file": "sections/03b-internal-adjunctions.tex", "first": 398, "last": 412, "role": "proof", "reconstructionLines": [34, 35], "printedCrossReferences": []}
+{"unit": 131, "file": "sections/03b-internal-adjunctions.tex", "first": 414, "last": 436, "role": "proof", "reconstructionLines": [35], "printedCrossReferences": []}
+{"unit": 132, "file": "sections/03b-internal-adjunctions.tex", "first": 438, "last": 449, "role": "proof", "reconstructionLines": [35], "printedCrossReferences": ["4.5"]}
+{"unit": 133, "file": "sections/03b-internal-adjunctions.tex", "first": 451, "last": 454, "role": "proof", "reconstructionLines": [35], "printedCrossReferences": ["4.5"]}
+{"unit": 134, "file": "sections/03b-internal-adjunctions.tex", "first": 456, "last": 474, "role": "proof", "reconstructionLines": [35], "printedCrossReferences": []}
+{"unit": 135, "file": "sections/03b-internal-adjunctions.tex", "first": 475, "last": 475, "role": "proof", "reconstructionLines": [35], "printedCrossReferences": []}
+{"unit": 136, "file": "sections/03b-internal-adjunctions.tex", "first": 477, "last": 483, "role": "corollary", "reconstructionLines": [36], "printedCrossReferences": ["4.7", "4.8"]}
+{"unit": 137, "file": "sections/03b-internal-adjunctions.tex", "first": 484, "last": 484, "role": "corollary", "reconstructionLines": [36], "printedCrossReferences": []}
+{"unit": 138, "file": "sections/03b-internal-adjunctions.tex", "first": 485, "last": 495, "role": "proof", "reconstructionLines": [36], "printedCrossReferences": ["4.3"]}
+{"unit": 139, "file": "sections/03b-internal-adjunctions.tex", "first": 497, "last": 538, "role": "proof", "reconstructionLines": [36], "printedCrossReferences": []}
+{"unit": 140, "file": "sections/03b-internal-adjunctions.tex", "first": 539, "last": 539, "role": "proof", "reconstructionLines": [36], "printedCrossReferences": []}
+{"unit": 141, "file": "main.tex", "first": 30, "last": 30, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 142, "file": "sections/04-theory-extensions.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [37], "printedCrossReferences": []}
+{"unit": 143, "file": "sections/04-theory-extensions.tex", "first": 4, "last": 10, "role": "exposition", "reconstructionLines": [37], "printedCrossReferences": ["5.3"]}
+{"unit": 144, "file": "sections/04-theory-extensions.tex", "first": 12, "last": 12, "role": "exposition", "reconstructionLines": [37], "printedCrossReferences": []}
+{"unit": 145, "file": "sections/04-theory-extensions.tex", "first": 14, "last": 35, "role": "exposition", "reconstructionLines": [37], "printedCrossReferences": []}
+{"unit": 146, "file": "sections/04-theory-extensions.tex", "first": 37, "last": 45, "role": "exposition", "reconstructionLines": [37], "printedCrossReferences": []}
+{"unit": 147, "file": "sections/04-theory-extensions.tex", "first": 47, "last": 61, "role": "lemma", "reconstructionLines": [38], "printedCrossReferences": ["5.1"]}
+{"unit": 148, "file": "sections/04-theory-extensions.tex", "first": 62, "last": 62, "role": "lemma", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 149, "file": "sections/04-theory-extensions.tex", "first": 63, "last": 67, "role": "proof", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 150, "file": "sections/04-theory-extensions.tex", "first": 69, "last": 78, "role": "proof", "reconstructionLines": [38], "printedCrossReferences": [], "literatureKeys": ["CockettHofstra"]}
+{"unit": 151, "file": "sections/04-theory-extensions.tex", "first": 80, "last": 98, "role": "proof", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 152, "file": "sections/04-theory-extensions.tex", "first": 100, "last": 113, "role": "proof", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 153, "file": "sections/04-theory-extensions.tex", "first": 114, "last": 114, "role": "proof", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 154, "file": "sections/04-theory-extensions.tex", "first": 116, "last": 129, "role": "exposition", "reconstructionLines": [38], "printedCrossReferences": []}
+{"unit": 155, "file": "sections/04-theory-extensions.tex", "first": 131, "last": 131, "role": "exposition", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 156, "file": "sections/04-theory-extensions.tex", "first": 133, "last": 150, "role": "theorem", "reconstructionLines": [39], "printedCrossReferences": ["5.2"]}
+{"unit": 157, "file": "sections/04-theory-extensions.tex", "first": 152, "last": 163, "role": "theorem", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 158, "file": "sections/04-theory-extensions.tex", "first": 164, "last": 164, "role": "theorem", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 159, "file": "sections/04-theory-extensions.tex", "first": 165, "last": 174, "role": "proof", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 160, "file": "sections/04-theory-extensions.tex", "first": 176, "last": 199, "role": "proof", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 161, "file": "sections/04-theory-extensions.tex", "first": 201, "last": 211, "role": "proof", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 162, "file": "sections/04-theory-extensions.tex", "first": 212, "last": 212, "role": "proof", "reconstructionLines": [39], "printedCrossReferences": []}
+{"unit": 163, "file": "sections/04-theory-extensions.tex", "first": 214, "last": 226, "role": "exposition", "reconstructionLines": [39], "printedCrossReferences": ["5.1"]}
+{"unit": 164, "file": "sections/04-theory-extensions.tex", "first": 228, "last": 228, "role": "exposition", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 165, "file": "sections/04-theory-extensions.tex", "first": 230, "last": 247, "role": "exposition", "reconstructionLines": [40], "printedCrossReferences": ["5.1"]}
+{"unit": 166, "file": "sections/04-theory-extensions.tex", "first": 249, "last": 258, "role": "exposition", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 167, "file": "sections/04-theory-extensions.tex", "first": 260, "last": 284, "role": "theorem", "reconstructionLines": [40], "printedCrossReferences": ["5.2", "5.3"]}
+{"unit": 168, "file": "sections/04-theory-extensions.tex", "first": 285, "last": 285, "role": "theorem", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 169, "file": "sections/04-theory-extensions.tex", "first": 286, "last": 295, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 170, "file": "sections/04-theory-extensions.tex", "first": 297, "last": 304, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 171, "file": "sections/04-theory-extensions.tex", "first": 306, "last": 321, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 172, "file": "sections/04-theory-extensions.tex", "first": 323, "last": 333, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 173, "file": "sections/04-theory-extensions.tex", "first": 335, "last": 347, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": ["4.3"]}
+{"unit": 174, "file": "sections/04-theory-extensions.tex", "first": 348, "last": 348, "role": "proof", "reconstructionLines": [40], "printedCrossReferences": []}
+{"unit": 175, "file": "sections/04-theory-extensions.tex", "first": 350, "last": 373, "role": "exposition", "reconstructionLines": [41], "printedCrossReferences": []}
+{"unit": 176, "file": "main.tex", "first": 31, "last": 31, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 177, "file": "sections/05-syntactic-recursion-category.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 178, "file": "sections/05-syntactic-recursion-category.tex", "first": 3, "last": 6, "role": "exposition", "reconstructionLines": [45], "printedCrossReferences": []}
+{"unit": 179, "file": "sections/05-syntactic-recursion-category.tex", "first": 8, "last": 36, "role": "exposition", "reconstructionLines": [45], "printedCrossReferences": [], "literatureKeys": ["Montagna,DPM"]}
+{"unit": 180, "file": "sections/05-syntactic-recursion-category.tex", "first": 38, "last": 62, "role": "exposition", "reconstructionLines": [45], "printedCrossReferences": [], "literatureKeys": ["Montagna", "DPM"]}
+{"unit": 181, "file": "sections/05-syntactic-recursion-category.tex", "first": 64, "last": 90, "role": "lemma", "reconstructionLines": [46], "printedCrossReferences": ["6.1"]}
+{"unit": 182, "file": "sections/05-syntactic-recursion-category.tex", "first": 91, "last": 91, "role": "lemma", "reconstructionLines": [46], "printedCrossReferences": []}
+{"unit": 183, "file": "sections/05-syntactic-recursion-category.tex", "first": 92, "last": 123, "role": "proof", "reconstructionLines": [46], "printedCrossReferences": [], "literatureKeys": ["Montagna"]}
+{"unit": 184, "file": "sections/05-syntactic-recursion-category.tex", "first": 124, "last": 124, "role": "proof", "reconstructionLines": [46], "printedCrossReferences": []}
+{"unit": 185, "file": "sections/05-syntactic-recursion-category.tex", "first": 126, "last": 135, "role": "exposition", "reconstructionLines": [47], "printedCrossReferences": []}
+{"unit": 186, "file": "sections/05-syntactic-recursion-category.tex", "first": 137, "last": 146, "role": "exposition", "reconstructionLines": [47], "printedCrossReferences": []}
+{"unit": 187, "file": "sections/05-syntactic-recursion-category.tex", "first": 148, "last": 173, "role": "exposition", "reconstructionLines": [47], "printedCrossReferences": [], "literatureKeys": ["Montagna", "DPM"]}
+{"unit": 188, "file": "sections/05-syntactic-recursion-category.tex", "first": 175, "last": 187, "role": "exposition", "reconstructionLines": [47], "printedCrossReferences": [], "literatureKeys": ["Montagna,DPM", "Composition"]}
+{"unit": 189, "file": "sections/05-syntactic-recursion-category.tex", "first": 189, "last": 229, "role": "exposition", "reconstructionLines": [48], "printedCrossReferences": [], "literatureKeys": ["Montagna"]}
+{"unit": 190, "file": "sections/05-syntactic-recursion-category.tex", "first": 231, "last": 263, "role": "exposition", "reconstructionLines": [48], "printedCrossReferences": ["6.1"]}
+{"unit": 191, "file": "main.tex", "first": 32, "last": 32, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 192, "file": "sections/05a-internal-syntax.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 193, "file": "sections/05a-internal-syntax.tex", "first": 4, "last": 8, "role": "exposition", "reconstructionLines": [49], "printedCrossReferences": [], "literatureKeys": ["RobinsonRosolini"]}
+{"unit": 194, "file": "sections/05a-internal-syntax.tex", "first": 10, "last": 32, "role": "exposition", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 195, "file": "sections/05a-internal-syntax.tex", "first": 34, "last": 48, "role": "lemma", "reconstructionLines": [49], "printedCrossReferences": ["6.2"]}
+{"unit": 196, "file": "sections/05a-internal-syntax.tex", "first": 49, "last": 49, "role": "lemma", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 197, "file": "sections/05a-internal-syntax.tex", "first": 50, "last": 56, "role": "proof", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 198, "file": "sections/05a-internal-syntax.tex", "first": 58, "last": 65, "role": "proof", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 199, "file": "sections/05a-internal-syntax.tex", "first": 66, "last": 66, "role": "proof", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 200, "file": "sections/05a-internal-syntax.tex", "first": 68, "last": 80, "role": "lemma", "reconstructionLines": [49], "printedCrossReferences": ["6.3"]}
+{"unit": 201, "file": "sections/05a-internal-syntax.tex", "first": 81, "last": 81, "role": "lemma", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 202, "file": "sections/05a-internal-syntax.tex", "first": 82, "last": 94, "role": "proof", "reconstructionLines": [49], "printedCrossReferences": ["6.2"]}
+{"unit": 203, "file": "sections/05a-internal-syntax.tex", "first": 96, "last": 109, "role": "proof", "reconstructionLines": [49], "printedCrossReferences": []}
+{"unit": 204, "file": "sections/05a-internal-syntax.tex", "first": 111, "last": 139, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 205, "file": "sections/05a-internal-syntax.tex", "first": 141, "last": 154, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": ["6.2"]}
+{"unit": 206, "file": "sections/05a-internal-syntax.tex", "first": 156, "last": 166, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 207, "file": "sections/05a-internal-syntax.tex", "first": 168, "last": 180, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 208, "file": "sections/05a-internal-syntax.tex", "first": 182, "last": 213, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 209, "file": "sections/05a-internal-syntax.tex", "first": 215, "last": 241, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": ["6.2"]}
+{"unit": 210, "file": "sections/05a-internal-syntax.tex", "first": 242, "last": 242, "role": "proof", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 211, "file": "sections/05a-internal-syntax.tex", "first": 244, "last": 253, "role": "exposition", "reconstructionLines": [50], "printedCrossReferences": []}
+{"unit": 212, "file": "sections/05a-internal-syntax.tex", "first": 255, "last": 267, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": ["5.1", "6.3"]}
+{"unit": 213, "file": "sections/05a-internal-syntax.tex", "first": 269, "last": 275, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": ["A.7"]}
+{"unit": 214, "file": "sections/05a-internal-syntax.tex", "first": 277, "last": 278, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 215, "file": "sections/05a-internal-syntax.tex", "first": 280, "last": 289, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 216, "file": "sections/05a-internal-syntax.tex", "first": 291, "last": 299, "role": "lemma", "reconstructionLines": [51], "printedCrossReferences": ["6.4"]}
+{"unit": 217, "file": "sections/05a-internal-syntax.tex", "first": 300, "last": 300, "role": "lemma", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 218, "file": "sections/05a-internal-syntax.tex", "first": 301, "last": 322, "role": "proof", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 219, "file": "sections/05a-internal-syntax.tex", "first": 323, "last": 323, "role": "proof", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 220, "file": "sections/05a-internal-syntax.tex", "first": 325, "last": 333, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 221, "file": "sections/05a-internal-syntax.tex", "first": 335, "last": 341, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 222, "file": "sections/05a-internal-syntax.tex", "first": 343, "last": 353, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 223, "file": "sections/05a-internal-syntax.tex", "first": 355, "last": 358, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": []}
+{"unit": 224, "file": "sections/05a-internal-syntax.tex", "first": 360, "last": 386, "role": "exposition", "reconstructionLines": [51], "printedCrossReferences": ["6.4"]}
+{"unit": 225, "file": "sections/05a-internal-syntax.tex", "first": 388, "last": 403, "role": "proposition", "reconstructionLines": [52], "printedCrossReferences": ["6.5"]}
+{"unit": 226, "file": "sections/05a-internal-syntax.tex", "first": 404, "last": 404, "role": "proposition", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 227, "file": "sections/05a-internal-syntax.tex", "first": 405, "last": 411, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 228, "file": "sections/05a-internal-syntax.tex", "first": 413, "last": 425, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 229, "file": "sections/05a-internal-syntax.tex", "first": 427, "last": 438, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 230, "file": "sections/05a-internal-syntax.tex", "first": 440, "last": 443, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": ["6.4"]}
+{"unit": 231, "file": "sections/05a-internal-syntax.tex", "first": 445, "last": 458, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 232, "file": "sections/05a-internal-syntax.tex", "first": 460, "last": 472, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": ["6.2"]}
+{"unit": 233, "file": "sections/05a-internal-syntax.tex", "first": 474, "last": 484, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 234, "file": "sections/05a-internal-syntax.tex", "first": 485, "last": 485, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 235, "file": "sections/05a-internal-syntax.tex", "first": 487, "last": 491, "role": "proposition", "reconstructionLines": [52], "printedCrossReferences": ["6.6"]}
+{"unit": 236, "file": "sections/05a-internal-syntax.tex", "first": 492, "last": 492, "role": "proposition", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 237, "file": "sections/05a-internal-syntax.tex", "first": 493, "last": 503, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": ["6.4"]}
+{"unit": 238, "file": "sections/05a-internal-syntax.tex", "first": 505, "last": 519, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": ["6.2", "6.4"]}
+{"unit": 239, "file": "sections/05a-internal-syntax.tex", "first": 520, "last": 520, "role": "proof", "reconstructionLines": [52], "printedCrossReferences": []}
+{"unit": 240, "file": "sections/05a-internal-syntax.tex", "first": 522, "last": 523, "role": "exposition", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 241, "file": "sections/05a-internal-syntax.tex", "first": 525, "last": 536, "role": "proposition", "reconstructionLines": [53], "printedCrossReferences": ["6.7"]}
+{"unit": 242, "file": "sections/05a-internal-syntax.tex", "first": 537, "last": 537, "role": "proposition", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 243, "file": "sections/05a-internal-syntax.tex", "first": 538, "last": 547, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": ["6.6"]}
+{"unit": 244, "file": "sections/05a-internal-syntax.tex", "first": 549, "last": 560, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": ["6.5", "6.6"]}
+{"unit": 245, "file": "sections/05a-internal-syntax.tex", "first": 562, "last": 590, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 246, "file": "sections/05a-internal-syntax.tex", "first": 592, "last": 607, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 247, "file": "sections/05a-internal-syntax.tex", "first": 609, "last": 618, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": ["6.5"]}
+{"unit": 248, "file": "sections/05a-internal-syntax.tex", "first": 620, "last": 642, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 249, "file": "sections/05a-internal-syntax.tex", "first": 644, "last": 653, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 250, "file": "sections/05a-internal-syntax.tex", "first": 654, "last": 654, "role": "proof", "reconstructionLines": [53], "printedCrossReferences": []}
+{"unit": 251, "file": "sections/05a-internal-syntax.tex", "first": 657, "last": 658, "role": "exposition", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 252, "file": "sections/05a-internal-syntax.tex", "first": 660, "last": 669, "role": "exposition", "reconstructionLines": [54], "printedCrossReferences": ["A.2"]}
+{"unit": 253, "file": "sections/05a-internal-syntax.tex", "first": 671, "last": 671, "role": "exposition", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 254, "file": "sections/05a-internal-syntax.tex", "first": 672, "last": 683, "role": "lemma", "reconstructionLines": [54], "printedCrossReferences": ["6.8"]}
+{"unit": 255, "file": "sections/05a-internal-syntax.tex", "first": 684, "last": 684, "role": "lemma", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 256, "file": "sections/05a-internal-syntax.tex", "first": 685, "last": 698, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": ["6.3"]}
+{"unit": 257, "file": "sections/05a-internal-syntax.tex", "first": 700, "last": 718, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 258, "file": "sections/05a-internal-syntax.tex", "first": 720, "last": 734, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": ["6.4"]}
+{"unit": 259, "file": "sections/05a-internal-syntax.tex", "first": 736, "last": 752, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 260, "file": "sections/05a-internal-syntax.tex", "first": 754, "last": 769, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 261, "file": "sections/05a-internal-syntax.tex", "first": 771, "last": 774, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 262, "file": "sections/05a-internal-syntax.tex", "first": 776, "last": 803, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 263, "file": "sections/05a-internal-syntax.tex", "first": 805, "last": 834, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 264, "file": "sections/05a-internal-syntax.tex", "first": 836, "last": 843, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 265, "file": "sections/05a-internal-syntax.tex", "first": 844, "last": 844, "role": "proof", "reconstructionLines": [54], "printedCrossReferences": []}
+{"unit": 266, "file": "sections/05a-internal-syntax.tex", "first": 846, "last": 859, "role": "theorem", "reconstructionLines": [55], "printedCrossReferences": ["6.9"]}
+{"unit": 267, "file": "sections/05a-internal-syntax.tex", "first": 861, "last": 869, "role": "theorem", "reconstructionLines": [55], "printedCrossReferences": []}
+{"unit": 268, "file": "sections/05a-internal-syntax.tex", "first": 870, "last": 870, "role": "theorem", "reconstructionLines": [55], "printedCrossReferences": []}
+{"unit": 269, "file": "sections/05a-internal-syntax.tex", "first": 871, "last": 880, "role": "proof", "reconstructionLines": [55], "printedCrossReferences": ["6.3", "6.5", "6.6", "6.7"]}
+{"unit": 270, "file": "sections/05a-internal-syntax.tex", "first": 882, "last": 889, "role": "proof", "reconstructionLines": [55], "printedCrossReferences": ["6.8", "A.6"]}
+{"unit": 271, "file": "sections/05a-internal-syntax.tex", "first": 891, "last": 907, "role": "proof", "reconstructionLines": [55], "printedCrossReferences": ["6.2", "A.7"]}
+{"unit": 272, "file": "sections/05a-internal-syntax.tex", "first": 908, "last": 908, "role": "proof", "reconstructionLines": [55], "printedCrossReferences": []}
+{"unit": 273, "file": "sections/05a-internal-syntax.tex", "first": 910, "last": 916, "role": "exposition", "reconstructionLines": [55], "printedCrossReferences": ["6.9"]}
+{"unit": 274, "file": "main.tex", "first": 33, "last": 33, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 275, "file": "sections/06-interpretation-in-models.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 276, "file": "sections/06-interpretation-in-models.tex", "first": 3, "last": 7, "role": "exposition", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 277, "file": "sections/06-interpretation-in-models.tex", "first": 9, "last": 32, "role": "exposition", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 278, "file": "sections/06-interpretation-in-models.tex", "first": 34, "last": 38, "role": "proposition", "reconstructionLines": [56], "printedCrossReferences": ["7.1"]}
+{"unit": 279, "file": "sections/06-interpretation-in-models.tex", "first": 39, "last": 39, "role": "proposition", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 280, "file": "sections/06-interpretation-in-models.tex", "first": 40, "last": 47, "role": "proof", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 281, "file": "sections/06-interpretation-in-models.tex", "first": 49, "last": 61, "role": "proof", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 282, "file": "sections/06-interpretation-in-models.tex", "first": 62, "last": 62, "role": "proof", "reconstructionLines": [56], "printedCrossReferences": []}
+{"unit": 283, "file": "sections/06-interpretation-in-models.tex", "first": 64, "last": 64, "role": "exposition", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 284, "file": "sections/06-interpretation-in-models.tex", "first": 66, "last": 74, "role": "lemma", "reconstructionLines": [57], "printedCrossReferences": ["7.2"]}
+{"unit": 285, "file": "sections/06-interpretation-in-models.tex", "first": 75, "last": 75, "role": "lemma", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 286, "file": "sections/06-interpretation-in-models.tex", "first": 76, "last": 91, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": ["6.2"]}
+{"unit": 287, "file": "sections/06-interpretation-in-models.tex", "first": 93, "last": 102, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 288, "file": "sections/06-interpretation-in-models.tex", "first": 103, "last": 103, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 289, "file": "sections/06-interpretation-in-models.tex", "first": 105, "last": 114, "role": "corollary", "reconstructionLines": [57], "printedCrossReferences": ["3.3", "7.3"]}
+{"unit": 290, "file": "sections/06-interpretation-in-models.tex", "first": 115, "last": 115, "role": "corollary", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 291, "file": "sections/06-interpretation-in-models.tex", "first": 116, "last": 121, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": ["3.3", "7.1", "7.2"]}
+{"unit": 292, "file": "sections/06-interpretation-in-models.tex", "first": 122, "last": 122, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 293, "file": "sections/06-interpretation-in-models.tex", "first": 125, "last": 125, "role": "exposition", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 294, "file": "sections/06-interpretation-in-models.tex", "first": 127, "last": 149, "role": "exposition", "reconstructionLines": [57], "printedCrossReferences": ["6.3"]}
+{"unit": 295, "file": "sections/06-interpretation-in-models.tex", "first": 151, "last": 153, "role": "proposition", "reconstructionLines": [57], "printedCrossReferences": ["7.4"]}
+{"unit": 296, "file": "sections/06-interpretation-in-models.tex", "first": 154, "last": 154, "role": "proposition", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 297, "file": "sections/06-interpretation-in-models.tex", "first": 155, "last": 172, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 298, "file": "sections/06-interpretation-in-models.tex", "first": 173, "last": 173, "role": "proof", "reconstructionLines": [57], "printedCrossReferences": []}
+{"unit": 299, "file": "sections/06-interpretation-in-models.tex", "first": 175, "last": 175, "role": "exposition", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 300, "file": "sections/06-interpretation-in-models.tex", "first": 177, "last": 193, "role": "exposition", "reconstructionLines": [58], "printedCrossReferences": ["6.8"]}
+{"unit": 301, "file": "sections/06-interpretation-in-models.tex", "first": 195, "last": 206, "role": "exposition", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 302, "file": "sections/06-interpretation-in-models.tex", "first": 208, "last": 218, "role": "exposition", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 303, "file": "sections/06-interpretation-in-models.tex", "first": 220, "last": 242, "role": "lemma", "reconstructionLines": [58], "printedCrossReferences": ["6.7", "7.5"]}
+{"unit": 304, "file": "sections/06-interpretation-in-models.tex", "first": 243, "last": 243, "role": "lemma", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 305, "file": "sections/06-interpretation-in-models.tex", "first": 244, "last": 255, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": ["6.7"]}
+{"unit": 306, "file": "sections/06-interpretation-in-models.tex", "first": 257, "last": 263, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 307, "file": "sections/06-interpretation-in-models.tex", "first": 265, "last": 281, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": ["6.7"]}
+{"unit": 308, "file": "sections/06-interpretation-in-models.tex", "first": 282, "last": 282, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 309, "file": "sections/06-interpretation-in-models.tex", "first": 284, "last": 297, "role": "proposition", "reconstructionLines": [58], "printedCrossReferences": ["7.6"]}
+{"unit": 310, "file": "sections/06-interpretation-in-models.tex", "first": 298, "last": 298, "role": "proposition", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 311, "file": "sections/06-interpretation-in-models.tex", "first": 299, "last": 304, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 312, "file": "sections/06-interpretation-in-models.tex", "first": 306, "last": 322, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": ["7.5"]}
+{"unit": 313, "file": "sections/06-interpretation-in-models.tex", "first": 324, "last": 329, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 314, "file": "sections/06-interpretation-in-models.tex", "first": 331, "last": 340, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": ["6.8"]}
+{"unit": 315, "file": "sections/06-interpretation-in-models.tex", "first": 342, "last": 345, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": ["6.7"]}
+{"unit": 316, "file": "sections/06-interpretation-in-models.tex", "first": 346, "last": 346, "role": "proof", "reconstructionLines": [58], "printedCrossReferences": []}
+{"unit": 317, "file": "sections/06-interpretation-in-models.tex", "first": 348, "last": 348, "role": "exposition", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 318, "file": "sections/06-interpretation-in-models.tex", "first": 350, "last": 361, "role": "exposition", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 319, "file": "sections/06-interpretation-in-models.tex", "first": 363, "last": 365, "role": "lemma", "reconstructionLines": [59], "printedCrossReferences": ["7.7"]}
+{"unit": 320, "file": "sections/06-interpretation-in-models.tex", "first": 366, "last": 366, "role": "lemma", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 321, "file": "sections/06-interpretation-in-models.tex", "first": 367, "last": 380, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 322, "file": "sections/06-interpretation-in-models.tex", "first": 382, "last": 397, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 323, "file": "sections/06-interpretation-in-models.tex", "first": 398, "last": 398, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 324, "file": "sections/06-interpretation-in-models.tex", "first": 400, "last": 401, "role": "exposition", "reconstructionLines": [59], "printedCrossReferences": [], "literatureKeys": ["Keisler"]}
+{"unit": 325, "file": "sections/06-interpretation-in-models.tex", "first": 403, "last": 415, "role": "lemma", "reconstructionLines": [59], "printedCrossReferences": ["7.8"]}
+{"unit": 326, "file": "sections/06-interpretation-in-models.tex", "first": 416, "last": 416, "role": "lemma", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 327, "file": "sections/06-interpretation-in-models.tex", "first": 417, "last": 423, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 328, "file": "sections/06-interpretation-in-models.tex", "first": 425, "last": 433, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 329, "file": "sections/06-interpretation-in-models.tex", "first": 435, "last": 455, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": ["6.3"]}
+{"unit": 330, "file": "sections/06-interpretation-in-models.tex", "first": 456, "last": 456, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 331, "file": "sections/06-interpretation-in-models.tex", "first": 458, "last": 488, "role": "theorem", "reconstructionLines": [59], "printedCrossReferences": ["7.6", "7.9"]}
+{"unit": 332, "file": "sections/06-interpretation-in-models.tex", "first": 489, "last": 489, "role": "theorem", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 333, "file": "sections/06-interpretation-in-models.tex", "first": 490, "last": 509, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": ["7.6", "7.7"]}
+{"unit": 334, "file": "sections/06-interpretation-in-models.tex", "first": 511, "last": 517, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": ["4.1", "7.4"]}
+{"unit": 335, "file": "sections/06-interpretation-in-models.tex", "first": 518, "last": 518, "role": "proof", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 336, "file": "sections/06-interpretation-in-models.tex", "first": 520, "last": 539, "role": "exposition", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 337, "file": "sections/06-interpretation-in-models.tex", "first": 541, "last": 545, "role": "exposition", "reconstructionLines": [59], "printedCrossReferences": []}
+{"unit": 338, "file": "main.tex", "first": 34, "last": 34, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 339, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": []}
+{"unit": 340, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 3, "last": 4, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": []}
+{"unit": 341, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 6, "last": 13, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": ["6.9"]}
+{"unit": 342, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 15, "last": 36, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": ["6.9"]}
+{"unit": 343, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 38, "last": 51, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": []}
+{"unit": 344, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 53, "last": 88, "role": "exposition", "reconstructionLines": [63], "printedCrossReferences": []}
+{"unit": 345, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 90, "last": 90, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 346, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 91, "last": 105, "role": "lemma", "reconstructionLines": [64], "printedCrossReferences": ["8.1"]}
+{"unit": 347, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 106, "last": 106, "role": "lemma", "reconstructionLines": [64], "printedCrossReferences": []}
+{"unit": 348, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 107, "last": 114, "role": "proof", "reconstructionLines": [64], "printedCrossReferences": ["6.7"]}
+{"unit": 349, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 116, "last": 137, "role": "proof", "reconstructionLines": [64], "printedCrossReferences": []}
+{"unit": 350, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 138, "last": 138, "role": "proof", "reconstructionLines": [64], "printedCrossReferences": []}
+{"unit": 351, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 140, "last": 162, "role": "lemma", "reconstructionLines": [65], "printedCrossReferences": ["8.2"]}
+{"unit": 352, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 163, "last": 163, "role": "lemma", "reconstructionLines": [65], "printedCrossReferences": []}
+{"unit": 353, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 164, "last": 176, "role": "proof", "reconstructionLines": [65], "printedCrossReferences": ["6.2"]}
+{"unit": 354, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 178, "last": 183, "role": "proof", "reconstructionLines": [65], "printedCrossReferences": []}
+{"unit": 355, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 184, "last": 184, "role": "proof", "reconstructionLines": [65], "printedCrossReferences": []}
+{"unit": 356, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 186, "last": 197, "role": "theorem", "reconstructionLines": [66], "printedCrossReferences": ["8.3"]}
+{"unit": 357, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 198, "last": 198, "role": "theorem", "reconstructionLines": [66], "printedCrossReferences": []}
+{"unit": 358, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 199, "last": 213, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": ["4.1", "7.6", "7.9"]}
+{"unit": 359, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 215, "last": 236, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": ["4.2", "8.1", "8.2"]}
+{"unit": 360, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 237, "last": 237, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": []}
+{"unit": 361, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 239, "last": 244, "role": "exposition", "reconstructionLines": [66], "printedCrossReferences": ["8.1"], "literatureKeys": ["DPH"]}
+{"unit": 362, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 246, "last": 251, "role": "corollary", "reconstructionLines": [66], "printedCrossReferences": ["8.4"]}
+{"unit": 363, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 252, "last": 252, "role": "corollary", "reconstructionLines": [66], "printedCrossReferences": []}
+{"unit": 364, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 253, "last": 270, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": ["3.2", "8.1"]}
+{"unit": 365, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 272, "last": 279, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": []}
+{"unit": 366, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 280, "last": 280, "role": "proof", "reconstructionLines": [66], "printedCrossReferences": []}
+{"unit": 367, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 282, "last": 282, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 368, "file": "sections/08a-uniform-theories.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [67], "printedCrossReferences": []}
+{"unit": 369, "file": "sections/08a-uniform-theories.tex", "first": 4, "last": 17, "role": "exposition", "reconstructionLines": [67], "printedCrossReferences": ["6.9"]}
+{"unit": 370, "file": "sections/08a-uniform-theories.tex", "first": 19, "last": 36, "role": "exposition", "reconstructionLines": [67], "printedCrossReferences": []}
+{"unit": 371, "file": "sections/08a-uniform-theories.tex", "first": 38, "last": 60, "role": "exposition", "reconstructionLines": [67], "printedCrossReferences": ["6.3"]}
+{"unit": 372, "file": "sections/08a-uniform-theories.tex", "first": 62, "last": 119, "role": "exposition", "reconstructionLines": [67], "printedCrossReferences": ["6.3", "6.8", "A.5", "A.7"]}
+{"unit": 373, "file": "sections/08a-uniform-theories.tex", "first": 121, "last": 124, "role": "exposition", "reconstructionLines": [67, 68], "printedCrossReferences": []}
+{"unit": 374, "file": "sections/08a-uniform-theories.tex", "first": 126, "last": 141, "role": "proposition", "reconstructionLines": [68], "printedCrossReferences": ["8.5"]}
+{"unit": 375, "file": "sections/08a-uniform-theories.tex", "first": 142, "last": 142, "role": "proposition", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 376, "file": "sections/08a-uniform-theories.tex", "first": 143, "last": 184, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 377, "file": "sections/08a-uniform-theories.tex", "first": 186, "last": 240, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 378, "file": "sections/08a-uniform-theories.tex", "first": 242, "last": 279, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 379, "file": "sections/08a-uniform-theories.tex", "first": 281, "last": 298, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": ["6.9"]}
+{"unit": 380, "file": "sections/08a-uniform-theories.tex", "first": 300, "last": 308, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 381, "file": "sections/08a-uniform-theories.tex", "first": 309, "last": 309, "role": "proof", "reconstructionLines": [68], "printedCrossReferences": []}
+{"unit": 382, "file": "sections/08a-uniform-theories.tex", "first": 311, "last": 341, "role": "exposition", "reconstructionLines": [68], "printedCrossReferences": ["6.2", "8.5"]}
+{"unit": 383, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 283, "last": 283, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 384, "file": "sections/08b-uniform-independent-sentences.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [69], "printedCrossReferences": []}
+{"unit": 385, "file": "sections/08b-uniform-independent-sentences.tex", "first": 4, "last": 9, "role": "exposition", "reconstructionLines": [69], "printedCrossReferences": [], "literatureKeys": ["PourEl"]}
+{"unit": 386, "file": "sections/08b-uniform-independent-sentences.tex", "first": 11, "last": 20, "role": "theorem", "reconstructionLines": [69], "printedCrossReferences": ["8.6"]}
+{"unit": 387, "file": "sections/08b-uniform-independent-sentences.tex", "first": 21, "last": 21, "role": "theorem", "reconstructionLines": [69], "printedCrossReferences": []}
+{"unit": 388, "file": "sections/08b-uniform-independent-sentences.tex", "first": 22, "last": 52, "role": "proof", "reconstructionLines": [69], "printedCrossReferences": ["6.2", "8.1"]}
+{"unit": 389, "file": "sections/08b-uniform-independent-sentences.tex", "first": 54, "last": 73, "role": "proof", "reconstructionLines": [69], "printedCrossReferences": []}
+{"unit": 390, "file": "sections/08b-uniform-independent-sentences.tex", "first": 75, "last": 101, "role": "proof", "reconstructionLines": [69], "printedCrossReferences": ["7.6", "8.1", "8.5"]}
+{"unit": 391, "file": "sections/08b-uniform-independent-sentences.tex", "first": 102, "last": 102, "role": "proof", "reconstructionLines": [69], "printedCrossReferences": []}
+{"unit": 392, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 285, "last": 285, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 393, "file": "sections/08c-numerical-realization.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 394, "file": "sections/08c-numerical-realization.tex", "first": 4, "last": 16, "role": "exposition", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 395, "file": "sections/08c-numerical-realization.tex", "first": 18, "last": 28, "role": "exposition", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 396, "file": "sections/08c-numerical-realization.tex", "first": 30, "last": 35, "role": "exposition", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 397, "file": "sections/08c-numerical-realization.tex", "first": 38, "last": 52, "role": "proposition", "reconstructionLines": [70], "printedCrossReferences": ["8.7"]}
+{"unit": 398, "file": "sections/08c-numerical-realization.tex", "first": 53, "last": 53, "role": "proposition", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 399, "file": "sections/08c-numerical-realization.tex", "first": 54, "last": 67, "role": "proof", "reconstructionLines": [70], "printedCrossReferences": []}
+{"unit": 400, "file": "sections/08c-numerical-realization.tex", "first": 69, "last": 102, "role": "proof", "reconstructionLines": [70, 71], "printedCrossReferences": []}
+{"unit": 401, "file": "sections/08c-numerical-realization.tex", "first": 104, "last": 114, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 402, "file": "sections/08c-numerical-realization.tex", "first": 116, "last": 133, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 403, "file": "sections/08c-numerical-realization.tex", "first": 135, "last": 157, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 404, "file": "sections/08c-numerical-realization.tex", "first": 159, "last": 174, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 405, "file": "sections/08c-numerical-realization.tex", "first": 176, "last": 193, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 406, "file": "sections/08c-numerical-realization.tex", "first": 195, "last": 239, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 407, "file": "sections/08c-numerical-realization.tex", "first": 241, "last": 278, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 408, "file": "sections/08c-numerical-realization.tex", "first": 279, "last": 279, "role": "proof", "reconstructionLines": [71], "printedCrossReferences": []}
+{"unit": 409, "file": "sections/08c-numerical-realization.tex", "first": 281, "last": 289, "role": "proposition", "reconstructionLines": [72], "printedCrossReferences": ["8.8", "A.1", "A.6"]}
+{"unit": 410, "file": "sections/08c-numerical-realization.tex", "first": 290, "last": 290, "role": "proposition", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 411, "file": "sections/08c-numerical-realization.tex", "first": 291, "last": 302, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": ["6.5"]}
+{"unit": 412, "file": "sections/08c-numerical-realization.tex", "first": 304, "last": 327, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 413, "file": "sections/08c-numerical-realization.tex", "first": 329, "last": 356, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 414, "file": "sections/08c-numerical-realization.tex", "first": 358, "last": 388, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 415, "file": "sections/08c-numerical-realization.tex", "first": 391, "last": 410, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": ["6.6", "6.7"]}
+{"unit": 416, "file": "sections/08c-numerical-realization.tex", "first": 412, "last": 438, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": ["6.8"]}
+{"unit": 417, "file": "sections/08c-numerical-realization.tex", "first": 440, "last": 460, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 418, "file": "sections/08c-numerical-realization.tex", "first": 461, "last": 461, "role": "proof", "reconstructionLines": [72], "printedCrossReferences": []}
+{"unit": 419, "file": "sections/08c-numerical-realization.tex", "first": 463, "last": 489, "role": "exposition", "reconstructionLines": [73], "printedCrossReferences": ["A.6"]}
+{"unit": 420, "file": "sections/08c-numerical-realization.tex", "first": 491, "last": 571, "role": "exposition", "reconstructionLines": [73], "printedCrossReferences": ["6.3", "6.8"]}
+{"unit": 421, "file": "sections/08c-numerical-realization.tex", "first": 573, "last": 599, "role": "exposition", "reconstructionLines": [73], "printedCrossReferences": ["8.1", "A.7"]}
+{"unit": 422, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 286, "last": 286, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 423, "file": "sections/08d-numerical-incompleteness.tex", "first": 1, "last": 3, "role": "exposition", "reconstructionLines": [74], "printedCrossReferences": []}
+{"unit": 424, "file": "sections/08d-numerical-incompleteness.tex", "first": 5, "last": 10, "role": "exposition", "reconstructionLines": [74], "printedCrossReferences": []}
+{"unit": 425, "file": "sections/08d-numerical-incompleteness.tex", "first": 12, "last": 28, "role": "exposition", "reconstructionLines": [74], "printedCrossReferences": ["6.1"]}
+{"unit": 426, "file": "sections/08d-numerical-incompleteness.tex", "first": 30, "last": 59, "role": "exposition", "reconstructionLines": [74], "printedCrossReferences": ["3.3"]}
+{"unit": 427, "file": "sections/08d-numerical-incompleteness.tex", "first": 61, "last": 80, "role": "exposition", "reconstructionLines": [74], "printedCrossReferences": ["4.3", "8.1"]}
+{"unit": 428, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 288, "last": 288, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": []}
+{"unit": 429, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 290, "last": 314, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": []}
+{"unit": 430, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 316, "last": 327, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": ["3.3"], "literatureKeys": ["Bernardi"]}
+{"unit": 431, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 329, "last": 330, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": []}
+{"unit": 432, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 332, "last": 342, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": ["6.9"]}
+{"unit": 433, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 344, "last": 361, "role": "exposition", "reconstructionLines": [75], "printedCrossReferences": []}
+{"unit": 434, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 363, "last": 367, "role": "lemma", "reconstructionLines": [76], "printedCrossReferences": ["8.9"]}
+{"unit": 435, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 368, "last": 368, "role": "lemma", "reconstructionLines": [76], "printedCrossReferences": []}
+{"unit": 436, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 369, "last": 410, "role": "proof", "reconstructionLines": [76], "printedCrossReferences": []}
+{"unit": 437, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 412, "last": 426, "role": "proof", "reconstructionLines": [76], "printedCrossReferences": ["6.9", "8.1"]}
+{"unit": 438, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 428, "last": 442, "role": "proof", "reconstructionLines": [76], "printedCrossReferences": ["4.8"]}
+{"unit": 439, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 443, "last": 443, "role": "proof", "reconstructionLines": [76], "printedCrossReferences": []}
+{"unit": 440, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 445, "last": 465, "role": "corollary", "reconstructionLines": [77], "printedCrossReferences": ["8.10"]}
+{"unit": 441, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 467, "last": 479, "role": "corollary", "reconstructionLines": [77], "printedCrossReferences": []}
+{"unit": 442, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 480, "last": 480, "role": "corollary", "reconstructionLines": [77], "printedCrossReferences": []}
+{"unit": 443, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 481, "last": 491, "role": "proof", "reconstructionLines": [77], "printedCrossReferences": ["6.3", "6.9"]}
+{"unit": 444, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 493, "last": 506, "role": "proof", "reconstructionLines": [77], "printedCrossReferences": ["6.8"]}
+{"unit": 445, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 508, "last": 517, "role": "proof", "reconstructionLines": [77], "printedCrossReferences": ["4.3", "5.2", "5.3", "8.9"]}
+{"unit": 446, "file": "sections/08-essential-incompleteness-of-arithmetic.tex", "first": 518, "last": 518, "role": "proof", "reconstructionLines": [77], "printedCrossReferences": []}
+{"unit": 447, "file": "main.tex", "first": 35, "last": 35, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 448, "file": "sections/04-miller-sequences.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [81], "printedCrossReferences": []}
+{"unit": 449, "file": "sections/04-miller-sequences.tex", "first": 3, "last": 10, "role": "exposition", "reconstructionLines": [81], "printedCrossReferences": [], "literatureKeys": ["Miller2004", "BauerHanson"]}
+{"unit": 450, "file": "sections/04-miller-sequences.tex", "first": 12, "last": 33, "role": "exposition", "reconstructionLines": [81], "printedCrossReferences": []}
+{"unit": 451, "file": "sections/04-miller-sequences.tex", "first": 35, "last": 46, "role": "exposition", "reconstructionLines": [81], "printedCrossReferences": []}
+{"unit": 452, "file": "sections/04-miller-sequences.tex", "first": 48, "last": 49, "role": "exposition", "reconstructionLines": [82], "printedCrossReferences": []}
+{"unit": 453, "file": "sections/04-miller-sequences.tex", "first": 51, "last": 61, "role": "lemma", "reconstructionLines": [82], "printedCrossReferences": ["9.1"]}
+{"unit": 454, "file": "sections/04-miller-sequences.tex", "first": 62, "last": 62, "role": "lemma", "reconstructionLines": [82], "printedCrossReferences": []}
+{"unit": 455, "file": "sections/04-miller-sequences.tex", "first": 63, "last": 92, "role": "proof", "reconstructionLines": [82], "printedCrossReferences": []}
+{"unit": 456, "file": "sections/04-miller-sequences.tex", "first": 94, "last": 105, "role": "proof", "reconstructionLines": [82], "printedCrossReferences": []}
+{"unit": 457, "file": "sections/04-miller-sequences.tex", "first": 106, "last": 106, "role": "proof", "reconstructionLines": [82], "printedCrossReferences": []}
+{"unit": 458, "file": "sections/04-miller-sequences.tex", "first": 108, "last": 126, "role": "exposition", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 459, "file": "sections/04-miller-sequences.tex", "first": 128, "last": 132, "role": "proposition", "reconstructionLines": [83], "printedCrossReferences": ["9.2"]}
+{"unit": 460, "file": "sections/04-miller-sequences.tex", "first": 133, "last": 133, "role": "proposition", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 461, "file": "sections/04-miller-sequences.tex", "first": 134, "last": 150, "role": "proof", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 462, "file": "sections/04-miller-sequences.tex", "first": 152, "last": 159, "role": "proof", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 463, "file": "sections/04-miller-sequences.tex", "first": 161, "last": 174, "role": "proof", "reconstructionLines": [83], "printedCrossReferences": ["9.1"]}
+{"unit": 464, "file": "sections/04-miller-sequences.tex", "first": 175, "last": 175, "role": "proof", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 465, "file": "sections/04-miller-sequences.tex", "first": 177, "last": 190, "role": "exposition", "reconstructionLines": [83], "printedCrossReferences": []}
+{"unit": 466, "file": "sections/04-miller-sequences.tex", "first": 192, "last": 207, "role": "exposition", "reconstructionLines": [83], "printedCrossReferences": ["3.3", "3.4", "9.2"]}
+{"unit": 467, "file": "sections/04-miller-sequences.tex", "first": 209, "last": 210, "role": "exposition", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 468, "file": "sections/04-miller-sequences.tex", "first": 212, "last": 215, "role": "exposition", "reconstructionLines": [84], "printedCrossReferences": ["9.1"]}
+{"unit": 469, "file": "sections/04-miller-sequences.tex", "first": 217, "last": 221, "role": "lemma", "reconstructionLines": [84], "printedCrossReferences": ["9.3"]}
+{"unit": 470, "file": "sections/04-miller-sequences.tex", "first": 222, "last": 222, "role": "lemma", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 471, "file": "sections/04-miller-sequences.tex", "first": 223, "last": 237, "role": "proof", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 472, "file": "sections/04-miller-sequences.tex", "first": 239, "last": 275, "role": "proof", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 473, "file": "sections/04-miller-sequences.tex", "first": 277, "last": 291, "role": "proof", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 474, "file": "sections/04-miller-sequences.tex", "first": 292, "last": 292, "role": "proof", "reconstructionLines": [84], "printedCrossReferences": []}
+{"unit": 475, "file": "sections/04-miller-sequences.tex", "first": 294, "last": 297, "role": "corollary", "reconstructionLines": [85], "printedCrossReferences": ["9.4"]}
+{"unit": 476, "file": "sections/04-miller-sequences.tex", "first": 298, "last": 298, "role": "corollary", "reconstructionLines": [85], "printedCrossReferences": []}
+{"unit": 477, "file": "sections/04-miller-sequences.tex", "first": 299, "last": 315, "role": "proof", "reconstructionLines": [85], "printedCrossReferences": ["3.3"]}
+{"unit": 478, "file": "sections/04-miller-sequences.tex", "first": 317, "last": 317, "role": "proof", "reconstructionLines": [85], "printedCrossReferences": []}
+{"unit": 479, "file": "sections/04-miller-sequences.tex", "first": 319, "last": 325, "role": "exposition", "reconstructionLines": [85], "printedCrossReferences": ["3.3"]}
+{"unit": 480, "file": "sections/04-miller-sequences.tex", "first": 328, "last": 329, "role": "exposition", "reconstructionLines": [85], "printedCrossReferences": []}
+{"unit": 481, "file": "sections/04-miller-sequences.tex", "first": 331, "last": 339, "role": "exposition", "reconstructionLines": [85], "printedCrossReferences": []}
+{"unit": 482, "file": "sections/04-miller-sequences.tex", "first": 341, "last": 347, "role": "exposition", "reconstructionLines": [85], "printedCrossReferences": []}
+{"unit": 483, "file": "sections/04-miller-sequences.tex", "first": 349, "last": 363, "role": "proposition", "reconstructionLines": [86], "printedCrossReferences": ["9.5", "A.1", "A.6"]}
+{"unit": 484, "file": "sections/04-miller-sequences.tex", "first": 364, "last": 364, "role": "proposition", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 485, "file": "sections/04-miller-sequences.tex", "first": 365, "last": 378, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 486, "file": "sections/04-miller-sequences.tex", "first": 380, "last": 401, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 487, "file": "sections/04-miller-sequences.tex", "first": 403, "last": 419, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 488, "file": "sections/04-miller-sequences.tex", "first": 421, "last": 437, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 489, "file": "sections/04-miller-sequences.tex", "first": 439, "last": 451, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": ["A.3"]}
+{"unit": 490, "file": "sections/04-miller-sequences.tex", "first": 453, "last": 465, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 491, "file": "sections/04-miller-sequences.tex", "first": 467, "last": 476, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 492, "file": "sections/04-miller-sequences.tex", "first": 477, "last": 477, "role": "proof", "reconstructionLines": [86], "printedCrossReferences": []}
+{"unit": 493, "file": "sections/04-miller-sequences.tex", "first": 479, "last": 491, "role": "lemma", "reconstructionLines": [87], "printedCrossReferences": ["9.5", "9.6", "A.1"]}
+{"unit": 494, "file": "sections/04-miller-sequences.tex", "first": 492, "last": 492, "role": "lemma", "reconstructionLines": [87], "printedCrossReferences": []}
+{"unit": 495, "file": "sections/04-miller-sequences.tex", "first": 493, "last": 505, "role": "proof", "reconstructionLines": [87], "printedCrossReferences": ["9.5", "A.1"]}
+{"unit": 496, "file": "sections/04-miller-sequences.tex", "first": 507, "last": 520, "role": "proof", "reconstructionLines": [87], "printedCrossReferences": []}
+{"unit": 497, "file": "sections/04-miller-sequences.tex", "first": 522, "last": 541, "role": "proof", "reconstructionLines": [87], "printedCrossReferences": []}
+{"unit": 498, "file": "sections/04-miller-sequences.tex", "first": 543, "last": 555, "role": "proof", "reconstructionLines": [87], "printedCrossReferences": []}
+{"unit": 499, "file": "sections/04-miller-sequences.tex", "first": 556, "last": 556, "role": "proof", "reconstructionLines": [87], "printedCrossReferences": []}
+{"unit": 500, "file": "sections/04-miller-sequences.tex", "first": 558, "last": 581, "role": "exposition", "reconstructionLines": [88], "printedCrossReferences": ["9.1", "9.5"]}
+{"unit": 501, "file": "sections/04-miller-sequences.tex", "first": 583, "last": 592, "role": "theorem", "reconstructionLines": [88], "printedCrossReferences": ["9.7"]}
+{"unit": 502, "file": "sections/04-miller-sequences.tex", "first": 593, "last": 593, "role": "theorem", "reconstructionLines": [88], "printedCrossReferences": []}
+{"unit": 503, "file": "sections/04-miller-sequences.tex", "first": 594, "last": 621, "role": "proof", "reconstructionLines": [88], "printedCrossReferences": ["9.5", "A.6", "A.7"]}
+{"unit": 504, "file": "sections/04-miller-sequences.tex", "first": 623, "last": 642, "role": "proof", "reconstructionLines": [88], "printedCrossReferences": ["4.3", "9.4"]}
+{"unit": 505, "file": "sections/04-miller-sequences.tex", "first": 644, "last": 650, "role": "proof", "reconstructionLines": [88], "printedCrossReferences": []}
+{"unit": 506, "file": "sections/04-miller-sequences.tex", "first": 652, "last": 652, "role": "proof", "reconstructionLines": [88], "printedCrossReferences": []}
+{"unit": 507, "file": "sections/04-miller-sequences.tex", "first": 654, "last": 654, "role": "exposition", "reconstructionLines": [89], "printedCrossReferences": []}
+{"unit": 508, "file": "sections/04-miller-sequences.tex", "first": 656, "last": 659, "role": "exposition", "reconstructionLines": [89], "printedCrossReferences": []}
+{"unit": 509, "file": "sections/04-miller-sequences.tex", "first": 661, "last": 676, "role": "corollary", "reconstructionLines": [89], "printedCrossReferences": ["9.8"]}
+{"unit": 510, "file": "sections/04-miller-sequences.tex", "first": 678, "last": 688, "role": "corollary", "reconstructionLines": [89], "printedCrossReferences": ["5.2", "5.3"]}
+{"unit": 511, "file": "sections/04-miller-sequences.tex", "first": 689, "last": 689, "role": "corollary", "reconstructionLines": [89], "printedCrossReferences": []}
+{"unit": 512, "file": "sections/04-miller-sequences.tex", "first": 690, "last": 696, "role": "proof", "reconstructionLines": [89], "printedCrossReferences": ["9.5", "9.6"]}
+{"unit": 513, "file": "sections/04-miller-sequences.tex", "first": 698, "last": 707, "role": "proof", "reconstructionLines": [89], "printedCrossReferences": ["4.3", "9.7"]}
+{"unit": 514, "file": "sections/04-miller-sequences.tex", "first": 709, "last": 720, "role": "proof", "reconstructionLines": [89], "printedCrossReferences": ["5.2", "5.3"]}
+{"unit": 515, "file": "sections/04-miller-sequences.tex", "first": 721, "last": 721, "role": "proof", "reconstructionLines": [89], "printedCrossReferences": []}
+{"unit": 516, "file": "main.tex", "first": 36, "last": 36, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 517, "file": "sections/09-three-point-space.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": []}
+{"unit": 518, "file": "sections/09-three-point-space.tex", "first": 3, "last": 13, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": [], "literatureKeys": ["CurryCosheaves"]}
+{"unit": 519, "file": "sections/09-three-point-space.tex", "first": 15, "last": 28, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": []}
+{"unit": 520, "file": "sections/09-three-point-space.tex", "first": 30, "last": 43, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": ["B.1"]}
+{"unit": 521, "file": "sections/09-three-point-space.tex", "first": 45, "last": 52, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": []}
+{"unit": 522, "file": "sections/09-three-point-space.tex", "first": 54, "last": 70, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": []}
+{"unit": 523, "file": "sections/09-three-point-space.tex", "first": 72, "last": 79, "role": "exposition", "reconstructionLines": [93], "printedCrossReferences": ["B.3"]}
+{"unit": 524, "file": "sections/09-three-point-space.tex", "first": 81, "last": 119, "role": "exposition", "reconstructionLines": [93, 94], "printedCrossReferences": ["B.6"], "literatureKeys": ["Heller"]}
+{"unit": 525, "file": "sections/09-three-point-space.tex", "first": 121, "last": 128, "role": "exposition", "reconstructionLines": [94], "printedCrossReferences": ["B.7"]}
+{"unit": 526, "file": "sections/09-three-point-space.tex", "first": 130, "last": 146, "role": "exposition", "reconstructionLines": [94], "printedCrossReferences": ["B.5", "B.8", "B.9"]}
+{"unit": 527, "file": "sections/09-three-point-space.tex", "first": 148, "last": 148, "role": "exposition", "reconstructionLines": [94], "printedCrossReferences": []}
+{"unit": 528, "file": "sections/09-three-point-space.tex", "first": 150, "last": 178, "role": "exposition", "reconstructionLines": [94], "printedCrossReferences": ["3.3", "B.3", "B.10"]}
+{"unit": 529, "file": "sections/09-three-point-space.tex", "first": 180, "last": 180, "role": "exposition", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 530, "file": "sections/09-three-point-space.tex", "first": 182, "last": 199, "role": "exposition", "reconstructionLines": [95], "printedCrossReferences": ["8.7", "B.7"]}
+{"unit": 531, "file": "sections/09-three-point-space.tex", "first": 201, "last": 208, "role": "proposition", "reconstructionLines": [95], "printedCrossReferences": ["10.1", "B.7"]}
+{"unit": 532, "file": "sections/09-three-point-space.tex", "first": 209, "last": 209, "role": "proposition", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 533, "file": "sections/09-three-point-space.tex", "first": 210, "last": 216, "role": "proof", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 534, "file": "sections/09-three-point-space.tex", "first": 218, "last": 232, "role": "proof", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 535, "file": "sections/09-three-point-space.tex", "first": 233, "last": 233, "role": "proof", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 536, "file": "sections/09-three-point-space.tex", "first": 235, "last": 262, "role": "exposition", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 537, "file": "sections/09-three-point-space.tex", "first": 264, "last": 277, "role": "exposition", "reconstructionLines": [95], "printedCrossReferences": []}
+{"unit": 538, "file": "sections/09-three-point-space.tex", "first": 279, "last": 279, "role": "exposition", "reconstructionLines": [96], "printedCrossReferences": []}
+{"unit": 539, "file": "sections/09-three-point-space.tex", "first": 281, "last": 312, "role": "exposition", "reconstructionLines": [96], "printedCrossReferences": ["3.3", "10.1", "B.6"]}
+{"unit": 540, "file": "sections/09-three-point-space.tex", "first": 314, "last": 331, "role": "exposition", "reconstructionLines": [96], "printedCrossReferences": ["3.3"]}
+{"unit": 541, "file": "sections/09-three-point-space.tex", "first": 333, "last": 337, "role": "exposition", "reconstructionLines": [96], "printedCrossReferences": ["B.2"]}
+{"unit": 542, "file": "sections/09-three-point-space.tex", "first": 339, "last": 357, "role": "exposition", "reconstructionLines": [96], "printedCrossReferences": []}
+{"unit": 543, "file": "sections/09-three-point-space.tex", "first": 359, "last": 362, "role": "proposition", "reconstructionLines": [97], "printedCrossReferences": ["10.2"]}
+{"unit": 544, "file": "sections/09-three-point-space.tex", "first": 363, "last": 363, "role": "proposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 545, "file": "sections/09-three-point-space.tex", "first": 364, "last": 370, "role": "proof", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 546, "file": "sections/09-three-point-space.tex", "first": 372, "last": 378, "role": "proof", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 547, "file": "sections/09-three-point-space.tex", "first": 379, "last": 379, "role": "proof", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 548, "file": "sections/09-three-point-space.tex", "first": 381, "last": 409, "role": "exposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 549, "file": "sections/09-three-point-space.tex", "first": 411, "last": 440, "role": "exposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 550, "file": "sections/09-three-point-space.tex", "first": 442, "last": 452, "role": "exposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 551, "file": "sections/09-three-point-space.tex", "first": 454, "last": 463, "role": "exposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 552, "file": "sections/09-three-point-space.tex", "first": 465, "last": 473, "role": "exposition", "reconstructionLines": [97], "printedCrossReferences": []}
+{"unit": 553, "file": "sections/09-three-point-space.tex", "first": 475, "last": 479, "role": "proposition", "reconstructionLines": [98], "printedCrossReferences": ["10.3"]}
+{"unit": 554, "file": "sections/09-three-point-space.tex", "first": 480, "last": 480, "role": "proposition", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 555, "file": "sections/09-three-point-space.tex", "first": 481, "last": 491, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 556, "file": "sections/09-three-point-space.tex", "first": 493, "last": 499, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 557, "file": "sections/09-three-point-space.tex", "first": 500, "last": 500, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 558, "file": "sections/09-three-point-space.tex", "first": 502, "last": 504, "role": "exposition", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 559, "file": "sections/09-three-point-space.tex", "first": 506, "last": 514, "role": "theorem", "reconstructionLines": [98], "printedCrossReferences": ["10.4"]}
+{"unit": 560, "file": "sections/09-three-point-space.tex", "first": 515, "last": 515, "role": "theorem", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 561, "file": "sections/09-three-point-space.tex", "first": 516, "last": 529, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": ["10.3", "A.5", "A.7"]}
+{"unit": 562, "file": "sections/09-three-point-space.tex", "first": 531, "last": 543, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 563, "file": "sections/09-three-point-space.tex", "first": 544, "last": 544, "role": "proof", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 564, "file": "sections/09-three-point-space.tex", "first": 546, "last": 559, "role": "exposition", "reconstructionLines": [98], "printedCrossReferences": []}
+{"unit": 565, "file": "sections/09-three-point-space.tex", "first": 561, "last": 578, "role": "theorem", "reconstructionLines": [99], "printedCrossReferences": ["10.5"]}
+{"unit": 566, "file": "sections/09-three-point-space.tex", "first": 579, "last": 579, "role": "theorem", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 567, "file": "sections/09-three-point-space.tex", "first": 580, "last": 585, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": ["4.3"]}
+{"unit": 568, "file": "sections/09-three-point-space.tex", "first": 587, "last": 602, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 569, "file": "sections/09-three-point-space.tex", "first": 604, "last": 606, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 570, "file": "sections/09-three-point-space.tex", "first": 607, "last": 607, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 571, "file": "sections/09-three-point-space.tex", "first": 609, "last": 612, "role": "corollary", "reconstructionLines": [99], "printedCrossReferences": ["10.6"]}
+{"unit": 572, "file": "sections/09-three-point-space.tex", "first": 613, "last": 613, "role": "corollary", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 573, "file": "sections/09-three-point-space.tex", "first": 614, "last": 621, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": ["10.5"]}
+{"unit": 574, "file": "sections/09-three-point-space.tex", "first": 622, "last": 622, "role": "proof", "reconstructionLines": [99], "printedCrossReferences": []}
+{"unit": 575, "file": "sections/09-three-point-space.tex", "first": 624, "last": 625, "role": "exposition", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 576, "file": "sections/09-three-point-space.tex", "first": 627, "last": 631, "role": "exposition", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 577, "file": "sections/09-three-point-space.tex", "first": 633, "last": 637, "role": "proposition", "reconstructionLines": [100], "printedCrossReferences": ["10.7"]}
+{"unit": 578, "file": "sections/09-three-point-space.tex", "first": 638, "last": 638, "role": "proposition", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 579, "file": "sections/09-three-point-space.tex", "first": 639, "last": 652, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 580, "file": "sections/09-three-point-space.tex", "first": 654, "last": 662, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 581, "file": "sections/09-three-point-space.tex", "first": 664, "last": 672, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": ["A.3"]}
+{"unit": 582, "file": "sections/09-three-point-space.tex", "first": 674, "last": 685, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 583, "file": "sections/09-three-point-space.tex", "first": 687, "last": 700, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 584, "file": "sections/09-three-point-space.tex", "first": 701, "last": 701, "role": "proof", "reconstructionLines": [100], "printedCrossReferences": []}
+{"unit": 585, "file": "sections/09-three-point-space.tex", "first": 703, "last": 714, "role": "exposition", "reconstructionLines": [100], "printedCrossReferences": ["10.4"]}
+{"unit": 586, "file": "sections/09-three-point-space.tex", "first": 716, "last": 725, "role": "proposition", "reconstructionLines": [101], "printedCrossReferences": ["10.8"]}
+{"unit": 587, "file": "sections/09-three-point-space.tex", "first": 726, "last": 726, "role": "proposition", "reconstructionLines": [101], "printedCrossReferences": []}
+{"unit": 588, "file": "sections/09-three-point-space.tex", "first": 727, "last": 747, "role": "proof", "reconstructionLines": [101], "printedCrossReferences": []}
+{"unit": 589, "file": "sections/09-three-point-space.tex", "first": 749, "last": 791, "role": "proof", "reconstructionLines": [101], "printedCrossReferences": []}
+{"unit": 590, "file": "sections/09-three-point-space.tex", "first": 793, "last": 802, "role": "proof", "reconstructionLines": [101], "printedCrossReferences": ["4.3"]}
+{"unit": 591, "file": "sections/09-three-point-space.tex", "first": 804, "last": 810, "role": "proof", "reconstructionLines": [101], "printedCrossReferences": ["10.6"]}
+{"unit": 592, "file": "sections/09-three-point-space.tex", "first": 811, "last": 811, "role": "proof", "reconstructionLines": [101], "printedCrossReferences": []}
+{"unit": 593, "file": "sections/09-three-point-space.tex", "first": 813, "last": 813, "role": "exposition", "reconstructionLines": [102], "printedCrossReferences": []}
+{"unit": 594, "file": "sections/09-three-point-space.tex", "first": 815, "last": 837, "role": "corollary", "reconstructionLines": [102], "printedCrossReferences": ["5.2", "10.9"]}
+{"unit": 595, "file": "sections/09-three-point-space.tex", "first": 838, "last": 838, "role": "corollary", "reconstructionLines": [102], "printedCrossReferences": []}
+{"unit": 596, "file": "sections/09-three-point-space.tex", "first": 839, "last": 859, "role": "proof", "reconstructionLines": [102], "printedCrossReferences": ["4.3", "5.2", "5.3", "10.7", "10.8", "B.2", "B.3", "B.8"]}
+{"unit": 597, "file": "sections/09-three-point-space.tex", "first": 860, "last": 860, "role": "proof", "reconstructionLines": [102], "printedCrossReferences": []}
+{"unit": 598, "file": "main.tex", "first": 37, "last": 37, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 599, "file": "main.tex", "first": 39, "last": 39, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 600, "file": "appendices/a-syntax-and-theories.tex", "first": 1, "last": 3, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 601, "file": "appendices/a-syntax-and-theories.tex", "first": 5, "last": 8, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 602, "file": "appendices/a-syntax-and-theories.tex", "first": 10, "last": 11, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 603, "file": "appendices/a-syntax-and-theories.tex", "first": 13, "last": 16, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": [], "literatureKeys": ["CockettLists", "MaiettiLists"]}
+{"unit": 604, "file": "appendices/a-syntax-and-theories.tex", "first": 18, "last": 26, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 605, "file": "appendices/a-syntax-and-theories.tex", "first": 28, "last": 35, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 606, "file": "appendices/a-syntax-and-theories.tex", "first": 37, "last": 61, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 607, "file": "appendices/a-syntax-and-theories.tex", "first": 63, "last": 77, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 608, "file": "appendices/a-syntax-and-theories.tex", "first": 79, "last": 83, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 609, "file": "appendices/a-syntax-and-theories.tex", "first": 85, "last": 101, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 610, "file": "appendices/a-syntax-and-theories.tex", "first": 103, "last": 117, "role": "exposition", "reconstructionLines": [106], "printedCrossReferences": []}
+{"unit": 611, "file": "appendices/a-syntax-and-theories.tex", "first": 119, "last": 120, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 612, "file": "appendices/a-syntax-and-theories.tex", "first": 122, "last": 127, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": [], "literatureKeys": ["GTWW", "GoguenBurstall"]}
+{"unit": 613, "file": "appendices/a-syntax-and-theories.tex", "first": 129, "last": 135, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": [], "literatureKeys": ["FPT", "GabbayPitts", "Katsumata"]}
+{"unit": 614, "file": "appendices/a-syntax-and-theories.tex", "first": 137, "last": 149, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 615, "file": "appendices/a-syntax-and-theories.tex", "first": 151, "last": 155, "role": "definition", "reconstructionLines": [107], "printedCrossReferences": ["A.1"]}
+{"unit": 616, "file": "appendices/a-syntax-and-theories.tex", "first": 156, "last": 156, "role": "definition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 617, "file": "appendices/a-syntax-and-theories.tex", "first": 158, "last": 184, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 618, "file": "appendices/a-syntax-and-theories.tex", "first": 186, "last": 204, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 619, "file": "appendices/a-syntax-and-theories.tex", "first": 206, "last": 221, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 620, "file": "appendices/a-syntax-and-theories.tex", "first": 223, "last": 230, "role": "definition", "reconstructionLines": [107], "printedCrossReferences": ["A.2"]}
+{"unit": 621, "file": "appendices/a-syntax-and-theories.tex", "first": 231, "last": 231, "role": "definition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 622, "file": "appendices/a-syntax-and-theories.tex", "first": 232, "last": 234, "role": "exposition", "reconstructionLines": [107], "printedCrossReferences": []}
+{"unit": 623, "file": "appendices/a-syntax-and-theories.tex", "first": 236, "last": 237, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 624, "file": "appendices/a-syntax-and-theories.tex", "first": 239, "last": 251, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": [], "literatureKeys": ["GabbayPitts"]}
+{"unit": 625, "file": "appendices/a-syntax-and-theories.tex", "first": 253, "last": 269, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 626, "file": "appendices/a-syntax-and-theories.tex", "first": 271, "last": 287, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 627, "file": "appendices/a-syntax-and-theories.tex", "first": 289, "last": 301, "role": "proposition", "reconstructionLines": [108], "printedCrossReferences": ["A.3"]}
+{"unit": 628, "file": "appendices/a-syntax-and-theories.tex", "first": 302, "last": 302, "role": "proposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 629, "file": "appendices/a-syntax-and-theories.tex", "first": 303, "last": 310, "role": "proof", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 630, "file": "appendices/a-syntax-and-theories.tex", "first": 311, "last": 311, "role": "proof", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 631, "file": "appendices/a-syntax-and-theories.tex", "first": 313, "last": 333, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 632, "file": "appendices/a-syntax-and-theories.tex", "first": 335, "last": 356, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 633, "file": "appendices/a-syntax-and-theories.tex", "first": 358, "last": 368, "role": "exposition", "reconstructionLines": [108], "printedCrossReferences": []}
+{"unit": 634, "file": "appendices/a-syntax-and-theories.tex", "first": 370, "last": 371, "role": "exposition", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 635, "file": "appendices/a-syntax-and-theories.tex", "first": 373, "last": 400, "role": "exposition", "reconstructionLines": [109], "printedCrossReferences": [], "literatureKeys": ["Aczel"]}
+{"unit": 636, "file": "appendices/a-syntax-and-theories.tex", "first": 402, "last": 408, "role": "definition", "reconstructionLines": [109], "printedCrossReferences": ["A.4"]}
+{"unit": 637, "file": "appendices/a-syntax-and-theories.tex", "first": 409, "last": 409, "role": "definition", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 638, "file": "appendices/a-syntax-and-theories.tex", "first": 411, "last": 414, "role": "exposition", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 639, "file": "appendices/a-syntax-and-theories.tex", "first": 416, "last": 418, "role": "exposition", "reconstructionLines": [109], "printedCrossReferences": [], "literatureKeys": ["Wissmann"]}
+{"unit": 640, "file": "appendices/a-syntax-and-theories.tex", "first": 420, "last": 424, "role": "theorem", "reconstructionLines": [109], "printedCrossReferences": ["A.5"]}
+{"unit": 641, "file": "appendices/a-syntax-and-theories.tex", "first": 425, "last": 425, "role": "theorem", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 642, "file": "appendices/a-syntax-and-theories.tex", "first": 426, "last": 431, "role": "proof", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 643, "file": "appendices/a-syntax-and-theories.tex", "first": 433, "last": 449, "role": "proof", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 644, "file": "appendices/a-syntax-and-theories.tex", "first": 450, "last": 450, "role": "proof", "reconstructionLines": [109], "printedCrossReferences": []}
+{"unit": 645, "file": "appendices/a-syntax-and-theories.tex", "first": 452, "last": 453, "role": "exposition", "reconstructionLines": [110], "printedCrossReferences": []}
+{"unit": 646, "file": "appendices/a-syntax-and-theories.tex", "first": 455, "last": 501, "role": "exposition", "reconstructionLines": [110], "printedCrossReferences": ["A.1"], "literatureKeys": ["HP", "HH", "HH"]}
+{"unit": 647, "file": "appendices/a-syntax-and-theories.tex", "first": 503, "last": 514, "role": "exposition", "reconstructionLines": [110], "printedCrossReferences": []}
+{"unit": 648, "file": "appendices/a-syntax-and-theories.tex", "first": 516, "last": 527, "role": "theorem", "reconstructionLines": [110], "printedCrossReferences": ["A.6"]}
+{"unit": 649, "file": "appendices/a-syntax-and-theories.tex", "first": 528, "last": 528, "role": "theorem", "reconstructionLines": [110], "printedCrossReferences": []}
+{"unit": 650, "file": "appendices/a-syntax-and-theories.tex", "first": 529, "last": 531, "role": "proof", "reconstructionLines": [110], "printedCrossReferences": ["A.5"]}
+{"unit": 651, "file": "appendices/a-syntax-and-theories.tex", "first": 532, "last": 532, "role": "proof", "reconstructionLines": [110], "printedCrossReferences": []}
+{"unit": 652, "file": "appendices/a-syntax-and-theories.tex", "first": 534, "last": 540, "role": "exposition", "reconstructionLines": [110], "printedCrossReferences": ["4.4"]}
+{"unit": 653, "file": "appendices/a-syntax-and-theories.tex", "first": 542, "last": 549, "role": "lemma", "reconstructionLines": [111], "printedCrossReferences": ["A.7"]}
+{"unit": 654, "file": "appendices/a-syntax-and-theories.tex", "first": 550, "last": 550, "role": "lemma", "reconstructionLines": [111], "printedCrossReferences": []}
+{"unit": 655, "file": "appendices/a-syntax-and-theories.tex", "first": 551, "last": 561, "role": "proof", "reconstructionLines": [111], "printedCrossReferences": []}
+{"unit": 656, "file": "appendices/a-syntax-and-theories.tex", "first": 562, "last": 562, "role": "proof", "reconstructionLines": [111], "printedCrossReferences": []}
+{"unit": 657, "file": "appendices/a-syntax-and-theories.tex", "first": 564, "last": 568, "role": "exposition", "reconstructionLines": [111], "printedCrossReferences": [], "literatureKeys": ["CGHRangeI", "CGHRangeII"]}
+{"unit": 658, "file": "appendices/a-syntax-and-theories.tex", "first": 570, "last": 586, "role": "exposition", "reconstructionLines": [111], "printedCrossReferences": ["A.7"], "literatureKeys": ["CGHRangeI"]}
+{"unit": 659, "file": "appendices/a-syntax-and-theories.tex", "first": 588, "last": 594, "role": "exposition", "reconstructionLines": [111], "printedCrossReferences": ["A.7"]}
+{"unit": 660, "file": "appendices/a-syntax-and-theories.tex", "first": 596, "last": 597, "role": "exposition", "reconstructionLines": [112], "printedCrossReferences": []}
+{"unit": 661, "file": "appendices/a-syntax-and-theories.tex", "first": 599, "last": 623, "role": "exposition", "reconstructionLines": [112], "printedCrossReferences": ["A.5"]}
+{"unit": 662, "file": "main.tex", "first": 40, "last": 40, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 663, "file": "appendices/b-three-point-cosheaves.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 664, "file": "appendices/b-three-point-cosheaves.tex", "first": 3, "last": 3, "role": "exposition", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 665, "file": "appendices/b-three-point-cosheaves.tex", "first": 5, "last": 7, "role": "exposition", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 666, "file": "appendices/b-three-point-cosheaves.tex", "first": 9, "last": 15, "role": "proposition", "reconstructionLines": [113], "printedCrossReferences": ["B.1"]}
+{"unit": 667, "file": "appendices/b-three-point-cosheaves.tex", "first": 16, "last": 16, "role": "proposition", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 668, "file": "appendices/b-three-point-cosheaves.tex", "first": 17, "last": 43, "role": "proof", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 669, "file": "appendices/b-three-point-cosheaves.tex", "first": 44, "last": 44, "role": "proof", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 670, "file": "appendices/b-three-point-cosheaves.tex", "first": 46, "last": 59, "role": "exposition", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 671, "file": "appendices/b-three-point-cosheaves.tex", "first": 61, "last": 81, "role": "exposition", "reconstructionLines": [113], "printedCrossReferences": []}
+{"unit": 672, "file": "appendices/b-three-point-cosheaves.tex", "first": 83, "last": 88, "role": "proposition", "reconstructionLines": [114], "printedCrossReferences": ["B.2"]}
+{"unit": 673, "file": "appendices/b-three-point-cosheaves.tex", "first": 89, "last": 89, "role": "proposition", "reconstructionLines": [114], "printedCrossReferences": []}
+{"unit": 674, "file": "appendices/b-three-point-cosheaves.tex", "first": 90, "last": 93, "role": "proof", "reconstructionLines": [114], "printedCrossReferences": ["8.7"]}
+{"unit": 675, "file": "appendices/b-three-point-cosheaves.tex", "first": 95, "last": 111, "role": "proof", "reconstructionLines": [114], "printedCrossReferences": []}
+{"unit": 676, "file": "appendices/b-three-point-cosheaves.tex", "first": 113, "last": 126, "role": "proof", "reconstructionLines": [114], "printedCrossReferences": []}
+{"unit": 677, "file": "appendices/b-three-point-cosheaves.tex", "first": 128, "last": 132, "role": "proof", "reconstructionLines": [114], "printedCrossReferences": []}
+{"unit": 678, "file": "appendices/b-three-point-cosheaves.tex", "first": 133, "last": 133, "role": "proof", "reconstructionLines": [114], "printedCrossReferences": []}
+{"unit": 679, "file": "appendices/b-three-point-cosheaves.tex", "first": 135, "last": 135, "role": "exposition", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 680, "file": "appendices/b-three-point-cosheaves.tex", "first": 137, "last": 147, "role": "proposition", "reconstructionLines": [115], "printedCrossReferences": ["B.3"]}
+{"unit": 681, "file": "appendices/b-three-point-cosheaves.tex", "first": 148, "last": 148, "role": "proposition", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 682, "file": "appendices/b-three-point-cosheaves.tex", "first": 149, "last": 166, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 683, "file": "appendices/b-three-point-cosheaves.tex", "first": 168, "last": 183, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 684, "file": "appendices/b-three-point-cosheaves.tex", "first": 185, "last": 193, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 685, "file": "appendices/b-three-point-cosheaves.tex", "first": 195, "last": 210, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 686, "file": "appendices/b-three-point-cosheaves.tex", "first": 212, "last": 223, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 687, "file": "appendices/b-three-point-cosheaves.tex", "first": 224, "last": 224, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 688, "file": "appendices/b-three-point-cosheaves.tex", "first": 226, "last": 227, "role": "proposition", "reconstructionLines": [115], "printedCrossReferences": ["B.4"]}
+{"unit": 689, "file": "appendices/b-three-point-cosheaves.tex", "first": 228, "last": 228, "role": "proposition", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 690, "file": "appendices/b-three-point-cosheaves.tex", "first": 229, "last": 240, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 691, "file": "appendices/b-three-point-cosheaves.tex", "first": 242, "last": 249, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 692, "file": "appendices/b-three-point-cosheaves.tex", "first": 250, "last": 250, "role": "proof", "reconstructionLines": [115], "printedCrossReferences": []}
+{"unit": 693, "file": "appendices/b-three-point-cosheaves.tex", "first": 252, "last": 252, "role": "exposition", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 694, "file": "appendices/b-three-point-cosheaves.tex", "first": 254, "last": 255, "role": "exposition", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 695, "file": "appendices/b-three-point-cosheaves.tex", "first": 256, "last": 258, "role": "lemma", "reconstructionLines": [116], "printedCrossReferences": ["B.5"]}
+{"unit": 696, "file": "appendices/b-three-point-cosheaves.tex", "first": 259, "last": 259, "role": "lemma", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 697, "file": "appendices/b-three-point-cosheaves.tex", "first": 260, "last": 274, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 698, "file": "appendices/b-three-point-cosheaves.tex", "first": 275, "last": 275, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 699, "file": "appendices/b-three-point-cosheaves.tex", "first": 277, "last": 297, "role": "exposition", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 700, "file": "appendices/b-three-point-cosheaves.tex", "first": 299, "last": 303, "role": "exposition", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 701, "file": "appendices/b-three-point-cosheaves.tex", "first": 305, "last": 307, "role": "lemma", "reconstructionLines": [116], "printedCrossReferences": ["B.6"]}
+{"unit": 702, "file": "appendices/b-three-point-cosheaves.tex", "first": 308, "last": 308, "role": "lemma", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 703, "file": "appendices/b-three-point-cosheaves.tex", "first": 309, "last": 314, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 704, "file": "appendices/b-three-point-cosheaves.tex", "first": 316, "last": 320, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 705, "file": "appendices/b-three-point-cosheaves.tex", "first": 322, "last": 338, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 706, "file": "appendices/b-three-point-cosheaves.tex", "first": 339, "last": 339, "role": "proof", "reconstructionLines": [116], "printedCrossReferences": []}
+{"unit": 707, "file": "appendices/b-three-point-cosheaves.tex", "first": 341, "last": 341, "role": "exposition", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 708, "file": "appendices/b-three-point-cosheaves.tex", "first": 343, "last": 345, "role": "exposition", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 709, "file": "appendices/b-three-point-cosheaves.tex", "first": 347, "last": 362, "role": "exposition", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 710, "file": "appendices/b-three-point-cosheaves.tex", "first": 364, "last": 377, "role": "theorem", "reconstructionLines": [117], "printedCrossReferences": ["B.7"]}
+{"unit": 711, "file": "appendices/b-three-point-cosheaves.tex", "first": 378, "last": 378, "role": "theorem", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 712, "file": "appendices/b-three-point-cosheaves.tex", "first": 380, "last": 386, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 713, "file": "appendices/b-three-point-cosheaves.tex", "first": 388, "last": 412, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 714, "file": "appendices/b-three-point-cosheaves.tex", "first": 414, "last": 426, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 715, "file": "appendices/b-three-point-cosheaves.tex", "first": 428, "last": 451, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 716, "file": "appendices/b-three-point-cosheaves.tex", "first": 453, "last": 463, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 717, "file": "appendices/b-three-point-cosheaves.tex", "first": 465, "last": 488, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 718, "file": "appendices/b-three-point-cosheaves.tex", "first": 489, "last": 489, "role": "proof", "reconstructionLines": [117], "printedCrossReferences": []}
+{"unit": 719, "file": "appendices/b-three-point-cosheaves.tex", "first": 491, "last": 491, "role": "exposition", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 720, "file": "appendices/b-three-point-cosheaves.tex", "first": 493, "last": 499, "role": "proposition", "reconstructionLines": [118], "printedCrossReferences": ["B.8"]}
+{"unit": 721, "file": "appendices/b-three-point-cosheaves.tex", "first": 500, "last": 500, "role": "proposition", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 722, "file": "appendices/b-three-point-cosheaves.tex", "first": 501, "last": 511, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": ["B.6", "B.7"]}
+{"unit": 723, "file": "appendices/b-three-point-cosheaves.tex", "first": 513, "last": 516, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 724, "file": "appendices/b-three-point-cosheaves.tex", "first": 518, "last": 535, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": ["B.5"]}
+{"unit": 725, "file": "appendices/b-three-point-cosheaves.tex", "first": 536, "last": 536, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 726, "file": "appendices/b-three-point-cosheaves.tex", "first": 538, "last": 542, "role": "corollary", "reconstructionLines": [118], "printedCrossReferences": ["B.9"]}
+{"unit": 727, "file": "appendices/b-three-point-cosheaves.tex", "first": 543, "last": 543, "role": "corollary", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 728, "file": "appendices/b-three-point-cosheaves.tex", "first": 544, "last": 553, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 729, "file": "appendices/b-three-point-cosheaves.tex", "first": 555, "last": 570, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": ["B.8"]}
+{"unit": 730, "file": "appendices/b-three-point-cosheaves.tex", "first": 571, "last": 571, "role": "proof", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 731, "file": "appendices/b-three-point-cosheaves.tex", "first": 573, "last": 585, "role": "exposition", "reconstructionLines": [118], "printedCrossReferences": ["8.7"]}
+{"unit": 732, "file": "appendices/b-three-point-cosheaves.tex", "first": 587, "last": 590, "role": "exposition", "reconstructionLines": [118], "printedCrossReferences": []}
+{"unit": 733, "file": "appendices/b-three-point-cosheaves.tex", "first": 592, "last": 595, "role": "proposition", "reconstructionLines": [119], "printedCrossReferences": ["B.10"]}
+{"unit": 734, "file": "appendices/b-three-point-cosheaves.tex", "first": 596, "last": 596, "role": "proposition", "reconstructionLines": [119], "printedCrossReferences": []}
+{"unit": 735, "file": "appendices/b-three-point-cosheaves.tex", "first": 597, "last": 608, "role": "proof", "reconstructionLines": [119], "printedCrossReferences": []}
+{"unit": 736, "file": "appendices/b-three-point-cosheaves.tex", "first": 610, "last": 615, "role": "proof", "reconstructionLines": [119], "printedCrossReferences": []}
+{"unit": 737, "file": "appendices/b-three-point-cosheaves.tex", "first": 616, "last": 616, "role": "proof", "reconstructionLines": [119], "printedCrossReferences": []}
+{"unit": 738, "file": "main.tex", "first": 41, "last": 41, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 739, "file": "appendices/c-section-lifting.tex", "first": 1, "last": 2, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 740, "file": "appendices/c-section-lifting.tex", "first": 4, "last": 6, "role": "exposition", "reconstructionLines": [120], "printedCrossReferences": ["3.1"]}
+{"unit": 741, "file": "appendices/c-section-lifting.tex", "first": 8, "last": 16, "role": "exposition", "reconstructionLines": [120], "printedCrossReferences": []}
+{"unit": 742, "file": "appendices/c-section-lifting.tex", "first": 18, "last": 28, "role": "exposition", "reconstructionLines": [120], "printedCrossReferences": []}
+{"unit": 743, "file": "appendices/c-section-lifting.tex", "first": 30, "last": 30, "role": "exposition", "reconstructionLines": [120], "printedCrossReferences": []}
+{"unit": 744, "file": "appendices/c-section-lifting.tex", "first": 32, "last": 43, "role": "exposition", "reconstructionLines": [120], "printedCrossReferences": []}
+{"unit": 745, "file": "appendices/c-section-lifting.tex", "first": 45, "last": 61, "role": "proposition", "reconstructionLines": [120], "printedCrossReferences": ["C.1"]}
+{"unit": 746, "file": "appendices/c-section-lifting.tex", "first": 62, "last": 62, "role": "proposition", "reconstructionLines": [120], "printedCrossReferences": []}
+{"unit": 747, "file": "appendices/c-section-lifting.tex", "first": 64, "last": 73, "role": "proof", "reconstructionLines": [121], "printedCrossReferences": []}
+{"unit": 748, "file": "appendices/c-section-lifting.tex", "first": 75, "last": 84, "role": "proof", "reconstructionLines": [121], "printedCrossReferences": []}
+{"unit": 749, "file": "appendices/c-section-lifting.tex", "first": 86, "last": 95, "role": "proof", "reconstructionLines": [121], "printedCrossReferences": []}
+{"unit": 750, "file": "appendices/c-section-lifting.tex", "first": 97, "last": 126, "role": "proof", "reconstructionLines": [121], "printedCrossReferences": []}
+{"unit": 751, "file": "appendices/c-section-lifting.tex", "first": 128, "last": 131, "role": "proof", "reconstructionLines": [121], "printedCrossReferences": []}
+{"unit": 752, "file": "appendices/c-section-lifting.tex", "first": 133, "last": 160, "role": "proof", "reconstructionLines": [121, 122], "printedCrossReferences": []}
+{"unit": 753, "file": "appendices/c-section-lifting.tex", "first": 162, "last": 196, "role": "proof", "reconstructionLines": [122], "printedCrossReferences": ["3.1"]}
+{"unit": 754, "file": "appendices/c-section-lifting.tex", "first": 198, "last": 203, "role": "proof", "reconstructionLines": [122], "printedCrossReferences": []}
+{"unit": 755, "file": "appendices/c-section-lifting.tex", "first": 204, "last": 204, "role": "proof", "reconstructionLines": [122], "printedCrossReferences": []}
+{"unit": 756, "file": "appendices/c-section-lifting.tex", "first": 206, "last": 222, "role": "exposition", "reconstructionLines": [122, 123], "printedCrossReferences": [], "literatureKeys": ["Lengyel2006", "Lengyel2006"]}
+{"unit": 757, "file": "main.tex", "first": 42, "last": 42, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 758, "file": "appendices/d-faithful-family.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 759, "file": "appendices/d-faithful-family.tex", "first": 3, "last": 9, "role": "exposition", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 760, "file": "appendices/d-faithful-family.tex", "first": 11, "last": 19, "role": "exposition", "reconstructionLines": [124], "printedCrossReferences": ["7.1"]}
+{"unit": 761, "file": "appendices/d-faithful-family.tex", "first": 21, "last": 28, "role": "theorem", "reconstructionLines": [124], "printedCrossReferences": ["D.1"]}
+{"unit": 762, "file": "appendices/d-faithful-family.tex", "first": 29, "last": 29, "role": "theorem", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 763, "file": "appendices/d-faithful-family.tex", "first": 30, "last": 37, "role": "proof", "reconstructionLines": [124], "printedCrossReferences": ["7.1"]}
+{"unit": 764, "file": "appendices/d-faithful-family.tex", "first": 39, "last": 49, "role": "proof", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 765, "file": "appendices/d-faithful-family.tex", "first": 51, "last": 58, "role": "proof", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 766, "file": "appendices/d-faithful-family.tex", "first": 59, "last": 59, "role": "proof", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 767, "file": "appendices/d-faithful-family.tex", "first": 61, "last": 62, "role": "exposition", "reconstructionLines": [124], "printedCrossReferences": [], "literatureKeys": ["DPM"]}
+{"unit": 768, "file": "appendices/d-faithful-family.tex", "first": 64, "last": 89, "role": "exposition", "reconstructionLines": [124], "printedCrossReferences": []}
+{"unit": 769, "file": "appendices/d-faithful-family.tex", "first": 91, "last": 91, "role": "exposition", "reconstructionLines": [125], "printedCrossReferences": []}
+{"unit": 770, "file": "appendices/d-faithful-family.tex", "first": 93, "last": 105, "role": "corollary", "reconstructionLines": [125], "printedCrossReferences": ["D.2"]}
+{"unit": 771, "file": "appendices/d-faithful-family.tex", "first": 106, "last": 106, "role": "corollary", "reconstructionLines": [125], "printedCrossReferences": []}
+{"unit": 772, "file": "appendices/d-faithful-family.tex", "first": 107, "last": 118, "role": "proof", "reconstructionLines": [125], "printedCrossReferences": ["7.3"]}
+{"unit": 773, "file": "appendices/d-faithful-family.tex", "first": 119, "last": 119, "role": "proof", "reconstructionLines": [125], "printedCrossReferences": []}
+{"unit": 774, "file": "appendices/d-faithful-family.tex", "first": 121, "last": 140, "role": "exposition", "reconstructionLines": [125], "printedCrossReferences": []}
+{"unit": 775, "file": "appendices/d-faithful-family.tex", "first": 142, "last": 145, "role": "exposition", "reconstructionLines": [125], "printedCrossReferences": ["7.2"]}
+{"unit": 776, "file": "appendices/d-faithful-family.tex", "first": 148, "last": 148, "role": "exposition", "reconstructionLines": [126], "printedCrossReferences": []}
+{"unit": 777, "file": "appendices/d-faithful-family.tex", "first": 150, "last": 179, "role": "exposition", "reconstructionLines": [126], "printedCrossReferences": []}
+{"unit": 778, "file": "appendices/d-faithful-family.tex", "first": 181, "last": 181, "role": "exposition", "reconstructionLines": [126], "printedCrossReferences": []}
+{"unit": 779, "file": "appendices/d-faithful-family.tex", "first": 183, "last": 200, "role": "exposition", "reconstructionLines": [126], "printedCrossReferences": ["D.2"]}
+{"unit": 780, "file": "main.tex", "first": 43, "last": 43, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 781, "file": "appendices/e-reading-lean-proofs.tex", "first": 1, "last": 1, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 782, "file": "appendices/e-reading-lean-proofs.tex", "first": 3, "last": 4, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 783, "file": "appendices/e-reading-lean-proofs.tex", "first": 6, "last": 6, "role": "exposition", "reconstructionLines": [127], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 784, "file": "appendices/e-reading-lean-proofs.tex", "first": 8, "last": 30, "role": "exposition", "reconstructionLines": [127], "printedCrossReferences": ["4.7"], "taggedProofLinks": []}
+{"unit": 785, "file": "appendices/e-reading-lean-proofs.tex", "first": 32, "last": 40, "role": "exposition", "reconstructionLines": [127], "printedCrossReferences": [], "taggedProofLinks": [39, 40]}
+{"unit": 786, "file": "appendices/e-reading-lean-proofs.tex", "first": 42, "last": 42, "role": "exposition", "reconstructionLines": [128], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 787, "file": "appendices/e-reading-lean-proofs.tex", "first": 44, "last": 55, "role": "exposition", "reconstructionLines": [128], "printedCrossReferences": ["4.8"], "taggedProofLinks": []}
+{"unit": 788, "file": "appendices/e-reading-lean-proofs.tex", "first": 57, "last": 68, "role": "exposition", "reconstructionLines": [128], "printedCrossReferences": ["4.8"], "taggedProofLinks": [64, 65, 68]}
+{"unit": 789, "file": "appendices/e-reading-lean-proofs.tex", "first": 70, "last": 70, "role": "exposition", "reconstructionLines": [129], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 790, "file": "appendices/e-reading-lean-proofs.tex", "first": 72, "last": 89, "role": "exposition", "reconstructionLines": [129], "printedCrossReferences": ["8.9"], "taggedProofLinks": []}
+{"unit": 791, "file": "appendices/e-reading-lean-proofs.tex", "first": 91, "last": 105, "role": "exposition", "reconstructionLines": [129], "printedCrossReferences": ["8.9"], "taggedProofLinks": [99, 100, 101, 104]}
+{"unit": 792, "file": "appendices/e-reading-lean-proofs.tex", "first": 107, "last": 107, "role": "exposition", "reconstructionLines": [130], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 793, "file": "appendices/e-reading-lean-proofs.tex", "first": 109, "last": 114, "role": "exposition", "reconstructionLines": [130], "printedCrossReferences": ["3.1"], "taggedProofLinks": []}
+{"unit": 794, "file": "appendices/e-reading-lean-proofs.tex", "first": 116, "last": 127, "role": "exposition", "reconstructionLines": [130], "printedCrossReferences": [], "taggedProofLinks": [127]}
+{"unit": 795, "file": "appendices/e-reading-lean-proofs.tex", "first": 129, "last": 134, "role": "exposition", "reconstructionLines": [130], "printedCrossReferences": ["C.1"], "taggedProofLinks": [134]}
+{"unit": 796, "file": "appendices/e-reading-lean-proofs.tex", "first": 136, "last": 136, "role": "exposition", "reconstructionLines": [131], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 797, "file": "appendices/e-reading-lean-proofs.tex", "first": 138, "last": 147, "role": "exposition", "reconstructionLines": [131], "printedCrossReferences": ["5.3"], "taggedProofLinks": []}
+{"unit": 798, "file": "appendices/e-reading-lean-proofs.tex", "first": 149, "last": 166, "role": "exposition", "reconstructionLines": [131], "printedCrossReferences": [], "taggedProofLinks": [166]}
+{"unit": 799, "file": "appendices/e-reading-lean-proofs.tex", "first": 168, "last": 168, "role": "exposition", "reconstructionLines": [132], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 800, "file": "appendices/e-reading-lean-proofs.tex", "first": 170, "last": 179, "role": "exposition", "reconstructionLines": [132], "printedCrossReferences": ["8.6"], "taggedProofLinks": []}
+{"unit": 801, "file": "appendices/e-reading-lean-proofs.tex", "first": 181, "last": 188, "role": "exposition", "reconstructionLines": [132], "printedCrossReferences": [], "taggedProofLinks": [187, 188]}
+{"unit": 802, "file": "appendices/e-reading-lean-proofs.tex", "first": 190, "last": 190, "role": "exposition", "reconstructionLines": [133], "printedCrossReferences": [], "taggedProofLinks": []}
+{"unit": 803, "file": "appendices/e-reading-lean-proofs.tex", "first": 192, "last": 210, "role": "exposition", "reconstructionLines": [133], "printedCrossReferences": ["9.6"], "taggedProofLinks": [209, 210]}
+{"unit": 804, "file": "appendices/e-reading-lean-proofs.tex", "first": 212, "last": 239, "role": "exposition", "reconstructionLines": [133], "printedCrossReferences": ["9.7"], "taggedProofLinks": [236, 237, 238, 239]}
+{"unit": 805, "file": "main.tex", "first": 44, "last": 44, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 806, "file": "bibliography.tex", "first": 1, "last": 3, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 807, "file": "bibliography.tex", "first": 4, "last": 8, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 808, "file": "bibliography.tex", "first": 10, "last": 12, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 809, "file": "bibliography.tex", "first": 14, "last": 16, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 810, "file": "bibliography.tex", "first": 18, "last": 21, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 811, "file": "bibliography.tex", "first": 23, "last": 26, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 812, "file": "bibliography.tex", "first": 28, "last": 33, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 813, "file": "bibliography.tex", "first": 35, "last": 40, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 814, "file": "bibliography.tex", "first": 42, "last": 45, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 815, "file": "bibliography.tex", "first": 47, "last": 50, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 816, "file": "bibliography.tex", "first": 52, "last": 55, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 817, "file": "bibliography.tex", "first": 57, "last": 61, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 818, "file": "bibliography.tex", "first": 63, "last": 66, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 819, "file": "bibliography.tex", "first": 68, "last": 72, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 820, "file": "bibliography.tex", "first": 74, "last": 79, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 821, "file": "bibliography.tex", "first": 81, "last": 85, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 822, "file": "bibliography.tex", "first": 87, "last": 94, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 823, "file": "bibliography.tex", "first": 96, "last": 100, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 824, "file": "bibliography.tex", "first": 102, "last": 106, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 825, "file": "bibliography.tex", "first": 108, "last": 110, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 826, "file": "bibliography.tex", "first": 112, "last": 115, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 827, "file": "bibliography.tex", "first": 117, "last": 123, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 828, "file": "bibliography.tex", "first": 125, "last": 128, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 829, "file": "bibliography.tex", "first": 130, "last": 136, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 830, "file": "bibliography.tex", "first": 138, "last": 140, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 831, "file": "bibliography.tex", "first": 142, "last": 145, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 832, "file": "bibliography.tex", "first": 147, "last": 150, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 833, "file": "bibliography.tex", "first": 152, "last": 155, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 834, "file": "bibliography.tex", "first": 157, "last": 161, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 835, "file": "bibliography.tex", "first": 163, "last": 166, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 836, "file": "bibliography.tex", "first": 168, "last": 170, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 837, "file": "bibliography.tex", "first": 172, "last": 176, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 838, "file": "bibliography.tex", "first": 178, "last": 181, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 839, "file": "bibliography.tex", "first": 183, "last": 186, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 840, "file": "bibliography.tex", "first": 188, "last": 190, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 841, "file": "bibliography.tex", "first": 192, "last": 196, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 842, "file": "bibliography.tex", "first": 198, "last": 201, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 843, "file": "bibliography.tex", "first": 203, "last": 206, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 844, "file": "bibliography.tex", "first": 208, "last": 212, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 845, "file": "bibliography.tex", "first": 214, "last": 219, "role": "bibliography", "reconstructionLines": [], "printedCrossReferences": []}
+{"unit": 846, "file": "main.tex", "first": 45, "last": 45, "role": "exposition", "reconstructionLines": [], "printedCrossReferences": []}

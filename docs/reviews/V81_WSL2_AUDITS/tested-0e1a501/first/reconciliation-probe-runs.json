@@ -1,0 +1,39 @@
+{
+  "tested_commit": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+  "lean": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "flags": [
+    "-j1",
+    "-M2500",
+    "-DwarningAsError=true"
+  ],
+  "maximum_seconds_per_process": 90,
+  "runs": [
+    {
+      "file": "DominicalOne.lean",
+      "sha256": "3dd621e18f782190d3dad330af89ced70679981d18fd60eda21a2bfaa4d0a7fd",
+      "output": "DominicalOne.output",
+      "output_sha256": "fb0e24310e612047be664b5379b973fd8a8a42dad8246741d26aaf749cca40c8",
+      "started_utc": "2026-11-23T21:17:09.988330+00:00",
+      "seconds": 2.831,
+      "exit": 0
+    },
+    {
+      "file": "Visser.lean",
+      "sha256": "cadc7970ba247bb2fabdfdfadb4f77c83b98c70ba9b84ff35fb89a11bcf49c21",
+      "output": "Visser.output",
+      "output_sha256": "7cc2c15862a99629c448abc8140ae28f8e5c50c11461494a466d6c190d4e8283",
+      "started_utc": "2026-11-23T21:17:12.819653+00:00",
+      "seconds": 4.003,
+      "exit": 0
+    },
+    {
+      "file": "CompletePresentation.lean",
+      "sha256": "71520ab8563c61f6a5897c07f85ed093a7c750027aa5e848ef928af49d3f2d0a",
+      "output": "CompletePresentation.output",
+      "output_sha256": "0b8f398c69fabf1e27c0ed1a9dae856b45be8fe10b2e8ca726fafb74a2078084",
+      "started_utc": "2026-11-23T21:17:16.823125+00:00",
+      "seconds": 3.688,
+      "exit": 0
+    }
+  ]
+}

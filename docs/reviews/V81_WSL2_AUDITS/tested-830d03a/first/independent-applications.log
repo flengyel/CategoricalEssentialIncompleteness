@@ -1,0 +1,86 @@
+@ProgramOrder.exists_inseparable : ∀ {C : Type u_2} [inst : Category.{u_1, u_2} C] [inst_1 : PCategoryStruct C]
+  [inst_2 : PCategory C] {U : C} {Z : RestrictionSubobjects.Tot C} (hZ : IsTerminal Z)
+  (τ : PCategoryStruct.nearProd U U ⟶ U),
+  RecursionCategory.IsTuringMorphism τ →
+    ∀ [inst_3 : HasZeroMorphisms C] [inst_4 : RestrictionZero C],
+      (∃ X, 𝟙 X ≠ 0) →
+        ProgramOrder.CompatibleJoinsPreservedByPrecomposition C →
+          ∀ (δ : PCategoryStruct.nearProd U U ⟶ U),
+            PCategoryStruct.diag U ≫ δ = 𝟙 U →
+              δ ≫ PCategoryStruct.diag U = RestrictionCategory.rst δ →
+                ∃ a b, a ⊓ b = ⊥ ∧ ¬∃ c n, PairComplementary c n ∧ a ≤ c ∧ b ≤ n
+@ProgramOrder.terminal_predicate_of_coded_order : ∀ {C : Type u_2} [inst : Category.{u_1, u_2} C]
+  [inst_1 : PCategoryStruct C] [inst_2 : PCategory C] {U : C} {Z : RestrictionSubobjects.Tot C} (hZ : IsTerminal Z)
+  (τ : PCategoryStruct.nearProd U U ⟶ U),
+  RecursionCategory.IsTuringMorphism τ →
+    ∀ [inst_3 : HasZeroMorphisms C] [inst_4 : RestrictionZero C],
+      (∃ X, 𝟙 X ≠ 0) →
+        ∀ (pair : PCategoryStruct.nearProd U U ⟶ U) (d : Idem U),
+          (∀ (k j : Z.obj ⟶ U),
+              RestrictionCategory.isTotal k →
+                RestrictionCategory.isTotal j →
+                  (Idem.pull (PCategoryStruct.partialPairing k j ≫ pair) d = ⊤ ↔
+                    ArrowLE (ProgramOrder.program hZ τ k) (ProgramOrder.program hZ τ j))) →
+            ∃ b, b ≠ ⊥ ∧ b ≠ ⊤
+EffectiveExtensibility.exists_complete_presentation_without_extender : ∃ T,
+  Entailment.Consistent T ∧
+    (ComputablePred fun w => ∃ p, Encodable.encode p = w ∧ p ∈ T) ∧
+      ∀ (additional : ℕ → Set (Sentence Janiczak.FOL.L)),
+        (∃ i, additional i = ∅) →
+          ¬∃ q, ∀ (i : ℕ), Entailment.Consistent (T ∪ additional i) → ¬T ∪ additional i ⊢ q i ∧ ¬T ∪ additional i ⊢ ∼q i
+@least_closed_image : ∀ {D : Type u_2} [inst : Category.{u_1, u_2} D] {F : D} [inst_1 : Regular D] (H : Over F ⥤ Over F)
+  (A : Endofunctor.Algebra H),
+  PreservesUnderlyingRegularEpis H →
+    ∀ (hA : IsInitial A),
+      ClosedUnder H (image.ι A.a.hom) ∧ ∀ {U : D} (m : U ⟶ F) [Mono m], ClosedUnder H m → ∃ w, w ≫ m = image.ι A.a.hom
+@RulePresentation.least_theorem_subobject : ∀ {D : Type u_2} [inst : Category.{u_1, u_2} D] [inst_1 : Regular D] {F : D}
+  {N : ℕ} (R : RulePresentation F N) [inst_2 : HasFiniteCoproducts D] (A : Endofunctor.Algebra R.inference)
+  (hA : IsInitial A),
+  ClosedUnder R.inference (image.ι A.a.hom) ∧
+    ∀ {U : D} (m : U ⟶ F) [Mono m], ClosedUnder R.inference m → ∃ w, w ≫ m = image.ι A.a.hom
+ArithmeticUniformIndependent.uniform_independent_sentences : ∃ q,
+  ∀ (e : ℕ),
+    Entailment.Consistent (ArithmeticNamedProofConnectives.system (ArithmeticUniformIndependent.gamma e)) →
+      ∃ φ,
+        NamedFiniteSyntax.Formula.freeVariables φ = [] ∧
+          NamedArithmeticSignature.formulaCode φ =
+              ↑↑((ConcreteCategory.hom ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map q))
+                    (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ e)) ∧
+            ¬SyntacticNamedHilbert.Derives NamedArithmeticSignature.functionSymbols
+                  NamedArithmeticSignature.relationSymbols NamedArithmeticSignature.bound
+                  (ArithmeticUniformIndependent.gamma e) φ ∧
+              ¬SyntacticNamedHilbert.Derives NamedArithmeticSignature.functionSymbols
+                  NamedArithmeticSignature.relationSymbols NamedArithmeticSignature.bound
+                  (ArithmeticUniformIndependent.gamma e) (NamedFiniteSyntax.Formula.neg φ)
+ForkFirstOrderApplication.printed_statement : ForkErasureClosure.sentenceTheory ForkInternalIncompleteness.A
+        ForkInternalIncompleteness.B ⊓
+      (Subobject.pullback ForkFirstOrderErasure.firstOrder.sentenceNegation).obj
+        (ForkErasureClosure.sentenceTheory ForkInternalIncompleteness.A ForkInternalIncompleteness.B) =
+    ⊥ ∧
+  (∀ (U : FirstOrderReflection.Theory ForkErasureClosure.proofFamily),
+      ForkErasureClosure.sentenceTheory ForkInternalIncompleteness.A ForkInternalIncompleteness.B ≤ ↑U →
+        ↑U ⊓ (Subobject.pullback ForkFirstOrderErasure.firstOrder.sentenceNegation).obj ↑U = ⊥ →
+          ↑U ⊔ (Subobject.pullback ForkFirstOrderErasure.firstOrder.sentenceNegation).obj ↑U ≠ ⊤) ∧
+    (Subobject.pullback ForkPropositionalEmbedding.embedding).obj
+          (ForkErasureClosure.sentenceTheory ForkInternalIncompleteness.A ForkInternalIncompleteness.B) =
+        Subobject.mk
+          (ForkDerivationImages.LiteralDiagram.theoremInclusion ForkInternalIncompleteness.A
+            ForkInternalIncompleteness.B) ∧
+      ∀ (k : Bool) (Δ : Set (NumericalTuples.Tuple (ForkEndpointSentences.carrier k).dimension))
+        (hΔ : REPred fun x => x ∈ Δ),
+        ForkEndpointSentences.theorems k ⊆ ForkFirstOrderApplication.closureSet k Δ hΔ →
+          (∀ x ∈ ForkFirstOrderApplication.closureSet k Δ hΔ,
+              (ForkEndpointSentences.neg k).toFun x ∉ ForkFirstOrderApplication.closureSet k Δ hΔ) →
+            ∃ x ∉ ForkFirstOrderApplication.closureSet k Δ hΔ,
+              (ForkEndpointSentences.neg k).toFun x ∉ ForkFirstOrderApplication.closureSet k Δ hΔ
+'FirstReader81.miller_with_machine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.class_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.visser' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.synthetic' depends on axioms: [propext]
+'FirstReader81.interpretations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.zero_object_diagonal' depends on axioms: [propext]
+'FirstReader81.unprimed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.domain_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.cuts_and_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.one_arithmetic_morphism' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FirstReader81.each_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]

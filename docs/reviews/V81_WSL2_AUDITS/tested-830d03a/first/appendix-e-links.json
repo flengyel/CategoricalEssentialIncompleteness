@@ -1,0 +1,202 @@
+[
+  {
+    "line": 39,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "start": 27,
+    "end": 56,
+    "span_at_tag": "638ab751e69de27285aa4f1cd1bea9ab7c1bfd27c5daf16d03cd923810f319d8",
+    "span_at_tested_commit": "638ab751e69de27285aa4f1cd1bea9ab7c1bfd27c5daf16d03cd923810f319d8",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 40,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "start": 58,
+    "end": 91,
+    "span_at_tag": "f5695b1a21bd61dc2349b81c197ebd7ec636952808180dd9026e33802378169d",
+    "span_at_tested_commit": "f5695b1a21bd61dc2349b81c197ebd7ec636952808180dd9026e33802378169d",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 64,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean",
+    "start": 43,
+    "end": 75,
+    "span_at_tag": "0a4a57653f78990f0d0ec1dd566a80a524f70eceb261ef5b111ff8b352d5fd62",
+    "span_at_tested_commit": "0a4a57653f78990f0d0ec1dd566a80a524f70eceb261ef5b111ff8b352d5fd62",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 65,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean",
+    "start": 28,
+    "end": 74,
+    "span_at_tag": "ab83421afe837345aeb37aca76cd0e02e644457e34fc442284b89057af9d2d33",
+    "span_at_tested_commit": "ab83421afe837345aeb37aca76cd0e02e644457e34fc442284b89057af9d2d33",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 68,
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "start": 83,
+    "end": 110,
+    "span_at_tag": "786ecd417de58ae216894031626f69892b210a1f9b71ca9550f269a85dbfea8a",
+    "span_at_tested_commit": "786ecd417de58ae216894031626f69892b210a1f9b71ca9550f269a85dbfea8a",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 99,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "start": 32,
+    "end": 56,
+    "span_at_tag": "fe1eabdcce4a38d39368c45ccc8153491fe3f5633b355e8b768844f0af539111",
+    "span_at_tested_commit": "fe1eabdcce4a38d39368c45ccc8153491fe3f5633b355e8b768844f0af539111",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 100,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "start": 85,
+    "end": 92,
+    "span_at_tag": "621113ff6e321f2d9dee4096029d4f9da9c56ed52da0a9dacc8065d71d3235c3",
+    "span_at_tested_commit": "621113ff6e321f2d9dee4096029d4f9da9c56ed52da0a9dacc8065d71d3235c3",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 101,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean",
+    "start": 45,
+    "end": 64,
+    "span_at_tag": "67db0119078e35c6f3855586dd1acc745bb4b379e505580a2376b4595f836d25",
+    "span_at_tested_commit": "67db0119078e35c6f3855586dd1acc745bb4b379e505580a2376b4595f836d25",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 104,
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "start": 114,
+    "end": 145,
+    "span_at_tag": "34ba812f6314a67a8a0f0d0d39873b8c79278cad733f54234921cd741679e017",
+    "span_at_tested_commit": "34ba812f6314a67a8a0f0d0d39873b8c79278cad733f54234921cd741679e017",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 127,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean",
+    "start": 35,
+    "end": 89,
+    "span_at_tag": "eff23ed965f561dd3e34201369729462cc5dfb617df4a79aa66e51c620338882",
+    "span_at_tested_commit": "eff23ed965f561dd3e34201369729462cc5dfb617df4a79aa66e51c620338882",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 134,
+    "file": "Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean",
+    "start": 89,
+    "end": 103,
+    "span_at_tag": "7943807d99585b415d2c3b87d50b3322e0d71087357a65b230290195219b9995",
+    "span_at_tested_commit": "7943807d99585b415d2c3b87d50b3322e0d71087357a65b230290195219b9995",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 166,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean",
+    "start": 68,
+    "end": 111,
+    "span_at_tag": "46616939657351ac293143591553154efe413c09ebc7a83f9090ef9655c9eca8",
+    "span_at_tested_commit": "46616939657351ac293143591553154efe413c09ebc7a83f9090ef9655c9eca8",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 187,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "start": 116,
+    "end": 128,
+    "span_at_tag": "78a9fe47ed9e948e27fe848409422b1f69c84222951d0128dd6707426a72b3e6",
+    "span_at_tested_commit": "78a9fe47ed9e948e27fe848409422b1f69c84222951d0128dd6707426a72b3e6",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 188,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "start": 184,
+    "end": 218,
+    "span_at_tag": "5e24883cabb61b9d3a01968348b82cea0f5eb53c5ec133da5783a2fa96525997",
+    "span_at_tested_commit": "5e24883cabb61b9d3a01968348b82cea0f5eb53c5ec133da5783a2fa96525997",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 209,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "start": 97,
+    "end": 126,
+    "span_at_tag": "4e6057e4d20349ed5b8438b43b558421da4bc11ab3e3a9ba1ba7fa46d02232f0",
+    "span_at_tested_commit": "4e6057e4d20349ed5b8438b43b558421da4bc11ab3e3a9ba1ba7fa46d02232f0",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 210,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "start": 130,
+    "end": 151,
+    "span_at_tag": "2d67909da492479d4f7e6e527428a52d235ce02336d0356a8b8e2fcfc01553e6",
+    "span_at_tested_commit": "2d67909da492479d4f7e6e527428a52d235ce02336d0356a8b8e2fcfc01553e6",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 236,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean",
+    "start": 155,
+    "end": 178,
+    "span_at_tag": "699467bbe3830e51f7abcf5cec7a6f955e0be649d4171b93bfce3dfc504bf786",
+    "span_at_tested_commit": "699467bbe3830e51f7abcf5cec7a6f955e0be649d4171b93bfce3dfc504bf786",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 237,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean",
+    "start": 59,
+    "end": 95,
+    "span_at_tag": "293a7a034248ce3c524cf0e4758fb4ef9710151a220b7c7b51b841c043fb2a05",
+    "span_at_tested_commit": "293a7a034248ce3c524cf0e4758fb4ef9710151a220b7c7b51b841c043fb2a05",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 238,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "start": 139,
+    "end": 175,
+    "span_at_tag": "99034913c7bdfad16ff89199785e1f07eb2e43a82e2f5adec67018fc4ad9d93f",
+    "span_at_tested_commit": "99034913c7bdfad16ff89199785e1f07eb2e43a82e2f5adec67018fc4ad9d93f",
+    "same_span": true,
+    "same_file": true
+  },
+  {
+    "line": 239,
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "start": 327,
+    "end": 342,
+    "span_at_tag": "7ebaf9295c55460d65e0e585b004c92e88d474e197fabbc02c04ff3cadc980a8",
+    "span_at_tested_commit": "7ebaf9295c55460d65e0e585b004c92e88d474e197fabbc02c04ff3cadc980a8",
+    "same_span": true,
+    "same_file": true
+  }
+]

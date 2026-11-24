@@ -1,0 +1,626 @@
+[
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 5,
+  "key": "DPH",
+  "locator": "pp.~594--596, 629",
+  "role": "context",
+  "formalComparison": "The first and modal paragraphs report research questions and the topics of the discussion. No modal fixed-point theorem or GL calculus is used in this derivation."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 98,
+  "key": "Montagna",
+  "locator": null,
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 98,
+  "key": "DPM",
+  "locator": null,
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 101,
+  "key": "Montagna",
+  "locator": "pp.~114--115",
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 125,
+  "key": "Miller2004",
+  "locator": null,
+  "role": "application",
+  "formalComparison": "V46.Miller.exists_isMiller gives an unconditional sequence at the fixed oracle numbering and approximation accuracy. Cut.printed_cut_contrast and fixed_representation_separator prove the two quantifier orders on cut separators."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 127,
+  "key": "BauerHanson",
+  "locator": "Theorem~6.4",
+  "role": "historical theorem H1",
+  "formalComparison": "Thm 6.4 yields an epi N→R_Ded inside the parameterized realizability topos T_μ. V46.Miller.exists_isMiller concerns a point of the external Hilbert cube, and the project constructs E_a and its total subcategory. The realizability topos, its internal Dedekind-real object, and that epi are external."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 162,
+  "key": "RosoliniThesis",
+  "locator": null,
+  "role": "history",
+  "formalComparison": "Introduction §1.4 situates the development of P-categories. No individual thesis construction enters the paper's proofs."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 162,
+  "key": "Rosolini",
+  "locator": null,
+  "role": "history",
+  "formalComparison": "Introduction §1.4 situates dominical, P- and restriction categories. The actual P-category/restriction product equivalence is separately proved."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 163,
+  "key": "Heller",
+  "locator": "Section~5",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 165,
+  "key": "CockettLack",
+  "locator": null,
+  "role": "definition/application",
+  "formalComparison": "The repository's CategoryTheory.RestrictionCategory gives the four restriction identities. V46.KaroubiRestriction and V46.PartialMaps implement split restrictions and monic spans; V46.PartialMaps.totalEquivalence and the strict inverse in V46PartialMapTotals.lean realize the asserted total category."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 166,
+  "key": "Heller",
+  "locator": "Sections~8--9",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 168,
+  "key": "Lengyel2004",
+  "locator": null,
+  "role": "history",
+  "formalComparison": "The text locates the subject of the faithful-iteration existence theorems. They supply no premise of the present construction."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 168,
+  "key": "Corrections",
+  "locator": null,
+  "role": "history",
+  "formalComparison": "The introduction describes the subject of the earlier existence papers. No existence theorem about arbitrary faithful iteration functors is an input to Section 3."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 171,
+  "key": "DPM",
+  "locator": null,
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 175,
+  "key": "DPH",
+  "locator": "Theorem~8.15",
+  "role": "historical theorem H2",
+  "formalComparison": "Di Paola–Heller 8.15 assumes a c⁺-dominical category and τ:X×X⇀X+X. It proves its two diagonal summand domains inseparable. V46Comparison proves the lifted conditional version at its own evaluator type; the c⁺-dominical section-to-conditional bridge is not supplied in the fixed-source DiPaolaHeller packaging."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 178,
+  "key": "Bernardi",
+  "locator": "Sections~2--3, pp.~125--128",
+  "role": "historical theorem H3",
+  "formalComparison": "Categorical Eršov fixed points and the categorical inseparability assertion for precomplete relations are external at the general dominical types. V46.Precomplete.inseparable_unions and V46.ProvableProgramEquality.precomplete establish the concrete numerical statements in §8."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 180,
+  "key": "Montagna",
+  "locator": "Remark~3.1",
+  "role": "historical theorem H4",
+  "formalComparison": "Remark 3.1 includes one total binary productive morphism for all indices of disjoint enlargements of a fixed pair in the unprimed system. Project 3.1 provides a unary avoiding witness after a specific lifted conditional; Corollary D.2 gives ordinary inseparability of the actual diagonals. Neither supplies the categorical indexed productive morphism."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 182,
+  "key": "Lengyel2006",
+  "locator": "Theorem~4.1",
+  "role": "definition/application",
+  "formalComparison": "In Appendix C restriction and range preservation, split Pfn, local connectedness, weak choice, the literal machine evaluator and separated diagonal are checked. V46MachineOracleTuring.lean, OracleMissingLift.lean and PartialFunctions.lean give a concrete counterexample to §4.1."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 187,
+  "key": "CockettComputability",
+  "locator": "Sections~5.3 and 7.1, Theorem~7.8",
+  "role": "application",
+  "formalComparison": "V46.DiscreteTuringInseparability.inseparable_idempotents obtains the pair from a discrete Turing object and compatible joins. V46.ProgramOrder.exists_nontrivial_terminal_predicate and terminal_predicate_of_coded_order give the nonzero proper terminal domain under the program-order predicate."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 194,
+  "key": "MPV",
+  "locator": "Section~4.4, p.~1169",
+  "role": "application",
+  "formalComparison": "Janiczak.FOL.signed_janiczak and signed_essentiallyUndecidable_iff use actual native FOL sentence/proof words; signed_recursively_axiomatizable gives a primitive-recursive equivalent axiomatization. The canonical spectrum proves existence of a class of size n+1 precisely for each prescribed n."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 202,
+  "key": "DPH",
+  "locator": "pp.~595--596",
+  "role": "context",
+  "formalComparison": "The first and modal paragraphs report research questions and the topics of the discussion. No modal fixed-point theorem or GL calculus is used in this derivation."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 205,
+  "key": "vanDijkGO",
+  "locator": "Theorems~5.19--5.20",
+  "role": "historical theorem H5",
+  "formalComparison": "The printed reference concerns an internal arithmetic-universe object in the initial AU. Its completeness/triviality and consistency subobject theorems have no corresponding AU construction in this source. The paper's associated partial-map slice is a separate checked type."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 210,
+  "key": "CockettHofstra",
+  "locator": "Theorem~4.9",
+  "role": "historical theorem H6",
+  "formalComparison": "The cited structure comparison uses Comp(A) for a PCA and recovers a Turing category by selected idempotent splittings. V46.turingObject_iff, V46.SplitTuring and V46.KaroubiRestriction cover the evaluator and retractions independently. They give no Comp(A) structure equivalence."
+ },
+ {
+  "file": "sections/01-introduction.tex",
+  "line": 214,
+  "key": "CockettComputability",
+  "locator": "Section~7.5, Theorem~7.14",
+  "role": "application",
+  "formalComparison": "V46.DiscreteTuringInseparability.inseparable_idempotents obtains the pair from a discrete Turing object and compatible joins. V46.ProgramOrder.exists_nontrivial_terminal_predicate and terminal_predicate_of_coded_order give the nonzero proper terminal domain under the program-order predicate."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 8,
+  "key": "CockettLack",
+  "locator": "Section~2.1.1",
+  "role": "definition/application",
+  "formalComparison": "The repository's CategoryTheory.RestrictionCategory gives the four restriction identities. V46.KaroubiRestriction and V46.PartialMaps implement split restrictions and monic spans; V46.PartialMaps.totalEquivalence and the strict inverse in V46PartialMapTotals.lean realize the asserted total category."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 18,
+  "key": "Heller",
+  "locator": "Section~5",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 61,
+  "key": "Heller",
+  "locator": "Section~6",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 82,
+  "key": "CockettLack",
+  "locator": "Section~2.3.3",
+  "role": "definition/application",
+  "formalComparison": "The repository's CategoryTheory.RestrictionCategory gives the four restriction identities. V46.KaroubiRestriction and V46.PartialMaps implement split restrictions and monic spans; V46.PartialMaps.totalEquivalence and the strict inverse in V46PartialMapTotals.lean realize the asserted total category."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 96,
+  "key": "CockettLack",
+  "locator": "Section~2.3.3, Proposition~2.26",
+  "role": "definition/application",
+  "formalComparison": "The repository's CategoryTheory.RestrictionCategory gives the four restriction identities. V46.KaroubiRestriction and V46.PartialMaps implement split restrictions and monic spans; V46.PartialMaps.totalEquivalence and the strict inverse in V46PartialMapTotals.lean realize the asserted total category."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 102,
+  "key": "CockettLack",
+  "locator": "Section~3",
+  "role": "definition/application",
+  "formalComparison": "The repository's CategoryTheory.RestrictionCategory gives the four restriction identities. V46.KaroubiRestriction and V46.PartialMaps implement split restrictions and monic spans; V46.PartialMaps.totalEquivalence and the strict inverse in V46PartialMapTotals.lean realize the asserted total category."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 128,
+  "key": "CockettLackIII",
+  "locator": "Proposition 4.5",
+  "role": "application",
+  "formalComparison": "V46RestrictionProductData.lean, V46RestrictionProductCategory.lean and V46RestrictionProductComparison.lean construct both directions of the characterization, identify the induced original restriction, and identify product choices by their unique comparison."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 145,
+  "key": "CGHRangeI",
+  "locator": "p.~424",
+  "role": "definition/application",
+  "formalComparison": "The restricted map data and range equations are implemented by RangeFunctor, V46.PartialMaps and V46.PartialMaps.totalEquivalence. V46.range_regularImage and V46.PartialMaps.range_totalValue give the use in Appendix A.5."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 146,
+  "key": "Lengyel2006",
+  "locator": "p.~7",
+  "role": "definition/application",
+  "formalComparison": "In Appendix C restriction and range preservation, split Pfn, local connectedness, weak choice, the literal machine evaluator and separated diagonal are checked. V46MachineOracleTuring.lean, OracleMissingLift.lean and PartialFunctions.lean give a concrete counterexample to §4.1."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 198,
+  "key": "Heller",
+  "locator": "Section 9",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "sections/02-categorical-preliminaries.tex",
+  "line": 210,
+  "key": "CockettHofstra",
+  "locator": "Theorem 3.4",
+  "role": "application",
+  "formalComparison": "V46.turingObject_iff constructs the typed evaluator from the universal evaluator and retracts, and conversely. V46.SplitTuring.evaluator_isTuring specializes on a split parameter, as used in Lemma 5.1."
+ },
+ {
+  "file": "sections/03a-internal-theories.tex",
+  "line": 239,
+  "key": "VisserEHU",
+  "locator": "Lemma~23",
+  "role": "application checked separately",
+  "formalComparison": "PinComparisons.lean, undecidable_extensions_of_reduction, checks the unrestricted computable reduction for all encoded first-order sentence types and every consistent extension. It uses the Mathlib many-one pullback, Foundation's theory weakening, negation modus ponens, and the project's Numerical.RecursivelyInseparable definition."
+ },
+ {
+  "file": "sections/03a-internal-theories.tex",
+  "line": 243,
+  "key": "KirstPeters",
+  "locator": "Definitions~7, 17 and Theorem~20",
+  "role": "historical theorem H7",
+  "formalComparison": "The cited result has synthetic enumerable partial functions, a synthetic diagonal and semidecidable provability for the extending system. Current V46.ArithmeticUniformIndependent and ArithmeticSentenceInseparability supply classical PA instances. The full original synthetic quantification is external."
+ },
+ {
+  "file": "sections/03b-internal-adjunctions.tex",
+  "line": 370,
+  "key": "Voutsadakis",
+  "locator": "Theorem~7",
+  "role": "historical theorem H8",
+  "formalComparison": "The cited F : HSet ⇄ Sign : U by substitution of formulas for relational symbols is external. The local SignedFirstOrder.adjunction has signed pairs on one side and closed internal first-order theories on the other."
+ },
+ {
+  "file": "sections/04-theory-extensions.tex",
+  "line": 72,
+  "key": "CockettHofstra",
+  "locator": "Section 3.5",
+  "role": "application",
+  "formalComparison": "V46.turingObject_iff constructs the typed evaluator from the universal evaluator and retracts, and conversely. V46.SplitTuring.evaluator_isTuring specializes on a split parameter, as used in Lemma 5.1."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 9,
+  "key": "Montagna",
+  "locator": null,
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 9,
+  "key": "DPM",
+  "locator": null,
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 39,
+  "key": "Montagna",
+  "locator": "p.~115, Note~1",
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 59,
+  "key": "DPM",
+  "locator": "p.~644",
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 94,
+  "key": "Montagna",
+  "locator": "p.~108; p.~115, Note~1",
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 150,
+  "key": "Montagna",
+  "locator": "p.~105",
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 153,
+  "key": "DPM",
+  "locator": "p.~646",
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 182,
+  "key": "Montagna",
+  "locator": null,
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 182,
+  "key": "DPM",
+  "locator": null,
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 184,
+  "key": "Composition",
+  "locator": "Corollary 2",
+  "role": "application",
+  "formalComparison": "FailureOfComposition.Palomar.no_quotient_composition_productive, via the retained Palomar solution, rules out representative-independent primed composition for each consistent c.e. extension. Section 6 uses the unprimed quotient."
+ },
+ {
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "line": 198,
+  "key": "Montagna",
+  "locator": "p.~109, equation~$(*)$",
+  "role": "definition/history/application",
+  "formalComparison": "The fixed programming language and formula conventions, variation by presentation, and the connect-the-categories question are separately identified. V46RealizedObjectSetsCategory.lean, UniformTrace.arithmetized_evaluation and the standard proof-word isomorphism supply the uses at the chosen coding."
+ },
+ {
+  "file": "sections/05a-internal-syntax.tex",
+  "line": 6,
+  "key": "RobinsonRosolini",
+  "locator": "pp.~108--109",
+  "role": "definition/application",
+  "formalComparison": "V46.SyntacticSearch.functional_search and SyntacticPredicates.predicateEquivalence realize the functional Sigma-one presentation modulo universal T-provable graph equality."
+ },
+ {
+  "file": "sections/06-interpretation-in-models.tex",
+  "line": 401,
+  "key": "Keisler",
+  "locator": "Theorem~3.1",
+  "role": "application",
+  "formalComparison": "V46.ArithmeticUltrapower.eval_representative proves the satisfaction equivalence by induction including the existential choice of reps, sentence_iff specializes to the constant arithmetic structure, and modelsPA applies it to each PA axiom."
+ },
+ {
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "line": 241,
+  "key": "DPH",
+  "locator": "p.~594, (3)",
+  "role": "application and incorrect page",
+  "formalComparison": "ArithmeticSyntax.supports_recursivelyInseparable_of_definability assumes consistency and strong numeralwise definability of each recursive set. It proves recursive inseparability of the theorem and refutation supports. The primary item (3) is on printed page 595; the manuscript cites page 594."
+ },
+ {
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "line": 324,
+  "key": "Bernardi",
+  "locator": "pp.~125--126",
+  "role": "application",
+  "formalComparison": "V46.Precomplete.inseparable_unions and inseparable_classes prove the numerical implications. V46.ProvableProgramEquality.precomplete constructs a totalizer for the actual PA-provable EqIndex relation."
+ },
+ {
+  "file": "sections/08b-uniform-independent-sentences.tex",
+  "line": 8,
+  "key": "PourEl",
+  "locator": null,
+  "role": "definition with ambiguity",
+  "formalComparison": "Effective extensibility is a property of a presentation. V46.ArithmeticUniformIndependent.uniform_independent_sentences constructs one morphism for the specified PA presentation and all standard consistent fibers. The ambiguity at §8.3 lines 4–8 is recorded in the report."
+ },
+ {
+  "file": "sections/04-miller-sequences.tex",
+  "line": 4,
+  "key": "Miller2004",
+  "locator": "Theorem~6.3 and the following paragraph",
+  "role": "application",
+  "formalComparison": "V46.Miller.exists_isMiller gives an unconditional sequence at the fixed oracle numbering and approximation accuracy. Cut.printed_cut_contrast and fixed_representation_separator prove the two quantifier orders on cut separators."
+ },
+ {
+  "file": "sections/04-miller-sequences.tex",
+  "line": 8,
+  "key": "BauerHanson",
+  "locator": "Section~2.1 and Theorem~2.2",
+  "role": "application",
+  "formalComparison": "For the sequence at the actual binary representation map, use V46.Miller.exists_isMiller, Unanimity.unanimityIndex_eq_tau and Cut.printed_cut_contrast. The oracle index is shared by all names."
+ },
+ {
+  "file": "sections/09-three-point-space.tex",
+  "line": 4,
+  "key": "CurryCosheaves",
+  "locator": "Definition~2.6",
+  "role": "definition/application",
+  "formalComparison": "ForkTopology.ActualCosheaf uses the full compatible-family gluing law. ForkTopology.actualCosheafEquivalence proves the reduction to the pushout in this three-point space."
+ },
+ {
+  "file": "sections/09-three-point-space.tex",
+  "line": 113,
+  "key": "Heller",
+  "locator": "Section 3",
+  "role": "definition/history",
+  "formalComparison": "The terminology for range, prodominical isotypes and nonempty words is historical. PCats.Recursion defines the exact recursion structure. The printed concrete fork has EffectiveFork.Recursion.recursionCategory and its word frame."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 14,
+  "key": "CockettLists",
+  "locator": "Lemma 2.2 and Definition 2.3",
+  "role": "definition",
+  "formalComparison": "The listed parameterized recursion property is imposed on StableListAlgebra, then constructed as withParametersInitial for the concrete syntax and list categories."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 16,
+  "key": "MaiettiLists",
+  "locator": "Definition 2.4 and the following paragraph",
+  "role": "definition",
+  "formalComparison": "StableListAlgebra expresses the displayed requirement after pullback to each slice. SyntacticLists.withParametersInitial and its concrete analogues supply witnesses in the examples."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 123,
+  "key": "GTWW",
+  "locator": "Section 2",
+  "role": "method comparison",
+  "formalComparison": "The cited use of many-sorted initial algebras describes prior syntax methodology. V46.CategoricalSyntax and the concrete SyntacticSyntax.withParametersInitial provide the chosen algebra."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 124,
+  "key": "GoguenBurstall",
+  "locator": "Section 4",
+  "role": "method comparison",
+  "formalComparison": "This is historical attribution of initial-algebra syntax for a range of signatures. The current many-sorted syntax is checked directly."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 130,
+  "key": "FPT",
+  "locator": "Sections 2--4",
+  "role": "method comparison",
+  "formalComparison": "The paper contrasts earlier accounts of binding and alpha-conversion with its explicit names. CategoricalSyntax.substitutionAlgebra and its fold construct the operations for the syntax actually used."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 131,
+  "key": "GabbayPitts",
+  "locator": "Section 6",
+  "role": "method comparison",
+  "formalComparison": "Prior binding syntax and retention of the original expression are methodological references. The paper's own product-with-the-input construction is V46.CategoricalSyntax.substitutionAlgebra and substitutionFold_original."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 132,
+  "key": "Katsumata",
+  "locator": "Section 2, Example 1(3)",
+  "role": "method comparison",
+  "formalComparison": "The reference describes a first-order example of syntax up to renaming. The present syntax explicitly retains bound-variable names."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 241,
+  "key": "GabbayPitts",
+  "locator": "proof of Corollary 6.7",
+  "role": "method comparison",
+  "formalComparison": "Prior binding syntax and retention of the original expression are methodological references. The paper's own product-with-the-input construction is V46.CategoricalSyntax.substitutionAlgebra and substitutionFold_original."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 373,
+  "key": "Aczel",
+  "locator": "Propositions 1.1.4 and 1.4.5",
+  "role": "application",
+  "formalComparison": "The finite-proof interpretation of finitary closure is realized by RulePresentation.least_theorem_subobject and SyntacticGeneratedTheory.generated_theory. Appendix A.4 uses their categorical instance."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 418,
+  "key": "Wissmann",
+  "locator": "Lemma 3.6",
+  "role": "application",
+  "formalComparison": "RulePresentation.inference_preservesRegularEpis and RulePresentation.least_theorem_subobject explicitly construct the image subalgebra and its unique factor where the paper invokes the lifting result."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 458,
+  "key": "HP",
+  "locator": "0.10, p.~7",
+  "role": "definition/application",
+  "formalComparison": "The three displayed propositional schemes are coproduct branches of CategoricalSyntax.logicalAxioms; the resulting least image is CategoricalSyntax.generated_firstOrder_theory."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 471,
+  "key": "HH",
+  "locator": "Sections 2.11--2.12",
+  "role": "definition/application",
+  "formalComparison": "The named-variable and equality schemes are components of CategoricalSyntax.logicalAxioms and logicalRules; NamedPlainSemantics.valid_logicalAxioms proves their soundness on the indicated substitution domains."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 473,
+  "key": "HH",
+  "locator": "Section 3.1",
+  "role": "definition/application",
+  "formalComparison": "The named-variable and equality schemes are components of CategoricalSyntax.logicalAxioms and logicalRules; NamedPlainSemantics.valid_logicalAxioms proves their soundness on the indicated substitution domains."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 566,
+  "key": "CGHRangeI",
+  "locator": "Theorem 4.7",
+  "role": "definition/application",
+  "formalComparison": "The restricted map data and range equations are implemented by RangeFunctor, V46.PartialMaps and V46.PartialMaps.totalEquivalence. V46.range_regularImage and V46.PartialMaps.range_totalValue give the use in Appendix A.5."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 568,
+  "key": "CGHRangeII",
+  "locator": "Section 3.16 and Proposition 3.17",
+  "role": "method comparison",
+  "formalComparison": "Appendix A.5 directly proves its regular-image case under the partial-inverse hypothesis using LocalConnectedness.V46.range_regularImage. The cited paper describes the surrounding theory of split ranges and regular images."
+ },
+ {
+  "file": "appendices/a-syntax-and-theories.tex",
+  "line": 572,
+  "key": "CGHRangeI",
+  "locator": "Theorem 4.5 and Section 4.11",
+  "role": "definition/application",
+  "formalComparison": "The restricted map data and range equations are implemented by RangeFunctor, V46.PartialMaps and V46.PartialMaps.totalEquivalence. V46.range_regularImage and V46.PartialMaps.range_totalValue give the use in Appendix A.5."
+ },
+ {
+  "file": "appendices/c-section-lifting.tex",
+  "line": 206,
+  "key": "Lengyel2006",
+  "locator": "Theorem~4.1",
+  "role": "definition/application",
+  "formalComparison": "In Appendix C restriction and range preservation, split Pfn, local connectedness, weak choice, the literal machine evaluator and separated diagonal are checked. V46MachineOracleTuring.lean, OracleMissingLift.lean and PartialFunctions.lean give a concrete counterexample to §4.1."
+ },
+ {
+  "file": "appendices/c-section-lifting.tex",
+  "line": 220,
+  "key": "Lengyel2006",
+  "locator": "p.~11",
+  "role": "definition/application",
+  "formalComparison": "In Appendix C restriction and range preservation, split Pfn, local connectedness, weak choice, the literal machine evaluator and separated diagonal are checked. V46MachineOracleTuring.lean, OracleMissingLift.lean and PartialFunctions.lean give a concrete counterexample to §4.1."
+ },
+ {
+  "file": "appendices/d-faithful-family.tex",
+  "line": 62,
+  "key": "DPM",
+  "locator": "Corollary 4.4, pp.~657--658",
+  "role": "definition/application",
+  "formalComparison": "The effective set realization and uniform graph equality are implemented by V46RealizedObjectSetsCategory.lean and V46StrictPresentationFunctors.lean. The primed composition obstruction uses FailureOfComposition.Palomar.no_quotient_composition_productive. V46.ConnectedNumeralDomains.unprimed_not_locallyConnected gives Appendix D at all consistent c.e. T."
+ }
+]

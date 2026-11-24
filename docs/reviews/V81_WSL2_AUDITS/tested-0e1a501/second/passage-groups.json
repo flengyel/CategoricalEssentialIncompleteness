@@ -1,0 +1,1412 @@
+[
+ {
+  "reconstructionLine": 11,
+  "file": "abstract.tex",
+  "first": 2,
+  "last": 24,
+  "numberedTypes": [
+   "4.4",
+   "4.6",
+   "4.7",
+   "4.8"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 12,
+  "file": "abstract.tex",
+  "first": 25,
+  "last": 44,
+  "numberedTypes": [
+   "5.1",
+   "5.2",
+   "5.3",
+   "7.9",
+   "8.5",
+   "8.6",
+   "8.8",
+   "8.10",
+   "9.4",
+   "9.7",
+   "9.8",
+   "10.6",
+   "10.9"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 13,
+  "file": "sections/01-introduction.tex",
+  "first": 3,
+  "last": 71,
+  "numberedTypes": [
+   "4.1",
+   "4.3",
+   "4.7",
+   "4.8",
+   "5.1",
+   "5.2",
+   "5.3"
+  ],
+  "correspondenceAnchorRows": [
+   33
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 14,
+  "file": "sections/01-introduction.tex",
+  "first": 72,
+  "last": 158,
+  "numberedTypes": [
+   "3.1",
+   "4.2",
+   "7.6",
+   "7.9",
+   "8.3",
+   "8.4",
+   "8.6",
+   "8.8",
+   "9.1",
+   "9.4",
+   "9.7",
+   "9.8",
+   "10.4",
+   "10.6",
+   "10.8",
+   "10.9"
+  ],
+  "correspondenceAnchorRows": [
+   42,
+   49,
+   109
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 15,
+  "file": "sections/01-introduction.tex",
+  "first": 159,
+  "last": 218,
+  "numberedTypes": [
+   "8.4",
+   "9.4",
+   "C.1"
+  ],
+  "correspondenceAnchorRows": [
+   29,
+   30,
+   40,
+   42,
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 16,
+  "file": "sections/02-categorical-preliminaries.tex",
+  "first": 3,
+  "last": 69,
+  "numberedTypes": [],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": [
+   "Lean/CategoricalEssentialIncompleteness/PartialFunctions.lean",
+   "Lean/CategoricalEssentialIncompleteness/RangeFunctor.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductData.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 17,
+  "file": "sections/02-categorical-preliminaries.tex",
+  "first": 71,
+  "last": 108,
+  "numberedTypes": [],
+  "correspondenceAnchorRows": [
+   31,
+   52
+  ],
+  "additionalLeanModules": [
+   "Lean/CategoricalEssentialIncompleteness/V46KaroubiRestriction.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46PartialMaps.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46PartialMapTotals.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 18,
+  "file": "sections/02-categorical-preliminaries.tex",
+  "first": 110,
+  "last": 161,
+  "numberedTypes": [],
+  "correspondenceAnchorRows": [
+   32
+  ],
+  "additionalLeanModules": [
+   "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductCategory.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46RestrictionProductData.lean",
+   "Lean/CategoricalEssentialIncompleteness/RangeFunctor.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 19,
+  "file": "sections/02-categorical-preliminaries.tex",
+  "first": 162,
+  "last": 212,
+  "numberedTypes": [
+   "7.2",
+   "D.1"
+  ],
+  "correspondenceAnchorRows": [
+   31
+  ],
+  "additionalLeanModules": [
+   "Lean/CategoricalEssentialIncompleteness/DoublingRangeFunctor.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 23,
+  "file": "sections/03-sections-and-inseparability.tex",
+  "first": 3,
+  "last": 47,
+  "numberedTypes": [
+   "3.1"
+  ],
+  "correspondenceAnchorRows": [
+   32
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 24,
+  "file": "sections/03-sections-and-inseparability.tex",
+  "first": 48,
+  "last": 106,
+  "numberedTypes": [
+   "3.1",
+   "3.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 25,
+  "file": "sections/03-sections-and-inseparability.tex",
+  "first": 108,
+  "last": 179,
+  "numberedTypes": [
+   "3.3",
+   "3.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 26,
+  "file": "sections/03a-internal-theories.tex",
+  "first": 3,
+  "last": 50,
+  "numberedTypes": [
+   "A.5",
+   "A.6",
+   "A.7",
+   "4.1",
+   "4.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 27,
+  "file": "sections/03a-internal-theories.tex",
+  "first": 52,
+  "last": 101,
+  "numberedTypes": [
+   "4.1",
+   "4.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 28,
+  "file": "sections/03a-internal-theories.tex",
+  "first": 102,
+  "last": 147,
+  "numberedTypes": [
+   "4.1"
+  ],
+  "correspondenceAnchorRows": [
+   33
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 29,
+  "file": "sections/03a-internal-theories.tex",
+  "first": 149,
+  "last": 235,
+  "numberedTypes": [
+   "4.2",
+   "4.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 30,
+  "file": "sections/03a-internal-theories.tex",
+  "first": 237,
+  "last": 270,
+  "numberedTypes": [
+   "4.3",
+   "8.4"
+  ],
+  "correspondenceAnchorRows": [
+   101
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 31,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 1,
+  "last": 58,
+  "numberedTypes": [
+   "4.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 32,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 59,
+  "last": 187,
+  "numberedTypes": [
+   "4.5"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 33,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 188,
+  "last": 322,
+  "numberedTypes": [
+   "4.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 34,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 323,
+  "last": 400,
+  "numberedTypes": [
+   "4.7"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 35,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 401,
+  "last": 476,
+  "numberedTypes": [
+   "4.7",
+   "A.3"
+  ],
+  "correspondenceAnchorRows": [
+   33,
+   61
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 36,
+  "file": "sections/03b-internal-adjunctions.tex",
+  "first": 477,
+  "last": 539,
+  "numberedTypes": [
+   "4.8"
+  ],
+  "correspondenceAnchorRows": [
+   33
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 37,
+  "file": "sections/04-theory-extensions.tex",
+  "first": 1,
+  "last": 46,
+  "numberedTypes": [],
+  "correspondenceAnchorRows": [
+   52
+  ],
+  "additionalLeanModules": [
+   "Lean/CategoricalEssentialIncompleteness/V46MonicPartialMapEquivalence.lean",
+   "Lean/CategoricalEssentialIncompleteness/V46PartialMapEquivalence.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 38,
+  "file": "sections/04-theory-extensions.tex",
+  "first": 47,
+  "last": 130,
+  "numberedTypes": [
+   "5.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 39,
+  "file": "sections/04-theory-extensions.tex",
+  "first": 131,
+  "last": 227,
+  "numberedTypes": [
+   "5.2"
+  ],
+  "correspondenceAnchorRows": [
+   34,
+   103
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 40,
+  "file": "sections/04-theory-extensions.tex",
+  "first": 228,
+  "last": 348,
+  "numberedTypes": [
+   "5.3",
+   "4.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 41,
+  "file": "sections/04-theory-extensions.tex",
+  "first": 349,
+  "last": 374,
+  "numberedTypes": [],
+  "correspondenceAnchorRows": [
+   103
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 45,
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "first": 3,
+  "last": 63,
+  "numberedTypes": [
+   "6.1"
+  ],
+  "correspondenceAnchorRows": [
+   35,
+   105
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 46,
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "first": 64,
+  "last": 124,
+  "numberedTypes": [
+   "6.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 47,
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "first": 126,
+  "last": 187,
+  "numberedTypes": [
+   "6.1"
+  ],
+  "correspondenceAnchorRows": [
+   35,
+   105
+  ],
+  "additionalLeanModules": [
+   "Lean/FailureOfComposition/Palomar/Solution.lean"
+  ]
+ },
+ {
+  "reconstructionLine": 48,
+  "file": "sections/05-syntactic-recursion-category.tex",
+  "first": 189,
+  "last": 263,
+  "numberedTypes": [
+   "6.1",
+   "6.2",
+   "7.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 49,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 1,
+  "last": 109,
+  "numberedTypes": [
+   "6.2",
+   "6.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 50,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 111,
+  "last": 253,
+  "numberedTypes": [
+   "6.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 51,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 255,
+  "last": 387,
+  "numberedTypes": [
+   "5.1",
+   "6.3",
+   "6.4"
+  ],
+  "correspondenceAnchorRows": [
+   36
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 52,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 388,
+  "last": 520,
+  "numberedTypes": [
+   "6.5",
+   "6.6"
+  ],
+  "correspondenceAnchorRows": [
+   113,
+   115
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 53,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 522,
+  "last": 656,
+  "numberedTypes": [
+   "6.7",
+   "A.3"
+  ],
+  "correspondenceAnchorRows": [
+   117
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 54,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 657,
+  "last": 844,
+  "numberedTypes": [
+   "6.8",
+   "6.9"
+  ],
+  "correspondenceAnchorRows": [
+   83
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 55,
+  "file": "sections/05a-internal-syntax.tex",
+  "first": 846,
+  "last": 917,
+  "numberedTypes": [
+   "6.9",
+   "A.5",
+   "A.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 56,
+  "file": "sections/06-interpretation-in-models.tex",
+  "first": 3,
+  "last": 63,
+  "numberedTypes": [
+   "7.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 57,
+  "file": "sections/06-interpretation-in-models.tex",
+  "first": 64,
+  "last": 174,
+  "numberedTypes": [
+   "7.2",
+   "7.3",
+   "7.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 58,
+  "file": "sections/06-interpretation-in-models.tex",
+  "first": 175,
+  "last": 347,
+  "numberedTypes": [
+   "7.5",
+   "7.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 59,
+  "file": "sections/06-interpretation-in-models.tex",
+  "first": 348,
+  "last": 546,
+  "numberedTypes": [
+   "7.7",
+   "7.8",
+   "7.9"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 63,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 1,
+  "last": 89,
+  "numberedTypes": [
+   "6.9",
+   "7.6",
+   "8.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 64,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 91,
+  "last": 138,
+  "numberedTypes": [
+   "8.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 65,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 140,
+  "last": 184,
+  "numberedTypes": [
+   "8.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 66,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 186,
+  "last": 280,
+  "numberedTypes": [
+   "8.3",
+   "8.4",
+   "3.1",
+   "4.1",
+   "4.2",
+   "7.6",
+   "7.9"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 67,
+  "file": "sections/08a-uniform-theories.tex",
+  "first": 1,
+  "last": 121,
+  "numberedTypes": [
+   "8.5",
+   "6.9"
+  ],
+  "correspondenceAnchorRows": [
+   37
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 68,
+  "file": "sections/08a-uniform-theories.tex",
+  "first": 122,
+  "last": 342,
+  "numberedTypes": [
+   "8.5"
+  ],
+  "correspondenceAnchorRows": [
+   36,
+   109
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 69,
+  "file": "sections/08b-uniform-independent-sentences.tex",
+  "first": 1,
+  "last": 103,
+  "numberedTypes": [
+   "8.6"
+  ],
+  "correspondenceAnchorRows": [
+   38,
+   41
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 70,
+  "file": "sections/08c-numerical-realization.tex",
+  "first": 1,
+  "last": 97,
+  "numberedTypes": [
+   "8.7",
+   "8.8"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 71,
+  "file": "sections/08c-numerical-realization.tex",
+  "first": 98,
+  "last": 279,
+  "numberedTypes": [
+   "8.7"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 72,
+  "file": "sections/08c-numerical-realization.tex",
+  "first": 281,
+  "last": 461,
+  "numberedTypes": [
+   "8.8"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 73,
+  "file": "sections/08c-numerical-realization.tex",
+  "first": 463,
+  "last": 600,
+  "numberedTypes": [
+   "8.8"
+  ],
+  "correspondenceAnchorRows": [
+   109
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 74,
+  "file": "sections/08d-numerical-incompleteness.tex",
+  "first": 1,
+  "last": 81,
+  "numberedTypes": [
+   "8.4",
+   "8.7",
+   "8.8",
+   "3.3"
+  ],
+  "correspondenceAnchorRows": [
+   109
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 75,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 288,
+  "last": 362,
+  "numberedTypes": [
+   "8.4"
+  ],
+  "correspondenceAnchorRows": [
+   39,
+   40,
+   107
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 76,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 363,
+  "last": 443,
+  "numberedTypes": [
+   "8.9"
+  ],
+  "correspondenceAnchorRows": [
+   119
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 77,
+  "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "first": 445,
+  "last": 519,
+  "numberedTypes": [
+   "8.10",
+   "5.1",
+   "5.2",
+   "5.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 81,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 1,
+  "last": 47,
+  "numberedTypes": [
+   "9.1"
+  ],
+  "correspondenceAnchorRows": [
+   42
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 82,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 48,
+  "last": 106,
+  "numberedTypes": [
+   "9.1"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 83,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 108,
+  "last": 208,
+  "numberedTypes": [
+   "9.1",
+   "9.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 84,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 209,
+  "last": 292,
+  "numberedTypes": [
+   "9.3"
+  ],
+  "correspondenceAnchorRows": [
+   43
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 85,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 294,
+  "last": 348,
+  "numberedTypes": [
+   "9.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 86,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 349,
+  "last": 477,
+  "numberedTypes": [
+   "9.5"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 87,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 479,
+  "last": 556,
+  "numberedTypes": [
+   "9.5",
+   "9.6"
+  ],
+  "correspondenceAnchorRows": [
+   44
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 88,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 558,
+  "last": 652,
+  "numberedTypes": [
+   "9.6",
+   "9.7"
+  ],
+  "correspondenceAnchorRows": [
+   44,
+   45
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 89,
+  "file": "sections/04-miller-sequences.tex",
+  "first": 654,
+  "last": 722,
+  "numberedTypes": [
+   "9.7",
+   "9.8",
+   "5.3"
+  ],
+  "correspondenceAnchorRows": [
+   44
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 93,
+  "file": "sections/09-three-point-space.tex",
+  "first": 1,
+  "last": 82,
+  "numberedTypes": [
+   "B.1",
+   "B.2"
+  ],
+  "correspondenceAnchorRows": [
+   46
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 94,
+  "file": "sections/09-three-point-space.tex",
+  "first": 83,
+  "last": 179,
+  "numberedTypes": [
+   "B.5",
+   "B.6",
+   "B.7",
+   "B.8"
+  ],
+  "correspondenceAnchorRows": [
+   47
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 95,
+  "file": "sections/09-three-point-space.tex",
+  "first": 180,
+  "last": 278,
+  "numberedTypes": [
+   "10.1",
+   "B.7"
+  ],
+  "correspondenceAnchorRows": [
+   47
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 96,
+  "file": "sections/09-three-point-space.tex",
+  "first": 279,
+  "last": 358,
+  "numberedTypes": [
+   "10.1",
+   "10.2",
+   "10.5"
+  ],
+  "correspondenceAnchorRows": [
+   48
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 97,
+  "file": "sections/09-three-point-space.tex",
+  "first": 359,
+  "last": 474,
+  "numberedTypes": [
+   "10.2",
+   "10.3"
+  ],
+  "correspondenceAnchorRows": [
+   48
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 98,
+  "file": "sections/09-three-point-space.tex",
+  "first": 475,
+  "last": 560,
+  "numberedTypes": [
+   "10.3",
+   "10.4"
+  ],
+  "correspondenceAnchorRows": [
+   48
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 99,
+  "file": "sections/09-three-point-space.tex",
+  "first": 561,
+  "last": 622,
+  "numberedTypes": [
+   "10.5",
+   "10.6"
+  ],
+  "correspondenceAnchorRows": [
+   49
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 100,
+  "file": "sections/09-three-point-space.tex",
+  "first": 624,
+  "last": 715,
+  "numberedTypes": [
+   "10.7"
+  ],
+  "correspondenceAnchorRows": [
+   54
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 101,
+  "file": "sections/09-three-point-space.tex",
+  "first": 716,
+  "last": 812,
+  "numberedTypes": [
+   "10.8",
+   "10.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 102,
+  "file": "sections/09-three-point-space.tex",
+  "first": 813,
+  "last": 860,
+  "numberedTypes": [
+   "10.9",
+   "5.1",
+   "5.2",
+   "5.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 106,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 5,
+  "last": 118,
+  "numberedTypes": [
+   "A.1"
+  ],
+  "correspondenceAnchorRows": [
+   50,
+   51
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 107,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 119,
+  "last": 235,
+  "numberedTypes": [
+   "A.1",
+   "A.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 108,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 236,
+  "last": 369,
+  "numberedTypes": [
+   "A.3"
+  ],
+  "correspondenceAnchorRows": [
+   61,
+   117
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 109,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 370,
+  "last": 451,
+  "numberedTypes": [
+   "A.4",
+   "A.5"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 110,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 452,
+  "last": 541,
+  "numberedTypes": [
+   "A.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 111,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 542,
+  "last": 595,
+  "numberedTypes": [
+   "A.7"
+  ],
+  "correspondenceAnchorRows": [
+   52
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 112,
+  "file": "appendices/a-syntax-and-theories.tex",
+  "first": 596,
+  "last": 624,
+  "numberedTypes": [
+   "A.5"
+  ],
+  "correspondenceAnchorRows": [
+   53
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 113,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 3,
+  "last": 82,
+  "numberedTypes": [
+   "B.1"
+  ],
+  "correspondenceAnchorRows": [
+   46
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 114,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 83,
+  "last": 134,
+  "numberedTypes": [
+   "B.2"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 115,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 135,
+  "last": 251,
+  "numberedTypes": [
+   "B.3",
+   "B.4"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 116,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 252,
+  "last": 340,
+  "numberedTypes": [
+   "B.5",
+   "B.6"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 117,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 341,
+  "last": 490,
+  "numberedTypes": [
+   "B.7"
+  ],
+  "correspondenceAnchorRows": [
+   47
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 118,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 491,
+  "last": 591,
+  "numberedTypes": [
+   "B.8",
+   "B.9"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 119,
+  "file": "appendices/b-three-point-cosheaves.tex",
+  "first": 592,
+  "last": 618,
+  "numberedTypes": [
+   "B.10"
+  ],
+  "correspondenceAnchorRows": [
+   54
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 120,
+  "file": "appendices/c-section-lifting.tex",
+  "first": 4,
+  "last": 62,
+  "numberedTypes": [
+   "C.1"
+  ],
+  "correspondenceAnchorRows": [
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 121,
+  "file": "appendices/c-section-lifting.tex",
+  "first": 64,
+  "last": 139,
+  "numberedTypes": [
+   "C.1"
+  ],
+  "correspondenceAnchorRows": [
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 122,
+  "file": "appendices/c-section-lifting.tex",
+  "first": 140,
+  "last": 206,
+  "numberedTypes": [
+   "C.1"
+  ],
+  "correspondenceAnchorRows": [
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 123,
+  "file": "appendices/c-section-lifting.tex",
+  "first": 207,
+  "last": 222,
+  "numberedTypes": [
+   "C.1",
+   "D.1"
+  ],
+  "correspondenceAnchorRows": [
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 124,
+  "file": "appendices/d-faithful-family.tex",
+  "first": 1,
+  "last": 90,
+  "numberedTypes": [
+   "D.1"
+  ],
+  "correspondenceAnchorRows": [
+   56,
+   57
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 125,
+  "file": "appendices/d-faithful-family.tex",
+  "first": 91,
+  "last": 147,
+  "numberedTypes": [
+   "D.2"
+  ],
+  "correspondenceAnchorRows": [
+   111
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 126,
+  "file": "appendices/d-faithful-family.tex",
+  "first": 148,
+  "last": 201,
+  "numberedTypes": [
+   "D.1",
+   "D.2"
+  ],
+  "correspondenceAnchorRows": [
+   39,
+   57
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 127,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 6,
+  "last": 41,
+  "numberedTypes": [
+   "4.7"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 128,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 42,
+  "last": 69,
+  "numberedTypes": [
+   "4.8"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 129,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 70,
+  "last": 106,
+  "numberedTypes": [
+   "8.9"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 130,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 107,
+  "last": 135,
+  "numberedTypes": [
+   "3.1",
+   "C.1"
+  ],
+  "correspondenceAnchorRows": [
+   55
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 131,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 136,
+  "last": 167,
+  "numberedTypes": [
+   "5.3"
+  ],
+  "correspondenceAnchorRows": [],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 132,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 168,
+  "last": 189,
+  "numberedTypes": [
+   "8.6"
+  ],
+  "correspondenceAnchorRows": [
+   41
+  ],
+  "additionalLeanModules": []
+ },
+ {
+  "reconstructionLine": 133,
+  "file": "appendices/e-reading-lean-proofs.tex",
+  "first": 190,
+  "last": 239,
+  "numberedTypes": [
+   "9.6",
+   "9.7"
+  ],
+  "correspondenceAnchorRows": [
+   44,
+   45
+  ],
+  "additionalLeanModules": []
+ }
+]

@@ -1,0 +1,21 @@
+machine_no_lift : ∀ (s : ↧ℕ ⟶ CoprodStruct.coprod ↧ℕ ↧ℕ),
+  Idem.pull s (summand0 ↧ℕ ↧ℕ) = (rangeFunctor K).mapIdem separatorComplement →
+    Idem.pull s (summand1 ↧ℕ ↧ℕ) = (rangeFunctor K).mapIdem separator →
+      ¬∃ ℓ, (inclusion K).map ℓ = s ≫ ((rangeFunctor K).comparison (N K) (N K)).hom
+ConnectedNumeralDomains.connected_le_numeral : ∀ (T : ArithmeticTheory) [inst : 𝗣𝗔 ⪯ T] [Theory.RE T]
+  (a : Idem (FailureOfComposition.TypedProgramCategory.omegaObject T)),
+  Connected a → a ≠ ⊥ → ∃ n, a ≤ SyntacticPredicates.predicateIdem T (ConnectedNumeralDomains.numeralPredicate n)
+ConnectedNumeralDomains.indistinguishable_on_connected : ∀ (T : ArithmeticTheory) [inst : 𝗣𝗔 ⪯ T] [Consistent T],
+  REPred (FailureOfComposition.AxiomCodes T) →
+    ∃ f g,
+      f ≠ g ∧
+        ∀ (a : Idem (FailureOfComposition.TypedProgramCategory.omegaObject T)), Connected a → a.hom ≫ f = a.hom ≫ g
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_pair_separated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_no_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.unprimed_not_locallyConnected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

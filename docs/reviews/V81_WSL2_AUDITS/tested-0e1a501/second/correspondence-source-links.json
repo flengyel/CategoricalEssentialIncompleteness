@@ -1,0 +1,962 @@
+[
+  {
+    "correspondenceLine": 29,
+    "linkText": "Point domains",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46DisjointProgramPoints.lean",
+    "line": 86,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ProgramOrder.disjoint_point_predicates",
+    "declarationLine": 86
+  },
+  {
+    "correspondenceLine": 29,
+    "linkText": "Inseparable pair",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46DiscreteTuringInseparability.lean",
+    "line": 112,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ProgramOrder.exists_inseparable",
+    "declarationLine": 112
+  },
+  {
+    "correspondenceLine": 29,
+    "linkText": "Coded provability predicate",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ProgramOrder.lean",
+    "line": 137,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ProgramOrder.terminal_predicate_of_coded_order",
+    "declarationLine": 137
+  },
+  {
+    "correspondenceLine": 30,
+    "linkText": "Axiom and derivability statements",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheory.lean",
+    "line": 60,
+    "declaration": "Janiczak.FOL.signed_janiczak",
+    "declarationLine": 60
+  },
+  {
+    "correspondenceLine": 30,
+    "linkText": "Expanded quantifiers and class sizes",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheoryChecks.lean",
+    "line": 25,
+    "declaration": "Janiczak.SignedTheoryChecks.native_proof_words",
+    "declarationLine": 25
+  },
+  {
+    "correspondenceLine": 30,
+    "linkText": "First-order soundness and completeness",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakFOL.lean",
+    "line": 122,
+    "declaration": "Janiczak.FOL.consequence_iff_provable",
+    "declarationLine": 122
+  },
+  {
+    "correspondenceLine": 30,
+    "linkText": "Decision on every code",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakNativeDecision.lean",
+    "line": 91,
+    "declaration": "Janiczak.NativeInput.nativeDecision_words",
+    "declarationLine": 91
+  },
+  {
+    "correspondenceLine": 31,
+    "linkText": "Karoubi equation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SummandBounds.lean",
+    "line": 43,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.V46.KaroubiRestriction.total_iff",
+    "declarationLine": 43
+  },
+  {
+    "correspondenceLine": 31,
+    "linkText": "Recognition",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean",
+    "line": 22,
+    "declaration": "CategoricalEssentialIncompleteness.V46.turingObject_iff",
+    "declarationLine": 22
+  },
+  {
+    "correspondenceLine": 31,
+    "linkText": "Independent types",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RestrictionComparisonChecks.lean",
+    "line": 24,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 32,
+    "linkText": "Least upper bound",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SummandBounds.lean",
+    "line": 25,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.summands_pairComplementary",
+    "declarationLine": 25
+  },
+  {
+    "correspondenceLine": 33,
+    "linkText": "Unique factor",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+    "line": 28,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PartialMaps.interpreted_theory_unique_factor",
+    "declarationLine": 28
+  },
+  {
+    "correspondenceLine": 33,
+    "linkText": "Binder and option equations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 34,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.binder_substitution",
+    "declarationLine": 34
+  },
+  {
+    "correspondenceLine": 34,
+    "linkText": "Unit criterion",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SliceUnitFactorization.lean",
+    "line": 30,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_total_iff",
+    "declarationLine": 30
+  },
+  {
+    "correspondenceLine": 34,
+    "linkText": "Independent type",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RestrictionComparisonChecks.lean",
+    "line": 43,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 35,
+    "linkText": "Distinct sets",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSets.lean",
+    "line": 255,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realize_injective",
+    "declarationLine": 255
+  },
+  {
+    "correspondenceLine": 35,
+    "linkText": "Equivalence and decoded graphs",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSetsCategory.lean",
+    "line": 127,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realizationEquivalence",
+    "declarationLine": 127
+  },
+  {
+    "correspondenceLine": 36,
+    "linkText": "Graph and PA application",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean",
+    "line": 20,
+    "declaration": "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selectorBranch",
+    "declarationLine": 20
+  },
+  {
+    "correspondenceLine": 36,
+    "linkText": "Exact model test",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteSortAndGraphChecks.lean",
+    "line": 34,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 37,
+    "linkText": "Existence",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentations.lean",
+    "line": 138,
+    "declaration": "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.equal_standard_axioms_unprovable",
+    "declarationLine": 138
+  },
+  {
+    "correspondenceLine": 37,
+    "linkText": "Exact binary predicates",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentationsChecks.lean",
+    "line": 20,
+    "declaration": "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.Checks.indexed_axiom_presentations",
+    "declarationLine": 20
+  },
+  {
+    "correspondenceLine": 38,
+    "linkText": "Uniform morphism and both exclusions",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "line": 204,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences",
+    "declarationLine": 204
+  },
+  {
+    "correspondenceLine": 39,
+    "linkText": "All presentations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean",
+    "line": 156,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.ofEnumerableTheory",
+    "declarationLine": 156
+  },
+  {
+    "correspondenceLine": 39,
+    "linkText": "Numerical proof points",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean",
+    "line": 63,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.signed_numerical_proofPoints",
+    "declarationLine": 63
+  },
+  {
+    "correspondenceLine": 39,
+    "linkText": "Functor and separator",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean",
+    "line": 137,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.observationFunctor",
+    "declarationLine": 137
+  },
+  {
+    "correspondenceLine": 40,
+    "linkText": "General classes and unions",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46PrecompleteClasses.lean",
+    "line": 26,
+    "declaration": "CategoricalEssentialIncompleteness.V46.Precomplete.inseparable_unions",
+    "declarationLine": 26
+  },
+  {
+    "correspondenceLine": 40,
+    "linkText": "Application graph",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean",
+    "line": 46,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.applicationGraph_pair",
+    "declarationLine": 46
+  },
+  {
+    "correspondenceLine": 40,
+    "linkText": "Value-first equality",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean",
+    "line": 122,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.uniform_totalization",
+    "declarationLine": 122
+  },
+  {
+    "correspondenceLine": 41,
+    "linkText": "The two domains",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 55,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.proof_search_domains",
+    "declarationLine": 55
+  },
+  {
+    "correspondenceLine": 41,
+    "linkText": "Diagonal and both exclusions",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 95,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.uniform_finite_derivations",
+    "declarationLine": 95
+  },
+  {
+    "correspondenceLine": 42,
+    "linkText": "Countable fixed point and witness",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+    "line": 106,
+    "declaration": "CategoricalEssentialIncompleteness.V46.Miller.exists_coordinate_fixedPoint",
+    "declarationLine": 106
+  },
+  {
+    "correspondenceLine": 43,
+    "linkText": "Neighbourhood criterion",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46WeightedCubeTopology.lean",
+    "line": 42,
+    "declaration": "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.isOpen_iff_productDistance",
+    "declarationLine": 42
+  },
+  {
+    "correspondenceLine": 43,
+    "linkText": "Metric with the product topology",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46WeightedCubeTopology.lean",
+    "line": 64,
+    "declaration": "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.weightedMetric",
+    "declarationLine": 64
+  },
+  {
+    "correspondenceLine": 44,
+    "linkText": "Nullary summands and fold",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 195,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.nullary_rule_conclusions",
+    "declarationLine": 195
+  },
+  {
+    "correspondenceLine": 44,
+    "linkText": "Arbitrary mono and finite proof domains",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 225,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.recovered_sentence_image",
+    "declarationLine": 225
+  },
+  {
+    "correspondenceLine": 45,
+    "linkText": "Integer codes and all words",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 125,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.integer_cut_axioms",
+    "declarationLine": 125
+  },
+  {
+    "correspondenceLine": 45,
+    "linkText": "Half-cut words",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+    "line": 177,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.half_cut_sentences",
+    "declarationLine": 177
+  },
+  {
+    "correspondenceLine": 45,
+    "linkText": "Extension theorem",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "line": 327,
+    "declaration": "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent",
+    "declarationLine": 327
+  },
+  {
+    "correspondenceLine": 46,
+    "linkText": "Open embeddings and ranges",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkOpenGluing.lean",
+    "line": 38,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.inclusion_openEmbedding",
+    "declarationLine": 38
+  },
+  {
+    "correspondenceLine": 46,
+    "linkText": "Unique gluing",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkOpenGluing.lean",
+    "line": 66,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.existsUnique_gluing",
+    "declarationLine": 66
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Component spans",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluation.lean",
+    "line": 38,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span",
+    "declarationLine": 38
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Product comparisons",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationComparisons.lean",
+    "line": 95,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_pair",
+    "declarationLine": 95
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Coproducts and the empty join",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationCoproducts.lean",
+    "line": 144,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit",
+    "declarationLine": 144
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Every parameter diagram",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean",
+    "line": 43,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring",
+    "declarationLine": 43
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Actual endpoint and centre graphs",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringPoints.lean",
+    "line": 97,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph",
+    "declarationLine": 97
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "Graph of the parameter",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean",
+    "line": 120,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.endpointParameter_graph",
+    "declarationLine": 120
+  },
+  {
+    "correspondenceLine": 47,
+    "linkText": "All three parameter components and the partial-morphism equation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringChecks.lean",
+    "line": 98,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.Checks.fork_parameter",
+    "declarationLine": 98
+  },
+  {
+    "correspondenceLine": 48,
+    "linkText": "Coordinates",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebraCoordinates.lean",
+    "line": 47,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.labelCoding",
+    "declarationLine": 47
+  },
+  {
+    "correspondenceLine": 48,
+    "linkText": "Initiality and constructor equations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean",
+    "line": 198,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.formulaAlgebra_isInitial",
+    "declarationLine": 198
+  },
+  {
+    "correspondenceLine": 48,
+    "linkText": "Evaluator",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean",
+    "line": 247,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.eq_evaluate",
+    "declarationLine": 247
+  },
+  {
+    "correspondenceLine": 48,
+    "linkText": "Copair mono",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkSignedAtomInclusion.lean",
+    "line": 126,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkDerivation.tuple_signed_atoms_mono",
+    "declarationLine": 126
+  },
+  {
+    "correspondenceLine": 49,
+    "linkText": "Endpoint, family and independent axioms",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkUndecidedAtoms.lean",
+    "line": 22,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.endpoint_undecided_atom",
+    "declarationLine": 22
+  },
+  {
+    "correspondenceLine": 50,
+    "linkText": "Vertices and colimit",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteBooleanPowers.lean",
+    "line": 41,
+    "declaration": "CategoricalEssentialIncompleteness.V46.BooleanPowers.vertex",
+    "declarationLine": 41
+  },
+  {
+    "correspondenceLine": 50,
+    "linkText": "Independent types",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteSortAndGraphChecks.lean",
+    "line": 19,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 51,
+    "linkText": "Preservation and natural isomorphism",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteSortPolynomials.lean",
+    "line": 119,
+    "declaration": "CategoricalEssentialIncompleteness.V46.FiniteSorts.constant_preservesFiniteCoproducts",
+    "declarationLine": 119
+  },
+  {
+    "correspondenceLine": 51,
+    "linkText": "Functor types",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteSortAndGraphChecks.lean",
+    "line": 26,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 52,
+    "linkText": "Inverse functors",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+    "line": 31,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PartialMaps.fromTotal",
+    "declarationLine": 31
+  },
+  {
+    "correspondenceLine": 52,
+    "linkText": "Composite equalities",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RestrictionComparisonChecks.lean",
+    "line": 68,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 53,
+    "linkText": "Three-branch rules and closure",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleClosure.lean",
+    "line": 30,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PropositionalRules.rules",
+    "declarationLine": 30
+  },
+  {
+    "correspondenceLine": 53,
+    "linkText": "Least theorem subobject",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleClosure.lean",
+    "line": 68,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PropositionalRules.least_theorems",
+    "declarationLine": 68
+  },
+  {
+    "correspondenceLine": 54,
+    "linkText": "Probes",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstruction.lean",
+    "line": 80,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.leftMap_injective_of_decidableVariables",
+    "declarationLine": 80
+  },
+  {
+    "correspondenceLine": 54,
+    "linkText": "Every diagonal square",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstructionTuples.lean",
+    "line": 59,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.no_diagonal_pullback",
+    "declarationLine": 59
+  },
+  {
+    "correspondenceLine": 54,
+    "linkText": "Expanded square",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstructionChecks.lean",
+    "line": 29,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 55,
+    "linkText": "All-oracle section and translations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46OracleMachineDomains.lean",
+    "line": 40,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.machine_section",
+    "declarationLine": 40
+  },
+  {
+    "correspondenceLine": 55,
+    "linkText": "Exact evaluator and parameter",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+    "line": 53,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.mem_machineTau",
+    "declarationLine": 53
+  },
+  {
+    "correspondenceLine": 55,
+    "linkText": "Arbitrary conditional",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+    "line": 154,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_no_lift",
+    "declarationLine": 154
+  },
+  {
+    "correspondenceLine": 55,
+    "linkText": "Independent types",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46OracleAndApplicationChecks.lean",
+    "line": 27,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 56,
+    "linkText": "Connected domains",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+    "line": 84,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.connected_le_numeral",
+    "declarationLine": 84
+  },
+  {
+    "correspondenceLine": 56,
+    "linkText": "Two morphisms",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+    "line": 143,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.indistinguishable_on_connected",
+    "declarationLine": 143
+  },
+  {
+    "correspondenceLine": 56,
+    "linkText": "Unprimed conclusion",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+    "line": 236,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.unprimed_not_locallyConnected",
+    "declarationLine": 236
+  },
+  {
+    "correspondenceLine": 56,
+    "linkText": "Family identity",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+    "line": 55,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_identity_ne_zero",
+    "declarationLine": 55
+  },
+  {
+    "correspondenceLine": 57,
+    "linkText": "Normalization",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+    "line": 75,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PrintedObjectCoding.normalization",
+    "declarationLine": 75
+  },
+  {
+    "correspondenceLine": 57,
+    "linkText": "Standard interpretation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+    "line": 104,
+    "declaration": "CategoricalEssentialIncompleteness.V46.TrueArithmetic.interpretationIsomorphism",
+    "declarationLine": 107
+  },
+  {
+    "correspondenceLine": 57,
+    "linkText": "Both composite equalities",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RestrictionComparisonChecks.lean",
+    "line": 74,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 57,
+    "linkText": "Extension equation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+    "line": 67,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.observation_extension",
+    "declarationLine": 67
+  },
+  {
+    "correspondenceLine": 61,
+    "linkText": "Nullary predicates",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryInterpretedSubstitution.lean",
+    "line": 122,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NullaryInterpretation.interpreted_atom",
+    "declarationLine": 122
+  },
+  {
+    "correspondenceLine": 61,
+    "linkText": "Equality",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryInterpretedSubstitution.lean",
+    "line": 89,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NullaryInterpretation.interpreted_equality",
+    "declarationLine": 89
+  },
+  {
+    "correspondenceLine": 61,
+    "linkText": "Independent checks",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NullaryInterpretedSubstitutionChecks.lean",
+    "line": 35,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 83,
+    "linkText": "Construction and universal property",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticSliceDerivations.lean",
+    "line": 19,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 83,
+    "linkText": "Underlying rules and iterated-slice comparison",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticSliceDerivationsChecks.lean",
+    "line": 22,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 83,
+    "linkText": "Independent initiality and uniqueness checks",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticSliceDerivationsChecks.lean",
+    "line": 36,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 101,
+    "linkText": "G-set construction and proofs",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RegularActionPoints.lean",
+    "line": 34,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RegularActionPoints.singletonIsTerminal",
+    "declarationLine": 34
+  },
+  {
+    "correspondenceLine": 103,
+    "linkText": "Unit",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46PartialSliceSpanChangeBase.lean",
+    "line": 56,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_span",
+    "declarationLine": 56
+  },
+  {
+    "correspondenceLine": 103,
+    "linkText": "First halting stages",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46EnumerableCarrierEnumeration.lean",
+    "line": 30,
+    "declaration": "CategoricalEssentialIncompleteness.V46.EnumerableCarrierEnumeration.firstStages",
+    "declarationLine": 30
+  },
+  {
+    "correspondenceLine": 103,
+    "linkText": "Split objects and slices",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46EnumerableCarrierEnumeration.lean",
+    "line": 198,
+    "declaration": "CategoricalEssentialIncompleteness.V46.EnumerableCarrierEnumeration.infinite_enumerable_carrier",
+    "declarationLine": 198
+  },
+  {
+    "correspondenceLine": 105,
+    "linkText": "Guarded inverse",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+    "line": 65,
+    "declaration": "CategoricalEssentialIncompleteness.V46.PrintedObjectCoding.guarded",
+    "declarationLine": 65
+  },
+  {
+    "correspondenceLine": 105,
+    "linkText": "Set realization and represented graphs",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSetsCategory.lean",
+    "line": 77,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realizationFunctor",
+    "declarationLine": 77
+  },
+  {
+    "correspondenceLine": 107,
+    "linkText": "Native sentence",
+    "path": "Lean/CategoricalEssentialIncompleteness/ArithmeticDomainApplication.lean",
+    "line": 50,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ArithmeticApplication.thetaCode",
+    "declarationLine": 53
+  },
+  {
+    "correspondenceLine": 107,
+    "linkText": "Object and morphism assignments",
+    "path": "Lean/CategoricalEssentialIncompleteness/ArithmeticObservationFunctor.lean",
+    "line": 47,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ArithmeticApplication.observedPair",
+    "declarationLine": 47
+  },
+  {
+    "correspondenceLine": 107,
+    "linkText": "Evaluator equations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ObservationCoding.lean",
+    "line": 30,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ObservationCoding.native_output",
+    "declarationLine": 30
+  },
+  {
+    "correspondenceLine": 109,
+    "linkText": "Proof-word isomorphism",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticProofWords.lean",
+    "line": 215,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NumericalArithmetic.ProofWords.iso",
+    "declarationLine": 215
+  },
+  {
+    "correspondenceLine": 109,
+    "linkText": "Named functor",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean",
+    "line": 137,
+    "declaration": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.observationFunctor",
+    "declarationLine": 137
+  },
+  {
+    "correspondenceLine": 111,
+    "linkText": "Coding isomorphism",
+    "path": "Lean/CategoricalEssentialIncompleteness/SyntacticModel.lean",
+    "line": 317,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.codingEquiv",
+    "declarationLine": 317
+  },
+  {
+    "correspondenceLine": 111,
+    "linkText": "Product comparison and diagonal argument",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ModelFamilyDiagonal.lean",
+    "line": 110,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ModelFamilyDiagonal.map_product",
+    "declarationLine": 110
+  },
+  {
+    "correspondenceLine": 111,
+    "linkText": "Independent statements",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptExamplesChecks.lean",
+    "line": 27,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 113,
+    "linkText": "Constructor laws",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxParserLaws.lean",
+    "line": 151,
+    "declaration": "CategoricalEssentialIncompleteness.V46.SyntacticSyntax.Postfix.term_constructor_carrier",
+    "declarationLine": 151
+  },
+  {
+    "correspondenceLine": 113,
+    "linkText": "Root decomposition",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxDecomposition.lean",
+    "line": 157,
+    "declaration": "CategoricalEssentialIncompleteness.V46.SyntacticSyntax.Postfix.carrier_decomposition",
+    "declarationLine": 157
+  },
+  {
+    "correspondenceLine": 113,
+    "linkText": "Independent equivalence",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptComparisonChecks.lean",
+    "line": 53,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 115,
+    "linkText": "Categorical and pointwise statements",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+    "line": 49,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.no_lift_of_summand_inverse_images",
+    "declarationLine": 52
+  },
+  {
+    "correspondenceLine": 115,
+    "linkText": "Independent statements",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptComparisonChecks.lean",
+    "line": 78,
+    "declaration": null,
+    "declarationLine": null
+  },
+  {
+    "correspondenceLine": 117,
+    "linkText": "Source and tags",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SubstitutionSource.lean",
+    "line": 26,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.substitutionSource",
+    "declarationLine": 26
+  },
+  {
+    "correspondenceLine": 117,
+    "linkText": "Public input codes",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SubstitutionSource.lean",
+    "line": 71,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.admissible_iff_source_and_success",
+    "declarationLine": 71
+  },
+  {
+    "correspondenceLine": 117,
+    "linkText": "Statement checks",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46AdmissibilityAndComplementChecks.lean",
+    "line": 27,
+    "declaration": "CategoricalEssentialIncompleteness.V46.AdmissibilityAndComplementChecks.substitution_domains",
+    "declarationLine": 27
+  },
+  {
+    "correspondenceLine": 119,
+    "linkText": "Individual partial inverse",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicatesImages.lean",
+    "line": 378,
+    "declaration": "CategoricalEssentialIncompleteness.V46.SyntacticPredicates.totalSplit_mono_partial_inverse",
+    "declarationLine": 378
+  },
+  {
+    "correspondenceLine": 119,
+    "linkText": "Copairing and total conditional",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticComplementaryInclusions.lean",
+    "line": 46,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ArithmeticComplementaryInclusions.conditional",
+    "declarationLine": 46
+  },
+  {
+    "correspondenceLine": 119,
+    "linkText": "Independent statements",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46AdmissibilityAndComplementChecks.lean",
+    "line": 60,
+    "declaration": "CategoricalEssentialIncompleteness.V46.AdmissibilityAndComplementChecks.substitution_domains",
+    "declarationLine": 27
+  },
+  {
+    "correspondenceLine": 142,
+    "linkText": "Presentation and translation data",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46LogicalTranslations.lean",
+    "line": 35,
+    "declaration": "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation",
+    "declarationLine": 34
+  },
+  {
+    "correspondenceLine": 144,
+    "linkText": "First-order presentations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46LogicalTranslations.lean",
+    "line": 35,
+    "declaration": "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation",
+    "declarationLine": 34
+  },
+  {
+    "correspondenceLine": 153,
+    "linkText": "Hypothesis",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompleteness.lean",
+    "line": 45,
+    "declaration": "CategoricalEssentialIncompleteness.V46.AssociatedCategory.essential_incomplete_of_reduction",
+    "declarationLine": 34
+  },
+  {
+    "correspondenceLine": 153,
+    "linkText": "Pullback calculation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46RetractedClosedTheories.lean",
+    "line": 53,
+    "declaration": "CategoricalEssentialIncompleteness.V46.RetractedClosedTheories.closed_back",
+    "declarationLine": 53
+  },
+  {
+    "correspondenceLine": 162,
+    "linkText": "Selector in every PA model",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean",
+    "line": 30,
+    "declaration": "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selectedEntry_eval",
+    "declarationLine": 30
+  },
+  {
+    "correspondenceLine": 192,
+    "linkText": "Native derivability and both exclusions",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "line": 183,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.independent_instance",
+    "declarationLine": 184
+  },
+  {
+    "correspondenceLine": 217,
+    "linkText": "Endpoint equations",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringComponents.lean",
+    "line": 43,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_tau",
+    "declarationLine": 43
+  },
+  {
+    "correspondenceLine": 217,
+    "linkText": "Evaluated binary coproduct",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationCoproducts.lean",
+    "line": 144,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit",
+    "declarationLine": 144
+  },
+  {
+    "correspondenceLine": 218,
+    "linkText": "Initiality and evaluation",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean",
+    "line": 198,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.formulaAlgebra_isInitial",
+    "declarationLine": 198
+  },
+  {
+    "correspondenceLine": 221,
+    "linkText": "Three atomic witnesses",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkUndecidedAtoms.lean",
+    "line": 22,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.endpoint_undecided_atom",
+    "declarationLine": 22
+  },
+  {
+    "correspondenceLine": 250,
+    "linkText": "Turing morphism",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean",
+    "line": 43,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring",
+    "declarationLine": 43
+  },
+  {
+    "correspondenceLine": 250,
+    "linkText": "Partial graphs at all three vertices",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringPoints.lean",
+    "line": 97,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph",
+    "declarationLine": 97
+  },
+  {
+    "correspondenceLine": 253,
+    "linkText": "Every candidate square",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstructionTuples.lean",
+    "line": 59,
+    "declaration": "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.no_diagonal_pullback",
+    "declarationLine": 59
+  },
+  {
+    "correspondenceLine": 259,
+    "linkText": "Evaluator, support and lifting",
+    "path": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+    "line": 53,
+    "declaration": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.mem_machineTau",
+    "declarationLine": 53
+  }
+]

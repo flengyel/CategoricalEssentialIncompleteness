@@ -1,0 +1,1507 @@
+Theorem 3.1 thm:comparison
+CategoricalEssentialIncompleteness.LocalConnectedness.comparison_zero_inverse_images Lean/CategoricalEssentialIncompleteness/V46Comparison.lean:35
+theorem comparison_zero_inverse_images (F : RangeFunctor R A) {U : R}
+    (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : U ≅ coprod U U) (P N : Idem (F.toFunctor.obj U))
+    (hPN : P ⊓ N = ⊥) (ha0 : F.mapIdem (diagonal0 τ b) ≤ P)
+    (ha1 : F.mapIdem (diagonal1 τ b) ≤ N)
+    (s : F.toFunctor.obj U ⟶ coprod (F.toFunctor.obj U) (F.toFunctor.obj U))
+    (hs0 : Idem.pull s (summand0 (F.toFunctor.obj U) (F.toFunctor.obj U)) = N)
+    (hs1 : Idem.pull s (summand1 (F.toFunctor.obj U) (F.toFunctor.obj U)) = P)
+    (ℓ : U ⟶ coprod U U)
+    (hℓ : F.toFunctor.map ℓ = s ≫ (F.comparison U U).hom) :
+    ∃ g : U ⟶ U, isTotal g ∧
+      Idem.pull (F.toFunctor.map g) P = ⊥ ∧
+      Idem.pull (F.toFunctor.map g) N = ⊥ := by
+
+Theorem 3.1 thm:comparison
+CategoricalEssentialIncompleteness.LocalConnectedness.comparison_noncoverage Lean/CategoricalEssentialIncompleteness/V46Comparison.lean:94
+theorem comparison_noncoverage [BinaryJoins A] (F : RangeFunctor R A) {U : R}
+    (g : U ⟶ U) (hg : isTotal g) (P N : Idem (F.toFunctor.obj U))
+    (hP : Idem.pull (F.toFunctor.map g) P = ⊥)
+    (hN : Idem.pull (F.toFunctor.map g) N = ⊥)
+    (hU : F.toFunctor.map (𝟙 U) ≠ 0)
+    (hjoin : Idem.pull (F.toFunctor.map g) (P ⊔ N) =
+      Idem.pull (F.toFunctor.map g) P ⊔ Idem.pull (F.toFunctor.map g) N) :
+    P ⊔ N ≠ ⊤ := by
+
+Corollary 3.2 cor:separator
+CategoricalEssentialIncompleteness.LocalConnectedness.no_lifted_complementary_separator Lean/CategoricalEssentialIncompleteness/V46Comparison.lean:112
+theorem no_lifted_complementary_separator [BinaryJoins A] [TotalJoinInverse A]
+    (F : RangeFunctor R A) {U : R}
+    (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : U ≅ coprod U U) (hU : F.toFunctor.map (𝟙 U) ≠ 0)
+    (P N : Idem (F.toFunctor.obj U)) (hPN : Complementary P N)
+    (ha0 : F.mapIdem (diagonal0 τ b) ≤ P)
+    (ha1 : F.mapIdem (diagonal1 τ b) ≤ N) :
+    ¬ ∃ (s : F.toFunctor.obj U ⟶ coprod (F.toFunctor.obj U) (F.toFunctor.obj U))
+      (ℓ : U ⟶ coprod U U),
+      Idem.pull s (summand0 (F.toFunctor.obj U) (F.toFunctor.obj U)) = N ∧
+      Idem.pull s (summand1 (F.toFunctor.obj U) (F.toFunctor.obj U)) = P ∧
+      F.toFunctor.map ℓ = s ≫ (F.comparison U U).hom := by
+
+Corollary 3.3 cor:source-conditionals
+CategoricalEssentialIncompleteness.LocalConnectedness.source_inseparable_of_complementary_conditionals Lean/CategoricalEssentialIncompleteness/V46Comparison.lean:132
+theorem source_inseparable_of_complementary_conditionals
+    [BinaryJoins R] [BinaryJoins A] [TotalJoinInverse A]
+    (F : RangeFunctor R A) {U : R}
+    (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : U ≅ coprod U U) (hU : F.toFunctor.map (𝟙 U) ≠ 0)
+    (conditionals : ∀ c c' : Idem U, Complementary c c' →
+      ∃ ℓ : U ⟶ coprod U U, isTotal ℓ ∧
+        c.hom ≫ ℓ = c.hom ≫ i1 U U ∧ c'.hom ≫ ℓ = c'.hom ≫ i0 U U) :
+    Inseparable (diagonal0 τ b) (diagonal1 τ b) := by
+
+Proposition 3.4 prop:disjoint-joins
+CategoricalEssentialIncompleteness.LocalConnectedness.complementary_conditional_of_disjoint_joins Lean/CategoricalEssentialIncompleteness/V46Comparison.lean:183
+theorem complementary_conditional_of_disjoint_joins [DisjointArrowJoins C]
+    {X : C} (c c' : Idem X) (hc : PairComplementary c c') :
+    ∃ ℓ : X ⟶ coprod X X, isTotal ℓ ∧
+      c.hom ≫ ℓ = c.hom ≫ i1 X X ∧ c'.hom ≫ ℓ = c'.hom ≫ i0 X X ∧
+      ∀ h : X ⟶ coprod X X,
+        ArrowLE (c.hom ≫ i1 X X) h → ArrowLE (c'.hom ≫ i0 X X) h → ArrowLE ℓ h :=
+  disjoint_joins_switch c c' hc
+
+
+Proposition 3.4 prop:disjoint-joins
+CategoricalEssentialIncompleteness.LocalConnectedness.disjoint_joins_switch Lean/CategoricalEssentialIncompleteness/DisjointJoins.lean:44
+theorem disjoint_joins_switch [DisjointArrowJoins C] {X : C}
+    (c c' : Idem X) (hc : PairComplementary c c') :
+    ∃ ℓ : X ⟶ coprod X X, isTotal ℓ ∧
+      c.hom ≫ ℓ = c.hom ≫ i1 X X ∧ c'.hom ≫ ℓ = c'.hom ≫ i0 X X ∧
+      ∀ h : X ⟶ coprod X X,
+        ArrowLE (c.hom ≫ i1 X X) h → ArrowLE (c'.hom ≫ i0 X X) h → ArrowLE ℓ h := by
+
+Proposition 4.1 prop:interpreted-theory
+CategoricalEssentialIncompleteness.LocalConnectedness.interpreted_theory_equations Lean/CategoricalEssentialIncompleteness/V46LogicalComparison.lean:92
+theorem interpreted_theory_equations (G : RangeFunctor C A) {P T S : C}
+    (c : P ⟶ S) (m : T ⟶ S) (r : S ⟶ T) (t : Idem S)
+    (ht : t = Ranges.range c) (hmr : m ≫ r = 𝟙 T) (hrm : r ≫ m = t.hom) :
+    G.mapIdem t = Ranges.range (G.toFunctor.map c) ∧
+      G.toFunctor.map r ≫ G.toFunctor.map m = (G.mapIdem t).hom ∧
+      G.toFunctor.map m ≫ G.toFunctor.map r = 𝟙 (G.toFunctor.obj T) := by
+
+Proposition 4.1 prop:interpreted-theory
+CategoricalEssentialIncompleteness.V46.PartialMaps.totalEquivalence Lean/CategoricalEssentialIncompleteness/V46PartialMapTotals.lean:115
+def totalEquivalence : D ≌ Tot D := (toTotal (D := D)).asEquivalence
+
+
+Theorem 4.2 thm:logical-comparison
+CategoricalEssentialIncompleteness.LocalConnectedness.logical_comparison Lean/CategoricalEssentialIncompleteness/V46LogicalComparison.lean:185
+theorem logical_comparison (F : RangeFunctor R A)
+    (splittings : ∀ X : SplitObject R, V46.TargetSplitting F X) {U : R}
+    (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : U ≅ coprod U U) (hU : F.toFunctor.map (𝟙 U) ≠ 0)
+    {S : SplitObject R} (θ : (splittingInclusion (C := R)).obj U ⟶ S)
+    (hθ : isTotal θ) (ν : S ⟶ S) (tA : Idem S)
+    (ht : (V46.chosenSplitRangeFunctor F splittings).mapIdem tA ⊓
+      Idem.pull ((V46.chosenSplitRangeFunctor F splittings).toFunctor.map ν)
+        ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA) = ⊥)
+    (ha0 : F.mapIdem (diagonal0 τ b) ≤
+      Idem.pull ((V46.chosenSplitExtensionInclusionIso F splittings).inv.app U ≫
+        (V46.chosenSplitExtension F splittings).map θ)
+        ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA))
+    (ha1 : F.mapIdem (diagonal1 τ b) ≤
+      Idem.pull ((V46.chosenSplitExtensionInclusionIso F splittings).inv.app U ≫
+        (V46.chosenSplitExtension F splittings).map θ)
+        (Idem.pull ((V46.chosenSplitExtension F splittings).map ν)
+          ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA)))
+    (s : F.toFunctor.obj U ⟶ coprod (F.toFunctor.obj U) (F.toFunctor.obj U))
+    (hs0 : Idem.pull s (summand0 (F.toFunctor.obj U) (F.toFunctor.obj U)) =
+      Idem.pull ((V46.chosenSplitExtensionInclusionIso F splittings).inv.app U ≫
+        (V46.chosenSplitExtension F splittings).map θ)
+        (Idem.pull ((V46.chosenSplitExtension F splittings).map ν)
+          ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA)))
+    (hs1 : Idem.pull s (summand1 (F.toFunctor.obj U) (F.toFunctor.obj U)) =
+      Idem.pull ((V46.chosenSplitExtensionInclusionIso F splittings).inv.app U ≫
+        (V46.chosenSplitExtension F splittings).map θ)
+        ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA))
+    (ℓ : U ⟶ coprod U U)
+    (hℓ : F.toFunctor.map ℓ = s ≫ (F.comparison U U).hom) :
+    ∃ g : U ⟶ U, isTotal g ∧
+      Idem.pull ((V46.chosenSplitExtension F splittings).map
+        ((splittingInclusion (C := R)).map g ≫ θ))
+        ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA) = ⊥ ∧
+      Idem.pull ((V46.chosenSplitExtension F splittings).map
+        ((splittingInclusion (C := R)).map g ≫ θ))
+        (Idem.pull ((V46.chosenSplitExtension F splittings).map ν)
+          ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA)) = ⊥ ∧
+      (V46.chosenSplitRangeFunctor F splittings).mapIdem tA ⊔
+        Idem.pull ((V46.chosenSplitExtension F splittings).map ν)
+          ((V46.chosenSplitRangeFunctor F splittings).mapIdem tA) ≠ ⊤ ∧
+      tA ⊔ Idem.pull ν tA ≠ ⊤ := by
+
+Theorem 4.2 thm:logical-comparison
+CategoricalEssentialIncompleteness.LocalConnectedness.V46.splitRangeFunctor_inclusion Lean/CategoricalEssentialIncompleteness/V46SplitExtension.lean:296
+theorem splitRangeFunctor_inclusion [Splits A] :
+    splittingInclusion (C := R) ⋙ (splitRangeFunctor F).toFunctor = F.toFunctor := by
+
+Corollary 4.3 cor:domain-incompleteness
+CategoricalEssentialIncompleteness.LocalConnectedness.domain_incompleteness Lean/CategoricalEssentialIncompleteness/RestrictionIdempotents.lean:222
+theorem domain_incompleteness [TotalJoinInverse C] {U S : C}
+    {a b : Idem U} (hab : Inseparable a b)
+    (θ : U ⟶ S) (hθ : isTotal θ) (ν : S ⟶ S) (_hν : isTotal ν)
+    (t₀ : Idem S) (ha : a ≤ Idem.pull θ t₀)
+    (hb : b ≤ Idem.pull θ (Idem.pull ν t₀))
+    (t : Idem S) (ht : t₀ ≤ t) (hconsistent : t ⊓ Idem.pull ν t = ⊥) :
+    Inseparable t (Idem.pull ν t) ∧ t ⊔ Idem.pull ν t ≠ ⊤ := by
+
+Theorem 4.4 thm:first-order-reflection
+CategoricalEssentialIncompleteness.V46.FirstOrderReflection.extensive Lean/CategoricalEssentialIncompleteness/V46FirstOrderReflection.lean:57
+theorem extensive (A : Subobject S) : A ≤ generated proofs A := by
+
+Theorem 4.4 thm:first-order-reflection
+CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.axiomGeneration_original Lean/CategoricalEssentialIncompleteness/V46SyntacticGenerationAdjunction.lean:106
+theorem axiomGeneration_original (A : Over (S).sentenceObject) :
+    ((axiomGeneration T V σ π d).obj A).val =
+      SyntacticGeneratedTheoryTotal.sentenceTheory T V σ π d A.hom :=
+  (FirstOrderReflection.presentation_generated_comparison (P) (hP) A.hom).symm
+
+
+Theorem 4.5 thm:translation-galois
+CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.Translation.inverse_closed Lean/CategoricalEssentialIncompleteness/V46TranslationGalois.lean:61
+theorem inverse_closed (T : Q.Theories) :
+    FirstOrderReflection.generated P.proofs ((Subobject.pullback σ.sentence).obj T.val) =
+      (Subobject.pullback σ.sentence).obj T.val := by
+
+Theorem 4.5 thm:translation-galois
+CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.Axioms.adjunction Lean/CategoricalEssentialIncompleteness/V46FirstOrderTranslationReflection.lean:144
+def adjunction : generation (D := D) (V := V) ⊣ inclusion :=
+  Adjunction.mkOfHomEquiv {
+    homEquiv := homEquiv
+    homEquiv_naturality_left_symm := fun _ _ => by
+
+Proposition 4.6 prop:deduction-comparison
+CategoricalEssentialIncompleteness.V46.DeductionComparison.generation_square Lean/CategoricalEssentialIncompleteness/V46DeductionComparison.lean:130
+theorem generation_square :
+    FirstOrderReflection.generation P.proofs P.initial ⋙ theoryFunctor G P Q σ =
+      imageFunctor G σ ⋙ FirstOrderReflection.generation Q.proofs Q.initial :=
+  CategoryTheory.Functor.ext (fun A => Subtype.ext
+    (generation_identity G regularEpis P Q σ proofMap proofConclusion A))
+
+include regularEpis proofConclusion in
+
+Proposition 4.6 prop:deduction-comparison
+CategoricalEssentialIncompleteness.V46.DeductionMates.theoryAdjunction Lean/CategoricalEssentialIncompleteness/V46DeductionMates.lean:177
+def theoryAdjunction :=
+  DeductionComparison.restrictedAdjunction G regularEpis P Q σ
+    (comparisonMap baseAdjunction P Q σ σΦ hs ruleTransformation)
+    (comparisonMap_conclusion baseAdjunction P Q σ σΦ hs ruleTransformation)
+    (DeductionSliceAdjunction.rightOrder baseAdjunction σ)
+    (DeductionSliceAdjunction.orderAdjunction baseAdjunction σ)
+
+
+Theorem 4.7 thm:free-first-order-adjunction
+CategoricalEssentialIncompleteness.V46.SignedFirstOrder.adjunction Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean:58
+def adjunction : generation F ⊣ extraction F :=
+  Adjunction.mkOfHomEquiv {
+    homEquiv := homEquiv F
+    homEquiv_naturality_left_symm := by
+
+Theorem 4.7 thm:free-first-order-adjunction
+CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.ConsistentTheoryCategory.morphism_bound_iff Lean/CategoricalEssentialIncompleteness/V46ConsistentFirstOrderTheories.lean:62
+theorem morphism_bound_iff {A B : ConsistentTheoryCategory (D := D) (V := V)}
+    (σ : A.presentation.Translation B.presentation) :
+    (Subobject.«exists» σ.sentence).obj A.theory.val ≤ B.theory.val ↔
+      (σ.pushforward.obj A.theory).val ≤ B.theory.val := by
+
+Corollary 4.8 cor:signed-first-order-incompleteness
+CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean:29
+theorem essential_incomplete_iff_inseparable
+    (inverses : RestrictionSubobjects.MonoInverses C)
+    {V X : RestrictionSubobjects.Tot C} (F : NullaryPresentations V)
+    (a b : Subobject X) (hab : a ⊓ b = ⊥)
+    (consistent : (F.presentation X).Consistent (theory F a b).val) :
+    (F.presentation X).EssentiallyIncomplete (theory F a b) ↔
+      Inseparable (RestrictionSubobjects.domain inverses a)
+        (RestrictionSubobjects.domain inverses b) :=
+  (essential_incomplete_iff_subobject_inseparable F a b hab consistent).trans
+    (RestrictionSubobjects.inseparable_iff inverses a b).symm
+
+
+Corollary 4.8 cor:signed-first-order-incompleteness
+CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.inseparable_iff Lean/CategoricalEssentialIncompleteness/V46RestrictionSubobjectInseparability.lean:49
+theorem inseparable_iff (a b : Subobject X) :
+    Inseparable (domain h a) (domain h b) ↔ SubobjectInseparable a b := by
+
+Lemma 5.1 lem:partial-slice-turing
+CategoricalEssentialIncompleteness.V46.SplitTuring.parameter_total Lean/CategoricalEssentialIncompleteness/V46SplitTuring.lean:75
+theorem parameter_total {W : R} (V : SplitObject R) (g : V.base ⟶ W)
+    (hg : isTotal g) :
+    @PCategoryStruct.rst (SplitObject R) inferInstance productData
+      V ((splittingInclusion (C := R)).obj W) (parameter V g) = 𝟙 V := by
+
+Lemma 5.1 lem:partial-slice-turing
+CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.splittingEquivalence_inverse_restriction Lean/CategoricalEssentialIncompleteness/V46ConstantSliceFull.lean:203
+theorem splittingEquivalence_inverse_restriction (Q : R) :
+    PreservesRestriction (splittingEquivalence inverses T Q).inverse :=
+  RestrictionCompletion.inverse_restriction _ (splittingEquivalence_restriction inverses T Q)
+
+
+Theorem 5.2 thm:theory-extension
+CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_full Lean/CategoricalEssentialIncompleteness/V46PartialSliceChangeBase.lean:95
+theorem postcompose_full : (postcompose i).Full where
+
+Theorem 5.2 thm:theory-extension
+CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso Lean/CategoricalEssentialIncompleteness/V46PartialSlicePostcomposeProducts.lean:84
+def actualProductIso (X Y : PartialMaps.Par (Over T)) :
+    (PartialSliceChangeBase.postcompose i).obj (PartialSliceProducts.product inverses T X Y) ≅
+      PartialSliceProducts.product inverses U
+        ((PartialSliceChangeBase.postcompose i).obj X)
+        ((PartialSliceChangeBase.postcompose i).obj Y) :=
+  (PartialSliceEquivalence.functor inverses U).preimageIso
+    (X := (PartialSliceChangeBase.postcompose i).obj (PartialSliceProducts.product inverses T X Y))
+    (Y := PartialSliceProducts.product inverses U
+      ((PartialSliceChangeBase.postcompose i).obj X) ((PartialSliceChangeBase.postcompose i).obj Y))
+    (ambientProductIso i ((PartialSliceEquivalence.functor inverses T).obj X)
+      ((PartialSliceEquivalence.functor inverses T).obj Y))
+
+
+Theorem 5.3 thm:associated-incompleteness
+CategoricalEssentialIncompleteness.V46.AssociatedCategory.associated_incompleteness Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompleteness.lean:57
+theorem associated_incompleteness (U : P.Theories) (hcU : P.Consistent U.val) :
+    (P.EssentiallyIncomplete U ↔
+      AssociatedClosedTheories.EssentiallyIncomplete P (U.val : Tot C) (Q (U.val : Tot C))
+        (constantTheory P (U.val : Tot C) (Q (U.val : Tot C)) (hQ (U.val : Tot C)) U)) ∧
+    (¬ P.Complete U.val ↔
+      ¬ isTotal ((PartialSliceTheoryFamilies.constantFunctor inverses (U.val : Tot C)).map
+        (theoryDecision inverses P U.val hcU))) ∧
+    (SubobjectInseparable U.val ((Subobject.pullback P.syntaxData.sentenceNegation).obj U.val) ↔
+      ¬ RestrictionRetraction.HasTotalExtension
+        ((PartialSliceTheoryFamilies.constantFunctor inverses (U.val : Tot C)).map
+          (theoryDecision inverses P U.val hcU))) := by
+
+Theorem 5.3 thm:associated-incompleteness
+CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.essential_incomplete_iff Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean:88
+theorem essential_incomplete_iff (T : P.Theories) (hc : P.Consistent T.val) :
+    P.EssentiallyIncomplete T ↔ EssentiallyIncomplete P U Q (constantTheory P U Q hQ T) := by
+
+Theorem 5.3 thm:associated-incompleteness
+CategoricalEssentialIncompleteness.V46.PropositionalAssociatedIncompleteness.associated_incompleteness Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean:90
+theorem associated_incompleteness :
+    (EssentiallyIncomplete n i P U ↔ EssentiallyIncomplete ((Bᵤ).map n)
+      (implication (Bᵤ) i) (Q _) (constantTheory n i P _ (Q _) (hQ _) U)) ∧
+    (¬ Complete n U.val ↔ ¬ isTotal (familyDecision m n i P U hc)) ∧
+    (SubobjectInseparable U.val ((Subobject.pullback n).obj U.val) ↔
+      ¬ RestrictionRetraction.HasTotalExtension (familyDecision m n i P U hc)) := by
+
+Theorem 5.3 thm:associated-incompleteness
+CategoricalEssentialIncompleteness.V46.PropositionalAssociatedIncompleteness.associated_reduction Lean/CategoricalEssentialIncompleteness/V46PropositionalAssociatedIncompleteness.lean:104
+theorem associated_reduction {X : Tot C} (a b : Subobject X) (hab : SubobjectInseparable a b)
+    (θ : X ⟶ S) (t : Theory n i P) (ha : a ≤ (Subobject.pullback θ).obj t.val)
+    (hb : b ≤ (Subobject.pullback θ).obj ((Subobject.pullback n).obj t.val)) (htU : t.val ≤ U.val) :
+    EssentiallyIncomplete ((Bᵤ).map n) (implication (Bᵤ) i) (Q _)
+      (constantTheory n i P _ (Q _) (hQ _) U) ∧
+    ¬ RestrictionRetraction.HasTotalExtension (familyDecision m n i P U hc) := by
+
+Lemma 6.1 lem:arithmetized-evaluation
+CategoricalEssentialIncompleteness.V46.UniformTrace.arithmetized_evaluation Lean/CategoricalEssentialIncompleteness/V46UniformTraceArithmetic.lean:23
+theorem arithmetized_evaluation :
+    Nat.Primrec (fun n : ℕ =>
+      traceCheck n.unpair.1 n.unpair.2.unpair.1 n.unpair.2.unpair.2) ∧
+    PrimrecPred (fun p : ℕ × ℕ × ℕ => traceFormula.val.Evalb ![p.1,p.2.1,p.2.2]) ∧
+    Nat.Primrec (out : ℕ → ℕ) ∧
+    (𝗣𝗔 ⊢ traceProgramComparisonSentence) ∧
+    (𝗣𝗔 ⊢ primitiveTraceGraphSentence) ∧
+    (𝗣𝗔 ⊢ traceProgramTotalitySentence) ∧
+    (𝗣𝗔 ⊢ functionalitySentence) ∧
+    (𝗣𝗔 ⊢ universalSentence) ∧
+    Nat.Primrec (Nat.unpaired (specialize : ℕ → ℕ → ℕ)) ∧
+    Nat.Primrec (Nat.unpaired (compose : ℕ → ℕ → ℕ)) ∧
+    (𝗣𝗔 ⊢ buildersTotalitySentence) ∧
+    (𝗣𝗔 ⊢ specializationSentence) ∧
+    (𝗣𝗔 ⊢ compositionSentence) ∧
+    (∀ e : ℕ, (𝗣𝗔 ⊢ specializerSectionSentence e) ∧
+      (𝗣𝗔 ⊢ specializerSectionTotalitySentence e)) := by
+
+Lemma 6.1 lem:arithmetized-evaluation
+CategoricalEssentialIncompleteness.V46.UniformTrace.compose_production_PA Lean/CategoricalEssentialIncompleteness/V46UniformTraceComparison.lean:75
+theorem compose_production_PA (f e : ℕ) :
+    Uniform 𝗣𝗔 (eventualGraph (compose f e)) (eventualGraph (canonicalPartrecCompIndex f e)) := by
+
+Lemma 6.2 lem:syntactic-functional-search
+CategoricalEssentialIncompleteness.V46.SyntacticSearch.functional_search Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean:114
+theorem functional_search (F : Graph) :
+    ∃ e : ℕ, (𝗣𝗔 ⊢ soundSentence e F) ∧ (𝗣𝗔 ⊢ domainSentence e F) ∧
+      ∀ (T : ArithmeticTheory) [𝗣𝗔 ⪯ T],
+        (T ⊢ functionalSentence F) → Uniform T (eventualGraph e) F :=
+  ⟨searchIndex F, search_sound F, search_domain F,
+    fun T _ hF => search_uniform_of_functional T F hF⟩
+
+
+Lemma 6.2 lem:syntactic-functional-search
+CategoricalEssentialIncompleteness.V46.SyntacticSearch.search_uniform_of_functional Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean:94
+theorem search_uniform_of_functional (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
+    (F : Graph) (hF : T ⊢ functionalSentence F) :
+    Uniform T (eventualGraph (searchIndex F)) F := by
+
+Lemma 6.3 lem:syntactic-total-category
+CategoricalEssentialIncompleteness.V46.SyntacticPredicates.predicateEquivalence Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicates.lean:631
+def predicateEquivalence : PredicateCategory T ≌ TotalSplit T :=
+  (realization T).asEquivalence
+
+
+Lemma 6.3 lem:syntactic-total-category
+CategoricalEssentialIncompleteness.V46.SyntacticPredicates.totalSplit_mono_partial_inverse Lean/CategoricalEssentialIncompleteness/V46SyntacticPredicatesImages.lean:378
+theorem totalSplit_mono_partial_inverse {X Y : TotalSplit T} (m : X ⟶ Y) [Mono m] :
+    ∃ r : Y.obj ⟶ X.obj, m.hom ≫ r = 𝟙 X.obj ∧ r ≫ m.hom = rst r := by
+
+Lemma 6.4 lem:st-finite-sigma1
+CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.finite_membership_PA Lean/CategoricalEssentialIncompleteness/V46FiniteSigmaOne.lean:171
+theorem finite_membership_PA (C : Carrier) : 𝗣𝗔 ⊢ finiteMembershipSentence C := by
+
+Lemma 6.4 lem:st-finite-sigma1
+CategoricalEssentialIncompleteness.V46.PrimitiveRecursiveTags.selected_membership_PA Lean/CategoricalEssentialIncompleteness/V46PrimitiveRecursiveTags.lean:434
+theorem selected_membership_PA {f : ℕ → ℕ} (hf : Nat.Primrec f) {k : ℕ}
+    (C : Fin k → FiniteSigmaOne.Carrier) :
+    𝗣𝗔 ⊢ FiniteSigmaOne.finiteMembershipSentence (selectedCondition hf C) :=
+  FiniteSigmaOne.finite_membership_PA _
+
+
+Proposition 6.5 prop:st-syntax-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticSyntax.foldHom Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxFoldHom.lean:148
+def foldHom : (SyntaxPolynomial.algebraWithParameters a b (postfixAlgebra T a b) P) ⟶ B where
+
+Proposition 6.5 prop:st-syntax-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticSyntax.NatVectors.run_natPrimrec Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxPrimitiveParser.lean:179
+theorem run_natPrimrec (a b : RawPolynomial) :
+    Nat.Primrec (Nat.unpaired (run a b : ℕ → ℕ → ℕ)) :=
+  Primrec₂.unpaired'.mpr (run_primrec a b)
+
+
+Proposition 6.6 prop:st-list-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticLists.algebra Lean/CategoricalEssentialIncompleteness/V46SyntacticLists.lean:172
+def algebra (V : PredicateCategory T) : ListAlgebra (D := PredicateCategory T) V where
+
+Proposition 6.6 prop:st-list-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticListEvaluation.SliceAlgebra.evaluation_unique Lean/CategoricalEssentialIncompleteness/V46SyntacticListEvaluationLaws.lean:220
+theorem evaluation_unique
+    (H : GraphMorphism T (productCarrier P (listCarrier V)) X)
+    (hn : ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] (p y : M),
+      (unpackedGraph H.graph).val.Evalb ![p, 0, y] ↔ A.nilOp.graph.val.Evalb ![p, y])
+    (hc : ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔]
+      (p v a y : M),
+      (unpackedGraph H.graph).val.Evalb ![p, adjoin v a, y] ↔
+        V.val.Evalb ![v] ∧ ∃ x : M, (unpackedGraph H.graph).val.Evalb ![p, a, x] ∧
+          A.consOp.val.Evalb ![p, v, x, y]) :
+    representedArrow T H = representedArrow T A.evaluationMorphism := by
+
+Proposition 6.7 prop:st-substitution-realization
+CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.admissible_iff_source_and_success Lean/CategoricalEssentialIncompleteness/V46SubstitutionSource.lean:71
+theorem admissible_iff_source_and_success (n : M) :
+    (plainAdmissibleCarrier T V σ π d).val.Evalb ![n] ↔
+      ∃ h : (Y ⨯ P : PredicateCategory T).val.Evalb ![n],
+        let q : Obj T M (Y ⨯ P) := ⟨n, h⟩
+        substitutionFreeFor V σ π d
+          ((F T M).map (prod.fst : P ⟶ V) ((F T M).map prod.snd q)).val
+          ((F T M).map (prod.snd : P ⟶ X) ((F T M).map prod.snd q)).val
+          ((F T M).map prod.fst q).val = 1 := by
+
+Proposition 6.7 prop:st-substitution-realization
+CategoricalEssentialIncompleteness.V46.ConcreteSyntaxOperationsTransport.admissibleIso_result Lean/CategoricalEssentialIncompleteness/V46SyntacticSyntaxSubstitutionComparisonTotal.lean:67
+@[reassoc] theorem admissibleIso_result :
+    (mappedAdmissibleSubstitutionIso (E) V σ π d (S₀) (S₁)
+      (targetListsEquality T V σ π d) (algebraIso T V σ π d)).hom ≫
+        (S₁).formulaSubstitution =
+      (E).functor.map (S₀).formulaSubstitution ≫
+        (syntaxFormulaIso («S₁» := (S₁)) (E) V σ π d (S₀)
+          (algebraIso T V σ π d)).hom :=
+  mappedAdmissibleSubstitutionIso_result (E) V σ π d (S₀) (S₁)
+    (targetListsEquality T V σ π d) (algebraIso T V σ π d)
+
+
+Lemma 6.8 lem:syntactic-derivation-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticDerivation.derivationCarrier Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationInitial.lean:52
+def derivationCarrier : Carrier := SuccessCarrier.carrier (validatorFold T R).f
+
+
+Lemma 6.8 lem:syntactic-derivation-initiality
+CategoricalEssentialIncompleteness.V46.SyntacticDerivation.totalDerivationFold_unique Lean/CategoricalEssentialIncompleteness/V46SyntacticDerivationTotal.lean:152
+theorem totalDerivationFold_unique (B : Endofunctor.Algebra R.inference)
+    (f : totalDerivationAlgebra T R ⟶ B) : f = totalDerivationFold T R B :=
+  (totalDerivationInitial T R).hom_ext f _
+
+
+Theorem 6.9 thm:syntactic-generated-theory
+CategoricalEssentialIncompleteness.V46.SyntacticGeneratedTheory.proofInitial Lean/CategoricalEssentialIncompleteness/V46SyntacticGeneratedTheory.lean:38
+def proofInitial {A : PredicateCategory T} (axioms : A ⟶ (S).sentenceObject) :
+    IsInitial (proofAlgebra T V σ π d axioms) :=
+  SyntacticDerivation.derivationInitial T ((S).logicalRules axioms)
+
+
+Theorem 6.9 thm:syntactic-generated-theory
+CategoricalEssentialIncompleteness.V46.SyntacticGeneratedTheory.literalSentenceRestrictionSplitting Lean/CategoricalEssentialIncompleteness/V46SyntacticGeneratedTheory.lean:191
+def literalSentenceRestrictionSplitting {A : PredicateCategory T}
+    (axioms : A ⟶ (S).sentenceObject) :
+    interpretedObject T (literalSentencePredicate T V σ π d axioms) ≅
+      (realization T).obj (image (sentenceConclusion T V σ π d axioms)) :=
+  SyntacticSentenceImages.programTheorySplittingIso T
+    (conclusion T V σ π d axioms) (S).sentenceInclusion
+
+
+Proposition 7.1 prop:model
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelRangeFunctor Lean/CategoricalEssentialIncompleteness/SyntacticPreservation.lean:127
+def modelRangeFunctor : RangeFunctor (CodedProgramCategory T) Pfn where
+
+Proposition 7.1 prop:model
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelComparison Lean/CategoricalEssentialIncompleteness/SyntacticModel.lean:340
+def modelComparison : modelFunctor T M ≅ functor T M :=
+  NatIso.ofComponents (codingIso T M) (by
+    intro Q R f
+    simp only [modelFunctor, Category.assoc, Iso.inv_hom_id, Category.comp_id])
+
+
+Lemma 7.2 lem:switch
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_finite_switch Lean/CategoricalEssentialIncompleteness/SyntacticFiniteSwitch.lean:213
+theorem syntactic_finite_switch {X : CodedProgramCategory T} (c c' : Idem X)
+    (hc : Complementary c c') :
+    ∃ s : X ⟶ coprod X X, isTotal s ∧
+      c.hom ≫ s = c.hom ≫ i1 X X ∧ c'.hom ≫ s = c'.hom ≫ i0 X X := by
+
+Lemma 7.2 lem:switch
+CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq Lean/CategoricalEssentialIncompleteness/DisjointJoins.lean:85
+theorem image_switch_eq (F : RangeFunctor C A) {X : C}
+    (c c' : Idem X) (hc : Complementary c c') (ℓ : X ⟶ coprod X X)
+    (h1 : c.hom ≫ ℓ = c.hom ≫ i1 X X)
+    (h0 : c'.hom ≫ ℓ = c'.hom ≫ i0 X X) :
+    F.toFunctor.map ℓ =
+      switchSection (F.mapIdem c) (F.mapIdem c') (F.map_complementary hc) ≫
+        (F.comparison X X).hom := by
+
+Corollary 7.3 cor:model-pair
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_pair_inseparable_v46_of_model Lean/CategoricalEssentialIncompleteness/V46SyntacticComparison.lean:32
+theorem syntactic_pair_inseparable_v46_of_model
+    (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* T]
+    (τ : nearProd (omegaObject T) (omegaObject T) ⟶ omegaObject T)
+    (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : omegaObject T ≅ coprod (omegaObject T) (omegaObject T)) :
+    Inseparable (diagonal0 τ b) (diagonal1 τ b) := by
+
+Corollary 7.3 cor:model-pair
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_fixed_pair_inseparable_v46 Lean/CategoricalEssentialIncompleteness/V46SyntacticComparison.lean:59
+theorem syntactic_fixed_pair_inseparable_v46 (hT : Consistent T) :
+    Inseparable (syntacticPair0 T) (syntacticPair1 T) :=
+  syntactic_pair_inseparable_v46 T hT (typedTau T) (typedTau_isTuringMorphism T)
+    (omegaCoprodIso T).symm
+
+
+Proposition 7.4 prop:model-total-regular
+CategoricalEssentialIncompleteness.V46.PredicateInterpretation.regular Lean/CategoricalEssentialIncompleteness/V46PredicateInterpretationRegular.lean:221
+theorem regular : PreservesFiniteLimits (functor T M) ∧
+    PreservesFiniteCoproducts (functor T M) ∧
+    ∀ (C D : PredicateCategory T) (f : C ⟶ D),
+      ∃ e : (functor T M).obj (image f) ≅ image ((functor T M).map f),
+        e.hom ≫ image.ι ((functor T M).map f) = (functor T M).map (image.ι f) :=
+  ⟨inferInstance, inferInstance, fun _ _ f => preserves_regularImage T M f⟩
+
+
+Proposition 7.4 prop:model-total-regular
+CategoricalEssentialIncompleteness.V46.PredicateInterpretation.recursiveDomainFunctor_graph Lean/CategoricalEssentialIncompleteness/V46RecursiveDomainInterpretation.lean:77
+theorem recursiveDomainFunctor_graph {X Y : TotalSplit T} (f : X ⟶ Y)
+    (x : RecursiveDomain T M X) (y : RecursiveDomain T M Y) :
+    (recursiveDomainFunctor T M).map f x = y ↔
+      y.val ∈ (SyntacticModel.modelFunctor T M).map f.hom.hom x.val := by
+
+Lemma 7.5 lem:semantic-substitution
+CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.evaluate_termSubstitution Lean/CategoricalEssentialIncompleteness/V46NamedPlainSubstitutionSemantics.lean:38
+theorem evaluate_termSubstitution (q : Obj 𝗣𝗔 ℕ (X ⨯ P)) (ρ : ℕ → K) :
+    evaluate σ π d functions ((G).map (S).termSubstitution q) ρ =
+      evaluate σ π d functions ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔) («X» := X) («Y» := P)) q)
+        (Function.update ρ
+          ((G).map (prod.fst (C := PredicateCategory 𝗣𝗔) («X» := (variableCarrier : PredicateCategory 𝗣𝗔)) («Y» := X))
+            ((G).map (prod.snd (C := PredicateCategory 𝗣𝗔) («X» := X) («Y» := P)) q)).val
+          (evaluate σ π d functions ((G).map (prod.snd (C := PredicateCategory 𝗣𝗔) («X» := (variableCarrier : PredicateCategory 𝗣𝗔)) («Y» := X))
+            ((G).map (prod.snd (C := PredicateCategory 𝗣𝗔) («X» := X) («Y» := P)) q)) ρ)) := by
+
+Lemma 7.5 lem:semantic-substitution
+CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.plain_formulaSubstitution_result Lean/CategoricalEssentialIncompleteness/V46ConcreteNamedComparisonPlainAdmissibleValues.lean:46
+theorem plain_formulaSubstitution_result (a : Obj T M (S).admissibleSubstitution) :
+    let q := (F T M).map (S).admissibleInclusion a
+    ConcreteNamedSubstitution.substitutionResult V σ π d
+      ((F T M).map (prod.fst : P ⟶ V) ((F T M).map prod.snd q)).val
+      ((F T M).map (prod.snd : P ⟶ X) ((F T M).map prod.snd q)).val
+      ((F T M).map prod.fst q).val =
+        ConcreteNamedSubstitution.ok ((F T M).map (S).formulaSubstitution a).val := by
+
+Proposition 7.6 prop:standard-code-soundness
+CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.valid_logicalAxioms Lean/CategoricalEssentialIncompleteness/V46NamedPlainLogicalValidity.lean:36
+theorem valid_logicalAxioms (l : Obj 𝗣𝗔 ℕ (S).logicalParameters) :
+    Valid σ π d functions relations ((G).map (S).logicalAxioms l) :=
+  logicalAxioms_predicate 𝗣𝗔 ℕ (S) (Valid σ π d functions relations)
+    (valid_hilbertOne σ π d functions relations)
+    (valid_hilbertTwo σ π d functions relations)
+    (valid_hilbertThree σ π d functions relations)
+    (valid_hilbertInstantiation σ π d functions relations)
+    (valid_hilbertDistribution σ π d functions relations)
+    (valid_hilbertReflexivity σ π d functions relations)
+    (valid_hilbertEquality σ π d functions relations) l
+
+
+Proposition 7.6 prop:standard-code-soundness
+CategoricalEssentialIncompleteness.V46.FirstOrderModelSoundness.sentenceConclusion_plain Lean/CategoricalEssentialIncompleteness/V46FirstOrderModelSoundness.lean:170
+theorem sentenceConclusion_plain (V : PredicateCategory T) (σ π : ℕ → PredicateCategory T)
+    (d : ℕ) {A : PredicateCategory T}
+    (axioms : A ⟶ (SyntacticSyntax.plainCategoricalSyntax T V σ π d).sentenceObject) :
+    sentenceConclusion T (SyntacticSyntax.plainCategoricalSyntax T V σ π d) axioms =
+      SyntacticGeneratedTheory.sentenceConclusion T V σ π d axioms := rfl
+
+
+Lemma 7.7 lem:ultrapower-regular
+CategoricalEssentialIncompleteness.V46.Ultrapower.functor Lean/CategoricalEssentialIncompleteness/V46Ultrapower.lean:40
+def functor : Type u ⥤ Type u where
+
+Lemma 7.7 lem:ultrapower-regular
+CategoricalEssentialIncompleteness.V46.Ultrapower.regularImageIso_hom_ι Lean/CategoricalEssentialIncompleteness/V46Ultrapower.lean:294
+@[simp, reassoc] theorem regularImageIso_hom_ι {X Y : Type u} (f : X ⟶ Y) :
+    (regularImageIso U f).hom ≫ image.ι ((functor U).map f) =
+      (functor U).map (image.ι f) :=
+  image.isoStrongEpiMono_hom_comp_ι _ _ _
+
+
+Lemma 7.8 lem:ultrapower-comparison
+CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.eval_representative Lean/CategoricalEssentialIncompleteness/V46ArithmeticUltrapower.lean:72
+theorem eval_representative {n : ℕ} (φ : ArithmeticSemisentence n)
+    (b : Fin n → I → ℕ) :
+    φ.Evalb (M := Model U) (fun j => Germ.ofFun (b j)) ↔
+      ∀ᶠ i in (U : Filter I), φ.Evalb (M := ℕ) (fun j => b j i) := by
+
+Lemma 7.8 lem:ultrapower-comparison
+CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.recursiveComparison Lean/CategoricalEssentialIncompleteness/V46RecursiveUltrapowerComparison.lean:25
+def recursiveComparison :
+    PredicateInterpretation.recursiveDomainFunctor 𝗣𝗔 ℕ ⋙ Ultrapower.functor U ≅
+      PredicateInterpretation.recursiveDomainFunctor 𝗣𝗔 (Model U) :=
+  Functor.isoWhiskerRight (PredicateInterpretation.recursiveDomainComparison 𝗣𝗔 ℕ)
+      (Ultrapower.functor U) ≪≫ canonicalComparison U ≪≫
+    (PredicateInterpretation.recursiveDomainComparison 𝗣𝗔 (Model U)).symm
+
+
+Theorem 7.9 thm:ultrapower-soundness
+CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.canonicalCodeComparison Lean/CategoricalEssentialIncompleteness/V46NamedPlainUltrapowerSoundness.lean:28
+def canonicalCodeComparison :
+    F 𝗣𝗔 ℕ ≅ realization 𝗣𝗔 ⋙ PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ :=
+  (PredicateInterpretation.predicateComparison 𝗣𝗔 ℕ).symm ≪≫
+    Functor.isoWhiskerLeft (realization 𝗣𝗔) (PredicateInterpretation.totalCanonicalComparison 𝗣𝗔 ℕ)
+
+variable (σ π : ℕ → PredicateCategory 𝗣𝗔) (d : ℕ)
+local notation "S" => plainCategoricalSyntax 𝗣𝗔 (variableCarrier : PredicateCategory 𝗣𝗔) σ π d
+local notation "G" => F 𝗣𝗔 ℕ
+local notation "E" => realization 𝗣𝗔
+local notation "H" => PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ
+local notation "η" => canonicalCodeComparison
+variable {K : Type w}
+  (functions : ∀ n : Fin (d + 1), Symbols σ n.val → (Fin n.val → K) → K)
+  (relations : ∀ n : Fin (d + 1), Symbols π n.val → (Fin n.val → K) → Prop)
+
+
+Theorem 7.9 thm:ultrapower-soundness
+CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.canonical_ultrapower_conclusion_consistent Lean/CategoricalEssentialIncompleteness/V46NamedPlainUltrapowerSoundness.lean:131
+theorem canonical_ultrapower_conclusion_consistent [Nonempty K]
+    {I : Type} (U : Ultrafilter I) :
+    Disjoint
+      (Set.range ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔
+        (ArithmeticUltrapower.Model U)).map
+          ((E).map (FirstOrderModelSoundness.sentenceConclusion 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms))))
+      (((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔
+          (ArithmeticUltrapower.Model U)).map ((E).map (S).sentenceNegation)) ⁻¹'
+        Set.range ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔
+          (ArithmeticUltrapower.Model U)).map
+            ((E).map (FirstOrderModelSoundness.sentenceConclusion 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms)))) :=
+  Ultrapower.conclusion_range_consistent U (ArithmeticUltrapower.canonicalComparison U)
+    ((E).map (FirstOrderModelSoundness.sentenceConclusion 𝗣𝗔 (V := (variableCarrier : PredicateCategory 𝗣𝗔)) (σ := σ) (π := π) (d := d) (S) (A := A) axioms))
+    ((E).map (S).sentenceNegation)
+    (canonicalValidityInclusion σ π d functions relations)
+    (canonicalSoundnessFactor σ π d functions relations (A := A) axioms haxioms)
+    (canonicalSoundnessFactor_inclusion σ π d functions relations (A := A) axioms haxioms)
+    (canonicalValidity_disjoint σ π d functions relations)
+
+
+Lemma 8.1 lem:arithmetic-diagonal-representation
+CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalRepresentation.printed_representation Lean/CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.lean:134
+theorem printed_representation :
+    ∃ f : ArithmeticOmegaComparison.identityOmega 𝗣𝗔 ⟶
+        NamedArithmeticLiteralTotal.literalSentence,
+      isTotal f.hom ∧
+      (∀ n : ℕ, ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map f
+        (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ n)).val.val =
+          formulaCode (NamedArithmeticDiagonalBounds.instanceFormula
+            ArithmeticDiagonalCodes.alpha.val n)) ∧
+      ∀ Γ : Carrier, ArithmeticNamedAxiomComparison.ExtendsPA Γ →
+        ∀ (M : Type) [ORingStructure M] [M ≡ₑ[ℒₒᵣ] ℕ],
+          letI : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 := Tarski.Structure.ElementaryEquiv.modelsTheory' M ℕ 𝗣𝗔
+          (SyntacticModel.modelRangeFunctor 𝗣𝗔 M).mapIdem ArithmeticDiagonalCodes.a0 ≤
+            Idem.pull (modelTheta M f)
+              ((ArithmeticDomainExtension.canonicalExtension M).mapIdem
+                (ArithmeticDomainExtension.sentenceTheory Γ)) ∧
+          (SyntacticModel.modelRangeFunctor 𝗣𝗔 M).mapIdem ArithmeticDiagonalCodes.a1 ≤
+            Idem.pull (modelTheta M f)
+              (Idem.pull ((ArithmeticDomainExtension.canonicalExtension M).toFunctor.map
+                ArithmeticDomainExtension.sentenceNegation)
+                ((ArithmeticDomainExtension.canonicalExtension M).mapIdem
+                  (ArithmeticDomainExtension.sentenceTheory Γ))) :=
+  ⟨theta,theta_total,theta_standard,fun Γ hΓ M _ _ => bounds Γ hΓ M⟩
+
+
+Lemma 8.1 lem:arithmetic-diagonal-representation
+CategoricalEssentialIncompleteness.V46.ArithmeticNamedAxiomComparison.axiomsAdmissible_PA Lean/CategoricalEssentialIncompleteness/V46ArithmeticNamedAxiomComparison.lean:62
+theorem axiomsAdmissible_PA (hΓ : ExtendsPA A) :
+    ArithmeticNamedProofTranslation.AxiomsAdmissible A 𝗣𝗔 := by
+
+Lemma 8.2 lem:arithmetic-proof-search
+CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch.printed_diagonal_partial_proof_search Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticProofSearchPrinted.lean:107
+theorem printed_diagonal_partial_proof_search (Γ : Carrier) :
+    ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
+      ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],
+        (∀ n : M, ¬(
+          (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+            variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+              ![NamedArithmeticUnarySubstitution.value ArithmeticDiagonalCodes.alpha.val n] ∧
+          (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+            variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+              ![negationWord M (NamedArithmeticUnarySubstitution.value ArithmeticDiagonalCodes.alpha.val n)])) →
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map l ≫
+          ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).comparison
+            (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔)).inv)
+          (summand0 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {n : M | (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+              variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+                ![negationWord M (NamedArithmeticUnarySubstitution.value ArithmeticDiagonalCodes.alpha.val n)]} ∧
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map l ≫
+          ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).comparison
+            (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔)).inv)
+          (summand1 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {n : M | (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+              variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+                ![NamedArithmeticUnarySubstitution.value ArithmeticDiagonalCodes.alpha.val n]} :=
+  printed_partial_proof_search Γ
+    (NamedArithmeticUnarySubstitution.namedFormula ArithmeticDiagonalCodes.alpha.val)
+    (NamedArithmeticUnarySubstitution.namedFormula_freeVariables ArithmeticDiagonalCodes.alpha.val)
+
+
+Lemma 8.2 lem:arithmetic-proof-search
+CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch.printed_partial_proof_search Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticProofSearchPrinted.lean:67
+theorem printed_partial_proof_search (Γ : Carrier) (φ : Formula)
+    (hφ : ∀ y, y ∈ φ.freeVariables → y = 0) :
+    ∃ l : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
+      ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],
+        (∀ n : M, ¬(
+          (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+            variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+              ![NamedArithmeticFixedSubstitution.value φ n] ∧
+          (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+            variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+              ![negationWord M (NamedArithmeticFixedSubstitution.value φ n)])) →
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map l ≫
+          ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).comparison
+            (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔)).inv)
+          (summand0 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {n : M | (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+              variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+                ![negationWord M (NamedArithmeticFixedSubstitution.value φ n)]} ∧
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map l ≫
+          ((SyntacticModel.modelRangeFunctor 𝗣𝗔 M).comparison
+            (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔)).inv)
+          (summand1 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {n : M | (SyntacticGeneratedAxioms.literalTheoremCarrier 𝗣𝗔
+              variableSymbols functionSymbols relationSymbols bound Γ).val.Evalb
+                ![NamedArithmeticFixedSubstitution.value φ n]} := by
+
+Lemma 8.2 lem:arithmetic-proof-search
+CategoricalEssentialIncompleteness.V46.PartialSearchLift.partial_lift Lean/CategoricalEssentialIncompleteness/V46PartialSearchLift.lean:202
+theorem partial_lift (C D : Carrier) :
+    ∃ ell : omegaObject 𝗣𝗔 ⟶ coprod (omegaObject 𝗣𝗔) (omegaObject 𝗣𝗔),
+      ∀ (M : Type) [ORingStructure M] [M↓[ℒₒᵣ] ⊧* 𝗣𝗔],
+        (∀ x : M, ¬(C.val.Evalb ![x] ∧ D.val.Evalb ![x])) →
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map ell)
+          (summand0 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {x : M | D.val.Evalb ![x]} ∧
+        Idem.pull ((SyntacticModel.modelFunctor 𝗣𝗔 M).map ell)
+          (summand1 (PartialFun.of M) (PartialFun.of M)) =
+            setIdem {x : M | C.val.Evalb ![x]} := by
+
+Theorem 8.3 thm:arithmetic-internal-comparison
+CategoricalEssentialIncompleteness.V46.NamedGammaModel.exists_model Lean/CategoricalEssentialIncompleteness/V46NamedGammaModel.lean:50
+theorem exists_model
+    (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
+    (hc : Entailment.Consistent S) :
+    ∃ (K : Type) (s : ORingStructure K), letI := s;
+      NamedGammaSoundness.Models functionSymbols relationSymbols bound A
+        ArithmeticNamedTranslation.functions ArithmeticNamedTranslation.relations
+        (fun _ => (0 : K)) := by
+
+Theorem 8.3 thm:arithmetic-internal-comparison
+CategoricalEssentialIncompleteness.V46.ArithmeticInternalComparison.total_undecidable_family Lean/CategoricalEssentialIncompleteness/V46ArithmeticInternalComparison.lean:198
+theorem total_undecidable_family :
+    ∃ g : omegaObject 𝗣𝗔 ⟶ omegaObject 𝗣𝗔, isTotal g ∧
+      ∃ gamma : ℕ → ℕ,
+        (∀ n : ℕ, gamma n ∈ (SyntacticModel.modelFunctor 𝗣𝗔 ℕ).map g n) ∧
+        ∀ n : ℕ,
+          let φ := NamedArithmeticDiagonalBounds.instanceFormula ArithmeticDiagonalCodes.alpha.val (gamma n)
+          ArithmeticComparisonTarget.diagonalFormula.substitute 0 (numeral (gamma n)) = some φ ∧
+          φ.freeVariables = [] ∧
+          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound A φ ∧
+          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound A (.neg φ) := by
+
+Corollary 8.4 cor:arithmetic
+CategoricalEssentialIncompleteness.V46.ArithmeticSentenceInseparability.no_recursive_separator Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.lean:124
+theorem no_recursive_separator (A : SyntacticPredicates.Carrier)
+    (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A) :
+    ¬ ∃ R : Set ℕ, ComputablePred (· ∈ R) ∧ theoremSet A ⊆ R ∧
+      Disjoint R (refutationSet A) :=
+  no_recursive_separator_of_bounds A NamedArithmeticDiagonalBounds.namedAlpha
+    NamedArithmeticDiagonalBounds.namedAlpha_freeVariables
+    (NamedArithmeticDiagonalBounds.standard_positive_of_axioms_admissible A
+      (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hPA))
+    (NamedArithmeticDiagonalBounds.standard_negative_of_axioms_admissible A
+      (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hPA))
+
+
+Corollary 8.4 cor:arithmetic
+CategoricalEssentialIncompleteness.V46.ArithmeticSentenceInseparability.enumeration_extension_incomplete Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparability.lean:236
+theorem enumeration_extension_incomplete (A B : SyntacticPredicates.Carrier)
+    (hPA : ArithmeticNamedAxiomComparison.ExtendsPA A)
+    (hAB : ∀ word : ℕ, A.val.Evalb (M := ℕ) ![word] → B.val.Evalb (M := ℕ) ![word])
+    (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system B)) :
+    Entailment.Incomplete (ArithmeticNamedProofConnectives.system B) := by
+
+Proposition 8.5 prop:arithmetic-theory-fibers
+CategoricalEssentialIncompleteness.V46.ArithmeticIndexedProvability.printedProvability_numeral_PA Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedProvabilityFibers.lean:174
+theorem printedProvability_numeral_PA (AxPA : Carrier) (e : ℕ) :
+    𝗣𝗔 ⊢ printedNumeralComparisonSentence AxPA e := by
+
+Proposition 8.5 prop:arithmetic-theory-fibers
+CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPrintedFamily.printedConclusion_realization Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedPrintedFamily.lean:269
+theorem printedConclusion_realization (AxPA : Carrier) :
+    (realization 𝗣𝗔).map (ArithmeticIndexedProvability.printedConclusion AxPA) =
+      (proofPresentationIso AxPA).hom ≫ sentenceConclusion AxPA ≫
+        ArithmeticIndexedProvability.printedProductIso.inv := by
+
+Proposition 8.5 prop:arithmetic-theory-fibers
+CategoricalEssentialIncompleteness.V46.ArithmeticIndexedFibers.fiberInitial Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedFibers.lean:81
+def fiberInitial : IsInitial (fiberAlgebra AxPA e) :=
+  ArithmeticIndexedAlgebraSplit.productInitialFirst _
+    (IsInitial.isInitialObj (algebraEquivalence AxPA e).functor
+      (ArithmeticIndexedFamily.algebra AxPA) (ArithmeticIndexedFamily.initial AxPA))
+
+
+Theorem 8.6 thm:uniform-independent-sentences
+CategoricalEssentialIncompleteness.V46.ArithmeticUniformSearch.lift_printed_coordinates Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformSearch.lean:185
+theorem lift_printed_coordinates (C C' : Predicate₂) :
+    (PrintedObjectCoding.omegaProductIso 𝗣𝗔).inv ≫ lift C C' ≫
+      (omegaCoprodIso 𝗣𝗔).hom = numberSearch C C' := by
+
+Theorem 8.6 thm:uniform-independent-sentences
+CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPAEnumeration.axiomCodes_standard Lean/CategoricalEssentialIncompleteness/V46ArithmeticIndexedPAEnumeration.lean:59
+theorem axiomCodes_standard (out : ℕ) :
+    axiomCodes.val.Evalb ![out] ↔ ∃ ψ : Formula, PAAxiom ψ ∧ formulaCode ψ = out := by
+
+Theorem 8.6 thm:uniform-independent-sentences
+CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean:204
+theorem uniform_independent_sentences :
+    ∃ q : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence,
+      ∀ e : ℕ, Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e)) →
+        ∃ φ : Formula, φ.freeVariables = [] ∧
+          formulaCode φ =
+            ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map q
+              (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ e)).val.val ∧
+          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound (gamma e) φ ∧
+          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound (gamma e) (.neg φ) := by
+
+Proposition 8.7 prop:numerical-structure
+CategoricalEssentialIncompleteness.V46.NumericalTuples.equivalence Lean/CategoricalEssentialIncompleteness/V46NumericalTuples.lean:417
+def equivalence : Object ≌ EnumerableCarriers.Total := comparison.asEquivalence
+
+
+Proposition 8.7 prop:numerical-structure
+CategoricalEssentialIncompleteness.V46.NumericalTuples.partialMap_preserves_ranges Lean/CategoricalEssentialIncompleteness/V46NumericalTuplesPartialMaps.lean:54
+theorem partialMap_preserves_ranges {X Y : PartialMapCategory} (f : X ⟶ Y) :
+    partialMapEquivalence.functor.map (Ranges.range f).hom =
+      (Ranges.range (partialMapEquivalence.functor.map f)).hom := by
+
+Proposition 8.8 prop:arithmetic-theory-realization
+CategoricalEssentialIncompleteness.V46.NumericalSyntax.categoricalSyntax Lean/CategoricalEssentialIncompleteness/V46NumericalSyntax.lean:36
+def categoricalSyntax (V : NumericalTuples.Object) (σ π : ℕ → NumericalTuples.Object) (d : ℕ) :
+    CategoricalSyntax V σ π d where
+
+Proposition 8.8 prop:arithmetic-theory-realization
+CategoricalEssentialIncompleteness.V46.NumericalArithmetic.ProofComparison.canonical_backward_program Lean/CategoricalEssentialIncompleteness/V46NumericalArithmeticProofComparison.lean:183
+theorem canonical_backward_program (Γ : Carrier) :
+    ∃ r : ℕ → Part ℕ, Partrec r ∧
+      ∀ p : PredicateInterpretation.CanonicalDomain 𝗣𝗔 ℕ
+        ((realization 𝗣𝗔).obj (ArithmeticLiteralModel.proofObject Γ)),
+        r p.val.val = Part.some ((canonicalRho Γ).inv p).val := by
+
+Lemma 8.9 lem:arithmetic-signed-theory
+CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheory.printed_statement Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean:32
+theorem printed_statement : Entailment.Consistent 𝗣𝗔 →
+    Inseparable (SplitObject.includedIdem ArithmeticDiagonalCodes.a0)
+      (SplitObject.includedIdem ArithmeticDiagonalCodes.a1) ∧
+    ((ArithmeticSignedTotal.theory presentation).val ⊓
+      (Subobject.pullback (ArithmeticSignedTotal.negation presentation)).obj
+        (ArithmeticSignedTotal.theory presentation).val = ⊥) ∧
+    ∀ U : FirstOrderReflection.Theory (ArithmeticSignedTotal.proofs presentation),
+      (ArithmeticSignedTotal.theory presentation).val ≤ U.val →
+      U.val ⊓ (Subobject.pullback (ArithmeticSignedTotal.negation presentation)).obj U.val = ⊥ →
+      U.val ⊔ (Subobject.pullback (ArithmeticSignedTotal.negation presentation)).obj U.val ≠ ⊤ :=
+  fun _ => ⟨ArithmeticDiagonalSplitting.source_pair_inseparable,
+    ArithmeticSignedTotal.essentially_incomplete presentation⟩
+
+
+Lemma 8.9 lem:arithmetic-signed-theory
+CategoricalEssentialIncompleteness.V46.ArithmeticComplementaryInclusions.conditional Lean/CategoricalEssentialIncompleteness/V46ArithmeticComplementaryInclusions.lean:46
+theorem conditional (A B : Subobject (identityOmega 𝗣𝗔)) (h : IsCompl A B) :
+    ∃ (c : (A : TotalSplit 𝗣𝗔) ⨿ (B : TotalSplit 𝗣𝗔) ≅ identityOmega 𝗣𝗔)
+      (ℓ : identityOmega 𝗣𝗔 ⟶ numberSum),
+      c.hom = coprod.desc A.arrow B.arrow ∧
+      ℓ = c.inv ≫ coprod.desc (A.arrow ≫ rightInjection) (B.arrow ≫ leftInjection) ∧
+      A.arrow ≫ ℓ = A.arrow ≫ rightInjection ∧ B.arrow ≫ ℓ = B.arrow ≫ leftInjection ∧
+      isTotal ℓ.hom.hom := by
+
+Lemma 8.9 lem:arithmetic-signed-theory
+CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheory.presentation_generation Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean:47
+theorem presentation_generation {A : TotalSplit 𝗣𝗔}
+    (a : A ⟶ (realization 𝗣𝗔).obj (presentation.syntaxData N).sentenceObject) :
+    ((FirstOrderReflection.presentationGeneration (ArithmeticSignedTotal.proofs presentation)
+      (ArithmeticSignedTotal.initial presentation)).obj (Over.mk a)).val =
+      FirstOrderReflection.generated (ArithmeticSignedTotal.proofs presentation)
+        (imageSubobject a) :=
+  FirstOrderReflection.presentationGeneration_obj _ _ _
+
+
+Corollary 8.10 cor:arithmetic-associated-categories
+CategoricalEssentialIncompleteness.V46.ArithmeticAssociatedCategories.printed_statement Lean/CategoricalEssentialIncompleteness/V46ArithmeticAssociatedCategories.lean:98
+theorem printed_statement (_hPA : Entailment.Consistent 𝗣𝗔) (U : GlobalTheory)
+    (hExt : (t).val ≤ U.val)
+    (hc : U.val ⊓ (Subobject.pullback (ν)).obj U.val = ⊥) : Conclusions U hExt hc where
+
+Corollary 8.10 cor:arithmetic-associated-categories
+CategoricalEssentialIncompleteness.V46.SyntacticSliceDerivations.initial Lean/CategoricalEssentialIncompleteness/V46SyntacticSliceDerivations.lean:29
+def initial : IsInitial (algebra T R) :=
+  SliceInference.initial R _
+    (SyntacticDerivation.totalDerivationInitial T (SliceRuleObjects.rules R))
+
+
+Lemma 9.1 lem:miller-unanimity
+CategoricalEssentialIncompleteness.V46.Miller.Unanimity.printed_unanimity Lean/CategoricalEssentialIncompleteness/V46MillerUnanimity.lean:83
+theorem printed_unanimity :
+    ∃ d : ℕ, ∀ z : ℕ → Set.Icc (0 : ℝ) 1,
+      ∀ p : ℕ → Fin 2, rho p = z → ∀ e n : ℕ,
+        OracleProgram.numberedEval d p (Nat.pair e n) = tau z e n :=
+  ⟨unanimityIndex,fun z p hp e n => unanimityIndex_eq_tau z p hp e n⟩
+
+
+Lemma 9.1 lem:miller-unanimity
+CategoricalEssentialIncompleteness.V46.Miller.rho_value Lean/CategoricalEssentialIncompleteness/V46MillerBinaryCore.lean:96
+@[simp] theorem rho_value (p : Bits) (n : ℕ) :
+    (rho p n : ℝ) = ∑' j, (p (Nat.pair n j) : ℝ) * ((2 : ℝ) ^ (j + 1))⁻¹ := rfl
+
+
+Proposition 9.2 prop:miller-category
+CategoricalEssentialIncompleteness.V46.Miller.Uniform.PointObject Lean/CategoricalEssentialIncompleteness/V46MillerCategory.lean:31
+abbrev PointObject (z : Point) := Object (Family.ofPoint z)
+
+
+Proposition 9.2 prop:miller-category
+CategoricalEssentialIncompleteness.V46.Miller.Uniform.J_value Lean/CategoricalEssentialIncompleteness/V46MillerCategoryRelative.lean:204
+theorem J_value (z : Point) (p : Bits) (hp : p ∈ representations z)
+    {X Y : PointObject z} (f : X ⟶ Y) : ((J z p hp).toFunctor.map f).val = f.val := rfl
+
+
+Lemma 9.3 lem:miller-cut-reduction
+CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_reduction Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean:85
+theorem printed_cut_reduction (a : Point) (ha : IsMiller a) :
+    ∃ h : ℕ → ℕ,Computable h ∧
+      h ⁻¹' CutDigits.lowerCut a = {e | ∃ m,m ∈ Unanimity.tau a e e ∧ m%2=0} ∧
+      h ⁻¹' CutDigits.upperCut a = {e | ∃ m,m ∈ Unanimity.tau a e e ∧ m%2=1} :=
+  ⟨reduction,reduction_computable,Set.ext (reduction_lower a ha),Set.ext (reduction_upper a ha)⟩
+
+
+Lemma 9.3 lem:miller-cut-reduction
+CategoricalEssentialIncompleteness.V46.Miller.Cut.separatingReal_program Lean/CategoricalEssentialIncompleteness/V46MillerCutSeparatingProgram.lean:251
+theorem separatingReal_program :
+    ∃ d : ℕ,∀ p : Bits,∀ e k : ℕ,∃ i : ℕ,
+      i∈OracleProgram.numberedEval d p (Nat.pair e k) ∧
+      |(Rationals.q i:ℝ)-separatingReal e (rho p)|<((2:ℝ)^k)⁻¹ := by
+
+Corollary 9.4 cor:miller-cuts-inseparable
+CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_inseparability Lean/CategoricalEssentialIncompleteness/V46MillerCutApplications.lean:43
+theorem printed_cut_inseparability (a : Point) (ha : IsMiller a) :
+    Inseparable (CutDigits.lowerIdem a) (CutDigits.upperIdem a) :=
+  CutInseparability.cuts_inseparable_of_recursive_reduction a reduction reduction_computable
+    (reduction_support0 a ha) (reduction_support1 a ha)
+
+
+Corollary 9.4 cor:miller-cuts-inseparable
+CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_contrast Lean/CategoricalEssentialIncompleteness/V46MillerCutApplications.lean:59
+theorem printed_cut_contrast (a : Point) (ha : IsMiller a) :
+    Inseparable (CutDigits.lowerIdem a) (CutDigits.upperIdem a) ∧
+      ∀ p ∈ representations a,
+        CutDigits.lowerCut a ⊆ CutDigits.separator p ∧
+          Disjoint (CutDigits.separator p) (CutDigits.upperCut a) ∧
+          Nat.RecursiveIn (OracleComputation.oracleSet (OracleRelative.oracleSupport p))
+            (fun n => Part.some (CutDigits.decision p n)) :=
+  ⟨printed_cut_inseparability a ha,fixed_representation_separator a⟩
+
+
+Corollary 9.4 cor:miller-cuts-inseparable
+CategoricalEssentialIncompleteness.V46.Miller.CutDigits.lowerIdem Lean/CategoricalEssentialIncompleteness/V46MillerCutDigitsStrict.lean:174
+def lowerIdem (z : Point) : Idem
+    (Uniform.N (Uniform.Family.ofPoint z)) :=
+  Uniform.setIdem (Uniform.N (Uniform.Family.ofPoint z)) (lowerCut z) (lowerCut_enumerable z)
+
+
+Corollary 9.4 cor:miller-cuts-inseparable
+CategoricalEssentialIncompleteness.V46.Miller.Cut.mapped_tau_notTuring Lean/CategoricalEssentialIncompleteness/V46MillerCutApplications.lean:71
+theorem mapped_tau_notTuring (a : Point) (ha : IsMiller a)
+    (p : Bits) (hp : p ∈ representations a) :
+    ¬RecursionCategory.IsTuringMorphism ((Uniform.J a p hp).toFunctor.map (Uniform.tau a)) :=
+  CutInseparability.mapped_tau_notTuring_of_recursive_reduction a reduction reduction_computable
+    (reduction_support0 a ha) (reduction_support1 a ha) p hp
+
+
+Proposition 9.5 prop:miller-theory-realization
+CategoricalEssentialIncompleteness.V46.Miller.Total.pointPresentation Lean/CategoricalEssentialIncompleteness/V46MillerTotalEquivalence.lean:60
+def pointPresentation (z : Point) : PointTotal z ≌ CanonicalTotal z :=
+  totalEquivalence (P := Uniform.Family.ofPoint z)
+
+
+Proposition 9.5 prop:miller-theory-realization
+CategoricalEssentialIncompleteness.V46.Miller.FirstOrder.sentence_idempotent_represents Lean/CategoricalEssentialIncompleteness/V46MillerFirstOrder.lean:215
+theorem sentence_idempotent_represents {A : Total.CanonicalTotal z} (axioms : A ⟶ (S).sentenceObject) :
+    ∃ r : (S).sentenceObject.obj ⟶ (image (sentenceConclusion z V σ π d axioms)).obj,
+      (image.ι (sentenceConclusion z V σ π d axioms)).hom ≫ r=𝟙 _ ∧
+      r ≫ (image.ι (sentenceConclusion z V σ π d axioms)).hom=rst r ∧
+      (sentenceIdem z V σ π d axioms).hom=r ≫ (image.ι (sentenceConclusion z V σ π d axioms)).hom :=
+  sentence_range_regular_image z V σ π d axioms
+
+
+Lemma 9.6 lem:miller-parameterized-deduction
+CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedRules Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean:97
+def printedRules (A : Subobject (P ⨯ S.sentenceObject)) :
+    RulePresentation (P ⨯ S.algebra.a.2) 2 :=
+  SliceRuleObjects.rules (rules z S P (axiomArrow z S P A))
+
+
+Lemma 9.6 lem:miller-parameterized-deduction
+CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedInitial Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean:105
+def printedInitial (A : Subobject (P ⨯ S.sentenceObject)) :
+    IsInitial (printedAlgebra z S P A) :=
+  Derivation.Canonical.derivationInitial z (printedRules z S P A)
+
+
+Lemma 9.6 lem:miller-parameterized-deduction
+CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_unique Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean:123
+theorem printedFold_unique (A : Subobject (P ⨯ S.sentenceObject))
+    (B : Endofunctor.Algebra (printedRules z S P A).inference)
+    (f : printedAlgebra z S P A ⟶ B) : f = printedFold z S P A B :=
+  (printedInitial z S P A).hom_ext _ _
+
+
+Lemma 9.6 lem:miller-parameterized-deduction
+CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedStatement Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean:145
+def printedStatement : Conclusions z where
+
+Lemma 9.6 lem:miller-parameterized-deduction
+CategoricalEssentialIncompleteness.V46.Miller.Derivation.Parameterized.uniformInitial Lean/CategoricalEssentialIncompleteness/V46MillerSliceDerivations.lean:29
+def uniformInitial : IsInitial (uniformAlgebra R) :=
+  SliceInference.initial R _ (Derivation.derivationInitial (SliceRuleObjects.rules R))
+
+
+Theorem 9.7 thm:miller-incompleteness
+CategoricalEssentialIncompleteness.V46.Miller.CanonicalIncompleteness.printed_categorical_incompleteness Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalIncompleteness.lean:359
+theorem printed_categorical_incompleteness (ha : IsMiller a) (Γ : Set ℕ)
+    (hΓ : Uniform.Enumerable (P) (·∈Γ))
+    (hext : theoremIdem a (RealClosedAxioms.theoryAxioms a)
+      (RealClosedAxioms.theoryAxioms_enumerable a) ≤ theoremIdem a Γ hΓ)
+    (hcons : theoremIdem a Γ hΓ⊓Idem.pull (nu a) (theoremIdem a Γ hΓ)=⊥) :
+    Inseparable (theoremIdem a Γ hΓ) (refutationIdem a Γ hΓ) ∧
+      theoremIdem a Γ hΓ⊔refutationIdem a Γ hΓ≠⊤ :=
+  printed_essential_incompleteness a ha Γ hΓ
+    ((extends_iff_theoremIdem_le a Γ hΓ).mpr hext) hcons
+
+
+Theorem 9.7 thm:miller-incompleteness
+CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_categorical_incompleteness Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean:315
+theorem printed_categorical_incompleteness (m : A ⟶ (S₂).sentenceObject) [Mono m]
+    (ha : IsMiller a)
+    (hext : CanonicalIncompleteness.theoremIdem a (RealClosedAxioms.theoryAxioms a)
+      (RealClosedAxioms.theoryAxioms_enumerable a) ≤ theoremIdem a m)
+    (hcons : theoremIdem a m⊓Idem.pull (S₂).sentenceNegation.hom (theoremIdem a m)=⊥) :
+    Inseparable (theoremIdem a m) (refutationIdem a m) ∧
+      theoremIdem a m⊔refutationIdem a m≠⊤ :=
+  printed_essential_incompleteness a m ha
+    ((extends_iff_theoremIdem_le a m).mpr hext) hcons
+
+
+Theorem 9.7 thm:miller-incompleteness
+CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean:327
+theorem printed_essential_incompleteness_of_consistent
+    (m : A ⟶ (S₂).sentenceObject) [Mono m]
+    (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))
+    (hcons : TheoryDomainApplication.Consistent (recoveredCodes a m)) :
+    Inseparable (theoremIdem a m) (refutationIdem a m) ∧
+      theoremIdem a m⊔refutationIdem a m≠⊤ :=
+  printed_essential_incompleteness a m ha hext ((consistent_iff_disjoint a m).mp hcons)
+
+
+Theorem 9.7 thm:miller-incompleteness
+CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_native_incomplete_of_consistent Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean:335
+theorem printed_native_incomplete_of_consistent
+    (m : A ⟶ (S₂).sentenceObject) [Mono m]
+    (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))
+    (hcons : TheoryDomainApplication.Consistent (recoveredCodes a m)) :
+    ∃ φ : OrderedFieldSyntax.Formula,φ.freeVariables=[] ∧
+      ¬RealClosedBounds.Proof (recoveredCodes a m) φ ∧
+      ¬RealClosedBounds.Proof (recoveredCodes a m) (.neg φ) :=
+  printed_native_incomplete a m ha hext ((consistent_iff_disjoint a m).mp hcons)
+
+
+Theorem 9.7 thm:miller-incompleteness
+CategoricalEssentialIncompleteness.V46.Miller.NamedSyntaxComparison.presentedSyntax Lean/CategoricalEssentialIncompleteness/V46MillerNamedSyntaxComparisonBundle.lean:87
+def presentedSyntax : CategoricalSyntax ((F).obj V)
+    (fun n => (F).obj (σ n)) (fun n => (F).obj (π n)) d where
+
+Corollary 9.8 cor:miller-associated-categories
+CategoricalEssentialIncompleteness.V46.Miller.AssociatedCategories.printed_statement Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedCategories.lean:79
+theorem printed_statement (ha : IsMiller a) (U : Theory a) (hExt : base a ≤ U.val)
+    (hc : U.val ⊓ refutation a U = ⊥) : Conclusions a U hc where
+
+Corollary 9.8 cor:miller-associated-categories
+CategoricalEssentialIncompleteness.V46.Miller.AssociatedData.point_factors Lean/CategoricalEssentialIncompleteness/V46MillerAssociatedData.lean:100
+theorem point_factors (U : Theory a) :
+    ∃ p : pointDomain a ⟶ (U.val : Total.CanonicalTotal a), p ≫ U.val.arrow = theoremPoint a :=
+  NullaryLogicalPoint.factors (syntaxData a).logicalAxioms (syntaxData a).sentenceInclusion
+    (syntaxData a).quantifierConstructor (syntaxData a).implicationConstructor (proofs a)
+    (theoremPoint a) (logicalPoint a) (logicalPoint_diagram a) U
+
+
+Proposition 10.1 prop:endpoint
+CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluation.lean:38
+theorem evaluation_span (j : WalkingSpan) {X Y : ForkSpans} (s : PartialMaps.Raw X Y) :
+    (evaluation j).map (PartialMaps.ofSpan s) = PartialMaps.ofSpan
+      (⟨s.apex.obj j, s.l.app j, s.r.app j, by infer_instance, by trivial⟩ :
+        PartialMaps.Raw ((evaluation j).obj X) ((evaluation j).obj Y)) := rfl
+
+
+Proposition 10.1 prop:endpoint
+CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_isTuring Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringComponents.lean:63
+theorem right_isTuring : @RecursionCategory.IsTuringMorphism TupleSpans _ tupleProducts.pcategoryStruct
+    tupleProducts.pcategoryLaws endpoint endpoint endpoint (evaluatedTau .right) :=
+  right_tau ▸ endpointTau_isTuring
+
+
+Proposition 10.2 prop:fork-syntax-initial
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra_isInitial Lean/CategoricalEssentialIncompleteness/ForkSyntaxInitialAlgebra.lean:63
+def syntaxAlgebra_isInitial : IsInitial syntaxAlgebra :=
+  IsInitial.ofUniqueHom foldHom (by
+    intro A m
+    apply Endofunctor.Algebra.Hom.ext
+    apply WideSubcategory.hom_ext
+    exact (syntax_initial A.str.hom A.str.property).unique
+      ⟨m.f.property,(congrArg (fun k => k.hom) m.h).symm⟩
+      ⟨(constructors A.str.hom A.str.property).fold_total,
+        fold_algebra A.str.hom A.str.property⟩)
+
+
+Proposition 10.2 prop:fork-syntax-initial
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.totalEquivalence Lean/CategoricalEssentialIncompleteness/EffectiveForkTotal.lean:100
+def totalEquivalence : Total ≌ (WalkingSpan ⥤ EnumerableCarriers.Total) where
+
+Proposition 10.3 prop:fork-proof-initial
+CategoricalEssentialIncompleteness.V46.ForkDerivation.printedInitial Lean/CategoricalEssentialIncompleteness/V46ForkDerivationInitial.lean:141
+def printedInitial (a b : Idem EffectiveFork.V) : IsInitial (printedAlgebra a b) :=
+  AlgebraTransport.initial (CategoryTheory.Equivalence.refl (C := Over sentenceObject))
+    (printedComparison a b) (inferenceAlgebra a b) (inferenceInitial a b)
+
+
+@[simp] theorem printed_carrier (a b : Idem EffectiveFork.V) :
+    (printedAlgebra a b).a = proofSlice a b := rfl
+
+
+Proposition 10.3 prop:fork-proof-initial
+CategoricalEssentialIncompleteness.V46.ForkDerivation.printed_unique Lean/CategoricalEssentialIncompleteness/V46ForkDerivationInitial.lean:151
+theorem printed_unique (a b : Idem EffectiveFork.V) (Q : EffectiveFork.Total)
+    (q : Q ⟶ sentenceObject)
+    (η : (printedH a b).obj (Over.mk q) ⟶ Over.mk q) :
+    ∃! u : proofSlice a b ⟶ Over.mk q,
+      (printedH a b).map u ≫ η = (printedAlgebra a b).str ≫ u := by
+
+Proposition 10.3 prop:fork-proof-initial
+CategoricalEssentialIncompleteness.V46.ForkInference.inferenceIso Lean/CategoricalEssentialIncompleteness/V46ForkDerivationInference.lean:211
+def inferenceIso : (rules axioms implication).inference ≅ printedH axioms implication :=
+  NatIso.ofComponents (inputIso axioms implication) (by
+    intro Q Q' h
+    apply Over.OverMorphism.ext
+    change Limits.Sigma.map ((rules axioms implication).ruleMap h) ≫
+        toPrintedLeft axioms implication Q' =
+      toPrintedLeft axioms implication Q ≫ coprod.map (𝟙 Ax) (mpMap implication h)
+    apply Sigma.hom_ext
+    intro i
+    fin_cases i
+    · erw [Sigma.ι_map_assoc,toPrintedLeft_ι_zero,toPrintedLeft_ι_zero_assoc,
+        coprod.inl_map,Category.id_comp,RulePresentation.ruleMap_fst_assoc]
+      rfl
+    · exact (unaryInputInitial axioms implication Q).hom_ext _ _
+    · erw [Sigma.ι_map_assoc,toPrintedLeft_ι_two,toPrintedLeft_ι_two_assoc,coprod.inr_map]
+      rfl)
+
+
+Proposition 10.3 prop:fork-proof-initial
+CategoricalEssentialIncompleteness.V46.ForkDerivation.Diagram.shaped_unique Lean/CategoricalEssentialIncompleteness/V46ForkDerivationDiagram.lean:382
+theorem shaped_unique (a b : Idem EffectiveFork.V) (Q : Object) (q : Q ⟶ sentences)
+    (η : (shapedH a b).obj (Over.mk q) ⟶ Over.mk q) :
+    ∃! u : Over.mk (realization.map (ForkDerivation.conclusion a b)) ⟶ Over.mk q,
+      (shapedH a b).map u ≫ η = (shapedAlgebra a b).str ≫ u := by
+
+Theorem 10.4 thm:fork-proof-presentation
+CategoricalEssentialIncompleteness.V46.ForkDerivationImages.least_theorem_image Lean/CategoricalEssentialIncompleteness/V46ForkDerivationImages.lean:101
+theorem least_theorem_image (a b : Idem V) :
+    ClosedUnder (ForkDerivation.rules a b).inference (image.ι (conclusion a b)) ∧
+      ∀ {U : E} (m : U ⟶ S) [Mono m],
+        ClosedUnder (ForkDerivation.rules a b).inference m →
+          ∃ w : image (conclusion a b) ⟶ U,
+            w ≫ m = image.ι (conclusion a b) :=
+  (ForkDerivation.rules a b).least_theorem_subobject
+    (ForkDerivation.inferenceAlgebra a b) (ForkDerivation.inferenceInitial a b)
+
+
+Theorem 10.4 thm:fork-proof-presentation
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.right_t0 Lean/CategoricalEssentialIncompleteness/ForkProofObjects.lean:108
+theorem right_t0 (a b : Idem V) (n : ℕ) :
+    n ∈ support (rightIdem (t0 a b)) ↔
+      Formula.decode n ∈ Theorems (support (rightIdem a)) (support (rightIdem b)) :=
+  conclusion_range (support (rightIdem a)) (support (rightIdem b)) _ _ n
+
+
+Theorem 10.5 thm:cosheaf-observation
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.cosheaf_observation Lean/CategoricalEssentialIncompleteness/ForkObservationFunctor.lean:131
+theorem cosheaf_observation (i : Bool) (t : Theory) :
+    Inseparable t.val (Idem.pull nu t.val) ∧
+      (REPred (· ∈ tuplePositiveSet i t.val) ∧ REPred (· ∈ tupleNegativeSet i t.val)) ∧
+      (Disjoint (tuplePositiveSet i t.val) (tupleNegativeSet i t.val) ∧
+        ¬ ∃ D : Set (ℕ × ℕ),ComputablePred (· ∈ D) ∧ tuplePositiveSet i t.val ⊆ D ∧
+          Disjoint D (tupleNegativeSet i t.val)) ∧ t.val ⊔ Idem.pull nu t.val≠⊤ :=
+  ⟨(coded_observation i t).1,tuple_observations_enumerable i t.val,
+    tuple_observations_inseparable i t,(coded_observation i t).2.2⟩
+
+
+Theorem 10.5 thm:cosheaf-observation
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.essential_incompleteness_v46 Lean/CategoricalEssentialIncompleteness/V46ForkComparison.lean:68
+theorem essential_incompleteness_v46 (t : Idem S) (ht : categoricalTheory ≤ t)
+    (hc : t ⊓ Idem.pull nu t = ⊥) :
+    Inseparable t (Idem.pull nu t) ∧ t ⊔ Idem.pull nu t ≠ ⊤ :=
+  domain_incompleteness EffectiveFork.Recursion.image_pair_inseparable_v46
+    theta theta_total nu nu_total categoricalTheory
+    (positive_inclusion _ _) (negative_inclusion _ _) t ht hc
+
+
+Corollary 10.6 cor:cosheaf-essential-incompleteness
+CategoricalEssentialIncompleteness.V46.ForkDerivationImages.categoricalTheory_eq Lean/CategoricalEssentialIncompleteness/V46ForkDerivationImages.lean:229
+theorem categoricalTheory_eq : categoricalTheory = ForkSyntax.categoricalTheory :=
+  theoremRange_eq_t0 _ _
+
+
+Corollary 10.6 cor:cosheaf-essential-incompleteness
+CategoricalEssentialIncompleteness.V46.ForkAxiomClosure.endpoint_axiom_extension_incomplete Lean/CategoricalEssentialIncompleteness/V46ForkAxiomClosure.lean:157
+theorem endpoint_axiom_extension_incomplete (i : Bool) (A : Set ℕ)
+    (hA : REPred (· ∈ A))
+    (hext : EnumerableCarriers.support (ForkSyntax.endpointTheory i ForkSyntax.categoricalTheory) ⊆
+      theoremCodes A)
+    (hc : ∀ p : Formula, ¬(Derives A p ∧ Derives A (.neg p))) :
+    ∃ p : Formula, ¬Derives A p ∧ ¬Derives A (.neg p) := by
+
+Proposition 10.7 prop:fork-first-order-realization
+CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedInitial Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedDeduction.lean:68
+def printedInitial (A : Subobject (P ⨯ (S).sentenceObject)) : IsInitial (printedAlgebra D P A) :=
+  NumericalDiagramDerivations.initial (printedRules D P A)
+
+
+Proposition 10.7 prop:fork-first-order-realization
+CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedStatement Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedDeduction.lean:95
+def printedStatement (A : Subobject (P ⨯ (S).sentenceObject)) :
+    Σ B : Endofunctor.Algebra (printedRules D P A).inference, IsInitial B :=
+  ⟨printedAlgebra D P A, printedInitial D P A⟩
+
+
+Proposition 10.7 prop:fork-first-order-realization
+CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedFold_underlying_unique Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedDeduction.lean:84
+theorem printedFold_underlying_unique (A : Subobject (P ⨯ (S).sentenceObject))
+    (B : Endofunctor.Algebra (printedRules D P A).inference)
+    (m : (printedAlgebra D P A).a.left ⟶ B.a.left)
+    (hm : m ≫ B.a.hom = (printedAlgebra D P A).a.hom)
+    (hc : (printedRules D P A).inference.map (Over.homMk m hm) ≫ B.str =
+      (printedAlgebra D P A).str ≫ Over.homMk m hm) : m = (printedFold D P A B).f.left :=
+  congrArg (fun n => n.f.left)
+    ((printedInitial D P A).hom_ext (⟨Over.homMk m hm, hc⟩ : printedAlgebra D P A ⟶ B) _)
+
+
+Proposition 10.7 prop:fork-first-order-realization
+CategoricalEssentialIncompleteness.V46.DiagramInitialAlgebras.initial Lean/CategoricalEssentialIncompleteness/V46DiagramInitialAlgebras.lean:127
+def initial : IsInitial (algebra P A hA) :=
+  IsInitial.ofUniqueHom (fold P A hA) (by
+    intro B m
+    apply Endofunctor.Algebra.Hom.ext
+    ext j
+    exact congrArg Endofunctor.Algebra.Hom.f ((hA j).hom_ext
+      (⟨m.f.app j, congrArg (fun n => n.app j) m.h⟩ : A j ⟶ component P B j) _))
+
+Proposition 10.7 prop:fork-first-order-realization
+CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.presentationGeneration_obj Lean/CategoricalEssentialIncompleteness/V46ForkParameterizedDeduction.lean:106
+theorem presentationGeneration_obj
+    (A : Over ((constantFamilyFunctor P).obj (S).sentenceObject)) :
+    ((presentationGeneration D P).obj A).val = generated D P (imageSubobject A.hom) := rfl
+
+
+Proposition 10.8 prop:fork-first-order-conservative
+CategoricalEssentialIncompleteness.V46.ForkFirstOrderApplication.printed_statement Lean/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplication.lean:72
+theorem printed_statement :
+    (sentenceTheory A B ⊓ (Subobject.pullback (S).sentenceNegation).obj (sentenceTheory A B) = ⊥) ∧
+    (∀ U : FirstOrderReflection.Theory proofFamily, sentenceTheory A B ≤ U.val →
+      U.val ⊓ (Subobject.pullback (S).sentenceNegation).obj U.val = ⊥ →
+        U.val ⊔ (Subobject.pullback (S).sentenceNegation).obj U.val ≠ ⊤) ∧
+    (Subobject.pullback ForkPropositionalEmbedding.embedding).obj (sentenceTheory A B) =
+      Subobject.mk (ForkDerivationImages.LiteralDiagram.theoremInclusion A B) ∧
+    ∀ (k : Bool) (Δ : Set (Tuple (carrier k).dimension)) (hΔ : REPred (· ∈ Δ)),
+      theorems k ⊆ closureSet k Δ hΔ →
+      (∀ x ∈ closureSet k Δ hΔ, (neg k).toFun x ∉ closureSet k Δ hΔ) →
+      ∃ x : Point (carrier k), x ∉ closureSet k Δ hΔ ∧ (neg k).toFun x ∉ closureSet k Δ hΔ := by
+
+Proposition 10.8 prop:fork-first-order-conservative
+CategoricalEssentialIncompleteness.V46.ForkErasureClosure.closed Lean/CategoricalEssentialIncompleteness/V46ForkErasureClosure.lean:113
+theorem closed : ClosedUnder ((S).logicalRules (axiomImage a b).arrow).inference
+    (erasedTheory a b).arrow := by
+
+Corollary 10.9 cor:fork-associated-theories
+CategoricalEssentialIncompleteness.V46.ForkAssociatedCategories.printedStatement Lean/CategoricalEssentialIncompleteness/V46ForkAssociatedCategories.lean:124
+def printedStatement (hc : U.val ⊓ refutation U.val = ⊥) : Application U i where
+
+Corollary 10.9 cor:fork-associated-theories
+CategoricalEssentialIncompleteness.V46.MonicPartialSliceComparison.proper Lean/CategoricalEssentialIncompleteness/V46MonicPartialSliceComparison.lean:102
+theorem proper (h : ¬ IsIso i) : ¬ (postcompose i).EssSurj := by
+
+Definition A.1 def:categorical-syntax
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax Lean/CategoricalEssentialIncompleteness/V46CategoricalSyntax.lean:161
+structure CategoricalSyntax (V : D) (σ π : ℕ → D) (d : ℕ) where
+
+Definition A.1 def:categorical-syntax
+CategoricalEssentialIncompleteness.V46.StableListAlgebra Lean/CategoricalEssentialIncompleteness/V46CategoricalLists.lean:134
+structure StableListAlgebra (V : D) where
+
+Definition A.2 def:sentence-object
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax.occurrenceAlgebra Lean/CategoricalEssentialIncompleteness/V46CategoricalFreeVariables.lean:56
+def occurrenceAlgebra : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
+    (SyntaxPolynomial.termExpression V σ d) (SyntaxPolynomial.formulaExpression V π d)) where
+
+Definition A.2 def:sentence-object
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax.sentenceNegation Lean/CategoricalEssentialIncompleteness/V46CategoricalFreeVariables.lean:105
+def sentenceNegation : S.sentenceObject ⟶ S.sentenceObject :=
+  pullback.lift (S.sentenceInclusion ≫ S.negationConstructor)
+    (pullback.snd S.formulaOccurrences S.lists.algebra.nil) (by
+      rw [Category.assoc, S.negation_occurrences]
+      exact pullback.condition)
+
+
+Proposition A.3 prop:categorical-substitution
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax.substitutionAlgebra Lean/CategoricalEssentialIncompleteness/V46CategoricalSubstitution.lean:319
+def substitutionAlgebra : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
+    ((SyntaxPolynomial.termExpression V σ d).withParameters S.substitutionParameters)
+    ((SyntaxPolynomial.formulaExpression V π d).withParameters S.substitutionParameters)) where
+
+Proposition A.3 prop:categorical-substitution
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax.admissibility_complemented Lean/CategoricalEssentialIncompleteness/V46CategoricalSubstitution.lean:531
+theorem admissibility_complemented :
+    IsCompl (Subobject.mk S.admissibleInclusion)
+      (Subobject.mk (pullback.fst S.formulaSubstitutionOption coprod.inl)) :=
+  (SumFibers.complementary S.formulaSubstitutionOption).symm
+
+
+Definition A.4 def:deductively-closed
+CategoricalEssentialIncompleteness.V46.ClosedUnder Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean:30
+def ClosedUnder (H : Over F ⥤ Over F) {T : D} (m : T ⟶ F) : Prop :=
+  Nonempty (H.obj (Over.mk m) ⟶ Over.mk m)
+
+
+Theorem A.5 thm:least-theorem-subobject
+CategoricalEssentialIncompleteness.V46.RulePresentation.least_theorem_subobject Lean/CategoricalEssentialIncompleteness/V46Inference.lean:247
+theorem least_theorem_subobject (A : Endofunctor.Algebra R.inference)
+    (hA : IsInitial A) :
+    ClosedUnder R.inference (image.ι A.a.hom) ∧
+      ∀ {U : D} (m : U ⟶ F) [Mono m], ClosedUnder R.inference m →
+        ∃ w : image A.a.hom ⟶ U, w ≫ m = image.ι A.a.hom :=
+  least_closed_image R.inference A R.inference_preservesRegularEpis hA
+
+
+Theorem A.5 thm:least-theorem-subobject
+CategoricalEssentialIncompleteness.V46.RulePresentation.inference_preservesRegularEpis Lean/CategoricalEssentialIncompleteness/V46Inference.lean:229
+theorem inference_preservesRegularEpis :
+    PreservesUnderlyingRegularEpis R.inference := by
+
+Theorem A.6 thm:first-order-theory
+CategoricalEssentialIncompleteness.V46.CategoricalSyntax.generated_firstOrder_theory Lean/CategoricalEssentialIncompleteness/V46FirstOrderTheory.lean:28
+theorem generated_firstOrder_theory {A : D} (axioms : A ⟶ S.sentenceObject)
+    (P : Endofunctor.Algebra (S.logicalRules axioms).inference) (hP : IsInitial P) :
+    ClosedUnder (S.logicalRules axioms).inference (image.ι P.a.hom) ∧
+      (∀ {T : D} (m : T ⟶ S.algebra.a.2) [Mono m],
+        ClosedUnder (S.logicalRules axioms).inference m →
+          ∃ w : image P.a.hom ⟶ T, w ≫ m = image.ι P.a.hom) ∧
+      (∃ a : S.logicalParameters ⨿ A ⟶ image P.a.hom,
+        a ≫ image.ι P.a.hom = coprod.desc S.logicalAxioms
+          (axioms ≫ S.sentenceInclusion)) ∧
+      imageSubobject (pullback.snd P.a.hom S.sentenceInclusion) =
+        (Subobject.pullback S.sentenceInclusion).obj (imageSubobject P.a.hom) := by
+
+Theorem A.6 thm:first-order-theory
+CategoricalEssentialIncompleteness.V46.firstOrder_sentence_image_monotone Lean/CategoricalEssentialIncompleteness/V46FirstOrderInference.lean:119
+theorem firstOrder_sentence_image_monotone (logical : L ⟶ F) (sentence : S ⟶ F)
+    (axioms : A ⟶ S) (axioms' : A' ⟶ S)
+    (all : V ⨯ F ⟶ F) (imp : F ⨯ F ⟶ F)
+    (k : A ⟶ A') (hk : k ≫ axioms' = axioms)
+    (P : Endofunctor.Algebra (firstOrderRules logical sentence axioms all imp).inference)
+    (hP : IsInitial P)
+    (P' : Endofunctor.Algebra (firstOrderRules logical sentence axioms' all imp).inference) :
+    imageSubobject (pullback.snd P.a.hom sentence) ≤
+      imageSubobject (pullback.snd P'.a.hom sentence) := by
+
+Lemma A.7 lem:range-regular-image
+CategoricalEssentialIncompleteness.LocalConnectedness.V46.range_regularImage Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean:119
+theorem range_regularImage {X I Y : TotalCategory S} (e : X ⟶ I)
+    (m : I ⟶ Y) [IsRegularEpi e] (r : Y.obj ⟶ I.obj)
+    (hmr : m.hom ≫ r = 𝟙 I.obj) (hrm : r ≫ m.hom = rst r) :
+    (Ranges.range (e.hom ≫ m.hom)).hom = r ≫ m.hom := by
+
+Proposition B.1 prop:fork-cosheaves
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.actualCosheafEquivalence Lean/CategoricalEssentialIncompleteness/ForkActualCosheaves.lean:102
+def actualCosheafEquivalence : ActualCoSh ≌ (WalkingSpan ⥤ Type) :=
+  actualPresentationEquivalence.trans cosheafEquivalence
+
+
+Proposition B.1 prop:fork-cosheaves
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.cosheafEquivalence Lean/CategoricalEssentialIncompleteness/ForkCosheafEquivalence.lean:99
+def cosheafEquivalence : CoSh ≌ (WalkingSpan ⥤ Type) where
+
+Proposition B.2 prop:fork-total
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.totalEquivalence Lean/CategoricalEssentialIncompleteness/EffectiveForkTotal.lean:100
+def totalEquivalence : Total ≌ (WalkingSpan ⥤ EnumerableCarriers.Total) where
+
+Proposition B.2 prop:fork-total
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.imageIsImage Lean/CategoricalEssentialIncompleteness/EffectiveForkRegular.lean:122
+def imageIsImage {X Y : Total} (f : X ⟶ Y) : IsImage (imageFactorization f).toMonoFactorisation :=
+  (imageFactorization f).toMonoIsImage
+
+
+Proposition B.3 prop:fork-structure
+CategoricalEssentialIncompleteness.V46.ForkRangeStability.equivalence Lean/CategoricalEssentialIncompleteness/V46ForkRangeStability.lean:32
+def equivalence : MonicSpanCategory ≌ Object :=
+  PartialMapEquivalence.equivalence (CategoryTheory.Equivalence.refl : Total ≌ Total)
+
+
+Proposition B.3 prop:fork-structure
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.weak_choice Lean/CategoricalEssentialIncompleteness/EffectiveForkConstruction.lean:23
+theorem weak_choice : WeakChoice Object := inferInstance
+
+Proposition B.4 prop:fork-local
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.locally_connected Lean/CategoricalEssentialIncompleteness/EffectiveForkConstruction.lean:21
+theorem locally_connected : LocallyConnected Object := inferInstance
+
+Lemma B.5 lem:fork-dominance
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.dominance Lean/CategoricalEssentialIncompleteness/EffectiveForkEncoding.lean:134
+theorem dominance (X : Object) :
+    ∃ (m : X ⟶ V) (s : V ⟶ X), isTotal m ∧ m ≫ s = 𝟙 X ∧ s ≫ m = rst s := by
+
+Lemma B.6 lem:fork-frames
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.productFrame Lean/CategoricalEssentialIncompleteness/EffectiveForkProductFrame.lean:152
+def productFrame : V ≅ product V V where
+
+Lemma B.6 lem:fork-frames
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.wordFrame Lean/CategoricalEssentialIncompleteness/EffectiveForkWordFrame.lean:147
+def wordFrame : V ≅ words V where
+
+Theorem B.7 thm:fork-turing
+CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean:43
+theorem tau_isTuring : @RecursionCategory.IsTuringMorphism ForkSpans _ forkProducts.pcategoryStruct
+    forkProducts.pcategoryLaws universal universal universal tau :=
+  FullRestrictionProducts.evaluator_isTuring _ forkCode_restriction _ _ _ _ _
+    (TuringRestrictionEquivalence.conjugate_turing _ labelIso _ codedFork_turing)
+
+
+Theorem B.7 thm:fork-turing
+CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.component_fibre Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringFibres.lean:122
+theorem component_fibre {Y : ForkSpans} (j : WalkingSpan) (f : forkProduct Y universal ⟶ universal)
+    (z : Point (Y.obj.obj j)) (x w : Point (universal.obj.obj j)) :
+    code _ w.val ∈ eval (componentIndex f j (code _ z.val)) (code _ x.val) ↔
+      Graph (componentMorphism j f) (pairPoint z x) w := by
+
+Proposition B.8 prop:fork-recursion
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.recursionCategory Lean/CategoricalEssentialIncompleteness/EffectiveForkRecursion.lean:231
+instance recursionCategory : RecursionCategory.PRecursionCategory Rec where
+
+Proposition B.8 prop:fork-recursion
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.splittingEquivalence Lean/CategoricalEssentialIncompleteness/EffectiveForkSplitEquivalence.lean:149
+def splittingEquivalence : SplitObject Rec ≌ Object := realization.asEquivalence
+
+
+Corollary B.9 cor:fork-karoubi
+CategoricalEssentialIncompleteness.LocalConnectedness.V46.idempotent_splits_through_range Lean/CategoricalEssentialIncompleteness/V46Karoubi.lean:29
+theorem idempotent_splits_through_range {X : C} (f : X ⟶ X) (hf : f ≫ f = f) :
+    ∃ (Y : C) (m : Y ⟶ X) (s : X ⟶ Y),
+      isTotal m ∧ m ≫ s = 𝟙 Y ∧ s ≫ m = f := by
+
+Corollary B.9 cor:fork-karoubi
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.karoubiEquivalence_source_iso Lean/CategoricalEssentialIncompleteness/V46Karoubi.lean:137
+def karoubiEquivalence_source_iso :
+    toKaroubi Rec ⋙ karoubiEquivalence.functor ≅ inclusion := by
+
+Proposition B.10 prop:fork-distinction
+CategoricalEssentialIncompleteness.LocalConnectedness.fork_not_restriction_equivalent Lean/CategoricalEssentialIncompleteness/ForkNonEquivalence.lean:26
+theorem fork_not_restriction_equivalent
+    (e : EffectiveFork.Recursion.Rec ≌ ClassicalPrograms.Rec)
+    (hF : PreservesRestriction e.functor) (hG : PreservesRestriction e.inverse) : False := by
+
+Proposition B.10 prop:fork-distinction
+CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.universal_no_decidable_equality Lean/CategoricalEssentialIncompleteness/EffectiveForkUniversal.lean:100
+theorem universal_no_decidable_equality : ¬ Nonempty (Fork.EqualityDecision universalDiagram) := by
+
+Proposition C.1 prop:missing-lift
+CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.missing_lift Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean:243
+theorem missing_lift :
+    (∃ c c' : Idem (N K),Complementary c c' ∧ pair0 K ≤ c ∧ pair1 K ≤ c') ∧
+    (¬ ∃ l : N K ⟶ coprod (N K) (N K),(inclusion K).map l=missingSection) ∧
+    (∃ f g : N K ⟶ coprod (N K) (N K),
+      Idem.ofRestrict f ⊓ Idem.ofRestrict g=⊥ ∧
+        ¬ ∃ l,ArrowLE f l ∧ ArrowLE g l) :=
+  ⟨⟨separator,separatorComplement,separator_complementary,
+    pair0_le_separator,pair1_le_separatorComplement⟩,
+    missingSection_has_no_lift,
+    ⟨branchA,branchComplement,branch_restrictions_disjoint,branches_have_no_common_upper_bound⟩⟩
+
+
+Proposition C.1 prop:missing-lift
+CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.total_iff_ordinary_total Lean/CategoricalEssentialIncompleteness/OracleRestrictedTotal.lean:61
+theorem total_iff_ordinary_total {X Y : Restricted S} (f : X ⟶ Y) :
+    isTotal f ↔ ∃ g : carrier S X → carrier S Y,Computable g ∧
+      f.val=fun x => Part.some (g x) := by
+
+Theorem D.1 thm:faithful
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_faithful Lean/CategoricalEssentialIncompleteness/SyntacticFamily.lean:43
+instance family_faithful : (familyFunctor T).Faithful where
+
+Theorem D.1 thm:faithful
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_nonzero Lean/CategoricalEssentialIncompleteness/SyntacticFamily.lean:94
+theorem family_nonzero (hT : Consistent T) :
+    (familyFunctor T).map (𝟙 (omegaObject T)) ≠ 0 := by
+
+Corollary D.2 cor:pair
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.extension_arbitrary_pair_inseparable_v46 Lean/CategoricalEssentialIncompleteness/V46SyntacticExtension.lean:78
+theorem extension_arbitrary_pair_inseparable_v46 (hT' : Consistent T')
+    (τ : nearProd (omegaObject T) (omegaObject T) ⟶ omegaObject T)
+    (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : omegaObject T ≅ coprod (omegaObject T) (omegaObject T)) :
+    Inseparable ((rangeFunctor T T').mapIdem (diagonal0 τ b))
+      ((rangeFunctor T T').mapIdem (diagonal1 τ b)) := by
+
+Corollary D.2 cor:pair
+CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.diagonal1_image Lean/CategoricalEssentialIncompleteness/V46SyntacticExtension.lean:64
+theorem diagonal1_image {U : CodedProgramCategory T}
+    (τ : nearProd U U ⟶ U) (b : U ≅ coprod U U) :
+    (rangeFunctor T T').mapIdem (diagonal1 τ b) =
+      diagonal1 ((functor T T').map τ) ((functor T T').mapIso b) := by
+

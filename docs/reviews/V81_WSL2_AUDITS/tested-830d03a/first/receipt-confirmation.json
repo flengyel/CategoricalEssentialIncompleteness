@@ -1,0 +1,48 @@
+{
+  "tested_git_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "raw_wrapper_json_sha256": "c7a75cba55ba62f52726a5834fe00fd1c00a080efe821002fdc0bb9636c694e9",
+  "source_snapshot_sha256": "71e8e35cc3006d79aa9f4e31aa77f263d7b7ca3b7ebc71a48f69663b11ed812a",
+  "snapshot_files_at_commit": 2716,
+  "matched_tex": 25,
+  "numbered_axioms_matched": 844,
+  "numbered_in_current_or_retained_axiom_audit": 837,
+  "numbered_axioms_only_in_strict_transcripts": {
+    "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.left_evaluation_turing": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.right_evaluation_turing": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.polynomialTotal": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0_consistency": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.rangeFunctor": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq": [
+      "build-logs/strict-V46OracleAndApplicationChecks.log"
+    ]
+  },
+  "independent_original_type_probes": 11,
+  "command_count": 2073,
+  "strict_sources": 2067,
+  "retained_declarations": 1274,
+  "current_declarations": 34652,
+  "current_modules": 1152,
+  "pinned_clean_packages_at_start_and_end": 16,
+  "commands_exit_zero": true,
+  "clean_start": true,
+  "scope": "full",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "consolidated_receipt_sha256": "887be14b44f0c891544522e04311fe0dab92d2ce3a23e592fa225d75cadab2cf"
+}

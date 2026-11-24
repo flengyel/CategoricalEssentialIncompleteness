@@ -1,0 +1,662 @@
+{
+ "CategoricalEssentialIncompleteness.V46.ProgramOrder.disjoint_point_predicates": {
+  "name": "CategoricalEssentialIncompleteness.V46.ProgramOrder.disjoint_point_predicates",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46DisjointProgramPoints",
+  "line": 86,
+  "end": 102,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46DisjointProgramPoints.lean",
+  "source": "theorem disjoint_point_predicates (hi : diag U ≫ δ = 𝟙 U)\n    (hd : δ ≫ diag U = RestrictionCategory.rst δ) :\n    ∃ (p q : Z.obj ⟶ U) (P N : Idem U), isTotal p ∧ isTotal q ∧ P ⊓ N = ⊥ ∧\n      p ≫ P.hom = p ∧ q ≫ N.hom = q := by\n  obtain ⟨p, hp, hid⟩ := exists_code hZ τ hτ (𝟙 U)\n  obtain ⟨q, hq, hz⟩ := exists_code hZ τ hτ (0 : U ⟶ U)\n  let P := pointPredicate hZ δ p\n  let N := pointPredicate hZ δ q\n  let c := P ⊓ N\n  refine ⟨p,q,P,N,hp,hq,?_,pointPredicate_fixed hZ δ hp hi,pointPredicate_fixed hZ δ hq hi⟩\n  have ep := pointPredicate_restriction hZ δ hp hd c (show c ≤ P from inf_le_left)\n  have en := pointPredicate_restriction hZ δ hq hd c (show c ≤ N from inf_le_right)\n  have hzero := apart_codes hZ τ hp hid hz (c.hom ≫ terminate hZ U) (by\n    simpa only [Category.assoc] using ep.symm.trans en)\n  apply Idem.ext\n  change c.hom = 0\n  rw [ep,← Category.assoc,hzero,zero_comp]",
+  "locator": "Point domains"
+ },
+ "CategoricalEssentialIncompleteness.V46.ProgramOrder.exists_inseparable": {
+  "name": "CategoricalEssentialIncompleteness.V46.ProgramOrder.exists_inseparable",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46DiscreteTuringInseparability",
+  "line": 112,
+  "end": 138,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46DiscreteTuringInseparability.lean",
+  "source": "theorem exists_inseparable (hne : ∃ X : C, 𝟙 X ≠ (0 : X ⟶ X))\n    (joins : CompatibleJoinsPreservedByPrecomposition C) (δ : nearProd U U ⟶ U)\n    (hi : diag U ≫ δ = 𝟙 U) (hd : δ ≫ diag U = RestrictionCategory.rst δ) :\n    ∃ a b : Idem U, a ⊓ b = ⊥ ∧\n      ¬ ∃ c n : Idem U, PairComplementary c n ∧ a ≤ c ∧ b ≤ n := by\n  obtain ⟨p,q,P,N,hp,hq,hPN,hpP,hqN⟩ := disjoint_point_predicates hZ τ hτ δ hi hd\n  let D := diag U ≫ τ\n  refine ⟨Idem.pull D P,Idem.pull D N,by rw [← Idem.pull_inf,hPN,Idem.pull_bot],?_⟩\n  rintro ⟨c,n,hcn,hc,hn⟩\n  obtain ⟨j,hc',hn'⟩ := branches joins c n hcn.disjoint (terminate hZ U ≫ q) (terminate hZ U ≫ p)\n    (RestrictionCategory.isTotal_comp (terminate_total hZ U) hq)\n    (RestrictionCategory.isTotal_comp (terminate_total hZ U) hp)\n  obtain ⟨k,hk,hj⟩ := exists_code hZ τ hτ j\n  have ha : Idem.pull k c ≤ Idem.pull k n :=\n    (switched_fibre hZ τ c hq hk N hqN j hj hc').trans (Idem.pull_mono k hn)\n  have hb : Idem.pull k n ≤ Idem.pull k c :=\n    (switched_fibre hZ τ n hp hk P hpP j hj hn').trans (Idem.pull_mono k hc)\n  have hempty : Idem.pull k c ⊓ Idem.pull k n = ⊥ := by rw [← Idem.pull_inf,hcn.disjoint,Idem.pull_bot]\n  have he : Idem.pull k c = ⊥ := (inf_eq_left.mpr ha).symm.trans hempty\n  have he' : Idem.pull k n = ⊥ := (le_antisymm hb ha).trans he\n  have hk0 := joint_zero joins c n hcn k\n    (by rw [← Idem.pull_commute,he,Idem.bot_hom,zero_comp])\n    (by rw [← Idem.pull_commute,he',Idem.bot_hom,zero_comp])\n  exact terminal_nonzero hZ hne (hk.symm.trans\n    ((congrArg RestrictionCategory.rst hk0).trans (RestrictionZero.restrict_zero Z.obj U)))\n\ninclude hZ hτ in",
+  "locator": "Inseparable pair"
+ },
+ "CategoricalEssentialIncompleteness.V46.ProgramOrder.terminal_predicate_of_coded_order": {
+  "name": "CategoricalEssentialIncompleteness.V46.ProgramOrder.terminal_predicate_of_coded_order",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ProgramOrder",
+  "line": 137,
+  "end": 145,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ProgramOrder.lean",
+  "source": "theorem terminal_predicate_of_coded_order (hne : ∃ X : C, 𝟙 X ≠ (0 : X ⟶ X))\n    (pair : nearProd U U ⟶ U) (d : Idem U)\n    (hd : ∀ k j : Z.obj ⟶ U, isTotal k → isTotal j →\n      (Idem.pull (partialPairing k j ≫ pair) d = ⊤ ↔\n        ArrowLE (program hZ τ k) (program hZ τ j))) :\n    ∃ b : Idem Z.obj, b ≠ ⊥ ∧ b ≠ ⊤ := by\n  apply exists_nontrivial_terminal_predicate hZ τ hτ hne (Idem.pull pair d)\n  intro k j hk hj\n  simpa only [Idem.pull_comp] using hd k j hk hj",
+  "locator": "Coded provability predicate"
+ },
+ "Janiczak.FOL.signed_janiczak": {
+  "name": "Janiczak.FOL.signed_janiczak",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46JaniczakSignedTheory",
+  "line": 60,
+  "end": 69,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheory.lean",
+  "source": "theorem signed_janiczak {P N : Set ℕ} (hd : Disjoint P N)\n    (hp : REPred (· ∈ P)) (hn : REPred (· ∈ N)) :\n    Entailment.Consistent (theory (Signed P N)) ∧\n      REPred (· ∈ Encodable.encode '' theory (Signed P N)) ∧\n      (∃ U : Theory L, PrimrecPred (fun w : ℕ ↦ w ∈ Encodable.encode '' U) ∧\n        ∀ φ : Sentence L, (U ⊢ φ ↔ theory (Signed P N) ⊢ φ)) ∧\n      (EssentiallyUndecidable (theory (Signed P N)) ↔\n        CategoricalEssentialIncompleteness.Numerical.RecursivelyInseparable P N) :=\n  ⟨signed_consistent_iff.mpr hd,signed_axiom_words_enumerable hp hn,\n    signed_recursively_axiomatizable hp hn,signed_essentiallyUndecidable_iff hd⟩",
+  "locator": "Axiom and derivability statements"
+ },
+ "Janiczak.SignedTheoryChecks.native_proof_words": {
+  "name": "Janiczak.SignedTheoryChecks.native_proof_words",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46JaniczakSignedTheoryChecks",
+  "line": 25,
+  "end": 29,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakSignedTheoryChecks.lean",
+  "source": "theorem native_proof_words {P N : Set ℕ} (hd : Disjoint P N) :\n    (∀ U : Theory FOL.L, FOL.theory (Signed P N) ⊆ U → Entailment.Consistent U →\n      ¬ ComputablePred (fun w : ℕ ↦ ∃ φ : Sentence FOL.L, Encodable.encode φ = w ∧ U ⊢ φ)) ↔\n    (Disjoint P N ∧ ¬ ∃ C : Set ℕ, ComputablePred (· ∈ C) ∧ P ⊆ C ∧ Disjoint C N) :=\n  FOL.signed_essentiallyUndecidable_iff hd",
+  "locator": "Expanded quantifiers and class sizes"
+ },
+ "Janiczak.FOL.consequence_iff_provable": {
+  "name": "Janiczak.FOL.consequence_iff_provable",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46JaniczakFOL",
+  "line": 122,
+  "end": 139,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakFOL.lean",
+  "source": "theorem consequence_iff_provable (T : Set Janiczak.Formula) (p : Janiczak.Formula) :\n    Consequence T p ↔ theory T ⊢ sentence p := by\n  constructor\n  · intro hp\n    let _ : 𝗘𝗤 L ⪯ theory T := inferInstanceAs (𝗘𝗤 L ⪯ (𝗘𝗤 L ∪ sentence '' T))\n    apply Theory.Proof.complete_on_eq_models.{0,0}\n    intro M _ _ _ hM\n    let A : Janiczak.Structure := ⟨M, inferInstance, relation⟩\n    apply (sentence_models p).mpr\n    apply hp A\n    intro q hq\n    exact (sentence_models q).mp (hM.models _ (Or.inr ⟨q,hq,rfl⟩))\n  · intro hp M hM\n    let _ :=  M.inhabited\n    let _ :=  model M\n    let _ :=  equality_in_model M\n    exact (sentence_models p).mp (consequence_iff.mp (Theory.Proof.sound hp) M.Carrier\n      (translated_models M T hM))",
+  "locator": "First-order soundness and completeness"
+ },
+ "Janiczak.NativeInput.nativeDecision_words": {
+  "name": "Janiczak.NativeInput.nativeDecision_words",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46JaniczakNativeDecision",
+  "line": 91,
+  "end": 102,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46JaniczakNativeDecision.lean",
+  "source": "theorem nativeDecision_words {C : Set ℕ} {d : ℕ → Bool} (hd : ∀ i, d i = true ↔ i ∈ C) (w : ℕ) :\n    nativeDecision d w = true ↔ ∃ p : Sentence FOL.L, Encodable.encode p = w ∧ completeTheory C ⊢ p := by\n  classical\n  simp only [nativeDecision, Bool.and_eq_true, nativeCodeTest, decide_eq_true_eq]\n  constructor\n  · rintro ⟨⟨p,rfl⟩,hy⟩\n    rw [namedWord_encode] at hy\n    exact ⟨p,rfl,(completeTheory_proves C p).mpr ((decideSpectrum_correct hd _).mp hy)⟩\n  · rintro ⟨p,rfl,hp⟩\n    refine ⟨⟨p,rfl⟩,?_⟩\n    rw [namedWord_encode]\n    exact (decideSpectrum_correct hd _).mpr ((completeTheory_proves C p).mp hp)",
+  "locator": "Decision on every code"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.V46.KaroubiRestriction.total_iff": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.V46.KaroubiRestriction.total_iff",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SummandBounds",
+  "line": 43,
+  "end": 45,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SummandBounds.lean",
+  "source": "theorem total_iff {P Q : Karoubi C} (f : P ⟶ Q) :\n    isTotal f ↔ P.p ≫ rst f.f = P.p :=\n  ⟨fun h => congrArg (fun k : P ⟶ P => k.f) h, fun h => Karoubi.hom_ext _ _ h⟩",
+  "locator": "Karoubi equation"
+ },
+ "CategoricalEssentialIncompleteness.V46.turingObject_iff": {
+  "name": "CategoricalEssentialIncompleteness.V46.turingObject_iff",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46TuringObjectRecognition",
+  "line": 22,
+  "end": 57,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean",
+  "source": "theorem turingObject_iff (U : C) :\n    (∀ A B : C, ∃ τ : nearProd U A ⟶ B, IsTuringMorphism τ) ↔\n      (∃ τ : nearProd U U ⟶ U, IsTuringMorphism τ) ∧\n        ∀ X : C, ∃ (m : X ⟶ U) (r : U ⟶ X), isTotal m ∧ m ≫ r = 𝟙 X := by\n  constructor\n  · intro typed\n    refine ⟨typed U U, ?_⟩\n    intro X\n    obtain ⟨eval, he⟩ := typed U X\n    obtain ⟨m, hm, h⟩ := he X (p0 X U)\n    refine ⟨m, diag U ≫ eval, hm, ?_⟩\n    have eqn := congrArg (fun k => partialPairing (𝟙 X) m ≫ k) h\n    rw [← Category.assoc, PCategory.partialPairing_comp_nearProd_map,\n      Category.id_comp, Category.comp_id, PCategory.p0_partialPairing_of_isTotal _ hm] at eqn\n    rwa [← Category.assoc, PCategory.diag_nat]\n  · rintro ⟨⟨τ, hτ⟩, retract⟩ A B\n    obtain ⟨mA, rA, _, hrA⟩ := retract A\n    obtain ⟨mB, rB, _, hrB⟩ := retract B\n    refine ⟨nearProd_map (𝟙 U) mA ≫ τ ≫ rB, ?_⟩\n    intro Z f\n    obtain ⟨g, hg, h⟩ := hτ Z (nearProd_map (𝟙 Z) rA ≫ f ≫ mB)\n    refine ⟨g, hg, ?_⟩\n    have swap : nearProd_map g (𝟙 A) ≫ nearProd_map (𝟙 U) mA =\n        nearProd_map (𝟙 Z) mA ≫ nearProd_map g (𝟙 U) := by\n      simp only [PCategory.nearProd_comp, Category.comp_id, Category.id_comp]\n    calc\n      _ = nearProd_map (𝟙 Z) mA ≫ (nearProd_map g (𝟙 U) ≫ τ) ≫ rB := by\n        rw [← Category.assoc, swap]\n        simp only [Category.assoc]\n      _ = f := by\n        rw [h]\n        have cancel : nearProd_map (𝟙 Z) mA ≫ nearProd_map (𝟙 Z) rA = 𝟙 _ := by\n          rw [PCategory.nearProd_comp, Category.comp_id, hrA, PCategory.nearProd_id]\n        simpa only [Category.assoc] using\n          (show (nearProd_map (𝟙 Z) mA ≫ nearProd_map (𝟙 Z) rA) ≫ f ≫ (mB ≫ rB) = f by\n            rw [cancel, hrB, Category.comp_id, Category.id_comp])",
+  "locator": "Recognition"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.summands_pairComplementary": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.summands_pairComplementary",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SummandBounds",
+  "line": 25,
+  "end": 36,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SummandBounds.lean",
+  "source": "theorem summands_pairComplementary [CoprodStruct C] [CategoryTheory.HasCoproducts C]\n    [RestrictionCoproducts C] [CategoryTheory.Limits.HasZeroMorphisms C] [RestrictionZero C]\n    (Y Z : C) : PairComplementary (summand0 Y Z) (summand1 Y Z) := by\n  refine ⟨summands_disjoint Y Z, ?_⟩\n  intro r h₀ h₁\n  change (𝟙 (coprod Y Z)) ≫ r.hom = 𝟙 _\n  rw [Category.id_comp]\n  apply CategoryTheory.HasCoproducts.hom_ext\n  · have h := congrArg (fun k => i0 Y Z ≫ k) (Idem.le_def.mp h₀)\n    simpa only [← Category.assoc, i0_summand0, Category.comp_id] using h\n  · have h := congrArg (fun k => i1 Y Z ≫ k) (Idem.le_def.mp h₁)\n    simpa only [← Category.assoc, i1_summand1, Category.comp_id] using h",
+  "locator": "Least upper bound"
+ },
+ "CategoricalEssentialIncompleteness.V46.PartialMaps.interpreted_theory_unique_factor": {
+  "name": "CategoricalEssentialIncompleteness.V46.PartialMaps.interpreted_theory_unique_factor",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ManuscriptPassageApplicationsChecks",
+  "line": 28,
+  "end": 37,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+  "source": "theorem interpreted_theory_unique_factor (G : RangeFunctor C (Par D)) {P T S : C}\n    (c : P ⟶ S) (hc : isTotal c) (m : T ⟶ S) (hm : isTotal m)\n    (r : S ⟶ T) (t : Idem S) (ht : t = Ranges.range c)\n    (hmr : m ≫ r = 𝟙 T) (hrm : r ≫ m = t.hom)\n    {V : D} (v : V ⟶ (G.toFunctor.obj S).obj) [Mono v] (k : (G.toFunctor.obj P).obj ⟶ V)\n    (hfac : k ≫ v = totalValue (G.toFunctor.map c) (G.map_total c hc)) :\n    ∃! w : (G.toFunctor.obj T).obj ⟶ V,\n      w ≫ v = totalValue (G.toFunctor.map m) (G.map_total m hm) := by\n  obtain ⟨w, hw⟩ := (interpreted_theory_subobject G c hc m hm r t ht hmr hrm v k hfac).2\n  exact ⟨w, hw, fun z hz => (cancel_mono v).mp (hz.trans hw.symm)⟩",
+  "locator": "Unique factor"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.binder_substitution": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.binder_substitution",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 34,
+  "end": 37,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem binder_substitution {W : D} (p : W ⟶ S.substitutionParameters) (y : W ⟶ V)\n    (a : W ⟶ S.substitutionCarriers.2) (ha : PairGood S d a) :\n    PairGood S d (prod.lift p (prod.lift y a) ≫ S.quantifierSubstitutionPair) :=\n  quantifier_pair_good S d p y a ha",
+  "locator": "Binder and option equations"
+ },
+ "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_total_iff": {
+  "name": "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.right_unit_total_iff",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SliceUnitFactorization",
+  "line": 30,
+  "end": 50,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SliceUnitFactorization.lean",
+  "source": "theorem right_unit_total_iff (Y : PartialMaps.Par (Over U)) :\n    isTotal ((rightAdjunction i inverses).unit.app Y) ↔\n      ∃ r : Y.obj.left ⟶ T, r ≫ i = Y.obj.hom := by\n  rw [right_unit_span]\n  let m := pullbackInclusion i inverses Y\n  let s := PartialMaps.Raw.monoInverse m\n  change isTotal (PartialMaps.ofSpan s) ↔ _\n  constructor\n  · intro h\n    let : IsIso m := PartialMaps.Raw.left_isIso_of_total s h\n    let : IsIso (pullback.fst Y.obj.hom i) := (Over.forget U).map_isIso m\n    refine ⟨inv (pullback.fst Y.obj.hom i) ≫ pullback.snd Y.obj.hom i, ?_⟩\n    rw [Category.assoc, ← pullback.condition, IsIso.inv_hom_id_assoc]\n  · rintro ⟨r, h⟩\n    let e := PartialMaps.pullbackFactorIso Y.obj.hom i r h\n    let E : ((postcompose i).obj ((reindex i inverses).obj Y)).obj ≅ Y.obj :=\n      Over.isoMk e (pullback.condition (f := Y.obj.hom) (g := i))\n    let : IsIso m := E.isIso_hom\n    let : IsIso s.l := ‹IsIso m›\n    rw [PartialMaps.ofSpan_eq_of_iso (PartialMaps.Raw.totalIso s)]\n    exact PartialMaps.ofTotal_total _",
+  "locator": "Unit criterion"
+ },
+ "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realize_injective": {
+  "name": "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realize_injective",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RealizedObjectSets",
+  "line": 255,
+  "end": 279,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSets.lean",
+  "source": "theorem realize_injective : Function.Injective realize := by\n  intro X\n  induction X with\n  | omega =>\n    rintro (_ | ⟨A, B⟩ | ⟨A, B⟩) he\n    · rfl\n    · exact (omega_ne_product _ _ he).elim\n    · exact (omega_ne_taggedUnion _ _ he).elim\n  | product X Y hX hY =>\n    rintro (_ | ⟨A, B⟩ | ⟨A, B⟩) he\n    · exact (omega_ne_product _ _ he.symm).elim\n    · have h₁ := congrArg firstProjection he\n      have h₂ := congrArg secondProjection he\n      rw [realize, realize, firstProjection_product _ _ (infinite_realize Y).nonempty,\n        firstProjection_product _ _ (infinite_realize B).nonempty] at h₁\n      rw [realize, realize, secondProjection_product _ _ (infinite_realize X).nonempty,\n        secondProjection_product _ _ (infinite_realize A).nonempty] at h₂\n      rw [hX h₁, hY h₂]\n    · exact (product_ne_taggedUnion X Y A B he).elim\n  | coproduct X Y hX hY =>\n    rintro (_ | ⟨A, B⟩ | ⟨A, B⟩) he\n    · exact (omega_ne_taggedUnion _ _ he.symm).elim\n    · exact (product_ne_taggedUnion A B X Y he.symm).elim\n    · obtain ⟨hl, hr⟩ := taggedUnion_injective he\n      rw [hX hl, hY hr]",
+  "locator": "Distinct sets"
+ },
+ "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realizationEquivalence": {
+  "name": "CategoricalEssentialIncompleteness.V46.RealizedObjectSets.realizationEquivalence",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46RealizedObjectSetsCategory",
+  "line": 127,
+  "end": 143,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RealizedObjectSetsCategory.lean",
+  "source": "def realizationEquivalence : PrintedObjectCoding.NormalizedCategory T ≌ SetPresentation T where\n  functor := realizationFunctor T\n  inverse := termFunctor T\n  unitIso := NatIso.ofComponents (fun _ => InducedCategory.isoMk (Iso.refl _)) (by\n    intro X Y f\n    apply InducedCategory.hom_ext\n    change f.hom ≫ 𝟙 _ = 𝟙 _ ≫ f.hom\n    simp)\n  counitIso := NatIso.ofComponents (fun _ => InducedCategory.isoMk (Iso.refl _)) (by\n    intro A B f\n    apply InducedCategory.hom_ext\n    change f.hom ≫ 𝟙 _ = 𝟙 _ ≫ f.hom\n    simp)\n  functor_unitIso_comp _ := by\n    apply InducedCategory.hom_ext\n    change (𝟙 _ : omegaObject T ⟶ omegaObject T) ≫ 𝟙 _ = 𝟙 _\n    simp",
+  "locator": "Equivalence and decoded graphs"
+ },
+ "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selectorBranch": {
+  "name": "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selectorBranch",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46SelectorGraph",
+  "line": 20,
+  "end": 21,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean",
+  "source": "def selectorBranch (L : 𝚺₁.Semisentence 2) (j : ℕ) : Carrier := .mkSigma\n  “x. !L.val x !!(numeralTerm j)”",
+  "locator": "Graph and PA application"
+ },
+ "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.equal_standard_axioms_unprovable": {
+  "name": "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.equal_standard_axioms_unprovable",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46IndexedAxiomPresentations",
+  "line": 138,
+  "end": 155,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentations.lean",
+  "source": "theorem equal_standard_axioms_unprovable :\n    ∃ e : ℕ, e ≠ Kleene.emptyIndex ∧ standardAxioms e = standardAxioms Kleene.emptyIndex ∧\n      ¬ 𝗣𝗔 ⊢ equivalenceSentence e Kleene.emptyIndex := by\n  classical\n  have hex : ∃ c : Code, ¬ (c.eval 0).Dom ∧ ¬ 𝗣𝗔 ⊢ equivalenceSentence (waitIndex c) Kleene.emptyIndex := by\n    by_contra! hall\n    apply ComputablePred.halting_problem_not_re 0\n    apply ((provable_equivalence_enumerable Kleene.emptyIndex).comp waitIndex_computable).of_eq\n    intro c\n    exact ⟨fun hp => (equal_standard_iff c).mp (sound_equivalence hp), hall c⟩\n  obtain ⟨c, hc, hp⟩ := hex\n  refine ⟨waitIndex c, ?_, (equal_standard_iff c).mpr hc, hp⟩\n  intro he\n  apply hp\n  rw [he]\n  apply complete.{0} 𝗣𝗔\n  intro M _ _\n  exact (equivalence_models _ _).mpr fun _ => Iff.rfl",
+  "locator": "Existence"
+ },
+ "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.Checks.indexed_axiom_presentations": {
+  "name": "CategoricalEssentialIncompleteness.V46.IndexedAxiomPresentations.Checks.indexed_axiom_presentations",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46IndexedAxiomPresentationsChecks",
+  "line": 20,
+  "end": 38,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46IndexedAxiomPresentationsChecks.lean",
+  "source": "theorem indexed_axiom_presentations :\n    let Ax := axiomGraph axiomCodes\n    ∃ e d : ℕ, e ≠ d ∧\n      (∀ w : ℕ, Ax.val.Evalb ![e,w] ↔ axiomCodes.val.Evalb ![w]) ∧\n      (∀ w : ℕ, Ax.val.Evalb ![d,w] ↔ axiomCodes.val.Evalb ![w]) ∧\n      ¬ 𝗣𝗔 ⊢ “∀ z, !Ax.val !!e z ↔ !Ax.val !!d z” := by\n  let Ax := axiomGraph axiomCodes\n  have hf (k w : ℕ) : Ax.val.Evalb ![k,w] ↔ w ∈ standardAxioms k := by\n    simp [Ax, standardAxioms, axiomPredicate, fiberAxioms, numeral_eq_natCast_app]\n  obtain ⟨e, hne, heq, hnot⟩ := equal_standard_axioms_unprovable\n  let d := FailureOfComposition.Kleene.emptyIndex\n  refine ⟨e,d,hne,fun w => (hf e w).trans ?_, fun w => (hf d w).trans (emptyIndex_axioms w), ?_⟩\n  · rw [heq, emptyIndex_axioms]\n  · intro h\n    apply hnot\n    apply complete.{0} 𝗣𝗔\n    intro M _ _\n    have hM := consequence_iff.mp (Theory.Proof.sound h) M inferInstance\n    simpa [models_iff, equivalenceSentence, axiomPredicate, fiberAxioms, Ax, d] using hM",
+  "locator": "Exact binary predicates"
+ },
+ "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences": {
+  "name": "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ArithmeticUniformIndependent",
+  "line": 204,
+  "end": 218,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+  "source": "theorem uniform_independent_sentences :\n    ∃ q : ArithmeticIndexedAxioms.parameter ⟶ ArithmeticIndexedAxioms.sentence,\n      ∀ e : ℕ, Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e)) →\n        ∃ φ : Formula, φ.freeVariables = [] ∧\n          formulaCode φ =\n            ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map q\n              (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ e)).val.val ∧\n          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound (gamma e) φ ∧\n          ¬ SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound (gamma e) (.neg φ) := by\n  refine ⟨sentence,?_⟩\n  intro e hc\n  let φ := NamedArithmeticDiagonalBounds.instanceFormula ArithmeticDiagonalCodes.alpha.val (output e)\n  have hr := NamedArithmeticDiagonalBounds.standard_instance_result ArithmeticDiagonalCodes.alpha.val (output e)\n  obtain ⟨hclosed,hpos,hneg⟩ := independent_instance e hc\n  exact ⟨φ,hclosed,hr.1.symm.trans (sentence_value e).symm,hpos,hneg⟩",
+  "locator": "Uniform morphism and both exclusions"
+ },
+ "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.ofEnumerableTheory": {
+  "name": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.ofEnumerableTheory",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46NamedTheoryObservationsProofs",
+  "line": 156,
+  "end": 173,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean",
+  "source": "def ofEnumerableTheory (T : Set ℕ) (hT : REPred (· ∈ T))\n    (hs : ∀ w ∈ T, ∃ φ : Formula, φ.freeVariables = [] ∧ formulaCode φ = w)\n    (hPA : ∀ φ, ArithmeticNamedAxiomComparison.PAAxiom φ → formulaCode φ ∈ T)\n    (hd : ∀ φ : Formula, φ.freeVariables = [] → FiniteDerivation (axiomPredicate T) φ → formulaCode φ ∈ T)\n    (hc : SentenceConsistent T) : Theory := by\n  refine ⟨T, ⟨axiomPredicate T, ?_, ?_⟩, hc⟩\n  · intro φ hφ\n    exact .axiom φ ((axiomPredicate_eval T hT _).mpr (hPA φ hφ)) hφ.1\n  · ext w\n    constructor\n    · intro hw\n      obtain ⟨φ, hφ, rfl⟩ := hs w hw\n      apply (theoremSet_iff_eval (axiomPredicate T) (formulaCode φ)).mpr\n      exact SyntacticNamedHilbert.native_sentence_theorem functionSymbols relationSymbols bound (axiomPredicate T)\n        (.axiom φ ((axiomPredicate_eval T hT _).mpr hw) hφ) hφ\n    · intro hw\n      obtain ⟨φ, hφ, rfl⟩ := theoremSet_sentences (axiomPredicate T) hw\n      exact hd φ hφ ((theoremSet_iff_finiteDerivation _ φ hφ).mp hw)",
+  "locator": "All presentations"
+ },
+ "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.signed_numerical_proofPoints": {
+  "name": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.signed_numerical_proofPoints",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46NamedTheoryObservations",
+  "line": 63,
+  "end": 70,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean",
+  "source": "theorem signed_numerical_proofPoints (T : Theory) (Γ : Carrier)\n    (hΓ : T.val = ArithmeticSentenceInseparability.theoremSet Γ) (n : ℕ) :\n    (n ∈ positive T ↔ NumericalProofPoint Γ (formulaCode (numeralInstance n))) ∧\n      (n ∈ negative T ↔ NumericalProofPoint Γ (formulaCode (.neg (numeralInstance n)))) := by\n  change (positiveWord n ∈ T.val ↔ _) ∧ (negativeWord n ∈ T.val ↔ _)\n  rw [hΓ, positiveWord_eq, negativeWord_eq]\n  exact ⟨theoremSet_iff_numericalProofPoint Γ _ (numeralInstance_closed n),\n    theoremSet_iff_numericalProofPoint Γ _ (numeralInstance_closed n)⟩",
+  "locator": "Numerical proof points"
+ },
+ "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.observationFunctor": {
+  "name": "CategoricalEssentialIncompleteness.V46.NamedTheoryObservations.observationFunctor",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46NamedTheoryObservations",
+  "line": 137,
+  "end": 153,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservations.lean",
+  "source": "def observationFunctor : Theory ⥤ RecursivePairs.Object where\n  obj := observedPair\n  map {T U} f :=\n    { map := 𝟙 ClassicalPrograms.U\n      total := rst_id _\n      positive := by\n        change ClassicalPrograms.supportIdem (positive T) (positive_enumerable T) ≤\n          Idem.pull (𝟙 ClassicalPrograms.U) (ClassicalPrograms.supportIdem (positive U) (positive_enumerable U))\n        rw [Idem.pull_id]\n        exact ClassicalPrograms.supportIdem_le _ _ (observations_mono (leOfHom f)).1\n      negative := by\n        change ClassicalPrograms.supportIdem (negative T) (negative_enumerable T) ≤\n          Idem.pull (𝟙 ClassicalPrograms.U) (ClassicalPrograms.supportIdem (negative U) (negative_enumerable U))\n        rw [Idem.pull_id]\n        exact ClassicalPrograms.supportIdem_le _ _ (observations_mono (leOfHom f)).2 }\n  map_id _ := RecursivePairs.Hom.ext rfl\n  map_comp _ _ := RecursivePairs.Hom.ext (Category.id_comp (𝟙 ClassicalPrograms.U)).symm",
+  "locator": "Functor and separator"
+ },
+ "CategoricalEssentialIncompleteness.V46.Precomplete.inseparable_unions": {
+  "name": "CategoricalEssentialIncompleteness.V46.Precomplete.inseparable_unions",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46PrecompleteClasses",
+  "line": 26,
+  "end": 56,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46PrecompleteClasses.lean",
+  "source": "theorem Precomplete.inseparable_unions {R : ℕ → ℕ → Prop} (pre : Precomplete R)\n    {U V : Set ℕ} (hU : U.Nonempty) (hV : V.Nonempty) (dis : Disjoint U V)\n    (satU : ∀ x y, R x y → y ∈ U → x ∈ U) (satV : ∀ x y, R x y → y ∈ V → x ∈ V) :\n    Numerical.RecursivelyInseparable U V := by\n  classical\n  obtain ⟨a, ha⟩ := hU\n  obtain ⟨b, hb⟩ := hV\n  refine ⟨dis, ?_⟩\n  rintro ⟨D, hD, hUD, hDV⟩\n  let diag (n : ℕ) := (ofNat Code n).eval n\n  have hd : Partrec diag := Code.eval_part.comp ((Computable.ofNat Code).comp Computable.id)\n    Computable.id\n  obtain ⟨h, hh, totalize⟩ := pre diag hd\n  obtain ⟨dec, hdec, hset⟩ := ComputablePred.computable_iff.mp hD\n  let flip (n : ℕ) := cond (dec (h n)) b a\n  have hf : Computable flip := (hdec.comp hh).cond (Computable.const b) (Computable.const a)\n  obtain ⟨c, hc⟩ := Code.exists_code.mp (Partrec.nat_iff.mp hf.partrec)\n  let k := encode c\n  have hdiag : flip k ∈ diag k := by\n    change flip k ∈ (ofNat Code (encode c)).eval k\n    rw [ofNat_encode, hc]\n    exact Part.mem_some _\n  have hr := totalize k (flip k) hdiag\n  have hm : h k ∈ D ↔ dec (h k) = true := (congrFun hset (h k)).to_iff\n  cases he : dec (h k) with\n  | false =>\n    have hu := satU (h k) a (by simpa [flip, he] using hr) ha\n    simpa [he] using hm.mp (hUD hu)\n  | true =>\n    have hv := satV (h k) b (by simpa [flip, he] using hr) hb\n    exact Set.disjoint_left.mp hDV (hm.mpr he) hv",
+  "locator": "General classes and unions"
+ },
+ "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.applicationGraph_pair": {
+  "name": "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.applicationGraph_pair",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ProvableProgramEquality",
+  "line": 46,
+  "end": 56,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean",
+  "source": "theorem applicationGraph_pair (e : ℕ) (n x y : M) :\n    (applicationGraph e).val.Evalb ![ExponentialPairing.code n x, y] ↔\n      ∃ j : M, UniformTrace.graph.val.Evalb ![(e : M), n, j] ∧\n        UniformTrace.graph.val.Evalb ![j, x, y] := by\n  rw [applicationGraph_eval]\n  constructor\n  · rintro ⟨n', x', j, he, hj, hy⟩\n    obtain ⟨rfl, rfl⟩ := ExponentialPairing.code_injective he\n    exact ⟨j, hj, hy⟩\n  · rintro ⟨j, hj, hy⟩\n    exact ⟨n, x, j, rfl, hj, hy⟩",
+  "locator": "Application graph"
+ },
+ "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.uniform_totalization": {
+  "name": "CategoricalEssentialIncompleteness.V46.ProvableProgramEquality.uniform_totalization",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ProvableProgramEquality",
+  "line": 122,
+  "end": 126,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ProvableProgramEquality.lean",
+  "source": "theorem uniform_totalization (f : ℕ →. ℕ) (hf : Partrec f) :\n    ∃ g : ℕ → ℕ, Computable g ∧ ∀ n j, j ∈ f n →\n      𝗣𝗔 ⊢ uniformSentence (eventualGraph j) (eventualGraph (g n)) := by\n  obtain ⟨g, hg, h⟩ := precomplete f hf\n  exact ⟨g, hg, fun n j hj => uniform_symm (h n j hj)⟩",
+  "locator": "Value-first equality"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.proof_search_domains": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.proof_search_domains",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 55,
+  "end": 73,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem proof_search_domains (e : ℕ)\n    (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) (x : ℕ) :\n    (Sum.inl x ∈ (F).map (lift Cpos Cneg) (e,x) ↔ (Cneg).val.Evalb ![e,x]) ∧\n    (Sum.inr x ∈ (F).map (lift Cpos Cneg) (e,x) ↔ (Cpos).val.Evalb ![e,x]) := by\n  have hd := fiber_disjoint e hc\n  have hneg := negative_lift_value ℕ Cpos Cneg e hd x\n  have hpos := positive_lift_value ℕ Cpos Cneg e hd x\n  have hdom := (model_lift_domain ℕ Cpos Cneg e x).mp\n  constructor\n  · refine ⟨fun hy => ?_, hneg⟩\n    rcases hdom ⟨Sum.inl x, hy⟩ with hp | hn\n    · have he : (Sum.inl x : ℕ ⊕ ℕ) = Sum.inr x := Part.mem_unique hy (hpos hp)\n      cases he\n    · exact hn\n  · refine ⟨fun hy => ?_, hpos⟩\n    rcases hdom ⟨Sum.inr x, hy⟩ with hp | hn\n    · exact hp\n    · have he : (Sum.inl x : ℕ ⊕ ℕ) = Sum.inr x := Part.mem_unique (hneg hn) hy\n      cases he",
+  "locator": "The two domains"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.uniform_finite_derivations": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.uniform_finite_derivations",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 95,
+  "end": 119,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem uniform_finite_derivations (e : ℕ)\n    (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system (gamma e))) :\n    let n := ArithmeticUniformIndependent.output e\n    let φ := NamedArithmeticDiagonalBounds.instanceFormula ArithmeticDiagonalCodes.alpha.val n\n    (F).map ArithmeticDiagonalCodes.sourceParityDiagonal n = (F).map (lift Cpos Cneg) (e,n) ∧\n      (¬ ∃ y : ℕ ⊕ ℕ, y ∈ (F).map (lift Cpos Cneg) (e,n)) ∧\n      ¬ NamedTheoryObservations.FiniteDerivation (gamma e) φ ∧\n      ¬ NamedTheoryObservations.FiniteDerivation (gamma e) (.neg φ) := by\n  let n := ArithmeticUniformIndependent.output e\n  let φ := NamedTheoryObservations.numeralInstance n\n  have hφ : φ.freeVariables = [] := NamedTheoryObservations.numeralInstance_closed n\n  have hav := output_avoids e hc\n  refine ⟨diagonal_partial_value Cpos Cneg e n (output_mem ℕ Cpos Cneg e),\n    fun hy => ((model_lift_domain ℕ Cpos Cneg e n).mp hy).elim hav.1 hav.2, ?_⟩\n  have hw : ((PredicateInterpretation.canonicalDomainFunctor 𝗣𝗔 ℕ).map\n      ArithmeticUniformIndependent.sentence (NamedArithmeticLiteralTotal.omegaPoint 𝗣𝗔 ℕ e)).val.val =\n      NamedArithmeticSignature.formulaCode φ :=\n    (sentence_value e).trans (NamedTheoryObservations.positiveWord_eq n)\n  have hs := sentence_code_avoids e hc\n  dsimp only at hs\n  rw [hw, NamedArithmeticProofSearch.negationWord_formulaCode] at hs\n  exact ⟨fun h => hs.1 ((NamedTheoryObservations.theoremSet_iff_eval (gamma e) _).mp\n      ((NamedTheoryObservations.theoremSet_iff_finiteDerivation (gamma e) φ hφ).mpr h)),\n    fun h => hs.2 ((NamedTheoryObservations.theoremSet_iff_eval (gamma e) _).mp\n      ((NamedTheoryObservations.theoremSet_iff_finiteDerivation (gamma e) (.neg φ) hφ).mpr h))⟩",
+  "locator": "Diagonal and both exclusions"
+ },
+ "CategoricalEssentialIncompleteness.V46.Miller.exists_coordinate_fixedPoint": {
+  "name": "CategoricalEssentialIncompleteness.V46.Miller.exists_coordinate_fixedPoint",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46MillerFixedPoint",
+  "line": 106,
+  "end": 121,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+  "source": "theorem exists_coordinate_fixedPoint (J : ℕ → Point → Set UnitInterval)\n    (hg : ∀ d, IsClosed {z : Point × UnitInterval | z.2 ∈ J d z.1})\n    (hb : ∀ d a, ∃ l u : UnitInterval, l ≤ u ∧ J d a = Icc l u) :\n    ∃ a : Point, ∀ d, a d ∈ J d a := by\n  let D (m : ℕ) : Set Point := {a | ∀ d < m, a d ∈ J d a}\n  have hd (m : ℕ) : IsClosed (D m) := by\n    have he : D m = ⋂ i : Fin m, {a : Point | a i ∈ J i a} := by\n      ext a\n      simp only [D, mem_ofPred_eq, mem_iInter, Fin.forall_iff]\n    rw [he]\n    exact isClosed_iInter fun i => (hg i).preimage (continuous_id.prodMk (continuous_apply i.val))\n  have hn (m : ℕ) : (D m).Nonempty := finite_coordinate_fixedPoint J hg hb m\n  have hs (m : ℕ) : D (m+1) ⊆ D m := fun _ h d hd => h d (Nat.lt_succ_of_lt hd)\n  obtain ⟨a, ha⟩ := IsCompact.nonempty_iInter_of_sequence_nonempty_isCompact_isClosed D\n    hs hn (hd 0).isCompact hd\n  exact ⟨a, fun d => mem_iInter.mp ha (d+1) d (Nat.lt_succ_self d)⟩",
+  "locator": "Countable fixed point and witness"
+ },
+ "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.isOpen_iff_productDistance": {
+  "name": "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.isOpen_iff_productDistance",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46WeightedCubeTopology",
+  "line": 42,
+  "end": 62,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46WeightedCubeTopology.lean",
+  "source": "theorem isOpen_iff_productDistance (s : Set Point) :\n    IsOpen s ↔ ∀ x ∈ s, ∃ ε > 0, ∀ y, productDistance x y < ε → y ∈ s := by\n  classical\n  constructor\n  · intro hs x hx\n    by_cases hn : (sᶜ).Nonempty\n    · obtain ⟨y, hy, hm⟩ :=\n        hs.isClosed_compl.isCompact.exists_isMinOn hn (continuous_productDistance x).continuousOn\n      refine ⟨productDistance x y, positive_distance (fun h => hy (h ▸ hx)), ?_⟩\n      intro w hw\n      by_contra h\n      exact (not_lt_of_ge (hm h)) hw\n    · exact ⟨1, zero_lt_one, fun y _ => by by_contra h; exact hn ⟨y, h⟩⟩\n  · intro h\n    apply isOpen_iff_mem_nhds.mpr\n    intro x hx\n    obtain ⟨ε, hε, hsub⟩ := h x hx\n    exact Filter.mem_of_superset ((isOpen_lt (continuous_productDistance x) continuous_const).mem_nhds\n      (show productDistance x x < ε by simpa [productDistance] using hε)) (fun y hy => hsub y hy)\n\nset_option maxHeartbeats 800000 in",
+  "locator": "Neighbourhood criterion"
+ },
+ "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.weightedMetric": {
+  "name": "CategoricalEssentialIncompleteness.V46.Miller.Cut.Distance.weightedMetric",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46WeightedCubeTopology",
+  "line": 64,
+  "end": 78,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46WeightedCubeTopology.lean",
+  "source": "@[instance_reducible] def weightedMetric : MetricSpace Point := MetricSpace.ofDistTopology productDistance\n  (fun x => by simp [productDistance])\n  (fun x y => by unfold productDistance\n                 exact tsum_congr fun n => congrArg (Series.weight n * ·) (abs_sub_comm (x n : ℝ) (y n : ℝ)))\n  (fun x y z => by\n    let δ (a b : Point) (n : ℕ) : ℝ := Series.weight n * |(a n : ℝ) - b n|\n    have summable (a b : Point) : Summable (δ a b) :=\n      Series.value_summable (fun n (w : Point) => |(a n : ℝ) - (w n : ℝ)|) (fun n w => coordinate_bounds n a w) b\n    change (∑' n, δ x z n) ≤ (∑' n, δ x y n) + ∑' n, δ y z n\n    rw [← (summable x y).tsum_add (summable y z)]\n    exact (summable x z).tsum_mono ((summable x y).add (summable y z))\n      (fun n => by simpa [δ, mul_add] using\n        mul_le_mul_of_nonneg_left (abs_sub_le (x n : ℝ) (y n) (z n)) (Series.weight_nonneg n)))\n  isOpen_iff_productDistance\n  (fun _ _ h => Classical.byContradiction fun ne => (positive_distance ne).ne' h)",
+  "locator": "Metric with the product topology"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.nullary_rule_conclusions": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.nullary_rule_conclusions",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 195,
+  "end": 200,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem nullary_rule_conclusions (A : Subobject (P ⨯ S.sentenceObject)) :\n    coprod.inl ≫ (rules a S P (axiomArrow a S P A)).conclusion 0 =\n        (constantFamilyFunctor P).map S.logicalAxioms ∧\n    coprod.inr ≫ (rules a S P (axiomArrow a S P A)).conclusion 0 =\n        axiomArrow a S P A ≫ (constantFamilyFunctor P).map S.sentenceInclusion :=\n  ⟨coprod.inl_desc _ _, coprod.inr_desc _ _⟩",
+  "locator": "Nullary summands and fold"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.recovered_sentence_image": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.recovered_sentence_image",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 225,
+  "end": 236,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem recovered_sentence_image (m : A ⟶ (S).sentenceObject) [Mono m] :\n    let Γ := recoveredCodes a m\n    let hΓ := recoveredCodes_enumerable a m\n    ∃ u : A ≅ CanonicalPresentation.chosenAxiomObject a σ π d Γ hΓ,\n      u.hom ≫ CanonicalPresentation.chosenAxioms a σ π d Γ hΓ = m ∧\n      u.inv ≫ m = CanonicalPresentation.chosenAxioms a σ π d Γ hΓ ∧\n      imageSubobject (sentenceConclusion a m) =\n        imageSubobject (CanonicalPresentation.chosenSentenceConclusion a σ π d Γ hΓ) ∧\n      Idem.pull (S).sentenceNegation.hom (Ranges.range (sentenceConclusion a m).hom) =\n        CanonicalIncompleteness.refutationIdem a Γ hΓ :=\n  ⟨axiomIso a m, axiomIso_inclusion a m, axiomIso_inverse_inclusion a m,\n    sentence_image_recovery a m, refutation_recovery a m⟩",
+  "locator": "Arbitrary mono and finite proof domains"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.integer_cut_axioms": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.integer_cut_axioms",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 125,
+  "end": 143,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem integer_cut_axioms (a : Point) (n : ℕ) (u : ℤ) (v : ℕ) (hv : 0 < v) :\n    ((u : ℝ) / (v : ℝ) < (a n : ℝ) →\n      formulaCode (lt (integerTerm (Rationals.integerCode u)) (mul (natural v) (c n))) ∈\n        cutAxioms a) ∧\n    ((a n : ℝ) < (u : ℝ) / (v : ℝ) →\n      formulaCode (lt (mul (natural v) (c n)) (integerTerm (Rationals.integerCode u))) ∈\n        cutAxioms a) := by\n  let j := Nat.pair (Rationals.integerCode u) (v - 1)\n  have hv' : v - 1 + 1 = v := Nat.sub_add_cancel (Nat.succ_le_of_lt hv)\n  have hq : (Rationals.q j : ℝ) = (u : ℝ) / (v : ℝ) := by\n    simp only [j, Rationals.q, Nat.unpair_pair, Rationals.signed_integerCode, hv',\n      Rat.cast_div, Rat.cast_intCast, Rat.cast_natCast]\n  constructor\n  · intro h\n    refine Or.inl ⟨n, j, by simpa only [hq] using h, ?_⟩\n    simpa only [belowSentence, j, Nat.unpair_pair, hv'] using (formulaCode_belowSentence n j).symm\n  · intro h\n    refine Or.inr ⟨n, j, by simpa only [hq] using h, ?_⟩\n    simpa only [aboveSentence, j, Nat.unpair_pair, hv'] using (formulaCode_aboveSentence n j).symm",
+  "locator": "Integer codes and all words"
+ },
+ "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.half_cut_sentences": {
+  "name": "CategoricalEssentialIncompleteness.V46.RevisedProofPassages.half_cut_sentences",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46RevisedProofPassagesChecks",
+  "line": 177,
+  "end": 183,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+  "source": "theorem half_cut_sentences (a : Point) (Γ : Set ℕ) (hΓ : RealClosedBounds.Extends a Γ) (n : ℕ) :\n    ((a n : ℝ) < 1/2 → formulaCode (lt (mul (natural 2) (c n)) one) ∈ cutAxioms a ∧\n      RealClosedBounds.Proof Γ (lt (mul (natural 2) (c n)) one)) ∧\n    (1/2 < (a n : ℝ) → formulaCode (lt one (mul (natural 2) (c n))) ∈ cutAxioms a ∧\n      RealClosedBounds.Proof Γ (.neg (lt (mul (natural 2) (c n)) one))) :=\n  ⟨fun h => ⟨lower_cut_axiom a n h, RealClosedBounds.lower_cut_gamma_theta a Γ hΓ n h⟩,\n   fun h => ⟨upper_cut_axiom a n h, RealClosedBounds.upper_cut_gamma_negtheta a Γ hΓ n h⟩⟩",
+  "locator": "Half-cut words"
+ },
+ "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent": {
+  "name": "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46MillerCanonicalAxiomIncompleteness",
+  "line": 327,
+  "end": 333,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+  "source": "theorem printed_essential_incompleteness_of_consistent\n    (m : A ⟶ (S₂).sentenceObject) [Mono m]\n    (ha : IsMiller a) (hext : RealClosedBounds.Extends a (recoveredCodes a m))\n    (hcons : TheoryDomainApplication.Consistent (recoveredCodes a m)) :\n    Inseparable (theoremIdem a m) (refutationIdem a m) ∧\n      theoremIdem a m⊔refutationIdem a m≠⊤ :=\n  printed_essential_incompleteness a m ha hext ((consistent_iff_disjoint a m).mp hcons)",
+  "locator": "Extension theorem"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.inclusion_openEmbedding": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.inclusion_openEmbedding",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkOpenGluing",
+  "line": 38,
+  "end": 53,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkOpenGluing.lean",
+  "source": "theorem inclusion_openEmbedding (i : Bool) : IsOpenEmbedding (inclusion i) := by\n  apply IsOpenEmbedding.of_continuous_injective_isOpenMap\n  · apply continuous_def.mpr\n    intro u hu\n    change inclusion i closedPoint ∈ u → Point.c ∈ u\n    cases i\n    · exact hu.1\n    · exact hu.2\n  · intro x y h\n    cases i <;> cases x <;> cases y <;> simp_all [inclusion]\n  · intro u hu\n    have h : closedPoint ∈ u → openPoint ∈ u := hu\n    change (Point.a ∈ inclusion i '' u → Point.c ∈ inclusion i '' u) ∧\n      (Point.b ∈ inclusion i '' u → Point.c ∈ inclusion i '' u)\n    constructor <;> rintro ⟨x, hx, e⟩ <;> refine ⟨openPoint, ?_, rfl⟩ <;>\n      cases x <;> first | exact h hx | exact hx",
+  "locator": "Open embeddings and ranges"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.existsUnique_gluing": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.existsUnique_gluing",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkOpenGluing",
+  "line": 66,
+  "end": 88,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkOpenGluing.lean",
+  "source": "theorem existsUnique_gluing {Y : Type*} [TopologicalSpace Y]\n    (f g : C(SierpinskiPoint, Y)) (agree : f openPoint = g openPoint) :\n    ∃! h : C(Point, Y), (∀ x, h (inclusion false x) = f x) ∧\n      (∀ x, h (inclusion true x) = g x) := by\n  let h : Point → Y\n    | .a => f closedPoint\n    | .b => g closedPoint\n    | .c => f openPoint\n  have hh : Continuous h := by\n    apply continuous_def.mpr\n    intro u hu\n    have hf : f closedPoint ∈ u → f openPoint ∈ u := hu.preimage f.continuous\n    have hg : g closedPoint ∈ u → g openPoint ∈ u := hu.preimage g.continuous\n    change (f closedPoint ∈ u → f openPoint ∈ u) ∧ (g closedPoint ∈ u → f openPoint ∈ u)\n    exact ⟨hf, fun hgu => agree.symm ▸ hg hgu⟩\n  refine ⟨⟨h, hh⟩, ⟨(fun x => by cases x <;> rfl), (fun x => by cases x; rfl; exact agree)⟩, ?_⟩\n  intro k hk\n  apply ContinuousMap.ext\n  intro x\n  cases x\n  · exact hk.1 closedPoint\n  · exact hk.2 closedPoint\n  · exact hk.1 openPoint",
+  "locator": "Unique gluing"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleEvaluation",
+  "line": 38,
+  "end": 41,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluation.lean",
+  "source": "theorem evaluation_span (j : WalkingSpan) {X Y : ForkSpans} (s : PartialMaps.Raw X Y) :\n    (evaluation j).map (PartialMaps.ofSpan s) = PartialMaps.ofSpan\n      (⟨s.apex.obj j, s.l.app j, s.r.app j, by infer_instance, by trivial⟩ :\n        PartialMaps.Raw ((evaluation j).obj X) ((evaluation j).obj Y)) := rfl",
+  "locator": "Component spans"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_pair": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_pair",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleEvaluationComparisons",
+  "line": 95,
+  "end": 102,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationComparisons.lean",
+  "source": "theorem evaluation_pair (j : WalkingSpan) {W X Y : ForkSpans} (f : W ⟶ X) (g : W ⟶ Y) :\n    (evaluation j).map (forkProducts.pair f g) ≫ (productComparison j X Y).hom =\n      tupleProducts.pair ((evaluation j).map f) ((evaluation j).map g) := by\n  apply tupleProducts.hom_ext\n  · rw [Category.assoc, comparison_fst, ← (evaluation j).map_comp, forkProducts.pair_fst,\n      (evaluation j).map_comp, evaluation_restriction j g, tupleProducts.pair_fst]\n  · rw [Category.assoc, comparison_snd, ← (evaluation j).map_comp, forkProducts.pair_snd,\n      (evaluation j).map_comp, evaluation_restriction j f, tupleProducts.pair_snd]",
+  "locator": "Product comparisons"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleEvaluationCoproducts",
+  "line": 144,
+  "end": 148,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleEvaluationCoproducts.lean",
+  "source": "def evaluatedSumColimit (j : WalkingSpan) (X Y : ForkSpans) :\n    IsColimit (BinaryCofan.mk ((evaluation j).map (PartialMaps.ofTotal coprod.inl : X ⟶ forkSum X Y))\n      ((evaluation j).map (PartialMaps.ofTotal coprod.inr : Y ⟶ forkSum X Y))) :=\n  (tupleSumColimit _ _).ofIsoColimit (BinaryCofan.ext (sumComparison j X Y)\n    (comparison_inl j X Y) (comparison_inr j X Y))",
+  "locator": "Coproducts and the empty join"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleTuring",
+  "line": 43,
+  "end": 46,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean",
+  "source": "theorem tau_isTuring : @RecursionCategory.IsTuringMorphism ForkSpans _ forkProducts.pcategoryStruct\n    forkProducts.pcategoryLaws universal universal universal tau :=\n  FullRestrictionProducts.evaluator_isTuring _ forkCode_restriction _ _ _ _ _\n    (TuringRestrictionEquivalence.conjugate_turing _ labelIso _ codedFork_turing)",
+  "locator": "Every parameter diagram"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleTuringPoints",
+  "line": 97,
+  "end": 100,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringPoints.lean",
+  "source": "theorem left_graph (k p l x a b : ℕ) :\n    Graph (evaluatedTau .left) (pairPoint (point₂ k p) (point₂ l x)) (point₂ a b) ↔\n      (a,b) ∈ Part.map Nat.unpair (eval p (Nat.pair l x)) :=\n  left_tau ▸ endpoint_graph k p l x a b",
+  "locator": "Actual endpoint and centre graphs"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.endpointParameter_graph": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.endpointParameter_graph",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleTuring",
+  "line": 120,
+  "end": 134,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuring.lean",
+  "source": "theorem endpointParameter_graph {Z : TupleSpans} (f : tupleProduct Z endpoint ⟶ endpoint)\n    (z : NumericalTuples.Point Z.obj) (q : NumericalTuples.Point endpoint.obj) :\n    Graph (endpointParameter f) z q ↔ q.val = (0, endpointIndex f (NumericalTuples.code _ z.val)) := by\n  unfold Graph endpointParameter\n  rw [tupleCode.map_preimage, EnumerableCarriers.mem_val_comp]\n  change (∃ n, n ∈ val (EffectiveFork.endpointEncoding _ _) _ ∧ _ ∈ val endpointIso.inv n) ↔ _\n  simp only [labelCode_inv, exists_eq_right']\n  rw [EffectiveFork.mem_endpointEncoding]\n  have hs := z.property\n  have hc := (NumericalTuples.code_mem_codedSupport Z.obj z.val).mpr hs\n  change _ ∈ NumericalTuples.codedSupport Z.obj ∧ _ = _ ↔ _\n  rw [and_iff_right hc]\n  change NumericalTuples.code 2 q.val =\n    NumericalTuples.code 2 (0, endpointIndex f (NumericalTuples.code _ z.val)) ↔ _\n  exact (NumericalTuples.code_injective 2).eq_iff",
+  "locator": "Graph of the parameter"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.Checks.fork_parameter": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.Checks.fork_parameter",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleTuringChecks",
+  "line": 98,
+  "end": 130,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleTuringChecks.lean",
+  "source": "theorem fork_parameter {Y : PartialMaps.Par (WalkingSpan ⥤ NumericalTuples.Object)}\n    (f : forkProduct Y universal ⟶ universal) :\n    ∃ c : Y ⟶ universal, isTotal c ∧ forkProducts.map c (𝟙 universal) ≫ tau = f ∧\n      (∀ (z : Point (Y.obj.obj .left)) (q : Point (tupleSpace 2)),\n        Graph ((evaluation .left).map c) z q ↔ q.val = (0, componentIndex f .left (code _ z.val))) ∧\n      (∀ (z : Point (Y.obj.obj .right)) (q : Point (tupleSpace 2)),\n        Graph ((evaluation .right).map c) z q ↔ q.val = (0, componentIndex f .right (code _ z.val))) ∧\n      (∀ (z : Point (Y.obj.obj .zero)) (q : Point (tupleSpace 4)),\n        Graph ((evaluation .zero).map c) z q ↔\n          q.val = (0, componentIndex f .zero (code _ z.val),\n            componentIndex f .left (code _ ((Y.obj.map WalkingSpan.Hom.fst).toFun z).val),\n            componentIndex f .right (code _ ((Y.obj.map WalkingSpan.Hom.snd).toFun z).val))) ∧\n      (∀ (j : WalkingSpan), Computable (fun z : Tuple (Y.obj.obj j).dimension =>\n        componentIndex f j (code _ z))) ∧\n      (∀ (j : WalkingSpan) (z : Point (Y.obj.obj j)) (x w : Point (universal.obj.obj j)),\n        code _ w.val ∈ eval (componentIndex f j (code _ z.val)) (code _ x.val) ↔\n          Graph ((productComparison j Y universal).inv ≫ (evaluation j).map f) (pairPoint z x) w) :=\n  ⟨forkParameter f, forkParameter_total f, fork_parameterizes f, forkParameter_left f,\n    forkParameter_right f, forkParameter_center f, componentIndex_computable f,\n    fun j => component_fibre j f⟩\n\nexample (m n : ℕ) (G : Tuple m × Tuple n → Part ℕ) (h : Partrec G) :\n    ∃ s : Tuple m → ℕ, Computable s ∧ ∀ y x, eval (s y) (code n x) = G (y,x) :=\n  specialize_tuples m n G h\n\nexample (m : ℕ) : ∃ e : Tuple (m+1) ≃ ℕ, Computable e ∧ Computable e.symm ∧\n    ∀ t, e t = code (m+1) t :=\n  ⟨positiveTupleCoding m, (positiveTuple_computable m).1, (positiveTuple_computable m).2, fun _ => rfl⟩\n\nexample {Y : ForkSpans} (f : forkProduct Y universal ⟶ universal) (j : WalkingSpan)\n    (z : Tuple (Y.obj.obj j).dimension) (hz : z ∉ (Y.obj.obj j).support) (x : ℕ) :\n    eval (componentIndex f j (code _ z)) x = Part.none :=\n  componentIndex_outside j f z hz x",
+  "locator": "All three parameter components and the partial-morphism equation"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.labelCoding": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.labelCoding",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleFormulaAlgebraCoordinates",
+  "line": 47,
+  "end": 70,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebraCoordinates.lean",
+  "source": "def labelCoding : tupleDiagram ≅ realization.obj variableObject :=\n  spanIsoMk centerCoding endpointCoding endpointCoding (by\n    apply NumericalTuples.Map.ext\n    funext x\n    apply Subtype.ext\n    obtain ⟨⟨k, z, a, b⟩, hx⟩ := x\n    let q := EffectiveFork.quadCode (k, z, a, b)\n    let x : {n // n ∈ EffectiveFork.natCarrier.support} := ⟨q, Set.mem_univ _⟩\n    let f : (⟨EffectiveFork.natCarrier⟩ : EnumerableCarriers.Total) ⟶\n        ⟨EffectiveFork.natCarrier⟩ := ⟨EffectiveFork.V.leftMap, EffectiveFork.V.left_total⟩\n    change Nat.pair k a = (EnumerableCarriers.totalFunction f x).val\n    exact (EffectiveFork.left_quad k z a b).symm.trans\n      ((EffectiveFork.mem_V_left _ _).mp (EnumerableCarriers.totalFunction_mem f x)).symm) (by\n    apply NumericalTuples.Map.ext\n    funext x\n    apply Subtype.ext\n    obtain ⟨⟨k, z, a, b⟩, hx⟩ := x\n    let q := EffectiveFork.quadCode (k, z, a, b)\n    let x : {n // n ∈ EffectiveFork.natCarrier.support} := ⟨q, Set.mem_univ _⟩\n    let f : (⟨EffectiveFork.natCarrier⟩ : EnumerableCarriers.Total) ⟶\n        ⟨EffectiveFork.natCarrier⟩ := ⟨EffectiveFork.V.rightMap, EffectiveFork.V.right_total⟩\n    change Nat.pair k b = (EnumerableCarriers.totalFunction f x).val\n    exact (EffectiveFork.right_quad k z a b).symm.trans\n      ((EffectiveFork.mem_V_right _ _).mp (EnumerableCarriers.totalFunction_mem f x)).symm)",
+  "locator": "Coordinates"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.formulaAlgebra_isInitial": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.formulaAlgebra_isInitial",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleFormulaAlgebra",
+  "line": 198,
+  "end": 204,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean",
+  "source": "def formulaAlgebra_isInitial : IsInitial formulaAlgebra := by\n  have e : AlgebraTransport.mappedAlgebra equivalence polynomialComparison ForkSyntax.syntaxAlgebra =\n      formulaAlgebra := by\n    change Endofunctor.Algebra.mk sentences _ = Endofunctor.Algebra.mk sentences _\n    exact congrArg (Endofunctor.Algebra.mk sentences) mapped_structure\n  exact e ▸ AlgebraTransport.initial equivalence polynomialComparison\n    ForkSyntax.syntaxAlgebra ForkSyntax.syntaxAlgebra_isInitial",
+  "locator": "Initiality and constructor equations"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.eq_evaluate": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkTupleFormulaAlgebra.eq_evaluate",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkTupleFormulaAlgebra",
+  "line": 247,
+  "end": 249,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkTupleFormulaAlgebra.lean",
+  "source": "theorem eq_evaluate {Z : Object} (a : polynomial.obj Z ⟶ Z) (u : sentences ⟶ Z)\n    (h : constructor ≫ u = polynomial.map u ≫ a) : u = evaluate Z a :=\n  (unique_fold Z a).unique h (evaluate_constructor Z a)",
+  "locator": "Evaluator"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkDerivation.tuple_signed_atoms_mono": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkDerivation.tuple_signed_atoms_mono",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkSignedAtomInclusion",
+  "line": 126,
+  "end": 139,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkSignedAtomInclusion.lean",
+  "source": "theorem tuple_signed_atoms_mono (a b : Idem EffectiveFork.V) :\n    Mono (coprod.desc\n      (NumericalForkPartialMaps.totalEquivalence.inverse.map (axiomInclusion a ≫ atom))\n      (NumericalForkPartialMaps.totalEquivalence.inverse.map (axiomInclusion b ≫ atom ≫ negation))) := by\n  let F := NumericalForkPartialMaps.totalEquivalence.inverse\n  let f := axiomInclusion a ≫ atom\n  let g := axiomInclusion b ≫ atom ≫ negation\n  have : Mono (coprod.desc f g) := signed_atoms_mono a b\n  change Mono (coprod.desc (F.map f) (F.map g))\n  have eqn : coprod.desc (F.map f) (F.map g) =\n      coprodComparison F (axiomDomain a) (axiomDomain b) ≫ F.map (coprod.desc f g) := by\n    apply coprod.hom_ext <;> simp [coprodComparison, ← F.map_comp]\n  rw [eqn]\n  infer_instance",
+  "locator": "Copair mono"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.endpoint_undecided_atom": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.endpoint_undecided_atom",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkUndecidedAtoms",
+  "line": 22,
+  "end": 50,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkUndecidedAtoms.lean",
+  "source": "theorem endpoint_undecided_atom (i : Bool) (t : Idem natCarrier)\n    (ht : endpointTheory i categoricalTheory ≤ t)\n    (hc : t ⊓ Idem.pull (natArrow negCode negCode_computable) t = ⊥) :\n    ∃ k : ℕ, atomCode k ∉ support t ∧ negCode (atomCode k) ∉ support t := by\n  classical\n  let θ := natArrow atomCode atomCode_computable\n  let ν := natArrow negCode negCode_computable\n  let p := Idem.pull θ t\n  let n := Idem.pull θ (Idem.pull ν t)\n  obtain ⟨ha, hb⟩ := observed_bounds i categoricalTheory le_rfl\n  have h : Inseparable p n := EffectiveFork.endpoint_pair_inseparable.enlarge\n    (ha.trans (Idem.pull_mono θ ht)) (hb.trans (Idem.pull_mono θ (Idem.pull_mono ν ht)))\n    (by change Idem.pull θ _ ⊓ Idem.pull θ _ = _; rw [← Idem.pull_inf, hc, Idem.pull_bot])\n  have pos (k : ℕ) : k ∈ support p ↔ atomCode k ∈ support t := by\n    change k ∈ support (Idem.pull θ t) ↔ _\n    rw [EnumerableCarriers.support_pull]\n    simp only [θ, Set.mem_ofPred_eq, mem_natArrow, exists_eq_left]\n  have neg (k : ℕ) : k ∈ support n ↔ negCode (atomCode k) ∈ support t := by\n    simp only [n, θ, ν, EnumerableCarriers.support_pull, Set.mem_ofPred_eq, mem_natArrow, exists_eq_left]\n  by_contra! all\n  have cover : p ⊔ n = ⊤ := by\n    apply EnumerableCarriers.support_injective\n    rw [EnumerableCarriers.support_sup, EnumerableCarriers.support_top]\n    apply Set.eq_univ_of_forall\n    intro k\n    by_cases hk : atomCode k ∈ support t\n    · exact Or.inl ((pos k).mpr hk)\n    · exact Or.inr ((neg k).mpr (all k hk))\n  exact h.no_separator ⟨p, n, ⟨h.disjoint, cover⟩, le_rfl, le_rfl⟩",
+  "locator": "Endpoint, family and independent axioms"
+ },
+ "CategoricalEssentialIncompleteness.V46.BooleanPowers.vertex": {
+  "name": "CategoricalEssentialIncompleteness.V46.BooleanPowers.vertex",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46FiniteBooleanPowers",
+  "line": 41,
+  "end": 44,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteBooleanPowers.lean",
+  "source": "def vertex : (n : ℕ) → (Fin n → Bool) → (⊤_ D ⟶ finitePower (Two D) n)\n  | 0, _ => 𝟙 _\n  | 1, a => Two.point (a 0)\n  | n + 2, a => vertex (n+1) (Fin.init a) ≫ append _ (a (Fin.last (n+1)))",
+  "locator": "Vertices and colimit"
+ },
+ "CategoricalEssentialIncompleteness.V46.FiniteSorts.constant_preservesFiniteCoproducts": {
+  "name": "CategoricalEssentialIncompleteness.V46.FiniteSorts.constant_preservesFiniteCoproducts",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46FiniteSortPolynomials",
+  "line": 119,
+  "end": 133,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46FiniteSortPolynomials.lean",
+  "source": "theorem constant_preservesFiniteCoproducts (P : E) :\n    PreservesFiniteCoproducts (constantFamilyFunctor P) where\n  preserves J := by\n    constructor\n    intro K\n    constructor\n    intro c hc\n    let B := constantFamilyFunctor P ⋙ Over.forget P\n    let π : K ⋙ B ⟶ K := { app := fun j => prod.snd\n                           naturality := fun _ _ f => prod.map_snd _ _ }\n    apply Nonempty.intro\n    apply isColimitOfReflects (Over.forget P)\n    exact (FinitaryPreExtensive.isUniversal_finiteCoproducts hc (B.mapCocone c) π prod.snd\n      (by ext j; exact (prod.map_snd _ _).symm) (fun {i j} f => product_square P (K.map f))\n      (fun j => product_square P (c.ι.app j))).some",
+  "locator": "Preservation and natural isomorphism"
+ },
+ "CategoricalEssentialIncompleteness.V46.PartialMaps.fromTotal": {
+  "name": "CategoricalEssentialIncompleteness.V46.PartialMaps.fromTotal",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46StrictPresentationFunctors",
+  "line": 31,
+  "end": 41,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+  "source": "def fromTotal : Tot D ⥤ D where\n  obj X := X.obj.obj\n  map f := totalValue f.hom f.property\n  map_id X := by\n    apply @ofTotal_injective D _ _ X.obj X.obj\n    rw [ofTotal_totalValue, ofTotal_id]\n    rfl\n  map_comp {X _ Z} f g := by\n    apply @ofTotal_injective D _ _ X.obj Z.obj\n    rw [ofTotal_totalValue, ofTotal_comp, ofTotal_totalValue, ofTotal_totalValue]\n    rfl",
+  "locator": "Inverse functors"
+ },
+ "CategoricalEssentialIncompleteness.V46.PropositionalRules.rules": {
+  "name": "CategoricalEssentialIncompleteness.V46.PropositionalRules.rules",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46PropositionalRuleClosure",
+  "line": 30,
+  "end": 35,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleClosure.lean",
+  "source": "def rules : RulePresentation S 2 where\n  instances := ![_, ⊥_ D, S ⨯ S]\n  premises := Fin.cases (terminal.from _)\n    (Fin.cases (initial.to S) (Fin.cases (prod.lift prod.fst imp) (fun j => Fin.elim0 j)))\n  conclusion := Fin.cases (axioms neg imp a)\n    (Fin.cases (initial.to S) (Fin.cases prod.snd (fun j => Fin.elim0 j)))",
+  "locator": "Three-branch rules and closure"
+ },
+ "CategoricalEssentialIncompleteness.V46.PropositionalRules.least_theorems": {
+  "name": "CategoricalEssentialIncompleteness.V46.PropositionalRules.least_theorems",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46PropositionalRuleClosure",
+  "line": 68,
+  "end": 73,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46PropositionalRuleClosure.lean",
+  "source": "theorem least_theorems (P : Endofunctor.Algebra (rules neg imp a).inference)\n    (hP : IsInitial P) :\n    ClosedUnder (rules neg imp a).inference (image.ι P.a.hom) ∧\n      ∀ {Q : D} (m : Q ⟶ S) [Mono m], ClosedUnder (rules neg imp a).inference m →\n        ∃ w : image P.a.hom ⟶ Q, w ≫ m = image.ι P.a.hom :=\n  (rules neg imp a).least_theorem_subobject P hP",
+  "locator": "Least theorem subobject"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.leftMap_injective_of_decidableVariables": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.leftMap_injective_of_decidableVariables",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkDiagonalObstruction",
+  "line": 80,
+  "end": 106,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstruction.lean",
+  "source": "theorem leftMap_injective_of_decidableVariables {X : EffectiveFork.Total} (E : DecidableVariables X)\n    {x y u : ℕ} (hx : u ∈ EnumerableCarriers.val X.obj.leftMap x)\n    (hy : u ∈ EnumerableCarriers.val X.obj.leftMap y) : x = y := by\n  have sx := EnumerableCarriers.val_source _ _ _ hx\n  have sy := EnumerableCarriers.val_source _ _ _ hy\n  obtain ⟨v, hv⟩ := Part.dom_iff_mem.mp\n    ((EnumerableCarriers.total_iff _).mp X.obj.right_total x sx)\n  obtain ⟨w, hw⟩ := Part.dom_iff_mem.mp\n    ((EnumerableCarriers.total_iff _).mp X.obj.right_total y sy)\n  let p : centerProbe ⟶ X := ⟨point0 x u v sx hx hv, point0_total x u v sx hx hv⟩\n  let q : centerProbe ⟶ X := ⟨point0 y u w sy hy hw, point0_total y u w sy hy hw⟩\n  have hleft : leftInclusion ≫ p = leftInclusion ≫ q := by\n    apply WideSubcategory.hom_ext\n    apply EffectiveFork.Hom.ext\n    · exact (empty_arrow_zero _).trans (empty_arrow_zero _).symm\n    · rfl\n    · exact (empty_arrow_zero _).trans (empty_arrow_zero _).symm\n  have h : p = q := by\n    apply (E.test_true_iff _ _).mp\n    apply precompose_left_boolean\n    rw [← Category.assoc, prod.comp_lift, Two.comp_constant]\n    exact (E.test_true_iff _ _).mpr hleft\n  have hc := congrArg (fun f : centerProbe ⟶ X => EnumerableCarriers.val f.hom.center 0) h\n  change EnumerableCarriers.val (constant x sx : singletonCarrier ⟶ X.obj.center) 0 =\n    EnumerableCarriers.val (constant y sy : singletonCarrier ⟶ X.obj.center) 0 at hc\n  rw [val_constant_at _ _ 0 (by rfl), val_constant_at _ _ 0 (by rfl)] at hc\n  exact Part.some_injective hc",
+  "locator": "Probes"
+ },
+ "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.no_diagonal_pullback": {
+  "name": "CategoricalEssentialIncompleteness.V46.ForkDiagonalObstruction.no_diagonal_pullback",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ForkDiagonalObstructionTuples",
+  "line": 59,
+  "end": 62,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ForkDiagonalObstructionTuples.lean",
+  "source": "theorem no_diagonal_pullback (d : tupleDiagram ⨯ tupleDiagram ⟶ Two NumericalForkPartialMaps.Diagram) :\n    ¬ IsPullback (prod.lift (𝟙 tupleDiagram) (𝟙 tupleDiagram)) (terminal.from tupleDiagram)\n      d (coprod.inr : ⊤_ NumericalForkPartialMaps.Diagram ⟶ Two NumericalForkPartialMaps.Diagram) :=\n  fun h => no_decidableVariables_tuples ⟨⟨d, h⟩⟩",
+  "locator": "Every diagonal square"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.machine_section": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.machine_section",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46OracleMachineDomains",
+  "line": 40,
+  "end": 44,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46OracleMachineDomains.lean",
+  "source": "theorem machine_section (A : Set ℕ) (e z x : ℕ) :\n    machineDomain A (sectionIndex e z) x ↔ machineDomain A e (Nat.pair z x) := by\n  change (OracleProgram.numberedEval (OracleProgram.specializationIndex e z) (bits A) x).Dom ↔ _\n  rw [OracleProgram.specializationIndex_eval]\n  rfl",
+  "locator": "All-oracle section and translations"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.mem_machineTau": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.mem_machineTau",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46MachineOracleTuring",
+  "line": 53,
+  "end": 55,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+  "source": "theorem mem_machineTau (q x y : ℕ) : y ∈ (machineTau S).val (q,x) ↔\n    machineDomain S q.unpair.2 x ∧ y ∈ ordinaryEval q.unpair.1 x := by\n  simp only [machineTau, Part.mem_assert_iff, exists_prop]",
+  "locator": "Exact evaluator and parameter"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_no_lift": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_no_lift",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46MachineOracleTuring",
+  "line": 154,
+  "end": 163,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+  "source": "theorem machine_no_lift (s : PartialFun.of ℕ ⟶ coprod (PartialFun.of ℕ) (PartialFun.of ℕ))\n    (h₀ : Idem.pull s (summand0 (PartialFun.of ℕ) (PartialFun.of ℕ)) = (rangeFunctor K).mapIdem separatorComplement)\n    (h₁ : Idem.pull s (summand1 (PartialFun.of ℕ) (PartialFun.of ℕ)) = (rangeFunctor K).mapIdem separator) :\n    ¬ ∃ ℓ : N K ⟶ coprod (N K) (N K),\n      (inclusion K).map ℓ = s ≫ ((rangeFunctor K).comparison (N K) (N K)).hom :=\n  no_lift_of_compatible_restriction (inducedRestriction_eq K) (rangeFunctor K)\n    (machineTau K) (machineTau_isTuring K) (parityIso K) (inclusion_nonzero K) _ _\n    ((rangeFunctor K).map_complementary separator_complementary)\n    ((rangeFunctor K).map_mono machine_separator_bounds.1)\n    ((rangeFunctor K).map_mono machine_separator_bounds.2) s h₀ h₁",
+  "locator": "Arbitrary conditional"
+ },
+ "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.connected_le_numeral": {
+  "name": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.connected_le_numeral",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SyntacticNonLocalConnectedness",
+  "line": 84,
+  "end": 111,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+  "source": "theorem connected_le_numeral [T.RE] (a : Idem (omegaObject T)) (hc : Connected a) (hne : a ≠ ⊥) :\n    ∃ n, a ≤ predicateIdem T (numeralPredicate n) := by\n  obtain ⟨C, rfl⟩ := omegaIdem_is_predicate T a\n  simp_rw [predicate_le]\n  by_contra hn\n  have hre (j : ℕ) : REPred (· ∈ decisions T C j) :=\n    SyntacticModel.numeral_provability_enumerable T (decisionFormula C j)\n  have hrec : ComputablePred (· ∈ decisions T C 1) :=\n    ComputablePred.computable_iff_re_compl_re'.mpr\n      ⟨hre 1, (hre 0).of_eq (decisions_complement T C hc hne)⟩\n  apply ArithmeticSentenceInseparability.diagonal_no_recursive_separator\n  refine ⟨decisions T C 1, hrec, ?_, Set.disjoint_left.mpr ?_⟩\n  · intro n ha\n    obtain ⟨t, ht⟩ := (alpha_iff_stage (M := ℕ) n).mp ha\n    apply (decision_iff T C 1 n).mpr\n    intro M _ _ x hx\n    let : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 := models_of_subtheory (U := T) inferInstance\n    exact (stageAt_eval 1 n x).mpr (stageParity_mono _ _ _\n      (bounds_of_no_numeral T C hc hn t M x hx) (standard_stage n t ht))\n  · intro n hp hb\n    have hneg := ArithmeticDiagonalCodes.beta_numeral_refutes_alpha n hb\n    have h1 := (decision_iff T C 1 n).mp hp\n    apply hne (predicate_bot T C ?_)\n    intro M _ _ x hx\n    let : M↓[ℒₒᵣ] ⊧* 𝗣𝗔 := models_of_subtheory (U := T) inferInstance\n    have hh := consequence_iff.mp (Theory.Proof.sound hneg) M inferInstance\n    rw [Semantics.Not.models_not, ClassicalPrograms.numeralInstance_eval] at hh\n    exact hh ((alpha_iff_stage _).mpr ⟨x, (stageAt_eval 1 n x).mp (h1 M x hx)⟩)",
+  "locator": "Connected domains"
+ },
+ "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.indistinguishable_on_connected": {
+  "name": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.indistinguishable_on_connected",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SyntacticNonLocalConnectedness",
+  "line": 143,
+  "end": 159,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+  "source": "theorem indistinguishable_on_connected [Consistent T] (hT : REPred (AxiomCodes T)) :\n    ∃ f g : omegaObject T ⟶ omegaObject T, f ≠ g ∧\n      ∀ a : Idem (omegaObject T), Connected a → a.hom ≫ f = a.hom ≫ g := by\n  let : T.RE := ⟨(hT.comp Computable.encode).of_eq (fun σ => by\n    simp only [AxiomCodes, Sentence.quote_eq_encode_nat, Encodable.encode_inj]\n    simp)⟩\n  obtain ⟨e, f, g, hef, hcomp⟩ := index_noncongruence_via_godel_of_re_axioms T hT\n  refine ⟨omegaArrow T (classOf T e), omegaArrow T (classOf T f), ?_, ?_⟩\n  · intro he\n    have h := congrArg (fun k : omegaObject T ⟶ omegaObject T => k.val * classOf T g) he\n    exact hcomp (pointwise_of_class_eq T h)\n  · intro a ha\n    by_cases hz : a = ⊥\n    · subst a\n      simp\n    · obtain ⟨n, hn⟩ := connected_le_numeral T a ha hz\n      exact comp_eq_of_supported _ _ (Idem.le_def.mp hn) _ _ (numeral_restriction_eq T hef n)",
+  "locator": "Two morphisms"
+ },
+ "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.unprimed_not_locallyConnected": {
+  "name": "CategoricalEssentialIncompleteness.V46.ConnectedNumeralDomains.unprimed_not_locallyConnected",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46SyntacticNonLocalConnectedness",
+  "line": 236,
+  "end": 238,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+  "source": "theorem unprimed_not_locallyConnected [Consistent T] [T.RE] :\n    ¬LocallyConnected (NormalizedCategory T) :=\n  normalized_not_locallyConnected T (axiomCodes_enumerable T)",
+  "locator": "Unprimed conclusion"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_identity_ne_zero": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_identity_ne_zero",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ManuscriptPassageApplicationsChecks",
+  "line": 55,
+  "end": 63,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+  "source": "theorem family_identity_ne_zero (hT : Consistent T) (X : CodedProgramCategory T) :\n    (familyFunctor T).map (𝟙 X) ≠ 0 := by\n  obtain ⟨s⟩ := modelIndex_nonempty T hT\n  rw [(familyFunctor T).map_id]\n  intro he\n  let x := objectPoint (objectCode X)\n  have h := congrFun (congrFun he s) x\n  change Part.some x = Part.none at h\n  exact Part.notMem_none x (h ▸ Part.mem_some x)",
+  "locator": "Family identity"
+ },
+ "CategoricalEssentialIncompleteness.V46.PrintedObjectCoding.normalization": {
+  "name": "CategoricalEssentialIncompleteness.V46.PrintedObjectCoding.normalization",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46StrictPresentationFunctors",
+  "line": 75,
+  "end": 93,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+  "source": "def normalization : IsoCat (CodedProgramCategory T) (NormalizedCategory T) where\n  functor := comparison T\n  inverse := guarded T\n  unit_eq := by\n    refine CategoryTheory.Functor.ext (fun _ => rfl) ?_\n    intro X Y f\n    simp only [eqToHom_refl, Category.id_comp, Category.comp_id]\n    change f = (isoToOmega T (objectCode X)).hom ≫\n      ((isoToOmega T (objectCode X)).inv ≫ f ≫ (isoToOmega T (objectCode Y)).hom) ≫\n      (isoToOmega T (objectCode Y)).inv\n    simp only [Category.assoc, Iso.hom_inv_id_assoc, Iso.hom_inv_id, Category.comp_id]\n  counit_eq := by\n    refine CategoryTheory.Functor.ext (fun _ => rfl) ?_\n    intro X Y f\n    simp only [eqToHom_refl, Category.id_comp, Category.comp_id]\n    apply InducedCategory.hom_ext\n    change (isoToOmega T X).inv ≫ ((isoToOmega T X).hom ≫ f.hom ≫ (isoToOmega T Y).inv) ≫\n      (isoToOmega T Y).hom = f.hom\n    simp only [Category.assoc, Iso.inv_hom_id_assoc, Iso.inv_hom_id, Category.comp_id]",
+  "locator": "Normalization"
+ },
+ "CategoricalEssentialIncompleteness.V46.TrueArithmetic.interpretation": {
+  "name": "CategoricalEssentialIncompleteness.V46.TrueArithmetic.interpretation",
+  "kind": "def",
+  "module": "CategoricalEssentialIncompleteness.V46StrictPresentationFunctors",
+  "line": 104,
+  "end": 105,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46StrictPresentationFunctors.lean",
+  "source": "def interpretation : PrintedObjectCoding.NormalizedCategory 𝗧𝗔 ⥤ ClassicalPrograms.Rec :=\n  PrintedObjectCoding.guarded 𝗧𝗔 ⋙ StandardTrueTheory.comparison",
+  "locator": "Standard interpretation"
+ },
+ "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.observation_extension": {
+  "name": "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.observation_extension",
+  "kind": "theorem",
+  "module": "CategoricalEssentialIncompleteness.V46ManuscriptPassageApplicationsChecks",
+  "line": 67,
+  "end": 77,
+  "path": "Lean/CategoricalEssentialIncompleteness/V46ManuscriptPassageApplicationsChecks.lean",
+  "source": "theorem observation_extension (T' : ArithmeticTheory) [𝗣𝗔 ⪯ T'] [T ⪯ T']\n    (c : Idem (omegaObject T)) :\n    observation T c ⊆ observation T' ((SyntacticExtension.rangeFunctor T T').mapIdem c) := by\n  intro n hn\n  change kappa T n ≫ c.hom = kappa T n at hn\n  have h := congrArg (SyntacticExtension.functor T T').map hn\n  rw [Functor.map_comp] at h\n  have hk : (SyntacticExtension.functor T T').map (kappa T n) = kappa T' n :=\n    SyntacticExtension.map_index T T' .omega .omega (UniformRange.rangeConstantIndex n)\n  rw [hk] at h\n  exact h",
+  "locator": "Extension equation"
+ }
+}

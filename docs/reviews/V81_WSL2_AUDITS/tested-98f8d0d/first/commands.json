@@ -1,0 +1,375 @@
+{
+  "tested_commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "launch_directory": "Lean",
+  "statement_probes": [
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "Independent1.lean"
+      ],
+      "exit_code": 0,
+      "declaration": "FirstReading.separator_and_closed_extensions",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "source_sha256": "5153e9e471757aaae8129b0c01ed55d82a68b7608cd648ac660304b7bff2580d",
+      "output_sha256": "cf7087210c63ce00c128024439a69a92e2c28bfe624221d8a2f7a3a6cb042f74"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "Independent2.lean"
+      ],
+      "exit_code": 0,
+      "declaration": "FirstReading.indexed_miller_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "source_sha256": "91009c12333dbbdf342a1f132e9b5ed3d4c71e426bd2d1d0455c2ca17fb2b64c",
+      "output_sha256": "876d27cd04a65ad13efb77f7e8170cd8b530e22466d74f5f3c43323d64401f26"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "Independent3.lean"
+      ],
+      "exit_code": 0,
+      "declaration": "FirstReading.discrete_exception",
+      "axioms": [
+        "propext"
+      ],
+      "source_sha256": "444fbb958b782a00339aa033c3f0963481a63c08ec0510f1e01b3e0a35237186",
+      "output_sha256": "6b7ac12785828a5cd41d7e6ccd35507bea36d14f85b83a111dbb65e1a54dd342"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "Independent4.lean"
+      ],
+      "exit_code": 0,
+      "declaration": "FirstReading.consistent_presentation_without_independent_sentence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "source_sha256": "23f77aeb583006bd5580dacf5c55dfab46874d9843245cdcff5052c1d87880ae",
+      "output_sha256": "09c9c2fd55cf1ea5c2e006a504b0e0e015cc38f3253cc19d1510f858f996f3b9"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "Independent5.lean"
+      ],
+      "exit_code": 0,
+      "declaration": "FirstReading.one_sentence_morphism",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "source_sha256": "5eca2ae11605279fe39429e028abd06bf91a4927f2512570b4bd16b8b4f52bba",
+      "output_sha256": "36e63bfdb3f8d127048fcb0f50af70975936b9cd7339ec757e92ab2af27ae2a8"
+    }
+  ],
+  "numbered_types": [
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/01.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 60,
+      "source_sha256": "995dbbd5e746b8449beedc272f8cf8dc174a8f82a9bfd8d6cac6aeff01fee5e5",
+      "output_sha256": "9e3b1cd19bf82e8bfdfe6ddbe041d74270a8a00ed535c6fded4e37c2debf14d0"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/02.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 39,
+      "source_sha256": "871b5fc01b4532c95f5c799f74e832865aef8f6ce29435c71b8e262ceaeff250",
+      "output_sha256": "c889f7a2b01443a945fbd867a0e433d035a50138057b29c87adec80dcb49cb83"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/03.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 49,
+      "source_sha256": "50fb4fcc1a1bf608906a401d72fb19e4429e4113d8cc5c51c77941094aa4dd43",
+      "output_sha256": "336fc93674aad037d21683de59ef230c3f3fd54864517e5204b0b8e6e141cda2"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/04.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 32,
+      "source_sha256": "81f17a3f13a3c692ebeb4298fffbbe2f184304ccae5d208c751954d93acf7f3a",
+      "output_sha256": "7777a5cb57b6c53071b062bf5a73e0f566982db4d90c7efe09aecb2a434921db"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/05.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 60,
+      "source_sha256": "332f93b3122b660cc4b33f5ae3050aaa5065a8510e91b2e9dd7f33e197fb2b99",
+      "output_sha256": "0976ca8d305f158af73c3ee1442c22df4cc72f624ec338075f777d6a079a9fd8"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/06.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 53,
+      "source_sha256": "cccbffcf440dccd85a69f91fd066c440327daf87050fad8f8d43f220669ea21e",
+      "output_sha256": "b0f4339029a9c65811cf91d9c074beeacef011053299c62787b58554bd663deb"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/07.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 45,
+      "source_sha256": "baa0bb3bac661e5d45742db7074b02096bf3a05d23b7b4f3e594d6e040ca0505",
+      "output_sha256": "4572794ea66f83be0977e90ff3882095ee9a559eecc3e970cd5db085c5b9ebdf"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/08.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 43,
+      "source_sha256": "2616760e7ba2db16f8fa14eeba838b060b5bf6090c5aa3b4de62bba1fb502663",
+      "output_sha256": "c4d6bbcd2fd2282fe69bd24450aeebf401b577d57b0a893981047d952dcb25df"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/09.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 51,
+      "source_sha256": "b5398dd9113cdd7fbfe0fd1c07318742bf5cc6174b7e86234c5a798c5e55ea03",
+      "output_sha256": "58b1b7a69a3270657ea767f7859390ab68a46a9b8b80356f92b33701fddcbfad"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/10.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 51,
+      "source_sha256": "d27d053971cace82180def86536de6148fb632654cec22fd2367ef9dc6417f11",
+      "output_sha256": "eb4d5586462402d3e4930cdbf0767fb448ce4e35fd3240bff4fd2aa8ec1a04c6"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/11.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 46,
+      "source_sha256": "274492b02c7cb1b26dd6ebae2d556b2781118fdcb97cedaee119a2bf80ed9b69",
+      "output_sha256": "feae360b178db3e5d422deb9fc99183b6f95880a43ed80ccf17de12f81d521be"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/12.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 49,
+      "source_sha256": "57683a002dd83f1db87e68a22bd190af8be0ec5ec05939a29ff81083b4252c77",
+      "output_sha256": "8f548b0895565883f309518ec3adc56627efd5e8c401753643e7a64729be3bb7"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/13.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 56,
+      "source_sha256": "31ef9ea4862a0ec095d3909ac318c0b6279fa6546da25da3adfe0a41c296430f",
+      "output_sha256": "d04bdc74a3dce0cb64539aeefbe9f45e388fd69a81f3b5ea225b393d748d6c7e"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/14.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 56,
+      "source_sha256": "af1663101f5cc173467aff41b4cdff6241233b8e85a9db8ba0512af76c162ca9",
+      "output_sha256": "3b96d14052830f64696857dd053c821ab8b6ed16e1f20281587f76e199170739"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/15.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 60,
+      "source_sha256": "72a51a4a89269308ad348a19daccf93b911f537efeb1cef13e72cb15b607f55a",
+      "output_sha256": "187c21b32b681abc9a4718fa691733e7a1e15d796f749b51ce0f9afa34a6baac"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/16.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 60,
+      "source_sha256": "2bb10b359766aeb9426500caee7c7008c31b81398652693fc2f9258468d9b032",
+      "output_sha256": "d5f08f551a5c2b7a6d9a0c6a03f1ec6d28fa6f4c379d146780c284296d683b8c"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/17.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 37,
+      "source_sha256": "170c1cf52a25f3c5a7e16b056a3b65849899a023dd05b395ac2189f78cc03c22",
+      "output_sha256": "d84ead408eb79bddc99adadcc5fc87658b3904ff8096f87ae45d0eb8089ac1b4"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-j1",
+        "-DwarningAsError=true",
+        "numbered-probes/18.lean"
+      ],
+      "exit_code": 0,
+      "named_types": 5,
+      "source_sha256": "bba8ece6861258094c2d2dfbebf13b718e309de6e3cfe50e3e67072dfa44b241",
+      "output_sha256": "ad41c4246596e3d4e6fe732eacc8ed518be5c3ee2330d0076727d03afae93882"
+    }
+  ],
+  "distinct_numbered_declarations": 852,
+  "numbered_types_uncompressed_sha256": "20253c72a807fef630faf7b94757b43694b6d49d40821a83443acc31fd46744c"
+}

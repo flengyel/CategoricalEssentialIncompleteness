@@ -1,0 +1,46 @@
+{
+  "tested_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "blind_reconstruction": [
+    "blind.sha256",
+    "expected.lean",
+    "reading-order.jsonl",
+    "reconstruction.md",
+    "literature.md",
+    "inventory.py",
+    "paper-inputs.sha256"
+  ],
+  "sealed_source_comparison": [
+    "source-verdict.sha256",
+    "source-verdict.md",
+    "source-hashes.tsv",
+    "passage-index.jsonl",
+    "external-keys.json",
+    "numbered-sources.jsonl",
+    "numbered-kernel.lean",
+    "numbered-kernel.log",
+    "independent-applications.lean",
+    "independent-applications.log",
+    "appendix-e-links.json",
+    "publication-checks.md"
+  ],
+  "reconciliation_and_reproduction": [
+    "reconciliation.md",
+    "reconciliation.json",
+    "reconciliation.sha256",
+    "publication-files.json",
+    "replay-notes.md",
+    "compare.py",
+    "index-passages.py",
+    "proof-links.py",
+    "run-independent.py",
+    "independent-build.log",
+    "numbered-kernel.time"
+  ],
+  "post_run_receipt_comparison": [
+    "confirm-receipt.py",
+    "receipt-confirmation.md",
+    "receipt-confirmation.json",
+    "receipt-confirmation.sha256"
+  ],
+  "original_tex_inputs": "Use each of the 25 hashes in paper-inputs.sha256, resolved under manuscript/latex in the tested Git object."
+}

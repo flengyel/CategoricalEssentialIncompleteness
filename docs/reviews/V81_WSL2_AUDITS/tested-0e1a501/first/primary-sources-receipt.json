@@ -1,0 +1,86 @@
+{
+  "checked_utc": "2026-11-23T20:47:27.564556+00:00",
+  "tested_commit": "0e1a501b3207ea64a3eb23740405f04b9aaa424f",
+  "version": 81,
+  "archive_directory": "/home/flengyel/crs-probes/tag-six-primitive-recursion-structural-bridges-production/run-20260915T143845Z/mirror/References",
+  "references": [
+    {
+      "name": "LOC18Jul06.tex",
+      "sha256": "bc7819127e4c4ff4b798fa3e1163d76b7585c9eddb1b6b58b70842b5f8f45272",
+      "lines": {
+        "projections": "189\u2013207",
+        "weak_Turing": "369\u2013385",
+        "theorem_4_1": "871\u2013942"
+      }
+    },
+    {
+      "name": "LOC18Jul06.pdf",
+      "sha256": "b1e8c826aeb6afcb382e70bbfdc58a5efcb7d68060ceabc20ba265bc780e2960",
+      "printed_pages": [
+        11,
+        12
+      ],
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "record": "https://academicworks.cuny.edu/gc_cs_tr/277/"
+    },
+    {
+      "name": "PaolaMontanga-PropertiesSyntacticpRecursion-1991.pdf",
+      "sha256": "535737e5013aba7aa9decf766dcecfeafc1517c65be657091b82b309f6938b5a",
+      "printed_pages": [
+        656,
+        657,
+        658
+      ],
+      "pdf_pages": [
+        15,
+        16,
+        17
+      ],
+      "facsimile_visually_checked": [
+        657,
+        658
+      ],
+      "doi": "10.2307/2274707"
+    }
+  ],
+  "pinned_manuscript_and_lean_sha256": {
+    "manuscript/latex/appendices/c-section-lifting.tex": "af3dee797792c058ffc9d96680687680f25232c3f8d862dca97817613373611b",
+    "manuscript/latex/appendices/d-faithful-family.tex": "552d17536a53920274574abf0a321bc64ba2d798ce469a1686e4e9b3585c5460",
+    "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean": "9f749a5b8dbfb6fd2fc079507cd2cdd608db4d398bfe614e1bfe99a94f3c6db6",
+    "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean": "be2da1358bdf568d673b29bd36a488034f71aa827a761614119de782f43f728b"
+  },
+  "reader_lean": {
+    "executable": "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "arguments": [
+      "-j1",
+      "-M4096",
+      "PrimaryApplications.lean"
+    ],
+    "environment": {
+      "LEAN_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "module_search_path": "Sealed first-reader overlay and the project\u2019s pinned Lake environment.",
+    "exit_code": 0,
+    "source_sha256": "885b2c149568d8ea7e376d97fcdba34ce12242d69817147422b844e2f7194cf9",
+    "stdout_sha256": "f219532247ef383dc84b8c148868e7bf5dab9e8d213123d85f8b93489d69817a",
+    "applications": 3,
+    "explicit_type_queries": 3,
+    "axiom_queries": 3,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "reader_findings": {
+    "mathematical_errors": 0,
+    "ambiguities": 1,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "source_seal_sha256": "aebf977c0abe82ce1e7c7208c12ae8c99b86012cd68db82be4b6a4d62f3a6fb8"
+}

@@ -1,0 +1,23 @@
+{
+  "source": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "manuscript": 81,
+  "directory": "verify-20261123T215230Z-hBXKla",
+  "disposition": "The daemon restart interrupted the official wrapper. It left no final exit-status file. The verifier had recorded 2038 successful commands, with 35 remaining. The handoff requires a new complete invocation.",
+  "recorded_commands": 2038,
+  "last_completed_command": {
+    "argv": [
+      "lake",
+      "env",
+      "lean",
+      "--memory=4096",
+      "-DwarningAsError=true",
+      "CategoricalEssentialIncompleteness/V46UniformTraceHalvingChecks.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.35,
+    "log": "build-logs/strict-V46UniformTraceHalvingChecks.log"
+  },
+  "official_partial_json_sha256": "1c397d090f7ee18a94816bae6971ef6db64536480eca3d5d5ccda40b0fe8b51f",
+  "wrapper_log_sha256": "9bbda1da9e3299cf66d092537b9e38efd3ed3c0395654f481acc1ddc5fe06a72",
+  "observed_utc": "2026-11-24T00:38:48+00:00"
+}

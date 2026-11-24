@@ -1,0 +1,54 @@
+{
+  "signer": "Codex, independent second reader",
+  "date_utc": "2026-11-24T05:50:43.834195+00:00",
+  "tested_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+  "source_tree": "e7faadff3596ef05277a126a1645248c26ef5ff2",
+  "manuscript_version": 81,
+  "verified": true,
+  "official_wrapper_directory": "verify-20261124T010813Z-ECyNaU",
+  "receipt_sha256": "887be14b44f0c891544522e04311fe0dab92d2ce3a23e592fa225d75cadab2cf",
+  "official_json_sha256": "c7a75cba55ba62f52726a5834fe00fd1c00a080efe821002fdc0bb9636c694e9",
+  "official_complete": true,
+  "official_commands": 2073,
+  "strict_files": 2067,
+  "hashed_source_inputs": 2716,
+  "raw_command_logs": 2073,
+  "production_modules": 1152,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "retained_audited": 1274,
+  "current_audited": 34652,
+  "additional_audited": 66,
+  "dependency_pins": 16,
+  "distinct_numbered_declarations": 844,
+  "own_checked_numbered_declarations": 189,
+  "own_names_also_listed_by_official_or_supplementary_audit": 189,
+  "own_names_with_independent_axioms_only": [],
+  "independently_compared_numbered_items": 80,
+  "source_paper_files": 25,
+  "source_inventory_entries": 667,
+  "counts_after_official_confirmation": {
+    "broad": {
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions": 15,
+      "proof_gaps": 16,
+      "positive_groups": 11,
+      "individual_positive_conclusions": 15,
+      "paper_level_invalid_inferences": 1,
+      "bibliographic_locator_corrections": 1
+    },
+    "numbered_and_applied": {
+      "numbered_results": 77,
+      "numbered_definitions": 3,
+      "mathematical_errors": 0,
+      "ambiguities": 0,
+      "lean_omissions": 0,
+      "proof_gaps": 0
+    },
+    "clean_consecutive_reports_added": 0
+  }
+}

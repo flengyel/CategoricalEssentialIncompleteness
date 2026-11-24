@@ -1,0 +1,672 @@
+[
+  {
+    "numbered_item": "Theorem 3.1",
+    "passage": 46,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.comparison_zero_inverse_images",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.comparison_noncoverage"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 3.2",
+    "passage": 49,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.no_lifted_complementary_separator"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 3.3",
+    "passage": 52,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.source_inseparable_of_complementary_conditionals"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 3.4",
+    "passage": 55,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.complementary_conditional_of_disjoint_joins",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.disjoint_joins_switch"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 4.1",
+    "passage": 64,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.interpreted_theory_equations",
+      "CategoricalEssentialIncompleteness.V46.PartialMaps.totalEquivalence"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 4.2",
+    "passage": 68,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.logical_comparison",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.V46.splitRangeFunctor_inclusion"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 4.3",
+    "passage": 72,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.domain_incompleteness"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 4.4",
+    "passage": 80,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.FirstOrderReflection.extensive",
+      "CategoricalEssentialIncompleteness.V46.SyntacticGenerationAdjunction.axiomGeneration_original"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 4.5",
+    "passage": 86,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.Translation.inverse_closed",
+      "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.Axioms.adjunction"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 4.6",
+    "passage": 92,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.DeductionComparison.generation_square",
+      "CategoricalEssentialIncompleteness.V46.DeductionMates.theoryAdjunction"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 4.7",
+    "passage": 101,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.adjunction",
+      "CategoricalEssentialIncompleteness.V46.FirstOrderPresentation.ConsistentTheoryCategory.morphism_bound_iff"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 4.8",
+    "passage": 107,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable",
+      "CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.inseparable_iff",
+      "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.booleanTheory_extends"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 5.1",
+    "passage": 115,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SplitTuring.parameter_total",
+      "CategoricalEssentialIncompleteness.V46.ConstantSlice.Full.splittingEquivalence_inverse_restriction"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 5.2",
+    "passage": 122,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.postcompose_full",
+      "CategoricalEssentialIncompleteness.V46.PartialSlicePostcomposeProducts.actualProductIso",
+      "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.leftAdjunction",
+      "CategoricalEssentialIncompleteness.V46.PartialSliceChangeBase.rightAdjunction"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 5.3",
+    "passage": 131,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.AssociatedCategory.associated_incompleteness",
+      "CategoricalEssentialIncompleteness.V46.PropositionalAssociatedIncompleteness.associated_reduction"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 6.1",
+    "passage": 142,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.UniformTrace.arithmetized_evaluation",
+      "CategoricalEssentialIncompleteness.V46.UniformTrace.compose_production_PA"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 6.2",
+    "passage": 153,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticSearch.functional_search",
+      "CategoricalEssentialIncompleteness.V46.SyntacticSearch.search_uniform_of_functional"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 6.3",
+    "passage": 156,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticPredicates.predicateEquivalence",
+      "CategoricalEssentialIncompleteness.V46.SyntacticPredicates.totalSplit_mono_partial_inverse"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 6.4",
+    "passage": 170,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.finite_membership_PA",
+      "CategoricalEssentialIncompleteness.V46.PrimitiveRecursiveTags.selected_membership_PA"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 6.5",
+    "passage": 177,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticSyntax.foldHom",
+      "CategoricalEssentialIncompleteness.V46.SyntacticSyntax.NatVectors.run_natPrimrec"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 6.6",
+    "passage": 185,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticLists.algebra",
+      "CategoricalEssentialIncompleteness.V46.SyntacticListEvaluation.SliceAlgebra.evaluation_unique"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 6.7",
+    "passage": 189,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.admissible_iff_source_and_success",
+      "CategoricalEssentialIncompleteness.V46.ConcreteSyntaxOperationsTransport.admissibleIso_result"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 6.8",
+    "passage": 200,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticDerivation.derivationCarrier",
+      "CategoricalEssentialIncompleteness.V46.SyntacticDerivation.totalDerivationFold_unique"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 6.9",
+    "passage": 210,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticGeneratedTheory.proofInitial",
+      "CategoricalEssentialIncompleteness.V46.SyntacticGeneratedTheory.literalSentenceRestrictionSplitting"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 7.1",
+    "passage": 219,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelRangeFunctor",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.modelComparison"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 7.2",
+    "passage": 223,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_finite_switch",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 7.3",
+    "passage": 226,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_pair_inseparable_v46_of_model",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.syntactic_fixed_pair_inseparable_v46"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 7.4",
+    "passage": 230,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.PredicateInterpretation.regular",
+      "CategoricalEssentialIncompleteness.V46.PredicateInterpretation.recursiveDomainFunctor_graph"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 7.5",
+    "passage": 236,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.evaluate_termSubstitution",
+      "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.plain_formulaSubstitution_result"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 7.6",
+    "passage": 240,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.valid_logicalAxioms",
+      "CategoricalEssentialIncompleteness.V46.FirstOrderModelSoundness.sentenceConclusion_plain"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 7.7",
+    "passage": 248,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Ultrapower.functor",
+      "CategoricalEssentialIncompleteness.V46.Ultrapower.regularImageIso_hom_ι"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 7.8",
+    "passage": 252,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.eval_representative",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.recursiveComparison"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 7.9",
+    "passage": 256,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.canonicalCodeComparison",
+      "CategoricalEssentialIncompleteness.V46.NamedPlainSemantics.canonical_ultrapower_conclusion_consistent"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 8.1",
+    "passage": 268,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticNamedAxiomComparison.axiomsAdmissible_PA",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalRepresentation.printed_representation"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 8.2",
+    "passage": 271,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch.printed_diagonal_partial_proof_search",
+      "CategoricalEssentialIncompleteness.V46.NamedArithmeticProofSearch.printed_partial_proof_search",
+      "CategoricalEssentialIncompleteness.V46.PartialSearchLift.partial_lift"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 8.3",
+    "passage": 274,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NamedGammaModel.exists_model",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticInternalComparison.total_undecidable_family"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 8.4",
+    "passage": 278,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSentenceInseparability.no_recursive_separator",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSentenceInseparability.enumeration_extension_incomplete"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 8.5",
+    "passage": 287,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticIndexedFibers.fiberInitial",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticIndexedProvability.printedProvability_numeral_PA",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPrintedFamily.printedConclusion_realization"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 8.6",
+    "passage": 296,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPAEnumeration.axiomCodes_standard",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUniformSearch.lift_printed_coordinates",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticUniformIndependent.uniform_independent_sentences",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticIndexedPAEnumeration.fiber_extendsPA"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 8.7",
+    "passage": 304,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NumericalTuples.equivalence",
+      "CategoricalEssentialIncompleteness.V46.NumericalTuples.partialMap_preserves_ranges"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 8.8",
+    "passage": 314,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.NumericalSyntax.categoricalSyntax",
+      "CategoricalEssentialIncompleteness.V46.NumericalArithmetic.ProofComparison.canonical_backward_program",
+      "CategoricalEssentialIncompleteness.V46.NumericalArithmetic.ProofComparison.canonical_forward_program"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 8.9",
+    "passage": 336,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ArithmeticComplementaryInclusions.conditional",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheory.printed_statement",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheory.presentation_generation",
+      "CategoricalEssentialIncompleteness.V46.SignedFiniteFormulaValuation.diagonal_negative_axiom",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTheoryTruth.consistency_PA",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticDiagonalSplitting.source_pair_inseparable",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedSeparator.no_separator",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedEssential.diagonal_inseparable",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticSignedTotal.every_consistent_extension_incomplete"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 8.10",
+    "passage": 340,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.SyntacticSliceDerivations.initial",
+      "CategoricalEssentialIncompleteness.V46.ArithmeticAssociatedCategories.printed_statement"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 9.1",
+    "passage": 350,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.rho_value",
+      "CategoricalEssentialIncompleteness.V46.Miller.Unanimity.printed_unanimity"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 9.2",
+    "passage": 354,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.Uniform.PointObject",
+      "CategoricalEssentialIncompleteness.V46.Miller.Uniform.J_value"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 9.3",
+    "passage": 362,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.Cut.separatingReal_program",
+      "CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_reduction"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 9.4",
+    "passage": 366,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.CutDigits.lowerIdem",
+      "CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_inseparability",
+      "CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_contrast",
+      "CategoricalEssentialIncompleteness.V46.Miller.Cut.mapped_tau_notTuring"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 9.5",
+    "passage": 373,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.Total.pointPresentation",
+      "CategoricalEssentialIncompleteness.V46.Miller.FirstOrder.sentence_idempotent_represents"
+    ]
+  },
+  {
+    "numbered_item": "Lemma 9.6",
+    "passage": 381,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.Derivation.Parameterized.uniformInitial",
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedRules",
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedInitial",
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedFold_unique",
+      "CategoricalEssentialIncompleteness.V46.Miller.ParameterizedDeduction.printedStatement"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 9.7",
+    "passage": 387,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.NamedSyntaxComparison.presentedSyntax",
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalIncompleteness.printed_categorical_incompleteness",
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_categorical_incompleteness",
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_essential_incompleteness_of_consistent",
+      "CategoricalEssentialIncompleteness.V46.Miller.CanonicalAxiomIncompleteness.printed_native_incomplete_of_consistent",
+      "CategoricalEssentialIncompleteness.V46.Miller.NamedProofImage.proofInitial",
+      "CategoricalEssentialIncompleteness.V46.Miller.TheoryDomainApplication.consistent_iff_disjoint"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 9.8",
+    "passage": 394,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.Miller.AssociatedData.point_factors",
+      "CategoricalEssentialIncompleteness.V46.Miller.AssociatedCategories.printed_statement"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 10.1",
+    "passage": 413,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span",
+      "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_isTuring"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 10.2",
+    "passage": 423,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra_isInitial",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.totalEquivalence"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 10.3",
+    "passage": 431,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkInference.inferenceIso",
+      "CategoricalEssentialIncompleteness.V46.ForkDerivation.printedInitial",
+      "CategoricalEssentialIncompleteness.V46.ForkDerivation.printed_unique",
+      "CategoricalEssentialIncompleteness.V46.ForkDerivation.Diagram.shaped_unique"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 10.4",
+    "passage": 435,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkDerivationImages.least_theorem_image",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.right_t0",
+      "CategoricalEssentialIncompleteness.V46.ForkDerivationImages.LiteralDiagram.theoremObject_eq_t0_domain"
+    ]
+  },
+  {
+    "numbered_item": "Theorem 10.5",
+    "passage": 439,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.cosheaf_observation",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.essential_incompleteness_v46"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 10.6",
+    "passage": 443,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkDerivationImages.categoricalTheory_eq",
+      "CategoricalEssentialIncompleteness.V46.ForkAxiomClosure.endpoint_axiom_extension_incomplete"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 10.7",
+    "passage": 447,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.DiagramInitialAlgebras.initial",
+      "CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedInitial",
+      "CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedStatement",
+      "CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.printedFold_underlying_unique",
+      "CategoricalEssentialIncompleteness.V46.ForkParameterizedDeduction.presentationGeneration_obj",
+      "CategoricalEssentialIncompleteness.V46.DiagramDecidableVariables.fork_diagonal"
+    ]
+  },
+  {
+    "numbered_item": "Proposition 10.8",
+    "passage": 454,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkErasureClosure.closed",
+      "CategoricalEssentialIncompleteness.V46.ForkFirstOrderApplication.printed_statement",
+      "CategoricalEssentialIncompleteness.V46.ForkConservativeRestriction.restriction_to_domain",
+      "CategoricalEssentialIncompleteness.V46.ForkEndpointSentences.extension_incomplete"
+    ]
+  },
+  {
+    "numbered_item": "Corollary 10.9",
+    "passage": 460,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkAssociatedCategories.printedStatement",
+      "CategoricalEssentialIncompleteness.V46.MonicPartialSliceComparison.proper"
+    ]
+  },
+  {
+    "numbered_item": "Definition A.1",
+    "passage": 478,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax",
+      "CategoricalEssentialIncompleteness.V46.StableListAlgebra"
+    ]
+  },
+  {
+    "numbered_item": "Definition A.2",
+    "passage": 482,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax.occurrenceAlgebra",
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax.sentenceNegation"
+    ]
+  },
+  {
+    "numbered_item": "Proposition A.3",
+    "passage": 488,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax.substitutionAlgebra",
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax.admissibility_complemented"
+    ]
+  },
+  {
+    "numbered_item": "Definition A.4",
+    "passage": 495,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ClosedUnder"
+    ]
+  },
+  {
+    "numbered_item": "Theorem A.5",
+    "passage": 498,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.RulePresentation.least_theorem_subobject",
+      "CategoricalEssentialIncompleteness.V46.RulePresentation.inference_preservesRegularEpis"
+    ]
+  },
+  {
+    "numbered_item": "Theorem A.6",
+    "passage": 504,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.CategoricalSyntax.generated_firstOrder_theory",
+      "CategoricalEssentialIncompleteness.V46.firstOrder_sentence_image_monotone"
+    ]
+  },
+  {
+    "numbered_item": "Lemma A.7",
+    "passage": 507,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.V46.range_regularImage"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.1",
+    "passage": 517,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.actualCosheafEquivalence",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.ForkTopology.cosheafEquivalence"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.2",
+    "passage": 521,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.totalEquivalence",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.imageIsImage"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.3",
+    "passage": 527,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkRangeStability.equivalence",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.weak_choice",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.range_product"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.4",
+    "passage": 533,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.locally_connected"
+    ]
+  },
+  {
+    "numbered_item": "Lemma B.5",
+    "passage": 538,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.dominance"
+    ]
+  },
+  {
+    "numbered_item": "Lemma B.6",
+    "passage": 542,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.productFrame",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.wordFrame"
+    ]
+  },
+  {
+    "numbered_item": "Theorem B.7",
+    "passage": 549,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring",
+      "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.component_fibre"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.8",
+    "passage": 557,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.recursionCategory",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.splittingEquivalence"
+    ]
+  },
+  {
+    "numbered_item": "Corollary B.9",
+    "passage": 561,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.V46.idempotent_splits_through_range",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Recursion.karoubiEquivalence_source_iso"
+    ]
+  },
+  {
+    "numbered_item": "Proposition B.10",
+    "passage": 566,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.fork_not_restriction_equivalent",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.universal_no_decidable_equality"
+    ]
+  },
+  {
+    "numbered_item": "Proposition C.1",
+    "passage": 575,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.missing_lift",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.total_iff_ordinary_total"
+    ]
+  },
+  {
+    "numbered_item": "Theorem D.1",
+    "passage": 588,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_faithful",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticModel.family_nonzero"
+    ]
+  },
+  {
+    "numbered_item": "Corollary D.2",
+    "passage": 595,
+    "declarations": [
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.extension_arbitrary_pair_inseparable_v46",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.diagonal1_image",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.map_surjective",
+      "CategoricalEssentialIncompleteness.LocalConnectedness.SyntacticExtension.diagonal0_image"
+    ]
+  }
+]

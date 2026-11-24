@@ -1,0 +1,18 @@
+{
+  "L01": "Miller 6.3/Bauer–Hanson 2.2, actual sequence proved in V46MillerFixedPoint:125",
+  "L02": "Bauer–Hanson 6.4, internal Dedekind reals epi in T_mu, external theorem open",
+  "L03": "Heller 9.2, Turing completion of a uniformly generated isotypical B# in locally connected iteration category, open",
+  "L04": "Lengyel 2004 26, faithful iteration functor to separated target and Turing completion, open",
+  "L05": "Di Paola–Heller 8.15, unrestricted sum-valued Turing evaluation refuted at zero identity; corrected nonzero c+ case open",
+  "L06": "Bernardi §§2–3, categorical fixed points and saturated domains open; numerical classes, unions and PA totalizer proved",
+  "L07": "Montagna Remark 3.1, categorical binary productive morphism in unprimed S open",
+  "L08": "Lengyel 2006 4.1 as stated refuted by Appendix C under its printed structures",
+  "L09": "Historical discussion of GL and diagonalizable algebras, no formal input to v81",
+  "L10": "van Dijk–Gietelink Oldenziel 5.19 and 5.20 in the internal arithmetic universe, two conclusions open",
+  "L11": "Cockett–Hofstra 4.9, PCA computability, converse and idempotent splitting open; 3.4 recognition proved",
+  "L12": "Di Paola–Heller numerical result (3), journal page 595; strong numeralwise definability supplies the reduction",
+  "L13": "Pour-El property versus unrestricted existence; undefined reading refuted, PA assignment proved with a single chosen q",
+  "L14": "Aczel arbitrary finitary set rules = finite tree proofs, original generality outside located kernel applications; A.5 case proved",
+  "L15": "Wißmann 3.6 arbitrary factorization system lifted to Alg(F), outside located applications; A.5 regular slice case proved",
+  "L16": "Di Paola–Montagna 4.4 on the unprimed S_T, V46SyntacticNonLocalConnectedness:236; C.1 uses different source"
+}

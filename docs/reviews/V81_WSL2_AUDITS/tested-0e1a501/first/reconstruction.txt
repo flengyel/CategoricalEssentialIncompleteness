@@ -1,0 +1,511 @@
+# Independent reconstruction of Florian Lengyel's version 81
+This reading precedes inspection of any project proof, correspondence, kernel output, or reader's report. The manuscript dates itself 23 November 2026. The line numbers refer to the original relative TeX input in each heading. Exact source, formulas, and bounds for every paragraph are retained separately in paragraphs.json, in expansion order of main.tex. The following entries give my mathematical reading of those paragraphs. Multiple sentences and calculations that share an argument are grouped by their original paragraph, with the exact text identifying each step. Theorems require the hypotheses of their enclosing section as well as those in their statements. The bibliography and front matter contain no freestanding theorem claims. The appendix about the Lean proofs is manuscript evidence, including its description of the claimed proofs. No links in it were followed for this reconstruction.
+
+@abstract
+1 Split recursion category, total category regular extensive, signed nullaries. For every consistent T generated from disjoint a,b on X, all consistent closed extensions omit a sentence in the subobject sense iff a,b have no complementary enlargement. An index is any x:W→X.
+17 The functors run from those disjoint pairs whose generated theory is consistent to consistent presentations, and back to the theorem and negated-theorem pair. Assume partial inverses, decidable variable equality, parameter-stable syntax and lists, and initial derivations for every axiom subobject.
+25 For u:U↪S, Par(D/U) is Turing. Assuming slice derivations and a common logical theorem λ:1→S factoring through consistent theories, u and its constant family over U are essentially incomplete together.
+33 One total internal PA morphism works for all consistent c.e. axiom indices. The real-field theory uses cuts for a Miller sequence and quantifies over extensions with a common oracle semidecision for every representation. Each of the two cosheaf endpoints has an essentially incomplete c.e. theory in its own propositional language.
+
+@01-introduction
+3 Disjoint source domains generate a signed theory. Consistency is assumed in the equivalence with inseparability. Essential incompleteness transfers to a constant family under separate hypotheses.
+13 Total monic m and partial inverse r replace subobjects by mr; splitting is inverse. For a sentence domain T and negation ν, consistency is disjointness with its inverse image, completeness is coverage. Separability asks for any complementary enlargement.
+30 A generalized element factors through its designated subobject. Generate from the join of direct images of its positive and negated atoms. A separator gives a bivalent complete extension. In reverse, along any total reduction f:X→S, a complete consistent extension pulls back to a separator. Initial derivation images supply generation.
+60 Inclusion induces a fully faithful functor of partial slices. Evaluation at a chosen theorem detects completeness of extensions in the base. A total enlargement of the partial Boolean decision morphism is equivalent to separation of the domains.
+74 For any range functor F, a source lift of the target conditional with reversed summands yields a total avoiding g. To deduce source and target incompleteness also use disjoint interpreted theorem/refutation domains, the two diagonal bounds, F(1) nonzero and pullback preserving joins. The extension at identity splittings acts as F.
+97 Syntactic/numerical derivations admit a computable conclusion-preserving bijection. Standard or ultrapower M interprets codes; a separate model K of the c.e. consistent extension certifies validity. Distinguish ordinary arithmetic from the signed nullary language of the slice instance.
+124 Common program equality on outputs and domains is stronger than p-computability for each representation p. Each gives a separator, no fixed uniformly computed separator exists. Rational-bounds RCF extensions with a uniformly semidecidable axiom set and the corresponding constant families are incomplete.
+144 The ambient cosheaf fork differs from Rec under restriction equivalence. Its Karoubi envelope contains initial syntax/derivations. Both endpoints obtain consistent, essentially incomplete theories. The first-order theory conservatively extends the propositional fragment.
+161 Rosolini, Heller, Lengyel, Di Paola–Montagna are historiographic comparisons concerning P-categories, existence and local connectedness.
+173 Di Paola–Heller, Bernardi, Montagna, Lengyel and Cockett are comparisons with existing inseparability hypotheses. Appendix C actually uses/disproves the stated older comparison theorem. Cockett's independent sufficient condition is reported.
+189 Murwanashyaka–Pakhomov–Visser use numerical equivalence-class cardinalities n+1 for the analogous result. This is historical rather than a premise of the free adjunction.
+198 Historical modal discussion and the two Joyal arithmetic-universe theorems; the latter require their own internal arithmetic universe. These are comparisons.
+208 Report of PCA/Turing comparison and Cockett's theorem under provability/restriction hypotheses. Here a failure of cover in a slice is the conclusion.
+
+@02-categorical-preliminaries
+5 Adopt four well-typed restriction axioms and composition order. Derive idempotence of bar f, total identities/composites; define restriction functors/equivalences.
+28 Domain order is ba=a, meet composition and top identity; the partial-map order and compatibility use restriction. Absorbing restriction zero, complementarity and inseparability are distinct concepts.
+44 Inverse image is bar(af); it preserves binary meets, zero, order, composition and sends 1 to bar f. Range minimizes r with rf=f and additionally satisfies agreement against any two postcomposites. In Pfn the representing sets are domain and image.
+71 A splitting e=mr has rm=1 and m total. In Split(R), Hom consists of f=dfe, identity is e, and totality says bar f=e. Restriction monos have mr=bar r.
+90 In the Karoubi construction e,d need only be idempotents; the restriction on a morphism f is bar f e, giving totality relative to e. This imports Cockett–Lack's general splitting convention.
+99 In Par(E,Mono), morphisms are mono-left spans up to iso, composition is pullback, restriction repeats the left leg, total spans identify with E.
+112 The unique pairing has restricted projections f bar g, g bar f and common domain. Products on arrows and total diagonal follow. Equivalence to P-category structure is a separate literature assertion.
+130 Coproducts have total injections; copairings and codiagonal are typed. Fixing both a,b is equivalent to fixing [a,b], so its range is their join.
+144 For F preserving restrictions, ranges, zeros, binary coproducts, χ is iso; precomposition by χ preserves the least fixing idempotent, whence joins/complements are preserved. The duplicated-point functor X↦X×2 on Pfn has these properties but misses mixed labels in product comparisons for nonempty factors.
+170 Connected idempotents admit no nonzero disjoint partition. Local connectedness is detection of parallel morphisms; partial monicity compares domains of precomposites. ps=bar s and psp=p define weak choice. In Pfn use inverse on an injection's image.
+187 Prodominical demands the indicated zero product and isotypical demands pairwise isomorphisms.
+192 For every X and f:X×U⇀U there exists a total r:X→U with f=τ(r×1). This, prodominical structure and isotypicality define recursion categories.
+200 Restriction terminal has the displayed naturality on partial arrows. The Cockett–Hofstra description of Turing categories additionally has total split embeddings of every object into U.
+
+@03-sections-and-inseparability
+3 Problem: under what conditions on F and on extensions P,N of the diagonal domains does their join fail to cover FU?
+9 Test summand domains on the two jointly epic injections to get both their zero meet and top join.
+21 Given a particular reversed-output conditional s and lift ℓ, apply universality to b⁻¹ℓπ₂. Pairing 1 with the resulting total g proves h g=ℓg, with h=bτΔ. The existence claim is unconditional on nonzeroness; its proper-join consequence uses nonzeroness and join preservation along Fg.
+60 Conjugate Fh by χ. The two pulled-back summand domains swap along E=Fg. The bounds in opposite directions make E*P=E*N; their meet pulls back zero. If P∨N=1, totality and join preservation imply 1=0.
+89 A complementary enlargement P,N cannot have the specified reversed conditional and lift simultaneously, by the preceding noncover theorem.
+110 If every complementary source pair has total ℓ agreeing with the two switched injections, the diagonal pair is inseparable. Its disjointness follows by inverse image. Agreement after [c,c'] of full range identifies the restrictions of ℓ to the two target summands.
+144 Transport ℓ and its two inverse-image equalities by F and χ to contradict the lifted-separator corollary.
+158 If disjoint parallel morphisms admit joins, take ℓ=(i₁c)∨(i₀c'). Upper-bounded branches give the two interpolation equations and force both c,c' below bar ℓ, so ℓ is total.
+177 Appendix C supplies the counterexample once lifting is dropped.
+
+@03a-internal-theories
+5 Pull back derivation conclusions c_A:P_A→Φ to j:S↪Φ; take image m_A, assume a partial inverse and get t_A=ran(c_AS). Refutable domain is ν*t_A. Closed theories contain sentence conclusions of their own axioms. Essential incompleteness quantifies over all consistent closed supertheories.
+52 Chosen splittings F(e)=m_e r_e, identity for e=1, give Fhat(f)=r_d F(f)m_e. Check identity, composition, restriction and agreement on the original category.
+73 For q fixing Fhat(f), transport q back to m_d q r_d fixing F(f), apply leastness and transport forward. Zeros survive the sandwich.
+87 Split coproduct is represented by e+d. The comparison r_{e+d}χ(m_e+m_d) and the displayed inverse cancel; coproducts plus ranges imply joins.
+102 The image of a sentence conclusion after interpretation is Fhat(t_A), split by Fhat(m_A),Fhat(r_A). In Par(E,Mono) factorization of conclusion through v gives its unique factor through v by regular-image universality. Disjointness of validity and its negated inverse image bounds down to interpreted theorems.
+142 Semantic soundness in this formulation is a factorization of interpreted sentence conclusions through the validity mono.
+151 For split target, nonzero FU, total θ,ν, disjoint interpreted domains, both diagonal inclusions and source lift, apply comparison to obtain total g such that Fhat(θg) pulls theorems and refutations to zero.
+195 Pulling back a top join along total Fhat(θg) contradicts nonzeroness; applying Fhat to a top source join would imply the same false target equality.
+211 For all t≥t₀ disjoint from ν*t, both pullbacks of a complementary enlargement under total θ form a complementary separator of a,b. Thus the two target domains are inseparable and their join proper.
+237 Literature comparison with Visser, Kirst–Peters. Properness need not supply an outside global element: for nontrivial G acting on itself, 1↪1+G is proper and all fixed points lie in 1.
+256 The full inclusion on identity splittings preserves the endomorphism order and hence inseparability.
+264 Arithmetic uses semantic comparison and a proof-search lift; the numerical, Miller and fork examples use source-domain inseparability.
+
+@03b-internal-adjunctions
+4 Assume all derivation algebras, regularity and extensivity; for a total f, define f_! by regular image and f* by pullback.
+16 Gen(A)=j*C(A); a closed sentence theory is exactly a fixed point.
+27 Gen is extensive by axioms, monotone by leastness, idempotent since C(A) contains j_!Gen(A). Thus Gen(A)≤T iff A≤T for closed T. On any a:A→S use Γ(a)=Gen(im a); a slice map to a theory mono exists uniquely exactly at the same inequality, giving natural Γ⊣J.
+57 A presentation carries named-variable syntax, logical rules and a chosen initial derivation algebra for each axiom subobject.
+66 A translation is specified by three total maps fixing variables, commuting with eq/neg/imp/all and the sentence inclusion. Cancel the inclusion to get sentence-negation compatibility.
+86 Require matching term substitution and existence of an Adm_P→Adm_Q over the translated input and output. This asserts preservation of admissibility and result, with no converse.
+101 Require rule-instance maps commuting with ordered premises and conclusions, arities 0,1,2. Witnesses are existential, so componentwise operations on the determining triple define a category.
+123 Pull a closed Q-formula subobject back by σ_Φ; rule witnesses preserve closure and include the pulled-back axioms. Extensivity makes the pulled-back sentence subobject a theory. Image–pullback adjunction plus Gen gives σ_#⊣σ*.
+163 Apply closure preservation at Gen_Q σ_!A to derive commuting generation. Image and pullback composition give the two functoriality identities.
+171 On variable-fixed presentations, Gen supplies a reflection of axioms into theories since the same translation admits a factorization for A iff it does for Gen(A) when the target is closed.
+191 Regular G between totals and σ:GS₁→S₂ give monotone L(A)=im(σGi_A) and slice functor K with arrow Gk.
+215 Assume for every A a conclusion-commuting p_A. Preserving the regular-epi part gives LGen₁A≤Gen₂LA, so their generated closures agree. This yields the commuting Γ square, a natural factorization KJ₁→J₂Lth, and restriction of any right adjoint R to closed theories.
+271 G⊣H gives R(B) as pullback of H i_B along Hσ η; adjunction transposes the two mono factorizations.
+286 A slice adjoint and rule transformation KΦH_A→H_L(A)KΦ transpose a target algebra to the right adjoint. Initiality and transposition give GP_A→P_L(A); the sentence pullback supplies p_A with the prescribed conclusion.
+326 When each mono splits partially, the preceding domain criterion applies to subobjects.
+332 For all X assume parameter-stable free syntax P_X with only nullary atoms indexed by X and initial deduction. Define signed axiom join and T_a,b. Generalized atoms respect precomposition.
+351 Pair_c objects include consistency of the generated theory, morphisms are total reductions. FO objects are consistent theories, morphisms logical translations sending the theory inside the target. Define Σ, J on objects and morphisms in the indicated directions.
+368 Voutsadakis provides a historical substitution-of-formulas adjunction. Here pair inequalities are precisely existence of a theory-respecting extension of f.
+375 For arbitrary assignment f:X→S_P, initial syntax gives a unique extension on terms/formulas. List initiality gives ℓ preserving occurrence lists and deletion/concatenation, so empty occurrences give a sentence map. Expected adjunction unit θ_X and counit extending identity on S_P.
+414 Closed atom values are fixed by substitution. Occurrence tests and quantifier branches are preserved; initiality over V×Tm gives the equation on success/failure and hence Adm. All seven schemes translate, including instantiation, distribution and equality substitution.
+438 At X=S_P pull T back along the evaluation translation: closed, consistent, contains both signed axioms; implies J well-defined. Pullback of the negation equation gives J's action on morphisms.
+451 Image inequalities on positive and negative generators imply all translated deductions lie in T.
+456 Restrict σ via θ, recover the two inequalities, and use uniqueness on generators for mutual inverses, naturality in both inputs and functor laws.
+477 Complete consistent U gives a complementary pair whose inverse image by θ_X separates. This direction only needs the signed axiom inequalities.
+497 Conversely [m,n] is iso for disjoint complementary monos. Its truth assignment defines a 1-element-domain valuation with quantification acting identically. Induct on failure-or-same-value substitutions. All schemes are true and both rules preserve truth. Pullback of true on sentences is closed, contains signed axioms, and has complementary negated fiber.
+
+@04-theory-extensions
+4 Associate partial maps over the theory object, recover a theory by evaluation at a theorem, and state the invariance to be proved.
+14 Split restrictions and partial inverses of all monos identify C with Par(D,Mono) by fm†. The pullback of n along f splits the domain of n†f; composing spans and composing these arrows agree.
+37 In C[T]=Par(D/T,Mono), a span (m,f) lies over T iff pm=qf, and totals coincide with the ordinary slice.
+47 General lemma: completed category and partial slices are Turing, restricted constant objects from the original R form a recursion category and generate the split slice. Terminality in the split category follows by factoring through the domain of each f.
+69 Extend the original universality to split objects with parameter ae:(X,e)→Q. Original isotypicality plus splitting makes every object a retract of Q.
+80 For p:X→T the graph ⟨p,m_X⟩ embeds into T×Q; a slice partial map with second component f has first pπ₁ bar φ. The total parameter ⟨p,a⟩ gives f and the same restricted first component.
+100 Isomorphisms, products and constant-parameter universality restrict by fullness. Zero is stable because the initial object pulls back. Every slice object splits an idempotent of T×Q through its embedded graph.
+116 Constant logical operations preserve first coordinate, with sentence family T×S and theory T×T↪T×S. Each slice's derivation-existence assumption is explicit.
+133 For inclusion i:T↪U, postcompose on objects and keep spans. Monicity yields full faithfulness, functoriality in i and restriction preservation. Pullback on both span legs yields i*; claim both adjunctions and properness criterion.
+152 The comparison square uses i×i and i×1 and base change identifies the sentence family. Pullback preserves monic legs and spans' composition.
+176 For Σ_i⊣i*, factor right legs uniquely through pullback. For i*⊣Σ_i, use the paired left leg ⟨pf,m⟩ into Y_T and undo by monic Y_T→Y. Natural span bijections give both adjunctions. The second unit is the partial inverse of Y_T↪Y.
+201 An isomorphism onto 1_U would give a total right inverse of i; monicity makes it two-sided. Commutation of the comparison square follows from ui=t.
+214 i monic makes X×_T Y≅X×_U Y. Postcomposition preserves binary restriction products; preserves terminal iff i iso, and the unit at q is total iff q factors through i.
+230 The constant-family functor and fiber functor along λ_U compose to the identity up to canonical isomorphism. Hence constants are faithful, preserve restriction/cartesian structure and send τ to the slice Turing morphism.
+249 The consistent theorem and refutation domains glue to δ_u:S⇀2 with domain their join and their signed values; take its constant family.
+260 Under initial derivations for all parameterized axiom subobjects and a global logical theorem in every consistent theory, base change in each direction preserves finite limits, images, coproducts, consistency and completeness.
+297 Given closed v, apply B to the closed formula subobject C(v); the rule and axiom maps and initiality prove closure of Bv.
+306 For closed W in the slice transport E(W) and E(C(W)) along EB≅1. Naturality at j and the rule morphisms gives a closed formula subobject restricting to W₀; initiality and axiom inclusion give closure of W₀.
+323 A complete consistent closed extension transfers in either direction and the inclusion u≤W₀ follows by evaluation at λ_U.
+335 Totality is detected by EB≅1. A total Boolean extension is equivalent to complementary fibers containing the signed domains. Every consistent extension of a reduced inseparable pair inherits essential incompleteness and lacks a total extension.
+350 For infinite c.e. A, the codes of inputs with their first success stages form infinite recursive D. Increasing enumeration followed by projection bijects ℕ onto A. μ-search gives a partial inverse, yielding iso in the splitting and of associated slices.
+
+@05-syntactic-recursion-category
+3 Fixed consistent extension T of PA, arithmetic symbols and recursively constructed numerals.
+8 Objects are typed product/sum expressions. Pairing 2^a(2b+1)−1 and parity recursively code their realizations bijectively into ℕ; the inverse equations are PA-provable.
+38 First successful stage paired with output gives deterministic trace Tr and Σ₁ graph G. Distinguish program-pairing [a,x] and object-pairing ⟨a,x⟩.
+64 A universal program and primitive recursive s,comp satisfy graph identities uniformly *in PA*. Recode the underlying parameter theorem twice; simulate composed traces and use functionality. For each fixed e a program k_e represents the PA-provably total specialization a↦s(e,a).
+126 Morphisms are quotiented by a single T-proof of universally quantified graph equality, with types fixed externally.
+137 Compose by comp; substitution of equivalent relational graphs and existential associativity verify category laws and independence.
+148 Von Neumann ω contains ∅ and cannot be a product/tagged sum; products have infinite second projection while sums have {0,1}. Projections/tags recover factors, so the chosen object expressions embed injectively in sets. Same coded hom quotients give equivalence to the unprimed set presentation.
+175 Pointwise T-provability at each standard input is distinct. A separate result is invoked to conclude failure of well-defined composition for every consistent c.e. extension.
+189 Σ₁ tests have PA-program partial identities. Source-domain order iff provable implication, joins/meets by ∨/∧, domain/range by existential witnesses. Functionality at intermediate y proves agreement on the range; its representing program works over stronger theories.
+231 Run two computations to pair, dispatch on tags to copair. Universal and specialization graphs supply τ, total k_e and Turing factorization; identity on codes gives all object isomorphisms, nowhere-defined factors give zero products.
+
+@05a-internal-syntax
+4 Predicate presentation models the total splitting by functional Σ₁ graphs, in the tradition of Robinson–Rosolini.
+10 Hom(C,D) consists of supported Σ₁ relations, T-provably single-valued and total on C. Quotient by T-provable universal equivalence. Identity restricted to C and existential composition give category.
+34 For every Σ₁ Γ(x,y), least coded pair of output/witness yields program aΓ. PA proves outputs satisfy Γ and its domain iff ∃y Γ; full equivalence of the graph needs functionality in T.
+58 Bounded simulation and least-number induction prove the two implications; T's functionality identifies every Γ-witness output with the selected value.
+68 J(C)=(ω,[C]) and J(Γ)=[aΓ] satisfy support, totality and composition. Claim equivalence with the completed total category, regularity/extensivity, monic partial inverses, existential image formula and presentation of all subobjects.
+96 Fullness uses program graphs, faithfulness uses the definition of program equality. Transport an arbitrary split object along its numerical coding and realize its restriction idempotent as the identity on an existential domain.
+111 Terminal x=0; products by paired coordinates, equalizers by common output. Functional graphs of equalizing morphisms factor uniquely. Pullbacks have coordinates sharing the two function outputs.
+141 Reverse-search a provably surjective graph to get a T-provably total section on its exact codomain.
+156 For split epi ε with section σ, (1,σε) factors through its kernel pair. Any β coequalizing that pair equals βσε and uniquely descends along ε.
+168 Existential program images factor each arrow into a provable surjection and mono. Extremality proves regular epis are exactly those surjections. Sections pull back, giving regularity.
+182 False is strict initial. Parity-encoded coproduct has disjoint monic injections and its preimages under each total Γ partition A by a T-provably total tagged inverse, establishing pullback stability.
+215 A mono equalizes its kernel-pair projections, hence T proves injectivity; transpose the graph, obtain by search its unique partial inverse with domain image and the two partial inverse equations.
+244 The earlier categorical span argument realizes Par(B_T,Mono)≃Split(S_T); on programs use the existentially specified domain.
+255 The split category is Turing with singleton restriction terminal, Cartesian split products and e as embedding/retraction into an object isomorphic to ω.
+269 The range of f=dfe lies below d; its same representative and agreement law work after splitting.
+280 Cons encodes as 1+pair, nil as 0. Tail strictly decreases. Bounded recursion and PA induction supply list operations, inverses and constructor disjointness.
+291 For Σ₁ membership in every entry, bound the checks by list length and existentially quantify a coded list of witnesses; PA induction builds it. For a finite tagged menu D_j test a finite Σ₁ disjunction of graph equalities of ℓ and D_j before applying the same construction.
+325 Variable equality is arithmetic equality within the chosen Σ₁ variable carrier and has complementary bounded cases. Coefficients at each arity may be any objects.
+335 Encode distinct constructor tags and numerical labels in postfix order, separately retaining the bound variable.
+343 Stack parsing consumes typed children, creates one tree and accepts iff a single result remains; tagged constructors have the specified arities.
+355 Parsing is primitive recursive, determines unique children, and PA proves they are smaller than their parent.
+360 Require both parsing and membership of all coefficient labels for Tm,Fm. Finitely many checks make these Σ₁. Splitting a valid node into ordered children yields the local carrier equivalence and conversely builds valid codes.
+388 For all bounded-arity coefficient objects, the two-sorted polynomial K has parameter-stable initial algebra. On maps act with f/g at relevant factors. The coded constructors define an algebra by the carrier equivalences.
+413 For arbitrary carriers X,Y over P and their K_P operations, choose graph indices. Function operations have fiber-product sources, return values in the given fiber, as do the other branches.
+427 Evaluation relations existentially record a value and an operation trace at every node with the appropriate sorts, projections and root.
+440 Finite membership/projection constraints and decidable trace tests put the evaluation graphs in Σ₁.
+445 Induct simultaneously on tree size in T. The induction hypothesis puts all children over the same parameter, so root totality supplies output and trace; functionality gives uniqueness.
+460 Functional search gives actual total slice maps. Decompose the evaluation record at its root to get the algebra equation.
+474 Uniqueness of a competing slice morphism follows inside T by induction using its algebra equations; terminal parameter gives base initiality.
+487 Lists over an arbitrary Σ₁ V have a Σ₁ carrier by finite witness collection, with nil/cons unique in PA. Claim initiality stable at every parameter.
+505 Evaluate from nil in the p-fiber using traced cons operations. Σ₁ evaluation and PA induction yield total, functional, fiberwise fold and uniqueness.
+525 Sequence coding computes concatenation, deletion and membership; induction proves the required equations and correct output carriers. Initiality identifies these as the abstract operations.
+549 Free-variable traversal accumulates ordered occurrences, deletes at binders, and computes a carrier-respecting fold with the categorical equations.
+562 Substitution retains the original tree and either a result term or optional formula. Variable/function/atomic clauses substitute terms; negation and implication propagate failed children.
+592 Same binder returns original quantified body. Distinct binder propagates successful body unless replacement-variable capture would occur; in that case it fails.
+609 Primitive recursion on node sequence preserves carriers; original component is identity, and fold uniqueness identifies numerical and abstract maps.
+620 The code-level success tag is primitive recursive independent of Σ₁ label membership. Intersect with the domain predicate to define complementary Adm/failure. The quantified formula test is the disjunction displayed in the source.
+644 Identity and absent-variable substitution fix inputs, including quantifiers: equal binder blocks substitution, and deletion/membership transfers absence for distinct names.
+660 The empty free-variable code pullback is the sentence predicate; the sentence inclusion retains the code.
+671 Arbitrary finite-arity rule maps into F^n/F give a Σ₁ initial algebra in B_T/F. Transport all carriers and premise/conclusion maps through presentation isomorphisms before coding.
+700 Positive tagged tree codes exceed each child. Course-of-values primitive recursion recognizes well-formed trees, ordered child indices and root decomposition in PA.
+720 Valid tree means each label has rule membership and each tuple of child root conclusions equals the rule's ordered premises; the nullary test uses singleton code 0. All checks form one Σ₁ predicate P.
+736 C(d,z)=P(d)∧root-computes-z; PA proves functionality by determinism and T proves totality/support. Search gives a program PA-provably equal to this graph.
+754 Domain of each node-constructor coincides in T with the appropriate rule-label/valid-child pullback summand. Adjoining the root defines H(P,c)→(P,c).
+771 For a target slice algebra choose numerical indices for q and its structure map so the latter's graph is T-provably total on the inference carrier.
+776 A list of values evaluated by the tagged algebra graph gives Σ₁ relation E_a; comparing lists positionwise proves functionality. Splitting/gluing records proves the root recursion with iff in PA.
+805 Induct in T: children evaluate into Q with right conclusions, so applying target algebra is defined and preserves the prescribed conclusion. Search on P∧E_a gives h with qh=c and hδ=αHh.
+836 Competing h obeys same equation; T-induction yields agreement on P, support excludes all other inputs, hence provably equivalent graphs.
+846 Under consistency and bounded finite arity, all syntax/derivation hypotheses are realized; for every axiom mono the conclusion image is least closed formula subobject, whose sentence pullback is the least sentence theory.
+861 The program range Th_A=∃p G_eA(p,z) intersect sentences is the partial identity t_A in S_T. Numerical equality and parameterized results discharge Appendix A's structural assumptions.
+882 Finite products, coproducts and pullbacks provide all Hilbert rule instance objects and their morphisms. Apply arbitrary finite-rule existence with N=2, then the image theorem.
+891 Restrict the conclusion graph to sentence values by functional search. Its exact domain and range yield a total map between the indicated split objects and t_A equals its range there.
+910 For a c.e. presentation use any Σ₁ Ax_T agreeing with its codes in ℕ; intersect with Sent and form the internal generated theory.
+
+@06-interpretation-in-models
+3 Ordinary partial functions pair on the intersection of domains; coproduct is tagged disjoint union.
+9 For every M⊨T, reconstruct X_M recursively, with γ_X^M a bijection by PA coding identities. Evaluate G_e with numeral e and allow all M-witnesses.
+34 Universal T-provable graph equivalence and functionality define F_M. γ_Y^M identifies arbitrary intermediate codes with actual Y_M elements in composition; identity graph handles identities.
+49 Domain and image in M are existential projections of the graph. False, ∧,∨ give zeros, meets, joins, and paired/tagged graph formulas give binary products/coproducts.
+66 For complementary source domains, their Σ₁ predicates give a T-provably total functional reversed-tag relation, so obtain total source switch by search; in each model it will be the unique section of the specified partial injection.
+93 Evaluate the graph. The two disjoint predicates cover X_M, so this switch is the inverse of the indicated restricted codiagonal, unique since injective on domain and surjective.
+105 Nonempty M, total inverse image preserving unions in Pfn, and the source switches apply the comparison corollary to every Turing morphism τ and iso b.
+127 Interpret (X,e) by the domain of F_M(e), dfe by its restriction to that domain. On total maps this defines G_M and on predicates coincides with C(M) and interpretation of the graph.
+151 Finite limits via singleton/paired predicates and common-output equalizers; parity and false yield coproducts; existential image formula in M yields regular images.
+177 At standard M=ℕ, choose coded arithmetic syntax, derivations and axiom predicate for Γ. Its interpreted inclusion is precisely the set of Γ-sentence codes.
+195 K⊨Γ interprets *formulas*, distinct from ℕ interpreting codes. V_K consists of all standard sentence codes true in K.
+208 The interpreted Adm inclusion composes with product comparisons to an injection into triples of standard formula/variable/term codes.
+220 Term substitution is evaluation under a reassigned variable; admissible formula substitution has the corresponding iff for every assignment. Prove free-variable dependence by induction over all constructors.
+257 Induct on variable and function cases for terms; these yield atomic formulas, then negation and implication follow compositionally.
+265 Equal binder shadows x. Absent x fixes the formula. For distinct binder with x free, admissibility excludes y from t; evaluations commute at distinct variable updates and quantification supplies the result.
+284 For standard finite proof codes obtain unique e_K:Gℕ P_AS→V_K with fixed conclusion and validity/refutation disjointness. First three Hilbert schemes follow truth tables.
+306 Universal instantiation uses admissibility, distribution uses absence, reflexivity uses identity, equality substitution uses both admissible substitutions and equal term values.
+324 Axioms of Γ hold in K under all assignments. Modus ponens and generalization preserve validity for all assignments.
+331 Tree induction on the actual standard finite derivations establishes validity at every root; restrict to sentence conclusions and corestrict to V_K. A mono gives uniqueness.
+342 Interpreted sentence negation produces the syntax code of semantic negation, so no sentence belongs to both validity subobjects.
+350 Fix choice, nonempty index set and proper ultrafilter. A set ultrapower is families modulo equality on a large set, and functions act coordinatewise.
+363 Products and terminal/empty sets are preserved. Equalizers are preserved by changing representatives off a large set to a fixed element chosen from it.
+382 Pick the unique large summand of a binary coproduct to obtain surjectivity, and compare representatives for injectivity. Functors preserve sections; all set surjections split using choice, giving regular images.
+400 Apply Łoś to each PA axiom for M=ℕ^I/U.
+403 Define η_C on coded predicates by inclusion of a representative. Łoś and replacement off a large set give a bijection even for predicates with empty carrier.
+425 Apply Łoś to the graph Γ(c_i,d_i) true at each coordinate. Functionality in M yields naturality of η on predicate morphisms.
+435 Extend to every total split object by conjugating with a predicate-presentation isomorphism. Full faithfulness reduces naturality and presentation-independence to the predicate case.
+458 Transport the standard soundness factorization under ultrapower and η. Naturality identifies composites with G_M(c_AS). Preservation of finite limits and initial object transfers disjointness under ν.
+511 The image of G_M c_AS lies in validity. Regularity and range identification give interpreted theorem/refutation disjointness as an equality of partial identities.
+520 Validity of a represented sentence means K-truth on a large set of coordinates, invariant under representative; for constant families it means ordinary K-truth.
+541 A represented proof p has evaluation the ultrapower class of its component e_K(p_i), each p_i a standard finite derivation.
+
+@08-essential-incompleteness-of-arithmetic
+6 Work in the single fixed category B_PA, not one category for each Γ; identify original objects with identity splittings.
+15 Each c.e. Γ yields sentence-derivation projection cΓ and domain tΓ=ran(cΓ). ProvΓ is its Σ₁ image predicate implying Sent in PA; identity on S is the partial identity on Sent.
+38 Standard theorem/refutation sets equal numerical finite-derivation images and inverse images under syntactic negation.
+53 Universal PA program and parity iso give diagonal even/odd Σ₁ predicates α,β, represented by a₀,a₁. Θ(n) forms the sentence α(numeral n), Neg is a total primitive recursive extension on codes.
+90 θ:ω→S is a total morphism because PA proves substituted numerals are closed. For every Γ deriving all PA axioms and every M elementarily equivalent to ℕ, the two diagram-domain inequalities use this θ.
+116 PA proves α,β disjoint. Finite traces establish PA numeral instances of α or β, hence of ¬α in the odd case. Substitute finite Γ-derivations in place of PA axioms. The two resulting universal first-order assertions are true in ℕ, hence in M≡ℕ.
+140 For every c.e. Γ, take Γ-proof-search graph R tagged odd for positive and even for negative. Functional search yields a PA program return relation and exact disjunctive domain even without uniform PA disjointness.
+178 In any M satisfying pointwise disjointness, existence plus the functional relation forces graph equality with R; thus the first-summand inverse image is the negative predicate and the second the positive.
+186 For consistent c.e. Γ deriving PA axioms, use first-order completeness to get K⊨Γ and standard or ultrapower soundness. Conclude internal and all specified interpreted theories are incomplete, plus standard total g producing independent sentences at every n.
+215 Instantiate logical comparison with S_PA→Pfn, partial proof-search lift, disjoint interpreted domains, nonzero model and join preservation. Empty inverse images exactly exclude a proof or refutation of each α(γ(n)).
+239 Historical Di Paola–Heller statement; Θ provides the concrete reduction of D₀,D₁ for the current Γ.
+246 A recursive separator of all theorem/refutation codes would pull back along Θ to a recursive separator of D₀,D₁. Its branch-coded total recursive conditional has a *partial* syntactic lift under standard interpretation, which contradicts the separator corollary.
+272 In a complete consistent c.e. extension, parallel enumeration decides all sentence codes, and false outside the recursive sentence-code set extends it to a forbidden recursive separator.
+
+@08a-uniform-theories
+4 Explicit inclusion I:S_PA→Split(S_PA), parameter E=I(ω), and Gℕ E=ℕ. Build one object of derivations with all enumeration indices.
+19 Uniform axiom predicate is Sent(z)∧(Ax_PA(z)∨W(e,z)); W ranges over c.e. sets. Fix the literal predicate at each e; extensional equality in ℕ alone does not license uniform PA-proof of predicate equivalence.
+38 Code E×S by D(w)=Sent(π₁w); the pairing/projections realize J(D)≅E×S. A₀(w) codes the uniform axiom predicate, and inclusion followed by that isomorphism gives an actual mono i:A↪E×S.
+62 Indexed rules retain e in each premise and conclusion. Nullary object (E×logical schemes)+A; higher arities E×R_n duplicate e into each premise. Initiality for finite rules gives one algebra; pull to sentence conclusions and take regular image. Its partial identity t=mr=ran c.
+121 Each standard numeral induces a section k_e^X:X→E×X of the projection to X.
+126 Split E into e and its complemented remainder to identify B/(E×Φ) with product of slices by extensive coproduct. Restrict by pullbacks, invert by copairing; naturality under slice maps and unit/counit follow decompositions. Goal is an actual fiber initial algebra and pullback square.
+186 On both pieces restrict rule objects, preserving their common first coordinate. Pasting pullbacks gives a natural isomorphism of the full inference functor with the product of the two inference functors, including the literal axiom predicate at e.
+242 Lift the slice equivalence to algebras by conjugating structure maps with ζ. Full faithfulness follows from the algebra square; transport target algebras using counit for essential surjectivity.
+281 An initial algebra in the product has initial first component by pairing a test morphism with identity on the second. Use uniqueness up to iso to identify it with the chosen fiber initial algebra.
+300 Pull back that iso to sentences; square k_e^S commutes with j and 1×j. Pasting gives the required pullback and stable image gives generated fiber theory.
+311 Present the uniform conclusion map by a program a_c. Prov(e,z)=∃d G_a_c(d,⟨e,z⟩) describes its image. Fibers give PA-provable equivalence with Prov_Γe for every standard numeral e; both sides imply Sent.
+
+@08b-uniform-independent-sentences
+4 Pour-El supplies an antecedent for effective extensibility; the present assertion insists on one internal total morphism.
+11 Uniform search on (e,x) returns the odd/even tag for proof/refutation of α(x); PA proves graph correctness and exact disjunctive domain. Claim ∃q:E→S ∀ consistent Γ_e, its standard value is independent.
+54 Specialize b⁻¹ℓ with e as first input to total g; τΔg composed with b equals ℓ⟨1,g⟩. Set q=θI(g), independent of the subsequent choice of e.
+75 Fix consistent Γ_e, choose K by completeness; standard soundness and the fiber identity give disjointness. At n=g(e), a proof selects odd and implies a refutation by diagonal representation; conversely a refutation selects even and implies a proof. Thus neither exists.
+
+@08c-numerical-realization
+4 Rec uses terms as typed objects, actual partial recursive functions as morphisms. Restrictions are partial identities on c.e. sets, complemented precisely for recursive carriers.
+18 C_rec objects are c.e. subsets of arbitrary finite powers, including power zero; morphisms are total on source carriers with partial recursive extensions. Equality is extensional there.
+30 κ_m gives effective coding with recursive image for every m, specially singleton 0 in arity zero and identity in arity one.
+38 Q(C) codes C as a restriction splitting of ω. In Q(f), semidecide source membership to ensure its domain is exactly the coded carrier. Claim equivalences including the partial-map equivalence and regularity of C_rec.
+69 F sends a split object to its coded domain and total f to the conjugated restricted function. Tuple decoding and the original object coding define inverse natural isomorphisms on total categories.
+104 Terminal is singleton; product concatenates tuples. Dovetail two total-on-domain computations and compare outputs to get a c.e. equalizer with the same factorizing program.
+116 Empty is initial. Coded even/odd coproduct with case analysis splits each total map's source into c.e. preimages, and the inverse is a computable retagging.
+135 Enumerate outputs for images. For a surjection search a preimage, yielding a section; h constant on fibers uniquely descends. Regular epis are exactly the surjections by extremality, pullbacks retain surjectivity.
+159 Singleton probes test injectivity. Search the c.e. image of an injective map to compute its partial inverse and verify the restriction-mono equations.
+176 Send a mono span to right leg composed with partial inverse of left leg. Its domain and value formulas prove well-definedness on span classes, identities, composition and restriction.
+195 Q_num sends a partial split f to its exact c.e. domain inclusion and total restriction. For comp, map (z,w) to z and invert by (z,fz), yielding a computable isomorphism of the pullback domain; restrictions and identities compare as spans.
+241 Equal represented partial functions give inverse computable change of middle object via partial inverses. The existing natural isos on carriers have the same domains and values on either composite for partial arrows, giving the restriction equivalence.
+281 Recursion on finite trees with recursive bounded signature labels gives decidable Tm,Fm and constructor maps. Goal is parameterized syntax/list initiality and initial finite derivations for arbitrary axiom subobjects.
+304 Fix arbitrary Z over P, not necessarily a constant family. Each operation's program halts on actual fiber-product inputs and preserves their common p.
+329 Evaluate bottom-up with constant p. Induction puts children in the required fiber, proving halting on the source and the slice algebra equation; constructor induction proves uniqueness.
+358 Lists of variable codes are recursive. Slice nil is over P and cons identifies its source with V×Z. Iterate these two operations; termination, preservation of p and uniqueness follow by length induction.
+391 Prior PA-certified numerical computations give the same occurrence and substitution maps by uniqueness; success fiber supplies Adm, empty occurrence fiber supplies S.
+412 Arbitrary mono A supplies axiom labels; encode each arity's tuple carrier. Semidecide all node memberships and child-conclusion matches to obtain a c.e. carrier. Root reading and node attachment form the derivation algebra over Fm.
+440 Arbitrary target algebra evaluates each valid tree to a value above its conclusion. Induction enforces halting, the slice equation and unique algebra equation.
+463 In the arithmetic signature choose identical axioms and syntax codes in both categories. Restrict finite proofs to sentence conclusions; the regular image is the sentence theory.
+491 Rule label bijections compare the same logical/axiom parameters, including both substitution side conditions and occurrence tests. They are computable with computable inverses, match ordered premises and conclusions, and compose with chosen presentation isos. Relabel every tree and reverse, proving a computable bijection of sentence derivations commuting with conclusion; the images equal Prov_T in ℕ.
+573 Q transfers the total maps to E,S_rec and the partial identity on the theorem set. Neg and Θ are actual total maps whose underlying functions are the common standard syntactic ones.
+
+@08d-numerical-incompleteness
+5 Identity splittings preserve/refelect the restriction-idempotent order and complements on original objects.
+12 φ_u is Turing by specialization. Decoding parity gives ζ, identifying the two diagonal program classes with the concrete D₀,D₁ sets.
+30 Each complementary c.e. partition is decided by parallel enumeration. The resulting total switch and nonzero range interpretation apply the source comparison. A recursive separator is impossible, also after passing to the identity splitting.
+61 For all c.e. extensions including the PA axioms, numerical proof comparison turns finite PA numeral proofs into θ-pullback inequalities and t_PA≤t_T. Consistency gives disjointness; inverse images preserve unions. The source-domain corollary yields inseparability and proper join.
+
+@08-essential-incompleteness-of-arithmetic
+290 The c.e. sets of positive and negative provable numeral instances are increasing with a consistent c.e. theory. Their source reduction is the identity; the resulting assignment and inclusions define a functor into typed disjoint c.e. pairs. Recursive separation pulls back, giving inseparability.
+316 Bernardi's cited numerical argument uses precomplete equivalence relations; classes and disjoint nonempty unions are inseparable. Uniform PA-provable graph equality is reported as his example, rather than used to derive the present bounds.
+332 Separately form the signed-nullary arithmetic diagonal language. A generalized x:W→ω gives a sentence over W.
+344 Choose split predicate carriers for α,β. Tagged positive atom and negative atom presentation j is injective via outer tag and label; the image is the signed axiom join. Axiom introduction handles all generalized elements factoring through it.
+363 Assume consistency of PA. Any source complementary separator gives a total ℓ in the original category; universality gives h g=ℓg, so the pulled-back complementary domains are equal and force identity zero. PA consistency rules that out.
+412 In two purported contrary derivations, collect labels of all *positive* nonlogical leaves into one finite list. Define one Boolean valuation from this list, with equality true and quantification identity; negative labels are excluded by α,β disjointness.
+428 PA proves operations primitive recursive, axioms and both rules sound for that list; PA induction on the coded trees gives contradiction and a provable disjointness statement, not only standard consistency. Apply signed criterion for essential incompleteness.
+445 For any consistent internal signed-language extension, inclusion induces full faithful partial-slice functor, proper iff outside essential surjectivity. Both slices Turing, constant family essentially incomplete and its partial decision morphism has no total extension.
+467 On the full subcategory of original constant objects the completion is the slice and B_U is faithful and preserves τ. Need derivation initiality for all slice axioms; flatten the twice-sliced formula category into the single slice over P×Φ.
+493 Identify relative and absolute inference pullbacks because every premise and conclusion retains p, including R₀≈P×L+A. Functor isos commute on all arities. Earlier arbitrary finite rules lemma gives slice initiality.
+508 The closed sentence ∀v₀(v₀=v₀) supplies the requisite global theorem. The domain criterion and the extension/invariance theorems then apply.
+
+@04-miller-sequences
+3 Miller existence in the Bauer–Hanson version is used as mathematical input. Claim individual separation, failure of one uniformly computed fixed separator, and an incompleteness application to RCF.
+12 Binary expansion map ρ from Cantor space to countable product [0,1] has compact nonempty fibers by continuity/surjectivity. Real computation allows rational approximations to vary with p at fixed precision.
+35 Assert ∃a in Hilbert cube such that for every program d and r∈[0,1], if that same d computes r from every p in its fiber with errors strictly below 2^-k, then a(d)=r. Existence is separate from the subsequent conditional results.
+51 For any z, one oracle program using *any* p representing z computes exact common-value/domain function τ_z(e,n). A finite cylinder projects to a computable finite union of closed dyadic coordinate boxes. Strict comparisons semidecide that z violates a bound; enumerating such cylinders covers the fiber complement.
+94 Finite halting runs enumerate cylinders for each possible m. Search for a finite clopen cover of all Cantor space by that open set and fiber complement. Compactness gives iff all q in the fiber output m; nonempty fiber ensures uniqueness.
+108 E_a morphisms are single entire extensional partial functions across all p, on chosen codes of finite products/sums. The same index must agree in definedness as well as value everywhere.
+128 Composition, restriction, finite products/coproducts, ranges, zero and compatible joins use effective operations; ranges/joins work because the output is fixed despite oracle-dependent timing. Agreement is inherited from partial functions.
+152 Singleton restriction idempotents are connected and jointly detect arrows. Test partial monos by constant inputs, then preimage search of an injection has a unique output independently of the oracle; gives weak choice.
+161 Apply oracle parameter theorem to a common program d computing f(x,n). Its ordinary total specialization provides c:X→ℕ; unanimity gives exact f=τ_a(c×1). Chosen codings give isotypicality.
+177 For p∈P_a the faithful inclusion J_p into p-recursive functions preserves range/product/finite joins; identity-splitting inclusion I_p realizes c.e.-relative carriers and preserves ranges. Pullbacks of partial domains over totals preserve unions.
+192 Compatible disjoint joins give total complementary switches. Nonzero I_pJ_p and these switches yield inseparability of the two τ_a-diagonal parity domains A_i.
+212 Strict half comparisons semidecide L_a,R_a uniformly over representations.
+217 To reduce A_i to the strict cuts, construct open sets U^i_e of z by enumerated finite halting cylinders; using compactness of P_z characterize them as unions of complements of effectively closed dyadic box unions K_{e,m,t}.
+239 Weighted metric induces product topology. Distance to a finite nonempty box union is a computable finite minimum of weighted coordinate distances (empty union assigned 1). Distance positive exactly off K. Uniformly convergent weighted series g^i_e, with stated finite tail errors, has positivity set U^i_e. Difference /4 around 1/2 separates the two signs.
+277 Choose N=k+1 to reach strict 2^-k error and ordinary s-m-n for the oracle program to produce total recursive h. Miller fixed point gives a(h(e))=r_e(a), hence the claimed exact inverse images.
+294 Pullback under h precludes complementary source domains. Each p individually decides C_p by its first bit, interchangeable at 1/2; if a single separator were common, its complementary partial identities would contradict inseparability.
+319 In Rec^p the p-decidable h⁻¹C_p separates the diagonal pair. A Turing J_pτ_a would contradict source conditionals in Rec^p, though that category has its own universal program.
+331 E_a-semidecidability is a single program with prescribed common domain over all representations; returning the input implements the partial identity.
+341 In Split(E_a), support f=1_E f1_D and relative totality bar f=1_D define partial maps between semidecidable carriers.
+349 For arbitrary semidecidable carriers show regularity, extensivity, partial inverses and Par equivalence. Products/equalizers use parallel semidecision, coproduct preimages use tags and give a partition. Claim also recursive bounded-signature syntax/list and deduction initialities.
+380 Enumerate images uniformly. Descend kernel-pair-equal h through a surjection e by searching any preimage and returning h there. Though the witness can vary across p, the value is equal. Surjections are regular epis and remain so under pullback.
+403 Singleton probes detect injectivity; unique preimage gives partial inverse. Send a span to gm† and recover it from its exact domain, with pullback composition yielding the restriction equivalence.
+421 Parameters may lie in arbitrary semidecidable objects. Test parameter/tree, evaluate branch programs bottom-up in fiber, use common values for every p, and prove uniqueness by induction. Same for lists.
+439 Free-variable traversal and capture tests are recursive for recursive labels; admissibility and sentence carrier are decidable on well-formed codes.
+453 Identify arbitrary axiom mono with its semidecidable image. Joint finite semidecisions on axiom leaves and rule matching give the same proof carrier over every p. Root projection and constructor give algebra.
+467 Check valid input then fold in arbitrary target algebra. Common domains/outputs ensure an actual E_a morphism. The algebra equations and uniqueness are by tree induction.
+479 For *arbitrary* X in D_a (possibly only semidecidable) the nullary language has initial syntax/list, and all bounded recursive signatures as well as this language have derivation initiality for every A↪P×S. Its reduced K and finite label checks need only semidecision.
+507 Keep the chosen w in each fold. For valid trees, target algebra operations halt on their exact fiber. Testing w and the tree ensures exact total-on-source morphisms, and induction gives uniqueness for syntax and lists.
+522 Three rule objects (P×L)+A, P×R₁, P×R₂ retain w at every premise and conclusion. Simultaneously check labels, shape, parameter and all (w,ψ) axiom leaves to semidecide valid pairs (w,t); root reading and attachment form a slice algebra.
+543 For any β:H(Q,q)→(Q,q), recursive evaluation gives unique e with qe=c_A and eδ=βH(e), by validity of premises and leaf/node induction.
+558 Add constants c_n to ordered rings, interpret q=u/v by integer terms for v>0. Dovetail strict upper/lower tests and recursive RCF axioms. Real numbers with c_n=a(n) model these axioms and consequences.
+583 For any consistent common-semidecidable axiomization extending T_a, theorem and refutation domains are inseparable, hence the extension incomplete. Compare finite derivations/regular image to t_T in the splitting; negation and n↦code(2c_n<1) are total.
+623 Axioms/proofs for n below or above half reduce L,R to the positive/negative theorem set under θ. Pull back any complementary enlargement along θ and use source inseparability, unchanged on identity splittings.
+644 Consistency ensures theorem/refutation disjointness. If they covered the sentence carrier they themselves would separate. Here numerical carriers give an actual outside sentence.
+656 Fix the field-language sentence object and the closed generated theory t_a in the split category.
+661 For every consistent internal enlargement u, the slice is Turing and its constant theory is essentially incomplete with inseparable domains and no total Boolean decision extension.
+678 A second theory inclusion gives fully faithful postcomposition, missing essential surjectivity when proper; use the established regular extensive structure and parameterized deduction.
+698 Real-field soundness yields disjoint signed domains for the base theory, and θ reduces the cuts. Apply the domain theorem to every consistent extension.
+709 The theorem 0=0 selects q_U:1→U. Evaluating a hypothetical separator of constant slice domains at q_U gives a forbidden separator of the original domains, completing the application.
+
+@09-three-point-space
+3 Cosheaves on a finite space correspond to fork diagrams; in its computable example, endpoint theorem/refutation atoms contain an inseparable pair. Each consistent c.e. endpoint extension omits an atom. A conservative first-order enlargement is claimed.
+15 Sets with covariant extension maps form a cosheaf if the overlap coequalizer is the cover value; empty cover forces the empty value. The Sierpiński space has exactly one proper nonempty open.
+30 The two Sierpiński opens share one point. The covering family of X supplies the pushout of the fork 1←0→2; all proper opens are determined, hence equivalence with Set^J.
+45 Computable numerical carriers have dimensions and c.e. subsets; all set membership statements in the fork use their underlying carriers.
+54 A fork functor is three objects and two total transitions, natural maps commute with them. Componentwise c.e. subsets stable under both transitions give subfunctors. Underlying diagrams give cosheaves via previous equivalence.
+72 In Par(C_rec^J,Mono), monic spans can be represented using c.e. subfunctor domains; range and restriction are partial identities on componentwise image and domain.
+81 Choose V=(ℕ²←ℕ⁴→ℕ²) retaining common coordinate k and the appropriate endpoint. Nonempty encoded words form computable c.e. objects and transitions. Frame isomorphisms for product, sum and words imply all objects of the generated full category are isomorphic.
+121 A Turing τ in the ambient partial category remains Turing in the full subcategory generated from V. With inherited zero/product structure this gives a recursion category.
+130 Embed any fork computably into V with partial inverse. Restriction splitting and full Karoubi envelope both give the ambient partial category. Transport numerical syntax across the equivalence and evaluate endpoints via the counit.
+150 Complementary domains give a componentwise decidable partition of V and a natural iso C+C'→V. Switched coproduct injections yield total source conditional. Use inclusion range functor, nonzero identity and stable joins to get inseparability; Appendix B distinguishes the resulting category from Rec.
+182 E_j evaluates a monic span at j into K=Par(C_rec,Mono). The quotient numerical presentation Q_num gives the comparison with Split(Rec).
+201 Component evaluation preserves partial composition by pullbacks and the stated products, coproducts, zeros, ranges, meets/joins. Its endpoint components of the constructed τ are Turing.
+218 For arbitrary c.e. Z and partial recursive F:Z×ℕ²⇀ℕ², specialize its coded computation and take parameter z↦(0,s(z)). This gives the endpoint Turing property in K.
+235 The singleton endpoint probe H_i has only zero/top domains, so postcomposition on total probes is a well-defined Pfn functor, naturally isomorphic to underlying endpoint evaluation. Fixing probes detects a c.e. endpoint domain.
+264 Center evaluation is not Turing: a total represented F(k,z,a,b)=(0,0,z,0) would have first endpoint projection depending on hidden z, yet naturality factors it through (k,a), independent of z.
+281 Parity of common k defines q₀,q₁; diagonal domains d*q₀,d*q₁ are inseparable in both full generated and ambient categories. At endpoints their carriers are defined by first-output parity; the full numerical subcategory on ℕ²-products/sums is recursion by inherited τ.
+314 Total computable switches on complementary c.e. endpoint domains give the hypotheses of source comparison in K₂; therefore A_i,B_i themselves are recursively inseparable.
+333 Apply arbitrary regular-category propositional construction to V and the signed subfunctors A,B.
+339 Build recursive finite formula trees for each V_j. Relabeling atoms defines transitions, constructors are natural and the algebra is for V+Z+Z².
+359 Evaluate each component's finite tree for any α; it terminates and gives a total-on-carrier slice-independent morphism satisfying the algebra equation.
+372 Naturality of α makes the folds commute with both transitions, and constructor induction gives uniqueness.
+381 Construct the three propositional axiom maps on typed powers. The positive and negative atomic maps share no outer constructor; their copairing is monic. The tagged axiom object supplies actual rule labels.
+411 Define the modus ponens premise pullback using (φ,φ⇒ψ); its conclusion is ψ. H takes coproduct Ax+M and acts on M via h×h. Empty unary summand is initial by extensivity.
+442 Finite ordered proof trees are c.e. by parsing, premise matching, finite positive/negative leaf semidecisions. Their root gives c_j into S_j.
+454 Relabel rules and expressions along each transition. A,B subfunctors and preservation of implication give valid target derivations and matching conclusions.
+465 Make leaves and MP nodes to obtain algebra δ; injectivity of implication fixes consequent. Both maps commute with c and transitions.
+475 A target slice algebra maps leaves and MP nodes over the right formula. Induct to see its evaluation is recursive and total on valid proof codes and preserves c.
+493 Evaluations commute with transitions by induction using naturality; leaf/MP recursion yields the unique algebra morphism.
+502 For each domain t denote its c.e. subfunctor D_t; t₀ is the range of the total proof projection.
+506 Initial-algebra image gives least closed subfunctor, componentwise derivability. One-node proofs of signed atoms give a≤θ*t₀ and b≤θ*ν*t₀.
+531 Fix two purported contrary proofs at a component. Assign true exactly to the union of positive leaf labels in both proofs, giving true signed axioms, all schemes and preservation under MP. Single valuation rules out contrary conclusions componentwise.
+546 Compatible families are c.e. closed componentwise supertheories with σ_i(T₀)⊆T_i; these give a subfunctor and t_T. Consistency is componentwise disjointness and simultaneous completeness is top join.
+561 For every consistent compatible family the base pair reduces to theorem/refutation in the partial category. At each endpoint positive/negative provable-atom index sets form a functor in the extension order, are disjoint c.e. and recursively inseparable, leaving a sentence undecided.
+587 Pull back c.e. domains along the recursive atom constructor and inherit the A_i,B_i bounds. A recursive separator is impossible; if the sets covered ℕ², a race of enumerations would decide them. Any missing x supplies the independent atom.
+604 Under inclusion both positive and negative sets grow; the identity function realizes the functor laws.
+609 Given any consistent c.e.-axiomatized extension at one endpoint, use it there and the original theory elsewhere. Original subfunctor compatibility is preserved, giving a compatible family to which the previous theorem applies.
+627 Fix the constant variable diagram Δℕ. In the signed first-order signature with arbitrary D-labelled nullary atoms there are only variables as terms.
+633 For every c.e. D-fork and every parameter, syntax, substitution and finite derivation initiality exist; c.e. formula words, transition relabeling and typed constructor polynomial Q_D supply the carriers.
+654 Finite folding yields a unique natural evaluation, also for arbitrary carriers over the parameter object by preserving its coordinate.
+664 Lists and equality on Δℕ use identical variable transitions. Relabeling nullaries cannot alter occurrence or capture tests, so Adm and sentences are stable.
+674 Check every label in formula parameters, logical leaves included, and check A for nonlogical leaves. Parallel semidecisions give c.e. proof carriers. Relabeling preserves rules and membership.
+687 Target algebra evaluation on trees is natural and unique; for A↪Z×S retain z in each node, and check (z,ψ) in its labels. This makes an initial algebra over Z×F and equivalently in the iterated slice.
+703 Embed propositional formulas j:S↪S_f by retaining syntax, generate first-order formulas from signed atoms, and then pull back to sentence theory.
+716 Choose global distinguished atom and tautology top=p⇒p. Erase equality to top and ∀ to its body, preserving other constructors. This natural map retracts j after sentence inclusion and is invariant under admissible substitution. Claim conservativity, consistency, internal and endpoint incompleteness.
+749 Preimage of T_p under erasure is a closed formula subobject; three schemes translate literally, remaining four are uniformly provable propositional tautologies by displayed Hilbert derivations. Leastness in both directions and retraction give j*T_f=T_p; negation preservation gives consistency.
+793 Pull back a complete consistent first-order enlargement along θ_f to contradict inseparability of A,B. Thus T_f essentially incomplete.
+804 At an endpoint pull back the c.e. first-order theorem set along j_i. Consistency, propositional closure and any hypothetical completeness pass through negation and axioms. Contradicts the propositional result.
+815 Any consistent enlargement gives Turing partial slices, full faithfulness/properness of postcomposition, essential incompleteness and inseparability of the constant theory. The common global theorem j(top) provides the evaluation point and transports any slice separator back.
+
+@a-syntax-and-theories
+5 Assuming stable initial algebras for syntax/lists and an initial derivation algebra at the chosen axioms, sentences are a pullback and generated theories are images of sentence conclusions.
+13 Cockett and Maietti supply historical antecedents of parameterized recursion. The precise stability used here is stated subsequently.
+18 Regularity means finite limits, stable regular epis and epi-mono factorization. Additional disjoint stable finite coproducts imply decomposition of the source of any map into a sum.
+28 Left-associated products/sums and canonical unit/associators specify all types. Power zero is terminal, power one identity, and f⁰=1.
+37 2=1+1. Product distributivity splits 2×2 into four summands and 2^n into 2^n summands. Boolean truth tables on jointly epic summands prove the algebra identities.
+63 For p:X→2, disjoint true/false pullbacks give an iso to X; copair restricted branches through its inverse, giving the unique typed conditional.
+79 Free variables in displayed internal expressions denote projections, constants denote c!_X; identities hold on that whole generalized source.
+85 Assume ε:V×V→2 has pullback of true the diagonal; pulling back false yields its complement. Bounded-arity coefficients Σ_k,Π_k are arbitrary objects; equality is logical.
+103 Polynomial functors change to slices using constant families; B_P preserves finite limits/coproducts, giving natural α. Stability means B_Pι α remains initial for every P, including nonconstant target algebras in that slice.
+122 Initial many-sorted syntax and logical signatures cited as antecedents.
+129 Accounts of binders modulo renaming are compared with this paper's named syntax and partial admissible substitution.
+137 K's two factors use variables/function symbols and equality/relation/connectives/binders. Componentwise identity and action on product powers define the endofunctor.
+151 Definition of named-variable syntax requires an initial two-sorted K-algebra stable under parameters and a parameter-stable initial list algebra 1+V×−.
+158 List of constructor types. Every algebra has unique interpretation at both sorts, also in slices. A subalgebra of initial carrier receives a section, hence a monic isomorphism, giving induction.
+186 Parameterized list recursion gives concatenation, membership and deletion. The two membership laws follow by nil/cons induction and Boolean cases on labels.
+206 Fold to lists to track ordered free-variable occurrences, with duplicates: singleton at variable, concatenate in order, erase bound variable under ∀, keep occurrences under negation, nullary contributes nil.
+223 Sentences are pullback of nil under FV_Fm. Negation restricts by its FV equation; existential quantifier is defined by ¬∀¬.
+239 Options O(Y)=1+Y with success/failure branches; distribute over product to lift binary operations and binders while propagating failure. Analogy with earlier substitution account is historical.
+253 Parameter E=V×Tm. Paired algebra carries original and substituted term/formula. Variable branch tests equality; function/atom branches substitute all terms; negation/implication propagate failure.
+271 For binder y, test y=x then retain original quantified formula. Otherwise check x absent in original body or y absent from replacement, then apply lifted ∀ to recursive result; remaining cases fail.
+289 Initiality gives unique total term substitution and optional formula substitution. Original coordinates form algebra endomorphism of initial object, so are identities. Pull back success for result and a complemented Adm mono.
+313 Pulling success back on quantified input gives equality case or distinct-and-safe-and-body-success. Formula result on each summand is explicitly typed via the lift to Adm and reattachment of the binder.
+335 Substituting the variable for itself is admissible identity; absent occurrence gives the original term or successful original formula, on the indicated subobjects.
+358 Simultaneous parameterized induction handles each branch. Equal binder shadows, distinct names give an automatically true capture test for identity substitution; deletion/membership transfers absence to the body.
+373 Arbitrary finite ordered rule family p_n:R_n→F^n, q_n:R_n→F defines H on D/F by pullback of q^n along p_n and coproduct. Arity zero is R₀; pullback uniqueness gives action and laws.
+402 Definition of a closed subobject is existence of an H-algebra on a mono with matching conclusion.
+411 Monicity makes that algebra unique; nullary part includes axioms, other parts enforce inference. Inclusion of closed subobjects automatically commutes with their algebra structures.
+416 Wißmann's factorization lifting is identified as context; the specific theorem is independently proved here.
+420 Assume an actual initial H-algebra. Factor its conclusion c=me. Products and pullbacks preserve regular epis and finite coproducts preserve coequalizers, so He is regular epi.
+433 The square with m and He has a unique diagonal since eδ coequalizes its kernel pair. This provides closure of the image; any closed mono receives an algebra morphism from P and therefore contains the image.
+455 Seven schemes are specified exactly. Three propositional and four quantifier/equality schemes use the indicated sources, admissibility pullbacks, absence of x, or intersection of two successful substitutions. Authors Hájek–Pudlák and Hirst–Hirst identify antecedents of the schemes.
+503 Nonlogical axioms A live on sentences. R₀=L+A, R₁=V×F for generalization, R₂=F² for MP with premises φ,φ⇒ψ. Their typed maps give H_A.
+516 If this H_A has initial algebra, its image is least rule-closed formula subobject, and the image of sentence-only conclusions is its pullback by the sentence inclusion (regular-image stability).
+534 Assume existence for every axiom mono. Factoring c_US through U says Gen(U)≤U; axiom inclusion supplies reverse. Reflection yields least sentence theory.
+542 In a split restriction category with regular total category and partial inverse r of the particular image mono m, mr fixes f; split any idempotent a fixing f and factor f through its monic inclusion to infer am=m. Thus mr=bar r=ran f.
+564 Cockett–Guo–Hofstra give related range/image factorization assertions with separate hypotheses. They motivate comparison with regular images.
+570 For regular D, Par(D,Mono) has split ranges and total category D. Every total mono has a partial inverse in it; the partial identity span of sentence image represents ran c_AS. In another split category require this actual mono to have partial inverse.
+588 Any range-preserving restriction functor sends the splitting equations for ran f to those for ran Gf.
+599 For propositional syntax V+Z+Z², three logical schemes and signed axiom mono give the nullary rules. R₁=0 imposes no closure even without strict initial object because its premise equals conclusion. R₂ is MP. Conditional initiality gives the least closed theory; the negative generalized axiom is νθ i_- x.
+
+@b-three-point-cosheaves
+5 D,L,R name the three nonempty proper opens, and cosheaf morphisms are natural transformations.
+9 Every cover of a proper open contains itself; covers of X without X contain L and R. Thus the pushout over D is exactly the remaining axiom. Restriction to these opens and extension by their pushout are inverse up to a natural isomorphism, with action on arrows forced by coprojections.
+46 The pushout at X is the tagged endpoint union modulo symmetric finite paths generated by a center element's two images. Edges and paths are c.e. and componentwise natural transformations preserve the equivalence relation and give the indicated quotient map.
+61 H=(1←0→1) has H×H≅H yet its top cosheaf value has size two and its square size four. H→constant 1 is monic in the diagram category but has top value 2→1. Extensivity is the specified slice equivalence.
+83 Finite limits, finite coproducts, regularity, extensivity and componentwise characterization of monos/images are claimed for the functor category; use numerical structure from §8.
+95 Componentwise universal constructions are natural by uniqueness. Componentwise image is a subdiagram; coequalizing morphisms descend naturally through componentwise surjections by canceling q₀. Pullbacks preserve these images.
+113 The three singleton probes H₀,H₁,H₂ represent the corresponding carrier elements by computable maps. Thus diagrams are monic iff each component injective, with inverses computable on images.
+128 For a diagram map into A+B, the natural c.e. component partitions form disjoint subfunctors reassembling the source. Restriction of morphisms and copairing are inverses, giving extensive slice equivalence.
+137 For every partial map choose actual c.e. domain subfunctor and a total map from it. Composition has preimage-intersection domains componentwise. Claim split prodominical structure, partial choice, stable ranges, and pullback of meets/finite joins.
+168 Domain partial identities satisfy restriction axioms componentwise and split via inclusion/inverse. Products pair on intersection; coproduct joins tagged domains; zero products are empty.
+185 Image components form a c.e. subfunctor. This partial identity is the least fixing idempotent; agreement of composites tests domains and values on each image element.
+195 For total u, pullback projection has image u⁻¹im f. Product ranges are product images. Inverse images restrict to actual source-domain points whose value is in the target set, commuting with finite unions and binary intersections.
+212 Probe partial monicity using elements in its domain to get componentwise injectivity. Unique computable image inverses commute with transitions; they define the required section.
+226 In the finite subfunctor generated by a center point, the component containing its generator must contain both endpoints; hence connected. Endpoint singleton domains are likewise connected.
+242 Testing the connected domain generated by each source point detects definedness and value componentwise, proving local connectedness.
+254 Embed an arbitrary Y by coding its component inputs and both endpoint images in V₀, and coding endpoint elements at V_i. This is natural and injective, with c.e. images and inverse natural by injectivity. Thus obtains a restriction mono m:Y→V.
+277 Nonempty-word functor extends to partial arrows on the domain where every entry is in D_f. Identities/composition follow entrywise; singleton/concatenation form the free internal semigroup via the unique associative multiplication fold.
+299 The length n≥1 is coded with n−1 and the n-tuple code, giving a computable bijection for nonempty words of natural numbers.
+305 Coordinatewise pair/unpair on all four or two coordinates commutes with transitions and inverts the product isomorphism.
+316 Parity of common k chooses the same summand at all components. Quotient by 2 on that summand and its inverse give V≅V+V.
+322 Decode k into a word of length n and decode other coordinates as tuples of that length. Assemble componentwise words and invert by collecting coordinates. This is natural and gives V≅V^#.
+343 To realize τ in Par(E), must supply an actual subdiagram of V×V and a total natural map from it.
+347 Adopt ordinary s-m-n on coded finite tuples, including the nullary-parameter case; conclusion is a total computable code map and extensional equality including divergence.
+364 Claim ∃τ:V×V⇀V, ∀Y,F:Y×V⇀V, ∃total c:Y→V, τ(c×1)=F; in addition fix the exact endpoint decoding formula using the endpoint index coordinate.
+380 Endpoints run the ordinary universal machine chosen by p and ignore parameter coordinate k. Their halting sets are c.e.
+388 At center run three machines, require all halt and both endpoint outputs equal the projections of the center output. These finite numerical conditions give a c.e. center domain, with value C there.
+414 The center checks imply both endpoint pairs lie in the appropriate domains and ensure naturality of output. This is the actual partial fork morphism.
+428 For arbitrary partial F, pretest its *exact* domain on each component. Specialize each of the three code programs on its parameter, a map total on the whole ambient numerical power, recovering precisely F_j(y,−).
+453 The parameter fork records two specialized endpoint codes at their images and one specialized center code, with common first coordinate zero. It is a total natural transformation.
+465 At endpoints specialization is exact. For center y,x in D₀, subfunctor/naturality force both endpoint halts and coherence. Conversely a successful center run includes the center's halting computation, forcing D₀. Thus all three partial values and domains coincide.
+493 Induct frame isos: every generated object iso to V. Products, sums, zero and τ with its parameters restrict by fullness, giving a recursion category.
+513 Fullness retains endodomain order and least fixing ranges, hence the inclusion is a range functor.
+518 Split functor compresses f by r_d f m_e and inverts on homs by m_d g r_e, respecting composition/identities and restrictions. Every Y appears as the domain of a restriction idempotent on V up to iso, so it is a restriction equivalence.
+538 An arbitrary idempotent p maps its domain into itself and fixes its image, componentwise. That c.e. subfunctor, inclusion and corestriction split p.
+555 Compress general Karoubi morphisms to the image objects. The sandwich/extension is inverse on homs. Restriction is bar f e on a Karoubi object, giving the formula after compression, and restriction-idempotent images already supply essential surjectivity.
+573 Restrict the actual numerical restriction equivalence to totals and identify total spans with the underlying computable map, obtaining the earlier F equivalence.
+587 Decidable equality on V means a *natural* V×V→1+1 pulling back the true mono to the diagonal.
+592 A terminal fork has five subobjects (four with empty center, one with singleton center). The numerical terminal singleton has two. A restriction equivalence induces equivalence of split totals preserving terminal subobject orders, impossible.
+610 Two distinct center points differing only in z have equal first endpoint image. A natural equality test into a constant 2 must then identify them as equal, contradiction.
+
+@c-section-lifting
+4 Claim a source lift is genuinely necessary, despite faithfulness, zero reflection and product preservation.
+8 K is the ordinary diagonal halting set and is nonrecursive. Adopt oracle programs W_a^A and one bijective pairing.
+18 Define C_K arrows by exact K-c.e. domain and an ordinary partial-recursive extension on the fixed numerical codes. A total arrow therefore is an ordinary total recursive function (and conversely).
+30 F is the concrete inclusion of this category in sets and partial functions.
+32 On ℕ, programming index pair (e,a) denotes the restriction of φ_e to its intersection with W_a^K. Every allowed map has such indices.
+45 Claim a recursion category with ranges/products/coproducts, faithful range interpretation with nonzero identity and stable target joins, a separated specific diagonal pair, and two disjoint arrows with no common upper bound.
+64 Composite uses composed ordinary extensions and exact K-c.e. domain D_f∩f₀⁻¹D_g, verified by dovetailing. Restriction extends with identity; empties and identity/composition laws as in Pfn.
+75 Pair on domain intersection and copair on tagged union, using ordinary extensions. Computable injections/projections give the universal properties and each original numerical object is coded isomorphically to ℕ.
+86 Enumerate f(D_f) with oracle K using the ordinary extension for values. Its partial identity is the least fixing range and satisfies agreement. Images commute with products; K-c.e. domains have finite union as join.
+97 τ_K uses ordinary evaluation for computing value, K-c.e. test for exact allowed domain. Specialize the ordinary value program and the oracle-domain program separately *by ordinary total functions* and combine their codes. Conjugating by γ_X makes this universal at every object.
+128 Inclusion is faithful, reflects zero, preserves partial-map structure and has nonempty identity. In Pfn inverse image of unions is union.
+133 With parity output the two diagonal domains use p(q)=φ_{π₀q}(q) restricted to W_{π₁q}^K. Ordinary c.e. A tests unrestricted even outputs; computably translate this test into a halting-on-self index. Thus A and Aᶜ are K-c.e. and form a complementary separator.
+162 K reduces to A via n↦⟨h(n),a*⟩, so A is nonrecursive. The tagged restricted codiagonal has unique section s_A, whose output tag decides A, so it has no lift. In fact *any* partial target map with exactly these two inverse images is total and its tag decides A.
+198 Two tagged injections restricted to A and its complement are source arrows, but any upper bound would be their total nonrecursive switch. Therefore even a common upper bound is absent.
+206 This is a counterexample to the cited 2006 assertion as stated: Pfn is split locally connected with weak choice, τ_K gives the older weak Turing property, F1≠0, and the diagonal pair has a separator. The argument in that source requires lifting a target section.
+
+@d-faithful-family
+3 For consistent T⊇PA in its countable language, completeness and downward Löwenheim–Skolem supply a countably infinite model; transport to ℕ. The family of all such structures is set-indexed and nonempty.
+11 Product category of Pfn over all these models uses coordinatewise composition and operations. F_T assembles the earlier interpretation functors.
+21 If graph classes differ, T+negated universal graph equality is consistent; completeness/LS give a numerical-carrier model seeing the difference. Thus F_T faithful and coordinatewise structure-preserving; claim product split locally connected, weak choice, pullback preserves binary joins and F_T1≠0.
+39 Split coordinate partial identities through their carriers. A partial identity supported at one model and one point is connected and jointly these test definedness/value everywhere.
+51 Single-coordinate singleton probes detect partial monicity; the coordinate inverses give a section. Pullbacks preserve unions, and nonempty model family plus nonempty X_M gives nonzero identity.
+61 The assertion S_T fails local connectedness for every consistent c.e. T⊇PA is adopted from Di Paola–Montagna Cor. 4.4. Its proof is separate from faithfulness.
+64 Inclusion T⊆T' sends program class to the same representative, preserving all graph-defined operations and canonical τ. Dropping other model coordinates strictly commutes with interpretations. Nesting and identities follow on representatives.
+93 For arbitrary Turing τ and iso b descending from PA, a countable model gives the inseparable pair in S_T. Q onto each hom-set lets arbitrary target morphisms lift to source, hence Qτ is Turing. Formula for pair preserved and its images inseparable in every stronger consistent theory.
+121 F_Tτ_T is not universal. In one model choose a partial constant defined exactly away from the diagonal domain, other coordinates zero. A global parameter would contradict the definedness at that parameter itself.
+142 Boolean coordinate restriction lattices give target separators for every disjoint pair. Source complementary domains supply sections that do lift by the switch lemma.
+150 For c.e. T, define observation E_T([C]) by numeral-provability, c.e. independent of representative; preserves finite meets, order, top/bottom and grows with consistent extension. Compute C κ_n=κ_n iff T⊢C(numeral n), iff F_T witnesses equality by faithfulness, iff all chosen models satisfy the numeral instance.
+183 With T=Th(ℕ), quotient graph equality holds exactly for extensionally equal denotations. On identical objects that gives a category isomorphism with Rec. The complete theory still has a source inseparable pair.
+
+@e-reading-lean-proofs
+8 Reconstruct Hom(ΣA,B)≃Hom(A,JB) by composing a sentence translation with θ or extending a signed assignment; variables fixed and closed assigned sentences substitution-invariant. Closure lifts signed axioms to their generated theory.
+32 Both composites of restriction and extension are identities by evaluation on generators. Identities give unit θ and counit interpreting each sentence-named predicate by itself. Pinned source links are cross-references.
+44 Any complete consistent theory U≥T supplies, via θ*, a complementary enlargement of disjoint a,b.
+57 Conversely assign Booleans from separator and fold with truth of all equalities and projection quantification. Truth is closed and contains axioms, negation complements it, giving a complete consistent extension. Distinguish registry subobject assertion from full categorical statement.
+72 In every *possibly nonstandard* arithmetic model, use both derivations' positive supports in one model-internal finite list L. The valuation is a single morphism List N×Fm±→2 restricting to membership at a general atom. Disjoint α,β make every negative leaf true.
+91 Model-internal induction on coded derivations with common L gives opposite conclusions true, impossible. First-order completeness lifts validity in all PA models to a PA proof. This requires internal induction, not ordinary external induction on arbitrary nonstandard codes.
+109 A target conditional pulls first summand back to N and second to P. Its existence supplemented with an actual source lift is hypothesis.
+116 Universal source specialization yields total g with h g=ℓg. The two pulled-back domains swap, then disjointness and inequalities make them zero.
+129 Appendix C nonrecursive branch choice blocks *any* total source lift since reading its tag would decide A ordinarily.
+138 Evaluation takes pullback at the point λ_U and transports evaluated W along the inverse of EB≅1. The object paired with closure is an original sentence theory.
+149 The transported formula closure restricts to W₀ by naturality at j. Evaluation of rule morphisms gives closedness, consistency and completeness transfer. Thus slice complete extensions yield base ones and constant families give the reverse.
+170 One internal q=θ I(g) handles all enumeration indices e, and its value is code of α at the numeral for g(e), with α testing even diagonal output.
+181 A Γ_e-proof yields odd, hence a PA refutation, while a Γ_e-refutation yields even, hence PA proof. Consistency of the extension excludes both.
+192 For all parameter/axiom families, an initial algebra realizes the unique e over both parameter and conclusion obeying the inference algebra square. Relevant distinction between a logical leaf at w and a nonlogical (w,ψ)∈A.
+212 For the Miller RCF language, equality of the actual theorem membership at s_φ and finite Hilbert provability from sentence words. For an arbitrary mono recover its image by axiom-word encoding, get an iso commuting with the original inclusion, transport proof leaves both ways and deduce equal conclusion images. Refutations obtained by inverse image of ν.
