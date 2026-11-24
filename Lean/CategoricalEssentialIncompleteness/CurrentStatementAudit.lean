@@ -1,5 +1,7 @@
 module
 
+public import CategoricalEssentialIncompleteness.V46ComputableTuringCategoryChecks
+
 public import CategoricalEssentialIncompleteness.V46DominicalLiteratureChecks
 public import CategoricalEssentialIncompleteness.V46SyntacticEffectiveInseparabilityChecks
 

@@ -4,8 +4,8 @@ Updated 23 November 2026
 Active WSL2 assignment — manuscript v81
 
 Fetch origin/main and execute docs/CODEX_WSL2_CEI_V81_LEAN_HANDOFF.md in full.
-The previous completed run tested v78 at 486414918381caf47688b1ae6574f1d9fe6e7b3a.
-Its report and machine-readable receipt were committed in c37ff1685f9d67cc37fd8b3a7e1e3fe56011273f.
+The current v81 report and machine-readable receipt are docs/V81_WSL2_LEAN_VERIFICATION.md and docs/V81_WSL2_LEAN_VERIFICATION.json.gz.
+The archived v81 full replay at 830d03a5adcf144a003feb36f88bd06e0c5b0cf5 is documented in docs/V81_WSL2_LEAN_VERIFICATION_830d03a.md.
 Verify the mathematical comparisons against the active manuscript and push the tested sources and report to origin/main.
 
 Fixed release and Appendix E citations

@@ -4,7 +4,7 @@ The independent reconstruction follows the active TeX in printed order. It recor
 
 The numbered correspondence accounts for 77 results and three definitions. The section dossiers below cover the intervening assertions, steps inside proofs, examples, definitions and literature attributions. The v81 application table supplies the proofs for entries that were open when those dossiers were written. [Numbered results and declarations](../../../FORMALIZATION_STATUS_V81.md#numbered-statements) · [v81 application table](../../../FORMALIZATION_STATUS_V81.md#proofs-for-the-v81-comparisons) · [Unnumbered coverage supplement](../V80_ASSERTIONS/unnumbered-coverage.md) · [Citation inventory](../V80_ASSERTIONS/citation-index.md).
 
-The further historical comparisons prove the conditionally stated Di Paola–Heller result, the two categorical theorems of Bernardi, Montagna’s binary productive morphism, and the four background results of Appendix A. The ledger traces the remaining §1 constructions to the passages that name them. [Exact types](../../../FORMALIZATION_STATUS_V81.md#categorical-domains-and-factorization) · [Sources and dependencies](historical-comparisons.md).
+The further historical comparisons prove the conditionally stated Di Paola–Heller result, the two categorical theorems of Bernardi, Montagna’s binary productive morphism, both directions of Cockett and Hofstra’s Theorem 4.9 on computable morphisms, and the four background results of Appendix A. The ledger traces the remaining §1 constructions to the passages that name them. [Exact types](../../../FORMALIZATION_STATUS_V81.md#categorical-domains-and-factorization) · [Sources and dependencies](historical-comparisons.md).
 
 ## Printed inputs
 
