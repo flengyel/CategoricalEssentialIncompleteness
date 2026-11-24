@@ -1,0 +1,50 @@
+{
+  "reader": "one",
+  "manuscript_version": 84,
+  "scope": "Full source-bound kernel receipt and frozen independent v84 mathematical judgment",
+  "validated_at_utc": "2026-11-24T23:47:11.772333+00:00",
+  "tested_source_commit": "b37f8908435a4c2991af5b95de4645980ac60a05",
+  "tested_tree": "1adfdc0752bdfaf3e250627aedfa3cdbf61b4857",
+  "receipt": "../../../V84_WSL2_LEAN_VERIFICATION.json.gz",
+  "receipt_sha256": "1e1b15b3796bdb197a04b4edd838beb0b320d51c6c25401af08229a1947b5ea6",
+  "official_raw_report_sha256": "d2d00971192029520974e364d63aeaffe0e69d56ff42f38ee2ee7ceb09adf380",
+  "frozen_verdict": "verdict.json",
+  "frozen_verdict_sha256": "7d05680f58bcc5c11300c712e691adcdd70674bfdeb36240298cc2f4fa7fd554",
+  "manuscript_first_reading_commit": "b7bf333810d653be90d2d1ce1678ad81345f98b3",
+  "wrapper_started_utc": "2026-11-24T19:23:36+00:00",
+  "wrapper_ended_utc": "2026-11-24T23:45:23+00:00",
+  "wrapper_exit_code": 0,
+  "validated_counts": {
+    "full_commands": 2101,
+    "targeted_commands": 35,
+    "targeted_strict_modules": 31,
+    "current_modules": 1174,
+    "current_declarations": 35112,
+    "retained_declarations": 1274,
+    "selected_queries": 78,
+    "inputs": 2744,
+    "additional_inputs": 37,
+    "dependencies": 16
+  },
+  "frozen_mathematical_counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_dependencies_clean_and_pinned_at_both_endpoints": true,
+  "all_full_and_targeted_command_log_digests_checked": true,
+  "source_inputs_and_extra_audit_inputs_matched_tested_git_tree": true,
+  "source_archive_and_pdf_copy_matched": true,
+  "official_axiom_map_subset_of_permitted_axioms": true,
+  "enclosed_official_report_identical_to_local_original": true,
+  "independent_declarations": 1670,
+  "independent_declarations_compared_in_official_axiom_maps": 1621,
+  "mismatched_shared_axiom_closures": 0,
+  "frozen_artifact_digests_verified": 9
+}

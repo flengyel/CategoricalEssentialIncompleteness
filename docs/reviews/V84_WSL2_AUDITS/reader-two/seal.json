@@ -1,0 +1,41 @@
+{
+  "manuscript_commit": "b7bf333810d653be90d2d1ce1678ad81345f98b3",
+  "method": "Direct expansion of main.tex in reading order. No Lean sources, correspondence, or other reports consulted. Printed Appendix E read as manuscript prose.",
+  "utc": "2026-11-24T18:53:46.748669+00:00",
+  "source_input_sha256": {
+    "main.tex": "37a07846825410efb4eed7f7b0028f1d4670d6f8c1c9870406f15aeaf7121102",
+    "preamble.tex": "930058ab368460e35cce02e919e287384cba3d42dd9b14c2c0a3f0e6642fa9b1",
+    "abstract.tex": "c15ddea3918e9bbc8bdb8c8e603a6be5aeaafe6981b64ad52187424743f8cecd",
+    "sections/01-introduction.tex": "834b0146ee18facfd2da17793501f653c4a9e089d3d13adce721820ef9285283",
+    "sections/02-categorical-preliminaries.tex": "6de644d7144268a89b36760906ea312dafe7802899fb9906d006ee537ade8ec8",
+    "sections/03-sections-and-inseparability.tex": "3a72481666c54e4772df21c1e30c0bbe14ce6234c6e329a76f37b3faaeb1d70c",
+    "sections/03a-internal-theories.tex": "a51d68cbb6e971902bc65b43735381c6cde0cec17882eca377bd07eb38f5f2e1",
+    "sections/03b-internal-adjunctions.tex": "5c52905586048b2a39ddd68241653a256990137db170aed29b5d44cd03c3f423",
+    "sections/04-theory-extensions.tex": "83ce38c15e5f53fcdf2a81bd0e28af9deab38fac8d4367441f22d5bb49f8cddb",
+    "sections/05-syntactic-recursion-category.tex": "74f11e96ea932f82b48972eba707f83edcddb5afaf068e628e9663644d0a0962",
+    "sections/05a-internal-syntax.tex": "2afafb146d44b1ea0233977032b782a1ef0f3af5be058bc7104c1ae43af3ab8a",
+    "sections/06-interpretation-in-models.tex": "5f6b3ce89275cde13a846a322970b0c4237c20661998986ad7993850b1273c33",
+    "sections/08-essential-incompleteness-of-arithmetic.tex": "9a8320d27547dbc00e79719581508ebd413ea9dc40b41ae1134a632c3877e01d",
+    "sections/08a-uniform-theories.tex": "6c17055501ded676f8b3d596c7df0b7915a94c7930e757535ce11a11a18214e0",
+    "sections/08b-uniform-independent-sentences.tex": "536b4dc638d7ac16aef21f40eb44e6aaddc2f9c8181189d095c401045e66f094",
+    "sections/08c-numerical-realization.tex": "8f8a8ff060bc00a26a1c8c79942b7dc26016ff63dbe40098c455feb5d4c3417e",
+    "sections/08d-numerical-incompleteness.tex": "6bc0f9996ceece0e811fef0d0a2a82fb7b0027be34ad92184d90745bd3934676",
+    "sections/04-miller-sequences.tex": "df3ad33029894f3c301c9681ea7337c269d9fee9a16c9029c909aa35969af211",
+    "sections/09-three-point-space.tex": "4f121b1695b391d92cd403e8abb90731c95f2acc6032ff8726e14263fe8d4a40",
+    "appendices/a-syntax-and-theories.tex": "4fb1837ce419e43817245837a0e30c8406c03c8328b6911a66b859daac7ad583",
+    "appendices/b-three-point-cosheaves.tex": "ac971d8a951f88656d47dfdb4c0db0380a9fe7f17897ea91a6830b2f400d93da",
+    "appendices/c-section-lifting.tex": "6b50d0f337ffae078dabc7178d97b82c7c2616f63a13cdf538b74ddb93308287",
+    "appendices/d-faithful-family.tex": "552d17536a53920274574abf0a321bc64ba2d798ce469a1686e4e9b3585c5460",
+    "appendices/e-reading-lean-proofs.tex": "a014501e2dcbe331beb371f44d163180b4956b85319be37777b59695b08794f1",
+    "bibliography.tex": "ac7cfdd713ccf5521484194d8b960e034b8e6ac871a59d09827a4d910a4f3627"
+  },
+  "pdf_sha256": "801e7c4641d42089285f144ddd6f6827dafe8c0cae529f61f025304553105bbd",
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "assertion_records": 3073,
+  "inventory_uncompressed_sha256": "180813a259e02b78556aa0119dbac64d5abb1f20e4f8bb205abf7a82e271a018",
+  "artifacts": {
+    "manuscript-assertions.tsv.gz": "cb788213db4fd7c650d414cd3094950d402b8a373c3a92bbfeb0382f21e1487a",
+    "manuscript-first.md": "57c3f7b89b36c26f642c1c400c1f6033310943d7a853f3296fddddac68d4b13c"
+  }
+}

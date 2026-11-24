@@ -1,0 +1,27 @@
+{
+  "tested_commit": "b37f8908435a4c2991af5b95de4645980ac60a05",
+  "manuscript_version": 84,
+  "frozen_utc": "2026-11-24T20:08:33.981316+00:00",
+  "reader": "independent second reader",
+  "mathematical_errors": 0,
+  "ambiguities": 0,
+  "lean_omissions": 0,
+  "proof_gaps": 0,
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "assertion_and_proof_step_records": 3073,
+  "bibliography_entries": 40,
+  "cited_key_occurrences": 81,
+  "seal_sha256": "7428c17b90e0b471e3a435c651d12de072481a0c477341b21f5eafe4679e59bb",
+  "strict_runs_passed": 14,
+  "printed_axioms_permitted": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "tested_critical_propositions": 13,
+  "other_v84_reader_report_consulted_before_freeze": false,
+  "whole_replay_qualification": "The independent mathematical judgment is frozen. Whole-paper replay qualification is recorded separately upon completion of the official run.",
+  "correspondence": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/b37f8908435a4c2991af5b95de4645980ac60a05/FORMALIZATION_STATUS_V84.md",
+  "kernel_receipt": "../../../V84_WSL2_LEAN_VERIFICATION.json.gz"
+}

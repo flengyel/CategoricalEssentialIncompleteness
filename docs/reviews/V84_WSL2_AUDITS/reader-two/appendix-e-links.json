@@ -1,0 +1,252 @@
+{
+  "tag": "cei-v72-palomar-v3",
+  "resolved_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+  "registered_version": 3,
+  "archived_mechanical_report_sha256": "f3c5ee83bbe00679091e99fb01bd7909dca0169f8ffecb591e65788b0599033d",
+  "archived_preflight_report_sha256": "998f325f08fa0eda5a98c0eaaee41df38cda63c941c0b43bda23a93100ea3022",
+  "receipt_and_registration": "docs/palomar/PALOMAR-2026-11-22-000009-v3/README.md",
+  "links": [
+    {
+      "appendix_line": 39,
+      "description": "The hom-set bijection",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean#L27-L56",
+      "file_sha256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+      "line_span_sha256": "bffa6b7a1f1ebbe32d2527b5b3961486427544726cc88bfb591ed8c1017c4cec",
+      "declarations": [
+        "def restrict {A : Pair F} {B : Theories (D := D) (V := V)}",
+        "def extend {A : Pair F} {B : Theories (D := D) (V := V)}",
+        "def homEquiv (A : Pair F) (B : Theories (D := D) (V := V)) :"
+      ]
+    },
+    {
+      "appendix_line": 40,
+      "description": "its naturality, unit and counit",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean#L58-L91",
+      "file_sha256": "b12eff38f11bf0c900aec7214911c9119fba2009fdf3ad22f0fab2f942c5b45d",
+      "line_span_sha256": "6b0d5c0b7063e3ba5a799bdaea0c0153d369d9ef79c51ade9ba5e7a70246f1e1",
+      "declarations": [
+        "def adjunction : generation F ⊣ extraction F :=",
+        "theorem unit_arrow (A : Pair F) :",
+        "theorem counit_translation (A : Theories (D := D) (V := V)) :"
+      ]
+    },
+    {
+      "appendix_line": 64,
+      "description": "The two implications",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean#L43-L75",
+      "file_sha256": "fbd9d2e767845e7062af51c976fa745cfcd1315784443d571ed013e986e17d63",
+      "line_span_sha256": "0bdee3d36e432a73780c3e158e0e223ef79f2fbb8a61d101863d5662d2b5c78a",
+      "declarations": [
+        "theorem essential_incomplete_of_subobject_inseparable",
+        "theorem no_subobject_separator_of_essential_incomplete",
+        "theorem essential_incomplete_iff_subobject_inseparable"
+      ]
+    },
+    {
+      "appendix_line": 65,
+      "description": "the Boolean extension",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean#L28-L74",
+      "file_sha256": "46c924a7cd8d1c616a1f595b33aa90c8a6208baab092899f09494019d90f4a6e",
+      "line_span_sha256": "caec34df2e64a3ed08587adf6f8bf803a297d65684a0077e66c4171da2deb751",
+      "declarations": [
+        "def Separates (d : X ⟶ Two D) (a b : Subobject X) : Prop :=",
+        "def booleanTheory (d : X ⟶ Two D) : (F.presentation X).Theories :=",
+        "theorem booleanTheory_consistent (d : X ⟶ Two D) :",
+        "theorem booleanTheory_complete (d : X ⟶ Two D) :",
+        "theorem booleanTheory_contains_axioms (d : X ⟶ Two D) (a b : Subobject X)",
+        "theorem booleanTheory_extends (d : X ⟶ Two D) (a b : Subobject X)"
+      ]
+    },
+    {
+      "appendix_line": 68,
+      "description": "Lean declarations",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CEIPalomar/Solution.lean#L83-L110",
+      "file_sha256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+      "line_span_sha256": "527a9d951d125589401446258ff9e5c9fb86b3044229885d619dc82b71488881",
+      "declarations": [
+        "theorem essential_incomplete_iff_inseparable {V X : D}",
+        "theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V P)"
+      ]
+    },
+    {
+      "appendix_line": 99,
+      "description": "The common list",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean#L32-L56",
+      "file_sha256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+      "line_span_sha256": "4340601add7ecdb864c6a50fa6ae630a78ea6bf91134cde1bdc9a6e63691e4b1",
+      "declarations": [
+        "def jointSupport (p q : Obj 𝗣𝗔 M (Q).a.left) : Obj 𝗣𝗔 M P :=",
+        "theorem jointSupport_alpha (p q : Obj 𝗣𝗔 M (Q).a.left) :",
+        "theorem joint_left_truth (p q : Obj 𝗣𝗔 M (Q).a.left) :",
+        "theorem joint_right_truth (p q : Obj 𝗣𝗔 M (Q).a.left) :"
+      ]
+    },
+    {
+      "appendix_line": 100,
+      "description": "the contradiction",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean#L85-L92",
+      "file_sha256": "215a29419c12a85b52a9d6b20196fe84e3b9bf7ec26c2841ab29beadd67a48d0",
+      "line_span_sha256": "d131e25b4d520fa2ebe2cfe576d2d4542e8785222ddbe270a8ec448e3f197185",
+      "declarations": [
+        "theorem no_contradictory_derivations (p q : Obj 𝗣𝗔 M (Q).a.left)"
+      ]
+    },
+    {
+      "appendix_line": 101,
+      "description": "provability in PA",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean#L45-L64",
+      "file_sha256": "26e13f45fc78ea25c5bce088597797aed009d3414c8eb6790af50b1b8eb690ac",
+      "line_span_sha256": "8310f844232b52d9b3db560ab3ec9eac5a7cb56ac129c10b9f89f8fcf84bcb78",
+      "declarations": [
+        "theorem consistency_PA : 𝗣𝗔 ⊢ consistencySentence S := by"
+      ]
+    },
+    {
+      "appendix_line": 104,
+      "description": "Lean proof",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CEIPalomar/Solution.lean#L114-L145",
+      "file_sha256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+      "line_span_sha256": "66da974f638bb89e63c71a894e586b37931ce0150792d0f125eea7aaf052f8e0",
+      "declarations": [
+        "theorem pa_diagonal_witness :",
+        "theorem exists_inseparable_example :"
+      ]
+    },
+    {
+      "appendix_line": 127,
+      "description": "The two inverse images under $Fg$",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46Comparison.lean#L35-L89",
+      "file_sha256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9",
+      "line_span_sha256": "61cb775fd988ee7ca8caed504fae1914b82cc89e40b9d20fb70fbb6cb9580602",
+      "declarations": [
+        "theorem comparison_zero_inverse_images (F : RangeFunctor R A) {U : R}"
+      ]
+    },
+    {
+      "appendix_line": 134,
+      "description": "Nonexistence of the lift",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean#L89-L103",
+      "file_sha256": "c6be582e829347e24fd19ec8fae864b7a736a7dfe6b2a8e8b6b16f7c49c6cbbe",
+      "line_span_sha256": "7275abb668b55c1422ee33578151b6bfcfdc70228c4610b761a87db2d3067c07",
+      "declarations": [
+        "theorem missingSection_has_no_lift :"
+      ]
+    },
+    {
+      "appendix_line": 166,
+      "description": "Closure under evaluation and the two implications",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean#L68-L111",
+      "file_sha256": "97162b1dcb7d2152cce6676166f72c628a25a249faa22fa451354769c5c58d0b",
+      "line_span_sha256": "42760bfad1377c230c131315cad9778a9de88f02f0e8bff4b025cca3f9d06dd8",
+      "declarations": [
+        "theorem evaluate_closed (W : FirstOrderReflection.Theory Q) :",
+        "def evaluationTheory (W : FirstOrderReflection.Theory Q) : P.Theories :=",
+        "theorem essential_incomplete_iff (T : P.Theories) (hc : P.Consistent T.val) :"
+      ]
+    },
+    {
+      "appendix_line": 187,
+      "description": "The diagonal output and the sentence code",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean#L116-L128",
+      "file_sha256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+      "line_span_sha256": "7746ad83a66349a05f5dfe58b07a4f0a3dde1db98296f7ada98a790bf55411f6",
+      "declarations": [
+        "theorem output_avoids (e : ℕ)",
+        "theorem sentence_value (e : ℕ) :"
+      ]
+    },
+    {
+      "appendix_line": 188,
+      "description": "the two excluded derivations and the uniform morphism",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean#L184-L218",
+      "file_sha256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+      "line_span_sha256": "452df28fd7eb0ec2e9e839af3ee069233f0361889a9311b370833a0345297dfd",
+      "declarations": [
+        "theorem independent_instance (e : ℕ)",
+        "theorem uniform_independent_sentences :"
+      ]
+    },
+    {
+      "appendix_line": 209,
+      "description": "The inference algebra and the two equations",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean#L97-L126",
+      "file_sha256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+      "line_span_sha256": "25d46c0b2f060b5dc790b577db250ac6cb8c1eda20f8aee300bb2683c18bbe8b",
+      "declarations": [
+        "def printedRules (A : Subobject (P ⨯ S.sentenceObject)) :",
+        "def printedAlgebra (A : Subobject (P ⨯ S.sentenceObject)) :",
+        "def printedInitial (A : Subobject (P ⨯ S.sentenceObject)) :",
+        "def printedFold (A : Subobject (P ⨯ S.sentenceObject))",
+        "theorem printedFold_conclusion (A : Subobject (P ⨯ S.sentenceObject))",
+        "theorem printedFold_constructor (A : Subobject (P ⨯ S.sentenceObject))",
+        "theorem printedFold_unique (A : Subobject (P ⨯ S.sentenceObject))"
+      ]
+    },
+    {
+      "appendix_line": 210,
+      "description": "initiality for every axiom subobject",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean#L130-L151",
+      "file_sha256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+      "line_span_sha256": "fa36c7800ef3797a8638a0c102472cbd05289ba7637639ffbac89da6783a0b2a",
+      "declarations": [
+        "def printedStatement : Conclusions z where"
+      ]
+    },
+    {
+      "appendix_line": 236,
+      "description": "Preservation of conclusions and inference rules",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean#L155-L178",
+      "file_sha256": "807d9d3b558ec4e5e31910b66d4315e8bdf99ba5f4121fea409d4c8ec5663e9d",
+      "line_span_sha256": "29a07d415ffb3002c05378cf784042f88a76cc19d38e5a0770521fc7af8f0425",
+      "declarations": [
+        "theorem proofIso_conclusion :",
+        "theorem inverse_proofIso_conclusion :",
+        "theorem proof_constructor :"
+      ]
+    },
+    {
+      "appendix_line": 237,
+      "description": "the equivalence with finite provability",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean#L59-L95",
+      "file_sha256": "414f8d579d00937adaed4aa1ea5b47295ae95a3ad8b71f9b8b21040fe5aef156",
+      "line_span_sha256": "a0bd808131f4462ebfec06802e7f92f489991f6b48f6adc969535438e325a4ca",
+      "declarations": [
+        "private theorem literal_theorem_mem (Γ : Set ℕ)",
+        "def decodedSentence (s : (U).obj (S).sentenceObject) : OrderedFieldSyntax.Formula :=",
+        "theorem decodedSentence_closed (s : (U).obj (S).sentenceObject) :",
+        "theorem point_eta (s : (U).obj (S).sentenceObject) :",
+        "theorem theorem_mem (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ))"
+      ]
+    },
+    {
+      "appendix_line": 238,
+      "description": "recovery of the axiom subobject and conclusion image",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean#L139-L175",
+      "file_sha256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+      "line_span_sha256": "38090c48b8ade7383a6af9186b8213bfe8cd5eba6f163b0553220437e69388e2",
+      "declarations": [
+        "theorem axiom_subobject_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :",
+        "def rules (m : A ⟶ (S₂).sentenceObject) : RulePresentation (S₂).algebra.a.2 2 :=",
+        "def proofAlgebra (m : A ⟶ (S₂).sentenceObject) : Endofunctor.Algebra (rules a m).inference :=",
+        "def proofInitial (m : A ⟶ (S₂).sentenceObject) : IsInitial (proofAlgebra a m) :=",
+        "def conclusion (m : A ⟶ (S₂).sentenceObject) :",
+        "def sentenceProofObject (m : A ⟶ (S₂).sentenceObject) : Total.CanonicalTotal a :=",
+        "def sentenceConclusion (m : A ⟶ (S₂).sentenceObject) :",
+        "def theoremIdem (m : A ⟶ (S₂).sentenceObject) : Idem (S₂).sentenceObject.obj :=",
+        "def refutationIdem (m : A ⟶ (S₂).sentenceObject) : Idem (S₂).sentenceObject.obj :=",
+        "theorem sentence_image_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :"
+      ]
+    },
+    {
+      "appendix_line": 239,
+      "description": "inseparability and the independent sentence",
+      "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v72-palomar-v3/Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean#L327-L342",
+      "file_sha256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+      "line_span_sha256": "3bbafde112dd97cab510daa4219cef98b8973333998d1a7583135c5c39de099d",
+      "declarations": [
+        "theorem printed_essential_incompleteness_of_consistent",
+        "theorem printed_native_incomplete_of_consistent"
+      ]
+    }
+  ]
+}

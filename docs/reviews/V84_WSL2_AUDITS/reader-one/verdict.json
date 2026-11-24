@@ -1,0 +1,50 @@
+{
+  "reader": "one",
+  "status": "independent judgments frozen before communication with reader two and before inspecting the manuscript-side reviews",
+  "frozen_utc": "2026-11-24T20:12:47.072826+00:00",
+  "tested_commit": "b37f8908435a4c2991af5b95de4645980ac60a05",
+  "tested_tree": "1adfdc0752bdfaf3e250627aedfa3cdbf61b4857",
+  "manuscript_commit": "b7bf333810d653be90d2d1ce1678ad81345f98b3",
+  "scope": "CEI mathematical claims, including construction and existence, and external results actually used in their proofs. Historical comparisons carry primary-source attribution and scope checks.",
+  "counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "source_inputs": 25,
+  "paragraphs": 1082,
+  "sentence_display_spans": 3915,
+  "independent_argument_groups": 44,
+  "local_source_steps": 497,
+  "distinct_kernel_declarations": 1670,
+  "declaration_to_numbered_occurrences": 868,
+  "declarations_in_numbered_results_and_definitions": 865,
+  "proof_input_files": 37,
+  "independent_compound_examples": 10,
+  "primary_works": 40,
+  "citation_key_occurrences": 81,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proof_replay_links": {
+    "correspondence": "../../../../FORMALIZATION_STATUS_V84.md",
+    "official_kernel_report": "../../../V84_WSL2_LEAN_VERIFICATION.md",
+    "official_kernel_receipt": "../../../V84_WSL2_LEAN_VERIFICATION.json.gz"
+  },
+  "artifacts_sha256": {
+    "blind-reading.md": "8799294dc9c466533bef936c886f1a3cbfcb24badc1dc76dc334aa498dfdc5a4",
+    "blind-reading.json.gz": "c6ec8728586299a4fce28168aaf1fbc5e97d4c3c1e60bd43c4fa1ebcbf5cf17c",
+    "blind-seal.sha256": "7572551edf1636e11a4f8fa34a260a88df181f7cfaad4f0b6948f859c8107830",
+    "inventory.json.gz": "9cd79a6241b77aafbc2bc0adc001a24b81b534ee6ea50dbf829b0c098e8a8134",
+    "claim-declarations.json.gz": "d11829623dacfbdbbe8ca62892af6a653e1a3fcdbff4dd1c6edce12b44b7e534",
+    "applied-types.json.gz": "08f89382d0acd06dbaa02a8acdf21e142a08ff0ae021ff4d049ec4af0967289e",
+    "primary-sources.json.gz": "299c6b46178a3cd88bfc9be23a5db0e2ab32545f4ffefa98dea9978ad608f4a0",
+    "proof-identity.json.gz": "6a20bbb4912d3491367c23202f1d47737e550ee601942156e0add631840e3ec8",
+    "proof-inputs.tar.gz": "e01672b1c3938fd20e6166477f87b37de39f8ad161dc6250f132fd03e216579a"
+  }
+}
