@@ -1,12 +1,25 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 23 November 2026
+Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v81
+Active WSL2 assignment — manuscript v82
 
-Fetch origin/main and execute docs/CODEX_WSL2_CEI_V81_LEAN_HANDOFF.md in full.
-The current v81 report and machine-readable receipt are docs/V81_WSL2_LEAN_VERIFICATION.md and docs/V81_WSL2_LEAN_VERIFICATION.json.gz.
-The archived v81 full replay at 830d03a5adcf144a003feb36f88bd06e0c5b0cf5 is documented in docs/V81_WSL2_LEAN_VERIFICATION_830d03a.md.
-Verify the mathematical comparisons against the active manuscript and push the tested sources and report to origin/main.
+Fetch origin/main. Read AGENTS.md, MANUSCRIPT_CURRENT.json and
+FORMALIZATION_STATUS_V82.md. Execute docs/CODEX_WSL2_CEI_V82_LEAN_HANDOFF.md.
+Verify the five revised passages, continue the six proofs of cited results, and
+return the v82 statement checks, complete replay, axiom receipt and independent
+readings at the tested source SHA. The consecutive-clean count begins at 0 of 2.
+
+The completed v81 full replay tested 73c2e4fa2bc633a3af012b1c4f85a7882018f962.
+Its report and machine-readable receipt are
+docs/V81_WSL2_LEAN_VERIFICATION_73c2e4f.md and
+docs/V81_WSL2_LEAN_VERIFICATION_73c2e4f.json.gz.
+Report commit: 8a0d852ee1a5002c4e82a275a51afd258df0c18f.
+
+Earlier release procedures and verification records
+---------------------------------------------------
+The material below records earlier editions and separate release work.
+The v82 assignment above covers manuscript and Lean verification only.
+Submission, release preparation and Palomar registration are outside this assignment.
 
 Fixed release and Appendix E citations
 --------------------------------------

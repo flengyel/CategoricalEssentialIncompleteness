@@ -1,12 +1,12 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-**Florian Lengyel** · Manuscript v81 · 23 November 2026
+**Florian Lengyel** · Manuscript v82 · 24 November 2026
 
-[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v81.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v81_source.zip)
+[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v82.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v82_source.zip)
 
 ## Reading the Lean proofs
 
-Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V81.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
+Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V82.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
 
 ## The construction
 

@@ -1,10 +1,10 @@
-# LaTeX sources — version 81
+# LaTeX sources — version 82
 
 **Logical consequence and essential incompleteness in recursion categories**,
-23 November 2026.
+24 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v81.pdf`
-and `logical_consequence_v81_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v82.pdf`
+and `logical_consequence_v82_source.zip`.
 
 The directory `latex/` contains the complete source. The order of the
 inputs in `main.tex` is the order of the printed sections.

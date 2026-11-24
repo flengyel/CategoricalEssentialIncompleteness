@@ -11,7 +11,7 @@ numerical function $f$, write $f(x)\mathord\downarrow$ when $f$ is
 defined at $x$. Put $K=\{e:\varphi_e(e)\mathord\downarrow\}$.
 The set $K$ is not recursive.
 Fix the standard enumeration of finite oracle-machine programs. For an
-oracle $A\subseteq\N$, let $W_a^A$ be the domain of program $a$ run with oracle $A$.
+oracle $B\subseteq\N$, let $W_a^B$ be the domain of program $a$ run with oracle $B$.
 Fix a recursive bijective pairing function
 $\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
 
@@ -107,17 +107,17 @@ for $v_0$ gives a total recursive function $t:\N\to\N$ such that
 $\varphi_{t(z)}(x)\simeq v_0(z,x)$.
 For oracle programs, let $s(e,z)$ be the index of the program that,
 on input $x$, computes $\langle z,x\rangle$ and runs program $e$
-on that input with the same oracle. This construction on program codes
-is ordinary total recursive and satisfies, for every oracle $A\subseteq\N$,
+on that input with the same oracle. The function $s:\N^2\to\N$ is
+total recursive and satisfies, for every oracle $B\subseteq\N$,
 \[
- x\in W_{s(e,z)}^A\quad\Longleftrightarrow\quad
- \langle z,x\rangle\in W_e^A.
+ x\in W_{s(e,z)}^B\quad\Longleftrightarrow\quad
+ \langle z,x\rangle\in W_e^B.
 \]
-Choose an index $d$ with
-$W_d^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
-Then $W_{s(d,z)}^K=\{x:(z,x)\in D_v\}$.
-Thus $r(z)=\langle t(z),s(d,z)\rangle$ defines a total
-morphism of $\mathcal C_K$, and
+Choose $c\in\N$ with
+$W_c^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
+Then $W_{s(c,z)}^K=\{x:(z,x)\in D_v\}$.
+Thus $r(z)=\langle t(z),s(c,z)\rangle$ defines a total
+morphism $r:\N\to\N$ of $\mathcal C_K$, and
 $v=\tau_K(r\times1_{\N})$, with equality of domains and values.
 For $w:X\times\N\rightharpoonup\N$, apply this construction to
 $v=w(\gamma_X^{-1}\times1_{\N})$. The parameter for $w$ is
@@ -135,7 +135,7 @@ Use the total recursive isomorphism
  b:\N\longrightarrow\N+\N,\qquad
  b(2n)=i_0(n),\quad b(2n+1)=i_1(n).
 \]
-Put $d=\tau_K\Delta_{\N}$ and
+Put $d=\tau_K\Delta_{\N}:\N\rightharpoonup\N$ and
 $a_0=(bd)^*(1_{\N}+0_{\N})$,
 $a_1=(bd)^*(0_{\N}+1_{\N})$.
 For $q\in\N$, write
