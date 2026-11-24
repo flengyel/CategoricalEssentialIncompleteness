@@ -10,6 +10,14 @@ Fetch `origin/main` in `/home/flengyel/src/CategoricalEssentialIncompleteness`. 
 4. In §8.3 fix the c.e. axioms and uniformly c.e. finitary rule relations of the presentation before the quantifier over the total recursive $g:\mathbb N\to\mathbb N$. Each index $e$ for additional sentence axioms whose addition preserves consistency must yield both nonderivability statements at $g(e)$ under the fixed rules. Compare [the PA instance](../Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean#L204). Retain the [Proposition 8.8 strict check](../Lean/CategoricalEssentialIncompleteness/V46NumericalSyntaxMembershipChecks.lean) of term and formula membership on **every** numerical word code under the recursive finite-arity support hypotheses.
 5. Retain the [Appendix C specialization check](../Lean/CategoricalEssentialIncompleteness/V46OracleAndApplicationChecks.lean#L28) for every oracle $B$ and $e,z,x\in\mathbb N$, with $x\in W^B_{s(e,z)}\iff \langle z,x\rangle\in W^B_e$. The fixed oracle index $c\in\mathbb N$ for $D_v$ and the ordinary value index $t(z)$ yield $v=\tau_K(r\times1_{\mathbb N})$ for $r(z)=\langle t(z),s(c,z)\rangle$. The partial diagonal $d=\tau_K\Delta_{\mathbb N}$ has type $\mathbb N\rightharpoonup\mathbb N$.
 
+6. In the [nonrecursiveness proof in Appendix C](../manuscript/latex/appendices/c-section-lifting.tex#L162), the second coordinate $a_*$ is arbitrary. The [checked reduction](../Lean/CategoricalEssentialIncompleteness/OracleDiagonalSeparator.lean#L40) fixes it at zero, which suffices for Proposition C.1. Check the printed statement for every $n,a\in\mathbb N$ in the namespace `CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation`, with `Encodable.encode` on ordinary program codes:
+
+   ```lean
+   ∀ n a : ℕ, n ∈ K ↔ Nat.pair (Encodable.encode (simulationCode n)) a ∈ A
+   ```
+
+   The program with code `simulationCode n` ignores its input, runs program $n$ on $n$, and returns zero if that computation halts. Thus substituting $q=\langle\operatorname{encode}(\operatorname{simulationCode}(n)),a\rangle$ into the ordinary diagonal gives the same partial value for every $a$. Include the statement and its transitive axioms in the v83 receipt. [Referee review](reviews/V83_APPENDIX_C/REFEREE.md)
+
 ## Corollary 4.8 under the printed hypotheses
 
 Let $\mathscr C=\operatorname{Split}(\mathscr R)$ for a recursion category $\mathscr R$, and $\mathcal D=\operatorname{Tot}(\mathscr C)$. Suppose $\mathcal D$ is regular and finitely extensive and every mono in $\mathcal D$ has a partial inverse in $\mathscr C$. Apply the [order isomorphism](../Lean/CategoricalEssentialIncompleteness/V46RestrictionSubobjects.lean#L124) $\Phi_X:\operatorname{Sub}_{\mathcal D}(X)\simeq_o\operatorname{Idem}_{\mathscr C}(X)$ to construct the binary joins required by the domain statement. For every $X$ and $e,f\in\operatorname{Idem}(X)$ put
