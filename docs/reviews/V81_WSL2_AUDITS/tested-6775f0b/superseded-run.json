@@ -1,0 +1,133 @@
+{
+  "attestation": {
+    "reviewer": "independent second reader",
+    "manuscript_version": 81,
+    "source_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+    "official_kernel_status": "superseded_during_full_replay",
+    "whole_paper_formalization_attested": false,
+    "verified_utc": "2026-11-24T09:26:55+00:00",
+    "interrupted_official_run": {
+      "wrapper_dir": ".codex-work/verify-20261124T092125Z-S5r5CG",
+      "clean_start": true,
+      "wrapper_exit_status_file_value": 0,
+      "raw_verifier_success": false,
+      "raw_verifier_error_key_present": false,
+      "controller_wrapper_result_present": false,
+      "raw_checkpoint_sha256": "4948599265004b78fd1b50311444bc162b79796ab902988b9fbd8f1f535f22a4",
+      "wrapper_log_sha256": "2a16e771bee3bb1dbe61c27a62808216b492ae5ae761b231c9b723612d3ddadf",
+      "partial_command_count": 13,
+      "completed_zero_exit_commands": 13,
+      "last_completed_argv": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46AmbientSliceTuring.lean"
+      ],
+      "uncompleted_command_announced": "Running: lake env lean --memory=4096 -DwarningAsError=true CategoricalEssentialIncompleteness/V46ApplicationChecks.lean",
+      "uncompleted_command_log_bytes": 0,
+      "frozen_build_logs_in_wrapper": false,
+      "official_full_current_axiom_audit_reached": false,
+      "final_dependency_snapshot_present": false,
+      "final_source_snapshot_present": false,
+      "stop_provenance": "coordinating agent instructed cessation to supersede the source after the earlier gate failure; wrapper stdout ends during the fourteenth command"
+    },
+    "previous_finished_run": {
+      "source_commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+      "wrapper_dir": ".codex-work/verify-20261124T051021Z-MnFu3p",
+      "wrapper_exit_code": 1,
+      "verifier_success": false,
+      "raw_verification_sha256": "0fb9a199b84678bd2e95a24c46424db08c8e9e45cc63c83ddb0251929bb3648d",
+      "commands_completed": 2087,
+      "all_completed_commands_zero_exit": true,
+      "last_completed_command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=4096",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/CurrentAxiomAudit.lean"
+      ],
+      "verifier_error": "Forbidden proof token in current production source: /home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/cei-v81-literature/Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean",
+      "current_axiom_reports_in_raw_stdout": 34773,
+      "retained_axiom_reports": 1274
+    },
+    "second_reader_numbered_and_targeted_evidence": {
+      "zero_exit_commands": 31,
+      "command_manifest_sha256": "0747e6a9aa919288673f678f99882bb1ea6bbbd88b382a4f9e6bd378aba732fd",
+      "early_current_axiom_reports": 35074,
+      "compared_core_names_in_targeted_outputs": 802,
+      "different_axiom_sets_in_targeted_overlap": 0,
+      "strict_supplementary_axiom_reports": 26,
+      "core_names_in_strict_supplement": 1,
+      "independent_numbered_results": 77,
+      "independent_definitions": 3,
+      "ordered_rows": 80,
+      "explicit_name_mentions": 855,
+      "distinct_named_core": 852,
+      "all_core_axiom_sets_compared_between_two_independent_local_probes": 852,
+      "expanded_names": 1078,
+      "historical_crosswalk_names": 844,
+      "typed_fork_applications": 3,
+      "permitted_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "core_axiom_map_sha256": "c68318e52caa61749001b665d1c0d20f0ae07406fcd19da5331841d745de8fe4",
+      "numbered_probe_raw_sha256": "3d2af8818ea0660d467fd9bac2f46219b481c19e36bc729b8660e92c8779e7bb",
+      "core_manifest_sha256": "cd8ba7a7ce2b96625f84637f26c0dfab03777342e073bb865eb70b8bab013bf5"
+    },
+    "docstring_comparison": {
+      "targeted_commits": [
+        "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+        "6775f0b3a5fb668f9390b21440f3f6c57bc65930"
+      ],
+      "equal_entire_module_git_blob": "05fb1e41d176b61a245f5f58c10c98dec71e5f6a",
+      "equal_module_sha256": "ddbbca75498103160bad8e9eea693f66f6cf9a310208f0035642c749e651027a",
+      "git_diff_exit": 0,
+      "empty_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_gate_file": "scripts/verify.py",
+      "source_gate_line": 1518,
+      "production_module_git_blobs_scanned": 1173,
+      "literal_matches": 1,
+      "matched_file": "Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean",
+      "matched_token": "admit",
+      "line": 31,
+      "unicode_column": 48,
+      "context": "Lean declaration documentation comment for OrthogonalFactorizationSystem",
+      "signed_text_file": "superseded-docstring-diff.txt",
+      "signed_text_sha256": "64facfba7a34bcf83961b8f92516dae30ed1a04005cafeb5cc10c28112038332"
+    },
+    "preserved_evidence_archive": {
+      "path": "superseded-kernel-evidence.tar.gz",
+      "sha256": "8a392ae9a7fc5e2e9ef788375177d0ded28d17b8b96c08aa17f6cb90e2aa4605",
+      "compressed_bytes": 1074775,
+      "evidence_files": 70,
+      "member_manifest_sha256": "8d5e41cdbcaa1ff745db2c9f838a0dd54783c9f0114d98c0e4d70e4425f0c39a"
+    },
+    "sealed_mathematical_reading": {
+      "original_package_manifest_sha256": "4f8e7db38995bfdefb9dab7962aa591219b19f3ed69b9e2c7031949b69fbd0e1",
+      "reconciliation_package_manifest_sha256": "949c3e500c34056980c952aafef6298b7f3573894174556e041de443ae50b5f9",
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions_at_the_original_types": 6,
+      "proof_gaps_in_numbered_statements": 0,
+      "missing_original_type_proofs": 6,
+      "invalid_historical_inference": 1,
+      "inclusive_proof_gaps": 7,
+      "unread_manuscript_passages": 0,
+      "consecutive_clean_reports": 0
+    }
+  },
+  "seal": {
+    "method": "Ed25519",
+    "author": "independent second reader, one-time self-signature",
+    "signed_bytes": "attestation object serialized as UTF-8 JSON with sorted keys, separators comma and colon, ensure_ascii false, no newline",
+    "signed_payload_sha256": "17e196b75874be40d53f711dddf1971788eafddd3e95d179bd95fcc8c2bffd22",
+    "public_key_spki_der_base64": "MCowBQYDK2VwAyEAtQakhcFzZaJZA7zNqrlfTZdpj9ZjvI6T/Ggjg+x77v4=",
+    "signature_base64": "ApcMR15H1/x0MflQvUkpXdP5hw1aVeGezfVvDdmbcTJ+ScZSPRbF6S9k0lbyW1KGTmcVAA5FvZsZo4xNkJIcDw==",
+    "detached_signature_over_exact_textual_diff_file_base64": "2tIqh8453LqWUBl1+0AhtVCmwq3at95LaaONh/NP1OiJUaRirMigEjotZfznGemkYJOIZsE+vZuI5ce0SfZXBg=="
+  }
+}

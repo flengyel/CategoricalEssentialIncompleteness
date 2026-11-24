@@ -1,0 +1,35 @@
+Second reader. Text of the v81 final-gate match
+
+Earlier failed source 98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885
+Superseded source 6775f0b3a5fb668f9390b21440f3f6c57bc65930
+
+git diff --exit-code --no-ext-diff 98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885 6775f0b3a5fb668f9390b21440f3f6c57bc65930 -- Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean scripts/verify.py scripts/verify-wsl.sh
+Exit 0, standard output 0 bytes, standard error 0 bytes.
+SHA-256 of the empty patch e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+Git blob and SHA-256 at both commits
+
+Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean
+05fb1e41d176b61a245f5f58c10c98dec71e5f6a  ddbbca75498103160bad8e9eea693f66f6cf9a310208f0035642c749e651027a
+scripts/verify.py
+366973e675a3f3422680199a601ea304f6b04793  d6590f7ac0871e8ca6aefd7ac04cef281a3d1b1339c90faa14f676a97e82a44f
+scripts/verify-wsl.sh
+5ef09f2d25579f436579c584af1ae2d824f4ed42  a320f433ee76c7b6538ad322b3c27f4fa30774b405b55b02083dad195b5791e8
+
+Exact lines from Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean
+  31  /-- Wißmann's Definition 2.10. The two classes admit factorizations,
+  32  respect isomorphisms and have a unique diagonal for every square. -/
+  33  structure OrthogonalFactorizationSystem (E M : MorphismProperty C) : Prop where
+  34    left_respectsIso : E.RespectsIso
+  35    right_respectsIso : M.RespectsIso
+  36    factorizes : MorphismProperty.HasFactorization E M
+  37    diagonal {A B X Y : C} {e : A ⟶ B} {m : X ⟶ Y} (he : E e) (hm : M m)
+  38      (top : A ⟶ X) (bottom : B ⟶ Y) (sq : top ≫ m = e ≫ bottom) :
+  39      ∃! d : B ⟶ X, e ≫ d = top ∧ d ≫ m = bottom
+
+Exact gate from scripts/verify.py
+1518              if re.search(r"\b(sorry|admit|native_decide|unsafe)\b", path.read_text()):
+1519                  raise RuntimeError("Forbidden proof token in current production source: " + str(path))
+
+Scanning every one of the 1,173 production-module Git blobs at 6775f0b with the committed regular expression finds one match. It begins at line 31, Unicode column 48, inside the two-line documentation comment above OrthogonalFactorizationSystem. The structure begins at line 33. The strict Lean subprocess for this module returned zero in each run.
+The older run reached the final source-text gate and failed. The newer run stopped during command 14. The complete module text and both verifier programs are byte-identical across these commits.

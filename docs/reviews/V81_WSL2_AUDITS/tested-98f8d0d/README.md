@@ -10,3 +10,5 @@ Two readers reconstructed the paper from the same 25 TeX inputs and sealed their
 | Comparison of the sealed findings | [Reconciliation](first/reconciliation.md) | [Reconciliation](second/reconciliation.md) |
 | Independent verification | [Commands and elaboration](first/verification.md) | [Command evidence](second/commands.json) |
 | Comparison with the official replay | [Confirmation](first/receipt-confirmation.json) | [Confirmation](second/receipt-confirmation.json) |
+
+The full wrapper later exited 1 after all 2,087 subprocesses passed. Its final source scan matched an English verb in a docstring. [Full outcome and original verifier JSON](../../../V81_WSL2_LEAN_VERIFICATION_98f8d0d.md) · [Reader’s post-run attestation](post-archive-confirmation.json)

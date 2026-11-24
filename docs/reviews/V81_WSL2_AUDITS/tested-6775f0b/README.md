@@ -10,3 +10,5 @@ The two readers independently reconstructed the manuscript from its 25 TeX files
 | [Targeted verification receipt](targeted.json.gz) | Build and strict elaboration on the pinned checkout, the full current transitive axiom audit, parser tests and manuscript verification. |
 
 The two reports identify the same six missing historical proofs and the same invalid inference in the unrestricted Di Paola–Heller attribution. Counting that inference a second time under proof gaps accounts for the difference between six and seven in the signed reports. Both also identify the ambiguity in the opening of §8.3 and the citation of page 594 where item (3) appears on page 595.
+
+The full replay stopped during its fourteenth command after the preceding run identified a shared docstring that fails the source scan. [Signed supersession record](superseded-run.json) · [Signed source comparison](superseded-docstring-diff.txt) · [Preserved kernel logs](superseded-kernel-evidence.tar.gz)

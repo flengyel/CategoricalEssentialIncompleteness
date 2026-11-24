@@ -1,0 +1,15 @@
+{
+  "tested_commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+  "result": "fail",
+  "signer": "Independent second reader",
+  "official_json_sha256": "0fb9a199b84678bd2e95a24c46424db08c8e9e45cc63c83ddb0251929bb3648d",
+  "official_raw_json_bytes": 1072338,
+  "raw_official_gzip_file": "failed-run-official.json.gz",
+  "raw_official_gzip_sha256": "7cb8cc7125370633d53adb0c65ce468cacbafcbb0ad549a0699c155009ae28ad",
+  "failed_source_evidence_sha256": "6b5eda247ec4dc08bff31d0b81b7e655799a3ced20bd1678eb5848a4dfda8622",
+  "post_archive_confirmation_sha256": "f0a2a8c04ee06bab45ce02739a36f567f482af9f6d878f63fc5cdcbd91bbc0aa",
+  "readme": "Decompress failed-run-official.json.gz to recover the exact official verification.json bytes and their original field order. The official member in failed-run-evidence.json.gz equals the decoded official JSON. Canonical encoding of the evidence sorted its nested object keys.",
+  "recovered_raw_bytes_equal_original": true,
+  "archive_object_equal_to_decoded_original": true,
+  "attested_content_sha256": "a25bc9acde47775b1dc8cd85072f358fab231e147147ac8d98ae7d9e6f4c0651"
+}

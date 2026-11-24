@@ -28,8 +28,8 @@ namespace CategoricalEssentialIncompleteness.V46
 universe v u
 variable {C : Type u} [Category.{v} C]
 
-/-- Wißmann's Definition 2.10. The two classes admit factorizations,
-respect isomorphisms and have a unique diagonal for every square. -/
+/-- In Wißmann's Definition 2.10 every morphism factors as an `E` morphism followed by an `M`
+morphism. The classes respect isomorphisms and every `E`–`M` square has a unique diagonal. -/
 structure OrthogonalFactorizationSystem (E M : MorphismProperty C) : Prop where
   left_respectsIso : E.RespectsIso
   right_respectsIso : M.RespectsIso

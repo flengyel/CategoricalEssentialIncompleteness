@@ -1,0 +1,73 @@
+{
+  "tested_commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885",
+  "result": "fail",
+  "wrapper_exit_code": 1,
+  "official_json_sha256": "0fb9a199b84678bd2e95a24c46424db08c8e9e45cc63c83ddb0251929bb3648d",
+  "run": "verify-20261124T051021Z-MnFu3p",
+  "started_utc": "2026-11-24T05:10:21+00:00",
+  "ended_utc": "2026-11-24T09:21:25+00:00",
+  "wrapper_elapsed_seconds": 15064,
+  "sum_official_command_seconds": "15049.24",
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "clean_detached_start": true,
+  "clean_detached_post_failure": true,
+  "independently_compared_input_blobs": 2730,
+  "input_comparison": "Post-failure snapshot compared byte-for-byte to the tested Git tree. The official verifier stopped before writing its closing source and dependency snapshots.",
+  "manuscript_version": 81,
+  "manuscript_tex_files": 25,
+  "dependencies_after_failure_matching_official_start": 16,
+  "all_official_subcommands_exit_zero": 2087,
+  "strict_subcommands_exit_zero": 2081,
+  "targeted_subcommands_exit_zero": 237,
+  "unique_final_text_scan_match": {
+    "path": "Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean",
+    "line": 31,
+    "text": "/-- Wißmann's Definition 2.10. The two classes admit factorizations,",
+    "token": "admit"
+  },
+  "failing_verifier_file": "scripts/verify.py",
+  "failing_verifier_line": 1518,
+  "current_audit_modules_observed": 1162,
+  "current_transitive_reports_from_original_log": 34773,
+  "retained_transitive_reports_from_original_log": 1274,
+  "individual_strict_unique_axiom_reports": 1355,
+  "all_distinct_original_axiom_reports": 36094,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "current_matches_independent_early_audit": true,
+  "active_numbered_declarations_matched": 852,
+  "active_declarations_by_first_available_audit": {
+    "current": 802,
+    "retained": 45,
+    "additional_strict": 5
+  },
+  "reader_literature_axiom_checks_matched": 7,
+  "total_numbered_items": 80,
+  "failed_source_evidence_file": "failed-run-evidence.json.gz",
+  "failed_source_evidence_sha256": "6b5eda247ec4dc08bff31d0b81b7e655799a3ced20bd1678eb5848a4dfda8622",
+  "original_log_sha256": {
+    "wrapper_verify_log": "4a8872663b833504cd3a3eb6baa2e06f483af97148d544251e64302964a92284",
+    "current_axiom_audit": "c7b20c5abd8b72163807480ae74da19e6ef330b70c28ffd027231720a6df9c02",
+    "retained_axiom_audit": "957d04fd15f8c532bb9adec9e5414ca7f8a72e9537b58892a6aca3c7c239909f",
+    "early_transitive_audit": "9d20fd34b6386c7dc74b0cc0cf768588a47179ce7d96dcbf2bf42f3d3ac004d4",
+    "official_verification_json": "0fb9a199b84678bd2e95a24c46424db08c8e9e45cc63c83ddb0251929bb3648d",
+    "service_wrapper_result": "27c4c8f6ccb112b8ad6c23832b8da8956b4a21cdce0e5ec3efe6faccc9d2c5e9",
+    "command_hash_manifest_sha256": "92957264716ba1af8b87a07a33579ecd3bb3449b131383b5ba063d904fd06014",
+    "source_hash_manifest_sha256": "40092498e434721bdebbac32adbcde40b1da5b3734cdd21e2fdfa5ad3012e62e",
+    "targeted_command_hash_manifest_sha256": "5bb40ffd0fd8273f464bd6bcb23f1a2c7ef146a7cb76b76fdbb5c283d3bc0c2b"
+  },
+  "original_verdict_sha256": "c2d8d7f791bcd131eaaf4a6aa4cbed430bf776352d7f9a2f9bf88e63fb5093ef",
+  "original_reading_seal_sha256": "ce37a74d35bcec8cc5a1b4f8c94daeaf3a2350b62f1ba717f2ad6e7b3570a280",
+  "signer": "Independent second reader",
+  "paper_counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "lean_omissions": 8,
+    "proof_gaps": 8
+  },
+  "scope": "The wrapper failed on the English verb admit in a declaration docstring. The 852 named proofs, the seven literature probes and the transitive policy were checked against original successful Lean subprocess output. This is a failed-source attestation.",
+  "attested_content_sha256": "29908d6227003159bcce75415bfd619b156833b8a4b283560ab222c943259aea"
+}
