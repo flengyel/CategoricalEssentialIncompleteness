@@ -1,0 +1,41 @@
+{
+  "uniformly generated iteration completion": {
+    "argv": [
+      "rg",
+      "-n",
+      "TuringCompletion|Turing completion|[Ii]sotypical|[Bb][Ss]harp",
+      "Lean/CategoricalEssentialIncompleteness",
+      "Lean/PCats",
+      "-g",
+      "*.lean"
+    ],
+    "exit": 1,
+    "output": ""
+  },
+  "internal arithmetic universes": {
+    "argv": [
+      "rg",
+      "-n",
+      "ArithmeticUniverse|ArithUniverse|arithmetic universe|arithmetic-universe",
+      "Lean/CategoricalEssentialIncompleteness",
+      "Lean/PCats",
+      "-g",
+      "*.lean"
+    ],
+    "exit": 1,
+    "output": ""
+  },
+  "internal countable Dedekind reals": {
+    "argv": [
+      "rg",
+      "-n",
+      "DedekindReal|Dedekind reals|Parametri[sz]edRealizability|[Rr]ealizability [Tt]opos|[Rr]ealisability [Tt]opos",
+      "Lean/CategoricalEssentialIncompleteness",
+      "Lean/PCats",
+      "-g",
+      "*.lean"
+    ],
+    "exit": 1,
+    "output": ""
+  }
+}

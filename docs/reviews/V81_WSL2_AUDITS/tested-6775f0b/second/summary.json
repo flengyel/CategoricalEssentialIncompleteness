@@ -1,0 +1,96 @@
+{
+  "source_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "version": 81,
+  "pdf_sha256": "22a678408cbf8878ea35d318e943e0b63d3c1639cc3382be71bce2294122fd48",
+  "archive_sha256": "9db20398b92f6b5d1fe8b30e0d6ad5f83f3be69bee5d34f0ea43fd3e77d69e81",
+  "tex_inputs_sha256": {
+    "manuscript/latex/abstract.tex": "142c4cebaf4929cf49a87ca0ad7457061031675be7554a253fca378cb5683889",
+    "manuscript/latex/preamble.tex": "308375437b4580fbc0070b136fb57a2d8d91961d43e4b9d699d10a9468abfda7",
+    "manuscript/latex/main.tex": "37a07846825410efb4eed7f7b0028f1d4670d6f8c1c9870406f15aeaf7121102",
+    "manuscript/latex/bibliography.tex": "c5cd6e7149c6b0853164cdfa75faddb7bd22f2b10f9eaccae438eb5044c23931",
+    "manuscript/latex/appendices/e-reading-lean-proofs.tex": "a014501e2dcbe331beb371f44d163180b4956b85319be37777b59695b08794f1",
+    "manuscript/latex/appendices/d-faithful-family.tex": "552d17536a53920274574abf0a321bc64ba2d798ce469a1686e4e9b3585c5460",
+    "manuscript/latex/appendices/a-syntax-and-theories.tex": "4fb1837ce419e43817245837a0e30c8406c03c8328b6911a66b859daac7ad583",
+    "manuscript/latex/appendices/c-section-lifting.tex": "af3dee797792c058ffc9d96680687680f25232c3f8d862dca97817613373611b",
+    "manuscript/latex/appendices/b-three-point-cosheaves.tex": "ac971d8a951f88656d47dfdb4c0db0380a9fe7f17897ea91a6830b2f400d93da",
+    "manuscript/latex/sections/08c-numerical-realization.tex": "8f8a8ff060bc00a26a1c8c79942b7dc26016ff63dbe40098c455feb5d4c3417e",
+    "manuscript/latex/sections/05-syntactic-recursion-category.tex": "74f11e96ea932f82b48972eba707f83edcddb5afaf068e628e9663644d0a0962",
+    "manuscript/latex/sections/09-three-point-space.tex": "4f121b1695b391d92cd403e8abb90731c95f2acc6032ff8726e14263fe8d4a40",
+    "manuscript/latex/sections/01-introduction.tex": "3eadb3c9b89e13d8fbd1f216bcd90cb745125fcdec0d58cf9866e2263052f1f1",
+    "manuscript/latex/sections/03a-internal-theories.tex": "0fb0c2aa97bd0c116b46e65fbf04432e330bd84251fb94c04fcdcab4c0a7a362",
+    "manuscript/latex/sections/03-sections-and-inseparability.tex": "3a72481666c54e4772df21c1e30c0bbe14ce6234c6e329a76f37b3faaeb1d70c",
+    "manuscript/latex/sections/04-theory-extensions.tex": "0023506999303792b595b569baf59ff4fd0e5d02bd774cf8e344567a139ceb23",
+    "manuscript/latex/sections/08b-uniform-independent-sentences.tex": "c4c9a4c700e234bb6f8c733801d569524329a149bc461453da9a25f2bfea7916",
+    "manuscript/latex/sections/05a-internal-syntax.tex": "2afafb146d44b1ea0233977032b782a1ef0f3af5be058bc7104c1ae43af3ab8a",
+    "manuscript/latex/sections/04-miller-sequences.tex": "df3ad33029894f3c301c9681ea7337c269d9fee9a16c9029c909aa35969af211",
+    "manuscript/latex/sections/08d-numerical-incompleteness.tex": "6bc0f9996ceece0e811fef0d0a2a82fb7b0027be34ad92184d90745bd3934676",
+    "manuscript/latex/sections/06-interpretation-in-models.tex": "5f6b3ce89275cde13a846a322970b0c4237c20661998986ad7993850b1273c33",
+    "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex": "39f0d53e28240e41c95d269cb04685e580f8fe7ff4fdb7c83fa459df6419ed70",
+    "manuscript/latex/sections/03b-internal-adjunctions.tex": "5c52905586048b2a39ddd68241653a256990137db170aed29b5d44cd03c3f423",
+    "manuscript/latex/sections/02-categorical-preliminaries.tex": "6211e705016f1769a728afba12be8259e973532af16c52ef85addc2be4e059c3",
+    "manuscript/latex/sections/08a-uniform-theories.tex": "6c17055501ded676f8b3d596c7df0b7915a94c7930e757535ce11a11a18214e0"
+  },
+  "blind_seal_sha256": "66cb412302a347175a883281a3c9ec27ecf03d9e9ce2aa0038ff6079557cbe99",
+  "blind_source_recheck_exit": 0,
+  "paragraph_units": 690,
+  "text_locators": 3324,
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "numbered_proof_imports": 389,
+  "numbered_qualified_names": 1078,
+  "affected_ch_modules_recompiled": 12,
+  "local_commands": 15,
+  "probes": {
+    "numbered": {
+      "count": 1078,
+      "permitted_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "186313898ab291a80bc0621dde47b8d84796e23f048f780bc963224438ff6866"
+    },
+    "historical": {
+      "count": 45,
+      "permitted_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "885aa09dedf908bce5d0ac09d2bed1fff11e6b4a40ae1cc02c10719e16ee26e1"
+    },
+    "apply": {
+      "count": 7,
+      "permitted_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "7076bd73f8c8e97a9d40253f811194fb17f1bb979db1d8c6d990857724a14a62"
+    }
+  },
+  "line_specific_correspondence_rows": 346,
+  "literature": {
+    "keys": 39,
+    "reference_occurrences": 78,
+    "citation_commands": 73,
+    "fresh_primary_text_or_extracts": 38,
+    "historical_dossier_only": [
+      "CockettLists"
+    ]
+  },
+  "findings": {
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "lean_omissions": 6,
+    "proof_gaps_all_original_types": 6,
+    "proof_gaps_in_numbered_arguments": 0,
+    "source_locator_errors": 1,
+    "clean_reports": 0
+  },
+  "unread_manuscript_passages": 0,
+  "current_canonical_receipt": "docs/V81_WSL2_LEAN_VERIFICATION_6775f0b.json.gz",
+  "official_full_replay_at_mathematical_review": "pending",
+  "verdict": "findings remain",
+  "count_convention": "The six unproved original-type historical statements are the same six Lean omissions. The defective historical universal statement and the presentation ambiguity are separate. Counts describe the sealed audit at the named source."
+}

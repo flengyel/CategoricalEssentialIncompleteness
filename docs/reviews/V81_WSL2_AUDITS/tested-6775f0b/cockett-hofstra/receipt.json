@@ -1,0 +1,215 @@
+{
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "checked_at_utc": "2026-11-24T07:19:46+00:00",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "project_olean_source": "tested checkout's Lean/.lake/build/lib/lean",
+  "history": {
+    "earlier_seal_sha256": "adc493531652002fd6e268c7b1134c6a2bfd7f680bfef09508948d38d721c3dc",
+    "unchanged_prior_modules": [
+      "V46ApplicativePolynomials",
+      "V46ComputablePowerRestriction",
+      "V46ComputablePowerRetractions",
+      "V46ComputablePowers",
+      "V46ComputableTuringCategory",
+      "V46RestrictionProductCones",
+      "V46TuringComputablePowers"
+    ],
+    "docstrings_changed": [
+      "V46ApplicativeCodes",
+      "V46ComputablePowerProducts",
+      "V46SplitIdempotentSubcategory"
+    ],
+    "added_modules": [
+      "V46ComputablePowerInclusion",
+      "V46ComputableTuringCategoryChecks"
+    ]
+  },
+  "official_objects_matching_independent_compilation": [],
+  "modules": {
+    "V46ApplicativeCodes": {
+      "source_sha256": "aabc04b8a90c370ebe52153b03f08dd61fc092b2a29e8adeec0d0eb51b649809",
+      "olean_sha256": "f3d1a03b7c4c5f8a509ddc97fb4d41b6db963b4cc03c1361a6b9a2f647859933"
+    },
+    "V46ApplicativePolynomials": {
+      "source_sha256": "6d29f40fb2417bc8e96950adb3bbc385212c7058eb2b2c69a500a6a48b1da015",
+      "olean_sha256": "c13bc8070e856dd70467e7b3bc30427a0afa7813eaeb6036d10fef67beaeca95"
+    },
+    "V46ComputablePowerInclusion": {
+      "source_sha256": "dc0261097d826947ec4d09678f04d04740450314b3a70000e46b55c377662a44",
+      "olean_sha256": "bee7802e5f30e0ea3cdd9fa94ae8fe29ec13db1ddd598fc2885422a3bee26f04"
+    },
+    "V46ComputablePowerProducts": {
+      "source_sha256": "a04b7c8c33401dade26623057fd17af4164df9221ce1d0b223d052fa5d141797",
+      "olean_sha256": "7e8f33798b88436c2498a5ab8c53cdd6c6bb02f2e25e2fee3ee5424075f29690"
+    },
+    "V46ComputablePowerRestriction": {
+      "source_sha256": "509cb3a195c657f7788d0fdb36a649cd1244d64e6b19f0dec5f5a48b60749326",
+      "olean_sha256": "791054c922527ec2e65860a8b0d743ce856d5c6ca3dc6da892ca5bcf78750de5"
+    },
+    "V46ComputablePowerRetractions": {
+      "source_sha256": "dac563529e27b6d881059f104d7b3f28b7428b70c6960be7740b2aba63b94223",
+      "olean_sha256": "1ceb00605122c2985a7607d0705f60861302983294a5cdc47cf804ce46bf5f6f"
+    },
+    "V46ComputablePowers": {
+      "source_sha256": "81fffa22aae5f3dd031daa506de8fc4c3c30ba4380461b0cbb91def0263ebe2e",
+      "olean_sha256": "5f0f36abb2770534ed45e3fddd4d3dcfb2b81aaa1e0073cb69de1fcf9c455340"
+    },
+    "V46ComputableTuringCategory": {
+      "source_sha256": "280d35f6b10ff8b537998b5d31766a66bdb068e0d0fa4f34651375925139127b",
+      "olean_sha256": "4d818b99f83fbc867c381a2910c55c14ee1e888697d9b430b8a0df43672f4761"
+    },
+    "V46ComputableTuringCategoryChecks": {
+      "source_sha256": "889641c434ae65ca6dd6efc6cf361d27efb026c7622b09fa6428c867b7b69c6c",
+      "olean_sha256": "40ebfecdbaf59a1df7a8c98871ffa7a009bd18c6469c25616236f22ff3844d42"
+    },
+    "V46RestrictionProductCones": {
+      "source_sha256": "d33801d0a4273b524c046fbb1bf77511169a8d389459d783da709a6ad7f526d7",
+      "olean_sha256": "e070ce3c0fa164554f8921310cbe34456d61e973097360a912892f3724f9003f"
+    },
+    "V46SplitIdempotentSubcategory": {
+      "source_sha256": "8926739f26e613916771e69e368527bd6bcba2693d8947ffb7abfd17c36d6853",
+      "olean_sha256": "9eb097119eeef36900cf45fd9779f6c051e512bc4e96f15389b2cdad0de34298"
+    },
+    "V46TuringComputablePowers": {
+      "source_sha256": "8b7c7fee53c271a59883580a2ce71e6fc2657f908588df157d717c69ab7c93aa",
+      "olean_sha256": "1e3052f1ee11966d1c16be5a634f00a6234e8b9925e1994a5985126d430968fb"
+    }
+  },
+  "probes": {
+    "PCAObservations": "f6ada9f93414818f659c32cc9ef57960505115d1db8be0d74f3d4a4055ab128e",
+    "AmbientProducts": "d965abddb10ffb3f31fece40a202924000cdaf16293229cba806266c4b8dcd3a"
+  },
+  "working_directory": "$REPO/Lean",
+  "commands": [
+    {
+      "argv": [
+        "lean",
+        "--threads=1",
+        "--memory=1700",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ComputablePowerInclusion.lean"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "argv": [
+        "lean",
+        "--threads=1",
+        "--memory=1700",
+        "-DwarningAsError=true",
+        "CategoricalEssentialIncompleteness/V46ComputableTuringCategoryChecks.lean"
+      ],
+      "exit_code": 0,
+      "output": "'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.code_with_prefix' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.positive_input_domain' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.scalar_domain' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.combinatory_completeness' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.finite_products' depends on axioms: [propext,\n Classical.choice]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.pca_turing' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.turing_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+      "argv": [
+        "lean",
+        "--threads=1",
+        "--memory=1700",
+        "-DwarningAsError=true",
+        "-R",
+        "$BUNDLE",
+        "-o",
+        "$TMP/PCAObservations.olean",
+        "$BUNDLE/PCAObservations.lean"
+      ],
+      "exit_code": 0,
+      "output": "'IndependentPCAReading.code_with_prefix' depends on axioms: [propext]\n'IndependentPCAReading.positive_input_domain_iff' depends on axioms: [propext]\n'IndependentPCAReading.scalar_iff' depends on axioms: [propext]\n'IndependentPCAReading.pca_iff_all_polynomials' depends on axioms: [propext]\n'IndependentPCAReading.pca_turing_object' depends on axioms: [propext]\n'IndependentPCAReading.representation_from_turing_object' depends on axioms: [propext, Classical.choice, Quot.sound]\n'IndependentPCAReading.realization_preserves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'IndependentPCAReading.comparison_preserves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'IndependentPCAReading.representation_preserves' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "argv": [
+        "lean",
+        "--threads=1",
+        "--memory=1700",
+        "-DwarningAsError=true",
+        "-R",
+        "$BUNDLE",
+        "-o",
+        "$TMP/AmbientProducts.olean",
+        "$BUNDLE/AmbientProducts.lean"
+      ],
+      "exit_code": 0,
+      "output": "'IndependentPCAReading.partial_pairing_in_base' depends on axioms: [propext, Classical.choice]\n'IndependentPCAReading.canonical_product_iso' depends on axioms: [propext, Classical.choice]\n'IndependentPCAReading.inclusion_terminal' depends on axioms: [propext]\n"
+    },
+    {
+      "argv": [
+        "leanexport",
+        "PCAObservations",
+        "AmbientProducts",
+        "CategoricalEssentialIncompleteness.V46ComputableTuringCategoryChecks",
+        "--",
+        "IndependentPCAReading.code_with_prefix",
+        "IndependentPCAReading.positive_input_domain_iff",
+        "IndependentPCAReading.scalar_iff",
+        "IndependentPCAReading.pca_iff_all_polynomials",
+        "IndependentPCAReading.pca_turing_object",
+        "IndependentPCAReading.representation_from_turing_object",
+        "IndependentPCAReading.realization_preserves",
+        "IndependentPCAReading.comparison_preserves",
+        "IndependentPCAReading.representation_preserves",
+        "IndependentPCAReading.partial_pairing_in_base",
+        "IndependentPCAReading.canonical_product_iso",
+        "IndependentPCAReading.inclusion_terminal",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.code_with_prefix",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.positive_input_domain",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.scalar_domain",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.combinatory_completeness",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.finite_products",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.pca_turing",
+        "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.turing_representation"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "argv": [
+        "leanchecker",
+        "--from-export",
+        "$TMP/proofs.ndjson"
+      ],
+      "exit_code": 0,
+      "output": "Lean default kernel accepts the solution\n"
+    }
+  ],
+  "export": {
+    "sha256": "4c664b5f5cc201cf19a63201a8569a981c9423c99c44525ce4ed8d239b9d9e63",
+    "bytes": 6034500,
+    "records_by_declaration_kind": {
+      "inductive": 82,
+      "def": 434,
+      "thm": 551,
+      "axiom": 3,
+      "quot": 4
+    },
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "theorem_roots": [
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.code_with_prefix",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.combinatory_completeness",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.finite_products",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.pca_turing",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.positive_input_domain",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.scalar_domain",
+      "CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.turing_representation",
+      "IndependentPCAReading.canonical_product_iso",
+      "IndependentPCAReading.code_with_prefix",
+      "IndependentPCAReading.comparison_preserves",
+      "IndependentPCAReading.inclusion_terminal",
+      "IndependentPCAReading.partial_pairing_in_base",
+      "IndependentPCAReading.pca_iff_all_polynomials",
+      "IndependentPCAReading.pca_turing_object",
+      "IndependentPCAReading.positive_input_domain_iff",
+      "IndependentPCAReading.realization_preserves",
+      "IndependentPCAReading.representation_from_turing_object",
+      "IndependentPCAReading.representation_preserves",
+      "IndependentPCAReading.scalar_iff"
+    ],
+    "gzip_sha256": "2bc22adb6f72a565d315c179a349443c1a17424bb16fa91d0c03dedf428f8835",
+    "gzip_bytes": 941987
+  }
+}

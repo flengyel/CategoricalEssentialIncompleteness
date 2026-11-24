@@ -1,0 +1,30 @@
+{
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "manifest_sha256": "cd8ba7a7ce2b96625f84637f26c0dfab03777342e073bb865eb70b8bab013bf5",
+  "rows": 80,
+  "backticked_occurrences": 866,
+  "explicit_mentions": 855,
+  "unique_explicit_names": 852,
+  "module_or_collection_references": 11,
+  "defining_git_blobs": 366,
+  "generated_lean_source_sha256": "025cf0601a0a4942e2c420ef91198914ac8e926025a4f6352cdc443d089eb59d",
+  "argv": [
+    "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "-j1",
+    "-DwarningAsError=true",
+    "-DautoImplicit=false",
+    "CurrentNumbered.lean"
+  ],
+  "exit_code": 0,
+  "working_directory": "Lean",
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "read_only_overlay": "../local-olean",
+  "individual_numbered_axiom_outputs": 852,
+  "typed_fork_applications": 3,
+  "axioms_used": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "uncompressed_lean_log_sha256": "3d2af8818ea0660d467fd9bac2f46219b481c19e36bc729b8660e92c8779e7bb"
+}

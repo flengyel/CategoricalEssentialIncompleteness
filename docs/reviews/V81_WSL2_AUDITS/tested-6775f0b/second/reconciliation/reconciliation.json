@@ -1,0 +1,129 @@
+{
+  "source_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "historical_snapshot": "986dee4d54d202a452009146cc29d19a544b0000",
+  "fork_update_commit": "2a5c1dd1b9161570e377bddff566c899928d9370",
+  "counts": {
+    "rows": 80,
+    "token_occurrences": 866,
+    "distinct_current_declarations": 852,
+    "current_declaration_mentions": 855,
+    "current_defining_modules": 366,
+    "module_collection_references": 11,
+    "historical_mentions": 847,
+    "distinct_historical_declarations": 844,
+    "shared_distinct": 836,
+    "historical_only": 8,
+    "current_only": 16,
+    "first_supplement_direct_additions": 11,
+    "first_supplement_indirect_additions": 5,
+    "expanded_distinct": 1078,
+    "expanded_extra": 226,
+    "expanded_core_mentions": 1081,
+    "labels_with_changed_named_entries": [
+      "10.1",
+      "B.7"
+    ]
+  },
+  "recurring_explicit_names": {
+    "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.plain_termSubstitution_value": [
+      "6.7",
+      "7.5"
+    ],
+    "CategoricalEssentialIncompleteness.V46.ConcreteNamedComparison.plain_formulaSubstitution_result": [
+      "6.7",
+      "7.5"
+    ],
+    "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.totalEquivalence": [
+      "10.2",
+      "B.2"
+    ]
+  },
+  "historical_differences": {
+    "10.1": {
+      "removed": [
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.evaluationRangeFunctor",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.evaluation_product",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.evaluation_sup",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.left_evaluation_turing",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.right_evaluation_turing"
+      ],
+      "added": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_finset",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_product",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_range",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_restriction",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_zero",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_isTuring",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_isTuring"
+      ],
+      "explicit_in_first_supplement": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluatedSumColimit",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_finset",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_product",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_range",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_restriction",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_span",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.evaluation_zero"
+      ],
+      "in_first_via_typed_fork_checks": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_isTuring",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_isTuring"
+      ]
+    },
+    "B.7": {
+      "removed": [
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.central_specialized",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.tau_isTuring",
+        "CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.tau_parameterization"
+      ],
+      "added": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.center_tuple_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.component_fibre",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.forkParameter_total",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.fork_parameterizes",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring"
+      ],
+      "explicit_in_first_supplement": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.center_tuple_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_graph",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.tau_isTuring"
+      ],
+      "in_first_via_typed_fork_checks": [
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.component_fibre",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.forkParameter_total",
+        "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.fork_parameterizes"
+      ]
+    }
+  },
+  "sources": {
+    "table_path": "FORMALIZATION_STATUS_V81.md",
+    "sha256": "c95a46735c050fcdba915855ac8c18a3ed2a0f67b2db81e0513d854264153a55",
+    "git_blob": "de3387ad5c6ce52562e0311f90bd9387f3c5b074",
+    "interpretation": "Use the backticked tokens in the Lean-declarations column of each numbered row, in source order. Resolve project abbreviations and the omitted namespace within each row. Nine Checks modules and two collections are recorded separately."
+  },
+  "seals": {
+    "first_blind": "d447de49f84f9de7a599e762a6035322da4e02c162782dcf416c4a25638b340d",
+    "first_numbered": "5b62bf0c0a06dc3ed92dd2e4c2761e6ea51f3a59770b22077ac0aed9e4e67b9f",
+    "first_supplement": "f27761460cb58587c7b56b1dae97afea4869c5fc2d414e083b935f3696306779",
+    "first_report": "6796348976e4ab96dbaf3c1f72d3a8c65bfc097c974850d7042fbd521f9ab0bf",
+    "second_blind": "66cb412302a347175a883281a3c9ec27ecf03d9e9ce2aa0038ff6079557cbe99",
+    "second_numbered": "9125231141dc375b3138d967d90933782c7a15d361649f441fd3ee12b3fcd7b5",
+    "second_evidence": "4f8e7db38995bfdefb9dab7962aa591219b19f3ed69b9e2c7031949b69fbd0e1",
+    "second_report": "0a7df0583816eed431c598fce8149bc1b477ec3d126471f4951ae7d78023d101"
+  },
+  "proof_gap_conventions": {
+    "missing_positive_kernel_proofs": 6,
+    "invalid_unrestricted_historical_inference": 1,
+    "combined": 7,
+    "numbered_proof_gaps": 0,
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "additional_source_page_errors": 1,
+    "clean_reports": 0
+  }
+}

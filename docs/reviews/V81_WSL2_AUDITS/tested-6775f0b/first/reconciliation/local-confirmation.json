@@ -1,0 +1,45 @@
+{
+  "signer": "Independent first reader",
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "manuscript_version": 81,
+  "checked_counts": {
+    "named_in_active_cell": {
+      "distinct": 852,
+      "occurrences": 855
+    },
+    "historical_named_reference": {
+      "distinct": 844,
+      "occurrences": 847
+    },
+    "direct_or_module_support": {
+      "distinct": 1078,
+      "occurrences": 1081
+    },
+    "named_by_module_expansion": {
+      "distinct": 301,
+      "occurrences": 301
+    },
+    "module_support_beyond_direct_on_row": {
+      "distinct": 226,
+      "occurrences": 226
+    },
+    "reader_one_supplemental": {
+      "distinct": 591,
+      "occurrences": 591
+    },
+    "reader_two_historical": {
+      "distinct": 45,
+      "occurrences": 45
+    },
+    "printed_rows": 80,
+    "module_links": 11,
+    "active_and_historical": 836,
+    "historical_only": 8,
+    "new_active_only": 16,
+    "extra_over_active_across_all_rows": 226,
+    "all_distinct_source_declarations": 1657
+  },
+  "full_official_6775": false,
+  "direct_register_sha256": "09ab680238c06327b3a75fde5d83e52de5c6e3edd0cfc029d6401e4209956737",
+  "named_probe_coverage_sha256": "d1fef8989e233fcb2475bdc43c347c297d1b7a3be37f18e14a884c2fd4516fd1"
+}

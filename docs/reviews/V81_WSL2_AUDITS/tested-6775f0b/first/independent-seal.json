@@ -1,0 +1,16 @@
+{
+  "sealed_utc": "2026-11-24T06:58:42+00:00",
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "stage": "independent source and formal comparison prior to peer reconciliation",
+  "source_verdict_sha256": "6796348976e4ab96dbaf3c1f72d3a8c65bfc097c974850d7042fbd521f9ab0bf",
+  "files_sha256": {
+    "confirm-official.py": "e66911ed689b040fb7c51a8e14233f8f284e0db54e907d9b9ff5307a7a5874f2",
+    "numbered.json.gz": "5b62bf0c0a06dc3ed92dd2e4c2761e6ea51f3a59770b22077ac0aed9e4e67b9f",
+    "passages.json.gz": "a1130bdda1e41fe5302f11f3b7aa874438979e0f3def441d87b29563ddb1d250",
+    "reader-evidence.zip": "df009b77679814278380e350df5ab49e4103af09899503de303e5d0f08da3b4f",
+    "reconstruction.md": "d447de49f84f9de7a599e762a6035322da4e02c162782dcf416c4a25638b340d",
+    "report.md": "6796348976e4ab96dbaf3c1f72d3a8c65bfc097c974850d7042fbd521f9ab0bf",
+    "supplemental.json.gz": "f27761460cb58587c7b56b1dae97afea4869c5fc2d414e083b935f3696306779",
+    "verdict.json": "250e24b441a9e9b939ba4c3a228c4caedafb2bb1f877696fc5e4a25f5f801ca8"
+  }
+}

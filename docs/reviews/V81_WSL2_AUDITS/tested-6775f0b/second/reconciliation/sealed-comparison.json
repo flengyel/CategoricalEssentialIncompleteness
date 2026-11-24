@@ -1,0 +1,24 @@
+{
+  "source_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "rows_with_identical_ordered_direct_name_lists": 78,
+  "rows_with_different_names": [
+    "10.1",
+    "B.7"
+  ],
+  "overlapping_individual_entries": {
+    "historical_numbered": 836,
+    "first_supplement": 20
+  },
+  "distinct_current_checked_individually_in_both": 847,
+  "identical_types_up_to_whitespace": true,
+  "identical_transitive_axiom_sets": true,
+  "identical_source_sha256": true,
+  "five_indirect_first_reader_applications": [
+    "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.component_fibre",
+    "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.forkParameter_total",
+    "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.fork_parameterizes",
+    "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.left_isTuring",
+    "CategoricalEssentialIncompleteness.V46.ForkTupleEvaluation.right_isTuring"
+  ],
+  "independent_report_seals_unchanged": true
+}

@@ -1,0 +1,105 @@
+{
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "started_utc": "2026-11-24T07:18:15+00:00",
+  "finished_utc": "2026-11-24T07:19:08+00:00",
+  "argv": [
+    "lake",
+    "--no-cache",
+    "build",
+    "CategoricalEssentialIncompleteness.V46ComputableTuringCategoryChecks"
+  ],
+  "exit_code": 0,
+  "log_sha256": "143608be2a64841889aa0fddf5808d4736e6ef4f87eebd0b17bf4896c386a7e7",
+  "tracked_checkout_clean": true,
+  "working_directory": "$REPO/Lean",
+  "environment": {
+    "LEAN_NUM_THREADS": "1"
+  },
+  "warnings_in_twelve_reviewed_modules": [
+    {
+      "module": "V46ComputablePowers",
+      "line": 28,
+      "column": 60,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46ComputablePowerProducts",
+      "line": 91,
+      "column": 74,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46ComputablePowerRetractions",
+      "line": 106,
+      "column": 43,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46ComputablePowerRetractions",
+      "line": 106,
+      "column": 64,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46SplitIdempotentSubcategory",
+      "line": 62,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46SplitIdempotentSubcategory",
+      "line": 63,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46SplitIdempotentSubcategory",
+      "line": 67,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46TuringComputablePowers",
+      "line": 52,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46ComputablePowerInclusion",
+      "line": 90,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46ComputablePowerInclusion",
+      "line": 100,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46ComputablePowerInclusion",
+      "line": 101,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    },
+    {
+      "module": "V46ComputableTuringCategoryChecks",
+      "line": 32,
+      "column": 62,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46ComputableTuringCategoryChecks",
+      "line": 36,
+      "column": 55,
+      "message": "missing space in the source"
+    },
+    {
+      "module": "V46ComputableTuringCategoryChecks",
+      "line": 104,
+      "column": 100,
+      "message": "This line exceeds the 100 character limit, please shorten it!"
+    }
+  ],
+  "log_gzip_sha256": "80405eb3695d0b59f01baf375d67b58ce2f0a99f22920109615bb9a39451c513"
+}

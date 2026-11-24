@@ -1,0 +1,43 @@
+# Cockett and Hofstra, Definitions 4.2–4.3 and Theorem 4.9
+
+I reconstructed the following statements before inspecting the new PCA Lean files. The source is the published PDF of J. R. B. Cockett and P. J. W. Hofstra, *Introduction to Turing categories*, Annals of Pure and Applied Logic 156 (2008), 183–209. Its SHA-256 is `ed06ee0bfda4da4278e37e61b10e7c34712dbc7e918a6d5b85f3183faf06403d`. Definitions 4.2–4.3 are in §4.1 on p. 197. Section 4.2 on p. 199 gives examples. Lemma 4.8 and Theorem 4.9 are in §4.3 on p. 200. I use ordinary right-to-left composition. [Journal article](https://doi.org/10.1016/j.apal.2008.04.005)
+
+## The finite-arity tests
+
+Let $D$ be a cartesian restriction category, let $1$ be its restriction terminal object and let $a:A\times A\to A$ be the application of an applicative system. Write $A^0=1$. Put $d=a\circ\Delta:A\to A$. For $n>0$, write $a_n$ for left-associated application to $n$ arguments. The source suppresses canonical finite-product isomorphisms.
+
+| Morphism | Test in Definition 4.2 |
+| --- | --- |
+| $f:1\to A$ | There is a **total** $p:1\to A$ with $f=d\circ p$. This permits a partial evaluated result. |
+| $f:A\to A$ | There is a total $p:1\to A$ with $f(x)=a(p,x)$ as an equality of morphisms. |
+| $f:A^n\to A, n\ge 2$ | A single total $p:1\to A$ computes $f$ exactly by $a_n$. The prefix $a_{n-1}(p,-):A^{n-1}\to A$ is total. The same $p$ satisfies both clauses. |
+| $f:A^n\to A^m, m>0$ | Each $\pi_j f:A^n\to A$ passes the preceding test at the same input arity $n$. Each component can have its own code. The domain of each component equals that of $f$, since the projections are total. |
+| $f:A^n\to 1, n>0$ | Its domain $\bar f:A^n\to A^n$ is computable. Thus each $\pi_i\bar f:A^n\to A$ must pass the $n$-ary test. |
+| $e:1\to 1$ | The printed last clause refers back to computability of $\bar e:1\to 1$. Here $e=\bar e$, by the restriction terminal law on p. 187. The text leaves this base case implicit. |
+
+The empty list of output components cannot decide the scalar case for an arbitrary base. The intended computable category, identified with the polynomial category in Theorem 4.5, gives a noncircular test. A scalar $e:1\to1$ is the domain $\bar q$ of some computable $q:1\to A$. Equivalently, there is a total $p:1\to A$ with $e=\overline{d p}$. To see necessity, choose a computable total $c:1\to A$, for example any total point in a PCA. Then $q=c e$ is computable by composition and $\overline{c e}=e$. Conversely, the restriction of a computable partial element belongs to the computable restriction category. This also shows, for a PCA, that testing $c e$ against a fixed total $c$ gives the same class. This is a deduction from the intended category and its closure, beyond the words of the scalar clause. Lemma 4.6 on p. 198 identifies a code for a partial element in the computable category. Its one-line proof requires the element to have such a code.
+
+For example, take $D=\mathrm{Par}(\mathrm{Set})$, $A$ a singleton and $a$ the unique total application. All generators, hence all polynomial morphisms, are total. The unique total points satisfy the positive- and zero-input tests. If every ambient scalar were admitted by an empty component test, the nowhere-defined scalar $e:1\to1$ could be composed with the computable total point $c:1\to A$. Their composite is nowhere defined. Every $d p$ is total in this example, so this composite fails the zero-input, one-output test. Closure under composition would fail. In a Turing category with its designated Turing morphism, all the ambient scalars do pass the domain test because all finite-power morphisms are computable.
+
+Definition 4.3 takes the **smallest cartesian restriction subcategory** on the formal finite powers containing application and all total points $1\to A$. Combinatory completeness means that every morphism of this subcategory passes the finite-arity tests. Theorem 4.4 equivalently tests the two polynomial morphisms for the $K$ and $S$ combinators with the indicated arities and defined prefixes. Theorem 4.5 identifies polynomial and computable morphisms. The implication from a code to a polynomial expression follows by expressing its evaluation using application, its total point and products. The scalar domain test uses closure under restriction.
+
+## The forward construction
+
+The objects of $\mathrm{Comp}(A,D)$ are formal powers indexed by natural numbers. Its morphisms are precisely the ambient morphisms passing the tests above. Its restriction, identities, composites, terminal morphisms, projections and partial pairings are inherited from $D$. Inclusion into $D$ is faithful. Theorem 4.9(i) designates the original $A$ and the original application $a$ in this category. For any $f:A^k\times A\to A$ in it, a total computable index $h:A^k\to A$ must satisfy $a(h\times 1_A)=f$. A code of arity $k+1$ supplies its $k$-argument prefix $h$ when $k>0$, total by Definition 4.2 and computable because it is polynomial. If $k=0$, take the total code point itself. This establishes the required parametrization at every finite input arity.
+
+For the retraction $A^2\rightleftarrows A$, choose a code $t$ of the ternary polynomial $g(x,y,z)=(z\mathbin{\bullet}x)\mathbin{\bullet}y$. Its two-argument prefix $p(x,y)=(t\mathbin{\bullet}x)\mathbin{\bullet}y$ is total and polynomial. Choose binary codes $k_1,k_2$ of the two projections. Put $u_i(w)=w\mathbin{\bullet}k_i$. Then $u_i p=\pi_i$, whence $\langle u_1,u_2\rangle p=1_{A^2}$. These operations are computable. A total computable point and the terminal morphism split $1$ off $A$. The identity treats $A^1$, and the product of a preceding retraction with $1_A$, followed by the binary one, gives the retraction at every further arity. The section is total. The retraction may be partial. This proves the finite-power requirement of the recognition theorem (Theorems 3.4 and 4.7, pp. 189 and 199).
+
+## The converse and the equivalence
+
+For a Turing category $D$ with designated $A,a$, parameterized universality of $a$ codes every $A^n\to A$ with the required total prefix. At $n=0$, given $f:1\to A$, choose a total unary code $p$ for $f\circ !_A:A\to A$. Evaluation at the total $p$ gives $d p=f$. At $n\ge2$, first choose a total morphism $h:A^{n-1}\to A$ indexing $f$ in its last variable. A code for $h$ by induction supplies the same code for $f$, with $h$ as its total prefix. Positive finite outputs follow by components. The restriction test passes for all morphisms to $1$, including a scalar $e$, by applying the zero-input test to $c e$ for a total point $c$. Thus all ambient morphisms between the powers are computable, which also proves the PCA assertion of Theorem 4.9(ii).
+
+Lemma 3.3 on p. 189 supplies a section $m_X:X\to A$ and retraction $r_X:A\to X$ for **every object $X$ of $D$** with $r_X m_X=1_X$. The composite $e_X=m_X r_X$ is an ordinary idempotent on $A$. Section 2.1, pp. 186–187, allows $r_X$ to be partial and $e_X$ to be an arbitrary idempotent. Lemma 4.8 also uses the retractions of each formal power. A class $E$ implementing Theorem 4.9(ii) can be taken to consist of the idempotents on formal powers that split in $D$. This includes every identity. The category $K_E(\mathrm{Comp}(A,D))$ has objects $(P,e)$ and morphisms $v:(P,e)\to(Q,d)$ with $v e=v=d v$. Their full faithfulness against the base uses computability of every morphism between powers. Choosing actual splittings in $D$ gives the equivalence. In the reverse direction send $X$ to $(A,e_X)$ and $f:X\to Y$ to $m_Y f r_X$. A sandwich in the other direction is $r_Y v m_X$. Every object $(P,e)$ is represented by its split object in $D$.
+
+The notation in the theorem is $D\simeq K_E(\mathrm{Comp}(A,D))$. The definition of Morita equivalence on p. 187 uses equivalence of the categories obtained by splitting idempotents. No separate preservation premise occurs in the theorem. An arbitrary equivalence between the underlying categories does not by its type certify that its chosen functor preserves restriction. The canonical equivalence above does preserve it. Indeed, the restriction of $v:(P,e)\to(Q,d)$ in the splitting is $e\bar v$. For $F(f)=m_Y f r_X$, the section $m_Y$ is total and the restriction axiom R4 gives
+
+$$
+  \overline{F(f)}^{K}=e_X\overline{m_Y f r_X}
+    =m_X r_X\overline{f r_X}=m_X\bar f r_X=F(\bar f).
+$$
+
+This derives preservation for the comparison implementing the theorem without an added hypothesis. If both partial products and their projections and pairing have been shown preserved, the formula $\bar f=\pi_1\langle 1,f\rangle$ on p. 198 gives another derivation. The stronger comparison as restriction categories should record the law, or an applicable result implying it, when claimed explicitly.

@@ -1,0 +1,93 @@
+{
+  "signer": "Independent first reader",
+  "signed_utc": "2026-11-24T07:37:28+00:00",
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "manuscript_version": 81,
+  "first_reader_verdict_sha256": "6796348976e4ab96dbaf3c1f72d3a8c65bfc097c974850d7042fbd521f9ab0bf",
+  "first_reader_independent_seal_sha256": "f5a7692e8dccdbf8b5e7d79d29e876edd451e58a91a95cee48e69b7f579a7589",
+  "second_reader_verdict_sha256": "0a7df0583816eed431c598fce8149bc1b477ec3d126471f4951ae7d78023d101",
+  "second_reader_independent_seal_sha256": "4f8e7db38995bfdefb9dab7962aa591219b19f3ed69b9e2c7031949b69fbd0e1",
+  "reconciled_finding_counts": {
+    "mathematical_errors": 1,
+    "ambiguities": 1,
+    "historical_lean_omissions": 6,
+    "proof_gaps_counting_unproved_positive_conclusions": 6,
+    "proof_gaps_including_invalid_historical_inference": 7,
+    "numbered_argument_proof_gaps": 0,
+    "additional_source_locator_errors": 1,
+    "qualifying_clean_reports": 0
+  },
+  "coverage": {
+    "named_in_active_cell": {
+      "distinct": 852,
+      "occurrences": 855
+    },
+    "historical_named_reference": {
+      "distinct": 844,
+      "occurrences": 847
+    },
+    "direct_or_module_support": {
+      "distinct": 1078,
+      "occurrences": 1081
+    },
+    "named_by_module_expansion": {
+      "distinct": 301,
+      "occurrences": 301
+    },
+    "module_support_beyond_direct_on_row": {
+      "distinct": 226,
+      "occurrences": 226
+    },
+    "reader_one_supplemental": {
+      "distinct": 591,
+      "occurrences": 591
+    },
+    "reader_two_historical": {
+      "distinct": 45,
+      "occurrences": 45
+    },
+    "printed_rows": 80,
+    "module_links": 11,
+    "active_and_historical": 836,
+    "historical_only": 8,
+    "new_active_only": 16,
+    "extra_over_active_across_all_rows": 226,
+    "all_distinct_source_declarations": 1657
+  },
+  "formal_replay_status_at_signature": "pending",
+  "previously_sealed_verdicts": "preserved, both digest sets rechecked",
+  "canonical_report": "docs/V81_WSL2_LEAN_VERIFICATION.md",
+  "canonical_receipt": "docs/V81_WSL2_LEAN_VERIFICATION.json.gz",
+  "commit_specific_receipt": "docs/V81_WSL2_LEAN_VERIFICATION_6775f0b.json.gz",
+  "checker_controls": {
+    "reject_wrong_sources": [
+      {
+        "file": "V81_WSL2_LEAN_VERIFICATION.json.gz",
+        "exit_code": 1,
+        "message": "No verification for the requested scope: different tested source or version"
+      },
+      {
+        "file": "V81_WSL2_LEAN_VERIFICATION_830d03a.json.gz",
+        "exit_code": 1,
+        "message": "No verification for the requested scope: different tested source or version"
+      }
+    ],
+    "historical_function_positive_control": {
+      "reported_commit": "830d03a5adcf144a003feb36f88bd06e0c5b0cf5",
+      "allowed_test_override": "explicit earlier commit and its own historical numbered row sets in a test process",
+      "exit_code": 0,
+      "commands": 2073,
+      "named_reported_by_receipt": 844,
+      "git_blobs": 2716
+    }
+  },
+  "files_sha256": {
+    "active-numbered.tsv.gz": "306127d80a12ab911127292553d94b25410ceaba13f72fba8b2300f28065f770",
+    "confirm-reconciliation.py": "35aadf075b6aad4f1d35a38a8f557ea813548903e4c8e0f583d00a5fc2734e3b",
+    "local-confirmation.json": "9bd3aa0d0c7576a6387cfb9b2efd9c49be15a42a381a883bc408ee024677b14d",
+    "named-probes.json.gz": "d1fef8989e233fcb2475bdc43c347c297d1b7a3be37f18e14a884c2fd4516fd1",
+    "numbered-reconciliation.json.gz": "09ab680238c06327b3a75fde5d83e52de5c6e3edd0cfc029d6401e4209956737",
+    "reconciliation-probes.zip": "83b23357089dffbbb20fd7b9ad0be5ac92a7acaf4651e48eefa67a8c1b063551",
+    "reconciliation.md": "e810c6fb5244bb6c63ade10ad335d24bc36650119aa35276ffd2bf598c29d79d"
+  }
+}

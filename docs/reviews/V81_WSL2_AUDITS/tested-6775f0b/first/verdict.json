@@ -1,0 +1,66 @@
+{
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "manuscript_version": 81,
+  "blind_seal_utc": "2026-11-24T06:37:35Z",
+  "blind_reconstruction_sha256": "d447de49f84f9de7a599e762a6035322da4e02c162782dcf416c4a25638b340d",
+  "counts": {
+    "whole_paper": {
+      "mathematical_errors": 1,
+      "ambiguities": 1,
+      "lean_omissions": 6,
+      "proof_gaps_including_missing_kernel_proofs": 7
+    },
+    "numbered_results_definitions_and_dependencies": {
+      "mathematical_errors": 0,
+      "ambiguities": 0,
+      "lean_omissions": 0,
+      "proof_gaps": 0
+    },
+    "additional_bibliographic_locator_errors": 1,
+    "numbered_mathematical_results": 77,
+    "numbered_definitions": 3,
+    "clean_reports": 0
+  },
+  "omitted_positive_historical_conclusions": [
+    "Heller 9.2",
+    "Lengyel 21",
+    "Lengyel 26",
+    "Bauer–Hanson 6.4",
+    "van Dijk–Gietelink Oldenziel 5.19",
+    "van Dijk–Gietelink Oldenziel 5.20"
+  ],
+  "false_unrestricted_statement": "Di Paola–Heller, Theorem 8.15 and §1, lines 173–175",
+  "ambiguous_passage": "§8.3, opening description of effective extensibility",
+  "locator": "§8.1, Di Paola–Heller item (3), correct page 595",
+  "active_correspondence_at_tested_commit": "FORMALIZATION_STATUS_V81.md",
+  "canonical_kernel_receipt": "docs/V81_WSL2_LEAN_VERIFICATION.json.gz",
+  "committed_canonical_receipt_at_tested_commit": {
+    "scope": "targeted",
+    "commit": "98f8d0d50a0cc08885d07ab4d71ec6f6a7adf885"
+  },
+  "official_full_replay_at_source_verdict": "pending",
+  "source_reading": {
+    "recursive_inputs": 25,
+    "paragraph_records": 587,
+    "nonlayout_math_or_expository_noblank_paragraphs": 485,
+    "all_input_lines_classified": true
+  },
+  "typed_evidence": {
+    "numbered_rows": 80,
+    "reference_occurrences": 847,
+    "unique_numbered_declarations": 844,
+    "numbered_modules": 360,
+    "other_module_links": 11,
+    "supplementary_decl_count": 591,
+    "supplementary_comparison_rows": 44,
+    "supplementary_linked_modules": 85,
+    "overlap_between_declaration_sets": 9,
+    "independent_typed_applications": 10,
+    "fresh_production_replays": 12,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

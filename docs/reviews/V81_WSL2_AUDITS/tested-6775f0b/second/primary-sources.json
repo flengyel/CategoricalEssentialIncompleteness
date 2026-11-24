@@ -1,0 +1,707 @@
+{
+  "citation_commands": 73,
+  "citation_occurrences": 78,
+  "sources": [
+    {
+      "key": "Aczel",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 373,
+          "locator": "Propositions 1.1.4 and 1.4.5"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+      "comparison": "Finitary sequence version of 1.1.4 and well-founded-tree version of 1.4.5. For finitely branching well-founded proofs each such tree is finite."
+    },
+    {
+      "key": "BauerHanson",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 127,
+          "locator": "Theorem~6.4"
+        },
+        {
+          "source": "manuscript/latex/sections/04-miller-sequences.tex",
+          "line": 8,
+          "locator": "Section~2.1 and Theorem~2.2"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/html/2404.01256v3",
+      "comparison": "The external Miller sequence in Theorem 2.2 and the internal epimorphism of Theorem 6.4 have different codomains and ambient categories."
+    },
+    {
+      "key": "Bernardi",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 178,
+          "locator": "Sections~2--3, pp.~125--128"
+        },
+        {
+          "source": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 324,
+          "locator": "pp.~125--126"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.researchgate.net/publication/303491669_Precomplete_equivalence_relations_in_dominical_categories",
+      "comparison": "Original paper as reproduced from Proceedings of the AMS, §§2–3. Nonempty disjoint unions of classes and precompleteness, plus the PA example."
+    },
+    {
+      "key": "CockettLists",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 14,
+          "locator": "Lemma 2.2 and Definition 2.3"
+        }
+      ],
+      "scope": "Original-source comparison inherited from the current linked dossiers",
+      "comparison": "See the occurrence and primary-source inventory. Individual source text was not independently rechecked for this item."
+    },
+    {
+      "key": "CockettComputability",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 187,
+          "locator": "Sections~5.3 and 7.1, Theorem~7.8"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 214,
+          "locator": "Section~7.5, Theorem~7.14"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf",
+      "comparison": "Theorems 7.8 and 7.14 distinguish discreteness and stable joins in the first theorem from the coded order and restriction zero in the second."
+    },
+    {
+      "key": "CGHRangeI",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 566,
+          "locator": "Theorem 4.7"
+        },
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 572,
+          "locator": "Theorem 4.5 and Section 4.11"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 145,
+          "locator": "p.~424"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html",
+      "comparison": "Authors’ published text, Theorem 4.7 on p. 437, gives the M-stable factorization for total maps of a split range category."
+    },
+    {
+      "key": "CGHRangeII",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 568,
+          "locator": "Section 3.16 and Proposition 3.17"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.kurims.kyoto-u.ac.jp/EMIS/journals/TAC/volumes/26/18/26-18.pdf",
+      "comparison": "Proposition 3.17, journal page 480. Finite limits and stability identify regular epi–mono factorizations when the right class is all monomorphisms."
+    },
+    {
+      "key": "CockettHofstra",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 210,
+          "locator": "Theorem~4.9"
+        },
+        {
+          "source": "manuscript/latex/sections/04-theory-extensions.tex",
+          "line": 72,
+          "locator": "Section 3.5"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 210,
+          "locator": "Theorem 3.4"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "770ce40ba7be05d491e4df5bc432a7822a9a7a27b987fb31774af1e44674a27b",
+      "comparison": "Definitions 4.2–4.3, Theorems 4.5 and 4.9, pp. 197–200. Total code, total prefix, computable full domains and the class of idempotents in the converse."
+    },
+    {
+      "key": "CockettLack",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 165,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 8,
+          "locator": "Section~2.1.1"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 82,
+          "locator": "Section~2.3.3"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 96,
+          "locator": "Section~2.3.3, Proposition~2.26"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 102,
+          "locator": "Section~3"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "18d1bce91e82c8d73b6a8ec0bfe09b68c6e6c9ab10e04e8656a2d798ee5bbd7e",
+      "comparison": "Restriction laws, categories of partial maps and the restriction of a morphism after ordinary idempotent splitting."
+    },
+    {
+      "key": "CockettLackIII",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 128,
+          "locator": "Proposition 4.5"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/pdf/math/0610500#page=21",
+      "comparison": "Proposition 4.5 identifies p-categories amongst restriction categories by binary restriction products."
+    },
+    {
+      "key": "CurryCosheaves",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/09-three-point-space.tex",
+          "line": 4,
+          "locator": "Definition~2.6"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/pdf/1607.06942#page=3",
+      "comparison": "Definition 2.6 is the cover-colimit condition. The paper itself computes the diagram of the three-point space."
+    },
+    {
+      "key": "DPH",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 5,
+          "locator": "pp.~594--596, 629"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 175,
+          "locator": "Theorem~8.15"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 202,
+          "locator": "pp.~595--596"
+        },
+        {
+          "source": "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 241,
+          "locator": "p.~594, (3)"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "c2ff8245ee343d529f50d4cd500194f92aed00b7d7cdeacf00c8255f3d07c588",
+      "comparison": "Theorem 8.15, pp. 625–626, depends on excluding the zero identity in its final contradiction. Item (3) starts on p. 595."
+    },
+    {
+      "key": "DPM",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/d-faithful-family.tex",
+          "line": 62,
+          "locator": "Corollary 4.4, pp.~657--658"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 9,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 59,
+          "locator": "p.~644"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 153,
+          "locator": "p.~646"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 182,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 98,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 171,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "f750e4d18e0cb322e7e07551a587e371987adecdddbc740e1da363b178af691a",
+      "comparison": "Unprimed Corollary 4.4, pp. 657–658. The authors discuss the relation of their example to Heller on p. 644."
+    },
+    {
+      "key": "FPT",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 130,
+          "locator": "Sections 2--4"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.dcs.ed.ac.uk/home/dt/FiorePlotkinTuri.pdf",
+      "comparison": "Binding algebra and substitution structures provide the external approach to syntax. The project uses named variables and a partial admissibility morphism."
+    },
+    {
+      "key": "GabbayPitts",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 131,
+          "locator": "Section 6"
+        },
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 241,
+          "locator": "proof of Corollary 6.7"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://doi.org/10.1007/s001650200016",
+      "comparison": "Corollary 6.7 extends structural recursion to the nominal quotient. Its proof retains the original term with the auxiliary value."
+    },
+    {
+      "key": "GoguenBurstall",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 124,
+          "locator": "Section 4"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.lfcs.inf.ed.ac.uk/reports/86/ECS-LFCS-86-10/ECS-LFCS-86-10.pdf",
+      "comparison": "Section 4 describes a many-sorted syntax as initial algebra and interpretation as the unique morphism to a denotation algebra."
+    },
+    {
+      "key": "GTWW",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 123,
+          "locator": "Section 2"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://fldit-www.cs.tu-dortmund.de/~peter/IniAlg.pdf#page=4",
+      "comparison": "Proposition 2.1 gives the many-sorted set-based initial algebra of a signature."
+    },
+    {
+      "key": "HP",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 458,
+          "locator": "0.10, p.~7"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://assets.cambridge.org/97811071/68411/excerpt/9781107168411_excerpt.pdf",
+      "comparison": "The first three Hilbert propositional schemes, including the orientation of the third, are in 0.10."
+    },
+    {
+      "key": "Heller",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/09-three-point-space.tex",
+          "line": 113,
+          "locator": "Section 3"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 163,
+          "locator": "Section~5"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 166,
+          "locator": "Sections~8--9"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 18,
+          "locator": "Section~5"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 61,
+          "locator": "Section~6"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 198,
+          "locator": "Section 9"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "98c6d7bf8909975d9feb17d2c13ea41cb0d21d042ff67b0296a484bc92b75a48",
+      "comparison": "Theorem 9.2 specifies a locally connected iteration category, a uniformly generated isotypical subcategory and the recursion-category structure on its completion."
+    },
+    {
+      "key": "HH",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 471,
+          "locator": "Sections 2.11--2.12"
+        },
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 473,
+          "locator": "Section 3.1"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "comparison": "Section 2.12 requires free substitutability for universal instantiation and absence from the antecedent for the distribution axiom."
+    },
+    {
+      "key": "Katsumata",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 132,
+          "locator": "Section 2, Example 1(3)"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~sinya/paper/generalpre.pdf",
+      "comparison": "Example 1 presents binding signatures and operators by argument and output sorts."
+    },
+    {
+      "key": "Keisler",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/06-interpretation-in-models.tex",
+          "line": 401,
+          "locator": "Theorem~3.1"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf",
+      "comparison": "Theorem 3.1 quantifies over formulas, structures and represented parameters."
+    },
+    {
+      "key": "KirstPeters",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/03a-internal-theories.tex",
+          "line": 243,
+          "locator": "Definitions~7, 17 and Theorem~20"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol252-csl2023/LIPIcs.CSL.2023.30/LIPIcs.CSL.2023.30.pdf#page=9",
+      "comparison": "Theorem 20 derives a particular independent sentence from strong separation and semidecision in a consistent extension with the indicated enumeration hypothesis."
+    },
+    {
+      "key": "Lengyel2004",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 168,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "655f0de829323d651798e85f2b5fe9d64774cfee2cda72acd22ad72deeb70f65",
+      "comparison": "Theorems 21 and 26, pp. 20 and 27, distinguish absolute separation from separation by an iteration functor."
+    },
+    {
+      "key": "Lengyel2006",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/c-section-lifting.tex",
+          "line": 206,
+          "locator": "Theorem~4.1"
+        },
+        {
+          "source": "manuscript/latex/appendices/c-section-lifting.tex",
+          "line": 220,
+          "locator": "p.~11"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 182,
+          "locator": "Theorem~4.1"
+        },
+        {
+          "source": "manuscript/latex/sections/02-categorical-preliminaries.tex",
+          "line": 146,
+          "locator": "p.~7"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "74a14a3b603cb0f5be4027ed18d246ff7264d5ac43f04e185a169c5dcfa055d1",
+      "comparison": "Theorem 4.1 in the author-held copy makes the source inseparability claim without a lifting assumption."
+    },
+    {
+      "key": "Corrections",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 168,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex#L619",
+      "comparison": "Author’s exact local Git blob 841d43806db321076744f1d6ed8378f7ac14f29f at the printed pin. Lines 619–625 use a faithful iteration functor and a separated target. Equality of simulation and partial domains is necessary for the weak evaluator."
+    },
+    {
+      "key": "Composition",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 184,
+          "locator": "Corollary 2"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/abs/2609.25556v3",
+      "comparison": "Author’s abstract gives the exact consistent c.e. PA-extension hypothesis and composition failure."
+    },
+    {
+      "key": "MaiettiLists",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 16,
+          "locator": "Definition 2.4 and the following paragraph"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf#page=4",
+      "comparison": "Definition 2.4 quantifies over each object and over both the parameterized seed and the step."
+    },
+    {
+      "key": "Miller2004",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 125,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/04-miller-sequences.tex",
+          "line": 4,
+          "locator": "Theorem~6.3 and the following paragraph"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+      "comparison": "The proof of Theorem 6.3 uses the same index for all representations in Lemma 6.2 and identifies its coordinate."
+    },
+    {
+      "key": "Montagna",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 9,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 39,
+          "locator": "p.~115, Note~1"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 94,
+          "locator": "p.~108; p.~115, Note~1"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 150,
+          "locator": "p.~105"
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 182,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/05-syntactic-recursion-category.tex",
+          "line": 198,
+          "locator": "p.~109, equation~$(*)$"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 98,
+          "locator": null
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 101,
+          "locator": "pp.~114--115"
+        },
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 180,
+          "locator": "Remark~3.1"
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "d1d55ae66c9ad91fb3cc18f6795648fab3ad30b72a533496badd7fe27f635388",
+      "comparison": "Remark 3.1, p. 114, attributes an effectively inseparable pair in the unprimed category."
+    },
+    {
+      "key": "MPV",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 194,
+          "locator": "Section~4.4, p.~1169"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/pdf/2207.08174#page=10",
+      "comparison": "The variant proof in §4.4 uses essential undecidability or inconsistency. For disjoint sets existence of the prescribed equivalence relation removes the inconsistent case."
+    },
+    {
+      "key": "PourEl",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+          "line": 8,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://doi.org/10.2307/2270052",
+      "comparison": "Original 1968 publisher extract describes a fixed presentation of number theory and consistent axiomatizable extensions."
+    },
+    {
+      "key": "RobinsonRosolini",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/05a-internal-syntax.tex",
+          "line": 6,
+          "locator": "pp.~108--109"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://core.ac.uk/download/pdf/82816866.pdf#page=14",
+      "comparison": "On pp. 108–109 the one-object category has provably single-valued binary Σ₁ formulas identified by provable equivalence."
+    },
+    {
+      "key": "RosoliniThesis",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 162,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, local facsimile text inspected",
+      "extracted_text_sha256": "3f47bc5d9283866388c704560d0e8f0b70443318c2e5ffef13a68884d089daf1",
+      "comparison": "Chapter 2 introduces p-categories and compares them with dominical categories."
+    },
+    {
+      "key": "Rosolini",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 162,
+          "locator": null
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://doi.org/10.1007/BFb0081368",
+      "comparison": "The author motivates the broader notion of p-category by familiar partial-map categories. The thesis gives a separate explicit implication for dominical categories."
+    },
+    {
+      "key": "vanDijkGO",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/01-introduction.tex",
+          "line": 205,
+          "locator": "Theorems~5.19--5.20"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://arxiv.org/pdf/2004.10482#page=25",
+      "comparison": "Theorem 5.19 is about an arithmetic universe object inside Urec. Theorem 5.20 compares the equalizer of two truth values to the bottom subobject in the ambient initial arithmetic universe."
+    },
+    {
+      "key": "VisserEHU",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/03a-internal-theories.tex",
+          "line": 239,
+          "locator": "Lemma~23"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://research-portal.uu.nl/ws/portalfiles/portal/230468330/s00153-024-00911-y.pdf#page=16",
+      "comparison": "Lemma 23 applies to a recursive map sending an inseparable pair into theorem and refutation sets."
+    },
+    {
+      "key": "Voutsadakis",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/sections/03b-internal-adjunctions.tex",
+          "line": 370,
+          "locator": "Theorem~7"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://www.voutsadakis.com/RESEARCH/PUBLISHED/fol.pdf#page=12",
+      "comparison": "Theorem 7 gives an adjunction between hierarchies of sets and relational signatures. The signature construction extends substitutions through binders."
+    },
+    {
+      "key": "Wissmann",
+      "occurrences": [
+        {
+          "source": "manuscript/latex/appendices/a-syntax-and-theories.tex",
+          "line": 418,
+          "locator": "Lemma 3.6"
+        }
+      ],
+      "scope": "Cited work, original passage or author/publisher extract inspected",
+      "url": "https://lmcs.episciences.org/10014/pdf#page=11",
+      "comparison": "Lemma 3.6 lifts the factorization system to algebras for an endofunctor preserving its left class."
+    }
+  ]
+}

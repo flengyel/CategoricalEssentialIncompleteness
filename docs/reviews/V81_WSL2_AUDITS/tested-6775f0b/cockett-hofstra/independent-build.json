@@ -1,0 +1,109 @@
+{
+  "tested_commit": "6775f0b3a5fb668f9390b21440f3f6c57bc65930",
+  "completed_utc": "2026-11-24T07:12:03+00:00",
+  "purpose": "Independent strict source compilation of all twelve PCA modules before the official-checkout replay.",
+  "source": "Pinned checkout. The dependencies of the twelve new modules came from their compiled predecessors in the independent output directory and the existing dependencies of the pinned checkout.",
+  "order": "Topological order of the twelve named project modules, processing one module at a time.",
+  "working_directory": "$REPO/Lean",
+  "argv": [
+    "lean",
+    "--threads=1",
+    "--memory=1700",
+    "-DwarningAsError=true",
+    "-R",
+    "$REPO/Lean",
+    "-o",
+    "$SCRATCH/CategoricalEssentialIncompleteness/$MODULE.olean",
+    "$REPO/Lean/CategoricalEssentialIncompleteness/$MODULE.lean"
+  ],
+  "environment": {
+    "LEAN_PATH": "$SCRATCH:$LAKE_LEAN_PATH",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "modules": [
+    {
+      "module": "V46ApplicativeCodes",
+      "source_sha256": "aabc04b8a90c370ebe52153b03f08dd61fc092b2a29e8adeec0d0eb51b649809",
+      "olean_sha256": "8fd77046296e4f65e8205f82db8667fc33d6c0dbf849b29a86ae4e397738e126",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46RestrictionProductCones",
+      "source_sha256": "d33801d0a4273b524c046fbb1bf77511169a8d389459d783da709a6ad7f526d7",
+      "olean_sha256": "876527dfbc72c86b41af2a81968cbc61ff9b0202c217a330e2c750068e39c73a",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46SplitIdempotentSubcategory",
+      "source_sha256": "8926739f26e613916771e69e368527bd6bcba2693d8947ffb7abfd17c36d6853",
+      "olean_sha256": "19fcc23fe1360782aff933ff03586b8d6e9e21e6a13a3ed2fa07a7dc43954615",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ApplicativePolynomials",
+      "source_sha256": "6d29f40fb2417bc8e96950adb3bbc385212c7058eb2b2c69a500a6a48b1da015",
+      "olean_sha256": "b0d50299078576cab0ca05447d33f49e25d1102ed74ddb7f5c863b19af12e6f9",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputablePowers",
+      "source_sha256": "81fffa22aae5f3dd031daa506de8fc4c3c30ba4380461b0cbb91def0263ebe2e",
+      "olean_sha256": "91f66ab7292babc39e855a5fb0223224d0ca13fb9e6ca41f09b5dc2447a5caa8",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputablePowerProducts",
+      "source_sha256": "a04b7c8c33401dade26623057fd17af4164df9221ce1d0b223d052fa5d141797",
+      "olean_sha256": "ea5a1eac7c1e800754b78291f0f2bf682ba0284593a233700973fca04b60a0b4",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46TuringComputablePowers",
+      "source_sha256": "8b7c7fee53c271a59883580a2ce71e6fc2657f908588df157d717c69ab7c93aa",
+      "olean_sha256": "edd2e1fb3a5a36c2b16b92d4c524a13b56583b6af91f618f70774df8959c8e93",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputablePowerInclusion",
+      "source_sha256": "dc0261097d826947ec4d09678f04d04740450314b3a70000e46b55c377662a44",
+      "olean_sha256": "7782861ad417f55bc86a8894ddd8c56958156fd661c000c7ab3a93be979fe773",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputablePowerRetractions",
+      "source_sha256": "dac563529e27b6d881059f104d7b3f28b7428b70c6960be7740b2aba63b94223",
+      "olean_sha256": "02a1978cd717dd24a7951823cfb2c1c90c24396a2b37927cb98b3b1c52338289",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputablePowerRestriction",
+      "source_sha256": "509cb3a195c657f7788d0fdb36a649cd1244d64e6b19f0dec5f5a48b60749326",
+      "olean_sha256": "9f67adb3cbfc849cad55e646b178c15e8c1ff54358fb2df0fbf666fe036f2239",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputableTuringCategory",
+      "source_sha256": "280d35f6b10ff8b537998b5d31766a66bdb068e0d0fa4f34651375925139127b",
+      "olean_sha256": "9d14da94513a55401f379d5a10fc5122fd72bef218eb93955c8abfbb2da5b5cc",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "module": "V46ComputableTuringCategoryChecks",
+      "source_sha256": "889641c434ae65ca6dd6efc6cf361d27efb026c7622b09fa6428c867b7b69c6c",
+      "olean_sha256": "fa4e698e8a15b1a9d728db1cb6581d1d876d13c1a240c0d530c5d32b847c0458",
+      "exit_code": 0,
+      "output": "'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.code_with_prefix' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.positive_input_domain' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.scalar_domain' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.combinatory_completeness' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.finite_products' depends on axioms: [propext,\n Classical.choice]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.pca_turing' depends on axioms: [propext]\n'CategoricalEssentialIncompleteness.V46.ComputableTuringCategoryChecks.turing_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    }
+  ]
+}
