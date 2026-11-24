@@ -16,19 +16,17 @@ Let $a,b$ be disjoint domains on an object $X$ in the restriction
 idempotent completion of a recursion category. In its total category the
 domains have inclusions $i_a:A\hookrightarrow X$ and $i_b:B\hookrightarrow X$.
 
-The only nonlogical symbols are predicates that take no arguments.
-In sets, one could write $P_x$ for the predicate named by $x\in X$.
-Writing $P_x$ already gives an atomic sentence. In the category, let $S_X$
-be the object of sentences. The morphism $\theta_X:X\to S_X$ forms the
-atomic sentence from its name. For any object $W$, a morphism $x:W\to X$
-specifies a family of names. Its family of sentences is the composite
-$\theta_X\circ x:W\to S_X$.
+Take $X$ as the object of predicate symbols. These are the only nonlogical
+symbols, and they take no arguments. Let $S_X$ be the object of sentences.
+The atomic sentence constructor is a morphism $\theta_X:X\to S_X$.
+For any object $W$, a morphism $x:W\to X$ specifies a predicate symbol
+over $W$. Its atomic sentence over $W$ is $\theta_X\circ x:W\to S_X$.
 
-The theory asserts the atoms whose names lie in $a$ and the negations
-of those whose names lie in $b$. The first family is
-$\theta_X\circ i_a:A\to S_X$. For the second, let $\nu_X:S_X\to S_X$
-denote negation. The family is $\nu_X\circ\theta_X\circ i_b:B\to S_X$.
-The images of these two morphisms give the nonlogical axioms.
+Restricting the constructor to $a$ gives the positive axiom family
+$\theta_X\circ i_a:A\to S_X$. For the negative axioms, restrict it to
+$b$ and apply sentence negation $\nu_X:S_X\to S_X$. This gives
+$\nu_X\circ\theta_X\circ i_b:B\to S_X$.
+The join of the two image subobjects gives the nonlogical axioms.
 Closing them under the rules of deduction gives the theory $T$.
 
 A consistent $T$ is essentially
