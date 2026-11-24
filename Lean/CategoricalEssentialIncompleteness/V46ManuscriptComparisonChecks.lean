@@ -75,6 +75,26 @@ open OracleComputation OracleComputation.Restricted
 
 attribute [local instance 2000] nativeRestriction
 
+example : ∀ n a : ℕ, n ∈ K ↔ Nat.pair (Encodable.encode (simulationCode n)) a ∈ A :=
+  K_iff_simulation_mem_A
+
+example : isTotal missingSection ∧ SectionOf ((inclusion K).map switchProjection) missingSection :=
+  ⟨missingSection_total, missingSection_is_section⟩
+
+example (n : ℕ) :
+    (n ∈ A → missingSection n = Part.some (Sum.inr n)) ∧
+    (n ∉ A → missingSection n = Part.some (Sum.inl n)) := by
+  classical
+  change (n ∈ A → Part.some (if n ∈ A then Sum.inr n else Sum.inl n) =
+    Part.some (Sum.inr n)) ∧ (n ∉ A → Part.some (if n ∈ A then Sum.inr n else Sum.inl n) =
+    Part.some (Sum.inl n))
+  exact ⟨fun hn => congrArg Part.some (ite_eq_left hn),
+    fun hn => congrArg Part.some (ite_eq_right hn)⟩
+
+example : ¬ ∃ u : N K ⟶ N K, (inclusion K).map u =
+    missingSection ≫ ((inclusion K).mapIso (parityIso K)).inv :=
+  missingSection_endomorphism_has_no_lift
+
 example (s : PartialFun.of ℕ ⟶ coprod (PartialFun.of ℕ) (PartialFun.of ℕ))
     (h₀ : Idem.pull s (summand0 (PartialFun.of ℕ) (PartialFun.of ℕ)) =
       (rangeFunctor K).mapIdem separatorComplement)
@@ -90,4 +110,14 @@ example (s : ℕ →. (ℕ ⊕ ℕ))
     ¬ ∃ ℓ : N K ⟶ coprod (N K) (N K), (inclusion K).map ℓ = s :=
   no_lift_of_output_summands s h₀ h₁
 
+example (s : ℕ →. (ℕ ⊕ ℕ))
+    (h₀ : ∀ n, (∃ y : ℕ, Sum.inl y ∈ s n) ↔ n ∉ A)
+    (h₁ : ∀ n, (∃ y : ℕ, Sum.inr y ∈ s n) ↔ n ∈ A) :
+    (∀ n, (s n).Dom) ∧ ¬ ∃ f : ℕ → ℕ ⊕ ℕ, Computable f ∧ s = fun n => Part.some (f n) :=
+  total_and_noncomputable_of_output_summands s h₀ h₁
+
 end Oracle
+
+#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.K_iff_simulation_mem_A
+#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.missingSection_endomorphism_has_no_lift
+#print axioms CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.total_and_noncomputable_of_output_summands

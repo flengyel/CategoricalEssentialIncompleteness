@@ -31,3 +31,53 @@ example (inverses : RestrictionSubobjects.MonoInverses C)
   SignedFirstOrder.essential_incomplete_iff_inseparable inverses F a b hab hc
 
 #print axioms CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable
+
+section TotalSubobjects
+
+open RestrictionSubobjects
+
+variable {S : Type u} [Category.{v} S] [RestrictionCategory S] [Splits S]
+  [Regular (Tot S)] [FinitaryExtensive (Tot S)]
+
+example {V X : Tot S} (F : NullaryPresentations V) (a b : Subobject X) (hab : a ⊓ b = ⊥)
+    (consistent : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
+    (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) ↔
+      ¬ ∃ p n : Subobject X, IsCompl p n ∧ a ≤ p ∧ b ≤ n := by
+  have h := SignedFirstOrder.essential_incomplete_iff_subobject_inseparable F a b hab consistent
+  constructor
+  · rintro ht ⟨p, n, hc, ha, hb⟩
+    exact (h.mp ht).2 ⟨⟨p, n, hc⟩, ha, hb⟩
+  · intro hs
+    apply h.mpr
+    refine ⟨hab, ?_⟩
+    rintro ⟨p, ha, hb⟩
+    exact hs ⟨p.positive, p.negative, p.complementary, ha, hb⟩
+
+end TotalSubobjects
+
+section SplitDomains
+
+open RestrictionSubobjects RecursionCategory
+
+variable {R : Type u} [Category.{v} R] [PCategoryStruct R] [PCategory R]
+  [HasZeroMorphisms R] [Prodominical R] [Isotype R]
+  [Regular (Tot (SplitObject R))] [FinitaryExtensive (Tot (SplitObject R))]
+  (inverses : MonoInverses (SplitObject R))
+
+example {X : Tot (SplitObject R)} (e f : Idem X.obj) :
+    (domainJoins inverses).join e f =
+      orderIso inverses X ((orderIso inverses X).symm e ⊔ (orderIso inverses X).symm f) := rfl
+
+example (rec : PRecursionCategory R) {V X : Tot (SplitObject R)} (F : NullaryPresentations V)
+    (a b : Subobject X) (hab : a ⊓ b = ⊥)
+    (consistent : (F.presentation X).Consistent (SignedFirstOrder.theory F a b).val) :
+    letI := domainJoins inverses
+    (F.presentation X).EssentiallyIncomplete (SignedFirstOrder.theory F a b) ↔
+      ¬ ∃ p n : Idem X.obj, Complementary p n ∧ (orderIso inverses X) a ≤ p ∧
+        (orderIso inverses X) b ≤ n :=
+  SignedFirstOrder.essential_incomplete_iff_no_domain_separator rec inverses F a b hab consistent
+
+end SplitDomains
+
+#print axioms CategoricalEssentialIncompleteness.V46.RestrictionSubobjects.domainJoins
+#print axioms CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_no_domain_separator

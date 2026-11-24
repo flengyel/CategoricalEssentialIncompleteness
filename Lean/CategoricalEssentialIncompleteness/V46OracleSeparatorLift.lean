@@ -43,7 +43,27 @@ theorem no_lift_of_compatible_restriction {R : Type*} [Category R]
   exact no_lifted_complementary_separator F τ hτ b hU P N hPN h₀ h₁
     ⟨s, ℓ, hs₀, hs₁, hℓ⟩
 
-namespace OracleComputation.Restricted
+namespace OracleComputation
+
+/-- The simulation in Appendix C ignores its input, so the second coordinate
+of the paired index does not affect its diagonal value. -/
+theorem ordinaryDiagonal_simulation (n a : ℕ) :
+    ordinaryDiagonal (Nat.pair (Encodable.encode (simulationCode n)) a) =
+      (ordinaryEval n n).map (fun _ => 0) := by
+  rw [← ordinaryDiagonal_reduction]
+  simp only [K_reduction_A, ordinaryDiagonal, Nat.unpair_pair, ordinaryEval,
+    Denumerable.ofNat_encode, simulationCode, Nat.Partrec.Code.eval, Nat.Partrec.Code.eval_const]
+
+/-- The halting problem reduces to the even-output separator at each choice of
+the second coordinate. -/
+theorem K_iff_simulation_mem_A (n a : ℕ) :
+    n ∈ K ↔ Nat.pair (Encodable.encode (simulationCode n)) a ∈ A := by
+  rw [K_iff_reduction_A]
+  change (∃ z, z ∈ ordinaryDiagonal (K_reduction_A n) ∧ z % 2 = 0) ↔
+    ∃ z, z ∈ ordinaryDiagonal (Nat.pair (Encodable.encode (simulationCode n)) a) ∧ z % 2 = 0
+  rw [ordinaryDiagonal_reduction, ordinaryDiagonal_simulation]
+
+namespace Restricted
 
 attribute [local instance 2000] nativeRestriction
 
@@ -110,5 +130,44 @@ theorem no_lift_of_output_summands (s : ℕ →. (ℕ ⊕ ℕ))
   rw [rangeFunctor_comparison_hom]
   exact hℓ.trans (Category.comp_id f).symm
 
-end OracleComputation.Restricted
+/-- The two summand inverse images cover the domain. An ordinary recursive
+function with these inverse images would decide the separator by its output tag. -/
+theorem total_and_noncomputable_of_output_summands (s : ℕ →. (ℕ ⊕ ℕ))
+    (h₀ : ∀ n, (∃ y : ℕ, Sum.inl y ∈ s n) ↔ n ∉ A)
+    (h₁ : ∀ n, (∃ y : ℕ, Sum.inr y ∈ s n) ↔ n ∈ A) :
+    (∀ n, (s n).Dom) ∧ ¬ ∃ f : ℕ → ℕ ⊕ ℕ, Computable f ∧ s = fun n => Part.some (f n) := by
+  constructor
+  · intro n
+    by_cases hn : n ∈ A
+    · obtain ⟨y, hy⟩ := (h₁ n).mpr hn
+      exact hy.1
+    · obtain ⟨y, hy⟩ := (h₀ n).mpr hn
+      exact hy.1
+  · rintro ⟨f, hf, rfl⟩
+    apply A_not_recursive
+    have ht : Computable (fun n => (f n).isRight) := by
+      apply (Computable.sumCasesOn hf (Computable.const false).to₂ (Computable.const true).to₂).of_eq
+      intro n
+      cases f n <;> rfl
+    have hd : ComputablePred (fun n => (f n).isRight = true) := ⟨inferInstance, by simpa using ht⟩
+    apply hd.of_eq
+    intro n
+    rw [← h₁ n]
+    cases he : f n <;> simp [he]
+
+/-- A preimage of the target endomorphism indexed in the comparison with
+Lengyel's Theorem 4.1 would give a lift of the section by postcomposition. -/
+theorem missingSection_endomorphism_has_no_lift :
+    ¬ ∃ u : N K ⟶ N K, (inclusion K).map u =
+      missingSection ≫ ((inclusion K).mapIso (parityIso K)).inv := by
+  rintro ⟨u, hu⟩
+  apply missingSection_has_no_lift
+  refine ⟨u ≫ (parityIso K).hom, ?_⟩
+  rw [Functor.map_comp, hu]
+  let b := (inclusion K).mapIso (parityIso K)
+  change (missingSection ≫ b.inv) ≫ b.hom = missingSection
+  rw [Category.assoc, b.inv_hom_id, Category.comp_id]
+
+end Restricted
+end OracleComputation
 end CategoricalEssentialIncompleteness.LocalConnectedness
