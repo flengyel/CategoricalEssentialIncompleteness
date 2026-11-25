@@ -19,7 +19,7 @@ numerical function $f$, write $f(x)\mathord\downarrow$ when $f$ is
 defined at $x$. Put $K=\{e:\varphi_e(e)\mathord\downarrow\}$.
 The set $K$ is not recursive.
 Fix the standard enumeration of finite oracle-machine programs. For an
-oracle $B\subseteq\N$, let $W_a^B$ be the domain of program $a$ run with oracle $B$.
+oracle $B\subseteq\N$, let $W_m^B$ be the domain of program $m$ run with oracle $B$.
 Fix a recursive bijective pairing function
 $\langle-,-\rangle:\N^2\to\N$, with projections $\pi_0,\pi_1$.
 
@@ -39,14 +39,14 @@ Let $F:\mathcal C_K\to\Pfn$ be the inclusion.
 
 On $\N$, the morphisms are precisely the functions
 \[
- f_{e,a}(x)\simeq
+ f_{e,m}(x)\simeq
  \begin{cases}
-  \varphi_e(x),&x\in W_a^K,\\
-  \text{undefined},&x\notin W_a^K.
+  \varphi_e(x),&x\in W_m^K,\\
+  \text{undefined},&x\notin W_m^K.
  \end{cases}
 \]
 Here $\simeq$ includes simultaneous undefinedness: the domain
-is $W_a^K\cap\operatorname{dom}(\varphi_e)$. Every morphism has this
+is $W_m^K\cap\operatorname{dom}(\varphi_e)$. Every morphism has this
 form by taking an index of its extension and an oracle index of its
 domain.
 
@@ -112,28 +112,28 @@ their order corresponds to inclusion, and their finite joins are
 partial identities on unions.
 
 Define $\tau_K:\N\times\N\rightharpoonup\N$ by
-$\tau_K(\langle e,a\rangle,x)\simeq f_{e,a}(x)$.
+$\tau_K(\langle e,m\rangle,x)\simeq f_{e,m}(x)$.
 Its domain is c.e.\ relative to $K$, uniformly in all three
 variables, and it has the ordinary partial recursive extension
-$(\langle e,a\rangle,x)\mapsto\varphi_e(x)$.
+$(\langle e,m\rangle,x)\mapsto\varphi_e(x)$.
 To prove its Turing property, let
 $v:\N\times\N\rightharpoonup\N$ be a morphism, with ordinary
 partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
 domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
 for $v_0$ gives a total recursive function $t:\N\to\N$ such that
 $\varphi_{t(z)}(x)\simeq v_0(z,x)$.
-For oracle programs, let $\operatorname{spec}(e,z)$ be the index of the program that,
-on input $x$, computes $\langle z,x\rangle$ and runs program $e$
+For oracle programs, let $\operatorname{spec}(m,z)$ be the index of the program that,
+on input $x$, computes $\langle z,x\rangle$ and runs program $m$
 on that input with the same oracle. The function $\operatorname{spec}:\N^2\to\N$ is
 total recursive and satisfies, for every oracle $B\subseteq\N$,
 \[
- x\in W_{\operatorname{spec}(e,z)}^B\quad\Longleftrightarrow\quad
- \langle z,x\rangle\in W_e^B.
+ x\in W_{\operatorname{spec}(m,z)}^B\quad\Longleftrightarrow\quad
+ \langle z,x\rangle\in W_m^B.
 \]
-Choose $c\in\N$ with
-$W_c^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
-Then $W_{\operatorname{spec}(c,z)}^K=\{x:(z,x)\in D_v\}$.
-Thus $r(z)=\langle t(z),\operatorname{spec}(c,z)\rangle$ defines a total
+Choose an oracle-machine index $m_v$ with
+$W_{m_v}^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
+Then $W_{\operatorname{spec}(m_v,z)}^K=\{x:(z,x)\in D_v\}$.
+Thus $r(z)=\langle t(z),\operatorname{spec}(m_v,z)\rangle$ defines a total
 morphism $r:\N\to\N$ of $\mathcal C_K$, and
 $v=\tau_K(r\times1_{\N})$, with equality of domains and values.
 For $w:X\times\N\rightharpoonup\N$, apply this construction to
@@ -176,13 +176,13 @@ identities are complementary restriction idempotents in $\mathcal C_K$.
 They separate $a_0,a_1$ because
 $D_{a_0}\subseteq A$ and $D_{a_1}\subseteq A^c$.
 
-The set $A$ is not recursive. Fix any index $a_*$. Choose an ordinary
+The set $A$ is not recursive. Choose an ordinary
 total recursive function $h:\N\to\N$ such that $\varphi_{h(n)}$
 ignores its input, simulates $\varphi_n(n)$, and returns $0$ if that
-simulation halts. Then
+simulation halts. For every $n,m\in\N$,
 \[
  n\in K\quad\Longleftrightarrow\quad
- \langle h(n),a_*\rangle\in A.
+ \langle h(n),m\rangle\in A.
 \]
 For a subset $B$ of a set $Y$, write $1_B:Y\rightharpoonup Y$ for
 the partial identity on $B$. The source morphism
@@ -228,8 +228,8 @@ shows that $p$ is injective on $D_p$. Define $s:Y\rightharpoonup X$
 on $p(D_p)$ by $s(p(x))=x$ for $x\in D_p$. Then
 $ps=1_{p(D_p)}=\bar s$ and $psp=p$, as weak choice requires.
 For every $u:\N\rightharpoonup\N$ in $\mathcal C_K$, the Turing
-property applied to $u\pi_2$, where $\pi_2(z,x)=x$, gives a total
-$e:\N\to\N$ with $\tau_K(e\times1_{\N})=u\pi_2$.
+property applied to $u\pi_2$, where $\pi_2(z,x)=x$, gives a total parameter
+$r_u:\N\to\N$ with $\tau_K(r_u\times1_{\N})=u\pi_2$.
 This is the weak Turing hypothesis,
 and $F(1_{\N})\ne0$. Nevertheless $1_A$ and $1_{A^c}$ separate
 the diagonal pair in $\mathcal C_K$. The earlier proof

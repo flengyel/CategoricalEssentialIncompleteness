@@ -1,11 +1,11 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v92
+Active WSL2 assignment — manuscript v93
 
-Fetch origin/main and record the clean source SHA for manuscript v92.
-Follow docs/CODEX_WSL2_CEI_V92_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V92.md.
-The v92 Lean tree, verifier and dependency pins are byte-identical to v91.
+Fetch origin/main and record the clean source SHA for manuscript v93.
+Follow docs/CODEX_WSL2_CEI_V93_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V93.md.
+The v93 Lean tree, verifier and dependency pins are byte-identical to v92.
 The last full replay tested v84 at b37f8908435a4c2991af5b95de4645980ac60a05.
 Use the active edition for the next replay and the two reports at the tested SHA.
 The v84 receipt is docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
@@ -13,8 +13,8 @@ The v84 receipt is docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-The v92 assignment above covers manuscript and Lean verification only.
-Submission, release preparation and Palomar registration are outside this assignment.
+Complete the v93 replay, publish its receipt and independent readings, and verify the report commit on origin/main.
+Palomar re-registration is the following assignment. Keep the tested replay snapshot and the published v3 tag available for comparison.
 
 Fixed release and Appendix E citations
 --------------------------------------
