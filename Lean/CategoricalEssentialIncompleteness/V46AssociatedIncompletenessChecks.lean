@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46AssociatedSliceCoordinates
 
-/-! # Independent complete-statement checks of manuscript v58 Theorem 5.3 -/
+/-! # Essential incompleteness in the associated category -/
 
 @[expose] public section
 noncomputable section

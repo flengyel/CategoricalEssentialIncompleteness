@@ -1,23 +1,20 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v85
+Active WSL2 assignment — manuscript v86
 
-Fetch origin/main and record the source SHA for manuscript v85. Follow
-docs/CODEX_WSL2_CEI_V85_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V85.md.
-Verify the stated selector condition in Lemma 6.4 and the type of the
-constant-family functor in Appendix E.5. The Lean sources and dependency
-pins agree byte for byte with the v84 proof sources at
-b37f8908435a4c2991af5b95de4645980ac60a05. Run the pinned wrapper for
-the v85 inputs. Record the commands, exits, transitive axioms, and
-independent readings at that commit. The successful v84 replay and its
-receipt are docs/V84_WSL2_LEAN_VERIFICATION.md and
-docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
+Fetch origin/main and record the source SHA for manuscript v86. Follow
+docs/CODEX_WSL2_CEI_V86_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V86.md.
+The last full replay tested v84 at b37f8908435a4c2991af5b95de4645980ac60a05.
+The complete v85 Lean tree is identical to v84. Four v86 modules have
+revised documentation. Run the pinned wrapper once on v86, then reconcile
+the two manuscript-first reports at the tested revision. The earlier
+receipt is docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-The v85 assignment above covers manuscript and Lean verification only.
+The v86 assignment above covers manuscript and Lean verification only.
 Submission, release preparation and Palomar registration are outside this assignment.
 
 Fixed release and Appendix E citations

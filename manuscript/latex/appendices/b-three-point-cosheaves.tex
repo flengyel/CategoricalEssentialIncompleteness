@@ -297,10 +297,11 @@ the unique semigroup morphism $\widehat f:Y^\#\to M$ satisfying
 $\widehat f\eta_Y=f$.
 
 Fix a recursive pairing bijection
-$\pi:\N^2\to\N$ and recursive tuple bijections
-$\gamma_n:\N^n\to\N$, with their inverses computable uniformly
-for $n\ge1$. Encode a nonempty word $(k_1,\ldots,k_n)$ by
-$\pi(n-1,\gamma_n(k_1,\ldots,k_n))$.
+$\pi:\N^2\to\N$. For $n\ge1$ choose tuple bijections
+$\operatorname{encode}_n:\N^n\to\N$ and their inverses
+$\operatorname{decode}_n:\N\to\N^n$, both computable uniformly in $n$.
+Encode a nonempty word $(k_1,\ldots,k_n)$ by
+$\pi(n-1,\operatorname{encode}_n(k_1,\ldots,k_n))$.
 
 \begin{lemma}\label{lem:fork-frames}
 There are isomorphisms in $\mathcal E$
@@ -320,7 +321,7 @@ coordinates. This rule is the same at all three components.
 The inverse replaces $q$ in summand $t$ by $2q+t$.
 
 For the word isomorphism, decode $k$ as the nonempty word
-$(k_1,\ldots,k_n)$. Decode $z,a,b$ by $\gamma_n^{-1}$,
+$(k_1,\ldots,k_n)$. Decode $z,a,b$ by $\operatorname{decode}_n$,
 and send $(k,z,a,b)$ to the numerical code
 \[
  \operatorname{code}_4
@@ -328,7 +329,7 @@ and send $(k,z,a,b)$ to the numerical code
  \in(V^\#)_0.
 \]
 At component $i\in\{1,2\}$, decode $k$ in the same way and
-decode $x$ by $\gamma_n^{-1}$, returning
+decode $x$ by $\operatorname{decode}_n$, returning
 \[
  \operatorname{code}_2((k_1,x_1),\ldots,(k_n,x_n))\in(V^\#)_i.
 \]
@@ -344,9 +345,6 @@ We construct a Turing morphism $\tau:V\times V\rightharpoonup V$
 in $\mathcal A$ by giving a monomorphism $T\hookrightarrow V\times V$
 and a natural transformation $T\to V$.
 
-Fix recursive bijections
-$\operatorname{encode}_n:\N^n\to\N$, with recursive inverses
-$\operatorname{decode}_n$, for each positive integer $n$.
 We use an acceptable numbering
 $\varphi:\N\times\N\rightharpoonup\N$ of the partial recursive
 functions and write $\varphi_p(t)=\varphi(p,t)$.

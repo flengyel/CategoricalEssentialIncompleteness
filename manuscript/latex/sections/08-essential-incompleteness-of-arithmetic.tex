@@ -371,47 +371,10 @@ in $\mathscr C_{\PA}$, and the internal theory $t_{\pm}$ is
 consistent and essentially incomplete.
 \end{lemma}
 \begin{proof}
-Suppose that complementary restriction idempotents $d,d'$ on
-$\omega$ separate $a_0,a_1$, with $a_0\le d$ and $a_1\le d'$.
-Let $m:C\hookrightarrow\omega$ and $m':C'\hookrightarrow\omega$
-be the total inclusions of their splitting objects in $\mathscr C_{\PA}$.
-In $\mathcal B_{\PA}$ the subobjects are complementary, so
-$[m,m']:C+C'\to\omega$ is an isomorphism.
-For the injections $i_0,i_1:\omega\to\omega+\omega$, put
-\[
- \ell=[i_1m,i_0m'][m,m']^{-1}:\omega\to\omega+\omega.
-\]
-Thus $\ell m=i_1m$ and $\ell m'=i_0m'$.
-Its source and target in the splitting are
-$(\omega,1_\omega)$ and $(\omega+\omega,1_{\omega+\omega})$.
-Between identity splittings the morphisms and their restrictions are
-those of $S_{\PA}$, so $\ell$ is total in $S_{\PA}$.
-Apply the Turing property to the total morphism
-$b^{-1}\ell\pi_2:\omega\times\omega\to\omega$.
-It gives a total $g:\omega\to\omega$ with
-\[
- \tau_{\PA}(g\times1_\omega)=b^{-1}\ell\pi_2.
-\]
-Precomposing with $\langle1_\omega,g\rangle$ gives
-\[
- \tau_{\PA}\Delta_\omega g=b^{-1}\ell g,
- \qquad hg=\ell g.
-\]
-The composite $\ell[m,m']=[i_1m,i_0m']$ sends $C$ to the
-second summand and $C'$ to the first. Since coproducts are disjoint
-and pullback-stable, the inverse images of the first and second
-summands under $\ell$ are represented by $m'$ and $m$, respectively.
-Taking inverse images along $hg=\ell g$ therefore gives
-\[
- g^*a_0=g^*d',\qquad g^*a_1=g^*d.
-\]
-The two separating inequalities imply $g^*d=g^*d'$.
-These two subobjects are complementary: their coproduct
-decomposition of $\omega$ is the pullback of $[m,m']$ along the
-total morphism $g$. Their meet is therefore zero and their join is
-$1_\omega$. Since they are equal, $1_\omega=0_\omega$.
-This contradicts
-$1_{\omega}\ne0_{\omega}$, which follows from consistency of PA.
+Apply Corollary~\ref{cor:model-pair} with $T=\PA$, $M=\N$, and the
+chosen $\tau_{\PA},b$. On $(\omega,1_\omega)$ the restriction
+idempotents, their order and their complements are those of $S_{\PA}$.
+Thus $a_0,a_1$ remain inseparable in $\mathscr C_{\PA}$.
 
 For internal consistency of $t_{\pm}$, use the numerical
 finite-derivation presentation of

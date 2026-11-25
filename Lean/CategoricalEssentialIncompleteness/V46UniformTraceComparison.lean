@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46UniformTracePrimitiveBuilders
 
-/-! # Comparison with production composition at fixed external indices
+/-! # Graphs of the two composition indices
 
 Sigma-one completeness is used only to interpret a closed index function value at
 standard numerals. Equality of program graphs then follows from the all-model
@@ -57,8 +57,8 @@ theorem specialize_natCast (e a : ℕ) : ((specialize e a : ℕ) : M) = speciali
   rw [hv] at hmodel
   exact (specializationGraph_eval _ _ _).mp hmodel
 
-/-- The new numerical composition builder and the existing production
-canonical index have the same graph in every PA model at all internal inputs. -/
+/-- The indices `compose f e` and `canonicalPartrecCompIndex f e` define the same
+binary relation in every model of PA. -/
 theorem compose_production_model (f e : ℕ) (input output : M) :
     (eventualGraph (compose f e)).val.Evalb ![input, output] ↔
       (eventualGraph (canonicalPartrecCompIndex f e)).val.Evalb ![input, output] := by

@@ -314,7 +314,7 @@ theorem oddSentence_mem (n : ℕ) : formulaCode (oddSentence n)∈RCFAxiomWords 
   apply (odd_generator_iff _).mpr
   exact ⟨n,formulaCode_oddSentence n⟩
 
-/-- The word axiom set requested for the point a. -/
+/-- Codes of the real closed field axioms and the cut axioms for `a`. -/
 def theoryAxioms (a : Point) : Set ℕ := RCFAxiomWords∪cutAxioms a
 
 theorem theoryAxioms_enumerable (a : Point) :

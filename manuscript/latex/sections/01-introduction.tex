@@ -190,21 +190,26 @@ categories. Di Paola and Montagna's syntactic examples raised the
 question of extending Heller's theorem beyond locally connected categories
 \cite{DPM}.
 
-Di Paola and Heller's Theorem~8.15 assumes a dominical category
-with binary coproducts in which every $f:Y\rightharpoonup Z$ has
+Di Paola and Heller assume throughout their Section~8 that the category
+is a recursion category \cite[p.~621]{DPH}. For Theorem~8.15 they
+require binary coproducts and, for each $f:Y\rightharpoonup Z$,
 a section $s:Z\rightharpoonup Y$ satisfying $fs=\bar s$ and $fsf=f$.
+Such a section gives $\ran(f)=fs=\bar s$: this restriction idempotent
+fixes $f$, and $uf=vf$ implies $u(fs)=v(fs)$ for all parallel
+$u,v:Z\rightharpoonup W$ \cite[p.~612, Definitions~6.1--6.2]{DPH}.
 They also assume that $f+g$ is total whenever $f$ and $g$ are total
 and that each canonical morphism
 $(X\times Y)+(X\times Z)\to X\times(Y+Z)$ is an isomorphism
-\cite[Definitions~6.1, 6.2 and~7.1]{DPH}.
+\cite[p.~615, Definition~7.1]{DPH}.
+
 For a dominical category with binary coproducts and the stated sections,
 let $\tau:X\times X\rightharpoonup X+X$ be a Turing morphism as in
-\cite[Definition~4.1]{DPH}. Thus for every
+\cite[p.~601, Definition~4.1]{DPH}. Thus for every
 $p:X\times X\rightharpoonup X+X$ there is a total $k:X\to X$ such
 that $p=\tau(k\times1_X)$. Put $h=\tau\Delta_X:X\rightharpoonup X+X$.
 The domains $h^*(1_X+0_X)$ and $h^*(0_X+1_X)$ are disjoint.
 If a complementary pair $c,d$ separated them, the diagonal construction
-of \cite[Theorem~8.15]{DPH} would give a total $g:X\to X$ with
+of \cite[pp.~625--626, Theorem~8.15]{DPH} would give a total $g:X\to X$ with
 $g^*c=g^*d=0_X$. Thus $cg=dg=0_X$, and the range agreement law
 (Section~\ref{sec:preliminaries}) gives $c\ran(g)=d\ran(g)=0_X$.
 Restriction idempotents commute, so $\ran(g)[c,d]=0$. Since

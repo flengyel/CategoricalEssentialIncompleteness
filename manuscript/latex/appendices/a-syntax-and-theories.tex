@@ -221,10 +221,10 @@ An empty concatenation is $\nil$. These are lists of free-variable
 occurrences; repetitions are retained.
 
 \begin{definition}\label{def:sentence-object}
-The sentence object $s:S\hookrightarrow\Fm$ is the pullback
+The sentence object $j:S\hookrightarrow\Fm$ is the pullback
 \[
 \begin{tikzcd}
- S\arrow[r,hook,"s"]\arrow[d] & \Fm\arrow[d,"\FV_{\Fm}"]\\
+ S\arrow[r,hook,"j"]\arrow[d] & \Fm\arrow[d,"\FV_{\Fm}"]\\
  1\arrow[r,"\nil"'] & W.
 \end{tikzcd}
 \]
@@ -293,12 +293,12 @@ $b_F:\Fm\times E\to O(\Fm)$.
 Admissibility and formula substitution are defined by the pullback
 \[
 \begin{tikzcd}
- \Adm\arrow[r,"a_F"]\arrow[d,hook,"j"'] &
+ \Adm\arrow[r,"a_F"]\arrow[d,hook,"i_{\Adm}"'] &
  \Fm\arrow[d,hook,"\ok_{\Fm}"]\\
  \Fm\times E\arrow[r,"b_F"'] & O(\Fm).
 \end{tikzcd}
 \]
-The monomorphism $j$ is complemented.
+The monomorphism $i_{\Adm}$ is complemented.
 \end{proposition}
 \begin{proof}
 The unique $K_E$-algebra morphism into $(X_T,X_F)$ has the original
@@ -307,7 +307,7 @@ projections to the original components gives an endomorphism of the
 initial $K_E$-algebra, hence the identity. The result components,
 after interchanging the parameter
 and syntax factors, are $a_T$ and $b_F$. The pullback defines
-$j$ and $a_F$; the coproduct hypotheses make $j$ complemented.
+$i_{\Adm}$ and $a_F$; the coproduct hypotheses make $i_{\Adm}$ complemented.
 \end{proof}
 
 On $B$ define
@@ -328,7 +328,7 @@ Here meet is pullback intersection and the disjoint join in
 result is $\forall y\,\varphi$; on the other summand it is
 $\forall\langle y\circ i,a_F\widetilde p\rangle$, where
 $i:Z\hookrightarrow B$ represents $D_{\ne}\wedge D_C\wedge p^*\Adm$
-and $\widetilde p:Z\to\Adm$ satisfies $j\widetilde p=p\circ i$.
+and $\widetilde p:Z\to\Adm$ satisfies $i_{\Adm}\widetilde p=p\circ i$.
 Thus quantification binds its named variable and prevents capture
 of free occurrences of the replacement term.
 
@@ -484,13 +484,13 @@ parameters~\cite[Section 3.1]{HH}:
 Each scheme denotes a morphism from its parameter object to $F$.
 For the first three these objects are $F^2,F^3,F^2$.
 For \eqref{eq:hilbert-instantiation}, use the pullback of
-$j:\Adm\hookrightarrow F\times V\times\Tm$ along the
+$i_{\Adm}:\Adm\hookrightarrow F\times V\times\Tm$ along the
 permutation $V\times F\times\Tm\to F\times V\times\Tm$.
 For \eqref{eq:hilbert-distribution}, use
 $[\mem(x,\FV_{\Fm}(\varphi))=\mathbf{f}]
 \hookrightarrow V\times F^2$.
 For \eqref{eq:hilbert-reflexivity}, use $\Tm$.
-For \eqref{eq:hilbert-equality}, intersect the pullbacks of $j$
+For \eqref{eq:hilbert-equality}, intersect the pullbacks of $i_{\Adm}$
 along
 \[
  (x,\varphi,u,t)\longmapsto(\varphi,x,u),\qquad
@@ -503,7 +503,7 @@ $\lambda:L\to F$ their copairing.
 Fix an axiom subobject $i_A:A\hookrightarrow S$. Define rule objects
 and their premise and conclusion morphisms by
 \begin{gather*}
- R_0=L+A,\quad p_0:R_0\to1,\quad q_0=[\lambda,si_A],\\
+ R_0=L+A,\quad p_0:R_0\to1,\quad q_0=[\lambda,ji_A],\\
  R_1=V\times F,\quad p_1=\pi_F:R_1\to F,
              \quad q_1=\forall:R_1\to F,\\
  R_2=F^2,\quad p_2=\langle\pi_1,\Rightarrow\rangle:R_2\to F^2,
@@ -521,7 +521,7 @@ under generalization and modus ponens. The image of the pullback
 \[
 \begin{tikzcd}
  P_{A,S}\arrow[r]\arrow[d,"c_{A,S}"'] & P_A\arrow[d,"c_A"]\\
- S\arrow[r,hook,"s"'] & F
+ S\arrow[r,hook,"j"'] & F
 \end{tikzcd}
 \]
 is $T_{A,S}=S\times_F T_A\hookrightarrow S$.

@@ -10,18 +10,16 @@ public import CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram
 public import CategoricalEssentialIncompleteness.V46MillerCutDigits
 
 
-/-! # Recursive reduction to the lower and upper cuts -/
+/-! # Recursive reduction to the lower and upper cuts
+
+Specializing one approximation program gives the same recursive reduction
+for every sequence with the Miller property.
+-/
 
 @[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option backward.isDefEq.respectTransparency.types false
 
-/-! # The ordinary recursive cut reduction
-
-The finite-box/series program is selected before the Miller sequence. The only
-sequence hypothesis in the final theorem is the Miller property. No numerical
-approximation or axiom-comparison premise remains.
--/
 noncomputable section
 namespace CategoricalEssentialIncompleteness.V46.Miller.Cut
 open OracleProgram

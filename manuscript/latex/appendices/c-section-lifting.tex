@@ -122,18 +122,18 @@ partial recursive extension $v_0:\N\times\N\rightharpoonup\N$ and
 domain $D_v$ c.e.\ relative to $K$. Specializing the ordinary program
 for $v_0$ gives a total recursive function $t:\N\to\N$ such that
 $\varphi_{t(z)}(x)\simeq v_0(z,x)$.
-For oracle programs, let $s(e,z)$ be the index of the program that,
+For oracle programs, let $\operatorname{spec}(e,z)$ be the index of the program that,
 on input $x$, computes $\langle z,x\rangle$ and runs program $e$
-on that input with the same oracle. The function $s:\N^2\to\N$ is
+on that input with the same oracle. The function $\operatorname{spec}:\N^2\to\N$ is
 total recursive and satisfies, for every oracle $B\subseteq\N$,
 \[
- x\in W_{s(e,z)}^B\quad\Longleftrightarrow\quad
+ x\in W_{\operatorname{spec}(e,z)}^B\quad\Longleftrightarrow\quad
  \langle z,x\rangle\in W_e^B.
 \]
 Choose $c\in\N$ with
 $W_c^K=\{\langle z,x\rangle:(z,x)\in D_v\}$.
-Then $W_{s(c,z)}^K=\{x:(z,x)\in D_v\}$.
-Thus $r(z)=\langle t(z),s(c,z)\rangle$ defines a total
+Then $W_{\operatorname{spec}(c,z)}^K=\{x:(z,x)\in D_v\}$.
+Thus $r(z)=\langle t(z),\operatorname{spec}(c,z)\rangle$ defines a total
 morphism $r:\N\to\N$ of $\mathcal C_K$, and
 $v=\tau_K(r\times1_{\N})$, with equality of domains and values.
 For $w:X\times\N\rightharpoonup\N$, apply this construction to
