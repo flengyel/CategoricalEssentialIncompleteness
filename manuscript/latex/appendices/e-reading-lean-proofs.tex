@@ -5,15 +5,15 @@
 
 \subsection{Restriction and extension of an interpretation}
 
-Let $A=(X,a,b)$ be an object of $\mathsf{Pair}_c(\mathcal D)$ and let
-$B=(P,T)$ be a consistent theory in $\mathsf{FO}_V(\mathcal D)$.
+Let $(X,a,b)$ be an object of $\mathsf{Pair}_c(\mathcal D)$ and
+$(P,T)$ a consistent theory in $\mathsf{FO}_V(\mathcal D)$.
 The bijection of Theorem~\ref{thm:free-first-order-adjunction} is
 \[
- \operatorname{Hom}_{\mathsf{FO}_V(\mathcal D)}(\Sigma_{\mathrm{FO}}A,B)
+ \operatorname{Hom}_{\mathsf{FO}_V(\mathcal D)}(\Sigma_{\mathrm{FO}}(X,a,b),(P,T))
  \cong
- \operatorname{Hom}_{\mathsf{Pair}_c(\mathcal D)}(A,J_{\mathrm{FO}}B).
+ \operatorname{Hom}_{\mathsf{Pair}_c(\mathcal D)}((X,a,b),J_{\mathrm{FO}}(P,T)).
 \]
-Given a translation $\sigma:\Sigma_{\mathrm{FO}}A\to B$, \texttt{restrict}
+Given a translation $\sigma:\Sigma_{\mathrm{FO}}(X,a,b)\to(P,T)$, \texttt{restrict}
 takes its sentence morphism $\sigma_S:S_X\to S_P$ and composes it with
 the atomic sentence morphism $\theta_X:X\to S_X$. For every
 $x:W\to X$, the atom with index $x$ is $\theta_Xx:W\to S_X$ and
@@ -33,15 +33,15 @@ In \texttt{homEquiv}, extending the restriction of $\sigma$ recovers
 $\sigma$ by uniqueness of the interpretation on generators. Restricting
 $\widehat f$ recovers $f$ by its defining equation
 $\widehat f_S\theta_X=f$. Restriction of the identity on
-$\Sigma_{\mathrm{FO}}A$ gives the unit $\theta_X$. Extension of the
-identity on $J_{\mathrm{FO}}B$ gives the counit, which interprets the
+$\Sigma_{\mathrm{FO}}(X,a,b)$ gives the unit $\theta_X$. Extension of the
+identity on $J_{\mathrm{FO}}(P,T)$ gives the counit, which interprets the
 predicate indexed by a sentence $\varphi$ as $\varphi$
 itself.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L27-L56}{The hom-set bijection}
 and \CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L58-L91}{its naturality, unit and counit}.}
 
 \subsection{Separators and complete extensions}
 
-Let $i_a:A\hookrightarrow X$ and $i_b:B\hookrightarrow X$ represent
+Let $i_a:X_a\hookrightarrow X$ and $i_b:X_b\hookrightarrow X$ represent
 disjoint subobjects $a,b$. In Corollary~\ref{cor:signed-first-order-incompleteness},
 $T_{a,b}$ is the least sentence theory containing the images of
 $\theta_X i_a$ and $\nu_X\theta_X i_b$. Suppose that $T_{a,b}$ is consistent and $(a,b)$ is inseparable.
@@ -116,14 +116,15 @@ summand inverse images $N,P$, in that order.
 Let $\chi_{U,U}:FU+FU\to F(U+U)$ be the coproduct isomorphism. Given
 a lift $\ell:U\rightharpoonup U+U$ with $F\ell=\chi_{U,U}s$,
 \texttt{turing\_diagonal} supplies a total
-$g:U\to U$ with $hg=\ell g$. Put $E=Fg:FU\to FU$ and
-$H=\chi_{U,U}^{-1}Fh:FU\rightharpoonup FU+FU$. Then $HE=sE$.
-Taking inverse images of the two summand domains along this common morphism gives
+$g:U\to U$ with $hg=\ell g$. Set
+$H=\chi_{U,U}^{-1}Fh:FU\rightharpoonup FU+FU$. Applying $F$ to $hg=\ell g$
+gives $H(Fg)=s(Fg)$. Taking inverse images of the two summand domains
+along this common morphism gives
 \[
- E^*N=E^*F(a_0)\leq E^*P,\qquad
- E^*P=E^*F(a_1)\leq E^*N.
+ (Fg)^*N=(Fg)^*F(a_0)\leq (Fg)^*P,\qquad
+ (Fg)^*P=(Fg)^*F(a_1)\leq (Fg)^*N.
 \]
-The inequalities give $E^*P=E^*N$. Since $P$ and $N$ are disjoint
+The inequalities give $(Fg)^*P=(Fg)^*N$. Since $P$ and $N$ are disjoint
 and inverse image preserves meets and zero, both inverse images are zero.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46Comparison}{L35-L89}{The two inverse images under $Fg$}.}
 
 In Proposition~\ref{prop:missing-lift} the output summand of the total
@@ -138,21 +139,20 @@ recursively.\footnote{\CEIproof{CategoricalEssentialIncompleteness/OracleMissing
 Let $u:U\hookrightarrow S$ be the consistent theory of
 Theorem~\ref{thm:associated-incompleteness}, and let $W$ be a closed
 extension of its constant family $B_U(u)$. The chosen logical theorem
-gives a point $\lambda_U:1\to U$. Let $E:\mathcal D/U\to\mathcal D$
+gives a point $\lambda_U:1\to U$. Let $\operatorname{ev}:\mathcal D/U\to\mathcal D$
 take the pullback along $\lambda_U$ and then its domain in $\mathcal D$.
-Thus $E$ evaluates $W$ at this point. Let $B:\mathcal D\to\mathcal D/U$
-be the restriction of $B_U$ to total morphisms. Write
-$e:EB\cong 1_{\mathcal D}$ for the projection isomorphism and
+Let $B:\mathcal D\to\mathcal D/U$ be the restriction of $B_U$ to total morphisms. Write
+$\varepsilon:\operatorname{ev}B\cong 1_{\mathcal D}$ for the projection isomorphism and
 $j:S\hookrightarrow\Fm$ for the sentence inclusion. The definition
 \texttt{evaluationTheory} pairs the subobject
-$W_0=(e_S^{-1})^*E(W)\hookrightarrow S$ with its proof of closure.
+$W_0=(\varepsilon_S^{-1})^*\operatorname{ev}(W)\hookrightarrow S$ with its proof of closure.
 
 Let $C(W)\hookrightarrow B(\Fm)$ be the formula subobject generated
-by $W$ in the slice. Its evaluation lies over $EB(\Fm)$. Put
-$C_0=(e_{\Fm}^{-1})^*E(C(W))\hookrightarrow\Fm$.
-Since $(Bj)^*C(W)=W$, preservation of pullbacks by $E$ and naturality
-$(EBj)e_S^{-1}=e_{\Fm}^{-1}j$ give $j^*C_0=W_0$. Evaluating the rule
-operations and transporting them along $e$ makes $C_0$ closed under
+by $W$ in the slice. Its evaluation lies over $\operatorname{ev}(B\Fm)$. Put
+$C_0=(\varepsilon_{\Fm}^{-1})^*\operatorname{ev}(C(W))\hookrightarrow\Fm$.
+Since $(Bj)^*C(W)=W$, preservation of pullbacks by $\operatorname{ev}$ and naturality
+$\operatorname{ev}(Bj)\varepsilon_S^{-1}=\varepsilon_{\Fm}^{-1}j$ give $j^*C_0=W_0$. Evaluating the rule
+operations and transporting them along $\varepsilon$ makes $C_0$ closed under
 the rules. Thus $C_0$ contains the axioms $W_0$ and admits the map
 from the initial algebra of their derivations. It follows that
 \[
@@ -161,7 +161,7 @@ from the initial algebra of their derivations. It follows that
 Axiom introduction gives the reverse inclusion. If $W$ were consistent and complete, so would be $W_0$,
 since evaluation preserves the finite limits, images and coproducts
 defining these conditions. Evaluating $B_U(u)\leq W$ gives $u\leq W_0$
-under $e_S:EB(S)\cong S$. Thus a complete consistent closed extension in
+under $\varepsilon_S:\operatorname{ev}(BS)\cong S$. Thus a complete consistent closed extension in
 the slice would give one in the base. Conversely, taking the constant
 family of such an extension in the base gives one in the
 slice.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46AssociatedClosedTheories}{L68-L111}{Closure under evaluation and the two implications}.}
@@ -198,12 +198,12 @@ For the inference endofunctor $H$ on
 $\mathcal D_a/(P\times\Fm)$, write $\delta:H(D_A,c_A)\to(D_A,c_A)$
 for the algebra of finite derivations. Given an algebra
 $\beta:H(Q,q)\to(Q,q)$ in this slice, its interpretation of derivations
-is the unique $e:D_A\to Q$ satisfying
+is the unique $\widehat\beta:D_A\to Q$ satisfying
 \[
-     qe=c_A,\qquad e\delta=\beta H(e).
+     q\widehat\beta=c_A,\qquad \widehat\beta\delta=\beta H(\widehat\beta).
 \]
 The first equation fixes both the parameter and the conclusion. The
-second determines $e$ at each leaf and at each application of an
+second determines $\widehat\beta$ at each leaf and at each application of an
 inference rule. A logical axiom leaf at $w$ carries an instance of a
 logical scheme. A nonlogical axiom leaf with sentence $\psi$ at $w$
 requires $(w,\psi)\in A$.\footnote{%
@@ -223,11 +223,11 @@ proofs gives
     \quad\Longleftrightarrow\quad \Gamma\vdash\varphi .
 \]
 The comparison of proof objects preserves conclusions and inference
-rules. For an arbitrary axiom monomorphism $m:A\hookrightarrow S$,
+rules. For an arbitrary axiom monomorphism $m:Z\hookrightarrow S$,
 let $\Gamma_m$ be the set of sentence words encoding its image in the
 numerical presentation. Write $i_{\Gamma_m}:A_{\Gamma_m}\hookrightarrow S$
 for the axiom subobject reconstructed from these words.
-The isomorphism $u:A\xrightarrow{\cong}A_{\Gamma_m}$ satisfies
+The isomorphism $u:Z\xrightarrow{\cong}A_{\Gamma_m}$ satisfies
 $i_{\Gamma_m}u=m$. Relabelling axiom leaves by $u$ preserves their
 sentences; initiality extends this relabelling to derivations, preserving
 conclusions. Relabelling by $u^{-1}$ gives the reverse inclusion of
@@ -235,6 +235,6 @@ sentence-conclusion images in $S$. Thus the displayed equivalence applies to $m$
 with $\Gamma=\Gamma_m$. Pullback of this theorem domain along
 $\nu:S\to S$ gives the refutation domain.\footnote{%
 \CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison}{L155-L178}{Preservation of conclusions and inference rules},
-\CEIproof{CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication}{L59-L95}{the equivalence with finite provability}, and
-\CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness}{L139-L175}{recovery of the axiom subobject and conclusion image}.
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication}{L59-L98}{the equivalence with finite provability}, and
+\CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness}{L139-L192}{recovery of the axiom subobject and conclusion image}.
 See also \CEIproof{CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness}{L327-L342}{inseparability and the independent sentence}.}
