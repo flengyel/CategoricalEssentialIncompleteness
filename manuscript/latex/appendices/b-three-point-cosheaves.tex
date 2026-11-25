@@ -255,22 +255,22 @@ Let $V$ be the object of $\mathcal A$ defined in
 \eqref{eq:universal-fork}.
 \begin{lemma}\label{lem:fork-dominance}
 Every object $Y$ of $\mathcal E$ admits a restriction monomorphism
-$m:Y\to V$ in $\mathcal A$.
+$s_Y:Y\to V$ in $\mathcal A$.
 \end{lemma}
 \begin{proof}
 For $j=0,1,2$, choose a recursive injection $c_j:Y_j\to\N$
 with a partial recursive inverse on its image, using a tuple
 coding of the ambient finite power. Define
 \[
- m_i(y_i)=(0,c_i(y_i))\quad(i=1,2),\qquad
- m_0(y)=(0,c_0(y),c_1(r_1^Yy),c_2(r_2^Yy)).
+ s_{Y,i}(y_i)=(0,c_i(y_i))\quad(i=1,2),\qquad
+ s_{Y,0}(y)=(0,c_0(y),c_1(r_1^Yy),c_2(r_2^Yy)).
 \]
 These maps are total and injective, and satisfy
-$r_i^Vm_0=m_i r_i^Y$ for $i=1,2$.
+$r_i^Vs_{Y,0}=s_{Y,i} r_i^Y$ for $i=1,2$.
 Their images form a c.e.\ subfunctor $I\subseteq V$. The inverses
-$m_j^{-1}:I_j\to Y_j$ are computable and satisfy
-$r_i^Y m_0^{-1}=m_i^{-1}r_i^I$. They define a partial morphism
-$r:V\rightharpoonup Y$ with $rm=1_Y$ and $mr=\bar r$, the partial
+$s_{Y,j}^{-1}:I_j\to Y_j$ are computable and satisfy
+$r_i^Y s_{Y,0}^{-1}=s_{Y,i}^{-1}r_i^I$. They define a partial morphism
+$r:V\rightharpoonup Y$ with $rs_Y=1_Y$ and $s_Y r=\bar r$, the partial
 identity on $I\subseteq V$.
 \end{proof}
 
@@ -308,8 +308,8 @@ There are isomorphisms in $\mathcal E$
 $V\cong V\times V$, $V\cong V+V$, and $V\cong V^\#$.
 \end{lemma}
 \begin{proof}
-For the product isomorphism, decode each of $k,z,a,b$ into a
-pair using $\pi^{-1}$. Send $(k,z,a,b)$ to the resulting pair
+For the product isomorphism, decode each of $k,z,x_1,x_2$ into a
+pair using $\pi^{-1}$. Send $(k,z,x_1,x_2)$ to the resulting pair
 of four-tuples. At component $i\in\{1,2\}$, decode $(k,x)$ into
 the resulting pair of two-tuples. The naturality equations hold
 coordinatewise, and coordinatewise pairing gives the inverse.
@@ -321,17 +321,16 @@ coordinates. This rule is the same at all three components.
 The inverse replaces $q$ in summand $t$ by $2q+t$.
 
 For the word isomorphism, decode $k$ as the nonempty word
-$(k_1,\ldots,k_n)$. Decode $z,a,b$ by $\operatorname{decode}_n$,
-and send $(k,z,a,b)$ to the numerical code
+$(k_1,\ldots,k_n)$. Apply $\operatorname{decode}_n$ to $z,x_1,x_2$
+to obtain $(z_j)_j,(x_{1,j})_j,(x_{2,j})_j$, respectively. Send $(k,z,x_1,x_2)$ to the numerical code
 \[
  \operatorname{code}_4
- ((k_1,z_1,a_1,b_1),\ldots,(k_n,z_n,a_n,b_n))
+ ((k_1,z_1,x_{1,1},x_{2,1}),\ldots,(k_n,z_n,x_{1,n},x_{2,n}))
  \in(V^\#)_0.
 \]
-At component $i\in\{1,2\}$, decode $k$ in the same way and
-decode $x$ by $\operatorname{decode}_n$, returning
+At endpoint $i$, the input is $(k,x_i)$. The same decodings give
 \[
- \operatorname{code}_2((k_1,x_1),\ldots,(k_n,x_n))\in(V^\#)_i.
+ \operatorname{code}_2((k_1,x_{i,1}),\ldots,(k_n,x_{i,n}))\in(V^\#)_i.
 \]
 These maps form a natural transformation. To invert them, decode
 the sequence, recover the word of first coordinates, and apply
@@ -342,8 +341,8 @@ These inverses are total recursive.
 \subsection{A Turing morphism}\label{app:fork-turing}
 
 We construct a Turing morphism $\tau:V\times V\rightharpoonup V$
-in $\mathcal A$ by giving a monomorphism $T\hookrightarrow V\times V$
-and a natural transformation $T\to V$.
+in $\mathcal A$ by giving a monomorphism $D_\tau\hookrightarrow V\times V$
+and a natural transformation $D_\tau\to V$.
 
 We use an acceptable numbering
 $\varphi:\N\times\N\rightharpoonup\N$ of the partial recursive
@@ -366,7 +365,7 @@ $\mathcal A=\operatorname{Par}(\mathcal C_{\mathrm{rec}}^J,
 $\tau:V\times V\rightharpoonup V$: for every object $Y$ of
 $\mathcal A$ and every morphism $F:Y\times V\rightharpoonup V$
 in $\mathcal A$, there is a total morphism
-$c:Y\to V$ such that $\tau(c\times1_V)=F$.
+$p_F:Y\to V$ such that $\tau(p_F\times1_V)=F$.
 At component $i\in\{1,2\}$, this Turing morphism is given by
 \begin{equation}\label{eq:fork-turing-endpoint}
  \tau_i((k,p),(\ell,x))
@@ -376,10 +375,10 @@ At component $i\in\{1,2\}$, this Turing morphism is given by
 \end{theorem}
 
 \begin{proof}
-For $i=1,2$, let $T_i\subseteq V_i\times V_i$ be the c.e.\ set
+For $i=1,2$, let $D_{\tau,i}\subseteq V_i\times V_i$ be the c.e.\ set
 on which the numerical computation in
 \eqref{eq:fork-turing-endpoint} halts, and define
-$\tau_i:V_i\times V_i\rightharpoonup V_i$ with domain $T_i$
+$\tau_i:V_i\times V_i\rightharpoonup V_i$ with domain $D_{\tau,i}$
 by that equation. The first coordinate $k$
 of the parameter has no effect on this computation.
 
@@ -399,28 +398,28 @@ by the following computations, run in parallel:
       \varphi_{p_i}(\operatorname{encode}_2(\ell,x_i))
       \qquad(i=1,2).
 \end{align*}
-Let $T_0\subseteq V_0\times V_0$ consist of those pairs $(P,x)$
+Let $D_{\tau,0}\subseteq V_0\times V_0$ consist of those pairs $(P,x)$
 for which all three computations halt and
 \begin{equation}\label{eq:fork-turing-check}
  Q_i(P,x)=r_i^V C(P,x)\qquad(i=1,2).
 \end{equation}
 Define $\tau_0:V_0\times V_0\rightharpoonup V_0$ with domain
-$T_0$ by $\tau_0(P,x)=C(P,x)$.
+$D_{\tau,0}$ by $\tau_0(P,x)=C(P,x)$.
 Dovetailing the three computations and checking equality of their
-numerical outputs enumerates $T_0$ and computes $\tau_0$ on it.
+numerical outputs enumerates $D_{\tau,0}$ and computes $\tau_0$ on it.
 
-If $(P,x)\in T_0$, then
-$(r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in T_i$.
-Thus $T=(T_0,T_1,T_2)$ is a c.e.\ subfunctor of $V\times V$.
+If $(P,x)\in D_{\tau,0}$, then
+$(r_i^V P,r_i^V x)=((k,p_i),(\ell,x_i))\in D_{\tau,i}$.
+Thus $D_\tau=(D_{\tau,0},D_{\tau,1},D_{\tau,2})$ is a c.e.\ subfunctor of $V\times V$.
 Equation~\eqref{eq:fork-turing-check} gives
 \[
  r_i^V\tau_0(P,x)
    =\tau_i(r_i^V P,r_i^V x)
- \qquad((P,x)\in T_0).
+ \qquad((P,x)\in D_{\tau,0}).
 \]
-The restrictions $\tau_j|_{T_j}:T_j\to V_j$, for $j=0,1,2$,
-therefore form a morphism $T\to V$ in $\mathcal E$.
-Together with the inclusion $T\hookrightarrow V\times V$,
+The restrictions $\tau_j|_{D_{\tau,j}}:D_{\tau,j}\to V_j$, for $j=0,1,2$,
+therefore form a morphism $D_\tau\to V$ in $\mathcal E$.
+Together with the inclusion $D_\tau\hookrightarrow V\times V$,
 they define the required partial morphism $\tau$.
 
 Now let $F:Y\times V\rightharpoonup V$ be any partial morphism.
@@ -448,41 +447,41 @@ $s_j:\N^{m_j}\to\N$ satisfying
  \qquad\text{with domain }D_j.
 \end{equation}
 
-Define the component maps of $c:Y\to V$ by
+Define the component maps of $p_F:Y\to V$ by
 \begin{align*}
- c_i(y_i)&=(0,s_i(y_i)) &&(i=1,2),\\
- c_0(y)&=(0,s_0(y),s_1(r_1^Yy),s_2(r_2^Yy)).
+ p_{F,i}(y_i)&=(0,s_i(y_i)) &&(i=1,2),\\
+ p_{F,0}(y)&=(0,s_0(y),s_1(r_1^Yy),s_2(r_2^Yy)).
 \end{align*}
 These maps are recursive and total on their respective carriers:
 the maps $s_j$ are total on the ambient numerical powers and the
 maps $r_i^Y$ are total on $Y_0$. Moreover,
-$r_i^Vc_0(y)=(0,s_i(r_i^Yy))=c_i(r_i^Yy)$,
-so $c$ is a natural transformation in $\mathcal E$, hence total in
+$r_i^Vp_{F,0}(y)=(0,s_i(r_i^Yy))=p_{F,i}(r_i^Yy)$,
+so $p_F$ is a natural transformation in $\mathcal E$, hence total in
 $\mathcal A$.
 
 At component $i\in\{1,2\}$, equations
 \eqref{eq:fork-turing-endpoint} and
 \eqref{eq:fork-specialization} show that the partial function
 \[
- (y_i,v_i)\longmapsto\tau_i(c_i(y_i),v_i)
+ (y_i,v_i)\longmapsto\tau_i(p_{F,i}(y_i),v_i)
  :Y_i\times V_i\rightharpoonup V_i
 \]
 has domain $D_i$ and agrees there with $F_i$.
 At component $0$, fix $(y,x)\in Y_0\times V_0$.
-If $(y,x)\in D_0$, the computation $C(c_0(y),x)$ returns $F_0(y,x)$.
+If $(y,x)\in D_0$, the computation $C(p_{F,0}(y),x)$ returns $F_0(y,x)$.
 Since $D$ is a subfunctor,
 $(r_i^Yy,r_i^Vx)\in D_i$ for $i=1,2$.
-The computations $Q_i(c_0(y),x)$, for $i=1,2$, consequently
+The computations $Q_i(p_{F,0}(y),x)$, for $i=1,2$, consequently
 halt, and naturality of the morphism $D\to V$ gives
 \[
  F_i(r_i^Yy,r_i^Vx)=r_i^VF_0(y,x).
 \]
 Both tests in \eqref{eq:fork-turing-check} succeed, so
-$\tau_0(c_0(y),x)=F_0(y,x)$.
-Conversely, if $\tau_0(c_0(y),x)$ is defined, the computation
-$C(c_0(y),x)$ has halted. Equation~\eqref{eq:fork-specialization}
+$\tau_0(p_{F,0}(y),x)=F_0(y,x)$.
+Conversely, if $\tau_0(p_{F,0}(y),x)$ is defined, the computation
+$C(p_{F,0}(y),x)$ has halted. Equation~\eqref{eq:fork-specialization}
 then implies $(y,x)\in D_0$.
-Thus $\tau(c\times1_V)=F$, with equality of domains and values
+Thus $\tau(p_F\times1_V)=F$, with equality of domains and values
 at each component.
 \end{proof}
 

@@ -84,8 +84,8 @@ $r_i^V=V(0\to i)$:
 \begin{equation}\label{eq:universal-fork}
  \begin{gathered}
  V_0=\N^4,\qquad V_1=V_2=\N^2,\\
- r_1^V:V_0\to V_1,\qquad r_1^V(k,z,a,b)=(k,a),\\
- r_2^V:V_0\to V_2,\qquad r_2^V(k,z,a,b)=(k,b).
+ r_i^V:V_0\to V_i,\qquad r_i^V(k,z,x_1,x_2)=(k,x_i)
+ \quad(i=1,2).
  \end{gathered}
 \end{equation}
 For $A=(m,A_0)$ in $\mathcal C_{\mathrm{rec}}$, put
@@ -122,14 +122,14 @@ Theorem~\ref{thm:fork-turing} constructs a Turing morphism
 $\tau:V\times V\rightharpoonup V$ in $\mathcal A$.
 For every object $Y$ of $\mathcal A$ and every morphism
 $F:Y\times V\rightharpoonup V$ in $\mathcal A$, there is a
-total morphism $c:Y\to V$ such that $\tau(c\times1_V)=F$.
+total morphism $p_F:Y\to V$ such that $\tau(p_F\times1_V)=F$.
 By fullness this property holds in $\mathscr R_X$ when
 $Y$ belongs to $\mathscr R_X$. Together with the inherited
 prodominical structure, it makes $\mathscr R_X$ a recursion category.
 
-Every object $Y$ of $\mathcal E$ admits a total morphism $m:Y\to V$ in
+Every object $Y$ of $\mathcal E$ admits a total morphism $s_Y:Y\to V$ in
 $\mathcal A$ with a partial inverse $r:V\rightharpoonup Y$
-such that $rm=1_Y$ and $mr=\bar r$
+such that $r s_Y=1_Y$ and $s_Y r=\bar r$
 (Lemma~\ref{lem:fork-dominance}). Thus $V$ is a
 \emph{universal object} of $\mathcal A$.
 These embeddings give the equivalence
@@ -147,26 +147,26 @@ its original $i$th component.
 
 \subsection{Complementary restriction idempotents and inseparability}
 
-Let $c,c'$ be complementary restriction idempotents on $V$ in
-$\mathscr R_X$. Write
-$m:C\hookrightarrow V$ and $m':C'\hookrightarrow V$ in $\mathcal E$
-for the inclusions through which $c,c'$ split in $\mathcal A$.
+Let $e,e'$ be complementary restriction idempotents on $V$ in
+$\mathscr R_X$. Write $\iota_C:C\hookrightarrow V$ and
+$\iota_{C'}:C'\hookrightarrow V$ for the inclusions in $\mathcal E$
+through which $e,e'$ split in $\mathcal A$.
 The component carriers $C_j,C'_j$ are disjoint c.e.\ subsets whose union
 is $V_j$ for each $j\in\{0,1,2\}$. Consequently the copairing
-$q=[m,m']:C+C'\to V$ has bijective components
-$q_j:C_j+C'_j\to V_j$. Each inverse is
+$\chi=[\iota_C,\iota_{C'}]:C+C'\to V$ has bijective components
+$\chi_j:C_j+C'_j\to V_j$. Each inverse is
 computable by running the membership searches for $C_j$ and $C'_j$ in
 parallel and returning the element in the corresponding coproduct
-summand. Naturality of $q$ gives
+summand. Naturality of $\chi$ gives
 \[
- r_i^{C+C'}q_0^{-1}=q_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
+ r_i^{C+C'}\chi_0^{-1}=\chi_i^{-1}r_i^V:V_0\longrightarrow C_i+C'_i
  \qquad(i=1,2).
 \]
-Thus these inverse components define $q^{-1}:V\to C+C'$ in
-$\mathcal E$, proving that $q$ is an isomorphism.
+Thus these inverse components define $\chi^{-1}:V\to C+C'$ in
+$\mathcal E$, proving that $\chi$ is an isomorphism.
 For the injections $i_0,i_1:V\to V+V$, define
-$\ell_c=[i_1m,i_0m']q^{-1}:V\to V+V$.
-It satisfies $\ell_cc=i_1c$ and $\ell_cc'=i_0c'$ and belongs to
+$\ell_e=[i_1\iota_C,i_0\iota_{C'}]\chi^{-1}:V\to V+V$.
+It satisfies $\ell_e e=i_1e$ and $\ell_e e'=i_0e'$ and belongs to
 $\mathscr R_X$ by fullness. The full inclusion
 $I:\mathscr R_X\hookrightarrow\mathcal A$ is a range functor,
 $I(1_V)\ne0$, and inverse images along total morphisms in $\mathcal A$ preserve
@@ -191,8 +191,8 @@ For $j\in\{0,1,2\}$, component evaluation defines
 \begin{equation}\label{eq:endpoint-functor}
  E_j:\mathcal A\longrightarrow\mathcal K,\qquad
  E_j(Y)=Y_j,\qquad
- E_j(Y\xleftarrow{m}D\xrightarrow{f}Z)
-   =(Y_j\xleftarrow{m_j}D_j\xrightarrow{f_j}Z_j).
+ E_j(Y\xleftarrow{\iota_D}D\xrightarrow{f}Z)
+   =(Y_j\xleftarrow{(\iota_D)_j}D_j\xrightarrow{f_j}Z_j).
 \end{equation}
 For the Turing morphism $\tau:V\times V\rightharpoonup V$ of
 Theorem~\ref{thm:fork-turing}, write
@@ -248,10 +248,10 @@ If $fp$ is not total, it is zero, and every further composite
 remains zero. If it is total, further postcomposition has exactly
 the domain specified by the next partial function. This proves
 $\Phi_i(gf)=\Phi_i(g)\Phi_i(f)$, and $\Phi_i(1_Y)(p)=p$.
-Let $U:\mathcal K\to\Pfn$ send a c.e.\ numerical carrier to its
+Let $\lvert-\rvert:\mathcal K\to\Pfn$ send a c.e.\ numerical carrier to its
 underlying set and a partial recursive morphism to the same partial
 function. The bijections $p_y\mapsto y$ give a natural isomorphism
-$\Phi_i\cong U E_i$.
+$\Phi_i\cong\lvert-\rvert\circ E_i$.
 Indeed, $fp_y=p_{E_i(f)(y)}$ when $E_i(f)(y)$ is defined, and $fp_y=0$
 otherwise.
 For a restriction idempotent $e$ on $Y$, put
@@ -265,16 +265,16 @@ The morphism $E_0(\tau)$ is not a Turing morphism. For the parameter
 object $1$, its universal property would represent each partial recursive
 $F:V_0\rightharpoonup V_0$ by a total point $1\to V_0$, using
 $1\times V_0\cong V_0$. The total function $F:V_0\to V_0$ given by
-$F(k,z,a,b)=(0,0,z,0)$ cannot equal $\tau_0(p,-)$ for any $p\in V_0$.
-Let $T\hookrightarrow V\times V$ be the domain subfunctor of
+$F(k,z,x_1,x_2)=(0,0,z,0)$ cannot equal $\tau_0(p,-)$ for any $p\in V_0$.
+Let $D_\tau\hookrightarrow V\times V$ be the domain subfunctor of
 $\tau$ constructed in Appendix~\ref{app:fork-turing}.
-If $F=\tau_0(p,-)$, totality of $F$ gives $(p,x)\in T_0$
-for every $x\in V_0$. Naturality of $T\to V$ then gives
+If $F=\tau_0(p,-)$, totality of $F$ gives $(p,x)\in D_{\tau,0}$
+for every $x\in V_0$. Naturality of $D_\tau\to V$ then gives
 \[
  r_1^V F(x)=\tau_1(r_1^Vp,r_1^Vx).
 \]
 The right-hand side is unchanged when only the $z$ coordinate
-of $x=(k,z,a,b)$ changes, whereas the left-hand side is $(0,z)$.
+of $x=(k,z,x_1,x_2)$ changes, whereas the left-hand side is $(0,z)$.
 
 \subsection{Propositional theories and component theorem sets}
 
@@ -287,15 +287,15 @@ $\varepsilon^V_0,\varepsilon^V_1:V\rightharpoonup V$ by
  \varepsilon^V_0=\zeta^{-1}(1_V+0_V)\zeta,\qquad
  \varepsilon^V_1=\zeta^{-1}(0_V+1_V)\zeta.
 \]
-Put $d=\tau\Delta_V:V\rightharpoonup V$ and define
-$a,b:V\rightharpoonup V$ by $a=d^*\varepsilon^V_0$ and $b=d^*\varepsilon^V_1$.
-These are the inseparable restriction idempotents supplied by
+Put $d=\tau\Delta_V:V\rightharpoonup V$. Let $A,B\subseteq V$ be the
+c.e.\ subfunctors on which the restriction idempotents
+$d^*\varepsilon^V_0,d^*\varepsilon^V_1$ are the partial identities
+$1_A,1_B$, respectively. These idempotents are inseparable by
 Corollary~\ref{cor:source-conditionals} for the full inclusion
 $\mathscr R_X\hookrightarrow\mathcal A$. They remain inseparable
 in $\mathcal A$: fullness leaves the restriction idempotents on $V$, their order,
 and their complements unchanged.
-Let $A,B\subseteq V$ be the c.e.\ subfunctors on which $a,b$
-are the partial identities, and write $A_j=A(j)$ and $B_j=B(j)$
+Write $A_j=A(j)$ and $B_j=B(j)$
 for $j=0,1,2$. For $i\in\{1,2\}$, put $d_i=E_i(d)$.
 By Proposition~\ref{prop:endpoint},
 \begin{align*}
@@ -311,19 +311,19 @@ $E_i\tau$ and the total parameter morphisms of
 Proposition~\ref{prop:endpoint} belong to $\mathcal K_2$ whenever
 their sources do. Thus $\mathcal K_2$ is a recursion category.
 
-The restriction $U|_{\mathcal K_2}:\mathcal K_2\to\Pfn$ preserves
+On $\mathcal K_2$, the underlying-set functor preserves
 restrictions, zeros, and ranges, since it sends each morphism to its
 underlying partial function. It also preserves the chosen products
 and coproducts, so it is a range functor.
-For complementary restriction idempotents $c,c':W\rightharpoonup W$
+For complementary restriction idempotents $e,e':W\rightharpoonup W$
 in $\mathcal K_2$, the construction in
 Section~\ref{sec:numerical-incompleteness} gives a total recursive
-morphism $\ell_c:W\to W+W$ with
-$\ell_cc=i_1c$ and $\ell_cc'=i_0c'$.
+morphism $\ell_e:W\to W+W$ with
+$\ell_e e=i_1e$ and $\ell_e e'=i_0e'$.
 It belongs to $\mathcal K_2$ by fullness. With the componentwise coproduct
 identification, $E_i\zeta:\N^2\to\N^2+\N^2$ is a coproduct
 isomorphism in $\mathcal K_2$.
-Since $(U|_{\mathcal K_2})(1_{\N^2})\ne0$ and inverse images along
+Since the identity on $\N^2$ is nonzero and inverse images along
 total morphisms in $\Pfn$ preserve unions,
 Corollary~\ref{cor:source-conditionals} makes the partial identities
 on $A_i,B_i$ inseparable in $\mathcal K_2$. A recursive separator
@@ -410,28 +410,28 @@ The morphism $\lambda_j$ gives its conclusion.
 
 Write $\pi_1,\pi_2:S^2\to S$ for the projections and put
 $\mu=\langle\pi_1,\Rightarrow\rangle:S^2\to S^2$.
-For $q:Q\to S$ in $\mathcal E/S$, let $M(Q,q)$ be the pullback
+For $h:Y\to S$ in $\mathcal E/S$, let $M(Y,h)$ be the pullback
 \[
 \begin{tikzcd}[column sep=large]
- M(Q,q)\arrow[r,"v_q"]\arrow[d,"w_q"'] &
- Q\times Q\arrow[d,"q\times q"]\\
+ M(Y,h)\arrow[r,"v_h"]\arrow[d,"w_h"'] &
+ Y\times Y\arrow[d,"h\times h"]\\
  S\times S\arrow[r,"\mu"'] & S\times S.
 \end{tikzcd}
 \]
-An element $(p_1,p_2,\alpha,\beta)$ of $M(Q,q)_j$ satisfies
-$q_j(p_1)=\alpha$ and $q_j(p_2)=\alpha\Rightarrow_j\beta$.
+An element $(p_1,p_2,\alpha,\beta)$ of $M(Y,h)_j$ satisfies
+$h_j(p_1)=\alpha$ and $h_j(p_2)=\alpha\Rightarrow_j\beta$.
 The conclusion morphism is
-$\kappa_q=\pi_2w_q:M(Q,q)\to S$. Define
+$\kappa_h=\pi_2w_h:M(Y,h)\to S$. Define
 \[
  \mathsf H:\mathcal E/S\longrightarrow\mathcal E/S,
  \qquad
- \mathsf H(Q,q)=
-       (\mathrm{Ax}+M(Q,q),[\lambda,\kappa_q]).
+ \mathsf H(Y,h)=
+       (\mathrm{Ax}+M(Y,h),[\lambda,\kappa_h]).
 \]
-For a slice morphism $h:(Q,q)\to(Q',q')$, the pullback gives
-$M(h):M(Q,q)\to M(Q',q')$ with
-$v_{q'}M(h)=(h\times h)v_q$ and $w_{q'}M(h)=w_q$.
-Put $\mathsf H(h)=1_{\mathrm{Ax}}+M(h)$; pullback uniqueness
+For a slice morphism $g:(Y,h)\to(Y',h')$, the pullback gives
+$M(g):M(Y,h)\to M(Y',h')$ with
+$v_{h'}M(g)=(g\times g)v_h$ and $w_{h'}M(g)=w_h$.
+Put $\mathsf H(g)=1_{\mathrm{Ax}}+M(g)$; pullback uniqueness
 proves the functor laws. The rule data of
 Appendix~\ref{app:closed-subobjects} are
 $R_0=\mathrm{Ax}$, $q_0=\lambda$, $R_1=0$, and
@@ -449,7 +449,7 @@ parameters, and premise matching are recursively decidable; the
 finitely many positive and negative axiom labels require semidecision
 of membership in $A_j$ and $B_j$. Dovetailing these tests shows that
 $\mathrm{Prf}_j$ is c.e. Reading the conclusion gives a morphism
-$c_j:\mathrm{Prf}_j\to S_j$ of $\mathcal C_{\mathrm{rec}}$.
+$c_{\mathrm p,j}:\mathrm{Prf}_j\to S_j$ of $\mathcal C_{\mathrm{rec}}$.
 
 For $i=1,2$, relabel formula parameters by $\sigma_i$ and atomic
 axiom labels by $r_i^V$, retaining the rule at each node. Since $A,B$ are
@@ -458,42 +458,42 @@ $r_i^V(B_0)\subseteq B_i$. Relabeling therefore preserves axiom
 leaves. Commutation of $\sigma_i$ with implication preserves premise
 matching at modus-ponens nodes. The resulting morphisms
 $\rho_i:\mathrm{Prf}_0\to\mathrm{Prf}_i$ satisfy
-$c_i\rho_i=\sigma_i c_0$, by induction. They define an object
-$\mathrm{Prf}$ of $\mathcal E$, and the $c_j$ define
-$c:\mathrm{Prf}\to S$ in $\mathcal E$.
+$c_{\mathrm p,i}\rho_i=\sigma_i c_{\mathrm p,0}$, by induction. They define an object
+$\mathrm{Prf}$ of $\mathcal E$, and the $c_{\mathrm p,j}$ define
+$c_{\mathrm p}:\mathrm{Prf}\to S$ in $\mathcal E$.
 
 Forming a leaf and adjoining a modus-ponens root give morphisms
-$\ell:\mathrm{Ax}\to\mathrm{Prf}$ and
-$m:M(\mathrm{Prf},c)\to\mathrm{Prf}$ in $\mathcal E$.
+$\mathsf{leaf}:\mathrm{Ax}\to\mathrm{Prf}$ and
+$\mathsf{mp}:M(\mathrm{Prf},c_{\mathrm p})\to\mathrm{Prf}$ in $\mathcal E$.
 They are recursive on their carriers and commute with relabeling.
 The injective implication constructor makes the consequent at a
 modus-ponens node unique. The equations
-$c\ell=\lambda$ and $cm=\kappa_c$ make
-$\delta=[\ell,m]:\mathsf H(\mathrm{Prf},c)\to(\mathrm{Prf},c)$
+$c_{\mathrm p}\,\mathsf{leaf}=\lambda$ and $c_{\mathrm p}\,\mathsf{mp}=\kappa_{c_{\mathrm p}}$ make
+$\delta=[\mathsf{leaf},\mathsf{mp}]:\mathsf H(\mathrm{Prf},c_{\mathrm p})\to(\mathrm{Prf},c_{\mathrm p})$
 an algebra in $\mathcal E/S$.
 
 \begin{proposition}\label{prop:fork-proof-initial}
 The algebra $\delta$ is initial. For every
-$\eta:\mathsf H(Q,q)\to(Q,q)$ in $\mathcal E/S$, there is a
-unique morphism $u:\mathrm{Prf}\to Q$ of $\mathcal E$ with
-$qu=c$ and $u\delta=\eta\mathsf H(u)$.
+$\eta:\mathsf H(Y,h)\to(Y,h)$ in $\mathcal E/S$, there is a
+unique morphism $u:\mathrm{Prf}\to Y$ of $\mathcal E$ with
+$hu=c_{\mathrm p}$ and $u\delta=\eta\mathsf H(u)$.
 \end{proposition}
 \begin{proof}
 Evaluate a derivation from its leaves to its root using $\eta_j$.
 At a leaf labeled by $\xi\in\mathrm{Ax}_j$, the value has
-$q_j$-image $\lambda_j(\xi)$ because $\eta$ is a slice morphism.
+$h_j$-image $\lambda_j(\xi)$ because $\eta$ is a slice morphism.
 If the children of a modus-ponens node conclude $\alpha$ and
 $\alpha\Rightarrow_j\beta$, their evaluated values, together
-with $\alpha,\beta$, belong to $M(Q,q)_j$. The corresponding
-operation of $\eta_j$ returns a value with $q_j$-image $\beta$.
+with $\alpha,\beta$, belong to $M(Y,h)_j$. The corresponding
+operation of $\eta_j$ returns a value with $h_j$-image $\beta$.
 Induction proves termination and gives a partial recursive function
-$u_j:\mathrm{Prf}_j\to Q_j$ total on its source carrier, with
-$q_ju_j=c_j$.
+$u_j:\mathrm{Prf}_j\to Y_j$ total on its source carrier, with
+$h_ju_j=c_{\mathrm p,j}$.
 
 Naturality of $\eta$, $\lambda$, and the pullback projections
 makes each evaluation step commute with relabeling. Induction gives
-$Q(0\to i)u_0=u_i\rho_i$, so the $u_j$ form a morphism
-$u:\mathrm{Prf}\to Q$ of $\mathcal E$. Its defining recursion
+$Y(0\to i)u_0=u_i\rho_i$, so the $u_j$ form a morphism
+$u:\mathrm{Prf}\to Y$ of $\mathcal E$. Its defining recursion
 is the algebra equation. Any other algebra morphism agrees on
 leaves and then on each modus-ponens node by induction, proving
 uniqueness.
@@ -501,7 +501,7 @@ uniqueness.
 
 For a restriction idempotent $t$ on $S$, let $D_t\subseteq S$
 be the c.e. subfunctor on which $t$ is the partial identity. View
-$c$ as a total morphism of $\mathcal A$ and put $t_0=\ran(c)$.
+$c_{\mathrm p}$ as a total morphism of $\mathcal A$ and put $t_0=\ran(c_{\mathrm p})$.
 
 \begin{theorem}\label{thm:fork-proof-presentation}
 The subfunctor $D_{t_0}\subseteq S$ is the least c.e. subfunctor
@@ -509,26 +509,26 @@ containing the logical and positive and negative atomic axioms and
 closed under modus ponens. Its component theories are consistent,
 and
 \begin{equation}\label{eq:atomic-inequalities}
- a\le\theta^*t_0,\qquad
- b\le\theta^*\nu^*t_0,\qquad t_0\nu^*t_0=0_S.
+ 1_A\le\theta^*t_0,\qquad
+ 1_B\le\theta^*\nu^*t_0,\qquad t_0\nu^*t_0=0_S.
 \end{equation}
 \end{theorem}
 \begin{proof}
 Apply Theorem~\ref{thm:least-theorem-subobject} to the regular
 category $\mathcal E$ and the initial algebra of
 Proposition~\ref{prop:fork-proof-initial}. It identifies the image
-of $c$ with the least subobject closed under these rules. Images
+of $c_{\mathrm p}$ with the least subobject closed under these rules. Images
 in $\mathcal E$ are componentwise, so its components are
-$T_j=c_j(\mathrm{Prf}_j)\subseteq S_j$.
+$(D_{t_0})_j=c_{\mathrm p,j}(\mathrm{Prf}_j)\subseteq S_j$.
 Lemma~\ref{lem:range-regular-image}, applied in
 $\mathcal A=\Par(\mathcal E,\Mono)$, identifies its partial identity
-with $t_0=\ran(c)$, and hence the image subfunctor with $D_{t_0}$.
+with $t_0=\ran(c_{\mathrm p})$, and hence the image subfunctor with $D_{t_0}$.
 The one-node positive and negative proofs give morphisms
 $A\to\mathrm{Prf}$ and $B\to\mathrm{Prf}$ whose composites
-with $c$ are $\theta|_A$ and $\nu\theta|_B$. These factorizations
+with $c_{\mathrm p}$ are $\theta|_A$ and $\nu\theta|_B$. These factorizations
 give the first two inequalities in \eqref{eq:atomic-inequalities}.
 
-For consistency, fix $j$ and suppose derivations $p,q$ conclude
+For consistency, fix $j$ and suppose derivations $p,p'$ conclude
 $\varphi$ and $\nu_j\varphi$. Let $L\subseteq A_j$ be the finite
 set of labels at positive leaves of either derivation. Assign truth
 value $1$ precisely to atoms with labels in $L$, and value $0$ to
@@ -538,7 +538,7 @@ its label in $B_j$, disjoint from $A_j$ and hence from $L$, so it
 is true. The three logical schemes are Boolean tautologies, and
 modus ponens preserves truth. Induction on both derivations would
 make $\varphi$ and its negation true, a contradiction. Thus
-$T_j\cap\nu_j^{-1}(T_j)=\varnothing$ at every component, which
+$(D_{t_0})_j\cap\nu_j^{-1}((D_{t_0})_j)=\varnothing$ at every component, which
 is $t_0\nu^*t_0=0_S$ because restriction operations in
 $\mathcal A$ are componentwise.
 \end{proof}
@@ -579,7 +579,7 @@ The theory with theorem set $T_i$ is incomplete.
 \end{theorem}
 \begin{proof}
 The category $\mathcal A$ has restriction zeros and joins of restriction idempotents
-preserved by inverse images along total morphisms. Its restriction idempotents $a,b$ are inseparable,
+preserved by inverse images along total morphisms. Its restriction idempotents $1_A,1_B$ are inseparable,
 and \eqref{eq:atomic-inequalities} gives the hypotheses of
 Corollary~\ref{cor:domain-incompleteness}. Hence $t_T,\nu^*t_T$ are
 inseparable.
@@ -639,10 +639,10 @@ constructions are stable under parameters in $\mathcal E$.
 \begin{proof}
 The formula constructor endofunctor is
 \[
- Q_D(Y)=N_\Delta^2+D+Y+Y^2+N_\Delta\times Y.
+ K_D(Y)=N_\Delta^2+D+Y+Y^2+N_\Delta\times Y.
 \]
 For $f:Y\to Y'$, set
-$Q_D(f)=1_{N_\Delta^2}+1_D+f+(f\times f)+(1_{N_\Delta}\times f)$.
+$K_D(f)=1_{N_\Delta^2}+1_D+f+(f\times f)+(1_{N_\Delta}\times f)$.
 Its five summands represent equality, atoms, negation, implication,
 and universal quantification. At each component, finite numerical
 tree codes form a c.e.\ carrier. Membership in the label carrier
@@ -651,7 +651,7 @@ For $i=1,2$, relabel each atomic label by $D(0\to i)$ and retain
 the variable names and constructors. This defines the transition
 morphisms of a formula object $F_D$.
 
-Given an algebra $\alpha:Q_D(Y)\to Y$, evaluate its finite trees
+Given an algebra $\alpha:K_D(Y)\to Y$, evaluate its finite trees
 from the leaves to the root using the components of $\alpha$.
 This is partial recursive and total on each formula carrier.
 Naturality of $\alpha$ makes evaluation commute with transitions,
@@ -694,8 +694,8 @@ at component $j$ is $(z,\varphi)\in Z_j\times (F_D)_j$. Its nodes
 retain $z$, and its nonlogical leaves test $(z,\psi)\in A_j$.
 Thus the conclusion morphism $c_{Z,A}:P_{Z,A}\to Z\times F_D$
 and the inference algebra lie over $Z\times F_D$. For any other
-algebra with carrier $q:Q\to Z\times F_D$, evaluation is the unique
-algebra morphism $h:P_{Z,A}\to Q$ with $qh=c_{Z,A}$. This gives the initial algebra for the inference endofunctor on
+algebra with carrier $h:Y\to Z\times F_D$, evaluation is the unique
+algebra morphism $u:P_{Z,A}\to Y$ with $hu=c_{Z,A}$. This gives the initial algebra for the inference endofunctor on
 $\mathcal E/(Z\times F_D)$, equivalently on the slice of $\mathcal E/Z$
 over $\pi_1:Z\times F_D\to Z$.
 \end{proof}
@@ -845,13 +845,13 @@ $\mathcal A\simeq\Split(\mathscr R_X)$.
 Proposition~\ref{prop:fork-first-order-realization} supplies the
 parameter-stable syntax and deduction required by the general
 theorem. The global sentence $j(\top)$ is a logical theorem, so
-it factors through $u$ by a total morphism $q:1\to U$.
+there is a total morphism $\lambda_U:1\to U$ with $u\lambda_U=j(\top)$.
 Proposition~\ref{prop:fork-first-order-conservative} and
 Corollary~\ref{cor:domain-incompleteness} show that every such
 $u$ is essentially incomplete and that its theorem and
 refutation domains are inseparable in $\mathcal A$. If the constant
 domains had a separator in the slice, its inverse image along
-$\langle q !_{S_{\mathrm f}},1_{S_{\mathrm f}}\rangle:
+$\langle \lambda_U !_{S_{\mathrm f}},1_{S_{\mathrm f}}\rangle:
  S_{\mathrm f}\to U\times S_{\mathrm f}$ would separate $u$ and
 $\nu_{\mathrm f}^*u$ in $\mathcal A$.
 Theorems~\ref{thm:theory-extension} and
