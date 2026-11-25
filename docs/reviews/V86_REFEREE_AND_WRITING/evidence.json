@@ -1,0 +1,123 @@
+{
+  "edition": 86,
+  "manuscript_commit": "b03f679b76906802f689f8f19e35f44226ac60ad",
+  "refereed_prior_tip": "3c74686045c1a74079d5d13ba16f72f525be9b3a",
+  "previous_kernel_commit": "b37f8908435a4c2991af5b95de4645980ac60a05",
+  "previous_kernel_receipt_sha256": "1e1b15b3796bdb197a04b4edd838beb0b320d51c6c25401af08229a1947b5ea6",
+  "v85_lean_tree": "5015b5a4a7aa08aa9218ac2730502136c9ce0ed4",
+  "v84_lean_tree": "5015b5a4a7aa08aa9218ac2730502136c9ce0ed4",
+  "v86_lean_tree": "cb57eb69839383a9ddae46f273d7791dd20164a0",
+  "verifier_tree": "9386f96da4c3deb65f1a41b0b0577b4339e7b84b",
+  "v86_lean_documentation_files": [
+    "Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompletenessChecks.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedAxioms.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46UniformTraceComparison.lean"
+  ],
+  "changed_noncomment_nonblank_lean_lines": 0,
+  "recursive_tex_inputs": 25,
+  "archive_members": 26,
+  "latex_labels": 161,
+  "bibliography_keys": 40,
+  "duplicate_latex_labels": 0,
+  "duplicate_bibliography_keys": 0,
+  "preserved_printed_environments": {
+    "theorem": 18,
+    "corollary": 13,
+    "proposition": 27,
+    "lemma": 19,
+    "definition": 3
+  },
+  "shared_correspondence_declarations": 862,
+  "old_locator_adjustments": {
+    "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.no_lift_of_summand_inverse_images": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+      "v84_recorded_line": 52,
+      "v86_line": 72
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.printed_cut_reduction": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 85,
+      "v86_line": 83
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.reduction_computable": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 45,
+      "v86_line": 43
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.reduction_lower": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 55,
+      "v86_line": 53
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.reduction_upper": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 65,
+      "v86_line": 63
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.reduction_value": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 48,
+      "v86_line": 46
+    },
+    "CategoricalEssentialIncompleteness.V46.Miller.Cut.uniform_cut_reduction": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+      "v84_recorded_line": 77,
+      "v86_line": 75
+    },
+    "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean",
+      "v84_recorded_line": 29,
+      "v86_line": 110
+    }
+  },
+  "appendix_e_pinned_links": 20,
+  "appendix_e_files_identical_at_tag": 14,
+  "v84_measured_inputs": 2781,
+  "v84_measured_lean_files": 2703,
+  "original_measured_paths_matching_v86": 2761,
+  "original_measured_paths_differing_at_v86": [
+    "Lean/CategoricalEssentialIncompleteness/V46AssociatedIncompletenessChecks.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46MillerRealClosedAxioms.lean",
+    "Lean/CategoricalEssentialIncompleteness/V46UniformTraceComparison.lean",
+    "MANUSCRIPT_CURRENT.json",
+    "docs/CODEX_WSL2_CURRENT.txt",
+    "manuscript/latex/appendices/a-syntax-and-theories.tex",
+    "manuscript/latex/appendices/b-three-point-cosheaves.tex",
+    "manuscript/latex/appendices/c-section-lifting.tex",
+    "manuscript/latex/appendices/e-reading-lean-proofs.tex",
+    "manuscript/latex/bibliography.tex",
+    "manuscript/latex/main.pdf",
+    "manuscript/latex/preamble.tex",
+    "manuscript/latex/sections/01-introduction.tex",
+    "manuscript/latex/sections/04-miller-sequences.tex",
+    "manuscript/latex/sections/05a-internal-syntax.tex",
+    "manuscript/latex/sections/06-interpretation-in-models.tex",
+    "manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex",
+    "manuscript/latex/sections/08b-uniform-independent-sentences.tex",
+    "manuscript/latex/sections/09-three-point-space.tex"
+  ],
+  "v84_replay": {
+    "serial_commands": 2101,
+    "targeted_checks": 35,
+    "current_declarations": 35112,
+    "retained_declarations": 1274,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "v86_checks": {
+    "manuscript_validator": "passed",
+    "axiom_parser_tests_passed": 6,
+    "serial_kernel_replay_completed": false,
+    "pages": 102
+  },
+  "v86_artifacts": {
+    "pdf": "352f83bca6d96dde63ad3dcfd0e522a62eee3d6105b3ea98cb7cd63b2cf8556a",
+    "source_archive": "ad4078a24f79a78141b968a6f8492deb3606ef0b2c5145f800b4d9cb05334f0d",
+    "correspondence": "f914ce59cbaca0432bc93b362455ddcc9d2b3fdf96e940d95aed9aaf8ef2c801"
+  }
+}
