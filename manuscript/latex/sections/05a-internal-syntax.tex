@@ -292,11 +292,15 @@ are understood to be universally quantified.
 \label{lem:st-finite-sigma1}
 Let $C(x)$ be $\Sigma_1$, and let $a$ code a finite sequence with
 entries $a_i$. The assertion that all entries satisfy $C$ is equivalent
-in $\mathrm{PA}$ to a $\Sigma_1$ formula. The same holds, for a positive
-integer $s$, for $\Sigma_1$ formulas
-$D_0(x),\ldots,D_{s-1}(x)$ and a primitive-recursive function
-$\ell:\N\to\{0,\ldots,s-1\}$ selecting the condition
-$D_{\ell(a_i)}(a_i)$ at the $i$th entry.
+in $\PA$ to a $\Sigma_1$ formula. Let $s$ be a positive integer and let
+$D_0(x),\ldots,D_{s-1}(x)$ be $\Sigma_1$ formulas. Fix a $\Sigma_1$
+graph formula $L(x,w)$ for a primitive-recursive program whose values on
+$\N$ lie in $\{0,\ldots,s-1\}$. Define the entry condition
+\[
+ C_L(x)\equiv\bigvee_{j=0}^{s-1}\bigl(L(x,\bar j)\land D_j(x)\bigr).
+\]
+The assertion that all entries satisfy $C_L$ is also equivalent in $\PA$
+to a $\Sigma_1$ formula.
 \end{lemma}
 \begin{proof}
 Write $C(x)$ as $\exists v\,C_0(x,v)$ with $C_0$ primitive recursive.
@@ -309,17 +313,8 @@ For a sequence code $a$, use a coded sequence of witnesses:
 Reading the entries proves the reverse implication. For the forward implication,
 induction in $\PA$ on the length constructs a sequence of witnesses by
 appending one witness at a time.
-For the selected conditions, fix a $\Sigma_1$ graph $L(x,w)$ for
-the primitive-recursive program computing $\ell$. Its totality and
-functionality are provable in $\PA$. The condition on an entry $x$ is
-\[
- C_\ell(x)\equiv\bigvee_{j=0}^{s-1}
-                 \bigl(L(x,\bar j)\land D_j(x)\bigr).
-\]
-In every model of $\PA$, this formula requires the program to return
-one of the indicated numerals and the corresponding condition to hold.
-The finite disjunction is $\Sigma_1$, so the first assertion applies
-to $C_\ell$.
+The finite disjunction defining $C_L$ is $\Sigma_1$, so the first
+assertion applies to $C_L$.
 \end{proof}
 
 Fix a nonnegative integer $d$ and objects

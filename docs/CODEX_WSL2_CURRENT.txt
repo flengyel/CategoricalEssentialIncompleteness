@@ -1,30 +1,23 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 24 November 2026
 
-Active WSL2 assignment — manuscript v84
+Active WSL2 assignment — manuscript v85
 
-Fetch origin/main. Read AGENTS.md, MANUSCRIPT_CURRENT.json and
-FORMALIZATION_STATUS_V84.md. Execute docs/CODEX_WSL2_CEI_V84_LEAN_HANDOFF.md.
-Check Proposition C.1 for every target morphism with the prescribed summand
-inverse images, and the halting reduction for every second coordinate. Check
-the restriction-domain form of Corollary 4.8 with joins induced by subobjects.
-Verify every mathematical input used in a CEI proof at the hypotheses invoked,
-including the §9 Miller witness and its use in Lemma 9.3. Check comparison-only
-attributions against their sources. The six listed historical comparisons carry
-no Lean proof obligation. Return a pinned full replay, axiom receipt and
-independent readings of the v84 inputs under this scope.
-The consecutive-clean count is 0 of 2.
-
-The completed v81 full replay tested 73c2e4fa2bc633a3af012b1c4f85a7882018f962.
-Its report and machine-readable receipt are
-docs/V81_WSL2_LEAN_VERIFICATION_73c2e4f.md and
-docs/V81_WSL2_LEAN_VERIFICATION_73c2e4f.json.gz.
-Report commit: 8a0d852ee1a5002c4e82a275a51afd258df0c18f.
+Fetch origin/main and record the source SHA for manuscript v85. Follow
+docs/CODEX_WSL2_CEI_V85_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V85.md.
+Verify the stated selector condition in Lemma 6.4 and the type of the
+constant-family functor in Appendix E.5. The Lean sources and dependency
+pins agree byte for byte with the v84 proof sources at
+b37f8908435a4c2991af5b95de4645980ac60a05. Run the pinned wrapper for
+the v85 inputs. Record the commands, exits, transitive axioms, and
+independent readings at that commit. The successful v84 replay and its
+receipt are docs/V84_WSL2_LEAN_VERIFICATION.md and
+docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-The v84 assignment above covers manuscript and Lean verification only.
+The v85 assignment above covers manuscript and Lean verification only.
 Submission, release preparation and Palomar registration are outside this assignment.
 
 Fixed release and Appendix E citations
