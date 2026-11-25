@@ -294,13 +294,11 @@ $\mathsf{Th}_\Gamma$ and $\mathsf{Ref}_\Gamma$.
 Use the numerical objects of Section~\ref{subsec:numerical-incompleteness}.
 For a consistent c.e.\ extension $T$ of $\PA$, define
 \[
- P_T=\{n:T\vdash\alpha(\bar n)\},\qquad
- N_T=\{n:T\vdash\neg\alpha(\bar n)\}.
+ \mathsf{Th}_T^\alpha=\{n:T\vdash\alpha(\bar n)\},\qquad
+ \mathsf{Ref}_T^\alpha=\{n:T\vdash\neg\alpha(\bar n)\}.
 \]
-These are the domains of definition of the partial identities
-$\theta^*t_T$ and $\theta^*\nu^*t_T$.
-They are computably enumerable disjoint sets with $A\subseteq P_T$
-and $B\subseteq N_T$, and they enlarge under theory extension.
+These are the domains of $\theta^*t_T$ and $\theta^*\nu^*t_T$.
+They are disjoint c.e.\ sets and increase under theory extension.
 Let $\operatorname{Pair}(\mathrm{Rec})$ have objects $(X,A,B)$,
 where $X\in\mathsf O$ and $A,B\subseteq J_{\mathrm{rec}}(X)$
 are disjoint computably enumerable subsets.
@@ -308,27 +306,32 @@ A morphism $(X,A,B)\to(Y,P,N)$ is a total morphism $f:X\to Y$
 of $\mathrm{Rec}$ satisfying $J_{\mathrm{rec}}(f)(A)\subseteq P$ and
 $J_{\mathrm{rec}}(f)(B)\subseteq N$. Identities and composition are inherited
 from $\mathrm{Rec}$. The assignment
-$T\mapsto(\omega,P_T,N_T)$, with the identity function for theory
+$T\mapsto(\omega,\mathsf{Th}_T^\alpha,\mathsf{Ref}_T^\alpha)$, with the identity function for theory
 inclusions, is a covariant functor from the poset of consistent
 computably enumerable extensions of $\PA$ to
 $\operatorname{Pair}(\mathrm{Rec})$.
-The inclusions $A\subseteq P_T$ and $B\subseteq N_T$ give the morphism
-$1_\omega:(\omega,A,B)\to(\omega,P_T,N_T)$ in this category.
+The inclusions in \eqref{eq:arithmetic-domain-inclusions} give the morphism
+\[
+ 1_\omega:(\omega,D_0,D_1)\to
+                (\omega,\mathsf{Th}_T^\alpha,\mathsf{Ref}_T^\alpha).
+\]
 A recursive separator pulls back along a total recursive function;
-consequently $P_T,N_T$ are recursively inseparable.
+consequently $\mathsf{Th}_T^\alpha,\mathsf{Ref}_T^\alpha$ are recursively inseparable.
 
 Bernardi's numerical argument uses a precomplete equivalence
 relation $R$ on $\N$: for every partial recursive function $f$
 there is a total recursive function $g$ such that
 $f(n)\mathord\downarrow$ implies $f(n)\,R\,g(n)$.
-For such a relation, distinct equivalence classes are recursively
-inseparable; consequently the same holds for disjoint nonempty
-unions of classes. The relation $\equiv_{\PA}$ on indices defined
-in \eqref{eq:uniform} is one of his examples
-\cite[pp.~125--126]{Bernardi}.
-The argument above obtains $A,B$ from
+Distinct $R$-classes are recursively inseparable
+\cite[p.~126, Proposition~2(b)]{Bernardi}. A separator of two disjoint
+nonempty unions of classes would separate a class from each union.
+Bernardi gives PA-provable equality of partial recursive functions as
+an example of precompleteness \cite[p.~125]{Bernardi}. On numerical
+program indices, \eqref{eq:uniform} expresses this equality as
+PA-provable equivalence of the two program graphs.
+The argument above obtains the inseparability of $D_0,D_1$ from
 Corollary~\ref{cor:source-conditionals} and uses finite PA-proofs to
-establish $A\subseteq P_T$ and $B\subseteq N_T$.
+establish $D_0\subseteq \mathsf{Th}_T^\alpha$ and $D_1\subseteq \mathsf{Ref}_T^\alpha$.
 
 \subsection{The associated recursion categories}
 \label{subsec:arithmetic-associated-categories}
@@ -345,8 +348,8 @@ over $W$. Theorem~\ref{thm:syntactic-generated-theory} constructs
 this syntax and its finite derivations in
 $\mathcal B_{\PA}$.
 
-Choose the splittings of $a_0=[\alpha]_{\PA}$ and $a_1=[\beta]_{\PA}$
-with $A_0=J_{\PA}(\alpha)$ and $A_1=J_{\PA}(\beta)$.
+The splitting objects $A_i=(\omega,a_i)$ of the syntactic idempotents
+$a_i$ are $J_{\PA}(\alpha)$ for $i=0$ and $J_{\PA}(\beta)$ for $i=1$.
 The inclusions $m_i:A_i\hookrightarrow\omega$ retain the numerical index.
 The nonlogical axioms have the presentation
 \[

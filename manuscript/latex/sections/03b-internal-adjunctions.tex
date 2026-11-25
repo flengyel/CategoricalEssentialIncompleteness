@@ -268,16 +268,16 @@ equality, and the restricted adjunction follows from the
 generation reflection.
 \end{proof}
 
-Suppose $G$ has a right adjoint $H:\mathcal D_2\to\mathcal D_1$
-with unit $\eta:1_{\mathcal D_1}\to HG$. Put
-$\sigma^\flat=H\sigma\,\eta_{S_1}:S_1\to HS_2$.
-For $i_B:B\hookrightarrow S_2$, let $R(B)=(\sigma^\flat)^*(H i_B)$.
-The right adjoint $H$ preserves monomorphisms.
+Suppose $G$ has a right adjoint $G^{\mathrm R}:\mathcal D_2\to\mathcal D_1$
+with unit $\eta:1_{\mathcal D_1}\to G^{\mathrm R}G$. Put
+$\sigma^\flat=G^{\mathrm R}\sigma\,\eta_{S_1}:S_1\to G^{\mathrm R}S_2$.
+For $i_B:B\hookrightarrow S_2$, let $R(B)=(\sigma^\flat)^*(G^{\mathrm R} i_B)$.
+The right adjoint $G^{\mathrm R}$ preserves monomorphisms.
 For $i_A:A\hookrightarrow S_1$, a factorization
 $k:GA\to B$ with $i_Bk=\sigma G i_A$ transposes to
-$k^\flat=Hk\,\eta_A:A\to HB$ satisfying
+$k^\flat=G^{\mathrm R}k\,\eta_A:A\to G^{\mathrm R}B$ satisfying
 \[
- H i_B\,k^\flat=\sigma^\flat i_A .
+ G^{\mathrm R} i_B\,k^\flat=\sigma^\flat i_A .
 \]
 Conversely this equation transposes back to the factorization through
 $i_B$. By the pullback defining $R(B)$, it follows that
@@ -289,10 +289,10 @@ $\sigma_\Phi G j_1=j_2\sigma$, where $j_i:S_i\hookrightarrow\Phi_i$.
 Define $K_\Phi:\mathcal D_1/\Phi_1\to\mathcal D_2/\Phi_2$ by
 $K_{\Phi}(q)=\sigma_{\Phi}Gq$ on objects and $K_\Phi(k)=Gk$ on
 slice morphisms. Its right adjoint $R_\Phi$ sends $b:B\to\Phi_2$
-to the pullback of $Hb$ along
-$H\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to H\Phi_2$.
+to the pullback of $G^{\mathrm R}b$ along
+$G^{\mathrm R}\sigma_{\Phi}\,\eta_{\Phi_1}:\Phi_1\to G^{\mathrm R}\Phi_2$.
 On a morphism $k:(B,b)\to(B',b')$ over $\Phi_2$, $R_\Phi(k)$
-is induced by $1_{\Phi_1}$ and $Hk:HB\to HB'$ on these pullbacks.
+is induced by $1_{\Phi_1}$ and $G^{\mathrm R}k:G^{\mathrm R}B\to G^{\mathrm R}B'$ on these pullbacks.
 For each $A$, suppose the comparison of rule instances supplies a
 natural transformation
 \[
@@ -300,15 +300,16 @@ natural transformation
 \]
 Its component at $q$ sends a rule instance with premise derivations
 over $q$ to a target rule instance with premises over $K_\Phi(q)$
-and the translated conclusion. Let $\delta':H_{L(A)}P'\to P'$ be the target initial algebra and
+and the translated conclusion. Let
+$\delta_{L(A)}:H_{L(A)}P_{L(A)}\to P_{L(A)}$ be the target initial algebra and
 $\epsilon:K_{\Phi}R_{\Phi}\to1$ the counit. Transpose
 \[
- K_{\Phi}H_AR_{\Phi}P'
- \xrightarrow{\lambda}H_{L(A)}K_{\Phi}R_{\Phi}P'
- \xrightarrow{H_{L(A)}\epsilon}H_{L(A)}P'
- \xrightarrow{\delta'}P'
+ K_{\Phi}H_AR_{\Phi}P_{L(A)}
+ \xrightarrow{\lambda}H_{L(A)}K_{\Phi}R_{\Phi}P_{L(A)}
+ \xrightarrow{H_{L(A)}\epsilon}H_{L(A)}P_{L(A)}
+ \xrightarrow{\delta_{L(A)}}P_{L(A)}
 \]
-to give $R_{\Phi}P'$ a source algebra structure. Source initiality
+to give $R_{\Phi}P_{L(A)}$ a source algebra structure. Source initiality
 gives a morphism from $P_A$ to this algebra. Its transpose has
 underlying morphism $h:GP_A\to P_{L(A)}$ with
 $c_{L(A)}h=\sigma_\Phi Gc_A$. Write $k_A:P_{A,S_1}\to P_A$ for the

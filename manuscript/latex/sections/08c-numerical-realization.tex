@@ -28,9 +28,8 @@ $f(x)$ abbreviates $|f|(x)$. Identities and composition are
 identities and composition of the represented functions.
 
 For each $m\geq0$, choose an injective recursive tuple coding
-$\kappa_m:\N^m\to\N$ with recursive image $K_m$ and recursive
-inverse $\kappa_m^{-1}:K_m\to\N^m$. Take
-$\kappa_0(())=0$, $K_0=\{0\}$, and $\kappa_1=1_{\N}$;
+$\kappa_m:\N^m\to\N$ with recursive image and recursive inverse
+on its image. Take $\kappa_0(())=0$ and $\kappa_1=1_{\N}$;
 iterated numerical pairing gives such codings for $m\geq2$.
 For $C=(m,C_0)$, put $\widehat C=\kappa_m(|C|)$.
 
@@ -59,7 +58,7 @@ Define a functor $Q:\mathcal C\to\mathcal B_{\mathrm{rec}}$ by
      (\omega,1_{\widehat C})\longrightarrow
      (\omega,1_{\widehat D}).
 \]
-For $f:C\to D$ with $C=(m,C_0)$ and $D=(n,D_0)$,
+For $f:C\to D$ with $C$ of dimension $m$ and $D$ of dimension $n$,
 the program for $Q(f)$ first semidecides membership
 in $\widehat C$, then decodes its input, computes $f$, and encodes
 the output. Its domain is $\widehat C$, so the displayed
@@ -113,9 +112,8 @@ their outputs. A morphism $h:Z\to C$
 with $fh=gh$ factors through the equalizer by the same program for $h$,
 with its values regarded as elements of the equalizer carrier.
 
-The object $(1,\varnothing)$ is initial. For $C=(m,C_0)$ and
-$D=(n,D_0)$, choose their coproduct as the object of dimension one
-with carrier
+The object $(1,\varnothing)$ is initial. For $C,D$ of dimensions $m,n$, choose
+their coproduct as the object of dimension one with carrier
 \[
  |C+D|=\{2\kappa_m(c):c\in|C|\}
         \cup\{2\kappa_n(d)+1:d\in|D|\}\subseteq\N,
@@ -311,13 +309,13 @@ where $\iota_P$ retains the parameter and applies the constructor
 in the other coordinate. Take any $K_P$-algebra
 \[
  \mathbf X=((X,\xi),(Y,\upsilon)),\qquad
- \alpha=(\alpha_1,\alpha_2):K_P\mathbf X\to\mathbf X.
+ \sigma=(\sigma_1,\sigma_2):K_P\mathbf X\to\mathbf X.
 \]
 Here $\xi:X\to P$ and $\upsilon:Y\to P$ are morphisms of
 $\mathcal C_{\mathrm{rec}}$, while
 \[
- \alpha_1:K_{P,1}\mathbf X\to(X,\xi),\qquad
- \alpha_2:K_{P,2}\mathbf X\to(Y,\upsilon)
+ \sigma_1:K_{P,1}\mathbf X\to(X,\xi),\qquad
+ \sigma_2:K_{P,2}\mathbf X\to(Y,\upsilon)
 \]
 are morphisms in $\mathcal C_{\mathrm{rec}}/P$.
 For example, the function-symbol operation at arity $k$ is defined
@@ -329,11 +327,11 @@ over $p$. Its representing program halts on every such tuple.
 On input $(p,t)\in|P|\times|\Tm|$ or
 $(p,\varphi)\in|P|\times|\Fm|$, parse the tree and evaluate its
 nodes in children-before-parent order. At each node, apply the
-representing program for the corresponding component of $\alpha$
+representing program for the corresponding component of $\sigma$
 to its label, its children's values, and the same parameter $p$.
 Induction on the number of nodes proves that the child values
 have the required sort and projection to $p$. They therefore lie
-in the source carrier of that component of $\alpha$; its program
+in the source carrier of that component of $\sigma$; its program
 halts and returns a value of the required sort over $p$.
 The nullary step uses the variable or nullary-symbol operation.
 Thus this algorithm is partial recursive and halts on every input
@@ -346,7 +344,7 @@ in each of the two source carriers. It defines morphisms
 For $h=(h_T,h_F):\mathbf T_P\to\mathbf X$, decomposition at
 the root gives
 \[
- h\iota_P=\alpha K_P(h):K_P\mathbf T_P\to\mathbf X
+ h\iota_P=\sigma K_P(h):K_P\mathbf T_P\to\mathbf X
  \quad\text{in }(\mathcal C_{\mathrm{rec}}/P)^2.
 \]
 If $h':\mathbf T_P\to\mathbf X$ satisfies that equation,
@@ -366,23 +364,23 @@ Appendix~\ref{app:categorical-hypotheses}.
 Its constructor algebra has carrier $(P\times W,\pi_P)$ and
 structure $\iota^L_P:L_P(P\times W,\pi_P)\to(P\times W,\pi_P)$.
 For an object $(Z,z)$ of that slice, the canonical isomorphism
-$\sigma_{P,Z}:(P\times V)\times_P Z\to V\times Z$
+$(P\times V)\times_P Z\cong V\times Z$
 sends $((p,v),z_0)$ to $(v,z_0)$. Its inverse sends $(v,z_0)$
 to $((z(z_0),v),z_0)$. For any algebra
-$\beta:L_P(Z,z)\to(Z,z)$, use this isomorphism and write
-$\beta_0:P\to Z$ and $\beta_1:V\times Z\to Z$ for its
-two underlying operations; thus $z\beta_0=1_P$ and
-$z\beta_1=z\pi_Z$.
+$\ell:L_P(Z,z)\to(Z,z)$, use this isomorphism and write
+$\ell_0:P\to Z$ and $\ell_1:V\times Z\to Z$ for its
+two underlying operations; thus $z\ell_0=1_P$ and
+$z\ell_1=z\pi_Z$.
 The recursive evaluation of a finite list gives
 $h_L:P\times W\to Z$ with
 \[
  \begin{aligned}
- h_L(p,w_0)&=\beta_0(p),\\
- h_L(p,\cons(v,w))&=\beta_1(v,h_L(p,w)),\qquad
+ h_L(p,w_0)&=\ell_0(p),\\
+ h_L(p,\cons(v,w))&=\ell_1(v,h_L(p,w)),\qquad
  zh_L=\pi_P.
  \end{aligned}
 \]
-The two recursion equations give $h_L\iota^L_P=\beta L_P(h_L)$
+The two recursion equations give $h_L\iota^L_P=\ell L_P(h_L)$
 in the slice. Induction on list length proves that the computation
 halts on $|P|\times|W|$ and that every algebra morphism agrees with
 $h_L$.
@@ -438,12 +436,12 @@ The node constructors give an algebra
 \]
 
 For any object $(Q,q)$ of $\mathcal C_{\mathrm{rec}}/\Fm$ and
-algebra $\beta:H_A(Q,q)\to(Q,q)$ in this slice,
+algebra $\delta:H_A(Q,q)\to(Q,q)$ in this slice,
 evaluate a valid derivation in children-before-parent order.
 Its children have been assigned values in $|Q|$ whose
 images under $q$ are their conclusions. Together with the node's
 decoded rule instance these values belong to the corresponding pullback
-summand of $H_A(Q,q)$. The program representing $\beta$ therefore
+summand of $H_A(Q,q)$. The program representing $\delta$ therefore
 halts at that input and returns a value in $|Q|$ with the node's
 conclusion as its image under $q$. The same argument applies to
 a nullary node with no child values. Induction on tree size proves
@@ -452,7 +450,7 @@ $|P_A^{\mathrm{all}}|$. It gives a morphism
 $h_A:P_A^{\mathrm{all}}\to Q$ in $\mathcal C_{\mathrm{rec}}$ with
 \[
  qh_A=c_A^{\mathrm{all}},\qquad
- h_A\delta_A=\beta H_A(h_A).
+ h_A\delta_A=\delta H_A(h_A).
 \]
 The second equation is in $\mathcal C_{\mathrm{rec}}/\Fm$, from
 $H_A(P_A^{\mathrm{all}},c_A^{\mathrm{all}})$ to $(Q,q)$.

@@ -44,7 +44,7 @@ Let $\pi_0^{\mathrm{num}},\pi_1^{\mathrm{num}}:\N\to\N$
 be the projections of the numerical pairing, and put
 \[
  D(w)\equiv\operatorname{Sent}(\pi_1^{\mathrm{num}}w),\qquad
- A_0(w)\equiv\operatorname{Ax}
+ \widetilde{\operatorname{Ax}}(w)\equiv\operatorname{Ax}
             (\pi_0^{\mathrm{num}}w,\pi_1^{\mathrm{num}}w).
 \]
 Let $r_0:D\to\operatorname{Top}$ and
@@ -54,10 +54,10 @@ $D(w)\land e=\pi_0^{\mathrm{num}}w$ and
 $D(w)\land z=\pi_1^{\mathrm{num}}w$.
 The pairing identities give the product isomorphism
 $v=\langle J(r_0),J(r_1)\rangle:J(D)\xrightarrow{\cong}E\times S$.
-The predicate inclusion $a:A_0\hookrightarrow D$ in
-$\mathcal P_{\PA}$ has graph $A_0(w)\land w'=w$.
+The predicate inclusion $a:\widetilde{\operatorname{Ax}}\hookrightarrow D$ in
+$\mathcal P_{\PA}$ has graph $\widetilde{\operatorname{Ax}}(w)\land w'=w$.
 Define the axiom subobject for the family in $\mathcal B$ by
-$A=J(A_0)$ and $i=vJ(a):A\hookrightarrow E\times S$.
+$A=J(\widetilde{\operatorname{Ax}})$ and $i=vJ(a):A\hookrightarrow E\times S$.
 
 Let $L,R_1,R_2\in\mathcal B$ and
 \[
@@ -95,11 +95,11 @@ of Appendix~\ref{app:closed-subobjects}.
 Lemma~\ref{lem:syntactic-derivation-initiality} gives its
 initial algebra
 \[
- \mathfrak P=((P^{\mathrm{all}},c^{\mathrm{all}}),\alpha),
+ \mathfrak P=((P^{\mathrm{all}},c^{\mathrm{all}}),\delta_E),
  \qquad c^{\mathrm{all}}:P^{\mathrm{all}}\to F_E,
 \]
 where
-$\alpha:H_E(P^{\mathrm{all}},c^{\mathrm{all}})
+$\delta_E:H_E(P^{\mathrm{all}},c^{\mathrm{all}})
              \to(P^{\mathrm{all}},c^{\mathrm{all}})$
 is a morphism in $\mathcal B/F_E$.
 Let $c:P\to E\times S$ be the pullback of $c^{\mathrm{all}}$
@@ -254,29 +254,31 @@ components of
  \Xi_e(\delta)\,\zeta_{(Q,q)}^{-1}:
  (H_e\times H_{\ne e})\Xi_e(Q,q)\longrightarrow\Xi_e(Q,q).
 \]
-On algebra morphisms $\Lambda_e$ acts by $\Xi_e$. For any slice
-morphism $f:(Q,q)\to(Q',q')$, put $K=H_e\times H_{\ne e}$.
-Naturality of $\zeta$ and faithfulness of $\Xi_e$ give
+On algebra morphisms $\Lambda_e$ acts by $\Xi_e$. Put
+$H_\times=H_e\times H_{\ne e}$. For $H_E$-algebras
+$((Q,q),\delta)$ and $((Q',q'),\delta')$ and a slice morphism
+$f:(Q,q)\to(Q',q')$, naturality of $\zeta$ and faithfulness of $\Xi_e$ give
 \[
  f\delta=\delta' H_E(f)
  \quad\Longleftrightarrow\quad
  (\Xi_e f)(\Xi_e\delta)\zeta_{(Q,q)}^{-1}
-   =(\Xi_e\delta')\zeta_{(Q',q')}^{-1} K(\Xi_e f).
+   =(\Xi_e\delta')\zeta_{(Q',q')}^{-1} H_\times(\Xi_e f).
 \]
 By fullness of $\Xi_e$, every pair of
 algebra morphisms between the two images lifts uniquely along
 $\Lambda_e$.
 For essential surjectivity take a pair
-of algebras with structure morphism $b:KD\to D$ in the product
-of the slices. Put $Q=\Psi_e D$, and let
-$\epsilon_D:\Xi_e Q\xrightarrow{\cong}D$ be the counit.
+of algebras with structure morphism
+$b:H_\times\mathbf Y\to\mathbf Y$ in the product of the slices.
+Put $Q=\Psi_e\mathbf Y$, and let
+$\epsilon_{\mathbf Y}:\Xi_e Q\xrightarrow{\cong}\mathbf Y$ be the counit.
 By full faithfulness of $\Xi_e$ there is a unique
 $\delta:H_E Q\to Q$ with
 \[
- \Xi_e(\delta)=\epsilon_D^{-1}b\,K(\epsilon_D)\,\zeta_Q .
+ \Xi_e(\delta)=\epsilon_{\mathbf Y}^{-1}b\,H_\times(\epsilon_{\mathbf Y})\,\zeta_Q .
 \]
-This equation makes $\epsilon_D$ an algebra isomorphism
-$\Lambda_e(Q,\delta)\cong(D,b)$.
+This equation makes $\epsilon_{\mathbf Y}$ an algebra isomorphism
+$\Lambda_e(Q,\delta)\cong(\mathbf Y,b)$.
 
 Let $(\mathfrak P_e,\mathfrak P_{\ne e})=\Lambda_e(\mathfrak P)$.
 This pair is initial in

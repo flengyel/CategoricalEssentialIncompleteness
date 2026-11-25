@@ -36,14 +36,14 @@ remainder by $2$ are primitive recursive; PA proves their defining
 and inverse equations.
 
 Use a deterministic form of Kleene's computation predicate as in
-Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,s)$ be the primitive-recursive bounded evaluator for program
-$e$ on input $x$. At stage $s$ it returns $0$ if no output has been
+Montagna~\cite[p.~115, Note~1]{Montagna}. Let $E(e,x,h)$ be the primitive-recursive bounded evaluator for program
+$e$ on input $x$. At stage $h$ it returns $0$ if no output has been
 found and $y+1$ for output $y$.
 Write $[a,x]$ for the pairing of the underlying program coding, with
 primitive-recursive projections whose inverse equations are provable
-in $\PA$. A halting trace has code $t=[s,y]$, where $s$ is its
+in $\PA$. A halting trace has code $t=[h,y]$, where $h$ is its
 first successful stage and $y$ its output. The projections are
-$\mathsf{st}(t)=s$ and $\mathsf{out}(t)=y$. Thus
+$\mathsf{st}(t)=h$ and $\mathsf{out}(t)=y$. Thus
 \[
  \mathsf{Tr}(e,x,t)\quad\Longleftrightarrow\quad
  E(e,x,\mathsf{st}(t))=\mathsf{out}(t)+1
@@ -106,11 +106,11 @@ Two applications of the parameter equation now give
 function $\operatorname{s}(e,a)=s_0(s_0(v,e),a)$.
 Choose an index $c$ whose program, on input
 $\langle\langle f,e\rangle,x\rangle$, searches successive codes
-of pairs $(t,v)$ for which
+of pairs $(t,t')$ for which
 \[
- \mathsf{Tr}(e,x,t)\land\mathsf{Tr}(f,\mathsf{out}(t),v).
+ \mathsf{Tr}(e,x,t)\land\mathsf{Tr}(f,\mathsf{out}(t),t').
 \]
-At the first such pair it returns $\mathsf{out}(v)$. Put
+At the first such pair it returns $\mathsf{out}(t')$. Put
 $\operatorname{comp}(f,e)=\operatorname{s}(c,\langle f,e\rangle)$,
 which is primitive recursive. PA proves that the code of any
 witnessing pair bounds the search, and that a successful search

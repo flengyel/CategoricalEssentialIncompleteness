@@ -256,14 +256,14 @@ By Lemma~\ref{lem:syntactic-total-category}, $\mathcal B_T$ is regular
 with disjoint stable finite coproducts, and its monomorphisms have
 partial inverses in $\Split(S_T)$. Lemma~\ref{lem:partial-slice-turing}
 therefore makes $\Split(S_T)$ a Turing category with Turing object
-$U=(\omega,1_\omega)$ and Turing morphism represented by $\tau_T=[u]_T$.
+$(\omega,1_\omega)$ and Turing morphism represented by $\tau_T=[u]_T$.
 The restriction equivalence supplies a restriction
 terminal object, represented by the singleton predicate $x=0$.
 Binary restriction products are
 $(X,e)\times(Y,d)=(X\times Y,e\times d)$.
 For every object $(X,e)$, the total morphism
 $e:(X,e)\to(X,1_X)$ has retraction
-$e:(X,1_X)\rightharpoonup(X,e)$, and $(X,1_X)\cong U$
+$e:(X,1_X)\rightharpoonup(X,e)$, and $(X,1_X)\cong(\omega,1_\omega)$
 by the coding isomorphism.
 
 Ranges extend to $\Split(S_T)$ by the same representatives.
@@ -292,12 +292,12 @@ are understood to be universally quantified.
 \label{lem:st-finite-sigma1}
 Let $C(x)$ be $\Sigma_1$, and let $a$ code a finite sequence with
 entries $a_i$. The assertion that all entries satisfy $C$ is equivalent
-in $\PA$ to a $\Sigma_1$ formula. Let $s$ be a positive integer and let
-$D_0(x),\ldots,D_{s-1}(x)$ be $\Sigma_1$ formulas. Fix a $\Sigma_1$
+in $\PA$ to a $\Sigma_1$ formula. Let $m$ be a positive integer and let
+$D_0(x),\ldots,D_{m-1}(x)$ be $\Sigma_1$ formulas. Fix a $\Sigma_1$
 graph formula $L(x,w)$ for a primitive-recursive program whose values on
-$\N$ lie in $\{0,\ldots,s-1\}$. Define the entry condition
+$\N$ lie in $\{0,\ldots,m-1\}$. Define the entry condition
 \[
- C_L(x)\equiv\bigvee_{j=0}^{s-1}\bigl(L(x,\bar j)\land D_j(x)\bigr).
+ C_L(x)\equiv\bigvee_{j=0}^{m-1}\bigl(L(x,\bar j)\land D_j(x)\bigr).
 \]
 The assertion that all entries satisfy $C_L$ is also equivalent in $\PA$
 to a $\Sigma_1$ formula.

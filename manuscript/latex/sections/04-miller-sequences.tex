@@ -1,13 +1,10 @@
 \section{Miller sequences and essential incompleteness}\label{sec:miller}
 
-For the sequence $a$ constructed by Miller
-\cite[Theorem~6.3 and the following paragraph]{Miller2004}, the index
-sets $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$ are separable relative to
-each binary representation of $a$. No single separator is computable
-uniformly from all representations. We use the formulation of Bauer
-and Hanson \cite[Section~2.1 and Theorem~2.2]{BauerHanson} to derive
-incompleteness for an extension of the theory of real closed ordered
-fields by rational bounds on the coordinates of $a$.
+For any sequence $a:\N\to[0,1]$ satisfying~\eqref{eq:miller-property},
+each binary representation of $a$ computes a separator of $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No single
+separator is computable uniformly from all representations. We use
+these cuts to prove incompleteness for an extension of the theory of
+real closed ordered fields by rational bounds on the coordinates of $a$.
 
 Let $2^{\N}=\{0,1\}^{\N}$ be Cantor space, the set of infinite binary
 sequences with the product topology of the discrete space $\{0,1\}$.
@@ -32,8 +29,15 @@ $P_z=\rho^{-1}(\{z\})$ for the set of these representations.
 The map $\rho$ is continuous and onto, so every $P_z$ is nonempty
 and compact.
 
-Miller's construction gives a sequence $a\in Q$ such that, for every
-$d\in\N$ and $r\in[0,1]$,
+Miller's fixed-point argument uses names of points in the computable
+metric space $Q$ \cite[proof of Theorem~6.3 and the following paragraph]{Miller2004}.
+In the binary representation of Bauer and Hanson
+\cite[pp.~6--9, (2.2), Definition~2.1 and Theorem~2.2]{BauerHanson},
+the fixed-point construction uses the finite oracle computations of
+program $d$ in the chosen numbering to define the interval at coordinate
+$d$. If that program computes $r\in[0,1]$ from every representation
+of the input sequence, the interval is $\{r\}$. Thus there is a
+sequence $a\in Q$ such that, for every $d\in\N$ and $r\in[0,1]$,
 \begin{equation}\label{eq:miller-property}
  \left[
   (\forall p\in P_a)(\forall k\in\N)(\exists j\in\N)\;
@@ -237,8 +241,8 @@ In particular, $U_e^0$ and $U_e^1$ are disjoint effectively open sets.
 
 The product topology on $Q$ is induced by the metric
 \[
- d:Q\times Q\to[0,1],\qquad
- d(z,w)=\sum_{n\geq0}2^{-n-1}|z(n)-w(n)|.
+ d_Q:Q\times Q\to[0,1],\qquad
+ d_Q(z,w)=\sum_{n\geq0}2^{-n-1}|z(n)-w(n)|.
 \]
 For a nonempty box restricting finitely many coordinates to closed
 rational intervals $I_n$, the distance from $z$ to the box is the
@@ -246,7 +250,7 @@ finite sum
 $\sum_n2^{-n-1}\operatorname{dist}(z(n),I_n)$ over those coordinates.
 Distance to a nonempty finite union is the minimum of these distances.
 Define $\delta_{e,m,t}:Q\to[0,1]$ by
-$\delta_{e,m,t}(z)=d(z,K_{e,m,t})$ when $K_{e,m,t}$ is nonempty, and
+$\delta_{e,m,t}(z)=d_Q(z,K_{e,m,t})$ when $K_{e,m,t}$ is nonempty, and
 $\delta_{e,m,t}(z)=1$ when it is empty. In each box formula, replacing
 $z(n)$ by $b_{n,N}(p)$ changes the distance by at most
 $2^{-N}\sum_n2^{-n-1}=2^{-N}$, since distance to an interval is
@@ -325,7 +329,7 @@ morphism, although $\mathrm{Rec}^{p}$ has a Turing morphism.
 
 
 \subsection{A theory of real closed fields}
-\label{def:miller-splitting}
+\label{subsec:miller-field-theory}
 
 A subset $D\subseteq X$ is \emph{$\mathcal E_a$-semidecidable} if
 its partial identity $1_D$ belongs to $\mathcal E_a$. In the chosen
@@ -449,7 +453,7 @@ Proposition~\ref{prop:categorical-substitution} therefore gives the
 recursive free-for domain and substitution on that domain. The
 sentence carrier, where the free-variable list is empty, is recursive.
 
-Represent an axiom subobject by its semidecidable image in the
+Let $A$ be the semidecidable image of an axiom subobject in the
 sentence carrier. Use the seven logical schemes, modus ponens,
 and generalization of Appendix~\ref{app:first-order-derivations}.
 A finite derivation tree records its rule instance and ordered
@@ -457,10 +461,9 @@ children at every node. Tree shape, logical instance conditions,
 and agreement of child conclusions with the required premises are
 recursive tests. Run these tests together with the finitely many
 semidecision procedures for membership of nonlogical axiom leaves.
-Together these procedures semidecide a carrier
-$P_A$ with the same membership outcome for every $p\in P_a$.
-Reading the root gives a total conclusion morphism
-$c_A:P_A\to\mathsf{Fm}$, and adjoining a labeled root gives an
+These tests semidecide the same carrier $D_A$ of valid derivations
+for every $p\in P_a$. Reading the root gives a total conclusion morphism
+$c_A:D_A\to\mathsf{Fm}$, and adjoining a labeled root gives an
 $H_A$-algebra.
 
 For any $H_A$-algebra, first semidecide that the input is a valid
@@ -539,15 +542,16 @@ $c_A:D_A\to F_P$ by $c_A(w,t)=(w,\varphi)$ for root conclusion
 $\varphi$. Adjoining a rule above its premises gives
 $\delta:H(D_A,c_A)\to(D_A,c_A)$.
 
-Let $\beta:H(Q,q)\to(Q,q)$ be an algebra over $F_P$. Evaluate each
+For an object $\pi_B:B\to F_P$ of the slice and an algebra
+$\beta:H(B,\pi_B)\to(B,\pi_B)$, evaluate each
 valid tree from the leaves to the root using $\beta$. Inductively,
 each child value lies over its premise at $w$, so the rule and its
 child values belong to the domain of the corresponding operation of
 $\beta$. For every $p\in P_a$ it returns the same value over the rule
 conclusion. With the test for membership in $D_A$
-this gives a total morphism $e:D_A\to Q$ satisfying
+this gives a total morphism $e:D_A\to B$ satisfying
 \[
- qe=c_A,\qquad e\delta=\beta H(e).
+ \pi_B e=c_A,\qquad e\delta=\beta H(e).
 \]
 The second equation forces the value at each leaf and at each node
 once its children have been evaluated. Induction gives uniqueness,
@@ -604,9 +608,10 @@ of a constant into an inequality give recursive total morphisms
 For a theory $T$ with an $\mathcal E_a$-semidecidable axiom set,
 let $A_T\hookrightarrow S$ be its axiom subobject. By
 Proposition~\ref{prop:miller-theory-realization}, the inference
-endofunctor $H_{A_T}$ has an initial derivation algebra. Pulling its conclusion morphism $\rho_T:P_T\to\mathsf{Fm}$
-back along the sentence inclusion $S\hookrightarrow\mathsf{Fm}$ gives
-$\mathrm{Prf}_T=P_T\times_{\mathsf{Fm}}S$ with projection
+endofunctor $H_{A_T}$ has an initial derivation algebra. Pulling its
+conclusion morphism $c_{A_T}:D_{A_T}\to\mathsf{Fm}$ back along the sentence
+inclusion $S\hookrightarrow\mathsf{Fm}$ gives
+$\mathrm{Prf}_T=D_{A_T}\times_{\mathsf{Fm}}S$ with projection
 $c_T:\mathrm{Prf}_T\to S$.
 Theorem~\ref{thm:first-order-theory} identifies its image with the
 sentence theory generated by $A_T$.
@@ -694,17 +699,13 @@ every consistent internal sentence theory extending $t_a$.
 In particular, $u$ is essentially incomplete and its theorem and
 refutation domains are inseparable.
 
-Let $q:1\to S$ select the code of $0=0$. Since $T_a$ proves $0=0$,
-$q$ factors as $u q_U$ for $q_U:1\to U$. Suppose complementary
-subobjects of $U\times S$ in the slice separated $1_U\times u$
-from $1_U\times\nu^*u$. Their inverse images along
-\[
- \langle q_U !_S,1_S\rangle:S\longrightarrow U\times S
-\]
-would be complementary subobjects of $S$ containing $u$ and
-$\nu^*u$, respectively. This contradicts inseparability in the base.
-Theorems~\ref{thm:theory-extension} and~\ref{thm:associated-incompleteness}
-give the conclusions about the category, its internal theory, the
-partial Boolean morphism, and the comparison functor.
+The point $\lambda:1\to S$ selecting the code of $0=0$ factors through
+$u$, since $T_a$ proves $0=0$. Theorem~\ref{thm:associated-incompleteness}
+therefore gives essential incompleteness of $1_U\times u$ and excludes
+a total extension of $1_U\times\delta_u$. A complementary separator in
+the slice would give such an extension by assigning true and false to its
+two summands. Lemma~\ref{lem:partial-slice-turing} gives the Turing
+category, and Theorem~\ref{thm:theory-extension} gives the assertions
+about $\Sigma_i$.
 \end{proof}
 
