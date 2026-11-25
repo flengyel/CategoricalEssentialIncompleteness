@@ -2,45 +2,43 @@
 
 \subsection{Cosheaves and functor categories}
 
-Write $D=\{c\}$, $L=\{a,c\}$, and $R=\{b,c\}$ for the nonempty
+Write $O_0=\{c\}$, $O_1=\{a,c\}$, and $O_2=\{b,c\}$ for the nonempty
 proper opens of $X$. Morphisms of the set-valued cosheaves defined in
 Section~\ref{sec:cosheaves} are natural transformations.
 
 \begin{proposition}\label{prop:fork-cosheaves}
-Restriction to $D,L,R$ defines an equivalence
+Restriction to $O_0,O_1,O_2$ defines an equivalence
 $\operatorname{CoSh}(X,\mathbf{Set})\simeq\mathbf{Set}^{J}$,
-where $J=(1\leftarrow0\to2)$. An object of $\mathbf{Set}^{J}$
-consists of sets $C,A,B$ and functions $r:C\to A$, $s:C\to B$.
-A quasi-inverse assigns to this functor the cosheaf whose values at
-$D,L,R,X$ are respectively $C,A,B,A\amalg_C B$.
+where $J=(1\leftarrow0\to2)$. A quasi-inverse sends a diagram
+$Y_1\xleftarrow{r_1^Y}Y_0\xrightarrow{r_2^Y}Y_2$ to the cosheaf
+with value $Y_j$ at $O_j$ and $Y_1\amalg_{Y_0}Y_2$ at $X$.
 \end{proposition}
 \begin{proof}
 Let $F:\mathcal O(X)\to\mathbf{Set}$ satisfy $F(\varnothing)=\varnothing$.
-Every cover of $D$, $L$, or $R$ contains the open it covers.
-A cover of $X$ contains $X$ or contains both $L$ and $R$.
-Since $L\cap R=D$, the remaining cosheaf condition is that the
-canonical map
+Every cover of $O_j$ contains $O_j$. A cover of $X$ that omits $X$
+contains both $O_1$ and $O_2$. Each of its members lies in $O_1$
+or $O_2$, so a cocone on the cover is determined
+by its maps on $O_1$ and $O_2$ agreeing on $O_0=O_1\cap O_2$.
+Thus the remaining cosheaf condition is that the canonical map
 \[
- F(L)\amalg_{F(D)}F(R)\longrightarrow F(X)
+ F(O_1)\amalg_{F(O_0)}F(O_2)\longrightarrow F(X)
 \]
-be a bijection. Every other member of a cover without $X$ lies
-in $L$ or $R$. Thus a cocone on the cover is determined by its maps
-on $L$ and $R$ agreeing on $D$.
-Given $A\xleftarrow{r}C\xrightarrow{s}B$, take the value at $X$ to
-be $A\amalg_C B$ and the maps from $A,B$ to be its coprojections.
-A morphism to a second diagram $A'\xleftarrow{r'}C'\xrightarrow{s'}B'$
-consists of $u:C\to C'$, $v:A\to A'$, and $w:B\to B'$ with
-$vr=r'u$ and $ws=s'u$. Its component at $X$ is the unique map
-$h:A\amalg_C B\to A'\amalg_{C'}B'$ satisfying
+be a bijection.
+
+Extend $Y$ by sending $O_i\subseteq X$ to the coprojection
+$\iota_i^Y:Y_i\to Y_1\amalg_{Y_0}Y_2$ for $i=1,2$. A morphism $f:Y\to Z$ of diagrams consists of functions
+$f_j:Y_j\to Z_j$ satisfying $f_i r_i^Y=r_i^Z f_0$ for $i=1,2$.
+It induces the unique map
 \[
- h\iota_A=\iota_{A'}v,\qquad h\iota_B=\iota_{B'}w,
+ f_X:Y_1\amalg_{Y_0}Y_2\longrightarrow Z_1\amalg_{Z_0}Z_2,
+ \qquad f_X\iota_i^Y=\iota_i^Z f_i\quad(i=1,2).
 \]
-where $\iota$ denotes a coprojection. Uniqueness gives preservation of
-identities and composition. Restricting this extension to $D,L,R$
-recovers the original diagram and its morphisms. For a cosheaf $F$,
-the comparison from the extension of its restriction to $F$ is the
-identity on the proper opens and the canonical bijection above at $X$.
-Naturality at $X$ follows from the two equations for $h$.
+Uniqueness gives preservation of identities and composition.
+Restriction of this extension recovers the original diagram and
+its morphisms. For a cosheaf $F$, the comparison from the extension
+of its restriction to $F$ is the identity on the proper opens and
+the canonical bijection above at $X$. Naturality at $X$ follows
+from the equations for $f_X$.
 \end{proof}
 
 For an object $Y$ of $\mathcal E$, the pushout has a
@@ -139,7 +137,7 @@ The category $\mathcal A=\operatorname{Par}(\mathcal E,
 \operatorname{Mono})$ is a split prodominical restriction category
 with binary restriction products, restriction coproducts, weak
 choice, and ranges satisfying the agreement law. The range of a morphism
-represented by $Y\xleftarrow{m}D\xrightarrow{v}Z$ is the partial
+represented by $Y\hookleftarrow D\xrightarrow{v}Z$ is the partial
 identity on the regular image of $v$.
 Joins of restriction idempotents are partial identities on finite
 unions of their subfunctors, and inverse image along every partial
@@ -218,8 +216,9 @@ images lie in $D_p$. Thus each $p_j$ is injective on $(D_p)_j$.
 Preimage search gives recursive inverse components on $I_p$;
 they form a natural transformation by injectivity and naturality of
 the representing morphism $D_p\to Z$.
-The resulting partial morphism $s:Z\rightharpoonup Y$ has domain
-$I_p$ and satisfies $ps=\bar s$ and $psp=p$.
+The resulting partial morphism $p^\dagger:Z\rightharpoonup Y$ has
+domain $I_p$ and satisfies $pp^\dagger=\overline{p^\dagger}$ and
+$pp^\dagger p=p$.
 This proves weak choice.
 \end{proof}
 
@@ -385,15 +384,13 @@ of the parameter has no effect on this computation.
 At component $0$, write the parameter as
 $P=(k,p_0,p_1,p_2)\in V_0$ and the input as
 $x=(\ell,x_0,x_1,x_2)\in V_0$.
-Define partial recursive maps
-$C:V_0\times V_0\rightharpoonup V_0$ and
-$Q_i:V_0\times V_0\rightharpoonup V_i$, for $i=1,2$,
-by the following computations, run in parallel:
+Define partial recursive maps $\psi_j:V_0\times V_0\rightharpoonup V_j$
+for $j=0,1,2$ by the following parallel computations:
 \begin{align*}
- C(P,x)&\simeq
+ \psi_0(P,x)&\simeq
    \operatorname{decode}_4
       \varphi_{p_0}(\operatorname{encode}_4 x),\\
- Q_i(P,x)&\simeq
+ \psi_i(P,x)&\simeq
    \operatorname{decode}_2
       \varphi_{p_i}(\operatorname{encode}_2(\ell,x_i))
       \qquad(i=1,2).
@@ -401,10 +398,10 @@ by the following computations, run in parallel:
 Let $D_{\tau,0}\subseteq V_0\times V_0$ consist of those pairs $(P,x)$
 for which all three computations halt and
 \begin{equation}\label{eq:fork-turing-check}
- Q_i(P,x)=r_i^V C(P,x)\qquad(i=1,2).
+ \psi_i(P,x)=r_i^V \psi_0(P,x)\qquad(i=1,2).
 \end{equation}
 Define $\tau_0:V_0\times V_0\rightharpoonup V_0$ with domain
-$D_{\tau,0}$ by $\tau_0(P,x)=C(P,x)$.
+$D_{\tau,0}$ by $\tau_0(P,x)=\psi_0(P,x)$.
 Dovetailing the three computations and checking equality of their
 numerical outputs enumerates $D_{\tau,0}$ and computes $\tau_0$ on it.
 
@@ -427,19 +424,17 @@ Choose its representation by a c.e.\ subfunctor
 $D\subseteq Y\times V$ and a morphism $D\to V$ in
 $\mathcal E$. Its components are the restrictions
 $F_j|_{D_j}:D_j\to V_j$, where $j=0,1,2$.
-Put $d_0=4$ and $d_1=d_2=2$, so that $V_j=\N^{d_j}$.
-Put $m_j=m(Y_j)$, the arity of the numerical object
-$Y_j=(m_j,|Y_j|)$.
+Let $d_j=m(V_j)$, so $d_0=4$ and $d_1=d_2=2$.
 For each component define a partial recursive numerical function
 \[
- G_j:\N^{m_j}\times\N^{d_j}\rightharpoonup\N
+ G_j:\N^{m(Y_j)}\times\N^{d_j}\rightharpoonup\N
 \]
 as follows. On input $(y,x)$, wait until $(y,x)$ appears in an
 enumeration of $D_j$; then compute $F_j(y,x)$ and return its
 $\operatorname{encode}_{d_j}$-code. This function has domain
 exactly $D_j$.
 Specialization gives total recursive maps
-$s_j:\N^{m_j}\to\N$ satisfying
+$s_j:\N^{m(Y_j)}\to\N$ satisfying
 \begin{equation}\label{eq:fork-specialization}
  \operatorname{decode}_{d_j}
    \varphi_{s_j(y)}(\operatorname{encode}_{d_j}x)
@@ -468,10 +463,10 @@ At component $i\in\{1,2\}$, equations
 \]
 has domain $D_i$ and agrees there with $F_i$.
 At component $0$, fix $(y,x)\in Y_0\times V_0$.
-If $(y,x)\in D_0$, the computation $C(p_{F,0}(y),x)$ returns $F_0(y,x)$.
+If $(y,x)\in D_0$, the computation $\psi_0(p_{F,0}(y),x)$ returns $F_0(y,x)$.
 Since $D$ is a subfunctor,
 $(r_i^Yy,r_i^Vx)\in D_i$ for $i=1,2$.
-The computations $Q_i(p_{F,0}(y),x)$, for $i=1,2$, consequently
+The computations $\psi_i(p_{F,0}(y),x)$, for $i=1,2$, consequently
 halt, and naturality of the morphism $D\to V$ gives
 \[
  F_i(r_i^Yy,r_i^Vx)=r_i^VF_0(y,x).
@@ -479,7 +474,7 @@ halt, and naturality of the morphism $D\to V$ gives
 Both tests in \eqref{eq:fork-turing-check} succeed, so
 $\tau_0(p_{F,0}(y),x)=F_0(y,x)$.
 Conversely, if $\tau_0(p_{F,0}(y),x)$ is defined, the computation
-$C(p_{F,0}(y),x)$ has halted. Equation~\eqref{eq:fork-specialization}
+$\psi_0(p_{F,0}(y),x)$ has halted. Equation~\eqref{eq:fork-specialization}
 then implies $(y,x)\in D_0$.
 Thus $\tau(p_F\times1_V)=F$, with equality of domains and values
 at each component.
@@ -513,22 +508,23 @@ is the same in both categories. The inclusion preserves restrictions,
 ranges and the chosen coproducts, so it is a range functor.
 
 For a restriction idempotent $e$ on an object $Y$ of $\mathscr R_X$,
-write $m_e:D_e\to Y$ and $r_e:Y\rightharpoonup D_e$ for its
+write $\iota_e:D_e\to Y$ and $r_e:Y\rightharpoonup D_e$ for its
 domain inclusion and partial inverse. Send $(Y,e)$ to $D_e$
 and a morphism $f:(Y,e)\rightharpoonup(Z,d)$, represented by
 $f:Y\rightharpoonup Z$ satisfying $f=dfe$, to
-$r_d f m_e:D_e\rightharpoonup D_d$.
-The equations $m_er_e=e$ and $r_em_e=1_{D_e}$ show that
+$r_d f \iota_e:D_e\rightharpoonup D_d$.
+The equations $\iota_er_e=e$ and $r_e\iota_e=1_{D_e}$ show that
 identities and composition are preserved. Conversely, send a
-partial map $g:D_e\rightharpoonup D_d$ to $m_d g r_e$.
+partial map $g:D_e\rightharpoonup D_d$ to $\iota_d g r_e$.
 This morphism belongs to $\mathscr R_X$ by fullness and satisfies
-$d(m_d g r_e)e=m_d g r_e$. The two assignments are inverse on
+$d(\iota_d g r_e)e=\iota_d g r_e$. The two assignments are inverse on
 each hom-set, so the functor is fully faithful.
 It preserves restrictions, since
-$\overline{r_d f m_e}=r_e\bar f m_e$.
+$\overline{r_d f \iota_e}=r_e\bar f \iota_e$.
 For every $Z\in\mathcal A$, Lemma~\ref{lem:fork-dominance}
-provides a restriction monomorphism $m:Z\to V$ with partial inverse $m^\dagger:V\rightharpoonup Z$.
-The domain subfunctor of $mm^\dagger$ is isomorphic to $Z$,
+provides a restriction monomorphism $s_Z:Z\to V$ with partial inverse
+$s_Z^\dagger:V\rightharpoonup Z$. The domain subfunctor of
+$s_Zs_Z^\dagger$ is isomorphic to $Z$,
 so the functor is essentially surjective.
 \end{proof}
 
@@ -544,24 +540,24 @@ $D\subseteq Y$ be its domain subfunctor. For $j=0,1,2$, put
 $I_j=p_j(D_j)\subseteq Y_j$. These sets are c.e., and naturality
 of $p:D\to Y$ gives $r_i^Y(I_0)\subseteq I_i$ for $i=1,2$.
 Thus $I\subseteq Y$ is an object of $\mathcal E$.
-Let $m:I\to Y$ be the inclusion, and let
+Let $\iota_I:I\to Y$ be the inclusion, and let
 $r:Y\rightharpoonup I$ have domain $D$ and component functions $p_j$.
 The equation $p^2=p$ implies that $I_j\subseteq D_j$ and that
-$p_j$ fixes every element of $I_j$. Hence $mr=p$ and $rm=1_I$.
+$p_j$ fixes every element of $I_j$. Hence $\iota_I r=p$ and $r\iota_I=1_I$.
 
 For each idempotent $e:Y\rightharpoonup Y$ in $\mathscr R_X$, write
 $I_e$ for its image subfunctor and
-$m_e:I_e\to Y$, $r_e:Y\rightharpoonup I_e$ for the splitting just
+$\iota_e:I_e\to Y$, $r_e:Y\rightharpoonup I_e$ for the splitting just
 constructed. Define
 $Q:\operatorname{Kar}(\mathscr R_X)\to\mathcal A$ by
 $Q(Y,e)=I_e$ and
-$Q(f)=r_d f m_e:I_e\rightharpoonup I_d$ for
+$Q(f)=r_d f \iota_e:I_e\rightharpoonup I_d$ for
 $f:(Y,e)\rightharpoonup(Z,d)$.
-The equations $m_er_e=e$ and $r_em_e=1_{I_e}$ prove the functor
+The equations $\iota_er_e=e$ and $r_e\iota_e=1_{I_e}$ prove the functor
 laws. As in Proposition~\ref{prop:fork-recursion}, the inverse
-assignment on hom-sets is $g\mapsto m_d g r_e$, so $Q$ is fully faithful.
+assignment on hom-sets is $g\mapsto \iota_d g r_e$, so $Q$ is fully faithful.
 For $f:(Y,e)\rightharpoonup(Z,d)$, restriction preservation follows from
-$\overline{r_d f m_e}=r_e\bar f e m_e$, since $e$ fixes its image
+$\overline{r_d f \iota_e}=r_e\bar f e \iota_e$, since $e$ fixes its image
 and $f=dfe$ takes values in the image of $d$.
 Every object of $\mathcal A$ is isomorphic to the image of a restriction
 idempotent on $V$, so this functor is essentially surjective.
