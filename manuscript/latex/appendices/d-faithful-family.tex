@@ -1,8 +1,8 @@
-\section{Faithful model interpretations and theory extension}\label{sec:family}
+\section{Faithful model interpretations and theory extension}\label{app:faithful-family}
 
 Fix a consistent theory $T\supseteq\PA$.
 Let $\mathcal M_T$ be the set of all structures for the language of
-arithmetic with underlying set $\N$ that satisfy $T$. Each structure interprets the arithmetic symbols on this carrier.
+arithmetic with underlying set $\N$ that satisfy $T$.
 Completeness and
 the downward L\"owenheim--Skolem theorem imply
 $\mathcal M_T\ne\varnothing$: every model of $T$ is infinite, and a
@@ -29,9 +29,10 @@ $F_T(1_\omega)\ne0$.
 \end{theorem}
 \begin{proof}
 Preservation follows coordinatewise from Proposition~\ref{prop:model}.
-Suppose $[e]_T,[f]_T:X\rightharpoonup Y$ are distinct. Let $E$ be the sentence asserting that the program
-graphs $G_e$ and $G_f$ agree on every input and output, as in
-\eqref{eq:uniform}. The theory $T\cup\{\neg E\}$ is consistent.
+Suppose $[e]_T,[f]_T:X\rightharpoonup Y$ are distinct. By
+\eqref{eq:uniform}, $T$ does not prove the sentence
+$\forall x\forall y\,(G_e(x,y)\leftrightarrow G_f(x,y))$.
+Its negation is therefore consistent with $T$.
 Completeness and downward L\"owenheim--Skolem give
 $M\in\mathcal M_T$ in which the two graphs differ. Hence
 $F_M([e]_T)\ne F_M([f]_T)$, so $F_T([e]_T)\ne F_T([f]_T)$.
@@ -53,21 +54,22 @@ $p_M(x)=p_M(x')$ is defined, take the family with a singleton at $M$
 and the empty set elsewhere. The two total maps from this family to $A$
 selecting $x,x'$ have equal composites with $p$. Their composites with
 $\bar p$ are therefore equal, so $x=x'$. The inverses of the coordinate
-injections, defined on their images, form a section of $p$. Inverse images commute with unions coordinatewise. Finally,
-$\mathcal M_T$ is nonempty and each $X_M$ is nonempty, so the
-identity of $F_T(X)$ differs from zero.
+injections, defined on their images, form a section of $p$.
+Inverse images commute with unions coordinatewise. Since
+$\mathcal M_T$ and each $X_M$ are nonempty, $F_T(1_X)\ne0$ for
+every object $X$, in particular for $X=\omega$.
 \end{proof}
 
 For consistent computably enumerable $T\supseteq\PA$, the source $S_T$
 is not locally connected \cite[Corollary 4.4, pp.~657--658]{DPM}.
 
-For an inclusion $T\subseteq T'$ of consistent theories, define
-$Q_{T,T'}:S_T\to S_{T'}$ by $Q_{T,T'}X=X$ and
-$Q_{T,T'}[e]_T=[e]_{T'}$.
-Every $T$-proof of graph equivalence is a $T'$-proof; composition
-uses the same program index in both quotients.
-It preserves restrictions, zeros, ranges, binary restriction products
-and coproducts, and satisfies $Q_{T,T'}(\tau_T)=\tau_{T'}$.
+For an inclusion $T\subseteq T'$ of consistent theories, the quotient
+functor $\mathsf{quot}_{T,T'}:S_T\to S_{T'}$ fixes objects and sends
+$[e]_T$ to $[e]_{T'}$. Every $T$-proof of graph equivalence is a
+$T'$-proof. Composition uses the same program index in both quotients,
+and the range formula $R_e(y)=\exists x\,G_e(x,y)$ depends only on $e$.
+The functor preserves restrictions, zeros, ranges, binary restriction
+products and coproducts, and satisfies $\mathsf{quot}_{T,T'}(\tau_T)=\tau_{T'}$.
 Since $\mathcal M_{T'}\subseteq\mathcal M_T$, restriction of families
 defines the projection
 $\pi_{T,T'}:\mathcal D_T\to\mathcal D_{T'}$. Fixing the assignments
@@ -75,7 +77,7 @@ $X\mapsto X_M$ once for each arithmetic structure gives a strictly
 commuting square:
 \[
 \begin{tikzcd}[column sep=large]
- S_T \arrow[r,"Q_{T,T'}"] \arrow[d,"F_T"'] &
+ S_T \arrow[r,"\mathsf{quot}_{T,T'}"] \arrow[d,"F_T"'] &
  S_{T'} \arrow[d,"F_{T'}"]\\
  \mathcal D_T \arrow[r,"\pi_{T,T'}"'] & \mathcal D_{T'}.
 \end{tikzcd}
@@ -83,7 +85,7 @@ commuting square:
 On a morphism $[e]_T$, both composites have, at every
 $M\in\mathcal M_{T'}$, the partial function defined by interpreting
 $G_e$ in $M$. For $T\subseteq T'\subseteq T''$, the quotient
-functors satisfy $Q_{T',T''}Q_{T,T'}=Q_{T,T''}$, and the coordinate
+functors satisfy $\mathsf{quot}_{T',T''}\mathsf{quot}_{T,T'}=\mathsf{quot}_{T,T''}$, and the coordinate
 projections satisfy
 $\pi_{T',T''}\pi_{T,T'}=\pi_{T,T''}$.
 The identity cases follow from the same definitions.
@@ -92,30 +94,30 @@ The identity cases follow from the same definitions.
 
 \begin{corollary}\label{cor:pair}
 Let $T\supseteq\PA$ be consistent.
-Fix $U=\omega$ and a Turing morphism
-$\tau:U\times U\rightharpoonup U$ in $S_T$.
-Choose an isomorphism $b_0:U\to U+U$ in $S_{\PA}$ and put
-$b=Q_{\PA,T}(b_0)$. Define
+Fix a Turing morphism $\tau:\omega\times\omega\rightharpoonup\omega$ in $S_T$.
+Choose an isomorphism $b_0:\omega\to\omega+\omega$ in $S_{\PA}$ and put
+$b=\mathsf{quot}_{\PA,T}(b_0)$. Define
 \[
- d=\tau\Delta_U,\qquad
- a_0=(bd)^*(1_U+0_U),\qquad a_1=(bd)^*(0_U+1_U).
+ d=\tau\Delta_\omega,\qquad
+ a_0=(bd)^*(1_\omega+0_\omega),\qquad a_1=(bd)^*(0_\omega+1_\omega).
 \]
 Then $a_0,a_1$ are inseparable in $S_T$. For every consistent
-extension $T'\supseteq T$, their images under $Q_{T,T'}$ form the
+extension $T'\supseteq T$, their images under $\mathsf{quot}_{T,T'}$ form the
 inseparable pair defined by the same formulas in $S_{T'}$.
 \end{corollary}
 \begin{proof}
 Corollary~\ref{cor:model-pair} gives the first assertion, since
 $\mathcal M_T\ne\varnothing$.
-The functor $Q_{T,T'}$ preserves the operations defining the pair.
-Write $Q=Q_{T,T'}$. Given $f:X\times U\rightharpoonup U$ in
-$S_{T'}$, its program index represents a morphism $\tilde f$ of
-the same type in $S_T$ with $Q(\tilde f)=f$.
-Choose a total $g:X\to U$ in $S_T$ with
-$\tilde f=\tau(g\times1_U)$. Then $Q(g)$ is total and
-$f=Q(\tau)(Q(g)\times1_U)$ in $S_{T'}$.
-Applying Corollary~\ref{cor:model-pair} to $T'$ gives inseparability
-of the image pair.
+Write $\mathsf{quot}=\mathsf{quot}_{T,T'}$. Given
+$f:X\times\omega\rightharpoonup\omega$ in $S_{T'}$, its program
+index represents a morphism $\tilde f$ of the same type in $S_T$ with
+$\mathsf{quot}(\tilde f)=f$. Choose a total $g:X\to\omega$ in $S_T$
+with $\tilde f=\tau(g\times1_\omega)$. Then $\mathsf{quot}(g)$ is
+total and $f=\mathsf{quot}(\tau)(\mathsf{quot}(g)\times1_\omega)$.
+Thus $\mathsf{quot}(\tau)$ is Turing in $S_{T'}$. Since
+$\mathsf{quot}$ preserves the operations defining $a_0,a_1$,
+Corollary~\ref{cor:model-pair} applied to $T'$ gives inseparability
+of their images.
 \end{proof}
 
 The morphism $F_T(\tau_T)$ is not a Turing morphism in $\mathcal D_T$.
@@ -159,7 +161,7 @@ Thus $E_T$ maps the restriction idempotents on $\omega$ in $S_T$
 to $\mathcal P(\N)$. It preserves order, finite meets, top and
 bottom. For a consistent c.e.\ extension $T'\supseteq T$, every
 $T$-proof is also a proof from $T'$, so
-$E_T(c)\subseteq E_{T'}(Q_{T,T'}c)$. For $n\in\N$ choose a constant-function index
+$E_T(c)\subseteq E_{T'}(\mathsf{quot}_{T,T'}c)$. For $n\in\N$ choose a constant-function index
 $\operatorname{const}(n)$ for which
 $\PA\vdash\forall x\forall y\,
 (G_{\operatorname{const}(n)}(x,y)\leftrightarrow y=\bar n)$, and put
