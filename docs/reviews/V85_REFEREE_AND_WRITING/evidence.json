@@ -1,0 +1,183 @@
+{
+  "edition": 85,
+  "manuscript_commit": "e9158ad89a3d4abfdbe732653ed5342c50a69faa",
+  "previous_full_kernel_commit": "b37f8908435a4c2991af5b95de4645980ac60a05",
+  "v84_kernel_receipt_sha256": "1e1b15b3796bdb197a04b4edd838beb0b320d51c6c25401af08229a1947b5ea6",
+  "published_artifacts": {
+    "pdf": {
+      "path": "manuscript/logical_consequence_and_essential_incompleteness_v85.pdf",
+      "sha256": "ef15f6df485a6aae75a0e4e88a79feafc2cda7837b50e0a8afde3b352af95ffd"
+    },
+    "source_archive": {
+      "path": "manuscript/logical_consequence_v85_source.zip",
+      "sha256": "210c2d1fc13416fd1c191e80d72f435e51b9099da6792590e0452351b40506a3"
+    }
+  },
+  "source_archive_members": 26,
+  "recursive_tex_inputs": 25,
+  "tex_changed_since_kernel_commit": [
+    "manuscript/latex/preamble.tex",
+    "manuscript/latex/sections/05a-internal-syntax.tex",
+    "manuscript/latex/appendices/e-reading-lean-proofs.tex"
+  ],
+  "numbered_environments": {
+    "theorem": 18,
+    "corollary": 13,
+    "proposition": 27,
+    "lemma": 19,
+    "definition": 3
+  },
+  "preserved_numbered_labels_with_proof_locations": 80,
+  "common_lean_declarations_resolved": 862,
+  "corrected_frozen_v84_line_locators": {
+    "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.no_lift_of_summand_inverse_images": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+      "archived_inventory_line": 52,
+      "declaration_line": 72
+    },
+    "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.essential_incomplete_iff_inseparable": {
+      "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean",
+      "archived_inventory_line": 29,
+      "declaration_line": 110
+    }
+  },
+  "matching_git_tree_ids": {
+    "Lean": "5015b5a4a7aa08aa9218ac2730502136c9ce0ed4",
+    "scripts": "9386f96da4c3deb65f1a41b0b0577b4339e7b84b"
+  },
+  "v84_measured_paths": 2781,
+  "v84_measured_lean_files": 2703,
+  "old_measured_paths_matching_hashes": 2775,
+  "old_measured_paths_with_other_contents": [
+    "MANUSCRIPT_CURRENT.json",
+    "docs/CODEX_WSL2_CURRENT.txt",
+    "manuscript/latex/appendices/e-reading-lean-proofs.tex",
+    "manuscript/latex/main.pdf",
+    "manuscript/latex/preamble.tex",
+    "manuscript/latex/sections/05a-internal-syntax.tex"
+  ],
+  "v84_inventory_intervals_compared_with_v85": {
+    "reader_one_passages": {
+      "total": 1082,
+      "identical_contiguous_lines": 1078,
+      "old_intervals_requiring_new_reading": [
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 291,
+          "last": 299
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 301,
+          "last": 314
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 315,
+          "last": 322
+        },
+        {
+          "path": "appendices/e-reading-lean-proofs.tex",
+          "first": 138,
+          "last": 147
+        }
+      ]
+    },
+    "reader_two_assertion_entries": {
+      "total": 3073,
+      "identical_contiguous_lines": 3065,
+      "old_intervals_requiring_new_reading": [
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 294,
+          "last": 298
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 299,
+          "last": 299
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 312,
+          "last": 313
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 313,
+          "last": 314
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 314,
+          "last": 320
+        },
+        {
+          "path": "sections/05a-internal-syntax.tex",
+          "first": 321,
+          "last": 322
+        },
+        {
+          "path": "appendices/e-reading-lean-proofs.tex",
+          "first": 143,
+          "last": 143
+        },
+        {
+          "path": "appendices/e-reading-lean-proofs.tex",
+          "first": 143,
+          "last": 145
+        }
+      ]
+    }
+  },
+  "v84_transitive_axioms_of_reused_declarations": {
+    "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selectedEntry_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selected_entries_model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selected_entries_PA": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.evaluate_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.evaluationTheory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CategoricalEssentialIncompleteness.V46.AssociatedClosedTheories.essential_incomplete_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "successful_v84_replay": {
+    "serial_commands": 2101,
+    "targeted_checks": 35,
+    "current_declarations": 35112,
+    "retained_declarations": 1274,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "v85_checks_here": {
+    "manuscript_verifier": "passed",
+    "axiom_parser_tests_passed": 6,
+    "serial_wrapper_exit": 127,
+    "serial_wrapper_last_step": "lean --version: executable absent",
+    "kernel_replay_completed": false
+  }
+}

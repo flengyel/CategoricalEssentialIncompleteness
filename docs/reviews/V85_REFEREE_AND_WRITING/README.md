@@ -1,0 +1,45 @@
+# Referee and mathematical writing review of manuscript v85
+
+Both requested corrections are present in the published LaTeX and PDF. The repeat reading found no further mathematical error, ambiguity, in-scope Lean omission or proof gap. The Lean source tree matches the successful v84 replay byte for byte. A full kernel run for the v85 manifest remains pending.
+
+| Source or record | Location |
+|---|---|
+| Reviewed v85 manuscript and proof tree | [`e9158ad89a3d4abfdbe732653ed5342c50a69faa`](https://github.com/flengyel/CategoricalEssentialIncompleteness/tree/e9158ad89a3d4abfdbe732653ed5342c50a69faa) · [PDF](../../../manuscript/logical_consequence_and_essential_incompleteness_v85.pdf) · [LaTeX source archive](../../../manuscript/logical_consequence_v85_source.zip) · [Whole-paper correspondence](../../../FORMALIZATION_STATUS_V85.md) |
+| Last complete kernel and axiom replay | [`b37f8908435a4c2991af5b95de4645980ac60a05`](https://github.com/flengyel/CategoricalEssentialIncompleteness/tree/b37f8908435a4c2991af5b95de4645980ac60a05) · [v84 report](../../V84_WSL2_LEAN_VERIFICATION.md) · [v84 machine-readable receipt](../../V84_WSL2_LEAN_VERIFICATION.json.gz) |
+| Evidence from this review | [Independent manuscript-first reconstruction](cei-v85-cold-notes.md) · [Independent report](INDEPENDENT.md) · [Machine-readable checks](evidence.json) |
+
+## (A) Hard blockers
+
+No claim failed the comparison between the v85 manuscript and the Lean declarations. The source changes concern exactly two mathematical passages. Of the 1,082 passages in the first v84 inventory, 1,078 carry over line for line, allowing for shifts in line numbers. Of the 3,073 entries in the other independent inventory, 3,065 carry over by the same test. Every changed entry in both inventories is in Lemma 6.4 or Appendix E.5. The new reading covers those passages directly, including the text introduced in v85. [Comparison with the earlier inventories](evidence.json) · [Earlier passage inventories](../V84_WSL2_AUDITS/README.md)
+
+## (B) Major weaknesses
+
+None found. In particular the revised statement of Lemma 6.4 keeps the chosen program fixed, and the revised Appendix E uses the functors in the proof of Theorem 5.3. The two comparisons below also test these formulations in cases where an omitted qualification matters.
+
+**Lemma 6.4, pp. 31–32.** With a fixed graph formula $L(x,w)$, v85 defines
+$$
+ C_L(x)=\bigvee_{j<s}\bigl(L(x,\bar j)\land D_j(x)\bigr).
+$$
+The condition has a $\Sigma_1$ definition by finite disjunction. Apply the list-witness construction to $C_L$. In every PA model the statement for a list requires, for each entry, a numeral in the displayed range satisfying both conjuncts. For example, assuming PA consistent, consider the primitive-recursive program that returns 1 if it finds a PA proof of contradiction coded at most $x$, and 0 otherwise. With $s=1$ its standard values all lie in the specified range. At a nonstandard input where its graph returns 1 the one branch of $C_L$ fails, as does the corresponding Lean entry test. This example resolves the ambiguity in v84 while retaining the original hypothesis. [v85 lemma](../../../manuscript/latex/sections/05a-internal-syntax.tex#L291) · [Definition and model interpretation](../../../Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean#L23) · [PA derivation](../../../Lean/CategoricalEssentialIncompleteness/V46SelectorGraph.lean#L44)
+
+**Appendix E.5, p. 100.** The functor $B:\mathcal D\to\mathcal D/U$ is the restriction of $B_U$ to total morphisms. Its codomain is the domain of evaluation $E:\mathcal D/U\to\mathcal D$, so $EB\cong 1_{\mathcal D}$ is well typed. Pulling an arbitrary closed $W\hookrightarrow B(S)$ back to the theorem point, then transporting by the projection isomorphism, gives a closed subobject of $S$. No constancy assumption is made on $W$. The Lean proof of the forward implication of `essential_incomplete_iff` takes exactly such a $W$ and uses `evaluationTheory` on it. [Guide](../../../manuscript/latex/appendices/e-reading-lean-proofs.tex#L138) · [Proof of Theorem 5.3](../../../manuscript/latex/sections/04-theory-extensions.tex#L287) · [Lean definition and implication](../../../Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean#L84)
+
+## (C) Minor issues and mathematical writing
+
+Both v84 editorial findings are resolved. The selector formula is now in the statement, so a reader can interpret the lemma without anticipating the proof. The source and target of $B$ appear before the composite $EB$. Both passages are legible in the rebuilt PDF. The abstract, introduction, numbered statements outside Lemma 6.4, and structure of the ten sections and five appendices retain their v84 wording or numbering as applicable. The independent reader’s outline follows the v85 LaTeX in input order. The earlier suggestions concerning Lean module headings and comments remain optional editorial suggestions. [Outline from the new reading](cei-v85-cold-notes.md) · [PDF, p. 31](../../../manuscript/logical_consequence_and_essential_incompleteness_v85.pdf#page=31) · [PDF, p. 100](../../../manuscript/logical_consequence_and_essential_incompleteness_v85.pdf#page=100) · [Earlier optional wording suggestions](../V84_FINAL_REFEREE_AND_WRITING/OUTLINE_AND_WRITING.md#public-lean-documentation)
+
+## (D) Cross-section consistency
+
+The rendered numbers and LaTeX labels agree with the correspondence for all 77 results and three definitions. All 862 distinct Lean declarations common to the two previous result mappings were located in the v85 proof tree. Two line numbers in the frozen source index predate the completed v84 proofs. The actual declarations are `essential_incomplete_iff_inseparable` at line 110 and `no_lift_of_summand_inverse_images` at line 72. The general statement of Corollary 4.8 is at line 124. Both identified source positions are recorded in the new evidence. [First declaration and the general theorem](../../../Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderIncompleteness.lean#L110) · [Second declaration](../../../Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean#L72) · [Evidence](evidence.json)
+
+The section-by-section comparison also retains the distinctions on which the applications depend. Theorem 8.6 chooses one total morphism before quantifying over consistent axiom indices. In §9 one oracle program computes the same partial function on every binary representation, and the fixed-point argument supplies a Miller sequence. The endpoint result in §10 permits every consistent c.e.-axiomatized extension in the chosen endpoint language. Proposition C.1 quantifies over every target morphism with the two prescribed inverse images and over every second coordinate in the reduction. [Arithmetic uniformity](../../../Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean#L204) · [Miller witness](../../../Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean#L125) · [Endpoint extension](../../../manuscript/latex/sections/09-three-point-space.tex#L609) · [Oracle reduction and nonlifting](../../../Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean#L59)
+
+## (E) Acceptance conditions
+
+Both changes requested by the v84 review are published in v85. The manuscript-only verifier passed, and all 26 contents of the public source archive matched the fetched source files. The named and build copies of the 103-page PDF are identical. The six axiom-parser tests passed. The independent reading and this comparison identify no outstanding mathematical revision or Lean proof obligation. The project requires a successful run at the v85 manifest before either reading can count toward its two receipt-qualified reports. [Manifest](../../../MANUSCRIPT_CURRENT.json) · [WSL2 verification assignment](../../CODEX_WSL2_CEI_V85_LEAN_HANDOFF.md)
+
+## (F) Verification limits
+
+The complete `Lean/` tree has the same Git object ID, `5015b5a4a7aa08aa9218ac2730502136c9ce0ed4`, in published v85 and in the kernel-tested v84 revision. The verifier scripts, toolchain, dependency manifest and source pins match as well. In the v84 receipt, all 2,101 replay commands and 35 targeted commands succeeded, and the axiom audit covered 35,112 current and 1,274 retained declarations. The six named declarations for the two v85 passages have only `propext`, `Quot.sound` and `Classical.choice` in their transitive axiom lists.
+
+At the clean published v85 commit, the pinned wrapper stopped at `lean --version` with exit 127 because the Lean executable is absent in this workspace. No kernel command elaborated a v85 declaration in that attempt. The existing receipt attests the identical proof sources at v84. A full v85 receipt remains outstanding. The repeat review found no counterexample to a paper result or unresolved proof issue. A venue’s publication decision is outside this author-side review. [v84 receipt](../../V84_WSL2_LEAN_VERIFICATION.json.gz) · [v85 source comparison and local check outcomes](evidence.json)
