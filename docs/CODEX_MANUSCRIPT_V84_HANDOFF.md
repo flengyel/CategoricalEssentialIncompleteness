@@ -2,6 +2,12 @@
 
 Fetch `origin/main` and record the full SHA. [MANUSCRIPT_CURRENT.json](../MANUSCRIPT_CURRENT.json) selects the active LaTeX, PDF, source archive and correspondence. The manuscript agent owns the LaTeX, source comparisons, independent mathematical readings and approved corrections. WSL2 owns the Lean proofs and the pinned replay. Start the mathematical reading at [main.tex](../manuscript/latex/main.tex), following each input in order. Reconstruct the typed assertions and their dependencies before comparing them with Lean. [Project instructions](../AGENTS.md) · [v84 correspondence](../FORMALIZATION_STATUS_V84.md) · [Current WSL2 assignment](CODEX_WSL2_CURRENT.txt) · [v84 WSL2 handoff](CODEX_WSL2_CEI_V84_LEAN_HANDOFF.md)
 
+## Result of the v84 review
+
+The [full v84 Lean replay](V84_WSL2_LEAN_VERIFICATION.md) passed at [b37f8908435a4c2991af5b95de4645980ac60a05](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/b37f8908435a4c2991af5b95de4645980ac60a05). Corollary 4.8 and Proposition C.1 have proofs at their printed hypotheses. The [two WSL2 readings](reviews/V84_WSL2_AUDITS/README.md) reported zero errors, ambiguities, omissions and proof gaps. [Kernel receipt](V84_WSL2_LEAN_VERIFICATION.json.gz)
+
+The [subsequent manuscript and Lean review](reviews/V84_FINAL_REFEREE_AND_WRITING/README.md) found two passages to edit. In Lemma 6.4 state the finite disjunction for the graph of the selected program. In Appendix E.5 identify the restriction of the constant-family functor to total morphisms. The proofs in the paper and Lean already use these data. There are no known open Lean proof obligations. The current consecutive-clean manuscript count is **0 of 2** following those findings. [Suggested wording](reviews/V84_FINAL_REFEREE_AND_WRITING/OUTLINE_AND_WRITING.md#two-passages-to-edit)
+
 ## Scope of the formalization
 
 Formalize each result established in the paper and each mathematical input used to prove it. At a use of an external theorem, record the source hypotheses, the substitution or construction that satisfies them, the conclusion used at that point and the Lean proof or import that supplies it. For a result cited only for historical comparison, check its attribution, hypotheses and conclusion against the source and explain its role. The lack of a Lean proof of a comparison is not a Lean omission. If the attribution is wrong, record the manuscript defect.
@@ -13,7 +19,7 @@ Formalize each result established in the paper and each mathematical input used 
 | [§1, literature discussion](../manuscript/latex/sections/01-introduction.tex) | Bauer–Hanson 6.4, Heller 9.2, Lengyel 21 and corrected 26, and van Dijk–Gietelink Oldenziel 5.19 and 5.20 are historical comparisons. Retain the six attributions and check them from their sources. Their independent formalizations are outside the v84 assignment. The two directions of Cockett–Hofstra 4.9 already have checked proofs. |
 | [Appendix C, Proposition C.1](../manuscript/latex/appendices/c-section-lifting.tex#L54) | For a nonrecursive $A\subseteq\mathbb N$, both partial identities belong to the source. A target $s:\mathbb N\rightharpoonup\mathbb N+\mathbb N$ with $s^{-1}(i_0\mathbb N)=A^c$ and $s^{-1}(i_1\mathbb N)=A$ exists. No such $s$ is the image of a source morphism. This counterexample is the paper’s result. The comparison with Lengyel (2006), Theorem 4.1, also requires a reading of the original statement and its proof on p. 11. [Primary-source comparison](reviews/V80_ASSERTIONS/primaryce.md) |
 
-## Current work
+## Assignment issued before the v84 replay
 
 The [v84 audit](reviews/V84_MANUSCRIPT_AUDIT/README.md) and [independent reading](reviews/V84_MANUSCRIPT_AUDIT/INDEPENDENT.md) cover the manuscript at `b7bf333810d653be90d2d1ce1678ad81345f98b3`. The two formal statements below remain open at that revision. The six historical comparisons have been checked at their primary sources. [Evidence by passage](reviews/V84_MANUSCRIPT_AUDIT/EVIDENCE.md)
 
