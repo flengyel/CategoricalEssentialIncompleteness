@@ -100,21 +100,21 @@ $\Sigma_k,\Pi_k\in\operatorname{Ob}(\mathcal D)$ to index the
 $k$-ary function and relation constructors, respectively.
 Here $d$ is a fixed nonnegative integer. Equality is a logical symbol.
 
-Let $B_P:\mathcal D\to\mathcal D/P$ send $X$ to
-$\pi_1:P\times X\to P$ and $f$ to $1_P\times f$.
-For an endofunctor $K$ on $\mathcal D^r$ built from finite products,
-coproducts, and constants, form $K_P$ on $(\mathcal D/P)^r$ by
-using slice products and coproducts and replacing each constant $X$
-by $B_PX$. Pullback along $P\to1$ preserves finite products and,
-by the coproduct hypotheses, finite coproducts. Applying $B_P$
-componentwise therefore gives an isomorphism
-$\alpha_A:K_P(B_P A)\xrightarrow{\sim} B_P(KA)$ natural in $A$.
-An initial $K$-algebra $\iota:K(A)\to A$ is
-\emph{stable under parameters} if the algebra
+Under the identification $\mathcal D\simeq\mathcal D/1$, pullback
+along $!_P:P\to1$ sends $X$ to $\pi_1:P\times X\to P$ and $f$ to
+$1_P\times f$. For an endofunctor $K$ on $\mathcal D^r$ built from
+finite products, coproducts, and constants, form $K_P$ on
+$(\mathcal D/P)^r$ using slice products and coproducts and replacing
+each constant $X$ by $!_P^*X$. Pullback preserves finite products
+and, by the coproduct hypotheses, finite coproducts. Applied
+componentwise, it thus gives the natural isomorphism in the composite
 \[
- \iota_P=B_P(\iota)\,\alpha_A:K_P(B_P A)\longrightarrow B_P A
+ \iota_P:K_P(!_P^*A)\xrightarrow{\sim} !_P^*(KA)
+          \xrightarrow{!_P^*\iota} !_P^*A
 \]
-is initial for every $P\in\mathcal D$.
+for each $K$-algebra $\iota:KA\to A$. An initial $K$-algebra is
+\emph{stable under parameters} if $\iota_P$ is initial for every
+$P\in\mathcal D$.
 
 \subsection{Terms, formulas, and free variables}
 \label{app:first-order-syntax}
@@ -202,6 +202,9 @@ Parameterized list induction gives the identities
  \mem(x,w+\!+w')&=\mem(x,w)\vee_2\mem(x,w'),\\
  \mem(x,\del(y,w))&=\neg_2\epsilon(x,y)\wedge_2\mem(x,w).
 \end{align*}
+In the deletion step for $\cons(z,w)$, the diagonal pullback identifies
+$y$ with $z$ on $[\epsilon(y,z)=\mathbf t]$. On the other fiber, a
+head equal to $x$ is distinct from $y$.
 
 Give $(W,W)$ the $K$-algebra defined by singleton lists at variables,
 ordered concatenation at function and relation symbols and equality,
@@ -268,21 +271,21 @@ term components. At negation and implication, reconstruct the
 original formula and apply $O(\neg)$ or
 $\widehat{\Rightarrow}$ to the result components.
 
-Put $B=V\times\Fm\times E$, with coordinates $(y,\varphi,x,t)$,
-and define the test $C:B\to\Two$ by
+Put $X_{\forall}=V\times\Fm\times E$, with coordinates $(y,\varphi,x,t)$,
+and define the quantifier test $\chi_{\forall}:X_{\forall}\to\Two$ by
 \[
- C(y,\varphi,x,t)=
+ \chi_{\forall}(y,\varphi,x,t)=
  \neg_2\mem(x,\FV_{\Fm}(\varphi))
  \vee_2\neg_2\mem(y,\FV_{\Tm}(t)).
 \]
 At the quantifier the input is $(x,t,y,\varphi,z)$ in
 $E\times V\times\Fm\times O(\Fm)$. The test uses the projection
-$(x,t,y,\varphi,z)\mapsto(y,\varphi,x,t)$ to $B$. The original
+$(x,t,y,\varphi,z)\mapsto(y,\varphi,x,t)$ to $X_{\forall}$. The original
 component is $\forall y\,\varphi$ and the result component is
 \begin{equation}\label{eq:quantifier-fold}
  \mathsf{if}\left(\epsilon(y,x);
    \ok_{\Fm}(\forall y\,\varphi),
-   \mathsf{if}\bigl(C(y,\varphi,x,t);
+   \mathsf{if}\bigl(\chi_{\forall}(y,\varphi,x,t);
           \widehat\forall(y,z),\fail_{\Fm}\bigr)\right).
 \end{equation}
 
@@ -310,25 +313,20 @@ and syntax factors, are $a_T$ and $b_F$. The pullback defines
 $i_{\Adm}$ and $a_F$; the coproduct hypotheses make $i_{\Adm}$ complemented.
 \end{proof}
 
-On $B$ define
-\[
- q=\langle\forall\pi_{V\times\Fm},\pi_E\rangle:B\to\Fm\times E,
- \qquad
- p=\langle\pi_{\Fm},\pi_E\rangle:B\to\Fm\times E.
-\]
-Let $D_=\hookrightarrow B$ and $D_{\ne}\hookrightarrow B$ be the
-two fibers of $\epsilon(y,x)$, and let $D_C=[C=\mathbf{t}]$.
-Equation~\eqref{eq:quantifier-fold} gives
+Both $\forall\times1_E$ and the projection
+$\pi=\langle\pi_{\Fm},\pi_E\rangle$ map $X_{\forall}$ to $\Fm\times E$.
+Let $D_=$ and $D_{\ne}$ be the true and false fibers of $\epsilon(y,x)$
+in $X_{\forall}$. Equation~\eqref{eq:quantifier-fold} gives
 \begin{equation}\label{eq:admissibility-subobjects}
- q^*\Adm=D_=\;\vee\;
-           (D_{\ne}\wedge D_C\wedge p^*\Adm).
+ (\forall\times1_E)^*\Adm=D_=\;\vee\;
+    (D_{\ne}\wedge [\chi_{\forall}=\mathbf{t}]\wedge \pi^*\Adm).
 \end{equation}
-Here meet is pullback intersection and the disjoint join in
-\eqref{eq:admissibility-subobjects} is the coproduct inclusion into $B$. On $D_=$ the substitution
-result is $\forall y\,\varphi$; on the other summand it is
-$\forall\langle y\circ i,a_F\widetilde p\rangle$, where
-$i:Z\hookrightarrow B$ represents $D_{\ne}\wedge D_C\wedge p^*\Adm$
-and $\widetilde p:Z\to\Adm$ satisfies $i_{\Adm}\widetilde p=p\circ i$.
+Here meet is pullback intersection, and the disjoint join is the
+coproduct inclusion into $X_{\forall}$. On $D_=$ the substitution
+result is $\forall y\,\varphi$. If $i:Z\hookrightarrow X_{\forall}$
+represents the second summand, its inclusion in $\pi^*\Adm$ induces
+$\widetilde\pi:Z\to\Adm$ with $i_{\Adm}\widetilde\pi=\pi i$.
+The result on $Z$ is $\forall\langle y\circ i,a_F\widetilde\pi\rangle$.
 Thus quantification binds its named variable and prevents capture
 of free occurrences of the replacement term.
 
@@ -361,7 +359,8 @@ the negation step uses $O(\neg)$ and the implication step uses
 $\widehat{\Rightarrow}$. At a quantifier with equal variable names,
 \eqref{eq:quantifier-fold} gives $\ok_{\Fm}(\forall y\,\varphi)$.
 For identity substitution with distinct names,
-$\FV_{\Tm}(\eta x)=[x]$ gives $C(y,\varphi,x,\eta x)=\mathbf t$.
+$\FV_{\Tm}(\eta x)=[x]$ and $\mem(y,[x])=\epsilon(y,x)=\mathbf f$ give
+$\chi_{\forall}(y,\varphi,x,\eta x)=\mathbf t$.
 For an absent variable with distinct names, the deletion identity
 transfers the absence condition to the body. In both cases the
 induction hypothesis identifies the value of the second branch with
@@ -549,16 +548,17 @@ If $m$ has a partial inverse $r:Y\rightharpoonup I$ in $\mathcal S$,
 then $\ran(f)=mr=\bar r$.
 \end{lemma}
 \begin{proof}
-The restriction idempotent $mr$ satisfies $mrf=mrme=f$.
-Let $a:Y\rightharpoonup Y$ be any restriction idempotent with $af=f$.
-Choose a splitting $a=js$, where $j:J\to Y$ is total,
-$s:Y\rightharpoonup J$, and $sj=1_J$.
-Then $f=j(sf)$, and $sf:X\to J$ is total, since
-$\overline{sf}=\overline{jsf}=\bar f=1_X$.
-The morphism $j$ is monic in $\mathcal D$, so the universal property
-of the regular image gives a unique $u:I\to J$ with $ju=m$.
-Consequently, $am=jsju=ju=m$ and $a(mr)=mr$.
-Thus $mr\leq a$, so $mr=\ran(f)$.
+The restriction idempotent $mr=\bar r$ satisfies $mrf=mrme=f$.
+Since $\ran(f)$ is the least restriction idempotent fixing $f$,
+$\ran(f)\leq mr$. For the reverse inequality, let $a:Y\rightharpoonup Y$
+be any restriction idempotent with $af=f$. Choose a splitting
+$a=i_a s_a$, where $i_a:Y_a\to Y$ is total, $s_a:Y\rightharpoonup Y_a$,
+and $s_a i_a=1_{Y_a}$. Then $f=i_a(s_a f)$, and $s_a f:X\to Y_a$ is
+total since $\overline{s_a f}=\overline{i_a s_a f}=\bar f=1_X$.
+The morphism $i_a$ is monic in $\mathcal D$, so the universal property
+of the regular image gives a unique $u:I\to Y_a$ with $i_a u=m$.
+Since $a i_a=i_a$, we have $am=m$ and $a(mr)=mr$. Thus $mr\leq a$.
+Taking $a=\ran(f)$ gives $mr\leq\ran(f)$.
 \end{proof}
 
 The relation between split ranges and factorizations through restriction
