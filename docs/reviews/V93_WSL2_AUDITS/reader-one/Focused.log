@@ -1,0 +1,17 @@
+'CategoryTheory.IsSection.isRange' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.V46.DominicalDiagonal.zero_of_empty_preimages' depends on axioms: [propext]
+'CategoricalEssentialIncompleteness.LocalConnectedness.V46.range_regularImage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.K_iff_simulation_mem_A' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.no_lift_of_output_summands' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.machine_no_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.V46.FiniteSigmaOne.selected_entries_PA' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,130 @@
+{
+  "commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+  "recursive_order": [
+    {
+      "file": "main.tex",
+      "sha256": "37a07846825410efb4eed7f7b0028f1d4670d6f8c1c9870406f15aeaf7121102",
+      "lines": 47
+    },
+    {
+      "file": "preamble.tex",
+      "sha256": "f668eb6f917ac03a53ccd970e33e1ef4ce91e3dd919da020608e12065d0e077f",
+      "lines": 45
+    },
+    {
+      "file": "abstract.tex",
+      "sha256": "c15ddea3918e9bbc8bdb8c8e603a6be5aeaafe6981b64ad52187424743f8cecd",
+      "lines": 27
+    },
+    {
+      "file": "sections/01-introduction.tex",
+      "sha256": "1de32afd2300ab363c3e11e8b41e137289666c15fa77acfdba2de035df8f61e1",
+      "lines": 264
+    },
+    {
+      "file": "sections/02-categorical-preliminaries.tex",
+      "sha256": "6de644d7144268a89b36760906ea312dafe7802899fb9906d006ee537ade8ec8",
+      "lines": 212
+    },
+    {
+      "file": "sections/03-sections-and-inseparability.tex",
+      "sha256": "3a72481666c54e4772df21c1e30c0bbe14ce6234c6e329a76f37b3faaeb1d70c",
+      "lines": 179
+    },
+    {
+      "file": "sections/03a-internal-theories.tex",
+      "sha256": "5c96a729426a1be40f5c8fcde18668064fa41ace164f8cf1f006ba6afddc454d",
+      "lines": 272
+    },
+    {
+      "file": "sections/03b-internal-adjunctions.tex",
+      "sha256": "e23eb1a49d141cbb77951c9c857e4637d955e2a70f9795cfdf2321c91a213452",
+      "lines": 540
+    },
+    {
+      "file": "sections/04-theory-extensions.tex",
+      "sha256": "9efa7ec6a53eb3ef084138859cb5c7b6b80e5f501889aca808d6b802a8398359",
+      "lines": 371
+    },
+    {
+      "file": "sections/05-syntactic-recursion-category.tex",
+      "sha256": "2b11ada6eca6e4a4c55388725ad0e079daabc35aceacbbfa9905251350dbf1bd",
+      "lines": 265
+    },
+    {
+      "file": "sections/05a-internal-syntax.tex",
+      "sha256": "3e52c655391e10a2c2b85b58d5ea11a05c05c4de4326abcef817bb9ef1bb98c1",
+      "lines": 904
+    },
+    {
+      "file": "sections/06-interpretation-in-models.tex",
+      "sha256": "349f815dd77d18a2229047305f329b2b091c38452a8175b3db480afff77c5b53",
+      "lines": 544
+    },
+    {
+      "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+      "sha256": "5ad1f121f9373cc48016d0d0ef0b9ecde839a85554b17460429a46740420d49c",
+      "lines": 489
+    },
+    {
+      "file": "sections/08a-uniform-theories.tex",
+      "sha256": "d7e167e6cffc748f7e09cbbbe3e8285ae65bf95bb06237445884f135ffd7a7b9",
+      "lines": 344
+    },
+    {
+      "file": "sections/08b-uniform-independent-sentences.tex",
+      "sha256": "b40d2b7b1dabd2b43b94115e2c661a5312df48cb7074691d5d7fb4bfd12a68b7",
+      "lines": 111
+    },
+    {
+      "file": "sections/08c-numerical-realization.tex",
+      "sha256": "676ab271093cc2c4b2914451d0b06744f0c6423ad05d225318104ebff5750414",
+      "lines": 598
+    },
+    {
+      "file": "sections/08d-numerical-incompleteness.tex",
+      "sha256": "d99c97857838a121749aa97bd7b8cc901f1b8d0a3ba8f51f5b8d68a7e55a796f",
+      "lines": 77
+    },
+    {
+      "file": "sections/04-miller-sequences.tex",
+      "sha256": "fbb7a0a151e47d3b7d286388f970e9ea74d72c1fc3eeafef61ae9cd8b240cb83",
+      "lines": 711
+    },
+    {
+      "file": "sections/09-three-point-space.tex",
+      "sha256": "ef9271ed3dd774aa007aacd1fca0168f0bfccbc13d6059b5d465c74d001a4177",
+      "lines": 860
+    },
+    {
+      "file": "appendices/a-syntax-and-theories.tex",
+      "sha256": "3671096ad7d903709b6fda24aa3ea5bd79d3f9e10571e9c54b7158ba65681a60",
+      "lines": 624
+    },
+    {
+      "file": "appendices/b-three-point-cosheaves.tex",
+      "sha256": "02ab5fe1eeac143ac1adc141bcf139a674e1e123beb170574ab88e32c58add21",
+      "lines": 611
+    },
+    {
+      "file": "appendices/c-section-lifting.tex",
+      "sha256": "7d7c9b8ef1bda7d5a730b7d042239642aa8aae3c6e844b42bb8f5b1bd994038e",
+      "lines": 241
+    },
+    {
+      "file": "appendices/d-faithful-family.tex",
+      "sha256": "63ee8ecbedf9f2866d63dfe15f5080dee984b8e5071267738c13e57e04923252",
+      "lines": 203
+    },
+    {
+      "file": "appendices/e-reading-lean-proofs.tex",
+      "sha256": "5d4ae91d75a98fb3160809971606d76f8d2c56318436a6106874672d475b303a",
+      "lines": 240
+    },
+    {
+      "file": "bibliography.tex",
+      "sha256": "8def63bf518ad1c96ab7ddbd4cfe7ca306584aace82b50196c8d5c0405ece5e6",
+      "lines": 228
+    }
+  ]
+}

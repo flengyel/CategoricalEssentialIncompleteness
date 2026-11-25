@@ -1,0 +1,13 @@
+{
+  "phase": "first reader, manuscript-only, before consulting formal or audit material",
+  "utc": "2026-11-25T05:02:57.292112+00:00",
+  "commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+  "sha256": {
+    "reconstruction.md": "d2cc3f50994d64e1f438bf3668593f8587805b24d2403da579eeaad9aadd85d3",
+    "tex-inventory.json": "5be224db90a2551d90584a19a95d79cb7f1df82c6075e685d2a10175e11ef129",
+    "claims.json": "f09bceea288dfb5c2896ee75749d6fbc4e095e19d2fec70f20e042d566162dbd",
+    "citations.json": "c60745fb23b45258a466b34a075535016a46e7d6af88be4b8fc090e466f64676",
+    "passages.json.gz": "e09885d0347fd318a0c49bc57358af758771a7b765be40047a3050126bc5eefe",
+    "inventory.py": "1b5ad9d6a614ae4a51b4e442924769e47fa0a234cbdf49e191b88c730d395ec5"
+  }
+}

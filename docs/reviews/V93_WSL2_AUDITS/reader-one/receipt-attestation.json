@@ -1,0 +1,56 @@
+{
+  "reader": "one",
+  "attested_utc": "2026-11-25T16:43:48.823621+00:00",
+  "tested_commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+  "manuscript_version": 93,
+  "frozen_verdict_sha256": "8f29533498c6bc3b843fc76ce5b0eb7a38affeeeee8f0639f03eeac85c77d58a",
+  "postfreeze_reconciliation_sha256": "75cbe3b1c69a371a57b0441469c30f8bd59f49e0ca6f2b06a968f63f92790674",
+  "receipt": "../../../V93_WSL2_LEAN_VERIFICATION.json.gz",
+  "receipt_sha256": "d273b1b66352e1a56f9029d00d1d858a351b58b2f0a32169549be4243d09b92d",
+  "original_official_json_sha256": "bacb08f2a33e3b0d11d6ecb04e9bfacaf9008fae522f06b3bb2a97c9ffc96f58",
+  "official_scope": "full",
+  "wrapper": {
+    "argv": [
+      "bash",
+      "scripts/verify-wsl.sh"
+    ],
+    "exit": 0,
+    "start_utc": "2026-11-25T06:17:42Z",
+    "end_utc": "2026-11-25T09:36:16Z",
+    "original_log_sha256": "1863fe584bbf8961d132a86ad099504f62890c1c59f234d77e19a4b9e832e329",
+    "clean_at_start": true
+  },
+  "all_official_and_supplemental_command_arguments_and_original_log_digests_verified": true,
+  "raw_and_embedded_official_json_match": true,
+  "all_active_and_retained_transitive_axioms_permitted": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "pinned_dependencies_match_and_clean_at_both_ends": true,
+  "all_measured_git_blobs_and_file_sha256_verified_at_tested_sha": true,
+  "own_frozen_evidence_digests_intact": true,
+  "counts": {
+    "full_commands": 2101,
+    "full_strict_module_files": 2093,
+    "targeted_commands": 35,
+    "targeted_strict_modules": 31,
+    "selected_queries": 78,
+    "current_modules": 1174,
+    "current_declarations": 35112,
+    "retained_declarations": 1274,
+    "current_and_retained_overlap": 0,
+    "inputs": 2744,
+    "additional_inputs": 24,
+    "dependencies": 16
+  },
+  "reader_to_official_comparison": {
+    "reader_distinct_declarations": 1682,
+    "common_with_current_audit": 1544,
+    "common_with_retained_audit": 58,
+    "common_including_supplemental_named_outputs": 1629,
+    "common_transitive_axiom_mismatches": 0,
+    "sorted_common_name_axiom_set_sha256": "441a93ec31720f9d4e95bd4bcfae05eb374eeb9f5bdc28ec067e84ae2f40ca42"
+  }
+}

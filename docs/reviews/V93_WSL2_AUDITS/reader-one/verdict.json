@@ -1,0 +1,62 @@
+{
+  "reader": "one",
+  "tested_commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+  "tested_tree": "247ddf217c5f081a21adb5630dcf167a34a668c3",
+  "status": "independent full mathematical and Lean verdict frozen before disclosure of the other v93 reader’s reconstruction or verdict; official receipt attested separately",
+  "frozen_utc": "2026-11-25T06:32:22.749319+00:00",
+  "blind_reconstruction_utc": "2026-11-25T05:02:57.292112+00:00",
+  "counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "source_inputs": 25,
+  "source_blocks": 610,
+  "sentence_display_fragments": 4043,
+  "local_source_steps": 497,
+  "distinct_applied_declarations": 1682,
+  "concrete_examples": 18,
+  "strict_invocations": 40,
+  "bibliography_works": 40,
+  "citation_key_occurrences": 84,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proof_replay_links": {
+    "correspondence": "../../../../FORMALIZATION_STATUS_V93.md",
+    "official_kernel_receipt": "../../../V93_WSL2_LEAN_VERIFICATION.json.gz",
+    "reader_commands": "commands.json.gz",
+    "reader_support": "support.json.gz"
+  },
+  "artifacts_sha256": {
+    "Focused.lean": "66eb37c57b453a2022c12be0c8433a4d9684af2ed6460e7a2a67770e84ace20c",
+    "Focused.log": "fc86a61ebac5839d07689339408c7fb5c386aefe1b1b15a7e4a0576f058db665",
+    "appendix-e-links.json": "406aa9c1ca5c20db555ae2e27a0b1a25b5b0abbe4b65040882b4e6df37ab1b48",
+    "applied-types.json.gz": "4d0fdf43075a5f5d6d95701e560c1a723ee14d81b21ac57e6cf85cc982cf7440",
+    "blind-seal.json": "9bd0a0972790f34a6757d288298f7ffe2b91505db7f13892c9f35fe11b649b30",
+    "check-identities.py": "badc1012e9810203e7fffecebb2dfba0f22039a9b5040f8a57830331a3520b9e",
+    "citations.json": "c60745fb23b45258a466b34a075535016a46e7d6af88be4b8fc090e466f64676",
+    "claims.json": "f09bceea288dfb5c2896ee75749d6fbc4e095e19d2fec70f20e042d566162dbd",
+    "commands.json.gz": "5e76618dc986e2fbe3c9f5667cff5a5896a47bf42baa4c5f4a2b0079dc58b25a",
+    "correspondence.json.gz": "9b6b47429e2f308d2603729adb39285db74b1a254d22005b2cf88950f7ee0341",
+    "correspondence.py": "84e9530ef1583fb022820e7b685e1993bd517a57c57ccec765d80ed4aac6ce71",
+    "focused-comparisons.md": "2d38229e3c36f712ba9937aaadcd61e5bf92511ab5f8e37c90c0a007d83e0375",
+    "inventory.py": "1b5ad9d6a614ae4a51b4e442924769e47fa0a234cbdf49e191b88c730d395ec5",
+    "passages.json.gz": "e09885d0347fd318a0c49bc57358af758771a7b765be40047a3050126bc5eefe",
+    "proof-and-artifact-identities.json.gz": "39bf00ad442e75813159633c4394ecab18a45cb3d963bf1c4951a33a3f68ecb4",
+    "query-plan.json.gz": "d9d167a174a26e5ec0338d00af6723c089ba512a7d65f75a8c2ea20627bb5427",
+    "reconstruction.md": "d2cc3f50994d64e1f438bf3668593f8587805b24d2403da579eeaad9aadd85d3",
+    "replay.py": "53cba529316943f1d125b3a2015b730f04db3fc54e568dc3a23bd8327ad5bc74",
+    "report.md": "afceac8067acacd457140b095be55eae7121d46dd1c582b2e859b3015a83376a",
+    "sentence-and-display-index.json.gz": "d47df37826ae228c71bb7b659927c16f9095c7c18883ad14a39b263a60be6dc7",
+    "sources.json.gz": "cd91fa638fb181b66c155755a92b6a7ceeae9981e2662378cb870478a0fef746",
+    "support-replay.py": "410fa85eb66e294eb79cbb23e5471a9efdeef513baa269c46b3314e89ff9e63f",
+    "support.json.gz": "510502703b45a78a8f61473a232065d1ea27e4273050ead7260feb90e3fc44d2",
+    "tex-inventory.json": "5be224db90a2551d90584a19a95d79cb7f1df82c6075e685d2a10175e11ef129"
+  }
+}

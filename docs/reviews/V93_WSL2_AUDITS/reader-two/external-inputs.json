@@ -1,0 +1,647 @@
+{
+ "tested_commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+ "description": "These proof applications and reconstructed comparisons supplement the internal calls in each mapped proof body. The primary-source ledger records all 84 citation-key occurrences and distinguishes the role of each work.",
+ "entries": [
+  {
+   "use": "§1, Di Paola and Heller 8.15",
+   "required_instance": "The evaluator is sum-valued, the section is total and the identity on its object is nonzero. Its diagonal projections have disjoint meet and exclude every complementary separator.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46DominicalLiteratureChecks.lean",
+   "line": 40,
+   "application": "have h := DominicalDiagonal.inseparable hd τ track nonzero",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46DominicalClassUnions"
+   ],
+   "module_sha256": "9770e23fe18971e390e8f0855a4309f60f12e936c1c32a33ee8220892ca390ee",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "§1, Bernardi fixed point",
+   "required_instance": "Specializes precompleteness to partial endomorphisms under the displayed universality and domain conditions.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46DominicalLiteratureChecks.lean",
+   "line": 43,
+   "application": "theorem fixed_point_for_partial_endomorphisms (hd : Dominical C) {X : C}",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46DominicalClassUnions"
+   ],
+   "module_sha256": "9770e23fe18971e390e8f0855a4309f60f12e936c1c32a33ee8220892ca390ee",
+   "primary_key_or_origin": "Bernardi"
+  },
+  {
+   "use": "§1, Bernardi class-union inseparability",
+   "required_instance": "Specializes disjoint saturated class unions and the indicated nontriviality to the dominical statement.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46DominicalLiteratureChecks.lean",
+   "line": 52,
+   "application": "theorem inseparable_class_unions [CoprodStruct C] [CategoryTheory.HasCoproducts C]",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46DominicalClassUnions"
+   ],
+   "module_sha256": "9770e23fe18971e390e8f0855a4309f60f12e936c1c32a33ee8220892ca390ee",
+   "primary_key_or_origin": "Bernardi"
+  },
+  {
+   "use": "§1 and §8, effectivity in the syntactic category",
+   "required_instance": "The productive morphism in the unprimed PA category applies to all presented disjoint supersets with their stated indices.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46SyntacticEffectiveInseparabilityChecks.lean",
+   "line": 24,
+   "application": "theorem productive_in_PA :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46SyntacticEffectiveInseparability"
+   ],
+   "module_sha256": "e31f884899a70bafdb2c108b70127da816121dedff96111d2a53bc71d8c64406",
+   "primary_key_or_origin": "Montagna"
+  },
+  {
+   "use": "§3 and Appendix C, recursion with parameters",
+   "required_instance": "An ordinary value program gets its recursive section by parameterization; its oracle-enumerable domain has the separate section on the next two lines.",
+   "source": "Lean/CategoricalEssentialIncompleteness/OracleRestrictedTuring.lean",
+   "line": 51,
+   "application": "obtain ⟨e,hec,hev⟩ := ordinary_program_specialization hf'",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.OracleRestrictedCoding",
+    "CategoricalEssentialIncompleteness.OracleProgramSpecialization"
+   ],
+   "module_sha256": "299310dbc4cd31e18fe9ae08804d867eb8221a5a28be23f25df12d27c93894f2",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "Appendix C, oracle domain parameter",
+   "required_instance": "The ordinary and relative sections are paired; the resulting Turing morphism has the prescribed ordinary values and relative domain.",
+   "source": "Lean/CategoricalEssentialIncompleteness/OracleRestrictedTuring.lean",
+   "line": 53,
+   "application": "obtain ⟨a,hac,hav⟩ := oracleDomain_specialization S hd",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.OracleRestrictedCoding",
+    "CategoricalEssentialIncompleteness.OracleProgramSpecialization"
+   ],
+   "module_sha256": "299310dbc4cd31e18fe9ae08804d867eb8221a5a28be23f25df12d27c93894f2",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "§7.8, unary predicate",
+   "required_instance": "Łoś at the single representative gives the equivalence defining the predicate object.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46UltrapowerComparisonChecks.lean",
+   "line": 29,
+   "application": "eval_representative U C.val ![x]",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46UltrapowerComparison"
+   ],
+   "module_sha256": "63d4bd07588631bf7c454a3e7e0cb0d1729cfc634052e43238f95bdd3a377f5f",
+   "primary_key_or_origin": "Keisler"
+  },
+  {
+   "use": "§7.8, graph",
+   "required_instance": "The two representatives are the given input and its chosen graph value; value_graph supplies satisfaction at every coordinate.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46UltrapowerComparisonChecks.lean",
+   "line": 36,
+   "application": "have h := eval_representative U f.graph.val",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46UltrapowerComparison"
+   ],
+   "module_sha256": "63d4bd07588631bf7c454a3e7e0cb0d1729cfc634052e43238f95bdd3a377f5f",
+   "primary_key_or_origin": "Keisler"
+  },
+  {
+   "use": "§7.8, PA axioms",
+   "required_instance": "The sentence transfer applies to each axiom using its truth in the standard model.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46UltrapowerComparisonChecks.lean",
+   "line": 43,
+   "application": "(sentence_iff U φ).mpr (models_of_mem h)",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46UltrapowerComparison"
+   ],
+   "module_sha256": "63d4bd07588631bf7c454a3e7e0cb0d1729cfc634052e43238f95bdd3a377f5f",
+   "primary_key_or_origin": "Keisler"
+  },
+  {
+   "use": "§7.8, all formulas",
+   "required_instance": "Structural induction treats arithmetic atoms, logic and quantification; witnesses for existential formulas are chosen on an ultrafilter-large set.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUltrapower.lean",
+   "line": 72,
+   "application": "theorem eval_representative {n : ℕ} (φ : ArithmeticSemisentence n)",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46Ultrapower",
+    "CategoricalEssentialIncompleteness.V46SyntacticSearch"
+   ],
+   "module_sha256": "6c0efa545c04ce7880897f7c3d447c03b7410d882ec4b45fbf3d7fc8474c5343",
+   "primary_key_or_origin": "Keisler"
+  },
+  {
+   "use": "§8 and Appendix E, PA proof",
+   "required_instance": "For an arbitrary model of PA, the common finite support rules out two coded derivations of opposite conclusions. First-order completeness turns that validity in every PA model into PA provability.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean",
+   "line": 46,
+   "application": "theorem consistency_PA : 𝗣𝗔 ⊢ consistencySentence S := by",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46ArithmeticSignedContradiction"
+   ],
+   "module_sha256": "26e13f45fc78ea25c5bce088597797aed009d3414c8eb6790af50b1b8eb690ac",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "§8, consistent additional axioms",
+   "required_instance": "From the absence of a model a proof of falsum follows. The equality theory for PA is supplied before completeness is applied.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46NamedGammaModelSource.lean",
+   "line": 94,
+   "application": "have hb : sourceTheory A ⊢ ⊥ := Arithmetic.complete (sourceTheory A) ⊥ (by",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46ArithmeticNamedPresentationSemantics"
+   ],
+   "module_sha256": "680ae8e0a42e007d2de8dde27a407d44f661d03cb2a6774fe02ea64e99dfcfc8",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "Appendix D, downward Löwenheim–Skolem",
+   "required_instance": "The elementary hull is countable, contains infinitely many distinct numerals, and is transported along an equivalence with the fixed carrier ℕ.",
+   "source": "Lean/CategoricalEssentialIncompleteness/CountableArithmeticModels.lean",
+   "line": 89,
+   "application": "letI : Countable H := Tarski.Structure.SkolemHull.countable₀",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.SyntacticPreservation",
+    "Foundation.FirstOrder.Tarski.Skolemization",
+    "Mathlib.Basic.Denumerable"
+   ],
+   "module_sha256": "cda0be183b1238f2159fb3ed162494208d795744b5d23b0c37c6a3ee0be02e82",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "Appendix D, joint faithfulness",
+   "required_instance": "The countable test family suffices for semantic validity of an arithmetic sentence; arbitrary program graphs are then compared by provability.",
+   "source": "Lean/CategoricalEssentialIncompleteness/CountableArithmeticModels.lean",
+   "line": 105,
+   "application": "apply Arithmetic.complete.{0} T",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.SyntacticPreservation",
+    "Foundation.FirstOrder.Tarski.Skolemization",
+    "Mathlib.Basic.Denumerable"
+   ],
+   "module_sha256": "cda0be183b1238f2159fb3ed162494208d795744b5d23b0c37c6a3ee0be02e82",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "§9, finite-dimensional fixed point",
+   "required_instance": "At the finite cube, the set-valued map has closed graph and nonempty compact convex values. The imported Kakutani file proves the result from Brouwer for this finite-dimensional domain.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+   "line": 97,
+   "application": "obtain ⟨x, hx⟩ := FixedPoint.kakutani_fixed_point (Cube m) (convex_Icc _ _)",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointIntervals",
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointKakutani"
+   ],
+   "module_sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+   "primary_key_or_origin": "local Kakutani theorem"
+  },
+  {
+   "use": "§9, closed intervals on the cube",
+   "required_instance": "The closed finite-coordinate fixed point conditions are nested and nonempty, yielding one point in their intersection.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+   "line": 119,
+   "application": "obtain ⟨a, ha⟩ := IsCompact.nonempty_iInter_of_sequence_nonempty_isCompact_isClosed D",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointIntervals",
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointKakutani"
+   ],
+   "module_sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+   "primary_key_or_origin": "Mathlib compactness"
+  },
+  {
+   "use": "§9, Miller existence",
+   "required_instance": "The constructed fixed point yields a common real for every representation at each program and every precision in the fixed numbering.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+   "line": 125,
+   "application": "theorem exists_isMiller : ∃ a : Point, IsMiller a := by",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointIntervals",
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointKakutani"
+   ],
+   "module_sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+   "primary_key_or_origin": "Miller2004 and BauerHanson"
+  },
+  {
+   "use": "§9, uniform cut transfer",
+   "required_instance": "The same ordinary total recursive function pulls back both cuts at every Miller sequence. The local theorem is conditional. The unconditioned witness is provided in V46MillerFixedPoint.exists_isMiller.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+   "line": 75,
+   "application": "theorem uniform_cut_reduction :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerRealComputation",
+    "CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram",
+    "CategoricalEssentialIncompleteness.V46MillerCutDigits"
+   ],
+   "module_sha256": "a0c162286bdf72d27e43a7f6111af3378e96a5d35d321be63315573bd96aa853",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "Appendix A, finitary inductive closure",
+   "required_instance": "For an arbitrary finitary rule family, membership in the least closed set is equivalent to occurrence in a proof sequence; mem_closure_iff_finiteTree gives the tree form.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46FinitaryInductiveDefinitions.lean",
+   "line": 75,
+   "application": "theorem mem_closure_iff_sequence (rules : RuleSet α) (finite : Finitary rules) (x : α) :",
+   "direct_imports": [
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Set.Finite.Basic"
+   ],
+   "module_sha256": "89e7ddb42ed3231842ec24b2d4fbf585d89037cca7814a7705ea4b8ce80e368a",
+   "primary_key_or_origin": "Aczel"
+  },
+  {
+   "use": "Appendix A, lifted factorizations",
+   "required_instance": "The preserved left class supplies a unique middle algebra and lifts the orthogonal factorization system to the algebra category.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46FactorizationSystemChecks.lean",
+   "line": 36,
+   "application": "exact ⟨fun h d => S.existsUnique_middle_algebra F hF h d, S.algebra F hF⟩",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46SplitRangePullbacks",
+    "CategoricalEssentialIncompleteness.V46StableFactorization"
+   ],
+   "module_sha256": "5c0ddc61980948d5d04daded4b9bb3ad42634e209d15ec55e10bb2e7d28574e6",
+   "primary_key_or_origin": "Wissmann"
+  },
+  {
+   "use": "Appendix A, regular epi–mono comparison",
+   "required_instance": "Specializes stability and the hypothesis on the right class; the result identifies the left and right classes at the printed finite-limit types.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46FactorizationSystemChecks.lean",
+   "line": 47,
+   "application": "obtain ⟨he, _⟩ := (OrthogonalFactorizationSystem.regularEpi_mono_iff S stable).mpr hm",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46SplitRangePullbacks",
+    "CategoricalEssentialIncompleteness.V46StableFactorization"
+   ],
+   "module_sha256": "5c0ddc61980948d5d04daded4b9bb3ad42634e209d15ec55e10bb2e7d28574e6",
+   "primary_key_or_origin": "CGHRangeII"
+  },
+  {
+   "use": "Appendix A, split ranges",
+   "required_instance": "The factorization on total morphisms is induced by the split restriction and its given range operation.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46FactorizationSystemChecks.lean",
+   "line": 61,
+   "application": "R.stableFactorization",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46SplitRangePullbacks",
+    "CategoricalEssentialIncompleteness.V46StableFactorization"
+   ],
+   "module_sha256": "5c0ddc61980948d5d04daded4b9bb3ad42634e209d15ec55e10bb2e7d28574e6",
+   "primary_key_or_origin": "CGHRangeI"
+  },
+  {
+   "use": "§1, section supplies a range",
+   "required_instance": "If sf and fsf satisfy the two section equations for f, the restriction of s fixes f and sends any pair agreeing after f to an equal pair. The statement does not assume an existing range operation.",
+   "source": "Lean/PCats/Ranges.lean",
+   "line": 168,
+   "application": "theorem IsSection.isRange {X Y : C} {f : X ⟶ Y} {σ : Y ⟶ X}",
+   "direct_imports": [
+    "PCats.PCat"
+   ],
+   "module_sha256": "8350ba935c07c3e8c92e1fa1bc11c4992cc25536cf955c9850cbf9c3305cabc2",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "§1, uniqueness of a chosen range",
+   "required_instance": "Apply uniqueness to the range supplied by the section under HasRanges.",
+   "source": "Lean/PCats/Ranges.lean",
+   "line": 175,
+   "application": "theorem IsSection.rst_eq_ran [HasRanges C] {X Y : C} {f : X ⟶ Y} {σ : Y ⟶ X}",
+   "direct_imports": [
+    "PCats.PCat"
+   ],
+   "module_sha256": "8350ba935c07c3e8c92e1fa1bc11c4992cc25536cf955c9850cbf9c3305cabc2",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "§1, type of the sum eliminator",
+   "required_instance": "For c,d on X the two source objects are X and the target is X, so copair c d goes from their coproduct to X.",
+   "source": "Lean/PCats/Coproducts.lean",
+   "line": 60,
+   "application": "def copair {X Y Z : C} (f : X ⟶ Z) (g : Y ⟶ Z) : coprod X Y ⟶ Z :=",
+   "direct_imports": [
+    "PCats.Ranges"
+   ],
+   "module_sha256": "9006b93035c16ae594c3477ae38a693fbe5a4304cbbf7954471702645c798de8",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "§1, vanishing on a complementary pair",
+   "required_instance": "Apply range agreement to the copair of c,d after proving the range of f kills both summands. The range of the copair is top.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46DominicalDiagonal.lean",
+   "line": 86,
+   "application": "have h := Ranges.agreement (copair a.hom b.hom) (Ranges.range f).hom 0 (by",
+   "direct_imports": [
+    "PCats.DominicalRecursion",
+    "CategoricalEssentialIncompleteness.RestrictionCompatibility"
+   ],
+   "module_sha256": "27661650b71293ab3c0f08187cc517e42f3d693526439da034fc8beff6d03f47",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "§1, fixed source for the total diagonal index",
+   "required_instance": "A sum-valued evaluator is universal at fixed source X×X. Reverse the complementary section and get a total h:X→X. The disjoint pullbacks then vanish.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46DominicalDiagonal.lean",
+   "line": 126,
+   "application": "obtain ⟨h, total, equation⟩ := fixed_source_diagonal τ universal s",
+   "direct_imports": [
+    "PCats.DominicalRecursion",
+    "CategoricalEssentialIncompleteness.RestrictionCompatibility"
+   ],
+   "module_sha256": "27661650b71293ab3c0f08187cc517e42f3d693526439da034fc8beff6d03f47",
+   "primary_key_or_origin": "DPH"
+  },
+  {
+   "use": "A.7, forward inequality",
+   "required_instance": "The image inclusion and its partial inverse imply that the candidate idempotent receives the composite of the regular epimorphism and the monomorphism. Range leastness applies.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean",
+   "line": 126,
+   "application": "have hleast : a ≤ Idem.ofRestrict r := by",
+   "direct_imports": [
+    "Mathlib.CategoryTheory.Endofunctor.Algebra",
+    "Mathlib.CategoryTheory.Comma.Over.Basic",
+    "Mathlib.CategoryTheory.RegularCategory.Basic",
+    "CategoricalEssentialIncompleteness.LocalSwitch",
+    "Mathlib.CategoryTheory.Widesubcategory"
+   ],
+   "module_sha256": "e5fd87fca34c9e989c51b90ef6c2038b4ffb294569cb01872db0a3ea2a747c69",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "A.7, lifting against a split monomorphism",
+   "required_instance": "Split the range of the original morphism. Its total inclusion is monic. The left edge of the square is a regular epimorphism in the total category, so the diagonal lift gives m through that split inclusion.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean",
+   "line": 143,
+   "application": "have sq : CommSq sf e jT m := ⟨by apply WideSubcategory.hom_ext; exact hscomp⟩",
+   "direct_imports": [
+    "Mathlib.CategoryTheory.Endofunctor.Algebra",
+    "Mathlib.CategoryTheory.Comma.Over.Basic",
+    "Mathlib.CategoryTheory.RegularCategory.Basic",
+    "CategoricalEssentialIncompleteness.LocalSwitch",
+    "Mathlib.CategoryTheory.Widesubcategory"
+   ],
+   "module_sha256": "e5fd87fca34c9e989c51b90ef6c2038b4ffb294569cb01872db0a3ea2a747c69",
+   "primary_key_or_origin": "Mathlib regular-epi/mono lifting"
+  },
+  {
+   "use": "A.7, reverse inequality",
+   "required_instance": "The lift proves m is fixed by the range. Compose with r and use r followed by m equals its restriction idempotent.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean",
+   "line": 148,
+   "application": "have hother : Idem.ofRestrict r ≤ a := by",
+   "direct_imports": [
+    "Mathlib.CategoryTheory.Endofunctor.Algebra",
+    "Mathlib.CategoryTheory.Comma.Over.Basic",
+    "Mathlib.CategoryTheory.RegularCategory.Basic",
+    "CategoricalEssentialIncompleteness.LocalSwitch",
+    "Mathlib.CategoryTheory.Widesubcategory"
+   ],
+   "module_sha256": "e5fd87fca34c9e989c51b90ef6c2038b4ffb294569cb01872db0a3ea2a747c69",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "A following A.7, partial-map regular image",
+   "required_instance": "For a regular base and every monic span, the right leg has a regular image whose partial identity receives the span and satisfies agreement.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46PartialMapRanges.lean",
+   "line": 133,
+   "application": "instance parRanges : Ranges (Par D) where",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46PartialMapTotals",
+    "Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Basic"
+   ],
+   "module_sha256": "ef15c39618b57345e66db4a6de2e232e8379e3662478d23887a9e62ec5b1b7b8",
+   "primary_key_or_origin": "CGHRangeI"
+  },
+  {
+   "use": "C.1, oracle-specialization equation",
+   "required_instance": "For each oracle A and d,z,x the domain of the specialized machine at x is the domain of d at the pair (z,x).",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46OracleMachineDomains.lean",
+   "line": 40,
+   "application": "theorem machine_section (A : Set ℕ) (e z x : ℕ) :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.OracleRestrictedTuring",
+    "CategoricalEssentialIncompleteness.V46MillerOracleProgramTable"
+   ],
+   "module_sha256": "d27a3cddb504fd8c3373c7a21ad30cfc999f92fd258886b93f01a0c84684d6d4",
+   "primary_key_or_origin": "relative s-m-n"
+  },
+  {
+   "use": "C.1, fixed oracle machine index",
+   "required_instance": "For an oracle-enumerable relation on a parameter and a natural number choose one machine index d valid for every value of both arguments.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+   "line": 23,
+   "application": "theorem fixed_machine_index {α : Type} [Primcodable α] (S : Set ℕ) {p : α × ℕ → Prop}",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46OracleMachineDomains",
+    "CategoricalEssentialIncompleteness.V46OracleSeparatorLift"
+   ],
+   "module_sha256": "9f749a5b8dbfb6fd2fc079507cd2cdd608db4d398bfe614e1bfe99a94f3c6db6",
+   "primary_key_or_origin": "ordinary and relative parameter theorems"
+  },
+  {
+   "use": "C.1, Turing property of the literal evaluator",
+   "required_instance": "The first program index is obtained by ordinary effective parameterization. The second tests the oracle domain. Their pairing gives a total computable section in every parameter object.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+   "line": 65,
+   "application": "obtain ⟨d, hd⟩ := fixed_machine_index S (show FiniteOracleRE S (fun p : carrier S Y × ℕ => (v.val p).Dom) from v.domain)",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46OracleMachineDomains",
+    "CategoricalEssentialIncompleteness.V46OracleSeparatorLift"
+   ],
+   "module_sha256": "9f749a5b8dbfb6fd2fc079507cd2cdd608db4d398bfe614e1bfe99a94f3c6db6",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "C.1, one computable first coordinate",
+   "required_instance": "A single ordinary total recursive function builds the index of the program simulating n on n and returning zero when defined.",
+   "source": "Lean/CategoricalEssentialIncompleteness/OracleDiagonalSeparator.lean",
+   "line": 36,
+   "application": "theorem simulationCode_computable : Computable simulationCode :=",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.OracleHalting"
+   ],
+   "module_sha256": "687774ea77bc8c8a77fc3274412d8a0b7116fcb574423f1bb5f64607cb73fc6f",
+   "primary_key_or_origin": "Mathlib partial-recursive programs"
+  },
+  {
+   "use": "C.1, equality of partial values",
+   "required_instance": "For each n and each second coordinate a, the diagonal value equals the simulation mapped to zero. Undefinedness is preserved.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+   "line": 50,
+   "application": "theorem ordinaryDiagonal_simulation (n a : ℕ) :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic",
+    "CategoricalEssentialIncompleteness.OracleMissingLift",
+    "CategoricalEssentialIncompleteness.V46Comparison"
+   ],
+   "module_sha256": "a7a19f40b27a9a185fafd166c6845a52ed58b69417ffb6de8d5d900453b5e1c5",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "C.1, every second coordinate",
+   "required_instance": "The equivalence holds for all pairs (n,a). No fixed dummy index is supplied as a hypothesis.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+   "line": 59,
+   "application": "theorem K_iff_simulation_mem_A (n a : ℕ) :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic",
+    "CategoricalEssentialIncompleteness.OracleMissingLift",
+    "CategoricalEssentialIncompleteness.V46Comparison"
+   ],
+   "module_sha256": "a7a19f40b27a9a185fafd166c6845a52ed58b69417ffb6de8d5d900453b5e1c5",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "C.1, any section with the prescribed inverse images",
+   "required_instance": "For any target partial morphism with reversed summand inverse images, comparison with the literal machine evaluator rules out its source lift.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean",
+   "line": 154,
+   "application": "theorem machine_no_lift (s : PartialFun.of ℕ ⟶ coprod (PartialFun.of ℕ) (PartialFun.of ℕ))",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46OracleMachineDomains",
+    "CategoricalEssentialIncompleteness.V46OracleSeparatorLift"
+   ],
+   "module_sha256": "9f749a5b8dbfb6fd2fc079507cd2cdd608db4d398bfe614e1bfe99a94f3c6db6",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "C.1, all output payloads",
+   "required_instance": "A target partial morphism may use any numerical value in either summand. The prescribed tag equivalences force totality and exclude every source lift.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46OracleSeparatorLift.lean",
+   "line": 88,
+   "application": "theorem no_lift_of_output_summands (s : ℕ →. (ℕ ⊕ ℕ))",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.ClassicalDiagonalArithmetic",
+    "CategoricalEssentialIncompleteness.OracleMissingLift",
+    "CategoricalEssentialIncompleteness.V46Comparison"
+   ],
+   "module_sha256": "a7a19f40b27a9a185fafd166c6845a52ed58b69417ffb6de8d5d900453b5e1c5",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "§9, actual witness at the selected enumeration",
+   "required_instance": "The intervals have closed graph and nonempty closed interval fibers. The coordinate fixed point obtained for this very machine numbering satisfies the all-representations Miller equation.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+   "line": 127,
+   "application": "coordinateInterval_graph_closed coordinateInterval_box",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointIntervals",
+    "CategoricalEssentialIncompleteness.V46MillerFixedPointKakutani"
+   ],
+   "module_sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+   "primary_key_or_origin": "Miller2004 and BauerHanson"
+  },
+  {
+   "use": "§9.3, real-computation specialization",
+   "required_instance": "The chosen approximation program and the specialized index give a single separating real from every representation, with the rational approximation witness permitted to depend on the representation.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean",
+   "line": 49,
+   "application": "apply miller_coordinate_of_approximation a ha approximationIndex separatingPoint ?_ e",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerRealComputation",
+    "CategoricalEssentialIncompleteness.V46MillerCutSeparatingProgram",
+    "CategoricalEssentialIncompleteness.V46MillerCutDigits"
+   ],
+   "module_sha256": "a0c162286bdf72d27e43a7f6111af3378e96a5d35d321be63315573bd96aa853",
+   "primary_key_or_origin": "Miller2004 and BauerHanson"
+  },
+  {
+   "use": "D, historical non-local-connectedness",
+   "required_instance": "The unprimed program category requires consistency and recursive enumerability of the PA extension in this assertion.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46SyntacticNonLocalConnectedness.lean",
+   "line": 236,
+   "application": "theorem unprimed_not_locallyConnected [Consistent T] [T.RE] :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46ConnectedNumeralDomains",
+    "CategoricalEssentialIncompleteness.V46ConnectedDomainStageTests",
+    "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityDiagonal",
+    "CategoricalEssentialIncompleteness.SyntacticObservations",
+    "CategoricalEssentialIncompleteness.V46PrintedObjectCoding"
+   ],
+   "module_sha256": "be2da1358bdf568d673b29bd36a488034f71aa827a761614119de782f43f728b",
+   "primary_key_or_origin": "DPM"
+  },
+  {
+   "use": "E.5 at the base and slice sentence objects",
+   "required_instance": "Evaluation preserves the rule operations and the sentence pullback under the natural projection isomorphism. A slice-closed theory is closed after transport to the base.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean",
+   "line": 69,
+   "application": "theorem evaluate_closed (W : FirstOrderReflection.Theory Q) :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46RetractedClosedTheories",
+    "CategoricalEssentialIncompleteness.V46SliceEvaluationSubobjects",
+    "CategoricalEssentialIncompleteness.V46SignedSubobjectIncompleteness"
+   ],
+   "module_sha256": "97162b1dcb7d2152cce6676166f72c628a25a249faa22fa451354769c5c58d0b",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "E.6, morphism and numeral",
+   "required_instance": "One total syntactic morphism is interpreted before evaluation on a numeral indexing the additional axioms. In each consistent fiber both signed finite derivations are excluded.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+   "line": 204,
+   "application": "theorem uniform_independent_sentences :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformPredicates",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedProvabilityFibers",
+    "CategoricalEssentialIncompleteness.V46ArithmeticIndexedPAEnumeration",
+    "CategoricalEssentialIncompleteness.V46ArithmeticInternalComparison"
+   ],
+   "module_sha256": "06135040c0aebdf88889572335aa2d2db66f787e87b6fad0649bb8d11e37879f",
+   "primary_key_or_origin": "PourEl1970"
+  },
+  {
+   "use": "E.7, parameterized algebra morphism",
+   "required_instance": "The algebra morphism equation and the separate slice conclusion equation fix the label and conclusion for every parameterized derivation.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+   "line": 117,
+   "application": "theorem printedFold_constructor (A : Subobject (P ⨯ S.sentenceObject))",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerSliceDerivations",
+    "CategoricalEssentialIncompleteness.V46NullaryPresentationAdjunction",
+    "CategoricalEssentialIncompleteness.V46FirstOrderRuleTransport",
+    "CategoricalEssentialIncompleteness.V46SliceBaseChangeGeometry"
+   ],
+   "module_sha256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "E.7, the two image inclusions",
+   "required_instance": "Apply the initial proof-object comparison in each direction along the axiom object isomorphism to prove equality of the images for every axiom mono.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+   "line": 172,
+   "application": "theorem sentence_image_recovery (m : A ⟶ (S₂).sentenceObject) [Mono m] :",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalIncompleteness",
+    "CategoricalEssentialIncompleteness.V46MillerSentenceAxiomPullbacks"
+   ],
+   "module_sha256": "3df3c8ef10b07977db536c2e74d50b62b2b1a81968a9fe13b5237e250c39d747",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "E.7, semantic point and finite proof",
+   "required_instance": "The image/range membership condition for a numerical sentence point is equivalent to existence of a finite Hilbert proof. Pullback by negation handles the negative statement.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean",
+   "line": 88,
+   "application": "theorem theorem_mem (Γ : Set ℕ) (hΓ : Uniform.Enumerable (P) (·∈Γ))",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46MillerTheorySentenceMorphisms",
+    "CategoricalEssentialIncompleteness.V46MillerNamedProofImageReverse",
+    "CategoricalEssentialIncompleteness.V46MillerRealClosedBounds",
+    "CategoricalEssentialIncompleteness.V46MillerCarrierIdempotents",
+    "CategoricalEssentialIncompleteness.V46MillerCutInseparabilitySourceSplit"
+   ],
+   "module_sha256": "414f8d579d00937adaed4aa1ea5b47295ae95a3ad8b71f9b8b21040fe5aef156",
+   "primary_key_or_origin": null
+  },
+  {
+   "use": "E.7, arbitrary monomorphism in the numerical chart",
+   "required_instance": "For each closed formula, use the reconstructed sentence-code set from the arbitrary axiom mono. Test the theorem and its negation through the two domain equivalences.",
+   "source": "Lean/CategoricalEssentialIncompleteness/V46RevisedProofPassagesChecks.lean",
+   "line": 240,
+   "application": "theorem recovered_proof_domains (m : A ⟶ (S).sentenceObject) [Mono m]",
+   "direct_imports": [
+    "CategoricalEssentialIncompleteness.V46NullaryBooleanSubstitution",
+    "CategoricalEssentialIncompleteness.V46ArithmeticUniformIndependent",
+    "CategoricalEssentialIncompleteness.V46NamedTheoryObservationsProofs",
+    "CategoricalEssentialIncompleteness.V46MillerCanonicalAxiomIncompleteness",
+    "CategoricalEssentialIncompleteness.V46MillerParameterizedDeduction"
+   ],
+   "module_sha256": "9ed6cd8e5d6d5b164d9325858fade0a4ba2bc91b793198232e8ed58f2a93340f",
+   "primary_key_or_origin": null
+  }
+ ]
+}

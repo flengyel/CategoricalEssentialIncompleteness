@@ -1,0 +1,1380 @@
+{
+ "tested_commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+ "distinct_sources": 40,
+ "citation_key_occurrences": 84,
+ "note": "Each bibliographic use is located in the sealed v93 reading. Original texts include locally preserved historical facsimiles, cited source editions, and the original authors’ texts accessed online. The evidence hashes distinguish extracted texts from whole PDF bytes. A related Lean module also substantiates some comparisons. An attribution alone is documentary evidence.",
+ "sources": [
+  {
+   "key": "Aczel",
+   "occurrences": [
+    {
+     "unit": "p0492",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 372,
+     "printed_locator": "Propositions 1.1.4 and 1.4.5"
+    }
+   ],
+   "primary_url": "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+   "primary_locator": "Props. 1.1.4 and 1.4.5",
+   "role": "finite proofs",
+   "assessment": "The argument uses finite rule trees to characterize the least inductively closed set. The CEI application passes to the image of the initial inference algebra in the slice. In particular the paper supplies the regular-epimorphism preservation used in that passage.",
+   "related_modules": [
+    "V46FinitaryInductiveDefinitions",
+    "V46RegularImage"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "457953f7ce94f491623baa099b93fccbbdb8501ae6c1cc41141fe359917dcd8a"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "582e711168a82da1cb656b6dd75a52cbd81fa73b53e833afae4eb1e5508db698",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "BauerHanson",
+   "occurrences": [
+    {
+     "unit": "p0015",
+     "file": "sections/01-introduction.tex",
+     "line": 146,
+     "printed_locator": "Theorem~6.4"
+    },
+    {
+     "unit": "p0348",
+     "file": "sections/04-miller-sequences.tex",
+     "line": 35,
+     "printed_locator": "pp.~6--9, (2.2), Definition~2.1 and Theorem~2.2"
+    }
+   ],
+   "primary_url": "https://arxiv.org/html/2404.01256v3",
+   "primary_locator": "Version 3, pp. 6–9, formula (2.2), Definition 2.1, Theorems 2.2 and 6.4",
+   "role": "witness and historical use",
+   "assessment": "The authors give binary names of Hilbert-cube points and the fixed-point sequence with its coordinate tied to the index in the chosen numbering. Every name computes the same real, while the rational outputs may depend on the name. The realizability topos has countable Dedekind reals. CEI constructs its own witness with its strict rational error test.",
+   "related_modules": [
+    "V46MillerFixedPoint",
+    "V46MillerRealComputation",
+    "V46MillerCutReduction"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "f73755c1d0f3f2c76c0389a25885dee8ac63869548d58c358ab8558b51807f64"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "c3f748bad5c6b8ec8eaff18f6a222335b06147d6eba4cbc519f5b2b51d57ecee",
+     "excerpts": 2
+    }
+   ]
+  },
+  {
+   "key": "Bernardi",
+   "occurrences": [
+    {
+     "unit": "p0021",
+     "file": "sections/01-introduction.tex",
+     "line": 224,
+     "printed_locator": "Sections~2--3, pp.~125--128"
+    },
+    {
+     "unit": "p0332",
+     "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+     "line": 326,
+     "printed_locator": "p.~126, Proposition~2(b)"
+    },
+    {
+     "unit": "p0332",
+     "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+     "line": 329,
+     "printed_locator": "p.~125"
+    }
+   ],
+   "primary_url": "https://www.researchgate.net/publication/303491669_Precomplete_equivalence_relations_in_dominical_categories",
+   "primary_locator": "pp. 125–128, Proposition 2(b), Definitions 2–3, Theorems 1–2",
+   "role": "comparison",
+   "assessment": "On numerical indices, partial recursive functions have total representatives up to the precomplete relation wherever defined. Distinct classes are recursively inseparable. The dominical version for saturated unions assumes precompleteness, disjointness and nonemptiness. The original examples include PA-provable equality. CEI gives a separate proof for its even and odd domains.",
+   "related_modules": [
+    "V46PrecompleteClasses",
+    "V46DominicalLiteratureChecks",
+    "V46ProvableProgramEquality"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "0ca52016cd3515f69a433d6674a74f866d7cccf2e4b23e00de6c5fcc21b00bcd"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "a2df74555285437ecb998fd41386ab2130ea0f96a67a5f08224029c2014bd384",
+     "excerpts": 3
+    }
+   ]
+  },
+  {
+   "key": "CockettLists",
+   "occurrences": [
+    {
+     "unit": "p0464",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 14,
+     "printed_locator": "Lemma 2.2 and Definition 2.3"
+    }
+   ],
+   "primary_url": "https://doi.org/10.1016/0022-4049(90)90121-W",
+   "primary_locator": "pp. 6–7, Lemma 2.2 and Definition 2.3",
+   "role": "definitions",
+   "assessment": "Parameterization means that the comparison for recursion in the relevant slices is invertible. Appendix A requires the actual list object and its stability under a parameter. The concrete constructions supply this data.",
+   "related_modules": [
+    "V46DiagramStableLists"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "CockettLists.txt",
+     "sha256": "24657c2e331b1a486ef61015fc9a2e6621c8bbd4ed38f03b7cab965473bad6d8"
+    }
+   ]
+  },
+  {
+   "key": "CockettComputability",
+   "occurrences": [
+    {
+     "unit": "p0021",
+     "file": "sections/01-introduction.tex",
+     "line": 233,
+     "printed_locator": "Sections~5.3 and 7.1, Theorem~7.8"
+    },
+    {
+     "unit": "p0024",
+     "file": "sections/01-introduction.tex",
+     "line": 260,
+     "printed_locator": "Section~7.5, Theorem~7.14"
+    }
+   ],
+   "primary_url": "https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf",
+   "primary_locator": "§§5.3, 7.1 and 7.5, Theorems 7.8 and 7.14",
+   "role": "comparison",
+   "assessment": "The first attribution includes nontriviality, discreteness and the finite joins stable under composition. The second concerns a nontrivial Turing category with a restriction zero and a predicate for program order. Its resulting proper restriction idempotent lives on the restriction terminal object.",
+   "related_modules": [
+    "V46DiscreteTuringInseparabilityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "fb6a8c792d321dabd256170a2ee987763cde0d55f758676891d2b6e415430d33"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "1ca7fc5b542b83f83318da4b58381f65ca9a62ee5e56818e18e36399d62b23a4",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "CGHRangeI",
+   "occurrences": [
+    {
+     "unit": "p0036",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 145,
+     "printed_locator": "p.~424"
+    },
+    {
+     "unit": "p0507",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 566,
+     "printed_locator": "Theorem 4.7"
+    },
+    {
+     "unit": "p0508",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 572,
+     "printed_locator": "Theorem 4.5 and Section 4.11"
+    }
+   ],
+   "primary_url": "https://www.researchgate.net/publication/265194097_Range_categories_I_General_theory",
+   "primary_locator": "p. 424, Theorems 4.5 and 4.7, §4.11",
+   "role": "proof input and comparison",
+   "assessment": "A range functor preserves restrictions and ranges. Section 2 adds preservation of restriction zeros and of binary restriction coproducts. The first theorem supplies ranges on the partial-map construction from the stable factorization. The second reconstructs the stable image system on total morphisms of the split range category. Appendix A applies the first result to a regular category with all monomorphisms.",
+   "related_modules": [
+    "V46PartialMapRanges",
+    "V46PartialMapTotals",
+    "V46FactorizationSystemChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "aeb2b81f3df7598fa2796cc8c57fa10d0275330b1a006a45ba84b0cc2bb78954"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "ca44977d9c296f864a8a6fec2c884c2366969c294f15535611cb0cb55d48ac87",
+     "excerpts": 2
+    }
+   ]
+  },
+  {
+   "key": "CGHRangeII",
+   "occurrences": [
+    {
+     "unit": "p0507",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 568,
+     "printed_locator": "Section 3.16 and Proposition 3.17"
+    }
+   ],
+   "primary_url": "https://www.kurims.kyoto-u.ac.jp/EMIS/journals/TAC/volumes/26/18/26-18.pdf",
+   "primary_locator": "§3.16, Prop. 3.17, pp. 479–480",
+   "role": "comparison",
+   "assessment": "With finite limits and stable factorization, the regular-epimorphism/monomorphism characterization requires the right class to contain exactly the monomorphisms. In A.7 the base category is regular and the particular image inclusion has a partial inverse.",
+   "related_modules": [
+    "V46FactorizationSystemChecks",
+    "V46RegularImage"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "3f2e36e5b6d27509917e27ef9e2ebc9321d0aad56407f75e678a7bf23e79a27b"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "b5f132fe19c37bc4b88c22e1a8b1e9ff8517d2e5c93f9ecdf9ab61d0064fc156",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "CockettHofstra",
+   "occurrences": [
+    {
+     "unit": "p0024",
+     "file": "sections/01-introduction.tex",
+     "line": 256,
+     "printed_locator": "Theorem~4.9"
+    },
+    {
+     "unit": "p0041",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 210,
+     "printed_locator": "Theorem 3.4"
+    },
+    {
+     "unit": "p0117",
+     "file": "sections/04-theory-extensions.tex",
+     "line": 72,
+     "printed_locator": "Section 3.5"
+    }
+   ],
+   "primary_url": "https://doi.org/10.1016/j.apal.2008.04.005",
+   "primary_locator": "Theorem 3.4, §3.5 and Theorem 4.9",
+   "role": "recognition and comparison",
+   "assessment": "The recognition theorem uses total retractions into a universal object and the Turing evaluation equation. Splitting the designated idempotents extends application. The subsequent theorem relates the chosen partial combinatory algebra and the Turing category through that splitting. CEI constructs the retractions and sections needed for its examples.",
+   "related_modules": [
+    "V46SplitTuringChecks",
+    "V46PartialSliceTuringTheoremChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "CockettHofstra.txt",
+     "sha256": "770ce40ba7be05d491e4df5bc432a7822a9a7a27b987fb31774af1e44674a27b"
+    }
+   ]
+  },
+  {
+   "key": "CockettLack",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 185,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0027",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 8,
+     "printed_locator": "Section~2.1.1"
+    },
+    {
+     "unit": "p0030",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 82,
+     "printed_locator": "Section~2.3.3"
+    },
+    {
+     "unit": "p0031",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 96,
+     "printed_locator": "Section~2.3.3, Proposition~2.26"
+    },
+    {
+     "unit": "p0032",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 102,
+     "printed_locator": "Section~3"
+    }
+   ],
+   "primary_url": "https://doi.org/10.1016/S0304-3975(00)00382-0",
+   "primary_locator": "§§2.1.1, 2.3.3 and 3, Prop. 2.26",
+   "role": "definitions and construction",
+   "assessment": "The four restriction identities give the convention in §2. The two completions distinguish splitting restriction idempotents from splitting arbitrary idempotents, with restriction of a corner morphism obtained by composing restriction with its source idempotent. A partial morphism in the monic-span model is an isomorphism class of spans.",
+   "related_modules": [
+    "V46RestrictionComparisonChecks",
+    "V46PartialMaps",
+    "V46PartialMapEquivalence"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "CockettLack.txt",
+     "sha256": "18d1bce91e82c8d73b6a8ec0bfe09b68c6e6c9ab10e04e8656a2d798ee5bbd7e"
+    }
+   ]
+  },
+  {
+   "key": "CockettLackIII",
+   "occurrences": [
+    {
+     "unit": "p0034",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 128,
+     "printed_locator": "Proposition 4.5"
+    }
+   ],
+   "primary_url": "https://arxiv.org/pdf/math/0610500",
+   "primary_locator": "Prop. 4.5",
+   "role": "categorical identification",
+   "assessment": "Binary restriction products give the near-product structure with the restriction projection equations and the reverse implication. CEI uses the corresponding partial-product and restriction structures in §2.",
+   "related_modules": [
+    "V46RestrictionComparisonChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "6ccbc2108d0080cdd0f126052f55af0052a7d20c96736bace5ea1357c1b0da2c"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "36202ebb84ba50c1ae4c0f09f6f7c62b5327d51856deeb3024ee4fe3b34597b1",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "CurryCosheaves",
+   "occurrences": [
+    {
+     "unit": "p0399",
+     "file": "sections/09-three-point-space.tex",
+     "line": 4,
+     "printed_locator": "Definition~2.6"
+    }
+   ],
+   "primary_url": "https://arxiv.org/pdf/1607.06942",
+   "primary_locator": "Definition 2.6",
+   "role": "definition",
+   "assessment": "The cosheaf colimit axiom applies to the covering diagram. For this finite space the minimal opens and their overlap reduce it to the displayed cospan. The proof of B.1 reconstructs the remaining open sections and the comparison isomorphisms.",
+   "related_modules": [
+    "V46ForkTupleTuringChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "468fc9939cda58fd7ed2610ad0b86ff61f267633057f563e965bf197d934806c"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "fbf5abb37ed4e93975f86c9491d064f952788801dbe2146cbf76ed1639fd01d7",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "DPH",
+   "occurrences": [
+    {
+     "unit": "p0009",
+     "file": "sections/01-introduction.tex",
+     "line": 5,
+     "printed_locator": "pp.~594--596, 629"
+    },
+    {
+     "unit": "p0019",
+     "file": "sections/01-introduction.tex",
+     "line": 194,
+     "printed_locator": "p.~621"
+    },
+    {
+     "unit": "p0019",
+     "file": "sections/01-introduction.tex",
+     "line": 199,
+     "printed_locator": "p.~612, Definitions~6.1--6.2"
+    },
+    {
+     "unit": "p0019",
+     "file": "sections/01-introduction.tex",
+     "line": 203,
+     "printed_locator": "p.~615, Definition~7.1"
+    },
+    {
+     "unit": "p0020",
+     "file": "sections/01-introduction.tex",
+     "line": 207,
+     "printed_locator": "p.~601, Definition~4.1"
+    },
+    {
+     "unit": "p0020",
+     "file": "sections/01-introduction.tex",
+     "line": 212,
+     "printed_locator": "pp.~625--626, Theorem~8.15"
+    },
+    {
+     "unit": "p0023",
+     "file": "sections/01-introduction.tex",
+     "line": 248,
+     "printed_locator": "pp.~595--596"
+    },
+    {
+     "unit": "p0277",
+     "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+     "line": 240,
+     "printed_locator": "p.~595, (3)"
+    }
+   ],
+   "primary_url": "https://www.jstor.org/stable/2274352",
+   "primary_locator": "pp. 594–596, 601, 612, 615, 621, 625–626 and 629. Definitions 4.1, 6.1, 6.2, 7.1, 8.14 and Theorem 8.15",
+   "role": "historical hypotheses, checked diagonal",
+   "assessment": "Theorem 8.15 is in the recursion-category section. Its evaluator has codomain X+X. The sections and both plus-dominical conditions are stated. In the v93 argument, the copairing has domain X+X and codomain X. Composing equality after f with its section proves agreement after the restriction of that section. The nonzero identity rules out the common zero preimage. The modal discussion and the implication about a theory representing recursive sets concern the introduction of the primary work.",
+   "related_modules": [
+    "V46DominicalDiagonal",
+    "V46DominicalLiteratureChecks",
+    "PCats/Ranges"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "DPH.txt",
+     "sha256": "c2ff8245ee343d529f50d4cd500194f92aed00b7d7cdeacf00c8255f3d07c588"
+    }
+   ]
+  },
+  {
+   "key": "DPM",
+   "occurrences": [
+    {
+     "unit": "p0014",
+     "file": "sections/01-introduction.tex",
+     "line": 115,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 191,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0140",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 9,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0141",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 59,
+     "printed_locator": "p.~644"
+    },
+    {
+     "unit": "p0146",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 153,
+     "printed_locator": "p.~646"
+    },
+    {
+     "unit": "p0147",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 182,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0592",
+     "file": "appendices/d-faithful-family.tex",
+     "line": 64,
+     "printed_locator": "Corollary 4.4, pp.~657--658"
+    }
+   ],
+   "primary_url": "https://www.jstor.org/stable/2274707",
+   "primary_locator": "Introduction and §1, pp. 643–646. Corollary 4.4, pp. 657–658",
+   "role": "syntactic construction and comparison",
+   "assessment": "The coding uses the PR extension and distinguishes conventions on products with a zero morphism. The unprimed quotient uses one proof of a universally quantified graph equivalence. The original question about Heller concerns local connectedness. Corollary 4.4 applies to the consistent c.e. extension stipulated there. D.2 has a larger quantifier over theory extensions and does not invoke that corollary without its effectivity premise.",
+   "related_modules": [
+    "V46SyntacticNonLocalConnectedness",
+    "V46ProvableProgramEquality"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "DPM.txt",
+     "sha256": "f750e4d18e0cb322e7e07551a587e371987adecdddbc740e1da363b178af691a"
+    }
+   ]
+  },
+  {
+   "key": "FPT",
+   "occurrences": [
+    {
+     "unit": "p0474",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 130,
+     "printed_locator": "Sections 2--4"
+    }
+   ],
+   "primary_url": "https://www.dcs.ed.ac.uk/home/dt/FiorePlotkinTuri.pdf",
+   "primary_locator": "§§2–4",
+   "role": "comparison",
+   "assessment": "The authors' syntax with binding uses varying contexts and makes substitution part of the algebraic structure. Appendix A uses named raw syntax and explicitly restricts its substitution to admissible triples. The construction and recursion equations are supplied locally.",
+   "related_modules": [
+    "V46CategoricalSubstitutionConstructorsChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "a9abf36391a7af35a70b3ebd0d1e15bd2f406ab1aed4596ff58a172a64af34bf"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "13ecbee32e4497b5d1f3112323d206eb4b41d0e85ba3ad22da27e5cb046623a3",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "GabbayPitts",
+   "occurrences": [
+    {
+     "unit": "p0474",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 131,
+     "printed_locator": "Section 6"
+    },
+    {
+     "unit": "p0483",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 244,
+     "printed_locator": "proof of Corollary 6.7"
+    }
+   ],
+   "primary_url": "https://www.cl.cam.ac.uk/~amp12/papers/newaas/newaas-jv.pdf",
+   "primary_locator": "§6, proof of Corollary 6.7",
+   "role": "comparison of recursion",
+   "assessment": "The original proof keeps the syntax being recursed on together with the accumulated value. In Appendix A this device yields the option-valued substitution on named expressions with its free-for condition.",
+   "related_modules": [
+    "V46CategoricalSubstitutionConstructorsChecks",
+    "V46CategoricalSubstitutionValuesChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "ef611a5954bdc4c4b803e9c8f38b64e7f2f5298171138035f59734b77ce08895"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "bfa95b271c7a970d68277cbc02aded9e21e9b5fdf3f4a383b8088f9a8664ce28",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "GoguenBurstall",
+   "occurrences": [
+    {
+     "unit": "p0473",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 124,
+     "printed_locator": "Section 4"
+    }
+   ],
+   "primary_url": "https://www.lfcs.inf.ed.ac.uk/reports/86/ECS-LFCS-86-10/ECS-LFCS-86-10.pdf",
+   "primary_locator": "§4, Edinburgh version pp. 15–17",
+   "role": "comparison",
+   "assessment": "The authors' parchment construction gives sort-indexed operators for terms and sentences and builds syntax with an initial many-sorted algebra. CEI takes its sorts and constructors in the specified base category.",
+   "related_modules": [
+    "V46CanonicalFormulaStabilityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "GoguenBurstall.txt",
+     "sha256": "9127f46eb77b00e3ce40d9b50fa9fddac094c6e3696d847d6481215c26a6938a"
+    },
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "5feab65237801c7e667720137f1f7538653b3e3d2bf5cc5c7c5bda027a605955"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "43c19c3b4b7b251d7ec5067cac58c52c037ccc89d0a9aecd27bb5b2ffa2cbf03",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "GTWW",
+   "occurrences": [
+    {
+     "unit": "p0473",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 123,
+     "printed_locator": "Section 2"
+    }
+   ],
+   "primary_url": "https://users.csc.calpoly.edu/~gfisher/work/specl/documentation/related-work/formal-semantics/algebraic/p68-goguen.pdf",
+   "primary_locator": "§2, especially Props. 2.1–2.2",
+   "role": "comparison",
+   "assessment": "The algebra of terms of a many-sorted signature is initial and every constructor expression has a unique immediate decomposition. Appendix A uses that initial-algebra specification in the categorical base.",
+   "related_modules": [
+    "V46CanonicalFormulaStabilityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "7119f7021c6845b71b3014d328a6b10543299f154316db71a5efbb9337731158"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "bc87d5088380cd3821bf262cf6efe5e85126a7af02e46d72186adfc118911d1b",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "HP",
+   "occurrences": [
+    {
+     "unit": "p0500",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 457,
+     "printed_locator": "0.10, p.~7"
+    }
+   ],
+   "primary_url": "https://assets.cambridge.org/97811071/68411/excerpt/9781107168411_excerpt.pdf",
+   "primary_locator": "§0.10, p. 7, Cambridge reissue",
+   "role": "logical schemes",
+   "assessment": "The three propositional schemes are weakening, the implicational composition scheme and classical contraposition in the displayed order and orientation. The local rules and valuations use exactly these three schemes.",
+   "related_modules": [
+    "V46NullaryBooleanLogicalSoundnessChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "HP.pdf",
+     "sha256": "29cfe1c3ddd7704e2f05fc80683fc2476614cfc6fedc739c6e56bafbd393b1ae"
+    },
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "6afbcafdb2f0b4fdc839669f416c4c3252bcfd5b046f7ccc6053cd4bde076bd9"
+    }
+   ]
+  },
+  {
+   "key": "Heller",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 183,
+     "printed_locator": "Section~5"
+    },
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 186,
+     "printed_locator": "Sections~8--9"
+    },
+    {
+     "unit": "p0027",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 18,
+     "printed_locator": "Section~5"
+    },
+    {
+     "unit": "p0029",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 61,
+     "printed_locator": "Section~6"
+    },
+    {
+     "unit": "p0040",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 198,
+     "printed_locator": "Section 9"
+    },
+    {
+     "unit": "p0405",
+     "file": "sections/09-three-point-space.tex",
+     "line": 113,
+     "printed_locator": "Section 3"
+    }
+   ],
+   "primary_url": "https://www.jstor.org/stable/2274486",
+   "primary_locator": "§§5–6, 8–9, Theorem 9.2",
+   "role": "definitions and comparison",
+   "assessment": "The terminology of domains and ranges and the prodominical structure appear in §§5–6. The existence theorem constructs a recursion category from a uniformly generated isotypical subsystem in a locally connected iteration category. The CEI three-point example supplies its own word construction and evaluator.",
+   "related_modules": [
+    "V46ForkTupleTuringChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "Heller.txt",
+     "sha256": "98c6d7bf8909975d9feb17d2c13ea41cb0d21d042ff67b0296a484bc92b75a48"
+    }
+   ]
+  },
+  {
+   "key": "HH",
+   "occurrences": [
+    {
+     "unit": "p0500",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 470,
+     "printed_locator": "Sections 2.11--2.12"
+    },
+    {
+     "unit": "p0500",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 472,
+     "printed_locator": "Section 3.1"
+    }
+   ],
+   "primary_url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+   "primary_locator": "§§2.11–2.12 and 3.1",
+   "role": "logical schemes",
+   "assessment": "The quantifier axiom is substitution of a term that is free for the variable. The other quantifier scheme includes variable absence. Equality uses reflexivity and substitutivity. Appendix A takes the two terms as parameters and retains the admissibility conditions.",
+   "related_modules": [
+    "V46NullaryBooleanLogicalSoundnessChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "a2ab57207f48ac8bbdefb4175fb3c67f5d64635217abcdfa292af3087907387a"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "9ea1331dc02046346bc89aaa0b7d1a0340c5bfccc8eae41e256c31b94d684d7e",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "Katsumata",
+   "occurrences": [
+    {
+     "unit": "p0474",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 132,
+     "printed_locator": "Section 2, Example 1(3)"
+    }
+   ],
+   "primary_url": "https://www.kurims.kyoto-u.ac.jp/~sinya/paper/generalpre.pdf",
+   "primary_locator": "§2, Example 1(3)",
+   "role": "comparison",
+   "assessment": "The typed abstract syntax examples include a first-order quantifier with binding. The comparison is to treatments up to bound-variable renaming. The internal named-variable algebra is independently specified in A.1.",
+   "related_modules": [
+    "V46CategoricalSubstitutionConstructorsChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "41b60bb5ed382ea5ab564c86674f7f2c0eb858742cc719eb687f0e17afa56b0f"
+    }
+   ]
+  },
+  {
+   "key": "Keisler",
+   "occurrences": [
+    {
+     "unit": "p0251",
+     "file": "sections/06-interpretation-in-models.tex",
+     "line": 401,
+     "printed_locator": "Theorem~3.1"
+    }
+   ],
+   "primary_url": "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf",
+   "primary_locator": "Theorem 3.1",
+   "role": "proof input",
+   "assessment": "For a tuple of representatives, satisfaction of a first-order formula holds in the ultraproduct exactly when the set of satisfying coordinates is in the ultrafilter. In §7.8 this is applied separately to each PA axiom, the unary predicate for a carrier and the binary relation of a program graph. The representative theorem is proved by formula induction in Lean.",
+   "related_modules": [
+    "V46ArithmeticUltrapower",
+    "V46UltrapowerComparisonChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "39334ec7470945d7f4251f64d6fe7e54bbf33141a276fbbbb5d13fc4aae98647"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "8106e038fd5cdc043b3553524f27e87a570a5b292a62e53525bc9585f434aa54",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "KirstPeters",
+   "occurrences": [
+    {
+     "unit": "p0074",
+     "file": "sections/03a-internal-theories.tex",
+     "line": 245,
+     "printed_locator": "Definitions~7, 17 and Theorem~20"
+    }
+   ],
+   "primary_url": "https://www.ps.uni-saarland.de/Publications/documents/KirstPeters_2023_Goedel.pdf",
+   "primary_locator": "Definitions 7 and 17, Theorem 20",
+   "role": "comparison",
+   "assessment": "The synthetic theorem assumes the indicated representability and semidecidable proof relation to obtain an independent sentence for the consistent extension. CEI takes its arithmetic proof search from a fixed program presentation.",
+   "related_modules": [
+    "V46SyntheticIndependenceChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "1070f7b450fd759a6319ecf12fc6fe2561352eae7ca97aa5ec9fa79323419448"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "e77999f350bfc335b17c596ed6d89a20708b3d8085f23a22e3bd3802cb432477",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "Lengyel2004",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 188,
+     "printed_locator": null
+    }
+   ],
+   "primary_url": "https://doi.org/10.1016/S0168-0072(03)00060-5",
+   "primary_locator": "Theorems 21 and 26 and the cited correction",
+   "role": "comparison",
+   "assessment": "These results construct recursion categories using iteration, relative separation and faithful iteration functors. The manuscript cites the correction adjoining the actual separated-target hypothesis. The historical observation introduces no hypothesis into the categorical incompleteness proofs.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "Lengyel2004.txt",
+     "sha256": "655f0de829323d651798e85f2b5fe9d64774cfee2cda72acd22ad72deeb70f65"
+    }
+   ]
+  },
+  {
+   "key": "Lengyel2006",
+   "occurrences": [
+    {
+     "unit": "p0021",
+     "file": "sections/01-introduction.tex",
+     "line": 228,
+     "printed_locator": "Theorem~4.1"
+    },
+    {
+     "unit": "p0036",
+     "file": "sections/02-categorical-preliminaries.tex",
+     "line": 146,
+     "printed_locator": "p.~7"
+    },
+    {
+     "unit": "p0569",
+     "file": "appendices/c-section-lifting.tex",
+     "line": 14,
+     "printed_locator": "Theorem~4.1"
+    },
+    {
+     "unit": "p0584",
+     "file": "appendices/c-section-lifting.tex",
+     "line": 236,
+     "printed_locator": "p.~11"
+    }
+   ],
+   "primary_url": "https://academicworks.cuny.edu/gc_cs_tr/277/",
+   "primary_locator": "p. 7, Theorem 4.1 and its proof on p. 11",
+   "role": "counterexample target",
+   "assessment": "This paper strengthens range preservation by the stated diagrammatic conditions. Its comparison takes an index of the target endomorphism after composing the conditional with the inverse of the coproduct isomorphism. Existence of a source preimage is needed to take that index. C.1 exhibits a case satisfying the older hypotheses without such a preimage.",
+   "related_modules": [
+    "V46Comparison",
+    "OracleMissingLift",
+    "V46OracleSeparatorLift",
+    "V46MachineOracleTuring"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "Lengyel2006.txt",
+     "sha256": "74a14a3b603cb0f5be4027ed18d246ff7264d5ac43f04e185a169c5dcfa055d1"
+    }
+   ]
+  },
+  {
+   "key": "Corrections",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 188,
+     "printed_locator": null
+    }
+   ],
+   "primary_url": "https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex",
+   "primary_locator": "Version 10, Theorem 6.4 in the pinned source",
+   "role": "comparison",
+   "assessment": "The relative theorem assumes a faithful iteration functor to the separated target and includes the identity specialization. It fixes the scope of the cited 2004 existence theorem.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "Corrections.txt",
+     "sha256": "f9bf95186754e87214ff7546bbd289b3c9b70484d30592b196df1d0f30344cc8"
+    }
+   ]
+  },
+  {
+   "key": "Composition",
+   "occurrences": [
+    {
+     "unit": "p0147",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 184,
+     "printed_locator": "Corollary 2"
+    }
+   ],
+   "primary_url": "https://arxiv.org/html/2609.25556v3",
+   "primary_locator": "Corollary 2",
+   "role": "counterexample comparison",
+   "assessment": "For each consistent c.e. extension of PA the proposed composition with pointwise provable equivalence depends on a representative. The unprimed quotient in CEI uses uniform proof of graph equivalence. The failure of composition gives a substantive distinction between the two constructions.",
+   "related_modules": [
+    "V46ProvableProgramEqualityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "b121c56dd77afd6d4e9c5e782402c7e4d8e0deaf7c95d18e326cb3c8ef335c16"
+    }
+   ]
+  },
+  {
+   "key": "MaiettiLists",
+   "occurrences": [
+    {
+     "unit": "p0464",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 16,
+     "printed_locator": "Definition 2.4 and the following paragraph"
+    }
+   ],
+   "primary_url": "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf",
+   "primary_locator": "Definition 2.4 and its following paragraph",
+   "role": "definitions",
+   "assessment": "The parameterized list object has unique folds for arbitrary parameter objects. The source explains the corresponding slice condition. CEI's definition and its witnesses require the constructor and the parameter equations.",
+   "related_modules": [
+    "V46DiagramStableLists"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "c6a8a716a3af4a1f81da7875abd6f11c61e26fd663ef9fa3454ec6427d38d498"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "f914cd638ee140df04bc24cb107e9994b78cc4b1fd77844196eae914bc3fbabf",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "Miller2004",
+   "occurrences": [
+    {
+     "unit": "p0015",
+     "file": "sections/01-introduction.tex",
+     "line": 144,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0348",
+     "file": "sections/04-miller-sequences.tex",
+     "line": 33,
+     "printed_locator": "proof of Theorem~6.3 and the following paragraph"
+    }
+   ],
+   "primary_url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+   "primary_locator": "Theorem 6.3 and paragraph immediately following its proof",
+   "role": "witness comparison",
+   "assessment": "The coordinate construction gives the same real at coordinate d when program d produces that real from every name of the input. Its proof uses a fixed point in the space of sequences. CEI redoes the construction for its own enumerations before applying the conditional cut theorem.",
+   "related_modules": [
+    "V46MillerFixedPoint",
+    "V46MillerCutReduction"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "16c2ca418756b78219823536454daa9299612e669469274dd62de5ed79a81d57"
+    }
+   ]
+  },
+  {
+   "key": "Montagna",
+   "occurrences": [
+    {
+     "unit": "p0014",
+     "file": "sections/01-introduction.tex",
+     "line": 115,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0014",
+     "file": "sections/01-introduction.tex",
+     "line": 118,
+     "printed_locator": "pp.~114--115"
+    },
+    {
+     "unit": "p0021",
+     "file": "sections/01-introduction.tex",
+     "line": 226,
+     "printed_locator": "Remark~3.1"
+    },
+    {
+     "unit": "p0140",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 9,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0141",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 39,
+     "printed_locator": "p.~115, Note~1"
+    },
+    {
+     "unit": "p0143",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 94,
+     "printed_locator": "p.~108; p.~115, Note~1"
+    },
+    {
+     "unit": "p0146",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 150,
+     "printed_locator": "p.~105"
+    },
+    {
+     "unit": "p0147",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 182,
+     "printed_locator": null
+    },
+    {
+     "unit": "p0148",
+     "file": "sections/05-syntactic-recursion-category.tex",
+     "line": 198,
+     "printed_locator": "p.~109, equation~$(*)$"
+    }
+   ],
+   "primary_url": "https://doi.org/10.1305/ndjfl/1093634998",
+   "primary_locator": "§§1–3, equation (*) on p. 109, Remark 3.1 and pp. 114–115",
+   "role": "program construction and comparison",
+   "assessment": "The source uses a program searching for a witness to a Sigma-one predicate and returning its input. It gives the syntactic category and an effectively inseparable pair and poses the comparison question for PA. The uniform graph presentation, effective pair and ordinary/pointwise distinction are checked separately in CEI.",
+   "related_modules": [
+    "V46SyntacticEffectiveInseparabilityChecks",
+    "V46ProvableProgramEqualityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "Montagna.txt",
+     "sha256": "d1d55ae66c9ad91fb3cc18f6795648fab3ad30b72a533496badd7fe27f635388"
+    }
+   ]
+  },
+  {
+   "key": "MPV",
+   "occurrences": [
+    {
+     "unit": "p0022",
+     "file": "sections/01-introduction.tex",
+     "line": 240,
+     "printed_locator": "Section~4.4, p.~1169"
+    }
+   ],
+   "primary_url": "https://biblio.ugent.be/publication/01H3WX1TZ4VA10NE6KGRK973YN/file/01H3WYVBENDCNXYRYQ63CSZGWW.pdf",
+   "primary_locator": "§§4.1 and 4.4, p. 1169, second variant of the proof",
+   "role": "comparison",
+   "assessment": "For disjoint c.e. sets the signed Jan theory is consistent. A decidable extension would separate them by the sentences asserting existence of a class of cardinality n+1. In the other direction a recursive separator yields the appropriate decidable completion. Their unrestricted formula also allows the inconsistent overlap case. CEI explicitly states disjointness.",
+   "related_modules": [
+    "V46JaniczakSignedTheoryChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "187dc95818b144e1e8eec72bbcb80439e032efb8c2b4ee1b472a04457609f009"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "53a0c7eb098183a1f8545a615f43676d163362765589c6ead452da6a3cca6847",
+     "excerpts": 3
+    }
+   ]
+  },
+  {
+   "key": "PourEl",
+   "occurrences": [
+    {
+     "unit": "p0295",
+     "file": "sections/08b-uniform-independent-sentences.tex",
+     "line": 6,
+     "printed_locator": null
+    }
+   ],
+   "primary_url": "https://doi.org/10.2307/2270052",
+   "primary_locator": "1968, opening definitions, pp. 56–57",
+   "role": "terminology",
+   "assessment": "The effective extension assigns an independent sentence relative to an index for an extension of the fixed presentation. The exact presentation convention and output requirement used in §8.3 are specified by the 1970 source.",
+   "related_modules": [
+    "V46EffectiveExtensibilityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "eca898fafb1e9b23b07f8132d79e83ef8b072e331adad368f8687b98f6fdea1e"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "388bbed8b0fd2dffd8b100a09e5a735fc209913077496d497a705562096aab33",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "PourEl1970",
+   "occurrences": [
+    {
+     "unit": "p0295",
+     "file": "sections/08b-uniform-independent-sentences.tex",
+     "line": 12,
+     "printed_locator": "pp.~272, 274, Definitions~5, 6(b) and~8"
+    }
+   ],
+   "primary_url": "https://pi.math.cornell.edu/~yytran/PourEl_recursion_axiomatizable_theories.pdf",
+   "primary_locator": "pp. 272 and 274, Definitions 5, 6(b) and 8",
+   "role": "terminology and quantifiers",
+   "assessment": "The input enumerates additional axioms for the fixed rules of inference. One total procedure must work on all indices yielding consistent extensions. Page 272 requires a sentence outside both signed theorem sets. On p. 274 Definition 8 prints intersection where this requirement calls for union. The v93 footnote explicitly records the issue.",
+   "related_modules": [
+    "V46ArithmeticUniformIndependent",
+    "V46EffectiveExtensibilityChecks"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "61172cac393f2dfc5337cd79cd18fe2fea24397f4e1e7298e5116de670063e38"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "74f61a9936b4e9b23db93c9fd211eced01527e15957e2c3eceddbf2a0d2a61ce",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "RobinsonRosolini",
+   "occurrences": [
+    {
+     "unit": "p0151",
+     "file": "sections/05a-internal-syntax.tex",
+     "line": 6,
+     "printed_locator": "pp.~108--109"
+    }
+   ],
+   "primary_url": "https://www.researchgate.net/publication/319395054_Categories_of_partial_maps",
+   "primary_locator": "pp. 108–109",
+   "role": "comparison",
+   "assessment": "Provably functional Sigma-one relations are taken up to provable graph equality. This motivates the predicate presentation in §6. Its comparison with the quotient of actual program indices has its own inverse constructions.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "4254c2519c65da10ea7d9f580bc529f66ad885f556807725b389aa13a7e0cc25"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "98c8da82f59330b37ee55aca0b9eac116c5d644d2e664ac59e969e6b469c05a1",
+     "excerpts": 2
+    }
+   ]
+  },
+  {
+   "key": "RosoliniThesis",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 182,
+     "printed_locator": null
+    }
+   ],
+   "primary_url": "https://www.researchgate.net/publication/35103849_Continuity_and_effectiveness_in_topoi",
+   "primary_locator": "Thesis chapter on partial maps and domains",
+   "role": "comparison",
+   "assessment": "Partial-map categories and their domain projections give the P-categorical framework cited in §1. The paper separately credits Heller for the prodominical hypothesis.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "local original or extraction",
+     "file": "RosoliniThesis.txt",
+     "sha256": "3f47bc5d9283866388c704560d0e8f0b70443318c2e5ffef13a68884d089daf1"
+    }
+   ]
+  },
+  {
+   "key": "Rosolini",
+   "occurrences": [
+    {
+     "unit": "p0018",
+     "file": "sections/01-introduction.tex",
+     "line": 182,
+     "printed_locator": null
+    }
+   ],
+   "primary_url": "https://doi.org/10.1007/BFb0081368",
+   "primary_locator": "pp. 307–308",
+   "role": "comparison",
+   "assessment": "The opening comparison gives more general partial-product axioms than the dominical ones. CEI uses the historical relation while imposing its own restriction and range structure in §2.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "b983b9e7028ae281161d7daa25d95442b7797e3e4bc9aeef684f84b553801aea"
+    }
+   ]
+  },
+  {
+   "key": "vanDijkGO",
+   "occurrences": [
+    {
+     "unit": "p0023",
+     "file": "sections/01-introduction.tex",
+     "line": 251,
+     "printed_locator": "Theorems~5.19--5.20"
+    }
+   ],
+   "primary_url": "https://arxiv.org/pdf/2004.10482",
+   "primary_locator": "Theorems 5.19–5.20",
+   "role": "comparison",
+   "assessment": "The internal arithmetic universe in the initial arithmetic universe yields the Gödellian inconsistency-if-complete claim and the unprovability of the displayed consistency statement. These express a different internal construction from the free pair of sentence predicates.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "420ee547f0294ed4987aebd57fc5bb9e4f0af1d62cd22a141af506b00806f9dc"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "06194cac96644638f8ab3a7306122898161dc1a40f5e8307bf374573e9794a19",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "VisserEHU",
+   "occurrences": [
+    {
+     "unit": "p0074",
+     "file": "sections/03a-internal-theories.tex",
+     "line": 241,
+     "printed_locator": "Lemma~23"
+    }
+   ],
+   "primary_url": "https://research-portal.uu.nl/ws/portalfiles/portal/230468330/s00153-024-00911-y.pdf",
+   "primary_locator": "Lemma 23",
+   "role": "comparison",
+   "assessment": "The numerical reduction tracks the positive enumerable member into provable sentences and the negative one into refutable sentences with the representability assumptions of that lemma. CEI formulates the two inclusions as inverse images and proves their categorical consequence.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "685e904bbedb5d22bece7ab9a9c19e8b8c01bcd5a83b86f51cfeedc32f155c8f"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "a242988d77f27dfbe94566948604b7a736ffbf09545e99ed60c402996c9a132d",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "Voutsadakis",
+   "occurrences": [
+    {
+     "unit": "p0100",
+     "file": "sections/03b-internal-adjunctions.tex",
+     "line": 371,
+     "printed_locator": "Theorem~7"
+    }
+   ],
+   "primary_url": "https://www.voutsadakis.com/RESEARCH/PUBLISHED/fol.pdf",
+   "primary_locator": "Theorem 7",
+   "role": "comparison",
+   "assessment": "Translations of the indicated first-order signatures can assign formulas to relation symbols. In CEI the category of pairs uses an assignment to the target sentence object and a translation of the free first-order syntax is recovered from it.",
+   "related_modules": [],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "8bb103e7517de8717d5270fcf69b92b2dfd997aed3fae0447f1db7ffe00f7c49"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "eb68e3acec0be7894c3ea1ec2c28eaf2969f4666e8087bd1707b0737536eb642",
+     "excerpts": 1
+    }
+   ]
+  },
+  {
+   "key": "Wissmann",
+   "occurrences": [
+    {
+     "unit": "p0495",
+     "file": "appendices/a-syntax-and-theories.tex",
+     "line": 417,
+     "printed_locator": "Lemma 3.6"
+    }
+   ],
+   "primary_url": "https://lmcs.episciences.org/10014/pdf",
+   "primary_locator": "Lemma 3.6",
+   "role": "proof comparison",
+   "assessment": "Preservation of the left class of an orthogonal factorization system permits the factorization to be lifted to endofunctor algebras. CEI checks this form and then constructs the least closed image for its regular base and inference endofunctor.",
+   "related_modules": [
+    "V46FactorizationSystemChecks",
+    "V46RegularImage"
+   ],
+   "evidence": [
+    {
+     "kind": "archived original-source retrieval",
+     "sha256": "8501a75f63cf7e6a8b370d7fb8fdb792353a53b247fc6f33d7052488b32195b1"
+    },
+    {
+     "kind": "v93 original-source retrieval",
+     "sha256": "44cb64bc4d584a5ef5b26ec106bd97d62949107454011a7e547742f3b47cac14",
+     "excerpts": 1
+    }
+   ]
+  }
+ ]
+}

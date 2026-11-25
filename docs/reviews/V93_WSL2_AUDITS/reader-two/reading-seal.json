@@ -1,0 +1,13 @@
+{
+  "reader": "two",
+  "tested_commit": "2269c9674e710a7032e6751e7db2473147aaaf96",
+  "utc": "2026-11-25T05:02:46.262567+00:00",
+  "basis": "Recursive pinned LaTeX, its printed PDF and Mathematical Writing. No previous manuscript review, source-to-Lean map or Lean source consulted before freezing these files.",
+  "units": 667,
+  "numbered_results": 77,
+  "numbered_definitions": 3,
+  "files": {
+    "manuscript-inventory.json": "36b70490839d21e9d726728e68b61c06e3e1619a398d01f55191087e4b6b6132",
+    "reconstruction.md": "2dbe481ee772601a917a9baadec373cbef763ac8ef52c1ed551e53afee25753d"
+  }
+}

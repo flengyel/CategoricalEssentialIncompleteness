@@ -1,0 +1,796 @@
+[
+  {
+    "number": "3.1",
+    "environment": "theorem",
+    "file": "sections/03-sections-and-inseparability.tex",
+    "start": 21,
+    "label": "thm:comparison",
+    "end": 47,
+    "proof_start": 48,
+    "proof_end": 87
+  },
+  {
+    "number": "3.2",
+    "environment": "corollary",
+    "file": "sections/03-sections-and-inseparability.tex",
+    "start": 89,
+    "label": "cor:separator",
+    "end": 102,
+    "proof_start": 103,
+    "proof_end": 106
+  },
+  {
+    "number": "3.3",
+    "environment": "corollary",
+    "file": "sections/03-sections-and-inseparability.tex",
+    "start": 110,
+    "label": "cor:source-conditionals",
+    "end": 124,
+    "proof_start": 125,
+    "proof_end": 156
+  },
+  {
+    "number": "3.4",
+    "environment": "proposition",
+    "file": "sections/03-sections-and-inseparability.tex",
+    "start": 158,
+    "label": "prop:disjoint-joins",
+    "end": 168,
+    "proof_start": 169,
+    "proof_end": 175
+  },
+  {
+    "number": "4.1",
+    "environment": "proposition",
+    "file": "sections/03a-internal-theories.tex",
+    "start": 104,
+    "label": "prop:interpreted-theory",
+    "end": 126,
+    "proof_start": 127,
+    "proof_end": 142
+  },
+  {
+    "number": "4.2",
+    "environment": "theorem",
+    "file": "sections/03a-internal-theories.tex",
+    "start": 153,
+    "label": "thm:logical-comparison",
+    "end": 189,
+    "proof_start": 190,
+    "proof_end": 209
+  },
+  {
+    "number": "4.3",
+    "environment": "corollary",
+    "file": "sections/03a-internal-theories.tex",
+    "start": 213,
+    "label": "cor:domain-incompleteness",
+    "end": 223,
+    "proof_start": 224,
+    "proof_end": 237
+  },
+  {
+    "number": "4.4",
+    "environment": "theorem",
+    "file": "sections/03b-internal-adjunctions.tex",
+    "start": 27,
+    "label": "thm:first-order-reflection",
+    "end": 42,
+    "proof_start": 43,
+    "proof_end": 55
+  },
+  {
+    "number": "4.5",
+    "environment": "theorem",
+    "file": "sections/03b-internal-adjunctions.tex",
+    "start": 123,
+    "label": "thm:translation-galois",
+    "end": 146,
+    "proof_start": 147,
+    "proof_end": 169
+  },
+  {
+    "number": "4.6",
+    "environment": "proposition",
+    "file": "sections/03b-internal-adjunctions.tex",
+    "start": 215,
+    "label": "prop:deduction-comparison",
+    "end": 244,
+    "proof_start": 245,
+    "proof_end": 269
+  },
+  {
+    "number": "4.7",
+    "environment": "theorem",
+    "file": "sections/03b-internal-adjunctions.tex",
+    "start": 376,
+    "label": "thm:free-first-order-adjunction",
+    "end": 398,
+    "proof_start": 399,
+    "proof_end": 476
+  },
+  {
+    "number": "4.8",
+    "environment": "corollary",
+    "file": "sections/03b-internal-adjunctions.tex",
+    "start": 478,
+    "label": "cor:signed-first-order-incompleteness",
+    "end": 485,
+    "proof_start": 486,
+    "proof_end": 540
+  },
+  {
+    "number": "5.1",
+    "environment": "lemma",
+    "file": "sections/04-theory-extensions.tex",
+    "start": 47,
+    "label": "lem:partial-slice-turing",
+    "end": 62,
+    "proof_start": 63,
+    "proof_end": 114
+  },
+  {
+    "number": "5.2",
+    "environment": "theorem",
+    "file": "sections/04-theory-extensions.tex",
+    "start": 133,
+    "label": "thm:theory-extension",
+    "end": 164,
+    "proof_start": 165,
+    "proof_end": 212
+  },
+  {
+    "number": "5.3",
+    "environment": "theorem",
+    "file": "sections/04-theory-extensions.tex",
+    "start": 260,
+    "label": "thm:associated-incompleteness",
+    "end": 282,
+    "proof_start": 283,
+    "proof_end": 345
+  },
+  {
+    "number": "6.1",
+    "environment": "lemma",
+    "file": "sections/05-syntactic-recursion-category.tex",
+    "start": 64,
+    "label": "lem:arithmetized-evaluation",
+    "end": 91,
+    "proof_start": 92,
+    "proof_end": 124
+  },
+  {
+    "number": "6.2",
+    "environment": "lemma",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 34,
+    "label": "lem:syntactic-functional-search",
+    "end": 49,
+    "proof_start": 50,
+    "proof_end": 66
+  },
+  {
+    "number": "6.3",
+    "environment": "lemma",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 68,
+    "label": "lem:syntactic-total-category",
+    "end": 81,
+    "proof_start": 82,
+    "proof_end": 242
+  },
+  {
+    "number": "6.4",
+    "environment": "lemma",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 291,
+    "label": "lem:st-finite-sigma1",
+    "end": 304,
+    "proof_start": 305,
+    "proof_end": 318
+  },
+  {
+    "number": "6.5",
+    "environment": "proposition",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 383,
+    "label": "prop:st-syntax-initiality",
+    "end": 399,
+    "proof_start": 400,
+    "proof_end": 480
+  },
+  {
+    "number": "6.6",
+    "environment": "proposition",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 482,
+    "label": "prop:st-list-initiality",
+    "end": 487,
+    "proof_start": 488,
+    "proof_end": 515
+  },
+  {
+    "number": "6.7",
+    "environment": "proposition",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 520,
+    "label": "prop:st-substitution-realization",
+    "end": 532,
+    "proof_start": 533,
+    "proof_end": 641
+  },
+  {
+    "number": "6.8",
+    "environment": "lemma",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 659,
+    "label": "lem:syntactic-derivation-initiality",
+    "end": 671,
+    "proof_start": 672,
+    "proof_end": 831
+  },
+  {
+    "number": "6.9",
+    "environment": "theorem",
+    "file": "sections/05a-internal-syntax.tex",
+    "start": 833,
+    "label": "thm:syntactic-generated-theory",
+    "end": 857,
+    "proof_start": 858,
+    "proof_end": 895
+  },
+  {
+    "number": "7.1",
+    "environment": "proposition",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 34,
+    "label": "prop:model",
+    "end": 39,
+    "proof_start": 40,
+    "proof_end": 62
+  },
+  {
+    "number": "7.2",
+    "environment": "lemma",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 66,
+    "label": "lem:switch",
+    "end": 75,
+    "proof_start": 76,
+    "proof_end": 103
+  },
+  {
+    "number": "7.3",
+    "environment": "corollary",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 105,
+    "label": "cor:model-pair",
+    "end": 115,
+    "proof_start": 116,
+    "proof_end": 122
+  },
+  {
+    "number": "7.4",
+    "environment": "proposition",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 151,
+    "label": "prop:model-total-regular",
+    "end": 154,
+    "proof_start": 155,
+    "proof_end": 173
+  },
+  {
+    "number": "7.5",
+    "environment": "lemma",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 220,
+    "label": "lem:semantic-substitution",
+    "end": 243,
+    "proof_start": 244,
+    "proof_end": 282
+  },
+  {
+    "number": "7.6",
+    "environment": "proposition",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 284,
+    "label": "prop:standard-code-soundness",
+    "end": 298,
+    "proof_start": 299,
+    "proof_end": 346
+  },
+  {
+    "number": "7.7",
+    "environment": "lemma",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 363,
+    "label": "lem:ultrapower-regular",
+    "end": 366,
+    "proof_start": 367,
+    "proof_end": 398
+  },
+  {
+    "number": "7.8",
+    "environment": "lemma",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 403,
+    "label": "lem:ultrapower-comparison",
+    "end": 416,
+    "proof_start": 417,
+    "proof_end": 455
+  },
+  {
+    "number": "7.9",
+    "environment": "theorem",
+    "file": "sections/06-interpretation-in-models.tex",
+    "start": 457,
+    "label": "thm:ultrapower-soundness",
+    "end": 487,
+    "proof_start": 488,
+    "proof_end": 516
+  },
+  {
+    "number": "8.1",
+    "environment": "lemma",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 91,
+    "label": "lem:arithmetic-diagonal-representation",
+    "end": 106,
+    "proof_start": 107,
+    "proof_end": 138
+  },
+  {
+    "number": "8.2",
+    "environment": "lemma",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 140,
+    "label": "lem:arithmetic-proof-search",
+    "end": 163,
+    "proof_start": 164,
+    "proof_end": 184
+  },
+  {
+    "number": "8.3",
+    "environment": "theorem",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 186,
+    "label": "thm:arithmetic-internal-comparison",
+    "end": 198,
+    "proof_start": 199,
+    "proof_end": 237
+  },
+  {
+    "number": "8.4",
+    "environment": "corollary",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 250,
+    "label": "cor:arithmetic",
+    "end": 256,
+    "proof_start": 257,
+    "proof_end": 284
+  },
+  {
+    "number": "8.5",
+    "environment": "proposition",
+    "file": "sections/08a-uniform-theories.tex",
+    "start": 126,
+    "label": "prop:arithmetic-theory-fibers",
+    "end": 142,
+    "proof_start": 143,
+    "proof_end": 311
+  },
+  {
+    "number": "8.6",
+    "environment": "theorem",
+    "file": "sections/08b-uniform-independent-sentences.tex",
+    "start": 19,
+    "label": "thm:uniform-independent-sentences",
+    "end": 29,
+    "proof_start": 30,
+    "proof_end": 110
+  },
+  {
+    "number": "8.7",
+    "environment": "proposition",
+    "file": "sections/08c-numerical-realization.tex",
+    "start": 37,
+    "label": "prop:numerical-structure",
+    "end": 52,
+    "proof_start": 53,
+    "proof_end": 277
+  },
+  {
+    "number": "8.8",
+    "environment": "proposition",
+    "file": "sections/08c-numerical-realization.tex",
+    "start": 279,
+    "label": "prop:arithmetic-theory-realization",
+    "end": 288,
+    "proof_start": 289,
+    "proof_end": 459
+  },
+  {
+    "number": "8.9",
+    "environment": "lemma",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 370,
+    "label": "lem:arithmetic-signed-theory",
+    "end": 375,
+    "proof_start": 376,
+    "proof_end": 413
+  },
+  {
+    "number": "8.10",
+    "environment": "corollary",
+    "file": "sections/08-essential-incompleteness-of-arithmetic.tex",
+    "start": 415,
+    "label": "cor:arithmetic-associated-categories",
+    "end": 450,
+    "proof_start": 451,
+    "proof_end": 488
+  },
+  {
+    "number": "9.1",
+    "environment": "lemma",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 55,
+    "label": "lem:miller-unanimity",
+    "end": 66,
+    "proof_start": 67,
+    "proof_end": 110
+  },
+  {
+    "number": "9.2",
+    "environment": "proposition",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 132,
+    "label": "prop:miller-category",
+    "end": 137,
+    "proof_start": 138,
+    "proof_end": 179
+  },
+  {
+    "number": "9.3",
+    "environment": "lemma",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 220,
+    "label": "lem:miller-cut-reduction",
+    "end": 225,
+    "proof_start": 226,
+    "proof_end": 295
+  },
+  {
+    "number": "9.4",
+    "environment": "corollary",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 297,
+    "label": "cor:miller-cuts-inseparable",
+    "end": 301,
+    "proof_start": 302,
+    "proof_end": 320
+  },
+  {
+    "number": "9.5",
+    "environment": "proposition",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 352,
+    "label": "prop:miller-theory-realization",
+    "end": 367,
+    "proof_start": 368,
+    "proof_end": 479
+  },
+  {
+    "number": "9.6",
+    "environment": "lemma",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 481,
+    "label": "lem:miller-parameterized-deduction",
+    "end": 494,
+    "proof_start": 495,
+    "proof_end": 559
+  },
+  {
+    "number": "9.7",
+    "environment": "theorem",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 586,
+    "label": "thm:miller-incompleteness",
+    "end": 596,
+    "proof_start": 597,
+    "proof_end": 649
+  },
+  {
+    "number": "9.8",
+    "environment": "corollary",
+    "file": "sections/04-miller-sequences.tex",
+    "start": 658,
+    "label": "cor:miller-associated-categories",
+    "end": 682,
+    "proof_start": 683,
+    "proof_end": 710
+  },
+  {
+    "number": "10.1",
+    "environment": "proposition",
+    "file": "sections/09-three-point-space.tex",
+    "start": 201,
+    "label": "prop:endpoint",
+    "end": 209,
+    "proof_start": 210,
+    "proof_end": 233
+  },
+  {
+    "number": "10.2",
+    "environment": "proposition",
+    "file": "sections/09-three-point-space.tex",
+    "start": 359,
+    "label": "prop:fork-syntax-initial",
+    "end": 363,
+    "proof_start": 364,
+    "proof_end": 379
+  },
+  {
+    "number": "10.3",
+    "environment": "proposition",
+    "file": "sections/09-three-point-space.tex",
+    "start": 475,
+    "label": "prop:fork-proof-initial",
+    "end": 480,
+    "proof_start": 481,
+    "proof_end": 500
+  },
+  {
+    "number": "10.4",
+    "environment": "theorem",
+    "file": "sections/09-three-point-space.tex",
+    "start": 506,
+    "label": "thm:fork-proof-presentation",
+    "end": 515,
+    "proof_start": 516,
+    "proof_end": 544
+  },
+  {
+    "number": "10.5",
+    "environment": "theorem",
+    "file": "sections/09-three-point-space.tex",
+    "start": 561,
+    "label": "thm:cosheaf-observation",
+    "end": 579,
+    "proof_start": 580,
+    "proof_end": 607
+  },
+  {
+    "number": "10.6",
+    "environment": "corollary",
+    "file": "sections/09-three-point-space.tex",
+    "start": 609,
+    "label": "cor:cosheaf-essential-incompleteness",
+    "end": 613,
+    "proof_start": 614,
+    "proof_end": 622
+  },
+  {
+    "number": "10.7",
+    "environment": "proposition",
+    "file": "sections/09-three-point-space.tex",
+    "start": 633,
+    "label": "prop:fork-first-order-realization",
+    "end": 638,
+    "proof_start": 639,
+    "proof_end": 701
+  },
+  {
+    "number": "10.8",
+    "environment": "proposition",
+    "file": "sections/09-three-point-space.tex",
+    "start": 716,
+    "label": "prop:fork-first-order-conservative",
+    "end": 726,
+    "proof_start": 727,
+    "proof_end": 811
+  },
+  {
+    "number": "10.9",
+    "environment": "corollary",
+    "file": "sections/09-three-point-space.tex",
+    "start": 815,
+    "label": "cor:fork-associated-theories",
+    "end": 838,
+    "proof_start": 839,
+    "proof_end": 860
+  },
+  {
+    "number": "A.1",
+    "environment": "definition",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 151,
+    "label": "def:categorical-syntax",
+    "end": 156
+  },
+  {
+    "number": "A.2",
+    "environment": "definition",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 226,
+    "label": "def:sentence-object",
+    "end": 234
+  },
+  {
+    "number": "A.3",
+    "environment": "proposition",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 292,
+    "label": "prop:categorical-substitution",
+    "end": 305,
+    "proof_start": 306,
+    "proof_end": 314
+  },
+  {
+    "number": "A.4",
+    "environment": "definition",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 401,
+    "label": "def:deductively-closed",
+    "end": 408
+  },
+  {
+    "number": "A.5",
+    "environment": "theorem",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 419,
+    "label": "thm:least-theorem-subobject",
+    "end": 424,
+    "proof_start": 425,
+    "proof_end": 449
+  },
+  {
+    "number": "A.6",
+    "environment": "theorem",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 515,
+    "label": "thm:first-order-theory",
+    "end": 527,
+    "proof_start": 528,
+    "proof_end": 531
+  },
+  {
+    "number": "A.7",
+    "environment": "lemma",
+    "file": "appendices/a-syntax-and-theories.tex",
+    "start": 541,
+    "label": "lem:range-regular-image",
+    "end": 549,
+    "proof_start": 550,
+    "proof_end": 562
+  },
+  {
+    "number": "B.1",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 9,
+    "label": "prop:fork-cosheaves",
+    "end": 15,
+    "proof_start": 16,
+    "proof_end": 42
+  },
+  {
+    "number": "B.2",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 81,
+    "label": "prop:fork-total",
+    "end": 87,
+    "proof_start": 88,
+    "proof_end": 131
+  },
+  {
+    "number": "B.3",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 135,
+    "label": "prop:fork-structure",
+    "end": 146,
+    "proof_start": 147,
+    "proof_end": 223
+  },
+  {
+    "number": "B.4",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 225,
+    "label": "prop:fork-local",
+    "end": 227,
+    "proof_start": 228,
+    "proof_end": 249
+  },
+  {
+    "number": "B.5",
+    "environment": "lemma",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 255,
+    "label": "lem:fork-dominance",
+    "end": 258,
+    "proof_start": 259,
+    "proof_end": 274
+  },
+  {
+    "number": "B.6",
+    "environment": "lemma",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 305,
+    "label": "lem:fork-frames",
+    "end": 308,
+    "proof_start": 309,
+    "proof_end": 338
+  },
+  {
+    "number": "B.7",
+    "environment": "theorem",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 360,
+    "label": "thm:fork-turing",
+    "end": 374,
+    "proof_start": 376,
+    "proof_end": 481
+  },
+  {
+    "number": "B.8",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 485,
+    "label": "prop:fork-recursion",
+    "end": 492,
+    "proof_start": 493,
+    "proof_end": 529
+  },
+  {
+    "number": "B.9",
+    "environment": "corollary",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 531,
+    "label": "cor:fork-karoubi",
+    "end": 536,
+    "proof_start": 537,
+    "proof_end": 564
+  },
+  {
+    "number": "B.10",
+    "environment": "proposition",
+    "file": "appendices/b-three-point-cosheaves.tex",
+    "start": 585,
+    "label": "prop:fork-distinction",
+    "end": 589,
+    "proof_start": 590,
+    "proof_end": 609
+  },
+  {
+    "number": "C.1",
+    "environment": "proposition",
+    "file": "appendices/c-section-lifting.tex",
+    "start": 54,
+    "label": "prop:missing-lift",
+    "end": 79,
+    "proof_start": 81,
+    "proof_end": 221
+  },
+  {
+    "number": "D.1",
+    "environment": "theorem",
+    "file": "appendices/d-faithful-family.tex",
+    "start": 21,
+    "label": "thm:faithful",
+    "end": 29,
+    "proof_start": 30,
+    "proof_end": 61
+  },
+  {
+    "number": "D.2",
+    "environment": "corollary",
+    "file": "appendices/d-faithful-family.tex",
+    "start": 95,
+    "label": "cor:pair",
+    "end": 107,
+    "proof_start": 108,
+    "proof_end": 121
+  }
+]
