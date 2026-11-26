@@ -35,7 +35,7 @@ $$
 a\le \eta_X^*T^+,\qquad b\le \eta_X^*T^-,
 $$
 
-there is a least one, denoted by $T_{a,b}$. An assignment $f:X\to S(Q)$ extends to a unique theory morphism $(P_X,T_{a,b})\to(Q,U)$ if and only if
+there is a least one, denoted by $T_{a,b}$. For every assignment $f:X\to S(Q)$, let $\widehat f:P_X\to Q$ be the unique translation extending $f$. It is a theory morphism $(P_X,T_{a,b})\to(Q,U)$ if and only if
 
 $$
 a\le f^*U^+,\qquad b\le f^*U^-.
@@ -43,14 +43,20 @@ $$
 
 **Proof.** The only possible translation is $\widehat f$, since $S(\widehat f)\eta_X=f$. Put $W=\widehat f^*U$. By the inverse-image equations, $\eta_X^*W^+=f^*U^+$ and $\eta_X^*W^-=f^*U^-$. If the two bounds hold, leastness gives $T_{a,b}\le W$. Conversely, if $T_{a,b}\le W$, monotonicity and the defining bounds for $T_{a,b}$ give both bounds for $W$. Thus $\widehat f$ is a theory morphism exactly under the stated conditions. $\square$
 
-For the adjunction, take triples $A=(X,a,b)$ as objects, with morphisms $k:(X,a,b)\to(Y,c,d)$ given by morphisms $k:X\to Y$ satisfying $a\le k^*c$ and $b\le k^*d$. The functor $J$ sends $(Q,U)$ to $(S(Q),U^+,U^-)$ and a theory morphism $\sigma$ to $S(\sigma)$. The theorem says precisely that
+**The comma category.** Write $\mathsf{Th}$ for the category of theories and theory morphisms above. In $\mathsf{Pair}(\mathcal C)$ an object is a triple $(X,a,b)$ of an object and two subobjects. A morphism $(X,a,b)\to(Y,c,d)$ is a morphism $k:X\to Y$ with $a\le k^*c$ and $b\le k^*d$. Inverse images compose, so identities and composition are those of $\mathcal C$.
 
-$$
-\bigl((P_X,T_{a,b}),\eta_X\bigr)
-\quad\text{is initial in}\quad A\downarrow J.
-$$
+Define $J:\mathsf{Th}\to\mathsf{Pair}(\mathcal C)$ by $J(Q,U)=(S(Q),U^+,U^-)$ and $J(\sigma)=S(\sigma)$. Indeed, $U\le\sigma^*U'$ gives $U^\pm\le(\sigma^*U')^\pm=S(\sigma)^*U'^\pm$, and $S$ preserves identities and composition.
 
-An object of this comma category is a theory $(Q,U)$ together with an assignment $f:A\to J(Q,U)$. If the required free presentations and least theories are chosen for every triple, the assignment $A\mapsto(P_X,T_{a,b})$ defines a left adjoint to $J$. Its unit at $A$ is represented by $\eta_X$. Its counit at $(Q,U)$ extends $1_{S(Q)}$.
+Fix $A=(X,a,b)$. The category $A\downarrow J$ has the following objects and morphisms.
+
+- An object $((Q,U),f)$ consists of a theory and a morphism $f:X\to S(Q)$ with $a\le f^*U^+$ and $b\le f^*U^-$.
+- A morphism $((Q,U),f)\to((Q',U'),f')$ is a translation $\sigma:Q\to Q'$ satisfying $U\le\sigma^*U'$ and $S(\sigma)f=f'$. Identities and composition are inherited from $\mathsf{Th}$.
+
+**Initiality.** The defining bounds for $T_{a,b}$ make $((P_X,T_{a,b}),\eta_X)$ an object of $A\downarrow J$. For each object $((Q,U),f)$ the theorem gives a theory morphism $\widehat f$ out of $(P_X,T_{a,b})$. It satisfies $S(\widehat f)\eta_X=f$, and this equation determines it uniquely. Hence $((P_X,T_{a,b}),\eta_X)$ is initial.
+
+Choosing the indicated free presentations and least theories for every triple gives a left adjoint $\Sigma$ to $J$. On $k:(X,a,b)\to(Y,c,d)$ its value is the translation extending $\eta_Y k$. The unit at $A$ is $\eta_X$. The counit at $(Q,U)$ is the translation $\varepsilon_Q:P_{S(Q)}\to Q$ extending $1_{S(Q)}$.
+
+**Restriction to consistent theories.** Suppose subobjects have pullback-stable bottom and finite meets. Call $U$ consistent when $U^+\wedge U^-=\bot$. Restrict $\mathsf{Th}$ to consistent theories and $\mathsf{Pair}(\mathcal C)$ to disjoint pairs whose generated theories are consistent, taking full subcategories. For consistent $U$, put $(c,d)=(U^+,U^-)$. The pair is disjoint. The counit inequality $T_{c,d}\le\varepsilon_Q^*U$ bounds the generated theory by a consistent one, since inverse image preserves disjointness. Monotonicity of the two subobjects implies consistency of $T_{c,d}$. Thus $J$ takes values in the restricted category. The same hom-set bijection restricts to the two full subcategories.
 
 ## 3. The additional hypotheses for inseparability
 
@@ -60,13 +66,13 @@ For any consistent theory $T$, essential incompleteness is equivalent to the abs
 
 Now let $a,b$ be disjoint and suppose $T_{a,b}$ is consistent. A **separator** is a complementary pair $c,d$ of subobjects of $X$ with $a\le c$ and $b\le d$. If $(a,b)$ has no separator, there can be no consistent complete target for $T_{a,b}$. An assignment $f$ into such a target would make $f^*U^+,f^*U^-$ a separator.
 
+Every consistent theory receiving a morphism from $(P_X,T_{a,b})$ is essentially incomplete when $(a,b)$ is inseparable, since any consistent complete extension of that theory would again receive a morphism from $(P_X,T_{a,b})$.
+
 For the converse one needs a realization of a separator. Assume that from a separator one can construct a consistent complete theory $U$ and an assignment $f$ satisfying the two signed bounds. Under this additional hypothesis the following are equivalent.
 
 1. The pair $(a,b)$ is inseparable.
 2. $T_{a,b}$ is essentially incomplete.
 3. No consistent complete theory receives a theory morphism from $(P_X,T_{a,b})$.
-
-Every consistent theory receiving a morphism from $(P_X,T_{a,b})$ is then essentially incomplete, since any consistent complete extension of that theory would again receive a morphism from $(P_X,T_{a,b})$.
 
 The realization hypothesis can fail even when the adjunction exists. Let $S$ forget the distinguished point of a pointed set. The free pointed set on $X$ is $X+\{*\}$. Take as theories on a pointed set all pairs of subsets that omit its distinguished point, ordered by componentwise inclusion. Pointed maps preserve this condition under inverse image. A pair of subsets of $X$, included in the first summand of $X+\{*\}$, is already its least compatible theory. Every disjoint pair $(a,b)$ of subsets of $X$ has the separator $(a,X\setminus a)$, yet no theory is complete, since neither subset contains the distinguished point.
 
@@ -80,13 +86,29 @@ $$
 
 Given an assignment $f:X\to Y$ to an algebra $(Y,n,h)$, initiality applied to $[f,n,h]$ gives the unique morphism $S_X\to Y$ preserving the two operations and extending $f$. Thus $\eta_X=\theta_X$. The structure morphism of the initial algebra is an isomorphism. In the manuscript’s extensive category, the composite of the first coproduct injection with this isomorphism is the monomorphism representing the subobject of **propositional atoms**. This construction requires neither variable names nor decidable equality on $X$.
 
-With the unary and binary constructors interpreted as negation and implication, Appendix A.6 constructs the least deductively closed theory containing the atoms specified by $a$ and the negations of the atoms specified by $b$, assuming the relevant initial derivation algebra. For a closed theory $U$ in a target with negation $\nu$, the two subobjects in §2 are $U$ and $\nu^*U$. [Appendix A.6](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/appendices/a-syntax-and-theories.tex#L596-L623)
+**Theories on an arbitrary target algebra.** Work in a regular category with disjoint, pullback-stable finite coproducts. On $(Y,n,h)$ write $\neg p=n(p)$ and $p\Rightarrow q=h(p,q)$ in expressions for morphisms. Let $\lambda_Y:Y^2+Y^3+Y^2\to Y$ have components
+$$
+p\Rightarrow(q\Rightarrow p),\qquad
+(p\Rightarrow(q\Rightarrow r))\Rightarrow((p\Rightarrow q)\Rightarrow(p\Rightarrow r)),\qquad
+(\neg q\Rightarrow\neg p)\Rightarrow(p\Rightarrow q).
+$$
+A subobject $U\hookrightarrow Y$ is a theory when $\lambda_Y$ factors through $U$ and $\pi_1^*U\wedge h^*U\le\pi_2^*U$ in $\operatorname{Sub}(Y^2)$. The inequality expresses modus ponens. If $g:Y\to Z$ preserves the operations, it commutes with each scheme, so $\lambda_Y$ factors through $g^*U$ for each theory $U$ on $Z$. Pulling the modus ponens inequality back along $g\times g$ proves it for $g^*U$. The theorem and refutation subobjects are $U$ and $n_Y^*U$. Since $g n_Y=n_Z g$, one has $n_Y^*g^*U=g^*n_Z^*U$. On the free algebra, the initial derivation algebra of Appendix A.6 gives the least closed theory containing the positive atoms specified by $a$ and the negations specified by $b$. This supplies all the data of §2. [Appendix A.6](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/b6ed18f59d04c3fbc0368c9559009ba74c4d1d67/manuscript/latex/appendices/a-syntax-and-theories.tex#L596-L623)
+
+**Realization of a propositional separator.** A complementary pair containing $a,b$, respectively, gives a decomposition $X\cong C+D$. Let $2=1+1$ with injections $\mathbf f,\mathbf t$. Let $d:X\to2$ be true on $C$ and false on $D$. Initiality gives the valuation $v:S_X\to2$ extending $d$ and preserving Boolean negation and implication, by the algebra $[d,\neg_2,{\Rightarrow}_2]:X+2+2^2\to2$. The true summand is a theory on $2$ because each scheme is true and modus ponens preserves truth. Its inverse image $v^*\mathbf t$ is therefore a theory on $S_X$. Its refutation subobject is $v^*\mathbf f$. These two subobjects are complementary, and $v\theta_X=d$ gives the bounds on $a,b$. Thus $v^*\mathbf t$ is a consistent complete extension of $T_{a,b}$. No variable object enters this construction.
 
 **First-order sentences.** Let the base category be regular with disjoint, pullback-stable finite coproducts. Take first-order presentations with the same object $V$ of variable names and let $S$ send a presentation to its sentence object. In the free presentation on $X$, the only nonlogical symbols are nullary predicates. Their formula constructor factors through the sentence object because their free-variable lists are empty. The resulting morphism $\theta_X:X\to S_X$ forms the generating atomic sentences. A translation can send each such atom to an arbitrary target sentence.
 
 Here $V$ has **decidable equality**. Its diagonal is the inverse image of the true injection $1\to 1+1$ under a morphism $V\times V\to 1+1$. The named-variable syntax uses this morphism in computing free-variable lists and admissible substitution. The parameter-stable syntax and list algebras yield the unique extension of an assignment. Initial derivation algebras for axiom subobjects give the generated theories, and inverse images along logical translations preserve closed theories. Writing $i_a,i_b$ for inclusions representing the subobjects of $X$, the least theory of §2 is therefore
 $\operatorname{Gen}_{P_X}\bigl(\operatorname{im}(\theta_X i_a)\vee\operatorname{im}(\nu_X\theta_X i_b)\bigr)$. [Appendix A.1](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/appendices/a-syntax-and-theories.tex#L85-L101) · [Theorem 4.7 and its proof](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/sections/03b-internal-adjunctions.tex#L376-L475)
 
-Two further steps give the manuscript’s criterion. First, $J$ sends a consistent theory to a disjoint pair whose generated theory is consistent. For consistent $U$, pullback along the interpretation extending $1_{S(Q)}$ gives a consistent closed theory containing the signed axioms of $(U,\nu^*U)$. Second, a separator determines a Boolean valuation of the free language whose true sentences form a consistent complete extension of $T_{a,b}$. This is the realization needed in §3. The comparison theorem for recursion categories supplies examples of inseparable pairs. [Boolean extension in Corollary 4.8](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/sections/03b-internal-adjunctions.tex#L498-L539) · [Diagonal pairs in Corollary 3.3](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/sections/03-sections-and-inseparability.tex#L110-L123)
+For first-order realization the separator again gives $d:X\to2$. Corollary 4.8 interprets terms in the terminal object, equality by $\mathbf t$ and universal quantification by $\pi_2:V\times2\to2$. The proof verifies substitution and the quantifier and equality axioms before restricting the valuation to sentences. The true and false fibres give the complementary theorem and refutation subobjects required in §3. The comparison theorem then supplies examples of inseparable pairs. [Boolean extension in Corollary 4.8](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/sections/03b-internal-adjunctions.tex#L498-L539) · [Diagonal pairs in Corollary 3.3](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/manuscript/latex/sections/03-sections-and-inseparability.tex#L110-L123)
 
 The current Lean development proves the assignment criterion for arbitrary pairs of subobjects in the named-variable calculus and the adjunction for consistent theories. The abstract theorem of §2 is stated here for review. [Lean assignment criterion](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderGeneration.lean#L85-L106) · [Lean adjunction](https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/afd279a4d6723838132a4f1c45ba559f3bd93ca5/Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean#L24-L91)
+
+## 5. Antecedents
+
+**Universal morphisms and adjunctions.** The comma category in §2 is the category of elements of the covariant functor $(Q,U)\mapsto\operatorname{Hom}_{\mathsf{Pair}(\mathcal C)}(A,J(Q,U))$. Its initial object represents this functor, as in Riehl, *Category Theory in Context*, Proposition 2.4.8. Turkenburg, Beohar, Kupke and Rot, *Forward and Backward Steps in a Fibration*, Lemma 10, relate lifts of a base adjunction to left adjoints on fibres under their Assumption 2 (complete lattices and meet-preserving reindexing). The extraction of theorem and refutation subobjects commutes with inverse image, just as their right adjoint must commute with reindexing. The proof in §2 asks only for a least compatible theory on each free presentation. [Riehl](https://math.jhu.edu/~eriehl/context.pdf) · [Turkenburg et al.](https://doi.org/10.4230/LIPIcs.CALCO.2023.6)
+
+**Logical instances.** The theories on arbitrary propositional algebras in §4 are the internal form of deductive filters in logical matrix semantics. Voutsadakis proves a free-signature adjunction allowing relation symbols to be interpreted by formulas (Theorem 7). Its objects are signatures. Blasio, Caleiro and Marcos study theories with assertions and denials (§4.1), where denial is a separate component. Here the negative component of a closed theory $U$ is determined by negation as $\nu^*U$. [Jansana, *Algebraic Propositional Logic*](https://plato.stanford.edu/entries/logic-algebraic-propositional/) · [Voutsadakis](https://doi.org/10.1007/s00153-004-0266-7) · [Blasio, Caleiro and Marcos](https://arxiv.org/abs/1903.02338)
+
+**Inseparability.** Smullyan, *Theory of Formal Systems*, Chapter III, Theorem 23(b), pp. 59–60, gives the recursive inseparability of the theorem and refutation sets for a consistent theory strongly separating a recursively inseparable pair. Theorem 22, p. 59, obtains recursive inseparability of the provable and refutable sentence codes when every recursive set is definable in a consistent arithmetical theory. A related explicit construction occurs in *There are no minimal essentially undecidable theories*: the proof of Theorem 4.5 adds sentences $A_n$ on one side of a recursively inseparable pair and their negations on the other side to a fixed theory of an equivalence relation. More directly, the variant proof in §4.4 forms this theory for arbitrary c.e. sets. For disjoint sets the theory is consistent, and it is essentially undecidable exactly when the pair is recursively inseparable. Theorem 2.2(i) gives transfer of essential undecidability under interpretation. These are external computability-theoretic results. The works checked do not state the internal criterion of §3 together with the separator realization of §4. [Published paper](https://doi.org/10.1093/logcom/exad005) · [Theorems and proofs](https://arxiv.org/pdf/2207.08174)

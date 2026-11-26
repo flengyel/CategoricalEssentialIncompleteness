@@ -19,9 +19,9 @@
     },
     {
       "path": "manuscript/latex/appendices/a-syntax-and-theories.tex",
-      "git_blob": "60cab41c3c89ab9dc90696f74ebe688e959f786d",
-      "sha256": "3671096ad7d903709b6fda24aa3ea5bd79d3f9e10571e9c54b7158ba65681a60",
-      "size": 27607
+      "git_blob": "758bf1cf1b348f6612074ad197a97b6bda125bd0",
+      "sha256": "3b1bd976c2fbf090e7a0b96d54e1ea79f0eb98e5378d746fd8021deeda73c270",
+      "size": 27657
     },
     {
       "path": "manuscript/latex/appendices/b-three-point-cosheaves.tex",
@@ -163,21 +163,21 @@
     },
     {
       "path": "manuscript/latex/main.pdf",
-      "git_blob": "c1eee91d2aeae9bdef9a1f45e264a9a2e1b54683",
-      "sha256": "4439d9e24900fdbebbc35f54395c6e6e01884bde6e851f49d3f3a823dbbefee7",
-      "size": 1134966
+      "git_blob": "0c90d85756b7491f1a7735413cf9997fcf7dfe50",
+      "sha256": "59fccb1bff9b284bbde5ec2cf91ff794ef00af4d72a7cfacbaee8863a7667571",
+      "size": 1134986
     },
     {
       "path": "manuscript/logical_consequence_and_essential_incompleteness_v94.pdf",
-      "git_blob": "c1eee91d2aeae9bdef9a1f45e264a9a2e1b54683",
-      "sha256": "4439d9e24900fdbebbc35f54395c6e6e01884bde6e851f49d3f3a823dbbefee7",
-      "size": 1134966
+      "git_blob": "0c90d85756b7491f1a7735413cf9997fcf7dfe50",
+      "sha256": "59fccb1bff9b284bbde5ec2cf91ff794ef00af4d72a7cfacbaee8863a7667571",
+      "size": 1134986
     },
     {
       "path": "manuscript/logical_consequence_v94_source.zip",
-      "git_blob": "44ef7e7351521c7e377dbbaa325392c755ef1cec",
-      "sha256": "ae72eca75bbc183da4f1c9c3ad85902d534a6eebf30a37e026cc6618badc6973",
-      "size": 148318
+      "git_blob": "72f0ad62f1800f40a352f3a3a52b8e9f41275fad",
+      "sha256": "408f90cfba811e90a1f39e404b6f3e1c0143e4911dd9bb08433acbef4439d264",
+      "size": 148475
     }
   ]
 }

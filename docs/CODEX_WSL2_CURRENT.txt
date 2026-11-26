@@ -23,11 +23,14 @@ slice and the hypotheses for the constant-family equivalence, and the conditions
 and Corollary 3.3. Check the citations to Smullyan, Chapter III, Theorem 22 (p. 59) and
 Theorem 23(b) (pp. 59–60) in §§1 and 8. These passages are present in v94.
 
+Check Appendix A.6 in the candidate PDF and source ZIP: the propositional generator object is X;
+V denotes the first-order variable object. The notation change postdates the pinned replay.
+
 Apply the following v94 findings before freezing the candidate.
 * In Appendix E.2 keep the registry citation for Corollary 4.8 and the Boolean-assignment theorem.
   In E.3 keep the registry citation for the existential consequence of Lemma 8.9 and its witness
   in CEIPalomar/Solution.lean. Add a distinct direct link for the full lemma under consistency
-  of PA: Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean, lines 30–43
+  of PA: Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean, lines 30–44
   (ArithmeticSignedTheory.printed_statement). Use the candidate tag for the Lean links.
 * Prepare the Palomar abstract for this edition in docs/PALOMAR_ABSTRACT.txt and in
   project.description of Lean/formalization.yaml. Use the approved v94 manuscript wording
