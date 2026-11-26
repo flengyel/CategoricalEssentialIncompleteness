@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalInterpretation
 
-/-! # Statement checks for nullary logical interpretation -/
+/-! # Statement checks for logical translations interpreting propositional atoms -/
 
 @[expose] public section
 

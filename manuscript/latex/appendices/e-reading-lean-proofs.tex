@@ -15,14 +15,14 @@ The bijection of Theorem~\ref{thm:free-first-order-adjunction} is
 \]
 Given a translation $\sigma:\Sigma_{\mathrm{FO}}(X,a,b)\to(P,T)$, \texttt{restrict}
 takes its sentence morphism $\sigma_S:S_X\to S_P$ and composes it with
-the atomic sentence morphism $\theta_X:X\to S_X$. For every
-$x:W\to X$, the atom with index $x$ is $\theta_Xx:W\to S_X$ and
-its translation is $\sigma_S\theta_Xx:W\to S_P$. Lean writes
+the atomic sentence morphism $\theta_X:X\to S_X$. For each generalized
+element $x:W\to X$, the translation sends the atomic sentence
+$\theta_Xx:W\to S_X$ to $\sigma_S\theta_Xx:W\to S_P$. Lean writes
 $\sigma_S\theta_X$ as $\theta_X\mathbin{\gg}\sigma_S$.
 Conversely, \texttt{extend} takes an assignment $f:X\to S_P$ satisfying
 $a\leq f^*T$ and $b\leq f^*(\nu_P^*T)$, where $\nu_P$ denotes negation.
 The interpretation $\widehat f$ sends each variable to its variable term
-in $P$ and each generating predicate to the closed sentence assigned by $f$.
+in $P$ and each propositional atom to the closed sentence assigned by $f$.
 Substitution fixes these sentences.
 Induction on formulas shows that the interpretation commutes with
 admissible substitution. The inequalities
@@ -35,7 +35,7 @@ $\widehat f$ recovers $f$ by its defining equation
 $\widehat f_S\theta_X=f$. Restriction of the identity on
 $\Sigma_{\mathrm{FO}}(X,a,b)$ gives the unit $\theta_X$. Extension of the
 identity on $J_{\mathrm{FO}}(P,T)$ gives the counit, which interprets the
-predicate indexed by a sentence $\varphi$ as $\varphi$
+propositional atom $\theta_{S_P}(\varphi)$ as the sentence $\varphi$
 itself.\footnote{\CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L27-L56}{The hom-set bijection}
 and \CEIproof{CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction}{L58-L91}{its naturality, unit and counit}.}
 

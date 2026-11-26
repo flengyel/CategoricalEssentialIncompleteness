@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebra
 
-/-! # Constructor equations of nullary syntax algebra morphisms -/
+/-! # Constructor equations for algebra morphisms from syntax with propositional atoms -/
 
 @[expose] public section
 noncomputable section

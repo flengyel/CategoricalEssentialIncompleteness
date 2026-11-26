@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalEquality
 
-/-! # Statement checks for nullary logical equality -/
+/-! # Statement checks for equality under interpretation of propositional atoms -/
 
 @[expose] public section
 

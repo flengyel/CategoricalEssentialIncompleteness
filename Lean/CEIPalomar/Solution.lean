@@ -21,7 +21,7 @@ variable [Regular D] [FinitaryExtensive D]
 
 open CategoricalEssentialIncompleteness CategoricalEssentialIncompleteness.V46
 
-/-- The calculus of the family of nullary first-order presentations `F` at `X`. -/
+/-- The first-order calculus of `F` with propositional atoms specified by `X`. -/
 def ofNullaryPresentation {V : D} (F : NullaryPresentations V) (X : D) : Calculus X where
   formula := (F.syntaxData X).algebra.a.2
   sentence := (F.syntaxData X).sentenceObject
@@ -37,8 +37,8 @@ def ofNullaryPresentation {V : D} (F : NullaryPresentations V) (X : D) : Calculu
 abbrev ofNative {V : D} (F : NullaryPresentations V) (X : D) : Calculus X :=
   ofNullaryPresentation F X
 
-/-- `P` is the calculus at `X` of a family of nullary first-order presentations
-with variable object `V`. -/
+/-- `P` belongs to a family of first-order presentations with variable object `V`.
+At `X`, the only nonlogical symbols are the propositional atoms specified by `X`. -/
 def IsNullaryCalculus {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
     (V : D) {X : D} (P : Calculus X) : Prop :=
   ∃ F : NullaryPresentations V, P = ofNullaryPresentation F X
@@ -130,8 +130,8 @@ theorem pa_diagonal_witness :
     (ArithmeticSignedTheoryTruth.signed_theory_consistent F)).mpr hi⟩
 
 /-- In some regular category with disjoint, pullback-stable finite coproducts,
-there is a nullary first-order calculus with an inseparable pair of subobjects
-of its index object. The signed theory of this pair is essentially incomplete. -/
+there is a first-order calculus with propositional atoms specified by an object `X`.
+An inseparable pair of subobjects of `X` generates an essentially incomplete theory. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext

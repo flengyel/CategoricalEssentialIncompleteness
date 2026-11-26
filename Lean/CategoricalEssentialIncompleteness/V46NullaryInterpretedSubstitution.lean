@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46NullarySubstitutionHom
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionValues
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxParameterConstructors
 
-/-! # Substitution after interpreting nullary predicates by sentences -/
+/-! # Substitution after interpreting propositional atoms by sentences -/
 
 @[expose] public section
 

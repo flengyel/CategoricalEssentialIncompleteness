@@ -19,8 +19,8 @@ example (z : Point) : (numbers z).obj.base = Uniform.N (Uniform.Family.ofPoint z
 example (z : Point) : (numbers z).obj.domain.hom =
     𝟙 (Uniform.N (Uniform.Family.ofPoint z)) := numbers_domain z
 
-/-- Arbitrary nullary labels, the numerical variable object, and all bounded signatures
-occur before every parameter and axiom subobject. -/
+/-- Each object `X` specifies propositional atoms for syntax with numerical variables.
+Parameterized derivations exist for these presentations and for all bounded signatures. -/
 example (z : Point) :
     (∀ X : Total.CanonicalTotal z,
       Nonempty (CategoricalSyntax (numbers z) (fun _ => ⊥_ (Total.CanonicalTotal z))

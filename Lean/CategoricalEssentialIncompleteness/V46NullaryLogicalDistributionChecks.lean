@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalDistribution
 
-/-! # Statement checks for nullary logical distribution -/
+/-! # Statement checks for quantifier distribution under interpretation of propositional atoms -/
 
 @[expose] public section
 

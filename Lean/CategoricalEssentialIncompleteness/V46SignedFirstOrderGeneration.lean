@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryPresentationAdjunction
 
-/-! # Generation from positive and negative nullary axioms -/
+/-! # Generating a first-order theory by asserting and refuting propositional atoms -/
 
 @[expose] public section
 

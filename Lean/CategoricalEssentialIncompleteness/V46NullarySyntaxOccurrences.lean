@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NullarySyntaxInterpretation
 public import CategoricalEssentialIncompleteness.V46StableListComparison
 public import CategoricalEssentialIncompleteness.V46VariableTests
 
-/-! # Occurrence lists under a nullary-predicate interpretation -/
+/-! # Occurrence lists under interpretation of propositional atoms -/
 
 @[expose] public section
 

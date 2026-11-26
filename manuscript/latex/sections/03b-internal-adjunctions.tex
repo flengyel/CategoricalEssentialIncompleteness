@@ -331,17 +331,23 @@ reduces an inseparable pair to its theorem and refutation subobjects
 (Corollary~\ref{cor:domain-incompleteness}).
 
 Fix the decidable variable object $V$ of
-Appendix~\ref{app:categorical-hypotheses}. Suppose that for every
-$X\in\mathcal D$ the first-order language whose only nonlogical
-symbols are nullary predicates indexed by $X$ has the syntax of
-Definition~\ref{def:categorical-syntax}, including initiality of the
-syntax and variable-list algebras in every parameter slice. For every
-axiom subobject of its sentence object, assume an initial derivation
-algebra as in Appendix~\ref{app:first-order-derivations}. Write
-$P_X$ for this presentation. Its terms are variables. A generalized index
-$x:W\to X$ determines the atomic sentence $\theta_Xx:W\to S_X$,
-where $\theta_X:X\to S_X$ is the atomic sentence constructor.
-For $h:W'\to W$, the sentence at $xh$ is $(\theta_Xx)h$.
+Appendix~\ref{app:categorical-hypotheses}. For each $X\in\mathcal D$,
+take the presentation $P_X$ with $\Pi_0=X$ and all other signature
+objects $\Sigma_k,\Pi_k$ initial. Assume that its syntax and
+variable-list algebras of Definition~\ref{def:categorical-syntax}
+are initial in every parameter slice and that it has an initial
+derivation algebra for each axiom subobject of its sentence object
+(Appendix~\ref{app:first-order-derivations}).
+
+The terms of $P_X$ are variables. Since $\Tm_X^0=1$, the relation
+constructor at arity $0$ in Appendix~\ref{app:first-order-syntax}
+gives $r_0:X\to\Phi_X$. Its values are the propositional atoms of $P_X$.
+Their free-variable lists are empty, so $r_0$ factors through the
+sentence inclusion $j_X:S_X\hookrightarrow\Phi_X$ as
+$j_X\theta_X$, with $\theta_X:X\to S_X$.
+A generalized element $x:W\to X$ gives the sentence
+$\theta_Xx:W\to S_X$. For $h:W'\to W$, the sentence at $xh$ is
+$(\theta_Xx)h$.
 For disjoint subobjects $a,b\hookrightarrow X$, with inclusions
 $i_a,i_b$, put
 \[
@@ -369,7 +375,7 @@ $\sigma_S$.
 Voutsadakis gives an adjunction for relational signatures in which
 morphisms substitute formulas for relation symbols
 \cite[Theorem~7]{Voutsadakis}. Here an assignment $f:X\to S_P$ of
-sentences to nullary predicates extends to a theory morphism
+sentences to propositional atoms extends to a theory morphism
 $(P_X,T_{a,b})\to(P,T)$ precisely when $a\leq f^*T$ and
 $b\leq f^*\nu_P^*T$.
 
@@ -397,14 +403,15 @@ The counit $\Sigma_{\mathrm{FO}}J_{\mathrm{FO}}(P,T)\to(P,T)$
 is the translation extending $1_{S_P}:S_P\to S_P$.
 \end{theorem}
 \begin{proof}
-Let $f:X\to S_P$ assign a sentence to each nullary predicate, and
+Let $f:X\to S_P$ assign a sentence to each propositional atom, and
 interpret variables by $V\to\Tm_P$. Initiality of the free syntax
 gives a unique term and formula interpretation $\widehat f$.
 Let $\ell:W_X\xrightarrow{\sim}W_P$ be the unique isomorphism
 of the two initial variable-list algebras. Write
 $\FV_X:\Phi_X\to W_X$ and $\FV_P:\Phi_P\to W_P$ for the
 free-variable occurrence morphisms. Since $f$ takes values in
-sentences, each interpreted nullary predicate has empty occurrence list.
+sentences, the interpretation of each propositional atom has an empty
+occurrence list.
 At a quantifier, $\ell$ commutes with deletion of the bound variable;
 at equality and implication it commutes with concatenation.
 The occurrence folds therefore give
@@ -417,7 +424,7 @@ $y=x$ retains the quantified formula. On the branch $y\ne x$,
 membership in the occurrence lists is preserved by $\ell$.
 Hence the two interpretations give the same values for the tests
 $x\in\FV_X(\varphi)$ and $y\in\FV_{\Tm}(t)$ that determine
-capture in~\eqref{eq:quantifier-fold}. At a nullary predicate,
+capture in~\eqref{eq:quantifier-fold}. At a propositional atom,
 substitution fixes its interpreting sentence by the absent-variable
 identity of Appendix~\ref{app:substitution}. At an equality $u=v$,
 substitution acts on the two terms. Put $E_X=V\times\Tm_X$,
@@ -441,7 +448,7 @@ by $\epsilon:P_{S_P}\to P$. The theory $\epsilon_S^*T$ is closed by
 Theorem~\ref{thm:translation-galois}. It is consistent because
 $\epsilon_S$ commutes with negation and its inverse-image map preserves
 meets and bottom. As $\epsilon_S\theta_{S_P}=1_{S_P}$, it contains
-the positive axioms indexed by $T$ and the negative axioms indexed
+the positive axioms specified by $T$ and the negative axioms specified
 by $\nu_P^*T$. Their generated theory is therefore consistent.
 This proves that $J_{\mathrm{FO}}(P,T)$ is an object of
 $\mathsf{Pair}_c(\mathcal D)$. For a theory morphism
@@ -468,7 +475,7 @@ both sides of
 \[
  \widehat{\rho_S f k}=\rho\,\widehat f\,\Sigma_{\mathrm{FO}}(k)
 \]
-take each generating predicate to the same sentence in $Q$.
+take each propositional atom to the same sentence in $Q$.
 Uniqueness of extension gives the equation, proving naturality in both
 variables. The same uniqueness gives the functor laws for
 $\Sigma_{\mathrm{FO}}$. For $J_{\mathrm{FO}}$ they follow from
@@ -503,7 +510,7 @@ Thus $[m,n]$ is an isomorphism. Let $\Two=1+1$ with injections
 $\mathbf{f},\mathbf{t}:1\to\Two$, in that order. The total morphism
 $d=[\mathbf{t}!_C,\mathbf{f}!_D][m,n]^{-1}:X\to\Two$
 is true on $a$ and false on $b$.
-Interpret the terms in $1$, the nullary predicates by $d$, equality
+Interpret the terms in $1$, the propositional atoms by $d$, equality
 by $\mathbf{t}:1\to\Two$ under $1\times1\cong1$, negation and
 implication by their Boolean truth functions, and universal quantification
 by the projection
@@ -514,8 +521,8 @@ the pairs of an original formula and a substitution result. In
 $\Phi_X\times(1+\Phi_X)$ take the coproduct of the failure summand
 $\Phi_X\times1$ and the equalizer of $v\pi_1,v\pi_2:\Phi_X^2\to\Two$
 in the success summand.
-The atomic results lie in this subobject because a nullary predicate
-retains its index and every equality has value $\mathbf t$. Negation and implication
+The atomic results lie in this subobject because substitution fixes every
+propositional atom and every equality has value $\mathbf t$. Negation and implication
 preserve equality of values whenever their substituted arguments succeed.
 At $\forall y\,\varphi$, substitution for $x$ returns the original
 formula when $y=x$. When $y\ne x$, a successful result has the value

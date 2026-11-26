@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebraHom
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxInterpretation
 
-/-! # Erasure from nullary first-order syntax to propositional operations -/
+/-! # Erasing quantifiers and equality from first-order syntax with propositional atoms -/
 
 @[expose] public section
 noncomputable section

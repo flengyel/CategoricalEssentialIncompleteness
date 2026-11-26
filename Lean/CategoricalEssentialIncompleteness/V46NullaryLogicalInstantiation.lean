@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullaryFormulaSubstitution
 public import CategoricalEssentialIncompleteness.V46LogicalSchemes
 
-/-! # Propositional and instantiation schemes under a nullary interpretation -/
+/-! # Propositional and instantiation schemes under interpretation of propositional atoms -/
 
 @[expose] public section
 

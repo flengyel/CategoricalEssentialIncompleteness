@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalInstantiation
 
-/-! # The quantifier-distribution scheme under a nullary interpretation -/
+/-! # The quantifier-distribution scheme under interpretation of propositional atoms -/
 
 @[expose] public section
 

@@ -9,7 +9,7 @@ public import CategoricalEssentialIncompleteness.V46SyntacticSyntaxPlain
 public import CategoricalEssentialIncompleteness.V46SyntacticDerivationInitial
 public import CategoricalEssentialIncompleteness.V46NullaryPresentationAdjunction
 
-/-! # Constructed arithmetic nullary presentations with subobject-indexed proofs -/
+/-! # First-order presentations with propositional atoms in the arithmetic category -/
 
 @[expose] public section
 noncomputable section
@@ -20,7 +20,7 @@ open CategoricalEssentialIncompleteness.V46.SyntacticPredicates
 namespace CategoricalEssentialIncompleteness.V46.SyntacticDerivation
 variable (T : ArithmeticTheory) [𝗣𝗔 ⪯ T]
 
-/-- Nullary syntax and its initial proof algebra at every axiom subobject. -/
+/-- Syntax with propositional atoms and an initial proof algebra for each axiom subobject. -/
 def nullaryPresentations (V : PredicateCategory T) : NullaryPresentations V where
   syntaxData X := SyntacticSyntax.plainCategoricalSyntax T V
     (fun _ => ⊥_ (PredicateCategory T)) (fun _ => X) 0

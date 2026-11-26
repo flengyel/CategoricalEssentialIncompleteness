@@ -99,7 +99,7 @@ theorem signed_axiom_image :
     SubobjectImagePresentations.exists_mk]
   exact PresentationLemmas.image_copair _ _
 
-/-- For each family `F` of nullary presentations, the signed theory of the
+/-- For each family `F` of first-order presentations with propositional atoms, the signed theory of the
 diagonal pair is the image of the conclusion morphism restricted to derivations
 of sentences from the signed axioms. -/
 theorem signed_theory_eq (F : NullaryPresentations V) :

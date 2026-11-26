@@ -20,7 +20,7 @@ namespace CEIPalomar
 
 variable {D : Type u} [Category.{v} D]
 
-/-- A calculus with atomic sentences indexed by `X`. For each axiom subobject
+/-- A calculus with an atomic-sentence morphism from `X`. For each axiom subobject
 `A`, the derivations form an initial algebra for `inference A`. Its carrier
 in the slice over the formula object is the conclusion morphism. -/
 structure Calculus (X : D) where

@@ -1,66 +1,18 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 25 November 2026
+Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v94
+Active WSL2 assignment — manuscript v95
 
-The full replay and both independent readings of manuscript v94 tested
-b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182. Report commit 654a06b7c9a9aaf7c6c25b61005a7f70e2772ac9
-contains docs/V94_WSL2_LEAN_VERIFICATION.md, its .json.gz receipt and docs/reviews/V94_WSL2_AUDITS/.
-The pinned procedure is docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md.
+For the full replay and the two independent readings, use
+docs/CODEX_WSL2_CEI_V95_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V95.md.
+The changes to the presentation in §4 are described in
+docs/CODEX_MANUSCRIPT_V95_HANDOFF.md.
 
-Palomar update after the v94 replay
------------------------------------
-Work in /home/flengyel/src/CategoricalEssentialIncompleteness. Fetch origin/main and read
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md, especially §§2–4. It is the registration procedure.
-Use existing entry PALOMAR-2026-11-22-000009. The last confirmed version is v3, manuscript v72,
-tag cei-v72-palomar-v3 at efda31344ec6420142468ab28af9d96deab571e7. Check the public version
-history and private pending attempts before choosing the next version and its permanent candidate tag.
-
-Before tagging, check the rebuilt PDF and source ZIP against the approved v94 abstract
-(manuscript/arxiv/abstract.txt at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182, 1,917 characters).
-In §1 verify the hypotheses for the internal theories, the equivalence with partial maps in the
-slice and the hypotheses for the constant-family equivalence, and the conditions of Theorem 3.1
-and Corollary 3.3. Check the citations to Smullyan, Chapter III, Theorem 22 (p. 59) and
-Theorem 23(b) (pp. 59–60) in §§1 and 8. These passages are present in v94.
-
-Check Appendix A.6 in the candidate PDF and source ZIP: the propositional generator object is X;
-V denotes the first-order variable object. The notation change postdates the pinned replay.
-
-The v94 release uses cei-v94-palomar-v4 and cites version 4. Resolve the tag to its full commit
-when checking the public snapshot. The release checks are listed below.
-* In Appendix E.2 keep the registry citation for Corollary 4.8 and the Boolean-assignment theorem.
-  In E.3 keep the registry citation for the existential consequence of Lemma 8.9 and its witness
-  in CEIPalomar/Solution.lean. Add a distinct direct link for the full lemma under consistency
-  of PA: Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean, lines 30–44
-  (ArithmeticSignedTheory.printed_statement). Use the candidate tag for the Lean links.
-* Prepare the Palomar abstract for this edition in docs/PALOMAR_ABSTRACT.txt and in
-  project.description of Lean/formalization.yaml. Use the approved v94 manuscript wording
-  for the account of the paper, with its mathematical notation rendered in plain text for Palomar.
-  Keep the existing sentence identifying the three selected
-  Palomar statements in a separate paragraph. Check that the parsed YAML description matches
-  the text file and that the registry preview displays that description before intake.
-* In Lean/formalization.yaml update the tagged PDF URL, edition and page references. In the
-  audited v94 PDF, Theorem 4.7 starts on p. 19, Corollary 4.8 on p. 20, its Boolean-assignment
-  proof spans pp. 20–21, and Lemma 8.9 starts on p. 60. Verify pagination in the rebuilt PDF.
-  In fidelity.divergences record that printed Corollary 4.8 and its Lean theorem both use
-  subobjects. The restriction-idempotent formulation follows by the order isomorphism.
-* Recheck all seven subsections and every Lean link in the rendered PDF, both registry links
-  and the copy of Appendix E inside the source ZIP. Synchronize the manifest and correspondence.
-
-For the three CEIPalomar theorems and IsNullaryCalculus, Lean/comparator.json permits
-propext, Quot.sound and Classical.choice. Lean/CEIPalomar/ManuscriptChecks.lean checks
-transitive dependencies against that set. The two-axiom check for the three RiceShapiro
-results listed in Lean/Tests/AxiomRegression.lean has separate scope.
-
-Follow the release procedure to commit the candidate and record its full SHA. Verify the
-fetched permanent tag peeled to a commit, the full preflight report and the intake coordinates
-all identify that SHA. Use project Lean, comparator Lean/comparator.json and metadata
-Lean/formalization.yaml. Obtain Florian’s agreement on the exact intake coordinates and
-authorization relationship. Present the actual private review and review_sha256 for his
-registration decision. On registration, verify the public record’s source.commit against the
-recorded candidate SHA and the tag, and verify the tagged PDF against the manifest. Return
-the versioned entry URL, source SHA, tag and verification run. Archive public evidence in
-a later report-only commit and report its SHA separately.
+The last completed replay and two independent readings tested manuscript
+v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182. Its receipt and readings
+are linked from docs/V94_WSL2_LEAN_VERIFICATION.md. The v94 release uses
+the tag cei-v94-palomar-v4. Its registration procedure is recorded in
+docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 Earlier release procedures and verification records
 ---------------------------------------------------

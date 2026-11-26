@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalInstantiation
 
-/-! # Statement checks for nullary logical instantiation -/
+/-! # Statement checks for instantiation under interpretation of propositional atoms -/
 
 @[expose] public section
 

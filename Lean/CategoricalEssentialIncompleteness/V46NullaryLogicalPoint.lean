@@ -43,7 +43,7 @@ theorem atom_closed : atom S label ≫ S.formulaOccurrences =
   rw [atom, Category.assoc, NullaryInterpretation.atom_occurrences, ← Category.assoc,
     terminal.comp_from]
 
-/-- The first Hilbert scheme at one closed nullary atom is a sentence. -/
+/-- The first Hilbert scheme at one propositional atom is a sentence. -/
 def formula : Z ⟶ S.algebra.a.2 := prod.lift (atom S label) (atom S label) ≫ S.hilbertOne
 
 theorem formula_closed : formula S label ≫ S.formulaOccurrences =

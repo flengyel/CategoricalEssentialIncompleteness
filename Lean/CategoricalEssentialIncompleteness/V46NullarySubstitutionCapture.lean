@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullarySubstitutionPairs
 
-/-! # Capture tests under a nullary-predicate interpretation -/
+/-! # Capture tests under interpretation of propositional atoms -/
 
 @[expose] public section
 

@@ -348,11 +348,11 @@ establish $D_0\subseteq \mathsf{Th}_T^\alpha$ and $D_1\subseteq \mathsf{Ref}_T^\
 
 Put $\mathscr C_{\PA}=\Split(S_{\PA})$, with total category
 $\mathcal B_{\PA}$. In $\mathcal B_{\PA}$ take the first-order language
-with variables indexed by $\omega$ and one nullary predicate for each
-index in $\omega$. These predicates are its only nonlogical symbols.
+whose variable object is $\omega$ and whose only nonlogical symbols
+are the propositional atoms specified by $\omega$.
 Let $\Fm^{\pm}$ and $S^{\pm}$ be its formula and sentence objects, and
 let $\nu^{\pm}:S^{\pm}\to S^{\pm}$ be negation. The atomic sentence
-constructor $\theta^{\pm}:\omega\to S^{\pm}$ sends a generalized index
+constructor $\theta^{\pm}:\omega\to S^{\pm}$ sends a generalized element
 $x:W\to\omega$ to the sentence $P_x=\theta^{\pm}x:W\to S^{\pm}$
 over $W$. Theorem~\ref{thm:syntactic-generated-theory} constructs
 this syntax and its finite derivations in
@@ -395,12 +395,12 @@ Theorem~\ref{thm:syntactic-generated-theory}. PA proves
 $\forall n\,\neg(\alpha(n)\land\beta(n))$, as in
 Lemma~\ref{lem:arithmetic-diagonal-representation}.
 Use the tagged numerical presentation of the nullary rules, so that a
-positive nonlogical leaf carries its predicate index.
+positive nonlogical leaf records the number $n$ of its atom $P_n$.
 Consider two derivations whose conclusions are a sentence
 $\varphi$ and its negation. Collect into a finite list $L$ all
 labels of positive nonlogical axiom leaves occurring in either
 derivation. Every member of $L$ satisfies $\alpha$.
-Assign a nullary predicate $P_n$ the Boolean value true exactly
+Assign the propositional atom $P_n$ the Boolean value true exactly
 when $n$ occurs in $L$. Assign every equality the value true,
 interpret negation and implication by their Boolean operations,
 and give $\forall v\,\psi$ the value of $\psi$.
@@ -409,8 +409,8 @@ Extracting $L$, testing membership in $L$, and evaluating a formula
 are primitive recursive on codes. In PA, every positive axiom leaf
 has value true by the choice of $L$. A negative leaf has label
 satisfying $\beta$, hence outside $L$, so it too has value true.
-Substitution preserves the value of a formula because predicates are
-nullary and every equality has value true. The logical schemes
+Substitution preserves the value of a formula because it fixes each
+propositional atom and every equality has value true. The logical schemes
 therefore have value true, and both inference rules preserve truth.
 Induction in PA on the two coded derivations gives value true to
 both $\varphi$ and its negation. Thus PA proves that no such pair of

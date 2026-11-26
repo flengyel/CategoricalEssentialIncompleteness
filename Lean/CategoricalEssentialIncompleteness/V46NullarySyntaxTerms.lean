@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebra
 public import CategoricalEssentialIncompleteness.V46NullarySyntaxInterpretation
 
-/-! # Terms of the nullary-predicate language -/
+/-! # Terms of the first-order language with propositional atoms -/
 
 @[expose] public section
 

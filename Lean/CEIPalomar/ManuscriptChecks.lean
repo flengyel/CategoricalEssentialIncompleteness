@@ -33,8 +33,8 @@ example {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V P)
         b.arrow ≫ d = terminal.from (b : D) ≫ coprod.inl → P.signedTheory a b ≤ T :=
   CEIPalomar.boolean_assignment P hP d
 
-/-- First-order syntax with nullary predicates at each index object and initial
-derivation algebras for all axiom subobjects give a nullary calculus at `X`. -/
+/-- First-order syntax with propositional atoms specified by each object `Y` and initial
+derivation algebras for all axiom subobjects give `IsNullaryCalculus` at `X`. -/
 theorem isNullaryCalculus_of_data {V : D}
     (syntaxData : (Y : D) → CategoricalSyntax V (fun _ => ⊥_ D) (fun _ => Y) 0)
     (proofs : (Y : D) → (A : Subobject (syntaxData Y).sentenceObject) →

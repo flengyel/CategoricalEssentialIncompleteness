@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46CategoricalVariableSubstitut
 public import CategoricalEssentialIncompleteness.V46StableListComparison
 public import CategoricalEssentialIncompleteness.V46VariableTests
 
-/-! # Term substitution under nullary-predicate interpretation -/
+/-! # Term substitution under interpretation of propositional atoms -/
 
 @[expose] public section
 

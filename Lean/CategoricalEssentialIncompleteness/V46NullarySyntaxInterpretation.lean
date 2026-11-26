@@ -8,9 +8,9 @@ module
 public import CategoricalEssentialIncompleteness.V46LogicalTranslations
 public import CategoricalEssentialIncompleteness.V46CategoricalFreeVariableLaws
 
-/-! # Interpretation of nullary predicates by closed sentences
+/-! # Interpretation of propositional atoms by closed sentences
 
-The initial fold interprets arbitrary nullary predicates by closed
+The initial fold interprets propositional atoms by closed
 sentences. Its constructor equations and uniqueness preserve the named
 variables.
 -/
@@ -140,8 +140,8 @@ its product with the terminal object, rather than identifying carriers. -/
 def emptyFunctionsInitial : IsInitial ((⊥_ D) ⨯ (⊤_ D)) := by
   exact (initialIsInitial : IsInitial (⊥_ D)).ofIso (terminalProductIso (⊥_ D))
 
-/-- Constructor compatibility determines the interpretation from a
-nullary-predicate syntax. These hypotheses describe the candidate
+/-- Constructor compatibility determines the interpretation of first-order syntax
+with propositional atoms. These hypotheses describe the candidate
 morphism; the existence of the interpretation was constructed above. -/
 theorem unique (m : S.algebra.a ⟶ Q.algebra.a)
     (hv : S.variableConstructor ≫ m.1 = Q.variableConstructor)

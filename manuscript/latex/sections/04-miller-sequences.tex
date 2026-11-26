@@ -480,8 +480,8 @@ algebra is initial.
 
 \begin{lemma}\label{lem:miller-parameterized-deduction}
 Let $X$ be an object of $\mathcal D_a$. The first-order language
-with variables $\N$, equality, and a nullary predicate for each
-label in $X$ has the syntax and list algebras of
+with variable object $\N$, equality, and propositional atoms specified
+by $X$ has the syntax and list algebras of
 Definition~\ref{def:categorical-syntax}, stable under parameters.
 For this language and for every recursive signature covered by
 Proposition~\ref{prop:miller-theory-realization}, finite derivation
@@ -494,15 +494,15 @@ $\mathcal D_a/(P\times\mathsf{Fm})$ has an initial algebra.
 \end{lemma}
 \begin{proof}
 Represent $X$ and $P$ by $\mathcal E_a$-semidecidable numerical
-carriers. In the nullary language the term and formula functor of
+carriers. For this language the term and formula functor of
 Definition~\ref{def:categorical-syntax} reduces to
 \[
  K(Y,Z)=(\N,\;Y^2+X+Z+Z^2+\N\times Z).
 \]
-Its formula constructors are equality, a predicate with label in $X$,
+Its formula constructors are equality, the atom constructor from $X$,
 negation, implication and universal quantification. To recognize a
-formula tree, check its shape and run the membership tests for its
-finitely many predicate labels in parallel. This gives a semidecision
+formula tree, check its shape and test in parallel whether the labels
+of its propositional atoms belong to $X$. This gives a semidecision
 uniform in $p\in P_a$. Occurrence lists and substitution are computed
 on these trees as in Proposition~\ref{prop:miller-theory-realization}.
 
@@ -685,8 +685,8 @@ Proposition~\ref{prop:miller-theory-realization} supplies regularity,
 disjoint stable finite coproducts, and the partial inverses of
 monomorphisms. Lemma~\ref{lem:miller-parameterized-deduction}
 supplies the syntax and finite derivations with parameters,
-including the languages with nullary predicate symbols used in the
-general construction.
+including the first-order languages on propositional atoms used in
+the general construction.
 
 Soundness in the real-field model of $T_a$ makes $t_a$ disjoint
 from its refutation subobject. The total morphism

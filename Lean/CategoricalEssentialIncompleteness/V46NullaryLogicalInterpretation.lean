@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalEquality
 public import CategoricalEssentialIncompleteness.V46LogicalTranslations
 
-/-! # Logical translations from the language of nullary predicates -/
+/-! # Logical translations from the first-order language with propositional atoms -/
 
 @[expose] public section
 

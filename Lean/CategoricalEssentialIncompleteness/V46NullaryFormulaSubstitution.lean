@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryInterpretedSubstitutionHom
 
-/-! # Formula substitution under the interpretation of nullary predicates
+/-! # Formula substitution under the interpretation of propositional atoms
 
 Initiality in the substitution-parameter slice identifies the two algebra
 morphisms. The induced morphism on admissible substitutions is then a

@@ -10,7 +10,7 @@ public import CategoricalEssentialIncompleteness.V46NullarySyntaxAlgebra
 public import CategoricalEssentialIncompleteness.V46CategoricalSubstitutionIdentity
 public import CategoricalEssentialIncompleteness.V46SliceProductCoordinates
 
-/-! # Constructors of the nullary-predicate syntax in a parameter slice -/
+/-! # First-order constructors for propositional atoms and logical operations in a parameter slice -/
 
 @[expose] public section
 

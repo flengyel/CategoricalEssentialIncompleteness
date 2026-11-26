@@ -627,8 +627,8 @@ Theorem~\ref{thm:cosheaf-observation} therefore makes $U$ incomplete.
 Let $N_\Delta=\Delta\N$ be the constant functor on $J$ with value
 $\N$ and identity transition morphisms. We use $N_\Delta$ as the
 object of variables. For an object $D$ of $\mathcal E$, consider
-the first-order language with nullary predicate symbols labelled by
-$D$, equality, and no other nonlogical symbols. Its terms are variables.
+the first-order language with equality whose only nonlogical symbols
+are the propositional atoms specified by $D$. Its terms are variables.
 
 \begin{proposition}\label{prop:fork-first-order-realization}
 For every $D\in\mathcal E$, this language has the syntax,
@@ -666,9 +666,9 @@ componentwise, with identity transitions on variable names.
 Equality of variables is decidable because the variable object
 is $N_\Delta$. The occurrence-list and substitution constructions
 of Proposition~\ref{prop:categorical-substitution} therefore apply.
-Their recursive clauses commute with transitions, since the
-atomic predicates are nullary and their relabelling does not
-change variable names. In particular, empty occurrence lists
+Their recursive clauses commute with transitions because relabelling
+propositional atoms preserves their empty occurrence lists and the
+transition morphisms fix variable names. In particular, empty occurrence lists
 define the sentence subobject of $F_D$.
 
 Write $S_D\hookrightarrow F_D$ for the sentence inclusion and let
@@ -676,8 +676,8 @@ $A\hookrightarrow S_D$ be an axiom subobject. Use the seven schemes
 and two rules of Appendix~\ref{app:first-order-derivations}. At component
 $j$, parse a proposed derivation and its rule parameters. Check the
 tree form, premise codes, and substitution and free-variable conditions.
-For every predicate label $d$ occurring in a formula parameter, run the
-test for $d\in D_j$, including at logical axiom leaves. For each
+For each propositional atom in a formula parameter, test whether its
+label $d$ belongs to $D_j$, including at logical axiom leaves. For each
 nonlogical axiom leaf also test its sentence for membership in $A_j$.
 These finitely many semidecisions succeed together exactly on the
 derivation carrier, so that carrier is computably enumerable. Relabelling preserves

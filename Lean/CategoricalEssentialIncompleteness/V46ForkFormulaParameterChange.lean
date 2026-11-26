@@ -16,7 +16,7 @@ namespace CategoricalEssentialIncompleteness.V46.ForkFormulaParameterChange
 open ForkFirstOrderFormula ForkFormulaParameterComponents
 local instance (X : C) : Regular (Over X) := RegularSlices.regular X
 
-/-- False labels the variable object; true labels the nullary predicates. -/
+/-- The variable object has label `false` and the propositional atoms have label `true`. -/
 def template : SyntaxPolynomial Bool :=
   .sum (.sum (.sum (.sum (.product (.coefficient false) (.coefficient false))
     (.coefficient true)) .formula) (.product .formula .formula))

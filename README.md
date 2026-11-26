@@ -1,14 +1,14 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-**Florian Lengyel** · Manuscript v94 · 25 November 2026
+**Florian Lengyel** · Manuscript v95 · 26 November 2026
 
-[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v94.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v94_source.zip)
+[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v95.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v95_source.zip)
 
-[Manuscript handoff](docs/CODEX_MANUSCRIPT_V94_HANDOFF.md) · [WSL2 verification handoff](docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md)
+[Manuscript handoff](docs/CODEX_MANUSCRIPT_V95_HANDOFF.md) · [WSL2 verification handoff](docs/CODEX_WSL2_CEI_V95_LEAN_HANDOFF.md)
 
 ## Reading the Lean proofs
 
-Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V94.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
+Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V95.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
 
 ## Abstract
 

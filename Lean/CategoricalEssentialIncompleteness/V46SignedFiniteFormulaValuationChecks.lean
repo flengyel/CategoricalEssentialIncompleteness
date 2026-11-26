@@ -94,8 +94,8 @@ example (q : Obj T M (atomInputs T X))
       (F T M).map (Two.constant (atomInputs T X) true) q := diagonal_negative_axiom T S q hs hn
 end UniformValuation
 
-/-- The no-function, nullary-predicate syntax and its parameterized valuation
-are constructed, without a syntax-existence hypothesis. -/
+/-- The construction gives the syntax with propositional atoms and no function symbols,
+together with its parameterized valuation. -/
 example :
     let X : PredicateCategory 𝗣𝗔 := PrintedObjectCoding.Number
     let S := SyntacticSyntax.plainCategoricalSyntax 𝗣𝗔 X

@@ -66,8 +66,8 @@ example (B : Endofunctor.Algebra (polynomial c p q))
 example (V : J ⥤ NumericalTuples.Object) (σ π : ℕ → J ⥤ NumericalTuples.Object) (d : ℕ) :
     IsInitial (syntaxData V σ π d).1 := (syntaxData V σ π d).2
 
-/-- The fork signature has no function symbols and arbitrary nullary predicates. The
-statement uses the exact canonical expressions. -/
+/-- The fork signature has no function symbols and has propositional atoms specified by
+`D`. The statement uses the canonical expressions. -/
 example (D : ForkFirstOrderFormula.Object) :
     Σ A : Endofunctor.Algebra (SyntaxPolynomial.jointFunctor
       (SyntaxPolynomial.termExpression ForkFirstOrderFormula.numbers

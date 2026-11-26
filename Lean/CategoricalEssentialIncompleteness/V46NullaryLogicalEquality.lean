@@ -7,7 +7,7 @@ module
 
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalDistribution
 
-/-! # The equality-substitution scheme under a nullary interpretation -/
+/-! # The equality-substitution scheme under interpretation of propositional atoms -/
 
 @[expose] public section
 

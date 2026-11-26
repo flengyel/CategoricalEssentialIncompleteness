@@ -8,10 +8,10 @@ module
 public import CategoricalEssentialIncompleteness.V46CategoricalSyntax
 public import Mathlib.CategoryTheory.Limits.Shapes.StrictInitial
 
-/-! # Algebra morphisms for syntax with nullary predicates
+/-! # Algebra morphisms for syntax with propositional atoms
 
 The six constructor equations determine an algebra morphism for the
-manuscript polynomial with no function symbols and nullary predicates X.
+manuscript polynomial with no function symbols and propositional atoms specified by `X`.
 -/
 
 @[expose] public section

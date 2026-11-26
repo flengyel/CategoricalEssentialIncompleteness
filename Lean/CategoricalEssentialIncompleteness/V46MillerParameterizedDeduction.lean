@@ -127,9 +127,9 @@ theorem printedFold_unique (A : Subobject (P ⨯ S.sentenceObject))
 
 end Signature
 
-/-- Every clause is constructed: nullary syntax for all labels and
-parameterized deduction for all bounded finite signatures, a stronger scope
-than restricting the coefficients to recursive signatures. -/
+/-- Every coefficient object may specify propositional atoms. The construction
+gives their first-order syntax and supplies parameterized deduction for all
+bounded finite signatures, including signatures with nonrecursive coefficients. -/
 structure Conclusions where
   nullary : NullaryPresentations (numbers z)
   parameterized : ∀ (X P : Total.CanonicalTotal z)

@@ -15,13 +15,13 @@ In the category of total morphisms of the restriction idempotent completion
 of `R`, the domains are represented by inclusions `i_a : A ↪ X` and
 `i_b : B ↪ X`. The syntax and derivations are formed in this total category.
 
-The only nonlogical symbols are nullary predicates. A nullary predicate takes
-no arguments, so it is already an atomic sentence. Let `S` be the sentence
-object. The family of these atomic sentences is given by a morphism `θ : X ⟶ S`.
-For any object `W`, an index `x : W ⟶ X` gives a family of atomic sentences
-`x ≫ θ : W ⟶ S`. The index lies in `a` when `x = u ≫ i_a` for some
-`u : W ⟶ A`. Then `x ≫ θ = u ≫ (i_a ≫ θ)`. Thus the atoms indexed by `a`
-form the restricted family `i_a ≫ θ : A ⟶ S`.
+The only nonlogical symbols are propositional atoms. The relation constructor
+at arity zero gives a morphism `θ : X ⟶ S` to the sentence object.
+A generalized element `x : W ⟶ X` determines the atomic sentence
+`x ≫ θ : W ⟶ S`. If `x` factors as `u ≫ i_a` for some `u : W ⟶ A`,
+then `x ≫ θ = u ≫ (i_a ≫ θ)`.
+Thus `i_a ≫ θ : A ⟶ S` is the restriction of the atomic-sentence morphism
+to `a`.
 
 Take the image of this family as the subobject of positive axioms. For the
 negative axioms, restrict the family to `b` and apply sentence negation
@@ -38,7 +38,7 @@ incomplete if and only if `a` and `b` are inseparable.
 
 Assume the total category is regular with disjoint, pullback-stable finite
 coproducts and that its monomorphisms have partial inverses in the completion.
-Fix a decidable variable object. For each index object assume parameter-stable
+Fix a decidable variable object. For each object `X` assume parameter-stable
 syntax and list algebras and an initial derivation algebra for each axiom
 subobject.
 
@@ -74,7 +74,7 @@ namespace CEIPalomar
 
 variable {D : Type u} [Category.{v} D]
 
-/-- A calculus with atomic sentences indexed by `X`. For each axiom subobject
+/-- A calculus with an atomic-sentence morphism from `X`. For each axiom subobject
 `A`, the derivations form an initial algebra for `inference A`. Its carrier
 in the slice over the formula object is the conclusion morphism. -/
 structure Calculus (X : D) where
@@ -92,8 +92,8 @@ variable [Regular D] [FinitaryExtensive D]
 
 /-- The calculus `P` is the value at `X` of a family of first-order presentations
 with decidable variable object `V`, equality, negation, implication and universal
-quantification. At each object `Y`, the only nonlogical symbols are nullary
-predicates indexed by `Y`. The parameter-stable initial syntax and list algebras
+quantification. At each object `Y`, the only nonlogical symbols are propositional
+atoms specified by `Y`. The parameter-stable initial syntax and list algebras
 determine substitution and the logical rule instances. For each axiom subobject,
 the derivations form an initial algebra for the corresponding inference functor. -/
 def IsNullaryCalculus {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
@@ -160,8 +160,8 @@ theorem boolean_assignment {V X : D} (P : Calculus X) (hP : IsNullaryCalculus V 
   sorry
 
 /-- In some regular category with disjoint, pullback-stable finite coproducts,
-there is a nullary first-order calculus with an inseparable pair of subobjects
-of its index object. The signed theory of this pair is essentially incomplete. -/
+there is a first-order calculus with propositional atoms specified by an object `X`.
+An inseparable pair of subobjects of `X` generates an essentially incomplete theory. -/
 theorem exists_inseparable_example :
     ∃ (D : Type) (cat : Category.{0} D), letI := cat
       ∃ (reg : Regular D) (ext : FinitaryExtensive D), letI := reg; letI := ext

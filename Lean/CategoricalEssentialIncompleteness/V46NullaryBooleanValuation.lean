@@ -8,7 +8,7 @@ module
 public import CategoricalEssentialIncompleteness.V46NullaryLogicalInterpretation
 public import CategoricalEssentialIncompleteness.TwoBoolean
 
-/-! # Boolean valuations of the nullary-predicate language
+/-! # Boolean valuations of the first-order language with propositional atoms
 
 Terms are interpreted in the terminal object, equality has value true,
 and quantification is the projection on the formula value.
