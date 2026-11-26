@@ -2,17 +2,20 @@
 
 Di Paola and Heller sought an algebraic account of generalized
 incompleteness theorems in recursion categories
-\cite[pp.~594--596, 629]{DPH}. Their statement~(3) specializes a
-theorem of Smullyan to a consistent arithmetical system. In a
-representation system with effective coding of predicate instances,
-if every recursive set is definable, no recursive set separates the
-G\"odel codes of provable sentences from those of refutable sentences
+\cite[pp.~594--596, 629]{DPH}. Their statement~(3) specializes
+Smullyan's Theorem~22 to a consistent arithmetical system.
+In a representation system, a predicate $H$ \emph{strongly separates}
+disjoint sets $A,B$ of natural numbers if $H(n)$ is provable for
+$n\in A$ and refutable for $n\in B$. A set is \emph{definable} if
+some predicate strongly separates it from its complement
+\cite[Chapter~III, \S5, p.~48]{Smullyan}.
+With effective coding of predicate instances, if every recursive set
+is definable, no recursive set separates the G\"odel codes of provable
+sentences from those of refutable sentences
 \cite[Chapter~III, \S8, p.~52, and \S16, Theorem~22, p.~59]{Smullyan}.
-In a consistent system these two sets of codes are disjoint.
-They are recursively inseparable if a predicate $H$ strongly separates
-a recursively inseparable pair $A,B$, meaning that $H(n)$ is provable
-for $n\in A$ and refutable for $n\in B$
-\cite[Chapter~III, \S17, Theorem~23(b), pp.~59--60]{Smullyan}.
+In a consistent system these two sets of codes are disjoint. They are
+recursively inseparable if a predicate strongly separates a recursively
+inseparable pair \cite[Chapter~III, \S17, Theorem~23(b), pp.~59--60]{Smullyan}.
 We ask when a pair of disjoint restriction idempotents generates an
 internal first-order theory with no complete consistent deductively
 closed extension in its language. For a consistent generated theory this
@@ -284,20 +287,28 @@ with finite joins of compatible morphisms stable under composition
 has inseparable restriction idempotents
 \cite[Sections~5.3 and 7.1, Theorem~7.8]{CockettComputability}.
 
-Shoenfield takes recursively inseparable c.e.\ sets $B,C$.
-To a theory of an equivalence relation he adds the sentence $\Phi_n$
-asserting that some class has size $n$ for $n\in B$, and $\neg\Phi_n$
-for $n\in C$. In a consistent decidable extension the set of $n$
-for which $\Phi_n$ is provable would recursively separate $B$ from $C$
+Given a nonrecursive c.e.\ set $A$, Shoenfield constructs recursively
+inseparable c.e.\ sets $B,C$, each of the Turing degree of $A$
+\cite[Theorem~1, p.~389]{Shoenfield}. To a theory of an equivalence
+relation he adds $\Phi_n$ for $n\in B$ and $\neg\Phi_n$ for $n\in C$,
+where $\Phi_n$ asserts that some class has exactly $n$ elements.
+In a consistent decidable extension the set of $n$ for which $\Phi_n$
+is provable would recursively separate $B$ from $C$
 \cite[Theorem~2, pp.~390--391]{Shoenfield}.
-Murwanashyaka, Pakhomov, and Visser use sentences asserting that some
-class has size $n+1$. For disjoint c.e.\ sets $B,C$, their theory
-asserts these sentences on $B$ and refutes them on $C$. It is
-essentially undecidable exactly when $B,C$ are recursively inseparable.
-Any set $D$ containing $B$ and disjoint from $C$ gives a complete
-consistent extension by deciding the sentences according to membership
-in $D$. This extension is c.e.\ exactly when $D$ is recursive
-\cite[Sections~4.1 and 4.4, pp.~1163--1164, 1169]{MPV}.
+Murwanashyaka, Pakhomov, and Visser write $A_n$ for the sentence
+asserting that some equivalence class has exactly $n+1$ elements.
+For disjoint c.e.\ sets $B,C$, they add $A_n$ for $n\in B$ and
+$\neg A_n$ for $n\in C$ to their base theory $\mathsf{Jan}$.
+The resulting theory is essentially undecidable exactly when $B,C$
+are recursively inseparable \cite[Section~4.4, p.~1169]{MPV}.
+Since $\mathsf{Jan}$ is propositional-logic-like
+\cite[Section~4.1 and Theorem~4.3, pp.~1163--1164]{MPV}, every set
+$D$ containing $B$ and disjoint from $C$ gives a complete consistent
+extension by adjoining $A_n$ for $n\in D$ and $\neg A_n$ otherwise.
+This extension is c.e.\ exactly when $D$ is recursive.
+A decision procedure for $D$ lets us enumerate the axioms and hence
+the theorems. Conversely, enumerating the theorems until $A_n$ or
+$\neg A_n$ appears decides whether $n\in D$.
 Here the generators form an object $X$ of $\mathcal D$, and the theory
 is free on the pair $(a,b)$ of subobjects of $X$ in the sense of
 Theorem~\ref{thm:free-first-order-adjunction}.

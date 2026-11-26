@@ -1,22 +1,23 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v96
+Active WSL2 assignment — manuscript v97
 
-For the full replay and the two independent readings, use
-docs/CODEX_WSL2_CEI_V96_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V96.md.
-The changes to §1 and the usage of “translation” in §4 are described in
-docs/CODEX_MANUSCRIPT_V96_HANDOFF.md.
+Run the full replay and two independent whole-paper readings at the final
+v97 commit assigned to WSL2. Use docs/CODEX_WSL2_CEI_V97_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V97.md. The manuscript changes are described in
+docs/CODEX_MANUSCRIPT_V97_HANDOFF.md. The v96 declaration comparison is in
+docs/reviews/V96_LEAN_REASSESSMENT.md.
 
-The last completed replay and two independent readings tested manuscript
-v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182. Its receipt and readings
-are linked from docs/V94_WSL2_LEAN_VERIFICATION.md. Appendix E uses the v94
-source tag cei-v94-palomar-v4 at 62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f
-for its links to Lean. The most recent public registration checked on
-26 November 2026 is version 3, from manuscript v72 at
-efda31344ec6420142468ab28af9d96deab571e7.
+The last completed full replay and two independent readings tested
+manuscript v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
+See docs/V94_WSL2_LEAN_VERIFICATION.md. Appendix E links the registered
+solution at cei-v72-palomar-v3 (efda31344ec6420142468ab28af9d96deab571e7)
+and the other proofs at cei-v94-palomar-v4
+(62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f). The last confirmed public
+registration is version 3, from manuscript v72.
 https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
-For a future registration, check the public history again, following
+For a future registration, check the public version history following
 docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 Earlier release procedures and verification records
