@@ -1,13 +1,15 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v97
+Active WSL2 assignment — manuscript v98
 
-Run the full replay and two independent whole-paper readings at the final
-v97 commit assigned to WSL2. Use docs/CODEX_WSL2_CEI_V97_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V97.md. The manuscript changes are described in
-docs/CODEX_MANUSCRIPT_V97_HANDOFF.md. The v96 declaration comparison is in
-docs/reviews/V96_LEAN_REASSESSMENT.md.
+Run the full replay and two independent whole-paper readings at the exact
+v98 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V98_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V98.md. The manuscript and Palomar metadata changes
+are described in docs/CODEX_MANUSCRIPT_V98_HANDOFF.md.
+
+An existing v97 replay or reading may finish at its assigned commit,
+1dccf0d1037e8268f29cb5d7593c5cda7ac5d417. Record those results for v97.
 
 The last completed full replay and two independent readings tested
 manuscript v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
