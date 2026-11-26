@@ -2,14 +2,24 @@
 
 Di Paola and Heller sought an algebraic account of generalized
 incompleteness theorems in recursion categories
-\cite[pp.~594--596, 629]{DPH}. We ask when a disjoint pair of domains
-generates an internal first-order theory with no complete consistent
-deductively closed extension in its language.
-For a consistent generated theory this happens exactly when the two
-domains are inseparable (Corollary~\ref{cor:signed-first-order-incompleteness}).
+\cite[pp.~594--596, 629]{DPH}. Their statement~(3) is Smullyan's
+theorem that if every recursive set is definable in a consistent
+arithmetical theory, then the sets of G\"odel numbers of its provable
+and refutable sentences are recursively inseparable
+\cite[Chapter~III, \S16, Theorem~22, p.~59]{Smullyan}.
+Smullyan also obtains recursive inseparability of these sets when a
+formula of the theory strongly separates a single recursively inseparable
+pair, that is, when its numeral instances are provable on the first set
+and refutable on the second
+\cite[Chapter~III, \S17, Theorem~23(b), pp.~59--60]{Smullyan}.
+We ask when a pair of disjoint restriction idempotents generates an
+internal first-order theory with no complete consistent deductively
+closed extension in its language. For a consistent generated theory this
+happens exactly when the pair is inseparable
+(Corollary~\ref{cor:signed-first-order-incompleteness}).
 
-Let $\mathscr R$ be a recursion category. Splitting its restriction
-idempotents makes the domains of partial morphisms into objects. Write
+Let $\mathscr R$ be a recursion category. In its restriction idempotent
+completion, a restriction idempotent $e$ on $X$ splits through $(X,e)$. Write
 $\mathscr C=\Split(\mathscr R)$ for this completion and
 $\mathcal D=\Tot(\mathscr C)$ for its category of total morphisms.
 Assume that $\mathcal D$ is regular, that its finite coproducts are
@@ -18,6 +28,9 @@ $\mathcal D$ has a partial inverse in $\mathscr C$. A subobject $m:A\hookrightar
 represents the restriction idempotent $mr:X\rightharpoonup X$.
 Conversely, splitting a restriction idempotent on $X$ gives its
 representing subobject (Section~\ref{subsec:restriction-idempotents}).
+These splittings give a restriction equivalence between $\mathscr C$
+and the category of partial maps in $\mathcal D$ with monic left legs
+(Section~\ref{sec:theory-extensions}).
 Two disjoint subobjects of $X$ are
 \emph{inseparable} if no pair of complementary subobjects contains
 them respectively. If $t:T\hookrightarrow S$ is the subobject of
@@ -33,24 +46,24 @@ $H\ge T$ in this language satisfies
 (Section~\ref{subsec:theories-and-interpretation}).
 
 Fix a variable object $V$ with decidable equality. For each
-$X\in\mathcal D$, take the first-order language whose only nonlogical
-symbols are nullary predicates indexed by $X$. Let $a,b$ be disjoint
+$X\in\mathcal D$, take the first-order language with $X$ as its object
+of nullary predicate symbols and no other nonlogical symbols.
+Assume that the syntax and variable-list algebras of this language are
+initial in every parameter slice. For each first-order presentation
+under consideration, take $V$ as its variable object and assume an initial derivation algebra for every
+axiom subobject of its sentence object (Appendix~\ref{app:syntax-theories}).
+Let $a,b$ be disjoint
 subobjects of $X$ with inclusions $i_a:A\hookrightarrow X$ and
 $i_b:B\hookrightarrow X$. Write $S_X$ for the sentence object of this
-language and $\theta_X:X\to S_X$ for its atomic sentence constructor. Thus an index $x:W\to X$ gives
-the sentence $\theta_Xx:W\to S_X$ over $W$. The index belongs to $a$
-over $W$ precisely when $x=i_a y$ for some $y:W\to A$.
+language and $\theta_X:X\to S_X$ for its atomic sentence constructor.
+A morphism $x:W\to X$ gives the sentence $\theta_Xx:W\to S_X$ over $W$.
 Write $\nu_X:S_X\to S_X$ for negation. The axiom subobject is
 \[
  A_{a,b}=\im(\theta_Xi_a)\vee\im(\nu_X\theta_Xi_b)
  \quad\text{in }\operatorname{Sub}(S_X).
 \]
-For each $X$, assume that the syntax and variable-list algebras of
-this language are initial in every parameter slice. For each first-order presentation
-under consideration, assume an initial derivation algebra for every
-axiom subobject of its sentence object (Appendix~\ref{app:syntax-theories}).
-Let $T_{a,b}$ be the image of the conclusion morphism for sentence
-derivations from $A_{a,b}$. Under these hypotheses, if $T_{a,b}$ is
+Let $T_{a,b}$ be the image of the conclusion morphism for derivations
+from $A_{a,b}$ that end in sentences. Under these hypotheses, if $T_{a,b}$ is
 consistent, it is essentially incomplete exactly when $a,b$ are
 inseparable. On pairs generating consistent theories, the construction
 is left adjoint to the functor taking a consistent theory $H$ with
@@ -67,49 +80,75 @@ complete consistent closed extension of $t$ would pull back along
 $f$ to complementary subobjects separating $a$ and $b$
 (Corollary~\ref{cor:domain-incompleteness}). For $T_{a,b}$ take $f=\theta_X$.
 
-For a theory $u:U\hookrightarrow S$ on a sentence object $S$, define its
-associated category to be the category of partial maps in $\mathcal D/U$.
-It is a Turing category (Lemma~\ref{lem:partial-slice-turing}).
-An inclusion of theories induces a fully faithful functor between their
-associated categories (Theorem~\ref{thm:theory-extension}).
+For a theory $t:H\hookrightarrow S$, let $\mathscr C[H]$ be the category
+of partial maps in $\mathcal D/H$ with monic left legs. The full
+restriction subcategory $\mathscr R[H]$ on the projections $H\times X\to H$
+for $X$ in $\mathscr R$ is a recursion category. Its restriction
+idempotent completion is equivalent to the Turing category $\mathscr C[H]$
+(Lemma~\ref{lem:partial-slice-turing}). For an inclusion $i:H\hookrightarrow K$
+of theories in the same language, postcomposition defines a fully faithful
+restriction functor $\Sigma_i:\mathscr C[H]\to\mathscr C[K]$. On the
+underlying categories it is both left and right adjoint to pullback along
+$i$ (Theorem~\ref{thm:theory-extension}).
 For each parameter object $P$ and each axiom subobject
 $A\hookrightarrow P\times S$ over $P$, assume that the inference
 endofunctor on $\mathcal D/(P\times\Phi)$ for the parameterized rules
 has an initial algebra, where $\Phi$ is the formula object
 (Section~\ref{subsec:essential-incompleteness-slice}).
 Assume also that a fixed logical theorem $\lambda:1\to S$ factors
-through every consistent closed theory. Then a consistent $u$ is
-essentially incomplete if and only if every consistent closed extension of
-$1_U\times u:U\times U\hookrightarrow U\times S$ in $\mathcal D/U$
-is incomplete. An extension here is a subobject of $U\times S$ over
-$U$ and may vary with the parameter.
+through every consistent closed theory. Then a consistent $t$ is
+essentially incomplete if and only if its constant family
+$1_H\times t:H\times H\hookrightarrow H\times S$ is essentially incomplete
+in $\mathscr C[H]$. Its extensions are theory subobjects of $H\times S$
+over $H$ containing $1_H\times t$ and may vary with the parameter.
 The partial Boolean morphism
 that is true on theorems and false on refutations in the constant family has a total
 extension exactly when the original theorem and refutation subobjects are separable
 (Theorem~\ref{thm:associated-incompleteness}).
 
-To compare a recursion category $\mathscr R$ with an interpretation,
-let $F:\mathscr R\to\mathcal A$ preserve restrictions, ranges,
-zeros and binary restriction coproducts. Let $a_0,a_1$ be the diagonal domains on the Turing object $U$ defined in
-Section~\ref{sec:lifting}. Let $P,N$ be disjoint domains on $FU$ with
-$F(a_0)\le P$ and $F(a_1)\le N$. Suppose a partial morphism
-$FU\rightharpoonup FU+FU$ has summand inverse images $N,P$,
-respectively, and lifts to $\mathscr R$. Theorem~\ref{thm:comparison}
-gives a total morphism $g:U\to U$ with $(Fg)^*P=(Fg)^*N=0$. When $\mathcal A$ is split,
-extend $F$ to $\widehat F:\Split(\mathscr R)\to\mathcal A$, choosing the
-identity splitting of $F(1_U)$ so that $\widehat F(U,1_U)=FU$.
-Let $t:S\rightharpoonup S$ be the theorem domain on a sentence object $S$ in
-$\Split(\mathscr R)$, with negation $\nu:S\to S$. For a total sentence
-morphism $\theta:(U,1_U)\to S$, take the two domains on $FU$ to be
+For the diagonal comparison, suppose $\mathscr R$ has ranges and binary
+restriction coproducts. Let $\mathcal A$ be a restriction category with
+ranges, restriction zeros, and binary restriction coproducts, and let
+$F:\mathscr R\to\mathcal A$ preserve restrictions, ranges, restriction
+zeros, and binary restriction coproducts. Choose a Turing morphism
+$\tau:U\times U\rightharpoonup U$ and an isomorphism $b:U\to U+U$.
+Write $\varepsilon_0^Z=1_Z+0_Z$ and $\varepsilon_1^Z=0_Z+1_Z$ for the
+two summand idempotents on $Z+Z$. Put $h=b\tau\Delta_U$ and
+$a_j=h^*\varepsilon_j^U$ for $j=0,1$. Suppose $P,N$ are disjoint
+restriction idempotents on $FU$ with $F(a_0)\le P$ and $F(a_1)\le N$.
+Let $\chi:FU+FU\to F(U+U)$ be the canonical coproduct isomorphism.
+If $s:FU\rightharpoonup FU+FU$ and $\ell:U\rightharpoonup U+U$ satisfy
 \[
- P=(\widehat F\theta)^*\widehat F(t),\qquad
- N=\bigl(\widehat F(\nu\theta)\bigr)^*\widehat F(t).
+ s^*\varepsilon_0^{FU}=N,\qquad s^*\varepsilon_1^{FU}=P,\qquad
+ F\ell=\chi s,
 \]
-Suppose the interpreted theorem and refutation domains are disjoint,
-$F(1_U)\ne0$, and inverse images along total morphisms in $\mathcal A$
-preserve binary joins of restriction idempotents. Under the preceding
-bounds and lifting hypothesis, Theorem~\ref{thm:logical-comparison}
-then proves incompleteness of the internal theory and its interpretation.
+there is a total $g:U\to U$ such that $(Fg)^*P=(Fg)^*N=0$.
+If in addition $F(1_U)\ne0$ and $(Fg)^*$ preserves the join $P\vee N$,
+then $P\vee N\ne 1_{FU}$ (Theorem~\ref{thm:comparison}).
+
+Suppose $F(1_U)\ne0$ and inverse images along total morphisms in
+$\mathcal A$ preserve binary joins of restriction idempotents.
+Let $i_0,i_1:U\to U+U$ be the coproduct injections. If for each
+complementary pair $c,c'$ on $U$ there is a total $\ell_c:U\to U+U$
+with $\ell_c c=i_1c$ and $\ell_c c'=i_0c'$, then $a_0,a_1$ are
+inseparable in $\mathscr R$ (Corollary~\ref{cor:source-conditionals}).
+
+For the comparison with an internal theory, retain the nonzero identity
+and binary join hypotheses and suppose that $\mathcal A$ is split. Extend $F$ to
+$\widehat F:\Split(\mathscr R)\to\mathcal A$, choosing the
+identity splitting of $F(1_U)$ so that $\widehat F(U,1_U)=FU$.
+Let $d:S\rightharpoonup S$ be the restriction idempotent representing
+the theorem subobject on a sentence object $S$ in $\Split(\mathscr R)$,
+with total negation $\nu:S\to S$. For a total morphism
+$\theta:(U,1_U)\to S$, take
+\[
+ P=(\widehat F\theta)^*\widehat F(d),\qquad
+ N=\bigl(\widehat F(\nu\theta)\bigr)^*\widehat F(d).
+\]
+If the interpreted theorem and refutation subobjects are disjoint and
+these $P,N$ satisfy the bounds and lifting hypothesis of
+Theorem~\ref{thm:comparison}, then both the internal theory and its
+interpretation are incomplete (Theorem~\ref{thm:logical-comparison}).
 
 The arithmetic realization uses the syntactic recursion categories of
 Montagna and Di Paola--Montagna \cite{Montagna,DPM}. Montagna asked

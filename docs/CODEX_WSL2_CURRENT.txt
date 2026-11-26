@@ -1,19 +1,19 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 24 November 2026
+Updated 25 November 2026
 
-Active WSL2 assignment — manuscript v93
+Active WSL2 assignment — manuscript v94
 
-Fetch origin/main and record the clean source SHA for manuscript v93.
-Follow docs/CODEX_WSL2_CEI_V93_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V93.md.
-The v93 Lean tree, verifier and dependency pins are byte-identical to v92.
-The last full replay tested v84 at b37f8908435a4c2991af5b95de4645980ac60a05.
-Use the active edition for the next replay and the two reports at the tested SHA.
-The v84 receipt is docs/V84_WSL2_LEAN_VERIFICATION.json.gz.
+Fetch origin/main and record the clean source SHA for manuscript v94.
+Follow docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V94.md.
+The latest published full replay tested v93 at 2269c9674e710a7032e6751e7db2473147aaaf96.
+Its report and receipt are docs/V93_WSL2_LEAN_VERIFICATION.md and docs/V93_WSL2_LEAN_VERIFICATION.json.gz.
+The v93 independent readings are under docs/reviews/V93_WSL2_AUDITS/.
+Record the v94 replay and its two readings against their own tested commit.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
 The material below records earlier editions and separate release work.
-Complete the v93 replay, publish its receipt and independent readings, and verify the report commit on origin/main.
+Complete the v94 replay, publish its receipt and independent readings, and verify the report commit on origin/main.
 Palomar re-registration is the following assignment. Keep the tested replay snapshot and the published v3 tag available for comparison.
 
 Fixed release and Appendix E citations

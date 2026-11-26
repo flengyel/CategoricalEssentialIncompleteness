@@ -242,10 +242,20 @@ each recursive set $B\subseteq\N$ there is a formula $\beta_B(x)$
 such that $H\vdash\beta_B(\bar n)$ whenever $n\in B$ and
 $H\vdash\neg\beta_B(\bar n)$ whenever $n\notin B$.
 Then the sets of codes of the provable and the refutable sentences
-of $H$ are recursively inseparable.
-For a c.e.\ extension of PA, the function $\Theta$ sends $D_0$ into
-its theorem set and $D_1$ into its refutation set by
-Lemma~\ref{lem:arithmetic-diagonal-representation}.
+of $H$ are recursively inseparable
+\cite[Chapter~III, \S16, Theorem~22, p.~59]{Smullyan}.
+Under this definability hypothesis,
+every formal consistent extension of $H$ is incomplete
+\cite[Chapter~III, \S15, corollary to Theorem~21, p.~58]{Smullyan}.
+
+Smullyan also proves that if a consistent system strongly separates a
+recursively inseparable pair, then its sets of theorem and refutation
+codes are recursively inseparable
+\cite[Chapter~III, \S17, Theorem~23(b), pp.~59--60]{Smullyan}.
+In each consistent c.e.\ extension of PA, $\alpha(x)$ strongly separates
+$D_0$ from $D_1$ because the sentence with code $\Theta(n)$ is provable
+for $n\in D_0$ and refutable for $n\in D_1$
+(Lemma~\ref{lem:arithmetic-diagonal-representation}).
 
 \begin{corollary}[Essential incompleteness of arithmetic]
 \label{cor:arithmetic}

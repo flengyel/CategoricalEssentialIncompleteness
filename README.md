@@ -1,42 +1,18 @@
 # Logical consequence and essential incompleteness in recursion categories
 
-**Florian Lengyel** · Manuscript v93 · 24 November 2026
+**Florian Lengyel** · Manuscript v94 · 25 November 2026
 
-[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v93.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v93_source.zip)
+[Read the paper (PDF)](manuscript/logical_consequence_and_essential_incompleteness_v94.pdf) · [Download the LaTeX source (ZIP)](manuscript/logical_consequence_v94_source.zip)
 
-[Manuscript handoff](docs/CODEX_MANUSCRIPT_V93_HANDOFF.md) · [WSL2 verification handoff](docs/CODEX_WSL2_CEI_V93_LEAN_HANDOFF.md)
+[Manuscript handoff](docs/CODEX_MANUSCRIPT_V94_HANDOFF.md) · [WSL2 verification handoff](docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md)
 
 ## Reading the Lean proofs
 
-Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V93.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
+Appendix E connects seven worked arguments to their Lean declarations. The correspondence table covers the paper’s 77 numbered results and three numbered definitions. [Appendix E](manuscript/latex/appendices/e-reading-lean-proofs.tex) · [Correspondence by theorem](FORMALIZATION_STATUS_V94.md#numbered-statements) · [Lean sources](Lean/CategoricalEssentialIncompleteness/)
 
 ## Abstract
 
-We characterize the disjoint pairs of domains that generate essentially
-incomplete first-order theories in the restriction idempotent completion
-of a recursion category. The object on which the domains lie indexes
-the nullary predicates, the only nonlogical symbols. The axioms are the
-atomic sentences indexed by the first domain and the negated atomic
-sentences indexed by the second. Under the hypotheses of
-[Theorem 4.7](manuscript/latex/sections/03b-internal-adjunctions.tex#L376), a consistent theory so
-generated is essentially incomplete if and only if no two complementary
-domains contain the given domains, respectively. Here essential incompleteness
-means that in every consistent deductively closed extension in the same
-language, the join of the theorem and refutation subobjects is a proper subobject
-of the sentence object. On pairs generating consistent theories, this
-construction is left adjoint to the functor assigning to a consistent
-theory its theorem and refutation subobjects.
-
-Under the hypotheses of [Theorem 5.3](manuscript/latex/sections/04-theory-extensions.tex#L261), a
-consistent theory is essentially incomplete if and only if its constant
-family is essentially incomplete in the slice over its theorem object.
-For Peano arithmetic (PA), the numerical interpretation of one total
-morphism sends each index for a computably enumerable set of additional
-axioms consistent with PA to the code of a sentence independent of the
-resulting theory. The other applications concern
-real closed ordered fields with constants for the entries of a Miller
-sequence and propositional theories obtained from cosheaves on a
-three-point space.
+From a recursion category we construct, under additional hypotheses, internal first-order theories in its restriction idempotent completion. Among disjoint pairs $(a,b)$ of restriction idempotents generating consistent theories, exactly the inseparable pairs generate essentially incomplete ones: theories with no complete consistent internal extension in their language. Di Paola and Heller proved diagonal domains inseparable toward an algebraization of incompleteness that never appeared. A comparison theorem for range functors gives conditions for diagonal pairs of Turing morphisms to be inseparable; we apply such pairs to internal theories of recursion categories for a categorical form of Smullyan's criterion: a consistent theory strongly separating a recursively inseparable pair has recursively inseparable theorems and refutations. A disjoint pair $(a,b)$ specifies two families of propositional atoms. The least theory proving the first and refuting the second is $T_{a,b}$. The construction is left adjoint to the functor giving theorem and refutation subobjects, so translations from $T_{a,b}$ into a theory $T$ correspond to assignments of its sentences sending $a$ into theorems and $b$ into refutations. When $(a,b)$ is inseparable, every consistent theory receiving such a translation is essentially incomplete. Each theory determines a recursion category over its theorem object; under further hypotheses, the theory is essentially incomplete exactly when its copy in the completion is. Theory extensions induce fully faithful functors between these completions, adjoint on both sides to pullback. Three examples are Montagna's $S_{\mathrm{PA}}$ (for consistent PA), uniform computations on binary representations of a Miller sequence, and one built from diagrams of c.e. sets presenting cosheaves on a three-point space. In each we prove an internal theory consistent and essentially incomplete.
 
 ## Build and verify
 
