@@ -1,6 +1,6 @@
 # WSL2 verification of manuscript v96
 
-Pin the public v96 source commit before starting the replay. From the repository root in WSL2, set `cei_requested` to its full SHA and run these commands.
+The [declaration comparison](reviews/V96_LEAN_REASSESSMENT.md) covers manuscript v96 at `ff20da56315d405f92ccd4f587fe4c05f32e11d2`. Let ongoing reviews finish. Run the full replay after the manuscript incorporates the accepted additions and corrections. If these produce a later edition, use its manifest and verification handoff and reconcile its new assertions first. For a replay of v96, set `cei_requested` to the full v96 source SHA above and run these commands from the repository root in WSL2.
 
 ```bash
 set -euo pipefail
