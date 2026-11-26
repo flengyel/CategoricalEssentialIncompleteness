@@ -3,20 +3,15 @@ Updated 25 November 2026
 
 Active WSL2 assignment — manuscript v94
 
-Fetch origin/main and record the clean source SHA for manuscript v94.
+Fetch origin/main. For the manuscript v94 replay, set cei_requested=b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
 Follow docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V94.md.
-The latest published full replay tested v93 at 2269c9674e710a7032e6751e7db2473147aaaf96.
-Its report and receipt are docs/V93_WSL2_LEAN_VERIFICATION.md and docs/V93_WSL2_LEAN_VERIFICATION.json.gz.
-The v93 independent readings are under docs/reviews/V93_WSL2_AUDITS/.
-Record the v94 replay and its two readings against their own tested commit.
+Resume or verify a matching run. Publish docs/V94_WSL2_LEAN_VERIFICATION.md, its .json.gz receipt
+and the two independent readings under docs/reviews/V94_WSL2_AUDITS/ against the tested SHA.
 
 Palomar update after the v94 replay
 -----------------------------------
 Work in /home/flengyel/src/CategoricalEssentialIncompleteness. Fetch origin/main and read
 docs/CODEX_WSL2_PALOMAR_SUBMISSION.md, especially §§2–4. It is the registration procedure.
-For the preceding manuscript replay, set cei_requested=b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182
-in the v94 Lean handoff. Resume or verify any matching run and publish its receipt and two readings.
-
 Use existing entry PALOMAR-2026-11-22-000009. The last confirmed version is v3, manuscript v72,
 tag cei-v72-palomar-v3 at efda31344ec6420142468ab28af9d96deab571e7. Check the public version
 history and private pending attempts before choosing the next version and its permanent candidate tag.
@@ -34,6 +29,12 @@ Apply the following v94 findings before freezing the candidate.
   in CEIPalomar/Solution.lean. Add a distinct direct link for the full lemma under consistency
   of PA: Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedTheory.lean, lines 30–43
   (ArithmeticSignedTheory.printed_statement). Use the candidate tag for the Lean links.
+* Prepare the Palomar abstract for this edition in docs/PALOMAR_ABSTRACT.txt and in
+  project.description of Lean/formalization.yaml. Use the approved v94 manuscript wording
+  for the account of the paper, with its mathematical notation rendered in plain text for Palomar.
+  Keep the existing sentence identifying the three selected
+  Palomar statements in a separate paragraph. Check that the parsed YAML description matches
+  the text file and that the registry preview displays that description before intake.
 * In Lean/formalization.yaml update the tagged PDF URL, edition and page references. In the
   audited v94 PDF, Theorem 4.7 starts on p. 19, Corollary 4.8 on p. 20, its Boolean-assignment
   proof spans pp. 20–21, and Lemma 8.9 starts on p. 60. Verify pagination in the rebuilt PDF.
@@ -59,9 +60,9 @@ a later report-only commit and report its SHA separately.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
-The material below records earlier editions and separate release work.
-Complete the v94 replay, publish its receipt and independent readings, and verify the report commit on origin/main.
-Palomar re-registration is the following assignment. Keep the tested replay snapshot and the published v3 tag available for comparison.
+The published v93 replay at 2269c9674e710a7032e6751e7db2473147aaaf96 is recorded in
+docs/V93_WSL2_LEAN_VERIFICATION.md and docs/V93_WSL2_LEAN_VERIFICATION.json.gz.
+Its two readings are under docs/reviews/V93_WSL2_AUDITS/.
 
 Fixed release and Appendix E citations
 --------------------------------------
