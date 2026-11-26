@@ -1,17 +1,22 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v95
+Active WSL2 assignment — manuscript v96
 
 For the full replay and the two independent readings, use
-docs/CODEX_WSL2_CEI_V95_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V95.md.
-The changes to the presentation in §4 are described in
-docs/CODEX_MANUSCRIPT_V95_HANDOFF.md.
+docs/CODEX_WSL2_CEI_V96_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V96.md.
+The changes to §1 and the usage of “translation” in §4 are described in
+docs/CODEX_MANUSCRIPT_V96_HANDOFF.md.
 
 The last completed replay and two independent readings tested manuscript
 v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182. Its receipt and readings
-are linked from docs/V94_WSL2_LEAN_VERIFICATION.md. The v94 release uses
-the tag cei-v94-palomar-v4. Its registration procedure is recorded in
+are linked from docs/V94_WSL2_LEAN_VERIFICATION.md. Appendix E uses the v94
+source tag cei-v94-palomar-v4 at 62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f
+for its links to Lean. The most recent public registration checked on
+26 November 2026 is version 3, from manuscript v72 at
+efda31344ec6420142468ab28af9d96deab571e7.
+https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
+For a future registration, check the public history again, following
 docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 Earlier release procedures and verification records

@@ -1,10 +1,10 @@
-# LaTeX sources — version 95
+# LaTeX sources — version 96
 
 **Logical consequence and essential incompleteness in recursion categories**,
 26 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v95.pdf`
-and `logical_consequence_v95_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v96.pdf`
+and `logical_consequence_v96_source.zip`.
 
 The directory `latex/` contains the complete source. The order of the
 inputs in `main.tex` is the order of the printed sections.
@@ -49,4 +49,4 @@ The output is `main.pdf`.
 | [appendices/e-reading-lean-proofs.tex](appendices/e-reading-lean-proofs.tex) | Appendix E: Reading the Lean proofs |
 | [bibliography.tex](bibliography.tex) | References |
 
-The Lean links in Appendix E refer to manuscript v94, tagged `cei-v94-palomar-v4`. Sections E.2 and E.3 cite the three selected theorems in [Palomar entry PALOMAR-2026-11-22-000009, version 4](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=4).
+The Lean links in Appendix E cite the manuscript v94 source tag `cei-v94-palomar-v4` at `62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f`. The registry links in §§E.2–E.3 cite the three selected theorems in [Palomar version 3](https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3), registered from manuscript v72 at `efda31344ec6420142468ab28af9d96deab571e7`.
