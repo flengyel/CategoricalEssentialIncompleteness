@@ -49,4 +49,4 @@ The output is `main.pdf`.
 | [appendices/e-reading-lean-proofs.tex](appendices/e-reading-lean-proofs.tex) | Appendix E: Reading the Lean proofs |
 | [bibliography.tex](bibliography.tex) | References |
 
-The Lean links in Appendix E refer to the source of manuscript v72, tagged `cei-v72-palomar-v3`. Three theorem declarations from that source appear in [Palomar entry PALOMAR-2026-11-22-000009, version 3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3).
+The Lean links in Appendix E refer to manuscript v94, tagged `cei-v94-palomar-v4`. Sections E.2 and E.3 cite the three selected theorems in [Palomar entry PALOMAR-2026-11-22-000009, version 4](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=4).

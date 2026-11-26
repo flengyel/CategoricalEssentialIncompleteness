@@ -3,10 +3,10 @@ Updated 25 November 2026
 
 Active WSL2 assignment — manuscript v94
 
-Fetch origin/main. For the manuscript v94 replay, set cei_requested=b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
-Follow docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md and FORMALIZATION_STATUS_V94.md.
-Resume or verify a matching run. Publish docs/V94_WSL2_LEAN_VERIFICATION.md, its .json.gz receipt
-and the two independent readings under docs/reviews/V94_WSL2_AUDITS/ against the tested SHA.
+The full replay and both independent readings of manuscript v94 tested
+b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182. Report commit 654a06b7c9a9aaf7c6c25b61005a7f70e2772ac9
+contains docs/V94_WSL2_LEAN_VERIFICATION.md, its .json.gz receipt and docs/reviews/V94_WSL2_AUDITS/.
+The pinned procedure is docs/CODEX_WSL2_CEI_V94_LEAN_HANDOFF.md.
 
 Palomar update after the v94 replay
 -----------------------------------
@@ -26,7 +26,8 @@ Theorem 23(b) (pp. 59–60) in §§1 and 8. These passages are present in v94.
 Check Appendix A.6 in the candidate PDF and source ZIP: the propositional generator object is X;
 V denotes the first-order variable object. The notation change postdates the pinned replay.
 
-Apply the following v94 findings before freezing the candidate.
+The v94 release uses cei-v94-palomar-v4 and cites version 4. Resolve the tag to its full commit
+when checking the public snapshot. The release checks are listed below.
 * In Appendix E.2 keep the registry citation for Corollary 4.8 and the Boolean-assignment theorem.
   In E.3 keep the registry citation for the existential consequence of Lemma 8.9 and its witness
   in CEIPalomar/Solution.lean. Add a distinct direct link for the full lemma under consistency

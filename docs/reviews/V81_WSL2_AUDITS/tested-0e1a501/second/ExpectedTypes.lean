@@ -1,3 +1,5 @@
+module
+
 /- Independently written specifications for comparison with the checked declarations.
    Arguments naming a construction in the manuscript must ultimately be instantiated by that construction.
    The definitions specify statements and supply no proof of existence. -/

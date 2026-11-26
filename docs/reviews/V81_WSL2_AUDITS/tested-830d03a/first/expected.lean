@@ -1,3 +1,5 @@
+module
+
 import Init
 
 /- Independent proposition types reconstructed with no project imports. `def ... : Prop` names

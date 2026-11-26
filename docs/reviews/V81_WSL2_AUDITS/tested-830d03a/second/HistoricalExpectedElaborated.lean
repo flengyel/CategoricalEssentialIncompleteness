@@ -1,3 +1,5 @@
+module
+
 import Mathlib.CategoryTheory.Adjunction.Basic
 import Mathlib.CategoryTheory.Category.Cat
 import Mathlib.CategoryTheory.Subobject.Basic
