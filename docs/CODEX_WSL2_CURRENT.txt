@@ -21,6 +21,13 @@ Use existing entry PALOMAR-2026-11-22-000009. The last confirmed version is v3, 
 tag cei-v72-palomar-v3 at efda31344ec6420142468ab28af9d96deab571e7. Check the public version
 history and private pending attempts before choosing the next version and its permanent candidate tag.
 
+Before tagging, check the rebuilt PDF and source ZIP against the approved v94 abstract
+(manuscript/arxiv/abstract.txt at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182, 1,917 characters).
+In §1 verify the hypotheses for the internal theories, the equivalence with partial maps in the
+slice and the hypotheses for the constant-family equivalence, and the conditions of Theorem 3.1
+and Corollary 3.3. Check the citations to Smullyan, Chapter III, Theorem 22 (p. 59) and
+Theorem 23(b) (pp. 59–60) in §§1 and 8. These passages are present in v94.
+
 Apply the following v94 findings before freezing the candidate.
 * In Appendix E.2 keep the registry citation for Corollary 4.8 and the Boolean-assignment theorem.
   In E.3 keep the registry citation for the existential consequence of Lemma 8.9 and its witness
@@ -34,6 +41,11 @@ Apply the following v94 findings before freezing the candidate.
   subobjects. The restriction-idempotent formulation follows by the order isomorphism.
 * Recheck all seven subsections and every Lean link in the rendered PDF, both registry links
   and the copy of Appendix E inside the source ZIP. Synchronize the manifest and correspondence.
+
+For the three CEIPalomar theorems and IsNullaryCalculus, Lean/comparator.json permits
+propext, Quot.sound and Classical.choice. Lean/CEIPalomar/ManuscriptChecks.lean checks
+transitive dependencies against that set. The two-axiom check for the three RiceShapiro
+results listed in Lean/Tests/AxiomRegression.lean has separate scope.
 
 Follow the release procedure to commit the candidate and record its full SHA. Verify the
 fetched permanent tag peeled to a commit, the full preflight report and the intake coordinates

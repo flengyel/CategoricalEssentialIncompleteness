@@ -2,7 +2,7 @@
 
 ## Reusable prompt
 
-Replace `<edition>` with the author's manuscript version (for example, `v72`). Give WSL2 Codex the following prompt when authorizing a candidate push to the public repository.
+Replace `<edition>` with the author's manuscript version. Give WSL2 Codex the following prompt when authorizing a candidate push to the public repository.
 
 ```text
 Use my existing local manuscript <edition> of Logical consequence and essential incompleteness in recursion categories. I authorize committing the synchronized candidate and pushing it to flengyel/CategoricalEssentialIncompleteness on origin/main.
@@ -22,7 +22,7 @@ Run the official full preflight on that SHA with project Lean, configuration Lea
 
 ### 1. Establish the source and scope
 
-After locating and preserving the requested local edition, fetch `origin/main` for `flengyel/CategoricalEssentialIncompleteness` and read `AGENTS.md`, `MANUSCRIPT_CURRENT.json`, `docs/CODEX_WSL2_CURRENT.txt` and `Lean/formalization.yaml`. [Palomar version 2](palomar/PALOMAR-2026-11-22-000009-v2/README.md) records `cd08f0a42a6e8e182805db84396e40fdddc1b2ca`, which contains manuscript v70. Manuscript v71 at `170f14c13366e1a10dca9a77fc6fda4cd1c8acda` added the v2 citation. Preserve both snapshots. Integrate any concurrent commits while retaining the author’s requested manuscript as the source for the candidate.
+After locating and preserving the requested local edition, fetch `origin/main` for `flengyel/CategoricalEssentialIncompleteness` and read `AGENTS.md`, `MANUSCRIPT_CURRENT.json`, `docs/CODEX_WSL2_CURRENT.txt` and `Lean/formalization.yaml`. Read the latest public record for `PALOMAR-2026-11-22-000009` and identify its registered source commit and manuscript edition. A later commit may have added the registry citation. Preserve the registered snapshot and its tag. Integrate any concurrent commits while retaining the author’s requested manuscript as the source for the candidate.
 
 Preserve the names in `Lean/comparator.json`.
 
@@ -33,11 +33,11 @@ Preserve the names in `Lean/comparator.json`.
 | `exists_inseparable_example` | The existence consequence of Lemma 8.9. The proof uses the PA diagonal pair as witness. |
 | `IsNullaryCalculus` | Auxiliary definition identifying the stipulated nullary syntax and deduction data. |
 
-The manuscript guide covers 77 numbered results. Theorem 4.7 supplies the adjunction used in Corollary 4.8. Submit the three configured theorems together in one entry. Preserve the existing account of automation and authorship, and the distinction between the subobject formulation and the printed restriction-idempotent formulation.
+The manuscript guide covers 77 numbered results. Theorem 4.7 supplies the adjunction used in Corollary 4.8. Submit the three configured theorems together in one entry. Preserve the account of automation and authorship. Check how the candidate manuscript states Corollary 4.8. The Comparator theorem uses subobjects, and `ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains` transports it to restriction idempotents.
 
 ### 2. Fix the public repository, tag and commit
 
-Follow the fixed-tag procedure used for the [Došen–Petrić v25 / Palomar v3 candidate](https://github.com/flengyel/Dosen-Petric-Maximality/blob/874ea6bcd775ff21f7a84759f46adc1d3364a954/docs/PALOMAR_V25_CODEX_HANDOFF.md). Read the public version history for `PALOMAR-2026-11-22-000009` and check for a pending attempt for the same entry. If v2 is still the latest version, the target is [Palomar v3](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3). Resolve an unavailable history or competing attempt before choosing the target. Palomar assigns the version at registration.
+Follow the fixed-tag procedure used for the [Došen–Petrić v25 / Palomar v3 candidate](https://github.com/flengyel/Dosen-Petric-Maximality/blob/874ea6bcd775ff21f7a84759f46adc1d3364a954/docs/PALOMAR_V25_CODEX_HANDOFF.md). Read the public version history for `PALOMAR-2026-11-22-000009` and check for a pending attempt for the same entry. Use the next version after the latest registered one as the proposed target. Resolve an unavailable history or competing attempt before choosing the target. Palomar assigns the version at registration.
 
 Choose an unused durable tag name for the candidate before composing its GitHub links. In Appendix E.2 place the target version’s permalink beside the subobject formulation of Corollary 4.8 and the Boolean-assignment theorem. In E.3 place it beside the existential consequence of Lemma 8.9 and retain the direct Lean proof link for the full lemma. Use a neutral citation such as “Palomar entry …, version …” that can stand in the candidate before registration and in the same PDF afterwards. Use the candidate tag in Appendix E’s links to this release’s Lean proofs and in the manuscript PDF URL in `Lean/formalization.yaml`. Check each proof’s line range and the manuscript edition, theorem labels and printed pages in the metadata and correspondence table.
 
@@ -57,7 +57,7 @@ python3 scripts/verify.py --manuscript-only
 )
 ```
 
-Compare the candidate Lean sources and dependency pins with the registered v2 source. Inspect any differences and run the repository checks they affect. Retain the permitted axioms `propext`, `Quot.sound`, and `Classical.choice`. Apply Palomar’s current source and Challenge requirements to the full checkout. Verify the PDF, the archive and the release links from the published snapshot.
+Compare the candidate Lean sources and dependency pins with the source commit of the latest registered version. Inspect any differences and run the repository checks they affect. Retain the permitted axioms `propext`, `Quot.sound`, and `Classical.choice`. Apply Palomar’s current source and Challenge requirements to the full checkout. Verify the PDF, the archive and the release links from the published snapshot.
 
 Use `.github/workflows/palomar-preflight.yml`. Check the current [official submission instructions](https://palomar-registry.org/how-to-submit) and [agent protocol](https://submit.palomar-registry.org/llms.txt). The workflow reference and `pipeline_commit` must pin the same supported full pipeline SHA. Use full mode, `palomar-standard-v1`, the wrapper’s 12-character request ID, project `Lean`, configuration `Lean/comparator.json`, and metadata `Lean/formalization.yaml`. With the public repository, verified release tag and candidate SHA set, dispatch the workflow.
 
