@@ -1,0 +1,62 @@
+{
+  "reader": 1,
+  "tested_revision": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+  "independent_pre_reconciliation_seal_utc": "2026-11-26T05:39:56+00:00",
+  "blind_seal_sha256": "42b7733f173a682a0c1079557ed96ef606cfba2588c65c167b8b0e0ead310f82",
+  "blind_seal_utc": "2026-11-26T04:14:45+00:00",
+  "other_reader_work_seen": false,
+  "counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0,
+    "unchecked_passages": 0
+  },
+  "manuscript": {
+    "pages": 103,
+    "tex_files": 25,
+    "passages": 671,
+    "segmented_units": 4055,
+    "results": 77,
+    "definitions": 3,
+    "primary_works": 41,
+    "citation_occurrences": 89
+  },
+  "lean": {
+    "source_modules_compiled_from_git_archive": 12,
+    "distinct_declarations_applied": 2067,
+    "original_typed_combination_proofs": 8,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "lean_commit": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+    "lean_tree": "cb57eb69839383a9ddae46f273d7791dd20164a0"
+  },
+  "official_receipt": "../../../V94_WSL2_LEAN_VERIFICATION.json.gz",
+  "whole_paper_correspondence": "../../../../FORMALIZATION_STATUS_V94.md",
+  "evidence_sha256": {
+    "source-identities.json": "c4428546c306d17ef4b12c30bb55d3f05c4dcb16f162e9f33aef343aa5821ea2",
+    "blind-seal.json": "42b7733f173a682a0c1079557ed96ef606cfba2588c65c167b8b0e0ead310f82",
+    "reconstruction.md": "c9fadf533b32e7fbf6bb02a6e7d27f1d01294390fc54901bd8e87117955583dc",
+    "numbered.json": "fda626ed9093cf24bc781169c0504480914ec4e798e4b08916215aa165103423",
+    "passages.jsonl.gz": "e744e25449452f94e2fb9b693fd7f6d5b0247f429f492f4021bb6ded397821c5",
+    "citation-uses.json": "8bb2b8043d62371090553855f0f4daa7be3542c0c5a414a3acaeea004b703640",
+    "passage-correspondence.json.gz": "21296854500e27264c7df932e6bea8dd86562502cf2dffa62d176e161576aae2",
+    "result-correspondence.json.gz": "148bf2a87e52d03a68d034c1ea6a8d0801022f4acfc7770b28b94c5838e5495d",
+    "lean-proof-steps.json.gz": "b5038068cf0b1b17d64660943a94dd748ffeba699ccb7b0a8f942e2637978a3e",
+    "sources.json.gz": "d8e02ff16ec67e3466ca27aa3a029a94d7c70f117ca9d1c0bcb146522dbd4109",
+    "appendix-e-links.json": "1ce08068c221b29b1caf00039bcab4c2d014cf95fa294211e5f627a479b203dc",
+    "focused.lean.txt": "7a6f140f9e75a9b3337001c089470680fb92a5ae0cce2e4e7051fd5081e1015c",
+    "kernel-probe.lean.txt": "1b4de753349363ba37c1f924539156a82c8a79a2154a25c6128cf719af7651c2",
+    "kernel-applications.json.gz": "1db212dca448ef59e6d55d3f31c22bc0e88f782efdb36f008cdc35c2543aa49c",
+    "supplementary-kernel-applications.json.gz": "0be66dc6c14561d354f1aa935266d5b551c1381c2641ee42e49046d2fdd8828f",
+    "kernel-transcripts.json.gz": "8275c5838f155787973c5ba63b7d687591d43de2c083eeb3055b905729c8c7e3",
+    "focused-applications.json": "52c913cb1a1752cc56cd721f7d1ef73d9fb1d2bad2910a182aa40e841b30dc46",
+    "selected-source-replay.json": "74e438db0430e6b10cfe877e6b1bfb6eed670b0346b291ee0a8afc722345cc62",
+    "inferences.md": "423f8c8ae96acfc8a2909889149d550dbef82e2bc9cf348ef0fff4400bf311db",
+    "discrepancies.md": "e22253af7f6f40c773ebc8c0ee3c9cc31938f75e7dee4fbdd5a3c2a35d960079",
+    "report.md": "f5680ec51e685fc95a9a753a88d9ea53e0f01880bc856f594668b8d0ed043ed0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+ "tested_commit": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+ "frozen_utc": "2026-11-26T04:44:05.410233+00:00",
+ "report": "reader-two-report.md",
+ "report_sha256": "55b2e0346271366f72149ff5da5aa534bf7e5bdef6683dd3df8ea5e7b0231c5e",
+ "first_reader_report_opened_before_this_seal": false,
+ "incorporated_common_receipt_before_this_seal": false,
+ "final_receipt_assessment": "Separate attestation to follow when common run finishes.",
+ "counts": {
+  "mathematical_errors": 0,
+  "ambiguities": 0,
+  "lean_omissions": 0,
+  "proof_gaps": 0
+ },
+ "files": {
+  "reader-two-appendix-e-links.json": "02be24a567f1f01b89e564a70d76d239b8b79d3d1f289de1d43fcf7344e9fd72",
+  "reader-two-applications.lean.txt": "b3c3991a0f2dd1987e98c29884a58577f76e1011252e8ca97bddbabfbfe0df95",
+  "reader-two-blind-seal.json": "f012cb39d002c3173083bc61fcad2713ba07841995e44bf8782370a6131e76f0",
+  "reader-two-citations.tsv": "f005bc648b9c96102295f7d8dae62ddba3bafa518a3aa869c74902c0c819b82e",
+  "reader-two-commands.json.gz": "76c5dacdfbd66a10d79d97188697f24a8e159af5af755f42cbf14358ed51af16",
+  "reader-two-correspondence.json.gz": "9213faacd648687bc5ef02aa8bd517946b1aad14d248122c654b08243b58a0e6",
+  "reader-two-kernel-types.json.gz": "7ed90648a1feae8a318f7c3300a38165db7f078c7278510b589b1d72dab842be",
+  "reader-two-proof-inputs.md": "4a67b9a7bf691c5a8cba8416b2d20e9e1bae207b71b68e6f02c5d7f58950c324",
+  "reader-two-reconstruction.md": "68b0085007c45f71e82a112a54003648ad84c014b600844530ac4eddd299c30b",
+  "reader-two-report.md": "55b2e0346271366f72149ff5da5aa534bf7e5bdef6683dd3df8ea5e7b0231c5e",
+  "reader-two-source-passages.json.gz": "beb04f2881478310fa939d709d21b795723e510a3f65c7ca826bc9d3bd38fc08",
+  "reader-two-sources.json": "bc44b90064a047be7b8ac6aa9f2e6455b07cb991fbc985edf2fdfbd018c67ee1"
+ }
+}

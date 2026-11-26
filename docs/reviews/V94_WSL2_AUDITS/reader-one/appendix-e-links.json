@@ -1,0 +1,222 @@
+[
+  {
+    "tex_line": 39,
+    "caption": "The hom-set bijection",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "lines": [
+      27,
+      56
+    ],
+    "sha256": "bffa6b7a1f1ebbe32d2527b5b3961486427544726cc88bfb591ed8c1017c4cec",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 40,
+    "caption": "its naturality, unit and counit",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+    "lines": [
+      58,
+      91
+    ],
+    "sha256": "6b0d5c0b7063e3ba5a799bdaea0c0153d369d9ef79c51ade9ba5e7a70246f1e1",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 64,
+    "caption": "The two implications",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean",
+    "lines": [
+      43,
+      75
+    ],
+    "sha256": "0bdee3d36e432a73780c3e158e0e223ef79f2fbb8a61d101863d5662d2b5c78a",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 65,
+    "caption": "the Boolean extension",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean",
+    "lines": [
+      28,
+      74
+    ],
+    "sha256": "caec34df2e64a3ed08587adf6f8bf803a297d65684a0077e66c4171da2deb751",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 68,
+    "caption": "Lean declarations",
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "lines": [
+      83,
+      110
+    ],
+    "sha256": "527a9d951d125589401446258ff9e5c9fb86b3044229885d619dc82b71488881",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 99,
+    "caption": "The common list",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "lines": [
+      32,
+      56
+    ],
+    "sha256": "4340601add7ecdb864c6a50fa6ae630a78ea6bf91134cde1bdc9a6e63691e4b1",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 100,
+    "caption": "the contradiction",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+    "lines": [
+      85,
+      92
+    ],
+    "sha256": "d131e25b4d520fa2ebe2cfe576d2d4542e8785222ddbe270a8ec448e3f197185",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 101,
+    "caption": "provability in PA",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean",
+    "lines": [
+      45,
+      64
+    ],
+    "sha256": "8310f844232b52d9b3db560ab3ec9eac5a7cb56ac129c10b9f89f8fcf84bcb78",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 104,
+    "caption": "Lean proof",
+    "file": "Lean/CEIPalomar/Solution.lean",
+    "lines": [
+      114,
+      145
+    ],
+    "sha256": "66da974f638bb89e63c71a894e586b37931ce0150792d0f125eea7aaf052f8e0",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 128,
+    "caption": "The two inverse images under $Fg$",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean",
+    "lines": [
+      35,
+      89
+    ],
+    "sha256": "61cb775fd988ee7ca8caed504fae1914b82cc89e40b9d20fb70fbb6cb9580602",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 135,
+    "caption": "Nonexistence of the lift",
+    "file": "Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean",
+    "lines": [
+      89,
+      103
+    ],
+    "sha256": "7275abb668b55c1422ee33578151b6bfcfdc70228c4610b761a87db2d3067c07",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 167,
+    "caption": "Closure under evaluation and the two implications",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean",
+    "lines": [
+      68,
+      111
+    ],
+    "sha256": "42760bfad1377c230c131315cad9778a9de88f02f0e8bff4b025cca3f9d06dd8",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 188,
+    "caption": "The diagonal output and the sentence code",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "lines": [
+      116,
+      128
+    ],
+    "sha256": "7746ad83a66349a05f5dfe58b07a4f0a3dde1db98296f7ada98a790bf55411f6",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 189,
+    "caption": "the two excluded derivations and the uniform morphism",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+    "lines": [
+      184,
+      218
+    ],
+    "sha256": "452df28fd7eb0ec2e9e839af3ee069233f0361889a9311b370833a0345297dfd",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 210,
+    "caption": "The inference algebra and the two equations",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "lines": [
+      97,
+      126
+    ],
+    "sha256": "25d46c0b2f060b5dc790b577db250ac6cb8c1eda20f8aee300bb2683c18bbe8b",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 211,
+    "caption": "initiality for every axiom subobject",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+    "lines": [
+      130,
+      151
+    ],
+    "sha256": "fa36c7800ef3797a8638a0c102472cbd05289ba7637639ffbac89da6783a0b2a",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 237,
+    "caption": "Preservation of conclusions and inference rules",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean",
+    "lines": [
+      155,
+      178
+    ],
+    "sha256": "29a07d415ffb3002c05378cf784042f88a76cc19d38e5a0770521fc7af8f0425",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 238,
+    "caption": "the equivalence with finite provability",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean",
+    "lines": [
+      59,
+      98
+    ],
+    "sha256": "0478d2eb2678519d670dc7fb0063e1c6f8255c2d550db47aec4f5aa51f2fbd3a",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 239,
+    "caption": "recovery of the axiom subobject and conclusion image",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "lines": [
+      139,
+      192
+    ],
+    "sha256": "c763d1a9a60a36d46aee68bfb110c787fa2071722a48af8c488e4b81a22955ed",
+    "same_bytes_as_registered_tag": true
+  },
+  {
+    "tex_line": 240,
+    "caption": "inseparability and the independent sentence",
+    "file": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+    "lines": [
+      327,
+      342
+    ],
+    "sha256": "3bbafde112dd97cab510daa4219cef98b8973333998d1a7583135c5c39de099d",
+    "same_bytes_as_registered_tag": true
+  }
+]

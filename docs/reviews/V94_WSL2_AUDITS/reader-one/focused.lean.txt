@@ -1,0 +1,138 @@
+import CategoricalEssentialIncompleteness.V46Comparison
+import CategoricalEssentialIncompleteness.V46ConstantSliceFull
+import CategoricalEssentialIncompleteness.V46MillerFixedPoint
+import CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency
+import CategoricalEssentialIncompleteness.V46PartialSliceAdjunctions
+import CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparability
+import CategoricalEssentialIncompleteness.V46ArithmeticDiagonalRepresentation
+import CategoricalEssentialIncompleteness.ArithmeticInseparability
+import Lean
+
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+set_option backward.isDefEq.respectTransparency.types false
+namespace CEIReaderOne
+
+universe v₁ v₂ u₁ u₂
+
+open CategoryTheory CategoryTheory.RestrictionCategory
+open CategoryTheory.Limits (HasZeroMorphisms)
+open CategoryTheory.CoprodStruct CategoryTheory.HasCoproducts
+open PCategoryStruct (nearProd diag)
+open CategoricalEssentialIncompleteness.LocalConnectedness
+
+section Comparison
+
+variable {R : Type u₁} {A : Type u₂} [Category.{v₁} R] [Category.{v₂} A]
+variable [PCategoryStruct R] [PCategory R] [RestrictionCategory A]
+variable [HasZeroMorphisms R] [RestrictionZero R]
+variable [HasZeroMorphisms A] [RestrictionZero A]
+variable [CoprodStruct R] [CategoryTheory.HasCoproducts R] [RestrictionCoproducts R]
+variable [CoprodStruct A] [CategoryTheory.HasCoproducts A] [RestrictionCoproducts A]
+variable [Ranges R] [Ranges A]
+theorem witnessAndNoncoverage (F : RangeFunctor R A) {U : R}
+    (τ : nearProd U U ⟶ U) (hτ : RecursionCategory.IsTuringMorphism τ)
+    (b : U ≅ coprod U U) (P N : Idem (F.toFunctor.obj U))
+    (hPN : P ⊓ N = ⊥)
+    (ha0 : F.mapIdem (Idem.pull (diag U ≫ τ ≫ b.hom) ((⊤ : Idem U).sum ⊥)) ≤ P)
+    (ha1 : F.mapIdem (Idem.pull (diag U ≫ τ ≫ b.hom) ((⊥ : Idem U).sum ⊤)) ≤ N)
+    (s : F.toFunctor.obj U ⟶ coprod (F.toFunctor.obj U) (F.toFunctor.obj U))
+    (hs0 : Idem.pull s ((⊤ : Idem (F.toFunctor.obj U)).sum ⊥) = N)
+    (hs1 : Idem.pull s ((⊥ : Idem (F.toFunctor.obj U)).sum ⊤) = P)
+    (ℓ : U ⟶ coprod U U)
+    (hℓ : F.toFunctor.map ℓ = s ≫ (F.comparison U U).hom)
+    (hU : F.toFunctor.map (𝟙 U) ≠ 0)
+    (hjoin : ∀ g : U ⟶ U, isTotal g → Idem.pull (F.toFunctor.map g) (P ⊔ N) =
+      Idem.pull (F.toFunctor.map g) P ⊔ Idem.pull (F.toFunctor.map g) N) :
+    ∃ g : U ⟶ U, isTotal g ∧ Idem.pull (F.toFunctor.map g) P = ⊥ ∧
+      Idem.pull (F.toFunctor.map g) N = ⊥ ∧ P ⊔ N ≠ ⊤ := by
+  obtain ⟨g, ht, hp, hn⟩ := comparison_zero_inverse_images F τ hτ b P N hPN ha0 ha1 s hs0 hs1 ℓ hℓ
+  exact ⟨g, ht, hp, hn, comparison_noncoverage F g ht P N hp hn hU (hjoin g ht)⟩
+
+theorem diagonalFromDisjointJoins [TotalJoinInverse A] [DisjointArrowJoins R]
+    (F : RangeFunctor R A) {U : R} (τ : nearProd U U ⟶ U)
+    (hτ : RecursionCategory.IsTuringMorphism τ) (b : U ≅ coprod U U)
+    (hU : F.toFunctor.map (𝟙 U) ≠ 0) :
+    Inseparable (Idem.pull (diag U ≫ τ ≫ b.hom) ((⊤ : Idem U).sum ⊥))
+      (Idem.pull (diag U ≫ τ ≫ b.hom) ((⊥ : Idem U).sum ⊤)) := by
+  apply source_inseparable_of_complementary_conditionals F τ hτ b hU
+  intro c d h
+  obtain ⟨l, ht, hl, hr, _⟩ := complementary_conditional_of_disjoint_joins c d h.toPair
+  exact ⟨l, ht, hl, hr⟩
+end Comparison
+
+open CategoricalEssentialIncompleteness
+open CategoricalEssentialIncompleteness.V46
+open CategoricalEssentialIncompleteness.V46.RestrictionSubobjects
+open CategoryTheory.Limits
+
+theorem twoAdjunctions {C : Type u₁} [Category.{v₁} C] [PCategoryStruct C]
+    [PCategory C] [Splits C] [HasPullbacks (Tot C)] {T U : Tot C}
+    (i : T ⟶ U) [Mono i] (inv : MonoInverses C) (h : ¬ IsIso i) :
+    Nonempty (PartialSliceChangeBase.postcompose i ⊣ PartialSliceChangeBase.reindex i inv) ∧
+    Nonempty (PartialSliceChangeBase.reindex i inv ⊣ PartialSliceChangeBase.postcompose i) ∧
+    ¬ (PartialSliceChangeBase.postcompose i).EssSurj :=
+  ⟨⟨PartialSliceChangeBase.leftAdjunction i inv⟩, ⟨PartialSliceChangeBase.rightAdjunction i inv⟩,
+    PartialSliceChangeBase.not_essSurj i inv h⟩
+
+open FFL FFL.FirstOrder FFL.FirstOrder.Arithmetic FFL.Entailment
+open SyntacticPredicates ArithmeticSentenceInseparability NamedArithmeticSignature
+local notation "D" => SyntacticNamedHilbert.Derives functionSymbols relationSymbols bound
+
+theorem pullbackConflict (A : Carrier) (hA : ArithmeticNamedAxiomComparison.ExtendsPA A)
+    (R : Set ℕ) (hR : ComputablePred (· ∈ R)) (hp : theoremSet A ⊆ R) :
+    ¬ Disjoint R (refutationSet A) := by
+  intro hn
+  have pos := NamedArithmeticDiagonalBounds.standard_positive_of_axioms_admissible A
+    (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hA)
+  have neg := NamedArithmeticDiagonalBounds.standard_negative_of_axioms_admissible A
+    (ArithmeticNamedAxiomComparison.axiomsAdmissible_PA A hA)
+  exact no_recursive_separator_of_bounds A NamedArithmeticDiagonalBounds.namedAlpha
+    NamedArithmeticDiagonalBounds.namedAlpha_freeVariables pos neg ⟨R, hR, hp, hn⟩
+
+theorem extensionWitness (A B : Carrier) (pa : ArithmeticNamedAxiomComparison.ExtendsPA A)
+    (extensionProof : ∀ φ : NamedArithmeticSignature.Formula, A.val.Evalb (M := ℕ) ![NamedArithmeticSignature.formulaCode φ] →
+      φ.freeVariables = [] → D B φ)
+    (hc : Entailment.Consistent (ArithmeticNamedProofConnectives.system B)) :
+    Numerical.RecursivelyInseparable (theoremSet B) (refutationSet B) ∧
+    ∃ φ : NamedArithmeticSignature.Formula, φ.freeVariables = [] ∧ ¬ D B φ ∧ ¬ D B (.neg φ) :=
+  ⟨recursively_inseparable B (extendsPA_of_axiom_extension A B pa extensionProof) hc,
+   extension_sentence_incomplete A B pa extensionProof hc⟩
+
+theorem arithmeticDefinabilityInstance (T : ArithmeticTheory) [𝗣𝗔⁻ ⪯ T] [Entailment.Consistent T] :
+    Numerical.RecursivelyInseparable (ArithmeticSyntax.theoremSupport T) (ArithmeticSyntax.refutationSupport T) := by
+  apply ArithmeticSyntax.supports_recursivelyInseparable_of_definability T
+  intro S hS
+  exact ⟨codeOfComputablePred (· ∈ S), ArithmeticRepresentation.codeOfComputablePred_strongNumeralwise T hS⟩
+
+theorem millerWitnessAndConsistency :
+    ∃ a : Miller.Point, Miller.IsMiller a ∧
+      Miller.TheoryDomainApplication.Consistent (Miller.RealClosedAxioms.theoryAxioms a) := by
+  obtain ⟨a, h⟩ := Miller.exists_isMiller
+  exact ⟨a, h, Miller.RealClosedConsistency.theoryAxioms_consistent a⟩
+
+section ConstantObjects
+open RecursionCategory
+variable {R : Type u₁} [Category.{v₁} R] [PCategoryStruct R] [PCategory R]
+attribute [local instance] SplitObject.productData SplitObject.productLaws SplitObject.productSplits
+local instance : RestrictionCategory (SplitObject R) :=
+  @PCategory.inducedRestriction (SplitObject R) inferInstance SplitObject.productData SplitObject.productLaws
+variable [HasPullbacks (Tot (SplitObject R))] [Isotype R]
+theorem constantCompletion (inv : MonoInverses (SplitObject R)) (T : Tot (SplitObject R)) (Q : R) :
+    ∃ E : SplitObject (ConstantSlice.Full.FullCategory T.obj) ≌ PartialMaps.Par (Over T),
+      PreservesRestriction E.functor ∧ PreservesRestriction E.inverse := by
+  exact ⟨ConstantSlice.Full.splittingEquivalence inv T Q,
+    ConstantSlice.Full.splittingEquivalence_restriction inv T Q,
+    ConstantSlice.Full.splittingEquivalence_inverse_restriction inv T Q⟩
+end ConstantObjects
+
+end CEIReaderOne
+
+#print axioms CEIReaderOne.witnessAndNoncoverage
+#print axioms CEIReaderOne.diagonalFromDisjointJoins
+#print axioms CEIReaderOne.twoAdjunctions
+#print axioms CEIReaderOne.pullbackConflict
+#print axioms CEIReaderOne.extensionWitness
+#print axioms CEIReaderOne.arithmeticDefinabilityInstance
+#print axioms CEIReaderOne.millerWitnessAndConsistency
+#print axioms CEIReaderOne.constantCompletion

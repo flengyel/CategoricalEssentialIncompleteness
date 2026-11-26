@@ -1,0 +1,1015 @@
+[
+ {
+  "passage": 8,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   3,
+   19
+  ],
+  "pinpoint": "pp.~594--596, 629",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 8,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   3,
+   19
+  ],
+  "pinpoint": "Chapter~III, \\S16, Theorem~22, p.~59",
+  "keys": [
+   "Smullyan"
+  ]
+ },
+ {
+  "passage": 8,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   3,
+   19
+  ],
+  "pinpoint": "Chapter~III, \\S17, Theorem~23(b), pp.~59--60",
+  "keys": [
+   "Smullyan"
+  ]
+ },
+ {
+  "passage": 15,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   153,
+   180
+  ],
+  "pinpoint": null,
+  "keys": [
+   "Montagna",
+   "DPM"
+  ]
+ },
+ {
+  "passage": 15,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   153,
+   180
+  ],
+  "pinpoint": "pp.~114--115",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 16,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   182,
+   201
+  ],
+  "pinpoint": null,
+  "keys": [
+   "Miller2004"
+  ]
+ },
+ {
+  "passage": 16,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   182,
+   201
+  ],
+  "pinpoint": "Theorem~6.4",
+  "keys": [
+   "BauerHanson"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": null,
+  "keys": [
+   "RosoliniThesis",
+   "Rosolini"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": "Section~5",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": null,
+  "keys": [
+   "CockettLack"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": "Sections~8--9",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": null,
+  "keys": [
+   "Lengyel2004",
+   "Corrections"
+  ]
+ },
+ {
+  "passage": 19,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   220,
+   230
+  ],
+  "pinpoint": null,
+  "keys": [
+   "DPM"
+  ]
+ },
+ {
+  "passage": 20,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   232,
+   242
+  ],
+  "pinpoint": "p.~621",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 20,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   232,
+   242
+  ],
+  "pinpoint": "p.~612, Definitions~6.1--6.2",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 20,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   232,
+   242
+  ],
+  "pinpoint": "p.~615, Definition~7.1",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 21,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   244,
+   258
+  ],
+  "pinpoint": "p.~601, Definition~4.1",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 21,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   244,
+   258
+  ],
+  "pinpoint": "pp.~625--626, Theorem~8.15",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 22,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   260,
+   272
+  ],
+  "pinpoint": "Sections~2--3, pp.~125--128",
+  "keys": [
+   "Bernardi"
+  ]
+ },
+ {
+  "passage": 22,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   260,
+   272
+  ],
+  "pinpoint": "Remark~3.1",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 22,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   260,
+   272
+  ],
+  "pinpoint": "Theorem~4.1",
+  "keys": [
+   "Lengyel2006"
+  ]
+ },
+ {
+  "passage": 22,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   260,
+   272
+  ],
+  "pinpoint": "Sections~5.3 and 7.1, Theorem~7.8",
+  "keys": [
+   "CockettComputability"
+  ]
+ },
+ {
+  "passage": 23,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   274,
+   281
+  ],
+  "pinpoint": "Section~4.4, p.~1169",
+  "keys": [
+   "MPV"
+  ]
+ },
+ {
+  "passage": 24,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   283,
+   291
+  ],
+  "pinpoint": "pp.~595--596",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 24,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   283,
+   291
+  ],
+  "pinpoint": "Theorems~5.19--5.20",
+  "keys": [
+   "vanDijkGO"
+  ]
+ },
+ {
+  "passage": 25,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   293,
+   302
+  ],
+  "pinpoint": "Theorem~4.9",
+  "keys": [
+   "CockettHofstra"
+  ]
+ },
+ {
+  "passage": 25,
+  "tex": "sections/01-introduction.tex",
+  "lines": [
+   293,
+   302
+  ],
+  "pinpoint": "Section~7.5, Theorem~7.14",
+  "keys": [
+   "CockettComputability"
+  ]
+ },
+ {
+  "passage": 28,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   5,
+   26
+  ],
+  "pinpoint": "Section~2.1.1",
+  "keys": [
+   "CockettLack"
+  ]
+ },
+ {
+  "passage": 28,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   5,
+   26
+  ],
+  "pinpoint": "Section~5",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 30,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   44,
+   69
+  ],
+  "pinpoint": "Section~6",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 31,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   71,
+   88
+  ],
+  "pinpoint": "Section~2.3.3",
+  "keys": [
+   "CockettLack"
+  ]
+ },
+ {
+  "passage": 32,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   90,
+   97
+  ],
+  "pinpoint": "Section~2.3.3, Proposition~2.26",
+  "keys": [
+   "CockettLack"
+  ]
+ },
+ {
+  "passage": 33,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   99,
+   108
+  ],
+  "pinpoint": "Section~3",
+  "keys": [
+   "CockettLack"
+  ]
+ },
+ {
+  "passage": 35,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   112,
+   128
+  ],
+  "pinpoint": "Proposition 4.5",
+  "keys": [
+   "CockettLackIII"
+  ]
+ },
+ {
+  "passage": 37,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   144,
+   168
+  ],
+  "pinpoint": "p.~424",
+  "keys": [
+   "CGHRangeI"
+  ]
+ },
+ {
+  "passage": 37,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   144,
+   168
+  ],
+  "pinpoint": "p.~7",
+  "keys": [
+   "Lengyel2006"
+  ]
+ },
+ {
+  "passage": 41,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   192,
+   198
+  ],
+  "pinpoint": "Section 9",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 42,
+  "tex": "sections/02-categorical-preliminaries.tex",
+  "lines": [
+   200,
+   210
+  ],
+  "pinpoint": "Theorem 3.4",
+  "keys": [
+   "CockettHofstra"
+  ]
+ },
+ {
+  "passage": 75,
+  "tex": "sections/03a-internal-theories.tex",
+  "lines": [
+   239,
+   256
+  ],
+  "pinpoint": "Lemma~23",
+  "keys": [
+   "VisserEHU"
+  ]
+ },
+ {
+  "passage": 75,
+  "tex": "sections/03a-internal-theories.tex",
+  "lines": [
+   239,
+   256
+  ],
+  "pinpoint": "Definitions~7, 17 and Theorem~20",
+  "keys": [
+   "KirstPeters"
+  ]
+ },
+ {
+  "passage": 101,
+  "tex": "sections/03b-internal-adjunctions.tex",
+  "lines": [
+   369,
+   374
+  ],
+  "pinpoint": "Theorem~7",
+  "keys": [
+   "Voutsadakis"
+  ]
+ },
+ {
+  "passage": 118,
+  "tex": "sections/04-theory-extensions.tex",
+  "lines": [
+   69,
+   78
+  ],
+  "pinpoint": "Section 3.5",
+  "keys": [
+   "CockettHofstra"
+  ]
+ },
+ {
+  "passage": 141,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   8,
+   36
+  ],
+  "pinpoint": null,
+  "keys": [
+   "Montagna",
+   "DPM"
+  ]
+ },
+ {
+  "passage": 142,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   38,
+   62
+  ],
+  "pinpoint": "p.~115, Note~1",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 142,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   38,
+   62
+  ],
+  "pinpoint": "p.~644",
+  "keys": [
+   "DPM"
+  ]
+ },
+ {
+  "passage": 144,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   92,
+   124
+  ],
+  "pinpoint": "p.~108; p.~115, Note~1",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 147,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   148,
+   173
+  ],
+  "pinpoint": "p.~105",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 147,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   148,
+   173
+  ],
+  "pinpoint": "p.~646",
+  "keys": [
+   "DPM"
+  ]
+ },
+ {
+  "passage": 148,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   175,
+   187
+  ],
+  "pinpoint": null,
+  "keys": [
+   "Montagna",
+   "DPM"
+  ]
+ },
+ {
+  "passage": 148,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   175,
+   187
+  ],
+  "pinpoint": "Corollary 2",
+  "keys": [
+   "Composition"
+  ]
+ },
+ {
+  "passage": 149,
+  "tex": "sections/05-syntactic-recursion-category.tex",
+  "lines": [
+   189,
+   229
+  ],
+  "pinpoint": "p.~109, equation~$(*)$",
+  "keys": [
+   "Montagna"
+  ]
+ },
+ {
+  "passage": 152,
+  "tex": "sections/05a-internal-syntax.tex",
+  "lines": [
+   4,
+   8
+  ],
+  "pinpoint": "pp.~108--109",
+  "keys": [
+   "RobinsonRosolini"
+  ]
+ },
+ {
+  "passage": 252,
+  "tex": "sections/06-interpretation-in-models.tex",
+  "lines": [
+   400,
+   401
+  ],
+  "pinpoint": "Theorem~3.1",
+  "keys": [
+   "Keisler"
+  ]
+ },
+ {
+  "passage": 278,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   239,
+   249
+  ],
+  "pinpoint": "p.~595, (3)",
+  "keys": [
+   "DPH"
+  ]
+ },
+ {
+  "passage": 278,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   239,
+   249
+  ],
+  "pinpoint": "Chapter~III, \\S16, Theorem~22, p.~59",
+  "keys": [
+   "Smullyan"
+  ]
+ },
+ {
+  "passage": 278,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   239,
+   249
+  ],
+  "pinpoint": "Chapter~III, \\S15, corollary to Theorem~21, p.~58",
+  "keys": [
+   "Smullyan"
+  ]
+ },
+ {
+  "passage": 279,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   251,
+   258
+  ],
+  "pinpoint": "Chapter~III, \\S17, Theorem~23(b), pp.~59--60",
+  "keys": [
+   "Smullyan"
+  ]
+ },
+ {
+  "passage": 297,
+  "tex": "sections/08b-uniform-independent-sentences.tex",
+  "lines": [
+   4,
+   17
+  ],
+  "pinpoint": null,
+  "keys": [
+   "PourEl"
+  ]
+ },
+ {
+  "passage": 297,
+  "tex": "sections/08b-uniform-independent-sentences.tex",
+  "lines": [
+   4,
+   17
+  ],
+  "pinpoint": "pp.~272, 274, Definitions~5, 6(b) and~8",
+  "keys": [
+   "PourEl1970"
+  ]
+ },
+ {
+  "passage": 334,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   331,
+   344
+  ],
+  "pinpoint": "p.~126, Proposition~2(b)",
+  "keys": [
+   "Bernardi"
+  ]
+ },
+ {
+  "passage": 334,
+  "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+  "lines": [
+   331,
+   344
+  ],
+  "pinpoint": "p.~125",
+  "keys": [
+   "Bernardi"
+  ]
+ },
+ {
+  "passage": 350,
+  "tex": "sections/04-miller-sequences.tex",
+  "lines": [
+   32,
+   50
+  ],
+  "pinpoint": "proof of Theorem~6.3 and the following paragraph",
+  "keys": [
+   "Miller2004"
+  ]
+ },
+ {
+  "passage": 350,
+  "tex": "sections/04-miller-sequences.tex",
+  "lines": [
+   32,
+   50
+  ],
+  "pinpoint": "pp.~6--9, (2.2), Definition~2.1 and Theorem~2.2",
+  "keys": [
+   "BauerHanson"
+  ]
+ },
+ {
+  "passage": 401,
+  "tex": "sections/09-three-point-space.tex",
+  "lines": [
+   3,
+   13
+  ],
+  "pinpoint": "Definition~2.6",
+  "keys": [
+   "CurryCosheaves"
+  ]
+ },
+ {
+  "passage": 407,
+  "tex": "sections/09-three-point-space.tex",
+  "lines": [
+   81,
+   119
+  ],
+  "pinpoint": "Section 3",
+  "keys": [
+   "Heller"
+  ]
+ },
+ {
+  "passage": 467,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   13,
+   16
+  ],
+  "pinpoint": "Lemma 2.2 and Definition 2.3",
+  "keys": [
+   "CockettLists"
+  ]
+ },
+ {
+  "passage": 467,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   13,
+   16
+  ],
+  "pinpoint": "Definition 2.4 and the following paragraph",
+  "keys": [
+   "MaiettiLists"
+  ]
+ },
+ {
+  "passage": 476,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   122,
+   127
+  ],
+  "pinpoint": "Section 2",
+  "keys": [
+   "GTWW"
+  ]
+ },
+ {
+  "passage": 476,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   122,
+   127
+  ],
+  "pinpoint": "Section 4",
+  "keys": [
+   "GoguenBurstall"
+  ]
+ },
+ {
+  "passage": 477,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   129,
+   135
+  ],
+  "pinpoint": "Sections 2--4",
+  "keys": [
+   "FPT"
+  ]
+ },
+ {
+  "passage": 477,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   129,
+   135
+  ],
+  "pinpoint": "Section 6",
+  "keys": [
+   "GabbayPitts"
+  ]
+ },
+ {
+  "passage": 477,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   129,
+   135
+  ],
+  "pinpoint": "Section 2, Example 1(3)",
+  "keys": [
+   "Katsumata"
+  ]
+ },
+ {
+  "passage": 486,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   242,
+   254
+  ],
+  "pinpoint": "proof of Corollary 6.7",
+  "keys": [
+   "GabbayPitts"
+  ]
+ },
+ {
+  "passage": 495,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   372,
+   399
+  ],
+  "pinpoint": "Propositions 1.1.4 and 1.4.5",
+  "keys": [
+   "Aczel"
+  ]
+ },
+ {
+  "passage": 498,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   415,
+   417
+  ],
+  "pinpoint": "Lemma 3.6",
+  "keys": [
+   "Wissmann"
+  ]
+ },
+ {
+  "passage": 503,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   454,
+   500
+  ],
+  "pinpoint": "0.10, p.~7",
+  "keys": [
+   "HP"
+  ]
+ },
+ {
+  "passage": 503,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   454,
+   500
+  ],
+  "pinpoint": "Sections 2.11--2.12",
+  "keys": [
+   "HH"
+  ]
+ },
+ {
+  "passage": 503,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   454,
+   500
+  ],
+  "pinpoint": "Section 3.1",
+  "keys": [
+   "HH"
+  ]
+ },
+ {
+  "passage": 510,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   564,
+   568
+  ],
+  "pinpoint": "Theorem 4.7",
+  "keys": [
+   "CGHRangeI"
+  ]
+ },
+ {
+  "passage": 510,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   564,
+   568
+  ],
+  "pinpoint": "Section 3.16 and Proposition 3.17",
+  "keys": [
+   "CGHRangeII"
+  ]
+ },
+ {
+  "passage": 511,
+  "tex": "appendices/a-syntax-and-theories.tex",
+  "lines": [
+   570,
+   586
+  ],
+  "pinpoint": "Theorem 4.5 and Section 4.11",
+  "keys": [
+   "CGHRangeI"
+  ]
+ },
+ {
+  "passage": 572,
+  "tex": "appendices/c-section-lifting.tex",
+  "lines": [
+   4,
+   14
+  ],
+  "pinpoint": "Theorem~4.1",
+  "keys": [
+   "Lengyel2006"
+  ]
+ },
+ {
+  "passage": 587,
+  "tex": "appendices/c-section-lifting.tex",
+  "lines": [
+   223,
+   241
+  ],
+  "pinpoint": "p.~11",
+  "keys": [
+   "Lengyel2006"
+  ]
+ },
+ {
+  "passage": 595,
+  "tex": "appendices/d-faithful-family.tex",
+  "lines": [
+   63,
+   64
+  ],
+  "pinpoint": "Corollary 4.4, pp.~657--658",
+  "keys": [
+   "DPM"
+  ]
+ }
+]

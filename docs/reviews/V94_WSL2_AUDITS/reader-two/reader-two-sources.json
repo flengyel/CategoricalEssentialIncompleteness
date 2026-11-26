@@ -1,0 +1,1450 @@
+{
+ "note": "Primary signatures and locators are given for 89 occurrences of 41 works. Local source-copy hashes identify the exact PDF, image or original-author text extraction consulted. No prior referee verdict serves as source evidence. The dated bibliographic search supports reading the claim in the abstract about what appeared as a report on the authors’ announced joint project. The 1987 journal article directly documents that the project was announced and remained future work at its end.",
+ "records": [
+  {
+   "key": "Aczel",
+   "source": "P.~Aczel, \\emph{An introduction to inductive definitions},\nin J.~Barwise (ed.), Handbook of Mathematical Logic,\nNorth-Holland, 1977, pp.~739--782.\n\\href{https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf}{Text}.",
+   "links": [
+    "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Aczel.txt",
+     "sha256": "1be53a90e4ba40506123496296163278d57e8495702f94c1eec9b188b955edf3"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 512,
+     "location": "appendices/a-syntax-and-theories.tex:372",
+     "cited_locator": "[Propositions 1.1.4 and 1.4.5]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Propositions 1.1.4 and 1.4.5 describe least membership by proof sequences and free proof trees. For finitary rules every tree used here is finite. Theorem A.5 uses a regular-epi–mono image of the initial algebra in the slice, whose form is checked directly.",
+   "role": "Source comparison and independently checked finite instance",
+   "relevant_manuscript_results": [
+    "A.5"
+   ]
+  },
+  {
+   "key": "BauerHanson",
+   "source": "A.~Bauer and J.~E. Hanson, \\emph{The Countable Reals},\n\\href{https://arxiv.org/abs/2404.01256v3}{arXiv:2404.01256v3}, 2026.",
+   "links": [
+    "https://arxiv.org/abs/2404.01256v3",
+    "https://arxiv.org/html/2404.01256v3"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "BauerHanson-fresh.txt",
+     "sha256": "322bd539f20ef026aad1df14982b32106d53564cd2822698bfd9f51a7cc5b4e5"
+    },
+    {
+     "primary_copy": "BauerHanson.txt",
+     "sha256": "96ce848642f3f881982dfbf7ea78effeb30344943ca899b558c765364d2268f9"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 11,
+     "location": "sections/01-introduction.tex:182",
+     "cited_locator": "[Theorem~6.4]"
+    },
+    {
+     "passage": 359,
+     "location": "sections/04-miller-sequences.tex:32",
+     "cited_locator": "[pp.~6--9, (2.2), Definition~2.1 and Theorem~2.2]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Definition 2.1 and Theorem 2.2 quantify over every binary name of one sequence and one oracle index. With the chosen coefficient at coordinate d, its singleton depends on all names producing the same real. Theorem 6.4 instead concerns the epimorphism to Dedekind reals in their realizability topos.",
+   "role": "Fixed-point input re-established for this numbering and separate historical use of 6.4",
+   "relevant_manuscript_results": [
+    "9.3",
+    "9.4"
+   ]
+  },
+  {
+   "key": "Bernardi",
+   "source": "C.~Bernardi, \\emph{Precomplete equivalence relations in dominical\ncategories}, Proc. Amer. Math. Soc. \\textbf{98} (1986), 124--134.\n\\href{https://doi.org/10.1090/S0002-9939-1986-0848889-9}{doi:10.1090/S0002-9939-1986-0848889-9}.",
+   "links": [
+    "https://doi.org/10.1090/S0002-9939-1986-0848889-9",
+    "https://www.researchgate.net/publication/303491669_Precomplete_equivalence_relations_in_dominical_categories"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Bernardi-fresh.txt",
+     "sha256": "d1bde47631c8d13ff2e6a59aed62cd38a479de26ab8b10ef2ad9461f61ddb671"
+    },
+    {
+     "primary_copy": "Bernardi.txt",
+     "sha256": "f262be6eba2fc51ceef5ab2ef16f3d9bab35b40a02ca15639ae23552b05dc2a0"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 17,
+     "location": "sections/01-introduction.tex:260",
+     "cited_locator": "[Sections~2--3, pp.~125--128]"
+    },
+    {
+     "passage": 342,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:331",
+     "cited_locator": "[p.~126, Proposition~2(b)]"
+    },
+    {
+     "passage": 342,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:331",
+     "cited_locator": "[p.~125]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Precompleteness totalizes partial programs modulo an equivalence relation. Proposition 2(b) gives the numerical inseparability of distinct classes. The categorical version takes a nonempty disjoint pair of saturated unions and the appropriate dominical choice and coproduct structure. PA-provable equality is the numerical example in §2.",
+   "role": "Source comparison and internally constructed diagonal obstruction",
+   "relevant_manuscript_results": [
+    "3.3",
+    "8.4"
+   ]
+  },
+  {
+   "key": "CockettLists",
+   "source": "J.~R.~B. Cockett, \\emph{List-arithmetic distributive categories: Locoi},\nJ. Pure Appl. Algebra \\textbf{66} (1990), no.~1, 1--29.\n\\href{https://doi.org/10.1016/0022-4049(90)90121-W}{doi:10.1016/0022-4049(90)90121-W}.",
+   "links": [
+    "https://doi.org/10.1016/0022-4049(90)90121-W"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CockettLists.txt",
+     "sha256": "24657c2e331b1a486ef61015fc9a2e6621c8bbd4ed38f03b7cab965473bad6d8"
+    },
+    {
+     "primary_copy": "CockettLists.txt",
+     "sha256": "24657c2e331b1a486ef61015fc9a2e6621c8bbd4ed38f03b7cab965473bad6d8"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 481,
+     "location": "appendices/a-syntax-and-theories.tex:13",
+     "cited_locator": "[Lemma 2.2 and Definition 2.3]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Lemma 2.2 gives list recursion with a parameter. Definition 2.3 singles out list-arithmetic distributive categories. Appendix A assumes parameter-stable list algebras and uses their constructors to collect occurrences.",
+   "role": "Definition and checked uses",
+   "relevant_manuscript_results": [
+    "A.1",
+    "A.2"
+   ]
+  },
+  {
+   "key": "CockettComputability",
+   "source": "J.~R.~B. Cockett, \\emph{Categories and Computability},\nlecture notes, 12 August 2014.\n\\href{https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf}{Author's text}.",
+   "links": [
+    "https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CockettComputability-fresh.txt",
+     "sha256": "a8e6d8c389678150ca7ed7d3bd7c72c9eea95c2d4fa98b2adf0ecaa87ede0c46"
+    },
+    {
+     "primary_copy": "CockettComputability.txt",
+     "sha256": "f502ca173d48bbf690a81104c2afbc3fb7ca83cd9cfcb9034683dcd931297161"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 17,
+     "location": "sections/01-introduction.tex:260",
+     "cited_locator": "[Sections~5.3 and 7.1, Theorem~7.8]"
+    },
+    {
+     "passage": 20,
+     "location": "sections/01-introduction.tex:293",
+     "cited_locator": "[Section~7.5, Theorem~7.14]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Sections 5.3 and 7.1 define joins and use the discrete join Turing setting for Theorem 7.8. The stated attribution to Lengyel appears in the theorem. Theorem 7.14 assumes a nontrivial Turing category, restriction zero (joins suffice) and a provability predicate. Its conclusion is a nontrivial terminal restriction idempotent.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "3.3"
+   ]
+  },
+  {
+   "key": "CGHRangeI",
+   "source": "J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,\n\\emph{Range categories I: General theory},\nTheory and Applications of Categories \\textbf{26} (2012),\nno.~17, pp.~412--452.\n\\href{https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html}{Journal page}.",
+   "links": [
+    "https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html",
+    "https://www.researchgate.net/publication/265194097_Range_categories_I_General_theory"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CGHRangeI-fresh.txt",
+     "sha256": "80095fd19b62e1b7bcbc5b66e07ca83473e0e6fe1e0170e79c150a18a0dc4d9a"
+    },
+    {
+     "primary_copy": "CGHRangeI.txt",
+     "sha256": "e4c3f80fbfa138546862a8698f2661bc89c7bad5836646e01c84c486b55eb33e"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 32,
+     "location": "sections/02-categorical-preliminaries.tex:144",
+     "cited_locator": "[p.~424]"
+    },
+    {
+     "passage": 528,
+     "location": "appendices/a-syntax-and-theories.tex:564",
+     "cited_locator": "[Theorem 4.7]"
+    },
+    {
+     "passage": 529,
+     "location": "appendices/a-syntax-and-theories.tex:570",
+     "cited_locator": "[Theorem 4.5 and Section 4.11]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The paper defines range functors as preserving restriction and range. For restriction splittings Theorem 4.7 relates range operators to stable factorizations of total morphisms. Theorem 4.5 and §4.11 cover monic partial maps of a regular category. Here preservation of zero and of coproducts is additional.",
+   "role": "Definitions, structural inference and independent proof",
+   "relevant_manuscript_results": [
+    "4.1",
+    "A.7"
+   ]
+  },
+  {
+   "key": "CGHRangeII",
+   "source": "J.~R.~B. Cockett, X.~Guo, and P.~Hofstra,\n\\emph{Range categories II: Towards regularity},\nTheory and Applications of Categories \\textbf{26} (2012),\nno.~18, pp.~453--500.\n\\href{https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html}{Journal page}.",
+   "links": [
+    "https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html",
+    "https://www.kurims.kyoto-u.ac.jp/EMIS/journals/TAC/volumes/26/18/26-18.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CGHRangeII.txt",
+     "sha256": "3a7ec44aab7d1860538adfc857a51aed784f22b948e7edd50465c40e3db73a46"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 528,
+     "location": "appendices/a-syntax-and-theories.tex:564",
+     "cited_locator": "[Section 3.16 and Proposition 3.17]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Section 3.16 and Proposition 3.17 identify the regular epi–mono case of a stable factorization system under finite limits and all monics as right class. A.7 states its own partial inverse assumption on the mono of a regular image.",
+   "role": "Structural comparison",
+   "relevant_manuscript_results": [
+    "A.7"
+   ]
+  },
+  {
+   "key": "CockettHofstra",
+   "source": "J.~R.~B. Cockett and P.~J.~W. Hofstra,\n\\emph{Introduction to Turing categories},\nAnn. Pure Appl. Logic \\textbf{156} (2008), 183--209.",
+   "links": [
+    "https://doi.org/10.1016/j.apal.2008.04.005"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Cockett-TuringCateg.pdf",
+     "kind": "original PDF",
+     "sha256": "ed06ee0bfda4da4278e37e61b10e7c34712dbc7e918a6d5b85f3183faf06403d"
+    },
+    {
+     "primary_copy": "CockettHofstra.txt",
+     "sha256": "770ce40ba7be05d491e4df5bc432a7822a9a7a27b987fb31774af1e44674a27b"
+    },
+    {
+     "primary_copy": "CockettHofstra.txt",
+     "sha256": "770ce40ba7be05d491e4df5bc432a7822a9a7a27b987fb31774af1e44674a27b"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 20,
+     "location": "sections/01-introduction.tex:293",
+     "cited_locator": "[Theorem~4.9]"
+    },
+    {
+     "passage": 37,
+     "location": "sections/02-categorical-preliminaries.tex:200",
+     "cited_locator": "[Theorem 3.4]"
+    },
+    {
+     "passage": 117,
+     "location": "sections/04-theory-extensions.tex:69",
+     "cited_locator": "[Section 3.5]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Theorem 3.4 recognizes a Turing object from total retractions and universal application. Section 3.5 treats completion/slicing constructions with their own ambient hypotheses. Theorem 4.9 relates the PCA of computable morphisms to partial idempotent splittings. Section 5 constructs its constant family, total parameter and splitting equivalence explicitly.",
+   "role": "Recognition input and structural comparison",
+   "relevant_manuscript_results": [
+    "5.1",
+    "5.2"
+   ]
+  },
+  {
+   "key": "CockettLack",
+   "source": "J.~R.~B. Cockett and S.~Lack, \\emph{Restriction categories. I.\nCategories of partial maps}, Theoret. Comput. Sci. \\textbf{270}\n(2002), 223--259.",
+   "links": [
+    "https://pages.cpsc.ucalgary.ca/~robin/FMCS/FMCS_06/RestrictionsI.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "882158435-Crockett-Restricted-Categories-I-Categories-of-Partial-Maps.pdf",
+     "kind": "original PDF",
+     "sha256": "fc26e5eafaee374717fd7422064ec4ea9f24345344f309f040169df24653a4c9"
+    },
+    {
+     "primary_copy": "CockettLack.txt",
+     "sha256": "18d1bce91e82c8d73b6a8ec0bfe09b68c6e6c9ab10e04e8656a2d798ee5bbd7e"
+    },
+    {
+     "primary_copy": "CockettLack.txt",
+     "sha256": "18d1bce91e82c8d73b6a8ec0bfe09b68c6e6c9ab10e04e8656a2d798ee5bbd7e"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    },
+    {
+     "passage": 23,
+     "location": "sections/02-categorical-preliminaries.tex:5",
+     "cited_locator": "[Section~2.1.1]"
+    },
+    {
+     "passage": 26,
+     "location": "sections/02-categorical-preliminaries.tex:71",
+     "cited_locator": "[Section~2.3.3]"
+    },
+    {
+     "passage": 27,
+     "location": "sections/02-categorical-preliminaries.tex:90",
+     "cited_locator": "[Section~2.3.3, Proposition~2.26]"
+    },
+    {
+     "passage": 28,
+     "location": "sections/02-categorical-preliminaries.tex:99",
+     "cited_locator": "[Section~3]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "§2.1.1 gives R1 to R4; §2.3.3 and Proposition 2.26 give the relative Karoubi construction and its restriction. In §3 composition of monic spans is by pullback. These operations underlie the restrictions, splittings and total subcategory in §§2 and 4.",
+   "role": "Definitions, constructions and applied laws",
+   "relevant_manuscript_results": [
+    "4.1",
+    "A.7",
+    "B.9"
+   ]
+  },
+  {
+   "key": "CockettLackIII",
+   "source": "J.~R.~B. Cockett and S.~Lack,\n\\emph{Restriction categories III: colimits, partial limits and extensivity},\nMath. Structures Comput. Sci. \\textbf{17} (2007), 775--817.",
+   "links": [
+    "https://arxiv.org/pdf/math/0610500"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CockettLackIII.txt",
+     "sha256": "a86d7e001a72e3b83b890e74ac84dba384d1f81412327a4557d68af01162a33c"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 30,
+     "location": "sections/02-categorical-preliminaries.tex:112",
+     "cited_locator": "[Proposition 4.5]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Proposition 4.5 identifies restriction products with P-category structure. The manuscript uses the pairing equations on parallel partial morphisms and total projections, including the domain of the pair.",
+   "role": "Structural equivalence",
+   "relevant_manuscript_results": [
+    "3.1",
+    "B.7"
+   ]
+  },
+  {
+   "key": "CurryCosheaves",
+   "source": "J.~M. Curry, \\emph{Dualities between cellular sheaves and cosheaves},\nJ. Pure Appl. Algebra \\textbf{222} (2018), 966--993.\n\\href{https://doi.org/10.1016/j.jpaa.2017.06.001}\n{doi:10.1016/j.jpaa.2017.06.001}.",
+   "links": [
+    "https://doi.org/10.1016/j.jpaa.2017.06.001",
+    "https://arxiv.org/pdf/1607.06942"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "CurryCosheaves.txt",
+     "sha256": "3f21ad92a15b2519f160d885ef46301829eb1751d0e2aa5d1ea714147299de44"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 413,
+     "location": "sections/09-three-point-space.tex:3",
+     "cited_locator": "[Definition~2.6]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Definition 2.6 uses covariant diagrams and a colimit gluing condition for a cover. For this finite topology the two proper nontrivial pieces meet at the centre and the value on their union is the pushout.",
+   "role": "Definition plus checked instance",
+   "relevant_manuscript_results": [
+    "B.1"
+   ]
+  },
+  {
+   "key": "DPH",
+   "source": "R.~A. Di Paola and A.~Heller, \\emph{Dominical categories:\nrecursion theory without elements}, J. Symbolic Logic\n\\textbf{52} (1987), no.~3, 594--635.\n\\href{https://doi.org/10.2307/2274352}{doi:10.2307/2274352}.",
+   "links": [
+    "https://doi.org/10.2307/2274352",
+    "https://ncatlab.org/nlab/files/Alex-Heller-pub.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Paola-DominicalCategoriesRecursion-1987.pdf",
+     "kind": "original PDF",
+     "sha256": "84930c7a61bc5d834926bce55c7ef4962f5a2ebc4510395814fb1cc97a67f463"
+    },
+    {
+     "primary_copy": "DPH.txt",
+     "sha256": "c2ff8245ee343d529f50d4cd500194f92aed00b7d7cdeacf00c8255f3d07c588"
+    },
+    {
+     "primary_copy": "DPH.txt",
+     "sha256": "c2ff8245ee343d529f50d4cd500194f92aed00b7d7cdeacf00c8255f3d07c588"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 3,
+     "location": "sections/01-introduction.tex:3",
+     "cited_locator": "[pp.~594--596, 629]"
+    },
+    {
+     "passage": 15,
+     "location": "sections/01-introduction.tex:232",
+     "cited_locator": "[p.~621]"
+    },
+    {
+     "passage": 15,
+     "location": "sections/01-introduction.tex:232",
+     "cited_locator": "[p.~612, Definitions~6.1--6.2]"
+    },
+    {
+     "passage": 15,
+     "location": "sections/01-introduction.tex:232",
+     "cited_locator": "[p.~615, Definition~7.1]"
+    },
+    {
+     "passage": 16,
+     "location": "sections/01-introduction.tex:244",
+     "cited_locator": "[p.~601, Definition~4.1]"
+    },
+    {
+     "passage": 16,
+     "location": "sections/01-introduction.tex:244",
+     "cited_locator": "[pp.~625--626, Theorem~8.15]"
+    },
+    {
+     "passage": 19,
+     "location": "sections/01-introduction.tex:283",
+     "cited_locator": "[pp.~595--596]"
+    },
+    {
+     "passage": 282,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:239",
+     "cited_locator": "[p.~595, (3)]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Pages 594–596 announce the program. Item (3) on page 595 assumes definability of each recursive set in a consistent system. Definitions 4.1, 6.1–2 and 7.1 specify indices, sections, choice, coproduct totality and distributivity. Theorem 8.15 on pp. 625–626 uses a sum-valued Turing morphism; its final contradiction needs a nonzero identity. On p. 629 the authors still describe the algebraization as future work.",
+   "role": "Source attribution, corrected nontrivial instance and checked degenerate counterexample",
+   "relevant_manuscript_results": [
+    "3.1",
+    "3.3",
+    "C.1"
+   ]
+  },
+  {
+   "key": "DPM",
+   "source": "R.~A. Di Paola and F.~Montagna, \\emph{Some properties of the syntactic\n$p$-recursion categories generated by consistent, recursively enumerable\nextensions of Peano arithmetic}, J. Symbolic Logic \\textbf{56} (1991),\n643--660.",
+   "links": [
+    "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/some-properties-of-the-syntactic-precursion-categories-generated-by-consistent-recursively-enumerable-extensions-of-peano-arithmetic/CEBD30B1664AF179CF873E007F2113F8"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "PaolaMontanga-PropertiesSyntacticpRecursion-1991.pdf",
+     "kind": "original PDF",
+     "sha256": "535737e5013aba7aa9decf766dcecfeafc1517c65be657091b82b309f6938b5a"
+    },
+    {
+     "primary_copy": "DPM.txt",
+     "sha256": "f750e4d18e0cb322e7e07551a587e371987adecdddbc740e1da363b178af691a"
+    },
+    {
+     "primary_copy": "DPM.txt",
+     "sha256": "f750e4d18e0cb322e7e07551a587e371987adecdddbc740e1da363b178af691a"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 10,
+     "location": "sections/01-introduction.tex:153",
+     "cited_locator": ""
+    },
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    },
+    {
+     "passage": 140,
+     "location": "sections/05-syntactic-recursion-category.tex:8",
+     "cited_locator": ""
+    },
+    {
+     "passage": 141,
+     "location": "sections/05-syntactic-recursion-category.tex:38",
+     "cited_locator": "[p.~644]"
+    },
+    {
+     "passage": 146,
+     "location": "sections/05-syntactic-recursion-category.tex:148",
+     "cited_locator": "[p.~646]"
+    },
+    {
+     "passage": 147,
+     "location": "sections/05-syntactic-recursion-category.tex:175",
+     "cited_locator": ""
+    },
+    {
+     "passage": 615,
+     "location": "appendices/d-faithful-family.tex:63",
+     "cited_locator": "[Corollary 4.4, pp.~657--658]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Syntactic objects are generated sets, program equality on the unprimed system is uniformly provable graph equality, and p. 646 specifies the coproduct coding. Their question about local connectedness refers to Heller's construction. Corollary 4.4 gives the failure of local connectedness for the consistent recursively enumerable PA extensions in Appendix D.",
+   "role": "Historical construction and comparison",
+   "relevant_manuscript_results": [
+    "6.1",
+    "6.3",
+    "D.1",
+    "D.2"
+   ]
+  },
+  {
+   "key": "FPT",
+   "source": "M.~Fiore, G.~Plotkin, and D.~Turi,\n\\emph{Abstract syntax and variable binding},\nProceedings of the Fourteenth Annual IEEE Symposium on Logic in\nComputer Science, IEEE Computer Society, 1999, pp.~193--202.\n\\href{https://doi.org/10.1109/LICS.1999.782615}{doi:10.1109/LICS.1999.782615}.",
+   "links": [
+    "https://doi.org/10.1109/LICS.1999.782615",
+    "https://www.dcs.ed.ac.uk/home/dt/FiorePlotkinTuri.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "FPT.txt",
+     "sha256": "607e2fc4ec52aab00de63da3f0a385198c6ca1b35267fd5c8c84c9038939ab58"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 492,
+     "location": "appendices/a-syntax-and-theories.tex:129",
+     "cited_locator": "[Sections 2--4]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Sections 2–4 give binding signatures, initial syntax and substitution using a context-indexed algebraic treatment modulo bound renaming. A.3 keeps raw variable names and its option-valued fold supplies capture tests.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "A.1",
+    "A.3"
+   ]
+  },
+  {
+   "key": "GabbayPitts",
+   "source": "M.~J. Gabbay and A.~M. Pitts,\n\\emph{A new approach to abstract syntax with variable binding},\nFormal Aspects of Computing \\textbf{13} (2002), 341--363.\n\\href{https://doi.org/10.1007/s001650200016}{doi:10.1007/s001650200016}.",
+   "links": [
+    "https://doi.org/10.1007/s001650200016",
+    "https://www.gabbay.org.uk/papers/newaas-jv.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "GabbayPitts.txt",
+     "sha256": "9542fbe2db5dcdff821b83aa6aa7e0af1908d11602bdbb85b735d3de5a8d9384"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 492,
+     "location": "appendices/a-syntax-and-theories.tex:129",
+     "cited_locator": "[Section 6]"
+    },
+    {
+     "passage": 502,
+     "location": "appendices/a-syntax-and-theories.tex:242",
+     "cited_locator": "[proof of Corollary 6.7]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Section 6 and Corollary 6.7 treat structural recursion on alpha-classes in nominal sets. Its proof carries the original expression together with the recursive value. Here the carried expression lets an equal binder return its original quantified body.",
+   "role": "Construction comparison, independently implemented for literal names",
+   "relevant_manuscript_results": [
+    "A.3"
+   ]
+  },
+  {
+   "key": "GoguenBurstall",
+   "source": "J.~A. Goguen and R.~M. Burstall,\n\\emph{A study in the foundations of programming methodology:\nSpecifications, institutions, charters and parchments},\nin D.~Pitt, S.~Abramsky, A.~Poign\\'e, and D.~Rydeheard (eds.),\nCategory Theory and Computer Programming, Lecture Notes in Computer\nScience \\textbf{240}, Springer, 1986, pp.~313--333.\n\\href{https://doi.org/10.1007/3-540-17162-2_131}{doi:10.1007/3-540-17162-2\\_131}.",
+   "links": [
+    "https://doi.org/10.1007/3-540-17162-2_131"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "goguen-16.png",
+     "sha256": "1ef982a4697a5b5dfeaa27678c15c923e0924b65ab11a8d630e4b77ca5a2b8cb"
+    },
+    {
+     "primary_copy": "GoguenBurstall.pdf",
+     "sha256": "1e84dadbbb2ffbef55cf8d95e8568863577341e2807c77f1b2d4ce4dbf55e288"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 491,
+     "location": "appendices/a-syntax-and-theories.tex:122",
+     "cited_locator": "[Section 4]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Section 4 on parchments obtains the phrase sorts and syntax of a logical language from an initial many-sorted algebra, including the sentence sort. This is the antecedent of an internal many-sorted construction.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "A.1"
+   ]
+  },
+  {
+   "key": "GTWW",
+   "source": "J.~A. Goguen, J.~W. Thatcher, E.~G. Wagner, and J.~B. Wright,\n\\emph{Initial algebra semantics and continuous algebras},\nJ. ACM \\textbf{24} (1977), no.~1, 68--95.\n\\href{https://doi.org/10.1145/321992.321997}{doi:10.1145/321992.321997}.",
+   "links": [
+    "https://doi.org/10.1145/321992.321997",
+    "https://fldit-www.cs.tu-dortmund.de/~peter/IniAlg.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "GTWW.txt",
+     "sha256": "f4b5bdeac62ae246a1909c0ad8b7c279223c6f3e3643ae5da842decdedc1257f"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 491,
+     "location": "appendices/a-syntax-and-theories.tex:122",
+     "cited_locator": "[Section 2]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Section 2 defines signatures and many-sorted algebras leading to the initial term algebra and its interpretation by unique homomorphism. The paper uses a two-sorted parameterized internal instance.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "A.1"
+   ]
+  },
+  {
+   "key": "HP",
+   "source": "P.~H\\'ajek and P.~Pudl\\'ak, \\emph{Metamathematics of First-Order\nArithmetic}, Perspectives in Logic, Cambridge \\mbox{University} Press,\n2017 reissue of the Springer text, originally published in 1993.\n\\href{https://doi.org/10.1017/9781316717271}{doi:10.1017/9781316717271}.",
+   "links": [
+    "https://doi.org/10.1017/9781316717271"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "HP7.png",
+     "sha256": "71038bf75c11086cc3165dc51150cc9b1a45ab986f484fb920b876d8a680dbfd"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 521,
+     "location": "appendices/a-syntax-and-theories.tex:454",
+     "cited_locator": "[0.10, p.~7]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Page 7, §0.10, lists the three implication/negation schemes in the paper, including the negative contraposition axiom. The manuscript obtains the other schemes from its separately cited source.",
+   "role": "Choice of axioms instantiated by seven rule morphisms",
+   "relevant_manuscript_results": [
+    "A.6"
+   ]
+  },
+  {
+   "key": "Heller",
+   "source": "A.~Heller, \\emph{An existence theorem for recursion categories},\nJ. Symbolic Logic \\textbf{55} (1990), 1252--1268.",
+   "links": [
+    "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/an-existence-theorem-for-recursion-categories/5A24053486108F86AF005D88D63D40E8"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Heller-ExistenceTheoremRecursion-1990.pdf",
+     "kind": "original PDF",
+     "sha256": "9464807984ec2949473ae83c44071d76bd32b57e2884600c01cf8536137634f2"
+    },
+    {
+     "primary_copy": "Heller.txt",
+     "sha256": "98c6d7bf8909975d9feb17d2c13ea41cb0d21d042ff67b0296a484bc92b75a48"
+    },
+    {
+     "primary_copy": "Heller.txt",
+     "sha256": "98c6d7bf8909975d9feb17d2c13ea41cb0d21d042ff67b0296a484bc92b75a48"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": "[Section~5]"
+    },
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": "[Sections~8--9]"
+    },
+    {
+     "passage": 23,
+     "location": "sections/02-categorical-preliminaries.tex:5",
+     "cited_locator": "[Section~5]"
+    },
+    {
+     "passage": 25,
+     "location": "sections/02-categorical-preliminaries.tex:44",
+     "cited_locator": "[Section~6]"
+    },
+    {
+     "passage": 36,
+     "location": "sections/02-categorical-preliminaries.tex:192",
+     "cited_locator": "[Section 9]"
+    },
+    {
+     "passage": 419,
+     "location": "sections/09-three-point-space.tex:81",
+     "cited_locator": "[Section 3]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Sections 5 and 6 discuss the prodominical setting, domains and ranges. Sections 8 and 9 give the frame/existence construction, while §3 analyzes the displayed formal free-semigroup structure. The numerical word carrier here uses actual nonempty words with explicit frames.",
+   "role": "Terminology and historical construction",
+   "relevant_manuscript_results": [
+    "5.1",
+    "B.6",
+    "B.8"
+   ]
+  },
+  {
+   "key": "HH",
+   "source": "H.~P.~Hirst and J.~L.~Hirst, \\emph{A Primer for Logic and Proof},\n2015 edition.\n\\href{https://www.appstate.edu/~hirstjl/primer/hirst.pdf}{Authors' text}.",
+   "links": [
+    "https://www.appstate.edu/~hirstjl/primer/hirst.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "HH-fresh.txt",
+     "sha256": "5280baa30a088c0b2da630c21bdafcacfd0bdf9334472497d2f4a5f1419e9907"
+    },
+    {
+     "primary_copy": "HH.txt",
+     "sha256": "61ed392a3bd3df062ce4acef78812ecc7df5db8b6b609613e823049ff49b8bf8"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 521,
+     "location": "appendices/a-syntax-and-theories.tex:454",
+     "cited_locator": "[Sections 2.11--2.12]"
+    },
+    {
+     "passage": 521,
+     "location": "appendices/a-syntax-and-theories.tex:454",
+     "cited_locator": "[Section 3.1]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The named-variable rules in §§2.11–2.12 use free-for substitution and a nonoccurrence condition for distribution. Section 3.1 supplies reflexivity and replacement. Appendix A constructs the rule domains using the admissibility pullbacks and the absence subobject.",
+   "role": "Choice of rules and checked construction",
+   "relevant_manuscript_results": [
+    "A.3",
+    "A.6"
+   ]
+  },
+  {
+   "key": "Katsumata",
+   "source": "S.-y. Katsumata,\n\\emph{A generalisation of pre-logical predicates to simply typed formal systems},\nin J.~D\\'iaz, J.~Karhum\\\"aki, A.~Lepist\\\"o, and D.~Sannella (eds.),\nAutomata, Languages and Programming, Lecture Notes in Computer Science\n\\textbf{3142}, Springer, 2004, pp.~831--845.\n\\href{https://doi.org/10.1007/978-3-540-27836-8_70}{doi:10.1007/978-3-540-27836-8\\_70}.",
+   "links": [
+    "https://doi.org/10.1007/978-3-540-27836-8_70",
+    "https://www.kurims.kyoto-u.ac.jp/~sinya/paper/generalpre.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Katsumata-fresh.txt",
+     "sha256": "de13382ee4615fd25cba8de01c25911fabf2f0791dcc33d092eda152b3f2fa26"
+    },
+    {
+     "primary_copy": "Katsumata.txt",
+     "sha256": "69b441f2e716ee9bfc1718be28719254ce49dfd1935a6c3da5df18811e2c2802"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 492,
+     "location": "appendices/a-syntax-and-theories.tex:129",
+     "cited_locator": "[Section 2, Example 1(3)]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "In §2, Example 1(3) uses a typed first-order binding signature for predicate logic with a quantified variable. The syntax of a binding signature identifies renamings. The paper's formula syntax additionally retains names and can return substitution failure.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "A.1",
+    "A.3"
+   ]
+  },
+  {
+   "key": "Keisler",
+   "source": "H.~J. Keisler, \\emph{The ultraproduct construction},\nauthor's survey, 1 June 2010.\n\\href{https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf}{Author's text}.",
+   "links": [
+    "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Keisler.txt",
+     "sha256": "402427d8d8d1a4d6275e5e090ded9227579f18fc4c8eac3327d249d3af8d108c"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 255,
+     "location": "sections/06-interpretation-in-models.tex:400",
+     "cited_locator": "[Theorem~3.1]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Theorem 3.1 transfers a first-order formula evaluated at a tuple of representatives exactly when its coordinatewise truth set belongs to the ultrafilter. Apply it separately to each PA axiom, each predicate defining a subobject, and each functional program graph. Closed truth transfers from the constant model.",
+   "role": "External mathematical input proved and instantiated",
+   "relevant_manuscript_results": [
+    "7.7",
+    "7.8",
+    "7.9"
+   ]
+  },
+  {
+   "key": "KirstPeters",
+   "source": "D.~Kirst and B.~Peters, \\emph{G\\\"odel's theorem without tears ---\nessential incompleteness in synthetic computability},\nin B.~Klin and E.~Pimentel (eds.), 31st EACSL Annual Conference on\nComputer Science Logic (CSL 2023), Leibniz International Proceedings\nin Informatics \\textbf{252}, Schloss Dagstuhl, 2023, pp.~30:1--30:18.\n\\href{https://doi.org/10.4230/LIPIcs.CSL.2023.30}{doi:10.4230/LIPIcs.CSL.2023.30}.",
+   "links": [
+    "https://doi.org/10.4230/LIPIcs.CSL.2023.30",
+    "https://www.ps.uni-saarland.de/Publications/documents/KirstPeters_2023_Goedel.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "KirstPeters.txt",
+     "sha256": "fae39c9c62492b3c7b3ba2e2e4403fe41033bfe3308067b582596d4912e61753"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 70,
+     "location": "sections/03a-internal-theories.tex:239",
+     "cited_locator": "[Definitions~7, 17 and Theorem~20]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Definitions 7 and 17 fix their formal systems and strong separation using a synthetic enumeration. Theorem 20 gives independence in consistent proof-preserving extensions under semidecidability. Here the transfer uses pullbacks of complementary subobjects and at first guarantees noncoverage, independent of point existence.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "4.3",
+    "8.6"
+   ]
+  },
+  {
+   "key": "Lengyel2004",
+   "source": "F.~Lengyel, \\emph{More existence theorems for recursion categories},\nAnn. Pure Appl. Logic \\textbf{125} (2004), 1--41.",
+   "links": [
+    "https://doi.org/10.1016/S0168-0072(03)00060-5"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "LengyelExistenceTheorems.pdf",
+     "kind": "original PDF",
+     "sha256": "128a9647654cafe45e0e9c9399b8e671de89b387057c9eb2aef23045bce952b6"
+    },
+    {
+     "primary_copy": "Lengyel2004.txt",
+     "sha256": "655f0de829323d651798e85f2b5fe9d64774cfee2cda72acd22ad72deeb70f65"
+    },
+    {
+     "primary_copy": "Lengyel2004.txt",
+     "sha256": "655f0de829323d651798e85f2b5fe9d64774cfee2cda72acd22ad72deeb70f65"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The existence argument constructs recursion categories using iteration functors preserving the specified structure, with faithfulness supplying the reflection of equations. The bibliography also cites its corrections.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "5.1",
+    "B.8"
+   ]
+  },
+  {
+   "key": "Lengyel2006",
+   "source": "F.~Lengyel, \\emph{Locally connected recursion categories},\nTechnical Report TR-2006011, Graduate Center, City University of New York,\n2006. \\url{https://academicworks.cuny.edu/gc_cs_tr/277/}.",
+   "links": [
+    "https://academicworks.cuny.edu/gc_cs_tr/277/"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "LOC18Jul06.pdf",
+     "kind": "original PDF",
+     "sha256": "b1e8c826aeb6afcb382e70bbfdc58a5efcb7d68060ceabc20ba265bc780e2960"
+    },
+    {
+     "primary_copy": "Lengyel2006.txt",
+     "sha256": "74a14a3b603cb0f5be4027ed18d246ff7264d5ac43f04e185a169c5dcfa055d1"
+    },
+    {
+     "primary_copy": "Lengyel2006.txt",
+     "sha256": "74a14a3b603cb0f5be4027ed18d246ff7264d5ac43f04e185a169c5dcfa055d1"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 17,
+     "location": "sections/01-introduction.tex:260",
+     "cited_locator": "[Theorem~4.1]"
+    },
+    {
+     "passage": 32,
+     "location": "sections/02-categorical-preliminaries.tex:144",
+     "cited_locator": "[p.~7]"
+    },
+    {
+     "passage": 592,
+     "location": "appendices/c-section-lifting.tex:4",
+     "cited_locator": "[Theorem~4.1]"
+    },
+    {
+     "passage": 607,
+     "location": "appendices/c-section-lifting.tex:223",
+     "cited_locator": "[p.~11]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Page 7 uses range functors that additionally preserve coproducts and zero. Theorem 4.1 attempts to use a weak sum-valued index in a target locally connected category with weak choice. Page 11 indexes the target section without a preimage in the source. C.1 exhibits this failure for every conditional with the prescribed inverse images.",
+   "role": "Checked counterexample to source theorem",
+   "relevant_manuscript_results": [
+    "3.1",
+    "C.1"
+   ]
+  },
+  {
+   "key": "Corrections",
+   "source": "F.~Lengyel, \\emph{Corrections to More existence theorems for recursion\ncategories}, version 10, 20 October 2026,\n\\href{https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex}{source}.",
+   "links": [
+    "https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Corrections.txt",
+     "sha256": "f9bf95186754e87214ff7546bbd289b3c9b70484d30592b196df1d0f30344cc8"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The cited source is the author's version 10 correcting the hypotheses used in the earlier existence theorem. In particular its comparison uses a faithful iteration functor and separated target for the pertinent construction. The examples in this paper construct their evaluators and frames directly.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "5.1",
+    "B.8"
+   ]
+  },
+  {
+   "key": "Composition",
+   "source": "F.~Lengyel, \\emph{Pointwise provable equality and the failure of\ncomposition}, 2026,\n\\href{https://arxiv.org/abs/2609.25556}{arXiv:2609.25556}.",
+   "links": [
+    "https://arxiv.org/abs/2609.25556",
+    "https://arxiv.org/html/2609.25556v3"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Composition.txt",
+     "sha256": "1aab78446164710740195f5def919b2b6c9845474bdb09c57fe2139bdac88c2c"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 147,
+     "location": "sections/05-syntactic-recursion-category.tex:175",
+     "cited_locator": "[Corollary 2]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Corollary 2 supplies the obstruction for the proposed composition of representatives in the pointwise-provable relation for a consistent c.e. PA extension. Section 6 uses uniform provable equality for the unprimed category.",
+   "role": "Historical comparison of the primed systems, whose proposed operation plays no part in the unprimed proofs",
+   "relevant_manuscript_results": [
+    "6.1"
+   ]
+  },
+  {
+   "key": "MaiettiLists",
+   "source": "M.~E. Maietti, \\emph{Joyal's arithmetic universe as list-arithmetic pretopos},\nTheory and Applications of Categories \\textbf{24} (2010),\nno.~3, 39--83.\n\\href{https://www.math.unipd.it/~maietti/papers/jartacrev.pdf}{Author's text}.",
+   "links": [
+    "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "MaiettiLists.txt",
+     "sha256": "f5c869ac773f17a457d69be793ca08a08397512a2954243e4872d97b1de4b647"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 481,
+     "location": "appendices/a-syntax-and-theories.tex:13",
+     "cited_locator": "[Definition 2.4 and the following paragraph]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Definition 2.4 states parameterized list recursion; the following paragraph relates it to stability in slices. Appendix A fixes its chosen algebras in each parameter slice.",
+   "role": "Definition and checked instances",
+   "relevant_manuscript_results": [
+    "A.1",
+    "6.6"
+   ]
+  },
+  {
+   "key": "Miller2004",
+   "source": "J.~S. Miller, \\emph{Degrees of unsolvability of continuous functions},\nJ. Symbolic Logic \\textbf{69} (2004), no.~2, 555--584.\n\\href{https://doi.org/10.2178/jsl/1082418543}{doi:10.2178/jsl/1082418543}.\n\\href{https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf}{Author's text}.",
+   "links": [
+    "https://doi.org/10.2178/jsl/1082418543",
+    "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Miller2004-fresh.txt",
+     "sha256": "5ace14d5906234ac292397965da56159ad6aabcf8ce240903407080a14925d94"
+    },
+    {
+     "primary_copy": "Miller2004.txt",
+     "sha256": "64c4430c0d0faa9a92a1e3081c93c97d28ff514eb0aa7f46e99458f2990e8b16"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 11,
+     "location": "sections/01-introduction.tex:182",
+     "cited_locator": ""
+    },
+    {
+     "passage": 359,
+     "location": "sections/04-miller-sequences.tex:32",
+     "cited_locator": "[proof of Theorem~6.3 and the following paragraph]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Theorem 6.3 gives a point of the Hilbert cube that is not computably diagonalizable. The paragraph following the proof gives the stronger coordinate condition for an index computing a real consistently from names. The present proof rebuilds the fixed point for its binary representation.",
+   "role": "External existence input proved for the specified coding",
+   "relevant_manuscript_results": [
+    "9.3",
+    "9.4"
+   ]
+  },
+  {
+   "key": "Montagna",
+   "source": "F.~Montagna, \\emph{``Pathologies'' in two syntactic categories of partial\nmaps}, Notre Dame J. Formal Logic \\textbf{30} (1989), 105--116.",
+   "links": [
+    "https://doi.org/10.1305/ndjfl/1093634998"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Montanga1989PathologiesInSyntactic.pdf",
+     "kind": "original PDF",
+     "sha256": "3f5fb158ea099e07d680bb94a0eb1a1399ebce075fbd934d7c144d38b6bf0212"
+    },
+    {
+     "primary_copy": "Montagna.txt",
+     "sha256": "d1d55ae66c9ad91fb3cc18f6795648fab3ad30b72a533496badd7fe27f635388"
+    },
+    {
+     "primary_copy": "Montagna.txt",
+     "sha256": "d1d55ae66c9ad91fb3cc18f6795648fab3ad30b72a533496badd7fe27f635388"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 10,
+     "location": "sections/01-introduction.tex:153",
+     "cited_locator": ""
+    },
+    {
+     "passage": 10,
+     "location": "sections/01-introduction.tex:153",
+     "cited_locator": "[pp.~114--115]"
+    },
+    {
+     "passage": 17,
+     "location": "sections/01-introduction.tex:260",
+     "cited_locator": "[Remark~3.1]"
+    },
+    {
+     "passage": 140,
+     "location": "sections/05-syntactic-recursion-category.tex:8",
+     "cited_locator": ""
+    },
+    {
+     "passage": 141,
+     "location": "sections/05-syntactic-recursion-category.tex:38",
+     "cited_locator": "[p.~115, Note~1]"
+    },
+    {
+     "passage": 143,
+     "location": "sections/05-syntactic-recursion-category.tex:92",
+     "cited_locator": "[p.~108; p.~115, Note~1]"
+    },
+    {
+     "passage": 146,
+     "location": "sections/05-syntactic-recursion-category.tex:148",
+     "cited_locator": "[p.~105]"
+    },
+    {
+     "passage": 147,
+     "location": "sections/05-syntactic-recursion-category.tex:175",
+     "cited_locator": ""
+    },
+    {
+     "passage": 148,
+     "location": "sections/05-syntactic-recursion-category.tex:189",
+     "cited_locator": "[p.~109, equation~$(*)$]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The unprimed category quotients by uniform PA-provable equality. Note 1 on p. 115 states the Kleene trace/out convention. The partial identity for a Σ₁ predicate occurs on p. 109. Remark 3.1 discusses effectively inseparable pairs. Pages 114–115 ask about numerical realization.",
+   "role": "Historical construction and concrete interpretation",
+   "relevant_manuscript_results": [
+    "6.1",
+    "6.3",
+    "8.7",
+    "8.8"
+   ]
+  },
+  {
+   "key": "MPV",
+   "source": "J.~Murwanashyaka, F.~Pakhomov, and A.~Visser,\n\\emph{There are no minimal essentially undecidable theories},\nJ. Logic Comput. \\textbf{34} (2024), 1159--1171.\n\\href{https://doi.org/10.1093/logcom/exad005}{doi:10.1093/logcom/exad005}.",
+   "links": [
+    "https://doi.org/10.1093/logcom/exad005",
+    "https://arxiv.org/pdf/2207.08174"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "MPV.txt",
+     "sha256": "2de166dfa6825d14f7c5fa301fa63e4d905809bf9d1664fe1a6199e2a0c1a4d0"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 18,
+     "location": "sections/01-introduction.tex:274",
+     "cited_locator": "[Section~4.4, p.~1169]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Section 4.4 signs the assertions that an equivalence class has size i+1. The equivalence there includes the possible inconsistency when the sets overlap. Restriction to disjoint c.e. sets gives the stated essentially undecidable iff inseparable comparison.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "4.8"
+   ]
+  },
+  {
+   "key": "PourEl",
+   "source": "M.~B. Pour-El, \\emph{Effectively extensible theories},\nJ. Symbolic Logic \\textbf{33} (1968), no.~1, 56--68.\n\\href{https://doi.org/10.2307/2270052}{doi:10.2307/2270052}.",
+   "links": [
+    "https://doi.org/10.2307/2270052"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "PourEl.txt",
+     "sha256": "e16aa70dc5c85806fc506d6b7a543d6dee1c5f82fbd581b6547d03593720cab8"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 303,
+     "location": "sections/08b-uniform-independent-sentences.tex:4",
+     "cited_locator": ""
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The 1968 paper introduces effective extensibility and codes independent sentences as a function of an extension index. The manuscript fixes the language and finitary proof system before applying this comparison to its PA family.",
+   "role": "Definition and historical comparison",
+   "relevant_manuscript_results": [
+    "8.6"
+   ]
+  },
+  {
+   "key": "PourEl1970",
+   "source": "M.~B. Pour-El, \\emph{A recursion-theoretic view of axiomatizable theories},\nDialectica \\textbf{24} (1970), no.~4, 267--276.\n\\href{https://www.jstor.org/stable/42970364}{JSTOR 42970364}.\n\\href{https://pi.math.cornell.edu/~yytran/PourEl_recursion_axiomatizable_theories.pdf}{Full text}.",
+   "links": [
+    "https://www.jstor.org/stable/42970364",
+    "https://pi.math.cornell.edu/~yytran/PourEl_recursion_axiomatizable_theories.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "PourEl1970-fresh.txt",
+     "sha256": "7895b4fbe2c23192bac2a2b78a3a0c24010ffa2eb60a9214a100e98261bdc2ce"
+    },
+    {
+     "primary_copy": "PourEl1970.txt",
+     "sha256": "6477e6657225bd2ff698cd47fe2883cfa6bddb7a6a872a7064465d3fe167b455"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 303,
+     "location": "sections/08b-uniform-independent-sentences.tex:4",
+     "cited_locator": "[pp.~272, 274, Definitions~5, 6(b) and~8]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Page 272 describes a sentence outside both theorem and refutation sets. Definitions 5, 6(b) and 8 on p. 274 fix the presentation, refutation convention, and an index-dependent total recursive function. This reading agrees with the correction of the intersection sign stated in the manuscript.",
+   "role": "Definition and concrete arithmetic instance",
+   "relevant_manuscript_results": [
+    "8.6"
+   ]
+  },
+  {
+   "key": "RobinsonRosolini",
+   "source": "E.~Robinson and G.~Rosolini, \\emph{Categories of partial maps},\nInform. and Comput. \\textbf{79} (1988), no.~2, 95--130.\n\\href{https://doi.org/10.1016/0890-5401(88)90034-X}{doi:10.1016/0890-5401(88)90034-X}.",
+   "links": [
+    "https://doi.org/10.1016/0890-5401(88)90034-X",
+    "https://core.ac.uk/download/pdf/82816866.pdf",
+    "https://www.researchgate.net/publication/319395054_Categories_of_partial_maps"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "RobinsonRosolini.txt",
+     "sha256": "9f427825e5617ae7fea74a54cd739553ff52206598a12effcc728aed199b5b9d"
+    },
+    {
+     "primary_copy": "Reader two direct web extraction, original author text",
+     "sha256": "b7e43584a50533e8efaf51713cbb2f4ee85a5732daad974bb2e390e99cba6b14"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 152,
+     "location": "sections/05a-internal-syntax.tex:4",
+     "cited_locator": "[pp.~108--109]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Pages 108–109 describe the single-object arithmetic example. Morphisms are PA-provably single-valued Σ₁ graphs modulo PA-provable identity, and composition existentially matches their middle entries. Section 6 builds its predicate category with the explicitly stated context and graph conditions.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "6.2",
+    "6.3"
+   ]
+  },
+  {
+   "key": "RosoliniThesis",
+   "source": "G.~Rosolini, \\emph{Continuity and effectiveness in topoi}, D.Phil.\nthesis, University of Oxford, 1986.",
+   "links": [
+    "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182/manuscript/latex/bibliography.tex#L197"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "RosoliniG1986 ContinutyAndEffectivenessInTopoi.pdf",
+     "kind": "original PDF",
+     "sha256": "afae4cc490c871687186a50734770ef5645ce3e77a8a085e6b1b7bced52d017c"
+    },
+    {
+     "primary_copy": "RosoliniThesis.txt",
+     "sha256": "3f47bc5d9283866388c704560d0e8f0b70443318c2e5ffef13a68884d089daf1"
+    },
+    {
+     "primary_copy": "RosoliniThesis.txt",
+     "sha256": "3f47bc5d9283866388c704560d0e8f0b70443318c2e5ffef13a68884d089daf1"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The thesis develops P-categories for categories of partial maps, including dominical conditions as extra restrictions. The history in the introduction distinguishes that general partial-product framework from the prodominical hypotheses used here.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "3.1"
+   ]
+  },
+  {
+   "key": "Rosolini",
+   "source": "G.~Rosolini, \\emph{Representation theorems for $P$-categories},\nin F.~Borceux (ed.), \\emph{Categorical Algebra and its Applications},\nLecture Notes in Mathematics \\textbf{1348}, Springer, Berlin, 1988,\n307--315.",
+   "links": [
+    "https://www.researchgate.net/publication/225697089_Representation_theorems_for_P-categories"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Rosolini.txt",
+     "sha256": "b05321b1e9d54b1935c82e9f16e55458bc3e844249ae1d448b7602b62d21d7e7"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 14,
+     "location": "sections/01-introduction.tex:220",
+     "cited_locator": ""
+    }
+   ],
+   "hypotheses_conclusion_and_role": "The original paper develops representation theorems for P-categories and discusses dominance among the possible additional structures. Section 1 uses this retrospectively to identify the terminology.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "3.1"
+   ]
+  },
+  {
+   "key": "Smullyan",
+   "source": "R.~M. Smullyan, \\emph{Theory of Formal Systems},\nAnnals of Mathematics Studies, no.~47, Princeton University Press,\nPrinceton, 1961.",
+   "links": [
+    "https://www.jstor.org/stable/j.ctt1b7x7ww.6",
+    "https://dokumen.pub/theory-of-formal-systems-am-47-volume-47-9781400882007.html"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Reader two direct web extraction, original author text",
+     "sha256": "1ed1429b1f7b8c7197afdc88400e4d4a4524d2f957eca7e01becb5e41fb7bac4"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 3,
+     "location": "sections/01-introduction.tex:3",
+     "cited_locator": "[Chapter~III, \\S16, Theorem~22, p.~59]"
+    },
+    {
+     "passage": 3,
+     "location": "sections/01-introduction.tex:3",
+     "cited_locator": "[Chapter~III, \\S17, Theorem~23(b), pp.~59--60]"
+    },
+    {
+     "passage": 282,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:239",
+     "cited_locator": "[Chapter~III, \\S16, Theorem~22, p.~59]"
+    },
+    {
+     "passage": 282,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:239",
+     "cited_locator": "[Chapter~III, \\S15, corollary to Theorem~21, p.~58]"
+    },
+    {
+     "passage": 283,
+     "location": "sections/08-essential-incompleteness-of-arithmetic.tex:251",
+     "cited_locator": "[Chapter~III, \\S17, Theorem~23(b), pp.~59--60]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Chapter III §15 corollary to Theorem 21 on p. 58 concerns formal consistent extensions. In §16 Theorem 22 assumes definability of all recursive sets and obtains recursively inseparable nuclei. In §17 Theorem 23(b), pp. 59–60, strong separation of a single recursively inseparable pair in a consistent system suffices. Arithmetic 8.4 uses its own Θ proof from 8.1.",
+   "role": "Source attribution with independently proved concrete instance",
+   "relevant_manuscript_results": [
+    "8.1",
+    "8.4"
+   ]
+  },
+  {
+   "key": "vanDijkGO",
+   "source": "J.~van Dijk and A.~Gietelink Oldenziel,\n\\emph{G\\\"odel incompleteness through arithmetic universes after A.~Joyal},\n2020. \\href{https://arxiv.org/abs/2004.10482}{arXiv:2004.10482}.",
+   "links": [
+    "https://arxiv.org/abs/2004.10482",
+    "https://arxiv.org/pdf/2004.10482"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "vanDijkGO.txt",
+     "sha256": "c02d35f837a8250e3cdc62df3946a696cbb8b580be8689d8647290a9b116c811"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 19,
+     "location": "sections/01-introduction.tex:283",
+     "cited_locator": "[Theorems~5.19--5.20]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Theorems 5.19–5.20 concern Joyal's construction in the initial arithmetic universe: syntactic completeness of the internal object forces triviality; consistency prevents its indicated consistency subobject from being top. The comparison has no model-theoretic use in the present proofs.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "4.3"
+   ]
+  },
+  {
+   "key": "VisserEHU",
+   "source": "A.~Visser, \\emph{Essential hereditary undecidability},\nArch. Math. Logic \\textbf{63} (2024), nos.~5--6, 529--562.\n\\href{https://doi.org/10.1007/s00153-024-00911-y}{doi:10.1007/s00153-024-00911-y}.",
+   "links": [
+    "https://doi.org/10.1007/s00153-024-00911-y",
+    "https://research-portal.uu.nl/ws/portalfiles/portal/230468330/s00153-024-00911-y.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "VisserEHU.txt",
+     "sha256": "2b21ef017af55b48ee8b4560d49b31d3f4a8e7ad9d83acce2e9547f937d8920e"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 70,
+     "location": "sections/03a-internal-theories.tex:239",
+     "cited_locator": "[Lemma~23]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Lemma 23 sends a recursively inseparable pair by one recursive sentence map into proofs and refutations and concludes essential undecidability. The categorical conclusion used here speaks of consistent closed extensions and noncoverage.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "4.3",
+    "8.4"
+   ]
+  },
+  {
+   "key": "Voutsadakis",
+   "source": "G.~Voutsadakis, \\emph{Categorical abstract algebraic logic:\ncategorical algebraization of first-order logic without terms},\nArch. Math. Logic \\textbf{44} (2005), no.~4, 473--491.\n\\href{https://doi.org/10.1007/s00153-004-0266-7}{doi:10.1007/s00153-004-0266-7}.",
+   "links": [
+    "https://doi.org/10.1007/s00153-004-0266-7",
+    "https://www.voutsadakis.com/RESEARCH/PUBLISHED/fol.pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Voutsadakis.txt",
+     "sha256": "8f75fd76a7032691e7356f2c05f99d18a0e3fb2c1e33ad2cb9760a27c8cb3c47"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 99,
+     "location": "sections/03b-internal-adjunctions.tex:369",
+     "cited_locator": "[Theorem~7]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Theorem 7 gives the signature/hierarchy adjunction, with the free signature functor on hierarchies and the formulas functor in the reverse direction. Theorem 4.7 here takes pairs to consistent generated first-order theories.",
+   "role": "Historical comparison",
+   "relevant_manuscript_results": [
+    "4.7"
+   ]
+  },
+  {
+   "key": "Wissmann",
+   "source": "T.~Wi\\ss{}mann, \\emph{Minimality notions via factorization systems and examples},\nLog. Methods Comput. Sci. \\textbf{18} (2022),\nno.~3, article~31, 31:1--31:26.\n\\href{https://doi.org/10.46298/lmcs-18(3:31)2022}{doi:10.46298/lmcs-18(3:31)2022}.",
+   "links": [
+    "https://doi.org/10.46298/lmcs-18(3:31)2022",
+    "https://lmcs.episciences.org/10014/pdf"
+   ],
+   "source_copy_digests": [
+    {
+     "primary_copy": "Wissmann.txt",
+     "sha256": "c7890f0df568af161cc944e710d63feea26acaad6f274afd9a61ccc26f385f6d"
+    }
+   ],
+   "occurrences": [
+    {
+     "passage": 515,
+     "location": "appendices/a-syntax-and-theories.tex:415",
+     "cited_locator": "[Lemma 3.6]"
+    }
+   ],
+   "hypotheses_conclusion_and_role": "Lemma 3.6 lifts an orthogonal factorization system to algebras if the endofunctor preserves its left class. In A.5 the concrete inference functor preserves regular epis via finite products, premise pullbacks and finite coproducts, so its initial conclusion has a least closed image.",
+   "role": "External mathematical input re-established and specialized",
+   "relevant_manuscript_results": [
+    "A.4",
+    "A.5"
+   ]
+  }
+ ]
+}

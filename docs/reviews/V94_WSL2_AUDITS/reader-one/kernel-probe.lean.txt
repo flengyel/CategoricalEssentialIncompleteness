@@ -1,0 +1,34 @@
+import Lean
+IMPORTS
+set_option maxRecDepth 100000
+open Lean Meta Elab Command
+elab "#reader_apply " ns:ident : command => liftTermElabM do
+  let name := ns.getId
+  let info ← getConstInfo name
+  let parameters := info.levelParams.map Level.param
+  let original := mkConst name parameters
+  let (body, arguments, codomain) ← forallTelescope info.type fun args conclusion => do
+    let applied := mkAppN original args
+    let result ← inferType applied
+    unless ← isDefEq result conclusion do throwError "applied type mismatch at {name}"
+    let closed ← mkLambdaFVars args applied
+    pure (closed,args.size,(← ppExpr conclusion).pretty)
+  let label := Name.str (Name.str .anonymous "ReaderOne") (toString name)
+  let declaration : DefinitionVal := {
+    name := label
+    levelParams := info.levelParams
+    type := info.type
+    value := body
+    hints := .opaque
+    safety := .safe
+  }
+  addDecl (.defnDecl declaration)
+  let inherited ← collectAxioms name
+  let proof ← collectAxioms label
+  unless inherited == proof do throwError "transitive axiom difference at {name}"
+  for ax in proof do
+    unless [`propext,`Quot.sound,`Classical.choice].contains ax do throwError "unexpected axiom {ax}"
+  let row := Json.mkObj [("name",toJson name.toString),("arguments",toJson arguments),
+    ("type",toJson (← ppExpr info.type).pretty),("conclusion",toJson codomain),
+    ("axioms",toJson (proof.map Name.toString))]
+  IO.println ("READER1 " ++ row.compress)

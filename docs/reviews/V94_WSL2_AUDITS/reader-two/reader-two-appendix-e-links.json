@@ -1,0 +1,348 @@
+{
+ "tested_commit": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+ "historical_tag": "cei-v72-palomar-v3",
+ "link_occurrences": [
+  {
+   "manuscript_line": 39,
+   "description": "The hom-set bijection",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+   "start": 27,
+   "end": 56,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0",
+   "tested_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0",
+   "same_cited_lines": true,
+   "tag_range_sha256": "bffa6b7a1f1ebbe32d2527b5b3961486427544726cc88bfb591ed8c1017c4cec",
+   "declarations_in_cited_range": [
+    "restrict",
+    "extend",
+    "homEquiv"
+   ]
+  },
+  {
+   "manuscript_line": 40,
+   "description": "its naturality, unit and counit",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderAdjunction.lean",
+   "start": 58,
+   "end": 91,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0",
+   "tested_blob": "4f9d092140d506be9b26c11e58e58656d0de8df0",
+   "same_cited_lines": true,
+   "tag_range_sha256": "6b0d5c0b7063e3ba5a799bdaea0c0153d369d9ef79c51ade9ba5e7a70246f1e1",
+   "declarations_in_cited_range": [
+    "adjunction",
+    "unit_arrow",
+    "counit_translation"
+   ]
+  },
+  {
+   "manuscript_line": 64,
+   "description": "The two implications",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46SignedSubobjectIncompleteness.lean",
+   "start": 43,
+   "end": 75,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "ed6df1806538d2325a89c83f25eccd5e03080bdb",
+   "tested_blob": "ed6df1806538d2325a89c83f25eccd5e03080bdb",
+   "same_cited_lines": true,
+   "tag_range_sha256": "0bdee3d36e432a73780c3e158e0e223ef79f2fbb8a61d101863d5662d2b5c78a",
+   "declarations_in_cited_range": [
+    "essential_incomplete_of_subobject_inseparable",
+    "no_subobject_separator_of_essential_incomplete",
+    "essential_incomplete_iff_subobject_inseparable"
+   ]
+  },
+  {
+   "manuscript_line": 65,
+   "description": "the Boolean extension",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46SignedBooleanExtension.lean",
+   "start": 28,
+   "end": 74,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "27e9add0bc3020a00c69273459355d3352b4cdf0",
+   "tested_blob": "27e9add0bc3020a00c69273459355d3352b4cdf0",
+   "same_cited_lines": true,
+   "tag_range_sha256": "caec34df2e64a3ed08587adf6f8bf803a297d65684a0077e66c4171da2deb751",
+   "declarations_in_cited_range": [
+    "Separates",
+    "booleanTheory",
+    "booleanTheory_consistent",
+    "booleanTheory_complete",
+    "booleanTheory_contains_axioms",
+    "booleanTheory_extends"
+   ]
+  },
+  {
+   "manuscript_line": 68,
+   "description": "Lean declarations",
+   "path": "Lean/CEIPalomar/Solution.lean",
+   "start": 83,
+   "end": 110,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "9d175f993b3c242c520582ff18f82383b4a4bc60",
+   "tested_blob": "9d175f993b3c242c520582ff18f82383b4a4bc60",
+   "same_cited_lines": true,
+   "tag_range_sha256": "527a9d951d125589401446258ff9e5c9fb86b3044229885d619dc82b71488881",
+   "declarations_in_cited_range": [
+    "essential_incomplete_iff_inseparable",
+    "boolean_assignment"
+   ]
+  },
+  {
+   "manuscript_line": 99,
+   "description": "The common list",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+   "start": 32,
+   "end": 56,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "52920c9f0ef8d2e7cf10b795c511d49b7a64e5a6",
+   "tested_blob": "52920c9f0ef8d2e7cf10b795c511d49b7a64e5a6",
+   "same_cited_lines": true,
+   "tag_range_sha256": "4340601add7ecdb864c6a50fa6ae630a78ea6bf91134cde1bdc9a6e63691e4b1",
+   "declarations_in_cited_range": [
+    "jointSupport",
+    "jointSupport_alpha",
+    "joint_left_truth",
+    "joint_right_truth"
+   ]
+  },
+  {
+   "manuscript_line": 100,
+   "description": "the contradiction",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedContradiction.lean",
+   "start": 85,
+   "end": 92,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "52920c9f0ef8d2e7cf10b795c511d49b7a64e5a6",
+   "tested_blob": "52920c9f0ef8d2e7cf10b795c511d49b7a64e5a6",
+   "same_cited_lines": true,
+   "tag_range_sha256": "d131e25b4d520fa2ebe2cfe576d2d4542e8785222ddbe270a8ec448e3f197185",
+   "declarations_in_cited_range": [
+    "no_contradictory_derivations"
+   ]
+  },
+  {
+   "manuscript_line": 101,
+   "description": "provability in PA",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedConsistencyPA.lean",
+   "start": 45,
+   "end": 64,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "cb6fae4e795b2540c06722305c309e7aae396137",
+   "tested_blob": "cb6fae4e795b2540c06722305c309e7aae396137",
+   "same_cited_lines": true,
+   "tag_range_sha256": "8310f844232b52d9b3db560ab3ec9eac5a7cb56ac129c10b9f89f8fcf84bcb78",
+   "declarations_in_cited_range": [
+    "consistency_PA"
+   ]
+  },
+  {
+   "manuscript_line": 104,
+   "description": "Lean proof",
+   "path": "Lean/CEIPalomar/Solution.lean",
+   "start": 114,
+   "end": 145,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "9d175f993b3c242c520582ff18f82383b4a4bc60",
+   "tested_blob": "9d175f993b3c242c520582ff18f82383b4a4bc60",
+   "same_cited_lines": true,
+   "tag_range_sha256": "66da974f638bb89e63c71a894e586b37931ce0150792d0f125eea7aaf052f8e0",
+   "declarations_in_cited_range": [
+    "pa_diagonal_witness",
+    "exists_inseparable_example"
+   ]
+  },
+  {
+   "manuscript_line": 128,
+   "description": "The two inverse images under $Fg$",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46Comparison.lean",
+   "start": 35,
+   "end": 89,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "17086177e64d41af5ae394ca55d021f60a79f2e0",
+   "tested_blob": "17086177e64d41af5ae394ca55d021f60a79f2e0",
+   "same_cited_lines": true,
+   "tag_range_sha256": "61cb775fd988ee7ca8caed504fae1914b82cc89e40b9d20fb70fbb6cb9580602",
+   "declarations_in_cited_range": [
+    "comparison_zero_inverse_images"
+   ]
+  },
+  {
+   "manuscript_line": 135,
+   "description": "Nonexistence of the lift",
+   "path": "Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean",
+   "start": 89,
+   "end": 103,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "76092c55df25326fa6e55e67cf6b3f059382d7b8",
+   "tested_blob": "76092c55df25326fa6e55e67cf6b3f059382d7b8",
+   "same_cited_lines": true,
+   "tag_range_sha256": "7275abb668b55c1422ee33578151b6bfcfdc70228c4610b761a87db2d3067c07",
+   "declarations_in_cited_range": [
+    "missingSection_has_no_lift"
+   ]
+  },
+  {
+   "manuscript_line": 167,
+   "description": "Closure under evaluation and the two implications",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46AssociatedClosedTheories.lean",
+   "start": 68,
+   "end": 111,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "94c04b8ddd60bff6f32023ac0f022ed1078ac5f1",
+   "tested_blob": "94c04b8ddd60bff6f32023ac0f022ed1078ac5f1",
+   "same_cited_lines": true,
+   "tag_range_sha256": "42760bfad1377c230c131315cad9778a9de88f02f0e8bff4b025cca3f9d06dd8",
+   "declarations_in_cited_range": [
+    "evaluate_closed",
+    "evaluationTheory",
+    "essential_incomplete_iff"
+   ]
+  },
+  {
+   "manuscript_line": 188,
+   "description": "The diagonal output and the sentence code",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+   "start": 116,
+   "end": 128,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9",
+   "tested_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9",
+   "same_cited_lines": true,
+   "tag_range_sha256": "7746ad83a66349a05f5dfe58b07a4f0a3dde1db98296f7ada98a790bf55411f6",
+   "declarations_in_cited_range": [
+    "output_avoids",
+    "sentence_value"
+   ]
+  },
+  {
+   "manuscript_line": 189,
+   "description": "the two excluded derivations and the uniform morphism",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46ArithmeticUniformIndependent.lean",
+   "start": 184,
+   "end": 218,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9",
+   "tested_blob": "cc449d7e7f65c48900a96fe92ee00cf825f166a9",
+   "same_cited_lines": true,
+   "tag_range_sha256": "452df28fd7eb0ec2e9e839af3ee069233f0361889a9311b370833a0345297dfd",
+   "declarations_in_cited_range": [
+    "independent_instance",
+    "uniform_independent_sentences"
+   ]
+  },
+  {
+   "manuscript_line": 210,
+   "description": "The inference algebra and the two equations",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+   "start": 97,
+   "end": 126,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "ac2f493114c942ae7d663d897b357183a411b128",
+   "tested_blob": "ac2f493114c942ae7d663d897b357183a411b128",
+   "same_cited_lines": true,
+   "tag_range_sha256": "25d46c0b2f060b5dc790b577db250ac6cb8c1eda20f8aee300bb2683c18bbe8b",
+   "declarations_in_cited_range": [
+    "printedRules",
+    "printedAlgebra",
+    "printedInitial",
+    "printedFold",
+    "printedFold_conclusion",
+    "printedFold_constructor",
+    "printedFold_unique"
+   ]
+  },
+  {
+   "manuscript_line": 211,
+   "description": "initiality for every axiom subobject",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean",
+   "start": 130,
+   "end": 151,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "ac2f493114c942ae7d663d897b357183a411b128",
+   "tested_blob": "ac2f493114c942ae7d663d897b357183a411b128",
+   "same_cited_lines": true,
+   "tag_range_sha256": "fa36c7800ef3797a8638a0c102472cbd05289ba7637639ffbac89da6783a0b2a",
+   "declarations_in_cited_range": [
+    "printedStatement"
+   ]
+  },
+  {
+   "manuscript_line": 237,
+   "description": "Preservation of conclusions and inference rules",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalProofComparison.lean",
+   "start": 155,
+   "end": 178,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "26604c477922892aac8f81612d9480f764430443",
+   "tested_blob": "26604c477922892aac8f81612d9480f764430443",
+   "same_cited_lines": true,
+   "tag_range_sha256": "29a07d415ffb3002c05378cf784042f88a76cc19d38e5a0770521fc7af8f0425",
+   "declarations_in_cited_range": [
+    "proofIso_conclusion",
+    "inverse_proofIso_conclusion",
+    "proof_constructor"
+   ]
+  },
+  {
+   "manuscript_line": 238,
+   "description": "the equivalence with finite provability",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerTheoryDomainApplication.lean",
+   "start": 59,
+   "end": 98,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "479f04475f9226685bf91c96f1b447216ec13186",
+   "tested_blob": "479f04475f9226685bf91c96f1b447216ec13186",
+   "same_cited_lines": true,
+   "tag_range_sha256": "0478d2eb2678519d670dc7fb0063e1c6f8255c2d550db47aec4f5aa51f2fbd3a",
+   "declarations_in_cited_range": [
+    "literal_theorem_mem",
+    "decodedSentence",
+    "decodedSentence_closed",
+    "point_eta",
+    "theorem_mem"
+   ]
+  },
+  {
+   "manuscript_line": 239,
+   "description": "recovery of the axiom subobject and conclusion image",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+   "start": 139,
+   "end": 192,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "7236247590411462f6f4c020edd2e89e3f03db84",
+   "tested_blob": "7236247590411462f6f4c020edd2e89e3f03db84",
+   "same_cited_lines": true,
+   "tag_range_sha256": "c763d1a9a60a36d46aee68bfb110c787fa2071722a48af8c488e4b81a22955ed",
+   "declarations_in_cited_range": [
+    "axiom_subobject_recovery",
+    "rules",
+    "proofAlgebra",
+    "proofInitial",
+    "conclusion",
+    "sentenceProofObject",
+    "sentenceConclusion",
+    "theoremIdem",
+    "refutationIdem",
+    "sentence_image_recovery"
+   ]
+  },
+  {
+   "manuscript_line": 240,
+   "description": "inseparability and the independent sentence",
+   "path": "Lean/CategoricalEssentialIncompleteness/V46MillerCanonicalAxiomIncompleteness.lean",
+   "start": 327,
+   "end": 342,
+   "tag_commit": "efda31344ec6420142468ab28af9d96deab571e7",
+   "tag_blob": "7236247590411462f6f4c020edd2e89e3f03db84",
+   "tested_blob": "7236247590411462f6f4c020edd2e89e3f03db84",
+   "same_cited_lines": true,
+   "tag_range_sha256": "3bbafde112dd97cab510daa4219cef98b8973333998d1a7583135c5c39de099d",
+   "declarations_in_cited_range": [
+    "printed_essential_incompleteness_of_consistent",
+    "printed_native_incomplete_of_consistent"
+   ]
+  }
+ ]
+}

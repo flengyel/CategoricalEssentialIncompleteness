@@ -1,0 +1,23 @@
+{
+  "tested_commit": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+  "frozen_utc": "2026-11-26T18:36:47+00:00",
+  "independent_report_sha256": "f5680ec51e685fc95a9a753a88d9ea53e0f01880bc856f594668b8d0ed043ed0",
+  "independent_verdict_sha256": "68199e7b1674869e8782787f2568868bf59e217cb98a377b733fff57448bfb6f",
+  "peer_report_sha256": "55b2e0346271366f72149ff5da5aa534bf7e5bdef6683dd3df8ea5e7b0231c5e",
+  "peer_verdict_sha256": "c6f6aad5aeba80fb593bad805600a82710ff8081383e93daa10b4f4723195e1a",
+  "common_kernel_receipt_sha256": "f376fc52ae1a1a7270fd74a474a00ac9b39045de9db55238aee64d5157645958",
+  "files": {
+    "reconciliation.md": "60ae3f16ad1727c0221ec6af75faf709d7129578e6ceb14160df7b6f30a2cdc4",
+    "reconciliation.json.gz": "f45a4dbbe53f275ebc43876b47a015139d60e66db9d09b3341a1b927123983e2",
+    "receipt-attestation.md": "c00f57724d1ddc5cbe47a44547d0d712942f6e686e38d47ce7a75eed687d42fa",
+    "receipt-attestation.json.gz": "2997585eb572c4c143813597988878462bc017328482ce1579698541c8783c68"
+  },
+  "corrected_report_coordinates": 2,
+  "audited_manuscript_findings": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0,
+    "unchecked_passages": 0
+  }
+}

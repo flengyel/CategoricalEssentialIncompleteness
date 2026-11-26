@@ -1,0 +1,22 @@
+{
+  "start": "2026-11-26T05:37:28+00:00",
+  "end": "2026-11-26T05:37:56+00:00",
+  "status": 0,
+  "command": [
+    "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "-DwarningAsError=true",
+    "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernels/focused.lean"
+  ],
+  "source_sha256": "7a6f140f9e75a9b3337001c089470680fb92a5ae0cce2e4e7051fd5081e1015c",
+  "log_sha256": "4116ec600cc13124711ed1343e88558603accadbd0860964fd47eae4eeea7b18",
+  "diagnostics": [
+    "'CEIReaderOne.witnessAndNoncoverage' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.diagonalFromDisjointJoins' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.twoAdjunctions' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.pullbackConflict' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.extensionWitness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.arithmeticDefinabilityInstance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.millerWitnessAndConsistency' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CEIReaderOne.constantCompletion' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ]
+}

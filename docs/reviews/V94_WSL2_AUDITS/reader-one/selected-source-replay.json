@@ -1,0 +1,210 @@
+{
+  "revision": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+  "inputs": "git archive of tested Lean tree; copy of byte-identical project import tree supplemented by pinned Lake packages",
+  "modules": [
+    {
+      "module": "PCats.Ranges",
+      "source": "PCats/Ranges.lean",
+      "source_sha256": "8350ba935c07c3e8c92e1fa1bc11c4992cc25536cf955c9850cbf9c3305cabc2",
+      "kernel_artifact_sha256": "8c67a20e77a62073c735f8122063a90e74bab4cc53e5c486a7dd4454ebee6503",
+      "start": "2026-11-26T04:30:50+00:00",
+      "end": "2026-11-26T04:31:03+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/PCats/Ranges.olean",
+        "PCats/Ranges.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.ArithmeticRepresentation",
+      "source": "CategoricalEssentialIncompleteness/ArithmeticRepresentation.lean",
+      "source_sha256": "b7a242a4479d4e03bfef31cead460a9ec59e512a4247bcf12bc3398082d763f5",
+      "kernel_artifact_sha256": "cabb32269ea240da96cb54be7abaa2a4931f98f539aadb6f8ba9fae3ee354043",
+      "start": "2026-11-26T04:31:03+00:00",
+      "end": "2026-11-26T04:31:17+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/ArithmeticRepresentation.olean",
+        "CategoricalEssentialIncompleteness/ArithmeticRepresentation.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.ArithmeticInseparability",
+      "source": "CategoricalEssentialIncompleteness/ArithmeticInseparability.lean",
+      "source_sha256": "badf4ed694366f943d13d25584739d80247a402a0422d7d9afcdc5bd217b6d1f",
+      "kernel_artifact_sha256": "2dc917aa338e89d37a97d90bf68af5d1d39e67c5bd3d8dd16f75d5c85ead84f6",
+      "start": "2026-11-26T04:31:17+00:00",
+      "end": "2026-11-26T04:31:38+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/ArithmeticInseparability.olean",
+        "CategoricalEssentialIncompleteness/ArithmeticInseparability.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46Comparison",
+      "source": "CategoricalEssentialIncompleteness/V46Comparison.lean",
+      "source_sha256": "2cc7a33c694c22422e399c7983685525016a307446a60168ac0011137a186eb9",
+      "kernel_artifact_sha256": "5d6961196454770a4ef31be39c3da5a7d0f0da99df83ec8e70f00477b1f4c101",
+      "start": "2026-11-26T04:31:38+00:00",
+      "end": "2026-11-26T04:31:52+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46Comparison.olean",
+        "CategoricalEssentialIncompleteness/V46Comparison.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46ConstantSliceFull",
+      "source": "CategoricalEssentialIncompleteness/V46ConstantSliceFull.lean",
+      "source_sha256": "d1a8c2441e558af75bd9067ee1efe2cb4be88944f6a5a311fd266cef8344434a",
+      "kernel_artifact_sha256": "e20d030bbc474e6e2f35275b2fe2011a041519a4a20d95756c3ec8094316f3b2",
+      "start": "2026-11-26T04:31:52+00:00",
+      "end": "2026-11-26T04:32:09+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46ConstantSliceFull.olean",
+        "CategoricalEssentialIncompleteness/V46ConstantSliceFull.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46PartialSliceAdjunctions",
+      "source": "CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.lean",
+      "source_sha256": "52bca382a5e33b54e245e0ddf19a73728bd2c3f587e7315b5fcd721dd93aff9e",
+      "kernel_artifact_sha256": "7b4e4307bc6e6b5cffddd466b62fb8cd285fa80af75f857d9ff481f0db039b35",
+      "start": "2026-11-26T04:32:09+00:00",
+      "end": "2026-11-26T04:32:32+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.olean",
+        "CategoricalEssentialIncompleteness/V46PartialSliceAdjunctions.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46ArithmeticDiagonalRepresentation",
+      "source": "CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.lean",
+      "source_sha256": "e839443be7347662a1cf288fea84112d5d6532bcfa5bdf64cf3b54622cd68941",
+      "kernel_artifact_sha256": "c488975fd75653b08e49b0e58019f5f17c717160199ad79ca237f147cb8ff9a5",
+      "start": "2026-11-26T04:32:32+00:00",
+      "end": "2026-11-26T04:32:49+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.olean",
+        "CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparabilityCore",
+      "source": "CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.lean",
+      "source_sha256": "b414f8d5147b5c54a19e9b1f1dff024e522e42c8d5d8cdc33bb00ad59b63041b",
+      "kernel_artifact_sha256": "a5f59708cf80127dc40b5dd179ec7ac9d2ad64f20bc471e5aa923c3e6eb17bb2",
+      "start": "2026-11-26T04:32:49+00:00",
+      "end": "2026-11-26T04:33:07+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.olean",
+        "CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46ArithmeticSentenceInseparability",
+      "source": "CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparability.lean",
+      "source_sha256": "f68c9cc1d0b7caa9785a745ab64dcb1e572dc177e64bc8f818af7fbaaf475d31",
+      "kernel_artifact_sha256": "f60cdaaa43ed337dad27de7cbaf0d5ff886495b07377ed7fd078ff09701291dc",
+      "start": "2026-11-26T04:33:07+00:00",
+      "end": "2026-11-26T04:33:22+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparability.olean",
+        "CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparability.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46MillerFixedPoint",
+      "source": "CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean",
+      "source_sha256": "8c25336adea8b1b76f3747bf99b09947e5037e45c696ef0cae187acaa294a983",
+      "kernel_artifact_sha256": "58d44f8df6f37d615dfb11afb3dd04a1c0443745370158d62d0afcaeca9e1c61",
+      "start": "2026-11-26T04:33:22+00:00",
+      "end": "2026-11-26T04:33:40+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46MillerFixedPoint.olean",
+        "CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46MillerRealClosedConsistency",
+      "source": "CategoricalEssentialIncompleteness/V46MillerRealClosedConsistency.lean",
+      "source_sha256": "c6e494dd9428078ca508f7ea8f6ac0b9ac3b0d152eae7fcff15effee4e4126dc",
+      "kernel_artifact_sha256": "96ceecbf3e1ad1895db7d790a783b1b08043f544de1d2befa9dadec488acd594",
+      "start": "2026-11-26T04:33:40+00:00",
+      "end": "2026-11-26T04:34:01+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46MillerRealClosedConsistency.olean",
+        "CategoricalEssentialIncompleteness/V46MillerRealClosedConsistency.lean"
+      ],
+      "output": "",
+      "status": 0
+    },
+    {
+      "module": "CategoricalEssentialIncompleteness.V46ForkFirstOrderApplication",
+      "source": "CategoricalEssentialIncompleteness/V46ForkFirstOrderApplication.lean",
+      "source_sha256": "903b25c6d6eb166d81574dd24b82fc4d2719d0809976e3ab8953915b12ae877d",
+      "kernel_artifact_sha256": "99b21fc77b2d0aa88fc7caec848baa39c37faddb04e2806b87f676c82f1300e6",
+      "start": "2026-11-26T04:34:01+00:00",
+      "end": "2026-11-26T04:34:28+00:00",
+      "command": [
+        "/home/flengyel/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v94-reader-one/kernel-products/CategoricalEssentialIncompleteness/V46ForkFirstOrderApplication.olean",
+        "CategoricalEssentialIncompleteness/V46ForkFirstOrderApplication.lean"
+      ],
+      "output": "",
+      "status": 0
+    }
+  ]
+}
