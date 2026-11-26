@@ -1,10 +1,10 @@
-# LaTeX sources — version 99
+# LaTeX sources — version 100
 
 **Logical consequence and essential incompleteness in recursion categories**,
 26 November 2026.
 
-Companion files: `logical_consequence_and_essential_incompleteness_v99.pdf`
-and `logical_consequence_v99_source.zip`.
+Companion files: `logical_consequence_and_essential_incompleteness_v100.pdf`
+and `logical_consequence_v100_source.zip`.
 
 The directory `latex/` contains the complete source. The order of the
 inputs in `main.tex` is the order of the printed sections.
@@ -26,6 +26,7 @@ The output is `main.pdf`.
 | [main.tex](main.tex) | Document assembly and section order |
 | [preamble.tex](preamble.tex) | Packages, theorem environments, macros, title, author, and date |
 | [abstract.tex](abstract.tex) | Abstract |
+| [preface.tex](preface.tex) | Preface |
 | [sections/01-introduction.tex](sections/01-introduction.tex) | Introduction |
 | [sections/02-categorical-preliminaries.tex](sections/02-categorical-preliminaries.tex) | Categorical preliminaries |
 | [sections/03-sections-and-inseparability.tex](sections/03-sections-and-inseparability.tex) | Diagonal comparison and lifted partial conditionals |

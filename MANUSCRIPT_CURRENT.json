@@ -1,11 +1,11 @@
 {
   "repository": "flengyel/CategoricalEssentialIncompleteness",
-  "version": 99,
+  "version": 100,
   "date": "2026-11-26",
   "entry_point": "manuscript/latex/main.tex",
-  "pdf": "manuscript/logical_consequence_and_essential_incompleteness_v99.pdf",
-  "source_archive": "manuscript/logical_consequence_v99_source.zip",
-  "correspondence": "FORMALIZATION_STATUS_V99.md",
+  "pdf": "manuscript/logical_consequence_and_essential_incompleteness_v100.pdf",
+  "source_archive": "manuscript/logical_consequence_v100_source.zip",
+  "correspondence": "FORMALIZATION_STATUS_V100.md",
   "statement_audit": "CategoricalEssentialIncompleteness.CurrentStatementAudit",
   "axiom_audit": "CategoricalEssentialIncompleteness.CurrentAxiomAudit",
   "production_prefix": "CategoricalEssentialIncompleteness.V46",
@@ -13,9 +13,9 @@
   "files": [
     {
       "path": "manuscript/latex/abstract.tex",
-      "git_blob": "5b415d929c01a827cff7c7c6c98337161e03f7a7",
-      "sha256": "e7831ece7fbe302796f80171205c6cbfcd07877e256d219b2f78a992d9331c72",
-      "size": 1950
+      "git_blob": "d2cfb8fe936f82980a08a09ae9b2b9f0f3cc5aa8",
+      "sha256": "3b3bec97c1e97b52a4ee916e8a0fde627336d302abf9c04bf46bdc500411ac02",
+      "size": 1924
     },
     {
       "path": "manuscript/latex/appendices/a-syntax-and-theories.tex",
@@ -49,27 +49,39 @@
     },
     {
       "path": "manuscript/latex/bibliography.tex",
-      "git_blob": "eeabbeb8953fa220d8a58a835b2729dfaaca65e6",
-      "sha256": "cf99b83772a81eab1a80737ccd2cc6bab7fa211c6ceda0c3723ffca3a7545c5e",
-      "size": 9956
+      "git_blob": "fa4f0b20a5ef408b1104d3a121465b58628125cb",
+      "sha256": "7c230df11aa546890529f07210b61742b176293a6f38e970adb06c711dc33c88",
+      "size": 10178
+    },
+    {
+      "path": "manuscript/latex/main.pdf",
+      "git_blob": "27f76cba4bc94bf3549f0c53df094f0ca617bb77",
+      "sha256": "16e8aa0ae5bb241e3c150d999f2456b34063c97b6842bf55bca4b92feb533174",
+      "size": 1154124
     },
     {
       "path": "manuscript/latex/main.tex",
-      "git_blob": "df5f0eedbc3d4b220de2cffa7af7e926b172fff2",
-      "sha256": "37a07846825410efb4eed7f7b0028f1d4670d6f8c1c9870406f15aeaf7121102",
-      "size": 1369
+      "git_blob": "e968d75eaa63c54efe7538788f2c91a64cbed520",
+      "sha256": "da8729cb8fa7b8ba41d64ee2b50fb4af73f3d05b1ba39b090e42abda6e5e854a",
+      "size": 1400
     },
     {
       "path": "manuscript/latex/preamble.tex",
-      "git_blob": "467664f7a5296448f2ad95eb04815d7ecdf24a07",
-      "sha256": "73ab5f1d636effaad4f17225a2b2b57dc7fd09dca022a0abae26c00d79cb54bc",
-      "size": 1648
+      "git_blob": "b6f32f6aa53b7c41211ece1df40f073a22f8c739",
+      "sha256": "fbfb8c423fe41e3744dd2291406521d92a3c3ad40d376a05e6c48a7988eb0f2c",
+      "size": 1650
+    },
+    {
+      "path": "manuscript/latex/preface.tex",
+      "git_blob": "55602364d0d2ad652802f6af7bff8d736e71dabf",
+      "sha256": "04fe46b7b2a7162ac952a39bdccff88750bedd91d412921881175acce5c606cf",
+      "size": 3428
     },
     {
       "path": "manuscript/latex/sections/01-introduction.tex",
-      "git_blob": "27b7d8dc3aa98f9319253012b427f74b0ef761ec",
-      "sha256": "d2186116a9f9aeb5da4399d5885924791c3760d4b649f9473b146f914f07f0e6",
-      "size": 20117
+      "git_blob": "1f16045fef11fb5192e14ba619802c5d87935763",
+      "sha256": "ce3c8627baae8eacb4932d5e23cd58c8985dcd16a475c47ebaf19dd2811030de",
+      "size": 24636
     },
     {
       "path": "manuscript/latex/sections/02-categorical-preliminaries.tex",
@@ -157,27 +169,21 @@
     },
     {
       "path": "manuscript/latex/sections/09-three-point-space.tex",
-      "git_blob": "bbd81be047d8ef000323e649a7b1ba4f1293bcd1",
-      "sha256": "6d90423c0c521e6232bee872abd63163cff113c6605b1fc4fd057b81a319c207",
-      "size": 40687
+      "git_blob": "83bfe5dc1b6df4d23e0fef11a7f9fd723609bde8",
+      "sha256": "ae422e21736b7669c659ebd81574174c2461cca3d27304b8a3c02a563636488c",
+      "size": 40772
     },
     {
-      "path": "manuscript/latex/main.pdf",
-      "git_blob": "1b4194247a19f88157808672d8116e145138c457",
-      "sha256": "b765574b766b5b2c2b2630042854eafc8d2f34b35a97a48aabb60c2c95e5cf2e",
-      "size": 1143098
+      "path": "manuscript/logical_consequence_and_essential_incompleteness_v100.pdf",
+      "git_blob": "27f76cba4bc94bf3549f0c53df094f0ca617bb77",
+      "sha256": "16e8aa0ae5bb241e3c150d999f2456b34063c97b6842bf55bca4b92feb533174",
+      "size": 1154124
     },
     {
-      "path": "manuscript/logical_consequence_and_essential_incompleteness_v99.pdf",
-      "git_blob": "1b4194247a19f88157808672d8116e145138c457",
-      "sha256": "b765574b766b5b2c2b2630042854eafc8d2f34b35a97a48aabb60c2c95e5cf2e",
-      "size": 1143098
-    },
-    {
-      "path": "manuscript/logical_consequence_v99_source.zip",
-      "git_blob": "855bff3552d888d12855b31742d8a21dee149a27",
-      "sha256": "0f629b4a50ee41537e0294fbfe38eb0dbebb1d41805f88998cf775e4ca4f24ec",
-      "size": 149928
+      "path": "manuscript/logical_consequence_v100_source.zip",
+      "git_blob": "8fbd8d621207db3387b5c31e1d8c117c7f2347dc",
+      "sha256": "f30b155d87aea5a7e1510783088ad3a5d810f87e1015d00ae198a84692115fb9",
+      "size": 152990
     }
   ]
 }

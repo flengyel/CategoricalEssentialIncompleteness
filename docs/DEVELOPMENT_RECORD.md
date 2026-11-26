@@ -1,0 +1,18 @@
+# Development of the manuscript
+
+The manuscript has reached its 100th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
+
+| Edition or note | Change and reason | Source |
+|---|---|---|
+| v84 | Appendix C identifies the missing lift in the 2006 comparison argument. A section exists in the target although no source morphism maps to it. The source diagonal pair in the counterexample has a separator. The v94 introduction sets out the additional hypotheses of Corollary 3.3. | [Appendix C revision](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/b7bf333810d653be90d2d1ce1678ad81345f98b3) · [v94 §1](CODEX_MANUSCRIPT_V94_HANDOFF.md) |
+| Companion note, §5 | Hermida’s Theorem 3.2.3 assumes that the functor over the base left adjoint preserves cartesian morphisms. Identifying two distinct propositional atoms gives an instance where the free-theory functor fails that hypothesis. | [Counterexample and citation](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/4720f298b44d2c32ccca7bf59fedaf05bb07aec7) |
+| Companion note, §§2 and 4 | A free algebra at a fixed object gives a universal assignment there. The adjunction on all objects requires a choice of free algebra at each object, and its lift requires a choice of least theory for each pair. | [Local and global hypotheses](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/cbc505b338d5ca78373fc3037cdeea70f0675286) |
+| v94 and v96 | Sections 1 and 8 distinguish Smullyan’s Theorem 22, which assumes definability of every recursive set, from Theorem 23(b), which assumes strong separation of one recursively inseparable pair in a consistent system. In v96 the introduction identifies Di Paola and Heller’s arithmetical specialization of Theorem 22. | [v94 account](CODEX_MANUSCRIPT_V94_HANDOFF.md) · [v96 revision](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/ff20da56315d405f92ccd4f587fe4c05f32e11d2) |
+| v99 | Theorem 4.7 identifies the generated theory together with its atom constructor as initial in the comma category. Uniqueness requires a sentence assignment on the whole object of atoms, including the atoms outside both specified families. | [Theorem and proof](https://github.com/flengyel/CategoricalEssentialIncompleteness/commit/a834c71330a9f6958fa7492618a3e170040bf422) · [Two-atom test](reviews/V99_ABSTRACT_AND_INITIALITY.md) |
+| v99 | The account of Di Paola and Heller’s diagonal theorem confines it to their §8 setting. Theorem 8.15 assumes a $c^+$-dominical category and a Turing morphism. Its proof uses $1_X\ne 0_X$. In the one-morphism category the diagonal pair has a separator. | [Source comparison and counterexample](reviews/V99_ABSTRACT_AND_INITIALITY.md) |
+
+## Verification and registration
+
+Palomar version 3 registered three selected declarations at manuscript v72, commit `efda31344ec6420142468ab28af9d96deab571e7`. The registry records the source commit and the names of the three theorems. [Public record](https://data.palomar-registry.org/entries/PALOMAR-2026-11-22-000009-v3.json) · [Verification reports](palomar/PALOMAR-2026-11-22-000009-v3/README.md)
+
+The full WSL2 replay of v94 on 26 November 2026 tested `b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182`. All 2,101 official commands and 35 supplemental commands passed. Two independent readings cover that same commit. [Replay receipt](V94_WSL2_LEAN_VERIFICATION.md) · [Independent readings](reviews/V94_WSL2_AUDITS/README.md) · [Manuscript reviews](reviews/)

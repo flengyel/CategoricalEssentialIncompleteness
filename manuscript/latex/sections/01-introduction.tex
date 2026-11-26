@@ -1,15 +1,12 @@
 \section{Introduction}
 
-Di Paola and Heller sought an algebraic account of generalized
-incompleteness theorems in recursion categories \cite[pp.~594--596]{DPH}.
-They reserved the algebraization for subsequent work \cite[p.~629]{DPH},
-but their announced treatment did not appear. Their statement~(3) specializes
-Smullyan's Theorem~22 to a consistent arithmetical system.
 In a representation system, a predicate $H$ \emph{strongly separates}
 disjoint sets $A,B$ of natural numbers if $H(n)$ is provable for
 $n\in A$ and refutable for $n\in B$. A set is \emph{definable} if
 some predicate strongly separates it from its complement
 \cite[Chapter~III, \S5, p.~48]{Smullyan}.
+Statement~(3) of Di Paola and Heller \cite[pp.~594--596]{DPH}
+specializes Smullyan's Theorem~22 to a consistent arithmetical system.
 With effective coding of predicate instances, if every recursive set
 is definable, no recursive set separates the G\"odel codes of provable
 sentences from those of refutable sentences
@@ -188,7 +185,16 @@ internal theory and its interpretation under $\widehat F_M$ are incomplete
 (Theorem~\ref{thm:arithmetic-internal-comparison}).
 For each such extension, the sets of standard codes of its provable
 sentences and of its refutable sentences are recursively inseparable
-(Corollary~\ref{cor:arithmetic}). Fix the PA axioms and let $\Gamma_e$ adjoin to them the
+(Corollary~\ref{cor:arithmetic}). On the numerical object of the category
+of partial recursive functions, complementary restriction idempotents
+are precisely the partial identities on a recursive set and its complement
+(Section~\ref{sec:numerical-incompleteness}). In $S_{\PA}$ the proof
+of Corollary~\ref{cor:arithmetic} needs only a partial morphism whose
+standard interpretation decides the proposed recursive separator.
+For which disjoint restriction idempotents on the numerical object of
+$S_{\PA}$ does recursive separability of their standard domains imply
+separability in $S_{\PA}$?
+Fix the PA axioms and let $\Gamma_e$ adjoin to them the
 arithmetic sentences on whose codes program $e$ halts. In
 $\Tot(\Split(S_{\PA}))$ there is one morphism from the numerical object to
 the sentence object whose standard interpretation sends every $e$ with
@@ -208,6 +214,9 @@ In the recursion category $\mathcal E_a$ of Section~\ref{sec:miller},
 a partial function $f:\N\rightharpoonup\N$ is a morphism precisely when
 one oracle program, run with any binary representation of $a$, halts at
 $n$ exactly when $f(n)$ is defined and then returns $f(n)$.
+The partial identities on a subset of $\N$ and its complement both
+belong to $\mathcal E_a$ exactly when one program decides membership
+in the subset from every representation (Section~\ref{sec:miller-category}).
 Each representation computes a separator of
 $\{n:a(n)<1/2\}$ and $\{n:a(n)>1/2\}$. No program computes the same
 separator from every representation
@@ -228,7 +237,13 @@ In the total category of its Karoubi envelope we construct an initial
 algebra of propositional formulas and an initial algebra of derivations
 from the signed atomic axioms and the logical schemes by modus ponens.
 Evaluating at either endpoint of the diagram $1\leftarrow0\to2$
-gives a consistent propositional theory. Every
+gives a consistent propositional theory. A recursive separator of the
+diagonal pair at an endpoint would give complementary restriction
+idempotents there.
+A separator in the diagram must give a computable decision at each
+vertex, and the two diagram morphisms must preserve these decisions
+(Sections~\ref{subsec:fork-complementary-domains}
+and~\ref{subsec:fork-propositional-theories}). Every
 consistent extension in the same language with a c.e.~axiom set
 leaves a propositional atom undecided
 (Theorem~\ref{thm:cosheaf-observation} and
@@ -237,6 +252,48 @@ Proposition~\ref{prop:fork-first-order-conservative} gives a conservative
 first-order extension of the internal propositional theory.
 Corollary~\ref{cor:fork-associated-theories} applies the
 associated-category construction to its consistent extensions.
+
+Table~\ref{tab:first-order-examples} gives the first-order constructions
+used in these examples. In the Miller case,
+Proposition~\ref{prop:miller-theory-realization} treats the ordered-field
+signature with the constants $c_n$, and
+Lemma~\ref{lem:miller-parameterized-deduction} treats the presentations
+$P_X$ for all objects $X$. The endpoint theorem uses propositional
+syntax and requires no variable object.
+
+\begin{table}[htbp]
+\centering
+\caption{Hypotheses for first-order theories in the three examples.}
+\label{tab:first-order-examples}
+\small
+\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{@{}p{.35\linewidth}lll@{}}
+\hline
+Hypothesis & Arithmetic & Miller sequence & Three-point space \\
+\hline
+\raggedright Regularity and disjoint, pullback-stable finite coproducts
+  & Lem.~\ref{lem:syntactic-total-category}
+  & Prop.~\ref{prop:miller-theory-realization}
+  & Prop.~\ref{prop:fork-total} \\
+\raggedright Partial inverses of monomorphisms
+  & Lem.~\ref{lem:syntactic-total-category}
+  & Prop.~\ref{prop:miller-theory-realization}
+  & Props.~\ref{prop:fork-structure},~\ref{prop:fork-recursion} \\
+\raggedright Decidable equality on variables
+  & \S\ref{sec:st-parameterized-syntax}
+  & Prop.~\ref{prop:miller-theory-realization}
+  & Prop.~\ref{prop:fork-first-order-realization} \\
+\raggedright Initial syntax and list algebras in each parameter slice
+  & Props.~\ref{prop:st-syntax-initiality}--\ref{prop:st-list-initiality}
+  & Prop.~\ref{prop:miller-theory-realization}, Lem.~\ref{lem:miller-parameterized-deduction}
+  & Prop.~\ref{prop:fork-first-order-realization} \\
+\raggedright Initial derivation algebra for each axiom subobject
+  & Thm.~\ref{thm:syntactic-generated-theory}
+  & Prop.~\ref{prop:miller-theory-realization}, Lem.~\ref{lem:miller-parameterized-deduction}
+  & Prop.~\ref{prop:fork-first-order-realization} \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Related work}
 
@@ -284,8 +341,12 @@ Bernardi obtained categorical fixed-point
 and inseparability results from precomplete equivalence relations,
 including PA-provable equality of partial recursive functions among his
 examples \cite[Sections~2--3, pp.~125--128]{Bernardi}.
-Montagna obtained effectively inseparable pairs in his syntactic
-category \cite[Remark~3.1]{Montagna}. The diagonal pair in
+Montagna assigns a syntactic recursion category $S_T$ to a consistent
+c.e.\ extension $T$ of $\PA$ and obtains effectively inseparable pairs
+there \cite[Remark~3.1]{Montagna}. Di Paola and Montagna study these
+categories further \cite{DPM}. Starting with $S_{\PA}$,
+Section~\ref{sec:arithmetic} constructs an internal theory from its
+diagonal pair. The diagonal pair in
 Theorem~\ref{thm:comparison} occurs in Lengyel's earlier comparison
 \cite[Theorem~4.1]{Lengyel2006}. Appendix~\ref{app:lifting-counterexample}
 gives a counterexample to that theorem as stated. Cockett attributes
@@ -314,13 +375,18 @@ $D$ containing $B$ and disjoint from $C$ gives a complete consistent
 extension by adjoining $A_n$ for $n\in D$ and $\neg A_n$ otherwise.
 This extension is c.e.\ exactly when $D$ is recursive.
 A decision procedure for $D$ lets us enumerate the axioms and hence
-the theorems. Conversely, enumerating the theorems until $A_n$ or
-$\neg A_n$ appears decides whether $n\in D$.
+the theorems. Conversely, in an enumeration of the theorems,
+completeness ensures that $A_n$ or $\neg A_n$ appears, and consistency
+ensures that exactly one appears. Its sign decides whether $n\in D$.
 Here the generators form an object $X$ of $\mathcal D$, and the theory
 is free on the pair $(a,b)$ of subobjects of $X$ in the sense of
 Theorem~\ref{thm:free-first-order-adjunction}.
 Corollary~\ref{cor:signed-first-order-incompleteness} concerns
 complete consistent internal extensions of this theory.
+For a consistent $T_{a,b}$, its essential incompleteness is equivalent
+to essential undecidability of the signed theory over $\mathsf{Jan}$
+whenever $(a,b)$ has a complementary separator exactly when $(B,C)$
+has a recursive separator.
 
 Di Paola and Heller also discussed the role of the formalized L\"ob
 theorem among the axioms of diagonalizable algebras and the modal
@@ -329,8 +395,21 @@ and the obstacles to extending modal fixed-point theorems to numerals
 and quantification \cite[pp.~595--596]{DPH}. In categorical logic,
 van Dijk and Gietelink Oldenziel give Joyal's arithmetic-universe
 proofs of incompleteness and of the unprovability of consistency
-\cite[Theorems~5.19--5.20]{vanDijkGO}. Their construction uses an
-internal arithmetic universe in the initial arithmetic universe.
+\cite[Theorems~5.19--5.20]{vanDijkGO}. Their proof uses an
+internal arithmetic universe in the initial arithmetic universe,
+which Maietti characterizes as the initial pretopos with parameterized
+list objects \cite[Definition~2.6 and Theorem~6.3]{MaiettiLists}.
+Ramesh calls an essentially algebraic theory extending the theory of
+categories with finite limits \emph{introspective} when each model
+is equipped with a homomorphism into an internal model of that same
+theory in its underlying category. For the modal operator
+$\Box$ on global presheaves, he derives L\"ob's theorem in the form
+of a guarded fixed point $\omega:1\to P$ for each $g:\Box P\to P$
+\cite[Definition~2.7, p.~48, and Theorem~4.19, p.~82]{Ramesh2023}.
+His examples include the syntactic category of $\PA$, the initial
+arithmetic universe, and full subcategories of presheaves for guarded
+recursion and for the modal logic $\mathrm{GL}$
+\cite[Sections~2.4 and 6.4]{Ramesh2023}.
 
 Cockett and Hofstra relate Turing categories to partial combinatory
 algebras through idempotent splitting
@@ -339,7 +418,13 @@ a restriction zero and a provability predicate for the restriction order
 on programs, Cockett constructs a restriction idempotent on the restriction
 terminal object distinct from zero and the identity
 \cite[Section~7.5, Theorem~7.14]{CockettComputability}.
-In Theorem~\ref{thm:associated-incompleteness}, incompleteness of
-an extension in the slice means that its theorem and refutation subobjects
-fail to cover the sentence object of the constant family.
+Here the image of the conclusion morphism from derivations ending in
+sentences gives the theorem subobject. If an assignment into a
+consistent theory sends an inseparable pair into its theorem and
+refutation subobjects, respectively, those subobjects are inseparable
+by Corollary~\ref{cor:domain-incompleteness}.
+We know of no earlier construction that assigns to a disjoint pair
+of restriction idempotents in the completion of a recursion category
+a first-order theory with the universal property of
+Theorem~\ref{thm:free-first-order-adjunction}.
 
