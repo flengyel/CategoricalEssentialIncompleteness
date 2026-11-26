@@ -1,15 +1,16 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v98
+Active WSL2 assignment — manuscript v99
 
 Run the full replay and two independent whole-paper readings at the exact
-v98 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V98_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V98.md. The manuscript and Palomar metadata changes
-are described in docs/CODEX_MANUSCRIPT_V98_HANDOFF.md.
+v99 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V99_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V99.md. The manuscript and Palomar metadata changes
+are described in docs/CODEX_MANUSCRIPT_V99_HANDOFF.md.
 
-An existing v97 replay or reading may finish at its assigned commit,
-1dccf0d1037e8268f29cb5d7593c5cda7ac5d417. Record those results for v97.
+Existing replays and readings may finish at their assigned commits. Record
+v98 results at 5f51f781afb6153f8ab81c948602ebaf1fcca3b3 and v97 results
+at 1dccf0d1037e8268f29cb5d7593c5cda7ac5d417.
 
 The last completed full replay and two independent readings tested
 manuscript v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
@@ -19,8 +20,15 @@ and the other proofs at cei-v94-palomar-v4
 (62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f). The last confirmed public
 registration is version 3, from manuscript v72.
 https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
-For a future registration, check the public version history following
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
+For v99, keep the existing registered v3 citations in Appendix E. Check the
+public history before proposing a version during intake. Use the identical
+full source commit for the WSL2 replay, both independent readings, an
+official full Comparator preflight, and the eventual registration receipt.
+The source must pass this preflight even if changes to Lean sources are
+limited to comments or metadata. Complete and record the replay, both
+readings, and preflight before intake. Follow the approval procedure in
+docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v99-specific instructions in
+docs/CODEX_WSL2_CEI_V99_LEAN_HANDOFF.md.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
@@ -35,14 +43,8 @@ https://github.com/flengyel/Dosen-Petric-Maximality/blob/874ea6bcd775ff21f7a8475
 The release name, paths, existing entry ID, and version in that example belong
 to the Došen–Petrić paper. CEI uses project_path Lean.
 
-When preparing a CEI release, choose a fresh, durable tag name before making
-the release commit. Use the tag in source and claim links that must refer
-to the release itself. Assemble the intended paper, PDF, source archive,
-Lean sources and registry metadata, then commit. Record the full computed
-SHA independently. Bind the tag to that commit once, check that its remote
-peeled value agrees, and give Palomar the full SHA. Keep the v66 private
-check attached to its tested SHA. Follow the ordinary authorized preflight
-and registration workflow for the intended candidate.
+The current CEI procedure is in docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
+Keep each preflight and receipt attached to its tested source SHA.
 
 Manuscript v71 at 170f14c13366e1a10dca9a77fc6fda4cd1c8acda cites
 PALOMAR-2026-11-22-000009, version 2. Its registered source was
@@ -51,18 +53,8 @@ https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=2
 
 Manuscript v72, tagged cei-v72-palomar-v3, was registered as version 3 of the
 existing entry. The tagged PDF cites https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000009&version=3
-For a later candidate, use the current version history to choose its target version. Include its version-specific permalink in Appendix E.2
-for Corollary 4.8 and the Boolean assignment and in E.3 for the existential
-consequence of Lemma 8.9. Retain the direct Lean proof link for the full
-lemma. Use neutral citation wording before registration. Point Appendix E's
-release-source links and the manuscript link in Lean/formalization.yaml at
-the fresh candidate tag. Build and inspect every subsection of Appendix E
-and both versioned hyperlinks in the PDF. Update the archive, manifest and
-correspondence before committing the snapshot and running full preflight.
-After registration, verify the issued version and SHA against that snapshot
-and its tag. Read the manuscript identifier from the public entry, resolve its tag
-to that SHA and compare the linked PDF bytes with the manifest. Report any mismatch
-before manuscript publication.
+For the next candidate, use the source, approval and receipt checks in the
+active assignment above and docs/CODEX_WSL2_PALOMAR_SUBMISSION.md.
 
 v66 proof preparation and verification record
 ---------------------------------------------

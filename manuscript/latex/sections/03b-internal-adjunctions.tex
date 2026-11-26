@@ -54,6 +54,11 @@ The equivalence identifies this hom-set with the hom-set from
 $\Gamma(a)$ to $T$ in the theory order, naturally in both objects.
 \end{proof}
 
+The poset of sentence theories containing $A$, ordered by inclusion,
+has $\operatorname{Gen}(A)$ as its initial object. Extensivity gives
+$A\leq\operatorname{Gen}(A)$, and the reflection gives the unique
+inclusion $\operatorname{Gen}(A)\leq T$ for each theory $T$ containing $A$.
+
 A first-order presentation $P$ consists of the named-variable
 syntax of Definition~\ref{def:categorical-syntax}, the logical rules of
 Appendix~\ref{app:first-order-derivations}, and a choice of initial
@@ -375,10 +380,14 @@ $\sigma_S$.
 
 Voutsadakis gives an adjunction for relational signatures in which
 morphisms substitute formulas for relation symbols
-\cite[Theorem~7]{Voutsadakis}. Here an assignment $f:X\to S_P$ of
-sentences to propositional atoms extends to a theory morphism
-$(P_X,T_{a,b})\to(P,T)$ precisely when $a\leq f^*T$ and
-$b\leq f^*\nu_P^*T$.
+\cite[Theorem~7]{Voutsadakis}.
+
+Fix $A=(X,a,b)$ in $\mathsf{Pair}_c(\mathcal D)$. An object of the
+comma category $A\downarrow J_{\mathrm{FO}}$ is a pair $((Q,U),f)$,
+where $(Q,U)$ is in $\mathsf{FO}_V(\mathcal D)$ and $f:X\to S_Q$ is
+a total assignment satisfying $a\leq f^*U$ and $b\leq f^*(\nu_Q^*U)$.
+A morphism from $((Q,U),f)$ to $((Q',U'),f')$ is a theory morphism
+$\sigma:(Q,U)\to(Q',U')$ with $\sigma_S f=f'$.
 
 \begin{theorem}[Free first-order adjunction]
 \label{thm:free-first-order-adjunction}
@@ -399,7 +408,14 @@ Then
  \mathsf{FO}_V(\mathcal D):J_{\mathrm{FO}},\qquad
  \Sigma_{\mathrm{FO}}\dashv J_{\mathrm{FO}}.
 \]
-The unit at $(X,a,b)$ has underlying morphism $\theta_X:X\to S_X$.
+For $A=(X,a,b)$ in $\mathsf{Pair}_c(\mathcal D)$, the unit has
+underlying morphism $\theta_X:X\to S_X$. The theory $(P_X,T_{a,b})$
+with this atom constructor is initial in $A\downarrow J_{\mathrm{FO}}$.
+For each $(Q,U)$ in $\mathsf{FO}_V(\mathcal D)$, every total
+assignment $f:X\to S_Q$ extends uniquely to a logical translation
+$\widehat f:P_X\to Q$ with $\widehat f_S\theta_X=f$. This translation
+is a theory morphism $(P_X,T_{a,b})\to(Q,U)$ exactly when
+$a\leq f^*U$ and $b\leq f^*(\nu_Q^*U)$.
 The counit $\Sigma_{\mathrm{FO}}J_{\mathrm{FO}}(P,T)\to(P,T)$
 is the translation extending $1_{S_P}:S_P\to S_P$.
 \end{theorem}
@@ -457,18 +473,17 @@ $\sigma:(P,T)\to(Q,U)$, the bound $T\leq\sigma_S^*U$ and
 $\sigma_S\nu_P=\nu_Q\sigma_S$ give
 $\nu_P^*T\leq\sigma_S^*\nu_Q^*U$. Thus $\sigma_S$ is a morphism of pairs.
 
-For a pair morphism $f:(X,a,b)\to J_{\mathrm{FO}}(P,T)$, the
-defining inequalities put $\widehat f_!A_{a,b}$ inside $T$.
-Theorem~\ref{thm:translation-galois} gives
-$\widehat f_!T_{a,b}\leq T$.
+For each assignment $f:X\to S_P$, the inverse image $\widehat f_S^*T$
+is a sentence theory by Theorem~\ref{thm:translation-galois}.
+By the generation reflection (Theorem~\ref{thm:first-order-reflection}),
+it contains $T_{a,b}$ exactly when it contains $A_{a,b}$.
+Since $\widehat f_S\theta_X=f$ and $\widehat f_S$ preserves negation,
+the latter holds exactly when $a\leq f^*T$ and $b\leq f^*(\nu_P^*T)$.
+These are therefore the conditions for $\widehat f_!T_{a,b}\leq T$.
 
-Conversely, a theory morphism $\sigma:(P_X,T_{a,b})\to(P,T)$
-restricts to $f=\sigma_S\theta_X:X\to S_P$. Preservation of negation
-and the definition of the signed axioms give
-\[
- a\leq f^*T,\qquad b\leq f^*\nu_P^*T.
-\]
-The extension satisfies $\widehat f_S\theta_X=f$, and uniqueness gives
+A theory morphism $\sigma:(P_X,T_{a,b})\to(P,T)$ restricts to
+$f=\sigma_S\theta_X$. The extension satisfies $\widehat f_S\theta_X=f$,
+and uniqueness gives
 $\widehat{\sigma_S\theta_X}=\sigma$. These equations make the two
 assignments inverse. For a morphism of pairs $k$ with underlying
 morphism $X'\to X$ and a theory translation $\rho:(P,T)\to(Q,U)$,
@@ -481,7 +496,18 @@ Uniqueness of extension gives the equation, proving naturality in both
 variables. The same uniqueness gives the functor laws for
 $\Sigma_{\mathrm{FO}}$. For $J_{\mathrm{FO}}$ they follow from
 composition of sentence morphisms.
+The unit at $A$ gives the object $((P_X,T_{a,b}),\theta_X)$ of
+$A\downarrow J_{\mathrm{FO}}$. For each object $((P,T),f)$, the
+hom-set bijection gives the unique theory morphism $\sigma$ with
+$\sigma_S\theta_X=f$, proving initiality.
 \end{proof}
+
+The initial derivation algebra gives $T_{a,b}$ as the image of the
+conclusion morphism on derivations ending in sentences.
+By Theorem~\ref{thm:first-order-reflection}, this image is the least
+sentence theory containing $A_{a,b}$, hence the meet of all such theories.
+The construction requires no arbitrary meets in
+$\operatorname{Sub}_{\mathcal D}(S_X)$.
 
 \begin{corollary}\label{cor:signed-first-order-incompleteness}
 Under the hypotheses of

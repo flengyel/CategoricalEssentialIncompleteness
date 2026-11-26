@@ -3,31 +3,32 @@ version: v0.4
 project:
   name: Logical consequence and essential incompleteness in recursion categories
   description: >-
-    From a recursion category we construct, under additional hypotheses, internal
-    first-order theories in its restriction idempotent completion. Among disjoint
-    pairs (a,b) of restriction idempotents generating consistent theories, exactly
-    the inseparable pairs generate essentially incomplete ones: theories with no
-    complete consistent internal extension in their language. Di Paola and Heller
-    proved diagonal domains inseparable toward an algebraization of incompleteness
-    that never appeared. A comparison theorem for range functors gives conditions
-    for diagonal pairs of Turing morphisms to be inseparable; we apply such pairs
-    to internal theories for a categorical form of
-    Smullyan's criterion: a consistent theory strongly separating a recursively
-    inseparable pair has recursively inseparable theorems and refutations. A
-    disjoint pair (a,b) specifies two families of propositional atoms. The least
-    theory proving the first and refuting the second is T_(a,b). The construction
-    is left adjoint to the functor giving theorem and refutation subobjects, so
-    translations from T_(a,b) into a theory T correspond to assignments of its
-    sentences sending a into theorems and b into refutations. When (a,b) is
-    inseparable, every consistent theory receiving such a translation is
-    essentially incomplete. Each theory determines a recursion category over its
-    theorem object; under further hypotheses, the theory is essentially incomplete
-    exactly when its copy in the completion is. Theory extensions induce fully
-    faithful functors between these completions, adjoint on both sides to
-    pullback. Three examples are Montagna's S_PA (for consistent PA), uniform
-    computations on binary representations of a Miller sequence, and one built
-    from diagrams of c.e. sets presenting cosheaves on a three-point space. In
-    each we prove an internal theory consistent and essentially incomplete.
+    Di Paola and Heller studied dominical categories to algebraize generalized
+    incompleteness. They proved a diagonal inseparability theorem. From a
+    recursion category we construct, under additional hypotheses, internal
+    first-order theories in its restriction idempotent completion. Among
+    disjoint pairs (a,b) of restriction idempotents generating consistent
+    theories T_(a,b), exactly the inseparable pairs generate essentially
+    incomplete ones: theories with no complete consistent internal extension in
+    their language. A comparison theorem for range functors gives conditions
+    for diagonal pairs of Turing morphisms to be inseparable; we apply such
+    pairs to internal theories for a categorical form of Smullyan's criterion:
+    a consistent theory strongly separating a recursively inseparable pair has
+    recursively inseparable theorems and refutations. For (a,b) on an object X
+    of propositional atoms, a consistent T_(a,b) with its atom constructor is
+    initial among consistent theories with a sentence assignment on X sending a
+    into theorems and b into refutations. Each such assignment extends uniquely
+    to a translation from T_(a,b). Generation is left adjoint to the functor
+    giving theorem and refutation subobjects. When (a,b) is inseparable, every
+    consistent theory receiving such a translation is essentially incomplete.
+    Each theory determines a recursion category over its theorem object; under
+    further hypotheses, the theory is essentially incomplete exactly when its
+    copy in the completion is. Theory extensions induce fully faithful functors
+    between these completions, adjoint on both sides to pullback. Examples are
+    Montagna's S_PA (for consistent PA), uniform computations on binary
+    representations of a Miller sequence, and one built from diagrams of c.e.
+    sets presenting cosheaves on a three-point space. In each we prove an
+    internal theory consistent and essentially incomplete.
 
 
     The three statements selected for this entry are the inseparability criterion
@@ -47,8 +48,8 @@ sources:
     authors: [Florian Lengyel]
     type: manuscript
     relationship: formalizes
-    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v98-manuscript/manuscript/logical_consequence_and_essential_incompleteness_v98.pdf
-    location: Version 98, 26 November 2026, Theorem 4.7 (p. 19), Corollary 4.8 and its Boolean-assignment proof (p. 21), and the existential consequence of Lemma 8.9 (p. 61).
+    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v99-manuscript/manuscript/logical_consequence_and_essential_incompleteness_v99.pdf
+    location: Version 99, 26 November 2026, Theorem 4.7 and its universal property (pp. 19–21), Corollary 4.8 and its Boolean-assignment proof (p. 21), and the existential consequence of Lemma 8.9 (p. 61).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories
     authors: [Juvenal Murwanashyaka, Fedor Pakhomov, Albert Visser]
@@ -74,8 +75,9 @@ status:
   scope: >-
     Corollary 4.8 assumes a disjoint pair with consistent generated theory.
     Its proof constructs a complete extension from a Boolean assignment.
-    The third theorem asserts that some nullary first-order calculus has an
-    inseparable pair of subobjects whose signed theory is essentially incomplete.
+    The third theorem gives a first-order calculus with propositional atoms
+    specified by an object X and an inseparable pair of subobjects of X
+    whose signed theory is essentially incomplete.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: [propext, Quot.sound, Classical.choice]
@@ -112,21 +114,23 @@ review:
   notes: >-
     The manuscript guide covers 77 numbered results. Comparator checks three
     theorems and the definition IsNullaryCalculus. The axiom and placeholder
-    counts under status refer to the Solution. Private run 44869789666 checked
-    commit a65aeb4d5aae48ef9d71bd3352f8935e7612e434.
+    counts under status refer to the Solution. The four source files in
+    Lean/CEIPalomar differ from those registered in version 3
+    (efda31344ec6420142468ab28af9d96deab571e7) only in comments. The
+    selected declarations and the Comparator configuration are unchanged.
 
 alignment:
   namespace: CEIPalomar
   statements:
-    - source: Corollary 4.8 of manuscript v98 (p. 21), subobject formulation
+    - source: Corollary 4.8 of manuscript v99 (p. 21), subobject formulation
       lean: CEIPalomar.essential_incomplete_iff_inseparable
       module: CEIPalomar.Solution
       note: CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains derives the restriction-idempotent equivalence from this declaration.
-    - source: Proof of Corollary 4.8 of manuscript v98 (p. 21), Boolean assignment
+    - source: Proof of Corollary 4.8 of manuscript v99 (p. 21), Boolean assignment
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
       note: The closed, consistent, complete theory depends only on the assignment. It contains the signed theory of each pair assigned true on the first subobject and false on the second.
-    - source: Existential consequence of Lemma 8.9 of manuscript v98 (p. 61)
+    - source: Existential consequence of Lemma 8.9 of manuscript v99 (p. 61)
       lean: CEIPalomar.exists_inseparable_example
       module: CEIPalomar.Solution
       note: The category, the variable and index objects, the calculus, and the two subobjects are existentially quantified.

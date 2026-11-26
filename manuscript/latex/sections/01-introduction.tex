@@ -1,8 +1,9 @@
 \section{Introduction}
 
 Di Paola and Heller sought an algebraic account of generalized
-incompleteness theorems in recursion categories
-\cite[pp.~594--596, 629]{DPH}. Their statement~(3) specializes
+incompleteness theorems in recursion categories \cite[pp.~594--596]{DPH}.
+They reserved the algebraization for subsequent work \cite[p.~629]{DPH},
+but their announced treatment did not appear. Their statement~(3) specializes
 Smullyan's Theorem~22 to a consistent arithmetical system.
 In a representation system, a predicate $H$ \emph{strongly separates}
 disjoint sets $A,B$ of natural numbers if $H(n)$ is provable for
@@ -67,14 +68,20 @@ Write $\nu_X:S_X\to S_X$ for negation. The axiom subobject is
  \quad\text{in }\operatorname{Sub}(S_X).
 \]
 Let $T_{a,b}$ be the image of the conclusion morphism for derivations
-from $A_{a,b}$ that end in sentences. For a presentation $Q$, write
+from $A_{a,b}$ that end in sentences. It is the least sentence theory
+of $P_X$ containing $A_{a,b}$, that is, the initial object of the
+ordered set of such theories under inclusion
+(Theorem~\ref{thm:first-order-reflection}).
+For a presentation $Q$, write
 $S_Q$ for its sentence object and $\nu_Q:S_Q\to S_Q$ for negation.
 Every total assignment $f:X\to S_Q$ extends uniquely to a logical
 translation $\sigma:P_X\to Q$ whose sentence component satisfies
-$\sigma_S\theta_X=f$. If $T_{a,b}$ is consistent and $U$ is a
-consistent theory of $Q$, this translation is a morphism of theories
+$\sigma_S\theta_X=f$. Suppose $T_{a,b}$ is consistent. For a consistent
+theory $U$ of $Q$, this translation is a morphism of theories
 $(P_X,T_{a,b})\to(Q,U)$ exactly when $a\le f^*U$ and
-$b\le f^*(\nu_Q^*U)$. On pairs generating consistent theories,
+$b\le f^*(\nu_Q^*U)$. Thus $((P_X,T_{a,b}),\theta_X)$ is initial among
+consistent theories $(Q,U)$ equipped with an assignment $f:X\to S_Q$
+satisfying these bounds. On pairs generating consistent theories,
 this correspondence gives a left adjoint to the functor sending
 $(Q,U)$ to $(S_Q,U,\nu_Q^*U)$
 (Theorem~\ref{thm:free-first-order-adjunction}).
