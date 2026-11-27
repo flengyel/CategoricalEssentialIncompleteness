@@ -1,13 +1,14 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v102
+Active WSL2 assignment — manuscript v103
 
 Run the full replay and both independent whole-paper readings at the supplied
-full SHA of cei-v102-palomar-candidate. Follow docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V102.md. The candidate includes the revised “Notes
-from the statement file” in Lean/CEIPalomar/Challenge.lean. The v102 manuscript
-was fixed at e1a145a74f05cfb549e47ca9ee0c867e415ace08.
+full SHA of cei-v103-palomar-candidate. Follow docs/CODEX_WSL2_CEI_V103_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V103.md. The candidate includes the revised “Notes
+from the statement file” in Lean/CEIPalomar/Challenge.lean. The preceding v102 manuscript
+was fixed at e1a145a74f05cfb549e47ca9ee0c867e415ace08; its Palomar candidate
+with the updated statement-file comment was 94bf26d378a3ac44650c0439f5b82c3c8f930cfa.
 
 Existing replays and readings may finish at their assigned commits. Record
 v101 results at d751072f38626106aa8654320499c7a2486404dc,
@@ -24,15 +25,15 @@ and the other proofs at cei-v94-palomar-v4
 (62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f). The last confirmed public
 registration is version 3, from manuscript v72.
 https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
-For v102, keep the existing registered v3 citations in Appendix E. Check the
+For v103, keep the existing registered v3 citations in Appendix E. Check the
 public history before proposing a version during intake. Use the identical
 full source commit for the WSL2 replay, both independent readings, an
 official full Comparator preflight, and the eventual registration receipt.
 The source must pass this preflight even if changes to Lean sources are
 limited to comments or metadata. Complete and record the replay, both
 readings, and preflight before intake. Follow the approval procedure in
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v102-specific instructions in
-docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md.
+docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v103-specific instructions in
+docs/CODEX_WSL2_CEI_V103_LEAN_HANDOFF.md.
 
 Earlier release procedures and verification records
 ---------------------------------------------------

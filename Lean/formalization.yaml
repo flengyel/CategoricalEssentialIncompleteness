@@ -49,8 +49,8 @@ sources:
     authors: [Florian Lengyel]
     type: manuscript
     relationship: formalizes
-    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v102-palomar-candidate/manuscript/logical_consequence_and_essential_incompleteness_v102.pdf
-    location: Version 102, 26 November 2026. Theorem 4.7 (pp. 21–23, initiality clause p. 22). Corollary 4.8 and its Boolean-assignment construction (p. 23). The existential consequence of Lemma 8.9 (p. 63).
+    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v103-palomar-candidate/manuscript/logical_consequence_and_essential_incompleteness_v103.pdf
+    location: Version 103, 26 November 2026. Theorem 4.7 (pp. 22–24, initiality clause p. 23). Corollary 4.8 and its Boolean-assignment construction (p. 24). The existential consequence of Lemma 8.9 (p. 64).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories
     authors: [Juvenal Murwanashyaka, Fedor Pakhomov, Albert Visser]
@@ -125,15 +125,15 @@ review:
 alignment:
   namespace: CEIPalomar
   statements:
-    - source: Corollary 4.8 of manuscript v102 (p. 23), subobject formulation
+    - source: Corollary 4.8 of manuscript v103 (p. 24), subobject formulation
       lean: CEIPalomar.essential_incomplete_iff_inseparable
       module: CEIPalomar.Solution
       note: CEIPalomar.ManuscriptChecks.essentiallyIncomplete_iff_inseparable_domains derives the restriction-idempotent equivalence from this declaration.
-    - source: Proof of Corollary 4.8 of manuscript v102 (p. 23), Boolean assignment
+    - source: Proof of Corollary 4.8 of manuscript v103 (p. 24), Boolean assignment
       lean: CEIPalomar.boolean_assignment
       module: CEIPalomar.Solution
       note: The closed, consistent, complete theory depends only on the assignment. It contains the signed theory of each pair assigned true on the first subobject and false on the second.
-    - source: Existential consequence of Lemma 8.9 of manuscript v102 (p. 63)
+    - source: Existential consequence of Lemma 8.9 of manuscript v103 (p. 64)
       lean: CEIPalomar.exists_inseparable_example
       module: CEIPalomar.Solution
       note: The category, the variable and index objects, the calculus, and the two subobjects are existentially quantified.
