@@ -1,6 +1,6 @@
 # Development of the manuscript
 
-The manuscript has reached its 103rd numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
+The manuscript has reached its 104th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
 
 | Edition or note | Change and reason | Source |
 |---|---|---|
@@ -16,3 +16,5 @@ The manuscript has reached its 103rd numbered edition. Six changes explain the s
 Palomar version 3 registered three selected declarations at manuscript v72, commit `efda31344ec6420142468ab28af9d96deab571e7`. The registry records the source commit and the names of the three theorems. [Public record](https://data.palomar-registry.org/entries/PALOMAR-2026-11-22-000009-v3.json) · [Verification reports](palomar/PALOMAR-2026-11-22-000009-v3/README.md)
 
 The full WSL2 replay of v94 on 26 November 2026 tested `b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182`. All 2,101 official commands and 35 supplemental commands passed. Two independent readings cover that same commit. [Replay receipt](V94_WSL2_LEAN_VERIFICATION.md) · [Independent readings](reviews/V94_WSL2_AUDITS/README.md) · [Manuscript reviews](reviews/)
+
+The full replay, both independent readings and Comparator preflight for v103 tested `f4b8921ecedb388c8b22e8f6e72df608abafa9f9`. The author reports that Palomar accepted the submission and that registration is paused. Manuscript v104 clarifies the purpose stated in the abstract, admissible substitution, the square in Proposition 4.6, and the effectiveness hypothesis in §8.1. [v103 verification](V103_WSL2_LEAN_VERIFICATION.md) · [v104 edition](CODEX_MANUSCRIPT_V104_HANDOFF.md)

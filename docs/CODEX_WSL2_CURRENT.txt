@@ -1,39 +1,23 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 26 November 2026
+Updated 27 November 2026
 
-Active WSL2 assignment — manuscript v103
+Current Palomar submission target: manuscript v104 only
 
-Run the full replay and both independent whole-paper readings at the supplied
-full SHA of cei-v103-palomar-candidate. Follow docs/CODEX_WSL2_CEI_V103_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V103.md. The candidate includes the revised “Notes
-from the statement file” in Lean/CEIPalomar/Challenge.lean. The preceding v102 manuscript
-was fixed at e1a145a74f05cfb549e47ca9ee0c867e415ace08; its Palomar candidate
-with the updated statement-file comment was 94bf26d378a3ac44650c0439f5b82c3c8f930cfa.
+The author reports that Palomar accepted the v103 submission. Preserve that
+submission, its private review and its digest at the tested v103 commit,
+f4b8921ecedb388c8b22e8f6e72df608abafa9f9. Leave v103 unregistered. Use v104 for the ordinary new-version submission
+to the existing entry. If the service requires withdrawal of v103 before
+it will accept v104, obtain the author's approval for that withdrawal.
 
-Existing replays and readings may finish at their assigned commits. Record
-v101 results at d751072f38626106aa8654320499c7a2486404dc,
-v100 results at 145c2a2bc3e1f307b1bbc12b1418a6ec8e3fdbbb,
-v99 results at a834c71330a9f6958fa7492618a3e170040bf422,
-v98 results at 5f51f781afb6153f8ab81c948602ebaf1fcca3b3 and v97 results
-at 1dccf0d1037e8268f29cb5d7593c5cda7ac5d417.
-
-The last completed full replay and two independent readings tested
-manuscript v94 at b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182.
-See docs/V94_WSL2_LEAN_VERIFICATION.md. Appendix E links the registered
-solution at cei-v72-palomar-v3 (efda31344ec6420142468ab28af9d96deab571e7)
-and the other proofs at cei-v94-palomar-v4
-(62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f). The last confirmed public
-registration is version 3, from manuscript v72.
-https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
-For v103, keep the existing registered v3 citations in Appendix E. Check the
-public history before proposing a version during intake. Use the identical
-full source commit for the WSL2 replay, both independent readings, an
-official full Comparator preflight, and the eventual registration receipt.
-The source must pass this preflight even if changes to Lean sources are
-limited to comments or metadata. Complete and record the replay, both
-readings, and preflight before intake. Follow the approval procedure in
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v103-specific instructions in
-docs/CODEX_WSL2_CEI_V103_LEAN_HANDOFF.md.
+The completed v103 replay, both readings and Comparator run 45931283651 are
+recorded in docs/V103_WSL2_LEAN_VERIFICATION.md at report commit
+8f7c1447f1b2af29d73b2b7a9ff9098aeb58a7f6. The current manuscript is a
+separate edition. Its source, correspondence and verification status are
+identified in MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V104.md and
+docs/CODEX_WSL2_CEI_V104_LEAN_HANDOFF.md. The v104 replay and Comparator
+preflight are pending. After both checks pass at the supplied v104 SHA,
+follow the v104 handoff through private review. Return the v104 review and
+its digest to the author before registration. Manuscript refereeing stays in chat.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
