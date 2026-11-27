@@ -49,7 +49,7 @@ sources:
     authors: [Florian Lengyel]
     type: manuscript
     relationship: formalizes
-    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v102-manuscript/manuscript/logical_consequence_and_essential_incompleteness_v102.pdf
+    id: https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/cei-v102-palomar-candidate/manuscript/logical_consequence_and_essential_incompleteness_v102.pdf
     location: Version 102, 26 November 2026. Theorem 4.7 (pp. 21–23, initiality clause p. 22). Corollary 4.8 and its Boolean-assignment construction (p. 23). The existential consequence of Lemma 8.9 (p. 63).
     author_endorsement: participated
   - title: There are no minimal essentially undecidable theories

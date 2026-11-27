@@ -3,10 +3,11 @@ Updated 26 November 2026
 
 Active WSL2 assignment — manuscript v102
 
-Run the full replay and two independent whole-paper readings at the exact
-v102 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V102.md. The manuscript and Palomar metadata changes
-are described in docs/CODEX_MANUSCRIPT_V102_HANDOFF.md.
+Run the full replay and both independent whole-paper readings at the supplied
+full SHA of cei-v102-palomar-candidate. Follow docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V102.md. The candidate includes the revised “Notes
+from the statement file” in Lean/CEIPalomar/Challenge.lean. The v102 manuscript
+was fixed at e1a145a74f05cfb549e47ca9ee0c867e415ace08.
 
 Existing replays and readings may finish at their assigned commits. Record
 v101 results at d751072f38626106aa8654320499c7a2486404dc,
