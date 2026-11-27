@@ -1,6 +1,6 @@
 # Development of the manuscript
 
-The manuscript has reached its 101st numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
+The manuscript has reached its 102nd numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
 
 | Edition or note | Change and reason | Source |
 |---|---|---|

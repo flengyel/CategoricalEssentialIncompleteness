@@ -1,14 +1,15 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 Updated 26 November 2026
 
-Active WSL2 assignment — manuscript v101
+Active WSL2 assignment — manuscript v102
 
 Run the full replay and two independent whole-paper readings at the exact
-v101 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V101_LEAN_HANDOFF.md
-and FORMALIZATION_STATUS_V101.md. The manuscript and Palomar metadata changes
-are described in docs/CODEX_MANUSCRIPT_V101_HANDOFF.md.
+v102 source commit in the handoff. Use docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md
+and FORMALIZATION_STATUS_V102.md. The manuscript and Palomar metadata changes
+are described in docs/CODEX_MANUSCRIPT_V102_HANDOFF.md.
 
 Existing replays and readings may finish at their assigned commits. Record
+v101 results at d751072f38626106aa8654320499c7a2486404dc,
 v100 results at 145c2a2bc3e1f307b1bbc12b1418a6ec8e3fdbbb,
 v99 results at a834c71330a9f6958fa7492618a3e170040bf422,
 v98 results at 5f51f781afb6153f8ab81c948602ebaf1fcca3b3 and v97 results
@@ -22,15 +23,15 @@ and the other proofs at cei-v94-palomar-v4
 (62fdf74cf37c8ef8126b2a6ea97acc10d76b3f0f). The last confirmed public
 registration is version 3, from manuscript v72.
 https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000009&version=3
-For v101, keep the existing registered v3 citations in Appendix E. Check the
+For v102, keep the existing registered v3 citations in Appendix E. Check the
 public history before proposing a version during intake. Use the identical
 full source commit for the WSL2 replay, both independent readings, an
 official full Comparator preflight, and the eventual registration receipt.
 The source must pass this preflight even if changes to Lean sources are
 limited to comments or metadata. Complete and record the replay, both
 readings, and preflight before intake. Follow the approval procedure in
-docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v101-specific instructions in
-docs/CODEX_WSL2_CEI_V101_LEAN_HANDOFF.md.
+docs/CODEX_WSL2_PALOMAR_SUBMISSION.md and the v102-specific instructions in
+docs/CODEX_WSL2_CEI_V102_LEAN_HANDOFF.md.
 
 Earlier release procedures and verification records
 ---------------------------------------------------

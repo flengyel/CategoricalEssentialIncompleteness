@@ -25,37 +25,41 @@ assigned to the second. The generated theory, with its atom constructor,
 is initial among consistent theories equipped with such an assignment.
 Each assignment extends uniquely to a translation from the generated theory.
 
-A complete consistent extension would separate the pair. Shoenfield used
-the corresponding inverse-image argument in his proof of essential
-undecidability \cite[Theorem~2, pp.~390--391]{Shoenfield}. Conversely,
-a separator gives a Boolean valuation whose true sentences form a
-complete consistent extension. Each theory determines a recursion
-category over its theorem object. An extension of theories induces a
-fully faithful restriction functor between the corresponding completions.
-On the underlying categories this functor is both left and right adjoint
-to pullback.
+A separator gives a Boolean valuation whose true sentences form a
+complete consistent extension of the generated theory. Conversely,
+pulling back the theorem and refutation subobjects of a complete
+consistent extension along the atom constructor would separate the pair.
+Shoenfield used the corresponding inverse-image argument in his proof
+of essential undecidability \cite[Theorem~2, pp.~390--391]{Shoenfield}.
 
-In particular, the pullback argument of
-Corollary~\ref{cor:domain-incompleteness} gives a categorical form of
-Smullyan's conclusion \cite[Chapter~III, Theorem~23(b)]{Smullyan}.
-If a theory admits such an assignment on an inseparable pair, the
-theorem and refutation subobjects of every consistent extension are
-inseparable. Corollary~\ref{cor:arithmetic} uses the same pullback on
-numerical codes. For a fixed arithmetic formula $\alpha(x)$, the
-primitive-recursive map $n\mapsto\ulcorner\alpha(\bar n)\urcorner$
-sends the two standard diagonal domains into the codes of provable
-and refutable sentences, respectively, of every consistent computably
-enumerable extension of Peano arithmetic
-(Lemma~\ref{lem:arithmetic-diagonal-representation}).
-A recursive separator of the two sets of codes would pull back to a
-recursive separator of the diagonal domains. An index for the
-conditional deciding membership in this inverse image gives a partial
-morphism of $S_{\PA}$ whose standard interpretation in sets and partial
-functions is that conditional. The comparison theorem excludes such a
-lifted separator (Corollary~\ref{cor:separator}). Hence the two sets
-of sentence codes are recursively inseparable. The other two applications use
+In particular, if a theory admits such an assignment on an inseparable
+pair, the theorem and refutation subobjects of every consistent
+extension are inseparable (Corollary~\ref{cor:domain-incompleteness}).
+This gives a categorical form of Smullyan's conclusion
+\cite[Chapter~III, Theorem~23(b)]{Smullyan}.
+
+Let $\alpha(x)$ say that the diagonal computation on input $x$ halts
+with even output. In every consistent computably enumerable extension
+of Peano arithmetic, $\alpha(\bar n)$ is provable when the computation
+on $n$ halts with even output and refutable when it halts with odd
+output (Lemma~\ref{lem:arithmetic-diagonal-representation}).
+Under the primitive-recursive map
+$\Theta(n)=\ulcorner\alpha(\bar n)\urcorner$, a recursive separator $R$
+of the provable and refutable sentence codes would pull back to a
+recursive separator $C=\Theta^{-1}(R)$ of the two diagonal domains.
+Let $s_C:\N\to\N+\N$ send $n$ to the second copy of $n$ if $n\in C$
+and to the first otherwise. Since $s_C$ is total recursive, an index
+for it gives a partial morphism of $S_{\PA}$ with standard
+interpretation $s_C$. Corollary~\ref{cor:separator} rules out this lift.
+Hence the two sets of sentence codes are recursively inseparable
+(Corollary~\ref{cor:arithmetic}). The other two applications use
 computation uniform in the binary representations of a Miller sequence
 and cosheaves on a three-point space.
+
+Each theory determines a recursion category over its theorem object.
+An extension of theories induces a fully faithful restriction functor
+between the corresponding completions. On the underlying categories
+this functor is both left and right adjoint to pullback.
 
 Palomar entry \texttt{PALOMAR-2026-11-22-000009}, version~3,
 registers three selected declarations. Appendix~\ref{app:reading-lean-proofs}
