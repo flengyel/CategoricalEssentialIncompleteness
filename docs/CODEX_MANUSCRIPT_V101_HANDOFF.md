@@ -1,0 +1,5 @@
+# Manuscript v101
+
+The preface now spells out how Corollary 8.4 uses the numerical coding of Lemma 8.1 to pull back a recursive separator and how its conditional lifts for the comparison in Corollary 3.2. It states that the two adjunctions of Theorem 5.2 hold on the underlying categories. The 1,891-character abstract, the numbered statements and their Lean declarations agree with v100. [Preface](../manuscript/latex/preface.tex) · [Arithmetic proof](../manuscript/latex/sections/08-essential-incompleteness-of-arithmetic.tex#L260-L293) · [Theorem 5.2](../manuscript/latex/sections/04-theory-extensions.tex#L133-L164)
+
+Use the v101 edition commit for the WSL2 replay, both independent whole-paper readings, and a fresh full Comparator preflight before Palomar intake. The last recorded whole-paper replay and both readings concern v94. Appendix E and the preface cite the registered v3 entry. [Correspondence](../FORMALIZATION_STATUS_V101.md) · [WSL2 instructions](CODEX_WSL2_CEI_V101_LEAN_HANDOFF.md) · [Edition PDF](../manuscript/logical_consequence_and_essential_incompleteness_v101.pdf) · [LaTeX source](../manuscript/logical_consequence_v101_source.zip)

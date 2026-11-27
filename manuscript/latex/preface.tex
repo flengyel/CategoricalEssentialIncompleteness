@@ -31,20 +31,29 @@ undecidability \cite[Theorem~2, pp.~390--391]{Shoenfield}. Conversely,
 a separator gives a Boolean valuation whose true sentences form a
 complete consistent extension. Each theory determines a recursion
 category over its theorem object. An extension of theories induces a
-fully faithful functor between the corresponding completions, both left
-and right adjoint to pullback.
+fully faithful restriction functor between the corresponding completions.
+On the underlying categories this functor is both left and right adjoint
+to pullback.
 
 In particular, the pullback argument of
 Corollary~\ref{cor:domain-incompleteness} gives a categorical form of
 Smullyan's conclusion \cite[Chapter~III, Theorem~23(b)]{Smullyan}.
 If a theory admits such an assignment on an inseparable pair, the
 theorem and refutation subobjects of every consistent extension are
-inseparable. In arithmetic, Corollary~\ref{cor:arithmetic} applies
-the comparison theorem to the standard interpretation of $S_{\PA}$
-in sets and partial functions. It follows that in every consistent
-computably enumerable extension of Peano arithmetic the sets of
-numerical codes of provable and refutable sentences are recursively
-inseparable. The other two applications use
+inseparable. Corollary~\ref{cor:arithmetic} uses the same pullback on
+numerical codes. For a fixed arithmetic formula $\alpha(x)$, the
+primitive-recursive map $n\mapsto\ulcorner\alpha(\bar n)\urcorner$
+sends the two standard diagonal domains into the codes of provable
+and refutable sentences, respectively, of every consistent computably
+enumerable extension of Peano arithmetic
+(Lemma~\ref{lem:arithmetic-diagonal-representation}).
+A recursive separator of the two sets of codes would pull back to a
+recursive separator of the diagonal domains. An index for the
+conditional deciding membership in this inverse image gives a partial
+morphism of $S_{\PA}$ whose standard interpretation in sets and partial
+functions is that conditional. The comparison theorem excludes such a
+lifted separator (Corollary~\ref{cor:separator}). Hence the two sets
+of sentence codes are recursively inseparable. The other two applications use
 computation uniform in the binary representations of a Miller sequence
 and cosheaves on a three-point space.
 
