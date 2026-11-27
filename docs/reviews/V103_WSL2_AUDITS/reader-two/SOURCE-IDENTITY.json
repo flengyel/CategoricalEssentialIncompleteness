@@ -1,0 +1,272 @@
+{
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "prior_source_commit": "b5db36ed4dd2f2b5bfe48f746ff167a95a8a7182",
+  "changed_lean_sources": {
+    "Lean/CEIPalomar/CalculusDefinitions.lean": {
+      "old_sha256": "4e4e333352031f55597b1dc9474bbf40561cc849b71778f87a46d43a7aa2d76b",
+      "current_sha256": "9a428f02a0a3ee7f2a60672d69bc22d0b3c2a082fcda8f3cb55127d5066493f5",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "aff3a7034f6ae21f808c678a7e713f79acc05ccd72443e3cef47730d76f01e0b",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CEIPalomar/Challenge.lean": {
+      "old_sha256": "422fa953ff598edf2fe21a2450b81e0808b7ff8c8aa936cd865c574671f41423",
+      "current_sha256": "e82888615f8e064fa9f3fc86a80ed69d96e5780857140ceee1ecedba48a62ef4",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "e84e523ce052ba1b8b13dff30f50d2649cc1de4ae6f66a67149d1cd5644193ee",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CEIPalomar/ManuscriptChecks.lean": {
+      "old_sha256": "7b417c75fa487e6cb22afb3bbda4f9a8021406fe37c2ce04ae285c481d0acd9c",
+      "current_sha256": "74186a32ac681be99231445ee1af185fb723e46aa4de0f2ac6e1e96df2f9d9e3",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "a19e11890b3d79502363458742b092fa900f1291f6985a42696875790c28db75",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CEIPalomar/Solution.lean": {
+      "old_sha256": "3e2ed05061b608306fb524100f431ba706ad5cd211f3f912b8937a7bbf97dc05",
+      "current_sha256": "2d92fd5b19fff12c0d970c00c95117ba2b22191f77fc9a1217c2b75d960d916f",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "bb43c0f0b3591e9601452c67cea4e34f25d5cb685e93d8ee9deb77e1518feb72",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ArithmeticSignedGeneration.lean": {
+      "old_sha256": "610cd382e55897af60ecc046e2b2d8d2a3755e087b4ee96e88516fe4b923c91d",
+      "current_sha256": "e63525ea24e8fe624f3a73360dff497046cce8ee6d18dbb4fe375ebb30ff7175",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "52acdbb2df7b48e4d5901bcbdbbea3a4d15a60dd6b196036fba522800ce9d177",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46CanonicalDiagramSyntaxChecks.lean": {
+      "old_sha256": "6bbc32d90d391e88b6c510b101431653426f0238741bca760e323d1980d393ca",
+      "current_sha256": "4bcb03ed62f774ed352053ff01dd2ef36eae676d7945f4489182c0c6e7d9df23",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "092ec2582308bb90921738a331595eda0ace5cf63744fcaa7271dfee69b4b5b4",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ForkCategoricalSyntax.lean": {
+      "old_sha256": "170e462b5d1b07d2f1306460a202f8e016836708f13d7d4340e731d2e7f9f95c",
+      "current_sha256": "6057952ea584ffc43c9242212ce09ad9558f06dbbbadffe27b78aec6dbfc2799",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "53e5955944ef4f2625a34e83764a4e778042a0259c68d43d4fd70959b33020ee",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46ForkFormulaParameterChange.lean": {
+      "old_sha256": "a3a3fd30ecaf61c563c4fc33a8e82bdc741f6f53bb6b54a25708df2854a2803f",
+      "current_sha256": "8f465e767a84ee527effaf3a8629bf1ae25cb49af8a03ff16c994459a4a3898d",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "d9e7dcc1be471f796efa43194966ee989dd9102f660a0c4fb97de2979ca02f99",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeduction.lean": {
+      "old_sha256": "2e77a92ce288b06822ae2c45063816036894fefc45e4957bde48a1d18957bc89",
+      "current_sha256": "daf17fd11c1940be0b329d99a118f8f8ce3035758f149dfdf002bb7773aefbb2",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "ac01f0b0d49a95dfad8accf8ce2aba49ab3307eb3ee3ca51092346542727b8a1",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46MillerParameterizedDeductionChecks.lean": {
+      "old_sha256": "5fceff3b1708e09f2f8114021a4161d6c7855d1dd1832b71f6b48845e1170687",
+      "current_sha256": "be779248d184e21f15afab1153dc1f27dbb6e295a71128bdc526944152c87bbe",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "c76cd507fe056756d1a8f607232081701f55140c7101f73e59bfdb785e5bb1c2",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryBooleanValuation.lean": {
+      "old_sha256": "5e21010a22fd638a3dfe7cabf499c4a868a90565b379450a1d9047a5bdb3bfa8",
+      "current_sha256": "cfbfd767e96d3f891968f735b99eaaafb0da7202489bd64b761d125b4f0d498a",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "f572241a8ae7a72d7fbfb7148c868e0b3e68bc70aacfc1cd6f470f8c2f15d7cb",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryFormulaSubstitution.lean": {
+      "old_sha256": "cbf0ce8bf5357fd475bdecf53cca55b39afdd5d3b67ddca419595f0c6f8c210f",
+      "current_sha256": "c291f43d034ae5ff68e9bc2f8080d94693403dfb8f00ee943e5909fe58d4ea87",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "7dbdf1abad6a771587b54447da98711c0cf1b1b1b32ac5dbad352cc32cf0b314",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryInterpretedSubstitution.lean": {
+      "old_sha256": "90ffa19a8a0bfdd22418d94e4887bdc5d2e636bfdce87cb3806c02774df26c4b",
+      "current_sha256": "8da56d3f0ad926da0adb7581a706724c0a46e52f5b9f9dc9a9f768e6285bf439",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "e90b67e652e1bd92034026db3987d67862ca8455454382db45e52d5b0dafb76e",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalDistribution.lean": {
+      "old_sha256": "1727924958aafdb6997a2c900cd85e5e59a17bbe56ed8abe6733ec0617cdc841",
+      "current_sha256": "bea9fda102a1db4688f806e1edd953d1c8edd7fb72fb270d8a20a0170a489224",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "a3e0dbceb752a6413421adeeac9df3b6f4d287be40d223f7b6fbc5b72fa33ebd",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalDistributionChecks.lean": {
+      "old_sha256": "e515be447452cfb104a30808c52e65c277e408f592ac4b090da701fe3c2c5ad7",
+      "current_sha256": "9737ee7915175d251a76104ca0203a1f410aeab389884262c82b41ef2ed8ebec",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "70ba53971b428152588bc2f88005527458785ff29bc98395789ec23d0be2b109",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalEquality.lean": {
+      "old_sha256": "bf25ea9916934396badd2f85878eca3b2bdf2e802f27e3ddccec011bf2933a5d",
+      "current_sha256": "170ca1420fe48033a1351f1cbbb0f658a4bb2577c1935f48d9a89a99d6c72333",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "5896c4436121e289dd4f0f17c9ac1c63d3cf174455a51ff618f6dc056ac11f71",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalEqualityChecks.lean": {
+      "old_sha256": "abc0e8fb29f18c656d563a7643a60692f79b8bde8a2e6f5a59b315a8cde8a173",
+      "current_sha256": "cce4b28fa343c0cf278891e5547f963bc0b05f5417f1bdc80796cf92a65f8f57",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "cc440763f3ce0ac9b6523cfb94600caebfd151386fb706a86edfbc0194c7fc64",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInstantiation.lean": {
+      "old_sha256": "ff0c6ee7c1dba50af3b5c8272d506e9b9286fac3e806a8557e8bb17f0b504402",
+      "current_sha256": "476388fd6a8d83666738272ddee4e84184304222d0269a3f5cb8f6411a33daaa",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "f1616007a05886efe0c130445f78831efe4defa2fe94122e82d39149640b1186",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInstantiationChecks.lean": {
+      "old_sha256": "5d86c4a8b2953003352300738cc60844b660267499681407b47a464c723e610a",
+      "current_sha256": "e014e4ae6cbb4f98479eee8f384fc39e16b5418bcd74d9961b3c7dca55d6a1f0",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "e74dc1db1d652666e74022725e6395ccbe14367f3389819aac2a42c8d6994897",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInterpretation.lean": {
+      "old_sha256": "0b2e2603deafbeba07302be602d03ef2bdaec74fadb56c696df49692aecf85d2",
+      "current_sha256": "03a96e31694305f3bbba1ec5d6b2b15e23b3c831bbd262d36eccb6a28763e707",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "7b6eaf6cdf30b3ca449f629a48209d81781e1d44cea0f1a2b0a908dfe27b6bbe",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalInterpretationChecks.lean": {
+      "old_sha256": "3099d423f3f11e8150b2eda015e15a32940c2e8bec9d9af3699fbe5fc983536c",
+      "current_sha256": "f8f045701680d416a935327c140eca8309866dc3c03353665b7d6b2409ab5fb3",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "a82e0be1dfdabdfdce2cb7ae890b04e5041ef769b3acc7b8fa600519f2512119",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryLogicalPoint.lean": {
+      "old_sha256": "4e194ff03f5f9598d9de375720601f96486226dba4ce72b30cebf31e91287afd",
+      "current_sha256": "5f95f055599118cbb8262d0c8d0e738392a66b979357c1429876a1fd72ad5bbb",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "63cf50c8906eac56f782e937ea43dc3fa5264d634ebb613bf6a55142352f8a61",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryPresentationAdjunction.lean": {
+      "old_sha256": "6aed6b11521164760b0d7f5da19e8039688e6c7c6a153eb53c4dd0239b39fff8",
+      "current_sha256": "83809fdd8fced9fe1ac918b2de6af56b6ae3d9caf39379afaac3a200c8b7ad90",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "a86323c05b379083f1cd8bb7837be75f9b86189c8a0b69a10afd8653d5ce290c",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryPropositionalErasure.lean": {
+      "old_sha256": "1406e237e7225ef11a1faaca8acec260571e4b7d35bc4f6aaaca0cd1f41c9e52",
+      "current_sha256": "4fbd49cb408072495899ce1d9044334edfb349054c60a99ddb4d1643469e48fd",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "36e20c902f2b39f261993327f405c77c9068175d1e4d1fe8101f29ed7ab46514",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySubstitutionCapture.lean": {
+      "old_sha256": "397661ac4263453254277119ace0e9876b5a42aaa3af0d97bdf8d739312075f7",
+      "current_sha256": "f8d0a1694a4da3e8b6e557226d75ec2fe7dfdc3a75089f6dcb999eaa7ade4ef7",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "80e1ffa4aa6dfd7278a03815b427286efa114e0df06cf598727f450cb191ac36",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxAlgebra.lean": {
+      "old_sha256": "3591e6429d695a328c19d1c0b7ddcc69ec6a8a6dc4ffa068070beaf70515d9e5",
+      "current_sha256": "2a0026ba72038cb4b378e512e391452e72d16e9b7b049fdc152848ec4257c185",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "678cc393dac2683ab2fb858c461b3a2da7c3cbeec369d77300686ff367ba498e",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxAlgebraHom.lean": {
+      "old_sha256": "1b4cc4c08902a19f58c288f5988886c4ad610af47dfba60130e7e7bf84026b60",
+      "current_sha256": "3c5435ff0ad551b2843e830e9c0401a20153a9820f2b8c2cdaf37e8df40a3d36",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "e62e6d14a67f3473c04e6042062c345f863ef2bf7cf03730703066cb467c4c85",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxInterpretation.lean": {
+      "old_sha256": "ef087cebdf3d202728bb5102290af8d7e24eab6188fd9743ee7aef4dc9fa5e58",
+      "current_sha256": "9bef1b2949b3a3014c44c76ad5aa8edfc3c15fca5862824eb6e96c38d3547769",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "df9d0784ed4262e6bdd23b5be40759240cd84cc196551b37690d7868a56ab11d",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxOccurrences.lean": {
+      "old_sha256": "69467a659b0e70ce7b856d96b1d29b7cfb84e6b531bdcdcb710ae0469d1d6ce2",
+      "current_sha256": "c5878f8780e1f0d2421f51c10cf9e687cb59703d859652ed84fdce4d7f357100",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "7d1a5e7c109968e2cb386eb284b8dd336dfb80e715ab638a0e2be05c1214220e",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxParameterConstructors.lean": {
+      "old_sha256": "b2415c44465eb7569403045080c053a92ccabda16d02e79d5872b33b5340febe",
+      "current_sha256": "d97544f56cf1f2a1ebda1c225d6cb1973061b4c24be6fe995cb9502319c7b113",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "edf96688637a690cdc7e8e2c81d2e85d28034ec85d9a4b5faad731da613d60b6",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullarySyntaxTerms.lean": {
+      "old_sha256": "7fdeee3fea990eaccd1f3e545d78ad40fa288011b27130c0c30920f251c2d61d",
+      "current_sha256": "ad21d0fab452de8f2238c123774327885c1af644107c37db9ae74f1d8e53b38d",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "c17e250d38a33eaace2d11e51a49bf3b67bb984f46618952a0ef7492da73c08d",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46NullaryTermSubstitution.lean": {
+      "old_sha256": "38a4fd5079dd04b246fd705937c73c255533a5a4f80e1f2e443fbb88909d00c6",
+      "current_sha256": "b657e93390f48a679cb644edf56ed5c6d569b22003c8e7cd527943edb29a30ae",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "a3918a4c6652bef7af7887170d8f7f37fbd72847081600edbe1b377ab27214a6",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedFiniteFormulaValuationChecks.lean": {
+      "old_sha256": "6f3aaf95fca05c3b779914f5080f771c7f9a43e2df3f9e3a41e738d13a555dd4",
+      "current_sha256": "fb6010ce4fa27924c1d410d82ff638e12d91dec877f52b58c5c3bd802721f0bd",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "abb023cdfedd35956eb99343fb1001de78d685f2af3d998e7e528dc5b0808c2f",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SignedFirstOrderGeneration.lean": {
+      "old_sha256": "1c73f7c10fa158b4c58439adc253dd0b7b9c41c379288c63c3d01ac2ea155e89",
+      "current_sha256": "954df2b3c37c81220ce7425b9de6c1ec3202d84d01a956ad31ca3c5580922e2c",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "f882af6cf9b9d71b551cadd38d238fa4a5dae5acced530a07e64a5fc3e64436e",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    },
+    "Lean/CategoricalEssentialIncompleteness/V46SyntacticNullaryPresentations.lean": {
+      "old_sha256": "8068366381957a0a66b1bd0ddf935c78dca99367aac7bd66fd25d98c8d7518c7",
+      "current_sha256": "c81a5676d57fbbee09e6aeca2f6fb9fda0222ef88aefe441cc8bed29e787b821",
+      "same_after_comment_and_whitespace_removal": true,
+      "current_normalized_source_sha256": "0d836083a9f05f840b2419da664d2ef4b2874ec2d401eef9a0e80cd0096a4d00",
+      "same_when_comments_removed_preserving_quoted_strings": true
+    }
+  },
+  "other_changed_lean_paths": [
+    "Lean/formalization.yaml"
+  ],
+  "pinned_lean_inputs": {
+    "Lean/lean-toolchain": [
+      "acc704ffe6eefbbe8ec09452a276202748aac923",
+      "acc704ffe6eefbbe8ec09452a276202748aac923"
+    ],
+    "Lean/lake-manifest.json": [
+      "489f82649891d939c7e7652afb5f5f703d73a118",
+      "489f82649891d939c7e7652afb5f5f703d73a118"
+    ],
+    "Lean/lakefile.toml": [
+      "fd4e154f9eb48e0efeed04d1b4426bd7bba9532f",
+      "fd4e154f9eb48e0efeed04d1b4426bd7bba9532f"
+    ],
+    "Lean/comparator.json": [
+      "cdaad9fd6c3cb4c12d8c7b0780a8df2260674ba1",
+      "cdaad9fd6c3cb4c12d8c7b0780a8df2260674ba1"
+    ]
+  }
+}

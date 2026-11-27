@@ -1,0 +1,25 @@
+{
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "scope": "Independent second-reader findings and completed supplemental Lean evidence, frozen before comparison with the first report and before the full WSL2 receipt.",
+  "frozen_utc": "2026-11-27T03:03:19.855808+00:00",
+  "files": {
+    "READING.md": "e71649e9f8b147ae37d124c9800db4ff03879441c8dda5a1deae583ea0d733db",
+    "READING-PASSAGES.tsv": "7f901c2d3734542a966c1ad0b84775de0a01212d93db282622ee28cb5bddead9",
+    "READING.sha256": "563e9243f03805954879e6874a2e2d13f56fea78a6035fab43e189f8e4fa8d92",
+    "FORMAL-COVERAGE.json.gz": "de9052c94d0ddb5e64aefaa6d5a3b9c92727ffeb0ad7f90531e721523f75c261",
+    "SOURCES.json": "3e10e12e92f74b1dcaec731bc83bd626433986eb55097b9bff9dfe1824ae6b72",
+    "PROOF-INPUTS.md": "0ef2b5d50151317397f3a8feb896e211ef91e1bb64706d0d1e0b962cd365d2ce",
+    "SOURCE-IDENTITY.json": "5719ef95760f199dfd85e62ae4345c499f0d7f5e1b29d2e6eb618b6fc426cdc4",
+    "PRINT-AND-LINKS.json": "202b09e0b7e91b06af98f85247af9e86574394d9384c732c714b99ab4f019c3c",
+    "INDEPENDENT-DRAFT.md": "ed0bacf0c2480ec1d7a4069db19c57a3b24334fcf63ff4fa1d0e2c89018590b9",
+    "INDEPENDENT-DRAFT-SEAL.json": "51949d60b0f5b1e7f95b0003f436b1b11aaacd9d589e51163a8e87f7b660b6be",
+    "EDITION-ASSERTIONS.tsv": "84706844d34a18b5be97255603a7dae8331e1cfc8ed3bd88d8406cb0529e5440",
+    "Applications.lean.txt": "2a5a0c123eacda842598b9e9e6d1733c65163b710a213749284a17812f6298ec",
+    "CategoryApplications.lean.txt": "6117f98fae2d5c0c8737a494aea0669780521c3355ce1042b6df0ed10d79373b",
+    "SignedCompleteness.lean.txt": "a545f5dca8c8d626a9f62c6e4a09bbd1479c6263ecd127196ec8251b22c98324",
+    "Applications.log": "767f58a855339f7b5ac58f65a49f63f654e5dcb3530ee7a22c78ae8aa3ff1ef1",
+    "SUPPLEMENTAL-COMMANDS.json.gz": "39730b0ddf30ac21e5079f38beb28e7425e655616690e9b0b688da7669d3474e",
+    "APPLICATION-RECEIPT.json": "14e579c4035e098fb27ade532c7feafe3bdc2951a64a0ac840f1d57b79670c85",
+    "INDEPENDENT-FINDINGS.md": "c0b72437341c9374bbdb40e06d6009ecd2e482d1df9d9f60c5d8869844d859ae"
+  }
+}

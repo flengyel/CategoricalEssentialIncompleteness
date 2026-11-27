@@ -1,0 +1,50 @@
+{
+  "commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "start": "2026-11-27T02:52:44.141882+00:00",
+  "end": "2026-11-27T02:52:58.124917+00:00",
+  "cwd": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+  "runtime_source": "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-reader-one/publish/ReadingChecks.lean",
+  "archived_source": "ReadingChecks.lean.txt",
+  "source_sha256": "852aa91200d93aa6230e22d162020484af302df7af72bf397da2e56e9fc6596d",
+  "environment": {
+    "LEAN_NUM_THREADS": "1"
+  },
+  "command": [
+    "flock",
+    "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+    "/home/flengyel/.elan/bin/lake",
+    "env",
+    "lean",
+    "--memory=2048",
+    "-DwarningAsError=true",
+    "--root=/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-reader-one/publish",
+    "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-reader-one/publish/ReadingChecks.lean"
+  ],
+  "exit": 0,
+  "output": "'CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatedInitial' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatorAssignment' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.halfExpansions' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.noFixedSeparator' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+  "declarations": {
+    "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatedInitial": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatorAssignment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.halfExpansions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.noFixedSeparator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "stdout_log": "READING_CHECKS.log",
+  "stdout_sha256": "7dcfb3fbecc5ec34cf6b098bb9fe89001808517a0dfcf5f3bc801e1b94448f29",
+  "exit_meaning": "The strict supplemental invocation typechecked all four specializations. The archived source reproduces the input bytes exactly. To run elsewhere, copy it to ReadingChecks.lean and update the two absolute workspace paths."
+}

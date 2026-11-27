@@ -1,0 +1,187 @@
+===== CategoryApplications =====
+'ReaderTwo.initialAssignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReaderTwo.generated_isGLB' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+===== JaniczakApplications =====
+'ReaderTwo.enumerableSpectrumTheory' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReaderTwo.enumerableGeneratedSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+===== SignedCompleteness =====
+'ReaderTwo.SignedCompleteness.full_signing_theorems' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReaderTwo.SignedCompleteness.complete_consistent_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+===== QueriesArithmeticRepresentation =====
+CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise : FFL.FirstOrder.ArithmeticTheory →
+  (ℕ → Prop) → FFL.FirstOrder.ArithmeticSemisentence 1 → Prop
+'CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise' depends on axioms: [propext, Quot.sound]
+CategoricalEssentialIncompleteness.ArithmeticRepresentation.consistent_not_both : ∀
+  (T : FFL.FirstOrder.ArithmeticTheory) [FFL.Entailment.Consistent T] (φ : FFL.FirstOrder.ArithmeticSentence),
+  ¬(T ⊢ φ ∧ T ⊢ ∼φ)
+'CategoricalEssentialIncompleteness.ArithmeticRepresentation.consistent_not_both' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+===== QueriesDisjointJoins =====
+@CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq : ∀ {C : Type u_3}
+  [inst : CategoryTheory.Category.{u_1, u_3} C] [inst_1 : CategoryTheory.RestrictionCategory C]
+  [inst_2 : CategoryTheory.Limits.HasZeroMorphisms C]
+  [inst_3 : CategoricalEssentialIncompleteness.LocalConnectedness.RestrictionZero C]
+  [inst_4 : CategoryTheory.CoprodStruct C] [inst_5 : CategoryTheory.HasCoproducts C]
+  [inst_6 : CategoricalEssentialIncompleteness.LocalConnectedness.BinaryJoins C] {A : Type u_4}
+  [inst_7 : CategoryTheory.Category.{u_2, u_4} A] [inst_8 : CategoryTheory.RestrictionCategory A]
+  [inst_9 : CategoryTheory.Limits.HasZeroMorphisms A]
+  [inst_10 : CategoricalEssentialIncompleteness.LocalConnectedness.RestrictionZero A]
+  [inst_11 : CategoricalEssentialIncompleteness.LocalConnectedness.BinaryJoins A]
+  [inst_12 : CategoryTheory.CoprodStruct A] [inst_13 : CategoryTheory.HasCoproducts A]
+  [inst_14 : CategoricalEssentialIncompleteness.LocalConnectedness.RestrictionCoproducts A]
+  [inst_15 : CategoricalEssentialIncompleteness.LocalConnectedness.Ranges C]
+  [inst_16 : CategoricalEssentialIncompleteness.LocalConnectedness.Ranges A]
+  [inst_17 : CategoricalEssentialIncompleteness.LocalConnectedness.Splits A]
+  [inst_18 : CategoricalEssentialIncompleteness.LocalConnectedness.JoinInverse A]
+  [inst_19 : CategoricalEssentialIncompleteness.LocalConnectedness.LocallyConnected A]
+  [inst_20 : CategoricalEssentialIncompleteness.LocalConnectedness.WeakChoice A]
+  (F : CategoricalEssentialIncompleteness.LocalConnectedness.RangeFunctor C A) {X : C}
+  (c c' : CategoricalEssentialIncompleteness.LocalConnectedness.Idem X)
+  (hc : CategoricalEssentialIncompleteness.LocalConnectedness.Complementary c c')
+  (ℓ : X ⟶ CategoryTheory.CoprodStruct.coprod X X),
+  CategoryTheory.CategoryStruct.comp c.hom ℓ =
+      CategoryTheory.CategoryStruct.comp c.hom (CategoryTheory.CoprodStruct.i1 X X) →
+    CategoryTheory.CategoryStruct.comp c'.hom ℓ =
+        CategoryTheory.CategoryStruct.comp c'.hom (CategoryTheory.CoprodStruct.i0 X X) →
+      F.toFunctor.map ℓ =
+        CategoryTheory.CategoryStruct.comp
+          (CategoricalEssentialIncompleteness.LocalConnectedness.switchSection (F.mapIdem c) (F.mapIdem c') ⋯)
+          (F.comparison X X).hom
+'CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq' depends on axioms: [propext, Classical.choice]
+
+===== QueriesForkProofPresentation =====
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0_consistency : ∀
+  (a b :
+    CategoricalEssentialIncompleteness.LocalConnectedness.Idem
+      CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.V),
+  a ⊓ b = ⊥ →
+    CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0 a b ⊓
+        CategoricalEssentialIncompleteness.LocalConnectedness.Idem.pull
+          CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.nu
+          (CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0 a b) =
+      ⊥
+'CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0_consistency' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+===== QueriesForkSyntaxInitialAlgebra =====
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.polynomialTotal : CategoryTheory.Functor
+  CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Total
+  CategoricalEssentialIncompleteness.LocalConnectedness.EffectiveFork.Total
+'CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.polynomialTotal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra : CategoryTheory.Endofunctor.Algebra
+  CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.polynomialTotal
+'CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+===== QueriesOracleRestrictedInclusion =====
+CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.rangeFunctor : (S : Set ℕ) →
+  CategoricalEssentialIncompleteness.LocalConnectedness.RangeFunctor
+    (CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted S)
+    CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctions.Pfn
+'CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.rangeFunctor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+===== QueriesPartialFunctionFamilies =====
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instBinaryJoinsFamily : {I : Type u_2} →
+  CategoricalEssentialIncompleteness.LocalConnectedness.BinaryJoins
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instBinaryJoinsFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instCoprodStructFamily : {I : Type u_2} →
+  CategoryTheory.CoprodStruct (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instCoprodStructFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasCoproductsFamily : ∀
+  {I : Type u_2},
+  CategoryTheory.HasCoproducts (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasCoproductsFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasZeroMorphismsFamily : {I :
+    Type u_2} →
+  CategoryTheory.Limits.HasZeroMorphisms
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasZeroMorphismsFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instJoinInverseFamily : ∀ {I : Type u_2},
+  CategoricalEssentialIncompleteness.LocalConnectedness.JoinInverse
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instJoinInverseFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instLocallyConnectedFamily : ∀
+  {I : Type u_2},
+  CategoricalEssentialIncompleteness.LocalConnectedness.LocallyConnected
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instLocallyConnectedFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRangesFamily : {I : Type u_2} →
+  CategoricalEssentialIncompleteness.LocalConnectedness.Ranges
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRangesFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionCategoryFamily : {I :
+    Type u_2} →
+  CategoryTheory.RestrictionCategory
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionCategoryFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionZeroFamily : ∀
+  {I : Type u_2},
+  CategoricalEssentialIncompleteness.LocalConnectedness.RestrictionZero
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionZeroFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instSplitsFamily : ∀ {I : Type u_2},
+  CategoricalEssentialIncompleteness.LocalConnectedness.Splits
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instSplitsFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instWeakChoiceFamily : ∀ {I : Type u_2},
+  CategoricalEssentialIncompleteness.LocalConnectedness.WeakChoice
+    (CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.Family I)
+'CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instWeakChoiceFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+===== QueriesV46UltrapowerComparisonChecks =====
+@CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.graph_value : ∀ {I : Type} (U : Ultrafilter I)
+  {C D : CategoricalEssentialIncompleteness.V46.SyntacticPredicates.Carrier}
+  (f : CategoricalEssentialIncompleteness.V46.SyntacticPredicates.GraphMorphism 𝗣𝗔 C D)
+  (x : I → CategoricalEssentialIncompleteness.V46.PredicateInterpretation.Obj ℕ C),
+  (FFL.FirstOrder.Semiformula.Evalb
+      ![↑fun i => ↑(x i),
+        ↑fun i => ↑(CategoricalEssentialIncompleteness.V46.PredicateInterpretation.value 𝗣𝗔 ℕ f (x i))])
+    ↑f.graph
+'CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.graph_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.pa_axiom : ∀ {I : Type} (U : Ultrafilter I),
+  ∀ φ ∈ 𝗣𝗔, (CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Model U)↓[ℒₒᵣ] ⊧ φ
+'CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.pa_axiom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.unary_predicate : ∀ {I : Type} (U : Ultrafilter I)
+  (C : CategoricalEssentialIncompleteness.V46.SyntacticPredicates.Carrier) (x : I → ℕ),
+  (FFL.FirstOrder.Semiformula.Evalb ![↑x]) ↑C ↔ ∀ᶠ (i : I) in ↑U, (FFL.FirstOrder.Semiformula.Evalb ![x i]) ↑C
+'CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.unary_predicate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

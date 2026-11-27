@@ -1,0 +1,1091 @@
+{
+  "commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "references": {
+    "Aczel": {
+      "role": "Analogy",
+      "judgment": "For a finitary rule set, membership in the least closed set is equivalent to having a finite proof. Aczel also describes the algebra of proof trees. The categorical image argument in A.5 supplies its own proof.",
+      "url": "https://lawrencecpaulson.github.io/papers/Aczel-Inductive-Defs.pdf",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 372,
+          "cited_location": "Propositions 1.1.4 and 1.4.5"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "mem_closure_iff_finiteTree",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46FinitaryInductiveDefinitions.lean#L105"
+        },
+        {
+          "declaration": "least_theorem_subobject",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46Inference.lean#L247"
+        }
+      ]
+    },
+    "BauerHanson": {
+      "role": "Input and comparison",
+      "judgment": "Their binary coding in (2.2), Definition 2.1 and Theorem 2.2 give one sequence with the value forced at the given program index by every representing oracle. Theorem 6.4 concerns countability of the internal Dedekind reals in their topos. In §9 the fixed-index property supplies a coordinate at the program constructed from a diagonal input. The project also proves the existence of the sequence.",
+      "url": "https://arxiv.org/html/2404.01256v3",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 212,
+          "cited_location": "Theorem~6.4"
+        },
+        {
+          "tex": "sections/04-miller-sequences.tex",
+          "line": 35,
+          "cited_location": "pp.~6--9, (2.2), Definition~2.1 and Theorem~2.2"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "IsMiller",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerRealComputation.lean#L30"
+        },
+        {
+          "declaration": "exists_isMiller",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean#L125"
+        },
+        {
+          "declaration": "printed_cut_reduction",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean#L83"
+        }
+      ]
+    },
+    "Bernardi": {
+      "role": "Comparison",
+      "judgment": "For a precomplete equivalence on the numbers, a total representative extends any partial computation modulo the equivalence. Distinct equivalence classes are recursively inseparable. The abstract dominical formulation uses sections for its stronger consequences for disjoint unions of classes. The arithmetic argument in §8 uses the even/odd diagonal pair.",
+      "url": "https://doi.org/10.1090/S0002-9939-1986-0848889-9",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 343,
+          "cited_location": "Sections~2--3, pp.~125--128"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 336,
+          "cited_location": "p.~126, Proposition~2(b)"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 339,
+          "cited_location": "p.~125"
+        }
+      ]
+    },
+    "CockettLists": {
+      "role": "Terminology",
+      "judgment": "In a finitely complete category with the specified coproducts, recursive objects preserved by change of parameter give parameterized lists. A.1 explicitly assumes the slice initiality of its syntax and lists.",
+      "url": "https://doi.org/10.1016/0022-4049(90)90121-W",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 14,
+          "cited_location": "Lemma 2.2 and Definition 2.3"
+        }
+      ]
+    },
+    "CockettComputability": {
+      "role": "Comparison",
+      "judgment": "The discrete computation argument uses distinct disjoint points and compatible joins to get an inseparable pair. The separate theorem about a program-order provability predicate gives a nontrivial restriction idempotent on the terminal object. Those assumptions do not enter the abstract logical construction.",
+      "url": "https://cspages.ucalgary.ca/~robin/talks/estonia-winter-2010/estonia-notes.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 357,
+          "cited_location": "Sections~5.3 and 7.1, Theorem~7.8"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 421,
+          "cited_location": "Section~7.5, Theorem~7.14"
+        }
+      ]
+    },
+    "CGHRangeI": {
+      "role": "Input and terminology",
+      "judgment": "Range functors preserve restriction and range. An M-stable factorization gives the range of a partial map through the output's factorization, and a split range category recovers the factorization on totals. A.7 proves the two order inequalities for the image with the specified partial inverse.",
+      "url": "https://www.tac.mta.ca/tac/volumes/26/17/26-17abs.html",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 566,
+          "cited_location": "Theorem 4.7"
+        },
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 572,
+          "cited_location": "Theorem 4.5 and Section 4.11"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 145,
+          "cited_location": "p.~424"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "factorizationSystem",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46SplitRangeFactorization.lean#L130"
+        },
+        {
+          "declaration": "range_regularImage",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean#L119"
+        },
+        {
+          "declaration": "parRanges",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46PartialMapRanges.lean#L133"
+        }
+      ]
+    },
+    "CGHRangeII": {
+      "role": "Comparison with the general factorization theorem",
+      "judgment": "In a finitely complete category a stable factorization gives the regular epi–mono factorization when its right class is all monics. This comparison follows the direct proof of A.7. There regularity and the specified partial inverse are given hypotheses.",
+      "url": "https://www.tac.mta.ca/tac/volumes/26/18/26-18abs.html",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 568,
+          "cited_location": "Section 3.16 and Proposition 3.17"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "regularEpi_mono_iff",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46StableFactorization.lean#L96"
+        },
+        {
+          "declaration": "range_regularImage",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46RegularImage.lean#L119"
+        }
+      ]
+    },
+    "CockettHofstra": {
+      "role": "Input and comparison",
+      "judgment": "Recognition uses a cartesian restriction category, a Turing morphism and total retracts of the Turing object. The framework also treats slicing and split categories of computable powers of a combinatorially complete applicative structure. The specializers in §§5, 9 and B are exhibited at every parameter object.",
+      "url": "https://www.di.ens.fr/users/longo/files/Cockett-TuringCateg.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 417,
+          "cited_location": "Theorem~4.9"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 210,
+          "cited_location": "Theorem 3.4"
+        },
+        {
+          "tex": "sections/04-theory-extensions.tex",
+          "line": 72,
+          "cited_location": "Section 3.5"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "turingObject_iff",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46TuringObjectRecognition.lean#L22"
+        }
+      ]
+    },
+    "CockettLack": {
+      "role": "Definitions and input",
+      "judgment": "R1–R4 govern restriction. Splitting ordinary idempotents inherits restriction by inserting the source idempotent. Splitting the restriction idempotents identifies a split category of partial maps relative to its distinguished class of monics. §5 requires all total monos to have partial inverses before using all monomorphisms.",
+      "url": "https://cspages.ucalgary.ca/~robin/FMCS/FMCS_06/RestrictionsI.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 304,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 8,
+          "cited_location": "Section~2.1.1"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 82,
+          "cited_location": "Section~2.3.3"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 96,
+          "cited_location": "Section~2.3.3, Proposition~2.26"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 102,
+          "cited_location": "Section~3"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46KaroubiRestriction.lean"
+        },
+        {
+          "declaration": "functor_isEquivalence",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46PartialSliceEquivalence.lean#L121"
+        }
+      ]
+    },
+    "CockettLackIII": {
+      "role": "Terminology",
+      "judgment": "Proposition 4.5 equates binary restriction products of a restriction category with the p-category near-product structure. The parameter equations use restriction products.",
+      "url": "https://arxiv.org/pdf/math/0610500",
+      "occurrences": [
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 128,
+          "cited_location": "Proposition 4.5"
+        }
+      ]
+    },
+    "CurryCosheaves": {
+      "role": "Definition",
+      "judgment": "The precosheaf is covariant and satisfies the colimit relation on open covers. Appendix B uses the cover of the whole three-point space to obtain the pushout of a fork. Limits at the whole space require a separate check.",
+      "url": "https://doi.org/10.1016/j.jpaa.2017.06.001",
+      "occurrences": [
+        {
+          "tex": "sections/09-three-point-space.tex",
+          "line": 4,
+          "cited_location": "Definition~2.6"
+        }
+      ]
+    },
+    "DPH": {
+      "role": "Historical and mathematical comparison",
+      "judgment": "The 1987 authors specify the intended algebraization, the arithmetic implication (3) on p. 595 and the future work on p. 629. Theorem 8.15 assumes their Section 8 setting with sections and compatible coproducts. Its diagonal calculation also needs a nonzero identity to yield a contradiction. The manuscript singles out the latter point and provides both a restricted comparison and a trivial counterexample. The sentence about subsequent publication is Lengyel’s historical account.",
+      "url": "https://doi.org/10.2307/2274352",
+      "occurrences": [
+        {
+          "tex": "preface.tex",
+          "line": 7,
+          "cited_location": "Theorem~8.15 and p.~629"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 8,
+          "cited_location": "pp.~594--596"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 313,
+          "cited_location": "p.~621"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 318,
+          "cited_location": "p.~612, Definitions~6.1--6.2"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 322,
+          "cited_location": "p.~615, Definition~7.1"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 326,
+          "cited_location": "p.~601, Definition~4.1"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 331,
+          "cited_location": "pp.~625--626, Theorem~8.15"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 396,
+          "cited_location": "pp.~595--596"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 240,
+          "cited_location": "p.~595, (3)"
+        }
+      ],
+      "publication_history_check": {
+        "source": "https://api.openalex.org/works?filter=author.id:A5074071182,author.id:A5103640497&per_page=100",
+        "returned_joint_works": [
+          [
+            1987,
+            "Dominical categories: recursion theory without elements"
+          ]
+        ],
+        "scope": "Bibliographic cross-check of the two author identities on the original article. The account of unpublished intentions remains the manuscript author’s historical account."
+      }
+    },
+    "DPM": {
+      "role": "Historical and mathematical comparison",
+      "judgment": "For a consistent c.e. extension of PA the unprimed construction uses globally provable graph equivalence, and Corollary 4.4 proves its lack of local connectedness. The separate primed construction uses another relation. Appendix D permits arbitrary consistent extensions of PA for its family of models, not for this attributed corollary.",
+      "url": "https://doi.org/10.2307/2274707",
+      "occurrences": [
+        {
+          "tex": "appendices/d-faithful-family.tex",
+          "line": 64,
+          "cited_location": "Corollary 4.4, pp.~657--658"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 169,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 310,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 348,
+          "cited_location": "p.~646"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 9,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 59,
+          "cited_location": "p.~644"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 153,
+          "cited_location": "p.~646"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 182,
+          "cited_location": null
+        }
+      ]
+    },
+    "FPT": {
+      "role": "Comparison",
+      "judgment": "The syntax algebra is formulated in variable contexts with substitution algebra and initial semantics. A.2–A.3 construct a partial named-variable substitution in a specified total category.",
+      "url": "https://doi.org/10.1109/LICS.1999.782615",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 130,
+          "cited_location": "Sections 2--4"
+        }
+      ]
+    },
+    "GabbayPitts": {
+      "role": "Comparison",
+      "judgment": "Equivariance and freshness in FM sets govern the structural recursion on terms modulo alpha equivalence. The proof of Corollary 6.7 retains the original child together with its recursive value. A.3 uses that recursion technique for actual named formulas with explicit capture tests.",
+      "url": "https://doi.org/10.1007/s001650200016",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 131,
+          "cited_location": "Section 6"
+        },
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 244,
+          "cited_location": "proof of Corollary 6.7"
+        }
+      ]
+    },
+    "GoguenBurstall": {
+      "role": "Comparison",
+      "judgment": "Parchments use initial-algebra syntax indexed by signature. Institutions impose invariance of satisfaction along signature morphisms. The first-order adjunction of §4 acts on signed pairs and consistent internal theories.",
+      "url": "https://doi.org/10.1007/3-540-17162-2_131",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 124,
+          "cited_location": "Section 4"
+        }
+      ]
+    },
+    "GTWW": {
+      "role": "Comparison",
+      "judgment": "For many-sorted operations, the initial term algebra has a unique homomorphism to any semantic algebra. The additional work in Appendix A supplies the named-variable, slice and admissibility structure.",
+      "url": "https://doi.org/10.1145/321992.321997",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 123,
+          "cited_location": "Section 2"
+        }
+      ]
+    },
+    "HP": {
+      "role": "Rule specification",
+      "judgment": "§0.10 prints the three displayed classical implicational and negation schemes. The source gives its own quantification rule and treats equality separately. A.6 proceeds to state precisely which rules it takes from the next source.",
+      "url": "https://assets.cambridge.org/97811071/68411/excerpt/9781107168411_excerpt.pdf",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 457,
+          "cited_location": "0.10, p.~7"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "generated_firstOrder_theory",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46FirstOrderTheory.lean#L28"
+        },
+        {
+          "declaration": "valid_logicalAxioms",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedPlainLogicalValidity.lean#L36"
+        }
+      ]
+    },
+    "Heller": {
+      "role": "History and terminology",
+      "judgment": "The opening page asks for examples different in spirit from numerical recursion. The paper defines prodominical categories, ranges and the framed recursion-category construction under the relevant iteration and local-connectedness conditions. Appendix B supplies an independent diagram evaluator and frame.",
+      "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/an-existence-theorem-for-recursion-categories/5A24053486108F86AF005D88D63D40E8",
+      "occurrences": [
+        {
+          "tex": "preface.tex",
+          "line": 59,
+          "cited_location": "p.~1252"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 302,
+          "cited_location": "Section~5"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 305,
+          "cited_location": "Sections~8--9"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 18,
+          "cited_location": "Section~5"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 61,
+          "cited_location": "Section~6"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 198,
+          "cited_location": "Section 9"
+        },
+        {
+          "tex": "sections/09-three-point-space.tex",
+          "line": 113,
+          "cited_location": "Section 3"
+        }
+      ]
+    },
+    "HH": {
+      "role": "Rule specification",
+      "judgment": "Sections 2.11–2.12 give universal instantiation under free-for substitution, the quantification distribution condition and generalization. Section 3.1 gives reflexivity and substitution of equals. A.6 explicitly instantiates terms as parameters and includes both admissibility conditions.",
+      "url": "https://www.appstate.edu/~hirstjl/primer/hirst.pdf",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 470,
+          "cited_location": "Sections 2.11--2.12"
+        },
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 472,
+          "cited_location": "Section 3.1"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "generated_firstOrder_theory",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46FirstOrderTheory.lean#L28"
+        },
+        {
+          "declaration": "valid_logicalAxioms",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedPlainLogicalValidity.lean#L36"
+        }
+      ]
+    },
+    "Katsumata": {
+      "role": "Comparison",
+      "judgment": "Example 1(3) presents first-order logic over a typed signature as a binding signature. It illustrates a treatment of binding, beside the chosen named-variable presentation.",
+      "url": "https://doi.org/10.1007/978-3-540-27836-8_70",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 132,
+          "cited_location": "Section 2, Example 1(3)"
+        }
+      ]
+    },
+    "Keisler": {
+      "role": "Input",
+      "judgment": "For a proper ultrafilter over an index set, satisfaction of a first-order formula in the ultraproduct agrees with membership in the ultrafilter of the satisfying coordinates. The numeral and graph formulas in Theorem 7.8 are instances. Later proof objects may have nonstandard lengths.",
+      "url": "https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/06-interpretation-in-models.tex",
+          "line": 401,
+          "cited_location": "Theorem~3.1"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "eval_representative",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticUltrapower.lean#L72"
+        },
+        {
+          "declaration": "sentence_iff",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticUltrapower.lean#L175"
+        },
+        {
+          "declaration": "canonical_ultrapower_soundness",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedPlainUltrapowerSoundness.lean#L106"
+        }
+      ]
+    },
+    "KirstPeters": {
+      "role": "Comparison",
+      "judgment": "Under the synthetic enumeration hypothesis, separation of the two diagonal semidecidable sets by a formal system yields an independent sentence in each consistent enumerable extension to which the reduction applies. Their argument concerns stage partial functions and formal systems. Corollary 4.3 proves a statement about subobjects.",
+      "url": "https://doi.org/10.4230/LIPIcs.CSL.2023.30",
+      "occurrences": [
+        {
+          "tex": "sections/03a-internal-theories.tex",
+          "line": 245,
+          "cited_location": "Definitions~7, 17 and Theorem~20"
+        }
+      ]
+    },
+    "Lengyel2004": {
+      "role": "History",
+      "judgment": "The extension of Heller’s existence theorem uses an iteration functor preserving the indicated structure. The cited corrections state the faithfulness and corrected finite-iteration argument. The cosheaf construction gives Turing factorization directly.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168007203000605",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 307,
+          "cited_location": null
+        }
+      ]
+    },
+    "Lengyel2006": {
+      "role": "Comparison and counterexample",
+      "judgment": "Definition of a range functor includes coproducts and zeros. Theorem 4.1 assumes a locally connected split range target with sections. Its argument invokes a target section as a source program. Proposition C.1 constructs the missing-lift obstruction despite the original conditions.",
+      "url": "https://academicworks.cuny.edu/gc_cs_tr/277/",
+      "occurrences": [
+        {
+          "tex": "appendices/c-section-lifting.tex",
+          "line": 14,
+          "cited_location": "Theorem~4.1"
+        },
+        {
+          "tex": "appendices/c-section-lifting.tex",
+          "line": 236,
+          "cited_location": "p.~11"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 352,
+          "cited_location": "Theorem~4.1"
+        },
+        {
+          "tex": "sections/02-categorical-preliminaries.tex",
+          "line": 146,
+          "cited_location": "p.~7"
+        }
+      ]
+    },
+    "Corrections": {
+      "role": "Historical qualification",
+      "judgment": "The cited v10 manuscript revisits Theorems 21 and 26 and the faithful iteration functor to a separated category, with explicit treatment of nontermination. It qualifies the comparison with the 2004 existence theorems.",
+      "url": "https://github.com/flengyel/errata/blob/5555e4fa1da7b8e3a0836dd1fbf1ca385cacd03b/lengyel2004/lengyel2004_repairs_v10.tex",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 307,
+          "cited_location": null
+        }
+      ]
+    },
+    "Composition": {
+      "role": "Comparison",
+      "judgment": "For a consistent c.e. extension of PA, Corollary 2 gives failure of the proposed operation on the pointwise provability quotient. Section 6 uses provable universal equality of graphs for its unprimed quotient.",
+      "url": "https://arxiv.org/abs/2609.25556",
+      "occurrences": [
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 184,
+          "cited_location": "Corollary 2"
+        }
+      ]
+    },
+    "MaiettiLists": {
+      "role": "Comparison and terminology",
+      "judgment": "Parameterized lists are defined by initiality under parameters. The definition of a list-arithmetic pretopos adds stable effective quotients, and Theorem 6.3 identifies both initial syntactic categories with the indicated arithmetic universe. Appendix A assumes its required syntax and list algebras explicitly.",
+      "url": "https://www.math.unipd.it/~maietti/papers/jartacrev.pdf",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 16,
+          "cited_location": "Definition 2.4 and the following paragraph"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 402,
+          "cited_location": "Definition~2.6 and Theorem~6.3"
+        }
+      ]
+    },
+    "Miller2004": {
+      "role": "Input",
+      "judgment": "The fixed point in the proof of Theorem 6.3 gives the value of coordinate e when e computes one real on all names. The following paragraph distinguishes this from merely having the computed real somewhere in the range. Lemma 9.3 uses that very coordinate after specialization.",
+      "url": "https://people.math.wisc.edu/~jsmiller8/Papers/continuous.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 210,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/04-miller-sequences.tex",
+          "line": 33,
+          "cited_location": "proof of Theorem~6.3 and the following paragraph"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "kakutani_fixed_point",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerFixedPointKakutani.lean#L210"
+        },
+        {
+          "declaration": "exists_isMiller",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerFixedPoint.lean#L125"
+        },
+        {
+          "declaration": "printed_cut_reduction",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerCutReduction.lean#L83"
+        }
+      ]
+    },
+    "Montagna": {
+      "role": "Comparison and construction",
+      "judgment": "The unprimed PA category uses T-provable universal equality at PA and the Gödel coding of partial recursive morphisms. The functional graph search at p. 109 provides partial identities. Remark 3.1 concerns effective inseparability. The note on coding and the comparison question refer to this PA construction. Section 6 develops the uniform quotient separately.",
+      "url": "https://projecteuclid.org/journals/notre-dame-journal-of-formal-logic/volume-30/issue-1/Pathologies-in-two-syntactic-categories-of-partial-maps/10.1305/ndjfl/1093634998.full",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 169,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 172,
+          "cited_location": "pp.~114--115"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 346,
+          "cited_location": "pp.~105--108 and Remark~3.1"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 9,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 39,
+          "cited_location": "p.~115, Note~1"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 94,
+          "cited_location": "p.~108; p.~115, Note~1"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 150,
+          "cited_location": "p.~105"
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 182,
+          "cited_location": null
+        },
+        {
+          "tex": "sections/05-syntactic-recursion-category.tex",
+          "line": 198,
+          "cited_location": "p.~109, equation~$(*)$"
+        }
+      ]
+    },
+    "MPV": {
+      "role": "Comparison",
+      "judgment": "Janiczak’s theory has equivalence classes, enough large classes, and at most one finite class of each positive size. The sentence for index n expresses existence of a class of size n+1. Boolean combinations generate the language modulo the base theory. Choosing all signs gives a complete consistent extension. An enumeration of its theorems decides the chosen signs by searching for either sign. This last inference is made in the manuscript.",
+      "url": "https://arxiv.org/pdf/2207.08174",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 372,
+          "cited_location": "Section~4.4, p.~1169"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 374,
+          "cited_location": "Section~4.1 and Theorem~4.3, pp.~1163--1164"
+        }
+      ]
+    },
+    "PourEl": {
+      "role": "Historical attribution",
+      "judgment": "The author introduced effective extensibility for presentations of formal theories. Section 8.3 specifies which quantification over indices and consistent c.e. additional axioms it needs.",
+      "url": "https://doi.org/10.2307/2270052",
+      "occurrences": [
+        {
+          "tex": "sections/08b-uniform-independent-sentences.tex",
+          "line": 6,
+          "cited_location": null
+        }
+      ]
+    },
+    "PourEl1970": {
+      "role": "Definition and comparison",
+      "judgment": "Definitions 5, 6(b) and 8 distinguish a fixed effective presentation, the uniform recursive function and the existence of an effectively extensible presentation for the theory. The mathematical use returns one independent sentence at every consistent extension index of the fixed PA presentation.",
+      "url": "https://www.jstor.org/stable/42970364",
+      "occurrences": [
+        {
+          "tex": "sections/08b-uniform-independent-sentences.tex",
+          "line": 12,
+          "cited_location": "pp.~272, 274, Definitions~5, 6(b) and~8"
+        }
+      ]
+    },
+    "Ramesh2023": {
+      "role": "Comparison",
+      "judgment": "Definition 2.7 requires representability of C in a pre-introspective theory. The functorial explanation immediately below yields the homomorphism of each model into an internal model of the same theory. Theorem 4.19 assigns a point ω of any global presheaf P to a morphism g from □P to P, with g composed with □ω equal to ω. The cited examples include the PA syntax, the initial arithmetic universe and the presheaf models for guarded recursion and GL. The PA proof here proceeds by numerical diagonal specialization.",
+      "url": "https://escholarship.org/uc/item/3mn0c475",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 409,
+          "cited_location": "Definition~2.7, p.~48, and Theorem~4.19, p.~82"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 413,
+          "cited_location": "Sections~2.4 and 6.4"
+        }
+      ]
+    },
+    "RobinsonRosolini": {
+      "role": "Comparison",
+      "judgment": "The PA example on pp. 108–109 identifies morphisms with provably functional Sigma-one formulas modulo provable graph equivalence. Lemma 6.3 presents the total splitting using a subobject predicate as source and target and proves its equivalence explicitly.",
+      "url": "https://doi.org/10.1016/0890-5401(88)90034-X",
+      "occurrences": [
+        {
+          "tex": "sections/05a-internal-syntax.tex",
+          "line": 6,
+          "cited_location": "pp.~108--109"
+        }
+      ]
+    },
+    "RosoliniThesis": {
+      "role": "History",
+      "judgment": "The definitions of p-categories and their comparison with dominical categories supply the older categorical language. The paper uses the restriction-category axioms for its own constructions.",
+      "url": "https://www.researchgate.net/profile/Giuseppe-Rosolini/publication/35103849_Continuity_and_effectiveness_in_topoi/links/57ef75b908ae886b89741067/Continuity-and-effectiveness-in-topoi.pdf",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 301,
+          "cited_location": null
+        }
+      ]
+    },
+    "Rosolini": {
+      "role": "History",
+      "judgment": "The representation theorems give the p-category account for partial maps and dominical examples under additional assumptions. The passage in §1 identifies the direction of generalization.",
+      "url": "https://doi.org/10.1007/BFb0081368",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 301,
+          "cited_location": null
+        }
+      ]
+    },
+    "Shoenfield": {
+      "role": "Historical comparison",
+      "judgment": "Theorem 1 produces two recursively inseparable c.e. sets of the degree of a given nonrecursive c.e. set. In Theorem 2 the sentence at n asserts a class of size n. Testing its provability in a decidable extension would separate the two sets by inverse image. No theorem about internal extension objects is attributed to this argument.",
+      "url": "https://doi.org/10.2307/2964013",
+      "occurrences": [
+        {
+          "tex": "preface.tex",
+          "line": 33,
+          "cited_location": "Theorem~2, pp.~390--391"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 361,
+          "cited_location": "Theorem~1, p.~389"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 366,
+          "cited_location": "Theorem~2, pp.~390--391"
+        }
+      ]
+    },
+    "Smullyan": {
+      "role": "Historical comparison",
+      "judgment": "Chapter III §5 defines strong separation, including definability as separation from the complement. The corollary to Theorem 21 concerns formal consistent extensions under definability of all recursive sets. Theorem 22 concerns the two nuclei of a representation system. Theorem 23(b) needs consistency and strong separation of one recursively inseparable pair. The manuscript distinguishes the arithmetic statement of Di Paola–Heller.",
+      "url": "https://www.jstor.org/stable/j.ctt1b7x7ww.6",
+      "occurrences": [
+        {
+          "tex": "preface.tex",
+          "line": 39,
+          "cited_location": "Chapter~III, Theorem~23(b)"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 7,
+          "cited_location": "Chapter~III, \\S5, p.~48"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 13,
+          "cited_location": "Chapter~III, \\S8, p.~52, and \\S16, Theorem~22, p.~59"
+        },
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 16,
+          "cited_location": "Chapter~III, \\S17, Theorem~23(b), pp.~59--60"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 246,
+          "cited_location": "Chapter~III, \\S16, Theorem~22, p.~59"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 249,
+          "cited_location": "Chapter~III, \\S15, corollary to Theorem~21, p.~58"
+        },
+        {
+          "tex": "sections/08-essential-incompleteness-of-arithmetic.tex",
+          "line": 254,
+          "cited_location": "Chapter~III, \\S17, Theorem~23(b), pp.~59--60"
+        }
+      ]
+    },
+    "vanDijkGO": {
+      "role": "Comparison",
+      "judgment": "Theorem 5.19 derives triviality from completeness of an arithmetic-universe object in the stated universe, and 5.20 derives nonminimality of the internal contradiction subobject from consistency of the initial object. The construction has its own internal-model and arithmetic-universe hypotheses.",
+      "url": "https://arxiv.org/abs/2004.10482",
+      "occurrences": [
+        {
+          "tex": "sections/01-introduction.tex",
+          "line": 399,
+          "cited_location": "Theorems~5.19--5.20"
+        }
+      ]
+    },
+    "VisserEHU": {
+      "role": "Comparison",
+      "judgment": "Lemma 23 uses a recursive reduction into the provable/refutable sentences of a theory to obtain essential undecidability. Corollary 4.3 uses the same inverse-image reasoning in the restriction-idempotent order.",
+      "url": "https://doi.org/10.1007/s00153-024-00911-y",
+      "occurrences": [
+        {
+          "tex": "sections/03a-internal-theories.tex",
+          "line": 241,
+          "cited_location": "Lemma~23"
+        }
+      ]
+    },
+    "Voutsadakis": {
+      "role": "Comparison",
+      "judgment": "Theorem 7 is an adjunction between hierarchies of sets and a category of relational signatures with formula-valued interpretations preserving the variable context. It provides an antecedent for assigning formulas to generators, with distinct categories and hypotheses.",
+      "url": "https://doi.org/10.1007/s00153-004-0266-7",
+      "occurrences": [
+        {
+          "tex": "sections/03b-internal-adjunctions.tex",
+          "line": 383,
+          "cited_location": "Theorem~7"
+        }
+      ]
+    },
+    "Wissmann": {
+      "role": "General theorem with the concrete application proved directly",
+      "judgment": "Lemma 3.6 lifts an orthogonal factorization system to algebras if the endofunctor preserves the left class. In Lemma A.5 the rule endofunctor preserves regular epimorphisms, so the middle object in the conclusion’s regular image obtains algebra structure. The direct proof uses the diagonal filler.",
+      "url": "https://doi.org/10.46298/lmcs-18(3:31)2022",
+      "occurrences": [
+        {
+          "tex": "appendices/a-syntax-and-theories.tex",
+          "line": 417,
+          "cited_location": "Lemma 3.6"
+        }
+      ],
+      "formal_statement_or_application": [
+        {
+          "declaration": "existsUnique_middle_algebra",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46AlgebraFactorization.lean#L56"
+        },
+        {
+          "declaration": "inference_preservesRegularEpis",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46Inference.lean#L229"
+        },
+        {
+          "declaration": "least_theorem_subobject",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46Inference.lean#L247"
+        }
+      ]
+    }
+  },
+  "other_mathematical_inputs": [
+    {
+      "input": "Arithmetized program evaluation and parameterization",
+      "required_inference": "PA proves functionality and the two universal evaluation, specialization and composition equations at the chosen number and product codings. These construct the category of §6 and the index of the reversed partial conditional in §8.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "arithmetized_evaluation",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46UniformTraceArithmetic.lean#L23"
+        },
+        {
+          "declaration": "compose_production_PA",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46UniformTraceComparison.lean#L75"
+        },
+        {
+          "declaration": "exists_reversedConditional_index",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityConditional.lean#L72"
+        }
+      ]
+    },
+    {
+      "input": "Search for a Sigma-one graph",
+      "required_inference": "At a functional graph the search program has the promised values. At an arbitrary predicate it has the existence domain and only chooses valid outputs. The latter suffices in the models where the two proof predicates are disjoint.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "functional_search",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean#L114"
+        },
+        {
+          "declaration": "search_domain",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean#L87"
+        },
+        {
+          "declaration": "search_uniform_of_functional",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46SyntacticSearch.lean#L94"
+        }
+      ]
+    },
+    {
+      "input": "First-order completeness for the named Hilbert calculus",
+      "required_inference": "The consistency of a c.e. named presentation deriving PA gives a semantic model of all its axioms. Model soundness then acts separately on the standard model of codes and each ultrapower. The construction retains the arbitrary name assignments.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "axiomsAdmissible_PA",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticNamedAxiomComparison.lean#L62"
+        },
+        {
+          "declaration": "source_consistent_of_extendsPA",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedGammaModel.lean#L29"
+        },
+        {
+          "declaration": "exists_model_all_assignments",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedGammaModel.lean#L37"
+        },
+        {
+          "declaration": "total_undecidable_family",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticInternalComparison.lean#L198"
+        },
+        {
+          "declaration": "exists_source_model",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedGammaModelSource.lean#L87"
+        }
+      ]
+    },
+    {
+      "input": "Countable countermodels and transport",
+      "required_inference": "A countable Skolem hull of a model of PA is infinite by the distinct numerals. A bijection carries its elementary arithmetic structure to ℕ. Completeness then detects every unprovable universal graph equality by a coordinate of the model-family interpretation.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "exists_nat_elementary",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/CountableArithmeticModels.lean#L73"
+        },
+        {
+          "declaration": "complete_nat_models",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/CountableArithmeticModels.lean#L102"
+        },
+        {
+          "declaration": "family_faithful",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/SyntacticFamily.lean#L43"
+        }
+      ]
+    },
+    {
+      "input": "Effective compactness of binary names",
+      "required_inference": "A name allows uniform enumeration of the complement of its fiber. A finite cover of Cantor space recognizes positive unanimity of an indexed oracle output. This supplies the Turing morphism for computations defined uniformly on all names.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "printed_unanimity",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MillerUnanimity.lean#L83"
+        }
+      ]
+    },
+    {
+      "input": "Oracle program parameterization",
+      "required_inference": "Specialization retains the extra parameter in both the oracle-semidecidable domain and the ordinary partial recursive extension of the value. Total source values are ordinary recursive and cannot decide the separator in Appendix C.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "machineTau_isTuring",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46MachineOracleTuring.lean#L71"
+        },
+        {
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/OracleDiagonalSeparator.lean"
+        },
+        {
+          "declaration": "missing_lift",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/OracleMissingLift.lean#L243"
+        }
+      ]
+    },
+    {
+      "input": "Fixed numeral substitution",
+      "required_inference": "The program computing Θ uses primitive recursion for a fixed formula and fixed-variable replacement, and constructs closed numerals. The same word is the standard value of the total sentence morphism. The proof of 8.4 only requires the resulting inverse image to be recursive.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "value_primrec",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedArithmeticUnarySubstitution.lean#L90"
+        },
+        {
+          "declaration": "theta_standard",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticDiagonalRepresentation.lean#L40"
+        },
+        {
+          "declaration": "computable_preimage",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46ArithmeticSentenceInseparabilityCore.lean#L91"
+        }
+      ]
+    },
+    {
+      "input": "Arbitrary computably enumerable axiom sets",
+      "required_inference": "Every c.e. set of words has a Sigma-one predicate with exactly those standard solutions. Restricting to sentences and identifying finite derivations matches the arbitrary c.e. presentations of Corollary 8.4.",
+      "formal_statement_or_application": [
+        {
+          "declaration": "axiomPredicate",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean#L116"
+        },
+        {
+          "declaration": "axiomPredicate_eval",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean#L119"
+        },
+        {
+          "declaration": "theoremSet_iff_finiteDerivation",
+          "url": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/Lean/CategoricalEssentialIncompleteness/V46NamedTheoryObservationsProofs.lean#L111"
+        }
+      ]
+    }
+  ]
+}

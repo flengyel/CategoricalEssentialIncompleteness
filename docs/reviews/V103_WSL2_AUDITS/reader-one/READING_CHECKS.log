@@ -1,0 +1,12 @@
+'CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatedInitial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne.generatorAssignment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.halfExpansions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CategoricalEssentialIncompleteness.V46.Miller.ReaderOne.noFixedSeparator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

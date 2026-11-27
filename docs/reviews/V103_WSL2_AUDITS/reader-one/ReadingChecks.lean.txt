@@ -1,0 +1,99 @@
+module
+
+public import Mathlib.CategoryTheory.Adjunction.Comma
+public import CategoricalEssentialIncompleteness.V46MillerCutApplications
+public import CategoricalEssentialIncompleteness.V46SignedFirstOrderAdjunction
+
+/-! Specializations of the free first-order adjunction and the Miller cut theorem. -/
+
+@[expose] public section
+
+open CategoryTheory CategoryTheory.Limits
+
+universe v u
+
+namespace CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne
+
+variable {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
+variable {V : D} (F : NullaryPresentations V)
+
+noncomputable def generatedInitial (A : Pair F) :
+    IsInitial (StructuredArrow.mk ((adjunction F).unit.app A) :
+      StructuredArrow A (extraction F)) :=
+  mkInitialOfLeftAdjoint (extraction F) (adjunction F) A
+
+theorem generatorAssignment (A : Pair F) :
+    ((adjunction F).unit.app A).arrow = NullaryInterpretation.atomSentence (F.syntaxData A.carrier) :=
+  unit_arrow F A
+
+#print axioms generatedInitial
+#print axioms generatorAssignment
+
+end CategoricalEssentialIncompleteness.V46.SignedFirstOrder.ReaderOne
+
+namespace CategoricalEssentialIncompleteness.V46.Miller.ReaderOne
+
+open _root_.CategoricalEssentialIncompleteness.LocalConnectedness
+attribute [local instance 2000] Uniform.nativeRestriction
+
+def headAndTail (head tail : Fin 2) : Bits
+  | 0 => head
+  | _ + 1 => tail
+
+/-- The two binary expansions used in the proof of Corollary 9.4 agree at one half. -/
+theorem halfExpansions :
+    Real.ofDigits (headAndTail 0 1) = 1 / 2 ∧
+      Real.ofDigits (headAndTail 1 0) = 1 / 2 ∧ headAndTail 0 1 0 ≠ headAndTail 1 0 0 := by
+  have ones : Real.ofDigits (fun _ => (1 : Fin 2)) = 1 := Real.ofDigits_const_last_eq_one 1
+  have zeros : Real.ofDigits (fun _ => (0 : Fin 2)) = 0 := by simp [Real.ofDigits, Real.ofDigitsTerm]
+  refine ⟨?_, ?_, by decide⟩
+  · rw [Real.ofDigits_eq_sum_add_ofDigits (headAndTail 0 1) 1]
+    norm_num [headAndTail, Real.ofDigitsTerm, ones]
+  · rw [Real.ofDigits_eq_sum_add_ofDigits (headAndTail 1 0) 1]
+    norm_num [headAndTail, Real.ofDigitsTerm, zeros]
+
+/-- No fixed set separating the cuts admits one decision index valid on every name. -/
+theorem noFixedSeparator (a : Point) (ha : IsMiller a) (S : Set ℕ)
+    (h₀ : CutDigits.lowerCut a ⊆ S) (h₁ : Disjoint S (CutDigits.upperCut a)) :
+    ¬ Uniform.Numerical (Uniform.Family.ofPoint a) (fun n => Part.some (S.indicator (fun _ => 1) n)) := by
+  classical
+  intro h
+  have htest (b : ℕ) : Uniform.Enumerable (Uniform.Family.ofPoint a)
+      (fun n => b ∈ Part.some (S.indicator (fun _ => (1 : ℕ)) n)) :=
+    Uniform.Enumerable.comp (Computable.pair Computable.id (Computable.const b))
+      (Uniform.numerical_graph_enumerable h)
+  have hs : Uniform.Enumerable (Uniform.Family.ofPoint a) (· ∈ S) :=
+    (htest 1).of_eq (by intro n; by_cases hn : n ∈ S <;> simp [hn])
+  have hc : Uniform.Enumerable (Uniform.Family.ofPoint a) (· ∈ Sᶜ) :=
+    (htest 0).of_eq (by intro n; by_cases hn : n ∈ S <;> simp [hn])
+  let c := Uniform.setIdem (Uniform.N (Uniform.Family.ofPoint a)) S hs
+  let d := Uniform.setIdem (Uniform.N (Uniform.Family.ofPoint a)) Sᶜ hc
+  have cs : Uniform.support c = S :=
+    Uniform.support_setIdem (Uniform.N (Uniform.Family.ofPoint a)) S hs
+  have ds : Uniform.support d = Sᶜ :=
+    Uniform.support_setIdem (Uniform.N (Uniform.Family.ofPoint a)) Sᶜ hc
+  apply (Cut.printed_cut_inseparability a ha).no_separator
+  refine ⟨c, d, ⟨?_, ?_⟩, ?_, ?_⟩
+  · apply Uniform.toPfnIdem_injective
+    apply PartialFunctions.support_injective
+    rw [Uniform.toPfnIdem_inf, Uniform.toPfnIdem_bot, PartialFunctions.support_inf,
+      PartialFunctions.support_bot]
+    change S ∩ Sᶜ = ∅
+    exact Set.inter_compl_self S
+  · apply Uniform.toPfnIdem_injective
+    apply PartialFunctions.support_injective
+    rw [Uniform.toPfnIdem_sup, Uniform.toPfnIdem_top, PartialFunctions.support_sup,
+      PartialFunctions.support_top]
+    change S ∪ Sᶜ = Set.univ
+    exact Set.union_compl_self S
+  · apply (Uniform.support_le_iff _ _).mpr
+    rw [CutDigits.lowerIdem_support, cs]
+    exact h₀
+  · apply (Uniform.support_le_iff _ _).mpr
+    rw [CutDigits.upperIdem_support, ds]
+    exact Set.disjoint_left.mp h₁.symm
+
+#print axioms halfExpansions
+#print axioms noFixedSeparator
+
+end CategoricalEssentialIncompleteness.V46.Miller.ReaderOne

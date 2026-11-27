@@ -1,0 +1,399 @@
+{
+  "scope": "Reader-two supplemental applications against the pinned project and dependency objects",
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "lean_options": [
+    "-j1",
+    "--memory=2048",
+    "-DwarningAsError=true"
+  ],
+  "coordinated_shared_lock": true,
+  "recorded_utc": "2026-11-27T03:03:02.150151+00:00",
+  "commands": {
+    "CategoryApplications": {
+      "raw_source": "CategoryApplications.lean.txt",
+      "axioms": {
+        "ReaderTwo.initialAssignment": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ReaderTwo.generated_isGLB": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/CategoryApplications.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "6117f98fae2d5c0c8737a494aea0669780521c3355ce1042b6df0ed10d79373b",
+      "started_utc": "2026-11-27T02:52:23.077239+00:00",
+      "ended_utc": "2026-11-27T02:52:46.821063+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "1d67d9aedcbfb730297fdca53decc5b55f7b8e05009e4b781d84d496b1603174"
+    },
+    "JaniczakApplications": {
+      "raw_source": "Applications.lean.txt",
+      "axioms": {
+        "ReaderTwo.enumerableSpectrumTheory": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ReaderTwo.enumerableGeneratedSpectrum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/JaniczakApplications.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "2a5a0c123eacda842598b9e9e6d1733c65163b710a213749284a17812f6298ec",
+      "started_utc": "2026-11-27T02:54:41.502302+00:00",
+      "ended_utc": "2026-11-27T02:54:55.895071+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "8bb5e1859c713edfa91b8f9348f40e79f23154748599896d48ee517c85ad9f3b"
+    },
+    "SignedCompleteness": {
+      "raw_source": "SignedCompleteness.lean.txt",
+      "axioms": {
+        "ReaderTwo.SignedCompleteness.full_signing_theorems": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ReaderTwo.SignedCompleteness.complete_consistent_extension": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/SignedCompleteness.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "a545f5dca8c8d626a9f62c6e4a09bbd1479c6263ecd127196ec8251b22c98324",
+      "started_utc": "2026-11-27T02:58:49.628489+00:00",
+      "ended_utc": "2026-11-27T03:01:37.870080+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "99584559665a5cd1f187d4bf745e56a521f61c0c1814aeddaaefdd9bee14ab39"
+    },
+    "QueriesArithmeticRepresentation": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.ArithmeticRepresentation.StrongNumeralwise": [
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.ArithmeticRepresentation.consistent_not_both": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesArithmeticRepresentation.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "07e28fc897427386b22e27d1472f183d0becbcb2092048df73cc9810cfb91096",
+      "started_utc": "2026-11-27T02:58:04.138886+00:00",
+      "ended_utc": "2026-11-27T02:58:44.919172+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "00f3b286b416fd45f262b2dbec54aef24d3268b7f5eee336816524cb6e1655a2"
+    },
+    "QueriesDisjointJoins": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.LocalConnectedness.image_switch_eq": [
+          "Classical.choice",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesDisjointJoins.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "43d39c36ebd91c3baa2205cb002d28d60138e07cf8a8e56a4b60b33365a4d282",
+      "started_utc": "2026-11-27T02:58:45.283650+00:00",
+      "ended_utc": "2026-11-27T02:59:25.126469+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "af2e90fa3a2e452d369fca0c9d3be2fa4b96e276a094e2551984ab74c778fc5a"
+    },
+    "QueriesForkProofPresentation": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.t0_consistency": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesForkProofPresentation.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "f70157ec1615627b53e732c0ee22040942a7249b9650914653690c4a66a1eaa7",
+      "started_utc": "2026-11-27T02:59:25.683754+00:00",
+      "ended_utc": "2026-11-27T03:02:04.029897+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "5f4ffb73914988e8f86f054629c9314c6f911627447bb5421929085775b7f525"
+    },
+    "QueriesForkSyntaxInitialAlgebra": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.polynomialTotal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.ForkSyntax.syntaxAlgebra": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesForkSyntaxInitialAlgebra.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "329e7578283eab2b796e6353eaef84c4d4b40b2a0670caffb298ef8f136810df",
+      "started_utc": "2026-11-27T03:02:04.530091+00:00",
+      "ended_utc": "2026-11-27T03:02:19.119007+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "40ccc121407b191d7a434cbde86a8916151ab774e6824dad5daaec48da263a0f"
+    },
+    "QueriesOracleRestrictedInclusion": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.LocalConnectedness.OracleComputation.Restricted.rangeFunctor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesOracleRestrictedInclusion.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "6c7581299474a837344f853f1f1c2a7b9e7b724d17bad250b5a4bd18dd0650a6",
+      "started_utc": "2026-11-27T03:02:19.610778+00:00",
+      "ended_utc": "2026-11-27T03:02:30.583209+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "b1dfb6d7917893f76731689440141c7c971d758cd9e2e9c4c34ea50ac385563d"
+    },
+    "QueriesPartialFunctionFamilies": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instBinaryJoinsFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instCoprodStructFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasCoproductsFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instHasZeroMorphismsFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instJoinInverseFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instLocallyConnectedFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRangesFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionCategoryFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instRestrictionZeroFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instSplitsFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.LocalConnectedness.PartialFunctionFamilies.instWeakChoiceFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesPartialFunctionFamilies.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "869158eb896d8b4b4f614881e8920235a3ae737a1f0db842054c9a26651d306e",
+      "started_utc": "2026-11-27T03:02:30.682817+00:00",
+      "ended_utc": "2026-11-27T03:02:39.557456+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "14fd7034a8c9b92fb82e322e451cc2151aea0fe1bd6669020c7ea2b1e9a77b3e"
+    },
+    "QueriesV46UltrapowerComparisonChecks": {
+      "raw_source": "SUPPLEMENTAL-COMMANDS.json.gz",
+      "axioms": {
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.graph_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.pa_axiom": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "CategoricalEssentialIncompleteness.V46.ArithmeticUltrapower.Checks.unary_predicate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+      "command": [
+        "flock",
+        "/home/flengyel/src/CategoricalEssentialIncompleteness/.codex-work/v103-control/reader-lean.lock",
+        "env",
+        "LEAN_NUM_THREADS=1",
+        "/home/flengyel/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "--memory=2048",
+        "-DwarningAsError=true",
+        "/tmp/v103-reader-two-source/QueriesV46UltrapowerComparisonChecks.lean"
+      ],
+      "working_directory": "/home/flengyel/src/cei-v103-replay-74xurr69/Lean",
+      "source_sha256": "1976a016c5dd15d9bcf2971817200b45ba6bda53cb26a8f26c427050ee747c82",
+      "started_utc": "2026-11-27T03:02:39.691884+00:00",
+      "ended_utc": "2026-11-27T03:02:51.716093+00:00",
+      "exit_code": 0,
+      "stdout_stderr_sha256": "38f17ce5d0e6ebcc52baf2a141235ae65fe9d249bdf88830d062e41654eff76e"
+    }
+  },
+  "source_and_log_payload": "SUPPLEMENTAL-COMMANDS.json.gz",
+  "payload_sha256": "39730b0ddf30ac21e5079f38beb28e7425e655616690e9b0b688da7669d3474e",
+  "aggregate_log_sha256": "767f58a855339f7b5ac58f65a49f63f654e5dcb3530ee7a22c78ae8aa3ff1ef1"
+}

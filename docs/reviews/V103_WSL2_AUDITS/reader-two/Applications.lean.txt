@@ -1,0 +1,111 @@
+import Foundation.FirstOrder.Arithmetic.Bootstrapping.DerivabilityCondition.D1
+import Foundation.FirstOrder.Arithmetic.R0.Representation
+import CategoricalEssentialIncompleteness.V46JaniczakSignedTheoryChecks
+import CategoricalEssentialIncompleteness.V46JaniczakCraig
+
+noncomputable section
+namespace ReaderTwo
+
+open FFL FFL.FirstOrder FFL.Entailment Encodable Janiczak
+
+/-- Godel words of the complete theory of the equivalence structure with spectrum C. -/
+theorem enumerableSpectrumTheory (C : Set ℕ) :
+    REPred (· ∈ FOL.TheoremWords (NativeInput.completeTheory C)) ↔ ComputablePred (· ∈ C) := by
+  classical
+  constructor
+  · intro he
+    let M := canonical C
+    let _ := M.inhabited
+    let _ := FOL.model M
+    let _ := FOL.equality_in_model M
+    have hm : M.Carrier↓[FOL.L] ⊧* NativeInput.completeTheory C := ⟨fun _ h => h⟩
+    have words (p : Janiczak.Formula) : encode (FOL.sentence p) ∈ FOL.TheoremWords (NativeInput.completeTheory C) ↔ M.Valid p := by
+      rw [FOL.theorem_word]
+      have h : NativeInput.completeTheory C ⊢ FOL.sentence p ↔ M.Carrier↓[FOL.L] ⊧ FOL.sentence p :=
+        ⟨fun d => consequence_iff.mp (Theory.Proof.sound d) M.Carrier hm, fun a => by_axm a⟩
+      exact h.trans (FOL.sentence_models p)
+    have computableWord {f : ℕ → Janiczak.Formula} (hf : Formula.Effective f) :
+        Computable (fun i => encode (FOL.sentence (f i))) :=
+      (FOL.Coding.forward_primrec.to_comp.comp hf.to_comp).of_eq (fun i => FOL.Coding.forward_code (f i))
+    have pos := REPred.comp (computableWord Formula.primrec_sizeSentence) he
+    have neg := REPred.comp (computableWord (Formula.Effective.neg Formula.primrec_sizeSentence)) he
+    have size (i : ℕ) (val : ℕ → M.Carrier) : (Formula.sizeSentence i).Holds M.rel val ↔ i ∈ C :=
+      (Formula.holds_sizeSentence M.rel val i).trans (Canonical.spectrum i)
+    obtain ⟨v⟩ := M.hasValuation
+    apply ComputablePred.computable_iff_re_compl_re'.mpr
+    constructor
+    · exact pos.of_eq fun i => (words _).trans ⟨fun h => (size i v).mp (h v), fun h w => (size i w).mpr h⟩
+    · exact neg.of_eq fun i => (words _).trans
+        ⟨fun h hi => h v ((size i v).mpr hi), fun h w hw => h ((size i w).mp hw)⟩
+  · exact fun h => (NativeInput.computable_completeTheory_words h).to_re
+
+
+open FFL.FirstOrder.Arithmetic FFL.FirstOrder.Arithmetic.Bootstrapping
+
+private theorem relational_codes {k c : ℕ} :
+    c ∈ Set.range (encode : FOL.L.Rel k → ℕ) ↔ (k = 2 ∧ c = 0) ∨ (k = 2 ∧ c = 1) := by
+  constructor
+  · rintro ⟨r,rfl⟩
+    cases r with | eq => exact Or.inl ⟨rfl,rfl⟩ | mem => exact Or.inr ⟨rfl,rfl⟩
+  · rintro (⟨rfl,rfl⟩ | ⟨rfl,rfl⟩)
+    · exact ⟨Language.Set.Rel.eq,rfl⟩
+    · exact ⟨Language.Set.Rel.mem,rfl⟩
+
+local instance : FOL.L.LORDefinable where
+  func := .mkSigma “k f. 0 = 1”
+  rel := .mkSigma “k r. (k = 2 ∧ r = 0) ∨ (k = 2 ∧ r = 1)”
+  func_iff {k c} := by
+    constructor
+    · rintro ⟨f,-⟩
+      exact Empty.elim f
+    · simp
+  rel_iff {k c} := by simpa [models_iff] using! @relational_codes k c
+
+/-- The corresponding statement for the deductive closure of the displayed signs themselves. -/
+theorem enumerableGeneratedSpectrum (C : Set ℕ) :
+    REPred (· ∈ FOL.TheoremWords (FOL.theory (Signed C Cᶜ))) ↔ ComputablePred (· ∈ C) := by
+  classical
+  let T := FOL.theory (Signed C Cᶜ)
+  constructor
+  · intro he
+    have modelled : (canonical C).Models (Signed C Cᶜ) :=
+      Canonical.models_signed Set.Subset.rfl disjoint_compl_right
+    have cp {f : ℕ → Janiczak.Formula} (hf : Formula.Effective f) :
+        Computable (fun i => encode (FOL.sentence (f i))) :=
+      (FOL.Coding.forward_primrec.to_comp.comp hf.to_comp).of_eq (fun i => FOL.Coding.forward_code (f i))
+    have pos := REPred.comp (cp Formula.primrec_sizeSentence) he
+    have neg := REPred.comp (cp (Formula.Effective.neg Formula.primrec_sizeSentence)) he
+    have words (p : Janiczak.Formula) : encode (FOL.sentence p) ∈ FOL.TheoremWords T ↔ Consequence (Signed C Cᶜ) p :=
+      (FOL.theorem_word T _).trans (FOL.consequence_iff_provable _ _).symm
+    obtain ⟨v⟩ := (canonical C).hasValuation
+    apply ComputablePred.computable_iff_re_compl_re'.mpr
+    constructor
+    · exact pos.of_eq fun i => (words _).trans
+        ⟨fun h => (SignedTheoryChecks.class_index C i).mp (h _ modelled),
+         fun hi => Consequence.of_mem (Signed.pos hi)⟩
+    · exact neg.of_eq fun i => (words _).trans
+        ⟨fun h hi => h _ modelled v ((SignedTheoryChecks.class_index C i).mpr hi v),
+         fun hi => Consequence.of_mem (Signed.neg hi)⟩
+  · intro hc
+    have hcn : REPred (· ∈ Cᶜ) := hc.not.to_re
+    let _ : T.RE := ⟨((FOL.signed_axiom_words_enumerable hc.to_re hcn).comp Computable.encode).of_eq
+      (fun φ => by simp [T])⟩
+    have hs : REPred (fun w : ℕ => ∃ p : Sentence FOL.L, encode p = w) :=
+      (NativeInput.primrec_validWord.comp ((Primrec.const 0).pair Primrec.id)).computablePred.to_re
+    have hp : REPred (FFL.FirstOrder.Arithmetic.Bootstrapping.Provable T.craig (V := ℕ)) := rePred_iff_sigma1.mpr inferInstance
+    have coded (p : Sentence FOL.L) : FFL.FirstOrder.Arithmetic.Bootstrapping.Provable T.craig (encode p) ↔ T ⊢ p := by
+      rw [← Sentence.quote_eq_encode_nat, provable_iff_provable]
+      exact ⟨fun h => (inferInstance : T.craig ⪯ T).wk h, fun h => (inferInstance : T ⪯ T.craig).wk h⟩
+    apply (hs.and hp).of_eq
+    intro w
+    change (∃ p : Sentence FOL.L, encode p = w) ∧ FFL.FirstOrder.Arithmetic.Bootstrapping.Provable T.craig w ↔ w ∈ FOL.TheoremWords T
+    constructor
+    · rintro ⟨⟨p, rfl⟩, h⟩
+      exact ⟨p, rfl, (coded p).mp h⟩
+    · rintro ⟨p, rfl, h⟩
+      exact ⟨⟨p, rfl⟩, (coded p).mpr h⟩
+
+end ReaderTwo
+
+#print axioms ReaderTwo.enumerableSpectrumTheory
+#print axioms ReaderTwo.enumerableGeneratedSpectrum

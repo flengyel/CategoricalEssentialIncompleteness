@@ -1,0 +1,43 @@
+{
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "manuscript_version": 103,
+  "completed_utc": "2026-11-27T07:51:12.918690+00:00",
+  "all_sections_and_appendices": true,
+  "unresolved_disagreements": 0,
+  "unchecked_passages": 0,
+  "findings": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "first_reader_frozen_verdict": "02eb8b4ea43be71c1c60a048197e23069104743110da111c4bb1c07e8d14bea5",
+  "own_independent_findings_sha256": "c0b72437341c9374bbdb40e06d6009ecd2e482d1df9d9f60c5d8869844d859ae",
+  "official_receipt_sha256": "f8e6a4ed3f58b5eb5d54a781b1493742de5d077159d9b0e5d8fef7156d2f65d3",
+  "report_sha256": "6da42b66a15529df38fd2f2e1e2c7a3dd88f665ae170ea80110ec2838aa98aa8",
+  "evidence_sha256": {
+    "APPLICATION-RECEIPT.json": "14e579c4035e098fb27ade532c7feafe3bdc2951a64a0ac840f1d57b79670c85",
+    "Applications.lean.txt": "2a5a0c123eacda842598b9e9e6d1733c65163b710a213749284a17812f6298ec",
+    "Applications.log": "767f58a855339f7b5ac58f65a49f63f654e5dcb3530ee7a22c78ae8aa3ff1ef1",
+    "CURRENT-AXIOMS.json.gz": "69704fe2d43a92b268a452b9dd8bd3970de86d329322aa1674bfc4701777e717",
+    "CategoryApplications.lean.txt": "6117f98fae2d5c0c8737a494aea0669780521c3355ce1042b6df0ed10d79373b",
+    "EDITION-ASSERTIONS.tsv": "84706844d34a18b5be97255603a7dae8331e1cfc8ed3bd88d8406cb0529e5440",
+    "FORMAL-COVERAGE.json.gz": "de9052c94d0ddb5e64aefaa6d5a3b9c92727ffeb0ad7f90531e721523f75c261",
+    "INDEPENDENT-DRAFT-SEAL.json": "51949d60b0f5b1e7f95b0003f436b1b11aaacd9d589e51163a8e87f7b660b6be",
+    "INDEPENDENT-DRAFT.md": "ed0bacf0c2480ec1d7a4069db19c57a3b24334fcf63ff4fa1d0e2c89018590b9",
+    "INDEPENDENT-FINDINGS-SEAL.json": "dd994b874e72fd4dcc38d0740b3f9599821e28b0cfe48efb1a9cfaa12d0aefaf",
+    "INDEPENDENT-FINDINGS.md": "c0b72437341c9374bbdb40e06d6009ecd2e482d1df9d9f60c5d8869844d859ae",
+    "KERNEL-ATTESTATION.json": "d0930f3f141ace50317a7bb65c95948944606c5218dc47be75dba9f9994bfdd9",
+    "PRINT-AND-LINKS.json": "202b09e0b7e91b06af98f85247af9e86574394d9384c732c714b99ab4f019c3c",
+    "PROOF-INPUTS.md": "0ef2b5d50151317397f3a8feb896e211ef91e1bb64706d0d1e0b962cd365d2ce",
+    "READING-PASSAGES.tsv": "7f901c2d3734542a966c1ad0b84775de0a01212d93db282622ee28cb5bddead9",
+    "READING.md": "e71649e9f8b147ae37d124c9800db4ff03879441c8dda5a1deae583ea0d733db",
+    "READING.sha256": "563e9243f03805954879e6874a2e2d13f56fea78a6035fab43e189f8e4fa8d92",
+    "RECONCILIATION-CHECKS.json.gz": "e75748d996bc9462f400480214aeca13ae048bec2b3b3439cca9ae9f1aa616f3",
+    "RECONCILIATION.json.gz": "e82061c48b5bc683ecfbc049b34610497bce8731b488b42a83ecf480f196ccc6",
+    "SOURCE-IDENTITY.json": "5719ef95760f199dfd85e62ae4345c499f0d7f5e1b29d2e6eb618b6fc426cdc4",
+    "SOURCES.json": "3e10e12e92f74b1dcaec731bc83bd626433986eb55097b9bff9dfe1824ae6b72",
+    "SUPPLEMENTAL-COMMANDS.json.gz": "39730b0ddf30ac21e5079f38beb28e7425e655616690e9b0b688da7669d3474e",
+    "SignedCompleteness.lean.txt": "a545f5dca8c8d626a9f62c6e4a09bbd1479c6263ecd127196ec8251b22c98324"
+  }
+}

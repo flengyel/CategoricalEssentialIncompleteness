@@ -1,0 +1,39 @@
+import Mathlib.CategoryTheory.Adjunction.Comma
+import CategoricalEssentialIncompleteness.V46SignedFirstOrderAdjunction
+
+noncomputable section
+open CategoryTheory CategoryTheory.Limits
+open CategoricalEssentialIncompleteness.V46
+
+namespace ReaderTwo
+
+universe v u
+variable {D : Type u} [Category.{v} D] [Regular D] [FinitaryExtensive D]
+variable {V : D} (F : NullaryPresentations V) (A : SignedFirstOrder.Pair F)
+
+/-- The comma object in Theorem 4.7, together with its atomic assignment. -/
+def initialAssignment :
+    IsInitial (StructuredArrow.mk ((SignedFirstOrder.adjunction F).unit.app A) :
+      StructuredArrow A (SignedFirstOrder.extraction F)) :=
+  CategoryTheory.mkInitialOfLeftAdjoint (SignedFirstOrder.extraction F)
+    (SignedFirstOrder.adjunction F) A
+
+example : ((SignedFirstOrder.adjunction F).unit.app A).arrow =
+    NullaryInterpretation.atomSentence (F.syntaxData A.carrier) :=
+  SignedFirstOrder.unit_arrow F A
+
+/-- The meet mentioned after Theorem 4.7 exists in the indicated subobject order. -/
+theorem generated_isGLB {X : D} (a b : Subobject X) :
+    IsGLB {B : Subobject (F.presentation X).syntaxData.sentenceObject |
+      FirstOrderReflection.generated (F.presentation X).proofs B = B ∧
+        SignedFirstOrder.axioms F a b ≤ B} (SignedFirstOrder.theory F a b).val := by
+  apply IsLeast.isGLB
+  refine ⟨⟨(SignedFirstOrder.theory F a b).property, FirstOrderReflection.extensive _ _⟩, ?_⟩
+  rintro B ⟨hB, h⟩
+  exact (FirstOrderReflection.generated_le_iff (F.presentation X).proofs
+    (F.presentation X).initial (SignedFirstOrder.axioms F a b) ⟨B, hB⟩).mpr h
+
+end ReaderTwo
+
+#print axioms ReaderTwo.initialAssignment
+#print axioms ReaderTwo.generated_isGLB

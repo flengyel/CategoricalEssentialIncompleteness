@@ -1,0 +1,15 @@
+{
+  "stage": "Manuscript reconstruction and source comparison complete. Supplemental elaboration and current kernel receipt pending.",
+  "frozen_utc": "2026-11-27T02:30:23.032749+00:00",
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "files": {
+    "READING.md": "e71649e9f8b147ae37d124c9800db4ff03879441c8dda5a1deae583ea0d733db",
+    "READING-PASSAGES.tsv": "7f901c2d3734542a966c1ad0b84775de0a01212d93db282622ee28cb5bddead9",
+    "FORMAL-COVERAGE.json.gz": "de9052c94d0ddb5e64aefaa6d5a3b9c92727ffeb0ad7f90531e721523f75c261",
+    "SOURCES.json": "3e10e12e92f74b1dcaec731bc83bd626433986eb55097b9bff9dfe1824ae6b72",
+    "PROOF-INPUTS.md": "0ef2b5d50151317397f3a8feb896e211ef91e1bb64706d0d1e0b962cd365d2ce",
+    "SOURCE-IDENTITY.json": "5719ef95760f199dfd85e62ae4345c499f0d7f5e1b29d2e6eb618b6fc426cdc4",
+    "PRINT-AND-LINKS.json": "202b09e0b7e91b06af98f85247af9e86574394d9384c732c714b99ab4f019c3c",
+    "INDEPENDENT-DRAFT.md": "ed0bacf0c2480ec1d7a4069db19c57a3b24334fcf63ff4fa1d0e2c89018590b9"
+  }
+}

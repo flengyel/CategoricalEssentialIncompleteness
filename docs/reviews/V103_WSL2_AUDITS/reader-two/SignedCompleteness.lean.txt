@@ -1,0 +1,298 @@
+import CategoricalEssentialIncompleteness.V46JaniczakSignedTheoryChecks
+import Mathlib.Data.Fintype.EquivFin
+
+noncomputable section
+open Janiczak
+namespace ReaderTwo.SignedCompleteness
+
+/-- Model-theoretic form of the equivalence-relation and class-size axioms. -/
+structure ClassData (C : Set ℕ) (M : Janiczak.Structure) : Prop where
+  equiv : Equivalence M.rel
+  unique : ∀ n a b, Sized M.rel a n → Sized M.rel b n → M.rel a b
+  many : ∀ n, ∃ f : Fin n → M.Carrier,
+    (∀ i j, i < j → ¬M.rel (f i) (f j)) ∧ ∀ i, Large M.rel (f i) n
+  spectrum : ∀ i, (∃ a, Sized M.rel a (i+1)) ↔ i ∈ C
+
+variable {C : Set ℕ} {M N : Janiczak.Structure}
+
+theorem of_models (h : M.Models (Signed C Cᶜ)) : ClassData C M := by
+  obtain ⟨v⟩ := M.hasValuation
+  refine ⟨⟨?_,?_,?_⟩,?_,?_,?_⟩
+  · have H := h _ (.jan .refl) v
+    simpa [Formula.reflSentence, Formula.holds_all, Formula.Holds] using H
+  · have H := h _ (.jan .symm) v
+    simpa [Formula.symmSentence, Formula.holds_all, Formula.holds_imp, Formula.Holds] using H
+  · have H := h _ (.jan .trans) v
+    simpa [Formula.transSentence, Formula.holds_all, Formula.holds_imp, Formula.Holds] using H
+  · intro n
+    exact (Formula.holds_uniqueSize M.rel v n).mp (h _ (.jan (.uniqueSize n)) v)
+  · intro n
+    exact (Formula.holds_manyLarge M.rel v n).mp (h _ (.jan (.manyLarge n)) v)
+  · intro i
+    constructor
+    · intro hi
+      by_contra hn
+      exact (h _ (.neg hn) v) ((Formula.holds_sizeSentence _ v i).mpr hi)
+    · intro hi
+      exact (Formula.holds_sizeSentence _ v i).mp (h _ (.pos hi) v)
+
+namespace ClassData
+
+variable (d : ClassData C M)
+
+abbrev Tag (C : Set ℕ) := (i : C) × Fin (i.val + 1)
+
+def rep (i : C) : M.Carrier := Classical.choose ((d.spectrum i).mpr i.property)
+
+def coords (i : C) : Fin (i.val+1) ≃ {y // M.rel (d.rep i) y} :=
+  Classical.choice (Classical.choose_spec ((d.spectrum i).mpr i.property))
+
+def point (t : Tag C) : M.Carrier := (d.coords t.1 t.2).val
+
+def classEquiv {x y : M.Carrier} (h : M.rel x y) : {z // M.rel x z} ≃ {z // M.rel y z} :=
+  Equiv.subtypeEquivRight (fun _ ↦ ⟨d.equiv.trans (d.equiv.symm h), d.equiv.trans h⟩)
+
+theorem point_size (t : Tag C) : Sized M.rel (d.point t) (t.1.val+1) :=
+  ⟨(d.coords t.1).trans (d.classEquiv (d.coords t.1 t.2).property)⟩
+
+theorem point_injective : Function.Injective d.point := by
+  rintro ⟨i,j⟩ ⟨i',j'⟩ e
+  have ea := (d.point_size ⟨i,j⟩).some
+  have eb := (d.point_size ⟨i',j'⟩).some
+  rw [← e] at eb
+  have n : i.val+1 = i'.val+1 := by simpa using Fintype.card_congr (ea.trans eb.symm)
+  have ei : i=i' := Subtype.ext (Nat.succ_inj.mp n)
+  subst i'
+  exact congrArg (Sigma.mk i) ((d.coords i).injective (Subtype.ext e))
+
+theorem chart_of_related (i : C) (j : Fin (i.val+1)) {y : M.Carrier}
+    (h : M.rel (d.point ⟨i,j⟩) y) : ∃ k, d.point ⟨i,k⟩ = y := by
+  let z : {y // M.rel (d.rep i) y} := ⟨y,d.equiv.trans (d.coords i j).property h⟩
+  exact ⟨(d.coords i).symm z, congrArg Subtype.val ((d.coords i).apply_symm_apply z)⟩
+
+theorem points_related (i : C) (j k : Fin (i.val+1)) : M.rel (d.point ⟨i,j⟩) (d.point ⟨i,k⟩) :=
+  d.equiv.trans (d.equiv.symm (d.coords i j).property) (d.coords i k).property
+
+/-- Large at the chosen finite variable bound precisely when all retained small charts miss x. -/
+def Fresh (b : ℕ) (x : M.Carrier) := ∀ t : Tag C, t.1.val < b → d.point t ≠ x
+
+theorem fresh_trans {b : ℕ} {x y : M.Carrier} (h : d.Fresh b x) (e : M.rel x y) : d.Fresh b y := by
+  rintro ⟨i,j⟩ hi rfl
+  obtain ⟨k,hk⟩ := d.chart_of_related i j (d.equiv.symm e)
+  exact h ⟨i,k⟩ hi hk
+
+theorem fresh_of_large {b : ℕ} {x : M.Carrier} (h : Large M.rel x (b+1)) : d.Fresh b x := by
+  rintro t ht rfl
+  let f := h.some.trans (d.point_size t).some.symm.toEmbedding
+  have n : b+1 ≤ t.1.val+1 := by simpa using Fintype.card_le_of_injective f f.injective
+  omega
+
+theorem large_of_fresh {b : ℕ} {x : M.Carrier} (h : d.Fresh b x) : Large M.rel x (b+1) := by
+  classical
+  let Y := {z // M.rel x z}
+  by_cases fin : Finite Y
+  · let _ : Fintype Y := Fintype.ofFinite Y
+    by_cases hb : b+1 ≤ Fintype.card Y
+    · exact ⟨(Fin.castLEEmb hb).trans (Fintype.equivFin Y).symm.toEmbedding⟩
+    · let _ : Nonempty Y := ⟨⟨x,d.equiv.refl x⟩⟩
+      obtain ⟨n, hn⟩ := Nat.exists_eq_succ_of_ne_zero (Nat.ne_of_gt (Fintype.card_pos (α := Y)))
+      have s : Sized M.rel x (n+1) := ⟨(finCongr hn.symm).trans (Fintype.equivFin Y).symm⟩
+      let i : C := ⟨n,(d.spectrum n).mp ⟨x,s⟩⟩
+      have e : M.rel (d.rep i) x := d.unique (n+1) _ _ ⟨d.coords i⟩ s
+      let y : {z // M.rel (d.rep i) z} := ⟨x,e⟩
+      have v : d.point ⟨i,(d.coords i).symm y⟩ = x := congrArg Subtype.val ((d.coords i).apply_symm_apply y)
+      exact (h _ (show n < b by omega) v).elim
+  · let _ : Infinite Y := ⟨fin⟩
+    exact ⟨(⟨Fin.val, Fin.val_injective⟩ : Fin (b+1) ↪ ℕ).trans (Infinite.natEmbedding Y)⟩
+
+end ClassData
+/-- The names in the two variable assignments have the same equality and class patterns.
+Each small finite class is labelled on both sides by its size and the elements in its chosen chart. -/
+structure Position (d : ClassData C M) (e : ClassData C N) (b : ℕ)
+    (v : ℕ → M.Carrier) (w : ℕ → N.Carrier) : Prop where
+  eqs : ∀ i j : Fin b, v i = v j ↔ w i = w j
+  rels : ∀ i j : Fin b, M.rel (v i) (v j) ↔ N.rel (w i) (w j)
+  charts : ∀ (i : Fin b) (t : ClassData.Tag C), t.1.val < b →
+    (d.point t = v i ↔ e.point t = w i)
+
+structure Move (d : ClassData C M) (e : ClassData C N) (b : ℕ)
+    (v : ℕ → M.Carrier) (w : ℕ → N.Carrier) (x : M.Carrier) (y : N.Carrier) : Prop where
+  eqs : ∀ i : Fin b, x = v i ↔ y = w i
+  rels : ∀ i : Fin b, M.rel x (v i) ↔ N.rel y (w i)
+  charts : ∀ t : ClassData.Tag C, t.1.val < b → (d.point t = x ↔ e.point t = y)
+
+variable {d : ClassData C M} {e : ClassData C N} {b : ℕ} {v : ℕ → M.Carrier} {w : ℕ → N.Carrier}
+
+theorem Position.symm (h : Position d e b v w) : Position e d b w v :=
+  ⟨fun i j ↦ (h.eqs i j).symm, fun i j ↦ (h.rels i j).symm, fun i t ht ↦ (h.charts i t ht).symm⟩
+
+theorem Position.fresh (h : Position d e b v w) (i : Fin b) : d.Fresh b (v i) → e.Fresh b (w i) :=
+  fun hi t ht hv ↦ hi t ht ((h.charts i t ht).mpr hv)
+
+private theorem outside {Y : Type*} {f : Fin (b+1) → Y} (hf : Function.Injective f) (z : Fin b → Y) :
+    ∃ j, ∀ i, f j ≠ z i := by
+  classical
+  by_contra! h
+  choose g hg using h
+  have hi : Function.Injective g := fun i j hij ↦ hf ((hg i).trans ((congrArg z hij).trans (hg j).symm))
+  have := Fintype.card_le_of_injective g hi
+  simp at this
+
+theorem choose_move (h : Position d e b v w) (x : M.Carrier) : ∃ y, Move d e b v w x y := by
+  classical
+  by_cases old : ∃ j : Fin b, x = v j
+  · obtain ⟨j, rfl⟩ := old
+    exact ⟨w j, h.eqs j, h.rels j, h.charts j⟩
+  by_cases chart : ∃ t : ClassData.Tag C, t.1.val < b ∧ d.point t = x
+  · obtain ⟨⟨i,j⟩,hi,rfl⟩ := chart
+    refine ⟨e.point ⟨i,j⟩, fun k ↦ h.charts k _ hi, ?_, ?_⟩
+    · intro k
+      constructor
+      · intro hr
+        obtain ⟨l,hl⟩ := d.chart_of_related i j hr
+        rw [← (h.charts k ⟨i,l⟩ hi).mp hl]
+        exact e.points_related i j l
+      · intro hr
+        obtain ⟨l,hl⟩ := e.chart_of_related i j hr
+        rw [← (h.charts k ⟨i,l⟩ hi).mpr hl]
+        exact d.points_related i j l
+    · exact fun t _ ↦ ⟨fun ep ↦ congrArg e.point (d.point_injective ep),
+        fun ep ↦ congrArg d.point (e.point_injective ep)⟩
+  have fx : d.Fresh b x := fun t ht ep ↦ chart ⟨t,ht,ep⟩
+  by_cases represented : ∃ j : Fin b, M.rel x (v j)
+  · obtain ⟨j,hj⟩ := represented
+    have fj := h.fresh j (d.fresh_trans fx hj)
+    obtain ⟨g⟩ := e.large_of_fresh fj
+    let f : Fin (b+1) → N.Carrier := fun t ↦ (g t).val
+    have fi : Function.Injective f := fun i k hk ↦ g.injective (Subtype.ext hk)
+    obtain ⟨m,hm⟩ := outside fi (fun i ↦ w i)
+    have hy : N.rel (w j) (f m) := (g m).property
+    have fy := e.fresh_trans fj hy
+    refine ⟨f m, fun k ↦ iff_of_false (fun hk ↦ old ⟨k,hk⟩) (hm k), ?_,
+      fun t ht ↦ iff_of_false (fx t ht) (fy t ht)⟩
+    intro k
+    exact (show M.rel x (v k) ↔ M.rel (v j) (v k) from
+      ⟨d.equiv.trans (d.equiv.symm hj),d.equiv.trans hj⟩).trans ((h.rels j k).trans
+        ⟨e.equiv.trans (e.equiv.symm hy),e.equiv.trans hy⟩)
+  · obtain ⟨f,apart,big⟩ := e.many (b+1)
+    let setoid : Setoid N.Carrier := ⟨N.rel,e.equiv⟩
+    let label : N.Carrier → Quotient setoid := Quotient.mk setoid
+    have fi : Function.Injective (label ∘ f) := by
+      intro i j hij
+      have he : N.rel (f i) (f j) := Quotient.exact hij
+      by_contra hn
+      rcases lt_or_gt_of_ne hn with hl | hg
+      · exact apart i j hl he
+      · exact apart j i hg (e.equiv.symm he)
+    obtain ⟨j,hj⟩ := outside fi (fun k ↦ label (w k))
+    have away (k : Fin b) : ¬ N.rel (f j) (w k) := fun hk ↦ hj k (Quotient.sound hk)
+    have fy := e.fresh_of_large (big j)
+    exact ⟨f j, fun k ↦ iff_of_false (fun hk ↦ old ⟨k,hk⟩) (fun hk ↦ away k (hk ▸ e.equiv.refl _)),
+      fun k ↦ iff_of_false (fun hk ↦ represented ⟨k,hk⟩) (away k),
+      fun t ht ↦ iff_of_false (fx t ht) (fy t ht)⟩
+
+theorem Position.update {x : M.Carrier} {y : N.Carrier} (h : Position d e b v w)
+    (move : Move d e b v w x y) (k : ℕ) :
+    Position d e b (Function.update v k x) (Function.update w k y) := by
+  constructor
+  · intro i j
+    by_cases hi : i.val=k <;> by_cases hj : j.val=k
+    · simp [hi,hj]
+    · simpa [hi,hj,Function.update_of_ne] using move.eqs j
+    · simpa [hi,hj,eq_comm,Function.update_of_ne] using move.eqs i
+    · simpa [hi,hj,Function.update_of_ne] using h.eqs i j
+  · intro i j
+    by_cases hi : i.val=k <;> by_cases hj : j.val=k
+    · simp [hi,hj,d.equiv.refl,e.equiv.refl]
+    · simpa [hi,hj,Function.update_of_ne] using move.rels j
+    · have rev : M.rel (v i) x ↔ N.rel (w i) y :=
+        ⟨fun hr ↦ e.equiv.symm ((move.rels i).mp (d.equiv.symm hr)),
+         fun hr ↦ d.equiv.symm ((move.rels i).mpr (e.equiv.symm hr))⟩
+      simpa [hi,hj,Function.update_of_ne] using rev
+    · simpa [hi,hj,Function.update_of_ne] using h.rels i j
+  · intro i t ht
+    by_cases hi : i.val = k
+    · simpa [hi] using move.charts t ht
+    · simpa [Function.update_of_ne hi] using h.charts i t ht
+
+theorem holds_iff (p : Janiczak.Formula) (hb : p.Below b) (h : Position d e b v w) :
+    p.Holds M.rel v ↔ p.Holds N.rel w := by
+  induction p generalizing v w with
+  | equal x y => exact h.eqs ⟨x,hb.1⟩ ⟨y,hb.2⟩
+  | related x y => exact h.rels ⟨x,hb.1⟩ ⟨y,hb.2⟩
+  | top => rfl
+  | neg p ih => exact not_congr (ih hb h)
+  | conj p q ih jh => exact and_congr (ih hb.1 h) (jh hb.2 h)
+  | ex x p ih =>
+    constructor
+    · rintro ⟨a,ha⟩
+      obtain ⟨c,move⟩ := choose_move h a
+      exact ⟨c,(ih hb.2 (h.update move x)).mp ha⟩
+    · rintro ⟨c,hc⟩
+      obtain ⟨a,move⟩ := choose_move h.symm c
+      exact ⟨a,(ih hb.2 ((h.symm.update move x).symm)).mpr hc⟩
+
+theorem starting (d : ClassData C M) (e : ClassData C N) (b : ℕ) :
+    ∃ (v : ℕ → M.Carrier) (w : ℕ → N.Carrier), Position d e b v w := by
+  obtain ⟨f,_,hf⟩ := d.many (b+1)
+  obtain ⟨g,_,hg⟩ := e.many (b+1)
+  exact ⟨fun _ ↦ f 0,fun _ ↦ g 0,fun _ _ ↦ iff_of_true rfl rfl,
+    fun _ _ ↦ iff_of_true (d.equiv.refl _) (e.equiv.refl _),
+    fun _ t ht ↦ iff_of_false (d.fresh_of_large (hf 0) t ht) (e.fresh_of_large (hg 0) t ht)⟩
+
+open FFL FFL.FirstOrder FFL.Entailment
+
+/-- All sentences of the ordinary language have the same theoremhood in the generated
+full signing and in the complete theory of its canonical model, for every spectrum. -/
+theorem full_signing_theorems (C : Set ℕ) (p : Sentence FOL.L) :
+    FOL.theory (Signed C Cᶜ) ⊢ p ↔ NativeInput.completeTheory C ⊢ p := by
+  let T := FOL.theory (Signed C Cᶜ)
+  constructor
+  · intro hp
+    exact (Theory.Proof.weakerThan_of_le (NativeInput.completeTheory_extends
+      (Set.Subset.rfl : C ⊆ C) disjoint_compl_right)).wk hp
+  · intro hp
+    have hc := (NativeInput.completeTheory_proves C p).mp hp
+    let _ : 𝗘𝗤 FOL.L ⪯ T := inferInstanceAs
+      (𝗘𝗤 FOL.L ⪯ (𝗘𝗤 FOL.L ∪ FOL.sentence '' Signed C Cᶜ))
+    apply Theory.Proof.complete_on_eq_models.{0,0}
+    intro X _ _ _ hm
+    let M : Janiczak.Structure := ⟨X,inferInstance,FOL.relation⟩
+    have hM : M.Models (Signed C Cᶜ) := fun q hq ↦
+      (FOL.sentence_models q).mp (hm.models _ (Or.inr ⟨q,hq,rfl⟩))
+    have hN : (canonical C).Models (Signed C Cᶜ) := Canonical.models_signed Set.Subset.rfl disjoint_compl_right
+    let q := NativeInput.named p
+    let b := q.code+1
+    obtain ⟨v,w,hw⟩ := starting (of_models hM) (of_models hN) b
+    have hq : q.Holds M.rel v := (holds_iff q (q.below_of_code_lt b (Nat.lt_succ_self _)) hw).mpr (hc w)
+    exact (NativeInput.named_correct p ![] v (fun i ↦ i.elim0)).mp hq
+
+theorem extends_original {B N D : Set ℕ} (hp : B ⊆ D) (hn : Disjoint D N) :
+    FOL.theory (Signed B N) ⊆ FOL.theory (Signed D Dᶜ) := by
+  rintro _ (eqax | ⟨p,hp',rfl⟩)
+  · exact Or.inl eqax
+  · refine Or.inr ⟨p, ?_,rfl⟩
+    cases hp' with
+    | jan hj => exact .jan hj
+    | pos hi => exact .pos (hp hi)
+    | neg hi => exact .neg (fun hd ↦ Set.disjoint_left.mp hn hd hi)
+
+/-- The exact signed extension attached to an arbitrary separator is complete and consistent. -/
+theorem complete_consistent_extension {B N D : Set ℕ} (hp : B ⊆ D) (hn : Disjoint D N) :
+    FOL.theory (Signed B N) ⊆ FOL.theory (Signed D Dᶜ) ∧
+    Entailment.Consistent (FOL.theory (Signed D Dᶜ)) ∧
+    ∀ p : Sentence FOL.L, FOL.theory (Signed D Dᶜ) ⊢ p ∨ FOL.theory (Signed D Dᶜ) ⊢ ∼p := by
+  refine ⟨extends_original hp hn,FOL.signed_consistent_iff.mpr disjoint_compl_right,?_⟩
+  intro p
+  let M := canonical D
+  let _ := M.inhabited
+  let _ := FOL.model M
+  by_cases h : Semiformula.Realize M.Carrier p
+  · exact Or.inl ((full_signing_theorems D p).mpr (by_axm h))
+  · have ht : Semiformula.Realize M.Carrier (∼p) := by simpa using h
+    exact Or.inr ((full_signing_theorems D (∼p)).mpr (by_axm ht))
+
+end ReaderTwo.SignedCompleteness
+
+#print axioms ReaderTwo.SignedCompleteness.full_signing_theorems
+#print axioms ReaderTwo.SignedCompleteness.complete_consistent_extension

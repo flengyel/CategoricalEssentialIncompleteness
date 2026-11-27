@@ -1,0 +1,27 @@
+{
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "manuscript_version": 103,
+  "reader": "First independent manuscript reader",
+  "sealed_utc": "2026-11-27T02:54:39.025814+00:00",
+  "scope": "All 26 distinct TeX inputs in recursive order, all 558 mathematical, historical and administrative paragraphs including proofs and examples, 80 numbered items, all 43 cited works, Appendix E and the four requested PDF locators.",
+  "independence": "The reconstruction was sealed and communicated before opening Lean, the correspondence or the current handoff. This verdict was sealed without access to another reader’s reconstruction or assessment.",
+  "counts": {
+    "mathematical_errors": 0,
+    "ambiguities": 0,
+    "lean_omissions": 0,
+    "proof_gaps": 0
+  },
+  "specialized_checks": "Four additional declarations typechecked with warnings treated as errors and only propext, Classical.choice and Quot.sound.",
+  "receipt_condition": "The official repository-wide WSL wrapper is running separately. The final whole-paper report requires its successful receipt for this unchanged commit. The present seal records the independent assessment and supplemental compiler result before any reconciliation.",
+  "correspondence": "https://github.com/flengyel/CategoricalEssentialIncompleteness/blob/f4b8921ecedb388c8b22e8f6e72df608abafa9f9/FORMALIZATION_STATUS_V103.md",
+  "whole_paper_kernel_receipt": "../../../V103_WSL2_LEAN_VERIFICATION.json.gz",
+  "evidence_sha256": {
+    "APPENDIX_E.json": "3ae18fa2789c16e622854f665da0c84491f89a3f69810f43f07d78716faeb4d6",
+    "LITERATURE.json": "4fbcda6a9ffb601280a6a1514769f95f5efaf323f6425eac0c2dcf7b42c4c559",
+    "PASSAGES.json.gz": "3b7336638c6887cbe4e67f0bf36c2d1c5ebf0852de2d7762e6474d930a0bce94",
+    "READING_CHECKS.json": "373f874fcdcaee8ac985a9da418872e5ee9faacc72108580acabde315a0894bf",
+    "READING_CHECKS.log": "7dcfb3fbecc5ec34cf6b098bb9fe89001808517a0dfcf5f3bc801e1b94448f29",
+    "RECONSTRUCTION.md": "3be364f170ccf335a9012e8dadbf5bbf2f6d3b63710d74c23ff5854057ec1844",
+    "ReadingChecks.lean.txt": "852aa91200d93aa6230e22d162020484af302df7af72bf397da2e56e9fc6596d"
+  }
+}

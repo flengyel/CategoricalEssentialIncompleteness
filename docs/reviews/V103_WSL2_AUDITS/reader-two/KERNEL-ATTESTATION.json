@@ -1,0 +1,97 @@
+{
+  "schema": "independent-raw-command-and-axiom-attestation-v2",
+  "tested_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+  "manuscript_version": 103,
+  "receipt_file": "V103_WSL2_LEAN_VERIFICATION.json.gz",
+  "receipt_sha256": "f8e6a4ed3f58b5eb5d54a781b1493742de5d077159d9b0e5d8fef7156d2f65d3",
+  "official_commands": 2101,
+  "successful_commands": 2101,
+  "strict_source_commands": 2093,
+  "certified_inputs": 2745,
+  "additional_pinned_inputs": 12,
+  "dependency_worktrees": 16,
+  "zero_source_mismatches": true,
+  "project_audit_modules": 1174,
+  "official_json_sha256": "5e609228a7c6b7900c49808ff9f5f211ec8b758c14aa89dbccda9b36d6bc6ece",
+  "native_wrapper_log_sha256": "c1f759c3b6e78c88c1be8388663e4e89ded1d1ec1a0fe1dc2394b6fcc435ee74",
+  "all_embedded_outputs_equal_native_files": true,
+  "current_axiom_inventory_size": 35112,
+  "retained_axiom_inventory_size": 1274,
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "raw_official_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "independent_supporting_names": 915,
+  "two_reader_union": 1011,
+  "where_independent_supporting_names_were_printed": {
+    "independent supplement": 13,
+    "official": 894,
+    "official module output": 8
+  },
+  "where_combined_supporting_names_were_printed": {
+    "independent supplement": 13,
+    "official": 967,
+    "reconciliation supplement": 6,
+    "official module output": 25
+  },
+  "supplemental_applications": {
+    "ReaderTwo.initialAssignment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ReaderTwo.generated_isGLB": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ReaderTwo.enumerableSpectrumTheory": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ReaderTwo.enumerableGeneratedSpectrum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ReaderTwo.SignedCompleteness.full_signing_theorems": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ReaderTwo.SignedCompleteness.complete_consistent_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "commands_root_sha256": "32c2557c1b36ce11e25d6e0cb177d46fe5cccd152b9e71d4968f4322e6aedd5f",
+  "all_official_logs_recomputed": true,
+  "all_supplied_log_sha256_matched": 2101,
+  "all_supplied_argv_sha256_matched": 2101,
+  "wrapper": {
+    "source_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+    "start_commit": "f4b8921ecedb388c8b22e8f6e72df608abafa9f9",
+    "start_status": "## HEAD (no branch)\n",
+    "start_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit_code": 0,
+    "exit_status": "0",
+    "argv": [
+      "bash",
+      "scripts/verify-wsl.sh"
+    ],
+    "recorded_command": "LEAN_NUM_THREADS=1 python3 scripts/verify.py",
+    "started_utc": "2026-11-27T02:04:28Z",
+    "ended_utc": "2026-11-27T07:49:50Z",
+    "seconds": 20722.0,
+    "directory": ".codex-work/verify-20261127T020429Z-Owx5Z4",
+    "log_sha256": "c1f759c3b6e78c88c1be8388663e4e89ded1d1ec1a0fe1dc2394b6fcc435ee74"
+  }
+}
