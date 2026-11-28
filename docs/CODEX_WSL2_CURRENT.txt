@@ -2,17 +2,18 @@ CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 
 PALOMAR SUBMISSION HOLD — author’s instruction, 27 November 2026
 
-Halt the v104 submission while the author reviews the preface and introduction.
-This hold supersedes the v104 intake prompt and release procedures below.
-Do not start or resume intake, request registration, or withdraw either edition.
-If an external request was already sent, preserve its receipt, report its state
-privately to the author, and stop before the next submission or registration
-action. The author is handling withdrawal of both v103 and v104. Preserve their
-receipts and private reviews; withdrawal is not confirmed by this notice.
-Resume Palomar work only on a new instruction from the author.
+The current manuscript is v105. This edition is for the author's review.
+Pause Lean replay and Palomar work. Do not start or resume intake, run the
+Comparator preflight, register a submission, or withdraw one. This hold
+supersedes the v104 handoff and the earlier release procedures below.
 
-The v104 manuscript remains pinned to a4a3a56e769139a1ec0d787d29647f0cfff72d65.
-This hold changes the WSL2 instructions only.
+The author is handling withdrawal of the v103 and v104 submissions.
+Preserve their receipts and private reviews. The author has not confirmed
+their withdrawal here. If a request was sent before the hold, report its
+state privately to the author and wait. Resume only on new instructions.
+
+The v104 manuscript is pinned to a4a3a56e769139a1ec0d787d29647f0cfff72d65.
+See docs/CODEX_MANUSCRIPT_V105_HANDOFF.md for the v105 edition.
 
 Earlier release procedures and verification records
 ---------------------------------------------------

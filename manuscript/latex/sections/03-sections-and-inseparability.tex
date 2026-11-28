@@ -177,3 +177,35 @@ $1_X=c\vee c'\le\bar\ell_c$ and $\ell_c$ is total.
 Appendix~\ref{app:lifting-counterexample} gives a faithful range functor
 and a complementary target separator whose conditional has no source lift.
 
+\subsection{Di Paola and Heller's diagonal theorem}
+\label{subsec:di-paola-heller-diagonal}
+
+Di Paola and Heller assume throughout their Section~8 that the category
+is a recursion category \cite[p.~621]{DPH}. For Theorem~8.15 they
+assume a dominical category with binary coproducts and, for each
+$f:Y\rightharpoonup Z$, a section $s:Z\rightharpoonup Y$ satisfying
+$fs=\bar s$ and $fsf=f$. The restriction idempotent $fs=\bar s$
+fixes $f$, and $uf=vf$ implies $u(fs)=v(fs)$ for parallel
+$u,v:Z\rightharpoonup W$. Thus $\ran(f)=fs$
+\cite[p.~612, Definitions~6.1--6.2]{DPH}.
+They also assume that $f+g$ is total whenever $f$ and $g$ are total
+and that the canonical morphisms
+$(X\times Y)+(X\times Z)\to X\times(Y+Z)$ are isomorphisms
+\cite[p.~615, Definition~7.1]{DPH}.
+
+Let $\tau:X\times X\rightharpoonup X+X$ be a Turing morphism in their
+sense: for every $p:X\times X\rightharpoonup X+X$ there is a total
+$k:X\to X$ with $p=\tau(k\times 1_X)$ \cite[p.~601, Definition~4.1]{DPH}.
+Put $h=\tau\Delta_X$. Its two summand inverse images
+$h^*(1_X+0_X)$ and $h^*(0_X+1_X)$ are disjoint. If a complementary
+pair $c,d$ separated them, their diagonal argument would give a total
+$g:X\to X$ with $g^*c=g^*d=0_X$
+\cite[pp.~625--626, Theorem~8.15]{DPH}. Then $cg=dg=0_X$, and range
+agreement gives $c\ran(g)=d\ran(g)=0_X$. Since restriction idempotents
+commute, $\ran(g)[c,d]=0$ for the copairing $[c,d]:X+X\rightharpoonup X$.
+Now $\ran[c,d]=c\vee d=1_X$, so range agreement gives $\ran(g)=0_X$.
+Hence $g=0_X$, and totality gives $1_X=\bar g=0_X$. The two diagonal
+domains are therefore inseparable when $1_X\ne0_X$.
+In Theorem~\ref{thm:comparison}, the lift of the conditional makes the
+inverse images of $P,N$ along $Fg$ vanish. If $F(1_U)\ne 0$ and
+$(Fg)^*$ preserves $P\vee N$, this gives $P\vee N\ne 1_{FU}$.
