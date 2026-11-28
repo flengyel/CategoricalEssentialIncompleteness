@@ -75,6 +75,20 @@ A restriction idempotent $e$ on $X$ \emph{splits} if
 $e=mr$ for a total $m:A\to X$ and $r:X\rightharpoonup A$
 with $rm=1_A$. The category is \emph{split} when every restriction
 idempotent splits.
+
+In a split restriction category $\mathcal C$, sending $e=mr$ to the
+class of $m:A\hookrightarrow X$ gives an order isomorphism from the
+restriction idempotents on $X$ to the subobjects of $X$ in
+$\operatorname{Tot}(\mathcal C)$ represented by restriction monomorphisms
+of $\mathcal C$.
+Indeed, for splittings $e=mr$ and $d=ns$, the inequality $e\le d$
+means $de=e$. This holds exactly when $m$ factors through $n$ in the
+total category, in which case the factor is $sm$. The inverse sends the class
+of $m$ to $mr$, where $r$ is its unique partial inverse
+\cite[Section~2.3.3, Lemma~2.25]{CockettLack}.
+Every subobject of $X$ arises in this way precisely when each
+monomorphism into $X$ in the total category has such a partial inverse.
+
 The \emph{restriction idempotent completion} of a restriction category
 $\mathcal C$, denoted by $\operatorname{Split}(\mathcal C)$, is obtained
 by splitting the restriction idempotents of $\mathcal C$.

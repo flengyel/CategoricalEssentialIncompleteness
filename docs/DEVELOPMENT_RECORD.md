@@ -1,6 +1,6 @@
 # Development of the manuscript
 
-The manuscript has reached its 106th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
+The manuscript has reached its 107th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
 
 | Edition or note | Change and reason | Source |
 |---|---|---|
@@ -22,3 +22,5 @@ The full replay, both independent readings and Comparator preflight for v103 tes
 Manuscript v105 revises the preface and introduction. The author placed Palomar submission on hold and is handling withdrawal of the v103 and v104 submissions. [v105 edition](CODEX_MANUSCRIPT_V105_HANDOFF.md) · [Current instructions](CODEX_WSL2_CURRENT.txt)
 
 In v106 the preface introduces the three examples and identifies the prototype in Heller’s comparison. [v106 edition](CODEX_MANUSCRIPT_V106_HANDOFF.md)
+
+In v107, §1.1 introduces the formula and sentence objects before stating the universal property of the generated first-order theory. Section 1.2 specifies what would separate the diagonal domains, and §1.3 explains derivations with a fixed parameter. Sections 1, 2 and 4 distinguish restriction idempotents from the subobjects represented by their splittings and state when all subobjects arise this way. [v107 edition](CODEX_MANUSCRIPT_V107_HANDOFF.md)
