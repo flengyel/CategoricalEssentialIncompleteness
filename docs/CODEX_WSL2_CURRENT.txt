@@ -1,19 +1,26 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
 
-PALOMAR SUBMISSION HOLD — author’s instruction, 27 November 2026
+ACTIVE WSL2 ASSIGNMENT — Palomar, manuscript v107
 
-The current manuscript is v107. This edition is for the author's review.
-Pause Lean replay and Palomar work. Do not start or resume intake, run the
-Comparator preflight, register a submission, or withdraw one. This hold
-supersedes the v104 handoff and the earlier release procedures below.
+The author has selected manuscript v107 for Palomar. Fetch origin/main for
+the current handoff. The public candidate in flengyel/CategoricalEssentialIncompleteness
+is 569f67d655e9c7024a0b6637ca707d43ac745bd4 (cei-manuscript-v107).
+Use this SHA for the WSL2 replay, both whole-paper readings, the full
+Comparator preflight and the update of PALOMAR-2026-11-22-000009.
+The later handoff commit on main is not the candidate. This instruction
+lifts the verification and intake hold for v107 alone.
 
-The author is handling withdrawal of the v103 and v104 submissions.
-Preserve their receipts and private reviews. The author has not confirmed
-their withdrawal here. If a request was sent before the hold, report its
-state privately to the author and wait. Resume only on new instructions.
+Follow docs/CODEX_MANUSCRIPT_V107_HANDOFF.md from the handoff commit on
+main and docs/CODEX_WSL2_PALOMAR_SUBMISSION.md. Confirm the author’s
+intake authorization for the listed SHA, paths and relationship using
+the author’s WSL2 prompt. After acceptance, return the complete private
+review and its review_sha256. Public registration requires the author's
+decision on that review.
 
-The v104 manuscript is pinned to a4a3a56e769139a1ec0d787d29647f0cfff72d65.
-See docs/CODEX_MANUSCRIPT_V107_HANDOFF.md for the v107 edition.
+The author is handling the v103 and v104 withdrawals. Check the public
+history and pending local attempts before choosing a proposed version.
+Preserve prior receipts. If an older attempt blocks v107, report its
+status privately to the author before taking any action on it.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
