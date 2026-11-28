@@ -7,8 +7,9 @@ This hold supersedes the v104 intake prompt and release procedures below.
 Do not start or resume intake, request registration, or withdraw either edition.
 If an external request was already sent, preserve its receipt, report its state
 privately to the author, and stop before the next submission or registration
-action. Preserve the accepted, unregistered v103 submission and its private
-review. Resume Palomar work only on a new instruction from the author.
+action. The author is handling withdrawal of both v103 and v104. Preserve their
+receipts and private reviews; withdrawal is not confirmed by this notice.
+Resume Palomar work only on a new instruction from the author.
 
 The v104 manuscript remains pinned to a4a3a56e769139a1ec0d787d29647f0cfff72d65.
 This hold changes the WSL2 instructions only.

@@ -1,6 +1,6 @@
 # WSL2 handoff for manuscript v104
 
-**Submission on hold by the author, 27 November 2026.** Stop before any further Palomar intake or registration action. Preserve the v103 and any v104 receipts. Await the author’s explicit restart. This instruction supersedes the procedure below and the earlier prompt for this edition. [Current hold](CODEX_WSL2_CURRENT.txt)
+**Submission on hold by the author, 27 November 2026.** Stop before any further Palomar intake or registration action. The author is handling the withdrawal of v103 and v104. Preserve their receipts. Await the author’s explicit restart. This instruction supersedes the procedure below and the earlier prompt for this edition. [Current hold](CODEX_WSL2_CURRENT.txt)
 
 The author reports that Palomar accepted the v103 submission. Registration is paused. Preserve that submission, its private review and its digest at `f4b8921ecedb388c8b22e8f6e72df608abafa9f9`. Only v104 is eligible for this submission. Leave v103 unregistered and retain its receipts. [Current instructions](CODEX_WSL2_CURRENT.txt)
 
