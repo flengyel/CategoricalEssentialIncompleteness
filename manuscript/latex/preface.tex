@@ -5,17 +5,23 @@ In 1987 Robert A. Di Paola and Alex Heller proved a diagonal
 inseparability theorem in recursion categories. They proposed to use it
 in an algebraic treatment of generalized incompleteness
 \cite[Theorem~8.15 and p.~629]{DPH}. That treatment did not appear.
-Their theorem supplies a pair that cannot be separated in the category.
-To draw a conclusion about incompleteness, one still needs a theory
-in which one part of the pair prescribes sentences to prove and the
-other prescribes sentences to refute. The purpose of this monograph is to construct such
-theories from the recursion category itself.
+Their theorem supplies a pair of domains that cannot be separated in
+the category. We use Cockett and Lack's term \emph{restriction idempotent}
+for a domain in this sense to distinguish it from the source of a morphism
+\cite[p.~227]{CockettLack}. To draw a conclusion about incompleteness, one still needs
+a theory in which one domain specifies sentences to prove and the other
+specifies sentences to refute. The purpose of this monograph is to
+construct such theories from the recursion category itself.
 
-Heller sought examples of recursion categories ``substantially different in spirit from the
-prototype'' \cite[p.~1252]{Heller}. An algebraic account of
-incompleteness should explain what the arithmetic example has in common
-with settings in which computation must be uniform across representations
-of a real sequence, or compatible with the maps of a diagram.
+We present three recursion categories and construct a consistent,
+essentially incomplete internal theory in each. The first example uses
+Montagna's syntactic category for Peano arithmetic and assumes that
+Peano arithmetic is consistent. The other two illustrate Heller's call
+for examples ``substantially different in spirit from the prototype'',
+the recursion category of partial computable functions
+\cite[p.~1252]{Heller}. One asks what a single program can compute
+from every binary representation of a fixed sequence of real numbers.
+The other uses cosheaves on a three-point space.
 
 Appendix~\ref{app:reading-lean-proofs} connects the results with their
 Lean proofs and identifies the three declarations registered in version~3

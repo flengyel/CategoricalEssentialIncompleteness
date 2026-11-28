@@ -1,6 +1,6 @@
 # Development of the manuscript
 
-The manuscript has reached its 105th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
+The manuscript has reached its 106th numbered edition. Six changes explain the scope of the comparison theorem, the free-theory adjunction and their antecedents. The two changes to the companion note were made while v94 was current. [Manuscript archive](../manuscript/archive/README.md) · [Edition and source manifest](../MANUSCRIPT_CURRENT.json)
 
 | Edition or note | Change and reason | Source |
 |---|---|---|
@@ -20,3 +20,5 @@ The full WSL2 replay of v94 on 26 November 2026 tested `b5db36ed4dd2f2b5bfe48f74
 The full replay, both independent readings and Comparator preflight for v103 tested `f4b8921ecedb388c8b22e8f6e72df608abafa9f9`. The author reports that Palomar accepted the submission and that registration is paused. Manuscript v104 clarifies the purpose stated in the abstract, admissible substitution, the square in Proposition 4.6, and the effectiveness hypothesis in §8.1. [v103 verification](V103_WSL2_LEAN_VERIFICATION.md) · [v104 edition](CODEX_MANUSCRIPT_V104_HANDOFF.md)
 
 Manuscript v105 revises the preface and introduction. The author placed Palomar submission on hold and is handling withdrawal of the v103 and v104 submissions. [v105 edition](CODEX_MANUSCRIPT_V105_HANDOFF.md) · [Current instructions](CODEX_WSL2_CURRENT.txt)
+
+In v106 the preface introduces the three examples and identifies the prototype in Heller’s comparison. [v106 edition](CODEX_MANUSCRIPT_V106_HANDOFF.md)
