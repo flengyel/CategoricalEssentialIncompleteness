@@ -1,23 +1,17 @@
 CODEX INSTRUCTIONS — CURRENT MANUSCRIPT AND LEAN FORMALIZATION
-Updated 27 November 2026
 
-Current Palomar submission target: manuscript v104 only
+PALOMAR SUBMISSION HOLD — author’s instruction, 27 November 2026
 
-The author reports that Palomar accepted the v103 submission. Preserve that
-submission, its private review and its digest at the tested v103 commit,
-f4b8921ecedb388c8b22e8f6e72df608abafa9f9. Leave v103 unregistered. Use v104 for the ordinary new-version submission
-to the existing entry. If the service requires withdrawal of v103 before
-it will accept v104, obtain the author's approval for that withdrawal.
+Halt the v104 submission while the author reviews the preface and introduction.
+This hold supersedes the v104 intake prompt and release procedures below.
+Do not start or resume intake, request registration, or withdraw either edition.
+If an external request was already sent, preserve its receipt, report its state
+privately to the author, and stop before the next submission or registration
+action. Preserve the accepted, unregistered v103 submission and its private
+review. Resume Palomar work only on a new instruction from the author.
 
-The completed v103 replay, both readings and Comparator run 45931283651 are
-recorded in docs/V103_WSL2_LEAN_VERIFICATION.md at report commit
-8f7c1447f1b2af29d73b2b7a9ff9098aeb58a7f6. The current manuscript is a
-separate edition. Its source, correspondence and verification status are
-identified in MANUSCRIPT_CURRENT.json, FORMALIZATION_STATUS_V104.md and
-docs/CODEX_WSL2_CEI_V104_LEAN_HANDOFF.md. The v104 replay and Comparator
-preflight are pending. After both checks pass at the supplied v104 SHA,
-follow the v104 handoff through private review. Return the v104 review and
-its digest to the author before registration. Manuscript refereeing stays in chat.
+The v104 manuscript remains pinned to a4a3a56e769139a1ec0d787d29647f0cfff72d65.
+This hold changes the WSL2 instructions only.
 
 Earlier release procedures and verification records
 ---------------------------------------------------
